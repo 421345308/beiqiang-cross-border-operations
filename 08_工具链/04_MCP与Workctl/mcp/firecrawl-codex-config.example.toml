@@ -1,0 +1,9 @@
+# Example only. Do not paste an API key into this file.
+# Set FIRECRAWL_API_KEY in your local environment, then let Codex forward it.
+
+[mcp_servers.firecrawl]
+command = "npx"
+args = ["-y", "firecrawl-mcp"]
+startup_timeout_sec = 60
+tool_timeout_sec = 120
+env_vars = ["FIRECRAWL_API_KEY"]

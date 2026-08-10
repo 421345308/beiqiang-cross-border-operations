@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "target": {
+    "platform": "Douyin China",
+    "resolution": "1080x1920",
+    "fps": 24,
+    "duration_s": 17.8
+  },
+  "audio": {
+    "source": "BQ001_CN_Douyin_GentlePresenter_V7B_20260729.mp4",
+    "method": "preserve continuous synchronized Mandarin timeline from 0.0 to 12.1 seconds",
+    "music": "low instrumental bed under dialogue and product montage"
+  },
+  "ranges": [
+    {"source": "BQ001_CN_Douyin_GentlePresenter_V7B_20260729.mp4", "start": 0.0, "end": 2.25, "output_start": 0.0, "beat": "GENTLE_HOST_HOOK"},
+    {"source": "BQ001_CN_Douyin_WarmProductFilm_V8_20260730.mp4", "start": 0.0, "end": 2.9, "output_start": 2.25, "beat": "WARM_SIDE_FOREFOOT"},
+    {"source": "BQ001_CN_Douyin_GentlePresenter_V7B_20260729.mp4", "start": 5.15, "end": 5.9, "output_start": 5.15, "beat": "HOST_BRIDGE"},
+    {"source": "BQ001_CN_Douyin_WarmProductFilm_V8_20260730.mp4", "start": 2.8, "end": 5.42, "output_start": 5.9, "beat": "WARM_KNIT_MACRO"},
+    {"source": "BQ001_CN_Douyin_GreenWalk_V8_20260730.mp4", "start": 0.3, "end": 3.08, "output_start": 8.52, "beat": "GREEN_WALK"},
+    {"source": "BQ001_CN_Douyin_GentlePresenter_V7B_20260729.mp4", "start": 11.3, "end": 12.1, "output_start": 11.3, "beat": "HOST_CLOSE"},
+    {"source": "BQ001_CN_Douyin_WarmProductFilm_V8_20260730.mp4", "start": 5.4, "end": 7.1, "output_start": 12.1, "beat": "WARM_TOP_FOREFOOT"},
+    {"source": "BQ001_CN_Douyin_GreenWalk_V8_20260730.mp4", "start": 4.8, "end": 6.8, "output_start": 13.8, "beat": "GREEN_SEATED"},
+    {"source": "BQ001_WideToeBox_ProductProof_V2_20260728.mp4", "start": 8.0, "end": 10.0, "output_start": 15.8, "beat": "EXACT_PRODUCT_END"}
+  ],
+  "captions": "captions_v8_cn.ass",
+  "sku_visible": false,
+  "hard_purchase_cta": false
+}

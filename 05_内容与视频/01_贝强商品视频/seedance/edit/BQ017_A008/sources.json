@@ -1,0 +1,29 @@
+{
+  "sku": "BQ017_A008",
+  "seedance_dir": "C:\\Users\\spq\\Desktop\\贝强\\output\\seedance",
+  "edit_dir": "C:\\Users\\spq\\Desktop\\贝强\\output\\seedance\\edit\\BQ017_A008",
+  "sources": [
+    {
+      "name": "BQ017_A008_ProductDemo_MiniTest_V1_20260728",
+      "video": "C:\\Users\\spq\\Desktop\\贝强\\output\\seedance\\BQ017_A008_ProductDemo_MiniTest_V1_20260728.mp4",
+      "metadata": "C:\\Users\\spq\\Desktop\\贝强\\output\\seedance\\BQ017_A008_ProductDemo_MiniTest_V1_20260728.json",
+      "task_id": "cgt-20260728142755-ptv6q",
+      "model": "doubao-seedance-2-0-mini-260615",
+      "duration": 8,
+      "resolution": "480p",
+      "ratio": "9:16",
+      "audio": false
+    },
+    {
+      "name": "BQ017_A008_TikTok_Lifestyle_V2_20260728",
+      "video": "C:\\Users\\spq\\Desktop\\贝强\\output\\seedance\\BQ017_A008_TikTok_Lifestyle_V2_20260728.mp4",
+      "metadata": "C:\\Users\\spq\\Desktop\\贝强\\output\\seedance\\BQ017_A008_TikTok_Lifestyle_V2_20260728.json",
+      "task_id": "cgt-20260728225426-mxbsj",
+      "model": "doubao-seedance-2-0-260128",
+      "duration": 12,
+      "resolution": "720p",
+      "ratio": "9:16",
+      "audio": true
+    }
+  ]
+}

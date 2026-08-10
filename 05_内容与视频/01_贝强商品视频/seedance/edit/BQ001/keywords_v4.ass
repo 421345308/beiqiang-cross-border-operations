@@ -1,0 +1,20 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Keyword,Arial,50,&H00FFFFFF,&H00FFFFFF,&H98000000,&H00000000,-1,0,0,0,100,100,1,0,1,4,1,8,60,60,70,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.60,Keyword,,0,0,0,,{\an8\pos(540,105)\fad(100,120)}ROOMY FOREFOOT
+Dialogue: 0,0:00:02.60,0:00:05.20,Keyword,,0,0,0,,{\an8\pos(540,105)\fad(100,120)}BREATHABLE KNIT
+Dialogue: 0,0:00:05.20,0:00:07.80,Keyword,,0,0,0,,{\an8\pos(540,105)\fad(100,120)}LIGHTWEIGHT EVA
+Dialogue: 0,0:00:07.80,0:00:11.50,Keyword,,0,0,0,,{\an8\pos(540,105)\fad(100,120)}DAILY WALKING + TRAVEL
+Dialogue: 0,0:00:11.50,0:00:15.20,Keyword,,0,0,0,,{\an8\pos(540,105)\fad(100,120)}EASY SLIP-ON
+Dialogue: 0,0:00:15.20,0:00:18.00,Keyword,,0,0,0,,{\an8\pos(540,105)\fad(100,120)}WHOLESALE | OEM / ODM
+Dialogue: 0,0:00:18.00,0:00:20.00,Keyword,,0,0,0,,{\an8\pos(540,105)\fad(100,120)}REQUEST A SAMPLE

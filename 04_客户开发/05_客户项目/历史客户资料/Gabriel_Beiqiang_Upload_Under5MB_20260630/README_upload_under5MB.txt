@@ -1,0 +1,1 @@
+This is the lightweight upload package for Gabriel. The Excel includes compressed product thumbnails, factory information, and quotation message. Full-resolution photos/videos can be sent after Gabriel selects styles.

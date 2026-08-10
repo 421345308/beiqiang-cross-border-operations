@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "platform": "TikTok",
+  "strategy": "Color-vote native TikTok edit with three visual moods, short kinetic labels, real product proof, and a B2B close. No long editorial cards.",
+  "duration_seconds": 28.5,
+  "fps": 24,
+  "segments": [
+    {"frames": 58, "beat": "COLOR HOOK", "source": "01_hook.mp4"},
+    {"frames": 115, "beat": "GREY WHITE", "source": "cgt-20260801164719-h5ktq.mp4"},
+    {"frames": 67, "beat": "GREY BLACK", "source": "cgt-20260801163532-5ngj8.mp4"},
+    {"frames": 67, "beat": "GREY KHAKI", "source": "cgt-20260801164059-d2c9p.mp4"},
+    {"frames": 72, "beat": "TOE SHAPE", "source": "05_toe.mp4"},
+    {"frames": 67, "beat": "KNIT AND COLLAR", "source": "06_upper.mp4"},
+    {"frames": 67, "beat": "SOLE", "source": "07_sole.mp4"},
+    {"frames": 67, "beat": "COLOR POLL", "source": "08_poll.mp4"},
+    {"frames": 104, "beat": "FACTORY CTA", "source": "cgt-20260801164719-h5ktq.mp4"}
+  ],
+  "generated_sources": {
+    "grey_black_actual": "cgt-20260801163532-5ngj8",
+    "grey_khaki_actual": "cgt-20260801164059-d2c9p",
+    "grey_white_product": "cgt-20260801164719-h5ktq"
+  }
+}

@@ -1,0 +1,68 @@
+# Beiqiang operations repository: track knowledge, data summaries and scripts;
+# keep heavyweight assets, nested repositories and reproducible runtimes local.
+
+# Product and media assets
+/01_产品资产/01_原始数据包/
+/01_产品资产/02_可发布素材/
+/02_可上传素材/
+/05_内容与视频/03_通用AI视频实验/
+/05_内容与视频/01_贝强商品视频/seedance/classical_chinese/
+/05_内容与视频/01_贝强商品视频/seedance/civilization_arc/
+/output/
+
+# Nested standalone repositories / active third-party applications
+/03_独立站/03_网站源码/
+/08_工具链/02_视频工具/opencut-classic/
+/tools/opencut-classic/
+
+# Runtime, dependency and temporary data
+/node_modules/
+/99_临时区/
+/08_工具链/02_视频工具/ffmpeg/
+/08_工具链/02_视频工具/.libtv/
+/08_工具链/03_网站发布运行时/edgeone-cli-runtime/node_modules/
+/08_工具链/04_MCP与Workctl/workctl_tmp/
+**/node_modules/
+**/.next/
+**/.vinext/
+**/.wrangler/
+**/dist/
+**/build/
+**/.cache/
+**/__pycache__/
+*.pyc
+*.log
+
+# Heavy binary deliverables stay local and are represented by text indexes
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.gif
+*.bmp
+*.tif
+*.tiff
+*.svg
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+*.mp3
+*.wav
+*.zip
+*.7z
+*.rar
+*.tar.gz
+*.pdf
+*.docx
+*.xlsx
+*.xls
+*.pptx
+
+# Local secrets and OS metadata
+.env
+.env.*
+Thumbs.db
+Desktop.ini
+.DS_Store

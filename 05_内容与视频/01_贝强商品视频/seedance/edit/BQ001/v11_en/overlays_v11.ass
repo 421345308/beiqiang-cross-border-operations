@@ -1,0 +1,19 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding
+Style: Hook,Bahnschrift,62,&H00FFFFFF,&H000000FF,&H001C1C1C,&H60000000,-1,0,0,0,100,100,1,0,1,3,0,8,66,66,138,1
+Style: CtaTop,Bahnschrift,48,&H00FFFFFF,&H000000FF,&H001C1C1C,&H70000000,-1,0,0,0,100,100,1,0,1,3,0,8,52,52,145,1
+Style: CtaBottom,Segoe UI,38,&H00FFFFFF,&H000000FF,&H001C1C1C,&H80000000,-1,0,0,0,100,100,0,0,1,3,0,2,70,70,245,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.18,0:00:01.55,Hook,,0,0,0,,A SHAPE BUYERS NOTICE
+Dialogue: 0,0:00:01.55,0:00:02.95,Hook,,0,0,0,,BEFORE THEY FEEL IT
+Dialogue: 0,0:00:28.05,0:00:30.00,CtaTop,,0,0,0,,FOOTWEAR FACTORY IN CHINA
+Dialogue: 0,0:00:28.05,0:00:30.00,CtaBottom,,0,0,0,,SAMPLES  •  WHOLESALE  •  OEM / ODM\NDM FOR PRODUCT DETAILS

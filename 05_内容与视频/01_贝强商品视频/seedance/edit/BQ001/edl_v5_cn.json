@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "target": {
+    "platform": "Douyin China",
+    "resolution": "1080x1920",
+    "fps": 24,
+    "duration_s": 15.5
+  },
+  "voice": {
+    "engine": "Microsoft Edge Neural TTS",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "+8%",
+    "pitch": "-2Hz"
+  },
+  "ranges": [
+    {
+      "source": "BQ001_CN_Douyin_PainHook_V5_20260729.mp4",
+      "start": 0.0,
+      "end": 3.88,
+      "beat": "PAIN_POINT"
+    },
+    {
+      "source": "BQ001_WideToeBox_ProductProof_V2_20260728.mp4",
+      "start": 0.0,
+      "end": 2.92,
+      "beat": "WIDE_TOE_CONTRAST"
+    },
+    {
+      "source": "BQ001_WideToeBox_ProductProof_V2_20260728.mp4",
+      "start": 2.2,
+      "end": 4.2,
+      "beat": "TOP_VIEW_PROOF"
+    },
+    {
+      "source": "BQ001_WideToeBox_ProductProof_V2_20260728.mp4",
+      "start": 4.5,
+      "end": 5.9,
+      "beat": "KNIT_DETAIL"
+    },
+    {
+      "source": "BQ001_LifestyleWalk_Insert_V3_20260729.mp4",
+      "start": 3.3,
+      "end": 5.5,
+      "beat": "EVERYDAY_WALK"
+    },
+    {
+      "source": "BQ001_TravelLifestyle_Insert_V4_20260729.mp4",
+      "start": 4.4,
+      "end": 6.0,
+      "beat": "SEATED_COMFORT"
+    },
+    {
+      "source": "BQ001_WideToeBox_ProductProof_V2_20260728.mp4",
+      "start": 8.5,
+      "end": 10.0,
+      "beat": "EXACT_PRODUCT_END"
+    }
+  ],
+  "captions": "captions_v5_cn.ass",
+  "music": "looped low under voice from the original Seedance product-proof soundtrack",
+  "cta": "none",
+  "sku_visible": false
+}

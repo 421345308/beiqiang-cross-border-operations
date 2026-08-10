@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "target": {
+    "platform": "Douyin China",
+    "resolution": "1080x1920",
+    "fps": 24,
+    "duration_s": 14.6
+  },
+  "audio": {
+    "source": "BQ001_CN_Douyin_FemalePresenter_V6_20260729.mp4",
+    "method": "preserve full synchronized generated Mandarin dialogue",
+    "music": "low instrumental bed from product-proof source"
+  },
+  "ranges": [
+    {
+      "source": "BQ001_CN_Douyin_FemalePresenter_V6_20260729.mp4",
+      "start": 0.0,
+      "end": 2.4,
+      "output_start": 0.0,
+      "beat": "HOST_HOOK"
+    },
+    {
+      "source": "BQ001_WideToeBox_ProductProof_V2_20260728.mp4",
+      "start": 0.2,
+      "end": 1.7,
+      "output_start": 2.4,
+      "beat": "EXACT_SIDE_PROOF"
+    },
+    {
+      "source": "BQ001_WideToeBox_ProductProof_V2_20260728.mp4",
+      "start": 2.2,
+      "end": 3.9,
+      "output_start": 3.9,
+      "beat": "EXACT_TOP_PROOF"
+    },
+    {
+      "source": "BQ001_CN_Douyin_FemalePresenter_V6_20260729.mp4",
+      "start": 5.6,
+      "end": 8.9,
+      "output_start": 5.6,
+      "beat": "HOST_MATERIAL_EXPLANATION"
+    },
+    {
+      "source": "BQ001_LifestyleWalk_Insert_V3_20260729.mp4",
+      "start": 3.5,
+      "end": 5.35,
+      "output_start": 8.9,
+      "beat": "DAILY_WALK"
+    },
+    {
+      "source": "BQ001_CN_Douyin_FemalePresenter_V6_20260729.mp4",
+      "start": 10.75,
+      "end": 12.05,
+      "output_start": 10.75,
+      "beat": "HOST_CLOSE"
+    },
+    {
+      "source": "BQ001_WideToeBox_ProductProof_V2_20260728.mp4",
+      "start": 7.45,
+      "end": 10.0,
+      "output_start": 12.05,
+      "beat": "EXACT_PRODUCT_END"
+    }
+  ],
+  "captions": "captions_v6_cn.ass",
+  "sku_visible": false,
+  "hard_purchase_cta": false
+}

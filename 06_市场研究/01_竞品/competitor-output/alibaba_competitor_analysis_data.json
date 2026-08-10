@@ -1,0 +1,30 @@
+{
+  "metadata": {
+    "created_at": "2026-07-21T12:42:09+08:00",
+    "mode": "store",
+    "keyword": "orthopedic shoes",
+    "cdp_url": "http://127.0.0.1:9222",
+    "benchmark_count": 3,
+    "products_per_store": 5,
+    "analysis_focus": "auto",
+    "confidence": "low"
+  },
+  "products": [],
+  "stores": [],
+  "recommendations": [
+    {
+      "priority": "P1",
+      "theme": "先扩大标杆样本",
+      "evidence": "本轮店铺页面可见信号较少。",
+      "action": "补充明确的竞品店铺链接或平台搜索结果，优先保证店铺页和商品页可访问。"
+    }
+  ],
+  "sources": [
+    {
+      "phase": "supplier_discovery",
+      "source": "user_or_search_json",
+      "status": "ok",
+      "note": "Loaded 3 supplier candidates."
+    }
+  ]
+}

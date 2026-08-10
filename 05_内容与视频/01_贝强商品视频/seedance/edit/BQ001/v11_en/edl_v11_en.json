@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "platform": "TikTok",
+  "aspect_ratio": "9:16",
+  "fps": 24,
+  "duration_seconds": 30.0,
+  "strategy": "Real product footage plus independent editorial 2D product pages; no circles, arrows, particles, presenter, or meaningless hand actions.",
+  "segments": [
+    {"start": 0.0, "duration": 3.0, "beat": "HOOK", "source": "BQ001_CN_Douyin_WarmProductFilm_V8_20260730.mp4"},
+    {"start": 3.0, "duration": 5.5, "beat": "WIDE FRONT", "source": "02_shape_card.mp4"},
+    {"start": 8.5, "duration": 5.0, "beat": "KNIT UPPER", "source": "03_knit_card.mp4"},
+    {"start": 13.5, "duration": 4.5, "beat": "SLIP-ON", "source": "04_slipon_card.mp4"},
+    {"start": 18.0, "duration": 4.0, "beat": "EVA SOLE", "source": "05_sole_card.mp4"},
+    {"start": 22.0, "duration": 3.5, "beat": "ON-FOOT", "source": "BQ001_TikTok_EN_SideWalk_V9_20260801.mp4"},
+    {"start": 25.5, "duration": 2.5, "beat": "COLORS", "source": "07_colors_card.mp4"},
+    {"start": 28.0, "duration": 2.0, "beat": "B2B CTA", "source": "BQ001_WideToeBox_ProductProof_V2_20260728.mp4"}
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "project": "BQ001 TikTok English Detailed V9",
+  "platform": "TikTok",
+  "aspect_ratio": "9:16",
+  "resolution": "1080x1920",
+  "fps": 24,
+  "duration_seconds": 30.0,
+  "voice": "en-US-EmmaMultilingualNeural",
+  "segments": [
+    {"start": 0.00, "end": 1.20, "source": "BQ001_WideToeBox_ProductProof_V2_20260728.mp4", "beat": "product-first hook"},
+    {"start": 1.20, "end": 3.52, "source": "BQ001_TikTok_EN_CreatorHook_V9_20260801.mp4", "beat": "creator empathy hook"},
+    {"start": 3.52, "end": 5.52, "source": "BQ001_TikTok_EN_ToeShape_V9_20260801.mp4", "beat": "forefoot pair"},
+    {"start": 5.52, "end": 8.24, "source": "BQ001_WideToeBox_ProductProof_V2_20260728.mp4", "beat": "exact toe-shape proof"},
+    {"start": 8.24, "end": 11.70, "source": "BQ001_TikTok_EN_KnitPress_V9_20260801.mp4", "beat": "knit press"},
+    {"start": 11.70, "end": 14.46, "source": "BQ001_TikTok_EN_StandUp_V9_20260801.mp4", "beat": "already-worn stand-up"},
+    {"start": 14.46, "end": 16.30, "source": "BQ001_WideToeBox_ProductProof_V2_20260728.mp4", "beat": "EVA sole profile"},
+    {"start": 16.30, "end": 19.14, "source": "BQ001_TikTok_EN_SideWalk_V9_20260801.mp4", "beat": "three-step side walk"},
+    {"start": 19.14, "end": 21.88, "source": "real BQ001 color images", "beat": "three color options"},
+    {"start": 21.88, "end": 24.04, "source": "BQ001_CN_Douyin_WarmProductFilm_V8_20260730.mp4", "beat": "factory positioning bridge"},
+    {"start": 24.04, "end": 30.00, "source": "BQ001_WideToeBox_ProductProof_V2_20260728.mp4", "beat": "accurate product CTA sequence"}
+  ],
+  "rejected_sources": [
+    {"source": "BQ001_TikTok_EN_TravelRest_V9_20260801.mp4", "reason": "white toe bumper enlarged and product identity drifted"}
+  ]
+}

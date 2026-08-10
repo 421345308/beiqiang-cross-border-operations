@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "owner": "accio-cli/competitor-analysis",
+  "run_id": "run_73002de0146b6849b49bae8f311c035c",
+  "input_fingerprint": "71828c6bce5edb80bc62e9c34e2df85a1cde656467c4aa92b41b8c730c2fc286",
+  "snapshot": "runs/run-73002de0146b6849b49bae8f311c035c-941f8fc2515f6824ea72694f08782d7d",
+  "created_at": "2026-07-21T14:52:32.1413165Z",
+  "artifacts": {
+    "data": "alibaba_competitor_analysis_data.json",
+    "product_csv": "alibaba_product_details.csv",
+    "store_csv": "alibaba_store_benchmarks.csv",
+    "excel": "data.xlsx",
+    "artifacts_status": "artifacts_status.json"
+  },
+  "files": [
+    {
+      "path": "alibaba_competitor_analysis_data.json",
+      "size": 34747,
+      "sha256": "c9b1f19111517e255fe31c86594dd9b258db3e2f591d3ea98bdec1b460fefaee"
+    },
+    {
+      "path": "alibaba_product_details.csv",
+      "size": 3435,
+      "sha256": "9656d6c62940d2772dd976e5a428d4aa6fe6d5eab13d07f12d0ae85738102fbd"
+    },
+    {
+      "path": "alibaba_store_benchmarks.csv",
+      "size": 689,
+      "sha256": "bfd98e15123e76fd89f7244afd892ff48db981a6619063e0df7fa7d4d58c9b87"
+    },
+    {
+      "path": "artifacts_status.json",
+      "size": 913,
+      "sha256": "a4c31830982a4d30671064364db2b522154857b11d6f7e75406f00a594bab99d"
+    },
+    {
+      "path": "data.xlsx",
+      "size": 12396,
+      "sha256": "a994c60c22a93fa2e77635f0e99e6c8a51a4a3f8c04adaccf0157260597d30f4"
+    }
+  ]
+}
