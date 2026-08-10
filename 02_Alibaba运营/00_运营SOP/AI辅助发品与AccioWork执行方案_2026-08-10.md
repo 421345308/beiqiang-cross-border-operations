@@ -86,6 +86,11 @@ AI 可以帮助贝强完成约 80%-90% 的发品准备工作；Accio Work / Work
    - `trunk`：正式线上正本。
 7. `copy` 已生成且 50 个 SKU 获得正式 SKU ID、但 `trunk` 返回 `Record does not exist.` 时，记录为“已提交，待审核/生效”，不得写“已发布上线”。
 8. `productDescType=5` 且 `isAiEdit=true` 表示 AI/HTML 富文本渲染链路。结构化 `detailImage/companyImage/faqs` 未返回，不等于前台没有详情内容；上线后仍须用买家公开页做第二证据源核验。
+9. AI 商详商品存在两套状态：结构化草稿字段与独立 `pageId` 装修页面。`product-edit-draft-detail` 的成功响应不是 AI 页面同步凭证；必须再读 `list-id.descComponentData.bodyLayout`，并打开 AI 编辑器或买家页描述 iframe 验证。
+10. 复用老品模板时，先把图片按角色分成 `company-gallery` 与 `product-gallery`。公司/物流模块可按要求沿用，但产品尺寸、场景、细节、颜色图必须逐张建立“旧 URL → 新 URL”映射，禁止用图片总数判断完成。
+11. 图片银行 URL 只是素材入库凭证；AI 编辑器保存后会产生新的裁剪 CDN URL。验收以最终渲染 URL 为准，同时检查旧 URL 消失、新 URL 出现。
+12. 发布验收必须同时执行文本禁词断言。至少搜索旧型号、旧尺码、旧颜色、旧人群和旧结构词；命中任一项时不得记录为“已完成”。
+13. 提交成功页、`submit draft success` 或 `auditStatus=-2` 只分别代表后台受理、草稿提交、审核中。最终状态必须等待审核结束，并以买家页正文和图片 URL 为准。
 
 ### BQ031 已验证接口链路
 
@@ -108,6 +113,10 @@ health
 - `componentList expects a JSON array`：PowerShell 把数组 JSON 拆坏；改用管道输入 JSON 数组和 `--component-list '@-'`。
 - `Record does not exist.`（trunk）：刚提交时通常尚无正本；查 `copy`，不要重复提交或重建商品。
 - 结构化详情为空：先看 `productDescType`，富文本类型必须做前台二次核验。
+- AI 商详图片已换、文案未换：说明只修改了图片组件，旧 `pageId` 的富文本组件仍在。保留正确图片，不重复上传；单独修正文案组件，并在买家页跑禁词断言。
+- 图片银行已有新图但买家页仍是旧图：检查 AI 编辑器是否点击“保存”和“编辑完成”，以及保存后的 `sc02.alicdn.com` 裁剪 URL 是否进入最终 `bodyLayout`；不能用银行原图 URL 代替渲染验收。
+- AI 富文本 `fill/type` 无效果：先用 `Control+A` 与 `Backspace` 验证控件确实可编辑，再用原生按键输入；每个字段写完立即回读。长文案一旦超时或中断，必须整段清空重写，禁止从猜测的光标位置续写。
+- 富文本修改后必须依次完成：AI 编辑器“保存” → “编辑完成” → 确认同步 App 端 → 商品表单“保存” → “提交”。缺任一步都可能导致 PC/移动端或草稿/正本不一致。
 
 ## 下一次实际执行建议
 
