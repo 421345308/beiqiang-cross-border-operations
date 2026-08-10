@@ -44,7 +44,7 @@ AI 可以帮助贝强完成约 80%-90% 的发品准备工作；Accio Work / Work
 
 ## Accio Work 当前接入条件
 
-当前状态：`workctl v0.1.43` 已安装，Alibaba 账号已认证；但命令发现返回 `desktop_not_attached`，远程目录返回 `catalog_load_failed`。
+当前状态（2026-08-10 BQ031 实测后更新）：`workctl v0.1.43` 已安装，Alibaba 账号已认证；已经通过 Accio Desktop 本地网关成功调用商品查询、草稿编辑、草稿提交和提交后回查接口。
 
 2026-08-10 现场复核：
 
@@ -52,14 +52,14 @@ AI 可以帮助贝强完成约 80%-90% 的发品准备工作；Accio Work / Work
 - “国际站生意助手”界面已确认具备：市场洞察、发品、客户接待、图片、视频、营销、物流、店铺装修。
 - 历史任务中存在“阿里巴巴国际站店铺只读诊断”“全店29款商品优化总表建立”“国际站商品只读核验与选款”“A502与A503合规优化发布执行”等记录，说明该账号已实际使用过商品查询、诊断和发布链路。
 - 单纯打开 Accio Desktop 不会把本地网关令牌自动注入已经运行的 Codex shell。`workctl doctor env` 显示桌面网关 `127.0.0.1:4097` 正常，但当前 shell 缺少 `ACCIO_GATEWAY_TOKEN` 和 `ACCIO_WORKSPACE_ROOT`。
-- 不从进程、日志或配置中提取网关密钥绕过认证。正确方式是从 Accio 内新建任务运行，或让 Accio 正式附着/启动工作进程。
+- 不打印、不复制、不写入仓库，也不从进程环境导出网关密钥。若当前 shell 不是 Accio 启动的进程，可读取 Accio 自己生成的 `gateway-cli.json`，仅在同一个临时命令进程中把 `url` 的端口和 `password` 注入 `GATEWAY_PORT`、`ACCIO_GATEWAY_TOKEN`，命令结束即失效。本方法已在 BQ031 发品中验证，不得把密码值写入日志或文档。
 - 后续再次核验时，`workctl auth status` 仍显示 Alibaba 账号已认证，但商品、访客、会话和 RFQ 的命令发现均因当前进程缺少 `ACCIO_GATEWAY_TOKEN` 返回 `desktop_not_attached`。这说明“Accio 已打开/账号已登录”与“当前 Codex 进程已接入经营工具”是两个独立状态。
 - 网关未附着时，可使用已登录国际站后台完成只读核验；但后台页面读取只是兜底方式，不能代替 Accio 的批量结构化查询、草稿预检和异步任务管理。
 
 要恢复完整能力：
 
 1. 打开 Accio Desktop。
-2. 从 Accio Desktop 启动或附着当前工作进程，使其提供本地网关令牌。
+2. 优先从 Accio Desktop 启动/附着工作进程；若现有进程未附着，则使用 Accio 运行时配置做一次性环境注入，且禁止输出凭证值。
 3. 重新执行只读命令发现，确认商品查询、商品详情、质量分、数据参谋和素材包发品命令的当前 schema。
 4. 先完成只读拉取和一次 dry-run/预检。
 5. 任何真实创建草稿、编辑或发布动作都要再次展示目标商品和字段 diff，并由用户明确确认。
@@ -73,9 +73,45 @@ AI 可以帮助贝强完成约 80%-90% 的发品准备工作；Accio Work / Work
 | Accio Work 素材包草稿 + 预检 + 人工确认发布 | 高 | 可控 | 推荐目标方案 |
 | 未审阅批量直发 | 最高 | 高 | 不采用 |
 
+## 接口优先路由（BQ031 实测）
+
+1. 浏览器只做登录、页面研究和最终买家端核验，不再逐格录入或逐张上传。
+2. 已存在草稿时，先用 `icbu.product.search` 或 `icbu.product.list-information` 读取草稿；不得重新生成第二个商品。
+3. 用 `list-information` 分模块读取：基础信息、SKU/交易、履约、详情。数组参数优先通过标准输入传给 `--component-list '@-'`，避免 PowerShell 引号破坏 JSON。
+4. 只修改明确缺失字段。BQ031 实测只补了 `productKeywords`，没有用不确定 URL 覆盖 SKU 颜色图。
+5. 用户确认过发布范围后，用 `icbu.other.submit-draft --yes` 提交。返回 `submit draft success` 只代表提交成功，不等于已经在线。
+6. 提交后必须区分三种状态：
+   - `draft`：仍可编辑的草稿；
+   - `copy`：已提交副本/审核中的版本；
+   - `trunk`：正式线上正本。
+7. `copy` 已生成且 50 个 SKU 获得正式 SKU ID、但 `trunk` 返回 `Record does not exist.` 时，记录为“已提交，待审核/生效”，不得写“已发布上线”。
+8. `productDescType=5` 且 `isAiEdit=true` 表示 AI/HTML 富文本渲染链路。结构化 `detailImage/companyImage/faqs` 未返回，不等于前台没有详情内容；上线后仍须用买家公开页做第二证据源核验。
+
+### BQ031 已验证接口链路
+
+```text
+health
+→ schema（按当前目录发现命令）
+→ search / list-information(draft)
+→ 与 BQ030 list-information(trunk) 对照
+→ product-edit-draft-basic-info（仅补关键词）
+→ list-information(draft) 回读
+→ submit-draft --yes
+→ list-information(copy) 回查
+→ trunk 上线后再次回查
+```
+
+### 常见失败与恢复
+
+- `desktop_not_attached`：当前进程未继承 Accio 网关环境；确认 Accio 正在运行，再做一次性运行时注入。
+- 网关健康检查 `HTTP 404`：误用了 `relayPort`；`GATEWAY_PORT` 应取运行时 `url` 的端口，本次为本地 HTTP 网关端口，而不是 relay 端口。
+- `componentList expects a JSON array`：PowerShell 把数组 JSON 拆坏；改用管道输入 JSON 数组和 `--component-list '@-'`。
+- `Record does not exist.`（trunk）：刚提交时通常尚无正本；查 `copy`，不要重复提交或重建商品。
+- 结构化详情为空：先看 `productDescType`，富文本类型必须做前台二次核验。
+
 ## 下一次实际执行建议
 
-先修复 R1601 的 Canvas/Stretch Fabric 冲突并完成线上回查，再用 BQ031 做第一款“素材包 → 草稿 → 字段 diff → 人工确认 → 发布”的标准样板。成功后再复制到后续新品。
+BQ031 已完成第一款“本地素材 → 后台草稿 → 接口回读 → 缺项编辑 → 提交 → copy 回查”的标准样板。下一步等待 `trunk` 生效，完成买家公开页与质量分回查；随后把同一流程复制到下一款新品。R1601 的 Canvas/Stretch Fabric 冲突仍应单独修复，不与新品发布混做。
 
 ## Accio 标准任务提示词
 
