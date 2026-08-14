@@ -21,6 +21,7 @@ New-Item -ItemType Directory -Force -Path $dataRoot, $downloadRoot, $coverRoot |
 
 $headers = @{
     'User-Agent' = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/127 Safari/537.36'
+    'Referer' = 'https://bqgcd.sooxie.com/'
 }
 
 function Get-RemoteText {
@@ -136,6 +137,7 @@ function Save-RemoteFilesParallel {
     $client = New-Object System.Net.Http.HttpClient($handler)
     $client.Timeout = [TimeSpan]::FromSeconds(60)
     $client.DefaultRequestHeaders.UserAgent.ParseAdd($headers['User-Agent'])
+    $client.DefaultRequestHeaders.Referrer = [Uri]$headers['Referer']
 
     try {
         for ($offset = 0; $offset -lt $Entries.Count; $offset += $MaxParallel) {
@@ -150,12 +152,25 @@ function Save-RemoteFilesParallel {
             }
 
             foreach ($request in $requests) {
-                try {
-                    $bytes = $request.Task.GetAwaiter().GetResult()
+                $bytes = $null
+                $lastError = $null
+                $uris = @($request.Entry.PrimaryUri, $request.Entry.FallbackUri) |
+                    Where-Object { -not [string]::IsNullOrWhiteSpace($_) } |
+                    Select-Object -Unique
+                for ($attempt = 1; $attempt -le 3 -and $null -eq $bytes; $attempt++) {
+                    foreach ($uri in $uris) {
+                        try {
+                            $bytes = $client.GetByteArrayAsync($uri).GetAwaiter().GetResult()
+                            break
+                        }
+                        catch {
+                            $lastError = $_
+                        }
+                    }
+                    if ($null -eq $bytes -and $attempt -lt 3) { Start-Sleep -Milliseconds (500 * $attempt) }
                 }
-                catch {
-                    if ([string]::IsNullOrWhiteSpace($request.Entry.FallbackUri)) { throw }
-                    $bytes = $client.GetByteArrayAsync($request.Entry.FallbackUri).GetAwaiter().GetResult()
+                if ($null -eq $bytes) {
+                    throw "图片下载失败：$($request.Entry.PrimaryUri)；$($lastError.Exception.Message)"
                 }
                 $destination = $request.Entry.Destination
                 $isWebp = $bytes.Length -ge 12 -and
@@ -252,7 +267,10 @@ foreach ($row in $selected) {
     $downloadEntries = @()
     for ($index = 0; $index -lt $urls.Count; $index++) {
         $rawUrl = $urls[$index]
-        $baseUrl = $rawUrl -replace '![^!/?]+$', ''
+        # Xiecdn transformation suffixes can contain slashes, for example
+        # `!/format/webp`. Keep both the original asset URL and transformed URL
+        # so a CDN rule rejecting one form does not block the whole package.
+        $baseUrl = $rawUrl -replace '!.*$', ''
         $ext = [IO.Path]::GetExtension(($baseUrl -split '\?')[0])
         if ([string]::IsNullOrWhiteSpace($ext)) { $ext = '.jpg' }
         $destination = Join-Path $imageDir ('{0:D2}{1}' -f ($index + 1), $ext.ToLowerInvariant())

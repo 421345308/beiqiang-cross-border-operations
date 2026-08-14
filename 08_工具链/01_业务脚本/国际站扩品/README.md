@@ -34,11 +34,36 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\sync_sooxie_catalog.ps1 -M
 - CDN 返回 WebP 时按真实格式保存。
 - 每款保留 `source.json` 和原图文件夹。
 
+大批量续跑经验：一次下载 48 包可能超出单次命令时限，应按 5-8 款小批运行。脚本会跳过已存在文件，不会重新下载完成包。Xiecdn 图片 URL 必须去掉 `!` 后的转码后缀，并携带来源 Referer；当前脚本已内置主/备 URL 和 3 次重试。
+
 搜鞋网官方“数据下载”按钮需要登录。当前脚本从公开详情页重建标题、颜色、尺码、上架时间和完整详情图，不读取账号凭证。
 
 ## 生成联系表
 
 `make_candidate_contact_sheets.ps1` 读取 JPG/PNG 审计预览并生成每页 12 张联系表。WebP 原图先转为 JPG 预览，原图不改。
+
+## 生成预上架包
+
+先完成重复/IP/产品事实审计，然后编辑配置正本：
+
+```text
+sooxie_prelisting_profiles_2026-08-14.json
+```
+
+执行：
+
+```powershell
+python .\build_sooxie_prelisting_batch.py --workspace C:\Users\spq\Desktop\贝强
+```
+
+脚本会：
+
+- 从每款 `source.json` 直接读取尺码。
+- 按配置生成 6 张主图、6 张英文详情图和逐颜色 SKU 图。
+- 校验公开标题/关键词禁用宣称、图片数量、像素尺寸和颜色映射。
+- 写出总表、单品填写表和主图/详情/颜色总览，用于人工视觉验收。
+
+生成程序不调用生成式 AI，不改变鞋型、配色和结构。源图存在中文或第三方标识时，必须通过选图/合规裁切或转入隔离，不使用 AI 抹除风险元素。
 
 ## 每次运行后
 
