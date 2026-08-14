@@ -129,3 +129,16 @@ Weekly review outputs must include:
 ## Evidence Rules
 
 Use real product photos, Beiqiang references, user confirmations, or competitor observations as evidence. Mark uncertain facts clearly. Ask for confirmation before finalizing high-impact details such as material, outsole, lining, size range, price, MOQ, packing, certificates, and lead time.
+
+## Technical Development Inquiry Gate
+
+When a buyer asks for controlled hardness, foam density, rebound, compression set, stack height, drop, last dimensions, new tooling, outsole formulation, laboratory tests, NDA, or a confidential tech pack, classify the inquiry as `Technical Development Buyer` and use `07_知识库与Skills/01_运营SOP/技术型品牌买家询盘评估SOP.md` before quoting.
+
+Always separate:
+
+- `Buyer Target`: what the buyer wants; never present it as an existing Beiqiang capability.
+- `Confirmed Capability`: supported by a physical sample, document, or supplier confirmation.
+- `Fixed / Not Adjustable`: existing mold, structure, formulation, or hardness that cannot be changed.
+- `Actual Result After Sampling`: data that only exists after a finished sample is produced; do not guarantee it will match the buyer target.
+
+Reference images, components, complete physical samples, internal measurements, and formal test reports are different readiness levels. Never describe a reference sole or concept as a tested finished shoe. Do not create a Trade Assurance sample order until the sample purpose, deliverables, acceptance criteria, and exclusions are written clearly.
