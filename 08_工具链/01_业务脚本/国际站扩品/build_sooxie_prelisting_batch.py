@@ -178,7 +178,7 @@ def color_card(
     width, height = size
     top = 48
     if show_header:
-        draw.text((50, 38), "DOCUMENTED COLOR OPTIONS", font=font(32, True), fill="#17212b")
+        draw.text((50, 38), "AVAILABLE COLOR OPTIONS", font=font(32, True), fill="#17212b")
         draw.text((50, 84), "Select colors and size ratio when sending an inquiry", font=font(20), fill="#66737f")
         top = 126
     colors = product["colors"]
@@ -226,7 +226,7 @@ def make_overview(product: dict[str, Any], hero: Image.Image, sizes: list[str]) 
 def make_specs(product: dict[str, Any], hero: Image.Image, sizes: list[str]) -> Image.Image:
     canvas = Image.new("RGB", (1200, 1200), "white")
     draw = ImageDraw.Draw(canvas)
-    draw_header(draw, "PRODUCT FACTS", "Specifications from the source package", "Materials, sizes and colors are kept product-specific")
+    draw_header(draw, "PRODUCT FACTS", "Product Specifications", "Materials, sizes and colors for this style")
     paste_image(canvas, hero, (650, 260, 1130, 900))
     rows = [
         ("Fit Type", "Regular Fit"),
@@ -250,7 +250,7 @@ def make_specs(product: dict[str, Any], hero: Image.Image, sizes: list[str]) -> 
 def make_size(product: dict[str, Any], hero: Image.Image, sizes: list[str]) -> Image.Image:
     canvas = Image.new("RGB", (1200, 1200), "white")
     draw = ImageDraw.Draw(canvas)
-    draw_header(draw, "SIZE RANGE", f"Available {product['size_system']} sizes", "Use the source-package range; final size ratio is confirmed before production")
+    draw_header(draw, "SIZE RANGE", f"Available {product['size_system']} sizes", "Final size selection and size ratio are confirmed before production")
     paste_image(canvas, hero, (710, 250, 1130, 850))
     x0, y0 = 70, 310
     cell_w, cell_h = 145, 92
@@ -271,7 +271,7 @@ def make_size(product: dict[str, Any], hero: Image.Image, sizes: list[str]) -> I
 def make_order(product: dict[str, Any], commercial: dict[str, Any], hero: Image.Image) -> Image.Image:
     canvas = Image.new("RGB", (1200, 1200), "white")
     draw = ImageDraw.Draw(canvas)
-    draw_header(draw, "WHOLESALE ORDER", "Commercial terms prepared for Alibaba.com", "The same owner-confirmed template is used for this batch")
+    draw_header(draw, "WHOLESALE ORDER", "Wholesale Order Terms", "MOQ, tier pricing, lead time and packing for wholesale buyers")
     paste_image(canvas, hero, (720, 250, 1130, 850))
     prices = commercial["ladder_prices_usd"]
     items = [
@@ -539,6 +539,22 @@ def write_batch_outputs(workspace: Path, rows: list[dict[str, Any]], output_root
     data_root = workspace / "02_Alibaba运营" / "05_扩品工程" / "数据"
     data_root.mkdir(parents=True, exist_ok=True)
     csv_path = data_root / "国际站预上架商品总表_2026-08-14.csv"
+    # Asset regeneration must not erase statuses written back after browser publishing.
+    # Preserve the three operational fields for any SKU that has moved beyond ASSETS_READY.
+    previous_by_code: dict[str, dict[str, str]] = {}
+    if csv_path.exists():
+        with csv_path.open("r", encoding="utf-8-sig", newline="") as handle:
+            previous_by_code = {
+                item["bq_code"]: item
+                for item in csv.DictReader(handle)
+                if item.get("bq_code")
+            }
+    for row in rows:
+        previous = previous_by_code.get(row["bq_code"])
+        if previous and previous.get("status") not in (None, "", "ASSETS_READY"):
+            for field in ("status", "next_action", "last_updated"):
+                if previous.get(field):
+                    row[field] = previous[field]
     with csv_path.open("w", encoding="utf-8-sig", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=list(rows[0].keys()))
         writer.writeheader()
@@ -547,7 +563,7 @@ def write_batch_outputs(workspace: Path, rows: list[dict[str, Any]], output_root
     qa_path = workspace / "02_Alibaba运营" / "05_扩品工程" / "预检" / "20款国际站预上架包验收_2026-08-14.md"
     qa_path.parent.mkdir(parents=True, exist_ok=True)
     table = "\n".join(
-        f"| {row['bq_code']} | {row['source_artno']} | {row['fit_type']} | {row['sizes'].replace(';', ', ')} | {row['main_images']}/{row['detail_images']}/{row['color_images']} | {row['status']} |"
+        f"| {row['bq_code']} | {row['source_artno']} | {row['fit_type']} | {row['sizes'].replace(';', ', ')} | {row['main_images']}/{row['detail_images']}/{row['color_images']} | ASSETS_READY |"
         for row in rows
     )
     qa_path.write_text(
