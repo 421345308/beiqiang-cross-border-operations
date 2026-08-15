@@ -88,6 +88,8 @@ Breathable Slip-On Sneakers
 
 慢走风休闲鞋常用属性：
 
+下表仅是常用参考值，不是所有鞋款的默认答案。每款必须回到来源包、实物图和负责人确认；不得把 `Mesh / EVA / Rubber` 机械复制到不同结构的鞋款。
+
 | 字段 | 推荐值 |
 |---|---|
 | 大底材质 | Rubber |
@@ -105,6 +107,8 @@ Breathable Slip-On Sneakers
 | 闭合方式 | Slip-On |
 | 图案 | Solid |
 | 鞋面材质 | Mesh |
+
+同一链接同时包含常规与加绒 SKU 时，里衬属性应覆盖真实存在的两种材料，例如 `Mesh + Plush`；标题写 `with Fleece Option`，不得把全款描述成加绒。若加绒仅改变内里，常规与加绒 SKU 可共用外观图，但外观图不能作为加绒证据。
 
 通常不强填：
 
@@ -265,6 +269,7 @@ HS 编码原则：
 - 不盲填完整美国 HS 编码。
 - 中国出口 HS 编码、美国 HS 编码最终建议由货代/报关行复核。
 - 任何涉及税率、清关异常风险的字段，都要向商家确认。
+- 国际站的“美国 HS 编码维护”可能先要求标题和必填属性完整；先补齐有证据的材料字段，再读取平台候选。当前按“商机品”发布时该模块可能不显示，不为打开模块而编造材料或盲填完整编码。
 
 ## 12. 公司信息与 FAQ
 
@@ -350,3 +355,4 @@ A: Yes, it is designed for daily walking, commuting, travel and light outdoor ac
 8. 详情图不能只凭素材源、`assemble/saveDraft success` 或草稿编辑接口的 success 判断已写入。正式发布前必须执行发布预检；若返回 `detailImage:详情图片不能为空`，使用 `operationType=ADD + newImageUrl + imageIndex` 逐张补写，旧结构 `[{imageUrl:...}]` 可能被静默忽略。
 9. Accio 重启、升级、切换任务或存在旧消息排队后，先只读查询目标 productId、草稿/审核/在线状态和同型号匹配数，再允许任何写操作。确认旧任务没有继续运行后再发送下一条发布指令，避免延迟执行造成重复商品。
 10. `publish-draft` 必须绑定已核验的唯一草稿 ID；禁止为解决草稿字段问题改用 `publish-product` 新建第二条商品。发布后记录原 productId、发布回执和审核状态。
+11. 里衬存在常规与加绒两种 SKU 时，后台里衬材质使用多值（例如 `Mesh + Plush`），标题用 `with Fleece Option`；禁止平台 AI 把整款自动改成全加绒。
