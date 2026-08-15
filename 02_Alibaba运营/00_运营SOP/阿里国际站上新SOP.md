@@ -336,4 +336,14 @@ A: Yes, it is designed for daily walking, commuting, travel and light outdoor ac
 9. 运行商品质量检测；质量分达到 5.0、各区块无问题后再提交。
 10. 从成功页记录 `primaryId` 和“审核中”状态，并立即写回扩品台账。
 
-本流程已由 BQ032（`10000046653813`）与 BQ033（`11000037600317`）实测验证。
+本流程已由 BQ032（`10000046653813`）、BQ034（`11000037600317`）和 BQ035（`10000046705043`）实测验证；BQ033（`1601924345456`）已提交并进入审核队列。
+
+## 16. 复制链接与 Accio/Workctl 发品门禁（2026-08-15）
+
+1. 禁止手工把现有商品 URL 改成 `pubAction=similarPost`。实测该参数会复用源商品 ID，并可能在未点击保存时覆盖源商品。
+2. 浏览器复制只能从平台 UI 执行 `发布新商品 → 发布类似 → 选择源商品`；真正的新建流程 URL 使用 `opType=similarPost`。提交后必须同时得到独立新 ID，并核对商品总数或列表中旧 ID 仍存在。
+3. Accio/Workctl 推荐链路：最终素材逐张目视验收 → 上传 CDN → 组装 materialInfo → infer/category schema → 建草稿 → search 回读 → 属性纠偏 → 正式提交 → 审核后 trunk/质量分/总数复验。
+4. 最终素材已定稿时设置 `decorationPlan=none`，禁止 AI 生图、重画鞋型或把推测材料写入商品字段。
+5. 平台 AI 生成草稿后必须逐项比对填写表。BQ033 实测出现标题改写、EVA/Mesh/Anti-Slip 虚构字段和颜色 SKU 错配，均在提交前修正。
+6. 草稿属性编辑使用 `attrNameId + attrValueId + attrValue + operationType`；已有属性用 `EDIT`，新增属性用 `ADD`。接口 success 之后仍要 search 回读确认真实落值。
+7. 审核中商品的质量分可能为 `null`，也可能暂不计入在线总数。只能记录“已提交/审核中”，待审核通过后再写入质量分、在线总数和 7/14/30 天观察起点。
