@@ -336,7 +336,7 @@ A: Yes, it is designed for daily walking, commuting, travel and light outdoor ac
 9. 运行商品质量检测；质量分达到 5.0、各区块无问题后再提交。
 10. 从成功页记录 `primaryId` 和“审核中”状态，并立即写回扩品台账。
 
-本流程已由 BQ032（`10000046653813`）、BQ034（`11000037600317`）和 BQ035（`10000046705043`）实测验证；BQ033（`1601924345456`）已提交并进入审核队列。
+本流程已由 BQ032（`10000046653813`）、BQ033 主商品（`1601924345456`）、BQ034（`11000037600317`）和 BQ035（`10000046705043`）实测验证；BQ036（`1601924292931`）已提交并进入审核队列。
 
 ## 16. 复制链接与 Accio/Workctl 发品门禁（2026-08-15）
 
@@ -347,3 +347,6 @@ A: Yes, it is designed for daily walking, commuting, travel and light outdoor ac
 5. 平台 AI 生成草稿后必须逐项比对填写表。BQ033 实测出现标题改写、EVA/Mesh/Anti-Slip 虚构字段和颜色 SKU 错配，均在提交前修正。
 6. 草稿属性编辑使用 `attrNameId + attrValueId + attrValue + operationType`；已有属性用 `EDIT`，新增属性用 `ADD`。接口 success 之后仍要 search 回读确认真实落值。
 7. 审核中商品的质量分可能为 `null`，也可能暂不计入在线总数。只能记录“已提交/审核中”，待审核通过后再写入质量分、在线总数和 7/14/30 天观察起点。
+8. 详情图不能只凭素材源、`assemble/saveDraft success` 或草稿编辑接口的 success 判断已写入。正式发布前必须执行发布预检；若返回 `detailImage:详情图片不能为空`，使用 `operationType=ADD + newImageUrl + imageIndex` 逐张补写，旧结构 `[{imageUrl:...}]` 可能被静默忽略。
+9. Accio 重启、升级、切换任务或存在旧消息排队后，先只读查询目标 productId、草稿/审核/在线状态和同型号匹配数，再允许任何写操作。确认旧任务没有继续运行后再发送下一条发布指令，避免延迟执行造成重复商品。
+10. `publish-draft` 必须绑定已核验的唯一草稿 ID；禁止为解决草稿字段问题改用 `publish-product` 新建第二条商品。发布后记录原 productId、发布回执和审核状态。
