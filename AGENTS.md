@@ -138,6 +138,8 @@ Use real product photos, Beiqiang references, user confirmations, or competitor 
 - Product images written to Alibaba must use official Alibaba image-bank/CDN URLs. Never persist Accio temporary URLs or nested URLs.
 - A publish/repair is complete only after title/model, six main images, SKU bindings, six product-detail images, five company images, bad-URL scan, copy, trunk, and public-page checks pass.
 - Do not continue new listings while the current published-catalog audit has unresolved blocking errors.
+- Confirmed store baseline as of 2026-08-17: MOQ `2 pairs`, current online price ladders, `31 days for 100 pairs`, and `34 × 23 × 13 cm / 0.5 kg / 1 pair`; SKU-specific evidence overrides this baseline.
+- GPSR decision as of 2026-08-17: accept the current EU country blocking temporarily. Never describe this as GPSR compliance or invent an EU Responsible Person.
 
 ## Technical Development Inquiry Gate
 

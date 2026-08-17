@@ -1,0 +1,47 @@
+{
+  "date": "2026-08-17",
+  "status": "WAITING_FOR_PHOTOBANK_LOGIN",
+  "destination": "Alibaba.com Picture Bank",
+  "rules": [
+    "Upload through the official Alibaba picture bank only",
+    "Record the returned official Alibaba CDN URL for every file",
+    "Do not use Accio temporary, local, signed OSS, or nested URLs"
+  ],
+  "files": [
+    {"role":"BQ032_main_replace_1","path":"02_可上传素材/00_最终上传/BQ032_ZX2212/01_主图/01_main_clean.jpg","cdnUrl":null},
+    {"role":"BQ032_main_replace_2","path":"02_可上传素材/00_最终上传/BQ032_ZX2212/01_主图/02_upper_clean.jpg","cdnUrl":null},
+    {"role":"BQ032_main_replace_3","path":"02_可上传素材/00_最终上传/BQ032_ZX2212/01_主图/03_structure_clean.jpg","cdnUrl":null},
+    {"role":"BQ032_main_replace_4","path":"02_可上传素材/00_最终上传/BQ032_ZX2212/01_主图/04_sole_clean.jpg","cdnUrl":null},
+    {"role":"BQ032_main_replace_6","path":"02_可上传素材/00_最终上传/BQ032_ZX2212/01_主图/06_scene_clean.jpg","cdnUrl":null},
+
+    {"role":"BQ003_main_add_6","path":"02_可上传素材/00_最终上传/BQ003_R1218/02_详情页/04_colors.jpg","cdnUrl":null},
+    {"role":"BQ007_main_add_6","path":"02_可上传素材/00_最终上传/BQ007_L0017/02_详情页/04_colors.jpg","cdnUrl":null},
+    {"role":"BQ009_main_add_6","path":"02_可上传素材/00_最终上传/BQ009_L1026/02_详情页/04_colors.jpg","cdnUrl":null},
+    {"role":"BQ010_main_add_6","path":"02_可上传素材/00_最终上传/BQ010_R1601/02_详情页/04_colors.jpg","cdnUrl":null},
+
+    {"role":"BQ033_color_black","path":"02_可上传素材/00_最终上传/BQ033_T5503/03_颜色图/01_black.jpg","cdnUrl":null},
+    {"role":"BQ033_color_grey","path":"02_可上传素材/00_最终上传/BQ033_T5503/03_颜色图/02_grey.jpg","cdnUrl":null},
+    {"role":"BQ033_color_off_white","path":"02_可上传素材/00_最终上传/BQ033_T5503/03_颜色图/03_off_white.jpg","cdnUrl":null},
+    {"role":"BQ033_color_pink","path":"02_可上传素材/00_最终上传/BQ033_T5503/03_颜色图/04_pink.jpg","cdnUrl":null},
+
+    {"role":"BQ036_color_black_white","path":"02_可上传素材/00_最终上传/BQ036_8025/03_颜色图/01_black_white.jpg","cdnUrl":null},
+    {"role":"BQ036_color_all_black","path":"02_可上传素材/00_最终上传/BQ036_8025/03_颜色图/02_all_black.jpg","cdnUrl":null},
+
+    {"role":"BQ037_color_black_white","path":"02_可上传素材/00_最终上传/BQ037_H7116/03_颜色图/01_black_white.jpg","cdnUrl":null},
+    {"role":"BQ037_color_grey","path":"02_可上传素材/00_最终上传/BQ037_H7116/03_颜色图/02_grey.jpg","cdnUrl":null},
+    {"role":"BQ037_color_white","path":"02_可上传素材/00_最终上传/BQ037_H7116/03_颜色图/03_white.jpg","cdnUrl":null},
+    {"role":"BQ037_color_blue","path":"02_可上传素材/00_最终上传/BQ037_H7116/03_颜色图/04_blue.jpg","cdnUrl":null},
+    {"role":"BQ037_color_green","path":"02_可上传素材/00_最终上传/BQ037_H7116/03_颜色图/05_green.jpg","cdnUrl":null},
+    {"role":"BQ037_color_purple_eu_35_40","path":"02_可上传素材/00_最终上传/BQ037_H7116/03_颜色图/06_purple_eu_35_40.jpg","cdnUrl":null},
+    {"role":"BQ037_color_black_white_fleece","path":"02_可上传素材/00_最终上传/BQ037_H7116/03_颜色图/07_black_white_fleece.jpg","cdnUrl":null},
+
+    {"role":"BQ038_color_black_white","path":"02_可上传素材/00_最终上传/BQ038_M889/03_颜色图/01_black_white.jpg","cdnUrl":null},
+    {"role":"BQ038_color_white","path":"02_可上传素材/00_最终上传/BQ038_M889/03_颜色图/02_white.jpg","cdnUrl":null},
+    {"role":"BQ038_color_all_black","path":"02_可上传素材/00_最终上传/BQ038_M889/03_颜色图/03_all_black.jpg","cdnUrl":null},
+    {"role":"BQ038_color_black_white_fleece","path":"02_可上传素材/00_最终上传/BQ038_M889/03_颜色图/04_black_white_fleece.jpg","cdnUrl":null},
+    {"role":"BQ038_color_all_black_fleece","path":"02_可上传素材/00_最终上传/BQ038_M889/03_颜色图/05_all_black_fleece.jpg","cdnUrl":null},
+
+    {"role":"BQ039_color_black","path":"02_可上传素材/00_最终上传/BQ039_155/03_颜色图/01_black.jpg","cdnUrl":null},
+    {"role":"BQ039_color_red","path":"02_可上传素材/00_最终上传/BQ039_155/03_颜色图/02_red.jpg","cdnUrl":null}
+  ]
+}
