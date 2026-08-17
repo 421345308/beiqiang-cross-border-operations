@@ -1,6 +1,6 @@
 {
   "date": "2026-08-17",
-  "status": "WAITING_FOR_PHOTOBANK_LOGIN",
+  "status": "UPLOADED_AND_URLS_RECORDED",
   "destination": "Alibaba.com Picture Bank",
   "rules": [
     "Upload through the official Alibaba picture bank only",
@@ -8,40 +8,40 @@
     "Do not use Accio temporary, local, signed OSS, or nested URLs"
   ],
   "files": [
-    {"role":"BQ032_main_replace_1","path":"02_可上传素材/00_最终上传/BQ032_ZX2212/01_主图/01_main_clean.jpg","cdnUrl":null},
-    {"role":"BQ032_main_replace_2","path":"02_可上传素材/00_最终上传/BQ032_ZX2212/01_主图/02_upper_clean.jpg","cdnUrl":null},
-    {"role":"BQ032_main_replace_3","path":"02_可上传素材/00_最终上传/BQ032_ZX2212/01_主图/03_structure_clean.jpg","cdnUrl":null},
-    {"role":"BQ032_main_replace_4","path":"02_可上传素材/00_最终上传/BQ032_ZX2212/01_主图/04_sole_clean.jpg","cdnUrl":null},
-    {"role":"BQ032_main_replace_6","path":"02_可上传素材/00_最终上传/BQ032_ZX2212/01_主图/06_scene_clean.jpg","cdnUrl":null},
+    {"role":"BQ032_main_replace_1","path":"02_可上传素材/00_最终上传/BQ032_ZX2212/01_主图/01_main_clean.jpg","cdnUrl":"https://sc04.alicdn.com/kf/A05134d6d3a284d80b4a77c0a1ff45131h/286385890/A05134d6d3a284d80b4a77c0a1ff45131h.jpg"},
+    {"role":"BQ032_main_replace_2","path":"02_可上传素材/00_最终上传/BQ032_ZX2212/01_主图/02_upper_clean.jpg","cdnUrl":"https://sc04.alicdn.com/kf/A68f93614e5164fe9a56102157911a2af3/286385890/A68f93614e5164fe9a56102157911a2af3.jpg"},
+    {"role":"BQ032_main_replace_3","path":"02_可上传素材/00_最终上传/BQ032_ZX2212/01_主图/03_structure_clean.jpg","cdnUrl":"https://sc04.alicdn.com/kf/Ab3f03d451a1b4c189ef7eb1e8ca9ba45H/286385890/Ab3f03d451a1b4c189ef7eb1e8ca9ba45H.jpg"},
+    {"role":"BQ032_main_replace_4","path":"02_可上传素材/00_最终上传/BQ032_ZX2212/01_主图/04_sole_clean.jpg","cdnUrl":"https://sc04.alicdn.com/kf/A253de6dde4b7413088f643ecd116d2f0U/286385890/A253de6dde4b7413088f643ecd116d2f0U.jpg"},
+    {"role":"BQ032_main_replace_6","path":"02_可上传素材/00_最终上传/BQ032_ZX2212/01_主图/06_scene_clean.jpg","cdnUrl":"https://sc04.alicdn.com/kf/Aa1143854b6ba4da9937d781e332a34e2u/286385890/Aa1143854b6ba4da9937d781e332a34e2u.jpg"},
 
-    {"role":"BQ003_main_add_6","path":"02_可上传素材/00_最终上传/BQ003_R1218/02_详情页/04_colors.jpg","cdnUrl":null},
-    {"role":"BQ007_main_add_6","path":"02_可上传素材/00_最终上传/BQ007_L0017/02_详情页/04_colors.jpg","cdnUrl":null},
-    {"role":"BQ009_main_add_6","path":"02_可上传素材/00_最终上传/BQ009_L1026/02_详情页/04_colors.jpg","cdnUrl":null},
-    {"role":"BQ010_main_add_6","path":"02_可上传素材/00_最终上传/BQ010_R1601/02_详情页/04_colors.jpg","cdnUrl":null},
+    {"role":"BQ003_main_add_6","path":"02_可上传素材/00_最终上传/BQ003_R1218/02_详情页/04_colors.jpg","cdnUrl":"https://sc04.alicdn.com/kf/A8262cb6a522b47c4b53f6a1a64b97db4Q/286385890/A8262cb6a522b47c4b53f6a1a64b97db4Q.jpg"},
+    {"role":"BQ007_main_add_6","path":"02_可上传素材/00_最终上传/BQ007_L0017/02_详情页/04_colors.jpg","cdnUrl":"https://sc04.alicdn.com/kf/Hcea6af89a4104bc59df92d1381f3533eS/286385890/Hcea6af89a4104bc59df92d1381f3533eS.jpg"},
+    {"role":"BQ009_main_add_6","path":"02_可上传素材/00_最终上传/BQ009_L1026/02_详情页/04_colors.jpg","cdnUrl":"https://sc04.alicdn.com/kf/H2977c962882f40d084232e3f81390822S/286385890/H2977c962882f40d084232e3f81390822S.jpg"},
+    {"role":"BQ010_main_add_6","path":"02_可上传素材/00_最终上传/BQ010_R1601/02_详情页/04_colors.jpg","cdnUrl":"https://sc04.alicdn.com/kf/H4b9c8e562cc84beb958fa1a57ebf6d20B/286385890/H4b9c8e562cc84beb958fa1a57ebf6d20B.jpg"},
 
-    {"role":"BQ033_color_black","path":"02_可上传素材/00_最终上传/BQ033_T5503/03_颜色图/01_black.jpg","cdnUrl":null},
-    {"role":"BQ033_color_grey","path":"02_可上传素材/00_最终上传/BQ033_T5503/03_颜色图/02_grey.jpg","cdnUrl":null},
-    {"role":"BQ033_color_off_white","path":"02_可上传素材/00_最终上传/BQ033_T5503/03_颜色图/03_off_white.jpg","cdnUrl":null},
-    {"role":"BQ033_color_pink","path":"02_可上传素材/00_最终上传/BQ033_T5503/03_颜色图/04_pink.jpg","cdnUrl":null},
+    {"role":"BQ033_color_black","path":"02_可上传素材/00_最终上传/BQ033_T5503/03_颜色图/01_black.jpg","cdnUrl":"https://sc04.alicdn.com/kf/S5ee9f570c7c241159982e56104ef78c59/286385890/S5ee9f570c7c241159982e56104ef78c59.jpg"},
+    {"role":"BQ033_color_grey","path":"02_可上传素材/00_最终上传/BQ033_T5503/03_颜色图/02_grey.jpg","cdnUrl":"https://sc04.alicdn.com/kf/Sb343ded6b6184fffbfbf4c6709a4737f2/286385890/Sb343ded6b6184fffbf4c6709a4737f2.jpg"},
+    {"role":"BQ033_color_off_white","path":"02_可上传素材/00_最终上传/BQ033_T5503/03_颜色图/03_off_white.jpg","cdnUrl":"https://sc04.alicdn.com/kf/S79c859c4a1954cd1a997c6243cfa4970e/286385890/S79c859c4a1954cd1a997c6243cfa4970e.jpg"},
+    {"role":"BQ033_color_pink","path":"02_可上传素材/00_最终上传/BQ033_T5503/03_颜色图/04_pink.jpg","cdnUrl":"https://sc04.alicdn.com/kf/S93bae5af796b4a0fb1b32cb3d41dd831v/286385890/S93bae5af796b4a0fb1b32cb3d41dd831v.jpg"},
 
-    {"role":"BQ036_color_black_white","path":"02_可上传素材/00_最终上传/BQ036_8025/03_颜色图/01_black_white.jpg","cdnUrl":null},
-    {"role":"BQ036_color_all_black","path":"02_可上传素材/00_最终上传/BQ036_8025/03_颜色图/02_all_black.jpg","cdnUrl":null},
+    {"role":"BQ036_color_black_white","path":"02_可上传素材/00_最终上传/BQ036_8025/03_颜色图/01_black_white.jpg","cdnUrl":"https://sc04.alicdn.com/kf/A6be70a6b71f0412c9e3bb99c2307f5d3T/286385890/A6be70a6b71f0412c9e3bb99c2307f5d3T.jpg"},
+    {"role":"BQ036_color_all_black","path":"02_可上传素材/00_最终上传/BQ036_8025/03_颜色图/02_all_black.jpg","cdnUrl":"https://sc04.alicdn.com/kf/Ac521b96ba4f94f4d88fd4911085cd0f1g/286385890/Ac521b96ba4f94f4d88fd4911085cd0f1g.jpg"},
 
-    {"role":"BQ037_color_black_white","path":"02_可上传素材/00_最终上传/BQ037_H7116/03_颜色图/01_black_white.jpg","cdnUrl":null},
-    {"role":"BQ037_color_grey","path":"02_可上传素材/00_最终上传/BQ037_H7116/03_颜色图/02_grey.jpg","cdnUrl":null},
-    {"role":"BQ037_color_white","path":"02_可上传素材/00_最终上传/BQ037_H7116/03_颜色图/03_white.jpg","cdnUrl":null},
-    {"role":"BQ037_color_blue","path":"02_可上传素材/00_最终上传/BQ037_H7116/03_颜色图/04_blue.jpg","cdnUrl":null},
-    {"role":"BQ037_color_green","path":"02_可上传素材/00_最终上传/BQ037_H7116/03_颜色图/05_green.jpg","cdnUrl":null},
-    {"role":"BQ037_color_purple_eu_35_40","path":"02_可上传素材/00_最终上传/BQ037_H7116/03_颜色图/06_purple_eu_35_40.jpg","cdnUrl":null},
-    {"role":"BQ037_color_black_white_fleece","path":"02_可上传素材/00_最终上传/BQ037_H7116/03_颜色图/07_black_white_fleece.jpg","cdnUrl":null},
+    {"role":"BQ037_color_black_white","path":"02_可上传素材/00_最终上传/BQ037_H7116/03_颜色图/01_black_white.jpg","cdnUrl":"https://sc04.alicdn.com/kf/A56196cef12c24340ac64e5acd0949985r/286385890/A56196cef12c24340ac64e5acd0949985r.jpg"},
+    {"role":"BQ037_color_grey","path":"02_可上传素材/00_最终上传/BQ037_H7116/03_颜色图/02_grey.jpg","cdnUrl":"https://sc04.alicdn.com/kf/A65e7f2f0e8e44051a0a855b659b414d1y/286385890/A65e7f2f0e8e44051a0a855b659b414d1y.jpg"},
+    {"role":"BQ037_color_white","path":"02_可上传素材/00_最终上传/BQ037_H7116/03_颜色图/03_white.jpg","cdnUrl":"https://sc04.alicdn.com/kf/A7dd9fbbb195c4d9db3277964df520a0fM/286385890/A7dd9fbbb195c4d9db3277964df520a0fM.jpg"},
+    {"role":"BQ037_color_blue","path":"02_可上传素材/00_最终上传/BQ037_H7116/03_颜色图/04_blue.jpg","cdnUrl":"https://sc04.alicdn.com/kf/A061be01aecb543669a8c01e286fb4bc4p/286385890/A061be01aecb543669a8c01e286fb4bc4p.jpg"},
+    {"role":"BQ037_color_green","path":"02_可上传素材/00_最终上传/BQ037_H7116/03_颜色图/05_green.jpg","cdnUrl":"https://sc04.alicdn.com/kf/Acae227f1d91444a29447da11606085ce8/286385890/Acae227f1d91444a29447da11606085ce8.jpg"},
+    {"role":"BQ037_color_purple_eu_35_40","path":"02_可上传素材/00_最终上传/BQ037_H7116/03_颜色图/06_purple_eu_35_40.jpg","cdnUrl":"https://sc04.alicdn.com/kf/A7f4a7deef4aa452e96cb1298a66bfcae5/286385890/A7f4a7deef4aa452e96cb1298a66bfcae5.jpg"},
+    {"role":"BQ037_color_black_white_fleece","path":"02_可上传素材/00_最终上传/BQ037_H7116/03_颜色图/07_black_white_fleece.jpg","cdnUrl":"https://sc04.alicdn.com/kf/A56196cef12c24340ac64e5acd0949985r/286385890/A56196cef12c24340ac64e5acd0949985r.jpg"},
 
-    {"role":"BQ038_color_black_white","path":"02_可上传素材/00_最终上传/BQ038_M889/03_颜色图/01_black_white.jpg","cdnUrl":null},
-    {"role":"BQ038_color_white","path":"02_可上传素材/00_最终上传/BQ038_M889/03_颜色图/02_white.jpg","cdnUrl":null},
-    {"role":"BQ038_color_all_black","path":"02_可上传素材/00_最终上传/BQ038_M889/03_颜色图/03_all_black.jpg","cdnUrl":null},
-    {"role":"BQ038_color_black_white_fleece","path":"02_可上传素材/00_最终上传/BQ038_M889/03_颜色图/04_black_white_fleece.jpg","cdnUrl":null},
-    {"role":"BQ038_color_all_black_fleece","path":"02_可上传素材/00_最终上传/BQ038_M889/03_颜色图/05_all_black_fleece.jpg","cdnUrl":null},
+    {"role":"BQ038_color_black_white","path":"02_可上传素材/00_最终上传/BQ038_M889/03_颜色图/01_black_white.jpg","cdnUrl":"https://sc04.alicdn.com/kf/A672d0ffbd4884ffd93ae06e0a76e7dd9W/286385890/A672d0ffbd4884ffd93ae06e0a76e7dd9W.jpg"},
+    {"role":"BQ038_color_white","path":"02_可上传素材/00_最终上传/BQ038_M889/03_颜色图/02_white.jpg","cdnUrl":"https://sc04.alicdn.com/kf/Aac8660ee523d46f3a406da178f80b751I/286385890/Aac8660ee523d46f3a406da178f80b751I.jpg"},
+    {"role":"BQ038_color_all_black","path":"02_可上传素材/00_最终上传/BQ038_M889/03_颜色图/03_all_black.jpg","cdnUrl":"https://sc04.alicdn.com/kf/Abae25a0a9dc94f8ea3095a46c638af7fx/286385890/Abae25a0a9dc94f8ea3095a46c638af7fx.jpg"},
+    {"role":"BQ038_color_black_white_fleece","path":"02_可上传素材/00_最终上传/BQ038_M889/03_颜色图/04_black_white_fleece.jpg","cdnUrl":"https://sc04.alicdn.com/kf/A6bf6521664cf4226b5469ecb2c08e28c8/286385890/A6bf6521664cf4226b5469ecb2c08e28c8.jpg"},
+    {"role":"BQ038_color_all_black_fleece","path":"02_可上传素材/00_最终上传/BQ038_M889/03_颜色图/05_all_black_fleece.jpg","cdnUrl":"https://sc04.alicdn.com/kf/A55ef7781db04422290aad1e77437b6a1u/286385890/A55ef7781db04422290aad1e77437b6a1u.jpg"},
 
-    {"role":"BQ039_color_black","path":"02_可上传素材/00_最终上传/BQ039_155/03_颜色图/01_black.jpg","cdnUrl":null},
-    {"role":"BQ039_color_red","path":"02_可上传素材/00_最终上传/BQ039_155/03_颜色图/02_red.jpg","cdnUrl":null}
+    {"role":"BQ039_color_black","path":"02_可上传素材/00_最终上传/BQ039_155/03_颜色图/01_black.jpg","cdnUrl":"https://sc04.alicdn.com/kf/A6dd9ffde37bd4b6ca94fcf3d39483f92o/286385890/A6dd9ffde37bd4b6ca94fcf3d39483f92o.jpg"},
+    {"role":"BQ039_color_red","path":"02_可上传素材/00_最终上传/BQ039_155/03_颜色图/02_red.jpg","cdnUrl":"https://sc04.alicdn.com/kf/Ad7fb6ec062ff4e1d8522e3cf388911c2Q/286385890/Ad7fb6ec062ff4e1d8522e3cf388911c2Q.jpg"}
   ]
 }
