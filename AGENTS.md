@@ -130,6 +130,15 @@ Weekly review outputs must include:
 
 Use real product photos, Beiqiang references, user confirmations, or competitor observations as evidence. Mark uncertain facts clearly. Ask for confirmation before finalizing high-impact details such as material, outsole, lining, size range, price, MOQ, packing, certificates, and lead time.
 
+## Alibaba Live Publishing Gate
+
+- The sole authoritative workspace SOP is `02_Alibaba运营/00_运营SOP/国际站商品全生命周期SOP.md`.
+- Do not reuse legacy defaults for material, lining, US size conversion, foot length, price, MOQ, sample terms, lead time, package weight/dimensions, customs, or old Workctl commands.
+- BQ032 and later products are regular fit unless SKU-specific evidence or the user confirms a wide last. Never infer `Wide Toe Box` from appearance alone.
+- Product images written to Alibaba must use official Alibaba image-bank/CDN URLs. Never persist Accio temporary URLs or nested URLs.
+- A publish/repair is complete only after title/model, six main images, SKU bindings, six product-detail images, five company images, bad-URL scan, copy, trunk, and public-page checks pass.
+- Do not continue new listings while the current published-catalog audit has unresolved blocking errors.
+
 ## Technical Development Inquiry Gate
 
 When a buyer asks for controlled hardness, foam density, rebound, compression set, stack height, drop, last dimensions, new tooling, outsole formulation, laboratory tests, NDA, or a confidential tech pack, classify the inquiry as `Technical Development Buyer` and use `07_知识库与Skills/01_运营SOP/技术型品牌买家询盘评估SOP.md` before quoting.
