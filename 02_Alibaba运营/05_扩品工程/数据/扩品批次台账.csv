@@ -12,7 +12,7 @@ batch_id,bq_code,source_artno,source_url,product_role,main_status,ip_status,pack
 2026-08-14-B,BQ042,206,https://bqgcd.sooxie.com/detail/1397685,系带针织缓震休闲鞋,ASSETS_READY,PASS,19,,登录后回读并建唯一草稿,2026-08-14
 2026-08-14-B,BQ043,8008,https://bqgcd.sooxie.com/detail/2043443,系带厚底 EVA 休闲鞋,ASSETS_READY,PASS,30,,登录后回读并建唯一草稿,2026-08-14
 2026-08-14-B,BQ044,811,https://bqgcd.sooxie.com/detail/1994639,低轮廓系带针织休闲鞋,ASSETS_READY,PASS,30,,登录后回读并建唯一草稿,2026-08-14
-2026-08-14-B,BQ045,A012,https://bqgcd.sooxie.com/detail/1576849,男士高帮套袜休闲鞋,SUBMITTED_UNDER_REVIEW,PASS,12,10000047160193,审核通过后执行copy/trunk/公开页三层验收,2026-08-23
+2026-08-14-B,BQ045,A012,https://bqgcd.sooxie.com/detail/1576849,男士高帮套袜休闲鞋,SUBMITTED_UNDER_REVIEW_WITH_SIZE_TABLE_BLOCKER,PASS,12,10000047160193,审核后先清除或据实重建旧尺码换算再执行三层验收,2026-08-23
 2026-08-14-B,BQ046,A155,https://bqgcd.sooxie.com/detail/1538205,高帮套袜 EVA 休闲鞋,ASSETS_READY,PASS,25,,登录后回读并建唯一草稿,2026-08-14
 2026-08-14-B,BQ047,A189,https://bqgcd.sooxie.com/detail/1522792,男士高帮套脚休闲鞋,ASSETS_READY,PASS,24,,登录后回读并建唯一草稿,2026-08-14
 2026-08-14-B,BQ048,A212+A212-1,https://bqgcd.sooxie.com/detail/1749632,套脚休闲鞋可选加绒,ASSETS_READY,PASS_MERGED,37,,登录后回读并建唯一草稿,2026-08-14
