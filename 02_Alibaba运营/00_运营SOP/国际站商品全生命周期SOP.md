@@ -80,6 +80,7 @@
 - `productDescType=4`：按结构化 `detailImage/companyImage` 数量和 URL 验收。
 - `productDescType=5`：结构化列表可能返回 0，但 AI/HTML 页面仍存在；必须读取 pageId/HTML 或买家公开页，不得仅凭结构化计数判定丢失。
 - `productDescType=5` 旧 AI/HTML 详情不能依赖 Workctl 结构化详情接口改文案。实测可行路径是：从原商品唯一编辑页进入“AI详情编辑器”→逐个修改公司介绍和 FAQ 文本模块→编辑器内保存→“编辑完成”→确认同步 PC/无线端→返回外层商品页保存草稿→回读卖家端 `sellPreview`。禁止整页替换导致原产品图和模块丢失。
+- AI 详情编辑器的 DOM 图片先后顺序不等于结构化图库归属。替换前必须逐个读取图片节点的 `data-component-group-name`，按 `product-gallery` 与 `company-gallery` 的真实归属绑定；禁止按视觉位置、DOM 序号或文件名猜测分组。保存后必须再次回读两组计数与 URL，再进入外层提交。
 - 卖家端 `sellPreview` 已是新文案，但公开 `descIframe` 仍是旧文案时，状态只能记为“已提交，待审核/同步”。不得把卖家预览、`copy` 或同值 `trunk` 单独当作线上 HTML 生效证据，也不得据此批量处理下一批。
 - 公开详情验收必须同时检查 `descIframe` 正文和每一张图片的真实像素内容。DOM 风险词扫描只能发现可访问文本，不能发现已经写进图片中的旧款鞋、宽楦、退款、物流、第三方品牌或错误尺码；必须逐张打开/下载预览并确认图片角色、SKU 身份和图内文字。图片数量正确但内容错误仍判定失败。
 - 旧 HTML 文案修复后同时扫描英文和平台自动翻译文本：`refund/deduct/退还/抵扣/扣除`、无依据的 `wide toe/roomy toe/宽楦/宽敞鞋头`、通用 `Flyknit/飞织`。仅当前 SKU 证据支持的产品级表述可以保留。
