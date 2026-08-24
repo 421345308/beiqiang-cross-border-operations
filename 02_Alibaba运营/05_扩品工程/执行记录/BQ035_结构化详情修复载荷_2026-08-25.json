@@ -1,0 +1,25 @@
+{
+  "productId": 10000046705043,
+  "sku": "BQ035",
+  "sourceModel": "A001",
+  "companyDesc": "Quanzhou Beiqiang Footwear & Apparel Co., Ltd. is a footwear factory located in Quanzhou, Fujian, China. We supply casual walking shoes and related footwear for overseas B2B buyers. Product materials, colors, size ratios, packing and customization requirements are confirmed according to the current style and order details.",
+  "detailImage": [
+    {"operationType":"ADD","newImageUrl":"https://sc04.alicdn.com/kf/A5576eb743de7430fae712240b08ef8fef/286385890/A5576eb743de7430fae712240b08ef8fef.jpg","imageIndex":0,"imageSetId":"350","imageText":"Product overview"},
+    {"operationType":"ADD","newImageUrl":"https://sc04.alicdn.com/kf/A8c9012cbd4144b80bb984f9f70a2fd99j/286385890/A8c9012cbd4144b80bb984f9f70a2fd99j.jpg","imageIndex":1,"imageSetId":"300","imageText":"Product specifications"},
+    {"operationType":"ADD","newImageUrl":"https://sc04.alicdn.com/kf/A284768077f8a4a6988943de60ec0ff71j/286385890/A284768077f8a4a6988943de60ec0ff71j.jpg","imageIndex":2,"imageSetId":"150","imageText":"Confirmed EU size range"},
+    {"operationType":"ADD","newImageUrl":"https://sc04.alicdn.com/kf/A2940517ec3d7497fbdbacc2685742529W/286385890/A2940517ec3d7497fbdbacc2685742529W.jpg","imageIndex":3,"imageSetId":"350","imageText":"Available color options"}
+  ],
+  "companyImage": [
+    {"operationType":"ADD","newImageUrl":"https://sc04.alicdn.com/kf/Sf587c854711748af9759e77ce5aeb03c3/286385890/Sf587c854711748af9759e77ce5aeb03c3.png","imageIndex":0,"imageSetId":"400","imageText":"Company overview"},
+    {"operationType":"ADD","newImageUrl":"https://sc04.alicdn.com/kf/Sfea34bbd56ae4d0583aa855838eb1454F/286385890/Sfea34bbd56ae4d0583aa855838eb1454F.png","imageIndex":1,"imageSetId":"450","imageText":"Production checking"},
+    {"operationType":"ADD","newImageUrl":"https://sc04.alicdn.com/kf/Sdc4e18f098e142b797df687e8befbfa14/286385890/Sdc4e18f098e142b797df687e8befbfa14.png","imageIndex":2,"imageSetId":"500","imageText":"Stock and packing"},
+    {"operationType":"ADD","newImageUrl":"https://sc04.alicdn.com/kf/Sc1dc6ec7d435404db6a31c6938a734a0g/286385890/Sc1dc6ec7d435404db6a31c6938a734a0g.png","imageIndex":3,"imageSetId":"600","imageText":"Packing and shipping"},
+    {"operationType":"ADD","newImageUrl":"https://sc04.alicdn.com/kf/S2a3af5690d524680824086ad8419dbc9G/286385890/S2a3af5690d524680824086ad8419dbc9G.png","imageIndex":4,"imageSetId":"700","imageText":"OEM ODM process"}
+  ],
+  "evidence": {
+    "detailImages": "all four sc04 files are byte-identical to the visually approved local 01-04 detail images",
+    "companyImages": "共用公司图合规修复_2026-08-24.md",
+    "excludedLocalAssets": ["05_order_support.jpg","06_oem_inquiry.jpg"],
+    "exclusionReason": "four product modules already meet the gate; excluding extra commercial claims reduces avoidable risk"
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "version": "2026-08-25",
+  "purpose": "Use Accio International Station product optimization/publish capability to repair 30 existing online products in three batches of 10. This is not a new-product Excel task.",
+  "execution_status": "READY_NOT_SUBMITTED",
+  "shared_edit_scope": {
+    "preserve": [
+      "product title and model number",
+      "all main images and SKU color bindings",
+      "all product-specific highlights supported by source evidence",
+      "all existing product and company image modules",
+      "price, MOQ, lead time, packing and all other trade fields"
+    ],
+    "replace_only": {
+      "company_introduction": "Quanzhou Beiqiang Footwear & Apparel Co., Ltd. is a footwear factory located in Quanzhou, Fujian, China. We supply casual walking shoes and related footwear for overseas B2B buyers. Product materials, colors, size ratios, packing and customization requirements are confirmed according to the current style and order details.",
+      "factory_answer": "We are a footwear factory located in Quanzhou, Fujian, China. We supply casual walking shoes and related footwear for overseas B2B buyers. Product details and order requirements are confirmed according to the current style.",
+      "sample_answer": "Yes. Samples can be arranged for quality checking. The sample fee, courier cost, development time and any bulk-order policy will be confirmed for the current style before payment.",
+      "why_factory_answer": "We provide factory support for product confirmation, sample checking, mixed size and color discussion, packing requirements and OEM/ODM cooperation. Final specifications are confirmed according to the current style and order details."
+    },
+    "prohibited_changes": [
+      "Do not recreate the whole detail page",
+      "Do not change product images or company images",
+      "Do not change any product or trade field outside the four shared text blocks",
+      "Do not add Flyknit, medical claims, fixed sample-fee refund/deduction promises, or store-wide wide-toe claims"
+    ],
+    "wide_toe_rule": "BQ001, BQ002 and BQ031 may retain their existing evidence-backed product-level wide-toe highlight. All other products must not gain a wide-toe claim.",
+    "verification": [
+      "Before publishing, compare productId, title and model number with the current online product",
+      "After publishing, read back copy, trunk and public page",
+      "Confirm main images, SKU bindings and detail images are unchanged",
+      "Confirm the shared text contains no Flyknit, refund, deduct or unsupported wide-toe wording",
+      "Return per-product success/failure and the public product URL"
+    ]
+  },
+  "batches": [
+    {
+      "batch": 1,
+      "products": [
+        {"sku": "BQ001", "product_id": "10000042821848"},
+        {"sku": "BQ002", "product_id": "10000042896165"},
+        {"sku": "BQ004", "product_id": "10000043201799"},
+        {"sku": "BQ005", "product_id": "1601815020244"},
+        {"sku": "BQ006", "product_id": "1601814931739"},
+        {"sku": "BQ007", "product_id": "1601825070472"},
+        {"sku": "BQ008", "product_id": "1601825021825"},
+        {"sku": "BQ009", "product_id": "1601825074604"},
+        {"sku": "BQ011", "product_id": "10000043725883"},
+        {"sku": "BQ012", "product_id": "10000043744505"}
+      ]
+    },
+    {
+      "batch": 2,
+      "products": [
+        {"sku": "BQ013", "product_id": "10000043763325"},
+        {"sku": "BQ014", "product_id": "10000043732626"},
+        {"sku": "BQ015", "product_id": "10000043734620"},
+        {"sku": "BQ016", "product_id": "10000044021584"},
+        {"sku": "BQ017", "product_id": "10000044034049"},
+        {"sku": "BQ018", "product_id": "10000044007878"},
+        {"sku": "BQ019", "product_id": "10000044041008"},
+        {"sku": "BQ020", "product_id": "1601839073314"},
+        {"sku": "BQ021", "product_id": "1601838963947"},
+        {"sku": "BQ022", "product_id": "10000043991998"}
+      ]
+    },
+    {
+      "batch": 3,
+      "products": [
+        {"sku": "BQ023", "product_id": "10000044004948"},
+        {"sku": "BQ024", "product_id": "10000044041031"},
+        {"sku": "BQ025", "product_id": "10000044024484"},
+        {"sku": "BQ026", "product_id": "10000044011929"},
+        {"sku": "BQ027", "product_id": "10000044028277"},
+        {"sku": "BQ028", "product_id": "1601839105416"},
+        {"sku": "BQ029", "product_id": "1601839062659"},
+        {"sku": "BQ030", "product_id": "1601839050756"},
+        {"sku": "BQ031", "product_id": "10000046439033"},
+        {"sku": "BQ032", "product_id": "10000046653813"}
+      ]
+    }
+  ]
+}
