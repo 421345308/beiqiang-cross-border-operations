@@ -1,13 +1,13 @@
 {
   "version": "2026-08-25",
   "purpose": "Use Accio International Station product optimization/publish capability to repair 30 existing online products in three batches of 10. This is not a new-product Excel task.",
-  "execution_status": "BATCH_1_STOPPED_NO_ONLINE_WRITE",
+  "execution_status": "BATCH_1_PARTIAL_SUBMITTED_2_OF_10_REVIEW_PENDING",
   "latest_execution_result": {
     "date": "2026-08-25",
     "batch": 1,
     "tested_product": {
-      "sku": "BQ001",
-      "product_id": "10000042821848"
+      "sku": "BQ004",
+      "product_id": "10000043201799"
     },
     "product_desc_type": 5,
     "is_ai_edit": true,
@@ -15,9 +15,53 @@
     "result": "REJECTED_LEGACY_NON_STRUCTURED_DETAIL",
     "platform_message": "Legacy non-structured detail products do not support structured detail field editing.",
     "draft_readback": "Record does not exist",
-    "online_submission": false,
-    "affected_products": [],
-    "decision": "Do not use Accio structured companyDesc/FAQ editing for any product in batches 1-3 while productDescType is 5. Use the Alibaba browser AI-detail editor with precise component-level replacement and image-role verification, or leave the product unchanged. Never rebuild the entire detail page merely to replace the four shared text blocks."
+    "online_submission": true,
+    "affected_products": [
+      {
+        "sku": "BQ001",
+        "product_id": "10000042821848",
+        "result": "SUBMITTED_REVIEW_PENDING",
+        "submit_success_url": "https://post.alibaba.com/product/success.htm?language=zh_CN&isSuccess=true&primaryId=10000042821848&isEdit=true",
+        "verification": {
+          "main_images": 6,
+          "product_detail_images": 11,
+          "company_images": 5,
+          "shared_copy_exact": true,
+          "risk_scan_passed": true
+        }
+      },
+      {
+        "sku": "BQ002",
+        "product_id": "10000042896165",
+        "result": "SUBMITTED_REVIEW_PENDING",
+        "submit_success_url": "https://post.alibaba.com/product/success.htm?language=zh_CN&isSuccess=true&primaryId=10000042896165&isEdit=true",
+        "verification": {
+          "main_images": 6,
+          "product_detail_images": 8,
+          "company_images": 5,
+          "shared_copy_exact": true,
+          "risk_scan_passed": true
+        }
+      }
+    ],
+    "blocked_products": [
+      {"sku": "BQ004", "product_id": "10000043201799", "reason": "LEGACY_HTML_NO_VISIBLE_DETAIL_EDITOR"},
+      {"sku": "BQ005", "product_id": "1601815020244", "reason": "LEGACY_HTML_NO_VISIBLE_DETAIL_EDITOR"},
+      {"sku": "BQ006", "product_id": "1601814931739", "reason": "LEGACY_HTML_NO_VISIBLE_DETAIL_EDITOR"},
+      {"sku": "BQ007", "product_id": "1601825070472", "reason": "LEGACY_HTML_NO_VISIBLE_DETAIL_EDITOR"},
+      {"sku": "BQ008", "product_id": "1601825021825", "reason": "LEGACY_HTML_NO_VISIBLE_DETAIL_EDITOR"},
+      {"sku": "BQ009", "product_id": "1601825074604", "reason": "LEGACY_HTML_NO_VISIBLE_DETAIL_EDITOR"},
+      {"sku": "BQ011", "product_id": "10000043725883", "reason": "LEGACY_HTML_NO_VISIBLE_DETAIL_EDITOR"},
+      {"sku": "BQ012", "product_id": "10000043744505", "reason": "LEGACY_HTML_NO_VISIBLE_DETAIL_EDITOR"}
+    ],
+    "workctl_status": {
+      "cli_version": "v0.1.43",
+      "authenticated": true,
+      "result": "BLOCKED_DESKTOP_NOT_ATTACHED",
+      "platform_message": "Accio Desktop not attached: ACCIO_GATEWAY_TOKEN env var is not set",
+      "remote_registry_result": "CATALOG_LOAD_FAILED"
+    },
+    "decision": "BQ001 and BQ002 were repaired through the visible Alibaba AI detail editor and submitted after exact-copy, image-count and risk checks. Do not submit BQ004-BQ012 while their legacy HTML detail has no visible editor and Workctl is not attached to Accio Desktop. Never rebuild or blank the entire detail page merely to replace the four shared text blocks."
   },
   "shared_edit_scope": {
     "preserve": [
