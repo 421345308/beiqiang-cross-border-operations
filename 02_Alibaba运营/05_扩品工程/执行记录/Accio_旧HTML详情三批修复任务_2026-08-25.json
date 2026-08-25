@@ -1,7 +1,71 @@
 {
   "version": "2026-08-25",
   "purpose": "Use Accio International Station product optimization/publish capability to repair 30 existing online products in three batches of 10. This is not a new-product Excel task.",
-  "execution_status": "BATCH_1_PARTIAL_PUBLIC_PASS_2_OF_10",
+  "execution_status": "BATCH_1_SCOPE_COMPLETE_PUBLIC_DETAIL_PASS_10_OF_10",
+  "current_execution": {
+    "date": "2026-08-25",
+    "batch": 1,
+    "gateway": {
+      "accio_desktop_version": "0.30.2",
+      "endpoint": "http://127.0.0.1:4097/mcp/proxy",
+      "dynamic_schema_readable": true,
+      "token_handling": "Inherited in memory from the running local Accio process; never printed or persisted."
+    },
+    "public_pass": ["BQ001", "BQ002", "BQ004", "BQ005", "BQ006", "BQ007", "BQ008", "BQ009", "BQ011", "BQ012"],
+    "submitted_pending_trunk_sync": [],
+    "upgrade": {
+      "command": "icbu.other.update-upgrade",
+      "detailType": "STRUCT_DETAIL",
+      "success_count": 8,
+      "draft_productDescType": 4
+    },
+    "detail_edit": {
+      "command": "icbu.other.product-edit-draft-detail",
+      "success_count": 8,
+      "changed_fields": ["companyDesc", "FAQ sortOrder 0 answer", "FAQ sortOrder 3 answer", "FAQ sortOrder 7 answer"],
+      "preserved_fields": ["title", "model", "6 main images", "SKU", "detail images", "company images", "price", "MOQ", "lead time", "packing"]
+    },
+    "pre_submit_verification": {
+      "products_checked": 8,
+      "main_images_each": 6,
+      "detail_images_each": 8,
+      "company_images_each": 1,
+      "faqs_each": 8,
+      "risk_terms_zero": ["Flyknit", "refund", "deduct", "wide toe"],
+      "moq": 2,
+      "price_ladder": ["2:9.49", "50:9.19", "100:9.09"],
+      "lead_time": "100 pairs / 31 days",
+      "packing": "0.5 kg / 34 x 23 x 13 cm"
+    },
+    "submit": {
+      "command": "icbu.other.submit-draft",
+      "success_count": 8,
+      "copy_state": "STRUCTURED_AND_SAFE",
+      "copy_audit_status": 1,
+      "trunk_state": "STRUCTURED_AND_SAFE",
+      "completion_gate": "PASSED_FOR_BATCH_1_SHARED_COPY_SCOPE"
+    },
+    "post_submit_verification": {
+      "copy_trunk_relevant_components_match": true,
+      "display_api_audit_status": 1,
+      "display_api_status": 1,
+      "BQ004_BQ012_structured_detail_images_each": 8,
+      "BQ004_BQ012_faqs_each": 8,
+      "BQ004_BQ012_company_images": {
+        "BQ004": 1,
+        "BQ005": 1,
+        "BQ006": 0,
+        "BQ007": 1,
+        "BQ008": 1,
+        "BQ009": 1,
+        "BQ011": 1,
+        "BQ012": 1
+      },
+      "BQ006_company_image_note": "Existing missing company-image gap; the batch preserved images and did not create this gap. Keep as a separate catalog repair item.",
+      "BQ001_BQ002": "auditStatus=1, status=1, copy/trunk business components match, public display payload contains the exact safe company copy, no Flyknit/refund/deduct wording, and the product-level wide-toe claim remains allowed.",
+      "risk_terms_zero_for_regular_fit_products": ["Flyknit", "refund", "deduct", "wide toe"]
+    }
+  },
   "latest_execution_result": {
     "date": "2026-08-25",
     "batch": 1,
