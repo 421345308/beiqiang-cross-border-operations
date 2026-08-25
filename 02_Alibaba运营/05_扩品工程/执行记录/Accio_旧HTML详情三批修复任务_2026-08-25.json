@@ -1,7 +1,7 @@
 {
   "version": "2026-08-25",
   "purpose": "Use Accio International Station product optimization/publish capability to repair 30 existing online products in three batches of 10. This is not a new-product Excel task.",
-  "execution_status": "BATCH_1_PARTIAL_SUBMITTED_2_OF_10_REVIEW_PENDING",
+  "execution_status": "BATCH_1_PARTIAL_PUBLIC_PASS_2_OF_10",
   "latest_execution_result": {
     "date": "2026-08-25",
     "batch": 1,
@@ -20,27 +20,33 @@
       {
         "sku": "BQ001",
         "product_id": "10000042821848",
-        "result": "SUBMITTED_REVIEW_PENDING",
+        "result": "PUBLIC_PASS_PENDING_COPY_TRUNK",
         "submit_success_url": "https://post.alibaba.com/product/success.htm?language=zh_CN&isSuccess=true&primaryId=10000042821848&isEdit=true",
         "verification": {
           "main_images": 6,
           "product_detail_images": 11,
           "company_images": 5,
           "shared_copy_exact": true,
-          "risk_scan_passed": true
+          "risk_scan_passed": true,
+          "public_page_verified": true,
+          "public_detail_images": 11,
+          "public_company_images": 5
         }
       },
       {
         "sku": "BQ002",
         "product_id": "10000042896165",
-        "result": "SUBMITTED_REVIEW_PENDING",
+        "result": "PUBLIC_PASS_PENDING_COPY_TRUNK",
         "submit_success_url": "https://post.alibaba.com/product/success.htm?language=zh_CN&isSuccess=true&primaryId=10000042896165&isEdit=true",
         "verification": {
           "main_images": 6,
           "product_detail_images": 8,
           "company_images": 5,
           "shared_copy_exact": true,
-          "risk_scan_passed": true
+          "risk_scan_passed": true,
+          "public_page_verified": true,
+          "public_detail_images": 8,
+          "public_company_images": 5
         }
       }
     ],
