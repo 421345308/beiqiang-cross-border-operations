@@ -88,7 +88,10 @@ $rows = foreach ($step in $payload.data.results) {
     $body = $data.descComponentData.bodyLayout | ConvertTo-Json -Depth 100 -Compress
     $bodyBytes = [Text.Encoding]::UTF8.GetBytes($body)
     $bodySha256 = [Convert]::ToHexString([Security.Cryptography.SHA256]::HashData($bodyBytes)).ToLowerInvariant()
-    $bodyImageMatches = [regex]::Matches($body, '(?i)https://sc04\.alicdn\.com/kf/[^"\\ ]+')
+    # Alibaba's compiled bodyLayout often emits protocol-relative image-bank URLs
+    # (//sc04.alicdn.com/...) even when the editor was given an https URL. Count
+    # both forms so a valid structured detail gallery is not reported as empty.
+    $bodyImageMatches = [regex]::Matches($body, '(?i)(?:https?:)?//sc04\.alicdn\.com/kf/[^"\\ ]+')
     $bodyImageUrls = @($bodyImageMatches | ForEach-Object Value)
     $publicBodyAvailable = $null -ne $data.descComponentData.pageId -and $body.Length -gt 1000
 

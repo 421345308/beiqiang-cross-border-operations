@@ -35,6 +35,13 @@
 5. 调用 `submit-draft` 后先检查 copy，再检查 trunk。`copy auditStatus=-2` 且 trunk 未变化表示平台审核/同步中，不得重复提交，也不得标记完成；稳定在线商品实测为 `auditStatus=1`。
 6. copy、trunk、公开买家页三层一致后，才把该款标为完全正确。
 
+### 2026-08-26 批次 3 新增实测
+
+- Workctl 批次汇总的 `succeeded` 只说明工具调用完成，仍要逐项检查 `output.data`。业务正文为“不支持编辑结构化详情字段”或“Please check the number of custom attributes”时均视为失败。
+- 旧详情先 `update-upgrade`，再以 `draftFirst` 确认 `productDescType=4`；随后图库按“DELETE 当前图 + ADD 正式 sc04 图”替换，FAQ 按 `sortOrder + operationType=EDIT` 更新。
+- 系统 Model Number 修改必须带 `operationType=EDIT, attrNameId=3, attrValueId=-3`。遗漏 ID 会追加同名自定义属性；修复方法是删除无 ID 重复项并回读确认只剩一条系统属性。
+- 已增加 `build_structured_detail_batch.ps1`，从批次计划和实时草稿回读生成可复用的详情替换批次；生成结果不写图片说明文本，避免卖家编辑页出现图集说明清理提示。
+
 ## 复用提示词
 
 Accio 只读核对必须显式限定：
