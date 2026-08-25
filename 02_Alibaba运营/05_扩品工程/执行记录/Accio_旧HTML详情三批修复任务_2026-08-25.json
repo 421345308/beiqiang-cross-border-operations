@@ -1,7 +1,24 @@
 {
   "version": "2026-08-25",
   "purpose": "Use Accio International Station product optimization/publish capability to repair 30 existing online products in three batches of 10. This is not a new-product Excel task.",
-  "execution_status": "READY_NOT_SUBMITTED",
+  "execution_status": "BATCH_1_STOPPED_NO_ONLINE_WRITE",
+  "latest_execution_result": {
+    "date": "2026-08-25",
+    "batch": 1,
+    "tested_product": {
+      "sku": "BQ001",
+      "product_id": "10000042821848"
+    },
+    "product_desc_type": 5,
+    "is_ai_edit": true,
+    "edit_api": "product_edit_draft_detail",
+    "result": "REJECTED_LEGACY_NON_STRUCTURED_DETAIL",
+    "platform_message": "Legacy non-structured detail products do not support structured detail field editing.",
+    "draft_readback": "Record does not exist",
+    "online_submission": false,
+    "affected_products": [],
+    "decision": "Do not use Accio structured companyDesc/FAQ editing for any product in batches 1-3 while productDescType is 5. Use the Alibaba browser AI-detail editor with precise component-level replacement and image-role verification, or leave the product unchanged. Never rebuild the entire detail page merely to replace the four shared text blocks."
+  },
   "shared_edit_scope": {
     "preserve": [
       "product title and model number",
