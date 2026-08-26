@@ -48,6 +48,11 @@ $payload = Get-Content -LiteralPath $rawOutputPath -Raw | ConvertFrom-Json
 if (-not $payload.success) {
     throw 'Workctl batch output reported success=false'
 }
+$batchDefinition = Get-Content -LiteralPath $batchSpecPath -Raw | ConvertFrom-Json
+$allowWideToeByName = @{}
+foreach ($definedStep in @($batchDefinition.steps)) {
+    $allowWideToeByName[[string]$definedStep.name] = [bool]$definedStep.allowWideToe
+}
 
 $wideCn = [string]([char]0x5BBD) + [char]0x6966
 $roomyToeCn = [string]([char]0x5BBD) + [char]0x655E + [char]0x978B + [char]0x5934
@@ -94,6 +99,11 @@ $rows = foreach ($step in $payload.data.results) {
     $bodyImageMatches = [regex]::Matches($body, '(?i)(?:https?:)?//sc04\.alicdn\.com/kf/[^"\\ ]+')
     $bodyImageUrls = @($bodyImageMatches | ForEach-Object Value)
     $publicBodyAvailable = $null -ne $data.descComponentData.pageId -and $body.Length -gt 1000
+    # `batch call` returns only the executed step name/path/output and does not
+    # echo custom audit metadata. Resolve SKU-specific exceptions from the input
+    # specification instead of expecting them on the Workctl result object.
+    $wideToeAllowed = [bool]$allowWideToeByName[[string]$step.name]
+    $wideToeMentions = ([regex]::Matches($body, $wideRiskPattern)).Count
 
     [pscustomobject]@{
         sku = $step.name.ToUpperInvariant()
@@ -109,7 +119,9 @@ $rows = foreach ($step in $payload.data.results) {
         publicBodyAvailable = $publicBodyAvailable
         flyknit = ([regex]::Matches($body, '(?i)flyknit')).Count
         refundDeduct = ([regex]::Matches($body, '(?i)refund|deduct')).Count
-        unsupportedWideToe = ([regex]::Matches($body, $wideRiskPattern)).Count
+        wideToeAllowed = $wideToeAllowed
+        wideToeMentions = $wideToeMentions
+        unsupportedWideToe = if ($wideToeAllowed) { 0 } else { $wideToeMentions }
         accioUrl = ([regex]::Matches($body, '(?i)accio')).Count
         nestedAlibabaUrl = ([regex]::Matches($body, '(?i)sc04\.alicdn\.com/kf/[^/]+\.(?:png|jpe?g|webp)/286385890/')).Count
         productGalleryMarkers = ([regex]::Matches($body, '(?i)product-gallery')).Count
