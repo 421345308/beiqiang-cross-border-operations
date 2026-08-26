@@ -138,6 +138,7 @@ Excel 的发货期梯度不得把 `2 pairs / 31 days` 与 `100 pairs / 31 days` 
 - SKU 写入后必须回读 `draft.sku`，核对总数、颜色集合、尺码最小/最大值和特殊尺码限制；接口返回的 `skuId=0` 是新草稿规格尚未分配正式 ID，不等于写入失败。
 - `submit-draft` 的外层 `success=true` 只代表工具调用成功，业务正文仍可能是 `Attribute value cannot be blank.` 等拦截信息。只有正文明确为 `submit draft success` 才算提交成功。若缺少必填材料属性，只能使用数据包、实物图或负责人确认补值；配方未知时使用可证明的通用材料口径，不得为了过检猜写具体材料。
 - Workctl 所有编辑接口都必须检查业务正文，不能只看外层或批次汇总的 `success=true`。2026-08-26 实测中，`product-edit-draft-detail` 会在外层成功时返回“详情类型不是结构化详情的商品不支持编辑结构化详情字段”，`submit-draft` 也会返回“Please check the number of custom attributes”；这两类都属于未完成，不能继续计数或公开验收。
+- 同一商品的不同草稿模块不得在一个可能并发执行的批次里同时写入。2026-08-26 BQ024/BQ025 实测中，`basic-info` 标题与 `trade` SKU 同批均返回 `draft edit success`，但后完成的交易模块用旧快照覆盖了标题；正确做法是先完成 SKU/交易编辑并回读，再单独写标题/基础信息并再次回读，最后才提交。跨商品的同一模块仍可并行。
 - `productDescType=5` 必须先调用 `update-upgrade`（`detailType=STRUCT_DETAIL`），再用 `draftFirst` 回读到 `productDescType=4` 后编辑。升级会带入旧共享文案和旧图库，产品卖点、公司介绍、FAQ、产品图库、公司图库都必须显式覆盖并重新扫描；不能把升级任务成功当成内容修复成功。
 - `product-edit-draft-detail` 的 `detailImage/companyImage/faqs` 是操作列表，不是最终状态数组。替换图库必须先按草稿回读逐张 `DELETE originalImageUrl`，再以正式图片银行地址 `ADD newImageUrl`；FAQ 必须按 `sortOrder` 使用 `operationType=EDIT`。仅传 `originalImageUrl` 或不带 `operationType` 即使返回 `draft edit success` 也可能不改变旧图和旧 FAQ。
 - `product-edit-draft-basic-info` 修改系统类目属性时必须带 `operationType=EDIT`、正确 `attrNameId/attrValueId`。只传 `attrName/attrValue` 会新增同名自定义属性，形成重复 Model Number，并在提交时触发自定义属性数量校验。若已误加，先以无 ID 的同名值执行 `DELETE`，再以系统 ID 执行 `EDIT`，回读确认 Model Number 仅剩 1 条后方可提交。
