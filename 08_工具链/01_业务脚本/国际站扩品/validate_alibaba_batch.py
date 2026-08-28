@@ -21,6 +21,10 @@ FIRST_DATA_ROW = 3
 MAIN_IMAGE_COLUMNS = ("F", "G", "H", "I", "J", "K")
 DETAIL_IMAGE_COLUMNS = ("O", "P", "Q", "R")
 COMPANY_IMAGE_COLUMNS = ("T", "V", "W", "X", "Z")
+FAQ_COLUMNS = (
+    "AC", "AD", "AE", "AF", "AG", "AH", "AI", "AJ",
+    "AK", "AL", "AM", "AN", "AO", "AP", "AQ", "AR",
+)
 IMAGE_COLUMNS = MAIN_IMAGE_COLUMNS + DETAIL_IMAGE_COLUMNS + COMPANY_IMAGE_COLUMNS + ("CF",)
 SKU_COLUMNS = {"CE", "CF", "CG", "CH", "CI", "CJ"}
 EXPECTED_LADDER = {"CM": 2, "CN": 9.49, "CO": 50, "CP": 9.19, "CQ": 100, "CR": 9.09}
@@ -32,7 +36,7 @@ EXPECTED_LOGISTICS = {
     "CX": 13,
     "CY": 0.5,
     "CZ": "智能运费模板",
-    "DA": "Ordinary goods",
+    "DA": "普货",
     "DB": 100,
     "DC": 31,
 }
@@ -62,6 +66,7 @@ def validate_rows(rows: list[dict[str, object]]) -> dict[str, object]:
         return {"ok": False, "errors": ["rows.json 必须是非空对象数组"], "warnings": []}
 
     groups: dict[str, list[dict[str, object]]] = defaultdict(list)
+    source_groups: dict[str, list[str]] = defaultdict(list)
     seen_skus: set[str] = set()
     seen_titles: dict[str, str] = {}
 
@@ -118,12 +123,20 @@ def validate_rows(rows: list[dict[str, object]]) -> dict[str, object]:
         main = [str(first.get(column, "")) for column in MAIN_IMAGE_COLUMNS]
         detail = [str(first.get(column, "")) for column in DETAIL_IMAGE_COLUMNS]
         company = [str(first.get(column, "")) for column in COMPANY_IMAGE_COLUMNS]
+        faqs = [str(first.get(column, "")).strip() for column in FAQ_COLUMNS]
         if len(set(main)) != 6:
             errors.append(f"{model}：6 张主图存在缺失或重复 URL")
         if len(set(detail)) != 4:
             errors.append(f"{model}：4 张产品详情图存在缺失或重复 URL")
+        main_detail_overlap = sorted(set(main) & set(detail))
+        if main_detail_overlap:
+            errors.append(
+                f"{model}：详情图与主图重复，共 {len(main_detail_overlap)} 张；平台禁止导入"
+            )
         if len(set(company)) != 5:
             errors.append(f"{model}：5 张公司图存在缺失或重复 URL")
+        if any(not value for value in faqs):
+            errors.append(f"{model}：8 组 FAQ 存在缺失（AC:AR 必须全部填写）")
 
         color_to_image: dict[str, set[str]] = defaultdict(set)
         combinations: set[tuple[str, str]] = set()
@@ -143,6 +156,34 @@ def validate_rows(rows: list[dict[str, object]]) -> dict[str, object]:
                 errors.append(f"{model}：存在空颜色名")
             if len(images) != 1:
                 errors.append(f"{model} / {color}：同一颜色绑定了多个颜色图")
+
+        source_model = model.split("/", 1)[1].strip() if "/" in model else model
+        source_groups[source_model].append(model)
+
+    # 第二批起同源多链接不能仅交换同一组图片顺序。
+    for source_model, sibling_models in source_groups.items():
+        if len(sibling_models) < 2:
+            continue
+        for left_index, left_model in enumerate(sibling_models):
+            left = groups[left_model][0]
+            left_main = [str(left.get(column, "")) for column in MAIN_IMAGE_COLUMNS]
+            for right_model in sibling_models[left_index + 1:]:
+                right = groups[right_model][0]
+                right_main = [str(right.get(column, "")) for column in MAIN_IMAGE_COLUMNS]
+                if left_main[0] == right_main[0]:
+                    errors.append(f"{source_model}：兄弟链接首图重复：{left_model} / {right_model}")
+                first_three_overlap = set(left_main[:3]) & set(right_main[:3])
+                if first_three_overlap:
+                    errors.append(
+                        f"{source_model}：兄弟链接前 3 张主图存在 {len(first_three_overlap)} 张复用："
+                        f"{left_model} / {right_model}"
+                    )
+                full_overlap = set(left_main) & set(right_main)
+                if len(full_overlap) > 2:
+                    errors.append(
+                        f"{source_model}：兄弟链接 6 主图共享 {len(full_overlap)} 张，超过 2 张上限："
+                        f"{left_model} / {right_model}"
+                    )
 
     return {
         "ok": not errors,
