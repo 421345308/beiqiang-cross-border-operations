@@ -1,0 +1,14 @@
+{
+  "finished_at": "2026-09-04T14:06:34.855747+00:00",
+  "product_count": 1,
+  "success_count": 0,
+  "failure_count": 1,
+  "results": [
+    {
+      "product_id": "1601939638522",
+      "ok": false,
+      "stage": "exception",
+      "error": "Network error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)"
+    }
+  ]
+}
