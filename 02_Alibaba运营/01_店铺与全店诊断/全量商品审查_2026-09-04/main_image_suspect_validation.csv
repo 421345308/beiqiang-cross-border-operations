@@ -1,0 +1,11 @@
+legacy_row,product_id,model,images_current,urls_http,dimensions_observed,aspect_observed,blank_or_missing_current,judgement,evidence_note
+56,1601939669411,BQ014-W1 / A507,6,6/6 HTTP 200,1000x1000 all,1:1 all,not confirmed,PASS mechanical,Current URLs fetched successfully; no empty image or non-square canvas observed.
+71,1601939661419,BQ009-R1 / L1026,6,6/6 HTTP 200,1000x1000 all,1:1 all,not confirmed,PASS mechanical,Current URLs fetched successfully; no empty image or non-square canvas observed.
+107,10000047127570,BQ041 / 202,unknown,not verifiable,not verifiable,not verifiable,not confirmed,BLOCKED verification,Current API detail record is network-error only; no conclusion of blank/missing image.
+115,10000046705043,BQ-035 / A001,6,6/6 HTTP 200,1000x1000 all,1:1 all,not confirmed,PASS mechanical,Current URLs fetched successfully; no empty image or non-square canvas observed.
+119,1601924345456,BQ033 / T5503,6,6/6 HTTP 200,1254x1254 first; 1000x1000 others,1:1 all,not confirmed,PASS mechanical,Current URLs fetched successfully; no empty image or non-square canvas observed.
+122,1601924755368,BQ039 / 155,6,6/6 HTTP 200,1254x1254 first; 1000x1000 others,1:1 all,not confirmed,PASS mechanical,Current URLs fetched successfully; no empty image or non-square canvas observed.
+135,10000044041031,BQ024 / A830,6,6/6 HTTP 200,1200x1200 all,1:1 all,not confirmed,PASS mechanical,Current URLs fetched successfully; no empty image or non-square canvas observed.
+137,10000047392343,BQ059 / A1888,6,6/6 HTTP 200,1000x1000 all,1:1 all,not confirmed,PASS mechanical,Current URLs fetched successfully; no empty image or non-square canvas observed.
+145,10000044004948,BQ023 / A505,6,6/6 HTTP 200,1000x1000 observed,1:1 observed,not confirmed,PASS mechanical,Current URLs available and sampled HTTP 200; no blank/non-square evidence.
+147,1601825070472,BQ-007,6,6/6 HTTP 200,1000x1000 or 320 preview; current files square,1:1 observed,not confirmed,PASS mechanical,Current URLs available and sampled HTTP 200; no blank/non-square evidence.
