@@ -48,7 +48,7 @@ def process_one(row: dict, config: dict, videos: dict[str, str], generic: str) -
         })
 
     number = bq_number(str(before.get("subject", "")), str(before.get("subject", "")))
-    selected_video = videos.get(number or "", generic)
+    selected_video = str(row.get("video_id") or videos.get(number or "", generic))
     video_response = top_call(
         config,
         "alibaba.icbu.video.relation.product.main",

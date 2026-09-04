@@ -130,6 +130,16 @@ def stable_snapshot(product: dict) -> dict:
     copy.pop("display", None)
     struct = copy.get("struct_detail") or {}
     struct.pop("company_image", None)
+    # Alibaba may reorder detail-image rows after an incremental update while
+    # preserving the exact image URLs and semantic roles. Compare their content,
+    # not the platform-controlled presentation order.
+    detail_rows = ((struct.get("detail_image") or {}).get("images") or [])
+    if detail_rows:
+        detail_rows.sort(key=lambda row: (
+            str(row.get("image_url", "")),
+            str((row.get("image_set") or {}).get("id", "")),
+            str((row.get("image_set") or {}).get("name", "")),
+        ))
     return copy
 
 
