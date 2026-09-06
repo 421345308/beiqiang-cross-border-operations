@@ -22,7 +22,7 @@ python .\validate_alibaba_batch.py --rows <rows.json> --xlsx <批量发品.xlsx>
 
 图片银行批次约束：每批最多 10 张，文件名连扩展名不超过 30 个字符，建议用 `q53m1.jpg`、`q53d1.jpg`、`q53c1.jpg` 这种短编号。页面出现 `sc01` 只代表预览上传完成，必须点“确认上传”后使用图片银行返回或确认过的 `sc04` 正式地址；检测报告提示“图片需要来自图片银行”时，只修图片确认状态、URL 映射和 `rows.json`，随后重生成整批 Excel，不得转为逐款网页编辑。
 
-真实图片局部去标支持：`build_sooxie_prelisting_batch.py` 的图片规格可使用 `{"path": "工作区相对路径"}` 引用已验收处理图。只允许在负责人确认可供无标版本时使用；处理图必须保存在 `01_产品资产/02_处理后商品资产/<BQ编码_货号>/00_去标原图/`，原图不得覆盖。处理后先比较鞋型、鞋底、配色、角度和纹理，再生成 6 主图/详情/颜色图；出现结构漂移即剔除该图或整款暂缓。
+真实图片局部去标支持：`build_sooxie_prelisting_batch.py` 的图片规格可使用 `{"path": "工作区相对路径"}` 引用已验收处理图。只允许在负责人确认可供无标版本时使用；处理图必须保存在 `01_产品资产/04_去标与处理后素材/<BQ编码_货号>/00_去标原图/`，原图不得覆盖。处理后先比较鞋型、鞋底、配色、角度和纹理，再生成 6 主图/详情/颜色图；出现结构漂移即剔除该图或整款暂缓。
 
 ## 目录同步
 
@@ -124,3 +124,11 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\stage_alibaba_public_image
   -RawBatchOutput <原始回读.json> `
   -OutputDirectory <公开图片验收目录>
 ```
+
+## API 发品后的 3.9 分修复门禁
+
+Schema 提交成功不等于库存已经对 30 个颜色×尺码 SKU 生效。若质量分为 `3.90`，先读取 `alibaba.icbu.product.score.get` 的 `extendProblemMap`；当只有 `inventory=true` 时，不得误改标题或图片，应通过 `alibaba.icbu.product.sku.inventory.get` 读取真实 SKU，再用 `alibaba.icbu.product.inventory.update` 把每个 SKU 同步到计划库存。`product.get` 可能不返回 Schema 商品的 `sku_infos`，此时库存接口是 SKU 绑定与库存验收的权威回读。
+
+库存接口已经正确但质量分仍显示旧的 `3.90` 时，对同一 SKU 执行一次可逆的减一/加一刷新，等待平台重算后再次调用质量分接口。完成标准不是“已发出更新请求”，而是同一商品同时满足：审核通过、前台展示、30 个 SKU 库存正确、6 主图/4 产品详情图/5 公司图结构通过、质量分 `5.00` 且问题项全部为 `false`。
+
+本批 HR001–HR067 的最终合并验证由 `consolidate_hr_audit.py` 生成。它还会核对 201 条发布回执中的首图 B2B 标识版本、官方图片银行 URL、主图/详情图互斥、标题唯一性和关键词唯一性，避免只依据平台分数判断内容质量。
