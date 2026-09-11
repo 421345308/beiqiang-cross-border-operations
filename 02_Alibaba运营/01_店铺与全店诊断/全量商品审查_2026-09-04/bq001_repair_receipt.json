@@ -1,0 +1,324 @@
+{
+  "product_id": 10000042821848,
+  "model": "BQ-001",
+  "before": {
+    "request_id": "21501be117885039681076793",
+    "trace_id": "2101075517885039679611105e0c34",
+    "message": null,
+    "error": null
+  },
+  "render": {
+    "request_id": "21501b8d17885039751562439",
+    "trace_id": "2101075517885039750198369e0f6e",
+    "message": null,
+    "error": null
+  },
+  "update": {
+    "request_id": "213e65a717885041247972066",
+    "trace_id": "2140ca6817885041245865899e0ded",
+    "message": null,
+    "error": null
+  },
+  "readback": {
+    "request_id": "21546a1d17885041322683084",
+    "trace_id": "2140ca6817885041321244009e0e90",
+    "message": null,
+    "error": null
+  },
+  "commercial_baseline": {
+    "moq": "preserve current live value",
+    "price_ladder": "preserve current live value",
+    "lead_time": "preserve current live value",
+    "package": "preserve current live value"
+  },
+  "uploaded": {
+    "colors": {
+      "Black": {
+        "source": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\00_最终上传\\BQ001_数据包1\\03_颜色图\\all_black.jpg",
+        "sha256": "ff2937974d505f654023821cf79359f3c1a00b3f93779715d497ddcc34009f22",
+        "bytes": 123128,
+        "url": "https://sc04.alicdn.com/kf/Se543cacc99e94062ae641dd26506e58dy/286385890/Se543cacc99e94062ae641dd26506e58dy.jpg",
+        "file_id": "30153856212",
+        "cached": false,
+        "refs": {
+          "request_id": "2105016d17885039842977979",
+          "trace_id": "213ba0c517885039835555879e0f12",
+          "message": null,
+          "error": null
+        }
+      },
+      "White": {
+        "source": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\00_最终上传\\BQ001_数据包1\\03_颜色图\\white.jpg",
+        "sha256": "7c386ae58493c774c8314df750f2387d35844521ef7370806abe54ca25c3d186",
+        "bytes": 125470,
+        "url": "https://sc04.alicdn.com/kf/Seb52623cee6f48f1b99fd35b260cef73E/286385890/Seb52623cee6f48f1b99fd35b260cef73E.jpg",
+        "file_id": "30153856214",
+        "cached": false,
+        "refs": {
+          "request_id": "213c934417885039922317087",
+          "trace_id": "2140ca6817885039908186676e0fb9",
+          "message": null,
+          "error": null
+        }
+      },
+      "Ivory": {
+        "source": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\00_最终上传\\BQ001_数据包1\\03_颜色图\\black_white.jpg",
+        "sha256": "935518794fd7639d6243a763c579ee57b6f35facb8912f48defd0c4f6062c545",
+        "bytes": 103262,
+        "url": "https://sc04.alicdn.com/kf/S5fb4d87cb4c64b578410018fcfd720d2d/286385890/S5fb4d87cb4c64b578410018fcfd720d2d.jpg",
+        "file_id": "30153856222",
+        "cached": false,
+        "refs": {
+          "request_id": "0b830ecc17885040024965871",
+          "trace_id": "213ba0c517885040017076769e0d86",
+          "message": null,
+          "error": null
+        }
+      }
+    },
+    "main": [
+      {
+        "source": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\00_最终上传\\BQ001_数据包1\\01_主图\\01_main.jpg",
+        "sha256": "4c9ba9e1a1c0579469a1f88c60fe7052cd1d165e7d355448eb809bcbc33b3fa0",
+        "bytes": 217893,
+        "url": "https://sc04.alicdn.com/kf/H506b0d923c3a48c19d6b7881ee694b286/286385890/H506b0d923c3a48c19d6b7881ee694b286.jpg",
+        "file_id": "33357312206",
+        "cached": false,
+        "refs": {
+          "request_id": "213e759c17885040093922881",
+          "trace_id": "210141f717885040085438561e0bf3",
+          "message": null,
+          "error": null
+        }
+      },
+      {
+        "source": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\00_最终上传\\BQ001_数据包1\\01_主图\\02_toe.jpg",
+        "sha256": "9e93d2857c0f38a38a24fe672013790f730c43a1347b34874fc78eb69dcc0842",
+        "bytes": 89213,
+        "url": "https://sc04.alicdn.com/kf/Hb66fff1c2eed442daa4b4d4dc726b533e/286385890/Hb66fff1c2eed442daa4b4d4dc726b533e.jpg",
+        "file_id": "33352704932",
+        "cached": false,
+        "refs": {
+          "request_id": "213f5a2117885040161994557",
+          "trace_id": "210141f717885040155798421e0bf5",
+          "message": null,
+          "error": null
+        }
+      },
+      {
+        "source": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\00_最终上传\\BQ001_数据包1\\01_主图\\03_walk.jpg",
+        "sha256": "343671f6d407b978bfa3b553a94be472a14f2c10aba614592452aa344e6ddb73",
+        "bytes": 192934,
+        "url": "https://sc04.alicdn.com/kf/Hb042d90630204d55af0a61a421ccdcael/286385890/Hb042d90630204d55af0a61a421ccdcael.jpg",
+        "file_id": "33357336066",
+        "cached": false,
+        "refs": {
+          "request_id": "0bab02fc17885040237528110",
+          "trace_id": "2101075517885040227368105e0e67",
+          "message": null,
+          "error": null
+        }
+      },
+      {
+        "source": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\00_最终上传\\BQ001_数据包1\\01_主图\\05_light.jpg",
+        "sha256": "a9a5d71212d38caf220e136992e7cf3330eb2f3cb29a5a19f82f719d4565512c",
+        "bytes": 157084,
+        "url": "https://sc04.alicdn.com/kf/H101cd8880c6641bb88c720773a4e592fP/286385890/H101cd8880c6641bb88c720773a4e592fP.jpg",
+        "file_id": "33357361594",
+        "cached": false,
+        "refs": {
+          "request_id": "21501be117885040307354807",
+          "trace_id": "213ba0c517885040300077404e0d86",
+          "message": null,
+          "error": null
+        }
+      },
+      {
+        "source": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\00_最终上传\\BQ001_数据包1\\01_主图\\06_top_view.jpg",
+        "sha256": "094a0d07f47999ac6822bb0ce0e80b529f7005a4fd970bf3ae66d5542735cae7",
+        "bytes": 264816,
+        "url": "https://sc04.alicdn.com/kf/Sebfb6a236c1a4ed383db9caecd532c735/286385890/Sebfb6a236c1a4ed383db9caecd532c735.jpg",
+        "file_id": "30150737536",
+        "cached": false,
+        "refs": {
+          "request_id": "21546a1d17885040382444134",
+          "trace_id": "210141f717885040374014212e10b7",
+          "message": null,
+          "error": null
+        }
+      },
+      {
+        "source": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\00_最终上传\\BQ001_数据包1\\01_主图\\07_outsole.jpg",
+        "sha256": "f4f7dcd03dc776c3a832cbb880611b9b28f49d9ca69923207486e1ab0540bb2c",
+        "bytes": 176358,
+        "url": "https://sc04.alicdn.com/kf/Scca5b5566a564ec4b4f3a536611dcf68G/286385890/Scca5b5566a564ec4b4f3a536611dcf68G.jpg",
+        "file_id": "30152849046",
+        "cached": false,
+        "refs": {
+          "request_id": "21501be117885040451597237",
+          "trace_id": "210141f717885040442821170e0cff",
+          "message": null,
+          "error": null
+        }
+      }
+    ],
+    "details": [
+      {
+        "source": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\00_最终上传\\BQ001_数据包1\\02_详情页\\02_info.jpg",
+        "sha256": "929aa8250ae9d5ac307f053221b0e30f39087a6ea645ffb2c21ac6fdff828fb9",
+        "bytes": 178668,
+        "url": "https://sc04.alicdn.com/kf/Sb8f355e62d11412aafc5f0ac83399da75/286385890/Sb8f355e62d11412aafc5f0ac83399da75.jpg",
+        "file_id": "30153856213",
+        "cached": false,
+        "refs": {
+          "request_id": "0bab02fc17885040525748337",
+          "trace_id": "210141f717885040516481315e0cff",
+          "message": null,
+          "error": null
+        },
+        "role_id": 350,
+        "role_name": "Other product images"
+      },
+      {
+        "source": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\00_最终上传\\BQ001_数据包1\\02_详情页\\03_upper.jpg",
+        "sha256": "517eaf51ba188bc46f18532459fe51cf4e1b6f5f1301596941f64de3434cf775",
+        "bytes": 203726,
+        "url": "https://sc04.alicdn.com/kf/See6e068f2a72493fa33d43729e79ed57R/286385890/See6e068f2a72493fa33d43729e79ed57R.jpg",
+        "file_id": "30153868132",
+        "cached": false,
+        "refs": {
+          "request_id": "213d4e4917885040617862743",
+          "trace_id": "210141f717885040609466372e0e88",
+          "message": null,
+          "error": null
+        },
+        "role_id": 300,
+        "role_name": "Detail shot"
+      },
+      {
+        "source": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\00_最终上传\\BQ001_数据包1\\02_详情页\\04_sole.jpg",
+        "sha256": "99c79779654392f1a6a9622743324fcd63b5deb1be2ac3d976c14460558116a3",
+        "bytes": 201379,
+        "url": "https://sc04.alicdn.com/kf/S192613265d024f65a687f2723a4ffef9j/286385890/S192613265d024f65a687f2723a4ffef9j.jpg",
+        "file_id": "30153868133",
+        "cached": false,
+        "refs": {
+          "request_id": "0b830ecc17885040814921636",
+          "trace_id": "213ba0c517885040806713782e0b56",
+          "message": null,
+          "error": null
+        },
+        "role_id": 300,
+        "role_name": "Detail shot"
+      },
+      {
+        "source": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\00_最终上传\\BQ001_数据包1\\02_详情页\\01_size_safe.png",
+        "sha256": "dcf867cc43dee67bd2c391f5f51dfcee5060952bd4e664e2d761dffbb2aae9e5",
+        "bytes": 1075328,
+        "url": "https://sc04.alicdn.com/kf/S0b307a6fe21e4309aff7ca7c28ffa16fp/286385890/S0b307a6fe21e4309aff7ca7c28ffa16fp.png",
+        "file_id": "30153868131",
+        "cached": false,
+        "refs": {
+          "request_id": "213f5a2117885041032505467",
+          "trace_id": "2101075517885041016674590e0f36",
+          "message": null,
+          "error": null
+        },
+        "role_id": 150,
+        "role_name": "Product dimensions"
+      },
+      {
+        "source": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\00_最终上传\\BQ001_数据包1\\02_详情页\\05_colors.jpg",
+        "sha256": "e05e7ff55445766282582287880f497fc049920555b456be4eaa9235e09cfd29",
+        "bytes": 137318,
+        "url": "https://sc04.alicdn.com/kf/S62c032399b464d398ddfdd614c3fa04fu/286385890/S62c032399b464d398ddfdd614c3fa04fu.jpg",
+        "file_id": "30153868136",
+        "cached": false,
+        "refs": {
+          "request_id": "0bbb3b2417885041101393449",
+          "trace_id": "210141f717885041093703030e0bf5",
+          "message": null,
+          "error": null
+        },
+        "role_id": 350,
+        "role_name": "Other product images"
+      },
+      {
+        "source": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\00_最终上传\\BQ001_数据包1\\02_详情页\\06_order.jpg",
+        "sha256": "7bd42768253b40d539ba97f23f7c2e02df8518505bab2d7444102d77059495ee",
+        "bytes": 182721,
+        "url": "https://sc04.alicdn.com/kf/H22ce11bcb78c4e4a914fe2f537f5b3fey/286385890/H22ce11bcb78c4e4a914fe2f537f5b3fey.jpg",
+        "file_id": "33357397614",
+        "cached": false,
+        "refs": {
+          "request_id": "212c6fc617885041169058828",
+          "trace_id": "213ba0c517885041161007689e0b59",
+          "message": null,
+          "error": null
+        },
+        "role_id": 350,
+        "role_name": "Other product images"
+      }
+    ],
+    "companies": [
+      {
+        "source": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\00_最终上传\\00_共用中性公司图_v2_2026-09-04\\01_factory.jpg",
+        "sha256": "d4fbe87d6770e6bbfcb8377fb161727ba01c1a9e5d708950803f4f47bb4bda8c",
+        "bytes": 352546,
+        "url": "https://sc04.alicdn.com/kf/Hc4c389dbec7540488a751c6dc8991221Y/286385890/Hc4c389dbec7540488a751c6dc8991221Y.jpg",
+        "file_id": "33354348048",
+        "cached": true,
+        "role_id": 400,
+        "role_name": "Company overview"
+      },
+      {
+        "source": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\00_最终上传\\00_共用中性公司图_v2_2026-09-04\\02_customization.jpg",
+        "sha256": "b7a503a470054ceefc0d77e020ab29bb1209d76f57be17c6bda4ddb0f63fa167",
+        "bytes": 156713,
+        "url": "https://sc04.alicdn.com/kf/Hd8eb75f7e5af4974b7fff477d475e123x/286385890/Hd8eb75f7e5af4974b7fff477d475e123x.jpg",
+        "file_id": "33351360782",
+        "cached": true,
+        "role_id": 550,
+        "role_name": "Customization capabilities"
+      },
+      {
+        "source": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\00_最终上传\\00_共用中性公司图_v2_2026-09-04\\03_production.jpg",
+        "sha256": "adb940f30f04cfa073683ebbca01e2f33d3e69bc245e61ed2d94567af3ccb566",
+        "bytes": 274060,
+        "url": "https://sc04.alicdn.com/kf/H4b057c6dc93d46fda5a8c2f81e1cf368Z/286385890/H4b057c6dc93d46fda5a8c2f81e1cf368Z.jpg",
+        "file_id": "33356016134",
+        "cached": true,
+        "role_id": 600,
+        "role_name": "Production workflow"
+      },
+      {
+        "source": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\00_最终上传\\00_共用中性公司图_v2_2026-09-04\\04_quality.jpg",
+        "sha256": "55adb28d9e534103394f35b2e75c72c53a2f4106610d1a2198022aa344e0dfd1",
+        "bytes": 351778,
+        "url": "https://sc04.alicdn.com/kf/H83605d3fabf04c39ba84c3f13103eae0r/286385890/H83605d3fabf04c39ba84c3f13103eae0r.jpg",
+        "file_id": "33351396575",
+        "cached": true,
+        "role_id": 500,
+        "role_name": "Factory profile"
+      },
+      {
+        "source": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\00_最终上传\\00_共用中性公司图_v2_2026-09-04\\05_packing.jpg",
+        "sha256": "9b0afdf65447e9705891abe7eb1d0a0567302bcd2539d08d83e20305766f6356",
+        "bytes": 164286,
+        "url": "https://sc04.alicdn.com/kf/Hbd01ab82fced4b03ab44a922d63cfc182/286385890/Hbd01ab82fced4b03ab44a922d63cfc182.jpg",
+        "file_id": "33356029572",
+        "cached": true,
+        "role_id": 700,
+        "role_name": "Packaging & shipping specifications"
+      }
+    ]
+  },
+  "verification": {
+    "identity_ok": true,
+    "main_count_ok": true,
+    "colors_ok": true,
+    "details_ok": true,
+    "companies_ok": true,
+    "commercial_fields_preserved": true
+  }
+}

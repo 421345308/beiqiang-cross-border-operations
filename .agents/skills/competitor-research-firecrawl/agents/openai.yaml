@@ -1,0 +1,11 @@
+interface:
+  display_name: "Competitor Research Firecrawl"
+  short_description: "Research shoe competitors with Firecrawl structured extraction."
+  default_prompt: "Use $competitor-research-firecrawl to research Alibaba and marketplace competitors with Firecrawl structured extraction."
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "firecrawl"
+      description: "Firecrawl MCP for search, scrape, batch scrape, map, crawl, extract, and agent-based competitor research."
+      transport: "stdio"

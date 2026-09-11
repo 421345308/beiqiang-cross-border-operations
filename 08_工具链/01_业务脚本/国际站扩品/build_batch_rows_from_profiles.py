@@ -101,7 +101,7 @@ def build_product(profile: dict[str, object], urls: dict[str, str]) -> list[dict
                 "CK": 2, "CL": "Pair/Pairs", "CM": 2, "CN": 9.49,
                 "CO": 50, "CP": 9.19, "CQ": 100, "CR": 9.09,
                 "CV": 34, "CW": 23, "CX": 13, "CY": 0.5,
-                "CZ": "智能运费模板", "DA": "Ordinary goods", "DB": 100, "DC": 31,
+                "CZ": "智能运费模板", "DA": "普货", "DB": 100, "DC": 31,
             }
             for column, value in zip(("F", "G", "H", "I", "J", "K"), main):
                 row[column] = value

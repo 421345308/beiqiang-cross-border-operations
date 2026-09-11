@@ -1,0 +1,142 @@
+{
+  "scan_started_utc": "2026-09-11T13:14:22+00:00",
+  "scan_finished_utc": "2026-09-11T13:14:50+00:00",
+  "elapsed_seconds": 27.2,
+  "workspace": "C:\\Users\\spq\\Desktop\\贝强",
+  "scope": "当前工作区全部一级入口，仅枚举文件系统元数据；包含运行时、node_modules及E盘Junction所达资产。排除任意层级.git目录/指针与本报告自身，不读取任何文件正文。",
+  "deduplication": "仅在Junction/符号链接处解析实际目标；普通子路径继承已解析父目录，按Windows不区分大小写的实际路径全局去重。同目标只计入首次遍历的一级入口。硬链接不同路径未按文件ID合并；字节为逻辑长度，不代表磁盘实际占用。",
+  "consistency": "一次完成的实时枚举，非冻结快照；扫描期间其他任务新增/删除文件可能影响统计。",
+  "performance_note": "此前逐文件realpath的只读尝试在8.05分钟后经主任务授权终止，未写任何报告；本表仅包含随后完成的优化扫描。",
+  "top_level": {
+    ".agents": {
+      "files": 180,
+      "bytes": 991358,
+      "directories": 189,
+      "directory_links": 0,
+      "duplicate_targets_skipped": 0,
+      "gib": 0.0009
+    },
+    "根目录文件": {
+      "files": 5,
+      "bytes": 10992,
+      "directories": 0,
+      "directory_links": 0,
+      "duplicate_targets_skipped": 0,
+      "gib": 0.0
+    },
+    "00_总控台": {
+      "files": 24,
+      "bytes": 184245,
+      "directories": 6,
+      "directory_links": 0,
+      "duplicate_targets_skipped": 0,
+      "gib": 0.0002
+    },
+    "01_产品资产": {
+      "files": 11249,
+      "bytes": 6577331949,
+      "directories": 1270,
+      "directory_links": 1,
+      "duplicate_targets_skipped": 0,
+      "gib": 6.1256
+    },
+    "02_Alibaba运营": {
+      "files": 10636,
+      "bytes": 1194208336,
+      "directories": 736,
+      "directory_links": 3,
+      "duplicate_targets_skipped": 2,
+      "gib": 1.1122
+    },
+    "03_独立站": {
+      "files": 78211,
+      "bytes": 2787067566,
+      "directories": 10901,
+      "directory_links": 1285,
+      "duplicate_targets_skipped": 1087,
+      "gib": 2.5957
+    },
+    "04_客户开发": {
+      "files": 603,
+      "bytes": 244824858,
+      "directories": 71,
+      "directory_links": 1,
+      "duplicate_targets_skipped": 1,
+      "gib": 0.228
+    },
+    "05_内容与视频": {
+      "files": 84302,
+      "bytes": 30978433114,
+      "directories": 6894,
+      "directory_links": 2,
+      "duplicate_targets_skipped": 0,
+      "gib": 28.8509
+    },
+    "06_市场研究": {
+      "files": 21,
+      "bytes": 170129,
+      "directories": 8,
+      "directory_links": 0,
+      "duplicate_targets_skipped": 0,
+      "gib": 0.0002
+    },
+    "07_知识库与Skills": {
+      "files": 64,
+      "bytes": 44908822,
+      "directories": 22,
+      "directory_links": 0,
+      "duplicate_targets_skipped": 0,
+      "gib": 0.0418
+    },
+    "08_工具链": {
+      "files": 131814,
+      "bytes": 4254780957,
+      "directories": 18964,
+      "directory_links": 80,
+      "duplicate_targets_skipped": 1,
+      "gib": 3.9626
+    },
+    "90_归档": {
+      "files": 8,
+      "bytes": 383537,
+      "directories": 5,
+      "directory_links": 0,
+      "duplicate_targets_skipped": 0,
+      "gib": 0.0004
+    },
+    "99_临时区": {
+      "files": 441,
+      "bytes": 87083497,
+      "directories": 45,
+      "directory_links": 3,
+      "duplicate_targets_skipped": 3,
+      "gib": 0.0811
+    },
+    "_codex_work": {
+      "files": 33581,
+      "bytes": 1627081723,
+      "directories": 3742,
+      "directory_links": 0,
+      "duplicate_targets_skipped": 0,
+      "gib": 1.5153
+    }
+  },
+  "totals": {
+    "files": 351139,
+    "bytes": 47797461083,
+    "directories": 42853,
+    "directory_links_encountered": 1375,
+    "unique_directories_outside_workspace_via_links": 31417,
+    "gib": 44.5149
+  },
+  "skipped": {
+    "git_entries": 9,
+    "duplicate_directory_targets": 1094
+  },
+  "permission_errors": 0,
+  "error_count": 275,
+  "errors_by_type": {
+    "FileNotFoundError": 275
+  },
+  "saved_file_paths": false
+}

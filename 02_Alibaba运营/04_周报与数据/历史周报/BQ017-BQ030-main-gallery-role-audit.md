@@ -54,6 +54,6 @@
 
 ## QA 文件
 
-- 当前主图组总览：`C:\Users\spq\Desktop\贝强\02_可上传素材\99_归档\BQ017_BQ030_gallery_role_audit_20260621\current_gallery_audit.jpg`
-- 源图预览总览：`C:\Users\spq\Desktop\贝强\02_可上传素材\99_归档\BQ017_BQ030_gallery_role_audit_20260621\source_contact_overview.jpg`
-- 结构化 CSV：`C:\Users\spq\Desktop\贝强\02_可上传素材\99_归档\BQ017_BQ030_gallery_role_audit_20260621\gallery_role_audit.csv`
+- 当前主图组总览：`C:\Users\spq\Desktop\贝强\01_产品资产\02_可发布素材\99_归档\BQ017_BQ030_gallery_role_audit_20260621\current_gallery_audit.jpg`
+- 源图预览总览：`C:\Users\spq\Desktop\贝强\01_产品资产\02_可发布素材\99_归档\BQ017_BQ030_gallery_role_audit_20260621\source_contact_overview.jpg`
+- 结构化 CSV：`C:\Users\spq\Desktop\贝强\01_产品资产\02_可发布素材\99_归档\BQ017_BQ030_gallery_role_audit_20260621\gallery_role_audit.csv`

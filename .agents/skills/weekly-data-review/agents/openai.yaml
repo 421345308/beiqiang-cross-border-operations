@@ -1,0 +1,4 @@
+interface:
+  display_name: "Weekly Data Review"
+  short_description: "Review weekly Alibaba operation data and choose next actions."
+  default_prompt: "Use $weekly-data-review to review Beiqiang weekly Alibaba data and produce next-week actions."

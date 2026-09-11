@@ -1,0 +1,13 @@
+{
+  "source": "D:\\下载\\素材.mp4",
+  "segments": [
+    {"name": "01_facade", "in": 0, "out": 4, "role": "factory_intro"},
+    {"name": "02_material", "in": 10, "out": 16, "role": "material_cutting"},
+    {"name": "03_stitching", "in": 44, "out": 50, "role": "upper_stitching"},
+    {"name": "04_assembly", "in": 102, "out": 109, "role": "assembly"},
+    {"name": "05_packing", "in": 120, "out": 127, "role": "packing"},
+    {"name": "06_checking", "in": 140, "out": 147, "role": "quality_check"},
+    {"name": "07_finish", "in": 160, "out": 167, "role": "finished_goods_cta"}
+  ],
+  "output": {"width": 1280, "height": 720, "fps": 30, "duration": 44}
+}

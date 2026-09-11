@@ -1,0 +1,154 @@
+[
+  {
+    "batch": 1,
+    "links": 15,
+    "source_products": [
+      "BQ001",
+      "BQ002",
+      "BQ003",
+      "BQ004",
+      "BQ005"
+    ],
+    "first_link": "BQ001-W1",
+    "last_link": "BQ005-O1",
+    "status": "BLOCKED_MAIN_IMAGE_VISUAL_QA_REAUDIT_REQUIRED"
+  },
+  {
+    "batch": 2,
+    "links": 15,
+    "source_products": [
+      "BQ006",
+      "BQ007",
+      "BQ008",
+      "BQ009",
+      "BQ010"
+    ],
+    "first_link": "BQ006-W1",
+    "last_link": "BQ010-O1",
+    "status": "BLOCKED_MAIN_IMAGE_VISUAL_QA_REAUDIT_REQUIRED"
+  },
+  {
+    "batch": 3,
+    "links": 15,
+    "source_products": [
+      "BQ011",
+      "BQ012",
+      "BQ013",
+      "BQ014",
+      "BQ015"
+    ],
+    "first_link": "BQ011-W1",
+    "last_link": "BQ015-O1",
+    "status": "BLOCKED_MAIN_IMAGE_VISUAL_QA_REAUDIT_REQUIRED"
+  },
+  {
+    "batch": 4,
+    "links": 15,
+    "source_products": [
+      "BQ016",
+      "BQ017",
+      "BQ018",
+      "BQ019",
+      "BQ020"
+    ],
+    "first_link": "BQ016-W1",
+    "last_link": "BQ020-O1",
+    "status": "BLOCKED_MAIN_IMAGE_VISUAL_QA_REAUDIT_REQUIRED"
+  },
+  {
+    "batch": 5,
+    "links": 15,
+    "source_products": [
+      "BQ021",
+      "BQ022",
+      "BQ023",
+      "BQ024",
+      "BQ025"
+    ],
+    "first_link": "BQ021-W1",
+    "last_link": "BQ025-O1",
+    "status": "BLOCKED_MAIN_IMAGE_VISUAL_QA_REAUDIT_REQUIRED"
+  },
+  {
+    "batch": 6,
+    "links": 15,
+    "source_products": [
+      "BQ026",
+      "BQ027",
+      "BQ028",
+      "BQ029",
+      "BQ030"
+    ],
+    "first_link": "BQ026-W1",
+    "last_link": "BQ030-O1",
+    "status": "BLOCKED_MAIN_IMAGE_VISUAL_QA_REAUDIT_REQUIRED"
+  },
+  {
+    "batch": 7,
+    "links": 15,
+    "source_products": [
+      "BQ031",
+      "BQ032",
+      "BQ033",
+      "BQ034",
+      "BQ035"
+    ],
+    "first_link": "BQ031-W1",
+    "last_link": "BQ035-O1",
+    "status": "BLOCKED_MAIN_IMAGE_VISUAL_QA_FAILED_IMPORT_STATE_TO_VERIFY"
+  },
+  {
+    "batch": 8,
+    "links": 15,
+    "source_products": [
+      "BQ036",
+      "BQ037",
+      "BQ038",
+      "BQ039",
+      "BQ040"
+    ],
+    "first_link": "BQ036-W1",
+    "last_link": "BQ040-O1",
+    "status": "BLOCKED_MAIN_IMAGE_VISUAL_QA_REAUDIT_REQUIRED"
+  },
+  {
+    "batch": 9,
+    "links": 15,
+    "source_products": [
+      "BQ041",
+      "BQ042",
+      "BQ043",
+      "BQ044",
+      "BQ045"
+    ],
+    "first_link": "BQ041-W1",
+    "last_link": "BQ045-O1",
+    "status": "ASSETS_READY_IMAGE_UPLOAD_BLOCKED_BROWSER_POLICY_WORKCTL_NOT_ATTACHED"
+  },
+  {
+    "batch": 10,
+    "links": 15,
+    "source_products": [
+      "BQ046",
+      "BQ047",
+      "BQ048",
+      "BQ049",
+      "BQ050"
+    ],
+    "first_link": "BQ046-W1",
+    "last_link": "BQ050-O1",
+    "status": "ASSETS_READY_IMAGE_UPLOAD_BLOCKED_BROWSER_POLICY_WORKCTL_NOT_ATTACHED"
+  },
+  {
+    "batch": 11,
+    "links": 9,
+    "source_products": [
+      "BQ051",
+      "BQ052",
+      "BQ059"
+    ],
+    "first_link": "BQ051-W1",
+    "last_link": "BQ059-O1",
+    "status": "ASSETS_READY_IMAGE_UPLOAD_BLOCKED_BROWSER_POLICY_WORKCTL_NOT_ATTACHED"
+  }
+]

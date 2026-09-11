@@ -5,8 +5,8 @@ from PIL import Image, ImageDraw, ImageFont, ImageOps
 
 ROOT = Path(__file__).resolve().parents[2]
 FACTORY_DIR = ROOT / "03_厂家资料" / "厂家照片"
-PRODUCT_DIR = ROOT / "02_可上传素材"
-OUT = ROOT / "02_可上传素材" / "公司图集"
+PRODUCT_DIR = ROOT / "01_产品资产" / "02_可发布素材"
+OUT = ROOT / "01_产品资产" / "02_可发布素材" / "公司图集"
 
 
 def font(size: int, bold: bool = False):

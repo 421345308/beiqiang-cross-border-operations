@@ -1,18 +1,20 @@
 ---
 name: alibaba-openapi-operator
-description: Use Beiqiang's Alibaba.com Open Platform application for API-first product, image-bank, video, quality-score, showcase, order, and logistics operations. Use when an Alibaba International Station task can be done through the authorized Open APIs; keep browser work only for authorization, unsupported UI-only fields, and final public-page verification.
+description: Execute Beiqiang Alibaba.com product, image-bank, video, quality, showcase, order and logistics operations through the authorized OpenAPI client. Use for API execution and readback; publishing rules remain in the workspace SOP.
 ---
 
 # Alibaba OpenAPI Operator
 
-Prefer the authorized Alibaba Open APIs over repetitive browser form work. The application currently exposes 72 APIs across product/media, order, logistics, and system authorization.
+Prefer the authorized Alibaba Open APIs over repetitive browser form work. Resolve scripts relative to this skill directory and business data relative to the workspace root; do not run the examples from an unrelated `scripts/` directory.
 
 ## Safety and evidence
 
-- Credentials live only at `C:/Users/spq/.config/beiqiang/alibaba-openapi.json`. Never print the secret, copy it into prompts, commit it, or place it in generated workbooks.
+负责人于2026-09-08确认：只有原始数据包中的商品属于贝强自有工厂货。阿里巴巴国际站扩品可能没有实际存在的商品；已上线、API回读、图片、生成素材、热榜或竞品记录均不能证明产品实物存在、自有工厂生产或可供货。必须逐款关联原始数据包；没有匹配证据的扩品标记为 HOLD_SOURCE（实物与货源待核验），不得称为自有工厂货、计入已确认供给或承诺样品/库存/交期。外部商品经后续核实可以记录真实来源，但不自动成为自有工厂货；归属变化须由负责人明确确认。
+
+- Credentials default to `~/.config/beiqiang/alibaba-openapi.json` (`Path.home()` in the client). A different external file can be selected with `--config` before the command. Never print secrets, copy them into prompts, commit them, or place them in generated workbooks.
 - Treat the current permission page and current official API documentation as authoritative. Read [references/permissions.md](references/permissions.md) to route an operation.
-- Read-only discovery and validation may run directly. A product publish/update, inventory/display change, order creation/shipping, address change, or other external mutation requires explicit authorization in the current task and an exact target summary before the call.
-- Do not infer unsupported Alibaba fields. Product facts and quality gates still come from the workspace Alibaba SOP and SKU evidence.
+- Read-only discovery and validation may run directly. Product/media, inventory/display, order/shipping, address and other external mutations must remain within the user's authorized targets and scope. Prepare the exact change before any missing approval is requested; existing authorization in the conversation remains valid.
+- For publishing or repair, read [the canonical lifecycle SOP](../../../02_Alibaba运营/00_运营SOP/国际站商品全生命周期SOP.md) and the SKU source evidence. Do not infer unsupported fields or copy historical defaults.
 - Record request IDs, trace IDs, returned product IDs, and platform error objects. Do not call success unless the API returns a positive business result.
 
 ## Runtime
@@ -28,7 +30,7 @@ python scripts/alibaba_openapi.py upload-image C:/absolute/image.jpg
 python scripts/catalog_image_audit.py --output C:/absolute/audit-folder --reference C:/absolute/reference.png
 ```
 
-The first authorization requires a user-approved OAuth grant in Alibaba. Authentication uses GOP while seller business APIs use the TOP-compatible protocol on Alibaba.com's current API server. After authorization, the script stores access and refresh tokens beside the credentials and refreshes them without exposing them.
+The first authorization requires a user-approved OAuth grant in Alibaba. Authentication uses GOP while seller business APIs use the TOP-compatible protocol. The client saves returned tokens in the external configuration file. It does **not** automatically refresh an expired token: use `refresh-token` when needed, then verify the required read API before resuming.
 
 ## Product operations
 
@@ -44,6 +46,8 @@ For publishing or repair, read [references/product-publishing.md](references/pro
 Use browser only when OAuth consent, CAPTCHA, a field absent from the API, or visible public-page verification requires it. Browser fallback does not replace API-side readback.
 
 For a catalog-wide image audit, use `scripts/catalog_image_audit.py`. It is read-only: it retrieves every live product gallery, creates compact six-image contact sheets, checks image count/resolution/hero occupancy, and can match a user screenshot to the closest live image without storing hundreds of full-size CDN files.
+
+Other helpers: `catalog_secondary_image_audit.py` performs a read-only follow-up audit; `batch_replace_hero.py` and `replace_full_gallery.py` write live products. Inspect each helper's `--help` and input manifest before use; their presence does not authorize a batch change.
 
 ## Documentation routing
 

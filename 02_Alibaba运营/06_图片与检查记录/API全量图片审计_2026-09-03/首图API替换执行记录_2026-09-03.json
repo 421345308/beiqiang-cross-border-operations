@@ -1,0 +1,354 @@
+{
+  "started_at": "2026-09-03T12:09:55.892204+00:00",
+  "finished_at": "2026-09-03T12:12:02.341043+00:00",
+  "candidate_count": 3,
+  "success_count": 2,
+  "failure_count": 1,
+  "results": [
+    {
+      "product_id": "10000043732626",
+      "file": "02_Alibaba运营\\06_图片与检查记录\\API全量图片审计_2026-09-03\\P0重试_3款\\10000043732626_BQ014_A507_black.png",
+      "ok": true,
+      "stage": "verified",
+      "model": "014",
+      "encrypted_product_id": "AAFkjmk4AOWGexecDTURi-lx",
+      "title": "2026 New Slip-On Knit Walking Shoes A507 Stretch Fabric Breathable Mesh Solid Spring Chunky EVA Sole Casual Sneakers OEM ODM",
+      "before_status": "approved",
+      "after_status": "modified",
+      "before_display": "Y",
+      "after_display": "N",
+      "old_images": [
+        "https://sc04.alicdn.com/kf/Se86e0b934bc24b9a9124c9dc1c195358C.jpg",
+        "https://sc04.alicdn.com/kf/S28fd173705f14d1b953ffffd631ab0568.jpg",
+        "https://sc04.alicdn.com/kf/S6a9d8387ea1d495bb5edd5a4909d7e55y.jpg",
+        "https://sc04.alicdn.com/kf/Sb4da5174b6dc4792a9399fa8273e8a752.jpg",
+        "https://sc04.alicdn.com/kf/S2ac1c1fc2db441949f5236a19305271eo.jpg",
+        "https://sc04.alicdn.com/kf/Sd207740d19714541aa73d3b8b073a0d96.jpg"
+      ],
+      "new_images": [
+        "https://sc04.alicdn.com/kf/Sa06a555836094985bff6de7d0cfe388bV.png",
+        "https://sc04.alicdn.com/kf/H64aef11f4c9349458ba23f03ecb6af26O.jpg",
+        "https://sc04.alicdn.com/kf/H39c3aa7f07cf4107b93d89a4e11992587.jpg",
+        "https://sc04.alicdn.com/kf/H0f8aa38612134d7c80750e70a30516085.jpg",
+        "https://sc04.alicdn.com/kf/Haf6492474e824776963d29bbe139a3ccO.jpg",
+        "https://sc04.alicdn.com/kf/Hd685d75280674954a3e116fa3d4bc7a2W.jpg"
+      ],
+      "preserved_m2_m6": true,
+      "other_fields_unchanged": true,
+      "preserved_reuploads": [
+        {
+          "slot": 2,
+          "source_url": "https://sc04.alicdn.com/kf/S28fd173705f14d1b953ffffd631ab0568.jpg",
+          "source_key": "S28fd173705f14d1b953ffffd631ab0568",
+          "file_id": "33345673051",
+          "photobank_url": "//sc04.alicdn.com/kf/H64aef11f4c9349458ba23f03ecb6af26O/286385890/H64aef11f4c9349458ba23f03ecb6af26O.jpg",
+          "request_id": "0bab02fc17884374193251985",
+          "trace_id": "2101e68f17884374170612087e0b59",
+          "message": null,
+          "error": null
+        },
+        {
+          "slot": 3,
+          "source_url": "https://sc04.alicdn.com/kf/S6a9d8387ea1d495bb5edd5a4909d7e55y.jpg",
+          "source_key": "S6a9d8387ea1d495bb5edd5a4909d7e55y",
+          "file_id": "33348277626",
+          "photobank_url": "//sc04.alicdn.com/kf/H39c3aa7f07cf4107b93d89a4e11992587/286385890/H39c3aa7f07cf4107b93d89a4e11992587.jpg",
+          "request_id": "213d4e4917884374356036988",
+          "trace_id": "2101d14517884374336764792e0f70",
+          "message": null,
+          "error": null
+        },
+        {
+          "slot": 4,
+          "source_url": "https://sc04.alicdn.com/kf/Sb4da5174b6dc4792a9399fa8273e8a752.jpg",
+          "source_key": "Sb4da5174b6dc4792a9399fa8273e8a752",
+          "file_id": "33348253812",
+          "photobank_url": "//sc04.alicdn.com/kf/H0f8aa38612134d7c80750e70a30516085/286385890/H0f8aa38612134d7c80750e70a30516085.jpg",
+          "request_id": "213c933517884374519848406",
+          "trace_id": "2101fb9317884374500513809e0f0c",
+          "message": null,
+          "error": null
+        },
+        {
+          "slot": 5,
+          "source_url": "https://sc04.alicdn.com/kf/S2ac1c1fc2db441949f5236a19305271eo.jpg",
+          "source_key": "S2ac1c1fc2db441949f5236a19305271eo",
+          "file_id": "33348277688",
+          "photobank_url": "//sc04.alicdn.com/kf/Haf6492474e824776963d29bbe139a3ccO/286385890/Haf6492474e824776963d29bbe139a3ccO.jpg",
+          "request_id": "21501b8d17884374692791433",
+          "trace_id": "2101d94717884374671436819e0e2f",
+          "message": null,
+          "error": null
+        },
+        {
+          "slot": 6,
+          "source_url": "https://sc04.alicdn.com/kf/Sd207740d19714541aa73d3b8b073a0d96.jpg",
+          "source_key": "Sd207740d19714541aa73d3b8b073a0d96",
+          "file_id": "33345637335",
+          "photobank_url": "//sc04.alicdn.com/kf/Hd685d75280674954a3e116fa3d4bc7a2W/286385890/Hd685d75280674954a3e116fa3d4bc7a2W.jpg",
+          "request_id": "21501be117884374855706531",
+          "trace_id": "2101dd0617884374837031482e0b58",
+          "message": null,
+          "error": null
+        }
+      ],
+      "upload": {
+        "file_id": "30154336240",
+        "url": "//sc04.alicdn.com/kf/Sa06a555836094985bff6de7d0cfe388bV/286385890/Sa06a555836094985bff6de7d0cfe388bV.png",
+        "request_id": "0bab02fe17884374946182624",
+        "trace_id": "2101c5a717884374923152228e0f8d",
+        "message": null,
+        "error": null
+      },
+      "video": {
+        "video_id": "AAHxjmk4AOWGexucDVhQziiW",
+        "request_id": "213c933517884375014018079",
+        "trace_id": "2101c5a717884375010366251e0c00",
+        "message": null,
+        "error": null
+      },
+      "update": {
+        "request_id": "21501be117884375086276743",
+        "trace_id": "2101d13c17884375082752437e0c04",
+        "message": null,
+        "error": null
+      },
+      "readback": {
+        "request_id": "0bab02fc17884375169301202",
+        "trace_id": "2101e68f17884375165776443e0deb",
+        "message": null,
+        "error": null
+      }
+    },
+    {
+      "product_id": "10000047166193",
+      "file": "02_Alibaba运营\\06_图片与检查记录\\API全量图片审计_2026-09-03\\P0重试_3款\\10000047166193_BQ042_206_all-black.png",
+      "ok": true,
+      "stage": "verified",
+      "model": "042",
+      "encrypted_product_id": "AAEqjmk4AOWGexecDTURxFUS",
+      "title": "Wholesale Model 206 Knit Lace-Up Walking Shoes Regular Fit Casual Sneakers EU 35-45 OEM ODM",
+      "before_status": "approved",
+      "after_status": "modified",
+      "before_display": "Y",
+      "after_display": "N",
+      "old_images": [
+        "https://sc04.alicdn.com/kf/Ab9223a1bda474e449cd5dfe6a283aaee5.png",
+        "https://sc04.alicdn.com/kf/A7952f4bfa09d4f14a041d03dc7ff0bdek.png",
+        "https://sc04.alicdn.com/kf/A94ef8d31ef3047e2a8b80185c41d0701w.png",
+        "https://sc04.alicdn.com/kf/A17c0a12b27f54c02abab4e21cf17d5d04.png",
+        "https://sc04.alicdn.com/kf/Aedc24f25f2d44ed6bb1a8ac4dbbed07aj.png",
+        "https://sc04.alicdn.com/kf/Acafdce5def074a7d93b13b46336f13f0J.png"
+      ],
+      "new_images": [
+        "https://sc04.alicdn.com/kf/S1d4045fb93b246a79c460fc5a674430dK.png",
+        "https://sc04.alicdn.com/kf/Hc8803ccf4bbe497eb82ef45f27c9f03ct.jpg",
+        "https://sc04.alicdn.com/kf/H0c126e03af2847b68f596b817ccc6eb0h.jpg",
+        "https://sc04.alicdn.com/kf/H1e8182e6b7d34290af91bbce9661d3d5H.jpg",
+        "https://sc04.alicdn.com/kf/H5be9184b5a9c4139879f95ef11872ae9G.jpg",
+        "https://sc04.alicdn.com/kf/H945cf36c17854e6183274452525b010fo.jpg"
+      ],
+      "preserved_m2_m6": true,
+      "other_fields_unchanged": true,
+      "preserved_reuploads": [
+        {
+          "slot": 2,
+          "source_url": "https://sc04.alicdn.com/kf/A7952f4bfa09d4f14a041d03dc7ff0bdek.png",
+          "source_key": "A7952f4bfa09d4f14a041d03dc7ff0bdek",
+          "file_id": "33345649284",
+          "photobank_url": "//sc04.alicdn.com/kf/Hc8803ccf4bbe497eb82ef45f27c9f03ct/286385890/Hc8803ccf4bbe497eb82ef45f27c9f03ct.jpg",
+          "request_id": "21501be117884374200075949",
+          "trace_id": "2101d13c17884374179204123e0d90",
+          "message": null,
+          "error": null
+        },
+        {
+          "slot": 3,
+          "source_url": "https://sc04.alicdn.com/kf/A94ef8d31ef3047e2a8b80185c41d0701w.png",
+          "source_key": "A94ef8d31ef3047e2a8b80185c41d0701w",
+          "file_id": "33342900955",
+          "photobank_url": "//sc04.alicdn.com/kf/H0c126e03af2847b68f596b817ccc6eb0h/286385890/H0c126e03af2847b68f596b817ccc6eb0h.jpg",
+          "request_id": "21501be117884374374766096",
+          "trace_id": "2101d86517884374355522749e0e89",
+          "message": null,
+          "error": null
+        },
+        {
+          "slot": 4,
+          "source_url": "https://sc04.alicdn.com/kf/A17c0a12b27f54c02abab4e21cf17d5d04.png",
+          "source_key": "A17c0a12b27f54c02abab4e21cf17d5d04",
+          "file_id": "33348265662",
+          "photobank_url": "//sc04.alicdn.com/kf/H1e8182e6b7d34290af91bbce9661d3d5H/286385890/H1e8182e6b7d34290af91bbce9661d3d5H.jpg",
+          "request_id": "0bab02fe17884374548404458",
+          "trace_id": "2101d94717884374528666280e0dab",
+          "message": null,
+          "error": null
+        },
+        {
+          "slot": 5,
+          "source_url": "https://sc04.alicdn.com/kf/Aedc24f25f2d44ed6bb1a8ac4dbbed07aj.png",
+          "source_key": "Aedc24f25f2d44ed6bb1a8ac4dbbed07aj",
+          "file_id": "33345697105",
+          "photobank_url": "//sc04.alicdn.com/kf/H5be9184b5a9c4139879f95ef11872ae9G/286385890/H5be9184b5a9c4139879f95ef11872ae9G.jpg",
+          "request_id": "0b51802d17884374727043411",
+          "trace_id": "2101d86517884374707755000e0f4f",
+          "message": null,
+          "error": null
+        },
+        {
+          "slot": 6,
+          "source_url": "https://sc04.alicdn.com/kf/Acafdce5def074a7d93b13b46336f13f0J.png",
+          "source_key": "Acafdce5def074a7d93b13b46336f13f0J",
+          "file_id": "33348241829",
+          "photobank_url": "//sc04.alicdn.com/kf/H945cf36c17854e6183274452525b010fo/286385890/H945cf36c17854e6183274452525b010fo.jpg",
+          "request_id": "0bbb3b2417884374901888695",
+          "trace_id": "2101dd0617884374883783873e0cf2",
+          "message": null,
+          "error": null
+        }
+      ],
+      "upload": {
+        "file_id": "30150317141",
+        "url": "//sc04.alicdn.com/kf/S1d4045fb93b246a79c460fc5a674430dK/286385890/S1d4045fb93b246a79c460fc5a674430dK.png",
+        "request_id": "21501b8d17884375001451710",
+        "trace_id": "2101d14517884374970916743e0e69",
+        "message": null,
+        "error": null
+      },
+      "video": {
+        "video_id": "AAGnjmk4AOWGexucDVhQxsS4",
+        "request_id": "212cbf3217884375069776759",
+        "trace_id": "2101e68f17884375066308175e0bdc",
+        "message": null,
+        "error": null
+      },
+      "update": {
+        "request_id": "21546a1d17884375139614917",
+        "trace_id": "2101c5a717884375136312745e0f8d",
+        "message": null,
+        "error": null
+      },
+      "readback": {
+        "request_id": "0b51802d17884375220573842",
+        "trace_id": "2101dbd017884375217082447e0e97",
+        "message": null,
+        "error": null
+      }
+    },
+    {
+      "product_id": "1601924345456",
+      "file": "02_Alibaba运营\\06_图片与检查记录\\API全量图片审计_2026-09-03\\P0重试_3款\\1601924345456_BQ033_T5503_black.png",
+      "ok": false,
+      "stage": "readback_mismatch",
+      "model": "033",
+      "encrypted_product_id": "AAG3jmk4AOWGex-cDVm6p6mT",
+      "title": "Wholesale Breathable Knit Lace-Up Casual Walking Shoes Lightweight Spring Autumn Summer Sneakers for Men and Women",
+      "before_status": "approved",
+      "after_status": "modified",
+      "before_display": "Y",
+      "after_display": "N",
+      "old_images": [
+        "https://sc04.alicdn.com/kf/Ha2a792ddd4bc4f1abe29114b7bfb383d5.jpg",
+        "https://sc04.alicdn.com/kf/H82dcba44c91042e78b5a2dda3b7bcd61H.jpg",
+        "https://sc04.alicdn.com/kf/H23c2946d87fb416385af8dfbe9467884e.jpg",
+        "https://sc04.alicdn.com/kf/Ha4af4d9f7ecf4ef598e6f4e562135c37G.jpg",
+        "https://sc04.alicdn.com/kf/Hd47c246380424068a1e9fa906e13ab577.jpg",
+        "https://sc04.alicdn.com/kf/H27fba740385b464fae45bcc8ed1e5e0cw.jpg"
+      ],
+      "new_images": [
+        "https://sc04.alicdn.com/kf/S445fb842ea014adfb95c010cab4c3114s.png",
+        "https://sc04.alicdn.com/kf/Hb69d02d3478444248e8c4ceb921a8ca4y.jpg",
+        "https://sc04.alicdn.com/kf/H2e2109ff4dc34df3bd11a8e194bb6ab4I.jpg",
+        "https://sc04.alicdn.com/kf/He9ed4afcaa3f4ab9831f207c58c8746fV.jpg",
+        "https://sc04.alicdn.com/kf/H4f375938af93464c84dbf3bff3874030O.jpg",
+        "https://sc04.alicdn.com/kf/Hfee54e3ed896487d9772ffe0ce22e398n.jpg"
+      ],
+      "preserved_m2_m6": true,
+      "other_fields_unchanged": false,
+      "preserved_reuploads": [
+        {
+          "slot": 2,
+          "source_url": "https://sc04.alicdn.com/kf/H82dcba44c91042e78b5a2dda3b7bcd61H.jpg",
+          "source_key": "H82dcba44c91042e78b5a2dda3b7bcd61H",
+          "file_id": "33347868100",
+          "photobank_url": "//sc04.alicdn.com/kf/Hb69d02d3478444248e8c4ceb921a8ca4y/286385890/Hb69d02d3478444248e8c4ceb921a8ca4y.jpg",
+          "request_id": "210829b717884374183732572",
+          "trace_id": "2101c5a717884374168496604e0bc3",
+          "message": null,
+          "error": null
+        },
+        {
+          "slot": 3,
+          "source_url": "https://sc04.alicdn.com/kf/H23c2946d87fb416385af8dfbe9467884e.jpg",
+          "source_key": "H23c2946d87fb416385af8dfbe9467884e",
+          "file_id": "33345601437",
+          "photobank_url": "//sc04.alicdn.com/kf/H2e2109ff4dc34df3bd11a8e194bb6ab4I/286385890/H2e2109ff4dc34df3bd11a8e194bb6ab4I.jpg",
+          "request_id": "0bab02fc17884374350894516",
+          "trace_id": "2101d14517884374333453162e111f",
+          "message": null,
+          "error": null
+        },
+        {
+          "slot": 4,
+          "source_url": "https://sc04.alicdn.com/kf/Ha4af4d9f7ecf4ef598e6f4e562135c37G.jpg",
+          "source_key": "Ha4af4d9f7ecf4ef598e6f4e562135c37G",
+          "file_id": "33345613445",
+          "photobank_url": "//sc04.alicdn.com/kf/He9ed4afcaa3f4ab9831f207c58c8746fV/286385890/He9ed4afcaa3f4ab9831f207c58c8746fV.jpg",
+          "request_id": "21501be117884374507286227",
+          "trace_id": "2101fb9317884374490688606e0f6f",
+          "message": null,
+          "error": null
+        },
+        {
+          "slot": 5,
+          "source_url": "https://sc04.alicdn.com/kf/Hd47c246380424068a1e9fa906e13ab577.jpg",
+          "source_key": "Hd47c246380424068a1e9fa906e13ab577",
+          "file_id": "33348277683",
+          "photobank_url": "//sc04.alicdn.com/kf/H4f375938af93464c84dbf3bff3874030O/286385890/H4f375938af93464c84dbf3bff3874030O.jpg",
+          "request_id": "210829b717884374663592137",
+          "trace_id": "2101c5a717884374649334826e0bbd",
+          "message": null,
+          "error": null
+        },
+        {
+          "slot": 6,
+          "source_url": "https://sc04.alicdn.com/kf/H27fba740385b464fae45bcc8ed1e5e0cw.jpg",
+          "source_key": "H27fba740385b464fae45bcc8ed1e5e0cw",
+          "file_id": "33347916103",
+          "photobank_url": "//sc04.alicdn.com/kf/Hfee54e3ed896487d9772ffe0ce22e398n/286385890/Hfee54e3ed896487d9772ffe0ce22e398n.jpg",
+          "request_id": "0b51802d17884374820253494",
+          "trace_id": "2101d86517884374805661547e0e05",
+          "message": null,
+          "error": null
+        }
+      ],
+      "upload": {
+        "file_id": "30154600702",
+        "url": "//sc04.alicdn.com/kf/S445fb842ea014adfb95c010cab4c3114s/286385890/S445fb842ea014adfb95c010cab4c3114s.png",
+        "request_id": "213e759c17884374917977319",
+        "trace_id": "2101dbd017884374887851226e0cc9",
+        "message": null,
+        "error": null
+      },
+      "video": {
+        "video_id": "AAGnjmk4AOWGexucDVhQxsS4",
+        "request_id": "210829b717884374985767157",
+        "trace_id": "2101d13c17884374982216414e0c06",
+        "message": null,
+        "error": null
+      },
+      "update": {
+        "request_id": "21501b6717884375054505260",
+        "trace_id": "2101d13c17884375051066247e0c68",
+        "message": null,
+        "error": null
+      },
+      "readback": {
+        "request_id": "212cbf3217884375138887836",
+        "trace_id": "2101c5a717884375135397495e0eb4",
+        "message": null,
+        "error": null
+      }
+    }
+  ]
+}

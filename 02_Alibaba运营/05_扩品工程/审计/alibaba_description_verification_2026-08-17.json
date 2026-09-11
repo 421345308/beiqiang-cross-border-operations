@@ -1,0 +1,172 @@
+{
+  "verification_date": "2026-08-17",
+  "method": "browser 前台渲染（滚动触发懒加载 + 描述区 iframe/内联模块 DOM 提取），只读，未登录，未拦截（7/7 无验证码/登录墙/区域拦截）",
+  "pages": [
+    {
+      "sku": "BQ031",
+      "url": "https://www.alibaba.com/product-detail/Wholesale-Wide-Toe-Box-Knit-Lace_10000046439033.html",
+      "template": "A-iframe（descIframe.html 同源 iframe）",
+      "main_gallery_slides": 6,
+      "main_gallery_thumbnails": 5,
+      "desc_images_total": 9,
+      "desc_images_loaded": 9,
+      "desc_srcs_first10": [
+        "https://sc02.alicdn.com/kf/S85b6763402114d958afb753952d130e6n.png",
+        "https://sc02.alicdn.com/kf/S08bdd1a31b3541f78e50f4b8be26cfadA.png",
+        "https://sc02.alicdn.com/kf/Sb785a174a04043129c63a39a19df1c2ep.png",
+        "https://sc02.alicdn.com/kf/Hc99422065f7644c18da852e6adbd4a40u.png",
+        "https://sc02.alicdn.com/kf/H9c98f0404800441cb760040394aa2294d.png",
+        "https://sc02.alicdn.com/kf/Sfbe3b266e2aa4e188c750787862dc6b3z.png",
+        "https://sc02.alicdn.com/kf/S09d513bc536545a6aa44dcde52d0786eJ.png",
+        "https://sc02.alicdn.com/kf/Sfe5425e00d6b4c6bb9b0fe13b886c21cL.png",
+        "https://sc02.alicdn.com/kf/S2a37068ec469457bbeda55a02dd30b42e.png"
+      ],
+      "desc_texts_first3": [
+        "PRODUCT HIGHLIGHTS / 1. Wide Toe Box: Roomy forefoot design for walking and casual footwear collections.",
+        "ABOUT THE SUPPLIER / Quanzhou Beiqiang Footwear & Apparel Co., Ltd. is a footwear factory in Quanzhou, Fujian, China, supplying casual walking shoes...（含 BQ031 订货确认要求）",
+        "FAQs / Are you a factory or a trading company? / We are a footwear factory focusing on casual walking shoes..."
+      ],
+      "desc_modules": ["PRODUCT HIGHLIGHTS", "ABOUT THE SUPPLIER", "PRODUCT DIMENSIONS", "SCENE IMAGE", "FAQs"],
+      "conclusion": "A.完整（产品图9张 + 卖点/公司/FAQ 等文字模块）"
+    },
+    {
+      "sku": "BQ032",
+      "url": "https://www.alibaba.com/product-detail/Wholesale-Regular-Fit-Knit-Lace-Up_10000046653813.html",
+      "template": "A-iframe",
+      "main_gallery_slides": 6,
+      "main_gallery_thumbnails": 6,
+      "desc_images_total": 11,
+      "desc_images_loaded": 11,
+      "desc_srcs_first10": [
+        "https://sc02.alicdn.com/kf/S85b6763402114d958afb753952d130e6n.png",
+        "https://sc02.alicdn.com/kf/S08bdd1a31b3541f78e50f4b8be26cfadA.png",
+        "https://sc02.alicdn.com/kf/Sb785a174a04043129c63a39a19df1c2ep.png",
+        "https://sc02.alicdn.com/kf/Hc99422065f7644c18da852e6adbd4a40u.png",
+        "https://sc02.alicdn.com/kf/H9c98f0404800441cb760040394aa2294d.png",
+        "https://sc02.alicdn.com/kf/S3295596405d6472ca3d93a6481355f701.png",
+        "https://sc02.alicdn.com/kf/S4f82f775f99e4694a877f3b3f137b21db.png",
+        "https://sc02.alicdn.com/kf/S7020814ab04b40aabf4690acf67cbcc3w.png",
+        "https://sc02.alicdn.com/kf/S91d65381fb3c4889887454d1c67a7bedk.png",
+        "https://sc02.alicdn.com/kf/Sb6625b5cc5584065b5107b5756cc6df3Z.png"
+      ],
+      "desc_texts_first3": [
+        "PRODUCT HIGHLIGHTS / 1. Regular Fit Casual Walking Shoe: Low-profile lace-up style for wholesale casual footwear collections.",
+        "PRODUCT HIGHLIGHTS",
+        "1. Regular Fit Casual Walking Shoe: Low-profile lace-up style for wholesale casual..."
+      ],
+      "desc_modules": ["PRODUCT HIGHLIGHTS", "ABOUT THE SUPPLIER（结构同 BQ031）"],
+      "conclusion": "A.完整（产品图11张 + 卖点/公司文字模块）"
+    },
+    {
+      "sku": "BQ033",
+      "url": "https://www.alibaba.com/product-detail/Wholesale-Breathable-Knit-Lace-Up-Casual_1601924345456.html",
+      "template": "B-inline（module-structure-description 内联模块）",
+      "main_gallery_slides": 6,
+      "main_gallery_thumbnails": 2,
+      "desc_images_total": 1,
+      "desc_images_loaded": 1,
+      "desc_srcs_first10": [
+        "https://sc04.alicdn.com/kf/H803b8385a7534f4da6eb38db6ee66bb25.png"
+      ],
+      "desc_texts_first3": [
+        "Highlights at a glance / Breathable Knit Upper:Engineered knit and stretch fabric construction creates a light feel while helping air circulate...",
+        "About this supplier / Quanzhou Beiqiang Footwear & Apparel Co., Ltd. is a footwear manufacturer...",
+        "FAQs / Who are we? / Quanzhou Beiqiang Footwear & Apparel Co., Ltd. is a footwear ma..."
+      ],
+      "desc_modules": ["Highlights at a glance（卖点文字）", "About this supplier", "FAQs"],
+      "conclusion": "A.完整（产品图1张 + 卖点/公司/FAQ 文字模块）"
+    },
+    {
+      "sku": "BQ036",
+      "url": "https://www.alibaba.com/product-detail/Wholesale-High-Top-Knit-Sock-Sneakers_1601924292931.html",
+      "template": "B-inline",
+      "main_gallery_slides": 6,
+      "main_gallery_thumbnails": 0,
+      "desc_images_total": 0,
+      "desc_images_loaded": 0,
+      "desc_srcs_first10": [],
+      "desc_texts_first3": [
+        "Highlights at a glance / Sock Fit Upper:High top knitted textile upper wraps the foot in a flexible ...",
+        "About this supplier / Quanzhou Beiqiang Footwear & Apparel Co., Ltd. is a footwear manufacturer based in Quanzho...",
+        "FAQs / Who are we? / Quanzhou Beiqiang Footwear & Apparel Co., Ltd. is a footwear manufacturer located in Quanzhou..."
+      ],
+      "desc_modules": ["Highlights at a glance", "About this supplier", "FAQs"],
+      "conclusion": "C.只有文字模块无产品图（Highlights/About/FAQ 三个模块，0 张图）"
+    },
+    {
+      "sku": "BQ040",
+      "url": "https://www.alibaba.com/product-detail/Wholesale-Knit-Slip-On-Walking-Shoes_1601924792152.html",
+      "template": "B-inline",
+      "main_gallery_slides": 6,
+      "main_gallery_thumbnails": 0,
+      "desc_images_total": 0,
+      "desc_images_loaded": 0,
+      "desc_srcs_first10": [],
+      "desc_texts_first3": [
+        "Highlights at a glance / Breathable Knit Upper:Soft knitted textile upper wraps the foot for a flexi...",
+        "About this supplier / Quanzhou Beiqiang Footwear & Apparel Co., Ltd. is a footwear manufacturer based in Quanzho...",
+        "FAQs / Who are we? / We are a footwear manufacturer located in Quanzhou, Fujian, China, specializing in casual and..."
+      ],
+      "desc_modules": ["Highlights at a glance", "About this supplier", "FAQs"],
+      "conclusion": "C.只有文字模块无产品图（Highlights/About/FAQ 三个模块，0 张图）"
+    },
+    {
+      "sku": "BQ034",
+      "url": "https://www.alibaba.com/product-detail/Wholesale-Knit-Slip-On-Walking-Shoes_11000037600317.html",
+      "template": "A-iframe",
+      "main_gallery_slides": 6,
+      "main_gallery_thumbnails": 3,
+      "desc_images_total": 6,
+      "desc_images_loaded": 6,
+      "desc_srcs_first10": [
+        "https://sc02.alicdn.com/kf/Aa6b2bab7c073420f85612e8b3c4ba16ax.png",
+        "https://sc02.alicdn.com/kf/A5baa5e3f1a874996806ddab505ff7fbdm.png",
+        "https://sc02.alicdn.com/kf/A40f937e2dfb3452d9dc68423fecdff426.png",
+        "https://sc02.alicdn.com/kf/Aacbd15c8f53f49319874e8eaf3b71b3at.png",
+        "https://sc02.alicdn.com/kf/A5dc43c95b87742b3b46ef46dcf2ae6f57.png",
+        "https://sc02.alicdn.com/kf/A347c9d3fed394e538baf50eedcf0c514y.png"
+      ],
+      "desc_texts_first3": [
+        "PRODUCT HIGHLIGHTS / 1. Knitted Textile Upper: Breathable knitted upper for daily walking and casual wear.",
+        "ABOUT THE SUPPLIER / Quanzhou Beiqiang Footwear & Apparel Co., Ltd. is a footwear factory...（含 BQ034 订货确认要求：Black, Grey or Brown, EU 35-45）",
+        "ORDER & CUSTOMIZATION / FAQs / Are you a factory or a ..."
+      ],
+      "desc_modules": ["PRODUCT HIGHLIGHTS", "ABOUT THE SUPPLIER", "ORDER & CUSTOMIZATION", "FAQs"],
+      "conclusion": "A.完整（产品图6张 + 卖点/公司/订单定制/FAQ 文字模块）"
+    },
+    {
+      "sku": "BQ020",
+      "url": "https://www.alibaba.com/product-detail/Wholesale-Summer-Breathable-Knit-Lace-Up_1601839073314.html",
+      "template": "A-iframe",
+      "main_gallery_slides": 6,
+      "main_gallery_thumbnails": 4,
+      "desc_images_total": 9,
+      "desc_images_loaded": 9,
+      "desc_srcs_first10": [
+        "https://sc02.alicdn.com/kf/S85b6763402114d958afb753952d130e6n.png",
+        "https://sc02.alicdn.com/kf/S08bdd1a31b3541f78e50f4b8be26cfadA.png",
+        "https://sc02.alicdn.com/kf/Sb785a174a04043129c63a39a19df1c2ep.png",
+        "https://sc02.alicdn.com/kf/Hc99422065f7644c18da852e6adbd4a40u.png",
+        "https://sc02.alicdn.com/kf/H1adcbc82e1ab4beb8b633d7d68f8dc733.png",
+        "https://sc02.alicdn.com/kf/H4fbe1af4cc1c41b38f64a436b64b76bf9.png",
+        "https://sc02.alicdn.com/kf/Hc79a451e0b2f4c448982b0983a8895359.png",
+        "https://sc02.alicdn.com/kf/H10ff29f229dd4edc8d44ae9863f20471d.png",
+        "https://sc02.alicdn.com/kf/Hca31f29e74744fedb5e13653157401582.png"
+      ],
+      "desc_texts_first3": [
+        "PRODUCT HIGHLIGHTS / 1. Hollow Knit Upper: Visible ventilation design supports summer buyer intent.",
+        "ABOUT THE SUPPLIER / Quanzhou Beiqiang Footwear & Apparel Co., Ltd. is a footwear factory located in Quanzhou, Fujian, China...",
+        "PRODUCT DIMENSIONS / SCENE IMAGE（图注模块）"
+      ],
+      "desc_modules": ["PRODUCT HIGHLIGHTS", "ABOUT THE SUPPLIER", "PRODUCT DIMENSIONS", "SCENE IMAGE"],
+      "conclusion": "A.完整（产品图9张 + 卖点/公司/尺寸/场景图文字模块）"
+    }
+  ],
+  "notes": [
+    "7/7 页面均为主图轮播 6 张（960x960 大图），缩略图 0-6 张不等（旧模板缩略图检测窗口有遗漏，不影响主图数）。",
+    "A-iframe 模板（BQ031/BQ032/BQ034/BQ020）：描述区 = 标题 + 同源 descIframe；前 4 张描述图在 BQ031/BQ032/BQ020 完全相同（共用模板头图），BQ034 不同。",
+    "B-inline 模板（BQ033/BQ036/BQ040）：描述区 = Highlights at a glance + About this supplier + FAQs 三个内联模块；BQ033 额外含 1 张产品图（PNG），BQ036/BQ040 无图。",
+    "BQ033 描述区下方为推荐位（220x220/100x100 缩略图），已排除在描述图片统计外。",
+    "无任何验证码/登录墙/区域拦截；未点击任何询盘/聊天/下单交互。"
+  ]
+}

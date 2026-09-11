@@ -1,0 +1,81 @@
+{
+  "group_id": 916810944,
+  "before": [
+    {
+      "id": 1601939738037,
+      "product_id": "AAE_jmk4AOWGex-cDVm7iopW",
+      "red_model": "BQ004-R1 / A502",
+      "subject": "Lightweight Knit Lace-Up Walking Shoes Breathable Casual Sneakers EVA Sole for Travel Commuting and Daily Wear Model A502",
+      "status": "approved",
+      "group_name": null,
+      "category_id": 201334413
+    },
+    {
+      "id": 1601939700200,
+      "product_id": "AAHrjmk4AOWGex-cDVm7jf4L",
+      "red_model": "BQ004-O1 / A502",
+      "subject": "Custom Logo Lightweight Knit Lace-Up Walking Shoes Breathable Casual Sneakers EVA Sole OEM ODM Private Label Model A502",
+      "status": "approved",
+      "group_name": null,
+      "category_id": 201334413
+    },
+    {
+      "id": 1601939626612,
+      "product_id": "AAHVjmk4AOWGex-cDVm7jN2X",
+      "red_model": "BQ004-W1 / A502",
+      "subject": "Wholesale Lightweight Knit Lace-Up Walking Shoes Breathable Casual Sneakers EVA Sole Factory Supply Model A502",
+      "status": "approved",
+      "group_name": null,
+      "category_id": 201334413
+    }
+  ],
+  "updates": [
+    {
+      "id": "1601939738037",
+      "model": "BQ004-R1 / A502",
+      "model_result": null,
+      "msg_code": null,
+      "msg_info": null,
+      "request_id": "0bab02fe17884879906698621"
+    },
+    {
+      "id": "1601939700200",
+      "model": "BQ004-O1 / A502",
+      "model_result": null,
+      "msg_code": null,
+      "msg_info": null,
+      "request_id": "213c932b17884879982112116"
+    },
+    {
+      "id": "1601939626612",
+      "model": "BQ004-W1 / A502",
+      "model_result": null,
+      "msg_code": null,
+      "msg_info": null,
+      "request_id": "21501be117884880061343535"
+    }
+  ],
+  "after": [
+    {
+      "id": 1601939700200,
+      "product_id": "AAHrjmk4AOWGex-cDVm7jf4L",
+      "red_model": "BQ004-O1 / A502",
+      "status": "modified",
+      "group_name": "Breathable Lace-Up Walking Shoes"
+    },
+    {
+      "id": 1601939626612,
+      "product_id": "AAHVjmk4AOWGex-cDVm7jN2X",
+      "red_model": "BQ004-W1 / A502",
+      "status": "modified",
+      "group_name": "Breathable Lace-Up Walking Shoes"
+    },
+    {
+      "id": 1601939738037,
+      "product_id": "AAE_jmk4AOWGex-cDVm7iopW",
+      "red_model": "BQ004-R1 / A502",
+      "status": "modified",
+      "group_name": "Breathable Lace-Up Walking Shoes"
+    }
+  ]
+}

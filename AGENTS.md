@@ -1,155 +1,47 @@
-# Beiqiang Cross-Border Operations System
+# 贝强工作台 · AI 工作入口
 
-This workspace is the operating system for Quanzhou Beiqiang Footwear & Apparel Co., Ltd. Use it for Alibaba.com product operations, competitor research, RFQ conversion, TikTok B2B content, and weekly review.
+本项目服务泉州贝强鞋业服饰有限公司（Quanzhou Beiqiang Footwear & Apparel Co., Ltd.）的跨境 B2B 经营，同时容纳独立的通用 AI 视频实验。贝强位于福建泉州，经营 OEM/ODM 与批发鞋类，目标是美国、欧洲的进口商、批发商、电商卖家、采购代理及品牌买家。舒适步行、休闲、轻量套脚、透气纺织鞋是产品方向；宽楦只属于有单款证据的产品。
 
-## Business Positioning
+## 开始与落盘
 
-- Company: footwear factory supplier in Quanzhou, Fujian, China.
-- Core products: wide toe box comfort walking shoes, casual walking shoes, lightweight slip-on shoes, breathable knit/textile shoes, related casual footwear.
-- Business model: OEM/ODM and wholesale supply.
-- Target buyers: importers, wholesalers, Amazon/TikTok sellers, sourcing agents, and brand/private-label buyers.
-- Target markets: United States and Europe.
-- Price logic: FOB `8-12 USD/pair` is the target commercial band, but final quote depends on style, quantity, material, size ratio, packing, and order requirements.
+1. 按下表进入任务目录，读该目录已有的入口文档（README、总控或索引）和适用的下级 `AGENTS.md`。不要为一个任务遍读整个工作台。
+2. 依赖公司身份、偏好或既有决策时，用 `beiqiang-memory-recall` 读取记忆库的 `README.md`、`INDEX.md`，再加载相关身份及 L1→L5 记忆。同一任务未变化的内容不反复读取。
+3. 继续经营任务查 `00_总控台/当前状态.md`；涉及 SKU 再查 `00_总控台/产品经营主表.md` 和原始证据。目录数、旧报告数与平台链接数均不是实时供给。
+4. 只选实际需要的 Skill；安装位置与分工见 `07_知识库与Skills/03_Skills清单.md`，不要自动串行调用所有经营 Skills。
+5. 成果写回对应业务/项目，短期文件放 `99_临时区/<任务>/`，复用脚本放 `08_工具链/`。根目录不新建临时工程、报告或媒体。
 
-All outputs must be B2B-facing. Avoid retail-consumer copy, unsupported medical claims, fake certificates, invented factory capacity, or unconfirmed price promises.
+| 任务 | 工作位置 / 事实源 |
+| --- | --- |
+| 当前优先级、跨渠道协调 | `00_总控台/`；状态、产品主表与资产索引各司其职 |
+| SKU 原件、处理图、技术资料 | `01_产品资产/`；原始包只读，不用生成图证明实物 |
+| Alibaba 发布、修复、审计、周报 | `02_Alibaba运营/`；先读唯一商品全生命周期 SOP |
+| 独立站 | `03_独立站/`；`03_网站源码/` 是独立 Git 仓库 |
+| 线索、RFQ、报价、客户跟进 | `04_客户开发/`；CRM 与客户原始记录为事实源 |
+| 商品视频、TikTok、通用 AI 实验 | `05_内容与视频/`；三者分开，实验按状态分类并保留 `PROJECT.md` |
+| 鞋类市场、竞品、关键词 | `06_市场研究/`；报告注明来源与日期 |
+| SOP、模板、记忆、技能维护 | `07_知识库与Skills/`；项目 Skill 在 `.agents/skills/` |
+| API、模型规范、运行环境、维护脚本 | `08_工具链/`；执行前查当前帮助与规格 |
+| 仍有追溯用途的历史证据 | `90_归档/`；不参与默认上下文 |
 
-## Skill Map
+## 贝强事实与承诺底线
 
-Use these Skills as a layered system:
+- 负责人于 2026-09-08 确认：只有原始数据包内商品属于贝强自有工厂货。扩品必须逐款映射原始包；无匹配证据标 `HOLD_SOURCE`（实物与货源待核验），不得算作已确认供给或承诺样品、库存、交期。线上状态、图片、API 回读、热榜和竞品记录不证明实物存在或自有生产。外部货源核实后记录真实来源，转为自有工厂货须负责人明确确认。
+- 贝强对外内容面向 B2B 采购；通用视频实验不强套鞋类营销。不得编造材料、认证、产能、测试、医疗功效或商业承诺。`Wide Toe Box` 不从外观推断；BQ032 及以后默认 regular fit，除非单款证据或负责人确认宽楦。
+- FOB `8–12 USD/pair` 是商业目标区间，最终报价取决于款式、数量、材料、尺码配比、包装和订单要求。高影响字段先查单款证据与已确认基线，缺证据再确认，不反复询问已有确认。
+- 技术开发询盘涉及硬度、密度、回弹、压缩形变、堆叠高度（stack height）、前后掌落差（drop）、鞋楦尺寸、新模具、配方、测试、NDA 或保密 tech pack 时，先读 `07_知识库与Skills/01_运营SOP/技术型品牌买家询盘评估SOP.md`。始终分开 Buyer Target、Confirmed Capability、Fixed / Not Adjustable、Actual Result After Sampling；参考图、部件、成鞋、内部测量、正式报告是不同准备度，不能互换。样品目的、交付物、验收标准和排除项写清前不创建信保样品订单。
 
-1. `beiqiang-positioning`
-   - Purpose: positioning guardrail for every Beiqiang task.
-   - Use before writing listings, RFQ replies, TikTok scripts, competitor conclusions, or weekly actions.
+## 条件式执行入口
 
-2. `competitor-research-firecrawl`
-   - Purpose: structured competitor research with Firecrawl MCP.
-   - Use for extracting competitor titles, price/MOQ text, selling points, materials, image angles, detail-page modules, and market gaps.
+- **Alibaba：** 唯一权威流程为 `02_Alibaba运营/00_运营SOP/国际站商品全生命周期SOP.md`。发布、修复与推广先核对货源及全店阻断；未解决阻断不继续新增。优先使用 `alibaba-openapi-operator`，浏览器用于授权、API 不支持字段和公开页验收。Workctl 以当前 schema/help 为准。不得从历史脚本复制材料、尺码、价格、MOQ、交期或包装默认值。图片只写官方图片银行/CDN URL；专项验收见 `02_Alibaba运营/AGENTS.md` 和唯一 SOP。
+- **研究：** 贝强竞品研究优先 `competitor-research-firecrawl`；不可用时说明并使用可用搜索工具，保留来源、日期、观察与推断的区分。竞品资料不能成为贝强事实。
+- **视频：** 先读 `05_内容与视频/AGENTS.md`，无论脚本放在哪。付费 AI 视频生成须有负责人当次明确确认；生成、剪辑、验收、发布与效果分别取证。
+- **MiniMax H3：** 任何提示词、工作流、参数或生成任务，先读已安装 `h3-prompt-writing` 与 `08_工具链/02_视频工具/MiniMax-H3/MiniMax-H3本地生成规范.md`。工作流只取中央 `官方工作流/`，先计算合法 `17k + 5` 帧数并按 `frames / 24` 写时序，匹配模式/权重/LoRA。提交前运行中央 `validate_h3_prompt.ps1`，失败不生成。历史项目工作流、脚本、提示词与参数不是规范。
 
-3. `alibaba-product-optimizer`
-   - Purpose: optimize one Alibaba.com product page.
-   - Use for titles, keywords, product groups, attributes, main images, detail pages, selling points, and inquiry hooks.
-   - Pair with existing `alibaba-international-operations` for Alibaba platform rules and existing Beiqiang product-package knowledge.
+## 记忆、维护与 Git
 
-4. `rfq-quote-assistant`
-   - Purpose: Alibaba RFQ quote and buyer follow-up.
-   - Use for FOB range replies, sample discussion, MOQ questions, OEM/ODM messages, and follow-up sequences.
-
-5. `inquiry-follow-up`
-   - Purpose: inquiry and WhatsApp follow-up.
-   - Use for sample-order pushes, no-reply buyer follow-ups, quotation reminders, and next-step buyer qualification.
-
-6. `image-brief-generator`
-   - Purpose: Alibaba image brief and AI prompt generation.
-   - Use for main images, detail images, shipping images, OEM/ODM images, factory images, quality-check images, and wide toe box comparison visuals.
-
-7. `shipping-trade-terms`
-   - Purpose: trade terms and logistics copy.
-   - Use for EXW, FOB, FCA, DDP, air, sea, express, Amazon FBA, sample shipping, and buyer-safe logistics explanations.
-
-8. `tiktok-b2b-content`
-   - Purpose: short-video scripts for sourcing buyers.
-   - Use for factory proof, product proof, wide toe box demos, packing/checking content, and Alibaba inquiry CTAs.
-
-9. `weekly-data-review`
-   - Purpose: turn weekly data into specific next actions.
-   - Use for exposure/click/CTR/inquiry diagnosis, RFQ performance, product-page priorities, keyword actions, and content planning.
-
-Existing Skill:
-
-- `alibaba-international-operations`
-  - Current role: mature Alibaba.com listing workflow and Beiqiang product package knowledge.
-  - Keep using it for Alibaba product upload SOP, image/detail-page rules, platform traffic logic, field filling, customs cautions, and post-publish optimization.
-
-## Default Workflow
-
-For a new product:
-
-1. Use `beiqiang-positioning`.
-2. Inspect the raw product package and existing Beiqiang facts.
-3. Use `competitor-research-firecrawl` if buyer intent, title terms, image strategy, or differentiation is unclear.
-4. Use `alibaba-product-optimizer` plus `alibaba-international-operations` to produce title, keywords, attributes, image plan, detail-page plan, and confirmations.
-5. Use `rfq-quote-assistant` to prepare inquiry reply language.
-6. Use `inquiry-follow-up` for no-reply buyers, sample pushes, WhatsApp follow-up, and quote reminders.
-7. Use `image-brief-generator` when images need a clear design brief or AI prompt.
-8. Use `shipping-trade-terms` for EXW/FOB/DDP/FBA logistics wording.
-9. Use `tiktok-b2b-content` to turn the product angle into B2B factory content.
-10. Use `weekly-data-review` after publishing to decide the next optimization.
-
-## Firecrawl MCP Integration
-
-Firecrawl MCP is used only for competitor and market research, not for inventing Beiqiang facts.
-
-Recommended local MCP config example:
-
-- `08_工具链/04_MCP与Workctl/mcp/firecrawl-mcp.example.json`
-- `08_工具链/04_MCP与Workctl/mcp/firecrawl-codex-config.example.toml`
-- `08_工具链/04_MCP与Workctl/mcp/FIRECRAWL_MCP_SETUP.md`
-
-Expected Firecrawl tools:
-
-- Search: find competitor pages when URLs are unknown.
-- Map: discover URLs from one site or storefront.
-- Scrape: read one known page.
-- Batch scrape: read multiple known product URLs.
-- Extract: return structured JSON for product title, price, MOQ, features, materials, image strategy, and gaps.
-- Agent: handle broader research when exact URLs are unknown.
-
-When Firecrawl is unavailable in the current Codex session, say so, then use available browsing/search tools if allowed and keep the same structured output schema from `competitor-research-firecrawl`.
-
-## Output Standards
-
-Alibaba-ready outputs must include:
-
-- B2B buyer intent.
-- Keyword cluster.
-- Title options.
-- Attributes and selling points.
-- Main image roles.
-- Detail-page modules.
-- Inquiry or RFQ hook.
-- Pending confirmations.
-
-RFQ outputs must include:
-
-- Buyer intent summary.
-- English reply.
-- Follow-up.
-- Missing quote data.
-- Internal risk note.
-
-Weekly review outputs must include:
-
-- Scorecard.
-- Top wins and problems.
-- Product-page actions.
-- Keyword/content actions.
-- RFQ actions.
-- Next-week task list with expected metric impact.
-
-## Evidence Rules
-
-Use real product photos, Beiqiang references, user confirmations, or competitor observations as evidence. Mark uncertain facts clearly. Ask for confirmation before finalizing high-impact details such as material, outsole, lining, size range, price, MOQ, packing, certificates, and lead time.
-
-## Alibaba Live Publishing Gate
-
-- The sole authoritative workspace SOP is `02_Alibaba运营/00_运营SOP/国际站商品全生命周期SOP.md`.
-- Do not reuse legacy defaults for material, lining, US size conversion, foot length, price, MOQ, sample terms, lead time, package weight/dimensions, customs, or old Workctl commands.
-- BQ032 and later products are regular fit unless SKU-specific evidence or the user confirms a wide last. Never infer `Wide Toe Box` from appearance alone.
-- Product images written to Alibaba must use official Alibaba image-bank/CDN URLs. Never persist Accio temporary URLs or nested URLs.
-- A publish/repair is complete only after title/model, six main images, SKU bindings, six product-detail images, five company images, bad-URL scan, copy, trunk, and public-page checks pass.
-- Do not continue new listings while the current published-catalog audit has unresolved blocking errors.
-- Confirmed store baseline as of 2026-08-17: MOQ `2 pairs`, current online price ladders, `31 days for 100 pairs`, and `34 × 23 × 13 cm / 0.5 kg / 1 pair`; SKU-specific evidence overrides this baseline.
-- GPSR decision as of 2026-08-17: accept the current EU country blocking temporarily. Never describe this as GPSR compliance or invent an EU Responsible Person.
-
-## Technical Development Inquiry Gate
-
-When a buyer asks for controlled hardness, foam density, rebound, compression set, stack height, drop, last dimensions, new tooling, outsole formulation, laboratory tests, NDA, or a confidential tech pack, classify the inquiry as `Technical Development Buyer` and use `07_知识库与Skills/01_运营SOP/技术型品牌买家询盘评估SOP.md` before quoting.
-
-Always separate:
-
-- `Buyer Target`: what the buyer wants; never present it as an existing Beiqiang capability.
-- `Confirmed Capability`: supported by a physical sample, document, or supplier confirmation.
-- `Fixed / Not Adjustable`: existing mold, structure, formulation, or hardness that cannot be changed.
-- `Actual Result After Sampling`: data that only exists after a finished sample is produced; do not guarantee it will match the buyer target.
-
-Reference images, components, complete physical samples, internal measurements, and formal test reports are different readiness levels. Never describe a reference sole or concept as a tested finished shoe. Do not create a Trade Assurance sample order until the sample purpose, deliverables, acceptance criteria, and exclusions are written clearly.
+- 唯一记忆库是 `07_知识库与Skills/05_项目记忆系统/`。记忆只做精炼决策与证据路由，不复制业务台账、在线数据或模型规格；原始证据及中央 SOP 优先。
+- 正式记忆放在两级目录下，使用 `type/title/description/status/privacy/tags/timestamp` 七字段。用 `beiqiang-memory-curator` 维护，正文与索引同步。
+- 普通对话不自动入长期记忆；新事实、经验晋级先提出候选并经用户确认。用户已明确授权的现有记忆整理、合并、去重和过时删除直接执行，不借整理新增未经确认的事实。用户保留最终裁决权。
+- 已证实过时、无用或可重建的内容直接删除，不另建备份/旧版副本；产品原件、客户、正式回执与有效经验不因日期旧而删除。维护方法见 `00_总控台/工作区维护.md`。
+- `01_产品资产/` 和部分视频入口通往 E 盘；移动/删除前验证实际目标，不能递归误删链接目标。`_codex_work/` 仍被 Blender MCP 使用，保留原位置直至调用迁移完成。
+- Git 管理知识、业务文本与自研代码，媒体/依赖/凭证不入普通 Git。客户资料只可推送到已核实的私有仓库。根仓库不管理独立站嵌套仓库；不重置或覆盖其他任务的未提交改动。必要提交按用户授权执行，推送前核对范围、远端与秘密信息。

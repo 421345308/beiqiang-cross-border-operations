@@ -1,0 +1,16 @@
+{
+  "created_at": "2026-09-05",
+  "status": "paused_by_user_2026-09-05",
+  "rule": "每款绑定对应商品视频；未取得视频银行 ID 前不误绑通用视频。",
+  "source_upload_note": "视频工作已按用户要求暂停。平台存在 alibaba.icbu.video.upload，但当前应用未获得该权限；已授权视频查询和商品绑定。官方上传 API 需要可公网访问的 HTTPS video_path，不接受本地 Windows 文件路径。",
+  "items": [
+    {"model":"HR001","product_ids":["1601943321794","1601943493004","1601943474137"],"video_file":"E:\\贝强大文件\\05_内容与视频\\01_贝强商品视频\\HR热榜8款_2026-09-05\\edit\\HR001_Product_And_Beiqiang_Factory_44s.mp4","video_id":null,"binding_status":"pending"},
+    {"model":"HR002","product_ids":["1601943305914","1601943393550","1601943419438"],"video_file":"E:\\贝强大文件\\05_内容与视频\\01_贝强商品视频\\HR热榜8款_2026-09-05\\edit\\HR002_Product_And_Beiqiang_Factory_44s.mp4","video_id":null,"binding_status":"pending"},
+    {"model":"HR003","product_ids":["1601943312845","1601943335928","1601943467198"],"video_file":"E:\\贝强大文件\\05_内容与视频\\01_贝强商品视频\\HR热榜8款_2026-09-05\\edit\\HR003_Product_And_Beiqiang_Factory_44s.mp4","video_id":null,"binding_status":"pending"},
+    {"model":"HR004","product_ids":["1601943397351","1601943405519","1601943421458"],"video_file":"E:\\贝强大文件\\05_内容与视频\\01_贝强商品视频\\HR热榜8款_2026-09-05\\edit\\HR004_Product_And_Beiqiang_Factory_44s.mp4","video_id":null,"binding_status":"pending"},
+    {"model":"HR005","product_ids":["1601943335751","1601943353831","1601943444273"],"video_file":"E:\\贝强大文件\\05_内容与视频\\01_贝强商品视频\\HR热榜8款_2026-09-05\\edit\\HR005_Product_And_Beiqiang_Factory_44s.mp4","video_id":null,"binding_status":"pending"},
+    {"model":"HR006","product_ids":["1601943439124","1601943450234","1601943364813"],"video_file":"E:\\贝强大文件\\05_内容与视频\\01_贝强商品视频\\HR热榜8款_2026-09-05\\edit\\HR006_Product_And_Beiqiang_Factory_44s.mp4","video_id":null,"binding_status":"pending"},
+    {"model":"HR007","product_ids":["1601943463020","1601943408495","1601943332965"],"video_file":"E:\\贝强大文件\\05_内容与视频\\01_贝强商品视频\\HR热榜8款_2026-09-05\\edit\\HR007_Product_And_Beiqiang_Factory_44s.mp4","video_id":null,"binding_status":"pending"},
+    {"model":"HR008","product_ids":["1601943348656","1601943422371","1601943451227"],"video_file":"E:\\贝强大文件\\05_内容与视频\\01_贝强商品视频\\HR热榜8款_2026-09-05\\edit\\HR008_Product_And_Beiqiang_Factory_44s.mp4","video_id":null,"binding_status":"pending"}
+  ]
+}

@@ -1,0 +1,730 @@
+{
+  "finished_utc": "2026-09-04T02:03:10.734203+00:00",
+  "online_product_count": 151,
+  "group_ids": {
+    "Slip-On Casual Walking Shoes": 972130291,
+    "Athletic & Running Style Shoes": 971467417,
+    "High Top & Sock Sneakers": 971885228,
+    "Breathable Lace-Up Walking Shoes": 916810944,
+    "Backless & Mule Casual Shoes": 972225685,
+    "Kids Casual Walking Shoes": 972226104,
+    "Regular Fit Casual Walking Shoes": 916200866,
+    "Wide Toe Box Walking Shoes": 915505550
+  },
+  "recovery_group_updates": [],
+  "group_update_failures": [],
+  "group_counts": {
+    "(none)": 3,
+    "Athletic & Running Style Shoes": 8,
+    "Backless & Mule Casual Shoes": 1,
+    "Breathable Lace-Up Walking Shoes": 53,
+    "High Top & Sock Sneakers": 10,
+    "Kids Casual Walking Shoes": 9,
+    "Regular Fit Casual Walking Shoes": 6,
+    "Slip-On Casual Walking Shoes": 58,
+    "Wide Toe Box Walking Shoes": 3
+  },
+  "group_mismatches_excluding_reviewing_bq004": [],
+  "bq004_deferred_group_ids": [
+    "1601939626612",
+    "1601939700200",
+    "1601939738037"
+  ],
+  "video_relation_calls": [
+    {
+      "video_id": "AAEAjmk4AOWGexucDVhQzkqD",
+      "related_count": 4,
+      "ok": true,
+      "request_id": "212c6fc617884872972803393",
+      "trace_id": "2101075517884872971481754e0c34",
+      "message": null,
+      "error": null
+    },
+    {
+      "video_id": "AAE4jmk4AOWGexucDVhQzide",
+      "related_count": 4,
+      "ok": true,
+      "request_id": "213c932b17884872973378891",
+      "trace_id": "210141f717884872971985473e0c59",
+      "message": null,
+      "error": null
+    },
+    {
+      "video_id": "AAEJjmk4AOWGexucDVhQzigu",
+      "related_count": 4,
+      "ok": true,
+      "request_id": "0bab02fc17884872973293598",
+      "trace_id": "210141f717884872972001477e10b7",
+      "message": null,
+      "error": null
+    },
+    {
+      "video_id": "AAEBjmk4AOWGexucDVhQzicn",
+      "related_count": 4,
+      "ok": true,
+      "request_id": "213e759c17884872973378090",
+      "trace_id": "2101075517884872971955995e0e88",
+      "message": null,
+      "error": null
+    },
+    {
+      "video_id": "AAE5jmk4AOWGexucDVhQwb1W",
+      "related_count": 4,
+      "ok": true,
+      "request_id": "213c934417884872976664830",
+      "trace_id": "213ba0c517884872975324638e0eaf",
+      "message": null,
+      "error": null
+    },
+    {
+      "video_id": "AAEpjmk4AOWGexucDVhQzidP",
+      "related_count": 4,
+      "ok": true,
+      "request_id": "0b830ecc17884872976754123",
+      "trace_id": "210141f717884872975443211e0fb1",
+      "message": null,
+      "error": null
+    },
+    {
+      "video_id": "AAF7jmk4AOWGexucDVhQzich",
+      "related_count": 4,
+      "ok": true,
+      "request_id": "0bbb3b2417884873035922112",
+      "trace_id": "2101075517884873034667132e0ea9",
+      "message": null,
+      "error": null
+    },
+    {
+      "video_id": "AAEvjmk4AOWGexucDVhQzidV",
+      "related_count": 4,
+      "ok": true,
+      "request_id": "213c933517884873036145194",
+      "trace_id": "2140ca6817884873034631533e1103",
+      "message": null,
+      "error": null
+    },
+    {
+      "video_id": "AAF2jmk4AOWGexucDVhQwdl3",
+      "related_count": 4,
+      "ok": true,
+      "request_id": "0bab02fe17884873036058925",
+      "trace_id": "213ba0c517884873034617827e0b58",
+      "message": null,
+      "error": null
+    },
+    {
+      "video_id": "AAF9jmk4AOWGexucDVhQzigi",
+      "related_count": 4,
+      "ok": true,
+      "request_id": "21501b6717884873036176495",
+      "trace_id": "213ba0c517884873034623702e0b59",
+      "message": null,
+      "error": null
+    },
+    {
+      "video_id": "AAFQjmk4AOWGexucDVhQzkrT",
+      "related_count": 4,
+      "ok": true,
+      "request_id": "21501b8d17884873039143077",
+      "trace_id": "210141f717884873037817103e0f6f",
+      "message": null,
+      "error": null
+    },
+    {
+      "video_id": "AAFFjmk4AOWGexucDVhQwc5R",
+      "related_count": 4,
+      "ok": true,
+      "request_id": "213c934417884873039185190",
+      "trace_id": "2140ca6817884873037821543e1103",
+      "message": null,
+      "error": null
+    },
+    {
+      "video_id": "AAFZjmk4AOWGexucDVhQziAG",
+      "related_count": 4,
+      "ok": true,
+      "request_id": "212c6fc617884873096733817",
+      "trace_id": "2101075517884873095433927e0c39",
+      "message": null,
+      "error": null
+    },
+    {
+      "video_id": "AAFejmk4AOWGexucDVhQzkrh",
+      "related_count": 4,
+      "ok": true,
+      "request_id": "212c6fc617884873096843818",
+      "trace_id": "2101075517884873095405099e0c35",
+      "message": null,
+      "error": null
+    },
+    {
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4",
+      "related_count": 20,
+      "ok": true,
+      "request_id": "213d4e4917884873097611837",
+      "trace_id": "210141f717884873096237535e0bf3",
+      "message": null,
+      "error": null
+    },
+    {
+      "video_id": "AAFejmk4AOWGexucDVhQzjD7",
+      "related_count": 4,
+      "ok": true,
+      "request_id": "21501be117884873097591017",
+      "trace_id": "2101075517884873096253974e0eca",
+      "message": null,
+      "error": null
+    },
+    {
+      "video_id": "AAHljmk4AOWGexucDVhQzlPf",
+      "related_count": 4,
+      "ok": true,
+      "request_id": "213c934417884873101525254",
+      "trace_id": "2101075517884873100171173e0dc2",
+      "message": null,
+      "error": null
+    },
+    {
+      "video_id": "AAH7jmk4AOWGexucDVhQzjCY",
+      "related_count": 4,
+      "ok": true,
+      "request_id": "213c933517884873101665250",
+      "trace_id": "210141f717884873100315497e0bf4",
+      "message": null,
+      "error": null
+    }
+  ],
+  "video_missing_before_repair": [
+    {
+      "product_id": "10000047307924",
+      "model": "BQ053 / 1888",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4"
+    },
+    {
+      "product_id": "10000047392343",
+      "model": "BQ059 / A1888",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4"
+    },
+    {
+      "product_id": "10000047396313",
+      "model": "BQ060 / A350",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4"
+    },
+    {
+      "product_id": "10000044041031",
+      "model": "BQ024 / A830",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4"
+    },
+    {
+      "product_id": "10000047187673",
+      "model": "BQ046 / A155",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4"
+    },
+    {
+      "product_id": "10000047208726",
+      "model": "BQ047 / A189",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4"
+    },
+    {
+      "product_id": "10000047220568",
+      "model": "BQ049 / A230",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4"
+    },
+    {
+      "product_id": "1601839062659",
+      "model": "BQ029 / A025",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4"
+    },
+    {
+      "product_id": "1601924292931",
+      "model": "BQ036 / 8025",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4"
+    },
+    {
+      "product_id": "10000046705043",
+      "model": "BQ-035 / A001",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4"
+    },
+    {
+      "product_id": "10000047198577",
+      "model": "BQ048 / A212",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4"
+    },
+    {
+      "product_id": "1601924792152",
+      "model": "BQ040 / 1689",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4"
+    },
+    {
+      "product_id": "10000047175212",
+      "model": "BQ043 / 8008",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4"
+    },
+    {
+      "product_id": "10000047196608",
+      "model": "BQ050 / A828",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4"
+    },
+    {
+      "product_id": "1601839050756",
+      "model": "BQ030 / A811",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4"
+    },
+    {
+      "product_id": "1601924347721",
+      "model": "BQ037 / H7116",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4"
+    },
+    {
+      "product_id": "10000047216427",
+      "model": "BQ051 / K6689",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4"
+    },
+    {
+      "product_id": "1601939707196",
+      "model": "BQ001-W1 / BQ001",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4"
+    },
+    {
+      "product_id": "1601939727104",
+      "model": "BQ001-R1 / BQ001",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4"
+    },
+    {
+      "product_id": "1601939635505",
+      "model": "BQ002-O1 / BQ002",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4"
+    },
+    {
+      "product_id": "1601939614689",
+      "model": "BQ002-R1 / BQ002",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4"
+    },
+    {
+      "product_id": "1601939654418",
+      "model": "BQ002-W1 / BQ002",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4"
+    },
+    {
+      "product_id": "1601939684371",
+      "model": "BQ024-R1 / A830",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4"
+    },
+    {
+      "product_id": "1601939691342",
+      "model": "BQ024-W1 / A830",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4"
+    },
+    {
+      "product_id": "1601939721228",
+      "model": "BQ029-O1 / A025",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4"
+    },
+    {
+      "product_id": "1601939749045",
+      "model": "BQ029-W1 / A025",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4"
+    },
+    {
+      "product_id": "1601939615744",
+      "model": "BQ030-O1 / A811",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4"
+    },
+    {
+      "product_id": "1601939607770",
+      "model": "BQ029-R1 / A025",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4"
+    },
+    {
+      "product_id": "1601939679363",
+      "model": "BQ030-R1 / A811",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4"
+    },
+    {
+      "product_id": "1601939672381",
+      "model": "BQ030-W1 / A811",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4"
+    },
+    {
+      "product_id": "10000046439033",
+      "model": "BQ031 / ZX2116",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4"
+    },
+    {
+      "product_id": "10000042896165",
+      "model": "BQ-002",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4"
+    },
+    {
+      "product_id": "10000042821848",
+      "model": "BQ-001",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4"
+    }
+  ],
+  "video_repairs": [
+    {
+      "product_id": "10000047208726",
+      "encrypted_product_id": "AAE2jmk4AOWGexecDTURxP71",
+      "model": "BQ047 / A189",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4",
+      "ok": true,
+      "request_id": "213d4e4917884873164522808",
+      "trace_id": "210141f717884873163195813e0f4e",
+      "message": "video relation limit",
+      "error": null
+    },
+    {
+      "product_id": "10000044041031",
+      "encrypted_product_id": "AAHbjmk4AOWGexecDTURlKSk",
+      "model": "BQ024 / A830",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4",
+      "ok": true,
+      "request_id": "0bab02fe17884873164241111",
+      "trace_id": "2101075517884873162825907e0c38",
+      "message": "video relation limit",
+      "error": null
+    },
+    {
+      "product_id": "10000047187673",
+      "encrypted_product_id": "AAEejmk4AOWGexecDTURxKE6",
+      "model": "BQ046 / A155",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4",
+      "ok": true,
+      "request_id": "0bbb3b2417884873164694031",
+      "trace_id": "210141f717884873163341505e0bf2",
+      "message": "video relation limit",
+      "error": null
+    },
+    {
+      "product_id": "10000047396313",
+      "encrypted_product_id": "AAFOjmk4AOWGexecDTURw9I6",
+      "model": "BQ060 / A350",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4",
+      "ok": true,
+      "request_id": "212c6fc617884873165323949",
+      "trace_id": "2101075517884873164075476e0ff3",
+      "message": "video relation limit",
+      "error": null
+    },
+    {
+      "product_id": "10000047307924",
+      "encrypted_product_id": "AAEzjmk4AOWGexecDTURwnt3",
+      "model": "BQ053 / 1888",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4",
+      "ok": true,
+      "request_id": "213e759c17884873165532648",
+      "trace_id": "213ba0c517884873164123716e0ef1",
+      "message": "video relation limit",
+      "error": null
+    },
+    {
+      "product_id": "10000047392343",
+      "encrypted_product_id": "AAG3jmk4AOWGexecDTURw8G0",
+      "model": "BQ059 / A1888",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4",
+      "ok": true,
+      "request_id": "210829b717884873165404935",
+      "trace_id": "210141f717884873163892405e0e88",
+      "message": "video relation limit",
+      "error": null
+    },
+    {
+      "product_id": "1601839062659",
+      "encrypted_product_id": "AAESjmk4AOWGex-cDVm1illg",
+      "model": "BQ029 / A025",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4",
+      "ok": true,
+      "request_id": "212cbf3217884873225743329",
+      "trace_id": "213ba0c517884873224533117e0d23",
+      "message": "video relation limit",
+      "error": null
+    },
+    {
+      "product_id": "10000047198577",
+      "encrypted_product_id": "AAGrjmk4AOWGexecDTURxNaS",
+      "model": "BQ048 / A212",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4",
+      "ok": true,
+      "request_id": "210829b717884873227555018",
+      "trace_id": "2140ca6817884873226254003e10e2",
+      "message": "video relation limit",
+      "error": null
+    },
+    {
+      "product_id": "10000046705043",
+      "encrypted_product_id": "AAF6jmk4AOWGexecDTURvU5w",
+      "model": "BQ-035 / A001",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4",
+      "ok": true,
+      "request_id": "213e759c17884873227563558",
+      "trace_id": "210141f717884873226227490e0f6f",
+      "message": "video relation limit",
+      "error": null
+    },
+    {
+      "product_id": "1601924292931",
+      "encrypted_product_id": "AAEAjmk4AOWGex-cDVm6puag",
+      "model": "BQ036 / 8025",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4",
+      "ok": true,
+      "request_id": "210829b717884873227585019",
+      "trace_id": "2101075517884873226313114e0f6f",
+      "message": "video relation limit",
+      "error": null
+    },
+    {
+      "product_id": "10000047220568",
+      "encrypted_product_id": "AAEfjmk4AOWGexecDTURxSC7",
+      "model": "BQ049 / A230",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4",
+      "ok": true,
+      "request_id": "21501be117884873227472915",
+      "trace_id": "213ba0c517884873226113244e0f12",
+      "message": "video relation limit",
+      "error": null
+    },
+    {
+      "product_id": "1601924792152",
+      "encrypted_product_id": "AAG1jmk4AOWGex-cDVm6rni7",
+      "model": "BQ040 / 1689",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4",
+      "ok": true,
+      "request_id": "213c933517884873227735447",
+      "trace_id": "213ba0c517884873226293128e0d23",
+      "message": "video relation limit",
+      "error": null
+    },
+    {
+      "product_id": "10000047175212",
+      "encrypted_product_id": "AAEDjmk4AOWGexecDTURxHHP",
+      "model": "BQ043 / 8008",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4",
+      "ok": true,
+      "request_id": "213c932b17884873286421588",
+      "trace_id": "2101075517884873285037747e0ea9",
+      "message": "video relation limit",
+      "error": null
+    },
+    {
+      "product_id": "10000047216427",
+      "encrypted_product_id": "AAEcjmk4AOWGexecDTURxRDI",
+      "model": "BQ051 / K6689",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4",
+      "ok": true,
+      "request_id": "210829b717884873290755080",
+      "trace_id": "2140ca6817884873289396728e0d88",
+      "message": "video relation limit",
+      "error": null
+    },
+    {
+      "product_id": "10000047196608",
+      "encrypted_product_id": "AAE0jmk4AOWGexecDTURxM4j",
+      "model": "BQ050 / A828",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4",
+      "ok": true,
+      "request_id": "213d4e4917884873291554697",
+      "trace_id": "2140ca6817884873290302070e1103",
+      "message": "video relation limit",
+      "error": null
+    },
+    {
+      "product_id": "1601839050756",
+      "encrypted_product_id": "AAH3jmk4AOWGex-cDVm1ijfn",
+      "model": "BQ030 / A811",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4",
+      "ok": true,
+      "request_id": "213e65a717884873291602297",
+      "trace_id": "213ba0c517884873290292067e0dc8",
+      "message": "video relation limit",
+      "error": null
+    },
+    {
+      "product_id": "1601939707196",
+      "encrypted_product_id": "AAHQjmk4AOWGex-cDVm7ihLf",
+      "model": "BQ001-W1 / BQ001",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4",
+      "ok": true,
+      "request_id": "21501b6717884873291982322",
+      "trace_id": "210141f717884873290654407e0e04",
+      "message": "video relation limit",
+      "error": null
+    },
+    {
+      "product_id": "1601924347721",
+      "encrypted_product_id": "AAHVjmk4AOWGex-cDVm6p7Cq",
+      "model": "BQ037 / H7116",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4",
+      "ok": true,
+      "request_id": "0b830ecc17884873302378677",
+      "trace_id": "2101075517884873301012575e0c34",
+      "message": "video relation limit",
+      "error": null
+    },
+    {
+      "product_id": "1601939727104",
+      "encrypted_product_id": "AAEmjmk4AOWGex-cDVm7imTj",
+      "model": "BQ001-R1 / BQ001",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4",
+      "ok": true,
+      "request_id": "213f5a2117884873347858930",
+      "trace_id": "2140ca6817884873346557641e0e90",
+      "message": "video relation limit",
+      "error": null
+    },
+    {
+      "product_id": "1601939614689",
+      "encrypted_product_id": "AAGPjmk4AOWGex-cDVm7jKwC",
+      "model": "BQ002-R1 / BQ002",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4",
+      "ok": true,
+      "request_id": "213e759c17884873352615444",
+      "trace_id": "2140ca6817884873351402013e0d86",
+      "message": "video relation limit",
+      "error": null
+    },
+    {
+      "product_id": "1601939635505",
+      "encrypted_product_id": "AAGtjmk4AOWGex-cDVm7jPrS",
+      "model": "BQ002-O1 / BQ002",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4",
+      "ok": true,
+      "request_id": "21501b6717884873353063253",
+      "trace_id": "210141f717884873351776356e0f4e",
+      "message": "video relation limit",
+      "error": null
+    },
+    {
+      "product_id": "1601939684371",
+      "encrypted_product_id": "AAGNjmk4AOWGex-cDVm7jbvw",
+      "model": "BQ024-R1 / A830",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4",
+      "ok": true,
+      "request_id": "213e65a717884873353853245",
+      "trace_id": "210141f717884873352507841e0f6f",
+      "message": "video relation limit",
+      "error": null
+    },
+    {
+      "product_id": "1601939654418",
+      "encrypted_product_id": "AAETjmk4AOWGex-cDVm7jUDx",
+      "model": "BQ002-W1 / BQ002",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4",
+      "ok": true,
+      "request_id": "213e65a717884873355013269",
+      "trace_id": "213ba0c517884873353624127e0ef1",
+      "message": "video relation limit",
+      "error": null
+    },
+    {
+      "product_id": "1601939691342",
+      "encrypted_product_id": "AAHfjmk4AOWGex-cDVm7jdCt",
+      "model": "BQ024-W1 / A830",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4",
+      "ok": true,
+      "request_id": "213f5a2117884873363288949",
+      "trace_id": "2140ca6817884873361904119e0ef2",
+      "message": "video relation limit",
+      "error": null
+    },
+    {
+      "product_id": "1601939721228",
+      "encrypted_product_id": "AAEZjmk4AOWGex-cDVm7ikvv",
+      "model": "BQ029-O1 / A025",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4",
+      "ok": true,
+      "request_id": "213d4e4917884873408266427",
+      "trace_id": "213ba0c517884873407055499e0eaf",
+      "message": "video relation limit",
+      "error": null
+    },
+    {
+      "product_id": "1601939749045",
+      "encrypted_product_id": "AAH0jmk4AOWGex-cDVm7ir9W",
+      "model": "BQ029-W1 / A025",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4",
+      "ok": true,
+      "request_id": "21501b6717884873414404097",
+      "trace_id": "213ba0c517884873412935506e0eaf",
+      "message": "video relation limit",
+      "error": null
+    },
+    {
+      "product_id": "1601939607770",
+      "encrypted_product_id": "AAExjmk4AOWGex-cDVm7jJc5",
+      "model": "BQ029-R1 / A025",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4",
+      "ok": true,
+      "request_id": "213c934417884873414495713",
+      "trace_id": "2140ca6817884873413063041e0fda",
+      "message": "video relation limit",
+      "error": null
+    },
+    {
+      "product_id": "1601939672381",
+      "encrypted_product_id": "AAHKjmk4AOWGex-cDVm7jYre",
+      "model": "BQ030-W1 / A811",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4",
+      "ok": true,
+      "request_id": "2105016d17884873424115645",
+      "trace_id": "210141f717884873422745246e0e67",
+      "message": "video relation limit",
+      "error": null
+    },
+    {
+      "product_id": "1601939615744",
+      "encrypted_product_id": "AAH7jmk4AOWGex-cDVm7jLfj",
+      "model": "BQ030-O1 / A811",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4",
+      "ok": true,
+      "request_id": "212c6fc617884873424144332",
+      "trace_id": "2101075517884873422753639e0f6f",
+      "message": "video relation limit",
+      "error": null
+    },
+    {
+      "product_id": "1601939679363",
+      "encrypted_product_id": "AAHxjmk4AOWGex-cDVm7ja9g",
+      "model": "BQ030-R1 / A811",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4",
+      "ok": true,
+      "request_id": "213c932b17884873426021850",
+      "trace_id": "213ba0c517884873424578459e0cf8",
+      "message": "video relation limit",
+      "error": null
+    },
+    {
+      "product_id": "10000046439033",
+      "encrypted_product_id": "AAEHjmk4AOWGexecDTURsT2a",
+      "model": "BQ031 / ZX2116",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4",
+      "ok": true,
+      "request_id": "212c6fc617884873473534654",
+      "trace_id": "210141f717884873472231876e0eeb",
+      "message": "video relation limit",
+      "error": null
+    },
+    {
+      "product_id": "10000042821848",
+      "encrypted_product_id": "AAFPjmk4AOWGexecDTURhg87",
+      "model": "BQ-001",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4",
+      "ok": true,
+      "request_id": "213e65a717884873474284677",
+      "trace_id": "2101075517884873472986725e0f90",
+      "message": "video relation limit",
+      "error": null
+    },
+    {
+      "product_id": "10000042896165",
+      "encrypted_product_id": "AAH4jmk4AOWGexecDTURhyzG",
+      "model": "BQ-002",
+      "video_id": "AAGnjmk4AOWGexucDVhQxsS4",
+      "ok": true,
+      "request_id": "21501b6717884873475744697",
+      "trace_id": "2140ca6817884873474222399e1103",
+      "message": "video relation limit",
+      "error": null
+    }
+  ],
+  "video_repair_failures": []
+}

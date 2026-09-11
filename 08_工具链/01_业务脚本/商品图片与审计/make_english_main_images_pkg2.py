@@ -4,7 +4,7 @@ from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
 ROOT = Path(r"C:\Users\spq\Desktop\贝强")
 RAW_ROOT = ROOT / "01_原始数据包"
-UPLOAD_ROOT = ROOT / "02_可上传素材"
+UPLOAD_ROOT = ROOT / "01_产品资产" / "02_可发布素材"
 SRC = RAW_ROOT / "5.13贝强2数据包" if (RAW_ROOT / "5.13贝强2数据包").exists() else ROOT / "5.13贝强2数据包"
 OUT = UPLOAD_ROOT / "数据包2" / "英文主图"
 FONT = r"C:\Windows\Fonts\arial.ttf"

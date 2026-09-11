@@ -5,7 +5,7 @@ import shutil
 
 ROOT = Path(r"C:\Users\spq\Desktop\贝强")
 RAW_ROOT = ROOT / "01_原始数据包"
-UPLOAD_ROOT = ROOT / "02_可上传素材"
+UPLOAD_ROOT = ROOT / "01_产品资产" / "02_可发布素材"
 FONT = r"C:\Windows\Fonts\arial.ttf"
 BOLD = r"C:\Windows\Fonts\arialbd.ttf"
 

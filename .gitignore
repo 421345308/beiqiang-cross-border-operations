@@ -9,15 +9,19 @@
 /05_内容与视频/01_贝强商品视频/seedance/classical_chinese/
 /05_内容与视频/01_贝强商品视频/seedance/civilization_arc/
 /output/
+/outputs/
+/02_Alibaba运营/05_扩品工程/批量发品/历史批次执行产物_2026-08-28至09-02/
 
 # Nested standalone repositories / active third-party applications
 /03_独立站/03_网站源码/
 /08_工具链/02_视频工具/opencut-classic/
-/tools/opencut-classic/
 
 # Runtime, dependency and temporary data
 /node_modules/
+/tmp/
+/.tmp_bq*_upload/
 /99_临时区/
+/08_工具链/ffmpeg/
 /08_工具链/02_视频工具/ffmpeg/
 /08_工具链/02_视频工具/.libtv/
 /08_工具链/03_网站发布运行时/edgeone-cli-runtime/node_modules/
@@ -54,6 +58,18 @@
 *.7z
 *.rar
 *.tar.gz
+*.tgz
+*.gz
+*.wasm
+*.whl
+*.woff
+*.woff2
+*.ttf
+*.ico
+*.blend
+*.glb
+*.sqlite
+*.db
 *.pdf
 *.docx
 *.xlsx
@@ -63,6 +79,26 @@
 # Local secrets and OS metadata
 .env
 .env.*
+**/browser_data/
+**/user_data/
+**/.venv/
+**/.venv_*/
+**/venv/
+**/site-packages/
+**/.libtv/
+*.exe
+*.dll
+*.pyd
+*.safetensors
+*.onnx
+/08_工具链/05_内容采集/MediaCrawler/
 Thumbs.db
 Desktop.ini
 .DS_Store
+
+# Local working environments and governance backups
+/_codex_work/
+/.tmp/
+/dunhuang_project_staging/.venv_bpy/
+/00_总控台/项目整理_2026-09-08/*盘点.json
+/00_总控台/项目整理_2026-09-08/整理前已有改动.txt

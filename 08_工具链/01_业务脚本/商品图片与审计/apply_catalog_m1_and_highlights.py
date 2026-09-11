@@ -75,7 +75,10 @@ def current_m1_matches_local(url: str, local_path: Path) -> bool:
         remote = Image.open(BytesIO(call_with_retry(fetch))).convert("RGB").resize((128, 128), Image.Resampling.LANCZOS)
         local = Image.open(local_path).convert("RGB").resize((128, 128), Image.Resampling.LANCZOS)
         stat = ImageStat.Stat(ImageChops.difference(remote, local))
-        return sum(stat.mean) / len(stat.mean) < 3.0
+        # Small text-layout changes can average below 3 after a 128px resize.
+        # Keep the threshold strict so a compact badge is not mistaken for the
+        # previous two-line overlay during a repair retry.
+        return sum(stat.mean) / len(stat.mean) < 0.5
     except Exception:
         return False
 

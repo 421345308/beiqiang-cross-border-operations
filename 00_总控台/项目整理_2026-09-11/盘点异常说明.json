@@ -1,0 +1,220 @@
+{
+  "checked_at": "2026-09-11T13:54:19+00:00",
+  "elapsed_seconds": 23.0,
+  "scope": "03独立站、05视频、08工具链：仅枚举目录/重解析点元数据，跳过Git，按链接目标去重；不读取文件正文、不哈希、不修复。01产品原始包与07记忆仅验证入口存在。",
+  "directories_by_scope": {
+    "08_工具链": 19582,
+    "05_内容与视频": 6894,
+    "03_独立站": 10901
+  },
+  "reparse_points_by_scope": {
+    "08_工具链": 80,
+    "05_内容与视频": 2,
+    "03_独立站": 1285
+  },
+  "critical_entry_checks": [
+    {
+      "path": "01_产品资产",
+      "exists": true,
+      "is_directory": true,
+      "actual_path": "E:\\贝强大文件\\01_产品资产"
+    },
+    {
+      "path": "01_产品资产/01_原始数据包",
+      "exists": true,
+      "is_directory": true,
+      "actual_path": "E:\\贝强大文件\\01_产品资产\\01_原始数据包"
+    },
+    {
+      "path": "07_知识库与Skills/05_项目记忆系统",
+      "exists": true,
+      "is_directory": true,
+      "actual_path": "C:\\Users\\spq\\Desktop\\贝强\\07_知识库与Skills\\05_项目记忆系统"
+    },
+    {
+      "path": "07_知识库与Skills/05_项目记忆系统/README.md",
+      "exists": true,
+      "is_directory": false,
+      "actual_path": "C:\\Users\\spq\\Desktop\\贝强\\07_知识库与Skills\\05_项目记忆系统\\README.md"
+    },
+    {
+      "path": "07_知识库与Skills/05_项目记忆系统/INDEX.md",
+      "exists": true,
+      "is_directory": false,
+      "actual_path": "C:\\Users\\spq\\Desktop\\贝强\\07_知识库与Skills\\05_项目记忆系统\\INDEX.md"
+    },
+    {
+      "path": "05_内容与视频/01_贝强商品视频",
+      "exists": true,
+      "is_directory": true,
+      "actual_path": "E:\\贝强大文件\\05_内容与视频\\01_贝强商品视频"
+    },
+    {
+      "path": "05_内容与视频/03_通用AI视频实验",
+      "exists": true,
+      "is_directory": true,
+      "actual_path": "E:\\贝强大文件\\05_内容与视频\\03_通用AI视频实验"
+    }
+  ],
+  "error_count": 275,
+  "errors_by_scope": {
+    "08_工具链": 78,
+    "03_独立站": 197
+  },
+  "error_groups": {
+    "08_工具链/02_视频工具/opencut-classic/apps/web/node_modules": {
+      "count": 78,
+      "readlink_success_count": 78,
+      "mapped_target_exists_count": 78,
+      "examples": [
+        {
+          "scope": "08_工具链",
+          "path": "08_工具链\\02_视频工具\\opencut-classic\\apps\\web\\node_modules\\zustand",
+          "operation": "scandir",
+          "error": "FileNotFoundError",
+          "link_target": "C:\\Users\\spq\\Desktop\\贝强\\tools\\opencut-classic\\node_modules\\.bun\\zustand@5.0.12+5e3d5174673d7dcb\\node_modules\\zustand",
+          "mapped_target_exists": true,
+          "mapped_target": "C:\\Users\\spq\\Desktop\\贝强\\08_工具链\\02_视频工具\\opencut-classic\\node_modules\\.bun\\zustand@5.0.12+5e3d5174673d7dcb\\node_modules\\zustand"
+        },
+        {
+          "scope": "08_工具链",
+          "path": "08_工具链\\02_视频工具\\opencut-classic\\apps\\web\\node_modules\\zod",
+          "operation": "scandir",
+          "error": "FileNotFoundError",
+          "link_target": "C:\\Users\\spq\\Desktop\\贝强\\tools\\opencut-classic\\node_modules\\.bun\\zod@4.3.6\\node_modules\\zod",
+          "mapped_target_exists": true,
+          "mapped_target": "C:\\Users\\spq\\Desktop\\贝强\\08_工具链\\02_视频工具\\opencut-classic\\node_modules\\.bun\\zod@4.3.6\\node_modules\\zod"
+        },
+        {
+          "scope": "08_工具链",
+          "path": "08_工具链\\02_视频工具\\opencut-classic\\apps\\web\\node_modules\\wrangler",
+          "operation": "scandir",
+          "error": "FileNotFoundError",
+          "link_target": "C:\\Users\\spq\\Desktop\\贝强\\tools\\opencut-classic\\node_modules\\.bun\\wrangler@4.85.0\\node_modules\\wrangler",
+          "mapped_target_exists": true,
+          "mapped_target": "C:\\Users\\spq\\Desktop\\贝强\\08_工具链\\02_视频工具\\opencut-classic\\node_modules\\.bun\\wrangler@4.85.0\\node_modules\\wrangler"
+        },
+        {
+          "scope": "08_工具链",
+          "path": "08_工具链\\02_视频工具\\opencut-classic\\apps\\web\\node_modules\\wavesurfer.js",
+          "operation": "scandir",
+          "error": "FileNotFoundError",
+          "link_target": "C:\\Users\\spq\\Desktop\\贝强\\tools\\opencut-classic\\node_modules\\.bun\\wavesurfer.js@7.12.6\\node_modules\\wavesurfer.js",
+          "mapped_target_exists": true,
+          "mapped_target": "C:\\Users\\spq\\Desktop\\贝强\\08_工具链\\02_视频工具\\opencut-classic\\node_modules\\.bun\\wavesurfer.js@7.12.6\\node_modules\\wavesurfer.js"
+        }
+      ]
+    },
+    "03_独立站/03_网站源码/node_modules": {
+      "count": 197,
+      "readlink_success_count": 197,
+      "mapped_target_exists_count": 0,
+      "examples": [
+        {
+          "scope": "03_独立站",
+          "path": "03_独立站\\03_网站源码\\node_modules\\.pnpm\\wrangler@4.92.0\\node_modules\\fsevents",
+          "operation": "scandir",
+          "error": "FileNotFoundError",
+          "link_target": "C:\\Users\\spq\\Desktop\\贝强\\03_独立站\\03_网站源码\\node_modules\\.pnpm\\fsevents@2.3.3\\node_modules\\fsevents"
+        },
+        {
+          "scope": "03_独立站",
+          "path": "03_独立站\\03_网站源码\\node_modules\\.pnpm\\workerd@1.20260515.1\\node_modules\\@cloudflare\\workerd-linux-arm64",
+          "operation": "scandir",
+          "error": "FileNotFoundError",
+          "link_target": "C:\\Users\\spq\\Desktop\\贝强\\03_独立站\\03_网站源码\\node_modules\\.pnpm\\@cloudflare+workerd-linux-arm64@1.20260515.1\\node_modules\\@cloudflare\\workerd-linux-arm64"
+        },
+        {
+          "scope": "03_独立站",
+          "path": "03_独立站\\03_网站源码\\node_modules\\.pnpm\\workerd@1.20260515.1\\node_modules\\@cloudflare\\workerd-linux-64",
+          "operation": "scandir",
+          "error": "FileNotFoundError",
+          "link_target": "C:\\Users\\spq\\Desktop\\贝强\\03_独立站\\03_网站源码\\node_modules\\.pnpm\\@cloudflare+workerd-linux-64@1.20260515.1\\node_modules\\@cloudflare\\workerd-linux-64"
+        },
+        {
+          "scope": "03_独立站",
+          "path": "03_独立站\\03_网站源码\\node_modules\\.pnpm\\workerd@1.20260515.1\\node_modules\\@cloudflare\\workerd-darwin-arm64",
+          "operation": "scandir",
+          "error": "FileNotFoundError",
+          "link_target": "C:\\Users\\spq\\Desktop\\贝强\\03_独立站\\03_网站源码\\node_modules\\.pnpm\\@cloudflare+workerd-darwin-arm64@1.20260515.1\\node_modules\\@cloudflare\\workerd-darwin-arm64"
+        }
+      ]
+    }
+  },
+  "finding": "首次有限扫描275条异常：OpenCut旧路径依赖78条，独立站pnpm明确skipped目标197个。OpenCut冻结锁安装后，原78条依赖链接局部验收全部有效、旧tools目标0；但安装exit1，根包opencut自引用copyfile/link失败，完整安装不可标成功。独立站197/197全部列在skipped，保持原状。05视频未见枚举异常；产品原始包与记忆关键入口存在。",
+  "independent_site_dependency_check": {
+    "package_manager": "pnpm@11.19.0",
+    "installed_platform_skipped_packages": 203,
+    "raw_missing_dependency_links": 199,
+    "unique_missing_targets": 197,
+    "unique_targets_listed_in_skipped": 197,
+    "not_listed_examples": [],
+    "elapsed_seconds": 1.8
+  },
+  "opencut_repair_preconditions": {
+    "package_manager_declared": "bun@1.2.18",
+    "available_bun": "C:\\Users\\spq\\.bun\\bin\\bun.exe",
+    "available_bun_version": "1.3.14",
+    "lock_file": "08_工具链/02_视频工具/opencut-classic/bun.lock",
+    "lock_exists": true,
+    "running_bun_or_opencut_processes_found": 0,
+    "process_check": "Win32_Process snapshot filtered by bun.exe name or opencut-classic command reference, excluding inspection shell/agent hosts; no matches.",
+    "recommended_command": "bun install --frozen-lockfile --ignore-scripts --no-save",
+    "note": "在当前OpenCut目录执行；已核对当前bun help支持这些参数。可用版本高于声明版本，必须冻结锁文件；遇锁格式/版本不兼容应停止，不升级依赖或迁回旧tools入口。"
+  },
+  "opencut_post_install_check": {
+    "checked_at": "2026-09-11T13:58:29+00:00",
+    "scope": "Only OpenCut apps/web/node_modules direct dependency entries and explicit opencut workspace link candidates.",
+    "dependency_links": 78,
+    "target_exists_count": 78,
+    "old_tools_target_count": 0,
+    "broken_link_count": 0,
+    "broken_examples": [],
+    "opencut_workspace_link_candidates": [
+      {
+        "path": "08_工具链\\02_视频工具\\opencut-classic\\apps\\web\\node_modules\\opencut",
+        "lexists": false,
+        "exists": false,
+        "is_directory": false,
+        "readlink_error": "FileNotFoundError"
+      },
+      {
+        "path": "08_工具链\\02_视频工具\\opencut-classic\\node_modules\\opencut",
+        "lexists": true,
+        "exists": true,
+        "is_directory": true,
+        "readlink_error": "OSError"
+      },
+      {
+        "path": "08_工具链\\02_视频工具\\opencut-classic\\node_modules\\.bun\\node_modules\\opencut",
+        "lexists": false,
+        "exists": false,
+        "is_directory": false,
+        "readlink_error": "FileNotFoundError"
+      }
+    ],
+    "scan_errors": []
+  },
+  "opencut_install_receipt": {
+    "reported_by": "parent task",
+    "command": "bun install --frozen-lockfile --ignore-scripts --no-save",
+    "exit_code": 1,
+    "reported_packages_installed": 1233,
+    "error": "EPERM failed to link package: opencut@ (copyfile)",
+    "bun_lock_sha256_before_and_after": "E1CFD587542907E057290776326D29F9B0CEBA5343685D580F6048DC83E5DB2B",
+    "status": "install partially succeeded; nonzero exit retained, requires local workspace link inspection"
+  },
+  "opencut_install_failure_localization": {
+    "root_package_name": "opencut",
+    "web_package_name": "@opencut/web",
+    "lock_root_dependency": {
+      "opencut": "."
+    },
+    "lock_package_resolution": "opencut@root:",
+    "node_modules_link_target": "E:\\贝强_C盘整理备份_20260828\\reinstallable\\opencut_node_modules",
+    "node_modules_opencut_state": "empty ordinary directory; not a reparse link",
+    "old_dependency_links_remaining": 0,
+    "proven_failure": "Bun returned EPERM while linking root self dependency opencut@ with copyfile; 78 migrated app dependency junctions are now valid.",
+    "inference": "Cross-volume node_modules and root self-dependency are the relevant link boundary. Exact Windows EPERM cause was not independently proven; do not conflate it with unrepaired app dependencies."
+  }
+}

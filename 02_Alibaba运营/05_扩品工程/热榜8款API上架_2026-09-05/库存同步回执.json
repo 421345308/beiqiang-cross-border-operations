@@ -1,0 +1,174 @@
+{
+  "target_inventory": 999,
+  "products": [
+    {
+      "model": "HR001",
+      "product_id": 1601943321794,
+      "sku_count": 30,
+      "changed_sku_count": 30,
+      "before_values": [
+        0
+      ],
+      "after_values": [
+        999
+      ],
+      "update_response": {
+        "result": {
+          "data": "true",
+          "success": true
+        },
+        "request_id": "21501be117886131124248851",
+        "_trace_id_": "210334ab17886131120663069e0b2d"
+      },
+      "passed": true
+    },
+    {
+      "model": "HR002",
+      "product_id": 1601943305914,
+      "sku_count": 30,
+      "changed_sku_count": 30,
+      "before_values": [
+        0
+      ],
+      "after_values": [
+        999
+      ],
+      "update_response": {
+        "result": {
+          "data": "true",
+          "success": true
+        },
+        "request_id": "0b51802d17886131341486169",
+        "_trace_id_": "210313ea17886131338028581e0f1e"
+      },
+      "passed": true
+    },
+    {
+      "model": "HR003",
+      "product_id": 1601943312845,
+      "sku_count": 30,
+      "changed_sku_count": 30,
+      "before_values": [
+        0
+      ],
+      "after_values": [
+        999
+      ],
+      "update_response": {
+        "result": {
+          "data": "true",
+          "success": true
+        },
+        "request_id": "213c932b17886131556128172",
+        "_trace_id_": "2103243417886131552782807e0bb2"
+      },
+      "passed": true
+    },
+    {
+      "model": "HR004",
+      "product_id": 1601943397351,
+      "sku_count": 30,
+      "changed_sku_count": 30,
+      "before_values": [
+        0
+      ],
+      "after_values": [
+        999
+      ],
+      "update_response": {
+        "result": {
+          "data": "true",
+          "success": true
+        },
+        "request_id": "213c934417886131775777049",
+        "_trace_id_": "210313ec17886131772073409e0e21"
+      },
+      "passed": true
+    },
+    {
+      "model": "HR005",
+      "product_id": 1601943335751,
+      "sku_count": 30,
+      "changed_sku_count": 30,
+      "before_values": [
+        0
+      ],
+      "after_values": [
+        999
+      ],
+      "update_response": {
+        "result": {
+          "data": "true",
+          "success": true
+        },
+        "request_id": "21501b6717886132031728195",
+        "_trace_id_": "210325bb17886132028422756e100c"
+      },
+      "passed": true
+    },
+    {
+      "model": "HR006",
+      "product_id": 1601943439124,
+      "sku_count": 30,
+      "changed_sku_count": 30,
+      "before_values": [
+        0
+      ],
+      "after_values": [
+        999
+      ],
+      "update_response": {
+        "result": {
+          "data": "true",
+          "success": true
+        },
+        "request_id": "210829b717886132266934447",
+        "_trace_id_": "2103135017886132263465046e1124"
+      },
+      "passed": true
+    },
+    {
+      "model": "HR007",
+      "product_id": 1601943463020,
+      "sku_count": 30,
+      "changed_sku_count": 30,
+      "before_values": [
+        0
+      ],
+      "after_values": [
+        999
+      ],
+      "update_response": {
+        "result": {
+          "data": "true",
+          "success": true
+        },
+        "request_id": "212c6fc617886132493026137",
+        "_trace_id_": "2103243417886132489786832e0d1b"
+      },
+      "passed": true
+    },
+    {
+      "model": "HR008",
+      "product_id": 1601943348656,
+      "sku_count": 30,
+      "changed_sku_count": 30,
+      "before_values": [
+        0
+      ],
+      "after_values": [
+        999
+      ],
+      "update_response": {
+        "result": {
+          "data": "true",
+          "success": true
+        },
+        "request_id": "213e759c17886132708194249",
+        "_trace_id_": "210313ea17886132704695468e0b63"
+      },
+      "passed": true
+    }
+  ],
+  "all_passed": true
+}

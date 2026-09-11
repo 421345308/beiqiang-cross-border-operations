@@ -1,14 +1,26 @@
-import json, subprocess, pathlib, concurrent.futures, csv, re
+import json, subprocess, pathlib, concurrent.futures, csv, re, time
 
 ROOT = pathlib.Path(r'C:\Users\spq\Desktop\贝强')
 CLI = ROOT / '.agents' / 'skills' / 'alibaba-openapi-operator' / 'scripts' / 'alibaba_openapi.py'
 OUT = pathlib.Path(__file__).parent
 
-def call(method, **params):
-    args = ['python', str(CLI), 'call', method] + [f'{k}={v}' for k,v in params.items()]
-    p = subprocess.run(args, cwd=ROOT, capture_output=True, text=True, encoding='utf-8', errors='replace', timeout=90)
-    try: return json.loads(p.stdout)
-    except Exception: return {'_call_error': p.stderr[-1000:], '_stdout_tail': p.stdout[-1000:]}
+def call(method, attempts=4, **params):
+    """Call with bounded retries; never turn a transport failure into zero fields."""
+    last = None
+    for attempt in range(1, attempts + 1):
+        args = ['python', str(CLI), 'call', method] + [f'{k}={v}' for k,v in params.items()]
+        try:
+            p = subprocess.run(args, cwd=ROOT, capture_output=True, text=True, encoding='utf-8', errors='replace', timeout=90)
+            data = json.loads(p.stdout)
+            err = data.get('error_response') or data.get('_call_error')
+            if p.returncode == 0 and not err:
+                return data
+            last = {'returncode': p.returncode, 'response_error': err, '_stderr_tail': p.stderr[-1000:], '_stdout_tail': p.stdout[-1000:]}
+        except Exception as exc:
+            last = {'exception': repr(exc)}
+        if attempt < attempts:
+            time.sleep(attempt * 1.5)
+    return {'_call_error': last, '_attempts': attempts}
 
 pages=[]
 for page in range(1, 30):
@@ -35,7 +47,7 @@ for p in products:
 def get_one(pid):
     return pid, call('alibaba.icbu.product.get', product_id=pid, language='en_US')
 details={}
-with concurrent.futures.ThreadPoolExecutor(max_workers=8) as ex:
+with concurrent.futures.ThreadPoolExecutor(max_workers=4) as ex:
     for pid, data in ex.map(get_one, ids): details[str(pid)] = data
 
 def count_urls(obj):
@@ -48,6 +60,7 @@ for p in products:
     if pid in seen_products: continue
     seen_products.add(pid)
     prod=d.get('product',{}) if isinstance(d,dict) else {}
+    read_ok=bool(prod)
     sku=(prod.get('product_sku') or {}).get('skus',[]) or []
     attrs=sku and (prod.get('product_sku') or {}).get('sku_attributes',[]) or []
     colors=[]; sizes=[]
@@ -59,9 +72,11 @@ for p in products:
     sd=prod.get('struct_detail') or {}
     di=sd.get('detail_image') or {}; ci=sd.get('company_image') or {}
     trade=prod.get('sourcing_trade') or {}
-    images=(p.get('main_image') or {}).get('images',[]) or (prod.get('main_image') or {}).get('images',[])
-    bad=[u for u in images if not re.match(r'^https://sc04\.alicdn\.com/kf/[^/]+\.(?:jpg|jpeg|png|webp)$',u,re.I)]
-    records.append({'productId':p.get('id'),'encryptedProductId':p.get('product_id'),'title':p.get('subject'),'modelNumber':p.get('red_model'),'categoryId':p.get('category_id'),'categoryName':p.get('group_name'),'status':p.get('status'),'display':p.get('display'),'mainImageCount':len(images),'skuColorCount':len(colors),'skuColors':' | '.join(colors),'skuSizeCount':len(sizes),'skuSizes':' | '.join(sizes),'skuTotalCount':len(sku),'detailType':'STRUCTURED' if p.get('struct_detail_product') else 'HTML/UNKNOWN','productDetailImageCount':len(di.get('images',[])),'companyImageCount':len(ci.get('images',[])),'video':'not returned by product.list/get','fobMinPrice':trade.get('fob_min_price'),'fobMaxPrice':trade.get('fob_max_price'),'currency':trade.get('fob_currency'),'moq':trade.get('min_order_quantity'),'unit':trade.get('min_order_unit_type'),'leadTime100Pairs':next((x.get('process_period') for x in trade.get('deliver_periods',[]) if x.get('quantity')==100),None),'package':'not returned by product.list/get','badUrlCount':len(bad),'badUrls':' | '.join(bad),'url':p.get('pc_detail_url'),'gmtModified':p.get('gmt_modified')})
+    images=(prod.get('main_image') or {}).get('images',[]) if read_ok else []
+    bad=[u for u in images if not re.match(r'^https://sc\d+\.alicdn\.com/kf/(?:[^/]+/286385890/)?[^/]+\.(?:jpg|jpeg|png|webp)$',u,re.I)]
+    attrs_flat=prod.get('attributes') or []
+    model=next((str(x.get('value')) for x in attrs_flat if str(x.get('name','')).lower() in ('model number','model no.','model')), p.get('red_model'))
+    records.append({'productId':p.get('id'),'encryptedProductId':p.get('product_id'),'apiReadOk':read_ok,'apiReadError':'' if read_ok else json.dumps(d.get('_call_error'),ensure_ascii=False),'title':prod.get('subject') if read_ok else p.get('subject'),'modelNumber':model,'categoryId':prod.get('category_id') if read_ok else p.get('category_id'),'categoryName':p.get('group_name'),'status':prod.get('status') if read_ok else p.get('status'),'display':prod.get('display') if read_ok else p.get('display'),'mainImageCount':len(images) if read_ok else None,'skuColorCount':len(colors) if read_ok else None,'skuColors':' | '.join(colors),'skuSizeCount':len(sizes) if read_ok else None,'skuSizes':' | '.join(sizes),'skuTotalCount':len(sku) if read_ok else None,'detailType':'STRUCTURED' if prod.get('struct_detail_product') else ('HTML/UNKNOWN' if read_ok else 'UNRESOLVED'),'productDetailImageCount':len(di.get('images',[])) if read_ok else None,'companyImageCount':len(ci.get('images',[])) if read_ok else None,'video':'not returned by product.list/get','fobMinPrice':trade.get('fob_min_price') if read_ok else None,'fobMaxPrice':trade.get('fob_max_price') if read_ok else None,'currency':trade.get('fob_currency') if read_ok else None,'moq':trade.get('min_order_quantity') if read_ok else None,'unit':trade.get('min_order_unit_type') if read_ok else None,'leadTime100Pairs':next((x.get('process_period') for x in trade.get('deliver_periods',[]) if x.get('quantity')==100),None) if read_ok else None,'package':'not returned by product.list/get','badUrlCount':len(bad) if read_ok else None,'badUrls':' | '.join(bad),'url':prod.get('pc_detail_url') if read_ok else p.get('pc_detail_url'),'gmtModified':prod.get('gmt_modified') if read_ok else p.get('gmt_modified')})
 
 (OUT/'api_product_list_pages.json').write_text(json.dumps(pages,ensure_ascii=False,indent=2),encoding='utf-8')
 (OUT/'api_product_get_details.json').write_text(json.dumps(details,ensure_ascii=False,indent=2),encoding='utf-8')

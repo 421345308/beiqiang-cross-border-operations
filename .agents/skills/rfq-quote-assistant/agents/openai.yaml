@@ -1,0 +1,4 @@
+interface:
+  display_name: "RFQ Quote Assistant"
+  short_description: "Draft RFQ quotes and follow-ups for B2B shoe buyers."
+  default_prompt: "Use $rfq-quote-assistant to draft a Beiqiang RFQ quotation and follow-up for an importer, wholesaler, Amazon/TikTok seller, or brand buyer."

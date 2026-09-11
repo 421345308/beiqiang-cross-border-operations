@@ -3,7 +3,7 @@ from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT_ROOT = ROOT / "02_可上传素材" / "主图优化_前5张_20260530"
+OUT_ROOT = ROOT / "01_产品资产" / "02_可发布素材" / "主图优化_前5张_20260530"
 
 NAVY = (17, 24, 39)
 SLATE = (75, 85, 99)

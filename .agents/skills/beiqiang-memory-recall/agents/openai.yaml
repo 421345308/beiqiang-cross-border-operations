@@ -1,0 +1,4 @@
+interface:
+  display_name: "贝强记忆调用"
+  short_description: "按任务读取最小相关的五层项目记忆"
+  default_prompt: "Use $beiqiang-memory-recall to load the relevant Beiqiang memories for this task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Alibaba 30 Products Audit"
+  short_description: "Audit Beiqiang Alibaba product listings before launch."
+  default_prompt: "Use $alibaba-30-products-audit to audit Beiqiang Alibaba products before launch, score listing quality, duplicate risk, and optimization priority."

@@ -30,8 +30,8 @@ FAQS = [
         "Logo, color, size ratio and packaging requirements can be discussed. Please provide your design and target quantity for production review.",
     ),
     (
-        "What is the production lead time?",
-        "The current store baseline is 31 days for 100 pairs. Final lead time depends on style, quantity, materials and customization requirements and is confirmed before order.",
+        "What is the lead time?",
+        "We respond quickly and arrange production or dispatch as soon as the order details are confirmed. For customized orders, exact timing depends on materials, quantity and requirements and is confirmed before order.",
     ),
     (
         "Can you provide a shipping quotation?",

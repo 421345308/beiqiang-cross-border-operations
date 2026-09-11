@@ -1,0 +1,71 @@
+{
+  "ok": true,
+  "root": "C:\\Users\\spq\\Desktop\\贝强",
+  "counts": {
+    "memory_entries": 13,
+    "active_memories": 13,
+    "project_skills": 21,
+    "active_entry_documents": 17,
+    "directory_links_checked": 6,
+    "git_tracked_entries": 1541
+  },
+  "errors": [],
+  "warnings": [
+    {
+      "check": "skills",
+      "path": ".agents/skills/remotion-captions",
+      "message": "retired/incomplete skill residue; not discoverable"
+    },
+    {
+      "check": "skills",
+      "path": ".agents/skills/remotion-create",
+      "message": "retired/incomplete skill residue; not discoverable"
+    },
+    {
+      "check": "skills",
+      "path": ".agents/skills/remotion-docs",
+      "message": "retired/incomplete skill residue; not discoverable"
+    },
+    {
+      "check": "skills",
+      "path": ".agents/skills/remotion-interactivity",
+      "message": "retired/incomplete skill residue; not discoverable"
+    },
+    {
+      "check": "skills",
+      "path": ".agents/skills/remotion-maps",
+      "message": "retired/incomplete skill residue; not discoverable"
+    },
+    {
+      "check": "skills",
+      "path": ".agents/skills/remotion-markup",
+      "message": "retired/incomplete skill residue; not discoverable"
+    },
+    {
+      "check": "skills",
+      "path": ".agents/skills/remotion-multimedia",
+      "message": "retired/incomplete skill residue; not discoverable"
+    },
+    {
+      "check": "skills",
+      "path": ".agents/skills/remotion-render",
+      "message": "retired/incomplete skill residue; not discoverable"
+    },
+    {
+      "check": "skills",
+      "path": ".agents/skills/remotion-saas",
+      "message": "retired/incomplete skill residue; not discoverable"
+    },
+    {
+      "check": "skills",
+      "path": ".agents/skills/remotion-studio",
+      "message": "retired/incomplete skill residue; not discoverable"
+    },
+    {
+      "check": "skills",
+      "path": ".agents/skills/remotion-upgrade",
+      "message": "retired/incomplete skill residue; not discoverable"
+    }
+  ],
+  "scope": "Read-only: active governance links, local skill links, memory structure, directory links through depth 4, and Git filenames. Historical records and secret contents are not scanned."
+}

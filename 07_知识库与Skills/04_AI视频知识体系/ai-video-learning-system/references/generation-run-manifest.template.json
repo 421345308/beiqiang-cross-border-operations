@@ -1,0 +1,43 @@
+{
+  "schema_version": "1",
+  "candidate_id": "S01_v01",
+  "shot_id": "S01",
+  "created_at": "YYYY-MM-DDTHH:mm:ss+08:00",
+  "prompt_path": "prompts/S01_v01.txt",
+  "prompt_sha256": "",
+  "canonical_canvas_path": "",
+  "canonical_canvas_sha256": "",
+  "review_canvas_path": "workflows/review/S01_v01.canvas.json",
+  "review_canvas_sha256": "",
+  "resolved_api_workflow_path": "workflows/resolved/S01_v01.api.json",
+  "resolved_api_workflow_sha256": "",
+  "mode": "",
+  "references": [
+    {
+      "path": "",
+      "sha256": "",
+      "role": "identity|costume|scene|motion|camera|audio|keyframe",
+      "label_in_prompt": ""
+    }
+  ],
+  "parameters": {
+    "seed": 0,
+    "width": 0,
+    "height": 0,
+    "frames": 0,
+    "effective_duration_seconds": 0,
+    "model": "",
+    "lora": "",
+    "lora_strength": 0,
+    "steps": 0,
+    "sampler": "",
+    "scheduler": "",
+    "reference_image_size": ""
+  },
+  "changed_variable": "",
+  "frozen_properties": [],
+  "acceptance_focus": [],
+  "expected_output": "",
+  "remote_job_id": "",
+  "status": "ready"
+}

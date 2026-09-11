@@ -1,0 +1,993 @@
+{
+  "expected": [
+    "S660455bfbb5f4634a50372274d99f4e9H",
+    "S3ba46a6991414401b0f7bb437383f48cQ",
+    "S2b5438cbe0a846c894d36a1a328dd8b1J",
+    "S68d1f083181b44baa2e7630b3e6bcdb9R",
+    "S187652b1fc754e91a39600ae2a28cb29L",
+    "S31f1dc3aa8834691893ad00813c9af3ax"
+  ],
+  "actual": [
+    "S660455bfbb5f4634a50372274d99f4e9H",
+    "S31f1dc3aa8834691893ad00813c9af3ax",
+    "S3ba46a6991414401b0f7bb437383f48cQ",
+    "S68d1f083181b44baa2e7630b3e6bcdb9R",
+    "S2b5438cbe0a846c894d36a1a328dd8b1J",
+    "S187652b1fc754e91a39600ae2a28cb29L"
+  ],
+  "main": [
+    "H41e38b3ae1fa4bdf9b2045b3f4a69de9x",
+    "H452dbc9df0fb4bf3a05b152c25ea8b81k",
+    "H885b4524f9b243eaaad9ec94dd445553l",
+    "H915bb9e87f6c4f29bd5e4283eb6dfaaen",
+    "Hc20969f744054090ab0b9cfbc4412165V",
+    "S4e6d8fbe85c549ea85e0eba28de4c832P"
+  ],
+  "update": {
+    "trace_id": "2101d86517884433817295382e0c9a",
+    "product_id": 10000043763325,
+    "biz_success": true,
+    "request_id": "213e759c17884433820464587",
+    "_trace_id_": "2101d86517884433817295382e0c9a"
+  },
+  "readback": {
+    "product": {
+      "gmt_create": "2026-06-13 19:27:01",
+      "keywords": [
+        ""
+      ],
+      "owner_member_display_name": "User name",
+      "subject": "2026 New Soft Knit Slip-On Walking Shoes Lightweight Breathable Mesh Spring/Autumn Anti-Slip Solid Color Casual Sneakers OEM ODM",
+      "main_image": {
+        "images": [
+          "https://sc04.alicdn.com/kf/S4e6d8fbe85c549ea85e0eba28de4c832P.png",
+          "https://sc04.alicdn.com/kf/Hc20969f744054090ab0b9cfbc4412165V.jpg",
+          "https://sc04.alicdn.com/kf/H41e38b3ae1fa4bdf9b2045b3f4a69de9x.jpg",
+          "https://sc04.alicdn.com/kf/H885b4524f9b243eaaad9ec94dd445553l.jpg",
+          "https://sc04.alicdn.com/kf/H915bb9e87f6c4f29bd5e4283eb6dfaaen.jpg",
+          "https://sc04.alicdn.com/kf/H452dbc9df0fb4bf3a05b152c25ea8b81k.jpg"
+        ]
+      },
+      "struct_detail_product": true,
+      "language": "ENGLISH",
+      "is_smart_edit": false,
+      "gmt_modified": "2026-09-03 21:49:43",
+      "product_sku": {
+        "skus": [
+          {
+            "attr2_value": "{\"222038415\":28388,\"191288010\":3483425}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 10001768113613
+          },
+          {
+            "attr2_value": "{\"222038415\":29542,\"191288010\":3483425}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 10001768113612
+          },
+          {
+            "attr2_value": "{\"222038415\":28389,\"191288010\":3483425}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 10001768113615
+          },
+          {
+            "attr2_value": "{\"222038415\":190000792,\"191288010\":3483425}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 10001768113614
+          },
+          {
+            "attr2_value": "{\"222038415\":28394,\"191288010\":3327837}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 10001768113609
+          },
+          {
+            "attr2_value": "{\"222038415\":28393,\"191288010\":3327837}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 10001768113608
+          },
+          {
+            "attr2_value": "{\"222038415\":190000105,\"191288010\":3483425}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 10001768113611
+          },
+          {
+            "attr2_value": "{\"222038415\":190000791,\"191288010\":3483425}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 10001768113610
+          },
+          {
+            "attr2_value": "{\"222038415\":28390,\"191288010\":3327837}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 10001768113605
+          },
+          {
+            "attr2_value": "{\"222038415\":28389,\"191288010\":3327837}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 10001768113604
+          },
+          {
+            "attr2_value": "{\"222038415\":28392,\"191288010\":3327837}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 10001768113607
+          },
+          {
+            "attr2_value": "{\"222038415\":28391,\"191288010\":3327837}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 10001768113606
+          },
+          {
+            "attr2_value": "{\"222038415\":29542,\"191288010\":3327837}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 10001768113601
+          },
+          {
+            "attr2_value": "{\"222038415\":190000105,\"191288010\":3327837}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 10001768113600
+          },
+          {
+            "attr2_value": "{\"222038415\":190000792,\"191288010\":3327837}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 10001768113603
+          },
+          {
+            "attr2_value": "{\"222038415\":28388,\"191288010\":3327837}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 10001768113602
+          },
+          {
+            "attr2_value": "{\"222038415\":28394,\"191288010\":3483425}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 10001768113620
+          },
+          {
+            "attr2_value": "{\"222038415\":28391,\"191288010\":3483425}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 10001768113617
+          },
+          {
+            "attr2_value": "{\"222038415\":28390,\"191288010\":3483425}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 10001768113616
+          },
+          {
+            "attr2_value": "{\"222038415\":28393,\"191288010\":3483425}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 10001768113619
+          },
+          {
+            "attr2_value": "{\"222038415\":28392,\"191288010\":3483425}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 10001768113618
+          },
+          {
+            "attr2_value": "{\"222038415\":28393,\"191288010\":-2}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 10001768113597
+          },
+          {
+            "attr2_value": "{\"222038415\":28392,\"191288010\":-2}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 10001768113596
+          },
+          {
+            "attr2_value": "{\"222038415\":190000791,\"191288010\":3327837}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 10001768113599
+          },
+          {
+            "attr2_value": "{\"222038415\":28394,\"191288010\":-2}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 10001768113598
+          },
+          {
+            "attr2_value": "{\"222038415\":28389,\"191288010\":-2}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 10001768113593
+          },
+          {
+            "attr2_value": "{\"222038415\":190000792,\"191288010\":-2}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 10001768113592
+          },
+          {
+            "attr2_value": "{\"222038415\":28391,\"191288010\":-2}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 10001768113595
+          },
+          {
+            "attr2_value": "{\"222038415\":28390,\"191288010\":-2}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 10001768113594
+          },
+          {
+            "attr2_value": "{\"222038415\":190000105,\"191288010\":-2}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 10001768113589
+          },
+          {
+            "attr2_value": "{\"222038415\":190000791,\"191288010\":-2}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 10001768113588
+          },
+          {
+            "attr2_value": "{\"222038415\":28388,\"191288010\":-2}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 10001768113591
+          },
+          {
+            "attr2_value": "{\"222038415\":29542,\"191288010\":-2}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 10001768113590
+          }
+        ],
+        "sku_attributes": [
+          {
+            "attribute_id": 191288010,
+            "values": [
+              {
+                "system_value_name": "Grey",
+                "image_url": "https://sc04.alicdn.com/kf/S7fd729b795894115b7874474557ddbe4Y.png",
+                "value_id": 3483425
+              },
+              {
+                "system_value_name": "Black",
+                "image_url": "https://sc04.alicdn.com/kf/Sb27a50f90d4d4132a894c71a1b557456P.png",
+                "value_id": 3327837
+              },
+              {
+                "system_value_name": "Wine Red",
+                "image_url": "https://sc04.alicdn.com/kf/Sd56efce9eff447f691784cdb8c296356K.png",
+                "value_id": -2
+              }
+            ],
+            "attribute_name": "Color"
+          },
+          {
+            "attribute_id": 222038415,
+            "values": [
+              {
+                "system_value_name": "38",
+                "value_id": 28388
+              },
+              {
+                "system_value_name": "37",
+                "value_id": 29542
+              },
+              {
+                "system_value_name": "40",
+                "value_id": 28389
+              },
+              {
+                "system_value_name": "39",
+                "value_id": 190000792
+              },
+              {
+                "system_value_name": "45",
+                "value_id": 28394
+              },
+              {
+                "system_value_name": "44",
+                "value_id": 28393
+              },
+              {
+                "system_value_name": "36",
+                "value_id": 190000105
+              },
+              {
+                "system_value_name": "35",
+                "value_id": 190000791
+              },
+              {
+                "system_value_name": "41",
+                "value_id": 28390
+              },
+              {
+                "system_value_name": "43",
+                "value_id": 28392
+              },
+              {
+                "system_value_name": "42",
+                "value_id": 28391
+              }
+            ],
+            "attribute_name": "EUR Size"
+          }
+        ]
+      },
+      "category_id": 201334413,
+      "product_id": "AAEGjmk4AOWGexecDTURiGGe",
+      "sub_market_type": "customization",
+      "struct_detail": {
+        "company_image": {
+          "images": [
+            {
+              "image_set": {
+                "name": "Packaging & shipping specifications",
+                "id": 700,
+                "order": "4"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/S2a3af5690d524680824086ad8419dbc9G.png"
+            },
+            {
+              "image_set": {
+                "name": "Factory profile",
+                "id": 500,
+                "order": "2"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/Sdc4e18f098e142b797df687e8befbfa14.png"
+            },
+            {
+              "image_set": {
+                "name": "Production workflow",
+                "id": 600,
+                "order": "3"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/Sc1dc6ec7d435404db6a31c6938a734a0g.png"
+            },
+            {
+              "image_set": {
+                "name": "Competitive advantages",
+                "id": 450,
+                "order": "1"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/Sfea34bbd56ae4d0583aa855838eb1454F.png"
+            },
+            {
+              "image_set": {
+                "name": "Extended company profile",
+                "id": 750,
+                "order": "0"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/Sf587c854711748af9759e77ce5aeb03c3.png"
+            }
+          ]
+        },
+        "product_faq": [
+          {
+            "question": "Are you a factory or a trading company?",
+            "answer": "We are a footwear factory located in Quanzhou, Fujian, China. We supply casual walking shoes and related footwear for overseas B2B buyers. Product details and order requirements are confirmed according to the current style."
+          },
+          {
+            "question": "What is your MOQ?",
+            "answer": "For available styles, small trial orders can be discussed. We support mixed colors and mixed sizes to help buyers test the market. For customized orders, MOQ depends on logo, packaging and material requirements."
+          },
+          {
+            "question": "Can I mix different colors and sizes in one order?",
+            "answer": "Yes. Mixed colors and mixed sizes are supported for available styles. Mixed styles can also be discussed according to stock and order quantity."
+          },
+          {
+            "question": "Can I order samples before bulk order?",
+            "answer": "Yes. Samples can be arranged for quality checking. The sample fee, courier cost, development time and any bulk-order policy will be confirmed for the current style before payment."
+          },
+          {
+            "question": "Do you support customized packaging?",
+            "answer": "Yes. Standard packaging can be shoe box or plastic bag. For large orders, customized packaging such as custom shoe box, label or packing method can be discussed."
+          },
+          {
+            "question": "Do you support logo or product customization?",
+            "answer": "Logo, color, size ratio and packaging customization can be discussed. Please send your design, target quantity and market requirements, and we will check the production solution for you."
+          },
+          {
+            "question": "How long is the delivery time?",
+            "answer": "Delivery time depends on stock, order quantity and customization requirements. Available styles can usually be arranged faster, while customized or bulk production needs to be confirmed before order."
+          },
+          {
+            "question": "Why choose your factory?",
+            "answer": "We provide factory support for product confirmation, sample checking, mixed size and color discussion, packing requirements and OEM/ODM cooperation. Final specifications are confirmed according to the current style and order details."
+          }
+        ],
+        "detail_image": {
+          "images": [
+            {
+              "image_set": {
+                "name": "Product dimensions",
+                "id": "150"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/S660455bfbb5f4634a50372274d99f4e9H.png"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/S31f1dc3aa8834691893ad00813c9af3ax.jpg"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/S3ba46a6991414401b0f7bb437383f48cQ.jpg"
+            },
+            {
+              "image_set": {
+                "name": "Detail shot",
+                "id": "300"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/S68d1f083181b44baa2e7630b3e6bcdb9R.jpg"
+            },
+            {
+              "image_set": {
+                "name": "Detail shot",
+                "id": "300"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/S2b5438cbe0a846c894d36a1a328dd8b1J.jpg"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/S187652b1fc754e91a39600ae2a28cb29L.jpg"
+            }
+          ]
+        },
+        "product_summary": "Stretch Fabric Upper: Flexible textile construction for casual walking styles. | Slip-On Design: Simple on-and-off construction for everyday use. | Lightweight EVA Sole: Supports a light casual walking shoe structure. | Solid Color Options: Suitable for wholesale assortment planning. | Factory Support: Mixed sizes, colors, samples, packing and OEM/ODM requirements can be discussed for the current order.",
+        "company_summary": "Quanzhou Beiqiang Footwear & Apparel Co., Ltd. is a footwear factory located in Quanzhou, Fujian, China. We supply casual walking shoes and related footwear for overseas B2B buyers. Product materials, colors, size ratios, packing and customization requirements are confirmed according to the current style and order details."
+      },
+      "display": "N",
+      "pc_detail_url": "https://www.alibaba.com/product-detail/2026-New-Soft-Knit-Slip-On_10000043763325.html",
+      "rts": false,
+      "product_type": "sourcing",
+      "sourcing_trade": {
+        "fob_min_price": "9.09",
+        "fob_currency": "USD",
+        "min_order_unit_type": "Pair",
+        "deliver_periods": [
+          {
+            "quantity": 100,
+            "process_period": 31
+          }
+        ],
+        "fob_max_price": "9.49",
+        "fob_unit_type": "Pair",
+        "min_order_quantity": "2"
+      },
+      "group_id": 916200866,
+      "price_type": "ladder_price",
+      "attributes": [
+        {
+          "attribute_id": 20700,
+          "attribute_name": "Midsole Material",
+          "value_id": 3376399,
+          "value_name": "EVA"
+        },
+        {
+          "attribute_id": 191288212,
+          "attribute_name": "Season",
+          "value_id": 3455309,
+          "value_name": "Summer"
+        },
+        {
+          "attribute_id": 191288212,
+          "attribute_name": "Season",
+          "value_id": 3599743,
+          "value_name": "Spring"
+        },
+        {
+          "attribute_id": 191288212,
+          "attribute_name": "Season",
+          "value_id": 8168102,
+          "value_name": "Autumn"
+        },
+        {
+          "attribute_id": 191288243,
+          "attribute_name": "Style",
+          "value_id": 19077592,
+          "value_name": "Walking Shoes"
+        },
+        {
+          "attribute_id": 191290426,
+          "attribute_name": "Outsole Material",
+          "value_id": 3376399,
+          "value_name": "EVA"
+        },
+        {
+          "attribute_id": 191290430,
+          "attribute_name": "Lining Material",
+          "value_id": 6821988,
+          "value_name": "Mesh"
+        },
+        {
+          "attribute_id": 200000329,
+          "attribute_name": "Pattern Type",
+          "value_id": 1954510751,
+          "value_name": "Solid"
+        },
+        {
+          "attribute_id": 200000486,
+          "attribute_name": "Toe Style",
+          "value_id": 556500746,
+          "value_name": "Round Toe"
+        },
+        {
+          "attribute_id": 210190305,
+          "attribute_name": "Pattern",
+          "value_id": 190091323,
+          "value_name": "Solid"
+        },
+        {
+          "attribute_id": 210194982,
+          "attribute_name": "Upper Material",
+          "value_id": 362061,
+          "value_name": "Stretch Fabric"
+        },
+        {
+          "attribute_id": 210200060,
+          "attribute_name": "Feature",
+          "value_id": 42283793,
+          "value_name": "Breathable"
+        },
+        {
+          "attribute_id": 210200060,
+          "attribute_name": "Feature",
+          "value_id": 61786742,
+          "value_name": "Anti-Slip"
+        },
+        {
+          "attribute_id": 210200060,
+          "attribute_name": "Feature",
+          "value_id": 46649883,
+          "value_name": "Light Weight"
+        },
+        {
+          "attribute_id": 210200060,
+          "attribute_name": "Feature",
+          "value_id": 3496969,
+          "value_name": "comfort"
+        },
+        {
+          "attribute_id": 1,
+          "attribute_name": "Place of Origin",
+          "value_id": -1,
+          "value_name": "CN;FUJ"
+        },
+        {
+          "attribute_id": 2,
+          "attribute_name": "Brand Name",
+          "value_id": -1,
+          "value_name": "Beiqiang"
+        },
+        {
+          "attribute_id": 3,
+          "attribute_name": "Model Number",
+          "value_id": -1,
+          "value_name": "BQ-013"
+        }
+      ],
+      "owner_member": 286385890,
+      "status": "modified"
+    },
+    "request_id": "0bab02fc17884433902538884",
+    "_trace_id_": "2101c5a717884433898852973e0e72"
+  }
+}

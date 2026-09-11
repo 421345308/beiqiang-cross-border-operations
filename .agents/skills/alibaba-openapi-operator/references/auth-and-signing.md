@@ -4,7 +4,7 @@
 
 The credential file is outside the repository:
 
-`C:/Users/spq/.config/beiqiang/alibaba-openapi.json`
+`~/.config/beiqiang/alibaba-openapi.json` (resolved from `Path.home()` by the client). Use the global `--config` option before the command to select a different external file.
 
 Expected keys are `appKey`, `appSecret`, optional `redirectUri`, `accessToken`, `refreshToken`, and expiry timestamps. Never copy its values into this skill or Git.
 
@@ -24,7 +24,7 @@ Use the exact registered callback URL and these official parameters:
 
 `response_type=code&force_auth=true&redirect_uri={callback}&client_id={appKey}`
 
-The returned code expires in 30 minutes. Exchange it through `/auth/token/create`, save both returned tokens, and always replace the stored refresh token after a refresh response.
+The returned code expires in 30 minutes. Exchange it through `/auth/token/create`, save both returned tokens, and always replace the stored refresh token after a refresh response. The client has an explicit `refresh-token` command; ordinary `call` and `upload-image` commands do not refresh automatically.
 
 Authorization policy depends on the application category. If it is `Allow binding user to authorize`, the seller must first be in APP Console → App Management → Auth Management → Authorized Seller Whitelist. If it is `Allow login users to authorize`, no whitelist is needed.
 

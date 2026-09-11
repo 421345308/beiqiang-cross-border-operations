@@ -39,12 +39,12 @@ def card_shadow(base, box):
     ImageDraw.Draw(base).rounded_rectangle(box, 24, fill=WHITE)
 
 products = [
-    ("BQ001", "Wide-Toe Knit Slip-On", ROOT/"02_可上传素材"/"00_最终上传"/"BQ001_数据包1"/"03_颜色图"/"all_black.jpg", None),
-    ("BQ002", "Wide-Toe Knit Slip-On", ROOT/"02_可上传素材"/"00_最终上传"/"BQ002_数据包2"/"03_颜色图"/"grey_white.jpg", None),
-    ("L1026", "Thick-Sole Knit Walker", ROOT/"02_可上传素材"/"00_最终上传"/"BQ009_L1026"/"01_主图"/"01_main.jpg", None),
-    ("A830", "Men's Knit Slip-On", ROOT/"02_可上传素材"/"00_最终上传"/"BQ024_A830"/"01_主图"/"01_main.jpg", None),
-    ("M8506", "Chunky Knit Walking Shoe", ROOT/"02_可上传素材"/"00_最终上传"/"BQ012_M8506"/"04_参考预览"/"old_main_20260613"/"01_main.jpg", (120,300,1080,900)),
-    ("A116", "Lightweight Knit Walker", ROOT/"02_可上传素材"/"00_最终上传"/"BQ018_A116"/"01_主图"/"01_main.jpg", None),
+    ("BQ001", "Wide-Toe Knit Slip-On", ROOT/"01_产品资产" / "02_可发布素材"/"00_最终上传"/"BQ001_数据包1"/"03_颜色图"/"all_black.jpg", None),
+    ("BQ002", "Wide-Toe Knit Slip-On", ROOT/"01_产品资产" / "02_可发布素材"/"00_最终上传"/"BQ002_数据包2"/"03_颜色图"/"grey_white.jpg", None),
+    ("L1026", "Thick-Sole Knit Walker", ROOT/"01_产品资产" / "02_可发布素材"/"00_最终上传"/"BQ009_L1026"/"01_主图"/"01_main.jpg", None),
+    ("A830", "Men's Knit Slip-On", ROOT/"01_产品资产" / "02_可发布素材"/"00_最终上传"/"BQ024_A830"/"01_主图"/"01_main.jpg", None),
+    ("M8506", "Chunky Knit Walking Shoe", ROOT/"01_产品资产" / "02_可发布素材"/"00_最终上传"/"BQ012_M8506"/"04_参考预览"/"old_main_20260613"/"01_main.jpg", (120,300,1080,900)),
+    ("A116", "Lightweight Knit Walker", ROOT/"01_产品资产" / "02_可发布素材"/"00_最终上传"/"BQ018_A116"/"01_主图"/"01_main.jpg", None),
 ]
 
 canvas = Image.new("RGBA", (W,H), BG)

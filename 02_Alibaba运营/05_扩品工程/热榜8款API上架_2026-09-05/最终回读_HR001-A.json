@@ -1,0 +1,92 @@
+{
+  "products": [
+    {
+      "listing_id": "HR001-A",
+      "product_id": "1601943321794",
+      "status": "approved",
+      "display": "Y",
+      "subject": "OEM Breathable Mesh Walking Shoes Lightweight Cushioned Lace Up Casual Sneakers EU 36-45 Model HR001",
+      "main_count": 6,
+      "main_unique": true,
+      "detail_count": 4,
+      "detail_unique": true,
+      "main_detail_disjoint": true,
+      "company_count": 5,
+      "sku_count": 30,
+      "inventory_values": [
+        999
+      ],
+      "inventory_pass": true,
+      "quality_score": "5.00",
+      "quality_problems": {
+        "imageText": false,
+        "title_word_miss_core_error": false,
+        "imageQualityBad": false,
+        "imageSubTitle": false,
+        "image_scale": false,
+        "inventory": false,
+        "title_word_error": false,
+        "selling_point_attribute_conflict": false,
+        "image_num": false,
+        "freightRate": false,
+        "sku_image": false,
+        "sku_text": false,
+        "price": false,
+        "category": false
+      },
+      "quality_problem_map": {
+        "ruleScoreMap": {
+          "title_word_miss_core_error": 0.0,
+          "imageQualityBad": 0.0,
+          "image_scale": 0.0,
+          "title_word_error": 0.0,
+          "image_num": 0.0
+        },
+        "errorReasonSkuImageMoreMap": {},
+        "errorReasonTitleWordMissErrorMap": {},
+        "errorReasonList": [],
+        "errorReasonTitleWordErrorMap": {},
+        "extendCheckMap": {
+          "imageText": true,
+          "sku_image": false,
+          "title_word_miss_core_error": true,
+          "imageQualityBad": true,
+          "sku_text": false,
+          "imageSubTitle": false,
+          "category": true,
+          "title_word_error": true,
+          "selling_point_attribute_conflict": false
+        },
+        "errorReasonCategoryMap": {},
+        "errorReasonSkuTextMap": {},
+        "errorReasonSubTitleMap": {},
+        "errorReasonMap": {},
+        "errorReasonSellingPointAttributeMap": {},
+        "errorReasonSkuImageMap": {},
+        "extendProblemMap": {
+          "imageText": false,
+          "title_word_miss_core_error": false,
+          "imageQualityBad": false,
+          "imageSubTitle": false,
+          "image_scale": false,
+          "inventory": false,
+          "title_word_error": false,
+          "selling_point_attribute_conflict": false,
+          "image_num": false,
+          "freightRate": false,
+          "sku_image": false,
+          "sku_text": false,
+          "price": false,
+          "category": false
+        },
+        "errorReasonQualityBadMap": {},
+        "errorReasonSkuTextMoreMap": {}
+      },
+      "update_error": null,
+      "content_pass": true
+    }
+  ],
+  "all_inventory_pass": true,
+  "all_content_pass": true,
+  "all_score_5": true
+}

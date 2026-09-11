@@ -1,0 +1,4 @@
+interface:
+  display_name: "贝强记忆维护"
+  short_description: "按授权整理有效记忆，确认新增事实并同步精简索引和证据入口"
+  default_prompt: "Use $beiqiang-memory-curator to maintain the requested memories, applying existing authorization and proposing any unconfirmed additions."

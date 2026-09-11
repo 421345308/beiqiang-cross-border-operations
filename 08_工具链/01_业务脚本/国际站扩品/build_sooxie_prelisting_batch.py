@@ -112,11 +112,20 @@ def open_source(raw_root: Path, default_source: str, spec: int | dict[str, Any])
         source = default_source
         index = spec
         crop = None
+        path = source_path(raw_root, source, index)
     else:
-        source = str(spec.get("source", default_source))
-        index = int(spec["index"])
+        custom_path = spec.get("path")
+        if custom_path:
+            path = raw_root.parents[2] / str(custom_path)
+            if not path.is_file():
+                raise FileNotFoundError(f"Missing custom source image: {path}")
+            source = str(spec.get("source", default_source))
+            index = int(spec.get("index", 0))
+        else:
+            source = str(spec.get("source", default_source))
+            index = int(spec["index"])
+            path = source_path(raw_root, source, index)
         crop = spec.get("crop")
-    path = source_path(raw_root, source, index)
     with Image.open(path) as image:
         result = ImageOps.exif_transpose(image).convert("RGB")
     if crop:
@@ -300,7 +309,7 @@ def make_oem(product: dict[str, Any], commercial: dict[str, Any], hero: Image.Im
     paste_image(canvas, hero, (660, 260, 1130, 850))
     bullets = [
         "Logo and branding placement",
-        "Removable insole and labeling",
+        "Insole and labeling options",
         "Color assortment and size ratio",
         "Standard shoe box or plastic bag",
         "Sample and courier arrangement",
@@ -628,16 +637,46 @@ def main() -> int:
         type=Path,
         default=Path(__file__).with_name("sooxie_prelisting_profiles_2026-08-14.json"),
     )
+    parser.add_argument(
+        "--codes",
+        nargs="*",
+        help="Only build the selected BQ codes. Use with --no-index for an incremental asset build.",
+    )
+    parser.add_argument(
+        "--no-index",
+        action="store_true",
+        help="Build product asset folders only; do not rewrite the shared batch CSV, QA file, or preview sheets.",
+    )
     args = parser.parse_args()
     workspace = args.workspace.resolve()
     profiles = json.loads(args.profiles.read_text(encoding="utf-8"))
     raw_root = workspace / "01_产品资产" / "01_原始数据包" / "待审_搜鞋网_2026-08-14"
-    upload_root = workspace / "02_可上传素材" / "00_最终上传"
+    upload_root = workspace / "01_产品资产" / "02_可发布素材" / "00_最终上传"
+    selected = profiles["products"]
+    if args.codes:
+        requested = set(args.codes)
+        selected = [product for product in selected if product["code"] in requested]
+        missing = sorted(requested - {product["code"] for product in selected})
+        if missing:
+            raise ValueError(f"Unknown BQ codes: {', '.join(missing)}")
+    blocked = [
+        product for product in selected
+        if str(product.get("publish_status", "")).upper().startswith(("BLOCK", "HOLD"))
+    ]
+    if blocked:
+        details = ", ".join(
+            f"{product['code']}->{product.get('duplicate_of', product.get('publish_status'))}"
+            for product in blocked
+        )
+        raise ValueError(
+            "Source-identity gate blocked asset generation for duplicate/held profiles: " + details
+        )
     rows = [
         build_product(product, raw_root, upload_root, profiles["owner_confirmed"])
-        for product in profiles["products"]
+        for product in selected
     ]
-    write_batch_outputs(workspace, rows, upload_root)
+    if not args.no_index:
+        write_batch_outputs(workspace, rows, upload_root)
     print(f"products={len(rows)} status=ASSETS_READY")
     print(upload_root)
     return 0

@@ -30,6 +30,7 @@ The Open API supports ordinary rich-text detail pages. Set the detail type to or
 
 - Query available videos with `alibaba.icbu.video.query`.
 - The verified minimal query is `current_page=1&page_size=1`.
+- The platform also exposes `alibaba.icbu.video.upload`, which imports a video from a publicly reachable HTTPS `video_path`; it is not a direct local-file/multipart upload API. As rechecked on 2026-09-05, Beiqiang application `SELF_APP2218064103529` does not currently have this upload permission. Do not try to call it until that permission is granted.
 - Bind a product-specific video to the main gallery with `alibaba.icbu.video.relation.product.main`.
 - Bind a video in the detail area with `alibaba.icbu.video.relation.product.detail`.
 - Read bindings with `alibaba.icbu.video.relation.product.list`.
