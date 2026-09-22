@@ -1,0 +1,55 @@
+{
+  "checked_at": "2026-09-15T00:01:00+08:00",
+  "source_product": {
+    "product_id": "10000044034049",
+    "model": "BQ-017",
+    "status": "approved",
+    "display": "Y",
+    "protected": true,
+    "untouched": true
+  },
+  "extensions": [
+    {
+      "product_id": "1601939636508",
+      "model": "BQ017-W1 / A008",
+      "status": "modified",
+      "display": "N",
+      "title_ok": true,
+      "image_count": 6,
+      "sku_count": 44,
+      "hero": "Grey"
+    },
+    {
+      "product_id": "1601939697271",
+      "model": "BQ017-R1 / A008",
+      "status": "modified",
+      "display": "N",
+      "title_ok": true,
+      "image_count": 6,
+      "sku_count": 44,
+      "hero": "White"
+    },
+    {
+      "product_id": "1601939593839",
+      "model": "BQ017-O1 / A008",
+      "status": "modified",
+      "display": "N",
+      "title_ok": true,
+      "image_count": 6,
+      "sku_count": 44,
+      "hero": "All Black"
+    }
+  ],
+  "remote_pixel_review": {
+    "unique_cdn_files": 10,
+    "gallery_slots": 18,
+    "result": "PASS",
+    "checks": [
+      "all unique CDN files loaded as real 1000x1000 pixels",
+      "Grey, White, Black White and All Black product colors match source evidence",
+      "scene and pair images preserve the same upper, outsole and lace-up construction",
+      "no broken image, watermark, collage, AI geometry change or invented product structure"
+    ]
+  },
+  "next_action": "Poll only. Do not resubmit while modified/N. After approved/Y, perform buyer-page QA for title, M1-M6, four colors, EU35-45, model, Pairs price tiers, Lace-Up and Regular Fit."
+}

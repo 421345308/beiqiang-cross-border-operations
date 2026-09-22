@@ -1,0 +1,23 @@
+{
+  "family": "BQ032/ZX2212",
+  "review_date": "2026-09-14",
+  "result": "PASS",
+  "method": "Opened every unique uploaded Alibaba CDN image in Chrome and visually compared it with the already approved local exact-pixel assets.",
+  "checks": {
+    "unique_remote_images": 6,
+    "all_loaded_as_real_pixels": true,
+    "all_match_local_color_and_geometry": true,
+    "no_label_remnants": true,
+    "no_collage": true,
+    "no_crop_damage": true,
+    "no_ai_shape_or_color_change": true
+  },
+  "images": {
+    "Blue": "https://sc04.alicdn.com/kf/H6bf7ec46a3234242b44ba801df0c713bY.jpg",
+    "Grey": "https://sc04.alicdn.com/kf/H53908513b8264768b6bdbebbe1ea1e51G.jpg",
+    "Black White": "https://sc04.alicdn.com/kf/H205994ba3fbb427da28e651eadf9c1d3C.jpg",
+    "Apricot": "https://sc04.alicdn.com/kf/H3f32f008910d457a87f9a972e1fae000o.jpg",
+    "White": "https://sc04.alicdn.com/kf/Ha80bdf893e014b04a96a95778cc4bc7aU.jpg",
+    "All Black": "https://sc04.alicdn.com/kf/Hfead1e80174e4b9b8f20bfc50f64e111o.jpg"
+  }
+}

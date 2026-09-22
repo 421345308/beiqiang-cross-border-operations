@@ -1,0 +1,30 @@
+{
+  "family": "BQ018/A116",
+  "source_product_id": "10000044007878",
+  "source_policy": "PROTECT_SOURCE",
+  "status": "SUBMITTED_WAIT_AUDIT",
+  "scope": ["1601939726170", "1601939641542", "1601939589890"],
+  "mapping_by_value_id": {
+    "-24": {
+      "color": "Cream",
+      "current_wrong_actual_color": "Black White",
+      "target_image_url": "https://sc04.alicdn.com/kf/S6c2add39ffa04564bffa92c22c639b7bC.jpg"
+    },
+    "-1": {
+      "color": "Lavender",
+      "current_wrong_actual_color": "All Black",
+      "target_image_url": "https://sc04.alicdn.com/kf/Saa8be4cb586e4eb6881fe0419b4378e0I.jpg"
+    },
+    "-80": {
+      "color": "Black White",
+      "current_wrong_actual_color": "Lavender",
+      "target_image_url": "https://sc04.alicdn.com/kf/S616ed02bb2e9432a9ef8d7f39fa5a25f3.jpg"
+    },
+    "3327837": {
+      "color": "Black",
+      "current_wrong_actual_color": "Cream",
+      "target_image_url": "https://sc04.alicdn.com/kf/S783d5394ead14c42956e0eee6d570652U.jpg"
+    }
+  },
+  "gate": "The thumbnail-only repair was submitted once after approved/Y and strict readback passed. Do not resubmit while status is modified or display is N. After the next approved/Y, perform public-page visual and field QA only."
+}

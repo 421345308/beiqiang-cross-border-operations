@@ -1,0 +1,76 @@
+{
+  "family": "BQ026/T5828",
+  "source_product_id": "10000044011929",
+  "source_policy": "PROTECT_SOURCE",
+  "market_evidence": {
+    "checked_at": "2026-09-14",
+    "product_advisor": {
+      "1601939745065": "Week 34: 12 search impressions, 0 search clicks, 4 visitors",
+      "1601939725201": "Week 32: 35 search impressions, 2 search clicks, 5.71% CTR, 4 visitors",
+      "1601939714238": "Weeks 31-34: no reportable search effect"
+    },
+    "keyword_advisor_recent_7_days": [
+      {"phrase": "mens lightweight walking shoes", "search_index": 7, "trend": "+50%", "ctr": "13.33%", "seller_scale": 0},
+      {"phrase": "mens shoes casual", "search_index": 19, "trend": "+123%", "ctr": "13.79%", "seller_scale": 6},
+      {"phrase": "mens black casual shoes", "search_index": 9, "trend": "+850%", "ctr": "0%", "seller_scale": 0},
+      {"phrase": "mens casual summer shoes", "search_index": 9, "trend": "+216.6%", "ctr": "0%", "seller_scale": 0}
+    ],
+    "rejected_terms": [
+      {"term": "anti-slip", "reason": "No test evidence in the verified source package."},
+      {"term": "wide toe box / orthopedic / barefoot / zero drop", "reason": "BQ026 is regular fit and has no evidence for these claims."},
+      {"term": "Flyknit", "reason": "Third-party/trademark-like unsupported material expression."}
+    ]
+  },
+  "asset_policy": {
+    "visual_review": "BQ026主图视觉验收_2026-09-14.json",
+    "method": "Mechanical crop, proportional resize and centering of verified real BQ026 source pixels only.",
+    "no_ai_product_change": true,
+    "no_collage_m1": true,
+    "all_six_are_real_product_photos": true
+  },
+  "products": [
+    {
+      "product_id": "1601939745065",
+      "expected_model": "BQ026-W1 / T5828",
+      "title": "Wholesale Mens Lightweight Walking Shoes Breathable Knit Lace-Up Casual Shoes T5828",
+      "keyword_plan": ["mens lightweight walking shoes", "breathable knit walking shoes", "mens casual shoes"],
+      "image_files": [
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/02_单品优化记录/BQ系列持续优化_2026-09-14/BQ026_真实鞋型主图_2026-09-14/white_clean.jpg",
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/02_单品优化记录/BQ系列持续优化_2026-09-14/BQ026_真实鞋型主图_2026-09-14/grey_clean.jpg",
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/02_单品优化记录/BQ系列持续优化_2026-09-14/BQ026_真实鞋型主图_2026-09-14/black_clean.jpg",
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/02_单品优化记录/BQ系列持续优化_2026-09-14/BQ026_真实鞋型主图_2026-09-14/pink_pair.jpg",
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/02_单品优化记录/BQ系列持续优化_2026-09-14/BQ026_真实鞋型主图_2026-09-14/red_angle.jpg",
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/02_单品优化记录/BQ系列持续优化_2026-09-14/BQ026_真实鞋型主图_2026-09-14/grey_pair.jpg"
+      ]
+    },
+    {
+      "product_id": "1601939725201",
+      "expected_model": "BQ026-R1 / T5828",
+      "title": "Mens Casual Shoes Breathable Knit Lace-Up Lightweight Daily Walking Sneakers T5828",
+      "keyword_plan": ["mens casual shoes", "daily walking sneakers", "knit lace up shoes"],
+      "image_files": [
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/02_单品优化记录/BQ系列持续优化_2026-09-14/BQ026_真实鞋型主图_2026-09-14/red_clean.jpg",
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/02_单品优化记录/BQ系列持续优化_2026-09-14/BQ026_真实鞋型主图_2026-09-14/red_angle.jpg",
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/02_单品优化记录/BQ系列持续优化_2026-09-14/BQ026_真实鞋型主图_2026-09-14/grey_pair.jpg",
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/02_单品优化记录/BQ系列持续优化_2026-09-14/BQ026_真实鞋型主图_2026-09-14/black_clean.jpg",
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/02_单品优化记录/BQ系列持续优化_2026-09-14/BQ026_真实鞋型主图_2026-09-14/white_clean.jpg",
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/02_单品优化记录/BQ系列持续优化_2026-09-14/BQ026_真实鞋型主图_2026-09-14/pink_pair.jpg"
+      ]
+    },
+    {
+      "product_id": "1601939714238",
+      "expected_model": "BQ026-O1 / T5828",
+      "title": "Custom Logo Mens Casual Shoes Knit Lace-Up Walking Sneakers OEM ODM Supplier T5828",
+      "keyword_plan": ["custom logo mens casual shoes", "OEM ODM walking shoes", "private label knit shoes"],
+      "image_files": [
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/02_单品优化记录/BQ系列持续优化_2026-09-14/BQ026_真实鞋型主图_2026-09-14/black_clean.jpg",
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/02_单品优化记录/BQ系列持续优化_2026-09-14/BQ026_真实鞋型主图_2026-09-14/grey_pair.jpg",
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/02_单品优化记录/BQ系列持续优化_2026-09-14/BQ026_真实鞋型主图_2026-09-14/white_clean.jpg",
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/02_单品优化记录/BQ系列持续优化_2026-09-14/BQ026_真实鞋型主图_2026-09-14/red_angle.jpg",
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/02_单品优化记录/BQ系列持续优化_2026-09-14/BQ026_真实鞋型主图_2026-09-14/pink_pair.jpg",
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/02_单品优化记录/BQ系列持续优化_2026-09-14/BQ026_真实鞋型主图_2026-09-14/grey_clean.jpg"
+      ]
+    }
+  ],
+  "keyword_execution_policy": "OpenAPI productKeywords is not used because current readback proves the field is ignored. Search clusters are placed naturally in title openings; dedicated keyword fields wait for a reliable UI workflow."
+}

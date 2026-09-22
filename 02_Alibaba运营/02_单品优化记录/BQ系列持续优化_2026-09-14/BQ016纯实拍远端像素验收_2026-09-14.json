@@ -1,0 +1,41 @@
+{
+  "audit_date": "2026-09-14",
+  "sku_family": "BQ016 / 201",
+  "result": "PASS",
+  "method": "提交后逐一使用Chrome直接打开Alibaba CDN原文件；灰色加载占位不计通过，等待真实1000x1000像素出现后才验收",
+  "product_count": 3,
+  "gallery_slots": 18,
+  "unique_remote_files": 16,
+  "shared_file": "Ha4c144d1671c42cb9ed895bfa54fbc9dm（三色实拍，三条共用）",
+  "checks": {
+    "all_unique_files_loaded": true,
+    "all_images_real_product_photos": true,
+    "main_image_colors_match_roles": true,
+    "shoe_geometry_unchanged": true,
+    "outsole_unchanged": true,
+    "closure_unchanged": true,
+    "no_unverified_copy": true,
+    "no_ai_product_change": true
+  },
+  "products": [
+    {
+      "product_id": "1601939608691",
+      "role": "W1 black",
+      "urls": ["H83d56a16e93849ddacf648c68e38bfefj", "H81de3d40eb14474183461f9e89123bb2Y", "H94bd8eae12424af69cfc80e4b841bc4dA", "Hc3d927d2e335480392da59ec49ef8107Z", "Ha4c144d1671c42cb9ed895bfa54fbc9dm", "H849f8ad147ab491d8d233c027f0956a1V"],
+      "result": "PASS"
+    },
+    {
+      "product_id": "1601939691301",
+      "role": "R1 pink",
+      "urls": ["Haf0fc02f80a14b3cadd74b62181dcb10R", "H04701e9eaade4fba8a35d7e323866ea4C", "Hb3487b5f91614550b45f1d2b148f0d287", "H97bb4ff4011f4318bcac5ca98aa4bb2e5", "Ha4c144d1671c42cb9ed895bfa54fbc9dm", "Hbba6d6b634904eb2afd8617f66b6dc72N"],
+      "result": "PASS"
+    },
+    {
+      "product_id": "1601939633580",
+      "role": "O1 zebra",
+      "urls": ["H8e8b79b216da47229c89ca35c24edccc0", "Hd2a85c1590c744d784d8b9377e1977e6d", "H640055c238a841b59d0a40e055b1e531t", "H5415234a8a5e4d36a3a28ac252c74e6fH", "Ha4c144d1671c42cb9ed895bfa54fbc9dm", "H9224d04becca4b649d5b69375ac7e643H"],
+      "result": "PASS"
+    }
+  ],
+  "current_state": "All three links are modified/N after the verified all-photo gallery submission. Poll only; do not resubmit."
+}

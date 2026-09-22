@@ -1,0 +1,74 @@
+{
+  "timestamp_utc": "2026-09-14T18:09:45.989458+00:00",
+  "source_product_id_protected": "10000043725883",
+  "mode": "dry-run",
+  "change_scope": "Light Grey label and seven matching SKU-code segments per expansion only",
+  "results": [
+    {
+      "product_id": "1601939634522",
+      "expected_model": "BQ011-W1 / A002",
+      "before": {
+        "request_id": "21546a1d17894093441756137",
+        "trace_id": "2101dd0617894093438754742e0e0c",
+        "message": null,
+        "error": null
+      },
+      "before_status": "approved",
+      "before_display": "Y",
+      "mode": "dry-run",
+      "stage": "prepared",
+      "render": {
+        "request_id": "212c6fc617894093513817233",
+        "trace_id": "2101fb9317894093510628852e0f6f",
+        "message": null,
+        "error": null
+      },
+      "changed_sku_rows": 7,
+      "ok": true
+    },
+    {
+      "product_id": "1601939666421",
+      "expected_model": "BQ011-R1 / A002",
+      "before": {
+        "request_id": "213c932b17894093602756573",
+        "trace_id": "2101c5a717894093599793859e0bbd",
+        "message": null,
+        "error": null
+      },
+      "before_status": "approved",
+      "before_display": "Y",
+      "mode": "dry-run",
+      "stage": "prepared",
+      "render": {
+        "request_id": "212c6fc617894093673728066",
+        "trace_id": "2101d14517894093670585120e10ba",
+        "message": null,
+        "error": null
+      },
+      "changed_sku_rows": 7,
+      "ok": true
+    },
+    {
+      "product_id": "1601939606803",
+      "expected_model": "BQ011-O1 / A002",
+      "before": {
+        "request_id": "21501b6717894093761727208",
+        "trace_id": "2101dbd017894093758605460e0c7c",
+        "message": null,
+        "error": null
+      },
+      "before_status": "approved",
+      "before_display": "Y",
+      "mode": "dry-run",
+      "stage": "prepared",
+      "render": {
+        "request_id": "0bab02fe17894093832496938",
+        "trace_id": "2101c5a717894093829078598e0c83",
+        "message": null,
+        "error": null
+      },
+      "changed_sku_rows": 7,
+      "ok": true
+    }
+  ]
+}

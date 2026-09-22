@@ -1,0 +1,22 @@
+{
+  "date": "2026-09-15",
+  "product_id": "1601939735063",
+  "link_code": "BQ006-O1",
+  "source_bq": "BQ006",
+  "source_model": "M8811",
+  "platform_write": false,
+  "protect_until": "D14",
+  "candidate_directory": "BQ006_O1_D14采购承接预案_2026-09-15/六图候选",
+  "images": [
+    {"slot": "M1", "file": "M1_all_black_current_protected.png", "role": "All Black protected search hero", "size": "1000x1000", "sha256": "71ebdbaa659a34cc129064b5d00179eaab066de9170e60a60302b2dca663a94c"},
+    {"slot": "M2", "file": "M2_knit_lace_detail.jpg", "role": "Knit upper and lace-up close detail", "size": "800x800", "sha256": "ad44da5d3cb2a84f4256eeca497a62be73a8c5809adb813ca6ae1b901721dba6"},
+    {"slot": "M3", "file": "M3_outsole_tread.jpg", "role": "Actual outsole tread structure", "size": "800x800", "sha256": "5c9bf628ffdb213a655c920eb60c39224614f992e34114e8b5e2edb36ac3ace2"},
+    {"slot": "M4", "file": "M4_seven_colors.jpg", "role": "Actual seven-color SKU range", "size": "800x800", "sha256": "2e3ae8655561dafeae5cffb875e1641e8f1adddae30b66d1c0a9a02c90c7fe18"},
+    {"slot": "M5", "file": "M5_all_black_on_foot.jpg", "role": "All Black on-foot lace-up scene", "size": "800x800", "sha256": "6e51cfeb3afb56c77062b25515a972a52dcf63f358ba73501021e16a4346057c"},
+    {"slot": "M6", "file": "M6_all_black_pair.jpg", "role": "All Black pair and chunky sole silhouette", "size": "800x800", "sha256": "963f9f9b65db6161d3f5baf05995959777c11a46dd4bd8a88a8da5048a42146b"}
+  ],
+  "excluded_examples": [
+    {"file": "59.jpg", "reason": "Chinese promotional and performance text"},
+    {"file": "61.jpg", "reason": "Chinese promotional and unsupported platform-height text"}
+  ]
+}

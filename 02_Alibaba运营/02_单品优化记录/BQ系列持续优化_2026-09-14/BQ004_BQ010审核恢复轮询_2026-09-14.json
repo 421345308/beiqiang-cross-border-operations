@@ -1,0 +1,19 @@
+{
+  "date": "2026-09-14",
+  "method": "alibaba.icbu.product.get read-only polling",
+  "result": "BQ004 and BQ010 approved/Y; BQ029 remains modified/N",
+  "approved_products": [
+    {"product_id":"1601939626612","family":"BQ004","status":"approved","display":"Y","image_count":6,"sku_count":55,"color_count":5},
+    {"product_id":"1601939738037","family":"BQ004","status":"approved","display":"Y","image_count":6,"sku_count":55,"color_count":5},
+    {"product_id":"1601939700200","family":"BQ004","status":"approved","display":"Y","image_count":6,"sku_count":55,"color_count":5},
+    {"product_id":"1601939589876","family":"BQ010","status":"approved","display":"Y","image_count":6,"sku_count":22,"color_count":2},
+    {"product_id":"1601939734070","family":"BQ010","status":"approved","display":"Y","image_count":6,"sku_count":22,"color_count":2},
+    {"product_id":"1601939573998","family":"BQ010","status":"approved","display":"Y","image_count":6,"sku_count":22,"color_count":2}
+  ],
+  "pending_products": [
+    {"product_id":"1601939749045","family":"BQ029","status":"modified","display":"N","image_count":6,"sku_count":22,"color_count":2},
+    {"product_id":"1601939607770","family":"BQ029","status":"modified","display":"N","image_count":6,"sku_count":22,"color_count":2},
+    {"product_id":"1601939721228","family":"BQ029","status":"modified","display":"N","image_count":6,"sku_count":22,"color_count":2}
+  ],
+  "action_taken": "No product update was submitted. Approved links proceeded to public buyer-page QA; BQ029 remains poll-only."
+}

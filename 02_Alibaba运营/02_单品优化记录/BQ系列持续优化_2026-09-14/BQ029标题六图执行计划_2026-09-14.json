@@ -1,0 +1,76 @@
+{
+  "family": "BQ029/A025",
+  "source_product_id": "1601839062659",
+  "source_policy": "PROTECT_SOURCE",
+  "market_evidence": {
+    "period": "Alibaba Product Advisor Week 35 and Keyword Advisor recent 7 days; public Alibaba competitor pages checked 2026-09-14",
+    "product_performance": {
+      "source": {"product_id": "1601839062659", "search_impressions": 1, "search_clicks": 0, "visitors": 1},
+      "W1": {"product_id": "1601939749045", "search_impressions": 1, "search_clicks": 0, "visitors": 0},
+      "R1": {"product_id": "1601939607770", "search_impressions": 0, "search_clicks": 0, "visitors": 0},
+      "O1": {"product_id": "1601939721228", "search_impressions": 0, "search_clicks": 0, "visitors": 0}
+    },
+    "accepted_method": [
+      "Use mature Walking Shoes and Slip-On Shoes category language as the search backbone",
+      "Use High Top, Knit and Sock-Like only as evidence-backed structural differentiation",
+      "Keep Custom Logo and OEM ODM only on the commercial-intent O1 link"
+    ],
+    "rejected": [
+      {"term": "high top walking shoes", "reason": "Keyword Advisor showed only a very small exact pool; not sufficient as the sole traffic backbone"},
+      {"term": "sock shoes", "reason": "mixed with baby, pet and branded traffic; use only controlled sock-like structure wording"},
+      {"term": "Autumn Winter / fleece lined", "reason": "no source evidence for seasonal lining"},
+      {"term": "anti-slip / cushion sole", "reason": "no verified test or precise sole-performance evidence"}
+    ]
+  },
+  "asset_evidence": {
+    "source_package": "01_产品资产/01_原始数据包/已整理_BQ029_A025_贝强鞋业A025高帮波浪纹35-45批58元全网限价88元",
+    "all_selected_images_visually_checked": true,
+    "excluded": [
+      "01_主图/05_colors.jpg and 02_详情页/05_colors.jpg: Black White / All Black labels are reversed relative to pixels",
+      "02_详情页/02_info.jpg: contains unverified Autumn/Winter, cushion sole and packing claims",
+      "01_主图/04_sole.jpg: performance implication not required",
+      "01_主图/06_scene.jpg: seasonal implication not required"
+    ]
+  },
+  "products": [
+    {
+      "product_id": "1601939749045",
+      "expected_model": "BQ029-W1 / A025",
+      "title": "Wholesale High Top Knit Slip-On Walking Shoes White Sole EU 35-45 A025",
+      "image_files": [
+        "C:/Users/spq/Desktop/贝强/01_产品资产/01_原始数据包/已整理_BQ029_A025_贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/PNG/PD2A6334.png",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/01_原始数据包/已整理_BQ029_A025_贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/800/0S8A4724.JPG",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/01_原始数据包/已整理_BQ029_A025_贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/800/0S8A5348.JPG",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/01_原始数据包/已整理_BQ029_A025_贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/PNG/PD2A6333.png",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/01_原始数据包/已整理_BQ029_A025_贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/800/0S8A4723.JPG",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/01_原始数据包/已整理_BQ029_A025_贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/800/0S8A5360.JPG"
+      ]
+    },
+    {
+      "product_id": "1601939607770",
+      "expected_model": "BQ029-R1 / A025",
+      "title": "High Top Knit Sock-Like Slip-On Walking Style Shoes Daily Casual A025",
+      "image_files": [
+        "C:/Users/spq/Desktop/贝强/01_产品资产/01_原始数据包/已整理_BQ029_A025_贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/800/0S8A5348.JPG",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/01_原始数据包/已整理_BQ029_A025_贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/PNG/PD2A6334.png",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/01_原始数据包/已整理_BQ029_A025_贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/800/0S8A4724.JPG",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/01_原始数据包/已整理_BQ029_A025_贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/800/0S8A5360.JPG",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/01_原始数据包/已整理_BQ029_A025_贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/PNG/PD2A6333.png",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/01_原始数据包/已整理_BQ029_A025_贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/800/0S8A4723.JPG"
+      ]
+    },
+    {
+      "product_id": "1601939721228",
+      "expected_model": "BQ029-O1 / A025",
+      "title": "All Black High Top Knit Slip-On Walking Shoes Custom Logo OEM ODM A025",
+      "image_files": [
+        "C:/Users/spq/Desktop/贝强/01_产品资产/01_原始数据包/已整理_BQ029_A025_贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/PNG/PD2A6333.png",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/01_原始数据包/已整理_BQ029_A025_贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/800/0S8A4723.JPG",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/01_原始数据包/已整理_BQ029_A025_贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/800/0S8A5360.JPG",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/01_原始数据包/已整理_BQ029_A025_贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/PNG/PD2A6334.png",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/01_原始数据包/已整理_BQ029_A025_贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/800/0S8A4724.JPG",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/01_原始数据包/已整理_BQ029_A025_贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/800/0S8A5348.JPG"
+      ]
+    }
+  ]
+}

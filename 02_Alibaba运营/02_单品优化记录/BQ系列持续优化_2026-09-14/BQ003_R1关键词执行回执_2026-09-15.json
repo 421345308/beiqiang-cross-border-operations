@@ -1,0 +1,53 @@
+{
+  "finished_at": "2026-09-14T17:37:29.895831+00:00",
+  "mode": "execute",
+  "fail_fast": true,
+  "results": [
+    {
+      "product_id": "1601939663432",
+      "execute": true,
+      "ok": false,
+      "stage": "readback_mismatch",
+      "before_keywords": [
+        ""
+      ],
+      "requested_keywords": [
+        "men's casual walking shoes",
+        "summer walking shoes",
+        "casual walking shoes",
+        "lightweight walking shoes",
+        "breathable walking shoes"
+      ],
+      "before_status": "approved",
+      "before_display": "Y",
+      "request": {
+        "request_id": "0b51802d17894074334875498",
+        "trace_id": "2101dd0617894074331555215e0f16",
+        "error": null
+      },
+      "after_keywords": [
+        ""
+      ],
+      "after_status": "modified",
+      "after_display": "N",
+      "checks": {
+        "keywords_ok": false,
+        "identity_ok": true,
+        "other_fields_unchanged": true,
+        "source_not_targeted": true
+      },
+      "update": {
+        "request_id": "0bbb637a17894074406351173",
+        "trace_id": "2101fb9317894074403001912e0f0b",
+        "error": null
+      },
+      "readback": {
+        "request_id": "210829b717894074486487520",
+        "trace_id": "2101fca817894074483391094e0d8f",
+        "error": null
+      }
+    }
+  ],
+  "success_count": 0,
+  "failure_count": 1
+}

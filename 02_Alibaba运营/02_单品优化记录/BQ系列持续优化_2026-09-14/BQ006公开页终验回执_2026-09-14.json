@@ -1,0 +1,61 @@
+{
+  "checked_at": "2026-09-14",
+  "family": "BQ006/M8811",
+  "source_product_id": "1601814931739",
+  "source_policy": "PROTECT_SOURCE",
+  "result": "PUBLIC_QA_PASS",
+  "products": [
+    {
+      "product_id": "1601939660427",
+      "link_code": "BQ006-W1",
+      "platform_status": "approved/Y",
+      "role": "white-green walking style wholesale",
+      "image_count": 6,
+      "sku_count": 67,
+      "colors": 7,
+      "size_range": "EU 35-45",
+      "unit": "Pairs",
+      "price_tiers_usd": [9.49, 9.19, 9.09],
+      "closure": "Lace-up",
+      "public_url": "https://www.alibaba.com/product-detail/Wholesale-White-Green-Walking-Style-Shoes_1601939660427.html"
+    },
+    {
+      "product_id": "1601939655430",
+      "link_code": "BQ006-R1",
+      "platform_status": "approved/Y",
+      "role": "white-pink summer casual walking",
+      "image_count": 6,
+      "sku_count": 67,
+      "colors": 7,
+      "size_range": "EU 35-45",
+      "unit": "Pairs",
+      "price_tiers_usd": [9.53, 9.23, 9.13],
+      "closure": "Lace-up",
+      "public_url": "https://www.alibaba.com/product-detail/White-Pink-Summer-Casual-Walking-Shoes_1601939655430.html"
+    },
+    {
+      "product_id": "1601939735063",
+      "link_code": "BQ006-O1",
+      "platform_status": "approved/Y",
+      "role": "all-black OEM/ODM private label",
+      "image_count": 6,
+      "sku_count": 67,
+      "colors": 7,
+      "size_range": "EU 35-45",
+      "unit": "Pairs",
+      "price_tiers_usd": [9.45, 9.15, 9.05],
+      "closure": "Lace-up",
+      "public_url": "https://www.alibaba.com/product-detail/All-Black-Breathable-Walking-Shoes-Knit_1601939735063.html"
+    }
+  ],
+  "visual_qa": {
+    "method": "Chrome buyer public product pages and each page's Photos gallery",
+    "passed": true,
+    "checks": [
+      "title and hero role alignment",
+      "same M8811 shoe structure across visible M1-M6 gallery images",
+      "knit upper, lacing, heel loop, chunky outsole, color and completeness",
+      "no visible wrong model, wrong color, crop defect, collage or structural drift"
+    ]
+  }
+}

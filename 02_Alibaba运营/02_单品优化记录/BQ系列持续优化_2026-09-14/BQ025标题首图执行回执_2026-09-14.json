@@ -1,0 +1,214 @@
+{
+  "finished_at": "2026-09-14T07:23:45.294568+00:00",
+  "success_count": 2,
+  "failure_count": 1,
+  "protected_product_ids": [
+    "10000042821848",
+    "10000043991998",
+    "10000044004948",
+    "10000044024484",
+    "10000044041008",
+    "1601825074604",
+    "1601838963947",
+    "1601839073314"
+  ],
+  "results": [
+    {
+      "product_id": "1601939612707",
+      "ok": false,
+      "stage": "readback_mismatch",
+      "expected_model": "BQ025-W1 / A1689",
+      "old_title": "Wholesale Low Cut Knit Slip-On Walking Shoes Casual Shoes Factory Supply Model A1689",
+      "new_title": "Wholesale Low Cut Knit Slip On Walking Shoes Lightweight Casual Sneakers Factory Supply A1689",
+      "old_images": [
+        "https://sc04.alicdn.com/kf/Saca8410367b14bc9a0d32b8621ded2afX.jpg",
+        "https://sc04.alicdn.com/kf/S6daec8f655784606a0f76ad60e663286E.jpg",
+        "https://sc04.alicdn.com/kf/Sf1051dd8b1a446a89529a1e8a60c3edbS.jpg",
+        "https://sc04.alicdn.com/kf/S980e689ebfa245f1b28b414aeb27962dz.jpg",
+        "https://sc04.alicdn.com/kf/S7810aa32341941ad98134fac31174e745.jpg",
+        "https://sc04.alicdn.com/kf/Sa4e1c759df5e4c86adff86521f8e95eff.jpg"
+      ],
+      "new_images": [
+        "https://sc04.alicdn.com/kf/S6daec8f655784606a0f76ad60e663286E.jpg",
+        "https://sc04.alicdn.com/kf/Sf1051dd8b1a446a89529a1e8a60c3edbS.jpg",
+        "https://sc04.alicdn.com/kf/S980e689ebfa245f1b28b414aeb27962dz.jpg",
+        "https://sc04.alicdn.com/kf/S7810aa32341941ad98134fac31174e745.jpg",
+        "https://sc04.alicdn.com/kf/Sa4e1c759df5e4c86adff86521f8e95eff.jpg"
+      ],
+      "before_status": "approved",
+      "after_status": "modified",
+      "before_display": "Y",
+      "after_display": "N",
+      "checks": {
+        "identity_ok": true,
+        "title_ok": true,
+        "hero_ok": true,
+        "m2_m6_ok": false,
+        "other_fields_unchanged": true,
+        "source_not_targeted": true
+      },
+      "snapshot_diff_paths": [],
+      "preserved_reuploads": [],
+      "hero_upload": {
+        "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\02_单品优化记录\\BQ系列持续优化_2026-09-14\\BQ025首图候选\\W1_black_white_studio.jpg",
+        "file_id": "30151073721",
+        "url": "//sc04.alicdn.com/kf/S6daec8f655784606a0f76ad60e663286E/286385890/S6daec8f655784606a0f76ad60e663286E.jpg",
+        "request_id": "0bab02fc17893705268264570",
+        "trace_id": "2101d13c17893705253784890e0f3d",
+        "message": null,
+        "error": null
+      },
+      "video": {
+        "video_id": "AAEJjmk4AOWGexucDVhQzigu",
+        "request_id": "0bbb3b2417893705336016546",
+        "trace_id": "2101c5a717893705332816345e0e93",
+        "message": null,
+        "error": null
+      },
+      "update": {
+        "request_id": "0b51802d17893705405492297",
+        "trace_id": "2101dbd017893705402118649e0c87",
+        "message": null,
+        "error": null
+      },
+      "readback": {
+        "request_id": "0b830ecc17893705487672807",
+        "trace_id": "2101fca817893705484433286e114d",
+        "message": null,
+        "error": null
+      }
+    },
+    {
+      "product_id": "1601939751016",
+      "ok": true,
+      "stage": "verified",
+      "expected_model": "BQ025-R1 / A1689",
+      "old_title": "Low Cut Knit Slip-On Walking Shoes Casual Shoes for Travel Commuting and Daily Wear Model A1689",
+      "new_title": "All Black Knit Slip On Walking Shoes Lightweight Casual Sneakers for Travel and Daily Wear A1689",
+      "old_images": [
+        "https://sc04.alicdn.com/kf/S7810aa32341941ad98134fac31174e745.jpg",
+        "https://sc04.alicdn.com/kf/Saca8410367b14bc9a0d32b8621ded2afX.jpg",
+        "https://sc04.alicdn.com/kf/S980e689ebfa245f1b28b414aeb27962dz.jpg",
+        "https://sc04.alicdn.com/kf/S6daec8f655784606a0f76ad60e663286E.jpg",
+        "https://sc04.alicdn.com/kf/Sf1051dd8b1a446a89529a1e8a60c3edbS.jpg",
+        "https://sc04.alicdn.com/kf/Sa4e1c759df5e4c86adff86521f8e95eff.jpg"
+      ],
+      "new_images": [
+        "https://sc04.alicdn.com/kf/S42e3898cd5ed40b59f1fbc5d78e1be9bQ.jpg",
+        "https://sc04.alicdn.com/kf/Saca8410367b14bc9a0d32b8621ded2afX.jpg",
+        "https://sc04.alicdn.com/kf/S980e689ebfa245f1b28b414aeb27962dz.jpg",
+        "https://sc04.alicdn.com/kf/S6daec8f655784606a0f76ad60e663286E.jpg",
+        "https://sc04.alicdn.com/kf/Sf1051dd8b1a446a89529a1e8a60c3edbS.jpg",
+        "https://sc04.alicdn.com/kf/Sa4e1c759df5e4c86adff86521f8e95eff.jpg"
+      ],
+      "before_status": "approved",
+      "after_status": "modified",
+      "before_display": "Y",
+      "after_display": "N",
+      "checks": {
+        "identity_ok": true,
+        "title_ok": true,
+        "hero_ok": true,
+        "m2_m6_ok": true,
+        "other_fields_unchanged": true,
+        "source_not_targeted": true
+      },
+      "snapshot_diff_paths": [],
+      "preserved_reuploads": [],
+      "hero_upload": {
+        "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\02_单品优化记录\\BQ系列持续优化_2026-09-14\\BQ025首图候选\\R1_all_black_on_foot.jpg",
+        "file_id": "30153221366",
+        "url": "//sc04.alicdn.com/kf/S42e3898cd5ed40b59f1fbc5d78e1be9bQ/286385890/S42e3898cd5ed40b59f1fbc5d78e1be9bQ.jpg",
+        "request_id": "213e759c17893705643848415",
+        "trace_id": "2101d13c17893705624131625e0fc1",
+        "message": null,
+        "error": null
+      },
+      "video": {
+        "video_id": "AAEJjmk4AOWGexucDVhQzigu",
+        "request_id": "213f5a2117893705712233336",
+        "trace_id": "2101e68f17893705708861893e0c7e",
+        "message": null,
+        "error": null
+      },
+      "update": {
+        "request_id": "213c934417893705781548204",
+        "trace_id": "2101d86517893705778178135e0b92",
+        "message": null,
+        "error": null
+      },
+      "readback": {
+        "request_id": "21501be117893705864191906",
+        "trace_id": "2101d14517893705861015957e0f4f",
+        "message": null,
+        "error": null
+      }
+    },
+    {
+      "product_id": "1601939733108",
+      "ok": true,
+      "stage": "verified",
+      "expected_model": "BQ025-O1 / A1689",
+      "old_title": "Custom Logo Low Cut Knit Slip-On Walking Shoes Casual Shoes OEM ODM Private Label Footwear Supplier Model A1689",
+      "new_title": "Custom Logo Black White Knit Slip On Walking Shoes OEM ODM Private Label Casual Sneakers A1689",
+      "old_images": [
+        "https://sc04.alicdn.com/kf/Sf1051dd8b1a446a89529a1e8a60c3edbS.jpg",
+        "https://sc04.alicdn.com/kf/Saca8410367b14bc9a0d32b8621ded2afX.jpg",
+        "https://sc04.alicdn.com/kf/S6daec8f655784606a0f76ad60e663286E.jpg",
+        "https://sc04.alicdn.com/kf/Sa4e1c759df5e4c86adff86521f8e95eff.jpg",
+        "https://sc04.alicdn.com/kf/S980e689ebfa245f1b28b414aeb27962dz.jpg",
+        "https://sc04.alicdn.com/kf/S7810aa32341941ad98134fac31174e745.jpg"
+      ],
+      "new_images": [
+        "https://sc04.alicdn.com/kf/S2b18349c4acf4d9ea9ff754bbbb22fffd.jpg",
+        "https://sc04.alicdn.com/kf/Saca8410367b14bc9a0d32b8621ded2afX.jpg",
+        "https://sc04.alicdn.com/kf/S6daec8f655784606a0f76ad60e663286E.jpg",
+        "https://sc04.alicdn.com/kf/Sa4e1c759df5e4c86adff86521f8e95eff.jpg",
+        "https://sc04.alicdn.com/kf/S980e689ebfa245f1b28b414aeb27962dz.jpg",
+        "https://sc04.alicdn.com/kf/S7810aa32341941ad98134fac31174e745.jpg"
+      ],
+      "before_status": "approved",
+      "after_status": "modified",
+      "before_display": "Y",
+      "after_display": "N",
+      "checks": {
+        "identity_ok": true,
+        "title_ok": true,
+        "hero_ok": true,
+        "m2_m6_ok": true,
+        "other_fields_unchanged": true,
+        "source_not_targeted": true
+      },
+      "snapshot_diff_paths": [],
+      "preserved_reuploads": [],
+      "hero_upload": {
+        "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\02_单品优化记录\\BQ系列持续优化_2026-09-14\\BQ025首图候选\\O1_black_white_pair_scene.jpg",
+        "file_id": "30151073750",
+        "url": "//sc04.alicdn.com/kf/S2b18349c4acf4d9ea9ff754bbbb22fffd/286385890/S2b18349c4acf4d9ea9ff754bbbb22fffd.jpg",
+        "request_id": "210829b717893706022688843",
+        "trace_id": "2101e68f17893706000407594e0e90",
+        "message": null,
+        "error": null
+      },
+      "video": {
+        "video_id": "AAEJjmk4AOWGexucDVhQzigu",
+        "request_id": "212c6fc617893706093308038",
+        "trace_id": "2101c5a717893706090063194e0ef7",
+        "message": null,
+        "error": null
+      },
+      "update": {
+        "request_id": "213e759c17893706162276497",
+        "trace_id": "2101d94717893706158902208e0e2f",
+        "message": null,
+        "error": null
+      },
+      "readback": {
+        "request_id": "212c41d317893706245002296",
+        "trace_id": "2101fca817893706241946099e0e3c",
+        "message": null,
+        "error": null
+      }
+    }
+  ]
+}

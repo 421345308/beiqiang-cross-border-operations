@@ -1,0 +1,54 @@
+{
+  "date": "2026-09-15",
+  "family": "BQ022",
+  "source_model": "A2208",
+  "source_product_id": "10000043991998",
+  "source_write_protection": "PROTECT_RECENT_SOURCE",
+  "source_modified": false,
+  "result": "PUBLIC_QA_PASS",
+  "products": [
+    {
+      "link_code": "BQ022-W1",
+      "product_id": "1601939641581",
+      "platform_state": "approved/Y",
+      "model_public": "BQ022-W1 / A2208",
+      "colors": ["Black White", "Black White Stripe", "Light Grey"],
+      "color_visual_mapping_pass": true,
+      "sizes": "EU 35-45",
+      "sku_count": 33,
+      "gallery_image_count": 6,
+      "inquiry_entry_visible": true
+    },
+    {
+      "link_code": "BQ022-R1",
+      "product_id": "1601939659468",
+      "platform_state": "approved/Y",
+      "model_public": "BQ022-R1 / A2208",
+      "colors": ["Black White", "Black White Stripe", "Light Grey"],
+      "color_visual_mapping_pass": true,
+      "sizes": "EU 35-45",
+      "sku_count": 33,
+      "gallery_image_count": 6,
+      "inquiry_entry_visible": true
+    },
+    {
+      "link_code": "BQ022-O1",
+      "product_id": "1601939709218",
+      "platform_state": "approved/Y",
+      "model_public": "BQ022-O1 / A2208",
+      "colors": ["Black White", "Black White Stripe", "Light Grey"],
+      "color_visual_mapping_pass": true,
+      "sizes": "EU 35-45",
+      "sku_count": 33,
+      "gallery_image_count": 6,
+      "inquiry_entry_visible": true
+    }
+  ],
+  "visual_mapping": {
+    "Black White": "black upper with white sole",
+    "Black White Stripe": "black-white striped upper with white sole",
+    "Light Grey": "light grey upper with grey sole and small colored flecks"
+  },
+  "next_stage": "WAIT_D7",
+  "note": "No All Black color was added; no image, title, price, detail page, or protected source field was changed during public QA."
+}

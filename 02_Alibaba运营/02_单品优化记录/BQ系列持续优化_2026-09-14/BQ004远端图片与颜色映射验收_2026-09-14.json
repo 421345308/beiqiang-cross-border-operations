@@ -1,0 +1,27 @@
+{
+  "date": "2026-09-14",
+  "family": "BQ004/A502",
+  "gallery": {
+    "result": "PASS",
+    "method": "Seven unique uploaded files opened from Alibaba CDN in Chrome after strict OpenAPI readback.",
+    "urls": {
+      "Orange Black": "https://sc04.alicdn.com/kf/S5908d9a1ab51461db81cbbdcbe6d88f1r.jpg",
+      "Light Blue": "https://sc04.alicdn.com/kf/S1b1e52c3b116467abf116198ff7eb0a4G.jpg",
+      "Black White": "https://sc04.alicdn.com/kf/S93d2b8951c704936a42a784fa1d6d4eet.jpg",
+      "Grey Black": "https://sc04.alicdn.com/kf/S8e19e6bdc841467eb865ad01bc1ec72cP.jpg",
+      "All Black": "https://sc04.alicdn.com/kf/Sbf3aa096e6c54c4ba0f86efd6fd8faa1T.jpg",
+      "EU 35-45": "https://sc04.alicdn.com/kf/S92e2dfe5be1c46eebe5360ba896397bd0.png",
+      "Private Label": "https://sc04.alicdn.com/kf/Sd1f7dcc9482f4516a0c8a72b32bdc55c7.png"
+    },
+    "checks": ["same A502 shoe", "shoe complete", "real color", "lace-up structure", "outsole geometry unchanged", "no wrong product", "remote pixels visible"]
+  },
+  "historical_sku_thumbnail_audit": {
+    "result": "REPAIR_REQUIRED_AFTER_APPROVAL",
+    "observations": [
+      "All Black currently points to an incomplete cutout with the outsole missing.",
+      "Grey Black and Black White labels do not consistently match the visible outsole color.",
+      "Light Blue and Orange Black are visually correct."
+    ],
+    "repair_policy": "After all three products return to approved/Y, submit saleProp color-image bindings only. Preserve color names, 55 SKUs, SKU codes, title, gallery and all non-image fields."
+  }
+}

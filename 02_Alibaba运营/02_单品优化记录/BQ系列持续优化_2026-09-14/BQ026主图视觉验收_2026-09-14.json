@@ -1,0 +1,29 @@
+{
+  "family": "BQ026/T5828",
+  "reviewed_at": "2026-09-14",
+  "result": "PASS",
+  "source_identity": "Verified BQ026/T5828 local source package; regular-fit knit textile lace-up shoe in Black, White, Grey, Red and Pink.",
+  "method": "Eight candidates were visually inspected at original resolution after mechanical crop, proportional resize and centering.",
+  "checks": {
+    "real_shoe_geometry_preserved": true,
+    "outsole_preserved": true,
+    "closure_preserved": true,
+    "colors_match_source": true,
+    "complete_shoe_in_each_m1": true,
+    "no_text_or_collage_in_m1": true,
+    "no_third_party_marks": true,
+    "no_ai_generation_or_generative_fill": true,
+    "three_m1_colors_are_distinct": true
+  },
+  "m1_assignments": {
+    "1601939745065": "white_clean.jpg",
+    "1601939725201": "red_clean.jpg",
+    "1601939714238": "black_clean.jpg"
+  },
+  "notes": [
+    "W1 replaces a text-heavy black hero that recorded 12 impressions and 0 search clicks with a brighter full white shoe.",
+    "R1 keeps the red color identity associated with its prior 5.71% search CTR, but removes the template text and increases the real shoe presence.",
+    "O1 stops duplicating R1's red hero and uses a clean black shoe aligned with custom-logo/private-label buyer intent.",
+    "All six gallery slots use real BQ026 product photos; no factory image or product collage is placed in the search-facing gallery."
+  ]
+}

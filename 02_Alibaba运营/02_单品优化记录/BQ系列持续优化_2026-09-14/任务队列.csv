@@ -1,0 +1,121 @@
+priority,source_bq,source_model,product_id,link_code,source_protection,status,next_action,notes
+1,BQ009,L1026,1601825074604,SOURCE,PROTECT_SOURCE,MONITORING,只读拉取同口径流量和询盘并作为扩展链接基线,逐ID基线69曝光3点击CTR4.35%访问20；当前全店排序页43曝光1点击CTR2.33%访问21询盘人数3；平台口径不混算；强流量与采购承接锚点；不得修改标题关键词主图价格详情
+2,BQ009,L1026,1601939661419,BQ009-R1,N,PUBLIC_QA_PASS,PROTECT_TRAFFIC_ENTRY；D14前不改标题与Mint Green M1；D14仍有点击无询盘时优先预检已核验六图承接包,approved/Y；公开页Midsole/Outsole=Other；Mint Green M1标题四色EU35-45与询盘入口终验通过；第36周11曝光1点击CTR9.09%访问1询盘0；71张原始图已全量联系表复核并冻结M1+鞋型/系带网面/外底/四色/后跟六图候选；源款永久只读
+3,BQ009,L1026,1601939675350,BQ009-W1,N,PUBLIC_QA_PASS,D7复核改版后相关曝光；Orange强M1保持；若约10仍0点击则以前段Men's Casual Walking Shoes与Breathable Mesh Lace-Up组合整组重构并核对源款同屏重叠,approved/Y；第36周18曝光0点击0访问；平台7日词显示men's casual walking shoes 47指数/4.11%CTR/卖家2；泛walking style shoes不作主意图；源款1601825074604永久只读
+4,BQ009,L1026,1601939721165,BQ009-O1,N,PUBLIC_QA_PASS,PROTECT_TRAFFIC_ENTRY；D14前不改标题与All Black M1；D14仍有点击无询盘时优先预检已核验All Black六图承接包,approved/Y；公开页Midsole/Outsole=Other；All Black M1标题四色EU35-45与询盘入口终验通过；21曝光1点击CTR4.76%访问1美国访客；71张原始图已全量联系表复核并冻结M1+黑色双鞋/系带网面/外底/四色/后跟六图候选；源款永久只读
+5,BQ019,A206,1601939616747,BQ019-W1,N,PUBLIC_QA_PASS,等待负责人复核2026-09-16整页视觉样板；通过后仅对本ID上传6主图+6产品详情+5公司详情并做全字段预检/回读/公开终验；标题是否同步采用方案B在提交前按当前查询意图决定,approved/Y；第36周11曝光0点击0访问0询盘；整页样板17图均1200×1200且哈希唯一；AI首图因结构漂移淘汰；源款不动
+6,BQ019,A206,1601939602873,BQ019-R1,N,PUBLIC_QA_PASS,PROTECT_TRAFFIC_ENTRY；D14前不改标题与浅灰M1；D14仍有相关点击/访问且无有效询盘时使用已核验六图包替换弱M2-M6,approved/Y；浅灰首图已验收；第36周13曝光1点击CTR7.69%访问1询盘0；36张原始主图已全量复核，候选六图为18/10/5/9/24/2.jpg且无AI改鞋
+7,BQ019,A206,1601939695286,BQ019-O1,N,PUBLIC_QA_PASS,D7若新增相关曝光约10仍0点击则保留白鞋深色地面M1；商品身份前置并重排M2-M6,approved/Y；当前窗口10曝光0搜索点击1访问0询盘；M1真实高对比；候选标题100字符；关键词与来源无数据；见D7第四梯队预案
+8,BQ022,A2208,1601939641581,BQ022-W1,N,PUBLIC_QA_PASS,WAIT_D7；只用改版后同口径窗口；若相关曝光约10仍0点击则整组评估真实Black White Stripe高对比M1、标题前段与M2-M6,颜色修复approved/Y且公开逐色终验通过；Black White/Black White Stripe/Light Grey三色33 SKU；标题六图与询盘入口正常；源款只读
+9,BQ022,A2208,1601939659468,BQ022-R1,N,PUBLIC_QA_PASS,WAIT_D7；第35周无有效样本；D7前保护现行标题和M1；到期结合来源词、相关曝光、访问和询盘承接整组判断,颜色修复approved/Y且公开逐色终验通过；三色33 SKU、六图、EU35-45与询盘入口正常
+10,BQ022,A2208,1601939709218,BQ022-O1,N,PUBLIC_QA_PASS,WAIT_D7；第35周无有效样本；D7前保护现行OEM/ODM入口与条纹双鞋M1；到期结合来源结构整组判断,颜色修复approved/Y且公开逐色终验通过；三色33 SKU、六图、EU35-45与询盘入口正常
+11,BQ020,A218,1601939712249,BQ020-W1,N,PUBLIC_QA_PASS,进入监测并在完整数据周期复盘相关曝光CTR与询盘,approved/Y；公开页批发标题、白色双鞋真实首图、4色与价格已验收
+12,BQ020,A218,1601939590957,BQ020-R1,N,PUBLIC_QA_PASS,进入监测并在完整数据周期复盘相关曝光CTR与询盘,approved/Y；公开页平台扩展标题、灰色双鞋真实场景首图、4色与型号已验收
+13,BQ020,A218,1601939625613,BQ020-O1,N,PUBLIC_QA_PASS,进入监测并在完整数据周期复盘相关曝光CTR与询盘,approved/Y；公开页OEM ODM标题、全黑双鞋真实首图、4色与价格已验收
+14,BQ021,K6212,1601939606858,BQ021-W1,N,PUBLIC_QA_PASS,进入监测并在完整数据周期复盘相关曝光CTR与询盘,approved/Y；公开页批发标题、黑面白底双鞋首图、5色与K6212型号已验收
+15,BQ021,K6212,1601939709217,BQ021-R1,N,PUBLIC_QA_PASS,D7改版后相关曝光约10仍0点击且查询意图匹配时使用Wholesale Men's Knit Slip-On身份与已验Grey白底双鞋六图整组；有点击则保护入口转D14承接；无曝光先查收录类目属性,approved/Y；24曝光0点击含改版前数据；59张原始图全量复核并淘汰All Black撞源款方案；Grey独立入口六图候选已通过原尺寸整组检查；AI漂移候选永久禁用
+16,BQ021,K6212,1601939739115,BQ021-O1,N,PUBLIC_QA_PASS,D7首批复盘相关曝光与来源词；Blue白底大主体M1保持；持续无相关曝光则以Men's Knit Slip-On Shoes开头、Walking/Breathable居中、Custom Logo OEM ODM后置,approved/Y；18曝光0点击；精确slip on walking shoes不作高需求假设；5色55SKU；强M1不机械替换
+17,BQ001,BQ001,1601939707196,BQ001-W1,N,PUBLIC_QA_PASS,D7保护当前标题和Black White双鞋M1；若仍约10相关曝光0点击则先查来源并仅前置真实宽鞋头证据到M2,approved/Y；当前窗口10曝光0搜索点击1访问0询盘；标题M1属性一致且宽鞋头有证据；UNATTRIBUTED_VISITOR；见D7第四梯队预案
+18,BQ001,BQ001,1601939727104,BQ001-R1,N,PUBLIC_QA_PASS,进入监测并在完整数据周期复盘相关曝光CTR与询盘,approved/Y；公开页扩展用途标题、白色大主体首图、3色与宽鞋头属性已验收
+19,BQ001,BQ001,1601939572948,BQ001-O1,N,PUBLIC_QA_PASS,PROTECT_TRAFFIC_ENTRY；D14前不改标题与R5VM8898全黑鞋面外底M1；55张原始图已全量复核并冻结六图承接包；D14仍有点击访问无询盘时只替换弱M2-M6并走完整门禁,approved/Y；15曝光1点击CTR6.67%访问2询盘0；访客地域伊拉克1美国1；来源未披露；custom white shoes仅1曝光0点击；六图候选均真实800x800且哈希唯一
+20,BQ023,A505,1601939722180,BQ023-W1,N,PUBLIC_QA_PASS,D7按针织套脚步行意图复核；保留Black白底M1并重建M2-M6角色,approved/Y；第36周11曝光0点击0访问0询盘；现有六图黑色重复；归档六图不可整包复用需逐图核真；候选标题95字符
+21,BQ023,A505,1601939616754,BQ023-R1,N,PUBLIC_QA_PASS,D7比较源款推荐访问意图；相关曝光约10仍0点击时对白底Grey候选,approved/Y；灰色上脚与Travel标题；第35周1曝光0点击0访问；33 SKU完整；D7前竞品方法与候选标题已完成
+22,BQ023,A505,1601939752005,BQ023-O1,N,PUBLIC_QA_PASS,PROTECT_TRAFFIC_ENTRY；D14前不改标题与7.jpg Brown双鞋M1；36张原始图已全量复核并冻结六图承接包；D14仍有点击访问无询盘时只替换弱M2-M6并走完整门禁,approved/Y；16曝光1点击CTR6.25%访问1询盘0；塞内加尔访客1；来源未披露；calçados 3曝光0点击与calçado 1曝光0点击；六图真实800x800且哈希唯一；现有33 SKU只校验不扩写尺码承诺
+23,BQ025,A1689,1601939751016,BQ025-R1,N,PUBLIC_QA_PASS,D7比较源款店内访问与扩展链承接；相关曝光累计约10仍0点击时复核All Black白底M1,approved/Y；当前全黑上脚M1；第35周无有效样本；22 SKU完整；Light Grey来源不符禁用
+24,BQ025,A1689,1601939612707,BQ025-W1,N,PUBLIC_QA_PASS,D7若新增相关曝光约10仍0点击则保留Black White M1；前置Breathable Knit Slip-On Walking并重排两色结构场景M2-M6,approved/Y；当前窗口10曝光0搜索点击2访问0询盘；22 SKU两色完整；Light Grey与Black Yellow禁用；候选标题90字符；见D7第四梯队预案
+25,BQ025,A1689,1601939733108,BQ025-O1,N,PUBLIC_QA_PASS,D7新增相关曝光约10仍0点击时用真实X366A0048双鞋上脚候选并联动标题前段六图承接；不得用Light Grey或无图Black Yellow,approved/Y；当前可用周窗口13曝光0搜索点击1访问0询盘；关键词与来源下钻均无数据；UNATTRIBUTED_VISITOR；22 SKU两色完整；见D7第二梯队预案
+26,BQ024,A830,10000044041031,SOURCE,PROTECT_SOURCE,MONITORING,只读作为当前四色与36 SKU事实基线,不得修改标题关键词主图价格详情；当前颜色为Black White/All Black/Black Yellow/Beige Grey
+27,BQ024,A830,1601939691342,BQ024-W1,N,PUBLIC_QA_PASS,D7复盘相关曝光点击访问询盘及来源词,approved/Y；新标题公开传播；六图四色EU37-45共36SKU型号价格终验通过；监测起点2026-09-15 PST
+28,BQ024,A830,1601939684371,BQ024-R1,N,PUBLIC_QA_PASS,进入监测并在完整数据周期复盘相关曝光CTR与询盘,approved/Y；米灰M1与六图四色EU37-45型号价格单位公开页验收通过
+29,BQ024,A830,1601939691340,BQ024-O1,N,PUBLIC_QA_PASS,D7复盘相关曝光点击访问询盘及OEM ODM承接,approved/Y；新标题公开传播；六图四色EU37-45共36SKU型号价格终验通过；监测起点2026-09-15 PST
+30,BQ012,M8506,10000043744505,SOURCE,PROTECT_SOURCE,MONITORING,只读监测历史流量并作为扩展链接基线,近半年1508搜索曝光12点击20访问0询盘；不得修改标题关键词主图价格详情
+31,BQ012,M8506,1601939650458,BQ012-W1,N,PUBLIC_QA_PASS,进入完整数据周期监测并复盘相关曝光CTR访问与询盘,approved/Y；公开页黑白标题M1六图3色EU39-44型号价格与Slip-On终验通过
+32,BQ012,M8506,1601939681367,BQ012-R1,N,PUBLIC_QA_PASS,进入完整数据周期监测并复盘相关曝光CTR访问与询盘,approved/Y；公开页红白标题M1六图3色EU39-44型号价格与Slip-On终验通过
+33,BQ012,M8506,1601939606805,BQ012-O1,N,PUBLIC_QA_PASS,进入完整数据周期监测并复盘相关曝光CTR访问与询盘,approved/Y；公开页全黑OEM标题M1六图3色EU39-44型号价格与Slip-On终验通过
+34,BQ027,K6116,10000044028277,SOURCE,PROTECT_SOURCE,MONITORING,只读拉取同周期数据并作为扩展链接事实与流量基线,第35周搜索曝光16点击1 CTR6.25%访问1；不得修改标题关键词主图价格详情
+35,BQ027,K6116,1601939616762,BQ027-W1,N,PUBLIC_QA_PASS,D7首批复盘相关曝光与来源词；Black White白底大主体M1保持；相关曝光约10仍0点击时优先重构Men's Knit Lace-Up Walking Shoes标题前段与M2-M6,approved/Y；15曝光0点击；44SKU；针织鞋带厚底识别清楚；不因小样本换掉强M1
+36,BQ027,K6116,1601939692338,BQ027-R1,N,PUBLIC_QA_PASS,D7复盘相关词；Grey强M1保持；若新增约10曝光仍0点击则以前段Men's Knit Lace-Up Walking Shoes/Men's Casual Walking Shoes重构并重排六图承接,approved/Y；第36周14曝光0点击0访问；平台7日词支持男士休闲步行低竞争组合；Cream命名未收口不作M1
+37,BQ027,K6116,1601939703288,BQ027-O1,N,PUBLIC_QA_PASS,进入完整数据周期监测并复盘相关曝光CTR访问与询盘,approved/Y；全黑OEM私牌标题与M1、六图、四色、EU35-45、型号、价格单位和Lace-up公开终验通过
+38,BQ008,L1009,1601825021825,SOURCE,PROTECT_SOURCE,MONITORING,SOURCE_MATERIAL_RISK_READONLY；只读拉取同周期数据并作为扩展链接基线,第35周搜索曝光16点击2 CTR12.5%访问4；源款材料仍显示待确认EVA但禁止修改；不得修改标题关键词主图价格详情
+39,BQ008,L1009,1601939625569,BQ008-W1,N,PUBLIC_QA_PASS,恢复第五梯队D7方案；Grey Green强M1与现标题先保护；新窗口仍相关曝光0点击再查查询意图和M2-M6,材料Other修复已approved/Y并完成API与买家页终验；六图40SKU四色EU36-45及询盘入口正常
+40,BQ008,L1009,1601939628529,BQ008-R1,N,PUBLIC_QA_PASS,进入D7/D14监测；保护当前Black White页面并复盘相关曝光CTR与询盘,材料Other修复已approved/Y并完成API与买家页终验；六图40SKU四色EU36-45及询盘入口正常
+41,BQ008,L1009,1601939659415,BQ008-O1,N,PUBLIC_QA_PASS,恢复第二梯队D7方案；All Black强M1保持；按新窗口决定标题前段与M2-M6承接,材料Other修复已approved/Y并完成API与买家页终验；六图40SKU四色EU36-45及询盘入口正常
+42,BQ005,A503,1601815020244,SOURCE,PROTECT_SOURCE,MONITORING,只读拉取同周期数据并作为扩展链接事实与流量基线,第35周搜索曝光9点击1 CTR11.11%访问2；不得修改标题关键词主图价格详情
+43,BQ005,A503,1601939599850,BQ005-W1,N,PUBLIC_QA_PASS,保持四色强M1和现标题；D7仍有相关曝光0点击时查来源词与同屏竞品并复核M2-M6角色,approved/Y；第36周10曝光0点击0访问；公开页标题、M1-M6、4色×11码、型号、Pairs价格与Lace-up已验收；见D7第五梯队预案
+44,BQ005,A503,1601939712176,BQ005-R1,N,PUBLIC_QA_PASS,进入监测并在完整数据周期复盘相关曝光CTR与询盘,approved/Y；公开页标题、粉色M1、M1-M6、4色×11码、型号、Pairs价格与Lace-up已验收
+45,BQ005,A503,1601939631570,BQ005-O1,N,PUBLIC_QA_PASS,进入监测并在完整数据周期复盘相关曝光CTR与询盘,approved/Y；公开页标题、全黑M1、M1-M6、4色×11码、型号、Pairs价格与Lace-up已验收
+46,BQ006,M8811,1601814931739,SOURCE,PROTECT_SOURCE,MONITORING,只读拉取同周期数据并作为扩展链接事实与流量基线,第35周搜索曝光8点击0 CTR0%访问0；不得修改标题关键词主图价格详情
+47,BQ006,M8811,1601939660427,BQ006-W1,N,PUBLIC_QA_PASS,进入监测并在完整数据周期复盘相关曝光CTR有效访问与询盘,approved/Y；公开页白绿Walking Style批发标题、M1-M6、7色、EU35-45、型号、Pairs价格与Lace-up验收通过
+48,BQ006,M8811,1601939655430,BQ006-R1,N,PUBLIC_QA_PASS,D7按透气针织系带与厚底结构复核；保留白粉M1并重建M2-M6角色,approved/Y；第36周11曝光0点击0访问0询盘；M1清楚；现有六图几乎全为颜色侧面；候选标题85字符；Regular Fit
+49,BQ006,M8811,1601939735063,BQ006-O1,N,PUBLIC_QA_PASS,PROTECT_TRAFFIC_ENTRY；D14前不改标题与全黑M1；D14仍有相关点击/访问且无有效询盘时使用已核验六图包替换弱M2-M6,approved/Y；第35周0搜索曝光0点击1访客0询盘；第36周8曝光1点击CTR12.5%访问1询盘0；60张常规原始主图已全量复核，排除中文功能图，六图包覆盖针织系带/外底/7色/全黑上脚与双鞋
+50,BQ018,A116,10000044007878,SOURCE,PROTECT_SOURCE,MONITORING,只读拉取同周期流量并作为扩展链接事实与流量基线,第35周搜索曝光26点击0；不得修改标题关键词主图价格详情
+51,BQ018,A116,1601939726170,BQ018-W1,N,PUBLIC_QA_PASS,D7核验Cloud错词是否消失及相关曝光是否形成,approved/Y；黑白M1与六图终验通过；第35周1曝光0点击0访问
+52,BQ018,A116,1601939641542,BQ018-R1,N,PUBLIC_QA_PASS,D7核验Cloud错词是否消失；当前无样本不改,approved/Y；米白M1与六图终验通过；第35周无有效样本
+53,BQ018,A116,1601939589890,BQ018-O1,N,PUBLIC_QA_PASS,D7核验Cloud错词是否消失；当前无样本不改,approved/Y；全黑M1与六图终验通过；第35周无有效样本
+54,BQ031,ZX2116,10000046439033,SOURCE,PROTECT_SOURCE,MONITORING,只读拉取同周期流量并作为扩展链接事实与流量基线,第35周搜索曝光13点击1 CTR7.69%访问1；不得修改标题关键词主图价格详情
+55,BQ031,ZX2116,1601939693331,BQ031-W1,N,PUBLIC_QA_PASS,进入完整数据周期监测；关键词覆盖改由标题属性来源词与P4P承接,approved/Y；绿白M1六图与平台属性改写标题再次公开验收；独立关键词字段仍为空且不再重提；5色EU38-47型号与Lace-up正常
+56,BQ031,ZX2116,1601939667426,BQ031-R1,N,PUBLIC_QA_PASS,进入完整数据周期监测；关键词覆盖改由标题属性来源词与P4P承接,approved/Y；米白完整鞋型M1、六图、平台属性改写标题、5色、EU38-47、型号与关键属性公开验收通过；未提交无效关键词接口
+57,BQ031,ZX2116,1601939754004,BQ031-O1,N,PUBLIC_QA_PASS,保护美国直接访问入口；D7区分搜索推荐与外部访问并评估OEM ODM承接,approved/Y；全黑宽鞋头大码M1；第35周0搜索曝光1美国直接访客0询盘；关键词未披露
+58,BQ028,7212,1601839105416,SOURCE,PROTECT_SOURCE,MONITORING,只读拉取同周期流量并作为扩展链接事实与流量基线,第35周搜索曝光12点击1 CTR8.33%访问5；不得修改标题关键词主图价格详情
+59,BQ028,7212,1601939720204,BQ028-W1,N,PUBLIC_QA_PASS,进入完整数据周期监测；按来源词曝光点击访问和询盘复盘,approved/Y；买家页已同步无BISCUIT的新标题；蓝色M1六图5色EU35-45型号7212价格与Slip-On终验通过
+60,BQ028,7212,1601939625627,BQ028-R1,N,PUBLIC_QA_PASS,D7与源款进口采购流量比较来源词；样本不足不改,approved/Y；杏色M1终验；第35周1曝光0点击0访问
+61,BQ028,7212,1601939705262,BQ028-O1,N,PUBLIC_QA_PASS,保护美国直接访问入口；D7区分搜索推荐与外部访问并评估OEM ODM承接,approved/Y；灰色M1终验；第35周0搜索曝光1美国直接访客0询盘；关键词未披露
+62,BQ007,L0017,1601825070472,SOURCE,PROTECT_SOURCE,MONITORING,只读拉取同周期流量并作为扩展链接事实与流量基线,第35周搜索曝光13点击0访问3；不得修改标题关键词主图价格详情
+63,BQ007,L0017,1601939585913,BQ007-W1,N,PUBLIC_QA_PASS,进入完整数据周期监测；按来源词曝光点击访问和询盘复盘,approved/Y；橙色M1、标题、六图、修复后5色、EU35-45、型号、三档Pairs价格与Slip-On买家页终验通过
+64,BQ007,L0017,1601939711161,BQ007-R1,N,PUBLIC_QA_PASS,进入完整数据周期监测；按来源词曝光点击访问和询盘复盘,approved/Y；White Khaki M1、标题、六图、修复后5色、EU35-45、型号、三档Pairs价格与Slip-On买家页终验通过
+65,BQ007,L0017,1601939701201,BQ007-O1,N,PUBLIC_QA_PASS,保持All Black强M1；D7仍有相关曝光0点击时将商品身份前置并重排M2-M6采购承接,approved/Y；第36周10曝光0点击0访问；All Black M1、六图、5色、EU35-45、型号、价格与Slip-On终验通过；见D7第五梯队预案
+66,BQ004,A502,10000043201799,SOURCE,PROTECT_SOURCE,MONITORING,只读拉取同周期流量并作为扩展链接事实与流量基线,第35周搜索曝光13点击0访问2；源标题虽误写Slip-On也不得修改；扩展链接按真实Lace-up优化
+67,BQ004,A502,1601939626612,BQ004-W1,N,PUBLIC_QA_PASS,进入完整数据周期监测；按来源词曝光点击访问和询盘复盘,approved/Y；橙黑M1、标题、六图、修复后5色、EU35-45、型号、三档Pairs价格与Lace-up买家页终验通过
+68,BQ004,A502,1601939738037,BQ004-R1,N,PUBLIC_QA_PASS,等待D7并复盘来源词与商品卡；累计相关曝光不足10不重构,approved/Y；第35周2搜索曝光0点击0访问0询盘；浅蓝M1、标题、六图、5色、EU35-45、型号、价格与Lace-up终验通过
+69,BQ004,A502,1601939700200,BQ004-O1,N,PUBLIC_QA_PASS,进入完整数据周期监测；按来源词曝光点击访问和询盘复盘,approved/Y；全黑M1、标题、六图、修复后5色、EU35-45、型号、三档Pairs价格与Lace-up买家页终验通过
+70,BQ010,R1601,1601825160204,SOURCE,PROTECT_SOURCE,MONITORING,只读拉取同周期流量并作为扩展链接事实与流量基线,第35周搜索曝光9点击0访问2；不得修改标题关键词主图价格详情
+71,BQ010,R1601,1601939589876,BQ010-W1,N,PUBLIC_QA_PASS,进入完整数据周期监测；按来源词曝光点击访问和询盘复盘,approved/Y；黑面白底干净单鞋M1、标题、六图、修复后2色、EU35-45、型号、三档Pairs价格与Lace-up买家页终验通过
+72,BQ010,R1601,1601939734070,BQ010-R1,N,PUBLIC_QA_PASS,PROTECT_TRAFFIC_ENTRY；D14前不改标题与黑面白底穿着M1；D14仍有相关点击/访问且无有效询盘时使用已核验六图包替换弱M2-M6,approved/Y；第35周2搜索曝光0点击0访问0询盘；第36周7曝光1点击CTR14.29%访问2询盘0；39张原始主图已全量复核，六图包覆盖包头系带/鞋口内里/外底/两色上脚/双鞋且M1精确锚定X627A4056.jpg
+73,BQ010,R1601,1601939573998,BQ010-O1,N,PUBLIC_QA_PASS,进入完整数据周期监测；按来源词曝光点击访问和询盘复盘,approved/Y；全黑干净单鞋M1、标题、六图、修复后2色、EU35-45、型号、三档Pairs价格与Lace-up买家页终验通过
+74,BQ029,A025,1601839062659,SOURCE,PROTECT_SOURCE,MONITORING,只读拉取同周期流量并作为扩展链接事实与流量基线,第35周搜索曝光1点击0访问1；高帮针织套脚结构；不得修改标题关键词主图价格详情
+75,BQ029,A025,1601939749045,BQ029-W1,N,PUBLIC_QA_PASS,等待D7并按高帮针织套脚独立意图复盘来源词与商品卡；累计相关曝光不足10不重构,approved/Y；第35周1搜索曝光0点击0访问0询盘；黑面白底M1、标题、六图、2色、EU35-45、型号、价格与Slip-On终验通过
+76,BQ029,A025,1601939607770,BQ029-R1,N,PUBLIC_QA_PASS,进入完整数据周期监测；按来源词曝光点击访问和询盘复盘,approved/Y；黑面白底真实上脚M1、标题、六图、2色、EU35-45、型号、三档Pairs价格与Slip-On买家页终验通过
+77,BQ029,A025,1601939721228,BQ029-O1,N,PUBLIC_QA_PASS,进入完整数据周期监测；按来源词曝光点击访问和询盘复盘,approved/Y；全黑干净单鞋M1、标题、六图、2色、EU35-45、型号、三档Pairs价格与Slip-On买家页终验通过
+78,BQ030,A811,1601839050756,SOURCE,PROTECT_SOURCE,MONITORING,SOURCE_CATEGORY_RISK_READONLY；继续只读取数且不得推广或修改,approved/Y；童鞋源款误在Men's Walking Style Shoes 201334413；正确Children's Shoes 202240628超出当前一级经营类目；不得修改标题关键词主图价格详情
+79,BQ030,A811,1601939672381,BQ030-W1,N,HOLD_CATEGORY_SCOPE,HOLD_CATEGORY_SCOPE；停止推广与内容放量；保留链接等待经营类目策略,approved/Y；绿白M1与页面字段已终验但童鞋误在Men's Walking Style Shoes 201334413；目标Children's Shoes 202240628不在店铺当前一级经营类目；不删除不提交
+80,BQ030,A811,1601939679363,BQ030-R1,N,HOLD_CATEGORY_SCOPE,HOLD_CATEGORY_SCOPE；停止推广与内容放量；保留链接等待经营类目策略,approved/Y；第36周11曝光0点击；粉白M1合格；童鞋误在Men's Walking Style Shoes 201334413；编辑页可切类目但店铺经营范围无Children's Shoes；不删除不提交
+81,BQ030,A811,1601939615744,BQ030-O1,N,HOLD_CATEGORY_SCOPE,HOLD_CATEGORY_SCOPE；停止推广与内容放量；保留链接等待经营类目策略,approved/Y；紫白M1与页面字段已终验但童鞋误在Men's Walking Style Shoes 201334413；目标Children's Shoes 202240628不在店铺当前一级经营类目；不删除不提交
+82,BQ032,ZX2212,10000046653813,SOURCE,PROTECT_SOURCE,MONITORING,只读拉取同周期流量并作为扩展链接事实与流量基线,第35周3曝光0点击0访问；regular fit针织系带EU38-47；不得修改标题关键词主图价格详情
+83,BQ032,ZX2212,1601939651515,BQ032-W1,N,PUBLIC_QA_PASS,进入完整数据周期监测；按来源词曝光点击访问和询盘复盘,approved/Y；蓝色完整鞋对M1、平台标准化标题、六图、六色、EU38-47、60 SKU、型号、三档Pairs价格、Lace-Up与Regular Fit公开终验通过
+84,BQ032,ZX2212,1601939751023,BQ032-R1,N,PUBLIC_QA_PASS,进入完整数据周期监测；按来源词曝光点击访问和询盘复盘,approved/Y；杏色完整鞋对M1、标题、六图、六色、EU38-47、60 SKU、型号、三档Pairs价格、Lace-Up与Regular Fit公开终验通过
+85,BQ032,ZX2212,1601939722196,BQ032-O1,N,PUBLIC_QA_PASS,进入完整数据周期监测；按来源词曝光点击访问和询盘复盘,approved/Y；全黑完整鞋对M1、标题、六图、六色、EU38-47、60 SKU、型号、三档Pairs价格、Lace-Up与Regular Fit公开终验通过
+86,BQ026,T5828,10000044011929,SOURCE,PROTECT_SOURCE,MONITORING,只读拉取同周期流量并作为扩展链接事实与流量基线,第35周8曝光0点击0访问；55 SKU五色完整；工具级硬保护；不得修改标题关键词主图价格详情
+87,BQ026,T5828,1601939745065,BQ026-W1,N,PUBLIC_QA_PASS,PROTECT_NEW_CARD_TO_D7；公开标题已传播；Grey新M1与标题在D7前保持；后续按同口径相关曝光点击访问询盘复盘,approved/Y；Chrome确认新标题、Grey新M1、White M2、五色、EU35-45、型号、EVA/Textile、Pairs价格、Lace-up、Regular Fit及询盘入口正常；无新图上传
+88,BQ026,T5828,1601939725201,BQ026-R1,N,PUBLIC_QA_PASS,进入完整数据周期监测；重点比较原有CTR与新红色干净M1的来源词表现,approved/Y；红色真实完整鞋M1、标题、六图、五色、EU35-45、55 SKU、型号、三档Pairs价格、Lace-Up与Regular Fit公开终验通过
+89,BQ026,T5828,1601939714238,BQ026-O1,N,PUBLIC_QA_PASS,进入完整数据周期监测；按Custom Logo与OEM ODM来源词复盘,approved/Y；黑色真实完整鞋M1、标题、六图、五色、EU35-45、55 SKU、型号、三档Pairs价格、Lace-Up与Regular Fit公开终验通过
+90,BQ016,201,10000044021584,SOURCE,PROTECT_SOURCE,MONITORING,SOURCE_CATEGORY_RISK_READONLY；继续只读取数且不得推广或修改,approved/Y；童鞋源款误在Men's Walking Style Shoes 201334413；正确Children's Shoes 202240628超出当前一级经营类目；工具级硬保护
+91,BQ016,201,1601939608691,BQ016-W1,N,HOLD_CATEGORY_SCOPE,HOLD_CATEGORY_SCOPE；停止推广与内容放量；保留链接等待经营类目策略,approved/Y；黑色实拍M1与30 SKU已终验但童鞋误在Men's Walking Style Shoes 201334413；目标Children's Shoes 202240628不在店铺当前一级经营类目；不删除不提交
+92,BQ016,201,1601939691301,BQ016-R1,N,HOLD_CATEGORY_SCOPE,HOLD_CATEGORY_SCOPE；停止推广与内容放量；保留链接等待经营类目策略,approved/Y；粉色实拍M1与30 SKU已终验但童鞋误在Men's Walking Style Shoes 201334413；目标Children's Shoes 202240628不在店铺当前一级经营类目；不删除不提交
+93,BQ016,201,1601939633580,BQ016-O1,N,HOLD_CATEGORY_SCOPE,HOLD_CATEGORY_SCOPE；停止推广与内容放量；保留链接等待经营类目策略,approved/Y；斑马纹实拍M1与30 SKU已终验但童鞋误在Men's Walking Style Shoes 201334413；目标Children's Shoes 202240628不在店铺当前一级经营类目；不删除不提交
+94,BQ017,A008,10000044034049,SOURCE,PROTECT_SOURCE,MONITORING,只读拉取同周期流量并作为扩展链接事实与流量基线,第34-35周合计24曝光0点击；44 SKU四色；工具级硬保护；不得修改标题关键词主图价格详情
+95,BQ017,A008,1601939636508,BQ017-W1,N,PUBLIC_QA_PASS,进入7/14/30天来源词CTR访问与询盘监测,approved/Y；灰色真实完整鞋M1、标题、六图、四色、EU35-45、44 SKU、型号、Pairs价格、Lace-Up与Regular Fit公开终验通过
+96,BQ017,A008,1601939697271,BQ017-R1,N,PUBLIC_QA_PASS,进入7/14/30天来源词CTR访问与询盘监测,approved/Y；白色真实完整鞋M1、标题、六图、四色、EU35-45、44 SKU、型号、Pairs价格、Lace-Up与Regular Fit公开终验通过；后续单次API空响应按瞬态处理
+97,BQ017,A008,1601939593839,BQ017-O1,N,PUBLIC_QA_PASS,进入7/14/30天来源词CTR访问与询盘监测,approved/Y；全黑真实完整鞋M1、六图、四色、EU35-45、44 SKU、型号、Pairs价格、Lace-Up与Regular Fit公开终验通过；平台标题新增词有属性支持
+98,BQ002,BQ-002,10000042896165,SOURCE,PROTECT_SOURCE,MONITORING,只读拉取同周期流量并作为三条扩展链接的SKU与流量基线,第34周25曝光0点击2访问；第35周25曝光0点击2访问；33 SKU三色；工具级硬保护；不得修改标题关键词主图价格详情
+99,BQ002,BQ-002,1601939654418,BQ002-W1,N,PUBLIC_QA_PASS,D7优先校正男士宽鞋头套脚标题与搜索词；现有M1及M2-M6整组保留,approved/Y；第36周11曝光0点击1访问0询盘；UNATTRIBUTED_VISITOR；灰黑M1与六图角色完整；三色、EU36-46、33 SKU及Wide Toe Box证据通过；候选标题97字符
+100,BQ002,BQ-002,1601939614689,BQ002-R1,N,PUBLIC_QA_PASS,PROTECT_FULL_GALLERY；D14前不改标题与Grey Khaki整组六图；54张原始图和当前六张1000x1000图已复核；若仍有点击无询盘优先查来源与详情询价承接而非强制换图,approved/Y；16曝光1点击CTR6.25%访问1询盘0；伊拉克访客1；搜索来源1；具体关键词未披露；Wide Toe Box有真实证据；禁止Barefoot Zero Drop Orthopedic Running错意图
+101,BQ002,BQ-002,1601939635505,BQ002-O1,N,PUBLIC_QA_PASS,进入7/14/30天来源词CTR访问与询盘监测,approved/Y；灰白M1、标题、六图、三色、EU36-46、33 SKU、型号、Pairs价格、Slip-On与Wide Toe Box公开终验通过；平台标准化词有实时属性支持
+102,BQ003,R1218,10000043200726,SOURCE,PROTECT_SOURCE,MONITORING,只读拉取同周期流量并作为三条扩展链接的SKU与流量基线,第35周1搜索曝光0点击0访问；55 SKU五色；工具级硬保护；不得修改标题关键词主图价格详情
+103,BQ003,R1218,1601939663432,BQ003-R1,N,PUBLIC_QA_PASS,进入7/14/30天自然搜索来源词点击访问与询盘监测；不再重试关键词API,恢复approved/Y；公开页标题六图5色EU35-45型号Pairs价格Lace-Up与Regular Fit通过
+104,BQ003,R1218,1601939585904,BQ003-W1,N,PUBLIC_QA_PASS,进入7/14/28天自然搜索与询盘监测；关键词改走可靠后台链路,粉色真实六图；标题/六图/5色/EU35-45/55SKU/型号/Pairs价格/Lace-Up/Regular Fit买家页通过
+105,BQ003,R1218,1601939665367,BQ003-O1,N,PUBLIC_QA_PASS,进入7/14/30天自然搜索来源词点击访问与询盘监测；不再重试关键词API,恢复approved/Y；公开页新标题及无中文全黑实拍M2已传播；六图5色EU35-45型号Pairs价格Lace-Up与Regular Fit通过
+106,BQ011,A002,10000043725883,SOURCE,PROTECT_SOURCE,MONITORING,SOURCE_MATERIAL_RISK_READONLY；只读拉取同周期流量并作为扩展链接基线,第35周6搜索曝光0点击1访问；21 SKU三色；源款材料仍显示Cushion但禁止修改；不得修改标题关键词主图价格详情
+107,BQ011,A002,1601939634522,BQ011-W1,Y,PUBLIC_QA_PASS,进入D7/D14监测；保持当前真实M1并复盘相关曝光CTR与询盘,材料Other修复已approved/Y并完成API与买家页终验；六图21SKU三色EU39-45及询盘入口正常
+108,BQ011,A002,1601939666421,BQ011-R1,Y,PUBLIC_QA_PASS,监测标题改版后的相关曝光、搜索CTR、有效访问与询盘；D7前不再覆盖标题或M1,新标题已公开并删除无证据Cushion Midsole；API及买家页确认Midsole/Outsole均为Other；Grey Green M1、六图、21 SKU、Grey Black/Grey White/Grey Green三色、EU39–45、型号、Pairs价格、Slip-On、Regular Fit及询盘入口通过
+109,BQ011,A002,1601939606803,BQ011-O1,Y,PUBLIC_QA_PASS,PROTECT_NEW_TITLE_TO_D7；新标题已公开传播；D7前保持Grey Black M1和当前标题；按相关曝光点击访问询盘复盘,approved/Y；公开标题已把Men's Breathable Textile Slip-On Walking Shoes置于OEM ODM之前；Midsole/Outsole=Other/4；Chrome确认Grey Black M1、六图、三色、EU39-45、型号、Pairs价格、Slip-On、Regular Fit及询盘入口正常；Grey Black禁称All Black
+110,BQ014,A507,10000043732626,SOURCE,PROTECT_SOURCE,MONITORING,只读拉取同周期流量并作为三条扩展链接的SKU与流量基线,第35周8曝光0点击0访问；33 SKU三色；已加入四套写入工具硬保护；不得修改标题关键词主图价格详情
+111,BQ014,A507,1601939669411,BQ014-W1,Y,PUBLIC_QA_PASS,等待D7并复盘平台标准化词与黑白商品卡；累计相关曝光不足10不重构,第35周2搜索曝光0点击0访问0询盘；黑白真实六图与平台标准化标题已公开；3色、EU35-45、33SKU、型号、价格、Slip-On和Regular Fit终验通过
+112,BQ014,A507,1601939658415,BQ014-R1,Y,PUBLIC_QA_PASS,进入7/14/30天同口径曝光点击访问询盘监测,米白真实六图与日常步行标题已公开；逐色确认Black全黑、White米白、Black White黑面白底；EU35-45、33SKU、型号、Pairs价格、Slip-On和Regular Fit终验通过
+113,BQ014,A507,1601939608686,BQ014-O1,Y,PUBLIC_QA_PASS,进入7/14/30天同口径曝光点击访问询盘监测,全黑真实六图与OEM ODM标题已公开；逐色确认Black全黑、White米白、Black White黑面白底；EU35-45、33SKU、型号、Pairs价格、Slip-On和Regular Fit终验通过
+114,BQ019,A206,10000044041008,SOURCE,PROTECT_RECENT_SOURCE,MONITORING,只读拉取与三条扩展链接同口径流量并作为近期稳定基线,第35周33曝光0点击0访问；2026-09-12完成整页优化；不得修改标题关键词主图价格详情
+115,BQ022,A2208,10000043991998,SOURCE,PROTECT_RECENT_SOURCE,MONITORING,只读拉取与三条扩展链接同口径流量并作为近期稳定基线,第35周6曝光0点击0访问；2026-09-12完成整页优化；不得修改标题关键词主图价格详情
+116,BQ020,A218,1601839073314,SOURCE,PROTECT_SOURCE,MONITORING,只读拉取与三条扩展链接同口径流量并作为闭合结构事实基线,第35周18曝光1点击CTR5.56%访问1；正向流量锚点；不得复制混合闭合表达或修改标题关键词主图价格详情
+117,BQ021,K6212,1601838963947,SOURCE,PROTECT_SOURCE,MONITORING,只读拉取与三条扩展链接同口径流量并作为44SKU事实基线,第35周23曝光1点击CTR4.35%访问1；正向流量锚点；不得修改标题关键词主图价格详情
+118,BQ001,BQ001,10000042821848,SOURCE,PROTECT_SOURCE,MONITORING,只读拉取与三条扩展链接同口径流量并作为宽鞋头转化基线,第35周23曝光1点击CTR4.35%访问7；正向宽鞋头流量锚点；不得修改标题关键词主图价格详情
+119,BQ023,A505,10000044004948,SOURCE,PROTECT_SOURCE,MONITORING,只读拉取与三条扩展链接同口径流量并作为A505三色Slip-On基线,店内偏好榜显示15访客；已在四套写入工具硬保护；不得修改标题关键词主图价格详情
+120,BQ025,A1689,10000044024484,SOURCE,PROTECT_SOURCE,MONITORING,只读拉取与三条扩展链接同口径流量并作为A1689两色基线,店内偏好榜显示17访客；线上仅Black White与All Black共22 SKU；Light Grey来源不符；Black Yellow缺真实图；不得修改标题关键词主图价格详情

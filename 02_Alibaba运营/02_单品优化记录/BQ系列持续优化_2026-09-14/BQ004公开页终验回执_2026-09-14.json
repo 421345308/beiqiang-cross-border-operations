@@ -1,0 +1,24 @@
+{
+  "date": "2026-09-14",
+  "family": "BQ004 / A502",
+  "method": "Chrome public Alibaba.com buyer-page visual and DOM QA after approved/Y",
+  "result": "PASS",
+  "checks": {
+    "three_pages_public": true,
+    "titles_match_roles": true,
+    "hero_images_match_roles": true,
+    "six_gallery_images_present": true,
+    "five_color_thumbnails_visible_and_correct": true,
+    "eu_35_45_present": true,
+    "model_numbers_present": true,
+    "three_pair_price_tiers_present": true,
+    "lace_up_public_attribute_present": true,
+    "shoe_identity_and_geometry_correct": true
+  },
+  "products": [
+    {"product_id":"1601939626612","role":"orange-black wholesale lightweight walking","hero":"Orange Black","price_tiers":["US$9.49 / 2-49 pairs","US$9.19 / 50-99 pairs","US$9.09 / >=100 pairs"]},
+    {"product_id":"1601939738037","role":"light-blue walking style daily casual","hero":"Light Blue","price_tiers":["US$9.53 / 2-49 pairs","US$9.23 / 50-99 pairs","US$9.13 / >=100 pairs"]},
+    {"product_id":"1601939700200","role":"all-black custom logo OEM ODM","hero":"All Black","price_tiers":["US$9.45 / 2-49 pairs","US$9.15 / 50-99 pairs","US$9.05 / >=100 pairs"]}
+  ],
+  "next_action": "Move to PUBLIC_QA_PASS and monitor 7/14/30-day traffic sources, CTR, visits and inquiries."
+}

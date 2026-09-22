@@ -1,0 +1,46 @@
+{
+  "family": "BQ032/ZX2212",
+  "reviewed_at": "2026-09-14",
+  "result": "PASS",
+  "products": [
+    {
+      "product_id": "1601939651515",
+      "model": "BQ032-W1 / ZX2212",
+      "public_title": "Wholesale Mens Lightweight Breathable Walking Shoes Knit Lace-Up Casual Shoes All Seasons EU 38-47 ZX2212",
+      "m1": "Blue real shoe pair",
+      "colors": ["Blue", "White", "Grey", "Apricot", "Black/White", "All Black"],
+      "sizes": "EU 38-47",
+      "prices": ["US$9.49 / 2-49 pairs", "US$9.19 / 50-99 pairs", "US$9.09 / 100+ pairs"]
+    },
+    {
+      "product_id": "1601939751023",
+      "model": "BQ032-R1 / ZX2212",
+      "public_title": "Mens Large Size Walking Shoes Knit Lace-Up Casual Daily Shoes EU 38-47 ZX2212",
+      "m1": "Apricot real shoe pair",
+      "colors": ["Blue", "White", "Grey", "Apricot", "Black/White", "All Black"],
+      "sizes": "EU 38-47",
+      "prices": ["US$9.53 / 2-49 pairs", "US$9.23 / 50-99 pairs", "US$9.13 / 100+ pairs"]
+    },
+    {
+      "product_id": "1601939722196",
+      "model": "BQ032-O1 / ZX2212",
+      "public_title": "All Black Mens Casual Walking Shoes Knit Lace-Up Custom Logo OEM ODM EU 38-47 ZX2212",
+      "m1": "All Black real shoe pair",
+      "colors": ["Blue", "White", "Grey", "Apricot", "Black/White", "All Black"],
+      "sizes": "EU 38-47",
+      "prices": ["US$9.45 / 2-49 pairs", "US$9.15 / 50-99 pairs", "US$9.05 / 100+ pairs"]
+    }
+  ],
+  "common_checks": {
+    "status_approved_display_y": true,
+    "six_gallery_images_visible": true,
+    "m1_pixels_visually_passed": true,
+    "six_colors_visible": true,
+    "ten_sizes_visible": true,
+    "sku_count_60_openapi_readback": true,
+    "closure_lace_up": true,
+    "fit_regular": true,
+    "sales_unit_single_item_and_pair_tiers": true
+  },
+  "note": "W1 public title was platform-standardized using supported current attributes (Breathable and All Seasons); no repeat overwrite was made."
+}

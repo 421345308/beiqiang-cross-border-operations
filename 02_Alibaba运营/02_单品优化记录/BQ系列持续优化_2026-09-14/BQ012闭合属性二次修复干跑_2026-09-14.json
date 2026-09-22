@@ -1,0 +1,105 @@
+{
+  "timestamp_utc": "2026-09-14T09:22:35.119401+00:00",
+  "source_product_id_protected": "10000043744505",
+  "mode": "dry-run",
+  "results": [
+    {
+      "product_id": "1601939650458",
+      "expected_model": "BQ012-W1 / M8506",
+      "mode": "dry-run",
+      "before": {
+        "request_id": "0bab02fe17893777129492955",
+        "trace_id": "2103346a17893777126102002e0dae",
+        "message": null,
+        "error": null
+      },
+      "before_status": "approved",
+      "before_display": "Y",
+      "before_closure": {
+        "attribute_id": 200000388,
+        "attribute_name": "Closure Type",
+        "value_id": 80806811,
+        "value_name": "Lace-up"
+      },
+      "stage": "prepared",
+      "render": {
+        "request_id": "213f5a2117893777202512932",
+        "trace_id": "2103135017893777199146516e0dac",
+        "message": null,
+        "error": null
+      },
+      "requested_closure": {
+        "attribute_id": 200000388,
+        "value_id": 13325270,
+        "value_name": "Slip-On"
+      },
+      "ok": true
+    },
+    {
+      "product_id": "1601939681367",
+      "expected_model": "BQ012-R1 / M8506",
+      "mode": "dry-run",
+      "before": {
+        "request_id": "210829b717893777289068016",
+        "trace_id": "210329c717893777285752010e1164",
+        "message": null,
+        "error": null
+      },
+      "before_status": "approved",
+      "before_display": "Y",
+      "before_closure": {
+        "attribute_id": 200000388,
+        "attribute_name": "Closure Type",
+        "value_id": 80806811,
+        "value_name": "Lace-up"
+      },
+      "stage": "prepared",
+      "render": {
+        "request_id": "213c932b17893777366976942",
+        "trace_id": "2103135017893777363932550e0d88",
+        "message": null,
+        "error": null
+      },
+      "requested_closure": {
+        "attribute_id": 200000388,
+        "value_id": 13325270,
+        "value_name": "Slip-On"
+      },
+      "ok": true
+    },
+    {
+      "product_id": "1601939606805",
+      "expected_model": "BQ012-O1 / M8506",
+      "mode": "dry-run",
+      "before": {
+        "request_id": "21501b6717893777455675196",
+        "trace_id": "2103346417893777452543764e0cc6",
+        "message": null,
+        "error": null
+      },
+      "before_status": "approved",
+      "before_display": "Y",
+      "before_closure": {
+        "attribute_id": 200000388,
+        "attribute_name": "Closure Type",
+        "value_id": 80806811,
+        "value_name": "Lace-up"
+      },
+      "stage": "prepared",
+      "render": {
+        "request_id": "213c933517893777526533417",
+        "trace_id": "2103245817893777523332045e0e7a",
+        "message": null,
+        "error": null
+      },
+      "requested_closure": {
+        "attribute_id": 200000388,
+        "value_id": 13325270,
+        "value_name": "Slip-On"
+      },
+      "ok": true
+    }
+  ],
+  "success_count": 3,
+  "failure_count": 0
+}

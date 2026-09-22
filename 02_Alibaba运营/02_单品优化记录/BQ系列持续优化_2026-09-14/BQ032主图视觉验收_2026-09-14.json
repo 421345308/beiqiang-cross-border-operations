@@ -1,0 +1,29 @@
+{
+  "family": "BQ032/ZX2212",
+  "review_date": "2026-09-14",
+  "method": "Exact-pixel crop and resize from the verified BQ032 color sheets; no generative fill, recoloring, geometry change or structure change.",
+  "source_folder": "01_产品资产/02_可发布素材/00_最终上传/BQ032_ZX2212/03_颜色图",
+  "result": "PASS_FOR_GALLERY",
+  "checks": {
+    "all_files_1000_square": true,
+    "shoe_pair_complete": true,
+    "toe_heel_outsole_closure_visible": true,
+    "color_matches_source": true,
+    "no_color_label_or_chinese_copy": true,
+    "no_collage_cells": true,
+    "no_ai_shape_or_color_change": true,
+    "clean_light_background": true
+  },
+  "approved_gallery_files": [
+    {"file": "all_black_pair.jpg", "sha256": "6C014DE240BE7F81B41A3FA688717CE1C0DE36804F3AC88275DC493E85330479"},
+    {"file": "apricot_pair.jpg", "sha256": "A536ABC3F386CB7E7D924B64089E40C59D106A7EAE2A6D70786F474FAB3FA07B"},
+    {"file": "black_white_pair.jpg", "sha256": "4DEF16358B07518D92F8E5828BB0B821CE93FD69197E4A77FF66483898802D3A"},
+    {"file": "blue_pair.jpg", "sha256": "60C9097E26DBD765F0D2A94D73A26F9713E530914750A5B20917573C27ED2943"},
+    {"file": "grey_pair.jpg", "sha256": "FA62D220933456ED59B10B35B9CDBCB06B94CD4CA461FF4F30D02D34CD72632A"},
+    {"file": "white_pair.jpg", "sha256": "9D1130EB0849D8B53DC5E07C67DD339212860D1499FC5A5360A2CA178E043E91"}
+  ],
+  "supporting_only": [
+    {"file": "upper_detail_blue.jpg", "decision": "Not selected for the six-image gallery; close crop is useful only as supporting evidence."},
+    {"file": "outsole_white.jpg", "decision": "Not selected for the six-image gallery; source area is smaller than the complete-shoe color images."}
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "checked_at_local": "2026-09-14 14:41+08:00",
+  "source": {
+    "product_id": "10000043991998",
+    "protected": true,
+    "status": "approved",
+    "display": "Y",
+    "main_images": 6,
+    "sku_count": 33,
+    "colors": ["Black White", "Black White Stripe", "Light Grey"],
+    "sizes": 11,
+    "price_usd": [9.09, 9.49],
+    "moq_pairs": 2,
+    "lead_time": {"quantity_pairs": 100, "days": 31},
+    "detail_images": 4,
+    "company_images": 5,
+    "unchanged": true
+  },
+  "expansions": [
+    {"product_id": "1601939641581", "status": "modified", "display": "N", "main_images": 6, "sku_count": 33, "colors": 3, "sizes": 11, "price_usd": [9.09, 9.49], "moq_pairs": 2, "detail_images": 4, "company_images": 5},
+    {"product_id": "1601939659468", "status": "modified", "display": "N", "main_images": 6, "sku_count": 33, "colors": 3, "sizes": 11, "price_usd": [9.13, 9.53], "moq_pairs": 2, "detail_images": 4, "company_images": 5},
+    {"product_id": "1601939709218", "status": "modified", "display": "N", "main_images": 6, "sku_count": 33, "colors": 3, "sizes": 11, "price_usd": [9.05, 9.45], "moq_pairs": 2, "detail_images": 4, "company_images": 5}
+  ],
+  "expected_platform_derived_change": "pc_detail_url slug follows the new title"
+}

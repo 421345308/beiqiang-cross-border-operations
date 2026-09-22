@@ -1,0 +1,28 @@
+{
+  "product_id": "1601939616747",
+  "link_code": "BQ019-W1",
+  "model": "A206",
+  "prepared_at": "2026-09-15",
+  "platform_write": false,
+  "decision": "KEEP_M1_REBUILD_M2_M6_ON_TRIGGER",
+  "contact_sheet": "BQ019-W1候选六图联系表.jpg",
+  "visual_review": {
+    "status": "PASS",
+    "checks": [
+      "all images are verified A206 source photography",
+      "shoe shape, outsole, knit upper, laces and colors are unchanged",
+      "no third-party brand or Chinese promotional copy",
+      "no AI-generated shoe geometry or color",
+      "no female on-foot image conflicting with the men's listing identity",
+      "all six image roles are visually distinct"
+    ]
+  },
+  "images": [
+    {"position": 1, "file": "候选六图/M1_black_search_hero.jpg", "role": "Black search hero; retain the current strong high-contrast entry", "source": "01_产品资产/02_可发布素材/00_最终上传/BQ019_A206/01_主图/01_main.jpg", "width": 1200, "height": 1200, "sha256": "FCC17EE98DD69BD8DA811B2242B59FFC849F07CD2C147AD3D88D067CD10F1B46"},
+    {"position": 2, "file": "候选六图/M2_black_handheld_scale.jpg", "role": "Black knit upper, lace structure and handheld scale reference", "source": "01_产品资产/01_原始数据包/已整理_BQ019_A206_A206情侣鞋图片/A206情侣鞋图片/主图/7.jpg", "width": 800, "height": 800, "sha256": "2A6D01B4F46DDFE06C753A5E3132348805CE1DB84AB7B30553BBA3C6656BDE71"},
+    {"position": 3, "file": "候选六图/M3_lightgrey_top_lace.jpg", "role": "Light Grey top view proving round toe shape and lace-up closure", "source": "01_产品资产/01_原始数据包/已整理_BQ019_A206_A206情侣鞋图片/A206情侣鞋图片/主图/10.jpg", "width": 800, "height": 800, "sha256": "49C15A3CDF61418B0E27B3F1EA032623F647A9F64C2ACFA968AE6426D7B2103D"},
+    {"position": 4, "file": "候选六图/M4_white_outsole_structure.jpg", "role": "White color proof and outsole structure", "source": "01_产品资产/01_原始数据包/已整理_BQ019_A206_A206情侣鞋图片/A206情侣鞋图片/主图/15.jpg", "width": 800, "height": 800, "sha256": "8B9B9329330781E621E89399BA3EA75EB9BCCD5EEE82064FB85C97481803C54F"},
+    {"position": 5, "file": "候选六图/M5_three_color_range.jpg", "role": "Black, Light Grey and Cream color range; White is separately evidenced by M4", "source": "01_产品资产/01_原始数据包/已整理_BQ019_A206_A206情侣鞋图片/A206情侣鞋图片/主图/9.jpg", "width": 800, "height": 800, "sha256": "9B38F32394C6194BB4ACFAB73BD0DF88014CEE77CB8395E9C6213A16896B93D8"},
+    {"position": 6, "file": "候选六图/M6_black_pair.jpg", "role": "Black pair confirmation and rear three-quarter view", "source": "01_产品资产/01_原始数据包/已整理_BQ019_A206_A206情侣鞋图片/A206情侣鞋图片/主图/13.jpg", "width": 800, "height": 800, "sha256": "428A4C98E6E4381B9E67DD638476EB6884C3ABDC3DF6926D971DD47304DC046F"}
+  ]
+}

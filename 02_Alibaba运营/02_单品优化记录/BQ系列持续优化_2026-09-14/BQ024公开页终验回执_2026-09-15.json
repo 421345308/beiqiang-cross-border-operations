@@ -1,0 +1,47 @@
+{
+  "checked_at": "2026-09-15T04:02:00+08:00",
+  "operation": "public_page_final_qa",
+  "overall_status": "PASS",
+  "products": [
+    {
+      "product_id": "1601939691342",
+      "link_code": "BQ024-W1",
+      "api_status": "approved",
+      "api_display": "Y",
+      "public_title_propagated": true,
+      "api_title": "Wholesale Black White Knit Slip-On Walking Shoes Lightweight Casual Sneakers EVA Sole Factory Supply A830",
+      "localized_public_heading": "批发黑白色针织一脚蹬步行鞋轻便休闲运动鞋 EVA 鞋底工厂供应 A830",
+      "main_image": "https://sc04.alicdn.com/kf/Sffddda0f12a242b3a68efff3fa1aebbd3.jpg",
+      "gallery_check": "六张公开缩略图已分段展开复核；API六图URL与提交前逐位一致",
+      "colors": ["All Black", "Beige Grey", "Black Yellow", "Black White"],
+      "eu_sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45],
+      "sku_count": 36,
+      "model": "BQ024-W1 / A830",
+      "price_tiers_usd": ["9.49 / 2-49 pairs", "9.19 / 50-99 pairs", "9.09 / 100+ pairs"],
+      "monitoring": {"start_pst": "2026-09-15", "d7_pst": "2026-09-22", "d14_pst": "2026-09-29", "d28_pst": "2026-10-13"}
+    },
+    {
+      "product_id": "1601939691340",
+      "link_code": "BQ024-O1",
+      "api_status": "approved",
+      "api_display": "Y",
+      "public_title_propagated": true,
+      "api_title": "Custom Logo Black Yellow Knit Slip-On Walking Shoes OEM ODM Private Label Casual Sneakers A830",
+      "localized_public_heading": "定制徽标黑黄针织一脚蹬步行鞋 OEM ODM 自有品牌休闲运动鞋 A830",
+      "main_image": "https://sc04.alicdn.com/kf/S3a1525fbe2294800bec12e24fe3c7d33E.jpg",
+      "gallery_check": "六张公开缩略图已分段展开复核；API六图URL与提交前逐位一致",
+      "colors": ["All Black", "Beige Grey", "Black Yellow", "Black White"],
+      "eu_sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45],
+      "sku_count": 36,
+      "model": "BQ024-O1 / A830",
+      "price_tiers_usd": ["9.45 / 2-49 pairs", "9.15 / 50-99 pairs", "9.05 / 100+ pairs"],
+      "monitoring": {"start_pst": "2026-09-15", "d7_pst": "2026-09-22", "d14_pst": "2026-09-29", "d28_pst": "2026-10-13"}
+    }
+  ],
+  "unchanged_sibling": {
+    "product_id": "1601939684371",
+    "link_code": "BQ024-R1",
+    "monitoring": {"start_pst": "2026-09-14", "d7_pst": "2026-09-21", "d14_pst": "2026-09-28", "d28_pst": "2026-10-12"}
+  },
+  "conclusion": "BQ024-W1/O1公开标题已完成传播，旧附加标题表达消失；标题、主图、六图、四色、EU37-45、36 SKU、型号和价格终验通过。两条转PUBLIC_QA_PASS并从2026-09-15 PST重新计时，R1保持原周期。"
+}

@@ -1,0 +1,32 @@
+{
+  "product_id": "1601939612707",
+  "model": "BQ025-W1 / A1689",
+  "stage": "submitted_recovered_by_readback",
+  "reason": "The API process lost its local completion output after the platform had accepted the six-image Schema update. No retry was made after readback showed modified/N and six images.",
+  "preflight": {
+    "status": "approved",
+    "display": "Y",
+    "image_count": 5,
+    "title": "Wholesale Low Cut Knit Slip on Walking Shoes Lightweight Breathable Casual Sneakers All Seasons Factory Supply A1689",
+    "request_id": "213e759c17893719440061931",
+    "trace_id": "2103346417893719436768065e0b7b"
+  },
+  "readback": {
+    "status": "modified",
+    "display": "N",
+    "image_count": 6,
+    "sku_count": 22,
+    "title": "Wholesale Low Cut Knit Slip on Walking Shoes Lightweight Breathable Casual Sneakers All Seasons Factory Supply A1689",
+    "images": [
+      "https://sc04.alicdn.com/kf/He5bb31918eb94115a562d0e35128b82dz.jpg",
+      "https://sc04.alicdn.com/kf/H28c10ab1a7744972a169dfdbd744e805a.jpg",
+      "https://sc04.alicdn.com/kf/H2f076ca9cf18405388cc8cdf976edf3c5.jpg",
+      "https://sc04.alicdn.com/kf/Hc17bd609deab4f13b6d9b3846ddd4ecb3.jpg",
+      "https://sc04.alicdn.com/kf/Hfc9690cbbc7e4053a2271a53dc6dfd55C.jpg",
+      "https://sc04.alicdn.com/kf/Hf7a4647c191444b69e1df1ac1f81ad2fP.jpg"
+    ],
+    "request_id": "0bab02fe17893720612346656",
+    "trace_id": "210334ab17893720609158082e0c55"
+  },
+  "decision": "Do not resubmit during review. After approved/Y, visually compare all six public images against the verified BQ025 sequence and only then mark PUBLIC_QA_PASS."
+}

@@ -1,0 +1,179 @@
+{
+  "timestamp_utc": "2026-09-14T18:22:04.574210+00:00",
+  "source_product_id_protected": "10000043732626",
+  "mode": "apply",
+  "change_scope": "Swap only Black and White color-image URLs; keep names, SKU IDs/codes, inventory, prices, title and gallery unchanged.",
+  "results": [
+    {
+      "product_id": "1601939669411",
+      "expected_model": "BQ014-W1 / A507",
+      "before": {
+        "request_id": "213c934417894100345864713",
+        "trace_id": "2103245817894100342615302e1005",
+        "message": null,
+        "error": null
+      },
+      "before_status": "approved",
+      "before_display": "Y",
+      "mode": "apply",
+      "before_images": {
+        "3327837": "https://sc04.alicdn.com/kf/Se89b514a5e024ef09d4288af0b44e299K.png",
+        "-34": "https://sc04.alicdn.com/kf/Scc55b368e2bb4e19b8cdd467ed90efdfv.png",
+        "3331185": "https://sc04.alicdn.com/kf/Sa06a555836094985bff6de7d0cfe388bV.png"
+      },
+      "stage": "submitted",
+      "render": {
+        "request_id": "0bbb3b2417894100417612288",
+        "trace_id": "210313ec17894100414127184e0d7c",
+        "message": null,
+        "error": null
+      },
+      "target_images": {
+        "3327837": "https://sc04.alicdn.com/kf/Sa06a555836094985bff6de7d0cfe388bV.png",
+        "-34": "https://sc04.alicdn.com/kf/Scc55b368e2bb4e19b8cdd467ed90efdfv.png",
+        "3331185": "https://sc04.alicdn.com/kf/Se89b514a5e024ef09d4288af0b44e299K.png"
+      },
+      "update": {
+        "request_id": "212c6fc617894100515873359",
+        "trace_id": "2103346417894100504047254e0ca5",
+        "message": null,
+        "error": null
+      },
+      "readback": {
+        "request_id": "0b830ecc17894100600896213",
+        "trace_id": "2103346a17894100597686851e0e29",
+        "message": null,
+        "error": null
+      },
+      "after_status": "modified",
+      "after_display": "N",
+      "after_images": {
+        "3327837": "https://sc04.alicdn.com/kf/Sa06a555836094985bff6de7d0cfe388bV.png",
+        "-34": "https://sc04.alicdn.com/kf/Scc55b368e2bb4e19b8cdd467ed90efdfv.png",
+        "3331185": "https://sc04.alicdn.com/kf/Se89b514a5e024ef09d4288af0b44e299K.png"
+      },
+      "checks": {
+        "identity_ok": true,
+        "target_bindings_ok": true,
+        "sku_count_33": true,
+        "non_target_fields_unchanged": true,
+        "source_not_targeted": true
+      },
+      "ok": true
+    },
+    {
+      "product_id": "1601939658415",
+      "expected_model": "BQ014-R1 / A507",
+      "before": {
+        "request_id": "212c6fc617894100671443516",
+        "trace_id": "2103346417894100668183395e0c21",
+        "message": null,
+        "error": null
+      },
+      "before_status": "approved",
+      "before_display": "Y",
+      "mode": "apply",
+      "before_images": {
+        "3327837": "https://sc04.alicdn.com/kf/Se89b514a5e024ef09d4288af0b44e299K.png",
+        "-34": "https://sc04.alicdn.com/kf/Scc55b368e2bb4e19b8cdd467ed90efdfv.png",
+        "3331185": "https://sc04.alicdn.com/kf/Sa06a555836094985bff6de7d0cfe388bV.png"
+      },
+      "stage": "submitted",
+      "render": {
+        "request_id": "21501be117894100741452540",
+        "trace_id": "210325bb17894100738098954e1090",
+        "message": null,
+        "error": null
+      },
+      "target_images": {
+        "3327837": "https://sc04.alicdn.com/kf/Sa06a555836094985bff6de7d0cfe388bV.png",
+        "-34": "https://sc04.alicdn.com/kf/Scc55b368e2bb4e19b8cdd467ed90efdfv.png",
+        "3331185": "https://sc04.alicdn.com/kf/Se89b514a5e024ef09d4288af0b44e299K.png"
+      },
+      "update": {
+        "request_id": "212cbf3217894100833513457",
+        "trace_id": "210313ec17894100822921604e0f08",
+        "message": null,
+        "error": null
+      },
+      "readback": {
+        "request_id": "0bbb637a17894100915054127",
+        "trace_id": "2103245817894100911832144e1026",
+        "message": null,
+        "error": null
+      },
+      "after_status": "modified",
+      "after_display": "N",
+      "after_images": {
+        "3327837": "https://sc04.alicdn.com/kf/Sa06a555836094985bff6de7d0cfe388bV.png",
+        "-34": "https://sc04.alicdn.com/kf/Scc55b368e2bb4e19b8cdd467ed90efdfv.png",
+        "3331185": "https://sc04.alicdn.com/kf/Se89b514a5e024ef09d4288af0b44e299K.png"
+      },
+      "checks": {
+        "identity_ok": true,
+        "target_bindings_ok": true,
+        "sku_count_33": true,
+        "non_target_fields_unchanged": true,
+        "source_not_targeted": true
+      },
+      "ok": true
+    },
+    {
+      "product_id": "1601939608686",
+      "expected_model": "BQ014-O1 / A507",
+      "before": {
+        "request_id": "0bab02fe17894100985571790",
+        "trace_id": "2103245817894100982464218e1047",
+        "message": null,
+        "error": null
+      },
+      "before_status": "approved",
+      "before_display": "Y",
+      "mode": "apply",
+      "before_images": {
+        "3331185": "https://sc04.alicdn.com/kf/Sa06a555836094985bff6de7d0cfe388bV.png",
+        "3327837": "https://sc04.alicdn.com/kf/Se89b514a5e024ef09d4288af0b44e299K.png",
+        "-34": "https://sc04.alicdn.com/kf/Scc55b368e2bb4e19b8cdd467ed90efdfv.png"
+      },
+      "stage": "submitted",
+      "render": {
+        "request_id": "21501be117894101058764882",
+        "trace_id": "210313ec17894101055653999e0c4e",
+        "message": null,
+        "error": null
+      },
+      "target_images": {
+        "3327837": "https://sc04.alicdn.com/kf/Sa06a555836094985bff6de7d0cfe388bV.png",
+        "-34": "https://sc04.alicdn.com/kf/Scc55b368e2bb4e19b8cdd467ed90efdfv.png",
+        "3331185": "https://sc04.alicdn.com/kf/Se89b514a5e024ef09d4288af0b44e299K.png"
+      },
+      "update": {
+        "request_id": "212c41d317894101152705939",
+        "trace_id": "210313ea17894101142025197e0b85",
+        "message": null,
+        "error": null
+      },
+      "readback": {
+        "request_id": "0bab02fc17894101233425798",
+        "trace_id": "2103245817894101230127347e0f60",
+        "message": null,
+        "error": null
+      },
+      "after_status": "modified",
+      "after_display": "N",
+      "after_images": {
+        "3331185": "https://sc04.alicdn.com/kf/Se89b514a5e024ef09d4288af0b44e299K.png",
+        "3327837": "https://sc04.alicdn.com/kf/Sa06a555836094985bff6de7d0cfe388bV.png",
+        "-34": "https://sc04.alicdn.com/kf/Scc55b368e2bb4e19b8cdd467ed90efdfv.png"
+      },
+      "checks": {
+        "identity_ok": true,
+        "target_bindings_ok": true,
+        "sku_count_33": true,
+        "non_target_fields_unchanged": true,
+        "source_not_targeted": true
+      },
+      "ok": true
+    }
+  ]
+}

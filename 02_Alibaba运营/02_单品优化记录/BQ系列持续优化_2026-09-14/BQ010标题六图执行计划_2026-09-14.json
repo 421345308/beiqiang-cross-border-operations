@@ -1,0 +1,58 @@
+{
+  "family": "BQ010/R1601",
+  "source_product_id": "1601825160204",
+  "source_policy": "PROTECT_SOURCE",
+  "market_evidence": {
+    "period": "Alibaba Keyword Advisor recent 7 days, checked 2026-09-14",
+    "accepted": [
+      {"keyword": "mens shoes casual", "search_index": 19, "ctr": "13.79%"}
+    ],
+    "rejected": [
+      {"keyword": "mens canvas casual shoes", "reason": "Canvas conflicts with confirmed Stretch Textile Upper"},
+      {"keyword": "stretch fabric walking shoes", "reason": "no stable result"},
+      {"keyword": "low top walking shoes", "reason": "no stable result"},
+      {"keyword": "lace up walking shoes", "reason": "only very weak long-tail results"}
+    ]
+  },
+  "products": [
+    {
+      "product_id": "1601939589876",
+      "expected_model": "BQ010-W1 / R1601",
+      "title": "Wholesale Men's Casual Shoes Lace-Up Stretch Textile Toe Cap Walking Sneakers R1601",
+      "image_files": [
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/BQ010_R1601/01_主图/01_main.jpg",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/BQ010_R1601/01_主图/02_black.jpg",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/BQ010_R1601/01_主图/03_scene.jpg",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/BQ010_R1601/01_主图/04_scene.jpg",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/BQ010_R1601/01_主图/05_detail.jpg",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/BQ010_R1601/02_详情页/01_size_safe.png"
+      ]
+    },
+    {
+      "product_id": "1601939734070",
+      "expected_model": "BQ010-R1 / R1601",
+      "title": "Men's Daily Walking Shoes Lace-Up Stretch Textile Toe Cap Lightweight Casual R1601",
+      "image_files": [
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/BQ010_R1601/01_主图/03_scene.jpg",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/BQ010_R1601/01_主图/01_main.jpg",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/BQ010_R1601/01_主图/02_black.jpg",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/BQ010_R1601/01_主图/04_scene.jpg",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/BQ010_R1601/01_主图/05_detail.jpg",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/BQ010_R1601/02_详情页/01_size_safe.png"
+      ]
+    },
+    {
+      "product_id": "1601939573998",
+      "expected_model": "BQ010-O1 / R1601",
+      "title": "All Black Men's Casual Shoes Lace-Up Stretch Textile Toe Cap Custom Logo OEM ODM R1601",
+      "image_files": [
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/BQ010_R1601/01_主图/02_black.jpg",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/BQ010_R1601/01_主图/05_detail.jpg",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/BQ010_R1601/01_主图/01_main.jpg",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/BQ010_R1601/01_主图/04_scene.jpg",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/BQ010_R1601/01_主图/03_scene.jpg",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/BQ010_R1601/02_详情页/01_size_safe.png"
+      ]
+    }
+  ]
+}

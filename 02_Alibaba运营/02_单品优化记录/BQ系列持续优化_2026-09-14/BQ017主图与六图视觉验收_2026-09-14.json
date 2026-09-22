@@ -1,0 +1,29 @@
+{
+  "sku": "BQ017 / A008",
+  "reviewed_at": "2026-09-14",
+  "source_product_id": "10000044034049",
+  "source_policy": "PROTECT_SOURCE",
+  "review_basis": [
+    "原始包透明单鞋图 PD2A6605-PD2A6608 已逐张查看原尺寸像素",
+    "使用的6张800X800场景图已逐张查看原尺寸像素",
+    "三组候选接触表与三张1000X1000首图已视觉复核"
+  ],
+  "galleries": [
+    {"product_id": "1601939636508", "role": "BQ017-W1", "hero_color": "Grey", "image_count": 6, "pass": true},
+    {"product_id": "1601939697271", "role": "BQ017-R1", "hero_color": "White", "image_count": 6, "pass": true},
+    {"product_id": "1601939593839", "role": "BQ017-O1", "hero_color": "All Black", "image_count": 6, "pass": true}
+  ],
+  "checks": {
+    "same_model_and_outsole": true,
+    "hero_full_shoe_visible": true,
+    "hero_background_clean": true,
+    "hero_colors_distinct": true,
+    "no_watermark": true,
+    "no_collage_on_hero": true,
+    "no_ai_geometry_change": true,
+    "no_unverified_claim_text": true,
+    "all_output_images_1000x1000": true
+  },
+  "excluded": ["01_主图/04_sole.jpg：含 Flexible Cushion Sole / Cushion Feel / Stable Step 软证据文案"],
+  "result": "PASS"
+}

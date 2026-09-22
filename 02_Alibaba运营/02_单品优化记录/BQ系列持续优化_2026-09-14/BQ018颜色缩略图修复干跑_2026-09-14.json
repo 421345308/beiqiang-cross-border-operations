@@ -1,0 +1,124 @@
+{
+  "timestamp_utc": "2026-09-14T10:37:57.072685+00:00",
+  "source_product_id_protected": "10000044007878",
+  "mode": "dry-run",
+  "results": [
+    {
+      "product_id": "1601939726170",
+      "expected_model": "BQ018-W1 / A116",
+      "mode": "dry-run",
+      "before_status": "approved",
+      "before_display": "Y",
+      "before": {
+        "request_id": "21501b6717893822353804417",
+        "trace_id": "2101d86517893822350632594e0c9a",
+        "message": null,
+        "error": null
+      },
+      "stage": "prepared",
+      "render": {
+        "request_id": "212cbf3217893822427038160",
+        "trace_id": "2101c5a717893822423761441e0f38",
+        "message": null,
+        "error": null
+      },
+      "target": {
+        "-24": {
+          "name": "Cream",
+          "image_url": "https://sc04.alicdn.com/kf/S6c2add39ffa04564bffa92c22c639b7bC.jpg"
+        },
+        "-1": {
+          "name": "Lavender",
+          "image_url": "https://sc04.alicdn.com/kf/Saa8be4cb586e4eb6881fe0419b4378e0I.jpg"
+        },
+        "-80": {
+          "name": "Black White",
+          "image_url": "https://sc04.alicdn.com/kf/S616ed02bb2e9432a9ef8d7f39fa5a25f3.jpg"
+        },
+        "3327837": {
+          "name": "Black",
+          "image_url": "https://sc04.alicdn.com/kf/S783d5394ead14c42956e0eee6d570652U.jpg"
+        }
+      },
+      "ok": true
+    },
+    {
+      "product_id": "1601939641542",
+      "expected_model": "BQ018-R1 / A116",
+      "mode": "dry-run",
+      "before_status": "approved",
+      "before_display": "Y",
+      "before": {
+        "request_id": "212c6fc617893822513431102",
+        "trace_id": "2101e68f17893822510111741e0c3e",
+        "message": null,
+        "error": null
+      },
+      "stage": "prepared",
+      "render": {
+        "request_id": "21501b6717893822585605376",
+        "trace_id": "2101dd0617893822582397916e0b7e",
+        "message": null,
+        "error": null
+      },
+      "target": {
+        "-24": {
+          "name": "Cream",
+          "image_url": "https://sc04.alicdn.com/kf/S6c2add39ffa04564bffa92c22c639b7bC.jpg"
+        },
+        "-1": {
+          "name": "Lavender",
+          "image_url": "https://sc04.alicdn.com/kf/Saa8be4cb586e4eb6881fe0419b4378e0I.jpg"
+        },
+        "-80": {
+          "name": "Black White",
+          "image_url": "https://sc04.alicdn.com/kf/S616ed02bb2e9432a9ef8d7f39fa5a25f3.jpg"
+        },
+        "3327837": {
+          "name": "Black",
+          "image_url": "https://sc04.alicdn.com/kf/S783d5394ead14c42956e0eee6d570652U.jpg"
+        }
+      },
+      "ok": true
+    },
+    {
+      "product_id": "1601939589890",
+      "expected_model": "BQ018-O1 / A116",
+      "mode": "dry-run",
+      "before_status": "approved",
+      "before_display": "Y",
+      "before": {
+        "request_id": "0b80d2d617893822671583204",
+        "trace_id": "2101c5a717893822668244150e0e30",
+        "message": null,
+        "error": null
+      },
+      "stage": "prepared",
+      "render": {
+        "request_id": "212c6fc617893822742693082",
+        "trace_id": "2101dbd017893822739621704e0cc9",
+        "message": null,
+        "error": null
+      },
+      "target": {
+        "-24": {
+          "name": "Cream",
+          "image_url": "https://sc04.alicdn.com/kf/S6c2add39ffa04564bffa92c22c639b7bC.jpg"
+        },
+        "-1": {
+          "name": "Lavender",
+          "image_url": "https://sc04.alicdn.com/kf/Saa8be4cb586e4eb6881fe0419b4378e0I.jpg"
+        },
+        "-80": {
+          "name": "Black White",
+          "image_url": "https://sc04.alicdn.com/kf/S616ed02bb2e9432a9ef8d7f39fa5a25f3.jpg"
+        },
+        "3327837": {
+          "name": "Black",
+          "image_url": "https://sc04.alicdn.com/kf/S783d5394ead14c42956e0eee6d570652U.jpg"
+        }
+      },
+      "ok": true
+    }
+  ]
+}

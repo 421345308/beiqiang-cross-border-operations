@@ -1,0 +1,58 @@
+{
+  "mode": "preflight",
+  "success_count": 1,
+  "failure_count": 0,
+  "protected_source_count": 30,
+  "results": [
+    {
+      "product_id": "1601939745065",
+      "mode": "preflight",
+      "ok": true,
+      "stage": "preflight_pass",
+      "expected_model": "BQ026-W1 / T5828",
+      "old_title": "Wholesale Mens Lightweight Walking Shoes Breathable Knit Lace-Up Casual Shoes T5828",
+      "new_title": "Wholesale Men's Breathable Knit Lace-Up Walking Shoes Lightweight Casual Sneakers T5828",
+      "title_length": 87,
+      "before_status": "approved",
+      "before_display": "Y",
+      "current_images": [
+        "https://sc04.alicdn.com/kf/H5ad74a72d3de43adad362b4248c04833R.jpg",
+        "https://sc04.alicdn.com/kf/Ha582447fd20b49f09707d49091c5f789w.jpg",
+        "https://sc04.alicdn.com/kf/Hde5aea05672e4e6fbee3a200cebed3f4r.jpg",
+        "https://sc04.alicdn.com/kf/H86d2433ed379468ea2bcdb4cf57d1363b.jpg",
+        "https://sc04.alicdn.com/kf/H31c31b6b27d446acbd344af6f7d5872fO.jpg",
+        "https://sc04.alicdn.com/kf/H655619ad5464422088f8692a71aadcf2S.jpg"
+      ],
+      "target_images": [
+        "https://sc04.alicdn.com/kf/Ha582447fd20b49f09707d49091c5f789w/286385890/Ha582447fd20b49f09707d49091c5f789w.jpg",
+        "https://sc04.alicdn.com/kf/H5ad74a72d3de43adad362b4248c04833R/286385890/H5ad74a72d3de43adad362b4248c04833R.jpg",
+        "https://sc04.alicdn.com/kf/Hde5aea05672e4e6fbee3a200cebed3f4r/286385890/Hde5aea05672e4e6fbee3a200cebed3f4r.jpg",
+        "https://sc04.alicdn.com/kf/H86d2433ed379468ea2bcdb4cf57d1363b/286385890/H86d2433ed379468ea2bcdb4cf57d1363b.jpg",
+        "https://sc04.alicdn.com/kf/H31c31b6b27d446acbd344af6f7d5872fO/286385890/H31c31b6b27d446acbd344af6f7d5872fO.jpg",
+        "https://sc04.alicdn.com/kf/H655619ad5464422088f8692a71aadcf2S/286385890/H655619ad5464422088f8692a71aadcf2S.jpg"
+      ],
+      "target_file_ids": [
+        "33491953835",
+        "33492876409",
+        "33489528772",
+        "33489409447",
+        "33492013612",
+        "33492912298"
+      ],
+      "checks": {
+        "identity_ok": true,
+        "approved_and_live": true,
+        "title_baseline_ok": true,
+        "six_current_images": true,
+        "same_image_set": true,
+        "new_hero_differs": true
+      },
+      "read_before": {
+        "request_id": "213c934417894413035371848",
+        "trace_id": "2101d86517894413032367837e0c33",
+        "message": null,
+        "error": null
+      }
+    }
+  ]
+}

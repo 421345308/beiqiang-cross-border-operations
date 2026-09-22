@@ -1,0 +1,104 @@
+{
+  "timestamp_utc": "2026-09-14T21:59:20.809708+00:00",
+  "source_product_id_protected": "1601825074604",
+  "mode": "apply",
+  "results": [
+    {
+      "product_id": "1601939661419",
+      "expected_model": "BQ009-R1 / L1026",
+      "mode": "apply",
+      "before": {
+        "request_id": "213d4e4917894231346756098",
+        "trace_id": "2101d86517894231343486274e0e89",
+        "message": null,
+        "error": null
+      },
+      "before_status": "approved",
+      "before_display": "Y",
+      "before_title": "Men's Light Weight Casual Sneakers Breathable Mesh Lace-Up Thick Sole Walking Shoes for Daily Wear All Seasons L1026",
+      "before_images": [
+        "https://sc04.alicdn.com/kf/S0111f67ff987467088b1e74d549b974eK.jpg",
+        "https://sc04.alicdn.com/kf/S70360f30048f4c6b9c67ca037c519f3e6.jpg",
+        "https://sc04.alicdn.com/kf/Sb3a29a85d63345fb91c78e89976357cbk.jpg",
+        "https://sc04.alicdn.com/kf/Sb8b1b3e9b74e4fd88d7dc28780e77d9c8.jpg",
+        "https://sc04.alicdn.com/kf/Sa7470868a52643298e7c06605038b3abX.jpg",
+        "https://sc04.alicdn.com/kf/S56cfb49a9fe54764a511721608257a0dE.jpg"
+      ],
+      "before_sku_count": 44,
+      "before_materials": {
+        "Midsole Material": null,
+        "Outsole Material": null
+      },
+      "stage": "submitted",
+      "render": {
+        "request_id": "213c933517894231416528403",
+        "trace_id": "2101fca817894231413377625e0fe2",
+        "message": null,
+        "error": null
+      },
+      "requested_materials": {
+        "Midsole Material": {
+          "value_id": 4,
+          "value_name": "Other"
+        },
+        "Outsole Material": {
+          "value_id": 4,
+          "value_name": "Other"
+        }
+      },
+      "recovery_from_blank_required_attributes": true,
+      "source_not_targeted": true,
+      "ok": true,
+      "update": {
+        "request_id": "210829b717894231511038164",
+        "trace_id": "2101d13c17894231507685253e0dd2",
+        "message": null,
+        "error": null
+      },
+      "readback": {
+        "request_id": "0b51802d17894231594583887",
+        "trace_id": "2101e68f17894231591292720e0c81",
+        "message": null,
+        "error": null
+      },
+      "after_status": "modified",
+      "after_display": "N",
+      "after_title": "Men's Light Weight Casual Sneakers Breathable Mesh Lace-Up Thick Sole Walking Shoes for Daily Wear All Seasons L1026",
+      "after_images": [
+        "https://sc04.alicdn.com/kf/S0111f67ff987467088b1e74d549b974eK.jpg",
+        "https://sc04.alicdn.com/kf/S70360f30048f4c6b9c67ca037c519f3e6.jpg",
+        "https://sc04.alicdn.com/kf/Sb3a29a85d63345fb91c78e89976357cbk.jpg",
+        "https://sc04.alicdn.com/kf/Sb8b1b3e9b74e4fd88d7dc28780e77d9c8.jpg",
+        "https://sc04.alicdn.com/kf/Sa7470868a52643298e7c06605038b3abX.jpg",
+        "https://sc04.alicdn.com/kf/S56cfb49a9fe54764a511721608257a0dE.jpg"
+      ],
+      "after_sku_count": 44,
+      "after_materials": {
+        "Midsole Material": {
+          "attribute_id": 20700,
+          "attribute_name": "Midsole Material",
+          "value_id": 4,
+          "value_name": "Other"
+        },
+        "Outsole Material": {
+          "attribute_id": 191290426,
+          "attribute_name": "Outsole Material",
+          "value_id": 4,
+          "value_name": "Other"
+        }
+      },
+      "checks": {
+        "identity_ok": true,
+        "midsole_is_other": true,
+        "outsole_is_other": true,
+        "title_unchanged": true,
+        "gallery_unchanged": true,
+        "sku_count_unchanged": true,
+        "non_target_fields_unchanged": true,
+        "source_not_targeted": true
+      }
+    }
+  ],
+  "success_count": 1,
+  "failure_count": 0
+}

@@ -1,0 +1,72 @@
+{
+  "finished_at": "2026-09-14T11:26:44.524710+00:00",
+  "mode": "preflight",
+  "fail_fast": true,
+  "results": [
+    {
+      "product_id": "1601939693331",
+      "execute": false,
+      "ok": true,
+      "stage": "preflight_pass",
+      "before_keywords": [
+        ""
+      ],
+      "requested_keywords": [
+        "walking style shoes",
+        "wide toe box walking shoes",
+        "large size walking shoes"
+      ],
+      "before_status": "approved",
+      "before_display": "Y",
+      "request": {
+        "request_id": "213c932b17893851893625373",
+        "trace_id": "2101d94717893851890485287e103d",
+        "error": null
+      }
+    },
+    {
+      "product_id": "1601939667426",
+      "execute": false,
+      "ok": true,
+      "stage": "preflight_pass",
+      "before_keywords": [
+        ""
+      ],
+      "requested_keywords": [
+        "casual walking shoes",
+        "lightweight walking shoes",
+        "breathable knit walking shoes"
+      ],
+      "before_status": "approved",
+      "before_display": "Y",
+      "request": {
+        "request_id": "213f5a2117893851963773717",
+        "trace_id": "2101d86517893851960402374e0c47",
+        "error": null
+      }
+    },
+    {
+      "product_id": "1601939754004",
+      "execute": false,
+      "ok": true,
+      "stage": "preflight_pass",
+      "before_keywords": [
+        ""
+      ],
+      "requested_keywords": [
+        "custom logo walking shoes",
+        "wide toe box shoes OEM",
+        "private label walking shoes"
+      ],
+      "before_status": "approved",
+      "before_display": "Y",
+      "request": {
+        "request_id": "0b80d2d617893852034413190",
+        "trace_id": "2101e68f17893852031035098e0ca2",
+        "error": null
+      }
+    }
+  ],
+  "success_count": 3,
+  "failure_count": 0
+}

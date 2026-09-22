@@ -1,0 +1,104 @@
+{
+  "timestamp_utc": "2026-09-14T22:00:16.159734+00:00",
+  "source_product_id_protected": "1601825074604",
+  "mode": "apply",
+  "results": [
+    {
+      "product_id": "1601939675350",
+      "expected_model": "BQ009-W1 / L1026",
+      "mode": "apply",
+      "before": {
+        "request_id": "0b80d2d617894231910413406",
+        "trace_id": "210334ab17894231907107288e0d1b",
+        "message": null,
+        "error": null
+      },
+      "before_status": "approved",
+      "before_display": "Y",
+      "before_title": "Wholesale Men's Casual Sneakers Breathable Mesh Lace Up Thick Sole Walking Shoes Factory Supply L1026",
+      "before_images": [
+        "https://sc04.alicdn.com/kf/S94bcbff54b064b5f8e566c5322b7a71dh.jpg",
+        "https://sc04.alicdn.com/kf/Sb1a49325ddca4c9d89ba30b0d650ac10z.jpg",
+        "https://sc04.alicdn.com/kf/Seff7efc59e1c4d2990cb3296fa6396edD.jpg",
+        "https://sc04.alicdn.com/kf/S2b170910a30d4cae8102ec3994a377781.jpg",
+        "https://sc04.alicdn.com/kf/Sb49934037cff4deab55804229f08d4953.jpg",
+        "https://sc04.alicdn.com/kf/S4dddceaf1267492a9a7712bafbc56c0bb.jpg"
+      ],
+      "before_sku_count": 44,
+      "before_materials": {
+        "Midsole Material": null,
+        "Outsole Material": null
+      },
+      "stage": "submitted",
+      "render": {
+        "request_id": "0bab02fe17894231981596780",
+        "trace_id": "210313ea17894231978443025e0f1e",
+        "message": null,
+        "error": null
+      },
+      "requested_materials": {
+        "Midsole Material": {
+          "value_id": 4,
+          "value_name": "Other"
+        },
+        "Outsole Material": {
+          "value_id": 4,
+          "value_name": "Other"
+        }
+      },
+      "recovery_from_blank_required_attributes": true,
+      "source_not_targeted": true,
+      "ok": true,
+      "update": {
+        "request_id": "21501b6717894232067466045",
+        "trace_id": "2103346417894232064037645eb283",
+        "message": null,
+        "error": null
+      },
+      "readback": {
+        "request_id": "213c934417894232147913300",
+        "trace_id": "2103243417894232144652363e0d7e",
+        "message": null,
+        "error": null
+      },
+      "after_status": "modified",
+      "after_display": "N",
+      "after_title": "Wholesale Men's Casual Sneakers Breathable Mesh Lace Up Thick Sole Walking Shoes Factory Supply L1026",
+      "after_images": [
+        "https://sc04.alicdn.com/kf/S94bcbff54b064b5f8e566c5322b7a71dh.jpg",
+        "https://sc04.alicdn.com/kf/Sb1a49325ddca4c9d89ba30b0d650ac10z.jpg",
+        "https://sc04.alicdn.com/kf/Seff7efc59e1c4d2990cb3296fa6396edD.jpg",
+        "https://sc04.alicdn.com/kf/S2b170910a30d4cae8102ec3994a377781.jpg",
+        "https://sc04.alicdn.com/kf/Sb49934037cff4deab55804229f08d4953.jpg",
+        "https://sc04.alicdn.com/kf/S4dddceaf1267492a9a7712bafbc56c0bb.jpg"
+      ],
+      "after_sku_count": 44,
+      "after_materials": {
+        "Midsole Material": {
+          "attribute_id": 20700,
+          "attribute_name": "Midsole Material",
+          "value_id": 4,
+          "value_name": "Other"
+        },
+        "Outsole Material": {
+          "attribute_id": 191290426,
+          "attribute_name": "Outsole Material",
+          "value_id": 4,
+          "value_name": "Other"
+        }
+      },
+      "checks": {
+        "identity_ok": true,
+        "midsole_is_other": true,
+        "outsole_is_other": true,
+        "title_unchanged": true,
+        "gallery_unchanged": true,
+        "sku_count_unchanged": true,
+        "non_target_fields_unchanged": true,
+        "source_not_targeted": true
+      }
+    }
+  ],
+  "success_count": 1,
+  "failure_count": 0
+}

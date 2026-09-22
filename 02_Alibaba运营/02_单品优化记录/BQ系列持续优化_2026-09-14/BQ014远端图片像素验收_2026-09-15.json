@@ -1,0 +1,31 @@
+{
+  "family": "BQ014/A507",
+  "review_date": "2026-09-15",
+  "result": "PASS",
+  "method": "Opened all 18 uploaded Alibaba CDN image slots in Chrome, waited for real pixels to load, and visually compared shoe identity, color, sole and slip-on structure against the approved local source-image sets.",
+  "checks": {
+    "remote_image_slots": 18,
+    "all_loaded_as_real_pixels": true,
+    "all_match_local_color_and_geometry": true,
+    "no_wrong_model_or_color_mix": true,
+    "no_missing_sole_or_crop_damage": true,
+    "no_ai_shape_color_sole_or_closure_change": true
+  },
+  "products": {
+    "1601939669411": {
+      "role": "BQ014-W1",
+      "color_anchor": "Black White",
+      "result": "PASS"
+    },
+    "1601939658415": {
+      "role": "BQ014-R1",
+      "color_anchor": "Beige White",
+      "result": "PASS"
+    },
+    "1601939608686": {
+      "role": "BQ014-O1",
+      "color_anchor": "All Black",
+      "result": "PASS"
+    }
+  }
+}

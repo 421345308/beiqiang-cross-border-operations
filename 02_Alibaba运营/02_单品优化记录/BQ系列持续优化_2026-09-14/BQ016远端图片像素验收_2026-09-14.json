@@ -1,0 +1,23 @@
+{
+  "audit_date": "2026-09-14",
+  "sku_family": "BQ016 / 201",
+  "method": "Chrome直接打开Alibaba CDN文件，等待真实像素加载后逐张目视复核",
+  "result": "PASS_WITH_FOLLOW_UP",
+  "loaded_and_verified": 8,
+  "items": [
+    {"role": "black_clean", "url": "https://sc04.alicdn.com/kf/Hcd5bf647114848099e67d00454a5bb67U.jpg", "result": "PASS"},
+    {"role": "pink_clean", "url": "https://sc04.alicdn.com/kf/H0b59d05dd86f4aecabbff6b911529061B.jpg", "result": "PASS"},
+    {"role": "zebra_clean", "url": "https://sc04.alicdn.com/kf/Ha9b149513980463b8a4d46e0f8d07cf76.jpg", "result": "PASS"},
+    {"role": "upper_graphic", "url": "https://sc04.alicdn.com/kf/Hd4fa686cbf544d8a8c3b30ccf2c7cf82l.jpg", "result": "PASS_PIXEL_RISK_COPY"},
+    {"role": "sole_graphic", "url": "https://sc04.alicdn.com/kf/Hb219628f14c04715816edd2c010b57ebu.jpg", "result": "PASS_PIXEL_RISK_COPY"},
+    {"role": "scene_graphic", "url": "https://sc04.alicdn.com/kf/H96e640d9b55447e99c902df71957d9a5v.jpg", "result": "PASS_PIXEL_RISK_COPY"},
+    {"role": "fit_graphic", "url": "https://sc04.alicdn.com/kf/H87ec348813254bfdba5ab388f33ed200G.jpg", "result": "PASS_PIXEL_RISK_COPY"},
+    {"role": "colors_graphic", "url": "https://sc04.alicdn.com/kf/H3ccec697c5d241448007e0ff7611c9f6X.jpg", "result": "PASS_PIXEL_RISK_COPY"}
+  ],
+  "pixel_findings": [
+    "八张文件均能加载为真实鞋图，无空图、坏图、错款、AI改色或鞋型结构变化。",
+    "三张M1分别为黑、粉、斑马纹真实颜色，主体完整。",
+    "部分辅助图含Cushion Feel、Stable Step或gold-thread等证据边界偏软文案，不作为最终放行版本。"
+  ],
+  "next_action": "当前三条为modified/N，禁止重复提交；已另备并视觉复核纯实拍六图组，待本轮审核恢复approved/Y后一次性替换辅助图并重新验收。"
+}

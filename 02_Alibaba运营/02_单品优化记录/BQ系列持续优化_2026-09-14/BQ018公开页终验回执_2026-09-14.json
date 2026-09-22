@@ -1,0 +1,65 @@
+{
+  "checked_at": "2026-09-14T19:02:00+08:00",
+  "family": "BQ018/A116",
+  "source_product_id": "10000044007878",
+  "source_policy": "PROTECT_SOURCE",
+  "result": "PUBLIC_QA_PASS",
+  "method": [
+    "OpenAPI approved/display and field readback",
+    "Alibaba.com public page DOM/AX verification",
+    "public first-image visual screenshot review"
+  ],
+  "products": [
+    {
+      "product_id": "1601939726170",
+      "role": "W1",
+      "status": "approved",
+      "display": "Y",
+      "public_url": "https://www.alibaba.com/product-detail/_1601939726170.html",
+      "model": "BQ018-W1 / A116",
+      "title_verified": true,
+      "image_count": 6,
+      "sku_count": 44,
+      "color_count": 4,
+      "size_range": "EU 35-45",
+      "closure": "Lace-up",
+      "price_unit": "pairs",
+      "hero_visual": "Black/White complete real shoe; structure and outsole match A116",
+      "checks_passed": true
+    },
+    {
+      "product_id": "1601939641542",
+      "role": "R1",
+      "status": "approved",
+      "display": "Y",
+      "public_url": "https://www.alibaba.com/product-detail/_1601939641542.html",
+      "model": "BQ018-R1 / A116",
+      "title_verified": true,
+      "image_count": 6,
+      "sku_count": 44,
+      "color_count": 4,
+      "size_range": "EU 35-45",
+      "closure": "Lace-up",
+      "price_unit": "pairs",
+      "hero_visual": "Cream complete real shoe; structure and outsole match A116",
+      "checks_passed": true
+    },
+    {
+      "product_id": "1601939589890",
+      "role": "O1",
+      "status": "approved",
+      "display": "Y",
+      "public_url": "https://www.alibaba.com/product-detail/_1601939589890.html",
+      "model": "BQ018-O1 / A116",
+      "title_verified": true,
+      "image_count": 6,
+      "sku_count": 44,
+      "color_count": 4,
+      "size_range": "EU 35-45",
+      "closure": "Lace-up",
+      "price_unit": "pairs",
+      "hero_visual": "All Black complete real shoe; structure and outsole match A116",
+      "checks_passed": true
+    }
+  ]
+}

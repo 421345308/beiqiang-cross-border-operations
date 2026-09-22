@@ -1,0 +1,84 @@
+{
+  "finished_at": "2026-09-14T08:15:37.913231+00:00",
+  "success_count": 1,
+  "failure_count": 0,
+  "protected_product_ids": [
+    "10000042821848",
+    "10000043991998",
+    "10000044004948",
+    "10000044024484",
+    "10000044041008",
+    "10000044041031",
+    "1601825074604",
+    "1601838963947",
+    "1601839073314"
+  ],
+  "results": [
+    {
+      "product_id": "1601939691340",
+      "ok": true,
+      "stage": "verified",
+      "expected_model": "BQ024-O1 / A830",
+      "old_title": "Custom Logo Breathable Light Weight Knit Slip-On Walking Shoes OEM ODM Private Label Footwear Supplier Model A830",
+      "new_title": "Custom Logo Black Yellow Knit Slip On Walking Shoes OEM ODM Private Label Casual Sneakers A830",
+      "old_images": [
+        "https://sc04.alicdn.com/kf/Hee39af5a40e4479a86c75954f000f2466.jpg",
+        "https://sc04.alicdn.com/kf/Sa10b848b889e4326a22bd10b55196d040.jpg",
+        "https://sc04.alicdn.com/kf/Sff2b4e2016594977ac6234c8f8ae295dY.jpg",
+        "https://sc04.alicdn.com/kf/S46372abc319041318ecfea6fc918bbf0T.jpg",
+        "https://sc04.alicdn.com/kf/S3c050369cf164ea1b61c40e22b5b6c3cR.jpg",
+        "https://sc04.alicdn.com/kf/S073016556e4f4af682f2beb656e53ac7s.jpg"
+      ],
+      "new_images": [
+        "https://sc04.alicdn.com/kf/S3a1525fbe2294800bec12e24fe3c7d33E.jpg",
+        "https://sc04.alicdn.com/kf/Sa10b848b889e4326a22bd10b55196d040.jpg",
+        "https://sc04.alicdn.com/kf/Sff2b4e2016594977ac6234c8f8ae295dY.jpg",
+        "https://sc04.alicdn.com/kf/S46372abc319041318ecfea6fc918bbf0T.jpg",
+        "https://sc04.alicdn.com/kf/S3c050369cf164ea1b61c40e22b5b6c3cR.jpg",
+        "https://sc04.alicdn.com/kf/S073016556e4f4af682f2beb656e53ac7s.jpg"
+      ],
+      "before_status": "approved",
+      "after_status": "modified",
+      "before_display": "Y",
+      "after_display": "N",
+      "checks": {
+        "identity_ok": true,
+        "title_ok": true,
+        "hero_ok": true,
+        "m2_m6_ok": true,
+        "other_fields_unchanged": true,
+        "source_not_targeted": true
+      },
+      "snapshot_diff_paths": [],
+      "preserved_reuploads": [],
+      "hero_upload": {
+        "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\02_单品优化记录\\BQ系列持续优化_2026-09-14\\BQ024首图候选\\O1_black_yellow_studio.jpg",
+        "file_id": "30151073706",
+        "url": "//sc04.alicdn.com/kf/S3a1525fbe2294800bec12e24fe3c7d33E/286385890/S3a1525fbe2294800bec12e24fe3c7d33E.jpg",
+        "request_id": "213d4e4917893737147686480",
+        "trace_id": "2101fb9317893737129964029e0da1",
+        "message": null,
+        "error": null
+      },
+      "video": {
+        "video_id": "AAGnjmk4AOWGexucDVhQxsS4",
+        "request_id": "213c933517893737215913895",
+        "trace_id": "2101fb9317893737212681336e1056",
+        "message": "video relation limit",
+        "error": null
+      },
+      "update": {
+        "request_id": "2105016d17893737285287134",
+        "trace_id": "2101e68f17893737281977972e0b55",
+        "message": null,
+        "error": null
+      },
+      "readback": {
+        "request_id": "0bbb3b2417893737369082030",
+        "trace_id": "2101d13c17893737365917684e0e56",
+        "message": null,
+        "error": null
+      }
+    }
+  ]
+}

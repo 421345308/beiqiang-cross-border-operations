@@ -1,0 +1,45 @@
+{
+  "date": "2026-09-14",
+  "sku_family": "BQ030 / A811",
+  "source_product_id_protected": "1601839050756",
+  "method": "Chrome direct Alibaba CDN pixel inspection after upload; gray placeholders were reloaded and were not accepted as evidence",
+  "result": "PASS_WITH_FOLLOWUP",
+  "images": [
+    {
+      "url": "https://sc04.alicdn.com/kf/S4b39d8d97c2d4abfadc534a9ffde7d70u.jpg",
+      "role": "Green clean product image",
+      "pixel_result": "PASS"
+    },
+    {
+      "url": "https://sc04.alicdn.com/kf/Sc69e5819f5e941948c6fa7102227a28dl.jpg",
+      "role": "Grey clean product image",
+      "pixel_result": "PASS"
+    },
+    {
+      "url": "https://sc04.alicdn.com/kf/Se37387c09d3e4f59b9112440a3d48d215.jpg",
+      "role": "Purple clean product image",
+      "pixel_result": "PASS_AFTER_RELOAD"
+    },
+    {
+      "url": "https://sc04.alicdn.com/kf/S249c57b03c3b4ae492a756b38db06344W.jpg",
+      "role": "Pink clean product image",
+      "pixel_result": "PASS_AFTER_RELOAD"
+    },
+    {
+      "url": "https://sc04.alicdn.com/kf/S3868447396d443509163e8086cc3f5b9G.jpg",
+      "role": "Breathable mesh upper proof image",
+      "pixel_result": "PASS_AFTER_RELOAD"
+    },
+    {
+      "url": "https://sc04.alicdn.com/kf/Ha7260bed39cb4b75ac98fc5ef826a286O.jpg",
+      "role": "Kids lace-up fit and EU31-40 proof image",
+      "pixel_result": "PASS"
+    }
+  ],
+  "geometry_check": "All six files retain the same A811 knit upper, lace-up closure, outsole profile and real colors; no AI geometry, outsole, closure or color change was used.",
+  "follow_up": {
+    "issue": "Historical sale-property thumbnails are cyclically misbound: Green points to Purple, Grey to Pink, Purple to Grey, and Pink to Green.",
+    "repair_script": "08_工具链/01_业务脚本/商品图片与审计/repair_bq030_color_thumbnails.py",
+    "gate": "Do not resubmit while modified/N. Run dry-run only after each expansion returns approved/Y, then apply one saleProp-only repair and verify all non-image fields remain unchanged."
+  }
+}

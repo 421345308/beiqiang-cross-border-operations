@@ -1,0 +1,70 @@
+{
+  "date": "2026-09-15",
+  "operation": "BQ011 R1/O1 title intent correction",
+  "transport_note": "The two-product execute command reached the 30-second aggregation boundary without returning stdout. No retry was issued. Independent product.get readback confirmed both writes were accepted.",
+  "protected_source_product_id": "10000043725883",
+  "source_targeted": false,
+  "preflight": {
+    "success_count": 2,
+    "failure_count": 0,
+    "products": [
+      {
+        "product_id": "1601939666421",
+        "expected_model": "BQ011-R1 / A002",
+        "old_title": "Men's Casual Walking Shoes Slip-On Round Toe Lightweight Breathable Cushion Midsole Textile Daily Sneakers OEM ODM",
+        "new_title": "Wholesale Men's Breathable Textile Slip-On Walking Shoes Lightweight Casual Sneakers EU 39-45 A002",
+        "title_length": 98,
+        "before_status": "approved",
+        "before_display": "Y",
+        "image_count": 6,
+        "sku_count": 21,
+        "read_request_id": "213f5a2117894408186397200",
+        "read_trace_id": "2101fb9317894408183221271e10da"
+      },
+      {
+        "product_id": "1601939606803",
+        "expected_model": "BQ011-O1 / A002",
+        "old_title": "OEM ODM Men's Casual Shoes Slip-On Breathable Lightweight Textile Walking Footwear Wholesale",
+        "new_title": "Wholesale Men's Breathable Textile Slip-On Walking Shoes Lightweight Casual Sneakers OEM ODM A002",
+        "title_length": 97,
+        "before_status": "approved",
+        "before_display": "Y",
+        "image_count": 6,
+        "sku_count": 21,
+        "read_request_id": "21546a1d17894408273755156",
+        "read_trace_id": "2101c5a717894408270552951e0bc3"
+      }
+    ]
+  },
+  "independent_readback": {
+    "success_count": 2,
+    "products": [
+      {
+        "product_id": "1601939666421",
+        "model": "BQ011-R1 / A002",
+        "title": "Wholesale Men's Breathable Textile Slip-On Walking Shoes Lightweight Casual Sneakers EU 39-45 A002",
+        "status": "modified",
+        "display": "N",
+        "image_count": 6,
+        "sku_count": 21,
+        "colors": ["Grey Black", "Grey Green", "Grey White"],
+        "read_request_id": "212c41d317894408809007594",
+        "read_trace_id": "2101d94717894408805831149e0ef3"
+      },
+      {
+        "product_id": "1601939606803",
+        "model": "BQ011-O1 / A002",
+        "title": "Wholesale Men's Breathable Textile Slip-On Walking Shoes Lightweight Casual Sneakers OEM ODM A002",
+        "status": "modified",
+        "display": "N",
+        "image_count": 6,
+        "sku_count": 21,
+        "colors": ["Grey Black", "Grey Green", "Grey White"],
+        "read_request_id": "21546a1d17894408819403927",
+        "read_trace_id": "2101d94717894408816036288e105e"
+      }
+    ]
+  },
+  "result": "SUBMITTED_WAIT_REVIEW",
+  "next_action": "Do not resubmit. Poll the same two product IDs. After approved/Y, verify title, Midsole/Outsole Other, six images, 21 SKUs, three colors, EU39-45, model, Pairs price and inquiry/contact entry on independent buyer pages."
+}

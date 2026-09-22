@@ -1,0 +1,24 @@
+{
+  "date": "2026-09-14",
+  "product_id": "1601939615744",
+  "model": "BQ030-O1 / A811",
+  "source_product_id_protected": "1601839050756",
+  "event": "The saleProp update request was sent after a successful dry-run, but the immediate post-submit product.get failed during a transient TLS interruption. No second update was sent.",
+  "authoritative_recovery_readback": {
+    "status": "modified",
+    "display": "N",
+    "title": "Kids Shoes Wholesale Knit Lace-Up Custom Logo OEM ODM EU 31-40 A811",
+    "image_count": 6,
+    "sku_count": 40,
+    "colors": {
+      "Green": "https://sc04.alicdn.com/kf/S4b39d8d97c2d4abfadc534a9ffde7d70u.jpg",
+      "Grey": "https://sc04.alicdn.com/kf/Sc69e5819f5e941948c6fa7102227a28dl.jpg",
+      "Purple": "https://sc04.alicdn.com/kf/Se37387c09d3e4f59b9112440a3d48d215.jpg",
+      "Pink": "https://sc04.alicdn.com/kf/S249c57b03c3b4ae492a756b38db06344W.jpg"
+    },
+    "request_id": "0b51802d17893936024532635",
+    "trace_id": "2103243417893936021106341"
+  },
+  "result": "SUBMISSION_CONFIRMED_BY_READBACK",
+  "next_action": "Poll only until approved/Y, then perform buyer-page final QA. Do not resubmit."
+}

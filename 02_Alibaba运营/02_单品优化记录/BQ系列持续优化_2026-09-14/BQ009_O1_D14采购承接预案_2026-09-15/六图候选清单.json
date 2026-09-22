@@ -1,0 +1,23 @@
+{
+  "date": "2026-09-15",
+  "product_id": "1601939721165",
+  "model": "BQ009-O1 / L1026",
+  "source_product_id_protected": "1601825074604",
+  "platform_write": false,
+  "decision": "PROTECT_TITLE_AND_M1_UNTIL_D14",
+  "candidate_gallery": [
+    {"position": 1, "file": "01_M1_PROTECT_all_black_three_quarter.jpg", "role": "protected All Black search hero", "width": 800, "height": 800, "sha256": "4899DF3EC89EFB7694ADEE355C15DEDA63F37BD6269103827F50FFFA77CAB6F9"},
+    {"position": 2, "file": "02_all_black_pair_three_quarter.jpg", "source": "R5VM8704.JPG", "role": "All Black pair and three-quarter product identity", "width": 800, "height": 800, "sha256": "25BBBBB457351CBAB5D4308A1A5608EB78E045B63199A9F66A9555E2CEC0845D"},
+    {"position": 3, "file": "03_all_black_top_lace_mesh.jpg", "source": "5M4A7614.JPG", "role": "top view, lacing, opening and visible mesh", "width": 800, "height": 800, "sha256": "3D9D7D2ECBFBCC4060E73ED0C84E3302F278F2AEC55CEEE5F4AC31AC270964AF"},
+    {"position": 4, "file": "04_all_black_outsole_proof.jpg", "source": "R5VM8710.JPG", "role": "outsole tread and sole profile appearance", "width": 800, "height": 800, "sha256": "D233B08D7572C247207A39883E4ABD5B6D043473DF080AD9C3F980A707FC4201"},
+    {"position": 5, "file": "05_four_color_family.jpg", "source": "R5VM8692.JPG", "role": "four verified colorways", "width": 800, "height": 800, "sha256": "E6C824D780E1289FC68746490448C01DC376F1FC3278AD7FFD83DDBFAE33FF21"},
+    {"position": 6, "file": "06_all_black_heel_view.jpg", "source": "5M4A7606.JPG", "role": "heel, pull tab and rear sole structure", "width": 800, "height": 800, "sha256": "C378B3F0F5700CC2D48D886DDBAFEC93B857F4511864D3EB997773C73F962438"}
+  ],
+  "excluded": [
+    {"file": "01 (1).jpg", "reason": "Chinese promotional text"},
+    {"file": "01 (2).jpg", "reason": "Chinese promotional text"},
+    {"file": "01 (7).jpg", "reason": "Chinese text and unsupported material decomposition"},
+    {"file": "R5VM8718.JPG", "reason": "packing tissue visible in the top-view pair; cleaner single-shoe top view selected"}
+  ],
+  "trigger": "At D14, apply only if related clicks or visits continue without a qualified inquiry and all live preflight gates pass."
+}

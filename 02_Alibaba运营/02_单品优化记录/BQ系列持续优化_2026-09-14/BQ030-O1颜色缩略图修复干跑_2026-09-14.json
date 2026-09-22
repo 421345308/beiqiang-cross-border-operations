@@ -1,0 +1,46 @@
+{
+  "timestamp_utc": "2026-09-14T13:43:20.126400+00:00",
+  "source_product_id_protected": "1601839050756",
+  "mode": "dry-run",
+  "results": [
+    {
+      "product_id": "1601939615744",
+      "expected_model": "BQ030-O1 / A811",
+      "mode": "dry-run",
+      "before_status": "approved",
+      "before_display": "Y",
+      "before": {
+        "request_id": "0b80d2d617893933898657304",
+        "trace_id": "2103245817893933895185969e0ebb",
+        "message": null,
+        "error": null
+      },
+      "stage": "prepared",
+      "render": {
+        "request_id": "21501b8d17893933973836845",
+        "trace_id": "2103346a17893933970818005e0e55",
+        "message": null,
+        "error": null
+      },
+      "target": {
+        "216016296": {
+          "name": "Green",
+          "image_url": "https://sc04.alicdn.com/kf/S4b39d8d97c2d4abfadc534a9ffde7d70u.jpg"
+        },
+        "3483425": {
+          "name": "Grey",
+          "image_url": "https://sc04.alicdn.com/kf/Sc69e5819f5e941948c6fa7102227a28dl.jpg"
+        },
+        "3851110": {
+          "name": "Purple",
+          "image_url": "https://sc04.alicdn.com/kf/Se37387c09d3e4f59b9112440a3d48d215.jpg"
+        },
+        "3328925": {
+          "name": "Pink",
+          "image_url": "https://sc04.alicdn.com/kf/S249c57b03c3b4ae492a756b38db06344W.jpg"
+        }
+      },
+      "ok": true
+    }
+  ]
+}

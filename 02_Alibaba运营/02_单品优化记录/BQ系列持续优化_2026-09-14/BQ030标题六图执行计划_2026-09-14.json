@@ -1,0 +1,78 @@
+{
+  "family": "BQ030/A811",
+  "source_product_id": "1601839050756",
+  "source_policy": "PROTECT_SOURCE",
+  "market_evidence": {
+    "period": "Alibaba Product Advisor Week 35 and Keyword Advisor recent 7 days, checked 2026-09-14",
+    "product_performance": {
+      "source": {"product_id":"1601839050756","search_impressions":4,"search_clicks":0,"visitors":0},
+      "W1": {"product_id":"1601939672381","search_impressions":0,"search_clicks":0,"visitors":0},
+      "R1": {"product_id":"1601939679363","search_impressions":0,"search_clicks":0,"visitors":0},
+      "O1": {"product_id":"1601939615744","search_impressions":0,"search_clicks":0,"visitors":0}
+    },
+    "keyword_signals": [
+      {"keyword":"kids shoes","search_index":167,"growth":"+35.7%","ctr":"13.84%","seller_scale_index":19,"use":"core search backbone"},
+      {"keyword":"kids shoes wholesale","search_index":24,"growth":"+32.8%","ctr":"3.53%","seller_scale_index":4,"use":"W1/O1 commercial intent"},
+      {"keyword":"kids school shoes","search_index":24,"growth":"-5.8%","ctr":"9.76%","seller_scale_index":7,"use":"R1 school intent"},
+      {"keyword":"kids walking shoes","search_index":5,"growth":"+166.6%","ctr":"0%","seller_scale_index":2,"use":"evidence-backed structural modifier only"}
+    ],
+    "rejected": [
+      {"term":"kids running shoes / sport shoes","reason":"product evidence and category support walking/casual use, not performance sport positioning"},
+      {"term":"anti-slip / orthopedic / barefoot / wide toe box","reason":"no verified test, medical or wide-fit evidence"},
+      {"term":"fixed spring autumn claim","reason":"not needed for the three intended search roles"}
+    ]
+  },
+  "asset_evidence": {
+    "source_sheet": "01_产品资产/02_可发布素材/00_最终上传/BQ030_A811/00_上架填写表.md",
+    "facts": ["Kids shoes","Knit textile upper","Lace-Up","EU 31-40","Regular Fit","Green Grey Purple Pink"],
+    "all_selected_images_visually_checked": true,
+    "hero_policy": "Use four real clean 900x900 color images; no AI geometry or color generation",
+    "excluded": [
+      "01_主图/04_sole.jpg and 02_详情页/04_sole.jpg: sole-performance implication not required",
+      "02_详情页/02_info.jpg: not required for search gallery",
+      "01_主图/05_colors.jpg: collage is weaker than individual color images",
+      "01_主图/06_scene.jpg: weaker than real product and fit evidence"
+    ]
+  },
+  "products": [
+    {
+      "product_id": "1601939672381",
+      "expected_model": "BQ030-W1 / A811",
+      "title": "Wholesale Kids Shoes Knit Lace-Up Walking Shoes EU 31-40 A811",
+      "image_files": [
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/BQ030_A811/03_颜色图/green.jpg",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/BQ030_A811/03_颜色图/grey.jpg",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/BQ030_A811/03_颜色图/purple.jpg",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/BQ030_A811/03_颜色图/pink.jpg",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/BQ030_A811/01_主图/02_upper.jpg",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/BQ030_A811/01_主图/03_fit.jpg"
+      ]
+    },
+    {
+      "product_id": "1601939679363",
+      "expected_model": "BQ030-R1 / A811",
+      "title": "Kids School Shoes Knit Lace-Up Walking Shoes Lightweight EU 31-40 A811",
+      "image_files": [
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/BQ030_A811/03_颜色图/pink.jpg",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/BQ030_A811/03_颜色图/purple.jpg",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/BQ030_A811/03_颜色图/grey.jpg",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/BQ030_A811/03_颜色图/green.jpg",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/BQ030_A811/01_主图/03_fit.jpg",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/BQ030_A811/01_主图/02_upper.jpg"
+      ]
+    },
+    {
+      "product_id": "1601939615744",
+      "expected_model": "BQ030-O1 / A811",
+      "title": "Kids Shoes Wholesale Knit Lace-Up Custom Logo OEM ODM EU 31-40 A811",
+      "image_files": [
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/BQ030_A811/03_颜色图/purple.jpg",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/BQ030_A811/03_颜色图/green.jpg",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/BQ030_A811/03_颜色图/grey.jpg",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/BQ030_A811/03_颜色图/pink.jpg",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/BQ030_A811/01_主图/02_upper.jpg",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/BQ030_A811/01_主图/03_fit.jpg"
+      ]
+    }
+  ]
+}

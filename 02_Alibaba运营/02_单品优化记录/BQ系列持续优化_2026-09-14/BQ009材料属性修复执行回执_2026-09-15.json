@@ -1,0 +1,291 @@
+{
+  "timestamp_utc": "2026-09-14T21:43:56.287655+00:00",
+  "source_product_id_protected": "1601825074604",
+  "mode": "apply",
+  "results": [
+    {
+      "product_id": "1601939661419",
+      "expected_model": "BQ009-R1 / L1026",
+      "mode": "apply",
+      "before": {
+        "request_id": "212c6fc617894221458443724",
+        "trace_id": "2101dd0617894221455161328e0cc4",
+        "message": null,
+        "error": null
+      },
+      "before_status": "approved",
+      "before_display": "Y",
+      "before_title": "Men's Light Weight Casual Sneakers Breathable Mesh Lace-Up Thick Sole Walking Shoes for Daily Wear All Seasons L1026",
+      "before_images": [
+        "https://sc04.alicdn.com/kf/S0111f67ff987467088b1e74d549b974eK.jpg",
+        "https://sc04.alicdn.com/kf/S70360f30048f4c6b9c67ca037c519f3e6.jpg",
+        "https://sc04.alicdn.com/kf/Sb3a29a85d63345fb91c78e89976357cbk.jpg",
+        "https://sc04.alicdn.com/kf/Sb8b1b3e9b74e4fd88d7dc28780e77d9c8.jpg",
+        "https://sc04.alicdn.com/kf/Sa7470868a52643298e7c06605038b3abX.jpg",
+        "https://sc04.alicdn.com/kf/S56cfb49a9fe54764a511721608257a0dE.jpg"
+      ],
+      "before_sku_count": 44,
+      "before_materials": {
+        "Midsole Material": {
+          "attribute_id": 20700,
+          "attribute_name": "Midsole Material",
+          "value_id": -1,
+          "value_name": "EVA, Confirm Before Bulk Order"
+        },
+        "Outsole Material": {
+          "attribute_id": 191290426,
+          "attribute_name": "Outsole Material",
+          "value_id": -1,
+          "value_name": "EVA, Confirm Before Bulk Order"
+        }
+      },
+      "stage": "submitted",
+      "render": {
+        "request_id": "213c934417894221529135499",
+        "trace_id": "2101e68f17894221525871952e0b57",
+        "message": null,
+        "error": null
+      },
+      "requested_materials": {
+        "Midsole Material": {
+          "value_id": -1,
+          "value_name": "Other"
+        },
+        "Outsole Material": {
+          "value_id": -1,
+          "value_name": "Other"
+        }
+      },
+      "source_not_targeted": true,
+      "ok": false,
+      "update": {
+        "request_id": "213e759c17894221615682968",
+        "trace_id": "2101d94717894221612422775e105e",
+        "message": null,
+        "error": null
+      },
+      "readback": {
+        "request_id": "213f5a2117894221697951511",
+        "trace_id": "2101d94717894221694567565e0f98",
+        "message": null,
+        "error": null
+      },
+      "after_status": "modified",
+      "after_display": "N",
+      "after_title": "Men's Light Weight Casual Sneakers Breathable Mesh Lace-Up Thick Sole Walking Shoes for Daily Wear All Seasons L1026",
+      "after_images": [
+        "https://sc04.alicdn.com/kf/S0111f67ff987467088b1e74d549b974eK.jpg",
+        "https://sc04.alicdn.com/kf/S70360f30048f4c6b9c67ca037c519f3e6.jpg",
+        "https://sc04.alicdn.com/kf/Sb3a29a85d63345fb91c78e89976357cbk.jpg",
+        "https://sc04.alicdn.com/kf/Sb8b1b3e9b74e4fd88d7dc28780e77d9c8.jpg",
+        "https://sc04.alicdn.com/kf/Sa7470868a52643298e7c06605038b3abX.jpg",
+        "https://sc04.alicdn.com/kf/S56cfb49a9fe54764a511721608257a0dE.jpg"
+      ],
+      "after_sku_count": 44,
+      "after_materials": {
+        "Midsole Material": null,
+        "Outsole Material": null
+      },
+      "checks": {
+        "identity_ok": true,
+        "midsole_is_other": false,
+        "outsole_is_other": false,
+        "title_unchanged": true,
+        "gallery_unchanged": true,
+        "sku_count_unchanged": true,
+        "non_target_fields_unchanged": true,
+        "source_not_targeted": true
+      }
+    },
+    {
+      "product_id": "1601939675350",
+      "expected_model": "BQ009-W1 / L1026",
+      "mode": "apply",
+      "before": {
+        "request_id": "0bab02fe17894221785153123",
+        "trace_id": "2101d13c17894221782021717e0d4e",
+        "message": null,
+        "error": null
+      },
+      "before_status": "approved",
+      "before_display": "Y",
+      "before_title": "Wholesale Men's Casual Sneakers Breathable Mesh Lace Up Thick Sole Walking Shoes Factory Supply L1026",
+      "before_images": [
+        "https://sc04.alicdn.com/kf/S94bcbff54b064b5f8e566c5322b7a71dh.jpg",
+        "https://sc04.alicdn.com/kf/Sb1a49325ddca4c9d89ba30b0d650ac10z.jpg",
+        "https://sc04.alicdn.com/kf/Seff7efc59e1c4d2990cb3296fa6396edD.jpg",
+        "https://sc04.alicdn.com/kf/S2b170910a30d4cae8102ec3994a377781.jpg",
+        "https://sc04.alicdn.com/kf/Sb49934037cff4deab55804229f08d4953.jpg",
+        "https://sc04.alicdn.com/kf/S4dddceaf1267492a9a7712bafbc56c0bb.jpg"
+      ],
+      "before_sku_count": 44,
+      "before_materials": {
+        "Midsole Material": {
+          "attribute_id": 20700,
+          "attribute_name": "Midsole Material",
+          "value_id": -1,
+          "value_name": "EVA, Confirm Before Bulk Order"
+        },
+        "Outsole Material": {
+          "attribute_id": 191290426,
+          "attribute_name": "Outsole Material",
+          "value_id": -1,
+          "value_name": "EVA, Confirm Before Bulk Order"
+        }
+      },
+      "stage": "submitted",
+      "render": {
+        "request_id": "212c41d317894221855547171",
+        "trace_id": "2101d13c17894221852385296e0fc1",
+        "message": null,
+        "error": null
+      },
+      "requested_materials": {
+        "Midsole Material": {
+          "value_id": -1,
+          "value_name": "Other"
+        },
+        "Outsole Material": {
+          "value_id": -1,
+          "value_name": "Other"
+        }
+      },
+      "source_not_targeted": true,
+      "ok": false,
+      "update": {
+        "request_id": "212cbf3217894221941335876",
+        "trace_id": "2101d94717894221937962847e107f",
+        "message": null,
+        "error": null
+      },
+      "readback": {
+        "request_id": "0b80d2d617894222021836558",
+        "trace_id": "2101e68f17894222018492002e0da9",
+        "message": null,
+        "error": null
+      },
+      "after_status": "modified",
+      "after_display": "N",
+      "after_title": "Wholesale Men's Casual Sneakers Breathable Mesh Lace Up Thick Sole Walking Shoes Factory Supply L1026",
+      "after_images": [
+        "https://sc04.alicdn.com/kf/S94bcbff54b064b5f8e566c5322b7a71dh.jpg",
+        "https://sc04.alicdn.com/kf/Sb1a49325ddca4c9d89ba30b0d650ac10z.jpg",
+        "https://sc04.alicdn.com/kf/Seff7efc59e1c4d2990cb3296fa6396edD.jpg",
+        "https://sc04.alicdn.com/kf/S2b170910a30d4cae8102ec3994a377781.jpg",
+        "https://sc04.alicdn.com/kf/Sb49934037cff4deab55804229f08d4953.jpg",
+        "https://sc04.alicdn.com/kf/S4dddceaf1267492a9a7712bafbc56c0bb.jpg"
+      ],
+      "after_sku_count": 44,
+      "after_materials": {
+        "Midsole Material": null,
+        "Outsole Material": null
+      },
+      "checks": {
+        "identity_ok": true,
+        "midsole_is_other": false,
+        "outsole_is_other": false,
+        "title_unchanged": true,
+        "gallery_unchanged": true,
+        "sku_count_unchanged": true,
+        "non_target_fields_unchanged": true,
+        "source_not_targeted": true
+      }
+    },
+    {
+      "product_id": "1601939721165",
+      "expected_model": "BQ009-O1 / L1026",
+      "mode": "apply",
+      "before": {
+        "request_id": "21501b8d17894222108205552",
+        "trace_id": "2101c5a717894222104882229e0c83",
+        "message": null,
+        "error": null
+      },
+      "before_status": "approved",
+      "before_display": "Y",
+      "before_title": "Custom Logo Men's Casual Sneakers Breathable Mesh Lace Up Thick Sole Walking Shoes OEM ODM L1026",
+      "before_images": [
+        "https://sc04.alicdn.com/kf/Sf0d6a3c726704afe98316df25d10a80dH.jpg",
+        "https://sc04.alicdn.com/kf/S4c1bbbb9cadd41dcac2109ca02f383ecA.jpg",
+        "https://sc04.alicdn.com/kf/Sde9af884527a4a91b24bdeca2ab63a34X.jpg",
+        "https://sc04.alicdn.com/kf/S72f5b314f6e3407582ab175ff3a1c500q.jpg",
+        "https://sc04.alicdn.com/kf/S1c8c5ae70cf847c486ff7387a4864f44U.jpg",
+        "https://sc04.alicdn.com/kf/S3f6a530e68044e19939ffd80490e0d0eQ.jpg"
+      ],
+      "before_sku_count": 44,
+      "before_materials": {
+        "Midsole Material": {
+          "attribute_id": 20700,
+          "attribute_name": "Midsole Material",
+          "value_id": -1,
+          "value_name": "EVA, Confirm Before Bulk Order"
+        },
+        "Outsole Material": {
+          "attribute_id": 191290426,
+          "attribute_name": "Outsole Material",
+          "value_id": -1,
+          "value_name": "EVA, Confirm Before Bulk Order"
+        }
+      },
+      "stage": "submitted",
+      "render": {
+        "request_id": "0b830ecc17894222179917391",
+        "trace_id": "2101c5a717894222176564372e0ef6",
+        "message": null,
+        "error": null
+      },
+      "requested_materials": {
+        "Midsole Material": {
+          "value_id": -1,
+          "value_name": "Other"
+        },
+        "Outsole Material": {
+          "value_id": -1,
+          "value_name": "Other"
+        }
+      },
+      "source_not_targeted": true,
+      "ok": false,
+      "update": {
+        "request_id": "21501b8d17894222267035853",
+        "trace_id": "2101c5a717894222263844223e0d6a",
+        "message": null,
+        "error": null
+      },
+      "readback": {
+        "request_id": "213d4e4917894222349133599",
+        "trace_id": "2101d86517894222345857734e0d1e",
+        "message": null,
+        "error": null
+      },
+      "after_status": "modified",
+      "after_display": "N",
+      "after_title": "Custom Logo Men's Casual Sneakers Breathable Mesh Lace Up Thick Sole Walking Shoes OEM ODM L1026",
+      "after_images": [
+        "https://sc04.alicdn.com/kf/Sf0d6a3c726704afe98316df25d10a80dH.jpg",
+        "https://sc04.alicdn.com/kf/S4c1bbbb9cadd41dcac2109ca02f383ecA.jpg",
+        "https://sc04.alicdn.com/kf/Sde9af884527a4a91b24bdeca2ab63a34X.jpg",
+        "https://sc04.alicdn.com/kf/S72f5b314f6e3407582ab175ff3a1c500q.jpg",
+        "https://sc04.alicdn.com/kf/S1c8c5ae70cf847c486ff7387a4864f44U.jpg",
+        "https://sc04.alicdn.com/kf/S3f6a530e68044e19939ffd80490e0d0eQ.jpg"
+      ],
+      "after_sku_count": 44,
+      "after_materials": {
+        "Midsole Material": null,
+        "Outsole Material": null
+      },
+      "checks": {
+        "identity_ok": true,
+        "midsole_is_other": false,
+        "outsole_is_other": false,
+        "title_unchanged": true,
+        "gallery_unchanged": true,
+        "sku_count_unchanged": true,
+        "non_target_fields_unchanged": true,
+        "source_not_targeted": true
+      }
+    }
+  ],
+  "success_count": 0,
+  "failure_count": 3
+}

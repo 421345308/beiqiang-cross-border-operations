@@ -1,0 +1,71 @@
+{
+  "family": "BQ032/ZX2212",
+  "source_product_id": "10000046653813",
+  "source_policy": "PROTECT_SOURCE",
+  "market_evidence": {
+    "period": "Alibaba Keyword Advisor recent 7 days and Product Advisor Week 35, checked 2026-09-14",
+    "product_performance": "No reportable Week 35 product-level traffic for the source or three expansion links; optimize the approved expansion links while preserving the canonical source.",
+    "accepted_keywords": [
+      {"phrase": "mens lightweight walking shoes", "search_index": 7, "trend": "+50%", "ctr": "13.33%", "seller_scale": 0},
+      {"phrase": "mens shoes size 47", "search_index": 5, "trend": "+300%", "ctr": "0%", "seller_scale": 0},
+      {"phrase": "men's walking shoes large size", "search_index": 3, "ctr": "0%"},
+      {"phrase": "mens shoes casual", "search_index": 19, "ctr": "13.79%", "seller_scale": 6, "note": "live store-adjacent keyword evidence"}
+    ],
+    "rejected_terms": [
+      {"term": "wide toe box", "reason": "BQ032 is confirmed regular fit."},
+      {"term": "waterproof / orthopedic / anti-slip / running", "reason": "unsupported or wrong buyer intent for this SKU."},
+      {"term": "designer", "reason": "irrelevant and potentially misleading."}
+    ]
+  },
+  "asset_policy": {
+    "visual_review": "BQ032主图视觉验收_2026-09-14.json",
+    "method": "Six clean complete-shoe color-pair images mechanically cropped from verified BQ032 source sheets.",
+    "no_collage_m1": true,
+    "no_ai_product_change": true
+  },
+  "products": [
+    {
+      "product_id": "1601939651515",
+      "expected_model": "BQ032-W1 / ZX2212",
+      "title": "Wholesale Mens Lightweight Walking Shoes Knit Lace-Up Casual Shoes EU 38-47 ZX2212",
+      "keyword_plan": ["mens lightweight walking shoes", "mens casual shoes", "knit lace up walking shoes"],
+      "image_files": [
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/02_单品优化记录/BQ系列持续优化_2026-09-14/BQ032_真实鞋型主图_2026-09-14/blue_pair.jpg",
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/02_单品优化记录/BQ系列持续优化_2026-09-14/BQ032_真实鞋型主图_2026-09-14/grey_pair.jpg",
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/02_单品优化记录/BQ系列持续优化_2026-09-14/BQ032_真实鞋型主图_2026-09-14/black_white_pair.jpg",
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/02_单品优化记录/BQ系列持续优化_2026-09-14/BQ032_真实鞋型主图_2026-09-14/apricot_pair.jpg",
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/02_单品优化记录/BQ系列持续优化_2026-09-14/BQ032_真实鞋型主图_2026-09-14/white_pair.jpg",
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/02_单品优化记录/BQ系列持续优化_2026-09-14/BQ032_真实鞋型主图_2026-09-14/all_black_pair.jpg"
+      ]
+    },
+    {
+      "product_id": "1601939751023",
+      "expected_model": "BQ032-R1 / ZX2212",
+      "title": "Mens Large Size Walking Shoes Knit Lace-Up Casual Daily Shoes EU 38-47 ZX2212",
+      "keyword_plan": ["mens shoes size 47", "men's walking shoes large size", "mens casual walking shoes"],
+      "image_files": [
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/02_单品优化记录/BQ系列持续优化_2026-09-14/BQ032_真实鞋型主图_2026-09-14/apricot_pair.jpg",
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/02_单品优化记录/BQ系列持续优化_2026-09-14/BQ032_真实鞋型主图_2026-09-14/white_pair.jpg",
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/02_单品优化记录/BQ系列持续优化_2026-09-14/BQ032_真实鞋型主图_2026-09-14/grey_pair.jpg",
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/02_单品优化记录/BQ系列持续优化_2026-09-14/BQ032_真实鞋型主图_2026-09-14/blue_pair.jpg",
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/02_单品优化记录/BQ系列持续优化_2026-09-14/BQ032_真实鞋型主图_2026-09-14/black_white_pair.jpg",
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/02_单品优化记录/BQ系列持续优化_2026-09-14/BQ032_真实鞋型主图_2026-09-14/all_black_pair.jpg"
+      ]
+    },
+    {
+      "product_id": "1601939722196",
+      "expected_model": "BQ032-O1 / ZX2212",
+      "title": "All Black Mens Casual Walking Shoes Knit Lace-Up Custom Logo OEM ODM EU 38-47 ZX2212",
+      "keyword_plan": ["all black mens walking shoes", "custom logo casual shoes", "OEM ODM walking shoes"],
+      "image_files": [
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/02_单品优化记录/BQ系列持续优化_2026-09-14/BQ032_真实鞋型主图_2026-09-14/all_black_pair.jpg",
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/02_单品优化记录/BQ系列持续优化_2026-09-14/BQ032_真实鞋型主图_2026-09-14/black_white_pair.jpg",
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/02_单品优化记录/BQ系列持续优化_2026-09-14/BQ032_真实鞋型主图_2026-09-14/grey_pair.jpg",
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/02_单品优化记录/BQ系列持续优化_2026-09-14/BQ032_真实鞋型主图_2026-09-14/blue_pair.jpg",
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/02_单品优化记录/BQ系列持续优化_2026-09-14/BQ032_真实鞋型主图_2026-09-14/apricot_pair.jpg",
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/02_单品优化记录/BQ系列持续优化_2026-09-14/BQ032_真实鞋型主图_2026-09-14/white_pair.jpg"
+      ]
+    }
+  ],
+  "keyword_execution_policy": "Do not send productKeywords through OpenAPI: the current schema accepted but ignored this field on BQ031. The keyword clusters are implemented in title openings now and retained for a later verified UI keyword workflow."
+}

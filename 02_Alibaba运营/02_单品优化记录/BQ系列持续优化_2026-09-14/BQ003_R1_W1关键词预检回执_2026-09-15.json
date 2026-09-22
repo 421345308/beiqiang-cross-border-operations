@@ -1,0 +1,49 @@
+{
+  "finished_at": "2026-09-14T17:36:12.827824+00:00",
+  "mode": "preflight",
+  "fail_fast": true,
+  "results": [
+    {
+      "product_id": "1601939663432",
+      "execute": false,
+      "ok": true,
+      "stage": "preflight_pass",
+      "before_keywords": [
+        ""
+      ],
+      "requested_keywords": [
+        "men's casual walking shoes",
+        "summer walking shoes",
+        "casual walking shoes",
+        "lightweight walking shoes",
+        "breathable walking shoes"
+      ],
+      "before_status": "approved",
+      "before_display": "Y",
+      "request": {
+        "request_id": "21501b6717894073645517030",
+        "trace_id": "2101c5a717894073642212530e0d49",
+        "error": null
+      }
+    },
+    {
+      "product_id": "1601939585904",
+      "execute": false,
+      "ok": false,
+      "stage": "product_get_before",
+      "response": {
+        "request_id": null,
+        "trace_id": null,
+        "error": {
+          "type": "ISV",
+          "code": "ApiCallLimit",
+          "msg": "Api access frequency exceeds the limit. this ban will last 1 seconds",
+          "request_id": "213f5a2117894073718652057",
+          "_trace_id_": "2101d14517894073715435588e8a13"
+        }
+      }
+    }
+  ],
+  "success_count": 1,
+  "failure_count": 1
+}

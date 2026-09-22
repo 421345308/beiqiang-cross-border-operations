@@ -1,0 +1,24 @@
+{
+  "family": "BQ031/ZX2116",
+  "state": "PLATFORM_FIELD_UNSUPPORTED_STOPPED",
+  "source_product_id": "10000046439033",
+  "source_policy": "PROTECT_SOURCE",
+  "execution_policy": "Fail-fast executed on W1 only. Alibaba accepted the independent productKeywords Schema request but readback remained empty and the product entered modified/N. R1 and O1 were not submitted. Do not retry this field; achieve keyword coverage through verified title terms, attributes, source-query analysis and P4P search terms.",
+  "products": [
+    {
+      "product_id": "1601939693331",
+      "expected_model": "BQ031-W1 / ZX2116",
+      "keywords": ["walking style shoes", "wide toe box walking shoes", "large size walking shoes"]
+    },
+    {
+      "product_id": "1601939667426",
+      "expected_model": "BQ031-R1 / ZX2116",
+      "keywords": ["casual walking shoes", "lightweight walking shoes", "breathable knit walking shoes"]
+    },
+    {
+      "product_id": "1601939754004",
+      "expected_model": "BQ031-O1 / ZX2116",
+      "keywords": ["custom logo walking shoes", "wide toe box shoes OEM", "private label walking shoes"]
+    }
+  ]
+}

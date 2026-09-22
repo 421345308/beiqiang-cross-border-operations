@@ -1,0 +1,51 @@
+{
+  "timestamp_utc": "2026-09-15T02:48:39.940432+00:00",
+  "protected_source_product_ids": [
+    "10000043725883",
+    "1601825021825"
+  ],
+  "mode": "dry-run",
+  "results": [
+    {
+      "product_id": "1601939634522",
+      "expected_model": "BQ011-W1 / A002",
+      "mode": "dry-run",
+      "before": {
+        "request_id": "0bab02fe17894405187133110",
+        "trace_id": "2101d86517894405183882289e0bb7",
+        "message": null,
+        "error": null
+      },
+      "before_status": "approved",
+      "before_display": "Y",
+      "before_title": "Wholesale Men's Casual Slip-On Shoes Lightweight Breathable Textile Walking Sneakers OEM ODM",
+      "before_images": [
+        "https://sc04.alicdn.com/kf/H434a33642eab4038895a1587addca932m.jpg",
+        "https://sc04.alicdn.com/kf/Hfd6cf4f0f1f24861a2ee5b1a575789c4F.jpg",
+        "https://sc04.alicdn.com/kf/H06eb8d3dbf4b45bc9babee791315606ex.jpg",
+        "https://sc04.alicdn.com/kf/Hfbefa6b0ad564bb6ba939710e3d400c7J.jpg",
+        "https://sc04.alicdn.com/kf/H5e87535adac1445d9b5dcf243051bb41T.jpg",
+        "https://sc04.alicdn.com/kf/Hd33bdd98bb7b43d096f407ec1855945c8.jpg"
+      ],
+      "before_sku_count": 21,
+      "before_materials": {
+        "Midsole Material": {
+          "attribute_id": 20700,
+          "attribute_name": "Midsole Material",
+          "value_id": 4,
+          "value_name": "Other"
+        },
+        "Outsole Material": {
+          "attribute_id": 191290426,
+          "attribute_name": "Outsole Material",
+          "value_id": 4,
+          "value_name": "Other"
+        }
+      },
+      "stage": "verified_existing",
+      "ok": true
+    }
+  ],
+  "success_count": 1,
+  "failure_count": 0
+}

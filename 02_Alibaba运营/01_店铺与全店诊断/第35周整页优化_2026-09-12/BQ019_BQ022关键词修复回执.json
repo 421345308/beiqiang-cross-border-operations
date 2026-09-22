@@ -1,0 +1,69 @@
+{
+  "completed_at": "2026-09-12T15:28:12.892325+00:00",
+  "results": [
+    {
+      "product_id": "10000044041008",
+      "requested_keywords": "knit lace up walking shoes\nwholesale casual textile shoes\nOEM ODM walking sneakers",
+      "before_keywords": [
+        ""
+      ],
+      "after_keywords": null,
+      "status": null,
+      "display": null,
+      "checks": {
+        "keywords_verified": false,
+        "other_fields_unchanged": false
+      },
+      "ok": false,
+      "update": {
+        "request_id": "0bab02fc17892267291744802",
+        "trace_id": "2101c5a717892267288648229e0bc3",
+        "message": null,
+        "error": null
+      },
+      "readback": {
+        "request_id": null,
+        "trace_id": null,
+        "message": null,
+        "error": {
+          "type": "ISV",
+          "code": "ApiCallLimit",
+          "msg": "Api access frequency exceeds the limit. this ban will last 1 seconds",
+          "request_id": "213c934417892268028472917",
+          "_trace_id_": "2101c5a717892268025081278e0ce6"
+        }
+      }
+    },
+    {
+      "product_id": "10000043991998",
+      "requested_keywords": "striped knit slip on walking shoes\nwholesale casual textile shoes\nOEM ODM slip on sneakers",
+      "before_keywords": [
+        ""
+      ],
+      "after_keywords": [
+        ""
+      ],
+      "status": "modified",
+      "display": "N",
+      "checks": {
+        "keywords_verified": false,
+        "other_fields_unchanged": false
+      },
+      "ok": false,
+      "update": {
+        "request_id": "213f5a2117892268174466723",
+        "trace_id": "2101d86517892268171387491e0b90",
+        "message": "systemError:isp.system-service-error:PUB_BIZCHECK_PRODUCT_IN_AUDITING:Your product is currently under review. Please do not resubmit.\n\n:;",
+        "error": null
+      },
+      "readback": {
+        "request_id": "213c932b17892268911646003",
+        "trace_id": "2101fca817892268908253575e0f3d",
+        "message": null,
+        "error": null
+      }
+    }
+  ],
+  "success_count": 0,
+  "failure_count": 2
+}

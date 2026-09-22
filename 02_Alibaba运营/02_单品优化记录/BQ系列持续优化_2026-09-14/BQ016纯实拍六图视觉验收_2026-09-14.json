@@ -1,0 +1,23 @@
+{
+  "audit_date": "2026-09-14",
+  "sku_family": "BQ016 / 201",
+  "result": "PASS_PREPARED_NOT_SUBMITTED",
+  "source": "BQ016原始数据包主图实拍及已核验真实颜色M1",
+  "processing": "仅1.01对比度、1.02锐度及1000x1000机械缩放；未生成像素、未改颜色、鞋型、鞋底或闭合结构",
+  "galleries": [
+    {"product_id": "1601939608691", "role": "W1 black wholesale", "count": 6, "visual_result": "PASS", "sequence": ["black hero", "black outsole", "black angle", "black top", "three real colors", "black handheld"]},
+    {"product_id": "1601939691301", "role": "R1 pink daily/school", "count": 6, "visual_result": "PASS", "sequence": ["pink hero", "pink top", "pink angle", "pink outsole", "three real colors", "pink handheld"]},
+    {"product_id": "1601939633580", "role": "O1 zebra OEM/ODM", "count": 6, "visual_result": "PASS", "sequence": ["zebra hero", "zebra angle", "zebra top", "zebra heel", "three real colors", "zebra handheld"]}
+  ],
+  "checks": {
+    "all_18_images_visually_reviewed": true,
+    "main_image_color_matches_role": true,
+    "shoe_geometry_unchanged": true,
+    "outsole_unchanged": true,
+    "closure_unchanged": true,
+    "unverified_copy_removed": true,
+    "duplicate_first_two_images_removed": true
+  },
+  "contact_sheets": "BQ016_纯实拍六图候选_2026-09-14/*_contact_v2.jpg",
+  "submission_gate": "等待现有modified/N审核结束；不在审核中二次写入。"
+}

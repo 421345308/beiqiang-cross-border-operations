@@ -1,0 +1,31 @@
+{
+  "strategy": "D7 whole-card diagnosis: retain verified strong M1; correct title intent and unsupported wording; preserve all non-target fields",
+  "keyword_field_policy": "productKeywords remains disabled because prior OpenAPI writes were silently ignored and triggered review; primary intent is carried by title plus verified attributes",
+  "protected_source_product_id": "10000043725883",
+  "products": [
+    {
+      "product_id": "1601939666421",
+      "expected_model": "BQ011-R1 / A002",
+      "title": "Wholesale Men's Breathable Textile Slip-On Walking Shoes Lightweight Casual Sneakers EU 39-45 A002",
+      "buyer_intent": "men's breathable textile slip-on walking shoes for daily wholesale sourcing",
+      "primary_keywords": [
+        "men's slip-on walking shoes",
+        "breathable textile walking shoes",
+        "lightweight casual sneakers"
+      ],
+      "reason": "Remove unsupported Cushion Midsole wording and place verified product identity first; keep current Grey Green hero"
+    },
+    {
+      "product_id": "1601939606803",
+      "expected_model": "BQ011-O1 / A002",
+      "title": "Wholesale Men's Breathable Textile Slip-On Walking Shoes Lightweight Casual Sneakers OEM ODM A002",
+      "buyer_intent": "men's slip-on walking shoes for private-label and OEM/ODM sourcing",
+      "primary_keywords": [
+        "men's slip-on walking shoes",
+        "breathable textile walking shoes",
+        "OEM ODM casual sneakers"
+      ],
+      "reason": "Move verified product identity before procurement modifiers; keep current Grey Black hero and never call it All Black"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "family": "BQ016/201",
+  "reviewed_at": "2026-09-14",
+  "evidence": "Verified BQ016/201 source package and current Alibaba CDN pixels",
+  "current_m1_findings": {
+    "1601939608691": "FAIL: black single shoe is small and carries a CUSTOM LOGO OEM/ODM badge; W1 intent is wholesale, not an OEM badge-first card.",
+    "1601939691301": "FAIL: black pair repeats W1 color and carries the same CUSTOM LOGO badge.",
+    "1601939633580": "WEAK: zebra color is distinctive but still carries the badge and has excessive white space."
+  },
+  "approved_candidates": [
+    {
+      "file": "BQ016_真实鞋型主图_2026-09-14/black_clean.jpg",
+      "role": "W1 M1",
+      "decision": "PASS",
+      "reason": "Complete real black pair, badge-free, enlarged without changing shape, outsole or color; directly matches high-intent black school-shoe searches."
+    },
+    {
+      "file": "BQ016_真实鞋型主图_2026-09-14/pink_clean.jpg",
+      "role": "R1 M1",
+      "decision": "PASS",
+      "reason": "Complete real pink pair, badge-free and visually distinct from W1; supports the girls-school-shoes angle without inventing features."
+    },
+    {
+      "file": "BQ016_真实鞋型主图_2026-09-14/zebra_clean.jpg",
+      "role": "O1 M1",
+      "decision": "PASS",
+      "reason": "Complete real zebra-stripe shoe, high visual recognition and clearly different from black and pink sibling cards."
+    }
+  ],
+  "family_review": {
+    "shared_source_model": "BQ016/201",
+    "verified_colors": ["Black", "Pink", "Zebra Stripe"],
+    "verified_size_range": "EU 31-40",
+    "verified_closure": "Slip-On",
+    "fit": "Regular Fit",
+    "m1_difference": "Black pair / Pink pair / Zebra single shoe",
+    "detail_overlap": "Expected and accepted for the same real product; product proof and factory modules may remain shared.",
+    "independent_search_intent": "Wholesale black school shoes / girls school shoes / OEM-ODM custom kids school shoes",
+    "decision": "KEEP_DISTINCT"
+  },
+  "prohibited_changes_checked": [
+    "No AI-generated shoe geometry",
+    "No outsole or closure change",
+    "No recoloring",
+    "No wide-toe, medical, waterproof, leather or certification claims",
+    "No text badge on M1"
+  ]
+}

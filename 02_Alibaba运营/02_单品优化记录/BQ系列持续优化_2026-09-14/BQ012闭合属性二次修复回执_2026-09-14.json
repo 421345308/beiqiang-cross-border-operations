@@ -1,0 +1,183 @@
+{
+  "timestamp_utc": "2026-09-14T09:24:27.218980+00:00",
+  "source_product_id_protected": "10000043744505",
+  "mode": "apply",
+  "results": [
+    {
+      "product_id": "1601939650458",
+      "expected_model": "BQ012-W1 / M8506",
+      "mode": "apply",
+      "before": {
+        "request_id": "0b80d2d617893777787074988",
+        "trace_id": "2103243417893777783865995e0be4",
+        "message": null,
+        "error": null
+      },
+      "before_status": "approved",
+      "before_display": "Y",
+      "before_closure": {
+        "attribute_id": 200000388,
+        "attribute_name": "Closure Type",
+        "value_id": 80806811,
+        "value_name": "Lace-up"
+      },
+      "stage": "submitted",
+      "render": {
+        "request_id": "0bab02fc17893777862036972",
+        "trace_id": "210313ec17893777858796716e0b90",
+        "message": null,
+        "error": null
+      },
+      "requested_closure": {
+        "attribute_id": 200000388,
+        "value_id": 13325270,
+        "value_name": "Slip-On"
+      },
+      "update": {
+        "request_id": "0b80d2d617893777954236034",
+        "trace_id": "210334ab17893777950988300e0e44",
+        "message": null,
+        "error": null
+      },
+      "readback": {
+        "request_id": "0b80d2d617893778035016411",
+        "trace_id": "210313ea17893778031923579e0b64",
+        "message": null,
+        "error": null
+      },
+      "after_status": "modified",
+      "after_display": "N",
+      "after_closure": {
+        "attribute_id": 200000388,
+        "attribute_name": "Closure Type",
+        "value_id": 13325270,
+        "value_name": "Slip-On"
+      },
+      "checks": {
+        "identity_ok": true,
+        "closure_is_slip_on": true,
+        "image_count_6": true,
+        "non_target_fields_unchanged": true
+      },
+      "ok": true
+    },
+    {
+      "product_id": "1601939681367",
+      "expected_model": "BQ012-R1 / M8506",
+      "mode": "apply",
+      "before": {
+        "request_id": "213e759c17893778107513521",
+        "trace_id": "2103135017893778104102529e0eb1",
+        "message": null,
+        "error": null
+      },
+      "before_status": "approved",
+      "before_display": "Y",
+      "before_closure": {
+        "attribute_id": 200000388,
+        "attribute_name": "Closure Type",
+        "value_id": 80806811,
+        "value_name": "Lace-up"
+      },
+      "stage": "submitted",
+      "render": {
+        "request_id": "0b830ecc17893778176637717",
+        "trace_id": "210334ab17893778173415324e0c55",
+        "message": null,
+        "error": null
+      },
+      "requested_closure": {
+        "attribute_id": 200000388,
+        "value_id": 13325270,
+        "value_name": "Slip-On"
+      },
+      "update": {
+        "request_id": "213d4e4917893778262593909",
+        "trace_id": "2103346417893778259558195e0f39",
+        "message": null,
+        "error": null
+      },
+      "readback": {
+        "request_id": "210829b717893778345675131",
+        "trace_id": "210313ea17893778342588048e0cac",
+        "message": null,
+        "error": null
+      },
+      "after_status": "modified",
+      "after_display": "N",
+      "after_closure": {
+        "attribute_id": 200000388,
+        "attribute_name": "Closure Type",
+        "value_id": 13325270,
+        "value_name": "Slip-On"
+      },
+      "checks": {
+        "identity_ok": true,
+        "closure_is_slip_on": true,
+        "image_count_6": true,
+        "non_target_fields_unchanged": true
+      },
+      "ok": true
+    },
+    {
+      "product_id": "1601939606805",
+      "expected_model": "BQ012-O1 / M8506",
+      "mode": "apply",
+      "before": {
+        "request_id": "0bbb637a17893778414433868",
+        "trace_id": "210325bb17893778411143207e1156",
+        "message": null,
+        "error": null
+      },
+      "before_status": "approved",
+      "before_display": "Y",
+      "before_closure": {
+        "attribute_id": 200000388,
+        "attribute_name": "Closure Type",
+        "value_id": 80806811,
+        "value_name": "Lace-up"
+      },
+      "stage": "submitted",
+      "render": {
+        "request_id": "0b51802d17893778484961193",
+        "trace_id": "2103135017893778481816373e0ffa",
+        "message": null,
+        "error": null
+      },
+      "requested_closure": {
+        "attribute_id": 200000388,
+        "value_id": 13325270,
+        "value_name": "Slip-On"
+      },
+      "update": {
+        "request_id": "21501b6717893778583112766",
+        "trace_id": "210325bb17893778579772447e1090",
+        "message": null,
+        "error": null
+      },
+      "readback": {
+        "request_id": "213f5a2117893778663425490",
+        "trace_id": "2103245817893778660323694e0e59",
+        "message": null,
+        "error": null
+      },
+      "after_status": "modified",
+      "after_display": "N",
+      "after_closure": {
+        "attribute_id": 200000388,
+        "attribute_name": "Closure Type",
+        "value_id": 13325270,
+        "value_name": "Slip-On"
+      },
+      "checks": {
+        "identity_ok": true,
+        "closure_is_slip_on": true,
+        "image_count_6": true,
+        "non_target_fields_unchanged": true
+      },
+      "ok": true
+    }
+  ],
+  "success_count": 3,
+  "failure_count": 0
+}

@@ -1,0 +1,22 @@
+{
+  "date": "2026-09-15",
+  "product_id": "1601939661419",
+  "model": "BQ009-R1 / L1026",
+  "source_product_id_protected": "1601825074604",
+  "platform_write": false,
+  "decision": "PROTECT_TITLE_AND_M1_UNTIL_D14",
+  "candidate_gallery": [
+    {"position": 1, "file": "01_M1_PROTECT_mint_side.jpg", "role": "protected search hero", "sha256": "37D12D265B964911406DC9433CEED90CD51AB7BB371DEC9C9B3E2DD0080137E0"},
+    {"position": 2, "file": "02_mint_pair_three_quarter.jpg", "source": "R5VM8699.JPG", "role": "pair and three-quarter product identity", "sha256": "37F43A629F6C05F654B3F7E91D4B69ACC11AB0F8D07F04E718A806F42D2089D6"},
+    {"position": 3, "file": "03_mint_top_lace_mesh.jpg", "source": "R5VM8716.JPG", "role": "top view, lacing and visible mesh", "sha256": "55CEA2D3B64A02895F0AF120605932D9DAEA2ED727CAAC96D37FADFDC953B7DB"},
+    {"position": 4, "file": "04_mint_outsole_proof.jpg", "source": "R5VM8708.JPG", "role": "outsole tread and sole profile appearance", "sha256": "A839F83BA78DF57E1C83DEE4DE2C44AA806BE3D0909B254981913BE1B4DE855D"},
+    {"position": 5, "file": "05_four_color_family.jpg", "source": "R5VM8692.JPG", "role": "four verified colorways", "sha256": "E6C824D780E1289FC68746490448C01DC376F1FC3278AD7FFD83DDBFAE33FF21"},
+    {"position": 6, "file": "06_mint_heel_view.jpg", "source": "5M4A7607.JPG", "role": "heel and rear sole structure", "sha256": "47D66CED163E1D34321FB4F6889058D64C2E1AF092E05579466DC95E103BC2A7"}
+  ],
+  "excluded": [
+    {"file": "01 (1).jpg", "reason": "Chinese promotional text"},
+    {"file": "01 (2).jpg", "reason": "Chinese promotional text"},
+    {"file": "01 (7).jpg", "reason": "Chinese text and unsupported material decomposition"}
+  ],
+  "trigger": "At D14, apply only if related clicks or visits continue without a qualified inquiry and all live preflight gates pass."
+}

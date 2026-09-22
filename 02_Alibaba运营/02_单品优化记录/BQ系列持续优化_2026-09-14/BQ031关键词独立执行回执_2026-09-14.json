@@ -1,0 +1,51 @@
+{
+  "finished_at": "2026-09-14T11:27:16.352212+00:00",
+  "mode": "execute",
+  "fail_fast": true,
+  "results": [
+    {
+      "product_id": "1601939693331",
+      "execute": true,
+      "ok": false,
+      "stage": "readback_mismatch",
+      "before_keywords": [
+        ""
+      ],
+      "requested_keywords": [
+        "walking style shoes",
+        "wide toe box walking shoes",
+        "large size walking shoes"
+      ],
+      "before_status": "approved",
+      "before_display": "Y",
+      "request": {
+        "request_id": "0b51802d17893852199245913",
+        "trace_id": "2101d13c17893852195952442e0fa0",
+        "error": null
+      },
+      "after_keywords": [
+        ""
+      ],
+      "after_status": "modified",
+      "after_display": "N",
+      "checks": {
+        "keywords_ok": false,
+        "identity_ok": true,
+        "other_fields_unchanged": true,
+        "source_not_targeted": true
+      },
+      "update": {
+        "request_id": "210829b717893852269668223",
+        "trace_id": "2101d94717893852266498152e0da9",
+        "error": null
+      },
+      "readback": {
+        "request_id": "0bab02fc17893852352348398",
+        "trace_id": "2101d86517893852348931248e0da2",
+        "error": null
+      }
+    }
+  ],
+  "success_count": 0,
+  "failure_count": 1
+}

@@ -1,0 +1,64 @@
+{
+  "family": "BQ026/T5828",
+  "protected_source_product_id": "10000044011929",
+  "strategy": "Replace low-contrast White search hero with the already verified real Grey image; move verified product identity to the title opening; reuse the same six approved image-bank files without upload",
+  "products": [
+    {
+      "product_id": "1601939745065",
+      "expected_model": "BQ026-W1 / T5828",
+      "expected_current_title": "Wholesale Mens Lightweight Walking Shoes Breathable Knit Lace-Up Casual Shoes T5828",
+      "expected_current_hero_key": "H5ad74a72d3de43adad362b4248c04833R",
+      "title": "Wholesale Men's Breathable Knit Lace-Up Walking Shoes Lightweight Casual Sneakers T5828",
+      "buyer_intent": "men's breathable knit lace-up walking shoes for wholesale sourcing",
+      "keyword_cluster": [
+        "men's lightweight walking shoes",
+        "breathable knit walking shoes",
+        "men's casual shoes"
+      ],
+      "images": [
+        {
+          "slot": "M1",
+          "role": "Grey high-contrast search hero",
+          "file": "grey_clean.jpg",
+          "url": "https://sc04.alicdn.com/kf/Ha582447fd20b49f09707d49091c5f789w/286385890/Ha582447fd20b49f09707d49091c5f789w.jpg",
+          "file_id": "33491953835"
+        },
+        {
+          "slot": "M2",
+          "role": "White color and knit structure",
+          "file": "white_clean.jpg",
+          "url": "https://sc04.alicdn.com/kf/H5ad74a72d3de43adad362b4248c04833R/286385890/H5ad74a72d3de43adad362b4248c04833R.jpg",
+          "file_id": "33492876409"
+        },
+        {
+          "slot": "M3",
+          "role": "Black color and sole contrast",
+          "file": "black_clean.jpg",
+          "url": "https://sc04.alicdn.com/kf/Hde5aea05672e4e6fbee3a200cebed3f4r/286385890/Hde5aea05672e4e6fbee3a200cebed3f4r.jpg",
+          "file_id": "33489528772"
+        },
+        {
+          "slot": "M4",
+          "role": "Pink pair view",
+          "file": "pink_pair.jpg",
+          "url": "https://sc04.alicdn.com/kf/H86d2433ed379468ea2bcdb4cf57d1363b/286385890/H86d2433ed379468ea2bcdb4cf57d1363b.jpg",
+          "file_id": "33489409447"
+        },
+        {
+          "slot": "M5",
+          "role": "Red alternate angle",
+          "file": "red_angle.jpg",
+          "url": "https://sc04.alicdn.com/kf/H31c31b6b27d446acbd344af6f7d5872fO/286385890/H31c31b6b27d446acbd344af6f7d5872fO.jpg",
+          "file_id": "33492013612"
+        },
+        {
+          "slot": "M6",
+          "role": "Grey pair view",
+          "file": "grey_pair.jpg",
+          "url": "https://sc04.alicdn.com/kf/H655619ad5464422088f8692a71aadcf2S/286385890/H655619ad5464422088f8692a71aadcf2S.jpg",
+          "file_id": "33492912298"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "checked_at": "2026-09-15T03:45:00+08:00",
+  "operation": "read_only_review_poll",
+  "resubmitted": false,
+  "conclusion": "两条标题修复均已被平台接收并处于 modified/N 审核态；目标标题、型号、六图、36个SKU及四色映射均正确，继续等待审核，不重复提交。",
+  "products": [
+    {
+      "product_id": "1601939691342",
+      "link_code": "BQ024-W1",
+      "status": "modified",
+      "display": "N",
+      "title": "Wholesale Black White Knit Slip-On Walking Shoes Lightweight Casual Sneakers EVA Sole Factory Supply A830",
+      "model": "BQ024-W1 / A830",
+      "image_count": 6,
+      "sku_count": 36,
+      "colors": ["Black White", "Black Yellow", "Beige Grey", "All Black"],
+      "pc_detail_url": "https://www.alibaba.com/product-detail/Wholesale-Black-White-Knit-Slip-On_1601939691342.html",
+      "request_id": "213d4e4917894151274804834",
+      "trace_id": "210325bb17894151271585840e0f88"
+    },
+    {
+      "product_id": "1601939691340",
+      "link_code": "BQ024-O1",
+      "status": "modified",
+      "display": "N",
+      "title": "Custom Logo Black Yellow Knit Slip-On Walking Shoes OEM ODM Private Label Casual Sneakers A830",
+      "model": "BQ024-O1 / A830",
+      "image_count": 6,
+      "sku_count": 36,
+      "colors": ["Black Yellow", "Beige Grey", "All Black", "Black White"],
+      "pc_detail_url": "https://www.alibaba.com/product-detail/Custom-Logo-Black-Yellow-Knit-Slip_1601939691340.html",
+      "request_id": "21501be117894151345844410",
+      "trace_id": "2103243417894151342583178e0bb2"
+    }
+  ],
+  "queue_snapshot": {
+    "total_rows": 120,
+    "monitoring": 30,
+    "public_qa_pass": 88,
+    "submitted": 2,
+    "duplicate_product_ids": 0
+  },
+  "next_action": "等待两条恢复 approved/Y；之后做公开页终验并分别重置BQ024-W1/O1监测起点。BQ024-R1保持原监测周期。"
+}

@@ -1,0 +1,137 @@
+{
+  "timestamp_utc": "2026-09-14T18:11:28.875735+00:00",
+  "source_product_id_protected": "10000043725883",
+  "mode": "apply",
+  "change_scope": "Light Grey label and seven matching SKU-code segments per expansion only",
+  "results": [
+    {
+      "product_id": "1601939634522",
+      "expected_model": "BQ011-W1 / A002",
+      "before": {
+        "request_id": "213e759c17894094011652599",
+        "trace_id": "2101dbd017894094008264345e0ed9",
+        "message": null,
+        "error": null
+      },
+      "before_status": "approved",
+      "before_display": "Y",
+      "mode": "apply",
+      "stage": "submitted",
+      "render": {
+        "request_id": "21501be117894094084482230",
+        "trace_id": "2101d14517894094081221037e10bb",
+        "message": null,
+        "error": null
+      },
+      "changed_sku_rows": 7,
+      "update": {
+        "request_id": "0b80d2d617894094175526575",
+        "trace_id": "2101d13c17894094166398200e0e35",
+        "message": null,
+        "error": null
+      },
+      "readback": {
+        "request_id": "21546a1d17894094255611254",
+        "trace_id": "2101e68f17894094252233532e0e90",
+        "message": null,
+        "error": null
+      },
+      "after_status": "modified",
+      "after_display": "N",
+      "checks": {
+        "identity_ok": true,
+        "target_state_ok": true,
+        "sku_count_21": true,
+        "non_target_fields_unchanged": true,
+        "source_not_targeted": true
+      },
+      "ok": true
+    },
+    {
+      "product_id": "1601939666421",
+      "expected_model": "BQ011-R1 / A002",
+      "before": {
+        "request_id": "0b80d2d617894094324007170",
+        "trace_id": "2101d94717894094320674947e0f14",
+        "message": null,
+        "error": null
+      },
+      "before_status": "approved",
+      "before_display": "Y",
+      "mode": "apply",
+      "stage": "submitted",
+      "render": {
+        "request_id": "0bbb3b2417894094392525466",
+        "trace_id": "2101d94717894094389072194e0dab",
+        "message": null,
+        "error": null
+      },
+      "changed_sku_rows": 7,
+      "update": {
+        "request_id": "213c934417894094481945337",
+        "trace_id": "2101e68f17894094473841048e0cc3",
+        "message": null,
+        "error": null
+      },
+      "readback": {
+        "request_id": "212c6fc617894094562854204",
+        "trace_id": "2101e68f17894094559325595e0b56",
+        "message": null,
+        "error": null
+      },
+      "after_status": "modified",
+      "after_display": "N",
+      "checks": {
+        "identity_ok": true,
+        "target_state_ok": true,
+        "sku_count_21": true,
+        "non_target_fields_unchanged": true,
+        "source_not_targeted": true
+      },
+      "ok": true
+    },
+    {
+      "product_id": "1601939606803",
+      "expected_model": "BQ011-O1 / A002",
+      "before": {
+        "request_id": "0bbb637a17894094631154576",
+        "trace_id": "2101fca817894094628007534e0f1c",
+        "message": null,
+        "error": null
+      },
+      "before_status": "approved",
+      "before_display": "Y",
+      "mode": "apply",
+      "stage": "submitted",
+      "render": {
+        "request_id": "21501be117894094702134514",
+        "trace_id": "2101dbd017894094698827877e0b9f",
+        "message": null,
+        "error": null
+      },
+      "changed_sku_rows": 7,
+      "update": {
+        "request_id": "21501b8d17894094794627724",
+        "trace_id": "2101fb9317894094786727504e0f0b",
+        "message": null,
+        "error": null
+      },
+      "readback": {
+        "request_id": "213c934417894094877927006",
+        "trace_id": "2101d14517894094874797734e0d7f",
+        "message": null,
+        "error": null
+      },
+      "after_status": "modified",
+      "after_display": "N",
+      "checks": {
+        "identity_ok": true,
+        "target_state_ok": true,
+        "sku_count_21": true,
+        "non_target_fields_unchanged": true,
+        "source_not_targeted": true
+      },
+      "ok": true
+    }
+  ]
+}

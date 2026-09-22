@@ -1,0 +1,214 @@
+{
+  "finished_at": "2026-09-14T06:41:12.111267+00:00",
+  "success_count": 1,
+  "failure_count": 2,
+  "protected_product_ids": [
+    "10000043991998",
+    "10000044041008",
+    "1601825074604"
+  ],
+  "results": [
+    {
+      "product_id": "1601939641581",
+      "ok": false,
+      "stage": "readback_mismatch",
+      "expected_model": "BQ022-W1 / A2208",
+      "old_title": "Wholesale Breathable Light Weight Striped Knit Slip-On Walking Shoes Casual Factory Supply Model A2208",
+      "new_title": "Wholesale Men's Casual Slip On Sneakers Striped Knit Textile Walking Shoes Factory Supply A2208",
+      "old_images": [
+        "https://sc04.alicdn.com/kf/Ha909f2cdcb1e4303817784e00aea2513e.jpg",
+        "https://sc04.alicdn.com/kf/Sb1b57502991c4e829d36c8860faf39b3U.jpg",
+        "https://sc04.alicdn.com/kf/S750fedabf92a4e78a8ab5f6e1395f3d62.jpg",
+        "https://sc04.alicdn.com/kf/S59433bca84814284b7754b693a41bff2e.jpg",
+        "https://sc04.alicdn.com/kf/Sdc1dbd5093a7409c99636ba71577fc14V.jpg",
+        "https://sc04.alicdn.com/kf/S971cf8eb73ac46afaa2bfebc9820b224l.jpg"
+      ],
+      "new_images": [
+        "https://sc04.alicdn.com/kf/S31678bf54e1b48aea05cc8676eaa1cd72.jpg",
+        "https://sc04.alicdn.com/kf/Sb1b57502991c4e829d36c8860faf39b3U.jpg",
+        "https://sc04.alicdn.com/kf/S750fedabf92a4e78a8ab5f6e1395f3d62.jpg",
+        "https://sc04.alicdn.com/kf/S59433bca84814284b7754b693a41bff2e.jpg",
+        "https://sc04.alicdn.com/kf/Sdc1dbd5093a7409c99636ba71577fc14V.jpg",
+        "https://sc04.alicdn.com/kf/S971cf8eb73ac46afaa2bfebc9820b224l.jpg"
+      ],
+      "before_status": "approved",
+      "after_status": "modified",
+      "before_display": "Y",
+      "after_display": "N",
+      "checks": {
+        "identity_ok": true,
+        "title_ok": true,
+        "hero_ok": true,
+        "m2_m6_ok": true,
+        "other_fields_unchanged": false,
+        "source_not_targeted": true
+      },
+      "snapshot_diff_paths": [
+        "$.pc_detail_url: 'https://www.alibaba.com/product-detail/Wholesale-Breathable-Light-Weight-Striped-Knit_1601939641581.html' -> 'https://www.alibaba.com/product-detail/Wholesale-Men-s-Casual-Slip-On_1601939641581.html'"
+      ],
+      "preserved_reuploads": [],
+      "hero_upload": {
+        "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\02_单品优化记录\\BQ系列持续优化_2026-09-14\\BQ022首图候选\\W1_black.jpg",
+        "file_id": "30153233069",
+        "url": "//sc04.alicdn.com/kf/S31678bf54e1b48aea05cc8676eaa1cd72/286385890/S31678bf54e1b48aea05cc8676eaa1cd72.jpg",
+        "request_id": "21546a1d17893679731288498",
+        "trace_id": "2101e68f17893679714975735e0e6f",
+        "message": null,
+        "error": null
+      },
+      "video": {
+        "video_id": "AAF7jmk4AOWGexucDVhQzich",
+        "request_id": "213e759c17893679800113843",
+        "trace_id": "2101d14517893679796985428e0e07",
+        "message": null,
+        "error": null
+      },
+      "update": {
+        "request_id": "213e759c17893679871594761",
+        "trace_id": "2101c5a717893679868415179e0e93",
+        "message": null,
+        "error": null
+      },
+      "readback": {
+        "request_id": "0b80d2d617893679952408857",
+        "trace_id": "2101dd0617893679949144145e0f16",
+        "message": null,
+        "error": null
+      }
+    },
+    {
+      "product_id": "1601939659468",
+      "ok": true,
+      "stage": "verified",
+      "expected_model": "BQ022-R1 / A2208",
+      "old_title": "Striped Knit Slip-On Walking Shoes Casual Shoes for Travel Commuting and Daily Wear Model A2208",
+      "new_title": "Striped Knit Slip On Walking Shoes Lightweight Casual Sneakers for Travel and Daily Wear A2208",
+      "old_images": [
+        "https://sc04.alicdn.com/kf/H1c8b1be63ed8439592046d9657d61e6eP.jpg",
+        "https://sc04.alicdn.com/kf/S05db511cdf9840dab9a75bb13976e523b.jpg",
+        "https://sc04.alicdn.com/kf/S828bd011b7804f418b556f1e2dc0ed9bJ.jpg",
+        "https://sc04.alicdn.com/kf/S5962b1c762e44c95b8e548290c801b89m.jpg",
+        "https://sc04.alicdn.com/kf/S199e709a1bc94488b3f613d239f6ed3cZ.jpg",
+        "https://sc04.alicdn.com/kf/S7774687f092646be89f9c292bd918caeu.jpg"
+      ],
+      "new_images": [
+        "https://sc04.alicdn.com/kf/S68775e0b2cf34c80bb16375031b6fb7bz.jpg",
+        "https://sc04.alicdn.com/kf/S05db511cdf9840dab9a75bb13976e523b.jpg",
+        "https://sc04.alicdn.com/kf/S828bd011b7804f418b556f1e2dc0ed9bJ.jpg",
+        "https://sc04.alicdn.com/kf/S5962b1c762e44c95b8e548290c801b89m.jpg",
+        "https://sc04.alicdn.com/kf/S199e709a1bc94488b3f613d239f6ed3cZ.jpg",
+        "https://sc04.alicdn.com/kf/S7774687f092646be89f9c292bd918caeu.jpg"
+      ],
+      "before_status": "approved",
+      "after_status": "modified",
+      "before_display": "Y",
+      "after_display": "N",
+      "checks": {
+        "identity_ok": true,
+        "title_ok": true,
+        "hero_ok": true,
+        "m2_m6_ok": true,
+        "other_fields_unchanged": true,
+        "source_not_targeted": true
+      },
+      "snapshot_diff_paths": [],
+      "preserved_reuploads": [],
+      "hero_upload": {
+        "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\02_单品优化记录\\BQ系列持续优化_2026-09-14\\BQ022首图候选\\R1_light_grey.jpg",
+        "file_id": "30153221298",
+        "url": "//sc04.alicdn.com/kf/S68775e0b2cf34c80bb16375031b6fb7bz/286385890/S68775e0b2cf34c80bb16375031b6fb7bz.jpg",
+        "request_id": "21501b6717893680110914594",
+        "trace_id": "2101e68f17893680093921519e0c3e",
+        "message": null,
+        "error": null
+      },
+      "video": {
+        "video_id": "AAF7jmk4AOWGexucDVhQzich",
+        "request_id": "213e759c17893680178247366",
+        "trace_id": "2101d13c17893680175042044e0d4e",
+        "message": null,
+        "error": null
+      },
+      "update": {
+        "request_id": "21501b6717893680247675298",
+        "trace_id": "2101d86517893680244383675e0e89",
+        "message": null,
+        "error": null
+      },
+      "readback": {
+        "request_id": "213d4e4917893680328138097",
+        "trace_id": "2101dd0617893680324995604e0e0f",
+        "message": null,
+        "error": null
+      }
+    },
+    {
+      "product_id": "1601939709218",
+      "ok": false,
+      "stage": "readback_mismatch",
+      "expected_model": "BQ022-O1 / A2208",
+      "old_title": "Custom Logo Striped Knit Slip-On Walking Shoes Casual Shoes OEM ODM Private Label Footwear Supplier Model A2208",
+      "new_title": "Custom Logo Slip On Casual Sneakers Striped Knit Walking Shoes OEM ODM Private Label A2208",
+      "old_images": [
+        "https://sc04.alicdn.com/kf/Hd6a9c260b97f40c3980d176542303cc92.jpg",
+        "https://sc04.alicdn.com/kf/S7401d411e99e4fc6bb4f68914a063e261.jpg",
+        "https://sc04.alicdn.com/kf/S4ff668aa18dd4815a3bfa07e5530784a9.jpg",
+        "https://sc04.alicdn.com/kf/S954b97c17a77407fbc98953047edf454y.jpg",
+        "https://sc04.alicdn.com/kf/Sa5a83e5dd8944b43bb9a63de1aaeb128o.jpg",
+        "https://sc04.alicdn.com/kf/S1c90bd800bea43f49fd346cd7daf8ecdj.jpg"
+      ],
+      "new_images": [
+        "https://sc04.alicdn.com/kf/H2c6d1f482ba949b2932168b6d006d69cW.jpg",
+        "https://sc04.alicdn.com/kf/S7401d411e99e4fc6bb4f68914a063e261.jpg",
+        "https://sc04.alicdn.com/kf/S4ff668aa18dd4815a3bfa07e5530784a9.jpg",
+        "https://sc04.alicdn.com/kf/S954b97c17a77407fbc98953047edf454y.jpg",
+        "https://sc04.alicdn.com/kf/Sa5a83e5dd8944b43bb9a63de1aaeb128o.jpg",
+        "https://sc04.alicdn.com/kf/S1c90bd800bea43f49fd346cd7daf8ecdj.jpg"
+      ],
+      "before_status": "approved",
+      "after_status": "modified",
+      "before_display": "Y",
+      "after_display": "N",
+      "checks": {
+        "identity_ok": true,
+        "title_ok": true,
+        "hero_ok": true,
+        "m2_m6_ok": true,
+        "other_fields_unchanged": false,
+        "source_not_targeted": true
+      },
+      "snapshot_diff_paths": [
+        "$.pc_detail_url: 'https://www.alibaba.com/product-detail/Custom-Logo-Striped-Knit-Slip-On_1601939709218.html' -> 'https://www.alibaba.com/product-detail/Custom-Logo-Slip-On-Casual-Sneakers_1601939709218.html'"
+      ],
+      "preserved_reuploads": [],
+      "hero_upload": {
+        "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\02_单品优化记录\\BQ系列持续优化_2026-09-14\\BQ022首图候选\\O1_black_white_pair_scene.jpg",
+        "file_id": "33483697707",
+        "url": "//sc04.alicdn.com/kf/H2c6d1f482ba949b2932168b6d006d69cW/286385890/H2c6d1f482ba949b2932168b6d006d69cW.jpg",
+        "request_id": "0bab02fe17893680485722191",
+        "trace_id": "2101e68f17893680465867109e0c7e",
+        "message": null,
+        "error": null
+      },
+      "video": {
+        "video_id": "AAF7jmk4AOWGexucDVhQzich",
+        "request_id": "21501b8d17893680556813851",
+        "trace_id": "2101dd0617893680553674025e0ed5",
+        "message": null,
+        "error": null
+      },
+      "update": {
+        "request_id": "21501b6717893680626147732",
+        "trace_id": "2101c5a717893680622982740e0dee",
+        "message": null,
+        "error": null
+      },
+      "readback": {
+        "request_id": "212cbf3217893680710356318",
+        "trace_id": "2101d14517893680707092714e0d83",
+        "message": null,
+        "error": null
+      }
+    }
+  ]
+}

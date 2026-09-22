@@ -1,0 +1,43 @@
+{
+  "checked_at": "2026-09-15T00:03:00+08:00",
+  "source_product_id": "10000044021584",
+  "result": "PUBLIC_QA_PASS",
+  "products": [
+    {
+      "product_id": "1601939608691",
+      "model": "BQ016-W1 / 201",
+      "status": "approved",
+      "display": "Y",
+      "hero": "Black",
+      "title_role": "Wholesale Kids School Shoes"
+    },
+    {
+      "product_id": "1601939691301",
+      "model": "BQ016-R1 / 201",
+      "status": "approved",
+      "display": "Y",
+      "hero": "Pink",
+      "title_role": "Girls School Shoes"
+    },
+    {
+      "product_id": "1601939633580",
+      "model": "BQ016-O1 / 201",
+      "status": "approved",
+      "display": "Y",
+      "hero": "Zebra Stripe",
+      "title_role": "Custom Logo OEM ODM"
+    }
+  ],
+  "checks": {
+    "title_and_hero_role_ok": true,
+    "six_real_photo_gallery_ok": true,
+    "three_color_thumbnails_ok": true,
+    "sizes_eu_31_40_ok": true,
+    "sku_count_30_ok": true,
+    "model_ok": true,
+    "pairs_price_tiers_ok": true,
+    "closure_slip_on_ok": true,
+    "regular_fit_ok": true
+  },
+  "next_action": "Enter 7/14/30-day source-keyword, CTR, visit and inquiry monitoring. Do not make rapid content changes."
+}

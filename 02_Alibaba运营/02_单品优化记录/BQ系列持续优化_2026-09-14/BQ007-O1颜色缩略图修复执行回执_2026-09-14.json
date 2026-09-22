@@ -1,0 +1,72 @@
+{
+  "timestamp_utc": "2026-09-14T12:18:28.829619+00:00",
+  "source_product_id_protected": "1601825070472",
+  "mode": "apply",
+  "results": [
+    {
+      "product_id": "1601939701201",
+      "expected_model": "BQ007-O1 / L0017",
+      "mode": "apply",
+      "before_status": "approved",
+      "before_display": "Y",
+      "before": {
+        "request_id": "212c41d317893882836581173",
+        "trace_id": "2103346417893882833396735e0d29",
+        "message": null,
+        "error": null
+      },
+      "stage": "submitted",
+      "render": {
+        "request_id": "213c933517893882907291431",
+        "trace_id": "2103245817893882904223243e10aa",
+        "message": null,
+        "error": null
+      },
+      "target": {
+        "3558409": {
+          "name": "Orange",
+          "image_url": "https://sc04.alicdn.com/kf/H45c4d98bb5824ab79f299a04151cf0bfH.jpg"
+        },
+        "-80": {
+          "name": "White Khaki",
+          "image_url": "https://sc04.alicdn.com/kf/H6b0948b966e8477f9204ff3d32058ca5h.jpg"
+        },
+        "3331185": {
+          "name": "White",
+          "image_url": "https://sc04.alicdn.com/kf/H5c8be9c9aa0c41fabb70d7e5a9430ac5F.jpg"
+        },
+        "-57": {
+          "name": "Black White",
+          "image_url": "https://sc04.alicdn.com/kf/H7a3f2b0702824b78b00b0a5236e66ef9x.jpg"
+        },
+        "-34": {
+          "name": "All Black",
+          "image_url": "https://sc04.alicdn.com/kf/Hd0edb11e1a8c44ccbd3e38bd06277bf3U.jpg"
+        }
+      },
+      "ok": true,
+      "update": {
+        "request_id": "213d4e4917893882995608302",
+        "trace_id": "210329c717893882992124111e0f75",
+        "message": null,
+        "error": null
+      },
+      "readback": {
+        "request_id": "0bab02fc17893883076642072",
+        "trace_id": "2103346417893883073582869e0c21",
+        "message": null,
+        "error": null
+      },
+      "after_status": "modified",
+      "after_display": "N",
+      "checks": {
+        "identity_ok": true,
+        "target_images_ok": true,
+        "color_names_unchanged": true,
+        "sku_count_55": true,
+        "sku_codes_unchanged": true,
+        "all_non_image_fields_unchanged": true
+      }
+    }
+  ]
+}

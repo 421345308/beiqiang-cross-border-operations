@@ -1,0 +1,53 @@
+{
+  "date": "2026-09-15",
+  "mode": "execute",
+  "success_count": 2,
+  "failure_count": 0,
+  "protected_source_count": 30,
+  "results": [
+    {
+      "product_id": "1601939691342",
+      "expected_model": "BQ024-W1 / A830",
+      "old_title": "Wholesale Black White Knit Slip Walking Shoes Lightweight Casual Sneakers EVA Midsole Breathable Regular Fit All Seasons Factory",
+      "new_title": "Wholesale Black White Knit Slip-On Walking Shoes Lightweight Casual Sneakers EVA Sole Factory Supply A830",
+      "after_status": "modified",
+      "after_display": "N",
+      "before_sku_count": 36,
+      "after_sku_count": 36,
+      "checks": {
+        "title_ok": true,
+        "model_ok": true,
+        "gallery_unchanged": true,
+        "sku_count_unchanged": true,
+        "non_target_fields_unchanged": true,
+        "source_not_targeted": true
+      },
+      "snapshot_diff_paths": [],
+      "update_request_id": "213c932b17894148920988569",
+      "readback_request_id": "21501b8d17894149023185885",
+      "stage": "verified"
+    },
+    {
+      "product_id": "1601939691340",
+      "expected_model": "BQ024-O1 / A830",
+      "old_title": "Custom Logo Black Yellow Knit Slip Walking Shoes OEM ODM Private Label Casual Sneakers Breathable Light Weight Regular Fit A830",
+      "new_title": "Custom Logo Black Yellow Knit Slip-On Walking Shoes OEM ODM Private Label Casual Sneakers A830",
+      "after_status": "modified",
+      "after_display": "N",
+      "before_sku_count": 36,
+      "after_sku_count": 36,
+      "checks": {
+        "title_ok": true,
+        "model_ok": true,
+        "gallery_unchanged": true,
+        "sku_count_unchanged": true,
+        "non_target_fields_unchanged": true,
+        "source_not_targeted": true
+      },
+      "snapshot_diff_paths": [],
+      "update_request_id": "213f5a2117894149179307664",
+      "readback_request_id": "0b80d2d617894149260628254",
+      "stage": "verified"
+    }
+  ]
+}

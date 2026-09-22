@@ -1,0 +1,843 @@
+{
+  "timestamp_utc": "2026-09-14T07:57:58.836558+00:00",
+  "source_product_id_protected": "10000044041031",
+  "mode": "dry-run",
+  "current_schema": {
+    "request_id": "0bab02fe17893726296885134",
+    "trace_id": "210334ab17893726293728305e0ea7",
+    "message": null,
+    "error": null,
+    "bytes": 88378
+  },
+  "color_image_uploads": [
+    {
+      "color_id": "-1",
+      "color": "All Black",
+      "local_file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\02_可发布素材\\00_最终上传\\BQ024_A830\\03_颜色图\\dark_grey.jpg",
+      "sha256": "22050696f5aeade93e008532d9a1fdf38032202b63291666c69d71358f459c06",
+      "bytes": 120298,
+      "planned": true
+    },
+    {
+      "color_id": "-20",
+      "color": "Beige Grey",
+      "local_file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\02_可发布素材\\00_最终上传\\BQ024_A830\\03_颜色图\\light_grey.jpg",
+      "sha256": "3a5f2a487493e35abaf8d5cf3ca1e892aaef6eaf8b6dfb2c9d46aa5609ede711",
+      "bytes": 107864,
+      "planned": true
+    },
+    {
+      "color_id": "-39",
+      "color": "Black Yellow",
+      "local_file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\02_可发布素材\\00_最终上传\\BQ024_A830\\03_颜色图\\yellow_sole.jpg",
+      "sha256": "4030072805850080d245fe8cdcc21143d7f3ee7505aa56940e34664dc3aacba8",
+      "bytes": 120904,
+      "planned": true
+    },
+    {
+      "color_id": "-58",
+      "color": "Black White",
+      "local_file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\02_可发布素材\\00_最终上传\\BQ024_A830\\03_颜色图\\all_black.jpg",
+      "sha256": "86fd939f1bd48a0554ca61cb26469e0ae5736dedc8b26f0812d73e3e8eb2eedf",
+      "bytes": 116601,
+      "planned": true
+    }
+  ],
+  "results": [
+    {
+      "product_id": "1601939691342",
+      "expected_model": "BQ024-W1 / A830",
+      "before": {
+        "request_id": "21501b6717893726378944593",
+        "trace_id": "210325bb17893726375805479e0dfb",
+        "message": null,
+        "error": null
+      },
+      "before_status": "approved",
+      "before_display": "Y",
+      "mode": "dry-run",
+      "stage": "prepared",
+      "render": {
+        "request_id": "21501b6717893726451375297",
+        "trace_id": "210313ec17893726448283706e0ddd",
+        "message": null,
+        "error": null
+      },
+      "sku_manifest": [
+        {
+          "color_id": "-58",
+          "color": "Black White",
+          "size": "44",
+          "sku_code": "BQ024-W1-BLACK-WHITE-44"
+        },
+        {
+          "color_id": "-58",
+          "color": "Black White",
+          "size": "45",
+          "sku_code": "BQ024-W1-BLACK-WHITE-45"
+        },
+        {
+          "color_id": "-58",
+          "color": "Black White",
+          "size": "42",
+          "sku_code": "BQ024-W1-BLACK-WHITE-42"
+        },
+        {
+          "color_id": "-58",
+          "color": "Black White",
+          "size": "43",
+          "sku_code": "BQ024-W1-BLACK-WHITE-43"
+        },
+        {
+          "color_id": "-58",
+          "color": "Black White",
+          "size": "40",
+          "sku_code": "BQ024-W1-BLACK-WHITE-40"
+        },
+        {
+          "color_id": "-58",
+          "color": "Black White",
+          "size": "41",
+          "sku_code": "BQ024-W1-BLACK-WHITE-41"
+        },
+        {
+          "color_id": "-58",
+          "color": "Black White",
+          "size": "38",
+          "sku_code": "BQ024-W1-BLACK-WHITE-38"
+        },
+        {
+          "color_id": "-58",
+          "color": "Black White",
+          "size": "39",
+          "sku_code": "BQ024-W1-BLACK-WHITE-39"
+        },
+        {
+          "color_id": "-39",
+          "color": "Black Yellow",
+          "size": "45",
+          "sku_code": "BQ024-W1-BLACK-YELLOW-45"
+        },
+        {
+          "color_id": "-58",
+          "color": "Black White",
+          "size": "37",
+          "sku_code": "BQ024-W1-BLACK-WHITE-37"
+        },
+        {
+          "color_id": "-39",
+          "color": "Black Yellow",
+          "size": "43",
+          "sku_code": "BQ024-W1-BLACK-YELLOW-43"
+        },
+        {
+          "color_id": "-39",
+          "color": "Black Yellow",
+          "size": "44",
+          "sku_code": "BQ024-W1-BLACK-YELLOW-44"
+        },
+        {
+          "color_id": "-39",
+          "color": "Black Yellow",
+          "size": "41",
+          "sku_code": "BQ024-W1-BLACK-YELLOW-41"
+        },
+        {
+          "color_id": "-39",
+          "color": "Black Yellow",
+          "size": "42",
+          "sku_code": "BQ024-W1-BLACK-YELLOW-42"
+        },
+        {
+          "color_id": "-39",
+          "color": "Black Yellow",
+          "size": "39",
+          "sku_code": "BQ024-W1-BLACK-YELLOW-39"
+        },
+        {
+          "color_id": "-39",
+          "color": "Black Yellow",
+          "size": "40",
+          "sku_code": "BQ024-W1-BLACK-YELLOW-40"
+        },
+        {
+          "color_id": "-39",
+          "color": "Black Yellow",
+          "size": "37",
+          "sku_code": "BQ024-W1-BLACK-YELLOW-37"
+        },
+        {
+          "color_id": "-39",
+          "color": "Black Yellow",
+          "size": "38",
+          "sku_code": "BQ024-W1-BLACK-YELLOW-38"
+        },
+        {
+          "color_id": "-20",
+          "color": "Beige Grey",
+          "size": "44",
+          "sku_code": "BQ024-W1-BEIGE-GREY-44"
+        },
+        {
+          "color_id": "-20",
+          "color": "Beige Grey",
+          "size": "45",
+          "sku_code": "BQ024-W1-BEIGE-GREY-45"
+        },
+        {
+          "color_id": "-20",
+          "color": "Beige Grey",
+          "size": "42",
+          "sku_code": "BQ024-W1-BEIGE-GREY-42"
+        },
+        {
+          "color_id": "-20",
+          "color": "Beige Grey",
+          "size": "43",
+          "sku_code": "BQ024-W1-BEIGE-GREY-43"
+        },
+        {
+          "color_id": "-20",
+          "color": "Beige Grey",
+          "size": "40",
+          "sku_code": "BQ024-W1-BEIGE-GREY-40"
+        },
+        {
+          "color_id": "-20",
+          "color": "Beige Grey",
+          "size": "41",
+          "sku_code": "BQ024-W1-BEIGE-GREY-41"
+        },
+        {
+          "color_id": "-20",
+          "color": "Beige Grey",
+          "size": "38",
+          "sku_code": "BQ024-W1-BEIGE-GREY-38"
+        },
+        {
+          "color_id": "-20",
+          "color": "Beige Grey",
+          "size": "39",
+          "sku_code": "BQ024-W1-BEIGE-GREY-39"
+        },
+        {
+          "color_id": "-1",
+          "color": "All Black",
+          "size": "45",
+          "sku_code": "BQ024-W1-ALL-BLACK-45"
+        },
+        {
+          "color_id": "-20",
+          "color": "Beige Grey",
+          "size": "37",
+          "sku_code": "BQ024-W1-BEIGE-GREY-37"
+        },
+        {
+          "color_id": "-1",
+          "color": "All Black",
+          "size": "43",
+          "sku_code": "BQ024-W1-ALL-BLACK-43"
+        },
+        {
+          "color_id": "-1",
+          "color": "All Black",
+          "size": "44",
+          "sku_code": "BQ024-W1-ALL-BLACK-44"
+        },
+        {
+          "color_id": "-1",
+          "color": "All Black",
+          "size": "41",
+          "sku_code": "BQ024-W1-ALL-BLACK-41"
+        },
+        {
+          "color_id": "-1",
+          "color": "All Black",
+          "size": "42",
+          "sku_code": "BQ024-W1-ALL-BLACK-42"
+        },
+        {
+          "color_id": "-1",
+          "color": "All Black",
+          "size": "39",
+          "sku_code": "BQ024-W1-ALL-BLACK-39"
+        },
+        {
+          "color_id": "-1",
+          "color": "All Black",
+          "size": "40",
+          "sku_code": "BQ024-W1-ALL-BLACK-40"
+        },
+        {
+          "color_id": "-1",
+          "color": "All Black",
+          "size": "37",
+          "sku_code": "BQ024-W1-ALL-BLACK-37"
+        },
+        {
+          "color_id": "-1",
+          "color": "All Black",
+          "size": "38",
+          "sku_code": "BQ024-W1-ALL-BLACK-38"
+        }
+      ],
+      "target_colors": {
+        "-1": {
+          "name": "All Black",
+          "slug": "ALL-BLACK",
+          "local_file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\02_可发布素材\\00_最终上传\\BQ024_A830\\03_颜色图\\dark_grey.jpg",
+          "image_url": "https://sc04.alicdn.com/kf/S71343b8d4d7c410fb969539cbcf5881eY.jpg"
+        },
+        "-20": {
+          "name": "Beige Grey",
+          "slug": "BEIGE-GREY",
+          "local_file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\02_可发布素材\\00_最终上传\\BQ024_A830\\03_颜色图\\light_grey.jpg",
+          "image_url": "https://sc04.alicdn.com/kf/Sfbbcf454c2754b4eacc3170c7fad8555r.jpg"
+        },
+        "-39": {
+          "name": "Black Yellow",
+          "slug": "BLACK-YELLOW",
+          "local_file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\02_可发布素材\\00_最终上传\\BQ024_A830\\03_颜色图\\yellow_sole.jpg",
+          "image_url": "https://sc04.alicdn.com/kf/S65295bf2182f4bc29622900947cda1d7E.jpg"
+        },
+        "-58": {
+          "name": "Black White",
+          "slug": "BLACK-WHITE",
+          "local_file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\02_可发布素材\\00_最终上传\\BQ024_A830\\03_颜色图\\all_black.jpg",
+          "image_url": "https://sc04.alicdn.com/kf/S71b8fd1bbef643a4835e6344b599963d0.jpg"
+        }
+      },
+      "ok": true
+    },
+    {
+      "product_id": "1601939684371",
+      "expected_model": "BQ024-R1 / A830",
+      "before": {
+        "request_id": "0b80d2d617893726536913414",
+        "trace_id": "2103135017893726533762865e0f56",
+        "message": null,
+        "error": null
+      },
+      "before_status": "approved",
+      "before_display": "Y",
+      "mode": "dry-run",
+      "stage": "prepared",
+      "render": {
+        "request_id": "213f5a2117893726607046818",
+        "trace_id": "210334ab17893726603806577e0c55",
+        "message": null,
+        "error": null
+      },
+      "sku_manifest": [
+        {
+          "color_id": "-1",
+          "color": "All Black",
+          "size": "41",
+          "sku_code": "BQ024-R1-ALL-BLACK-41"
+        },
+        {
+          "color_id": "-1",
+          "color": "All Black",
+          "size": "42",
+          "sku_code": "BQ024-R1-ALL-BLACK-42"
+        },
+        {
+          "color_id": "-1",
+          "color": "All Black",
+          "size": "43",
+          "sku_code": "BQ024-R1-ALL-BLACK-43"
+        },
+        {
+          "color_id": "-1",
+          "color": "All Black",
+          "size": "44",
+          "sku_code": "BQ024-R1-ALL-BLACK-44"
+        },
+        {
+          "color_id": "-1",
+          "color": "All Black",
+          "size": "37",
+          "sku_code": "BQ024-R1-ALL-BLACK-37"
+        },
+        {
+          "color_id": "-1",
+          "color": "All Black",
+          "size": "38",
+          "sku_code": "BQ024-R1-ALL-BLACK-38"
+        },
+        {
+          "color_id": "-1",
+          "color": "All Black",
+          "size": "39",
+          "sku_code": "BQ024-R1-ALL-BLACK-39"
+        },
+        {
+          "color_id": "-1",
+          "color": "All Black",
+          "size": "40",
+          "sku_code": "BQ024-R1-ALL-BLACK-40"
+        },
+        {
+          "color_id": "-58",
+          "color": "Black White",
+          "size": "42",
+          "sku_code": "BQ024-R1-BLACK-WHITE-42"
+        },
+        {
+          "color_id": "-58",
+          "color": "Black White",
+          "size": "43",
+          "sku_code": "BQ024-R1-BLACK-WHITE-43"
+        },
+        {
+          "color_id": "-58",
+          "color": "Black White",
+          "size": "44",
+          "sku_code": "BQ024-R1-BLACK-WHITE-44"
+        },
+        {
+          "color_id": "-58",
+          "color": "Black White",
+          "size": "45",
+          "sku_code": "BQ024-R1-BLACK-WHITE-45"
+        },
+        {
+          "color_id": "-58",
+          "color": "Black White",
+          "size": "38",
+          "sku_code": "BQ024-R1-BLACK-WHITE-38"
+        },
+        {
+          "color_id": "-58",
+          "color": "Black White",
+          "size": "39",
+          "sku_code": "BQ024-R1-BLACK-WHITE-39"
+        },
+        {
+          "color_id": "-58",
+          "color": "Black White",
+          "size": "40",
+          "sku_code": "BQ024-R1-BLACK-WHITE-40"
+        },
+        {
+          "color_id": "-58",
+          "color": "Black White",
+          "size": "41",
+          "sku_code": "BQ024-R1-BLACK-WHITE-41"
+        },
+        {
+          "color_id": "-39",
+          "color": "Black Yellow",
+          "size": "43",
+          "sku_code": "BQ024-R1-BLACK-YELLOW-43"
+        },
+        {
+          "color_id": "-39",
+          "color": "Black Yellow",
+          "size": "44",
+          "sku_code": "BQ024-R1-BLACK-YELLOW-44"
+        },
+        {
+          "color_id": "-39",
+          "color": "Black Yellow",
+          "size": "45",
+          "sku_code": "BQ024-R1-BLACK-YELLOW-45"
+        },
+        {
+          "color_id": "-58",
+          "color": "Black White",
+          "size": "37",
+          "sku_code": "BQ024-R1-BLACK-WHITE-37"
+        },
+        {
+          "color_id": "-39",
+          "color": "Black Yellow",
+          "size": "39",
+          "sku_code": "BQ024-R1-BLACK-YELLOW-39"
+        },
+        {
+          "color_id": "-39",
+          "color": "Black Yellow",
+          "size": "40",
+          "sku_code": "BQ024-R1-BLACK-YELLOW-40"
+        },
+        {
+          "color_id": "-39",
+          "color": "Black Yellow",
+          "size": "41",
+          "sku_code": "BQ024-R1-BLACK-YELLOW-41"
+        },
+        {
+          "color_id": "-39",
+          "color": "Black Yellow",
+          "size": "42",
+          "sku_code": "BQ024-R1-BLACK-YELLOW-42"
+        },
+        {
+          "color_id": "-20",
+          "color": "Beige Grey",
+          "size": "44",
+          "sku_code": "BQ024-R1-BEIGE-GREY-44"
+        },
+        {
+          "color_id": "-20",
+          "color": "Beige Grey",
+          "size": "45",
+          "sku_code": "BQ024-R1-BEIGE-GREY-45"
+        },
+        {
+          "color_id": "-39",
+          "color": "Black Yellow",
+          "size": "37",
+          "sku_code": "BQ024-R1-BLACK-YELLOW-37"
+        },
+        {
+          "color_id": "-39",
+          "color": "Black Yellow",
+          "size": "38",
+          "sku_code": "BQ024-R1-BLACK-YELLOW-38"
+        },
+        {
+          "color_id": "-20",
+          "color": "Beige Grey",
+          "size": "40",
+          "sku_code": "BQ024-R1-BEIGE-GREY-40"
+        },
+        {
+          "color_id": "-20",
+          "color": "Beige Grey",
+          "size": "41",
+          "sku_code": "BQ024-R1-BEIGE-GREY-41"
+        },
+        {
+          "color_id": "-20",
+          "color": "Beige Grey",
+          "size": "42",
+          "sku_code": "BQ024-R1-BEIGE-GREY-42"
+        },
+        {
+          "color_id": "-20",
+          "color": "Beige Grey",
+          "size": "43",
+          "sku_code": "BQ024-R1-BEIGE-GREY-43"
+        },
+        {
+          "color_id": "-1",
+          "color": "All Black",
+          "size": "45",
+          "sku_code": "BQ024-R1-ALL-BLACK-45"
+        },
+        {
+          "color_id": "-20",
+          "color": "Beige Grey",
+          "size": "37",
+          "sku_code": "BQ024-R1-BEIGE-GREY-37"
+        },
+        {
+          "color_id": "-20",
+          "color": "Beige Grey",
+          "size": "38",
+          "sku_code": "BQ024-R1-BEIGE-GREY-38"
+        },
+        {
+          "color_id": "-20",
+          "color": "Beige Grey",
+          "size": "39",
+          "sku_code": "BQ024-R1-BEIGE-GREY-39"
+        }
+      ],
+      "target_colors": {
+        "-1": {
+          "name": "All Black",
+          "slug": "ALL-BLACK",
+          "local_file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\02_可发布素材\\00_最终上传\\BQ024_A830\\03_颜色图\\dark_grey.jpg",
+          "image_url": "https://sc04.alicdn.com/kf/S71343b8d4d7c410fb969539cbcf5881eY.jpg"
+        },
+        "-20": {
+          "name": "Beige Grey",
+          "slug": "BEIGE-GREY",
+          "local_file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\02_可发布素材\\00_最终上传\\BQ024_A830\\03_颜色图\\light_grey.jpg",
+          "image_url": "https://sc04.alicdn.com/kf/Sfbbcf454c2754b4eacc3170c7fad8555r.jpg"
+        },
+        "-39": {
+          "name": "Black Yellow",
+          "slug": "BLACK-YELLOW",
+          "local_file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\02_可发布素材\\00_最终上传\\BQ024_A830\\03_颜色图\\yellow_sole.jpg",
+          "image_url": "https://sc04.alicdn.com/kf/S65295bf2182f4bc29622900947cda1d7E.jpg"
+        },
+        "-58": {
+          "name": "Black White",
+          "slug": "BLACK-WHITE",
+          "local_file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\02_可发布素材\\00_最终上传\\BQ024_A830\\03_颜色图\\all_black.jpg",
+          "image_url": "https://sc04.alicdn.com/kf/S71b8fd1bbef643a4835e6344b599963d0.jpg"
+        }
+      },
+      "ok": true
+    },
+    {
+      "product_id": "1601939691340",
+      "expected_model": "BQ024-O1 / A830",
+      "before": {
+        "request_id": "21546a1d17893726694217176",
+        "trace_id": "210334ab17893726690925765e0bf3",
+        "message": null,
+        "error": null
+      },
+      "before_status": "approved",
+      "before_display": "Y",
+      "mode": "dry-run",
+      "stage": "prepared",
+      "render": {
+        "request_id": "21501b8d17893726764074417",
+        "trace_id": "210329c717893726760906996e1101",
+        "message": null,
+        "error": null
+      },
+      "sku_manifest": [
+        {
+          "color_id": "-39",
+          "color": "Black Yellow",
+          "size": "43",
+          "sku_code": "BQ024-O1-BLACK-YELLOW-43"
+        },
+        {
+          "color_id": "-39",
+          "color": "Black Yellow",
+          "size": "42",
+          "sku_code": "BQ024-O1-BLACK-YELLOW-42"
+        },
+        {
+          "color_id": "-39",
+          "color": "Black Yellow",
+          "size": "41",
+          "sku_code": "BQ024-O1-BLACK-YELLOW-41"
+        },
+        {
+          "color_id": "-39",
+          "color": "Black Yellow",
+          "size": "40",
+          "sku_code": "BQ024-O1-BLACK-YELLOW-40"
+        },
+        {
+          "color_id": "-39",
+          "color": "Black Yellow",
+          "size": "39",
+          "sku_code": "BQ024-O1-BLACK-YELLOW-39"
+        },
+        {
+          "color_id": "-39",
+          "color": "Black Yellow",
+          "size": "38",
+          "sku_code": "BQ024-O1-BLACK-YELLOW-38"
+        },
+        {
+          "color_id": "-39",
+          "color": "Black Yellow",
+          "size": "37",
+          "sku_code": "BQ024-O1-BLACK-YELLOW-37"
+        },
+        {
+          "color_id": "-20",
+          "color": "Beige Grey",
+          "size": "45",
+          "sku_code": "BQ024-O1-BEIGE-GREY-45"
+        },
+        {
+          "color_id": "-20",
+          "color": "Beige Grey",
+          "size": "44",
+          "sku_code": "BQ024-O1-BEIGE-GREY-44"
+        },
+        {
+          "color_id": "-20",
+          "color": "Beige Grey",
+          "size": "43",
+          "sku_code": "BQ024-O1-BEIGE-GREY-43"
+        },
+        {
+          "color_id": "-20",
+          "color": "Beige Grey",
+          "size": "42",
+          "sku_code": "BQ024-O1-BEIGE-GREY-42"
+        },
+        {
+          "color_id": "-20",
+          "color": "Beige Grey",
+          "size": "41",
+          "sku_code": "BQ024-O1-BEIGE-GREY-41"
+        },
+        {
+          "color_id": "-20",
+          "color": "Beige Grey",
+          "size": "40",
+          "sku_code": "BQ024-O1-BEIGE-GREY-40"
+        },
+        {
+          "color_id": "-20",
+          "color": "Beige Grey",
+          "size": "39",
+          "sku_code": "BQ024-O1-BEIGE-GREY-39"
+        },
+        {
+          "color_id": "-20",
+          "color": "Beige Grey",
+          "size": "38",
+          "sku_code": "BQ024-O1-BEIGE-GREY-38"
+        },
+        {
+          "color_id": "-20",
+          "color": "Beige Grey",
+          "size": "37",
+          "sku_code": "BQ024-O1-BEIGE-GREY-37"
+        },
+        {
+          "color_id": "-1",
+          "color": "All Black",
+          "size": "45",
+          "sku_code": "BQ024-O1-ALL-BLACK-45"
+        },
+        {
+          "color_id": "-1",
+          "color": "All Black",
+          "size": "44",
+          "sku_code": "BQ024-O1-ALL-BLACK-44"
+        },
+        {
+          "color_id": "-1",
+          "color": "All Black",
+          "size": "43",
+          "sku_code": "BQ024-O1-ALL-BLACK-43"
+        },
+        {
+          "color_id": "-1",
+          "color": "All Black",
+          "size": "42",
+          "sku_code": "BQ024-O1-ALL-BLACK-42"
+        },
+        {
+          "color_id": "-1",
+          "color": "All Black",
+          "size": "41",
+          "sku_code": "BQ024-O1-ALL-BLACK-41"
+        },
+        {
+          "color_id": "-1",
+          "color": "All Black",
+          "size": "40",
+          "sku_code": "BQ024-O1-ALL-BLACK-40"
+        },
+        {
+          "color_id": "-1",
+          "color": "All Black",
+          "size": "39",
+          "sku_code": "BQ024-O1-ALL-BLACK-39"
+        },
+        {
+          "color_id": "-1",
+          "color": "All Black",
+          "size": "38",
+          "sku_code": "BQ024-O1-ALL-BLACK-38"
+        },
+        {
+          "color_id": "-1",
+          "color": "All Black",
+          "size": "37",
+          "sku_code": "BQ024-O1-ALL-BLACK-37"
+        },
+        {
+          "color_id": "-58",
+          "color": "Black White",
+          "size": "45",
+          "sku_code": "BQ024-O1-BLACK-WHITE-45"
+        },
+        {
+          "color_id": "-58",
+          "color": "Black White",
+          "size": "44",
+          "sku_code": "BQ024-O1-BLACK-WHITE-44"
+        },
+        {
+          "color_id": "-58",
+          "color": "Black White",
+          "size": "43",
+          "sku_code": "BQ024-O1-BLACK-WHITE-43"
+        },
+        {
+          "color_id": "-58",
+          "color": "Black White",
+          "size": "42",
+          "sku_code": "BQ024-O1-BLACK-WHITE-42"
+        },
+        {
+          "color_id": "-58",
+          "color": "Black White",
+          "size": "41",
+          "sku_code": "BQ024-O1-BLACK-WHITE-41"
+        },
+        {
+          "color_id": "-58",
+          "color": "Black White",
+          "size": "40",
+          "sku_code": "BQ024-O1-BLACK-WHITE-40"
+        },
+        {
+          "color_id": "-58",
+          "color": "Black White",
+          "size": "39",
+          "sku_code": "BQ024-O1-BLACK-WHITE-39"
+        },
+        {
+          "color_id": "-58",
+          "color": "Black White",
+          "size": "38",
+          "sku_code": "BQ024-O1-BLACK-WHITE-38"
+        },
+        {
+          "color_id": "-58",
+          "color": "Black White",
+          "size": "37",
+          "sku_code": "BQ024-O1-BLACK-WHITE-37"
+        },
+        {
+          "color_id": "-39",
+          "color": "Black Yellow",
+          "size": "45",
+          "sku_code": "BQ024-O1-BLACK-YELLOW-45"
+        },
+        {
+          "color_id": "-39",
+          "color": "Black Yellow",
+          "size": "44",
+          "sku_code": "BQ024-O1-BLACK-YELLOW-44"
+        }
+      ],
+      "target_colors": {
+        "-1": {
+          "name": "All Black",
+          "slug": "ALL-BLACK",
+          "local_file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\02_可发布素材\\00_最终上传\\BQ024_A830\\03_颜色图\\dark_grey.jpg",
+          "image_url": "https://sc04.alicdn.com/kf/S71343b8d4d7c410fb969539cbcf5881eY.jpg"
+        },
+        "-20": {
+          "name": "Beige Grey",
+          "slug": "BEIGE-GREY",
+          "local_file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\02_可发布素材\\00_最终上传\\BQ024_A830\\03_颜色图\\light_grey.jpg",
+          "image_url": "https://sc04.alicdn.com/kf/Sfbbcf454c2754b4eacc3170c7fad8555r.jpg"
+        },
+        "-39": {
+          "name": "Black Yellow",
+          "slug": "BLACK-YELLOW",
+          "local_file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\02_可发布素材\\00_最终上传\\BQ024_A830\\03_颜色图\\yellow_sole.jpg",
+          "image_url": "https://sc04.alicdn.com/kf/S65295bf2182f4bc29622900947cda1d7E.jpg"
+        },
+        "-58": {
+          "name": "Black White",
+          "slug": "BLACK-WHITE",
+          "local_file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\02_可发布素材\\00_最终上传\\BQ024_A830\\03_颜色图\\all_black.jpg",
+          "image_url": "https://sc04.alicdn.com/kf/S71b8fd1bbef643a4835e6344b599963d0.jpg"
+        }
+      },
+      "ok": true
+    }
+  ]
+}

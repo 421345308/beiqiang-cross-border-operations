@@ -1,0 +1,33 @@
+{
+  "finished_at": "2026-09-14T11:06:47.348596+00:00",
+  "mode": "preflight",
+  "fail_fast": true,
+  "results": [
+    {
+      "product_id": "1601939693331",
+      "execute": false,
+      "ok": false,
+      "stage": "auditing_no_resubmit",
+      "status": "modified",
+      "display": "N"
+    },
+    {
+      "product_id": "1601939667426",
+      "execute": false,
+      "ok": false,
+      "stage": "auditing_no_resubmit",
+      "status": "modified",
+      "display": "N"
+    },
+    {
+      "product_id": "1601939754004",
+      "execute": false,
+      "ok": false,
+      "stage": "auditing_no_resubmit",
+      "status": "modified",
+      "display": "N"
+    }
+  ],
+  "success_count": 0,
+  "failure_count": 3
+}

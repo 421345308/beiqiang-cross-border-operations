@@ -1,0 +1,24 @@
+{
+  "date": "2026-09-14",
+  "family": "BQ007 / L0017",
+  "source_protected": "1601825070472",
+  "method": "OpenAPI readback plus Chrome buyer-page visual and accessibility inspection",
+  "result": "PASS",
+  "products": [
+    {"product_id": "1601939585913", "role": "Orange wholesale men's casual walking", "status": "approved", "display": "Y", "main_image": "Orange", "model": "BQ007-W1 / L0017"},
+    {"product_id": "1601939711161", "role": "White Khaki walking style / daily casual", "status": "approved", "display": "Y", "main_image": "White Khaki", "model": "BQ007-R1 / L0017"},
+    {"product_id": "1601939701201", "role": "All Black custom logo OEM ODM", "status": "approved", "display": "Y", "main_image": "All Black", "model": "BQ007-O1 / L0017"}
+  ],
+  "shared_checks": {
+    "title_role_visible": true,
+    "gallery_six_images_visible": true,
+    "five_color_thumbnails_correct": true,
+    "size_range_eu35_45": true,
+    "model_visible": true,
+    "three_tier_pairs_price_visible": true,
+    "closure_type_slip_on": true,
+    "product_identity_correct": true,
+    "no_wrong_color_or_geometry_drift": true
+  },
+  "next_action": "Enter 7/14/30-day monitoring by product, source term, CTR, effective visits and inquiries."
+}

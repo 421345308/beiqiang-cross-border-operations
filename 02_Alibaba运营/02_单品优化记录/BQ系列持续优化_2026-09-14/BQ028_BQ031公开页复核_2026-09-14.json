@@ -1,0 +1,34 @@
+{
+  "date": "2026-09-14",
+  "openapi_poll": "自动续跑审核轮询_2026-09-14_2.json",
+  "products": [
+    {
+      "product_id": "1601939693331",
+      "code": "BQ031-W1",
+      "status": "PUBLIC_QA_PASS",
+      "checks": ["approved/Y", "platform-standardized title visible", "Green White M1 visible", "six images", "five colors", "EU 38-47", "model ZX2116", "Lace-up"],
+      "note": "The unsupported productKeywords field remains empty and will not be resubmitted."
+    },
+    {
+      "product_id": "1601939720204",
+      "code": "BQ028-W1",
+      "status": "AUDIT_PASS",
+      "checks": ["approved/Y", "Blue M1 visible", "six images", "five repaired color thumbnails", "EU 35-45", "model 7212", "Slip-On", "price tiers"],
+      "pending": "Buyer page still shows cached pre-update title ending in BISCUIT while OpenAPI returns the intended 7212 title; wait and recheck without resubmission."
+    },
+    {
+      "product_id": "1601939625627",
+      "code": "BQ028-R1",
+      "status": "AUDIT_PASS",
+      "checks": ["approved/Y", "Apricot M1 visible", "six images", "five repaired color thumbnails", "EU 35-45", "model 7212", "Slip-On", "price tiers"],
+      "pending": "Buyer page title cache has not synchronized; OpenAPI title is correct."
+    },
+    {
+      "product_id": "1601939705262",
+      "code": "BQ028-O1",
+      "status": "AUDIT_PASS",
+      "checks": ["approved/Y", "Grey M1 visible", "six images", "five repaired color thumbnails", "EU 35-45", "model 7212", "Slip-On", "price tiers"],
+      "pending": "Buyer page title cache has not synchronized; OpenAPI title is correct."
+    }
+  ]
+}

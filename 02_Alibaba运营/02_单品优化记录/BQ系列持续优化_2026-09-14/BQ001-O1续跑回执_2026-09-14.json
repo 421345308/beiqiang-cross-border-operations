@@ -1,0 +1,26 @@
+{
+  "finished_at": "2026-09-14T07:13:42.356631+00:00",
+  "success_count": 0,
+  "failure_count": 1,
+  "protected_product_ids": [
+    "10000042821848",
+    "10000043991998",
+    "10000044041008",
+    "1601825074604",
+    "1601838963947",
+    "1601839073314"
+  ],
+  "results": [
+    {
+      "product_id": "1601939572948",
+      "ok": false,
+      "stage": "schema_update",
+      "response": {
+        "request_id": "0b830ecc17893700212031592",
+        "trace_id": "2103243417893700208882358e0bb1",
+        "message": "systemError:isp.system-service-error:PUB_BIZCHECK_PRODUCT_IN_AUDITING:Your product is currently under review. Please do not resubmit.\n\n:;",
+        "error": null
+      }
+    }
+  ]
+}

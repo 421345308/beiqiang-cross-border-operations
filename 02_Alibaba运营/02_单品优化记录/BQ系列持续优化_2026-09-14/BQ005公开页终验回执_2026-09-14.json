@@ -1,0 +1,62 @@
+{
+  "checked_at": "2026-09-14",
+  "family": "BQ005/A503",
+  "source_product_id": "1601815020244",
+  "source_policy": "PROTECT_SOURCE",
+  "result": "PUBLIC_QA_PASS",
+  "products": [
+    {
+      "product_id": "1601939599850",
+      "link_code": "BQ005-W1",
+      "platform_status": "approved/Y",
+      "role": "multi-color wholesale",
+      "image_count": 6,
+      "sku_count": 44,
+      "colors": 4,
+      "sizes_per_color": 11,
+      "size_range": "EU 35-45",
+      "unit": "Pairs",
+      "closure": "Lace-up",
+      "public_url": "https://www.alibaba.com/product-detail/Wholesale-Multi-Color-Breathable-Knit-Walking_1601939599850.html"
+    },
+    {
+      "product_id": "1601939712176",
+      "link_code": "BQ005-R1",
+      "platform_status": "approved/Y",
+      "role": "pink daily walking",
+      "image_count": 6,
+      "sku_count": 44,
+      "colors": 4,
+      "sizes_per_color": 11,
+      "size_range": "EU 35-45",
+      "unit": "Pairs",
+      "closure": "Lace-up",
+      "public_url": "https://www.alibaba.com/product-detail/Pink-Breathable-Knit-Walking-Shoes-Lightweight_1601939712176.html"
+    },
+    {
+      "product_id": "1601939631570",
+      "link_code": "BQ005-O1",
+      "platform_status": "approved/Y",
+      "role": "all-black OEM/ODM",
+      "image_count": 6,
+      "sku_count": 44,
+      "colors": 4,
+      "sizes_per_color": 11,
+      "size_range": "EU 35-45",
+      "unit": "Pairs",
+      "closure": "Lace-up",
+      "public_url": "https://www.alibaba.com/product-detail/Custom-Logo-All-Black-Breathable-Knit_1601939631570.html"
+    }
+  ],
+  "visual_qa": {
+    "method": "Chrome buyer public product pages and each page's Photos gallery",
+    "passed": true,
+    "checks": [
+      "title and hero role alignment",
+      "same A503 shoe structure across visible gallery images",
+      "shoe upper, lacing, outsole, color and completeness",
+      "no visible AI shape, outsole or color drift"
+    ],
+    "note": "A direct CDN image tab triggered an Alibaba slider CAPTCHA and was not used as final evidence; the public product-page galleries supplied the final visual evidence."
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "checked_at": "2026-09-15",
+  "source_anchor": "E:/贝强大文件/01_产品资产/01_原始数据包/已整理_BQ002_5.13贝强2数据包",
+  "result": "PASS",
+  "galleries": [
+    {
+      "product_id": "1601939654418",
+      "hero_color": "Grey Black",
+      "slots": 6,
+      "checks": ["complete real shoe", "large product scale", "clean white background", "same knit upper and sole geometry", "side/outsole/top/pair/range coverage", "no AI color or structural change", "no medical or performance text"]
+    },
+    {
+      "product_id": "1601939614689",
+      "hero_color": "Grey Khaki",
+      "slots": 6,
+      "checks": ["complete real shoe", "large product scale", "clean white background", "same knit upper and khaki sole", "side/outsole/top/pair/range coverage", "no AI color or structural change", "no medical or performance text"]
+    },
+    {
+      "product_id": "1601939635505",
+      "hero_color": "Grey White",
+      "slots": 6,
+      "checks": ["complete real shoe", "large product scale", "clean white background", "same knit upper and white sole", "side/outsole/top/pair/range coverage", "no AI color or structural change", "no medical or performance text"]
+    }
+  ],
+  "excluded": [
+    "generated graphics containing all-day comfort, shock absorption or other unverified performance wording",
+    "Chinese retail comparison graphics",
+    "old size conversion graphic",
+    "barefoot, zero-drop, orthopedic, diabetic, waterproof and tested anti-slip claims"
+  ],
+  "review_method": "Three six-image contact sheets were inspected together, and all three 1000x1000 M1 files were inspected at original resolution before preflight."
+}

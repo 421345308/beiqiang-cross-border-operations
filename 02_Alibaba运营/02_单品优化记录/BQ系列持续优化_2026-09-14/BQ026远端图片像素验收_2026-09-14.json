@@ -1,0 +1,24 @@
+{
+  "family": "BQ026/T5828",
+  "reviewed_at": "2026-09-14",
+  "result": "PASS",
+  "method": "Opened every unique uploaded Alibaba CDN URL in Chrome and visually inspected the rendered 1000x1000 pixels after upload.",
+  "unique_remote_images": 7,
+  "checks": {
+    "all_urls_loaded": true,
+    "all_dimensions_1000x1000": true,
+    "shoe_geometry_matches_local_review": true,
+    "colors_match_local_review": true,
+    "no_blank_or_corrupt_image": true,
+    "no_text_or_collage_in_m1": true
+  },
+  "images": [
+    {"file": "white_clean.jpg", "url": "https://sc04.alicdn.com/kf/H5ad74a72d3de43adad362b4248c04833R/286385890/H5ad74a72d3de43adad362b4248c04833R.jpg", "result": "PASS"},
+    {"file": "grey_clean.jpg", "url": "https://sc04.alicdn.com/kf/Ha582447fd20b49f09707d49091c5f789w/286385890/Ha582447fd20b49f09707d49091c5f789w.jpg", "result": "PASS"},
+    {"file": "black_clean.jpg", "url": "https://sc04.alicdn.com/kf/Hde5aea05672e4e6fbee3a200cebed3f4r/286385890/Hde5aea05672e4e6fbee3a200cebed3f4r.jpg", "result": "PASS"},
+    {"file": "pink_pair.jpg", "url": "https://sc04.alicdn.com/kf/H86d2433ed379468ea2bcdb4cf57d1363b/286385890/H86d2433ed379468ea2bcdb4cf57d1363b.jpg", "result": "PASS"},
+    {"file": "red_angle.jpg", "url": "https://sc04.alicdn.com/kf/H31c31b6b27d446acbd344af6f7d5872fO/286385890/H31c31b6b27d446acbd344af6f7d5872fO.jpg", "result": "PASS"},
+    {"file": "grey_pair.jpg", "url": "https://sc04.alicdn.com/kf/H655619ad5464422088f8692a71aadcf2S/286385890/H655619ad5464422088f8692a71aadcf2S.jpg", "result": "PASS"},
+    {"file": "red_clean.jpg", "url": "https://sc04.alicdn.com/kf/H096d5afa442f4f65bf1691e17beae972E/286385890/H096d5afa442f4f65bf1691e17beae972E.jpg", "result": "PASS"}
+  ]
+}

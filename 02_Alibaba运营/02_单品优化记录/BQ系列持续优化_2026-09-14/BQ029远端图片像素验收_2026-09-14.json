@@ -1,0 +1,35 @@
+{
+  "date": "2026-09-14",
+  "family": "BQ029 / A025",
+  "scope": "Alibaba image bank CDN post-upload visual QA and current sale-property thumbnail mapping",
+  "unique_gallery_image_count": 6,
+  "color_thumbnail_count": 2,
+  "method": "Chrome direct CDN pixel inspection after successful product readback",
+  "result": "PASS",
+  "checks": {
+    "all_urls_loaded": true,
+    "correct_product_identity": true,
+    "high_top_knit_structure_unchanged": true,
+    "outsole_and_closure_unchanged": true,
+    "colors_match_real_assets": true,
+    "all_black_thumbnail_correct": true,
+    "black_white_thumbnail_correct": true,
+    "no_wrong_crop_or_transcode_loss": true,
+    "excluded_reversed_local_color_files": true,
+    "excluded_unsupported_claim_images": true
+  },
+  "gallery_images": [
+    {"url": "https://sc04.alicdn.com/kf/Hc25c2051c697410d9b655b6d3ede48aaF.png", "role": "Black White clean product"},
+    {"url": "https://sc04.alicdn.com/kf/Sfff0d3c1b78c4e12902a5a3030c7fb45Z.jpg", "role": "Black White paired real photo"},
+    {"url": "https://sc04.alicdn.com/kf/H69cbc6f71e8a40a7a92ff3234a9ac1e2V.jpg", "role": "Black White on-foot real photo"},
+    {"url": "https://sc04.alicdn.com/kf/H9b817a010cfe4c5c923c4b17cfea84aac.png", "role": "All Black clean product"},
+    {"url": "https://sc04.alicdn.com/kf/S639e4fa6636b4d30a6ccb2d8b77ae10aM.jpg", "role": "All Black paired real photo"},
+    {"url": "https://sc04.alicdn.com/kf/Hff79b3125b884136bc4c239c830f23037.jpg", "role": "All Black on-foot real photo"}
+  ],
+  "sale_property_thumbnails": [
+    {"color": "All Black", "url": "https://sc04.alicdn.com/kf/Sbb9ad584dbce4eca97ad9c0512ff38c98.jpg", "pixel_result": "all-black shoe"},
+    {"color": "Black White", "url": "https://sc04.alicdn.com/kf/Secfd69d307a04e55889fd051b44c54c4y.jpg", "pixel_result": "black upper with white sole"}
+  ],
+  "products": ["1601939749045", "1601939607770", "1601939721228"],
+  "next_action": "Poll only until approved/Y, then perform public buyer-page QA. Do not resubmit while modified/N."
+}

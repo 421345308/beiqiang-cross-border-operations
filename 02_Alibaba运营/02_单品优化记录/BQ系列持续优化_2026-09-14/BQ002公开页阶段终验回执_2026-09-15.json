@@ -1,0 +1,68 @@
+{
+  "checked_at": "2026-09-15",
+  "family": "BQ002/BQ-002",
+  "source_product_id": "10000042896165",
+  "source_untouched": true,
+  "results": [
+    {
+      "product_id": "1601939654418",
+      "link_code": "BQ002-W1",
+      "platform_status": "approved/Y",
+      "public_url": "https://www.alibaba.com/product-detail/Wholesale-Walking-Style-Shoes-Lightweight-Knit_1601939654418.html",
+      "hero": "Grey Black",
+      "checks": {
+        "title": true,
+        "m1_to_m6": true,
+        "three_colors": true,
+        "eu_36_46": true,
+        "sku_count_33": true,
+        "model": true,
+        "pairs_price_tiers": true,
+        "slip_on": true,
+        "wide_toe_box": true
+      },
+      "platform_title_note": "平台按当前EVA、Light Weight、Breathable、All Seasons等实时属性标准化公开标题，支持证据存在，接受不覆盖",
+      "result": "PUBLIC_QA_PASS"
+    },
+    {
+      "product_id": "1601939614689",
+      "link_code": "BQ002-R1",
+      "platform_status": "approved/Y",
+      "public_url": "https://www.alibaba.com/product-detail/Lightweight-Slip-On-Walking-Shoes-Wide_1601939614689.html",
+      "hero": "Grey Khaki",
+      "checks": {
+        "title": true,
+        "m1_to_m6": true,
+        "three_colors": true,
+        "eu_36_46": true,
+        "sku_count_33": true,
+        "model": true,
+        "pairs_price_tiers": true,
+        "slip_on": true,
+        "wide_toe_box": true
+      },
+      "platform_title_note": "平台按当前EVA与用途属性标准化为旅行、通勤和日常步行表达，实时页面字段支持，接受不覆盖",
+      "result": "PUBLIC_QA_PASS"
+    },
+    {
+      "product_id": "1601939635505",
+      "link_code": "BQ002-O1",
+      "platform_status": "approved/Y",
+      "public_url": "https://www.alibaba.com/product-detail/Custom-Logo-Wide-Toe-Box-Walking_1601939635505.html",
+      "hero": "Grey White",
+      "checks": {
+        "title": true,
+        "m1_to_m6": true,
+        "three_colors": true,
+        "eu_36_46": true,
+        "sku_count_33": true,
+        "model": true,
+        "pairs_price_tiers": true,
+        "slip_on": true,
+        "wide_toe_box": true
+      },
+      "platform_title_note": "平台按当前All Seasons、EVA、Light Weight和Breathable实时属性标准化公开标题，支持证据存在，接受不覆盖",
+      "result": "PUBLIC_QA_PASS"
+    }
+  ]
+}

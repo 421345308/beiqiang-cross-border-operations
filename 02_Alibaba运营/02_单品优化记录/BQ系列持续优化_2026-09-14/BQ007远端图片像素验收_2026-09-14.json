@@ -1,0 +1,29 @@
+{
+  "date": "2026-09-14",
+  "family": "BQ007/L0017",
+  "scope": "Six unique image-bank files reused across three expansion galleries",
+  "method": [
+    "All six local source files inspected at original resolution before upload",
+    "OpenAPI strict readback confirmed exact six-URL order for each product",
+    "Each unique Alibaba CDN image opened in Chrome and visually inspected after upload"
+  ],
+  "images": [
+    {"role": "Orange", "url": "https://sc04.alicdn.com/kf/H45c4d98bb5824ab79f299a04151cf0bfH.jpg", "result": "PASS"},
+    {"role": "White Khaki", "url": "https://sc04.alicdn.com/kf/H6b0948b966e8477f9204ff3d32058ca5h.jpg", "result": "PASS"},
+    {"role": "Black White", "url": "https://sc04.alicdn.com/kf/H7a3f2b0702824b78b00b0a5236e66ef9x.jpg", "result": "PASS"},
+    {"role": "White", "url": "https://sc04.alicdn.com/kf/H5c8be9c9aa0c41fabb70d7e5a9430ac5F.jpg", "result": "PASS"},
+    {"role": "All Black", "url": "https://sc04.alicdn.com/kf/Hd0edb11e1a8c44ccbd3e38bd06277bf3U.jpg", "result": "PASS"},
+    {"role": "Scene and structure explanation", "url": "https://sc04.alicdn.com/kf/Hc9094a1419f14b659e349eac9dca717e8.jpg", "result": "PASS"}
+  ],
+  "checks": {
+    "same_shoe_model": true,
+    "real_colors": true,
+    "shoe_complete": true,
+    "closure_and_sole_geometry_unchanged": true,
+    "no_wrong_product": true,
+    "no_watermark_or_chinese_text_on_hero_candidates": true,
+    "remote_pixels_visible": true
+  },
+  "result": "PASS",
+  "note": "Public product pages remain unavailable while modified/N; final buyer-page QA waits for approved/Y."
+}

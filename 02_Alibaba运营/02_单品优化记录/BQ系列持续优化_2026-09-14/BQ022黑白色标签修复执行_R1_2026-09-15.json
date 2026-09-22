@@ -1,0 +1,130 @@
+{
+  "timestamp_utc": "2026-09-14T22:12:58.617846+00:00",
+  "source_product_id_protected": "10000043991998",
+  "mode": "apply",
+  "evidence": "protected source product + merged raw A2208 images + expansion thumbnail readback",
+  "results": [
+    {
+      "product_id": "1601939659468",
+      "expected_model": "BQ022-R1 / A2208",
+      "mode": "apply",
+      "before": {
+        "request_id": "21546a1d17894239527195650",
+        "trace_id": "2101d13c17894239523975060e0e77",
+        "message": null,
+        "error": null
+      },
+      "before_status": "approved",
+      "before_display": "Y",
+      "before_title": "Striped Knit Slip On Walking Shoes Lightweight Casual Sneakers for Travel and Daily Wear A2208",
+      "before_image_count": 6,
+      "before_sku_count": 33,
+      "before_colors": {
+        "-57": {
+          "name": "Light Grey",
+          "image_url": "https://sc04.alicdn.com/kf/S68775e0b2cf34c80bb16375031b6fb7bz.jpg"
+        },
+        "-34": {
+          "name": "Black White Stripe",
+          "image_url": "https://sc04.alicdn.com/kf/Scffb1b02f7a04f4fb4b0c67647ed47606.jpg"
+        },
+        "3327837": {
+          "name": "Black",
+          "image_url": "https://sc04.alicdn.com/kf/S31678bf54e1b48aea05cc8676eaa1cd72.jpg"
+        }
+      },
+      "stage": "submitted",
+      "render": {
+        "request_id": "21546a1d17894239597525903",
+        "trace_id": "2101e68f17894239594293210e0e2d",
+        "message": null,
+        "error": null
+      },
+      "changed_sku_rows": [
+        {
+          "size": "45",
+          "sku_code": "BQ022-R1-BLACK-WHITE-45"
+        },
+        {
+          "size": "44",
+          "sku_code": "BQ022-R1-BLACK-WHITE-44"
+        },
+        {
+          "size": "43",
+          "sku_code": "BQ022-R1-BLACK-WHITE-43"
+        },
+        {
+          "size": "42",
+          "sku_code": "BQ022-R1-BLACK-WHITE-42"
+        },
+        {
+          "size": "41",
+          "sku_code": "BQ022-R1-BLACK-WHITE-41"
+        },
+        {
+          "size": "40",
+          "sku_code": "BQ022-R1-BLACK-WHITE-40"
+        },
+        {
+          "size": "39",
+          "sku_code": "BQ022-R1-BLACK-WHITE-39"
+        },
+        {
+          "size": "38",
+          "sku_code": "BQ022-R1-BLACK-WHITE-38"
+        },
+        {
+          "size": "37",
+          "sku_code": "BQ022-R1-BLACK-WHITE-37"
+        },
+        {
+          "size": "36",
+          "sku_code": "BQ022-R1-BLACK-WHITE-36"
+        },
+        {
+          "size": "35",
+          "sku_code": "BQ022-R1-BLACK-WHITE-35"
+        }
+      ],
+      "intended_change": "Black -> Black White; preserve its current thumbnail",
+      "update": {
+        "request_id": "0bab02fe17894239692724320",
+        "trace_id": "2101c5a717894239681916250e0bbe",
+        "message": null,
+        "error": null
+      },
+      "readback": {
+        "request_id": "0bab02fe17894239773294526",
+        "trace_id": "2101fb9317894239770212375e0fb1",
+        "message": null,
+        "error": null
+      },
+      "after_status": "modified",
+      "after_display": "N",
+      "after_colors": {
+        "-57": {
+          "name": "Light Grey",
+          "image_url": "https://sc04.alicdn.com/kf/S68775e0b2cf34c80bb16375031b6fb7bz.jpg"
+        },
+        "-34": {
+          "name": "Black White Stripe",
+          "image_url": "https://sc04.alicdn.com/kf/Scffb1b02f7a04f4fb4b0c67647ed47606.jpg"
+        },
+        "-10": {
+          "name": "Black White",
+          "image_url": "https://sc04.alicdn.com/kf/S31678bf54e1b48aea05cc8676eaa1cd72.jpg"
+        }
+      },
+      "checks": {
+        "identity_ok": true,
+        "target_state_ok": true,
+        "title_unchanged": true,
+        "gallery_unchanged": true,
+        "sku_count_33": true,
+        "non_target_fields_unchanged": true,
+        "source_not_targeted": true
+      },
+      "ok": true
+    }
+  ]
+}

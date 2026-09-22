@@ -1,0 +1,48 @@
+{
+  "checked_at": "2026-09-15T03:58:03+08:00",
+  "operation": "api_review_recovery_and_public_page_qa",
+  "overall_status": "PUBLIC_TITLE_PROPAGATION_WAIT",
+  "resubmitted": false,
+  "products": [
+    {
+      "product_id": "1601939691342",
+      "link_code": "BQ024-W1",
+      "api_status": "approved",
+      "api_display": "Y",
+      "api_title": "Wholesale Black White Knit Slip-On Walking Shoes Lightweight Casual Sneakers EVA Sole Factory Supply A830",
+      "api_model": "BQ024-W1 / A830",
+      "api_image_count": 6,
+      "api_sku_count": 36,
+      "public_page": {
+        "title_propagation": "NOT_YET_PROVEN",
+        "localized_heading": "批发黑白色针织防滑步行鞋轻便休闲运动鞋 EVA 中底透气常规版型四季皆宜工厂直送",
+        "main_image_matches_api_m1": true,
+        "colors": ["All Black", "Beige Grey", "Black Yellow", "Black White"],
+        "eu_sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45],
+        "model": "BQ024-W1 / A830",
+        "price_tiers_usd": ["9.49 / 2-49 pairs", "9.19 / 50-99 pairs", "9.09 / 100+ pairs"]
+      }
+    },
+    {
+      "product_id": "1601939691340",
+      "link_code": "BQ024-O1",
+      "api_status": "approved",
+      "api_display": "Y",
+      "api_title": "Custom Logo Black Yellow Knit Slip-On Walking Shoes OEM ODM Private Label Casual Sneakers A830",
+      "api_model": "BQ024-O1 / A830",
+      "api_image_count": 6,
+      "api_sku_count": 36,
+      "public_page": {
+        "title_propagation": "NOT_YET_PROVEN",
+        "localized_heading": "定制徽标黑黄针织防滑步行鞋 OEM ODM 自有品牌休闲运动鞋透气轻便常规版型 A830",
+        "main_image_matches_api_m1": true,
+        "colors": ["All Black", "Beige Grey", "Black Yellow", "Black White"],
+        "eu_sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45],
+        "model": "BQ024-O1 / A830",
+        "price_tiers_usd": ["9.45 / 2-49 pairs", "9.15 / 50-99 pairs", "9.05 / 100+ pairs"]
+      }
+    }
+  ],
+  "conclusion": "OpenAPI审核已恢复approved/Y且目标标题、六图、36 SKU保持正确。买家页主图、四色、EU37-45、型号和价格正常，但本地化标题仍包含修复前标题独有的附加表达，无法证明新标题已完成公开传播。保持SUBMITTED续跑状态，仅复查公开标题，不重复提交。",
+  "next_action": "待公开标题可验证后完成终验，将两条转PUBLIC_QA_PASS，并以该公开验收日期分别重置D7/D14/D28；BQ024-R1维持原日历。"
+}

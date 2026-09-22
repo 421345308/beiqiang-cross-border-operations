@@ -1,0 +1,28 @@
+{
+  "date": "2026-09-14",
+  "family": "BQ010 / R1601",
+  "scope": "Alibaba image bank CDN post-upload visual QA",
+  "unique_image_count": 6,
+  "method": "Chrome direct CDN pixel inspection after successful product readback",
+  "result": "PASS",
+  "checks": {
+    "all_urls_loaded": true,
+    "correct_product_identity": true,
+    "shoe_geometry_unchanged": true,
+    "outsole_unchanged": true,
+    "toe_cap_unchanged": true,
+    "lace_up_structure_unchanged": true,
+    "colors_match_real_assets": true,
+    "no_wrong_crop_or_transcode_loss": true
+  },
+  "images": [
+    {"url": "https://sc04.alicdn.com/kf/S131c1295cf36499b8d244c05a4bddfd7l.jpg", "role": "White Sole Black clean product"},
+    {"url": "https://sc04.alicdn.com/kf/H88a70f03f531404088345b094a830e14a.jpg", "role": "All Black clean product"},
+    {"url": "https://sc04.alicdn.com/kf/Sdbb492f0fe004a50baf815075489cac8T.jpg", "role": "White Sole Black on-foot scene"},
+    {"url": "https://sc04.alicdn.com/kf/Scb67e79a3e86406aa038c066f2297c99E.jpg", "role": "White Sole Black hand/on-foot scene"},
+    {"url": "https://sc04.alicdn.com/kf/S61ab0c30e62d49a1b42b3a550c827f32f.jpg", "role": "All Black hand/on-foot scene"},
+    {"url": "https://sc04.alicdn.com/kf/S439c0c68f79d42908079159be4c24e29r.png", "role": "EU35-45 wholesale size confirmation"}
+  ],
+  "products": ["1601939589876", "1601939734070", "1601939573998"],
+  "next_action": "Poll only until approved/Y, then perform public buyer-page QA. Do not resubmit while modified/N."
+}

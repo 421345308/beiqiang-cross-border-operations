@@ -1,0 +1,325 @@
+{
+  "product_id": 1601943650395,
+  "request_id": "213fc94c17899813310503422",
+  "trace_id": "210313ec17899813307546633e0ddd",
+  "matches": [
+    {
+      "id": "scImages",
+      "name": "Product images",
+      "type": "complex",
+      "xml": "<field id=\"scImages\" name=\"Product images\" type=\"complex\"><rules><rule name=\"requiredRule\" value=\"true\" /><rule name=\"maxInputNumRule\" value=\"6\" exProperty=\"include\" /><rule name=\"minInputNumRule\" value=\"1\" exProperty=\"include\" /><rule name=\"maxImageSizeRule\" value=\"4194304\" exProperty=\"include\" /></rules><complex-value><field id=\"scImages_1\" type=\"input\"><value fileFlag=\"no\" fileId=\"0\">//sc04.alicdn.com/kf/H8d50d9e071034351ba35d0629b54207e0.jpg_350x350.jpg</value></field><field id=\"scImages_2\" type=\"input\"><value fileFlag=\"no\" fileId=\"0\">//sc04.alicdn.com/kf/Hb4a50dd22b584e769f9f20c70111e59c9.jpg_350x350.jpg</value></field><field id=\"scImages_0\" type=\"input\"><value fileFlag=\"no\" fileId=\"0\">//sc04.alicdn.com/kf/Hf0ca9fe6e0494bef89a271aba2bdd2b7T.jpg_350x350.jpg</value></field><field id=\"scImages_5\" type=\"input\"><value fileFlag=\"no\" fileId=\"0\">//sc04.alicdn.com/kf/Hdea3b3c8e456441ca54086f9f6f680aeE.jpg_350x350.jpg</value></field><field id=\"scImages_3\" type=\"input\"><value fileFlag=\"no\" fileId=\"0\">//sc04.alicdn.com/kf/Hedd6f53e82bd4847938cc9ccc247767fw.jpg_350x350.jpg</value></field><field id=\"scImages_4\" type=\"input\"><value fileFlag=\"no\" fileId=\"0\">//sc04.alicdn.com/kf/Hbd9ab07528fa4d13aab9f8106833c4feB.jpg_350x350.jpg</value></field></complex-value><fields><field id=\"scImages_0\" name=\"Product images\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"url\" /><rule name=\"valueAttributeRule\" value=\"fileId\" desc=\"图片银行图片ID\" /></rules></field><field id=\"scImages_1\" name=\"Product images\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"url\" /><rule name=\"valueAttributeRule\" value=\"fileId\" desc=\"图片银行图片ID\" /></rules></field><field id=\"scImages_2\" name=\"Product images\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"url\" /><rule name=\"valueAttributeRule\" value=\"fileId\" desc=\"图片银行图片ID\" /></rules></field><field id=\"scImages_3\" name=\"Product images\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"url\" /><rule name=\"valueAttributeRule\" value=\"fileId\" desc=\"图片银行图片ID\" /></rules></field><field id=\"scImages_4\" name=\"Product images\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"url\" /><rule name=\"valueAttributeRule\" value=\"fileId\" desc=\"图片银行图片ID\" /></rules></field><field id=\"scImages_5\" name=\"Product images\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"url\" /><rule name=\"valueAttributeRule\" value=\"fileId\" desc=\"图片银行图片ID\" /></rules></field></fields></field>"
+    },
+    {
+      "id": "scImages_1",
+      "name": null,
+      "type": "input",
+      "xml": "<field id=\"scImages_1\" type=\"input\"><value fileFlag=\"no\" fileId=\"0\">//sc04.alicdn.com/kf/H8d50d9e071034351ba35d0629b54207e0.jpg_350x350.jpg</value></field>"
+    },
+    {
+      "id": "scImages_2",
+      "name": null,
+      "type": "input",
+      "xml": "<field id=\"scImages_2\" type=\"input\"><value fileFlag=\"no\" fileId=\"0\">//sc04.alicdn.com/kf/Hb4a50dd22b584e769f9f20c70111e59c9.jpg_350x350.jpg</value></field>"
+    },
+    {
+      "id": "scImages_0",
+      "name": null,
+      "type": "input",
+      "xml": "<field id=\"scImages_0\" type=\"input\"><value fileFlag=\"no\" fileId=\"0\">//sc04.alicdn.com/kf/Hf0ca9fe6e0494bef89a271aba2bdd2b7T.jpg_350x350.jpg</value></field>"
+    },
+    {
+      "id": "scImages_5",
+      "name": null,
+      "type": "input",
+      "xml": "<field id=\"scImages_5\" type=\"input\"><value fileFlag=\"no\" fileId=\"0\">//sc04.alicdn.com/kf/Hdea3b3c8e456441ca54086f9f6f680aeE.jpg_350x350.jpg</value></field>"
+    },
+    {
+      "id": "scImages_3",
+      "name": null,
+      "type": "input",
+      "xml": "<field id=\"scImages_3\" type=\"input\"><value fileFlag=\"no\" fileId=\"0\">//sc04.alicdn.com/kf/Hedd6f53e82bd4847938cc9ccc247767fw.jpg_350x350.jpg</value></field>"
+    },
+    {
+      "id": "scImages_4",
+      "name": null,
+      "type": "input",
+      "xml": "<field id=\"scImages_4\" type=\"input\"><value fileFlag=\"no\" fileId=\"0\">//sc04.alicdn.com/kf/Hbd9ab07528fa4d13aab9f8106833c4feB.jpg_350x350.jpg</value></field>"
+    },
+    {
+      "id": "scImages_0",
+      "name": "Product images",
+      "type": "input",
+      "xml": "<field id=\"scImages_0\" name=\"Product images\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"url\" /><rule name=\"valueAttributeRule\" value=\"fileId\" desc=\"图片银行图片ID\" /></rules></field>"
+    },
+    {
+      "id": "scImages_1",
+      "name": "Product images",
+      "type": "input",
+      "xml": "<field id=\"scImages_1\" name=\"Product images\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"url\" /><rule name=\"valueAttributeRule\" value=\"fileId\" desc=\"图片银行图片ID\" /></rules></field>"
+    },
+    {
+      "id": "scImages_2",
+      "name": "Product images",
+      "type": "input",
+      "xml": "<field id=\"scImages_2\" name=\"Product images\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"url\" /><rule name=\"valueAttributeRule\" value=\"fileId\" desc=\"图片银行图片ID\" /></rules></field>"
+    },
+    {
+      "id": "scImages_3",
+      "name": "Product images",
+      "type": "input",
+      "xml": "<field id=\"scImages_3\" name=\"Product images\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"url\" /><rule name=\"valueAttributeRule\" value=\"fileId\" desc=\"图片银行图片ID\" /></rules></field>"
+    },
+    {
+      "id": "scImages_4",
+      "name": "Product images",
+      "type": "input",
+      "xml": "<field id=\"scImages_4\" name=\"Product images\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"url\" /><rule name=\"valueAttributeRule\" value=\"fileId\" desc=\"图片银行图片ID\" /></rules></field>"
+    },
+    {
+      "id": "scImages_5",
+      "name": "Product images",
+      "type": "input",
+      "xml": "<field id=\"scImages_5\" name=\"Product images\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"url\" /><rule name=\"valueAttributeRule\" value=\"fileId\" desc=\"图片银行图片ID\" /></rules></field>"
+    },
+    {
+      "id": "imageVideo",
+      "name": "Product Video",
+      "type": "singleCheck",
+      "xml": "<field id=\"imageVideo\" name=\"Product Video\" type=\"singleCheck\"><rules><rule name=\"tipRule\" value=\"The main video will be displayed on the first slide of your image carousel.   Make sure your video length does not exceed 45 seconds and the file size does not exceed 100MB. \" /><rule name=\"tipRule\" value=\"The product detail video will be displayed on the top of your product description.   Make sure your video length does not exceed 10 minutes and the file size does not exceed 500MB. \" /><rule name=\"tipRule\" value=\"•To encourage suppliers to upload high quality videos and detail videos, the available storage for videos has been increased from 1GB to 3GB.\" /><rule name=\"maxLengthRule\" value=\"104857600\" exProperty=\"include\" unit=\"byte\" /></rules><value>6000341998157</value></field>"
+    },
+    {
+      "id": "detailVideo",
+      "name": "Additional videos",
+      "type": "singleCheck",
+      "xml": "<field id=\"detailVideo\" name=\"Additional videos\" type=\"singleCheck\"><rules><rule name=\"maxLengthRule\" value=\"524288000\" exProperty=\"include\" unit=\"byte\" /></rules></field>"
+    },
+    {
+      "id": "image",
+      "name": null,
+      "type": "input",
+      "xml": "<field id=\"image\" type=\"input\" />"
+    },
+    {
+      "id": "image",
+      "name": null,
+      "type": "input",
+      "xml": "<field id=\"image\" type=\"input\" />"
+    },
+    {
+      "id": "image",
+      "name": null,
+      "type": "input",
+      "xml": "<field id=\"image\" type=\"input\" />"
+    },
+    {
+      "id": "image",
+      "name": null,
+      "type": "input",
+      "xml": "<field id=\"image\" type=\"input\" />"
+    },
+    {
+      "id": "image",
+      "name": null,
+      "type": "input",
+      "xml": "<field id=\"image\" type=\"input\" />"
+    },
+    {
+      "id": "image",
+      "name": null,
+      "type": "input",
+      "xml": "<field id=\"image\" type=\"input\" />"
+    },
+    {
+      "id": "image",
+      "name": null,
+      "type": "input",
+      "xml": "<field id=\"image\" type=\"input\" />"
+    },
+    {
+      "id": "image",
+      "name": null,
+      "type": "input",
+      "xml": "<field id=\"image\" type=\"input\" />"
+    },
+    {
+      "id": "customMoreProperty",
+      "name": "More details",
+      "type": "complex",
+      "xml": "<field id=\"customMoreProperty\" name=\"More details\" type=\"complex\"><complex-value><field id=\"customMoreProperty_0\" type=\"complex\"><complex-value><field id=\"valueName\" type=\"input\"><value>Regular Fit</value></field><field id=\"propName\" type=\"input\"><value>Fit Type</value></field></complex-value></field></complex-value><fields><field id=\"customMoreProperty_0\" type=\"complex\"><fields><field id=\"propName\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field><field id=\"valueName\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field></fields></field><field id=\"customMoreProperty_1\" type=\"complex\"><fields><field id=\"propName\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field><field id=\"valueName\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field></fields></field><field id=\"customMoreProperty_2\" type=\"complex\"><fields><field id=\"propName\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field><field id=\"valueName\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field></fields></field><field id=\"customMoreProperty_3\" type=\"complex\"><fields><field id=\"propName\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field><field id=\"valueName\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field></fields></field><field id=\"customMoreProperty_4\" type=\"complex\"><fields><field id=\"propName\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field><field id=\"valueName\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field></fields></field><field id=\"customMoreProperty_5\" type=\"complex\"><fields><field id=\"propName\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field><field id=\"valueName\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field></fields></field><field id=\"customMoreProperty_6\" type=\"complex\"><fields><field id=\"propName\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field><field id=\"valueName\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field></fields></field><field id=\"customMoreProperty_7\" type=\"complex\"><fields><field id=\"propName\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field><field id=\"valueName\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field></fields></field><field id=\"customMoreProperty_8\" type=\"complex\"><fields><field id=\"propName\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field><field id=\"valueName\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field></fields></field><field id=\"customMoreProperty_9\" type=\"complex\"><fields><field id=\"propName\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field><field id=\"valueName\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field></fields></field></fields></field>"
+    },
+    {
+      "id": "productDescType",
+      "name": "Product description",
+      "type": "singleCheck",
+      "xml": "<field id=\"productDescType\" name=\"Product description\" type=\"singleCheck\"><value>4</value><options><option displayName=\"智能编辑\" value=\"1\" /><option displayName=\"普通编辑\" value=\"2\" /></options></field>"
+    },
+    {
+      "id": "detailImage",
+      "name": "Details of the picture",
+      "type": "multiComplex",
+      "xml": "<field id=\"detailImage\" name=\"Details of the picture\" type=\"multiComplex\"><rules><rule name=\"requiredRule\" value=\"true\" /><rule name=\"maxCustomGalleryItem\" value=\"5\" /><rule name=\"supportCustomOrder\" value=\"true\" /><rule name=\"supportCustomGallery\" value=\"true\" /></rules><complex-values><field id=\"images\" type=\"multiComplex\"><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/A39699221bc2846e99a537ae008f7d2bcK.png_350x350.png</value></field></complex-values></field><field id=\"gallery\" type=\"singleCheck\"><value displayName=\"Product dimensions\">150</value></field></complex-values><complex-values><field id=\"images\" type=\"multiComplex\"><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/Ad3f1a458b69842fd8e90bc4e4511e50cG.png_350x350.png</value></field><field id=\"generalText\" type=\"input\"><value>Product specifications</value></field></complex-values></field><field id=\"gallery\" type=\"singleCheck\"><value displayName=\"Detail shot\">300</value></field></complex-values><complex-values><field id=\"images\" type=\"multiComplex\"><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/A3a1aab49c3214d34909d0d7a4954a46a4.png_350x350.png</value></field></complex-values><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/A3c21f069c8264f5681305872dcefff00p.png_350x350.png</value></field></complex-values><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/A320519747e0d42e7b28c287832c81304u.png_350x350.png</value></field></complex-values><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/A0f1ab252ba4744e5931b716e71f290e69.png_350x350.png</value></field></complex-values></field><field id=\"gallery\" type=\"singleCheck\"><value displayName=\"Other product images\">350</value></field></complex-values><fields><field id=\"gallery\" name=\"gallery\" type=\"singleCheck\"><rules><rule name=\"valueTypeRule\" value=\"long\" /><rule name=\"maxInputNumRule\" value=\"50\" exProperty=\"include\" /><rule name=\"requiredRule\" value=\"true\" /></rules><options><option displayName=\"Product dimensions\" value=\"150\" cnName=\"尺寸图\" supportText=\"false\" /><option displayName=\"Scene image\" value=\"200\" cnName=\"场景图\" supportText=\"false\" /><option displayName=\"Detail shot\" value=\"300\" cnName=\"细节图\" supportText=\"true\" /><option displayName=\"Other product images\" value=\"350\" cnName=\"其他商品图片\" supportText=\"false\" /></options></field><field id=\"images\" name=\"images\" type=\"multiComplex\"><rules><rule name=\"requiredRule\" value=\"true\" /><rule name=\"maxItemsRule\" value=\"30\" exProperty=\"include\" /></rules><fields><field id=\"imageURL\" name=\"imageURL\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field><field id=\"generalText\" name=\"generalText\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"maxInputNumRule\" value=\"500\" exProperty=\"include\" /></rules></field></fields></field></fields></field>"
+    },
+    {
+      "id": "images",
+      "name": null,
+      "type": "multiComplex",
+      "xml": "<field id=\"images\" type=\"multiComplex\"><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/A39699221bc2846e99a537ae008f7d2bcK.png_350x350.png</value></field></complex-values></field>"
+    },
+    {
+      "id": "imageURL",
+      "name": null,
+      "type": "input",
+      "xml": "<field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/A39699221bc2846e99a537ae008f7d2bcK.png_350x350.png</value></field>"
+    },
+    {
+      "id": "images",
+      "name": null,
+      "type": "multiComplex",
+      "xml": "<field id=\"images\" type=\"multiComplex\"><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/Ad3f1a458b69842fd8e90bc4e4511e50cG.png_350x350.png</value></field><field id=\"generalText\" type=\"input\"><value>Product specifications</value></field></complex-values></field>"
+    },
+    {
+      "id": "imageURL",
+      "name": null,
+      "type": "input",
+      "xml": "<field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/Ad3f1a458b69842fd8e90bc4e4511e50cG.png_350x350.png</value></field>"
+    },
+    {
+      "id": "images",
+      "name": null,
+      "type": "multiComplex",
+      "xml": "<field id=\"images\" type=\"multiComplex\"><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/A3a1aab49c3214d34909d0d7a4954a46a4.png_350x350.png</value></field></complex-values><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/A3c21f069c8264f5681305872dcefff00p.png_350x350.png</value></field></complex-values><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/A320519747e0d42e7b28c287832c81304u.png_350x350.png</value></field></complex-values><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/A0f1ab252ba4744e5931b716e71f290e69.png_350x350.png</value></field></complex-values></field>"
+    },
+    {
+      "id": "imageURL",
+      "name": null,
+      "type": "input",
+      "xml": "<field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/A3a1aab49c3214d34909d0d7a4954a46a4.png_350x350.png</value></field>"
+    },
+    {
+      "id": "imageURL",
+      "name": null,
+      "type": "input",
+      "xml": "<field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/A3c21f069c8264f5681305872dcefff00p.png_350x350.png</value></field>"
+    },
+    {
+      "id": "imageURL",
+      "name": null,
+      "type": "input",
+      "xml": "<field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/A320519747e0d42e7b28c287832c81304u.png_350x350.png</value></field>"
+    },
+    {
+      "id": "imageURL",
+      "name": null,
+      "type": "input",
+      "xml": "<field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/A0f1ab252ba4744e5931b716e71f290e69.png_350x350.png</value></field>"
+    },
+    {
+      "id": "images",
+      "name": "images",
+      "type": "multiComplex",
+      "xml": "<field id=\"images\" name=\"images\" type=\"multiComplex\"><rules><rule name=\"requiredRule\" value=\"true\" /><rule name=\"maxItemsRule\" value=\"30\" exProperty=\"include\" /></rules><fields><field id=\"imageURL\" name=\"imageURL\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field><field id=\"generalText\" name=\"generalText\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"maxInputNumRule\" value=\"500\" exProperty=\"include\" /></rules></field></fields></field>"
+    },
+    {
+      "id": "imageURL",
+      "name": "imageURL",
+      "type": "input",
+      "xml": "<field id=\"imageURL\" name=\"imageURL\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field>"
+    },
+    {
+      "id": "companyImage",
+      "name": "Company Picture",
+      "type": "multiComplex",
+      "xml": "<field id=\"companyImage\" name=\"Company Picture\" type=\"multiComplex\"><rules><rule name=\"maxCustomGalleryItem\" value=\"3\" /><rule name=\"supportCustomOrder\" value=\"true\" /></rules><complex-values><field id=\"images\" type=\"multiComplex\"><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/S85b6763402114d958afb753952d130e6n.png_350x350.png</value></field></complex-values></field><field id=\"gallery\" type=\"singleCheck\"><value displayName=\"Company overview\">400</value></field></complex-values><complex-values><field id=\"images\" type=\"multiComplex\"><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/S08bdd1a31b3541f78e50f4b8be26cfadA.png_350x350.png</value></field></complex-values></field><field id=\"gallery\" type=\"singleCheck\"><value displayName=\"Competitive advantages\">450</value></field></complex-values><complex-values><field id=\"images\" type=\"multiComplex\"><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/Sb785a174a04043129c63a39a19df1c2ep.png_350x350.png</value></field></complex-values></field><field id=\"gallery\" type=\"singleCheck\"><value displayName=\"Factory profile\">500</value></field></complex-values><complex-values><field id=\"images\" type=\"multiComplex\"><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/Hc99422065f7644c18da852e6adbd4a40u.png_350x350.png</value></field></complex-values></field><field id=\"gallery\" type=\"singleCheck\"><value displayName=\"Production workflow\">600</value></field></complex-values><complex-values><field id=\"images\" type=\"multiComplex\"><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/H9c98f0404800441cb760040394aa2294d.png_350x350.png</value></field></complex-values></field><field id=\"gallery\" type=\"singleCheck\"><value displayName=\"Packaging &amp; shipping specifications\">700</value></field></complex-values><fields><field id=\"gallery\" name=\"gallery\" type=\"singleCheck\"><rules><rule name=\"valueTypeRule\" value=\"long\" /><rule name=\"maxInputNumRule\" value=\"50\" exProperty=\"include\" /><rule name=\"requiredRule\" value=\"true\" /></rules><options><option displayName=\"Company overview\" value=\"400\" cnName=\"公司介绍\" supportText=\"false\" /><option displayName=\"Competitive advantages\" value=\"450\" cnName=\"公司优势\" supportText=\"false\" /><option displayName=\"Factory profile\" value=\"500\" cnName=\"工厂情况\" supportText=\"false\" /><option displayName=\"Customization capabilities\" value=\"550\" cnName=\"定制能力\" supportText=\"true\" /><option displayName=\"Production workflow\" value=\"600\" cnName=\"生产流程\" supportText=\"false\" /><option displayName=\"Trade show participation\" value=\"650\" cnName=\"参展情况\" supportText=\"false\" /><option displayName=\"Packaging &amp; shipping specifications\" value=\"700\" cnName=\"包装运输\" supportText=\"false\" /><option displayName=\"Extended company profile\" value=\"750\" cnName=\"其他公司介绍\" supportText=\"false\" /></options></field><field id=\"images\" name=\"images\" type=\"multiComplex\"><rules><rule name=\"requiredRule\" value=\"true\" /><rule name=\"maxItemsRule\" value=\"30\" exProperty=\"include\" /></rules><fields><field id=\"imageURL\" name=\"imageURL\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field><field id=\"generalText\" name=\"generalText\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"maxInputNumRule\" value=\"500\" exProperty=\"include\" /></rules></field></fields></field></fields></field>"
+    },
+    {
+      "id": "images",
+      "name": null,
+      "type": "multiComplex",
+      "xml": "<field id=\"images\" type=\"multiComplex\"><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/S85b6763402114d958afb753952d130e6n.png_350x350.png</value></field></complex-values></field>"
+    },
+    {
+      "id": "imageURL",
+      "name": null,
+      "type": "input",
+      "xml": "<field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/S85b6763402114d958afb753952d130e6n.png_350x350.png</value></field>"
+    },
+    {
+      "id": "images",
+      "name": null,
+      "type": "multiComplex",
+      "xml": "<field id=\"images\" type=\"multiComplex\"><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/S08bdd1a31b3541f78e50f4b8be26cfadA.png_350x350.png</value></field></complex-values></field>"
+    },
+    {
+      "id": "imageURL",
+      "name": null,
+      "type": "input",
+      "xml": "<field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/S08bdd1a31b3541f78e50f4b8be26cfadA.png_350x350.png</value></field>"
+    },
+    {
+      "id": "images",
+      "name": null,
+      "type": "multiComplex",
+      "xml": "<field id=\"images\" type=\"multiComplex\"><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/Sb785a174a04043129c63a39a19df1c2ep.png_350x350.png</value></field></complex-values></field>"
+    },
+    {
+      "id": "imageURL",
+      "name": null,
+      "type": "input",
+      "xml": "<field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/Sb785a174a04043129c63a39a19df1c2ep.png_350x350.png</value></field>"
+    },
+    {
+      "id": "images",
+      "name": null,
+      "type": "multiComplex",
+      "xml": "<field id=\"images\" type=\"multiComplex\"><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/Hc99422065f7644c18da852e6adbd4a40u.png_350x350.png</value></field></complex-values></field>"
+    },
+    {
+      "id": "imageURL",
+      "name": null,
+      "type": "input",
+      "xml": "<field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/Hc99422065f7644c18da852e6adbd4a40u.png_350x350.png</value></field>"
+    },
+    {
+      "id": "images",
+      "name": null,
+      "type": "multiComplex",
+      "xml": "<field id=\"images\" type=\"multiComplex\"><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/H9c98f0404800441cb760040394aa2294d.png_350x350.png</value></field></complex-values></field>"
+    },
+    {
+      "id": "imageURL",
+      "name": null,
+      "type": "input",
+      "xml": "<field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/H9c98f0404800441cb760040394aa2294d.png_350x350.png</value></field>"
+    },
+    {
+      "id": "images",
+      "name": "images",
+      "type": "multiComplex",
+      "xml": "<field id=\"images\" name=\"images\" type=\"multiComplex\"><rules><rule name=\"requiredRule\" value=\"true\" /><rule name=\"maxItemsRule\" value=\"30\" exProperty=\"include\" /></rules><fields><field id=\"imageURL\" name=\"imageURL\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field><field id=\"generalText\" name=\"generalText\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"maxInputNumRule\" value=\"500\" exProperty=\"include\" /></rules></field></fields></field>"
+    },
+    {
+      "id": "imageURL",
+      "name": "imageURL",
+      "type": "input",
+      "xml": "<field id=\"imageURL\" name=\"imageURL\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field>"
+    },
+    {
+      "id": "companyDesc",
+      "name": "Company Introduction",
+      "type": "input",
+      "xml": "<field id=\"companyDesc\" name=\"Company Introduction\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /></rules><value>Quanzhou Beiqiang Footwear &amp; Apparel Co., Ltd. is a footwear factory supplier based in Quanzhou, Fujian, China. We serve importers, wholesalers, online sellers and private-label buyers with casual walking shoes and related footwear. Sample review, mixed size and color requirements, and OEM/ODM options can be discussed according to product availability, quantity, materials, logo and packing requirements. Product details and delivery arrangements are confirmed before order placement.</value></field>"
+    },
+    {
+      "id": "companyFaqDesc",
+      "name": "FAQs",
+      "type": "multiComplex",
+      "xml": "<field id=\"companyFaqDesc\" name=\"FAQs\" type=\"multiComplex\"><rules><rule name=\"maxItemsRule\" value=\"8\" exProperty=\"include\" /></rules><complex-values><field id=\"question\" type=\"input\"><value>Who are we?</value></field><field id=\"answers\" type=\"input\"><value>Quanzhou Beiqiang Footwear &amp; Apparel Co., Ltd. is a footwear manufacturer located in Quanzhou, Fujian, China, one of the well-known footwear production areas in China.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>How can we guarantee quality?</value></field><field id=\"answers\" type=\"input\"><value>We pay attention to key details such as shoe shape, upper workmanship, stitching, bonding, sole flexibility, wearing comfort, appearance consistency and packaging condition. Before delivery, we will check the products according to order requirements to help reduce quality risks for customers.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>Are you a trading company or a manufacturer?</value></field><field id=\"answers\" type=\"input\"><value>We are a manufacturer.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>Why should you buy from us not from other suppliers?</value></field><field id=\"answers\" type=\"input\"><value>We specialize in casual and sport-casual footwear, especially slip-on sneakers and lightweight knit shoes. We can provide various styles, colors, materials and sole designs according to market needs. We support OEM and ODM cooperation.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>What services can we provide?</value></field><field id=\"answers\" type=\"input\"><value>We can provide flexible support from sample development to bulk production. We support OEM and ODM cooperation. Customization options may include upper material, color combination, outsole design, logo placement, label, insole, shoebox, packaging and other details.</value></field></complex-values><fields><field id=\"question\" name=\"question\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /><rule name=\"maxInputNumRule\" value=\"150\" exProperty=\"include\" /></rules></field><field id=\"answers\" name=\"answers\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /><rule name=\"maxInputNumRule\" value=\"500\" exProperty=\"include\" /></rules></field></fields></field>"
+    },
+    {
+      "id": "productQuality_dataSource_5_text",
+      "name": "Commodity Details",
+      "type": "input",
+      "xml": "<field id=\"productQuality_dataSource_5_text\" name=\"Commodity Details\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /></rules></field>"
+    }
+  ]
+}

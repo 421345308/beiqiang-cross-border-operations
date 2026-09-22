@@ -1,0 +1,58 @@
+{
+  "checked_at": "2026-09-15",
+  "method": "Chrome直接打开Alibaba CDN原图，逐张等待实际1000x1000像素渲染后人工视觉复核；灰色占位不计为通过",
+  "identity": "BQ002",
+  "source_product_id": "10000042896165",
+  "source_untouched": true,
+  "summary": {
+    "positions_checked": 18,
+    "positions_passed": 18,
+    "failed": 0,
+    "result": "PASS"
+  },
+  "galleries": [
+    {
+      "product_id": "1601939654418",
+      "link_code": "BQ002-W1",
+      "m1_color_role": "Grey Black",
+      "result": "PASS",
+      "urls": [
+        "https://sc04.alicdn.com/kf/H18317839dc5e4d4db394f7066ee4874f4.jpg",
+        "https://sc04.alicdn.com/kf/Hf1ad659f0d344e03a43398bd44e2fc13D.jpg",
+        "https://sc04.alicdn.com/kf/Hbcbeca7962ff487690fe22284933e736L.jpg",
+        "https://sc04.alicdn.com/kf/H928bc7e8d7734488b04785d5a1a3a098f.jpg",
+        "https://sc04.alicdn.com/kf/Hf2a12c2c602240c0973a8462a66679e2O.jpg",
+        "https://sc04.alicdn.com/kf/H66c70ba5e5b94ee4a197f4dcd7a62072U.jpg"
+      ]
+    },
+    {
+      "product_id": "1601939614689",
+      "link_code": "BQ002-R1",
+      "m1_color_role": "Grey Khaki",
+      "result": "PASS",
+      "urls": [
+        "https://sc04.alicdn.com/kf/H58acbd73b8bb4cda9abe0448e4221a70H.jpg",
+        "https://sc04.alicdn.com/kf/H353c06bb4ead4286b95a712b34e7a112F.jpg",
+        "https://sc04.alicdn.com/kf/H9be6313e80b949d482891623a4425d48n.jpg",
+        "https://sc04.alicdn.com/kf/H6e6d7e93f5254cb499e061e8598799b8q.jpg",
+        "https://sc04.alicdn.com/kf/Hc2684407229348fba65e1218a6a7ec77R.jpg",
+        "https://sc04.alicdn.com/kf/H51650b4f666743f0956b2a753c3082fcG.jpg"
+      ]
+    },
+    {
+      "product_id": "1601939635505",
+      "link_code": "BQ002-O1",
+      "m1_color_role": "Grey White",
+      "result": "PASS",
+      "urls": [
+        "https://sc04.alicdn.com/kf/H1ad7cc6c06954a73a6d4a096cb29bd25Z.jpg",
+        "https://sc04.alicdn.com/kf/H713583f715654d2980decbfcaf630260B.jpg",
+        "https://sc04.alicdn.com/kf/H89d0363c03cc4b06a55c28488805ffeeA.jpg",
+        "https://sc04.alicdn.com/kf/Hdbde36ee37824125ab7e98a184c0d1a2Z.jpg",
+        "https://sc04.alicdn.com/kf/H35c3bf049a2340f9b370f615067491989.jpg",
+        "https://sc04.alicdn.com/kf/H2651c2d7bfec4dd3982b4037721778f66.jpg"
+      ]
+    }
+  ],
+  "visual_conclusion": "三组均为同款真实针织Slip-On鞋型，颜色、鞋面、鞋底、穿脱方式与原始SKU证据一致；无错款、错色、坏图、文字水印或AI改结构。"
+}

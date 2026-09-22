@@ -1,0 +1,104 @@
+{
+  "timestamp_utc": "2026-09-14T22:17:36.041143+00:00",
+  "source_product_id_protected": "10000043991998",
+  "mode": "dry-run",
+  "evidence": "protected source product + merged raw A2208 images + expansion thumbnail readback",
+  "results": [
+    {
+      "product_id": "1601939641581",
+      "expected_model": "BQ022-W1 / A2208",
+      "mode": "dry-run",
+      "before": {
+        "request_id": "212cbf3217894242373677384",
+        "trace_id": "2101d13c17894242370263288e0db1",
+        "message": null,
+        "error": null
+      },
+      "before_status": "modified",
+      "before_display": "N",
+      "before_title": "Wholesale Men's Casual Slip On Sneakers Striped Knit Textile Walking Shoes Factory Supply A2208",
+      "before_image_count": 6,
+      "before_sku_count": 33,
+      "before_colors": {
+        "-10": {
+          "name": "Black White",
+          "image_url": "https://sc04.alicdn.com/kf/S31678bf54e1b48aea05cc8676eaa1cd72.jpg"
+        },
+        "-57": {
+          "name": "Light Grey",
+          "image_url": "https://sc04.alicdn.com/kf/S68775e0b2cf34c80bb16375031b6fb7bz.jpg"
+        },
+        "-34": {
+          "name": "Black White Stripe",
+          "image_url": "https://sc04.alicdn.com/kf/Scffb1b02f7a04f4fb4b0c67647ed47606.jpg"
+        }
+      },
+      "stage": "verified_existing",
+      "ok": true
+    },
+    {
+      "product_id": "1601939659468",
+      "expected_model": "BQ022-R1 / A2208",
+      "mode": "dry-run",
+      "before": {
+        "request_id": "0bab02fc17894242462161164",
+        "trace_id": "2101d94717894242458828525e10e2",
+        "message": null,
+        "error": null
+      },
+      "before_status": "modified",
+      "before_display": "N",
+      "before_title": "Striped Knit Slip On Walking Shoes Lightweight Casual Sneakers for Travel and Daily Wear A2208",
+      "before_image_count": 6,
+      "before_sku_count": 33,
+      "before_colors": {
+        "-57": {
+          "name": "Light Grey",
+          "image_url": "https://sc04.alicdn.com/kf/S68775e0b2cf34c80bb16375031b6fb7bz.jpg"
+        },
+        "-34": {
+          "name": "Black White Stripe",
+          "image_url": "https://sc04.alicdn.com/kf/Scffb1b02f7a04f4fb4b0c67647ed47606.jpg"
+        },
+        "-10": {
+          "name": "Black White",
+          "image_url": "https://sc04.alicdn.com/kf/S31678bf54e1b48aea05cc8676eaa1cd72.jpg"
+        }
+      },
+      "stage": "verified_existing",
+      "ok": true
+    },
+    {
+      "product_id": "1601939709218",
+      "expected_model": "BQ022-O1 / A2208",
+      "mode": "dry-run",
+      "before": {
+        "request_id": "0bbb3b2417894242547363251",
+        "trace_id": "2101dd0617894242543982018e0e30",
+        "message": null,
+        "error": null
+      },
+      "before_status": "modified",
+      "before_display": "N",
+      "before_title": "Custom Logo Slip On Casual Sneakers Striped Knit Walking Shoes OEM ODM Private Label A2208",
+      "before_image_count": 6,
+      "before_sku_count": 33,
+      "before_colors": {
+        "-34": {
+          "name": "Black White Stripe",
+          "image_url": "https://sc04.alicdn.com/kf/Scffb1b02f7a04f4fb4b0c67647ed47606.jpg"
+        },
+        "-10": {
+          "name": "Black White",
+          "image_url": "https://sc04.alicdn.com/kf/S31678bf54e1b48aea05cc8676eaa1cd72.jpg"
+        },
+        "-57": {
+          "name": "Light Grey",
+          "image_url": "https://sc04.alicdn.com/kf/S68775e0b2cf34c80bb16375031b6fb7bz.jpg"
+        }
+      },
+      "stage": "verified_existing",
+      "ok": true
+    }
+  ]
+}

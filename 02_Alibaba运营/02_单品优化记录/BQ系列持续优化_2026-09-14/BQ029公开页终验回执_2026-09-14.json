@@ -1,0 +1,30 @@
+{
+  "date": "2026-09-14",
+  "family": "BQ029 / A025",
+  "source_product_id_protected": "1601839062659",
+  "method": "OpenAPI approved/Y readback followed by Chrome buyer-page visual and field verification",
+  "result": "PASS",
+  "products": [
+    {
+      "product_id": "1601939749045",
+      "role": "BQ029-W1 wholesale / black-white clean product M1",
+      "status": "approved",
+      "display": "Y",
+      "checks": ["title", "real black-white M1", "six-image gallery", "Black White and All Black thumbnails", "EU35-45", "BQ029-W1 / A025", "three pairs price tiers", "Slip-On"]
+    },
+    {
+      "product_id": "1601939607770",
+      "role": "BQ029-R1 daily casual / real black-white on-foot M1",
+      "status": "approved",
+      "display": "Y",
+      "checks": ["title", "real on-foot M1", "six-image gallery", "Black White and All Black thumbnails", "EU35-45", "BQ029-R1 / A025", "three pairs price tiers", "Slip-On"]
+    },
+    {
+      "product_id": "1601939721228",
+      "role": "BQ029-O1 OEM ODM / all-black clean product M1",
+      "status": "approved",
+      "display": "Y",
+      "checks": ["title", "real all-black M1", "six-image gallery", "Black White and All Black thumbnails", "EU35-45", "BQ029-O1 / A025", "three pairs price tiers", "Slip-On"]
+    }
+  ]
+}

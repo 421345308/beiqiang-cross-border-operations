@@ -1,0 +1,43 @@
+{
+  "family": "BQ026/T5828",
+  "reviewed_at": "2026-09-14",
+  "result": "PASS",
+  "products": [
+    {
+      "product_id": "1601939745065",
+      "model": "BQ026-W1 / T5828",
+      "m1": "White clean complete real shoe",
+      "colors": ["Pink", "Black", "White", "Red", "Grey"],
+      "sizes": "EU 35-45",
+      "prices": ["US$9.49 / 2-49 pairs", "US$9.19 / 50-99 pairs", "US$9.09 / 100+ pairs"]
+    },
+    {
+      "product_id": "1601939725201",
+      "model": "BQ026-R1 / T5828",
+      "m1": "Red clean complete real shoe",
+      "colors": ["Pink", "Black", "White", "Red", "Grey"],
+      "sizes": "EU 35-45",
+      "prices": ["US$9.53 / 2-49 pairs", "US$9.23 / 50-99 pairs", "US$9.13 / 100+ pairs"]
+    },
+    {
+      "product_id": "1601939714238",
+      "model": "BQ026-O1 / T5828",
+      "m1": "Black clean complete real shoe",
+      "colors": ["Pink", "Black", "White", "Red", "Grey"],
+      "sizes": "EU 35-45",
+      "prices": ["US$9.45 / 2-49 pairs", "US$9.15 / 50-99 pairs", "US$9.05 / 100+ pairs"]
+    }
+  ],
+  "common_checks": {
+    "status_approved_display_y": true,
+    "six_gallery_images_visible": true,
+    "m1_pixels_visually_passed_after_real_load": true,
+    "five_colors_visible": true,
+    "eleven_sizes_visible_as_35_to_43_plus_2": true,
+    "sku_count_55_openapi_readback": true,
+    "closure_lace_up": true,
+    "fit_regular": true,
+    "sales_unit_single_item_and_pair_tiers": true
+  },
+  "note": "The first batch screenshot briefly showed Alibaba skeleton placeholders on W1/R1. Both pages were reopened and only passed after the white and red M1 pixels rendered visibly. Public localized headings remain fact-consistent; OpenAPI English titles match the submitted plan."
+}

@@ -1,0 +1,31 @@
+{
+  "checked_at": "2026-09-15",
+  "product_adviser": {
+    "source_product_id": "10000042896165",
+    "week_34": {"search_impressions": 25, "search_clicks": 0, "ctr": "0%", "visitors": 2},
+    "week_35": {"search_impressions": 25, "search_clicks": 0, "ctr": "0%", "visitors": 2},
+    "extensions_week_35": {
+      "1601939654418": {"search_impressions": 0, "search_clicks": 0, "visitors": 0},
+      "1601939614689": {"search_impressions": 0, "search_clicks": 0, "visitors": 0},
+      "1601939635505": {"search_impressions": 0, "search_clicks": 0, "visitors": 0}
+    }
+  },
+  "keyword_adviser_latest_7_days": [
+    {"keyword": "walking style shoes", "search_index": 366, "growth": "-5.9%", "ctr": "3.6%", "seller_scale_index": 19},
+    {"keyword": "wide toe box running shoes", "search_index": 13, "growth": "+3300%", "ctr": "0%", "eligible": false, "reason": "BQ002 is not evidenced as a running shoe"},
+    {"keyword": "wide toe box shoes", "search_index": 6, "growth": "-42.9%", "ctr": "0%", "eligible": true},
+    {"keyword": "wide toe box shoes men", "search_index": 6, "growth": "-64.6%", "ctr": "0%", "eligible": false, "reason": "gender is not fixed in the current source form"},
+    {"keyword": "comfort shoes wide toe box", "search_index": 5, "growth": "0%", "ctr": "0%", "eligible": true},
+    {"keyword": "comfortable breathable wide toe box walking shoes mens orthopedic sneakers custom zero drop running shoes", "search_index": 2, "growth": "0%", "ctr": "0%", "eligible": false, "reason": "orthopedic, zero drop, running and male claims are unsupported"}
+  ],
+  "competitor_findings": {
+    "sample_scope": "Public Alibaba product and showroom pages; Firecrawl was unavailable, so current public search was used manually.",
+    "patterns": [
+      "Relevant cards combine product category, construction/material and one buyer-facing differentiator instead of relying on wide toe box alone.",
+      "High-credibility cards expose real color choices, size range, price tiers, MOQ and customization options above the fold.",
+      "Many competitor titles overuse barefoot, zero drop, orthopedic, diabetic, medical and tested anti-slip language; these are not transferable to BQ002 without exact evidence.",
+      "Clean single-product white-background images dominate the product card; secondary images show side, outsole, top view, pair and color range."
+    ]
+  },
+  "decision": "Protect the source link. Optimize all three zero-data extensions as a coordinated family: W1 leads broad walking-style wholesale intent with Grey Black, R1 leads daily walking with Grey Khaki, and O1 leads custom-logo/OEM intent with Grey White. Wide Toe Box remains a supported differentiator, not the sole traffic term."
+}

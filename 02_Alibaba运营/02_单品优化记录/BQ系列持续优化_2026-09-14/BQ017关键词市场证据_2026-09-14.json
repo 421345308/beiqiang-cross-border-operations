@@ -1,0 +1,21 @@
+{
+  "sku": "BQ017 / A008",
+  "source": "Alibaba.com 数据参谋·选词参谋",
+  "scope": "最近7天，全部终端，全球，鞋靴及配饰",
+  "captured_at": "2026-09-14",
+  "verified_terms": [
+    {"keyword": "casual shoes", "search_index": 1424, "growth": "+19.9%", "ctr": "0.71%", "seller_scale_index": 32, "role": "大词，仅做语义背景"},
+    {"keyword": "men's casual shoes", "search_index": 253, "growth": "+14.4%", "ctr": "5.06%", "seller_scale_index": 26, "role": "男款主意图词"},
+    {"keyword": "men's casual sports shoes", "search_index": 70, "growth": "-7.8%", "ctr": "6.38%", "seller_scale_index": 6, "role": "备选，不冒充运动性能"},
+    {"keyword": "men's casual walking shoes", "search_index": 47, "growth": "+10%", "ctr": "4.11%", "seller_scale_index": 2, "role": "最高相关的主意图长尾词"},
+    {"keyword": "men's casual shoes wholesale", "search_index": 25, "growth": "+151.4%", "ctr": "6.82%", "seller_scale_index": 0, "role": "W1批发采购意图"},
+    {"keyword": "mens shoes casual", "search_index": 19, "growth": "+123%", "ctr": "13.79%", "seller_scale_index": 6, "role": "买家实际词序证据"},
+    {"keyword": "walking style shoes", "search_index": 366, "growth": "-5.9%", "ctr": "3.6%", "seller_scale_index": 19, "role": "步行鞋大词补充"},
+    {"keyword": "casual walking shoes", "search_index": 12, "growth": "+87.5%", "ctr": "3.33%", "seller_scale_index": 7, "role": "R1日常步行意图"},
+    {"keyword": "mens lightweight walking shoes", "search_index": 7, "growth": "+50%", "ctr": "13.33%", "seller_scale_index": 0, "role": "轻量表达的辅助证据"},
+    {"keyword": "men's lace-up shoes", "search_index": 8, "growth": "+20%", "ctr": "5.56%", "seller_scale_index": 0, "role": "结构限定词，不占标题主位"},
+    {"keyword": "knit shoes", "search_index": 2, "growth": "+100%", "ctr": "0%", "seller_scale_index": 4, "role": "材质限定词，不单独抢大词"}
+  ],
+  "no_data_queries": ["mens lace up walking shoes", "mens casual walking shoes"],
+  "decision": "标题以 men's casual shoes / men's casual walking shoes / wholesale 采购意图为主，walking、quilted knit、lace-up和 lightweight 只作真实属性限定；不因低量结构词堆词。"
+}

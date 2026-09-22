@@ -1,0 +1,50 @@
+{
+  "timestamp_utc": "2026-09-14T12:17:50.335509+00:00",
+  "source_product_id_protected": "1601825070472",
+  "mode": "dry-run",
+  "results": [
+    {
+      "product_id": "1601939701201",
+      "expected_model": "BQ007-O1 / L0017",
+      "mode": "dry-run",
+      "before_status": "approved",
+      "before_display": "Y",
+      "before": {
+        "request_id": "213c933517893882604978021",
+        "trace_id": "210329c717893882601708467e0da6",
+        "message": null,
+        "error": null
+      },
+      "stage": "prepared",
+      "render": {
+        "request_id": "213f5a2117893882676623770",
+        "trace_id": "210313ec17893882673538097e0c96",
+        "message": null,
+        "error": null
+      },
+      "target": {
+        "3558409": {
+          "name": "Orange",
+          "image_url": "https://sc04.alicdn.com/kf/H45c4d98bb5824ab79f299a04151cf0bfH.jpg"
+        },
+        "-80": {
+          "name": "White Khaki",
+          "image_url": "https://sc04.alicdn.com/kf/H6b0948b966e8477f9204ff3d32058ca5h.jpg"
+        },
+        "3331185": {
+          "name": "White",
+          "image_url": "https://sc04.alicdn.com/kf/H5c8be9c9aa0c41fabb70d7e5a9430ac5F.jpg"
+        },
+        "-57": {
+          "name": "Black White",
+          "image_url": "https://sc04.alicdn.com/kf/H7a3f2b0702824b78b00b0a5236e66ef9x.jpg"
+        },
+        "-34": {
+          "name": "All Black",
+          "image_url": "https://sc04.alicdn.com/kf/Hd0edb11e1a8c44ccbd3e38bd06277bf3U.jpg"
+        }
+      },
+      "ok": true
+    }
+  ]
+}

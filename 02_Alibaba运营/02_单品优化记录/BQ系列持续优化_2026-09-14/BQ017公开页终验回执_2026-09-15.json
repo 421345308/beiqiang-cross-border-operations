@@ -1,0 +1,39 @@
+{
+  "checked_at": "2026-09-15T00:10:17+08:00",
+  "family": "BQ017",
+  "source_product_id": "10000044034049",
+  "source_protected": true,
+  "result": "PASS",
+  "products": [
+    {
+      "product_id": "1601939636508",
+      "model": "BQ017-W1 / A008",
+      "status": "approved",
+      "display": "Y",
+      "hero": "Grey",
+      "public_qa": "PASS",
+      "checks": ["title", "real M1 and six-photo gallery", "four colors", "EU35-45", "44 SKUs", "three Pairs price tiers", "Lace-Up", "Regular Fit"]
+    },
+    {
+      "product_id": "1601939697271",
+      "model": "BQ017-R1 / A008",
+      "status": "approved",
+      "display": "Y",
+      "hero": "White",
+      "public_qa": "PASS",
+      "checks": ["title", "real M1 and six-photo gallery", "four colors", "EU35-45", "44 SKUs", "three Pairs price tiers", "Lace-Up", "Regular Fit"],
+      "note": "A later isolated OpenAPI read returned an empty transient response; the prior approved/Y readback and live buyer page both confirmed the product is public. No resubmission was made."
+    },
+    {
+      "product_id": "1601939593839",
+      "model": "BQ017-O1 / A008",
+      "status": "approved",
+      "display": "Y",
+      "hero": "All Black",
+      "public_qa": "PASS",
+      "checks": ["platform-standardized supported title", "real M1 and six-photo gallery", "four colors", "EU35-45", "44 SKUs", "three Pairs price tiers", "Lace-Up", "Regular Fit"],
+      "note": "Platform added Light Weight and Breathable; both are supported by current product attributes, so the standardized title was accepted without overwrite."
+    }
+  ],
+  "next_action": "Enter 7/14/30-day source-term, CTR, visit and inquiry monitoring. Do not make short-term repeat edits."
+}

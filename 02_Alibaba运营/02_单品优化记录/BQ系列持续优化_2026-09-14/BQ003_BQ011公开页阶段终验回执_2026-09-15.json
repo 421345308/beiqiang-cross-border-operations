@@ -1,0 +1,14 @@
+{
+  "review_date": "2026-09-15",
+  "method": "Read-only OpenAPI polling followed by Chrome buyer-page verification.",
+  "no_resubmission": true,
+  "products": {
+    "1601939663432": {"family": "BQ003", "role": "R1", "platform_state": "approved/Y", "result": "PUBLIC_QA_PASS"},
+    "1601939665367": {"family": "BQ003", "role": "O1", "platform_state": "approved/Y", "result": "PUBLIC_QA_PASS", "m2_chinese_text_removed": true},
+    "1601939634522": {"family": "BQ011", "role": "W1", "platform_state": "approved/Y", "result": "PUBLIC_QA_HOLD", "hold_reason": "Original evidence says Grey Green while public SKU label says Light Grey."},
+    "1601939666421": {"family": "BQ011", "role": "R1", "platform_state": "approved/Y", "result": "PUBLIC_QA_HOLD", "hold_reason": "Original evidence says Grey Green while public SKU label says Light Grey."},
+    "1601939606803": {"family": "BQ011", "role": "O1", "platform_state": "approved/Y", "result": "PUBLIC_QA_HOLD", "hold_reason": "Original evidence says Grey Green while public SKU label says Light Grey."}
+  },
+  "bq003_checks": {"title_propagated": true, "six_gallery_slots_visible": true, "colors": 5, "size_range": "EU35-45", "sku_count": 55, "closure": "Lace-Up", "fit_type": "Regular Fit", "pairs_price_tiers_visible": true},
+  "bq011_checks": {"title_propagated": true, "six_gallery_slots_visible": true, "colors": 3, "size_range": "EU39-45", "sku_count": 21, "closure": "Slip-On", "fit_type": "Regular Fit", "pairs_price_tiers_visible": true, "color_semantic_mapping_complete": false}
+}

@@ -1,0 +1,52 @@
+{
+  "timestamp_utc": "2026-09-14T12:09:20.397958+00:00",
+  "source_product_id_protected": "10000043201799",
+  "mode": "dry-run",
+  "results": [
+    {
+      "product_id": "1601939626612",
+      "expected_model": "BQ004-W1 / A502",
+      "mode": "dry-run",
+      "before_status": "modified",
+      "before_display": "N",
+      "before": {
+        "request_id": "213c934417893877447355645",
+        "trace_id": "2103243417893877444134542e0c55",
+        "message": null,
+        "error": null
+      },
+      "stage": "auditing_no_resubmit",
+      "ok": false
+    },
+    {
+      "product_id": "1601939738037",
+      "expected_model": "BQ004-R1 / A502",
+      "mode": "dry-run",
+      "before_status": "modified",
+      "before_display": "N",
+      "before": {
+        "request_id": "21501be117893877522993715",
+        "trace_id": "2103346417893877519624165e0c21",
+        "message": null,
+        "error": null
+      },
+      "stage": "auditing_no_resubmit",
+      "ok": false
+    },
+    {
+      "product_id": "1601939700200",
+      "expected_model": "BQ004-O1 / A502",
+      "mode": "dry-run",
+      "before_status": "modified",
+      "before_display": "N",
+      "before": {
+        "request_id": "0bab02fe17893877593073256",
+        "trace_id": "210313ea17893877589987561e0cac",
+        "message": null,
+        "error": null
+      },
+      "stage": "auditing_no_resubmit",
+      "ok": false
+    }
+  ]
+}

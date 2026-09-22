@@ -1,0 +1,56 @@
+{
+  "date": "2026-09-15",
+  "source_product_id_protected": "1601825074604",
+  "api_review": {
+    "receipt": "BQ009材料审核轮询_2026-09-15_第三次.json",
+    "all_approved_display_y": true,
+    "all_midsole_other_value_id_4": true,
+    "all_outsole_other_value_id_4": true,
+    "all_image_count_6": true,
+    "all_sku_count_44": true
+  },
+  "public_pages": [
+    {
+      "product_id": "1601939661419",
+      "link_code": "BQ009-R1",
+      "url": "https://www.alibaba.com/product-detail/_1601939661419.html",
+      "title_verified": true,
+      "m1": "Mint Green clean-background complete shoe",
+      "midsole": "Other",
+      "outsole": "Other",
+      "colors": 4,
+      "sizes": "EU35-45",
+      "inquiry_entry_visible": true,
+      "pass": true
+    },
+    {
+      "product_id": "1601939675350",
+      "link_code": "BQ009-W1",
+      "url": "https://www.alibaba.com/product-detail/_1601939675350.html",
+      "title_verified": true,
+      "m1": "Orange clean-background complete shoe",
+      "midsole": "Other",
+      "outsole": "Other",
+      "colors": 4,
+      "sizes": "EU35-45",
+      "inquiry_entry_visible": true,
+      "pass": true
+    },
+    {
+      "product_id": "1601939721165",
+      "link_code": "BQ009-O1",
+      "url": "https://www.alibaba.com/product-detail/_1601939721165.html",
+      "title_verified": true,
+      "m1": "All Black clean-background three-quarter complete shoe",
+      "midsole": "Other",
+      "outsole": "Other",
+      "colors": 4,
+      "sizes": "EU35-45",
+      "inquiry_entry_visible": true,
+      "pass": true
+    }
+  ],
+  "all_pass": true,
+  "queue_transition": "SUBMITTED -> PUBLIC_QA_PASS",
+  "next_stage": "WAIT_D7; O1 remains PROTECT_TRAFFIC_ENTRY through D14"
+}

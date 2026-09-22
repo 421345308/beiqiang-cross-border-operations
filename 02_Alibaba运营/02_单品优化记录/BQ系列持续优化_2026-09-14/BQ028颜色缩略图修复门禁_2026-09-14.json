@@ -1,0 +1,52 @@
+{
+  "timestamp_utc": "2026-09-14T11:25:13.149859+00:00",
+  "source_product_id_protected": "1601839105416",
+  "mode": "dry-run",
+  "results": [
+    {
+      "product_id": "1601939720204",
+      "expected_model": "BQ028-W1 / 7212",
+      "mode": "dry-run",
+      "before_status": "modified",
+      "before_display": "N",
+      "before": {
+        "request_id": "212cbf3217893850970973370",
+        "trace_id": "2101fca817893850967905315e0eb9",
+        "message": null,
+        "error": null
+      },
+      "stage": "auditing_no_resubmit",
+      "ok": false
+    },
+    {
+      "product_id": "1601939625627",
+      "expected_model": "BQ028-R1 / 7212",
+      "mode": "dry-run",
+      "before_status": "modified",
+      "before_display": "N",
+      "before": {
+        "request_id": "0b830ecc17893851044585033",
+        "trace_id": "2101d86517893851041298137e0b93",
+        "message": null,
+        "error": null
+      },
+      "stage": "auditing_no_resubmit",
+      "ok": false
+    },
+    {
+      "product_id": "1601939705262",
+      "expected_model": "BQ028-O1 / 7212",
+      "mode": "dry-run",
+      "before_status": "modified",
+      "before_display": "N",
+      "before": {
+        "request_id": "212c41d317893851120525740",
+        "trace_id": "2101d86517893851117238306e0b93",
+        "message": null,
+        "error": null
+      },
+      "stage": "auditing_no_resubmit",
+      "ok": false
+    }
+  ]
+}

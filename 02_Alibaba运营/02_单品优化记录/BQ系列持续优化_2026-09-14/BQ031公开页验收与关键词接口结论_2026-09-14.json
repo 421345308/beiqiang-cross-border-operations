@@ -1,0 +1,33 @@
+{
+  "family": "BQ031/ZX2116",
+  "source_product_id_protected": "10000046439033",
+  "public_qa_before_keyword_attempt": {
+    "1601939693331": {
+      "role": "W1 Green/White wholesale walking style",
+      "result": "PASS",
+      "checks": ["real Green/White complete-shoe M1", "six-image gallery", "5 colors", "EU 38-47", "BQ031-W1 / ZX2116", "Pairs price", "Lace-up"]
+    },
+    "1601939667426": {
+      "role": "R1 Off White daily casual walking",
+      "result": "PASS",
+      "checks": ["real Off White complete-shoe M1", "six-image gallery", "5 colors", "EU 38-47", "BQ031-R1 / ZX2116", "Pairs price", "Lace-up", "Wide Toe Box"]
+    },
+    "1601939754004": {
+      "role": "O1 All Black OEM ODM private label",
+      "result": "PASS",
+      "checks": ["real All Black complete-shoe M1", "six-image gallery", "5 colors", "EU 38-47", "BQ031-O1 / ZX2116", "Pairs price", "Lace-up", "Wide Toe Box"]
+    }
+  },
+  "title_decision": "Public titles are Alibaba attribute-based rewrites rather than byte-identical submitted titles. All visible claims are supported by live attributes and preserve each link's search intent, so no title resubmission is warranted.",
+  "keyword_attempt": {
+    "targeted_product_id": "1601939693331",
+    "result": "READBACK_MISMATCH_STOPPED",
+    "requested": ["walking style shoes", "wide toe box walking shoes", "large size walking shoes"],
+    "readback": [""],
+    "other_fields_unchanged": true,
+    "after_status": "modified",
+    "after_display": "N",
+    "untouched_products": ["1601939667426", "1601939754004"],
+    "decision": "Do not resubmit W1 and do not attempt the same field on R1/O1. Poll W1 only until approved/Y. Treat productKeywords write as unsupported for current OpenAPI Schema."
+  }
+}

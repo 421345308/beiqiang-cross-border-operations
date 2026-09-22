@@ -1,0 +1,24 @@
+{
+  "family": "BQ028/7212",
+  "state": "WAIT_AUDIT_PASS",
+  "source_product_id": "1601839105416",
+  "source_policy": "PROTECT_SOURCE",
+  "execution_policy": "After title/model/gallery approval and public QA, preflight all; execute fail-fast in listed order.",
+  "products": [
+    {
+      "product_id": "1601939720204",
+      "expected_model": "BQ028-W1 / 7212",
+      "keywords": ["men's casual slip-on shoes", "slip on shoes", "wholesale slip on shoes"]
+    },
+    {
+      "product_id": "1601939625627",
+      "expected_model": "BQ028-R1 / 7212",
+      "keywords": ["walking style shoes", "casual walking shoes", "lightweight slip on shoes"]
+    },
+    {
+      "product_id": "1601939705262",
+      "expected_model": "BQ028-O1 / 7212",
+      "keywords": ["custom logo slip on shoes", "private label casual shoes", "OEM slip on shoes"]
+    }
+  ]
+}

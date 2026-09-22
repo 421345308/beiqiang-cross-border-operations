@@ -1,0 +1,60 @@
+{
+  "timestamp_utc": "2026-09-14T12:51:44.346575+00:00",
+  "source_product_id_protected": "1601825160204",
+  "mode": "apply",
+  "results": [
+    {
+      "product_id": "1601939734070",
+      "expected_model": "BQ010-R1 / R1601",
+      "mode": "apply",
+      "before_status": "approved",
+      "before_display": "Y",
+      "before": {
+        "request_id": "0b80d2d617893902796706620",
+        "trace_id": "2103135017893902793545151e1124",
+        "message": null,
+        "error": null
+      },
+      "stage": "submitted",
+      "render": {
+        "request_id": "213c932b17893902865227541",
+        "trace_id": "2103243417893902861972689e0c76",
+        "message": null,
+        "error": null
+      },
+      "target": {
+        "-1": {
+          "name": "White Sole Black",
+          "image_url": "https://sc04.alicdn.com/kf/S131c1295cf36499b8d244c05a4bddfd7l.jpg"
+        },
+        "-24": {
+          "name": "All Black",
+          "image_url": "https://sc04.alicdn.com/kf/H88a70f03f531404088345b094a830e14a.jpg"
+        }
+      },
+      "ok": true,
+      "update": {
+        "request_id": "212c41d317893902953312521",
+        "trace_id": "210325bb17893902949691235e0dfd",
+        "message": null,
+        "error": null
+      },
+      "readback": {
+        "request_id": "0bbb637a17893903033874639",
+        "trace_id": "210313ea17893903030666128e0ba9",
+        "message": null,
+        "error": null
+      },
+      "after_status": "modified",
+      "after_display": "N",
+      "checks": {
+        "identity_ok": true,
+        "target_images_ok": true,
+        "color_names_unchanged": true,
+        "sku_count_22": true,
+        "sku_codes_unchanged": true,
+        "all_non_image_fields_unchanged": true
+      }
+    }
+  ]
+}

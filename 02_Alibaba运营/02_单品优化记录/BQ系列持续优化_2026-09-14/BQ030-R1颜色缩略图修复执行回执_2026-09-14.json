@@ -1,0 +1,68 @@
+{
+  "timestamp_utc": "2026-09-14T13:59:51.893038+00:00",
+  "source_product_id_protected": "1601839050756",
+  "mode": "apply",
+  "results": [
+    {
+      "product_id": "1601939679363",
+      "expected_model": "BQ030-R1 / A811",
+      "mode": "apply",
+      "before_status": "approved",
+      "before_display": "Y",
+      "before": {
+        "request_id": "21501be117893943667395039",
+        "trace_id": "2101d86517893943664232645e0eaa",
+        "message": null,
+        "error": null
+      },
+      "stage": "submitted",
+      "render": {
+        "request_id": "0bab02fc17893943737952588",
+        "trace_id": "2101d13c17893943734731396e0d6f",
+        "message": null,
+        "error": null
+      },
+      "target": {
+        "216016296": {
+          "name": "Green",
+          "image_url": "https://sc04.alicdn.com/kf/S4b39d8d97c2d4abfadc534a9ffde7d70u.jpg"
+        },
+        "3483425": {
+          "name": "Grey",
+          "image_url": "https://sc04.alicdn.com/kf/Sc69e5819f5e941948c6fa7102227a28dl.jpg"
+        },
+        "3851110": {
+          "name": "Purple",
+          "image_url": "https://sc04.alicdn.com/kf/Se37387c09d3e4f59b9112440a3d48d215.jpg"
+        },
+        "3328925": {
+          "name": "Pink",
+          "image_url": "https://sc04.alicdn.com/kf/S249c57b03c3b4ae492a756b38db06344W.jpg"
+        }
+      },
+      "ok": true,
+      "update": {
+        "request_id": "213c933517893943825853662",
+        "trace_id": "2101e68f17893943822088573e0ef3",
+        "message": null,
+        "error": null
+      },
+      "readback": {
+        "request_id": "0b830ecc17893943907412979",
+        "trace_id": "2101fb9317893943904097748e0f4e",
+        "message": null,
+        "error": null
+      },
+      "after_status": "modified",
+      "after_display": "N",
+      "checks": {
+        "identity_ok": true,
+        "target_images_ok": true,
+        "color_names_unchanged": true,
+        "sku_count_40": true,
+        "sku_codes_unchanged": true,
+        "all_non_image_fields_unchanged": true
+      }
+    }
+  ]
+}

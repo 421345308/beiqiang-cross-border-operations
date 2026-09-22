@@ -1,0 +1,38 @@
+{
+  "timestamp_utc": "2026-09-14T12:51:04.527473+00:00",
+  "source_product_id_protected": "1601825160204",
+  "mode": "dry-run",
+  "results": [
+    {
+      "product_id": "1601939734070",
+      "expected_model": "BQ010-R1 / R1601",
+      "mode": "dry-run",
+      "before_status": "approved",
+      "before_display": "Y",
+      "before": {
+        "request_id": "213d4e4917893902549951260",
+        "trace_id": "210325bb17893902546917609e0fca",
+        "message": null,
+        "error": null
+      },
+      "stage": "prepared",
+      "render": {
+        "request_id": "21546a1d17893902618317624",
+        "trace_id": "210329c717893902615148020e0ef1",
+        "message": null,
+        "error": null
+      },
+      "target": {
+        "-1": {
+          "name": "White Sole Black",
+          "image_url": "https://sc04.alicdn.com/kf/S131c1295cf36499b8d244c05a4bddfd7l.jpg"
+        },
+        "-24": {
+          "name": "All Black",
+          "image_url": "https://sc04.alicdn.com/kf/H88a70f03f531404088345b094a830e14a.jpg"
+        }
+      },
+      "ok": true
+    }
+  ]
+}
