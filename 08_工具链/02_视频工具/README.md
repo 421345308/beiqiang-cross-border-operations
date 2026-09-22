@@ -8,6 +8,7 @@
 | `seedance_video/` | Seedance 相关脚本与接口工具 |
 | `video_use/` | 视频下载、抽帧、检查和剪辑能力 |
 | `remotion/` | 当前 Remotion 工程与可视化视频制作 |
+| `Hypit/` | Hypit 语义编排、批量变体与可编辑合成的接入评估；当前未安装、未纳入生产 |
 | `opencut-classic/` | OpenCut 第三方编辑器实体目录 |
 | `Blender人体白模/` | Blender 人体白模相关工具和说明 |
 | `ffmpeg/` | FFmpeg 本地运行文件 |
