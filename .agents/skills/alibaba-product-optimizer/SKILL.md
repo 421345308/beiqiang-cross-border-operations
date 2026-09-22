@@ -1,6 +1,6 @@
 ---
 name: alibaba-product-optimizer
-description: Optimize a single Beiqiang Alibaba.com product listing for B2B search traffic, click-through, and inquiry conversion. Use when improving product titles, keywords, product groups, attributes, selling points, main images, detail-page modules, SKU/color images, inquiry hooks, and post-publish actions for wide toe box comfort walking shoes and related casual footwear.
+description: Optimize a single Beiqiang Alibaba.com product listing for B2B search traffic, click-through, and inquiry conversion. Use when improving product titles, keywords, product groups, attributes, selling points, main images, detail-page modules, SKU/color images, inquiry hooks, and post-publish actions for comfort walking shoes and related casual footwear.
 ---
 
 # Alibaba Product Optimizer
@@ -11,6 +11,10 @@ description: Optimize a single Beiqiang Alibaba.com product listing for B2B sear
 
 
 Use this skill when the task is one Beiqiang Alibaba product page or one product package. It wraps Beiqiang positioning, competitor signals, and the existing Alibaba International Operations workflow into a focused optimization pass.
+
+## Adaptive optimization rule
+
+Separate `HARD_CONSTRAINT` from `DEFAULT_HEURISTIC`. Source identity, SKU facts, compliance and publish/readback gates remain fixed. Title formulas, keyword placement, image order, module count beyond platform requirements, visual style and historical conversion advice are hypotheses. If fresh keyword data, current buyer intent, current platform behavior or a protected-link pilot supports a better approach, use it and record why. Read the adaptive-learning reference in `alibaba-international-operations` when a conflict is material.
 
 ## Required References
 
@@ -28,7 +32,7 @@ For a complete single-product optimization, return content in a form the operato
 - 3-5 keyword phrases.
 - Required, optional, and custom attributes.
 - 4-6 selling points.
-- Main image roles, including first-image click-through logic.
+- Main image roles chosen from the buyer questions that remain unresolved, including first-image click-through logic.
 - Detail-page module order.
 - RFQ/inquiry hook for the page.
 - Pending confirmations for price, MOQ, material, lining, outsole, size range, packing, certificates, or lead time.
@@ -46,7 +50,7 @@ Approve the page only if the title, attributes, images, details and inquiry hook
 
 - Start from Beiqiang positioning and real product evidence.
 - Keep the page B2B: importer, wholesaler, Amazon/TikTok seller, brand buyer.
-- Highlight wide toe box, comfort walking, knit/textile upper, EVA sole, lightweight, slip-on, sample, OEM/ODM, mixed sizes/colors only when true or supported.
+- Highlight only the current SKU's supported product and procurement facts. `Wide Toe Box`, materials, sole composition, fit, sample, OEM/ODM and mixed sizes/colors are never inherited merely because they worked on another link.
 - Treat price, MOQ, material, lining, outsole, size range, packing, and lead time as confirmation items when missing.
 
 ## 输出格式
@@ -61,7 +65,7 @@ Keywords:
 Attributes:
 Selling points:
 Main image plan:
-First 5 image plan:
+Gallery image plan:
 Detail page structure:
 MOQ/sample/lead time:
 Shipping note:

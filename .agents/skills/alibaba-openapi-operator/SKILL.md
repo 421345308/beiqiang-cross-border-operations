@@ -43,6 +43,8 @@ For publishing or repair, read [references/product-publishing.md](references/pro
 5. Associate the correct product or factory video only after the product ID is known.
 6. Read the product back, check quality score, and verify the public page when it becomes available.
 
+For an existing product repair, prefer a minimal incremental Schema containing only the target fields and documented dependencies. Render the target's current Schema first; do not use another product's full Schema as a shortcut for a one-field edit. Inspect current video fields before writing, because an overlinked video can block otherwise unrelated edits. See the failure-handling rules in the publishing reference.
+
 Use browser only when OAuth consent, CAPTCHA, a field absent from the API, or visible public-page verification requires it. Browser fallback does not replace API-side readback.
 
 For a catalog-wide image audit, use `scripts/catalog_image_audit.py`. It is read-only: it retrieves every live product gallery, creates compact six-image contact sheets, checks image count/resolution/hero occupancy, and can match a user screenshot to the closest live image without storing hundreds of full-size CDN files.

@@ -21,20 +21,22 @@ If a high-impact fact is missing, proceed with a conservative draft and list it 
 2. Product role: new listing, variant, duplicate risk, seasonal style, or skip candidate.
 3. Competitor check: use `competitor-research-firecrawl` if keyword or image strategy is uncertain.
 4. Keyword cluster: choose one primary buyer intent and 3-5 supporting long-tail terms.
-5. Title: produce 3 options, 75-105 characters by default.
+5. Title: produce up to 3 useful options when comparison adds value; length and structure follow current keyword evidence and buyer clarity rather than a permanent character target.
 6. Attributes: align category, product group, required attributes, optional attributes, and custom attributes.
 7. Main images: define roles before generating or selecting images.
 8. Detail page: product proof first, company proof later.
 9. Inquiry conversion: add sample/MOQ/customization prompt.
 10. Final QA: ensure title, images, attributes, and detail modules do not contradict each other.
 
-## Title Formula
+## Title Starting Structure
+
+This is a `DEFAULT_HEURISTIC`, not a fixed formula. Reorder or replace it when current keyword evidence and buyer intent support a clearer title.
 
 ```text
 [B2B modifier] + [verified material/feature] + [closure/toe/sole] + [core product keyword] + [application/buyer use]
 ```
 
-Good terms:
+Possible terms when supported by the exact SKU and current keyword intent:
 
 - `Wholesale`
 - `Factory Direct`
@@ -56,27 +58,11 @@ Avoid:
 
 ## Main Image Roles
 
-Default order:
-
-1. Search hero: clean white/light background, product large and clear, minimal or no text.
-2. Core differentiator: wide toe box, breathable knit, winter lining, flexible sole, or product-specific advantage.
-3. Material/structure proof.
-4. Comfort/use scene.
-5. Color/variant overview.
-6. Buyer decision support: OEM/ODM, sample, packing, size reference, or factory proof if product images are already strong.
+M1 is normally a clean product-first search hero. Select the remaining roles only after listing the target buyer's unresolved questions. Available roles include additional angles, verified construction, color/size choice, supported use evidence, OEM/ODM scope, quote inputs, packing/order support and supplier proof. Each image must add distinct decision value; do not repeat a white-background shoe, color or factory scene merely to fill six slots.
 
 ## Detail Page Modules
 
-Default product-first flow:
-
-1. Product overview and application.
-2. Specs table.
-3. Size reference.
-4. Material and structure details.
-5. Function proof supported by photos or facts.
-6. Color/SKU overview.
-7. Order support: sample, MOQ discussion, packing, customization when true.
-8. Company/factory proof after product modules.
+Use a product-first flow, but combine and reorder modules around current buyer questions and platform limits. Cover product identity, verified choices/structure, procurement support and supplier trust without redundant sections. Company/factory proof follows enough product proof for the buyer to know what is being sourced.
 
 ## Output Template
 

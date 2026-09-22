@@ -87,6 +87,26 @@ Each image must perform a role:
 
 Reject a main image if it contains Chinese domestic copy, Taobao-style arrows, internal workflow notes, unsupported claims, wrong shoe/color/material, cropped text, oversized blank space, or repeated card-style filler.
 
+### Existing-link image optimization versus new-link expansion
+
+Do not confuse these two decisions:
+
+- **Optimize an existing link:** a real SKU color can be moved to M1 when it is more recognizable or attractive in search. Rebuild or reorder the complete six-image gallery so M2-M6 support the selected color, product structure, available variants and buyer decision. This is a legitimate click-through optimization even though the physical product is unchanged.
+- **Create another link:** a different color, M1, image order, title prefix, or generic audience phrase such as `OEM`, `wholesale`, `travel` or `online seller` is not enough. A sibling link must have a supported difference in product structure, closure, outsole, lining, size/gender segment, seasonal use or another concrete procurement need, plus page content that actually serves that need.
+
+Before publishing a sibling family, compare every candidate with the existing canonical link:
+
+1. Source model and factory article number.
+2. Shoe geometry and construction.
+3. SKU color/size matrix and commercial fields.
+4. M1 and M2-M6 image overlap.
+5. Product-detail image overlap.
+6. Whether the supposed buyer intent is supported by different product facts and decision content, rather than title wording alone.
+
+Treat `5/6 shared main images + all product-detail images shared` as a high-confidence presentation variant, not an independently developed product page. Prefer optimizing the strongest existing link or marking siblings for merge/pause review. A different M1 color may still be valuable on the canonical link.
+
+This distinction is based on the 2026-09-14 Beiqiang retrospective: 67 HR product families were each expanded to A/B/C links; every family shared M2-M6 and all four product-detail images across the three links. An earlier 53-family W/R/O campaign also used the same source article and facts for all three siblings. Use the evidence pattern, not the historical labels, when auditing future families.
+
 White-background main-image quality gate:
 
 - Treat the first image as a search-result ad, not just an upload slot. If the buyer would not click it beside cleaner competitors, improve it.

@@ -7,6 +7,10 @@ description: Plan, prepare, publish or repair Beiqiang Alibaba.com product listi
 
 Resolve business paths from the Beiqiang workspace root. Preserve the user's requested scope: a title correction does not require a complete listing package or a new competitor study.
 
+## Adaptive guidance
+
+Treat product/source truth, compliance, authorization and live verification as hard constraints. Treat image order, page modules, keyword patterns, copy structures and old operating habits as dated heuristics that can be replaced by stronger current evidence. When old guidance conflicts with current conditions, read [Adaptive Operations Learning](references/adaptive-operations-learning.md), classify the conflict, protect hard constraints, and update the narrowest reusable instruction instead of blindly preserving the old default.
+
 ## Non-negotiable evidence and execution
 
 - Match each SKU to its original product package. Unmatched expansion products remain `HOLD_SOURCE`; online listings, API readback and generated/competitor images do not prove physical existence, own-factory origin or supply. Record verified external sourcing truthfully; own-factory attribution requires explicit owner confirmation.
@@ -30,6 +34,7 @@ Resolve business paths from the Beiqiang workspace root. Preserve the user's req
 | Attribute, trade/logistics or customs wording | [Evidence-based fields](references/fields-customs-copy.md) |
 | Publishing/readback, detail types or propagation failure | [Live verification notes](references/live-publishing-gates.md) |
 | Changes after publication | [Post-publish optimization](references/post-publish-optimization.md) |
+| Current evidence conflicts with an old rule or template | [Adaptive operations learning](references/adaptive-operations-learning.md) |
 
 For a complete listing, identify the product role and buyer intent, check evidence and meaningful differentiation, prepare consistent copy/assets/attributes, then verify the authorized change. Competitor observations guide presentation; they never supply Beiqiang facts.
 

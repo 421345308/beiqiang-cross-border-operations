@@ -46,6 +46,25 @@ For every live item, block further publishing until these pass:
 
 Quality score alone cannot pass this gate.
 
+## 同货号多链接审计
+
+Do not count links as independent products merely because their titles, M1 colors or image order differ. Group the catalog first by verified factory article number and physical shoe structure, then compare sibling links on:
+
+- M1 color and composition.
+- Exact and near-duplicate overlap in M2-M6.
+- Product-detail image overlap.
+- SKU color/size matrix, attributes and commercial fields.
+- Whether each page answers a genuinely different procurement need with different evidenced content.
+
+Use these decisions:
+
+- `OPTIMIZE_CANONICAL`: retain the strongest existing link and improve its M1 color plus full six-image sequence.
+- `KEEP_DISTINCT`: retain siblings only when real product facts and page content support distinct buyer needs.
+- `MERGE_REVIEW`: same product facts with mainly title/color/image presentation differences; compare performance before consolidation.
+- `PAUSE_REVIEW`: redundant weak sibling with no independent traffic or conversion evidence.
+
+Flag `5/6 shared main images + all product-detail images shared` as high-confidence presentation-only expansion even when titles and keywords are unique. Do not automatically remove or hide products during an audit; provide the family evidence and recommended action first.
+
 ## 评分表
 
 Score each product out of 100:
