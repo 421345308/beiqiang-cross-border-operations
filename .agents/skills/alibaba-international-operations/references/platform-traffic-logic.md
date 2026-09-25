@@ -44,5 +44,4 @@ Before publishing or regenerating assets, check:
 
 ## When To Ask The User
 
-Ask before finalizing high-impact facts that affect business risk or buyer trust: price, MOQ, sample cost, lead time, stock, package weight/size, material, outsole, fleece/lining, customization ability, certificate, customer review, HS code, or claims that cannot be supported by source evidence.
-
+Ask only when a high-impact fact lacks both current SKU evidence and an existing owner-approved baseline: price, MOQ, sample cost, lead time, package weight/size, material, outsole, fleece/lining, customization ability, certificate, customer review, HS code, or other unsupported buyer-facing claims. For the authorized HR replacement workflow, do not pause over exact supplier stock or repeatedly ask about the backend quantity: once a procurable real or similar shoe is mapped and the live page/SKUs match it, use `999` on each valid SKU as the owner's availability convention, not a physical-stock claim. Recheck actual supply for each order.

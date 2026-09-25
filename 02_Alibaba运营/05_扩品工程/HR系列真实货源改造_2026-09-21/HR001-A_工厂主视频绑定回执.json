@@ -1,0 +1,39 @@
+{
+  "product_id": 1601943321794,
+  "encrypted_product_id": "AAH2jmk4AOWGex-cDVm7xTsh",
+  "video_id": "6000342456358",
+  "gates": {
+    "product_approved_online": true,
+    "model_ok": true,
+    "encrypted_id_available": true,
+    "not_already_bound": true,
+    "capacity_available": true
+  },
+  "before_relation_count": 19,
+  "after_relation_count": 20,
+  "product_refs": {
+    "request_id": "212c6fc617900495171217048",
+    "trace_id": "2101dbd017900495168168210e0e13",
+    "error": null,
+    "biz_success": null
+  },
+  "before_relation_refs": {
+    "request_id": "0bbb3b2417900495232398407",
+    "trace_id": "2101fb9317900495228674290e1077",
+    "error": null,
+    "biz_success": null
+  },
+  "bind_refs": {
+    "request_id": "213fc94c17900495292963576",
+    "trace_id": "2101d14517900495289862486e0dcf",
+    "error": null,
+    "biz_success": null
+  },
+  "after_relation_refs": {
+    "request_id": "213c934417900495354167202",
+    "trace_id": "2101d13c17900495350978827e0c68",
+    "error": null,
+    "biz_success": null
+  },
+  "verified": true
+}

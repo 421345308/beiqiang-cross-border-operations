@@ -1,0 +1,91 @@
+{
+  "mode": "read-only",
+  "expect": "approved",
+  "captured_at_utc": "2026-09-22T08:07:08.378754+00:00",
+  "product_id": 1601943493004,
+  "snapshot": {
+    "status": "approved",
+    "display": "Y",
+    "url": "https://www.alibaba.com/product-detail/Men-s-Knit-Slip-On-Walking_1601943493004.html",
+    "title": "Men's Knit Slip-On Walking Shoes EVA Sole Autumn Cushioning Regular Fit EU 38-47 Wholesale OEM Supplier Model 9002",
+    "model": "HR001-B / 9002",
+    "fit_type": "Regular Fit",
+    "closure": "Slip-On",
+    "outsole": "EVA",
+    "colors": [
+      "Light Gray / Beige Sole",
+      "Dark Gray / Black Sole"
+    ],
+    "sizes": [
+      "38",
+      "39",
+      "42",
+      "43",
+      "40",
+      "41",
+      "46",
+      "47",
+      "44",
+      "45"
+    ],
+    "sku_count": 20,
+    "prices": [
+      10.9,
+      11.5,
+      11.9
+    ],
+    "main_tokens": [
+      "H7ab7666eca414497b3a4376ead8f5612X",
+      "H32d8f07fa67247e8858522985d27e2857",
+      "H70708fed544744a0be4c413e9fd3928bA",
+      "H2d5013a4ef0b4166980df7cf56df9e36b",
+      "Ha0a575f462224e59af7bdcebce519ca19",
+      "H525aafc0bef84c20b2254c5cd02afc075"
+    ],
+    "detail_tokens": [
+      "A5fcde3e399ee44fca0f1492d7a27c5a6X",
+      "Ae2d54b8df0004519a9a5412580c2ac84b",
+      "A98808cf8bb864dfd999b11979679b2cf5",
+      "A3c4d7d35cc4e4739b94dba964fc57568v"
+    ],
+    "company_count": 5,
+    "main_video_id": "6000344840202"
+  },
+  "expected_detail_tokens": [
+    "H01ae8a622bd246a38cb229c42c6de347Q",
+    "H0f9911f7f4c741498cc5136d726f4ea1Y",
+    "H73087b896040408e8c8273c992601d50Q",
+    "H7c844f80d25b4b9f97e1bffedad8eb1cI",
+    "Hc4d8cf746fae4b009a8af40cd8ca59ebE"
+  ],
+  "checks": {
+    "expected_state_ok": true,
+    "title_ok": false,
+    "model_ok": true,
+    "closure_ok": true,
+    "outsole_ok": true,
+    "colors_ok": true,
+    "sizes_ok": true,
+    "sku_count_ok": true,
+    "prices_ok": true,
+    "main_images_ok": true,
+    "company_images_ok": true,
+    "fit_type_removed": false,
+    "detail_images_ok": false,
+    "main_video_ok": true
+  },
+  "pending_checks": {},
+  "all_checks_pass": false,
+  "get_refs": {
+    "request_id": "213c934417900644199667411",
+    "trace_id": "2101d94717900644196585838e0e2f",
+    "error": null,
+    "biz_success": null
+  },
+  "render_refs": {
+    "request_id": "212cbf3217900644263311071",
+    "trace_id": "2101fb9317900644259832622e0f2d",
+    "error": null,
+    "biz_success": true
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "listing": "HR001-B",
+  "source_model": "9002",
+  "product_id": 1601943493004,
+  "checked_at": "2026-09-23T17:22:02.242730+08:00",
+  "mode": "dry_run",
+  "product_request_id": "21501b8d17901553155883313",
+  "inventory_before_request_id": "2166c2ca17901553217121718",
+  "sku_count": 20,
+  "before_values": [
+    0
+  ],
+  "planned_changes": 20,
+  "marker_semantics": "999 is a seller-side availability marker, not actual on-hand inventory",
+  "passed": true
+}

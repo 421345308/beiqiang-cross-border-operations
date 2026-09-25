@@ -1,0 +1,110 @@
+{
+  "mode": "read-only",
+  "expect": "approved",
+  "captured_at_utc": "2026-09-22T23:54:27.226588+00:00",
+  "product_id": 1601943305914,
+  "status": "approved",
+  "display": "Y",
+  "url": "https://www.alibaba.com/product-detail/Wholesale-Men-s-Retro-Mesh-Lace_1601943305914.html",
+  "attributes": {
+    "Fit Type": "Regular Fit",
+    "Style": "Walking Shoes",
+    "Closure Type": "Lace-up",
+    "Toe Style": "Round Toe",
+    "Place of Origin": "CN",
+    "Model Number": "HR002-A / S6077"
+  },
+  "colors": [
+    "Black",
+    "White"
+  ],
+  "sizes": [
+    "39",
+    "40",
+    "41",
+    "42",
+    "43",
+    "44",
+    "45",
+    "46",
+    "47",
+    "48"
+  ],
+  "sku_count": 20,
+  "prices": [
+    9.1,
+    9.2,
+    9.5
+  ],
+  "main_tokens": [
+    "He96ec2157a484f52989aba375d17a3d7B",
+    "He33e5d7f3e7c43adaba0a8b66f28f3a7H",
+    "H665a0aee114a4b188afa49444fc596f6k",
+    "He4db0fee00e344289196e4d21f6fb49fD",
+    "Hfc58026c4f6c4adb8f3483980194a0e4A",
+    "H203a5a3c1bad4e179895bf65048ec198v"
+  ],
+  "detail_tokens": [
+    "A4384785bae844910ab14c01618aeb12bH",
+    "A5b326ec3809049dbac7b453afb31f2dcv",
+    "A95e9a3736c774284b812a903d7ca96a6U",
+    "Ae60ed23392b44344a0136fb1f1a0a7dbr"
+  ],
+  "package_measure_values": [
+    "23",
+    "34",
+    "13"
+  ],
+  "package_weight_values": [
+    "0.5"
+  ],
+  "lead_time_values": [
+    "100",
+    "31"
+  ],
+  "custom_property_values": [
+    "Regular Fit",
+    "Fit Type"
+  ],
+  "checks": {
+    "expected_state_ok": true,
+    "title_ok": true,
+    "model_ok": true,
+    "closure_ok": true,
+    "round_toe_ok": true,
+    "walking_style_ok": true,
+    "colors_ok": true,
+    "sizes_ok": true,
+    "sku_count_ok": true,
+    "inventory_999_absent": true,
+    "prices_ok": true,
+    "main_images_ok": true,
+    "schema_available": true,
+    "product_desc_type_structured": true,
+    "structured_detail_images_ok": false,
+    "structured_detail_all_sc04": true,
+    "company_images_5": true,
+    "video_ok": true,
+    "legacy_system_attributes_removed": true,
+    "package_dimensions_preserved_34x23x13_cm": true,
+    "package_weight_preserved_0_5_kg": true,
+    "structured_lead_time_preserved_100_31": true
+  },
+  "pending_or_failed_cleanup": {
+    "fit_type_removed": false,
+    "custom_properties_cleared": false
+  },
+  "all_checks_pass": false,
+  "get_refs": {
+    "request_id": "21501be117901212592566990",
+    "trace_id": "2101d14517901212589022925e0f70",
+    "error": null,
+    "biz_success": null
+  },
+  "render_refs": {
+    "request_id": "213c932b17901212654208302",
+    "trace_id": "2101fca817901212650766108e0e3c",
+    "error": null,
+    "biz_success": true
+  }
+}

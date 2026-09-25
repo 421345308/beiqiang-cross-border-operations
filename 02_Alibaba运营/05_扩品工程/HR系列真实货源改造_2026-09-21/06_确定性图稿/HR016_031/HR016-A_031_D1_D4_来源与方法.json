@@ -1,0 +1,67 @@
+{
+  "checked_at": "2026-09-24T05:44:25.944276+08:00",
+  "status": "LOCAL_CANDIDATES_ONLY_NOT_UPLOADED",
+  "model": "HR016-A / supplier 031",
+  "items": [
+    {
+      "output": "02_Alibaba运营\\05_扩品工程\\HR系列真实货源改造_2026-09-21\\06_确定性图稿\\HR016_031\\HR016-A_031_D1_overview.png",
+      "output_sha256": "2f0ccd497adead1bfab35f13b67f1ee4aa11f5a6cddd4bf17ca65498384e69d0",
+      "output_bytes": 616263,
+      "source_photos": [
+        {
+          "path": "99_临时区\\HR016_031_公开货源图_2026-09-24\\01_土黄_白底_来源图.jpg",
+          "sha256": "f0ed1eda0c0ef06383e9531c5653e661c2ac0308ec34d64c366d5f093c365d28"
+        }
+      ],
+      "purpose": "product identity and orderable range",
+      "method": "deterministic uniform scale and English graphic layout; shoe geometry not redrawn"
+    },
+    {
+      "output": "02_Alibaba运营\\05_扩品工程\\HR系列真实货源改造_2026-09-21\\06_确定性图稿\\HR016_031\\HR016-A_031_D2_materials.png",
+      "output_sha256": "ad2a97a19be7daeaaacee1adbf506b8f037d7342ac8d5779ada5a12f1fdc43a9",
+      "output_bytes": 355132,
+      "source_photos": [
+        {
+          "path": "99_临时区\\HR016_031_公开货源图_2026-09-24\\03_卡其_白底_来源图.jpg",
+          "sha256": "824d22ca3eca799ef7b6a624311533ea5d59126aa90e743f601273796eb4de1b"
+        }
+      ],
+      "purpose": "four sourcing-page material layers",
+      "method": "deterministic uniform scale and English graphic layout; shoe geometry not redrawn"
+    },
+    {
+      "output": "02_Alibaba运营\\05_扩品工程\\HR系列真实货源改造_2026-09-21\\06_确定性图稿\\HR016_031\\HR016-A_031_D3_colors_sizes.png",
+      "output_sha256": "943f0d49f7d509ffaf722d8300d86526aa58a9a37dc968bcbaefa3b730859602",
+      "output_bytes": 339332,
+      "source_photos": [
+        {
+          "path": "99_临时区\\HR016_031_公开货源图_2026-09-24\\02_黑色_白底_来源图.jpg",
+          "sha256": "53baa58fb1feb2b84f8d7233e62a4030861e2f9a454d874d5da69e012257dff7"
+        },
+        {
+          "path": "99_临时区\\HR016_031_公开货源图_2026-09-24\\03_卡其_白底_来源图.jpg",
+          "sha256": "824d22ca3eca799ef7b6a624311533ea5d59126aa90e743f601273796eb4de1b"
+        },
+        {
+          "path": "99_临时区\\HR016_031_公开货源图_2026-09-24\\01_土黄_白底_来源图.jpg",
+          "sha256": "f0ed1eda0c0ef06383e9531c5653e661c2ac0308ec34d64c366d5f093c365d28"
+        }
+      ],
+      "purpose": "three actual colors and ten EU labels",
+      "method": "deterministic uniform scale and English graphic layout; shoe geometry not redrawn"
+    },
+    {
+      "output": "02_Alibaba运营\\05_扩品工程\\HR系列真实货源改造_2026-09-21\\06_确定性图稿\\HR016_031\\HR016-A_031_D4_order_brief.png",
+      "output_sha256": "5fc7742cef3c6f73f98c6ff2b63618bb619841a77fde9139a6ff3ab9af863b5c",
+      "output_bytes": 800336,
+      "source_photos": [
+        {
+          "path": "99_临时区\\HR016_031_公开货源图_2026-09-24\\06_穿着图_来源.jpg",
+          "sha256": "34b1e6a2d5d6d898482b726ef139cb13d96fd94bd945037a7f681720989a7a99"
+        }
+      ],
+      "purpose": "B2B quote inputs without stock/lead-time promise",
+      "method": "deterministic uniform scale and English graphic layout; shoe geometry not redrawn"
+    }
+  ]
+}

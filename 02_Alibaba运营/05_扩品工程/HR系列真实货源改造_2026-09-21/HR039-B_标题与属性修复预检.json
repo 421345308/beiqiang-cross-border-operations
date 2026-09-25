@@ -1,0 +1,35 @@
+{
+  "mode": "preflight_only_no_platform_write",
+  "product_id": 1601943670292,
+  "target_changes": {
+    "productTitle": "resubmit unchanged target title to trigger public propagation",
+    "Pattern Type": {
+      "from": "Quilted",
+      "to": "Solid",
+      "value_id": 1954510751
+    },
+    "customMoreProperty.Fit Type": "delete"
+  },
+  "title": "Men's High Top Knit Slip-On Walking Shoes EVA Sole EU 35-45 Wholesale OEM for Daily Wear",
+  "removed_custom_value_nodes": 1,
+  "sku_count": 22,
+  "sku_unique": true,
+  "main_image_count": 6,
+  "detail_image_url_count": 5,
+  "company_image_url_count": 5,
+  "main_video_id": "6000342456358",
+  "xml_chars": 116312,
+  "xml_sha256": "342911ca40de396cd77389dcdecbd20f746a440a55fccd1eebbbe8fce63c86e2",
+  "render_request_id": "212c6fc617900405116425512",
+  "render_trace_id": "2101fca817900405113035262e0d92",
+  "gates": {
+    "title_exact": true,
+    "pattern_system_value": true,
+    "custom_value_removed": true,
+    "sku_22_unique": true,
+    "main_6": true,
+    "detail_at_least_4": true,
+    "company_5": true,
+    "no_platform_write": true
+  }
+}

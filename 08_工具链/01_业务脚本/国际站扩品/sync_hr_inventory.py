@@ -1,9 +1,10 @@
-"""Synchronize HR001-HR008 SKU inventory to the verified store baseline.
+"""Retired historical blanket HR inventory script; kept for receipt provenance.
 
-The Schema publish endpoint currently drops submitted skuStock values to zero.
-This script uses Alibaba's dedicated inventory API, calculates a delta from the
-live value, applies only the required plus/sub operation, and verifies the
-result.  It is therefore safe to rerun.
+The owner now uses 999 as a seller-side availability marker, not physical stock.
+That rule applies only after a real procurable shoe, listing images, and live SKU
+identity match. This old script blindly targets eight historical product IDs and
+assumes 30 SKUs each, so it must never be run against the live store. Use a
+product-specific source/identity check, then set valid SKUs to 999 and read back.
 """
 from __future__ import annotations
 
@@ -69,6 +70,10 @@ def rows(response):
 
 
 def main():
+    raise SystemExit(
+        "RETIRED: this historical batch script cannot verify the source, listing "
+        "identity or current SKU set. Use a product-specific 999 marker update."
+    )
     parser = argparse.ArgumentParser()
     parser.add_argument("--variant", choices=["A", "B", "C"], default="A")
     args = parser.parse_args()

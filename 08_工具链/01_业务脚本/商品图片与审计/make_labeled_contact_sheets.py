@@ -30,11 +30,18 @@ def main() -> int:
     parser.add_argument("--thumb", type=int, default=320)
     args = parser.parse_args()
 
-    extensions = {".jpg", ".jpeg", ".png", ".webp", ".bmp"}
-    paths = sorted(
-        (p for p in args.input_dir.iterdir() if p.is_file() and p.suffix.lower() in extensions),
-        key=lambda p: p.name.lower(),
-    )
+    candidates = sorted((p for p in args.input_dir.iterdir() if p.is_file()), key=lambda p: p.name.lower())
+    paths: list[Path] = []
+    for path in candidates:
+        # Marketplace CDNs often append transform suffixes such as ``!small`` or
+        # ``!firstwebp`` after the real extension.  Inspect file content so those
+        # images are not silently omitted from a review sheet.
+        try:
+            with Image.open(path) as src:
+                src.verify()
+            paths.append(path)
+        except (OSError, SyntaxError):
+            continue
     if not paths:
         raise SystemExit(f"No supported images in {args.input_dir}")
 

@@ -1,0 +1,26 @@
+{
+  "timestamp_utc": "2026-09-24T01:53:08.060114+00:00",
+  "mode": "apply",
+  "product_id": 1601943305914,
+  "source_model": "2618",
+  "formal_request_id": "0b0b3a2717902147809285424",
+  "status": "approved",
+  "display": "Y",
+  "before_request_id": "0b51802d17902147875931771",
+  "sku_count": 30,
+  "before_values": [
+    0
+  ],
+  "planned_changes": 30,
+  "semantics": "999 is an inquiry marker, not actual physical stock",
+  "update_request_id": "21501b8d17902147939133976",
+  "update_result": {
+    "success": true,
+    "data": "true"
+  },
+  "after_request_id": "213c932b17902148011642964",
+  "after_values": [
+    999
+  ],
+  "passed": true
+}

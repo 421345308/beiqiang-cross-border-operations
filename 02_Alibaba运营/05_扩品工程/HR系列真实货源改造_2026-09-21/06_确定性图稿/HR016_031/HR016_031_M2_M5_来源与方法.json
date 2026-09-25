@@ -1,0 +1,63 @@
+{
+  "checked_at": "2026-09-24T05:40:16.516382+08:00",
+  "status": "LOCAL_CANDIDATES_ONLY_NOT_UPLOADED",
+  "source_product": "Sooxie Luqi 031",
+  "items": [
+    {
+      "output": "02_Alibaba运营\\05_扩品工程\\HR系列真实货源改造_2026-09-21\\06_确定性图稿\\HR016_031\\HR016_031_M2_colors.png",
+      "output_sha256": "82e91be613b1226d146450a0f90bf1c8c9f39a4242d1ff1fa40a00b65fd6f003",
+      "output_bytes": 257446,
+      "sources": [
+        {
+          "path": "99_临时区\\HR016_031_公开货源图_2026-09-24\\02_黑色_白底_来源图.jpg",
+          "sha256": "53baa58fb1feb2b84f8d7233e62a4030861e2f9a454d874d5da69e012257dff7"
+        },
+        {
+          "path": "99_临时区\\HR016_031_公开货源图_2026-09-24\\03_卡其_白底_来源图.jpg",
+          "sha256": "824d22ca3eca799ef7b6a624311533ea5d59126aa90e743f601273796eb4de1b"
+        },
+        {
+          "path": "99_临时区\\HR016_031_公开货源图_2026-09-24\\01_土黄_白底_来源图.jpg",
+          "sha256": "f0ed1eda0c0ef06383e9531c5653e661c2ac0308ec34d64c366d5f093c365d28"
+        }
+      ],
+      "method": "exact source photos; uniform scale and English layout; no generated shoe"
+    },
+    {
+      "output": "02_Alibaba运营\\05_扩品工程\\HR系列真实货源改造_2026-09-21\\06_确定性图稿\\HR016_031\\HR016_031_M3_construction.png",
+      "output_sha256": "4b3f3255ab491a3f630d8024a40eb36cc7e2b8d49983bb969b4efa2bfb2bca10",
+      "output_bytes": 1494104,
+      "sources": [
+        {
+          "path": "99_临时区\\HR016_031_公开货源图_2026-09-24\\04_展示图_来源.jpg",
+          "sha256": "f7b618f230000e5d251807cbe692cffe563b330db22c79d9892f5a186a3de53a"
+        }
+      ],
+      "method": "original 800x800 photo pasted without resampling; English labels outside photo"
+    },
+    {
+      "output": "02_Alibaba运营\\05_扩品工程\\HR系列真实货源改造_2026-09-21\\06_确定性图稿\\HR016_031\\HR016_031_M4_black_wear.png",
+      "output_sha256": "67d69c0240c37c6d33454f4c6f4f53b6863ffc1349a11f49a1ef8077f074ada8",
+      "output_bytes": 1380802,
+      "sources": [
+        {
+          "path": "99_临时区\\HR016_031_公开货源图_2026-09-24\\05_展示图_来源.jpg",
+          "sha256": "28057257b8b1f8a39dcea731c1a7702e595625dfb1c91b8e2fe205bdf6c4fcb1"
+        }
+      ],
+      "method": "original 800x800 photo pasted without resampling; English labels outside photo"
+    },
+    {
+      "output": "02_Alibaba运营\\05_扩品工程\\HR系列真实货源改造_2026-09-21\\06_确定性图稿\\HR016_031\\HR016_031_M5_company_context.png",
+      "output_sha256": "c28e5a391271118a6b8eeb5d43c449371a2dee23638e7f76db1fafa56d1a4345",
+      "output_bytes": 721741,
+      "sources": [
+        {
+          "path": "02_Alibaba运营\\06_图片与检查记录\\公司图复用模板_v4_2026-09-21\\C4_real_quality_checkpoints.jpg",
+          "sha256": "8171fc953364b7204bb932b3cfe9465bd8acfaa2f6e6c7691c1ed055fe132de1"
+        }
+      ],
+      "method": "real Beiqiang company photo collage with explicit sourced-shoe distinction"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "product_id": 1601943583746,
+  "action": "seller_console_delete_custom_property_and_submit",
+  "deleted_property": {
+    "name": "Fit Type",
+    "value": "Regular Fit"
+  },
+  "ui_evidence": {
+    "edit_url": "https://post.alibaba.com/product/publish.htm?itemId=1601943583746",
+    "before_inputs": ["Fit Type", "Regular Fit"],
+    "after_inputs": [],
+    "submitted": true
+  },
+  "openapi_readback": {
+    "request_id": "0b51802d17900442044372564",
+    "trace_id": "2101fca817900442040932873e10a8",
+    "error": null,
+    "status": "modified",
+    "display": "N",
+    "model": "HR039-C / 8025",
+    "fit_type": null,
+    "title": "Unisex High Top Knit Sock Sneakers Slip-On EVA Sole EU 35-45 Wholesale OEM Casual Shoes",
+    "pattern": "Solid",
+    "sku_count": 22,
+    "main_images": 6,
+    "detail_images": 5,
+    "company_images": 5
+  },
+  "final_openapi": {
+    "request_id": "0bab02fe17900443463083691",
+    "trace_id": "2101dd0617900443459871855e0d08",
+    "status": "approved",
+    "display": "Y",
+    "model": "HR039-C / 8025",
+    "fit_type": null,
+    "pattern": "Solid"
+  },
+  "public_qa": {
+    "url": "https://www.alibaba.com/product-detail/Unisex-High-Top-Knit-Sock-Sneakers_1601943583746.html",
+    "target_title_live": true,
+    "old_burgundy_quilted_title_absent": true,
+    "fit_type_absent": true,
+    "solid_live": true,
+    "model_live": true,
+    "colors_live": ["Black/White", "All Black"],
+    "sizes_live": "EU 35-45",
+    "prices_live_usd": ["12.90", "12.50", "12.00"]
+  },
+  "state": "PUBLIC_QA_PASS"
+}

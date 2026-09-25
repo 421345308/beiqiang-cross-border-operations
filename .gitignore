@@ -15,6 +15,10 @@
 # Nested standalone repositories / active third-party applications
 /03_独立站/03_网站源码/
 /08_工具链/02_视频工具/opencut-classic/
+# awesome-seedance: third-party prompt library, synced upstream daily.
+# Kept local as a workspace-level video capability; only the project index and
+# scenario constraints are tracked (see 07_知识库与Skills/04_AI视频知识体系/).
+/08_工具链/02_视频工具/awesome-seedance/
 
 # Runtime, dependency and temporary data
 /node_modules/
@@ -40,6 +44,7 @@
 # Heavy binary deliverables stay local and are represented by text indexes
 *.png
 *.jpg
+*.jpg!bac
 *.jpeg
 *.webp
 *.gif
@@ -75,6 +80,9 @@
 *.xlsx
 *.xls
 *.pptx
+
+# Extensionless source images downloaded for the HR012 evidence package
+/02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR012_DL20_原始证据_2026-09-23/[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]
 
 # Local secrets and OS metadata
 .env

@@ -1,0 +1,25 @@
+{
+  "checked_at": "2026-09-24T01:27:45.585287+08:00",
+  "product_id": 1601943321794,
+  "source_model": "9002",
+  "source_url": "https://bqgcd.sooxie.com/detail/2536154",
+  "mode": "apply",
+  "product_request_id": "21501b6717901844576835410",
+  "inventory_before_request_id": "213c934417901844648461101",
+  "sku_count": 20,
+  "before_values": [
+    0
+  ],
+  "planned_changes": 20,
+  "marker_semantics": "999 means seller-side availability, not physical on-hand inventory",
+  "update_request_id": "21546a1d17901844715034557",
+  "update_trace_id": "2101fca817901844711841355e1066",
+  "update_business_success": true,
+  "update_business_data": "true",
+  "inventory_after_request_id": "0b51802d17901844783464737",
+  "after_count": 20,
+  "after_values": [
+    999
+  ],
+  "passed": true
+}

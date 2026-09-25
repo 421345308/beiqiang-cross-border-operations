@@ -28,3 +28,13 @@
 - 检查前 2 秒、后 2 秒、所有切点和各段中点。
 - 检查无黑帧、无截断字幕、无横竖比变形、无第三方品牌。
 - 上传后通过 API 回读视频 ID，并逐款核对商品绑定。
+
+## Session 2 — 2026-09-25
+
+**Strategy:** Re-scan the retained 42-second factory overview and assess whether it can be described as a general company video or as evidence for a particular HR product.
+
+**Decisions:** Reviewed the 20-frame full-video contact sheet and original-resolution frames at 0.05, 8.87, 11.08, 15.49, 26.51, 37.54, and 41.95 seconds. Classified the file as generic factory footage; no identifiable HR model appears.
+
+**Reasoning log:** The clip shows the Beiqiang building and general workshop operations, plus several unidentified shoes and sole components. It can represent general factory scenes but cannot prove an external-source product was manufactured by Beiqiang or establish product-specific materials or performance.
+
+**Outstanding:** Product-page association remains subject to each listing’s source identity and public-page context. The review record is in the HR remodel project.

@@ -7,7 +7,7 @@
 | 身份 | 公司定位、市场和买家 | [公司与业务方向](identity/organization/company-profile.md) |
 | L1 | 对外事实、货源、宽楦、技术能力声明 | [事实与承诺底线](principles/behavioral-rules/evidence-and-claims-guardrail.md) |
 | L1 | 视频生成扣点、云 GPU 计费 | [付费生成授权](principles/behavioral-rules/ai-video-paid-generation-confirmation.md) |
-| L3 | 主动协作、交付、跨 AI 讨论、记忆维护 | [协作与记忆控制](preferences/collaboration/ai-collaboration-and-memory-control.md) |
+| L3 | 主动协作、交付、跨 AI 讨论、记忆维护、搜鞋网只读访问授权 | [协作与记忆控制](preferences/collaboration/ai-collaboration-and-memory-control.md) |
 | L3 | 通用 AI 视频选择工具 | [LibTV 与 Seedance 偏好](preferences/collaboration/ai-video-tool-routing.md) |
 | L3 | 视频方案、选镜、剪辑与成片复盘 | [导演判断偏好](preferences/collaboration/video-direction-and-editing-judgment.md) |
 | L3 | 同款多个采购意图链接的图文差异 | [多链接视觉偏好](preferences/deliverables/alibaba-multilink-image-and-title-preferences.md) |

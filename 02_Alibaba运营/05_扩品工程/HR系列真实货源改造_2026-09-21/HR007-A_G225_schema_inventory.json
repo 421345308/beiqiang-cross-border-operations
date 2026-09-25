@@ -1,0 +1,296 @@
+{
+  "mode": "read-only",
+  "target_family": "HR007 / G225 candidate",
+  "product_id": 1601943463020,
+  "product_get_request_id": "0bab02fc17900834504681740",
+  "render_request_id": "21546a1d17900834619093009",
+  "status": "approved",
+  "display": "Y",
+  "title": "OEM Synthetic Suede Platform Walking Shoes Lace-Up Thick Sole Casual Sneakers EVA Midsole Rubber Outsole All Seasons EU 36-45",
+  "attributes": [
+    {
+      "attribute_id": -1,
+      "attribute_name": "Fit Type",
+      "value_id": -1,
+      "value_name": "Regular Fit"
+    },
+    {
+      "attribute_id": 20700,
+      "attribute_name": "Midsole Material",
+      "value_id": 3376399,
+      "value_name": "EVA"
+    },
+    {
+      "attribute_id": 191288212,
+      "attribute_name": "Season",
+      "value_id": 27034893,
+      "value_name": "All Seasons"
+    },
+    {
+      "attribute_id": 191288243,
+      "attribute_name": "Style",
+      "value_id": 19077592,
+      "value_name": "Walking Shoes"
+    },
+    {
+      "attribute_id": 191290426,
+      "attribute_name": "Outsole Material",
+      "value_id": 3338114,
+      "value_name": "Rubber"
+    },
+    {
+      "attribute_id": 200000388,
+      "attribute_name": "Closure Type",
+      "value_id": 80806811,
+      "value_name": "Lace-up"
+    },
+    {
+      "attribute_id": 200000486,
+      "attribute_name": "Toe Style",
+      "value_id": 556500746,
+      "value_name": "Round Toe"
+    },
+    {
+      "attribute_id": 1,
+      "attribute_name": "Place of Origin",
+      "value_id": -1,
+      "value_name": "CN"
+    },
+    {
+      "attribute_id": 3,
+      "attribute_name": "Model Number",
+      "value_id": -1,
+      "value_name": "HR007"
+    },
+    {
+      "attribute_id": 191290430,
+      "attribute_name": "Lining Material",
+      "value_id": -1,
+      "value_name": "Textile"
+    }
+  ],
+  "sku_count": 0,
+  "sale_options": {
+    "Color": [
+      {
+        "display": "Black",
+        "value": "3327837"
+      },
+      {
+        "display": "Yellow",
+        "value": "3354417"
+      },
+      {
+        "display": "Grey",
+        "value": "3483425"
+      }
+    ],
+    "EUR Size": [
+      {
+        "display": "39",
+        "value": "190000792"
+      },
+      {
+        "display": "40",
+        "value": "28389"
+      },
+      {
+        "display": "41",
+        "value": "28390"
+      },
+      {
+        "display": "42",
+        "value": "28391"
+      },
+      {
+        "display": "43",
+        "value": "28392"
+      },
+      {
+        "display": "44",
+        "value": "28393"
+      }
+    ]
+  },
+  "schema_attribute_fields": [
+    {
+      "id": "p-200000388",
+      "name": "Closure Type",
+      "type": "singleCheck",
+      "current": [
+        {
+          "text": "80806811",
+          "inputValue": "Lace-up",
+          "displayName": null
+        }
+      ],
+      "matching_options": []
+    },
+    {
+      "id": "p-191290430",
+      "name": "Lining Material",
+      "type": "multiCheck",
+      "current": [
+        {
+          "text": "-3",
+          "inputValue": "Textile",
+          "displayName": null
+        }
+      ],
+      "matching_options": []
+    },
+    {
+      "id": "p-1",
+      "name": "Place of Origin",
+      "type": "singleCheck",
+      "current": [
+        {
+          "text": "100000458",
+          "inputValue": "China",
+          "displayName": null
+        }
+      ],
+      "matching_options": []
+    },
+    {
+      "id": "p-3",
+      "name": "Model Number",
+      "type": "input",
+      "current": [
+        {
+          "text": "-2",
+          "inputValue": "HR007",
+          "displayName": null
+        }
+      ],
+      "matching_options": []
+    },
+    {
+      "id": "p-20700",
+      "name": "Midsole Material",
+      "type": "multiCheck",
+      "current": [
+        {
+          "text": "3376399",
+          "inputValue": "EVA",
+          "displayName": null
+        }
+      ],
+      "matching_options": []
+    },
+    {
+      "id": "p-191288212",
+      "name": "Season",
+      "type": "multiCheck",
+      "current": [
+        {
+          "text": "27034893",
+          "inputValue": "All Seasons",
+          "displayName": null
+        }
+      ],
+      "matching_options": []
+    },
+    {
+      "id": "p-191290426",
+      "name": "Outsole Material",
+      "type": "multiCheck",
+      "current": [
+        {
+          "text": "3338114",
+          "inputValue": "Rubber",
+          "displayName": null
+        }
+      ],
+      "matching_options": []
+    },
+    {
+      "id": "p-200000486",
+      "name": "Toe Style",
+      "type": "multiCheck",
+      "current": [
+        {
+          "text": "556500746",
+          "inputValue": "Round Toe",
+          "displayName": null
+        }
+      ],
+      "matching_options": []
+    },
+    {
+      "id": "p-191288243",
+      "name": "Style",
+      "type": "multiCheck",
+      "current": [
+        {
+          "text": "19077592",
+          "inputValue": "Walking Shoes",
+          "displayName": null
+        }
+      ],
+      "matching_options": []
+    }
+  ],
+  "schema_values": {
+    "productDescType": "<field id=\"productDescType\" name=\"Product description\" type=\"singleCheck\"><value>4</value><options><option displayName=\"智能编辑\" value=\"1\" /><option displayName=\"普通编辑\" value=\"2\" /></options></field>",
+    "pkgMeasure": "<field id=\"pkgMeasure\" name=\"Dimensions\" type=\"complex\"><complex-value><field id=\"width\" type=\"input\"><value>23</value></field><field id=\"length\" type=\"input\"><value>34</value></field><field id=\"height\" type=\"input\"><value>13</value></field></complex-value><fields><field id=\"length\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"double\" /><rule name=\"requiredRule\" value=\"false\" /></rules></field><field id=\"width\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"double\" /><rule name=\"requiredRule\" value=\"false\" /></rules></field><field id=\"height\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"double\" /><rule name=\"requiredRule\" value=\"false\" /></rules></field></fields></field>",
+    "pkgWeight": "<field id=\"pkgWeight\" name=\"Volume and weight (including logistics packaging)\" type=\"input\"><rules><rule name=\"tipRule\" value=\"If the transaction information is set to sell by piece, fill in the volume and weight of each item (including logistics packaging). br/&gt; If the transaction information is set to sell by batch, fill in the overall volume and weight of each batch of goods (including logistics packaging)&lt;br/&gt; Please accurately fill in the product weight and size information (including logistics packaging), fill in the inaccurate will lead to freight differences.\" /><rule name=\"valueTypeRule\" value=\"double\" /></rules><value>0.5</value></field>",
+    "ladderPeriod": "<field id=\"ladderPeriod\" name=\"Shipping\" type=\"complex\"><rules><rule name=\"minInputNumRule\" value=\"1\" exProperty=\"include\" /><rule name=\"maxInputNumRule\" value=\"3\" exProperty=\"include\" /></rules><complex-value><field id=\"ladderPeriod_0\" type=\"complex\"><complex-value><field id=\"quantity\" type=\"input\"><value>100</value></field><field id=\"day\" type=\"input\"><value>31</value></field></complex-value></field></complex-value><fields><field id=\"ladderPeriod_0\" type=\"complex\"><fields><field id=\"quantity\" name=\"Quantity\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"long\" /><rule name=\"requiredRule\" value=\"false\" /><rule name=\"maxInputNumRule\" value=\"999999999\" exProperty=\"include\" /><rule name=\"minInputNumRule\" value=\"1\" exProperty=\"include\" /></rules></field><field id=\"day\" name=\"Estimated lead time\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"long\" /><rule name=\"requiredRule\" value=\"false\" /><rule name=\"maxInputNumRule\" value=\"999999999\" exProperty=\"include\" /><rule name=\"minInputNumRule\" value=\"1\" exProperty=\"include\" /></rules></field></fields></field><field id=\"ladderPeriod_1\" type=\"complex\"><fields><field id=\"quantity\" name=\"Quantity\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"long\" /><rule name=\"requiredRule\" value=\"false\" /><rule name=\"maxInputNumRule\" value=\"999999999\" exProperty=\"include\" /><rule name=\"minInputNumRule\" value=\"1\" exProperty=\"include\" /></rules></field><field id=\"day\" name=\"Estimated lead time\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"long\" /><rule name=\"requiredRule\" value=\"false\" /><rule name=\"maxInputNumRule\" value=\"999999999\" exProperty=\"include\" /><rule name=\"minInputNumRule\" value=\"1\" exProperty=\"include\" /></rules></field></fields></field><field id=\"ladderPeriod_2\" type=\"complex\"><fields><field id=\"quantity\" name=\"Quantity\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"long\" /><rule name=\"requiredRule\" value=\"false\" /><rule name=\"maxInputNumRule\" value=\"999999999\" exProperty=\"include\" /><rule name=\"minInputNumRule\" value=\"1\" exProperty=\"include\" /></rules></field><field id=\"day\" name=\"Estimated lead time\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"long\" /><rule name=\"requiredRule\" value=\"false\" /><rule name=\"maxInputNumRule\" value=\"999999999\" exProperty=\"include\" /><rule name=\"minInputNumRule\" value=\"1\" exProperty=\"include\" /></rules></field></fields></field></fields></field>",
+    "customMoreProperty": "<field id=\"customMoreProperty\" name=\"More details\" type=\"complex\"><complex-value><field id=\"customMoreProperty_0\" type=\"complex\"><complex-value><field id=\"valueName\" type=\"input\"><value>Regular Fit</value></field><field id=\"propName\" type=\"input\"><value>Fit Type</value></field></complex-value></field></complex-value><fields><field id=\"customMoreProperty_0\" type=\"complex\"><fields><field id=\"propName\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field><field id=\"valueName\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field></fields></field><field id=\"customMoreProperty_1\" type=\"complex\"><fields><field id=\"propName\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field><field id=\"valueName\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field></fields></field><field id=\"customMoreProperty_2\" type=\"complex\"><fields><field id=\"propName\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field><field id=\"valueName\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field></fields></field><field id=\"customMoreProperty_3\" type=\"complex\"><fields><field id=\"propName\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field><field id=\"valueName\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field></fields></field><field id=\"customMoreProperty_4\" type=\"complex\"><fields><field id=\"propName\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field><field id=\"valueName\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field></fields></field><field id=\"customMoreProperty_5\" type=\"complex\"><fields><field id=\"propName\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field><field id=\"valueName\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field></fields></field><field id=\"customMoreProperty_6\" type=\"complex\"><fields><field id=\"propName\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field><field id=\"valueName\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field></fields></field><field id=\"customMoreProperty_7\" type=\"complex\"><fields><field id=\"propName\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field><field id=\"valueName\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field></fields></field><field id=\"customMoreProperty_8\" type=\"complex\"><fields><field id=\"propName\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field><field id=\"valueName\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field></fields></field><field id=\"customMoreProperty_9\" type=\"complex\"><fields><field id=\"propName\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field><field id=\"valueName\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field></fields></field></fields></field>",
+    "imageVideo": "<field id=\"imageVideo\" name=\"Product Video\" type=\"singleCheck\"><rules><rule name=\"tipRule\" value=\"The main video will be displayed on the first slide of your image carousel.   Make sure your video length does not exceed 45 seconds and the file size does not exceed 100MB. \" /><rule name=\"tipRule\" value=\"The product detail video will be displayed on the top of your product description.   Make sure your video length does not exceed 10 minutes and the file size does not exceed 500MB. \" /><rule name=\"tipRule\" value=\"•To encourage suppliers to upload high quality videos and detail videos, the available storage for videos has been increased from 1GB to 3GB.\" /><rule name=\"maxLengthRule\" value=\"104857600\" exProperty=\"include\" unit=\"byte\" /></rules></field>",
+    "detailImage": "<field id=\"detailImage\" name=\"Details of the picture\" type=\"multiComplex\"><rules><rule name=\"requiredRule\" value=\"true\" /><rule name=\"maxCustomGalleryItem\" value=\"5\" /><rule name=\"supportCustomOrder\" value=\"true\" /><rule name=\"supportCustomGallery\" value=\"true\" /></rules><complex-values><field id=\"images\" type=\"multiComplex\"><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/Ae968bae8ffb64f8fbfddc3c1813691adj.png_350x350.png</value></field></complex-values></field><field id=\"gallery\" type=\"singleCheck\"><value displayName=\"Detail shot\">300</value></field></complex-values><complex-values><field id=\"images\" type=\"multiComplex\"><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/A56247158dd174a2b9a9aa5be8a40e253i.png_350x350.png</value></field></complex-values><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/A5da8984834c546d9b08c45a98541f1758.png_350x350.png</value></field></complex-values><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/A68e4d9ee66e54d94833bcb458ea9f6d3l.png_350x350.png</value></field></complex-values></field><field id=\"gallery\" type=\"singleCheck\"><value displayName=\"Other product images\">350</value></field></complex-values><fields><field id=\"gallery\" name=\"gallery\" type=\"singleCheck\"><rules><rule name=\"valueTypeRule\" value=\"long\" /><rule name=\"maxInputNumRule\" value=\"50\" exProperty=\"include\" /><rule name=\"requiredRule\" value=\"true\" /></rules><options><option displayName=\"Product dimensions\" value=\"150\" cnName=\"尺寸图\" supportText=\"false\" /><option displayName=\"Scene image\" value=\"200\" cnName=\"场景图\" supportText=\"false\" /><option displayName=\"Detail shot\" value=\"300\" cnName=\"细节图\" supportText=\"true\" /><option displayName=\"Other product images\" value=\"350\" cnName=\"其他商品图片\" supportText=\"false\" /></options></field><field id=\"images\" name=\"images\" type=\"multiComplex\"><rules><rule name=\"requiredRule\" value=\"true\" /><rule name=\"maxItemsRule\" value=\"30\" exProperty=\"include\" /></rules><fields><field id=\"imageURL\" name=\"imageURL\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field><field id=\"generalText\" name=\"generalText\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"maxInputNumRule\" value=\"500\" exProperty=\"include\" /></rules></field></fields></field></fields></field>",
+    "companyImage": "<field id=\"companyImage\" name=\"Company Picture\" type=\"multiComplex\"><rules><rule name=\"maxCustomGalleryItem\" value=\"3\" /><rule name=\"supportCustomOrder\" value=\"true\" /></rules><complex-values><field id=\"images\" type=\"multiComplex\"><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/Sf587c854711748af9759e77ce5aeb03c3.png_350x350.png</value></field></complex-values></field><field id=\"gallery\" type=\"singleCheck\"><value displayName=\"Company overview\">400</value></field></complex-values><complex-values><field id=\"images\" type=\"multiComplex\"><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/Sfea34bbd56ae4d0583aa855838eb1454F.png_350x350.png</value></field></complex-values></field><field id=\"gallery\" type=\"singleCheck\"><value displayName=\"Factory profile\">500</value></field></complex-values><complex-values><field id=\"images\" type=\"multiComplex\"><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/S2a3af5690d524680824086ad8419dbc9G.png_350x350.png</value></field></complex-values></field><field id=\"gallery\" type=\"singleCheck\"><value displayName=\"Customization capabilities\">550</value></field></complex-values><complex-values><field id=\"images\" type=\"multiComplex\"><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/Sdc4e18f098e142b797df687e8befbfa14.png_350x350.png</value></field></complex-values></field><field id=\"gallery\" type=\"singleCheck\"><value displayName=\"Production workflow\">600</value></field></complex-values><complex-values><field id=\"images\" type=\"multiComplex\"><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/Sc1dc6ec7d435404db6a31c6938a734a0g.png_350x350.png</value></field></complex-values></field><field id=\"gallery\" type=\"singleCheck\"><value displayName=\"Packaging &amp; shipping specifications\">700</value></field></complex-values><fields><field id=\"gallery\" name=\"gallery\" type=\"singleCheck\"><rules><rule name=\"valueTypeRule\" value=\"long\" /><rule name=\"maxInputNumRule\" value=\"50\" exProperty=\"include\" /><rule name=\"requiredRule\" value=\"true\" /></rules><options><option displayName=\"Company overview\" value=\"400\" cnName=\"公司介绍\" supportText=\"false\" /><option displayName=\"Competitive advantages\" value=\"450\" cnName=\"公司优势\" supportText=\"false\" /><option displayName=\"Factory profile\" value=\"500\" cnName=\"工厂情况\" supportText=\"false\" /><option displayName=\"Customization capabilities\" value=\"550\" cnName=\"定制能力\" supportText=\"true\" /><option displayName=\"Production workflow\" value=\"600\" cnName=\"生产流程\" supportText=\"false\" /><option displayName=\"Trade show participation\" value=\"650\" cnName=\"参展情况\" supportText=\"false\" /><option displayName=\"Packaging &amp; shipping specifications\" value=\"700\" cnName=\"包装运输\" supportText=\"false\" /><option displayName=\"Extended company profile\" value=\"750\" cnName=\"其他公司介绍\" supportText=\"false\" /></options></field><field id=\"images\" name=\"images\" type=\"multiComplex\"><rules><rule name=\"requiredRule\" value=\"true\" /><rule name=\"maxItemsRule\" value=\"30\" exProperty=\"include\" /></rules><fields><field id=\"imageURL\" name=\"imageURL\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field><field id=\"generalText\" name=\"generalText\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"maxInputNumRule\" value=\"500\" exProperty=\"include\" /></rules></field></fields></field></fields></field>"
+  },
+  "top_level_field_ids": [
+    "infos",
+    "productFeature",
+    "catId",
+    "icbuCatProp",
+    "saleProp",
+    "sku",
+    "sampleSku",
+    "productTitle",
+    "inventory",
+    "scImages",
+    "imageVideo",
+    "detailVideo",
+    "productKeywords",
+    "pkgMeasure",
+    "pkgWeight",
+    "ApiPostLevelAttrAdapter",
+    "productCertificate",
+    "boxPackaging",
+    "ladderPeriod",
+    "priceUnit",
+    "platformLogisticsServices",
+    "shippingTemplate",
+    "newCustomizedServices",
+    "lightCustomizedServices",
+    "productGroup",
+    "ladderPrice",
+    "customMoreProperty",
+    "fob",
+    "saleType",
+    "batchNum",
+    "scPrice",
+    "minOrderQuantity",
+    "productDescType",
+    "superText",
+    "detailImage",
+    "textDesc",
+    "companyImage",
+    "companyDesc",
+    "companyFaqDesc",
+    "productQuality",
+    "marketSample",
+    "marketSamplingQuantity",
+    "marketSamplingPrice",
+    "multilangInfo",
+    "logisticsProperty",
+    "logisticsSku",
+    "supportLogisticsSku",
+    "semiManagedPeriod",
+    "tariffsHsCode",
+    "designAndSampleService"
+  ]
+}

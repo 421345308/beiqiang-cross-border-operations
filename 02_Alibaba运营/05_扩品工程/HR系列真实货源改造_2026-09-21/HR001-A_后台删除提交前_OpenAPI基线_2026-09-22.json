@@ -1,0 +1,39 @@
+{
+  "captured_at": "2026-09-22",
+  "purpose": "Baseline before deleting the four legacy detail images and legacy Fit Type in seller UI",
+  "product_id": 1601943321794,
+  "status": "approved",
+  "display": "Y",
+  "title": "Wholesale Men's Knit Slip-On Walking Shoes EVA Sole EU 38-47 Model 9002 for Importers",
+  "model": "HR001-A / 9002",
+  "fit_type": "Regular Fit",
+  "sku_count": 20,
+  "prices_usd": [10.90, 11.50, 11.90],
+  "main_image_count": 6,
+  "detail_image_count": 4,
+  "company_image_count": 5,
+  "main_video_id": "6000342456358",
+  "legacy_detail_image_tokens": [
+    "Ae2d54b8df0004519a9a5412580c2ac84b",
+    "A5fcde3e399ee44fca0f1492d7a27c5a6X",
+    "A98808cf8bb864dfd999b11979679b2cf5",
+    "A3c4d7d35cc4e4739b94dba964fc57568v"
+  ],
+  "seller_ui_staged_state": {
+    "detail_image_count": 9,
+    "new_images": [
+      "D1_product_overview.jpg",
+      "D2_verified_specs.jpg",
+      "D3_colors_sizes.jpg",
+      "D4_price_quote.jpg",
+      "D5_oem_project_inputs.jpg"
+    ],
+    "saved": false,
+    "submitted": false
+  },
+  "openapi_refs": {
+    "product_get_request_id": "213d4e4917900530958065770",
+    "schema_render_request_id": "0bab02fc17900531019751166"
+  },
+  "source": "HR001_OpenAPI只读回读.json"
+}

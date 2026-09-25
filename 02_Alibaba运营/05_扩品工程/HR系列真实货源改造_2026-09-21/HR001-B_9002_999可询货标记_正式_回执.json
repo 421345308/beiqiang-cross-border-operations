@@ -1,0 +1,21 @@
+{
+  "listing": "HR001-B",
+  "source_model": "9002",
+  "product_id": 1601943493004,
+  "checked_at": "2026-09-23T17:22:29.796801+08:00",
+  "mode": "apply",
+  "product_request_id": "213c934417901553431614830",
+  "inventory_before_request_id": "21501b8d17901553492584212",
+  "sku_count": 20,
+  "before_values": [
+    0
+  ],
+  "planned_changes": 20,
+  "marker_semantics": "999 is a seller-side availability marker, not actual on-hand inventory",
+  "update_request_id": "213c933517901553556972647",
+  "inventory_after_request_id": "212c6fc617901553625576823",
+  "after_values": [
+    999
+  ],
+  "passed": true
+}

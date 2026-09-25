@@ -1,5 +1,7 @@
 # Prompt Framework
 
+镜头语言模板来自工作区级模板库，本场景的取舍与改造见 [template-mapping.md](template-mapping.md)；模板库总索引见 [awesome-seedance 模板索引](../../../../07_知识库与Skills/04_AI视频知识体系/awesome-seedance-模板索引.md)。模板只提供镜头方法，产品事实仍回到单款证据。
+
 ## Structure
 
 Write prompts in this order:

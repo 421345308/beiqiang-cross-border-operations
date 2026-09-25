@@ -1,0 +1,92 @@
+{
+  "mode": "read-only",
+  "expect": "submitted",
+  "captured_at_utc": "2026-09-22T09:32:39.403209+00:00",
+  "product_id": 1601943305914,
+  "status": "modified",
+  "display": "N",
+  "url": "https://www.alibaba.com/product-detail/Wholesale-Men-s-Retro-Mesh-Lace_1601943305914.html",
+  "attributes": {
+    "Fit Type": "Regular Fit",
+    "Midsole Material": "EVA",
+    "Season": "All Seasons",
+    "Style": "Walking Shoes",
+    "Outsole Material": "Rubber",
+    "Lining Material": "Mesh",
+    "Closure Type": "Lace-up",
+    "Toe Style": "Round Toe",
+    "Feature": "Light Weight",
+    "Place of Origin": "CN",
+    "Model Number": "HR002-A / S6077"
+  },
+  "colors": [
+    "Black",
+    "White"
+  ],
+  "sizes": [
+    "39",
+    "40",
+    "41",
+    "42",
+    "43",
+    "44",
+    "45",
+    "46",
+    "47",
+    "48"
+  ],
+  "sku_count": 20,
+  "prices": [
+    9.1,
+    9.2,
+    9.5
+  ],
+  "main_tokens": [
+    "He96ec2157a484f52989aba375d17a3d7B",
+    "He33e5d7f3e7c43adaba0a8b66f28f3a7H",
+    "H665a0aee114a4b188afa49444fc596f6k",
+    "He4db0fee00e344289196e4d21f6fb49fD",
+    "Hfc58026c4f6c4adb8f3483980194a0e4A",
+    "H203a5a3c1bad4e179895bf65048ec198v"
+  ],
+  "html_tokens": [],
+  "checks": {
+    "expected_state_ok": true,
+    "title_ok": true,
+    "model_ok": true,
+    "closure_ok": true,
+    "round_toe_ok": true,
+    "walking_style_ok": true,
+    "colors_ok": true,
+    "sizes_ok": true,
+    "sku_count_ok": true,
+    "inventory_999_absent": true,
+    "prices_ok": true,
+    "main_images_ok": true
+  },
+  "pending_or_failed_cleanup": {
+    "schema_available": "pending review; schema.render returned no XML",
+    "product_desc_type_2": "pending review; schema.render returned no XML",
+    "ordinary_detail_images_ok": "pending review; schema.render returned no XML",
+    "ordinary_detail_all_sc04": "pending review; schema.render returned no XML",
+    "video_ok": "pending review; schema.render returned no XML",
+    "legacy_attributes_removed": "pending review; schema.render returned no XML",
+    "package_dimensions_cleared": "pending review; schema.render returned no XML",
+    "package_weight_cleared": "pending review; schema.render returned no XML",
+    "legacy_lead_time_cleared": "pending review; schema.render returned no XML",
+    "custom_properties_cleared": "pending review; schema.render returned no XML"
+  },
+  "all_checks_pass": true,
+  "get_refs": {
+    "request_id": "0bab02fe17900695526803388",
+    "trace_id": "2101d86517900695523505856e0d3f",
+    "error": null,
+    "biz_success": null
+  },
+  "render_refs": {
+    "request_id": "0bbb3b2417900695589035593",
+    "trace_id": "2101dd0617900695585992518e0b5d",
+    "error": null,
+    "biz_success": false
+  }
+}

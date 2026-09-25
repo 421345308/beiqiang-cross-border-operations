@@ -15,6 +15,7 @@ Prefer the authorized Alibaba Open APIs over repetitive browser form work. Resol
 - Treat the current permission page and current official API documentation as authoritative. Read [references/permissions.md](references/permissions.md) to route an operation.
 - Read-only discovery and validation may run directly. Product/media, inventory/display, order/shipping, address and other external mutations must remain within the user's authorized targets and scope. Prepare the exact change before any missing approval is requested; existing authorization in the conversation remains valid.
 - For publishing or repair, read [the canonical lifecycle SOP](../../../02_Alibaba运营/00_运营SOP/国际站商品全生命周期SOP.md) and the SKU source evidence. Do not infer unsupported fields or copy historical defaults.
+- For sourced HR replacement, supplier `0`/"not stocked" is not an API inventory target or automatic source failure. Once the specific order route and replacement SKU identity are evidenced, write `999` for valid SKUs in the rebuilt draft, submit together with consistent new-shoe assets, and read back formal inventory. Treat `999` as a seller-side inquiry marker, not literal on-hand quantity; never count a stock-only update on an old-shoe page as a completed replacement.
 - Record request IDs, trace IDs, returned product IDs, and platform error objects. Do not call success unless the API returns a positive business result.
 
 ## Runtime
@@ -44,6 +45,8 @@ For publishing or repair, read [references/product-publishing.md](references/pro
 6. Read the product back, check quality score, and verify the public page when it becomes available.
 
 For an existing product repair, prefer a minimal incremental Schema containing only the target fields and documented dependencies. Render the target's current Schema first; do not use another product's full Schema as a shortcut for a one-field edit. Inspect current video fields before writing, because an overlinked video can block otherwise unrelated edits. See the failure-handling rules in the publishing reference.
+
+Use `alibaba.icbu.product.get` for review state and formal field readback. Do not make a status check depend on `schema.render`: while a product is under review, Alibaba can return a valid request/trace pair but omit rendered `data`. Treat that as an unavailable editable Schema, not as proof that `product.get` failed.
 
 Use browser only when OAuth consent, CAPTCHA, a field absent from the API, or visible public-page verification requires it. Browser fallback does not replace API-side readback.
 

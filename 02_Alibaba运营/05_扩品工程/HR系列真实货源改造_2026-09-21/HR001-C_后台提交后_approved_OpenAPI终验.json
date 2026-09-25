@@ -1,0 +1,91 @@
+{
+  "mode": "read-only",
+  "expect": "approved",
+  "captured_at_utc": "2026-09-23T00:13:43.256780+00:00",
+  "product_id": 1601943474137,
+  "snapshot": {
+    "status": "approved",
+    "display": "Y",
+    "url": "https://www.alibaba.com/product-detail/Private-Label-Men-s-Textile-Slip_1601943474137.html",
+    "title": "Private Label Men's Textile Slip-On Walking Shoes EVA Outsole EU 38-47 Wholesale Model 9002",
+    "model": "HR001-C / 9002",
+    "fit_type": "Regular Fit",
+    "closure": "Slip-On",
+    "outsole": "EVA",
+    "colors": [
+      "Light Gray / Beige Sole",
+      "Dark Gray / Black Sole"
+    ],
+    "sizes": [
+      "43",
+      "42",
+      "45",
+      "44",
+      "39",
+      "38",
+      "41",
+      "40",
+      "47",
+      "46"
+    ],
+    "sku_count": 20,
+    "prices": [
+      10.9,
+      11.5,
+      11.9
+    ],
+    "main_tokens": [
+      "H7ab7666eca414497b3a4376ead8f5612X",
+      "H32d8f07fa67247e8858522985d27e2857",
+      "H70708fed544744a0be4c413e9fd3928bA",
+      "H2d5013a4ef0b4166980df7cf56df9e36b",
+      "Ha0a575f462224e59af7bdcebce519ca19",
+      "H525aafc0bef84c20b2254c5cd02afc075"
+    ],
+    "detail_tokens": [
+      "A3c4d7d35cc4e4739b94dba964fc57568v",
+      "Ae2d54b8df0004519a9a5412580c2ac84b",
+      "A5fcde3e399ee44fca0f1492d7a27c5a6X",
+      "A98808cf8bb864dfd999b11979679b2cf5"
+    ],
+    "company_count": 5,
+    "main_video_id": "6000344840202"
+  },
+  "expected_detail_tokens": [
+    "H01ae8a622bd246a38cb229c42c6de347Q",
+    "H0f9911f7f4c741498cc5136d726f4ea1Y",
+    "H73087b896040408e8c8273c992601d50Q",
+    "H7c844f80d25b4b9f97e1bffedad8eb1cI",
+    "Hc4d8cf746fae4b009a8af40cd8ca59ebE"
+  ],
+  "checks": {
+    "expected_state_ok": true,
+    "title_ok": true,
+    "model_ok": true,
+    "closure_ok": true,
+    "outsole_ok": true,
+    "colors_ok": true,
+    "sizes_ok": true,
+    "sku_count_ok": true,
+    "prices_ok": true,
+    "main_images_ok": true,
+    "company_images_ok": true,
+    "fit_type_removed": false,
+    "detail_images_ok": false,
+    "main_video_ok": true
+  },
+  "pending_checks": {},
+  "all_checks_pass": false,
+  "get_refs": {
+    "request_id": "213c933517901224151828811",
+    "trace_id": "2103346a17901224148483681e0cef",
+    "error": null,
+    "biz_success": null
+  },
+  "render_refs": {
+    "request_id": "2105584317901224213302043",
+    "trace_id": "210329c717901224210173565e109e",
+    "error": null,
+    "biz_success": true
+  }
+}

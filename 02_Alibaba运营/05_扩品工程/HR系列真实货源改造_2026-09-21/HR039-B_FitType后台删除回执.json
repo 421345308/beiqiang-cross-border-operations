@@ -1,0 +1,25 @@
+{
+  "product_id": 1601943670292,
+  "action": "seller_console_delete_custom_property_and_submit",
+  "deleted_property": {
+    "name": "Fit Type",
+    "value": "Regular Fit"
+  },
+  "reason": "Alibaba schema.update is incremental; omitting the value node and submitting an explicit empty complex-value were both accepted as no-op updates. The seller console was used only for the unsupported deletion operation.",
+  "ui_evidence": {
+    "edit_url": "https://post.alibaba.com/product/publish.htm?itemId=1601943670292",
+    "before_inputs": ["Fit Type", "Regular Fit"],
+    "after_inputs": [],
+    "submitted": true
+  },
+  "openapi_readback": {
+    "request_id": "21501b8d17900421640793530",
+    "trace_id": "210313ea17900421637382685e0e16",
+    "error": null,
+    "status": "modified",
+    "display": "N",
+    "fit_type": null,
+    "title": "Men's High Top Knit Slip-On Walking Shoes EVA Sole EU 35-45 Wholesale OEM for Daily Wear"
+  },
+  "state": "SUBMITTED_UI_FIT_TYPE_DELETE_WAIT_REVIEW"
+}

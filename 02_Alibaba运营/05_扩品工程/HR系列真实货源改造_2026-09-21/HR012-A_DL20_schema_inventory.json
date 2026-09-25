@@ -1,0 +1,270 @@
+{
+  "mode": "read-only",
+  "target_family": "HR012 / DL20 candidate",
+  "product_id": 1601943445780,
+  "product_get_request_id": "0bbb637a17901190514978062",
+  "render_request_id": "210829b717901190578221831",
+  "status": "approved",
+  "display": "Y",
+  "title": "OEM Retro Mesh Lace-Up Breathable Lightweight Walking Shoes Chunky Sole Casual Sneakers EU 36-45 Model HR012-A",
+  "attributes": [
+    {
+      "attribute_id": -1,
+      "attribute_name": "Fit Type",
+      "value_id": -1,
+      "value_name": "Regular Fit"
+    },
+    {
+      "attribute_id": 20700,
+      "attribute_name": "Midsole Material",
+      "value_id": 3376399,
+      "value_name": "EVA"
+    },
+    {
+      "attribute_id": 191288212,
+      "attribute_name": "Season",
+      "value_id": 27034893,
+      "value_name": "All Seasons"
+    },
+    {
+      "attribute_id": 191288243,
+      "attribute_name": "Style",
+      "value_id": 19077592,
+      "value_name": "Walking Shoes"
+    },
+    {
+      "attribute_id": 191290426,
+      "attribute_name": "Outsole Material",
+      "value_id": 3338114,
+      "value_name": "Rubber"
+    },
+    {
+      "attribute_id": 191290430,
+      "attribute_name": "Lining Material",
+      "value_id": 6821988,
+      "value_name": "Mesh"
+    },
+    {
+      "attribute_id": 200000388,
+      "attribute_name": "Closure Type",
+      "value_id": 80806811,
+      "value_name": "Lace-up"
+    },
+    {
+      "attribute_id": 200000486,
+      "attribute_name": "Toe Style",
+      "value_id": 556500746,
+      "value_name": "Round Toe"
+    },
+    {
+      "attribute_id": 210200060,
+      "attribute_name": "Feature",
+      "value_id": 42283793,
+      "value_name": "Breathable"
+    },
+    {
+      "attribute_id": 210200060,
+      "attribute_name": "Feature",
+      "value_id": 46649883,
+      "value_name": "Light Weight"
+    },
+    {
+      "attribute_id": 1,
+      "attribute_name": "Place of Origin",
+      "value_id": -1,
+      "value_name": "CN"
+    },
+    {
+      "attribute_id": 3,
+      "attribute_name": "Model Number",
+      "value_id": -1,
+      "value_name": "HR012-A"
+    }
+  ],
+  "sku_count": 0,
+  "target_sizes": [
+    "39",
+    "40",
+    "41",
+    "42",
+    "43",
+    "44"
+  ],
+  "candidate_sale_options": {
+    "Color": [
+      {
+        "display": "Black",
+        "value": "3327837"
+      },
+      {
+        "display": "White",
+        "value": "3331185"
+      },
+      {
+        "display": "Brown",
+        "value": "3399503"
+      },
+      {
+        "display": "Beige",
+        "value": "5715155"
+      },
+      {
+        "display": "Green",
+        "value": "216016296"
+      }
+    ],
+    "EUR Size": [
+      {
+        "display": "39",
+        "value": "190000792"
+      },
+      {
+        "display": "40",
+        "value": "28389"
+      },
+      {
+        "display": "41",
+        "value": "28390"
+      },
+      {
+        "display": "42",
+        "value": "28391"
+      },
+      {
+        "display": "43",
+        "value": "28392"
+      },
+      {
+        "display": "44",
+        "value": "28393"
+      }
+    ]
+  },
+  "all_color_options": [
+    {
+      "display": "Pink",
+      "value": "3328925"
+    },
+    {
+      "display": "Gold",
+      "value": "3331116"
+    },
+    {
+      "display": "Silver",
+      "value": "3460547"
+    },
+    {
+      "display": "Orange",
+      "value": "3558409"
+    },
+    {
+      "display": "Sliver",
+      "value": "3787620"
+    },
+    {
+      "display": "Purple",
+      "value": "3851110"
+    },
+    {
+      "display": "Ivory",
+      "value": "4173850"
+    },
+    {
+      "display": "Plum",
+      "value": "6408090"
+    },
+    {
+      "display": "Blue",
+      "value": "123085"
+    },
+    {
+      "display": "Black",
+      "value": "3327837"
+    },
+    {
+      "display": "White",
+      "value": "3331185"
+    },
+    {
+      "display": "Red",
+      "value": "3331260"
+    },
+    {
+      "display": "Yellow",
+      "value": "3354417"
+    },
+    {
+      "display": "Brown",
+      "value": "3399503"
+    },
+    {
+      "display": "Grey",
+      "value": "3483425"
+    },
+    {
+      "display": "Beige",
+      "value": "5715155"
+    },
+    {
+      "display": "Green",
+      "value": "216016296"
+    },
+    {
+      "display": "other",
+      "value": "-1"
+    }
+  ],
+  "color_field_xml": "<field id=\"p-191288010\" name=\"Color\" type=\"multiCheck\"><rules><rule name=\"requiredRule\" value=\"true\" /><rule name=\"valueAttributeRule\" value=\"inputValue\" desc=\"输入属性值\" /><rule name=\"valueTypeRule\" value=\"text\" target=\"attribute:inputValue\" /><rule name=\"tipRule\" value=\"该属性支持自定义输入，输入值请填写value中inputValue属性,值为任意负数；多个输入值请保证value负数值不重复\" /><rule name=\"maxValueRule\" value=\"最大用户输入值个数[60]\" exProperty=\"include\" /><rule name=\"valueAttributeRule\" value=\"img\" desc=\"可上传图片\" /><rule name=\"valueAttributeRule\" value=\"remark\" desc=\"可使用色块\" /><rule name=\"maxInputNumRule\" value=\"40\" exProperty=\"include\" /><rule name=\"requiredRule\" value=\"true\" /></rules><options><option displayName=\"Pink\" value=\"3328925\" /><option displayName=\"Gold\" value=\"3331116\" /><option displayName=\"Silver\" value=\"3460547\" /><option displayName=\"Orange\" value=\"3558409\" /><option displayName=\"Sliver\" value=\"3787620\" /><option displayName=\"Purple\" value=\"3851110\" /><option displayName=\"Ivory\" value=\"4173850\" /><option displayName=\"Plum\" value=\"6408090\" /><option displayName=\"Blue\" value=\"123085\" /><option displayName=\"Black\" value=\"3327837\" /><option displayName=\"White\" value=\"3331185\" /><option displayName=\"Red\" value=\"3331260\" /><option displayName=\"Yellow\" value=\"3354417\" /><option displayName=\"Brown\" value=\"3399503\" /><option displayName=\"Grey\" value=\"3483425\" /><option displayName=\"Beige\" value=\"5715155\" /><option displayName=\"Green\" value=\"216016296\" /><option displayName=\"other\" value=\"-1\" /></options></field>",
+  "top_level_field_ids": [
+    "infos",
+    "productFeature",
+    "catId",
+    "icbuCatProp",
+    "saleProp",
+    "sku",
+    "sampleSku",
+    "productTitle",
+    "inventory",
+    "scImages",
+    "imageVideo",
+    "detailVideo",
+    "productKeywords",
+    "pkgMeasure",
+    "pkgWeight",
+    "ApiPostLevelAttrAdapter",
+    "productCertificate",
+    "boxPackaging",
+    "ladderPeriod",
+    "priceUnit",
+    "platformLogisticsServices",
+    "shippingTemplate",
+    "newCustomizedServices",
+    "lightCustomizedServices",
+    "productGroup",
+    "ladderPrice",
+    "customMoreProperty",
+    "fob",
+    "saleType",
+    "batchNum",
+    "scPrice",
+    "minOrderQuantity",
+    "productDescType",
+    "superText",
+    "detailImage",
+    "textDesc",
+    "companyImage",
+    "companyDesc",
+    "companyFaqDesc",
+    "productQuality",
+    "marketSample",
+    "marketSamplingQuantity",
+    "marketSamplingPrice",
+    "multilangInfo",
+    "logisticsProperty",
+    "logisticsSku",
+    "supportLogisticsSku",
+    "semiManagedPeriod",
+    "tariffsHsCode",
+    "designAndSampleService"
+  ]
+}

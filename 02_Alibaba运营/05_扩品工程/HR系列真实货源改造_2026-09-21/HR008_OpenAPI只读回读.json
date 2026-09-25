@@ -1,0 +1,438 @@
+{
+  "mode": "read-only",
+  "family": "HR008",
+  "targets": {
+    "HR008-A": {
+      "product_id": 1601943348656,
+      "product": {
+        "subject": "OEM White Low Top Casual Walking Shoes Synthetic Leather Lace-Up Everyday Sneakers EVA Midsole Rubber Outsole Regular Fit EU",
+        "red_model": null,
+        "category_id": 201334413,
+        "group_id": 972130291,
+        "status": "approved",
+        "display": "Y",
+        "pc_detail_url": "https://www.alibaba.com/product-detail/OEM-White-Low-Top-Casual-Walking_1601943348656.html",
+        "attributes": {
+          "Fit Type": "Regular Fit",
+          "Midsole Material": "EVA",
+          "Season": "All Seasons",
+          "Style": "Walking Shoes",
+          "Outsole Material": "Rubber",
+          "Closure Type": "Lace-up",
+          "Toe Style": "Round Toe",
+          "Place of Origin": "CN",
+          "Model Number": "HR008",
+          "Lining Material": "Textile"
+        },
+        "sku_axes": {
+          "Color": [
+            "Black",
+            "Clean White",
+            "Light Beige"
+          ],
+          "EUR Size": [
+            "38",
+            "37",
+            "40",
+            "39",
+            "44",
+            "43",
+            "36",
+            "45",
+            "42",
+            "41"
+          ]
+        },
+        "sku_count": 30,
+        "prices": [
+          "9.16",
+          "9.26",
+          "9.56"
+        ],
+        "moq": "2",
+        "main_images": [
+          "https://sc04.alicdn.com/kf/H4dd7351f04cb4afc99a49a1c00379020g.png",
+          "https://sc04.alicdn.com/kf/Add93df345bb34d90890a4bd5ff0a7f87N.png",
+          "https://sc04.alicdn.com/kf/A845c9d2534254ed49ffe1c64d5166579e.png",
+          "https://sc04.alicdn.com/kf/A325e06c0cf55400fa994866bce1f8ec1D.png",
+          "https://sc04.alicdn.com/kf/Af1a002fd1f0b49c7b7b259f807f2fc23t.png",
+          "https://sc04.alicdn.com/kf/A913ed0c7c3a147f6b18ba0af0bfdaab6n.png"
+        ],
+        "detail_images": [
+          {
+            "image_set": {
+              "name": "Detail shot",
+              "id": "300"
+            },
+            "image_url": "https://sc04.alicdn.com/kf/Ab191c2179047439b99f0aa85a23eee20x.png"
+          },
+          {
+            "image_set": {
+              "name": "Other product images",
+              "id": "350"
+            },
+            "image_url": "https://sc04.alicdn.com/kf/A3429788b7cee4992904cd6644bbec3360.png"
+          },
+          {
+            "image_set": {
+              "name": "Other product images",
+              "id": "350"
+            },
+            "image_url": "https://sc04.alicdn.com/kf/A4089745dea38405daa9471313cba4bf3g.png"
+          },
+          {
+            "image_set": {
+              "name": "Other product images",
+              "id": "350"
+            },
+            "image_url": "https://sc04.alicdn.com/kf/A6f9a1b6e4f9d45039991bab4070c8e7bk.png"
+          }
+        ],
+        "company_images": [
+          {
+            "image_set": {
+              "name": "Customization capabilities",
+              "id": 550
+            },
+            "image_url": "https://sc04.alicdn.com/kf/S2a3af5690d524680824086ad8419dbc9G.png"
+          },
+          {
+            "image_set": {
+              "name": "Production workflow",
+              "id": 600
+            },
+            "image_url": "https://sc04.alicdn.com/kf/Sdc4e18f098e142b797df687e8befbfa14.png"
+          },
+          {
+            "image_set": {
+              "name": "Packaging & shipping specifications",
+              "id": 700
+            },
+            "image_url": "https://sc04.alicdn.com/kf/Sc1dc6ec7d435404db6a31c6938a734a0g.png"
+          },
+          {
+            "image_set": {
+              "name": "Company overview",
+              "id": 400
+            },
+            "image_url": "https://sc04.alicdn.com/kf/Sf587c854711748af9759e77ce5aeb03c3.png"
+          },
+          {
+            "image_set": {
+              "name": "Factory profile",
+              "id": 500
+            },
+            "image_url": "https://sc04.alicdn.com/kf/Sfea34bbd56ae4d0583aa855838eb1454F.png"
+          }
+        ]
+      },
+      "schema_fields": {
+        "productTitle": "<field id=\"productTitle\" name=\"Product name\" type=\"input\"><rules><rule name=\"tipRule\" value=\"The &lt;div&gt; should contain information such as product name, product characteristics (attributes), industry standards, certifications, and models to avoid listing and stacking. &lt;br&gt;&lt;a href=&quot;https://service.alibaba.com/page/knowledge? pageId = 127 &amp; category = 9207967 &amp; knowledge = 20142419 &amp; language = zh &quot;target =&quot;_blank &quot;&gt; How do I set the product title? &lt;/a&gt;\" /><rule name=\"tipRule\" value=\"The key information of standardized products will be displaied by default, please do not repeat it in the product name\" /><rule name=\"requiredRule\" value=\"true\" /><rule name=\"maxLengthRule\" value=\"128\" exProperty=\"include\" unit=\"byte\" /><rule name=\"regexRule\" value=\"[^\\x04-\\x80≤≥‰±㎡℃℉°μΩé3²³㎡m³]+|[@@!！\\?？]\" exProperty=\"not include\" /><rule name=\"regexRule\" value=\"\\w+(?:[\\-+.]\\w+)*@\\w+(?:[\\-.]\\w+)*\\.\\w+(?:[\\-.]\\w+)*\" exProperty=\"not include\" /><rule name=\"regexRule\" value=\"&lt;[^&gt;]+&gt;\" exProperty=\"not include\" /><rule name=\"valueTypeRule\" value=\"text\" /></rules><value>OEM White Low Top Casual Walking Shoes Synthetic Leather Lace-Up Everyday Sneakers EVA Midsole Rubber Outsole Regular Fit EU</value></field>",
+        "p-3": "<field id=\"p-3\" name=\"Model Number\" type=\"input\"><value inputValue=\"HR008\">-2</value></field>",
+        "imageVideo": "<field id=\"imageVideo\" name=\"Product Video\" type=\"singleCheck\"><rules><rule name=\"tipRule\" value=\"The main video will be displayed on the first slide of your image carousel.   Make sure your video length does not exceed 45 seconds and the file size does not exceed 100MB. \" /><rule name=\"tipRule\" value=\"The product detail video will be displayed on the top of your product description.   Make sure your video length does not exceed 10 minutes and the file size does not exceed 500MB. \" /><rule name=\"tipRule\" value=\"•To encourage suppliers to upload high quality videos and detail videos, the available storage for videos has been increased from 1GB to 3GB.\" /><rule name=\"maxLengthRule\" value=\"104857600\" exProperty=\"include\" unit=\"byte\" /></rules></field>",
+        "detailVideo": "<field id=\"detailVideo\" name=\"Additional videos\" type=\"singleCheck\"><rules><rule name=\"maxLengthRule\" value=\"524288000\" exProperty=\"include\" unit=\"byte\" /></rules></field>",
+        "scImages": "<field id=\"scImages\" name=\"Product images\" type=\"complex\"><rules><rule name=\"requiredRule\" value=\"true\" /><rule name=\"maxInputNumRule\" value=\"6\" exProperty=\"include\" /><rule name=\"minInputNumRule\" value=\"1\" exProperty=\"include\" /><rule name=\"maxImageSizeRule\" value=\"4194304\" exProperty=\"include\" /></rules><complex-value><field id=\"scImages_1\" type=\"input\"><value fileFlag=\"no\" fileId=\"0\">//sc04.alicdn.com/kf/Add93df345bb34d90890a4bd5ff0a7f87N.png_350x350.png</value></field><field id=\"scImages_2\" type=\"input\"><value fileFlag=\"no\" fileId=\"0\">//sc04.alicdn.com/kf/A845c9d2534254ed49ffe1c64d5166579e.png_350x350.png</value></field><field id=\"scImages_0\" type=\"input\"><value fileFlag=\"no\" fileId=\"0\">//sc04.alicdn.com/kf/H4dd7351f04cb4afc99a49a1c00379020g.png_350x350.png</value></field><field id=\"scImages_5\" type=\"input\"><value fileFlag=\"no\" fileId=\"0\">//sc04.alicdn.com/kf/A913ed0c7c3a147f6b18ba0af0bfdaab6n.png_350x350.png</value></field><field id=\"scImages_3\" type=\"input\"><value fileFlag=\"no\" fileId=\"0\">//sc04.alicdn.com/kf/A325e06c0cf55400fa994866bce1f8ec1D.png_350x350.png</value></field><field id=\"scImages_4\" type=\"input\"><value fileFlag=\"no\" fileId=\"0\">//sc04.alicdn.com/kf/Af1a002fd1f0b49c7b7b259f807f2fc23t.png_350x350.png</value></field></complex-value><fields><field id=\"scImages_0\" name=\"Product images\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"url\" /><rule name=\"valueAttributeRule\" value=\"fileId\" desc=\"图片银行图片ID\" /></rules></field><field id=\"scImages_1\" name=\"Product images\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"url\" /><rule name=\"valueAttributeRule\" value=\"fileId\" desc=\"图片银行图片ID\" /></rules></field><field id=\"scImages_2\" name=\"Product images\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"url\" /><rule name=\"valueAttributeRule\" value=\"fileId\" desc=\"图片银行图片ID\" /></rules></field><field id=\"scImages_3\" name=\"Product images\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"url\" /><rule name=\"valueAttributeRule\" value=\"fileId\" desc=\"图片银行图片ID\" /></rules></field><field id=\"scImages_4\" name=\"Product images\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"url\" /><rule name=\"valueAttributeRule\" value=\"fileId\" desc=\"图片银行图片ID\" /></rules></field><field id=\"scImages_5\" name=\"Product images\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"url\" /><rule name=\"valueAttributeRule\" value=\"fileId\" desc=\"图片银行图片ID\" /></rules></field></fields></field>",
+        "detailImage": "<field id=\"detailImage\" name=\"Details of the picture\" type=\"multiComplex\"><rules><rule name=\"requiredRule\" value=\"true\" /><rule name=\"maxCustomGalleryItem\" value=\"5\" /><rule name=\"supportCustomOrder\" value=\"true\" /><rule name=\"supportCustomGallery\" value=\"true\" /></rules><complex-values><field id=\"images\" type=\"multiComplex\"><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/Ab191c2179047439b99f0aa85a23eee20x.png_350x350.png</value></field></complex-values></field><field id=\"gallery\" type=\"singleCheck\"><value displayName=\"Detail shot\">300</value></field></complex-values><complex-values><field id=\"images\" type=\"multiComplex\"><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/A3429788b7cee4992904cd6644bbec3360.png_350x350.png</value></field></complex-values><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/A4089745dea38405daa9471313cba4bf3g.png_350x350.png</value></field></complex-values><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/A6f9a1b6e4f9d45039991bab4070c8e7bk.png_350x350.png</value></field></complex-values></field><field id=\"gallery\" type=\"singleCheck\"><value displayName=\"Other product images\">350</value></field></complex-values><fields><field id=\"gallery\" name=\"gallery\" type=\"singleCheck\"><rules><rule name=\"valueTypeRule\" value=\"long\" /><rule name=\"maxInputNumRule\" value=\"50\" exProperty=\"include\" /><rule name=\"requiredRule\" value=\"true\" /></rules><options><option displayName=\"Product dimensions\" value=\"150\" cnName=\"尺寸图\" supportText=\"false\" /><option displayName=\"Scene image\" value=\"200\" cnName=\"场景图\" supportText=\"false\" /><option displayName=\"Detail shot\" value=\"300\" cnName=\"细节图\" supportText=\"true\" /><option displayName=\"Other product images\" value=\"350\" cnName=\"其他商品图片\" supportText=\"false\" /></options></field><field id=\"images\" name=\"images\" type=\"multiComplex\"><rules><rule name=\"requiredRule\" value=\"true\" /><rule name=\"maxItemsRule\" value=\"30\" exProperty=\"include\" /></rules><fields><field id=\"imageURL\" name=\"imageURL\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field><field id=\"generalText\" name=\"generalText\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"maxInputNumRule\" value=\"500\" exProperty=\"include\" /></rules></field></fields></field></fields></field>",
+        "companyImage": "<field id=\"companyImage\" name=\"Company Picture\" type=\"multiComplex\"><rules><rule name=\"maxCustomGalleryItem\" value=\"3\" /><rule name=\"supportCustomOrder\" value=\"true\" /></rules><complex-values><field id=\"images\" type=\"multiComplex\"><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/Sf587c854711748af9759e77ce5aeb03c3.png_350x350.png</value></field></complex-values></field><field id=\"gallery\" type=\"singleCheck\"><value displayName=\"Company overview\">400</value></field></complex-values><complex-values><field id=\"images\" type=\"multiComplex\"><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/Sfea34bbd56ae4d0583aa855838eb1454F.png_350x350.png</value></field></complex-values></field><field id=\"gallery\" type=\"singleCheck\"><value displayName=\"Factory profile\">500</value></field></complex-values><complex-values><field id=\"images\" type=\"multiComplex\"><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/S2a3af5690d524680824086ad8419dbc9G.png_350x350.png</value></field></complex-values></field><field id=\"gallery\" type=\"singleCheck\"><value displayName=\"Customization capabilities\">550</value></field></complex-values><complex-values><field id=\"images\" type=\"multiComplex\"><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/Sdc4e18f098e142b797df687e8befbfa14.png_350x350.png</value></field></complex-values></field><field id=\"gallery\" type=\"singleCheck\"><value displayName=\"Production workflow\">600</value></field></complex-values><complex-values><field id=\"images\" type=\"multiComplex\"><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/Sc1dc6ec7d435404db6a31c6938a734a0g.png_350x350.png</value></field></complex-values></field><field id=\"gallery\" type=\"singleCheck\"><value displayName=\"Packaging &amp; shipping specifications\">700</value></field></complex-values><fields><field id=\"gallery\" name=\"gallery\" type=\"singleCheck\"><rules><rule name=\"valueTypeRule\" value=\"long\" /><rule name=\"maxInputNumRule\" value=\"50\" exProperty=\"include\" /><rule name=\"requiredRule\" value=\"true\" /></rules><options><option displayName=\"Company overview\" value=\"400\" cnName=\"公司介绍\" supportText=\"false\" /><option displayName=\"Competitive advantages\" value=\"450\" cnName=\"公司优势\" supportText=\"false\" /><option displayName=\"Factory profile\" value=\"500\" cnName=\"工厂情况\" supportText=\"false\" /><option displayName=\"Customization capabilities\" value=\"550\" cnName=\"定制能力\" supportText=\"true\" /><option displayName=\"Production workflow\" value=\"600\" cnName=\"生产流程\" supportText=\"false\" /><option displayName=\"Trade show participation\" value=\"650\" cnName=\"参展情况\" supportText=\"false\" /><option displayName=\"Packaging &amp; shipping specifications\" value=\"700\" cnName=\"包装运输\" supportText=\"false\" /><option displayName=\"Extended company profile\" value=\"750\" cnName=\"其他公司介绍\" supportText=\"false\" /></options></field><field id=\"images\" name=\"images\" type=\"multiComplex\"><rules><rule name=\"requiredRule\" value=\"true\" /><rule name=\"maxItemsRule\" value=\"30\" exProperty=\"include\" /></rules><fields><field id=\"imageURL\" name=\"imageURL\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field><field id=\"generalText\" name=\"generalText\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"maxInputNumRule\" value=\"500\" exProperty=\"include\" /></rules></field></fields></field></fields></field>"
+      },
+      "get_refs": {
+        "request_id": "21501be117900858324643124",
+        "trace_id": "210313ec17900858321558512e0b6b",
+        "error": null
+      },
+      "render_refs": {
+        "request_id": "21546a1d17900858390608429",
+        "trace_id": "210325bb17900858387238073e0dfd",
+        "error": null
+      }
+    },
+    "HR008-B": {
+      "product_id": 1601943422371,
+      "product": {
+        "subject": "Private Label Black Low Top Walking Shoes Synthetic Leather Lace-Up Cupsole Sneakers EVA Midsole Rubber Outsole All Seasons EU",
+        "red_model": null,
+        "category_id": 201334413,
+        "group_id": 972130291,
+        "status": "approved",
+        "display": "Y",
+        "pc_detail_url": "https://www.alibaba.com/product-detail/Private-Label-Black-Low-Top-Walking_1601943422371.html",
+        "attributes": {
+          "Fit Type": "Regular Fit",
+          "Midsole Material": "EVA",
+          "Season": "All Seasons",
+          "Style": "Walking Shoes",
+          "Outsole Material": "Rubber",
+          "Closure Type": "Lace-up",
+          "Toe Style": "Round Toe",
+          "Place of Origin": "CN",
+          "Model Number": "HR008-B",
+          "Lining Material": "Textile"
+        },
+        "sku_axes": {
+          "Color": [
+            "Light Beige",
+            "Black",
+            "Clean White"
+          ],
+          "EUR Size": [
+            "45",
+            "44",
+            "43",
+            "42",
+            "41",
+            "40",
+            "39",
+            "38",
+            "37",
+            "36"
+          ]
+        },
+        "sku_count": 30,
+        "prices": [
+          "9.18",
+          "9.28",
+          "9.58"
+        ],
+        "moq": "2",
+        "main_images": [
+          "https://sc04.alicdn.com/kf/Hcd25b63c2d184f1a8f85ec6fc739a68cP.png",
+          "https://sc04.alicdn.com/kf/Add93df345bb34d90890a4bd5ff0a7f87N.png",
+          "https://sc04.alicdn.com/kf/A845c9d2534254ed49ffe1c64d5166579e.png",
+          "https://sc04.alicdn.com/kf/A325e06c0cf55400fa994866bce1f8ec1D.png",
+          "https://sc04.alicdn.com/kf/Af1a002fd1f0b49c7b7b259f807f2fc23t.png",
+          "https://sc04.alicdn.com/kf/A913ed0c7c3a147f6b18ba0af0bfdaab6n.png"
+        ],
+        "detail_images": [
+          {
+            "image_set": {
+              "name": "Other product images",
+              "id": "350"
+            },
+            "image_url": "https://sc04.alicdn.com/kf/A3429788b7cee4992904cd6644bbec3360.png"
+          },
+          {
+            "image_set": {
+              "name": "Detail shot",
+              "id": "300"
+            },
+            "image_url": "https://sc04.alicdn.com/kf/Ab191c2179047439b99f0aa85a23eee20x.png"
+          },
+          {
+            "image_set": {
+              "name": "Other product images",
+              "id": "350"
+            },
+            "image_url": "https://sc04.alicdn.com/kf/A4089745dea38405daa9471313cba4bf3g.png"
+          },
+          {
+            "image_set": {
+              "name": "Other product images",
+              "id": "350"
+            },
+            "image_url": "https://sc04.alicdn.com/kf/A6f9a1b6e4f9d45039991bab4070c8e7bk.png"
+          }
+        ],
+        "company_images": [
+          {
+            "image_set": {
+              "name": "Packaging & shipping specifications",
+              "id": 700
+            },
+            "image_url": "https://sc04.alicdn.com/kf/Sc1dc6ec7d435404db6a31c6938a734a0g.png"
+          },
+          {
+            "image_set": {
+              "name": "Production workflow",
+              "id": 600
+            },
+            "image_url": "https://sc04.alicdn.com/kf/Sdc4e18f098e142b797df687e8befbfa14.png"
+          },
+          {
+            "image_set": {
+              "name": "Customization capabilities",
+              "id": 550
+            },
+            "image_url": "https://sc04.alicdn.com/kf/S2a3af5690d524680824086ad8419dbc9G.png"
+          },
+          {
+            "image_set": {
+              "name": "Factory profile",
+              "id": 500
+            },
+            "image_url": "https://sc04.alicdn.com/kf/Sfea34bbd56ae4d0583aa855838eb1454F.png"
+          },
+          {
+            "image_set": {
+              "name": "Company overview",
+              "id": 400
+            },
+            "image_url": "https://sc04.alicdn.com/kf/Sf587c854711748af9759e77ce5aeb03c3.png"
+          }
+        ]
+      },
+      "schema_fields": {
+        "productTitle": "<field id=\"productTitle\" name=\"Product name\" type=\"input\"><rules><rule name=\"tipRule\" value=\"The &lt;div&gt; should contain information such as product name, product characteristics (attributes), industry standards, certifications, and models to avoid listing and stacking. &lt;br&gt;&lt;a href=&quot;https://service.alibaba.com/page/knowledge? pageId = 127 &amp; category = 9207967 &amp; knowledge = 20142419 &amp; language = zh &quot;target =&quot;_blank &quot;&gt; How do I set the product title? &lt;/a&gt;\" /><rule name=\"tipRule\" value=\"The key information of standardized products will be displaied by default, please do not repeat it in the product name\" /><rule name=\"requiredRule\" value=\"true\" /><rule name=\"maxLengthRule\" value=\"128\" exProperty=\"include\" unit=\"byte\" /><rule name=\"regexRule\" value=\"[^\\x04-\\x80≤≥‰±㎡℃℉°μΩé3²³㎡m³]+|[@@!！\\?？]\" exProperty=\"not include\" /><rule name=\"regexRule\" value=\"\\w+(?:[\\-+.]\\w+)*@\\w+(?:[\\-.]\\w+)*\\.\\w+(?:[\\-.]\\w+)*\" exProperty=\"not include\" /><rule name=\"regexRule\" value=\"&lt;[^&gt;]+&gt;\" exProperty=\"not include\" /><rule name=\"valueTypeRule\" value=\"text\" /></rules><value>Private Label Black Low Top Walking Shoes Synthetic Leather Lace-Up Cupsole Sneakers EVA Midsole Rubber Outsole All Seasons EU</value></field>",
+        "p-3": "<field id=\"p-3\" name=\"Model Number\" type=\"input\"><value inputValue=\"HR008-B\">-2</value></field>",
+        "imageVideo": "<field id=\"imageVideo\" name=\"Product Video\" type=\"singleCheck\"><rules><rule name=\"tipRule\" value=\"The main video will be displayed on the first slide of your image carousel.   Make sure your video length does not exceed 45 seconds and the file size does not exceed 100MB. \" /><rule name=\"tipRule\" value=\"The product detail video will be displayed on the top of your product description.   Make sure your video length does not exceed 10 minutes and the file size does not exceed 500MB. \" /><rule name=\"tipRule\" value=\"•To encourage suppliers to upload high quality videos and detail videos, the available storage for videos has been increased from 1GB to 3GB.\" /><rule name=\"maxLengthRule\" value=\"104857600\" exProperty=\"include\" unit=\"byte\" /></rules></field>",
+        "detailVideo": "<field id=\"detailVideo\" name=\"Additional videos\" type=\"singleCheck\"><rules><rule name=\"maxLengthRule\" value=\"524288000\" exProperty=\"include\" unit=\"byte\" /></rules></field>",
+        "scImages": "<field id=\"scImages\" name=\"Product images\" type=\"complex\"><rules><rule name=\"requiredRule\" value=\"true\" /><rule name=\"maxInputNumRule\" value=\"6\" exProperty=\"include\" /><rule name=\"minInputNumRule\" value=\"1\" exProperty=\"include\" /><rule name=\"maxImageSizeRule\" value=\"4194304\" exProperty=\"include\" /></rules><complex-value><field id=\"scImages_1\" type=\"input\"><value fileFlag=\"no\" fileId=\"0\">//sc04.alicdn.com/kf/Add93df345bb34d90890a4bd5ff0a7f87N.png_350x350.png</value></field><field id=\"scImages_2\" type=\"input\"><value fileFlag=\"no\" fileId=\"0\">//sc04.alicdn.com/kf/A845c9d2534254ed49ffe1c64d5166579e.png_350x350.png</value></field><field id=\"scImages_0\" type=\"input\"><value fileFlag=\"no\" fileId=\"0\">//sc04.alicdn.com/kf/Hcd25b63c2d184f1a8f85ec6fc739a68cP.png_350x350.png</value></field><field id=\"scImages_5\" type=\"input\"><value fileFlag=\"no\" fileId=\"0\">//sc04.alicdn.com/kf/A913ed0c7c3a147f6b18ba0af0bfdaab6n.png_350x350.png</value></field><field id=\"scImages_3\" type=\"input\"><value fileFlag=\"no\" fileId=\"0\">//sc04.alicdn.com/kf/A325e06c0cf55400fa994866bce1f8ec1D.png_350x350.png</value></field><field id=\"scImages_4\" type=\"input\"><value fileFlag=\"no\" fileId=\"0\">//sc04.alicdn.com/kf/Af1a002fd1f0b49c7b7b259f807f2fc23t.png_350x350.png</value></field></complex-value><fields><field id=\"scImages_0\" name=\"Product images\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"url\" /><rule name=\"valueAttributeRule\" value=\"fileId\" desc=\"图片银行图片ID\" /></rules></field><field id=\"scImages_1\" name=\"Product images\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"url\" /><rule name=\"valueAttributeRule\" value=\"fileId\" desc=\"图片银行图片ID\" /></rules></field><field id=\"scImages_2\" name=\"Product images\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"url\" /><rule name=\"valueAttributeRule\" value=\"fileId\" desc=\"图片银行图片ID\" /></rules></field><field id=\"scImages_3\" name=\"Product images\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"url\" /><rule name=\"valueAttributeRule\" value=\"fileId\" desc=\"图片银行图片ID\" /></rules></field><field id=\"scImages_4\" name=\"Product images\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"url\" /><rule name=\"valueAttributeRule\" value=\"fileId\" desc=\"图片银行图片ID\" /></rules></field><field id=\"scImages_5\" name=\"Product images\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"url\" /><rule name=\"valueAttributeRule\" value=\"fileId\" desc=\"图片银行图片ID\" /></rules></field></fields></field>",
+        "detailImage": "<field id=\"detailImage\" name=\"Details of the picture\" type=\"multiComplex\"><rules><rule name=\"requiredRule\" value=\"true\" /><rule name=\"maxCustomGalleryItem\" value=\"5\" /><rule name=\"supportCustomOrder\" value=\"true\" /><rule name=\"supportCustomGallery\" value=\"true\" /></rules><complex-values><field id=\"images\" type=\"multiComplex\"><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/Ab191c2179047439b99f0aa85a23eee20x.png_350x350.png</value></field></complex-values></field><field id=\"gallery\" type=\"singleCheck\"><value displayName=\"Detail shot\">300</value></field></complex-values><complex-values><field id=\"images\" type=\"multiComplex\"><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/A3429788b7cee4992904cd6644bbec3360.png_350x350.png</value></field></complex-values><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/A4089745dea38405daa9471313cba4bf3g.png_350x350.png</value></field></complex-values><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/A6f9a1b6e4f9d45039991bab4070c8e7bk.png_350x350.png</value></field></complex-values></field><field id=\"gallery\" type=\"singleCheck\"><value displayName=\"Other product images\">350</value></field></complex-values><fields><field id=\"gallery\" name=\"gallery\" type=\"singleCheck\"><rules><rule name=\"valueTypeRule\" value=\"long\" /><rule name=\"maxInputNumRule\" value=\"50\" exProperty=\"include\" /><rule name=\"requiredRule\" value=\"true\" /></rules><options><option displayName=\"Product dimensions\" value=\"150\" cnName=\"尺寸图\" supportText=\"false\" /><option displayName=\"Scene image\" value=\"200\" cnName=\"场景图\" supportText=\"false\" /><option displayName=\"Detail shot\" value=\"300\" cnName=\"细节图\" supportText=\"true\" /><option displayName=\"Other product images\" value=\"350\" cnName=\"其他商品图片\" supportText=\"false\" /></options></field><field id=\"images\" name=\"images\" type=\"multiComplex\"><rules><rule name=\"requiredRule\" value=\"true\" /><rule name=\"maxItemsRule\" value=\"30\" exProperty=\"include\" /></rules><fields><field id=\"imageURL\" name=\"imageURL\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field><field id=\"generalText\" name=\"generalText\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"maxInputNumRule\" value=\"500\" exProperty=\"include\" /></rules></field></fields></field></fields></field>",
+        "companyImage": "<field id=\"companyImage\" name=\"Company Picture\" type=\"multiComplex\"><rules><rule name=\"maxCustomGalleryItem\" value=\"3\" /><rule name=\"supportCustomOrder\" value=\"true\" /></rules><complex-values><field id=\"images\" type=\"multiComplex\"><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/Sf587c854711748af9759e77ce5aeb03c3.png_350x350.png</value></field></complex-values></field><field id=\"gallery\" type=\"singleCheck\"><value displayName=\"Company overview\">400</value></field></complex-values><complex-values><field id=\"images\" type=\"multiComplex\"><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/Sfea34bbd56ae4d0583aa855838eb1454F.png_350x350.png</value></field></complex-values></field><field id=\"gallery\" type=\"singleCheck\"><value displayName=\"Factory profile\">500</value></field></complex-values><complex-values><field id=\"images\" type=\"multiComplex\"><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/S2a3af5690d524680824086ad8419dbc9G.png_350x350.png</value></field></complex-values></field><field id=\"gallery\" type=\"singleCheck\"><value displayName=\"Customization capabilities\">550</value></field></complex-values><complex-values><field id=\"images\" type=\"multiComplex\"><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/Sdc4e18f098e142b797df687e8befbfa14.png_350x350.png</value></field></complex-values></field><field id=\"gallery\" type=\"singleCheck\"><value displayName=\"Production workflow\">600</value></field></complex-values><complex-values><field id=\"images\" type=\"multiComplex\"><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/Sc1dc6ec7d435404db6a31c6938a734a0g.png_350x350.png</value></field></complex-values></field><field id=\"gallery\" type=\"singleCheck\"><value displayName=\"Packaging &amp; shipping specifications\">700</value></field></complex-values><fields><field id=\"gallery\" name=\"gallery\" type=\"singleCheck\"><rules><rule name=\"valueTypeRule\" value=\"long\" /><rule name=\"maxInputNumRule\" value=\"50\" exProperty=\"include\" /><rule name=\"requiredRule\" value=\"true\" /></rules><options><option displayName=\"Company overview\" value=\"400\" cnName=\"公司介绍\" supportText=\"false\" /><option displayName=\"Competitive advantages\" value=\"450\" cnName=\"公司优势\" supportText=\"false\" /><option displayName=\"Factory profile\" value=\"500\" cnName=\"工厂情况\" supportText=\"false\" /><option displayName=\"Customization capabilities\" value=\"550\" cnName=\"定制能力\" supportText=\"true\" /><option displayName=\"Production workflow\" value=\"600\" cnName=\"生产流程\" supportText=\"false\" /><option displayName=\"Trade show participation\" value=\"650\" cnName=\"参展情况\" supportText=\"false\" /><option displayName=\"Packaging &amp; shipping specifications\" value=\"700\" cnName=\"包装运输\" supportText=\"false\" /><option displayName=\"Extended company profile\" value=\"750\" cnName=\"其他公司介绍\" supportText=\"false\" /></options></field><field id=\"images\" name=\"images\" type=\"multiComplex\"><rules><rule name=\"requiredRule\" value=\"true\" /><rule name=\"maxItemsRule\" value=\"30\" exProperty=\"include\" /></rules><fields><field id=\"imageURL\" name=\"imageURL\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field><field id=\"generalText\" name=\"generalText\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"maxInputNumRule\" value=\"500\" exProperty=\"include\" /></rules></field></fields></field></fields></field>"
+      },
+      "get_refs": {
+        "request_id": "0b80d2d617900858477168871",
+        "trace_id": "210313ec17900858473821048e0c75",
+        "error": null
+      },
+      "render_refs": {
+        "request_id": "213c933517900858542044081",
+        "trace_id": "2103245817900858538817217e47ff",
+        "error": null
+      }
+    },
+    "HR008-C": {
+      "product_id": 1601943451227,
+      "product": {
+        "subject": "Wholesale Light Beige Lace-up Everyday Sneakers Minimal Synthetic Leather Low Top Walking Shoes EU 36-45 Model HR008-C",
+        "red_model": null,
+        "category_id": 201334413,
+        "group_id": 972130291,
+        "status": "approved",
+        "display": "Y",
+        "pc_detail_url": "https://www.alibaba.com/product-detail/Wholesale-Light-Beige-Lace-up-Everyday_1601943451227.html",
+        "attributes": {
+          "Fit Type": "Regular Fit",
+          "Midsole Material": "EVA",
+          "Season": "All Seasons",
+          "Style": "Walking Shoes",
+          "Outsole Material": "Rubber",
+          "Closure Type": "Lace-up",
+          "Toe Style": "Round Toe",
+          "Place of Origin": "CN",
+          "Model Number": "HR008-C",
+          "Lining Material": "Textile"
+        },
+        "sku_axes": {
+          "Color": [
+            "Light Beige",
+            "Black",
+            "Clean White"
+          ],
+          "EUR Size": [
+            "38",
+            "37",
+            "36",
+            "45",
+            "44",
+            "43",
+            "42",
+            "41",
+            "40",
+            "39"
+          ]
+        },
+        "sku_count": 30,
+        "prices": [
+          "9.15",
+          "9.25",
+          "9.55"
+        ],
+        "moq": "2",
+        "main_images": [
+          "https://sc04.alicdn.com/kf/He7451e4fd9f34f5f8281fa93e4cc2ff9f.png",
+          "https://sc04.alicdn.com/kf/Add93df345bb34d90890a4bd5ff0a7f87N.png",
+          "https://sc04.alicdn.com/kf/A845c9d2534254ed49ffe1c64d5166579e.png",
+          "https://sc04.alicdn.com/kf/A325e06c0cf55400fa994866bce1f8ec1D.png",
+          "https://sc04.alicdn.com/kf/Af1a002fd1f0b49c7b7b259f807f2fc23t.png",
+          "https://sc04.alicdn.com/kf/A913ed0c7c3a147f6b18ba0af0bfdaab6n.png"
+        ],
+        "detail_images": [
+          {
+            "image_set": {
+              "name": "Other product images",
+              "id": "350"
+            },
+            "image_url": "https://sc04.alicdn.com/kf/A6f9a1b6e4f9d45039991bab4070c8e7bk.png"
+          },
+          {
+            "image_set": {
+              "name": "Detail shot",
+              "id": "300"
+            },
+            "image_url": "https://sc04.alicdn.com/kf/Ab191c2179047439b99f0aa85a23eee20x.png"
+          },
+          {
+            "image_set": {
+              "name": "Other product images",
+              "id": "350"
+            },
+            "image_url": "https://sc04.alicdn.com/kf/A3429788b7cee4992904cd6644bbec3360.png"
+          },
+          {
+            "image_set": {
+              "name": "Other product images",
+              "id": "350"
+            },
+            "image_url": "https://sc04.alicdn.com/kf/A4089745dea38405daa9471313cba4bf3g.png"
+          }
+        ],
+        "company_images": [
+          {
+            "image_set": {
+              "name": "Factory profile",
+              "id": 500
+            },
+            "image_url": "https://sc04.alicdn.com/kf/Sfea34bbd56ae4d0583aa855838eb1454F.png"
+          },
+          {
+            "image_set": {
+              "name": "Packaging & shipping specifications",
+              "id": 700
+            },
+            "image_url": "https://sc04.alicdn.com/kf/Sc1dc6ec7d435404db6a31c6938a734a0g.png"
+          },
+          {
+            "image_set": {
+              "name": "Customization capabilities",
+              "id": 550
+            },
+            "image_url": "https://sc04.alicdn.com/kf/S2a3af5690d524680824086ad8419dbc9G.png"
+          },
+          {
+            "image_set": {
+              "name": "Company overview",
+              "id": 400
+            },
+            "image_url": "https://sc04.alicdn.com/kf/Sf587c854711748af9759e77ce5aeb03c3.png"
+          },
+          {
+            "image_set": {
+              "name": "Production workflow",
+              "id": 600
+            },
+            "image_url": "https://sc04.alicdn.com/kf/Sdc4e18f098e142b797df687e8befbfa14.png"
+          }
+        ]
+      },
+      "schema_fields": {
+        "productTitle": "<field id=\"productTitle\" name=\"Product name\" type=\"input\"><rules><rule name=\"tipRule\" value=\"The &lt;div&gt; should contain information such as product name, product characteristics (attributes), industry standards, certifications, and models to avoid listing and stacking. &lt;br&gt;&lt;a href=&quot;https://service.alibaba.com/page/knowledge? pageId = 127 &amp; category = 9207967 &amp; knowledge = 20142419 &amp; language = zh &quot;target =&quot;_blank &quot;&gt; How do I set the product title? &lt;/a&gt;\" /><rule name=\"tipRule\" value=\"The key information of standardized products will be displaied by default, please do not repeat it in the product name\" /><rule name=\"requiredRule\" value=\"true\" /><rule name=\"maxLengthRule\" value=\"128\" exProperty=\"include\" unit=\"byte\" /><rule name=\"regexRule\" value=\"[^\\x04-\\x80≤≥‰±㎡℃℉°μΩé3²³㎡m³]+|[@@!！\\?？]\" exProperty=\"not include\" /><rule name=\"regexRule\" value=\"\\w+(?:[\\-+.]\\w+)*@\\w+(?:[\\-.]\\w+)*\\.\\w+(?:[\\-.]\\w+)*\" exProperty=\"not include\" /><rule name=\"regexRule\" value=\"&lt;[^&gt;]+&gt;\" exProperty=\"not include\" /><rule name=\"valueTypeRule\" value=\"text\" /></rules><value>Wholesale Light Beige Lace-up Everyday Sneakers Minimal Synthetic Leather Low Top Walking Shoes EU 36-45 Model HR008-C</value></field>",
+        "p-3": "<field id=\"p-3\" name=\"Model Number\" type=\"input\"><value inputValue=\"HR008-C\">-2</value></field>",
+        "imageVideo": "<field id=\"imageVideo\" name=\"Product Video\" type=\"singleCheck\"><rules><rule name=\"tipRule\" value=\"The main video will be displayed on the first slide of your image carousel.   Make sure your video length does not exceed 45 seconds and the file size does not exceed 100MB. \" /><rule name=\"tipRule\" value=\"The product detail video will be displayed on the top of your product description.   Make sure your video length does not exceed 10 minutes and the file size does not exceed 500MB. \" /><rule name=\"tipRule\" value=\"•To encourage suppliers to upload high quality videos and detail videos, the available storage for videos has been increased from 1GB to 3GB.\" /><rule name=\"maxLengthRule\" value=\"104857600\" exProperty=\"include\" unit=\"byte\" /></rules></field>",
+        "detailVideo": "<field id=\"detailVideo\" name=\"Additional videos\" type=\"singleCheck\"><rules><rule name=\"maxLengthRule\" value=\"524288000\" exProperty=\"include\" unit=\"byte\" /></rules></field>",
+        "scImages": "<field id=\"scImages\" name=\"Product images\" type=\"complex\"><rules><rule name=\"requiredRule\" value=\"true\" /><rule name=\"maxInputNumRule\" value=\"6\" exProperty=\"include\" /><rule name=\"minInputNumRule\" value=\"1\" exProperty=\"include\" /><rule name=\"maxImageSizeRule\" value=\"4194304\" exProperty=\"include\" /></rules><complex-value><field id=\"scImages_1\" type=\"input\"><value fileFlag=\"no\" fileId=\"0\">//sc04.alicdn.com/kf/Add93df345bb34d90890a4bd5ff0a7f87N.png_350x350.png</value></field><field id=\"scImages_2\" type=\"input\"><value fileFlag=\"no\" fileId=\"0\">//sc04.alicdn.com/kf/A845c9d2534254ed49ffe1c64d5166579e.png_350x350.png</value></field><field id=\"scImages_0\" type=\"input\"><value fileFlag=\"no\" fileId=\"0\">//sc04.alicdn.com/kf/He7451e4fd9f34f5f8281fa93e4cc2ff9f.png_350x350.png</value></field><field id=\"scImages_5\" type=\"input\"><value fileFlag=\"no\" fileId=\"0\">//sc04.alicdn.com/kf/A913ed0c7c3a147f6b18ba0af0bfdaab6n.png_350x350.png</value></field><field id=\"scImages_3\" type=\"input\"><value fileFlag=\"no\" fileId=\"0\">//sc04.alicdn.com/kf/A325e06c0cf55400fa994866bce1f8ec1D.png_350x350.png</value></field><field id=\"scImages_4\" type=\"input\"><value fileFlag=\"no\" fileId=\"0\">//sc04.alicdn.com/kf/Af1a002fd1f0b49c7b7b259f807f2fc23t.png_350x350.png</value></field></complex-value><fields><field id=\"scImages_0\" name=\"Product images\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"url\" /><rule name=\"valueAttributeRule\" value=\"fileId\" desc=\"图片银行图片ID\" /></rules></field><field id=\"scImages_1\" name=\"Product images\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"url\" /><rule name=\"valueAttributeRule\" value=\"fileId\" desc=\"图片银行图片ID\" /></rules></field><field id=\"scImages_2\" name=\"Product images\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"url\" /><rule name=\"valueAttributeRule\" value=\"fileId\" desc=\"图片银行图片ID\" /></rules></field><field id=\"scImages_3\" name=\"Product images\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"url\" /><rule name=\"valueAttributeRule\" value=\"fileId\" desc=\"图片银行图片ID\" /></rules></field><field id=\"scImages_4\" name=\"Product images\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"url\" /><rule name=\"valueAttributeRule\" value=\"fileId\" desc=\"图片银行图片ID\" /></rules></field><field id=\"scImages_5\" name=\"Product images\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"url\" /><rule name=\"valueAttributeRule\" value=\"fileId\" desc=\"图片银行图片ID\" /></rules></field></fields></field>",
+        "detailImage": "<field id=\"detailImage\" name=\"Details of the picture\" type=\"multiComplex\"><rules><rule name=\"requiredRule\" value=\"true\" /><rule name=\"maxCustomGalleryItem\" value=\"5\" /><rule name=\"supportCustomOrder\" value=\"true\" /><rule name=\"supportCustomGallery\" value=\"true\" /></rules><complex-values><field id=\"images\" type=\"multiComplex\"><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/Ab191c2179047439b99f0aa85a23eee20x.png_350x350.png</value></field></complex-values></field><field id=\"gallery\" type=\"singleCheck\"><value displayName=\"Detail shot\">300</value></field></complex-values><complex-values><field id=\"images\" type=\"multiComplex\"><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/A6f9a1b6e4f9d45039991bab4070c8e7bk.png_350x350.png</value></field></complex-values><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/A3429788b7cee4992904cd6644bbec3360.png_350x350.png</value></field></complex-values><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/A4089745dea38405daa9471313cba4bf3g.png_350x350.png</value></field></complex-values></field><field id=\"gallery\" type=\"singleCheck\"><value displayName=\"Other product images\">350</value></field></complex-values><fields><field id=\"gallery\" name=\"gallery\" type=\"singleCheck\"><rules><rule name=\"valueTypeRule\" value=\"long\" /><rule name=\"maxInputNumRule\" value=\"50\" exProperty=\"include\" /><rule name=\"requiredRule\" value=\"true\" /></rules><options><option displayName=\"Product dimensions\" value=\"150\" cnName=\"尺寸图\" supportText=\"false\" /><option displayName=\"Scene image\" value=\"200\" cnName=\"场景图\" supportText=\"false\" /><option displayName=\"Detail shot\" value=\"300\" cnName=\"细节图\" supportText=\"true\" /><option displayName=\"Other product images\" value=\"350\" cnName=\"其他商品图片\" supportText=\"false\" /></options></field><field id=\"images\" name=\"images\" type=\"multiComplex\"><rules><rule name=\"requiredRule\" value=\"true\" /><rule name=\"maxItemsRule\" value=\"30\" exProperty=\"include\" /></rules><fields><field id=\"imageURL\" name=\"imageURL\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field><field id=\"generalText\" name=\"generalText\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"maxInputNumRule\" value=\"500\" exProperty=\"include\" /></rules></field></fields></field></fields></field>",
+        "companyImage": "<field id=\"companyImage\" name=\"Company Picture\" type=\"multiComplex\"><rules><rule name=\"maxCustomGalleryItem\" value=\"3\" /><rule name=\"supportCustomOrder\" value=\"true\" /></rules><complex-values><field id=\"images\" type=\"multiComplex\"><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/Sf587c854711748af9759e77ce5aeb03c3.png_350x350.png</value></field></complex-values></field><field id=\"gallery\" type=\"singleCheck\"><value displayName=\"Company overview\">400</value></field></complex-values><complex-values><field id=\"images\" type=\"multiComplex\"><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/Sfea34bbd56ae4d0583aa855838eb1454F.png_350x350.png</value></field></complex-values></field><field id=\"gallery\" type=\"singleCheck\"><value displayName=\"Factory profile\">500</value></field></complex-values><complex-values><field id=\"images\" type=\"multiComplex\"><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/S2a3af5690d524680824086ad8419dbc9G.png_350x350.png</value></field></complex-values></field><field id=\"gallery\" type=\"singleCheck\"><value displayName=\"Customization capabilities\">550</value></field></complex-values><complex-values><field id=\"images\" type=\"multiComplex\"><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/Sdc4e18f098e142b797df687e8befbfa14.png_350x350.png</value></field></complex-values></field><field id=\"gallery\" type=\"singleCheck\"><value displayName=\"Production workflow\">600</value></field></complex-values><complex-values><field id=\"images\" type=\"multiComplex\"><complex-values><field id=\"imageURL\" type=\"input\"><value>//sc04.alicdn.com/kf/Sc1dc6ec7d435404db6a31c6938a734a0g.png_350x350.png</value></field></complex-values></field><field id=\"gallery\" type=\"singleCheck\"><value displayName=\"Packaging &amp; shipping specifications\">700</value></field></complex-values><fields><field id=\"gallery\" name=\"gallery\" type=\"singleCheck\"><rules><rule name=\"valueTypeRule\" value=\"long\" /><rule name=\"maxInputNumRule\" value=\"50\" exProperty=\"include\" /><rule name=\"requiredRule\" value=\"true\" /></rules><options><option displayName=\"Company overview\" value=\"400\" cnName=\"公司介绍\" supportText=\"false\" /><option displayName=\"Competitive advantages\" value=\"450\" cnName=\"公司优势\" supportText=\"false\" /><option displayName=\"Factory profile\" value=\"500\" cnName=\"工厂情况\" supportText=\"false\" /><option displayName=\"Customization capabilities\" value=\"550\" cnName=\"定制能力\" supportText=\"true\" /><option displayName=\"Production workflow\" value=\"600\" cnName=\"生产流程\" supportText=\"false\" /><option displayName=\"Trade show participation\" value=\"650\" cnName=\"参展情况\" supportText=\"false\" /><option displayName=\"Packaging &amp; shipping specifications\" value=\"700\" cnName=\"包装运输\" supportText=\"false\" /><option displayName=\"Extended company profile\" value=\"750\" cnName=\"其他公司介绍\" supportText=\"false\" /></options></field><field id=\"images\" name=\"images\" type=\"multiComplex\"><rules><rule name=\"requiredRule\" value=\"true\" /><rule name=\"maxItemsRule\" value=\"30\" exProperty=\"include\" /></rules><fields><field id=\"imageURL\" name=\"imageURL\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /></rules></field><field id=\"generalText\" name=\"generalText\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"maxInputNumRule\" value=\"500\" exProperty=\"include\" /></rules></field></fields></field></fields></field>"
+      },
+      "get_refs": {
+        "request_id": "21501be117900858626834053",
+        "trace_id": "210334ab17900858623618143e0ec8",
+        "error": null
+      },
+      "render_refs": {
+        "request_id": "210829b717900858695566606",
+        "trace_id": "2103346a17900858692157469e0d0a",
+        "error": null
+      }
+    }
+  }
+}

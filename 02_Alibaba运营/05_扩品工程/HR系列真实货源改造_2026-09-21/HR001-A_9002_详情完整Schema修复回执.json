@@ -1,0 +1,87 @@
+{
+  "product_id": 1601943321794,
+  "method": "full_current_target_schema_replace_detailImage_only",
+  "before": {
+    "status": "approved",
+    "display": "Y",
+    "title": "Wholesale Men's Knit Slip-On Walking Shoes EVA Sole EU 38-47 Model 9002 for Importers",
+    "model": "HR001-A / 9002",
+    "fit_type": "Regular Fit",
+    "sku_count": 20,
+    "main_count": 6,
+    "detail_count": 4,
+    "detail_urls": [
+      "https://sc04.alicdn.com/kf/A5fcde3e399ee44fca0f1492d7a27c5a6X.png",
+      "https://sc04.alicdn.com/kf/Ae2d54b8df0004519a9a5412580c2ac84b.png",
+      "https://sc04.alicdn.com/kf/A98808cf8bb864dfd999b11979679b2cf5.png",
+      "https://sc04.alicdn.com/kf/A3c4d7d35cc4e4739b94dba964fc57568v.png"
+    ],
+    "company_count": 5
+  },
+  "gates": {
+    "approved_online": true,
+    "title_ok": true,
+    "model_ok": true,
+    "sku_count_ok": true,
+    "main_and_company_ok": true,
+    "old_detail_count_confirmed": true
+  },
+  "expected_tokens": [
+    "H01ae8a622bd246a38cb229c42c6de347Q",
+    "H0f9911f7f4c741498cc5136d726f4ea1Y",
+    "H73087b896040408e8c8273c992601d50Q",
+    "H7c844f80d25b4b9f97e1bffedad8eb1cI",
+    "Hc4d8cf746fae4b009a8af40cd8ca59ebE"
+  ],
+  "xml_chars": 119110,
+  "xml_sha256": "d78fbefc1e9ba65db83bcabc93429066708d33035383008493068231e662271b",
+  "before_refs": {
+    "request_id": "0bbb637a17900491679973989",
+    "trace_id": "2101dbd017900491676432682e0c87",
+    "error": null,
+    "biz_success": null
+  },
+  "render_refs": {
+    "request_id": "213c932b17900491741365439",
+    "trace_id": "2101d13c17900491738136572e0c89",
+    "error": null,
+    "biz_success": true
+  },
+  "update_refs": {
+    "request_id": "213c934417900491843212249",
+    "trace_id": "2101e68f17900491815428946e0f14",
+    "error": null,
+    "biz_success": true
+  },
+  "immediate_readback": {
+    "status": "modified",
+    "display": "N",
+    "title": "Wholesale Men's Knit Slip-On Walking Shoes EVA Sole EU 38-47 Model 9002 for Importers",
+    "model": "HR001-A / 9002",
+    "fit_type": "Regular Fit",
+    "sku_count": 20,
+    "main_count": 6,
+    "detail_count": 4,
+    "detail_urls": [
+      "https://sc04.alicdn.com/kf/A5fcde3e399ee44fca0f1492d7a27c5a6X.png",
+      "https://sc04.alicdn.com/kf/Ae2d54b8df0004519a9a5412580c2ac84b.png",
+      "https://sc04.alicdn.com/kf/A98808cf8bb864dfd999b11979679b2cf5.png",
+      "https://sc04.alicdn.com/kf/A3c4d7d35cc4e4739b94dba964fc57568v.png"
+    ],
+    "company_count": 5
+  },
+  "actual_tokens": [
+    "A3c4d7d35cc4e4739b94dba964fc57568v",
+    "A5fcde3e399ee44fca0f1492d7a27c5a6X",
+    "A98808cf8bb864dfd999b11979679b2cf5",
+    "Ae2d54b8df0004519a9a5412580c2ac84b"
+  ],
+  "readback_refs": {
+    "request_id": "2105044417900491915042373",
+    "trace_id": "2101fca817900491911788398e112c",
+    "error": null,
+    "biz_success": null
+  },
+  "verified": false,
+  "accepted_pending_review": true
+}

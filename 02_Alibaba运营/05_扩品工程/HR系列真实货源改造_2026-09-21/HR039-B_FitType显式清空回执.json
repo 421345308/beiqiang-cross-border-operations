@@ -1,0 +1,64 @@
+{
+  "product_id": 1601943670292,
+  "method": "minimal_incremental_explicit_empty_customMoreProperty",
+  "before": {
+    "status": "approved",
+    "display": "Y",
+    "subject": "Men's High Top Knit Slip-On Walking Shoes EVA Sole EU 35-45 Wholesale OEM for Daily Wear",
+    "model": "HR039-B / 8025",
+    "pattern": "Solid",
+    "fit_type": "Regular Fit",
+    "sku_count": 22,
+    "main_images": 6,
+    "detail_images": 5,
+    "company_images": 5
+  },
+  "gates": {
+    "approved_and_online": true,
+    "title_ok": true,
+    "model_ok": true,
+    "pattern_ok": true,
+    "fit_type_present": true,
+    "sku_count_ok": true,
+    "gallery_ok": true
+  },
+  "before_value_xml": "<complex-value><field id=\"customMoreProperty_0\" type=\"complex\"><complex-value><field id=\"valueName\" type=\"input\"><value>Regular Fit</value></field><field id=\"propName\" type=\"input\"><value>Fit Type</value></field></complex-value></field></complex-value>",
+  "submitted_xml": "<itemSchema><field id=\"customMoreProperty\" type=\"complex\"><complex-value /></field></itemSchema>",
+  "xml_sha256": "b618eb62d4450564a9d7fe11a4a9b33a56e92b53bcf99e5a57e31ea32855beed",
+  "before_refs": {
+    "request_id": "213e759c17900419109995736",
+    "trace_id": "210325bb17900419106898295e1090",
+    "error": null,
+    "biz_success": null
+  },
+  "render_refs": {
+    "request_id": "0b830ecc17900419171527467",
+    "trace_id": "2103243417900419167922929e0d1b",
+    "error": null,
+    "biz_success": true
+  },
+  "update_refs": {
+    "request_id": "213d4e4917900419250208675",
+    "trace_id": "210334ab17900419246891145e0bb3",
+    "error": null,
+    "biz_success": true
+  },
+  "immediate_readback": {
+    "status": "approved",
+    "display": "Y",
+    "subject": "Men's High Top Knit Slip-On Walking Shoes EVA Sole EU 35-45 Wholesale OEM for Daily Wear",
+    "model": "HR039-B / 8025",
+    "pattern": "Solid",
+    "fit_type": "Regular Fit",
+    "sku_count": 22,
+    "main_images": 6,
+    "detail_images": 5,
+    "company_images": 5
+  },
+  "readback_refs": {
+    "request_id": "0bbb637a17900419323393817",
+    "trace_id": "2103243417900419320156798e0e23",
+    "error": null,
+    "biz_success": null
+  }
+}

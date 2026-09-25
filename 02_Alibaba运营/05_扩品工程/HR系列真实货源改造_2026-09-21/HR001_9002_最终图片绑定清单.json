@@ -1,0 +1,265 @@
+{
+  "product_family": "HR001",
+  "source_model": "9002",
+  "source_url": "https://bqgcd.sooxie.com/detail/2536154",
+  "source_price_cny": 55.0,
+  "source_checked_at": "2026-09-22",
+  "source_facts": {
+    "target": "Men",
+    "upper": "Textile",
+    "outsole": "EVA",
+    "closure": "Slip-On / No Laces",
+    "season": "Autumn 2026",
+    "colors": [
+      "Light Gray / Beige Sole",
+      "Dark Gray / Black Sole"
+    ],
+    "eur_sizes": [
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47
+    ],
+    "supplier_page_original_claim": true,
+    "supplier_inventory_claim": false
+  },
+  "pricing": {
+    "usd_cny_reference": 6.7487,
+    "minimum_130pct_cny": 71.5,
+    "minimum_130pct_usd": 10.5946,
+    "planned_tiers_usd": [
+      [
+        2,
+        11.9
+      ],
+      [
+        50,
+        11.5
+      ],
+      [
+        100,
+        10.9
+      ]
+    ],
+    "planned_low_price_cny": 73.56083,
+    "planned_low_markup_ratio": 1.3374696,
+    "freight": "quoted separately"
+  },
+  "planned_titles": {
+    "HR001-A": "Wholesale Men's Knit Slip-On Walking Shoes EVA Sole EU 38-47 Model 9002 for Importers",
+    "HR001-B": "Men's Big Size Knit Slip-On Walking Shoes EU 38-47 Casual OEM Model 9002",
+    "HR001-C": "Private Label Men's Textile Slip-On Walking Shoes EVA Outsole EU 38-47 Wholesale Model 9002"
+  },
+  "demand_evidence": [
+    {
+      "observed_at": "2026-09-22",
+      "url": "https://www.alibaba.com/product-detail/big-size-40-47-light-weight_1601224450912.html",
+      "observation": "Public Alibaba listing uses big-size 40-47, breathable mesh, slip-on and walking-shoe intent.",
+      "boundary": "Demand direction only; competitor materials, claims, prices and service promises are not copied."
+    },
+    {
+      "observed_at": "2026-09-22",
+      "url": "https://www.alibaba.com/wholesale/slip-running-shoes-men.html",
+      "observation": "Public wholesale results include men's knit slip-on thick-sole walking/running-shoe demand.",
+      "boundary": "Keyword/demand signal only."
+    }
+  ],
+  "role_order": {
+    "main": [
+      "M1_9002_b2b",
+      "M2_9002_colors_sizes",
+      "M3_9002_construction",
+      "M4_9002_oem_inputs",
+      "M5_factory_quality",
+      "M6_packing_quote"
+    ],
+    "detail": [
+      "D1_product_overview",
+      "D2_verified_specs",
+      "D3_colors_sizes",
+      "D4_price_quote",
+      "D5_oem_project_inputs"
+    ],
+    "sku": [
+      "SKU_9002_light",
+      "SKU_9002_dark"
+    ],
+    "company": [
+      "C1_real_factory_identity",
+      "C2_custom_project_flow",
+      "C3_real_production_organization",
+      "C4_real_quality_checkpoints",
+      "C5_packing_order_handoff"
+    ]
+  },
+  "items": [
+    {
+      "role": "M1_9002_b2b",
+      "local_path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\HR系列真实货源改造_2026-09-21\\01_正式主图候选\\HR001_9002\\M1_9002_b2b.jpg",
+      "sha256": "591e8196dc1b5bcd105774e70109c36d2a4646e10508cfda0d51b0c570673939",
+      "file_id": "33599472797",
+      "url": "https://sc04.alicdn.com/kf/H7ab7666eca414497b3a4376ead8f5612X/286385890/H7ab7666eca414497b3a4376ead8f5612X.jpg",
+      "request_id": "0b51802d17900463793048417",
+      "trace_id": "2101d86517900463774865362e0b92"
+    },
+    {
+      "role": "M2_9002_colors_sizes",
+      "local_path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\HR系列真实货源改造_2026-09-21\\01_正式主图候选\\HR001_9002\\M2_9002_colors_sizes.jpg",
+      "sha256": "7230d62c9d74fc76a0e22fc52743846e65f8bb72ecab4ee784332c464b29a4e2",
+      "file_id": "33602424227",
+      "url": "https://sc04.alicdn.com/kf/H32d8f07fa67247e8858522985d27e2857/286385890/H32d8f07fa67247e8858522985d27e2857.jpg",
+      "request_id": "213c932b17900463869058765",
+      "trace_id": "2101fb9317900463854367300e0f0c"
+    },
+    {
+      "role": "M3_9002_construction",
+      "local_path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\HR系列真实货源改造_2026-09-21\\01_正式主图候选\\HR001_9002\\M3_9002_construction.jpg",
+      "sha256": "01a2673c924fe593cf61ebd291fa2499d8a5653d83c77854a4c6f5e6d197b8a7",
+      "file_id": "33599161431",
+      "url": "https://sc04.alicdn.com/kf/H70708fed544744a0be4c413e9fd3928bA/286385890/H70708fed544744a0be4c413e9fd3928bA.jpg",
+      "request_id": "21501b6717900463949543116",
+      "trace_id": "2101e68f17900463930871171e0b57"
+    },
+    {
+      "role": "M4_9002_oem_inputs",
+      "local_path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\HR系列真实货源改造_2026-09-21\\01_正式主图候选\\HR001_9002\\M4_9002_oem_inputs.jpg",
+      "sha256": "75abcfabfc6f29569b536bd45637788021a7856c6cdb32f3c05cdb0a6aef7d3d",
+      "file_id": "33599389725",
+      "url": "https://sc04.alicdn.com/kf/H2d5013a4ef0b4166980df7cf56df9e36b/286385890/H2d5013a4ef0b4166980df7cf56df9e36b.jpg",
+      "request_id": "213d4e4917900464036503194",
+      "trace_id": "2101dbd017900464015522397e0d0b"
+    },
+    {
+      "role": "M5_factory_quality",
+      "local_path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\HR系列真实货源改造_2026-09-21\\01_正式主图候选\\HR001_9002\\M5_factory_quality.jpg",
+      "sha256": "47a6d533602d85b0b46ac9fbb19ae9f0b3d28b2880ee2030023e65b5090f2f86",
+      "file_id": "33599149445",
+      "url": "https://sc04.alicdn.com/kf/Ha0a575f462224e59af7bdcebce519ca19/286385890/Ha0a575f462224e59af7bdcebce519ca19.jpg",
+      "request_id": "213c932b17900464116332832",
+      "trace_id": "2101dd0617900464097541145e0e0c"
+    },
+    {
+      "role": "M6_packing_quote",
+      "local_path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\HR系列真实货源改造_2026-09-21\\01_正式主图候选\\HR001_9002\\M6_packing_quote.jpg",
+      "sha256": "ec8f8ca2b35ccb0991bafa15cf9de9532a90b9eb8d76b424086b7a2eda947939",
+      "file_id": "33599472932",
+      "url": "https://sc04.alicdn.com/kf/H525aafc0bef84c20b2254c5cd02afc075/286385890/H525aafc0bef84c20b2254c5cd02afc075.jpg",
+      "request_id": "0bbb3b2417900464193368766",
+      "trace_id": "2101dd0617900464177496071e0d4a"
+    },
+    {
+      "role": "D1_product_overview",
+      "local_path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\HR系列真实货源改造_2026-09-21\\02_正式详情候选\\HR001_9002\\D1_product_overview.jpg",
+      "sha256": "80233a8b02fdcdaf9ececa7ad4401de28a8c9273b5abc0aa681a4d9a3443a270",
+      "file_id": "33602460253",
+      "url": "https://sc04.alicdn.com/kf/H01ae8a622bd246a38cb229c42c6de347Q/286385890/H01ae8a622bd246a38cb229c42c6de347Q.jpg",
+      "request_id": "213e759c17900464272302081",
+      "trace_id": "2101fb9317900464255628175e10fb"
+    },
+    {
+      "role": "D2_verified_specs",
+      "local_path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\HR系列真实货源改造_2026-09-21\\02_正式详情候选\\HR001_9002\\D2_verified_specs.jpg",
+      "sha256": "bee2bef190ebcef830250dd774e08bea4540c8ce19eedaf0f7e2c138c0e59dc8",
+      "file_id": "33599425611",
+      "url": "https://sc04.alicdn.com/kf/H73087b896040408e8c8273c992601d50Q/286385890/H73087b896040408e8c8273c992601d50Q.jpg",
+      "request_id": "21546a1d17900464350384715",
+      "trace_id": "2101d14517900464333196105e0dcf"
+    },
+    {
+      "role": "D3_colors_sizes",
+      "local_path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\HR系列真实货源改造_2026-09-21\\02_正式详情候选\\HR001_9002\\D3_colors_sizes.jpg",
+      "sha256": "66f128cf0c94c08a63f488a5273acdf3c3f3ce5d1b6bc7530097b3f396a9cf3b",
+      "file_id": "33599233055",
+      "url": "https://sc04.alicdn.com/kf/H7c844f80d25b4b9f97e1bffedad8eb1cI/286385890/H7c844f80d25b4b9f97e1bffedad8eb1cI.jpg",
+      "request_id": "0bbb637a17900464443378640",
+      "trace_id": "2101fca817900464411356170e0fa0"
+    },
+    {
+      "role": "D4_price_quote",
+      "local_path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\HR系列真实货源改造_2026-09-21\\02_正式详情候选\\HR001_9002\\D4_price_quote.jpg",
+      "sha256": "2ce2ba93c78b696d70b4efca9f9f76bcfff90b354f3bfac709b306058774c392",
+      "file_id": "33599425684",
+      "url": "https://sc04.alicdn.com/kf/Hc4d8cf746fae4b009a8af40cd8ca59ebE/286385890/Hc4d8cf746fae4b009a8af40cd8ca59ebE.jpg",
+      "request_id": "0b830ecc17900464518095278",
+      "trace_id": "2101c5a717900464503861862e0cc5"
+    },
+    {
+      "role": "D5_oem_project_inputs",
+      "local_path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\HR系列真实货源改造_2026-09-21\\02_正式详情候选\\HR001_9002\\D5_oem_project_inputs.jpg",
+      "sha256": "112ed38d1b9f3966af1b9fe80870be1424d4967c2964fa8c0362e1c24ac7be0a",
+      "file_id": "33599401820",
+      "url": "https://sc04.alicdn.com/kf/H0f9911f7f4c741498cc5136d726f4ea1Y/286385890/H0f9911f7f4c741498cc5136d726f4ea1Y.jpg",
+      "request_id": "0bbb3b2417900464592863456",
+      "trace_id": "2101d94717900464578056554e0daa"
+    },
+    {
+      "role": "SKU_9002_dark",
+      "local_path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\HR系列真实货源改造_2026-09-21\\01_正式主图候选\\HR001_9002\\SKU_9002_dark.jpg",
+      "sha256": "be852e949f16e9ac645b9190428761fac587cad554e3d525e3ff296481fdce07",
+      "file_id": "33602556036",
+      "url": "https://sc04.alicdn.com/kf/H530d505a90e641e8b83176177bb6f72b0/286385890/H530d505a90e641e8b83176177bb6f72b0.jpg",
+      "request_id": "0bab02fe17900464668661917",
+      "trace_id": "2101e68f17900464653731883e0c3e"
+    },
+    {
+      "role": "SKU_9002_light",
+      "local_path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\HR系列真实货源改造_2026-09-21\\01_正式主图候选\\HR001_9002\\SKU_9002_light.jpg",
+      "sha256": "62f6e0df985ff57a034bbd8728763dec622dda974e8177cc20350be108e3ab95",
+      "file_id": "33599508954",
+      "url": "https://sc04.alicdn.com/kf/Ha4ff0864311e4a18b6b4532e6d616a39m/286385890/Ha4ff0864311e4a18b6b4532e6d616a39m.jpg",
+      "request_id": "0bbb637a17900464746503305",
+      "trace_id": "2101fca817900464730036270e1087"
+    },
+    {
+      "role": "C1_real_factory_identity",
+      "local_path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\06_图片与检查记录\\公司图复用模板_v4_2026-09-21\\C1_real_factory_identity.jpg",
+      "sha256": "4eff96dbda4a405713f4372e8dfac65b14dc8f07ef1ceb1763829ef63ec0039e",
+      "file_id": "33588673131",
+      "url": "https://sc04.alicdn.com/kf/Hdb2bdb8cea6649228ee7df018cb8fefaQ/286385890/Hdb2bdb8cea6649228ee7df018cb8fefaQ.jpg",
+      "request_id": "0bab02fe17899767611498594",
+      "trace_id": "2101fca817899767594078573e1066"
+    },
+    {
+      "role": "C2_custom_project_flow",
+      "local_path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\06_图片与检查记录\\公司图复用模板_v4_2026-09-21\\C2_custom_project_flow.jpg",
+      "sha256": "4e76ce5a5778c9e1c07cbb51331e9e61505c72766ec6e1f453abda978579155e",
+      "file_id": "33588708680",
+      "url": "https://sc04.alicdn.com/kf/Haa266cbb3f5148bcb19b0d7aea0c30acX/286385890/Haa266cbb3f5148bcb19b0d7aea0c30acX.jpg",
+      "request_id": "213f5a2117899767686988765",
+      "trace_id": "2101e68f17899767671554840e0c81"
+    },
+    {
+      "role": "C3_real_production_organization",
+      "local_path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\06_图片与检查记录\\公司图复用模板_v4_2026-09-21\\C3_real_production_organization.jpg",
+      "sha256": "1e176a6af8442491976cdfefa16cfe6a13119eac33bd43f85322e03df46d21dc",
+      "file_id": "33588625412",
+      "url": "https://sc04.alicdn.com/kf/Hfc4e6ca53d8042d1805cafd0b97dbf92x/286385890/Hfc4e6ca53d8042d1805cafd0b97dbf92x.jpg",
+      "request_id": "21501be117899767767831296",
+      "trace_id": "2101d94717899767749017086e0fda"
+    },
+    {
+      "role": "C4_real_quality_checkpoints",
+      "local_path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\06_图片与检查记录\\公司图复用模板_v4_2026-09-21\\C4_real_quality_checkpoints.jpg",
+      "sha256": "8171fc953364b7204bb932b3cfe9465bd8acfaa2f6e6c7691c1ed055fe132de1",
+      "file_id": "33588685152",
+      "url": "https://sc04.alicdn.com/kf/H8e6b6a96b00c4e069e64e0e5296fc146n/286385890/H8e6b6a96b00c4e069e64e0e5296fc146n.jpg",
+      "request_id": "213d4e4917899767851377997",
+      "trace_id": "2101fca817899767828702275e10ea"
+    },
+    {
+      "role": "C5_packing_order_handoff",
+      "local_path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\06_图片与检查记录\\公司图复用模板_v4_2026-09-21\\C5_packing_order_handoff.jpg",
+      "sha256": "319722e4c85543cf14bc55ed5533166e01219bad628fc94eb25af5119fd8b031",
+      "file_id": "33591012125",
+      "url": "https://sc04.alicdn.com/kf/Hb6d47ba5da57479d8fb8178f4e37509bn/286385890/Hb6d47ba5da57479d8fb8178f4e37509bn.jpg",
+      "request_id": "213c932b17899767925657802",
+      "trace_id": "2101dbd017899767912732667e0d4d"
+    }
+  ]
+}

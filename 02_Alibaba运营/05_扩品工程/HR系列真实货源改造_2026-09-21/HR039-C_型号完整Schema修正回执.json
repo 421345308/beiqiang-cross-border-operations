@@ -1,0 +1,76 @@
+{
+  "product_id": 1601943583746,
+  "method": "full_current_target_schema_change_p3_inputValue_only",
+  "before": {
+    "status": "approved",
+    "display": "Y",
+    "title": "Unisex High Top Knit Sock Sneakers Slip-On EVA Sole EU 35-45 Wholesale OEM Casual Shoes",
+    "model": "HR039-A / 8025",
+    "pattern": "Solid",
+    "sku_count": 22,
+    "prices": [
+      "12.00",
+      "12.50",
+      "12.90"
+    ],
+    "main_images": 6,
+    "detail_images": 5,
+    "company_images": 5
+  },
+  "gates": {
+    "approved_online": true,
+    "title_ok": true,
+    "old_model_present": true,
+    "pattern_ok": true,
+    "sku_count_ok": true,
+    "price_ok": true,
+    "gallery_ok": true
+  },
+  "before_p3_xml": "<field id=\"p-3\" name=\"Model Number\" type=\"input\"><value inputValue=\"HR039-A / 8025\">-2</value></field>",
+  "target_p3_xml": "<field id=\"p-3\" name=\"Model Number\" type=\"input\"><value inputValue=\"HR039-C / 8025\">-2</value></field>",
+  "preserved_sku_count": 22,
+  "xml_chars": 116582,
+  "xml_sha256": "27d7a0cde5929393c3b0cc532a352c9eac0a00ddfa9a1d360295744b328aebd2",
+  "before_refs": {
+    "request_id": "21501b6717900437059064793",
+    "trace_id": "2101dd0617900437055533872e0b59",
+    "error": null,
+    "biz_success": null
+  },
+  "render_refs": {
+    "request_id": "2105584317900437120998047",
+    "trace_id": "2101dd0617900437117576459e0b5a",
+    "error": null,
+    "biz_success": true
+  },
+  "update_refs": {
+    "request_id": "2105044417900437218146159",
+    "trace_id": "2101fca817900437196685525e1024",
+    "error": null,
+    "biz_success": true
+  },
+  "immediate_readback": {
+    "status": "modified",
+    "display": "N",
+    "title": "Unisex High Top Knit Sock Sneakers Slip-On EVA Sole EU 35-45 Wholesale OEM Casual Shoes",
+    "model": "HR039-C / 8025",
+    "pattern": "Solid",
+    "sku_count": 22,
+    "prices": [
+      "12.00",
+      "12.50",
+      "12.90"
+    ],
+    "main_images": 6,
+    "detail_images": 5,
+    "company_images": 5
+  },
+  "readback_refs": {
+    "request_id": "0bab02fe17900437295998255",
+    "trace_id": "2101dbd017900437292725116e0bed",
+    "error": null,
+    "biz_success": null
+  },
+  "verified": true,
+  "accepted_pending_review": true
+}

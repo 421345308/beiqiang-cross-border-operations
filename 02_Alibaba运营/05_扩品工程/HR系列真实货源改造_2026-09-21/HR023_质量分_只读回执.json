@@ -1,0 +1,75 @@
+{
+  "mode": "read-only",
+  "checked_at_utc": "2026-09-23T05:27:48.323763+00:00",
+  "products": {
+    "HR023-A": {
+      "product_id": 1601943614240,
+      "request_id": "21501b8d17901412742468420",
+      "trace_id": "2101fca817901412739196774e114d",
+      "final_score": "5.00",
+      "extend_problem_map": {
+        "imageText": false,
+        "title_word_miss_core_error": false,
+        "imageQualityBad": false,
+        "imageSubTitle": false,
+        "image_scale": false,
+        "inventory": false,
+        "title_word_error": false,
+        "selling_point_attribute_conflict": false,
+        "image_num": false,
+        "freightRate": false,
+        "sku_image": false,
+        "sku_text": false,
+        "price": false,
+        "category": false
+      },
+      "error_reason_list": []
+    },
+    "HR023-B": {
+      "product_id": 1601943629102,
+      "request_id": "2105044417901412804108457",
+      "trace_id": "2101c5a717901412800827773e0dac",
+      "final_score": "5.00",
+      "extend_problem_map": {
+        "imageText": false,
+        "title_word_miss_core_error": false,
+        "imageQualityBad": false,
+        "imageSubTitle": false,
+        "image_scale": false,
+        "inventory": false,
+        "title_word_error": false,
+        "selling_point_attribute_conflict": false,
+        "image_num": false,
+        "freightRate": false,
+        "sku_image": false,
+        "sku_text": false,
+        "price": false,
+        "category": false
+      },
+      "error_reason_list": []
+    },
+    "HR023-C": {
+      "product_id": 1601943547591,
+      "request_id": "213e759c17901412864865689",
+      "trace_id": "2101fb9317901412861758880e0e88",
+      "final_score": "5.00",
+      "extend_problem_map": {
+        "imageText": false,
+        "title_word_miss_core_error": false,
+        "imageQualityBad": false,
+        "imageSubTitle": false,
+        "image_scale": false,
+        "inventory": false,
+        "title_word_error": false,
+        "selling_point_attribute_conflict": false,
+        "image_num": false,
+        "freightRate": false,
+        "sku_image": false,
+        "sku_text": false,
+        "price": false,
+        "category": false
+      },
+      "error_reason_list": []
+    }
+  }
+}

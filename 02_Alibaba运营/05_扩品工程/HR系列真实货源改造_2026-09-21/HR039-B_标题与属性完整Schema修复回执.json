@@ -1,0 +1,49 @@
+{
+  "product_id": 1601943670292,
+  "method": "full_current_target_schema_title_pattern_custom_cleanup",
+  "target_title": "Men's High Top Knit Slip-On Walking Shoes EVA Sole EU 35-45 Wholesale OEM for Daily Wear",
+  "before_pattern_xml": "<field id=\"p-200000329\" name=\"Pattern Type\" type=\"singleCheck\"><value inputValue=\"Quilted\">-4</value></field>",
+  "target_pattern": {
+    "display_name": "Solid",
+    "value_id": "1954510751"
+  },
+  "removed_custom_value_nodes": [
+    "<complex-value><field id=\"customMoreProperty_0\" type=\"complex\"><complex-value><field id=\"valueName\" type=\"input\"><value>Regular Fit</value></field><field id=\"propName\" type=\"input\"><value>Fit Type</value></field></complex-value></field></complex-value>"
+  ],
+  "preserved_gates": {
+    "sku_count": 22,
+    "sku_unique": true,
+    "main_images": 6,
+    "detail_images": 5,
+    "company_images": 5,
+    "main_video_id": "6000342456358"
+  },
+  "xml_chars": 116312,
+  "xml_sha256": "342911ca40de396cd77389dcdecbd20f746a440a55fccd1eebbbe8fce63c86e2",
+  "render_refs": {
+    "request_id": "213c934417900410449032935",
+    "trace_id": "2103243417900410445703504e0bb0",
+    "error": null
+  },
+  "update_refs": {
+    "request_id": "212c6fc617900410542514036",
+    "trace_id": "210329c717900410526321658e0e25",
+    "error": null,
+    "biz_success": true,
+    "model": null
+  },
+  "immediate_readback": {
+    "request_id": "21501be117900410617777459",
+    "trace_id": "2103135017900410614355489e0dac",
+    "error": null,
+    "status": "modified",
+    "display": "N",
+    "pattern": "Solid",
+    "fit_type": "Regular Fit",
+    "title": "Men's High Top Knit Slip-On Walking Shoes EVA Sole EU 35-45 Wholesale OEM for Daily Wear",
+    "model": "HR039-B / 8025",
+    "main_images": 6,
+    "detail_images": 5,
+    "company_images": 5
+  }
+}

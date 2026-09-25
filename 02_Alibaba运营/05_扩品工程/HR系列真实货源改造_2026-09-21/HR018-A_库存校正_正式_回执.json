@@ -1,0 +1,27 @@
+{
+  "listing": "HR018-A",
+  "product_id": 1601943561380,
+  "checked_at": "2026-09-23T10:57:05.188120+08:00",
+  "product_request_id": "210829b717901322184181483",
+  "inventory_before_request_id": "0bab02fe17901322247402268",
+  "before_count": 30,
+  "before_values": [
+    999
+  ],
+  "changes": 30,
+  "mode": "apply",
+  "update_response": {
+    "result": {
+      "data": "true",
+      "success": true
+    },
+    "request_id": "0bbb637a17901322310492281",
+    "_trace_id_": "210313ec17901322307442162e0e84"
+  },
+  "inventory_after_request_id": "213c932b17901322379808755",
+  "after_count": 30,
+  "after_values": [
+    0
+  ],
+  "passed": true
+}

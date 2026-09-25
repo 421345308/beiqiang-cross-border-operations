@@ -1,0 +1,32 @@
+{
+  "created_date": "2026-09-22",
+  "purpose": "generic_factory_video_capacity_shard",
+  "evidence_class": "GENERIC_FACTORY_VIDEO",
+  "not_new_factory_evidence": true,
+  "source_file": "C:\\Users\\spq\\Desktop\\贝强\\05_内容与视频\\01_贝强商品视频\\通用工厂视频修复_2026-09-05\\factory42.mp4",
+  "source_sha256": "873B2E7E561C0E571ED5D05D8A06A33C5F43FDF68D8AC2D5915283341B3BB1D0",
+  "title": "Beiqiang Footwear Factory Overview 42s - Shard 02",
+  "numeric_video_id": "6000344840202",
+  "openapi_encrypted_video_id": "AAH3jmk4AOWGexucDVhQ6j_p",
+  "duration_seconds": 42,
+  "platform_status": "approved",
+  "platform_quality": "low",
+  "tags": [
+    "工厂展示",
+    "生产工序",
+    "质量控制"
+  ],
+  "bound_product_count": 0,
+  "planned_products": [
+    "HR001-B",
+    "HR001-C"
+  ],
+  "capacity_policy": "Target 15-18 products per shard; never exceed the platform limit of 20.",
+  "openapi_query_request_ids": [
+    "0b80d2d617900519696256205",
+    "212c41d317900519761125073"
+  ],
+  "openapi_relation_request_id": "212c6fc617900519822264912",
+  "openapi_relation_trace_id": "2101fca817900519819021008e1003",
+  "notes": "Seller UI was used only because the authorized OpenAPI application lacks alibaba.icbu.video.upload permission. Status and relation count were verified through OpenAPI. The duplicated file is the same verified factory video and is not represented as a different factory capability."
+}

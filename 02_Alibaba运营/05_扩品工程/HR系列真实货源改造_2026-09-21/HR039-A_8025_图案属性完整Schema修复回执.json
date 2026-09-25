@@ -1,0 +1,41 @@
+{
+  "product_id": 1601943650395,
+  "method": "full_current_target_schema_single_field_rewrite",
+  "before_pattern_xml": "<field id=\"p-200000329\" name=\"Pattern Type\" type=\"singleCheck\"><value inputValue=\"Quilted\">-4</value></field>",
+  "target_pattern": {
+    "display_name": "Solid",
+    "value_id": "1954510751"
+  },
+  "preserved_gates": {
+    "sku_count": 22,
+    "sku_unique": true,
+    "main_images": 6,
+    "detail_images": 5,
+    "company_images": 5,
+    "main_video_id": "6000342456358"
+  },
+  "xml_chars": 116330,
+  "xml_sha256": "2f648f1f7172e475a9442f8dd1c127abf77380303957b9559ddda16d0bce4453",
+  "render_refs": {
+    "request_id": "2166c2ca17900406752206813",
+    "trace_id": "2101fb9317900406748843356e0dc3",
+    "error": null
+  },
+  "update_refs": {
+    "request_id": "0b830ecc17900406844685569",
+    "trace_id": "2101dd0617900406828135936e0e93",
+    "error": null,
+    "biz_success": true,
+    "model": null
+  },
+  "immediate_readback": {
+    "request_id": "212cbf3217900406917811264",
+    "trace_id": "2101fb9317900406914672072e0e05",
+    "error": null,
+    "status": "modified",
+    "display": "N",
+    "pattern": "Solid",
+    "title": "Wholesale Model 8025 High Top Knit Slip-On Casual Walking Shoes EVA Sole EU 35-45 for Importers and Wholesalers",
+    "model": "HR039-A / 8025"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "product_id": 1601943305914,
+  "source_model": "2618",
+  "stage": "WAIT_REVIEW_THEN_SELLER_EDITOR",
+  "formal_product_request_id": "210829b717902142359224940",
+  "delete_original_detail_urls": [
+    "https://sc04.alicdn.com/kf/Ae60ed23392b44344a0136fb1f1a0a7dbr.png",
+    "https://sc04.alicdn.com/kf/A95e9a3736c774284b812a903d7ca96a6U.png",
+    "https://sc04.alicdn.com/kf/A5b326ec3809049dbac7b453afb31f2dcv.png",
+    "https://sc04.alicdn.com/kf/A4384785bae844910ab14c01618aeb12bH.png"
+  ],
+  "add_detail_images": [
+    {
+      "slot": 1,
+      "gallery_id": 350,
+      "url": "https://sc04.alicdn.com/kf/Hf96b32efa30547f3b37e53ab0c020539j/286385890/Hf96b32efa30547f3b37e53ab0c020539j.jpg",
+      "file_id": "33628249182"
+    },
+    {
+      "slot": 2,
+      "gallery_id": 150,
+      "url": "https://sc04.alicdn.com/kf/H0fc7ab2affc440cfa4888d498824371eE/286385890/H0fc7ab2affc440cfa4888d498824371eE.jpg",
+      "file_id": "33629496575"
+    },
+    {
+      "slot": 3,
+      "gallery_id": 300,
+      "url": "https://sc04.alicdn.com/kf/H43e7b5c52a95469d95990fa22e0ebbbc5/286385890/H43e7b5c52a95469d95990fa22e0ebbbc5.jpg",
+      "file_id": "33629460851"
+    },
+    {
+      "slot": 4,
+      "gallery_id": 350,
+      "url": "https://sc04.alicdn.com/kf/Hb34f2c319740460fa1c84660671d686dF/286385890/Hb34f2c319740460fa1c84660671d686dF.jpg",
+      "file_id": "33629496596"
+    }
+  ],
+  "delete_original_company_urls": [
+    "https://sc04.alicdn.com/kf/Sdc4e18f098e142b797df687e8befbfa14.png",
+    "https://sc04.alicdn.com/kf/Sfea34bbd56ae4d0583aa855838eb1454F.png",
+    "https://sc04.alicdn.com/kf/S2a3af5690d524680824086ad8419dbc9G.png",
+    "https://sc04.alicdn.com/kf/Sf587c854711748af9759e77ce5aeb03c3.png",
+    "https://sc04.alicdn.com/kf/Sc1dc6ec7d435404db6a31c6938a734a0g.png"
+  ],
+  "add_company_images": [
+    {
+      "slot": 1,
+      "gallery_id": 400,
+      "url": "https://sc04.alicdn.com/kf/Hdb2bdb8cea6649228ee7df018cb8fefaQ/286385890/Hdb2bdb8cea6649228ee7df018cb8fefaQ.jpg",
+      "file_id": "33588673131",
+      "claim_scope": "Beiqiang company-level process, not model 2618 own-factory production"
+    },
+    {
+      "slot": 2,
+      "gallery_id": 550,
+      "url": "https://sc04.alicdn.com/kf/Haa266cbb3f5148bcb19b0d7aea0c30acX/286385890/Haa266cbb3f5148bcb19b0d7aea0c30acX.jpg",
+      "file_id": "33588708680",
+      "claim_scope": "Beiqiang company-level process, not model 2618 own-factory production"
+    },
+    {
+      "slot": 3,
+      "gallery_id": 600,
+      "url": "https://sc04.alicdn.com/kf/Hfc4e6ca53d8042d1805cafd0b97dbf92x/286385890/Hfc4e6ca53d8042d1805cafd0b97dbf92x.jpg",
+      "file_id": "33588625412",
+      "claim_scope": "Beiqiang company-level process, not model 2618 own-factory production"
+    },
+    {
+      "slot": 4,
+      "gallery_id": 500,
+      "url": "https://sc04.alicdn.com/kf/H8e6b6a96b00c4e069e64e0e5296fc146n/286385890/H8e6b6a96b00c4e069e64e0e5296fc146n.jpg",
+      "file_id": "33588685152",
+      "claim_scope": "Beiqiang company-level process, not model 2618 own-factory production"
+    },
+    {
+      "slot": 5,
+      "gallery_id": 700,
+      "url": "https://sc04.alicdn.com/kf/Hecd5dd9f4eb94add8fb8a2436dab13c27/286385890/Hecd5dd9f4eb94add8fb8a2436dab13c27.png",
+      "file_id": "33626689160",
+      "claim_scope": "Beiqiang company-level process, not model 2618 own-factory production"
+    }
+  ],
+  "after_edit_gates": [
+    "4 current-shoe detail images only",
+    "5 company-level images only",
+    "old Fit Type custom attribute removed",
+    "FAQ and summary contain no unverified 2618 sample/customization or fixed lead-time claims",
+    "seller draft saved and independently reread before submit",
+    "formal product.get and public page checked after approval"
+  ]
+}

@@ -24,15 +24,27 @@ Category input properties can encode typed text in the `inputValue` attribute wh
 
 Use full-Schema replacement only for a deliberate whole-product migration. Before such a write, scrub source identity, SKU codes, videos, groups, company/detail content and every inherited field that is not intentionally shared. Compare the target before/after snapshots and stop if an unrelated field would change.
 
+Alibaba can return `biz_success=true` for an incremental field payload that produces no formal-data change. A successful update receipt is therefore submission evidence, not field verification. After review, compare `product.get` and the target's rendered Schema with the intended value. If the formal value is unchanged, record the attempt as a no-op and stop repeating it.
+
+Do not assume that omission, `<values />`, `<complex-value />`, or an empty `multiComplex` means “delete the existing value.” The official Schema update documentation defines the endpoint as incremental and does not document a generic deletion marker for `customMoreProperty`. In particular, an empty `customMoreProperty` payload must not be treated as a verified deletion method. If an existing custom property must be removed, use the current seller UI unless Alibaba publishes a field-specific delete contract, then verify the approved formal value again through OpenAPI.
+
+Keep status polling separate from editable-Schema rendering. `alibaba.icbu.product.get` remains the status source. During `modified/N` review, `alibaba.icbu.product.schema.render` may return request and trace IDs without `data`; this is an expected transient platform state. Do not classify it as token failure, and do not use browser state to replace the API status check.
+
 ## Image invariant
 
 All images persisted into product fields must come from the seller's Alibaba image bank. `photobank.upload` returns both `photobank_url` and `file_id`; Schema main-image fields need both. A URL copied from an existing product page is not automatically valid for republishing. Maximum raw upload size is 5 MB according to the image-upload API documentation.
+
+Main-image values carry both the image-bank URL and `fileId`. A URL copied from a product or CDN page is not a substitute for the image-bank asset returned by `photobank.upload`/`photobank.list`.
+
+`schema.render` may expose seller-page fields such as `detailImage`, `companyImage`, `textDesc`, or other structured/AI-detail components. Their presence in rendered XML is read evidence, not proof that `schema.update` supports writing or deleting them. Alibaba's official publishing guide states that the API supports only ordinary rich-text detail editing. Do not submit structured detail-gallery replacements through `schema.update` as a normal supported path. If a historical experiment returns `biz_success=true` but the approved structured detail remains unchanged, record the no-op once and switch that field to the seller UI; do not retry with flat CDN URLs, fuller Schema copies, or alternate empty-node shapes.
 
 For Beiqiang, keep the existing live-publishing visual gates: six strong gallery images, correct SKU/color binding, at least four information-complete product-detail images, five company images, no domestic Chinese overlays, no third-party marks, and no filler images.
 
 ## Detail page
 
-The Open API supports ordinary rich-text detail pages. Set the detail type to ordinary editing and place the verified HTML in the Schema detail field. Structured/AI detail editing is not currently the API path; use the existing product-first HTML detail design.
+The OpenAPI supports ordinary rich-text detail pages only. The official guide specifies `productDescType=2` with verified HTML in `superText`, and explicitly says API publishing supports only the ordinary-editor detail type. Structured/AI detail modules and their gallery fields must be edited in the seller UI unless Alibaba later documents a supported write API. Do not convert an existing structured detail page to ordinary HTML merely to avoid the UI unless the user has intentionally chosen that page-type migration and the conversion has been reviewed.
+
+Do not confuse Schema updates with Work Agent draft-edit operations. `alibaba.icbu.product.schema.update` has no documented generic delete marker for a structured detail gallery, so omission or an empty node is not a deletion request. Where the current Work Agent schema exposes `product-edit-draft-detail`, its `detailImage`, `companyImage`, and `faqs` inputs are operation lists rather than final-state arrays: delete an existing image with `operationType=DELETE` plus the exact `originalImageUrl` returned by the current draft readback, and add a replacement separately with `operationType=ADD` plus the approved image-bank URL. Verify the draft count and contents after each phase. A `draft edit success` receipt is not proof that the gallery changed; if exact DELETE operations still leave auto-migrated images, stop retrying and use the seller UI to reach and save a verified zero-image state before adding the whitelist.
 
 ## Video
 
@@ -59,7 +71,13 @@ When one verified company-owned factory video reaches the platform product-link 
 
 Run these after first authorization or token refresh before any write call. A non-empty business response plus `request_id` confirms transport and authorization; it does not replace payload validation for publishing.
 
+For catalog pagination, use the official `current_page` and `page_size` names. Do not substitute `pageNo` or `pageSize`: Alibaba may ignore unknown names and silently return page 1 repeatedly. Bound the page loop and stop with an explicit error if the returned page number disagrees with the request or a page payload repeats.
+
 ## Verification and failure handling
+
+### Inventory update operation value (2026-09-23 verified)
+
+For `alibaba.icbu.product.inventory.update`, the official `InventoryDto.operate` value for increasing stock is **`plus`**, not `add`; decreasing uses `sub`. The API can return `result.success=true` and `data=true` for an `add` payload while SKU inventory remains unchanged. Never accept that wrapper response alone: call `alibaba.icbu.product.sku.inventory.get` afterward and compare every target SKU's actual value. Existing opportunity products with no inventory rows may need a SKU-bearing Schema submission before the inventory endpoint can address them. While `product.get` reports `modified/N`, inventory mutation can return “product under review”; wait for review to finish before retrying. For sourced HR products, `999` remains the owner's availability marker, not a physical count. [Official inventory update API](https://developer.alibaba.com/docs/api.htm?apiId=53178).
 
 - Draft readback: title/model, category, attributes, sizes, shoe length, prices, MOQ, lead time, package data, images, SKU mappings, detail HTML, and video IDs.
 - Submitted readback: product ID, business-success flag, trace ID, and review state.

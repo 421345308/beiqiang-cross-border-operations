@@ -8,6 +8,7 @@
 | `seedance_video/` | Seedance 相关脚本与接口工具 |
 | `video_use/` | 视频下载、抽帧、检查和剪辑能力 |
 | `remotion/` | 当前 Remotion 工程与可视化视频制作 |
+| `awesome-seedance/` | **工作区级通用视频模板库**（第三方，上游每日同步，本地保留不进 Git）。25 个分类模板 / 463 案例 / 12 个可选 Skill；来源 `LearnPrompt/awesome-seedance`，许可为代码 MIT + 策展 CC BY 4.0 + 提示词归原作者。索引见 [模板索引](../../07_知识库与Skills/04_AI视频知识体系/awesome-seedance-模板索引.md) |
 | `Hypit/` | Hypit 语义编排、批量变体与可编辑合成的接入评估；当前未安装、未纳入生产 |
 | `opencut-classic/` | OpenCut 第三方编辑器实体目录 |
 | `Blender人体白模/` | Blender 人体白模相关工具和说明 |

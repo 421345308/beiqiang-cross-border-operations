@@ -24,6 +24,7 @@ SOURCE_PRODUCT_ID = 1601924292931
 TARGET_PRODUCT_ID = 1601943650395
 SOURCE_MODEL = "BQ036 / 8025"
 TARGET_MODEL = "HR039-A / 8025"
+ALLOWED_TARGET_MODELS = {"HR039-A", "BQ036 / 8025", TARGET_MODEL}
 SOURCE_PRICE_CNY = 58.00
 USD_CNY_REFERENCE = 6.7487  # SAFE/CFETS central parity, 2026-09-21
 MIN_MARKUP = 1.30
@@ -286,7 +287,7 @@ def main() -> None:
     before_snap = product_snapshot(before)
     if source_snap["model"] != SOURCE_MODEL:
         raise RuntimeError(f"source identity mismatch: {source_snap['model']}")
-    if before_snap["model"] not in {"HR039-A", "BQ036 / 8025", TARGET_MODEL}:
+    if before_snap["model"] not in ALLOWED_TARGET_MODELS:
         raise RuntimeError(f"target identity mismatch: {before_snap['model']}")
     if source_snap["main_image_count"] != 6 or source_snap["detail_image_count"] < 4 or source_snap["company_image_count"] != 5:
         raise RuntimeError(f"source gallery gate failed: {source_snap}")

@@ -26,6 +26,11 @@ BUSINESS = (
 )
 ROOT_ALLOWED = set(BUSINESS) | {
     ".agents", ".git", ".gitignore", ".gitattributes", "AGENTS.md", "README.md", "skills-lock.json", "_codex_work",
+    # Tool-managed entries. ".workbuddy" is the WorkBuddy session/memory store and must stay at the
+    # workspace root; "outputs" is WorkBuddy's default deliverable staging dir. Neither is a business
+    # directory: business results must still be relocated into the matching business directory, and
+    # derived dumps must be moved to 99_临时区 (see 00_总控台/工作区维护.md).
+    ".workbuddy", "outputs",
 }
 MEMORY_FIELDS = {"type", "title", "description", "status", "privacy", "tags", "timestamp"}
 MEMORY_TYPES = {"Identity", "Principle", "Preference", "Context", "Skill", "Experience", "Learning"}

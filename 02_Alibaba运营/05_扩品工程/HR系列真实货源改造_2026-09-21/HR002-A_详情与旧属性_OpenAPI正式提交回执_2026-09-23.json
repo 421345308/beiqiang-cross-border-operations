@@ -1,0 +1,153 @@
+{
+  "product_id": 1601943305914,
+  "method": "full_current_schema_detail_replace_and_legacy_attribute_clear",
+  "before": {
+    "status": "approved",
+    "display": "Y",
+    "title": "Wholesale Men's Retro Mesh Lace-Up Walking Shoes Casual Sneakers EU 39-48 Model S6077",
+    "model": "HR002-A / S6077",
+    "attributes": {
+      "Fit Type": [
+        "Regular Fit"
+      ],
+      "Midsole Material": [
+        "EVA"
+      ],
+      "Season": [
+        "All Seasons"
+      ],
+      "Style": [
+        "Walking Shoes"
+      ],
+      "Outsole Material": [
+        "Rubber"
+      ],
+      "Lining Material": [
+        "Mesh"
+      ],
+      "Closure Type": [
+        "Lace-up"
+      ],
+      "Toe Style": [
+        "Round Toe"
+      ],
+      "Feature": [
+        "Breathable",
+        "Light Weight"
+      ],
+      "Place of Origin": [
+        "CN"
+      ],
+      "Model Number": [
+        "HR002-A / S6077"
+      ]
+    },
+    "sku_count": 20,
+    "main_count": 6,
+    "detail_count": 4,
+    "detail_urls": [
+      "https://sc04.alicdn.com/kf/Ae60ed23392b44344a0136fb1f1a0a7dbr.png",
+      "https://sc04.alicdn.com/kf/A95e9a3736c774284b812a903d7ca96a6U.png",
+      "https://sc04.alicdn.com/kf/A5b326ec3809049dbac7b453afb31f2dcv.png",
+      "https://sc04.alicdn.com/kf/A4384785bae844910ab14c01618aeb12bH.png"
+    ],
+    "company_count": 5,
+    "video_id": null
+  },
+  "gates": {
+    "approved_online": true,
+    "title_ok": true,
+    "model_ok": true,
+    "sku_count_ok": true,
+    "main_company_ok": true,
+    "detail_mapping_ok": true
+  },
+  "expected_detail_tokens": [
+    "H16f4873206e64a20a90bfa4431ac5b98y",
+    "H435695e99138472fa28febbf6f732ed47",
+    "H74a8a34983154040b7d1b50be7439e66E",
+    "Hb32d1ebf90b74984bd10752e2b1135c0F"
+  ],
+  "removed_property_nodes": {
+    "Outsole Material / Rubber": 2,
+    "Midsole Material / EVA": 2,
+    "Lining Material / Mesh": 2,
+    "Feature / Breathable + Light Weight": 3,
+    "Season / All Seasons": 2
+  },
+  "submitted_xml_chars": 116411,
+  "submitted_xml_sha256": "7c9f32440a53c1e4452e55a56761959257635c7ac5358fb9e0863a5fc3ac0cb7",
+  "before_refs": {
+    "request_id": "21501b6717900929910902066",
+    "trace_id": "2101d13c17900929907386325e0e77",
+    "error": null,
+    "biz_success": null
+  },
+  "render_refs": {
+    "request_id": "21501b6717900930000612278",
+    "trace_id": "2101e68f17900929997101911e0b95",
+    "error": null,
+    "biz_success": true
+  },
+  "update_refs": {
+    "request_id": "0bab02fe17900930260666075",
+    "trace_id": "2101fb9317900930237543743e0fb1",
+    "error": null,
+    "biz_success": true
+  },
+  "immediate_readback": {
+    "status": "modified",
+    "display": "N",
+    "title": "Wholesale Men's Retro Mesh Lace-Up Walking Shoes Casual Sneakers EU 39-48 Model S6077",
+    "model": "HR002-A / S6077",
+    "attributes": {
+      "Fit Type": [
+        "Regular Fit"
+      ],
+      "Style": [
+        "Walking Shoes"
+      ],
+      "Closure Type": [
+        "Lace-up"
+      ],
+      "Toe Style": [
+        "Round Toe"
+      ],
+      "Place of Origin": [
+        "CN"
+      ],
+      "Model Number": [
+        "HR002-A / S6077"
+      ]
+    },
+    "sku_count": 20,
+    "main_count": 6,
+    "detail_count": 4,
+    "detail_urls": [
+      "https://sc04.alicdn.com/kf/Ae60ed23392b44344a0136fb1f1a0a7dbr.png",
+      "https://sc04.alicdn.com/kf/A95e9a3736c774284b812a903d7ca96a6U.png",
+      "https://sc04.alicdn.com/kf/A5b326ec3809049dbac7b453afb31f2dcv.png",
+      "https://sc04.alicdn.com/kf/A4384785bae844910ab14c01618aeb12bH.png"
+    ],
+    "company_count": 5,
+    "video_id": null
+  },
+  "actual_detail_tokens": [
+    "A4384785bae844910ab14c01618aeb12bH",
+    "A5b326ec3809049dbac7b453afb31f2dcv",
+    "A95e9a3736c774284b812a903d7ca96a6U",
+    "Ae60ed23392b44344a0136fb1f1a0a7dbr"
+  ],
+  "remaining_legacy_attributes": {
+    "Fit Type": [
+      "Regular Fit"
+    ]
+  },
+  "readback_refs": {
+    "request_id": "0bbb637a17900930340175594",
+    "trace_id": "2101dbd017900930336934563e0c7c",
+    "error": null,
+    "biz_success": null
+  },
+  "submitted_for_review": true
+}
