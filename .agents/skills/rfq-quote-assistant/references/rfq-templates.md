@@ -23,7 +23,7 @@ Emphasize factory supply, stable product line, mixed colors/sizes discussion, sa
 
 ### Amazon or TikTok Seller
 
-Emphasize product angle, wide toe comfort, clean photos/video support if available, sample order, and fast confirmation of sellable colors/sizes.
+Emphasize the verified style, usable photos/video when available, and a clear check of sellable colors, sizes and sample feasibility. Mention wide-toe comfort only for an evidenced SKU.
 
 ### Brand Buyer
 
@@ -34,9 +34,9 @@ Emphasize OEM/ODM discussion, logo/packing confirmation, sample before bulk orde
 ```text
 Hi [Name],
 
-Thank you for your inquiry. We are Quanzhou Beiqiang Footwear & Apparel Co., Ltd., a footwear factory in Quanzhou, Fujian, China. We focus on comfortable walking shoes, wide toe box shoes, and lightweight casual slip-on shoes for wholesale and OEM/ODM orders.
+Thank you for your inquiry. We are Quanzhou Beiqiang Footwear & Apparel Co., Ltd., a footwear supplier in Quanzhou, Fujian, China. We handle wholesale and OEM/ODM footwear projects. We will match your request to a verified style and confirm its actual source and options.
 
-For [product/style], the FOB reference range is about USD [range]/pair depending on quantity, materials, size ratio, colors, packing, and final order requirements. Samples can be arranged for checking before bulk order.
+For [verified product/style], we can confirm an FOB quotation after checking quantity, materials, size ratio, colors, packing, and order requirements. [Mention a price range or sample only when supported for this style.]
 
 To quote accurately, could you please confirm:
 1. Quantity
@@ -56,7 +56,7 @@ Quanzhou Beiqiang Footwear & Apparel Co., Ltd.
 ## Short First Reply
 
 ```text
-Hi [Name], thank you for your RFQ. We are a footwear factory in Quanzhou, China, focusing on wide toe box comfort walking shoes and lightweight casual shoes. Please share quantity, target market, size/color requirements, and logo/packing needs, then we can confirm the most suitable style, sample details, and FOB price range.
+Hi [Name], thank you for your RFQ. We are a footwear supplier in Quanzhou, China. Please share your target style, quantity, market, size/color requirements, and logo/packing needs. We can then check a verified shoe option, sample feasibility, and quotation terms.
 ```
 
 ## Follow-Up After No Reply

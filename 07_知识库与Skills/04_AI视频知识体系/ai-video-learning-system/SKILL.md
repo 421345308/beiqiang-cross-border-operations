@@ -11,6 +11,7 @@ Build useful memory without turning every past failure into a universal constrai
 
 1. Read the current project's record first. It contains the creative goal, approved assets, current baseline, project-specific decisions, results, and next step.
 2. Read the technical facts for the model or tool actually being used. Load H3 guidance only for H3 work; do not import it into unrelated video models.
+   A memory that names a model's "default instance" or runtime is conditional configuration for that model, not authority to select that model for a new project. Select the production tool from the user's current instruction, the active project record, and recent accepted workflow evidence first.
 3. Read shared creative guidance only when it affects the present decision.
 4. Search the experience ledger for relevant candidate lessons. Treat confidence and scope as evidence, not as commands.
 
@@ -47,6 +48,7 @@ When multiple approaches remain reasonable, preserve creative choice. A prior fa
 Before ending a material video iteration:
 
 - identify the accepted baseline and what changed;
+- link the versioned visual-QA run and source ID when a generated or finished video was reviewed; a contact sheet alone is not a completed review;
 - record observable results, including unchanged strengths and regressions;
 - separate confirmed cause from hypothesis;
 - update or reject any affected experience cards;

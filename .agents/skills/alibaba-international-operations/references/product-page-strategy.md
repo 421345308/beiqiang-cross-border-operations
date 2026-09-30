@@ -1,6 +1,6 @@
 # Product Page Strategy For Alibaba International Station
 
-Use this reference before producing or reviewing titles, main images, detail images, and final upload folders for Alibaba product pages. The goal is not to make more assets. The goal is to build a product page that can win search exposure, clicks, buyer understanding, and inquiries.
+Use this reference for a coordinated product-page strategy, full image/detail review or final upload preparation. A title-only draft may use its relevant title guidance when needed; it does not require the entire page plan. The goal is to improve search exposure, clicks, buyer understanding and inquiries without creating unnecessary assets.
 
 ## Platform Logic From The Publishing PPT
 

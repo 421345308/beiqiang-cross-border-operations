@@ -17,7 +17,7 @@ If a high-impact fact is missing, proceed with a conservative draft and list it 
 
 ## Workflow
 
-1. Positioning gate: apply `beiqiang-positioning`.
+1. Positioning gate: check buyer-facing claims against the exact SKU and workspace facts; consult the positioning card only if a claim remains uncertain.
 2. Product role: new listing, variant, duplicate risk, seasonal style, or skip candidate.
 3. Competitor check: use `competitor-research-firecrawl` if keyword or image strategy is uncertain.
 4. Keyword cluster: choose one primary buyer intent and 3-5 supporting long-tail terms.
@@ -33,13 +33,12 @@ If a high-impact fact is missing, proceed with a conservative draft and list it 
 This is a `DEFAULT_HEURISTIC`, not a fixed formula. Reorder or replace it when current keyword evidence and buyer intent support a clearer title.
 
 ```text
-[B2B modifier] + [verified material/feature] + [closure/toe/sole] + [core product keyword] + [application/buyer use]
+[gender/buyer] + [recognizable style and core product keyword] + [one supported differentiator] + [use when relevant]
 ```
 
 Possible terms when supported by the exact SKU and current keyword intent:
 
-- `Wholesale`
-- `Factory Direct`
+- `Wholesale` only when it adds useful procurement intent; do not prepend it to every title.
 - `Breathable Knit`
 - `Wide Toe Box`
 - `Slip-On`
@@ -52,6 +51,7 @@ Possible terms when supported by the exact SKU and current keyword intent:
 
 Avoid:
 
+- For the current HR replacement batch, color names and size ranges in the title: the owner rejected this on 2026-09-29. Put these choices in SKU fields and images. Sibling titles need real search-intent and feature distinctions, not color substitution.
 - Repeated words just for length.
 - `Flyknit` if platform flags it.
 - Unsupported `orthopedic`, `medical`, `waterproof`, `leather`, `certified`, or brand terms.

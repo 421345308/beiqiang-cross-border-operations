@@ -14,7 +14,7 @@ Create B2B footwear videos from real Beiqiang product evidence. Optimize for ove
 - Use `beiqiang-positioning` and `tiktok-b2b-content` as guardrails.
 - Read `references/prompt-framework.md` before creating a new prompt.
 - Read `references/review-template.md` before reviewing a generated video.
-- Use `video-use` and its `references/video-visual-qa.md` for the actual contact-sheet, focused-candidate, original-resolution, and time-range QA mechanics. This Skill adds footwear/product truth; it does not duplicate the model-agnostic review procedure.
+- Use the installed `video-use` skill and its visual QA reference for contact-sheet, focused-candidate, original-resolution and time-range review. That reference belongs to the personal skill installation, not this project directory. This Skill adds footwear/product truth without copying the model-agnostic procedure.
 
 ## Workflow
 

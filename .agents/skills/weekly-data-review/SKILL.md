@@ -1,6 +1,6 @@
 ---
 name: weekly-data-review
-description: Weekly operation data review for Beiqiang Alibaba.com and cross-border B2B channels. Use when reviewing exposure, clicks, CTR, inquiries, inquiry quality, RFQ replies, keyword performance, product-page performance, competitor changes, TikTok content output, and next-week actions for Beiqiang wide toe box comfort walking shoes and related factory-supply footwear.
+description: Turn dated Alibaba.com and B2B channel metrics into Beiqiang's next weekly actions. Use for exposure, clicks, inquiries, buyer quality, RFQ and content results; keep unsupported SKU claims out of recommendations.
 ---
 
 # Weekly Data Review
@@ -9,12 +9,8 @@ Use this skill to convert weekly operation data into next actions. The review sh
 
 ## Required References
 
-- Read `references/review-template.md` before reviewing data or producing a weekly plan.
-- Use `beiqiang-positioning` for all action recommendations.
-- Use `alibaba-product-optimizer` for weak product pages found during review.
-- Use `competitor-research-firecrawl` when competitor changes or keyword shifts need verification.
-- Use `rfq-quote-assistant` when inquiry quality or RFQ reply rate is the weak point.
-- Use `tiktok-b2b-content` when the weekly plan includes sourcing-buyer content.
+- Read `references/review-template.md` for a complete weekly scorecard; a single metric or narrow diagnosis needs only its source rows.
+- Load a narrower skill only when the review actually includes that action: product editing, competitor verification, RFQ wording or TikTok content. Keep the default review focused on the supplied metrics and source dates.
 
 ## Review Logic
 

@@ -1,6 +1,6 @@
 ---
 name: p4p-keyword-testing
-description: Build small-budget Alibaba.com P4P keyword testing plans for Beiqiang products. Use when selecting test products, keyword groups, daily budgets, bid logic, negative/pause rules, metric tracking, and post-test actions for wide toe box comfort walking shoes and related casual footwear.
+description: Plan and review small-budget Alibaba.com P4P keyword tests for verified Beiqiang products. Use for test-product selection, intent groups, budgets, pause rules, metrics and post-test actions.
 ---
 
 # P4P Keyword Testing
@@ -10,7 +10,7 @@ Use this skill to create controlled P4P tests that identify useful keywords with
 ## 适用场景
 
 - Plan the first small-budget Alibaba P4P test after store launch.
-- Select 3-5 products and keyword clusters for testing.
+- Select a test size the budget and listing quality can support; do not impose a fixed product count.
 - Diagnose P4P results by impressions, clicks, CTR, inquiries, spend, and inquiry quality.
 - Decide which keywords to pause, keep, increase, or move into organic title/detail optimization.
 
@@ -61,7 +61,7 @@ Date | Product | Keyword | Match type | Impressions | Clicks | CTR | Avg CPC | S
 ## 贝强业务规则
 
 - P4P should validate buyer intent and keyword quality, not cover up weak product pages.
-- Good first candidates should fit Beiqiang's wide toe box, comfort walking, slip-on, breathable knit, lightweight, or OEM/ODM positioning.
+- Select product and keyword claims supported by each SKU's evidence and sourcing status; do not treat wide-toe, knit, EVA or OEM/ODM as default product attributes.
 - Ask for or mark missing MOQ, price range, sample, lead time, and packing data before pushing aggressive conversion language.
 
 ## 禁止事项

@@ -1,11 +1,6 @@
 # Beiqiang facts and asset routing
 
-## Beiqiang product provenance gate (2026-09-08)
-
-负责人于2026-09-08确认：只有原始数据包中的商品属于贝强自有工厂货。阿里巴巴国际站扩品可能没有实际存在的商品；已上线、API回读、图片、生成素材、热榜或竞品记录均不能证明产品实物存在、自有工厂生产或可供货。必须逐款关联原始数据包；没有匹配证据的扩品标记为 HOLD_SOURCE（实物与货源待核验），不得称为自有工厂货、计入已确认供给或承诺样品/库存/交期。外部商品经后续核实可以记录真实来源，但不自动成为自有工厂货；归属变化须由负责人明确确认。
-
-
-Maintained: 2026-09-08. This reference routes to evidence; it is not a second SKU database.
+This reference routes to evidence, not a second SKU database. Read the current root `AGENTS.md` for own-factory identity, externally sourced supply, `HOLD_SOURCE` and inquiry-only inventory markers.
 
 - Company: Quanzhou Beiqiang Footwear & Apparel Co., Ltd.; Quanzhou, Fujian, China; footwear factory supplier for B2B wholesale and OEM/ODM.
 - Resolve workspace paths from the root containing `AGENTS.md` and `.agents/skills/`; this project skill moves with that root.

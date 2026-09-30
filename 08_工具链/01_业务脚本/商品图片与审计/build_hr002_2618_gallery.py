@@ -77,9 +77,17 @@ m2, d = page("COLOR AND SIZE CHOICE", "THREE REAL COLORWAYS", "Model 2618 · EU 
 for n, (color, title) in enumerate((("black", "BLACK"), ("khaki", "KHAKI"), ("brown", "DARK BROWN"))):
     x = 55 + n * 370
     card(d, (x, 225, x + 350, 943))
-    place(m2, sku[color], (x + 10, 260, x + 340, 805))
-    label(d, (x + 32, 840), title, 29, GREEN, True)
-    label(d, (x + 32, 890), "EU 39–48", 24, MUTED)
+    source = sku[color]
+    mask = ImageOps.grayscale(source).point(lambda value: 255 if value < 246 else 0)
+    bounds = mask.getbbox()
+    if bounds:
+        left, top, right, bottom = bounds
+        margin_x, margin_y = 36, 34
+        source = source.crop((max(0, left - margin_x), max(0, top - margin_y),
+                              min(source.width, right + margin_x), min(source.height, bottom + margin_y)))
+    place(m2, source, (x + 18, 250, x + 332, 790))
+    label(d, (x + 32, 820), title, 29, GREEN, True)
+    label(d, (x + 32, 865), "EU 39–48", 24, MUTED)
 card(d, (55, 990, 1145, 1125), PALE)
 label(d, (90, 1030), "For quotation: send colors, EU size ratio and quantity.", 28, INK, True)
 save(m2, "M2_2618_colors.jpg")
@@ -111,19 +119,19 @@ label(d, (55, 1054), "Confirm the required EU size mix before purchase.", 22, MU
 save(m4, "M4_2618_onfoot.jpg")
 
 # M5: company-level process evidence. It does not represent production of 2618.
-m5, d = page("BEIQIANG COMPANY CAPABILITY", "ORDER COORDINATION", "Workshop and order-management capability")
+m5, d = page("BEIQIANG COMPANY CAPABILITY", "ORDER COORDINATION", "Company-level operations | Product scope confirmed per inquiry")
 production = img(COMP / "C3_real_production_organization.jpg", (55, 245, 790, 1000))
 quality = img(COMP / "C4_real_quality_checkpoints.jpg", (55, 240, 1145, 805))
-for x, picture, caption in ((55, production, "PRODUCTION PLANNING"), (610, quality, "QUALITY CHECK POINTS")):
+for x, picture, caption in ((55, production, "COMPANY PRODUCTION PLANNING"), (610, quality, "COMPANY QC PROCESS")):
     card(d, (x, 230, x + 535, 942))
     place(m5, picture, (x + 18, 250, x + 517, 820), fit=True)
     label(d, (x + 30, 857), caption, 24, GREEN, True)
 card(d, (55, 990, 1145, 1128), PALE)
-label(d, (83, 1024), "Sourcing, specification and order details are reviewed per project.", 23, INK, True)
+label(d, (83, 1024), "Company-level processes; product scope confirmed per inquiry.", 23, INK, True)
 save(m5, "M5_2618_company.jpg")
 
 # M6 is a buyer-input prompt, not a claim that either pack is included.
-m6, d = page("ORDER SUPPORT", "SEND A SOURCING BRIEF", "Packing and timing are confirmed for each actual order")
+m6, d = page("ORDER SUPPORT", "SEND AN INQUIRY BRIEF", "Packing and timing are confirmed for each actual order")
 for n, (head, body) in enumerate((
     ("1  COLOR + SIZE", "Black, khaki or dark brown; EU 39–48"),
     ("2  ORDER QUANTITY", "Tell us pairs per color and size"),

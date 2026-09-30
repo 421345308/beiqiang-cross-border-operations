@@ -1,8 +1,12 @@
 ---
-type: Context
+id: outreach-small-sample
+type: Decision
 title: 冷邮件最近确认实验与历史结果
 description: 重启客户开发时核验群发暂停决定、具名买家和小样本实验；不作为实时 CRM。
 status: active
+scope: "客户开发; 2026-08-27 冷邮件暂停与下一轮小样本实验"
+source: "04_客户开发/01_线索与CRM/lead_pool_20260803/冷邮件零正面回复根因复盘与下一轮实验_2026-08-27.md"
+verify_when: "重启实验或准备外发前，核对最新 CRM、联系人证据及当前外发授权"
 privacy: internal
 tags: [客户开发, 冷邮件, 小样本实验]
 timestamp: 2026-08-27

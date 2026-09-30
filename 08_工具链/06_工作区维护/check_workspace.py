@@ -30,10 +30,12 @@ ROOT_ALLOWED = set(BUSINESS) | {
     # workspace root; "outputs" is WorkBuddy's default deliverable staging dir. Neither is a business
     # directory: business results must still be relocated into the matching business directory, and
     # derived dumps must be moved to 99_临时区 (see 00_总控台/工作区维护.md).
-    ".workbuddy", "outputs",
+    ".workbuddy", "outputs", ".workctl",
 }
-MEMORY_FIELDS = {"type", "title", "description", "status", "privacy", "tags", "timestamp"}
-MEMORY_TYPES = {"Identity", "Principle", "Preference", "Context", "Skill", "Experience", "Learning"}
+MEMORY_REQUIRED = {"id", "type", "title", "description", "status", "scope", "source", "privacy", "tags", "timestamp"}
+MEMORY_OPTIONAL = {"supersedes", "verify_when", "review_after"}
+MEMORY_TYPES = {"Authorization", "Preference", "Decision", "Experience"}
+MEMORY_STATES = {"active", "superseded", "disputed", "archived"}
 ACTIVE_CONTROL = (
     "当前状态.md", "产品经营主表.md", "资产索引.md", "跨渠道经营总览.md", "工作区维护.md",
 )
@@ -134,6 +136,76 @@ def markdown_targets(text: str) -> list[str]:
     return result
 
 
+def declared_reads(text: str) -> tuple[list[str], list[str]]:
+    """Only explicit skill sections create mandatory dependencies; ordinary links do not."""
+    required: list[str] = []
+    conditional: list[str] = []
+    section = ""
+    for line in text.splitlines():
+        heading = re.match(r"^##\s+(.+?)\s*$", line)
+        if heading:
+            section = heading.group(1).lower()
+            continue
+        if not re.match(r"^\s*[-*]\s+", line):
+            continue
+        targets = markdown_targets(line)
+        if section == "required reads":
+            required.extend(targets)
+        elif section.startswith("conditional reads") or section.startswith("conditional execution"):
+            conditional.extend(targets)
+    return required, conditional
+
+
+def required_cycles(graph: dict[str, set[str]]) -> list[list[str]]:
+    """Return cycles in mandatory skill calls; conditional links are excluded."""
+    cycles: list[list[str]] = []
+    visited: set[str] = set()
+    stack: list[str] = []
+
+    def visit(node: str) -> None:
+        if node in stack:
+            cycle = stack[stack.index(node):] + [node]
+            if cycle not in cycles:
+                cycles.append(cycle)
+            return
+        if node in visited:
+            return
+        visited.add(node)
+        stack.append(node)
+        for neighbor in sorted(graph.get(node, ())):
+            visit(neighbor)
+        stack.pop()
+
+    for name in sorted(graph):
+        visit(name)
+    return cycles
+
+
+def ids_field(value: str) -> list[str]:
+    return [part.strip().strip("\"'") for part in value.strip("[]").split(",") if part.strip()]
+
+
+def literal_paths(text: str) -> list[str]:
+    """Find explicit workspace paths in inline code, not placeholders or examples."""
+    visible = []
+    fence = False
+    for line in text.splitlines():
+        if re.match(r"^\s{0,3}(`{3,}|~{3,})", line):
+            fence = not fence
+            continue
+        if not fence:
+            visible.append(line)
+    prefixes = (*BUSINESS, ".agents", "references", "scripts")
+    result = []
+    for value in re.findall(r"`([^`\n]+)`", "\n".join(visible)):
+        path = value.replace("\\", "/")
+        if any(mark in path for mark in ("<", ">", "{", "}", "*", "?", "...", "://")):
+            continue
+        if "/" in path and path.split("/", 1)[0] in prefixes:
+            result.append(path)
+    return result
+
+
 class WorkspaceCheck:
     def __init__(self, root: Path):
         self.root = root.resolve()
@@ -170,6 +242,14 @@ class WorkspaceCheck:
                 self.issue(check, path, f"missing local link: {destination}")
         return linked
 
+    def code_links(self, path: Path, text: str, check: str) -> None:
+        for destination in literal_paths(text):
+            head = destination.split("/", 1)[0]
+            target = (self.root if head in set(BUSINESS) | {".agents"} else path.parent) / destination
+            target = Path(os.path.abspath(target))
+            if not target.exists():
+                self.issue(check, path, f"missing inline-code path: {destination}")
+
     def root_entries(self) -> None:
         for path in self.root.iterdir():
             if path.name not in ROOT_ALLOWED:
@@ -178,14 +258,41 @@ class WorkspaceCheck:
             if not (self.root / name).exists():
                 self.issue("root", self.root / name, "required workspace entry missing")
 
+    def governance(self) -> None:
+        status = self.root / "00_总控台/当前状态.md"
+        text = self.read(status, "governance")
+        if text is not None:
+            if not text.lstrip("\ufeff\n\r \t").startswith("# 当前状态"):
+                self.issue("governance", status, "current status must start with its heading; replace old status instead of prepending updates")
+            if len(text.encode("utf-8")) > 12 * 1024:
+                self.issue("governance", status, "current status is too long; move dated execution detail to business records", warning=True)
+        for folder in (self.root / "00_总控台", self.root / "07_知识库与Skills"):
+            for path in folder.iterdir():
+                if path.is_file() and re.search(r"(?i)v\d+|最终版|新版|备份", path.stem):
+                    self.issue("governance", path, "versioned active guidance; update the stable document and retain versions only as dated evidence")
+
     def memory(self) -> None:
         memory = self.root / "07_知识库与Skills/05_项目记忆系统"
         index = memory / "INDEX.md"
         index_text = self.read(index, "memory")
         self.read(memory / "README.md", "memory")
-        indexed = set(self.links(index, index_text, "memory") if index_text else [])
+        linked = self.links(index, index_text, "memory") if index_text else []
+        indexed = set(linked)
+        if len(linked) != len(indexed):
+            self.issue("memory", index, "duplicate link in default memory index")
+        indexed_types: dict[Path, str] = {}
+        if index_text:
+            for line in index_text.splitlines():
+                cells = [cell.strip() for cell in line.strip().split("|")]
+                if len(cells) < 4 or cells[1] not in MEMORY_TYPES:
+                    continue
+                for destination in markdown_targets(line):
+                    indexed_types[Path(os.path.abspath(index.parent / destination))] = cells[1]
         active = 0
+        pending_sources = 0
         total = 0
+        entries: dict[str, tuple[Path, dict[str, str]]] = {}
+        seen_paths: set[Path] = set()
         for base, dirs, files in os.walk(memory, followlinks=False):
             folder = Path(base)
             depth = len(folder.relative_to(memory).parts)
@@ -205,38 +312,84 @@ class WorkspaceCheck:
                     self.issue("memory", path, "formal memories must be first-level/second-level/file.md")
                     continue
                 total += 1
+                seen_paths.add(path)
                 text = self.read(path, "memory")
                 if text is None:
                     continue
                 fields, issues = frontmatter(text)
-                if set(fields) != MEMORY_FIELDS:
-                    issues.append("formal memory must have exactly the seven required metadata fields")
-                for key in MEMORY_FIELDS - {"tags"}:
+                missing = MEMORY_REQUIRED - set(fields)
+                extra = set(fields) - MEMORY_REQUIRED - MEMORY_OPTIONAL
+                if missing:
+                    issues.append(f"missing required metadata: {', '.join(sorted(missing))}")
+                if extra:
+                    issues.append(f"unknown metadata: {', '.join(sorted(extra))}")
+                for key in MEMORY_REQUIRED - {"tags"}:
                     if not fields.get(key):
                         issues.append(f"empty or missing metadata field: {key}")
+                identifier = fields.get("id", "")
+                if not re.fullmatch(r"[a-z][a-z0-9]*(?:-[a-z0-9]+)*", identifier):
+                    issues.append("id must be a stable lowercase hyphenated identifier")
+                elif identifier in entries:
+                    issues.append(f"duplicate memory id; first used by {self.label(entries[identifier][0])}")
+                else:
+                    entries[identifier] = (path, fields)
                 if fields.get("type") not in MEMORY_TYPES:
                     issues.append("invalid memory type")
-                if fields.get("status") not in {"active", "archived"}:
-                    issues.append("status must be active or archived")
+                if fields.get("status") not in MEMORY_STATES:
+                    issues.append("invalid memory status")
                 if fields.get("privacy") not in {"internal", "public"}:
                     issues.append("privacy must be internal or public")
-                try:
-                    dt.date.fromisoformat(fields.get("timestamp", ""))
-                except ValueError:
-                    issues.append("timestamp must be a valid YYYY-MM-DD date")
+                for date_key in ("timestamp", "review_after"):
+                    if date_key not in fields:
+                        continue
+                    try:
+                        dt.date.fromisoformat(fields[date_key])
+                    except ValueError:
+                        issues.append(f"{date_key} must be a valid YYYY-MM-DD date")
+                source = fields.get("source", "")
+                if source == "pending":
+                    pending_sources += 1
+                    message = "original source pending; verify the stated scope before use"
+                    if fields.get("type") == "Authorization":
+                        message = "authorization source pending; verify recipient, action and current scope before external or paid action"
+                    self.issue("memory", path, message, warning=True)
+                elif source:
+                    source_path = Path(source.replace("\\", "/"))
+                    if source_path.is_absolute() or ".." in source_path.parts or ":" in source:
+                        issues.append("source must be a repository-relative path or pending")
+                    elif not (self.root / source_path).exists():
+                        issues.append(f"source path missing: {source}")
                 for message in issues:
                     self.issue("memory", path, message)
                 if fields.get("status") == "active":
                     active += 1
                     if path not in indexed:
                         self.issue("memory", path, "active memory missing from INDEX.md")
+                    if indexed_types.get(path) != fields.get("type"):
+                        self.issue("memory", index, f"index type differs from memory: {self.label(path)}")
                 elif path in indexed:
-                    self.issue("memory", path, "archived memory is linked from the default index", warning=True)
-        self.counts.update(memory_entries=total, active_memories=active)
+                    self.issue("memory", path, "non-active memory linked from the default index")
+        for path in indexed - seen_paths:
+            self.issue("memory", index, f"index target is not a formal memory: {self.label(path)}")
+        replacement_graph: dict[str, set[str]] = {}
+        for identifier, (path, fields) in entries.items():
+            replaced = ids_field(fields.get("supersedes", ""))
+            replacement_graph[identifier] = set(replaced)
+            for old_id in replaced:
+                if old_id == identifier:
+                    self.issue("memory", path, "memory cannot supersede itself")
+                elif old_id not in entries:
+                    self.issue("memory", path, f"supersedes id missing: {old_id}")
+                elif entries[old_id][1].get("status") == "active":
+                    self.issue("memory", path, f"superseded entry remains active: {old_id}")
+        for cycle in required_cycles(replacement_graph):
+            self.issue("memory", memory, f"supersedes cycle: {' -> '.join(cycle)}")
+        self.counts.update(memory_entries=total, active_memories=active, memory_sources_pending=pending_sources)
 
     def skills(self) -> None:
         skill_root = self.root / ".agents/skills"
         count = 0
+        dependency_graph: dict[str, set[str]] = {}
         if not skill_root.is_dir():
             self.issue("skills", skill_root, "project skills directory missing")
             return
@@ -251,6 +404,7 @@ class WorkspaceCheck:
             if text is None:
                 continue
             count += 1
+            dependency_graph[folder.name] = set()
             fields, issues = frontmatter(text)
             if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", fields.get("name", "")):
                 issues.append("skill name must use lowercase letters, digits and hyphens")
@@ -261,6 +415,12 @@ class WorkspaceCheck:
             for message in issues:
                 self.issue("skills", path, message)
             self.links(path, text, "skills")
+            self.code_links(path, text, "skills")
+            required, _conditional = declared_reads(text)
+            for destination in required:
+                target = Path(os.path.abspath(path.parent / destination))
+                if target.name == "SKILL.md" and target.parent.parent == skill_root:
+                    dependency_graph[folder.name].add(target.parent.name)
             for base, dirs, files in os.walk(folder, followlinks=False):
                 dirs[:] = [d for d in dirs if d not in PRUNE and not reparse(Path(base) / d)]
                 for name in files:
@@ -269,6 +429,20 @@ class WorkspaceCheck:
                         contents = self.read(reference, "skills")
                         if contents is not None:
                             self.links(reference, contents, "skills")
+                            self.code_links(reference, contents, "skills")
+        self.counts["mandatory_skill_edges"] = sum(len(edges) for edges in dependency_graph.values())
+        for cycle in required_cycles(dependency_graph):
+            self.issue("skills", skill_root, f"mandatory skill read cycle: {' -> '.join(cycle)}")
+        catalog = self.root / "07_知识库与Skills/03_Skills清单.md"
+        catalog_text = self.read(catalog, "skills")
+        if catalog_text is not None:
+            catalog_links = self.links(catalog, catalog_text, "skills")
+            catalog_skills = {path.parent.name for path in catalog_links if path.name == "SKILL.md" and path.parent.parent == skill_root}
+            installed_skills = set(dependency_graph)
+            for name in sorted(installed_skills - catalog_skills):
+                self.issue("skills", catalog, f"project skill absent from catalog: {name}")
+            for name in sorted(catalog_skills - installed_skills):
+                self.issue("skills", catalog, f"catalog names missing project skill: {name}")
         self.counts["project_skills"] = count
 
     def active_links(self) -> None:
@@ -283,10 +457,24 @@ class WorkspaceCheck:
             text = self.read(path, "active_links")
             if text is not None:
                 self.links(path, text, "active_links")
+                self.code_links(path, text, "active_links")
         self.counts["active_entry_documents"] = len(paths)
 
     def junctions(self) -> None:
         count = 0
+
+        def unavailable_link(path: Path) -> None:
+            resolved = path.resolve(strict=False)
+            try:
+                resolved.relative_to(self.root)
+                outside = False
+            except ValueError:
+                outside = True
+            if outside:
+                self.issue("junctions", path, "external link target unavailable in this environment; not confirmed broken", warning=True)
+            else:
+                self.issue("junctions", path, "local link target is missing")
+
         for base, dirs, files in os.walk(self.root, followlinks=False):
             folder = Path(base)
             depth = len(folder.relative_to(self.root).parts)
@@ -296,13 +484,13 @@ class WorkspaceCheck:
                 if reparse(path):
                     count += 1
                     if not path.exists():
-                        self.issue("junctions", path, "link target is missing or unavailable")
+                        unavailable_link(path)
             for name in dirs[:]:
                 path = folder / name
                 if reparse(path):
                     count += 1
                     if not path.exists():
-                        self.issue("junctions", path, "directory link target is missing or unavailable")
+                        unavailable_link(path)
                     dirs.remove(name)
                 elif name in PRUNE or depth >= 3:
                     dirs.remove(name)
@@ -357,7 +545,7 @@ class WorkspaceCheck:
         self.counts["git_tracked_entries"] = count
 
     def run(self) -> dict:
-        for check in (self.root_entries, self.memory, self.skills, self.active_links, self.junctions, self.git_paths):
+        for check in (self.root_entries, self.governance, self.memory, self.skills, self.active_links, self.junctions, self.git_paths):
             try:
                 check()
             except OSError:
@@ -365,7 +553,7 @@ class WorkspaceCheck:
         return {
             "ok": not self.errors, "root": str(self.root), "counts": self.counts,
             "errors": self.errors, "warnings": self.warnings,
-            "scope": "Read-only: active governance links, local skill links, memory structure, directory links through depth 4, and Git filenames. Historical records and secret contents are not scanned.",
+            "scope": "Read-only structural checks: active and inline-code paths, skill catalog and declared mandatory edges, memory IDs, scope presence, source paths, replacement and index, shallow link targets, and Git filenames. No semantic judgment, agent behavior replay, historical payload or secret-body scan.",
         }
 
 

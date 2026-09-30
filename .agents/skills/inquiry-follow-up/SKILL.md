@@ -1,6 +1,6 @@
 ---
 name: inquiry-follow-up
-description: Inquiry follow-up workflow for Beiqiang B2B shoe buyers. Use when drafting Alibaba inquiry replies, WhatsApp follow-ups, sample order push messages, second follow-ups for no-reply buyers, quotation reminders, buyer qualification questions, and next-step messages for importers, wholesalers, Amazon/TikTok sellers, and brand buyers sourcing wide toe box comfort walking shoes or related casual footwear.
+description: Draft or review post-inquiry follow-ups for Beiqiang B2B shoe buyers by Alibaba, WhatsApp or email. Use for next-step messages, no-reply follow-ups and sample discussions; use rfq-quote-assistant for a first quotation.
 ---
 
 # Inquiry Follow Up
@@ -20,13 +20,13 @@ Use this skill to move a buyer from inquiry to confirmed specs, sample order, or
 
 - Position Beiqiang as a Quanzhou footwear factory supplier.
 - Keep the buyer type B2B: importer, wholesaler, Amazon/TikTok seller, brand buyer, sourcing agent.
-- Focus on wide toe box comfort walking shoes, casual walking shoes, lightweight slip-on shoes, knit/textile upper, EVA sole, sample check, mixed colors/sizes, OEM/ODM discussion when true.
+- Discuss only the current SKU's verified shoe type, fit, materials, source and feasible order options. Wide toe, EVA, samples, mixed sizes/colors and OEM/ODM are conditional.
 - Use FOB `8-12 USD/pair` only as a reference range when relevant; final price depends on style, quantity, material, size ratio, packing, and trade terms.
 - Ask for one clear next action, not a long survey.
 
 ## 输出格式
 
-Return:
+Return only the message and internal notes needed for the requested channel and buyer stage. For a complete follow-up sequence, use:
 
 ```text
 Buyer status:

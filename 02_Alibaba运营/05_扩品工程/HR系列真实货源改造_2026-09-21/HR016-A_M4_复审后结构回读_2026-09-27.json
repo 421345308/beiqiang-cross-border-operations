@@ -1,0 +1,72 @@
+{
+  "timestamp_utc": "2026-09-27T11:47:01.985612+00:00",
+  "product_id": 1601943514625,
+  "product_request_id": "21501b8d17905096174832748",
+  "schema_render_request_id": "2166c2ca17905096240123670",
+  "schema_render_trace_id": "2103135017905096236983249e0fd9",
+  "schema_render_sha256": "c6316bd97a88c593b79a74475a329f1937e9cbe22dc0dd011d451238854e3530",
+  "status": "approved",
+  "display": "Y",
+  "approved_y": true,
+  "main_images": [
+    {
+      "slot": 0,
+      "url": "https://sc04.alicdn.com/kf/A3c0e76b92ca54d95a9016db4b1ced4d4z.png",
+      "render_file_id": "0",
+      "render_url": "//sc04.alicdn.com/kf/A3c0e76b92ca54d95a9016db4b1ced4d4z.png_350x350.png"
+    },
+    {
+      "slot": 1,
+      "url": "https://sc04.alicdn.com/kf/A6be34f4b1b4141779284360dadd853bcj.png",
+      "render_file_id": "0",
+      "render_url": "//sc04.alicdn.com/kf/A6be34f4b1b4141779284360dadd853bcj.png_350x350.png"
+    },
+    {
+      "slot": 2,
+      "url": "https://sc04.alicdn.com/kf/Abdc0612d3eec4146b79c7d4857dece07C.png",
+      "render_file_id": "0",
+      "render_url": "//sc04.alicdn.com/kf/Abdc0612d3eec4146b79c7d4857dece07C.png_350x350.png"
+    },
+    {
+      "slot": 3,
+      "url": "https://sc04.alicdn.com/kf/H3ed81d0f0cce4a2992a2a3546dad0b48y.png",
+      "render_file_id": "0",
+      "render_url": "//sc04.alicdn.com/kf/H3ed81d0f0cce4a2992a2a3546dad0b48y.png_350x350.png"
+    },
+    {
+      "slot": 4,
+      "url": "https://sc04.alicdn.com/kf/Ab9a4c6b3347e47799c1fd519399da5b3r.png",
+      "render_file_id": "0",
+      "render_url": "//sc04.alicdn.com/kf/Ab9a4c6b3347e47799c1fd519399da5b3r.png_350x350.png"
+    },
+    {
+      "slot": 5,
+      "url": "https://sc04.alicdn.com/kf/A51c0b4e420704a18a9f8fe59c19b4620u.png",
+      "render_file_id": "0",
+      "render_url": "//sc04.alicdn.com/kf/A51c0b4e420704a18a9f8fe59c19b4620u.png_350x350.png"
+    }
+  ],
+  "m4_is_approved_candidate": true,
+  "other_five_main_images_match_before": true,
+  "detail_gallery_groups_in_render_order": [
+    {
+      "gallery_name": "Detail shot",
+      "gallery_id": "300",
+      "images": [
+        "https://sc04.alicdn.com/kf/Hfbebae21cd3a4f88aa252a36102ef5fbt.png_350x350.png"
+      ]
+    },
+    {
+      "gallery_name": "Other product images",
+      "gallery_id": "350",
+      "images": [
+        "https://sc04.alicdn.com/kf/H3d98b90b927943ecbda4e4e225677bedh.png_350x350.png",
+        "https://sc04.alicdn.com/kf/Hca64ffa9cbe2470aaa5171b83fa0f46fE.png_350x350.png",
+        "https://sc04.alicdn.com/kf/Hbcba208b831c413fb66f75e09ae6ba88C.png_350x350.png"
+      ]
+    }
+  ],
+  "detail_role_order_pass": true,
+  "public_visual_verification": "NOT_COMPLETED: no connected browser (CUA reports no apps/browsers and IAB unavailable); Alibaba public URL inaccessible via web tool; Firecrawl request denied for insufficient credits.",
+  "overall_m4_public_qa_pass": false
+}
