@@ -5,6 +5,10 @@ description: Create, generate, review, and iteratively improve Beiqiang footwear
 
 # Beiqiang Seedance Video
 
+## Required reads
+
+- Read the [video entry](../../../05_内容与视频/AGENTS.md) and exact SKU evidence. Use [positioning](../beiqiang-positioning/SKILL.md) and [TikTok content](../tiktok-b2b-content/SKILL.md) for buyer-facing shoe claims.
+
 Create B2B footwear videos from real Beiqiang product evidence. Optimize for overseas importers, wholesalers, online sellers, sourcing agents, and private-label buyers.
 
 ## Required Inputs

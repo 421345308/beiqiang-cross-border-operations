@@ -35,7 +35,7 @@ Before publishing or regenerating assets, check:
 2. Title: relevant search terms, not overstuffed, core keyword appears naturally.
 3. Keywords/selling points: at least 3 relevant phrases when the page offers such fields; avoid repeating the same term.
 4. Attributes: required attributes complete; important optional/custom attributes filled.
-5. First main image: pure/light background, product complete and large, preferably no text, strong search click signal.
+5. First main image: apply current placement rules, keep product recognizable at thumbnail size, and compare clean product views with credible product-led scenes when both are allowed. Any text needs evidence and legibility.
 6. Gallery: every image has a buyer-facing job; no filler.
 7. Detail page: product specs, size, material, function, colors, packaging/order support, and optional supplier trust.
 8. Offer terms: MOQ, sample policy, lead time, price tiers, packing, and logistics are as complete as truthfully possible.
@@ -44,4 +44,4 @@ Before publishing or regenerating assets, check:
 
 ## When To Ask The User
 
-Ask only when a high-impact fact lacks both current SKU evidence and an existing owner-approved baseline: price, MOQ, sample cost, lead time, package weight/size, material, outsole, fleece/lining, customization ability, certificate, customer review, HS code, or other unsupported buyer-facing claims. For the authorized HR replacement workflow, do not pause over exact supplier stock or repeatedly ask about the backend quantity: once a procurable real or similar shoe is mapped and the live page/SKUs match it, use `999` on each valid SKU as the owner's availability convention, not a physical-stock claim. Recheck actual supply for each order.
+Ask only when a high-impact fact lacks both current SKU evidence and an existing owner-approved baseline. The HR replacement and `999` conditions are maintained solely in lifecycle SOP §§1, 3 and 5; do not treat a backend number as physical stock or a reason to bypass source verification.

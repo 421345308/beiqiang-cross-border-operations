@@ -4,7 +4,7 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 import unittest
 
-from check_workspace import WorkspaceCheck, declared_reads, literal_paths, required_cycles
+from check_workspace import WorkspaceCheck, declared_reads, literal_paths, read_declaration, required_cycles
 
 
 def memory_text(identifier: str, status: str = "active", extra: str = "") -> str:
@@ -89,6 +89,26 @@ class MemoryFixture(unittest.TestCase):
 
 
 class SkillFixture(unittest.TestCase):
+    def test_fenced_required_reads_are_examples_not_edges(self) -> None:
+        body = "```markdown\n## Required reads\n- [fake](../fake/SKILL.md)\n```\n## Required reads\n- [real](../real/SKILL.md)\n"
+        self.assertEqual(declared_reads(body)[0], ["../real/SKILL.md"])
+        self.assertEqual(read_declaration("```md\n## Required reads\n- [fake](../fake/SKILL.md)\n```"), "undeclared")
+
+    def test_declaration_coverage_and_real_cycle(self) -> None:
+        self.assertEqual(read_declaration("# A\n"), "undeclared")
+        self.assertEqual(read_declaration("## Required reads\n- None. Task evidence is conditional.\n"), "none")
+        self.assertEqual(read_declaration("## Required reads\n- Read the other skill.\n"), "unresolved")
+        a = declared_reads("## Required reads\n- [b](../b/SKILL.md)\n")[0]
+        b = declared_reads("## Required reads\n- [a](../a/SKILL.md)\n")[0]
+        self.assertEqual(a, ["../b/SKILL.md"])
+        self.assertEqual(b, ["../a/SKILL.md"])
+        self.assertTrue(required_cycles({"a": {"b"}, "b": {"a"}}))
+
+    def test_reference_and_inline_paths(self) -> None:
+        body = "[target]: ../b/SKILL.md\n## Required reads\n- [Read B][target]\n- `references/local.md`\n## Conditional reads\n- [C](../c/SKILL.md)\n"
+        self.assertEqual(declared_reads(body), (["../b/SKILL.md", "references/local.md"], ["../c/SKILL.md"]))
+        self.assertEqual(read_declaration("## Required reads\n- None\n- [B](../b/SKILL.md)"), "unresolved")
+
     def test_required_cycle_but_conditional_links_do_not_count(self) -> None:
         a = "## Required reads\n- [b](../b/SKILL.md)\n"
         b = "## Conditional reads\n- [a](../a/SKILL.md)\n"

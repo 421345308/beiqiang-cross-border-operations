@@ -5,6 +5,10 @@ description: Audit the current full Beiqiang Alibaba.com catalog before further 
 
 # Alibaba Full Catalog Audit
 
+## Required reads
+
+- Read [workspace boundaries](../../../AGENTS.md), [Alibaba entry](../../../02_Alibaba运营/AGENTS.md), and the relevant gates in the [lifecycle SOP](../../../02_Alibaba运营/00_运营SOP/国际站商品全生命周期SOP.md); inspect current catalog evidence for the audited scope.
+
 货源身份、外采可供能力和 `HOLD_SOURCE` 的现行判断只读根 `AGENTS.md` 与单款证据；本 Skill 不维护第二份货源规则。
 
 Use this skill for Beiqiang's pre-launch or pre-promotion Alibaba.com product audit. Treat the audit as an operating decision tool, not a generic listing review.
@@ -29,6 +33,8 @@ Prefer these inputs:
 - Live readback where available: productId, title, Model Number, main-image count, SKU/color-image bindings, product detail count, company-image count, productDescType, URL scan, copy, trunk, and public page.
 
 If backend data is missing, label the result as `本地资料预审`, not final performance audit.
+
+For performance diagnosis, preserve report date/timezone, currency, link/family ID, channel, unit, deduplication and attribution. Quality score, online state, `999` and an inquiry do not establish real source or supply. Use the [read-only funnel aggregator](../../../08_工具链/06_工作区维护/funnel_metrics.py) only for comparable rows; a score is a triage aid, not evidence that exposure or effective inquiries improved. Explain observation, alternative cause, next check and smallest action for each priority item.
 
 ## 发布完整性门槛
 

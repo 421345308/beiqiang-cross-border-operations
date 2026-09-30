@@ -5,6 +5,10 @@ description: Execute Beiqiang Alibaba.com product, image-bank, video, quality, s
 
 # Alibaba OpenAPI Operator
 
+## Required reads
+
+- Read [workspace boundaries](../../../AGENTS.md), [Alibaba entry](../../../02_Alibaba运营/AGENTS.md), and the applicable sections of the [lifecycle SOP](../../../02_Alibaba运营/00_运营SOP/国际站商品全生命周期SOP.md) before operations.
+
 Prefer the authorized Alibaba Open APIs over repetitive browser form work. Resolve scripts relative to this skill directory and business data relative to the workspace root; do not run the examples from an unrelated `scripts/` directory.
 
 ## Safety and evidence

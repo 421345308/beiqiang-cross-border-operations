@@ -7,6 +7,10 @@ metadata:
 
 # Remotion workspace routing
 
+## Required reads
+
+- None. Select only the mode reference below for the requested video task.
+
 Use this single project entry for Remotion work. Its mode documents are references, not separately installed skills. Read only the row needed for the current task; do not load the whole bundle or the plugin's equivalent instructions again.
 
 Preserve user edits and inspect the target project's dependencies before using version-specific APIs. This bundle came from Remotion 4.0.522; the installed plugin inspected on 2026-09-11 contains 4.0.506 guidance. Local package versions and current official documentation decide compatibility.

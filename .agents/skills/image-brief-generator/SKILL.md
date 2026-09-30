@@ -5,6 +5,10 @@ description: Image brief and AI prompt generator for Beiqiang Alibaba.com operat
 
 # Image Brief Generator
 
+## Required reads
+
+- Read [workspace facts](../../../AGENTS.md), the exact SKU/source evidence, and the applicable image/claim gates in the [lifecycle SOP](../../../02_Alibaba运营/00_运营SOP/国际站商品全生命周期SOP.md).
+
 Use this skill to create image briefs before selecting, designing, or generating Alibaba International Station images.
 
 ## 适用场景
@@ -18,7 +22,7 @@ Use this skill to create image briefs before selecting, designing, or generating
 ## 贝强业务规则
 
 - Product must stay visually consistent with the real shoe photo and confirmed facts.
-- First main image should be clean, product-first, international B2B style, with minimal or no text.
+- M1 must meet current placement/category material rules. Otherwise compare a clear product view with a credible product-led scene using thumbnail recognition, target buyer intent and available real assets; short text is optional when evidenced and legible.
 - Detail images should explain product before factory.
 - Use English only on buyer-facing images.
 - Use the current SKU's evidenced positioning. Factory supply, fit, comfort, weight, materials, sample support and OEM/ODM scope must each be supported; `Wide Toe Box` is not a store-wide default.
@@ -39,7 +43,7 @@ M1 继续承担搜索点击与商品识别：真实产品优先、主体清楚�
 - 包装选择，例如袋装、盒装或外箱交接；包装方式是可讨论选项，不等于默认报价已包含；
 - MOQ、混色混码、询价信息或其他能推动买家发询盘的下一步。
 
-B2B 采购标识**允许并推荐使用**（`WHOLESALE`、`OEM/ODM`、`SAMPLE SUPPORT`、`MIXED SIZES/COLORS`、`PACKAGING OPTIONS` 等）—— 平台热榜商品普遍在主图上标注这些，对进口商/批发商是核心采购信号，不是噪音。判断标准是**信息价值**，不是"有无标识"：该标识是否回答买家的采购问题、是否由公司或单款的真实证据支持。**不得标注未确认的能力**（未落实的认证、产能、MOQ、交期）。公司能力图允许复用经核实的模板；产品细节、颜色、尺码、材料与产品承诺必须逐款映射。
+B2B 采购标识（如 `WHOLESALE`、`OEM/ODM`、`SAMPLE SUPPORT`、`MIXED SIZES/COLORS`、`PACKAGING OPTIONS`）是可选的信息标签。只在其回答本款买家的具体问题、公司或单款证据支持且缩略图仍清楚时使用；同行热榜样本不能证明标签带来排名或点击。未确认的能力、MOQ、样品政策、包装价格或交期不写。公司能力图可复用经核实的模板，产品事实仍逐款映射。
 
 ## 输出格式
 
@@ -63,6 +67,8 @@ Suggested filename:
 ```
 
 For a full image set, return a table with one row per image.
+
+When assets are insufficient, specify the exact view to photograph instead of inventing tread, materials, equipment or certification. Detail-page opening should identify the shoe and its real choices before generic company history; give one relevant inquiry CTA that asks for only the few inputs needed to quote. Check English overlays at mobile width.
 
 ## 禁止事项
 

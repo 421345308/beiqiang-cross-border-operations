@@ -5,6 +5,10 @@ description: Plan and review small-budget Alibaba.com P4P keyword tests for veri
 
 # P4P Keyword Testing
 
+## Required reads
+
+- Read [workspace boundaries](../../../AGENTS.md), [Alibaba entry](../../../02_Alibaba运营/AGENTS.md), and dated account-mode/report evidence for the target plan.
+
 Use this skill to create controlled P4P tests that identify useful keywords without wasting budget on weak listings.
 
 ## 适用场景
@@ -32,6 +36,9 @@ Recommended after launch:
 - Prioritize products with complete title, first image, attributes, detail page, and inquiry CTA.
 - Group keywords by intent: core product terms, long-tail scenario terms, and B2B/OEM terms.
 - Start with small daily budgets and short cycles, then optimize from data.
+- Identify whether the target is standard keyword advertising, full-site smart promotion or another mode. Check actual controls, report grain, attribution, currency/timezone and any active contract or lock before proposing a keyword, time or geography change. The 2026-09-15 historical smart-plan case is not a current control map.
+- Distinguish bid keywords from buyer search terms. Candidate terms need source/date/market, exact SKU relevance, buyer intent and validation status. Long-tail cost or conversion advantage is a hypothesis, not a guarantee; there is no universal Top5/50% split or fixed click threshold.
+- Draft budget, bid, pause and scale changes with a risk cap and review condition; do not execute them without task authorization. Correct confirmed wrong category or misleading claims immediately; compare reasonable alternatives only when a controlled test can separate them.
 
 ## 输出格式
 

@@ -6,9 +6,9 @@ Use this reference for a coordinated product-page strategy, full image/detail re
 
 - A high-quality product is not only a complete listing. It combines information quality, product competitiveness, and product performance.
 - Title, subtitle/selling points, and attributes all participate in search matching. They must be complete, accurate, and mutually consistent with images.
-- Title drafting pattern: marketing modifier + evidenced attributes + core product keyword + use scenario. Aim around 75–105 characters; use 95–115 only when useful verified attributes justify it. These are drafting heuristics, not platform limits. Avoid repeated stuffing and use `Knit`, `Knitted Upper` or `Textile` instead of `Flyknit` when the platform flags it.
+- Title: lead with a recognizable product category and supported differentiator in natural buyer language. There is no universal character target, word slot or fixed repetition count; verify current field limits in the live schema. HR replacement batch exceptions stay in lifecycle SOP §3. Use `Knit`, `Knitted Upper` or `Textile` instead of `Flyknit` when the platform flags that term.
 - When keyword fields are available, provide at least 3 relevant buyer-search phrases and avoid repeating the same word mechanically.
-- The first main image should follow Alibaba-style product quality logic: clean pure/light background, full product display, high product occupancy, minimal or no text.
+- The first main image must meet the current placement/category/advertising material rules. Otherwise compare clear product photography with a credible, product-led use scene using thumbnail recognizability and buyer intent; text is optional when legible and evidenced. Historical GGS pure-background teaching is a dated reference, not a permanent rule for every listing.
 - Strong product basics include accurate category, clear title, complete attributes, clear main images, useful detail page, reliable price/logistics/lead time, and non-duplicate product structure.
 - Repeated products scatter traffic and reduce buyer trust. A true new listing needs a meaningful product difference, not only a different image, title, price, MOQ, or SKU order.
 - Main gallery images support product quality scoring and buyer click-through. Use clear 1:1 images, preferably around 800x800 or larger, with the first image strong enough for search results.
@@ -30,8 +30,8 @@ For each product, form a short internal strategy before creating final files:
 
 - Product role: benchmark listing, supporting variant, duplicate-risk variant, or delay/skip until more evidence is available.
 - Core buyer intent: for example wide toe walking shoes, lightweight knit slip-on shoes, casual sneakers, comfort walking shoes.
-- Top differentiator: the one strongest visible reason to click, such as wide toe box, breathable knit, EVA cushion, slip-on convenience, or lightweight sole.
-- Main keyword cluster: 2-4 real search phrases. Do not repeat the same core keyword more than twice in the title.
+- Top differentiator: the strongest evidenced reason to click, such as verified toe room, upper structure or closure. Material, cushioning and weight need exact SKU evidence before use.
+- Main keyword cluster: distinguish actual buyer search terms from ad targeting keywords and public candidate phrases; record source, date, region, product relevance and validation state. Avoid mechanical repetition.
 - Search copy plan: title, keyword/selling-point field, attributes, and detail specs should support the same keyword cluster without contradiction.
 - Buyer objections: size range, material, comfort proof, outsole, colors, MOQ/sample/lead time, and whether OEM/private label is supported.
 - Image plan: each main image and detail image needs a buyer-facing job. Reject filler.
@@ -43,7 +43,7 @@ Before preparing a new uploaded product:
 
 1. Compare it with existing Beiqiang final-upload products.
 2. Check whether the new package has a real difference in product shape, upper material, closure, outsole, buyer use case, gender/size range, or major style.
-3. If the product is only a color or minor photo variant of an existing listing, treat it as a SKU/variant candidate rather than a new product page unless the user explicitly wants a separate test page.
+3. If the product is only a color or minor photo variant of an existing listing, treat it as a SKU/variant candidate. A request to test a title or image does not waive duplicate-listing constraints; test within an eligible existing link and preserve the link's current protection. Audit historical sibling links separately from decisions to create new ones.
 4. If source information is incomplete but the product looks commercially valuable, prepare a pending-confirmation list instead of inventing facts.
 5. If the product is weak or too similar, suggest merge/delay/skip rather than creating a low-quality listing.
 
@@ -78,7 +78,7 @@ Shoe size charts are not an exception to evidence rules. Generate conversions on
 
 Each image must perform a role:
 
-1. Search hero: high-click white/light background image, full product, large product occupancy, minimal or no text.
+1. Search hero: clear, truthful product recognition at thumbnail size; choose a compliant clean background or credible product-led scene based on actual placement rules and source assets. Short B2B text is optional when it answers a real buyer question.
 2. Core differentiator: one obvious reason to click, such as roomy toe box or breathable knit upper.
 3. Product proof: material, structure, outsole, insole, weight, or flexibility evidence.
 4. Use/comfort scene: daily walking, commuting, travel, or casual wear, still product-led.

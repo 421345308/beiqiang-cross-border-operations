@@ -5,6 +5,10 @@ description: Manage CompShare GPU instances, durable remote jobs, images and sto
 
 # CompShare CLI
 
+## Required reads
+
+- None. Discover the current CLI help for the specific operation below.
+
 Use the installed CLI and structured JSON help rather than guessing flags. Detailed command examples, SSH/file transfer, durable jobs, billing and error handling are in [references/operations.md](references/operations.md); read only the relevant section.
 
 ## Operating rules

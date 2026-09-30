@@ -5,6 +5,10 @@ description: Research Beiqiang walking shoe market demand and product direction 
 
 # Market Demand Research
 
+## Required reads
+
+- Read [current status](../../../00_总控台/当前状态.md), [product master](../../../00_总控台/产品经营主表.md), and dated evidence for the specific direction.
+
 Use this skill to judge what Beiqiang should push next with evidence from multiple data sources. Separate B2B supplier signals from retail demand language.
 
 ## 适用场景

@@ -19,8 +19,8 @@ If a high-impact fact is missing, proceed with a conservative draft and list it 
 
 1. Positioning gate: check buyer-facing claims against the exact SKU and workspace facts; consult the positioning card only if a claim remains uncertain.
 2. Product role: new listing, variant, duplicate risk, seasonal style, or skip candidate.
-3. Competitor check: use `competitor-research-firecrawl` if keyword or image strategy is uncertain.
-4. Keyword cluster: choose one primary buyer intent and 3-5 supporting long-tail terms.
+3. Competitor check: use `competitor-research-firecrawl` only if current SKU/platform evidence cannot settle a material keyword or image choice.
+4. Keyword cluster: choose the core category and supported attribute/use terms for one buyer intent; label actual buyer queries, ad terms and unvalidated public candidates separately, with source, date and target market. Long-tail is an option, not a priority rule.
 5. Title: produce up to 3 useful options when comparison adds value; length and structure follow current keyword evidence and buyer clarity rather than a permanent character target.
 6. Attributes: align category, product group, required attributes, optional attributes, and custom attributes.
 7. Main images: define roles before generating or selecting images.
@@ -51,7 +51,7 @@ Possible terms when supported by the exact SKU and current keyword intent:
 
 Avoid:
 
-- For the current HR replacement batch, color names and size ranges in the title: the owner rejected this on 2026-09-29. Put these choices in SKU fields and images. Sibling titles need real search-intent and feature distinctions, not color substitution.
+- For the current HR replacement batch, apply lifecycle SOP §3's title exception. Do not extend it to unrelated SKUs.
 - Repeated words just for length.
 - `Flyknit` if platform flags it.
 - Unsupported `orthopedic`, `medical`, `waterproof`, `leather`, `certified`, or brand terms.

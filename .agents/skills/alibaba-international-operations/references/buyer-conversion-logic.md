@@ -19,7 +19,7 @@ Use this order for most Beiqiang product details:
 
 1. Product overview: the product type, buyer use case, and 3-4 true benefits.
 2. Product specifications: model, upper, outsole, size, closure, season, colors, packing, sample/MOQ note if confirmed.
-3. Size reference: shoe image plus readable EU/US/foot-length table.
+3. Size reference: only evidenced size systems and measurements; never infer US sizes or foot length from an EU range.
 4. Material and structure: upper, sole, insole/lining, outsole/tread, closure.
 5. Function proof: wide toe, cushioning, breathable upper, flexibility, lightweight, anti-slip texture when supported.
 6. Color/variant overview: actual available SKU colors.
@@ -33,7 +33,7 @@ Use this order for most Beiqiang product details:
 - Prefer factual supply language over exaggerated consumer ads.
 - Avoid unsupported medical, orthopedic, waterproof, safety, brand, certificate, review, or performance claims.
 - Explain uncertainty in internal listing notes, not buyer-facing images.
-- If a claim helps conversion but needs proof, ask for source photo or user confirmation.
+- If a claim helps conversion but needs proof, ask for source photo or user confirmation. A certificate must identify its holder, scope, validity and relevant market; do not add generic CE/FDA/ISO badges. Neither free samples nor discounts, five-year warranty or named customer logos are default offers.
 
 ## Inquiry Readiness
 

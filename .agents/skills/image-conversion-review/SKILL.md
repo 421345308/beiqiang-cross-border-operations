@@ -5,6 +5,10 @@ description: Review Beiqiang Alibaba.com main images and first gallery images fo
 
 # Image Conversion Review
 
+## Required reads
+
+- Read [workspace facts](../../../AGENTS.md), the exact SKU/source evidence, and the applicable image/claim gates in the [lifecycle SOP](../../../02_Alibaba运营/00_运营SOP/国际站商品全生命周期SOP.md).
+
 Use this skill to judge whether Alibaba product images can win clicks and help buyers understand the product quickly.
 
 ## 适用场景
@@ -25,7 +29,7 @@ Use any of:
 
 ## 图组标准
 
-M1 is normally a clean, complete, product-first search hero with a light/white background, strong product occupancy and minimal text. Do not force M2-M6 into a permanent sequence. First list the buyer's unresolved questions, then select distinct roles from this library:
+Apply current placement/category/advertising material requirements first. When both are permitted, compare a clean full-product M1 and a credible product-led use scene by thumbnail recognition, exact shoe fidelity, buyer intent and source quality. Short B2B text can help if evidenced and readable; it is not mandatory. Do not force M2-M6 into a permanent sequence. First list the buyer's unresolved questions, then select distinct roles from this library:
 
 - additional angle or construction proof;
 - real color/SKU choice and supported size information;

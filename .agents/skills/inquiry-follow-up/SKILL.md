@@ -5,6 +5,10 @@ description: Draft or review post-inquiry follow-ups for Beiqiang B2B shoe buyer
 
 # Inquiry Follow Up
 
+## Required reads
+
+- Read the relevant buyer record and exact SKU/commercial evidence; apply [workspace boundaries](../../../AGENTS.md).
+
 Use this skill to move a buyer from inquiry to confirmed specs, sample order, or bulk-order discussion.
 
 ## 适用场景
@@ -23,6 +27,8 @@ Use this skill to move a buyer from inquiry to confirmed specs, sample order, or
 - Discuss only the current SKU's verified shoe type, fit, materials, source and feasible order options. Wide toe, EVA, samples, mixed sizes/colors and OEM/ODM are conditional.
 - Use FOB `8-12 USD/pair` only as a reference range when relevant; final price depends on style, quantity, material, size ratio, packing, and trade terms.
 - Ask for one clear next action, not a long survey.
+- Identify whether this is a new inquiry, quoted-buyer follow-up, sample follow-up or visitor outreach. Read the actual buyer stage, earlier answer and stop-contact state. A first-inquiry automatic reply does not establish visitor popup access; verify account feature and trigger separately before any proposal. Country informs language, destination rules and timezone, never a stereotype of price or certification interest.
+- Deliver a stage-specific draft and internal next-check only; do not activate automation or send a message. For translation, preserve model facts, units and confirmed sizes, and verify local buyer language rather than treating machine translation as search-demand evidence.
 
 ## 输出格式
 

@@ -5,6 +5,10 @@ description: Read the smallest relevant Beiqiang memory set for accepted prefere
 
 # Beiqiang Memory Recall
 
+## Required reads
+
+- None. Memory lookup is conditional on a task needing an unstated prior decision; then read the protocol and index below.
+
 The sole library is `07_知识库与Skills/05_项目记忆系统/`.
 
 1. When the task needs an unstated preference, authorization or prior decision, read `README.md` and `INDEX.md`; reuse unchanged content already read. Ordinary tool tasks need neither.

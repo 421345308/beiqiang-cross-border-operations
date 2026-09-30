@@ -148,7 +148,26 @@ def declared_reads(text: str) -> tuple[list[str], list[str]]:
     required: list[str] = []
     conditional: list[str] = []
     section = ""
+    fence: str | None = None
+    visible: list[str] = []
     for line in text.splitlines():
+        marker = re.match(r"^\s{0,3}(`{3,}|~{3,})", line)
+        if marker:
+            token = marker.group(1)
+            if fence is None:
+                fence = token
+            elif token[0] == fence[0] and len(token) >= len(fence):
+                fence = None
+            continue
+        if fence is not None:
+            continue
+        visible.append(line)
+    definitions = {
+        label.lower(): target for label, target in re.findall(
+            r"(?m)^\s{0,3}\[([^\]]+)\]:\s*<?([^\s>]+)>?", "\n".join(visible)
+        )
+    }
+    for line in visible:
         heading = re.match(r"^##\s+(.+?)\s*$", line)
         if heading:
             section = heading.group(1).lower()
@@ -156,11 +175,38 @@ def declared_reads(text: str) -> tuple[list[str], list[str]]:
         if not re.match(r"^\s*[-*]\s+", line):
             continue
         targets = markdown_targets(line)
+        targets.extend(definitions[label.lower()] for label in re.findall(r"\[[^\]]+\]\[([^\]]+)\]", line) if label.lower() in definitions)
+        targets.extend(re.findall(r"`([^`\n]+\.md)`", line))
         if section == "required reads":
             required.extend(targets)
         elif section.startswith("conditional reads") or section.startswith("conditional execution"):
             conditional.extend(targets)
     return required, conditional
+
+
+def read_declaration(text: str) -> str:
+    """Distinguish an explicit empty declaration from absent dependency metadata."""
+    visible = []
+    fence: str | None = None
+    for line in text.splitlines():
+        marker = re.match(r"^\s{0,3}(`{3,}|~{3,})", line)
+        if marker:
+            token = marker.group(1)
+            if fence is None:
+                fence = token
+            elif token[0] == fence[0] and len(token) >= len(fence):
+                fence = None
+            continue
+        if fence is None:
+            visible.append(line)
+    body = "\n".join(visible)
+    match = re.search(r"(?m)^## Required reads\s*$([\s\S]*?)(?=^## |\Z)", body)
+    if not match:
+        return "undeclared"
+    section = match.group(1)
+    if re.search(r"(?im)^\s*[-*]\s+(?:None\b|No additional Skill dependencies\b)", section):
+        return "unresolved" if declared_reads(body)[0] else "none"
+    return "declared" if declared_reads(body)[0] else "unresolved"
 
 
 def required_cycles(graph: dict[str, set[str]]) -> list[list[str]]:
@@ -411,6 +457,7 @@ class WorkspaceCheck:
     def skills(self) -> None:
         skill_root = self.root / ".agents/skills"
         count = 0
+        declarations = {"declared": 0, "none": 0, "undeclared": 0, "unresolved": 0}
         dependency_graph: dict[str, set[str]] = {}
         if not skill_root.is_dir():
             self.issue("skills", skill_root, "project skills directory missing")
@@ -426,6 +473,12 @@ class WorkspaceCheck:
             if text is None:
                 continue
             count += 1
+            declaration = read_declaration(text)
+            declarations[declaration] += 1
+            if declaration == "unresolved":
+                self.issue("skills", path, "Required reads declared but no resolvable Markdown targets; inspect declaration")
+            elif declaration == "undeclared":
+                self.issue("skills", path, "dependency declaration absent; add Required reads or explicit None", warning=True)
             dependency_graph[folder.name] = set()
             fields, issues = frontmatter(text)
             if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", fields.get("name", "")):
@@ -441,6 +494,9 @@ class WorkspaceCheck:
             required, _conditional = declared_reads(text)
             for destination in required:
                 target = Path(os.path.abspath(path.parent / destination))
+                if not target.exists():
+                    self.issue("skills", path, f"unresolved required read: {destination}")
+                    continue
                 if target.name == "SKILL.md" and target.parent.parent == skill_root:
                     dependency_graph[folder.name].add(target.parent.name)
             for base, dirs, files in os.walk(folder, followlinks=False):
@@ -453,6 +509,8 @@ class WorkspaceCheck:
                             self.links(reference, contents, "skills")
                             self.code_links(reference, contents, "skills")
         self.counts["mandatory_skill_edges"] = sum(len(edges) for edges in dependency_graph.values())
+        for status, total in declarations.items():
+            self.counts[f"skill_dependencies_{status}"] = total
         for cycle in required_cycles(dependency_graph):
             self.issue("skills", skill_root, f"mandatory skill read cycle: {' -> '.join(cycle)}")
         catalog = self.root / "07_知识库与Skills/03_Skills清单.md"

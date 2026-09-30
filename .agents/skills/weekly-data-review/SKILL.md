@@ -5,6 +5,10 @@ description: Turn dated Alibaba.com and B2B channel metrics into Beiqiang's next
 
 # Weekly Data Review
 
+## Required reads
+
+- Read dated metric sources and the [current status](../../../00_总控台/当前状态.md). Full-scorecard references below are conditional.
+
 Use this skill to convert weekly operation data into next actions. The review should be operational, specific, and tied to Beiqiang's B2B buyer positioning.
 
 ## Required References
@@ -13,6 +17,10 @@ Use this skill to convert weekly operation data into next actions. The review sh
 - Load a narrower skill only when the review actually includes that action: product editing, competitor verification, RFQ wording or TikTok content. Keep the default review focused on the supplied metrics and source dates.
 
 ## Review Logic
+
+Before diagnosing, state coverage dates, report timezone, currency, product/family/link ID, channel, metric unit, deduplication and attribution. Missing is not zero. Do not add organic, recommendation, ads, RFQ and visitor marketing rows or different product/search-term dimensions without a common definition. The read-only [funnel aggregator](../../../08_工具链/06_工作区维护/funnel_metrics.py) rejects incompatible slices and calculates weighted CTR/CPC; valid-inquiry rates require buyer-level deduplication and click attribution.
+
+Write each finding as observation → competing explanations → best-supported cause → discriminating check → smallest correction → expected direction and failure signal. Zero exposure requires checking time, publish/review state, visibility, category, duplicate/compliance risk, matching demand and plan state before changing a title. Low CTR needs intent/placement/device/region and visible offer review; low inquiry needs traffic quality, product proof, terms and contact path. Small samples and zero inquiries support risk control, not a claim that the page lost a test. Record what is missing separately from evidence against a hypothesis.
 
 Diagnose in this order:
 

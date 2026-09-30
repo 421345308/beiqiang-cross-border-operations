@@ -5,6 +5,10 @@ description: Create evidence-based TikTok B2B footwear scripts, hooks, shot list
 
 # TikTok B2B Content
 
+## Required reads
+
+- Read [video entry](../../../05_内容与视频/AGENTS.md) and exact SKU/source evidence. Full script references below are conditional.
+
 Use this skill to create TikTok content that attracts sourcing buyers, not retail consumers. Scripts should show real product proof, factory handling, quality checks, packing, and buyer-useful details.
 
 ## Required References

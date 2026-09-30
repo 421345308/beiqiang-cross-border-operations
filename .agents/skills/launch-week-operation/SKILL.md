@@ -5,6 +5,10 @@ description: Plan and run Beiqiang Alibaba.com launch-week operations. Use when 
 
 # Launch Week Operation
 
+## Required reads
+
+- Read the current [status](../../../00_总控台/当前状态.md) and [Alibaba entry](../../../02_Alibaba运营/AGENTS.md); route narrower work only when needed.
+
 Use this skill to convert Beiqiang's opening week into a daily execution system.
 
 ## 适用场景

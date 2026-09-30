@@ -5,6 +5,10 @@ description: Research public shoe competitors for Beiqiang B2B decisions with Fi
 
 # Competitor Research Firecrawl
 
+## Required reads
+
+- None. Choose the tool route and relevant reference below for the question at hand.
+
 Use this skill for public competitor evidence. Select a sample size that answers the user's question; record source URL and observation date. Alibaba supplier pages indicate B2B supply positioning, while retail and social pages mainly reveal end-buyer language and presentation.
 
 ## Tool route

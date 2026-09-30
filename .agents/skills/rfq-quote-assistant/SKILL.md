@@ -5,6 +5,10 @@ description: Prepare evidence-based first RFQ replies and quotation language for
 
 # RFQ Quote Assistant
 
+## Required reads
+
+- Read [workspace boundaries](../../../AGENTS.md), exact buyer request, SKU and confirmed commercial evidence. The references below are conditional.
+
 Use this skill to answer B2B sourcing inquiries with practical, trust-building quotation language. The output should help buyers move from vague RFQ to sample, spec confirmation, or bulk-order discussion.
 
 ## References by need
@@ -16,11 +20,15 @@ Use this skill to answer B2B sourcing inquiries with practical, trust-building q
 
 ## Quote Discipline
 
+- Triage each real RFQ by exact shoe/capability fit, quantity and commercial target, missing specs, buying stage, destination and technical-development needs. Explain the priority in plain terms; do not invent a platform ranking score or quote simply to use an allowance.
+- Reply to the buyer's stated requirement first, then show the matching evidenced model, conditional price or the one or two facts needed for a valid quote, and a concrete next step. A one-pair inquiry may be sample exploration rather than an automatic rejection or bulk-order signal.
+
 - Keep price as a range unless the user provides style, material, quantity, size ratio, packing, and order terms.
 - Use FOB `8-12 USD/pair` as Beiqiang's target market band, not as an unconditional promise.
 - Ask for order-critical details naturally: quantity, target market, size range, color mix, logo/packing needs, delivery time, and sample address.
 - Offer feasible next steps: confirm the actual model and source, check sample availability and current color/size supply, then quote after specs.
 - Avoid unsupported claims about certificates, capacity, years, private-label services, or compliance.
+- Treat named customers/logos and example figures as unverified until there is specific permission and evidence. Draft only; never send through a platform as part of a writing task.
 
 ## Output size
 

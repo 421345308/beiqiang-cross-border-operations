@@ -5,6 +5,10 @@ description: Maintain Beiqiang memories when the user requests remembering, upda
 
 # Beiqiang Memory Curator
 
+## Required reads
+
+- Read the [memory protocol](../../../07_知识库与Skills/05_项目记忆系统/README.md) and [index](../../../07_知识库与Skills/05_项目记忆系统/INDEX.md) for affected entries.
+
 Read `07_知识库与Skills/05_项目记忆系统/README.md` and `INDEX.md`; reuse unchanged versions already read in the task. Read only affected entries unless the user asks for a full audit.
 
 ## Authorization
@@ -23,4 +27,4 @@ Read `07_知识库与Skills/05_项目记忆系统/README.md` and `INDEX.md`; reu
 - When a retained entry explicitly replaces another, mark the old entry `superseded` and remove it from the default index; if it has no independent evidence value, delete it and avoid a dangling `supersedes` pointer.
 - Update `INDEX.md` and affected active links in the same change. Keep existing timestamps unless facts or preferences were newly confirmed; formatting and deduplication are not new evidence.
 - Verify IDs, index coverage, scope, source paths, replacement relations, references, metadata and depth. Report material merges/deletions and remaining uncertainties.
-- Commit only if requested and safely scoped; do not commit unrelated user changes merely because they share the worktree.
+- Git 提交、推送与隔离边界统一执行根 [AGENTS.md](../../../AGENTS.md#记忆维护与-git)；本 Skill 不另设提交许可规则。

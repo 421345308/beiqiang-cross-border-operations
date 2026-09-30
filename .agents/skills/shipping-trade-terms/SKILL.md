@@ -5,6 +5,10 @@ description: Shipping and trade terms assistant for Beiqiang B2B shoe exports. U
 
 # Shipping Trade Terms
 
+## Required reads
+
+- Read [workspace boundaries](../../../AGENTS.md) and the actual buyer/order terms; verify any dynamic logistics quote before using it.
+
 Use this skill to explain trade terms and draft buyer-safe logistics copy for shoe export conversations.
 
 ## 适用场景

@@ -34,8 +34,9 @@ Separate `HARD_CONSTRAINT` from `DEFAULT_HEURISTIC`. Source identity, SKU facts,
 
 1. Freeze the requested scope and target link. Classify proposed claims as verified SKU fact, confirmed commercial condition or drafting hypothesis.
 2. For a title, choose a recognizable product/category term and only supported differentiators. Current keyword evidence and buyer clarity decide wording; fixed formulas and character targets are heuristics. Avoid stuffing and unsupported medical, waterproof, leather, certification or brand terms.
-3. For HR replacement titles, apply the current SOP's HR-specific rules. Keep internal model, supplier and procurement path out of buyer-facing copy; current HR batch titles do not use colors or size ranges as the distinguishing feature.
+3. For HR replacement titles, apply lifecycle SOP §3's current batch exception and fact boundaries; do not infer its details for another batch. Keep internal supplier and procurement paths out of buyer-facing copy.
 4. Check the changed field against relevant existing product facts. A full page task additionally aligns attributes, gallery, details and inquiry content, then uses the checklist. Do not create another listing without a supported product role and duplicate-risk review.
+5. For keyword work, separate ad targeting terms, observed buyer queries and research candidates. Record each candidate's source/date/market, intent, exact SKU support and validation state; do not invent volume or infer that long-tail always wins. Match the proposed title to the page's actual ability to answer that query.
 
 ## Output and completion
 
