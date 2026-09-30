@@ -1,0 +1,740 @@
+{
+  "timestamp_utc": "2026-09-27T11:26:45.529606+00:00",
+  "traffic_source": "02_Alibaba运营/01_店铺与全店诊断/数据管家导出_2026-09-27/数据/Products-2026-09-19.csv",
+  "traffic_period": "2026-09-13~2026-09-19",
+  "meaning": "Click/order figures rank remediation priority; they do not prove supply. Inventory 999 is the seller's inquiry marker, not physical stock.",
+  "read_only": true,
+  "rows": [
+    {
+      "family": "HR040",
+      "listing": "HR040-C",
+      "product_id": 1601943611671,
+      "title_2026_09_19": "Wholesale Women's Sage Knit Adjustable Walking Shoes Breathable Casual Footwear EU 36-45 Model HR040-C",
+      "metrics_period": "2026-09-13~2026-09-19",
+      "search_impressions": 435,
+      "search_clicks": 5,
+      "inquiries": 3,
+      "submitted_orders": 0,
+      "historical_snapshot": {
+        "status": "approved",
+        "display": "Y",
+        "inventory_values": [
+          999
+        ],
+        "checked_snapshot": "HR001-HR067_201条最终全链路回读.json"
+      },
+      "current_api": {
+        "product_id": 1601943611671,
+        "product_request_id": "212c6fc617905083629528486",
+        "product_error": null,
+        "status": null,
+        "display": null,
+        "title": null,
+        "model": null,
+        "sku_count": 0,
+        "sku_code_samples": [],
+        "inventory_request_id": "213e759c17905083693621111",
+        "inventory_error": null,
+        "inventory_count": 0,
+        "inventory_values": [],
+        "inventory_codes": [],
+        "inventory_sku_ids": []
+      },
+      "supply_class": "HOLD_SOURCE_NO_CONFIRMED_MATCHING_SHOE_AND_ROUTE",
+      "disposition": "READ_ONLY_AUDIT_NO_INVENTORY_WRITE"
+    },
+    {
+      "family": "HR054",
+      "listing": "HR054-A",
+      "product_id": 1601943673716,
+      "title_2026_09_19": "OEM Women's Ivory Canvas Platform Lace-up Light Weight Walking Sneakers Casual Shoes EU 36-45 Model HR054-A",
+      "metrics_period": "2026-09-13~2026-09-19",
+      "search_impressions": 1070,
+      "search_clicks": 17,
+      "inquiries": 1,
+      "submitted_orders": 0,
+      "historical_snapshot": {
+        "status": "approved",
+        "display": "Y",
+        "inventory_values": [
+          999
+        ],
+        "checked_snapshot": "HR001-HR067_201条最终全链路回读.json"
+      },
+      "current_api": {
+        "product_id": 1601943673716,
+        "product_request_id": "210829b717905083629766395",
+        "product_error": null,
+        "status": "approved",
+        "display": "Y",
+        "title": "Women's Shoes Model HR054-A",
+        "model": "HR054-A",
+        "sku_count": 30,
+        "sku_code_samples": [
+          "HR054-A-WARM-IVORY-43",
+          "HR054-A-WARM-IVORY-42",
+          "HR054-A-WARM-IVORY-41"
+        ],
+        "inventory_request_id": "21501b6717905083696594261",
+        "inventory_error": null,
+        "inventory_count": 30,
+        "inventory_values": [
+          999
+        ],
+        "inventory_codes": [
+          "CN_LOCAL_01"
+        ],
+        "inventory_sku_ids": [
+          "109646892664",
+          "109646892665",
+          "109646892666",
+          "109646892667",
+          "109646892668",
+          "109646892669",
+          "109646892670",
+          "109646892671",
+          "109646892672",
+          "109646892673",
+          "109646892674",
+          "109646892675",
+          "109646892676",
+          "109646892677",
+          "109646892678",
+          "109646892679",
+          "109646892680",
+          "109646892681",
+          "109646892682",
+          "109646892683",
+          "109646892684",
+          "109646892685",
+          "109646892686",
+          "109646892687",
+          "109646892688",
+          "109646892689",
+          "109646892690",
+          "109646892691",
+          "109646892692",
+          "109646892693"
+        ]
+      },
+      "supply_class": "HOLD_SOURCE_NO_CONFIRMED_MATCHING_SHOE_AND_ROUTE",
+      "disposition": "READ_ONLY_AUDIT_NO_INVENTORY_WRITE"
+    },
+    {
+      "family": "HR034",
+      "listing": "HR034-A",
+      "product_id": 1601943690007,
+      "title_2026_09_19": "OEM Men's Charcoal Mesh Breathable Walking Shoes Double Hook-and-Loop Strap Casual Sneakers EU 36-45 Model HR034-A",
+      "metrics_period": "2026-09-13~2026-09-19",
+      "search_impressions": 12,
+      "search_clicks": 2,
+      "inquiries": 1,
+      "submitted_orders": 0,
+      "historical_snapshot": {
+        "status": "approved",
+        "display": "Y",
+        "inventory_values": [
+          999
+        ],
+        "checked_snapshot": "HR001-HR067_201条最终全链路回读.json"
+      },
+      "current_api": {
+        "product_id": 1601943690007,
+        "product_request_id": "21546a1d17905083623093049",
+        "product_error": null,
+        "status": "approved",
+        "display": "Y",
+        "title": "Men's Charcoal Mesh Breathable Walking Shoes Double Hook-and-Loop Strap Casual Sneakers EU 36-45 Model HR034-A",
+        "model": "HR034-A",
+        "sku_count": 30,
+        "sku_code_samples": [
+          "HR034-A-WARM-BEIGE-36",
+          "HR034-A-WARM-BEIGE-37",
+          "HR034-A-DEEP-NAVY-44"
+        ],
+        "inventory_request_id": "21501be117905083689326030",
+        "inventory_error": null,
+        "inventory_count": 30,
+        "inventory_values": [
+          999
+        ],
+        "inventory_codes": [
+          "CN_LOCAL_01"
+        ],
+        "inventory_sku_ids": [
+          "109646433538",
+          "109646433539",
+          "109646433540",
+          "109646433541",
+          "109646433542",
+          "109646433543",
+          "109646433544",
+          "109646433545",
+          "109646433546",
+          "109646433547",
+          "109646433548",
+          "109646433549",
+          "109646433550",
+          "109646433551",
+          "109646433552",
+          "109646433553",
+          "109646433554",
+          "109646433555",
+          "109646433556",
+          "109646433557",
+          "109646433558",
+          "109646433559",
+          "109646433560",
+          "109646433561",
+          "109646433562",
+          "109646433563",
+          "109646433564",
+          "109646433565",
+          "109646433566",
+          "109646433567"
+        ]
+      },
+      "supply_class": "HOLD_SOURCE_NO_CONFIRMED_MATCHING_SHOE_AND_ROUTE",
+      "disposition": "READ_ONLY_AUDIT_NO_INVENTORY_WRITE"
+    },
+    {
+      "family": "HR030",
+      "listing": "HR030-B",
+      "product_id": 1601943545775,
+      "title_2026_09_19": "Private Label Men's Cream Canvas Casual Sneakers Vulcanized Walking Shoes EU 36-45 Model HR030-B",
+      "metrics_period": "2026-09-13~2026-09-19",
+      "search_impressions": 1116,
+      "search_clicks": 15,
+      "inquiries": 0,
+      "submitted_orders": 0,
+      "historical_snapshot": {
+        "status": "approved",
+        "display": "Y",
+        "inventory_values": [
+          999
+        ],
+        "checked_snapshot": "HR001-HR067_201条最终全链路回读.json"
+      },
+      "current_api": {
+        "product_id": 1601943545775,
+        "product_request_id": "21501be117905083756586216",
+        "product_error": null,
+        "status": "approved",
+        "display": "Y",
+        "title": "Men's Cream Canvas Casual Sneakers Vulcanized Walking Shoes EU 36-45 Model HR030-B",
+        "model": "HR030-B",
+        "sku_count": 30,
+        "sku_code_samples": [
+          "HR030-B-CLASSIC-BLACK-42",
+          "HR030-B-CLASSIC-BLACK-41",
+          "HR030-B-CLASSIC-BLACK-44"
+        ],
+        "inventory_request_id": "213d4e4917905083823304018",
+        "inventory_error": null,
+        "inventory_count": 30,
+        "inventory_values": [
+          999
+        ],
+        "inventory_codes": [
+          "CN_LOCAL_01"
+        ],
+        "inventory_sku_ids": [
+          "109646450227",
+          "109646450228",
+          "109646450229",
+          "109646450230",
+          "109646450231",
+          "109646450232",
+          "109646450233",
+          "109646450234",
+          "109646450235",
+          "109646450236",
+          "109646450237",
+          "109646450238",
+          "109646450239",
+          "109646450240",
+          "109646450241",
+          "109646450242",
+          "109646450243",
+          "109646450244",
+          "109646450245",
+          "109646450246",
+          "109646450247",
+          "109646450248",
+          "109646450249",
+          "109646450250",
+          "109646450251",
+          "109646450252",
+          "109646450253",
+          "109646450254",
+          "109646450255",
+          "109646450256"
+        ]
+      },
+      "supply_class": "HOLD_SOURCE_NO_CONFIRMED_MATCHING_SHOE_AND_ROUTE",
+      "disposition": "READ_ONLY_AUDIT_NO_INVENTORY_WRITE"
+    },
+    {
+      "family": "HR034",
+      "listing": "HR034-B",
+      "product_id": 1601943543826,
+      "title_2026_09_19": "Private Label Men's Navy Double Strap Walking Shoes Breathable Mesh Sneakers EVA Midsole Rubber Outsole EU 36-45 Model HR034-B",
+      "metrics_period": "2026-09-13~2026-09-19",
+      "search_impressions": 793,
+      "search_clicks": 13,
+      "inquiries": 0,
+      "submitted_orders": 0,
+      "historical_snapshot": {
+        "status": "approved",
+        "display": "Y",
+        "inventory_values": [
+          999
+        ],
+        "checked_snapshot": "HR001-HR067_201条最终全链路回读.json"
+      },
+      "current_api": {
+        "product_id": 1601943543826,
+        "product_request_id": "0b830ecc17905083760372788",
+        "product_error": null,
+        "status": "approved",
+        "display": "Y",
+        "title": "Men's Navy Double Strap Walking Shoes Breathable Mesh Sneakers EU 36-45 Model HR034-B",
+        "model": "HR034-B",
+        "sku_count": 30,
+        "sku_code_samples": [
+          "HR034-B-WARM-BEIGE-45",
+          "HR034-B-WARM-BEIGE-44",
+          "HR034-B-WARM-BEIGE-43"
+        ],
+        "inventory_request_id": "0b80d2d617905083826793531",
+        "inventory_error": null,
+        "inventory_count": 30,
+        "inventory_values": [
+          999
+        ],
+        "inventory_codes": [
+          "CN_LOCAL_01"
+        ],
+        "inventory_sku_ids": [
+          "109646368841",
+          "109646368842",
+          "109646368843",
+          "109646368844",
+          "109646368845",
+          "109646368846",
+          "109646368847",
+          "109646368848",
+          "109646368849",
+          "109646368850",
+          "109646368851",
+          "109646368852",
+          "109646368853",
+          "109646368854",
+          "109646368855",
+          "109646368856",
+          "109646368857",
+          "109646368858",
+          "109646368859",
+          "109646368860",
+          "109646368861",
+          "109646368862",
+          "109646368863",
+          "109646368864",
+          "109646368865",
+          "109646368866",
+          "109646368867",
+          "109646368868",
+          "109646368869",
+          "109646368870"
+        ]
+      },
+      "supply_class": "HOLD_SOURCE_NO_CONFIRMED_MATCHING_SHOE_AND_ROUTE",
+      "disposition": "READ_ONLY_AUDIT_NO_INVENTORY_WRITE"
+    },
+    {
+      "family": "HR010",
+      "listing": "HR010-B",
+      "product_id": 1601943527175,
+      "title_2026_09_19": "Private Label All White Lace-Up Walking Sneakers Breathable Mesh Lightweight Platform Shoes EU 36-45 Model HR010-B",
+      "metrics_period": "2026-09-13~2026-09-19",
+      "search_impressions": 316,
+      "search_clicks": 13,
+      "inquiries": 0,
+      "submitted_orders": 0,
+      "historical_snapshot": {
+        "status": "approved",
+        "display": "Y",
+        "inventory_values": [
+          999
+        ],
+        "checked_snapshot": "HR001-HR067_201条最终全链路回读.json"
+      },
+      "current_api": {
+        "product_id": 1601943527175,
+        "product_request_id": "0b0b3a2717905083763498781",
+        "product_error": null,
+        "status": "approved",
+        "display": "Y",
+        "title": "Wholesale Shoes Model HR010-B",
+        "model": "HR010-B",
+        "sku_count": 30,
+        "sku_code_samples": [
+          "HR010-B-WHITE-SLATE-38",
+          "HR010-B-WHITE-SLATE-39",
+          "HR010-B-WHITE-SLATE-36"
+        ],
+        "inventory_request_id": "0bbb3b2417905083846428631",
+        "inventory_error": null,
+        "inventory_count": 30,
+        "inventory_values": [
+          999
+        ],
+        "inventory_codes": [
+          "CN_LOCAL_01"
+        ],
+        "inventory_sku_ids": [
+          "109646151096",
+          "109646151097",
+          "109646151098",
+          "109646151099",
+          "109646151100",
+          "109646151101",
+          "109646151102",
+          "109646151103",
+          "109646151104",
+          "109646151105",
+          "109646151106",
+          "109646151107",
+          "109646151108",
+          "109646151109",
+          "109646151110",
+          "109646151111",
+          "109646151112",
+          "109646151113",
+          "109646151114",
+          "109646151115",
+          "109646151116",
+          "109646151117",
+          "109646151118",
+          "109646151119",
+          "109646151120",
+          "109646151121",
+          "109646151122",
+          "109646151123",
+          "109646151124",
+          "109646151125"
+        ]
+      },
+      "supply_class": "SOURCE_ROUTE_086_CANDIDATE_IP_ASSETS_BLOCK",
+      "disposition": "READ_ONLY_AUDIT_NO_INVENTORY_WRITE"
+    },
+    {
+      "family": "HR030",
+      "listing": "HR030-A",
+      "product_id": 1601943574507,
+      "title_2026_09_19": "OEM Men's Black Canvas Lace-Up Walking Shoes Vulcanized Low Top Casual Sneakers EU 36-45 Model HR030-A",
+      "metrics_period": "2026-09-13~2026-09-19",
+      "search_impressions": 524,
+      "search_clicks": 12,
+      "inquiries": 0,
+      "submitted_orders": 0,
+      "historical_snapshot": {
+        "status": "approved",
+        "display": "Y",
+        "inventory_values": [
+          999
+        ],
+        "checked_snapshot": "HR001-HR067_201条最终全链路回读.json"
+      },
+      "current_api": {
+        "product_id": 1601943574507,
+        "product_request_id": "212c6fc617905083890231471",
+        "product_error": null,
+        "status": "approved",
+        "display": "Y",
+        "title": "Men's Black Canvas Lace-Up Walking Shoes Vulcanized Low Top Casual Sneakers EVA Midsole Rubber Outsole EU 36-45 Model",
+        "model": "HR030-A",
+        "sku_count": 30,
+        "sku_code_samples": [
+          "HR030-A-NATURAL-CREAM-40",
+          "HR030-A-NATURAL-CREAM-41",
+          "HR030-A-NATURAL-CREAM-42"
+        ],
+        "inventory_request_id": "2166c2ca17905083956721197",
+        "inventory_error": null,
+        "inventory_count": 30,
+        "inventory_values": [
+          999
+        ],
+        "inventory_codes": [
+          "CN_LOCAL_01"
+        ],
+        "inventory_sku_ids": [
+          "109646309734",
+          "109646309735",
+          "109646309736",
+          "109646309737",
+          "109646309738",
+          "109646309739",
+          "109646309740",
+          "109646309741",
+          "109646309742",
+          "109646309743",
+          "109646309744",
+          "109646309745",
+          "109646309746",
+          "109646309747",
+          "109646309748",
+          "109646309749",
+          "109646309750",
+          "109646309751",
+          "109646309752",
+          "109646309753",
+          "109646309754",
+          "109646309755",
+          "109646309756",
+          "109646309757",
+          "109646309758",
+          "109646309759",
+          "109646309760",
+          "109646309761",
+          "109646309762",
+          "109646309763"
+        ]
+      },
+      "supply_class": "HOLD_SOURCE_NO_CONFIRMED_MATCHING_SHOE_AND_ROUTE",
+      "disposition": "READ_ONLY_AUDIT_NO_INVENTORY_WRITE"
+    },
+    {
+      "family": "HR024",
+      "listing": "HR024-B",
+      "product_id": 1601943527861,
+      "title_2026_09_19": "Private Label Men's Navy Lace-up Light Weight Mid Top Walking Sneakers Breathable Mesh Casual Shoes EU 36-45 Model HR024-B",
+      "metrics_period": "2026-09-13~2026-09-19",
+      "search_impressions": 604,
+      "search_clicks": 11,
+      "inquiries": 0,
+      "submitted_orders": 0,
+      "historical_snapshot": {
+        "status": "approved",
+        "display": "Y",
+        "inventory_values": [
+          999
+        ],
+        "checked_snapshot": "HR001-HR067_201条最终全链路回读.json"
+      },
+      "current_api": {
+        "product_id": 1601943527861,
+        "product_request_id": "21546a1d17905083893753706",
+        "product_error": null,
+        "status": "approved",
+        "display": "Y",
+        "title": "Wholesale Shoes Model HR024-B",
+        "model": "HR024-B",
+        "sku_count": 30,
+        "sku_code_samples": [
+          "HR024-B-WARM-TAUPE-42",
+          "HR024-B-WARM-TAUPE-43",
+          "HR024-B-WARM-TAUPE-44"
+        ],
+        "inventory_request_id": "213c933517905083960866389",
+        "inventory_error": null,
+        "inventory_count": 30,
+        "inventory_values": [
+          999
+        ],
+        "inventory_codes": [
+          "CN_LOCAL_01"
+        ],
+        "inventory_sku_ids": [
+          "109646312794",
+          "109646312795",
+          "109646312796",
+          "109646312797",
+          "109646312798",
+          "109646312799",
+          "109646312800",
+          "109646312801",
+          "109646312802",
+          "109646312803",
+          "109646312804",
+          "109646312805",
+          "109646312806",
+          "109646312807",
+          "109646312808",
+          "109646312809",
+          "109646312810",
+          "109646312811",
+          "109646312812",
+          "109646312813",
+          "109646312814",
+          "109646312815",
+          "109646312816",
+          "109646312817",
+          "109646312818",
+          "109646312819",
+          "109646312820",
+          "109646312821",
+          "109646312822",
+          "109646312823"
+        ]
+      },
+      "supply_class": "VALID_ROUTE_3316_FAMILY_NOT_YET_CONVERTED",
+      "disposition": "READ_ONLY_AUDIT_NO_INVENTORY_WRITE"
+    },
+    {
+      "family": "HR042",
+      "listing": "HR042-A",
+      "product_id": 1601943703336,
+      "title_2026_09_19": "OEM Men's Olive Perforated Breathable Slip on Walking Loafers EVA Midsole Flexible Casual Shoes EU 36-45 Model HR042-A",
+      "metrics_period": "2026-09-13~2026-09-19",
+      "search_impressions": 588,
+      "search_clicks": 9,
+      "inquiries": 0,
+      "submitted_orders": 0,
+      "historical_snapshot": {
+        "status": "approved",
+        "display": "Y",
+        "inventory_values": [
+          999
+        ],
+        "checked_snapshot": "HR001-HR067_201条最终全链路回读.json"
+      },
+      "current_api": {
+        "product_id": 1601943703336,
+        "product_request_id": "213d4e4917905083913234210",
+        "product_error": null,
+        "status": "approved",
+        "display": "Y",
+        "title": "Men's Shoes Model HR042-A",
+        "model": "HR042-A",
+        "sku_count": 30,
+        "sku_code_samples": [
+          "HR042-A-WARM-TAUPE-44",
+          "HR042-A-WARM-TAUPE-43",
+          "HR042-A-WARM-TAUPE-45"
+        ],
+        "inventory_request_id": "0b0b3a2717905083980591504",
+        "inventory_error": null,
+        "inventory_count": 30,
+        "inventory_values": [
+          999
+        ],
+        "inventory_codes": [
+          "CN_LOCAL_01"
+        ],
+        "inventory_sku_ids": [
+          "109646741837",
+          "109646741838",
+          "109646741839",
+          "109646741840",
+          "109646741841",
+          "109646741842",
+          "109646741843",
+          "109646741844",
+          "109646741845",
+          "109646741846",
+          "109646741847",
+          "109646741848",
+          "109646741849",
+          "109646741850",
+          "109646741851",
+          "109646741852",
+          "109646741853",
+          "109646741854",
+          "109646741855",
+          "109646741856",
+          "109646741857",
+          "109646741858",
+          "109646741859",
+          "109646741860",
+          "109646741861",
+          "109646741862",
+          "109646741863",
+          "109646741864",
+          "109646741865",
+          "109646741866"
+        ]
+      },
+      "supply_class": "HOLD_SOURCE_NO_CONFIRMED_MATCHING_SHOE_AND_ROUTE",
+      "disposition": "READ_ONLY_AUDIT_NO_INVENTORY_WRITE"
+    },
+    {
+      "family": "HR025",
+      "listing": "HR025-B",
+      "product_id": 1601943535810,
+      "title_2026_09_19": "Private Label Women's Black Side Zipper Walking Sneakers Breathable Knit Shoes EU 36-45 Model HR025-B",
+      "metrics_period": "2026-09-13~2026-09-19",
+      "search_impressions": 550,
+      "search_clicks": 8,
+      "inquiries": 0,
+      "submitted_orders": 0,
+      "historical_snapshot": {
+        "status": "approved",
+        "display": "Y",
+        "inventory_values": [
+          999
+        ],
+        "checked_snapshot": "HR001-HR067_201条最终全链路回读.json"
+      },
+      "current_api": {
+        "product_id": 1601943535810,
+        "product_request_id": "0bab02fc17905084023904165",
+        "product_error": null,
+        "status": "approved",
+        "display": "Y",
+        "title": "Women's Black Side Zipper Walking Sneakers Breathable Knit Shoes EU 36-45 Model HR025-B",
+        "model": "HR025-B",
+        "sku_count": 30,
+        "sku_code_samples": [
+          "HR025-B-SAGE-GREEN-42",
+          "HR025-B-SAGE-GREEN-43",
+          "HR025-B-SAGE-GREEN-44"
+        ],
+        "inventory_request_id": "213c934417905084090012002",
+        "inventory_error": null,
+        "inventory_count": 30,
+        "inventory_values": [
+          999
+        ],
+        "inventory_codes": [
+          "CN_LOCAL_01"
+        ],
+        "inventory_sku_ids": [
+          "109646294894",
+          "109646294895",
+          "109646294896",
+          "109646294897",
+          "109646294898",
+          "109646294899",
+          "109646294900",
+          "109646294901",
+          "109646294902",
+          "109646294903",
+          "109646294904",
+          "109646294905",
+          "109646294906",
+          "109646294907",
+          "109646294908",
+          "109646294909",
+          "109646294910",
+          "109646294911",
+          "109646294912",
+          "109646294913",
+          "109646294914",
+          "109646294915",
+          "109646294916",
+          "109646294917",
+          "109646294918",
+          "109646294919",
+          "109646294920",
+          "109646294921",
+          "109646294922",
+          "109646294923"
+        ]
+      },
+      "supply_class": "HOLD_SOURCE_NO_CONFIRMED_MATCHING_SHOE_AND_ROUTE",
+      "disposition": "READ_ONLY_AUDIT_NO_INVENTORY_WRITE"
+    }
+  ]
+}

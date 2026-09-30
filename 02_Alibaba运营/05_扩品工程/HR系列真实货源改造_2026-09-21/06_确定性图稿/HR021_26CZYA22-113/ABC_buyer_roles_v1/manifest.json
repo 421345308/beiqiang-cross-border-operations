@@ -1,0 +1,714 @@
+{
+  "productModel": "26CZYA22-113",
+  "family": "HR021; A/B/C are same product family and do not represent three distinct product models",
+  "status": "PREPARED_FOR_ROOT_IMAGE_REVIEW; NOT_UPLOADED; NOT_APPROVED",
+  "source": {
+    "supplierPage": "https://hzmshoes.en.made-in-china.com/product/JYcRrUIDuBVm/China-OEM-ODM-High-Quality-Brown-Suede-Mary-Jane-Sneakers-for-Women-Walking-Style-Double-Buckle-Casual-Shoes-Manufacturer-in-Guangzhou.html",
+    "model": "26CZYA22-113",
+    "colors": [
+      "Coffee",
+      "Green"
+    ],
+    "euSizes": "35–40",
+    "materials": {
+      "upper": "Suede",
+      "lining": "Genuine Leather",
+      "midsole": "Rubber",
+      "outsole": "Rubber"
+    },
+    "sourcePhotos": {
+      "coffee": {
+        "file": "image_01.webp",
+        "w": 4160,
+        "h": 4160,
+        "sha": "9851bf83c67196aa83d8e5b48de731322775a985f6e6aeecd32cf7972397eb92",
+        "color": "Coffee",
+        "path": "source_photos/image_01.webp"
+      },
+      "green": {
+        "file": "image_02.webp",
+        "w": 4160,
+        "h": 4160,
+        "sha": "725688981b8058a307e866b7c4c7d8d130500ec43834459c33876a74fb762443",
+        "color": "Green",
+        "path": "source_photos/image_02.webp"
+      },
+      "wearCoffee": {
+        "file": "image_03.webp",
+        "w": 1773,
+        "h": 1773,
+        "sha": "8eafd760d90beecdc71611798e6a4c2742a63730f044447c95c5fdd1492fede7",
+        "color": "Coffee",
+        "path": "source_photos/image_03.webp"
+      },
+      "wearGreen": {
+        "file": "image_04.webp",
+        "w": 1773,
+        "h": 1773,
+        "sha": "6c774ef8145f44669567c490fa9ea4ae45ba5c7c76c356ce2bbdb93adf03d159",
+        "color": "Green",
+        "path": "source_photos/image_04.webp"
+      }
+    }
+  },
+  "claimsPolicy": {
+    "sellerPricesUsdPerPair": [
+      {
+        "qty": "2–49",
+        "price": 36
+      },
+      {
+        "qty": "50–99",
+        "price": 34
+      },
+      {
+        "qty": "100+",
+        "price": 32
+      }
+    ],
+    "basis": "Public source tiers × 1.30, rounded up; proposed listing prices only; freight and final terms separately confirmed",
+    "shoeBox": "Page lists shoe box; no box image created",
+    "excludedClaims": [
+      "own-factory production",
+      "factory capacity",
+      "OEM/ODM capability",
+      "stock quantity",
+      "delivery promise",
+      "comfort/performance/testing",
+      "wide fit",
+      "outsole tread or bottom geometry"
+    ]
+  },
+  "imagePolicy": {
+    "sourcePixels": "Embedded source photos only; SVG crops/scale preserve geometry and source color; no AI redraw or shoe retouching",
+    "whiteContrast": "White contrast panels are not a separate White color option",
+    "noOutsoleBottomPhoto": true,
+    "companyImages": "Reuse the previously approved Beiqiang v3 five-company-image set unchanged, outside this 32-product-asset bundle."
+  },
+  "assetCount": 32,
+  "sourcePhotoFiles": [
+    "source_photos/image_01.webp",
+    "source_photos/image_02.webp",
+    "source_photos/image_03.webp",
+    "source_photos/image_04.webp"
+  ],
+  "contacts": [
+    "contact_main_18.jpg",
+    "contact_detail_12.jpg",
+    "contact_sku_2.jpg",
+    "contact_all_32.jpg"
+  ],
+  "records": [
+    {
+      "name": "A_M1",
+      "role": "Main image 1 · Coffee product identification",
+      "buyerQuestion": "Can I identify the Coffee version and its visible Mary Jane construction?",
+      "sourcePhotos": [
+        {
+          "key": "coffee",
+          "file": "image_01.webp",
+          "sha256": "9851bf83c67196aa83d8e5b48de731322775a985f6e6aeecd32cf7972397eb92"
+        }
+      ],
+      "layoutNote": "Single actual shoe, large and fully visible; neutral background; restrained identity text.",
+      "svg": "A_M1.svg",
+      "render": "A_M1.jpg",
+      "svgSha256": "dfc0f234037cfa18290acb57c06bbbcd697019f93a7857d37802e305ad1d174e",
+      "renderSha256": "3a4c4f4bafecfc4e55955005fcb87b70c28f241290af76d36d1087093a512a1a",
+      "dimensions": "1200x1200"
+    },
+    {
+      "name": "B_M1",
+      "role": "Main image 1 · Green product identification",
+      "buyerQuestion": "Can I identify the Green version and its visible Mary Jane construction?",
+      "sourcePhotos": [
+        {
+          "key": "green",
+          "file": "image_02.webp",
+          "sha256": "725688981b8058a307e866b7c4c7d8d130500ec43834459c33876a74fb762443"
+        }
+      ],
+      "layoutNote": "Same product shown in the second confirmed color.",
+      "svg": "B_M1.svg",
+      "render": "B_M1.jpg",
+      "svgSha256": "35c3a0472e20fd7bb2e711a4d2e552037737a4f8297a47f690e2586a1fff88e5",
+      "renderSha256": "9302e10e2bce93da763fa3cb89f5308973bbd8359724240d4ac36049e0a8ff82",
+      "dimensions": "1200x1200"
+    },
+    {
+      "name": "C_M1",
+      "role": "Main image 1 · Green on-foot product view",
+      "buyerQuestion": "How does the photographed Green shoe look when worn?",
+      "sourcePhotos": [
+        {
+          "key": "wearGreen",
+          "file": "image_04.webp",
+          "sha256": "6c774ef8145f44669567c490fa9ea4ae45ba5c7c76c356ce2bbdb93adf03d159"
+        }
+      ],
+      "layoutNote": "Two complete shoes remain visible; crop avoids unnecessary upper-body area; no fit or comfort claim.",
+      "svg": "C_M1.svg",
+      "render": "C_M1.jpg",
+      "svgSha256": "28ebf1562877daccd134c4718d5fac423bfc3677517132e60a2547c903ff4ddd",
+      "renderSha256": "e93eca735a75295a7e320561805f6495ab16e42133dcd246c15cf028231ef6eb",
+      "dimensions": "1200x1200"
+    },
+    {
+      "name": "A_M2",
+      "role": "Main image 2 · Coffee and Green color comparison",
+      "buyerQuestion": "Which colors and sizes can I request for this style?",
+      "sourcePhotos": [
+        {
+          "key": "coffee",
+          "file": "image_01.webp",
+          "sha256": "9851bf83c67196aa83d8e5b48de731322775a985f6e6aeecd32cf7972397eb92"
+        },
+        {
+          "key": "green",
+          "file": "image_02.webp",
+          "sha256": "725688981b8058a307e866b7c4c7d8d130500ec43834459c33876a74fb762443"
+        }
+      ],
+      "layoutNote": "Large real color photos with a simple size line for each option.",
+      "svg": "A_M2.svg",
+      "render": "A_M2.jpg",
+      "svgSha256": "f040eb2fd2fcba1140fb120e2ca23a6b066b9ab88ce69bc01aebab9b58d858d7",
+      "renderSha256": "82965dea4f5d41a73540a082f969cf47a84636a4b030c6d8f1c5c3c90df5cf1b",
+      "dimensions": "1200x1200"
+    },
+    {
+      "name": "A_M3",
+      "role": "Main image 3 · Buckle construction close view",
+      "buyerQuestion": "What fastening details are visible on this Mary Jane?",
+      "sourcePhotos": [
+        {
+          "key": "coffee",
+          "file": "image_01.webp",
+          "sha256": "9851bf83c67196aa83d8e5b48de731322775a985f6e6aeecd32cf7972397eb92"
+        }
+      ],
+      "layoutNote": "Large original photo crop brings the buckle area forward.",
+      "svg": "A_M3.svg",
+      "render": "A_M3.jpg",
+      "svgSha256": "9a481f831a87a01cf32b05d61a4f5057b000c9c3672e2ef5cbd75e088e44b84c",
+      "renderSha256": "3a28020f27f82501376c618eefa12d4fd39e4178235fa54025946da4a66d6115",
+      "dimensions": "1200x1200"
+    },
+    {
+      "name": "A_M4",
+      "role": "Main image 4 · Coffee on-foot appearance",
+      "buyerQuestion": "How does the Coffee version appear in a real worn photograph?",
+      "sourcePhotos": [
+        {
+          "key": "wearCoffee",
+          "file": "image_03.webp",
+          "sha256": "8eafd760d90beecdc71611798e6a4c2742a63730f044447c95c5fdd1492fede7"
+        }
+      ],
+      "layoutNote": "Complete photographed pair with crop avoiding clothing mark.",
+      "svg": "A_M4.svg",
+      "render": "A_M4.jpg",
+      "svgSha256": "f909434e13642db9b324d1128be72081757fb60dd31ae47c3ccbd3207baed312",
+      "renderSha256": "48b114c96730547df334d488ad0e886405c01a4513a56f509a07ec06b2cf9751",
+      "dimensions": "1200x1200"
+    },
+    {
+      "name": "A_M5",
+      "role": "Main image 5 · Four-layer material specification",
+      "buyerQuestion": "Which materials are specified for each shoe layer?",
+      "sourcePhotos": [
+        {
+          "key": "coffee",
+          "file": "image_01.webp",
+          "sha256": "9851bf83c67196aa83d8e5b48de731322775a985f6e6aeecd32cf7972397eb92"
+        }
+      ],
+      "layoutNote": "Four layers are presented beside a large product photo.",
+      "svg": "A_M5.svg",
+      "render": "A_M5.jpg",
+      "svgSha256": "3f3772814a7aaa6588f0af2be6c4503f4034fe5e8310a255d840012457017bbf",
+      "renderSha256": "907af2a324b30d9bf166e238044b3943606ab2d45fc230a82f4fe4bb6b6e68aa",
+      "dimensions": "1200x1200"
+    },
+    {
+      "name": "A_M6",
+      "role": "Main image 6 · Quantity pricing and inquiry inputs",
+      "buyerQuestion": "What are the price breaks and what details should I send?",
+      "sourcePhotos": [
+        {
+          "key": "coffee",
+          "file": "image_01.webp",
+          "sha256": "9851bf83c67196aa83d8e5b48de731322775a985f6e6aeecd32cf7972397eb92"
+        }
+      ],
+      "layoutNote": "Three buyer-facing price breaks plus a clear inquiry checklist.",
+      "svg": "A_M6.svg",
+      "render": "A_M6.jpg",
+      "svgSha256": "18d9c6cb4e2340328857fa411e383a9ebab7f940a3b1ea142691260a039e0902",
+      "renderSha256": "e6cd9c33c8880bfffae16eca8587c936968b702a03fe642e07631b9a89085f4f",
+      "dimensions": "1200x1200"
+    },
+    {
+      "name": "B_M2",
+      "role": "Main image 2 · EU size selection",
+      "buyerQuestion": "Which EU sizes and color choices should I include in my assortment?",
+      "sourcePhotos": [
+        {
+          "key": "green",
+          "file": "image_02.webp",
+          "sha256": "725688981b8058a307e866b7c4c7d8d130500ec43834459c33876a74fb762443"
+        },
+        {
+          "key": "coffee",
+          "file": "image_01.webp",
+          "sha256": "9851bf83c67196aa83d8e5b48de731322775a985f6e6aeecd32cf7972397eb92"
+        }
+      ],
+      "layoutNote": "Large product view paired with a six-size grid and color options.",
+      "svg": "B_M2.svg",
+      "render": "B_M2.jpg",
+      "svgSha256": "3d59fab5d7bb7286032350d56e3f3ca8f9613863f97de2219da97a0faec10eee",
+      "renderSha256": "bd9e7ea1fa605b1957184ee08d6dbbd08c99da4ecbb573075c470f8d2f12af80",
+      "dimensions": "1200x1200"
+    },
+    {
+      "name": "B_M3",
+      "role": "Main image 3 · On-foot shape and listed features",
+      "buyerQuestion": "How does the Green style look worn, and what shape details are listed?",
+      "sourcePhotos": [
+        {
+          "key": "wearGreen",
+          "file": "image_04.webp",
+          "sha256": "6c774ef8145f44669567c490fa9ea4ae45ba5c7c76c356ce2bbdb93adf03d159"
+        }
+      ],
+      "layoutNote": "Actual Green on-foot photo replaces repeated small studio thumbnails.",
+      "svg": "B_M3.svg",
+      "render": "B_M3.jpg",
+      "svgSha256": "3fd16d1a8f7485f0c578311d938e0cf0e4ea59a2d94c2656139867c7c244f44e",
+      "renderSha256": "22b1a2a63490cbe7e6680671b341d0ce70f631d729288951e79ac0ce0c1d4591",
+      "dimensions": "1200x1200"
+    },
+    {
+      "name": "B_M4",
+      "role": "Main image 4 · Packing details",
+      "buyerQuestion": "What packing is included and what requirements should I share?",
+      "sourcePhotos": [
+        {
+          "key": "green",
+          "file": "image_02.webp",
+          "sha256": "725688981b8058a307e866b7c4c7d8d130500ec43834459c33876a74fb762443"
+        }
+      ],
+      "layoutNote": "Large product photo with the only listed packaging item and an order prompt.",
+      "svg": "B_M4.svg",
+      "render": "B_M4.jpg",
+      "svgSha256": "10e37ca64193753f3c582244325062e382a4030dbcee78a7bb553cd2154e0ed1",
+      "renderSha256": "fffb5e917dd86dfc4ee4e86a885f66ff16bf865379d098cf715f2ae741c91975",
+      "dimensions": "1200x1200"
+    },
+    {
+      "name": "B_M5",
+      "role": "Main image 5 · Materials for a product brief",
+      "buyerQuestion": "Which materials are specified across the upper, lining and sole?",
+      "sourcePhotos": [
+        {
+          "key": "wearGreen",
+          "file": "image_04.webp",
+          "sha256": "6c774ef8145f44669567c490fa9ea4ae45ba5c7c76c356ce2bbdb93adf03d159"
+        }
+      ],
+      "layoutNote": "Green on-foot view plus a readable four-layer specification.",
+      "svg": "B_M5.svg",
+      "render": "B_M5.jpg",
+      "svgSha256": "8be12e5b201dc0b711bee885f5ffe6ee1e8576ea3ff22b45c66612540af2cb43",
+      "renderSha256": "8788f7e38e5bf04e2008c43aa4533c221f73fd2c36be471e347bbec23ef250ff",
+      "dimensions": "1200x1200"
+    },
+    {
+      "name": "B_M6",
+      "role": "Main image 6 · Quantity pricing and RFQ details",
+      "buyerQuestion": "What quantity price breaks can I review and what details are needed?",
+      "sourcePhotos": [
+        {
+          "key": "green",
+          "file": "image_02.webp",
+          "sha256": "725688981b8058a307e866b7c4c7d8d130500ec43834459c33876a74fb762443"
+        }
+      ],
+      "layoutNote": "Large price tiers and concise order-input list.",
+      "svg": "B_M6.svg",
+      "render": "B_M6.jpg",
+      "svgSha256": "304dbdefdf6a357d7d7f65e5c004114f38327bb35754ba82143f8c2366ab78ed",
+      "renderSha256": "f1ef6557e05c713036bbdabbd6e221ed306af6688d525a74a75a9384c1bab217",
+      "dimensions": "1200x1200"
+    },
+    {
+      "name": "C_M2",
+      "role": "Main image 2 · Green buckle detail",
+      "buyerQuestion": "Can I inspect the actual buckle closure before planning a style range?",
+      "sourcePhotos": [
+        {
+          "key": "green",
+          "file": "image_02.webp",
+          "sha256": "725688981b8058a307e866b7c4c7d8d130500ec43834459c33876a74fb762443"
+        }
+      ],
+      "layoutNote": "Green-specific close view; answering the structure inspection question.",
+      "svg": "C_M2.svg",
+      "render": "C_M2.jpg",
+      "svgSha256": "3a46d414fe5209686a2ef9c49ded9b68768a867413f16bd2875fc532e98252a4",
+      "renderSha256": "c0dc4ffec65dbc5f136217fdafa26a672d420a19adc8a618b72c7931e02da9ce",
+      "dimensions": "1200x1200"
+    },
+    {
+      "name": "C_M3",
+      "role": "Main image 3 · Colorway comparison",
+      "buyerQuestion": "How do the Coffee and Green source photos compare, including their shared contrast panels?",
+      "sourcePhotos": [
+        {
+          "key": "coffee",
+          "file": "image_01.webp",
+          "sha256": "9851bf83c67196aa83d8e5b48de731322775a985f6e6aeecd32cf7972397eb92"
+        },
+        {
+          "key": "green",
+          "file": "image_02.webp",
+          "sha256": "725688981b8058a307e866b7c4c7d8d130500ec43834459c33876a74fb762443"
+        }
+      ],
+      "layoutNote": "A horizontal paired-color editorial for design review; does not create a White SKU.",
+      "svg": "C_M3.svg",
+      "render": "C_M3.jpg",
+      "svgSha256": "cf6556ed33457ac5b0ad139094513e1b57639f31b2c36f01a6cee50d8945adcc",
+      "renderSha256": "be55ee8ac93c0576d26b5cea59e1163059bf90d3635b030006456fbe8776120e",
+      "dimensions": "1200x1200"
+    },
+    {
+      "name": "C_M4",
+      "role": "Main image 4 · Layer-by-layer materials",
+      "buyerQuestion": "What material is specified for each part of the shoe?",
+      "sourcePhotos": [
+        {
+          "key": "green",
+          "file": "image_02.webp",
+          "sha256": "725688981b8058a307e866b7c4c7d8d130500ec43834459c33876a74fb762443"
+        }
+      ],
+      "layoutNote": "Product view paired with the four listed layers.",
+      "svg": "C_M4.svg",
+      "render": "C_M4.jpg",
+      "svgSha256": "69c7c9a2b2d7e4e82dc54558062edf359e8d03a3bee940840ff97f43f987c23d",
+      "renderSha256": "a00c8dad6fdc842e6f1d87900ec8cf25919261b73ec4eff114a1bc4fe9a82a1e",
+      "dimensions": "1200x1200"
+    },
+    {
+      "name": "C_M5",
+      "role": "Main image 5 · Color by EU size assortment",
+      "buyerQuestion": "How can I describe a mixed-color, mixed-size order clearly?",
+      "sourcePhotos": [
+        {
+          "key": "green",
+          "file": "image_02.webp",
+          "sha256": "725688981b8058a307e866b7c4c7d8d130500ec43834459c33876a74fb762443"
+        },
+        {
+          "key": "coffee",
+          "file": "image_01.webp",
+          "sha256": "9851bf83c67196aa83d8e5b48de731322775a985f6e6aeecd32cf7972397eb92"
+        }
+      ],
+      "layoutNote": "A fill-in assortment planning aid with six page-listed EU sizes and both actual colors.",
+      "svg": "C_M5.svg",
+      "render": "C_M5.jpg",
+      "svgSha256": "0b0a7bee97c0c3bd987f74d4c747ccf5631b35cf1e5d9fad23ba423cd5947bb3",
+      "renderSha256": "38d96339cc442d0887fa8f1c8faf0b028b6083d5e05b52736ff6e782734bed5a",
+      "dimensions": "1200x1200"
+    },
+    {
+      "name": "C_M6",
+      "role": "Main image 6 · Wholesale inquiry brief",
+      "buyerQuestion": "What information will help confirm price, packing and freight for my order?",
+      "sourcePhotos": [
+        {
+          "key": "coffee",
+          "file": "image_01.webp",
+          "sha256": "9851bf83c67196aa83d8e5b48de731322775a985f6e6aeecd32cf7972397eb92"
+        }
+      ],
+      "layoutNote": "Short buyer checklist paired with the proposed tiers; no package image or fixed logistics claim.",
+      "svg": "C_M6.svg",
+      "render": "C_M6.jpg",
+      "svgSha256": "d315973ae2114b0fac698bdcd168f0003908cdf3aa505da553fa3f689e8b3336",
+      "renderSha256": "67c8e4b8160ec78a6df2b7181723308cee3b610faa0858758b9b3468a799ced5",
+      "dimensions": "1200x1200"
+    },
+    {
+      "name": "A_D1",
+      "role": "Detail image 1 · Product overview",
+      "buyerQuestion": "Can I identify the Coffee model and its listed form?",
+      "sourcePhotos": [
+        {
+          "key": "coffee",
+          "file": "image_01.webp",
+          "sha256": "9851bf83c67196aa83d8e5b48de731322775a985f6e6aeecd32cf7972397eb92"
+        }
+      ],
+      "layoutNote": "Large product photo with concise style identification.",
+      "svg": "A_D1.svg",
+      "render": "A_D1.jpg",
+      "svgSha256": "433106f7ad94cc39acce2b60a5a0ff9a137f9ed1f45f6da5105736858fc9b696",
+      "renderSha256": "ccda575f70134ac2b29b37586bdee55e996329cb0b8ccabe1dd45250ea054d79",
+      "dimensions": "1200x1200"
+    },
+    {
+      "name": "B_D1",
+      "role": "Detail image 1 · Full product profile",
+      "buyerQuestion": "What is the full Green shoe profile?",
+      "sourcePhotos": [
+        {
+          "key": "green",
+          "file": "image_02.webp",
+          "sha256": "725688981b8058a307e866b7c4c7d8d130500ec43834459c33876a74fb762443"
+        }
+      ],
+      "layoutNote": "Large product photo with concise style identification.",
+      "svg": "B_D1.svg",
+      "render": "B_D1.jpg",
+      "svgSha256": "ddab7d54dca7618274cdf28856054c38339b259cc9c333b6f91fa0b11659f5fa",
+      "renderSha256": "9f6a413ddffe49c459acd147356ffbfd755310490004e7ebf60f6e3cda4623bf",
+      "dimensions": "1200x1200"
+    },
+    {
+      "name": "C_D1",
+      "role": "Detail image 1 · On-foot appearance",
+      "buyerQuestion": "How does the photographed Green version appear when worn?",
+      "sourcePhotos": [
+        {
+          "key": "wearGreen",
+          "file": "image_04.webp",
+          "sha256": "6c774ef8145f44669567c490fa9ea4ae45ba5c7c76c356ce2bbdb93adf03d159"
+        }
+      ],
+      "layoutNote": "Large product photo with concise style identification.",
+      "svg": "C_D1.svg",
+      "render": "C_D1.jpg",
+      "svgSha256": "e929c2055fdf92e8ad8c0e71cbbe1111ec1b4cc4d521c14f970e42c76d5176db",
+      "renderSha256": "fa1baea037d07eb8fd3dd91f547b966e26e77c02c9b8469f554d97276893aff2",
+      "dimensions": "1200x1200"
+    },
+    {
+      "name": "A_D2",
+      "role": "Detail image 2 · Two colors and EU size range",
+      "buyerQuestion": "Which colors and EU sizes are available for this style?",
+      "sourcePhotos": [
+        {
+          "key": "coffee",
+          "file": "image_01.webp",
+          "sha256": "9851bf83c67196aa83d8e5b48de731322775a985f6e6aeecd32cf7972397eb92"
+        },
+        {
+          "key": "green",
+          "file": "image_02.webp",
+          "sha256": "725688981b8058a307e866b7c4c7d8d130500ec43834459c33876a74fb762443"
+        }
+      ],
+      "layoutNote": "Two large color photos and a readable size line.",
+      "svg": "A_D2.svg",
+      "render": "A_D2.jpg",
+      "svgSha256": "bbb64ca8e9e99a31f79c96b92ec5cfa8d4d1be12e3785dc4236d6e8d6a0269f6",
+      "renderSha256": "d5b189343694baf8dd805c091a8565dd5cce9a6236af5ca6fb4b16f8be919468",
+      "dimensions": "1200x1200"
+    },
+    {
+      "name": "B_D2",
+      "role": "Detail image 2 · EU size assortment planning",
+      "buyerQuestion": "How should I send a color and size breakdown?",
+      "sourcePhotos": [
+        {
+          "key": "green",
+          "file": "image_02.webp",
+          "sha256": "725688981b8058a307e866b7c4c7d8d130500ec43834459c33876a74fb762443"
+        },
+        {
+          "key": "coffee",
+          "file": "image_01.webp",
+          "sha256": "9851bf83c67196aa83d8e5b48de731322775a985f6e6aeecd32cf7972397eb92"
+        }
+      ],
+      "layoutNote": "Size grid leads; actual thumbnails map to the two listed colors.",
+      "svg": "B_D2.svg",
+      "render": "B_D2.jpg",
+      "svgSha256": "d2b46bc23ab5b9325d75cbde4c54e892dc54bf344ed76f7fdf9045372564ff40",
+      "renderSha256": "f250ce4cc6f12da5be93aaf764e773b7226e964729e008e912dbbf916594973d",
+      "dimensions": "1200x1200"
+    },
+    {
+      "name": "C_D2",
+      "role": "Detail image 2 · Color options",
+      "buyerQuestion": "Which color options and sizes can I include?",
+      "sourcePhotos": [
+        {
+          "key": "green",
+          "file": "image_02.webp",
+          "sha256": "725688981b8058a307e866b7c4c7d8d130500ec43834459c33876a74fb762443"
+        },
+        {
+          "key": "coffee",
+          "file": "image_01.webp",
+          "sha256": "9851bf83c67196aa83d8e5b48de731322775a985f6e6aeecd32cf7972397eb92"
+        }
+      ],
+      "layoutNote": "One large Green photo with color and size choices.",
+      "svg": "C_D2.svg",
+      "render": "C_D2.jpg",
+      "svgSha256": "92765c0ab68e360f9e4013488719877c3cc6c3737fef8a177b9d1090538c5f58",
+      "renderSha256": "cde7a5d877e47468f9846f9be4f1d1847721c17a28c01e259b9643762d98ad71",
+      "dimensions": "1200x1200"
+    },
+    {
+      "name": "A_D3",
+      "role": "Detail image 3 · Material specification",
+      "buyerQuestion": "What materials are specified for the four shoe layers?",
+      "sourcePhotos": [
+        {
+          "key": "coffee",
+          "file": "image_01.webp",
+          "sha256": "9851bf83c67196aa83d8e5b48de731322775a985f6e6aeecd32cf7972397eb92"
+        }
+      ],
+      "layoutNote": "Four material values paired with a product photograph.",
+      "svg": "A_D3.svg",
+      "render": "A_D3.jpg",
+      "svgSha256": "c4126b6f2e5fcc3f4902c7b7d13641bae4bc48ce223331dd5ee988015509a47d",
+      "renderSha256": "1bf838ec70488e4c60773d425f8c9206f0243f505dcfd3f7fbe0f11e111ff9b6",
+      "dimensions": "1200x1200"
+    },
+    {
+      "name": "B_D3",
+      "role": "Detail image 3 · Material specification",
+      "buyerQuestion": "Which material values should I include in a product brief?",
+      "sourcePhotos": [
+        {
+          "key": "green",
+          "file": "image_02.webp",
+          "sha256": "725688981b8058a307e866b7c4c7d8d130500ec43834459c33876a74fb762443"
+        }
+      ],
+      "layoutNote": "Four material values paired with a product photograph.",
+      "svg": "B_D3.svg",
+      "render": "B_D3.jpg",
+      "svgSha256": "d34896db9b09dafa474e5b89e6b00bd95461179b672f74b65baf463cd3b7e69c",
+      "renderSha256": "702474a09ed9078dfa9faa2e1322e004a5ee47f845bb36be64353543fe5ace01",
+      "dimensions": "1200x1200"
+    },
+    {
+      "name": "C_D3",
+      "role": "Detail image 3 · Material specification",
+      "buyerQuestion": "What materials are specified for the upper, lining and sole?",
+      "sourcePhotos": [
+        {
+          "key": "green",
+          "file": "image_02.webp",
+          "sha256": "725688981b8058a307e866b7c4c7d8d130500ec43834459c33876a74fb762443"
+        }
+      ],
+      "layoutNote": "Four material values paired with a product photograph.",
+      "svg": "C_D3.svg",
+      "render": "C_D3.jpg",
+      "svgSha256": "cfcaf875fee9ef0599bd6f4eebe1cb3fc4737ca87f3cc82a5e88525fcbb30af1",
+      "renderSha256": "702474a09ed9078dfa9faa2e1322e004a5ee47f845bb36be64353543fe5ace01",
+      "dimensions": "1200x1200"
+    },
+    {
+      "name": "A_D4",
+      "role": "Detail image 4 · Planned price ladder and buyer inputs",
+      "buyerQuestion": "Which planned tier applies to my quantity, and what do I need to provide?",
+      "sourcePhotos": [
+        {
+          "key": "coffee",
+          "file": "image_01.webp",
+          "sha256": "9851bf83c67196aa83d8e5b48de731322775a985f6e6aeecd32cf7972397eb92"
+        }
+      ],
+      "layoutNote": "Horizontal product-and-price layout with a concise order-input list.",
+      "svg": "A_D4.svg",
+      "render": "A_D4.jpg",
+      "svgSha256": "92a487f2f318ea4ba6e3b12438fddc0cf940d344d32458dee4e2884b65cbc8b0",
+      "renderSha256": "04b28fe42dc5b0b5e0622a26e459662bf493a01cd6101360837e9e364baa4744",
+      "dimensions": "1200x1200"
+    },
+    {
+      "name": "B_D4",
+      "role": "Detail image 4 · Price and packing details",
+      "buyerQuestion": "What quantity price breaks and packing details should I review?",
+      "sourcePhotos": [
+        {
+          "key": "green",
+          "file": "image_02.webp",
+          "sha256": "725688981b8058a307e866b7c4c7d8d130500ec43834459c33876a74fb762443"
+        }
+      ],
+      "layoutNote": "Product view and three price breaks with a packing prompt.",
+      "svg": "B_D4.svg",
+      "render": "B_D4.jpg",
+      "svgSha256": "20b1b981ba0e26726be48f8e9c0628dd8590a8bf014453c1a545d2cf28063105",
+      "renderSha256": "219104f62564a05f1dcd888d3ff53946758315afa8671390c35341db3151704d",
+      "dimensions": "1200x1200"
+    },
+    {
+      "name": "C_D4",
+      "role": "Detail image 4 · Mixed-order inquiry brief",
+      "buyerQuestion": "What should I send for a quote covering my color, size and quantity mix?",
+      "sourcePhotos": [
+        {
+          "key": "wearGreen",
+          "file": "image_04.webp",
+          "sha256": "6c774ef8145f44669567c490fa9ea4ae45ba5c7c76c356ce2bbdb93adf03d159"
+        }
+      ],
+      "layoutNote": "On-foot photograph anchors a compact inquiry checklist and quantity tier strip.",
+      "svg": "C_D4.svg",
+      "render": "C_D4.jpg",
+      "svgSha256": "55a617faee7b50b71f3ec7d13cfdf66b2cef83cbca40c6837b09f6389c16ce76",
+      "renderSha256": "bdc93ad701bc06cab44e26f0993c7b26d072a0585e8d2f07071ca72e22b30e8f",
+      "dimensions": "1200x1200"
+    },
+    {
+      "name": "SKU_Coffee",
+      "role": "Color SKU image · one source-confirmed color",
+      "buyerQuestion": "Which real coffee color is selected?",
+      "sourcePhotos": [
+        {
+          "key": "coffee",
+          "file": "image_01.webp",
+          "sha256": "9851bf83c67196aa83d8e5b48de731322775a985f6e6aeecd32cf7972397eb92"
+        }
+      ],
+      "layoutNote": "One real color in one view; no text, multi-angle collage or added White option.",
+      "svg": "SKU_Coffee.svg",
+      "render": "SKU_Coffee.jpg",
+      "svgSha256": "27f7db71bccede646704995ad9a67fbc8daf4d46a78b1c40f13c3a70b2179afb",
+      "renderSha256": "885fcea0178f984d04f6c5d9d687a91926ba855288dd910fc257817dda2ab584",
+      "dimensions": "1000x1000"
+    },
+    {
+      "name": "SKU_Green",
+      "role": "Color SKU image · one source-confirmed color",
+      "buyerQuestion": "Which real green color is selected?",
+      "sourcePhotos": [
+        {
+          "key": "green",
+          "file": "image_02.webp",
+          "sha256": "725688981b8058a307e866b7c4c7d8d130500ec43834459c33876a74fb762443"
+        }
+      ],
+      "layoutNote": "One real color in one view; no text, multi-angle collage or added White option.",
+      "svg": "SKU_Green.svg",
+      "render": "SKU_Green.jpg",
+      "svgSha256": "29d3e3bf2dd81d12ad296d9760a33074b9b45dcdad37c04bb05b1403f1fd2a0a",
+      "renderSha256": "86944df9819e15485e5c8c2f63d0b1246d97b956fd312d9a2b92beaeea512435",
+      "dimensions": "1000x1000"
+    }
+  ]
+}

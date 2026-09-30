@@ -89,11 +89,37 @@ def process_environment(pid):
 
 
 def accio_pids():
-    output = subprocess.check_output(
-        ["powershell", "-NoProfile", "-Command", "(Get-Process Accio -ErrorAction SilentlyContinue).Id"],
-        text=True,
-    )
-    return [int(line.strip()) for line in output.splitlines() if line.strip().isdigit()]
+    # Native enumeration avoids launching PowerShell for every API command.
+    # It also avoids the intermittent PowerShell process-enumeration crash.
+    class PROCESSENTRY32W(ctypes.Structure):
+        _fields_ = [
+            ("dwSize", wintypes.DWORD), ("cntUsage", wintypes.DWORD),
+            ("th32ProcessID", wintypes.DWORD), ("th32DefaultHeapID", ctypes.c_size_t),
+            ("th32ModuleID", wintypes.DWORD), ("cntThreads", wintypes.DWORD),
+            ("th32ParentProcessID", wintypes.DWORD), ("pcPriClassBase", wintypes.LONG),
+            ("dwFlags", wintypes.DWORD), ("szExeFile", wintypes.WCHAR * 260),
+        ]
+    kernel32.CreateToolhelp32Snapshot.argtypes = [wintypes.DWORD, wintypes.DWORD]
+    kernel32.CreateToolhelp32Snapshot.restype = wintypes.HANDLE
+    for name in ("Process32FirstW", "Process32NextW"):
+        fn = getattr(kernel32, name)
+        fn.argtypes = [wintypes.HANDLE, ctypes.POINTER(PROCESSENTRY32W)]
+        fn.restype = wintypes.BOOL
+    snapshot = kernel32.CreateToolhelp32Snapshot(0x00000002, 0)
+    if snapshot == ctypes.c_void_p(-1).value:
+        raise ctypes.WinError(ctypes.get_last_error())
+    try:
+        entry = PROCESSENTRY32W()
+        entry.dwSize = ctypes.sizeof(entry)
+        ids = []
+        available = kernel32.Process32FirstW(snapshot, ctypes.byref(entry))
+        while available:
+            if entry.szExeFile.lower() == "accio.exe":
+                ids.append(entry.th32ProcessID)
+            available = kernel32.Process32NextW(snapshot, ctypes.byref(entry))
+        return ids
+    finally:
+        kernel32.CloseHandle(snapshot)
 
 
 for process_id in accio_pids():
