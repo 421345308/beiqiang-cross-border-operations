@@ -34,7 +34,7 @@ Prefer these inputs:
 
 If backend data is missing, label the result as `本地资料预审`, not final performance audit.
 
-For performance diagnosis, preserve report date/timezone, currency, link/family ID, channel, unit, deduplication and attribution. Quality score, online state, `999` and an inquiry do not establish real source or supply. Use the [read-only funnel aggregator](../../../08_工具链/06_工作区维护/funnel_metrics.py) only for comparable rows; a score is a triage aid, not evidence that exposure or effective inquiries improved. Explain observation, alternative cause, next check and smallest action for each priority item.
+For performance diagnosis, preserve report date/timezone, currency, link/family ID, channel, unit, deduplication and attribution. Quality score, online state, `999` and an inquiry do not establish real source or supply. Use the [read-only funnel aggregator](../../../08_工具链/01_业务脚本/funnel_metrics.py) only for comparable rows; a score is a triage aid, not evidence that exposure or effective inquiries improved. Explain observation, alternative cause, next check and smallest action for each priority item.
 
 ## 发布完整性门槛
 
