@@ -110,6 +110,24 @@ class SkillFixture(unittest.TestCase):
             checker.code_links(doc, doc.read_text(encoding="utf-8"), "fixture")
             self.assertTrue(any("missing inline-code path" in item["message"] for item in checker.errors))
 
+    def test_absent_local_mount_warns_but_broken_child_fails(self) -> None:
+        with TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            doc = root / "AGENTS.md"
+            content = "Read `01_产品资产/01_原始数据包/sample.jpg`."
+            checker = WorkspaceCheck(root)
+            checker.code_links(doc, content, "fixture")
+            self.assertEqual(checker.errors, [])
+            self.assertTrue(any("local ignored entry unavailable" in item["message"] for item in checker.warnings))
+            (root / "01_产品资产").mkdir()
+            checker = WorkspaceCheck(root)
+            checker.code_links(doc, content, "fixture")
+            self.assertEqual(checker.errors, [])
+            (root / "01_产品资产/01_原始数据包").mkdir()
+            checker = WorkspaceCheck(root)
+            checker.code_links(doc, content, "fixture")
+            self.assertTrue(any("missing inline-code path" in item["message"] for item in checker.errors))
+
     def test_catalog_link_is_relative_to_catalog(self) -> None:
         with TemporaryDirectory() as tmp:
             root = Path(tmp)

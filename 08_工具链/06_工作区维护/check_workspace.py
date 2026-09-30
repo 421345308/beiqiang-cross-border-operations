@@ -53,6 +53,13 @@ BINARY_SUFFIXES = {
     ".doc", ".ppt", ".xlsm", ".ods", ".odt",
 }
 NESTED_ROOTS = ("03_独立站/03_网站源码/", "08_工具链/02_视频工具/opencut-classic/")
+# These roots are deliberately absent from an ordinary Git checkout. Check a
+# missing child as an error only after its local mount/staging root exists.
+LOCAL_UNTRACKED_ROOTS = (
+    "01_产品资产/01_原始数据包", "01_产品资产/02_可发布素材",
+    "01_产品资产/04_去标与处理后素材", "03_独立站/03_网站源码",
+    "05_内容与视频/03_通用AI视频实验", "99_临时区",
+)
 RESIDUE_SUFFIXES = {".png", ".jpg", ".jpeg", ".webp", ".gif", ".svg", ".ico", ".pyc", ".pyo", ".log", ".cache"}
 
 
@@ -231,6 +238,21 @@ class WorkspaceCheck:
             self.issue(check, path, "required document missing or unreadable as UTF-8")
             return None
 
+    def missing_reference(self, check: str, source: Path, target: Path, message: str) -> None:
+        try:
+            relative = target.relative_to(self.root)
+        except ValueError:
+            relative = None
+        if relative is not None:
+            for name in LOCAL_UNTRACKED_ROOTS:
+                mount = self.root / name
+                if relative == Path(name) or Path(name) in relative.parents:
+                    if not mount.exists():
+                        self.issue(check, source, f"local ignored entry unavailable in this checkout: {name}", warning=True)
+                        return
+                    break
+        self.issue(check, source, message)
+
     def links(self, path: Path, text: str, check: str) -> list[Path]:
         linked = []
         for destination in markdown_targets(text):
@@ -239,7 +261,7 @@ class WorkspaceCheck:
             target = Path(os.path.abspath(target))
             linked.append(target)
             if not target.exists():
-                self.issue(check, path, f"missing local link: {destination}")
+                self.missing_reference(check, path, target, f"missing local link: {destination}")
         return linked
 
     def code_links(self, path: Path, text: str, check: str) -> None:
@@ -248,7 +270,7 @@ class WorkspaceCheck:
             target = (self.root if head in set(BUSINESS) | {".agents"} else path.parent) / destination
             target = Path(os.path.abspath(target))
             if not target.exists():
-                self.issue(check, path, f"missing inline-code path: {destination}")
+                self.missing_reference(check, path, target, f"missing inline-code path: {destination}")
 
     def root_entries(self) -> None:
         for path in self.root.iterdir():
@@ -256,7 +278,7 @@ class WorkspaceCheck:
                 self.issue("root", path, "unexpected root entry; place it in the matching business directory")
         for name in BUSINESS + (".agents", ".git", "AGENTS.md", "README.md", ".gitignore", "skills-lock.json"):
             if not (self.root / name).exists():
-                self.issue("root", self.root / name, "required workspace entry missing")
+                self.issue("root", self.root / name, "local ignored entry unavailable in this checkout" if name in LOCAL_UNTRACKED_ROOTS else "required workspace entry missing", warning=name in LOCAL_UNTRACKED_ROOTS)
 
     def governance(self) -> None:
         status = self.root / "00_总控台/当前状态.md"
