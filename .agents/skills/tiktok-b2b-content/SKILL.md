@@ -1,6 +1,6 @@
 ---
 name: tiktok-b2b-content
-description: TikTok B2B factory content script generator for Beiqiang footwear. Use when creating short-video scripts, hooks, shot lists, captions, hashtags, factory/product proof content, OEM/ODM buyer education, wide toe box comfort walking shoe demonstrations, and Alibaba inquiry-driving TikTok content for importers, wholesalers, Amazon/TikTok sellers, and brand buyers.
+description: Create evidence-based TikTok B2B footwear scripts, hooks, shot lists and captions for Beiqiang sourcing buyers. Use real SKU or factory proof and an appropriate inquiry path; wide-toe demonstrations require SKU evidence.
 ---
 
 # TikTok B2B Content
@@ -9,14 +9,13 @@ Use this skill to create TikTok content that attracts sourcing buyers, not retai
 
 ## Required References
 
-- Read `references/script-formats.md` before creating scripts or content calendars.
-- Use `beiqiang-positioning` to keep hooks and captions B2B.
-- Use `competitor-research-firecrawl` when content should respond to current market or competitor angles.
+- Read `references/script-formats.md` for a full script or content calendar; a hook or caption edit only needs the current project evidence.
+- Use `beiqiang-positioning` when a source or product claim needs review, and competitor research only when the task actually asks for current market angles.
 
 ## Content Rules
 
 - Lead with a buyer problem or sourcing decision, not vague lifestyle aesthetics.
-- Show product proof: toe room, flexibility, knit upper, EVA sole, weight, slip-on comfort, color options, packing, checking, or customization only when supported.
+- Show only evidence-supported product or supplier proof: construction, colors, packing, checking or customization as applicable to the actual source.
 - Include a clear Alibaba inquiry bridge: sample, MOQ discussion, mixed colors/sizes, OEM/ODM, factory supply.
 - Avoid medical/orthopedic promises, fake test data, celebrity-style consumer ads, or claims not visible in footage.
 

@@ -1,17 +1,17 @@
 ---
 name: rfq-quote-assistant
-description: RFQ quotation and buyer follow-up assistant for Beiqiang B2B shoe exports. Use when drafting Alibaba RFQ replies, quotation templates, FOB 8-12 USD/pair price-range responses, sample offers, MOQ negotiation, OEM/ODM options, importer/wholesaler/Amazon/TikTok seller follow-up messages, or inquiry conversion copy for wide toe box comfort walking shoes and casual footwear.
+description: Prepare evidence-based first RFQ replies and quotation language for Beiqiang B2B shoe buyers. Use for price range, MOQ, sample and trade-term questions; use inquiry-follow-up for later-stage follow-ups.
 ---
 
 # RFQ Quote Assistant
 
 Use this skill to answer B2B sourcing inquiries with practical, trust-building quotation language. The output should help buyers move from vague RFQ to sample, spec confirmation, or bulk-order discussion.
 
-## Required References
+## References by need
 
-- Read `references/rfq-templates.md` before drafting RFQ quotes or follow-ups.
-- Use `beiqiang-positioning` to keep the reply factory-oriented and B2B.
-- Use `alibaba-international-operations` if the RFQ references a specific Alibaba product listing.
+- Read `references/rfq-templates.md` when a full reusable reply structure is needed; a short quotation question does not need the whole template.
+- Use `beiqiang-positioning` only when a buyer-facing source or product claim needs review.
+- Use `alibaba-international-operations` only when the task also changes an Alibaba listing.
 - For controlled hardness, foam density, rebound, tooling, laboratory tests, NDA or confidential tech packs, read the [technical buyer SOP](../../../07_知识库与Skills/01_运营SOP/技术型品牌买家询盘评估SOP.md) before quoting. Separate buyer targets, confirmed capability, fixed limits and actual sample results.
 
 ## Quote Discipline
@@ -19,46 +19,17 @@ Use this skill to answer B2B sourcing inquiries with practical, trust-building q
 - Keep price as a range unless the user provides style, material, quantity, size ratio, packing, and order terms.
 - Use FOB `8-12 USD/pair` as Beiqiang's target market band, not as an unconditional promise.
 - Ask for order-critical details naturally: quantity, target market, size range, color mix, logo/packing needs, delivery time, and sample address.
-- Offer next steps: confirm model, send sample, check stock/color, confirm final quote after specs.
+- Offer feasible next steps: confirm the actual model and source, check sample availability and current color/size supply, then quote after specs.
 - Avoid unsupported claims about certificates, capacity, years, private-label services, or compliance.
 
-## Output Contract
+## Output size
 
-For each RFQ, return:
-
-- Buyer intent summary.
-- Recommended reply strategy.
-- Alibaba-ready English message.
-- Short follow-up message.
-- Data still needed before final quote.
-- Internal operator note on risk, pricing, or product fit.
+For a short request, return the ready-to-send reply and only the missing facts that affect it. For a complete RFQ package, include buyer intent, quote logic, first reply, optional follow-up, unresolved commercial facts and internal risk notes.
 
 ## 适用场景
 
 - Alibaba RFQ first reply, quotation message, sample offer, FOB range response, DDP clarification, MOQ negotiation, and buyer qualification.
-- B2B shoe buyers asking about wide toe box walking shoes, casual walking shoes, lightweight slip-on shoes, OEM/ODM, samples, or bulk orders.
-
-## 贝强业务规则
-
-- Keep Beiqiang positioned as a footwear factory in Quanzhou.
-- Use FOB `8-12 USD/pair` as a reference band only when style and quantity are plausible.
-- Ask for quantity, market, size ratio, colors, logo/packing needs, and delivery timing before final quotation.
-- Push the buyer toward a sample check or clear spec confirmation.
-
-## 输出格式
-
-Return:
-
-```text
-Buyer intent:
-Quote strategy:
-First reply:
-FOB/DDP note:
-Sample guidance:
-Follow-up:
-Data needed:
-Internal risk note:
-```
+- B2B buyers asking about an evidenced shoe style, OEM/ODM, samples or bulk orders; never infer wide-toe fit from a general category.
 
 ## 禁止事项
 

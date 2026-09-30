@@ -9,13 +9,13 @@ Prefer the authorized Alibaba Open APIs over repetitive browser form work. Resol
 
 ## Safety and evidence
 
-负责人于2026-09-08确认：只有原始数据包中的商品属于贝强自有工厂货。阿里巴巴国际站扩品可能没有实际存在的商品；已上线、API回读、图片、生成素材、热榜或竞品记录均不能证明产品实物存在、自有工厂生产或可供货。必须逐款关联原始数据包；没有匹配证据的扩品标记为 HOLD_SOURCE（实物与货源待核验），不得称为自有工厂货、计入已确认供给或承诺样品/库存/交期。外部商品经后续核实可以记录真实来源，但不自动成为自有工厂货；归属变化须由负责人明确确认。
+API readback proves only the returned platform fields and review state. Product/source truth remains in [workspace boundaries](../../../AGENTS.md), exact SKU evidence and the [canonical lifecycle SOP](../../../02_Alibaba运营/00_运营SOP/国际站商品全生命周期SOP.md).
 
 - Credentials default to `~/.config/beiqiang/alibaba-openapi.json` (`Path.home()` in the client). A different external file can be selected with `--config` before the command. Never print secrets, copy them into prompts, commit them, or place them in generated workbooks.
 - Treat the current permission page and current official API documentation as authoritative. Read [references/permissions.md](references/permissions.md) to route an operation.
 - Read-only discovery and validation may run directly. Product/media, inventory/display, order/shipping, address and other external mutations must remain within the user's authorized targets and scope. Prepare the exact change before any missing approval is requested; existing authorization in the conversation remains valid.
 - For publishing or repair, read [the canonical lifecycle SOP](../../../02_Alibaba运营/00_运营SOP/国际站商品全生命周期SOP.md) and the SKU source evidence. Do not infer unsupported fields or copy historical defaults.
-- For sourced HR replacement, supplier `0`/"not stocked" is not an API inventory target or automatic source failure. Once the specific order route and replacement SKU identity are evidenced, write `999` for valid SKUs in the rebuilt draft, submit together with consistent new-shoe assets, and read back formal inventory. Treat `999` as a seller-side inquiry marker, not literal on-hand quantity; never count a stock-only update on an old-shoe page as a completed replacement.
+- For sourced HR replacement, apply the SOP's current sourcing and inventory convention. A stock-only update on an old-shoe page is not a completed replacement; read back formal inventory and the other affected fields separately.
 - Record request IDs, trace IDs, returned product IDs, and platform error objects. Do not call success unless the API returns a positive business result.
 
 ## Runtime

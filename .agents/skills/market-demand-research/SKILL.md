@@ -35,7 +35,7 @@ Rate each direction by:
 
 ## 输出格式
 
-Return:
+For a full direction study, return the following; a narrow question needs only the relevant conclusion, sources and limits:
 
 ```text
 Research scope:
@@ -48,7 +48,6 @@ Keyword actions:
 Image/detail-page actions:
 P4P implications:
 RFQ implications:
-ChatGPT handoff:
 ```
 
 Hot direction table fields:
@@ -61,7 +60,7 @@ Hot direction table fields:
 
 - Treat Alibaba supplier pages as B2B supply evidence.
 - Treat Amazon, Walmart, TikTok, and review articles as demand language, not as Beiqiang proof.
-- Favor directions that support Beiqiang's wide toe box comfort walking shoe supplier positioning.
+- Favor directions supported by a real, verified supply route and B2B buyer demand. Wide-toe is one possible evidenced direction, not a store-wide positioning.
 - Turn findings into operational choices: improve current products first, then decide whether new products are needed.
 
 ## 禁止事项

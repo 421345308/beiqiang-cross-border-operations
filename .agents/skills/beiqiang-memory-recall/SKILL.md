@@ -1,16 +1,16 @@
 ---
 name: beiqiang-memory-recall
-description: Read the smallest relevant Beiqiang memory set when a task depends on company context, accepted preferences, or prior decisions. Read-only; ordinary tool tasks do not require business memories.
+description: Read the smallest relevant Beiqiang memory set for accepted preferences or prior decisions not already covered by AGENTS, SOP or project records. Read-only; ordinary tool tasks do not require project memories.
 ---
 
 # Beiqiang Memory Recall
 
 The sole library is `07_知识库与Skills/05_项目记忆系统/`.
 
-1. Read its `README.md` and `INDEX.md` at task start. Reuse unchanged content already read in this task.
-2. Select by task signal and description; load relevant identity first, then necessary active memories in L1 → L5 order. Do not read the whole library unless explicitly auditing it.
-3. Historical context is a pointer to evidence. Verify volatile platform, SKU, CRM, GPU and price facts at the linked source before acting; never present an old snapshot as current.
-4. Preserve source boundaries and privacy. Memory weights guide attention, not authority over evidence or the user's latest instruction.
-5. Mention only memories that materially changed the decision. Do not restate unrelated memories.
+1. When the task needs an unstated preference, authorization or prior decision, read `README.md` and `INDEX.md`; reuse unchanged content already read. Ordinary tool tasks need neither.
+2. Select by task and object, then read only entries whose `scope` matches. Use only `active` entries for current guidance; `superseded`, `disputed` and `archived` are traceability material, not default instructions. Follow `supersedes` to prevent an older entry from re-entering the current set.
+3. Check `type` and `source` before applying a claim. Facts need source evidence; preferences need a confirmed choice; authorizations require the exact action and recipient; experiences remain conditional advice. `source: pending` never justifies broadening external or paid action. Apply `verify_when` or `review_after` as a prompt to recheck, not automatic invalidation.
+4. Use root and applicable local `AGENTS.md` for shared identity, claims and present boundaries. Verify volatile platform, SKU, CRM, GPU and price facts at the business source before acting; old snapshots are not current state.
+5. Mention only entries that materially changed the decision. Keep private and unrelated memories out of output.
 
 This skill never writes. Use `beiqiang-memory-curator` only when memory maintenance is requested; do not turn ordinary task results into durable entries.

@@ -1,14 +1,11 @@
 ---
-name: alibaba-30-products-audit
-description: Audit Beiqiang Alibaba.com products before further listing or promotion. Use when reviewing the current full catalog (including 30, 40, or more products), validating product identity, main images, SKU bindings, detail pages, URLs and live state, scoring conversion quality, or deciding which products should be promoted, paused, merged, or fixed.
+name: alibaba-catalog-audit
+description: Audit the current full Beiqiang Alibaba.com catalog before further listing or promotion. Use for product identity, images, SKU bindings, detail pages, URLs, live state and conversion quality; the audit scope is the current catalog, not a fixed product count.
 ---
 
 # Alibaba Full Catalog Audit
 
-## Beiqiang product provenance gate (2026-09-08)
-
-负责人于2026-09-08确认：只有原始数据包中的商品属于贝强自有工厂货。阿里巴巴国际站扩品可能没有实际存在的商品；已上线、API回读、图片、生成素材、热榜或竞品记录均不能证明产品实物存在、自有工厂生产或可供货。必须逐款关联原始数据包；没有匹配证据的扩品标记为 HOLD_SOURCE（实物与货源待核验），不得称为自有工厂货、计入已确认供给或承诺样品/库存/交期。外部商品经后续核实可以记录真实来源，但不自动成为自有工厂货；归属变化须由负责人明确确认。
-
+货源身份、外采可供能力和 `HOLD_SOURCE` 的现行判断只读根 `AGENTS.md` 与单款证据；本 Skill 不维护第二份货源规则。
 
 Use this skill for Beiqiang's pre-launch or pre-promotion Alibaba.com product audit. Treat the audit as an operating decision tool, not a generic listing review.
 

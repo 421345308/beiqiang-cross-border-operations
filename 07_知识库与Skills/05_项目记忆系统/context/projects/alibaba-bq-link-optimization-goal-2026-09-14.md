@@ -1,8 +1,12 @@
 ---
-type: Context
+id: bq-link-optimization
+type: Decision
 title: BQ 链接持续优化目标与源链接保护
 description: 继续 BQ 标题、关键词、主图与转化优化时恢复长期目标和执行边界。
 status: active
+scope: "Alibaba; BQ 系列已有链接的持续优化与源链接保护"
+source: "02_Alibaba运营/02_单品优化记录/BQ系列持续优化_2026-09-14/README.md"
+verify_when: "修改受保护源链接或恢复优化任务前，核对当期队列、后台数据与授权"
 privacy: internal
 tags: [Alibaba, BQ, 链接优化, 流量, 转化, 主动执行]
 timestamp: 2026-09-14

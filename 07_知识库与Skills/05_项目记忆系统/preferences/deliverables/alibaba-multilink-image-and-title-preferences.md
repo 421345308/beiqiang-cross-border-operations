@@ -1,8 +1,11 @@
 ---
+id: alibaba-multilink-presentation
 type: Preference
 title: 国际站多链接视觉与标题偏好
 description: 已核实真实可供鞋款制作多个采购意图链接时调用。
 status: active
+scope: "Alibaba; 已核实真实鞋款且确有独立采购意图的多链接图文；不授权新建重复链接"
+source: "02_Alibaba运营/05_扩品工程/多链接引流_2026-08-28/同款多链接与热榜扩品执行方案.md"
 privacy: internal
 tags: [Alibaba, 多链接, 主图, 标题]
 timestamp: 2026-08-28
