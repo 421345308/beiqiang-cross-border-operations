@@ -18,3 +18,7 @@
 临时可复核证据：`99_临时区/WorkBuddy_CLI桌面会话验证_2026-10-01/`，首次`finished.json`与第二次`shared-config/finished.json`、各自原生CLI stream。模型执行与GUI显示须分开验收。
 
 参考：本机内置CLI `--help` 为本次参数依据；[官方CLI参考](https://www.codebuddy.ai/docs/cli/cli-reference)描述会话恢复和ACP，但没有据此证明WorkBuddy原生任务自动登记。
+
+## 原生 HR 会话恢复的第三次实测
+在目标 idle 时，以正确 CODEBUDDY_CONFIG_DIR 和 --resume 恢复原生 HR 会话。一次 DeepSeek Flash 模型调用成功，原生 jsonl 出现 CLI_VISIBLE_PROBE_OK，桌面任务时间更新为刚刚。但切换其他任务再返回 HR 后，界面仍显示 10:24 的旧回复，未显示测试消息。因此只能确认命令行执行与记录恢复，不能声称桌面自动显示或实时流式同步。未修改任务数据库或伪造消息。证据位于临时目录 resume-native/。
+为避免通信调查拖住业务，下一批 HR020 纠正指令已通过原有桌面 HR 会话实际发送，模型为 Deepseek-V4.1-Flash。桌面可见通路仍需另行解决，不以隐藏 CLI 替代用户要求。
