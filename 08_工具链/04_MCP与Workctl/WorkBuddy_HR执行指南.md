@@ -1,6 +1,14 @@
 # WorkBuddy：HR执行指南
 
-更新：2026-09-29。只读本文和当次任务指定证据；不遍读工作台。
+更新：2026-10-01。只读本文和当次任务指定证据；不遍读工作台。
+
+## 当前指挥方式
+
+- 负责人明确要求优先 CLI，停止用频繁 computer-use 点击传递 WorkBuddy 工作；也停止 Accio Work 消耗积分。
+- 使用 `run_workbuddy_task.mjs TASK_FILE OUTPUT_DIR`，模型固定 `deepseek-v4.1-flash`，通过已认证 WorkBuddy 主机请求通道调用，凭证仅在内存，不读取 Accio 进程凭证。
+- 输入写清事实、范围、输出路径和验收条件，分小批实际业务任务。XML/JSON整理为多行，避免工具单行截断导致循环读取。保存任务、流式会话、终态和请求状态，我方复核产物后再授权范围内执行下一步。
+- CLI 与桌面原生聊天自动显示尚未验证；共享记录或 CLI 恢复成功不能算界面同步。不要为了显示逐次回到桌面点击，也不要修改数据库伪造会话。
+- 2026-10-01 官方 `agent-browser@0.38.1` 已通过 `--cdp` 连接既有 Chrome；回执显示 reused=true、launched=false、relaunchedBrowser=false。可用于 API 缺失字段和公开页检查，不能把浏览器连接成功当成已登录国际站或商品验收完成。
 
 ## 任务入口
 
