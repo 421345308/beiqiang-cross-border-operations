@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-10-07T17:43:35.436731+00:00",
+  "observed_at": "2026-10-07T17:48:55.431481+00:00",
   "style": "2667",
   "model": "BQ-LQ2667",
   "product_id": "1601973009551",
@@ -37,18 +37,17 @@
       "sku_code": "BQ-LQ2667-BLACK"
     }
   ],
-  "get_request_id": "2105584317913949907026040",
-  "actual_official_score": null,
-  "score_request_id": null,
+  "get_request_id": "213e759c17913953067401565",
+  "actual_official_score": 5.0,
+  "score_request_id": "0b830ecc17913953282184748",
   "keywords": [
     ""
   ],
   "keyword_status": "LEGACY_EMPTY_CURRENT_VERSION_UNVERIFIED",
   "pending": [
     "normal browser public color clicks/full images/FAQ/detail",
-    "current keyword or exact-ID edit-version migration evidence",
-    "actual official score>=5"
+    "current keyword or exact-ID edit-version migration evidence"
   ],
-  "completion_status": "FORMAL_READBACK_FULL_ACCEPTANCE_PENDING",
+  "completion_status": "APPROVED_Y_SCORE_5_FORMAL_READBACK_PUBLIC_ACCEPTANCE_PENDING",
   "typed_fields_verified_except_legacy_keyword": true
 }

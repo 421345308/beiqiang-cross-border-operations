@@ -1,7 +1,7 @@
 {
   "product_id": "1601973009551",
-  "observed_at": "2026-10-07T17:43:35.436731+00:00",
-  "render_request_id": "213c932b17913949996207674",
+  "observed_at": "2026-10-07T17:48:55.431481+00:00",
+  "render_request_id": "212c6fc617913953180616457",
   "checks": {
     "catId": {
       "status": "MATCH"
@@ -126,14 +126,26 @@
   "acceptance": {
     "phase": "post_publish_completion",
     "target_score": 5.0,
-    "actual_score": null,
-    "observed_at": "2026-10-07T17:43:35.436731+00:00",
-    "score_source": "alibaba.icbu.product.score.get / None",
+    "actual_score": 5.0,
+    "observed_at": "2026-10-07T17:48:55.431481+00:00",
+    "score_source": "alibaba.icbu.product.score.get / 0b830ecc17913953282184748",
     "diagnostics": {
-      "status": "not_read"
+      "status": "clear",
+      "request_id": "0b830ecc17913953282184748",
+      "observed_at": "2026-10-07T17:48:55.431481+00:00",
+      "flagged": {},
+      "error_reasons": {},
+      "nonzero_rule_scores": {},
+      "checks_not_run": [
+        "sku_image",
+        "sku_text",
+        "imageSubTitle",
+        "selling_point_attribute_conflict"
+      ],
+      "limits": "只表示本次评分接口返回未见问题；未运行的检查、公开图片和关键词必须另验。"
     },
-    "score_status": "pending_score",
-    "overall_status": "PENDING_SCORE",
+    "score_status": "threshold_met",
+    "overall_status": "PENDING_CONTENT",
     "unverified_content_checks": [
       "public_page",
       "media_review",
