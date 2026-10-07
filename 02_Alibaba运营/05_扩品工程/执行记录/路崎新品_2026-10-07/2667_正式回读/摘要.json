@@ -1,11 +1,11 @@
 {
-  "observed_at": "2026-10-07T17:31:09.245936+00:00",
+  "observed_at": "2026-10-07T17:43:35.436731+00:00",
   "style": "2667",
   "model": "BQ-LQ2667",
   "product_id": "1601973009551",
   "url": "https://www.alibaba.com/product-detail/Mens-Low-Top-Lace-Up-Casual_1601973009551.html",
-  "audit_status": "new",
-  "display": "N",
+  "audit_status": "approved",
+  "display": "Y",
   "checks": {
     "model": true,
     "category": true,
@@ -37,7 +37,7 @@
       "sku_code": "BQ-LQ2667-BLACK"
     }
   ],
-  "get_request_id": "212c41d317913942467083693",
+  "get_request_id": "2105584317913949907026040",
   "actual_official_score": null,
   "score_request_id": null,
   "keywords": [
@@ -45,11 +45,10 @@
   ],
   "keyword_status": "LEGACY_EMPTY_CURRENT_VERSION_UNVERIFIED",
   "pending": [
-    "review approved/Y if not yet approved",
-    "current render typed fields/packaging/logistics",
-    "actual score>=5 if not yet available",
     "normal browser public color clicks/full images/FAQ/detail",
-    "current keyword or exact-ID edit-version migration evidence"
+    "current keyword or exact-ID edit-version migration evidence",
+    "actual official score>=5"
   ],
-  "completion_status": "CREATED_FORMAL_CORE_CHECKS_PASS_FULL_ACCEPTANCE_PENDING"
+  "completion_status": "FORMAL_READBACK_FULL_ACCEPTANCE_PENDING",
+  "typed_fields_verified_except_legacy_keyword": true
 }
