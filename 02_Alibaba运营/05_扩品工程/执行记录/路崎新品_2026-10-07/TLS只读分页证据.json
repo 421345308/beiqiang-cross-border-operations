@@ -1,0 +1,159 @@
+[
+  {
+    "method": "alibaba.icbu.product.list",
+    "attempt": 1,
+    "page": 1,
+    "status": "response",
+    "request_id": "0bbb3b2417913469275575038"
+  },
+  {
+    "method": "alibaba.icbu.product.list",
+    "attempt": 1,
+    "page": 2,
+    "status": "transport_error",
+    "phase": "transport",
+    "http_status": null,
+    "error_type": "URLError",
+    "reason_type": "SSLEOFError",
+    "certificate_error": false
+  },
+  {
+    "method": "alibaba.icbu.product.list",
+    "attempt": 2,
+    "page": 2,
+    "status": "response",
+    "request_id": "213c932b17913469469638959"
+  },
+  {
+    "method": "alibaba.icbu.product.list",
+    "attempt": 1,
+    "page": 3,
+    "status": "transport_error",
+    "phase": "transport",
+    "http_status": null,
+    "error_type": "URLError",
+    "reason_type": "SSLEOFError",
+    "certificate_error": false
+  },
+  {
+    "method": "alibaba.icbu.product.list",
+    "attempt": 2,
+    "page": 3,
+    "status": "transport_error",
+    "phase": "transport",
+    "http_status": null,
+    "error_type": "URLError",
+    "reason_type": "SSLEOFError",
+    "certificate_error": false
+  },
+  {
+    "method": "alibaba.icbu.product.list",
+    "attempt": 3,
+    "page": 3,
+    "status": "response",
+    "request_id": "0bbb3b2417913469783316408"
+  },
+  {
+    "method": "alibaba.icbu.product.list",
+    "attempt": 1,
+    "page": 4,
+    "status": "response",
+    "request_id": "0bab02fe17913469866294481"
+  },
+  {
+    "method": "alibaba.icbu.product.list",
+    "attempt": 1,
+    "page": 5,
+    "status": "response",
+    "request_id": "213c932b17913469949742850"
+  },
+  {
+    "method": "alibaba.icbu.product.list",
+    "attempt": 1,
+    "page": 6,
+    "status": "response",
+    "request_id": "21546a1d17913470033412001"
+  },
+  {
+    "method": "alibaba.icbu.product.list",
+    "attempt": 1,
+    "page": 7,
+    "status": "response",
+    "request_id": "213d4e4917913470117992764"
+  },
+  {
+    "method": "alibaba.icbu.product.list",
+    "attempt": 1,
+    "page": 8,
+    "status": "response",
+    "request_id": "210829b717913470200435088"
+  },
+  {
+    "method": "alibaba.icbu.product.list",
+    "attempt": 1,
+    "page": 9,
+    "status": "response",
+    "request_id": "21501be117913470283835803"
+  },
+  {
+    "method": "alibaba.icbu.product.list",
+    "attempt": 1,
+    "page": 10,
+    "status": "response",
+    "request_id": "212c6fc617913470405777633"
+  },
+  {
+    "method": "alibaba.icbu.product.list",
+    "attempt": 1,
+    "page": 11,
+    "status": "transport_error",
+    "phase": "transport",
+    "http_status": null,
+    "error_type": "URLError",
+    "reason_type": "SSLEOFError",
+    "certificate_error": false
+  },
+  {
+    "method": "alibaba.icbu.product.list",
+    "attempt": 2,
+    "page": 11,
+    "status": "transport_error",
+    "phase": "transport",
+    "http_status": null,
+    "error_type": "URLError",
+    "reason_type": "SSLEOFError",
+    "certificate_error": false
+  },
+  {
+    "method": "alibaba.icbu.product.list",
+    "attempt": 3,
+    "page": 11,
+    "status": "response",
+    "request_id": "0bbb3b2417913470751661813"
+  },
+  {
+    "method": "alibaba.icbu.product.list",
+    "attempt": 1,
+    "page": 12,
+    "status": "response",
+    "request_id": "0b80d2d617913470837185347"
+  },
+  {
+    "method": "alibaba.icbu.product.list",
+    "attempt": 1,
+    "page": 13,
+    "status": "transport_error",
+    "phase": "transport",
+    "http_status": null,
+    "error_type": "URLError",
+    "reason_type": "SSLEOFError",
+    "certificate_error": false
+  },
+  {
+    "method": "alibaba.icbu.product.list",
+    "attempt": 2,
+    "page": 13,
+    "status": "response",
+    "request_id": "213c933517913471031925980"
+  }
+]
