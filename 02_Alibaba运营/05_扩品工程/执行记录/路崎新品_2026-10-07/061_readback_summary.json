@@ -1,0 +1,57 @@
+{
+  "observed_at": "2026-10-07T16:14:49.439760+00:00",
+  "product_id": "1601972965417",
+  "url": "https://www.alibaba.com/product-detail/Unisex-Low-Top-Lace-Up-Casual_1601972965417.html",
+  "formal_get_request_id": "0bbb637a17913896273291745",
+  "checks": {
+    "model": true,
+    "category": true,
+    "title": true,
+    "main_6_ordered": true,
+    "detail_4": true,
+    "company_5": true,
+    "faq_5": true,
+    "color_3": true,
+    "sku_3_unique": true,
+    "prices_all_skus": true,
+    "pair_unit": true,
+    "MOQ_2": true,
+    "product_summary_source_identity": true,
+    "company_summary_source_identity": true
+  },
+  "color_mapping": [
+    {
+      "label": "Beige",
+      "expected": "https://sc04.alicdn.com/kf/H0982b384dcbb4236af3026ced9cc35c82/286385890/H0982b384dcbb4236af3026ced9cc35c82.jpg",
+      "actual": "https://sc04.alicdn.com/kf/H0982b384dcbb4236af3026ced9cc35c82.jpg",
+      "match": true
+    },
+    {
+      "label": "Tan",
+      "expected": "https://sc04.alicdn.com/kf/H4fc7905473f54c4fb85505f0c4ef4021C/286385890/H4fc7905473f54c4fb85505f0c4ef4021C.jpg",
+      "actual": "https://sc04.alicdn.com/kf/H4fc7905473f54c4fb85505f0c4ef4021C.jpg",
+      "match": true
+    },
+    {
+      "label": "Black",
+      "expected": "https://sc04.alicdn.com/kf/H1ae8361047ab4f0c972f1823074cc962M/286385890/H1ae8361047ab4f0c972f1823074cc962M.jpg",
+      "actual": "https://sc04.alicdn.com/kf/H1ae8361047ab4f0c972f1823074cc962M.jpg",
+      "match": true
+    }
+  ],
+  "checks_passed": true,
+  "audit_status": "approved",
+  "display": "Y",
+  "keyword_observation": [
+    ""
+  ],
+  "keyword_persistence": "NOT_PERSISTED_IN_LEGACY_FIELD; current edit-version migration unverified, not accepted as complete",
+  "pending": [
+    "normal browser buyer page photos/color-click/FAQ/detail acceptance",
+    "current keyword or versioned migration evidence"
+  ],
+  "completion_status": "APPROVED_Y_SCORE_5_FORMAL_READBACK_FULL_PUBLIC_ACCEPTANCE_PENDING",
+  "actual_official_score": 5.0,
+  "score_request_id": "21546a1d17913896271976142",
+  "typed_field_acceptance": "061_formal_field_acceptance.json"
+}

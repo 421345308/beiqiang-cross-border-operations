@@ -1,0 +1,237 @@
+{
+  "observed_at": "2026-10-07T16:14:49.439760+00:00",
+  "product_id": "1601972965417",
+  "render_request_id": "0bab02fe17913896271714516",
+  "checks": {
+    "catId": {
+      "status": "MATCH"
+    },
+    "icbuCatProp": {
+      "status": "MISMATCH_OR_NOOP",
+      "task_specific_semantic_review": {
+        "passed": true,
+        "reason": "本款7个属性inputValue逐项一致；闭合Lace-up由自定义值归并成系统80806811且values改为value；材料自定义负ID重新分配；原始值树保留。"
+      }
+    },
+    "saleProp": {
+      "status": "MATCH"
+    },
+    "sku": {
+      "status": "verified"
+    },
+    "productTitle": {
+      "status": "MATCH"
+    },
+    "productKeywords": {
+      "status": "MISMATCH_OR_NOOP"
+    },
+    "scImages": {
+      "status": "CHANGED_BY_AUTHORIZED_HERO_UPDATE",
+      "semantic_verified": true,
+      "evidence": "061_hero_update_receipt.json + 061_formal_get.json"
+    },
+    "priceUnit": {
+      "status": "MATCH"
+    },
+    "saleType": {
+      "status": "MATCH"
+    },
+    "scPrice": {
+      "status": "MATCH"
+    },
+    "minOrderQuantity": {
+      "status": "MATCH"
+    },
+    "ladderPrice": {
+      "status": "MATCH"
+    },
+    "pkgMeasure": {
+      "status": "MATCH"
+    },
+    "pkgWeight": {
+      "status": "MISMATCH_OR_NOOP",
+      "task_specific_semantic_review": {
+        "passed": true,
+        "reason": "提交.5与回读0.5数值同为0.5kg运营基线。"
+      }
+    },
+    "shippingTemplate": {
+      "status": "MATCH"
+    },
+    "logisticsProperty": {
+      "status": "MISMATCH_OR_NOOP",
+      "task_specific_semantic_review": {
+        "passed": true,
+        "reason": "正式值仍为general_cargo_0；回读以valid=true代替描述inputValue，未选平台包邮或固定交期。"
+      }
+    },
+    "productDescType": {
+      "status": "MATCH"
+    },
+    "detailImage": {
+      "status": "MATCH"
+    },
+    "companyImage": {
+      "status": "MATCH"
+    },
+    "textDesc": {
+      "status": "MATCH"
+    },
+    "companyDesc": {
+      "status": "MATCH"
+    },
+    "companyFaqDesc": {
+      "status": "MATCH"
+    }
+  },
+  "sku_verification": {
+    "status": "verified",
+    "bindings": {
+      "BQ-LQ061-BLACK": "109778976304",
+      "BQ-LQ061-TAN": "109778976305",
+      "BQ-LQ061-BEIGE": "109778976306"
+    },
+    "unsubmitted_observations": {
+      "BQ-LQ061-BLACK": {
+        "price": [
+          "field",
+          [
+            [
+              "id",
+              "price"
+            ]
+          ],
+          "",
+          []
+        ],
+        "skuStock": [
+          "field",
+          [
+            [
+              "id",
+              "skuStock"
+            ]
+          ],
+          "",
+          []
+        ],
+        "outerSupplyId": [
+          "field",
+          [
+            [
+              "id",
+              "outerSupplyId"
+            ]
+          ],
+          "",
+          []
+        ]
+      },
+      "BQ-LQ061-TAN": {
+        "price": [
+          "field",
+          [
+            [
+              "id",
+              "price"
+            ]
+          ],
+          "",
+          []
+        ],
+        "skuStock": [
+          "field",
+          [
+            [
+              "id",
+              "skuStock"
+            ]
+          ],
+          "",
+          []
+        ],
+        "outerSupplyId": [
+          "field",
+          [
+            [
+              "id",
+              "outerSupplyId"
+            ]
+          ],
+          "",
+          []
+        ]
+      },
+      "BQ-LQ061-BEIGE": {
+        "price": [
+          "field",
+          [
+            [
+              "id",
+              "price"
+            ]
+          ],
+          "",
+          []
+        ],
+        "skuStock": [
+          "field",
+          [
+            [
+              "id",
+              "skuStock"
+            ]
+          ],
+          "",
+          []
+        ],
+        "outerSupplyId": [
+          "field",
+          [
+            [
+              "id",
+              "outerSupplyId"
+            ]
+          ],
+          "",
+          []
+        ]
+      }
+    },
+    "limits": "Formal API row/ID binding only; first read establishes IDs, not prior history, physical stock or image pixel truth."
+  },
+  "trade_observations": {
+    "pkgWeight": "<field id=\"pkgWeight\" name=\"Volume and weight (including logistics packaging)\" type=\"input\"><rules><rule name=\"tipRule\" value=\"If the transaction information is set to sell by piece, fill in the volume and weight of each item (including logistics packaging). br/&gt; If the transaction information is set to sell by batch, fill in the overall volume and weight of each batch of goods (including logistics packaging)&lt;br/&gt; Please accurately fill in the product weight and size information (including logistics packaging), fill in the inaccurate will lead to freight differences.\" /><rule name=\"valueTypeRule\" value=\"double\" /></rules><value>0.5</value></field>",
+    "pkgMeasure": "<field id=\"pkgMeasure\" name=\"Dimensions\" type=\"complex\"><complex-value><field id=\"width\" type=\"input\"><value>23</value></field><field id=\"length\" type=\"input\"><value>34</value></field><field id=\"height\" type=\"input\"><value>13</value></field></complex-value><fields><field id=\"length\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"double\" /><rule name=\"requiredRule\" value=\"false\" /></rules></field><field id=\"width\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"double\" /><rule name=\"requiredRule\" value=\"false\" /></rules></field><field id=\"height\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"double\" /><rule name=\"requiredRule\" value=\"false\" /></rules></field></fields></field>",
+    "semiManagedPeriod": "<field id=\"semiManagedPeriod\" name=\"Semi-Managed Shipment Period\" type=\"input\"><rules><rule name=\"maxValueRule\" value=\"14\" exProperty=\"not include\" /><rule name=\"minValueRule\" value=\"1\" exProperty=\"not include\" /><rule name=\"valueTypeRule\" value=\"integer\" /></rules><value>3</value></field>"
+  },
+  "acceptance": {
+    "phase": "post_publish_completion",
+    "target_score": 5.0,
+    "actual_score": 5.0,
+    "observed_at": "2026-10-07T16:14:49.439760+00:00",
+    "score_source": "alibaba.icbu.product.score.get / 21546a1d17913896271976142",
+    "diagnostics": {
+      "status": "not_read"
+    },
+    "score_status": "threshold_met",
+    "overall_status": "PENDING_CONTENT",
+    "unverified_content_checks": [
+      "public_page",
+      "media_review",
+      "keyword_persistence"
+    ],
+    "versioned_content": null,
+    "required_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "limits": "Platform listing score does not prove public content, source truth or real product quality."
+  },
+  "limits": "主图已由授权更新改变，按061正式get逐槽比较新CDN身份；更新回执保留，不重写原创建载荷。media_review=false表示公开像素未验，并非本地审图失败。semiManagedPeriod平台默认3不是提交值/交期承诺。"
+}
