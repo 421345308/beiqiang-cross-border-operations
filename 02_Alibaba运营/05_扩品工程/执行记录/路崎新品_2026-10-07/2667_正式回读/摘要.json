@@ -1,0 +1,55 @@
+{
+  "observed_at": "2026-10-07T17:31:09.245936+00:00",
+  "style": "2667",
+  "model": "BQ-LQ2667",
+  "product_id": "1601973009551",
+  "url": "https://www.alibaba.com/product-detail/Mens-Low-Top-Lace-Up-Casual_1601973009551.html",
+  "audit_status": "new",
+  "display": "N",
+  "checks": {
+    "model": true,
+    "category": true,
+    "title": true,
+    "main_6_ordered": true,
+    "detail_4": true,
+    "company_5": true,
+    "faq_5": true,
+    "prices_all_skus": true,
+    "pair_unit": true,
+    "MOQ_2": true,
+    "product_summary_source_identity": true,
+    "company_summary_source_identity": true,
+    "colors_1": true,
+    "sku_1_unique": true
+  },
+  "checks_passed": true,
+  "color_mapping": [
+    {
+      "color": "Black",
+      "actual": "https://sc04.alicdn.com/kf/Hfd5cbb56954e45429cbd96bfdc2a08721.jpg",
+      "expected": "https://sc04.alicdn.com/kf/Hfd5cbb56954e45429cbd96bfdc2a08721/286385890/Hfd5cbb56954e45429cbd96bfdc2a08721.jpg",
+      "match": true
+    }
+  ],
+  "sku_id_bindings": [
+    {
+      "sku_id": 109779162219,
+      "sku_code": "BQ-LQ2667-BLACK"
+    }
+  ],
+  "get_request_id": "212c41d317913942467083693",
+  "actual_official_score": null,
+  "score_request_id": null,
+  "keywords": [
+    ""
+  ],
+  "keyword_status": "LEGACY_EMPTY_CURRENT_VERSION_UNVERIFIED",
+  "pending": [
+    "review approved/Y if not yet approved",
+    "current render typed fields/packaging/logistics",
+    "actual score>=5 if not yet available",
+    "normal browser public color clicks/full images/FAQ/detail",
+    "current keyword or exact-ID edit-version migration evidence"
+  ],
+  "completion_status": "CREATED_FORMAL_CORE_CHECKS_PASS_FULL_ACCEPTANCE_PENDING"
+}

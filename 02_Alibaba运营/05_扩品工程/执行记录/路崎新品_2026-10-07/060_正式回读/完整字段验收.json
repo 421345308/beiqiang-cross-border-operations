@@ -1,0 +1,227 @@
+{
+  "product_id": "1601972944790",
+  "observed_at": "2026-10-07T17:16:07.301900+00:00",
+  "render_request_id": "21546a1d17913933421815974",
+  "checks": {
+    "catId": {
+      "status": "MATCH"
+    },
+    "icbuCatProp": {
+      "status": "MISMATCH_OR_NOOP",
+      "task_specific_semantic_review": {
+        "passed": true,
+        "reason": "本款所有属性inputValue逐项一致；Lace-up自定义归并系统80806811及材料负ID重分配，只在当前样本核实，保留严格原差异。"
+      }
+    },
+    "productTitle": {
+      "status": "MATCH"
+    },
+    "priceUnit": {
+      "status": "MATCH"
+    },
+    "saleType": {
+      "status": "MATCH"
+    },
+    "scPrice": {
+      "status": "MATCH"
+    },
+    "minOrderQuantity": {
+      "status": "MATCH"
+    },
+    "ladderPrice": {
+      "status": "MATCH"
+    },
+    "pkgMeasure": {
+      "status": "MATCH"
+    },
+    "pkgWeight": {
+      "status": "MISMATCH_OR_NOOP",
+      "task_specific_semantic_review": {
+        "passed": true,
+        "reason": ".5/0.5数值同为0.5kg运营基线，不是实测。"
+      }
+    },
+    "shippingTemplate": {
+      "status": "MATCH"
+    },
+    "logisticsProperty": {
+      "status": "MISMATCH_OR_NOOP",
+      "task_specific_semantic_review": {
+        "passed": true,
+        "reason": "同一个general_cargo_0值；显示描述回读为valid=true。"
+      }
+    },
+    "productDescType": {
+      "status": "MATCH"
+    },
+    "companyImage": {
+      "status": "MATCH"
+    },
+    "textDesc": {
+      "status": "MATCH"
+    },
+    "companyDesc": {
+      "status": "MATCH"
+    },
+    "saleProp": {
+      "status": "MATCH"
+    },
+    "sku": {
+      "status": "verified",
+      "bindings": {
+        "BQ-LQ060-BLACK": "109779140108",
+        "BQ-LQ060-BLACK-BROWN": "109779140109",
+        "BQ-LQ060-BLACK-GREY": "109779140110"
+      },
+      "unsubmitted_observations": {
+        "BQ-LQ060-BLACK": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ060-BLACK-BROWN": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ060-BLACK-GREY": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        }
+      },
+      "limits": "Formal API row/ID binding only; first read establishes IDs, not prior history, physical stock or image pixel truth."
+    },
+    "productKeywords": {
+      "status": "MISMATCH_OR_NOOP"
+    },
+    "scImages": {
+      "status": "MATCH"
+    },
+    "detailImage": {
+      "status": "MATCH"
+    },
+    "companyFaqDesc": {
+      "status": "MATCH"
+    }
+  },
+  "acceptance": {
+    "phase": "post_publish_completion",
+    "target_score": 5.0,
+    "actual_score": 5.0,
+    "observed_at": "2026-10-07T17:16:07.301900+00:00",
+    "score_source": "alibaba.icbu.product.score.get / 0b80d2d617913933573346685",
+    "diagnostics": {
+      "status": "not_read"
+    },
+    "score_status": "threshold_met",
+    "overall_status": "PENDING_CONTENT",
+    "unverified_content_checks": [
+      "public_page",
+      "media_review",
+      "keyword_persistence"
+    ],
+    "versioned_content": null,
+    "required_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "limits": "Platform listing score does not prove public content, source truth or real product quality."
+  },
+  "limits": "本地及正式银行像素已核，不代替公开页点击/全文；旧关键词回读为空，无精确当前编辑迁移证据，不虚报完整完成。semiManagedPeriod平台默认不计提交/交期承诺。"
+}

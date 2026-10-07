@@ -1,0 +1,73 @@
+{
+  "observed_at": "2026-10-07T17:16:07.301900+00:00",
+  "style": "060",
+  "model": "BQ-LQ060",
+  "product_id": "1601972944790",
+  "url": "https://www.alibaba.com/product-detail/Unisex-Low-Top-Lace-Up-Casual_1601972944790.html",
+  "audit_status": "approved",
+  "display": "Y",
+  "checks": {
+    "model": true,
+    "category": true,
+    "title": true,
+    "main_6_ordered": true,
+    "detail_4": true,
+    "company_5": true,
+    "faq_5": true,
+    "colors_3": true,
+    "sku_3_unique": true,
+    "prices_all_skus": true,
+    "pair_unit": true,
+    "MOQ_2": true,
+    "product_summary_source_identity": true,
+    "company_summary_source_identity": true
+  },
+  "checks_passed": true,
+  "color_mapping": [
+    {
+      "color": "Black / Brown",
+      "actual": "https://sc04.alicdn.com/kf/Haff2afd2f4bb4937affb827b5fdfef2dz.jpg",
+      "expected": "https://sc04.alicdn.com/kf/Haff2afd2f4bb4937affb827b5fdfef2dz/286385890/Haff2afd2f4bb4937affb827b5fdfef2dz.jpg",
+      "match": true
+    },
+    {
+      "color": "Black",
+      "actual": "https://sc04.alicdn.com/kf/H7ec6a2e1e2ed4d6e92d942bf791b1a02C.jpg",
+      "expected": "https://sc04.alicdn.com/kf/H7ec6a2e1e2ed4d6e92d942bf791b1a02C/286385890/H7ec6a2e1e2ed4d6e92d942bf791b1a02C.jpg",
+      "match": true
+    },
+    {
+      "color": "Black / Grey",
+      "actual": "https://sc04.alicdn.com/kf/H5a926b0a89314670a2bfe38412f7cc27o.jpg",
+      "expected": "https://sc04.alicdn.com/kf/H5a926b0a89314670a2bfe38412f7cc27o/286385890/H5a926b0a89314670a2bfe38412f7cc27o.jpg",
+      "match": true
+    }
+  ],
+  "sku_id_bindings": [
+    {
+      "sku_id": 109779140109,
+      "sku_code": "BQ-LQ060-BLACK-BROWN"
+    },
+    {
+      "sku_id": 109779140108,
+      "sku_code": "BQ-LQ060-BLACK"
+    },
+    {
+      "sku_id": 109779140110,
+      "sku_code": "BQ-LQ060-BLACK-GREY"
+    }
+  ],
+  "get_request_id": "212c41d317913933344137512",
+  "actual_official_score": 5.0,
+  "score_request_id": "0b80d2d617913933573346685",
+  "keywords": [
+    ""
+  ],
+  "keyword_status": "LEGACY_EMPTY_CURRENT_VERSION_UNVERIFIED",
+  "pending": [
+    "normal browser public color clicks/full images/FAQ/detail",
+    "current keyword or exact-ID edit-version migration evidence"
+  ],
+  "completion_status": "APPROVED_Y_SCORE_5_FORMAL_READBACK_PUBLIC_ACCEPTANCE_PENDING",
+  "typed_fields_verified_except_legacy_keyword": true
+}
