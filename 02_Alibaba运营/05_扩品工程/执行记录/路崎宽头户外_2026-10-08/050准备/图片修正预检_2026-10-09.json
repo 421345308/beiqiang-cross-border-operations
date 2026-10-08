@@ -1,0 +1,135 @@
+{
+  "style": "050",
+  "product_id": "1601973794508",
+  "observed_at": "2026-10-08T21:47:11.684367+00:00",
+  "stage": "SOURCE_TRIAGE_ONLY_NOT_FULL_IMAGE_REVIEW",
+  "source": "https://luqi.sooxie.com/detail/2435080",
+  "confirmed_colors": [
+    "WhiteSilver",
+    "WhiteBlack",
+    "BlackSilver",
+    "AllBlack"
+  ],
+  "EU_sizes": [
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48
+  ],
+  "EU_combinations": 52,
+  "formal_evidence": "质量修正_2026-10-09/最新正式回读.json and current cached color-image match to original upload ledger; not new live API read",
+  "title_retained": "Unisex Wide Toe Box Mesh Walking Sneakers Angular Layered Side Panels Lace Up Casual Shoes EU 36-48 Wholesale",
+  "current_color_photo_bindings": [
+    {
+      "formal_color": "BlackSilver",
+      "source_image": 27,
+      "formal_value_id": -202,
+      "binding": "CURRENT_CACHED_FORMAL_GET_MATCHES_ORIGINAL_UPLOAD_LEDGER"
+    },
+    {
+      "formal_color": "WhiteBlack",
+      "source_image": 22,
+      "formal_value_id": -201,
+      "binding": "CURRENT_CACHED_FORMAL_GET_MATCHES_ORIGINAL_UPLOAD_LEDGER"
+    },
+    {
+      "formal_color": "AllBlack",
+      "source_image": 32,
+      "formal_value_id": -203,
+      "binding": "CURRENT_CACHED_FORMAL_GET_MATCHES_ORIGINAL_UPLOAD_LEDGER"
+    },
+    {
+      "formal_color": "WhiteSilver",
+      "source_image": 31,
+      "formal_value_id": -200,
+      "binding": "CURRENT_CACHED_FORMAL_GET_MATCHES_ORIGINAL_UPLOAD_LEDGER"
+    }
+  ],
+  "observed_source_images_full": [
+    31,
+    22,
+    27,
+    32
+  ],
+  "contact_sheets_reviewed": [
+    0,
+    1
+  ],
+  "confirmed_risk": "Three rock-background color photos31/22/27 have generic Fashion headers; AllBlack32 has four actual shoes with natural rear occlusion and no material/performance text. Preserve exact supplier color mapping rather than visually renaming: WhiteSilver31 has beige accent/silver-eye overlay, WhiteBlack22 black-eye/black grid accents, BlackSilver27 black mesh with white/silver overlays and black sole, AllBlack32 all-black four-shoe photo. Main01 bright cyan rail is distracting. Source15 Breathable fog and Chinese claims excluded; actual16/17/18 closeups require full original inspection before use.",
+  "proposed_roles": {
+    "M1": {
+      "source": 1,
+      "action": "Actual WhiteSilver pair hero; remove cyan rail/background, preserve two full shoes"
+    },
+    "M2": {
+      "source": 13,
+      "action": "Actual BlackSilver on-foot lace closure profile, remove generic header"
+    },
+    "M3": {
+      "source": 21,
+      "action": "Actual WhiteSilver full side/heel geometry"
+    },
+    "M4": {
+      "source": [
+        31,
+        22,
+        27,
+        32
+      ],
+      "action": "Four exact-color photos,2x2 tiles,EU36-48; keep original AllBlack four shoes/occlusion"
+    },
+    "M5": {
+      "source": 34,
+      "action": "Actual AllBlack on-foot pair with quotation inputs"
+    },
+    "D1": {
+      "source": 8,
+      "action": "Independent actual WhiteSilver pair overview, remove Made in China/marketing overlays"
+    },
+    "D2": {
+      "source": 16,
+      "action": "Actual photographed mesh/toe closeup crop without Chinese composition text or completing unseen parts"
+    },
+    "D3": {
+      "source": 18,
+      "action": "Actual photographed partial brown outsole closeup, no composition/traction claims"
+    },
+    "D4": {
+      "source": 26,
+      "action": "Actual BlackSilver lace-handling sample photograph, conditional sample terms"
+    },
+    "SKU_WhiteSilver": {
+      "source": 31,
+      "action": "Clean generic overlay only, preserve exact beige accents/silver eye and brown sole"
+    },
+    "SKU_WhiteBlack": {
+      "source": 22,
+      "action": "Clean generic overlay only, preserve exact black eye/grid accents and brown sole"
+    },
+    "SKU_BlackSilver": {
+      "source": 27,
+      "action": "Clean generic overlay only, preserve black mesh/white-silver panels/black sole"
+    },
+    "SKU_AllBlack": {
+      "source": 32,
+      "action": "Retain clean true four-shoe photo or contain it as color tile; no invented pair normalization"
+    }
+  },
+  "next_steps": [
+    "Inspect all remaining originals full-size before editing.",
+    "Build13 assets if all four Color photos edited:9main/detail plus4color; use2x2color chart, preserve source identity.",
+    "Fresh current Schema and52EU/4colors must be checked. Existing positive evidence covers same category/type three Color img edits; this four-color cardinality needs its own bounded contract and formal verification, not assumed generic SKU support.",
+    "Only Color img plus scImages/detailImage, omit sku; protect all52 row IDs/prices and nonimage values, submit once and formally verify."
+  ],
+  "mutations_this_plan": "NONE: no050 generation, upload, prepare or submit this phase",
+  "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+}
