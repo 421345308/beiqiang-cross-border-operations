@@ -46,7 +46,7 @@
     "Normal public color QA and exact-ID current keyword field evidence",
     "Remaining candidate publishing, formal readback, review, real score and applicable public QA"
   ],
-  "updated_at": "2026-10-08T05:29:41.664008+00:00",
+  "updated_at": "2026-10-08T05:40:32.281704+00:00",
   "photobank_accepted_count": 59,
   "current_schema_read": {
     "category_id": 201334413,
@@ -66,5 +66,22 @@
     "catalog_records": 384,
     "unassociated_catalog_ids": 345,
     "limits": "Exact source/model/hero conflicts absent in supplied local evidence; not all-gallery or public QA/global clearance. Actual submission must bind unchanged model/title/hero and current evidence hashes. No create performed."
+  },
+  "non_sku_field_preflight": {
+    "styles": [
+      "2639",
+      "056",
+      "2659",
+      "2620",
+      "2590"
+    ],
+    "status": "INCOMPLETE_FRAGMENTS_DO_NOT_SUBMIT",
+    "existing_serializers_reused": true,
+    "main_images_each": 6,
+    "detail_images_each": 4,
+    "materials": "Explicit current custom-negative rules checked; no platform payload acceptance claimed",
+    "no_unconfirmed_EU_written": true,
+    "full_payload_validated": false,
+    "new_product_ids": []
   }
 }
