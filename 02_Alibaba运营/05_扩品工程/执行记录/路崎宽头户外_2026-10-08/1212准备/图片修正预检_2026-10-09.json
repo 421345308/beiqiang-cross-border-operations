@@ -1,0 +1,148 @@
+{
+  "style": "1212",
+  "product_id": "1601973808453",
+  "observed_at": "2026-10-08T22:39:01.027485+00:00",
+  "stage": "SOURCE_TRIAGE_ONLY_NOT_FULL_IMAGE_REVIEW",
+  "source": "https://luqi.sooxie.com/detail/2426308",
+  "confirmed_colors": [
+    "Black",
+    "Brown",
+    "Beige",
+    "White",
+    "DarkGrey",
+    "LightGrey"
+  ],
+  "EU_sizes": [
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48
+  ],
+  "EU_combinations": 78,
+  "formal_evidence": "Cached质量修正_2026-10-09/最新正式回读.json and original image-bank ledger, not fresh API observation",
+  "current_title": "Unisex Wide Toe Box Slip On Walking Shoes Honeycomb Knit Upper Ribbed Collar Casual Sneakers EU 36-48 Wholesale",
+  "title_review": "Visible honeycomb knit texture, ribbed collar and slip-on structure support existing differentiated title; material composition not inferred. Small top cord/stopper is visible, not ordinary lace-up. Full details still required.",
+  "current_color_photo_bindings": [
+    {
+      "formal_color": "Black",
+      "source_image": 21,
+      "formal_value_id": -200,
+      "binding": "CACHED_FORMAL_GET_MATCHES_ORIGINAL_UPLOAD_LEDGER"
+    },
+    {
+      "formal_color": "Brown",
+      "source_image": 29,
+      "formal_value_id": -201,
+      "binding": "CACHED_FORMAL_GET_MATCHES_ORIGINAL_UPLOAD_LEDGER"
+    },
+    {
+      "formal_color": "Beige",
+      "source_image": 27,
+      "formal_value_id": -202,
+      "binding": "CACHED_FORMAL_GET_MATCHES_ORIGINAL_UPLOAD_LEDGER"
+    },
+    {
+      "formal_color": "White",
+      "source_image": 25,
+      "formal_value_id": -203,
+      "binding": "CACHED_FORMAL_GET_MATCHES_ORIGINAL_UPLOAD_LEDGER"
+    },
+    {
+      "formal_color": "DarkGrey",
+      "source_image": 22,
+      "formal_value_id": -204,
+      "binding": "CACHED_FORMAL_GET_MATCHES_ORIGINAL_UPLOAD_LEDGER"
+    },
+    {
+      "formal_color": "LightGrey",
+      "source_image": 19,
+      "formal_value_id": -205,
+      "binding": "CACHED_FORMAL_GET_MATCHES_ORIGINAL_UPLOAD_LEDGER"
+    }
+  ],
+  "observed_source_images_full": [
+    1,
+    21,
+    29,
+    27,
+    25,
+    22,
+    19,
+    13
+  ],
+  "contact_sheets_reviewed": [
+    0,
+    1
+  ],
+  "confirmed_risk": "Hero01Beige pair includes upside-down laptop/tablet, remove only background. All six colors have mustard/yellow-brown textured sole; Black black upper, Brown warm brown, Beige cream, White white, DarkGrey charcoal, LightGrey pale grey. Preserve visible honeycomb weave and small cord loop/stopper at ribbed collar, no invented lace eyelets. Several Color photos have tan decorative frame, others clean scene. White25 rear shoe extends toward right source/photo boundary; replace selector with fully contained actual White13 front pair. Do not complete clipped source25. Source8 last/9 arrows/10-12/14/16/18/30 material/traction/cushioning claims excluded as proof.",
+  "preferred_color_sources": {
+    "Black": 21,
+    "Brown": 29,
+    "Beige": 27,
+    "White": 13,
+    "DarkGrey": 22,
+    "LightGrey": 19
+  },
+  "proposed_roles": {
+    "M1": {
+      "source": 1,
+      "action": "Exact Beige pair clean hero without laptop/tablet"
+    },
+    "M2": {
+      "source": 28,
+      "action": "Actual Brown side honeycomb texture, inspect full before use"
+    },
+    "M3": {
+      "source": 24,
+      "action": "Actual White heel/collar hand view, inspect full before use"
+    },
+    "M4": {
+      "source": [
+        21,
+        29,
+        27,
+        13,
+        22,
+        19
+      ],
+      "action": "Six cleaned exact-color source tiles,2x3 grid, generous whole-shoe margins and EU36-48"
+    },
+    "M5": {
+      "source": 23,
+      "action": "Actual DarkGrey standing/walking photo and quotation inputs, inspect full before use"
+    },
+    "D1": {
+      "source": 11,
+      "action": "Original seated LightGrey photo only; remove Chinese claim/header, inspect full"
+    },
+    "D2": {
+      "source": 14,
+      "action": "Actual LightGrey top knit/collar close view, remove other inset/Chinese text; inspect exact original before choosing"
+    },
+    "D3": {
+      "source": 20,
+      "action": "Actual Black collar/heel handling view, no generic performance promises; inspect full"
+    },
+    "D4": {
+      "source": 26,
+      "action": "Actual Beige on-foot side photo and sample terms, inspect full"
+    }
+  },
+  "next_steps": [
+    "Inspect full originals28/24/23/11/14/20/26, choose real photo-only areas without fabricating missing parts.",
+    "Plan15 edited assets if all six Color photos cleaned plus nine main/details; original White25 replace with13.",
+    "Current Schema six Color nodes and78 rows must be verified; only intended img plus scImages/detailImage, no sku field. Existing three/fourColor positive cases do not prove six-node update without exact formal get/schema checks.",
+    "Full source/candidate/whole-set review then controlled upload, original-ID single update and formal readback."
+  ],
+  "mutations_this_plan": "NONE: no1212 generation/upload/update this phase",
+  "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+}

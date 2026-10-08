@@ -559,8 +559,8 @@
       "D3": "Actual color and EU selection with unequal per-color sizes if applicable; distinct layout and image from main.",
       "D4": "Order decision inputs and terms-to-confirm, supported by visible true product/lining/sole view; no blank/price filler."
     },
-    "next_action": "Read back exact submitted image correction after review; no replay of successful or unknown update.",
-    "status": "IMAGE_APPLY_PENDING_REVIEW",
+    "next_action": "Scoped image update PASS; preserve canonical ID.",
+    "status": "IMAGE_APPLY_PASS",
     "title_update_submission": {
       "status": "submitted_needs_readback",
       "product_id": "1601973794508",
@@ -608,14 +608,21 @@
       "D3": "Actual color and EU selection with unequal per-color sizes if applicable; distinct layout and image from main.",
       "D4": "Order decision inputs and terms-to-confirm, supported by visible true product/lining/sole view; no blank/price filler."
     },
-    "next_action": "Review current source images at full size; identify deficient slots; generate only needed candidates, compare and reject drift before upload.",
-    "status": "TITLE_SCOPE_PASS_FULL_IMAGE_REVISION_PENDING",
+    "next_action": "Read back exact submitted image correction after review; no replay of successful or unknown update.",
+    "status": "IMAGE_APPLY_PENDING_REVIEW",
     "title_update_submission": {
       "status": "submitted_needs_readback",
       "product_id": "1601973792546",
       "receipt": "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\033准备\\质量修正_2026-10-09\\正式更新回执.json",
       "formal_readback": "PASS",
       "observed_at": "2026-10-08T17:10:24.223104+00:00"
+    },
+    "latest_title_refinement": {
+      "observed_at": "2026-10-08T22:44:40.198227+00:00",
+      "target_title": "Unisex Wide Toe Box Mesh Panel Walking Sneakers Broad Angular Side Overlay Lace Up Casual Shoes EU 36-48 Wholesale",
+      "title_match": true,
+      "schema_title_match": null,
+      "scope_result": "PENDING_REVIEW"
     }
   },
   {
