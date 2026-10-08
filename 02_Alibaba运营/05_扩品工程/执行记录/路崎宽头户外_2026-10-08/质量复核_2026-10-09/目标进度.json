@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-10-08T22:45:23.467535+00:00",
+  "observed_at": "2026-10-08T23:17:52.927223+00:00",
   "source_urls": 107,
   "created_products": 28,
   "formal_EU_combinations": 900,
@@ -16,7 +16,7 @@
     "Do not count source URLs as distinct publishable styles",
     "Do not replay existing or outcome-unknown creates"
   ],
-  "next_work": "Read back already-submitted image/title updates for 033, without replay. Next improve1212 six-color/78EU image set, then remaining original-ID images and full107 quality-gated new listings. Hiking2509/02505 remain local business-category holds.",
+  "next_work": "Read back already-submitted image/title updates for 1212, without replay. Next improve 2599-1 three-color/30EU image set, then remaining original-ID images and full107 quality-gated new listings. Hiking2509/02505 remain local business-category holds.",
   "revision_readbacks": 26,
   "revision_scope_pass": 26,
   "revision_pending_review": 0,
@@ -50,20 +50,21 @@
     "2626",
     "053",
     "050",
+    "033",
     "25017",
     "25016",
     "02508",
     "02507"
   ],
   "pending_image_readback_styles": [
-    "033"
+    "1212"
   ],
   "latest_title_refinement": {
     "style": "033",
     "target_title": "Unisex Wide Toe Box Mesh Panel Walking Sneakers Broad Angular Side Overlay Lace Up Casual Shoes EU 36-48 Wholesale",
     "title_match": true,
-    "schema_title_match": null,
-    "scope_result": "PENDING_REVIEW",
-    "observed_at": "2026-10-08T22:44:40.198227+00:00"
+    "schema_title_match": true,
+    "scope_result": "PASS",
+    "observed_at": "2026-10-08T23:07:23.578830+00:00"
   }
 }

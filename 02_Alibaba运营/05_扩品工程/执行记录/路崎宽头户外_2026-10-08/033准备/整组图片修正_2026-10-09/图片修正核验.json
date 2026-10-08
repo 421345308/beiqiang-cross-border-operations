@@ -1,9 +1,9 @@
 {
   "style": "033",
   "product_id": "1601973792546",
-  "observed_at": "2026-10-08T22:44:40.198227+00:00",
-  "status": "modified",
-  "display": "N",
+  "observed_at": "2026-10-08T23:07:23.578830+00:00",
+  "status": "approved",
+  "display": "Y",
   "sku_count": 39,
   "protected_fields": {
     "category_id": true,
@@ -13,9 +13,22 @@
     "keywords": true
   },
   "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
-  "actual_score": null,
-  "scope_result": "PENDING_REVIEW",
+  "actual_score": "5.00",
+  "scope_result": "PASS",
   "main_order_match": true,
+  "unsubmitted_schema_differences": [],
+  "detail_asset_order_match": true,
+  "detail_asset_set_match": true,
+  "detail_first_overview_preserved": true,
+  "actual_detail_order": [
+    "Hb513b91298224145959b2e3507e5f952V",
+    "H05fc370dd191412ea4d2751356a1111a8",
+    "Ha3fa84ce899e49fda2fb7ab17aed231ee",
+    "H0b08c508402842488c9f91716ebfb2eaB"
+  ],
+  "schema_main_order_match": true,
+  "score_source": "alibaba.icbu.product.score.get / 2105044417915008796635635",
+  "score_observed_at": "2026-10-08T23:07:57.243732+00:00",
   "title_match": true,
   "target_title": "Unisex Wide Toe Box Mesh Panel Walking Sneakers Broad Angular Side Overlay Lace Up Casual Shoes EU 36-48 Wholesale",
   "product_sku_protection_scope": "Entire object except precisely three intended Color image_url fields; all39 rows/IDs/codes/prices/attributes unchanged",
@@ -26,5 +39,12 @@
   },
   "exact_three_colors": true,
   "EU_labels_match": true,
-  "exact_39_combinations": true
+  "exact_39_combinations": true,
+  "schema_title_match": true,
+  "saleProp_unchanged_except_color_img": true,
+  "schema_color_image_binding": {
+    "AllBlack": true,
+    "BlackSilver": true,
+    "WhiteGreen": true
+  }
 }

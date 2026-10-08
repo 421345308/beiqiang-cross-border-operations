@@ -1,0 +1,58 @@
+{
+  "bridge": {
+    "role": "M4-BlackBrown-reference",
+    "version": 1,
+    "indices": [
+      21,
+      29
+    ],
+    "referenced_image_paths": [
+      "C:/Users/spq/Desktop/贝强/02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1212准备/05_AI候选/1212-SKU-Black-v1.png",
+      "C:/Users/spq/Desktop/贝强/02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1212准备/05_AI候选/1212-SKU-Brown-v1.png"
+    ],
+    "prompt": "Create one square reference sheet containing exactly the TWO supplied original cleaned product photographs. Two independent equal photographic tiles, Black on the left, Brown on the right. Preserve each entire source photo, both full shoes and lower legs, exact pose, knit honeycomb details, ribbed collar and mustard sole. Uniformly contain within generous white padding. Labels only 'Black' and 'Brown'. Do not invent or change shoes, colors, angles, texture or legs. No additional photo, shoe, text, badge, material or performance claims. This is a reference tile to preserve actual product identity, not an artistic redraw."
+  },
+  "revisions": [
+    {
+      "role": "M4",
+      "indices": [
+        21,
+        29,
+        27,
+        13,
+        22,
+        19
+      ],
+      "prompt": "First supplied reference sheet contains TWO distinct source photos Black left and Brown right: use these as TWO separate tiles. Other four references are Beige, White, DarkGrey, LightGrey in that order. Final exactly SIX photo tiles in2rows×3cols ordered Black/Brown/Beige then White/Dark Grey/Light Grey. Use case: compositing. Six exact-color chart using six supplied cleaned photos in order: Black, Brown, Beige, White, DarkGrey, LightGrey. Six ENTIRE source-photograph tiles in2-row by3-column grid on square white canvas. Uniformly contain each whole source photo with generous internal padding; preserve two shoes and original lower legs/trousers in EVERY tile, not normalize poses/recolor. Exact title 'COLOR & SIZE OPTIONS'; labels 'Black'/'Brown'/'Beige'/'White'/'Dark Grey'/'Light Grey'; footer 'EU 36–48'/'Confirm color and size mix for quotation'. Reduce photos uniformly to fit; no heel/toe may touch tile or outer frame. No additional shoe images. EXACT photographed Luqi1212 only: knitted raised honeycomb-shaped texture, ribbed continuous collar, small actual cord loop/stopper at top opening, heel pull tab and mustard/yellow-brown sole with irregular rounded raised edge blocks. Preserve subtle original weave per photo, exact mesh/knit texture, original shoe count, relative pose/scale, natural occlusion and all seams/sole contours. ALL six colors have same mustard sole: Black black upper, Brown warm brown, Beige cream/off-white, White pure white, DarkGrey charcoal, LightGrey pale grey. Do not invent ordinary lace eyelets/laces or turn into033 angular overlays/050 eye-grid sneaker/213 toggle-lace mesh. Remove pasted headers/footers/Chinese/marketing/frames and unrelated props only. No source/supplier/model labels (NO Luqi1212), no new angle/miniature/cutout row/badges/arrows, no material/rubber/EVA/weight/grip/cushioning/flexibility/waterproof/medical/certification claims. Use ONLY original photograph(s) and exact requested text. Strict square1:1 quiet white/warm-white B2B canvas; whole photographed toe/heel/sole edges visible with safe generous margins; preserve true partial crop only if explicitly specified, never complete hidden or unseen areas.",
+      "version": 2,
+      "mode": "built-in imagegen",
+      "referenced_image_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\1212准备\\05_AI候选\\1212-M4-BlackBrown-reference-v1.png",
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1212准备/05_AI候选/1212-SKU-Beige-v1.png",
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1212准备/05_AI候选/1212-SKU-White-v1.png",
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1212准备/05_AI候选/1212-SKU-DarkGrey-v1.png",
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1212准备/05_AI候选/1212-SKU-LightGrey-v1.png"
+      ]
+    },
+    {
+      "role": "D2",
+      "indices": [
+        12
+      ],
+      "prompt": "Use case: precise-object-edit plus text-localization. Use ONLY largest actual complete single LightGrey shoe photograph from original12. Remove ALL tan poster background, Chinese grip/rubber/quick-wear text, decorative badge and ENTIRE separate bottom-right outsole inset. Keep just actual large original single shoe in same oblique top/side pose, full toe/heel/pull tab and sole visible with safe margins. Place ONE large contained photo on square warm-white canvas; no new shoe views, no new sole macro. Exact title 'VISIBLE UPPER DETAILS'; plain labels 'Honeycomb knit texture'/'Ribbed collar'/'Small cord loop'. No leaders/arrows, no composition or performance claims. EXACT photographed Luqi1212 only: knitted raised honeycomb-shaped texture, ribbed continuous collar, small actual cord loop/stopper at top opening, heel pull tab and mustard/yellow-brown sole with irregular rounded raised edge blocks. Preserve subtle original weave per photo, exact mesh/knit texture, original shoe count, relative pose/scale, natural occlusion and all seams/sole contours. ALL six colors have same mustard sole: Black black upper, Brown warm brown, Beige cream/off-white, White pure white, DarkGrey charcoal, LightGrey pale grey. Do not invent ordinary lace eyelets/laces or turn into033 angular overlays/050 eye-grid sneaker/213 toggle-lace mesh. Remove pasted headers/footers/Chinese/marketing/frames and unrelated props only. No source/supplier/model labels (NO Luqi1212), no new angle/miniature/cutout row/badges/arrows, no material/rubber/EVA/weight/grip/cushioning/flexibility/waterproof/medical/certification claims. Use ONLY original photograph(s) and exact requested text. Strict square1:1 quiet white/warm-white B2B canvas; whole photographed toe/heel/sole edges visible with safe generous margins; preserve true partial crop only if explicitly specified, never complete hidden or unseen areas. CORRECTION: No floating labels near shoe parts. All descriptive text must be one compact FOOTER completely below the photograph: 'Honeycomb knit texture | Ribbed collar | Small cord loop'. Only header 'VISIBLE UPPER DETAILS' above photograph. This avoids implying that the heel pull is the front cord loop. Preserve one exact complete source shoe, safe white margins.",
+      "version": 2,
+      "mode": "built-in imagegen",
+      "referenced_image_paths": [
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/图片/1212/12.jpg"
+      ]
+    }
+  ],
+  "failed_attempts": [
+    {
+      "role": "M4",
+      "version": 1,
+      "error": "referenced_image_paths must contain at most 5 paths; no image returned",
+      "resolution": "Generate inspected two-photo Black/Brown reference then use five reference files carrying six source photographs"
+    }
+  ]
+}

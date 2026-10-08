@@ -1,0 +1,116 @@
+{
+  "style": "2599-1",
+  "product_id": "1601973741932",
+  "observed_at": "2026-10-08T23:12:35.409730+00:00",
+  "stage": "SOURCE_TRIAGE_ONLY_NOT_FULL_IMAGE_REVIEW",
+  "source": "https://luqi.sooxie.com/detail/2413954",
+  "confirmed_colors": [
+    "Black",
+    "Beige",
+    "White"
+  ],
+  "EU_sizes": [
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48
+  ],
+  "EU_combinations": 30,
+  "formal_evidence": "Cached质量修正_2026-10-09/最新正式回读.json and original upload ledger; not fresh API observation",
+  "current_title": "Mens Wide Toe Box Open Mesh Walking Sneakers Forked Side Panels Lace Up Summer Casual Shoes EU 39-48 Wholesale",
+  "title_review": "Wide-toe category confirmed; actual open square mesh, forked side overlay, ordinary laces and waved low sole distinguish SKU. Existing title includes broad retail-buyer phrase; review full sources before more specific refinement. No verified search-volume claim.",
+  "current_color_photo_bindings": [
+    {
+      "formal_color": "Black",
+      "source_image": 24,
+      "formal_value_id": -200,
+      "binding": "CACHED_FORMAL_GET_MATCHES_ORIGINAL_UPLOAD_LEDGER"
+    },
+    {
+      "formal_color": "Beige",
+      "source_image": 27,
+      "formal_value_id": -201,
+      "binding": "CACHED_FORMAL_GET_MATCHES_ORIGINAL_UPLOAD_LEDGER"
+    },
+    {
+      "formal_color": "White",
+      "source_image": 18,
+      "formal_value_id": -202,
+      "binding": "CACHED_FORMAL_GET_MATCHES_ORIGINAL_UPLOAD_LEDGER"
+    }
+  ],
+  "observed_source_images_full": [
+    1,
+    24,
+    27,
+    18,
+    21,
+    17
+  ],
+  "contact_sheets_reviewed": [
+    0,
+    1
+  ],
+  "confirmed_risk": "Hero01 actual Beige pair includes upside-down laptop/tablet; remove background only. Black is black open mesh/black forked overlay/black sole; Beige cream open mesh/burgundy forked overlay/taupe-brown sole; White white open mesh/black forked overlay/mustard sole. Visible separate tongue pull tab/heel tab, ordinary flat laces. Current White18 is a source collage with two complete upper shoes plus third clipped enlarged foreground shoe; prefer complete actual White21 on-foot pair for selector, no completing cropped18. D2 actual17 whole White side photo available, remove lower Chinese claims and decorative footprint badge. Generic performance/last/medical posters not evidence. Original2-6 recommendations excluded.",
+  "preferred_color_sources": {
+    "Black": 24,
+    "Beige": 27,
+    "White": 21
+  },
+  "proposed_roles": {
+    "M1": {
+      "source": 1,
+      "action": "Exact Beige hero without laptop"
+    },
+    "M2": {
+      "source": 10,
+      "action": "Actual Beige side pair, inspect full"
+    },
+    "M3": {
+      "source": 22,
+      "action": "Actual Black heel-handling pair, inspect full"
+    },
+    "M4": {
+      "source": [
+        24,
+        27,
+        21
+      ],
+      "action": "Three cleaned actual-color tiles and EU39-48"
+    },
+    "M5": {
+      "source": 20,
+      "action": "Actual White standing pair and quotation inputs, inspect full"
+    },
+    "D1": {
+      "source": 12,
+      "action": "Independent White hand-pose overview, remove Chinese header and inspect full"
+    },
+    "D2": {
+      "source": 17,
+      "action": "Single complete actual White side/open-mesh/forked overlay photo, remove Chinese marketing and footprint decoration"
+    },
+    "D3": {
+      "source": 23,
+      "action": "Actual Black side pair, inspect full"
+    },
+    "D4": {
+      "source": 26,
+      "action": "Actual Beige raised-heel sample terms, inspect full"
+    }
+  },
+  "next_steps": [
+    "Inspect full10/22/20/12/23/26 before editing.",
+    "Create12 role-specific assets and inspect each full, source comparison and whole set; title refinement only actual visual evidence.",
+    "Fresh current Schema three Color IDs and30EU rows; precise img plus gallery/detail and optional independently reviewed title only, no sku field.",
+    "Controlled upload, single original-ID update, exact formal get/Schema, preserve company M6 context."
+  ],
+  "mutations_this_plan": "NONE: no2599-1 generation/upload/update this phase",
+  "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+}
