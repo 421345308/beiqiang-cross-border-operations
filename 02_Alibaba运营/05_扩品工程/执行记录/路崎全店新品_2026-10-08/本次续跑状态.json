@@ -16,7 +16,9 @@
   },
   "candidate_preparation": {
     "2639": "11 product images locally reviewed and official photobank uploads accepted; task pack saved; no product ID, formal SKU binding or public QA",
-    "056": "12 product images locally reviewed and official photobank uploads accepted; task pack saved; no product ID, formal SKU binding or public QA"
+    "056": "12 product images locally reviewed and official photobank uploads accepted; task pack saved; no product ID, formal SKU binding or public QA",
+    "2659": "12 final images compared to source and official photobank accepted; first M4 crop rejected/revised. 384 hero triage and exact model/source register checked. No product ID or formal binding/public QA.",
+    "2660": "Prior writer found stopped; original outsole partial brand mark reconfirmed with same SHA256. This style alone requires actual brand/sales-route evidence; do not erase mark or carry hold to other styles."
   },
   "browser": {
     "normal_reconnection_attempted_in_this_continuation": true,
@@ -34,11 +36,11 @@
   "remaining": [
     "EU/code-system evidence for the remaining nine candidate styles; pending question not repeated",
     "Candidate-specific source/structure/intent differentiation contract before any new listing",
-    "2660 prior-owner reconciliation and actual material/lining version dimension",
+    "2660 actual partial outsole brand mark/sales-route evidence and material/lining version dimension; prior writer stopped, reconciliation complete",
     "Candidate-specific material/IP and applicable unknown-value validation; do not inherit obsolete blanket holds",
     "Normal public color QA and exact-ID current keyword field evidence",
     "Remaining candidate publishing, formal readback, review, real score and applicable public QA"
   ],
-  "updated_at": "2026-10-08T03:46:43.667467+00:00",
-  "photobank_accepted_count": 23
+  "updated_at": "2026-10-08T04:23:59.840391+00:00",
+  "photobank_accepted_count": 35
 }

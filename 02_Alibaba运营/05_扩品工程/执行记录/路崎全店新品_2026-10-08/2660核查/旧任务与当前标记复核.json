@@ -1,0 +1,38 @@
+{
+  "observed_at": "2026-10-08T04:04:23.913165+00:00",
+  "source_model": "2660",
+  "source_url": "https://luqi.sooxie.com/detail/2558276",
+  "old_owner_reference": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-8\\next_candidate_review\\2660_visual_review.json",
+  "old_owner_reference_sha256": "987e2bd34b4b63356f3f2d228d1096f9e018a6382a4f60d3a6d7094b5cd99d81",
+  "old_review": {
+    "source_id": "2558276",
+    "source_url": "https://luqi.sooxie.com/detail/2558276",
+    "model": "2660",
+    "decision": "HOLD_IP",
+    "evidence": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-8\\2660\\originals\\13.jpg",
+    "evidence_sha256": "bfde6f89970669ce73249f8813c62e24685f5d3e57c17f91a22fd338f0bc6190",
+    "finding": "Actual outsole macro inset at right edge has embossed framed lettering with readable Vibr prefix; remaining letters are clipped by source image. Vibram-like third-party outsole mark; complete word and authenticity not confirmed. Cannot certify unbranded or hide by selecting side photographs.",
+    "image12": "12.jpg does not show readable brand, but includes transparent foot graphic and Chinese function claims; does not resolve image13.",
+    "dedup": "Prior exact source ID/model search found no current catalog or historical source mapping match; this does not override visual IP hold.",
+    "platform_actions": false,
+    "minimum_to_clear": "Full actual outsole marking and verifiable branding authenticity/authorization evidence; no guessed unmarked supply."
+  },
+  "old_owner_thread": {
+    "id": "01a0fc6f-eae1-71a8-bf0e-14f51e100025",
+    "title": "完成 5998 新品发布",
+    "status": "idle",
+    "last_final": "Completely stopped; no live or unknown writes. This read does not resume the other task."
+  },
+  "current_original_image": "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎全店新品_2026-10-08\\候选原图\\2660\\13.jpg",
+  "current_original_sha256": "bfde6f89970669ce73249f8813c62e24685f5d3e57c17f91a22fd338f0bc6190",
+  "same_bytes_as_old_brand_evidence": true,
+  "current_visual_observation": "Current image 13 viewed full size: partial framed embossed lettering at right edge, starting Vibr-like; full spelling and authenticity unconfirmed. Preserve mark; no erasure or angle selection to pretend unbranded.",
+  "version_observation": "Source options black mesh / black skin-like upper / black skin-like upper plus fleece refer to upper/lining versions, not three different Black colors. Raw size labels39-48; EU unconfirmed.",
+  "source_register_matches": [],
+  "catalog_model_matches": [],
+  "ownership_conclusion": "No currently running writer established; historical queue exclusion alone is not a live reservation. No product creation/unknown write shown in the exact old review or inspected current mapping.",
+  "current_route": "HOLD_BRAND_ROUTE_FOR_THIS_STYLE_ONLY",
+  "next_action": "Obtain complete actual outsole marking and verifiable legitimate sales/supply route evidence before preparing a publishable version; no supplier message sent.",
+  "platform_writes": false,
+  "does_not_block_other_styles": true
+}
