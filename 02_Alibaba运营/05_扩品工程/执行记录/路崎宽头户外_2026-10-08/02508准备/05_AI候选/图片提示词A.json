@@ -1,0 +1,34 @@
+{
+  "tool": "built-in image_gen",
+  "jobs": [
+    {
+      "key": "M4",
+      "refs": [
+        "22.jpg",
+        "18.jpg"
+      ],
+      "prompt": "Use-case: exact footwear catalog text/layout edit. Produce ONE square English B2B footwear image with restrained charcoal sans-serif typography and white clean margins. Use attached real shoe photographs literally; preserve the exact shoe proportions, toe outline, seven metal eyelets per side, lace path, stitched panel layout, textured surface appearance, narrow colored side strip, navy lining and white/navy segmented outsole. No side zipper (this exact style has none). No new texture, magnified macro circle, new viewpoint, extra shoe, swatch, made-up logo, ingredient, performance, leather composition, waterproof, stock, test, certification, price or US-size conversion claim. Never crop a shoe boundary. Complete real shoe photo dominates. Color/size choice card. Two balanced large photo panels on white, each contains the WHOLE source photo at original aspect ratio: first exact dark upper with blue lining pair labelled 'Blue'; second exact brown single shoe labelled 'Brown'. Do not recolor dark upper to bright blue. Header 'COLOR & EU SIZE OPTIONS'. Under panels 'EU 39–48'. Footer 'Confirm color-size mix before ordering'. Colors are source SKU names, not invented new variants. No extra colors."
+    },
+    {
+      "key": "M5",
+      "refs": [
+        "18.jpg"
+      ],
+      "prompt": "Use-case: exact footwear catalog text/layout edit. Produce ONE square English B2B footwear image with restrained charcoal sans-serif typography and white clean margins. Use attached real shoe photographs literally; preserve the exact shoe proportions, toe outline, seven metal eyelets per side, lace path, stitched panel layout, textured surface appearance, narrow colored side strip, navy lining and white/navy segmented outsole. No side zipper (this exact style has none). No new texture, magnified macro circle, new viewpoint, extra shoe, swatch, made-up logo, ingredient, performance, leather composition, waterproof, stock, test, certification, price or US-size conversion claim. Never crop a shoe boundary. Complete real shoe photo dominates. Quotation-input panel. Use one exact complete Brown shoe source photo in a large square inset on left, no product redrawing. Right text: 'FOOTWEAR ENQUIRY', 'Color + EU size mix', 'Pair quantity', 'Packaging requirements', 'Destination'. Small footer 'Order terms confirmed for your requirements'. Do not add boxes, manufactured packaging, labels or capability claims."
+    },
+    {
+      "key": "D1",
+      "refs": [
+        "20.jpg"
+      ],
+      "prompt": "Use-case: exact footwear catalog text/layout edit. Produce ONE square English B2B footwear image with restrained charcoal sans-serif typography and white clean margins. Use attached real shoe photographs literally; preserve the exact shoe proportions, toe outline, seven metal eyelets per side, lace path, stitched panel layout, textured surface appearance, narrow colored side strip, navy lining and white/navy segmented outsole. No side zipper (this exact style has none). No new texture, magnified macro circle, new viewpoint, extra shoe, swatch, made-up logo, ingredient, performance, leather composition, waterproof, stock, test, certification, price or US-size conversion claim. Never crop a shoe boundary. Complete real shoe photo dominates. Product overview detail. Keep the WHOLE source Brown pair photo intact in one large square photo inset. Header 'LACE-UP CASUAL WALKING SHOES'. Short footer text in two rows: 'Low-top profile | Metal eyelets | Panelled upper' and 'Blue / Brown | EU 39–48'. No magnified calls, no added panels or false measured comfort promises."
+    },
+    {
+      "key": "D2",
+      "refs": [
+        "16.jpg"
+      ],
+      "prompt": "Use-case: exact footwear catalog text/layout edit. Produce ONE square English B2B footwear image with restrained charcoal sans-serif typography and white clean margins. Use attached real shoe photographs literally; preserve the exact shoe proportions, toe outline, seven metal eyelets per side, lace path, stitched panel layout, textured surface appearance, narrow colored side strip, navy lining and white/navy segmented outsole. No side zipper (this exact style has none). No new texture, magnified macro circle, new viewpoint, extra shoe, swatch, made-up logo, ingredient, performance, leather composition, waterproof, stock, test, certification, price or US-size conversion claim. Never crop a shoe boundary. Complete real shoe photo dominates. Construction detail card. Keep the WHOLE attached on-foot Brown shoe photograph intact as a centered square photo inset, source fingers and ankle can remain; complete source shoe is essential. Header 'LACES, EYELETS & STITCHED PANELS'. One footer 'Actual construction view | Confirm specifications for your order'. Do not zoom a part, draw duplicate parts or claim genuine leather."
+    }
+  ]
+}

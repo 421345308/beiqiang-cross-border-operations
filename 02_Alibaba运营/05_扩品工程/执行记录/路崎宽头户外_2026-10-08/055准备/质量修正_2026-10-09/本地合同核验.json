@@ -1,0 +1,47 @@
+{
+  "keyword_input": null,
+  "differentiation_review": null,
+  "category_id": 201334413,
+  "operation": "update",
+  "inventory_input": null,
+  "model_serialization": null,
+  "target_product_id": "1601973841032",
+  "field_ids": [
+    "productTitle"
+  ],
+  "dependency_ids": [],
+  "xml": "<itemSchema><field id=\"productTitle\" name=\"Product name\" type=\"input\"><value>Unisex Wide Toe Box Open Mesh Walking Shoes Wave Panel Lace Up Summer Casual Sneakers EU 36-48 Wholesale</value></field></itemSchema>",
+  "expected_fields": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Unisex Wide Toe Box Open Mesh Walking Shoes Wave Panel Lace Up Summer Casual Sneakers EU 36-48 Wholesale",
+          []
+        ]
+      ]
+    ]
+  },
+  "prepared_from_current_schema": true,
+  "task_pack": null,
+  "replacement_plan": null,
+  "schema_provenance": {
+    "schema_request_id": "0bbb637a17914770770797056",
+    "schema_acquired_at": "2026-10-08T16:31:17.347457+00:00",
+    "current_schema_sha256": "c7115871c07463e3ddf4f341c6b5c190e182098cc6615f829b9b6df24faca096",
+    "source_evidence": [
+      "../经营任务包.md",
+      "../../质量复核_2026-10-09/标题修正计划.json",
+      "../../负责人分类事实确认.json"
+    ]
+  }
+}

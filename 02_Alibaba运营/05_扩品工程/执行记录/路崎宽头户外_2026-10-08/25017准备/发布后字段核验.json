@@ -7,8 +7,8 @@
   "sku_count": 18,
   "EU_labels_match": true,
   "title_match": true,
-  "observed_at": "2026-10-08T13:22:07.211214+00:00",
-  "score": "3.90",
+  "observed_at": "2026-10-08T16:16:47.261935+00:00",
+  "score": "5.00",
   "Chrome_readback": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
   "incremental_update_evidence": [
     "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\25017准备\\内里属性修正\\正式更新回执.json"
@@ -737,11 +737,9 @@
       "limits": "Formal API row/ID binding only; first read establishes IDs, not prior history, physical stock or image pixel truth."
     }
   },
-  "score_source": "alibaba.icbu.product.score.get / 213f5a2117914657556843963",
+  "score_source": "alibaba.icbu.product.score.get / 213c932b17914762354236518",
   "score_diagnostics": {
-    "flags": {
-      "imageText": true
-    },
+    "flags": {},
     "deductions": {},
     "checks_not_run": [
       "sku_image",

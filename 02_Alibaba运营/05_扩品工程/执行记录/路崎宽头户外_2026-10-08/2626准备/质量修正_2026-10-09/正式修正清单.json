@@ -1,0 +1,20 @@
+{
+  "operation": "update",
+  "product_id": "1601973769589",
+  "category_id": 201334413,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "../经营任务包.md",
+    "../../质量复核_2026-10-09/标题修正计划.json",
+    "../../负责人分类事实确认.json"
+  ],
+  "current_schema": "当前Schema.xml",
+  "current_schema_sha256": "3a493d1d704d9faf79808658922f2903909733ca0efaa1edf67992288714283e",
+  "schema_request_id": "0b0b3a2717914771012526855",
+  "schema_acquired_at": "2026-10-08T16:31:41.497069+00:00",
+  "payload_xml": "最小修正载荷.xml",
+  "field_ids": [
+    "productTitle"
+  ],
+  "dependency_ids": []
+}

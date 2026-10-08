@@ -7,8 +7,8 @@
   "sku_count": 30,
   "EU_labels_match": true,
   "title_match": true,
-  "observed_at": "2026-10-08T13:22:35.979968+00:00",
-  "score": null,
+  "observed_at": "2026-10-08T13:31:22.821452+00:00",
+  "score": "5.00",
   "Chrome_readback": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
   "main_order_match": true,
   "unmatched_fields": [],
@@ -1166,5 +1166,15 @@
       "limits": "Formal API row/ID binding only; first read establishes IDs, not prior history, physical stock or image pixel truth."
     }
   },
-  "score_source": "alibaba.icbu.product.score.get / None"
+  "score_source": "alibaba.icbu.product.score.get / 0bab02fc17914663084825389",
+  "score_diagnostics": {
+    "flags": {},
+    "deductions": {},
+    "checks_not_run": [
+      "sku_image",
+      "sku_text",
+      "imageSubTitle",
+      "selling_point_attribute_conflict"
+    ]
+  }
 }

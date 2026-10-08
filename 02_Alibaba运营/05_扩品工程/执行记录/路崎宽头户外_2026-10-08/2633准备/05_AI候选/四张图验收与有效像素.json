@@ -1,0 +1,103 @@
+{
+  "observed_at": "2026-10-08T16:43:00.878527+00:00",
+  "images": [
+    {
+      "role": "M1",
+      "source_paths": [
+        "../../图片/2633/01.jpg"
+      ],
+      "source_full_dimensions": [
+        800,
+        800
+      ],
+      "original_front_shoe_effective_pixels_approx": [
+        430,
+        630
+      ],
+      "candidate_path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2633准备\\05_AI候选\\2633-hero-v1.png",
+      "candidate_dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "2ddd8922fdc7fbfa617355ee08f2824cf9bafeca79ec0daaa66ac5f0f31ea414",
+      "url": "https://sc04.alicdn.com/kf/H90a478fb114e494a9e5026b4a81b0822L/286385890/H90a478fb114e494a9e5026b4a81b0822L.png",
+      "file_id": "33761137224",
+      "role_check": "VISUALLY_ACCEPTED",
+      "limits": "AI enlargement creates no new physical or microstructure evidence; only source-visible construction is described."
+    },
+    {
+      "role": "M2",
+      "source_paths": [
+        "../../图片/2633/01.jpg"
+      ],
+      "source_full_dimensions": [
+        800,
+        800
+      ],
+      "original_front_shoe_effective_pixels_approx": [
+        430,
+        630
+      ],
+      "candidate_path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2633准备\\05_AI候选\\2633-structure-v1.png",
+      "candidate_dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "9a003c223360a2bbc1c1ab38c87dc8aed134abffa37d16efbcc13796414063d1",
+      "url": "https://sc04.alicdn.com/kf/H4a188eb4e29e4b4c8a718d13e64836a3A/286385890/H4a188eb4e29e4b4c8a718d13e64836a3A.png",
+      "file_id": "33761125241",
+      "role_check": "VISUALLY_ACCEPTED",
+      "limits": "AI enlargement creates no new physical or microstructure evidence; only source-visible construction is described."
+    },
+    {
+      "role": "M4",
+      "source_paths": [
+        "../../图片/2633/01.jpg",
+        "../../图片/2633/13.jpg",
+        "../../图片/2633/32.jpg"
+      ],
+      "source_full_dimensions": [
+        800,
+        800
+      ],
+      "original_front_shoe_effective_pixels_approx": null,
+      "candidate_path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2633准备\\05_AI候选\\2633-options-v2.png",
+      "candidate_dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "bdb7a30e05232571992963a6a1eb9a959ea87bf1cc7e970778778c263f26489e",
+      "url": "https://sc04.alicdn.com/kf/H72bc5a968e634ea69438afbb150cb484I/286385890/H72bc5a968e634ea69438afbb150cb484I.png",
+      "file_id": "33761101363",
+      "role_check": "VISUALLY_ACCEPTED",
+      "limits": "AI enlargement creates no new physical or microstructure evidence; only source-visible construction is described."
+    },
+    {
+      "role": "M5",
+      "source_paths": [
+        "../../图片/2633/01.jpg"
+      ],
+      "source_full_dimensions": [
+        800,
+        800
+      ],
+      "original_front_shoe_effective_pixels_approx": [
+        430,
+        630
+      ],
+      "candidate_path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2633准备\\05_AI候选\\2633-enquiry-v1.png",
+      "candidate_dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "e6fc80e99bdd1c2dac8aedd54795a90a721ca77afa6fa5351365eedc30de3168",
+      "url": "https://sc04.alicdn.com/kf/H0fa0ab1e675c49bf8f49734654d1294dm/286385890/H0fa0ab1e675c49bf8f49734654d1294dm.png",
+      "file_id": "33762589755",
+      "role_check": "VISUALLY_ACCEPTED",
+      "limits": "AI enlargement creates no new physical or microstructure evidence; only source-visible construction is described."
+    }
+  ],
+  "comparison": "2633-before-after-review.jpg",
+  "review": "编辑约束与提示词.json",
+  "main_detail_exact_duplicate": "New images are distinct SHA256 from retained four raw detail photos; different information role does not create a new product."
+}

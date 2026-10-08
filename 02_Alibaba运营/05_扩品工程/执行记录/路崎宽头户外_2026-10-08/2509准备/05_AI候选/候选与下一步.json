@@ -1,0 +1,50 @@
+{
+  "tool": "built-in image_gen",
+  "requests": [
+    {
+      "key": "luqi2509_options",
+      "prompt": "Use case: compositing. Asset type: square Alibaba gallery selection panel for Luqi 2509 rotary-dial outdoor shoes. Input 1 is the exact Grey pair photo. Input 2 is the exact source-labeled Dark Brown pair photo. Use both entire square photographs UN-CROPPED in two large equal square panels on a clean white layout; retain their photographed views and all shoe edges, without reconstructing any shoe surface. Preserve the dial artwork, three fabric loops, side mesh windows, toe overlay, segmented midsole, tread edges and real source colors exactly. Header exactly \"COLOR & EU SIZE OPTIONS\". Labels exactly \"Grey\" under input 1 and \"Dark Brown\" under input 2. Lower line exactly \"EU 39-48\". Small footer exactly \"Confirm your color-size mix before ordering\". Large product-led layout, restrained charcoal typography, no extra colors, no US or foot-length conversions, no price, stock, waterproof or slip claims, no certificates, no logos added or removed. This layout communicates two real choices, not measured performance.",
+      "paths": [
+        "23",
+        "19"
+      ]
+    },
+    {
+      "key": "luqi2509_enquiry",
+      "prompt": "Use case: compositing. Asset type: square Alibaba B2B enquiry-input gallery for Luqi 2509. Input 1 is the exact photographed Dark Brown rotary-dial shoe pair. Preserve the ENTIRE actual pair photograph, shoe colors, dial artwork, fabric loops, mesh panels, toe overlays and tread edges as photographed. Place this photograph prominently on the left in a balanced clean white layout; no new views or recoloring. On the right header exactly \"OUTDOOR FOOTWEAR ENQUIRY\"; lines exactly \"Color + EU size mix\", \"Pair quantity\", \"Packaging requirements\", \"Destination\". Footer exactly \"Order terms confirmed for your requirements\". Use readable charcoal typography, product remains prominent. No text-only cards, prices, certification/quality badges, delivery guarantees, waterproofness, medical or professional mountaineering claims. Do not erase or invent any physical mark on the dial or shoe.",
+      "paths": [
+        "19"
+      ]
+    }
+  ],
+  "source_role_map": {
+    "Grey": "../../图片/2509/23.jpg",
+    "DarkBrown": "../../图片/2509/19.jpg"
+  },
+  "confirmed_EU": "39-48",
+  "candidates": [
+    {
+      "role": "M4",
+      "file": "2509-options-v1.png",
+      "decision": "ACCEPT_CANDIDATE_PENDING_COMPLETE_SET_REVIEW",
+      "notes": "Two correct source-labeled colors, original complete pair views, dial/loop/panel/sole identity visually consistent; no extra size conversion."
+    },
+    {
+      "role": "M5",
+      "file": "2509-enquiry-v1.png",
+      "decision": "ACCEPT_CANDIDATE_PENDING_COMPLETE_SET_REVIEW",
+      "notes": "Exact DarkBrown pair supports buyer quotation inputs. Icons represent inquiry inputs, not included packing or certifications."
+    }
+  ],
+  "main_plan": {
+    "M1": "Original Grey pair #1, assess full size before final acceptance",
+    "M2": "Original DarkBrown side view #18, construction role",
+    "M3": "Original real outsole on-foot #14, visible tread geometry only",
+    "M4": "New real color + EU options",
+    "M5": "New enquiry inputs",
+    "M6": "Existing verified company factory background"
+  },
+  "detail_plan": "Current D2 #14 would overlap new M3; rebuild independent product-specific English detail modules before publication.",
+  "status": "REWORK_PENDING_NO_CREATE_NO_IMAGE_UPLOAD",
+  "next_action": "Prepare four independent English detail modules; inspect full main/detail/SKU group; then current-schema build and one formal create."
+}

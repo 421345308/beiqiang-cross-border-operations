@@ -1,0 +1,42 @@
+{
+  "observed_at": "2026-10-08T18:23:47.321448+00:00",
+  "source_urls": 107,
+  "created_products": 28,
+  "formal_EU_combinations": 900,
+  "approved_before_quality_revision": 26,
+  "actual_score_5_before_quality_revision": 26,
+  "scope_status": "ACTIVE_NOT_COMPLETE",
+  "quality_revision_status": "26 original-ID title revisions PASS; remaining image sets reviewed and corrected individually. Later image updates may re-enter platform review.",
+  "title_plan_count": 26,
+  "new_candidates_awaiting_quality": 1,
+  "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+  "prohibited_completion_shortcuts": [
+    "Do not count uploaded images as applied images",
+    "Do not count API 5.00 as visual or business conversion proof",
+    "Do not count source URLs as distinct publishable styles",
+    "Do not replay existing or outcome-unknown creates"
+  ],
+  "next_work": "Read058 submitted image correction; improve055 and remaining original-ID image sets, then continue full107 quality-gated new listings.02507/02508 have approved full readbacks. Hiking2509/02505 remain local business-category holds.",
+  "revision_readbacks": 26,
+  "revision_scope_pass": 26,
+  "revision_pending_review": 0,
+  "revision_not_yet_read": 0,
+  "title_revision_scope_pass": 26,
+  "new_product_status": {
+    "02507": {
+      "product_id": "1601973978339",
+      "status": "approved",
+      "display": "Y",
+      "sku_count": 20,
+      "score": "5.00"
+    },
+    "02508": {
+      "product_id": "1601973995230",
+      "status": "approved",
+      "display": "Y",
+      "sku_count": 20,
+      "score": "5.00"
+    }
+  },
+  "current_approved_displayed": 27
+}

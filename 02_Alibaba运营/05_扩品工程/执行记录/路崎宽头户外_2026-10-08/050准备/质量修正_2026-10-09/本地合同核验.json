@@ -1,0 +1,47 @@
+{
+  "keyword_input": null,
+  "differentiation_review": null,
+  "category_id": 201334413,
+  "operation": "update",
+  "inventory_input": null,
+  "model_serialization": null,
+  "target_product_id": "1601973794508",
+  "field_ids": [
+    "productTitle"
+  ],
+  "dependency_ids": [],
+  "xml": "<itemSchema><field id=\"productTitle\" name=\"Product name\" type=\"input\"><value>Unisex Wide Toe Box Mesh Walking Sneakers Angular Layered Side Panels Lace Up Casual Shoes EU 36-48 Wholesale</value></field></itemSchema>",
+  "expected_fields": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Unisex Wide Toe Box Mesh Walking Sneakers Angular Layered Side Panels Lace Up Casual Shoes EU 36-48 Wholesale",
+          []
+        ]
+      ]
+    ]
+  },
+  "prepared_from_current_schema": true,
+  "task_pack": null,
+  "replacement_plan": null,
+  "schema_provenance": {
+    "schema_request_id": "213c933517914772467124909",
+    "schema_acquired_at": "2026-10-08T16:34:06.590286+00:00",
+    "current_schema_sha256": "c23ab36fe4f56c5a6595b5056aa35c6b472f68bc6345d6a38e9c47bd081b20da",
+    "source_evidence": [
+      "../经营任务包.md",
+      "../../质量复核_2026-10-09/标题修正计划.json",
+      "../../负责人分类事实确认.json"
+    ]
+  }
+}
