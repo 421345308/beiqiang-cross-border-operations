@@ -1,0 +1,42 @@
+{
+  "operation": "create",
+  "category_id": 201334413,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2596准备\\经营任务包.md",
+    "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2596准备\\图片本地验收.json",
+    "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\负责人分类事实确认.json"
+  ],
+  "current_schema": "../当前类目.xml",
+  "current_schema_sha256": "cb3be59dc64d9f4449a17a1bf77eb0f562cc0270c1f85786e7601f7a6d150f1e",
+  "schema_request_id": "213c932b17914612382936300",
+  "schema_acquired_at": "2026-10-08T12:07:19.900162+00:00",
+  "payload_xml": "完整提交.xml",
+  "field_ids": [
+    "icbuCatProp",
+    "productTitle",
+    "textDesc",
+    "companyDesc",
+    "scImages",
+    "detailImage",
+    "companyImage",
+    "companyFaqDesc",
+    "catId",
+    "minOrderQuantity",
+    "pkgWeight",
+    "productDescType",
+    "priceUnit",
+    "saleType",
+    "scPrice",
+    "logisticsProperty",
+    "pkgMeasure",
+    "shippingTemplate",
+    "ladderPrice",
+    "saleProp",
+    "sku"
+  ],
+  "dependency_ids": [],
+  "expected_model": "BQ-LQ2596",
+  "differentiation_review": "发布前差异化审查.json",
+  "differentiation_review_sha256": "d71babb34dce9976d22d117da5081a24118e83d34f781c5138b917b11046219f"
+}

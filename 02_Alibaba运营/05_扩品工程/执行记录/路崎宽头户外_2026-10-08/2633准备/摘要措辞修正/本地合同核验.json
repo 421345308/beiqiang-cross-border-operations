@@ -1,0 +1,46 @@
+{
+  "keyword_input": null,
+  "differentiation_review": null,
+  "category_id": 201334413,
+  "operation": "update",
+  "inventory_input": null,
+  "model_serialization": null,
+  "target_product_id": "1601973753470",
+  "field_ids": [
+    "textDesc"
+  ],
+  "dependency_ids": [],
+  "xml": "<itemSchema><field id=\"textDesc\" name=\"Product Highlights\" type=\"input\"><value>Wide toe box lace-up mesh walking shoes for summer casual footwear assortments. Black, LightGrey, OffWhite colors; EU 39-48 sizes. Open mesh low-cut lace-up upper with separate thin curved side cords, toe cap and segmented scalloped sole; three colors. Share your size mix, quantities, packaging needs and destination for a wholesale quotation. Final specifications and availability are confirmed before ordering.</value></field></itemSchema>",
+  "expected_fields": {
+    "textDesc": [
+      "field",
+      [
+        [
+          "id",
+          "textDesc"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Wide toe box lace-up mesh walking shoes for summer casual footwear assortments. Black, LightGrey, OffWhite colors; EU 39-48 sizes. Open mesh low-cut lace-up upper with separate thin curved side cords, toe cap and segmented scalloped sole; three colors. Share your size mix, quantities, packaging needs and destination for a wholesale quotation. Final specifications and availability are confirmed before ordering.",
+          []
+        ]
+      ]
+    ]
+  },
+  "prepared_from_current_schema": true,
+  "task_pack": null,
+  "replacement_plan": null,
+  "schema_provenance": {
+    "schema_request_id": "212cbf3217914638887606233",
+    "schema_acquired_at": "2026-10-08T12:51:32.103119+00:00",
+    "current_schema_sha256": "7bf25eae118d10208e09933eceef1140898eaa9fba8e5345241cad79fb27b743",
+    "source_evidence": [
+      "../经营任务包.md",
+      "../../负责人分类事实确认.json"
+    ]
+  }
+}
