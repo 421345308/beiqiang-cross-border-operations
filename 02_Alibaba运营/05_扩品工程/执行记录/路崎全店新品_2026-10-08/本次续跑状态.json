@@ -40,18 +40,31 @@
   },
   "remaining": [
     "EU/code-system evidence for the remaining nine candidate styles; pending question not repeated",
-    "Candidate-specific source/structure/intent differentiation contract before any new listing",
+    "Revalidate actual payload model/title/hero binding against saved differentiation context and current evidence hashes before any create; five contexts prepared; other candidates not yet prepared",
     "2660 actual partial outsole brand mark/sales-route evidence and material/lining version dimension; prior writer stopped, reconciliation complete",
     "Candidate-specific material/IP and applicable unknown-value validation; do not inherit obsolete blanket holds",
     "Normal public color QA and exact-ID current keyword field evidence",
     "Remaining candidate publishing, formal readback, review, real score and applicable public QA"
   ],
-  "updated_at": "2026-10-08T05:13:47.231797+00:00",
+  "updated_at": "2026-10-08T05:29:41.664008+00:00",
   "photobank_accepted_count": 59,
   "current_schema_read": {
     "category_id": 201334413,
     "request_id": "213f5a2117914340099897128",
     "observed_at": "2026-10-08T04:33:31.591368+00:00",
     "result": "Custom negative inputValue material rule present; platform complete payload validation not yet performed"
+  },
+  "local_differentiation": {
+    "styles": [
+      "2639",
+      "056",
+      "2659",
+      "2620",
+      "2590"
+    ],
+    "status": "PASS_SCOPED_LOCAL_ONLY",
+    "catalog_records": 384,
+    "unassociated_catalog_ids": 345,
+    "limits": "Exact source/model/hero conflicts absent in supplied local evidence; not all-gallery or public QA/global clearance. Actual submission must bind unchanged model/title/hero and current evidence hashes. No create performed."
   }
 }
