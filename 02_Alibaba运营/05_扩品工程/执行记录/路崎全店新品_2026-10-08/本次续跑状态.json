@@ -24,15 +24,15 @@
     "luqi_latest_quality_score": "5.00 each of four"
   },
   "candidate_preparation": {
-    "2639": "11 product images locally reviewed and official photobank uploads accepted; task pack saved; no product ID, formal SKU binding or public QA",
-    "056": "12 product images locally reviewed and official photobank uploads accepted; task pack saved; no product ID, formal SKU binding or public QA",
-    "2659": "12 final images compared to source and official photobank accepted; first M4 crop rejected/revised. 384 hero triage and exact model/source register checked. No product ID or formal binding/public QA.",
+    "2639": "Formal 1601973586995 / new/N; 20 EU SKUs and all checked images/copy/prices match. Packaging PENDING_EDITABLE_SCHEMA_UNAVAILABLE; actual score/public/keyword acceptance pending.",
+    "056": "Formal 1601973675393 / approved/Y; 39 EU SKUs and all checked images/copy/prices match. Packaging PASS; actual score/public/keyword acceptance pending.",
+    "2659": "Formal 1601973622603 / approved/Y; 30 EU SKUs and all checked images/copy/prices match. Packaging PASS; actual score/public/keyword acceptance pending.",
     "2660": "Prior writer found stopped; original outsole partial brand mark reconfirmed with same SHA256. This style alone requires actual brand/sales-route evidence; do not erase mark or carry hold to other styles.",
-    "2620": "22 original images preserved unchanged; source material/unknown segment fields reviewed against fresh current schema; 12 product images locally reviewed and official photobank accepted. No product ID or formal SKU binding/public QA.",
-    "2590": "12 final images individually compared to original source photographs; all 12 official photobank uploads accepted with exclusive ledgers and request IDs. Three color assets ready; no product ID, formal SKU binding or public QA.",
-    "2658": "All nine available original photos inspected; 11 final images locally reviewed, M5 first crop rejected and revised to full-body original context, all 11 official photobank accepted. Source material conflict retained, no pig-leather/EVA/width claims. Exact source/model and scoped 384 first-hero comparisons saved. No product ID, formal color binding, public QA. Existing local differentiation loader/contract PASS on saved evidence only; 345 unassociated source IDs retained, no global clearance inferred.",
-    "2652": "All 11 final product images individually compared with original source photos, accepted by official photobank with request IDs and exclusive ledgers, two single-color images ready. Main/detail originals disjoint. No source outsole reconstruction, material/performance invention or physical marking removal. Scoped source/model/hero check saved; no new product ID, formal SKU binding or public QA.",
-    "2651": "12 final images individually compared with source originals and accepted by official photobank, three single-color assets included. Main/detail raw photographs disjoint. D2 actual folded shoe and limited tread preserved. Scoped source/model/selected-hero differentiation documented; no product ID, formal color binding, public QA. Existing local differentiation loader/contract PASS on saved evidence only; 345 unassociated source IDs retained, no global clearance inferred."
+    "2620": "Formal 1601973661443 / approved/Y; 30 EU SKUs and all checked images/copy/prices match. Packaging PASS; actual score/public/keyword acceptance pending.",
+    "2590": "Formal 1601973702206 / approved/Y; 30 EU SKUs and all checked images/copy/prices match. Packaging PASS; actual score/public/keyword acceptance pending.",
+    "2658": "Formal 1601973663435 / approved/Y; 20 EU SKUs and all checked images/copy/prices match. Packaging PASS; actual score/public/keyword acceptance pending.",
+    "2652": "Formal 1601973617634 / approved/Y; 26 EU SKUs and all checked images/copy/prices match. Packaging PASS; actual score/public/keyword acceptance pending.",
+    "2651": "Formal 1601973652504 / approved/Y; 39 EU SKUs and all checked images/copy/prices match. Packaging PASS; actual score/public/keyword acceptance pending."
   },
   "browser": {
     "normal_reconnection_attempted_in_this_continuation": true,
@@ -50,14 +50,12 @@
     "api_work_independent": true
   },
   "remaining": [
-    "Actual manufacturing origin for eight candidates: fresh public source pages have no explicit origin, question pending; supplier address not substituted.",
-    "Eight full-content/trade fragments prepared, but actual origin p-1 and SKU完整绑定仍待完成; unconditional top-level fields covered only, not full current-Schema/platform acceptance. Rebind current evidence before create.",
-    "2660 actual partial outsole brand mark/sales-route evidence and material/lining version dimension; prior writer stopped, reconciliation complete",
-    "Candidate-specific material/IP and applicable unknown-value validation; do not inherit obsolete blanket holds",
-    "Normal public color QA and exact-ID current keyword field evidence",
-    "Remaining candidate publishing, formal readback, review, real score and applicable public QA"
+    "2639审核/展示及包装Schema回读",
+    "8款真实评分与诊断",
+    "12款适用公开页颜色交互和关键词迁移终验",
+    "2660实鞋标记/销售路径证据与版本维度问题"
   ],
-  "updated_at": "2026-10-08T09:17:25.080857+00:00",
+  "updated_at": "2026-10-08T09:53:03.545400+00:00",
   "photobank_accepted_count": 93,
   "current_schema_read": {
     "category_id": 201334413,
@@ -136,5 +134,13 @@
     "styles": 8,
     "local_color_size_rows": 234,
     "formal_SKUs_created": false
+  },
+  "new_formal_submissions": {
+    "product_count": 8,
+    "EU_SKU_count": 234,
+    "receipt": "八款正式创建与字段回读汇总.json",
+    "approved_Y_count": 7,
+    "packaging_PASS_count": 7,
+    "actual_score_known_count": 0
   }
 }

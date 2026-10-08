@@ -1,0 +1,177 @@
+{
+  "style": "2651",
+  "product_id": "1601973652504",
+  "url": "https://www.alibaba.com/product-detail/Wholesale-Unisex-Retro-Casual-Sneakers-Low_1601973652504.html",
+  "observed_at": "2026-10-08T09:40:48.798404+00:00",
+  "request_id": "213e759c17914524481167130",
+  "status": "approved",
+  "display": "Y",
+  "title": "Wholesale Unisex Retro Casual Sneakers Low Top Lace Up Walking Shoes with T Toe Overlays and Two Panel Side Details",
+  "title_match": true,
+  "sku_count": 39,
+  "expected_sku_count": 39,
+  "all_color_size_pairs_match": true,
+  "size_attribute": {
+    "attribute_id": 222038415,
+    "values": [
+      {
+        "system_value_name": "EU 40",
+        "value_id": -10040
+      },
+      {
+        "system_value_name": "EU 41",
+        "value_id": -10041
+      },
+      {
+        "system_value_name": "EU 38",
+        "value_id": -10038
+      },
+      {
+        "system_value_name": "EU 39",
+        "value_id": -10039
+      },
+      {
+        "system_value_name": "EU 36",
+        "value_id": -10036
+      },
+      {
+        "system_value_name": "EU 37",
+        "value_id": -10037
+      },
+      {
+        "system_value_name": "EU 48",
+        "value_id": -10048
+      },
+      {
+        "system_value_name": "EU 46",
+        "value_id": -10046
+      },
+      {
+        "system_value_name": "EU 47",
+        "value_id": -10047
+      },
+      {
+        "system_value_name": "EU 44",
+        "value_id": -10044
+      },
+      {
+        "system_value_name": "EU 45",
+        "value_id": -10045
+      },
+      {
+        "system_value_name": "EU 42",
+        "value_id": -10042
+      },
+      {
+        "system_value_name": "EU 43",
+        "value_id": -10043
+      }
+    ],
+    "attribute_name": "EUR Size"
+  },
+  "main_count": 6,
+  "main_order_match": true,
+  "detail_count": 4,
+  "company_count": 5,
+  "cross_group_image_overlap": [],
+  "factory_in_main": true,
+  "attributes": [
+    {
+      "attribute_id": 191290426,
+      "attribute_name": "Outsole Material",
+      "value_id": 3338114,
+      "value_name": "Rubber"
+    },
+    {
+      "attribute_id": 1,
+      "attribute_name": "Place of Origin",
+      "value_id": -1,
+      "value_name": "Not specified"
+    },
+    {
+      "attribute_id": 3,
+      "attribute_name": "Model Number",
+      "value_id": -1,
+      "value_name": "BQ-LQ2651"
+    },
+    {
+      "attribute_id": 20700,
+      "attribute_name": "Midsole Material",
+      "value_id": -1,
+      "value_name": "Not specified"
+    },
+    {
+      "attribute_id": 191290430,
+      "attribute_name": "Lining Material",
+      "value_id": -1,
+      "value_name": "Not specified"
+    },
+    {
+      "attribute_id": 210194982,
+      "attribute_name": "Upper Material",
+      "value_id": -1,
+      "value_name": "Not specified"
+    }
+  ],
+  "target_score": 5.0,
+  "actual_score": null,
+  "public_QA": "PENDING_SUPPORTED_BROWSER",
+  "keyword_persistence": "PENDING_CURRENT_VERSION_EVIDENCE",
+  "color_names_and_images_match": true,
+  "exact_detail_image_set_match": true,
+  "exact_company_image_set_match": true,
+  "FAQ_count": 6,
+  "FAQ_exact_match": true,
+  "product_summary_text_present": true,
+  "company_summary_text_present": true,
+  "all_SKU_prices_match": true,
+  "MOQ_and_unit_match": true,
+  "actual_origin_value": "Not specified",
+  "origin_truthful_unknown_saved": true,
+  "model_matches": true,
+  "packaging_formal_readback": "PASS",
+  "keyword_actual_formal": [
+    ""
+  ],
+  "score_source": "alibaba.icbu.product.score.get / 213d4e4917914530459908478",
+  "score_status": "NO_SCORE_RETURNED_AFTER_CORRECT_ENCRYPTED_ID",
+  "diagnostics_status": "PENDING_VALID_SCORE_RESPONSE",
+  "source_url": "https://luqi.sooxie.com/detail/2551541",
+  "source_cost_CNY": 65,
+  "source_cost_date": "2026-10-08 public recheck; not confirmed order quote",
+  "formal_checked_fields_pass": true,
+  "failed_checks": [],
+  "review_observed_at": "2026-10-08T09:50:31.430537+00:00",
+  "review_request_id": "21501b8d17914530308968294",
+  "packaging_render_request_id": "0bbb3b2417914530373257268",
+  "packaging_actual": {
+    "dimensions": {
+      "length": "34",
+      "width": "23",
+      "height": "13"
+    },
+    "weight": "0.5"
+  },
+  "latest_score_response": {
+    "error_response": {
+      "code": "15",
+      "type": "ISP",
+      "sub_code": "-1",
+      "sub_msg": "通用验证失败",
+      "msg": "Remote service error",
+      "request_id": "213d4e4917914530459908478",
+      "_trace_id_": "210325bb17914530456814004e106f"
+    }
+  },
+  "score_observed_at": "2026-10-08T09:50:46.351119+00:00",
+  "score_error": {
+    "code": "15",
+    "type": "ISP",
+    "sub_code": "-1",
+    "sub_msg": "通用验证失败",
+    "msg": "Remote service error",
+    "request_id": "213d4e4917914530459908478",
+    "_trace_id_": "210325bb17914530456814004e106f"
+  },
+  "score_control_result": "Known 061 returned real 5.00 with encrypted ID; new-item score failures remain item-specific/unexplained, not proof of missing permission."
+}
