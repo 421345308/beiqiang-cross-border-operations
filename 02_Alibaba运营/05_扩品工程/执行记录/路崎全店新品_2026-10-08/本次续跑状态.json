@@ -5,7 +5,16 @@
     "061": "36-48",
     "059": "36-48",
     "060": "36-48",
-    "2667": "39-48"
+    "2667": "39-48",
+    "2639": "39-48",
+    "056": "36-48",
+    "2659": "39-48",
+    "2620": "39-48",
+    "2590": "39-48",
+    "2658": "39-48",
+    "2651": "36-48",
+    "2652": "36-48",
+    "2660": "39-48"
   },
   "completed_repairs": {
     "titles_formal_match_and_approved_displayed": 22,
@@ -21,9 +30,9 @@
     "2660": "Prior writer found stopped; original outsole partial brand mark reconfirmed with same SHA256. This style alone requires actual brand/sales-route evidence; do not erase mark or carry hold to other styles.",
     "2620": "22 original images preserved unchanged; source material/unknown segment fields reviewed against fresh current schema; 12 product images locally reviewed and official photobank accepted. No product ID or formal SKU binding/public QA.",
     "2590": "12 final images individually compared to original source photographs; all 12 official photobank uploads accepted with exclusive ledgers and request IDs. Three color assets ready; no product ID, formal SKU binding or public QA.",
-    "2658": "All nine available original photos inspected; 11 final images locally reviewed, M5 first crop rejected and revised to full-body original context, all 11 official photobank accepted. Source material conflict retained, no pig-leather/EVA/width claims. Exact source/model and scoped 384 first-hero comparisons saved. No product ID, formal color binding, EU confirmation or public QA. Existing local differentiation loader/contract PASS on saved evidence only; 345 unassociated source IDs retained, no global clearance inferred.",
-    "2652": "All 11 final product images individually compared with original source photos, accepted by official photobank with request IDs and exclusive ledgers, two single-color images ready. Main/detail originals disjoint. No source outsole reconstruction, material/performance invention or physical marking removal. Scoped source/model/hero check saved; no new product ID, EU confirmation, formal SKU binding or public QA.",
-    "2651": "12 final images individually compared with source originals and accepted by official photobank, three single-color assets included. Main/detail raw photographs disjoint. D2 actual folded shoe and limited tread preserved. Scoped source/model/selected-hero differentiation documented; no product ID, formal color binding, EU confirmation or public QA. Existing local differentiation loader/contract PASS on saved evidence only; 345 unassociated source IDs retained, no global clearance inferred."
+    "2658": "All nine available original photos inspected; 11 final images locally reviewed, M5 first crop rejected and revised to full-body original context, all 11 official photobank accepted. Source material conflict retained, no pig-leather/EVA/width claims. Exact source/model and scoped 384 first-hero comparisons saved. No product ID, formal color binding, public QA. Existing local differentiation loader/contract PASS on saved evidence only; 345 unassociated source IDs retained, no global clearance inferred.",
+    "2652": "All 11 final product images individually compared with original source photos, accepted by official photobank with request IDs and exclusive ledgers, two single-color images ready. Main/detail originals disjoint. No source outsole reconstruction, material/performance invention or physical marking removal. Scoped source/model/hero check saved; no new product ID, formal SKU binding or public QA.",
+    "2651": "12 final images individually compared with source originals and accepted by official photobank, three single-color assets included. Main/detail raw photographs disjoint. D2 actual folded shoe and limited tread preserved. Scoped source/model/selected-hero differentiation documented; no product ID, formal color binding, public QA. Existing local differentiation loader/contract PASS on saved evidence only; 345 unassociated source IDs retained, no global clearance inferred."
   },
   "browser": {
     "normal_reconnection_attempted_in_this_continuation": true,
@@ -36,18 +45,19 @@
     "scope": "Public-page color QA and current editor keyword migration evidence remain unavailable; authorized OpenAPI and local preparation continue independently",
     "existing_user_authorization": "Normal reconnection and read-only access approved; no repeated approval requested",
     "permissions_configuration_changed": false,
-    "alternative_browser_or_indirect_site_access_used": false
+    "alternative_browser_or_indirect_site_access_used": false,
+    "chrome_diagnosis_record": "Chrome连接诊断_2026-10-08.json",
+    "api_work_independent": true
   },
   "remaining": [
-    "EU/code-system evidence for the remaining nine candidate styles; pending question not repeated",
     "Actual manufacturing origin for eight candidates: fresh public source pages have no explicit origin, question pending; supplier address not substituted.",
-    "Eight full-content/trade fragments prepared, but actual origin p-1 and size-system/SKU remain missing; unconditional top-level fields covered only, not full current-Schema/platform acceptance. Rebind current evidence before create.",
+    "Eight full-content/trade fragments prepared, but actual origin p-1 and SKU完整绑定仍待完成; unconditional top-level fields covered only, not full current-Schema/platform acceptance. Rebind current evidence before create.",
     "2660 actual partial outsole brand mark/sales-route evidence and material/lining version dimension; prior writer stopped, reconciliation complete",
     "Candidate-specific material/IP and applicable unknown-value validation; do not inherit obsolete blanket holds",
     "Normal public color QA and exact-ID current keyword field evidence",
     "Remaining candidate publishing, formal readback, review, real score and applicable public QA"
   ],
-  "updated_at": "2026-10-08T07:38:18.677741+00:00",
+  "updated_at": "2026-10-08T09:17:25.080857+00:00",
   "photobank_accepted_count": 93,
   "current_schema_read": {
     "category_id": 201334413,
@@ -121,5 +131,10 @@
     "sale_prop_and_sku_absent": true,
     "full_payload_validated": false,
     "reference": "发布准备与未完成项_交易补齐.json"
+  },
+  "EU_preparation": {
+    "styles": 8,
+    "local_color_size_rows": 234,
+    "formal_SKUs_created": false
   }
 }

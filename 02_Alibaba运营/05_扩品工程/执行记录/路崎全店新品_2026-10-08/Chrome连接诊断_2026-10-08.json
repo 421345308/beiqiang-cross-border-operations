@@ -1,0 +1,19 @@
+{
+  "observed_at": "2026-10-08T09:17:25.080857+00:00",
+  "browser_selection_error": "Browser is not available: chrome",
+  "available_browser_types": [
+    "iab",
+    "mcpapps"
+  ],
+  "chrome_extension_installed": true,
+  "chrome_extension_enabled": true,
+  "native_host_manifest_exists": false,
+  "native_host_registry_key_exists": false,
+  "independent_escalated_read_only_check_same_result": true,
+  "diagnosis": "Chrome扩展存在，但所需本机通信组件及注册缺失；当前未发现Chrome控制通道。",
+  "not_proven": "此前内置浏览器saved permissions/security check服务错误与此是否同一根因，尚未证明。",
+  "repair_status": "NOT_REPAIRED",
+  "supported_repair": "通过应用插件管理界面重新安装Browser插件；官方浏览器技能禁止自行安装本机通信组件。",
+  "api_work_independent": true,
+  "permission_checks_disabled": false
+}
