@@ -1,0 +1,415 @@
+{
+  "canvas": "9f9e453d99184fcd8483476b14ba15dc",
+  "stage": "preproduction",
+  "videoSubmitted": false,
+  "images": {
+    "city": {
+      "node": "0f0df55b-535c-445b-9cb7-d8c1216be084",
+      "label": "关键画面A｜迎光出门｜R1601",
+      "references": [
+        "73d7f7e1-0a53-46df-894b-27398c0ff4f1",
+        "fc565133-6029-4c99-b3a9-278f3c3368de"
+      ],
+      "status": "generated",
+      "ratio": "9:16",
+      "file": "visuals\\city\\关键画面A｜迎光出门｜R1601.png",
+      "promptFile": "prompts\\city.txt",
+      "promptSha256": "93ccea2c51cae8c7a129e0539e3196167b775c1a908b08b48866b286d405dd53",
+      "taskId": "20261008175403747319167",
+      "nativeNodeStatus": 2,
+      "nativeModel": "General image V2.1",
+      "fileSha256": "685767585377d833243889c9f596cbfcd2ff9fe1461a0db6ff4b91e9b3fd7731"
+    },
+    "cafe": {
+      "node": "36f7f9f4-0a1f-406c-970b-0d6eba216732",
+      "label": "关键画面B｜转身相遇｜R1218",
+      "references": [
+        "4248cbf4-c6b2-49cd-a662-a4f8cb56e9aa"
+      ],
+      "status": "generated",
+      "ratio": "9:16",
+      "file": "visuals\\cafe\\关键画面B｜转身相遇｜R1218.png",
+      "promptFile": "prompts\\cafe.txt",
+      "promptSha256": "d534be59e3deaa50a0cd89e5f332d6a79703dacce0cf4d1924f138fd0c2c44e0",
+      "taskId": "20261008175503052859167",
+      "nativeNodeStatus": 2,
+      "nativeModel": "General image V2.1",
+      "fileSha256": "4517649ae920c8a199523075fb8f5b7bca5a854b7fc19c87b80ada0dd01af30f"
+    },
+    "greenway": {
+      "node": "55144d24-f928-48b0-9274-f204620da997",
+      "label": "关键画面C｜回头同行｜A502",
+      "references": [
+        "eafa19f6-98d4-4398-8c7f-da6aeed263e7"
+      ],
+      "status": "generated",
+      "ratio": "9:16",
+      "file": "visuals\\greenway\\关键画面C｜回头同行｜A502.png",
+      "promptFile": "prompts\\greenway.txt",
+      "promptSha256": "a5c0d4d47bf66687151d5184f3b21f8c0f95195cd8b84d3d62fe608e60ce7d44",
+      "taskId": "20261008175703403769167",
+      "nativeNodeStatus": 2,
+      "nativeModel": "General image V2.1",
+      "fileSha256": "ab4bac151cdcfbb921642680190455088304c67b7767c9c11f36e55799103f86"
+    },
+    "city_fixed": {
+      "node": "0125ca62-f639-49bc-a17d-66073513945f",
+      "label": "产品校正｜城市R1601",
+      "references": [
+        "0f0df55b-535c-445b-9cb7-d8c1216be084",
+        "bd14b747-5ff4-42a9-bc1a-b67814b537b2"
+      ],
+      "status": "generated",
+      "ratio": "9:16",
+      "model": "Lib Image 2.5 Pro",
+      "file": "visuals\\city_fixed\\产品校正｜城市R1601.png",
+      "promptFile": "prompts\\city_fixed.txt",
+      "promptSha256": "2db6f1a36c49554b355068cf2b955ef47167b1060dc83610c9e288f9d215cf63",
+      "taskId": "20261008180003126039167",
+      "nativeNodeStatus": 2,
+      "nativeModel": "Lib Image 2.5 Pro",
+      "fileSha256": "595ededd0edd456c299c6b74316080121e6a21aacea9e8b76c3c07522c20777c"
+    },
+    "cafe_fixed": {
+      "node": "878eac39-87fa-4d90-8f33-2cf1eb3f5685",
+      "label": "产品校正｜街区R1218",
+      "references": [
+        "36f7f9f4-0a1f-406c-970b-0d6eba216732",
+        "4248cbf4-c6b2-49cd-a662-a4f8cb56e9aa"
+      ],
+      "status": "generated",
+      "ratio": "9:16",
+      "model": "Lib Image 2.5 Pro",
+      "file": "visuals\\cafe_fixed\\产品校正｜街区R1218.png",
+      "promptFile": "prompts\\cafe_fixed.txt",
+      "promptSha256": "c72eff7bf06086cb617e6cfc69fedd3aec7144287ed352bbb94d45abe4ab04da",
+      "taskId": "20261008180103772819167",
+      "nativeNodeStatus": 2,
+      "nativeModel": "Lib Image 2.5 Pro",
+      "fileSha256": "53a37ac272758dd5ae69cecfbe91f82aa94e4a54ee28dc79813ff44b4bb226bf"
+    },
+    "city_person": {
+      "node": "5b2ea0cf-8357-4949-a3bc-0c202cf61662",
+      "label": "人物定妆｜城市男主",
+      "references": [
+        "0125ca62-f639-49bc-a17d-66073513945f"
+      ],
+      "status": "generated",
+      "ratio": "3:4",
+      "model": "General image V2.1",
+      "file": "visuals\\city_person\\人物定妆｜城市男主.png",
+      "promptFile": "prompts\\city_person.txt",
+      "promptSha256": "b767101e24ee89263f3aca2338aa5cdced5f8ec05058075e2c51d017eb84b540",
+      "taskId": "20261008180303522939167",
+      "nativeNodeStatus": 2,
+      "nativeModel": "General image V2.1",
+      "fileSha256": "978a768e9b02f81b1d56432b2d14fc85125740796b111dd7939f9253e3c2c9d4"
+    },
+    "city_scene": {
+      "node": "97a79539-83b8-4fd9-a275-0dfe5ee8acc8",
+      "label": "场景定景｜楼门与晨光",
+      "references": [
+        "0125ca62-f639-49bc-a17d-66073513945f"
+      ],
+      "status": "generated",
+      "ratio": "16:9",
+      "model": "General image V2.1",
+      "file": "visuals\\city_scene\\场景定景｜楼门与晨光.png",
+      "promptFile": "prompts\\city_scene.txt",
+      "promptSha256": "c7d3534d6fb4150d1441712b73f8fd85121cb1ce9080990ad577420d271cdd60",
+      "taskId": "20261008180303485209167",
+      "nativeNodeStatus": 2,
+      "nativeModel": "General image V2.1",
+      "fileSha256": "3f4a31410fccad3b041f4349df57b93728baa69b0b69bcf36a6f9a2929e9e861"
+    },
+    "cafe_person": {
+      "node": "fcc8ba65-b369-4fe4-bdc4-c35c3516aced",
+      "label": "人物定妆｜街区女主",
+      "references": [
+        "878eac39-87fa-4d90-8f33-2cf1eb3f5685"
+      ],
+      "status": "generated",
+      "ratio": "3:4",
+      "model": "General image V2.1",
+      "file": "visuals\\cafe_person\\人物定妆｜街区女主.png",
+      "promptFile": "prompts\\cafe_person.txt",
+      "promptSha256": "f21f6b58af204659d915ce8e9e060ae26dadeaf6b9bed2eabc6cd4a4aee86e01",
+      "taskId": "20261008180403925749167",
+      "nativeNodeStatus": 2,
+      "nativeModel": "General image V2.1",
+      "fileSha256": "70dbcd27f852f58d8b23e03a6a100ae5e6e5a7f310c857698976a7a193c87f85"
+    },
+    "cafe_scene": {
+      "node": "af260dbd-5a43-4ab5-9836-823e375f570d",
+      "label": "场景定景｜街角与橱窗",
+      "references": [
+        "878eac39-87fa-4d90-8f33-2cf1eb3f5685"
+      ],
+      "status": "generated",
+      "ratio": "16:9",
+      "model": "General image V2.1",
+      "file": "visuals\\cafe_scene\\场景定景｜街角与橱窗.png",
+      "promptFile": "prompts\\cafe_scene.txt",
+      "promptSha256": "d32fbf80225e4e1c45eeea3c1dd83b55f56665aabd231ed33a8e708fa4c54ef1",
+      "taskId": "20261008180503750959167",
+      "nativeNodeStatus": 2,
+      "nativeModel": "General image V2.1",
+      "fileSha256": "18c88074cb3db84fd8f5ca6f1ab723bde07a248796979251304b2580580564bd"
+    },
+    "greenway_person": {
+      "node": "f5a43709-07d3-44b6-adb2-43f7338c347e",
+      "label": "人物定妆｜绿道女主",
+      "references": [
+        "55144d24-f928-48b0-9274-f204620da997"
+      ],
+      "status": "generated",
+      "ratio": "3:4",
+      "model": "General image V2.1",
+      "file": "visuals\\greenway_person\\人物定妆｜绿道女主.png",
+      "promptFile": "prompts\\greenway_person.txt",
+      "promptSha256": "9f410e977b7872dc2ccf49108c17b9f11699d902d5c0e60f1a272d54b62a7e58",
+      "taskId": "20261008180503179999167",
+      "nativeNodeStatus": 2,
+      "nativeModel": "General image V2.1",
+      "fileSha256": "b0558f0a6d36ecc84657bb84685eb063bdae65991d564c5e89c67f2160df22ba"
+    },
+    "greenway_scene": {
+      "node": "c3ed67ae-610a-4828-a987-4ac69205c88a",
+      "label": "场景定景｜绿道与前景树",
+      "references": [
+        "55144d24-f928-48b0-9274-f204620da997"
+      ],
+      "status": "generated",
+      "ratio": "16:9",
+      "model": "General image V2.1",
+      "file": "visuals\\greenway_scene\\场景定景｜绿道与前景树.png",
+      "promptFile": "prompts\\greenway_scene.txt",
+      "promptSha256": "d977e41c5b3d2e3d68566384609cc4d4c44753fee4cebeb8ba2d67a834787d4f",
+      "taskId": "20261008180703585369167",
+      "nativeNodeStatus": 2,
+      "nativeModel": "General image V2.1",
+      "fileSha256": "1d3fbd3b8c0398441716c8da1cd01f4eb593f2f4c9f5950822893ac31d42d398"
+    },
+    "city_step": {
+      "node": "6a442dc9-b8cb-4bdf-8877-58e205456044",
+      "label": "动作接点｜门口迈步",
+      "references": [
+        "0125ca62-f639-49bc-a17d-66073513945f",
+        "bd14b747-5ff4-42a9-bc1a-b67814b537b2"
+      ],
+      "status": "generated",
+      "ratio": "9:16",
+      "model": "Lib Image 2.5 Pro",
+      "file": "visuals\\city_step\\动作接点｜门口迈步.png",
+      "promptFile": "prompts\\city_step.txt",
+      "promptSha256": "201885d38b466135ae637ba5b18a310ed42cc796759f16a8f13ea7a78d9f44ea",
+      "taskId": "20261008180903080409167",
+      "nativeNodeStatus": 2,
+      "nativeModel": "Lib Image 2.5 Pro",
+      "fileSha256": "bc1554904b45e138362159402c02cb7be22dc5153afb191988dc4640c8adbc32"
+    },
+    "cafe_step": {
+      "node": "fa579bf5-6e5c-4f26-97c1-3b25320889f3",
+      "label": "动作接点｜街角转脚",
+      "references": [
+        "878eac39-87fa-4d90-8f33-2cf1eb3f5685",
+        "4248cbf4-c6b2-49cd-a662-a4f8cb56e9aa"
+      ],
+      "status": "generated",
+      "ratio": "9:16",
+      "model": "Lib Image 2.5 Pro",
+      "file": "visuals\\cafe_step\\动作接点｜街角转脚.png",
+      "promptFile": "prompts\\cafe_step.txt",
+      "promptSha256": "2aef3d65ed8473aa5d2c09b8e487181af7bf09c954f5485f3012a5cc03b79fcf",
+      "taskId": "20261008180903928559167",
+      "nativeNodeStatus": 2,
+      "nativeModel": "Lib Image 2.5 Pro",
+      "fileSha256": "c66002578bb0eb7adfecceec90450245c195a2dbc4de24f5711d9d0d92df74c1"
+    },
+    "greenway_step": {
+      "node": "c99205d3-3cd5-40f5-ac6b-72e138bb1ca5",
+      "label": "动作接点｜绿道前行",
+      "references": [
+        "55144d24-f928-48b0-9274-f204620da997",
+        "eafa19f6-98d4-4398-8c7f-da6aeed263e7"
+      ],
+      "status": "generated",
+      "ratio": "9:16",
+      "model": "Lib Image 2.5 Pro",
+      "file": "visuals\\greenway_step\\动作接点｜绿道前行.png",
+      "promptFile": "prompts\\greenway_step.txt",
+      "promptSha256": "e896214a99a1f1833a09424eacad76ba206b4012b9ba485f78d59752dfd7e6f3",
+      "taskId": "20261008181003280399167",
+      "nativeNodeStatus": 2,
+      "nativeModel": "Lib Image 2.5 Pro",
+      "fileSha256": "783ab68e6e6705c9bed48802d118145bd8b09767210b88575d7cddc43471eba8"
+    },
+    "city_macro": {
+      "node": "74c9959f-ab41-4074-aa52-68793c0d3207",
+      "label": "细节关键帧｜包头与走线",
+      "references": [
+        "fc565133-6029-4c99-b3a9-278f3c3368de",
+        "0125ca62-f639-49bc-a17d-66073513945f"
+      ],
+      "status": "generated",
+      "ratio": "9:16",
+      "model": "Lib Image 2.5 Pro",
+      "file": "visuals\\city_macro\\细节关键帧｜包头与走线.png",
+      "promptFile": "prompts\\city_macro.txt",
+      "promptSha256": "964e8029f06f697e4def1ee94381ce29c7a7fe81a1ed09ca645dac59b6756931",
+      "taskId": "20261008181103859219167",
+      "nativeNodeStatus": 2,
+      "nativeModel": "Lib Image 2.5 Pro",
+      "fileSha256": "ac45de3b3e1d5e89775997b13c457c3cd61b49266f3311ac1f3caf854c25c0f1"
+    },
+    "cafe_macro": {
+      "node": "efabac17-489e-4c0f-9cdb-c00c295a8b10",
+      "label": "细节关键帧｜开放针织",
+      "references": [
+        "4248cbf4-c6b2-49cd-a662-a4f8cb56e9aa",
+        "878eac39-87fa-4d90-8f33-2cf1eb3f5685"
+      ],
+      "status": "generated",
+      "ratio": "9:16",
+      "model": "Lib Image 2.5 Pro",
+      "file": "visuals\\cafe_macro\\细节关键帧｜开放针织.png",
+      "promptFile": "prompts\\cafe_macro.txt",
+      "promptSha256": "b7653c4a65591e3b87ad8bc931c896c36a641969f8f2edb8747efac4bd3370f6",
+      "taskId": "20261008181203542959167",
+      "nativeNodeStatus": 2,
+      "nativeModel": "Lib Image 2.5 Pro",
+      "fileSha256": "b981fc2def3cf1a33c4dc30a6a98b8ca680e6bd738b639469849c923a7ce9815"
+    },
+    "greenway_macro": {
+      "node": "d26286b4-25eb-4556-93a7-5460836d7edb",
+      "label": "细节关键帧｜蓝白拼接",
+      "references": [
+        "eafa19f6-98d4-4398-8c7f-da6aeed263e7",
+        "55144d24-f928-48b0-9274-f204620da997"
+      ],
+      "status": "generated",
+      "ratio": "9:16",
+      "model": "Lib Image 2.5 Pro",
+      "file": "visuals\\greenway_macro\\细节关键帧｜蓝白拼接.png",
+      "promptFile": "prompts\\greenway_macro.txt",
+      "promptSha256": "50ff803714cbdae37d3e61df78fc8f524be101df962a970eadff469932c585d4",
+      "taskId": "20261008181203023759167",
+      "nativeNodeStatus": 2,
+      "nativeModel": "Lib Image 2.5 Pro",
+      "fileSha256": "c2fc8221dad4720b30526a9ff82c5138a6624fa52052b0744cfa849a6056ca13"
+    }
+  },
+  "references": {
+    "r1601": {
+      "node": "73d7f7e1-0a53-46df-894b-27398c0ff4f1",
+      "source": "01_产品资产\\01_原始数据包\\已整理_BQ010_R1601_贝强鞋业R1601款包头帆布板鞋35-45批55元\\贝强鞋业R1601款包头帆布板鞋35-45批55元\\750\\长图_10.jpg",
+      "label": "真实鞋｜R1601黑白｜全形与上脚"
+    },
+    "r1601_detail": {
+      "node": "fc565133-6029-4c99-b3a9-278f3c3368de",
+      "source": "01_产品资产\\01_原始数据包\\已整理_BQ010_R1601_贝强鞋业R1601款包头帆布板鞋35-45批55元\\贝强鞋业R1601款包头帆布板鞋35-45批55元\\750\\长图_06.jpg",
+      "label": "真实鞋｜R1601黑白｜包头与走线"
+    },
+    "r1218": {
+      "node": "4248cbf4-c6b2-49cd-a662-a4f8cb56e9aa",
+      "source": "01_产品资产\\01_原始数据包\\已整理_BQ003_R1218_贝强鞋业2026夏季R1218镂空包头板鞋35-45批55元\\贝强鞋业2026夏季R1218镂空包头板鞋35-45批55元\\750X1000主图\\R5VM4483.JPG",
+      "label": "真实鞋｜R1218白｜镂空针织"
+    },
+    "a502": {
+      "node": "eafa19f6-98d4-4398-8c7f-da6aeed263e7",
+      "source": "01_产品资产\\01_原始数据包\\已整理_BQ004_A502_贝强鞋业A502新款35-45批55元\\贝强鞋业A502新款35-45批55元\\750X1000主图\\主图 (1).JPG",
+      "label": "真实鞋｜A502蓝白｜侧面结构"
+    },
+    "r1601_clean": {
+      "node": "bd14b747-5ff4-42a9-bc1a-b67814b537b2",
+      "source": "01_产品资产\\01_原始数据包\\已整理_BQ010_R1601_贝强鞋业R1601款包头帆布板鞋35-45批55元\\贝强鞋业R1601款包头帆布板鞋35-45批55元\\主图\\白色白底.jpg",
+      "label": "真实鞋｜R1601黑白｜干净侧面"
+    }
+  },
+  "production": {
+    "script": {
+      "node": "7c16865a-5b2e-4277-805a-87423cae0ffb",
+      "name": "导演分镜｜把鞋做进日常｜28秒14镜",
+      "kind": "script",
+      "references": [
+        "0125ca62-f639-49bc-a17d-66073513945f",
+        "878eac39-87fa-4d90-8f33-2cf1eb3f5685",
+        "55144d24-f928-48b0-9274-f204620da997"
+      ],
+      "params": null,
+      "prompt": null,
+      "status": "prepared_not_run"
+    },
+    "brief": {
+      "node": "59c8ca47-6263-4f5b-b2a1-4303cce25d67",
+      "name": "创意总控｜从脚步到贝强",
+      "kind": "text",
+      "references": [],
+      "params": null,
+      "prompt": null,
+      "status": "prepared_not_run"
+    },
+    "review": {
+      "node": "128f2030-bb1d-4d67-b107-57df3c16f65d",
+      "name": "关键帧检查｜已修与待测",
+      "kind": "text",
+      "references": [],
+      "params": null,
+      "prompt": null,
+      "status": "prepared_not_run"
+    },
+    "test_city": {
+      "node": "ff137c22-0d90-498c-86de-7f7c1efafdd8",
+      "name": "待授权视频测试｜R1601行走｜4秒1080p",
+      "kind": "video",
+      "references": [
+        "6a442dc9-b8cb-4bdf-8877-58e205456044",
+        "bd14b747-5ff4-42a9-bc1a-b67814b537b2"
+      ],
+      "params": {
+        "model": "Seedance 2.5",
+        "modeType": "image2video",
+        "ratio": "9:16",
+        "resolution": "1080p",
+        "duration": 4,
+        "count": 1,
+        "enableSound": "off",
+        "searchEnabled": 0,
+        "autoCompliance": 1
+      },
+      "prompt": "4秒连续广告镜头，9:16。以 {{Node 6a442dc9-b8cb-4bdf-8877-58e205456044}} 的低位构图、服装、场景、光线和脚的位置为开场依据；{{Node bd14b747-5ff4-42a9-bc1a-b67814b537b2}} 仅负责准确鞋款和同色产品结构，不取其背景。摄影机离地约18厘米，稳定侧向短跟拍，正常成人脚鞋比例，鞋在画面右下，运动从左向右。0—0.5秒自然起步，0.5—3.3秒：深灰九分裤男主从左向右正常走两步，先脚跟轻触地再重心滚至前掌，后脚自然离地。黑面白包头、白系带、双道浅色走线、菱形侧纹及较深梯形底部切口全段保持，不变成普通平底帆布鞋。 3.3—4秒延续走步留剪辑余量，不停成一张图。只拍膝盖以下，真实生活节奏，不慢动作夸张弹跳，鞋面清楚，轻微自然衣料运动。不要换鞋换裤子换场景，不要字幕、标语、旁白、配乐，不做跨空间变形转场。",
+      "status": "prepared_not_run"
+    },
+    "test_cafe": {
+      "node": "d0bc1694-93ca-4d7f-8430-cf3c812ecfa5",
+      "name": "待授权视频测试｜R1218转脚｜4秒1080p",
+      "kind": "video",
+      "references": [
+        "fa579bf5-6e5c-4f26-97c1-3b25320889f3",
+        "4248cbf4-c6b2-49cd-a662-a4f8cb56e9aa"
+      ],
+      "params": {
+        "model": "Seedance 2.5",
+        "modeType": "image2video",
+        "ratio": "9:16",
+        "resolution": "1080p",
+        "duration": 4,
+        "count": 1,
+        "enableSound": "off",
+        "searchEnabled": 0,
+        "autoCompliance": 1
+      },
+      "prompt": "4秒连续广告镜头，9:16。以 {{Node fa579bf5-6e5c-4f26-97c1-3b25320889f3}} 的低位构图、服装、场景、光线和脚的位置为开场依据；{{Node 4248cbf4-c6b2-49cd-a662-a4f8cb56e9aa}} 仅负责准确鞋款和同色产品结构，不取其背景。摄影机离地约18厘米，稳定侧向短跟拍，正常成人脚鞋比例，鞋在画面右下，运动从左向右。0—0.5秒自然起步，0.5—3.3秒：浅蓝牛仔裤女主听见画外招呼后自然小幅转脚，再向右迈一步；脚掌与地面接触真实，转身不让两脚互穿。白开放镂空针织结构、系带、包头、菱形侧纹、较深梯形底部切口保持。 3.3—4秒延续走步留剪辑余量，不停成一张图。只拍膝盖以下，真实生活节奏，不慢动作夸张弹跳，鞋面清楚，轻微自然衣料运动。不要换鞋换裤子换场景，不要字幕、标语、旁白、配乐，不做跨空间变形转场。",
+      "status": "prepared_not_run"
+    },
+    "authorization": {
+      "node": "392c1b34-20e1-4810-9671-97d914b5c643",
+      "name": "视频提交边界｜两条短测试",
+      "kind": "text",
+      "references": [],
+      "params": null,
+      "prompt": null,
+      "status": "prepared_not_run"
+    }
+  }
+}
