@@ -1,0 +1,125 @@
+{
+  "style": "033",
+  "product_id": "1601973792546",
+  "observed_at": "2026-10-08T22:15:03.703144+00:00",
+  "stage": "SOURCE_TRIAGE_ONLY_NOT_FULL_IMAGE_REVIEW",
+  "source": "https://luqi.sooxie.com/detail/2416933",
+  "confirmed_colors": [
+    "AllBlack",
+    "BlackSilver",
+    "WhiteGreen"
+  ],
+  "EU_sizes": [
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48
+  ],
+  "EU_combinations": 39,
+  "formal_evidence": "Cached质量修正_2026-10-09/最新正式回读.json and original image-bank ledger, not fresh live read",
+  "current_title": "Unisex Wide Toe Box Casual Walking Sneakers Closed Panel Upper Lace Up Padded Low Collar EU 36-48 Wholesale",
+  "title_review_required": "Current Closed Panel Upper is too broad/may suggest a closed face. Full originals01/21/25/27 show visible mesh panels with broad angular overlays, ordinary laces and padded low collar. Reassess evidence-anchored wording during full image update, not assume title-scope PASS proves copy accuracy.",
+  "draft_title_for_next_review": "Unisex Wide Toe Box Mesh Panel Walking Sneakers Broad Angular Side Overlay Lace Up Casual Shoes EU 36-48 Wholesale",
+  "current_color_photo_bindings": [
+    {
+      "formal_color": "AllBlack",
+      "source_image": 27,
+      "formal_value_id": -200,
+      "binding": "CACHED_FORMAL_GET_MATCHES_ORIGINAL_UPLOAD_LEDGER"
+    },
+    {
+      "formal_color": "BlackSilver",
+      "source_image": 21,
+      "formal_value_id": -201,
+      "binding": "CACHED_FORMAL_GET_MATCHES_ORIGINAL_UPLOAD_LEDGER"
+    },
+    {
+      "formal_color": "WhiteGreen",
+      "source_image": 25,
+      "formal_value_id": -202,
+      "binding": "CACHED_FORMAL_GET_MATCHES_ORIGINAL_UPLOAD_LEDGER"
+    }
+  ],
+  "observed_source_images_full": [
+    1,
+    21,
+    25,
+    27
+  ],
+  "contact_sheets_reviewed": [
+    0,
+    1
+  ],
+  "confirmed_risk": "WhiteGreen01/25 has white mesh and pale toe panels, green collar/heel accent and mustard outsole; BlackSilver21 black mesh/silver broad angular overlay/black sole; AllBlack27 black mesh/black overlays/black sole. Hero01 grey blocks distract; BlackSilver21 and WhiteGreen25 have generic Trend/Classic footer and top decorative fragment to remove. AllBlack27 clean actual on-foot pair may retain exact binding; source4 is unrelated recommended black shoe and excluded. Source7-10 marketing/foot-last promises not used as proof. Preserve original heel pull loop and actual broad angular overlay, no050 eye/grid decoration.",
+  "proposed_roles": {
+    "M1": {
+      "source": 1,
+      "action": "Clean WhiteGreen actual pair hero, remove grey blocks/backdrop"
+    },
+    "M2": {
+      "source": 20,
+      "action": "BlackSilver actual side structure, inspect full before use"
+    },
+    "M3": {
+      "source": 23,
+      "action": "AllBlack actual side/heel, inspect full before use"
+    },
+    "M4": {
+      "source": [
+        27,
+        21,
+        25
+      ],
+      "action": "Three exact source photo tiles; confirmed EU36-48; never normalize natural occlusion"
+    },
+    "M5": {
+      "source": 16,
+      "action": "WhiteGreen actual seated on-foot image and quote inputs; inspect full and remove source inset/marketing without inventing views"
+    },
+    "D1": {
+      "source": 11,
+      "action": "Independent actual four-shoe/two-person overview, inspect full before use"
+    },
+    "D2": {
+      "source": 29,
+      "action": "Actual BlackSilver shoe/lacing/hand view, inspect full before use"
+    },
+    "D3": {
+      "source": 19,
+      "action": "Actual WhiteGreen rear/sole view, no invented outsole macro"
+    },
+    "D4": {
+      "source": 24,
+      "action": "Actual WhiteGreen female model and sample request, inspect full before use"
+    },
+    "SKU_AllBlack": {
+      "source": 27,
+      "action": "Clean true pair; retain original binding unless full review finds actual defect"
+    },
+    "SKU_BlackSilver": {
+      "source": 21,
+      "action": "Remove generic footer and top decoration, exact broad silver overlay/black sole"
+    },
+    "SKU_WhiteGreen": {
+      "source": 25,
+      "action": "Remove generic footer/top decoration, exact white/green and mustard sole"
+    }
+  },
+  "next_steps": [
+    "Full-size inspect all remaining selected originals before imagegen.",
+    "Choose precisely needed edits, compare full source/candidates and whole set; independent details and factory M6.",
+    "Fresh current Schema,39 rows/IDs/prices and exact color image bindings before smallest original-ID update.",
+    "Current title field revision requires scoped manifest/current Schema and once-only ledger; do not replay prior title change."
+  ],
+  "mutations_this_plan": "NONE: no033 generation/upload/update in this phase",
+  "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+}

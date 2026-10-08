@@ -1,0 +1,30 @@
+{
+  "style": "050",
+  "product_id": "1601973794508",
+  "observed_at": "2026-10-08T22:17:44.787625+00:00",
+  "status": "modified",
+  "display": "N",
+  "sku_count": 52,
+  "protected_fields": {
+    "subject": true,
+    "category_id": true,
+    "attributes": true,
+    "product_sku": true,
+    "sourcing_trade": true,
+    "keywords": true
+  },
+  "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+  "actual_score": null,
+  "scope_result": "PENDING_REVIEW",
+  "main_order_match": true,
+  "product_sku_protection_scope": "Entire object except precisely three intended WhiteSilver/WhiteBlack/BlackSilver image_url fields; AllBlack image protected; all52 rows/IDs/codes/prices/attributes unchanged",
+  "color_image_binding": {
+    "BlackSilver": true,
+    "WhiteBlack": true,
+    "AllBlack": true,
+    "WhiteSilver": true
+  },
+  "exact_four_colors": true,
+  "EU_labels_match": true,
+  "exact_52_combinations": true
+}
