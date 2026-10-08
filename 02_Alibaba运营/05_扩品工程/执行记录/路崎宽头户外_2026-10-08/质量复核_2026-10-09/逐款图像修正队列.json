@@ -272,8 +272,8 @@
       "D3": "Actual color and EU selection with unequal per-color sizes if applicable; distinct layout and image from main.",
       "D4": "Order decision inputs and terms-to-confirm, supported by visible true product/lining/sole view; no blank/price filler."
     },
-    "next_action": "Read back exact submitted image correction after review; no replay of successful or unknown update.",
-    "status": "IMAGE_APPLY_PENDING_REVIEW",
+    "next_action": "Scoped image update PASS; preserve canonical ID.",
+    "status": "IMAGE_APPLY_PASS",
     "title_update_submission": {
       "status": "submitted_needs_readback",
       "product_id": "1601973850058",
@@ -318,8 +318,8 @@
       "D3": "Actual color and EU selection with unequal per-color sizes if applicable; distinct layout and image from main.",
       "D4": "Order decision inputs and terms-to-confirm, supported by visible true product/lining/sole view; no blank/price filler."
     },
-    "next_action": "Review current source images at full size; identify deficient slots; generate only needed candidates, compare and reject drift before upload.",
-    "status": "TITLE_SCOPE_PASS_FULL_IMAGE_REVISION_PENDING",
+    "next_action": "Scoped image update PASS; preserve canonical ID.",
+    "status": "IMAGE_APPLY_PASS",
     "title_update_submission": {
       "status": "submitted_needs_readback",
       "product_id": "1601973730776",
@@ -362,8 +362,8 @@
       "D3": "Actual color and EU selection with unequal per-color sizes if applicable; distinct layout and image from main.",
       "D4": "Order decision inputs and terms-to-confirm, supported by visible true product/lining/sole view; no blank/price filler."
     },
-    "next_action": "Review current source images at full size; identify deficient slots; generate only needed candidates, compare and reject drift before upload.",
-    "status": "TITLE_SCOPE_PASS_FULL_IMAGE_REVISION_PENDING",
+    "next_action": "Read back exact submitted image correction after review; no replay of successful or unknown update.",
+    "status": "IMAGE_APPLY_PENDING_REVIEW",
     "title_update_submission": {
       "status": "submitted_needs_readback",
       "product_id": "1601973806430",
