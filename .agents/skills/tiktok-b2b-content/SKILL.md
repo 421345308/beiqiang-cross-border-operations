@@ -1,61 +1,30 @@
 ---
 name: tiktok-b2b-content
-description: Create evidence-based TikTok B2B footwear scripts, hooks, shot lists and captions for Beiqiang sourcing buyers. Use real SKU or factory proof and an appropriate inquiry path; wide-toe demonstrations require SKU evidence.
+description: Draft Beiqiang B2B footwear short-video concepts, scripts, hooks and captions for TikTok or a user-selected channel such as domestic Douyin. Match real SKU evidence to the current audience, language and brand or inquiry objective.
 ---
 
-# TikTok B2B Content
+# Beiqiang B2B Short-Video Content
 
-## Required reads
+## Scope
 
-- Read [video entry](../../../05_内容与视频/AGENTS.md) and exact SKU/source evidence. Full script references below are conditional.
+This skill supports Beiqiang footwear content for sourcing buyers. TikTok in its retained identifier describes the original use case; it does not set the channel for new work. Confirm the actual project audience, channel, language, objective and chosen creative approach from the user instruction and `PROJECT.md`.
 
-Use this skill to create TikTok content that attracts sourcing buyers, not retail consumers. Scripts should show real product proof, factory handling, quality checks, packing, and buyer-useful details.
+Overseas importer content, domestic Douyin factory-brand ads, product introductions and inquiry-led explainers need different openings, pacing and calls to action. Do not automatically use English, Alibaba links, factory tours or a buyer-problem opening. A B2B audience can be reached through attractive lifestyle/product advertising when that serves the current brief.
 
-## Required References
+## Required context and conditional references
 
-- Read `references/script-formats.md` for a full script or content calendar; a hook or caption edit only needs the current project evidence.
-- Use `beiqiang-positioning` when a source or product claim needs review, and competitor research only when the task actually asks for current market angles.
+- Read the [video entry](../../../05_内容与视频/AGENTS.md), current project and exact SKU/source evidence before making product claims.
+- Read [script options](references/script-formats.md) for a full script/calendar; a small hook or caption edit needs only current evidence.
+- Use [positioning](../beiqiang-positioning/SKILL.md) when resolving a disputed claim/audience angle. Use competitor research when current market evidence is actually needed. Do not invoke unrelated operations simply because they are linked.
 
-## Content Rules
+## Creative decisions
 
-- Lead with a buyer problem or sourcing decision, not vague lifestyle aesthetics.
-- Show only evidence-supported product or supplier proof: construction, colors, packing, checking or customization as applicable to the actual source.
-- Include a clear Alibaba inquiry bridge: sample, MOQ discussion, mixed colors/sizes, OEM/ODM, factory supply.
-- Avoid medical/orthopedic promises, fake test data, celebrity-style consumer ads, or claims not visible in footage.
+Start with the current communication goal and an idea worth watching. For scene-led advertising, choose an action or event and make the suitable shoe participate; for procurement explainers, choose a concrete buying question. Product choice, people, setting, shot design and available generation capability should fit together.
 
-## 适用场景
+Select the details worth showing from that shoe's actual evidence. Attractive imagery may establish a brand or product impression; generated use scenes do not establish measured performance, real factory processes or customer testimony. Root `AGENTS.md` governs source and claim boundaries.
 
-- TikTok B2B short-video hooks, scripts, captions, hashtags, content calendars, factory proof videos, product proof videos, and Alibaba inquiry-driving content.
-- Videos for importers, wholesalers, Amazon/TikTok sellers, sourcing agents, and brand buyers.
+Choose an inquiry bridge when appropriate to the selected channel and objective: catalogue, model discussion, samples or sourcing contact. Do not force an Alibaba CTA into domestic content or place a retail discount into a sourcing campaign. Keep the film's ending consistent with its story and brand goal.
 
-## 贝强业务规则
+## Deliver only what the task needs
 
-- Treat TikTok as B2B lead generation, not retail entertainment.
-- Show product proof, factory handling, checking, packing, sample process, and order support.
-- Keep the message tied to the exact SKU's verified category, construction and source. Wide toe room, light weight, knit/textile uppers and EVA are conditional claims, not default script ingredients.
-- Include an Alibaba inquiry CTA when appropriate.
-
-## 输出格式
-
-For a full video script, use the following fields and the requested duration (usually 15–30 seconds when unspecified). For a hook, caption or wording revision, deliver only that requested part:
-
-```text
-Content goal:
-Buyer target:
-Hook options:
-Script:
-Shot list:
-On-screen text:
-Caption:
-Hashtags:
-Alibaba CTA:
-Footage checklist:
-Risk notes:
-```
-
-## 禁止事项
-
-- Do not make retail-only ads or personal discount offers.
-- Do not use fake test results, fake factory footage, fake buyer reviews, or unsupported medical claims.
-- Do not overpromise OEM/ODM, delivery speed, or stock.
-- Do not copy competitor scripts verbatim.
+For concepts, show what happens, how the shoe participates, why the scene fits, how the brand enters and the main tradeoff. For a production script, specify action, shot/camera, timing, shoe/person/scene references, sound, text and intended transitions. Add captions, hashtags, calendar or inquiry CTA only when relevant. Research, script selection, paid generation, review and publication retain their separate authorization and evidence boundaries.

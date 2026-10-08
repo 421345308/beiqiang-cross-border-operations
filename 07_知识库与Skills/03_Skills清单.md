@@ -23,8 +23,8 @@
 | 首次 RFQ / 报价 | [rfq-quote-assistant](../.agents/skills/rfq-quote-assistant/SKILL.md) | 技术开发买家先读技术型询盘 SOP |
 | 已建立联系后的跟进 | [inquiry-follow-up](../.agents/skills/inquiry-follow-up/SKILL.md) | 按渠道与阶段只写所需消息；发送须已授权 |
 | 物流与贸易条款 | [shipping-trade-terms](../.agents/skills/shipping-trade-terms/SKILL.md) | 不虚构运费、时效和清关条件 |
-| TikTok B2B 脚本 | [tiktok-b2b-content](../.agents/skills/tiktok-b2b-content/SKILL.md) | 产品/工厂证据与买家意图一致 |
-| Seedance 鞋款视频 | [beiqiang-seedance-video](../.agents/skills/beiqiang-seedance-video/SKILL.md) | 生成工具与模型验证，剪辑交给 video-use |
+| B2B 鞋款短视频内容（保留原 TikTok Skill 标识） | [tiktok-b2b-content](../.agents/skills/tiktok-b2b-content/SKILL.md) | 渠道、语言、受众与品牌/询盘目标取当前项目；不固定开场或 Alibaba CTA |
+| Seedance 鞋款视频 | [beiqiang-seedance-video](../.agents/skills/beiqiang-seedance-video/SKILL.md) | 版本和执行入口取当前项目；核当前规格与实际回执，不默认 Ark 或 2.0 |
 | 项目记忆读取 | [beiqiang-memory-recall](../.agents/skills/beiqiang-memory-recall/SKILL.md) | 只读相关有效记忆 |
 | 项目记忆维护 | [beiqiang-memory-curator](../.agents/skills/beiqiang-memory-curator/SKILL.md) | 维护以用户授权范围为准 |
 | CompShare GPU | [compshare-cli](../.agents/skills/compshare-cli/SKILL.md) | 小入口加按需操作参考，以当前帮助为准 |

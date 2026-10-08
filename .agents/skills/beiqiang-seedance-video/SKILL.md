@@ -1,108 +1,42 @@
 ---
 name: beiqiang-seedance-video
-description: Create, generate, review, and iteratively improve Beiqiang footwear product videos with the Volcengine Ark Doubao Seedance API. Use when Codex needs to turn a Beiqiang SKU's local product images into TikTok or Alibaba.com videos, write Seedance prompts, add original overseas-facing music, verify the exact Seedance model and cost, download results, or record post-generation quality lessons for the next video.
+description: Prepare, generate and review Beiqiang footwear videos with a user-selected Seedance version and execution platform. Use for product-reference planning, model research, prompts, generation and footwear QA; channel, language and model come from the current project.
 ---
 
 # Beiqiang Seedance Video
 
-## Required reads
+## Scope and required context
 
-- Read the [video entry](../../../05_内容与视频/AGENTS.md) and exact SKU evidence. Use [positioning](../beiqiang-positioning/SKILL.md) and [TikTok content](../tiktok-b2b-content/SKILL.md) for buyer-facing shoe claims.
+Applies to Beiqiang footwear work using Seedance. It does not select the version, provider, channel, audience, language, style or runtime for a new project. The old overseas TikTok / English / Seedance 2.0 Ark setup was a project configuration, not a continuing default.
 
-Create B2B footwear videos from real Beiqiang product evidence. Optimize for overseas importers, wholesalers, online sellers, sourcing agents, and private-label buyers.
+Read the [video entry](../../../05_内容与视频/AGENTS.md), current `PROJECT.md` and exact SKU/source evidence. Use [positioning](../beiqiang-positioning/SKILL.md) only when resolving a buyer-facing claim or audience decision; use [short-video content](../tiktok-b2b-content/SKILL.md) when writing that content. Adjacent skill links do not require loading unrelated workflows.
 
-## Required Inputs
+Take confirmed audience, channel, language, model and execution platform from the current user instruction and project. Ask only for consequential missing choices. Put these choices in the project record, not back into this general skill.
 
-- Identify the SKU and locate its final-upload product folder.
-- Read confirmed product facts before writing claims.
-- Use `beiqiang-positioning` and `tiktok-b2b-content` as guardrails.
-- Read `references/prompt-framework.md` before creating a new prompt.
-- Read `references/review-template.md` before reviewing a generated video.
-- Use the installed `video-use` skill and its visual QA reference for contact-sheet, focused-candidate, original-resolution and time-range review. That reference belongs to the personal skill installation, not this project directory. This Skill adds footwear/product truth without copying the model-agnostic procedure.
+## Preparation and model selection
 
-## Workflow
+- Inspect real product references before assigning shoes to scenes. Confirm which visible structures and product facts can support the intended message.
+- Research the chosen version through current primary documentation and the actual provider's schema/help: supported reference modes, control granularity, durations, ratio, resolution, sound, cost and material restrictions. A provider's display name alone does not prove the exact upstream build.
+- Separate documented capability, project observations and untested creative risks. Historical success or failure on another version/provider does not establish current behavior.
+- Design characters, settings, actions and camera work together with the available product evidence. Preserve room for creative alternatives; neither a previous shot pattern nor the model's maximum duration dictates the film structure.
+- Before writing generation prompts, read [prompt guidance](references/prompt-framework.md). Consult [template mapping](references/template-mapping.md) only when borrowing a template.
 
-1. Inspect the SKU's main image, color images, detail images, and confirmed listing facts.
-2. Define one primary visual message. Do not combine more than two product benefits in one short video.
-3. Choose platform:
-   - TikTok: `9:16`, native creator pacing, strong first-second hook.
-   - Alibaba.com: `16:9`, slower inspection pacing, product and order evidence.
-4. Use real product images as strict identity references.
-5. Write an English Seedance prompt using the prompt framework.
-6. Use original instrumental music and realistic sound effects. Do not imitate known songs or artists.
-7. Submit with the workspace generator:
+## Execution routing and authorization
 
-```powershell
-python .\08_工具链\02_视频工具\seedance_video\seedance_generate.py create `
-  --prompt-file "<PROMPT_FILE>" `
-  --image-file "<LOCAL_IMAGE>" `
-  --model "doubao-seedance-2-0-260128" `
-  --ratio "9:16" `
-  --resolution "720p" `
-  --duration 12 `
-  --generate-audio
-```
+Use the execution platform selected for the current task:
 
-8. Poll until success and download the MP4 immediately.
-9. Verify the returned JSON before reporting success:
-   - `model` must equal the intended model.
-   - Confirm resolution, ratio, duration, FPS, audio, token use, and file existence.
-10. Run the `video-use` whole-video scan, inspect suspicious focused candidates at original resolution, complete the QA artifacts, and save the retrospective with the current SKU video project's deliverables. Do not recreate a generic output folder at the workspace root.
-11. Convert concrete failures into the next prompt's explicit constraints.
-12. When a publishable edit is requested, use `video-use` for trimming, real English overlays, music mixing, platform-safe subtitles, final rendering, and cut-boundary QA. Seedance generates source clips; `video-use` performs post-production.
+- **LibTV selected:** use the configured official `libtv-cli` skill and CLI. Discover the chosen model with `libtv model search`, then read its full schema. Keep canvas operations and assets in that route; do not substitute Ark or raw HTTP.
+- **Volcengine Ark selected:** inspect `08_工具链/02_视频工具/seedance_video/seedance_generate.py --help` and current Ark documentation before using that client. Confirm it supports the chosen version and input mode. A historical command containing `doubao-seedance-2-0-260128` is not authority to run 2.0 now.
+- **Another provider selected:** verify its current tool/interface and supported model identity before submitting. Do not silently change model, variant, provider or price tier.
 
-## Model Gate
+Paid video authorization follows the workspace/video entry. Research approval or choosing a model does not authorize paid generation. Before submission, preserve the exact prompt, reference roles, exposed settings, intended model and available cost evidence in the project package. Use a draft/test only when appropriate and authorized; its result is not final-quality acceptance.
 
-- Default to full `doubao-seedance-2-0-260128`.
-- Never silently use Mini, Fast, 1.5, or 1.0.
-- Use another model only when the user explicitly requests it.
-- Before a paid generation, run a no-cost empty-content permission probe when model access is uncertain.
-- After generation, verify the actual returned model ID. Do not rely on the requested command alone.
+## Product truth and review
 
-## Product Truth Rules
+Apply the root `AGENTS.md` product/source/claim rules. Preserve the intended shoe's silhouette, texture, laces, stitching, sole, color and proportions. Lifestyle acting and concept visualization may serve a commercial story; they do not prove factory operations, customer testimony or performance. Footage offered as real manufacturing or testing evidence must have that provenance.
 
-- Preserve shoe silhouette, outsole, upper texture, stitching, laces, logo, color, and proportions.
-- Do not invent factories, workers, tests, certificates, reviews, capacity, materials, packaging, prices, MOQ, or delivery promises.
-- Use AI for product motion, lifestyle, camera movement, backgrounds, and transitions.
-- Use real footage for factory, inspection, packing, warehouse, and compliance proof.
-- Avoid medical, orthopedic, pain-relief, waterproof, or certification claims without evidence.
+Define acceptance for the current purpose: attractive moving images and rhythm, product readability and identity, believable anatomy/contact, coherent scenes, sound, brand communication and platform fit. Do not equate render success or one good frame with a usable ad.
 
-## Music Rules
+For generated-video review, read [review guidance](references/review-template.md) and the available `video-use` visual-QA reference. Inspect the full timeline and suspicious actions, link time ranges and source IDs, and separate observations from creative preferences. Check sound explicitly; do not infer it from stills or an audio stream's existence.
 
-- Prefer original instrumental music with a clear beat for TikTok.
-- Specify BPM, percussion, bass, energy, transitions, and synchronized product sound effects.
-- Use no lyrics by default so the video works across the US and Europe.
-- Do not request a recognizable melody or imitation of a known artist.
-- For paid TikTok advertising, replace generated music with a properly licensed Commercial Music Library track when needed.
-
-## Mandatory Review
-
-Score every generated video for:
-
-- Product identity consistency.
-- First-second stopping power.
-- Visual proof of the intended benefit.
-- Human anatomy and physical realism.
-- Editing rhythm and music synchronization.
-- B2B relevance and CTA space.
-- Platform fit.
-
-Record defects even when the overall result is acceptable. Each defect must link to a time range and use the shared `PASS` / `MINOR` / `MODERATE` / `SEVERE` / `CRITICAL` severity and `KEEP` / `TRIM` / `REGENERATE` action vocabulary. Each next prompt must address the highest-impact two defects without turning the entire QA list into prompt bloat.
-
-## Output Contract
-
-Return:
-
-```text
-SKU:
-Platform:
-Primary message:
-Actual model:
-Video specifications:
-Token use and estimated cost:
-Output file:
-What worked:
-Problems found:
-Next prompt improvements:
-Suggested English caption and hashtags:
-```
+Record the requested and returned model identity, actual specifications, output, usage/cost evidence, defects and next decision in the project. If the provider does not disclose a field, mark it unverified. Use the requested language for narration/captions; choose licensed or authorized sound appropriate to that channel. Editing and export use the task's selected tool; `video-use` is an available route, not a mandatory replacement for a chosen editor.
