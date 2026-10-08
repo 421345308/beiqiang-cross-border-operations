@@ -1,6 +1,32 @@
 {
   "status": "preproduction",
   "duration": 28,
+  "resolution": "720p",
+  "nativeSceneAudio": true,
+  "narrationStatus": "script_only_not_recorded",
+  "narration": [
+    {
+      "start": 3,
+      "end": 7,
+      "text": "出门，见面，周末走走。"
+    },
+    {
+      "start": 8,
+      "end": 13,
+      "text": "贝强鞋业，把休闲鞋做进不同日常。"
+    },
+    {
+      "start": 16,
+      "end": 22,
+      "text": "包头走线、镂空织面、蓝白拼接，细节看得见。"
+    },
+    {
+      "start": 24,
+      "end": 28,
+      "text": "选款、来样、开发合作，和贝强聊聊。"
+    }
+  ],
+  "brandFirstMentionSeconds": 8,
   "scriptNode": "7c16865a-5b2e-4277-805a-87423cae0ffb",
   "shots": [
     {
@@ -11,12 +37,13 @@
       "characterAction": "R1601跨出门槛，鞋尖向右落地；镜头低位轻跟。",
       "sceneTags": "城市楼门",
       "lightingAndAtmosphere": "柔和自然侧光，暖灰底色与真实鞋色；人物神态自然。",
-      "audioEffects": "第一声脚步，配乐尚未完全进入。",
+      "audioEffects": "第一声脚步，配乐尚未完全进入。；旁白统一后配，各段现场声择优保留。",
       "videoReference": {
         "referenceFrameImage": "https://libtv-res.liblib.art/sd-gen-save-img/genius_playground/image/8edd84f7434f4da5ab70846b7064e724/952502593_89d2ea8dd5a346f78d0295b79b02dff7.png"
       },
       "imageGenerationPrompt": "R1601跨出门槛，鞋尖向右落地；镜头低位轻跟。 仅表达当前静态参考的构图；动作与摄影待视频验证。",
-      "videoMotionPrompt": "R1601跨出门槛，鞋尖向右落地；镜头低位轻跟。 接地瞬间切下一款，落点保持右下。 真实自然步态，鞋型鞋色结构保持不变，同镜头不换鞋、不换人、不变空间，无字幕。"
+      "videoMotionPrompt": "R1601跨出门槛，鞋尖向右落地；镜头低位轻跟。 接地瞬间切下一款，落点保持右下。 同人同鞋同空间，真实步态，演员不说话、不做口型；画外旁白和文字后期统一制作。",
+      "dialogue": "演员无对白；此段保留声音呼吸。"
     },
     {
       "id": "11df4769-b94f-4ec2-9d2b-3df270fc409c",
@@ -26,12 +53,13 @@
       "characterAction": "R1218在石板轻落地，后脚跟上；维持向右。",
       "sceneTags": "街区咖啡馆",
       "lightingAndAtmosphere": "柔和自然侧光，暖灰底色与真实鞋色；人物神态自然。",
-      "audioEffects": "第二声脚步接拍。",
+      "audioEffects": "第二声脚步接拍。；旁白统一后配，各段现场声择优保留。",
       "videoReference": {
         "referenceFrameImage": "https://libtv-res.liblib.art/sd-gen-save-img/genius_playground/image/8edd84f7434f4da5ab70846b7064e724/952502596_9da848c57cf04e8e816845b025341b2e.png"
       },
       "imageGenerationPrompt": "R1218在石板轻落地，后脚跟上；维持向右。 仅表达当前静态参考的构图；动作与摄影待视频验证。",
-      "videoMotionPrompt": "R1218在石板轻落地，后脚跟上；维持向右。 第二次接地切绿道，裤色与地面改变。 真实自然步态，鞋型鞋色结构保持不变，同镜头不换鞋、不换人、不变空间，无字幕。"
+      "videoMotionPrompt": "R1218在石板轻落地，后脚跟上；维持向右。 第二次接地切绿道，裤色与地面改变。 同人同鞋同空间，真实步态，演员不说话、不做口型；画外旁白和文字后期统一制作。",
+      "dialogue": "演员无对白；此段保留声音呼吸。"
     },
     {
       "id": "41e4ac71-1739-48e4-b18f-74f31ca47e43",
@@ -41,147 +69,157 @@
       "characterAction": "A502向右迈步，蓝白侧面经过镜头。",
       "sceneTags": "城市绿道",
       "lightingAndAtmosphere": "柔和自然侧光，暖灰底色与真实鞋色；人物神态自然。",
-      "audioEffects": "第三声脚步，音乐节奏进入。",
+      "audioEffects": "第三声脚步，音乐节奏进入。；旁白统一后配，各段现场声择优保留。",
       "videoReference": {
         "referenceFrameImage": "https://libtv-res.liblib.art/sd-gen-save-img/genius_playground/image/8edd84f7434f4da5ab70846b7064e724/952504744_f1b204bd5bf843b28fa564e285f8cc4d.png"
       },
       "imageGenerationPrompt": "A502向右迈步，蓝白侧面经过镜头。 仅表达当前静态参考的构图；动作与摄影待视频验证。",
-      "videoMotionPrompt": "A502向右迈步，蓝白侧面经过镜头。 三次落脚后切人物，视线打开。 真实自然步态，鞋型鞋色结构保持不变，同镜头不换鞋、不换人、不变空间，无字幕。"
+      "videoMotionPrompt": "A502向右迈步，蓝白侧面经过镜头。 三次落脚后切人物，视线打开。 同人同鞋同空间，真实步态，演员不说话、不做口型；画外旁白和文字后期统一制作。",
+      "dialogue": "演员无对白；此段保留声音呼吸。"
     },
     {
       "id": "d746c53f-9db0-46f7-b62e-3c3d4b2f2f57",
-      "durationSeconds": 3,
-      "plotDescription": "03—06秒｜迎光出门。门框擦过镜头，保持主体向右。",
+      "durationSeconds": 2,
+      "plotDescription": "03—05秒｜迎光出门。门框擦过镜头，保持主体向右。",
       "shotSize": "中全景",
       "characterAction": "男主推门走出阴影、抬头；稳定侧后方短跟拍。",
       "sceneTags": "城市楼门",
       "lightingAndAtmosphere": "柔和自然侧光，暖灰底色与真实鞋色；人物神态自然。",
-      "audioEffects": "城市底声、门轴轻响。",
+      "audioEffects": "城市底声、门轴轻响。；旁白统一后配，各段现场声择优保留。",
       "videoReference": {
         "referenceFrameImage": "https://libtv-res.liblib.art/sd-gen-save-img/genius_playground/image/8edd84f7434f4da5ab70846b7064e724/952481618_973c015540c84ec7a9f515f2323b89de.png"
       },
       "imageGenerationPrompt": "男主推门走出阴影、抬头；稳定侧后方短跟拍。 仅表达当前静态参考的构图；动作与摄影待视频验证。",
-      "videoMotionPrompt": "男主推门走出阴影、抬头；稳定侧后方短跟拍。 门框擦过镜头，保持主体向右。 真实自然步态，鞋型鞋色结构保持不变，同镜头不换鞋、不换人、不变空间，无字幕。"
+      "videoMotionPrompt": "男主推门走出阴影、抬头；稳定侧后方短跟拍。 门框擦过镜头，保持主体向右。 同人同鞋同空间，真实步态，演员不说话、不做口型；画外旁白和文字后期统一制作。",
+      "dialogue": "画外旁白（统一音轨，跨镜延续，不是逐镜重复）：出门，见面，周末走走。"
     },
     {
       "id": "aaf56987-97be-4f34-8020-a639317288cb",
       "durationSeconds": 2,
-      "plotDescription": "06—08秒｜黑白鞋跟着人走。近处门框遮挡后切木门框。",
+      "plotDescription": "05—07秒｜黑白鞋跟着人走。近处门框遮挡后切木门框。",
       "shotSize": "低位近景",
       "characterAction": "侧跟两步，包头、鞋带与双道走线可读。",
       "sceneTags": "城市楼门",
       "lightingAndAtmosphere": "柔和自然侧光，暖灰底色与真实鞋色；人物神态自然。",
-      "audioEffects": "脚步和衣料声。",
+      "audioEffects": "脚步和衣料声。；旁白统一后配，各段现场声择优保留。",
       "videoReference": {
         "referenceFrameImage": "https://libtv-res.liblib.art/sd-gen-save-img/genius_playground/image/8edd84f7434f4da5ab70846b7064e724/952502593_89d2ea8dd5a346f78d0295b79b02dff7.png"
       },
       "imageGenerationPrompt": "侧跟两步，包头、鞋带与双道走线可读。 仅表达当前静态参考的构图；动作与摄影待视频验证。",
-      "videoMotionPrompt": "侧跟两步，包头、鞋带与双道走线可读。 近处门框遮挡后切木门框。 真实自然步态，鞋型鞋色结构保持不变，同镜头不换鞋、不换人、不变空间，无字幕。"
+      "videoMotionPrompt": "侧跟两步，包头、鞋带与双道走线可读。 近处门框遮挡后切木门框。 同人同鞋同空间，真实步态，演员不说话、不做口型；画外旁白和文字后期统一制作。",
+      "dialogue": "画外旁白（统一音轨，跨镜延续，不是逐镜重复）：出门，见面，周末走走。"
     },
     {
       "id": "32d13c44-80d9-4012-a029-f5bfe0e10efe",
       "durationSeconds": 3,
-      "plotDescription": "08—11秒｜回身相遇。摄影机小弧线随转身，切脚部。",
+      "plotDescription": "07—10秒｜转头相遇。摄影机稳定短跟，切脚部。",
       "shotSize": "中全景",
-      "characterAction": "女主听见画外招呼，转头微笑、转身向朋友走。",
+      "characterAction": "女主注意到画外朋友示意，小幅转头微笑，再向朋友迈步；不用大幅转身。",
       "sceneTags": "街区咖啡馆",
       "lightingAndAtmosphere": "柔和自然侧光，暖灰底色与真实鞋色；人物神态自然。",
-      "audioEffects": "简短招呼声后配。",
+      "audioEffects": "脚步、远处杯碟与街区底声；人物无对白。；旁白统一后配，各段现场声择优保留。",
       "videoReference": {
         "referenceFrameImage": "https://libtv-res.liblib.art/sd-gen-save-img/genius_playground/image/8edd84f7434f4da5ab70846b7064e724/952484536_3cec1fafaf7840abb133059e76591e70.png"
       },
       "imageGenerationPrompt": "女主听见画外招呼，转头微笑、转身向朋友走。 仅表达当前静态参考的构图；动作与摄影待视频验证。",
-      "videoMotionPrompt": "女主听见画外招呼，转头微笑、转身向朋友走。 摄影机小弧线随转身，切脚部。 真实自然步态，鞋型鞋色结构保持不变，同镜头不换鞋、不换人、不变空间，无字幕。"
+      "videoMotionPrompt": "女主注意到画外朋友示意，小幅转头微笑，再向朋友迈步；不用大幅转身。 摄影机稳定短跟，切脚部。 同人同鞋同空间，真实步态，演员不说话、不做口型；画外旁白和文字后期统一制作。",
+      "dialogue": "画外旁白（统一音轨，跨镜延续，不是逐镜重复）：贝强鞋业，把休闲鞋做进不同日常。"
     },
     {
       "id": "a2caaa9a-25ee-46d0-baae-3d889a1fecc7",
       "durationSeconds": 2,
-      "plotDescription": "11—13秒｜白织鞋轻转身。木框擦镜，接下一场景树干。",
+      "plotDescription": "10—12秒｜白织鞋轻转身。木框擦镜，接下一场景树干。",
       "shotSize": "低位近景",
       "characterAction": "转脚而后迈步，鞋底正常贴地，织面自然受光。",
       "sceneTags": "街区咖啡馆",
       "lightingAndAtmosphere": "柔和自然侧光，暖灰底色与真实鞋色；人物神态自然。",
-      "audioEffects": "鞋底与石板的轻脚步。",
+      "audioEffects": "鞋底与石板的轻脚步。；旁白统一后配，各段现场声择优保留。",
       "videoReference": {
         "referenceFrameImage": "https://libtv-res.liblib.art/sd-gen-save-img/genius_playground/image/8edd84f7434f4da5ab70846b7064e724/952502596_9da848c57cf04e8e816845b025341b2e.png"
       },
       "imageGenerationPrompt": "转脚而后迈步，鞋底正常贴地，织面自然受光。 仅表达当前静态参考的构图；动作与摄影待视频验证。",
-      "videoMotionPrompt": "转脚而后迈步，鞋底正常贴地，织面自然受光。 木框擦镜，接下一场景树干。 真实自然步态，鞋型鞋色结构保持不变，同镜头不换鞋、不换人、不变空间，无字幕。"
+      "videoMotionPrompt": "转脚而后迈步，鞋底正常贴地，织面自然受光。 木框擦镜，接下一场景树干。 同人同鞋同空间，真实步态，演员不说话、不做口型；画外旁白和文字后期统一制作。",
+      "dialogue": "画外旁白（统一音轨，跨镜延续，不是逐镜重复）：贝强鞋业，把休闲鞋做进不同日常。"
     },
     {
       "id": "4f2710b5-6f5d-4e55-a1be-b6e546b96926",
-      "durationSeconds": 4,
-      "plotDescription": "13—17秒｜回头等你。延续同一行进方向，切鞋。",
+      "durationSeconds": 3,
+      "plotDescription": "12—15秒｜回头等你。延续同一行进方向，切鞋。",
       "shotSize": "中全景",
-      "characterAction": "女主正常步行，回头等同行者，笑后继续；稳定侧跟。",
+      "characterAction": "女主正常步行，小幅回头等同行者，笑后继续；稳定侧跟。",
       "sceneTags": "城市绿道",
       "lightingAndAtmosphere": "柔和自然侧光，暖灰底色与真实鞋色；人物神态自然。",
-      "audioEffects": "风、叶声，音乐保持轻快。",
+      "audioEffects": "风、叶声，音乐保持轻快。；旁白统一后配，各段现场声择优保留。",
       "videoReference": {
         "referenceFrameImage": "https://libtv-res.liblib.art/sd-gen-save-img/genius_playground/image/8edd84f7434f4da5ab70846b7064e724/952474607_79745226d29048948bda2c91e80fced2.png"
       },
       "imageGenerationPrompt": "女主正常步行，回头等同行者，笑后继续；稳定侧跟。 仅表达当前静态参考的构图；动作与摄影待视频验证。",
-      "videoMotionPrompt": "女主正常步行，回头等同行者，笑后继续；稳定侧跟。 延续同一行进方向，切鞋。 真实自然步态，鞋型鞋色结构保持不变，同镜头不换鞋、不换人、不变空间，无字幕。"
+      "videoMotionPrompt": "女主正常步行，小幅回头等同行者，笑后继续；稳定侧跟。 延续同一行进方向，切鞋。 同人同鞋同空间，真实步态，演员不说话、不做口型；画外旁白和文字后期统一制作。",
+      "dialogue": "画外旁白（统一音轨，跨镜延续，不是逐镜重复）：贝强鞋业，把休闲鞋做进不同日常。"
     },
     {
       "id": "fe691cef-184c-4853-b384-8c559ecfbdad",
-      "durationSeconds": 2,
-      "plotDescription": "17—19秒｜蓝白向前。按鞋面斜线切产品近摄。",
+      "durationSeconds": 1,
+      "plotDescription": "15—16秒｜蓝白向前。按鞋面斜线切产品近摄。",
       "shotSize": "低位近景",
       "characterAction": "侧跟步态，前掌接地后跟自然抬起，白底曲线清楚。",
       "sceneTags": "城市绿道",
       "lightingAndAtmosphere": "柔和自然侧光，暖灰底色与真实鞋色；人物神态自然。",
-      "audioEffects": "自然步声。",
+      "audioEffects": "自然步声。；旁白统一后配，各段现场声择优保留。",
       "videoReference": {
         "referenceFrameImage": "https://libtv-res.liblib.art/sd-gen-save-img/genius_playground/image/8edd84f7434f4da5ab70846b7064e724/952504744_f1b204bd5bf843b28fa564e285f8cc4d.png"
       },
       "imageGenerationPrompt": "侧跟步态，前掌接地后跟自然抬起，白底曲线清楚。 仅表达当前静态参考的构图；动作与摄影待视频验证。",
-      "videoMotionPrompt": "侧跟步态，前掌接地后跟自然抬起，白底曲线清楚。 按鞋面斜线切产品近摄。 真实自然步态，鞋型鞋色结构保持不变，同镜头不换鞋、不换人、不变空间，无字幕。"
+      "videoMotionPrompt": "侧跟步态，前掌接地后跟自然抬起，白底曲线清楚。 按鞋面斜线切产品近摄。 同人同鞋同空间，真实步态，演员不说话、不做口型；画外旁白和文字后期统一制作。",
+      "dialogue": "演员无对白；此段保留声音呼吸。"
     },
     {
       "id": "1db92227-b4b3-47ec-a03b-1c85ea533782",
-      "durationSeconds": 1,
-      "plotDescription": "19—20秒｜包头与走线。几何斜线匹配下一镜。",
+      "durationSeconds": 2,
+      "plotDescription": "16—18秒｜包头与走线。几何斜线匹配下一镜。",
       "shotSize": "微距特写",
       "characterAction": "R1601包头与双道走线微距，短距离掠过。",
       "sceneTags": "城市楼门",
       "lightingAndAtmosphere": "柔和自然侧光，暖灰底色与真实鞋色；人物神态自然。",
-      "audioEffects": "细节节奏点一。",
+      "audioEffects": "细节节奏点一；统一画外旁白开始。；旁白统一后配，各段现场声择优保留。",
       "videoReference": {
         "referenceFrameImage": "https://libtv-res.liblib.art/sd-gen-save-img/genius_playground/image/8edd84f7434f4da5ab70846b7064e724/952505053_3d207b4e1dac454db2424d77c31a41c0.png"
       },
       "imageGenerationPrompt": "R1601包头与双道走线微距，短距离掠过。 仅表达当前静态参考的构图；动作与摄影待视频验证。",
-      "videoMotionPrompt": "R1601包头与双道走线微距，短距离掠过。 几何斜线匹配下一镜。 真实自然步态，鞋型鞋色结构保持不变，同镜头不换鞋、不换人、不变空间，无字幕。"
+      "videoMotionPrompt": "R1601包头与双道走线微距，短距离掠过。 几何斜线匹配下一镜。 同人同鞋同空间，真实步态，演员不说话、不做口型；画外旁白和文字后期统一制作。",
+      "dialogue": "画外旁白（统一音轨，跨镜延续，不是逐镜重复）：包头走线、镂空织面、蓝白拼接，细节看得见。"
     },
     {
       "id": "2feeb51b-dce1-4d36-a736-44b5b2827287",
-      "durationSeconds": 1,
-      "plotDescription": "20—21秒｜镂空织面。纹理节奏切蓝白拼接。",
+      "durationSeconds": 2,
+      "plotDescription": "18—20秒｜镂空织面。纹理节奏切蓝白拼接。",
       "shotSize": "微距特写",
       "characterAction": "R1218同一白色织面，焦点轻移至镂空纹理。",
       "sceneTags": "街区咖啡馆",
       "lightingAndAtmosphere": "柔和自然侧光，暖灰底色与真实鞋色；人物神态自然。",
-      "audioEffects": "细节节奏点二。",
+      "audioEffects": "细节节奏点二；统一旁白延续。；旁白统一后配，各段现场声择优保留。",
       "videoReference": {
         "referenceFrameImage": "https://libtv-res.liblib.art/sd-gen-save-img/genius_playground/image/8edd84f7434f4da5ab70846b7064e724/952506925_995aa2d643c346e289b899c76edd296f.png"
       },
       "imageGenerationPrompt": "R1218同一白色织面，焦点轻移至镂空纹理。 仅表达当前静态参考的构图；动作与摄影待视频验证。",
-      "videoMotionPrompt": "R1218同一白色织面，焦点轻移至镂空纹理。 纹理节奏切蓝白拼接。 真实自然步态，鞋型鞋色结构保持不变，同镜头不换鞋、不换人、不变空间，无字幕。"
+      "videoMotionPrompt": "R1218同一白色织面，焦点轻移至镂空纹理。 纹理节奏切蓝白拼接。 同人同鞋同空间，真实步态，演员不说话、不做口型；画外旁白和文字后期统一制作。",
+      "dialogue": "画外旁白（统一音轨，跨镜延续，不是逐镜重复）：包头走线、镂空织面、蓝白拼接，细节看得见。"
     },
     {
       "id": "d984aa09-53d4-4e98-983d-bf6ec0d4b95b",
-      "durationSeconds": 1,
-      "plotDescription": "21—22秒｜拼接与底线。第三个细节后回到人物。",
+      "durationSeconds": 2,
+      "plotDescription": "20—22秒｜拼接与底线。第三个细节后回到人物。",
       "shotSize": "微距特写",
       "characterAction": "A502蓝白拼接和白底侧线微距，短移镜。",
       "sceneTags": "城市绿道",
       "lightingAndAtmosphere": "柔和自然侧光，暖灰底色与真实鞋色；人物神态自然。",
-      "audioEffects": "细节节奏点三。",
+      "audioEffects": "细节节奏点三；统一旁白延续。；旁白统一后配，各段现场声择优保留。",
       "videoReference": {
         "referenceFrameImage": "https://libtv-res.liblib.art/sd-gen-save-img/genius_playground/image/8edd84f7434f4da5ab70846b7064e724/952507164_c740a2ee48b145318aabd7a002067e98.png"
       },
       "imageGenerationPrompt": "A502蓝白拼接和白底侧线微距，短移镜。 仅表达当前静态参考的构图；动作与摄影待视频验证。",
-      "videoMotionPrompt": "A502蓝白拼接和白底侧线微距，短移镜。 第三个细节后回到人物。 真实自然步态，鞋型鞋色结构保持不变，同镜头不换鞋、不换人、不变空间，无字幕。"
+      "videoMotionPrompt": "A502蓝白拼接和白底侧线微距，短移镜。 第三个细节后回到人物。 同人同鞋同空间，真实步态，演员不说话、不做口型；画外旁白和文字后期统一制作。",
+      "dialogue": "画外旁白（统一音轨，跨镜延续，不是逐镜重复）：包头走线、镂空织面、蓝白拼接，细节看得见。"
     },
     {
       "id": "a58b1ebd-e823-4eb9-a74a-de2288086ef9",
@@ -191,27 +229,29 @@
       "characterAction": "绿道女主朝前迈开，摄影机稍退，空间和情绪打开。",
       "sceneTags": "城市绿道",
       "lightingAndAtmosphere": "柔和自然侧光，暖灰底色与真实鞋色；人物神态自然。",
-      "audioEffects": "旋律打开，保留一次脚步。",
+      "audioEffects": "旋律打开，保留一次脚步。；旁白统一后配，各段现场声择优保留。",
       "videoReference": {
         "referenceFrameImage": "https://libtv-res.liblib.art/sd-gen-save-img/genius_playground/image/8edd84f7434f4da5ab70846b7064e724/952474607_79745226d29048948bda2c91e80fced2.png"
       },
       "imageGenerationPrompt": "绿道女主朝前迈开，摄影机稍退，空间和情绪打开。 仅表达当前静态参考的构图；动作与摄影待视频验证。",
-      "videoMotionPrompt": "绿道女主朝前迈开，摄影机稍退，空间和情绪打开。 保留同一连续尾段进入片尾。 真实自然步态，鞋型鞋色结构保持不变，同镜头不换鞋、不换人、不变空间，无字幕。"
+      "videoMotionPrompt": "绿道女主朝前迈开，摄影机稍退，空间和情绪打开。 保留同一连续尾段进入片尾。 同人同鞋同空间，真实步态，演员不说话、不做口型；画外旁白和文字后期统一制作。",
+      "dialogue": "画外旁白（统一音轨，跨镜延续，不是逐镜重复）：选款、来样、开发合作，和贝强聊聊。"
     },
     {
       "id": "97d93802-7458-4696-be2c-a2dc047fd419",
       "durationSeconds": 3,
-      "plotDescription": "25—28秒｜贝强出现。左上或中上排字避开平台界面；不让模型写字。",
+      "plotDescription": "25—28秒｜贝强合作邀请。左上或中上排字避开平台界面；不让模型写字。",
       "shotSize": "中全景叠字",
-      "characterAction": "延续移动画面，后期排字：贝强鞋业／休闲鞋开发与制造／款式合作·来样沟通。",
+      "characterAction": "延续移动画面，后期排字：贝强鞋业／休闲鞋开发与制造／款式合作·来样开发沟通。",
       "sceneTags": "城市绿道",
       "lightingAndAtmosphere": "柔和自然侧光，暖灰底色与真实鞋色；人物神态自然。",
-      "audioEffects": "音乐短收尾，无硬口号口播。",
+      "audioEffects": "音乐短收尾，统一画外旁白完成合作邀请。；旁白统一后配，各段现场声择优保留。",
       "videoReference": {
         "referenceFrameImage": "https://libtv-res.liblib.art/sd-gen-save-img/genius_playground/image/8edd84f7434f4da5ab70846b7064e724/952474607_79745226d29048948bda2c91e80fced2.png"
       },
       "imageGenerationPrompt": "延续移动画面，后期排字：贝强鞋业／休闲鞋开发与制造／款式合作·来样沟通。 仅表达当前静态参考的构图；动作与摄影待视频验证。",
-      "videoMotionPrompt": "延续移动画面，后期排字：贝强鞋业／休闲鞋开发与制造／款式合作·来样沟通。 左上或中上排字避开平台界面；不让模型写字。 真实自然步态，鞋型鞋色结构保持不变，同镜头不换鞋、不换人、不变空间，无字幕。"
+      "videoMotionPrompt": "延续移动画面，后期排字：贝强鞋业／休闲鞋开发与制造／款式合作·来样开发沟通。 左上或中上排字避开平台界面；不让模型写字。 同人同鞋同空间，真实步态，演员不说话、不做口型；画外旁白和文字后期统一制作。",
+      "dialogue": "画外旁白（统一音轨，跨镜延续，不是逐镜重复）：选款、来样、开发合作，和贝强聊聊。"
     }
   ],
   "micro_detail_keyframes": "generated_pending_video_test"
