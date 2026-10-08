@@ -1,0 +1,25 @@
+{
+  "product_id": "1601973009551",
+  "title": "Wholesale Mens Casual Sneakers Low Top Lace Up Walking Shoes with Stitched Toe Panels for Everyday Wear",
+  "title_match": true,
+  "status": "modified",
+  "display": "N",
+  "protected_fields": {
+    "product_sku": true,
+    "main_image": true,
+    "attributes": true,
+    "category_id": true,
+    "sourcing_trade": true
+  },
+  "request_id": "0b51802d17914264936543212",
+  "score_response": {
+    "result": {
+      "final_score": "3.90",
+      "boutique_tag": 1,
+      "problem_map": "{\"ruleScoreMap\":{\"title_word_miss_core_error\":0.0,\"imageQualityBad\":0.0,\"image_scale\":0.0,\"title_word_error\":0.0,\"image_num\":0.0},\"errorReasonSkuImageMoreMap\":{},\"errorReasonTitleWordMissErrorMap\":{},\"errorReasonList\":[],\"errorReasonTitleWordErrorMap\":{},\"extendCheckMap\":{\"imageText\":true,\"sku_image\":false,\"title_word_miss_core_error\":true,\"imageQualityBad\":true,\"sku_text\":false,\"imageSubTitle\":false,\"category\":true,\"title_word_error\":true,\"selling_point_attribute_conflict\":false},\"errorReasonCategoryMap\":{},\"errorReasonSkuTextMap\":{},\"errorReasonSubTitleMap\":{},\"errorReasonMap\":{\"en\":\"The title mentions 'Lining Options', but the attribute list states 'Lining Material: Not specified', indicating a conflict regarding the lining material.\",\"zh\":\"标题中提到“Lining Options”，但属性列表中却显示“Lining Material: Not specified”，表明内里材质存在不一致。\"},\"errorReasonSellingPointAttributeMap\":{},\"errorReasonSkuImageMap\":{},\"extendProblemMap\":{\"imageText\":true,\"title_word_miss_core_error\":false,\"imageQualityBad\":false,\"imageSubTitle\":false,\"image_scale\":false,\"inventory\":false,\"title_word_error\":false,\"selling_point_attribute_conflict\":false,\"image_num\":false,\"freightRate\":false,\"sku_image\":false,\"sku_text\":false,\"price\":false,\"category\":false},\"errorReasonQualityBadMap\":{},\"errorReasonSkuTextMoreMap\":{}}"
+    },
+    "request_id": "0b51802d17914265003403549",
+    "_trace_id_": "212e559c17914265001996894e0e38"
+  },
+  "observed_at": "2026-10-08T02:28:21.499353+00:00"
+}

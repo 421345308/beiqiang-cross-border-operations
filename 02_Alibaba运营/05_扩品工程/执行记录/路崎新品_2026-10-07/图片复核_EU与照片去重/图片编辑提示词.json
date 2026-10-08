@@ -1,0 +1,36 @@
+{
+  "tool": "built-in image_gen",
+  "jobs": [
+    {
+      "name": "059_EU",
+      "source": "C:/Users/spq/Desktop/贝强/02_Alibaba运营/05_扩品工程/执行记录/路崎新品_2026-10-07/059_color_selection.png",
+      "prompt": "Edit only the bottom size-label wording on this existing image. Replace 'Supplier size labels: 36–48' with exactly 'EU sizes: 36–48'. Preserve every shoe photograph, the three color names, layout, colors and all other text exactly unchanged. Do not redraw or modify shoes, bodies, eyelets, stitching, sole or colors."
+    },
+    {
+      "name": "060_EU",
+      "source": "C:/Users/spq/Desktop/贝强/02_Alibaba运营/05_扩品工程/执行记录/路崎新品_2026-10-07/060_color_selection.png",
+      "prompt": "Edit only the bottom size-label wording on this existing image. Replace 'Supplier size labels: 36–48' with exactly 'EU sizes: 36–48'. Preserve every shoe photograph, the three color names, layout, colors and all other text exactly unchanged. Do not redraw or modify shoes, bodies, eyelets, stitching, sole or colors."
+    },
+    {
+      "name": "061_EU",
+      "source": "C:/Users/spq/Desktop/贝强/02_Alibaba运营/05_扩品工程/执行记录/路崎新品_2026-10-07/061_assets/LQ061_M6.png",
+      "prompt": "Edit only the bottom size-label wording on this existing image. Replace 'Supplier size labels: 36–48' with exactly 'EU sizes: 36–48'. Preserve every shoe photograph, the three color names, layout, colors and all other text exactly unchanged. Do not redraw or modify shoes, bodies, eyelets, stitching, sole or colors."
+    },
+    {
+      "name": "059_sole",
+      "source": "C:/Users/spq/Desktop/贝强/99_临时区/路崎新品_2026-10-07/059_assets/14.jpg",
+      "prompt": "Edit this exact original sole photograph for a B2B footwear detail image. Keep the shoe, actual brown outsole tread and circular inset exactly unchanged, including every groove and side seam. Remove ALL Chinese text, logos, performance icons and material or functional statements. Replace header with only 'Outsole Detail' and small text 'Pattern and sidewall shown for visual reference'. Neutral light gray background, large original sole photo. No rubber, grip, stability, rebound, lightweight, support, cushioning, medical or other performance claims. Do not invent or reconstruct tread."
+    },
+    {
+      "name": "060_sole",
+      "source": "C:/Users/spq/Desktop/贝强/99_临时区/路崎新品_2026-10-07/060_assets/15.jpg",
+      "prompt": "Edit this exact original sole photograph for a B2B footwear detail image. Keep the shoe, actual black outsole tread and upper geometry exactly unchanged, including every groove and side seam. Remove ALL Chinese text, logos, performance icons and material or functional statements. Replace header with only 'Outsole Detail' and small text 'Pattern and sidewall shown for visual reference'. Neutral light gray background, large original sole photo. No rubber, grip, stability, rebound, lightweight, support, cushioning, medical or other performance claims. Do not invent or reconstruct tread."
+    },
+    {
+      "name": "2667_pair",
+      "source": "C:/Users/spq/Desktop/贝强/02_Alibaba运营/05_扩品工程/执行记录/路崎新品_2026-10-07/其他候选_assets/2667/source_25.jpg",
+      "prompt": "Edit this exact existing photograph of the person holding the pair of black shoes. Preserve the original person, hands, two shoes, laces, stitched toe geometry, eyelets, sole and background exactly. Remove ALL existing text, including tiny EVA/lightweight claims and slogans. Only add a simple header 'Pair and Upper Detail'. No material or performance claims, no shoe reconstruction or altered proportions. Clean B2B detail image, preserve vertical format."
+    }
+  ],
+  "limits": "真实原图编辑；文字去除与EU标签统一，非实物或性能证据"
+}
