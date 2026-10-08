@@ -76,3 +76,16 @@ Firecrawl 当前无可调用工具，使用公开搜索和官方页面；未读�
 - 可通过连续帧、时间戳、切点检查和必要的逐帧比对分析动作；稀疏抽帧不能证明连续性。不能把连续帧分析表述为实际听过声音或原速看完视频。
 - 已为首段 7.5—9.0 秒提取原24fps的36张连续帧，未插帧；检查文件：`99_临时区/LibTV商业短视频调研_2026-10-08/edit/motion_check_7_5_to_9_0/`。正式结论以实际视觉阅读为准，本次仅演示检查方式，不是全片验收。
 - 已实际阅读连续帧图：可追踪鞋部抬起、接地和再次抬起的状态，以及之后切到男主的镜头；未据此断言动作自然或全片通过。后续采用全片分镜扫描、重点动作连续帧检查与声音单独检查；当前没有实际听完音频的证据。
+
+## 音视频理解工具核查（2026-10-08）
+
+- 用户指出仅靠图片、未完整检查声音会影响视频制作质量，并明确询问 Hypit 与其他音视频理解工具；本轮为只读能力核查，不构成新服务登录、上传素材或付费调用授权。
+- “接收端”指本会话/工具将媒体送入模型的接口。当前没有已验证的原生视频输入通道，不能仅凭这个事实推断底层模型绝对不支持视频或音频。Base64 在支持视频的接口中确实可以作为传输方式，单纯编码不会使不支持视频的字段变得可用。
+- 已按 Hypit skill 查看参考理解与环境说明，实际调用已安装 CLI 帮助。固定安装版本0.1.8；media支持probe/cut/frames/tile/tiles/boundaries/fetch；transcribe通过所选Runtime Profile的WhisperX alignment Endpoint建立词级时间。它的参考研究流程结合帧、片段及转录，不自动给当前对话增加视频输入。
+- 当前 `99_临时区/Hypit_POC/hypit.runtime.json` 仅声明 `media.local` 与 `hyperframes.local`；该配置没有转录Endpoint。不能将Hypit已安装写成转录已接通。
+- 默认Python环境能发现whisper、faster_whisper、librosa、torch、soundfile，未发现whisperx或google.genai；默认Whisper缓存有small.pt、tiny.pt、tiny.en.pt。已实际验证whisper与torch可导入且CUDA可用。本轮并未完成对参考片的本地转录，程序/缓存存在不等于分析结果已验证。
+- 本轮检查的进程环境未发现GEMINI_API_KEY、GOOGLE_API_KEY、OPENAI_API_KEY、ELEVENLABS_API_KEY、HYPIHUB_API_KEY；这不证明其他凭证存储没有账号，仅说明尚未验证该会话可调用这些云服务。
+- 已探测首段MP4确有AAC音轨：44.1kHz、双声道、15.092971秒。音轨存在不能证明内容已听取。
+- [Gemini视频理解官方文档](https://ai.google.dev/gemini-api/docs/video-understanding)支持视频文件、Base64 inline等输入，并联合处理声音与画面；文档同时指出默认视觉采样可能漏过快速动作，可调整采样/片段检查。因此适合补全音画语义分析，不能替代鞋型与动作逐帧复核。
+- [Gemini音频理解官方文档](https://ai.google.dev/gemini-api/docs/audio)覆盖语音及非语音声音；[OpenAI转录说明](https://developers.openai.com/api/docs/guides/transcription)和[WhisperX项目](https://github.com/m-bain/whisperX)支持语音内容/时间定位路线。语音转录不能代替配乐、音效与混音判断。
+- 推荐待讨论组合：LibTV继续承接用户指定画布/生成；音画理解模型分析叙事、动作与声音关系；本地帧序列复核产品和快速动作；本地音频分析检查响度、削波、静音、节奏等客观指标；Hypit按实际编排需求使用。未执行新服务接入或制作。
