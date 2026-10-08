@@ -22,7 +22,7 @@
     "2620": "22 original images preserved unchanged; source material/unknown segment fields reviewed against fresh current schema; 12 product images locally reviewed and official photobank accepted. No product ID or formal SKU binding/public QA.",
     "2590": "12 final images individually compared to original source photographs; all 12 official photobank uploads accepted with exclusive ledgers and request IDs. Three color assets ready; no product ID, formal SKU binding or public QA.",
     "2658": "All nine available original photos inspected; 11 final images locally reviewed, M5 first crop rejected and revised to full-body original context, all 11 official photobank accepted. Source material conflict retained, no pig-leather/EVA/width claims. Exact source/model and scoped 384 first-hero comparisons saved. No product ID, formal color binding, EU confirmation or public QA. Existing local differentiation loader/contract PASS on saved evidence only; 345 unassociated source IDs retained, no global clearance inferred.",
-    "2652": "Original-size side-pattern/material/color review saved with file SHA256. Actual motifs differ; no blanket three-stripe conclusion. No brand clearance, EU confirmation or product creation claimed.",
+    "2652": "All 11 final product images individually compared with original source photos, accepted by official photobank with request IDs and exclusive ledgers, two single-color images ready. Main/detail originals disjoint. No source outsole reconstruction, material/performance invention or physical marking removal. Scoped source/model/hero check saved; no new product ID, EU confirmation, formal SKU binding or public QA.",
     "2651": "12 final images individually compared with source originals and accepted by official photobank, three single-color assets included. Main/detail raw photographs disjoint. D2 actual folded shoe and limited tread preserved. Scoped source/model/selected-hero differentiation documented; no product ID, formal color binding, EU confirmation or public QA. Existing local differentiation loader/contract PASS on saved evidence only; 345 unassociated source IDs retained, no global clearance inferred."
   },
   "browser": {
@@ -40,14 +40,14 @@
   },
   "remaining": [
     "EU/code-system evidence for the remaining nine candidate styles; pending question not repeated",
-    "Revalidate actual payload model/title/hero binding against saved differentiation context and current evidence hashes before any create; five contexts prepared; other candidates not yet prepared",
+    "Revalidate actual payload model/title/hero and current evidence hashes before create; all eight scoped contexts prepared, not global clearance. Complete size and commercial required fields before full current-Schema validation.",
     "2660 actual partial outsole brand mark/sales-route evidence and material/lining version dimension; prior writer stopped, reconciliation complete",
     "Candidate-specific material/IP and applicable unknown-value validation; do not inherit obsolete blanket holds",
     "Normal public color QA and exact-ID current keyword field evidence",
     "Remaining candidate publishing, formal readback, review, real score and applicable public QA"
   ],
-  "updated_at": "2026-10-08T06:55:19.726437+00:00",
-  "photobank_accepted_count": 82,
+  "updated_at": "2026-10-08T07:17:38.431108+00:00",
+  "photobank_accepted_count": 93,
   "current_schema_read": {
     "category_id": 201334413,
     "request_id": "213f5a2117914340099897128",
@@ -62,7 +62,8 @@
       "2620",
       "2590",
       "2658",
-      "2651"
+      "2651",
+      "2652"
     ],
     "status": "PASS_SCOPED_LOCAL_ONLY",
     "catalog_records": 384,
@@ -75,7 +76,10 @@
       "056",
       "2659",
       "2620",
-      "2590"
+      "2590",
+      "2658",
+      "2651",
+      "2652"
     ],
     "status": "INCOMPLETE_FRAGMENTS_DO_NOT_SUBMIT",
     "existing_serializers_reused": true,
@@ -84,6 +88,18 @@
     "materials": "Explicit current custom-negative rules checked; no platform payload acceptance claimed",
     "no_unconfirmed_EU_written": true,
     "full_payload_validated": false,
-    "new_product_ids": []
+    "new_product_ids": [],
+    "company_images_each": 5,
+    "faq_each": 6,
+    "buyer_copy_styles": [
+      "2639",
+      "056",
+      "2659",
+      "2620",
+      "2590",
+      "2658",
+      "2651",
+      "2652"
+    ]
   }
 }
