@@ -1,7 +1,7 @@
 {
   "version": 1,
   "date": "2026-10-08",
-  "status": "preproduction_no_generation",
+  "status": "rejected_by_user_do_not_execute",
   "projectUuid": "9f9e453d99184fcd8483476b14ba15dc",
   "canvasUrl": "https://www.liblib.tv/canvas?projectId=9f9e453d99184fcd8483476b14ba15dc",
   "cliVersionVerified": "1.1.3",
@@ -393,5 +393,11 @@
       "nodeKey": "f2274401-c94c-4af6-9a49-84e8177509fa",
       "content": "产品：逐款对照原图，检查鞋头、开口、缝线、鞋底纹路与比例；同框不串款。\n动作：检查抖动、漂浮、变形及光影连续；重点段用连续帧，不以稀疏抽帧判定自然。\n声音：分析音乐/音效/切点对应，检查突变、静音、削波和整体响度。\n文字：贝强名称准确，承诺有依据，采购行动单一。\n\n音画联合理解尚未接通：先以参考片段实测，再纳入成片审片。转录不代替音乐/音效判断。\n生成完成、剪辑完成、验收、发布分别记录。本轮没有已验收视频。"
     }
-  ]
+  ],
+  "rejection": {
+    "date": "2026-10-08",
+    "reason": "用户明确否决产品目录式静图、轻推与换款结构；参考研究未充分落实到动作、情境及商业创意。",
+    "incorrectAssumptionWithdrawn": "不提供真实工厂内容不等于禁止人物、AI演员或生活情境。",
+    "replacement": "创意重研_01.md 为讨论稿，尚无认可的新基线。"
+  }
 }
