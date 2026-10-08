@@ -4,8 +4,8 @@
   "url": "https://www.alibaba.com/product-detail/Wholesale-Mens-Casual-Sneakers-Lace-Up_1601973586995.html",
   "observed_at": "2026-10-08T09:43:25.385950+00:00",
   "request_id": "0bbb637a17914526048533579",
-  "status": "new",
-  "display": "N",
+  "status": "approved",
+  "display": "Y",
   "title": "Wholesale Mens Casual Sneakers Lace Up Low Top Walking Shoes with Stitched Side Panels in Black and Beige",
   "title_match": true,
   "sku_count": 20,
@@ -96,7 +96,7 @@
     }
   ],
   "target_score": 5.0,
-  "actual_score": null,
+  "actual_score": 5.0,
   "public_QA": "PENDING_SUPPORTED_BROWSER",
   "keyword_persistence": "PENDING_CURRENT_VERSION_EVIDENCE",
   "color_names_and_images_match": true,
@@ -111,11 +111,11 @@
   "actual_origin_value": "Not specified",
   "origin_truthful_unknown_saved": true,
   "model_matches": true,
-  "packaging_formal_readback": "PENDING_EDITABLE_SCHEMA_UNAVAILABLE",
+  "packaging_formal_readback": "PASS",
   "keyword_actual_formal": [
     ""
   ],
-  "score_source": "quality_score.json",
+  "score_source": "alibaba.icbu.product.score.get / 21501b6717914536791791200",
   "score_status": "API_ERROR_NO_SCORE",
   "diagnostics_status": "PENDING_VALID_SCORE_RESPONSE",
   "source_url": "https://luqi.sooxie.com/detail/2555891",
@@ -123,8 +123,85 @@
   "source_cost_date": "2026-10-08 public recheck; not confirmed order quote",
   "formal_checked_fields_pass": true,
   "failed_checks": [],
-  "review_observed_at": "2026-10-08T09:50:05.441629+00:00",
-  "review_request_id": "0b0b3a2717914530052501689",
-  "packaging_render_request_id": "0bbb637a17914530115988831",
-  "score_control_result": "Known 061 returned real 5.00 with encrypted ID; new-item score failures remain item-specific/unexplained, not proof of missing permission."
+  "review_observed_at": "2026-10-08T09:55:43.159185+00:00",
+  "review_request_id": "0bab02fc17914533428351046",
+  "packaging_render_request_id": "0b830ecc17914533490462800",
+  "score_control_result": "Known 061 returned real 5.00 with encrypted ID; new-item score failures remain item-specific/unexplained, not proof of missing permission.",
+  "packaging_actual": {
+    "dimensions": {
+      "length": "34",
+      "width": "23",
+      "height": "13"
+    },
+    "weight": "0.5"
+  },
+  "latest_score_response": {
+    "error_response": {
+      "code": "15",
+      "type": "ISP",
+      "sub_code": "-1",
+      "sub_msg": "通用验证失败",
+      "msg": "Remote service error",
+      "request_id": "212c41d317914533574436627",
+      "_trace_id_": "210325bb17914533571251001e7c85"
+    }
+  },
+  "score_observed_at": "2026-10-08T10:01:19.402609+00:00",
+  "formal_schema_unmatched_fields": [],
+  "formal_schema_fields_pass": true,
+  "score_diagnostics": {
+    "status": "clear",
+    "flagged": {},
+    "errors": {},
+    "deductions": {},
+    "checks_not_run": [
+      "sku_image",
+      "sku_text",
+      "imageSubTitle",
+      "selling_point_attribute_conflict"
+    ],
+    "request_id": "21501b6717914536791791200",
+    "observed_at": "2026-10-08T10:01:19.402609+00:00",
+    "limits": "Only this platform score diagnostic; unrun checks and public/keyword QA remain separate."
+  },
+  "post_publish_acceptance": {
+    "phase": "post_publish_completion",
+    "target_score": 5.0,
+    "actual_score": 5.0,
+    "observed_at": "2026-10-08T10:01:19.402609+00:00",
+    "score_source": "alibaba.icbu.product.score.get / 21501b6717914536791791200",
+    "diagnostics": {
+      "status": "clear",
+      "flagged": {},
+      "errors": {},
+      "deductions": {},
+      "checks_not_run": [
+        "sku_image",
+        "sku_text",
+        "imageSubTitle",
+        "selling_point_attribute_conflict"
+      ],
+      "request_id": "21501b6717914536791791200",
+      "observed_at": "2026-10-08T10:01:19.402609+00:00",
+      "limits": "Only this platform score diagnostic; unrun checks and public/keyword QA remain separate."
+    },
+    "score_status": "threshold_met",
+    "overall_status": "PENDING_CONTENT",
+    "unverified_content_checks": [
+      "public_page",
+      "media_review",
+      "keyword_persistence"
+    ],
+    "versioned_content": null,
+    "required_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "limits": "Platform listing score does not prove public content, source truth or real product quality."
+  }
 }

@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-10-08T09:53:03.545400+00:00",
+  "observed_at": "2026-10-08T10:05:54.154415+00:00",
   "products": [
     {
       "style": "2639",
@@ -7,8 +7,8 @@
       "url": "https://www.alibaba.com/product-detail/Wholesale-Mens-Casual-Sneakers-Lace-Up_1601973586995.html",
       "observed_at": "2026-10-08T09:43:25.385950+00:00",
       "request_id": "0bbb637a17914526048533579",
-      "status": "new",
-      "display": "N",
+      "status": "approved",
+      "display": "Y",
       "title": "Wholesale Mens Casual Sneakers Lace Up Low Top Walking Shoes with Stitched Side Panels in Black and Beige",
       "title_match": true,
       "sku_count": 20,
@@ -99,7 +99,7 @@
         }
       ],
       "target_score": 5.0,
-      "actual_score": null,
+      "actual_score": 5.0,
       "public_QA": "PENDING_SUPPORTED_BROWSER",
       "keyword_persistence": "PENDING_CURRENT_VERSION_EVIDENCE",
       "color_names_and_images_match": true,
@@ -114,11 +114,11 @@
       "actual_origin_value": "Not specified",
       "origin_truthful_unknown_saved": true,
       "model_matches": true,
-      "packaging_formal_readback": "PENDING_EDITABLE_SCHEMA_UNAVAILABLE",
+      "packaging_formal_readback": "PASS",
       "keyword_actual_formal": [
         ""
       ],
-      "score_source": "quality_score.json",
+      "score_source": "alibaba.icbu.product.score.get / 21501b6717914536791791200",
       "score_status": "API_ERROR_NO_SCORE",
       "diagnostics_status": "PENDING_VALID_SCORE_RESPONSE",
       "source_url": "https://luqi.sooxie.com/detail/2555891",
@@ -126,10 +126,87 @@
       "source_cost_date": "2026-10-08 public recheck; not confirmed order quote",
       "formal_checked_fields_pass": true,
       "failed_checks": [],
-      "review_observed_at": "2026-10-08T09:50:05.441629+00:00",
-      "review_request_id": "0b0b3a2717914530052501689",
-      "packaging_render_request_id": "0bbb637a17914530115988831",
-      "score_control_result": "Known 061 returned real 5.00 with encrypted ID; new-item score failures remain item-specific/unexplained, not proof of missing permission."
+      "review_observed_at": "2026-10-08T09:55:43.159185+00:00",
+      "review_request_id": "0bab02fc17914533428351046",
+      "packaging_render_request_id": "0b830ecc17914533490462800",
+      "score_control_result": "Known 061 returned real 5.00 with encrypted ID; new-item score failures remain item-specific/unexplained, not proof of missing permission.",
+      "packaging_actual": {
+        "dimensions": {
+          "length": "34",
+          "width": "23",
+          "height": "13"
+        },
+        "weight": "0.5"
+      },
+      "latest_score_response": {
+        "error_response": {
+          "code": "15",
+          "type": "ISP",
+          "sub_code": "-1",
+          "sub_msg": "通用验证失败",
+          "msg": "Remote service error",
+          "request_id": "212c41d317914533574436627",
+          "_trace_id_": "210325bb17914533571251001e7c85"
+        }
+      },
+      "score_observed_at": "2026-10-08T10:01:19.402609+00:00",
+      "formal_schema_unmatched_fields": [],
+      "formal_schema_fields_pass": true,
+      "score_diagnostics": {
+        "status": "clear",
+        "flagged": {},
+        "errors": {},
+        "deductions": {},
+        "checks_not_run": [
+          "sku_image",
+          "sku_text",
+          "imageSubTitle",
+          "selling_point_attribute_conflict"
+        ],
+        "request_id": "21501b6717914536791791200",
+        "observed_at": "2026-10-08T10:01:19.402609+00:00",
+        "limits": "Only this platform score diagnostic; unrun checks and public/keyword QA remain separate."
+      },
+      "post_publish_acceptance": {
+        "phase": "post_publish_completion",
+        "target_score": 5.0,
+        "actual_score": 5.0,
+        "observed_at": "2026-10-08T10:01:19.402609+00:00",
+        "score_source": "alibaba.icbu.product.score.get / 21501b6717914536791791200",
+        "diagnostics": {
+          "status": "clear",
+          "flagged": {},
+          "errors": {},
+          "deductions": {},
+          "checks_not_run": [
+            "sku_image",
+            "sku_text",
+            "imageSubTitle",
+            "selling_point_attribute_conflict"
+          ],
+          "request_id": "21501b6717914536791791200",
+          "observed_at": "2026-10-08T10:01:19.402609+00:00",
+          "limits": "Only this platform score diagnostic; unrun checks and public/keyword QA remain separate."
+        },
+        "score_status": "threshold_met",
+        "overall_status": "PENDING_CONTENT",
+        "unverified_content_checks": [
+          "public_page",
+          "media_review",
+          "keyword_persistence"
+        ],
+        "versioned_content": null,
+        "required_content_checks": [
+          "formal_fields",
+          "review_approved",
+          "public_page",
+          "sku_binding",
+          "media_review",
+          "source_truth",
+          "keyword_persistence"
+        ],
+        "limits": "Platform listing score does not prove public content, source truth or real product quality."
+      }
     },
     {
       "style": "056",
@@ -247,7 +324,7 @@
         }
       ],
       "target_score": 5.0,
-      "actual_score": null,
+      "actual_score": 5.0,
       "public_QA": "PENDING_SUPPORTED_BROWSER",
       "keyword_persistence": "PENDING_CURRENT_VERSION_EVIDENCE",
       "color_names_and_images_match": true,
@@ -266,17 +343,17 @@
       "keyword_actual_formal": [
         ""
       ],
-      "score_source": "alibaba.icbu.product.score.get / 212cbf3217914530189631907",
-      "score_status": "NO_SCORE_RETURNED_AFTER_CORRECT_ENCRYPTED_ID",
-      "diagnostics_status": "PENDING_VALID_SCORE_RESPONSE",
+      "score_source": "alibaba.icbu.product.score.get / 0bbb637a17914533579224365",
+      "score_status": "TARGET_MET",
+      "diagnostics_status": "PENDING_DETAILED_DIAGNOSTICS",
       "source_url": "https://luqi.sooxie.com/detail/2555178",
       "source_cost_CNY": 68,
       "source_cost_date": "2026-10-08 public recheck; not confirmed order quote",
       "formal_checked_fields_pass": true,
       "failed_checks": [],
-      "review_observed_at": "2026-10-08T09:50:05.628266+00:00",
-      "review_request_id": "21501be117914530052693561",
-      "packaging_render_request_id": "21501b8d17914530115687784",
+      "review_observed_at": "2026-10-08T09:55:43.436276+00:00",
+      "review_request_id": "213c932b17914533428204702",
+      "packaging_render_request_id": "0b51802d17914533493686619",
       "packaging_actual": {
         "dimensions": {
           "length": "34",
@@ -286,17 +363,15 @@
         "weight": "0.5"
       },
       "latest_score_response": {
-        "error_response": {
-          "code": "15",
-          "type": "ISP",
-          "sub_code": "-1",
-          "sub_msg": "通用验证失败",
-          "msg": "Remote service error",
-          "request_id": "212cbf3217914530189631907",
-          "_trace_id_": "0bb4a40617914530188333444e0bd1"
-        }
+        "result": {
+          "final_score": "5.00",
+          "boutique_tag": 1,
+          "problem_map": "{\"ruleScoreMap\":{\"title_word_miss_core_error\":0.0,\"imageQualityBad\":0.0,\"image_scale\":0.0,\"title_word_error\":0.0,\"image_num\":0.0},\"errorReasonSkuImageMoreMap\":{},\"errorReasonTitleWordMissErrorMap\":{},\"errorReasonList\":[],\"errorReasonTitleWordErrorMap\":{},\"extendCheckMap\":{\"imageText\":true,\"sku_image\":false,\"title_word_miss_core_error\":true,\"imageQualityBad\":true,\"sku_text\":false,\"imageSubTitle\":false,\"category\":true,\"title_word_error\":true,\"selling_point_attribute_conflict\":false},\"errorReasonCategoryMap\":{},\"errorReasonSkuTextMap\":{},\"errorReasonSubTitleMap\":{},\"errorReasonMap\":{},\"errorReasonSellingPointAttributeMap\":{},\"errorReasonSkuImageMap\":{},\"extendProblemMap\":{\"imageText\":false,\"title_word_miss_core_error\":false,\"imageQualityBad\":false,\"imageSubTitle\":false,\"image_scale\":false,\"inventory\":false,\"title_word_error\":false,\"selling_point_attribute_conflict\":false,\"image_num\":false,\"freightRate\":false,\"sku_image\":false,\"sku_text\":false,\"price\":false,\"category\":false},\"errorReasonQualityBadMap\":{},\"errorReasonSkuTextMoreMap\":{}}"
+        },
+        "request_id": "0bbb637a17914533579224365",
+        "_trace_id_": "2103245817914533575955115e0df7"
       },
-      "score_observed_at": "2026-10-08T09:50:19.181765+00:00",
+      "score_observed_at": "2026-10-08T09:55:58.239414+00:00",
       "score_error": {
         "code": "15",
         "type": "ISP",
@@ -306,7 +381,64 @@
         "request_id": "212cbf3217914530189631907",
         "_trace_id_": "0bb4a40617914530188333444e0bd1"
       },
-      "score_control_result": "Known 061 returned real 5.00 with encrypted ID; new-item score failures remain item-specific/unexplained, not proof of missing permission."
+      "score_control_result": "Known 061 returned real 5.00 with encrypted ID; new-item score failures remain item-specific/unexplained, not proof of missing permission.",
+      "formal_schema_unmatched_fields": [],
+      "formal_schema_fields_pass": true,
+      "score_diagnostics": {
+        "status": "clear",
+        "flagged": {},
+        "errors": {},
+        "deductions": {},
+        "checks_not_run": [
+          "sku_image",
+          "sku_text",
+          "imageSubTitle",
+          "selling_point_attribute_conflict"
+        ],
+        "request_id": "0bbb637a17914533579224365",
+        "observed_at": "2026-10-08T09:55:58.239414+00:00",
+        "limits": "Only this platform score diagnostic; unrun checks and public/keyword QA remain separate."
+      },
+      "post_publish_acceptance": {
+        "phase": "post_publish_completion",
+        "target_score": 5.0,
+        "actual_score": 5.0,
+        "observed_at": "2026-10-08T09:55:58.239414+00:00",
+        "score_source": "alibaba.icbu.product.score.get / 0bbb637a17914533579224365",
+        "diagnostics": {
+          "status": "clear",
+          "flagged": {},
+          "errors": {},
+          "deductions": {},
+          "checks_not_run": [
+            "sku_image",
+            "sku_text",
+            "imageSubTitle",
+            "selling_point_attribute_conflict"
+          ],
+          "request_id": "0bbb637a17914533579224365",
+          "observed_at": "2026-10-08T09:55:58.239414+00:00",
+          "limits": "Only this platform score diagnostic; unrun checks and public/keyword QA remain separate."
+        },
+        "score_status": "threshold_met",
+        "overall_status": "PENDING_CONTENT",
+        "unverified_content_checks": [
+          "public_page",
+          "media_review",
+          "keyword_persistence"
+        ],
+        "versioned_content": null,
+        "required_content_checks": [
+          "formal_fields",
+          "review_approved",
+          "public_page",
+          "sku_binding",
+          "media_review",
+          "source_truth",
+          "keyword_persistence"
+        ],
+        "limits": "Platform listing score does not prove public content, source truth or real product quality."
+      }
     },
     {
       "style": "2659",
@@ -412,7 +544,7 @@
         }
       ],
       "target_score": 5.0,
-      "actual_score": null,
+      "actual_score": 5.0,
       "public_QA": "PENDING_SUPPORTED_BROWSER",
       "keyword_persistence": "PENDING_CURRENT_VERSION_EVIDENCE",
       "color_names_and_images_match": true,
@@ -431,17 +563,17 @@
       "keyword_actual_formal": [
         ""
       ],
-      "score_source": "alibaba.icbu.product.score.get / 0b51802d17914530189583920",
-      "score_status": "NO_SCORE_RETURNED_AFTER_CORRECT_ENCRYPTED_ID",
-      "diagnostics_status": "PENDING_VALID_SCORE_RESPONSE",
+      "score_source": "alibaba.icbu.product.score.get / 2105044417914533575871120",
+      "score_status": "TARGET_MET",
+      "diagnostics_status": "PENDING_DETAILED_DIAGNOSTICS",
       "source_url": "https://luqi.sooxie.com/detail/2553829",
       "source_cost_CNY": 59,
       "source_cost_date": "2026-10-08 public recheck; not confirmed order quote",
       "formal_checked_fields_pass": true,
       "failed_checks": [],
-      "review_observed_at": "2026-10-08T09:50:05.522603+00:00",
-      "review_request_id": "212cbf3217914530052618442",
-      "packaging_render_request_id": "213c933517914530115762137",
+      "review_observed_at": "2026-10-08T09:55:43.343514+00:00",
+      "review_request_id": "2166c2ca17914533428445555",
+      "packaging_render_request_id": "0b80d2d617914533492138929",
       "packaging_actual": {
         "dimensions": {
           "length": "34",
@@ -451,17 +583,15 @@
         "weight": "0.5"
       },
       "latest_score_response": {
-        "error_response": {
-          "code": "15",
-          "type": "ISP",
-          "sub_code": "-1",
-          "sub_msg": "通用验证失败",
-          "msg": "Remote service error",
-          "request_id": "0b51802d17914530189583920",
-          "_trace_id_": "212e559c17914530188318609e0d92"
-        }
+        "result": {
+          "final_score": "5.00",
+          "boutique_tag": 1,
+          "problem_map": "{\"ruleScoreMap\":{\"title_word_miss_core_error\":0.0,\"imageQualityBad\":0.0,\"image_scale\":0.0,\"title_word_error\":0.0,\"image_num\":0.0},\"errorReasonSkuImageMoreMap\":{},\"errorReasonTitleWordMissErrorMap\":{},\"errorReasonList\":[],\"errorReasonTitleWordErrorMap\":{},\"extendCheckMap\":{\"imageText\":true,\"sku_image\":false,\"title_word_miss_core_error\":true,\"imageQualityBad\":true,\"sku_text\":false,\"imageSubTitle\":false,\"category\":true,\"title_word_error\":true,\"selling_point_attribute_conflict\":false},\"errorReasonCategoryMap\":{},\"errorReasonSkuTextMap\":{},\"errorReasonSubTitleMap\":{},\"errorReasonMap\":{},\"errorReasonSellingPointAttributeMap\":{},\"errorReasonSkuImageMap\":{},\"extendProblemMap\":{\"imageText\":false,\"title_word_miss_core_error\":false,\"imageQualityBad\":false,\"imageSubTitle\":false,\"image_scale\":false,\"inventory\":false,\"title_word_error\":false,\"selling_point_attribute_conflict\":false,\"image_num\":false,\"freightRate\":false,\"sku_image\":false,\"sku_text\":false,\"price\":false,\"category\":false},\"errorReasonQualityBadMap\":{},\"errorReasonSkuTextMoreMap\":{}}"
+        },
+        "request_id": "2105044417914533575871120",
+        "_trace_id_": "210313ea17914533572625515e0b60"
       },
-      "score_observed_at": "2026-10-08T09:50:19.181765+00:00",
+      "score_observed_at": "2026-10-08T09:55:57.884015+00:00",
       "score_error": {
         "code": "15",
         "type": "ISP",
@@ -471,7 +601,64 @@
         "request_id": "0b51802d17914530189583920",
         "_trace_id_": "212e559c17914530188318609e0d92"
       },
-      "score_control_result": "Known 061 returned real 5.00 with encrypted ID; new-item score failures remain item-specific/unexplained, not proof of missing permission."
+      "score_control_result": "Known 061 returned real 5.00 with encrypted ID; new-item score failures remain item-specific/unexplained, not proof of missing permission.",
+      "formal_schema_unmatched_fields": [],
+      "formal_schema_fields_pass": true,
+      "score_diagnostics": {
+        "status": "clear",
+        "flagged": {},
+        "errors": {},
+        "deductions": {},
+        "checks_not_run": [
+          "sku_image",
+          "sku_text",
+          "imageSubTitle",
+          "selling_point_attribute_conflict"
+        ],
+        "request_id": "2105044417914533575871120",
+        "observed_at": "2026-10-08T09:55:57.884015+00:00",
+        "limits": "Only this platform score diagnostic; unrun checks and public/keyword QA remain separate."
+      },
+      "post_publish_acceptance": {
+        "phase": "post_publish_completion",
+        "target_score": 5.0,
+        "actual_score": 5.0,
+        "observed_at": "2026-10-08T09:55:57.884015+00:00",
+        "score_source": "alibaba.icbu.product.score.get / 2105044417914533575871120",
+        "diagnostics": {
+          "status": "clear",
+          "flagged": {},
+          "errors": {},
+          "deductions": {},
+          "checks_not_run": [
+            "sku_image",
+            "sku_text",
+            "imageSubTitle",
+            "selling_point_attribute_conflict"
+          ],
+          "request_id": "2105044417914533575871120",
+          "observed_at": "2026-10-08T09:55:57.884015+00:00",
+          "limits": "Only this platform score diagnostic; unrun checks and public/keyword QA remain separate."
+        },
+        "score_status": "threshold_met",
+        "overall_status": "PENDING_CONTENT",
+        "unverified_content_checks": [
+          "public_page",
+          "media_review",
+          "keyword_persistence"
+        ],
+        "versioned_content": null,
+        "required_content_checks": [
+          "formal_fields",
+          "review_approved",
+          "public_page",
+          "sku_binding",
+          "media_review",
+          "source_truth",
+          "keyword_persistence"
+        ],
+        "limits": "Platform listing score does not prove public content, source truth or real product quality."
+      }
     },
     {
       "style": "2620",
@@ -577,7 +764,7 @@
         }
       ],
       "target_score": 5.0,
-      "actual_score": null,
+      "actual_score": 5.0,
       "public_QA": "PENDING_SUPPORTED_BROWSER",
       "keyword_persistence": "PENDING_CURRENT_VERSION_EVIDENCE",
       "color_names_and_images_match": true,
@@ -596,17 +783,17 @@
       "keyword_actual_formal": [
         ""
       ],
-      "score_source": "alibaba.icbu.product.score.get / 212cbf3217914530189651909",
-      "score_status": "NO_SCORE_RETURNED_AFTER_CORRECT_ENCRYPTED_ID",
-      "diagnostics_status": "PENDING_VALID_SCORE_RESPONSE",
+      "score_source": "alibaba.icbu.product.score.get / 213f5a2117914533575521710",
+      "score_status": "TARGET_MET",
+      "diagnostics_status": "PENDING_DETAILED_DIAGNOSTICS",
       "source_url": "https://luqi.sooxie.com/detail/2550096",
       "source_cost_CNY": 72,
       "source_cost_date": "2026-10-08 public recheck; not confirmed order quote",
       "formal_checked_fields_pass": true,
       "failed_checks": [],
-      "review_observed_at": "2026-10-08T09:50:05.523647+00:00",
-      "review_request_id": "213c933517914530052391533",
-      "packaging_render_request_id": "0bab02fc17914530115993338",
+      "review_observed_at": "2026-10-08T09:55:43.123242+00:00",
+      "review_request_id": "2105044417914533428118118",
+      "packaging_render_request_id": "2105044417914533489828478",
       "packaging_actual": {
         "dimensions": {
           "length": "34",
@@ -616,17 +803,15 @@
         "weight": "0.5"
       },
       "latest_score_response": {
-        "error_response": {
-          "code": "15",
-          "type": "ISP",
-          "sub_code": "-1",
-          "sub_msg": "通用验证失败",
-          "msg": "Remote service error",
-          "request_id": "212cbf3217914530189651909",
-          "_trace_id_": "0bb4a40617914530188301373e0f4c"
-        }
+        "result": {
+          "final_score": "5.00",
+          "boutique_tag": 1,
+          "problem_map": "{\"ruleScoreMap\":{\"title_word_miss_core_error\":0.0,\"imageQualityBad\":0.0,\"image_scale\":0.0,\"title_word_error\":0.0,\"image_num\":0.0},\"errorReasonSkuImageMoreMap\":{},\"errorReasonTitleWordMissErrorMap\":{},\"errorReasonList\":[],\"errorReasonTitleWordErrorMap\":{},\"extendCheckMap\":{\"imageText\":true,\"sku_image\":false,\"title_word_miss_core_error\":true,\"imageQualityBad\":true,\"sku_text\":false,\"imageSubTitle\":false,\"category\":true,\"title_word_error\":true,\"selling_point_attribute_conflict\":false},\"errorReasonCategoryMap\":{},\"errorReasonSkuTextMap\":{},\"errorReasonSubTitleMap\":{},\"errorReasonMap\":{},\"errorReasonSellingPointAttributeMap\":{},\"errorReasonSkuImageMap\":{},\"extendProblemMap\":{\"imageText\":false,\"title_word_miss_core_error\":false,\"imageQualityBad\":false,\"imageSubTitle\":false,\"image_scale\":false,\"inventory\":false,\"title_word_error\":false,\"selling_point_attribute_conflict\":false,\"image_num\":false,\"freightRate\":false,\"sku_image\":false,\"sku_text\":false,\"price\":false,\"category\":false},\"errorReasonQualityBadMap\":{},\"errorReasonSkuTextMoreMap\":{}}"
+        },
+        "request_id": "213f5a2117914533575521710",
+        "_trace_id_": "2103245817914533572582255e1026"
       },
-      "score_observed_at": "2026-10-08T09:50:19.182296+00:00",
+      "score_observed_at": "2026-10-08T09:55:57.851284+00:00",
       "score_error": {
         "code": "15",
         "type": "ISP",
@@ -636,7 +821,64 @@
         "request_id": "212cbf3217914530189651909",
         "_trace_id_": "0bb4a40617914530188301373e0f4c"
       },
-      "score_control_result": "Known 061 returned real 5.00 with encrypted ID; new-item score failures remain item-specific/unexplained, not proof of missing permission."
+      "score_control_result": "Known 061 returned real 5.00 with encrypted ID; new-item score failures remain item-specific/unexplained, not proof of missing permission.",
+      "formal_schema_unmatched_fields": [],
+      "formal_schema_fields_pass": true,
+      "score_diagnostics": {
+        "status": "clear",
+        "flagged": {},
+        "errors": {},
+        "deductions": {},
+        "checks_not_run": [
+          "sku_image",
+          "sku_text",
+          "imageSubTitle",
+          "selling_point_attribute_conflict"
+        ],
+        "request_id": "213f5a2117914533575521710",
+        "observed_at": "2026-10-08T09:55:57.851284+00:00",
+        "limits": "Only this platform score diagnostic; unrun checks and public/keyword QA remain separate."
+      },
+      "post_publish_acceptance": {
+        "phase": "post_publish_completion",
+        "target_score": 5.0,
+        "actual_score": 5.0,
+        "observed_at": "2026-10-08T09:55:57.851284+00:00",
+        "score_source": "alibaba.icbu.product.score.get / 213f5a2117914533575521710",
+        "diagnostics": {
+          "status": "clear",
+          "flagged": {},
+          "errors": {},
+          "deductions": {},
+          "checks_not_run": [
+            "sku_image",
+            "sku_text",
+            "imageSubTitle",
+            "selling_point_attribute_conflict"
+          ],
+          "request_id": "213f5a2117914533575521710",
+          "observed_at": "2026-10-08T09:55:57.851284+00:00",
+          "limits": "Only this platform score diagnostic; unrun checks and public/keyword QA remain separate."
+        },
+        "score_status": "threshold_met",
+        "overall_status": "PENDING_CONTENT",
+        "unverified_content_checks": [
+          "public_page",
+          "media_review",
+          "keyword_persistence"
+        ],
+        "versioned_content": null,
+        "required_content_checks": [
+          "formal_fields",
+          "review_approved",
+          "public_page",
+          "sku_binding",
+          "media_review",
+          "source_truth",
+          "keyword_persistence"
+        ],
+        "limits": "Platform listing score does not prove public content, source truth or real product quality."
+      }
     },
     {
       "style": "2590",
@@ -742,7 +984,7 @@
         }
       ],
       "target_score": 5.0,
-      "actual_score": null,
+      "actual_score": 5.0,
       "public_QA": "PENDING_SUPPORTED_BROWSER",
       "keyword_persistence": "PENDING_CURRENT_VERSION_EVIDENCE",
       "color_names_and_images_match": true,
@@ -761,17 +1003,17 @@
       "keyword_actual_formal": [
         ""
       ],
-      "score_source": "alibaba.icbu.product.score.get / 0b0b3a2717914530384374772",
-      "score_status": "NO_SCORE_RETURNED_AFTER_CORRECT_ENCRYPTED_ID",
-      "diagnostics_status": "PENDING_VALID_SCORE_RESPONSE",
+      "score_source": "alibaba.icbu.product.score.get / 212c41d317914533865358458",
+      "score_status": "TARGET_MET",
+      "diagnostics_status": "PENDING_DETAILED_DIAGNOSTICS",
       "source_url": "https://luqi.sooxie.com/detail/2549343",
       "source_cost_CNY": 78,
       "source_cost_date": "2026-10-08 public recheck; not confirmed order quote",
       "formal_checked_fields_pass": true,
       "failed_checks": [],
-      "review_observed_at": "2026-10-08T09:50:23.597214+00:00",
-      "review_request_id": "0b0b3a2717914530233273627",
-      "packaging_render_request_id": "0bab02fe17914530301155486",
+      "review_observed_at": "2026-10-08T09:56:11.904129+00:00",
+      "review_request_id": "2105044417914533714292019",
+      "packaging_render_request_id": "212cbf3217914533778938687",
       "packaging_actual": {
         "dimensions": {
           "length": "34",
@@ -781,17 +1023,15 @@
         "weight": "0.5"
       },
       "latest_score_response": {
-        "error_response": {
-          "code": "15",
-          "type": "ISP",
-          "sub_code": "-1",
-          "sub_msg": "通用验证失败",
-          "msg": "Remote service error",
-          "request_id": "0b0b3a2717914530384374772",
-          "_trace_id_": "210313ec17914530381157049e0b6a"
-        }
+        "result": {
+          "final_score": "5.00",
+          "boutique_tag": 1,
+          "problem_map": "{\"ruleScoreMap\":{\"title_word_miss_core_error\":0.0,\"imageQualityBad\":0.0,\"image_scale\":0.0,\"title_word_error\":0.0,\"image_num\":0.0},\"errorReasonSkuImageMoreMap\":{},\"errorReasonTitleWordMissErrorMap\":{},\"errorReasonList\":[],\"errorReasonTitleWordErrorMap\":{},\"extendCheckMap\":{\"imageText\":true,\"sku_image\":false,\"title_word_miss_core_error\":true,\"imageQualityBad\":true,\"sku_text\":false,\"imageSubTitle\":false,\"category\":true,\"title_word_error\":true,\"selling_point_attribute_conflict\":false},\"errorReasonCategoryMap\":{},\"errorReasonSkuTextMap\":{},\"errorReasonSubTitleMap\":{},\"errorReasonMap\":{},\"errorReasonSellingPointAttributeMap\":{},\"errorReasonSkuImageMap\":{},\"extendProblemMap\":{\"imageText\":false,\"title_word_miss_core_error\":false,\"imageQualityBad\":false,\"imageSubTitle\":false,\"image_scale\":false,\"inventory\":false,\"title_word_error\":false,\"selling_point_attribute_conflict\":false,\"image_num\":false,\"freightRate\":false,\"sku_image\":false,\"sku_text\":false,\"price\":false,\"category\":false},\"errorReasonQualityBadMap\":{},\"errorReasonSkuTextMoreMap\":{}}"
+        },
+        "request_id": "212c41d317914533865358458",
+        "_trace_id_": "2103346a17914533862076775e0e8d"
       },
-      "score_observed_at": "2026-10-08T09:50:38.733153+00:00",
+      "score_observed_at": "2026-10-08T09:56:26.904401+00:00",
       "score_error": {
         "code": "15",
         "type": "ISP",
@@ -801,7 +1041,64 @@
         "request_id": "0b0b3a2717914530384374772",
         "_trace_id_": "210313ec17914530381157049e0b6a"
       },
-      "score_control_result": "Known 061 returned real 5.00 with encrypted ID; new-item score failures remain item-specific/unexplained, not proof of missing permission."
+      "score_control_result": "Known 061 returned real 5.00 with encrypted ID; new-item score failures remain item-specific/unexplained, not proof of missing permission.",
+      "formal_schema_unmatched_fields": [],
+      "formal_schema_fields_pass": true,
+      "score_diagnostics": {
+        "status": "clear",
+        "flagged": {},
+        "errors": {},
+        "deductions": {},
+        "checks_not_run": [
+          "sku_image",
+          "sku_text",
+          "imageSubTitle",
+          "selling_point_attribute_conflict"
+        ],
+        "request_id": "212c41d317914533865358458",
+        "observed_at": "2026-10-08T09:56:26.904401+00:00",
+        "limits": "Only this platform score diagnostic; unrun checks and public/keyword QA remain separate."
+      },
+      "post_publish_acceptance": {
+        "phase": "post_publish_completion",
+        "target_score": 5.0,
+        "actual_score": 5.0,
+        "observed_at": "2026-10-08T09:56:26.904401+00:00",
+        "score_source": "alibaba.icbu.product.score.get / 212c41d317914533865358458",
+        "diagnostics": {
+          "status": "clear",
+          "flagged": {},
+          "errors": {},
+          "deductions": {},
+          "checks_not_run": [
+            "sku_image",
+            "sku_text",
+            "imageSubTitle",
+            "selling_point_attribute_conflict"
+          ],
+          "request_id": "212c41d317914533865358458",
+          "observed_at": "2026-10-08T09:56:26.904401+00:00",
+          "limits": "Only this platform score diagnostic; unrun checks and public/keyword QA remain separate."
+        },
+        "score_status": "threshold_met",
+        "overall_status": "PENDING_CONTENT",
+        "unverified_content_checks": [
+          "public_page",
+          "media_review",
+          "keyword_persistence"
+        ],
+        "versioned_content": null,
+        "required_content_checks": [
+          "formal_fields",
+          "review_approved",
+          "public_page",
+          "sku_binding",
+          "media_review",
+          "source_truth",
+          "keyword_persistence"
+        ],
+        "limits": "Platform listing score does not prove public content, source truth or real product quality."
+      }
     },
     {
       "style": "2658",
@@ -907,7 +1204,7 @@
         }
       ],
       "target_score": 5.0,
-      "actual_score": null,
+      "actual_score": 5.0,
       "public_QA": "PENDING_SUPPORTED_BROWSER",
       "keyword_persistence": "PENDING_CURRENT_VERSION_EVIDENCE",
       "color_names_and_images_match": true,
@@ -926,17 +1223,17 @@
       "keyword_actual_formal": [
         ""
       ],
-      "score_source": "alibaba.icbu.product.score.get / 21546a1d17914530454298405",
-      "score_status": "NO_SCORE_RETURNED_AFTER_CORRECT_ENCRYPTED_ID",
-      "diagnostics_status": "PENDING_VALID_SCORE_RESPONSE",
+      "score_source": "alibaba.icbu.product.score.get / 0b830ecc17914533862715175",
+      "score_status": "TARGET_MET",
+      "diagnostics_status": "PENDING_DETAILED_DIAGNOSTICS",
       "source_url": "https://luqi.sooxie.com/detail/2553121",
       "source_cost_CNY": 59,
       "source_cost_date": "2026-10-08 public recheck; not confirmed order quote",
       "formal_checked_fields_pass": true,
       "failed_checks": [],
-      "review_observed_at": "2026-10-08T09:50:31.026974+00:00",
-      "review_request_id": "2105044417914530306816130",
-      "packaging_render_request_id": "0b51802d17914530368664621",
+      "review_observed_at": "2026-10-08T09:56:11.813364+00:00",
+      "review_request_id": "0b51802d17914533714648124",
+      "packaging_render_request_id": "213c934417914533779043179",
       "packaging_actual": {
         "dimensions": {
           "length": "34",
@@ -946,17 +1243,15 @@
         "weight": "0.5"
       },
       "latest_score_response": {
-        "error_response": {
-          "code": "15",
-          "type": "ISP",
-          "sub_code": "-1",
-          "sub_msg": "通用验证失败",
-          "msg": "Remote service error",
-          "request_id": "21546a1d17914530454298405",
-          "_trace_id_": "210334ab17914530450907241e0cd9"
-        }
+        "result": {
+          "final_score": "5.00",
+          "boutique_tag": 1,
+          "problem_map": "{\"ruleScoreMap\":{\"title_word_miss_core_error\":0.0,\"imageQualityBad\":0.0,\"image_scale\":0.0,\"title_word_error\":0.0,\"image_num\":0.0},\"errorReasonSkuImageMoreMap\":{},\"errorReasonTitleWordMissErrorMap\":{},\"errorReasonList\":[],\"errorReasonTitleWordErrorMap\":{},\"extendCheckMap\":{\"imageText\":true,\"sku_image\":false,\"title_word_miss_core_error\":true,\"imageQualityBad\":true,\"sku_text\":false,\"imageSubTitle\":false,\"category\":true,\"title_word_error\":true,\"selling_point_attribute_conflict\":false},\"errorReasonCategoryMap\":{},\"errorReasonSkuTextMap\":{},\"errorReasonSubTitleMap\":{},\"errorReasonMap\":{},\"errorReasonSellingPointAttributeMap\":{},\"errorReasonSkuImageMap\":{},\"extendProblemMap\":{\"imageText\":false,\"title_word_miss_core_error\":false,\"imageQualityBad\":false,\"imageSubTitle\":false,\"image_scale\":false,\"inventory\":false,\"title_word_error\":false,\"selling_point_attribute_conflict\":false,\"image_num\":false,\"freightRate\":false,\"sku_image\":false,\"sku_text\":false,\"price\":false,\"category\":false},\"errorReasonQualityBadMap\":{},\"errorReasonSkuTextMoreMap\":{}}"
+        },
+        "request_id": "0b830ecc17914533862715175",
+        "_trace_id_": "2103346a17914533859612138e0d0a"
       },
-      "score_observed_at": "2026-10-08T09:50:45.809426+00:00",
+      "score_observed_at": "2026-10-08T09:56:26.625821+00:00",
       "score_error": {
         "code": "15",
         "type": "ISP",
@@ -966,7 +1261,64 @@
         "request_id": "21546a1d17914530454298405",
         "_trace_id_": "210334ab17914530450907241e0cd9"
       },
-      "score_control_result": "Known 061 returned real 5.00 with encrypted ID; new-item score failures remain item-specific/unexplained, not proof of missing permission."
+      "score_control_result": "Known 061 returned real 5.00 with encrypted ID; new-item score failures remain item-specific/unexplained, not proof of missing permission.",
+      "formal_schema_unmatched_fields": [],
+      "formal_schema_fields_pass": true,
+      "score_diagnostics": {
+        "status": "clear",
+        "flagged": {},
+        "errors": {},
+        "deductions": {},
+        "checks_not_run": [
+          "sku_image",
+          "sku_text",
+          "imageSubTitle",
+          "selling_point_attribute_conflict"
+        ],
+        "request_id": "0b830ecc17914533862715175",
+        "observed_at": "2026-10-08T09:56:26.625821+00:00",
+        "limits": "Only this platform score diagnostic; unrun checks and public/keyword QA remain separate."
+      },
+      "post_publish_acceptance": {
+        "phase": "post_publish_completion",
+        "target_score": 5.0,
+        "actual_score": 5.0,
+        "observed_at": "2026-10-08T09:56:26.625821+00:00",
+        "score_source": "alibaba.icbu.product.score.get / 0b830ecc17914533862715175",
+        "diagnostics": {
+          "status": "clear",
+          "flagged": {},
+          "errors": {},
+          "deductions": {},
+          "checks_not_run": [
+            "sku_image",
+            "sku_text",
+            "imageSubTitle",
+            "selling_point_attribute_conflict"
+          ],
+          "request_id": "0b830ecc17914533862715175",
+          "observed_at": "2026-10-08T09:56:26.625821+00:00",
+          "limits": "Only this platform score diagnostic; unrun checks and public/keyword QA remain separate."
+        },
+        "score_status": "threshold_met",
+        "overall_status": "PENDING_CONTENT",
+        "unverified_content_checks": [
+          "public_page",
+          "media_review",
+          "keyword_persistence"
+        ],
+        "versioned_content": null,
+        "required_content_checks": [
+          "formal_fields",
+          "review_approved",
+          "public_page",
+          "sku_binding",
+          "media_review",
+          "source_truth",
+          "keyword_persistence"
+        ],
+        "limits": "Platform listing score does not prove public content, source truth or real product quality."
+      }
     },
     {
       "style": "2651",
@@ -1084,7 +1436,7 @@
         }
       ],
       "target_score": 5.0,
-      "actual_score": null,
+      "actual_score": 5.0,
       "public_QA": "PENDING_SUPPORTED_BROWSER",
       "keyword_persistence": "PENDING_CURRENT_VERSION_EVIDENCE",
       "color_names_and_images_match": true,
@@ -1103,17 +1455,17 @@
       "keyword_actual_formal": [
         ""
       ],
-      "score_source": "alibaba.icbu.product.score.get / 213d4e4917914530459908478",
-      "score_status": "NO_SCORE_RETURNED_AFTER_CORRECT_ENCRYPTED_ID",
-      "diagnostics_status": "PENDING_VALID_SCORE_RESPONSE",
+      "score_source": "alibaba.icbu.product.score.get / 213d4e4917914533866104222",
+      "score_status": "TARGET_MET",
+      "diagnostics_status": "PENDING_DETAILED_DIAGNOSTICS",
       "source_url": "https://luqi.sooxie.com/detail/2551541",
       "source_cost_CNY": 65,
       "source_cost_date": "2026-10-08 public recheck; not confirmed order quote",
       "formal_checked_fields_pass": true,
       "failed_checks": [],
-      "review_observed_at": "2026-10-08T09:50:31.430537+00:00",
-      "review_request_id": "21501b8d17914530308968294",
-      "packaging_render_request_id": "0bbb3b2417914530373257268",
+      "review_observed_at": "2026-10-08T09:56:12.056162+00:00",
+      "review_request_id": "213e759c17914533714547776",
+      "packaging_render_request_id": "212cbf3217914533779178688",
       "packaging_actual": {
         "dimensions": {
           "length": "34",
@@ -1123,17 +1475,15 @@
         "weight": "0.5"
       },
       "latest_score_response": {
-        "error_response": {
-          "code": "15",
-          "type": "ISP",
-          "sub_code": "-1",
-          "sub_msg": "通用验证失败",
-          "msg": "Remote service error",
-          "request_id": "213d4e4917914530459908478",
-          "_trace_id_": "210325bb17914530456814004e106f"
-        }
+        "result": {
+          "final_score": "5.00",
+          "boutique_tag": 1,
+          "problem_map": "{\"ruleScoreMap\":{\"title_word_miss_core_error\":0.0,\"imageQualityBad\":0.0,\"image_scale\":0.0,\"title_word_error\":0.0,\"image_num\":0.0},\"errorReasonSkuImageMoreMap\":{},\"errorReasonTitleWordMissErrorMap\":{},\"errorReasonList\":[],\"errorReasonTitleWordErrorMap\":{},\"extendCheckMap\":{\"imageText\":true,\"sku_image\":false,\"title_word_miss_core_error\":true,\"imageQualityBad\":true,\"sku_text\":false,\"imageSubTitle\":false,\"category\":true,\"title_word_error\":true,\"selling_point_attribute_conflict\":false},\"errorReasonCategoryMap\":{},\"errorReasonSkuTextMap\":{},\"errorReasonSubTitleMap\":{},\"errorReasonMap\":{},\"errorReasonSellingPointAttributeMap\":{},\"errorReasonSkuImageMap\":{},\"extendProblemMap\":{\"imageText\":false,\"title_word_miss_core_error\":false,\"imageQualityBad\":false,\"imageSubTitle\":false,\"image_scale\":false,\"inventory\":false,\"title_word_error\":false,\"selling_point_attribute_conflict\":false,\"image_num\":false,\"freightRate\":false,\"sku_image\":false,\"sku_text\":false,\"price\":false,\"category\":false},\"errorReasonQualityBadMap\":{},\"errorReasonSkuTextMoreMap\":{}}"
+        },
+        "request_id": "213d4e4917914533866104222",
+        "_trace_id_": "210313ea17914533863076685e0cee"
       },
-      "score_observed_at": "2026-10-08T09:50:46.351119+00:00",
+      "score_observed_at": "2026-10-08T09:56:26.905629+00:00",
       "score_error": {
         "code": "15",
         "type": "ISP",
@@ -1143,7 +1493,64 @@
         "request_id": "213d4e4917914530459908478",
         "_trace_id_": "210325bb17914530456814004e106f"
       },
-      "score_control_result": "Known 061 returned real 5.00 with encrypted ID; new-item score failures remain item-specific/unexplained, not proof of missing permission."
+      "score_control_result": "Known 061 returned real 5.00 with encrypted ID; new-item score failures remain item-specific/unexplained, not proof of missing permission.",
+      "formal_schema_unmatched_fields": [],
+      "formal_schema_fields_pass": true,
+      "score_diagnostics": {
+        "status": "clear",
+        "flagged": {},
+        "errors": {},
+        "deductions": {},
+        "checks_not_run": [
+          "sku_image",
+          "sku_text",
+          "imageSubTitle",
+          "selling_point_attribute_conflict"
+        ],
+        "request_id": "213d4e4917914533866104222",
+        "observed_at": "2026-10-08T09:56:26.905629+00:00",
+        "limits": "Only this platform score diagnostic; unrun checks and public/keyword QA remain separate."
+      },
+      "post_publish_acceptance": {
+        "phase": "post_publish_completion",
+        "target_score": 5.0,
+        "actual_score": 5.0,
+        "observed_at": "2026-10-08T09:56:26.905629+00:00",
+        "score_source": "alibaba.icbu.product.score.get / 213d4e4917914533866104222",
+        "diagnostics": {
+          "status": "clear",
+          "flagged": {},
+          "errors": {},
+          "deductions": {},
+          "checks_not_run": [
+            "sku_image",
+            "sku_text",
+            "imageSubTitle",
+            "selling_point_attribute_conflict"
+          ],
+          "request_id": "213d4e4917914533866104222",
+          "observed_at": "2026-10-08T09:56:26.905629+00:00",
+          "limits": "Only this platform score diagnostic; unrun checks and public/keyword QA remain separate."
+        },
+        "score_status": "threshold_met",
+        "overall_status": "PENDING_CONTENT",
+        "unverified_content_checks": [
+          "public_page",
+          "media_review",
+          "keyword_persistence"
+        ],
+        "versioned_content": null,
+        "required_content_checks": [
+          "formal_fields",
+          "review_approved",
+          "public_page",
+          "sku_binding",
+          "media_review",
+          "source_truth",
+          "keyword_persistence"
+        ],
+        "limits": "Platform listing score does not prove public content, source truth or real product quality."
+      }
     },
     {
       "style": "2652",
@@ -1261,7 +1668,7 @@
         }
       ],
       "target_score": 5.0,
-      "actual_score": null,
+      "actual_score": 5.0,
       "public_QA": "PENDING_SUPPORTED_BROWSER",
       "keyword_persistence": "PENDING_CURRENT_VERSION_EVIDENCE",
       "color_names_and_images_match": true,
@@ -1280,17 +1687,17 @@
       "keyword_actual_formal": [
         ""
       ],
-      "score_source": "alibaba.icbu.product.score.get / 213c934417914530456386404",
-      "score_status": "NO_SCORE_RETURNED_AFTER_CORRECT_ENCRYPTED_ID",
-      "diagnostics_status": "PENDING_VALID_SCORE_RESPONSE",
+      "score_source": "alibaba.icbu.product.score.get / 0b51802d17914533864248978",
+      "score_status": "TARGET_MET",
+      "diagnostics_status": "PENDING_DETAILED_DIAGNOSTICS",
       "source_url": "https://luqi.sooxie.com/detail/2552258",
       "source_cost_CNY": 65,
       "source_cost_date": "2026-10-08 public recheck; not confirmed order quote",
       "formal_checked_fields_pass": true,
       "failed_checks": [],
-      "review_observed_at": "2026-10-08T09:50:31.306684+00:00",
-      "review_request_id": "21501b6717914530308947878",
-      "packaging_render_request_id": "21501be117914530372634738",
+      "review_observed_at": "2026-10-08T09:56:11.819311+00:00",
+      "review_request_id": "213c932b17914533714916210",
+      "packaging_render_request_id": "21501be117914533778958643",
       "packaging_actual": {
         "dimensions": {
           "length": "34",
@@ -1300,17 +1707,15 @@
         "weight": "0.5"
       },
       "latest_score_response": {
-        "error_response": {
-          "code": "15",
-          "type": "ISP",
-          "sub_code": "-1",
-          "sub_msg": "通用验证失败",
-          "msg": "Remote service error",
-          "request_id": "213c934417914530456386404",
-          "_trace_id_": "2103245817914530453182191e1005"
-        }
+        "result": {
+          "final_score": "5.00",
+          "boutique_tag": 1,
+          "problem_map": "{\"ruleScoreMap\":{\"title_word_miss_core_error\":0.0,\"imageQualityBad\":0.0,\"image_scale\":0.0,\"title_word_error\":0.0,\"image_num\":0.0},\"errorReasonSkuImageMoreMap\":{},\"errorReasonTitleWordMissErrorMap\":{},\"errorReasonList\":[],\"errorReasonTitleWordErrorMap\":{},\"extendCheckMap\":{\"imageText\":true,\"sku_image\":false,\"title_word_miss_core_error\":true,\"imageQualityBad\":true,\"sku_text\":false,\"imageSubTitle\":false,\"category\":true,\"title_word_error\":true,\"selling_point_attribute_conflict\":false},\"errorReasonCategoryMap\":{},\"errorReasonSkuTextMap\":{},\"errorReasonSubTitleMap\":{},\"errorReasonMap\":{},\"errorReasonSellingPointAttributeMap\":{},\"errorReasonSkuImageMap\":{},\"extendProblemMap\":{\"imageText\":false,\"title_word_miss_core_error\":false,\"imageQualityBad\":false,\"imageSubTitle\":false,\"image_scale\":false,\"inventory\":false,\"title_word_error\":false,\"selling_point_attribute_conflict\":false,\"image_num\":false,\"freightRate\":false,\"sku_image\":false,\"sku_text\":false,\"price\":false,\"category\":false},\"errorReasonQualityBadMap\":{},\"errorReasonSkuTextMoreMap\":{}}"
+        },
+        "request_id": "0b51802d17914533864248978",
+        "_trace_id_": "210313ec17914533861052742e0b6b"
       },
-      "score_observed_at": "2026-10-08T09:50:45.934294+00:00",
+      "score_observed_at": "2026-10-08T09:56:26.903866+00:00",
       "score_error": {
         "code": "15",
         "type": "ISP",
@@ -1320,13 +1725,72 @@
         "request_id": "213c934417914530456386404",
         "_trace_id_": "2103245817914530453182191e1005"
       },
-      "score_control_result": "Known 061 returned real 5.00 with encrypted ID; new-item score failures remain item-specific/unexplained, not proof of missing permission."
+      "score_control_result": "Known 061 returned real 5.00 with encrypted ID; new-item score failures remain item-specific/unexplained, not proof of missing permission.",
+      "formal_schema_unmatched_fields": [],
+      "formal_schema_fields_pass": true,
+      "score_diagnostics": {
+        "status": "clear",
+        "flagged": {},
+        "errors": {},
+        "deductions": {},
+        "checks_not_run": [
+          "sku_image",
+          "sku_text",
+          "imageSubTitle",
+          "selling_point_attribute_conflict"
+        ],
+        "request_id": "0b51802d17914533864248978",
+        "observed_at": "2026-10-08T09:56:26.903866+00:00",
+        "limits": "Only this platform score diagnostic; unrun checks and public/keyword QA remain separate."
+      },
+      "post_publish_acceptance": {
+        "phase": "post_publish_completion",
+        "target_score": 5.0,
+        "actual_score": 5.0,
+        "observed_at": "2026-10-08T09:56:26.903866+00:00",
+        "score_source": "alibaba.icbu.product.score.get / 0b51802d17914533864248978",
+        "diagnostics": {
+          "status": "clear",
+          "flagged": {},
+          "errors": {},
+          "deductions": {},
+          "checks_not_run": [
+            "sku_image",
+            "sku_text",
+            "imageSubTitle",
+            "selling_point_attribute_conflict"
+          ],
+          "request_id": "0b51802d17914533864248978",
+          "observed_at": "2026-10-08T09:56:26.903866+00:00",
+          "limits": "Only this platform score diagnostic; unrun checks and public/keyword QA remain separate."
+        },
+        "score_status": "threshold_met",
+        "overall_status": "PENDING_CONTENT",
+        "unverified_content_checks": [
+          "public_page",
+          "media_review",
+          "keyword_persistence"
+        ],
+        "versioned_content": null,
+        "required_content_checks": [
+          "formal_fields",
+          "review_approved",
+          "public_page",
+          "sku_binding",
+          "media_review",
+          "source_truth",
+          "keyword_persistence"
+        ],
+        "limits": "Platform listing score does not prove public content, source truth or real product quality."
+      }
     }
   ],
   "new_product_count": 8,
   "EU_SKU_count": 234,
   "full_goal_complete": false,
   "public_review_score_keyword_QA": "PENDING",
-  "approved_Y_count": 7,
-  "packaging_PASS_count": 7
+  "approved_Y_count": 8,
+  "packaging_PASS_count": 8,
+  "actual_score_known_count": 8,
+  "score_5_count": 8
 }

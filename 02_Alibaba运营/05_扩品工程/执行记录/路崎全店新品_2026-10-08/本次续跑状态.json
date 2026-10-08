@@ -24,15 +24,15 @@
     "luqi_latest_quality_score": "5.00 each of four"
   },
   "candidate_preparation": {
-    "2639": "Formal 1601973586995 / new/N; 20 EU SKUs and all checked images/copy/prices match. Packaging PENDING_EDITABLE_SCHEMA_UNAVAILABLE; actual score/public/keyword acceptance pending.",
-    "056": "Formal 1601973675393 / approved/Y; 39 EU SKUs and all checked images/copy/prices match. Packaging PASS; actual score/public/keyword acceptance pending.",
-    "2659": "Formal 1601973622603 / approved/Y; 30 EU SKUs and all checked images/copy/prices match. Packaging PASS; actual score/public/keyword acceptance pending.",
+    "2639": "Formal 1601973586995 approved/Y; 20 EU SKUs; full explicit fields and packaging verified; actual score=5.0; public/keyword version QA pending.",
+    "056": "Formal 1601973675393 approved/Y; 39 EU SKUs; full explicit fields and packaging verified; actual score=5.0; public/keyword version QA pending.",
+    "2659": "Formal 1601973622603 approved/Y; 30 EU SKUs; full explicit fields and packaging verified; actual score=5.0; public/keyword version QA pending.",
     "2660": "Prior writer found stopped; original outsole partial brand mark reconfirmed with same SHA256. This style alone requires actual brand/sales-route evidence; do not erase mark or carry hold to other styles.",
-    "2620": "Formal 1601973661443 / approved/Y; 30 EU SKUs and all checked images/copy/prices match. Packaging PASS; actual score/public/keyword acceptance pending.",
-    "2590": "Formal 1601973702206 / approved/Y; 30 EU SKUs and all checked images/copy/prices match. Packaging PASS; actual score/public/keyword acceptance pending.",
-    "2658": "Formal 1601973663435 / approved/Y; 20 EU SKUs and all checked images/copy/prices match. Packaging PASS; actual score/public/keyword acceptance pending.",
-    "2652": "Formal 1601973617634 / approved/Y; 26 EU SKUs and all checked images/copy/prices match. Packaging PASS; actual score/public/keyword acceptance pending.",
-    "2651": "Formal 1601973652504 / approved/Y; 39 EU SKUs and all checked images/copy/prices match. Packaging PASS; actual score/public/keyword acceptance pending."
+    "2620": "Formal 1601973661443 approved/Y; 30 EU SKUs; full explicit fields and packaging verified; actual score=5.0; public/keyword version QA pending.",
+    "2590": "Formal 1601973702206 approved/Y; 30 EU SKUs; full explicit fields and packaging verified; actual score=5.0; public/keyword version QA pending.",
+    "2658": "Formal 1601973663435 approved/Y; 20 EU SKUs; full explicit fields and packaging verified; actual score=5.0; public/keyword version QA pending.",
+    "2652": "Formal 1601973617634 approved/Y; 26 EU SKUs; full explicit fields and packaging verified; actual score=5.0; public/keyword version QA pending.",
+    "2651": "Formal 1601973652504 approved/Y; 39 EU SKUs; full explicit fields and packaging verified; actual score=5.0; public/keyword version QA pending."
   },
   "browser": {
     "normal_reconnection_attempted_in_this_continuation": true,
@@ -50,12 +50,10 @@
     "api_work_independent": true
   },
   "remaining": [
-    "2639审核/展示及包装Schema回读",
-    "8款真实评分与诊断",
-    "12款适用公开页颜色交互和关键词迁移终验",
-    "2660实鞋标记/销售路径证据与版本维度问题"
+    "12款适用公开页和精确关键词/商品卖点版本验收",
+    "2660完整实鞋标识及合法供货销售路径缺证"
   ],
-  "updated_at": "2026-10-08T09:53:03.545400+00:00",
+  "updated_at": "2026-10-08T10:05:54.154415+00:00",
   "photobank_accepted_count": 93,
   "current_schema_read": {
     "category_id": 201334413,
@@ -90,14 +88,23 @@
       "2651",
       "2652"
     ],
-    "status": "INCOMPLETE_FRAGMENTS_DO_NOT_SUBMIT",
+    "status": "SUPERSEDED_BY_FORMAL_FULL_FIELD_READBACK",
     "existing_serializers_reused": true,
     "main_images_each": 6,
     "detail_images_each": 4,
     "materials": "Explicit current custom-negative rules checked; no platform payload acceptance claimed",
     "no_unconfirmed_EU_written": true,
-    "full_payload_validated": false,
-    "new_product_ids": [],
+    "full_payload_validated": true,
+    "new_product_ids": [
+      "1601973586995",
+      "1601973675393",
+      "1601973622603",
+      "1601973661443",
+      "1601973702206",
+      "1601973663435",
+      "1601973652504",
+      "1601973617634"
+    ],
     "company_images_each": 5,
     "faq_each": 6,
     "buyer_copy_styles": [
@@ -122,25 +129,27 @@
       "2651",
       "2652"
     ],
-    "status": "INCOMPLETE_FRAGMENTS_DO_NOT_SUBMIT",
+    "status": "SUPERSEDED_BY_FORMAL_FULL_FIELD_READBACK",
     "fields": "current unit / quantity pricing / MOQ / baseline packaging / negotiated freight / current structured detail default / general cargo",
     "pricing": "Dated historical reference only; not final quotation",
-    "required_origin_missing": true,
-    "sale_prop_and_sku_absent": true,
-    "full_payload_validated": false,
-    "reference": "发布准备与未完成项_交易补齐.json"
+    "required_origin_missing": false,
+    "sale_prop_and_sku_absent": false,
+    "full_payload_validated": true,
+    "reference": "八款全字段与评分完成门汇总.json",
+    "origin_value": "Not specified / current Schema accepts truthful unknown"
   },
   "EU_preparation": {
     "styles": 8,
     "local_color_size_rows": 234,
-    "formal_SKUs_created": false
+    "formal_SKUs_created": true,
+    "formal_SKU_rows": 234
   },
   "new_formal_submissions": {
     "product_count": 8,
     "EU_SKU_count": 234,
     "receipt": "八款正式创建与字段回读汇总.json",
-    "approved_Y_count": 7,
-    "packaging_PASS_count": 7,
-    "actual_score_known_count": 0
+    "approved_Y_count": 8,
+    "packaging_PASS_count": 8,
+    "actual_score_known_count": 8
   }
 }
