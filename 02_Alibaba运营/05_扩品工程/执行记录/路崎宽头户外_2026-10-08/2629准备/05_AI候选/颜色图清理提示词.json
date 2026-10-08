@@ -1,0 +1,40 @@
+{
+  "style": "2629",
+  "tool": "built-in image_gen",
+  "reason": "Original photos contain tiny unverified EVA/foam/lightweight promotional header; cleanup targets overlay only, not physical product markings",
+  "tasks": [
+    {
+      "role": "SKU_Beige",
+      "indices": [
+        20
+      ],
+      "name": "2629-SKU-Beige-v1.png",
+      "prompt": "Use case: precise-object-edit. ONE square single-color SKU photograph. Clean only the overlaid promotional text and white material-claim header from the supplied Beige pair hanging on carabiners. Retain the exact original whole Beige pair, all original poses, navy side panels/sole, fabric heel loops, carabiners and neutral grey wall. Preserve incidental physical inscriptions on props. Fit the entire pair and hooks in the square with clean neutral-grey padding; do not crop any shoe edge. No written labels, borders, collage, swatches, icons or added text. No repainting of mesh or lace features.\nExact original Luqi2629 source photograph only. Preserve actual mesh distribution, diagonal side panels, curved toe overlays, lace pattern, collar/pull tabs, heel and sole geometry, true White/Black/Beige source color and all real physical shoe markings. No generated new angles or macros; no recoloring, extra footwear or added/erased physical shoe logos. Remove ONLY promotional overlays outside shoes, including every original EVA/foam/lightweight/breath/sweat/flexibility/material headline and decorative Fashion text. Such words are not verified product facts. Do not add material/performance/medical/test/stock or factory-manufacture claims. Whole toes and heels remain visible.",
+      "referenced_image_paths": [
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/图片/2629/20.jpg"
+      ]
+    },
+    {
+      "role": "SKU_White",
+      "indices": [
+        25
+      ],
+      "name": "2629-SKU-White-v1.png",
+      "prompt": "Use case: precise-object-edit. ONE square single-color SKU photograph. Clean only the overlaid promotional text and white material-claim header from the supplied White pair hanging on carabiners. Retain the exact original whole White pair, all original poses, black side panels/sole, fabric heel loops, carabiners and neutral grey wall. Preserve incidental physical inscriptions on props. Fit the entire pair and hooks in the square with clean neutral-grey padding; do not crop any shoe edge. No written labels, borders, collage, swatches, icons or added text. No repainting of mesh or lace features.\nExact original Luqi2629 source photograph only. Preserve actual mesh distribution, diagonal side panels, curved toe overlays, lace pattern, collar/pull tabs, heel and sole geometry, true White/Black/Beige source color and all real physical shoe markings. No generated new angles or macros; no recoloring, extra footwear or added/erased physical shoe logos. Remove ONLY promotional overlays outside shoes, including every original EVA/foam/lightweight/breath/sweat/flexibility/material headline and decorative Fashion text. Such words are not verified product facts. Do not add material/performance/medical/test/stock or factory-manufacture claims. Whole toes and heels remain visible.",
+      "referenced_image_paths": [
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/图片/2629/25.jpg"
+      ]
+    },
+    {
+      "role": "SKU_Black",
+      "indices": [
+        30
+      ],
+      "name": "2629-SKU-Black-v1.png",
+      "prompt": "Use case: precise-object-edit. ONE square single-color SKU photograph. Clean only the overlaid promotional text and white material-claim header from the supplied Black pair hanging on carabiners. Retain the exact original whole Black pair, all original poses, white side/heel panels, black sole, fabric heel loops, carabiners and neutral grey wall. Preserve incidental physical inscriptions on props. Fit the entire pair and hooks in the square with clean neutral-grey padding; do not crop any shoe edge. No written labels, borders, collage, swatches, icons or added text. No repainting of mesh or lace features.\nExact original Luqi2629 source photograph only. Preserve actual mesh distribution, diagonal side panels, curved toe overlays, lace pattern, collar/pull tabs, heel and sole geometry, true White/Black/Beige source color and all real physical shoe markings. No generated new angles or macros; no recoloring, extra footwear or added/erased physical shoe logos. Remove ONLY promotional overlays outside shoes, including every original EVA/foam/lightweight/breath/sweat/flexibility/material headline and decorative Fashion text. Such words are not verified product facts. Do not add material/performance/medical/test/stock or factory-manufacture claims. Whole toes and heels remain visible.",
+      "referenced_image_paths": [
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/图片/2629/30.jpg"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "rejected": [
+    {
+      "file": "2628-M4-v1.png",
+      "reason": "All three left-shoe heel/heel-tab edges clipped by card boundary; do not upload"
+    }
+  ],
+  "replacement": {
+    "role": "M4",
+    "name": "2628-M4-v2.png",
+    "indices": [
+      26,
+      21,
+      31
+    ],
+    "prompt": "Edit only this exact Luqi2628 real source photograph, retaining original shoe identity pixel-faithfully: two curved sweeping heel-to-midfoot contrast bands, mesh opening pattern, lace eyelets/white or black laces, toe overlay, heel tab and sole geometry. No invented outsole underside, seams, logos, toe widening, recoloring, smoothing mesh, new shoe angles, physical text erasure or reconstruction. Preserve every original visible shoe fully inside the frame, no tight crop. Keep the true colors including Beige with navy bands/sole, White with black bands/sole and Black with white bands. Remove ONLY existing graphic advertising overlays outside the physical product: tiny header EVA/lightweight claims, Fashion and leisure, DRESSING slogan. Remove header by eliminating it and refitting the complete photo, fill only neutral framing as needed. No material/performance/certification claims, no Chinese, no test/fit benefits. This is source-photo cleanup, not a new product render. Use ONLY the three attached already-cleaned real SKU pair photographs, in order Beige, White, Black. Compose a square1254px three-column procurement color chart. Whole pair each and retain true navy/black/white bands, do not recolor. No text-over-shoe, no cropping silhouettes. Header 'COLOR & EU SIZE OPTIONS'; each column 'Beige', 'White', 'Black'; footer 'EU 36-48' and 'Share your color-size mix'. Navy and warm cream framing, clear readable typography. No measurements or assurances. CRITICAL CORRECTION: Prior v1 clipped the outer heel/heel tabs of the left shoe in EVERY column. Reject all bleed/cropping. Use each WHOLE attached SQUARE PHOTO as a small square thumbnail with visible navy background and tube surrounding both shoes. The left heel tab/heel edge and front right shoe toe MUST each have visible margin INSIDE its card; do not enlarge or zoom. Three small square photo thumbnails centered on neutral cream, width no more than345px each in1254canvas and generous gutters. Preserve entire photos via contain and all four outer photo edges. Keep simple header, color labels and footer. No closeup. Smaller intact photos are mandatory.",
+    "referenced_image_paths": [
+      "C:/Users/spq/Desktop/贝强/02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2628准备/05_AI候选/2628-SKU-Beige-v1.png",
+      "C:/Users/spq/Desktop/贝强/02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2628准备/05_AI候选/2628-SKU-White-v1.png",
+      "C:/Users/spq/Desktop/贝强/02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2628准备/05_AI候选/2628-SKU-Black-v1.png"
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "rejected": [
+    {
+      "file": "2628-D2-v1.png",
+      "reason": "Mesh pointer included toe overlay; do not upload"
+    },
+    {
+      "file": "2628-D4-v1.png",
+      "reason": "Invented three inaccurate side-profile color thumbnails; do not upload"
+    }
+  ],
+  "tasks": [
+    {
+      "role": "D2",
+      "name": "2628-D2-v2.png",
+      "indices": [
+        28
+      ],
+      "prompt": "Edit only this exact Luqi2628 real source photograph, retaining original shoe identity pixel-faithfully: two curved sweeping heel-to-midfoot contrast bands, mesh opening pattern, lace eyelets/white or black laces, toe overlay, heel tab and sole geometry. No invented outsole underside, seams, logos, toe widening, recoloring, smoothing mesh, new shoe angles, physical text erasure or reconstruction. Preserve every original visible shoe fully inside the frame, no tight crop. Keep the true colors including Beige with navy bands/sole, White with black bands/sole and Black with white bands. Remove ONLY existing graphic advertising overlays outside the physical product: tiny header EVA/lightweight claims, Fashion and leisure, DRESSING slogan. Remove header by eliminating it and refitting the complete photo, fill only neutral framing as needed. No material/performance/certification claims, no Chinese, no test/fit benefits. This is source-photo cleanup, not a new product render. Square1254px B2B English detail layout using ONLY the entire attached real Black on-foot source photo. Remove old advertisement text. Keep both shoes fully visible within cream framing with generous margin. Header exactly 'MESH & LACE-UP CONSTRUCTION'. Subheader 'Curved side panels | Mesh sections | Lace-up closure'. Footer 'Black shown'. NO arrows, NO pointer dots, NO diagrams, NO extra photos, NO inset circles. Prior v1 arrow endpoint incorrectly identified leather toe overlay as mesh; remove all pointers entirely. Exact full photograph, simple typography only.",
+      "referenced_image_paths": [
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/图片/2628/28.jpg"
+      ]
+    },
+    {
+      "role": "D4",
+      "name": "2628-D4-v2.png",
+      "indices": [
+        29
+      ],
+      "prompt": "Edit only this exact Luqi2628 real source photograph, retaining original shoe identity pixel-faithfully: two curved sweeping heel-to-midfoot contrast bands, mesh opening pattern, lace eyelets/white or black laces, toe overlay, heel tab and sole geometry. No invented outsole underside, seams, logos, toe widening, recoloring, smoothing mesh, new shoe angles, physical text erasure or reconstruction. Preserve every original visible shoe fully inside the frame, no tight crop. Keep the true colors including Beige with navy bands/sole, White with black bands/sole and Black with white bands. Remove ONLY existing graphic advertising overlays outside the physical product: tiny header EVA/lightweight claims, Fashion and leisure, DRESSING slogan. Remove header by eliminating it and refitting the complete photo, fill only neutral framing as needed. No material/performance/certification claims, no Chinese, no test/fit benefits. This is source-photo cleanup, not a new product render. Square1254px English B2B sample planning detail. Use ONLY the whole attached real Black front-on on-foot photo on left, all toes/laces/edges visible. Right side PURE TEXT on cream: 'PLAN A SAMPLE REQUEST'; 'Select a color and EU size'; 'Black / White / Beige'; 'EU 36-48'; 'Send your destination'. Footer 'Sample availability, charges and timing to confirm'. CRITICAL: Prior v1 added three invented side-profile shoe pictures not present in source. Absolutely NO extra shoe graphics, color thumbnails, illustrations, clipart, icons, stock images, new angles or cutout shoes. Text color names ONLY. Exactly two visible shoes in the original photo, no additional shoes anywhere. Preserve real curved side-panel style, never straight stripes.",
+      "referenced_image_paths": [
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/图片/2628/29.jpg"
+      ]
+    }
+  ]
+}
