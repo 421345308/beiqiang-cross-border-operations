@@ -60,18 +60,18 @@
     "product_id": "1601973009551",
     "model": "2667",
     "title_match": true,
-    "status": "modified",
-    "display": "N",
-    "request_id": "0b51802d17914264936543212",
-    "observed_at": "2026-10-08T02:28:21.499353+00:00",
+    "status": "approved",
+    "display": "Y",
+    "request_id": "213e759c17914288600678949",
+    "observed_at": "2026-10-08T03:07:47.872022+00:00",
     "quality_response": {
       "result": {
-        "final_score": "3.90",
+        "final_score": "5.00",
         "boutique_tag": 1,
-        "problem_map": "{\"ruleScoreMap\":{\"title_word_miss_core_error\":0.0,\"imageQualityBad\":0.0,\"image_scale\":0.0,\"title_word_error\":0.0,\"image_num\":0.0},\"errorReasonSkuImageMoreMap\":{},\"errorReasonTitleWordMissErrorMap\":{},\"errorReasonList\":[],\"errorReasonTitleWordErrorMap\":{},\"extendCheckMap\":{\"imageText\":true,\"sku_image\":false,\"title_word_miss_core_error\":true,\"imageQualityBad\":true,\"sku_text\":false,\"imageSubTitle\":false,\"category\":true,\"title_word_error\":true,\"selling_point_attribute_conflict\":false},\"errorReasonCategoryMap\":{},\"errorReasonSkuTextMap\":{},\"errorReasonSubTitleMap\":{},\"errorReasonMap\":{\"en\":\"The title mentions 'Lining Options', but the attribute list states 'Lining Material: Not specified', indicating a conflict regarding the lining material.\",\"zh\":\"标题中提到“Lining Options”，但属性列表中却显示“Lining Material: Not specified”，表明内里材质存在不一致。\"},\"errorReasonSellingPointAttributeMap\":{},\"errorReasonSkuImageMap\":{},\"extendProblemMap\":{\"imageText\":true,\"title_word_miss_core_error\":false,\"imageQualityBad\":false,\"imageSubTitle\":false,\"image_scale\":false,\"inventory\":false,\"title_word_error\":false,\"selling_point_attribute_conflict\":false,\"image_num\":false,\"freightRate\":false,\"sku_image\":false,\"sku_text\":false,\"price\":false,\"category\":false},\"errorReasonQualityBadMap\":{},\"errorReasonSkuTextMoreMap\":{}}"
+        "problem_map": "{\"ruleScoreMap\":{\"title_word_miss_core_error\":0.0,\"imageQualityBad\":0.0,\"image_scale\":0.0,\"title_word_error\":0.0,\"image_num\":0.0},\"errorReasonSkuImageMoreMap\":{},\"errorReasonTitleWordMissErrorMap\":{},\"errorReasonList\":[],\"errorReasonTitleWordErrorMap\":{},\"extendCheckMap\":{\"imageText\":true,\"sku_image\":false,\"title_word_miss_core_error\":true,\"imageQualityBad\":true,\"sku_text\":false,\"imageSubTitle\":false,\"category\":true,\"title_word_error\":true,\"selling_point_attribute_conflict\":false},\"errorReasonCategoryMap\":{},\"errorReasonSkuTextMap\":{},\"errorReasonSubTitleMap\":{},\"errorReasonMap\":{},\"errorReasonSellingPointAttributeMap\":{},\"errorReasonSkuImageMap\":{},\"extendProblemMap\":{\"imageText\":false,\"title_word_miss_core_error\":false,\"imageQualityBad\":false,\"imageSubTitle\":false,\"image_scale\":false,\"inventory\":false,\"title_word_error\":false,\"selling_point_attribute_conflict\":false,\"image_num\":false,\"freightRate\":false,\"sku_image\":false,\"sku_text\":false,\"price\":false,\"category\":false},\"errorReasonQualityBadMap\":{},\"errorReasonSkuTextMoreMap\":{}}"
       },
-      "request_id": "0b51802d17914265003403549",
-      "_trace_id_": "212e559c17914265001996894e0e38"
+      "request_id": "21546a1d17914288667133802",
+      "_trace_id_": "0bb4a40617914288665815744e0e02"
     },
     "state_evidence": "../路崎新品_2026-10-07/2667标题一致性修正/正式核验.json"
   },
