@@ -18,7 +18,9 @@
     "2639": "11 product images locally reviewed and official photobank uploads accepted; task pack saved; no product ID, formal SKU binding or public QA",
     "056": "12 product images locally reviewed and official photobank uploads accepted; task pack saved; no product ID, formal SKU binding or public QA",
     "2659": "12 final images compared to source and official photobank accepted; first M4 crop rejected/revised. 384 hero triage and exact model/source register checked. No product ID or formal binding/public QA.",
-    "2660": "Prior writer found stopped; original outsole partial brand mark reconfirmed with same SHA256. This style alone requires actual brand/sales-route evidence; do not erase mark or carry hold to other styles."
+    "2660": "Prior writer found stopped; original outsole partial brand mark reconfirmed with same SHA256. This style alone requires actual brand/sales-route evidence; do not erase mark or carry hold to other styles.",
+    "2620": "22 original images preserved unchanged; source material/unknown segment fields reviewed against fresh current schema; 12 product images locally reviewed and official photobank accepted. No product ID or formal SKU binding/public QA.",
+    "2590": "23 original images preserved unchanged; material/color/size evidence reviewed; task pack and scoped source/model/structure comparison saved. No image generation, photobank upload or product ID."
   },
   "browser": {
     "normal_reconnection_attempted_in_this_continuation": true,
@@ -41,6 +43,12 @@
     "Normal public color QA and exact-ID current keyword field evidence",
     "Remaining candidate publishing, formal readback, review, real score and applicable public QA"
   ],
-  "updated_at": "2026-10-08T04:23:59.840391+00:00",
-  "photobank_accepted_count": 35
+  "updated_at": "2026-10-08T04:46:37.510665+00:00",
+  "photobank_accepted_count": 47,
+  "current_schema_read": {
+    "category_id": 201334413,
+    "request_id": "213f5a2117914340099897128",
+    "observed_at": "2026-10-08T04:33:31.591368+00:00",
+    "result": "Custom negative inputValue material rule present; platform complete payload validation not yet performed"
+  }
 }
