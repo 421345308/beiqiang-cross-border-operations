@@ -1,0 +1,134 @@
+{
+  "style": "032",
+  "product_id": "1601973736928",
+  "observed_at": "2026-10-08T23:36:02.644357+00:00",
+  "stage": "SOURCE_TRIAGE_ONLY_NOT_FULL_IMAGE_REVIEW",
+  "source": "https://luqi.sooxie.com/detail/2416116",
+  "confirmed_colors": [
+    "Black",
+    "DarkGrey",
+    "LightGrey",
+    "Khaki"
+  ],
+  "EU_sizes": [
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48
+  ],
+  "EU_combinations": 52,
+  "formal_evidence": "Cached质量修正_2026-10-09/最新正式回读.json and original upload ledger, not fresh API observation",
+  "current_title": "Unisex Wide Toe Box Mesh Walking Shoes Curved Teardrop Side Panels Lace Up Casual Sneakers EU 36-48 Wholesale",
+  "title_review": "Current differentiated title describes actual curved teardrop mesh-panel construction, ordinary laces, confirmed wide-toe category and EU36-48; retained if further full detail inspection confirms. No volume/keyword-persistence claim. Historical task-pack title is not current formal title.",
+  "current_color_photo_bindings": [
+    {
+      "formal_color": "Khaki",
+      "source_image": 28,
+      "original_upload_role": "M5",
+      "formal_value_id": -203,
+      "binding": "CACHED_FORMAL_GET_MATCHES_ORIGINAL_UPLOAD_LEDGER"
+    },
+    {
+      "formal_color": "Black",
+      "source_image": 29,
+      "original_upload_role": "SKU_Black",
+      "formal_value_id": -200,
+      "binding": "CACHED_FORMAL_GET_MATCHES_ORIGINAL_UPLOAD_LEDGER"
+    },
+    {
+      "formal_color": "DarkGrey",
+      "source_image": 22,
+      "original_upload_role": "SKU_DarkGrey",
+      "formal_value_id": -201,
+      "binding": "CACHED_FORMAL_GET_MATCHES_ORIGINAL_UPLOAD_LEDGER"
+    },
+    {
+      "formal_color": "LightGrey",
+      "source_image": 21,
+      "original_upload_role": "M2",
+      "formal_value_id": -202,
+      "binding": "CACHED_FORMAL_GET_MATCHES_ORIGINAL_UPLOAD_LEDGER"
+    }
+  ],
+  "observed_source_images_full": [
+    1,
+    25,
+    27,
+    26,
+    24,
+    22,
+    28,
+    29
+  ],
+  "contact_sheets_reviewed": [
+    0,
+    1
+  ],
+  "confirmed_risk": "All four formal Color img fields currently bound; upload ledger has only two SKU_-named roles but LightGrey maps M2/source21 and Khaki maps M5/source28, not missing. Current Black29 full model gives small shoe region; choose complete closer actual pair25. Current DarkGrey22 has two complete photo panels and TRAIL RUNNING decoration; choose single actual pair27 for selector. LightGrey26 complete actual pair replaces21, Khaki24 complete actual front pair replaces single28; remove generic header/stream inset on24. Hero01 LightGrey with concrete block backdrop; only remove backdrop. Mesh low-cut upper, long curved teardrop panels, twin narrow toe-side lines, three parallel short heel-side lines, ordinary laces/tongue pull. Black black upper/white contrast lines/black sole; DarkGrey charcoal/dark lines/black sole; LightGrey pale grey/dark lines/brown sole; Khaki brown/white lines/brown sole. Historical generic brown-sole description does not apply to Black/DarkGrey. Source2-6 recommendations and unverified performance/medical posters excluded.",
+  "preferred_color_sources": {
+    "Black": 25,
+    "DarkGrey": 27,
+    "LightGrey": 26,
+    "Khaki": 24
+  },
+  "proposed_roles": {
+    "M1": {
+      "source": 1,
+      "action": "Exact LightGrey hero, remove concrete backdrop only"
+    },
+    "M2": {
+      "source": 21,
+      "action": "Actual LightGrey heel-hand view, inspect full"
+    },
+    "M3": {
+      "source": 22,
+      "action": "Use only actual upper DarkGrey complete-pair photograph; remove lower independent photo and trail text, no invented view"
+    },
+    "M4": {
+      "source": [
+        25,
+        27,
+        26,
+        24
+      ],
+      "action": "Four cleaned exact-color photos, EU36-48"
+    },
+    "M5": {
+      "source": 28,
+      "action": "Actual single Khaki raised on-foot shoe plus quotation inputs, full source seen"
+    },
+    "D1": {
+      "source": 14,
+      "action": "Actual two-person overview, inspect full and count full original shoes"
+    },
+    "D2": {
+      "source": 30,
+      "action": "Actual single LightGrey complete side shoe only; remove Chinese materials/performance list, inspect full"
+    },
+    "D3": {
+      "source": 23,
+      "action": "Actual Khaki seated photo only; remove trail heading and separate rock inset, inspect full"
+    },
+    "D4": {
+      "source": 17,
+      "action": "Actual seated LightGrey female photo only, sample terms, inspect full"
+    }
+  },
+  "next_steps": [
+    "Inspect full21/14/30/23/17 before editing.",
+    "Create13 assets if all four selectors cleaned, full source/candidate/whole-set review, precise color/sole fidelity.",
+    "Fresh current Schema four Color IDs and52EU rows, precise img plus gallery/detail only, no sku field.",
+    "Controlled official upload, once-only original-ID update, exact formal get and Schema, preserve title/company background."
+  ],
+  "mutations_this_plan": "NONE: no032 generation/upload/update this phase",
+  "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+}
