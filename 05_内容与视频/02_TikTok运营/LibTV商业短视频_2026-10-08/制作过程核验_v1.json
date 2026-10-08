@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-08",
+  "projectUuid": "9f9e453d99184fcd8483476b14ba15dc",
+  "status": "preproduction_verified_no_generation",
+  "nodeCount": 20,
+  "edgeCount": 23,
+  "sourceImageCount": 3,
+  "imageTaskCount": 4,
+  "videoTaskCount": 4,
+  "storyboardShotCount": 7,
+  "storyboardDurationSeconds": 27,
+  "checks": [
+    "原图SHA256一致",
+    "节点与名称唯一",
+    "参考连线完整",
+    "七镜时长回读为27秒",
+    "图像与视频任务均9:16且每次1份",
+    "视频均5秒720p且关闭分段声音",
+    "任务无生成URL/任务信息",
+    "操作记录无运行模型或批量分镜指令"
+  ],
+  "limits": [
+    "未验证网页端视觉排版",
+    "未生成样张或成片",
+    "3D导演台未自动操作",
+    "音画分析尚未实测",
+    "最终费用尚未核实"
+  ]
+}
