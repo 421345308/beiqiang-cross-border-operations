@@ -1,0 +1,102 @@
+{
+  "style": "053",
+  "product_id": "1601973846232",
+  "observed_at": "2026-10-08T21:12:05.291722+00:00",
+  "stage": "SOURCE_TRIAGE_ONLY_NOT_FULL_IMAGE_REVIEW",
+  "source": "https://luqi.sooxie.com/detail/2451884",
+  "confirmed_colors": [
+    "Black",
+    "LightGrey",
+    "White"
+  ],
+  "EU_sizes": [
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48
+  ],
+  "EU_combinations": 39,
+  "formal_evidence": "质量修正_2026-10-09/最新正式回读.json; cached formal title/SKU facts, not new live API observation",
+  "title_retained": "Unisex Wide Toe Box Mesh Walking Shoes Slotted Side Panels Lace Up Summer Casual Sneakers EU 36-48 Wholesale",
+  "observed_source_images_full": [
+    21,
+    26,
+    31
+  ],
+  "contact_sheets_reviewed": [
+    0,
+    1
+  ],
+  "confirmed_risk": "All three existing SKU color sources21LightGrey/26White/31Black contain tiny unverified EVA/lightweight header. Black31 also contains Fashion/sweat/flexibility slogans. Clean Color click photos along with main/detail. Main source01 has phone/tablet props. Source14 generic25-48 is NOT adopted; confirmed EU36-48 retained. Chinese schematic/performance photos7-15 must not be used as measurement, upper composition, sole material or grip proof.",
+  "proposed_roles": {
+    "M1": {
+      "source": 1,
+      "action": "Exact White pair hero; remove phone/tablet props and replace background with white, preserve original shoe shape"
+    },
+    "M2": {
+      "source": 18,
+      "action": "Actual LightGrey on-foot side fit and slotted overlay, full shoes and no marketing"
+    },
+    "M3": {
+      "source": 25,
+      "action": "Actual White on-foot front/side structure, retain complete shoes"
+    },
+    "M4": {
+      "source": [
+        31,
+        21,
+        26
+      ],
+      "action": "Three cleaned true Color photos and EU36-48"
+    },
+    "M5": {
+      "source": 23,
+      "action": "Actual White lifted pair with quotation inputs"
+    },
+    "D1": {
+      "source": 20,
+      "action": "Independent LightGrey pair overview"
+    },
+    "D2": {
+      "source": 19,
+      "action": "Actual LightGrey seated side and visible slotted upper details; no invented macro"
+    },
+    "D3": {
+      "source": 29,
+      "action": "Actual Black lifted heel/side profile, no performance or grip inference"
+    },
+    "D4": {
+      "source": 17,
+      "action": "Actual LightGrey lower-leg sample image; whole photographed shoes retained"
+    },
+    "SKU_Black": {
+      "source": 31,
+      "action": "Remove all marketing, retain black upper/white marking/black sole"
+    },
+    "SKU_LightGrey": {
+      "source": 21,
+      "action": "Remove all marketing, retain grey mesh/brown sole"
+    },
+    "SKU_White": {
+      "source": 26,
+      "action": "Remove all marketing, retain white mesh/brown sole"
+    }
+  },
+  "next_steps": [
+    "Inspect remaining proposed originals full-size, especially shoe edges and physical marks, before editing.",
+    "Build individual prompts and source/candidate and whole-set reviews; then current API Schema contracts.",
+    "Use supported scImages/detailImage plus precisely three Color img update, omit sku, preserve39 row IDs/prices and current EU values.",
+    "Submit once with exclusive ledger, then read back approved status, schema, image order, colors and39EU."
+  ],
+  "mutations_this_plan": "NONE: no053 generation, upload, prepare or submit in this phase",
+  "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+}
