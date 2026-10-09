@@ -1,0 +1,28 @@
+{
+  "style": "02602",
+  "product_id": "1601973869140",
+  "observed_at": "2026-10-09T01:16:09.869716+00:00",
+  "status": "modified",
+  "display": "N",
+  "sku_count": 20,
+  "protected_fields": {
+    "subject": true,
+    "category_id": true,
+    "attributes": true,
+    "product_sku": true,
+    "sourcing_trade": true,
+    "keywords": true
+  },
+  "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+  "actual_score": null,
+  "scope_result": "PENDING_REVIEW",
+  "main_order_match": true,
+  "product_sku_protection_scope": "Entire object except precisely two intended Color image_url fields; all20 rows/IDs/codes/prices/attributes unchanged",
+  "color_image_binding": {
+    "Blue": true,
+    "Yellow": true
+  },
+  "exact_two_colors": true,
+  "EU_labels_match": true,
+  "exact_20_combinations": true
+}
