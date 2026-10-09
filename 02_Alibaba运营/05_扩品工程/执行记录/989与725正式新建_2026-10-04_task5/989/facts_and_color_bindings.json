@@ -1,0 +1,88 @@
+{
+  "observed_at": "2026-10-04T02:26:57.895908+00:00",
+  "reference": "https://weituo.sooxie.com/detail/2559336",
+  "supplier_name": "维拓鞋业",
+  "supplier_original_model": "989",
+  "listed_cost_cny_per_pair": 85,
+  "colors": [
+    {
+      "source_label": "黑红",
+      "buyer_color": "Black / Red",
+      "source_image": "original/gallery_3.jpg"
+    },
+    {
+      "source_label": "黄色",
+      "buyer_color": "Yellow",
+      "source_image": "original/main.jpg"
+    },
+    {
+      "source_label": "天兰",
+      "buyer_color": "Sky Blue",
+      "source_image": "original/gallery_4.jpg"
+    }
+  ],
+  "size_labels": [
+    "38",
+    "39",
+    "40",
+    "41",
+    "42",
+    "43",
+    "44",
+    "45",
+    "46",
+    "47",
+    "48",
+    "49",
+    "50"
+  ],
+  "size_system": "NOT_SPECIFIED",
+  "upper_material": "NOT_SPECIFIED",
+  "midsole_material": "NOT_SPECIFIED",
+  "outsole_material": "NOT_SPECIFIED",
+  "lining_material": "NOT_SPECIFIED",
+  "current_public_sku_text": "是否库存:否",
+  "inventory_claim": "NONE",
+  "category_id": 201336512,
+  "category_name": "Basketball Style Shoes",
+  "source_access": "Actual public source HTML plus exact public page loader; source tokens redacted and not copied into task records",
+  "source_truth_limit": "Valid procurement entry and actual shoe photos; not company production, stock quantity, performance test, certification, sizing conversion or supplier MOQ proof",
+  "source_files": [
+    {
+      "path": "sooxie_2559336_20261004\\source_public.html",
+      "sha256": "7d9a5ff227c5d6e5084c6b6fce6b9fb164210dac1798585f47acf729f35332fd"
+    },
+    {
+      "path": "sooxie_2559336_20261004\\source_visible_text.txt",
+      "sha256": "4c9ec34870785f25f58e23de0547af5282651adef8d033d79787da0acb88f5f7"
+    },
+    {
+      "path": "sooxie_2559336_20261004\\source_public_loader_response.json",
+      "sha256": "1d04c522aa8a65f6b1d87c5359595f1222a8799eb0ff18e6b0e2ae7b5b676e7b"
+    },
+    {
+      "path": "sooxie_2559336_20261004\\original\\detail.jpg",
+      "sha256": "5eb2b2410c44e86c0c7f8b574df5bd9c23c3cd849f8e0e8e2dd8778abf26c1d5"
+    },
+    {
+      "path": "sooxie_2559336_20261004\\original\\gallery_1.jpg",
+      "sha256": "0d999d70830c39fea00530731dbcdf823581ba9e3a93524ed580fe48d556e5bc"
+    },
+    {
+      "path": "sooxie_2559336_20261004\\original\\gallery_2.jpg",
+      "sha256": "c28cb11771e9c0cecfc36434c2c05328fa43f59e8897aea8411672d080cf2b43"
+    },
+    {
+      "path": "sooxie_2559336_20261004\\original\\gallery_3.jpg",
+      "sha256": "f82fc460fe15ce784ea7cf27dc7b7341d5aac4049a99d5a083737b6989000e59"
+    },
+    {
+      "path": "sooxie_2559336_20261004\\original\\gallery_4.jpg",
+      "sha256": "5c74c602066227e250f18c637dfe4229b41a2fb8837312181965fbab356dcd9f"
+    },
+    {
+      "path": "sooxie_2559336_20261004\\original\\main.jpg",
+      "sha256": "2b9272eaa6b14428554488910d3c69d5c78bfd82e7ccd4da916b67ea98436080"
+    }
+  ]
+}

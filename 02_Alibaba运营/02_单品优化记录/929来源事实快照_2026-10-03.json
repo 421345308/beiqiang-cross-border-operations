@@ -1,0 +1,61 @@
+{
+  "scope": "Saved original source evidence, not current stock confirmation",
+  "source_work_file": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\single_agent_resume_2310\\929_publish\\facts.json",
+  "facts": {
+    "observed_at_utc": "2026-10-02T17:14:29.176382+00:00",
+    "source_url": "https://siji.sooxie.com/detail/2428686",
+    "source_model": "929",
+    "model": "BQ-CS929",
+    "gender": "Men",
+    "colors": [
+      "Black",
+      "Silver",
+      "Grey/Blue"
+    ],
+    "size_labels": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47
+    ],
+    "size_conversion": "No foot-length table verified; no country conversion claim",
+    "listed_price_cny": "95.00",
+    "procurement_price_confirmed": false,
+    "upper": {
+      "value": "Mesh",
+      "basis": "11.jpg source parameters 网布;08.jpg close-up"
+    },
+    "midsole": {
+      "value": "EVA",
+      "basis": "05.jpg literal EVA中底"
+    },
+    "outsole": {
+      "value": "Rubber",
+      "basis": "11.jpg sole EVA+橡胶 together with05.jpg EVA midsole assignment and visible separate outsole tread"
+    },
+    "lining": {
+      "value": "Textile",
+      "basis": "07.jpg actual visible woven collar/lining; exact fiber composition unspecified"
+    },
+    "shape": "Low-top chunky sneakers",
+    "closure": "Laces",
+    "branding_observation": "No visible brand text or recognized trademark in26 reviewed supplier images. Visual observation only, no trademark clearance claim",
+    "supplier_stock_per_size": null,
+    "omitted_claims": [
+      "lightweight",
+      "removable insole",
+      "orthopedic",
+      "running performance",
+      "certified slip resistance",
+      "measured wide fit grade",
+      "supplier shipping guarantee"
+    ],
+    "source_html_sha256": "d3a0be51df7bda52edb0796a2077bd8fbb1f86bd83929f9f8bc50e5b4bddd4aa",
+    "source_download_ledger": "source/929_download_ledger.json"
+  }
+}

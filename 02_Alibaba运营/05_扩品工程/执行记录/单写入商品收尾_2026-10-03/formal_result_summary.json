@@ -1,0 +1,1025 @@
+{
+  "at": "2026-10-03T06:02:22.538498+00:00",
+  "five_off": [
+    {
+      "product_id": "1601969860254",
+      "observed_at": "2026-10-03T04:26:46.521431+00:00",
+      "status": "approved",
+      "display": "N",
+      "get_error": null,
+      "request_id": "2105584317910016056021975",
+      "SKU_count": 33,
+      "role": "authorized_off_target"
+    },
+    {
+      "product_id": "1601943774082",
+      "observed_at": "2026-10-03T04:26:49.183411+00:00",
+      "status": "approved",
+      "display": "N",
+      "get_error": null,
+      "request_id": "213f5a2117910016083012979",
+      "SKU_count": 30,
+      "role": "authorized_off_target"
+    },
+    {
+      "product_id": "1601943742273",
+      "observed_at": "2026-10-03T04:26:51.804491+00:00",
+      "status": "approved",
+      "display": "N",
+      "get_error": null,
+      "request_id": "212c6fc617910016109254623",
+      "SKU_count": 30,
+      "role": "authorized_off_target"
+    },
+    {
+      "product_id": "1601943621884",
+      "observed_at": "2026-10-03T04:26:54.159693+00:00",
+      "status": "approved",
+      "display": "N",
+      "get_error": null,
+      "request_id": "0b80d2d617910016132656399",
+      "SKU_count": 30,
+      "role": "authorized_off_target"
+    },
+    {
+      "product_id": "1601943768215",
+      "observed_at": "2026-10-03T05:57:07.969533+00:00",
+      "status": "approved",
+      "display": "N",
+      "get_error": null,
+      "request_id": "0b0b3a2717910070269456941",
+      "SKU_count": 30,
+      "role": "authorized_off_target"
+    },
+    {
+      "product_id": "1601969853888",
+      "observed_at": "2026-10-03T04:26:58.992315+00:00",
+      "status": "approved",
+      "display": "Y",
+      "get_error": null,
+      "request_id": "212cbf3217910016182707238",
+      "SKU_count": 33,
+      "role": "protected_same_model"
+    }
+  ],
+  "five_off_success_count": 5,
+  "five_off_failed_or_not_effective": [],
+  "no_repeated_OFF_requests": false,
+  "BQ041": {
+    "product_id": "10000047127570",
+    "observed_at": "2026-10-03T04:08:50.745033+00:00",
+    "status": "approved",
+    "display": "Y",
+    "get_error": null,
+    "get_request_id": "213c934417910005299657420",
+    "actual_score": 5.0,
+    "company_intro_formal_verified": true,
+    "FAQ_count": 8,
+    "sku_count": 30,
+    "unrelated_fields_unchanged": {
+      "main_image": true,
+      "product_sku": true,
+      "attributes": true,
+      "sourcing_trade": true,
+      "subject": true,
+      "keywords": true
+    },
+    "score_error": null,
+    "score_request_id": "0b0b3a2717910005326137518"
+  },
+  "slippers": {
+    "M001": {
+      "authorization": "Direct user: 允许按已备方案上传 M001、A6607 的商品图片，并各正式发布一次。",
+      "create_calls": 2,
+      "product_id": "1601970169467",
+      "status": "APPROVED_DISPLAY_Y_ACTUAL_4_5",
+      "request_id": "213e759c17910038598925619",
+      "trace_id": "210325bb17910030066971359e1114",
+      "business_error": null,
+      "verified_uploaded_roles": 11,
+      "unique_upload_successes": 11,
+      "unknown_upload_roles": [
+        "M6"
+      ],
+      "old_action": "NOT_SENT",
+      "next_action": "Same-ID image-aspect repair and public QA remain pending; never create this model again",
+      "successful_creates": 1,
+      "attempt2_request_id": "213e759c17910038598925619",
+      "first_attempt_business_rejected": true,
+      "formal_read_request_id": "0bbb3b2417910047913975543",
+      "formal_observed_at": "2026-10-03T05:19:52.196952+00:00",
+      "category_id": 201153804,
+      "SKU_count": 12,
+      "SKU_binding": "verified",
+      "FAQ_count": 6,
+      "prices": [
+        {
+          "min_pairs": 2,
+          "USD": 10.08
+        },
+        {
+          "min_pairs": 50,
+          "USD": 9.41
+        },
+        {
+          "min_pairs": 100,
+          "USD": 8.74
+        }
+      ],
+      "actual_score": 4.5,
+      "score_issue": "Official score image_scale -0.5; current native hero 630x455. Square colour composites reviewed and rejected as unsuitable heroes. No further image update sent.",
+      "source_url": "https://baiyou877.sooxie.com/detail/2482094",
+      "public_model": "BQ-M001",
+      "score_request_id": "0bab02fe17910057901777334",
+      "prior_failed_create_receipt": {
+        "request_id": "0b830ecc17910030073376783",
+        "business_error": "isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:PUB_BIZCHECK_API_SKU_PROP_INVALID;"
+      }
+    },
+    "A6607": {
+      "authorization": "Direct user: 允许按已备方案上传 M001、A6607 的商品图片，并各正式发布一次。",
+      "create_calls": 1,
+      "product_id": null,
+      "status": "business_rejected",
+      "request_id": "0b0b3a2717910030490695855",
+      "trace_id": "210334ab17910030484897639e0b91",
+      "business_error": "isp.system-service-error:PUB_BIZCHECK_CAT_PUB_RESTRICT;",
+      "verified_uploaded_roles": 14,
+      "unique_upload_successes": 13,
+      "unknown_upload_roles": [],
+      "old_action": "NOT_SENT",
+      "next_action": "Store business category restriction; do not change company settings or misclassify children slides"
+    }
+  },
+  "929_public": {
+    "product_id": "1601970118386",
+    "actual_score": 5.0,
+    "URL": "https://www.alibaba.com/product-detail/Men-s-Chunky-Mesh-Sneakers-with_1601970118386.html",
+    "visible_verified": [
+      "real full hero",
+      "three color labels and thumbnails",
+      "size39-47",
+      "three price tiers",
+      "public modelBQ-CS929",
+      "inquiry entry present",
+      "structured product/company text and sixFAQ loaded"
+    ],
+    "category_id": 201153805,
+    "official_category_name": "Clogs",
+    "category_semantic_gate": "FAIL_FOR_LACE_UP_SNEAKER_STRUCTURE",
+    "category_write_attempts": 0,
+    "full_public_QA": "NOT_PASS_CATEGORY_AND_REMAINING_VISUAL_CHECKS",
+    "screenshot_occluded_by_user_window": "public_description_visible.png not accepted as visual proof"
+  },
+  "scope": "No full-shop rescan, no new business strategy, no RFQ, no budget change, no new creation, no watcher.",
+  "slipper_current": {
+    "M001": {
+      "authorization": "Direct user: 允许按已备方案上传 M001、A6607 的商品图片，并各正式发布一次。",
+      "create_calls": 2,
+      "product_id": "1601970169467",
+      "status": "APPROVED_DISPLAY_Y_ACTUAL_4_5",
+      "request_id": "213e759c17910038598925619",
+      "trace_id": "210325bb17910030066971359e1114",
+      "business_error": null,
+      "verified_uploaded_roles": 11,
+      "unique_upload_successes": 11,
+      "unknown_upload_roles": [
+        "M6"
+      ],
+      "old_action": "NOT_SENT",
+      "next_action": "Same-ID image-aspect repair and public QA remain pending; never create this model again",
+      "successful_creates": 1,
+      "attempt2_request_id": "213e759c17910038598925619",
+      "first_attempt_business_rejected": true,
+      "formal_read_request_id": "0bbb3b2417910047913975543",
+      "formal_observed_at": "2026-10-03T05:19:52.196952+00:00",
+      "category_id": 201153804,
+      "SKU_count": 12,
+      "SKU_binding": "verified",
+      "FAQ_count": 6,
+      "prices": [
+        {
+          "min_pairs": 2,
+          "USD": 10.08
+        },
+        {
+          "min_pairs": 50,
+          "USD": 9.41
+        },
+        {
+          "min_pairs": 100,
+          "USD": 8.74
+        }
+      ],
+      "actual_score": 4.5,
+      "score_issue": "Official score image_scale -0.5; current native hero 630x455. Square colour composites reviewed and rejected as unsuitable heroes. No further image update sent.",
+      "source_url": "https://baiyou877.sooxie.com/detail/2482094",
+      "public_model": "BQ-M001",
+      "score_request_id": "0bab02fe17910057901777334",
+      "prior_failed_create_receipt": {
+        "request_id": "0b830ecc17910030073376783",
+        "business_error": "isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:PUB_BIZCHECK_API_SKU_PROP_INVALID;"
+      }
+    },
+    "A6607": {
+      "authorization": "Direct user: 允许按已备方案上传 M001、A6607 的商品图片，并各正式发布一次。",
+      "create_calls": 1,
+      "product_id": null,
+      "status": "business_rejected",
+      "request_id": "0b0b3a2717910030490695855",
+      "trace_id": "210334ab17910030484897639e0b91",
+      "business_error": "isp.system-service-error:PUB_BIZCHECK_CAT_PUB_RESTRICT;",
+      "verified_uploaded_roles": 14,
+      "unique_upload_successes": 13,
+      "unknown_upload_roles": [],
+      "old_action": "NOT_SENT",
+      "next_action": "Store business category restriction; do not change company settings or misclassify children slides"
+    }
+  },
+  "protected_new_links_current": [
+    {
+      "product_id": "1601969869242",
+      "observed_at": "2026-10-03T04:52:39.553844+00:00",
+      "status": "approved",
+      "display": "Y",
+      "get_error": null,
+      "request_id": "21501be117910031588875522",
+      "SKU_count": 22,
+      "role": "protected_replacement_link"
+    },
+    {
+      "product_id": "1601969788941",
+      "observed_at": "2026-10-03T04:52:40.960994+00:00",
+      "status": "approved",
+      "display": "Y",
+      "get_error": null,
+      "request_id": "21501b8d17910031602943793",
+      "SKU_count": 18,
+      "role": "protected_replacement_link"
+    },
+    {
+      "product_id": "1601969861694",
+      "observed_at": "2026-10-03T04:52:42.546628+00:00",
+      "status": "approved",
+      "display": "Y",
+      "get_error": null,
+      "request_id": "0bab02fe17910031617796995",
+      "SKU_count": 15,
+      "role": "protected_replacement_link"
+    },
+    {
+      "product_id": "1601969920294",
+      "observed_at": "2026-10-03T04:52:44.046979+00:00",
+      "status": "approved",
+      "display": "Y",
+      "get_error": null,
+      "request_id": "213c933517910031633684884",
+      "SKU_count": 24,
+      "role": "protected_replacement_link"
+    },
+    {
+      "product_id": "1601969853888",
+      "observed_at": "2026-10-03T04:52:45.545420+00:00",
+      "status": "approved",
+      "display": "Y",
+      "get_error": null,
+      "request_id": "21501be117910031647935645",
+      "SKU_count": 33,
+      "role": "protected_replacement_link"
+    }
+  ],
+  "category_929_diagnosis": {
+    "recorded_at": "2026-10-03T06:00:52.271372+00:00",
+    "id": "1601970118386",
+    "requested_category": 201339906,
+    "current_category": 201153805,
+    "status": "approved",
+    "display": "Y",
+    "sku_count": 27,
+    "get_request_id": "213d4e4917910071259007423",
+    "route": "normal existing-ID GUI category change",
+    "result": "UI_VALIDATION_REJECTED_NO_FORMAL_CATEGORY_CHANGE",
+    "errors": [
+      "颜色",
+      "发货期"
+    ],
+    "unknown_information": "No evidenced delivery lead-time commitment; do not invent days. Colour validation needs precise diagnosis before correction.",
+    "submission_ui_ledger": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\single_agent_resume_2310\\929_publish\\category_diagnosis\\category_update_ui_once.json",
+    "next_action": "Recover these precise validation items; preserve original SKU IDs, prices and galleries; do not recreate."
+  },
+  "OFF_recovery_scope": "One explicitly authorised fresh HR057 normal-UI recovery after fresh formal Y; previous unknown/error attempt ledger preserved; no automatic retries.",
+  "protected_3522_latest": {
+    "observed_at": "2026-10-03T05:58:48.898457+00:00",
+    "response": {
+      "product": {
+        "gmt_create": "2026-10-02 23:19:14",
+        "keywords": [
+          ""
+        ],
+        "owner_member_display_name": "User name",
+        "subject": "Men's Suede Slip-On Loafers with Perforated Side Panels",
+        "main_image": {
+          "images": [
+            "https://sc04.alicdn.com/kf/H1eaef987b28f495bbb68e65950525c746.jpg",
+            "https://sc04.alicdn.com/kf/H4ae6b56a8bbd447db3e7987f79a43b1fS.jpg",
+            "https://sc04.alicdn.com/kf/Hd29ac3e7327941b78062f3218b698a899.jpg",
+            "https://sc04.alicdn.com/kf/Hd14d8f03f35a4f7dafda0de47137f7e7o.jpg",
+            "https://sc04.alicdn.com/kf/H76783d4ac77648b0bd98f594fdec22c8r.jpg",
+            "https://sc04.alicdn.com/kf/Hd96f2d91454e4050936baa1be491d0ebD.jpg"
+          ]
+        },
+        "struct_detail_product": true,
+        "language": "ENGLISH",
+        "is_smart_edit": false,
+        "gmt_modified": "2026-10-02 23:56:50",
+        "product_sku": {
+          "skus": [
+            {
+              "attr2_value": "{\"222038415\":-46,\"191288010\":3327837}",
+              "bulk_discount_prices": [
+                {
+                  "start_quantity": 2,
+                  "price": "19.04"
+                },
+                {
+                  "start_quantity": 50,
+                  "price": "17.77"
+                },
+                {
+                  "start_quantity": 100,
+                  "price": "16.50"
+                }
+              ],
+              "sku_id": 109767000198,
+              "sku_code": "BQ-L3522-Black-46"
+            },
+            {
+              "attr2_value": "{\"222038415\":-39,\"191288010\":216016296}",
+              "bulk_discount_prices": [
+                {
+                  "start_quantity": 2,
+                  "price": "19.04"
+                },
+                {
+                  "start_quantity": 50,
+                  "price": "17.77"
+                },
+                {
+                  "start_quantity": 100,
+                  "price": "16.50"
+                }
+              ],
+              "sku_id": 109767000199,
+              "sku_code": "BQ-L3522-Green-39"
+            },
+            {
+              "attr2_value": "{\"222038415\":-44,\"191288010\":3327837}",
+              "bulk_discount_prices": [
+                {
+                  "start_quantity": 2,
+                  "price": "19.04"
+                },
+                {
+                  "start_quantity": 50,
+                  "price": "17.77"
+                },
+                {
+                  "start_quantity": 100,
+                  "price": "16.50"
+                }
+              ],
+              "sku_id": 109767000196,
+              "sku_code": "BQ-L3522-Black-44"
+            },
+            {
+              "attr2_value": "{\"222038415\":-45,\"191288010\":3327837}",
+              "bulk_discount_prices": [
+                {
+                  "start_quantity": 2,
+                  "price": "19.04"
+                },
+                {
+                  "start_quantity": 50,
+                  "price": "17.77"
+                },
+                {
+                  "start_quantity": 100,
+                  "price": "16.50"
+                }
+              ],
+              "sku_id": 109767000197,
+              "sku_code": "BQ-L3522-Black-45"
+            },
+            {
+              "attr2_value": "{\"222038415\":-42,\"191288010\":3327837}",
+              "bulk_discount_prices": [
+                {
+                  "start_quantity": 2,
+                  "price": "19.04"
+                },
+                {
+                  "start_quantity": 50,
+                  "price": "17.77"
+                },
+                {
+                  "start_quantity": 100,
+                  "price": "16.50"
+                }
+              ],
+              "sku_id": 109767000194,
+              "sku_code": "BQ-L3522-Black-42"
+            },
+            {
+              "attr2_value": "{\"222038415\":-43,\"191288010\":3327837}",
+              "bulk_discount_prices": [
+                {
+                  "start_quantity": 2,
+                  "price": "19.04"
+                },
+                {
+                  "start_quantity": 50,
+                  "price": "17.77"
+                },
+                {
+                  "start_quantity": 100,
+                  "price": "16.50"
+                }
+              ],
+              "sku_id": 109767000195,
+              "sku_code": "BQ-L3522-Black-43"
+            },
+            {
+              "attr2_value": "{\"222038415\":-40,\"191288010\":3327837}",
+              "bulk_discount_prices": [
+                {
+                  "start_quantity": 2,
+                  "price": "19.04"
+                },
+                {
+                  "start_quantity": 50,
+                  "price": "17.77"
+                },
+                {
+                  "start_quantity": 100,
+                  "price": "16.50"
+                }
+              ],
+              "sku_id": 109767000192,
+              "sku_code": "BQ-L3522-Black-40"
+            },
+            {
+              "attr2_value": "{\"222038415\":-41,\"191288010\":3327837}",
+              "bulk_discount_prices": [
+                {
+                  "start_quantity": 2,
+                  "price": "19.04"
+                },
+                {
+                  "start_quantity": 50,
+                  "price": "17.77"
+                },
+                {
+                  "start_quantity": 100,
+                  "price": "16.50"
+                }
+              ],
+              "sku_id": 109767000193,
+              "sku_code": "BQ-L3522-Black-41"
+            },
+            {
+              "attr2_value": "{\"222038415\":-46,\"191288010\":216016296}",
+              "bulk_discount_prices": [
+                {
+                  "start_quantity": 2,
+                  "price": "19.04"
+                },
+                {
+                  "start_quantity": 50,
+                  "price": "17.77"
+                },
+                {
+                  "start_quantity": 100,
+                  "price": "16.50"
+                }
+              ],
+              "sku_id": 109767000206,
+              "sku_code": "BQ-L3522-Green-46"
+            },
+            {
+              "attr2_value": "{\"222038415\":-39,\"191288010\":5715155}",
+              "bulk_discount_prices": [
+                {
+                  "start_quantity": 2,
+                  "price": "19.04"
+                },
+                {
+                  "start_quantity": 50,
+                  "price": "17.77"
+                },
+                {
+                  "start_quantity": 100,
+                  "price": "16.50"
+                }
+              ],
+              "sku_id": 109767000207,
+              "sku_code": "BQ-L3522-Beige-39"
+            },
+            {
+              "attr2_value": "{\"222038415\":-44,\"191288010\":216016296}",
+              "bulk_discount_prices": [
+                {
+                  "start_quantity": 2,
+                  "price": "19.04"
+                },
+                {
+                  "start_quantity": 50,
+                  "price": "17.77"
+                },
+                {
+                  "start_quantity": 100,
+                  "price": "16.50"
+                }
+              ],
+              "sku_id": 109767000204,
+              "sku_code": "BQ-L3522-Green-44"
+            },
+            {
+              "attr2_value": "{\"222038415\":-45,\"191288010\":216016296}",
+              "bulk_discount_prices": [
+                {
+                  "start_quantity": 2,
+                  "price": "19.04"
+                },
+                {
+                  "start_quantity": 50,
+                  "price": "17.77"
+                },
+                {
+                  "start_quantity": 100,
+                  "price": "16.50"
+                }
+              ],
+              "sku_id": 109767000205,
+              "sku_code": "BQ-L3522-Green-45"
+            },
+            {
+              "attr2_value": "{\"222038415\":-42,\"191288010\":216016296}",
+              "bulk_discount_prices": [
+                {
+                  "start_quantity": 2,
+                  "price": "19.04"
+                },
+                {
+                  "start_quantity": 50,
+                  "price": "17.77"
+                },
+                {
+                  "start_quantity": 100,
+                  "price": "16.50"
+                }
+              ],
+              "sku_id": 109767000202,
+              "sku_code": "BQ-L3522-Green-42"
+            },
+            {
+              "attr2_value": "{\"222038415\":-43,\"191288010\":216016296}",
+              "bulk_discount_prices": [
+                {
+                  "start_quantity": 2,
+                  "price": "19.04"
+                },
+                {
+                  "start_quantity": 50,
+                  "price": "17.77"
+                },
+                {
+                  "start_quantity": 100,
+                  "price": "16.50"
+                }
+              ],
+              "sku_id": 109767000203,
+              "sku_code": "BQ-L3522-Green-43"
+            },
+            {
+              "attr2_value": "{\"222038415\":-40,\"191288010\":216016296}",
+              "bulk_discount_prices": [
+                {
+                  "start_quantity": 2,
+                  "price": "19.04"
+                },
+                {
+                  "start_quantity": 50,
+                  "price": "17.77"
+                },
+                {
+                  "start_quantity": 100,
+                  "price": "16.50"
+                }
+              ],
+              "sku_id": 109767000200,
+              "sku_code": "BQ-L3522-Green-40"
+            },
+            {
+              "attr2_value": "{\"222038415\":-41,\"191288010\":216016296}",
+              "bulk_discount_prices": [
+                {
+                  "start_quantity": 2,
+                  "price": "19.04"
+                },
+                {
+                  "start_quantity": 50,
+                  "price": "17.77"
+                },
+                {
+                  "start_quantity": 100,
+                  "price": "16.50"
+                }
+              ],
+              "sku_id": 109767000201,
+              "sku_code": "BQ-L3522-Green-41"
+            },
+            {
+              "attr2_value": "{\"222038415\":-46,\"191288010\":5715155}",
+              "bulk_discount_prices": [
+                {
+                  "start_quantity": 2,
+                  "price": "19.04"
+                },
+                {
+                  "start_quantity": 50,
+                  "price": "17.77"
+                },
+                {
+                  "start_quantity": 100,
+                  "price": "16.50"
+                }
+              ],
+              "sku_id": 109767000214,
+              "sku_code": "BQ-L3522-Beige-46"
+            },
+            {
+              "attr2_value": "{\"222038415\":-44,\"191288010\":5715155}",
+              "bulk_discount_prices": [
+                {
+                  "start_quantity": 2,
+                  "price": "19.04"
+                },
+                {
+                  "start_quantity": 50,
+                  "price": "17.77"
+                },
+                {
+                  "start_quantity": 100,
+                  "price": "16.50"
+                }
+              ],
+              "sku_id": 109767000212,
+              "sku_code": "BQ-L3522-Beige-44"
+            },
+            {
+              "attr2_value": "{\"222038415\":-45,\"191288010\":5715155}",
+              "bulk_discount_prices": [
+                {
+                  "start_quantity": 2,
+                  "price": "19.04"
+                },
+                {
+                  "start_quantity": 50,
+                  "price": "17.77"
+                },
+                {
+                  "start_quantity": 100,
+                  "price": "16.50"
+                }
+              ],
+              "sku_id": 109767000213,
+              "sku_code": "BQ-L3522-Beige-45"
+            },
+            {
+              "attr2_value": "{\"222038415\":-42,\"191288010\":5715155}",
+              "bulk_discount_prices": [
+                {
+                  "start_quantity": 2,
+                  "price": "19.04"
+                },
+                {
+                  "start_quantity": 50,
+                  "price": "17.77"
+                },
+                {
+                  "start_quantity": 100,
+                  "price": "16.50"
+                }
+              ],
+              "sku_id": 109767000210,
+              "sku_code": "BQ-L3522-Beige-42"
+            },
+            {
+              "attr2_value": "{\"222038415\":-43,\"191288010\":5715155}",
+              "bulk_discount_prices": [
+                {
+                  "start_quantity": 2,
+                  "price": "19.04"
+                },
+                {
+                  "start_quantity": 50,
+                  "price": "17.77"
+                },
+                {
+                  "start_quantity": 100,
+                  "price": "16.50"
+                }
+              ],
+              "sku_id": 109767000211,
+              "sku_code": "BQ-L3522-Beige-43"
+            },
+            {
+              "attr2_value": "{\"222038415\":-40,\"191288010\":5715155}",
+              "bulk_discount_prices": [
+                {
+                  "start_quantity": 2,
+                  "price": "19.04"
+                },
+                {
+                  "start_quantity": 50,
+                  "price": "17.77"
+                },
+                {
+                  "start_quantity": 100,
+                  "price": "16.50"
+                }
+              ],
+              "sku_id": 109767000208,
+              "sku_code": "BQ-L3522-Beige-40"
+            },
+            {
+              "attr2_value": "{\"222038415\":-41,\"191288010\":5715155}",
+              "bulk_discount_prices": [
+                {
+                  "start_quantity": 2,
+                  "price": "19.04"
+                },
+                {
+                  "start_quantity": 50,
+                  "price": "17.77"
+                },
+                {
+                  "start_quantity": 100,
+                  "price": "16.50"
+                }
+              ],
+              "sku_id": 109767000209,
+              "sku_code": "BQ-L3522-Beige-41"
+            },
+            {
+              "attr2_value": "{\"222038415\":-39,\"191288010\":3327837}",
+              "bulk_discount_prices": [
+                {
+                  "start_quantity": 2,
+                  "price": "19.04"
+                },
+                {
+                  "start_quantity": 50,
+                  "price": "17.77"
+                },
+                {
+                  "start_quantity": 100,
+                  "price": "16.50"
+                }
+              ],
+              "sku_id": 109767000191,
+              "sku_code": "BQ-L3522-Black-39"
+            }
+          ],
+          "sku_attributes": [
+            {
+              "attribute_id": 191288010,
+              "values": [
+                {
+                  "system_value_name": "Black",
+                  "image_url": "https://sc04.alicdn.com/kf/H5b2b370e2376433eae8113a339dbaf0d1.jpg",
+                  "value_id": 3327837
+                },
+                {
+                  "system_value_name": "Green",
+                  "image_url": "https://sc04.alicdn.com/kf/Hab2dd8f0076945de820100b8030cc042i.jpg",
+                  "value_id": 216016296
+                },
+                {
+                  "system_value_name": "Beige",
+                  "image_url": "https://sc04.alicdn.com/kf/H65c4f404852c4dffa46b87aa3c738bccM.jpg",
+                  "value_id": 5715155
+                }
+              ],
+              "attribute_name": "Color"
+            },
+            {
+              "attribute_id": 222038415,
+              "values": [
+                {
+                  "system_value_name": "Size 46",
+                  "value_id": -46
+                },
+                {
+                  "system_value_name": "Size 39",
+                  "value_id": -39
+                },
+                {
+                  "system_value_name": "Size 44",
+                  "value_id": -44
+                },
+                {
+                  "system_value_name": "Size 45",
+                  "value_id": -45
+                },
+                {
+                  "system_value_name": "Size 42",
+                  "value_id": -42
+                },
+                {
+                  "system_value_name": "Size 43",
+                  "value_id": -43
+                },
+                {
+                  "system_value_name": "Size 40",
+                  "value_id": -40
+                },
+                {
+                  "system_value_name": "Size 41",
+                  "value_id": -41
+                }
+              ],
+              "attribute_name": "EUR Size"
+            }
+          ]
+        },
+        "category_id": 202240835,
+        "product_id": "AAEYjmk4AOWGex-cDVm8Xx7F",
+        "sub_market_type": "customization",
+        "struct_detail": {
+          "company_image": {
+            "images": [
+              {
+                "image_set": {
+                  "name": "Extended company profile",
+                  "id": 750
+                },
+                "image_url": "https://sc04.alicdn.com/kf/H9f32c7ecea0f4d25bc5ddc9cd04c1e5dK.jpg"
+              },
+              {
+                "image_set": {
+                  "name": "Production workflow",
+                  "id": 600
+                },
+                "image_url": "https://sc04.alicdn.com/kf/H36e700f5c3ee447a80c035d8ae7521d9a.jpg"
+              },
+              {
+                "image_set": {
+                  "name": "Packaging & shipping specifications",
+                  "id": 700
+                },
+                "image_url": "https://sc04.alicdn.com/kf/H5f71c3cfb4064b51bb458d0a786cb402R.jpg"
+              },
+              {
+                "image_set": {
+                  "name": "Customization capabilities",
+                  "id": 550
+                },
+                "image_url": "https://sc04.alicdn.com/kf/H496f7579171f4370a1d47c3adf30001bK.jpg"
+              },
+              {
+                "image_set": {
+                  "name": "Company overview",
+                  "id": 400
+                },
+                "image_url": "https://sc04.alicdn.com/kf/Ha8c1682092424e778eadf945763e79daU.jpg"
+              }
+            ]
+          },
+          "product_faq": [
+            {
+              "question": "What materials are specified?",
+              "answer": "The upper is cow suede and the lining is PU. Outsole, midsole and insole compositions are not specified. Send any additional material requirements with your inquiry so they can be checked before ordering."
+            },
+            {
+              "question": "Which colors and sizes can I request?",
+              "answer": "Listed colors are Black, Green and Beige, with size labels 39-46. Provide a quantity for each requested color and size. Measurements, fit and any international size conversion are confirmed for your order."
+            },
+            {
+              "question": "What construction is visible in the photos?",
+              "answer": "The actual photos show a slip-on opening, plain central vamp, stitched U-shaped vamp panel, perforated surrounding panels and closed heel. Review the pictured shape for your intended business casual assortment."
+            },
+            {
+              "question": "What are the minimum and quantity prices?",
+              "answer": "The listing minimum is 2 pairs. Indicative unit prices are USD 19.04 for 2-49 pairs, USD 17.77 for 50-99 pairs and USD 16.50 for 100 or more pairs. Final quotation depends on color-size mix, packing, destination and agreed order terms; freight and any taxes are confirmed separately."
+            },
+            {
+              "question": "Can I request samples or customization?",
+              "answer": "Send your sample quantity or customization requirements with the color-size mix. Feasibility, sample charges, logo or packing options and applicable minimums are assessed before quotation."
+            },
+            {
+              "question": "Is stock or a dispatch date guaranteed?",
+              "answer": "No ready-stock or fixed dispatch promise is made. Provide total quantity, destination, packing requirements and requested dispatch date. Supply, per-size availability, payment terms and the dispatch arrangement are confirmed for your inquiry."
+            }
+          ],
+          "detail_image": {
+            "images": [
+              {
+                "image_set": {
+                  "name": "Other product images",
+                  "id": "350"
+                },
+                "image_url": "https://sc04.alicdn.com/kf/Hddfc7a2aa4b7414fadface1590e1d05bz.jpg"
+              },
+              {
+                "image_set": {
+                  "name": "Detail shot",
+                  "id": "300"
+                },
+                "image_url": "https://sc04.alicdn.com/kf/H7ae9bbe3b0c64f02b616dedbb575ea8cQ.jpg"
+              },
+              {
+                "image_set": {
+                  "name": "Other product images",
+                  "id": "350"
+                },
+                "image_url": "https://sc04.alicdn.com/kf/H3d1ed4c9d7cd4e9fa587932f56bfc68cO.jpg"
+              },
+              {
+                "image_set": {
+                  "name": "Other product images",
+                  "id": "350"
+                },
+                "image_url": "https://sc04.alicdn.com/kf/H13d5c36e892445d387698c46d52c101ck.jpg"
+              }
+            ]
+          },
+          "product_summary": "Cow suede slip-on loafers with a plain central vamp, stitched U-shaped vamp panel, perforated surrounding panels and closed heel. The confirmed lining material is PU. Three source colors: Black, Green and Beige. Listed size labels: 39, 40, 41, 42, 43, 44, 45 and 46; measured fit and international size conversion are confirmed for the order. Outsole, midsole and insole compositions are not specified. Send your color-size quantities, destination, packing requirements and requested dispatch date for an order-specific quotation. Availability and supply terms are confirmed during inquiry; no ready-stock or performance guarantee is made.",
+          "company_summary": "Quanzhou Beiqiang Footwear & Apparel Co., Ltd. supports footwear wholesale inquiries. The company capability images below describe general business capabilities. Product-specific supply, samples, customization, packing and dispatch are assessed against your order requirements before quotation."
+        },
+        "display": "Y",
+        "pc_detail_url": "https://www.alibaba.com/product-detail/Men-s-Suede-Slip-On-Loafers_1601969920294.html",
+        "rts": false,
+        "product_type": "sourcing",
+        "sourcing_trade": {
+          "fob_min_price": "16.5",
+          "fob_currency": "USD",
+          "min_order_unit_type": "Pair",
+          "fob_max_price": "19.04",
+          "fob_unit_type": "Pair",
+          "min_order_quantity": "2"
+        },
+        "price_type": "ladder_price",
+        "attributes": [
+          {
+            "attribute_id": 191290430,
+            "attribute_name": "Lining Material",
+            "value_id": 3323086,
+            "value_name": "PU"
+          },
+          {
+            "attribute_id": 200001153,
+            "attribute_name": "Closure Type",
+            "value_id": 190091228,
+            "value_name": "Slip-On"
+          },
+          {
+            "attribute_id": 1,
+            "attribute_name": "Place of Origin",
+            "value_id": -1,
+            "value_name": "Not specified"
+          },
+          {
+            "attribute_id": 3,
+            "attribute_name": "Model Number",
+            "value_id": -1,
+            "value_name": "BQ-L3522"
+          },
+          {
+            "attribute_id": 20700,
+            "attribute_name": "Midsole Material",
+            "value_id": -1,
+            "value_name": "Not specified"
+          },
+          {
+            "attribute_id": 191290426,
+            "attribute_name": "Outsole Material",
+            "value_id": -1,
+            "value_name": "Not specified"
+          },
+          {
+            "attribute_id": 191290428,
+            "attribute_name": "Upper Material",
+            "value_id": -1,
+            "value_name": "Cow suede"
+          }
+        ],
+        "owner_member": 286385890,
+        "status": "approved"
+      },
+      "request_id": "212cbf3217910071281924170",
+      "_trace_id_": "2103243417910071278472035e0d1b"
+    },
+    "operation_kind": "read_only"
+  }
+}

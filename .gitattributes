@@ -1,2 +1,4 @@
 # Store text consistently in Git; preserve binary assets without conversion.
 * text=auto
+# Imported source evidence keeps its original bytes for SHA-256 verification.
+/02_Alibaba运营/05_扩品工程/数据/来源证据/* -text -diff
