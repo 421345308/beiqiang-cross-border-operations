@@ -1,8 +1,8 @@
 {
-  "observed_at": "2026-10-09T15:22:56.366873+00:00",
+  "observed_at": "2026-10-09T16:03:04.449307+00:00",
   "source_urls": 107,
-  "created_products": 37,
-  "formal_EU_combinations": 1131,
+  "created_products": 38,
+  "formal_EU_combinations": 1170,
   "approved_before_quality_revision": 26,
   "actual_score_5_before_quality_revision": 26,
   "scope_status": "ACTIVE_NOT_COMPLETE",
@@ -16,7 +16,7 @@
     "Do not count source URLs as distinct publishable styles",
     "Do not replay existing or outcome-unknown creates"
   ],
-  "next_work": "2577已单次创建16EU，原ID只读补核审核、完整Schema及实际评分；保留各原ID不重放。1712已证不同鞋型，K502/K502D为同外形加绒/单鞋版本，按真实类目及版本继续准备；下一款023先补当前来源、逐图优化和差异化标题，再续107来源剩余独立款。027图案及2509/02505类目局部处理；浏览器仅异常与批次抽检。",
+  "next_work": "023唯一原IDapproved/Y、39EU、完整字段及18CDN通过；实际评分接口返回ISP15，按真实回执保留待评分并继续制作。2577全字段及实际5.00通过。018当前25图/四颜色48EU/材料及13图角色已准备，先核当前类目和正式目录、逐张优化后单次发布；2583已取得27图/逐色72范围，Black/LightGray实拍及绿色具体侧饰局部核对并行继续。",
   "revision_readbacks": 26,
   "revision_scope_pass": 26,
   "revision_pending_review": 0,
@@ -101,15 +101,24 @@
     },
     "2577": {
       "product_id": "1601974939421",
-      "status": "new",
-      "display": "N",
+      "status": "approved",
+      "display": "Y",
       "sku_count": 16,
+      "score": "5.00",
+      "score_status": "PASS_SCORE_GATE",
+      "observed_at": "2026-10-09T15:37:24.421137+00:00"
+    },
+    "023": {
+      "product_id": "1601974946496",
+      "status": "approved",
+      "display": "Y",
+      "sku_count": 39,
       "score": null,
-      "score_status": null,
-      "observed_at": "2026-10-09T15:22:23.619784+00:00"
+      "score_status": "PENDING_OR_BELOW_TARGET",
+      "observed_at": "2026-10-09T15:59:12.797272+00:00"
     }
   },
-  "current_approved_displayed": 36,
+  "current_approved_displayed": 38,
   "complete_image_readback_pass_styles": [
     "058",
     "2633",
@@ -146,7 +155,9 @@
     "02507",
     "2585",
     "021",
-    "2578"
+    "2578",
+    "2577",
+    "023"
   ],
   "pending_image_readback_styles": [],
   "latest_title_refinement": {
@@ -158,9 +169,7 @@
     "observed_at": "2026-10-08T23:07:23.578830+00:00"
   },
   "browser_acceptance": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
-  "pending_new_approval_styles": [
-    "2577"
-  ],
+  "pending_new_approval_styles": [],
   "public_QA_pass_styles": [
     "2619",
     "028",
@@ -286,11 +295,36 @@
     "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2578准备/发布后字段核验.json"
   },
   "candidate2577": {
-    "status": "CREATED_PENDING_APPROVAL_FULL_ACCEPTANCE",
+    "status": "API_FIELDS_SCORE_PASS",
     "product_id": "1601974939421",
     "EU_combinations": 16,
     "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2577准备/发布后字段核验.json",
     "formal_CDN_pixel_status": "FORMAL_CDN_PIXEL_AND_VISUAL_PASS",
     "formal_CDN_pixel_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2577准备/正式CDN像素核验.json"
+  },
+  "candidate023": {
+    "status": "APPROVED_FIELDS_SCORE_PENDING",
+    "product_id": "1601974946496",
+    "EU_combinations": 39,
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/023准备/发布后字段核验.json",
+    "formal_CDN_pixel_status": "FORMAL_CDN_PIXEL_AND_VISUAL_PASS",
+    "formal_CDN_pixel_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/023准备/正式CDN像素核验.json"
+  },
+  "candidate2583": {
+    "status": "CURRENT_SOURCE_COLLECTED_PRODUCT_SPECIFIC_IMAGE_REVIEW_PENDING",
+    "source_EU_combinations": 72,
+    "photo_evidenced_colors": [
+      "Beige",
+      "Yellow",
+      "Green",
+      "Red"
+    ],
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2583准备/当前来源与色码核对.json"
+  },
+  "candidate018": {
+    "status": "CURRENT_SOURCE_AND_BUYER_ROLE_PLAN_READY_NOT_GENERATED",
+    "source_EU_combinations": 48,
+    "title_bytes": 91,
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/018准备/商品预检与图组策略.json"
   }
 }

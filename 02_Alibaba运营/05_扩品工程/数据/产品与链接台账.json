@@ -6468,22 +6468,29 @@
     {
       "id": "LQ-023",
       "aliases": [
-        "LQ-023"
+        "LQ-023",
+        "BQ-LQ023"
       ],
-      "source_state": "CANDIDATE",
-      "adopted_source_id": null,
-      "candidate_source_ids": [
-        "src-d2ddaa085167"
-      ],
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-d2ddaa085167",
+      "candidate_source_ids": [],
       "raw_packages": [],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/质量复核_2026-10-09/全分类处理队列.json"
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/质量复核_2026-10-09/全分类处理队列.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/023准备/当前来源文本.txt",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/023准备/经营任务包.md",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/023准备/05_AI候选/整组验收.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/023准备/来源款式近似候选.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/023准备/发布前逐款核验.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/023准备/正式创建回执.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/023准备/发布后字段核验.json"
       ],
       "notes": [
-        "来源采集色码（非实存）：黑色/米色/红色；EU 36/37/38/39/40/41/42/43/44/45/46/47/48"
+        "来源采集色码（非实存）：黑色/米色/红色；EU 36/37/38/39/40/41/42/43/44/45/46/47/48",
+        "Black/Beige/Red各EU36–48；合成革鞋面和橡胶外底有当前来源实图证据，内里/中底成分未知；12张产品图先优化验收后单次发布。"
       ],
-      "next_action": "候选已采集；先做款式去重、事实/IP/图组质量，再按授权发布。"
+      "next_action": "保持唯一原ID；审核、完整字段和评分仅只读补核；继续其他款。"
     },
     {
       "id": "LQ-02412",
@@ -7370,7 +7377,7 @@
         "来源采集色码（非实存）：黑色/浅灰；EU 39/40/41/42/43/44/45/46",
         "Black/Light Gray各EU39–46；飞织鞋面及内里、MD中底有当前来源实图证据，牛津不推定外底具体成分；11张产品图先优化验收后单次发布。"
       ],
-      "next_action": "保持唯一原ID；审核、完整字段和评分仅只读补核；继续其他款。"
+      "next_action": "保持唯一原ID；API全量字段和实际评分验收通过，浏览器仅异常与抽检。"
     },
     {
       "id": "LQ-2578",
@@ -16336,18 +16343,18 @@
       "bound_source_id": "src-b5a310a9d98a",
       "source_relation": "ADOPTED_SOURCE_EVIDENCE",
       "observation": {
-        "audit": "new",
-        "display": "N",
-        "at": "2026-10-09T15:22:23.619784+00:00",
+        "audit": "approved",
+        "display": "Y",
+        "at": "2026-10-09T15:37:24.421137+00:00",
         "scope": "API正式标题/卖点/有效品牌及材料/EU规格/SKU图/6主4详5公司核验；审核和实际评分独立取证",
-        "score": null,
+        "score": "5.00",
         "sku_count": 16,
-        "image_scope": "PENDING_APPROVAL_FULL_SCHEMA",
+        "image_scope": "PASS_COMPLETE_IMAGE_SCHEMA",
         "title_quality": "LOCAL_REVIEW_PASS_FORMAL_MATCH",
         "public_qa": "NOT_PUBLICLY_TESTED_BATCH_SAMPLE_POLICY",
         "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
         "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2577准备/发布后字段核验.json",
-        "score_status": "PENDING_APPROVAL_SCORE",
+        "score_status": "PASS_SCORE_GATE",
         "effective_attribute_status": "PASS_EFFECTIVE_CUSTOM_TEXT",
         "formal_product_summary_match": true,
         "legacy_keyword_status": "NOT_POPULATED"
@@ -16361,14 +16368,50 @@
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2577准备/正式创建回执.json",
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2577准备/发布后字段核验.json"
       ],
-      "notes": "2577两色16个EU规格；当前new/N，实际评分待有效回读。正式卖点已保存，旧关键词字段空；当前飞织鞋面和内里/MD中底来源内部留证，外底具体成分未指定。"
+      "notes": "2577两色16个EU规格；当前approved/Y，实际评分5.00。正式卖点已保存，旧关键词字段空；当前飞织鞋面和内里/MD中底来源内部留证，外底具体成分未指定。"
+    },
+    {
+      "id": "1601974946496",
+      "product_id": "LQ-023",
+      "model": "BQ-LQ023",
+      "url": "https://www.alibaba.com/product-detail/Unisex-Wide-Toe-Box-Synthetic-Leather_1601974946496.html",
+      "record_type": "国际站正式商品",
+      "bound_source_id": "src-d2ddaa085167",
+      "source_relation": "ADOPTED_SOURCE_EVIDENCE",
+      "observation": {
+        "audit": "approved",
+        "display": "Y",
+        "at": "2026-10-09T15:59:12.797272+00:00",
+        "scope": "API正式标题/卖点/有效品牌及材料/EU规格/SKU图/6主4详5公司核验；审核和实际评分独立取证",
+        "score": null,
+        "sku_count": 39,
+        "image_scope": "PASS_COMPLETE_IMAGE_SCHEMA",
+        "title_quality": "LOCAL_REVIEW_PASS_FORMAL_MATCH",
+        "public_qa": "NOT_PUBLICLY_TESTED_BATCH_SAMPLE_POLICY",
+        "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/023准备/发布后字段核验.json",
+        "score_status": "PENDING_OR_BELOW_TARGET",
+        "effective_attribute_status": "PASS_EFFECTIVE_CUSTOM_TEXT",
+        "formal_product_summary_match": true,
+        "legacy_keyword_status": "NOT_POPULATED"
+      },
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/023准备/当前来源文本.txt",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/023准备/经营任务包.md",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/023准备/05_AI候选/整组验收.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/023准备/来源款式近似候选.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/023准备/发布前逐款核验.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/023准备/正式创建回执.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/023准备/发布后字段核验.json"
+      ],
+      "notes": "023三色39个EU规格；当前approved/Y，实际评分待有效回读。正式卖点已保存，旧关键词字段空；当前合成革鞋面/橡胶外底来源内部留证，内里和中底成分未指定。"
     }
   ],
   "workstreams": [
     {
       "name": "路崎宽头/户外全分类",
-      "status": "107来源目标ACTIVE；37正式ID/1131EU；当前36个approved/Y；29品牌修复PASS；2577按完整字段及评分分别取证，2585-1同款合并。",
-      "next_action": "2577已单次创建16EU，原ID只读补核审核、完整Schema及实际评分；保留各原ID不重放。1712已证不同鞋型，K502/K502D为同外形加绒/单鞋版本，按真实类目及版本继续准备；下一款023先补当前来源、逐图优化和差异化标题，再续107来源剩余独立款。027图案及2509/02505类目局部处理；浏览器仅异常与批次抽检。",
+      "status": "107来源目标ACTIVE；38正式ID/1170EU；当前38个approved/Y；29品牌修复PASS；023按完整字段及评分分别取证，2585-1同款合并。",
+      "next_action": "023唯一原IDapproved/Y、39EU、完整字段及18CDN通过；实际评分接口返回ISP15，按真实回执保留待评分并继续制作。2577全字段及实际5.00通过。018当前25图/四颜色48EU/材料及13图角色已准备，先核当前类目和正式目录、逐张优化后单次发布；2583已取得27图/逐色72范围，Black/LightGray实拍及绿色具体侧饰局部核对并行继续。",
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/质量复核_2026-10-09/全分类处理队列.json",
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/本批正式商品汇总.json",
