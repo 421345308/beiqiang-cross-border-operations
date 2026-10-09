@@ -1,0 +1,127 @@
+{
+  "style": "25012",
+  "product_id": "1601973838360",
+  "observed_at": "2026-10-09T00:08:16.200438+00:00",
+  "stage": "SOURCE_TRIAGE_ONLY_NOT_FULL_IMAGE_REVIEW",
+  "source": "https://luqi.sooxie.com/detail/2498213",
+  "confirmed_colors": [
+    "Black",
+    "Grey"
+  ],
+  "EU_sizes": [
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48
+  ],
+  "EU_combinations": 20,
+  "formal_evidence": "Cached质量修正_2026-10-09/最新正式回读.json and original upload ledger, not fresh API observation",
+  "current_title": "Mens Slip On Outdoor Walking Shoes Elastic Side Gores Pull Tabs Segmented Sole Casual Footwear EU 39-48 Wholesale",
+  "title_review": "Accurate differentiated current slip-on/outdoor/elastic side gores/pull tabs/segmented sole/EU39-48/wholesale retained; outdoor category confirmed by owner. No search-volume or formal keyword-field persistence claim.",
+  "current_color_photo_bindings": [
+    {
+      "formal_color": "Black",
+      "source_image": 7,
+      "original_upload_role": "SKU_Black",
+      "formal_value_id": -200,
+      "binding": "CACHED_FORMAL_GET_MATCHES_ORIGINAL_UPLOAD_LEDGER"
+    },
+    {
+      "formal_color": "Grey",
+      "source_image": 11,
+      "original_upload_role": "SKU_Grey",
+      "formal_value_id": -201,
+      "binding": "CACHED_FORMAL_GET_MATCHES_ORIGINAL_UPLOAD_LEDGER"
+    }
+  ],
+  "observed_source_images_full": [
+    1,
+    7,
+    8,
+    10,
+    11,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    20,
+    21,
+    22,
+    23,
+    24,
+    26
+  ],
+  "contact_sheets_reviewed": [
+    0,
+    1
+  ],
+  "confirmed_risk": "Closed plain slip-on low upper, twin elastic side gores, striped center front pull strip and heel loop, black toe perimeter patch, grey sole band and black segmented tread. Black black upper; Grey grey upper with black collar/gores/toe and grey side panel; both blue actual insoles. Genuine OUTDOOR emboss retained, no added performance promise. Source17 and24 have rear shoe clipped at left edge,18 rear shoe at right leg edge,26 rear shoe at right frame; avoid full-pair edit/reconstruction. Source2-6 unrelated recommended products excluded. Ordinary laces, mesh panels, wide toe proof or new views not invented.",
+  "preferred_color_sources": {
+    "Black": 7,
+    "Grey": 11
+  },
+  "proposed_roles": {
+    "M1": {
+      "source": 1,
+      "action": "Black original full hero pair; clean white background only"
+    },
+    "M2": {
+      "source": 10,
+      "action": "Actual Black side/outsole pair, exact tread visible, no grip testing claim"
+    },
+    "M3": {
+      "source": 15,
+      "action": "Actual complete single Grey angled shoe, visible side gore and pull tabs"
+    },
+    "M4": {
+      "source": [
+        7,
+        11
+      ],
+      "action": "Two cleaned actual complete Black/Grey pairs, EU39-48"
+    },
+    "M5": {
+      "source": 23,
+      "action": "Complete actual Grey front on-foot pair and quotation inputs"
+    },
+    "D1": {
+      "source": 20,
+      "action": "Independent actual Black front on-foot pair overview"
+    },
+    "D2": {
+      "source": 8,
+      "action": "Actual Black top pair showing original front/heel pull tabs and blue insole; no orthopedic/material claim"
+    },
+    "D3": {
+      "source": 22,
+      "action": "Actual complete Grey outsole/heel on-foot pair, no grip or flexibility demonstration"
+    },
+    "D4": {
+      "source": 13,
+      "action": "Actual Grey top pair plus sample terms"
+    },
+    "SKU-Black": {
+      "source": 7,
+      "action": "Exact complete Black pair clean white"
+    },
+    "SKU-Grey": {
+      "source": 11,
+      "action": "Exact complete Grey pair clean white"
+    }
+  },
+  "next_steps": [
+    "Generate11 individual assets with original identity and safe edges, full candidate/source/whole-set review.",
+    "Fresh current Schema two Color IDs and20EU rows; precise img plus gallery/detail only, no sku field.",
+    "Official controlled upload, original-ID once update and formal get/Schema/twoColor/20EU readback."
+  ],
+  "mutations_this_plan": "NONE: no25012 generation/upload/update this phase",
+  "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+}

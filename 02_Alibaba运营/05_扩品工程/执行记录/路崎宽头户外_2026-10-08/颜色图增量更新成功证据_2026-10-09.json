@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-10-08T23:42:31.710494+00:00",
+  "observed_at": "2026-10-09T00:08:18.263227+00:00",
   "scope": "Verified current-type4 category201334413 original-ID Color img update, together with galleries; no generic saleProp delete/material/price/SKU support inferred",
   "evidence": [
     {
@@ -225,6 +225,34 @@
         "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\1212准备\\整组图片修正_2026-10-09\\最新正式回读.json",
         "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\1212准备\\整组图片修正_2026-10-09\\正式Schema回执.json",
         "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\1212准备\\整组图片修正_2026-10-09\\图片修正核验.json"
+      ]
+    },
+    {
+      "style": "2599-1",
+      "product_id": "1601973741932",
+      "operation": "alibaba.icbu.product.schema.update",
+      "detail_type": 4,
+      "category_id": 201334413,
+      "field_ids": [
+        "scImages",
+        "detailImage",
+        "saleProp"
+      ],
+      "dependency_ids": [],
+      "changed_saleProp": "Precisely 3 existing Black/Beige/White Color img attributes; IDs/names/EU values unchanged",
+      "sku_submitted": false,
+      "preserved": "All30 original SKU rows/IDs/codes/prices, title, nonimage saleProp and all unsubmitted fields",
+      "verification": "Fresh 3-node current Schema; approved/Y get and Schema exact color bindings, six main/four detail order and entire30-row protection PASS",
+      "scope_result": "PASS",
+      "observed_at": "2026-10-09T00:02:42.889176+00:00",
+      "source_reports": [
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2599-1准备\\整组图片修正_2026-10-09\\当前Schema回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2599-1准备\\整组图片修正_2026-10-09\\正式修正清单.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2599-1准备\\整组图片修正_2026-10-09\\最小图片载荷.xml",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2599-1准备\\整组图片修正_2026-10-09\\正式更新回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2599-1准备\\整组图片修正_2026-10-09\\最新正式回读.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2599-1准备\\整组图片修正_2026-10-09\\正式Schema回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2599-1准备\\整组图片修正_2026-10-09\\图片修正核验.json"
       ]
     }
   ],
