@@ -1,3 +1,18 @@
+> **历史过程证据，停止追加和维护当前状态。** 当前款式、共用来源、关联ID与待办统一看[扩品总文件](../国际站合规扩品工程总控.md)；历史段落中的旧暂停、线程分工、候选、库存与待授权只解释当时过程，不能作为当前执行指令。
+
+<a id="hr021-source-verified-20261002"></a>
+## HR021 A/B/C真实来源已核（2026-10-02本地原件复核）
+这款不在搜鞋网：采购来源为Made-in-China，店铺hzmshoes/HZM，供方原页英文公司名 **Guangzhou Weirui Shoes Co., Ltd.**；中文工商名未核，不自行音译为已确认名称。原货号 **26CZYA22-113**，Coffee/Green、EU35–40，真实双扣Mary Jane（包括HR021-C），不是早期单搭带网面概念鞋。
+
+| 我们的型号 | 国际站商品ID | 供方/原货号/直达链接 | 证据日期与缺失状态 |
+| --- | --- | --- | --- |
+| HR021-A | 1601943593293 | Guangzhou Weirui Shoes Co., Ltd.；26CZYA22-113；[Made-in-China原款](https://hzmshoes.en.made-in-china.com/product/JYcRrUIDuBVm/China-OEM-ODM-High-Quality-Brown-Suede-Mary-Jane-Sneakers-for-Women-Walking-Style-Double-Buckle-Casual-Shoes-Manufacturer-in-Guangzhou.html) | 来源2026-09-29实图/事实核验；后来正式绑定已核，2026-10-01批次approved/Y及各12SKU；当次3.90边框/拼接、公开QA未闭环，今日实时状态/采购条件仍须原owner核。 |
+| HR021-B | 1601943584343 | Guangzhou Weirui Shoes Co., Ltd.；26CZYA22-113；[Made-in-China原款](https://hzmshoes.en.made-in-china.com/product/JYcRrUIDuBVm/China-OEM-ODM-High-Quality-Brown-Suede-Mary-Jane-Sneakers-for-Women-Walking-Style-Double-Buckle-Casual-Shoes-Manufacturer-in-Guangzhou.html) | 来源2026-09-29实图/事实核验；后来正式绑定已核，2026-10-01批次approved/Y及各12SKU；当次3.90边框/拼接、公开QA未闭环，今日实时状态/采购条件仍须原owner核。 |
+| HR021-C | 1601943577329 | Guangzhou Weirui Shoes Co., Ltd.；26CZYA22-113；[Made-in-China原款](https://hzmshoes.en.made-in-china.com/product/JYcRrUIDuBVm/China-OEM-ODM-High-Quality-Brown-Suede-Mary-Jane-Sneakers-for-Women-Walking-Style-Double-Buckle-Casual-Shoes-Manufacturer-in-Guangzhou.html) | 来源2026-09-29实图/事实核验；后来正式绑定已核，2026-10-01批次approved/Y及各12SKU；当次3.90边框/拼接、公开QA未闭环，今日实时状态/采购条件仍须原owner核。 |
+
+原件：[真实来源facts](../../../99_临时区/HR021_26CZYA22-113_候选独立核验_2026-09-29/facts.json)、[双扣真实像素](../../../99_临时区/HR021_26CZYA22-113_候选独立核验_2026-09-29/image_manifest.json)、[后来的正式采用回执](HR021_标题及主字段替换阶段回执_2026-09-29.md)；10-01批准/36SKU/3.90原始ROOT_HR021_正式批次核验.json位于99_临时区/WorkBuddy_HR020_可见试单_2026-10-01/04_执行回执/。
+9-23的SK18/5965A/2929/D666/699是早期淘汰/待核候选，不能拿来替代已采用26CZYA22-113。9-29候选复核中的“尚未采用”只描述该次先期复核，后来正式绑定是后续事实。ABC同一实款，标题/图片区别不解除MERGE_REVIEW；找到供应链接不等于可承诺当天库存、自产或交期。
+
 # HR 系列货源、发货与图片总表
 
 > **历史映射表，暂停作为当日接单或发布依据。** 多行仍是旧货号和旧页面状态，2026-09-29 前后的正式换款已产生冲突；例如 HR001 已从旧 `9002` 换为 `26NC1328`。本表只用于追溯候选和旧证据，接单前必须按家族查最新正式回执、真实采购入口并逐单核价、色码、数量、包装和交期；平台状态实时回读。当前任务从[总控台当前状态](../../../00_总控台/当前状态.md)进入。

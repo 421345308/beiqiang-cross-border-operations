@@ -1,0 +1,75 @@
+{
+  "observed_at": "2026-10-09T01:15:08.094884+00:00",
+  "source_urls": 107,
+  "created_products": 28,
+  "formal_EU_combinations": 900,
+  "approved_before_quality_revision": 26,
+  "actual_score_5_before_quality_revision": 26,
+  "scope_status": "ACTIVE_NOT_COMPLETE",
+  "quality_revision_status": "26 original-ID title revisions PASS; remaining image sets reviewed and corrected individually. Later image updates may re-enter platform review.",
+  "title_plan_count": 26,
+  "new_candidates_awaiting_quality": 1,
+  "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+  "prohibited_completion_shortcuts": [
+    "Do not count uploaded images as applied images",
+    "Do not count API 5.00 as visual or business conversion proof",
+    "Do not count source URLs as distinct publishable styles",
+    "Do not replay existing or outcome-unknown creates"
+  ],
+  "next_work": "Read back already-submitted image/title updates for 02602, without replay. Next improve 02601 three-color/30EU image set, then remaining original-ID images and full107 quality-gated new listings. Hiking2509/02505 remain local business-category holds.",
+  "revision_readbacks": 26,
+  "revision_scope_pass": 26,
+  "revision_pending_review": 0,
+  "revision_not_yet_read": 0,
+  "title_revision_scope_pass": 26,
+  "new_product_status": {
+    "02507": {
+      "product_id": "1601973978339",
+      "status": "approved",
+      "display": "Y",
+      "sku_count": 20,
+      "score": "5.00"
+    },
+    "02508": {
+      "product_id": "1601973995230",
+      "status": "approved",
+      "display": "Y",
+      "sku_count": 20,
+      "score": "5.00"
+    }
+  },
+  "current_approved_displayed": 27,
+  "complete_image_readback_pass_styles": [
+    "058",
+    "2633",
+    "2629",
+    "055",
+    "2628",
+    "2623",
+    "213",
+    "2626",
+    "053",
+    "050",
+    "033",
+    "1212",
+    "2599-1",
+    "032",
+    "25017",
+    "25016",
+    "25012",
+    "02603",
+    "02508",
+    "02507"
+  ],
+  "pending_image_readback_styles": [
+    "02602"
+  ],
+  "latest_title_refinement": {
+    "style": "033",
+    "target_title": "Unisex Wide Toe Box Mesh Panel Walking Sneakers Broad Angular Side Overlay Lace Up Casual Shoes EU 36-48 Wholesale",
+    "title_match": true,
+    "schema_title_match": true,
+    "scope_result": "PASS",
+    "observed_at": "2026-10-08T23:07:23.578830+00:00"
+  }
+}

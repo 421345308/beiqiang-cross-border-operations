@@ -1,0 +1,68 @@
+{
+  "mode": "READ_ONLY_PREPARATION_DO_NOT_SUBMIT",
+  "source_folder": "C:\\Users\\spq\\Desktop\\贝强\\99_临时区\\1688选品_965493972088_2026-10-01",
+  "priority_model": "266",
+  "proposed_model": "BQ-W266",
+  "sku_count": 30,
+  "title_candidate": "Men's Low-Top Knit Work Shoes with Dial Closure",
+  "title_status": "candidate; final category and intended safety claims unresolved",
+  "confirmed_price_values_usd": [
+    12.5,
+    13.5,
+    14
+  ],
+  "quantity_mapping_status": "USER_CONFIRMED",
+  "obsolete_prices_do_not_reuse": [
+    13.5,
+    12.5,
+    11.8
+  ],
+  "materials": {
+    "upper": "Supplier D03: knit + KPU; raw properties: knit",
+    "toe_cap": "Supplier raw property: steel toe; not test certification",
+    "lining": "Textile fabric, explicitly user-confirmed",
+    "midsole": "Kevlar puncture-resistant insert layer, explicitly user-confirmed",
+    "outsole": "TPU, explicitly user-confirmed"
+  },
+  "brand_status": "Local current decision says original marks may remain; preserve real marks, no new trademark approval requested",
+  "source_supplier": "高密市广和劳保用品有限公司",
+  "source_offer": "965493972088",
+  "source_status": "Archived 2026-10-01 public procurement listing and corresponding real-shoe photos; present purchasing availability not freshly verified, no bypass of blocked 1688 URL",
+  "assets_status": "Material card uploaded; final competitor-informed visual review pending",
+  "category_recommendation": {
+    "id": 32211,
+    "path": [
+      "Safety",
+      "Personal Protective Equipment",
+      "Foot Protection",
+      "Safety Shoes"
+    ],
+    "current_permission_evidence": "User has approved adding Safety business category; cloud executor is handling it; approval is not completion evidence",
+    "no_truthful_shoes_branch_identified": true
+  },
+  "external_mutations_this_run": 0,
+  "hr_mutations_this_run": 0,
+  "ready_to_publish": false,
+  "integrity": {
+    "main_listed": 13,
+    "main_present": 13,
+    "detail_listed": 23,
+    "detail_sha256_failures": []
+  },
+  "latest_material_delta": "material_update_from_parent.json",
+  "current_pack": "current_pack/validation_and_gate.json",
+  "confirmed_price_tiers": [
+    {
+      "quantity": "2–49",
+      "usd_per_pair": 14
+    },
+    {
+      "quantity": "50–99",
+      "usd_per_pair": 13.5
+    },
+    {
+      "quantity": "100+",
+      "usd_per_pair": 12.5
+    }
+  ]
+}

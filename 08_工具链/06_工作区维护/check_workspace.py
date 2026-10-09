@@ -11,6 +11,7 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import json
+import importlib.util
 import os
 from pathlib import Path
 import re
@@ -59,6 +60,7 @@ LOCAL_UNTRACKED_ROOTS = (
     "01_产品资产/01_原始数据包", "01_产品资产/02_可发布素材",
     "01_产品资产/04_去标与处理后素材", "03_独立站/03_网站源码",
     "05_内容与视频/03_通用AI视频实验", "99_临时区",
+    "04_客户开发/07_RFQ专岗", "04_客户开发/01_线索与CRM/outputs",
 )
 RESIDUE_SUFFIXES = {".png", ".jpg", ".jpeg", ".webp", ".gif", ".svg", ".ico", ".pyc", ".pyo", ".log", ".cache"}
 
@@ -252,6 +254,7 @@ def literal_paths(text: str) -> list[str]:
     result = []
     for value in re.findall(r"`([^`\n]+)`", "\n".join(visible)):
         path = value.replace("\\", "/")
+        path = re.sub(r"(?i)(\.(?:py|ps1|js|mjs|cjs|exe))\s+--?.*$", r"\1", path)
         if any(mark in path for mark in ("<", ">", "{", "}", "*", "?", "...", "://")):
             continue
         if "/" in path and path.split("/", 1)[0] in prefixes:
@@ -336,8 +339,39 @@ class WorkspaceCheck:
                 self.issue("governance", status, "current status is too long; move dated execution detail to business records", warning=True)
         for folder in (self.root / "00_总控台", self.root / "07_知识库与Skills"):
             for path in folder.iterdir():
+                if folder.name == "00_总控台" and re.search(r"整理|迁移记录", path.name) and re.search(r"20\d\d[-_]\d\d[-_]\d\d", path.name):
+                    self.issue("governance", path, "dated maintenance report in control desk; update 工作区维护.md and use Git history")
                 if path.is_file() and re.search(r"(?i)v\d+|最终版|新版|备份", path.stem):
                     self.issue("governance", path, "versioned active guidance; update the stable document and retain versions only as dated evidence")
+
+    def product_registry(self) -> None:
+        area = self.root / "02_Alibaba运营/05_扩品工程"
+        if not area.exists():
+            return
+        generator = self.root / "08_工具链/06_工作区维护/build_product_workspace.py"
+        registry = area / "数据/产品与链接台账.json"
+        if not generator.exists() or not registry.exists():
+            self.issue("product_registry", registry, "missing canonical product registry or renderer")
+            return
+        spec = importlib.util.spec_from_file_location("product_workspace_checker", generator)
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        module.ROOT = self.root
+        try:
+            data = json.loads(registry.read_text(encoding="utf-8-sig"))
+            for error in module.validate(data, self.root):
+                self.issue("product_registry", registry, error)
+            if self.errors and any(x["check"] == "product_registry" for x in self.errors):
+                return
+            for rel, expected in module.build(data).items():
+                path = self.root / rel
+                if not module.view_matches(path, expected):
+                    self.issue("product_registry", path, "generated view differs from canonical registry; regenerate instead of editing separately")
+            self.counts["product_groups"] = len(data["products"])
+            self.counts["listing_ids"] = len(data["listings"])
+            self.counts["shared_sources"] = len(data["sources"])
+        except (ValueError, KeyError, TypeError) as exc:
+            self.issue("product_registry", registry, f"invalid registry structure: {type(exc).__name__}")
 
     def memory(self) -> None:
         memory = self.root / "07_知识库与Skills/05_项目记忆系统"
@@ -533,6 +567,10 @@ class WorkspaceCheck:
                 path = self.root / folder / filename
                 if path.is_file():
                     paths.append(path)
+        for relative in ("02_Alibaba运营/05_扩品工程/国际站合规扩品工程总控.md", "02_Alibaba运营/05_扩品工程/供应商产品总表/README.md"):
+            path = self.root / relative
+            if path.exists():
+                paths.append(path)
         for path in paths:
             text = self.read(path, "active_links")
             if text is not None:
@@ -625,7 +663,7 @@ class WorkspaceCheck:
         self.counts["git_tracked_entries"] = count
 
     def run(self) -> dict:
-        for check in (self.root_entries, self.governance, self.memory, self.skills, self.active_links, self.junctions, self.git_paths):
+        for check in (self.root_entries, self.governance, self.product_registry, self.memory, self.skills, self.active_links, self.junctions, self.git_paths):
             try:
                 check()
             except OSError:
