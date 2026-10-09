@@ -5,8 +5,8 @@
   "source_price_cny": "72.00",
   "observed_at": "2026-10-09T13:36:34.399516+00:00",
   "source_sha256": "778d0c51615be0e626c6b10d9d43026f0b70f6b22f5a4f184a22e94ac56922c0",
-  "status": "CURRENT_SOURCE_AND_ROLE_PLAN_NO_CREATE",
-  "image_status": "NO_GENERATED_IMAGES",
+  "status": "PARTIAL_SOURCE_BOUND_IMAGES_2_OF_12_NO_CREATE",
+  "image_status": "PARTIAL_LOCAL_ROLES_PASS_COMPLETE_SET_PENDING",
   "title": "Mens Wide Toe Box Jacquard Mesh Walking Sneakers Lace Up MD Midsole Casual Shoes EU 39-46 Wholesale",
   "title_bytes": 99,
   "confirmed_EU_by_color": {
@@ -101,5 +101,9 @@
     "12distinctproductroles+actualfactory+5company; wholevisualreview",
     "Freshownschema/fullcatalog/sourcefamilydedup",
     "Singlecreate then formalreadback/actualscore"
+  ],
+  "accepted_roles": [
+    "M1",
+    "M2"
   ]
 }

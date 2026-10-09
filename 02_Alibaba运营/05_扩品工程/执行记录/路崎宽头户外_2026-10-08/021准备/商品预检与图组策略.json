@@ -4,7 +4,7 @@
   "source_model": "021",
   "source_price_cny": "75.00",
   "source_sha256": "18a5a4c0699a8c9b59b064c57b75cab95056b80af0bcf8f68d8ccce9e9cf1da0",
-  "status": "CREATED_PENDING_APPROVAL_FULL_ACCEPTANCE",
+  "status": "API_FIELDS_SCORE_PASS",
   "image_status": "BUYER_ROLE_REVIEW_PASS",
   "confirmed_EU_by_color": {
     "Black": [
@@ -65,7 +65,5 @@
   ],
   "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
   "product_id": "1601974859471",
-  "remaining": [
-    "原ID只读补核当前审核、全量字段与实际评分；不重放创建"
-  ]
+  "remaining": []
 }
