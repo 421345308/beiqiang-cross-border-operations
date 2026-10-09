@@ -1,11 +1,10 @@
 {
-  "observed_at": "2026-10-09T03:23:50.361909+00:00",
+  "observed_at": "2026-10-09T05:05:41.466819+00:00",
   "scope": "107 sources; statuses are evidence stages, not 107 independent publishable products",
   "state_counts": {
-    "CREATED_APPROVED_Y": 27,
+    "CREATED_APPROVED_Y": 28,
     "PENDING_STYLE_AND_QUALITY_REVIEW": 73,
     "EXISTING_SOURCE_MAPPING_DO_NOT_DUPLICATE": 3,
-    "CREATED_MODIFIED_N": 1,
     "HOLD_ACCOUNT_HIKING_BUSINESS_CATEGORY": 2,
     "HOLD_WITHDRAWN_SOURCE": 1
   },
@@ -451,16 +450,16 @@
       ],
       "source_collection": "COLLECTED",
       "image_cache": "CONTACT_SHEET_ONLY_NOT_PUBLISHABLE",
-      "publication_state": "CREATED_MODIFIED_N",
+      "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PASS",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
       "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
       "product_id": "1601973797610",
       "EU_combinations": 30,
       "EU_labels_match": true,
-      "actual_score": null,
+      "actual_score": "5.00",
       "image_review": "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2597准备\\05_AI候选\\整组验收.json",
-      "image_apply_scope": "PENDING_REVIEW"
+      "image_apply_scope": "PASS"
     },
     {
       "style": "2596",
@@ -472,12 +471,14 @@
       "image_cache": "CONTACT_SHEET_ONLY_NOT_PUBLISHABLE",
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PASS",
-      "image_quality": "PENDING",
+      "image_quality": "LOCAL_SET_REVIEW_PASS",
       "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
       "product_id": "1601973842356",
       "EU_combinations": 20,
       "EU_labels_match": true,
-      "actual_score": "5.00"
+      "actual_score": "5.00",
+      "image_review": "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2596准备\\05_AI候选\\整组验收.json",
+      "image_apply_scope": "PASS"
     },
     {
       "style": "2580",
@@ -967,12 +968,14 @@
       "image_cache": "CONTACT_SHEET_ONLY_NOT_PUBLISHABLE",
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PASS",
-      "image_quality": "PENDING",
+      "image_quality": "LOCAL_SET_REVIEW_PASS",
       "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
       "product_id": "1601973854304",
       "EU_combinations": 20,
       "EU_labels_match": true,
-      "actual_score": "5.00"
+      "actual_score": "5.00",
+      "image_review": "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\25021准备\\05_AI候选\\整组验收.json",
+      "image_apply_scope": "PASS"
     },
     {
       "style": "2510",
@@ -984,12 +987,14 @@
       "image_cache": "CONTACT_SHEET_ONLY_NOT_PUBLISHABLE",
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PASS",
-      "image_quality": "PENDING",
+      "image_quality": "LOCAL_SET_REVIEW_PASS",
       "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
       "product_id": "1601973747919",
       "EU_combinations": 20,
       "EU_labels_match": true,
-      "actual_score": "5.00"
+      "actual_score": "5.00",
+      "image_review": "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2510准备\\05_AI候选\\整组验收.json",
+      "image_apply_scope": "PASS"
     },
     {
       "style": "2509",

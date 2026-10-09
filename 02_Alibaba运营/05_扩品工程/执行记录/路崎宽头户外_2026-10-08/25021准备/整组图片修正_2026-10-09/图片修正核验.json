@@ -1,0 +1,46 @@
+{
+  "style": "25021",
+  "product_id": "1601973854304",
+  "observed_at": "2026-10-09T04:46:51.962916+00:00",
+  "status": "approved",
+  "display": "Y",
+  "sku_count": 20,
+  "protected_fields": {
+    "subject": true,
+    "category_id": true,
+    "attributes": true,
+    "product_sku": true,
+    "sourcing_trade": true,
+    "keywords": true
+  },
+  "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+  "actual_score": "5.00",
+  "scope_result": "PASS",
+  "main_order_match": true,
+  "unsubmitted_schema_differences": [],
+  "detail_asset_order_match": true,
+  "detail_asset_set_match": true,
+  "detail_first_overview_preserved": true,
+  "actual_detail_order": [
+    "H2d217e83dff846a3a425089b060861403",
+    "H76a413e8a3814a34b6e1c2445030ab93m",
+    "H241cc06459b74286ab16b03499452dc75",
+    "Hd4772c98087544b4b7aac19a9725323eU"
+  ],
+  "schema_main_order_match": true,
+  "score_source": "alibaba.icbu.product.score.get / 0bab02fe17915212446872240",
+  "score_observed_at": "2026-10-09T04:47:22.228040+00:00",
+  "product_sku_protection_scope": "Entire object except precisely two intended Color image_url fields; all20 rows/IDs/codes/prices/attributes unchanged",
+  "color_image_binding": {
+    "Blue": true,
+    "Khaki": true
+  },
+  "exact_two_colors": true,
+  "EU_labels_match": true,
+  "exact_20_combinations": true,
+  "saleProp_unchanged_except_color_img": true,
+  "schema_color_image_binding": {
+    "Blue": true,
+    "Khaki": true
+  }
+}

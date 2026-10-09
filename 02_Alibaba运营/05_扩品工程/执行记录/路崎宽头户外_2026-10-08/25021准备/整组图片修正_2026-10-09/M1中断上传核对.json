@@ -1,0 +1,31 @@
+{
+  "status": "CONFIRMED_NOT_FOUND_AFTER_COMPLETE_BANK_SCAN",
+  "original_attempt": {
+    "role": "M1",
+    "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\25021准备\\05_AI候选\\25021-M1-v1.png",
+    "sha256": "2ac5c623e11827ff986fef6af93427242801739a36ed279c791e3fed1612ad86",
+    "observed_at": "2026-10-09T04:02:12.538811+00:00",
+    "status": "STARTED_OUTCOME_UNKNOWN"
+  },
+  "scan_evidence": "中断上传完整核对.json",
+  "scan_rows": 6783,
+  "scan_pages": 14,
+  "filename_matches": 0,
+  "reconciled_at": "2026-10-09T04:27:23.574489+00:00",
+  "action": "Preserve this interrupted attempt; remove only its unresolved active ledger entry. Reuse both verified color assets; upload the absent M1 once in the resumed upload phase. No product submission exists.",
+  "resumed_attempts": [
+    {
+      "attempt": {
+        "role": "M1",
+        "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\25021准备\\05_AI候选\\25021-M1-v1.png",
+        "sha256": "2ac5c623e11827ff986fef6af93427242801739a36ed279c791e3fed1612ad86",
+        "observed_at": "2026-10-09T04:27:25.043743+00:00",
+        "status": "STARTED_OUTCOME_UNKNOWN"
+      },
+      "status": "FAILED_BEFORE_CONNECTION_ESTABLISHED",
+      "transport_evidence": "WinError10061 in socket.connect during urllib HTTPSConnection.connect before request headers/body sent; exec chunk bede81 exit1",
+      "action": "Retry under normal authorized network context; no security/TLS bypass.",
+      "recorded_at": "2026-10-09T04:27:57.916055+00:00"
+    }
+  ]
+}

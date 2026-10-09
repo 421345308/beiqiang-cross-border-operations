@@ -1,9 +1,9 @@
 {
   "style": "2597",
   "product_id": "1601973797610",
-  "observed_at": "2026-10-09T03:22:55.783769+00:00",
-  "status": "modified",
-  "display": "N",
+  "observed_at": "2026-10-09T03:49:27.670529+00:00",
+  "status": "approved",
+  "display": "Y",
   "sku_count": 30,
   "protected_fields": {
     "subject": true,
@@ -14,9 +14,22 @@
     "keywords": true
   },
   "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
-  "actual_score": null,
-  "scope_result": "PENDING_REVIEW",
+  "actual_score": "5.00",
+  "scope_result": "PASS",
   "main_order_match": true,
+  "unsubmitted_schema_differences": [],
+  "detail_asset_order_match": true,
+  "detail_asset_set_match": true,
+  "detail_first_overview_preserved": true,
+  "actual_detail_order": [
+    "Hdf9d268f58c642a69d1f34a803c631851",
+    "Hab4fb8302602433f9d99a02a7ac53de75",
+    "H12a77f8d92384c05a2097e8c5f9f6832h",
+    "Hc7a8ea54b39544e3931f8bf9b9342b1bc"
+  ],
+  "schema_main_order_match": true,
+  "score_source": "alibaba.icbu.product.score.get / 213f5a2117915177984691844",
+  "score_observed_at": "2026-10-09T03:49:56.055971+00:00",
   "product_sku_protection_scope": "Entire object except precisely three intended Color image_url fields; all30 rows/IDs/codes/prices/attributes unchanged",
   "color_image_binding": {
     "Grey": true,
@@ -25,5 +38,11 @@
   },
   "exact_three_colors": true,
   "EU_labels_match": true,
-  "exact_30_combinations": true
+  "exact_30_combinations": true,
+  "saleProp_unchanged_except_color_img": true,
+  "schema_color_image_binding": {
+    "Black": true,
+    "WhiteRed": true,
+    "Grey": true
+  }
 }
