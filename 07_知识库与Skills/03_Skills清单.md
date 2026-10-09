@@ -40,7 +40,7 @@
 | LibTV 画布 | 个人 `libtv-cli` |
 | 视频剪辑、QA、Manim | 个人 `video-use`，其下 `manim-video` |
 | 视频通用经验 | `ai-video-learning-system`；[工作区维护源](04_AI视频知识体系/ai-video-learning-system/SKILL.md) 是项目知识正文，个人安装为部署副本。本次不改全局副本；使用时核对可见版本，差异未核实前不互相覆盖 |
-| Work Agent | 优先 `~/.agents/skills/workctl/` 中的 `workctl` 和 `workctl-operator` |
+| Alibaba历史工具 | Workctl / Work Agent仅作历史追溯；当前执行用项目`alibaba-openapi-operator`与唯一商品SOP，不恢复旧路线 |
 | 文档、PDF、表格、演示、图像、网站、浏览器等 | 使用当前会话已安装的对应通用 Skill 或插件 |
 
 ## 维护规则
@@ -49,6 +49,6 @@
 - 经营 Skill 的历史图片顺序、标题结构和详情模板均视为可迭代启发式，不是永久硬规则。冲突时先守货源/事实/合规/授权，再以当前 SKU、平台数据和负责人最新决策更新做法；可复用经验同步回 Skill 或唯一 SOP，避免旧流程反过来限制经营。
 - 贝强专用 Skill 直接改项目副本并随 Git 提交。迁入后不要重新建立同名全局副本；通用工具或插件的安装、升级与卸载按实际任务范围处理。
 - Remotion 只保留一个项目入口和按需模式参考。插件更新可能重建同名空壳，更新后核对项目目录中是否出现无 `SKILL.md` 的顶层目录。
-- Workctl 使用当前可用的优先个人入口；不为同一能力在项目里创建副本。
+- Workctl旧路线只作历史追溯；不安装、恢复或推荐为当前Alibaba执行入口。当前API能力按成功回执核验，不从历史脚本继承商品事实。
 - `Required reads` 表示强制规则/资料；`Conditional reads` 仅在条件触发时读。链接到相邻 Skill 只是发现入口，不构成自动调用或额外授权。单款标题草稿从优化 Skill 入手，不展开运营总流程或 API 写入。
 - `skills-lock.json` 保留 CompShare 上游安装来源；本地整理改动由 Git 跟踪，不伪造来源哈希。
