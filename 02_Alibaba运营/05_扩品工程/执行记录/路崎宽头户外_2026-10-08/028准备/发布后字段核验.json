@@ -7,17 +7,18 @@
   "sku_count": 39,
   "EU_labels_match": true,
   "title_match": true,
-  "observed_at": "2026-10-09T09:23:29.201064+00:00",
+  "observed_at": "2026-10-09T10:30:57.775688+00:00",
   "score": "5.00",
   "Chrome_readback": "PASS_PUBLIC_GALLERY_COLOR_EU_AND_DETAILS",
-  "main_order_match": true,
-  "unmatched_fields": [
-    "icbuCatProp"
+  "incremental_update_evidence": [
+    "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\028准备\\品牌与中底属性修正\\正式更新回执.json"
   ],
+  "main_order_match": true,
+  "unmatched_fields": [],
   "field_checks": {
     "icbuCatProp": {
-      "status": "MISMATCH_OR_NOOP",
-      "semantic_normalization_pass": false
+      "status": "MATCH",
+      "semantic_normalization_pass": true
     },
     "productTitle": {
       "status": "MATCH"
@@ -1492,7 +1493,7 @@
       "limits": "Formal API row/ID binding only; first read establishes IDs, not prior history, physical stock or image pixel truth."
     }
   },
-  "score_source": "alibaba.icbu.product.score.get / 213c934417915378361215586",
+  "score_source": "alibaba.icbu.product.score.get / 213e759c17915418868533142",
   "score_diagnostics": {
     "flags": {},
     "deductions": {},
@@ -1504,7 +1505,7 @@
     ]
   },
   "target_score": 5.0,
-  "score_observed_at": "2026-10-09T09:23:53.611920+00:00",
+  "score_observed_at": "2026-10-09T10:31:24.386675+00:00",
   "score_status": "PASS_SCORE_GATE",
   "score_error": null,
   "exact_color_EU": true,
@@ -1557,9 +1558,5 @@
     ]
   },
   "Chrome_evidence": "浏览器验收/公开页验收.json",
-  "attribute_diagnosis": {
-    "positive_option_IDs": "Rubber / Mesh / Lace-up / China values retained; display inputValue normalization is not a factual mismatch",
-    "Brand_Name_p2": "Submitted Beiqiang absent from returned icbuCatProp; not counted as persisted",
-    "whole_attribute_scope": "PENDING_BRAND_PERSISTENCE"
-  }
+  "brand_persistence": "PASS_APPROVED_SCHEMA_FORMAL"
 }

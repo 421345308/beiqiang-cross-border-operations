@@ -2,14 +2,972 @@
   "style": "2571",
   "product_id": "1601974689145",
   "url": "https://www.alibaba.com/product-detail/Mens-Wide-Toe-Box-Mesh-Sneakers_1601974689145.html",
-  "status": "new",
-  "display": "N",
+  "status": "approved",
+  "display": "Y",
   "sku_count": 24,
   "EU_labels_match": true,
   "title_match": true,
-  "observed_at": "2026-10-09T09:23:29.198364+00:00",
-  "score": null,
-  "Chrome_readback": "RESTORED_PUBLIC_QA_PENDING_APPROVAL",
+  "observed_at": "2026-10-09T10:30:57.777827+00:00",
+  "score": "5.00",
+  "Chrome_readback": "PASS_PUBLIC_GALLERY_COLOR_EU_AND_DETAILS",
+  "incremental_update_evidence": [
+    "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2571准备\\品牌与中底属性修正\\正式更新回执.json"
+  ],
+  "main_order_match": true,
+  "unmatched_fields": [],
+  "field_checks": {
+    "icbuCatProp": {
+      "status": "MATCH",
+      "semantic_normalization_pass": true
+    },
+    "productTitle": {
+      "status": "MATCH"
+    },
+    "textDesc": {
+      "status": "MATCH"
+    },
+    "companyDesc": {
+      "status": "MATCH"
+    },
+    "scImages": {
+      "status": "MISMATCH_OR_NOOP",
+      "semantic_normalization_pass": true
+    },
+    "detailImage": {
+      "status": "MATCH"
+    },
+    "companyImage": {
+      "status": "MATCH"
+    },
+    "companyFaqDesc": {
+      "status": "MATCH"
+    },
+    "catId": {
+      "status": "MATCH"
+    },
+    "minOrderQuantity": {
+      "status": "MATCH"
+    },
+    "pkgWeight": {
+      "status": "MATCH",
+      "semantic_normalization_pass": true
+    },
+    "productDescType": {
+      "status": "MATCH"
+    },
+    "priceUnit": {
+      "status": "MATCH"
+    },
+    "saleType": {
+      "status": "MATCH"
+    },
+    "scPrice": {
+      "status": "MATCH"
+    },
+    "logisticsProperty": {
+      "status": "MISMATCH_OR_NOOP",
+      "semantic_normalization_pass": true
+    },
+    "pkgMeasure": {
+      "status": "MATCH"
+    },
+    "shippingTemplate": {
+      "status": "MATCH"
+    },
+    "ladderPrice": {
+      "status": "MATCH"
+    },
+    "saleProp": {
+      "status": "MATCH"
+    },
+    "sku": {
+      "status": "verified",
+      "bindings": {
+        "BQ-LQ2571-BLACK-EU39": "109787062840",
+        "BQ-LQ2571-BLACK-EU40": "109787062841",
+        "BQ-LQ2571-BLACK-EU41": "109787062842",
+        "BQ-LQ2571-BLACK-EU42": "109787062843",
+        "BQ-LQ2571-BLACK-EU43": "109787062844",
+        "BQ-LQ2571-BLACK-EU44": "109787062845",
+        "BQ-LQ2571-BLACK-EU45": "109787062846",
+        "BQ-LQ2571-BLACK-EU46": "109787062847",
+        "BQ-LQ2571-BEIGE-EU39": "109787062848",
+        "BQ-LQ2571-BEIGE-EU40": "109787062849",
+        "BQ-LQ2571-BEIGE-EU41": "109787062850",
+        "BQ-LQ2571-BEIGE-EU42": "109787062851",
+        "BQ-LQ2571-BEIGE-EU43": "109787062852",
+        "BQ-LQ2571-BEIGE-EU44": "109787062853",
+        "BQ-LQ2571-BEIGE-EU45": "109787062854",
+        "BQ-LQ2571-BEIGE-EU46": "109787062855",
+        "BQ-LQ2571-ORANGE-EU39": "109787062856",
+        "BQ-LQ2571-ORANGE-EU40": "109787062857",
+        "BQ-LQ2571-ORANGE-EU41": "109787062858",
+        "BQ-LQ2571-ORANGE-EU42": "109787062859",
+        "BQ-LQ2571-ORANGE-EU43": "109787062860",
+        "BQ-LQ2571-ORANGE-EU44": "109787062861",
+        "BQ-LQ2571-ORANGE-EU45": "109787062862",
+        "BQ-LQ2571-ORANGE-EU46": "109787062863"
+      },
+      "unsubmitted_observations": {
+        "BQ-LQ2571-BLACK-EU39": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ2571-BLACK-EU40": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ2571-BLACK-EU41": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ2571-BLACK-EU42": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ2571-BLACK-EU43": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ2571-BLACK-EU44": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ2571-BLACK-EU45": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ2571-BLACK-EU46": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ2571-BEIGE-EU39": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ2571-BEIGE-EU40": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ2571-BEIGE-EU41": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ2571-BEIGE-EU42": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ2571-BEIGE-EU43": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ2571-BEIGE-EU44": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ2571-BEIGE-EU45": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ2571-BEIGE-EU46": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ2571-ORANGE-EU39": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ2571-ORANGE-EU40": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ2571-ORANGE-EU41": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ2571-ORANGE-EU42": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ2571-ORANGE-EU43": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ2571-ORANGE-EU44": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ2571-ORANGE-EU45": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ2571-ORANGE-EU46": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        }
+      },
+      "limits": "Formal API row/ID binding only; first read establishes IDs, not prior history, physical stock or image pixel truth."
+    }
+  },
+  "score_source": "alibaba.icbu.product.score.get / 2166c2ca17915418868525639",
+  "score_diagnostics": {
+    "flags": {},
+    "deductions": {},
+    "checks_not_run": [
+      "sku_image",
+      "sku_text",
+      "imageSubTitle",
+      "selling_point_attribute_conflict"
+    ]
+  },
+  "target_score": 5.0,
+  "score_observed_at": "2026-10-09T10:31:24.383972+00:00",
+  "score_status": "PASS_SCORE_GATE",
+  "score_error": null,
   "exact_color_EU": true,
   "color_image_binding_match": true,
   "confirmed_EU_by_color": {
@@ -43,5 +1001,7 @@
       45,
       46
     ]
-  }
+  },
+  "Chrome_evidence": "浏览器验收/公开页验收.json",
+  "brand_persistence": "PASS_APPROVED_SCHEMA_FORMAL"
 }

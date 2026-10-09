@@ -19,7 +19,7 @@
     "struct_detail_product": true,
     "language": "ENGLISH",
     "is_smart_edit": false,
-    "gmt_modified": "2026-10-09 17:18:23",
+    "gmt_modified": "2026-10-09 18:19:46",
     "product_sku": {
       "skus": [
         {
@@ -645,7 +645,7 @@
       "product_summary": "Mens wide toe box mesh sneakers with lace-up closure, wave-pattern upper, ribbed MD midsole and rubber outsole. Black, Beige and Orange; EU 39-46 in each color. Product photographs show the actual upper, sole structure and on-foot views. Send pair quantity, color and EU size mix, packaging needs and destination for a wholesale quotation. Sample availability, customization feasibility, charges and dispatch timing are confirmed for the requested order.",
       "company_summary": "Quanzhou Beiqiang Footwear & Apparel Co., Ltd. is based in Quanzhou, Fujian, China and serves overseas B2B footwear buyers. Share footwear specifications, quantities, packaging needs and destination for review and quotation. Company images introduce company activities and order coordination."
     },
-    "display": "N",
+    "display": "Y",
     "pc_detail_url": "https://www.alibaba.com/product-detail/Mens-Wide-Toe-Box-Mesh-Sneakers_1601974689145.html",
     "rts": false,
     "product_type": "sourcing",
@@ -684,6 +684,12 @@
         "value_name": "CN"
       },
       {
+        "attribute_id": 2,
+        "attribute_name": "Brand Name",
+        "value_id": -1,
+        "value_name": "Beiqiang"
+      },
+      {
         "attribute_id": 3,
         "attribute_name": "Model Number",
         "value_id": -1,
@@ -693,7 +699,7 @@
         "attribute_id": 20700,
         "attribute_name": "Midsole Material",
         "value_id": -1,
-        "value_name": "MD"
+        "value_name": "MD midsole"
       },
       {
         "attribute_id": 191290430,
@@ -703,8 +709,8 @@
       }
     ],
     "owner_member": 286385890,
-    "status": "new"
+    "status": "approved"
   },
-  "request_id": "213c934417915378174814433",
-  "_trace_id_": "212e559c17915378173391486e0fe5"
+  "request_id": "212c41d317915418668094683",
+  "_trace_id_": "0bb4a40617915418666847841e0cda"
 }

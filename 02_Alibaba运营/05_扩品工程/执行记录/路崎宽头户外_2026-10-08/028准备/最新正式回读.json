@@ -19,7 +19,7 @@
     "struct_detail_product": true,
     "language": "ENGLISH",
     "is_smart_edit": false,
-    "gmt_modified": "2026-10-09 16:21:02",
+    "gmt_modified": "2026-10-09 18:19:39",
     "product_sku": {
       "skus": [
         {
@@ -989,6 +989,12 @@
         "value_name": "CN"
       },
       {
+        "attribute_id": 2,
+        "attribute_name": "Brand Name",
+        "value_id": -1,
+        "value_name": "Beiqiang"
+      },
+      {
         "attribute_id": 3,
         "attribute_name": "Model Number",
         "value_id": -1,
@@ -1010,6 +1016,6 @@
     "owner_member": 286385890,
     "status": "approved"
   },
-  "request_id": "213f5a2117915378174964332",
-  "_trace_id_": "0bb4a40617915378173552195e0d6d"
+  "request_id": "213f5a2117915418668137840",
+  "_trace_id_": "212e559c17915418666848278e0e59"
 }

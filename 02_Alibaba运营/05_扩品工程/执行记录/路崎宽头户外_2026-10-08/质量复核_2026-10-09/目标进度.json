@@ -1,8 +1,8 @@
 {
-  "observed_at": "2026-10-09T09:24:59.489377+00:00",
+  "observed_at": "2026-10-09T10:38:48.754680+00:00",
   "source_urls": 107,
-  "created_products": 31,
-  "formal_EU_combinations": 1009,
+  "created_products": 32,
+  "formal_EU_combinations": 1025,
   "approved_before_quality_revision": 26,
   "actual_score_5_before_quality_revision": 26,
   "scope_status": "ACTIVE_NOT_COMPLETE",
@@ -16,7 +16,7 @@
     "Do not count source URLs as distinct publishable styles",
     "Do not replay existing or outcome-unknown creates"
   ],
-  "next_work": "Only read back already-created2571 after platform review, then exact Schema/image/materials/score and per-color public QA; never replay create.028 public gallery/colors/details PASS and score5.00, Brand Name pending; continue next qualified source2572 from107 queue. Hiking2509/02505 are local category holds.",
+  "next_work": "Continue2573 current-source107-byte title and source-bound11-image optimization before single create; preserve existing32 IDs and exact1025EU.2572 approved/Y exact Schema and public visuals/Beiqiang brand PASS; score temporarily generic validation error.028/2571 brand repairs approved/Y exact all unsubmitted product fields preserved, scores5.00;2571 MD public translation corrected. Per-target seller-editor keyword migration acceptance remains separate pending. Continue remaining107 sources and older product public QA. Hiking2509/02505 remain local category holds.",
   "revision_readbacks": 26,
   "revision_scope_pass": 26,
   "revision_pending_review": 0,
@@ -46,9 +46,16 @@
     },
     "2571": {
       "product_id": "1601974689145",
-      "status": "new",
-      "display": "N",
+      "status": "approved",
+      "display": "Y",
       "sku_count": 24,
+      "score": "5.00"
+    },
+    "2572": {
+      "product_id": "1601974755167",
+      "status": "approved",
+      "display": "Y",
+      "sku_count": 16,
       "score": null
     },
     "2619": {
@@ -59,7 +66,7 @@
       "score": "5.00"
     }
   },
-  "current_approved_displayed": 30,
+  "current_approved_displayed": 32,
   "complete_image_readback_pass_styles": [
     "058",
     "2633",
@@ -81,6 +88,8 @@
     "2597",
     "2596",
     "028",
+    "2571",
+    "2572",
     "25017",
     "25016",
     "25012",
@@ -92,9 +101,7 @@
     "02508",
     "02507"
   ],
-  "pending_image_readback_styles": [
-    "2571"
-  ],
+  "pending_image_readback_styles": [],
   "latest_title_refinement": {
     "style": "033",
     "target_title": "Unisex Wide Toe Box Mesh Panel Walking Sneakers Broad Angular Side Overlay Lace Up Casual Shoes EU 36-48 Wholesale",
@@ -104,12 +111,12 @@
     "observed_at": "2026-10-08T23:07:23.578830+00:00"
   },
   "browser_acceptance": "RESTORED_BY_OWNER_2026-10-09_QA_IN_PROGRESS",
-  "pending_new_approval_styles": [
-    "2571"
-  ],
+  "pending_new_approval_styles": [],
   "public_QA_pass_styles": [
     "2619",
     "028",
+    "2571",
+    "2572",
     "2510"
   ],
   "candidate2571": {
@@ -117,6 +124,27 @@
     "accepted_images": 12,
     "EU_combinations": 24,
     "title_bytes": 113,
-    "status": "CREATED_NEW_N_PENDING_PLATFORM_REVIEW"
+    "status": "APPROVED_Y_FULL_FIELDS_AND_PUBLIC_VISUAL_PASS",
+    "brand_repair": "PASS",
+    "MD_translation_repair": "PASS_PUBLIC"
+  },
+  "candidate2572": {
+    "product_id": "1601974755167",
+    "generated_images": 13,
+    "accepted_images": 11,
+    "rejected_images": 2,
+    "EU_combinations": 16,
+    "title_bytes": 107,
+    "status": "APPROVED_Y_FULL_FIELDS_AND_PUBLIC_VISUAL_PASS",
+    "brand": "PASS_PUBLIC",
+    "score": "PENDING_VALID_PLATFORM_SCORE"
+  },
+  "candidate2573": {
+    "status": "CURRENT_SOURCE_CONFIRMED_IMAGE_EDIT_RUNNING",
+    "source": "https://luqi.sooxie.com/detail/2349364",
+    "current_images_readable": 25,
+    "EU_combinations": 16,
+    "title_bytes": 107,
+    "new_ID": null
   }
 }

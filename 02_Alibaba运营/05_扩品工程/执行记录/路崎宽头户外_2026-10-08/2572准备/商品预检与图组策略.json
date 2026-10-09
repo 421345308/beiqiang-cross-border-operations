@@ -5,7 +5,7 @@
   "source_price_cny": "58.00",
   "observed_at": "2026-10-09T09:28:51.037082+00:00",
   "current_source_sha256": "47fb0ed7a79b2e8c485d3c5cb2eea76dbc97aa880fc7a9c76054970313e9de12",
-  "status": "SOURCE_CONFIRMED_PENDING_IMAGE_EDIT_AND_FORMAL_DEDUP",
+  "status": "APPROVED_Y_EXACT_SCHEMA_PUBLIC_VISUAL_PASS",
   "current_source_evidence": [
     "当前来源文本.txt",
     "当前来源页.png"
@@ -71,7 +71,7 @@
       "15.jpg: exactBlack/Beige side profiles; labelsEU39–46 only"
     ],
     "M5": [
-      "12.jpg: actualheldBlack/Beigeon-foot scene plusquotationinputs"
+      "21.jpg: actualheldBeige/on-footBeige; intactphoto avoids overlay touchingBlackshoe in12"
     ],
     "D1": [
       "20.jpg: completeactualBeigepairon-foot"
@@ -94,6 +94,8 @@
     ]
   },
   "identity_notes": "Actual2572 original contacts0/1 viewed: plain perforated mesh upper, ordinarylace holes, low knit collar, heelpull, smoothlayered midsole withchevron side texture, orange outsole segments. Different from2571 wave upper/ribbedMD and2573closedslip-on; final full formal dedup still pending.",
-  "image_status": "NOT_GENERATED_NOT_ACCEPTED",
-  "Chrome": "RESTORED_PUBLIC_QA_REQUIRED_AFTER_APPROVAL"
+  "image_status": "COMPLETE_SET_REVIEW_PASS_FORMAL_MATCH",
+  "Chrome": "PUBLIC_VISUAL_PASS",
+  "product_id": "1601974755167",
+  "pending": "Score and exact target keyword/editor version evidence"
 }
