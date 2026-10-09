@@ -1,22 +1,22 @@
 {
-  "observed_at": "2026-10-09T05:05:41.466819+00:00",
+  "observed_at": "2026-10-09T06:35:17.756148+00:00",
   "source_urls": 107,
-  "created_products": 28,
-  "formal_EU_combinations": 900,
+  "created_products": 29,
+  "formal_EU_combinations": 946,
   "approved_before_quality_revision": 26,
   "actual_score_5_before_quality_revision": 26,
   "scope_status": "ACTIVE_NOT_COMPLETE",
-  "quality_revision_status": "26 original-ID title revisions PASS; remaining image sets reviewed and corrected individually. Later image updates may re-enter platform review.",
+  "quality_revision_status": "26 original-ID title revisions PASS; all current 29 complete image sets have exact formal readback PASS. Public visual acceptance remains separately evidenced per product.",
   "title_plan_count": 26,
   "new_candidates_awaiting_quality": 1,
-  "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+  "Chrome": "RESTORED_WITH_PER_PRODUCT_VISUAL_EVIDENCE",
   "prohibited_completion_shortcuts": [
     "Do not count uploaded images as applied images",
     "Do not count API 5.00 as visual or business conversion proof",
     "Do not count source URLs as distinct publishable styles",
     "Do not replay existing or outcome-unknown creates"
   ],
-  "next_work": "Next process quality-gated remaining sources (2619 variable color sizes first); original-ID image fixes require exact final readback before closure. Continue full107 quality-gated new listings. Hiking2509/02505 remain local business-category holds.",
+  "next_work": "Next process quality-gated remaining sources;2619 approved with exact fields, public visuals and valid score; continue other products public QA; original-ID image fixes require exact final readback before closure. Continue full107 quality-gated new listings. Hiking2509/02505 remain local business-category holds.",
   "revision_readbacks": 26,
   "revision_scope_pass": 26,
   "revision_pending_review": 0,
@@ -36,9 +36,16 @@
       "display": "Y",
       "sku_count": 20,
       "score": "5.00"
+    },
+    "2619": {
+      "product_id": "1601974271772",
+      "status": "approved",
+      "display": "Y",
+      "sku_count": 46,
+      "score": "5.00"
     }
   },
-  "current_approved_displayed": 28,
+  "current_approved_displayed": 29,
   "complete_image_readback_pass_styles": [
     "058",
     "2633",
@@ -52,6 +59,7 @@
     "050",
     "033",
     "1212",
+    "2619",
     "2599-1",
     "032",
     "2598",
@@ -77,5 +85,11 @@
     "schema_title_match": true,
     "scope_result": "PASS",
     "observed_at": "2026-10-08T23:07:23.578830+00:00"
-  }
+  },
+  "browser_acceptance": "RESTORED_BY_OWNER_2026-10-09_QA_IN_PROGRESS",
+  "pending_new_approval_styles": [],
+  "public_QA_pass_styles": [
+    "2619",
+    "2510"
+  ]
 }

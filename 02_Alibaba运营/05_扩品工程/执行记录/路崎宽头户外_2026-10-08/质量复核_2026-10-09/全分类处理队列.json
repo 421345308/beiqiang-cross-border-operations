@@ -1,9 +1,9 @@
 {
-  "observed_at": "2026-10-09T05:05:41.466819+00:00",
+  "observed_at": "2026-10-09T06:35:17.756148+00:00",
   "scope": "107 sources; statuses are evidence stages, not 107 independent publishable products",
   "state_counts": {
-    "CREATED_APPROVED_Y": 28,
-    "PENDING_STYLE_AND_QUALITY_REVIEW": 73,
+    "CREATED_APPROVED_Y": 29,
+    "PENDING_STYLE_AND_QUALITY_REVIEW": 72,
     "EXISTING_SOURCE_MAPPING_DO_NOT_DUPLICATE": 3,
     "HOLD_ACCOUNT_HIKING_BUSINESS_CATEGORY": 2,
     "HOLD_WITHDRAWN_SOURCE": 1
@@ -20,7 +20,7 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PASS",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+      "Chrome": "BROWSER_RESTORED_QA_PENDING",
       "product_id": "1601973821133",
       "EU_combinations": 26,
       "EU_labels_match": true,
@@ -39,7 +39,7 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PASS",
       "image_quality": "MAIN_AND_DETAIL_LOCAL_REVIEW_PASS",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+      "Chrome": "BROWSER_RESTORED_QA_PENDING",
       "product_id": "1601973753470",
       "EU_combinations": 30,
       "EU_labels_match": true,
@@ -57,7 +57,7 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PASS",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+      "Chrome": "BROWSER_RESTORED_QA_PENDING",
       "product_id": "1601973749610",
       "EU_combinations": 39,
       "EU_labels_match": true,
@@ -76,7 +76,7 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PASS",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+      "Chrome": "BROWSER_RESTORED_QA_PENDING",
       "product_id": "1601973841032",
       "EU_combinations": 39,
       "EU_labels_match": true,
@@ -95,7 +95,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+      "Chrome": "BROWSER_RESTORED_QA_PENDING",
       "local_issue": "NEEDS_ADDITIONAL_DISTINCT_CLEAN_ASSETS"
     },
     {
@@ -109,7 +109,7 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PASS",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+      "Chrome": "BROWSER_RESTORED_QA_PENDING",
       "product_id": "1601973823209",
       "EU_combinations": 39,
       "EU_labels_match": true,
@@ -128,7 +128,7 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PASS",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+      "Chrome": "BROWSER_RESTORED_QA_PENDING",
       "product_id": "1601973806430",
       "EU_combinations": 24,
       "EU_labels_match": true,
@@ -147,7 +147,7 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PASS",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+      "Chrome": "BROWSER_RESTORED_QA_PENDING",
       "product_id": "1601973876011",
       "EU_combinations": 39,
       "EU_labels_match": true,
@@ -166,7 +166,7 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PASS",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+      "Chrome": "BROWSER_RESTORED_QA_PENDING",
       "product_id": "1601973769589",
       "EU_combinations": 39,
       "EU_labels_match": true,
@@ -185,7 +185,7 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PASS",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+      "Chrome": "BROWSER_RESTORED_QA_PENDING",
       "product_id": "1601973846232",
       "EU_combinations": 39,
       "EU_labels_match": true,
@@ -204,7 +204,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+      "Chrome": "BROWSER_RESTORED_QA_PENDING",
       "local_issue": "NEEDS_DISTINCT_CLEAN_ASSETS_EXCLUDING_SUPPLIER_MARKS"
     },
     {
@@ -218,7 +218,7 @@
       "publication_state": "EXISTING_SOURCE_MAPPING_DO_NOT_DUPLICATE",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "038",
@@ -231,7 +231,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+      "Chrome": "BROWSER_RESTORED_QA_PENDING",
       "local_issue": "NEEDS_COMPLETE_FOUR_COLOR_CLEAN_ASSETS"
     },
     {
@@ -245,7 +245,7 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PASS",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+      "Chrome": "BROWSER_RESTORED_QA_PENDING",
       "product_id": "1601973794508",
       "EU_combinations": 52,
       "EU_labels_match": true,
@@ -264,7 +264,7 @@
       "publication_state": "EXISTING_SOURCE_MAPPING_DO_NOT_DUPLICATE",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "2583-1",
@@ -277,7 +277,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+      "Chrome": "BROWSER_RESTORED_QA_PENDING",
       "local_issue": "SOURCE_COLOR_PHOTO_MISMATCH: source lists six colors including pink EU36-42 but photos only two closed-upper variants; do not fabricate six SKU images."
     },
     {
@@ -291,7 +291,7 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "REFINEMENT_PASS",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+      "Chrome": "BROWSER_RESTORED_QA_PENDING",
       "product_id": "1601973792546",
       "EU_combinations": 39,
       "EU_labels_match": true,
@@ -317,7 +317,7 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PASS",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+      "Chrome": "BROWSER_RESTORED_QA_PENDING",
       "product_id": "1601973808453",
       "EU_combinations": 78,
       "EU_labels_match": true,
@@ -333,10 +333,17 @@
       ],
       "source_collection": "COLLECTED",
       "image_cache": "CONTACT_SHEET_ONLY_NOT_PUBLISHABLE",
-      "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
-      "title_quality": "PENDING",
-      "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "publication_state": "CREATED_APPROVED_Y",
+      "title_quality": "LOCAL_REVIEW_PASS_FORMAL_MATCH",
+      "image_quality": "LOCAL_SET_REVIEW_PASS",
+      "Chrome": "PASS",
+      "product_id": "1601974271772",
+      "EU_combinations": 46,
+      "EU_labels_match": true,
+      "actual_score": "5.00",
+      "image_review": "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2619准备\\05_AI候选\\整组验收.json",
+      "image_apply_scope": "PASS",
+      "public_qa_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2619准备/浏览器验收/公开页验收.json"
     },
     {
       "style": "2599-1",
@@ -349,7 +356,7 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PASS",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+      "Chrome": "BROWSER_RESTORED_QA_PENDING",
       "product_id": "1601973741932",
       "EU_combinations": 30,
       "EU_labels_match": true,
@@ -368,7 +375,7 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PASS",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+      "Chrome": "BROWSER_RESTORED_QA_PENDING",
       "product_id": "1601973736928",
       "EU_combinations": 52,
       "EU_labels_match": true,
@@ -387,7 +394,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+      "Chrome": "BROWSER_RESTORED_QA_PENDING",
       "local_issue": "POSSIBLE_SAME_PRODUCT_FAMILY: source photos share identical upper and marketing panels; do not create two links based on suffix. Need distinct clean assets and outsole structure confirmation."
     },
     {
@@ -401,7 +408,7 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PASS",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+      "Chrome": "BROWSER_RESTORED_QA_PENDING",
       "product_id": "1601973831465",
       "EU_combinations": 30,
       "EU_labels_match": true,
@@ -420,7 +427,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+      "Chrome": "BROWSER_RESTORED_QA_PENDING",
       "local_issue": "POSSIBLE_SAME_PRODUCT_FAMILY: source photos share identical upper and marketing panels; do not create two links based on suffix. Need distinct clean assets and outsole structure confirmation."
     },
     {
@@ -434,7 +441,7 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PASS",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+      "Chrome": "BROWSER_RESTORED_QA_PENDING",
       "product_id": "1601973772709",
       "EU_combinations": 27,
       "EU_labels_match": true,
@@ -453,7 +460,7 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PASS",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+      "Chrome": "BROWSER_RESTORED_QA_PENDING",
       "product_id": "1601973797610",
       "EU_combinations": 30,
       "EU_labels_match": true,
@@ -472,7 +479,7 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PASS",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+      "Chrome": "BROWSER_RESTORED_QA_PENDING",
       "product_id": "1601973842356",
       "EU_combinations": 20,
       "EU_labels_match": true,
@@ -491,7 +498,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "029",
@@ -504,7 +511,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "027",
@@ -517,7 +524,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "2585-1",
@@ -530,7 +537,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "028",
@@ -543,7 +550,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "2585",
@@ -556,7 +563,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "021",
@@ -569,7 +576,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "2571",
@@ -582,7 +589,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "2578",
@@ -595,7 +602,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "023",
@@ -608,7 +615,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "2583",
@@ -621,7 +628,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "2573",
@@ -634,7 +641,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "2572",
@@ -647,7 +654,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "2577",
@@ -660,7 +667,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "018",
@@ -673,7 +680,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "017",
@@ -686,7 +693,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "015",
@@ -699,7 +706,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "2568",
@@ -712,7 +719,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "2569",
@@ -725,7 +732,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "016",
@@ -738,7 +745,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "012",
@@ -751,7 +758,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "013",
@@ -764,7 +771,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "2561",
@@ -777,7 +784,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "2559",
@@ -790,7 +797,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "2558",
@@ -803,7 +810,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "2560",
@@ -816,7 +823,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "011",
@@ -829,7 +836,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "25019",
@@ -842,7 +849,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "25017",
@@ -855,7 +862,7 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PASS",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+      "Chrome": "BROWSER_RESTORED_QA_PENDING",
       "product_id": "1601973850058",
       "EU_combinations": 18,
       "EU_labels_match": true,
@@ -874,7 +881,7 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PASS",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+      "Chrome": "BROWSER_RESTORED_QA_PENDING",
       "product_id": "1601973730776",
       "EU_combinations": 30,
       "EU_labels_match": true,
@@ -893,7 +900,7 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PASS",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+      "Chrome": "BROWSER_RESTORED_QA_PENDING",
       "product_id": "1601973838360",
       "EU_combinations": 20,
       "EU_labels_match": true,
@@ -912,7 +919,7 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PASS",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+      "Chrome": "BROWSER_RESTORED_QA_PENDING",
       "product_id": "1601973784646",
       "EU_combinations": 30,
       "EU_labels_match": true,
@@ -931,7 +938,7 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PASS",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+      "Chrome": "BROWSER_RESTORED_QA_PENDING",
       "product_id": "1601973869140",
       "EU_combinations": 20,
       "EU_labels_match": true,
@@ -950,7 +957,7 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PASS",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+      "Chrome": "BROWSER_RESTORED_QA_PENDING",
       "product_id": "1601973814505",
       "EU_combinations": 30,
       "EU_labels_match": true,
@@ -969,7 +976,7 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PASS",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+      "Chrome": "BROWSER_RESTORED_QA_PENDING",
       "product_id": "1601973854304",
       "EU_combinations": 20,
       "EU_labels_match": true,
@@ -988,13 +995,14 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PASS",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+      "Chrome": "PASS",
       "product_id": "1601973747919",
       "EU_combinations": 20,
       "EU_labels_match": true,
       "actual_score": "5.00",
       "image_review": "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2510准备\\05_AI候选\\整组验收.json",
-      "image_apply_scope": "PASS"
+      "image_apply_scope": "PASS",
+      "public_qa_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2510准备/浏览器验收/公开页验收.json"
     },
     {
       "style": "2509",
@@ -1007,7 +1015,7 @@
       "publication_state": "HOLD_ACCOUNT_HIKING_BUSINESS_CATEGORY",
       "title_quality": "LOCAL_REVIEW_PASS_NOT_YET_FORMAL",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+      "Chrome": "BROWSER_RESTORED_QA_PENDING",
       "image_review": "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2509准备\\05_AI候选\\整组验收.json",
       "category_issue_evidence": "2509准备/经营类目拒绝诊断.json"
     },
@@ -1022,7 +1030,7 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "LOCAL_REVIEW_PASS_FORMAL_MATCH",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+      "Chrome": "BROWSER_RESTORED_QA_PENDING",
       "product_id": "1601973995230",
       "EU_combinations": 20,
       "EU_labels_match": true,
@@ -1040,7 +1048,7 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "LOCAL_REVIEW_PASS_FORMAL_MATCH",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+      "Chrome": "BROWSER_RESTORED_QA_PENDING",
       "product_id": "1601973978339",
       "EU_combinations": 20,
       "EU_labels_match": true,
@@ -1058,7 +1066,7 @@
       "publication_state": "HOLD_ACCOUNT_HIKING_BUSINESS_CATEGORY",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+      "Chrome": "BROWSER_RESTORED_QA_PENDING",
       "category_issue_evidence": "2509准备/经营类目拒绝诊断.json"
     },
     {
@@ -1072,7 +1080,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+      "Chrome": "BROWSER_RESTORED_QA_PENDING",
       "local_issue": "SOURCE_MARK_REVIEW_PENDING: original side panel has an unfamiliar stitched word/mark; retain original shoe evidence, do not erase physical mark or assume authorization from category membership."
     },
     {
@@ -1086,7 +1094,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "2417",
@@ -1099,7 +1107,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "2416",
@@ -1112,7 +1120,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "2415",
@@ -1125,7 +1133,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "2413",
@@ -1138,7 +1146,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "2409",
@@ -1151,7 +1159,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "031",
@@ -1164,7 +1172,7 @@
       "publication_state": "EXISTING_SOURCE_MAPPING_DO_NOT_DUPLICATE",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "2550",
@@ -1177,7 +1185,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "2579",
@@ -1190,7 +1198,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "2575",
@@ -1203,7 +1211,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "2539",
@@ -1216,7 +1224,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "995",
@@ -1229,7 +1237,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "2520",
@@ -1242,7 +1250,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "868",
@@ -1255,7 +1263,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "822",
@@ -1268,7 +1276,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "924",
@@ -1281,7 +1289,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "1628",
@@ -1294,7 +1302,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "2505",
@@ -1307,7 +1315,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "931",
@@ -1320,7 +1328,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "323",
@@ -1333,7 +1341,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "02412",
@@ -1346,7 +1354,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "0922",
@@ -1359,7 +1367,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "923",
@@ -1372,7 +1380,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "020",
@@ -1385,7 +1393,7 @@
       "publication_state": "HOLD_WITHDRAWN_SOURCE",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+      "Chrome": "BROWSER_RESTORED_QA_PENDING",
       "local_issue": "WITHDRAWAL_NOTICE_REQUIRES_CURRENT_VALID_ENTRY"
     },
     {
@@ -1399,7 +1407,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "2576",
@@ -1412,7 +1420,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "1680",
@@ -1425,7 +1433,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "909",
@@ -1438,7 +1446,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "0323-1",
@@ -1451,7 +1459,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "2772",
@@ -1464,7 +1472,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "2132",
@@ -1477,7 +1485,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "ST-117",
@@ -1490,7 +1498,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "117-1",
@@ -1503,7 +1511,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "K502D",
@@ -1516,7 +1524,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "K502",
@@ -1529,7 +1537,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "1712",
@@ -1542,7 +1550,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "1026",
@@ -1555,7 +1563,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "0323F",
@@ -1568,7 +1576,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     },
     {
       "style": "2593",
@@ -1581,7 +1589,7 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+      "Chrome": "BROWSER_RESTORED_QA_PENDING"
     }
   ]
 }
