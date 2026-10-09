@@ -1,0 +1,96 @@
+{
+  "style": "015",
+  "observed_at": "2026-10-09T17:20:56.283724+00:00",
+  "source": "https://luqi.sooxie.com/detail/2306239",
+  "source_price_cny": "55.00",
+  "source_HTML_file_sha256": "4da1957a14fe7a39fb62254486e938af5cbbc96915cc69086acab63af24fb608",
+  "confirmed_EU_by_color": {
+    "Black": [
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ],
+    "Black Gray": [
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ],
+    "Black Green": [
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ],
+    "Black Khaki": [
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ]
+  },
+  "EU_combinations": 48,
+  "title": "Unisex Wide Toe Box Synthetic Leather Walking Shoes Lace Up Rubber Outsole EU 37-48 Wholesale",
+  "title_bytes": 93,
+  "known_materials": {
+    "upper": "Synthetic leather; exact original08鞋面采用合成革材料 and12合成革",
+    "outsole": "Rubber; source02/04 graphic explicitly橡胶底, no slip performance established",
+    "lining": "Not specified",
+    "midsole": "Not specified"
+  },
+  "identity_notes": "Low-top lace-up shoe with dark textured forefoot band, layered long curved side panel, mesh collar/rear loop and dense small rounded tread studs. Distinct from017 ankle boot height and018 ribbed sole/raised edge. Source02 and04 appear same marketing image and source03/05 same underlying on-foot photo; cannot count these as distinct roles.",
+  "current_source_images": 12,
+  "readable_source_images": 12,
+  "status": "CURRENT_SOURCE_REVIEW_READY_NOT_GENERATED_NOT_PUBLISHED",
+  "image_status": "PENDING_UNDERLYING_PHOTO_ROLE_AND_VISUAL_REVIEW",
+  "photo_plan_notes": "No fixed13-image plan yet:12sourceframes contain repeated02/04 and03/05photos plus source-derived composite closeups. Prefer actual01/03/06/07/08/09/10/11/12distinct views where provable; avoid reusing same underlying scene in main/detail. Black Gray proposed source01 mapping pending. Preserve original Black/Black Green/Black Khaki, no new angles.",
+  "pending": [
+    "Current source only12 frames, underlying duplicate photographs present; count genuinely distinct usable originals for main/detail and SKU roles",
+    "Source01 gray-looking cover versus Black Gray label needs exact mapping; do not recolor missing option",
+    "Own current categorySchema and exact source/model/visual dedup",
+    "Generate distinct role images and accept before official upload/create"
+  ],
+  "excluded_claims": [
+    "barefoot/zero-drop",
+    "medical",
+    "waterproof",
+    "slip resistance/grip",
+    "foam compound",
+    "height increase",
+    "lightweight/rebound/stability",
+    "actual inventory/guaranteed dispatch"
+  ]
+}

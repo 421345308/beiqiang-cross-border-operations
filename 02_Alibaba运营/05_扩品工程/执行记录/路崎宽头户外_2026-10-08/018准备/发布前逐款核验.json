@@ -1,0 +1,25 @@
+{
+  "style": "018",
+  "observed_at": "2026-10-09T16:23:45.537832+00:00",
+  "scope_result": "PASS",
+  "expected_sku_count": 48,
+  "exact_color_EU": true,
+  "title": "Unisex Wide Toe Box Outdoor Walking Shoes Lace Up Rubber Outsole Low Top EU 37-48 Wholesale",
+  "title_bytes": 91,
+  "main_images": 6,
+  "product_details": 4,
+  "company_images": 5,
+  "known_materials": {
+    "upper": "Not specified; 革面 does not identify natural/synthetic leather or chemistry",
+    "lining": "Not specified; 舒适内里 is a comfort description",
+    "midsole": "Not specified",
+    "outsole": "Rubber; original10/12/13 explicit橡胶"
+  },
+  "source_current": "25 exact current photographs, CNY59, four colors EU37–48; source13 casual shoe/Rubber; upper 革面 does not identify material chemistry, unknown lining/midsole materials.",
+  "formal_dedup": "Fresh full catalog430, exact source/model unbound;100 cover triage and nearest12 actual structure comparison.",
+  "dedup_limit": "Not global all-angle or physicalIP clearance",
+  "payload_sha256": "424424547d05c6f2b867c6b70f8687e37d381ecbcfad2f51a6a22e8988923f39",
+  "quality_evidence": "05_AI候选/整组验收.json",
+  "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+  "next_action": "One authorized create, read returned ID, never replay"
+}

@@ -7,8 +7,8 @@
   "sku_count": 39,
   "EU_labels_match": true,
   "title_match": true,
-  "observed_at": "2026-10-09T15:59:12.797272+00:00",
-  "score": null,
+  "observed_at": "2026-10-09T16:22:26.016485+00:00",
+  "score": "5.00",
   "Chrome_readback": "NOT_PUBLICLY_TESTED_BATCH_SAMPLE_POLICY",
   "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
   "formal_attribute_texts": {
@@ -1529,19 +1529,23 @@
       "limits": "Formal API row/ID binding only; first read establishes IDs, not prior history, physical stock or image pixel truth."
     }
   },
-  "score_source": "alibaba.icbu.product.score.get / None",
-  "target_score": 5.0,
-  "score_observed_at": "2026-10-09T15:59:36.549194+00:00",
-  "score_status": "PENDING_OR_BELOW_TARGET",
-  "score_error": {
-    "code": "15",
-    "type": "ISP",
-    "sub_code": "-1",
-    "sub_msg": "通用验证失败",
-    "msg": "Remote service error",
-    "request_id": "21501be117915615792308265",
-    "_trace_id_": "21057f9a17915615792286167e0dd5"
+  "score_source": "alibaba.icbu.product.score.get / 0bab02fe17915629740736849",
+  "score_diagnostics": {
+    "flags": {},
+    "deductions": {},
+    "checks_not_run": [
+      "sku_image",
+      "sku_text",
+      "imageSubTitle",
+      "selling_point_attribute_conflict"
+    ],
+    "error_reasons": [],
+    "status": "clear"
   },
+  "target_score": 5.0,
+  "score_observed_at": "2026-10-09T16:22:51.420531+00:00",
+  "score_status": "PASS_SCORE_GATE",
+  "score_error": null,
   "exact_color_EU": true,
   "color_image_binding_match": true,
   "confirmed_EU_by_color": {
@@ -1591,6 +1595,6 @@
       48
     ]
   },
-  "saved_response_sha256": "b7081bb17f48fa298ee966e24df80ad7acb62cce6708197fa80fc8de4f327875",
-  "derived_review_at": "2026-10-09T16:03:04.449307+00:00"
+  "saved_response_sha256": "f924f84ce1da64a13b9424d167ed87c21a97735f129e678ca2d28fc7e88399be",
+  "derived_review_at": "2026-10-09T17:07:40.161984+00:00"
 }
