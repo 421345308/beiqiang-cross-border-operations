@@ -1,9 +1,9 @@
 {
-  "observed_at": "2026-10-09T10:38:48.754680+00:00",
+  "observed_at": "2026-10-09T11:39:54.937794+00:00",
   "scope": "107 sources; statuses are evidence stages, not 107 independent publishable products",
   "state_counts": {
-    "CREATED_APPROVED_Y": 32,
-    "PENDING_STYLE_AND_QUALITY_REVIEW": 69,
+    "CREATED_APPROVED_Y": 33,
+    "PENDING_STYLE_AND_QUALITY_REVIEW": 68,
     "EXISTING_SOURCE_MAPPING_DO_NOT_DUPLICATE": 3,
     "HOLD_ACCOUNT_HIKING_BUSINESS_CATEGORY": 2,
     "HOLD_WITHDRAWN_SOURCE": 1
@@ -20,13 +20,16 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PASS",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING",
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
       "product_id": "1601973821133",
       "EU_combinations": 26,
       "EU_labels_match": true,
       "actual_score": "5.00",
       "image_review": "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\058准备\\05_AI候选\\整组验收.json",
-      "image_apply_scope": "PASS"
+      "image_apply_scope": "PASS",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+      "effective_attribute_status": "NEEDS_TARGET_ATTRIBUTE_REPAIR",
+      "effective_attribute_evidence": "有效品牌与MD标签核验.json"
     },
     {
       "style": "2633",
@@ -39,12 +42,15 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PASS",
       "image_quality": "MAIN_AND_DETAIL_LOCAL_REVIEW_PASS",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING",
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
       "product_id": "1601973753470",
       "EU_combinations": 30,
       "EU_labels_match": true,
       "actual_score": "5.00",
-      "image_apply_scope": "PASS"
+      "image_apply_scope": "PASS",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+      "effective_attribute_status": "NEEDS_TARGET_ATTRIBUTE_REPAIR",
+      "effective_attribute_evidence": "有效品牌与MD标签核验.json"
     },
     {
       "style": "2629",
@@ -57,13 +63,16 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PASS",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING",
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
       "product_id": "1601973749610",
       "EU_combinations": 39,
       "EU_labels_match": true,
       "actual_score": "5.00",
       "image_review": "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2629准备\\05_AI候选\\整组验收.json",
-      "image_apply_scope": "PASS"
+      "image_apply_scope": "PASS",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+      "effective_attribute_status": "NEEDS_TARGET_ATTRIBUTE_REPAIR",
+      "effective_attribute_evidence": "有效品牌与MD标签核验.json"
     },
     {
       "style": "055",
@@ -76,13 +85,16 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PASS",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING",
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
       "product_id": "1601973841032",
       "EU_combinations": 39,
       "EU_labels_match": true,
       "actual_score": "5.00",
       "image_review": "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\055准备\\05_AI候选\\整组验收.json",
-      "image_apply_scope": "PASS"
+      "image_apply_scope": "PASS",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+      "effective_attribute_status": "NEEDS_TARGET_ATTRIBUTE_REPAIR",
+      "effective_attribute_evidence": "有效品牌与MD标签核验.json"
     },
     {
       "style": "2627",
@@ -95,8 +107,9 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING",
-      "local_issue": "NEEDS_ADDITIONAL_DISTINCT_CLEAN_ASSETS"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "local_issue": "NEEDS_ADDITIONAL_DISTINCT_CLEAN_ASSETS",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "2628",
@@ -109,13 +122,16 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PASS",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING",
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
       "product_id": "1601973823209",
       "EU_combinations": 39,
       "EU_labels_match": true,
       "actual_score": "5.00",
       "image_review": "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2628准备\\05_AI候选\\整组验收.json",
-      "image_apply_scope": "PASS"
+      "image_apply_scope": "PASS",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+      "effective_attribute_status": "NEEDS_TARGET_ATTRIBUTE_REPAIR",
+      "effective_attribute_evidence": "有效品牌与MD标签核验.json"
     },
     {
       "style": "2623",
@@ -128,13 +144,16 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PASS",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING",
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
       "product_id": "1601973806430",
       "EU_combinations": 24,
       "EU_labels_match": true,
       "actual_score": "5.00",
       "image_review": "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2623准备\\05_AI候选\\整组验收.json",
-      "image_apply_scope": "PASS"
+      "image_apply_scope": "PASS",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+      "effective_attribute_status": "NEEDS_TARGET_ATTRIBUTE_REPAIR",
+      "effective_attribute_evidence": "有效品牌与MD标签核验.json"
     },
     {
       "style": "213",
@@ -147,13 +166,16 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PASS",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING",
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
       "product_id": "1601973876011",
       "EU_combinations": 39,
       "EU_labels_match": true,
       "actual_score": "5.00",
       "image_review": "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\213准备\\05_AI候选\\整组验收.json",
-      "image_apply_scope": "PASS"
+      "image_apply_scope": "PASS",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+      "effective_attribute_status": "NEEDS_TARGET_ATTRIBUTE_REPAIR",
+      "effective_attribute_evidence": "有效品牌与MD标签核验.json"
     },
     {
       "style": "2626",
@@ -166,13 +188,16 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PASS",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING",
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
       "product_id": "1601973769589",
       "EU_combinations": 39,
       "EU_labels_match": true,
       "actual_score": "5.00",
       "image_review": "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2626准备\\05_AI候选\\整组验收.json",
-      "image_apply_scope": "PASS"
+      "image_apply_scope": "PASS",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+      "effective_attribute_status": "NEEDS_TARGET_ATTRIBUTE_REPAIR",
+      "effective_attribute_evidence": "有效品牌与MD标签核验.json"
     },
     {
       "style": "053",
@@ -185,13 +210,16 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PASS",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING",
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
       "product_id": "1601973846232",
       "EU_combinations": 39,
       "EU_labels_match": true,
       "actual_score": "5.00",
       "image_review": "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\053准备\\05_AI候选\\整组验收.json",
-      "image_apply_scope": "PASS"
+      "image_apply_scope": "PASS",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+      "effective_attribute_status": "NEEDS_TARGET_ATTRIBUTE_REPAIR",
+      "effective_attribute_evidence": "有效品牌与MD标签核验.json"
     },
     {
       "style": "052",
@@ -204,8 +232,9 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING",
-      "local_issue": "NEEDS_DISTINCT_CLEAN_ASSETS_EXCLUDING_SUPPLIER_MARKS"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "local_issue": "NEEDS_DISTINCT_CLEAN_ASSETS_EXCLUDING_SUPPLIER_MARKS",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "036",
@@ -218,7 +247,8 @@
       "publication_state": "EXISTING_SOURCE_MAPPING_DO_NOT_DUPLICATE",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "038",
@@ -231,8 +261,9 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING",
-      "local_issue": "NEEDS_COMPLETE_FOUR_COLOR_CLEAN_ASSETS"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "local_issue": "NEEDS_COMPLETE_FOUR_COLOR_CLEAN_ASSETS",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "050",
@@ -245,13 +276,16 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PASS",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING",
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
       "product_id": "1601973794508",
       "EU_combinations": 52,
       "EU_labels_match": true,
       "actual_score": "5.00",
       "image_review": "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\050准备\\05_AI候选\\整组验收.json",
-      "image_apply_scope": "PASS"
+      "image_apply_scope": "PASS",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+      "effective_attribute_status": "NEEDS_TARGET_ATTRIBUTE_REPAIR",
+      "effective_attribute_evidence": "有效品牌与MD标签核验.json"
     },
     {
       "style": "2618",
@@ -264,7 +298,8 @@
       "publication_state": "EXISTING_SOURCE_MAPPING_DO_NOT_DUPLICATE",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "2583-1",
@@ -277,8 +312,9 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING",
-      "local_issue": "SOURCE_COLOR_PHOTO_MISMATCH: source lists six colors including pink EU36-42 but photos only two closed-upper variants; do not fabricate six SKU images."
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "local_issue": "SOURCE_COLOR_PHOTO_MISMATCH: source lists six colors including pink EU36-42 but photos only two closed-upper variants; do not fabricate six SKU images.",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "033",
@@ -291,7 +327,7 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "REFINEMENT_PASS",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING",
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
       "product_id": "1601973792546",
       "EU_combinations": 39,
       "EU_labels_match": true,
@@ -304,7 +340,10 @@
         "title_match": true,
         "schema_title_match": true,
         "scope_result": "PASS"
-      }
+      },
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+      "effective_attribute_status": "NEEDS_TARGET_ATTRIBUTE_REPAIR",
+      "effective_attribute_evidence": "有效品牌与MD标签核验.json"
     },
     {
       "style": "1212",
@@ -317,13 +356,16 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PASS",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING",
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
       "product_id": "1601973808453",
       "EU_combinations": 78,
       "EU_labels_match": true,
       "actual_score": "5.00",
       "image_review": "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\1212准备\\05_AI候选\\整组验收.json",
-      "image_apply_scope": "PASS"
+      "image_apply_scope": "PASS",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+      "effective_attribute_status": "NEEDS_TARGET_ATTRIBUTE_REPAIR",
+      "effective_attribute_evidence": "有效品牌与MD标签核验.json"
     },
     {
       "style": "2619",
@@ -344,7 +386,10 @@
       "image_review": "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2619准备\\05_AI候选\\整组验收.json",
       "image_apply_scope": "PASS",
       "remaining_field_differences": [],
-      "public_qa_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2619准备/浏览器验收/公开页验收.json"
+      "public_qa_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2619准备/浏览器验收/公开页验收.json",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+      "effective_attribute_status": "NEEDS_TARGET_ATTRIBUTE_REPAIR",
+      "effective_attribute_evidence": "有效品牌与MD标签核验.json"
     },
     {
       "style": "2599-1",
@@ -357,13 +402,16 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PASS",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING",
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
       "product_id": "1601973741932",
       "EU_combinations": 30,
       "EU_labels_match": true,
       "actual_score": "5.00",
       "image_review": "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2599-1准备\\05_AI候选\\整组验收.json",
-      "image_apply_scope": "PASS"
+      "image_apply_scope": "PASS",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+      "effective_attribute_status": "NEEDS_TARGET_ATTRIBUTE_REPAIR",
+      "effective_attribute_evidence": "有效品牌与MD标签核验.json"
     },
     {
       "style": "032",
@@ -376,13 +424,16 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PASS",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING",
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
       "product_id": "1601973736928",
       "EU_combinations": 52,
       "EU_labels_match": true,
       "actual_score": "5.00",
       "image_review": "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\032准备\\05_AI候选\\整组验收.json",
-      "image_apply_scope": "PASS"
+      "image_apply_scope": "PASS",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+      "effective_attribute_status": "NEEDS_TARGET_ATTRIBUTE_REPAIR",
+      "effective_attribute_evidence": "有效品牌与MD标签核验.json"
     },
     {
       "style": "026-1",
@@ -395,8 +446,9 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING",
-      "local_issue": "POSSIBLE_SAME_PRODUCT_FAMILY: source photos share identical upper and marketing panels; do not create two links based on suffix. Need distinct clean assets and outsole structure confirmation."
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "local_issue": "POSSIBLE_SAME_PRODUCT_FAMILY: source photos share identical upper and marketing panels; do not create two links based on suffix. Need distinct clean assets and outsole structure confirmation.",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "2598",
@@ -409,13 +461,16 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PASS",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING",
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
       "product_id": "1601973831465",
       "EU_combinations": 30,
       "EU_labels_match": true,
       "actual_score": "5.00",
       "image_review": "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2598准备\\05_AI候选\\整组验收.json",
-      "image_apply_scope": "PASS"
+      "image_apply_scope": "PASS",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+      "effective_attribute_status": "NEEDS_TARGET_ATTRIBUTE_REPAIR",
+      "effective_attribute_evidence": "有效品牌与MD标签核验.json"
     },
     {
       "style": "026",
@@ -428,8 +483,9 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING",
-      "local_issue": "POSSIBLE_SAME_PRODUCT_FAMILY: source photos share identical upper and marketing panels; do not create two links based on suffix. Need distinct clean assets and outsole structure confirmation."
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "local_issue": "POSSIBLE_SAME_PRODUCT_FAMILY: source photos share identical upper and marketing panels; do not create two links based on suffix. Need distinct clean assets and outsole structure confirmation.",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "2588-1",
@@ -442,13 +498,16 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PASS",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING",
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
       "product_id": "1601973772709",
       "EU_combinations": 27,
       "EU_labels_match": true,
       "actual_score": "5.00",
       "image_review": "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2588-1准备\\05_AI候选\\整组验收.json",
-      "image_apply_scope": "PASS"
+      "image_apply_scope": "PASS",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+      "effective_attribute_status": "NEEDS_TARGET_ATTRIBUTE_REPAIR",
+      "effective_attribute_evidence": "有效品牌与MD标签核验.json"
     },
     {
       "style": "2597",
@@ -461,13 +520,16 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PASS",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING",
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
       "product_id": "1601973797610",
       "EU_combinations": 30,
       "EU_labels_match": true,
       "actual_score": "5.00",
       "image_review": "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2597准备\\05_AI候选\\整组验收.json",
-      "image_apply_scope": "PASS"
+      "image_apply_scope": "PASS",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+      "effective_attribute_status": "NEEDS_TARGET_ATTRIBUTE_REPAIR",
+      "effective_attribute_evidence": "有效品牌与MD标签核验.json"
     },
     {
       "style": "2596",
@@ -480,13 +542,16 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PASS",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING",
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
       "product_id": "1601973842356",
       "EU_combinations": 20,
       "EU_labels_match": true,
       "actual_score": "5.00",
       "image_review": "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2596准备\\05_AI候选\\整组验收.json",
-      "image_apply_scope": "PASS"
+      "image_apply_scope": "PASS",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+      "effective_attribute_status": "NEEDS_TARGET_ATTRIBUTE_REPAIR",
+      "effective_attribute_evidence": "有效品牌与MD标签核验.json"
     },
     {
       "style": "2580",
@@ -499,7 +564,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "029",
@@ -512,7 +578,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "027",
@@ -525,7 +592,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "2585-1",
@@ -538,7 +606,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "028",
@@ -559,7 +628,10 @@
       "image_review": "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\028准备\\05_AI候选\\整组验收.json",
       "image_apply_scope": "PASS",
       "remaining_field_differences": [],
-      "public_qa_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/028准备/浏览器验收/公开页验收.json"
+      "public_qa_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/028准备/浏览器验收/公开页验收.json",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+      "effective_attribute_status": "PASS_EFFECTIVE_BRAND_AND_KNOWN_MD_LABEL",
+      "effective_attribute_evidence": "有效品牌与MD标签核验.json"
     },
     {
       "style": "2585",
@@ -572,7 +644,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "021",
@@ -585,7 +658,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "2571",
@@ -606,7 +680,10 @@
       "image_review": "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2571准备\\05_AI候选\\整组验收.json",
       "image_apply_scope": "PASS",
       "remaining_field_differences": [],
-      "public_qa_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2571准备/浏览器验收/公开页验收.json"
+      "public_qa_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2571准备/浏览器验收/公开页验收.json",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+      "effective_attribute_status": "PASS_EFFECTIVE_BRAND_AND_KNOWN_MD_LABEL",
+      "effective_attribute_evidence": "有效品牌与MD标签核验.json"
     },
     {
       "style": "2578",
@@ -619,7 +696,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "023",
@@ -632,7 +710,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "2583",
@@ -645,7 +724,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "2573",
@@ -655,10 +735,21 @@
       ],
       "source_collection": "COLLECTED",
       "image_cache": "CONTACT_SHEET_ONLY_NOT_PUBLISHABLE",
-      "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
-      "title_quality": "PENDING",
-      "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "publication_state": "CREATED_APPROVED_Y",
+      "title_quality": "LOCAL_REVIEW_PASS_FORMAL_MATCH",
+      "image_quality": "LOCAL_SET_REVIEW_PASS",
+      "Chrome": "PASS",
+      "product_id": "1601974740583",
+      "EU_combinations": 16,
+      "EU_labels_match": true,
+      "actual_score": "5.00",
+      "image_review": "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2573准备\\05_AI候选\\整组验收.json",
+      "image_apply_scope": "PASS",
+      "remaining_field_differences": [],
+      "public_qa_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2573准备/浏览器验收/公开页验收.json",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+      "effective_attribute_status": "PASS_EFFECTIVE_BRAND_AND_KNOWN_MD_LABEL",
+      "effective_attribute_evidence": "有效品牌与MD标签核验.json"
     },
     {
       "style": "2572",
@@ -675,11 +766,14 @@
       "product_id": "1601974755167",
       "EU_combinations": 16,
       "EU_labels_match": true,
-      "actual_score": null,
+      "actual_score": "5.00",
       "image_review": "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2572准备\\05_AI候选\\整组验收.json",
       "image_apply_scope": "PASS",
       "remaining_field_differences": [],
-      "public_qa_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2572准备/浏览器验收/公开页验收.json"
+      "public_qa_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2572准备/浏览器验收/公开页验收.json",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+      "effective_attribute_status": "PASS_EFFECTIVE_BRAND_AND_KNOWN_MD_LABEL",
+      "effective_attribute_evidence": "有效品牌与MD标签核验.json"
     },
     {
       "style": "2577",
@@ -692,7 +786,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "018",
@@ -705,7 +800,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "017",
@@ -718,7 +814,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "015",
@@ -731,7 +828,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "2568",
@@ -744,7 +842,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "2569",
@@ -757,7 +856,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "016",
@@ -770,7 +870,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "012",
@@ -783,7 +884,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "013",
@@ -796,7 +898,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "2561",
@@ -809,7 +912,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "2559",
@@ -822,7 +926,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "2558",
@@ -835,7 +940,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "2560",
@@ -848,7 +954,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "011",
@@ -861,7 +968,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "25019",
@@ -874,7 +982,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "25017",
@@ -887,13 +996,16 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PASS",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING",
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
       "product_id": "1601973850058",
       "EU_combinations": 18,
       "EU_labels_match": true,
       "actual_score": "5.00",
       "image_review": "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\25017准备\\05_AI候选\\整组验收.json",
-      "image_apply_scope": "PASS"
+      "image_apply_scope": "PASS",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+      "effective_attribute_status": "NEEDS_TARGET_ATTRIBUTE_REPAIR",
+      "effective_attribute_evidence": "有效品牌与MD标签核验.json"
     },
     {
       "style": "25016",
@@ -906,13 +1018,16 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PASS",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING",
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
       "product_id": "1601973730776",
       "EU_combinations": 30,
       "EU_labels_match": true,
       "actual_score": "5.00",
       "image_review": "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\25016准备\\05_AI候选\\整组验收.json",
-      "image_apply_scope": "PASS"
+      "image_apply_scope": "PASS",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+      "effective_attribute_status": "NEEDS_TARGET_ATTRIBUTE_REPAIR",
+      "effective_attribute_evidence": "有效品牌与MD标签核验.json"
     },
     {
       "style": "25012",
@@ -925,13 +1040,16 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PASS",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING",
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
       "product_id": "1601973838360",
       "EU_combinations": 20,
       "EU_labels_match": true,
       "actual_score": "5.00",
       "image_review": "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\25012准备\\05_AI候选\\整组验收.json",
-      "image_apply_scope": "PASS"
+      "image_apply_scope": "PASS",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+      "effective_attribute_status": "NEEDS_TARGET_ATTRIBUTE_REPAIR",
+      "effective_attribute_evidence": "有效品牌与MD标签核验.json"
     },
     {
       "style": "02603",
@@ -944,13 +1062,16 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PASS",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING",
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
       "product_id": "1601973784646",
       "EU_combinations": 30,
       "EU_labels_match": true,
       "actual_score": "5.00",
       "image_review": "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\02603准备\\05_AI候选\\整组验收.json",
-      "image_apply_scope": "PASS"
+      "image_apply_scope": "PASS",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+      "effective_attribute_status": "NEEDS_TARGET_ATTRIBUTE_REPAIR",
+      "effective_attribute_evidence": "有效品牌与MD标签核验.json"
     },
     {
       "style": "02602",
@@ -963,13 +1084,16 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PASS",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING",
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
       "product_id": "1601973869140",
       "EU_combinations": 20,
       "EU_labels_match": true,
       "actual_score": "5.00",
       "image_review": "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\02602准备\\05_AI候选\\整组验收.json",
-      "image_apply_scope": "PASS"
+      "image_apply_scope": "PASS",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+      "effective_attribute_status": "NEEDS_TARGET_ATTRIBUTE_REPAIR",
+      "effective_attribute_evidence": "有效品牌与MD标签核验.json"
     },
     {
       "style": "02601",
@@ -982,13 +1106,16 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PASS",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING",
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
       "product_id": "1601973814505",
       "EU_combinations": 30,
       "EU_labels_match": true,
       "actual_score": "5.00",
       "image_review": "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\02601准备\\05_AI候选\\整组验收.json",
-      "image_apply_scope": "PASS"
+      "image_apply_scope": "PASS",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+      "effective_attribute_status": "NEEDS_TARGET_ATTRIBUTE_REPAIR",
+      "effective_attribute_evidence": "有效品牌与MD标签核验.json"
     },
     {
       "style": "25021",
@@ -1001,13 +1128,16 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PASS",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING",
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
       "product_id": "1601973854304",
       "EU_combinations": 20,
       "EU_labels_match": true,
       "actual_score": "5.00",
       "image_review": "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\25021准备\\05_AI候选\\整组验收.json",
-      "image_apply_scope": "PASS"
+      "image_apply_scope": "PASS",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+      "effective_attribute_status": "NEEDS_TARGET_ATTRIBUTE_REPAIR",
+      "effective_attribute_evidence": "有效品牌与MD标签核验.json"
     },
     {
       "style": "2510",
@@ -1027,7 +1157,10 @@
       "actual_score": "5.00",
       "image_review": "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2510准备\\05_AI候选\\整组验收.json",
       "image_apply_scope": "PASS",
-      "public_qa_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2510准备/浏览器验收/公开页验收.json"
+      "public_qa_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2510准备/浏览器验收/公开页验收.json",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+      "effective_attribute_status": "NEEDS_TARGET_ATTRIBUTE_REPAIR",
+      "effective_attribute_evidence": "有效品牌与MD标签核验.json"
     },
     {
       "style": "2509",
@@ -1040,9 +1173,10 @@
       "publication_state": "HOLD_ACCOUNT_HIKING_BUSINESS_CATEGORY",
       "title_quality": "LOCAL_REVIEW_PASS_NOT_YET_FORMAL",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING",
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
       "image_review": "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2509准备\\05_AI候选\\整组验收.json",
-      "category_issue_evidence": "2509准备/经营类目拒绝诊断.json"
+      "category_issue_evidence": "2509准备/经营类目拒绝诊断.json",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "02508",
@@ -1055,12 +1189,15 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "LOCAL_REVIEW_PASS_FORMAL_MATCH",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING",
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
       "product_id": "1601973995230",
       "EU_combinations": 20,
       "EU_labels_match": true,
       "actual_score": "5.00",
-      "image_review": "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\02508准备\\05_AI候选\\整组验收.json"
+      "image_review": "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\02508准备\\05_AI候选\\整组验收.json",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+      "effective_attribute_status": "NEEDS_TARGET_ATTRIBUTE_REPAIR",
+      "effective_attribute_evidence": "有效品牌与MD标签核验.json"
     },
     {
       "style": "02507",
@@ -1073,12 +1210,15 @@
       "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "LOCAL_REVIEW_PASS_FORMAL_MATCH",
       "image_quality": "LOCAL_SET_REVIEW_PASS",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING",
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
       "product_id": "1601973978339",
       "EU_combinations": 20,
       "EU_labels_match": true,
       "actual_score": "5.00",
-      "image_review": "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\02507准备\\05_AI候选\\整组验收.json"
+      "image_review": "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\02507准备\\05_AI候选\\整组验收.json",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+      "effective_attribute_status": "NEEDS_TARGET_ATTRIBUTE_REPAIR",
+      "effective_attribute_evidence": "有效品牌与MD标签核验.json"
     },
     {
       "style": "02505",
@@ -1091,8 +1231,9 @@
       "publication_state": "HOLD_ACCOUNT_HIKING_BUSINESS_CATEGORY",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING",
-      "category_issue_evidence": "2509准备/经营类目拒绝诊断.json"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "category_issue_evidence": "2509准备/经营类目拒绝诊断.json",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "02503",
@@ -1105,8 +1246,9 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING",
-      "local_issue": "SOURCE_MARK_REVIEW_PENDING: original side panel has an unfamiliar stitched word/mark; retain original shoe evidence, do not erase physical mark or assume authorization from category membership."
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "local_issue": "SOURCE_MARK_REVIEW_PENDING: original side panel has an unfamiliar stitched word/mark; retain original shoe evidence, do not erase physical mark or assume authorization from category membership.",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "2418",
@@ -1119,7 +1261,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "2417",
@@ -1132,7 +1275,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "2416",
@@ -1145,7 +1289,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "2415",
@@ -1158,7 +1303,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "2413",
@@ -1171,7 +1317,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "2409",
@@ -1184,7 +1331,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "031",
@@ -1197,7 +1345,8 @@
       "publication_state": "EXISTING_SOURCE_MAPPING_DO_NOT_DUPLICATE",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "2550",
@@ -1210,7 +1359,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "2579",
@@ -1223,7 +1373,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "2575",
@@ -1236,7 +1387,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "2539",
@@ -1249,7 +1401,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "995",
@@ -1262,7 +1415,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "2520",
@@ -1275,7 +1429,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "868",
@@ -1288,7 +1443,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "822",
@@ -1301,7 +1457,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "924",
@@ -1314,7 +1471,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "1628",
@@ -1327,7 +1485,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "2505",
@@ -1340,7 +1499,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "931",
@@ -1353,7 +1513,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "323",
@@ -1366,7 +1527,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "02412",
@@ -1379,7 +1541,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "0922",
@@ -1392,7 +1555,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "923",
@@ -1405,7 +1569,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "020",
@@ -1418,8 +1583,9 @@
       "publication_state": "HOLD_WITHDRAWN_SOURCE",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING",
-      "local_issue": "WITHDRAWAL_NOTICE_REQUIRES_CURRENT_VALID_ENTRY"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "local_issue": "WITHDRAWAL_NOTICE_REQUIRES_CURRENT_VALID_ENTRY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "9705",
@@ -1432,7 +1598,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "2576",
@@ -1445,7 +1612,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "1680",
@@ -1458,7 +1626,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "909",
@@ -1471,7 +1640,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "0323-1",
@@ -1484,7 +1654,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "2772",
@@ -1497,7 +1668,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "2132",
@@ -1510,7 +1682,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "ST-117",
@@ -1523,7 +1696,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "117-1",
@@ -1536,7 +1710,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "K502D",
@@ -1549,7 +1724,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "K502",
@@ -1562,7 +1738,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "1712",
@@ -1575,7 +1752,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "1026",
@@ -1588,7 +1766,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "0323F",
@@ -1601,7 +1780,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     },
     {
       "style": "2593",
@@ -1614,7 +1794,8 @@
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
-      "Chrome": "BROWSER_RESTORED_QA_PENDING"
+      "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
     }
   ]
 }

@@ -5,7 +5,7 @@
   "source_price_cny": "59.00",
   "observed_at": "2026-10-09T10:35:38.767407+00:00",
   "current_source_sha256": "12ca5435de95ec5910936d6c854c3cb31e7f955ebd0fd26438ae822aa99deb37",
-  "status": "SOURCE_CONFIRMED_PENDING_IMAGE_EDIT_AND_FORMAL_DEDUP",
+  "status": "APPROVED_Y_API_PUBLIC_CONTENT_SCORE_PASS",
   "current_source_evidence": [
     "当前来源文本.txt",
     "当前来源页.png",
@@ -53,8 +53,8 @@
     "10": "Keep two genuine side profiles; remove supplier info table in buyer image"
   },
   "identity_notes": "Closed slip-on front with no laces, raised knit vamp, curved ribbed rear panel, chevron side sole, orange segmented outsole. Black black side sole / Dark Gray white side sole. Distinct from2572 ordinary lace-eyelet mesh and2571 wave lace mesh, and2633 toggle-bungee. Whole-shop/all-angle identity audit not claimed.",
-  "image_status": "NOT_GENERATED_NOT_ACCEPTED",
-  "Chrome": "CURRENT_SOURCE_READABLE_PUBLIC_NEW_PRODUCT_QA_PENDING",
+  "image_status": "BUYER_ROLE_REVIEW_PASS",
+  "Chrome": "PUBLIC_VISUAL_PASS",
   "proposed_roles": {
     "M1": [
       21
@@ -90,5 +90,21 @@
     "SKU_Dark Gray": [
       25
     ]
+  },
+  "product_id": "1601974740583",
+  "pending": null,
+  "content_version": "product_summary_verified",
+  "actual_score": "5.00",
+  "score_diagnostics": {
+    "flags": {},
+    "deductions": {},
+    "checks_not_run": [
+      "sku_image",
+      "sku_text",
+      "imageSubTitle",
+      "selling_point_attribute_conflict"
+    ],
+    "error_reasons": [],
+    "status": "clear"
   }
 }

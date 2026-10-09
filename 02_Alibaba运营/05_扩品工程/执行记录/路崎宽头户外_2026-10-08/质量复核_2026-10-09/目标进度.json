@@ -1,22 +1,22 @@
 {
-  "observed_at": "2026-10-09T10:38:48.754680+00:00",
+  "observed_at": "2026-10-09T11:39:54.937794+00:00",
   "source_urls": 107,
-  "created_products": 32,
-  "formal_EU_combinations": 1025,
+  "created_products": 33,
+  "formal_EU_combinations": 1041,
   "approved_before_quality_revision": 26,
   "actual_score_5_before_quality_revision": 26,
   "scope_status": "ACTIVE_NOT_COMPLETE",
   "quality_revision_status": "26 original-ID title revisions PASS; full image/Schema readback and public visuals remain separately evidenced per product. Pending approval is not counted as online or complete.",
   "title_plan_count": 26,
   "new_candidates_awaiting_quality": 1,
-  "Chrome": "RESTORED_WITH_PER_PRODUCT_VISUAL_EVIDENCE",
+  "Chrome": "BATCH_SAMPLING_PER_PRODUCT_COMPLETE_BROWSER_STEP_REMOVED",
   "prohibited_completion_shortcuts": [
     "Do not count uploaded images as applied images",
     "Do not count API 5.00 as visual or business conversion proof",
     "Do not count source URLs as distinct publishable styles",
     "Do not replay existing or outcome-unknown creates"
   ],
-  "next_work": "Continue2573 current-source107-byte title and source-bound11-image optimization before single create; preserve existing32 IDs and exact1025EU.2572 approved/Y exact Schema and public visuals/Beiqiang brand PASS; score temporarily generic validation error.028/2571 brand repairs approved/Y exact all unsubmitted product fields preserved, scores5.00;2571 MD public translation corrected. Per-target seller-editor keyword migration acceptance remains separate pending. Continue remaining107 sources and older product public QA. Hiking2509/02505 remain local category holds.",
+  "next_work": "Fresh-read and minimally repair effective Beiqiang brand on29 exact existing IDs; saved formal snapshots flagged29 missing effective brand values. Preserve all unrelated fields and original IDs. Then prepare027 source-bound image/title pack and continue107 sources. API full checks; browser only exceptions and batch samples, never a per-item publication blocker. Hiking2509/02505 remain actual local category holds.",
   "revision_readbacks": 26,
   "revision_scope_pass": 26,
   "revision_pending_review": 0,
@@ -56,7 +56,14 @@
       "status": "approved",
       "display": "Y",
       "sku_count": 16,
-      "score": null
+      "score": "5.00"
+    },
+    "2573": {
+      "product_id": "1601974740583",
+      "status": "approved",
+      "display": "Y",
+      "sku_count": 16,
+      "score": "5.00"
     },
     "2619": {
       "product_id": "1601974271772",
@@ -66,7 +73,7 @@
       "score": "5.00"
     }
   },
-  "current_approved_displayed": 32,
+  "current_approved_displayed": 33,
   "complete_image_readback_pass_styles": [
     "058",
     "2633",
@@ -89,6 +96,7 @@
     "2596",
     "028",
     "2571",
+    "2573",
     "2572",
     "25017",
     "25016",
@@ -110,12 +118,13 @@
     "scope_result": "PASS",
     "observed_at": "2026-10-08T23:07:23.578830+00:00"
   },
-  "browser_acceptance": "RESTORED_BY_OWNER_2026-10-09_QA_IN_PROGRESS",
+  "browser_acceptance": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
   "pending_new_approval_styles": [],
   "public_QA_pass_styles": [
     "2619",
     "028",
     "2571",
+    "2573",
     "2572",
     "2510"
   ],
@@ -130,21 +139,58 @@
   },
   "candidate2572": {
     "product_id": "1601974755167",
-    "generated_images": 13,
+    "EU_combinations": 16,
     "accepted_images": 11,
     "rejected_images": 2,
-    "EU_combinations": 16,
     "title_bytes": 107,
-    "status": "APPROVED_Y_FULL_FIELDS_AND_PUBLIC_VISUAL_PASS",
-    "brand": "PASS_PUBLIC",
-    "score": "PENDING_VALID_PLATFORM_SCORE"
+    "status": "APPROVED_Y_API_PUBLIC_SCORE_PASS",
+    "score": "5.00"
   },
   "candidate2573": {
-    "status": "CURRENT_SOURCE_CONFIRMED_IMAGE_EDIT_RUNNING",
-    "source": "https://luqi.sooxie.com/detail/2349364",
-    "current_images_readable": 25,
+    "product_id": "1601974740583",
     "EU_combinations": 16,
+    "accepted_images": 11,
+    "rejected_images": 0,
     "title_bytes": 107,
-    "new_ID": null
+    "status": "APPROVED_Y_API_PUBLIC_CONTENT_SCORE_PASS",
+    "score": "5.00"
+  },
+  "browser_policy_evidence": "02_Alibaba运营/00_运营SOP/国际站商品全生命周期SOP.md#5",
+  "attribute_repairs_required": [
+    "02507",
+    "02508",
+    "02601",
+    "02602",
+    "02603",
+    "032",
+    "033",
+    "050",
+    "053",
+    "055",
+    "058",
+    "1212",
+    "213",
+    "25012",
+    "25016",
+    "25017",
+    "25021",
+    "2510",
+    "2588-1",
+    "2596",
+    "2597",
+    "2598",
+    "2599-1",
+    "2619",
+    "2623",
+    "2626",
+    "2628",
+    "2629",
+    "2633"
+  ],
+  "effective_attribute_evidence": "有效品牌与MD标签核验.json",
+  "candidate027": {
+    "status": "CURRENT_SOURCE_READ_28_IMAGES_NO_CREATE",
+    "source": "https://luqi.sooxie.com/detail/2370261",
+    "EU_combinations": 39
   }
 }

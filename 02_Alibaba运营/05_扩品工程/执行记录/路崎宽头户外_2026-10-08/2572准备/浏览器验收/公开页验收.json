@@ -140,11 +140,24 @@
     }
   ],
   "DOM_evidence": "详情DOM图像证据.json",
-  "actual_score": null,
+  "actual_score": "5.00",
   "score_evidence": "../实际评分回读.json",
   "whole_lifecycle_complete": false,
   "remaining": [
-    "Valid score awaiting platform; actual endpoint returned generic validation error",
-    "Per-target keyword/editor migration evidence pending"
-  ]
+    "Per-target editor/public version not independently verified; non-blocking under this batch API policy"
+  ],
+  "score": "5.00",
+  "score_status": "PASS_SCORE_GATE",
+  "score_diagnostics": {
+    "flags": {},
+    "deductions": {},
+    "checks_not_run": [
+      "sku_image",
+      "sku_text",
+      "imageSubTitle",
+      "selling_point_attribute_conflict"
+    ],
+    "error_reasons": [],
+    "status": "clear"
+  }
 }
