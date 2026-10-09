@@ -1,11 +1,12 @@
 {
-  "observed_at": "2026-10-09T12:18:22.545964+00:00",
+  "observed_at": "2026-10-09T13:39:24.847601+00:00",
   "scope": "107 sources; statuses are evidence stages, not 107 independent publishable products",
   "state_counts": {
-    "CREATED_APPROVED_Y": 33,
-    "PENDING_STYLE_AND_QUALITY_REVIEW": 66,
+    "CREATED_APPROVED_Y": 34,
+    "PENDING_STYLE_AND_QUALITY_REVIEW": 64,
     "EXISTING_SOURCE_MAPPING_DO_NOT_DUPLICATE": 3,
     "MERGED_SOURCE_FAMILY_2585_NO_EXTRA_CREATE": 1,
+    "CREATED_NEW_N": 1,
     "CURRENT_SOURCE_AND_ROLE_PLAN_NO_CREATE": 1,
     "HOLD_ACCOUNT_HIKING_BUSINESS_CATEGORY": 2,
     "HOLD_WITHDRAWN_SOURCE": 1
@@ -625,12 +626,13 @@
       "source_collection": "COLLECTED",
       "image_cache": "CONTACT_SHEET_ONLY_NOT_PUBLISHABLE",
       "publication_state": "MERGED_SOURCE_FAMILY_2585_NO_EXTRA_CREATE",
-      "title_quality": "PENDING",
-      "image_quality": "PENDING",
+      "title_quality": "MERGED_FAMILY_NO_EXTRA_TITLE",
+      "image_quality": "MERGED_CURRENT_SOURCE_FAMILY",
       "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
       "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
       "family_target": "2585",
-      "current_source_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2585准备/商品预检与图组策略.json"
+      "current_source_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2585准备/2585-1_封面对照来源.json",
+      "family_product_id": "1601974857344"
     },
     {
       "style": "028",
@@ -663,14 +665,20 @@
         "27256"
       ],
       "source_collection": "COLLECTED",
-      "image_cache": "CONTACT_SHEET_ONLY_NOT_PUBLISHABLE",
-      "publication_state": "CURRENT_SOURCE_AND_ROLE_PLAN_NO_CREATE",
-      "title_quality": "LOCAL_SOURCE_BOUND_DRAFT_NO_FORMAL_ID",
-      "image_quality": "ROLE_PLAN_NO_GENERATED_IMAGES",
+      "image_cache": "CURRENT_SOURCE_AND_FINAL_ASSETS",
+      "publication_state": "CREATED_APPROVED_Y",
+      "title_quality": "LOCAL_REVIEW_PASS_FORMAL_MATCH",
+      "image_quality": "BUYER_ROLE_REVIEW_PASS",
       "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
       "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
       "EU_combinations": 20,
-      "current_source_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2585准备/商品预检与图组策略.json"
+      "current_source_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2585准备/商品预检与图组策略.json",
+      "product_id": "1601974857344",
+      "image_apply_scope": "PASS_COMPLETE_IMAGE_SCHEMA",
+      "actual_score": "5.00",
+      "effective_attribute_status": "PASS_EFFECTIVE_CUSTOM_TEXT",
+      "current_platform_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2585准备/发布后字段核验.json",
+      "score_status": "PASS_SCORE_GATE"
     },
     {
       "style": "021",
@@ -679,12 +687,19 @@
         "27256"
       ],
       "source_collection": "COLLECTED",
-      "image_cache": "CONTACT_SHEET_ONLY_NOT_PUBLISHABLE",
-      "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
-      "title_quality": "PENDING",
-      "image_quality": "PENDING",
+      "image_cache": "CURRENT_SOURCE_AND_FINAL_ASSETS",
+      "publication_state": "CREATED_NEW_N",
+      "title_quality": "LOCAL_REVIEW_PASS_FORMAL_MATCH",
+      "image_quality": "BUYER_ROLE_REVIEW_PASS",
       "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
-      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+      "product_id": "1601974859471",
+      "EU_combinations": 30,
+      "image_apply_scope": "PENDING_APPROVAL_FULL_SCHEMA",
+      "actual_score": null,
+      "effective_attribute_status": "PASS_EFFECTIVE_CUSTOM_TEXT",
+      "score_status": "PENDING_APPROVAL_SCORE",
+      "current_platform_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/021准备/发布后字段核验.json"
     },
     {
       "style": "2571",
@@ -718,11 +733,13 @@
       ],
       "source_collection": "COLLECTED",
       "image_cache": "CONTACT_SHEET_ONLY_NOT_PUBLISHABLE",
-      "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
-      "title_quality": "PENDING",
-      "image_quality": "PENDING",
+      "publication_state": "CURRENT_SOURCE_AND_ROLE_PLAN_NO_CREATE",
+      "title_quality": "LOCAL_SOURCE_BOUND_DRAFT_NO_FORMAL_ID",
+      "image_quality": "ROLE_PLAN_NO_GENERATED_IMAGES",
       "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
-      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+      "EU_combinations": 24,
+      "current_source_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2578准备/商品预检与图组策略.json"
     },
     {
       "style": "023",
@@ -1760,7 +1777,17 @@
       "title_quality": "PENDING",
       "image_quality": "PENDING",
       "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
-      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+      "source_family_review": {
+        "status": "SAME_COVER_PHYSICAL_PAIR_RECONCILIATION_REQUIRED",
+        "candidate_family": [
+          "1712",
+          "K502",
+          "K502D"
+        ],
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/021准备/来源款式近似候选.json",
+        "next_action": "Compare current exactsourcephotos/material/color choices and adopt one family if same physicalstyle; no separatecreate until compared."
+      }
     },
     {
       "style": "K502",
@@ -1774,7 +1801,17 @@
       "title_quality": "PENDING",
       "image_quality": "PENDING",
       "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
-      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+      "source_family_review": {
+        "status": "SAME_COVER_PHYSICAL_PAIR_RECONCILIATION_REQUIRED",
+        "candidate_family": [
+          "1712",
+          "K502",
+          "K502D"
+        ],
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/021准备/来源款式近似候选.json",
+        "next_action": "Compare current exactsourcephotos/material/color choices and adopt one family if same physicalstyle; no separatecreate until compared."
+      }
     },
     {
       "style": "1712",
@@ -1788,7 +1825,17 @@
       "title_quality": "PENDING",
       "image_quality": "PENDING",
       "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
-      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+      "source_family_review": {
+        "status": "SAME_COVER_PHYSICAL_PAIR_RECONCILIATION_REQUIRED",
+        "candidate_family": [
+          "1712",
+          "K502",
+          "K502D"
+        ],
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/021准备/来源款式近似候选.json",
+        "next_action": "Compare current exactsourcephotos/material/color choices and adopt one family if same physicalstyle; no separatecreate until compared."
+      }
     },
     {
       "style": "1026",

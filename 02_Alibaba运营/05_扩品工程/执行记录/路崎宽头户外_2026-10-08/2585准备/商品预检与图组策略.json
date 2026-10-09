@@ -4,7 +4,7 @@
   "source_model": "2585",
   "observed_at": "2026-10-09T12:18:22.545964+00:00",
   "source_price_cny": "59.00",
-  "status": "SOURCE_AND_ROLE_PLAN_READY_NO_CREATE_NO_IMAGES_GENERATED",
+  "status": "API_FIELDS_SCORE_PASS",
   "current_source_evidence": [
     "当前公开来源HTML.html",
     "当前来源文本.txt",
@@ -59,7 +59,7 @@
   "source_family_disposition": {
     "2585-1": "MERGED_SOURCE_FAMILY_2585_NO_EXTRA_CREATE"
   },
-  "image_status": "ROLE_PLAN_ONLY; raw contact sheets not upload-ready",
+  "image_status": "BUYER_ROLE_REVIEW_PASS",
   "proposed_roles": {
     "M1": [
       1
@@ -84,7 +84,7 @@
       9
     ],
     "D3": [
-      11
+      13
     ],
     "D4": [
       19
@@ -104,11 +104,34 @@
     "Source11 preserve actual bent shoe pose; no quantified flexibility/lightweight/fatigue claim",
     "Every edit target must be fully viewed before edit; role plan is not final image acceptance"
   ],
-  "remaining": [
-    "Full source-role review",
-    "11 product image edits and visual comparison, plus existing verified factory and company assets",
-    "Current own-category Schema and source/identity dedup gate",
-    "Formal create manifest and single-create ledger",
-    "Current full API readback and actualscore; browser exceptions/batch samples only"
-  ]
+  "remaining": [],
+  "confirmed_EU_by_color": {
+    "Black Mesh": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ],
+    "Black Fleece": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ]
+  },
+  "keywords": "wide toe box black sneakers; lace up walking shoes; synthetic leather casual shoes; mesh lining; fleece lined footwear; wholesale shoe size assortments",
+  "product_id": "1601974857344",
+  "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
 }

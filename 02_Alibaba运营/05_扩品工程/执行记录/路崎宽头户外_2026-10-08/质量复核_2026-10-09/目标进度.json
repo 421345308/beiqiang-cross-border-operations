@@ -1,8 +1,8 @@
 {
-  "observed_at": "2026-10-09T12:18:19.602159+00:00",
+  "observed_at": "2026-10-09T13:35:51.211995+00:00",
   "source_urls": 107,
-  "created_products": 33,
-  "formal_EU_combinations": 1041,
+  "created_products": 35,
+  "formal_EU_combinations": 1091,
   "approved_before_quality_revision": 26,
   "actual_score_5_before_quality_revision": 26,
   "scope_status": "ACTIVE_NOT_COMPLETE",
@@ -16,7 +16,7 @@
     "Do not count source URLs as distinct publishable styles",
     "Do not replay existing or outcome-unknown creates"
   ],
-  "next_work": "29 exact-ID brand repairs approved/Y, current Schema text and actual5.00 diagnostics clear, other fields protected; do not replay. Continue2585 current source20 photos, two black lining variants EU39-48; 2585-1 is same photo/lining family, do not duplicate create; finish source-bound distinct title/image pack.027 side-pattern comparison unresolved, no publication or paid edits yet. API full fields; browser exceptions and batch samples only.107 source task active; hiking2509/02505 category holds remain local.",
+  "next_work": "021已单次创建，保持原ID只读核当前审核、Schema和实际评分；2585/2585-1已合并同款来源。继续2578真实来源、标题和图组；1712/K502/K502D同封面需比较规格并去重后发布。027侧面图案、2509/02505类目问题局部处理。107来源目标ACTIVE，API全量验收，浏览器仅异常与抽检。",
   "revision_readbacks": 26,
   "revision_scope_pass": 26,
   "revision_pending_review": 0,
@@ -71,9 +71,27 @@
       "display": "Y",
       "sku_count": 46,
       "score": "5.00"
+    },
+    "2585": {
+      "product_id": "1601974857344",
+      "status": "approved",
+      "display": "Y",
+      "sku_count": 20,
+      "score": "5.00",
+      "score_status": "PASS_SCORE_GATE",
+      "observed_at": "2026-10-09T13:28:02.630824+00:00"
+    },
+    "021": {
+      "product_id": "1601974859471",
+      "status": "new",
+      "display": "N",
+      "sku_count": 30,
+      "score": null,
+      "score_status": null,
+      "observed_at": "2026-10-09T13:34:14.063532+00:00"
     }
   },
-  "current_approved_displayed": 33,
+  "current_approved_displayed": 34,
   "complete_image_readback_pass_styles": [
     "058",
     "2633",
@@ -107,7 +125,8 @@
     "25021",
     "2510",
     "02508",
-    "02507"
+    "02507",
+    "2585"
   ],
   "pending_image_readback_styles": [],
   "latest_title_refinement": {
@@ -119,7 +138,9 @@
     "observed_at": "2026-10-08T23:07:23.578830+00:00"
   },
   "browser_acceptance": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
-  "pending_new_approval_styles": [],
+  "pending_new_approval_styles": [
+    "021"
+  ],
   "public_QA_pass_styles": [
     "2619",
     "028",
@@ -227,12 +248,21 @@
     "2633"
   ],
   "candidate2585": {
-    "status": "SOURCE_AND_ROLE_PLAN_READY_NO_CREATE_NO_IMAGES_GENERATED",
-    "source": "https://luqi.sooxie.com/detail/2364385",
+    "status": "API_FIELDS_SCORE_PASS",
+    "product_id": "1601974857344",
     "EU_combinations": 20,
-    "source_images": 20,
-    "title_bytes": 106,
-    "deduplicated_alias": "2585-1",
-    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2585准备/商品预检与图组策略.json"
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2585准备/发布后字段核验.json"
+  },
+  "candidate021": {
+    "status": "CREATED_PENDING_APPROVAL_FULL_ACCEPTANCE",
+    "product_id": "1601974859471",
+    "EU_combinations": 30,
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/021准备/发布后字段核验.json"
+  },
+  "candidate2578": {
+    "status": "CURRENT_SOURCE_AND_ROLE_PLAN_NO_CREATE",
+    "source": "https://luqi.sooxie.com/detail/2361658",
+    "EU_combinations": 24,
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2578准备/商品预检与图组策略.json"
   }
 }
