@@ -1,0 +1,214 @@
+{
+  "keyword_input": null,
+  "differentiation_review": null,
+  "category_id": 201334413,
+  "operation": "update",
+  "inventory_input": null,
+  "model_serialization": {
+    "field_id": "p-3",
+    "field_type": "input",
+    "expected_model": "BQ-LQ02601",
+    "value_text": "-2",
+    "value_attributes": {
+      "inputValue": "BQ-LQ02601"
+    }
+  },
+  "target_product_id": "1601973814505",
+  "field_ids": [
+    "icbuCatProp"
+  ],
+  "dependency_ids": [],
+  "xml": "<itemSchema><field id=\"icbuCatProp\" name=\"Product feature\" type=\"complex\"><complex-value><field id=\"p-191290430\" name=\"Lining Material\" type=\"multiCheck\"><values><value inputValue=\"Not specified\">-5</value></values></field><field id=\"p-1\" name=\"Place of Origin\" type=\"singleCheck\"><value inputValue=\"Not specified\">-1</value></field><field id=\"p-20700\" name=\"Midsole Material\" type=\"multiCheck\"><values><value inputValue=\"Not specified\">-3</value></values></field><field id=\"p-191290426\" name=\"Outsole Material\" type=\"multiCheck\"><values><value inputValue=\"Not specified\">-4</value></values></field><field id=\"p-2\" type=\"input\"><value inputValue=\"Beiqiang\">-2</value></field><field id=\"p-3\" name=\"Model Number\" type=\"input\"><value inputValue=\"BQ-LQ02601\">-2</value></field></complex-value></field></itemSchema>",
+  "expected_fields": {
+    "icbuCatProp": [
+      "field",
+      [
+        [
+          "id",
+          "icbuCatProp"
+        ]
+      ],
+      "",
+      [
+        [
+          "complex-value",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "p-191290430"
+                ]
+              ],
+              "",
+              [
+                [
+                  "values",
+                  [],
+                  "",
+                  [
+                    [
+                      "value",
+                      [
+                        [
+                          "inputValue",
+                          "Not specified"
+                        ]
+                      ],
+                      "-5",
+                      []
+                    ]
+                  ]
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "p-1"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [
+                    [
+                      "inputValue",
+                      "Not specified"
+                    ]
+                  ],
+                  "-1",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "p-20700"
+                ]
+              ],
+              "",
+              [
+                [
+                  "values",
+                  [],
+                  "",
+                  [
+                    [
+                      "value",
+                      [
+                        [
+                          "inputValue",
+                          "Not specified"
+                        ]
+                      ],
+                      "-3",
+                      []
+                    ]
+                  ]
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "p-191290426"
+                ]
+              ],
+              "",
+              [
+                [
+                  "values",
+                  [],
+                  "",
+                  [
+                    [
+                      "value",
+                      [
+                        [
+                          "inputValue",
+                          "Not specified"
+                        ]
+                      ],
+                      "-4",
+                      []
+                    ]
+                  ]
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "p-2"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [
+                    [
+                      "inputValue",
+                      "Beiqiang"
+                    ]
+                  ],
+                  "-2",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "p-3"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [
+                    [
+                      "inputValue",
+                      "BQ-LQ02601"
+                    ]
+                  ],
+                  "__typed_model_marker__",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "prepared_from_current_schema": true,
+  "task_pack": null,
+  "replacement_plan": null,
+  "schema_provenance": {
+    "schema_request_id": "0bbb3b2417915465407044042",
+    "schema_acquired_at": "2026-10-09T11:48:59.813668+00:00",
+    "current_schema_sha256": "9593c7b92343ae17596b1ab67d8997345b5e37cbfd1c4b940b84f083f0a347eb",
+    "source_evidence": [
+      "修正依据.md",
+      "修正前正式商品.json"
+    ]
+  }
+}

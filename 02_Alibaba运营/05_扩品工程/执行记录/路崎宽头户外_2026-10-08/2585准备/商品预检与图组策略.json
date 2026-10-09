@@ -1,0 +1,114 @@
+{
+  "style": "2585",
+  "source": "https://luqi.sooxie.com/detail/2364385",
+  "source_model": "2585",
+  "observed_at": "2026-10-09T12:18:22.545964+00:00",
+  "source_price_cny": "59.00",
+  "status": "SOURCE_AND_ROLE_PLAN_READY_NO_CREATE_NO_IMAGES_GENERATED",
+  "current_source_evidence": [
+    "当前公开来源HTML.html",
+    "当前来源文本.txt",
+    "01_产品来源原图/当前来源图像索引.json"
+  ],
+  "source_sha256": "12ff05260b51d6493beb2cfb45f073313bc6c531f0c8b3329d415ca671bbaecb",
+  "confirmed_EU_by_variant": {
+    "Black Mesh": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ],
+    "Black Fleece": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ]
+  },
+  "EU_combinations": 20,
+  "variant_identity": "Both black; distinguish current source黑色mesh lining versus黑色加绒fleece lining. Do not imply a second exterior color. All numeric sizes EU per owner.",
+  "materials": {
+    "upper": "Synthetic leather: actual full source13合成革",
+    "sole": "Current source13 explicitlyTPR+MD; request current category mapping, preserve custom MD midsole spelling; do not inferEVA",
+    "lining": "Mesh/fleece variants explicitlysource12 and13; fleece fibre composition unknown, no genuine wool claim"
+  },
+  "gender": "Not explicitly established in current source table; no gender attribute copied from previous styles",
+  "title": "Wide Toe Box Black Lace Up Walking Sneakers Synthetic Leather Mesh or Fleece Lining Casual Shoes Wholesale",
+  "title_bytes": 106,
+  "buyer_search_volume": "Unknown; title uses factual buyer descriptors, no measured demand claim",
+  "wide_evidence": "Owner confirmed exact category27256, source title宽头 and source13宽脚鞋",
+  "identity_notes": "Black low-top lace-up, stitched toe overlay, broad wave side panels, rear pull tab and thick black tiered sole. Ordinary mesh lining and fleece lining share exterior. Source2585-1 primary is the same fleece pair/photo scene as this source20; duplicate source family, do not create two links for a lining variant. Preserve both real procurement URLs internally.",
+  "family_evidence": [
+    "2585-1_当前来源文本.txt",
+    "2585-1_当前封面.jpg",
+    "2585-1_封面对照来源.json",
+    "01_产品来源原图/20.jpg"
+  ],
+  "source_family_disposition": {
+    "2585-1": "MERGED_SOURCE_FAMILY_2585_NO_EXTRA_CREATE"
+  },
+  "image_status": "ROLE_PLAN_ONLY; raw contact sheets not upload-ready",
+  "proposed_roles": {
+    "M1": [
+      1
+    ],
+    "M2": [
+      15
+    ],
+    "M3": [
+      14
+    ],
+    "M4": [
+      12
+    ],
+    "M5": [
+      7
+    ],
+    "M6": "Verified actual Beiqiang company factory image only; no assertion this sourced SKU was photographed in own factory",
+    "D1": [
+      8
+    ],
+    "D2": [
+      9
+    ],
+    "D3": [
+      11
+    ],
+    "D4": [
+      19
+    ],
+    "SKU_Black Mesh": [
+      16
+    ],
+    "SKU_Black Fleece": [
+      20
+    ]
+  },
+  "image_exclusions": [
+    "Source02 blank: not used",
+    "Source03-06 width/medical/performance illustrations: not used",
+    "Source09 sole/top macro only after domestic assertions removed; no unseen reconstruction",
+    "Source12 omit wool composition, winter warmth performance and marketing header; factual lining choices only",
+    "Source11 preserve actual bent shoe pose; no quantified flexibility/lightweight/fatigue claim",
+    "Every edit target must be fully viewed before edit; role plan is not final image acceptance"
+  ],
+  "remaining": [
+    "Full source-role review",
+    "11 product image edits and visual comparison, plus existing verified factory and company assets",
+    "Current own-category Schema and source/identity dedup gate",
+    "Formal create manifest and single-create ledger",
+    "Current full API readback and actualscore; browser exceptions/batch samples only"
+  ]
+}

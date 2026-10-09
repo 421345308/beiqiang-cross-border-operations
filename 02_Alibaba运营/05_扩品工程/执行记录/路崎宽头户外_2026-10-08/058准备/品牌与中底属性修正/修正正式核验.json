@@ -1,0 +1,54 @@
+{
+  "style": "058",
+  "product_id": "1601973821133",
+  "observed_at": "2026-10-09T12:11:33.916790+00:00",
+  "status": "approved",
+  "display": "Y",
+  "scope_result": "PASS",
+  "brand": "Beiqiang",
+  "unsubmitted_product_fields_preserved": {
+    "gmt_create": true,
+    "keywords": true,
+    "owner_member_display_name": true,
+    "subject": true,
+    "main_image": true,
+    "struct_detail_product": true,
+    "language": true,
+    "is_smart_edit": true,
+    "product_sku": true,
+    "category_id": true,
+    "product_id": true,
+    "sub_market_type": true,
+    "struct_detail": true,
+    "pc_detail_url": true,
+    "rts": true,
+    "product_type": true,
+    "sourcing_trade": true,
+    "price_type": true,
+    "owner_member": true
+  },
+  "other_attributes_preserved": true,
+  "changed_product_fields": [
+    "attributes",
+    "gmt_modified"
+  ],
+  "source_get_request": "0bbb3b2417915478964396533",
+  "actual_score": "5.00",
+  "scope": "Only brand text; saved original ID, other attributes and every unsubmitted formal product field compared; no browser PASS inferred",
+  "schema_brand_match": true,
+  "score_source": "alibaba.icbu.product.score.get / 212cbf3217915479149376279",
+  "score_observed_at": "2026-10-09T12:11:52.394375+00:00",
+  "score_diagnostics": {
+    "flags": {},
+    "deductions": {},
+    "checks_not_run": [
+      "sku_image",
+      "sku_text",
+      "imageSubTitle",
+      "selling_point_attribute_conflict"
+    ],
+    "error_reasons": [],
+    "status": "clear"
+  },
+  "score_status": "PASS_SCORE_GATE"
+}

@@ -1,0 +1,987 @@
+{
+  "observed_at": "2026-10-09T12:18:19.602159+00:00",
+  "scope": "33 exact IDs; initial manifest frozen; original-ID brand write each once; approval and score separately verified",
+  "initial_manifest": "有效品牌与MD标签核验.json",
+  "rows": [
+    {
+      "style": "02507",
+      "product_id": "1601973978339",
+      "status": "PASS",
+      "brand": "Beiqiang",
+      "midsole": "Not specified",
+      "issues": [],
+      "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/02507准备/品牌与中底属性修正/修正正式核验.json",
+      "sha256": "c3c9c3e172851000a444b972cf0600fd2fff9a1baab99dcedc4b2ed84260d556",
+      "formal_gmt_modified": "2026-10-09 02:02:08",
+      "evidence_limit": "Current exact-ID formal get; after approved/Y, current Schema brand and actual score checked; no per-item public rendering inferred",
+      "platform_status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-09T12:10:45.005026+00:00",
+      "protected_fields": "ALL_PRESERVED",
+      "resolved_initial_issues": [
+        "BRAND_EFFECTIVE_TEXT_MISSING_OR_DIFFERENT"
+      ],
+      "actual_score": "5.00",
+      "score_diagnostics": {
+        "flags": {},
+        "deductions": {},
+        "checks_not_run": [
+          "sku_image",
+          "sku_text",
+          "imageSubTitle",
+          "selling_point_attribute_conflict"
+        ],
+        "error_reasons": [],
+        "status": "clear"
+      }
+    },
+    {
+      "style": "02508",
+      "product_id": "1601973995230",
+      "status": "PASS",
+      "brand": "Beiqiang",
+      "midsole": "Not specified",
+      "issues": [],
+      "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/02508准备/品牌与中底属性修正/修正正式核验.json",
+      "sha256": "697b07a2a040f2965185b546f2204662234dbf905ef2b4cd5ec46a23cf4cb720",
+      "formal_gmt_modified": "2026-10-09 01:38:13",
+      "evidence_limit": "Current exact-ID formal get; after approved/Y, current Schema brand and actual score checked; no per-item public rendering inferred",
+      "platform_status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-09T12:10:44.999273+00:00",
+      "protected_fields": "ALL_PRESERVED",
+      "resolved_initial_issues": [
+        "BRAND_EFFECTIVE_TEXT_MISSING_OR_DIFFERENT"
+      ],
+      "actual_score": "5.00",
+      "score_diagnostics": {
+        "flags": {},
+        "deductions": {},
+        "checks_not_run": [
+          "sku_image",
+          "sku_text",
+          "imageSubTitle",
+          "selling_point_attribute_conflict"
+        ],
+        "error_reasons": [],
+        "status": "clear"
+      }
+    },
+    {
+      "style": "02601",
+      "product_id": "1601973814505",
+      "status": "PASS",
+      "brand": "Beiqiang",
+      "midsole": "Not specified",
+      "issues": [],
+      "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/02601准备/品牌与中底属性修正/修正正式核验.json",
+      "sha256": "d025a7a64dbef0c24025182cd291f00beffeb120f9037f568cb8fafa147db995",
+      "formal_gmt_modified": "2026-10-09 09:48:34",
+      "evidence_limit": "Current exact-ID formal get; after approved/Y, current Schema brand and actual score checked; no per-item public rendering inferred",
+      "platform_status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-09T12:10:44.997115+00:00",
+      "protected_fields": "ALL_PRESERVED",
+      "resolved_initial_issues": [
+        "BRAND_EFFECTIVE_TEXT_MISSING_OR_DIFFERENT"
+      ],
+      "actual_score": "5.00",
+      "score_diagnostics": {
+        "flags": {},
+        "deductions": {},
+        "checks_not_run": [
+          "sku_image",
+          "sku_text",
+          "imageSubTitle",
+          "selling_point_attribute_conflict"
+        ],
+        "error_reasons": [],
+        "status": "clear"
+      }
+    },
+    {
+      "style": "02602",
+      "product_id": "1601973869140",
+      "status": "PASS",
+      "brand": "Beiqiang",
+      "midsole": "Not specified",
+      "issues": [],
+      "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/02602准备/品牌与中底属性修正/修正正式核验.json",
+      "sha256": "15b5cd1b8beb06d27df67ffd17806dc611b1b3d5d9e3469c5ca93baf951b2e7b",
+      "formal_gmt_modified": "2026-10-09 09:07:16",
+      "evidence_limit": "Current exact-ID formal get; after approved/Y, current Schema brand and actual score checked; no per-item public rendering inferred",
+      "platform_status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-09T12:10:44.991975+00:00",
+      "protected_fields": "ALL_PRESERVED",
+      "resolved_initial_issues": [
+        "BRAND_EFFECTIVE_TEXT_MISSING_OR_DIFFERENT"
+      ],
+      "actual_score": "5.00",
+      "score_diagnostics": {
+        "flags": {},
+        "deductions": {},
+        "checks_not_run": [
+          "sku_image",
+          "sku_text",
+          "imageSubTitle",
+          "selling_point_attribute_conflict"
+        ],
+        "error_reasons": [],
+        "status": "clear"
+      }
+    },
+    {
+      "style": "02603",
+      "product_id": "1601973784646",
+      "status": "PASS",
+      "brand": "Beiqiang",
+      "midsole": "Not specified",
+      "issues": [],
+      "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/02603准备/品牌与中底属性修正/修正正式核验.json",
+      "sha256": "af7659b3cae65f4a0d54a42cce663336c1ba998bc8a5ce7389049c66ebca5783",
+      "formal_gmt_modified": "2026-10-09 08:50:57",
+      "evidence_limit": "Current exact-ID formal get; after approved/Y, current Schema brand and actual score checked; no per-item public rendering inferred",
+      "platform_status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-09T12:11:09.205677+00:00",
+      "protected_fields": "ALL_PRESERVED",
+      "resolved_initial_issues": [
+        "BRAND_EFFECTIVE_TEXT_MISSING_OR_DIFFERENT"
+      ],
+      "actual_score": "5.00",
+      "score_diagnostics": {
+        "flags": {},
+        "deductions": {},
+        "checks_not_run": [
+          "sku_image",
+          "sku_text",
+          "imageSubTitle",
+          "selling_point_attribute_conflict"
+        ],
+        "error_reasons": [],
+        "status": "clear"
+      }
+    },
+    {
+      "style": "028",
+      "product_id": "1601974617075",
+      "status": "PASS_EFFECTIVE_BRAND_AND_KNOWN_MD_LABEL",
+      "brand": "Beiqiang",
+      "midsole": "Not specified",
+      "issues": [],
+      "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/028准备/最新正式回读.json",
+      "sha256": "645b66f0684ebb3a2017edcf5f270778fb1f86eef89b8ecef9ec43bece7ba7f0",
+      "formal_gmt_modified": "2026-10-09 18:19:39",
+      "evidence_limit": "Saved formal snapshot, not a fresh API read or public-language rendering; re-read current exact target before repair"
+    },
+    {
+      "style": "032",
+      "product_id": "1601973736928",
+      "status": "PASS",
+      "brand": "Beiqiang",
+      "midsole": "Not specified",
+      "issues": [],
+      "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/032准备/品牌与中底属性修正/修正正式核验.json",
+      "sha256": "a00a28af83210231f7ef92016c6f46c523f990f8047e0f001c9c38b8336a98ff",
+      "formal_gmt_modified": "2026-10-09 08:05:54",
+      "evidence_limit": "Current exact-ID formal get; after approved/Y, current Schema brand and actual score checked; no per-item public rendering inferred",
+      "platform_status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-09T12:11:09.372270+00:00",
+      "protected_fields": "ALL_PRESERVED",
+      "resolved_initial_issues": [
+        "BRAND_EFFECTIVE_TEXT_MISSING_OR_DIFFERENT"
+      ],
+      "actual_score": "5.00",
+      "score_diagnostics": {
+        "flags": {},
+        "deductions": {},
+        "checks_not_run": [
+          "sku_image",
+          "sku_text",
+          "imageSubTitle",
+          "selling_point_attribute_conflict"
+        ],
+        "error_reasons": [],
+        "status": "clear"
+      }
+    },
+    {
+      "style": "033",
+      "product_id": "1601973792546",
+      "status": "PASS",
+      "brand": "Beiqiang",
+      "midsole": "Not specified",
+      "issues": [],
+      "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/033准备/品牌与中底属性修正/修正正式核验.json",
+      "sha256": "59a1f5d9b6dacb4bb0111307f9d38d84cd18e1bf7a7f9a7e67f029e1123d6fe8",
+      "formal_gmt_modified": "2026-10-09 06:41:20",
+      "evidence_limit": "Current exact-ID formal get; after approved/Y, current Schema brand and actual score checked; no per-item public rendering inferred",
+      "platform_status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-09T12:11:09.631955+00:00",
+      "protected_fields": "ALL_PRESERVED",
+      "resolved_initial_issues": [
+        "BRAND_EFFECTIVE_TEXT_MISSING_OR_DIFFERENT"
+      ],
+      "actual_score": "5.00",
+      "score_diagnostics": {
+        "flags": {},
+        "deductions": {},
+        "checks_not_run": [
+          "sku_image",
+          "sku_text",
+          "imageSubTitle",
+          "selling_point_attribute_conflict"
+        ],
+        "error_reasons": [],
+        "status": "clear"
+      }
+    },
+    {
+      "style": "050",
+      "product_id": "1601973794508",
+      "status": "PASS",
+      "brand": "Beiqiang",
+      "midsole": "Not specified",
+      "issues": [],
+      "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/050准备/品牌与中底属性修正/修正正式核验.json",
+      "sha256": "11d16bdd492bcd08d13f8313a33e6b64816370c62adc20068d16404cfa563688",
+      "formal_gmt_modified": "2026-10-09 06:16:02",
+      "evidence_limit": "Current exact-ID formal get; after approved/Y, current Schema brand and actual score checked; no per-item public rendering inferred",
+      "platform_status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-09T12:11:09.857015+00:00",
+      "protected_fields": "ALL_PRESERVED",
+      "resolved_initial_issues": [
+        "BRAND_EFFECTIVE_TEXT_MISSING_OR_DIFFERENT"
+      ],
+      "actual_score": "5.00",
+      "score_diagnostics": {
+        "flags": {},
+        "deductions": {},
+        "checks_not_run": [
+          "sku_image",
+          "sku_text",
+          "imageSubTitle",
+          "selling_point_attribute_conflict"
+        ],
+        "error_reasons": [],
+        "status": "clear"
+      }
+    },
+    {
+      "style": "053",
+      "product_id": "1601973846232",
+      "status": "PASS",
+      "brand": "Beiqiang",
+      "midsole": "Not specified",
+      "issues": [],
+      "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/053准备/品牌与中底属性修正/修正正式核验.json",
+      "sha256": "1251ea9f381b42e6568e11353b5d891c9ca4325c8f2f9675e78fb2afa786b820",
+      "formal_gmt_modified": "2026-10-09 05:49:27",
+      "evidence_limit": "Current exact-ID formal get; after approved/Y, current Schema brand and actual score checked; no per-item public rendering inferred",
+      "platform_status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-09T12:11:33.529577+00:00",
+      "protected_fields": "ALL_PRESERVED",
+      "resolved_initial_issues": [
+        "BRAND_EFFECTIVE_TEXT_MISSING_OR_DIFFERENT"
+      ],
+      "actual_score": "5.00",
+      "score_diagnostics": {
+        "flags": {},
+        "deductions": {},
+        "checks_not_run": [
+          "sku_image",
+          "sku_text",
+          "imageSubTitle",
+          "selling_point_attribute_conflict"
+        ],
+        "error_reasons": [],
+        "status": "clear"
+      }
+    },
+    {
+      "style": "055",
+      "product_id": "1601973841032",
+      "status": "PASS",
+      "brand": "Beiqiang",
+      "midsole": "Not specified",
+      "issues": [],
+      "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/055准备/品牌与中底属性修正/修正正式核验.json",
+      "sha256": "5e01e13cf0c4fc7bef101e90684eef0611d9e4ec0b97e36b7f9e3915f1755727",
+      "formal_gmt_modified": "2026-10-09 02:43:06",
+      "evidence_limit": "Current exact-ID formal get; after approved/Y, current Schema brand and actual score checked; no per-item public rendering inferred",
+      "platform_status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-09T12:11:33.722045+00:00",
+      "protected_fields": "ALL_PRESERVED",
+      "resolved_initial_issues": [
+        "BRAND_EFFECTIVE_TEXT_MISSING_OR_DIFFERENT"
+      ],
+      "actual_score": "5.00",
+      "score_diagnostics": {
+        "flags": {},
+        "deductions": {},
+        "checks_not_run": [
+          "sku_image",
+          "sku_text",
+          "imageSubTitle",
+          "selling_point_attribute_conflict"
+        ],
+        "error_reasons": [],
+        "status": "clear"
+      }
+    },
+    {
+      "style": "058",
+      "product_id": "1601973821133",
+      "status": "PASS",
+      "brand": "Beiqiang",
+      "midsole": "Not specified",
+      "issues": [],
+      "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/058准备/品牌与中底属性修正/修正正式核验.json",
+      "sha256": "6cf4322e1fd5f9e635ea734fc744d1e56c70be50baa6674803987cc5c0fa6991",
+      "formal_gmt_modified": "2026-10-09 02:20:15",
+      "evidence_limit": "Current exact-ID formal get; after approved/Y, current Schema brand and actual score checked; no per-item public rendering inferred",
+      "platform_status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-09T12:11:33.916790+00:00",
+      "protected_fields": "ALL_PRESERVED",
+      "resolved_initial_issues": [
+        "BRAND_EFFECTIVE_TEXT_MISSING_OR_DIFFERENT"
+      ],
+      "actual_score": "5.00",
+      "score_diagnostics": {
+        "flags": {},
+        "deductions": {},
+        "checks_not_run": [
+          "sku_image",
+          "sku_text",
+          "imageSubTitle",
+          "selling_point_attribute_conflict"
+        ],
+        "error_reasons": [],
+        "status": "clear"
+      }
+    },
+    {
+      "style": "1212",
+      "product_id": "1601973808453",
+      "status": "PASS",
+      "brand": "Beiqiang",
+      "midsole": "Not specified",
+      "issues": [],
+      "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1212准备/品牌与中底属性修正/修正正式核验.json",
+      "sha256": "c1f102b0b0c9c8b0d7379fef25d045afc0e8748a554baded06427b2b240d99aa",
+      "formal_gmt_modified": "2026-10-09 07:15:31",
+      "evidence_limit": "Current exact-ID formal get; after approved/Y, current Schema brand and actual score checked; no per-item public rendering inferred",
+      "platform_status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-09T12:11:36.298458+00:00",
+      "protected_fields": "ALL_PRESERVED",
+      "resolved_initial_issues": [
+        "BRAND_EFFECTIVE_TEXT_MISSING_OR_DIFFERENT"
+      ],
+      "actual_score": "5.00",
+      "score_diagnostics": {
+        "flags": {},
+        "deductions": {},
+        "checks_not_run": [
+          "sku_image",
+          "sku_text",
+          "imageSubTitle",
+          "selling_point_attribute_conflict"
+        ],
+        "error_reasons": [],
+        "status": "clear"
+      }
+    },
+    {
+      "style": "213",
+      "product_id": "1601973876011",
+      "status": "PASS",
+      "brand": "Beiqiang",
+      "midsole": "Not specified",
+      "issues": [],
+      "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/213准备/品牌与中底属性修正/修正正式核验.json",
+      "sha256": "b46843eee1b88a36b218112021ab39956f13271689c2c86896aeee19431983e8",
+      "formal_gmt_modified": "2026-10-09 04:50:38",
+      "evidence_limit": "Current exact-ID formal get; after approved/Y, current Schema brand and actual score checked; no per-item public rendering inferred",
+      "platform_status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-09T12:11:58.237763+00:00",
+      "protected_fields": "ALL_PRESERVED",
+      "resolved_initial_issues": [
+        "BRAND_EFFECTIVE_TEXT_MISSING_OR_DIFFERENT"
+      ],
+      "actual_score": "5.00",
+      "score_diagnostics": {
+        "flags": {},
+        "deductions": {},
+        "checks_not_run": [
+          "sku_image",
+          "sku_text",
+          "imageSubTitle",
+          "selling_point_attribute_conflict"
+        ],
+        "error_reasons": [],
+        "status": "clear"
+      }
+    },
+    {
+      "style": "25012",
+      "product_id": "1601973838360",
+      "status": "PASS",
+      "brand": "Beiqiang",
+      "midsole": "Not specified",
+      "issues": [],
+      "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/25012准备/品牌与中底属性修正/修正正式核验.json",
+      "sha256": "2d3f87de410a88bc40afb54c24191f54c36f0d5414800ecf24fa44176f3cc8b0",
+      "formal_gmt_modified": "2026-10-09 08:27:24",
+      "evidence_limit": "Current exact-ID formal get; after approved/Y, current Schema brand and actual score checked; no per-item public rendering inferred",
+      "platform_status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-09T12:11:58.238836+00:00",
+      "protected_fields": "ALL_PRESERVED",
+      "resolved_initial_issues": [
+        "BRAND_EFFECTIVE_TEXT_MISSING_OR_DIFFERENT"
+      ],
+      "actual_score": "5.00",
+      "score_diagnostics": {
+        "flags": {},
+        "deductions": {},
+        "checks_not_run": [
+          "sku_image",
+          "sku_text",
+          "imageSubTitle",
+          "selling_point_attribute_conflict"
+        ],
+        "error_reasons": [],
+        "status": "clear"
+      }
+    },
+    {
+      "style": "25016",
+      "product_id": "1601973730776",
+      "status": "PASS",
+      "brand": "Beiqiang",
+      "midsole": "Not specified",
+      "issues": [],
+      "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/25016准备/品牌与中底属性修正/修正正式核验.json",
+      "sha256": "1293442cf26610040922502a729b014dcdf92ca189a60d14c87f585e41b68c57",
+      "formal_gmt_modified": "2026-10-09 04:02:17",
+      "evidence_limit": "Current exact-ID formal get; after approved/Y, current Schema brand and actual score checked; no per-item public rendering inferred",
+      "platform_status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-09T12:11:58.237233+00:00",
+      "protected_fields": "ALL_PRESERVED",
+      "resolved_initial_issues": [
+        "BRAND_EFFECTIVE_TEXT_MISSING_OR_DIFFERENT"
+      ],
+      "actual_score": "5.00",
+      "score_diagnostics": {
+        "flags": {},
+        "deductions": {},
+        "checks_not_run": [
+          "sku_image",
+          "sku_text",
+          "imageSubTitle",
+          "selling_point_attribute_conflict"
+        ],
+        "error_reasons": [],
+        "status": "clear"
+      }
+    },
+    {
+      "style": "25017",
+      "product_id": "1601973850058",
+      "status": "PASS",
+      "brand": "Beiqiang",
+      "midsole": "Not specified",
+      "issues": [],
+      "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/25017准备/品牌与中底属性修正/修正正式核验.json",
+      "sha256": "f517e1e6d4c500e0351eb3d31dcad2b2d205f8567cf052a0b5aa00d24e30ab7e",
+      "formal_gmt_modified": "2026-10-09 03:42:18",
+      "evidence_limit": "Current exact-ID formal get; after approved/Y, current Schema brand and actual score checked; no per-item public rendering inferred",
+      "platform_status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-09T12:12:00.541348+00:00",
+      "protected_fields": "ALL_PRESERVED",
+      "resolved_initial_issues": [
+        "BRAND_EFFECTIVE_TEXT_MISSING_OR_DIFFERENT"
+      ],
+      "actual_score": "5.00",
+      "score_diagnostics": {
+        "flags": {},
+        "deductions": {},
+        "checks_not_run": [
+          "sku_image",
+          "sku_text",
+          "imageSubTitle",
+          "selling_point_attribute_conflict"
+        ],
+        "error_reasons": [],
+        "status": "clear"
+      }
+    },
+    {
+      "style": "25021",
+      "product_id": "1601973854304",
+      "status": "PASS",
+      "brand": "Beiqiang",
+      "midsole": "Not specified",
+      "issues": [],
+      "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/25021准备/品牌与中底属性修正/修正正式核验.json",
+      "sha256": "e74712dbed62f79abd705e68c185e8354e71a7c0eee755cf6662cf8a8f6bc879",
+      "formal_gmt_modified": "2026-10-09 12:30:30",
+      "evidence_limit": "Current exact-ID formal get; after approved/Y, current Schema brand and actual score checked; no per-item public rendering inferred",
+      "platform_status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-09T12:12:26.821633+00:00",
+      "protected_fields": "ALL_PRESERVED",
+      "resolved_initial_issues": [
+        "BRAND_EFFECTIVE_TEXT_MISSING_OR_DIFFERENT"
+      ],
+      "actual_score": "5.00",
+      "score_diagnostics": {
+        "flags": {},
+        "deductions": {},
+        "checks_not_run": [
+          "sku_image",
+          "sku_text",
+          "imageSubTitle",
+          "selling_point_attribute_conflict"
+        ],
+        "error_reasons": [],
+        "status": "clear"
+      }
+    },
+    {
+      "style": "2510",
+      "product_id": "1601973747919",
+      "status": "PASS",
+      "brand": "Beiqiang",
+      "midsole": "Not specified",
+      "issues": [],
+      "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2510准备/品牌与中底属性修正/修正正式核验.json",
+      "sha256": "2c79d79b3aa7ac1f25188a1b3b7b3112ac1e8c8d941b808a24f5706960948e64",
+      "formal_gmt_modified": "2026-10-09 12:45:03",
+      "evidence_limit": "Current exact-ID formal get; after approved/Y, current Schema brand and actual score checked; no per-item public rendering inferred",
+      "platform_status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-09T12:12:26.861205+00:00",
+      "protected_fields": "ALL_PRESERVED",
+      "resolved_initial_issues": [
+        "BRAND_EFFECTIVE_TEXT_MISSING_OR_DIFFERENT"
+      ],
+      "actual_score": "5.00",
+      "score_diagnostics": {
+        "flags": {},
+        "deductions": {},
+        "checks_not_run": [
+          "sku_image",
+          "sku_text",
+          "imageSubTitle",
+          "selling_point_attribute_conflict"
+        ],
+        "error_reasons": [],
+        "status": "clear"
+      }
+    },
+    {
+      "style": "2571",
+      "product_id": "1601974689145",
+      "status": "PASS_EFFECTIVE_BRAND_AND_KNOWN_MD_LABEL",
+      "brand": "Beiqiang",
+      "midsole": "MD midsole",
+      "issues": [],
+      "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2571准备/最新正式回读.json",
+      "sha256": "b59b2d633a6ab7ec2f277cc1d9d67296698df68a055ea0737e3a24d8f6c7cba0",
+      "formal_gmt_modified": "2026-10-09 18:19:46",
+      "evidence_limit": "Saved formal snapshot, not a fresh API read or public-language rendering; re-read current exact target before repair"
+    },
+    {
+      "style": "2572",
+      "product_id": "1601974755167",
+      "status": "PASS_EFFECTIVE_BRAND_AND_KNOWN_MD_LABEL",
+      "brand": "Beiqiang",
+      "midsole": "Not specified",
+      "issues": [],
+      "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2572准备/最新正式回读.json",
+      "sha256": "a949bd3f513afd51e9eff31a92a680e2bee44b35d3ada7e131b0f9172bb242b9",
+      "formal_gmt_modified": "2026-10-09 17:59:36",
+      "evidence_limit": "Saved formal snapshot, not a fresh API read or public-language rendering; re-read current exact target before repair"
+    },
+    {
+      "style": "2573",
+      "product_id": "1601974740583",
+      "status": "PASS_EFFECTIVE_BRAND_AND_KNOWN_MD_LABEL",
+      "brand": "Beiqiang",
+      "midsole": "MD midsole",
+      "issues": [],
+      "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2573准备/最新正式回读.json",
+      "sha256": "a923f9d1e89fec5b58c64df8c011794075cbaced7cad91a36e340b9356fa1f75",
+      "formal_gmt_modified": "2026-10-09 18:52:25",
+      "evidence_limit": "Saved formal snapshot, not a fresh API read or public-language rendering; re-read current exact target before repair"
+    },
+    {
+      "style": "2588-1",
+      "product_id": "1601973772709",
+      "status": "PASS",
+      "brand": "Beiqiang",
+      "midsole": "Not specified",
+      "issues": [],
+      "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2588-1准备/品牌与中底属性修正/修正正式核验.json",
+      "sha256": "c75871d484487ed9d7be7e3998c088a7e919b621798f197d8e12888a1ce45f37",
+      "formal_gmt_modified": "2026-10-09 10:34:36",
+      "evidence_limit": "Current exact-ID formal get; after approved/Y, current Schema brand and actual score checked; no per-item public rendering inferred",
+      "platform_status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-09T12:12:26.856682+00:00",
+      "protected_fields": "ALL_PRESERVED",
+      "resolved_initial_issues": [
+        "BRAND_EFFECTIVE_TEXT_MISSING_OR_DIFFERENT"
+      ],
+      "actual_score": "5.00",
+      "score_diagnostics": {
+        "flags": {},
+        "deductions": {},
+        "checks_not_run": [
+          "sku_image",
+          "sku_text",
+          "imageSubTitle",
+          "selling_point_attribute_conflict"
+        ],
+        "error_reasons": [],
+        "status": "clear"
+      }
+    },
+    {
+      "style": "2596",
+      "product_id": "1601973842356",
+      "status": "PASS",
+      "brand": "Beiqiang",
+      "midsole": "Not specified",
+      "issues": [],
+      "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2596准备/品牌与中底属性修正/修正正式核验.json",
+      "sha256": "a50deb6f0c74dd4743759ce562e0f13cb22d916382d3b3bdf34394f8a90431b1",
+      "formal_gmt_modified": "2026-10-09 11:46:58",
+      "evidence_limit": "Current exact-ID formal get; after approved/Y, current Schema brand and actual score checked; no per-item public rendering inferred",
+      "platform_status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-09T12:12:27.048786+00:00",
+      "protected_fields": "ALL_PRESERVED",
+      "resolved_initial_issues": [
+        "BRAND_EFFECTIVE_TEXT_MISSING_OR_DIFFERENT"
+      ],
+      "actual_score": "5.00",
+      "score_diagnostics": {
+        "flags": {},
+        "deductions": {},
+        "checks_not_run": [
+          "sku_image",
+          "sku_text",
+          "imageSubTitle",
+          "selling_point_attribute_conflict"
+        ],
+        "error_reasons": [],
+        "status": "clear"
+      }
+    },
+    {
+      "style": "2597",
+      "product_id": "1601973797610",
+      "status": "PASS",
+      "brand": "Beiqiang",
+      "midsole": "Not specified",
+      "issues": [],
+      "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2597准备/品牌与中底属性修正/修正正式核验.json",
+      "sha256": "f8a1d13a7843d8c6c5067bfd4c53cf333620d0d4719526ad3b73bb7aa0986f99",
+      "formal_gmt_modified": "2026-10-09 11:19:07",
+      "evidence_limit": "Current exact-ID formal get; after approved/Y, current Schema brand and actual score checked; no per-item public rendering inferred",
+      "platform_status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-09T12:12:56.023227+00:00",
+      "protected_fields": "ALL_PRESERVED",
+      "resolved_initial_issues": [
+        "BRAND_EFFECTIVE_TEXT_MISSING_OR_DIFFERENT"
+      ],
+      "actual_score": "5.00",
+      "score_diagnostics": {
+        "flags": {},
+        "deductions": {},
+        "checks_not_run": [
+          "sku_image",
+          "sku_text",
+          "imageSubTitle",
+          "selling_point_attribute_conflict"
+        ],
+        "error_reasons": [],
+        "status": "clear"
+      }
+    },
+    {
+      "style": "2598",
+      "product_id": "1601973831465",
+      "status": "PASS",
+      "brand": "Beiqiang",
+      "midsole": "Not specified",
+      "issues": [],
+      "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2598准备/品牌与中底属性修正/修正正式核验.json",
+      "sha256": "09e0cf6e0ab5b41062492673bf4827553447a3c1d60b99fc84b93e49f5f7bfb9",
+      "formal_gmt_modified": "2026-10-09 10:06:37",
+      "evidence_limit": "Current exact-ID formal get; after approved/Y, current Schema brand and actual score checked; no per-item public rendering inferred",
+      "platform_status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-09T12:12:56.251269+00:00",
+      "protected_fields": "ALL_PRESERVED",
+      "resolved_initial_issues": [
+        "BRAND_EFFECTIVE_TEXT_MISSING_OR_DIFFERENT"
+      ],
+      "actual_score": "5.00",
+      "score_diagnostics": {
+        "flags": {},
+        "deductions": {},
+        "checks_not_run": [
+          "sku_image",
+          "sku_text",
+          "imageSubTitle",
+          "selling_point_attribute_conflict"
+        ],
+        "error_reasons": [],
+        "status": "clear"
+      }
+    },
+    {
+      "style": "2599-1",
+      "product_id": "1601973741932",
+      "status": "PASS",
+      "brand": "Beiqiang",
+      "midsole": "Not specified",
+      "issues": [],
+      "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2599-1准备/品牌与中底属性修正/修正正式核验.json",
+      "sha256": "33ba5d9454f258df95b80592cc2cbfa88b6a5f902ae9b56b1f8938b5819b04c8",
+      "formal_gmt_modified": "2026-10-09 07:39:08",
+      "evidence_limit": "Current exact-ID formal get; after approved/Y, current Schema brand and actual score checked; no per-item public rendering inferred",
+      "platform_status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-09T12:12:56.220393+00:00",
+      "protected_fields": "ALL_PRESERVED",
+      "resolved_initial_issues": [
+        "BRAND_EFFECTIVE_TEXT_MISSING_OR_DIFFERENT"
+      ],
+      "actual_score": "5.00",
+      "score_diagnostics": {
+        "flags": {},
+        "deductions": {},
+        "checks_not_run": [
+          "sku_image",
+          "sku_text",
+          "imageSubTitle",
+          "selling_point_attribute_conflict"
+        ],
+        "error_reasons": [],
+        "status": "clear"
+      }
+    },
+    {
+      "style": "2619",
+      "product_id": "1601974271772",
+      "status": "PASS",
+      "brand": "Beiqiang",
+      "midsole": "Not specified",
+      "issues": [],
+      "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2619准备/品牌与中底属性修正/修正正式核验.json",
+      "sha256": "40f03617db96b84d80e04c6bb7292501d5d54c736cd2591b73aa2e9e0fd19569",
+      "formal_gmt_modified": "2026-10-09 13:29:33",
+      "evidence_limit": "Current exact-ID formal get; after approved/Y, current Schema brand and actual score checked; no per-item public rendering inferred",
+      "platform_status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-09T12:12:56.291813+00:00",
+      "protected_fields": "ALL_PRESERVED",
+      "resolved_initial_issues": [
+        "BRAND_EFFECTIVE_TEXT_MISSING_OR_DIFFERENT"
+      ],
+      "actual_score": "5.00",
+      "score_diagnostics": {
+        "flags": {},
+        "deductions": {},
+        "checks_not_run": [
+          "sku_image",
+          "sku_text",
+          "imageSubTitle",
+          "selling_point_attribute_conflict"
+        ],
+        "error_reasons": [],
+        "status": "clear"
+      }
+    },
+    {
+      "style": "2623",
+      "product_id": "1601973806430",
+      "status": "PASS",
+      "brand": "Beiqiang",
+      "midsole": "Not specified",
+      "issues": [],
+      "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2623准备/品牌与中底属性修正/修正正式核验.json",
+      "sha256": "beb51d5d128f1a7a16a12bf274f15bf495aca8f27b3955a6c28b1dcfadb06c97",
+      "formal_gmt_modified": "2026-10-09 04:19:21",
+      "evidence_limit": "Current exact-ID formal get; after approved/Y, current Schema brand and actual score checked; no per-item public rendering inferred",
+      "platform_status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-09T12:13:20.087294+00:00",
+      "protected_fields": "ALL_PRESERVED",
+      "resolved_initial_issues": [
+        "BRAND_EFFECTIVE_TEXT_MISSING_OR_DIFFERENT"
+      ],
+      "actual_score": "5.00",
+      "score_diagnostics": {
+        "flags": {},
+        "deductions": {},
+        "checks_not_run": [
+          "sku_image",
+          "sku_text",
+          "imageSubTitle",
+          "selling_point_attribute_conflict"
+        ],
+        "error_reasons": [],
+        "status": "clear"
+      }
+    },
+    {
+      "style": "2626",
+      "product_id": "1601973769589",
+      "status": "PASS",
+      "brand": "Beiqiang",
+      "midsole": "Not specified",
+      "issues": [],
+      "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2626准备/品牌与中底属性修正/修正正式核验.json",
+      "sha256": "0f53b37254fe5b801bdd421e8630b8d2a8e61b0ca70ce3544fe84d87dd61cabb",
+      "formal_gmt_modified": "2026-10-09 05:12:55",
+      "evidence_limit": "Current exact-ID formal get; after approved/Y, current Schema brand and actual score checked; no per-item public rendering inferred",
+      "platform_status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-09T12:13:20.563190+00:00",
+      "protected_fields": "ALL_PRESERVED",
+      "resolved_initial_issues": [
+        "BRAND_EFFECTIVE_TEXT_MISSING_OR_DIFFERENT"
+      ],
+      "actual_score": "5.00",
+      "score_diagnostics": {
+        "flags": {},
+        "deductions": {},
+        "checks_not_run": [
+          "sku_image",
+          "sku_text",
+          "imageSubTitle",
+          "selling_point_attribute_conflict"
+        ],
+        "error_reasons": [],
+        "status": "clear"
+      }
+    },
+    {
+      "style": "2628",
+      "product_id": "1601973823209",
+      "status": "PASS",
+      "brand": "Beiqiang",
+      "midsole": "Not specified",
+      "issues": [],
+      "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2628准备/品牌与中底属性修正/修正正式核验.json",
+      "sha256": "a6903b47d2583212fd2b9435590504d560abedac8f42a3df78ed1f0bd13f4b98",
+      "formal_gmt_modified": "2026-10-09 03:24:47",
+      "evidence_limit": "Current exact-ID formal get; after approved/Y, current Schema brand and actual score checked; no per-item public rendering inferred",
+      "platform_status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-09T12:13:20.555999+00:00",
+      "protected_fields": "ALL_PRESERVED",
+      "resolved_initial_issues": [
+        "BRAND_EFFECTIVE_TEXT_MISSING_OR_DIFFERENT"
+      ],
+      "actual_score": "5.00",
+      "score_diagnostics": {
+        "flags": {},
+        "deductions": {},
+        "checks_not_run": [
+          "sku_image",
+          "sku_text",
+          "imageSubTitle",
+          "selling_point_attribute_conflict"
+        ],
+        "error_reasons": [],
+        "status": "clear"
+      }
+    },
+    {
+      "style": "2629",
+      "product_id": "1601973749610",
+      "status": "PASS",
+      "brand": "Beiqiang",
+      "midsole": "Not specified",
+      "issues": [],
+      "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2629准备/品牌与中底属性修正/修正正式核验.json",
+      "sha256": "9dfe66a7307780992bcd9541793f11ba449db7bc59cac831277182424bb6d406",
+      "formal_gmt_modified": "2026-10-09 03:07:20",
+      "evidence_limit": "Current exact-ID formal get; after approved/Y, current Schema brand and actual score checked; no per-item public rendering inferred",
+      "platform_status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-09T12:13:20.612356+00:00",
+      "protected_fields": "ALL_PRESERVED",
+      "resolved_initial_issues": [
+        "BRAND_EFFECTIVE_TEXT_MISSING_OR_DIFFERENT"
+      ],
+      "actual_score": "5.00",
+      "score_diagnostics": {
+        "flags": {},
+        "deductions": {},
+        "checks_not_run": [
+          "sku_image",
+          "sku_text",
+          "imageSubTitle",
+          "selling_point_attribute_conflict"
+        ],
+        "error_reasons": [],
+        "status": "clear"
+      }
+    },
+    {
+      "style": "2633",
+      "product_id": "1601973753470",
+      "status": "PASS",
+      "brand": "Beiqiang",
+      "midsole": "Not specified",
+      "issues": [],
+      "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2633准备/品牌与中底属性修正/修正正式核验.json",
+      "sha256": "b1e393509c90ec8912e5725c5dc6dcc058f5a62ab783eb020fa2dc036afed0f1",
+      "formal_gmt_modified": "2026-10-09 01:53:20",
+      "evidence_limit": "Current exact-ID formal get; after approved/Y, current Schema brand and actual score checked; no per-item public rendering inferred",
+      "platform_status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-09T12:13:44.169744+00:00",
+      "protected_fields": "ALL_PRESERVED",
+      "resolved_initial_issues": [
+        "BRAND_EFFECTIVE_TEXT_MISSING_OR_DIFFERENT"
+      ],
+      "actual_score": "5.00",
+      "score_diagnostics": {
+        "flags": {},
+        "deductions": {},
+        "checks_not_run": [
+          "sku_image",
+          "sku_text",
+          "imageSubTitle",
+          "selling_point_attribute_conflict"
+        ],
+        "error_reasons": [],
+        "status": "clear"
+      }
+    }
+  ],
+  "counts": {
+    "PASS": 29,
+    "PASS_EFFECTIVE_BRAND_AND_KNOWN_MD_LABEL": 4
+  }
+}
