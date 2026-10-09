@@ -7218,27 +7218,32 @@
         "来源采集色码（非实存）：黑色/米色/桔红；EU 39/40/41/42/43/44/45/46",
         "三色24EU39–46；图组先优化后发布。买家统一贝强品牌供货，真实来源仅内部留证；当前入口不证明实际库存或单款已自产。"
       ],
-      "next_action": "继续真实来源图组优化；标题LOCAL_REVIEW_PASS_FORMAL_MATCH；关键词持久化仍待支持；浏览器验收BROWSER_RESTORED_QA_PENDING。"
+      "next_action": "完整图组API回读通过，保留原ID；标题LOCAL_REVIEW_PASS_FORMAL_MATCH；关键词持久化仍待支持；浏览器验收PASS。"
     },
     {
       "id": "LQ-2572",
       "aliases": [
-        "LQ-2572"
+        "LQ-2572",
+        "BQ-LQ2572"
       ],
-      "source_state": "CANDIDATE",
-      "adopted_source_id": null,
-      "candidate_source_ids": [
-        "src-32ae0675f747"
-      ],
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-32ae0675f747",
+      "candidate_source_ids": [],
       "raw_packages": [],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/质量复核_2026-10-09/全分类处理队列.json"
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/质量复核_2026-10-09/全分类处理队列.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2572准备/当前来源文本.txt",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2572准备/经营任务包.md",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2572准备/05_AI候选/整组验收.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2572准备/发布前逐款核验.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2572准备/发布后字段核验.json"
       ],
       "notes": [
-        "来源采集色码（非实存）：黑色/米色；EU 39/40/41/42/43/44/45/46"
+        "来源采集色码（非实存）：黑色/米色；EU 39/40/41/42/43/44/45/46",
+        "两色16EU39–46；图组先优化后发布。买家统一贝强品牌供货，真实来源仅内部留证；当前入口不证明实际库存或单款已自产。"
       ],
-      "next_action": "候选已采集；先做款式去重、事实/IP/图组质量，再按授权发布。"
+      "next_action": "完整图组API回读通过，保留原ID；标题LOCAL_REVIEW_PASS_FORMAL_MATCH；关键词持久化仍待支持；浏览器验收PASS。"
     },
     {
       "id": "LQ-2573",
@@ -15934,7 +15939,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-09T09:23:29.201064+00:00",
+        "at": "2026-10-09T10:30:57.775688+00:00",
         "scope": "本批逐款正式字段回读；浏览器已恢复，逐款公开验收另取证；关键词持久化未验",
         "score": "5.00",
         "sku_count": 39,
@@ -15961,15 +15966,15 @@
       "bound_source_id": "src-5120ad2767ce",
       "source_relation": "ADOPTED_SOURCE_EVIDENCE",
       "observation": {
-        "audit": "new",
-        "display": "N",
-        "at": "2026-10-09T09:23:29.198364+00:00",
+        "audit": "approved",
+        "display": "Y",
+        "at": "2026-10-09T10:30:57.777827+00:00",
         "scope": "本批逐款正式字段回读；浏览器已恢复，逐款公开验收另取证；关键词持久化未验",
-        "score": null,
+        "score": "5.00",
         "sku_count": 24,
-        "image_scope": "PENDING_APPROVAL_FULL_SCHEMA",
+        "image_scope": "PASS",
         "title_quality": "LOCAL_REVIEW_PASS_FORMAL_MATCH",
-        "public_qa": "PENDING_PRODUCT_APPROVAL",
+        "public_qa": "PASS",
         "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2571准备/发布后字段核验.json"
       },
       "evidence": [
@@ -15979,14 +15984,43 @@
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2571准备/发布前逐款核验.json",
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2571准备/发布后字段核验.json"
       ],
-      "notes": "本分类批次24个EU组合；图组PENDING_APPROVAL_FULL_SCHEMA；实际评分审核后待有效返回；贝强统一品牌供货；内部来源独立留证；浏览器验收BROWSER_RESTORED_QA_PENDING。"
+      "notes": "本分类批次24个EU组合；图组PASS；实际评分5.00；贝强统一品牌供货；内部来源独立留证；浏览器验收PASS。"
+    },
+    {
+      "id": "1601974755167",
+      "product_id": "LQ-2572",
+      "model": "BQ-LQ2572",
+      "url": "https://www.alibaba.com/product-detail/Wide-Toe-Box-Mesh-Sneakers-Lace_1601974755167.html",
+      "record_type": "国际站正式商品",
+      "bound_source_id": "src-32ae0675f747",
+      "source_relation": "ADOPTED_SOURCE_EVIDENCE",
+      "observation": {
+        "audit": "approved",
+        "display": "Y",
+        "at": "2026-10-09T10:15:17.369883+00:00",
+        "scope": "本批逐款正式字段回读；浏览器已恢复，逐款公开验收另取证；关键词持久化未验",
+        "score": null,
+        "sku_count": 16,
+        "image_scope": "PASS",
+        "title_quality": "LOCAL_REVIEW_PASS_FORMAL_MATCH",
+        "public_qa": "PASS",
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2572准备/发布后字段核验.json"
+      },
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2572准备/当前来源文本.txt",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2572准备/经营任务包.md",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2572准备/05_AI候选/整组验收.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2572准备/发布前逐款核验.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2572准备/发布后字段核验.json"
+      ],
+      "notes": "本分类批次16个EU组合；图组PASS；实际评分审核后待有效返回；贝强统一品牌供货；内部来源独立留证；浏览器验收PASS。"
     }
   ],
   "workstreams": [
     {
       "name": "路崎宽头/户外全分类",
-      "status": "10-09最新分款回读：107来源，31正式ID/1009EU；当前30个approved/Y；26原ID标题通过，30款完整图组通过；待审：2571。正式关键词未验。",
-      "next_action": "Only read back already-created2571 after platform review, then exact Schema/image/materials/score and per-color public QA; never replay create.028 public gallery/colors/details PASS and score5.00, Brand Name pending; continue next qualified source2572 from107 queue. Hiking2509/02505 are local category holds. 浏览器已恢复，未实测款仍待逐款验收；020撤下来源另挂。",
+      "status": "10-09最新分款回读：107来源，32正式ID/1025EU；当前32个approved/Y；26原ID标题通过，32款完整图组通过；待审：无。正式关键词未验。",
+      "next_action": "Continue2573 current-source107-byte title and source-bound11-image optimization before single create; preserve existing32 IDs and exact1025EU.2572 approved/Y exact Schema and public visuals/Beiqiang brand PASS; score temporarily generic validation error.028/2571 brand repairs approved/Y exact all unsubmitted product fields preserved, scores5.00;2571 MD public translation corrected. Per-target seller-editor keyword migration acceptance remains separate pending. Continue remaining107 sources and older product public QA. Hiking2509/02505 remain local category holds. 浏览器已恢复，未实测款仍待逐款验收；020撤下来源另挂。",
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/质量复核_2026-10-09/全分类处理队列.json",
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/本批正式商品汇总.json",
