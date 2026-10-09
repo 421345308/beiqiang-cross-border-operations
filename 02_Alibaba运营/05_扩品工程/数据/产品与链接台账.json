@@ -3718,7 +3718,7 @@
       "notes": [
         "来源采集色码（非实存）：白色/黑白/全黑；EU 39/40/41/42/43/44/45/46/47"
       ],
-      "next_action": "已单次更新，审核后仅只读核验；标题PASS；关键词持久化仍待支持；Chrome本期豁免。"
+      "next_action": "完整图组API回读通过，保留原ID；标题PASS；关键词持久化仍待支持；Chrome本期豁免。"
     },
     {
       "id": "BQ-LQ2590",
@@ -3768,12 +3768,13 @@
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2597准备/经营任务包.md",
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/质量复核_2026-10-09/全分类处理队列.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2597准备/质量修正_2026-10-09/质量修正核验.json"
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2597准备/质量修正_2026-10-09/质量修正核验.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2597准备/整组图片修正_2026-10-09/图片修正核验.json"
       ],
       "notes": [
         "来源采集色码（非实存）：黑色/白红/灰色；EU 39/40/41/42/43/44/45/46/47/48"
       ],
-      "next_action": "继续真实来源图组优化；标题PASS；关键词持久化仍待支持；Chrome本期豁免。"
+      "next_action": "已单次更新，审核后仅只读核验；标题PASS；关键词持久化仍待支持；Chrome本期豁免。"
     },
     {
       "id": "BQ-LQ2598",
@@ -15374,13 +15375,13 @@
       "bound_source_id": "src-e186dd666102",
       "source_relation": "ADOPTED_SOURCE_EVIDENCE",
       "observation": {
-        "audit": "modified",
-        "display": "N",
-        "at": "2026-10-09T02:36:19.375760+00:00",
+        "audit": "approved",
+        "display": "Y",
+        "at": "2026-10-09T02:53:42.295530+00:00",
         "scope": "本批逐款正式字段回读；Chrome本期豁免，关键词持久化未验",
-        "score": null,
+        "score": "5.00",
         "sku_count": 27,
-        "image_scope": "PENDING_REVIEW",
+        "image_scope": "PASS",
         "title_quality": "PASS",
         "public_qa": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
         "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2588-1准备/整组图片修正_2026-10-09/图片修正核验.json"
@@ -15391,7 +15392,7 @@
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2588-1准备/质量修正_2026-10-09/质量修正核验.json",
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2588-1准备/整组图片修正_2026-10-09/图片修正核验.json"
       ],
-      "notes": "本分类批次27个EU组合；图组PENDING_REVIEW；实际评分审核后待有效返回；不证明供货库存或自产，Chrome豁免。"
+      "notes": "本分类批次27个EU组合；图组PASS；实际评分5.00；不证明供货库存或自产，Chrome豁免。"
     },
     {
       "id": "1601973842356",
@@ -15429,23 +15430,24 @@
       "bound_source_id": "src-038a36798455",
       "source_relation": "ADOPTED_SOURCE_EVIDENCE",
       "observation": {
-        "audit": "approved",
-        "display": "Y",
-        "at": "2026-10-08T17:00:20.803146+00:00",
+        "audit": "modified",
+        "display": "N",
+        "at": "2026-10-09T03:22:55.783769+00:00",
         "scope": "本批逐款正式字段回读；Chrome本期豁免，关键词持久化未验",
-        "score": "5.00",
+        "score": null,
         "sku_count": 30,
-        "image_scope": "PENDING_IMAGE_REVISION",
+        "image_scope": "PENDING_REVIEW",
         "title_quality": "PASS",
         "public_qa": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
-        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2597准备/质量修正_2026-10-09/质量修正核验.json"
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2597准备/整组图片修正_2026-10-09/图片修正核验.json"
       },
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2597准备/经营任务包.md",
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/质量复核_2026-10-09/全分类处理队列.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2597准备/质量修正_2026-10-09/质量修正核验.json"
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2597准备/质量修正_2026-10-09/质量修正核验.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2597准备/整组图片修正_2026-10-09/图片修正核验.json"
       ],
-      "notes": "本分类批次30个EU组合；图组PENDING_IMAGE_REVISION；实际评分5.00；不证明供货库存或自产，Chrome豁免。"
+      "notes": "本分类批次30个EU组合；图组PENDING_REVIEW；实际评分审核后待有效返回；不证明供货库存或自产，Chrome豁免。"
     },
     {
       "id": "1601973831465",
@@ -15875,8 +15877,8 @@
   "workstreams": [
     {
       "name": "路崎宽头/户外全分类",
-      "status": "10-09最新分款回读：107来源，28正式ID/900EU；当前27个approved/Y；26原ID标题通过，23款完整图组通过；待审：2588-1。正式关键词未验。",
-      "next_action": "Read back already-submitted image/title updates for 2588-1, without replay. Next improve 2597 three-color/30EU image set, then remaining original-ID images and full107 quality-gated new listings. Hiking2509/02505 remain local business-category holds. Chrome本期豁免；020撤下来源另挂。",
+      "status": "10-09最新分款回读：107来源，28正式ID/900EU；当前27个approved/Y；26原ID标题通过，24款完整图组通过；待审：2597。正式关键词未验。",
+      "next_action": "Read back already-submitted image/title updates for 2597, without replay. Next improve 2596 two-color/20EU image set, then remaining original-ID images and full107 quality-gated new listings. Hiking2509/02505 remain local business-category holds. Chrome本期豁免；020撤下来源另挂。",
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/质量复核_2026-10-09/全分类处理队列.json",
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/本批正式商品汇总.json",
