@@ -1,0 +1,25 @@
+{
+  "operation": "update",
+  "product_id": "1601973814505",
+  "category_id": 201334413,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "../经营任务包.md",
+    "../05_AI候选/整组验收.json",
+    "../05_AI候选/图片编辑提示词_2026-10-09.json",
+    "../../负责人分类事实确认.json",
+    "../../颜色图增量更新成功证据_2026-10-09.json"
+  ],
+  "current_schema": "当前Schema.xml",
+  "current_schema_sha256": "c23efc259366b6e5263acb10780b896932c96b250962144dd22ec691c749cd70",
+  "schema_request_id": "2105584317915104298344688",
+  "schema_acquired_at": "2026-10-09T01:47:09.748403+00:00",
+  "payload_xml": "最小图片载荷.xml",
+  "field_ids": [
+    "scImages",
+    "detailImage",
+    "saleProp"
+  ],
+  "dependency_ids": [],
+  "scope_note": "Only gallery, detail, and saleProp Color img. Current color IDs/names and EU values unchanged; sku omitted and all30 formal row IDs/prices must remain unchanged."
+}
