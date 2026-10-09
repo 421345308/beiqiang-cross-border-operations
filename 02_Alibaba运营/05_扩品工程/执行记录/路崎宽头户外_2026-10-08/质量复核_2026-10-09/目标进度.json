@@ -1,12 +1,12 @@
 {
-  "observed_at": "2026-10-09T06:35:17.756148+00:00",
+  "observed_at": "2026-10-09T09:20:14.194399+00:00",
   "source_urls": 107,
-  "created_products": 29,
-  "formal_EU_combinations": 946,
+  "created_products": 31,
+  "formal_EU_combinations": 1009,
   "approved_before_quality_revision": 26,
   "actual_score_5_before_quality_revision": 26,
   "scope_status": "ACTIVE_NOT_COMPLETE",
-  "quality_revision_status": "26 original-ID title revisions PASS; all current 29 complete image sets have exact formal readback PASS. Public visual acceptance remains separately evidenced per product.",
+  "quality_revision_status": "26 original-ID title revisions PASS; full image/Schema readback and public visuals remain separately evidenced per product. Pending approval is not counted as online or complete.",
   "title_plan_count": 26,
   "new_candidates_awaiting_quality": 1,
   "Chrome": "RESTORED_WITH_PER_PRODUCT_VISUAL_EVIDENCE",
@@ -16,7 +16,7 @@
     "Do not count source URLs as distinct publishable styles",
     "Do not replay existing or outcome-unknown creates"
   ],
-  "next_work": "Next process quality-gated remaining sources;2619 approved with exact fields, public visuals and valid score; continue other products public QA; original-ID image fixes require exact final readback before closure. Continue full107 quality-gated new listings. Hiking2509/02505 remain local business-category holds.",
+  "next_work": "Only read back already-created2571 after platform review, then exact Schema/image/materials/score and per-color public QA; never replay create.028 public gallery/colors/details PASS, Brand Name and valid score pending; continue next qualified source2572 from107 queue. Hiking2509/02505 are local category holds.",
   "revision_readbacks": 26,
   "revision_scope_pass": 26,
   "revision_pending_review": 0,
@@ -37,6 +37,20 @@
       "sku_count": 20,
       "score": "5.00"
     },
+    "028": {
+      "product_id": "1601974617075",
+      "status": "approved",
+      "display": "Y",
+      "sku_count": 39,
+      "score": null
+    },
+    "2571": {
+      "product_id": "1601974689145",
+      "status": "new",
+      "display": "N",
+      "sku_count": 24,
+      "score": null
+    },
     "2619": {
       "product_id": "1601974271772",
       "status": "approved",
@@ -45,7 +59,7 @@
       "score": "5.00"
     }
   },
-  "current_approved_displayed": 29,
+  "current_approved_displayed": 30,
   "complete_image_readback_pass_styles": [
     "058",
     "2633",
@@ -66,6 +80,7 @@
     "2588-1",
     "2597",
     "2596",
+    "028",
     "25017",
     "25016",
     "25012",
@@ -77,7 +92,9 @@
     "02508",
     "02507"
   ],
-  "pending_image_readback_styles": [],
+  "pending_image_readback_styles": [
+    "2571"
+  ],
   "latest_title_refinement": {
     "style": "033",
     "target_title": "Unisex Wide Toe Box Mesh Panel Walking Sneakers Broad Angular Side Overlay Lace Up Casual Shoes EU 36-48 Wholesale",
@@ -87,9 +104,19 @@
     "observed_at": "2026-10-08T23:07:23.578830+00:00"
   },
   "browser_acceptance": "RESTORED_BY_OWNER_2026-10-09_QA_IN_PROGRESS",
-  "pending_new_approval_styles": [],
+  "pending_new_approval_styles": [
+    "2571"
+  ],
   "public_QA_pass_styles": [
     "2619",
+    "028",
     "2510"
-  ]
+  ],
+  "candidate2571": {
+    "product_id": "1601974689145",
+    "accepted_images": 12,
+    "EU_combinations": 24,
+    "title_bytes": 113,
+    "status": "CREATED_NEW_N_PENDING_PLATFORM_REVIEW"
+  }
 }

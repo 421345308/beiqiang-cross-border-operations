@@ -1,0 +1,75 @@
+{
+  "style": "2571",
+  "source": "https://luqi.sooxie.com/detail/2362382",
+  "observed_at": "2026-10-09T08:41:31.048925+00:00",
+  "source_model": "2571",
+  "registered_ids": [],
+  "status": "CREATED_PENDING_APPROVAL_FULL_ACCEPTANCE",
+  "category_id": 201334413,
+  "source_price_cny": "72.00",
+  "current_source_evidence": [
+    "当前来源文本.txt",
+    "当前来源页.png"
+  ],
+  "confirmed_EU_by_color": {
+    "Black": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "Beige": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "Orange": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46
+    ]
+  },
+  "EU_combinations": 24,
+  "materials": {
+    "upper": "Mesh: original image18 鞋面网面",
+    "midsole": "MD: original image18 中底MD; no inference of EVA chemistry",
+    "outsole": "Rubber: source attribute and original image18",
+    "lining": "Not specified: source only 透气内里, no composition",
+    "insole": "Not specified"
+  },
+  "gender": "Mens, current source 性别:男",
+  "closure": "Lace-up, current source 系带",
+  "wide_evidence": "Source category27256 / original image18宽头宽楦 / owner classification and numericEU confirmation",
+  "title": "Mens Wide Toe Box Mesh Sneakers Lace Up Casual Walking Shoes Wave Pattern Ribbed Midsole Rubber Outsole Wholesale",
+  "keywords": "wide toe box mesh sneakers; mens lace up sneakers; casual walking shoes; wave pattern sneakers; ribbed midsole shoes; rubber outsole shoes; wholesale footwear",
+  "buyer_search_volume": "Unknown; exact product and procurement intent only",
+  "claim_exclusions": [
+    "anti-slip/abrasion percentage claims45/54/42 from source13 unsupported by tests",
+    "no increased-height, zero-drop, medical, waterproof or measured cushioning claim",
+    "no EVA inference from MD",
+    "no guarantee of stock/dispatch from source general shop metrics"
+  ],
+  "image_exclusions": {
+    "02-06": "unrelated recommended styles",
+    "11-12": "foot diagram/insole comparisons without exact supported fit evidence"
+  },
+  "dedup_status": "Exact model and source currently unbound; structural comparison before create still required",
+  "buyer_brand": "Beiqiang supplier/company; internal route not buyer-facing; factory imagery establishes company capability",
+  "Chrome": "RESTORED_PUBLIC_QA_PENDING_APPROVAL",
+  "product_id": "1601974689145",
+  "pending": "No recreate. Approval/Y -> full Schema/image/material/24EU/score and public visual QA."
+}
