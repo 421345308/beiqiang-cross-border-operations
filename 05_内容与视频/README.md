@@ -4,6 +4,7 @@
 
 | 工作类型 | 正确位置 | 先核对什么 |
 | --- | --- | --- |
+| LinkedIn / Facebook / TikTok跨平台运营 | [社媒入口](04_社交媒体运营/README.md) | 账号身份、可用连接、采购内容、真实发布与CRM；Instagram当前暂停主动运营 |
 | 贝强商品视频 | [商品视频索引](01_贝强商品视频/seedance/VIDEO_INDEX.md) | SKU 来源、版本、审核记录 |
 | TikTok 运营 | [TikTok目录](02_TikTok运营/) | 发布台账、来源链接、询盘与效果证据 |
 | 非鞋类创作、动画与模型实验 | [通用 AI 项目](03_通用AI视频实验/README.md) | 项目状态、PROJECT.md 与素材证据 |

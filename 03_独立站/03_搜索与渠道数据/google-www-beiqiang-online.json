@@ -1,0 +1,80 @@
+{
+  "observedAt": "2026-10-09",
+  "timezone": "Asia/Shanghai",
+  "property": "https://www.beiqiang.online/",
+  "verification": {
+    "status": "verified",
+    "method": "existing_html_meta_tag"
+  },
+  "performance": {
+    "selectedWindow": "3 months",
+    "visibleChartStart": "2026-08-26",
+    "visibleChartEnd": "2026-10-06",
+    "impressions": 62,
+    "clicks": 1,
+    "ctrPercent": 1.6,
+    "averagePosition": 37.1,
+    "visibleQueries": 9,
+    "pageRows": 33,
+    "note": "Visible queries may omit privacy-protected rows; counts are not unique buyers."
+  },
+  "indexing": {
+    "indexed": 99,
+    "notIndexed": 20
+  },
+  "home": {
+    "indexed": true,
+    "lastRecordedCrawl": "2026-09-29T03:59:37",
+    "userCanonical": "https://www.beiqiang.online/",
+    "googleCanonical": "https://www.beiqiang.online/",
+    "liveTestAtLocal": "2026-10-09T19:36:00+08:00",
+    "liveTestResult": "URL can be indexed",
+    "validVideoItemsInLiveTest": 1
+  },
+  "breadcrumbs": {
+    "valid": 18,
+    "invalid": 6,
+    "reportUpdatedAt": "2026-10-07",
+    "issue": "Missing item in itemListElement",
+    "affectedPaths": [
+      "/solutions/wholesale-walking-shoes/",
+      "/zh/solutions/private-label-walking-shoes/",
+      "/solutions/oem-knit-shoes/",
+      "/solutions/private-label-walking-shoes/",
+      "/zh/solutions/oem-knit-shoes/",
+      "/zh/solutions/wholesale-walking-shoes/"
+    ],
+    "fixStatus": "production_verified_all_six_urls_google_validation_pending",
+    "googleValidation": {
+      "status": "started",
+      "startedAt": "2026-10-09",
+      "finalResult": "pending"
+    }
+  },
+  "sitemap": {
+    "url": "https://www.beiqiang.online/sitemap.xml",
+    "submissionAcceptedAt": "2026-10-09",
+    "googleReadStatus": "Could not fetch / unable to read sitemap",
+    "googleDiscoveredUrls": 0,
+    "publicHttpStatus": 200,
+    "publicContentType": "application/xml",
+    "parsedUniqueUrls": 128,
+    "canonicalHostOnly": true,
+    "privateRoutesPresent": false
+  },
+  "aiCitation": {
+    "status": "not_verified",
+    "note": "AI report entry visible; detailed results not inspected."
+  },
+  "evidenceFolder": "google-www-beiqiang-online/",
+  "evidencePrivacy": "Raw account views and screenshots remain local and ignored by Git.",
+  "websiteRelease": {
+    "releaseId": "2026-10-09.1",
+    "commit": "619931d",
+    "githubBranch": "main",
+    "productionVerified": true,
+    "affectedUrlsVerified": 6,
+    "buildPassed": true,
+    "relatedTestsPassed": 28
+  }
+}

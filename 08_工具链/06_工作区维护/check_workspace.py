@@ -38,7 +38,7 @@ MEMORY_OPTIONAL = {"supersedes", "verify_when", "review_after"}
 MEMORY_TYPES = {"Authorization", "Preference", "Decision", "Experience"}
 MEMORY_STATES = {"active", "superseded", "disputed", "archived"}
 ACTIVE_CONTROL = (
-    "当前状态.md", "产品经营主表.md", "资产索引.md", "跨渠道经营总览.md", "工作区维护.md",
+    "当前状态.md", "产品经营主表.md", "资产索引.md", "跨渠道经营总览.md", "工作区维护.md", "全渠道增长总控.md",
 )
 PRUNE = {
     ".git", "node_modules", "browser_data", ".venv", "venv", "__pycache__",
@@ -567,7 +567,14 @@ class WorkspaceCheck:
                 path = self.root / folder / filename
                 if path.is_file():
                     paths.append(path)
-        for relative in ("02_Alibaba运营/05_扩品工程/国际站合规扩品工程总控.md", "02_Alibaba运营/05_扩品工程/供应商产品总表/README.md"):
+        for relative in (
+            "02_Alibaba运营/05_扩品工程/国际站合规扩品工程总控.md",
+            "02_Alibaba运营/05_扩品工程/供应商产品总表/README.md",
+            "03_独立站/01_运营SOP/搜索与AI可发现性运营.md",
+            "05_内容与视频/04_社交媒体运营/README.md",
+            "05_内容与视频/04_社交媒体运营/账号资料与首批内容.md",
+            "08_工具链/04_MCP与Workctl/渠道接口与插件.md",
+        ):
             path = self.root / relative
             if path.exists():
                 paths.append(path)
