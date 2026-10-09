@@ -111,5 +111,25 @@ class SourceIdentity(unittest.TestCase):
             self.assertTrue(view_matches(path,b'first\nsecond\n'))
             self.assertFalse(view_matches(path,b'first\nchanged\n'))
 
+    def test_public_checkout_does_not_require_private_customer_records(self):
+        with TemporaryDirectory() as tmp:
+            root=Path(tmp)
+            source=root/'04_客户开发/README.md'
+            target=root/'04_客户开发/07_RFQ专岗/README.md'
+            checker=WorkspaceCheck(root)
+            checker.missing_reference('active_links',source,target,'missing private record')
+            self.assertEqual(checker.errors,[])
+            self.assertEqual(len(checker.warnings),1)
+
+    def test_missing_private_record_still_fails_when_local_folder_is_present(self):
+        with TemporaryDirectory() as tmp:
+            root=Path(tmp)
+            source=root/'04_客户开发/README.md'
+            target=root/'04_客户开发/07_RFQ专岗/README.md'
+            target.parent.mkdir(parents=True)
+            checker=WorkspaceCheck(root)
+            checker.missing_reference('active_links',source,target,'missing private record')
+            self.assertEqual(len(checker.errors),1)
+
 if __name__=='__main__':
     unittest.main()
