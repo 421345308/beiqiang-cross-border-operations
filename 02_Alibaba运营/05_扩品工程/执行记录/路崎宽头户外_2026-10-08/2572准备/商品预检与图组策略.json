@@ -1,0 +1,99 @@
+{
+  "style": "2572",
+  "source": "https://luqi.sooxie.com/detail/2348587",
+  "source_model": "2572",
+  "source_price_cny": "58.00",
+  "observed_at": "2026-10-09T09:28:51.037082+00:00",
+  "current_source_sha256": "47fb0ed7a79b2e8c485d3c5cb2eea76dbc97aa880fc7a9c76054970313e9de12",
+  "status": "SOURCE_CONFIRMED_PENDING_IMAGE_EDIT_AND_FORMAL_DEDUP",
+  "current_source_evidence": [
+    "当前来源文本.txt",
+    "当前来源页.png"
+  ],
+  "confirmed_EU_by_color": {
+    "Black": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "Beige": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46
+    ]
+  },
+  "EU_combinations": 16,
+  "size_conflict_resolution": "Original marketing image15 says39–48, current actual sellable page says39–46. Adopt current39–46 only; owner confirms numeric sizes EU. Do not extend47/48.",
+  "materials": {
+    "upper": "Mesh: current source鞋面材质网布",
+    "lining": "Textile/cloth: current source鞋面内里材质布",
+    "insole": "Textile/cloth: current source鞋垫材质布",
+    "outsole": "PU: exact original image15防滑PU大底; no adoption of untested anti-slip performance",
+    "midsole": "Not specified: do not infer EVA/MD from appearance"
+  },
+  "gender": "Not specified on current exact page; title omits gender",
+  "title": "Wide Toe Box Mesh Sneakers Lace Up Low Top Casual Walking Shoes Knit Collar Heel Pull Tab PU Sole Wholesale",
+  "title_bytes": 107,
+  "keywords": "wide toe box mesh sneakers; lace up walking shoes; low top casual sneakers; knit collar shoes; heel pull tab footwear; PU sole shoes; wholesale footwear",
+  "buyer_search_volume": "Unknown",
+  "wide_evidence": "Source category27256 and owner category confirmation; exact image7/8wide-shape depiction not medical evidence",
+  "claim_exclusions": [
+    "foot swelling/valgus and medical diagram11",
+    "anti-slip/grip/abrasion performance from image19 unsupported by tests",
+    "no density/weight/height/comfort measurement or fixed dispatch promise",
+    "source15 marketing39–48 is not current size inventory"
+  ],
+  "image_exclusions": {
+    "02-06": "Unrelated recommended styles",
+    "08-11": "Foot diagrams/comparisons and efficacy overlays excluded"
+  },
+  "proposed_roles": {
+    "M1": [
+      "27.jpg: isolate actual complete foregroundBeige shoe, retainwhite sole/orange segments"
+    ],
+    "M2": [
+      "19.jpg: exact large sole photograph, removeheader claims, no fabricatedtoe"
+    ],
+    "M3": [
+      "13.jpg: actualBeige on-foot pair, remove topmarketing"
+    ],
+    "M4": [
+      "15.jpg: exactBlack/Beige side profiles; labelsEU39–46 only"
+    ],
+    "M5": [
+      "12.jpg: actualheldBlack/Beigeon-foot scene plusquotationinputs"
+    ],
+    "D1": [
+      "20.jpg: completeactualBeigepairon-foot"
+    ],
+    "D2": [
+      "17.jpg: actualmeshmacro",
+      "18.jpg: actuallining/closuremacro"
+    ],
+    "D3": [
+      "24.jpg: actualBlackpairon-foot"
+    ],
+    "D4": [
+      "22.jpg: actualBeigeon-footheel/sole"
+    ],
+    "SKU_Black": [
+      "29.jpg: fullBlackpair"
+    ],
+    "SKU_Beige": [
+      "26.jpg: fullBeigepair"
+    ]
+  },
+  "identity_notes": "Actual2572 original contacts0/1 viewed: plain perforated mesh upper, ordinarylace holes, low knit collar, heelpull, smoothlayered midsole withchevron side texture, orange outsole segments. Different from2571 wave upper/ribbedMD and2573closedslip-on; final full formal dedup still pending.",
+  "image_status": "NOT_GENERATED_NOT_ACCEPTED",
+  "Chrome": "RESTORED_PUBLIC_QA_REQUIRED_AFTER_APPROVAL"
+}

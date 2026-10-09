@@ -1,7 +1,7 @@
 {
   "style": "028",
   "product_id": "1601974617075",
-  "observed_at": "2026-10-09T09:16:22.848159+00:00",
+  "observed_at": "2026-10-09T09:24:55.092197+00:00",
   "scope_result": "PASS",
   "scope": "Actual public gallery /3 color large images and EU labels /4 product and5 company detail images. Brand attribute and platform score are separate pending fields.",
   "url": "https://www.alibaba.com/product-detail/Unisex-Wide-Toe-Box-Sneakers-Lace_1601974617075.html",
@@ -173,7 +173,8 @@
   "whole_lifecycle_complete": false,
   "remaining": [
     "Brand Name submitted Beiqiang not persisted in returned schema",
-    "Actual score not yet validly returned",
     "Formal keyword field persistence pending"
-  ]
+  ],
+  "actual_score": "5.00",
+  "score_evidence": "../实际评分回读.json"
 }
