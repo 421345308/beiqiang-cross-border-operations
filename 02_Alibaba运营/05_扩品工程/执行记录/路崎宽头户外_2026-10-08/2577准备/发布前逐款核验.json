@@ -1,0 +1,25 @@
+{
+  "style": "2577",
+  "observed_at": "2026-10-09T15:13:59.980428+00:00",
+  "scope_result": "PASS",
+  "expected_sku_count": 16,
+  "exact_color_EU": true,
+  "title": "Mens Wide Toe Box Knit Walking Shoes Lace Up MD Midsole Low Top Casual Sneakers EU 39-46 Wholesale",
+  "title_bytes": 98,
+  "main_images": 6,
+  "product_details": 4,
+  "company_images": 5,
+  "known_materials": {
+    "upper": "Knit; source09/13飞织",
+    "lining": "Knit; source13内里飞织",
+    "midsole": "MD midsole; source12/13",
+    "outsole": "Not specified; supplier牛津 does not identify exact compound"
+  },
+  "source_current": "23 exact current photographs, CNY58, two colors EU39–46; source12/13 outsole supplier term retained internally without inferring compound.",
+  "formal_dedup": "Fresh full catalog428, exact source/model unbound;100 cover triage and nearest12 actual structure comparison.",
+  "dedup_limit": "Not global all-angle or physicalIP clearance",
+  "payload_sha256": "b6807b7fa3595d8a9f417046325768b19c66bb5cbfcf22b5bdedd1c93bc056e2",
+  "quality_evidence": "05_AI候选/整组验收.json",
+  "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+  "next_action": "One authorized create, read returned ID, never replay"
+}

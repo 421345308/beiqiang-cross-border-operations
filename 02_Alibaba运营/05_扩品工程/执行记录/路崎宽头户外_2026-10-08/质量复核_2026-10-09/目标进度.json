@@ -1,8 +1,8 @@
 {
-  "observed_at": "2026-10-09T14:53:44.497226+00:00",
+  "observed_at": "2026-10-09T15:22:56.366873+00:00",
   "source_urls": 107,
-  "created_products": 36,
-  "formal_EU_combinations": 1115,
+  "created_products": 37,
+  "formal_EU_combinations": 1131,
   "approved_before_quality_revision": 26,
   "actual_score_5_before_quality_revision": 26,
   "scope_status": "ACTIVE_NOT_COMPLETE",
@@ -16,7 +16,7 @@
     "Do not count source URLs as distinct publishable styles",
     "Do not replay existing or outcome-unknown creates"
   ],
-  "next_work": "2578已approved/Y，完整Schema及实际5.00诊断通过；保留各原ID不重放。1712已证不同鞋型，K502/K502D为同外形加绒/单鞋版本，按真实类目及版本继续准备；下一款2577先补当前来源、逐图优化和差异化标题，再续107来源剩余独立款。027图案及2509/02505类目局部处理；浏览器仅异常与批次抽检。",
+  "next_work": "2577已单次创建16EU，原ID只读补核审核、完整Schema及实际评分；保留各原ID不重放。1712已证不同鞋型，K502/K502D为同外形加绒/单鞋版本，按真实类目及版本继续准备；下一款023先补当前来源、逐图优化和差异化标题，再续107来源剩余独立款。027图案及2509/02505类目局部处理；浏览器仅异常与批次抽检。",
   "revision_readbacks": 26,
   "revision_scope_pass": 26,
   "revision_pending_review": 0,
@@ -98,6 +98,15 @@
       "score": "5.00",
       "score_status": "PASS_SCORE_GATE",
       "observed_at": "2026-10-09T14:40:50.160777+00:00"
+    },
+    "2577": {
+      "product_id": "1601974939421",
+      "status": "new",
+      "display": "N",
+      "sku_count": 16,
+      "score": null,
+      "score_status": null,
+      "observed_at": "2026-10-09T15:22:23.619784+00:00"
     }
   },
   "current_approved_displayed": 36,
@@ -149,7 +158,9 @@
     "observed_at": "2026-10-08T23:07:23.578830+00:00"
   },
   "browser_acceptance": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
-  "pending_new_approval_styles": [],
+  "pending_new_approval_styles": [
+    "2577"
+  ],
   "public_QA_pass_styles": [
     "2619",
     "028",
@@ -273,5 +284,13 @@
     "product_id": "1601974917344",
     "EU_combinations": 24,
     "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2578准备/发布后字段核验.json"
+  },
+  "candidate2577": {
+    "status": "CREATED_PENDING_APPROVAL_FULL_ACCEPTANCE",
+    "product_id": "1601974939421",
+    "EU_combinations": 16,
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2577准备/发布后字段核验.json",
+    "formal_CDN_pixel_status": "FORMAL_CDN_PIXEL_AND_VISUAL_PASS",
+    "formal_CDN_pixel_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2577准备/正式CDN像素核验.json"
   }
 }
