@@ -1,12 +1,11 @@
 {
-  "observed_at": "2026-10-09T13:49:31.651420+00:00",
+  "observed_at": "2026-10-09T14:53:44.497226+00:00",
   "scope": "107 sources; statuses are evidence stages, not 107 independent publishable products",
   "state_counts": {
-    "CREATED_APPROVED_Y": 35,
+    "CREATED_APPROVED_Y": 36,
     "PENDING_STYLE_AND_QUALITY_REVIEW": 64,
     "EXISTING_SOURCE_MAPPING_DO_NOT_DUPLICATE": 3,
     "MERGED_SOURCE_FAMILY_2585_NO_EXTRA_CREATE": 1,
-    "PARTIAL_SOURCE_BOUND_IMAGES_2_OF_12_NO_CREATE": 1,
     "HOLD_ACCOUNT_HIKING_BUSINESS_CATEGORY": 2,
     "HOLD_WITHDRAWN_SOURCE": 1
   },
@@ -731,14 +730,20 @@
         "27256"
       ],
       "source_collection": "COLLECTED",
-      "image_cache": "CONTACT_SHEET_ONLY_NOT_PUBLISHABLE",
-      "publication_state": "PARTIAL_SOURCE_BOUND_IMAGES_2_OF_12_NO_CREATE",
-      "title_quality": "LOCAL_SOURCE_BOUND_DRAFT_NO_FORMAL_ID",
-      "image_quality": "PARTIAL_LOCAL_ROLES_PASS_COMPLETE_SET_PENDING",
+      "image_cache": "CURRENT_SOURCE_AND_FINAL_ASSETS",
+      "publication_state": "CREATED_APPROVED_Y",
+      "title_quality": "LOCAL_REVIEW_PASS_FORMAL_MATCH",
+      "image_quality": "BUYER_ROLE_REVIEW_PASS",
       "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
       "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
       "EU_combinations": 24,
-      "current_source_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2578准备/商品预检与图组策略.json"
+      "current_source_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2578准备/商品预检与图组策略.json",
+      "product_id": "1601974917344",
+      "image_apply_scope": "PASS_COMPLETE_IMAGE_SCHEMA",
+      "actual_score": "5.00",
+      "effective_attribute_status": "PASS_EFFECTIVE_CUSTOM_TEXT",
+      "score_status": "PASS_SCORE_GATE",
+      "current_platform_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2578准备/发布后字段核验.json"
     },
     {
       "style": "023",
@@ -1771,22 +1776,23 @@
         "27257"
       ],
       "source_collection": "COLLECTED",
-      "image_cache": "CONTACT_SHEET_ONLY_NOT_PUBLISHABLE",
+      "image_cache": "CURRENT_EXACT_SOURCE_IMAGES_COLLECTED",
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
       "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
       "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
       "source_family_review": {
-        "status": "SAME_COVER_PHYSICAL_PAIR_RECONCILIATION_REQUIRED",
+        "status": "SHARED_OUTER_FAMILY_DISTINCT_LINING_VERSIONS",
         "candidate_family": [
-          "1712",
           "K502",
           "K502D"
         ],
-        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/021准备/来源款式近似候选.json",
-        "next_action": "Compare current exactsourcephotos/material/color choices and adopt one family if same physicalstyle; no separatecreate until compared."
-      }
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/质量复核_2026-10-09/1712_K502_K502D当前来源证据.json",
+        "next_action": "Retain exact plush/single-shoe source and price; prepare one family route without duplicate same-version pages; verify category and visible marks."
+      },
+      "source_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/质量复核_2026-10-09/1712_K502_K502D当前来源证据.json",
+      "source_EU_combinations": 24
     },
     {
       "style": "K502",
@@ -1795,22 +1801,23 @@
         "27257"
       ],
       "source_collection": "COLLECTED",
-      "image_cache": "CONTACT_SHEET_ONLY_NOT_PUBLISHABLE",
+      "image_cache": "CURRENT_EXACT_SOURCE_IMAGES_COLLECTED",
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
       "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
       "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
       "source_family_review": {
-        "status": "SAME_COVER_PHYSICAL_PAIR_RECONCILIATION_REQUIRED",
+        "status": "SHARED_OUTER_FAMILY_DISTINCT_LINING_VERSIONS",
         "candidate_family": [
-          "1712",
           "K502",
           "K502D"
         ],
-        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/021准备/来源款式近似候选.json",
-        "next_action": "Compare current exactsourcephotos/material/color choices and adopt one family if same physicalstyle; no separatecreate until compared."
-      }
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/质量复核_2026-10-09/1712_K502_K502D当前来源证据.json",
+        "next_action": "Retain exact plush/single-shoe source and price; prepare one family route without duplicate same-version pages; verify category and visible marks."
+      },
+      "source_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/质量复核_2026-10-09/1712_K502_K502D当前来源证据.json",
+      "source_EU_combinations": 24
     },
     {
       "style": "1712",
@@ -1819,22 +1826,22 @@
         "27257"
       ],
       "source_collection": "COLLECTED",
-      "image_cache": "CONTACT_SHEET_ONLY_NOT_PUBLISHABLE",
+      "image_cache": "CURRENT_EXACT_SOURCE_IMAGES_COLLECTED",
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
       "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
       "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
       "source_family_review": {
-        "status": "SAME_COVER_PHYSICAL_PAIR_RECONCILIATION_REQUIRED",
+        "status": "DISTINCT_FROM_K502_FAMILY",
         "candidate_family": [
-          "1712",
-          "K502",
-          "K502D"
+          "1712"
         ],
-        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/021准备/来源款式近似候选.json",
-        "next_action": "Compare current exactsourcephotos/material/color choices and adopt one family if same physicalstyle; no separatecreate until compared."
-      }
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/质量复核_2026-10-09/1712_K502_K502D当前来源证据.json",
+        "next_action": "Prepare independent current-source product; verify actual hiking category eligibility."
+      },
+      "source_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/质量复核_2026-10-09/1712_K502_K502D当前来源证据.json",
+      "source_EU_combinations": 33
     },
     {
       "style": "1026",
