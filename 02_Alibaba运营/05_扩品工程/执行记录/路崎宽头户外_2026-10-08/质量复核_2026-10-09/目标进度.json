@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-10-10T18:15:49.312346+00:00",
+  "observed_at": "2026-10-10T18:21:22.590060+00:00",
   "source_urls": 107,
   "created_products": 58,
   "formal_EU_combinations": 1808,
@@ -284,9 +284,9 @@
       "status": "approved",
       "display": "Y",
       "sku_count": 30,
-      "score": "3.90",
-      "score_status": "PENDING_OR_BELOW_TARGET",
-      "observed_at": "2026-10-10T18:10:00.537423+00:00"
+      "score": "5.00",
+      "score_status": "PASS_SCORE_GATE",
+      "observed_at": "2026-10-10T18:20:35.480329+00:00"
     },
     "2583-1": {
       "product_id": "1601976101204",
@@ -295,7 +295,7 @@
       "sku_count": 26,
       "score": null,
       "score_status": null,
-      "observed_at": "2026-10-10T18:11:32.693631+00:00"
+      "observed_at": "2026-10-10T18:20:35.481935+00:00"
     }
   },
   "current_approved_displayed": 57,
@@ -682,7 +682,7 @@
     "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/026-1准备/来源家族与色码核对.json"
   },
   "candidate25019": {
-    "status": "APPROVED_FIELDS_SCORE_PENDING",
+    "status": "API_FIELDS_SCORE_PASS",
     "product_id": "1601975986800",
     "EU_combinations": 30,
     "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/25019准备/发布后字段核验.json",

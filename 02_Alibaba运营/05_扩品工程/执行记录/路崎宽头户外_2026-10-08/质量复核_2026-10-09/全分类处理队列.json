@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-10-10T18:15:49.312346+00:00",
+  "observed_at": "2026-10-10T18:21:22.590060+00:00",
   "scope": "107 sources; statuses are evidence stages, not 107 independent publishable products",
   "state_counts": {
     "CREATED_APPROVED_Y": 57,
@@ -1289,8 +1289,8 @@
       "product_id": "1601975986800",
       "EU_combinations": 30,
       "image_apply_scope": "PASS_COMPLETE_IMAGE_SCHEMA",
-      "actual_score": "3.90",
-      "score_status": "PENDING_OR_BELOW_TARGET",
+      "actual_score": "5.00",
+      "score_status": "PASS_SCORE_GATE",
       "effective_attribute_status": "PASS_EFFECTIVE_CUSTOM_TEXT",
       "current_platform_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/25019准备/发布后字段核验.json",
       "formal_CDN_pixel_status": "FORMAL_CDN_PIXEL_AND_VISUAL_PASS",
@@ -1577,13 +1577,17 @@
       "categories": [
         "27257"
       ],
-      "source_collection": "COLLECTED",
-      "image_cache": "CONTACT_SHEET_ONLY_NOT_PUBLISHABLE",
+      "source_collection": "CURRENT_SOURCE_COLLECTED",
+      "image_cache": "CURRENT_EXACT_SOURCE_IMAGES_COLLECTED",
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
       "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
-      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+      "source_review": "CURRENT_SOURCE_COLLECTED_COLOR_LABEL_RECONCILIATION_PENDING_NO_CREATE",
+      "source_EU_combinations": 20,
+      "local_issue": "COLOR_LABEL_MISMATCH: HTML Yellow/Green; actual brown/gray-olive photos and original10/11 brown/khaki/grey labels. Reconcile SKU labels before publication, do not invent/recolor.",
+      "preparation_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/当前来源与色码核对.json"
     },
     {
       "style": "2417",
