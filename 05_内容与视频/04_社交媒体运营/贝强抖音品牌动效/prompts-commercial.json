@@ -1,0 +1,53 @@
+{
+  "tool": "builtin image_gen",
+  "date": "2026-10-10",
+  "product_reference": "C:/Users/spq/Desktop/贝强/01_产品资产/01_原始数据包/已整理_BQ029_A025_贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/PNG/PD2A6333.png",
+  "assets": [
+    {
+      "key": "sockHero",
+      "file": "public/sock-hero.png",
+      "prompt": "Use case: product-mockup. Asset: transparent cutout for a premium Chinese knit sock-shoe commercial. Reference image is the exact product identity, not just inspiration. Extract and relight ONE of this all-black high-top slip-on sock shoe, preserving its tall ribbed/wave knitted collar, corrugated knit vamp, rear pull tab, glossy black heel panel, rounded toe and black sole geometry. Preserve all-black color and proportions. Three-quarter side view, toe points left, camera at shoe height, entire shoe including collar and sole visible, centered with generous 12% transparent margin. Premium soft grazing warm studio light reveals black knit texture beautifully, without changing material or adding features. Genuine transparent alpha background; no floor, no cast shadow, no text, no logo, no laces. Photoreal product art direction; no added cushioning layers, mesh vents, or new parts."
+    },
+    {
+      "key": "sockWalk",
+      "prompt": "Use case: ads-marketing. Asset: 9:16 portrait lifestyle keyframe for a premium Chinese knit sock-shoe brand commercial. Reference image defines the shoe identity exactly. A stylish adult woman cropped from waist down, cream loose tailored trousers with cuffs stopping just above the tall sock collar, wearing a MATCHING PAIR of the reference ALL-BLACK high-top ribbed knitted slip-on shoes with black soles and heel panels. One foot planted and one leg stepping forward naturally on pale travertine city pavement, morning sunlight and long elegant shadows, calm minimal architectural arcade in background. Shoe texture and collar clearly visible, feet anatomically natural, shoe silhouette not changed. Camera near knee height, cinematic editorial 50mm perspective, premium realistic tactile knit and warm limestone palette. Composition: legs and shoes in lower 70% of portrait, upper 30% calm softly lit cream wall with genuinely clean negative space for overlay headlines; no cropped toes or soles. No text, no logos, no laces, no color changes, no claims graphics. It is a staged advertising scene, not a testimonial. Beautiful human-use scene rather than a floating shoe.",
+      "file": "public/sock-city.png"
+    },
+    {
+      "key": "sockWorn",
+      "prompt": "Use case: ads-marketing. Asset: high-resolution transparent cutout for a sock-shoe wearing sequence. Reference is exact shoe identity: ONE all-black tall wave-ribbed knit sock shoe with black sole and black rear heel panel, rounded toe pointing left, preserve proportions and details. Show this same shoe FULLY WORN on an adult woman's naturally proportioned foot, lower leg rising vertically from the collar, just a cropped portion of cream trouser cuff above the ankle. Three-quarter side camera aligned to reference. Include only ONE shoe and ONE ankle/lower shin; the foot is entirely inside the shoe, no exposed toes or heel. High collar fits around lower ankle with believable fabric folds, no exaggerated stretch, no material deformation or performance tests. Entire shoe and toe fully visible, leave generous alpha margin on all sides and crop shin neatly at the top of image. Premium warm soft studio light on black knit, true transparent background, no floor, no cast shadow, no labels, no hand, no objects.",
+      "file": "public/sock-worn.png"
+    },
+    {
+      "key": "sockEntry",
+      "alpha": true,
+      "prompt": "Use case: precise-object-edit. Asset: intermediate wearing action, transparent cutout matched to image 1. Image 1 is the finished worn pose and framing to match; image 2 is the exact all-black knit sock shoe identity. Keep the SAME shoe, black sole shape, side camera, toe pointing left, and shoe position/scale as image 1. Change only the wearing pose to a natural intermediate moment: woman is putting the sock shoe on, forefoot already inserted, heel not yet fully seated, ONE natural human hand gently pulling the rear collar/pull-tab upwards to help the heel enter. Foot and ankle remain anatomically believable with restrained fabric movement. The leg can angle slightly backwards to accommodate the motion; cream trouser cuff as in image 1. One shoe, one ankle, one hand, five fingers; no second foot, no text. Keep the shoe's sole on the same horizontal baseline and entire shoe visible. Transparent background without floor or baked shadow, premium warm soft studio light. This is a discreet realistic step of putting on footwear, not a demonstration of hands-free entry. Preserve the product's knit ribs and heel panel, no exaggerated stretch, no new material or changed design. Crop wrist cleanly at right edge if necessary.",
+      "file": "public/sock-entry.png"
+    },
+    {
+      "key": "sockKnit",
+      "alpha": false,
+      "prompt": "Use case: ads-marketing. Asset: macro product texture keyframe for a knit sock-shoe commercial, portrait 9:16. Reference defines the exact black knit texture of this shoe. An extreme close-up of the ALL-BLACK knitted vamp and gently rising wavy ribbed collar, luminous soft raking warm studio light revealing the minute interlocking yarn loops. Actual recognizable curving ribs seen on the reference, black yarn remains black, highlights warm gray, deep but readable shadows. Premium tactile product macro, shallow depth of field but rich detail in central/lower frame, no new fabric, no white threads, no leather, no shiny beads. Fill frame with flowing knit texture, subtle diagonal pattern orientation from lower left to upper right, sculptural and calm. No typography, no logo, no toes, no anatomical diagrams, no artificial technical holes. More product detail than an abstract carpet.",
+      "file": "public/sock-knit.png"
+    },
+    {
+      "key": "sockPark",
+      "file": "public/sock-park.png",
+      "prompt": "Use case: ads-marketing. Asset: 9:16 portrait SECOND lifestyle scene in a premium knit sock-shoe commercial. Reference image 1 defines exact ALL-BLACK high-top ribbed knitted sock shoes with black soles. Reference image 2 defines cream tailored trousers and warm cinematic campaign style ONLY, do NOT copy its pose or camera view. New scene and a substantially different pose: adult woman sits relaxed on a pale limestone park bench, cropped from the waist down, knees bent, ankles loosely crossed forward, BOTH all-black sock shoes entirely visible in side view, one toe points to lower left. Cream tailored trouser cuffs rolled just above the tall knit collar. Camera is wider and higher than the reference, from diagonal side at waist level, a gentle 50mm editorial angle; show a little more of the seat and pale stone path, muted olive trees softly out of focus. Warm dappled afternoon sunlight, natural everyday comfort mood, premium fashion magazine realism. Keep calm upper 35% with pale bright stone wall/blur for headlines, feet in lower half but not bottom-cropped. No new shoe colors, no white soles, no laces, no logos, no text. Human anatomy believable, footwear precisely follows reference product. This is a relaxing worn-use scene, not the same stepping pose with a changed background."
+    }
+  ],
+  "additional_asset": {
+  "key": "sockComfort",
+  "file": "public/sock-comfort.png",
+  "references": [
+    "public/sock-hero.png",
+    "public/sock-worn.png"
+  ],
+  "prompt": "Use case: ads-marketing. Asset: premium 9:16 portrait comfort/detail photograph for a knit sock-shoe commercial. Reference 1 defines exact ALL-BLACK tall knitted sock shoe, reference 2 defines how it fits on the ankle with a cream trouser cuff. Close photograph of the same shoe naturally worn on a woman's foot resting on pale limestone in soft afternoon light. Focus on the ribbed sock-style collar surrounding the ankle and the detailed black knitted vamp, believable relaxed pose, skin and knit beautifully resolved. Frame from lower shin down, crop shin at TOP EDGE of actual photograph rather than a detached floating leg, shoe collar and foot occupying lower 60% / lower right; toe may extend gently toward lower left, sole visible. Upper 30% is very calm cream sunlit plaster wall softly out of focus, genuinely suitable for black headline overlay. Real complete background scene, not a transparent cutout and not a technical diagram. Camera three-quarter side at ankle height, 85mm premium fashion product detail, soft shallow depth, warm restrained cream and black colors. Keep collar, rear pull tab, wave ribs, heel panel and black sole geometry. No new color, no laces, no claims text, no skin marks, no pressure graphics, no exaggerated elasticity or sole deformation. This photograph conveys pleasant everyday wearing atmosphere; it does not represent tested comfort performance."
+},
+  "reference_mapping": {"sockHero":["BQ029_A025/PNG/PD2A6333.png"],"sockWalk":["public/sock-hero.png"],"sockWorn":["public/sock-hero.png"],"sockEntry":["public/sock-worn.png","public/sock-hero.png"],"sockKnit":["public/sock-hero.png"],"sockPark":["public/sock-hero.png","public/sock-city.png"]},
+  "rejected_candidate": {
+    "key": "sockPark",
+    "reason": "Pose was too similar to city scene; replaced with seated pose."
+  }
+}

@@ -1,6 +1,6 @@
 {
   "name": "beiqiang-brand-motion", "version": "0.1.0", "private": true,
-  "scripts": {"studio": "remotion studio src/index.ts --no-open", "render": "remotion render src/index.ts BrandStudy out/贝强_三种风格动效试稿.mp4 --concurrency=2", "render:warm": "remotion render src/index.ts WarmBrandFilm out/贝强_暖白织带品牌片_v2.mp4 --concurrency=2", "render:final": "remotion render src/index.ts BeiqiangBrandFilm out/贝强_把灵感织进每一步_完整版.mp4 --concurrency=2 --pixel-format=yuv420p --color-space=bt709", "check": "tsc --noEmit"},
+  "scripts": {"studio": "remotion studio src/index.ts --no-open", "render": "remotion render src/index.ts BrandStudy out/贝强_三种风格动效试稿.mp4 --concurrency=2", "render:warm": "remotion render src/index.ts WarmBrandFilm out/贝强_暖白织带品牌片_v2.mp4 --concurrency=2", "render:final": "remotion render src/index.ts BeiqiangBrandFilm out/贝强_把灵感织进每一步_完整版.mp4 --concurrency=2 --pixel-format=yuv420p --color-space=bt709", "render:commercial": "remotion render src/index.ts SockShoeCommercial out/贝强_针织袜子鞋_内容重做版.mp4 --concurrency=2 --pixel-format=yuv420p --color-space=bt709", "check": "tsc --noEmit"},
   "dependencies": {"remotion": "4.0.534", "@remotion/cli": "4.0.534", "react": "19.2.0", "react-dom": "19.2.0"},
   "devDependencies": {"typescript": "5.9.3", "@types/react": "19.2.2", "@types/react-dom": "19.2.2"}
 }
