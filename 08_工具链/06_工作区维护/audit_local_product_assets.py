@@ -50,7 +50,7 @@ def main():
                 continue
             archive_index = file.parts.index('99_归档')
             directory_name = file.parts[archive_index+1]
-            command = ['rg','-l','-F',directory_name,'00_总控台','02_Alibaba运营','07_知识库与Skills','08_工具链','.agents','-g','*.md','-g','*.json','-g','*.py','-g','*.ps1']
+            command = ['rg','-l','-F',directory_name,'00_总控台','02_Alibaba运营','07_知识库与Skills','08_工具链','.agents','-g','*.md','-g','*.json','-g','*.py','-g','*.ps1','-g','!**/本地资产唯一性.json']
             if directory_name not in references:
                 search = subprocess.run(command, cwd=ROOT, capture_output=True)
                 if search.returncode not in (0,1):

@@ -59,6 +59,13 @@ def main():
         for value in roles.values():
             urls |= value
     assets = old['assets']
+    audit_path=ROOT/'02_Alibaba运营/05_扩品工程/数据/目录对账/本地资产唯一性.json'
+    reusable={}
+    if audit_path.exists():
+        for item in json.loads(audit_path.read_text(encoding='utf-8')).get('items',[]):
+            target=ROOT/item['canonical']
+            if target.is_file() and hashlib.sha256(target.read_bytes()).hexdigest()==item['sha256']:
+                reusable[item['sha256']]=target
     def fetch(url):
         record = assets.get(url)
         if record and (ROOT/record.get('file','')).is_file():
@@ -77,7 +84,7 @@ def main():
             ext = {'JPEG':'.jpg','PNG':'.png','WEBP':'.webp','GIF':'.gif','AVIF':'.avif'}.get(pic.format)
             if not ext:
                 raise ValueError('Unrecognized image format')
-            path = CACHE/(sha+ext)
+            path = reusable.get(sha) or CACHE/(sha+ext)
             if not path.exists():
                 path.write_bytes(raw)
             return url,{'state':'SAVED','file':path.relative_to(ROOT).as_posix(),'sha256':sha,'bytes':len(raw),'width':pic.width,'height':pic.height}

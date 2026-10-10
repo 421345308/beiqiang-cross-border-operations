@@ -11,6 +11,8 @@ AREA = Path('02_Alibaba运营/02_单品优化记录/商品档案')
 
 def builds(data):
     output = {}
+    cache_path=ROOT/'02_Alibaba运营/05_扩品工程/数据/目录对账/当前素材清单.json'
+    cache=json.loads(cache_path.read_text(encoding='utf-8')) if cache_path.exists() else {}
     sources = {s['id']: s for s in data['sources']}
     links = {}
     for listing in data['listings']:
@@ -54,6 +56,18 @@ def builds(data):
                 snap = json.loads((ROOT/path).read_text(encoding='utf-8'))
                 actual = snap['response']['product']
                 lines += [f"- 正式回读：{ref(path,parent,'完整商品字段')}；UTC {snap['observed_at_utc']}。", f"- 当前正式标题：{actual.get('subject','')}", f"- 审核/展示：{actual.get('status','')} / {actual.get('display','')}；平台类目ID：{actual.get('category_id','')}。", f"- 正式字段原件包含：{', '.join(sorted(actual))}。", '- SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。']
+                group_id=str(actual.get('group_id') or '')
+                group_file=DETAILS.parent/'店内分组'/(group_id+'.json')
+                if group_id and (ROOT/group_file).exists():
+                    group=json.loads((ROOT/group_file).read_text(encoding='utf-8'))['response'].get('product_group',{})
+                    lines.append(f"- 店内分组：{group.get('group_name','')} · {group_id}；{ref(group_file,parent,'平台分组回执')}。")
+                roles=cache.get('products',{}).get(pid,{})
+                if roles:
+                    lines.append('- 本地平台素材：'+ref(cache_path.relative_to(ROOT),parent,'唯一素材索引')+'；图片按内容哈希保存一份，图库/详情/SKU通过索引引用。')
+                    for slot,url in enumerate(actual.get('main_image',{}).get('images',[]),1):
+                        asset=cache.get('assets',{}).get(url,{})
+                        lines.append(f"  - M{slot}：{ref(asset['file'],parent,'本地原图')} · {asset.get('width','')}×{asset.get('height','')}" if asset.get('state')=='SAVED' else f'  - M{slot}：本地图片待补；官方来源 {url}')
+                else:lines.append('- 本地平台图片缓存：待补；正式字段中的官方原URL已保留。')
             else:
                 lines.append('- 当前完整正式回读：待补；历史ID未检出不自动判定删除。')
             lines.append(f"- 本地同步状态：`{listing.get('local_sync',{}).get('state','UNVERIFIED')}`。")
@@ -62,6 +76,9 @@ def builds(data):
                 lines += [f"- 本轮优化：`{opt.get('state','')}`；{opt.get('next_action','')}"]
                 for path in opt.get('evidence', []):
                     lines.append(f'  - 变更证据：{ref(path,parent)}')
+                if opt.get('gallery'):
+                    lines.append(f"- 图库调整：`{opt['gallery'].get('state','')}`。")
+                    for path in opt['gallery'].get('evidence',[]):lines.append(f'  - 图库证据：{ref(path,parent)}')
             lines.append('')
         if not links.get(product['id']):
             lines += ['本地已有商品资料，未关联国际站商品ID；保留未发布身份，不冒充线上商品。', '']
@@ -85,6 +102,7 @@ def sync_formal_references(data):
         if not actual:
             continue
         listing['formal_fields'] = {'file':path.as_posix(), 'at':snap['observed_at_utc'], 'scope':'product.get返回的完整字段；不等于来源或公开视觉验收'}
+        listing['current_platform_fields']={'at':snap['observed_at_utc'],'title':actual.get('subject',''),'keywords':actual.get('keywords',[]),'main_images':actual.get('main_image',{}).get('images',[]),'category_id':actual.get('category_id'),'display':actual.get('display'),'status':actual.get('status'),'url':actual.get('pc_detail_url',''),'scope':'按ID完整product.get正式字段；审核与公开验收分开'}
         listing['local_sync'] = {'state':'FORMAL_SNAPSHOT_SAVED', 'current_fields_file':path.as_posix(), 'next_action':'正式字段已保存在本地；逐款核实物事实/当前素材，并验收本次优化公开呈现'}
         seen += 1
     data.setdefault('catalog_reconciliation',{})['formal_snapshots_saved'] = seen

@@ -10,6 +10,8 @@ import csv
 import html
 import io
 import hashlib
+import os
+import tempfile
 import json
 from pathlib import Path
 from urllib.parse import urlsplit, quote
@@ -33,6 +35,18 @@ def clean(value: object) -> str:
 def view_matches(path: Path, expected: bytes) -> bool:
     """Git may check text out as CRLF on Windows; that is not a content change."""
     return path.exists() and path.read_bytes().replace(b'\r\n',b'\n')==expected.replace(b'\r\n',b'\n')
+
+def write_generated(path: Path,body: bytes) -> None:
+    """Publish a whole derived view atomically while other tasks read it."""
+    if view_matches(path,body):return
+    path.parent.mkdir(parents=True,exist_ok=True)
+    temporary=None
+    try:
+        with tempfile.NamedTemporaryFile(dir=path.parent,prefix='.derived-',suffix='.tmp',delete=False) as stream:
+            stream.write(body);temporary=Path(stream.name)
+        os.replace(temporary,path)
+    finally:
+        if temporary and temporary.exists():temporary.unlink()
 
 def validate(data: dict, root: Path=ROOT) -> list[str]:
     errors=[]
@@ -140,7 +154,8 @@ def build(data: dict) -> dict[Path, bytes]:
             label=link['model']
             links.append(f"[{clean(label)}]({link['url']})" if link.get('url') else f"{clean(label)} `{link['id']}`（历史未返回）")
             obs=link.get('observation',{})
-            details.append({'model':label,'id':link['id'],'url':link.get('url',''),'status':obs.get('audit',''),'display':obs.get('display',''),'observed_at':obs.get('at',''),'source_bound':bool(link.get('bound_source_id')),'scope':obs.get('scope',''),'catalog_presence':link.get('catalog_presence','未核'),'catalog_fields':link.get('catalog_fields',{}),'local_sync':link.get('local_sync',{}).get('state','未核')})
+            current=link.get('current_platform_fields',link.get('catalog_fields',{}))
+            details.append({'model':label,'id':link['id'],'url':current.get('url') or link.get('url',''),'status':current.get('status') or obs.get('audit',''),'display':current.get('display') or obs.get('display',''),'observed_at':current.get('at') or obs.get('at',''),'source_bound':bool(link.get('bound_source_id')),'scope':current.get('scope') or obs.get('scope',''),'catalog_presence':link.get('catalog_presence','未核'),'catalog_fields':current,'local_sync':link.get('local_sync',{}).get('state','未核')})
         md.append(f"| {clean(' / '.join(p['aliases']))} | {src} | {states.get(p['source_state'],p['source_state'])} | {clean(price)} | {'<br>'.join(links) or '未关联正式ID'} | {clean(p['next_action'])} |")
         rendered.append({'id':pid,'aliases':p['aliases'],'source_state':p['source_state'],'source_label':states.get(p['source_state'],p['source_state']),'source':sources.get(p.get('adopted_source_id') or p.get('reference_source_id')),'candidates':[sources[x] for x in p.get('candidate_source_ids',[])],'raw_packages':p.get('raw_packages',[]),'next_action':p['next_action'],'notes':p.get('notes',[]),'listings':details,'evidence':p.get('evidence',[])})
         rendered[-1]['classification']=p.get('classification',{})
@@ -164,7 +179,7 @@ function render(){const q=$('q').value.trim().toLowerCase(),state=$('state').val
 </script></html>'''.replace('PAYLOAD',payload)
     page=page.replace('<span id="count">','<select id="intent" aria-label="采购意图候选分类"><option value="">全部采购意图候选</option></select><span id="count">')
     page=page.replace('const rows=data.filter(p=>',"const intent=$('intent').value;const rows=data.filter(p=>(!intent||(p.classification.local_intent_candidates||[]).includes(intent))&&")
-    page=page.replace('<div class="sources">','<p><small>采购意图候选（待实款核验）：${esc((p.classification.local_intent_candidates||[]).join(" / "))} · 平台类目ID ${esc((p.classification.platform_category_ids||[]).join(" / "))} · 店内分组待核</small></p><p>本地入口：${p.local_assets.files.map(f=>`<a href="${esc(f.url)}">${esc(f.path)}</a>`).join("<br>")||"当前档案待指定"}<br><small>${esc(p.local_assets.state)}</small></p><div class="sources">')
+    page=page.replace('<div class="sources">','<p><small>采购意图（状态 ${esc(p.classification.state)}）：${esc((p.classification.local_intent_candidates||[]).join(" / "))} · 平台类目ID ${esc((p.classification.platform_category_ids||[]).join(" / "))} · 店内分组 ${esc((p.classification.store_groups||[]).map(g=>g.name||g.id).join(" / ")||"接口未返回，待核")}</small></p><p>本地入口：${p.local_assets.files.map(f=>`<a href="${esc(f.url)}">${esc(f.path)}</a>`).join("<br>")||"当前档案待指定"}<br><small>${esc(p.local_assets.state)}</small></p><div class="sources">')
     page=page.replace('${esc(l.scope)}</td>', '${esc(l.scope)}<br>本轮目录：${esc(l.catalog_presence)} · 本地同步：${esc(l.local_sync)}<br>本轮标题：${esc(l.catalog_fields.title||"未检出")}</td>')
     page=page.replace("$('q').oninput=render;", "$('intent').innerHTML+=[...new Set(data.flatMap(p=>p.classification.local_intent_candidates||[]))].sort().map(x=>`<option value=\"${esc(x)}\">${esc(x)}</option>`).join('');$('intent').onchange=render;$('q').oninput=render;")
     output=io.StringIO(newline='')
@@ -192,8 +207,7 @@ def main():
         if args.check:
             if not view_matches(ROOT/path,body): errors.append(f'stale generated view: {path}')
         else:
-            (ROOT/path).parent.mkdir(parents=True,exist_ok=True)
-            (ROOT/path).write_bytes(body)
+            write_generated(ROOT/path,body)
     for e in errors: print(e)
     print(f'{"FAIL" if errors else "PASS"}: {len(data["products"])} groups, {len(data["listings"])} IDs, {len(data["sources"])} shared sources')
     return bool(errors)

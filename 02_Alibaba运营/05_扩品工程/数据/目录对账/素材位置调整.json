@@ -1,0 +1,124 @@
+{
+  "files": [
+    {
+      "path": "00_上架填写表.md",
+      "sha256": "50A5EF3869054698F1F7C6463763840676C64B9756176B1E179EBA3468D332D3"
+    },
+    {
+      "path": "01_主图\\00_main_clean.png",
+      "sha256": "6E0276F22A4D7B1112E86A30825D0440C5F3034D1D3B642CCBF90F2718A9A9A7"
+    },
+    {
+      "path": "01_主图\\02_upper_top.png",
+      "sha256": "B763464A1916CE1D5BA5102186CDCEB73104ED5A9628DD65F47DC2DE03E8FDB1"
+    },
+    {
+      "path": "01_主图\\03_structure_angle.png",
+      "sha256": "64C35EEFBC7D1F3BEC3A7A48F8C12ED10CD61D6420CACABD3E7CFE0BFA696DFC"
+    },
+    {
+      "path": "01_主图\\04_colors.png",
+      "sha256": "604F7C36D1EF451E2C10555CDB245624525D669C1999924528A24F0DA5C72D9C"
+    },
+    {
+      "path": "01_主图\\05_all_black.png",
+      "sha256": "ACDDE4260F4974C0192A75B4CD11BFA32071BD24DCD2B5FB2F9E1BC677DA84B1"
+    },
+    {
+      "path": "01_主图\\06_blue.png",
+      "sha256": "68D99DA7785E63F4BBDA8F31E213B8CAD702E14A59B2924C5F210C25E0FB0A08"
+    },
+    {
+      "path": "02_详情页\\01_overview.png",
+      "sha256": "B92D41C3C591096E5121EC77E702171AAA52C9489B4F2796A0C93F4738D99F28"
+    },
+    {
+      "path": "02_详情页\\02_upper.png",
+      "sha256": "8DB6A6E574725948C69713CFF285942A2341BAFA57CDF79519914B4FC405909D"
+    },
+    {
+      "path": "02_详情页\\03_sole.png",
+      "sha256": "144D6AA4ED29FEB5C5521EFBA033F716E1B4B99B8207EA5F927AC95BE021D669"
+    },
+    {
+      "path": "02_详情页\\04_size.png",
+      "sha256": "CAD322B86A4395ACE7F92B7F03C36AE2A88486A5D1644429879244E9B9CDC979"
+    },
+    {
+      "path": "02_详情页\\05_colors.png",
+      "sha256": "68F4F82101D1C7A15B6DAD036C485E3738B58556EA19D919A6CC86D24EEC77B9"
+    },
+    {
+      "path": "02_详情页\\06_oem.png",
+      "sha256": "8553CFDBE710B6D557A96B3FE051338F2CA788B2D1346756C1A8C9FF8B4BEBBB"
+    },
+    {
+      "path": "04_参考预览\\图片简报.md",
+      "sha256": "83CB1EBC2EBFB5531328F462A6D128968D22D37E4DCC0E3EABE877B86313B426"
+    }
+  ],
+  "state": "MOVED_HASH_VERIFIED",
+  "destination": "01_产品资产/02_可发布素材/00_最终上传/BQ062_116/历史准备_BQ052误编号",
+  "source": "01_产品资产/02_可发布素材/00_最终上传/BQ052_116",
+  "reason": "116的当前本地编号是BQ062；BQ052线上及来源映射是9212，旧准备图保留在116单款目录内",
+  "alias_consolidation_moves": [
+    {
+      "at": "2026-10-10T07:56:55.710214+00:00",
+      "source": "01_产品资产/02_可发布素材/00_最终上传/BQ063_7212",
+      "target": "01_产品资产/02_可发布素材/00_最终上传/BQ028_BISCUIT/历史准备_原BQ063",
+      "hashes_before": {
+        "00_上架填写表.md": "4426adbf9761273bf9bca5c57718e303dbc42e42da0dc25be0d8e491f5e6b2a4",
+        "01_主图/01_main.jpg": "d538b4c84325e877238afa1b7d2ca12465b60e883f99acb9114d4803b9da4d83",
+        "01_主图/02_upper.jpg": "bed5792221ac4d8e4ea3d3b90c8c46dc4736554eb0fc78ec4f5f52b097f14bec",
+        "01_主图/03_structure.jpg": "dd6d2cecf29af07bd52ba8fb4ec6fbd43a72b736eb236408801370f51d436231",
+        "01_主图/04_sole.jpg": "76ccfeecb31a49652540c915d2aa389a3e7eef9566df409b4d3e6f343c775391",
+        "01_主图/05_colors.jpg": "e75dffce20e67d242539f1b6a30e635b5f3d5d08441f5892045b170421ead806",
+        "01_主图/06_scene.jpg": "09159f3c5f9fed4a56fa7d4568a83d4870fc9b11fdc1f6d2e0fb9071d59b133a",
+        "02_详情页/01_product_overview.jpg": "05df84f64e9ff0d1a9299c5af3c82268aa897b26dbc97efe0aebf4c7ab7d496a",
+        "02_详情页/02_specifications.jpg": "a32208f3c93c1cce60ccd39345baf2ef28a873521dd7d45dd7eeaef13dfb5e4b",
+        "02_详情页/03_size_range.jpg": "e5ce8fd581bc3b028dab874e9ab55107edd934408a005893b76db82d92f5e82c",
+        "02_详情页/04_color_options.jpg": "43dedc3f7c89bbd9dfe67ba7227686a0b038eec9f3dc253f8a8a62ccb7729bea",
+        "02_详情页/05_order_support.jpg": "569db93bcb0b9658d9543b262a791da73d3dd8a9e4750f12e45b7ea589a4ce96",
+        "02_详情页/06_oem_inquiry.jpg": "08621667fc290cd717e0f7b220290aee4ca0de7841b14eefc1812c924f231bfc",
+        "03_颜色图/01_black_white.jpg": "0ef051f7ae922ede16cb592ff1fecbc5d329f60b2195d8f7d7d838529443df0e",
+        "03_颜色图/02_apricot.jpg": "51caa031a343b8b679d53250538a961a6f6aab53a76379e66e7a93c913309b7c",
+        "03_颜色图/03_grey.jpg": "d2ef89bd84b3205899a008b803f13b5529efb7867aeb3be977bf52cea1199b1f",
+        "03_颜色图/04_white.jpg": "3c3e895ff14e4ee90becb9a9975c1c451a35d20f5a0fefbcc03c41f3f0699041",
+        "03_颜色图/05_blue.jpg": "13d5e3e09ab575bc98f43d8307a440aea29505d2a50d8c31820b58ca88b3cf99",
+        "03_颜色图/06_black_white_fleece.jpg": "0ef051f7ae922ede16cb592ff1fecbc5d329f60b2195d8f7d7d838529443df0e",
+        "04_参考预览/README_来源与禁用.md": "6df235caf7485e519d6dd13cb223d2eeb622198aabf5cc0a3f675ebd23dd5add",
+        "04_参考预览/source_contact.jpg": "566b82f66d3f9d0791f99e24508a962c69b92091c8c8df6b9fe79e81a32ca2a6",
+        "04_参考预览/source_manifest.txt": "b1b207f0fbad98e168e0afbf87e61ee1d0ee6848c5900fd589acdb554726258e"
+      },
+      "hashes_after_move": {
+        "00_上架填写表.md": "4426adbf9761273bf9bca5c57718e303dbc42e42da0dc25be0d8e491f5e6b2a4",
+        "01_主图/01_main.jpg": "d538b4c84325e877238afa1b7d2ca12465b60e883f99acb9114d4803b9da4d83",
+        "01_主图/02_upper.jpg": "bed5792221ac4d8e4ea3d3b90c8c46dc4736554eb0fc78ec4f5f52b097f14bec",
+        "01_主图/03_structure.jpg": "dd6d2cecf29af07bd52ba8fb4ec6fbd43a72b736eb236408801370f51d436231",
+        "01_主图/04_sole.jpg": "76ccfeecb31a49652540c915d2aa389a3e7eef9566df409b4d3e6f343c775391",
+        "01_主图/05_colors.jpg": "e75dffce20e67d242539f1b6a30e635b5f3d5d08441f5892045b170421ead806",
+        "01_主图/06_scene.jpg": "09159f3c5f9fed4a56fa7d4568a83d4870fc9b11fdc1f6d2e0fb9071d59b133a",
+        "02_详情页/01_product_overview.jpg": "05df84f64e9ff0d1a9299c5af3c82268aa897b26dbc97efe0aebf4c7ab7d496a",
+        "02_详情页/02_specifications.jpg": "a32208f3c93c1cce60ccd39345baf2ef28a873521dd7d45dd7eeaef13dfb5e4b",
+        "02_详情页/03_size_range.jpg": "e5ce8fd581bc3b028dab874e9ab55107edd934408a005893b76db82d92f5e82c",
+        "02_详情页/04_color_options.jpg": "43dedc3f7c89bbd9dfe67ba7227686a0b038eec9f3dc253f8a8a62ccb7729bea",
+        "02_详情页/05_order_support.jpg": "569db93bcb0b9658d9543b262a791da73d3dd8a9e4750f12e45b7ea589a4ce96",
+        "02_详情页/06_oem_inquiry.jpg": "08621667fc290cd717e0f7b220290aee4ca0de7841b14eefc1812c924f231bfc",
+        "03_颜色图/01_black_white.jpg": "0ef051f7ae922ede16cb592ff1fecbc5d329f60b2195d8f7d7d838529443df0e",
+        "03_颜色图/02_apricot.jpg": "51caa031a343b8b679d53250538a961a6f6aab53a76379e66e7a93c913309b7c",
+        "03_颜色图/03_grey.jpg": "d2ef89bd84b3205899a008b803f13b5529efb7867aeb3be977bf52cea1199b1f",
+        "03_颜色图/04_white.jpg": "3c3e895ff14e4ee90becb9a9975c1c451a35d20f5a0fefbcc03c41f3f0699041",
+        "03_颜色图/05_blue.jpg": "13d5e3e09ab575bc98f43d8307a440aea29505d2a50d8c31820b58ca88b3cf99",
+        "03_颜色图/06_black_white_fleece.jpg": "0ef051f7ae922ede16cb592ff1fecbc5d329f60b2195d8f7d7d838529443df0e",
+        "04_参考预览/README_来源与禁用.md": "6df235caf7485e519d6dd13cb223d2eeb622198aabf5cc0a3f675ebd23dd5add",
+        "04_参考预览/source_contact.jpg": "566b82f66d3f9d0791f99e24508a962c69b92091c8c8df6b9fe79e81a32ca2a6",
+        "04_参考预览/source_manifest.txt": "b1b207f0fbad98e168e0afbf87e61ee1d0ee6848c5900fd589acdb554726258e"
+      },
+      "files": 22,
+      "note_added_after_hash_check": "01_产品资产/02_可发布素材/00_最终上传/BQ028_BISCUIT/历史准备_原BQ063/00_上架填写表.md",
+      "references_repaired": [
+        "02_Alibaba运营/05_扩品工程/供应商产品总表/供应商产品查询.html"
+      ]
+    }
+  ]
+}
