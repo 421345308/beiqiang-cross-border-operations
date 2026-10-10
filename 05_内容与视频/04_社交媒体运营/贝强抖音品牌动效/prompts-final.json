@@ -1,0 +1,19 @@
+{
+  "tool": "builtin image_gen",
+  "date": "2026-10-10",
+  "reference": "public/shoe-v2.png",
+  "assets": [
+    {
+      "key": "macro",
+      "file": "macro-final.png",
+      "transparent_background": false,
+      "prompt": "Input image is a material and design reference for a conceptual footwear brand film. Create ONE exquisite vertical 9:16 extreme macro photograph of the ivory shoe's knit textile surface. Camera very close, showing individual delicate interlocking cream yarn fibers following a flowing diagonal raised knit ridge, with subtle soft organic imperfections. Lower 70 percent dominated by the beautiful textile ridge in sharp detailed focus, transitioning into a smooth out-of-focus ivory background in the top 25 percent reserved for typography. Warm cream, honey-gold grazing side light, refined very subtle shadows, physically believable soft textile, shallow depth of field, contemporary high-end editorial CGI feel. No whole shoe, no label, no text, no logo, no factory, no technical diagram, no coarse burlap, no medical or performance claims. The image should feel like an abstract landscape made of the exact fine knitted material of the reference."
+    },
+    {
+      "key": "angle",
+      "file": "shoe-angle-final.png",
+      "transparent_background": true,
+      "prompt": "Use the reference as the exact conceptual shoe design and color guide. Create a second camera view of the SAME unbranded ivory knitted slip-on shoe, preserving its fine knit pattern, curved off-white sculpted sole, simple forefoot and heel pull tab. Camera is three-quarter FRONT view, low and close: rounded toe at lower left foreground, heel receding to upper right. Shoe tilts only slightly, entire shoe and sole fully visible. Soft warm cream studio lighting, natural fine fiber detail, elegant physically plausible silhouette, precise antialiased edge. Isolate only this single shoe on genuinely transparent alpha background. No cloth ribbons, no surroundings, no floor shadow, no fog or glow halo, no text or logos. Square canvas with comfortable 10 percent transparent margin. This is a concept art asset for a brand film, not proof of an actual catalog product."
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="zh-CN">
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>贝强 · 暖白织带品牌片</title>
+<title>贝强 · 把灵感织进每一步</title>
 <style>
 body{margin:0;background:#201f1d;color:#eee9df;font-family:'Microsoft YaHei',sans-serif}
 main{max-width:1120px;margin:32px auto;padding:0 24px}h1{font-size:26px;font-weight:500;letter-spacing:3px}
@@ -15,23 +15,23 @@ small{display:block;color:#a9a296;line-height:1.8;margin-top:20px}
 @media(max-width:720px){section{display:block}video{height:65vh}.side{margin-top:22px}}
 </style>
 <main>
-<h1>贝强 · 暖白织带品牌片</h1>
-<p id="version">第二版 / 20 秒 / 竖屏</p>
+<h1>贝强 · 把灵感织进每一步</h1>
+<p id="version">完整版 / 32 秒 / 竖屏</p>
 <section>
-<video id="film" aria-label="贝强品牌片" controls playsinline preload="auto" poster="out/v2_主视觉.png" src="out/贝强_暖白织带品牌片_v2.mp4"></video>
+<video id="film" aria-label="贝强品牌片" controls playsinline preload="auto" poster="out/贝强_抖音封面.png" src="out/贝强_把灵感织进每一步_完整版.mp4"></video>
 <div class="side">
-<div class="grid"><div><img src="out/v2_开场.png"><span>01 从纤维出发</span></div><div><img src="out/v2_主视觉.png"><span>02 鞋与织带</span></div><div><img src="out/v2_收尾.png"><span>03 留下贝强</span></div></div>
-<div class="notes">织带贯穿开场、鞋形和品牌收尾。<br>鞋、织带、背景各自运动。<br>这一轮比较完整气质与节奏。</div>
-<button onclick="selectV2();film.currentTime=0;film.play()">播放新版</button>
-<a href="out/贝强_暖白织带品牌片_v2.mp4" download>保存新版视频</a>
-<div><button class="secondary" onclick="seekV2(1)">纤维开场</button><button class="secondary" onclick="seekV2(7.2)">鞋形出现</button><button class="secondary" onclick="seekV2(11.7)">细节特写</button><button class="secondary" onclick="seekV2(18.3)">品牌收尾</button></div>
+<div class="grid"><div><img src="out/完整版_开场检查.png"><span>01 鞋形开场</span></div><div><img src="out/贝强_抖音封面.png"><span>02 品牌封面</span></div><div><img src="out/完整版_收尾检查.png"><span>03 品牌收尾</span></div></div>
+<div class="notes">把灵感，织进每一步。<br>六段画面 · 原创配乐 · 公司全称收尾。<br>视频与封面可以分别保存。</div>
+<button onclick="selectV2();film.currentTime=0;film.play()">播放完整版</button>
+<a href="out/贝强_把灵感织进每一步_完整版.mp4" download>保存完整视频</a>
+<div><button class="secondary" onclick="seekV2(1.6)">鞋形开场</button><button class="secondary" onclick="seekV2(5.5)">织纹微距</button><button class="secondary" onclick="seekV2(16.4)">细节特写</button><button class="secondary" onclick="seekV2(30.5)">品牌收尾</button></div>
 <button class="secondary" onclick="film.src='out/贝强_三种风格动效试稿.mp4';film.poster='out/暖白排版.png';document.querySelector('#version').textContent='第一版 / 18 秒 / 三种风格比较';film.play()">回看第一版</button>
-<small>视觉概念试稿；鞋形与收尾文案仍是候选。</small>
+<a class="secondary" href="out/贝强_抖音封面.png" download>保存抖音封面</a><small>发布文案：把灵感，织进每一步。<br>一缕灵感，一种风格。这里是贝强。<br>#贝强鞋业 #鞋履美学 #品牌短片</small>
 </div>
 </section>
 </main>
 <script>
-function selectV2(){if(!film.getAttribute('src').includes('v2')){film.src='out/贝强_暖白织带品牌片_v2.mp4';film.poster='out/v2_主视觉.png'}document.querySelector('#version').textContent='第二版 / 20 秒 / 竖屏'}
+function selectV2(){if(!film.getAttribute('src').includes('完整版')){film.src='out/贝强_把灵感织进每一步_完整版.mp4';film.poster='out/贝强_抖音封面.png'}document.querySelector('#version').textContent='完整版 / 32 秒 / 竖屏'}
 function seekV2(t){selectV2();if(film.readyState<1)film.addEventListener('loadedmetadata',()=>{film.currentTime=t;film.pause()},{once:true});else{film.currentTime=t;film.pause()}}
 </script>
 </html>
