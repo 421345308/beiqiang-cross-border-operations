@@ -1,0 +1,16 @@
+{
+  "product_id": "1601975986800",
+  "observed_at": "2026-10-10T18:14:08.881141+00:00",
+  "status": "FORMAL_LINING_PLUSH_VERIFIED_SCORE_DIAGNOSTIC_STILL_REFERENCES_OLD_VALUE",
+  "actual_score": "3.90",
+  "score_request_id": "21546a1d17916558240113704",
+  "formal_lining": [
+    "Plush"
+  ],
+  "current_full_schema_unmatched": [],
+  "stale_diagnostic_text": {
+    "en": "The title mentions 'Plush Lining', but the attribute list states 'Lining Material: Not specified', which is a conflict.",
+    "zh": "标题中提到“Plush Lining”，但属性列表中却显示“Lining Material: Not specified”，两者存在冲突。"
+  },
+  "scope": "Current product.get and full Schema confirm Plush. Score3.90 still cites old Not specified; completion gate remains below target. Do not re-submit already matched attribute or alter true materials/images to chase cached wording. Next grouped readback after other product preparation."
+}

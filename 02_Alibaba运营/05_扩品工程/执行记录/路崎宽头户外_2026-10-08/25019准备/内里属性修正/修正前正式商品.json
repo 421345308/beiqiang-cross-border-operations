@@ -19,7 +19,7 @@
     "struct_detail_product": true,
     "language": "ENGLISH",
     "is_smart_edit": false,
-    "gmt_modified": "2026-10-11 01:58:10",
+    "gmt_modified": "2026-10-11 01:35:33",
     "product_sku": {
       "skus": [
         {
@@ -782,12 +782,6 @@
     "price_type": "ladder_price",
     "attributes": [
       {
-        "attribute_id": 191290430,
-        "attribute_name": "Lining Material",
-        "value_id": 4141322,
-        "value_name": "Plush"
-      },
-      {
         "attribute_id": 1,
         "attribute_name": "Place of Origin",
         "value_id": -1,
@@ -822,11 +816,17 @@
         "attribute_name": "Upper Material",
         "value_id": -1,
         "value_name": "Not specified"
+      },
+      {
+        "attribute_id": 191290430,
+        "attribute_name": "Lining Material",
+        "value_id": -1,
+        "value_name": "Not specified"
       }
     ],
     "owner_member": 286385890,
     "status": "approved"
   },
-  "request_id": "21501b6717916558060773486",
-  "_trace_id_": "213280d917916558060758011e0fd8"
+  "request_id": "0b51802d17916550034351290",
+  "_trace_id_": "21310a6617916550034311382e0bc3"
 }
