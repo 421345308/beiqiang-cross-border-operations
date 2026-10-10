@@ -1,8 +1,8 @@
 {
-  "observed_at": "2026-10-10T15:24:32.985586+00:00",
+  "observed_at": "2026-10-10T17:42:11.903203+00:00",
   "source_urls": 107,
-  "created_products": 56,
-  "formal_EU_combinations": 1752,
+  "created_products": 57,
+  "formal_EU_combinations": 1782,
   "approved_before_quality_revision": 26,
   "actual_score_5_before_quality_revision": 26,
   "scope_status": "ACTIVE_NOT_COMPLETE",
@@ -16,7 +16,7 @@
     "Do not count source URLs as distinct publishable styles",
     "Do not replay existing or outcome-unknown creates"
   ],
-  "next_work": "107来源目标ACTIVE；56正式ID/1752EU，当前56approved/Y。013唯一ID36EU/18实际图，015唯一ID48EU/19实际图；完整字段及实际评分依当前逐款回执。继续独立款完整素材优化和单次创建；2569仅单款底纹冲突HOLD；浏览器仅异常与批次抽检。 下一款026/026-1：各23实拍已采集并比较，同基型橘色渐变/贴片版本先核目录与家族，优先026；真实Running类目及原生独立图组待核，不重复创建。",
+  "next_work": "107来源目标ACTIVE；57正式ID/1782EU，当前56approved/Y。25019唯一ID30EU/18实际图，015唯一ID48EU/19实际图；026Running一级经营类目拒绝无ID、已验收图组保留，026-1同家族备用不另建；Safety替换SportsOutdoor将下架5现有链接并消耗最后一次修改机会，商业取舍待负责人决定；完整字段及实际评分依当前逐款回执。继续独立款完整素材优化和单次创建；2569仅单款底纹冲突HOLD；浏览器仅异常与批次抽检。",
   "revision_readbacks": 26,
   "revision_scope_pass": 26,
   "revision_pending_review": 0,
@@ -278,6 +278,15 @@
       "score": "5.00",
       "score_status": "PASS_SCORE_GATE",
       "observed_at": "2026-10-10T15:21:37.309817+00:00"
+    },
+    "25019": {
+      "product_id": "1601975986800",
+      "status": "new",
+      "display": "N",
+      "sku_count": 30,
+      "score": null,
+      "score_status": null,
+      "observed_at": "2026-10-10T17:37:13.029603+00:00"
     }
   },
   "current_approved_displayed": 56,
@@ -349,7 +358,9 @@
     "observed_at": "2026-10-08T23:07:23.578830+00:00"
   },
   "browser_acceptance": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
-  "pending_new_approval_styles": [],
+  "pending_new_approval_styles": [
+    "25019"
+  ],
   "public_QA_pass_styles": [
     "2619",
     "028",
@@ -649,15 +660,22 @@
     "formal_CDN_pixel_status": "FORMAL_CDN_PIXEL_AND_VISUAL_PASS"
   },
   "candidate026": {
-    "status": "CURRENT_SOURCE_FAMILY_REVIEW_NOT_PUBLISHED",
+    "status": "HOLD_ACCOUNT_RUNNING_BUSINESS_CATEGORY",
+    "product_id": null,
     "EU_combinations": 30,
-    "readable_images": 23,
-    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/026准备/商品预检与图组策略.json"
+    "image_status": "BUYER_ROLE_REVIEW_PASS",
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/026准备/经营类目拒绝诊断.json"
   },
   "candidate026-1": {
-    "status": "CURRENT_SOURCE_FAMILY_REVIEW_NOT_PUBLISHED",
+    "status": "MERGED_SOURCE_FAMILY_026_NO_EXTRA_CREATE",
+    "family_primary": "026",
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/026-1准备/来源家族与色码核对.json"
+  },
+  "candidate25019": {
+    "status": "CREATED_PENDING_APPROVAL_FULL_ACCEPTANCE",
+    "product_id": "1601975986800",
     "EU_combinations": 30,
-    "readable_images": 23,
-    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/026-1准备/商品预检与图组策略.json"
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/25019准备/发布后字段核验.json",
+    "formal_CDN_pixel_status": "FORMAL_CDN_PIXEL_AND_VISUAL_PASS"
   }
 }

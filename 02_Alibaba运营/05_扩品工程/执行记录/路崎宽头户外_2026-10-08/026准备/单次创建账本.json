@@ -1,0 +1,11 @@
+{
+  "status": "business_rejected",
+  "product_id": null,
+  "refs": {
+    "request_id": "213c934417916509716876603",
+    "trace_id": "2108b42e17916509715527954e0c78",
+    "message": "systemError:isp.system-service-error:PUB_BIZCHECK_CAT_PUB_RESTRICT:The current commodity category is not within the scope of online business category and cannot be delivered. Please go to store management-> Manage company information to complete the business category setting:;",
+    "error": null
+  },
+  "attempted_at": "2026-10-10T16:49:26.103537+00:00"
+}

@@ -1,0 +1,22 @@
+{
+  "style": "25019",
+  "observed_at": "2026-10-10T17:34:49.288779+00:00",
+  "scope_result": "PASS",
+  "expected_sku_count": 30,
+  "exact_color_EU": true,
+  "title": "Winter Ankle Boots Lace Up Plush Lining Padded Collar Stitched Panels Lug Sole Outdoor Casual Shoes Wholesale EU 39-48",
+  "title_bytes": 118,
+  "main_images": 6,
+  "product_details": 4,
+  "company_images": 5,
+  "known_materials": {
+    "upper": "Not specified; suede-like surface appearance is not composition evidence",
+    "outsole": "Not specified; dark/tan tread colors do not prove Rubber or EVA",
+    "midsole": "Not specified",
+    "lining": "Visible plush lining; fiber composition not specified, no cotton/fleece/fur species claim"
+  },
+  "formal_dedup": "Own fresh448ID fullcatalog exactBQ-LQ25019 absent; all six current boot-category hero images actually viewed BQ-LQ017/016/25017/25016/WBF2888/ABH219:25019 has padded plain black collar, round laces in ringeyelets only, triangular/long double-stitched sidepanel, plain forefoot, no sidezip/rearpulltab, dark steppedheel/lugsole with tan segmentedbottompatches, plush tonguelining. Existing boots show gumstud/quarterpatch, zipper or top hook/higher furrycollar, pulltab or quiltedupper.100source cover triage closest12 actually viewed011/1712/2415/K502/K502D/02603/2550/2413/2568/053/868/02602 mostlylowtop;2550highmesh hiking sculptedsole differs. Bounded currentcatalog model/source and boot/nearest hero review; no global all-angle identity or IPclearance.",
+  "payload_sha256": "ae92e3eb7ceb9fa7ffe2886fcee9127c65b58de7136140a41d8a1b4a61b03f21",
+  "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+  "next_action": "One formalcreate, retain ID; readback fields and real pixels."
+}

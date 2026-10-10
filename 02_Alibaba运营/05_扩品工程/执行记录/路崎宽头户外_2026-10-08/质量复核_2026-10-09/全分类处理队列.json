@@ -1,12 +1,15 @@
 {
-  "observed_at": "2026-10-10T15:24:32.985586+00:00",
+  "observed_at": "2026-10-10T17:42:11.903203+00:00",
   "scope": "107 sources; statuses are evidence stages, not 107 independent publishable products",
   "state_counts": {
     "CREATED_APPROVED_Y": 56,
     "EXISTING_SOURCE_MAPPING_DO_NOT_DUPLICATE": 3,
-    "PENDING_STYLE_AND_QUALITY_REVIEW": 43,
+    "PENDING_STYLE_AND_QUALITY_REVIEW": 40,
+    "MERGED_SOURCE_FAMILY_026_NO_EXTRA_CREATE": 1,
+    "HOLD_ACCOUNT_RUNNING_BUSINESS_CATEGORY": 1,
     "MERGED_SOURCE_FAMILY_2585_NO_EXTRA_CREATE": 1,
     "HOLD_SOURCE_PHOTO_IDENTITY": 1,
+    "CREATED_NEW_N": 1,
     "HOLD_ACCOUNT_HIKING_BUSINESS_CATEGORY": 2,
     "HOLD_WITHDRAWN_SOURCE": 1
   },
@@ -487,14 +490,15 @@
       ],
       "source_collection": "CURRENT_SOURCE_COLLECTED",
       "image_cache": "CURRENT_SOURCE_23_FULL_FILES",
-      "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
+      "publication_state": "MERGED_SOURCE_FAMILY_026_NO_EXTRA_CREATE",
       "title_quality": "SOURCE_BASED_DRAFT_PENDING_CATEGORY_AND_FAMILY_REVIEW",
       "image_quality": "PENDING_OWN_NATIVE_ROLE_GENERATION_AND_REVIEW",
       "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
-      "local_issue": "POSSIBLE_SAME_PRODUCT_FAMILY: source photos share identical upper and marketing panels; do not create two links based on suffix. Need distinct clean assets and outsole structure confirmation.",
+      "local_issue": "Same construction/source photograph family; Orange trim/bottompatch colorversion retained internally. Primary026 business category rejected with no ID; alternate no separate creation.",
       "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
       "EU_combinations": 30,
-      "current_source_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/026-1准备/商品预检与图组策略.json"
+      "current_source_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/026-1准备/来源家族与色码核对.json",
+      "family_primary": "026"
     },
     {
       "style": "2598",
@@ -526,15 +530,17 @@
         "27256"
       ],
       "source_collection": "CURRENT_SOURCE_COLLECTED",
-      "image_cache": "CURRENT_SOURCE_23_FULL_FILES",
-      "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
-      "title_quality": "SOURCE_BASED_DRAFT_PENDING_CATEGORY_AND_FAMILY_REVIEW",
-      "image_quality": "PENDING_OWN_NATIVE_ROLE_GENERATION_AND_REVIEW",
+      "image_cache": "CURRENT_SOURCE_AND_FINAL_ASSETS",
+      "publication_state": "HOLD_ACCOUNT_RUNNING_BUSINESS_CATEGORY",
+      "title_quality": "LOCAL_REVIEW_PASS_NOT_YET_FORMAL",
+      "image_quality": "BUYER_ROLE_REVIEW_PASS",
       "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
       "local_issue": "POSSIBLE_SAME_PRODUCT_FAMILY: source photos share identical upper and marketing panels; do not create two links based on suffix. Need distinct clean assets and outsole structure confirmation.",
       "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
       "EU_combinations": 30,
-      "current_source_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/026准备/商品预检与图组策略.json"
+      "current_source_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/026准备/商品预检与图组策略.json",
+      "category_issue_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/026准备/经营类目拒绝诊断.json",
+      "image_review": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/026准备/05_AI候选/整组验收.json"
     },
     {
       "style": "2588-1",
@@ -1264,12 +1270,21 @@
         "27257"
       ],
       "source_collection": "COLLECTED",
-      "image_cache": "CONTACT_SHEET_ONLY_NOT_PUBLISHABLE",
-      "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
-      "title_quality": "PENDING",
-      "image_quality": "PENDING",
+      "image_cache": "CURRENT_SOURCE_AND_FINAL_ASSETS",
+      "publication_state": "CREATED_NEW_N",
+      "title_quality": "LOCAL_REVIEW_PASS_FORMAL_MATCH",
+      "image_quality": "BUYER_ROLE_REVIEW_PASS",
       "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
-      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+      "product_id": "1601975986800",
+      "EU_combinations": 30,
+      "image_apply_scope": "PENDING_APPROVAL_FULL_SCHEMA",
+      "actual_score": null,
+      "score_status": "PENDING_APPROVAL_SCORE",
+      "effective_attribute_status": "PASS_EFFECTIVE_CUSTOM_TEXT",
+      "current_platform_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/25019准备/发布后字段核验.json",
+      "formal_CDN_pixel_status": "FORMAL_CDN_PIXEL_AND_VISUAL_PASS",
+      "formal_CDN_pixel_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/25019准备/正式CDN像素核验.json"
     },
     {
       "style": "25017",

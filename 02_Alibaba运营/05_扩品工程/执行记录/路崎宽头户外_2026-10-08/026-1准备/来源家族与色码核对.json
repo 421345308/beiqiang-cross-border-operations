@@ -1,6 +1,6 @@
 {
   "observed_at": "2026-10-10T15:20:06.975686+00:00",
-  "status": "SOURCE_FAMILY_REVIEW_BEFORE_ANY_CREATE",
+  "status": "SOURCE_FAMILY_026_PRIMARY_026_1_ALTERNATE_NO_EXTRA_CREATE",
   "styles": [
     "026",
     "026-1"
@@ -64,7 +64,7 @@
       "limit": "Fullframe comparison; layout/encoding differences possible. Actual underlying pose/geometry compared visually."
     }
   ],
-  "source_selection": "Prefer026 primarysource; retain026-1 asalternateversion evidence pending canonical/currentcatalog/style review beforecreation. No familymerge or platformID claimed yet.",
+  "source_selection": "026 primary source2411777;026-1 alternate samebase trim version2415152. One family, no second independent ID. Primary026 current payload rejected operating category, no ID. Retain both source images/version differences and source entries.",
   "size_discrepancy": "Both live sourceoptionsEU39-48, while graphic22 says39-45. Currentselectable labels are sourceoffer, not actual inventory; preserve both evidence and compare applicableSOP before formalSKU. Do not generate old39-45 graphic or US/cm conversion.",
   "materials": "Graphic22 specifies贾卡网布upper (Jacquardmesh) and大底EVA; graphic09EVA midsole. Darkbottompatch composition andlining unspecified; do not inferRubber fromcolor or texture. Performancegraphics excluded."
 }

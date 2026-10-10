@@ -1,0 +1,199 @@
+{
+  "style": "026",
+  "status": "HOLD_ACCOUNT_RUNNING_BUSINESS_CATEGORY",
+  "observed_at": "2026-10-10T17:01:10.506086+00:00",
+  "business_rejection": {
+    "msg_code": "isp.system-service-error:PUB_BIZCHECK_CAT_PUB_RESTRICT;",
+    "trace_id": "2108b42e17916509715527954e0c78",
+    "biz_success": false,
+    "message": "systemError:isp.system-service-error:PUB_BIZCHECK_CAT_PUB_RESTRICT:The current commodity category is not within the scope of online business category and cannot be delivered. Please go to store management-> Manage company information to complete the business category setting:;",
+    "request_id": "213c934417916509716876603",
+    "_trace_id_": "2108b42e17916509715527954e0c78"
+  },
+  "product_id": null,
+  "category_path": [
+    {
+      "id": 127734032,
+      "name": "Running Shoes"
+    },
+    {
+      "id": 127726074,
+      "name": "Sports & Outdoor Shoes"
+    },
+    {
+      "id": 202240208,
+      "name": "Sportswear & Outdoor Apparel",
+      "UI_cn_name": "运动户外鞋服及装备"
+    }
+  ],
+  "browser_check": "Normal Chrome reconnect succeeded. Official Manage company info page displayed current main Shoes & Accessories, extra Safety; allows only one extra root and one remaining contract-year change ending2027-06-27. No category save or company submit performed.",
+  "current_roots": [
+    "鞋靴及配饰",
+    "安全用品"
+  ],
+  "change_remaining": 1,
+  "additional_roots_allowed": 1,
+  "contract_until": "2027-06-27",
+  "rule_url": "https://rulechannel.alibaba.com/icbu?type=detail&ruleId=20001935&cId=1277#/rule/detail?ruleId=20001935&cId=1277",
+  "rule_observation": "Official displayed rule section2.2: stock products outside permitted operating roots automatically delisted, product information retained. Therefore replacing Safety affects five current Safety product IDs; do not assume harmless preference update.",
+  "affected_safety_products": [
+    {
+      "id": "1601969913308",
+      "model": "BQ-W262",
+      "status": "approved",
+      "display": "Y",
+      "category_chain": [
+        {
+          "id": "32211",
+          "name": "Safety Shoes",
+          "cn_name": "劳保鞋"
+        },
+        {
+          "id": "202249401",
+          "name": "Foot Protection",
+          "cn_name": "脚防护器具"
+        },
+        {
+          "id": "3007",
+          "name": "Personal Protective Equipment",
+          "cn_name": "个人防护设备"
+        },
+        {
+          "id": "201727804",
+          "name": "Safety",
+          "cn_name": "安全用品"
+        }
+      ],
+      "root_id": "201727804",
+      "root_name": "Safety"
+    },
+    {
+      "id": "1601969951162",
+      "model": "BQ-W266",
+      "status": "approved",
+      "display": "Y",
+      "category_chain": [
+        {
+          "id": "32211",
+          "name": "Safety Shoes",
+          "cn_name": "劳保鞋"
+        },
+        {
+          "id": "202249401",
+          "name": "Foot Protection",
+          "cn_name": "脚防护器具"
+        },
+        {
+          "id": "3007",
+          "name": "Personal Protective Equipment",
+          "cn_name": "个人防护设备"
+        },
+        {
+          "id": "201727804",
+          "name": "Safety",
+          "cn_name": "安全用品"
+        }
+      ],
+      "root_id": "201727804",
+      "root_name": "Safety"
+    },
+    {
+      "id": "1601969707634",
+      "model": "BQ-W266",
+      "status": "approved",
+      "display": "N",
+      "category_chain": [
+        {
+          "id": "32211",
+          "name": "Safety Shoes",
+          "cn_name": "劳保鞋"
+        },
+        {
+          "id": "202249401",
+          "name": "Foot Protection",
+          "cn_name": "脚防护器具"
+        },
+        {
+          "id": "3007",
+          "name": "Personal Protective Equipment",
+          "cn_name": "个人防护设备"
+        },
+        {
+          "id": "201727804",
+          "name": "Safety",
+          "cn_name": "安全用品"
+        }
+      ],
+      "root_id": "201727804",
+      "root_name": "Safety"
+    },
+    {
+      "id": "1601969810495",
+      "model": "BQ-W262",
+      "status": "approved",
+      "display": "N",
+      "category_chain": [
+        {
+          "id": "32211",
+          "name": "Safety Shoes",
+          "cn_name": "劳保鞋"
+        },
+        {
+          "id": "202249401",
+          "name": "Foot Protection",
+          "cn_name": "脚防护器具"
+        },
+        {
+          "id": "3007",
+          "name": "Personal Protective Equipment",
+          "cn_name": "个人防护设备"
+        },
+        {
+          "id": "201727804",
+          "name": "Safety",
+          "cn_name": "安全用品"
+        }
+      ],
+      "root_id": "201727804",
+      "root_name": "Safety"
+    },
+    {
+      "id": "1601969526580",
+      "model": "BQ-W266",
+      "status": "approved",
+      "display": "N",
+      "category_chain": [
+        {
+          "id": "32211",
+          "name": "Safety Shoes",
+          "cn_name": "劳保鞋"
+        },
+        {
+          "id": "202249401",
+          "name": "Foot Protection",
+          "cn_name": "脚防护器具"
+        },
+        {
+          "id": "3007",
+          "name": "Personal Protective Equipment",
+          "cn_name": "个人防护设备"
+        },
+        {
+          "id": "201727804",
+          "name": "Safety",
+          "cn_name": "安全用品"
+        }
+      ],
+      "root_id": "201727804",
+      "root_name": "Safety"
+    }
+  ],
+  "decision": "AWAITING_BUSINESS_SCOPE_DECISION_KEEP_SAFETY_OR_REPLACE_WITH_SPORTS_OUTDOOR",
+  "authorized_unaffected_work": "Continue eligible independent styles; do not change this shoe to unrelated Walking category; exact Running payload/assets remain reusable after business-category setting actually changes.",
+  "evidence": [
+    "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/026准备/正式创建回执.json",
+    "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/026准备/经营一级类目官方回读.json",
+    "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/026准备/经营类目影响范围.json"
+  ],
+  "limits": "Not authorization/browser/TLS failure. No category change, no formal ID, no API readback or score claimed."
+}
