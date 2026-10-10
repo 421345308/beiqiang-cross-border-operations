@@ -1,0 +1,11 @@
+{
+  "style": "011",
+  "observed_at": "2026-10-10",
+  "provider": "public web fallback; Firecrawl callable tools unavailable",
+  "source_price_cny": 55,
+  "observations": [
+    {"url": "https://www.alibaba.com/countrysearch/CN/barefoot-shoes.html", "status": "current indexed category wording; aggregate page is not exact product/composition or comparable price proof", "buyer_terms": ["unisex", "wide toe box", "low top", "lace up", "casual outdoor"], "price_comparable": false},
+    {"url": "https://www.alibaba.com/category/fitness-walking-shoes_127734048_100.html", "status": "current indexed category wording; no exact independent same-style quote found", "buyer_terms": ["men and women", "lace up", "casual", "walking"], "price_comparable": false}
+  ],
+  "decision": "Queries did not yield adequate exactstyle/material/order/trade-term competitor evidence. Keep current own sourcecost55 and authorized50/40/30percent markup at2/50/100pairs using existing6.7487referenceconversion. Use only own verified structure/colors/EU plus owner-confirmed category scope. Do not copy barefoot/zero-drop, performance, material, MOQ, customization promises, prices or search-volume/trend claims."
+}
