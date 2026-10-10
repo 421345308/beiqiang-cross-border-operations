@@ -1,0 +1,28 @@
+{
+  "style": "2569",
+  "observed_at": "2026-10-10T05:54:53.410306+00:00",
+  "status": "HOLD_SOURCE_PHOTO_IDENTITY",
+  "expected_sku_count": 46,
+  "outsole_reference": "01_产品来源原图/10.jpg: distinct outlined central section, forefoot elongated raised oval pieces andrear outlined section",
+  "conflicting_source_photos": [
+    {
+      "file": "01_产品来源原图/04.jpg",
+      "region": "lifted Beige shoe underside",
+      "observation": "Many small irregular tread pieces with no matching outlined central section or elongated forefoot pieces visible; actualsource crop enlarged forreview."
+    },
+    {
+      "file": "01_产品来源原图/11.jpg",
+      "region": "left seated photo, exposed Beige shoe underside",
+      "observation": "Dense small tread differs from original10 construction; enlarged actualsourceinspection."
+    }
+  ],
+  "excluded_roles": [
+    "M3",
+    "M5"
+  ],
+  "image_identity_limit": "Upper silhouette similarity does not resolve differing sole design. Not an assertion that all sourcephotos are false or all colors unsupplied.",
+  "formal_uploads": 0,
+  "formal_create_calls": 0,
+  "product_id": null,
+  "next_action": "Review alternative exact2569photos/sourcepackage; continue other independent styles without replaying or publishing uncertain photos."
+}

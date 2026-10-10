@@ -1,0 +1,346 @@
+{
+  "style": "2569",
+  "tool": "BUILTIN_IMAGE_GEN",
+  "observed_at": "2026-10-10T05:44:31.554221+00:00",
+  "status": "HOLD_SOURCE_PHOTO_IDENTITY",
+  "rows": [
+    {
+      "role": "M1",
+      "buyer_question": "搜索识别",
+      "source_indices": [
+        1
+      ],
+      "source_photo_region": "full",
+      "source_photo_key": "1/full",
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2569准备\\01_产品来源原图\\01.jpg"
+      ],
+      "source_sha256": [
+        "1be1592d3a508a4b359765dd5d0a76cd41827b2ef3ef5bba66f065c7a77f8e5b"
+      ],
+      "source_dimensions": [
+        [
+          800,
+          800
+        ]
+      ],
+      "prompt": "Use case: precise-object-edit. Create a square English B2B footwear photograph by editing the exact attached Luqi2569 source. Preserve the actual photographed shoe geometry, count and pose; long vamp, contrast black wraparound toe bumper, round metal eyelets, actual laces, stitched side panels, heel loop and sole studs. Beige has black/red laces; Green has green laces; Black has black laces; Pink has pink laces. All actual black sole/toe sections must remain. No recoloring, added shoe, hidden reconstruction or invented viewpoint. Remove only external Chinese, arrows, promotional frames and clutter. Restrained white/neutral composition with photograph dominant. No waterproof/grip/barefoot/zero-drop/medical/lightweight/rebound/price/delivery claims. Keep exactly two complete Beige top-view shoes as original. Clean whitebackground/naturalshadow, no text.",
+      "status": "REVIEWED_LOCAL_CANDIDATE_NOT_FORMALLY_ACCEPTED",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2569准备\\05_AI候选\\M1.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-3a4ff26e-de74-408a-ac51-7253535f91a7.png",
+      "output_sha256": "6dd494815a708efc2d0492dfd55fe866a8cb664a8143fb4952dbc3780dffd314"
+    },
+    {
+      "role": "M2",
+      "buyer_question": "绿色米色色码",
+      "source_indices": [
+        3
+      ],
+      "source_photo_region": "full-lower-legs",
+      "source_photo_key": "3/full-lower-legs",
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2569准备\\01_产品来源原图\\03.jpg"
+      ],
+      "source_sha256": [
+        "162c69ee4e4a8994c29ab0d7b6815580efb09b14d9aabcca0c2ea93e19bb8bbf"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1470
+        ]
+      ],
+      "prompt": "Use case: precise-object-edit. Create a square English B2B footwear photograph by editing the exact attached Luqi2569 source. Preserve the actual photographed shoe geometry, count and pose; long vamp, contrast black wraparound toe bumper, round metal eyelets, actual laces, stitched side panels, heel loop and sole studs. Beige has black/red laces; Green has green laces; Black has black laces; Pink has pink laces. All actual black sole/toe sections must remain. No recoloring, added shoe, hidden reconstruction or invented viewpoint. Remove only external Chinese, arrows, promotional frames and clutter. Restrained white/neutral composition with photograph dominant. No waterproof/grip/barefoot/zero-drop/medical/lightweight/rebound/price/delivery claims. Use only original photographed lower legs of standing man and seated woman, retaining exactly two Green shoes and two Beige shoes at actual poses. Original white socks, blackshorts and seat/ground retained; crop above knees, exclude faces/torso/signs. Text exactly: BEIGE AND GREEN; EU 36-48 | Confirm your color-size mix.",
+      "status": "REVIEWED_LOCAL_CANDIDATE_NOT_FORMALLY_ACCEPTED",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2569准备\\05_AI候选\\M2.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-bca41f8a-004e-4a8a-a381-2131cebab83e.png",
+      "output_sha256": "e2f4a2bb710bf57cb4dabf0ea04f849625a6efdb3c1fdf60957cfa2b4fa9f58c"
+    },
+    {
+      "role": "M3",
+      "buyer_question": "米色实际上脚",
+      "source_indices": [
+        4
+      ],
+      "source_photo_region": "full-lower-legs",
+      "source_photo_key": "4/full-lower-legs",
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2569准备\\01_产品来源原图\\04.jpg"
+      ],
+      "source_sha256": [
+        "9df88a7880ddb8b000a14ac13eb6bca49af64e702ce88d26a6d47a3ce88a7787"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1076
+        ]
+      ],
+      "prompt": "Create a square catalog panel from this exact original photograph. Copy the original rectangular lower-half photographic crop showing skirt, grass, bare legs and exactly two Beige shoes, leaving their pose, outlines, perspective and underside rubber tread unchanged. Preserve the original soft photographic resolution. Do not redraw or enhance any shoe, do not add grooves, studs, circles or oval blocks. The lifted shoe's original oval/stone tread pattern must remain identical; the lower shoe must remain partially occluded by grass. Keep this photo as a horizontal rectangle centered on a white square panel, crop face/torso out. Remove original bottom Chinese by excluding it outside the photograph crop. Add ONLY outside the photograph: ON-FOOT PROFILE. No other text.",
+      "status": "EXCLUDED_SOURCE_OUTSOLE_CONFLICT",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2569准备\\05_AI候选\\M3.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-3f032b82-3c54-446f-9cf3-6d39d8b6479f.png",
+      "output_sha256": "a470d2835c4c6666cf3ab38fa8113a34ce2cfb113c9b8ba430f7ce663af5e799"
+    },
+    {
+      "role": "M4",
+      "buyer_question": "包头缝线",
+      "source_indices": [
+        13
+      ],
+      "source_photo_region": "top-pair-photo",
+      "source_photo_key": "13/top-pair-photo",
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2569准备\\01_产品来源原图\\13.jpg"
+      ],
+      "source_sha256": [
+        "2734b56333ab16ec5eab18e5e24d2fe9e5ae71034ffb0e6cbfcb6361560af057"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          2139
+        ]
+      ],
+      "prompt": "Use case: precise-object-edit. Create a square English B2B footwear photograph by editing the exact attached Luqi2569 source. Preserve the actual photographed shoe geometry, count and pose; long vamp, contrast black wraparound toe bumper, round metal eyelets, actual laces, stitched side panels, heel loop and sole studs. Beige has black/red laces; Green has green laces; Black has black laces; Pink has pink laces. All actual black sole/toe sections must remain. No recoloring, added shoe, hidden reconstruction or invented viewpoint. Remove only external Chinese, arrows, promotional frames and clutter. Restrained white/neutral composition with photograph dominant. No waterproof/grip/barefoot/zero-drop/medical/lightweight/rebound/price/delivery claims. Use ONLY the top rectangular photo of two Beige shoes over a vintage telephone. Exclude both bottom photographs and all Chinese. Preserve original cropped/occluded two-shoe boundaries; do not reconstruct collars or hidden shoes. Keep telephone as actual harmless context if needed. Text exactly: TOE AND STITCHING; Contrast toe bumper and stitched upper.",
+      "status": "REVIEWED_LOCAL_CANDIDATE_NOT_FORMALLY_ACCEPTED",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2569准备\\05_AI候选\\M4.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-936751cf-0516-4368-af95-f7ef697179c8.png",
+      "output_sha256": "82fac411ff9297a609fd35f97b10268d70845e9a3c03eec65b9e1cf491834b90"
+    },
+    {
+      "role": "M5",
+      "buyer_question": "配货报价输入",
+      "source_indices": [
+        11
+      ],
+      "source_photo_region": "left-seated-photo",
+      "source_photo_key": "11/left-seated-photo",
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2569准备\\01_产品来源原图\\11.jpg"
+      ],
+      "source_sha256": [
+        "307d46602e1820ca15650c6d68e7c9946f800a299db3a14c6da56c35bc6ba5ed"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1128
+        ]
+      ],
+      "prompt": "Create a square B2B footwear panel using ONLY the LEFT rectangular photograph in the attached collage. Copy the original photo showing the seated woman on wood, preserving the original photograph unchanged. Crop above her knees but keep skirt hem, bare ankles and exactly two Beige shoes. Do not redraw, sharpen or reimagine the shoe/outsole, do not add ring shaped blocks or any new tread pattern. Keep original photographed resolution, exact shoe contours and original pose. Right photograph and all Chinese excluded. White square margins, original partial photographic crop in a rectangle. Add ONLY outside the photo: PLAN YOUR ASSORTMENT; Send color, EU size mix, pair quantity and destination.",
+      "status": "EXCLUDED_SOURCE_OUTSOLE_CONFLICT",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2569准备\\05_AI候选\\M5.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-50ecbcce-3c05-4762-8b85-ff461b81d42b.png",
+      "output_sha256": "8fb86d32f6e8a685dad54a95b8e6df704c5d53dbce91cbdc5f5f4f0757591bc2"
+    },
+    {
+      "role": "D1",
+      "buyer_question": "黑色上脚结构",
+      "source_indices": [
+        13
+      ],
+      "source_photo_region": "lower-left-single-black-photo",
+      "source_photo_key": "13/lower-left-single-black-photo",
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2569准备\\01_产品来源原图\\13.jpg"
+      ],
+      "source_sha256": [
+        "2734b56333ab16ec5eab18e5e24d2fe9e5ae71034ffb0e6cbfcb6361560af057"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          2139
+        ]
+      ],
+      "prompt": "Use case: precise-object-edit. Create a square English B2B footwear photograph by editing the exact attached Luqi2569 source. Preserve the actual photographed shoe geometry, count and pose; long vamp, contrast black wraparound toe bumper, round metal eyelets, actual laces, stitched side panels, heel loop and sole studs. Beige has black/red laces; Green has green laces; Black has black laces; Pink has pink laces. All actual black sole/toe sections must remain. No recoloring, added shoe, hidden reconstruction or invented viewpoint. Remove only external Chinese, arrows, promotional frames and clutter. Restrained white/neutral composition with photograph dominant. No waterproof/grip/barefoot/zero-drop/medical/lightweight/rebound/price/delivery claims. Use ONLY the LOWER LEFT rectangular photograph of the actual single Black shoe, white sock and hand adjusting sock. Exclude top pair and lower-right woman. Preserve one whole photographed shoe and original contours. Text exactly: BLACK UPPER DETAIL; Lace-up construction and stitched panels.",
+      "status": "REVIEWED_LOCAL_CANDIDATE_NOT_FORMALLY_ACCEPTED",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2569准备\\05_AI候选\\D1.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-80b72444-9cb0-4a34-894c-9bd93a48e201.png",
+      "output_sha256": "458192bc9ed0f06b13c8aea50761f50bb7e66006f7802d45fca204388364463e"
+    },
+    {
+      "role": "D2",
+      "buyer_question": "底部真实结构",
+      "source_indices": [
+        10
+      ],
+      "source_photo_region": "full-sole-photo",
+      "source_photo_key": "10/full-sole-photo",
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2569准备\\01_产品来源原图\\10.jpg"
+      ],
+      "source_sha256": [
+        "b8d6d180b4eb22d1955a2c67a7ee08ca10698494877eb302b56916c051ed0eb1"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1552
+        ]
+      ],
+      "prompt": "Use case: precise-object-edit. Create a square English B2B footwear photograph by editing the exact attached Luqi2569 source. Preserve the actual photographed shoe geometry, count and pose; long vamp, contrast black wraparound toe bumper, round metal eyelets, actual laces, stitched side panels, heel loop and sole studs. Beige has black/red laces; Green has green laces; Black has black laces; Pink has pink laces. All actual black sole/toe sections must remain. No recoloring, added shoe, hidden reconstruction or invented viewpoint. Remove only external Chinese, arrows, promotional frames and clutter. Restrained white/neutral composition with photograph dominant. No waterproof/grip/barefoot/zero-drop/medical/lightweight/rebound/price/delivery claims. Keep exactly the one complete actual diagonal black underside sole asoriginal. Remove Chinese/whitearrow/graphics/backgroundtext; preserve every ovalforefootblock, centralstoneshape blocks, outlinedgrooves and rearblocks. No addedorchanged tread. Text exactly: OUTSOLE CONSTRUCTION; Rubber at wear points | Base material unspecified.",
+      "status": "REVIEWED_LOCAL_CANDIDATE_NOT_FORMALLY_ACCEPTED",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2569准备\\05_AI候选\\D2.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-888ba7bc-9396-4d0a-be04-eb8ee3514ac8.png",
+      "output_sha256": "df4450d50428056c94a12fd9ade5e3f342c73d97b98f809d21f6e727415f32f0"
+    },
+    {
+      "role": "D3",
+      "buyer_question": "鞋面系带材料",
+      "source_indices": [
+        6
+      ],
+      "source_photo_region": "lace-macro",
+      "source_photo_key": "6/lace-macro",
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2569准备\\01_产品来源原图\\06.jpg"
+      ],
+      "source_sha256": [
+        "77d2884c08375ab1c76329b8bbe60e43856bb29541a471bfc8d68445517fa0c3"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1383
+        ]
+      ],
+      "prompt": "Use case: precise-object-edit. Create a square English B2B footwear photograph by editing the exact attached Luqi2569 source. Preserve the actual photographed shoe geometry, count and pose; long vamp, contrast black wraparound toe bumper, round metal eyelets, actual laces, stitched side panels, heel loop and sole studs. Beige has black/red laces; Green has green laces; Black has black laces; Pink has pink laces. All actual black sole/toe sections must remain. No recoloring, added shoe, hidden reconstruction or invented viewpoint. Remove only external Chinese, arrows, promotional frames and clutter. Restrained white/neutral composition with photograph dominant. No waterproof/grip/barefoot/zero-drop/medical/lightweight/rebound/price/delivery claims. Use ONLY a close rectangular crop of the visibly photographed Beige lace and roundeyelet region. Preserve exact blackredlaces, metalroundeyelets, straightstitchedpanels and textilelacestrap. Remove arrows/Chinese; do not turn thispartialmacro into whole shoe. Text exactly: UPPER AND CLOSURE; Synthetic leather upper | Lace-up construction.",
+      "status": "PLANNED_NOT_GENERATED",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2569准备\\05_AI候选\\D3.png"
+    },
+    {
+      "role": "D4",
+      "buyer_question": "侧面完整轮廓",
+      "source_indices": [
+        2
+      ],
+      "source_photo_region": "full-side-photo",
+      "source_photo_key": "2/full-side-photo",
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2569准备\\01_产品来源原图\\02.jpg"
+      ],
+      "source_sha256": [
+        "96b869de745c02002aa9adefa0884e5abbb0a044523e35fab835f431dc089a86"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1593
+        ]
+      ],
+      "prompt": "Use case: precise-object-edit. Create a square English B2B footwear photograph by editing the exact attached Luqi2569 source. Preserve the actual photographed shoe geometry, count and pose; long vamp, contrast black wraparound toe bumper, round metal eyelets, actual laces, stitched side panels, heel loop and sole studs. Beige has black/red laces; Green has green laces; Black has black laces; Pink has pink laces. All actual black sole/toe sections must remain. No recoloring, added shoe, hidden reconstruction or invented viewpoint. Remove only external Chinese, arrows, promotional frames and clutter. Restrained white/neutral composition with photograph dominant. No waterproof/grip/barefoot/zero-drop/medical/lightweight/rebound/price/delivery claims. Keep original one complete Beige side/threequarter shoe on rock, blacktoebumper, roundeyelets, rearloop and soleedge. Remove Chinese/decorativeframe/flowers/text. Do not change actualview or introduce outsoleunderside. Text exactly: SIDE PROFILE; Actual photographed panel construction.",
+      "status": "PLANNED_NOT_GENERATED",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2569准备\\05_AI候选\\D4.png"
+    },
+    {
+      "role": "SKU_Black",
+      "buyer_question": "黑色SKU",
+      "source_indices": [
+        13
+      ],
+      "source_photo_region": "lower-right-seated-black-photo",
+      "source_photo_key": "13/lower-right-seated-black-photo",
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2569准备\\01_产品来源原图\\13.jpg"
+      ],
+      "source_sha256": [
+        "2734b56333ab16ec5eab18e5e24d2fe9e5ae71034ffb0e6cbfcb6361560af057"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          2139
+        ]
+      ],
+      "prompt": "Use case: precise-object-edit. Create a square English B2B footwear photograph by editing the exact attached Luqi2569 source. Preserve the actual photographed shoe geometry, count and pose; long vamp, contrast black wraparound toe bumper, round metal eyelets, actual laces, stitched side panels, heel loop and sole studs. Beige has black/red laces; Green has green laces; Black has black laces; Pink has pink laces. All actual black sole/toe sections must remain. No recoloring, added shoe, hidden reconstruction or invented viewpoint. Remove only external Chinese, arrows, promotional frames and clutter. Restrained white/neutral composition with photograph dominant. No waterproof/grip/barefoot/zero-drop/medical/lightweight/rebound/price/delivery claims. Use ONLY LOWER RIGHT rectangular seatedadultwoman photograph, exclude upperpair and lowerleftsinglefoot. Crop to original shorts hem, white socks and exactly two actual Black shoes crossed at originalseatedpose. Preserve one exposedsole/one topview and occlusion; no hiddenreconstruction. Exclude face/torso/text. No text/collage.",
+      "status": "PLANNED_NOT_GENERATED",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2569准备\\05_AI候选\\SKU_Black.png"
+    },
+    {
+      "role": "SKU_Beige",
+      "buyer_question": "米色SKU",
+      "source_indices": [
+        11
+      ],
+      "source_photo_region": "right-standing-beige-photo",
+      "source_photo_key": "11/right-standing-beige-photo",
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2569准备\\01_产品来源原图\\11.jpg"
+      ],
+      "source_sha256": [
+        "307d46602e1820ca15650c6d68e7c9946f800a299db3a14c6da56c35bc6ba5ed"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1128
+        ]
+      ],
+      "prompt": "Use case: precise-object-edit. Create a square English B2B footwear photograph by editing the exact attached Luqi2569 source. Preserve the actual photographed shoe geometry, count and pose; long vamp, contrast black wraparound toe bumper, round metal eyelets, actual laces, stitched side panels, heel loop and sole studs. Beige has black/red laces; Green has green laces; Black has black laces; Pink has pink laces. All actual black sole/toe sections must remain. No recoloring, added shoe, hidden reconstruction or invented viewpoint. Remove only external Chinese, arrows, promotional frames and clutter. Restrained white/neutral composition with photograph dominant. No waterproof/grip/barefoot/zero-drop/medical/lightweight/rebound/price/delivery claims. Use ONLY RIGHT rectangular standingadultwoman photograph, exclude leftseatedphoto. Crop above knees, retain white socks and exactly two Beige shoes with black/redlaces/blacktoebumpers in original standingpose. Exclude face/torso/shoplogos and allotherphotos. No text/collage.",
+      "status": "PLANNED_NOT_GENERATED",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2569准备\\05_AI候选\\SKU_Beige.png"
+    },
+    {
+      "role": "SKU_Green",
+      "buyer_question": "绿色SKU",
+      "source_indices": [
+        9
+      ],
+      "source_photo_region": "full-seated-green-photo",
+      "source_photo_key": "9/full-seated-green-photo",
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2569准备\\01_产品来源原图\\09.jpg"
+      ],
+      "source_sha256": [
+        "df7c9c228a8b4c4628aae7e8c4ac1849de44a76b5d379dd49075dd3cb5b9f716"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1116
+        ]
+      ],
+      "prompt": "Use case: precise-object-edit. Create a square English B2B footwear photograph by editing the exact attached Luqi2569 source. Preserve the actual photographed shoe geometry, count and pose; long vamp, contrast black wraparound toe bumper, round metal eyelets, actual laces, stitched side panels, heel loop and sole studs. Beige has black/red laces; Green has green laces; Black has black laces; Pink has pink laces. All actual black sole/toe sections must remain. No recoloring, added shoe, hidden reconstruction or invented viewpoint. Remove only external Chinese, arrows, promotional frames and clutter. Restrained white/neutral composition with photograph dominant. No waterproof/grip/barefoot/zero-drop/medical/lightweight/rebound/price/delivery claims. Use originalman lowerlegs, blackshorts hem, white socks and exactly two Green shoes at actualseatedpose, with greenlaces/blacktoebumpers/blacksole. Crop face/torso/signs out. Preserve actual shoe outlines and ground. No text/collage.",
+      "status": "PLANNED_NOT_GENERATED",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2569准备\\05_AI候选\\SKU_Green.png"
+    },
+    {
+      "role": "SKU_Pink",
+      "buyer_question": "粉红SKU",
+      "source_indices": [
+        14
+      ],
+      "source_photo_region": "right-pink-feet",
+      "source_photo_key": "14/right-pink-feet",
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2569准备\\01_产品来源原图\\14.jpg"
+      ],
+      "source_sha256": [
+        "3f8097c7535e78a672b55ec8f7a54ae4695e016bba7ec50c7a0f17f17c3b39e2"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1216
+        ]
+      ],
+      "prompt": "Use case: precise-object-edit. Create a square English B2B footwear photograph by editing the exact attached Luqi2569 source. Preserve the actual photographed shoe geometry, count and pose; long vamp, contrast black wraparound toe bumper, round metal eyelets, actual laces, stitched side panels, heel loop and sole studs. Beige has black/red laces; Green has green laces; Black has black laces; Pink has pink laces. All actual black sole/toe sections must remain. No recoloring, added shoe, hidden reconstruction or invented viewpoint. Remove only external Chinese, arrows, promotional frames and clutter. Restrained white/neutral composition with photograph dominant. No waterproof/grip/barefoot/zero-drop/medical/lightweight/rebound/price/delivery claims. Use ONLY photographed RIGHT seatedadult lowerlegs, darktrousers, white socks and exactly two Pink shoes dangling in actualfront-facingpose. Exclude manandallBeigeshoes, faceandtorso. Keep original pinklaces/blacksoleedge/actualeyelets, naturallycropped contours. Do not add sideview or hidden sole. No text/collage.",
+      "status": "PLANNED_NOT_GENERATED",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2569准备\\05_AI候选\\SKU_Pink.png"
+    }
+  ],
+  "limits": "Source13 contains3 distinct actualphotos and source11 contains2, usedas disjointsubphotos. Original2/8/12 same sidephoto reusedgraphics excluded;7 pair/lifestyle repeats excluded;5 genericnonSKU excluded. D3 ispartialmacro notindependentwholeview.",
+  "rejected_attempts": [
+    {
+      "role": "M3",
+      "native_path": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-dfd33812-00f6-49a7-abab-637524b42188.png"
+    },
+    {
+      "role": "M5",
+      "native_path": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-54e869aa-b107-4b4d-8d2e-5e46d55d8e21.png"
+    }
+  ],
+  "next_action": "Exclude original04 andoriginal11left actualphotos because outsole disagrees with original10; do not create/publish this set. Continue independent source styles. Other sourcephotos and current size/material facts remain recorded, not all images or product deemed wrong."
+}
