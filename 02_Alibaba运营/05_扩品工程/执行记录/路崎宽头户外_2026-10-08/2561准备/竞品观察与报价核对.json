@@ -1,0 +1,30 @@
+{
+  "style": "2561",
+  "observed_at": "2026-10-10T11:39:12.900502+00:00",
+  "source_price_cny": 72,
+  "provider": "public web fallback; Firecrawl callable tools unavailable",
+  "observations": [
+    {
+      "url": "https://www.alibaba.co.uk/product-detail/New-Cheap-Brief-Design-Breathable-All_1601935598850.html",
+      "status": "indexed title PU outsole/Mesh/Lace-up; direct fetch cache miss",
+      "buyer_terms": [
+        "men casual shoes",
+        "PU outsole",
+        "mesh",
+        "walking",
+        "lace up"
+      ],
+      "comparable_price": null
+    },
+    {
+      "url": "https://www.alibaba.com/product-detail/High-Quality-Mesh-Air-Fashion-Breathable_1600287477597.html",
+      "status": "indexed mesh/casual sneaker title; indexed outsole PVC differs; direct page no readablecontent",
+      "buyer_terms": [
+        "mesh",
+        "casual sneaker"
+      ],
+      "comparable_price": null
+    }
+  ],
+  "decision": "No verified samegeometry, material, exactquantity/tradeterm/price competitor match. Use current sourcecost72 with authorized50/40/30percent costmarkup for2/50/100pair tiers and6.7487referenceconversion; no copiedperformance claims, marketpricing or searchvolume inference."
+}
