@@ -1,0 +1,22 @@
+{
+  "style": "2416",
+  "observed_at": "2026-10-10T19:35:03.791574+00:00",
+  "scope_result": "PASS",
+  "expected_sku_count": 20,
+  "exact_color_EU": true,
+  "title": "Mens Lace Up Casual Walking Shoes MD Sole Heel Pull Tab Riveted Stitched Side Panels Wholesale Footwear EU 39-48",
+  "title_bytes": 112,
+  "main_images": 6,
+  "product_details": 4,
+  "company_images": 5,
+  "known_materials": {
+    "upper": "CONFLICT_UNRESOLVED: original11仿布/12imitation cloth versus16仿皮/17faux leather; retain Not specified for composition until resolved; continue photographed structure and MDsole route.",
+    "outsole": "MD secondary sole; original11/20, no compound/dual density inferred from translated copy.",
+    "midsole": "Not specified",
+    "lining": "Not specified; comfort wording not composition."
+  },
+  "formal_dedup": "Current fullcatalog451IDs exact BQ-LQ2416/LQ-2416 absent; own current Walking201334413Schema fetched. Own100sourcecovers dHashtriage nearest12 actually viewed038/2597/2558/053/2626/2580/02507/2588-1/2598/25021/2418/2579: different mesh/perforations/stripes/cupsole/pulltabs/highankles. Actual2417 source/nativeformal photos viewed:2416 heelpulltab, central sidepanel seam, broader lower sideband/plaincollar and no browncontinuouscollarband differ. 2418 actualdiagonalwide band/darkbluequarter andmustardheelpatch differ. Bounded source/model/hero comparison; current fullcatalog metadata checked, not globalallangle orIPclearance.",
+  "payload_sha256": "088886681051d40778c3137d6532bbc0d5c308c40c48207a25b9f20695fa459b",
+  "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+  "next_action": "One formalcreate, retain ID; readback fields and real pixels."
+}
