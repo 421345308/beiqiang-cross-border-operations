@@ -1,0 +1,22 @@
+{
+  "style": "2417",
+  "observed_at": "2026-10-10T18:53:09.271953+00:00",
+  "scope_result": "PASS",
+  "expected_sku_count": 20,
+  "exact_color_EU": true,
+  "title": "Lace Up Outdoor Casual Walking Shoes Faux Leather Upper MD Sole Riveted Side Panels Heel Trim Wholesale EU 39-48",
+  "title_bytes": 112,
+  "main_images": 6,
+  "product_details": 4,
+  "company_images": 5,
+  "known_materials": {
+    "upper": "Faux leather; original09/15 仿皮, no genuineleather/fibercomposition inferred",
+    "outsole": "MD secondary sole; original09/17 MD二次底, no EVA/rubbercompound inferred",
+    "midsole": "Not separately specified",
+    "lining": "Soft material/柔软材质 not composition; Not specified"
+  },
+  "formal_dedup": "Current fullcatalog450 IDs exactBQ-LQ2417 absent.100sourcecovers triage nearest12 actually viewed2560/023/02505/2505/018/1628/2559/2593/02601/029/2132/2409:2417 riveted nearlystraight closed sidepanel, plain tongue/roundpatternedlaces, browncollartrim and light segmentedgroovedsole differ from smoothforefoot/multiplethinlines/mesh/toggles/highfurboot/cutout/slipon/shapedblacksole. Source2418 photos actually viewed also differ: diagonalwide light sideband/darkbluequarterpatch/mustardheelpatch absent from2417. Bounded source/model/hero comparison, not all-angle globalidentity/IPclearance.",
+  "payload_sha256": "884cc44f676a15f3916531ff8a2f1e9f3b7f4ecff44506ec9bd5231b6ede6a11",
+  "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+  "next_action": "One formalcreate, retain ID; readback fields and real pixels."
+}
