@@ -1,0 +1,457 @@
+{
+  "status": "BUYER_ROLE_REVIEW_PASS",
+  "observed_at": "2026-10-10T10:33:21.058946+00:00",
+  "roles": [
+    {
+      "role": "M1",
+      "buyer_question": "搜索识别",
+      "source_indices": [
+        1
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2558准备\\01_产品来源原图\\01.jpg"
+      ],
+      "source_sha256": [
+        "79a5594ae6eb5173ea3d566b75f636b10778c0ee44ea2e1e48cbc93e1df4e1df"
+      ],
+      "source_dimensions": [
+        [
+          800,
+          800
+        ]
+      ],
+      "source_region_key": "actual-photo-1",
+      "prompt": "Use case: precise-object-edit. Square English B2B footwear image at least1024x1024. Edit ONLY the actual photographed Luqi2558 shoe pixels, preserving original pose, count, exact fine mesh, segmented forefoot overlay, angular printed side graphic, flecked laces, tongue and heel pull loops, original color-to-white sculpted sole and actual black tread. No new angle, reconstructed hidden geometry, altered seams, added branding or changed material. Preserve original socks or bareankles exactly when included. Remove original Chinese words, frames, arrows, diagrams and unverified performance claims. Neat contemporary product-dominant composition with modest English typography. No medical, waterproof, anti-slip, zero-drop, certification, stock or dispatch claims. Preserve BOTH original White Orange shoes in exact front three-quarter arrangement. Replace blue backdrop with clean pale studio background and natural shadows. No text.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2558准备\\05_AI候选\\M1.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-9cdc5728-4d34-4151-9ce6-aa466c415059.png",
+      "output_sha256": "eb3459e7f1474c17812957d2ecceafffcbbdc19a0606aa1bdd48a441286be589",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T10:33:21.058946+00:00",
+      "review_note": "Compared individually to current2558 photographs: fine mesh, segmented forefoot, angular printed side lines, flecked laces, tongue and heel loops, exact original pose and contrasting sole. D1 mesh macro, D2 actual partial triangular tread, D3 collar heel macro, D4 EU39-46. Three disjoint source30 profiles bind own color. Whole outsole candidate, poor text layout and repeated annotations excluded."
+    },
+    {
+      "role": "M2",
+      "buyer_question": "白绿配色",
+      "source_indices": [
+        16
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2558准备\\01_产品来源原图\\16.jpg"
+      ],
+      "source_sha256": [
+        "7f36d3b72daf85a18b9c4b03e681cc85963dcc2937ebae2e962eb53c1154e5d3"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          893
+        ]
+      ],
+      "source_region_key": "actual-photo-16",
+      "prompt": "Use case: precise-object-edit. Square English B2B footwear image at least1024x1024. Edit ONLY the actual photographed Luqi2558 shoe pixels, preserving original pose, count, exact fine mesh, segmented forefoot overlay, angular printed side graphic, flecked laces, tongue and heel pull loops, original color-to-white sculpted sole and actual black tread. No new angle, reconstructed hidden geometry, altered seams, added branding or changed material. Preserve original socks or bareankles exactly when included. Remove original Chinese words, frames, arrows, diagrams and unverified performance claims. Neat contemporary product-dominant composition with modest English typography. No medical, waterproof, anti-slip, zero-drop, certification, stock or dispatch claims. Preserve TWO original White Green onfoot shoes, white socks and bare lower legs, original redcourt front pose. Crop below knees. Text: WHITE GREEN OPTION; Mesh walking shoes.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2558准备\\05_AI候选\\M2.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-a219d35b-df02-48df-8f88-051f78887e3f.png",
+      "output_sha256": "d2089e185d3c890f529fd3ee297b7ee24b797d90d137de8c52b8441a46c71064",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T10:33:21.058946+00:00",
+      "review_note": "Compared individually to current2558 photographs: fine mesh, segmented forefoot, angular printed side lines, flecked laces, tongue and heel loops, exact original pose and contrasting sole. D1 mesh macro, D2 actual partial triangular tread, D3 collar heel macro, D4 EU39-46. Three disjoint source30 profiles bind own color. Whole outsole candidate, poor text layout and repeated annotations excluded."
+    },
+    {
+      "role": "M3",
+      "buyer_question": "黑灰配色",
+      "source_indices": [
+        29
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2558准备\\01_产品来源原图\\29.jpg"
+      ],
+      "source_sha256": [
+        "29df633af14e0674db7e60a6aa440efa8952818afe58caf9db2b02c1f0bd4270"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1198
+        ]
+      ],
+      "source_region_key": "actual-photo-29",
+      "prompt": "Use case: precise-object-edit. Square English B2B footwear image at least1024x1024. Edit ONLY the actual photographed Luqi2558 shoe pixels, preserving original pose, count, exact fine mesh, segmented forefoot overlay, angular printed side graphic, flecked laces, tongue and heel pull loops, original color-to-white sculpted sole and actual black tread. No new angle, reconstructed hidden geometry, altered seams, added branding or changed material. Preserve original socks or bareankles exactly when included. Remove original Chinese words, frames, arrows, diagrams and unverified performance claims. Neat contemporary product-dominant composition with modest English typography. No medical, waterproof, anti-slip, zero-drop, certification, stock or dispatch claims. Preserve TWO original Black Gray onfoot shoes, white socks and lower bare legs, actual front/side pose on redcourt. Crop below knees. Text: BLACK GRAY OPTION; Lace-up casual shoes.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2558准备\\05_AI候选\\M3.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-305135b7-0c5d-4913-b09a-d63ee1fde880.png",
+      "output_sha256": "422d65b124cfb3d8fa7ff683da413953bff337d18ee11eef59c0964ab7c11916",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T10:33:21.058946+00:00",
+      "review_note": "Compared individually to current2558 photographs: fine mesh, segmented forefoot, angular printed side lines, flecked laces, tongue and heel loops, exact original pose and contrasting sole. D1 mesh macro, D2 actual partial triangular tread, D3 collar heel macro, D4 EU39-46. Three disjoint source30 profiles bind own color. Whole outsole candidate, poor text layout and repeated annotations excluded."
+    },
+    {
+      "role": "M4",
+      "buyer_question": "鞋侧与提拉环",
+      "source_indices": [
+        27
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2558准备\\01_产品来源原图\\27.jpg"
+      ],
+      "source_sha256": [
+        "21f658ce336a4d3b324c1732146523be2615926e449225224ceb21c152edc6b1"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1063
+        ]
+      ],
+      "source_region_key": "actual-photo-27",
+      "prompt": "Use case: precise-object-edit. Square English B2B footwear image at least1024x1024. Edit ONLY the actual photographed Luqi2558 shoe pixels, preserving original pose, count, exact fine mesh, segmented forefoot overlay, angular printed side graphic, flecked laces, tongue and heel pull loops, original color-to-white sculpted sole and actual black tread. No new angle, reconstructed hidden geometry, altered seams, added branding or changed material. Preserve original socks or bareankles exactly when included. Remove original Chinese words, frames, arrows, diagrams and unverified performance claims. Neat contemporary product-dominant composition with modest English typography. No medical, waterproof, anti-slip, zero-drop, certification, stock or dispatch claims. Preserve original SINGLE White Green tilted onfoot shoe, white sock and actual redcourt setting. Crop below knees. Do not add a second shoe. Text: SIDE PROFILE; Tongue and heel pull loops.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2558准备\\05_AI候选\\M4.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-3ec95cc1-212e-4c66-beec-a13d75c8e746.png",
+      "output_sha256": "7ecef53f3a38d0395dacdf217a5975d0f4b8f8a7817e2a65059f851cbc1ca793",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T10:33:21.058946+00:00",
+      "review_note": "Compared individually to current2558 photographs: fine mesh, segmented forefoot, angular printed side lines, flecked laces, tongue and heel loops, exact original pose and contrasting sole. D1 mesh macro, D2 actual partial triangular tread, D3 collar heel macro, D4 EU39-46. Three disjoint source30 profiles bind own color. Whole outsole candidate, poor text layout and repeated annotations excluded."
+    },
+    {
+      "role": "M5",
+      "buyer_question": "询价所需信息",
+      "source_indices": [
+        24
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2558准备\\01_产品来源原图\\24.jpg"
+      ],
+      "source_sha256": [
+        "d77a9d7a43d5cc0228f91df9a043fb6e0e240759b265954ea530a10ea70f54c7"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1372
+        ]
+      ],
+      "source_region_key": "actual-photo-24",
+      "prompt": "Use case: precise-object-edit. Square English B2B footwear image at least1024x1024. Edit ONLY the actual photographed Luqi2558 shoe pixels, preserving original pose, count, exact fine mesh, segmented forefoot overlay, angular printed side graphic, flecked laces, tongue and heel pull loops, original color-to-white sculpted sole and actual black tread. No new angle, reconstructed hidden geometry, altered seams, added branding or changed material. Preserve original socks or bareankles exactly when included. Remove original Chinese words, frames, arrows, diagrams and unverified performance claims. Neat contemporary product-dominant composition with modest English typography. No medical, waterproof, anti-slip, zero-drop, certification, stock or dispatch claims. Preserve TWO original White Orange onfoot shoes, original bareankles/black cuffs, one heel raised exposing actual outsole and other planted. Frame below knees. Text: PLAN YOUR WHOLESALE ORDER; Color + EU size mix + Pair quantity + Destination.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2558准备\\05_AI候选\\M5.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-1b69ddbd-8d58-4ae5-9a22-2a301028e245.png",
+      "output_sha256": "a1b21c6fe2e53b958d91d775d89b436adf4bb88afc346f6fddb014291dddfaa4",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T10:33:21.058946+00:00",
+      "review_note": "Compared individually to current2558 photographs: fine mesh, segmented forefoot, angular printed side lines, flecked laces, tongue and heel loops, exact original pose and contrasting sole. D1 mesh macro, D2 actual partial triangular tread, D3 collar heel macro, D4 EU39-46. Three disjoint source30 profiles bind own color. Whole outsole candidate, poor text layout and repeated annotations excluded."
+    },
+    {
+      "role": "D1",
+      "buyer_question": "网布与鞋带细节",
+      "source_indices": [
+        17
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2558准备\\01_产品来源原图\\17.jpg"
+      ],
+      "source_sha256": [
+        "552eebdcd758a50ed9e76de1825ccbc3b1fe1e355d655a4f678c03aec2aec0e6"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1110
+        ]
+      ],
+      "source_region_key": "actual-photo-17",
+      "prompt": "Use case: precise-object-edit. Square English B2B footwear image at least1024x1024. Edit ONLY the actual photographed Luqi2558 shoe pixels, preserving original pose, count, exact fine mesh, segmented forefoot overlay, angular printed side graphic, flecked laces, tongue and heel pull loops, original color-to-white sculpted sole and actual black tread. No new angle, reconstructed hidden geometry, altered seams, added branding or changed material. Preserve original socks or bareankles exactly when included. Remove original Chinese words, frames, arrows, diagrams and unverified performance claims. Neat contemporary product-dominant composition with modest English typography. No medical, waterproof, anti-slip, zero-drop, certification, stock or dispatch claims. Strict PARTIAL macro crop of the large actual White Orange forefoot mesh and flecked laces on RIGHT of source, not the inset photograph. Remove arrows and original text. Never reconstruct a whole shoe. Text: MESH UPPER DETAIL; Actual photographed texture.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2558准备\\05_AI候选\\D1.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-3c0dfb64-4429-4b15-8228-317d02d7a0f2.png",
+      "output_sha256": "09f731b8a05b473dac71a895015fd89ba50a26e23d12c8c6d1df91cc05a7814b",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T10:33:21.058946+00:00",
+      "review_note": "Compared individually to current2558 photographs: fine mesh, segmented forefoot, angular printed side lines, flecked laces, tongue and heel loops, exact original pose and contrasting sole. D1 mesh macro, D2 actual partial triangular tread, D3 collar heel macro, D4 EU39-46. Three disjoint source30 profiles bind own color. Whole outsole candidate, poor text layout and repeated annotations excluded."
+    },
+    {
+      "role": "D2",
+      "buyer_question": "真实底纹",
+      "source_indices": [
+        5
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2558准备\\01_产品来源原图\\05.jpg"
+      ],
+      "source_sha256": [
+        "2cef117b163e7b8864b8817f9d85e89fecb262d647350cc266c888a172577b86"
+      ],
+      "source_dimensions": [
+        [
+          800,
+          800
+        ]
+      ],
+      "source_region_key": "actual-photo-5",
+      "prompt": "Use case: precise-object-edit. Square English B2B footwear image at least1024x1024. Edit ONLY the actual photographed Luqi2558 shoe pixels, preserving original pose, count, exact fine mesh, segmented forefoot overlay, angular printed side graphic, flecked laces, tongue and heel pull loops, original color-to-white sculpted sole and actual black tread. No new angle, reconstructed hidden geometry, altered seams, added branding or changed material. Preserve original socks or bareankles exactly when included. Remove original Chinese words, frames, arrows, diagrams and unverified performance claims. Neat contemporary product-dominant composition with modest English typography. No medical, waterproof, anti-slip, zero-drop, certification, stock or dispatch claims. Strict PARTIAL macro of actual photographed outsole showing orange sole and dark triangular patterned tread pods. Exclude upper, other shoes, rock insets, arrows and diagrams. Do not invent tread. Text: OUTSOLE DETAIL; MD + Rubber-plastic.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2558准备\\05_AI候选\\D2.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-0c7eae87-627d-4a64-b28c-701a39d4f772.png",
+      "output_sha256": "60202bbaccd4e8bfa93856d13c20e2257d6d36678429f3b71a80ac6187200533",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T10:33:21.058946+00:00",
+      "review_note": "Compared individually to current2558 photographs: fine mesh, segmented forefoot, angular printed side lines, flecked laces, tongue and heel loops, exact original pose and contrasting sole. D1 mesh macro, D2 actual partial triangular tread, D3 collar heel macro, D4 EU39-46. Three disjoint source30 profiles bind own color. Whole outsole candidate, poor text layout and repeated annotations excluded."
+    },
+    {
+      "role": "D3",
+      "buyer_question": "鞋口与后跟细节",
+      "source_indices": [
+        33
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2558准备\\01_产品来源原图\\33.jpg"
+      ],
+      "source_sha256": [
+        "e793bb2ffd75e26687a88aa189a97024764dd86ebd537827f7d85e3f9de7dea9"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1025
+        ]
+      ],
+      "source_region_key": "actual-photo-33",
+      "prompt": "Use case: precise-object-edit. Square English B2B footwear image at least1024x1024. Edit ONLY the actual photographed Luqi2558 shoe pixels, preserving original pose, count, exact fine mesh, segmented forefoot overlay, angular printed side graphic, flecked laces, tongue and heel pull loops, original color-to-white sculpted sole and actual black tread. No new angle, reconstructed hidden geometry, altered seams, added branding or changed material. Preserve original socks or bareankles exactly when included. Remove original Chinese words, frames, arrows, diagrams and unverified performance claims. Neat contemporary product-dominant composition with modest English typography. No medical, waterproof, anti-slip, zero-drop, certification, stock or dispatch claims. Strict PARTIAL crop of original raised Black Gray shoe collar and rear heel on RIGHT. Preserve original bare ankle and hand fragment where present. Exclude planted foreground shoe and torso, no full shoe. Text: COLLAR AND HEEL DETAIL; Actual photographed construction.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2558准备\\05_AI候选\\D3.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-4ccd9d47-5157-4c9e-983e-4a99ad19b727.png",
+      "output_sha256": "290031ef494fa77275b0ceb98b1194a81f0bd0ff8e5a7d28201b1d98aefaa985",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T10:33:21.058946+00:00",
+      "review_note": "Compared individually to current2558 photographs: fine mesh, segmented forefoot, angular printed side lines, flecked laces, tongue and heel loops, exact original pose and contrasting sole. D1 mesh macro, D2 actual partial triangular tread, D3 collar heel macro, D4 EU39-46. Three disjoint source30 profiles bind own color. Whole outsole candidate, poor text layout and repeated annotations excluded."
+    },
+    {
+      "role": "D4",
+      "buyer_question": "EU尺码配比",
+      "source_indices": [
+        13
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2558准备\\01_产品来源原图\\13.jpg"
+      ],
+      "source_sha256": [
+        "a6045d9c509d8f61413b9a03d7f3dc6fde8e2b15ba62ba6d0a7f8da50ac234a7"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1068
+        ]
+      ],
+      "source_region_key": "actual-photo-13",
+      "prompt": "Use case: precise-object-edit. Square English B2B footwear image at least1024x1024. Edit ONLY the actual photographed Luqi2558 shoe pixels, preserving original pose, count, exact fine mesh, segmented forefoot overlay, angular printed side graphic, flecked laces, tongue and heel pull loops, original color-to-white sculpted sole and actual black tread. No new angle, reconstructed hidden geometry, altered seams, added branding or changed material. Preserve original socks or bareankles exactly when included. Remove original Chinese words, frames, arrows, diagrams and unverified performance claims. Neat contemporary product-dominant composition with modest English typography. No medical, waterproof, anti-slip, zero-drop, certification, stock or dispatch claims. Preserve TWO original White Orange onfoot shoes and original bareankles/blackpants, side/front pose on redcourt, crop below knees. Text: EU 39-46; Send your color-size mix for order confirmation. No US or centimeter conversion.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2558准备\\05_AI候选\\D4.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-f2369451-eaa4-4902-8630-9f0bee95c685.png",
+      "output_sha256": "2eeb2fb88fa645a4c89fd866a6f2d6536491d8f459c36e9b3d0f42986a0432e9",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T10:33:21.058946+00:00",
+      "review_note": "Compared individually to current2558 photographs: fine mesh, segmented forefoot, angular printed side lines, flecked laces, tongue and heel loops, exact original pose and contrasting sole. D1 mesh macro, D2 actual partial triangular tread, D3 collar heel macro, D4 EU39-46. Three disjoint source30 profiles bind own color. Whole outsole candidate, poor text layout and repeated annotations excluded."
+    },
+    {
+      "role": "SKU_Black Gray",
+      "buyer_question": "黑灰SKU绑定",
+      "source_indices": [
+        30
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2558准备\\01_产品来源原图\\30.jpg"
+      ],
+      "source_sha256": [
+        "dee7ad50d4af0ff3a89bc3da1863b8b4be7d9a99c2b8c0063c575c39d75cb70f"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          870
+        ]
+      ],
+      "source_region_key": "SKU_Black Gray",
+      "prompt": "Use case: precise-object-edit. Square English B2B footwear image at least1024x1024. Edit ONLY the actual photographed Luqi2558 shoe pixels, preserving original pose, count, exact fine mesh, segmented forefoot overlay, angular printed side graphic, flecked laces, tongue and heel pull loops, original color-to-white sculpted sole and actual black tread. No new angle, reconstructed hidden geometry, altered seams, added branding or changed material. Preserve original socks or bareankles exactly when included. Remove original Chinese words, frames, arrows, diagrams and unverified performance claims. Neat contemporary product-dominant composition with modest English typography. No medical, waterproof, anti-slip, zero-drop, certification, stock or dispatch claims. Extract ONLY original single Black Gray shoe at LOWER RIGHT of source30, identical side profile facing left. Exact black fine mesh, gray angular side lines, black forefoot sole blending white heel. Clean white studio background with shadow. No other shoe, label or text.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2558准备\\05_AI候选\\SKU_Black_Gray.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-778e3ed6-9edd-4944-b34f-84ea96dbb582.png",
+      "output_sha256": "2e2bd819184b72263240a6c19b4fb714a0933af699d2b381f4e05d20b9733902",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T10:33:21.058946+00:00",
+      "review_note": "Compared individually to current2558 photographs: fine mesh, segmented forefoot, angular printed side lines, flecked laces, tongue and heel loops, exact original pose and contrasting sole. D1 mesh macro, D2 actual partial triangular tread, D3 collar heel macro, D4 EU39-46. Three disjoint source30 profiles bind own color. Whole outsole candidate, poor text layout and repeated annotations excluded."
+    },
+    {
+      "role": "SKU_White Orange",
+      "buyer_question": "白桔SKU绑定",
+      "source_indices": [
+        30
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2558准备\\01_产品来源原图\\30.jpg"
+      ],
+      "source_sha256": [
+        "dee7ad50d4af0ff3a89bc3da1863b8b4be7d9a99c2b8c0063c575c39d75cb70f"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          870
+        ]
+      ],
+      "source_region_key": "SKU_White Orange",
+      "prompt": "Use case: precise-object-edit. Square English B2B footwear image at least1024x1024. Edit ONLY the actual photographed Luqi2558 shoe pixels, preserving original pose, count, exact fine mesh, segmented forefoot overlay, angular printed side graphic, flecked laces, tongue and heel pull loops, original color-to-white sculpted sole and actual black tread. No new angle, reconstructed hidden geometry, altered seams, added branding or changed material. Preserve original socks or bareankles exactly when included. Remove original Chinese words, frames, arrows, diagrams and unverified performance claims. Neat contemporary product-dominant composition with modest English typography. No medical, waterproof, anti-slip, zero-drop, certification, stock or dispatch claims. Extract ONLY original single White Orange shoe at UPPER MIDDLE of source30, identical side profile facing left. White fine mesh, black angular side graphic/heel, orange lining/tongue loop, orange forefoot sole blending white heel. White studio background and shadow. No other shoe, label or text.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2558准备\\05_AI候选\\SKU_White_Orange.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-0628bc79-35e6-4b0d-a9a4-b502d1c58efd.png",
+      "output_sha256": "ade44d74f8f256e19c58f2bea9702a2b79679bee74586d0fff4d4173dc02dabf",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T10:33:21.058946+00:00",
+      "review_note": "Compared individually to current2558 photographs: fine mesh, segmented forefoot, angular printed side lines, flecked laces, tongue and heel loops, exact original pose and contrasting sole. D1 mesh macro, D2 actual partial triangular tread, D3 collar heel macro, D4 EU39-46. Three disjoint source30 profiles bind own color. Whole outsole candidate, poor text layout and repeated annotations excluded."
+    },
+    {
+      "role": "SKU_White Green",
+      "buyer_question": "白绿SKU绑定",
+      "source_indices": [
+        30
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2558准备\\01_产品来源原图\\30.jpg"
+      ],
+      "source_sha256": [
+        "dee7ad50d4af0ff3a89bc3da1863b8b4be7d9a99c2b8c0063c575c39d75cb70f"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          870
+        ]
+      ],
+      "source_region_key": "SKU_White Green",
+      "prompt": "Use case: precise-object-edit. Square English B2B footwear image at least1024x1024. Edit ONLY the actual photographed Luqi2558 shoe pixels, preserving original pose, count, exact fine mesh, segmented forefoot overlay, angular printed side graphic, flecked laces, tongue and heel pull loops, original color-to-white sculpted sole and actual black tread. No new angle, reconstructed hidden geometry, altered seams, added branding or changed material. Preserve original socks or bareankles exactly when included. Remove original Chinese words, frames, arrows, diagrams and unverified performance claims. Neat contemporary product-dominant composition with modest English typography. No medical, waterproof, anti-slip, zero-drop, certification, stock or dispatch claims. Extract ONLY original single White Green shoe at LOWER LEFT of source30, identical side profile facing left. White fine mesh, olive green angular side graphics/heel/lining, green frontsole blending white heel. White studio background and shadow. No other shoe, label or text.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2558准备\\05_AI候选\\SKU_White_Green.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-2947cef5-33c7-4b35-82f8-b1d719347593.png",
+      "output_sha256": "c4eb59410ca560724d1584458372b5e1e73f28505584656e94129d68894dd665",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T10:33:21.058946+00:00",
+      "review_note": "Compared individually to current2558 photographs: fine mesh, segmented forefoot, angular printed side lines, flecked laces, tongue and heel loops, exact original pose and contrasting sole. D1 mesh macro, D2 actual partial triangular tread, D3 collar heel macro, D4 EU39-46. Three disjoint source30 profiles bind own color. Whole outsole candidate, poor text layout and repeated annotations excluded."
+    }
+  ],
+  "M6": {
+    "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎新品_2026-10-07\\图片修复\\F.png",
+    "bank_url": "https://sc04.alicdn.com/kf/S6c8cb1d46d8c4b018cf07f5cab50c1adi/286385890/S6c8cb1d46d8c4b018cf07f5cab50c1adi.png",
+    "file_id": "30149993323"
+  },
+  "company": [
+    {
+      "role": "C1",
+      "usage": "ordinary_HTML_company_context",
+      "official_url": "https://sc04.alicdn.com/kf/Ha8c1682092424e778eadf945763e79daU/286385890/Ha8c1682092424e778eadf945763e79daU.jpg",
+      "file_id": "33355885480",
+      "local_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\266_quality_audit\\originals\\C01_factory_profile.jpg",
+      "sha256": "23a34c8e425ae286d190ac1eb587c93e9a87421fdf490ec48f260e53e316149c",
+      "local_hash_verified": true,
+      "pixel_edit": false
+    },
+    {
+      "role": "C2",
+      "usage": "ordinary_HTML_company_context",
+      "official_url": "https://sc04.alicdn.com/kf/H496f7579171f4370a1d47c3adf30001bK/286385890/H496f7579171f4370a1d47c3adf30001bK.jpg",
+      "file_id": "33358392283",
+      "local_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\266_quality_audit\\originals\\C02_oem_odm_workflow.jpg",
+      "sha256": "66624253f1d95ec68e060d792f13c61943c86f7d61e763167a0a2eb1146300f5",
+      "local_hash_verified": true,
+      "pixel_edit": false
+    },
+    {
+      "role": "C3",
+      "usage": "ordinary_HTML_company_context",
+      "official_url": "https://sc04.alicdn.com/kf/H36e700f5c3ee447a80c035d8ae7521d9a/286385890/H36e700f5c3ee447a80c035d8ae7521d9a.jpg",
+      "file_id": "33355813301",
+      "local_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\266_quality_audit\\originals\\C03_production_process.jpg",
+      "sha256": "3ae00d6398224dd7021ed2a266584bccb77b741b31fa9c72ca8ad66ab443f683",
+      "local_hash_verified": true,
+      "pixel_edit": false
+    },
+    {
+      "role": "C4",
+      "usage": "ordinary_HTML_company_context",
+      "official_url": "https://sc04.alicdn.com/kf/H9f32c7ecea0f4d25bc5ddc9cd04c1e5dK/286385890/H9f32c7ecea0f4d25bc5ddc9cd04c1e5dK.jpg",
+      "file_id": "33358345636",
+      "local_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\266_quality_audit\\originals\\C04_quality_control.jpg",
+      "sha256": "f32d682a7055a3e44f91eb074b678507beca63967da5565de8997f582a651bf5",
+      "local_hash_verified": true,
+      "pixel_edit": false
+    },
+    {
+      "role": "C5",
+      "usage": "ordinary_HTML_company_context",
+      "official_url": "https://sc04.alicdn.com/kf/H5f71c3cfb4064b51bb458d0a786cb402R/286385890/H5f71c3cfb4064b51bb458d0a786cb402R.jpg",
+      "file_id": "33358440083",
+      "local_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\266_quality_audit\\originals\\C05_packing_inquiry.jpg",
+      "sha256": "d0f3916d920a9ec46fd822317a9cd3c684b6b7d60631208475fa2be138d05bc2",
+      "local_hash_verified": true,
+      "pixel_edit": false
+    }
+  ],
+  "excluded_candidates": [
+    {
+      "role": "D2",
+      "native_path": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-cbde3072-ea3d-4709-b2e2-1a7db02188db.png",
+      "reason": "整鞋画面，未满足局部底纹角色",
+      "status": "REJECTED_NOT_UPLOADED"
+    },
+    {
+      "role": "D2",
+      "native_path": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-fa487942-811c-43cd-8cf2-0752bcf9c7f0.png",
+      "reason": "文字跨底纹，阅读不清",
+      "status": "REJECTED_NOT_UPLOADED"
+    },
+    {
+      "role": "M4",
+      "native_path": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-83ffc8f0-ce73-4fb2-817c-ced3245eb07f.png",
+      "reason": "两处相同提拉环标注重复",
+      "status": "REJECTED_NOT_UPLOADED"
+    }
+  ],
+  "complete_set_visual_review_at": "2026-10-10T10:34:20.464461+00:00",
+  "complete_set_note": "Nine independent main/detail photographs and three disjoint source30 single-color profiles plus real factoryM6 and five company panels compared visually. Photograph pose, fine mesh/angular graphics/triangular tread, BlackGray/WhiteOrange/WhiteGreen and EU39-46, source tread and independent main/detail roles checked. No public webpage rendering proof."
+}

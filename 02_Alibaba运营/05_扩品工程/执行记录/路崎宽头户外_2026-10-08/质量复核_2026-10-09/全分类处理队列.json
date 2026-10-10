@@ -1,12 +1,13 @@
 {
-  "observed_at": "2026-10-10T10:10:52.969149+00:00",
+  "observed_at": "2026-10-10T10:53:48.171825+00:00",
   "scope": "107 sources; statuses are evidence stages, not 107 independent publishable products",
   "state_counts": {
     "CREATED_APPROVED_Y": 48,
     "EXISTING_SOURCE_MAPPING_DO_NOT_DUPLICATE": 3,
-    "PENDING_STYLE_AND_QUALITY_REVIEW": 51,
+    "PENDING_STYLE_AND_QUALITY_REVIEW": 50,
     "MERGED_SOURCE_FAMILY_2585_NO_EXTRA_CREATE": 1,
     "HOLD_SOURCE_PHOTO_IDENTITY": 1,
+    "CREATED_NEW_N": 1,
     "HOLD_ACCOUNT_HIKING_BUSINESS_CATEGORY": 2,
     "HOLD_WITHDRAWN_SOURCE": 1
   },
@@ -669,8 +670,8 @@
       "product_id": "1601975774322",
       "EU_combinations": 39,
       "image_apply_scope": "PASS_COMPLETE_IMAGE_SCHEMA",
-      "actual_score": null,
-      "score_status": "PENDING_OR_BELOW_TARGET",
+      "actual_score": "5.00",
+      "score_status": "PASS_SCORE_GATE",
       "effective_attribute_status": "PASS_EFFECTIVE_CUSTOM_TEXT",
       "current_platform_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/027准备/发布后字段核验.json",
       "formal_CDN_pixel_status": "FORMAL_CDN_PIXEL_AND_VISUAL_PASS",
@@ -1111,12 +1112,16 @@
         "27256"
       ],
       "source_collection": "COLLECTED",
-      "image_cache": "CONTACT_SHEET_ONLY_NOT_PUBLISHABLE",
+      "image_cache": "CURRENT_READABLE_SOURCE_IMAGES",
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
-      "title_quality": "PENDING",
-      "image_quality": "PENDING",
+      "title_quality": "SOURCE_BASED_DRAFT_PENDING_CURRENT_SCHEMA",
+      "image_quality": "PENDING_NATIVE_GENERATION_AND_ROLE_REVIEW",
       "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
-      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+      "current_source_images": 19,
+      "current_source_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2559准备/当前来源色码材料核对.json",
+      "EU_combinations": 20,
+      "next_action": "Generate11source-based roles; individually inspect plus completeset. FetchcurrentSchema/catalog before officialupload/create. Current39–48 versus static39–44 retained; compositionunknown."
     },
     {
       "style": "2558",
@@ -1125,16 +1130,24 @@
         "27256"
       ],
       "source_collection": "COLLECTED",
-      "image_cache": "CURRENT_READABLE_SOURCE_IMAGES",
-      "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
-      "title_quality": "SOURCE_BASED_DRAFT_PENDING_CURRENT_SCHEMA",
-      "image_quality": "PENDING_NATIVE_GENERATION_AND_ROLE_REVIEW",
+      "image_cache": "CURRENT_SOURCE_AND_FINAL_ASSETS",
+      "publication_state": "CREATED_NEW_N",
+      "title_quality": "LOCAL_REVIEW_PASS_FORMAL_MATCH",
+      "image_quality": "BUYER_ROLE_REVIEW_PASS",
       "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
       "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
       "current_source_images": 33,
       "current_source_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2558准备/当前来源色码材料核对.json",
       "EU_combinations": 24,
-      "next_action": "Generate12 own source-based roles; inspect each plus complete set before officialupload/create. CurrentHTML EU39–46 and static39–45 discrepancy explicitly recorded; bottom MD+Rubber-plastic only."
+      "next_action": "Generate12 own source-based roles; inspect each plus complete set before officialupload/create. CurrentHTML EU39–46 and static39–45 discrepancy explicitly recorded; bottom MD+Rubber-plastic only.",
+      "product_id": "1601975843125",
+      "image_apply_scope": "PENDING_APPROVAL_FULL_SCHEMA",
+      "actual_score": null,
+      "score_status": "PENDING_APPROVAL_SCORE",
+      "effective_attribute_status": "PASS_EFFECTIVE_CUSTOM_TEXT",
+      "current_platform_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2558准备/发布后字段核验.json",
+      "formal_CDN_pixel_status": "FORMAL_CDN_PIXEL_AND_VISUAL_PASS",
+      "formal_CDN_pixel_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2558准备/正式CDN像素核验.json"
     },
     {
       "style": "2560",
