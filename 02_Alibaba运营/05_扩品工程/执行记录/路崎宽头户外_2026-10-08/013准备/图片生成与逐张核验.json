@@ -1,0 +1,383 @@
+{
+  "style": "013",
+  "tool": "BUILTIN_IMAGE_GEN_PLUS_UNCHANGED_REVIEWED_ORIGINAL",
+  "observed_at": "2026-10-10T13:59:48.888100+00:00",
+  "status": "ALL_12_LOCAL_ROLES_VISUALLY_ACCEPTED",
+  "rows": [
+    {
+      "role": "M1",
+      "buyer_question": "搜索识别",
+      "source_indices": [
+        24
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\013准备\\01_产品来源原图\\24.jpg"
+      ],
+      "source_sha256": [
+        "50abe11f764fa0237a9ea6aad515e4976f1074da84cfc0b0a8f8d2b899d55106"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          760
+        ]
+      ],
+      "source_region_key": "actual-photo-24",
+      "prompt": "Use case: precise-object-edit. Square B2B footwear photo,1024px or more. Edit ONLY the actual attached Luqi013 photograph. Preserve photographed shoe number, pose, silhouette and exact original panel geometry: broad rounded bordered forefoot, diagonally stitched textured sidepanel, low collar, original togglecord lacing with round lock and original cord endstop, shallow oval-block tread. No new front/rear pulltabs, patterned lacewebbing, dimpled panels, added seams or hidden geometry. Black remains allblack with blacksole; Gray gray with gray/taupe borders and blacksole; Beige pale beige panels with taupe borders and BROWN sole. Preserve original hands/rolled trousers/bare ankles if present; no new socks. Remove Chinese wording/arrows/borders and unsupported supplier performance labels. Only render requested English text after TEXT below, never render internal instructions. No medical/waterproof/zero-drop/barefoot/anti-slip/testedperformance/stock/dispatch claims. Keep BOTH original Beige studio shoes exactly as photographed, no text.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\013准备\\05_AI候选\\M1.jpg",
+      "selected_original_unchanged": true,
+      "native_output": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\013准备\\01_产品来源原图\\24.jpg",
+      "output_sha256": "50abe11f764fa0237a9ea6aad515e4976f1074da84cfc0b0a8f8d2b899d55106",
+      "output_dimensions": [
+        790,
+        760
+      ],
+      "review_at": "2026-10-10T13:59:48.888100+00:00",
+      "review_note": "Individually compared to actual013 photographs: broad bordered forefoot, diagonally stitched sidepanels, low collar, togglecord with roundlock/original endstop and oval-block tread. No front/rear pulltabs. Black/Gray blacksole, Beige brownsole. M1 original24 unchanged790x760px, already clean readable studio pair. Eleven native info/color edits; details retain actual photographed partial regions, no new whole-shoe/hidden geometry. Three disjoint singleprofiles from source06 have about320x130effectivepixels; visible geometry/colors, not hidden fine construction evidence. Microfiber upper06/07 and Rubber outsole06/10; midsole/lining unknown. Source dimensions and native aspect ratios retained without geometric stretching."
+    },
+    {
+      "role": "M2",
+      "buyer_question": "黑色实拍",
+      "source_indices": [
+        15
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\013准备\\01_产品来源原图\\15.jpg"
+      ],
+      "source_sha256": [
+        "b0c57b7866c9d7ba80b9dfc7934e9c2471778951a6c2349a12effcd5321518e4"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1070
+        ]
+      ],
+      "source_region_key": "actual-photo-15",
+      "prompt": "Use case: precise-object-edit. Square B2B footwear photo,1024px or more. Edit ONLY the actual attached Luqi013 photograph. Preserve photographed shoe number, pose, silhouette and exact original panel geometry: broad rounded bordered forefoot, diagonally stitched textured sidepanel, low collar, original togglecord lacing with round lock and original cord endstop, shallow oval-block tread. No new front/rear pulltabs, patterned lacewebbing, dimpled panels, added seams or hidden geometry. Black remains allblack with blacksole; Gray gray with gray/taupe borders and blacksole; Beige pale beige panels with taupe borders and BROWN sole. Preserve original hands/rolled trousers/bare ankles if present; no new socks. Remove Chinese wording/arrows/borders and unsupported supplier performance labels. Only render requested English text after TEXT below, never render internal instructions. No medical/waterproof/zero-drop/barefoot/anti-slip/testedperformance/stock/dispatch claims. Keep original source15 Black hand-held shoe and onfoot shoe in exact original pose; preserve hand and togglecord. TEXT: BLACK OPTION; Toggle-lace walking shoes.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\013准备\\05_AI候选\\M2.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-11e9b395-ecb4-4e45-bf1d-6f1fef705a16.png",
+      "output_sha256": "1ab90fa93fe8d2cff3a5e71202042142e6b43433994a7fc846640b5d5add678a",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T13:59:48.888100+00:00",
+      "review_note": "Individually compared to actual013 photographs: broad bordered forefoot, diagonally stitched sidepanels, low collar, togglecord with roundlock/original endstop and oval-block tread. No front/rear pulltabs. Black/Gray blacksole, Beige brownsole. M1 original24 unchanged790x760px, already clean readable studio pair. Eleven native info/color edits; details retain actual photographed partial regions, no new whole-shoe/hidden geometry. Three disjoint singleprofiles from source06 have about320x130effectivepixels; visible geometry/colors, not hidden fine construction evidence. Microfiber upper06/07 and Rubber outsole06/10; midsole/lining unknown. Source dimensions and native aspect ratios retained without geometric stretching."
+    },
+    {
+      "role": "M3",
+      "buyer_question": "灰色实拍",
+      "source_indices": [
+        19
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\013准备\\01_产品来源原图\\19.jpg"
+      ],
+      "source_sha256": [
+        "a340b1fc816514c5d4e26ada8e0eb7c535582be1ccd36fc86804fc639cb106a6"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1079
+        ]
+      ],
+      "source_region_key": "actual-photo-19",
+      "prompt": "Use case: precise-object-edit. Square B2B footwear photo,1024px or more. Edit ONLY the actual attached Luqi013 photograph. Preserve photographed shoe number, pose, silhouette and exact original panel geometry: broad rounded bordered forefoot, diagonally stitched textured sidepanel, low collar, original togglecord lacing with round lock and original cord endstop, shallow oval-block tread. No new front/rear pulltabs, patterned lacewebbing, dimpled panels, added seams or hidden geometry. Black remains allblack with blacksole; Gray gray with gray/taupe borders and blacksole; Beige pale beige panels with taupe borders and BROWN sole. Preserve original hands/rolled trousers/bare ankles if present; no new socks. Remove Chinese wording/arrows/borders and unsupported supplier performance labels. Only render requested English text after TEXT below, never render internal instructions. No medical/waterproof/zero-drop/barefoot/anti-slip/testedperformance/stock/dispatch claims. Keep BOTH source19 Gray onfoot shoes in exact side/front pose and actual setting. TEXT: GRAY OPTION; Actual photographed style.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\013准备\\05_AI候选\\M3.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-79ced8b0-00b4-4c50-9902-dbc70b8071f1.png",
+      "output_sha256": "534f4b1076b94a4e211cb787c87bf4a03c3e09040c9b82eb4bca161d02c49c81",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T13:59:48.888100+00:00",
+      "review_note": "Individually compared to actual013 photographs: broad bordered forefoot, diagonally stitched sidepanels, low collar, togglecord with roundlock/original endstop and oval-block tread. No front/rear pulltabs. Black/Gray blacksole, Beige brownsole. M1 original24 unchanged790x760px, already clean readable studio pair. Eleven native info/color edits; details retain actual photographed partial regions, no new whole-shoe/hidden geometry. Three disjoint singleprofiles from source06 have about320x130effectivepixels; visible geometry/colors, not hidden fine construction evidence. Microfiber upper06/07 and Rubber outsole06/10; midsole/lining unknown. Source dimensions and native aspect ratios retained without geometric stretching."
+    },
+    {
+      "role": "M4",
+      "buyer_question": "米色与棕底实拍",
+      "source_indices": [
+        13
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\013准备\\01_产品来源原图\\13.jpg"
+      ],
+      "source_sha256": [
+        "ec935a84144651e3a492c38bbcadd9f74dc186f3d51ac3f486a74058dfb149ac"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1266
+        ]
+      ],
+      "source_region_key": "actual-photo-13",
+      "prompt": "Use case: precise-object-edit. Square B2B footwear photo,1024px or more. Edit ONLY the actual attached Luqi013 photograph. Preserve photographed shoe number, pose, silhouette and exact original panel geometry: broad rounded bordered forefoot, diagonally stitched textured sidepanel, low collar, original togglecord lacing with round lock and original cord endstop, shallow oval-block tread. No new front/rear pulltabs, patterned lacewebbing, dimpled panels, added seams or hidden geometry. Black remains allblack with blacksole; Gray gray with gray/taupe borders and blacksole; Beige pale beige panels with taupe borders and BROWN sole. Preserve original hands/rolled trousers/bare ankles if present; no new socks. Remove Chinese wording/arrows/borders and unsupported supplier performance labels. Only render requested English text after TEXT below, never render internal instructions. No medical/waterproof/zero-drop/barefoot/anti-slip/testedperformance/stock/dispatch claims. Keep BOTH source13 Beige onfoot shoes with original visible brown outsole and exact original pose. TEXT: BEIGE OPTION; Brown sole.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\013准备\\05_AI候选\\M4.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-b9649bb3-cf0a-43c0-addf-04ae1be6c4a3.png",
+      "output_sha256": "d2f26e2561194ac60644901bd201fa4b4c83fde9f1655eb6299626223807bff5",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T13:59:48.888100+00:00",
+      "review_note": "Individually compared to actual013 photographs: broad bordered forefoot, diagonally stitched sidepanels, low collar, togglecord with roundlock/original endstop and oval-block tread. No front/rear pulltabs. Black/Gray blacksole, Beige brownsole. M1 original24 unchanged790x760px, already clean readable studio pair. Eleven native info/color edits; details retain actual photographed partial regions, no new whole-shoe/hidden geometry. Three disjoint singleprofiles from source06 have about320x130effectivepixels; visible geometry/colors, not hidden fine construction evidence. Microfiber upper06/07 and Rubber outsole06/10; midsole/lining unknown. Source dimensions and native aspect ratios retained without geometric stretching."
+    },
+    {
+      "role": "M5",
+      "buyer_question": "采购询价行动",
+      "source_indices": [
+        22
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\013准备\\01_产品来源原图\\22.jpg"
+      ],
+      "source_sha256": [
+        "319fdc55f3670931d84afebb604e2f9ee7937c4605f3281b3e6badae80d6145c"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1133
+        ]
+      ],
+      "source_region_key": "actual-photo-22",
+      "prompt": "Use case: precise-object-edit. Square B2B footwear photo,1024px or more. Edit ONLY the actual attached Luqi013 photograph. Preserve photographed shoe number, pose, silhouette and exact original panel geometry: broad rounded bordered forefoot, diagonally stitched textured sidepanel, low collar, original togglecord lacing with round lock and original cord endstop, shallow oval-block tread. No new front/rear pulltabs, patterned lacewebbing, dimpled panels, added seams or hidden geometry. Black remains allblack with blacksole; Gray gray with gray/taupe borders and blacksole; Beige pale beige panels with taupe borders and BROWN sole. Preserve original hands/rolled trousers/bare ankles if present; no new socks. Remove Chinese wording/arrows/borders and unsupported supplier performance labels. Only render requested English text after TEXT below, never render internal instructions. No medical/waterproof/zero-drop/barefoot/anti-slip/testedperformance/stock/dispatch claims. Keep original source22 ONE Gray onfoot shoe, hand holding original cord, exact shoe/cord/hand pose. No extra shoe. TEXT: PLAN YOUR WHOLESALE ORDER; Color + EU size mix + Pair quantity + Destination.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\013准备\\05_AI候选\\M5.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-cd7a968d-5502-4006-9670-b1cf5ab000c3.png",
+      "output_sha256": "aad6a71fc914242a864239c5c96efa425027066a41a3d4e1b24a153d6ef07b47",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T13:59:48.888100+00:00",
+      "review_note": "Individually compared to actual013 photographs: broad bordered forefoot, diagonally stitched sidepanels, low collar, togglecord with roundlock/original endstop and oval-block tread. No front/rear pulltabs. Black/Gray blacksole, Beige brownsole. M1 original24 unchanged790x760px, already clean readable studio pair. Eleven native info/color edits; details retain actual photographed partial regions, no new whole-shoe/hidden geometry. Three disjoint singleprofiles from source06 have about320x130effectivepixels; visible geometry/colors, not hidden fine construction evidence. Microfiber upper06/07 and Rubber outsole06/10; midsole/lining unknown. Source dimensions and native aspect ratios retained without geometric stretching."
+    },
+    {
+      "role": "D1",
+      "buyer_question": "超纤鞋面细节",
+      "source_indices": [
+        7
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\013准备\\01_产品来源原图\\07.jpg"
+      ],
+      "source_sha256": [
+        "2404b122b62cbb1a6a40e92c22da94567f7b7fcc83ee80d2bbc1b1d7c4c614d5"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1178
+        ]
+      ],
+      "source_region_key": "actual-photo-7",
+      "prompt": "Use case: precise-object-edit. Square B2B footwear photo,1024px or more. Edit ONLY the actual attached Luqi013 photograph. Preserve photographed shoe number, pose, silhouette and exact original panel geometry: broad rounded bordered forefoot, diagonally stitched textured sidepanel, low collar, original togglecord lacing with round lock and original cord endstop, shallow oval-block tread. No new front/rear pulltabs, patterned lacewebbing, dimpled panels, added seams or hidden geometry. Black remains allblack with blacksole; Gray gray with gray/taupe borders and blacksole; Beige pale beige panels with taupe borders and BROWN sole. Preserve original hands/rolled trousers/bare ankles if present; no new socks. Remove Chinese wording/arrows/borders and unsupported supplier performance labels. Only render requested English text after TEXT below, never render internal instructions. No medical/waterproof/zero-drop/barefoot/anti-slip/testedperformance/stock/dispatch claims. Strict PARTIAL crop of source07 actual Beige forefoot/upper detail, preserve original textile-like texture and stitched border. No whole shoe reconstruction. TEXT: MICROFIBER UPPER; Actual photographed detail.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\013准备\\05_AI候选\\D1.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-390c20ab-1378-46ea-8b99-f22da8f62de6.png",
+      "output_sha256": "bd8e0af3c74e203e27f152ba7c03994255d795ce8241318b3912629b3502ec5d",
+      "output_dimensions": [
+        1193,
+        1319
+      ],
+      "review_at": "2026-10-10T13:59:48.888100+00:00",
+      "review_note": "Individually compared to actual013 photographs: broad bordered forefoot, diagonally stitched sidepanels, low collar, togglecord with roundlock/original endstop and oval-block tread. No front/rear pulltabs. Black/Gray blacksole, Beige brownsole. M1 original24 unchanged790x760px, already clean readable studio pair. Eleven native info/color edits; details retain actual photographed partial regions, no new whole-shoe/hidden geometry. Three disjoint singleprofiles from source06 have about320x130effectivepixels; visible geometry/colors, not hidden fine construction evidence. Microfiber upper06/07 and Rubber outsole06/10; midsole/lining unknown. Source dimensions and native aspect ratios retained without geometric stretching."
+    },
+    {
+      "role": "D2",
+      "buyer_question": "橡胶底纹细节",
+      "source_indices": [
+        10
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\013准备\\01_产品来源原图\\10.jpg"
+      ],
+      "source_sha256": [
+        "679913dd0133d4382238a3e740eafbfb4c363d8ce7e5bb9018033e6d48219bc9"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          985
+        ]
+      ],
+      "source_region_key": "actual-photo-10",
+      "prompt": "Use case: precise-object-edit. Square B2B footwear photo,1024px or more. Edit ONLY the actual attached Luqi013 photograph. Preserve photographed shoe number, pose, silhouette and exact original panel geometry: broad rounded bordered forefoot, diagonally stitched textured sidepanel, low collar, original togglecord lacing with round lock and original cord endstop, shallow oval-block tread. No new front/rear pulltabs, patterned lacewebbing, dimpled panels, added seams or hidden geometry. Black remains allblack with blacksole; Gray gray with gray/taupe borders and blacksole; Beige pale beige panels with taupe borders and BROWN sole. Preserve original hands/rolled trousers/bare ankles if present; no new socks. Remove Chinese wording/arrows/borders and unsupported supplier performance labels. Only render requested English text after TEXT below, never render internal instructions. No medical/waterproof/zero-drop/barefoot/anti-slip/testedperformance/stock/dispatch claims. Strict PARTIAL crop of source10 actual BROWN outsole. Preserve existing oval blocks/grooves and original crop, no expansion into hidden outsole. TEXT: RUBBER OUTSOLE; Actual photographed detail.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\013准备\\05_AI候选\\D2.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-4a7ae487-57b8-4141-acfa-5eb4c8d58ad2.png",
+      "output_sha256": "a74e25aa7da1aba25960465c1a6b41621157b582784fc59a7693db9594510c24",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T13:59:48.888100+00:00",
+      "review_note": "Individually compared to actual013 photographs: broad bordered forefoot, diagonally stitched sidepanels, low collar, togglecord with roundlock/original endstop and oval-block tread. No front/rear pulltabs. Black/Gray blacksole, Beige brownsole. M1 original24 unchanged790x760px, already clean readable studio pair. Eleven native info/color edits; details retain actual photographed partial regions, no new whole-shoe/hidden geometry. Three disjoint singleprofiles from source06 have about320x130effectivepixels; visible geometry/colors, not hidden fine construction evidence. Microfiber upper06/07 and Rubber outsole06/10; midsole/lining unknown. Source dimensions and native aspect ratios retained without geometric stretching."
+    },
+    {
+      "role": "D3",
+      "buyer_question": "鞋口细节",
+      "source_indices": [
+        9
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\013准备\\01_产品来源原图\\09.jpg"
+      ],
+      "source_sha256": [
+        "9d1513f8106d862bedb0e83c3af4ee5907e7327a48618aa74b02c61e98dcc491"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          988
+        ]
+      ],
+      "source_region_key": "actual-photo-9",
+      "prompt": "Use case: precise-object-edit. Square B2B footwear photo,1024px or more. Edit ONLY the actual attached Luqi013 photograph. Preserve photographed shoe number, pose, silhouette and exact original panel geometry: broad rounded bordered forefoot, diagonally stitched textured sidepanel, low collar, original togglecord lacing with round lock and original cord endstop, shallow oval-block tread. No new front/rear pulltabs, patterned lacewebbing, dimpled panels, added seams or hidden geometry. Black remains allblack with blacksole; Gray gray with gray/taupe borders and blacksole; Beige pale beige panels with taupe borders and BROWN sole. Preserve original hands/rolled trousers/bare ankles if present; no new socks. Remove Chinese wording/arrows/borders and unsupported supplier performance labels. Only render requested English text after TEXT below, never render internal instructions. No medical/waterproof/zero-drop/barefoot/anti-slip/testedperformance/stock/dispatch claims. Strict PARTIAL crop of source09 Beige collar and visible lining/tongue. Retain actual source boundaries/visible texture, no new insole/whole shoe, no lining composition claims. TEXT: COLLAR DETAIL; Low-top construction.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\013准备\\05_AI候选\\D3.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-28c90930-d55c-4b95-852c-5cc6403da323.png",
+      "output_sha256": "feb7507c4209703f3f91d4a018d3afa795623cab4dd409aa107d1c41a40b4a5e",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T13:59:48.888100+00:00",
+      "review_note": "Individually compared to actual013 photographs: broad bordered forefoot, diagonally stitched sidepanels, low collar, togglecord with roundlock/original endstop and oval-block tread. No front/rear pulltabs. Black/Gray blacksole, Beige brownsole. M1 original24 unchanged790x760px, already clean readable studio pair. Eleven native info/color edits; details retain actual photographed partial regions, no new whole-shoe/hidden geometry. Three disjoint singleprofiles from source06 have about320x130effectivepixels; visible geometry/colors, not hidden fine construction evidence. Microfiber upper06/07 and Rubber outsole06/10; midsole/lining unknown. Source dimensions and native aspect ratios retained without geometric stretching."
+    },
+    {
+      "role": "D4",
+      "buyer_question": "EU尺码配比",
+      "source_indices": [
+        21
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\013准备\\01_产品来源原图\\21.jpg"
+      ],
+      "source_sha256": [
+        "6029b44847fb02363d4f03334fa68469c43edf09534868cecd527531c3343685"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1272
+        ]
+      ],
+      "source_region_key": "actual-photo-21",
+      "prompt": "Use case: precise-object-edit. Square B2B footwear photo,1024px or more. Edit ONLY the actual attached Luqi013 photograph. Preserve photographed shoe number, pose, silhouette and exact original panel geometry: broad rounded bordered forefoot, diagonally stitched textured sidepanel, low collar, original togglecord lacing with round lock and original cord endstop, shallow oval-block tread. No new front/rear pulltabs, patterned lacewebbing, dimpled panels, added seams or hidden geometry. Black remains allblack with blacksole; Gray gray with gray/taupe borders and blacksole; Beige pale beige panels with taupe borders and BROWN sole. Preserve original hands/rolled trousers/bare ankles if present; no new socks. Remove Chinese wording/arrows/borders and unsupported supplier performance labels. Only render requested English text after TEXT below, never render internal instructions. No medical/waterproof/zero-drop/barefoot/anti-slip/testedperformance/stock/dispatch claims. Keep BOTH original source21 Gray onfoot shoes in exact original pose. TEXT: EU 37-48; Send your color-size mix for order confirmation. No US/cm conversion.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\013准备\\05_AI候选\\D4.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-9add59e0-af7f-436d-aa8f-09a79f53f29d.png",
+      "output_sha256": "1e43910075f1745a5729aa245de5eca42b889c1553179e846add30dbe32907d5",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T13:59:48.888100+00:00",
+      "review_note": "Individually compared to actual013 photographs: broad bordered forefoot, diagonally stitched sidepanels, low collar, togglecord with roundlock/original endstop and oval-block tread. No front/rear pulltabs. Black/Gray blacksole, Beige brownsole. M1 original24 unchanged790x760px, already clean readable studio pair. Eleven native info/color edits; details retain actual photographed partial regions, no new whole-shoe/hidden geometry. Three disjoint singleprofiles from source06 have about320x130effectivepixels; visible geometry/colors, not hidden fine construction evidence. Microfiber upper06/07 and Rubber outsole06/10; midsole/lining unknown. Source dimensions and native aspect ratios retained without geometric stretching."
+    },
+    {
+      "role": "SKU_Black",
+      "buyer_question": "黑色SKU绑定",
+      "source_indices": [
+        6
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\013准备\\01_产品来源原图\\06.jpg"
+      ],
+      "source_sha256": [
+        "c5a814bb77ed768434ade586c55b93be033cf1f045792f43461bb55229b7d8ff"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          775
+        ]
+      ],
+      "source_region_key": "SKU_Black",
+      "prompt": "Use case: precise-object-edit. Square B2B footwear photo,1024px or more. Edit ONLY the actual attached Luqi013 photograph. Preserve photographed shoe number, pose, silhouette and exact original panel geometry: broad rounded bordered forefoot, diagonally stitched textured sidepanel, low collar, original togglecord lacing with round lock and original cord endstop, shallow oval-block tread. No new front/rear pulltabs, patterned lacewebbing, dimpled panels, added seams or hidden geometry. Black remains allblack with blacksole; Gray gray with gray/taupe borders and blacksole; Beige pale beige panels with taupe borders and BROWN sole. Preserve original hands/rolled trousers/bare ankles if present; no new socks. Remove Chinese wording/arrows/borders and unsupported supplier performance labels. Only render requested English text after TEXT below, never render internal instructions. No medical/waterproof/zero-drop/barefoot/anti-slip/testedperformance/stock/dispatch claims. Select ONLY source06 lower-right SINGLE Black sideprofile, allblack and blacksole; preserve actual cordlock/endstop, original pose and diagonal stitching. Remove other shoes and all text. White background/small shadow. Original region about320x130px: preserve visible low-detail geometry, no invented finer hidden construction or angle changes.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\013准备\\05_AI候选\\SKU_Black.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-f231f60a-2099-4dfe-b9cc-4ae5b867f1ec.png",
+      "output_sha256": "737dea40e847a0ec76f1399888d47e4290c95d2f2b06f66c334c87e1341292d4",
+      "output_dimensions": [
+        1774,
+        887
+      ],
+      "review_at": "2026-10-10T13:59:48.888100+00:00",
+      "review_note": "Individually compared to actual013 photographs: broad bordered forefoot, diagonally stitched sidepanels, low collar, togglecord with roundlock/original endstop and oval-block tread. No front/rear pulltabs. Black/Gray blacksole, Beige brownsole. M1 original24 unchanged790x760px, already clean readable studio pair. Eleven native info/color edits; details retain actual photographed partial regions, no new whole-shoe/hidden geometry. Three disjoint singleprofiles from source06 have about320x130effectivepixels; visible geometry/colors, not hidden fine construction evidence. Microfiber upper06/07 and Rubber outsole06/10; midsole/lining unknown. Source dimensions and native aspect ratios retained without geometric stretching."
+    },
+    {
+      "role": "SKU_Beige",
+      "buyer_question": "米色SKU绑定",
+      "source_indices": [
+        6
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\013准备\\01_产品来源原图\\06.jpg"
+      ],
+      "source_sha256": [
+        "c5a814bb77ed768434ade586c55b93be033cf1f045792f43461bb55229b7d8ff"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          775
+        ]
+      ],
+      "source_region_key": "SKU_Beige",
+      "prompt": "Use case: precise-object-edit. Square B2B footwear photo,1024px or more. Edit ONLY the actual attached Luqi013 photograph. Preserve photographed shoe number, pose, silhouette and exact original panel geometry: broad rounded bordered forefoot, diagonally stitched textured sidepanel, low collar, original togglecord lacing with round lock and original cord endstop, shallow oval-block tread. No new front/rear pulltabs, patterned lacewebbing, dimpled panels, added seams or hidden geometry. Black remains allblack with blacksole; Gray gray with gray/taupe borders and blacksole; Beige pale beige panels with taupe borders and BROWN sole. Preserve original hands/rolled trousers/bare ankles if present; no new socks. Remove Chinese wording/arrows/borders and unsupported supplier performance labels. Only render requested English text after TEXT below, never render internal instructions. No medical/waterproof/zero-drop/barefoot/anti-slip/testedperformance/stock/dispatch claims. Select ONLY source06 upper-center SINGLE Beige sideprofile, pale beige panels/taupe borders/BROWN sole. Preserve actual cordlock/endstop, exact pose and diagonal stitching. Remove other shoes/all text. Whitebackground/smallshadow. Original region about320x130px: preserve actual visible low-detail geometry, no invented fine details or new angle.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\013准备\\05_AI候选\\SKU_Beige.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-2aeb2249-b9aa-42d6-aa3b-9c07c04faa29.png",
+      "output_sha256": "26d27f61d3831c3f57b612754b357055ab8b17e447f47123c2f9268942ff6c77",
+      "output_dimensions": [
+        1672,
+        941
+      ],
+      "review_at": "2026-10-10T13:59:48.888100+00:00",
+      "review_note": "Individually compared to actual013 photographs: broad bordered forefoot, diagonally stitched sidepanels, low collar, togglecord with roundlock/original endstop and oval-block tread. No front/rear pulltabs. Black/Gray blacksole, Beige brownsole. M1 original24 unchanged790x760px, already clean readable studio pair. Eleven native info/color edits; details retain actual photographed partial regions, no new whole-shoe/hidden geometry. Three disjoint singleprofiles from source06 have about320x130effectivepixels; visible geometry/colors, not hidden fine construction evidence. Microfiber upper06/07 and Rubber outsole06/10; midsole/lining unknown. Source dimensions and native aspect ratios retained without geometric stretching."
+    },
+    {
+      "role": "SKU_Gray",
+      "buyer_question": "灰色SKU绑定",
+      "source_indices": [
+        6
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\013准备\\01_产品来源原图\\06.jpg"
+      ],
+      "source_sha256": [
+        "c5a814bb77ed768434ade586c55b93be033cf1f045792f43461bb55229b7d8ff"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          775
+        ]
+      ],
+      "source_region_key": "SKU_Gray",
+      "prompt": "Use case: precise-object-edit. Square B2B footwear photo,1024px or more. Edit ONLY the actual attached Luqi013 photograph. Preserve photographed shoe number, pose, silhouette and exact original panel geometry: broad rounded bordered forefoot, diagonally stitched textured sidepanel, low collar, original togglecord lacing with round lock and original cord endstop, shallow oval-block tread. No new front/rear pulltabs, patterned lacewebbing, dimpled panels, added seams or hidden geometry. Black remains allblack with blacksole; Gray gray with gray/taupe borders and blacksole; Beige pale beige panels with taupe borders and BROWN sole. Preserve original hands/rolled trousers/bare ankles if present; no new socks. Remove Chinese wording/arrows/borders and unsupported supplier performance labels. Only render requested English text after TEXT below, never render internal instructions. No medical/waterproof/zero-drop/barefoot/anti-slip/testedperformance/stock/dispatch claims. Select ONLY source06 lower-left SINGLE Gray sideprofile, gray panels/graytaupe borders/BLACK sole. Preserve actual cordlock/endstop, exact original pose and diagonal stitching. Remove other shoes/all text. Whitebackground/smallshadow. Original region about320x130px: preserve visible low-detail geometry, no finer hidden construction or angle change.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\013准备\\05_AI候选\\SKU_Gray.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-f83ad08f-8ff1-40b8-a91e-ff77ad6ac472.png",
+      "output_sha256": "c097169f78de17b25ec11ad80456f50bd72c415a528bac605b7273b768d80e33",
+      "output_dimensions": [
+        1536,
+        1024
+      ],
+      "review_at": "2026-10-10T13:59:48.888100+00:00",
+      "review_note": "Individually compared to actual013 photographs: broad bordered forefoot, diagonally stitched sidepanels, low collar, togglecord with roundlock/original endstop and oval-block tread. No front/rear pulltabs. Black/Gray blacksole, Beige brownsole. M1 original24 unchanged790x760px, already clean readable studio pair. Eleven native info/color edits; details retain actual photographed partial regions, no new whole-shoe/hidden geometry. Three disjoint singleprofiles from source06 have about320x130effectivepixels; visible geometry/colors, not hidden fine construction evidence. Microfiber upper06/07 and Rubber outsole06/10; midsole/lining unknown. Source dimensions and native aspect ratios retained without geometric stretching."
+    }
+  ],
+  "rejected_attempts": [],
+  "limits": "D1 actual Beige upper macro; D2 original brown partial outsole; D3 original Beige collar. Source06 color-profile resolution limits retained; unchanged originalM1 aspectratio retained. Not performance tests or public rendering proof."
+}

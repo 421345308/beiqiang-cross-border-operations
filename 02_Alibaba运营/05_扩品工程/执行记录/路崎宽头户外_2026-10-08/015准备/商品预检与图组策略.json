@@ -1,6 +1,6 @@
 {
   "style": "015",
-  "observed_at": "2026-10-09T17:20:56.283724+00:00",
+  "observed_at": "2026-10-10T14:14:44.143724+00:00",
   "source": "https://luqi.sooxie.com/detail/2306239",
   "source_price_cny": "55.00",
   "source_HTML_file_sha256": "4da1957a14fe7a39fb62254486e938af5cbbc96915cc69086acab63af24fb608",
@@ -63,8 +63,8 @@
     ]
   },
   "EU_combinations": 48,
-  "title": "Unisex Wide Toe Box Synthetic Leather Walking Shoes Lace Up Rubber Outsole EU 37-48 Wholesale",
-  "title_bytes": 93,
+  "title": "Unisex Wide Toe Box Lace Up Outdoor Walking Shoes Synthetic Leather Upper Rubber Sole Layered Panels Wholesale EU 37-48",
+  "title_bytes": 119,
   "known_materials": {
     "upper": "Synthetic leather; exact original08鞋面采用合成革材料 and12合成革",
     "outsole": "Rubber; source02/04 graphic explicitly橡胶底, no slip performance established",
@@ -74,14 +74,12 @@
   "identity_notes": "Low-top lace-up shoe with dark textured forefoot band, layered long curved side panel, mesh collar/rear loop and dense small rounded tread studs. Distinct from017 ankle boot height and018 ribbed sole/raised edge. Source02 and04 appear same marketing image and source03/05 same underlying on-foot photo; cannot count these as distinct roles.",
   "current_source_images": 12,
   "readable_source_images": 12,
-  "status": "CURRENT_SOURCE_REVIEW_READY_NOT_GENERATED_NOT_PUBLISHED",
-  "image_status": "PENDING_UNDERLYING_PHOTO_ROLE_AND_VISUAL_REVIEW",
+  "status": "CURRENT_SOURCE_AND_ROLE_PLAN_NOT_PUBLISHED",
+  "image_status": "PENDING_NATIVE_GENERATION_AND_REVIEW",
   "photo_plan_notes": "No fixed13-image plan yet:12sourceframes contain repeated02/04 and03/05photos plus source-derived composite closeups. Prefer actual01/03/06/07/08/09/10/11/12distinct views where provable; avoid reusing same underlying scene in main/detail. Black Gray proposed source01 mapping pending. Preserve original Black/Black Green/Black Khaki, no new angles.",
   "pending": [
-    "Current source only12 frames, underlying duplicate photographs present; count genuinely distinct usable originals for main/detail and SKU roles",
-    "Source01 gray-looking cover versus Black Gray label needs exact mapping; do not recolor missing option",
-    "Own current categorySchema and exact source/model/visual dedup",
-    "Generate distinct role images and accept before official upload/create"
+    "Full individually selected reference view and actual native role review",
+    "Own freshSchema/fullplatformcatalog and bounded visualdedup beforeupload/create"
   ],
   "excluded_claims": [
     "barefoot/zero-drop",
@@ -92,5 +90,127 @@
     "height increase",
     "lightweight/rebound/stability",
     "actual inventory/guaranteed dispatch"
-  ]
+  ],
+  "color_mapping_review": "All12contacts and full01/08/11/12 viewed. Source01 visibly graybody with black textured border/sole differs from patterned Black source11 and actualgreen10/khaki03/07/09; matches currentBlack Gray option by bounded color comparison. No recoloring. Source labels and photo mapping, not a calibrated color measurement.",
+  "photo_plan": [
+    {
+      "role": "M1",
+      "source_index": 1,
+      "source_path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\015准备\\01_产品来源原图\\01.jpg",
+      "source_sha256": "1af66a5403fa7e0ebbc841efee4ac5afb324334dd473c3cd845f36d6f82eb903",
+      "source_region_key": "M1",
+      "brief": "Original single Black Gray hero: visibly gray curved body/black textured forefoot and blacksole; preserve exact real angle.",
+      "status": "PLANNED_NOT_GENERATED"
+    },
+    {
+      "role": "M2",
+      "source_index": 11,
+      "source_path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\015准备\\01_产品来源原图\\11.jpg",
+      "source_sha256": "e11329b2ee91e518e3556712e405d4f01e46ed824872e3fb371b37f2c791954b",
+      "source_region_key": "M2",
+      "brief": "Only upper original single Black sideprofile facing right; no other shoe or publicity banner.",
+      "status": "PLANNED_NOT_GENERATED"
+    },
+    {
+      "role": "M3",
+      "source_index": 3,
+      "source_path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\015准备\\01_产品来源原图\\03.jpg",
+      "source_sha256": "a30dabd31f82495801a4963f152ca9f7855bbc2c648138fbd594d1660c294a34",
+      "source_region_key": "M3",
+      "brief": "Original Black Khaki onfoot pair at lake, exact photographed legs/white socks/pose.",
+      "status": "PLANNED_NOT_GENERATED"
+    },
+    {
+      "role": "M4",
+      "source_index": 10,
+      "source_path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\015准备\\01_产品来源原图\\10.jpg",
+      "source_sha256": "41c1a3020ac9ed00593ecba8346fc8570cf0fa8ac1b693f42b77f391b1dabab3",
+      "source_region_key": "M4",
+      "brief": "Original Black Green onfoot pair, exact original green curved panels and blacksole.",
+      "status": "PLANNED_NOT_GENERATED"
+    },
+    {
+      "role": "M5",
+      "source_index": 9,
+      "source_path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\015准备\\01_产品来源原图\\09.jpg",
+      "source_sha256": "5938e78497f3dfea9e1e89bbb3e0f63fb544452c97112285f04d669dabbabee4",
+      "source_region_key": "M5",
+      "brief": "Original Black Khaki seated person shoe scene; crop below knees if useful, preserve actual shoes/white socks; buyer quotation inputs.",
+      "status": "PLANNED_NOT_GENERATED"
+    },
+    {
+      "role": "D1",
+      "source_index": 8,
+      "source_path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\015准备\\01_产品来源原图\\08.jpg",
+      "source_sha256": "cbb2976212b46bee7c5ba7b5deda426a95575df947c1268c55334912bb0cf686",
+      "source_region_key": "D1",
+      "brief": "Only original lower-right enlarged Black forefoot/lacing partial; remove arrows/text, no hidden whole-shoe reconstruction; Synthetic leather evidence08/12.",
+      "status": "PLANNED_NOT_GENERATED"
+    },
+    {
+      "role": "D2",
+      "source_index": 6,
+      "source_path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\015准备\\01_产品来源原图\\06.jpg",
+      "source_sha256": "ecccaa6917bc34e1a2add5c5f2439c8edd1bf1ac05b1ad77acbe954b17662d71",
+      "source_region_key": "D2",
+      "brief": "Only original large upper partial Black outsole/sidewall photograph, preserve dense rounded studs and grooves; Rubber evidence02/04; no performance claims.",
+      "status": "PLANNED_NOT_GENERATED"
+    },
+    {
+      "role": "D3",
+      "source_index": 12,
+      "source_path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\015准备\\01_产品来源原图\\12.jpg",
+      "source_sha256": "d5b18793d18038fb18d992c766860c0c4e4f19a6b69742b716ceff8e5749ff4c",
+      "source_region_key": "D3",
+      "brief": "Only original bottom-center Black collar closeup, no reconstructed insole/whole shoe; composition unspecified.",
+      "status": "PLANNED_NOT_GENERATED"
+    },
+    {
+      "role": "D4",
+      "source_index": 7,
+      "source_path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\015准备\\01_产品来源原图\\07.jpg",
+      "source_sha256": "93e630348af98fa6d0e88599c882f8d0b34b3ea6d7a9425779c6bea57f92c0b3",
+      "source_region_key": "D4",
+      "brief": "Original Black Khaki standing/onfoot pair, distinct fromsource03seated feet andsource09seatedmodel; EU37-48 noUS/cm.",
+      "status": "PLANNED_NOT_GENERATED"
+    },
+    {
+      "role": "SKU_Black",
+      "source_index": 11,
+      "source_path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\015准备\\01_产品来源原图\\11.jpg",
+      "source_sha256": "e11329b2ee91e518e3556712e405d4f01e46ed824872e3fb371b37f2c791954b",
+      "source_region_key": "SKU_Black",
+      "brief": "Only lower original single Black sideprofile facing left; distinct opposite side/pose toM2 upper photograph.",
+      "status": "PLANNED_NOT_GENERATED"
+    },
+    {
+      "role": "SKU_Black Gray",
+      "source_index": 1,
+      "source_path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\015准备\\01_产品来源原图\\01.jpg",
+      "source_sha256": "1af66a5403fa7e0ebbc841efee4ac5afb324334dd473c3cd845f36d6f82eb903",
+      "source_region_key": "SKU_Black Gray",
+      "brief": "Same actual single gray/black source01 shoe for color binding; main/SKU reuse disclosed, no recolor or fake new angle.",
+      "status": "PLANNED_NOT_GENERATED"
+    },
+    {
+      "role": "SKU_Black Green",
+      "source_index": 10,
+      "source_path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\015准备\\01_产品来源原图\\10.jpg",
+      "source_sha256": "41c1a3020ac9ed00593ecba8346fc8570cf0fa8ac1b693f42b77f391b1dabab3",
+      "source_region_key": "SKU_Black Green",
+      "brief": "Only foreground actual Black Green onfoot shoe; preserve visible shoe and original ankle/sock, no hidden collar reconstruction. Main/SKU source reuse disclosed.",
+      "status": "PLANNED_NOT_GENERATED"
+    },
+    {
+      "role": "SKU_Black Khaki",
+      "source_index": 9,
+      "source_path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\015准备\\01_产品来源原图\\09.jpg",
+      "source_sha256": "5938e78497f3dfea9e1e89bbb3e0f63fb544452c97112285f04d669dabbabee4",
+      "source_region_key": "SKU_Black Khaki",
+      "brief": "Only foreground actual Black Khaki seated-model shoe; preserve visible shoe/sock; main/SKU source reuse disclosed.",
+      "status": "PLANNED_NOT_GENERATED"
+    }
+  ],
+  "source_duplicate_disposition": "02/04 same marketing frame and03/05 same onfoot photo: only03 used;02/04 excluded from roleimages and retained as rubber material text evidence. Five main and four detail use distinct scene/region photos; main/SKU source reuse explicitly disclosed for real color binding, not counted as extra physicalangle.",
+  "SKU_source_pixel_limit": "SKUGray shares true single01 hero;Black uses lower11 opposite sideprofile;Green/Khaki retain photographed onfoot footwear and ankle/sock. D3 bottom-center12 smallcollar original; native cleanup is not evidence of unseen fine construction."
 }
