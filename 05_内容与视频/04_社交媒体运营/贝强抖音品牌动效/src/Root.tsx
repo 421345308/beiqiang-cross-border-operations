@@ -1,5 +1,6 @@
 import React from 'react';
 import {AbsoluteFill, Audio, Composition, Easing, Img, Sequence, interpolate, staticFile, useCurrentFrame} from 'remotion';
+import {WarmFilm} from './WarmFilm';
 
 const clamp = {extrapolateLeft: 'clamp' as const, extrapolateRight: 'clamp' as const};
 const ease = Easing.bezier(0.2, 0.65, 0.25, 1);
@@ -56,4 +57,4 @@ const Film:React.FC=()=> <AbsoluteFill style={{fontFamily:'"Microsoft YaHei", "P
   <Audio src={staticFile('sound.wav')} volume={0.8}/>
 </AbsoluteFill>;
 
-export const Root:React.FC=()=> <Composition id="BrandStudy" component={Film} durationInFrames={540} fps={30} width={1080} height={1920}/>;
+export const Root:React.FC=()=> <><Composition id="BrandStudy" component={Film} durationInFrames={540} fps={30} width={1080} height={1920}/><Composition id="WarmBrandFilm" component={WarmFilm} durationInFrames={600} fps={30} width={1080} height={1920}/></>;
