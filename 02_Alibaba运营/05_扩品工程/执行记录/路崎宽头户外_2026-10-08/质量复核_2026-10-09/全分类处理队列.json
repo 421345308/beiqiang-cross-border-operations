@@ -1,13 +1,12 @@
 {
-  "observed_at": "2026-10-10T14:17:17.737204+00:00",
+  "observed_at": "2026-10-10T15:24:32.985586+00:00",
   "scope": "107 sources; statuses are evidence stages, not 107 independent publishable products",
   "state_counts": {
-    "CREATED_APPROVED_Y": 54,
+    "CREATED_APPROVED_Y": 56,
     "EXISTING_SOURCE_MAPPING_DO_NOT_DUPLICATE": 3,
-    "PENDING_STYLE_AND_QUALITY_REVIEW": 44,
+    "PENDING_STYLE_AND_QUALITY_REVIEW": 43,
     "MERGED_SOURCE_FAMILY_2585_NO_EXTRA_CREATE": 1,
     "HOLD_SOURCE_PHOTO_IDENTITY": 1,
-    "CREATED_NEW_N": 1,
     "HOLD_ACCOUNT_HIKING_BUSINESS_CATEGORY": 2,
     "HOLD_WITHDRAWN_SOURCE": 1
   },
@@ -486,14 +485,16 @@
       "categories": [
         "27256"
       ],
-      "source_collection": "COLLECTED",
-      "image_cache": "CONTACT_SHEET_ONLY_NOT_PUBLISHABLE",
+      "source_collection": "CURRENT_SOURCE_COLLECTED",
+      "image_cache": "CURRENT_SOURCE_23_FULL_FILES",
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
-      "title_quality": "PENDING",
-      "image_quality": "PENDING",
+      "title_quality": "SOURCE_BASED_DRAFT_PENDING_CATEGORY_AND_FAMILY_REVIEW",
+      "image_quality": "PENDING_OWN_NATIVE_ROLE_GENERATION_AND_REVIEW",
       "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
       "local_issue": "POSSIBLE_SAME_PRODUCT_FAMILY: source photos share identical upper and marketing panels; do not create two links based on suffix. Need distinct clean assets and outsole structure confirmation.",
-      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+      "EU_combinations": 30,
+      "current_source_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/026-1准备/商品预检与图组策略.json"
     },
     {
       "style": "2598",
@@ -524,14 +525,16 @@
       "categories": [
         "27256"
       ],
-      "source_collection": "COLLECTED",
-      "image_cache": "CONTACT_SHEET_ONLY_NOT_PUBLISHABLE",
+      "source_collection": "CURRENT_SOURCE_COLLECTED",
+      "image_cache": "CURRENT_SOURCE_23_FULL_FILES",
       "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
-      "title_quality": "PENDING",
-      "image_quality": "PENDING",
+      "title_quality": "SOURCE_BASED_DRAFT_PENDING_CATEGORY_AND_FAMILY_REVIEW",
+      "image_quality": "PENDING_OWN_NATIVE_ROLE_GENERATION_AND_REVIEW",
       "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
       "local_issue": "POSSIBLE_SAME_PRODUCT_FAMILY: source photos share identical upper and marketing panels; do not create two links based on suffix. Need distinct clean assets and outsole structure confirmation.",
-      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES"
+      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+      "EU_combinations": 30,
+      "current_source_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/026准备/商品预检与图组策略.json"
     },
     {
       "style": "2588-1",
@@ -985,15 +988,23 @@
         "27256"
       ],
       "source_collection": "CURRENT_SOURCE_COLLECTED",
-      "image_cache": "CURRENT_READABLE_SOURCE_IMAGES",
-      "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
-      "title_quality": "SOURCE_BASED_DRAFT_PENDING_CURRENT_SCHEMA",
-      "image_quality": "PENDING_NATIVE_GENERATION_AND_ROLE_REVIEW",
+      "image_cache": "CURRENT_SOURCE_AND_FINAL_ASSETS",
+      "publication_state": "CREATED_APPROVED_Y",
+      "title_quality": "LOCAL_REVIEW_PASS_FORMAL_MATCH",
+      "image_quality": "BUYER_ROLE_REVIEW_PASS",
       "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
       "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
       "current_source_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/015准备/当前来源色码材料核对.json",
       "EU_combinations": 48,
-      "next_action": "Black Gray graybody cover mapping compared to Black11/Green10/Khaki03;13distinct role/region plan with explicitmain-SKU reuse;02/04and03/05duplicates excluded. Native review/currentSchema/catalog beforeupload/create."
+      "next_action": "Black Gray graybody cover mapping compared to Black11/Green10/Khaki03;13distinct role/region plan with explicitmain-SKU reuse;02/04and03/05duplicates excluded. Native review/currentSchema/catalog beforeupload/create.",
+      "product_id": "1601975924693",
+      "image_apply_scope": "PASS_COMPLETE_IMAGE_SCHEMA",
+      "actual_score": "5.00",
+      "score_status": "PASS_SCORE_GATE",
+      "effective_attribute_status": "PASS_EFFECTIVE_CUSTOM_TEXT",
+      "current_platform_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/015准备/发布后字段核验.json",
+      "formal_CDN_pixel_status": "FORMAL_CDN_PIXEL_AND_VISUAL_PASS",
+      "formal_CDN_pixel_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/015准备/正式CDN像素核验.json"
     },
     {
       "style": "2568",
@@ -1098,7 +1109,7 @@
       ],
       "source_collection": "COLLECTED",
       "image_cache": "CURRENT_SOURCE_AND_FINAL_ASSETS",
-      "publication_state": "CREATED_NEW_N",
+      "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "LOCAL_REVIEW_PASS_FORMAL_MATCH",
       "image_quality": "BUYER_ROLE_REVIEW_PASS",
       "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
@@ -1108,9 +1119,9 @@
       "next_action": "12 own source-region roles, clean studio M1 original24; Microfiber/Rubber evidenced06/07/10;3colorsEU37-48. CurrentSchema/catalog and actual image review before officialupload/create.",
       "EU_combinations": 36,
       "product_id": "1601975911526",
-      "image_apply_scope": "PENDING_APPROVAL_FULL_SCHEMA",
-      "actual_score": null,
-      "score_status": "PENDING_APPROVAL_SCORE",
+      "image_apply_scope": "PASS_COMPLETE_IMAGE_SCHEMA",
+      "actual_score": "5.00",
+      "score_status": "PASS_SCORE_GATE",
       "effective_attribute_status": "PASS_EFFECTIVE_CUSTOM_TEXT",
       "current_platform_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/013准备/发布后字段核验.json",
       "formal_CDN_pixel_status": "FORMAL_CDN_PIXEL_AND_VISUAL_PASS",

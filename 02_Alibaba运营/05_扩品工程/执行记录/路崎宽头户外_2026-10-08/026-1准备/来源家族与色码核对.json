@@ -1,0 +1,70 @@
+{
+  "observed_at": "2026-10-10T15:20:06.975686+00:00",
+  "status": "SOURCE_FAMILY_REVIEW_BEFORE_ANY_CREATE",
+  "styles": [
+    "026",
+    "026-1"
+  ],
+  "actual_visual_review": "All46frames in fourcontact sheets viewed; both full01/07/22 individually viewed. Shared lowtop mesh/lace construction, angular bird-like graphic toe/side panels, thick diagonally sculpted sole and matching Black/Green photographed poses/profiles. Orange hasdifferentfront/side trim gradient; outsole macro blackpatches026 vs brownpatches026-1. These are photographed color/trim differences within apparent samebasefamily, not proof of independent shoe construction. Do not blindlycreate twoIDs. No global IPclearance inferred.",
+  "same_index_pixel_comparison": [
+    {
+      "source_index": 8,
+      "026_sha256": "a8ca8293fd39a402e05f3e6d1ef4d738b8a6852957bdc4dea2bab3bab1958abd",
+      "026_1_sha256": "00af4f7d4f4e7de86f0fc7ba2a3ed2477bf4321c222a9c7904d4fc2b91890b03",
+      "normalized_RGB_MAE": 0.7763,
+      "limit": "Fullframe comparison; layout/encoding differences possible. Actual underlying pose/geometry compared visually."
+    },
+    {
+      "source_index": 12,
+      "026_sha256": "68a186658435d4e8be143117ad4de51fe32581fcc5c8ef771bd5125048fbb05e",
+      "026_1_sha256": "f8c41edf264137274584e6ed8c7e6805340ba0011ac63fc1ba41702f4a78c41b",
+      "normalized_RGB_MAE": 1.1092,
+      "limit": "Fullframe comparison; layout/encoding differences possible. Actual underlying pose/geometry compared visually."
+    },
+    {
+      "source_index": 17,
+      "026_sha256": "c8dee8ce857924f283b070a719aea97f860b3452d84780610880daf987280bb8",
+      "026_1_sha256": "ce2372191716822c8607f3651e830115d5de0ee9644d7db746f81f3b3d58925a",
+      "normalized_RGB_MAE": 1.3466,
+      "limit": "Fullframe comparison; layout/encoding differences possible. Actual underlying pose/geometry compared visually."
+    },
+    {
+      "source_index": 18,
+      "026_sha256": "3322e220c805e06fa02c515ab51ad2fd4f5ddcf9849c5432da97141c8e41235e",
+      "026_1_sha256": "625b38a2d82af5baf0badef5c2ea1916463d081805195cbfcb4c3ceed988c13c",
+      "normalized_RGB_MAE": 1.0587,
+      "limit": "Fullframe comparison; layout/encoding differences possible. Actual underlying pose/geometry compared visually."
+    },
+    {
+      "source_index": 19,
+      "026_sha256": "29e473c5f80dea2cf53b5a1b548d85bbb33d38b0ebc2f1bbf9c05f7c9abcf342",
+      "026_1_sha256": "573a40f24cb688e3879a8b213be16de906caef1c41ffcdf1ce78391b3973e02e",
+      "normalized_RGB_MAE": 0.7814,
+      "limit": "Fullframe comparison; layout/encoding differences possible. Actual underlying pose/geometry compared visually."
+    },
+    {
+      "source_index": 20,
+      "026_sha256": "70d9cff9c903922927d94e8b6bb120df24ef895073d0e6608ab4245a98b760e9",
+      "026_1_sha256": "d3566e617155aa6dbdcbc8162e7099975f1dd778d149d625d90c67e9ee8d33a7",
+      "normalized_RGB_MAE": 0.4553,
+      "limit": "Fullframe comparison; layout/encoding differences possible. Actual underlying pose/geometry compared visually."
+    },
+    {
+      "source_index": 21,
+      "026_sha256": "9c8b6876cebad10c75b8edd31e7f641151e613c0693e14f05ca478cedddb6c97",
+      "026_1_sha256": "09111521d7763d6269df2997ae990c8900f2f09dc2d2665dcef7a035e9bf1845",
+      "normalized_RGB_MAE": 0.6734,
+      "limit": "Fullframe comparison; layout/encoding differences possible. Actual underlying pose/geometry compared visually."
+    },
+    {
+      "source_index": 23,
+      "026_sha256": "92c7049662b759e4122e1f15d83f0e3bc419f66b53c00b54fd6eed9b0cdc1238",
+      "026_1_sha256": "0dd517aa30c553250bc9db54cb1bb7f768f5f5ca7aded46eaa6379b11c2ddedc",
+      "normalized_RGB_MAE": 0.6517,
+      "limit": "Fullframe comparison; layout/encoding differences possible. Actual underlying pose/geometry compared visually."
+    }
+  ],
+  "source_selection": "Prefer026 primarysource; retain026-1 asalternateversion evidence pending canonical/currentcatalog/style review beforecreation. No familymerge or platformID claimed yet.",
+  "size_discrepancy": "Both live sourceoptionsEU39-48, while graphic22 says39-45. Currentselectable labels are sourceoffer, not actual inventory; preserve both evidence and compare applicableSOP before formalSKU. Do not generate old39-45 graphic or US/cm conversion.",
+  "materials": "Graphic22 specifies贾卡网布upper (Jacquardmesh) and大底EVA; graphic09EVA midsole. Darkbottompatch composition andlining unspecified; do not inferRubber fromcolor or texture. Performancegraphics excluded."
+}

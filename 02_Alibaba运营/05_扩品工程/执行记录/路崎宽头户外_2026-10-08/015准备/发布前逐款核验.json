@@ -1,0 +1,22 @@
+{
+  "style": "015",
+  "observed_at": "2026-10-10T14:59:29.807240+00:00",
+  "scope_result": "PASS",
+  "expected_sku_count": 48,
+  "exact_color_EU": true,
+  "title": "Unisex Wide Toe Box Lace Up Outdoor Walking Shoes Synthetic Leather Upper Rubber Sole Layered Panels Wholesale EU 37-48",
+  "title_bytes": 119,
+  "main_images": 6,
+  "product_details": 4,
+  "company_images": 5,
+  "known_materials": {
+    "upper": "Synthetic leather; exact original08鞋面采用合成革材料 and12合成革",
+    "outsole": "Rubber; source02/04 graphic explicitly橡胶底, no slip performance established",
+    "lining": "Not specified",
+    "midsole": "Not specified"
+  },
+  "formal_dedup": "Own current official full catalog447IDs, exact BQ-LQ015 absent, own current walking Schema201334413.100sourcecover dHash triage nearest12 actually viewed822/027/2633/032/029/2585-1/018/2559/2415/909/02601/023.015 low-top curved longbody panels, black textured wraparoundforefoot band, round reflective-thread laces/metaleyelets, mesh collar/rearloop and dense small treadstuds independently differ from observed plainforefoot/mesh/dottedpanel/wedge/ribbedsole/slipon/furboot/stripedshoe candidates. Canonical exactsource/model unbound. Bounded sourcecover review, not all-angle global identity or IPclearance.",
+  "payload_sha256": "8196d279223c8f9a2a7a2c82def49a947f631f3244bc8c4fdb8b1995ea97953e",
+  "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+  "next_action": "One formalcreate, retain ID; readback fields and real pixels."
+}
