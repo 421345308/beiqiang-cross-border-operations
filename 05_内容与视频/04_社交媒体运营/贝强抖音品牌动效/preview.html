@@ -16,23 +16,25 @@ small{display:block;color:#a9a296;line-height:1.8;margin-top:20px}
 </style>
 <main>
 <h1>贝强 · 针织袜子鞋 · 穿上就出发</h1>
-<p id="version">产品内容重做版 / 36 秒 / 竖屏</p>
+<p id="version">程序绘制版 / 36 秒 / 竖屏品牌动画</p>
 <section>
-<video id="film" aria-label="贝强针织袜子鞋品牌片" controls playsinline preload="auto" poster="out/贝强_针织袜子鞋_封面.png" src="out/贝强_针织袜子鞋_内容重做版.mp4"></video>
+<video id="film" aria-label="贝强针织袜子鞋程序绘制品牌片" controls playsinline preload="metadata" poster="out/贝强_程序绘制版_封面.png" src="out/贝强_针织袜子鞋_程序绘制版.mp4"></video>
 <div class="side">
-<div class="grid"><div><img src="out/商业版_160.png"><span>01 品牌与品类</span></div><div><img src="out/商业版_480.png"><span>02 套脚穿着</span></div><div><img src="out/商业版_820.png"><span>03 日常穿搭</span></div></div>
-<div class="notes">穿上，就出发。<br>针织鞋面 · 套脚设计 · 袜套鞋口。<br>用穿着场景建立贝强与针织袜子鞋的联系。</div>
-<button onclick="selectFilm();film.currentTime=0;film.play()">播放重做版</button>
-<a href="out/贝强_针织袜子鞋_内容重做版.mp4" download>保存视频</a>
-<div><button class="secondary" onclick="seekFilm(5.3)">产品身份</button><button class="secondary" onclick="seekFilm(10.3)">针织细节</button><button class="secondary" onclick="seekFilm(16)">套脚穿着</button><button class="secondary" onclick="seekFilm(21.8)">袜套鞋口</button><button class="secondary" onclick="seekFilm(28.5)">日常穿搭</button><button class="secondary" onclick="seekFilm(33.5)">品牌收尾</button></div>
+<div class="grid"><div><img src="out/程序绘制帧/frame-0260.png"><span>01 线圈交织</span></div><div><img src="out/程序绘制帧/frame-0600.png"><span>02 套脚示意</span></div><div><img src="out/程序绘制帧/frame-0800.png"><span>03 日常步履</span></div></div>
+<div class="notes">一圈一圈，织成鞋面。<br>袜套鞋口，少一步系带。<br>贝强针织袜子鞋，把舒适穿进日常。</div>
+<button onclick="selectFilm();film.currentTime=0;film.play()">播放程序绘制版</button>
+<a href="out/贝强_针织袜子鞋_程序绘制版.mp4" download>保存视频</a>
+<div><button class="secondary" onclick="seekFilm(1)">产品身份</button><button class="secondary" onclick="seekFilm(6)">针织成形</button><button class="secondary" onclick="seekFilm(12)">袜套鞋口</button><button class="secondary" onclick="seekFilm(17)">套脚示意</button><button class="secondary" onclick="seekFilm(26)">日常步履</button><button class="secondary" onclick="seekFilm(33)">品牌收尾</button></div>
+<button class="secondary" onclick="film.src='out/贝强_针织袜子鞋_内容重做版.mp4';film.poster='out/贝强_针织袜子鞋_封面.png';document.querySelector('#version').textContent='上一版 / 图片叠化 / 36 秒';film.play()">对照图片叠化版</button>
 <button class="secondary" onclick="film.src='out/贝强_把灵感织进每一步_完整版.mp4';film.poster='out/贝强_抖音封面.png';document.querySelector('#version').textContent='旧 32 秒版 / 商业内容未通过';film.play()">对照旧32秒版</button>
 <button class="secondary" onclick="film.src='out/贝强_三种风格动效试稿.mp4';film.poster='out/暖白排版.png';document.querySelector('#version').textContent='第一版 / 18 秒 / 三种风格比较';film.play()">回看第一版</button>
-<a class="secondary" href="out/贝强_针织袜子鞋_封面.png" download>保存抖音封面</a><small>发布文案：穿上，就出发。<br>针织鞋面，袜套鞋口，少一步系带。<br>贝强针织袜子鞋，把舒适穿进日常。<br>#贝强鞋业 #针织袜子鞋 #一脚蹬 #日常穿搭</small>
+<a class="secondary" href="out/贝强_程序绘制版_封面.png" download>保存抖音封面</a><small>发布文案：穿上，就出发。<br>针织鞋面，袜套鞋口，少一步系带。<br>贝强针织袜子鞋，把舒适穿进日常。<br>#贝强鞋业 #针织袜子鞋 #一脚蹬 #日常穿搭</small>
 </div>
 </section>
 </main>
 <script>
-function selectFilm(){if(!film.getAttribute('src').includes('内容重做版')){film.src='out/贝强_针织袜子鞋_内容重做版.mp4';film.poster='out/贝强_针织袜子鞋_封面.png'}document.querySelector('#version').textContent='产品内容重做版 / 36 秒 / 竖屏'}
+const film=document.querySelector('#film');
+function selectFilm(){if(!film.getAttribute('src').includes('程序绘制版')){film.src='out/贝强_针织袜子鞋_程序绘制版.mp4';film.poster='out/贝强_程序绘制版_封面.png'}document.querySelector('#version').textContent='程序绘制版 / 36 秒 / 竖屏品牌动画'}
 function seekFilm(t){selectFilm();if(film.readyState<1)film.addEventListener('loadedmetadata',()=>{film.currentTime=t;film.pause()},{once:true});else{film.currentTime=t;film.pause()}}
 </script>
 </html>
