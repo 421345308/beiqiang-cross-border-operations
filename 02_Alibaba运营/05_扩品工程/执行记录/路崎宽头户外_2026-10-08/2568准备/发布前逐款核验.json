@@ -1,0 +1,22 @@
+{
+  "style": "2568",
+  "observed_at": "2026-10-10T05:36:09.400485+00:00",
+  "scope_result": "PASS",
+  "expected_sku_count": 39,
+  "exact_color_EU": true,
+  "title": "Wide Toe Box Low Top Lace Up Casual Shoes Synthetic Leather Upper Rubber Outsole EU 36-48 Wholesale",
+  "title_bytes": 99,
+  "main_images": 6,
+  "product_details": 4,
+  "company_images": 5,
+  "known_materials": {
+    "upper": "Synthetic leather; original12鞋面材质合成革 and08.",
+    "outsole": "Rubber; original12鞋底材质橡胶.",
+    "lining": "Not specified; original12舒适内里 no composition.",
+    "midsole": "Not specified; source no compound."
+  },
+  "formal_dedup": "Current431catalog snapshot plus41formal supplement;100cover triage and nearest12 compared; related2569 outsole/upper and cover compared; source/model unbound.",
+  "payload_sha256": "812b0a43a833712bf97467c320837598044611208b4d8affd0fed64f73119e2f",
+  "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+  "next_action": "One formalcreate, retain ID; readback fields and real pixels."
+}
