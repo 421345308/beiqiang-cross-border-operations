@@ -1,8 +1,8 @@
 {
-  "observed_at": "2026-10-10T19:42:09.578558+00:00",
+  "observed_at": "2026-10-10T20:36:32.814846+00:00",
   "source_urls": 107,
-  "created_products": 60,
-  "formal_EU_combinations": 1848,
+  "created_products": 61,
+  "formal_EU_combinations": 1878,
   "approved_before_quality_revision": 26,
   "actual_score_5_before_quality_revision": 26,
   "scope_status": "ACTIVE_NOT_COMPLETE",
@@ -16,7 +16,7 @@
     "Do not count source URLs as distinct publishable styles",
     "Do not replay existing or outcome-unknown creates"
   ],
-  "next_work": "107来源目标ACTIVE；60正式ID/1848EU，当前59approved/Y。2416与2417各唯一ID20EU/17实际图，审核和完整字段/评分按单款实际证据；026经营一级类目限制仍待原有商业选择；其他独立鞋款继续；完整字段及实际评分依当前逐款回执。继续独立款完整素材优化和单次创建；2569仅单款底纹冲突HOLD；浏览器仅异常与批次抽检。",
+  "next_work": "107来源目标ACTIVE；61正式ID/1878EU，当前61approved/Y。2415唯一ID30EU/18实际图及2416唯一ID20EU/17实际图，审核和完整字段/评分按单款实际证据；026经营一级类目限制仍待原有商业选择；其他独立鞋款继续；完整字段及实际评分依当前逐款回执。继续独立款完整素材优化和单次创建；2569仅单款底纹冲突HOLD；浏览器仅异常与批次抽检。",
   "revision_readbacks": 26,
   "revision_scope_pass": 26,
   "revision_pending_review": 0,
@@ -308,15 +308,24 @@
     },
     "2416": {
       "product_id": "1601976114323",
-      "status": "new",
-      "display": "N",
+      "status": "approved",
+      "display": "Y",
       "sku_count": 20,
+      "score": "5.00",
+      "score_status": "PASS_SCORE_GATE",
+      "observed_at": "2026-10-10T20:22:00.457357+00:00"
+    },
+    "2415": {
+      "product_id": "1601976088655",
+      "status": "approved",
+      "display": "Y",
+      "sku_count": 30,
       "score": null,
-      "score_status": null,
-      "observed_at": "2026-10-10T19:36:24.804652+00:00"
+      "score_status": "PENDING_OR_BELOW_TARGET",
+      "observed_at": "2026-10-10T20:34:10.998703+00:00"
     }
   },
-  "current_approved_displayed": 59,
+  "current_approved_displayed": 61,
   "complete_image_readback_pass_styles": [
     "058",
     "2633",
@@ -376,7 +385,9 @@
     "015",
     "25019",
     "2583-1",
-    "2417"
+    "2417",
+    "2416",
+    "2415"
   ],
   "pending_image_readback_styles": [],
   "latest_title_refinement": {
@@ -388,9 +399,7 @@
     "observed_at": "2026-10-08T23:07:23.578830+00:00"
   },
   "browser_acceptance": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
-  "pending_new_approval_styles": [
-    "2416"
-  ],
+  "pending_new_approval_styles": [],
   "public_QA_pass_styles": [
     "2619",
     "028",
@@ -723,10 +732,17 @@
     "formal_CDN_pixel_status": "FORMAL_CDN_PIXEL_AND_VISUAL_PASS"
   },
   "candidate2416": {
-    "status": "CREATED_PENDING_APPROVAL_FULL_ACCEPTANCE",
+    "status": "API_FIELDS_SCORE_PASS",
     "product_id": "1601976114323",
     "EU_combinations": 20,
     "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2416准备/发布后字段核验.json",
+    "formal_CDN_pixel_status": "FORMAL_CDN_PIXEL_AND_VISUAL_PASS"
+  },
+  "candidate2415": {
+    "status": "APPROVED_FIELDS_SCORE_PENDING",
+    "product_id": "1601976088655",
+    "EU_combinations": 30,
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2415准备/发布后字段核验.json",
     "formal_CDN_pixel_status": "FORMAL_CDN_PIXEL_AND_VISUAL_PASS"
   }
 }
