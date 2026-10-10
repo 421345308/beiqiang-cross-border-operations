@@ -1,8 +1,8 @@
 {
-  "observed_at": "2026-10-09T17:20:56.283724+00:00",
+  "observed_at": "2026-10-10T05:12:24.003600+00:00",
   "source_urls": 107,
-  "created_products": 39,
-  "formal_EU_combinations": 1218,
+  "created_products": 41,
+  "formal_EU_combinations": 1290,
   "approved_before_quality_revision": 26,
   "actual_score_5_before_quality_revision": 26,
   "scope_status": "ACTIVE_NOT_COMPLETE",
@@ -16,7 +16,7 @@
     "Do not count source URLs as distinct publishable styles",
     "Do not replay existing or outcome-unknown creates"
   ],
-  "next_work": "018与023均approved/Y、完整字段及真实5.00诊断通过；01819CDN已验收，保留唯一正式ID。继续017/015：017按真实踝靴核当前类目和去重，三色EU37–48、合成革/橡胶有原09证据；015当前12源图含同照重复，先解决独立图角色和Black Gray精确映射，再优化并发布。2583缺色实拍与绿色具体侧饰、027图案、2509/02505类目局部处理不阻断其他款。剩余2568/2569/016按来源继续。浏览器仅异常与抽检。",
+  "next_work": "017完整字段、正式18图与实际5.00通过。016新ID1601975285993已回读36EU及逐色绑定，正式18图通过；保持原ID补核审核、完整Schema及实际分，不重放创建。继续2568/2569的当前来源、材料、结构去重、标题与独立图组；015仅10张独立原照，逐角色核对重复与SKU照片；2583色图/侧饰、027图案及2509/02505类目局部处理不阻断其他款。浏览器仅异常与抽检。",
   "revision_readbacks": 26,
   "revision_scope_pass": 26,
   "revision_pending_review": 0,
@@ -125,9 +125,27 @@
       "score": "5.00",
       "score_status": "PASS_SCORE_GATE",
       "observed_at": "2026-10-09T16:58:15.734732+00:00"
+    },
+    "017": {
+      "product_id": "1601975178233",
+      "status": "approved",
+      "display": "Y",
+      "sku_count": 36,
+      "score": "5.00",
+      "score_status": "PASS_SCORE_GATE",
+      "observed_at": "2026-10-10T04:39:28.332834+00:00"
+    },
+    "016": {
+      "product_id": "1601975285993",
+      "status": "new",
+      "display": "N",
+      "sku_count": 36,
+      "score": null,
+      "score_status": null,
+      "observed_at": "2026-10-10T05:10:54.640492+00:00"
     }
   },
-  "current_approved_displayed": 39,
+  "current_approved_displayed": 40,
   "complete_image_readback_pass_styles": [
     "058",
     "2633",
@@ -167,7 +185,8 @@
     "2578",
     "2577",
     "023",
-    "018"
+    "018",
+    "017"
   ],
   "pending_image_readback_styles": [],
   "latest_title_refinement": {
@@ -179,7 +198,9 @@
     "observed_at": "2026-10-08T23:07:23.578830+00:00"
   },
   "browser_acceptance": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
-  "pending_new_approval_styles": [],
+  "pending_new_approval_styles": [
+    "016"
+  ],
   "public_QA_pass_styles": [
     "2619",
     "028",
@@ -342,11 +363,14 @@
     "formal_CDN_pixel_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/018准备/正式CDN像素核验.json"
   },
   "candidate017": {
-    "status": "CURRENT_SOURCE_REVIEW_READY_NOT_GENERATED_NOT_PUBLISHED",
+    "status": "API_FIELDS_SCORE_PASS",
     "EU_combinations": 36,
     "source_images": 21,
     "readable_images": 19,
-    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/017准备/商品预检与图组策略.json"
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/017准备/发布后字段核验.json",
+    "product_id": "1601975178233",
+    "formal_CDN_pixel_status": "FORMAL_CDN_PIXEL_AND_VISUAL_PASS",
+    "formal_CDN_pixel_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/017准备/正式CDN像素核验.json"
   },
   "candidate015": {
     "status": "CURRENT_SOURCE_REVIEW_READY_NOT_GENERATED_NOT_PUBLISHED",
@@ -354,5 +378,13 @@
     "source_images": 12,
     "readable_images": 12,
     "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/015准备/商品预检与图组策略.json"
+  },
+  "candidate016": {
+    "status": "CREATED_PENDING_APPROVAL_FULL_ACCEPTANCE",
+    "product_id": "1601975285993",
+    "EU_combinations": 36,
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/016准备/发布后字段核验.json",
+    "formal_CDN_pixel_status": "FORMAL_CDN_PIXEL_AND_VISUAL_PASS",
+    "formal_CDN_pixel_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/016准备/正式CDN像素核验.json"
   }
 }

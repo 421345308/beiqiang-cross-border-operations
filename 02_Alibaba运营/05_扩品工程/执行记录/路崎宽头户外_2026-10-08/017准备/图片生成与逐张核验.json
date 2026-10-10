@@ -1,0 +1,386 @@
+{
+  "style": "017",
+  "tool": "BUILTIN_IMAGE_GEN",
+  "observed_at": "2026-10-10T01:14:16.511750+00:00",
+  "rows": [
+    {
+      "role": "M1",
+      "buyer_question": "搜索识别鞋型",
+      "source_indices": [
+        1
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\017准备\\01_产品来源原图\\01.jpg"
+      ],
+      "source_sha256": [
+        "313c138240f0847c71618d066da5f1e5caf720f9675da2e5dd015b7af5206f93"
+      ],
+      "source_dimensions": [
+        [
+          800,
+          800
+        ]
+      ],
+      "prompt": "Use case: precise-object-edit. Asset type: square English B2B footwear photograph. Input image is the exact edit target. Change framing, supplier decorative overlays and background clutter only. Preserve the exact actual photographed Luqi017 ankle boot(s), photographed pose, count, naturally occluded/cropped boundaries, smooth textured synthetic-leather upper, moc-toe curved seam, metal eyelets, flat laces, rear pull loops, ankle height, stitching and dense small rounded outsole studs. Black has black outsole; White has brown outsole; Yellow has gray-brown outsole. No recoloring, new viewpoint, added shoes, hidden contour reconstruction or changes to shoe markings. Remove original supplier wording, decorative frames, arrows and marketing diagrams outside the shoes. No medical, orthopedic, barefoot, zero-drop, waterproof, grip, slip resistance, foam, lightweight, rebound, stability, certification, price or production claims. Photography must dominate, safe margins, clear legible restrained English headings on white or understated neutral background. Keep the one complete Yellow diagonal boot exactly photographed; retain sole details, toe seam and rear loop. White background with natural grounded shadow. No text or extra objects.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\017准备\\05_AI候选\\M1.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-d930f1ea-8be9-4fd8-9128-baf10f436973.png",
+      "output_sha256": "7fc250e7ca58659570ea012d2fb1b7f62719d69d31db84a1a565574e4d9df121",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T01:24:14.515563+00:00",
+      "review_note": "Complete actual Yellow diagonal boot, five eyelet pairs, moc-toe seam and gray-brown sole retained; no text."
+    },
+    {
+      "role": "M2",
+      "buyer_question": "实际三色及尺码选择",
+      "source_indices": [
+        9
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\017准备\\01_产品来源原图\\09.jpg"
+      ],
+      "source_sha256": [
+        "b972ed08d57f35557056c7159764d48a329f2abcf9e1fc7cd71e9be1c7e9c59d"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1451
+        ]
+      ],
+      "prompt": "Use case: precise-object-edit. Asset type: square English B2B footwear photograph. Input image is the exact edit target. Change framing, supplier decorative overlays and background clutter only. Preserve the exact actual photographed Luqi017 ankle boot(s), photographed pose, count, naturally occluded/cropped boundaries, smooth textured synthetic-leather upper, moc-toe curved seam, metal eyelets, flat laces, rear pull loops, ankle height, stitching and dense small rounded outsole studs. Black has black outsole; White has brown outsole; Yellow has gray-brown outsole. No recoloring, new viewpoint, added shoes, hidden contour reconstruction or changes to shoe markings. Remove original supplier wording, decorative frames, arrows and marketing diagrams outside the shoes. No medical, orthopedic, barefoot, zero-drop, waterproof, grip, slip resistance, foam, lightweight, rebound, stability, certification, price or production claims. Photography must dominate, safe margins, clear legible restrained English headings on white or understated neutral background. Use only the three actual complete boot photographs, original Black top, White lower left, Yellow lower right. Omit original specification table. Keep each exact color/sole. Text exactly: COLOR OPTIONS; Black; White; Yellow; EU 37-48 | Send your color and size mix.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\017准备\\05_AI候选\\M2.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-ae3721b5-32fb-4dc7-ac94-3241c1e73773.png",
+      "output_sha256": "57363fbc5d5c7d4ce77e0ed112bcb9a79ba14fa8e229e40f7692a74655f78e2f",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T01:24:14.537918+00:00",
+      "review_note": "Three original photographs, correct Black/White/Yellow and sole colors; EU37–48. Overview includes original Yellow cover, not a new angle."
+    },
+    {
+      "role": "M3",
+      "buyer_question": "黑色踝靴上脚外观",
+      "source_indices": [
+        3
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\017准备\\01_产品来源原图\\03.jpg"
+      ],
+      "source_sha256": [
+        "fb603e080db305b2cf9730a63ccace7e82dcd7602bde5016d6c9b225fc438131"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1177
+        ]
+      ],
+      "prompt": "Use case: precise-object-edit. Asset type: square English B2B footwear photograph. Input image is the exact edit target. Change framing, supplier decorative overlays and background clutter only. Preserve the exact actual photographed Luqi017 ankle boot(s), photographed pose, count, naturally occluded/cropped boundaries, smooth textured synthetic-leather upper, moc-toe curved seam, metal eyelets, flat laces, rear pull loops, ankle height, stitching and dense small rounded outsole studs. Black has black outsole; White has brown outsole; Yellow has gray-brown outsole. No recoloring, new viewpoint, added shoes, hidden contour reconstruction or changes to shoe markings. Remove original supplier wording, decorative frames, arrows and marketing diagrams outside the shoes. No medical, orthopedic, barefoot, zero-drop, waterproof, grip, slip resistance, foam, lightweight, rebound, stability, certification, price or production claims. Photography must dominate, safe margins, clear legible restrained English headings on white or understated neutral background. Keep exact Black on-foot pair: one heel lifted and one planted, brown trousers, white socks, actual hand near ankle. Preserve both complete photographed boots and actual ground. Text exactly: ON-FOOT PROFILE; Ankle-height lace-up boots.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\017准备\\05_AI候选\\M3.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-1498614e-284b-41b2-b5c7-504a046d2bb1.png",
+      "output_sha256": "7957090d4cfd63ce188e46e0eeeb970dfcd88ee5b00cf99a97ee7dd7988a4d58",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T01:24:14.566510+00:00",
+      "review_note": "Actual Black on-foot pair, lifted heel/planted boot, trousers/socks/hand and structure retained."
+    },
+    {
+      "role": "M4",
+      "buyer_question": "实拍底纹结构",
+      "source_indices": [
+        5
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\017准备\\01_产品来源原图\\05.jpg"
+      ],
+      "source_sha256": [
+        "456ed8ee62eee9ca232df10e50cc1bae763163796f37cd5b672562c79e258452"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1907
+        ]
+      ],
+      "prompt": "Use case: precise-object-edit. Asset type: square English B2B footwear photograph. Input image is the exact edit target. Change framing, supplier decorative overlays and background clutter only. Preserve the exact actual photographed Luqi017 ankle boot(s), photographed pose, count, naturally occluded/cropped boundaries, smooth textured synthetic-leather upper, moc-toe curved seam, metal eyelets, flat laces, rear pull loops, ankle height, stitching and dense small rounded outsole studs. Black has black outsole; White has brown outsole; Yellow has gray-brown outsole. No recoloring, new viewpoint, added shoes, hidden contour reconstruction or changes to shoe markings. Remove original supplier wording, decorative frames, arrows and marketing diagrams outside the shoes. No medical, orthopedic, barefoot, zero-drop, waterproof, grip, slip resistance, foam, lightweight, rebound, stability, certification, price or production claims. Photography must dominate, safe margins, clear legible restrained English headings on white or understated neutral background. Use ONLY the large lower vertical outsole photograph. Omit the separate upper toe photograph, diagrams and all overlays. Preserve every oval pad and small rounded/square edge stud exactly. Whole outsole fits with safe margins; no additional shoe/sole or grip claim. Text exactly: OUTSOLE DETAIL; Actual photographed rubber outsole.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\017准备\\05_AI候选\\M4.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-74b2efc0-9bda-439a-9105-a1314d326cb1.png",
+      "output_sha256": "caf29786af11df8e06440a97300df0a05491b809c7c49bbd5ce7e0f567e367e5",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T01:24:14.591079+00:00",
+      "review_note": "Only actual lower outsole macro, oval pads/edge studs retained; no grip claim or toe-photo duplication."
+    },
+    {
+      "role": "M5",
+      "buyer_question": "采购配码询价输入",
+      "source_indices": [
+        14
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\017准备\\01_产品来源原图\\14.jpg"
+      ],
+      "source_sha256": [
+        "2f7aaa5a14dd73cecf49eadd7b337305ca3d96232d939b7385e27ce36fdb4e24"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1041
+        ]
+      ],
+      "prompt": "Use case: precise-object-edit. Asset type: square English B2B footwear photograph. Input image is the exact edit target. Change framing, supplier decorative overlays and background clutter only. Preserve the exact actual photographed Luqi017 ankle boot(s), photographed pose, count, naturally occluded/cropped boundaries, smooth textured synthetic-leather upper, moc-toe curved seam, metal eyelets, flat laces, rear pull loops, ankle height, stitching and dense small rounded outsole studs. Black has black outsole; White has brown outsole; Yellow has gray-brown outsole. No recoloring, new viewpoint, added shoes, hidden contour reconstruction or changes to shoe markings. Remove original supplier wording, decorative frames, arrows and marketing diagrams outside the shoes. No medical, orthopedic, barefoot, zero-drop, waterproof, grip, slip resistance, foam, lightweight, rebound, stability, certification, price or production claims. Photography must dominate, safe margins, clear legible restrained English headings on white or understated neutral background. Keep exact Yellow on-foot pair, brown trousers and white socks, actual sharp foreground shoe and naturally blurred background shoe. Preserve pose/count. Text exactly: PLAN YOUR ASSORTMENT; Send color, EU size mix, pair quantity and destination.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\017准备\\05_AI候选\\M5.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-4d50fac0-19ea-4e45-adc5-13b178bd447e.png",
+      "output_sha256": "d50eb932e43cc0cdd76963b372daaa6c288594c2f2c890bb5050093cce9aa4b4",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T01:24:14.621383+00:00",
+      "review_note": "Actual Yellow on-foot pair, sharp foreground/natural rear blur, clear quotation inputs."
+    },
+    {
+      "role": "D1",
+      "buyer_question": "鞋口与系带构造",
+      "source_indices": [
+        7
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\017准备\\01_产品来源原图\\07.jpg"
+      ],
+      "source_sha256": [
+        "214f23740eed5da02be18111ed9ac63e33f5189e61f84f28b7f0ad0f6273268a"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1092
+        ]
+      ],
+      "prompt": "Use case: precise-object-edit. Asset type: square English B2B footwear photograph. Input image is the exact edit target. Change framing, supplier decorative overlays and background clutter only. Preserve the exact actual photographed Luqi017 ankle boot(s), photographed pose, count, naturally occluded/cropped boundaries, smooth textured synthetic-leather upper, moc-toe curved seam, metal eyelets, flat laces, rear pull loops, ankle height, stitching and dense small rounded outsole studs. Black has black outsole; White has brown outsole; Yellow has gray-brown outsole. No recoloring, new viewpoint, added shoes, hidden contour reconstruction or changes to shoe markings. Remove original supplier wording, decorative frames, arrows and marketing diagrams outside the shoes. No medical, orthopedic, barefoot, zero-drop, waterproof, grip, slip resistance, foam, lightweight, rebound, stability, certification, price or production claims. Photography must dominate, safe margins, clear legible restrained English headings on white or understated neutral background. Keep exact two Black boots on the display block with their actual openings, tongues and laces. No pose or viewpoint change. Remove lower blue frame. Text exactly: UPPER AND CLOSURE; Synthetic leather upper | Lace-up construction.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\017准备\\05_AI候选\\D1.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-61d7776c-b5fb-4fb2-9017-046c2be52739.png",
+      "output_sha256": "3170118fd84c7436fc4e8a992104a9ca0f43a5e2d1d520c9f829ee2bbfc527f9",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T01:24:14.646279+00:00",
+      "review_note": "Actual Black display pair, openings/laces/eyelets/moc-toe seams; synthetic leather wording from09."
+    },
+    {
+      "role": "D2",
+      "buyer_question": "实际侧面和后跟结构",
+      "source_indices": [
+        6
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\017准备\\01_产品来源原图\\06.jpg"
+      ],
+      "source_sha256": [
+        "c863d7657002632f8ef27860acd57e07aa88f8e08c47763a4feb1ad3eba9ba8b"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1456
+        ]
+      ],
+      "prompt": "Use case: precise-object-edit. Asset type: square English B2B footwear photograph. Input image is the exact edit target. Change framing, supplier decorative overlays and background clutter only. Preserve the exact actual photographed Luqi017 ankle boot(s), photographed pose, count, naturally occluded/cropped boundaries, smooth textured synthetic-leather upper, moc-toe curved seam, metal eyelets, flat laces, rear pull loops, ankle height, stitching and dense small rounded outsole studs. Black has black outsole; White has brown outsole; Yellow has gray-brown outsole. No recoloring, new viewpoint, added shoes, hidden contour reconstruction or changes to shoe markings. Remove original supplier wording, decorative frames, arrows and marketing diagrams outside the shoes. No medical, orthopedic, barefoot, zero-drop, waterproof, grip, slip resistance, foam, lightweight, rebound, stability, certification, price or production claims. Photography must dominate, safe margins, clear legible restrained English headings on white or understated neutral background. Use ONLY the complete lower Black boot side-profile photograph. Exclude the separate upper outsole photograph, foam wording, arrows, diagrams and performance text. Keep exact toe seam, ankle height, rear loop and sole geometry. Text exactly: SIDE PROFILE; Ankle height and rear pull loop.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\017准备\\05_AI候选\\D2.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-6ea167cf-b1d2-4204-b855-962d368da846.png",
+      "output_sha256": "36e4e5e02d54e294724be236f3164018fd98567046897700a3c66cca562d49ad",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T01:24:14.672212+00:00",
+      "review_note": "Only actual lower Black side profile, ankle/loop/toe seam/sole preserved; marketing diagrams excluded."
+    },
+    {
+      "role": "D3",
+      "buyer_question": "实际顶视与鞋带排列",
+      "source_indices": [
+        11
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\017准备\\01_产品来源原图\\11.jpg"
+      ],
+      "source_sha256": [
+        "725572a37048b053930d7f07ef9af77c363c9a1323403946e08581d7cf69c53c"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1235
+        ]
+      ],
+      "prompt": "Use case: precise-object-edit. Asset type: square English B2B footwear photograph. Input image is the exact edit target. Change framing, supplier decorative overlays and background clutter only. Preserve the exact actual photographed Luqi017 ankle boot(s), photographed pose, count, naturally occluded/cropped boundaries, smooth textured synthetic-leather upper, moc-toe curved seam, metal eyelets, flat laces, rear pull loops, ankle height, stitching and dense small rounded outsole studs. Black has black outsole; White has brown outsole; Yellow has gray-brown outsole. No recoloring, new viewpoint, added shoes, hidden contour reconstruction or changes to shoe markings. Remove original supplier wording, decorative frames, arrows and marketing diagrams outside the shoes. No medical, orthopedic, barefoot, zero-drop, waterproof, grip, slip resistance, foam, lightweight, rebound, stability, certification, price or production claims. Photography must dominate, safe margins, clear legible restrained English headings on white or understated neutral background. Keep exact two Black on-foot boots in their photographed top view, original trousers, socks, hand and ground. Remove external frames and wording including Camel outside photograph; do not alter shoe details. Text exactly: TOP VIEW; Actual photographed lace arrangement.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\017准备\\05_AI候选\\D3.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-16f0e81c-daed-434b-bcc5-07caedeb4f9b.png",
+      "output_sha256": "924df45748135cd464e5d7228091af2ebbd3399fc571cb380d72e56fdcc5ccf7",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T01:24:14.705473+00:00",
+      "review_note": "Actual Black top-view pair with socks/trousers/hand; external Camel wording excluded, no shoe marks removed."
+    },
+    {
+      "role": "D4",
+      "buyer_question": "白色配码与局部鞋底",
+      "source_indices": [
+        13
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\017准备\\01_产品来源原图\\13.jpg"
+      ],
+      "source_sha256": [
+        "5b6930bfb434bb62e2ec98bf6d4a921330c098f5ba4d2b602cf3e756a6546282"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1193
+        ]
+      ],
+      "prompt": "Use case: precise-object-edit. Asset type: square English B2B footwear photograph. Input image is the exact edit target. Change framing, supplier decorative overlays and background clutter only. Preserve the exact actual photographed Luqi017 ankle boot(s), photographed pose, count, naturally occluded/cropped boundaries, smooth textured synthetic-leather upper, moc-toe curved seam, metal eyelets, flat laces, rear pull loops, ankle height, stitching and dense small rounded outsole studs. Black has black outsole; White has brown outsole; Yellow has gray-brown outsole. No recoloring, new viewpoint, added shoes, hidden contour reconstruction or changes to shoe markings. Remove original supplier wording, decorative frames, arrows and marketing diagrams outside the shoes. No medical, orthopedic, barefoot, zero-drop, waterproof, grip, slip resistance, foam, lightweight, rebound, stability, certification, price or production claims. Photography must dominate, safe margins, clear legible restrained English headings on white or understated neutral background.  Keep exact two complete Black ankle boots in the source13 on-foot road photograph, black trousers and actual bare ankles, foreground heel raised and back shoe planted, both whole photographed boots retained. Do not add socks or change footwear position. Remove all original page frames and Chinese slogans. Text exactly: EU SIZE PLANNING; EU 37-48 | Confirm your required color-size mix.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\017准备\\05_AI候选\\D4.png",
+      "rejected_candidates": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\017准备\\05_AI候选\\D4_rejected_1.png",
+          "sha256": "bb75f664f69ea3614f62b2113290f9d18b554d696f471d84926385c5c0e22a45",
+          "status": "REJECTED_TOE_OUTPAINT",
+          "source_index": 18,
+          "prompt": "Use case: precise-object-edit. Asset type: square English B2B footwear photograph. Input image is the exact edit target. Change framing, supplier decorative overlays and background clutter only. Preserve the exact actual photographed Luqi017 ankle boot(s), photographed pose, count, naturally occluded/cropped boundaries, smooth textured synthetic-leather upper, moc-toe curved seam, metal eyelets, flat laces, rear pull loops, ankle height, stitching and dense small rounded outsole studs. Black has black outsole; White has brown outsole; Yellow has gray-brown outsole. No recoloring, new viewpoint, added shoes, hidden contour reconstruction or changes to shoe markings. Remove original supplier wording, decorative frames, arrows and marketing diagrams outside the shoes. No medical, orthopedic, barefoot, zero-drop, waterproof, grip, slip resistance, foam, lightweight, rebound, stability, certification, price or production claims. Photography must dominate, safe margins, clear legible restrained English headings on white or understated neutral background. Keep exact White on-foot pair, raised foreground heel showing actual partial tread, planted boot, brown trousers and white socks. Preserve naturally clipped rightmost toe boundary, do not reconstruct hidden/front geometry. Text exactly: EU SIZE PLANNING; EU 37-48 | Confirm your required color-size mix."
+        },
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\017准备\\05_AI候选\\D4_rejected_2.png",
+          "sha256": "ba882a9ef11d10d6bc37a4ac68a0eae1b3387cf57274553d6653577793f7ecf6",
+          "status": "REJECTED_TOE_OUTPAINT",
+          "source_index": 18,
+          "prompt": "Use case: precise-object-edit. Asset type: square English B2B footwear photograph. Input image is the exact edit target. Change framing, supplier decorative overlays and background clutter only. Preserve the exact actual photographed Luqi017 ankle boot(s), photographed pose, count, naturally occluded/cropped boundaries, smooth textured synthetic-leather upper, moc-toe curved seam, metal eyelets, flat laces, rear pull loops, ankle height, stitching and dense small rounded outsole studs. Black has black outsole; White has brown outsole; Yellow has gray-brown outsole. No recoloring, new viewpoint, added shoes, hidden contour reconstruction or changes to shoe markings. Remove original supplier wording, decorative frames, arrows and marketing diagrams outside the shoes. No medical, orthopedic, barefoot, zero-drop, waterproof, grip, slip resistance, foam, lightweight, rebound, stability, certification, price or production claims. Photography must dominate, safe margins, clear legible restrained English headings on white or understated neutral background. Keep exact White on-foot pair, raised foreground heel showing actual partial tread, planted boot, brown trousers and white socks. Preserve naturally clipped rightmost toe boundary, do not reconstruct hidden/front geometry. Text exactly: EU SIZE PLANNING; EU 37-48 | Confirm your required color-size mix. Critical correction: the raised right boot is cut off at the RIGHT edge of the original photograph. Keep that exact RIGHT-EDGE CROPPING. Its forefoot/toe must continue out of frame beyond the right edge; NEVER complete or synthesize the missing toe. Use the original photographic rectangle below a white text strip without outpainting. The raised shoe remains cropped, as a construction detail photograph."
+        }
+      ],
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-b3240667-950a-4588-ac49-4e913359cf40.png",
+      "output_sha256": "a29968967bbfde2997298660c8dc3cfaf7c7342eaf058397f197abfc9e0758f5",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T01:24:14.903181+00:00",
+      "review_note": "Two source18 candidates rejected: completed missing toe. Final13 complete Black pair, bare ankles/black trousers/original stance; EU37–48."
+    },
+    {
+      "role": "SKU_Black",
+      "buyer_question": "黑色SKU识别",
+      "source_indices": [
+        12
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\017准备\\01_产品来源原图\\12.jpg"
+      ],
+      "source_sha256": [
+        "39ac987a2673e0a96c39aba9f14b102aa78acb9b712bfd08e30433a1230e8be5"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          867
+        ]
+      ],
+      "prompt": "Use case: precise-object-edit. Asset type: square English B2B footwear photograph. Input image is the exact edit target. Change framing, supplier decorative overlays and background clutter only. Preserve the exact actual photographed Luqi017 ankle boot(s), photographed pose, count, naturally occluded/cropped boundaries, smooth textured synthetic-leather upper, moc-toe curved seam, metal eyelets, flat laces, rear pull loops, ankle height, stitching and dense small rounded outsole studs. Black has black outsole; White has brown outsole; Yellow has gray-brown outsole. No recoloring, new viewpoint, added shoes, hidden contour reconstruction or changes to shoe markings. Remove original supplier wording, decorative frames, arrows and marketing diagrams outside the shoes. No medical, orthopedic, barefoot, zero-drop, waterproof, grip, slip resistance, foam, lightweight, rebound, stability, certification, price or production claims. Photography must dominate, safe margins, clear legible restrained English headings on white or understated neutral background. Keep exact Black on-foot pair in original side-view stance with white socks/brown trousers, foreground sharp/back naturally blurred. Neutral understated actual background, no text, no collage.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\017准备\\05_AI候选\\SKU_Black.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-1ed5b62a-0507-4a26-b5f5-dd8775de6f7f.png",
+      "output_sha256": "d4ac0c46f7021552fe3a25b32aa13b45fa0eb975c9952a5bf38cbe2b2e83a632",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T01:24:14.929908+00:00",
+      "review_note": "Actual12 Black pair, trousers/socks, sharp front/natural rear blur; no text/collage."
+    },
+    {
+      "role": "SKU_Yellow",
+      "buyer_question": "黄色SKU识别",
+      "source_indices": [
+        17
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\017准备\\01_产品来源原图\\17.jpg"
+      ],
+      "source_sha256": [
+        "bf468ed5b1ef9b03fb3703b46bf60368aa18d405803e8d0149c52d6b7679348f"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          859
+        ]
+      ],
+      "prompt": "Use case: precise-object-edit. Asset type: square English B2B footwear photograph. Input image is the exact edit target. Change framing, supplier decorative overlays and background clutter only. Preserve the exact actual photographed Luqi017 ankle boot(s), photographed pose, count, naturally occluded/cropped boundaries, smooth textured synthetic-leather upper, moc-toe curved seam, metal eyelets, flat laces, rear pull loops, ankle height, stitching and dense small rounded outsole studs. Black has black outsole; White has brown outsole; Yellow has gray-brown outsole. No recoloring, new viewpoint, added shoes, hidden contour reconstruction or changes to shoe markings. Remove original supplier wording, decorative frames, arrows and marketing diagrams outside the shoes. No medical, orthopedic, barefoot, zero-drop, waterproof, grip, slip resistance, foam, lightweight, rebound, stability, certification, price or production claims. Photography must dominate, safe margins, clear legible restrained English headings on white or understated neutral background. Keep exact two Yellow on-foot boots in original seated top-view pose with hands near ankles and black trousers, gray-brown outsoles. No added shoes or reconstructed occlusion. Neutral understated actual ground, no text, no collage.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\017准备\\05_AI候选\\SKU_Yellow.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-f3da5afa-019e-42be-87c9-20659e430741.png",
+      "output_sha256": "bd0d728651aabc6bafeb44bac611cc375e4c6475e059b6590ed4c4d76da10bdc",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T01:24:14.959449+00:00",
+      "review_note": "Actual17 Yellow seated pair, bare ankles/hands/black trousers, gray-brown sole retained; no text/collage."
+    },
+    {
+      "role": "SKU_White",
+      "buyer_question": "白色SKU识别",
+      "source_indices": [
+        21
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\017准备\\01_产品来源原图\\21.jpg"
+      ],
+      "source_sha256": [
+        "18cde2ebb88b06059549f31410d1d488b06031914f754280b29c06ca8f9d6420"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          885
+        ]
+      ],
+      "prompt": "Use case: precise-object-edit. Asset type: square English B2B footwear photograph. Input image is the exact edit target. Change framing, supplier decorative overlays and background clutter only. Preserve the exact actual photographed Luqi017 ankle boot(s), photographed pose, count, naturally occluded/cropped boundaries, smooth textured synthetic-leather upper, moc-toe curved seam, metal eyelets, flat laces, rear pull loops, ankle height, stitching and dense small rounded outsole studs. Black has black outsole; White has brown outsole; Yellow has gray-brown outsole. No recoloring, new viewpoint, added shoes, hidden contour reconstruction or changes to shoe markings. Remove original supplier wording, decorative frames, arrows and marketing diagrams outside the shoes. No medical, orthopedic, barefoot, zero-drop, waterproof, grip, slip resistance, foam, lightweight, rebound, stability, certification, price or production claims. Photography must dominate, safe margins, clear legible restrained English headings on white or understated neutral background. Keep exact White on-foot pair in original seated top-view pose, actual hands near ankles, black trousers and brown soles. No added shoes or reconstructed occlusion. Neutral understated actual ground, no text, no collage.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\017准备\\05_AI候选\\SKU_White.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-b0e77a78-518a-4bc4-87ee-7c4275b6f604.png",
+      "output_sha256": "f62cbe6404aa972b4da299416fe872b5528216871da613ebc6ead0cf13b7a1f9",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T01:24:14.987747+00:00",
+      "review_note": "Actual21 White seated pair, bare ankles/hands/black trousers, brown sole retained; no text/collage."
+    }
+  ],
+  "status": "ALL_12_LOCAL_ROLES_VISUALLY_ACCEPTED",
+  "limitations": "12 source frames. M2 selection overview includes the original Yellow cover photograph; its role is three-color identification, not an independent angle. Actual crop and generated invariants require visual acceptance.",
+  "review_limit": "Native outputs individually compared with exact source photos. Public webpage rendering and physical fit/performance not proved."
+}
