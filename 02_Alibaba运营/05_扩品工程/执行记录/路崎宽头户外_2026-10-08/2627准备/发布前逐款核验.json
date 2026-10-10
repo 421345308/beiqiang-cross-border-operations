@@ -1,0 +1,22 @@
+{
+  "style": "2627",
+  "observed_at": "2026-10-10T08:23:15.595063+00:00",
+  "scope_result": "PASS",
+  "expected_sku_count": 16,
+  "exact_color_EU": true,
+  "title": "Men Wide Toe Box Slip On Knit Walking Shoes Lace Free Sock Collar Casual Footwear Wholesale EU 39-46",
+  "title_bytes": 100,
+  "main_images": 6,
+  "product_details": 4,
+  "company_images": 5,
+  "known_materials": {
+    "upper": "Knitted Textile; source07/09透气飞织. No Flyknit brand claim.",
+    "outsole": "MD; source08/09二次MD大底. Generic tiny EVA boilerplate on later photo margins is not treated as specific compound confirmation.",
+    "midsole": "Not specified",
+    "lining": "Not specified"
+  },
+  "formal_dedup": "Current435 complete APIcatalog plus44 formalbatchsupplement; current canonical462 mapped IDs;100sourcecover triage nearest12 visually reviewed,171unique knit/sock related formalCDNheroes172IDs all11contact sheets viewed. Luqi2573/1601974740583 separately compared: plain mesh vamp, ribbed rear heel overlay and swirling sole-edge versus2627 diagonal knit windows, frontwebbingloop and triplewave-rib edge/segmented sole. BQ001/002 angular cloud sole and nofrontloop; BQ021 spiral sole/rearloop; other lace-up/highsock/loafers structurally different. BQ-C2627/1601969885846 is EVA heelstrapclog, unrelated model/source. Exact Luqi source/model unbound. Not globalallangle or physical/IP clearance.",
+  "payload_sha256": "e6cd3be81262bdd251388e75b39bec24f5e072a6dbd2d9939e3a2ce05bd1c0b5",
+  "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+  "next_action": "One formalcreate, retain ID; readback fields and real pixels."
+}

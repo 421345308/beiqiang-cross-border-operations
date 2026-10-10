@@ -1,0 +1,407 @@
+{
+  "status": "BUYER_ROLE_REVIEW_PASS",
+  "observed_at": "2026-10-10T08:47:44.876588+00:00",
+  "roles": [
+    {
+      "role": "M1",
+      "buyer_question": "搜索识别",
+      "source_indices": [
+        1
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2580准备\\01_产品来源原图\\01.jpg"
+      ],
+      "source_sha256": [
+        "2be61e107dc998e8a5a765761a5910438afac3f58d420b5bfb473c58fdd03015"
+      ],
+      "source_dimensions": [
+        [
+          800,
+          800
+        ]
+      ],
+      "source_region_key": "actual-photo-1",
+      "prompt": "Use case: precise-object-edit. Square English B2B product photograph panel. Edit target is exact Luqi2580 supplied photo. Preserve photographed shoe count and original pose, exact jacquard forefoot lozenges and side mesh, oval eyelet panel, flat laces, tongue pull loop/rear heel loop, grooved sidewall and outsole chevrons. Yellow upper stays yellow with orange heel/perimeter and white sidewall; Black stays allblack. Preserve real bareankles/lowerlegs/hand where pictured. Product dominant, careful clean English typography in margins. Remove old text/colored frames/unrelated diagrams/insets. No new shoe or rotation/recolor, hidden reconstruction, added socks, changed shoe counts or tread. No brands/racing/performance/medical/waterproof/slip resistance/test/price/delivery claims. Keep both whole Yellow shoes, exact original front-top pair upright on white geometric block, plain charcoal studio backdrop. Preserve complete original silhouettes; no text.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2580准备\\05_AI候选\\M1.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-0bb5a110-42da-48cf-aa83-d639451988e3.png",
+      "output_sha256": "e614ce1e42742b43c14dc16ec373ce2379d08b5f787be986e9fa7bc5e185e366",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T08:47:44.876588+00:00",
+      "review_note": "Exact source individually compared: shoe count/pose/jacquard forefoot/eyelet panel and grooved sole edge retained. Actual bareankles/hand preserved; D1 partial upper macro excludes repeated inset, D2 original partial chevron tread, D3 real heelup view, D4 EU39-48. TwoSKU source19 disjoint actual single shoes. No performance claims."
+    },
+    {
+      "role": "M2",
+      "buyer_question": "侧面结构",
+      "source_indices": [
+        6
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2580准备\\01_产品来源原图\\06.jpg"
+      ],
+      "source_sha256": [
+        "94a02d07bd8d789ac6aa0c5f58534209fc6f2de1857fe5fded6725b384557da0"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1148
+        ]
+      ],
+      "source_region_key": "actual-photo-6",
+      "prompt": "Use case: precise-object-edit. Square English B2B product photograph panel. Edit target is exact Luqi2580 supplied photo. Preserve photographed shoe count and original pose, exact jacquard forefoot lozenges and side mesh, oval eyelet panel, flat laces, tongue pull loop/rear heel loop, grooved sidewall and outsole chevrons. Yellow upper stays yellow with orange heel/perimeter and white sidewall; Black stays allblack. Preserve real bareankles/lowerlegs/hand where pictured. Product dominant, careful clean English typography in margins. Remove old text/colored frames/unrelated diagrams/insets. No new shoe or rotation/recolor, hidden reconstruction, added socks, changed shoe counts or tread. No brands/racing/performance/medical/waterproof/slip resistance/test/price/delivery claims. Use ONLY large upper LEFT photograph of two actual Yellow shoes on boxes. Exclude upperRIGHT/lower inset single shoe and all diagram/text. Keep original pair and side-threequarter angles; remove writing from external boxes, plain pale studio setting. Text: JACQUARD MESH LACE-UP; Yellow color option.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2580准备\\05_AI候选\\M2.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-4d18f288-eaad-48ed-8725-64bff93c1205.png",
+      "output_sha256": "9ddbbcad49172e9074572b2f6466bf731eb88d354bbc97b4b4a9890ebbfc5422",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T08:47:44.876588+00:00",
+      "review_note": "Exact source individually compared: shoe count/pose/jacquard forefoot/eyelet panel and grooved sole edge retained. Actual bareankles/hand preserved; D1 partial upper macro excludes repeated inset, D2 original partial chevron tread, D3 real heelup view, D4 EU39-48. TwoSKU source19 disjoint actual single shoes. No performance claims."
+    },
+    {
+      "role": "M3",
+      "buyer_question": "黑色选项",
+      "source_indices": [
+        15
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2580准备\\01_产品来源原图\\15.jpg"
+      ],
+      "source_sha256": [
+        "0c22e3a2d6bb1d1c35a5fe85c34306a028506d44bd495bce4a3be5663b3e1e9b"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1096
+        ]
+      ],
+      "source_region_key": "actual-photo-15",
+      "prompt": "Use case: precise-object-edit. Square English B2B product photograph panel. Edit target is exact Luqi2580 supplied photo. Preserve photographed shoe count and original pose, exact jacquard forefoot lozenges and side mesh, oval eyelet panel, flat laces, tongue pull loop/rear heel loop, grooved sidewall and outsole chevrons. Yellow upper stays yellow with orange heel/perimeter and white sidewall; Black stays allblack. Preserve real bareankles/lowerlegs/hand where pictured. Product dominant, careful clean English typography in margins. Remove old text/colored frames/unrelated diagrams/insets. No new shoe or rotation/recolor, hidden reconstruction, added socks, changed shoe counts or tread. No brands/racing/performance/medical/waterproof/slip resistance/test/price/delivery claims. Keep exact two Black shoes on actual bareankles with original black jogger cuffs on gravel; original threequarter side pose. Frame below knees, no face/torso. Text: BLACK COLOR OPTION; Actual on-foot view.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2580准备\\05_AI候选\\M3.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-f765bf63-19e3-4863-a8e1-28e6b12afdcd.png",
+      "output_sha256": "076ca07312f61b7d83834a391a0e957f45ee0ed0a25fb775c3e3d6485ed825e3",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T08:47:44.876588+00:00",
+      "review_note": "Exact source individually compared: shoe count/pose/jacquard forefoot/eyelet panel and grooved sole edge retained. Actual bareankles/hand preserved; D1 partial upper macro excludes repeated inset, D2 original partial chevron tread, D3 real heelup view, D4 EU39-48. TwoSKU source19 disjoint actual single shoes. No performance claims."
+    },
+    {
+      "role": "M4",
+      "buyer_question": "前掌与系带",
+      "source_indices": [
+        12
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2580准备\\01_产品来源原图\\12.jpg"
+      ],
+      "source_sha256": [
+        "0d0329f6305a08da3ab89fc5d6c809e68003baf23f043f11a7b09dd00682704d"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1490
+        ]
+      ],
+      "source_region_key": "actual-photo-12",
+      "prompt": "Use case: precise-object-edit. Square English B2B product photograph panel. Edit target is exact Luqi2580 supplied photo. Preserve photographed shoe count and original pose, exact jacquard forefoot lozenges and side mesh, oval eyelet panel, flat laces, tongue pull loop/rear heel loop, grooved sidewall and outsole chevrons. Yellow upper stays yellow with orange heel/perimeter and white sidewall; Black stays allblack. Preserve real bareankles/lowerlegs/hand where pictured. Product dominant, careful clean English typography in margins. Remove old text/colored frames/unrelated diagrams/insets. No new shoe or rotation/recolor, hidden reconstruction, added socks, changed shoe counts or tread. No brands/racing/performance/medical/waterproof/slip resistance/test/price/delivery claims. Use exact two Yellow shoes on original bareankles/lowerlegs, original front-threequarter standing pose/gravel. Frame below knees, no torso or face, no socks. Text: WIDE TOE BOX WALKING SHOES; Lace-up construction.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2580准备\\05_AI候选\\M4.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-ce1af733-bbb4-4a4b-8eef-dd36c25868b9.png",
+      "output_sha256": "23d3ec674d68dc379f365056aaeb341396a45424e1b1f71e74de61d9bdef186e",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T08:47:44.876588+00:00",
+      "review_note": "Exact source individually compared: shoe count/pose/jacquard forefoot/eyelet panel and grooved sole edge retained. Actual bareankles/hand preserved; D1 partial upper macro excludes repeated inset, D2 original partial chevron tread, D3 real heelup view, D4 EU39-48. TwoSKU source19 disjoint actual single shoes. No performance claims."
+    },
+    {
+      "role": "M5",
+      "buyer_question": "采购配色输入",
+      "source_indices": [
+        14
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2580准备\\01_产品来源原图\\14.jpg"
+      ],
+      "source_sha256": [
+        "a60509abd5fe617ac6b1d6c5b38e9705b9bbab1dd5ba8e5a3c302aeace1b6da5"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          975
+        ]
+      ],
+      "source_region_key": "actual-photo-14",
+      "prompt": "Use case: precise-object-edit. Square English B2B product photograph panel. Edit target is exact Luqi2580 supplied photo. Preserve photographed shoe count and original pose, exact jacquard forefoot lozenges and side mesh, oval eyelet panel, flat laces, tongue pull loop/rear heel loop, grooved sidewall and outsole chevrons. Yellow upper stays yellow with orange heel/perimeter and white sidewall; Black stays allblack. Preserve real bareankles/lowerlegs/hand where pictured. Product dominant, careful clean English typography in margins. Remove old text/colored frames/unrelated diagrams/insets. No new shoe or rotation/recolor, hidden reconstruction, added socks, changed shoe counts or tread. No brands/racing/performance/medical/waterproof/slip resistance/test/price/delivery claims. Keep original adult hand holding rear collar of one Yellow onfoot shoe while other Yellow shoe planted, exact front pose/blackjogger cuffs/gravel. Frame below knees, retain real hand; remove supplier framing. Text: PLAN YOUR ASSORTMENT; Send color, EU size mix, pair quantity and destination.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2580准备\\05_AI候选\\M5.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-23b04623-1dcf-4027-ba7e-ba8f67df3f7e.png",
+      "output_sha256": "e32f7a447104280805a371722928169106190533287eac8c8f7f1dabfa21ad05",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T08:47:44.876588+00:00",
+      "review_note": "Exact source individually compared: shoe count/pose/jacquard forefoot/eyelet panel and grooved sole edge retained. Actual bareankles/hand preserved; D1 partial upper macro excludes repeated inset, D2 original partial chevron tread, D3 real heelup view, D4 EU39-48. TwoSKU source19 disjoint actual single shoes. No performance claims."
+    },
+    {
+      "role": "D1",
+      "buyer_question": "提花网面",
+      "source_indices": [
+        5
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2580准备\\01_产品来源原图\\05.jpg"
+      ],
+      "source_sha256": [
+        "dfd2717836ac1d9a3f5d6be271206a78b5d9afbcf664367a12cec24aaf5299fd"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1501
+        ]
+      ],
+      "source_region_key": "actual-photo-5",
+      "prompt": "Use case: precise-object-edit. Square English B2B product photograph panel. Edit target is exact Luqi2580 supplied photo. Preserve photographed shoe count and original pose, exact jacquard forefoot lozenges and side mesh, oval eyelet panel, flat laces, tongue pull loop/rear heel loop, grooved sidewall and outsole chevrons. Yellow upper stays yellow with orange heel/perimeter and white sidewall; Black stays allblack. Preserve real bareankles/lowerlegs/hand where pictured. Product dominant, careful clean English typography in margins. Remove old text/colored frames/unrelated diagrams/insets. No new shoe or rotation/recolor, hidden reconstruction, added socks, changed shoe counts or tread. No brands/racing/performance/medical/waterproof/slip resistance/test/price/delivery claims. Use ONLY large actual lower-right Yellow side shoe partial photograph; close macro crop of visible jacquard side panels/oval eyelet and heel. Partial photo remains partial. EXCLUDE upperLEFT inset that repeats main1, white foam spheres/diagrams and old text. Plain margins. No reconstruction. Text: JACQUARD MESH UPPER; Actual photographed upper detail.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2580准备\\05_AI候选\\D1.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-cf8fcddf-ab8b-4b43-9b29-8c32b59a713f.png",
+      "output_sha256": "d2c8c949462548445a0c903a183ac045c452dc520e50f352e17563ec76f89d27",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T08:47:44.876588+00:00",
+      "review_note": "Exact source individually compared: shoe count/pose/jacquard forefoot/eyelet panel and grooved sole edge retained. Actual bareankles/hand preserved; D1 partial upper macro excludes repeated inset, D2 original partial chevron tread, D3 real heelup view, D4 EU39-48. TwoSKU source19 disjoint actual single shoes. No performance claims."
+    },
+    {
+      "role": "D2",
+      "buyer_question": "实际底纹",
+      "source_indices": [
+        9
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2580准备\\01_产品来源原图\\09.jpg"
+      ],
+      "source_sha256": [
+        "a651e560e8002d988f0c8b5d5d11a8d2a9671f855e1cabdacb5b62d1b919b995"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1422
+        ]
+      ],
+      "source_region_key": "actual-photo-9",
+      "prompt": "Use case: precise-object-edit. Square English B2B product photograph panel. Edit target is exact Luqi2580 supplied photo. Preserve photographed shoe count and original pose, exact jacquard forefoot lozenges and side mesh, oval eyelet panel, flat laces, tongue pull loop/rear heel loop, grooved sidewall and outsole chevrons. Yellow upper stays yellow with orange heel/perimeter and white sidewall; Black stays allblack. Preserve real bareankles/lowerlegs/hand where pictured. Product dominant, careful clean English typography in margins. Remove old text/colored frames/unrelated diagrams/insets. No new shoe or rotation/recolor, hidden reconstruction, added socks, changed shoe counts or tread. No brands/racing/performance/medical/waterproof/slip resistance/test/price/delivery claims. Use ONLY actual large Yellow outsole partial photograph, macro crop of original orange chevron sections/white rectangular textures. Exclude lower inset and all old claims. Partial outsole remains partial, no complete hidden outsole. Text: MD + TPR OUTSOLE; Actual photographed tread section.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2580准备\\05_AI候选\\D2.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-0816a228-f9ab-4177-b184-2701d6fc13d7.png",
+      "output_sha256": "49565a6c3b166c1736a9a0172931f927daea306e6d5d061e06bac2fbc3e4bab9",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T08:47:44.876588+00:00",
+      "review_note": "Exact source individually compared: shoe count/pose/jacquard forefoot/eyelet panel and grooved sole edge retained. Actual bareankles/hand preserved; D1 partial upper macro excludes repeated inset, D2 original partial chevron tread, D3 real heelup view, D4 EU39-48. TwoSKU source19 disjoint actual single shoes. No performance claims."
+    },
+    {
+      "role": "D3",
+      "buyer_question": "黑色后跟及底纹",
+      "source_indices": [
+        17
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2580准备\\01_产品来源原图\\17.jpg"
+      ],
+      "source_sha256": [
+        "ab916f06ca2d2607957d31ce8da0148342219f2e551700e0323ea17bde34ae7f"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          931
+        ]
+      ],
+      "source_region_key": "actual-photo-17",
+      "prompt": "Use case: precise-object-edit. Square English B2B product photograph panel. Edit target is exact Luqi2580 supplied photo. Preserve photographed shoe count and original pose, exact jacquard forefoot lozenges and side mesh, oval eyelet panel, flat laces, tongue pull loop/rear heel loop, grooved sidewall and outsole chevrons. Yellow upper stays yellow with orange heel/perimeter and white sidewall; Black stays allblack. Preserve real bareankles/lowerlegs/hand where pictured. Product dominant, careful clean English typography in margins. Remove old text/colored frames/unrelated diagrams/insets. No new shoe or rotation/recolor, hidden reconstruction, added socks, changed shoe counts or tread. No brands/racing/performance/medical/waterproof/slip resistance/test/price/delivery claims. Preserve exact two Black onfoot shoes with bareankles/blackjogger cuffs, one planted and one raised heel showing original tread, gravel. Frame below knees, no face/torso. Text: HEEL AND OUTSOLE VIEW; Inspect the photographed profile and tread.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2580准备\\05_AI候选\\D3.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-718dee0e-e811-46df-855b-8394fb0ac3bd.png",
+      "output_sha256": "d16b1ad5c822292ef189f502a2cc1037cb04360ea21a17db00485de3237530db",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T08:47:44.876588+00:00",
+      "review_note": "Exact source individually compared: shoe count/pose/jacquard forefoot/eyelet panel and grooved sole edge retained. Actual bareankles/hand preserved; D1 partial upper macro excludes repeated inset, D2 original partial chevron tread, D3 real heelup view, D4 EU39-48. TwoSKU source19 disjoint actual single shoes. No performance claims."
+    },
+    {
+      "role": "D4",
+      "buyer_question": "EU尺码输入",
+      "source_indices": [
+        13
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2580准备\\01_产品来源原图\\13.jpg"
+      ],
+      "source_sha256": [
+        "fafb2137abe4e54081bc3b695544d3d555872c61d85936a0102b72a113b97766"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1533
+        ]
+      ],
+      "source_region_key": "actual-photo-13",
+      "prompt": "Use case: precise-object-edit. Square English B2B product photograph panel. Edit target is exact Luqi2580 supplied photo. Preserve photographed shoe count and original pose, exact jacquard forefoot lozenges and side mesh, oval eyelet panel, flat laces, tongue pull loop/rear heel loop, grooved sidewall and outsole chevrons. Yellow upper stays yellow with orange heel/perimeter and white sidewall; Black stays allblack. Preserve real bareankles/lowerlegs/hand where pictured. Product dominant, careful clean English typography in margins. Remove old text/colored frames/unrelated diagrams/insets. No new shoe or rotation/recolor, hidden reconstruction, added socks, changed shoe counts or tread. No brands/racing/performance/medical/waterproof/slip resistance/test/price/delivery claims. Use ONLY upper large photograph of Yellow pair on bareankles and blackjogger cuffs on gravel, exact side-threequarter pose. Exclude lowerLEFT inset and all old framing/text. Frame below knees. Text: EU SIZE PLANNING; EU 39-48; Confirm your required color-size mix.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2580准备\\05_AI候选\\D4.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-368fbf9b-4dda-45f6-aa83-bdc39ce51a3a.png",
+      "output_sha256": "711e43a0fc766d409ddafb0c80a360b6c433cc77ae2c3e9a70c0d5c0959cc8ac",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T08:47:44.876588+00:00",
+      "review_note": "Exact source individually compared: shoe count/pose/jacquard forefoot/eyelet panel and grooved sole edge retained. Actual bareankles/hand preserved; D1 partial upper macro excludes repeated inset, D2 original partial chevron tread, D3 real heelup view, D4 EU39-48. TwoSKU source19 disjoint actual single shoes. No performance claims."
+    },
+    {
+      "role": "SKU_Black",
+      "buyer_question": "黑色SKU",
+      "source_indices": [
+        19
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2580准备\\01_产品来源原图\\19.jpg"
+      ],
+      "source_sha256": [
+        "97a681236175f8fccfd47ad9d5ddddfad16683464a578715fd9ce3b884903886"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1164
+        ]
+      ],
+      "source_region_key": "SKU_Black",
+      "prompt": "Use case: precise-object-edit. Square English B2B product photograph panel. Edit target is exact Luqi2580 supplied photo. Preserve photographed shoe count and original pose, exact jacquard forefoot lozenges and side mesh, oval eyelet panel, flat laces, tongue pull loop/rear heel loop, grooved sidewall and outsole chevrons. Yellow upper stays yellow with orange heel/perimeter and white sidewall; Black stays allblack. Preserve real bareankles/lowerlegs/hand where pictured. Product dominant, careful clean English typography in margins. Remove old text/colored frames/unrelated diagrams/insets. No new shoe or rotation/recolor, hidden reconstruction, added socks, changed shoe counts or tread. No brands/racing/performance/medical/waterproof/slip resistance/test/price/delivery claims. Use ONLY LOWER actual single Black shoe photograph. Exclude upper Yellow shoe. Whole original shoe silhouette and threequarter angle on white background, no text or collage. Do not invent angle or geometry.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2580准备\\05_AI候选\\SKU_Black.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-9b5ec73f-9ff3-4552-9928-c494aee05a73.png",
+      "output_sha256": "0a81ddb17b5fd22fdf34d0e6424c97260387975ab6a91f4fcf331e147489b521",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T08:47:44.876588+00:00",
+      "review_note": "Exact source individually compared: shoe count/pose/jacquard forefoot/eyelet panel and grooved sole edge retained. Actual bareankles/hand preserved; D1 partial upper macro excludes repeated inset, D2 original partial chevron tread, D3 real heelup view, D4 EU39-48. TwoSKU source19 disjoint actual single shoes. No performance claims."
+    },
+    {
+      "role": "SKU_Yellow",
+      "buyer_question": "黄色SKU",
+      "source_indices": [
+        19
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2580准备\\01_产品来源原图\\19.jpg"
+      ],
+      "source_sha256": [
+        "97a681236175f8fccfd47ad9d5ddddfad16683464a578715fd9ce3b884903886"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1164
+        ]
+      ],
+      "source_region_key": "SKU_Yellow",
+      "prompt": "Use case: precise-object-edit. Square English B2B product photograph panel. Edit target is exact Luqi2580 supplied photo. Preserve photographed shoe count and original pose, exact jacquard forefoot lozenges and side mesh, oval eyelet panel, flat laces, tongue pull loop/rear heel loop, grooved sidewall and outsole chevrons. Yellow upper stays yellow with orange heel/perimeter and white sidewall; Black stays allblack. Preserve real bareankles/lowerlegs/hand where pictured. Product dominant, careful clean English typography in margins. Remove old text/colored frames/unrelated diagrams/insets. No new shoe or rotation/recolor, hidden reconstruction, added socks, changed shoe counts or tread. No brands/racing/performance/medical/waterproof/slip resistance/test/price/delivery claims. Use ONLY UPPER actual single Yellow shoe photograph. Exclude lower Black shoe. Whole original shoe silhouette and threequarter angle on white background, no text or collage. Do not invent angle or geometry.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2580准备\\05_AI候选\\SKU_Yellow.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-aaf45a1c-f4b5-415c-a2a4-05cdca32aa34.png",
+      "output_sha256": "fed8c4637a373c0e6f7bbf8ec3d75e0e5a30b778da8221f06c681c0cb09dab9a",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T08:47:44.876588+00:00",
+      "review_note": "Exact source individually compared: shoe count/pose/jacquard forefoot/eyelet panel and grooved sole edge retained. Actual bareankles/hand preserved; D1 partial upper macro excludes repeated inset, D2 original partial chevron tread, D3 real heelup view, D4 EU39-48. TwoSKU source19 disjoint actual single shoes. No performance claims."
+    }
+  ],
+  "M6": {
+    "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎新品_2026-10-07\\图片修复\\F.png",
+    "bank_url": "https://sc04.alicdn.com/kf/S6c8cb1d46d8c4b018cf07f5cab50c1adi/286385890/S6c8cb1d46d8c4b018cf07f5cab50c1adi.png",
+    "file_id": "30149993323"
+  },
+  "company": [
+    {
+      "role": "C1",
+      "usage": "ordinary_HTML_company_context",
+      "official_url": "https://sc04.alicdn.com/kf/Ha8c1682092424e778eadf945763e79daU/286385890/Ha8c1682092424e778eadf945763e79daU.jpg",
+      "file_id": "33355885480",
+      "local_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\266_quality_audit\\originals\\C01_factory_profile.jpg",
+      "sha256": "23a34c8e425ae286d190ac1eb587c93e9a87421fdf490ec48f260e53e316149c",
+      "local_hash_verified": true,
+      "pixel_edit": false
+    },
+    {
+      "role": "C2",
+      "usage": "ordinary_HTML_company_context",
+      "official_url": "https://sc04.alicdn.com/kf/H496f7579171f4370a1d47c3adf30001bK/286385890/H496f7579171f4370a1d47c3adf30001bK.jpg",
+      "file_id": "33358392283",
+      "local_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\266_quality_audit\\originals\\C02_oem_odm_workflow.jpg",
+      "sha256": "66624253f1d95ec68e060d792f13c61943c86f7d61e763167a0a2eb1146300f5",
+      "local_hash_verified": true,
+      "pixel_edit": false
+    },
+    {
+      "role": "C3",
+      "usage": "ordinary_HTML_company_context",
+      "official_url": "https://sc04.alicdn.com/kf/H36e700f5c3ee447a80c035d8ae7521d9a/286385890/H36e700f5c3ee447a80c035d8ae7521d9a.jpg",
+      "file_id": "33355813301",
+      "local_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\266_quality_audit\\originals\\C03_production_process.jpg",
+      "sha256": "3ae00d6398224dd7021ed2a266584bccb77b741b31fa9c72ca8ad66ab443f683",
+      "local_hash_verified": true,
+      "pixel_edit": false
+    },
+    {
+      "role": "C4",
+      "usage": "ordinary_HTML_company_context",
+      "official_url": "https://sc04.alicdn.com/kf/H9f32c7ecea0f4d25bc5ddc9cd04c1e5dK/286385890/H9f32c7ecea0f4d25bc5ddc9cd04c1e5dK.jpg",
+      "file_id": "33358345636",
+      "local_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\266_quality_audit\\originals\\C04_quality_control.jpg",
+      "sha256": "f32d682a7055a3e44f91eb074b678507beca63967da5565de8997f582a651bf5",
+      "local_hash_verified": true,
+      "pixel_edit": false
+    },
+    {
+      "role": "C5",
+      "usage": "ordinary_HTML_company_context",
+      "official_url": "https://sc04.alicdn.com/kf/H5f71c3cfb4064b51bb458d0a786cb402R/286385890/H5f71c3cfb4064b51bb458d0a786cb402R.jpg",
+      "file_id": "33358440083",
+      "local_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\266_quality_audit\\originals\\C05_packing_inquiry.jpg",
+      "sha256": "d0f3916d920a9ec46fd822317a9cd3c684b6b7d60631208475fa2be138d05bc2",
+      "local_hash_verified": true,
+      "pixel_edit": false
+    }
+  ],
+  "excluded_candidates": [],
+  "complete_set_visual_review_at": "2026-10-10T08:49:33.176049+00:00",
+  "complete_set_note": "Nine independent main/detail photographs and two disjoint source19 single-color photos plus real factoryM6 and five company panels compared visually. Photograph pose, jacquard mesh/eyelet panel/grooved sole edge, Black/Yellow and EU39-48, source tread and independent main/detail roles checked. No public webpage rendering proof."
+}

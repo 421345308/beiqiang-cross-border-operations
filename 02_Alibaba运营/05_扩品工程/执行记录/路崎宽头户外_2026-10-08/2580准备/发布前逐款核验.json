@@ -1,0 +1,22 @@
+{
+  "style": "2580",
+  "observed_at": "2026-10-10T08:51:42.036124+00:00",
+  "scope_result": "PASS",
+  "expected_sku_count": 20,
+  "exact_color_EU": true,
+  "title": "Men Wide Toe Box Jacquard Mesh Lace Up Walking Shoes MD TPR Outsole Casual Sneakers Wholesale EU 39-48",
+  "title_bytes": 102,
+  "main_images": 6,
+  "product_details": 4,
+  "company_images": 5,
+  "known_materials": {
+    "upper": "Jacquard Mesh; source05/18 贾卡网面",
+    "outsole": "MD + TPR; source18 大底MD+TPR; no material allocation inferred from colors",
+    "midsole": "Not specified",
+    "lining": "Not specified"
+  },
+  "formal_dedup": "Current complete435 platformcatalog metadata plus45 formalbatchsupplement, canonical exact source/model mapping checked. 100sourcecover dHash triage nearest12 visually reviewed:2626/2583-1/2558/2627/038/2571/2629/2572/2598/032/016/033. 2580 has jacquard forefoot lozenges, oval eyelet panel, yellow tongue loop/orange heel loop, MD+TPR sole with orange edge and grooved white sidewall; Black same geometry allblack. 2558 has different forefoot overlay, round patterned laces and curved sidewall. Other nearest retro overlays/gum soles, geometric panels, lowmesh or highwinter styles distinct;2627 is lacefree diagonal knit/triplewave sole. Source/model not bound. Hero metadata/source scope only, not globalallangle physical/IP clearance.",
+  "payload_sha256": "e242313acf8954772d1a043a866a50c9a00d56c1812e154c696b257af224c34c",
+  "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+  "next_action": "One formalcreate, retain ID; readback fields and real pixels."
+}

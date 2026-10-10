@@ -1,0 +1,22 @@
+{
+  "style": "029",
+  "observed_at": "2026-10-10T09:21:49.615963+00:00",
+  "scope_result": "PASS",
+  "expected_sku_count": 20,
+  "exact_color_EU": true,
+  "title": "Men Wide Toe Box Lace Up Walking Shoes Mesh or Plush Lining EVA Outsole Textured Casual Footwear Wholesale EU 39-48",
+  "title_bytes": 115,
+  "main_images": 6,
+  "product_details": 4,
+  "company_images": 5,
+  "known_materials": {
+    "upper": "Not specified; source11 革面 only, textured photographed surface. No Microfiber/PU/genuineleather/species assumption.",
+    "outsole": "EVA; source11 specific specification. Source05 generic rubber diagram wording not retained.",
+    "midsole": "Not specified",
+    "lining": "Mesh or Plush, per selected variant; source09/11 physical lining photos and source selector Black/BlackPlush"
+  },
+  "formal_dedup": "Current complete435 platformcatalog metadata plus46 formalbatchsupplement; canonical exact source/model mapping checked.100sourcecover dHash triage nearest12 individually visually compared:027/2409/2132/023/018/1628/2577/028/2593/0922/995/1026. 029 lowtop textured grain upper, undulating forefoot seam, flatblack laces/single top metal eyelet, smooth sculpted sole edge/rearloop, samebody Mesh and Plush lining options.027 metallic band overlays/mesh;2409/2132/1628 highplush boots with different panels or sole;other nearest mesh/retropanels/technicalhiking soles distinct. Exactsource/model unbound. Current hero/source/metadata scope, not globalallangle physical/IP clearance.",
+  "payload_sha256": "1cec2def6eeed96170e1fcd18ae573465370a9235c2b494eb67cef2e70899771",
+  "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+  "next_action": "One formalcreate, retain ID; readback fields and real pixels."
+}
