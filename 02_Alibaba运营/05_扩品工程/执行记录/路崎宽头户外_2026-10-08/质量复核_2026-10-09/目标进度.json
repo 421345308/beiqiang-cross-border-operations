@@ -1,8 +1,8 @@
 {
-  "observed_at": "2026-10-10T21:08:29.024155+00:00",
+  "observed_at": "2026-10-10T21:51:23.765055+00:00",
   "source_urls": 107,
-  "created_products": 62,
-  "formal_EU_combinations": 1908,
+  "created_products": 63,
+  "formal_EU_combinations": 1928,
   "approved_before_quality_revision": 26,
   "actual_score_5_before_quality_revision": 26,
   "scope_status": "ACTIVE_NOT_COMPLETE",
@@ -16,7 +16,7 @@
     "Do not count source URLs as distinct publishable styles",
     "Do not replay existing or outcome-unknown creates"
   ],
-  "next_work": "107来源目标ACTIVE；62正式ID/1908EU，当前61approved/Y。2413与2415各唯一ID30EU/18实际图；审核、完整字段及评分按当前逐款证据；026经营一级类目限制仅单款待商业选择，独立款继续；完整字段及实际评分依当前逐款回执。继续独立款完整素材优化和单次创建；2569仅单款底纹冲突HOLD；浏览器仅异常与批次抽检。",
+  "next_work": "107来源目标ACTIVE；63正式ID/1928EU，当前63approved/Y。2409唯一ID20EU/17实际图及2413唯一ID30EU/18实际图；审核、完整字段及评分按当前逐款证据；026经营一级类目限制仅单款待商业选择，其他独立款继续；完整字段及实际评分依当前逐款回执。继续独立款完整素材优化和单次创建；2569仅单款底纹冲突HOLD；浏览器仅异常与批次抽检。",
   "revision_readbacks": 26,
   "revision_scope_pass": 26,
   "revision_pending_review": 0,
@@ -326,15 +326,24 @@
     },
     "2413": {
       "product_id": "1601976190044",
-      "status": "new",
-      "display": "N",
+      "status": "approved",
+      "display": "Y",
       "sku_count": 30,
+      "score": "5.00",
+      "score_status": "PASS_SCORE_GATE",
+      "observed_at": "2026-10-10T21:14:49.082023+00:00"
+    },
+    "2409": {
+      "product_id": "1601976084873",
+      "status": "approved",
+      "display": "Y",
+      "sku_count": 20,
       "score": null,
-      "score_status": null,
-      "observed_at": "2026-10-10T21:07:23.189712+00:00"
+      "score_status": "PENDING_OR_BELOW_TARGET",
+      "observed_at": "2026-10-10T21:50:49.305896+00:00"
     }
   },
-  "current_approved_displayed": 61,
+  "current_approved_displayed": 63,
   "complete_image_readback_pass_styles": [
     "058",
     "2633",
@@ -396,7 +405,9 @@
     "2583-1",
     "2417",
     "2416",
-    "2415"
+    "2415",
+    "2413",
+    "2409"
   ],
   "pending_image_readback_styles": [],
   "latest_title_refinement": {
@@ -408,9 +419,7 @@
     "observed_at": "2026-10-08T23:07:23.578830+00:00"
   },
   "browser_acceptance": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
-  "pending_new_approval_styles": [
-    "2413"
-  ],
+  "pending_new_approval_styles": [],
   "public_QA_pass_styles": [
     "2619",
     "028",
@@ -757,10 +766,17 @@
     "formal_CDN_pixel_status": "FORMAL_CDN_PIXEL_AND_VISUAL_PASS"
   },
   "candidate2413": {
-    "status": "CREATED_PENDING_APPROVAL_FULL_ACCEPTANCE",
+    "status": "API_FIELDS_SCORE_PASS",
     "product_id": "1601976190044",
     "EU_combinations": 30,
     "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2413准备/发布后字段核验.json",
+    "formal_CDN_pixel_status": "FORMAL_CDN_PIXEL_AND_VISUAL_PASS"
+  },
+  "candidate2409": {
+    "status": "APPROVED_FIELDS_SCORE_PENDING",
+    "product_id": "1601976084873",
+    "EU_combinations": 20,
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2409准备/发布后字段核验.json",
     "formal_CDN_pixel_status": "FORMAL_CDN_PIXEL_AND_VISUAL_PASS"
   }
 }

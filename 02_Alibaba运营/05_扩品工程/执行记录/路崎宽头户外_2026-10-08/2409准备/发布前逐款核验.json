@@ -1,0 +1,22 @@
+{
+  "style": "2409",
+  "observed_at": "2026-10-10T21:35:54.370298+00:00",
+  "scope_result": "PASS",
+  "expected_sku_count": 20,
+  "exact_color_EU": true,
+  "title": "Mens Winter Ankle Boots Dial Closure Plush Lining TPR Sole Wide Toe Box Wholesale Footwear EU 39-48",
+  "title_bytes": 99,
+  "main_images": 6,
+  "product_details": 4,
+  "company_images": 5,
+  "known_materials": {
+    "upper": "Conflict: original06 English PIGSKIN vs original07仿超 abbreviation; do not resolve by guessing or copy anotherstyle. FormalNot specified.",
+    "outsole": "TPR original07 and12, no grip/waterproof test inference.",
+    "midsole": "Not separately specified",
+    "lining": "Actual grayplush inside/tongue/collar01/08/10, generalPlush descriptor only; fiber, Cotton/wool/fauxfur composition not established."
+  },
+  "formal_dedup": "Own current454-ID metadata plus separate62 formalbatch evidence and canonicalsource/model reviewed; exactBQ-LQ2409/LQ-2409 absent. Own100sourcecover triage, twelve nearest covers actually viewed, closest1026 wholeoriginal explicitly compared. Ankle winter footwear with visible round rotarydial/cord and four pairs of webbingguides, mesh tongue, plain roundedtoeoverlay, bordered leaf-shaped sidepanel with two transverse stitchlines, plainheelpanel with pulltab, graytextured sidewall with OUTDOOR marking and blackblocklug sole, grayplush tongue/collar/inside08. Keep actualdial decorativeface/OUTDOOR text. 1026 sharesdial/plush and bottompattern but has prominentblackwaveoverlay/whitepiping/letters on side, extrafrontmudguard/sidepanel pattern;2409 plain leaf-shaped stitched sidepanel with no blackwave overlay. 018/029/023/027/2577/028 lowtops ordinarylaces/nonplush differ;2132/1628/2772/2593/0922 lacedboots differentpanels/sole. 25019 plainringeyelet highankle laceboots differentupper/outsole. This is bounded sourcepattern review, not globalphysical/IPclearance.",
+  "payload_sha256": "2806e2251f81111daf6a7a10c4aceee2337ad5d4ffe5d2bec8d4ce70541f783b",
+  "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+  "next_action": "One formalcreate, retain ID; readback fields and real pixels."
+}
