@@ -1,0 +1,476 @@
+{
+  "status": "BUYER_ROLE_REVIEW_PASS",
+  "observed_at": "2026-10-10T13:25:14.344082+00:00",
+  "roles": [
+    {
+      "role": "M1",
+      "buyer_question": "搜索识别",
+      "source_indices": [
+        1
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\012准备\\01_产品来源原图\\01.jpg"
+      ],
+      "source_sha256": [
+        "1bc7138f85744cda356182e75fd86e0a0e948b54d2b0229120cb96a2a754bc32"
+      ],
+      "source_dimensions": [
+        [
+          800,
+          800
+        ]
+      ],
+      "source_region_key": "actual-photo-1",
+      "prompt": "Use case: precise-object-edit. Square English B2B footwear photo,1024px or more. Edit ONLY the actual attached Luqi012 photograph. Preserve its exact photographed shoes, number, angle, silhouette, curved dimpled/textured sidepanels, black forefoot and heel overlays, patterned black-white webbing lace loops, original laces, rear pulltab, and oval-block tread. No new front pulltab, diamond stitching, seams, eyelets, materials or unseen geometry. Green remains bottle/teal green with black overlays/sole; Dark Gray gray with black overlays/sole; Black near-black textured panel with gray framing and blacksole; Khaki warm taupe with black overlays and BROWN sole. Keep original hands, rolled trousers and bare ankles if present; no new socks. Remove Chinese text, arrows, banners, unverified performance badges. Restrained readable English typography. No medical, waterproof, zero-drop, barefoot, tested traction or anti-slip, stock or dispatch claims. Keep BOTH original Green shoes in exact source01 top/front pair angle, clean pale background and natural shadows. No text, badges or props.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\012准备\\05_AI候选\\M1.jpg",
+      "selected_original_unchanged": true,
+      "native_output": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\012准备\\01_产品来源原图\\01.jpg",
+      "output_sha256": "1bc7138f85744cda356182e75fd86e0a0e948b54d2b0229120cb96a2a754bc32",
+      "output_dimensions": [
+        800,
+        800
+      ],
+      "review_at": "2026-10-10T13:25:14.344082+00:00",
+      "review_note": "Individually compared to012 actual original photographs. Curved textured sidepanels, black forefoot/heel overlays, patterned webbing lacing, rear pulltab and oval-block outsole preserved. Black/Dark Gray/Khaki/Green separately bound, Khaki brown sole and other black soles. M1 unchanged clean800px source01. D1 actual partial upper (Microfiber supported08/09); D2 actual partial outsole (Rubber supported08/12); D3 actual partial collar; D4 EU37-48. Four disjoint source08 sideprofiles: original effective320x145px, visible silhouette/colors retained, not proof of finer hidden construction. Midsole/lining unspecified."
+    },
+    {
+      "role": "M2",
+      "buyer_question": "深灰实拍与底纹",
+      "source_indices": [
+        17
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\012准备\\01_产品来源原图\\17.jpg"
+      ],
+      "source_sha256": [
+        "33a6f3836a7d62943b497f43d624c28bded335cb1d1c6b8360c3453043677afd"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1064
+        ]
+      ],
+      "source_region_key": "actual-photo-17",
+      "prompt": "Use case: precise-object-edit. Square English B2B footwear photo,1024px or more. Edit ONLY the actual attached Luqi012 photograph. Preserve its exact photographed shoes, number, angle, silhouette, curved dimpled/textured sidepanels, black forefoot and heel overlays, patterned black-white webbing lace loops, original laces, rear pulltab, and oval-block tread. No new front pulltab, diamond stitching, seams, eyelets, materials or unseen geometry. Green remains bottle/teal green with black overlays/sole; Dark Gray gray with black overlays/sole; Black near-black textured panel with gray framing and blacksole; Khaki warm taupe with black overlays and BROWN sole. Keep original hands, rolled trousers and bare ankles if present; no new socks. Remove Chinese text, arrows, banners, unverified performance badges. Restrained readable English typography. No medical, waterproof, zero-drop, barefoot, tested traction or anti-slip, stock or dispatch claims. Keep BOTH actual source17 Dark Gray onfoot shoes and visible actual oval-block outsole, exact pose. Text: DARK GRAY OPTION; Actual photographed style.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\012准备\\05_AI候选\\M2.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-8b3d0035-0b2e-44c4-a9f2-022bf8fb3ffc.png",
+      "output_sha256": "298d080320b05edd634b86411e3717a71a1bdb7d8a310b4ac105a032e9806ca7",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T13:25:14.344082+00:00",
+      "review_note": "Individually compared to012 actual original photographs. Curved textured sidepanels, black forefoot/heel overlays, patterned webbing lacing, rear pulltab and oval-block outsole preserved. Black/Dark Gray/Khaki/Green separately bound, Khaki brown sole and other black soles. M1 unchanged clean800px source01. D1 actual partial upper (Microfiber supported08/09); D2 actual partial outsole (Rubber supported08/12); D3 actual partial collar; D4 EU37-48. Four disjoint source08 sideprofiles: original effective320x145px, visible silhouette/colors retained, not proof of finer hidden construction. Midsole/lining unspecified."
+    },
+    {
+      "role": "M3",
+      "buyer_question": "卡其实拍",
+      "source_indices": [
+        21
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\012准备\\01_产品来源原图\\21.jpg"
+      ],
+      "source_sha256": [
+        "8e6131f020ae8af96f82957b800d14543f2383adf45757822fd4ebfbd6cf4a53"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1074
+        ]
+      ],
+      "source_region_key": "actual-photo-21",
+      "prompt": "Use case: precise-object-edit. Square English B2B footwear photo,1024px or more. Edit ONLY the actual attached Luqi012 photograph. Preserve its exact photographed shoes, number, angle, silhouette, curved dimpled/textured sidepanels, black forefoot and heel overlays, patterned black-white webbing lace loops, original laces, rear pulltab, and oval-block tread. No new front pulltab, diamond stitching, seams, eyelets, materials or unseen geometry. Green remains bottle/teal green with black overlays/sole; Dark Gray gray with black overlays/sole; Black near-black textured panel with gray framing and blacksole; Khaki warm taupe with black overlays and BROWN sole. Keep original hands, rolled trousers and bare ankles if present; no new socks. Remove Chinese text, arrows, banners, unverified performance badges. Restrained readable English typography. No medical, waterproof, zero-drop, barefoot, tested traction or anti-slip, stock or dispatch claims. Keep original source21 Khaki held shoe and onfoot shoe with exact original hand/rolled trousers/bare ankles. Text: KHAKI OPTION; Brown sole.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\012准备\\05_AI候选\\M3.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-0e59d520-bee7-4437-9e78-4155843c2843.png",
+      "output_sha256": "883bf1b298b14d218d50e13a8c9ce9d803a0c2650d6b999fb7803cdddb79f525",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T13:25:14.344082+00:00",
+      "review_note": "Individually compared to012 actual original photographs. Curved textured sidepanels, black forefoot/heel overlays, patterned webbing lacing, rear pulltab and oval-block outsole preserved. Black/Dark Gray/Khaki/Green separately bound, Khaki brown sole and other black soles. M1 unchanged clean800px source01. D1 actual partial upper (Microfiber supported08/09); D2 actual partial outsole (Rubber supported08/12); D3 actual partial collar; D4 EU37-48. Four disjoint source08 sideprofiles: original effective320x145px, visible silhouette/colors retained, not proof of finer hidden construction. Midsole/lining unspecified."
+    },
+    {
+      "role": "M4",
+      "buyer_question": "绿色实拍",
+      "source_indices": [
+        14
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\012准备\\01_产品来源原图\\14.jpg"
+      ],
+      "source_sha256": [
+        "b08512d6380fdf9905856fa73192f14b37058582736ad08d2953d735b2f1b930"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1183
+        ]
+      ],
+      "source_region_key": "actual-photo-14",
+      "prompt": "Use case: precise-object-edit. Square English B2B footwear photo,1024px or more. Edit ONLY the actual attached Luqi012 photograph. Preserve its exact photographed shoes, number, angle, silhouette, curved dimpled/textured sidepanels, black forefoot and heel overlays, patterned black-white webbing lace loops, original laces, rear pulltab, and oval-block tread. No new front pulltab, diamond stitching, seams, eyelets, materials or unseen geometry. Green remains bottle/teal green with black overlays/sole; Dark Gray gray with black overlays/sole; Black near-black textured panel with gray framing and blacksole; Khaki warm taupe with black overlays and BROWN sole. Keep original hands, rolled trousers and bare ankles if present; no new socks. Remove Chinese text, arrows, banners, unverified performance badges. Restrained readable English typography. No medical, waterproof, zero-drop, barefoot, tested traction or anti-slip, stock or dispatch claims. Keep BOTH source14 Green onfoot shoes in exact side/rear pose and original photographed setting. Text: GREEN OPTION; Lace-up walking shoes.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\012准备\\05_AI候选\\M4.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-1bceb13b-9a72-483c-a7e8-2ccaaa6e797f.png",
+      "output_sha256": "52894e8339bd09b5f637b745e208d2b4bdd9d70024c2e983668460d0346a4bf5",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T13:25:14.344082+00:00",
+      "review_note": "Individually compared to012 actual original photographs. Curved textured sidepanels, black forefoot/heel overlays, patterned webbing lacing, rear pulltab and oval-block outsole preserved. Black/Dark Gray/Khaki/Green separately bound, Khaki brown sole and other black soles. M1 unchanged clean800px source01. D1 actual partial upper (Microfiber supported08/09); D2 actual partial outsole (Rubber supported08/12); D3 actual partial collar; D4 EU37-48. Four disjoint source08 sideprofiles: original effective320x145px, visible silhouette/colors retained, not proof of finer hidden construction. Midsole/lining unspecified."
+    },
+    {
+      "role": "M5",
+      "buyer_question": "采购询价行动",
+      "source_indices": [
+        16
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\012准备\\01_产品来源原图\\16.jpg"
+      ],
+      "source_sha256": [
+        "ca1e6250ba64ffc614c61e2cc7065daa525a15c466a9a4b3f449c60936da6058"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1129
+        ]
+      ],
+      "source_region_key": "actual-photo-16",
+      "prompt": "Use case: precise-object-edit. Square English B2B footwear photo,1024px or more. Edit ONLY the actual attached Luqi012 photograph. Preserve its exact photographed shoes, number, angle, silhouette, curved dimpled/textured sidepanels, black forefoot and heel overlays, patterned black-white webbing lace loops, original laces, rear pulltab, and oval-block tread. No new front pulltab, diamond stitching, seams, eyelets, materials or unseen geometry. Green remains bottle/teal green with black overlays/sole; Dark Gray gray with black overlays/sole; Black near-black textured panel with gray framing and blacksole; Khaki warm taupe with black overlays and BROWN sole. Keep original hands, rolled trousers and bare ankles if present; no new socks. Remove Chinese text, arrows, banners, unverified performance badges. Restrained readable English typography. No medical, waterproof, zero-drop, barefoot, tested traction or anti-slip, stock or dispatch claims. Keep source16 actual Green held and onfoot shoes with exact original hand and pose. Text: PLAN YOUR WHOLESALE ORDER; Color + EU size mix + Pair quantity + Destination.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\012准备\\05_AI候选\\M5.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-7097d9fe-05a9-4409-9c6a-a34988f9e5da.png",
+      "output_sha256": "8d316cb4e0ec583b1fefc13e7305cc84b2af2ebb7b49ecbd211ef42475360f35",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T13:25:14.344082+00:00",
+      "review_note": "Individually compared to012 actual original photographs. Curved textured sidepanels, black forefoot/heel overlays, patterned webbing lacing, rear pulltab and oval-block outsole preserved. Black/Dark Gray/Khaki/Green separately bound, Khaki brown sole and other black soles. M1 unchanged clean800px source01. D1 actual partial upper (Microfiber supported08/09); D2 actual partial outsole (Rubber supported08/12); D3 actual partial collar; D4 EU37-48. Four disjoint source08 sideprofiles: original effective320x145px, visible silhouette/colors retained, not proof of finer hidden construction. Midsole/lining unspecified."
+    },
+    {
+      "role": "D1",
+      "buyer_question": "超纤鞋面细节",
+      "source_indices": [
+        9
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\012准备\\01_产品来源原图\\09.jpg"
+      ],
+      "source_sha256": [
+        "706b870b200a0ee803b4d487b761668bb67d0529e635bea7a97a614d2692d5e3"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1179
+        ]
+      ],
+      "source_region_key": "actual-photo-9",
+      "prompt": "Use case: precise-object-edit. Square English B2B footwear photo,1024px or more. Edit ONLY the actual attached Luqi012 photograph. Preserve its exact photographed shoes, number, angle, silhouette, curved dimpled/textured sidepanels, black forefoot and heel overlays, patterned black-white webbing lace loops, original laces, rear pulltab, and oval-block tread. No new front pulltab, diamond stitching, seams, eyelets, materials or unseen geometry. Green remains bottle/teal green with black overlays/sole; Dark Gray gray with black overlays/sole; Black near-black textured panel with gray framing and blacksole; Khaki warm taupe with black overlays and BROWN sole. Keep original hands, rolled trousers and bare ankles if present; no new socks. Remove Chinese text, arrows, banners, unverified performance badges. Restrained readable English typography. No medical, waterproof, zero-drop, barefoot, tested traction or anti-slip, stock or dispatch claims. Strict PARTIAL closeup of source09 actual Green forefoot/upper. Preserve original textured panels/overlays/visible lace loops. No whole-shoe reconstruction. Text: MICROFIBER UPPER; Actual photographed detail. Material supported by source specification.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\012准备\\05_AI候选\\D1.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-16847d51-4ad6-4fe8-aa7a-a041248ec564.png",
+      "output_sha256": "cc102ca80fc2c0e37af354a339a2b2bfae8bc24dc76becc8933e3166e52d001f",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T13:25:14.344082+00:00",
+      "review_note": "Individually compared to012 actual original photographs. Curved textured sidepanels, black forefoot/heel overlays, patterned webbing lacing, rear pulltab and oval-block outsole preserved. Black/Dark Gray/Khaki/Green separately bound, Khaki brown sole and other black soles. M1 unchanged clean800px source01. D1 actual partial upper (Microfiber supported08/09); D2 actual partial outsole (Rubber supported08/12); D3 actual partial collar; D4 EU37-48. Four disjoint source08 sideprofiles: original effective320x145px, visible silhouette/colors retained, not proof of finer hidden construction. Midsole/lining unspecified."
+    },
+    {
+      "role": "D2",
+      "buyer_question": "橡胶底真实细节",
+      "source_indices": [
+        12
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\012准备\\01_产品来源原图\\12.jpg"
+      ],
+      "source_sha256": [
+        "2cda5fa5ecfcb7b3ddcc6c61787cbc5f31fa1d3888777348fa63406bf36b3df8"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          964
+        ]
+      ],
+      "source_region_key": "actual-photo-12",
+      "prompt": "Use case: precise-object-edit. Square English B2B footwear photo,1024px or more. Edit ONLY the actual attached Luqi012 photograph. Preserve its exact photographed shoes, number, angle, silhouette, curved dimpled/textured sidepanels, black forefoot and heel overlays, patterned black-white webbing lace loops, original laces, rear pulltab, and oval-block tread. No new front pulltab, diamond stitching, seams, eyelets, materials or unseen geometry. Green remains bottle/teal green with black overlays/sole; Dark Gray gray with black overlays/sole; Black near-black textured panel with gray framing and blacksole; Khaki warm taupe with black overlays and BROWN sole. Keep original hands, rolled trousers and bare ankles if present; no new socks. Remove Chinese text, arrows, banners, unverified performance badges. Restrained readable English typography. No medical, waterproof, zero-drop, barefoot, tested traction or anti-slip, stock or dispatch claims. Strict PARTIAL closeup of source12 actual BLACK forefoot outsole, original oval blocks/grooves. Do not expand into unphotographed whole sole or rearrange tread. Text: RUBBER OUTSOLE; Actual photographed detail. No grip/anti-slip promises.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\012准备\\05_AI候选\\D2.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-403924df-5acd-433b-b550-59b4c813b563.png",
+      "output_sha256": "20f627b90ca3d5fc90bdc67d9c99f61675f15869efd14f482394a53dc3026db3",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T13:25:14.344082+00:00",
+      "review_note": "Individually compared to012 actual original photographs. Curved textured sidepanels, black forefoot/heel overlays, patterned webbing lacing, rear pulltab and oval-block outsole preserved. Black/Dark Gray/Khaki/Green separately bound, Khaki brown sole and other black soles. M1 unchanged clean800px source01. D1 actual partial upper (Microfiber supported08/09); D2 actual partial outsole (Rubber supported08/12); D3 actual partial collar; D4 EU37-48. Four disjoint source08 sideprofiles: original effective320x145px, visible silhouette/colors retained, not proof of finer hidden construction. Midsole/lining unspecified."
+    },
+    {
+      "role": "D3",
+      "buyer_question": "鞋口细节",
+      "source_indices": [
+        11
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\012准备\\01_产品来源原图\\11.jpg"
+      ],
+      "source_sha256": [
+        "07a4fe3650cc3a518951f68f34aa9e15b7b2136ac50b9494d3034f0184a9957d"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          986
+        ]
+      ],
+      "source_region_key": "actual-photo-11",
+      "prompt": "Use case: precise-object-edit. Square English B2B footwear photo,1024px or more. Edit ONLY the actual attached Luqi012 photograph. Preserve its exact photographed shoes, number, angle, silhouette, curved dimpled/textured sidepanels, black forefoot and heel overlays, patterned black-white webbing lace loops, original laces, rear pulltab, and oval-block tread. No new front pulltab, diamond stitching, seams, eyelets, materials or unseen geometry. Green remains bottle/teal green with black overlays/sole; Dark Gray gray with black overlays/sole; Black near-black textured panel with gray framing and blacksole; Khaki warm taupe with black overlays and BROWN sole. Keep original hands, rolled trousers and bare ankles if present; no new socks. Remove Chinese text, arrows, banners, unverified performance badges. Restrained readable English typography. No medical, waterproof, zero-drop, barefoot, tested traction or anti-slip, stock or dispatch claims. Strict PARTIAL closeup of source11 original collar and visible inner textile. Preserve visible shoe parts only. Text: COLLAR DETAIL; Low-top construction. No lining composition claim.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\012准备\\05_AI候选\\D3.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-334f11bb-ceb8-4843-bfe6-4b8c0cef8762.png",
+      "output_sha256": "d11eca598232a9e4d90014eb6598f1cc8287c6647e2b2b5f23098c5620bb725c",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T13:25:14.344082+00:00",
+      "review_note": "Individually compared to012 actual original photographs. Curved textured sidepanels, black forefoot/heel overlays, patterned webbing lacing, rear pulltab and oval-block outsole preserved. Black/Dark Gray/Khaki/Green separately bound, Khaki brown sole and other black soles. M1 unchanged clean800px source01. D1 actual partial upper (Microfiber supported08/09); D2 actual partial outsole (Rubber supported08/12); D3 actual partial collar; D4 EU37-48. Four disjoint source08 sideprofiles: original effective320x145px, visible silhouette/colors retained, not proof of finer hidden construction. Midsole/lining unspecified."
+    },
+    {
+      "role": "D4",
+      "buyer_question": "EU尺码配比",
+      "source_indices": [
+        20
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\012准备\\01_产品来源原图\\20.jpg"
+      ],
+      "source_sha256": [
+        "f5812e86f83f2af7095c9c9cf57a2932a38905edc8b1eb01f0b99e0977563d46"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1134
+        ]
+      ],
+      "source_region_key": "actual-photo-20",
+      "prompt": "Use case: precise-object-edit. Square English B2B footwear photo,1024px or more. Edit ONLY the actual attached Luqi012 photograph. Preserve its exact photographed shoes, number, angle, silhouette, curved dimpled/textured sidepanels, black forefoot and heel overlays, patterned black-white webbing lace loops, original laces, rear pulltab, and oval-block tread. No new front pulltab, diamond stitching, seams, eyelets, materials or unseen geometry. Green remains bottle/teal green with black overlays/sole; Dark Gray gray with black overlays/sole; Black near-black textured panel with gray framing and blacksole; Khaki warm taupe with black overlays and BROWN sole. Keep original hands, rolled trousers and bare ankles if present; no new socks. Remove Chinese text, arrows, banners, unverified performance badges. Restrained readable English typography. No medical, waterproof, zero-drop, barefoot, tested traction or anti-slip, stock or dispatch claims. Keep BOTH original source20 Dark Gray onfoot shoes in exact photographed pose/setting. Text: EU 37-48; Send your color-size mix for order confirmation. No US/cm conversion.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\012准备\\05_AI候选\\D4.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-3082cce5-4c59-4db7-9dbf-c68ddd7e7a6e.png",
+      "output_sha256": "d50efd66aad22e13ceca899c814c34ddd902e7910818974b54e37eb77eab64a4",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T13:25:14.344082+00:00",
+      "review_note": "Individually compared to012 actual original photographs. Curved textured sidepanels, black forefoot/heel overlays, patterned webbing lacing, rear pulltab and oval-block outsole preserved. Black/Dark Gray/Khaki/Green separately bound, Khaki brown sole and other black soles. M1 unchanged clean800px source01. D1 actual partial upper (Microfiber supported08/09); D2 actual partial outsole (Rubber supported08/12); D3 actual partial collar; D4 EU37-48. Four disjoint source08 sideprofiles: original effective320x145px, visible silhouette/colors retained, not proof of finer hidden construction. Midsole/lining unspecified."
+    },
+    {
+      "role": "SKU_Black",
+      "buyer_question": "黑色SKU绑定",
+      "source_indices": [
+        8
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\012准备\\01_产品来源原图\\08.jpg"
+      ],
+      "source_sha256": [
+        "566742ad8e6a5d44441c52d910412513dc2b13025e92cbaf79ef8ed2667008ce"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          783
+        ]
+      ],
+      "source_region_key": "SKU_Black",
+      "prompt": "Use case: precise-object-edit. Square English B2B footwear photo,1024px or more. Edit ONLY the actual attached Luqi012 photograph. Preserve its exact photographed shoes, number, angle, silhouette, curved dimpled/textured sidepanels, black forefoot and heel overlays, patterned black-white webbing lace loops, original laces, rear pulltab, and oval-block tread. No new front pulltab, diamond stitching, seams, eyelets, materials or unseen geometry. Green remains bottle/teal green with black overlays/sole; Dark Gray gray with black overlays/sole; Black near-black textured panel with gray framing and blacksole; Khaki warm taupe with black overlays and BROWN sole. Keep original hands, rolled trousers and bare ankles if present; no new socks. Remove Chinese text, arrows, banners, unverified performance badges. Restrained readable English typography. No medical, waterproof, zero-drop, barefoot, tested traction or anti-slip, stock or dispatch claims. Select ONLY upper-right SINGLE Black sideprofile from source08 specification sheet. Preserve actual near-black sidepanel/gray framing, black overlays, patterned lacing and blacksole. Remove all other shoes and all text. Whitebackground, small shadow. This original region has about320x145effectivepixels: retain actual visible low-detail geometry, do NOT invent finer construction, change silhouette or turn into new angle.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\012准备\\05_AI候选\\SKU_Black.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-7ee753ff-b9f1-4c2f-81f3-963b947db12e.png",
+      "output_sha256": "78c8048d4f464a4f8e16ce42085c39e89fe60050b4ca3cd630ea70f248a16315",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T13:25:14.344082+00:00",
+      "review_note": "Individually compared to012 actual original photographs. Curved textured sidepanels, black forefoot/heel overlays, patterned webbing lacing, rear pulltab and oval-block outsole preserved. Black/Dark Gray/Khaki/Green separately bound, Khaki brown sole and other black soles. M1 unchanged clean800px source01. D1 actual partial upper (Microfiber supported08/09); D2 actual partial outsole (Rubber supported08/12); D3 actual partial collar; D4 EU37-48. Four disjoint source08 sideprofiles: original effective320x145px, visible silhouette/colors retained, not proof of finer hidden construction. Midsole/lining unspecified."
+    },
+    {
+      "role": "SKU_Dark Gray",
+      "buyer_question": "深灰SKU绑定",
+      "source_indices": [
+        8
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\012准备\\01_产品来源原图\\08.jpg"
+      ],
+      "source_sha256": [
+        "566742ad8e6a5d44441c52d910412513dc2b13025e92cbaf79ef8ed2667008ce"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          783
+        ]
+      ],
+      "source_region_key": "SKU_Dark Gray",
+      "prompt": "Use case: precise-object-edit. Square English B2B footwear photo,1024px or more. Edit ONLY the actual attached Luqi012 photograph. Preserve its exact photographed shoes, number, angle, silhouette, curved dimpled/textured sidepanels, black forefoot and heel overlays, patterned black-white webbing lace loops, original laces, rear pulltab, and oval-block tread. No new front pulltab, diamond stitching, seams, eyelets, materials or unseen geometry. Green remains bottle/teal green with black overlays/sole; Dark Gray gray with black overlays/sole; Black near-black textured panel with gray framing and blacksole; Khaki warm taupe with black overlays and BROWN sole. Keep original hands, rolled trousers and bare ankles if present; no new socks. Remove Chinese text, arrows, banners, unverified performance badges. Restrained readable English typography. No medical, waterproof, zero-drop, barefoot, tested traction or anti-slip, stock or dispatch claims. Select ONLY lower-left SINGLE Gray sideprofile from source08 sheet, representing current Dark Gray. Preserve actual gray textured sidepanel, black overlays and blacksole. Remove all other shoes/text. Whitebackground, smallshadow. Original region about320x145effectivepixels: retain visible low-detail geometry, do NOT invent fine details or change angle.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\012准备\\05_AI候选\\SKU_Dark Gray.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-411dd0ee-b23b-4025-98f9-8fbc2fe7b13d.png",
+      "output_sha256": "8110757d557482f14381e8444301dcf995fe6b8faa60b378b82387951f77cf08",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T13:25:14.344082+00:00",
+      "review_note": "Individually compared to012 actual original photographs. Curved textured sidepanels, black forefoot/heel overlays, patterned webbing lacing, rear pulltab and oval-block outsole preserved. Black/Dark Gray/Khaki/Green separately bound, Khaki brown sole and other black soles. M1 unchanged clean800px source01. D1 actual partial upper (Microfiber supported08/09); D2 actual partial outsole (Rubber supported08/12); D3 actual partial collar; D4 EU37-48. Four disjoint source08 sideprofiles: original effective320x145px, visible silhouette/colors retained, not proof of finer hidden construction. Midsole/lining unspecified."
+    },
+    {
+      "role": "SKU_Khaki",
+      "buyer_question": "卡其SKU绑定",
+      "source_indices": [
+        8
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\012准备\\01_产品来源原图\\08.jpg"
+      ],
+      "source_sha256": [
+        "566742ad8e6a5d44441c52d910412513dc2b13025e92cbaf79ef8ed2667008ce"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          783
+        ]
+      ],
+      "source_region_key": "SKU_Khaki",
+      "prompt": "Use case: precise-object-edit. Square English B2B footwear photo,1024px or more. Edit ONLY the actual attached Luqi012 photograph. Preserve its exact photographed shoes, number, angle, silhouette, curved dimpled/textured sidepanels, black forefoot and heel overlays, patterned black-white webbing lace loops, original laces, rear pulltab, and oval-block tread. No new front pulltab, diamond stitching, seams, eyelets, materials or unseen geometry. Green remains bottle/teal green with black overlays/sole; Dark Gray gray with black overlays/sole; Black near-black textured panel with gray framing and blacksole; Khaki warm taupe with black overlays and BROWN sole. Keep original hands, rolled trousers and bare ankles if present; no new socks. Remove Chinese text, arrows, banners, unverified performance badges. Restrained readable English typography. No medical, waterproof, zero-drop, barefoot, tested traction or anti-slip, stock or dispatch claims. Select ONLY lower-right SINGLE Khaki sideprofile from source08 sheet. Preserve actual warm taupe textured sidepanel, black overlays, and BROWN sole. Remove other shoes/text. Whitebackground, smallshadow. Original region about320x145effectivepixels: retain actual visible low-detail geometry, do NOT invent finer construction or change angle.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\012准备\\05_AI候选\\SKU_Khaki.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-1b2b829d-8977-469c-a6b8-ce64b3d6cb30.png",
+      "output_sha256": "e400fae8411fb743d01bca5e22a4da8501d0091f95590dad954e064d280288c0",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T13:25:14.344082+00:00",
+      "review_note": "Individually compared to012 actual original photographs. Curved textured sidepanels, black forefoot/heel overlays, patterned webbing lacing, rear pulltab and oval-block outsole preserved. Black/Dark Gray/Khaki/Green separately bound, Khaki brown sole and other black soles. M1 unchanged clean800px source01. D1 actual partial upper (Microfiber supported08/09); D2 actual partial outsole (Rubber supported08/12); D3 actual partial collar; D4 EU37-48. Four disjoint source08 sideprofiles: original effective320x145px, visible silhouette/colors retained, not proof of finer hidden construction. Midsole/lining unspecified."
+    },
+    {
+      "role": "SKU_Green",
+      "buyer_question": "绿色SKU绑定",
+      "source_indices": [
+        8
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\012准备\\01_产品来源原图\\08.jpg"
+      ],
+      "source_sha256": [
+        "566742ad8e6a5d44441c52d910412513dc2b13025e92cbaf79ef8ed2667008ce"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          783
+        ]
+      ],
+      "source_region_key": "SKU_Green",
+      "prompt": "Use case: precise-object-edit. Square English B2B footwear photo,1024px or more. Edit ONLY the actual attached Luqi012 photograph. Preserve its exact photographed shoes, number, angle, silhouette, curved dimpled/textured sidepanels, black forefoot and heel overlays, patterned black-white webbing lace loops, original laces, rear pulltab, and oval-block tread. No new front pulltab, diamond stitching, seams, eyelets, materials or unseen geometry. Green remains bottle/teal green with black overlays/sole; Dark Gray gray with black overlays/sole; Black near-black textured panel with gray framing and blacksole; Khaki warm taupe with black overlays and BROWN sole. Keep original hands, rolled trousers and bare ankles if present; no new socks. Remove Chinese text, arrows, banners, unverified performance badges. Restrained readable English typography. No medical, waterproof, zero-drop, barefoot, tested traction or anti-slip, stock or dispatch claims. Select ONLY upper-left SINGLE Green sideprofile from source08 sheet. Preserve bottle/teal green textured sidepanel, black overlays and blacksole. Remove other shoes/text. Whitebackground, smallshadow. Original region about320x145effectivepixels: retain actual visible low-detail geometry, do NOT invent finer construction or change angle.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\012准备\\05_AI候选\\SKU_Green.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-1c2ef717-26e0-418e-a6ec-23575275816d.png",
+      "output_sha256": "194bed8264a25cb1a5375029db843505b93b70bbca6179f92ba538e136756b16",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T13:25:14.344082+00:00",
+      "review_note": "Individually compared to012 actual original photographs. Curved textured sidepanels, black forefoot/heel overlays, patterned webbing lacing, rear pulltab and oval-block outsole preserved. Black/Dark Gray/Khaki/Green separately bound, Khaki brown sole and other black soles. M1 unchanged clean800px source01. D1 actual partial upper (Microfiber supported08/09); D2 actual partial outsole (Rubber supported08/12); D3 actual partial collar; D4 EU37-48. Four disjoint source08 sideprofiles: original effective320x145px, visible silhouette/colors retained, not proof of finer hidden construction. Midsole/lining unspecified."
+    }
+  ],
+  "M6": {
+    "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎新品_2026-10-07\\图片修复\\F.png",
+    "bank_url": "https://sc04.alicdn.com/kf/S6c8cb1d46d8c4b018cf07f5cab50c1adi/286385890/S6c8cb1d46d8c4b018cf07f5cab50c1adi.png",
+    "file_id": "30149993323"
+  },
+  "company": [
+    {
+      "role": "C1",
+      "usage": "ordinary_HTML_company_context",
+      "official_url": "https://sc04.alicdn.com/kf/Ha8c1682092424e778eadf945763e79daU/286385890/Ha8c1682092424e778eadf945763e79daU.jpg",
+      "file_id": "33355885480",
+      "local_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\266_quality_audit\\originals\\C01_factory_profile.jpg",
+      "sha256": "23a34c8e425ae286d190ac1eb587c93e9a87421fdf490ec48f260e53e316149c",
+      "local_hash_verified": true,
+      "pixel_edit": false
+    },
+    {
+      "role": "C2",
+      "usage": "ordinary_HTML_company_context",
+      "official_url": "https://sc04.alicdn.com/kf/H496f7579171f4370a1d47c3adf30001bK/286385890/H496f7579171f4370a1d47c3adf30001bK.jpg",
+      "file_id": "33358392283",
+      "local_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\266_quality_audit\\originals\\C02_oem_odm_workflow.jpg",
+      "sha256": "66624253f1d95ec68e060d792f13c61943c86f7d61e763167a0a2eb1146300f5",
+      "local_hash_verified": true,
+      "pixel_edit": false
+    },
+    {
+      "role": "C3",
+      "usage": "ordinary_HTML_company_context",
+      "official_url": "https://sc04.alicdn.com/kf/H36e700f5c3ee447a80c035d8ae7521d9a/286385890/H36e700f5c3ee447a80c035d8ae7521d9a.jpg",
+      "file_id": "33355813301",
+      "local_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\266_quality_audit\\originals\\C03_production_process.jpg",
+      "sha256": "3ae00d6398224dd7021ed2a266584bccb77b741b31fa9c72ca8ad66ab443f683",
+      "local_hash_verified": true,
+      "pixel_edit": false
+    },
+    {
+      "role": "C4",
+      "usage": "ordinary_HTML_company_context",
+      "official_url": "https://sc04.alicdn.com/kf/H9f32c7ecea0f4d25bc5ddc9cd04c1e5dK/286385890/H9f32c7ecea0f4d25bc5ddc9cd04c1e5dK.jpg",
+      "file_id": "33358345636",
+      "local_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\266_quality_audit\\originals\\C04_quality_control.jpg",
+      "sha256": "f32d682a7055a3e44f91eb074b678507beca63967da5565de8997f582a651bf5",
+      "local_hash_verified": true,
+      "pixel_edit": false
+    },
+    {
+      "role": "C5",
+      "usage": "ordinary_HTML_company_context",
+      "official_url": "https://sc04.alicdn.com/kf/H5f71c3cfb4064b51bb458d0a786cb402R/286385890/H5f71c3cfb4064b51bb458d0a786cb402R.jpg",
+      "file_id": "33358440083",
+      "local_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\266_quality_audit\\originals\\C05_packing_inquiry.jpg",
+      "sha256": "d0f3916d920a9ec46fd822317a9cd3c684b6b7d60631208475fa2be138d05bc2",
+      "local_hash_verified": true,
+      "pixel_edit": false
+    }
+  ],
+  "excluded_candidates": [
+    {
+      "role": "D1",
+      "path": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-597a015c-e0fc-4f14-a95e-a1fc6338c29b.png",
+      "reason": "Unwanted internal source-specification verification sentence rendered in buyer image."
+    }
+  ],
+  "complete_set_visual_review_at": "2026-10-10T13:26:40.607842+00:00",
+  "complete_set_note": "Compared individually to012 actual originals: crossing stitched sidepanels and original forefoot borders, five lacepositions/topmetaleyelet, roundlaces, front/rear pulltabs and oval-block tread. Exact Black/Gray/Brown Camouflage Sole/Khaki Brown Sole colors and original poses. M1 unchanged clean800px source18 selected after two texture-drifting native attempts rejected. D1 originalGray partialpanel/lacing; D2 wholeoutsole matches actual fullsource17, no hidden geometry reconstructed; D3 originalBrown paircollars; D4 originalGrayfront EU37-48. Four distinct singleprofile sources7/15/4/12. Material compositions unspecified. Sixmain including actualfactoryM6, four distinctproductdetail and five companypanels checked; no public rendering proof."
+}
