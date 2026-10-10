@@ -10,6 +10,7 @@
     "render:commercial": "remotion render src/index.ts SockShoeCommercial out/贝强_针织袜子鞋_内容重做版.mp4 --concurrency=2 --pixel-format=yuv420p --color-space=bt709",
     "render:procedural": "node render-procedural.mjs",
     "render:generated": "remotion render src/index.ts GeneratedBrandFilm out/贝强_针织袜子鞋_生成融合版.mp4 --concurrency=2 --pixel-format=yuv420p --color-space=bt709",
+    "render:warm-generated": "remotion render src/index.ts WarmGeneratedBrandFilm out/贝强_针织袜子鞋_暖白融合版.mp4 --concurrency=2 --pixel-format=yuv420p --color-space=bt709",
     "check": "tsc --noEmit"
   },
   "dependencies": {

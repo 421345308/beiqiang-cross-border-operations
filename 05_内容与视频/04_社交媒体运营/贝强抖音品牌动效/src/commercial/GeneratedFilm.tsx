@@ -12,11 +12,11 @@ const shots=[
   {file:'generated-hero-v3.png',title:'贝强鞋业',sub:'针织袜子鞋',size:106},
 ];
 
-const Scene:React.FC<{index:number;duration:number;cover?:boolean}>=({index,duration,cover=false})=> {
+export const Scene:React.FC<{index:number;duration:number;cover?:boolean;fadeIn?:boolean}>=({index,duration,cover=false,fadeIn=false})=> {
   const current=useCurrentFrame();const f=cover?70:current;const s=shots[index];
   const p=motion(f,[5,25],[0,1]);const detail=index===2;
   const scale=detail?motion(f,[0,duration],[1,1.055]):motion(f,[0,duration],[1.045,1]);
-  return <AbsoluteFill style={{opacity:index===0||cover?1:motion(f,[0,12],[0,1]),background:palette.paper,color:palette.ink,overflow:'hidden'}}>
+  return <AbsoluteFill style={{opacity:(index===0&&!fadeIn)||cover?1:motion(f,[0,12],[0,1]),background:palette.paper,color:palette.ink,overflow:'hidden'}}>
     <FullPhoto file={s.file} zoom={scale} dx={detail?motion(f,[0,duration],[0,-10]):motion(f,[0,duration],[-10,0])}/>
     {index===5&&<AbsoluteFill style={{opacity:motion(f,[85,101],[0,1])}}><FullPhoto file="sock-city.png" zoom={motion(f,[85,duration],[1.04,1])}/></AbsoluteFill>}
     <AbsoluteFill style={{background:detail?'linear-gradient(180deg,rgba(246,239,226,.3),transparent 30%,transparent 75%,rgba(0,0,0,.35))':'linear-gradient(180deg,rgba(244,239,228,.64),rgba(244,239,228,.08) 32%,transparent 58%,rgba(244,239,228,.18))'}}/>
