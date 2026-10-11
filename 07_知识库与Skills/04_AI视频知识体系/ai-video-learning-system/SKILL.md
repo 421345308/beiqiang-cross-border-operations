@@ -19,6 +19,8 @@ When the user invokes Hypit, read its installed Skill and the workspace [Hypit t
 
 See [knowledge-layers.md](references/knowledge-layers.md) when creating or restructuring a project memory system.
 
+When the user invokes Erduo B-roll, read its installed `erduo-broll-loop-engineering` Skill and the workspace [Erduo tool entry](../../../08_工具链/02_视频工具/Erduo/README.md). The selected relay uses fresh director, chapter-creator and reviewer contexts, with deterministic renders and local repairs. Keep video-use source/QA and audio evidence connected; preserve explicit Remotion and existing project routes. This optional integration does not mean footwear generation, reference sales performance or artistic quality has been verified.
+
 ## Write back at the right level
 
 - Record project facts and iteration outcomes in that project's own record.
