@@ -1,4 +1,8 @@
 from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[3] / "08_工具链/01_业务脚本/商品图片与审计"))
+from factory_assets import legacy_asset
+# Historical asset lookup only; new company image work uses the shared factory entry.
 
 from PIL import Image, ImageDraw, ImageFont, ImageOps
 
@@ -8,7 +12,7 @@ PROJECT = ROOT / "02_Alibaba运营" / "05_扩品工程" / "HR系列真实货源�
 SRC = PROJECT / "00_来源素材" / "HR011_NK25" / "NK25_lingzi_full"
 MAIN = PROJECT / "01_正式主图候选" / "HR011_NK25"
 DETAIL = PROJECT / "02_正式详情候选" / "HR011_NK25"
-COMPANY = ROOT / "02_Alibaba运营" / "06_图片与检查记录" / "公司图复用模板_v4_2026-09-21"
+COMPANY = legacy_asset('02_Alibaba运营/06_图片与检查记录/公司图复用模板_v4_2026-09-21')
 FONT = Path(r"C:\Windows\Fonts\arial.ttf")
 BOLD = Path(r"C:\Windows\Fonts\arialbd.ttf")
 W = H = 1000

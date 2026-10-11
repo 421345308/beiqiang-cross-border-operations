@@ -1,12 +1,16 @@
 from __future__ import annotations
 
 from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[3] / "08_工具链/01_业务脚本/商品图片与审计"))
+from factory_assets import legacy_asset
+# Historical asset lookup only; new company image work uses the shared factory entry.
 from PIL import Image, ImageDraw, ImageFont, ImageOps
 
 ROOT = Path(r"C:\Users\spq\Desktop\贝强")
 PROJECT = ROOT / r"02_Alibaba运营\05_扩品工程\HR系列真实货源改造_2026-09-21"
 SOURCE = ROOT / r"01_产品资产\02_可发布素材\00_最终上传\BQ036_8025"
-COMPANY = ROOT / r"02_Alibaba运营\06_图片与检查记录\公司图复用模板_v4_2026-09-21"
+COMPANY = legacy_asset('02_Alibaba运营/06_图片与检查记录/公司图复用模板_v4_2026-09-21')
 OUT = PROJECT / "01_正式主图候选" / "HR039-A_8025"
 OUT.mkdir(parents=True, exist_ok=True)
 DETAIL_OUT = PROJECT / "02_正式详情候选" / "HR039-A_8025"

@@ -20,7 +20,7 @@ config = module.load_config(Path.home() / ".config/beiqiang/alibaba-openapi.json
 files = []
 files.extend(sorted((PROJECT / "01_正式主图候选" / "HR039-A_8025").glob("M*.jpg")))
 files.extend(sorted((PROJECT / "02_正式详情候选" / "HR039-A_8025").glob("D*.jpg")))
-files.extend(sorted((ROOT / r"02_Alibaba运营\06_图片与检查记录\公司图复用模板_v4_2026-09-21").glob("C*.jpg")))
+# Shared company images are handled from the canonical entry after whole-set review.
 
 if len(files) != 16:
     raise SystemExit(f"Expected 16 upload images, found {len(files)}")

@@ -1,4 +1,11 @@
+
+# HISTORICAL_FULL_PAGE_GENERATOR_RETIRED
+raise SystemExit("Historical whole-page generator retired; use the shared factory detail entry.")
 from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[4] / "08_工具链/01_业务脚本/商品图片与审计"))
+from factory_assets import legacy_asset
+# Historical asset lookup only; new company image work uses the shared factory entry.
 
 import numpy as np
 from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont, ImageOps
@@ -18,7 +25,7 @@ for folder in (COLORS, MAIN, DETAIL, COMPANY, AI, PREVIEW):
 
 RAW = ROOT / "01_产品资产/01_原始数据包/已整理_BQ019_A206_A206情侣鞋图片/A206情侣鞋图片/主图"
 PRODUCT = ROOT / "01_产品资产/02_可发布素材/00_最终上传/BQ019_A206"
-FACTORY = ROOT / "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/00_精选可用照片"
+FACTORY = legacy_asset('01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/00_精选可用照片')
 
 W = H = 1200
 WHITE = "#FFFFFF"

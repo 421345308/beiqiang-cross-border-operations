@@ -6,6 +6,10 @@ import hashlib
 import json
 from datetime import datetime
 from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[3] / "08_工具链/01_业务脚本/商品图片与审计"))
+from factory_assets import legacy_asset
+# Historical asset lookup only; new company image work uses the shared factory entry.
 
 from PIL import Image, ImageDraw, ImageFont, ImageOps
 
@@ -13,7 +17,7 @@ from PIL import Image, ImageDraw, ImageFont, ImageOps
 ROOT = Path(__file__).resolve().parents[3]
 SRC = ROOT / "99_临时区/HR016_031_公开货源图_2026-09-24"
 OUT = ROOT / "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/06_确定性图稿/HR016_031"
-COMPANY = ROOT / "02_Alibaba运营/06_图片与检查记录/公司图复用模板_v4_2026-09-21/C4_real_quality_checkpoints.jpg"
+COMPANY = legacy_asset('02_Alibaba运营/06_图片与检查记录/公司图复用模板_v4_2026-09-21/C4_real_quality_checkpoints.jpg')
 FONT = Path("C:/Windows/Fonts/arial.ttf")
 BOLD = Path("C:/Windows/Fonts/arialbd.ttf")
 INK = (25, 43, 52)
