@@ -1,0 +1,23 @@
+{
+  "observed_date": "2026-10-11",
+  "review_status": "FACTORY_MODULE_PROPOSAL_ONLY; NO_NEW_IMAGES_CREATED_OR_SUBMITTED",
+  "beiqiang_reference_manifest": "../../05_扩品工程/执行记录/路崎新品_2026-10-07/061_company_v3_manifest.json",
+  "beiqiang_reviewed_image_keys": [
+    "H36e700f5c3ee447a80c035d8ae7521d9a",
+    "H496f7579171f4370a1d47c3adf30001bK",
+    "H5f71c3cfb4064b51bb458d0a786cb402R",
+    "H9f32c7ecea0f4d25bc5ddc9cd04c1e5dK",
+    "Ha8c1682092424e778eadf945763e79daU"
+  ],
+  "beiqiang_observation": "Five current company pages have consistent layout. C2/C3/C5 repeat brief-confirmation-scheduling inputs. Company identity, actual production steps and physical customization/packing examples need stronger visual presentation. C4 has specific useful inspection topics.",
+  "competitor": {
+    "name": "Kaisun",
+    "page": "https://www.alibaba.com/product-detail/Breathable-Anti-Slip-Soft-Comfortable-Wide_1601735452315.html",
+    "factory_image": "https://sc04.alicdn.com/kf/H1a0394a97d1147209d4c5c83a78f5227F/242295340/H1a0394a97d1147209d4c5c83a78f5227F.jpg",
+    "access": "normal Chrome rendered public description; factory image visually inspected, customization section visually inspected in browser",
+    "observed": "Factory overview and departmental images, six supplier-capability image cells, color/material/logo/accessory/packaging choice panels. Seller claims are not independently verified or Beiqiang facts.",
+    "inference": "Concrete facility/process/option photos can make supplier capability easier for buyers to understand; conversion improvement not established."
+  },
+  "scope_inventory": "公司图组范围核对.json",
+  "current_business_priority": "Per-model highlights and FAQ; shared factory/company module first; retain product detail images except specific necessary corrections."
+}
