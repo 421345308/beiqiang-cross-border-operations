@@ -1,0 +1,22 @@
+{
+  "product_id": "1601939705262",
+  "observed_at": "2026-10-11T17:20:53.970757+00:00",
+  "status": "TARGET_COPY_MATCHES_OTHER_FIELDS_CHANGED_SEPARATE_DIAGNOSIS",
+  "submitted_fields": [
+    "textDesc",
+    "companyFaqDesc"
+  ],
+  "changes": [
+    {
+      "path": "/pc_detail_url",
+      "before": "https://www.alibaba.com/product-detail/Grey-Knit-Slip-On-Casual-Walking_1601939705262.html",
+      "after": "https://www.alibaba.com/product-detail/Grey-Knit-Slip-On-Breathable-Light_1601939705262.html"
+    },
+    {
+      "path": "/subject",
+      "before": "Grey Knit Slip-On Casual Walking Shoes Custom Logo OEM ODM Private Label Model 7212",
+      "after": "Grey Knit Slip-On Breathable Light Weight Casual Walking Shoes Custom Logo OEM ODM Private Label Model 7212"
+    }
+  ],
+  "action": "Do not overwrite concurrent or unexplained changes; retain exact historical differences. New wording revisions use fresh observed baseline."
+}

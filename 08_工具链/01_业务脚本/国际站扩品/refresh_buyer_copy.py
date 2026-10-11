@@ -6,6 +6,7 @@ Writes are serial and never automatically replayed, including unknown outcomes.
 from pathlib import Path
 from datetime import datetime, timezone
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from collections import Counter
 from xml.etree import ElementTree as E
 import argparse, importlib.util, json, hashlib, sys
 
@@ -32,6 +33,34 @@ def formal_copy(product):
     detail=product.get('struct_detail') or {}
     faq=detail.get('product_faq')
     return {'highlights':detail.get('product_summary'),'faq':None if faq is None else [{'question':f.get('question'),'answers':f.get('answer')} for f in faq]}
+
+def apostrophe_equivalent(actual, expected):
+    # Observed platform conversion U+2019 -> ASCII apostrophe only. Never
+    # discard words, spaces, numbers or any other punctuation in verification.
+    return isinstance(actual,str) and isinstance(expected,str) and actual.replace('\u2019',"'")==expected.replace('\u2019',"'")
+
+def text_snapshot_apostrophe_equivalent(actual, expected):
+    if actual is None or expected is None:return False
+    return apostrophe_equivalent(json.dumps(actual,ensure_ascii=False),json.dumps(expected,ensure_ascii=False))
+
+def faq_pairs_equivalent(actual, expected):
+    if not isinstance(actual,list) or not isinstance(expected,list):return False
+    def pairs(rows):
+        if not all(isinstance(x,dict) and set(x)=={'question','answers'} and isinstance(x['question'],str) and isinstance(x['answers'],str) for x in rows):return None
+        return Counter((x['question'],x['answers'])for x in rows)
+    left,right=pairs(actual),pairs(expected)
+    return left is not None and right is not None and left==right
+
+def faq_snapshot_content_equivalent(actual, expected):
+    # Observed update moves edited FAQ pairs to the end. Ignore only the order
+    # of complete outer FAQ rows, never words, answer pairing or multiplicity.
+    def rows(value):
+        if not isinstance(value,list) or len(value)!=4 or value[:3]!=expected[:3]:return None
+        if not all(isinstance(x,list) and len(x)==4 and x[0]=='complex-values' for x in value[3]):return None
+        return Counter(json.dumps(x,ensure_ascii=False)for x in value[3])
+    if not isinstance(expected,list) or len(expected)!=4:return False
+    left,right=rows(actual),rows(expected)
+    return left is not None and right is not None and left==right
 def protected(product):
     # Preserve every unsubmitted key, including nested galleries and company copy.
     result=json.loads(json.dumps(product))
@@ -127,14 +156,20 @@ def main():
         actual=formal_copy(p);expected={'highlights':cp['highlights'],'faq':cp['faq']}
         preserve=protected(p)==protected(before)
         report={'product_id':pid,'observed_at':now(),'request_id':got.get('request_id'),'product_status':p.get('status'),'display':p.get('display'),'display_preserved_after_review':p.get('display')==before.get('display') if p.get('status')=='approved' else None,'formal_highlights_match':actual['highlights']==expected['highlights'],'formal_faq_match':actual['faq']==expected['faq'],'unsubmitted_fields_preserved':preserve,'public_status':'PENDING_APPLICABLE_TEXT_VERIFICATION'}
-        report['status']='FORMAL_PASS' if p.get('status')=='approved' and all(report[k] for k in ('formal_highlights_match','formal_faq_match','unsubmitted_fields_preserved','display_preserved_after_review')) else 'PENDING_REVIEW' if p.get('status')!='approved' else 'MISMATCH_DIAGNOSE_NO_REPLAY'
-        if report['status']=='FORMAL_PASS':
+        report['formal_highlights_apostrophe_equivalent']=apostrophe_equivalent(actual['highlights'],expected['highlights'])
+        report['formal_faq_pair_content_match']=faq_pairs_equivalent(actual['faq'],expected['faq'])
+        report['formal_faq_order_match']=report['formal_faq_match']
+        report['status']='FORMAL_PASS' if p.get('status')=='approved' and report['formal_highlights_apostrophe_equivalent'] and all(report[k] for k in ('formal_faq_pair_content_match','unsubmitted_fields_preserved','display_preserved_after_review')) else 'PENDING_REVIEW' if p.get('status')!='approved' else 'MISMATCH_DIAGNOSE_NO_REPLAY'
+        target_matches=report['formal_highlights_apostrophe_equivalent'] and report['formal_faq_pair_content_match']
+        if p.get('status')=='approved' and p.get('display')=='Y' and target_matches:
             response=render(p);save(folder/'after_render.json',response)
             if response.get('data'):
                 (folder/'after_schema.xml').write_text(response['data'],encoding='utf8')
                 fields=pub.field_snapshot(E.fromstring(response['data']));listing=load(folder/'prepared.json')
-                report['schema_target_fields_match']=all(fields.get(k)==v for k,v in listing['expected_fields'].items())
+                report['schema_target_fields_exact_match']=all(fields.get(k)==v for k,v in listing['expected_fields'].items())
+                report['schema_target_fields_match']=all(fields.get(k)==v or (k=='textDesc' and text_snapshot_apostrophe_equivalent(fields.get(k),v)) or (k=='companyFaqDesc' and faq_snapshot_content_equivalent(fields.get(k),v)) for k,v in listing['expected_fields'].items())
                 if not report['schema_target_fields_match']:report['status']='SCHEMA_MISMATCH_DIAGNOSE'
+                report['target_copy_status']='TARGET_FORMAL_PASS' if report['schema_target_fields_match'] else 'TARGET_SCHEMA_MISMATCH'
             else:report['status']='PENDING_EDITABLE_SCHEMA'
         public_evidence=folder/'public_text_verification.json'
         if public_evidence.exists():
@@ -159,7 +194,8 @@ def main():
         with ThreadPoolExecutor(max_workers=max(1,min(args.workers,4))) as ex:
             for f in as_completed([ex.submit(collect,pid) for pid in ids]):
                 row=f.result();rows.append(row);print(json.dumps(row,ensure_ascii=False),flush=True)
-    summary_name=args.mode+'_summary.json' if not args.ids else args.mode+'_subset_'+hashlib.sha256(','.join(ids).encode()).hexdigest()[:10]+'.json'
-    save(BASE/summary_name,{'observed_at':now(),'scope_count':len(ids),'rows':rows})
+    # Exact-ID request, receipt and verification files are the durable evidence.
+    # Avoid a new derivative report for every subset or single-ID command.
+    if not args.ids:save(BASE/(args.mode+'_summary.json'),{'observed_at':now(),'scope_count':len(ids),'rows':rows})
     if any(row['status']=='ERROR_OBJECT_EVIDENCE' for row in rows):sys.exit(1)
 if __name__=='__main__':main()

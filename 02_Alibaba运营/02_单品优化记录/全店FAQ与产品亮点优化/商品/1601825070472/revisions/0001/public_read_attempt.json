@@ -1,0 +1,13 @@
+{
+  "product_id": "1601825070472",
+  "observed_at": "2026-10-11T17:06:16.679007+00:00",
+  "requested_url": "https://www.alibaba.com/product-detail/Wholesale-Slip-On-Knit-Walking-Shoes_1601825070472.html",
+  "browser": "Chrome",
+  "status": "PUBLIC_TEXT_NOT_OBSERVED_LOGIN_PAGE",
+  "observed_host": "login.alibaba.com",
+  "observed_path": "/newlogin/icbuLogin.htm",
+  "copy_sha256": "527ba2db0cc2073979cae851248e8b85a0d5981483bc0751c682254dda473fa2",
+  "formal_verification": "FORMAL_PASS",
+  "consequence": "Public text remains pending; this is not lack of user authorization and does not stop authorized API updates.",
+  "external_mutations": 0
+}

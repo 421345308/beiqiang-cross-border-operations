@@ -410,3 +410,11 @@ F2888 / 1601970034464 / category201339011 / type4，经当前目标Schema提交�
 FAQ创建需按当前Schema写全父／子字段type，数量上限动态读取；725的实际31002拒绝fixture为 `schema_contract_fixtures/725_faq_type_rejection_20261004.json`。`created_field_equivalent` 只在创建回读中识别已观察到的字段排序、数值格式、定制值标记及sc04同资产链接；保留主图槽位、图库数量／分组、颜色与SKU身份，update仍严格比较。真实正负回归为 `test_created_readback_normalization.py`、`test_faq_create_type_guard.py`，本次56项离线测试通过，测试不写平台。
 
 业务规则唯一权威仍为[全生命周期SOP](../../../02_Alibaba运营/00_运营SOP/国际站商品全生命周期SOP.md)。具体回执、当前版本证据、diff和验收以[2026-10-04交付](../../../02_Alibaba运营/05_扩品工程/执行记录/989与725正式新建_2026-10-04_task5/最终交付.md)为准；旧关键词空值不伪装为恢复，旧品不因新ID成功而自动下架，Workctl不复活。
+
+## 实款亮点与FAQ的精确ID修订工具
+
+`refresh_buyer_copy.py`按当前实款稿读取、准备、单次提交、独立核对亮点FAQ。`begin_buyer_copy_revision.py`仅在前次目标字段已核实后启动经过审阅的新措辞修订，保留前次正式证据；未知结果不进入自动重试。已记录的关联字段差异不得因为新的修订而消失。`sync_buyer_copy_records.py`写回唯一台账与现有商品档案。原件、回执和验收按商品ID保存，当前业务进度只查全店FAQ与产品亮点优化的README和当前执行，不新建逐批知识副本。
+
+`商品图片与审计/prepare_company_gallery.py`只准备公司图最小载荷，没有商品提交端点。当前目标Schema、官方银行图及像素核对、对应文案正式回读均须匹配；图库更新支持和公开编译另行诊断，准备成功不等于线上公司图替换。
+
+正式FAQ校验保留顺序差异，并逐字比较完整问答对及重复数量；只接受整对重新排序，不接受漏项、重复、错配答案或字词/规格变化。Schema也独立核对整对内容；该字段级结果不等于买家公开FAQ顺序或页面验收。

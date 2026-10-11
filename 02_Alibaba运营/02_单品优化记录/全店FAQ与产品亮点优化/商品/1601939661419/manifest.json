@@ -1,0 +1,27 @@
+{
+  "operation": "update",
+  "product_id": "1601939661419",
+  "category_id": 201334413,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "copy.json",
+    "before_get.json",
+    "../../../../../01_产品资产/02_可发布素材/00_最终上传/BQ009_L1026/00_上架填写表.md",
+    "../../../../../01_产品资产/01_原始数据包/已整理_BQ009_L1026_贝强鞋业35-45批65全网限价98元/L1026贝强鞋业35-45批65全网限价98元/主图/001_27.jpg",
+    "current_get.json",
+    "../../../../00_运营SOP/国际站商品全生命周期SOP.md"
+  ],
+  "current_schema": "current_schema.xml",
+  "current_schema_sha256": "9351fb0dd56deaca5d66095cff101abb1b03703fd441640b595f0e357ae729d3",
+  "schema_request_id": "0b0b3a2717917344751736005",
+  "schema_acquired_at": "2026-10-11T16:01:12.457294+00:00",
+  "payload_xml": "payload.xml",
+  "field_ids": [
+    "textDesc",
+    "companyFaqDesc"
+  ],
+  "dependency_ids": [
+    "productDescType"
+  ],
+  "observed_model": "BQ009-R1 / L1026"
+}

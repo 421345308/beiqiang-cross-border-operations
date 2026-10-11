@@ -1,6 +1,6 @@
 {
   "version": 6,
-  "status": "LOCAL_REVIEW_DRAFT; PROCESS_FOCUSED_CROSS_CATEGORY",
+  "status": "LOCAL_REVIEW_PASS_OFFICIAL_BANK_READY_BINDINGS_PENDING",
   "entry": "README.md",
   "current_media_root": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情",
   "raw_media_root": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片",
@@ -50,9 +50,13 @@
   },
   "iteration_history": "Git preserves text, prompts, source/asset hashes and decisions. Current media files use stable role names; no dated/versioned candidate folders.",
   "online_state": {
-    "uploaded": false,
-    "bound": false,
-    "scope": "Local draft only; original online image URLs and formal product receipts unchanged."
+    "bank_images": 5,
+    "bank_evidence": "当前上传回执.json",
+    "bank_pixels_evidence": "图片银行像素核对.json",
+    "bound_product_count": 0,
+    "state": "PREPARED_NOT_BOUND",
+    "uploaded": true,
+    "bound": false
   },
   "final_requests": {
     "C1": {
@@ -1249,7 +1253,7 @@
     "C4": "删除不证明质检的生产线背景，四项改为具体动作示意；Illustrated review examples标识清楚，无合格结论、测试报告或全检承诺；示例鞋不限定全店结构。",
     "C5": "移除印字杂乱仓储大图，保留袋盒箱Packing examples、空白色码配货表与外箱标记示意，只出现一次询价入口；不表示真实订单、库存或包装默认包含。",
     "boundary": "Shared factory modules explain cooperation and processes across footwear projects. Example shoes explain actions; actual materials, structure, options and feasibility remain product/order specific.",
-    "online": "Not uploaded or bound; local review does not constitute online acceptance."
+    "online": "Five version6 assets uploaded to official image bank and original pixels verified; no product company-image bindings changed."
   },
   "benchmark_review": {
     "observed_date": "2026-10-11",
@@ -1276,6 +1280,6 @@
       "single_current_asset_path": true
     },
     "buyer_assessment": "身份页压短，开发/生产/检查/包装各自解决一个采购问题。表达更清楚、重复更少；缺少真实检查及包装作业照片，示意不等于履约记录，不能据此认定实力或效果超过凯顺。",
-    "replacement_condition": "负责人明确要求先完成全量亮点与FAQ，再开始公司图全量替换。"
+    "replacement_condition": "先验收实款亮点FAQ；负责人已将159条历史链接单列待修。本期候选290条，源链接与离线重复款排除。逐ID核公司图正式及公开结果，未闭环不报替换完成。"
   }
 }

@@ -1,0 +1,27 @@
+{
+  "operation": "update",
+  "product_id": "1601939743040",
+  "category_id": 201334413,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "copy.json",
+    "before_get.json",
+    "../../../../../01_产品资产/02_可发布素材/00_最终上传/BQ015_R1811/00_上架填写表.md",
+    "../../../../../01_产品资产/01_原始数据包/已整理_BQ015_R1811_贝强鞋业R1811秋冬新款35-45批58元/贝强鞋业R1811秋冬新款35-45批58元/800X800主图/主图 (1).jpg",
+    "current_get.json",
+    "../../../../00_运营SOP/国际站商品全生命周期SOP.md"
+  ],
+  "current_schema": "current_schema.xml",
+  "current_schema_sha256": "2399b1ceee3f486c9aa0ca6289ffb8af996986d118345c54b56111a2e0fe87bd",
+  "schema_request_id": "213e759c17917348012261267",
+  "schema_acquired_at": "2026-10-11T16:06:38.300883+00:00",
+  "payload_xml": "payload.xml",
+  "field_ids": [
+    "textDesc",
+    "companyFaqDesc"
+  ],
+  "dependency_ids": [
+    "productDescType"
+  ],
+  "observed_model": "BQ015-W1 / R1811"
+}

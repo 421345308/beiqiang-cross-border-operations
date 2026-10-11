@@ -1,0 +1,27 @@
+{
+  "operation": "update",
+  "product_id": "10000043732626",
+  "category_id": 201334413,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "copy.json",
+    "before_get.json",
+    "../../../../../01_产品资产/02_可发布素材/00_最终上传/BQ014_A507/00_上架填写表.md",
+    "../../../../../01_产品资产/01_原始数据包/已整理_BQ014_A507_贝强鞋业A507闪穿鞋35-45秋冬新款批55元/A507/800X800主图/主图 (1).JPG",
+    "current_get.json",
+    "../../../../00_运营SOP/国际站商品全生命周期SOP.md"
+  ],
+  "current_schema": "current_schema.xml",
+  "current_schema_sha256": "7b11ec4b0b10ec9b4d9529cc1147a102a3e57c9e81899f64296e985ca606fd18",
+  "schema_request_id": "213d4e4917917401961503828",
+  "schema_acquired_at": "2026-10-11T17:36:33.299670+00:00",
+  "payload_xml": "payload.xml",
+  "field_ids": [
+    "textDesc",
+    "companyFaqDesc"
+  ],
+  "dependency_ids": [
+    "productDescType"
+  ],
+  "observed_model": "BQ-014"
+}

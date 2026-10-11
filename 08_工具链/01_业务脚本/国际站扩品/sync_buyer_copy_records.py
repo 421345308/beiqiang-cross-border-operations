@@ -31,8 +31,15 @@ def main():
         evidence=[rel(f/x) for x in ['copy.json','update_receipt.json','after_get.json','verification.json','public_text_verification.json'] if (f/x).exists()]
         state=verification['status'];states[pid]=state
         public_pass=verification['public_status']=='PUBLIC_TRANSLATED_TEXT_SEMANTIC_PASS'
-        next_action='审核后核对应公开亮点FAQ；不重放已有提交' if state=='PENDING_REVIEW' else '本轮亮点FAQ正式字段与当前中文公开正文已核；其他字段未纳入本次验收' if public_pass else '核对应公开亮点FAQ；其他商品字段未纳入本次修改'
+        prior_differences=[rel(p) for p in (f/'revisions').glob('*/non_target_difference.json')]
+        if (f/'non_target_difference.json').exists():prior_differences.append(rel(f/'non_target_difference.json'))
+        evidence += [rel(f/'revision_history.json')] if (f/'revision_history.json').exists() else []
+        evidence += prior_differences
+        next_action='核对应公开亮点FAQ；另核精确关联字段差异，不覆盖未知变化' if prior_differences or state=='MISMATCH_DIAGNOSE_NO_REPLAY' else '审核后核对应公开亮点FAQ；不重放已有提交' if state=='PENDING_REVIEW' else '本轮亮点FAQ正式字段与当前中文公开正文已核；其他字段未纳入本次验收' if public_pass else '核对应公开亮点FAQ；其他商品字段未纳入本次修改'
         listing.setdefault('optimization',{})['buyer_copy']={'state':state,'at':verification['observed_at'],'scope':['textDesc','companyFaqDesc'],'draft':rel(f/'copy.json'),'formal_readback':rel(f/'after_get.json'),'public_status':verification['public_status'],'evidence':evidence,'next_action':next_action}
+        if prior_differences:listing['optimization']['buyer_copy']['earlier_non_target_differences']=prior_differences
+        listing['optimization']['buyer_copy']['target_formal_copy_status']=verification.get('target_copy_status','TARGET_FORMAL_PASS' if state=='FORMAL_PASS' else 'PENDING')
+        listing['optimization']['buyer_copy']['faq_order_match']=verification.get('formal_faq_order_match',verification['formal_faq_match'])
         # Refresh the existing canonical per-ID snapshot, not a duplicate current platform library.
         formal=ROOT/'02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品'/pid/'formal_get.json'
         prior=json.loads(formal.read_text(encoding='utf8')) if formal.exists() else {}

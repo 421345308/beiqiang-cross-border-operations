@@ -1,0 +1,26 @@
+{
+  "operation": "update",
+  "product_id": "1601969877983",
+  "category_id": 202240835,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "copy.json",
+    "before_get.json",
+    "../../../../05_扩品工程/执行记录/805_API完整新建_2026-10-02/facts_and_copy.json",
+    "current_get.json",
+    "../../../../00_运营SOP/国际站商品全生命周期SOP.md"
+  ],
+  "current_schema": "current_schema.xml",
+  "current_schema_sha256": "bbc453161cff095d6134fb5ddcee0b39e932eba07a86a9037f88cfbcff13ad3d",
+  "schema_request_id": "213c932b17917373023896612",
+  "schema_acquired_at": "2026-10-11T16:48:19.429760+00:00",
+  "payload_xml": "payload.xml",
+  "field_ids": [
+    "textDesc",
+    "companyFaqDesc"
+  ],
+  "dependency_ids": [
+    "productDescType"
+  ],
+  "observed_model": "BQ-D805"
+}

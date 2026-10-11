@@ -1,0 +1,26 @@
+{
+  "operation": "update",
+  "product_id": "1601969788941",
+  "category_id": 201152005,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "copy.json",
+    "before_get.json",
+    "../../../../05_扩品工程/执行记录/9968_API完整新建_2026-10-02/facts_and_copy.json",
+    "current_get.json",
+    "../../../../00_运营SOP/国际站商品全生命周期SOP.md"
+  ],
+  "current_schema": "current_schema.xml",
+  "current_schema_sha256": "89eb8c44d41b3667b449c76f81cc80a48772009ab578e2bd2d65bfd27d1b0818",
+  "schema_request_id": "0bab02fc17917373661786985",
+  "schema_acquired_at": "2026-10-11T16:49:23.266948+00:00",
+  "payload_xml": "payload.xml",
+  "field_ids": [
+    "textDesc",
+    "companyFaqDesc"
+  ],
+  "dependency_ids": [
+    "productDescType"
+  ],
+  "observed_model": "BQ-MJ9968"
+}

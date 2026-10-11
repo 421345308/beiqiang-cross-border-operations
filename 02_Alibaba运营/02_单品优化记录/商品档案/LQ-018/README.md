@@ -20,9 +20,9 @@
 ### BQ-LQ018 · 1601974978404
 
 - 平台链接：[1601974978404](https://www.alibaba.com/product-detail/Unisex-Wide-Toe-Box-Outdoor-Walking_1601974978404.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601974978404/formal_get.json)；UTC 2026-10-11T05:44:03.154714+00:00。
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601974978404/formal_get.json)；UTC 2026-10-11T15:40:51.568373+00:00。
 - 当前正式标题：Unisex Wide Toe Box Outdoor Walking Shoes Lace Up Rubber Outsole Low Top EU 37-48 Wholesale
-- 审核/展示：modified / N；平台类目ID：201334413。
+- 审核/展示：approved / Y；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, is_smart_edit, keywords, language, main_image, owner_member, owner_member_display_name, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
 - SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。
 - 本地平台素材：[唯一素材索引](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90%E6%B8%85%E5%8D%95.json)；图片按内容哈希保存一份，图库/详情/SKU通过索引引用。
@@ -32,12 +32,12 @@
   - M4：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/f49215f2b87f7626f804b984c7f09ee03301a4710bdde5c77e47065f5bf318f0.png) · 1254×1254
   - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/87c944eab1cb1580b255c732a1988e1db6d5d724049a6831fcf10309d151d0ea.png) · 1254×1254
   - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/778cae3a27b67c2197cf651dea936e41fbae1e9ddedeaaae0d0a769ac1d30b06.png) · 1254×1254
-- 本地同步状态：`FORMAL_SNAPSHOT_SAVED_BUYER_COPY_PENDING_REVIEW`。
+- 本地同步状态：`FORMAL_SNAPSHOT_SAVED_BUYER_COPY_FORMAL_PASS`。
 - 本轮优化：``；
 
 ## 本轮亮点与 FAQ
 
-- 1601974978404：PENDING_REVIEW；审核后核对应公开亮点FAQ；不重放已有提交。改稿与正式回读见下方按ID证据。
+- 1601974978404：FORMAL_PASS；核对应公开亮点FAQ；其他商品字段未纳入本次修改。改稿与正式回读见下方按ID证据。
 
 ## 其他原始/正式证据
 

@@ -1,0 +1,41 @@
+{
+  "started_at": "2026-10-11T17:35:26.291657+00:00",
+  "product_id": "1601939701201",
+  "previous_verification": {
+    "product_id": "1601939701201",
+    "observed_at": "2026-10-11T16:56:39.213602+00:00",
+    "request_id": "0b80d2d617917378032944634",
+    "product_status": "approved",
+    "display": "Y",
+    "display_preserved_after_review": true,
+    "formal_highlights_match": true,
+    "formal_faq_match": true,
+    "unsubmitted_fields_preserved": true,
+    "public_status": "PENDING_APPLICABLE_TEXT_VERIFICATION",
+    "status": "FORMAL_PASS",
+    "schema_target_fields_match": true
+  },
+  "candidate_sha256": "aad54b1c90f9cf338b7dd9d721b03bacf3a28e9006c2c2f043b06cce35ff0d5d",
+  "scope": [
+    "textDesc",
+    "companyFaqDesc"
+  ],
+  "no_platform_write": true,
+  "archived_files": [
+    "copy.json",
+    "before_get.json",
+    "before_render.json",
+    "current_schema.xml",
+    "payload.xml",
+    "manifest.json",
+    "prepared.json",
+    "reviewed_baseline.json",
+    "immediate_prewrite_get.json",
+    "update_once.json",
+    "update_receipt.json",
+    "after_get.json",
+    "after_render.json",
+    "after_schema.xml",
+    "verification.json"
+  ]
+}

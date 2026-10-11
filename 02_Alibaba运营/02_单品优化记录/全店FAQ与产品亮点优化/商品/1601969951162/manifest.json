@@ -1,0 +1,27 @@
+{
+  "operation": "update",
+  "product_id": "1601969951162",
+  "category_id": 32211,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "copy.json",
+    "before_get.json",
+    "../../../../05_扩品工程/数据/来源证据/d25c25f4ce45.json",
+    "../../../../../99_临时区/1688选品_965493972088_2026-10-01/02_主图/M01_O1CN01Svf2Sn1zyDCTKDmTe.jpg",
+    "current_get.json",
+    "../../../../00_运营SOP/国际站商品全生命周期SOP.md"
+  ],
+  "current_schema": "current_schema.xml",
+  "current_schema_sha256": "63efc7e106e9c31d85c8b4df0e6955c2fe215e38605d19281026b2fd77ac9ed8",
+  "schema_request_id": "21546a1d17917374513156017",
+  "schema_acquired_at": "2026-10-11T16:50:48.447565+00:00",
+  "payload_xml": "payload.xml",
+  "field_ids": [
+    "textDesc",
+    "companyFaqDesc"
+  ],
+  "dependency_ids": [
+    "productDescType"
+  ],
+  "observed_model": "BQ-W266"
+}

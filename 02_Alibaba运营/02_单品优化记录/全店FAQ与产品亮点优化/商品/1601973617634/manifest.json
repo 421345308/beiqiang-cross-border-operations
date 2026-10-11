@@ -1,0 +1,27 @@
+{
+  "operation": "update",
+  "product_id": "1601973617634",
+  "category_id": 201334413,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "copy.json",
+    "before_get.json",
+    "../../../../05_扩品工程/执行记录/路崎全店新品_2026-10-08/2652准备/经营任务包.md",
+    "../../../../05_扩品工程/执行记录/路崎全店新品_2026-10-08/候选原图/2652/23.jpg",
+    "current_get.json",
+    "../../../../00_运营SOP/国际站商品全生命周期SOP.md"
+  ],
+  "current_schema": "current_schema.xml",
+  "current_schema_sha256": "ef2a209429d832ddc542f7ac285d7778dab15363911c05233c4fb1a529e5809c",
+  "schema_request_id": "0b80d2d617917377219863265",
+  "schema_acquired_at": "2026-10-11T16:55:19.090840+00:00",
+  "payload_xml": "payload.xml",
+  "field_ids": [
+    "textDesc",
+    "companyFaqDesc"
+  ],
+  "dependency_ids": [
+    "productDescType"
+  ],
+  "observed_model": "BQ-LQ2652"
+}

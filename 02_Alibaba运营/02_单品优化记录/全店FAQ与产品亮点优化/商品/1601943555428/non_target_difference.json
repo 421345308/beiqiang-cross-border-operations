@@ -1,0 +1,17 @@
+{
+  "product_id": "1601943555428",
+  "observed_at": "2026-10-11T17:28:10.315417+00:00",
+  "status": "TARGET_COPY_MATCHES_OTHER_FIELDS_CHANGED_SEPARATE_DIAGNOSIS",
+  "submitted_fields": [
+    "textDesc",
+    "companyFaqDesc"
+  ],
+  "changes": [
+    {
+      "path": "/keywords/0",
+      "before": "Mens Walking Shoes",
+      "after": ""
+    }
+  ],
+  "action": "Do not overwrite concurrent or unexplained changes; retain exact historical differences. New wording revisions use fresh observed baseline."
+}

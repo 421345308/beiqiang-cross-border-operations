@@ -1,0 +1,1715 @@
+{
+  "requested_product_id": "1601958865699",
+  "observed_at_utc": "2026-10-11T18:35:45.607116+00:00",
+  "method": "alibaba.icbu.product.get",
+  "response": {
+    "product": {
+      "gmt_create": "2026-09-21 14:05:35",
+      "keywords": [
+        ""
+      ],
+      "owner_member_display_name": "User name",
+      "subject": "Wholesale White Knit Elastic Lace Slip-On Walking Shoes Lightweight Casual Sneakers L0017 BQ007",
+      "main_image": {
+        "images": [
+          "https://sc04.alicdn.com/kf/Hfaf545db785b4a39bba6fc1d20b2e242J.jpg",
+          "https://sc04.alicdn.com/kf/H2abede378b0943e0b27adef2211dd4faT.jpg",
+          "https://sc04.alicdn.com/kf/H14fc0ab97e9e4ecb93de91578727ebb0P.jpg",
+          "https://sc04.alicdn.com/kf/H12f7f8e681324d4f8883c9bbfa9eaf44c.jpg",
+          "https://sc04.alicdn.com/kf/H1a7e86f4fb394939b525c33c53218fceq.jpg",
+          "https://sc04.alicdn.com/kf/Hc4fbb80cf2b74c54918edafe06968f1cB.jpg"
+        ]
+      },
+      "struct_detail_product": true,
+      "language": "ENGLISH",
+      "is_smart_edit": false,
+      "gmt_modified": "2026-10-12 02:10:32",
+      "product_sku": {
+        "skus": [
+          {
+            "attr2_value": "{\"222038415\":28393,\"191288010\":3331185}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185277,
+            "sku_code": "BQ007-S1-WHITE-44"
+          },
+          {
+            "attr2_value": "{\"222038415\":28392,\"191288010\":3331185}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185276,
+            "sku_code": "BQ007-S1-WHITE-43"
+          },
+          {
+            "attr2_value": "{\"222038415\":190000791,\"191288010\":-34}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185279,
+            "sku_code": "BQ007-S1-ALL-BLACK-35"
+          },
+          {
+            "attr2_value": "{\"222038415\":28394,\"191288010\":3331185}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185278,
+            "sku_code": "BQ007-S1-WHITE-45"
+          },
+          {
+            "attr2_value": "{\"222038415\":28389,\"191288010\":3331185}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185273,
+            "sku_code": "BQ007-S1-WHITE-40"
+          },
+          {
+            "attr2_value": "{\"222038415\":190000792,\"191288010\":3331185}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185272,
+            "sku_code": "BQ007-S1-WHITE-39"
+          },
+          {
+            "attr2_value": "{\"222038415\":28391,\"191288010\":3331185}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185275,
+            "sku_code": "BQ007-S1-WHITE-42"
+          },
+          {
+            "attr2_value": "{\"222038415\":28390,\"191288010\":3331185}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185274,
+            "sku_code": "BQ007-S1-WHITE-41"
+          },
+          {
+            "attr2_value": "{\"222038415\":190000105,\"191288010\":3331185}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185269,
+            "sku_code": "BQ007-S1-WHITE-36"
+          },
+          {
+            "attr2_value": "{\"222038415\":190000791,\"191288010\":3331185}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185268,
+            "sku_code": "BQ007-S1-WHITE-35"
+          },
+          {
+            "attr2_value": "{\"222038415\":28388,\"191288010\":3331185}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185271,
+            "sku_code": "BQ007-S1-WHITE-38"
+          },
+          {
+            "attr2_value": "{\"222038415\":29542,\"191288010\":3331185}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185270,
+            "sku_code": "BQ007-S1-WHITE-37"
+          },
+          {
+            "attr2_value": "{\"222038415\":28392,\"191288010\":3558409}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185265,
+            "sku_code": "BQ007-S1-ORANGE-43"
+          },
+          {
+            "attr2_value": "{\"222038415\":28391,\"191288010\":3558409}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185264,
+            "sku_code": "BQ007-S1-ORANGE-42"
+          },
+          {
+            "attr2_value": "{\"222038415\":28394,\"191288010\":3558409}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185267,
+            "sku_code": "BQ007-S1-ORANGE-45"
+          },
+          {
+            "attr2_value": "{\"222038415\":28393,\"191288010\":3558409}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185266,
+            "sku_code": "BQ007-S1-ORANGE-44"
+          },
+          {
+            "attr2_value": "{\"222038415\":190000792,\"191288010\":3558409}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185261,
+            "sku_code": "BQ007-S1-ORANGE-39"
+          },
+          {
+            "attr2_value": "{\"222038415\":28388,\"191288010\":3558409}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185260,
+            "sku_code": "BQ007-S1-ORANGE-38"
+          },
+          {
+            "attr2_value": "{\"222038415\":28390,\"191288010\":3558409}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185263,
+            "sku_code": "BQ007-S1-ORANGE-41"
+          },
+          {
+            "attr2_value": "{\"222038415\":28389,\"191288010\":3558409}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185262,
+            "sku_code": "BQ007-S1-ORANGE-40"
+          },
+          {
+            "attr2_value": "{\"222038415\":190000791,\"191288010\":3558409}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185257,
+            "sku_code": "BQ007-S1-ORANGE-35"
+          },
+          {
+            "attr2_value": "{\"222038415\":29542,\"191288010\":3558409}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185259,
+            "sku_code": "BQ007-S1-ORANGE-37"
+          },
+          {
+            "attr2_value": "{\"222038415\":190000105,\"191288010\":3558409}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185258,
+            "sku_code": "BQ007-S1-ORANGE-36"
+          },
+          {
+            "attr2_value": "{\"222038415\":28392,\"191288010\":-80}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185309,
+            "sku_code": "BQ007-S1-WHITE-KHAKI-43"
+          },
+          {
+            "attr2_value": "{\"222038415\":28391,\"191288010\":-80}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185308,
+            "sku_code": "BQ007-S1-WHITE-KHAKI-42"
+          },
+          {
+            "attr2_value": "{\"222038415\":28394,\"191288010\":-80}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185311,
+            "sku_code": "BQ007-S1-WHITE-KHAKI-45"
+          },
+          {
+            "attr2_value": "{\"222038415\":28393,\"191288010\":-80}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185310,
+            "sku_code": "BQ007-S1-WHITE-KHAKI-44"
+          },
+          {
+            "attr2_value": "{\"222038415\":190000792,\"191288010\":-80}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185305,
+            "sku_code": "BQ007-S1-WHITE-KHAKI-39"
+          },
+          {
+            "attr2_value": "{\"222038415\":28388,\"191288010\":-80}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185304,
+            "sku_code": "BQ007-S1-WHITE-KHAKI-38"
+          },
+          {
+            "attr2_value": "{\"222038415\":28390,\"191288010\":-80}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185307,
+            "sku_code": "BQ007-S1-WHITE-KHAKI-41"
+          },
+          {
+            "attr2_value": "{\"222038415\":28389,\"191288010\":-80}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185306,
+            "sku_code": "BQ007-S1-WHITE-KHAKI-40"
+          },
+          {
+            "attr2_value": "{\"222038415\":190000791,\"191288010\":-80}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185301,
+            "sku_code": "BQ007-S1-WHITE-KHAKI-35"
+          },
+          {
+            "attr2_value": "{\"222038415\":28394,\"191288010\":-57}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185300,
+            "sku_code": "BQ007-S1-BLACK-WHITE-45"
+          },
+          {
+            "attr2_value": "{\"222038415\":29542,\"191288010\":-80}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185303,
+            "sku_code": "BQ007-S1-WHITE-KHAKI-37"
+          },
+          {
+            "attr2_value": "{\"222038415\":190000105,\"191288010\":-80}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185302,
+            "sku_code": "BQ007-S1-WHITE-KHAKI-36"
+          },
+          {
+            "attr2_value": "{\"222038415\":28391,\"191288010\":-57}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185297,
+            "sku_code": "BQ007-S1-BLACK-WHITE-42"
+          },
+          {
+            "attr2_value": "{\"222038415\":28390,\"191288010\":-57}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185296,
+            "sku_code": "BQ007-S1-BLACK-WHITE-41"
+          },
+          {
+            "attr2_value": "{\"222038415\":28393,\"191288010\":-57}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185299,
+            "sku_code": "BQ007-S1-BLACK-WHITE-44"
+          },
+          {
+            "attr2_value": "{\"222038415\":28392,\"191288010\":-57}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185298,
+            "sku_code": "BQ007-S1-BLACK-WHITE-43"
+          },
+          {
+            "attr2_value": "{\"222038415\":28388,\"191288010\":-57}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185293,
+            "sku_code": "BQ007-S1-BLACK-WHITE-38"
+          },
+          {
+            "attr2_value": "{\"222038415\":29542,\"191288010\":-57}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185292,
+            "sku_code": "BQ007-S1-BLACK-WHITE-37"
+          },
+          {
+            "attr2_value": "{\"222038415\":28389,\"191288010\":-57}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185295,
+            "sku_code": "BQ007-S1-BLACK-WHITE-40"
+          },
+          {
+            "attr2_value": "{\"222038415\":190000792,\"191288010\":-57}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185294,
+            "sku_code": "BQ007-S1-BLACK-WHITE-39"
+          },
+          {
+            "attr2_value": "{\"222038415\":28394,\"191288010\":-34}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185289,
+            "sku_code": "BQ007-S1-ALL-BLACK-45"
+          },
+          {
+            "attr2_value": "{\"222038415\":28393,\"191288010\":-34}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185288,
+            "sku_code": "BQ007-S1-ALL-BLACK-44"
+          },
+          {
+            "attr2_value": "{\"222038415\":190000105,\"191288010\":-57}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185291,
+            "sku_code": "BQ007-S1-BLACK-WHITE-36"
+          },
+          {
+            "attr2_value": "{\"222038415\":190000791,\"191288010\":-57}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185290,
+            "sku_code": "BQ007-S1-BLACK-WHITE-35"
+          },
+          {
+            "attr2_value": "{\"222038415\":28390,\"191288010\":-34}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185285,
+            "sku_code": "BQ007-S1-ALL-BLACK-41"
+          },
+          {
+            "attr2_value": "{\"222038415\":28389,\"191288010\":-34}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185284,
+            "sku_code": "BQ007-S1-ALL-BLACK-40"
+          },
+          {
+            "attr2_value": "{\"222038415\":28392,\"191288010\":-34}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185287,
+            "sku_code": "BQ007-S1-ALL-BLACK-43"
+          },
+          {
+            "attr2_value": "{\"222038415\":28391,\"191288010\":-34}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185286,
+            "sku_code": "BQ007-S1-ALL-BLACK-42"
+          },
+          {
+            "attr2_value": "{\"222038415\":29542,\"191288010\":-34}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185281,
+            "sku_code": "BQ007-S1-ALL-BLACK-37"
+          },
+          {
+            "attr2_value": "{\"222038415\":190000105,\"191288010\":-34}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185280,
+            "sku_code": "BQ007-S1-ALL-BLACK-36"
+          },
+          {
+            "attr2_value": "{\"222038415\":190000792,\"191288010\":-34}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185283,
+            "sku_code": "BQ007-S1-ALL-BLACK-39"
+          },
+          {
+            "attr2_value": "{\"222038415\":28388,\"191288010\":-34}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "9.49"
+              },
+              {
+                "start_quantity": 50,
+                "price": "9.19"
+              },
+              {
+                "start_quantity": 100,
+                "price": "9.09"
+              }
+            ],
+            "sku_id": 109721185282,
+            "sku_code": "BQ007-S1-ALL-BLACK-38"
+          }
+        ],
+        "sku_attributes": [
+          {
+            "attribute_id": 191288010,
+            "values": [
+              {
+                "system_value_name": "White",
+                "image_url": "https://sc04.alicdn.com/kf/H5c8be9c9aa0c41fabb70d7e5a9430ac5F.jpg",
+                "value_id": 3331185
+              },
+              {
+                "system_value_name": "All Black",
+                "image_url": "https://sc04.alicdn.com/kf/Hd0edb11e1a8c44ccbd3e38bd06277bf3U.jpg",
+                "value_id": -34
+              },
+              {
+                "system_value_name": "Orange",
+                "image_url": "https://sc04.alicdn.com/kf/H45c4d98bb5824ab79f299a04151cf0bfH.jpg",
+                "value_id": 3558409
+              },
+              {
+                "system_value_name": "White Khaki",
+                "image_url": "https://sc04.alicdn.com/kf/H6b0948b966e8477f9204ff3d32058ca5h.jpg",
+                "value_id": -80
+              },
+              {
+                "system_value_name": "Black White",
+                "image_url": "https://sc04.alicdn.com/kf/H7a3f2b0702824b78b00b0a5236e66ef9x.jpg",
+                "value_id": -57
+              }
+            ],
+            "attribute_name": "Color"
+          },
+          {
+            "attribute_id": 222038415,
+            "values": [
+              {
+                "system_value_name": "44",
+                "value_id": 28393
+              },
+              {
+                "system_value_name": "43",
+                "value_id": 28392
+              },
+              {
+                "system_value_name": "35",
+                "value_id": 190000791
+              },
+              {
+                "system_value_name": "45",
+                "value_id": 28394
+              },
+              {
+                "system_value_name": "40",
+                "value_id": 28389
+              },
+              {
+                "system_value_name": "39",
+                "value_id": 190000792
+              },
+              {
+                "system_value_name": "42",
+                "value_id": 28391
+              },
+              {
+                "system_value_name": "41",
+                "value_id": 28390
+              },
+              {
+                "system_value_name": "36",
+                "value_id": 190000105
+              },
+              {
+                "system_value_name": "38",
+                "value_id": 28388
+              },
+              {
+                "system_value_name": "37",
+                "value_id": 29542
+              }
+            ],
+            "attribute_name": "EUR Size"
+          }
+        ]
+      },
+      "category_id": 201334413,
+      "product_id": "AAG4jmk4AOWGex-cDVm8tmzA",
+      "sub_market_type": "customization",
+      "struct_detail": {
+        "company_image": {
+          "images": [
+            {
+              "image_set": {
+                "name": "Production workflow",
+                "id": 600
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H36e700f5c3ee447a80c035d8ae7521d9a.jpg"
+            },
+            {
+              "image_set": {
+                "name": "Packaging & shipping specifications",
+                "id": 700
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H5f71c3cfb4064b51bb458d0a786cb402R.jpg"
+            },
+            {
+              "image_set": {
+                "name": "Factory profile",
+                "id": 500
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H9f32c7ecea0f4d25bc5ddc9cd04c1e5dK.jpg"
+            },
+            {
+              "image_set": {
+                "name": "Customization capabilities",
+                "id": 550
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H496f7579171f4370a1d47c3adf30001bK.jpg"
+            },
+            {
+              "image_set": {
+                "name": "Company overview",
+                "id": 400
+              },
+              "image_url": "https://sc04.alicdn.com/kf/Ha8c1682092424e778eadf945763e79daU.jpg"
+            }
+          ]
+        },
+        "product_faq": [
+          {
+            "question": "Which color and EU size combinations are listed?",
+            "answer": "White: EU 35–45; All Black: EU 35–45; Orange: EU 35–45; White Khaki: EU 35–45; Black White: EU 35–45."
+          },
+          {
+            "question": "What should I check during a sample fitting?",
+            "answer": "Try the sample with the intended socks. Check toe room, instep fit, heel hold and the shoe opening before deciding the bulk EU size mix."
+          },
+          {
+            "question": "What is the minimum order for the original style?",
+            "answer": "The listed original-style wholesale minimum is 2 pairs. Quantity pricing is shown on this page; branding and custom packaging are quoted separately."
+          },
+          {
+            "question": "How can I request a sample?",
+            "answer": "Send the selected color or lining variant, EU size and delivery postcode for a sample quotation. It sets out the sample charge, courier cost and proposed dispatch date."
+          },
+          {
+            "question": "What should I send for a branding or packaging proposal?",
+            "answer": "Send your logo artwork, preferred placement, packaging brief and order quantity. We can review the proposal for this style and set out the applicable minimum, cost and sample process."
+          },
+          {
+            "question": "How can I get a delivered quotation?",
+            "answer": "Send pair quantities by color and EU size, the destination postcode or port and your packaging request. The quotation separates product cost from freight and includes the proposed dispatch and transit schedule."
+          },
+          {
+            "question": "How does the elastic-lace closure work?",
+            "answer": "This is an elastic-lace slip-on style. The lace-look front retains the sneaker appearance; check the opening and elastic-lace fit when selecting your sample."
+          }
+        ],
+        "detail_image": {
+          "images": [
+            {
+              "image_set": {
+                "name": "Detail shot",
+                "id": "300"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H95a65083db6c4e9c95c783507075b97eI.jpg"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/Hbd3dfb8d697d40bfbd852ef1a2db865ce.jpg"
+            },
+            {
+              "image_set": {
+                "name": "Model image",
+                "id": "250"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/Hd65e583e62d54aaf9c45726b1fa5c3a3S.jpg"
+            },
+            {
+              "image_set": {
+                "name": "Product dimensions",
+                "id": "150"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/Hb1ff8b477b2f4c21ad5892e6032283bcG.jpg"
+            }
+          ]
+        },
+        "product_summary": "Knit casual walking shoes with an elastic-lace slip-on construction and a sculpted sole. The front gives the appearance of laces while retaining the slip-on style. The shoe has an EVA and PEBA foamed sole construction.",
+        "company_summary": "Quanzhou Beiqiang Footwear & Apparel Co., Ltd. is a footwear factory located in Quanzhou, Fujian, China. We supply casual walking shoes and related footwear for overseas B2B buyers. Product materials, colors, size ratios, packing and customization requirements are confirmed according to the current style and order details."
+      },
+      "display": "Y",
+      "pc_detail_url": "https://www.alibaba.com/product-detail/Wholesale-White-Knit-Elastic-Lace-Slip_1601958865699.html",
+      "rts": false,
+      "product_type": "sourcing",
+      "sourcing_trade": {
+        "fob_min_price": "9.09",
+        "fob_currency": "USD",
+        "min_order_unit_type": "Pair",
+        "deliver_periods": [
+          {
+            "quantity": 100,
+            "process_period": 31
+          }
+        ],
+        "fob_max_price": "9.49",
+        "fob_unit_type": "Pair",
+        "min_order_quantity": "2"
+      },
+      "group_id": 972130291,
+      "price_type": "ladder_price",
+      "attributes": [
+        {
+          "attribute_id": 20700,
+          "attribute_name": "Midsole Material",
+          "value_id": 3376399,
+          "value_name": "EVA"
+        },
+        {
+          "attribute_id": 191288212,
+          "attribute_name": "Season",
+          "value_id": 3455309,
+          "value_name": "Summer"
+        },
+        {
+          "attribute_id": 191288212,
+          "attribute_name": "Season",
+          "value_id": 3599743,
+          "value_name": "Spring"
+        },
+        {
+          "attribute_id": 191288212,
+          "attribute_name": "Season",
+          "value_id": 8168102,
+          "value_name": "Autumn"
+        },
+        {
+          "attribute_id": 191288243,
+          "attribute_name": "Style",
+          "value_id": 19077592,
+          "value_name": "Walking Shoes"
+        },
+        {
+          "attribute_id": 191290426,
+          "attribute_name": "Outsole Material",
+          "value_id": 3376399,
+          "value_name": "EVA"
+        },
+        {
+          "attribute_id": 191290430,
+          "attribute_name": "Lining Material",
+          "value_id": 6821988,
+          "value_name": "Mesh"
+        },
+        {
+          "attribute_id": 200000329,
+          "attribute_name": "Pattern Type",
+          "value_id": 1954510751,
+          "value_name": "Solid"
+        },
+        {
+          "attribute_id": 200000486,
+          "attribute_name": "Toe Style",
+          "value_id": 556500746,
+          "value_name": "Round Toe"
+        },
+        {
+          "attribute_id": 210190305,
+          "attribute_name": "Pattern",
+          "value_id": 190091323,
+          "value_name": "Solid"
+        },
+        {
+          "attribute_id": 210194982,
+          "attribute_name": "Upper Material",
+          "value_id": 362061,
+          "value_name": "Stretch Fabric"
+        },
+        {
+          "attribute_id": 210200060,
+          "attribute_name": "Feature",
+          "value_id": 42283793,
+          "value_name": "Breathable"
+        },
+        {
+          "attribute_id": 1,
+          "attribute_name": "Place of Origin",
+          "value_id": -1,
+          "value_name": "CN;FUJ"
+        },
+        {
+          "attribute_id": 2,
+          "attribute_name": "Brand Name",
+          "value_id": -1,
+          "value_name": "Beiqiang"
+        },
+        {
+          "attribute_id": 3,
+          "attribute_name": "Model Number",
+          "value_id": -1,
+          "value_name": "BQ007-S1 / L0017"
+        }
+      ],
+      "owner_member": 286385890,
+      "status": "approved"
+    },
+    "request_id": "212c41d317917437495927681",
+    "_trace_id_": "2107e99617917437495881786e0f0f"
+  }
+}

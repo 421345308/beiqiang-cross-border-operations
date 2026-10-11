@@ -1,0 +1,27 @@
+{
+  "operation": "update",
+  "product_id": "1601939607770",
+  "category_id": 201334413,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "copy.json",
+    "before_get.json",
+    "../../../../../01_产品资产/02_可发布素材/00_最终上传/BQ029_A025/00_上架填写表.md",
+    "../../../../../01_产品资产/01_原始数据包/已整理_BQ029_A025_贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/1.jpg",
+    "current_get.json",
+    "../../../../00_运营SOP/国际站商品全生命周期SOP.md"
+  ],
+  "current_schema": "current_schema.xml",
+  "current_schema_sha256": "e07f2d89383ec195dd6eb6fe7da9969068f7dd4880f96e89eeb61b1a8229a324",
+  "schema_request_id": "2105044417917404689511385",
+  "schema_acquired_at": "2026-10-11T17:41:05.934415+00:00",
+  "payload_xml": "payload.xml",
+  "field_ids": [
+    "textDesc",
+    "companyFaqDesc"
+  ],
+  "dependency_ids": [
+    "productDescType"
+  ],
+  "observed_model": "BQ029-R1 / A025"
+}

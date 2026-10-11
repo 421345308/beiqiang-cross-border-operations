@@ -10,15 +10,15 @@
     "../../../../00_运营SOP/国际站商品全生命周期SOP.md"
   ],
   "claim_review": "Individually authored against the model source sheet and reviewed source photograph. Current SKU matrix labels are explicitly listed choices, not inventory proof; owner-confirmed numeric EU convention. Fit/lining/closure exceptions follow the corresponding model. Unknown chemistry, measured performance, weight and unconfirmed stock omitted; actual listed MOQ used. Only highlights and FAQ are proposed.",
-  "highlights": "Low-cut knit slip-on casual shoes with a closed front and segmented sole profile. Curved woven lines across the upper create texture without conventional laces. Color and size combinations should be selected together for this model’s assortment.",
+  "highlights": "Low-cut knit slip-on casual shoes with a closed front and segmented sole profile. Curved woven lines across the upper create texture without conventional laces. Color and size combinations should be selected together for this model's assortment.",
   "faq": [
     {
       "question": "Which color and EU size combinations are listed?",
       "answers": "Black White: EU 35–45; All Black: EU 35–45."
     },
     {
-      "question": "Do all source colors share the same size range?",
-      "answers": "Black White and All Black belong to the EU 35–45 source assortment; Black Yellow is limited to EU 37–45. Specify the color as well as the EU size when requesting pairs."
+      "question": "Do all colors share the same size range?",
+      "answers": "Black White and All Black are offered in EU 35–45; Black Yellow is limited to EU 37–45. Specify the color and EU size for each quantity."
     },
     {
       "question": "What should I check during a sample fitting?",
@@ -40,5 +40,9 @@
       "question": "How can I get a delivered quotation?",
       "answers": "Send pair quantities by color and EU size, the destination postcode or port and your packaging request. The quotation separates product cost from freight and includes the proposed dispatch and transit schedule."
     }
-  ]
+  ],
+  "buyer_wording_review": {
+    "at": "2026-10-11T17:25:28.542139+00:00",
+    "reason": "Direct product-specific buyer wording; internal evidence language removed; no shoe or commercial fact added"
+  }
 }

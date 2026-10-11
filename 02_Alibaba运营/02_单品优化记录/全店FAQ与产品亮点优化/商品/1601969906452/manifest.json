@@ -1,0 +1,27 @@
+{
+  "operation": "update",
+  "product_id": "1601969906452",
+  "category_id": 201334413,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "copy.json",
+    "before_get.json",
+    "../../../../05_扩品工程/数据/来源证据/6e1df35af433.md",
+    "../../../../../../../Documents/Codex/2026-10-02/task-2/HR_other_candidates_2026-10-02/niche_matches/longqin/detail_00.jpg",
+    "current_get.json",
+    "../../../../00_运营SOP/国际站商品全生命周期SOP.md"
+  ],
+  "current_schema": "current_schema.xml",
+  "current_schema_sha256": "b4c73682b77a89594bfd4e21ddb23d9e1ea99d0cc6030aa036f7497e58c0bd7a",
+  "schema_request_id": "21501b8d17917377421327085",
+  "schema_acquired_at": "2026-10-11T16:55:39.124392+00:00",
+  "payload_xml": "payload.xml",
+  "field_ids": [
+    "textDesc",
+    "companyFaqDesc"
+  ],
+  "dependency_ids": [
+    "productDescType"
+  ],
+  "observed_model": "HR051-A"
+}

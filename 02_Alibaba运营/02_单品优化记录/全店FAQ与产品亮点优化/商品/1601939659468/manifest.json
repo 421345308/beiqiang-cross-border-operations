@@ -1,0 +1,27 @@
+{
+  "operation": "update",
+  "product_id": "1601939659468",
+  "category_id": 201334413,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "copy.json",
+    "before_get.json",
+    "../../../../../01_产品资产/02_可发布素材/00_最终上传/BQ022_A2208/00_上架填写表.md",
+    "../../../../../01_产品资产/01_原始数据包/已整理_BQ022_A2208_补充_A2208/A2208/主图/1.jpg",
+    "current_get.json",
+    "../../../../00_运营SOP/国际站商品全生命周期SOP.md"
+  ],
+  "current_schema": "current_schema.xml",
+  "current_schema_sha256": "874e14f9e4eb961c691ed4d73157ee64aa5db7d4add4f9f465af7e6fb85c0a47",
+  "schema_request_id": "0b51802d17917346603363346",
+  "schema_acquired_at": "2026-10-11T16:04:17.539702+00:00",
+  "payload_xml": "payload.xml",
+  "field_ids": [
+    "textDesc",
+    "companyFaqDesc"
+  ],
+  "dependency_ids": [
+    "productDescType"
+  ],
+  "observed_model": "BQ022-R1 / A2208"
+}

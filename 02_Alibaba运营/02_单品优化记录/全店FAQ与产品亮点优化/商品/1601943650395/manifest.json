@@ -1,0 +1,30 @@
+{
+  "operation": "update",
+  "product_id": "1601943650395",
+  "category_id": 201334413,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "copy.json",
+    "before_get.json",
+    "../../../../../01_产品资产/02_可发布素材/00_最终上传/BQ036_8025/00_上架填写表.md",
+    "../../../../05_扩品工程/数据/国际站预上架商品总表_2026-08-14.csv",
+    "../../../../05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md",
+    "../../../../../01_产品资产/01_原始数据包/待审_搜鞋网_2026-08-14/8025/原图/13.webp",
+    "../../../../05_扩品工程/数据/产品与链接台账.json",
+    "current_get.json",
+    "../../../../00_运营SOP/国际站商品全生命周期SOP.md"
+  ],
+  "current_schema": "current_schema.xml",
+  "current_schema_sha256": "d856eba991f321a3c7433f6b94807481807b9bb1f1ab6257c08950394c056c0d",
+  "schema_request_id": "21501b6717917375211043945",
+  "schema_acquired_at": "2026-10-11T16:51:58.376666+00:00",
+  "payload_xml": "payload.xml",
+  "field_ids": [
+    "textDesc",
+    "companyFaqDesc"
+  ],
+  "dependency_ids": [
+    "productDescType"
+  ],
+  "observed_model": "HR039-A"
+}

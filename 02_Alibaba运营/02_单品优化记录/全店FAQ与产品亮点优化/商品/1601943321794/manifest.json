@@ -1,0 +1,27 @@
+{
+  "operation": "update",
+  "product_id": "1601943321794",
+  "category_id": 202240835,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "copy.json",
+    "before_get.json",
+    "../../../../05_扩品工程/HR系列真实货源改造_2026-09-21/HR001_ABC_26NC1328新鞋与标题主字段正式回执_2026-09-28.md",
+    "../../../../../01_产品资产/05_平台当前素材/66578b8347dac2cc1ce61decfd09f4262b7f5fd3342bd712863e5e6349ff2a4c.webp",
+    "current_get.json",
+    "../../../../00_运营SOP/国际站商品全生命周期SOP.md"
+  ],
+  "current_schema": "current_schema.xml",
+  "current_schema_sha256": "b9b73756a8ce751e334a9b5ea14923385cf55b990e9560151ff5805b79ba5cfd",
+  "schema_request_id": "21501b6717917407061255601",
+  "schema_acquired_at": "2026-10-11T17:45:03.175188+00:00",
+  "payload_xml": "payload.xml",
+  "field_ids": [
+    "textDesc",
+    "companyFaqDesc"
+  ],
+  "dependency_ids": [
+    "productDescType"
+  ],
+  "observed_model": "HR001-A"
+}

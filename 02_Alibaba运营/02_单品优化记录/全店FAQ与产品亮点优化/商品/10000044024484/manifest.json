@@ -1,0 +1,27 @@
+{
+  "operation": "update",
+  "product_id": "10000044024484",
+  "category_id": 201334413,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "copy.json",
+    "before_get.json",
+    "../../../../../01_产品资产/02_可发布素材/00_最终上传/BQ025_A1689/00_上架填写表.md",
+    "../../../../../01_产品资产/01_原始数据包/已整理_BQ025_A1689_A1689情侣鞋图片/A1689情侣鞋图片/42.jpg",
+    "current_get.json",
+    "../../../../00_运营SOP/国际站商品全生命周期SOP.md"
+  ],
+  "current_schema": "current_schema.xml",
+  "current_schema_sha256": "fb80d399fdaa03bcd4a5a159d5e5a66d254a3e8305ad0980059911d300f99d5a",
+  "schema_request_id": "213e759c17917404530356502",
+  "schema_acquired_at": "2026-10-11T17:40:50.200865+00:00",
+  "payload_xml": "payload.xml",
+  "field_ids": [
+    "textDesc",
+    "companyFaqDesc"
+  ],
+  "dependency_ids": [
+    "productDescType"
+  ],
+  "observed_model": "BQ025 / A1689"
+}

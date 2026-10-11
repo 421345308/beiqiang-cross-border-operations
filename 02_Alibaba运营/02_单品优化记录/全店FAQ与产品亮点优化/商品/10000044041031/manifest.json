@@ -1,0 +1,27 @@
+{
+  "operation": "update",
+  "product_id": "10000044041031",
+  "category_id": 201334413,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "copy.json",
+    "before_get.json",
+    "../../../../../01_产品资产/02_可发布素材/00_最终上传/BQ024_A830/00_上架填写表.md",
+    "../../../../../01_产品资产/01_原始数据包/已整理_BQ024_A830_A830贝强工厂店37-45批55元/A830贝强工厂店37-45批55元/X409A9855.jpg",
+    "current_get.json",
+    "../../../../00_运营SOP/国际站商品全生命周期SOP.md"
+  ],
+  "current_schema": "current_schema.xml",
+  "current_schema_sha256": "15cfe8c17ff37ecefe6eac34521838c37b421cfd5dabbf36826b63f00d8a51f2",
+  "schema_request_id": "0b830ecc17917402419187041",
+  "schema_acquired_at": "2026-10-11T17:37:19.012521+00:00",
+  "payload_xml": "payload.xml",
+  "field_ids": [
+    "textDesc",
+    "companyFaqDesc"
+  ],
+  "dependency_ids": [
+    "productDescType"
+  ],
+  "observed_model": "BQ024 / A830"
+}

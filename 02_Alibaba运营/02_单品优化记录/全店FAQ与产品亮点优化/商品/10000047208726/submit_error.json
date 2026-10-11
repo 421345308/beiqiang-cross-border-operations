@@ -1,0 +1,12 @@
+{
+  "product_id": "10000047208726",
+  "status": "ERROR_OBJECT_EVIDENCE",
+  "exception_type": "ReadBusinessError",
+  "observed_at": "2026-10-11T16:40:20.815442+00:00",
+  "api_evidence": {
+    "method": "alibaba.icbu.product.get",
+    "code": "ApiCallLimit",
+    "sub_code": null,
+    "request_id": "0bab02fc17917368249811756"
+  }
+}

@@ -17,8 +17,8 @@
       "answers": "Blue: EU 35–45; Grey: EU 35–45; Black White: EU 35–45; White: EU 35–45; Apricot: EU 35–45."
     },
     {
-      "question": "How should I specify the lining version?",
-      "answers": "State the regular color or Black White Fleece explicitly. Fleece is a specific source variant, so a regular color name alone does not request the fleece version."
+      "question": "How should I select the lining version?",
+      "answers": "Choose the regular color name or Black White Fleece. Include the full variant name so the assortment matches your chosen lining."
     },
     {
       "question": "What should I check during a sample fitting?",
@@ -40,5 +40,9 @@
       "question": "How can I get a delivered quotation?",
       "answers": "Send pair quantities by color and EU size, the destination postcode or port and your packaging request. The quotation separates product cost from freight and includes the proposed dispatch and transit schedule."
     }
-  ]
+  ],
+  "buyer_wording_review": {
+    "at": "2026-10-11T17:25:28.532228+00:00",
+    "reason": "Direct product-specific buyer wording; internal evidence language removed; no shoe or commercial fact added"
+  }
 }

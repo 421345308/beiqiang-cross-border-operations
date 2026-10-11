@@ -84,10 +84,24 @@ def check():
         assert not (ROOT/src).exists(),src
         if row['target']:legacy_asset(src)._path()
     assert plan['originals_retained']==33 and plan['redundant_or_obsolete_images_removed']==65
-    assert not m['online_state']['uploaded'] and not m['online_state']['bound']
+    # Local asset integrity does not depend on the publishing stage. Verify
+    # uploaded-bank claims with their own evidence; bank upload is not binding.
+    bank_images=0
+    if m.get('online_state',{}).get('uploaded'):
+        bank=json.loads((ENTRY/m['online_state']['bank_evidence']).read_text(encoding='utf8'))
+        pixels=json.loads((ENTRY/m['online_state']['bank_pixels_evidence']).read_text(encoding='utf8'))
+        assert bank['asset_version']==pixels['asset_version']==m['version']
+        assert pixels['status']=='FIVE_BANK_PIXELS_EXACT_PASS'
+        assert set(bank['items'])==set(m['assets'])
+        for role,row in bank['items'].items():
+            assert row['status']=='UPLOADED_OFFICIAL_BANK' and row['file_id']
+            assert row['sha256']==m['assets'][role]['sha256']
+        bank_images=len(bank['items'])
     return {'ok':True,'current_images':5,'originals':33,'historical_unique':34,
             'redundant_or_obsolete_images_removed':65,'preview_images_verified':5,
-            'preview_versions_match_current_images':True,'state':'LOCAL_REVIEW_DRAFT'}
+            'preview_versions_match_current_images':True,'bank_images_verified':bank_images,
+            'scope':'Local media, source hashes, preview and recorded bank evidence; no product binding/public-page acceptance',
+            'state':m['status']}
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--check',action='store_true')
