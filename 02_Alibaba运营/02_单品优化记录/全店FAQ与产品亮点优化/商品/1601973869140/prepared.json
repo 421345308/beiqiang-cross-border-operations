@@ -13,7 +13,7 @@
   "dependency_ids": [
     "productDescType"
   ],
-  "xml": "<itemSchema><field id=\"textDesc\" name=\"Product Highlights\" type=\"input\"><value>Low-top lace-up outdoor casual shoes with a closed upper and contrasting heel panels. Metal eyelets and a stitched layered sole give the style a defined casual profile. Blue and Yellow offer two distinct color choices for an extended men's size assortment.\nBlue, Yellow; EU 39-48 provide color and size choices for wholesale assortments.\nOriginal-style wholesale orders start from 2 pairs, allowing buyers to request a small trial assortment.</value></field><field id=\"companyFaqDesc\" name=\"FAQs\" type=\"multiComplex\"><complex-values><field id=\"question\" type=\"input\"><value>What are the available colors and sizes?</value></field><field id=\"answers\" type=\"input\"><value>Blue, Yellow; EU 39-48. List the pair quantity for each color and EU size to request your assortment.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>What design features are shown?</value></field><field id=\"answers\" type=\"input\"><value>A closed low-top upper, metal lace eyelets, contrasting heel panels, a blue inner collar and a stitched layered sole.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>How should I choose a size?</value></field><field id=\"answers\" type=\"input\"><value>Use EU sizes and compare your foot length with the size information for this style. For a trial fitting, choose your usual EU size and assess a sample with the socks you plan to wear.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>What is the minimum order for the original style?</value></field><field id=\"answers\" type=\"input\"><value>The original-style wholesale minimum is 2 pairs. Quantity pricing is shown on this page. Logo, material or custom packaging requests are quoted separately from the original-style order.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>How can I arrange a sample?</value></field><field id=\"answers\" type=\"input\"><value>Request a sample quotation with your preferred color, EU size and delivery postcode. The quotation will include the sample charge, shipping cost and proposed dispatch schedule.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>What should I send for a branding or packaging quotation?</value></field><field id=\"answers\" type=\"input\"><value>Send your logo artwork, preferred placement, packaging brief and order quantity. We can review the brief for this style and provide a proposal with the applicable minimum, cost and sample process.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>How can I get a delivered quotation and shipment schedule?</value></field><field id=\"answers\" type=\"input\"><value>Send the color-size quantities and destination postcode or port, plus any packaging request. The quotation separates product cost from freight and sets out the dispatch plan and estimated transit time for your chosen shipping method.</value></field></complex-values></field><field id=\"productDescType\" name=\"Product description\" type=\"singleCheck\"><value>4</value></field></itemSchema>",
+  "xml": "<itemSchema><field id=\"textDesc\" name=\"Product Highlights\" type=\"input\"><value>Low-top lace-up outdoor casual shoes with a closed upper and contrasting heel panels. Metal eyelets and a stitched layered sole give the style a defined casual profile. Blue and Yellow offer two distinct color choices for an extended men's size assortment.\nBlue, Yellow; EU 39-48 provide color and size choices for wholesale assortments.</value></field><field id=\"companyFaqDesc\" name=\"FAQs\" type=\"multiComplex\"><complex-values><field id=\"question\" type=\"input\"><value>What are the available colors and sizes?</value></field><field id=\"answers\" type=\"input\"><value>Blue, Yellow; EU 39-48. List the pair quantity for each color and EU size to request your assortment.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>What design features are shown?</value></field><field id=\"answers\" type=\"input\"><value>A closed low-top upper, metal lace eyelets, contrasting heel panels, a blue inner collar and a stitched layered sole.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>Which details create the contrast look?</value></field><field id=\"answers\" type=\"input\"><value>The colored heel panels, blue inner collar and stitched layered sole contrast with the closed upper. Blue and Yellow are separate color choices.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>How should I choose a size?</value></field><field id=\"answers\" type=\"input\"><value>Request an EU sample size using your foot length and the socks you intend to wear. During the fitting, assess toe space, heel fit and the upper closure before choosing the bulk size assortment.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>What is the minimum order for the original style?</value></field><field id=\"answers\" type=\"input\"><value>The original-style wholesale minimum is 2 pairs. Quantity pricing is shown on this page. Logo, material or custom packaging requests are quoted separately from the original-style order.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>How can I arrange a sample?</value></field><field id=\"answers\" type=\"input\"><value>Request a sample quotation with your preferred color, EU size and delivery postcode. The quotation will include the sample charge, shipping cost and proposed dispatch schedule.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>What should I send for a branding or packaging quotation?</value></field><field id=\"answers\" type=\"input\"><value>Send your logo artwork, preferred placement, packaging brief and order quantity. We can review the brief for this style and provide a proposal with the applicable minimum, cost and sample process.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>How can I get a delivered quotation and shipment schedule?</value></field><field id=\"answers\" type=\"input\"><value>Send the color-size quantities and destination postcode or port, plus any packaging request. The quotation separates product cost from freight and sets out the dispatch plan and estimated transit time for your chosen shipping method.</value></field></complex-values></field><field id=\"productDescType\" name=\"Product description\" type=\"singleCheck\"><value>4</value></field></itemSchema>",
   "expected_fields": {
     "textDesc": [
       "field",
@@ -28,7 +28,7 @@
         [
           "value",
           [],
-          "Low-top lace-up outdoor casual shoes with a closed upper and contrasting heel panels. Metal eyelets and a stitched layered sole give the style a defined casual profile. Blue and Yellow offer two distinct color choices for an extended men's size assortment.\nBlue, Yellow; EU 39-48 provide color and size choices for wholesale assortments.\nOriginal-style wholesale orders start from 2 pairs, allowing buyers to request a small trial assortment.",
+          "Low-top lace-up outdoor casual shoes with a closed upper and contrasting heel panels. Metal eyelets and a stitched layered sole give the style a defined casual profile. Blue and Yellow offer two distinct color choices for an extended men's size assortment.\nBlue, Yellow; EU 39-48 provide color and size choices for wholesale assortments.",
           []
         ]
       ]
@@ -147,6 +147,49 @@
                 [
                   "value",
                   [],
+                  "Which details create the contrast look?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "The colored heel panels, blue inner collar and stitched layered sole contrast with the closed upper. Blue and Yellow are separate color choices.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
                   "How should I choose a size?",
                   []
                 ]
@@ -165,7 +208,7 @@
                 [
                   "value",
                   [],
-                  "Use EU sizes and compare your foot length with the size information for this style. For a trial fitting, choose your usual EU size and assess a sample with the socks you plan to wear.",
+                  "Request an EU sample size using your foot length and the socks you intend to wear. During the fitting, assess toe space, heel fit and the upper closure before choosing the bulk size assortment.",
                   []
                 ]
               ]
@@ -351,9 +394,9 @@
   "task_pack": null,
   "replacement_plan": null,
   "schema_provenance": {
-    "schema_request_id": "212c6fc617916863915735375",
-    "schema_acquired_at": "2026-10-11T02:39:53.041873+00:00",
-    "current_schema_sha256": "34d45563afb25b2588c5ac622c4f640cd8f5403c3ac54be47b7baa90b3cb7a7b",
+    "schema_request_id": "213e759c17916945724081925",
+    "schema_acquired_at": "2026-10-11T04:56:13.366975+00:00",
+    "current_schema_sha256": "95cad04ef32d059ea12ea59072bcea86f7cd5a87c3e22fdfa7532667261d0c11",
     "source_evidence": [
       "copy.json",
       "before_get.json",

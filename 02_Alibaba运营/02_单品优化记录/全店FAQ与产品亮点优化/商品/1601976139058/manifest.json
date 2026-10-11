@@ -1,0 +1,25 @@
+{
+  "operation": "update",
+  "product_id": "1601976139058",
+  "category_id": 201334413,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "copy.json",
+    "before_get.json",
+    "../../../../05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2417准备/经营任务包.md",
+    "../../../../00_运营SOP/国际站商品全生命周期SOP.md"
+  ],
+  "current_schema": "current_schema.xml",
+  "current_schema_sha256": "2cc471c7d90e03ea7ac75244cd914c83fd29005e0812c83eb71e3f8f8bf77b84",
+  "schema_request_id": "21546a1d17916967962172493",
+  "schema_acquired_at": "2026-10-11T05:33:17.130483+00:00",
+  "payload_xml": "payload.xml",
+  "field_ids": [
+    "textDesc",
+    "companyFaqDesc"
+  ],
+  "dependency_ids": [
+    "productDescType"
+  ],
+  "observed_model": "BQ-LQ2417"
+}

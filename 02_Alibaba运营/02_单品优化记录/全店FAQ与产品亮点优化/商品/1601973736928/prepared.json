@@ -13,7 +13,7 @@
   "dependency_ids": [
     "productDescType"
   ],
-  "xml": "<itemSchema><field id=\"textDesc\" name=\"Product Highlights\" type=\"input\"><value>Wide toe-box mesh walking sneakers with long curved teardrop-shaped side panels. Fine lines around the toe and a low sole profile give the upper a flowing casual appearance. Four color choices help buyers build a broader neutral assortment around one lace-up silhouette.\nBlack, Dark Grey, Light Grey, Khaki; EU 36-48 provide color and size choices for wholesale assortments.\nOriginal-style wholesale orders start from 2 pairs, allowing buyers to request a small trial assortment.</value></field><field id=\"companyFaqDesc\" name=\"FAQs\" type=\"multiComplex\"><complex-values><field id=\"question\" type=\"input\"><value>What are the available colors and sizes?</value></field><field id=\"answers\" type=\"input\"><value>Black, Dark Grey, Light Grey, Khaki; EU 36-48. List the pair quantity for each color and EU size to request your assortment.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>What distinguishes the upper?</value></field><field id=\"answers\" type=\"input\"><value>Long curved teardrop-shaped side panels, two narrow lines near the toe and a mesh low-top construction. Conventional laces adjust the upper.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>How should I choose a size?</value></field><field id=\"answers\" type=\"input\"><value>This style has a wider toe-box design. Use EU sizes and compare your foot length with the size information for this style. For a trial fitting, choose your usual EU size and assess a sample with the socks you plan to wear.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>What is the minimum order for the original style?</value></field><field id=\"answers\" type=\"input\"><value>The original-style wholesale minimum is 2 pairs. Quantity pricing is shown on this page. Logo, material or custom packaging requests are quoted separately from the original-style order.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>How can I arrange a sample?</value></field><field id=\"answers\" type=\"input\"><value>Request a sample quotation with your preferred color, EU size and delivery postcode. The quotation will include the sample charge, shipping cost and proposed dispatch schedule.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>What should I send for a branding or packaging quotation?</value></field><field id=\"answers\" type=\"input\"><value>Send your logo artwork, preferred placement, packaging brief and order quantity. We can review the brief for this style and provide a proposal with the applicable minimum, cost and sample process.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>How can I get a delivered quotation and shipment schedule?</value></field><field id=\"answers\" type=\"input\"><value>Send the color-size quantities and destination postcode or port, plus any packaging request. The quotation separates product cost from freight and sets out the dispatch plan and estimated transit time for your chosen shipping method.</value></field></complex-values></field><field id=\"productDescType\" name=\"Product description\" type=\"singleCheck\"><value>4</value></field></itemSchema>",
+  "xml": "<itemSchema><field id=\"textDesc\" name=\"Product Highlights\" type=\"input\"><value>Wide toe-box mesh walking sneakers with long curved teardrop-shaped side panels. Fine lines around the toe and a low sole profile give the upper a flowing casual appearance. Four color choices help buyers build a broader neutral assortment around one lace-up silhouette.\nBlack, Dark Grey, Light Grey, Khaki; EU 36-48 provide color and size choices for wholesale assortments.</value></field><field id=\"companyFaqDesc\" name=\"FAQs\" type=\"multiComplex\"><complex-values><field id=\"question\" type=\"input\"><value>What are the available colors and sizes?</value></field><field id=\"answers\" type=\"input\"><value>Black, Dark Grey, Light Grey, Khaki; EU 36-48. List the pair quantity for each color and EU size to request your assortment.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>What distinguishes the upper?</value></field><field id=\"answers\" type=\"input\"><value>Long curved teardrop-shaped side panels, two narrow lines near the toe and a mesh low-top construction. Conventional laces adjust the upper.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>What closure does this low-top shoe use?</value></field><field id=\"answers\" type=\"input\"><value>It uses conventional laces. The long curved teardrop side panels and two narrow toe lines form the upper design.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>How should I choose a size?</value></field><field id=\"answers\" type=\"input\"><value>Request an EU sample size using your foot length and the socks you intend to wear. During the fitting, assess toe space, heel fit and the upper closure before choosing the bulk size assortment.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>What is the minimum order for the original style?</value></field><field id=\"answers\" type=\"input\"><value>The original-style wholesale minimum is 2 pairs. Quantity pricing is shown on this page. Logo, material or custom packaging requests are quoted separately from the original-style order.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>How can I arrange a sample?</value></field><field id=\"answers\" type=\"input\"><value>Request a sample quotation with your preferred color, EU size and delivery postcode. The quotation will include the sample charge, shipping cost and proposed dispatch schedule.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>What should I send for a branding or packaging quotation?</value></field><field id=\"answers\" type=\"input\"><value>Send your logo artwork, preferred placement, packaging brief and order quantity. We can review the brief for this style and provide a proposal with the applicable minimum, cost and sample process.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>How can I get a delivered quotation and shipment schedule?</value></field><field id=\"answers\" type=\"input\"><value>Send the color-size quantities and destination postcode or port, plus any packaging request. The quotation separates product cost from freight and sets out the dispatch plan and estimated transit time for your chosen shipping method.</value></field></complex-values></field><field id=\"productDescType\" name=\"Product description\" type=\"singleCheck\"><value>4</value></field></itemSchema>",
   "expected_fields": {
     "textDesc": [
       "field",
@@ -28,7 +28,7 @@
         [
           "value",
           [],
-          "Wide toe-box mesh walking sneakers with long curved teardrop-shaped side panels. Fine lines around the toe and a low sole profile give the upper a flowing casual appearance. Four color choices help buyers build a broader neutral assortment around one lace-up silhouette.\nBlack, Dark Grey, Light Grey, Khaki; EU 36-48 provide color and size choices for wholesale assortments.\nOriginal-style wholesale orders start from 2 pairs, allowing buyers to request a small trial assortment.",
+          "Wide toe-box mesh walking sneakers with long curved teardrop-shaped side panels. Fine lines around the toe and a low sole profile give the upper a flowing casual appearance. Four color choices help buyers build a broader neutral assortment around one lace-up silhouette.\nBlack, Dark Grey, Light Grey, Khaki; EU 36-48 provide color and size choices for wholesale assortments.",
           []
         ]
       ]
@@ -147,6 +147,49 @@
                 [
                   "value",
                   [],
+                  "What closure does this low-top shoe use?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "It uses conventional laces. The long curved teardrop side panels and two narrow toe lines form the upper design.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
                   "How should I choose a size?",
                   []
                 ]
@@ -165,7 +208,7 @@
                 [
                   "value",
                   [],
-                  "This style has a wider toe-box design. Use EU sizes and compare your foot length with the size information for this style. For a trial fitting, choose your usual EU size and assess a sample with the socks you plan to wear.",
+                  "Request an EU sample size using your foot length and the socks you intend to wear. During the fitting, assess toe space, heel fit and the upper closure before choosing the bulk size assortment.",
                   []
                 ]
               ]
@@ -351,9 +394,9 @@
   "task_pack": null,
   "replacement_plan": null,
   "schema_provenance": {
-    "schema_request_id": "0b0b3a2717916863766783830",
-    "schema_acquired_at": "2026-10-11T02:39:38.188301+00:00",
-    "current_schema_sha256": "e502ac2b385989e5798c7512efe1e52dbcdfd5dd5a09c4599b0ebc35f6f8b56d",
+    "schema_request_id": "213e759c17916945582851608",
+    "schema_acquired_at": "2026-10-11T04:55:59.671198+00:00",
+    "current_schema_sha256": "e7bd7142d906fbbfee057198b7609b87c69452fb258b63beb37aa579784a2b51",
     "source_evidence": [
       "copy.json",
       "before_get.json",

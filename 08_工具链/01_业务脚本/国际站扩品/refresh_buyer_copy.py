@@ -111,6 +111,12 @@ def main():
                 report['schema_target_fields_match']=all(fields.get(k)==v for k,v in listing['expected_fields'].items())
                 if not report['schema_target_fields_match']:report['status']='SCHEMA_MISMATCH_DIAGNOSE'
             else:report['status']='PENDING_EDITABLE_SCHEMA'
+        public_evidence=folder/'public_text_verification.json'
+        if public_evidence.exists():
+            observed=load(public_evidence)
+            if observed.get('copy_sha256')==sha(folder/'copy.json') and observed.get('status')=='PUBLIC_TRANSLATED_TEXT_SEMANTIC_PASS':
+                report['public_status']=observed['status']
+                report['public_evidence']=public_evidence.name
         save(folder/'verification.json',report);return report
     rows=[]
     def collect(pid):

@@ -1,12 +1,15 @@
 {
   "product_id": "1601976084873",
-  "observed_at": "2026-10-11T02:17:12.744816+00:00",
-  "request_id": "213c932b17916850329972225",
-  "product_status": "modified",
-  "display": "N",
+  "observed_at": "2026-10-11T05:44:39.239447+00:00",
+  "request_id": "213c933517916974794136994",
+  "product_status": "approved",
+  "display": "Y",
+  "display_preserved_after_review": true,
   "formal_highlights_match": true,
   "formal_faq_match": true,
   "unsubmitted_fields_preserved": true,
-  "public_status": "PENDING_APPLICABLE_TEXT_VERIFICATION",
-  "status": "PENDING_REVIEW"
+  "public_status": "PUBLIC_TRANSLATED_TEXT_SEMANTIC_PASS",
+  "status": "FORMAL_PASS",
+  "schema_target_fields_match": true,
+  "public_evidence": "public_text_verification.json"
 }
