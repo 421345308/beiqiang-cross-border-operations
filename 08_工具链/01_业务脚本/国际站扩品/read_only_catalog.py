@@ -5,14 +5,31 @@ from datetime import datetime, timezone
 
 READ_METHODS = frozenset({'alibaba.icbu.product.list', 'alibaba.icbu.product.get', 'alibaba.icbu.product.schema.get', 'alibaba.icbu.product.schema.render', 'alibaba.icbu.product.score.get', 'alibaba.icbu.photobank.list'})
 
+class ReadBusinessError(RuntimeError):
+    def __init__(self, method, response, error):
+        super().__init__('API business error; bounded read attempts exhausted or non-transient error')
+        # Keep only routing codes and IDs. Raw business messages can echo submitted data.
+        self.api_evidence = {'method':method, 'code':error.get('code'),
+            'sub_code':error.get('sub_code'), 'request_id':response.get('request_id') or error.get('request_id')}
+
 def read_only_call(client, config, method, params, attempts=3, evidence=None):
     if method not in READ_METHODS:
         raise ValueError('Read-only transport rejects mutation methods before request')
     for attempt in range(1, attempts+1):
         try:
             result = client.top_call(config, method, params)
-            if client.api_error(result):
-                raise RuntimeError('API business error; no transport retry')
+            error=client.api_error(result)
+            if error:
+                # Alibaba explicitly returned a temporary access-frequency ban in the
+                # current read response. Respect it with backoff; never retry a write
+                # or another business error through this read-only helper.
+                if str(error.get('code'))=='ApiCallLimit' and attempt<attempts:
+                    if evidence is not None:
+                        evidence.append({'method':method,'attempt':attempt,'status':'rate_limited_read',
+                            'code':'ApiCallLimit','request_id':result.get('request_id') or error.get('request_id')})
+                    time.sleep(2*attempt)
+                    continue
+                raise ReadBusinessError(method,result,error)
             if evidence is not None:
                 evidence.append({'method': method, 'attempt': attempt, 'page': params.get('current_page'), 'status': 'response', 'request_id':result.get('request_id')})
             return result

@@ -1261,5 +1261,21 @@
     "adopted": "Differentiated buyer decision roles and concrete process explanations; supplier identity does not restrict footwear categories. Existing factory scenes anchor C1/C3; other modules clearly identify examples.",
     "not_adopted": "Supplier experience, laboratory, employee count, client/brand claims and offered material library are not independently verified or Beiqiang facts.",
     "limits": "No conversion or capability superiority claimed. Current raw photos do not document dedicated inspection or packing actions; new illustrations explain them without claiming actual records."
+  },
+  "final_review": {
+    "observed_at": "2026-10-11T16:04:42.380725+00:00",
+    "status": "PASS_FOR_REPLACEMENT_AFTER_BUYER_COPY",
+    "scope": "C1–C5第6版本地成品、原图追溯、英文与角色去重；不是全店线上视觉验收",
+    "reviewer": "active_agent",
+    "checks": {
+      "distinct_buyer_roles": true,
+      "no_category_specialism_restriction": true,
+      "illustrative_modules_labelled": true,
+      "originals_33_unchanged": true,
+      "preview_current_hashes": true,
+      "single_current_asset_path": true
+    },
+    "buyer_assessment": "身份页压短，开发/生产/检查/包装各自解决一个采购问题。表达更清楚、重复更少；缺少真实检查及包装作业照片，示意不等于履约记录，不能据此认定实力或效果超过凯顺。",
+    "replacement_condition": "负责人明确要求先完成全量亮点与FAQ，再开始公司图全量替换。"
   }
 }

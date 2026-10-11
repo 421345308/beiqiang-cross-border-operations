@@ -12,6 +12,8 @@ import argparse, importlib.util, json, hashlib, sys
 ROOT = Path(__file__).resolve().parents[3]
 BASE = ROOT/'02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化'
 FIELDS = ['textDesc', 'companyFaqDesc']
+# Exact current source-link protection in the lifecycle SOP; sibling links are separate targets.
+PROTECTED_IDS = frozenset({'1601825074604'})
 def now(): return datetime.now(timezone.utc).isoformat()
 def save(path, value):
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -39,16 +41,21 @@ def protected(product):
         for key in ('product_summary','product_faq'):detail.pop(key,None)
     return result
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('mode',choices=['collect','prepare','submit','verify']);ap.add_argument('--ids');ap.add_argument('--workers',type=int,default=4);args=ap.parse_args()
+    ap=argparse.ArgumentParser();ap.add_argument('mode',choices=['collect','prepare','submit','verify']);ap.add_argument('--ids');ap.add_argument('--workers',type=int,default=4)
+    ap.add_argument('--resume-reconciled-no-effect',action='store_true',help='One explicitly reviewed unknown attempt only; requires independent fresh get/schema proving no effect. Not an automatic retry.')
+    args=ap.parse_args()
     sys.stdout.reconfigure(encoding='utf8')
     ids=args.ids.split(',') if args.ids else [str(x['id']) for x in load(BASE/'当前目录/catalog.json')['products']]
     assert len(ids)==len(set(ids)) and all(x.isdigit() for x in ids)
+    if args.resume_reconciled_no_effect:assert args.mode=='submit' and len(ids)==1
     sys.path.insert(0,str(Path(__file__).parent))
     import publish_hot_rank_hr_a_batch as pub
     from read_only_catalog import read_only_call
     api,cfg=api_client()
     def work(pid):
         folder=BASE/'商品'/pid;folder.mkdir(parents=True,exist_ok=True)
+        if pid in PROTECTED_IDS and args.mode in ('prepare','submit'):
+            return {'product_id':pid,'status':'READ_ONLY_SOURCE_PROTECTED'}
         ledger=folder/'update_once.json'
         def read(method,params):return read_only_call(api,cfg,method,params)
         def get():return read('alibaba.icbu.product.get',{'product_id':pid,'language':'ENGLISH'})
@@ -88,14 +95,32 @@ def main():
             save(folder/'reviewed_baseline.json',{'prepared_at':now(),'copy_sha256':sha(folder/'copy.json'),'before_get_sha256':sha(folder/'before_get.json'),'protected':protected(p),'scope':FIELDS,'dependency_ids':deps,'unchanged_dependency_values':pub.field_snapshot(schema).get('productDescType')})
             return {'product_id':pid,'status':'PREPARED','faq_count':len(cp['faq'])}
         if args.mode=='submit':
-            if ledger.exists():return {'product_id':pid,'status':'EXISTING_LEDGER_READBACK_ONLY'}
+            history=None
+            if ledger.exists():
+                if not args.resume_reconciled_no_effect:return {'product_id':pid,'status':'EXISTING_LEDGER_READBACK_ONLY'}
+                original=load(ledger);assert original['status']=='STARTED_OUTCOME_UNKNOWN'
+                assert not (folder/'update_receipt.json').exists()
+                reconciliation=load(folder/'unknown_reconciliation.json')
+                assert reconciliation['product_id']==pid and reconciliation['status']=='approved' and reconciliation['display']=='Y'
+                assert all(reconciliation.get(k) is True for k in ('same_original_all_fields','same_original_gmt_modified','formal_target_matches_old','unsubmitted_fields_preserved','current_schema_equals_prewrite','editable_schema_available'))
+                assert reconciliation['formal_target_matches_proposed'] is False
+                age=(datetime.now(timezone.utc)-datetime.fromisoformat(reconciliation['observed_at'])).total_seconds();assert 0<=age<900
+                history={'original_attempt':original,'resolution':'INDEPENDENT_GET_AND_EDITABLE_SCHEMA_NO_EFFECT','evidence':'unknown_reconciliation.json','reconciled_at':reconciliation['observed_at']}
+            else:assert not args.resume_reconciled_no_effect
             baseline=load(folder/'reviewed_baseline.json');assert baseline['copy_sha256']==sha(folder/'copy.json')
             listing=pub.load_submission_manifest(folder/'manifest.json','update',pid)
             got=get();save(folder/'immediate_prewrite_get.json',got)
             before=load(folder/'before_get.json')['product'];current=got['product']
             if current!=before:return {'product_id':pid,'status':'CURRENT_CHANGED_REPREPARE_NO_WRITE'}
-            with ledger.open('x',encoding='utf8') as f:json.dump({'product_id':pid,'status':'STARTED_OUTCOME_UNKNOWN','started_at':now()},f)
-            result=pub.api_submit(api,cfg,listing,False,update_product_id=pid);save(folder/'update_receipt.json',result);save(ledger,{'product_id':pid,'status':result['status'],'attempted_at':result['attempted_at'],'refs':result.get('refs')})
+            pending={'product_id':pid,'status':'STARTED_OUTCOME_UNKNOWN','started_at':now()}
+            if history:
+                pending['reconciled_previous_attempt']=history;save(ledger,pending)
+            else:
+                with ledger.open('x',encoding='utf8') as f:json.dump(pending,f)
+            result=pub.api_submit(api,cfg,listing,False,update_product_id=pid);save(folder/'update_receipt.json',result)
+            completed={'product_id':pid,'status':result['status'],'attempted_at':result['attempted_at'],'refs':result.get('refs')}
+            if history:completed['reconciled_previous_attempt']=history
+            save(ledger,completed)
             return {'product_id':pid,'status':result['status']}
         if not ledger.exists():return {'product_id':pid,'status':'NO_WRITE_LEDGER'}
         got=get();save(folder/'after_get.json',got);p=got['product'];before=load(folder/'before_get.json')['product'];cp=load(folder/'copy.json')
@@ -124,6 +149,7 @@ def main():
         except Exception as exc:
             # Error details stay controlled; no raw signed request or credentials.
             result={'product_id':pid,'status':'ERROR_OBJECT_EVIDENCE','exception_type':type(exc).__name__,'observed_at':now()}
+            if getattr(exc,'api_evidence',None):result['api_evidence']=exc.api_evidence
             save(BASE/'商品'/pid/(args.mode+'_error.json'),result)
             return result
     if args.mode=='submit':

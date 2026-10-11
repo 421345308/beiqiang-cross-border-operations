@@ -1,0 +1,19 @@
+{
+  "observed_at": "2026-10-11T16:55:28.227110+00:00",
+  "current_catalog_ids": 455,
+  "authored_links": 296,
+  "source_pending_links": 159,
+  "write_ledger_count": 242,
+  "positive_write_receipts": 242,
+  "latest_verification": {
+    "FORMAL_PASS": 80,
+    "PENDING_REVIEW": 12,
+    "MISMATCH_DIAGNOSE_NO_REPLAY": 1
+  },
+  "public_semantic_pass_count": 1,
+  "protected_source_id": "1601825074604",
+  "factory_images_uploaded": false,
+  "factory_images_bound": false,
+  "status": "COPY_WRITING_AND_FORMAL_READBACK_IN_PROGRESS",
+  "scope": "Only product highlights and FAQ; shared factory image replacement waits for copy closure."
+}
