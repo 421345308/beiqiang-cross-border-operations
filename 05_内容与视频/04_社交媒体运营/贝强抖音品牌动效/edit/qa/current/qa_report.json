@@ -1,54 +1,57 @@
 {
-  "status": "delivered_32s_visual_sampling_and_decoding_complete_listening_pending",
+  "status": "delivered_26s_visual_sampling_and_decoding_complete_listening_pending",
   "film": "out/贝强_针织袜子鞋_品牌片.mp4",
-  "duration_seconds": 32,
+  "duration_seconds": 26,
   "fps": 24,
   "resolution": [
     1080,
     1920
   ],
-  "new_authorized_jobs": 4,
-  "new_paid_estimated_cny": 14.4,
-  "new_paid_nominal_seconds": 18,
-  "new_paid_nominal_seconds_used": 18,
-  "native_motion_seconds": 21.5,
-  "native_motion_ratio": 0.671875,
+  "new_authorized_jobs": 0,
+  "new_paid_estimated_cny": 0,
+  "new_paid_nominal_seconds": 0,
+  "new_paid_nominal_seconds_used": 0,
+  "native_motion_seconds": 13.25,
+  "native_motion_ratio": 0.5096153846153846,
   "frame_checks": {
     "whole_film_sample_points": 24,
-    "cut_before_first_after_points": 27,
-    "action_points": 17,
-    "source_contact_points": 96,
+    "cut_before_first_after_points": 30,
+    "action_points": 28,
     "original_resolution_inspected": [
-      "opening 1.437",
-      "tactile 5.598",
-      "donning 12.1 and 13.2",
-      "release 16",
-      "walking 20",
-      "settling 22.5 and 23.5",
-      "closing 31.950"
+      0.65,
+      1.2,
+      2.5,
+      6.2,
+      10.3,
+      10.5,
+      10.95,
+      11.3,
+      11.7,
+      13.6,
+      18.3,
+      19.8,
+      25.3
     ],
-    "boundary": "Samples are not full continuous human playback; no listening capability available in current assistant input.",
-    "final_typography_original_points": [
-      1.437,
-      20.854,
-      22.241
-    ]
+    "boundary": "Sparse images and decoding are not continuous human playback or listening."
   },
   "repairs": [
     {
-      "issue": "skin-colored slits invented inside lower knitted collar",
-      "action": "local adjacent-knit retouch; all 121 source frames retained",
-      "record": "../../knit-repair.json"
+      "issue": "Same walking event appeared at beginning and middle",
+      "action": "Product lighting opener; continuous6s walking appears once12–18s."
     },
     {
-      "issue": "dark text loses strokes against moving glass doors and foliage",
-      "action": "walking editorial header, rest light text and upper gradient; no footage time or crop changes"
+      "issue": "Collar elongation/contact artifact; color retouch did not fix geometry",
+      "action": "Remove donning source1.5–4.25s, use0–1.5s entry,0.75s collar insert,4.25–5s worn state; editorial ellipsis."
+    },
+    {
+      "issue": "Weak hand event in old release footage",
+      "action": "Exclude release entirely."
     }
   ],
   "remaining_limits": [
-    "No continuous human visual playback or audio listening verified.",
-    "Rest shoe tip briefly reaches the source left edge during swing, with motion blur; legs remain visible and trackable.",
-    "Generated shoe knit and silhouette vary mildly between angles; no physical product performance validation."
+    "No continuous human playback or listening verified.",
+    "Heel seating elided; no claim of repaired generation geometry.",
+    "Mild cross-source generated-shoe detail variation."
   ],
   "kimi_review": {
     "uses_existing_free_endpoint": true,
@@ -59,7 +62,7 @@
     "pre_typography_fix_film_call_tokens": 16374,
     "total_free_tokens": 164429,
     "free_remaining_expected": 470795,
-    "scope": "Kimi internally samples 6–8 frames per short source and 8 frames for full film; full film also given 24-point sheet. Final model review predates typography fix; no claim it audited the later file.",
+    "scope": "Historical32s/source reviews only. This26s edit has no new Kimi call; sparse6–8 point source parsing did not clear insertion geometry.",
     "free_remaining_verified": 470795,
     "quota_query_request_id": "641fde7f-a9eb-4559-8b99-297b705f81a6"
   },
@@ -67,18 +70,41 @@
   "publication": false,
   "source": {
     "path": "C:\\Users\\spq\\Desktop\\贝强\\05_内容与视频\\04_社交媒体运营\\贝强抖音品牌动效\\out\\贝强_针织袜子鞋_品牌片.mp4",
-    "size_bytes": 30534743,
-    "mtime_ns": 1791697622900851000,
-    "source_id": "ea17267aecbe5f2e",
-    "sha256": "460244146ac4aee9c2481719c35364f99b346344e516dcdd6fad4ce72e16ed14"
+    "size_bytes": 25487808,
+    "mtime_ns": 1791706238802051600,
+    "source_id": "fb53433eb6600aa4",
+    "sha256": "4b789d4c92cc63899d620875adfc0e9b08e7ef1ea258d12cf721be9bb0aefe27"
   },
   "audio_technical": {
-    "duration": 32,
+    "duration": 26,
     "sample_rate": 48000,
     "channels": 2,
-    "decoded_sample_values": 3072000,
-    "mean_volume_dbfs": -17.2,
+    "mean_volume_dbfs": -17.0,
     "max_volume_dbfs": -1.8,
     "listened": false
-  }
+  },
+  "paid_batch_material_usage": {
+    "previously_authorized_nominal_seconds": 18,
+    "retained_seconds": 13.25,
+    "retention_ratio": 0.7361111111111112,
+    "generation_calls_this_edit": 0
+  },
+  "issues": [
+    {
+      "start": 10.5,
+      "end": 11.25,
+      "severity": "MINOR",
+      "category": "camera_continuity",
+      "description": "Collar insert bridges entry to worn state. Heel seating is intentionally elided.",
+      "action": "KEEP"
+    },
+    {
+      "start": 0,
+      "end": 26,
+      "severity": "MINOR",
+      "category": "object_consistency",
+      "description": "Generated shoe knit/sole details vary mildly between angles; not physical-product verification.",
+      "action": "KEEP"
+    }
+  ]
 }

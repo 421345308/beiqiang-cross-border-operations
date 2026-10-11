@@ -1,27 +1,12 @@
 {
-  "source_id": "ea17267aecbe5f2e",
-  "sha256": "460244146ac4aee9c2481719c35364f99b346344e516dcdd6fad4ce72e16ed14",
-  "decoded_frames": 768,
-  "duration": 32,
+  "source_id": "fb53433eb6600aa4",
+  "sha256": "4b789d4c92cc63899d620875adfc0e9b08e7ef1ea258d12cf721be9bb0aefe27",
+  "decoded_frames": 624,
+  "duration": 26.0,
   "fps": 24,
   "near_black_frames": [],
   "exact_duplicate_adjacent_frames": [],
   "actual_video_usage": [
-    {
-      "source": "walking",
-      "film_frames": [
-        0,
-        72
-      ],
-      "source_frames": [
-        0,
-        72
-      ],
-      "used_seconds": 3.0,
-      "mean_absolute_pixel_difference": 3.1015,
-      "maximum_frame_mean_difference": 3.4719,
-      "source_frame_match": true
-    },
     {
       "source": "tactile",
       "film_frames": [
@@ -33,74 +18,75 @@
         72
       ],
       "used_seconds": 3.0,
-      "mean_absolute_pixel_difference": 4.3733,
-      "maximum_frame_mean_difference": 4.4464,
-      "source_frame_match": true
+      "mean_absolute_pixel_difference": 4.3775,
+      "maximum_frame_mean_difference": 4.4521,
+      "comparison_within_tolerance": true
     },
     {
       "source": "donning-clean",
       "film_frames": [
-        228,
-        348
+        216,
+        252
       ],
       "source_frames": [
         0,
-        120
+        36
       ],
-      "used_seconds": 5.0,
-      "mean_absolute_pixel_difference": 4.0686,
-      "maximum_frame_mean_difference": 4.2029,
-      "source_frame_match": true
+      "used_seconds": 1.5,
+      "mean_absolute_pixel_difference": 4.125,
+      "maximum_frame_mean_difference": 4.2046,
+      "comparison_within_tolerance": true
     },
     {
-      "source": "release",
+      "source": "donning-clean",
       "film_frames": [
-        348,
-        432
+        270,
+        288
       ],
       "source_frames": [
-        0,
-        84
+        102,
+        120
       ],
-      "used_seconds": 3.5,
-      "mean_absolute_pixel_difference": 3.6167,
-      "maximum_frame_mean_difference": 3.679,
-      "source_frame_match": true
+      "used_seconds": 0.75,
+      "mean_absolute_pixel_difference": 3.967,
+      "maximum_frame_mean_difference": 4.0928,
+      "comparison_within_tolerance": true
     },
     {
       "source": "walking",
       "film_frames": [
-        432,
-        504
+        288,
+        432
       ],
       "source_frames": [
-        72,
+        0,
         144
       ],
-      "used_seconds": 3.0,
-      "mean_absolute_pixel_difference": 3.0168,
-      "maximum_frame_mean_difference": 3.2953,
-      "source_frame_match": true
+      "used_seconds": 6.0,
+      "mean_absolute_pixel_difference": 3.0585,
+      "maximum_frame_mean_difference": 3.4715,
+      "comparison_within_tolerance": true
     },
     {
       "source": "settling",
       "film_frames": [
-        504,
-        600
+        432,
+        480
       ],
       "source_frames": [
-        0,
+        48,
         96
       ],
-      "used_seconds": 4.0,
-      "mean_absolute_pixel_difference": 6.3049,
-      "maximum_frame_mean_difference": 6.5918,
-      "source_frame_match": true
+      "used_seconds": 2.0,
+      "mean_absolute_pixel_difference": 6.2362,
+      "maximum_frame_mean_difference": 6.4737,
+      "comparison_within_tolerance": true
     }
   ],
-  "new_paid_seconds_used": 18,
-  "motion_seconds_total": 21.5,
+  "new_paid_seconds_used": 13.25,
+  "motion_seconds_total": 13.25,
+  "current_edit_paid_submissions": 0,
   "limits": "Decoding and source correspondence verify frame delivery and retention, not subjective continuous playback or audio listening.",
-  "sampled_source_id": "3045ac32160156c7",
-  "delivered_file": "out/贝强_针织袜子鞋_品牌片.mp4"
+  "sampled_source_id": "6e43907f6de3f70f",
+  "delivery_sha256": "4b789d4c92cc63899d620875adfc0e9b08e7ef1ea258d12cf721be9bb0aefe27"
 }
