@@ -1,0 +1,70 @@
+{
+  "status": "rejected_by_owner_creative_quality",
+  "creative_acceptance": false,
+  "rejection_date": "2026-10-11",
+  "rejection_reason": "Repeated static photography/crops, weak product benefit expression and insufficient creative review; technical checks do not establish advertising quality.",
+  "movie": "out/贝强_针织袜子鞋_品牌片.mp4",
+  "duration_seconds": 36,
+  "fps": 24,
+  "new_paid_submissions": 0,
+  "new_paid_cost_cny": 0,
+  "estimated_total_paid_cny": 20,
+  "actual_bill_verified": false,
+  "source_motion_used_seconds": 10,
+  "sources": [
+    {
+      "id": "release",
+      "source": "public/dynamic/release.mp4",
+      "sha256": "2127f3de814ff552c1d2d30725ea0fec1f3a11bd8f1ac47b6e9d5f960dcb14be",
+      "generation_receipt": "edit/generation/tokenhub-kling-v3/release.json",
+      "estimated_cny": 4,
+      "nominal_seconds": 5,
+      "used_seconds": 5,
+      "decision": "KEEP: full0–5s collar adjustment and release; no heel insertion claim"
+    },
+    {
+      "id": "step",
+      "source": "public/dynamic/step.mp4",
+      "sha256": "49f6d9a822b7d7a7475f423cde992f89ff10c8a6fe8ca9917a1d54df3ec62426",
+      "generation_receipt": "edit/generation/tokenhub-kling-v3/step.json",
+      "estimated_cny": 4,
+      "nominal_seconds": 5,
+      "used_seconds": 0,
+      "decision": "EXCLUDE: foot premise and edge framing failed natural walking goal"
+    },
+    {
+      "id": "step-v2",
+      "source": "public/dynamic/step-v2.mp4",
+      "sha256": "43a23e03fa7695da80cad8db5c00a5d881f5c4282c24452fe58c2cfbe3562fc4",
+      "generation_receipt": "edit/generation/tokenhub-kling-v3/step-v2.json",
+      "estimated_cny": 4,
+      "nominal_seconds": 5,
+      "used_seconds": 5,
+      "decision": "KEEP: full0–5s single complete step; no continuous-walking claim; minor generated texture/shape variation"
+    },
+    {
+      "id": "entry-v4",
+      "source": "public/dynamic/entry-v4.mp4",
+      "sha256": "32df82869ccfd81bf37da6812d6d7f2f60bef6aa5823919f1660008596c06723",
+      "generation_receipt": "edit/generation/tokenhub-kling-v3/entry-v4.json",
+      "estimated_cny": 4,
+      "nominal_seconds": 5,
+      "used_seconds": 0,
+      "decision": "EXCLUDE: heel insertion failed and rear loop elongated"
+    },
+    {
+      "id": "walk-v4",
+      "source": "public/dynamic/walk-v4.mp4",
+      "sha256": "4fe6c28543f27594d38c81a945df2e52d140ff90202533570be310c8ec3b5805",
+      "generation_receipt": "edit/generation/tokenhub-kling-v3/walk-v4.json",
+      "estimated_cny": 4,
+      "nominal_seconds": 5,
+      "used_seconds": 0,
+      "decision": "EXCLUDE: outsole crosses frame edge; no crop/insert rescue"
+    }
+  ],
+  "paid_source_nominal_seconds": 25,
+  "note": "10/25 seconds of raw source used; this is neither a success rate for original action goals nor cost recovery. No new generation authorized or pending.",
+  "qa": "edit/qa/最终成片/qa_20261011_013329/qa_report.json",
+  "sha256": "a819ace0bf041f53231043c8e9f643cfd77b7afa505bc2d76506f5380dd29a71"
+}

@@ -2,3 +2,10 @@
 /out/
 /node_modules/
 *.tsbuildinfo
+/edit/**/*.mp4
+/edit/**/*.png
+/edit/**/*.jpg
+/edit/qa/**/focused/
+/edit/qa/**/frames/
+/edit/references/**/edit/qa/**/frames/
+/edit/references/**/edit/qa/**/focused/
