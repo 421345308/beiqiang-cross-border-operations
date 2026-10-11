@@ -19,6 +19,21 @@ import requests
 BASE = "https://tokenhub.tencentmaas.com/v1/chat/completions"
 
 
+def review_budget(spec):
+    """Keep review verbosity bounded without changing endpoint/cost safeguards."""
+    effort = spec.get("reasoning_effort", "medium")
+    maximum = spec.get("max_completion_tokens", 3500)
+    if effort not in ("low", "medium", "high"):
+        raise ValueError("Unsupported review reasoning effort")
+    if type(maximum) is not int or not 500 <= maximum <= 9000:
+        raise ValueError("Review completion budget must be an integer in 500..9000")
+    return effort, maximum
+
+
+def review_completed(answer, finish):
+    return bool(answer.strip()) and finish == "stop"
+
+
 def save(path, data):
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -65,6 +80,7 @@ def main():
     p.add_argument("--direct", action="store_true", help="Ignore the broken environment proxy; retain TLS verification")
     a = p.parse_args()
     spec = json.loads(a.manifest.read_text(encoding="utf-8"))
+    effort, maximum = review_budget(spec)
     model = spec.get("model", "kimi-k3")
     preflight = free_preflight(model, a.direct)
     keyfile = Path.home() / ".thcli/default.tokenhub.json"
@@ -91,14 +107,14 @@ def main():
         blocks.append({"type": "image_url", "image_url": {"url": f"data:{mime};base64," + base64.b64encode(raw).decode("ascii")}})
     blocks.append({"type": "text", "text": spec["prompt"]})
     body = {"model": model, "messages": [{"role": "user", "content": blocks}],
-            "reasoning_effort": "high", "max_completion_tokens": 9000,
+            "reasoning_effort": effort, "max_completion_tokens": maximum,
             "stream": True, "stream_options": {"include_usage": True}}
     payload = json.dumps(body, ensure_ascii=False).encode("utf-8")
     if len(payload) > 95 * 1024 * 1024:
         raise ValueError("Body exceeds conservative 95MiB limit; inference not sent")
     save(a.output_dir / "request.json", {"endpoint": BASE, "model": model, "input_type": "native video_url base64",
          "sources": sources, "prompt": spec["prompt"], "request_body_bytes": len(payload),
-         "reasoning_effort": "high", "max_completion_tokens": 9000, "stream": True,
+         "reasoning_effort": effort, "max_completion_tokens": maximum, "stream": True,
          "preflight": preflight, "audio_review": "not assumed", "automatic_retries": 0})
     session = requests.Session()
     if a.direct:
@@ -141,7 +157,7 @@ def main():
                       "reasoning_chars": sum(map(len, reasoning))}, key)
     save(a.output_dir / "response.json", response)
     # Only final answer is kept; no private reasoning or headers are persisted.
-    if not answer or finish == "length":
+    if not review_completed(answer, finish):
         print("Incomplete answer; not a completed review. Response preserved. No retry.")
         return 2
     a.output_dir.joinpath("model-review.md").write_text(response["content"], encoding="utf-8")

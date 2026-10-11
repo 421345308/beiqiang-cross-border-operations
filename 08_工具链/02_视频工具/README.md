@@ -13,6 +13,7 @@
 | `opencut-classic/` | OpenCut 第三方编辑器实体目录 |
 | `Blender人体白模/` | Blender 人体白模相关工具和说明 |
 | `ffmpeg/` | FFmpeg 本地运行文件 |
+| `tokenhub_video_review.py` | 腾讯云Kimi原生视频辅助审片；仅用已启用FREE且后付费关闭、余量≥200000的接入点，每次发送前核验，无自动重试。清单可设reasoning_effort=low/medium/high、max_completion_tokens=500–9000；默认medium/3500控制审片时长和输出量，不改变免费守卫。原生取样不替代局部原尺寸时序检查与创意判断 |
 | `.libtv/` | LibTV 本地运行状态，不作为项目档案 |
 
 具体 AI 视频项目统一从 `../../05_内容与视频/03_通用AI视频实验/README.md` 进入。项目目录保存创作目标、素材、提示词、运行清单、候选输出和验收；本目录保存可复用工具。

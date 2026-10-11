@@ -35,6 +35,20 @@ class ReviewBoundaryTests(unittest.TestCase):
         with self.assertRaises(RuntimeError):
             self.check(ChargeDetail=json.dumps({"FreeQuota": {"TotalQuota": 1000000, "UsedQuota": 900000}}))
 
+    def test_invalid_review_budget_is_rejected(self):
+        for value in (True, 3500.5, 0, 10000, "3500"):
+            with self.subTest(value=value), self.assertRaises(ValueError):
+                review.review_budget({"max_completion_tokens": value})
+        with self.assertRaises(ValueError):
+            review.review_budget({"reasoning_effort": "unsupported"})
+
+    def test_aborted_or_truncated_answer_is_not_a_review(self):
+        for finish in ("abort", "length", "content_filter", None):
+            with self.subTest(finish=finish):
+                self.assertFalse(review.review_completed("Only an opening paragraph", finish))
+        self.assertFalse(review.review_completed("   ", "stop"))
+        self.assertTrue(review.review_completed("Finished critique", "stop"))
+
     def test_reflected_key_and_video_scrubbed(self):
         fake = "test-credential"
         result = review.scrub({"error": fake + " sk-dummy1234567890 data:video/mp4;base64,ABCDEF"}, fake)

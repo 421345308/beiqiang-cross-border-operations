@@ -29,12 +29,12 @@ qa.create_contact_sheet(frames,root/'contact_sheet.jpg',f'{seconds:g}-second com
 meta['sampling']={'strategy':'uniform','sample_count':24,'times':times}
 (root/'video_metadata.json').write_text(json.dumps(meta,ensure_ascii=False,indent=2),encoding='utf-8')
 (root/'sampling_manifest.json').write_text(json.dumps({'source_id':meta['source']['source_id'],'frames':frames},ensure_ascii=False,indent=2),encoding='utf-8')
-cuts=[s['from']/fps for s in timeline['scenes'][1:]]
+cuts=sorted([s['from']/fps for s in timeline['scenes'][1:]]+[s['from']/fps+c/fps for s in timeline['scenes'] for c in s.get('internal_cuts',[])])
 cutframes=qa.extract_frame_set(video,[round(c+d/24,3) for c in cuts for d in [-1,0,1]],root/'focused/cuts',cache)
 qa.create_contact_sheet(cutframes,root/'cut_sheet.jpg',f'All {len(cuts)} cuts / before, first and after frames')
-actimes=[.05,.25,.65,1.2,2.5,5,6.2,7.3,9.4,9.9,10.3,10.5,10.95,11.3,11.5,11.7,11.95,12.1,13.6,15.4,17.7,18.1,18.3,18.6,19.3,19.8,23.5,25.3]
+actimes=[0,.25,.5,.95,1,1.3,2.45,2.5,2.625,2.75,3,3.375,4.4,4.55,5,5.7,6.3,6.9,7.45,8.2,9.2,10.1,11.6,12.5,13.3,14.3,15.5,16.5,17.4,17.6,18.1,18.6,19.4,19.6,19.875,21.5,23.7]
 action=qa.extract_frame_set(video,actimes,root/'focused/action',cache)
-qa.create_contact_sheet(action,root/'action_sheet.jpg','Contact, insertion, heel seating and leg tracking')
+qa.create_contact_sheet(action,root/'action_sheet.jpg','Aperture, typography, tactile event, both legs and final reading')
 (root/'cut_manifest.json').write_text(json.dumps({'source_id':meta['source']['source_id'],'frames':cutframes+action},ensure_ascii=False,indent=2),encoding='utf-8')
 
 def decode(path,width=216,height=384):
@@ -44,13 +44,7 @@ film=decode(video)
 ranges=[(Path(s['src']).stem,s['from'],s['from']+s['frames'],s.get('sourceFrame',0)) for s in timeline['scenes'] if s.get('video')]
 usage=[]
 for name,start,end,source_start in ranges:
- if name=='walking':
-  # Editorial header reduces the video display area, retaining the full
-  # source image. Recreate its geometry for source correspondence.
-  raw=subprocess.check_output([qa.FFMPEG,'-v','error','-i',str(P/'public/dynamic/walking.mp4'),
-   '-vf','scale=180:318,pad=216:384:18:66:color=0xede5d8','-an','-pix_fmt','rgb24','-f','rawvideo','-'])
-  source=np.frombuffer(raw,dtype=np.uint8).reshape(-1,384,216,3)
- else:source=decode(P/'public/dynamic'/f'{name}.mp4')
+ source=decode(P/'public/dynamic'/f'{name}.mp4')
  # Text lives at the top; comparison covers the entire lower subject area.
  a=film[start:end,88:];b=source[source_start:source_start+end-start,88:]
  err=np.abs(a.astype(float)-b.astype(float)).mean(axis=(1,2,3))
@@ -63,7 +57,8 @@ tech={'source_id':meta['source']['source_id'],'sha256':meta['source']['sha256'],
  'decoded_frames':len(film),'duration':seconds,'fps':fps,
  'near_black_frames':np.where(film.mean(axis=(1,2,3))<3)[0].tolist(),
  'exact_duplicate_adjacent_frames':np.where(diff==0)[0].tolist(),
- 'actual_video_usage':usage,'new_paid_seconds_used':13.25,'motion_seconds_total':13.25,'current_edit_paid_submissions':0,
+ 'intentional_static_hold_frames':[timeline['scenes'][-1]['from']+10,timeline['total_frames']],
+ 'actual_video_usage':usage,'new_paid_seconds_used':sum(u['used_seconds'] for u in usage),'motion_seconds_total':sum(u['used_seconds'] for u in usage),'current_edit_paid_submissions':0,
  'limits':'Decoding and source correspondence verify frame delivery and retention, not subjective continuous playback or audio listening.'}
 (root/'technical-audit.json').write_text(json.dumps(tech,ensure_ascii=False,indent=2),encoding='utf-8')
 print(json.dumps(tech,ensure_ascii=False))

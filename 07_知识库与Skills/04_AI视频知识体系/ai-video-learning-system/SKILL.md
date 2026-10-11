@@ -12,7 +12,7 @@ Build useful memory without turning every past failure into a universal constrai
 1. Read the current project's record first. It contains the creative goal, approved assets, current baseline, project-specific decisions, results, and next step.
 2. Read the technical facts for the model or tool actually being used. Load H3 guidance only for H3 work; do not import it into unrelated video models.
    A memory that names a model's "default instance" or runtime is conditional configuration for that model, not authority to select that model for a new project. Select the production tool from the user's current instruction, the active project record, and recent accepted workflow evidence first.
-3. Read shared creative guidance only when it affects the present decision.
+3. Read shared creative guidance only when it affects the present decision. For product/brand short films centered on visual appeal and brand memory, use [brand-film-direction.md](references/brand-film-direction.md) to compare concrete design choices and separate creative review from technical QA. This is a workspace production method, not a claim that the model has acquired new trained capabilities.
 4. Search the experience ledger for relevant candidate lessons. Treat confidence and scope as evidence, not as commands.
 
 See [knowledge-layers.md](references/knowledge-layers.md) when creating or restructuring a project memory system.
