@@ -1,16 +1,9 @@
 {
-  "status": "rejected_by_owner_creative_quality",
-  "creative_acceptance": false,
-  "rejection_date": "2026-10-11",
-  "rejection_reason": "Repeated static photography/crops, weak product benefit expression and insufficient creative review; technical checks do not establish advertising quality.",
-  "movie": "out/贝强_针织袜子鞋_品牌片.mp4",
-  "duration_seconds": 36,
-  "fps": 24,
+  "status": "source_inventory_only",
   "new_paid_submissions": 0,
   "new_paid_cost_cny": 0,
   "estimated_total_paid_cny": 20,
   "actual_bill_verified": false,
-  "source_motion_used_seconds": 10,
   "sources": [
     {
       "id": "release",
@@ -19,8 +12,8 @@
       "generation_receipt": "edit/generation/tokenhub-kling-v3/release.json",
       "estimated_cny": 4,
       "nominal_seconds": 5,
-      "used_seconds": 5,
-      "decision": "KEEP: full0–5s collar adjustment and release; no heel insertion claim"
+      "used_seconds": 0,
+      "decision": "SOURCE ONLY: full0–5s collar adjustment and release; no heel insertion claim"
     },
     {
       "id": "step",
@@ -39,8 +32,8 @@
       "generation_receipt": "edit/generation/tokenhub-kling-v3/step-v2.json",
       "estimated_cny": 4,
       "nominal_seconds": 5,
-      "used_seconds": 5,
-      "decision": "KEEP: full0–5s single complete step; no continuous-walking claim; minor generated texture/shape variation"
+      "used_seconds": 0,
+      "decision": "SOURCE ONLY: full0–5s single complete step; no continuous-walking claim; minor generated texture/shape variation"
     },
     {
       "id": "entry-v4",
@@ -64,7 +57,5 @@
     }
   ],
   "paid_source_nominal_seconds": 25,
-  "note": "10/25 seconds of raw source used; this is neither a success rate for original action goals nor cost recovery. No new generation authorized or pending.",
-  "qa": "edit/qa/最终成片/qa_20261011_013329/qa_report.json",
-  "sha256": "a819ace0bf041f53231043c8e9f643cfd77b7afa505bc2d76506f5380dd29a71"
+  "note": "No current rendered delivery. Source assets and generation receipts retained for provenance and cost tracking."
 }
