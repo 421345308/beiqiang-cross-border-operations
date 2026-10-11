@@ -8,7 +8,7 @@ import {Closing} from './scenes/Closing';
 export const BrandFilm:React.FC=()=> <AbsoluteFill style={{backgroundColor:'#f1ece2'}}>
  <Audio src={staticFile('brand-score.wav')} volume={1}/>
  <Sequence from={0} durationInFrames={384}><Opening/></Sequence>
- <Sequence from={384} durationInFrames={720}><Wearing/></Sequence>
- <Sequence from={1104} durationInFrames={336}><Lifestyle/></Sequence>
- <Sequence from={1440} durationInFrames={288}><Closing/></Sequence>
+ <Sequence from={384} durationInFrames={504}><Wearing/></Sequence>
+ <Sequence from={888} durationInFrames={336}><Lifestyle/></Sequence>
+ <Sequence from={1224} durationInFrames={288}><Closing/></Sequence>
 </AbsoluteFill>;

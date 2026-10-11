@@ -2,30 +2,6 @@
   "date": "2026-10-11",
   "new_assets": [
     {
-      "id": "fabric",
-      "file": "public/campaign-fabric.png",
-      "size": [
-        941,
-        1672
-      ],
-      "sha256": "2a428f266e85460e87d6dd76c4528f37fcb5d27ef5f36baa025c705d3508c730",
-      "tool": "built-in imagegen",
-      "brief": "暖白针织起伏与晨光，用于开场和生活段桥接",
-      "role": "generated editorial advertising visual, not real product/factory evidence"
-    },
-    {
-      "id": "touch",
-      "file": "public/campaign-touch.png",
-      "size": [
-        941,
-        1672
-      ],
-      "sha256": "19af10da39c443a3e68ab724d8d92de690225789f0b977c51fc7202fe2b55277",
-      "tool": "built-in imagegen",
-      "brief": "手指轻触全黑针织鞋面，表现人和织纹的触感关系",
-      "role": "generated editorial advertising visual, not real product/factory evidence"
-    },
-    {
       "id": "city",
       "file": "public/campaign-city.png",
       "size": [
@@ -48,8 +24,36 @@
       "tool": "built-in imagegen",
       "brief": "黑色针织袜子鞋对鞋，新角度，暖白织物，品牌留白",
       "role": "generated editorial advertising visual, not real product/factory evidence"
+    },
+    {
+      "id": "collar",
+      "file": "public/campaign-collar.png",
+      "size": [
+        941,
+        1672
+      ],
+      "sha256": "968d03dff59c24b010079a7a07b09f20201aa7bf784fe93ac3b634fc5611424f",
+      "tool": "built-in imagegen",
+      "brief": "无手、无脚的后侧鞋口近景；说明袜式鞋口及套脚结构，暖白织物仅作为背景",
+      "role": "generated editorial advertising visual; not real product/factory proof"
+    },
+    {
+      "id": "overhead",
+      "file": "public/campaign-overhead.png",
+      "size": [
+        941,
+        1672
+      ],
+      "sha256": "ce6af980e1b238ddcd4d49315d8ba15fc06f695732cdae133c38e79690726e99",
+      "tool": "built-in imagegen",
+      "brief": "俯拍对鞋；两只鞋与两处开放鞋口可见，无手无脚，说明免系带外形",
+      "role": "generated editorial advertising visual; not real product/factory proof"
     }
   ],
   "new_tokenhub_image_or_video_calls": 0,
-  "product_style_reference": "BQ029/A025 all-black knit sock footwear; outside-sourced style; no factory provenance claim"
+  "product_style_reference": "BQ029/A025 all-black knit sock footwear; outside-sourced style; no factory provenance claim",
+  "removed_assets": [
+    "public/campaign-fabric.png",
+    "public/campaign-touch.png"
+  ]
 }

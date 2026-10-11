@@ -30,18 +30,14 @@ const Action:React.FC<{src:string;title:string;subtitle?:string;cameraMove?:bool
 const Bridge:React.FC=()=>{
  const f=useCurrentFrame();
  return <AbsoluteFill style={{background:'#eee9de',overflow:'hidden',fontFamily:font,color:'#352f28'}}>
-  <Img src={staticFile('campaign-fabric.png')} style={{position:'absolute',inset:-80,width:1240,height:2080,objectFit:'cover',transform:`scale(1.18) translateY(${interpolate(f,[0,96],[30,-35],clamp)}px)`}}/>
-  <AbsoluteFill style={{background:'rgba(255,249,239,.15)'}}/>
-  <div style={{position:'absolute',left:90,top:660,fontSize:104,lineHeight:1.48,fontWeight:500,letterSpacing:4}}>
-   {['让日常','自在一点'].map((s,i)=><div key={s} style={{overflow:'hidden'}}><div style={{translate:`0px ${125*(1-enter(f,i*9,i*9+25))}px`}}>{s}</div></div>)}
-  </div>
+  <Img src={staticFile('campaign-overhead.png')} style={{width:'100%',height:'100%',objectFit:'cover',transform:`scale(${interpolate(f,[0,192],[1,1.018],clamp)})`,transformOrigin:'50% 60%'}}/>
+  <div style={{position:'absolute',left:88,top:136,fontSize:78,lineHeight:1.2,fontWeight:500,letterSpacing:3,opacity:enter(f),transform:`translateY(${18*(1-enter(f))}px)`}}>穿着，简单一点。</div>
  </AbsoluteFill>;
 };
 
-/** 8–23s: visible structure, full collar release, full step, then a tactile bridge. */
+/** 8–18.5s: visible structure, purposeful collar release, then a new overhead pair view. */
 export const Wearing:React.FC=()=> <AbsoluteFill>
  <Sequence from={0} durationInFrames={144}><Structure/></Sequence>
- <Sequence from={144} durationInFrames={240}><Action src="dynamic/release.mp4" title="穿好，就出发。"/></Sequence>
- <Sequence from={384} durationInFrames={240}><Action src="dynamic/step-v2.mp4" title="迈开步。" subtitle="把舒服，带进日常" cameraMove/></Sequence>
- <Sequence from={624} durationInFrames={96}><Bridge/></Sequence>
+ <Sequence from={144} durationInFrames={168}><Action src="dynamic/release.mp4" title="理好鞋口，再出门。"/></Sequence>
+ <Sequence from={312} durationInFrames={192}><Bridge/></Sequence>
 </AbsoluteFill>;

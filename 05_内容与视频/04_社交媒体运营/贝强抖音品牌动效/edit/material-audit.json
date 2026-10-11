@@ -1,5 +1,5 @@
 {
-  "status": "current_film_rendered",
+  "status": "rendered_semantic_sampling_complete_continuous_playback_pending",
   "new_paid_submissions": 0,
   "new_paid_cost_cny": 0,
   "estimated_total_paid_cny": 20,
@@ -12,11 +12,11 @@
       "generation_receipt": "edit/generation/tokenhub-kling-v3/release.json",
       "estimated_cny": 4,
       "nominal_seconds": 5,
-      "used_seconds": 5,
-      "decision": "USE: complete nominal 5-second collar adjustment/release",
+      "used_seconds": 3.5,
+      "decision": "USE: collar pull and release only; no heel insertion claim. Last 1.5 seconds of settling removed; released fingers are visible before cut.",
       "source_range_seconds": [
         0,
-        5
+        3.5
       ],
       "playback_rate": 1
     },
@@ -28,7 +28,8 @@
       "estimated_cny": 4,
       "nominal_seconds": 5,
       "used_seconds": 0,
-      "decision": "EXCLUDE: foot premise and edge framing failed natural walking goal"
+      "decision": "EXCLUDE: foot premise and edge framing failed natural walking goal",
+      "file_deleted": true
     },
     {
       "id": "step-v2",
@@ -37,13 +38,9 @@
       "generation_receipt": "edit/generation/tokenhub-kling-v3/step-v2.json",
       "estimated_cny": 4,
       "nominal_seconds": 5,
-      "used_seconds": 5,
-      "decision": "USE: complete nominal 5-second single step; continuous camera push; no continuous-walking claim",
-      "source_range_seconds": [
-        0,
-        5
-      ],
-      "playback_rate": 1
+      "used_seconds": 0,
+      "decision": "DELETED: owner repeatedly reported missing leg; earlier visual acceptance revoked. No cropping or camera motion rescue.",
+      "file_deleted": true
     },
     {
       "id": "entry-v4",
@@ -53,7 +50,8 @@
       "estimated_cny": 4,
       "nominal_seconds": 5,
       "used_seconds": 0,
-      "decision": "EXCLUDE: heel insertion failed and rear loop elongated"
+      "decision": "EXCLUDE: heel insertion failed and rear loop elongated",
+      "file_deleted": true
     },
     {
       "id": "walk-v4",
@@ -63,13 +61,14 @@
       "estimated_cny": 4,
       "nominal_seconds": 5,
       "used_seconds": 0,
-      "decision": "EXCLUDE: outsole crosses frame edge; no crop/insert rescue"
+      "decision": "EXCLUDE: outsole crosses frame edge; no crop/insert rescue",
+      "file_deleted": true
     }
   ],
   "paid_source_nominal_seconds": 25,
-  "note": "Two selected clips use 0–5s at original speed. Historical paid generation remains estimated 20 CNY, bill unverified; only 10 of 25 nominal seconds are used. No new TokenHub generation or inference. Failed earlier source videos/receipts retained only for provenance; no old final film retained.",
-  "current_video_source_id": "8d2875c4c774f970",
-  "selected_paid_source_seconds": 10,
-  "used_paid_source_seconds": 10,
-  "all_historical_paid_nominal_use_ratio": 0.4
+  "note": "Four failed generated videos deleted under owner authorization; deidentified official job receipts, source SHA256 and cost records retained. Only 0–3.5s of release is used, at original speed; no new TokenHub calls. Estimated historical 20 CNY is not refunded and actual bill is unverified.",
+  "selected_paid_source_seconds": 3.5,
+  "used_paid_source_seconds": 3.5,
+  "all_historical_paid_nominal_use_ratio": 0.14,
+  "current_video_source_id": "6df7e5dc263fc16b"
 }
