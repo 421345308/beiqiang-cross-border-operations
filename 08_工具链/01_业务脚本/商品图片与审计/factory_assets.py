@@ -51,6 +51,16 @@ def check():
     assert set(m['assets'])=={'C1','C2','C3','C4','C5'}
     assert {p.name for p in current_root().glob('*')}=={Path(v['path']).name for v in m['assets'].values()}
     for role in m['assets']:current_asset(role)
+    if 'coverage_audit' in m:
+        # Verify the explicit current photo allocation, alongside manual role review.
+        photo_hashes={}
+        for role,rows in m['active_sources'].items():
+            photo_hashes[role]={hashlib.sha256((ROOT/name).read_bytes()).hexdigest() for name in rows}
+        roles=list(photo_hashes)
+        for i,role in enumerate(roles):
+            for other in roles[i+1:]:
+                assert not photo_hashes[role] & photo_hashes[other],(role,other)
+        assert m['coverage_audit']['visual_source_count']==sum(map(len,photo_hashes.values()))
     for row in m['originals']:
         p=ROOT/row['path'];assert hashlib.sha256(p.read_bytes()).hexdigest()==row['sha256']
     for src,row in plan['aliases'].items():
