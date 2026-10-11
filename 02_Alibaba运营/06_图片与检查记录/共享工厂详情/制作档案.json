@@ -1,10 +1,10 @@
 {
-  "version": 3,
-  "status": "LOCAL_REVIEW_DRAFT; FIVE_DISTINCT_CHAPTERS",
+  "version": 4,
+  "status": "LOCAL_REVIEW_DRAFT; SUPPLIER_LEVEL_FIVE_CHAPTERS",
   "entry": "README.md",
   "current_media_root": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情",
   "raw_media_root": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片",
-  "owner_scope": "负责人要求检查并消除跨图信息冗余，整套全方位表达；保留原图和当前成品，沿用唯一迭代入口。",
+  "owner_scope": "负责人认可共用工厂图展示供应商协作与流程；重做C2、调整C4，具体鞋款结构、配色、标识位置与可行性留在单品详情；原位维护唯一迭代入口。",
   "generation_mode": "built-in image_gen",
   "requests": {
     "C1": {
@@ -17,11 +17,11 @@
     },
     "C2": {
       "referenced_image_paths": [
-        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/微信图片_20260530105316_231_16.jpg",
-        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C2_oem.png"
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C2_oem.png",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/微信图片_20260530105316_231_16.jpg"
       ],
       "transparent_background": false,
-      "prompt": "This is one coordinated five-page Beiqiang English B2B company detail set. Output portrait 2:3,1024x1536, crisp navy/orange/white premium industrial brochure, restrained accents, compact brand header, informative image-led layout, comfortable mobile-readable body text around27px or larger, headings larger. The five chapters have exclusive jobs: C1 supplier identity; C2 style/design development; C3 equipment and assembly; C4 product review/acceptance criteria; C5 packing and order handoff. Do NOT fill pages with generic repeated quote cards, slogans, footers or other chapters' content. Keep actual photo subject identity/geometry, improve lighting and tidy surfaces with AI as authorized, no expanded premises, added equipment or fake certification/capacity/labs/promises. No numeric product specifications unless supplied. Use only specified buyer-facing English text, no added filler. Redesign C2 'OEM / ODM Style Development'. Reference1 real multi-color footwear rack is its unique subject, show actual black/white striped knit, gray/green and lavender/white styles in a large image panel ~32% top. Preserve actual styles, tidy/brighten scene, do not create another factory view. Reference2 previous target STYLE ONLY; DELETE its packaging card, box icon, EU size/quantity input, and sample-review checklist. Under main photo a concise label 'Turn your style direction into a development brief'. Four concrete visually illustrated design inputs in2x2 cards, not oversized generic icons: 'Style direction' / 'Reference style and intended use'; 'Upper & sole design' / 'Construction requirements and design details'; 'Colour direction' / 'Reference colours and visual matching'; 'Logo & labeling' / 'Artwork, placement and label brief'. Show elegant diagram-like shoe upper/sole outlines, colour swatches echoing reference shoes, and generic blank logo-placement sketch. These mini illustrations are project briefs, not photos of verified custom samples. Bottom compact4-stage design collaboration strip: 'Reference → Design brief → Sample feedback → Agreed specification'. Bottom useful two-row input mini panel 'Your starting brief' / 'Style references • design requirements • logo artwork'. Never include manufacturing scenes, machines, building, stock warehouse, packaging formats, shipping, EU quantity matrix, quality inspections/fit checklist or generic quote disclaimer. Logo/colour/design topics only here; do not repeat company identity cards. No unconfirmed material menu, universal customization claims, minimums, sample availability or lead times."
+      "prompt": "Use case: compositing / B2B factory-company brochure. Redesign one current Beiqiang company-detail page, portrait exactly 1024x1536, with the established navy/orange/white palette and BEIQIANG brand header. This shared supplier module will appear below MANY DIFFERENT footwear products, including slip-ons, boots and outdoor styles. Communicate supplier collaboration/process, never the current listing's shoe options. Attractive, concrete, visual-led brochure, clear mobile-readable typography; no oversized stock icons or dense text. Use English only. Input 1 is the existing page: retain its brand/header visual family ONLY, fully rebuild its body. Input 2 is an actual Beiqiang photograph: use it only as a small full-width workshop-context strip, about 20% page height, keep actual shoes, rack/conveyor and equipment geometry, improve exposure and cleanliness gently, no extra premises, people or tools. No huge shoe hero, no single shoe exploded diagram, no shoe color lineup or logo-position marks, no claims of material availability, technology, certifications, performance tests, capacity or standard lead time. Procedural graphics must be clearly editorial illustrations, not fabricated documentary photos. No packing/quantity/quotation cards, handled by C5; no production machinery/process lessons, handled by C3. No new slogan or repeated bottom input checklist.\nPrimary request: replace this product-specific OEM page with a universal \"OEM / ODM Development Collaboration\" page. Exact header: \"BEIQIANG\" / \"OEM / ODM\" / \"Development Collaboration\". Subtitle \"From your concept to an agreed development brief\".\nBody should feature FOUR large informative visual modules in a 2x2 composition, each about a different DEVELOPMENT INPUT. Put section title \"Build your development brief\". Use sophisticated realistic 3D stationery/material-reference illustrations on a clean white background, not a fake design office and not a photographed material library:\n1 \"Style & intended use\" / \"Reference images and target use.\" Visual: layered development reference sheets with small simplified line drawings of two different shoe categories, e.g. a low shoe and ankle boot. These must look like design reference sketches, not products offered or manufactured.\n2 \"Colour & material direction\" / \"Colour references and material requirements.\" Visual: neutral small color-reference fan and textured swatch tiles beside a blank brief sheet. Present as requirements to discuss, NOT a catalog of available upper/outsole materials. No material names or brand color standards.\n3 \"Brand artwork\" / \"Logo files, label artwork and placement requirements.\" Visual: generic vector-artwork file sheet, illustrative neutral tag and woven-label mockup marked only \"LOGO\"; do not draw placement on a shoe.\n4 \"Construction brief\" / \"Structure, components and design details.\" Visual: annotated specification document with abstract section/detail sketches and a plain component checklist, NOT an exploded recognizable shoe or an interchangeable sole library.\nAt lower middle show the exact source2 rack photo as one horizontal 20%-height contextual strip captioned \"Workshop reference\". The real footwear appears only in this contextual strip.\nBottom ONE concise progression: \"Reference\" → \"Development brief\" → \"Sample feedback\" → \"Agreed specification\". Do not repeat this as another large set of cards or ask for the same documents again. Keep all text above verbatim, no new text."
     },
     "C3": {
       "referenced_image_paths": [
@@ -35,11 +35,11 @@
     },
     "C4": {
       "referenced_image_paths": [
-        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/微信图片_20260530105055_228_16.jpg",
-        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C4_quality.png"
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C4_quality.png",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/微信图片_20260530105055_228_16.jpg"
       ],
       "transparent_background": false,
-      "prompt": "This is one coordinated five-page Beiqiang English B2B company detail set. Output portrait 2:3,1024x1536, crisp navy/orange/white premium industrial brochure, restrained accents, compact brand header, informative image-led layout, comfortable mobile-readable body text around27px or larger, headings larger. The five chapters have exclusive jobs: C1 supplier identity; C2 style/design development; C3 equipment and assembly; C4 product review/acceptance criteria; C5 packing and order handoff. Do NOT fill pages with generic repeated quote cards, slogans, footers or other chapters' content. Keep actual photo subject identity/geometry, improve lighting and tidy surfaces with AI as authorized, no expanded premises, added equipment or fake certification/capacity/labs/promises. No numeric product specifications unless supplied. Use only specified buyer-facing English text, no added filler. Completely redesign C4 'Footwear Quality Review'. Reference1 is its ONLY photographic subject: real black knit/laced shoe assemblies with chunky black soles on green surface; reference2 previous target STYLE ONLY, delete ALL existing upper glue-hand/white-sole-hand photos and batch rack, whole order matrix/packing table, and every recycled C3 photograph. Build a clean image-led quality review sheet: use a large recognizable black shoe assembly hero from reference1, showing actual knit pattern, speckled black-white laces, collar/green last and visible black sole edge. Retain the visible green last if present; do not invent insole/outsole underside, remove last to pretend finished stock, or alter shoe style. Clean the backdrop and improve lighting. Around the hero use four clearly numbered pointers to VISIBLE features: 'Upper finish', 'Laces & collar', 'Sole-edge alignment', 'Overall appearance'. Below provide4readable horizontal review rows with ONE modest illustrative detail graphic each: 'Upper finish' / 'Weave, seams and surface appearance'; 'Construction' / 'Visible connection and edge alignment'; 'Closure & opening' / 'Laces, collar and pull-tab finish'; 'Sample criteria' / 'Agreed appearance, fit and workmanship'. These are review TOPICS, not photographs of an inspection procedure or verified test results. Bottom short statement 'Set the acceptance points against the approved sample.' No people, production operation, white soles, glue brushes, machine/equipment scenes, batch organization, carton/packing, colour-size quantities, development workflow or contact CTA. No hidden outsole pattern, new measurement devices, certified tests, pass rates, medical fit or promises. Distinct clean photographic product-detail review layout instead of C3's factory collage; large actual footwear details and specific acceptance information."
+      "prompt": "Use case: compositing / B2B factory-company brochure. Redesign one current Beiqiang company-detail page, portrait exactly 1024x1536, with the established navy/orange/white palette and BEIQIANG brand header. This shared supplier module will appear below MANY DIFFERENT footwear products, including slip-ons, boots and outdoor styles. Communicate supplier collaboration/process, never the current listing's shoe options. Attractive, concrete, visual-led brochure, clear mobile-readable typography; no oversized stock icons or dense text. Use English only. Input 1 is the existing page: retain its brand/header visual family ONLY, fully rebuild its body. Input 2 is an actual Beiqiang photograph: use it only as a small full-width workshop-context strip, about 20% page height, keep actual shoes, rack/conveyor and equipment geometry, improve exposure and cleanliness gently, no extra premises, people or tools. No huge shoe hero, no single shoe exploded diagram, no shoe color lineup or logo-position marks, no claims of material availability, technology, certifications, performance tests, capacity or standard lead time. Procedural graphics must be clearly editorial illustrations, not fabricated documentary photos. No packing/quantity/quotation cards, handled by C5; no production machinery/process lessons, handled by C3. No new slogan or repeated bottom input checklist.\nPrimary request: replace the black-knit-shoe-specific quality page with universal supplier-level \"Quality Review & Sample Alignment\".\nExact header \"BEIQIANG\" / \"Quality Review\" / \"& Sample Alignment\". Subtitle \"Compare workmanship and specifications with the approved sample.\"\nBelow header put source2 photo as a small panoramic workshop-context strip about20% page height, retaining the genuine row of multiple black/white-soled shoes on green lasts and green conveyor, not enlarging the front black shoe. Caption \"Workshop context\". Do NOT add inspection staff, measuring machines, certificates or tests; this source is production context, not proof of a documented inspection event.\nBelow photo label \"Four review checkpoints\". Four substantial alternating illustrated-row modules, NO same-shoe photo zoom crops or shoe-part callout pointers. Exact text:\n1 \"Appearance & finish\" / \"Surface condition, cleanliness and visible consistency.\"\nVisual: editorial magnifying glass with THREE small neutral surface/detail illustration tiles (smooth surface, textile texture, stitched seam), not actual material/finish selections and not a gigantic product shoe.\n2 \"Workmanship\" / \"Seams, connections and finishing details.\"\nVisual: simplified stitched-seam and joined-edge cross-section detail, clean engineering editorial illustration without numbers or test ratings.\n3 \"Specification match\" / \"Style, colour, size and agreed markings.\"\nVisual: generic specification card compared to a neutral product tag, with visual small color square and size-symbol, no fixed color range or size number, no packaging illustration.\n4 \"Approved-sample comparison\" / \"Compare the batch with the agreed reference sample.\"\nVisual: two equally sized abstract navy footwear-outline icons on comparison cards marked \"Approved sample\" and \"Batch review\", comparison arrows and a record sheet. These are abstract icons for comparison, NOT a specific shoe hero, photo or design claim.\nBottom only \"Define review points for each style and record the findings.\" NO additional workflow with four repeated checkpoint labels, no certified lab/performance-test/pass-rate claim or universal lace/collar/knit checklist. Make a polished factory brochure rather than a compliance checklist. Exact numbers1-4 must match corresponding row titles."
     },
     "C5": {
       "referenced_image_paths": [
@@ -67,11 +67,11 @@
     },
     "C2": {
       "referenced_image_paths": [
-        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/微信图片_20260530105316_231_16.jpg",
-        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C2_oem.png"
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C2_oem.png",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/微信图片_20260530105316_231_16.jpg"
       ],
       "transparent_background": false,
-      "prompt": "This is one coordinated five-page Beiqiang English B2B company detail set. Output portrait 2:3,1024x1536, crisp navy/orange/white premium industrial brochure, restrained accents, compact brand header, informative image-led layout, comfortable mobile-readable body text around27px or larger, headings larger. The five chapters have exclusive jobs: C1 supplier identity; C2 style/design development; C3 equipment and assembly; C4 product review/acceptance criteria; C5 packing and order handoff. Do NOT fill pages with generic repeated quote cards, slogans, footers or other chapters' content. Keep actual photo subject identity/geometry, improve lighting and tidy surfaces with AI as authorized, no expanded premises, added equipment or fake certification/capacity/labs/promises. No numeric product specifications unless supplied. Use only specified buyer-facing English text, no added filler. Redesign C2 'OEM / ODM Style Development'. Reference1 real multi-color footwear rack is its unique subject, show actual black/white striped knit, gray/green and lavender/white styles in a large image panel ~32% top. Preserve actual styles, tidy/brighten scene, do not create another factory view. Reference2 previous target STYLE ONLY; DELETE its packaging card, box icon, EU size/quantity input, and sample-review checklist. Under main photo a concise label 'Turn your style direction into a development brief'. Four concrete visually illustrated design inputs in2x2 cards, not oversized generic icons: 'Style direction' / 'Reference style and intended use'; 'Upper & sole design' / 'Construction requirements and design details'; 'Colour direction' / 'Reference colours and visual matching'; 'Logo & labeling' / 'Artwork, placement and label brief'. Show elegant diagram-like shoe upper/sole outlines, colour swatches echoing reference shoes, and generic blank logo-placement sketch. These mini illustrations are project briefs, not photos of verified custom samples. Bottom compact4-stage design collaboration strip: 'Reference → Design brief → Sample feedback → Agreed specification'. Bottom useful two-row input mini panel 'Your starting brief' / 'Style references • design requirements • logo artwork'. Never include manufacturing scenes, machines, building, stock warehouse, packaging formats, shipping, EU quantity matrix, quality inspections/fit checklist or generic quote disclaimer. Logo/colour/design topics only here; do not repeat company identity cards. No unconfirmed material menu, universal customization claims, minimums, sample availability or lead times."
+      "prompt": "Use case: compositing / B2B factory-company brochure. Redesign one current Beiqiang company-detail page, portrait exactly 1024x1536, with the established navy/orange/white palette and BEIQIANG brand header. This shared supplier module will appear below MANY DIFFERENT footwear products, including slip-ons, boots and outdoor styles. Communicate supplier collaboration/process, never the current listing's shoe options. Attractive, concrete, visual-led brochure, clear mobile-readable typography; no oversized stock icons or dense text. Use English only. Input 1 is the existing page: retain its brand/header visual family ONLY, fully rebuild its body. Input 2 is an actual Beiqiang photograph: use it only as a small full-width workshop-context strip, about 20% page height, keep actual shoes, rack/conveyor and equipment geometry, improve exposure and cleanliness gently, no extra premises, people or tools. No huge shoe hero, no single shoe exploded diagram, no shoe color lineup or logo-position marks, no claims of material availability, technology, certifications, performance tests, capacity or standard lead time. Procedural graphics must be clearly editorial illustrations, not fabricated documentary photos. No packing/quantity/quotation cards, handled by C5; no production machinery/process lessons, handled by C3. No new slogan or repeated bottom input checklist.\nPrimary request: replace this product-specific OEM page with a universal \"OEM / ODM Development Collaboration\" page. Exact header: \"BEIQIANG\" / \"OEM / ODM\" / \"Development Collaboration\". Subtitle \"From your concept to an agreed development brief\".\nBody should feature FOUR large informative visual modules in a 2x2 composition, each about a different DEVELOPMENT INPUT. Put section title \"Build your development brief\". Use sophisticated realistic 3D stationery/material-reference illustrations on a clean white background, not a fake design office and not a photographed material library:\n1 \"Style & intended use\" / \"Reference images and target use.\" Visual: layered development reference sheets with small simplified line drawings of two different shoe categories, e.g. a low shoe and ankle boot. These must look like design reference sketches, not products offered or manufactured.\n2 \"Colour & material direction\" / \"Colour references and material requirements.\" Visual: neutral small color-reference fan and textured swatch tiles beside a blank brief sheet. Present as requirements to discuss, NOT a catalog of available upper/outsole materials. No material names or brand color standards.\n3 \"Brand artwork\" / \"Logo files, label artwork and placement requirements.\" Visual: generic vector-artwork file sheet, illustrative neutral tag and woven-label mockup marked only \"LOGO\"; do not draw placement on a shoe.\n4 \"Construction brief\" / \"Structure, components and design details.\" Visual: annotated specification document with abstract section/detail sketches and a plain component checklist, NOT an exploded recognizable shoe or an interchangeable sole library.\nAt lower middle show the exact source2 rack photo as one horizontal 20%-height contextual strip captioned \"Workshop reference\". The real footwear appears only in this contextual strip.\nBottom ONE concise progression: \"Reference\" → \"Development brief\" → \"Sample feedback\" → \"Agreed specification\". Do not repeat this as another large set of cards or ask for the same documents again. Keep all text above verbatim, no new text."
     },
     "C3": {
       "referenced_image_paths": [
@@ -85,11 +85,10 @@
     },
     "C4": {
       "referenced_image_paths": [
-        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/微信图片_20260530105055_228_16.jpg",
-        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C4_quality.png"
+        "E:/C盘迁移/Codex/.codex/generated_images/01a1164e-73c1-70d1-882c-299608adb19c/exec-5492b3b3-91dc-42c6-a5ba-964a0b7b4cb5.png"
       ],
       "transparent_background": false,
-      "prompt": "This is one coordinated five-page Beiqiang English B2B company detail set. Output portrait 2:3,1024x1536, crisp navy/orange/white premium industrial brochure, restrained accents, compact brand header, informative image-led layout, comfortable mobile-readable body text around27px or larger, headings larger. The five chapters have exclusive jobs: C1 supplier identity; C2 style/design development; C3 equipment and assembly; C4 product review/acceptance criteria; C5 packing and order handoff. Do NOT fill pages with generic repeated quote cards, slogans, footers or other chapters' content. Keep actual photo subject identity/geometry, improve lighting and tidy surfaces with AI as authorized, no expanded premises, added equipment or fake certification/capacity/labs/promises. No numeric product specifications unless supplied. Use only specified buyer-facing English text, no added filler. Completely redesign C4 'Footwear Quality Review'. Reference1 is its ONLY photographic subject: real black knit/laced shoe assemblies with chunky black soles on green surface; reference2 previous target STYLE ONLY, delete ALL existing upper glue-hand/white-sole-hand photos and batch rack, whole order matrix/packing table, and every recycled C3 photograph. Build a clean image-led quality review sheet: use a large recognizable black shoe assembly hero from reference1, showing actual knit pattern, speckled black-white laces, collar/green last and visible black sole edge. Retain the visible green last if present; do not invent insole/outsole underside, remove last to pretend finished stock, or alter shoe style. Clean the backdrop and improve lighting. Around the hero use four clearly numbered pointers to VISIBLE features: 'Upper finish', 'Laces & collar', 'Sole-edge alignment', 'Overall appearance'. Below provide4readable horizontal review rows with ONE modest illustrative detail graphic each: 'Upper finish' / 'Weave, seams and surface appearance'; 'Construction' / 'Visible connection and edge alignment'; 'Closure & opening' / 'Laces, collar and pull-tab finish'; 'Sample criteria' / 'Agreed appearance, fit and workmanship'. These are review TOPICS, not photographs of an inspection procedure or verified test results. Bottom short statement 'Set the acceptance points against the approved sample.' No people, production operation, white soles, glue brushes, machine/equipment scenes, batch organization, carton/packing, colour-size quantities, development workflow or contact CTA. No hidden outsole pattern, new measurement devices, certified tests, pass rates, medical fit or promises. Distinct clean photographic product-detail review layout instead of C3's factory collage; large actual footwear details and specific acceptance information."
+      "prompt": "Precise edit of this1024x1536 Beiqiang shared supplier quality brochure. Change ONLY the illustration on the RIGHT of row2 titled \"Workmanship\". Replace the recognizable shoe-toe/outsole segment and its outsole stitching with TWO neutral abstract workmanship detail illustrations: a rectangular stitched seam sample and a simple joined-edge/layer connection detail with a magnifying inset. Use navy/white/gray editorial diagram style matching the existing brochure, NO recognizable shoe outline, no outsole, no sole profile, no fixed footwear production method, no performance-test labels. These generic workmanship illustrations should show visible seams and connection edges without suggesting every shoe has a stitched outsole. Keep ALL other content completely unchanged: exact English,1-4 numbering, photographs, brand, layout, palette, spacing, page dimensions1024x1536, rows1,3,4 and footer. Do not add new text or new photo objects."
     },
     "C5": {
       "referenced_image_paths": [
@@ -116,17 +115,17 @@
     },
     "C2": {
       "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C2_oem.png",
-      "sha256": "1b9ec7df4043522a29862be76f33d0991520d658e2f6a9ef71bb836cda6f3a98",
+      "sha256": "8c3adc38a8e261d0ddbb10af0ab692f35df26c53e0253572d0b2208bb963c310",
       "pixels": [
         1024,
         1536
       ],
-      "buyer_question": "怎样把款式、结构、配色和标识需求变成开发输入",
-      "qa": "四色鞋款参考与款式、结构、配色、标识开发图解；移除包装和尺码数量清单，不重复品质验收点。",
-      "review": "VISUAL_REVIEWED_LOCAL_DRAFT; DISTINCT_ROLE",
+      "buyer_question": "买家怎样提出开发方向并与贝强协作形成明确方案",
+      "qa": "已实看：开发需求四项与一次协作流程，去掉单款配色、拆解与鞋身标识位置；实际鞋架仅作小幅车间背景。文字与需求角色对应，不把示意色卡与织物当作现有材料库存。",
+      "review": "VISUAL_REVIEWED_LOCAL_DRAFT; SUPPLIER_LEVEL_CONTENT",
       "scene_status": "AI_ENHANCED_FROM_EXISTING_SCENES; FACT_CHECK_REQUIRED_BEFORE_EXTERNAL_USE",
-      "buyer_next_step": "Prepare design references and artwork",
-      "illustrations": "Design directions and logo placement sketches; not actual custom order samples."
+      "buyer_next_step": "Share development directions and artwork for an agreed brief",
+      "illustrations": "Editorial development inputs and checkpoints; not current SKU options, material stock or documented inspection results."
     },
     "C3": {
       "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C3_production.png",
@@ -143,16 +142,17 @@
     },
     "C4": {
       "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C4_quality.png",
-      "sha256": "4f55f23102ac57945ae62584839847c259669010d9aebd7e17143627e0c42b07",
+      "sha256": "7c036bee2862566695479637f3da3b0d59c2f166b2f2854d8a95b8ee1f9e7a0e",
       "pixels": [
         1024,
         1536
       ],
-      "buyer_question": "应按确认样检查哪些成鞋细节",
-      "qa": "另用黑色鞋款细节原图，标明鞋面、闭合、连接及确认样验收点；无图三手工操作照片与包装配比内容。",
-      "review": "VISUAL_REVIEWED_LOCAL_DRAFT; DISTINCT_ROLE",
+      "buyer_question": "怎样围绕各款确认样核对外观、做工及约定要求",
+      "qa": "已实看：外观、做工、约定规格和确认样对照四项；编号一致，移除单款鞋结构指针与细节重复裁切，做工采用通用接缝和连接示意；实际车间只作背景，无实验室、检测结果或固定性能承诺。",
+      "review": "VISUAL_REVIEWED_LOCAL_DRAFT; SUPPLIER_LEVEL_CONTENT",
       "scene_status": "AI_ENHANCED_FROM_EXISTING_SCENES; FACT_CHECK_REQUIRED_BEFORE_EXTERNAL_USE",
-      "buyer_next_step": "Define sample acceptance criteria"
+      "buyer_next_step": "Define style-specific review points against the approved sample",
+      "illustrations": "Editorial development inputs and checkpoints; not current SKU options, material stock or documented inspection results."
     },
     "C5": {
       "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C5_packing.png",
@@ -937,7 +937,7 @@
       "reason": "SUPERSEDED_UNPUBLISHED_SQUARE_DRAFT"
     }
   },
-  "qa_scope": "Five full final outputs visually inspected together; ten chapter pairs checked for raw-photo reuse. Native original hashes preserved. Local-only revision; no Alibaba upload or binding.",
+  "qa_scope": "C2/C4 final full images inspected against original photographs and intended universal role. C1/C3/C5 inspected and retained byte-identically. No Alibaba upload or product binding.",
   "active_sources": {
     "C1": [
       "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/大门.jpg"
@@ -1012,14 +1012,14 @@
     ],
     "C2": [
       {
+        "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C2_oem.png",
+        "sha256": "1b9ec7df4043522a29862be76f33d0991520d658e2f6a9ef71bb836cda6f3a98",
+        "role": "previous_target_and_style"
+      },
+      {
         "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/微信图片_20260530105316_231_16.jpg",
         "sha256": "8749ac5e72f71ec764d9599acacc5ec22ba071828907b3f4aa38e381adc1fafe",
         "role": "source_photo"
-      },
-      {
-        "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C2_oem.png",
-        "sha256": "2e9ffa00b248a682da95bda47829ae584a888345423f426af1ff81c3537c19b3",
-        "role": "previous_target_and_style"
       }
     ],
     "C3": [
@@ -1046,14 +1046,14 @@
     ],
     "C4": [
       {
+        "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C4_quality.png",
+        "sha256": "4f55f23102ac57945ae62584839847c259669010d9aebd7e17143627e0c42b07",
+        "role": "previous_target_and_style"
+      },
+      {
         "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/微信图片_20260530105055_228_16.jpg",
         "sha256": "d0879c16778fd50681472750052e2ece5b0d3e38705aa21f298f54dc918323ab",
         "role": "source_photo"
-      },
-      {
-        "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C4_quality.png",
-        "sha256": "5f7f162dfb8b15d9198921f5488e0796f115bea710c82d6875e7a7306ccd32ad",
-        "role": "previous_target_and_style"
       }
     ],
     "C5": [
@@ -1087,21 +1087,22 @@
       ]
     },
     "C2": {
-      "title": "款式与标识开发",
-      "question": "怎样把款式、结构、配色和标识需求变成开发输入",
+      "title": "开发协作与需求沟通",
+      "question": "买家怎样提出开发方向并与贝强协作形成明确方案",
       "topics": [
-        "style direction",
-        "upper and sole design brief",
-        "colour references",
-        "logo/label artwork",
-        "development workflow"
+        "development reference inputs",
+        "colour/material requirements",
+        "brand artwork requirements",
+        "construction brief",
+        "development collaboration"
       ],
       "exclude": [
-        "building",
-        "production operations",
-        "quality review checklist",
-        "packing",
-        "EU quantity matrix"
+        "single-SKU colour options",
+        "exploded product shoe",
+        "fixed logo placements",
+        "packing/quantity inputs",
+        "quality checkpoints",
+        "production instruction"
       ]
     },
     "C3": {
@@ -1123,22 +1124,21 @@
       ]
     },
     "C4": {
-      "title": "品质与样品验收",
-      "question": "应按确认样检查哪些成鞋细节",
+      "title": "品质检查与确认样对照",
+      "question": "怎样围绕各款确认样核对外观、做工及约定要求",
       "topics": [
-        "upper finish",
-        "closure and collar",
-        "visible connection alignment",
-        "appearance and fit acceptance criteria"
+        "appearance and finish",
+        "workmanship",
+        "specification match",
+        "approved-sample comparison"
       ],
       "exclude": [
-        "glue operation photos",
-        "sole handling photos",
-        "production equipment",
-        "batch organization",
-        "packing",
-        "colour-size quantities",
-        "design workflow"
+        "fixed knit/lace/collar checklist",
+        "product hero",
+        "same-shoe photo crops",
+        "formal laboratory/test claims",
+        "production operations",
+        "packing/order quotation"
       ]
     },
     "C5": {
@@ -1162,17 +1162,12 @@
     }
   },
   "coverage_audit": {
-    "before": [
-      "C1 included company identity, equipment, development and order topics",
-      "C3/C4 reused the same upper-preparation and sole-handling photographs",
-      "C2/C4/C5 repeated packing/assortment checklists"
-    ],
     "changes": [
-      "C1 exterior and supplier identity only",
-      "C2 style/construction/colour/logo development, no packing or quantity matrix",
-      "C3 equipment and hand assembly only",
-      "C4 unique shoe detail reference and acceptance points",
-      "C5 sole packaging/order/quotation chapter, removed finished-shoe rack"
+      "C1 supplier identity/exterior",
+      "C2 development collaboration; source rack reduced to contextual strip, no SKU option diagrams",
+      "C3 actual equipment and assembly",
+      "C4 universal review dimensions; no single-shoe structural callouts",
+      "C5 packing and order handoff"
     ],
     "raw_photo_pairs": [
       {
@@ -1246,8 +1241,37 @@
         "shared_raw_photo_hashes": []
       }
     ],
-    "manual_review": "Five full generated images inspected for actual photographs, text, role boundaries, readability and redundant information.",
     "visual_source_count": 7,
-    "note": "Brand identifiers and the same company colour palette repeat intentionally; unique photograph allocation complements manual content review."
+    "manual_review": "All five images inspected. C2/C4 reviewed for layout, actual source context, English, numbering and applicability across footwear categories.",
+    "note": "Non-reused raw photographs complement semantic review; supplier capability and workflow do not supply SKU facts."
+  },
+  "targeted_refinements": {
+    "C4": {
+      "request": {
+        "referenced_image_paths": [
+          "E:/C盘迁移/Codex/.codex/generated_images/01a1164e-73c1-70d1-882c-299608adb19c/exec-5492b3b3-91dc-42c6-a5ba-964a0b7b4cb5.png"
+        ],
+        "transparent_background": false,
+        "prompt": "Precise edit of this1024x1536 Beiqiang shared supplier quality brochure. Change ONLY the illustration on the RIGHT of row2 titled \"Workmanship\". Replace the recognizable shoe-toe/outsole segment and its outsole stitching with TWO neutral abstract workmanship detail illustrations: a rectangular stitched seam sample and a simple joined-edge/layer connection detail with a magnifying inset. Use navy/white/gray editorial diagram style matching the existing brochure, NO recognizable shoe outline, no outsole, no sole profile, no fixed footwear production method, no performance-test labels. These generic workmanship illustrations should show visible seams and connection edges without suggesting every shoe has a stitched outsole. Keep ALL other content completely unchanged: exact English,1-4 numbering, photographs, brand, layout, palette, spacing, page dimensions1024x1536, rows1,3,4 and footer. Do not add new text or new photo objects."
+      },
+      "reason": "Replace recognizable shoe/outsole seam drawing with generic workmanship detail illustrations.",
+      "input_assets": [
+        {
+          "path": "E:/C盘迁移/Codex/.codex/generated_images/01a1164e-73c1-70d1-882c-299608adb19c/exec-5492b3b3-91dc-42c6-a5ba-964a0b7b4cb5.png",
+          "sha256": "45c91d8f84a176a88dd71ecd4f53e82c63309d2891635ad6701b754a2959a5d5",
+          "role": "generated_draft_edit_target"
+        }
+      ]
+    }
+  },
+  "shared_use_review": {
+    "status": "LOCAL_VISUAL_REVIEWED",
+    "C1": "Supplier identity/location/focus; not proof of every listed model production.",
+    "C2": "Illustrated development requirements; no fixed SKU material/colour/logo claims. Existing shoes occur only as workshop context.",
+    "C3": "Existing equipment and assembly context; SKU origin and production facts remain individually documented.",
+    "C4": "Universal checkpoints and reference comparison; workshop photo does not prove an inspection event or formal test.",
+    "C5": "Packing formats and order handoff; specific packaging/cost/quantities remain order-specific.",
+    "boundary": "Shared company modules explain supplier capability and cooperation. Actual product choices and custom feasibility belong to each SKU.",
+    "online": "Not uploaded or bound; local review does not constitute online acceptance."
   }
 }
