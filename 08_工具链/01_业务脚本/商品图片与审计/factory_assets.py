@@ -8,6 +8,8 @@ import hashlib
 import json
 import fnmatch
 import os
+from html.parser import HTMLParser
+from urllib.parse import urlsplit, unquote, parse_qs
 
 ROOT=Path(__file__).resolve().parents[3]
 ENTRY=ROOT/'02_Alibaba运营/06_图片与检查记录/共享工厂详情'
@@ -46,11 +48,26 @@ class LegacyAssetPath(os.PathLike):
                 p=ROOT/row['target']
                 if p not in seen:seen.add(p);yield p
 def legacy_asset(relative):return LegacyAssetPath(relative)
+def check_preview(m):
+    class Images(HTMLParser):
+        def __init__(self):super().__init__();self.rows=[]
+        def handle_starttag(self,tag,attrs):
+            if tag=='img':self.rows.append(dict(attrs))
+    page=Images();page.feed((ENTRY/'预览.html').read_text(encoding='utf8'))
+    assert len(page.rows)==5,'Preview must reference exactly five current images'
+    assert {row.get('alt') for row in page.rows}==set(m['assets'])
+    for row in page.rows:
+        asset=m['assets'][row['alt']];url=urlsplit(row['src'])
+        assert not url.scheme and not url.netloc,'Preview image must be local'
+        assert (ENTRY/unquote(url.path)).resolve()==(ROOT/asset['path']).resolve()
+        assert parse_qs(url.query).get('v')==[asset['sha256']],row['alt']+' preview version is stale'
+
 def check():
     m=manifest();plan=json.loads((ENTRY/'素材整理.json').read_text(encoding='utf8'))
     assert set(m['assets'])=={'C1','C2','C3','C4','C5'}
     assert {p.name for p in current_root().glob('*')}=={Path(v['path']).name for v in m['assets'].values()}
     for role in m['assets']:current_asset(role)
+    check_preview(m)
     if 'coverage_audit' in m:
         # Verify the explicit current photo allocation, alongside manual role review.
         photo_hashes={}
@@ -69,7 +86,8 @@ def check():
     assert plan['originals_retained']==33 and plan['redundant_or_obsolete_images_removed']==65
     assert not m['online_state']['uploaded'] and not m['online_state']['bound']
     return {'ok':True,'current_images':5,'originals':33,'historical_unique':34,
-            'redundant_or_obsolete_images_removed':65,'state':'LOCAL_REVIEW_DRAFT'}
+            'redundant_or_obsolete_images_removed':65,'preview_images_verified':5,
+            'preview_versions_match_current_images':True,'state':'LOCAL_REVIEW_DRAFT'}
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--check',action='store_true')
