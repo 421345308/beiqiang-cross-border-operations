@@ -30,6 +30,10 @@ Separate `HARD_CONSTRAINT` from `DEFAULT_HEURISTIC`. Source identity, SKU facts,
 - For material keyword uncertainty that current SKU/platform data cannot settle, consider [competitor research](../competitor-research-firecrawl/SKILL.md). External wording never supplies Beiqiang product facts.
 - For coordinated listing preparation or repair, use [Alibaba operations](../alibaba-international-operations/SKILL.md). For an authorized API write/readback, use [OpenAPI operator](../alibaba-openapi-operator/SKILL.md).
 
+## Product highlights and FAQ
+
+For highlights or FAQ work, apply the single current writing method in [lifecycle SOP §6.1](../../../02_Alibaba运营/00_运营SOP/国际站商品全生命周期SOP.md#61-产品亮点与-faq买家决策写法). Explain the exact shoe's selection value and answer buying questions directly. Keep fact gaps in internal notes; do not turn them into selling points or fill every answer with confirmation language. Reuse observed competitor structure, then write original SKU-specific copy.
+
 ## Method
 
 1. Freeze the requested scope and target link. Classify proposed claims as verified SKU fact, confirmed commercial condition or drafting hypothesis.

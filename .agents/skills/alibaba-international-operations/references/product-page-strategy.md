@@ -132,7 +132,7 @@ Recommended product-first order:
 4. Size/fit: show the confirmed size range or a chart supported by manufacturer data, physical measurements or explicit confirmation, alongside the shoe image. If the manufacturer chart is missing, do not invent a standard conversion or foot-length table; keep unsupported values pending and avoid a blank filler page.
 5. Function proof: comfort, cushioning, flexibility, anti-slip texture, lightweight evidence, or wide toe comparison when supported.
 6. Color/variant display: actual color photos or clean color overview.
-7. Order support: packaging, MOQ/sample/lead time/customization only if confirmed and relevant.
+7. Order support: packaging, MOQ/sample/lead time/customization only if confirmed and relevant. Highlights and FAQ use the single [lifecycle SOP §6.1](../../../../02_Alibaba运营/00_运营SOP/国际站商品全生命周期SOP.md#61-产品亮点与-faq买家决策写法); keep internal fact gaps out of selling points and answer the buyer before adding an enquiry step.
 
 Company profile, factory photos, production process, certificates, trade shows, and customer reviews are optional lower-page trust modules. They should not replace the product explanation and should not dominate the product's core detail images.
 
