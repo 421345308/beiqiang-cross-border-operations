@@ -1,0 +1,62 @@
+{
+  "status": "rendered_technical_and_sample_visual_review_complete_continuous_playback_pending",
+  "source_id": "8d2875c4c774f970",
+  "sha256": "8945946a1a126cfe7a312f252c8a876a852e25d5ca609ebd45cc74fba03d7807",
+  "video": "C:\\Users\\spq\\Desktop\\贝强\\05_内容与视频\\04_社交媒体运营\\贝强抖音品牌动效\\out\\贝强_针织袜子鞋_品牌片.mp4",
+  "technical": {
+    "resolution": [
+      1080,
+      1920
+    ],
+    "fps": 48,
+    "duration_seconds": 36,
+    "frames": 1728,
+    "pts_min_gap": 0.020832999999999657,
+    "pts_max_gap": 0.020834000000000685,
+    "black_intervals": 0,
+    "freeze_intervals_over_0_25_seconds": 0,
+    "integrated_loudness_lufs": -16.7,
+    "true_peak_dbfs": -1.7,
+    "typescript_check": "passed"
+  },
+  "visual_review": {
+    "uniform_frames": 20,
+    "focused_times": [
+      8,
+      11,
+      16,
+      20,
+      21,
+      23,
+      30
+    ],
+    "focused_window_seconds": 0.16,
+    "original_resolution_review_times": [
+      8,
+      19.84,
+      20,
+      20.16
+    ],
+    "observations": [
+      "针织、穿着结构、手触鞋面、松手、完整一步、全身城市人物、休息及品牌对鞋形成12个镜头。",
+      "暖白织物是环境与转场语言，不将其纤维成分冒称鞋面材料。",
+      "8秒结构段已用完整穿着照片替换悬空抠图，文字在上方留白。",
+      "迈步19.3至21秒为站稳停留，新增原速片内持续3%镜头推进；没有伪造新一步或连续行走。",
+      "8、11、16、21、23、30秒为有意景别/环境切换；没有黑帧或输出时间间隙。",
+      "原生生成视频24fps，输出48fps用于代码与镜头动画；不是把动作插帧为48fps。"
+    ],
+    "limits": [
+      "没有真实脚跟套入过程，不将素材说成已展示穿入或Hands Free。",
+      "生成图片与动作仍是演绎，有细微纹理/轮廓差异，不作实物一致性或性能证明。",
+      "浏览器MP4导航超时，读取播放器也发生CDP超时；未完成连贯播放、音画同步听审或腾讯云原生视频理解复核。"
+    ]
+  },
+  "changes_after_first_scan": [
+    "替换结构段构图",
+    "尾部细节改为针织回扣",
+    "迈步加入持续推进消除低变化停留",
+    "音乐由-19.7提高到-16.7LUFS"
+  ],
+  "new_tokenhub_paid_submissions": 0,
+  "new_tokenhub_cost_cny": 0
+}

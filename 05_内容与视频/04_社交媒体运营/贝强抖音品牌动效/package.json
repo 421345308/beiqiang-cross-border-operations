@@ -3,14 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "studio": "remotion studio src/index.ts --no-open",
-    "render": "remotion render src/index.ts BrandStudy out/贝强_三种风格动效试稿.mp4 --concurrency=2",
-    "render:warm": "remotion render src/index.ts WarmBrandFilm out/贝强_暖白织带品牌片_v2.mp4 --concurrency=2",
-    "render:final": "remotion render src/index.ts BeiqiangBrandFilm out/贝强_把灵感织进每一步_完整版.mp4 --concurrency=2 --pixel-format=yuv420p --color-space=bt709",
-    "render:commercial": "remotion render src/index.ts SockShoeCommercial out/贝强_针织袜子鞋_内容重做版.mp4 --concurrency=2 --pixel-format=yuv420p --color-space=bt709",
-    "render:procedural": "node render-procedural.mjs",
-    "render:generated": "remotion render src/index.ts GeneratedBrandFilm out/贝强_针织袜子鞋_生成融合版.mp4 --concurrency=2 --pixel-format=yuv420p --color-space=bt709",
-    "render:warm-generated": "remotion render src/index.ts WarmGeneratedBrandFilm out/贝强_针织袜子鞋_暖白融合版.mp4 --concurrency=2 --pixel-format=yuv420p --color-space=bt709",
+    "render": "remotion render src/index.ts BeiqiangBrandFilm out/贝强_针织袜子鞋_品牌片.mp4 --concurrency=4 --pixel-format=yuv420p --color-space=bt709 --crf=18",
     "check": "tsc --noEmit"
   },
   "dependencies": {

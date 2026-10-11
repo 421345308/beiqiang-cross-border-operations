@@ -1,5 +1,5 @@
 {
-  "status": "source_inventory_only",
+  "status": "current_film_rendered",
   "new_paid_submissions": 0,
   "new_paid_cost_cny": 0,
   "estimated_total_paid_cny": 20,
@@ -12,8 +12,13 @@
       "generation_receipt": "edit/generation/tokenhub-kling-v3/release.json",
       "estimated_cny": 4,
       "nominal_seconds": 5,
-      "used_seconds": 0,
-      "decision": "SOURCE ONLY: full0–5s collar adjustment and release; no heel insertion claim"
+      "used_seconds": 5,
+      "decision": "USE: complete nominal 5-second collar adjustment/release",
+      "source_range_seconds": [
+        0,
+        5
+      ],
+      "playback_rate": 1
     },
     {
       "id": "step",
@@ -32,8 +37,13 @@
       "generation_receipt": "edit/generation/tokenhub-kling-v3/step-v2.json",
       "estimated_cny": 4,
       "nominal_seconds": 5,
-      "used_seconds": 0,
-      "decision": "SOURCE ONLY: full0–5s single complete step; no continuous-walking claim; minor generated texture/shape variation"
+      "used_seconds": 5,
+      "decision": "USE: complete nominal 5-second single step; continuous camera push; no continuous-walking claim",
+      "source_range_seconds": [
+        0,
+        5
+      ],
+      "playback_rate": 1
     },
     {
       "id": "entry-v4",
@@ -57,5 +67,9 @@
     }
   ],
   "paid_source_nominal_seconds": 25,
-  "note": "No current rendered delivery. Source assets and generation receipts retained for provenance and cost tracking."
+  "note": "Two selected clips use 0–5s at original speed. Historical paid generation remains estimated 20 CNY, bill unverified; only 10 of 25 nominal seconds are used. No new TokenHub generation or inference. Failed earlier source videos/receipts retained only for provenance; no old final film retained.",
+  "current_video_source_id": "8d2875c4c774f970",
+  "selected_paid_source_seconds": 10,
+  "used_paid_source_seconds": 10,
+  "all_historical_paid_nominal_use_ratio": 0.4
 }
