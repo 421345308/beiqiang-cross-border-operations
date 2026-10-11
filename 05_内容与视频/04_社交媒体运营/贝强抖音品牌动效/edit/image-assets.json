@@ -35,7 +35,9 @@
       "sha256": "968d03dff59c24b010079a7a07b09f20201aa7bf784fe93ac3b634fc5611424f",
       "tool": "built-in imagegen",
       "brief": "无手、无脚的后侧鞋口近景；说明袜式鞋口及套脚结构，暖白织物仅作为背景",
-      "role": "generated editorial advertising visual; not real product/factory proof"
+      "role": "generated editorial advertising visual; not real product/factory proof",
+      "prompt": "Create a premium photorealistic vertical 9:16 footwear advertisement DETAIL image using the attached black shoe as product identity reference. Show ONLY this same all-black tall knit sock slip-on shoe, rear three-quarter close-up from slightly above. Main focus: the single oval open sock collar, black fine knit rim and small rear pull loop, and triangular smooth black heel reinforcement. Preserve the high ribbed wave knit vamp and sculpted black sole design. No hands, no feet, no person. Shoe on pale warm limestone with a very small soft ivory woven cloth behind it as background, clearly NOT shoe material. Black collar opening occupies center of picture between y=600 and y=1100; heel and sole remain visible below; generous clean pale space top quarter for captions. Warm directional daylight, editorial macro photography, natural scale, refined shadows, no weird double openings or stretched loops, no cutaway, no new parts, no text, no logo, no graphic lines.",
+      "reference_image": "public/sock-hero.png"
     },
     {
       "id": "overhead",
@@ -47,7 +49,9 @@
       "sha256": "ce6af980e1b238ddcd4d49315d8ba15fc06f695732cdae133c38e79690726e99",
       "tool": "built-in imagegen",
       "brief": "俯拍对鞋；两只鞋与两处开放鞋口可见，无手无脚，说明免系带外形",
-      "role": "generated editorial advertising visual; not real product/factory proof"
+      "role": "generated editorial advertising visual; not real product/factory proof",
+      "prompt": "Create a premium photorealistic vertical 9:16 footwear advertisement image. Use the attached all-black tall knit sock slip-on shoe as strict design identity reference. New purposeful camera angle: two matching shoes, true overhead flat lay on warm ivory limestone, diagonally arranged with natural spacing. Both oval openings are clearly visible, toes pointing down-left, fully visible tall wave ribbed knit shafts, triangular black heel reinforcements, small rear pull tabs, sculpted black thick soles. No laces, no hands, no feet, no person, no ribbons. The shoes fill the middle and lower 65 percent; leave upper quarter pale clear negative space for typography. A soft warm-white woven cloth enters only bottom right corner behind shoes, unmistakably table scenery not separate material swatch. Elegant actual product campaign photography, correct pair anatomy, natural contact shadows, warm daylight, black fabric texture still discernible, no text, no logos.",
+      "reference_image": "public/sock-hero.png"
     }
   ],
   "new_tokenhub_image_or_video_calls": 0,
