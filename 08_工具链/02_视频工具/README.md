@@ -13,6 +13,7 @@
 | `opencut-classic/` | OpenCut 第三方编辑器实体目录 |
 | `Blender人体白模/` | Blender 人体白模相关工具和说明 |
 | `ffmpeg/` | FFmpeg 本地运行文件 |
+| `audio_review/` | 已验证的本地音轨提取、缓存中文ASR与声学时间证据；复用现有Whisper/GPU/librosa，无自动下载或上传。声音语义与听感须另核，见[入口](audio_review/README.md) |
 | `tokenhub_video_review.py` | 腾讯云Kimi原生视频辅助审片；仅用已启用FREE且后付费关闭、余量≥200000的接入点，每次发送前核验，无自动重试。清单可设reasoning_effort=low/medium/high、max_completion_tokens=500–9000；默认medium/3500控制审片时长和输出量，不改变免费守卫。原生取样不替代局部原尺寸时序检查与创意判断 |
 | `.libtv/` | LibTV 本地运行状态，不作为项目档案 |
 
