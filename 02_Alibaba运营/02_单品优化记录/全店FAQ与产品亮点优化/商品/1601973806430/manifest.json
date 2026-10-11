@@ -1,0 +1,26 @@
+{
+  "operation": "update",
+  "product_id": "1601973806430",
+  "category_id": 201334413,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "copy.json",
+    "before_get.json",
+    "../../../../05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2623准备/经营任务包.md",
+    "../../../../05_扩品工程/执行记录/路崎宽头户外_2026-10-08/首批三款图片角色与选词.json",
+    "../../../../00_运营SOP/国际站商品全生命周期SOP.md"
+  ],
+  "current_schema": "current_schema.xml",
+  "current_schema_sha256": "3f7ca1b1ea40d3c03f1173cc265c9eee1db69bf2288ed248ae213d53573d305a",
+  "schema_request_id": "213f5a2117916863614054037",
+  "schema_acquired_at": "2026-10-11T02:39:22.482909+00:00",
+  "payload_xml": "payload.xml",
+  "field_ids": [
+    "textDesc",
+    "companyFaqDesc"
+  ],
+  "dependency_ids": [
+    "productDescType"
+  ],
+  "observed_model": "BQ-LQ2623"
+}
