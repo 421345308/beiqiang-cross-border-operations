@@ -15,6 +15,8 @@ Build useful memory without turning every past failure into a universal constrai
 3. Read shared creative guidance only when it affects the present decision. For product/brand short films centered on visual appeal and brand memory, use [brand-film-direction.md](references/brand-film-direction.md) to compare concrete design choices and separate creative review from technical QA. This is a workspace production method, not a claim that the model has acquired new trained capabilities.
 4. Search the experience ledger for relevant candidate lessons. Treat confidence and scope as evidence, not as commands.
 
+When the user invokes Hypit, read its installed Skill and the workspace [Hypit tool entry](../../../08_工具链/02_视频工具/Hypit/README.md). Use video-use for source acquisition, identity and independent visual QA; use Hypit for reference understanding and, when suitable, semantic authoring/composition. Share one source clock and one production timeline. Installation does not create automatic routing, and neither a new engine nor an external reviewer replaces directing judgment. Keep unsupported visual or audio conclusions out of reference analysis.
+
 See [knowledge-layers.md](references/knowledge-layers.md) when creating or restructuring a project memory system.
 
 ## Write back at the right level
