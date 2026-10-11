@@ -1,0 +1,37 @@
+{
+  "endpoint": "https://tokenhub.tencentmaas.com/v1/chat/completions",
+  "model": "kimi-k3",
+  "input_type": "native video_url base64",
+  "sources": [
+    {
+      "label": "walking",
+      "path": "../../../public/dynamic/walking.mp4",
+      "bytes": 15153331,
+      "sha256": "abe4fb963fc1402aee8c967ad563e79a30537a069c16d5d0f606529c8bf97ba3",
+      "duration": 6.041667
+    },
+    {
+      "label": "settling",
+      "path": "../../../public/dynamic/settling.mp4",
+      "bytes": 7326029,
+      "sha256": "2ceca4705b15c42f3057e2e2e077bf8a52768df7e7f984faa98709dba4a83ffc",
+      "duration": 4.041667
+    }
+  ],
+  "prompt": "独立审查这两个鞋类广告动作素材，只根据实际收到的画面，先分别列出视频解析帧数、时间戳及动作起止状态；没有解析到请明确说无法审查。对各片核查：手是否有明确作用，手指/脚/双腿是否连续合理，脚是否实际进入鞋内，鞋款结构是否异常变化，有无可见跳变/畸变/严重穿模。穿鞋与整理鞋口是不同动作。按致命、需注意、无明确问题分级，用可见时间段支撑，不以采样帧证明连续流畅，不假装听到声音。最后给出可剪辑用途和需要更密集看帧的位置。不要恭维，不推测材料性能。不超过1100字。",
+  "request_body_bytes": 29973720,
+  "reasoning_effort": "high",
+  "max_completion_tokens": 9000,
+  "stream": true,
+  "preflight": {
+    "model": "kimi-k3",
+    "status": "ACTIVE",
+    "charge_type": "FREE",
+    "payment_enabled": false,
+    "free_remaining_before": 532537,
+    "free_total": 1000000,
+    "request_id": "c1e33daf-33d6-43cf-8fc7-e6181c2885e8"
+  },
+  "audio_review": "not assumed",
+  "automatic_retries": 0
+}

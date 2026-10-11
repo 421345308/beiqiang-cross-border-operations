@@ -1,0 +1,106 @@
+{
+  "source_id": "ea17267aecbe5f2e",
+  "sha256": "460244146ac4aee9c2481719c35364f99b346344e516dcdd6fad4ce72e16ed14",
+  "decoded_frames": 768,
+  "duration": 32,
+  "fps": 24,
+  "near_black_frames": [],
+  "exact_duplicate_adjacent_frames": [],
+  "actual_video_usage": [
+    {
+      "source": "walking",
+      "film_frames": [
+        0,
+        72
+      ],
+      "source_frames": [
+        0,
+        72
+      ],
+      "used_seconds": 3.0,
+      "mean_absolute_pixel_difference": 3.1015,
+      "maximum_frame_mean_difference": 3.4719,
+      "source_frame_match": true
+    },
+    {
+      "source": "tactile",
+      "film_frames": [
+        108,
+        180
+      ],
+      "source_frames": [
+        0,
+        72
+      ],
+      "used_seconds": 3.0,
+      "mean_absolute_pixel_difference": 4.3733,
+      "maximum_frame_mean_difference": 4.4464,
+      "source_frame_match": true
+    },
+    {
+      "source": "donning-clean",
+      "film_frames": [
+        228,
+        348
+      ],
+      "source_frames": [
+        0,
+        120
+      ],
+      "used_seconds": 5.0,
+      "mean_absolute_pixel_difference": 4.0686,
+      "maximum_frame_mean_difference": 4.2029,
+      "source_frame_match": true
+    },
+    {
+      "source": "release",
+      "film_frames": [
+        348,
+        432
+      ],
+      "source_frames": [
+        0,
+        84
+      ],
+      "used_seconds": 3.5,
+      "mean_absolute_pixel_difference": 3.6167,
+      "maximum_frame_mean_difference": 3.679,
+      "source_frame_match": true
+    },
+    {
+      "source": "walking",
+      "film_frames": [
+        432,
+        504
+      ],
+      "source_frames": [
+        72,
+        144
+      ],
+      "used_seconds": 3.0,
+      "mean_absolute_pixel_difference": 3.0168,
+      "maximum_frame_mean_difference": 3.2953,
+      "source_frame_match": true
+    },
+    {
+      "source": "settling",
+      "film_frames": [
+        504,
+        600
+      ],
+      "source_frames": [
+        0,
+        96
+      ],
+      "used_seconds": 4.0,
+      "mean_absolute_pixel_difference": 6.3049,
+      "maximum_frame_mean_difference": 6.5918,
+      "source_frame_match": true
+    }
+  ],
+  "new_paid_seconds_used": 18,
+  "motion_seconds_total": 21.5,
+  "limits": "Decoding and source correspondence verify frame delivery and retention, not subjective continuous playback or audio listening.",
+  "sampled_source_id": "3045ac32160156c7",
+  "delivered_file": "out/贝强_针织袜子鞋_品牌片.mp4"
+}

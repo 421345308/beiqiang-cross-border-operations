@@ -1,8 +1,8 @@
 {
-  "status": "rendered_semantic_sampling_complete_continuous_playback_pending",
-  "new_paid_submissions": 0,
-  "new_paid_cost_cny": 0,
-  "estimated_total_paid_cny": 20,
+  "status": "delivered_32s_visual_sampling_complete_listening_pending",
+  "new_paid_submissions": 4,
+  "new_paid_cost_cny": 14.4,
+  "estimated_total_paid_cny": 34.4,
   "actual_bill_verified": false,
   "sources": [
     {
@@ -63,12 +63,69 @@
       "used_seconds": 0,
       "decision": "EXCLUDE: outsole crosses frame edge; no crop/insert rescue",
       "file_deleted": true
+    },
+    {
+      "id": "tactile",
+      "source": "public/dynamic/tactile.mp4",
+      "sha256": "2a29496ddc8e074dd2d7f09110c39a81e5550c538d3a51eb8a3a2d2e30a17805",
+      "generation_receipt": "edit/generation/tokenhub-kling-v3/tactile.json",
+      "task_id": "1317587621-WandVideo-85d7e7d9f05f487fbcf9afc692fabd2d",
+      "nominal_seconds": 3,
+      "estimated_cny": 2.4,
+      "usage_tokens": 240000,
+      "used_seconds": 3,
+      "decision": "Used full nominal source duration; no speed change, crop or repeated source frames.",
+      "playback_rate": 1
+    },
+    {
+      "id": "donning",
+      "source": "public/dynamic/donning.mp4",
+      "sha256": "269f40c4a89676ca6893584d0b26f38ebaf78e4fbcaa15fca146c29a7b184d33",
+      "generation_receipt": "edit/generation/tokenhub-kling-v3/donning.json",
+      "task_id": "1317587621-WandVideo-67197f97e1674a0eaea661de2e58131b",
+      "nominal_seconds": 5,
+      "estimated_cny": 4.0,
+      "usage_tokens": 400000,
+      "used_seconds": 5,
+      "decision": "Used full nominal source duration; donning collar locally retouched with no deleted frames.",
+      "playback_rate": 1
+    },
+    {
+      "id": "walking",
+      "source": "public/dynamic/walking.mp4",
+      "sha256": "abe4fb963fc1402aee8c967ad563e79a30537a069c16d5d0f606529c8bf97ba3",
+      "generation_receipt": "edit/generation/tokenhub-kling-v3/walking.json",
+      "task_id": "1317587621-WandVideo-1087cd6cac944e7dad9b15d0efeefd16",
+      "nominal_seconds": 6,
+      "estimated_cny": 4.8,
+      "usage_tokens": 480000,
+      "used_seconds": 6,
+      "decision": "Used full nominal source duration; no speed change, crop or repeated source frames.",
+      "playback_rate": 1
+    },
+    {
+      "id": "settling",
+      "source": "public/dynamic/settling.mp4",
+      "sha256": "2ceca4705b15c42f3057e2e2e077bf8a52768df7e7f984faa98709dba4a83ffc",
+      "generation_receipt": "edit/generation/tokenhub-kling-v3/settling.json",
+      "task_id": "1317587621-WandVideo-112d8e4aeaa141b099a9aa9e45a94d2d",
+      "nominal_seconds": 4,
+      "estimated_cny": 3.2,
+      "usage_tokens": 320000,
+      "used_seconds": 4,
+      "decision": "Used full nominal source duration; no speed change, crop or repeated source frames.",
+      "playback_rate": 1
     }
   ],
-  "paid_source_nominal_seconds": 25,
-  "note": "Four failed generated videos deleted under owner authorization; deidentified official job receipts, source SHA256 and cost records retained. Only 0–3.5s of release is used, at original speed; no new TokenHub calls. Estimated historical 20 CNY is not refunded and actual bill is unverified.",
-  "selected_paid_source_seconds": 3.5,
-  "used_paid_source_seconds": 3.5,
+  "paid_source_nominal_seconds": 43,
+  "note": "Four new authorized jobs:18 nominal seconds,1440000 generation tokens,estimated14.4CNY. All18 nominal seconds used at original24fps; each source contains1 extra endpoint frame outside the purchased nominal duration. Old failed expense20CNY remains, historical old utilization3.5/25=14%. Overall paid nominal usage21.5/43=50%; do not call earlier expense recovered. Bill not independently reconciled.",
+  "selected_paid_source_seconds": 21.5,
+  "used_paid_source_seconds": 21.5,
   "all_historical_paid_nominal_use_ratio": 0.14,
-  "current_video_source_id": "6df7e5dc263fc16b"
+  "current_video_source_id": "ea17267aecbe5f2e",
+  "new_paid_nominal_seconds_used": 18,
+  "new_paid_nominal_use_ratio": 1,
+  "current_video_sha256": "460244146ac4aee9c2481719c35364f99b346344e516dcdd6fad4ce72e16ed14",
+  "current_video_duration": 32,
+  "all_paid_nominal_use_ratio": 0.5
 }

@@ -1,17 +1,54 @@
 {
-  "duration": 31.5,
-  "fps": 48.0,
+  "duration": 32.0,
+  "fps": 24.0,
   "resolution": {
     "width": 1080,
     "height": 1920
   },
-  "frame_count": 1512,
+  "frame_count": 768,
   "codec": "h264",
   "source": {
     "path": "C:\\Users\\spq\\Desktop\\贝强\\05_内容与视频\\04_社交媒体运营\\贝强抖音品牌动效\\out\\贝强_针织袜子鞋_品牌片.mp4",
-    "size_bytes": 36809794,
-    "mtime_ns": 1791691723563739800,
-    "source_id": "6df7e5dc263fc16b"
+    "size_bytes": 30534743,
+    "mtime_ns": 1791697622900851000,
+    "source_id": "ea17267aecbe5f2e",
+    "sha256": "460244146ac4aee9c2481719c35364f99b346344e516dcdd6fad4ce72e16ed14"
   },
-  "sha256": "11551f219882f1b72ead0ca6acad513a11a36f1dec139a98dc1da033aeceeff4"
+  "sampling": {
+    "strategy": "uniform",
+    "sample_count": 24,
+    "times": [
+      0.05,
+      1.437,
+      2.824,
+      4.211,
+      5.598,
+      6.985,
+      8.372,
+      9.759,
+      11.146,
+      12.533,
+      13.92,
+      15.307,
+      16.693,
+      18.08,
+      19.467,
+      20.854,
+      22.241,
+      23.628,
+      25.015,
+      26.402,
+      27.789,
+      29.176,
+      30.563,
+      31.95
+    ]
+  },
+  "sampled_input": {
+    "path": "C:\\Users\\spq\\Desktop\\贝强\\05_内容与视频\\04_社交媒体运营\\贝强抖音品牌动效\\edit\\render\\current.mp4",
+    "size_bytes": 30534743,
+    "mtime_ns": 1791697622900851000,
+    "source_id": "3045ac32160156c7",
+    "sha256": "460244146ac4aee9c2481719c35364f99b346344e516dcdd6fad4ce72e16ed14"
+  }
 }

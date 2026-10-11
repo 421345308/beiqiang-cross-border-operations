@@ -1,112 +1,84 @@
 {
-  "source_id": "6df7e5dc263fc16b",
-  "sha256": "11551f219882f1b72ead0ca6acad513a11a36f1dec139a98dc1da033aeceeff4",
-  "status": "sampled_content_review_complete_continuous_playback_and_listening_pending",
-  "review_evidence": {
-    "whole_film_uniform_samples": 20,
-    "action_times": [
-      11,
-      11.5,
-      12,
-      12.5,
-      13,
-      13.5,
-      14,
-      14.4
+  "status": "delivered_32s_visual_sampling_and_decoding_complete_listening_pending",
+  "film": "out/贝强_针织袜子鞋_品牌片.mp4",
+  "duration_seconds": 32,
+  "fps": 24,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "new_authorized_jobs": 4,
+  "new_paid_estimated_cny": 14.4,
+  "new_paid_nominal_seconds": 18,
+  "new_paid_nominal_seconds_used": 18,
+  "native_motion_seconds": 21.5,
+  "native_motion_ratio": 0.671875,
+  "frame_checks": {
+    "whole_film_sample_points": 24,
+    "cut_before_first_after_points": 27,
+    "action_points": 17,
+    "source_contact_points": 96,
+    "original_resolution_inspected": [
+      "opening 1.437",
+      "tactile 5.598",
+      "donning 12.1 and 13.2",
+      "release 16",
+      "walking 20",
+      "settling 22.5 and 23.5",
+      "closing 31.950"
     ],
-    "cuts_before_center_after": [
-      3,
-      5,
-      8,
-      11,
-      14.5,
-      18.5,
-      22,
-      24,
-      25.5
-    ],
-    "opened_original_resolution": [
-      0.05,
-      4.88,
-      5.12,
-      12.5,
-      14.4,
-      18.62,
-      22.12
+    "boundary": "Samples are not full continuous human playback; no listening capability available in current assistant input.",
+    "final_typography_original_points": [
+      1.437,
+      20.854,
+      22.241
     ]
   },
-  "observations": [
+  "repairs": [
     {
-      "range": [
-        0,
-        3
-      ],
-      "purpose": "brand and product-category recognition",
-      "observation": "Black complete shoe and 贝强/针织袜子鞋 appear from first frame; no stand-alone white fabric introduction."
+      "issue": "skin-colored slits invented inside lower knitted collar",
+      "action": "local adjacent-knit retouch; all 121 source frames retained",
+      "record": "../../knit-repair.json"
     },
     {
-      "range": [
-        3,
-        8
-      ],
-      "purpose": "identify visible black knit and sock-style opening",
-      "observation": "Black knit close-up followed by new rear collar view; ivory fabric is spatially behind the black shoe, not presented as shoe material."
-    },
-    {
-      "range": [
-        11,
-        14.5
-      ],
-      "purpose": "collar adjustment followed by release",
-      "observation": "Both trouser legs end at separate visible ankles/shoes. Pull loop/collar moves; at 14.4s fingertips visibly separate from loop. Caption names the actual purpose; no heel-entry claim."
-    },
-    {
-      "range": [
-        14.5,
-        18.5
-      ],
-      "purpose": "show lace-free pair from overhead view",
-      "observation": "Two shoe forms and two empty collar openings are visible; no hands or legs are composited."
-    },
-    {
-      "range": [
-        18.5,
-        24
-      ],
-      "purpose": "everyday wearing mood",
-      "observation": "Original-resolution city and seated photographs each show two trouser-leg/ankle/shoe connections. These are animated photographs, not natural walking footage."
-    },
-    {
-      "range": [
-        25.5,
-        31.5
-      ],
-      "purpose": "brand recall",
-      "observation": "Black pair rests on ivory fabric, type arrives in hierarchy and holds; warm white is environment."
+      "issue": "dark text loses strokes against moving glass doors and foliage",
+      "action": "walking editorial header, rest light text and upper gradient; no footage time or crop changes"
     }
   ],
-  "corrected_owner_issues": [
-    "Static hand photo removed and deleted",
-    "Missing-leg step removed wholesale and deleted; no crop/zoom rescue",
-    "Ambiguous white fabric opener and bridge removed and deleted"
+  "remaining_limits": [
+    "No continuous human visual playback or audio listening verified.",
+    "Rest shoe tip briefly reaches the source left edge during swing, with motion blur; legs remain visible and trackable.",
+    "Generated shoe knit and silhouette vary mildly between angles; no physical product performance validation."
   ],
-  "limits": [
-    "Sampling does not establish absence of every temporal artifact",
-    "Real-time continuous playback and listening were not completed",
-    "No native whole-video model review was performed",
-    "No commercial outcome or owner acceptance is claimed"
-  ],
-  "technical": {
-    "duration": 31.5,
-    "frames": 1512,
-    "fps": 48,
-    "resolution": [
-      1080,
-      1920
-    ],
-    "black_frames_reported": false,
-    "loudness_lufs": -16.3,
-    "true_peak_dbfs": -1.7
+  "kimi_review": {
+    "uses_existing_free_endpoint": true,
+    "payment_enabled": false,
+    "provided_token_plan_key_used": false,
+    "initial_three_calls_tokens": 63412,
+    "new_source_pair_calls_tokens": 84643,
+    "pre_typography_fix_film_call_tokens": 16374,
+    "total_free_tokens": 164429,
+    "free_remaining_expected": 470795,
+    "scope": "Kimi internally samples 6–8 frames per short source and 8 frames for full film; full film also given 24-point sheet. Final model review predates typography fix; no claim it audited the later file.",
+    "free_remaining_verified": 470795,
+    "quota_query_request_id": "641fde7f-a9eb-4559-8b99-297b705f81a6"
   },
-  "remaining_delivery_issues": []
+  "user_acceptance": false,
+  "publication": false,
+  "source": {
+    "path": "C:\\Users\\spq\\Desktop\\贝强\\05_内容与视频\\04_社交媒体运营\\贝强抖音品牌动效\\out\\贝强_针织袜子鞋_品牌片.mp4",
+    "size_bytes": 30534743,
+    "mtime_ns": 1791697622900851000,
+    "source_id": "ea17267aecbe5f2e",
+    "sha256": "460244146ac4aee9c2481719c35364f99b346344e516dcdd6fad4ce72e16ed14"
+  },
+  "audio_technical": {
+    "duration": 32,
+    "sample_rate": 48000,
+    "channels": 2,
+    "decoded_sample_values": 3072000,
+    "mean_volume_dbfs": -17.2,
+    "max_volume_dbfs": -1.8,
+    "listened": false
+  }
 }
