@@ -196,14 +196,19 @@ def aggregate():
         if v.get('at','')<l.get('at',''):v={}
         rows.append({'product_id':pid,'status':v.get('status',l.get('status','NOT_SUBMITTED')),'submission_status':l.get('status','NOT_SUBMITTED'),'public_status':v.get('public_status','NOT_CHECKED')})
     counts=dict(Counter(x['status']for x in rows));public=dict(Counter(x['public_status']for x in rows))
+    formal_complete=counts.get('FORMAL_PASS',0)==len(rows)
+    public_expected=len(rows)-len(scope['original_offline_ids'])
+    public_complete=public.get('PUBLIC_SIX_IMAGES_INTRO_FAQ_PASS',0)==public_expected and public.get('NOT_APPLICABLE_OFFLINE_DISPLAY_PRESERVED',0)==len(scope['original_offline_ids'])
     out={'asset_version':8,'at':now(),'authorized_count':len(rows),'counts':counts,'public_counts':public,'items':rows,'scope':['companyImage','companyDesc','companyFaqDesc'],'productTitle':'same original value explicitly preserved','historical_source_and_highlight_holds_unchanged':True}
+    out.update(formal_scope_complete=formal_complete,public_expected_count=public_expected,public_scope_complete=public_complete,completed_this_scope=formal_complete and public_complete)
     save(PHASE/'当前替换.json',out)
     m=load(BASE/'制作档案.json')
     if m.get('published_version')!=8:
         m['previous_completed_online_state']=m['online_state']
         m['previous_published_assets']={'asset_version':m.get('published_version',6),'assets':m['published_assets']}
         m['published_version']=8;m['published_assets']=copy.deepcopy(m['assets'])
-    m['online_state']={'asset_version':8,'state':'BATCH_REPLACEMENT_IN_PROGRESS','uploaded':True,'bank_evidence':'V8/bank.json','bank_pixels_evidence':'V8/bank_pixels.json','bound_product_count':counts.get('FORMAL_PASS',0),'authorized_product_count':len(rows),'public_pass_count':public.get('PUBLIC_SIX_IMAGES_INTRO_FAQ_PASS',0),'original_offline_display_preserved_count':public.get('NOT_APPLICABLE_OFFLINE_DISPLAY_PRESERVED',0),'current_state_evidence':'V8/当前替换.json','scope':'Six company images, introduction and general FAQ only; per-shoe highlights and sources preserved'}
+    state='COMPLETE_THIS_SCOPE' if formal_complete and public_complete else 'FORMAL_COMPLETE_PUBLIC_VERIFY_PENDING' if formal_complete else 'BATCH_REPLACEMENT_IN_PROGRESS'
+    m['online_state']={'asset_version':8,'state':state,'uploaded':True,'bank_evidence':'V8/bank.json','bank_pixels_evidence':'V8/bank_pixels.json','bound_product_count':counts.get('FORMAL_PASS',0),'authorized_product_count':len(rows),'public_pass_count':public.get('PUBLIC_SIX_IMAGES_INTRO_FAQ_PASS',0),'original_offline_display_preserved_count':public.get('NOT_APPLICABLE_OFFLINE_DISPLAY_PRESERVED',0),'current_state_evidence':'V8/当前替换.json','scope':'Six company images, introduction and general FAQ only; per-shoe highlights and sources preserved'}
     save(BASE/'制作档案.json',m)
     return {'counts':counts,'public_counts':public}
 def main():

@@ -66,10 +66,10 @@
     "uploaded": true,
     "bank_evidence": "V8/bank.json",
     "bank_pixels_evidence": "V8/bank_pixels.json",
-    "bound_product_count": 189,
+    "bound_product_count": 261,
     "authorized_product_count": 449,
     "public_pass_count": 81,
-    "original_offline_display_preserved_count": 0,
+    "original_offline_display_preserved_count": 1,
     "current_state_evidence": "V8/当前替换.json",
     "scope": "Six company images, introduction and general FAQ only; per-shoe highlights and sources preserved"
   },
@@ -1281,5 +1281,24 @@
         "illustrations": "Clearly identified process/packing examples, not SKU choices, completed customer work, inspection results or inventory."
       }
     }
+  },
+  "public_verification_service": {
+    "at": "2026-10-12T22:26:00.731711+00:00",
+    "state": "BROWSER_TRANSPORT_TIMEOUT_API_EXECUTION_CONTINUES",
+    "verified_public_count": 81,
+    "observed_failures": [
+      "16 normal page navigations: page frame-tree reads timed out",
+      "single fresh tab navigation timed out",
+      "single screenshot timed out and browser runtime reset",
+      "normal reconnect to existing tab still timed out"
+    ],
+    "attempted_normal_recovery": [
+      "Reduced concurrency to one tab",
+      "Closed only agent QA tabs and opened one fresh tab in the same browser",
+      "Reinitialized runtime and reconnected to the existing tab"
+    ],
+    "scope": "Remaining public-page QA only; does not block authorized API submission or formal readback",
+    "next_action": "Keep API execution running; resume exact-ID public checks when normal browser reads recover",
+    "authorization_unchanged": true
   }
 }

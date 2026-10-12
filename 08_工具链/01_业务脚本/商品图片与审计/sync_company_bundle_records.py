@@ -49,7 +49,7 @@ def main():
         states[pid]=state
     assert data['sources']==source and all(x['source_state']==source_states[x['id']]for x in data['products'])
     assert REG.read_bytes()==raw,'Registry changed during sync; start with fresh input'
-    data['updated_on']=op.now()[:10];op.save(REG,data)
+    data['updated_on']=op.datetime.now().astimezone().date().isoformat();op.save(REG,data)
     spec=importlib.util.spec_from_file_location('dossiers',op.ROOT/'08_工具链/06_工作区维护/product_dossiers.py');m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
     selected={**data,'products':[x for x in data['products']if x['id']in touched],'listings':[x for x in data['listings']if x['product_id']in touched]}
     for path,content in m.builds(selected).items():
