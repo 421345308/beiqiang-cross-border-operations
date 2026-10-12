@@ -1,7 +1,7 @@
 {
-  "prepared_at": "2026-10-11T16:04:42.380725+00:00",
-  "status": "OFFICIAL_BANK_READY_WAIT_REAL_SHOE_COPY_ACCEPTANCE",
-  "catalog_observed_at": "2026-10-11T15:40:54.654713+00:00",
+  "prepared_at": "2026-10-12T01:41:33.999947+00:00",
+  "status": "OWNER_ACCEPTED_COPY_ALL_APPLICABLE_COMPANY_IMAGES_AUTHORIZED",
+  "catalog_observed_at": "2026-10-12T01:38:53.799243+00:00",
   "scope_count": 455,
   "asset_version": 6,
   "target_assets": {
@@ -30,13 +30,21 @@
     "companyImage"
   ],
   "dependency": "原productDescType仅按各自当前Schema必要性携带；不更换产品详情/主图",
-  "condition": "先验收实款亮点FAQ；159条历史链接本期单列待修，源链接只读、离线重复款不发布。各拟绑定ID文案及适用公开呈现未闭环前不报工厂图替换完成。",
+  "condition": "实款文案已获负责人认可。159条历史链接明确授权仅替换共享公司图，不解除来源待修、不移植实款文案。保护源及离线重复链接排除；正式绑定与公开显示分别验收。",
   "execution": "各ID鲜读正式值和Schema；只写公司图字段；保全SKU、价格、库存、产品图和文字；提交、审核、正式绑定、公开显示及本地双改分开核",
   "online_state": {
+    "bank_images": 5,
+    "bank_evidence": "当前上传回执.json",
+    "bank_pixels_evidence": "图片银行像素核对.json",
+    "bound_product_count": 101,
+    "state": "BATCH_API_REPLACEMENT_IN_PROGRESS",
     "uploaded": true,
-    "uploaded_count": 5,
     "bound": false,
-    "binding_count": 0
+    "authorized_product_count": 449,
+    "positive_submission_count": 173,
+    "public_pass_count": 21,
+    "current_state_evidence": "当前替换.json",
+    "scope": "Only companyImage; historical source/copy not resolved"
   },
   "items": [
     {
@@ -82,7 +90,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601976088655",
@@ -127,7 +135,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601976114323",
@@ -172,7 +180,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601976139058",
@@ -217,7 +225,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601975986800",
@@ -262,7 +270,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601976101204",
@@ -307,7 +315,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601975924693",
@@ -352,7 +360,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601975911526",
@@ -397,7 +405,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601975969050",
@@ -442,7 +450,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601975906283",
@@ -487,7 +495,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601975826614",
@@ -532,7 +540,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601975844350",
@@ -577,7 +585,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601975843125",
@@ -622,7 +630,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601975753865",
@@ -667,7 +675,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601975774322",
@@ -712,7 +720,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601975754227",
@@ -757,7 +765,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601975638462",
@@ -802,7 +810,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601975631791",
@@ -847,7 +855,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601975454376",
@@ -892,7 +900,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601975500310",
@@ -937,7 +945,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601975285993",
@@ -982,7 +990,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601975313957",
@@ -1027,7 +1035,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601975178233",
@@ -1072,7 +1080,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601974978404",
@@ -1117,7 +1125,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601974946496",
@@ -1162,7 +1170,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601974939421",
@@ -1207,7 +1215,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601974917344",
@@ -1252,7 +1260,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601974859471",
@@ -1297,7 +1305,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601974857344",
@@ -1342,7 +1350,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601974740583",
@@ -1387,7 +1395,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601974755167",
@@ -1432,7 +1440,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601974689145",
@@ -1477,7 +1485,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601974271772",
@@ -1522,7 +1530,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601974617075",
@@ -1567,7 +1575,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601973978339",
@@ -1612,7 +1620,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601973995230",
@@ -1657,7 +1665,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601973831465",
@@ -1702,7 +1710,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601973797610",
@@ -1747,7 +1755,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601973772709",
@@ -1792,7 +1800,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601973842356",
@@ -1837,7 +1845,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601973854304",
@@ -1882,7 +1890,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601973747919",
@@ -1927,7 +1935,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601973869140",
@@ -1972,7 +1980,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601973784646",
@@ -2017,7 +2025,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601973838360",
@@ -2062,7 +2070,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601973741932",
@@ -2107,7 +2115,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601973792546",
@@ -2152,7 +2160,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601973808453",
@@ -2197,7 +2205,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601973736928",
@@ -2242,7 +2250,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601973814505",
@@ -2287,7 +2295,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601973769589",
@@ -2332,7 +2340,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601973806430",
@@ -2377,7 +2385,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601973846232",
@@ -2422,7 +2430,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601973876011",
@@ -2467,7 +2475,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601973794508",
@@ -2512,7 +2520,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601973749610",
@@ -2557,7 +2565,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601973823209",
@@ -2602,7 +2610,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601973850058",
@@ -2647,7 +2655,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601973841032",
@@ -2692,7 +2700,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601973730776",
@@ -2737,7 +2745,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601973753470",
@@ -2782,7 +2790,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601973821133",
@@ -2827,7 +2835,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601976084873",
@@ -2872,7 +2880,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "10000047392343",
@@ -2917,7 +2925,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "10000047216427",
@@ -2967,7 +2975,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601924755368",
@@ -3017,7 +3025,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939638522",
@@ -3062,7 +3070,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939608691",
@@ -3107,7 +3115,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939572948",
@@ -3152,7 +3160,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939701201",
@@ -3197,7 +3205,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "10000047307924",
@@ -3242,7 +3250,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "10000047208726",
@@ -3292,7 +3300,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939633580",
@@ -3337,7 +3345,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939669411",
@@ -3382,7 +3390,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939608686",
@@ -3427,7 +3435,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939619687",
@@ -3477,7 +3485,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939634522",
@@ -3522,7 +3530,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939736061",
@@ -3567,7 +3575,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939585913",
@@ -3612,7 +3620,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939606803",
@@ -3657,7 +3665,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939711161",
@@ -3702,7 +3710,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939654418",
@@ -3747,7 +3755,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939707196",
@@ -3792,7 +3800,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939635505",
@@ -3837,7 +3845,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601924792152",
@@ -3887,7 +3895,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "10000047198577",
@@ -3937,7 +3945,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "11000037600317",
@@ -3987,7 +3995,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939691301",
@@ -4032,7 +4040,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939658415",
@@ -4077,7 +4085,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939739115",
@@ -4122,7 +4130,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939666421",
@@ -4167,7 +4175,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939614689",
@@ -4212,7 +4220,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939727104",
@@ -4257,7 +4265,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939681367",
@@ -4302,7 +4310,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "10000047187673",
@@ -4352,7 +4360,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601924292931",
@@ -4402,7 +4410,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939606858",
@@ -4447,7 +4455,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939709217",
@@ -4492,7 +4500,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939650458",
@@ -4537,7 +4545,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939606805",
@@ -4582,7 +4590,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601973586995",
@@ -4627,7 +4635,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601973617634",
@@ -4672,7 +4680,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601973663435",
@@ -4717,7 +4725,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601973652504",
@@ -4762,7 +4770,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601973661443",
@@ -4807,7 +4815,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601973702206",
@@ -4852,7 +4860,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601973675393",
@@ -4897,7 +4905,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601973622603",
@@ -4942,7 +4950,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601973009551",
@@ -4987,7 +4995,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601972944790",
@@ -5032,7 +5040,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601972951733",
@@ -5077,7 +5085,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601972965417",
@@ -5122,7 +5130,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601969869242",
@@ -5167,7 +5175,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601969788941",
@@ -5212,7 +5220,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601969913308",
@@ -5257,7 +5265,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601969861694",
@@ -5302,7 +5310,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601969906452",
@@ -5347,7 +5355,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601969853888",
@@ -5392,7 +5400,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601969951162",
@@ -5437,7 +5445,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601969920294",
@@ -5482,7 +5490,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601969877983",
@@ -5527,7 +5535,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601969885846",
@@ -5572,7 +5580,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601969936536",
@@ -5617,7 +5625,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601970034464",
@@ -5662,7 +5670,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601970169467",
@@ -5707,7 +5715,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601970118386",
@@ -5752,7 +5760,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601970628659",
@@ -5797,7 +5805,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601970622736",
@@ -5842,7 +5850,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601970690721",
@@ -5887,7 +5895,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601970691438",
@@ -5932,7 +5940,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "10000047396313",
@@ -5977,7 +5985,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "10000047356491",
@@ -6022,7 +6030,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "10000047220568",
@@ -6072,7 +6080,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "10000047221334",
@@ -6122,7 +6130,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "10000047196608",
@@ -6172,7 +6180,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "10000047201716",
@@ -6222,7 +6230,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "10000047175212",
@@ -6272,7 +6280,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "10000047166193",
@@ -6322,7 +6330,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "10000047127570",
@@ -6367,7 +6375,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601943593293",
@@ -6417,7 +6425,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601943577329",
@@ -6467,7 +6475,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601943584343",
@@ -6517,7 +6525,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601969860254",
@@ -6562,7 +6570,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "OFFLINE_COPY_ONLY_NO_REPUBLISH"
+      "planned_status": "EXCLUDED_PROTECTED_OR_OFFLINE"
     },
     {
       "product_id": "1601969707634",
@@ -6607,7 +6615,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "OFFLINE_COPY_ONLY_NO_REPUBLISH"
+      "planned_status": "EXCLUDED_PROTECTED_OR_OFFLINE"
     },
     {
       "product_id": "1601969810495",
@@ -6652,7 +6660,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "OFFLINE_COPY_ONLY_NO_REPUBLISH"
+      "planned_status": "EXCLUDED_PROTECTED_OR_OFFLINE"
     },
     {
       "product_id": "1601969872083",
@@ -6697,7 +6705,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "OFFLINE_COPY_ONLY_NO_REPUBLISH"
+      "planned_status": "EXCLUDED_PROTECTED_OR_OFFLINE"
     },
     {
       "product_id": "1601969526580",
@@ -6747,7 +6755,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "OFFLINE_COPY_ONLY_NO_REPUBLISH"
+      "planned_status": "EXCLUDED_PROTECTED_OR_OFFLINE"
     },
     {
       "product_id": "1601957075451",
@@ -6792,7 +6800,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601943767266",
@@ -6837,7 +6845,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601957629892",
@@ -6882,7 +6890,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601943753087",
@@ -6932,7 +6940,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943607919",
@@ -6982,7 +6990,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943583746",
@@ -7032,7 +7040,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601943650718",
@@ -7082,7 +7090,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943650395",
@@ -7132,7 +7140,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601943670292",
@@ -7182,7 +7190,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601943543826",
@@ -7232,7 +7240,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943690007",
@@ -7282,7 +7290,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943592466",
@@ -7332,7 +7340,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943649254",
@@ -7382,7 +7390,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943558633",
@@ -7432,7 +7440,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943654096",
@@ -7482,7 +7490,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943614355",
@@ -7532,7 +7540,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943711519",
@@ -7577,7 +7585,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943670945",
@@ -7622,7 +7630,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943546735",
@@ -7672,7 +7680,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943582498",
@@ -7722,7 +7730,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601958363305",
@@ -7767,7 +7775,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601943597447",
@@ -7817,7 +7825,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943529870",
@@ -7867,7 +7875,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943535810",
@@ -7917,7 +7925,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943541766",
@@ -7967,7 +7975,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943635041",
@@ -8017,7 +8025,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943546524",
@@ -8067,7 +8075,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943607120",
@@ -8117,7 +8125,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601943493822",
@@ -8167,7 +8175,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943555428",
@@ -8217,7 +8225,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601943561380",
@@ -8267,7 +8275,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601943517454",
@@ -8317,7 +8325,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943523535",
@@ -8367,7 +8375,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601943543192",
@@ -8417,7 +8425,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943574061",
@@ -8467,7 +8475,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943484576",
@@ -8517,7 +8525,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943542214",
@@ -8567,7 +8575,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943445780",
@@ -8617,7 +8625,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943531277",
@@ -8667,7 +8675,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943406882",
@@ -8717,7 +8725,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943513336",
@@ -8767,7 +8775,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943501378",
@@ -8817,7 +8825,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943479449",
@@ -8867,7 +8875,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943520149",
@@ -8917,7 +8925,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943501309",
@@ -8967,7 +8975,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943434630",
@@ -9017,7 +9025,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943411769",
@@ -9067,7 +9075,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943422371",
@@ -9117,7 +9125,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943451227",
@@ -9167,7 +9175,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943332965",
@@ -9217,7 +9225,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943348656",
@@ -9267,7 +9275,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943463020",
@@ -9317,7 +9325,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943408495",
@@ -9367,7 +9375,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943439124",
@@ -9417,7 +9425,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943364813",
@@ -9467,7 +9475,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943444273",
@@ -9517,7 +9525,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943353831",
@@ -9567,7 +9575,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943335751",
@@ -9617,7 +9625,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943421458",
@@ -9667,7 +9675,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943397351",
@@ -9717,7 +9725,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943405519",
@@ -9767,7 +9775,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943467198",
@@ -9812,7 +9820,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943335928",
@@ -9857,7 +9865,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943474137",
@@ -9907,7 +9915,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601943419438",
@@ -9957,7 +9965,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601943321794",
@@ -10007,7 +10015,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601943459958",
@@ -10057,7 +10065,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943484872",
@@ -10107,7 +10115,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943583193",
@@ -10157,7 +10165,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943312845",
@@ -10202,7 +10210,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943450234",
@@ -10252,7 +10260,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943305914",
@@ -10302,7 +10310,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601943493004",
@@ -10352,7 +10360,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601943514625",
@@ -10402,7 +10410,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601943535517",
@@ -10452,7 +10460,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601943542329",
@@ -10502,7 +10510,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943502604",
@@ -10552,7 +10560,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943481648",
@@ -10602,7 +10610,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943417982",
@@ -10652,7 +10660,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943514448",
@@ -10702,7 +10710,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943527175",
@@ -10752,7 +10760,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601958239898",
@@ -10797,7 +10805,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939641542",
@@ -10842,7 +10850,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601943653995",
@@ -10887,7 +10895,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601957633351",
@@ -10932,7 +10940,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601943593578",
@@ -10982,7 +10990,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943662995",
@@ -11027,7 +11035,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943703336",
@@ -11072,7 +11080,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943527861",
@@ -11117,7 +11125,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943574507",
@@ -11162,7 +11170,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943545775",
@@ -11207,7 +11215,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943558646",
@@ -11252,7 +11260,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943673716",
@@ -11297,7 +11305,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601939599850",
@@ -11342,7 +11350,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939625627",
@@ -11392,7 +11400,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601943665060",
@@ -11437,7 +11445,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601957955917",
@@ -11482,7 +11490,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601956115029",
@@ -11527,7 +11535,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939725201",
@@ -11572,7 +11580,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939703288",
@@ -11617,7 +11625,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601943607904",
@@ -11662,7 +11670,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943694473",
@@ -11707,7 +11715,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601957664983",
@@ -11752,7 +11760,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601957361351",
@@ -11797,7 +11805,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601943608942",
@@ -11842,7 +11850,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943641737",
@@ -11887,7 +11895,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943621884",
@@ -11932,7 +11940,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943530673",
@@ -11977,7 +11985,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943614836",
@@ -12022,7 +12030,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943658940",
@@ -12067,7 +12075,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943497861",
@@ -12112,7 +12120,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943783263",
@@ -12157,7 +12165,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943799127",
@@ -12202,7 +12210,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943708668",
@@ -12247,7 +12255,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943734532",
@@ -12292,7 +12300,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943748344",
@@ -12337,7 +12345,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943717639",
@@ -12382,7 +12390,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943703750",
@@ -12427,7 +12435,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943738486",
@@ -12472,7 +12480,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943779211",
@@ -12517,7 +12525,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943793113",
@@ -12562,7 +12570,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943651966",
@@ -12607,7 +12615,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943764325",
@@ -12652,7 +12660,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943682804",
@@ -12697,7 +12705,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943761346",
@@ -12742,7 +12750,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943700660",
@@ -12787,7 +12795,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943727538",
@@ -12832,7 +12840,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943755354",
@@ -12877,7 +12885,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943705620",
@@ -12922,7 +12930,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943790138",
@@ -12967,7 +12975,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943773221",
@@ -13012,7 +13020,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943651773",
@@ -13057,7 +13065,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943721497",
@@ -13102,7 +13110,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943771190",
@@ -13147,7 +13155,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943750198",
@@ -13192,7 +13200,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943700590",
@@ -13237,7 +13245,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943768215",
@@ -13282,7 +13290,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943778191",
@@ -13327,7 +13335,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943751252",
@@ -13372,7 +13380,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943775160",
@@ -13417,7 +13425,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943784098",
@@ -13462,7 +13470,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943737356",
@@ -13507,7 +13515,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943672753",
@@ -13552,7 +13560,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943741370",
@@ -13597,7 +13605,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943784084",
@@ -13642,7 +13650,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943638954",
@@ -13687,7 +13695,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943687648",
@@ -13732,7 +13740,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943664760",
@@ -13777,7 +13785,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943742273",
@@ -13822,7 +13830,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943653819",
@@ -13867,7 +13875,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943710448",
@@ -13912,7 +13920,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943660717",
@@ -13957,7 +13965,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943766117",
@@ -14002,7 +14010,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943767092",
@@ -14047,7 +14055,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943774082",
@@ -14092,7 +14100,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943639863",
@@ -14137,7 +14145,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943633918",
@@ -14182,7 +14190,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943767083",
@@ -14227,7 +14235,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943677652",
@@ -14272,7 +14280,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943649788",
@@ -14317,7 +14325,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943607995",
@@ -14362,7 +14370,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943773037",
@@ -14407,7 +14415,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943670678",
@@ -14452,7 +14460,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943660642",
@@ -14497,7 +14505,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943660658",
@@ -14542,7 +14550,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943687504",
@@ -14587,7 +14595,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943723312",
@@ -14632,7 +14640,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943639708",
@@ -14677,7 +14685,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943747024",
@@ -14722,7 +14730,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943620678",
@@ -14767,7 +14775,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943686274",
@@ -14812,7 +14820,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943674209",
@@ -14857,7 +14865,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943677234",
@@ -14902,7 +14910,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943654301",
@@ -14947,7 +14955,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943620588",
@@ -14992,7 +15000,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943627431",
@@ -15037,7 +15045,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943561786",
@@ -15082,7 +15090,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943568763",
@@ -15127,7 +15135,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943680112",
@@ -15172,7 +15180,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943539818",
@@ -15217,7 +15225,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943665138",
@@ -15262,7 +15270,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943544741",
@@ -15307,7 +15315,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943651120",
@@ -15352,7 +15360,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601939691342",
@@ -15397,7 +15405,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939679363",
@@ -15442,7 +15450,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601943695412",
@@ -15487,7 +15495,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601939585904",
@@ -15532,7 +15540,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601943558469",
@@ -15577,7 +15585,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601943622296",
@@ -15622,7 +15630,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "1601956046603",
@@ -15667,7 +15675,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601957092413",
@@ -15712,7 +15720,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939659415",
@@ -15762,7 +15770,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939625569",
@@ -15807,7 +15815,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601958195527",
@@ -15852,7 +15860,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939628529",
@@ -15902,7 +15910,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601957529565",
@@ -15947,7 +15955,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939667426",
@@ -15992,7 +16000,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601957079462",
@@ -16037,7 +16045,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939589890",
@@ -16082,7 +16090,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601959746415",
@@ -16127,7 +16135,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601959878246",
@@ -16172,7 +16180,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601959231056",
@@ -16222,7 +16230,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601958993646",
@@ -16272,7 +16280,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601957778956",
@@ -16317,7 +16325,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601958022991",
@@ -16362,7 +16370,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601957855049",
@@ -16407,7 +16415,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601957514145",
@@ -16452,7 +16460,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601958770867",
@@ -16497,7 +16505,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601958260477",
@@ -16542,7 +16550,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601957404574",
@@ -16587,7 +16595,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601957388768",
@@ -16632,7 +16640,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601958865699",
@@ -16677,7 +16685,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601957476136",
@@ -16722,7 +16730,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601957502919",
@@ -16767,7 +16775,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601957577249",
@@ -16812,7 +16820,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601957061462",
@@ -16857,7 +16865,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939655430",
@@ -16902,7 +16910,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939616747",
@@ -16947,7 +16955,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939589876",
@@ -16992,7 +17000,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939743040",
@@ -17037,7 +17045,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939709218",
@@ -17082,7 +17090,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939721228",
@@ -17127,7 +17135,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939720204",
@@ -17172,7 +17180,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939659468",
@@ -17217,7 +17225,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939714238",
@@ -17262,7 +17270,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939636508",
@@ -17307,7 +17315,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939615744",
@@ -17352,7 +17360,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939751016",
@@ -17397,7 +17405,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939573998",
@@ -17442,7 +17450,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939663432",
@@ -17487,7 +17495,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939675350",
@@ -17532,7 +17540,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939751023",
@@ -17577,7 +17585,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939626612",
@@ -17622,7 +17630,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939745065",
@@ -17667,7 +17675,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939641581",
@@ -17712,7 +17720,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939661419",
@@ -17757,7 +17765,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939721165",
@@ -17802,7 +17810,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939691340",
@@ -17847,7 +17855,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939665367",
@@ -17892,7 +17900,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939593839",
@@ -17937,7 +17945,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939697271",
@@ -17982,7 +17990,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939651515",
@@ -18027,7 +18035,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939722196",
@@ -18072,7 +18080,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939672381",
@@ -18117,7 +18125,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939607770",
@@ -18162,7 +18170,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939749045",
@@ -18207,7 +18215,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939734070",
@@ -18252,7 +18260,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939700200",
@@ -18297,7 +18305,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939738037",
@@ -18342,7 +18350,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939747001",
@@ -18387,7 +18395,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939705262",
@@ -18432,7 +18440,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939693331",
@@ -18482,7 +18490,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939754004",
@@ -18527,7 +18535,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939726170",
@@ -18572,7 +18580,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939660427",
@@ -18617,7 +18625,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939712176",
@@ -18662,7 +18670,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939735063",
@@ -18707,7 +18715,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939631570",
@@ -18752,7 +18760,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939692338",
@@ -18797,7 +18805,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939616762",
@@ -18842,7 +18850,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939684371",
@@ -18887,7 +18895,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939722180",
@@ -18932,7 +18940,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939612707",
@@ -18977,7 +18985,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939733108",
@@ -19022,7 +19030,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939752005",
@@ -19067,7 +19075,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939590957",
@@ -19112,7 +19120,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939616754",
@@ -19157,7 +19165,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939712249",
@@ -19202,7 +19210,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939625613",
@@ -19247,7 +19255,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939602873",
@@ -19292,7 +19300,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939695286",
@@ -19337,7 +19345,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "10000043991998",
@@ -19387,7 +19395,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "10000044041008",
@@ -19437,7 +19445,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "10000042821848",
@@ -19482,7 +19490,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "10000044024484",
@@ -19532,7 +19540,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "10000046705043",
@@ -19582,7 +19590,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "10000043201799",
@@ -19632,7 +19640,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601924347721",
@@ -19682,7 +19690,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601815020244",
@@ -19732,7 +19740,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "10000046439033",
@@ -19782,7 +19790,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "12000003229472",
@@ -19827,7 +19835,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "DEFERRED_SOURCE_REPAIR"
+      "planned_status": "AUTHORIZED_HISTORICAL_COMPANY_ONLY"
     },
     {
       "product_id": "10000046653813",
@@ -19877,7 +19885,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "10000044041031",
@@ -19927,7 +19935,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "10000044034049",
@@ -19977,7 +19985,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "10000044028277",
@@ -20027,7 +20035,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "10000044011929",
@@ -20077,7 +20085,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "10000044021584",
@@ -20127,7 +20135,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "10000044007878",
@@ -20177,7 +20185,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "10000044004948",
@@ -20227,7 +20235,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "10000043763325",
@@ -20277,7 +20285,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "10000043744505",
@@ -20327,7 +20335,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "10000043732626",
@@ -20377,7 +20385,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "10000043725883",
@@ -20427,7 +20435,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "10000043200726",
@@ -20477,7 +20485,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "10000042896165",
@@ -20522,7 +20530,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601924732369",
@@ -20572,7 +20580,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601939683302",
@@ -20617,7 +20625,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601839105416",
@@ -20667,7 +20675,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601924345456",
@@ -20717,7 +20725,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601839073314",
@@ -20767,7 +20775,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601839062659",
@@ -20817,7 +20825,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601838963947",
@@ -20867,7 +20875,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601839050756",
@@ -20917,7 +20925,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601825160204",
@@ -20967,7 +20975,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601825074604",
@@ -21018,7 +21026,7 @@
       "state": "READ_ONLY_SOURCE_PROTECTED",
       "company_binding_receipt": null,
       "protection_source": "商品生命周期SOP §6.1；BQ009源链接永久只读记录",
-      "planned_status": "READ_ONLY_SOURCE_PROTECTED"
+      "planned_status": "EXCLUDED_PROTECTED_OR_OFFLINE"
     },
     {
       "product_id": "1601825021825",
@@ -21068,7 +21076,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601825070472",
@@ -21118,7 +21126,7 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     },
     {
       "product_id": "1601814931739",
@@ -21168,15 +21176,15 @@
       ],
       "state": "WAIT_FULL_BUYER_COPY_THEN_FRESH_SCHEMA",
       "company_binding_receipt": null,
-      "planned_status": "WAIT_APPLICABLE_PUBLIC_TEXT_CHECK_AND_FRESH_SCHEMA"
+      "planned_status": "AUTHORIZED_REAL_SHOE_COMPANY_IMAGES"
     }
   ],
   "protected_ids": [
     "1601825074604"
   ],
-  "candidate_write_count": 290,
-  "scope_decision_at": "2026-10-11T17:29:42.621233+00:00",
-  "owner_scope": "先验收实款，159条单列待修",
+  "candidate_write_count": 449,
+  "scope_decision_at": "2026-10-12",
+  "owner_scope": "实款文案认可；共享工厂图替换包含159条历史链接；历史鞋款事实和文案仍待修",
   "eligible_ids": [
     "10000042821848",
     "10000042896165",
@@ -21215,6 +21223,7 @@
     "10000047392343",
     "10000047396313",
     "11000037600317",
+    "12000003229472",
     "1601814931739",
     "1601815020244",
     "1601825021825",
@@ -21328,22 +21337,180 @@
     "1601939752005",
     "1601939754004",
     "1601943305914",
+    "1601943312845",
     "1601943321794",
+    "1601943332965",
+    "1601943335751",
+    "1601943335928",
+    "1601943348656",
+    "1601943353831",
+    "1601943364813",
+    "1601943397351",
+    "1601943405519",
+    "1601943406882",
+    "1601943408495",
+    "1601943411769",
+    "1601943417982",
     "1601943419438",
+    "1601943421458",
+    "1601943422371",
+    "1601943434630",
+    "1601943439124",
+    "1601943444273",
+    "1601943445780",
+    "1601943450234",
+    "1601943451227",
+    "1601943459958",
+    "1601943463020",
+    "1601943467198",
     "1601943474137",
+    "1601943479449",
+    "1601943481648",
+    "1601943484576",
+    "1601943484872",
     "1601943493004",
+    "1601943493822",
+    "1601943497861",
+    "1601943501309",
+    "1601943501378",
+    "1601943502604",
+    "1601943513336",
+    "1601943514448",
     "1601943514625",
+    "1601943517454",
+    "1601943520149",
     "1601943523535",
+    "1601943527175",
+    "1601943527861",
+    "1601943529870",
+    "1601943530673",
+    "1601943531277",
     "1601943535517",
+    "1601943535810",
+    "1601943539818",
+    "1601943541766",
+    "1601943542214",
+    "1601943542329",
+    "1601943543192",
+    "1601943543826",
+    "1601943544741",
+    "1601943545775",
+    "1601943546524",
+    "1601943546735",
     "1601943555428",
+    "1601943558469",
+    "1601943558633",
+    "1601943558646",
     "1601943561380",
+    "1601943561786",
+    "1601943568763",
+    "1601943574061",
+    "1601943574507",
     "1601943577329",
+    "1601943582498",
+    "1601943583193",
     "1601943583746",
     "1601943584343",
+    "1601943592466",
     "1601943593293",
+    "1601943593578",
+    "1601943597447",
     "1601943607120",
+    "1601943607904",
+    "1601943607919",
+    "1601943607995",
+    "1601943608942",
+    "1601943614355",
+    "1601943614836",
+    "1601943620588",
+    "1601943620678",
+    "1601943621884",
+    "1601943622296",
+    "1601943627431",
+    "1601943633918",
+    "1601943635041",
+    "1601943638954",
+    "1601943639708",
+    "1601943639863",
+    "1601943641737",
+    "1601943649254",
+    "1601943649788",
     "1601943650395",
+    "1601943650718",
+    "1601943651120",
+    "1601943651773",
+    "1601943651966",
+    "1601943653819",
+    "1601943653995",
+    "1601943654096",
+    "1601943654301",
+    "1601943658940",
+    "1601943660642",
+    "1601943660658",
+    "1601943660717",
+    "1601943662995",
+    "1601943664760",
+    "1601943665060",
+    "1601943665138",
     "1601943670292",
+    "1601943670678",
+    "1601943670945",
+    "1601943672753",
+    "1601943673716",
+    "1601943674209",
+    "1601943677234",
+    "1601943677652",
+    "1601943680112",
+    "1601943682804",
+    "1601943686274",
+    "1601943687504",
+    "1601943687648",
+    "1601943690007",
+    "1601943694473",
+    "1601943695412",
+    "1601943700590",
+    "1601943700660",
+    "1601943703336",
+    "1601943703750",
+    "1601943705620",
+    "1601943708668",
+    "1601943710448",
+    "1601943711519",
+    "1601943717639",
+    "1601943721497",
+    "1601943723312",
+    "1601943727538",
+    "1601943734532",
+    "1601943737356",
+    "1601943738486",
+    "1601943741370",
+    "1601943742273",
+    "1601943747024",
+    "1601943748344",
+    "1601943750198",
+    "1601943751252",
+    "1601943753087",
+    "1601943755354",
+    "1601943761346",
+    "1601943764325",
+    "1601943766117",
+    "1601943767083",
+    "1601943767092",
+    "1601943767266",
+    "1601943768215",
+    "1601943771190",
+    "1601943773037",
+    "1601943773221",
+    "1601943774082",
+    "1601943775160",
+    "1601943778191",
+    "1601943779211",
+    "1601943783263",
+    "1601943784084",
+    "1601943784098",
+    "1601943790138",
+    "1601943793113",
+    "1601943799127",
     "1601956046603",
     "1601956115029",
     "1601957061462",
@@ -21470,167 +21637,6 @@
     "1601976190044"
   ],
   "excluded_ids": {
-    "source_pending": [
-      "12000003229472",
-      "1601943312845",
-      "1601943332965",
-      "1601943335751",
-      "1601943335928",
-      "1601943348656",
-      "1601943353831",
-      "1601943364813",
-      "1601943397351",
-      "1601943405519",
-      "1601943406882",
-      "1601943408495",
-      "1601943411769",
-      "1601943417982",
-      "1601943421458",
-      "1601943422371",
-      "1601943434630",
-      "1601943439124",
-      "1601943444273",
-      "1601943445780",
-      "1601943450234",
-      "1601943451227",
-      "1601943459958",
-      "1601943463020",
-      "1601943467198",
-      "1601943479449",
-      "1601943481648",
-      "1601943484576",
-      "1601943484872",
-      "1601943493822",
-      "1601943497861",
-      "1601943501309",
-      "1601943501378",
-      "1601943502604",
-      "1601943513336",
-      "1601943514448",
-      "1601943517454",
-      "1601943520149",
-      "1601943527175",
-      "1601943527861",
-      "1601943529870",
-      "1601943530673",
-      "1601943531277",
-      "1601943535810",
-      "1601943539818",
-      "1601943541766",
-      "1601943542214",
-      "1601943542329",
-      "1601943543192",
-      "1601943543826",
-      "1601943544741",
-      "1601943545775",
-      "1601943546524",
-      "1601943546735",
-      "1601943558469",
-      "1601943558633",
-      "1601943558646",
-      "1601943561786",
-      "1601943568763",
-      "1601943574061",
-      "1601943574507",
-      "1601943582498",
-      "1601943583193",
-      "1601943592466",
-      "1601943593578",
-      "1601943597447",
-      "1601943607904",
-      "1601943607919",
-      "1601943607995",
-      "1601943608942",
-      "1601943614355",
-      "1601943614836",
-      "1601943620588",
-      "1601943620678",
-      "1601943621884",
-      "1601943622296",
-      "1601943627431",
-      "1601943633918",
-      "1601943635041",
-      "1601943638954",
-      "1601943639708",
-      "1601943639863",
-      "1601943641737",
-      "1601943649254",
-      "1601943649788",
-      "1601943650718",
-      "1601943651120",
-      "1601943651773",
-      "1601943651966",
-      "1601943653819",
-      "1601943653995",
-      "1601943654096",
-      "1601943654301",
-      "1601943658940",
-      "1601943660642",
-      "1601943660658",
-      "1601943660717",
-      "1601943662995",
-      "1601943664760",
-      "1601943665060",
-      "1601943665138",
-      "1601943670678",
-      "1601943670945",
-      "1601943672753",
-      "1601943673716",
-      "1601943674209",
-      "1601943677234",
-      "1601943677652",
-      "1601943680112",
-      "1601943682804",
-      "1601943686274",
-      "1601943687504",
-      "1601943687648",
-      "1601943690007",
-      "1601943694473",
-      "1601943695412",
-      "1601943700590",
-      "1601943700660",
-      "1601943703336",
-      "1601943703750",
-      "1601943705620",
-      "1601943708668",
-      "1601943710448",
-      "1601943711519",
-      "1601943717639",
-      "1601943721497",
-      "1601943723312",
-      "1601943727538",
-      "1601943734532",
-      "1601943737356",
-      "1601943738486",
-      "1601943741370",
-      "1601943742273",
-      "1601943747024",
-      "1601943748344",
-      "1601943750198",
-      "1601943751252",
-      "1601943753087",
-      "1601943755354",
-      "1601943761346",
-      "1601943764325",
-      "1601943766117",
-      "1601943767083",
-      "1601943767092",
-      "1601943767266",
-      "1601943768215",
-      "1601943771190",
-      "1601943773037",
-      "1601943773221",
-      "1601943774082",
-      "1601943775160",
-      "1601943778191",
-      "1601943779211",
-      "1601943783263",
-      "1601943784084",
-      "1601943784098",
-      "1601943790138",
-      "1601943793113",
-      "1601943799127"
-    ],
     "readonly_source": [
       "1601825074604"
     ],
@@ -21643,5 +21649,172 @@
     ]
   },
   "bank_evidence": "当前上传回执.json",
-  "bank_pixels_evidence": "图片银行像素核对.json"
+  "bank_pixels_evidence": "图片银行像素核对.json",
+  "owner_copy_accepted": true,
+  "owner_authorization": {
+    "date": "2026-10-12",
+    "statement": "实款文案我认可，继续处理那8条关键词差异，然后开始替换所有产品的工厂详情图，包括那159条历史链接",
+    "scope": "companyImage only for real-shoe and 159 historical links; historical shoe-copy/source repair remains deferred"
+  },
+  "historical_company_only_ids": [
+    "12000003229472",
+    "1601943312845",
+    "1601943332965",
+    "1601943335751",
+    "1601943335928",
+    "1601943348656",
+    "1601943353831",
+    "1601943364813",
+    "1601943397351",
+    "1601943405519",
+    "1601943406882",
+    "1601943408495",
+    "1601943411769",
+    "1601943417982",
+    "1601943421458",
+    "1601943422371",
+    "1601943434630",
+    "1601943439124",
+    "1601943444273",
+    "1601943445780",
+    "1601943450234",
+    "1601943451227",
+    "1601943459958",
+    "1601943463020",
+    "1601943467198",
+    "1601943479449",
+    "1601943481648",
+    "1601943484576",
+    "1601943484872",
+    "1601943493822",
+    "1601943497861",
+    "1601943501309",
+    "1601943501378",
+    "1601943502604",
+    "1601943513336",
+    "1601943514448",
+    "1601943517454",
+    "1601943520149",
+    "1601943527175",
+    "1601943527861",
+    "1601943529870",
+    "1601943530673",
+    "1601943531277",
+    "1601943535810",
+    "1601943539818",
+    "1601943541766",
+    "1601943542214",
+    "1601943542329",
+    "1601943543192",
+    "1601943543826",
+    "1601943544741",
+    "1601943545775",
+    "1601943546524",
+    "1601943546735",
+    "1601943558469",
+    "1601943558633",
+    "1601943558646",
+    "1601943561786",
+    "1601943568763",
+    "1601943574061",
+    "1601943574507",
+    "1601943582498",
+    "1601943583193",
+    "1601943592466",
+    "1601943593578",
+    "1601943597447",
+    "1601943607904",
+    "1601943607919",
+    "1601943607995",
+    "1601943608942",
+    "1601943614355",
+    "1601943614836",
+    "1601943620588",
+    "1601943620678",
+    "1601943621884",
+    "1601943622296",
+    "1601943627431",
+    "1601943633918",
+    "1601943635041",
+    "1601943638954",
+    "1601943639708",
+    "1601943639863",
+    "1601943641737",
+    "1601943649254",
+    "1601943649788",
+    "1601943650718",
+    "1601943651120",
+    "1601943651773",
+    "1601943651966",
+    "1601943653819",
+    "1601943653995",
+    "1601943654096",
+    "1601943654301",
+    "1601943658940",
+    "1601943660642",
+    "1601943660658",
+    "1601943660717",
+    "1601943662995",
+    "1601943664760",
+    "1601943665060",
+    "1601943665138",
+    "1601943670678",
+    "1601943670945",
+    "1601943672753",
+    "1601943673716",
+    "1601943674209",
+    "1601943677234",
+    "1601943677652",
+    "1601943680112",
+    "1601943682804",
+    "1601943686274",
+    "1601943687504",
+    "1601943687648",
+    "1601943690007",
+    "1601943694473",
+    "1601943695412",
+    "1601943700590",
+    "1601943700660",
+    "1601943703336",
+    "1601943703750",
+    "1601943705620",
+    "1601943708668",
+    "1601943710448",
+    "1601943711519",
+    "1601943717639",
+    "1601943721497",
+    "1601943723312",
+    "1601943727538",
+    "1601943734532",
+    "1601943737356",
+    "1601943738486",
+    "1601943741370",
+    "1601943742273",
+    "1601943747024",
+    "1601943748344",
+    "1601943750198",
+    "1601943751252",
+    "1601943753087",
+    "1601943755354",
+    "1601943761346",
+    "1601943764325",
+    "1601943766117",
+    "1601943767083",
+    "1601943767092",
+    "1601943767266",
+    "1601943768215",
+    "1601943771190",
+    "1601943773037",
+    "1601943773221",
+    "1601943774082",
+    "1601943775160",
+    "1601943778191",
+    "1601943779211",
+    "1601943783263",
+    "1601943784084",
+    "1601943784098",
+    "1601943790138",
+    "1601943793113",
+    "1601943799127"
+  ]
 }

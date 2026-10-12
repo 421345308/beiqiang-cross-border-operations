@@ -30,12 +30,16 @@ def main():
  ids=a.ids.split(',');assert len(ids)==len(set(ids)) and all(x.isdigit()for x in ids)
  for pid in ids:
   assert pid in prep['eligible_ids'] and pid not in buyer.PROTECTED_IDS
-  c=COPY/pid;verification=load(c/'verification.json');copy=load(c/'copy.json')
-  assert verification['status']=='FORMAL_PASS','Current copy must pass before preparing replacement for this ID'
+  c=COPY/pid;verification=load(c/'verification.json') if (c/'verification.json').exists() else None
+  copy=load(c/'copy.json') if (c/'copy.json').exists() else None
+  historical=pid in prep.get('historical_company_only_ids',[])
+  assert prep.get('owner_copy_accepted') is True
+  assert historical or (verification and (verification.get('status')=='FORMAL_PASS' or verification.get('target_copy_status')=='TARGET_FORMAL_PASS')),'Only owner-accepted real copy or explicitly authorized historical company-only scope'
   folder=FACTORY/'商品'/pid;folder.mkdir(parents=True,exist_ok=True)
   got=read_only_call(api,cfg,'alibaba.icbu.product.get',{'product_id':pid,'language':'ENGLISH'});p=got['product'];save(folder/'before_get.json',got)
-  assert p['status']=='approved' and p['display']=='Y'
-  assert buyer.apostrophe_equivalent(buyer.formal_copy(p)['highlights'],copy['highlights']) and buyer.faq_pairs_equivalent(buyer.formal_copy(p)['faq'],copy['faq'])
+  assert p['status']=='approved' and p['display'] in ('Y','N')
+  if not historical:
+   assert buyer.apostrophe_equivalent(buyer.formal_copy(p)['highlights'],copy['highlights']) and buyer.faq_pairs_equivalent(buyer.formal_copy(p)['faq'],copy['faq'])
   rendered=read_only_call(api,cfg,'alibaba.icbu.product.schema.render',{'param_product_top_publish_request':{'product_id':int(pid),'cat_id':int(p['category_id']),'language':'en_US'}});save(folder/'before_render.json',rendered);assert rendered.get('data'),'Wait current editable Schema'
   schema=E.fromstring(rendered['data']);company=schema.find("./field[@id='companyImage']");assert company is not None
   options={int(x.get('value')):x.get('displayName')for x in company.findall("./fields/field[@id='gallery']/options/option")};assert all(options.get(i)==name for _,i,name in ROLES)
@@ -45,13 +49,17 @@ def main():
   assert {x.get('id')for x in root.findall('./field')}=={'companyImage'}
   current=folder/'current_schema.xml';current.write_text(rendered['data'],encoding='utf8');payload=folder/'payload.xml';payload.write_text(E.tostring(root,encoding='unicode'),encoding='utf8')
   rel=lambda x:x.relative_to(ROOT).as_posix()
-  manifest={'operation':'update','product_id':pid,'category_id':p['category_id'],'facts_reviewed':True,'source_evidence':[rel(FACTORY/'制作档案.json'),rel(FACTORY/'当前上传回执.json'),rel(FACTORY/'图片银行像素核对.json'),rel(c/'copy.json')],'current_schema':current.name,'current_schema_sha256':sha(current),'schema_request_id':rendered['request_id'],'schema_acquired_at':datetime.now(timezone.utc).isoformat(),'payload_xml':payload.name,'field_ids':['companyImage'],'dependency_ids':deps}
+  sources=[rel(FACTORY/'制作档案.json'),rel(FACTORY/'当前上传回执.json'),rel(FACTORY/'图片银行像素核对.json'),rel(FACTORY/'替换准备.json')]
+  if not historical:sources.append(rel(c/'copy.json'))
+  manifest={'operation':'update','product_id':pid,'category_id':p['category_id'],'facts_reviewed':True,'source_evidence':sources,'current_schema':current.name,'current_schema_sha256':sha(current),'schema_request_id':rendered['request_id'],'schema_acquired_at':datetime.now(timezone.utc).isoformat(),'payload_xml':payload.name,'field_ids':['companyImage'],'dependency_ids':deps}
   # The shared scoped preparer copies declared dependency values from this
   # target's current Schema and rejects changes or additional payload fields.
   save(folder/'manifest.json',manifest);prepared=pub.load_submission_manifest(folder/'manifest.json','update',pid)
   assert set(prepared['expected_fields'])=={'companyImage'}
   assert {x.get('id')for x in E.fromstring(prepared['xml']).findall('./field')}==set(['companyImage']+deps)
   save(folder/'prepared.json',prepared)
-  save(folder/'readiness.json',{'at':datetime.now(timezone.utc).isoformat(),'status':'MINIMAL_SCHEMA_PREPARED_NOT_SUBMITTED','copy_status':verification['status'],'copy_public_status':verification['public_status'],'copy_sha256':sha(c/'copy.json'),'asset_version':6,'bank_file_ids':[x['file_id']for x in assets],'field_scope':['companyImage'],'dependency_ids':deps,'requires_fresh_prewrite_compare':True,'requires_first_update_formal_and_public_diagnosis_before_bulk':True,'product_fields_written':False})
+  save(folder/'readiness.json',{'at':datetime.now(timezone.utc).isoformat(),'status':'MINIMAL_SCHEMA_PREPARED_NOT_SUBMITTED','copy_status':verification['status'] if verification else 'HISTORICAL_COPY_DEFERRED','copy_public_status':verification['public_status'] if verification else 'HISTORICAL_COPY_DEFERRED','copy_sha256':sha(c/'copy.json') if copy else None,'historical_company_only':historical,'source_status_unchanged':True,'asset_version':6,'bank_file_ids':[x['file_id']for x in assets],'field_scope':['companyImage'],'dependency_ids':deps,'requires_fresh_prewrite_compare':True,'requires_first_update_formal_and_public_diagnosis_before_bulk':True,'product_fields_written':False})
+  error=folder/'preparation_error.json'
+  if error.exists():error.unlink()
   print(json.dumps({'product_id':pid,'status':'MINIMAL_SCHEMA_PREPARED_NOT_SUBMITTED','images':5,'unrelated_fields_in_payload':0},ensure_ascii=False),flush=True)
 if __name__=='__main__':main()

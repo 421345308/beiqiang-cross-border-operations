@@ -1,6 +1,6 @@
 {
   "requested_product_id": "1601939651515",
-  "observed_at_utc": "2026-10-11T18:21:05.596910+00:00",
+  "observed_at_utc": "2026-10-12T02:51:25.191659+00:00",
   "method": "alibaba.icbu.product.get",
   "response": {
     "product": {
@@ -23,7 +23,7 @@
       "struct_detail_product": true,
       "language": "ENGLISH",
       "is_smart_edit": false,
-      "gmt_modified": "2026-10-12 01:56:28",
+      "gmt_modified": "2026-10-12 10:35:53",
       "product_sku": {
         "skus": [
           {
@@ -1620,38 +1620,38 @@
           "images": [
             {
               "image_set": {
-                "name": "Factory profile",
-                "id": 500
+                "name": "Competitive advantages",
+                "id": 450
               },
-              "image_url": "https://sc04.alicdn.com/kf/H83605d3fabf04c39ba84c3f13103eae0r.jpg"
+              "image_url": "https://sc04.alicdn.com/kf/Hb696d63f52ca4f08a2e59442f29461835.png"
             },
             {
               "image_set": {
                 "name": "Company overview",
                 "id": 400
               },
-              "image_url": "https://sc04.alicdn.com/kf/Hc4c389dbec7540488a751c6dc8991221Y.jpg"
+              "image_url": "https://sc04.alicdn.com/kf/H4485e694f2a440db8d5601b04d4cce17d.png"
             },
             {
               "image_set": {
                 "name": "Customization capabilities",
                 "id": 550
               },
-              "image_url": "https://sc04.alicdn.com/kf/Hd8eb75f7e5af4974b7fff477d475e123x.jpg"
+              "image_url": "https://sc04.alicdn.com/kf/H8e16babc58ce41d79e8b92623a045461w.png"
             },
             {
               "image_set": {
                 "name": "Production workflow",
                 "id": 600
               },
-              "image_url": "https://sc04.alicdn.com/kf/H4b057c6dc93d46fda5a8c2f81e1cf368Z.jpg"
+              "image_url": "https://sc04.alicdn.com/kf/Hf249cf1234f84225af0b14aa8a0fa7773.png"
             },
             {
               "image_set": {
                 "name": "Packaging & shipping specifications",
                 "id": 700
               },
-              "image_url": "https://sc04.alicdn.com/kf/Hbd01ab82fced4b03ab44a922d63cfc182.jpg"
+              "image_url": "https://sc04.alicdn.com/kf/H68cf387530d946a6ba6cf02ce258525dm.png"
             }
           ]
         },
@@ -1817,7 +1817,7 @@
       "owner_member": 286385890,
       "status": "approved"
     },
-    "request_id": "213c932b17917428695297451",
-    "_trace_id_": "2166afa617917428695264953e0d92"
+    "request_id": "213d4e4917917734890487093",
+    "_trace_id_": "2131137617917734890467434e0da7"
   }
 }

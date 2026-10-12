@@ -1,6 +1,6 @@
 {
   "requested_product_id": "1601939606858",
-  "observed_at_utc": "2026-10-11T17:07:55.317025+00:00",
+  "observed_at_utc": "2026-10-12T02:45:45.288277+00:00",
   "method": "alibaba.icbu.product.get",
   "response": {
     "product": {
@@ -23,7 +23,7 @@
       "struct_detail_product": true,
       "language": "ENGLISH",
       "is_smart_edit": false,
-      "gmt_modified": "2026-10-12 00:22:30",
+      "gmt_modified": "2026-10-12 10:30:21",
       "product_sku": {
         "skus": [
           {
@@ -1497,35 +1497,35 @@
                 "name": "Production workflow",
                 "id": 600
               },
-              "image_url": "https://sc04.alicdn.com/kf/H36e700f5c3ee447a80c035d8ae7521d9a.jpg"
+              "image_url": "https://sc04.alicdn.com/kf/Hf249cf1234f84225af0b14aa8a0fa7773.png"
             },
             {
               "image_set": {
-                "name": "Customization capabilities",
-                "id": 550
+                "name": "Competitive advantages",
+                "id": 450
               },
-              "image_url": "https://sc04.alicdn.com/kf/H496f7579171f4370a1d47c3adf30001bK.jpg"
+              "image_url": "https://sc04.alicdn.com/kf/Hb696d63f52ca4f08a2e59442f29461835.png"
             },
             {
               "image_set": {
                 "name": "Company overview",
                 "id": 400
               },
-              "image_url": "https://sc04.alicdn.com/kf/Ha8c1682092424e778eadf945763e79daU.jpg"
-            },
-            {
-              "image_set": {
-                "name": "Factory profile",
-                "id": 500
-              },
-              "image_url": "https://sc04.alicdn.com/kf/H9f32c7ecea0f4d25bc5ddc9cd04c1e5dK.jpg"
+              "image_url": "https://sc04.alicdn.com/kf/H4485e694f2a440db8d5601b04d4cce17d.png"
             },
             {
               "image_set": {
                 "name": "Packaging & shipping specifications",
                 "id": 700
               },
-              "image_url": "https://sc04.alicdn.com/kf/H5f71c3cfb4064b51bb458d0a786cb402R.jpg"
+              "image_url": "https://sc04.alicdn.com/kf/H68cf387530d946a6ba6cf02ce258525dm.png"
+            },
+            {
+              "image_set": {
+                "name": "Customization capabilities",
+                "id": 550
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H8e16babc58ce41d79e8b92623a045461w.png"
             }
           ]
         },
@@ -1594,7 +1594,7 @@
         "product_summary": "Knit slip-on casual shoes with a closed front and deeply sculpted side sole. A heel pull loop gives the wearer a grip when putting the shoe on. The lace-free silhouette and prominent sole pattern provide a distinct everyday style.",
         "company_summary": "Quanzhou Beiqiang Footwear & Apparel Co., Ltd. supplies OEM/ODM and wholesale casual footwear for importers, wholesalers, sourcing agents and private-label buyers."
       },
-      "display": "Y",
+      "display": "N",
       "pc_detail_url": "https://www.alibaba.com/product-detail/Slip-On-Knit-Walking-Shoes-Easy_1601939606858.html",
       "rts": false,
       "product_type": "sourcing",
@@ -1689,9 +1689,9 @@
         }
       ],
       "owner_member": 286385890,
-      "status": "approved"
+      "status": "modified"
     },
-    "request_id": "21501b8d17917384793941445",
-    "_trace_id_": "2150384d17917384793911694e0b50"
+    "request_id": "0b51802d17917731490871786",
+    "_trace_id_": "0b5dcfa617917731490855742e0f49"
   }
 }

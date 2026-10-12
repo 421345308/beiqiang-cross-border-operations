@@ -1,0 +1,1818 @@
+{
+  "requested_product_id": "1601943332965",
+  "observed_at_utc": "2026-10-10T06:56:47.798610+00:00",
+  "method": "alibaba.icbu.product.get",
+  "response": {
+    "product": {
+      "gmt_create": "2026-09-05 21:55:04",
+      "keywords": [
+        "Mens Casual Sneakers"
+      ],
+      "owner_member_display_name": "User name",
+      "subject": "Mens Casual Sneakers with Canvas Upper and Lace Up Design for Everyday Wear",
+      "main_image": {
+        "images": [
+          "https://sc04.alicdn.com/kf/Hc28279c3287c47f3a95bac67414481a3S.jpg",
+          "https://sc04.alicdn.com/kf/Hc3e24e569c7741b0b8e3a37cb17ba3535.jpg",
+          "https://sc04.alicdn.com/kf/H25bc73209f1c498288ec52810cece2987.png",
+          "https://sc04.alicdn.com/kf/He489413beda0436c8c43d8dd2fdbdaf3H.png",
+          "https://sc04.alicdn.com/kf/H9c8f1bc342e44058a87e8e6267c47cd0r.png",
+          "https://sc04.alicdn.com/kf/H2d86240f7abe4614aa87c48af829e716n.png"
+        ]
+      },
+      "struct_detail_product": true,
+      "language": "ENGLISH",
+      "is_smart_edit": false,
+      "gmt_modified": "2026-09-29 15:43:37",
+      "product_sku": {
+        "skus": [
+          {
+            "attr2_value": "{\"222038415\":-808,\"191288010\":3331185}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543707,
+            "sku_code": "HR007-C-WHITE-EU46"
+          },
+          {
+            "attr2_value": "{\"222038415\":-807,\"191288010\":3331185}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543706,
+            "sku_code": "HR007-C-WHITE-EU45"
+          },
+          {
+            "attr2_value": "{\"222038415\":-806,\"191288010\":3331185}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543705,
+            "sku_code": "HR007-C-WHITE-EU44"
+          },
+          {
+            "attr2_value": "{\"222038415\":-805,\"191288010\":3331185}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543704,
+            "sku_code": "HR007-C-WHITE-EU43"
+          },
+          {
+            "attr2_value": "{\"222038415\":-802,\"191288010\":3331260}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543711,
+            "sku_code": "HR007-C-RED-EU40"
+          },
+          {
+            "attr2_value": "{\"222038415\":-801,\"191288010\":3331260}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543710,
+            "sku_code": "HR007-C-RED-EU39"
+          },
+          {
+            "attr2_value": "{\"222038415\":-810,\"191288010\":3331185}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543709,
+            "sku_code": "HR007-C-WHITE-EU48"
+          },
+          {
+            "attr2_value": "{\"222038415\":-809,\"191288010\":3331185}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543708,
+            "sku_code": "HR007-C-WHITE-EU47"
+          },
+          {
+            "attr2_value": "{\"222038415\":-810,\"191288010\":3327837}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543699,
+            "sku_code": "HR007-C-BLACK-EU48"
+          },
+          {
+            "attr2_value": "{\"222038415\":-809,\"191288010\":3327837}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543698,
+            "sku_code": "HR007-C-BLACK-EU47"
+          },
+          {
+            "attr2_value": "{\"222038415\":-808,\"191288010\":3327837}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543697,
+            "sku_code": "HR007-C-BLACK-EU46"
+          },
+          {
+            "attr2_value": "{\"222038415\":-807,\"191288010\":3327837}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543696,
+            "sku_code": "HR007-C-BLACK-EU45"
+          },
+          {
+            "attr2_value": "{\"222038415\":-804,\"191288010\":3331185}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543703,
+            "sku_code": "HR007-C-WHITE-EU42"
+          },
+          {
+            "attr2_value": "{\"222038415\":-803,\"191288010\":3331185}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543702,
+            "sku_code": "HR007-C-WHITE-EU41"
+          },
+          {
+            "attr2_value": "{\"222038415\":-802,\"191288010\":3331185}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543701,
+            "sku_code": "HR007-C-WHITE-EU40"
+          },
+          {
+            "attr2_value": "{\"222038415\":-801,\"191288010\":3331185}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543700,
+            "sku_code": "HR007-C-WHITE-EU39"
+          },
+          {
+            "attr2_value": "{\"222038415\":-802,\"191288010\":3327837}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543691,
+            "sku_code": "HR007-C-BLACK-EU40"
+          },
+          {
+            "attr2_value": "{\"222038415\":-801,\"191288010\":3327837}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543690,
+            "sku_code": "HR007-C-BLACK-EU39"
+          },
+          {
+            "attr2_value": "{\"222038415\":-810,\"191288010\":123085}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543689,
+            "sku_code": "HR007-C-BLUE-EU48"
+          },
+          {
+            "attr2_value": "{\"222038415\":-809,\"191288010\":123085}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543688,
+            "sku_code": "HR007-C-BLUE-EU47"
+          },
+          {
+            "attr2_value": "{\"222038415\":-806,\"191288010\":3327837}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543695,
+            "sku_code": "HR007-C-BLACK-EU44"
+          },
+          {
+            "attr2_value": "{\"222038415\":-805,\"191288010\":3327837}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543694,
+            "sku_code": "HR007-C-BLACK-EU43"
+          },
+          {
+            "attr2_value": "{\"222038415\":-804,\"191288010\":3327837}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543693,
+            "sku_code": "HR007-C-BLACK-EU42"
+          },
+          {
+            "attr2_value": "{\"222038415\":-803,\"191288010\":3327837}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543692,
+            "sku_code": "HR007-C-BLACK-EU41"
+          },
+          {
+            "attr2_value": "{\"222038415\":-804,\"191288010\":123085}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543683,
+            "sku_code": "HR007-C-BLUE-EU42"
+          },
+          {
+            "attr2_value": "{\"222038415\":-803,\"191288010\":123085}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543682,
+            "sku_code": "HR007-C-BLUE-EU41"
+          },
+          {
+            "attr2_value": "{\"222038415\":-802,\"191288010\":123085}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543681,
+            "sku_code": "HR007-C-BLUE-EU40"
+          },
+          {
+            "attr2_value": "{\"222038415\":-801,\"191288010\":123085}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543680,
+            "sku_code": "HR007-C-BLUE-EU39"
+          },
+          {
+            "attr2_value": "{\"222038415\":-808,\"191288010\":123085}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543687,
+            "sku_code": "HR007-C-BLUE-EU46"
+          },
+          {
+            "attr2_value": "{\"222038415\":-807,\"191288010\":123085}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543686,
+            "sku_code": "HR007-C-BLUE-EU45"
+          },
+          {
+            "attr2_value": "{\"222038415\":-806,\"191288010\":123085}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543685,
+            "sku_code": "HR007-C-BLUE-EU44"
+          },
+          {
+            "attr2_value": "{\"222038415\":-805,\"191288010\":123085}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543684,
+            "sku_code": "HR007-C-BLUE-EU43"
+          },
+          {
+            "attr2_value": "{\"222038415\":-810,\"191288010\":-1}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543739,
+            "sku_code": "HR007-C-KHAKI-EU48"
+          },
+          {
+            "attr2_value": "{\"222038415\":-809,\"191288010\":-1}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543738,
+            "sku_code": "HR007-C-KHAKI-EU47"
+          },
+          {
+            "attr2_value": "{\"222038415\":-808,\"191288010\":-1}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543737,
+            "sku_code": "HR007-C-KHAKI-EU46"
+          },
+          {
+            "attr2_value": "{\"222038415\":-807,\"191288010\":-1}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543736,
+            "sku_code": "HR007-C-KHAKI-EU45"
+          },
+          {
+            "attr2_value": "{\"222038415\":-802,\"191288010\":-1}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543731,
+            "sku_code": "HR007-C-KHAKI-EU40"
+          },
+          {
+            "attr2_value": "{\"222038415\":-801,\"191288010\":-1}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543730,
+            "sku_code": "HR007-C-KHAKI-EU39"
+          },
+          {
+            "attr2_value": "{\"222038415\":-810,\"191288010\":3483425}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543729,
+            "sku_code": "HR007-C-GREY-EU48"
+          },
+          {
+            "attr2_value": "{\"222038415\":-809,\"191288010\":3483425}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543728,
+            "sku_code": "HR007-C-GREY-EU47"
+          },
+          {
+            "attr2_value": "{\"222038415\":-806,\"191288010\":-1}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543735,
+            "sku_code": "HR007-C-KHAKI-EU44"
+          },
+          {
+            "attr2_value": "{\"222038415\":-805,\"191288010\":-1}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543734,
+            "sku_code": "HR007-C-KHAKI-EU43"
+          },
+          {
+            "attr2_value": "{\"222038415\":-804,\"191288010\":-1}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543733,
+            "sku_code": "HR007-C-KHAKI-EU42"
+          },
+          {
+            "attr2_value": "{\"222038415\":-803,\"191288010\":-1}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543732,
+            "sku_code": "HR007-C-KHAKI-EU41"
+          },
+          {
+            "attr2_value": "{\"222038415\":-804,\"191288010\":3483425}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543723,
+            "sku_code": "HR007-C-GREY-EU42"
+          },
+          {
+            "attr2_value": "{\"222038415\":-803,\"191288010\":3483425}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543722,
+            "sku_code": "HR007-C-GREY-EU41"
+          },
+          {
+            "attr2_value": "{\"222038415\":-802,\"191288010\":3483425}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543721,
+            "sku_code": "HR007-C-GREY-EU40"
+          },
+          {
+            "attr2_value": "{\"222038415\":-801,\"191288010\":3483425}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543720,
+            "sku_code": "HR007-C-GREY-EU39"
+          },
+          {
+            "attr2_value": "{\"222038415\":-808,\"191288010\":3483425}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543727,
+            "sku_code": "HR007-C-GREY-EU46"
+          },
+          {
+            "attr2_value": "{\"222038415\":-807,\"191288010\":3483425}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543726,
+            "sku_code": "HR007-C-GREY-EU45"
+          },
+          {
+            "attr2_value": "{\"222038415\":-806,\"191288010\":3483425}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543725,
+            "sku_code": "HR007-C-GREY-EU44"
+          },
+          {
+            "attr2_value": "{\"222038415\":-805,\"191288010\":3483425}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543724,
+            "sku_code": "HR007-C-GREY-EU43"
+          },
+          {
+            "attr2_value": "{\"222038415\":-806,\"191288010\":3331260}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543715,
+            "sku_code": "HR007-C-RED-EU44"
+          },
+          {
+            "attr2_value": "{\"222038415\":-805,\"191288010\":3331260}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543714,
+            "sku_code": "HR007-C-RED-EU43"
+          },
+          {
+            "attr2_value": "{\"222038415\":-804,\"191288010\":3331260}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543713,
+            "sku_code": "HR007-C-RED-EU42"
+          },
+          {
+            "attr2_value": "{\"222038415\":-803,\"191288010\":3331260}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543712,
+            "sku_code": "HR007-C-RED-EU41"
+          },
+          {
+            "attr2_value": "{\"222038415\":-810,\"191288010\":3331260}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543719,
+            "sku_code": "HR007-C-RED-EU48"
+          },
+          {
+            "attr2_value": "{\"222038415\":-809,\"191288010\":3331260}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543718,
+            "sku_code": "HR007-C-RED-EU47"
+          },
+          {
+            "attr2_value": "{\"222038415\":-808,\"191288010\":3331260}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543717,
+            "sku_code": "HR007-C-RED-EU46"
+          },
+          {
+            "attr2_value": "{\"222038415\":-807,\"191288010\":3331260}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 5,
+                "price": "8.50"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.30"
+              },
+              {
+                "start_quantity": 100,
+                "price": "8.00"
+              }
+            ],
+            "sku_id": 109752543716,
+            "sku_code": "HR007-C-RED-EU45"
+          }
+        ],
+        "sku_attributes": [
+          {
+            "attribute_id": 191288010,
+            "values": [
+              {
+                "system_value_name": "White",
+                "image_url": "https://sc04.alicdn.com/kf/Hc8bbccaefb6b4225b69f3daff9aebaee1.jpg",
+                "value_id": 3331185
+              },
+              {
+                "system_value_name": "Red",
+                "image_url": "https://sc04.alicdn.com/kf/Hf059173f2d624f35b5dfeff731cdbee9W.jpg",
+                "value_id": 3331260
+              },
+              {
+                "system_value_name": "Black",
+                "image_url": "https://sc04.alicdn.com/kf/Hc28279c3287c47f3a95bac67414481a3S.jpg",
+                "value_id": 3327837
+              },
+              {
+                "system_value_name": "Blue",
+                "image_url": "https://sc04.alicdn.com/kf/H550f959a1e8b47228d1dd4299ae23e806.jpg",
+                "value_id": 123085
+              },
+              {
+                "system_value_name": "Khaki",
+                "image_url": "https://sc04.alicdn.com/kf/H2e3c8bf963e94abf9736b30472bd8f9ak.jpg",
+                "value_id": -1
+              },
+              {
+                "system_value_name": "Grey",
+                "image_url": "https://sc04.alicdn.com/kf/Hc3e24e569c7741b0b8e3a37cb17ba3535.jpg",
+                "value_id": 3483425
+              }
+            ],
+            "attribute_name": "Color"
+          },
+          {
+            "attribute_id": 222038415,
+            "values": [
+              {
+                "system_value_name": "EU 46",
+                "value_id": -808
+              },
+              {
+                "system_value_name": "EU 45",
+                "value_id": -807
+              },
+              {
+                "system_value_name": "EU 44",
+                "value_id": -806
+              },
+              {
+                "system_value_name": "EU 43",
+                "value_id": -805
+              },
+              {
+                "system_value_name": "EU 40",
+                "value_id": -802
+              },
+              {
+                "system_value_name": "EU 39",
+                "value_id": -801
+              },
+              {
+                "system_value_name": "EU 48",
+                "value_id": -810
+              },
+              {
+                "system_value_name": "EU 47",
+                "value_id": -809
+              },
+              {
+                "system_value_name": "EU 42",
+                "value_id": -804
+              },
+              {
+                "system_value_name": "EU 41",
+                "value_id": -803
+              }
+            ],
+            "attribute_name": "EUR Size"
+          }
+        ]
+      },
+      "category_id": 201334413,
+      "product_id": "AAGPjmk4AOWGex-cDVm7xW-G",
+      "sub_market_type": "customization",
+      "struct_detail": {
+        "company_image": {
+          "images": [
+            {
+              "image_set": {
+                "name": "Production workflow",
+                "id": 600,
+                "order": "2"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H36e700f5c3ee447a80c035d8ae7521d9a.jpg"
+            },
+            {
+              "image_set": {
+                "name": "Customization capabilities",
+                "id": 550,
+                "order": "1"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H496f7579171f4370a1d47c3adf30001bK.jpg"
+            },
+            {
+              "image_set": {
+                "name": "Company overview",
+                "id": 400,
+                "order": "0"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/Ha8c1682092424e778eadf945763e79daU.jpg"
+            },
+            {
+              "image_set": {
+                "name": "Factory profile",
+                "id": 500,
+                "order": "3"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H9f32c7ecea0f4d25bc5ddc9cd04c1e5dK.jpg"
+            },
+            {
+              "image_set": {
+                "name": "Packaging & shipping specifications",
+                "id": 700,
+                "order": "4"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H5f71c3cfb4064b51bb458d0a786cb402R.jpg"
+            }
+          ]
+        },
+        "product_faq": [
+          {
+            "question": "What materials are used?",
+            "answer": "The upper is canvas, the lining is cotton fabric, the midsole is rubber, and the outsole is plastic."
+          },
+          {
+            "question": "Which colors and sizes are available?",
+            "answer": "This style is listed in Blue, Black, White, Red, Grey and Khaki, in EU sizes 39-48. Please confirm the requested color and size mix for the order."
+          },
+          {
+            "question": "What is the minimum order quantity?",
+            "answer": "The listing MOQ is 5 pairs. Please confirm the requested color and size mix and availability for the order."
+          },
+          {
+            "question": "How is the quantity price arranged?",
+            "answer": "The listed FOB price tiers are USD 8.50 per pair for 5-49 pairs, USD 8.30 per pair for 50-99 pairs, and USD 8.00 per pair for 100+ pairs. Share the quantity, color-size mix and packing needs for a current quotation."
+          },
+          {
+            "question": "Can I choose the size ratio for my order?",
+            "answer": "Share the EU size quantity breakdown you need across EU 39-48 so the size ratio can be checked for the order."
+          },
+          {
+            "question": "What is the packing for one pair?",
+            "answer": "The listed packing measures 30 x 20 x 10 cm with a gross weight of 1.2 kg per pair. Share any alternative packing requirements for review."
+          },
+          {
+            "question": "What information is needed for an order quotation?",
+            "answer": "Please share the color, EU size quantity breakdown, total pairs, destination and packing preference. The final quotation depends on style, quantity, materials, size mix, packing and order requirements."
+          },
+          {
+            "question": "Can I request a sample?",
+            "answer": "Please share the requested color, size and destination so sample availability, price and timing can be confirmed for the current enquiry."
+          }
+        ],
+        "detail_image": {
+          "images": [
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350",
+                "order": "0"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H5742893afdc84e498a80c74d250fc09ar.png"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350",
+                "order": "0"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H32a0128b6bb0469f86cf69c06d368efec.png"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350",
+                "order": "0"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/Ha00dfdb13e1e4c3284116a8541590840X.png"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350",
+                "order": "0"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H1fa56037db8740b886d89af6d17b9e596.png"
+            }
+          ]
+        },
+        "product_summary": "Wholesale men's canvas lace-up casual shoes in Blue, Black, White, Red, Grey and Khaki, EU 39-48. Sixty listed color-size combinations. Canvas upper, cotton fabric lining, rubber midsole, plastic outsole. Listed USD/pair: 5-49 pairs 8.50, 50-99 pairs 8.30, 100+ pairs 8.00. Send pairs per color-size, destination and packing preference for final quotation.",
+        "company_summary": "Quanzhou Beiqiang Footwear & Apparel Co., Ltd. supports international B2B footwear enquiries, OEM/ODM project discussions and wholesale order coordination. Product specifications, order options and quotations are reviewed for each selected style and order."
+      },
+      "display": "Y",
+      "pc_detail_url": "https://www.alibaba.com/product-detail/Mens-Casual-Sneakers-with-Canvas-Upper_1601943332965.html",
+      "rts": false,
+      "product_type": "sourcing",
+      "sourcing_trade": {
+        "fob_min_price": "8.0",
+        "fob_currency": "USD",
+        "min_order_unit_type": "Pair",
+        "deliver_periods": [
+          {
+            "quantity": 100,
+            "process_period": 31
+          }
+        ],
+        "fob_max_price": "8.5",
+        "fob_unit_type": "Pair",
+        "min_order_quantity": "5"
+      },
+      "group_id": 972130291,
+      "price_type": "ladder_price",
+      "attributes": [
+        {
+          "attribute_id": 20700,
+          "attribute_name": "Midsole Material",
+          "value_id": 3338114,
+          "value_name": "Rubber"
+        },
+        {
+          "attribute_id": 191288243,
+          "attribute_name": "Style",
+          "value_id": 19077592,
+          "value_name": "Walking Shoes"
+        },
+        {
+          "attribute_id": 191290426,
+          "attribute_name": "Outsole Material",
+          "value_id": 3954276,
+          "value_name": "Plastic"
+        },
+        {
+          "attribute_id": 191290430,
+          "attribute_name": "Lining Material",
+          "value_id": 384964283,
+          "value_name": "Cotton Fabric"
+        },
+        {
+          "attribute_id": 200000388,
+          "attribute_name": "Closure Type",
+          "value_id": 80806811,
+          "value_name": "Lace-up"
+        },
+        {
+          "attribute_id": 200000486,
+          "attribute_name": "Toe Style",
+          "value_id": 556500746,
+          "value_name": "Round Toe"
+        },
+        {
+          "attribute_id": 210194982,
+          "attribute_name": "Upper Material",
+          "value_id": 3767487,
+          "value_name": "Canvas"
+        },
+        {
+          "attribute_id": 1,
+          "attribute_name": "Place of Origin",
+          "value_id": -1,
+          "value_name": "CN"
+        },
+        {
+          "attribute_id": 3,
+          "attribute_name": "Model Number",
+          "value_id": -1,
+          "value_name": "HR007-C"
+        }
+      ],
+      "owner_member": 286385890,
+      "status": "approved"
+    },
+    "request_id": "212cbf3217916154077545171",
+    "_trace_id_": "2108b42717916154077506927e0cb7"
+  }
+}

@@ -1,0 +1,485 @@
+{
+  "requested_product_id": "1601943364813",
+  "observed_at_utc": "2026-10-10T06:56:47.763926+00:00",
+  "method": "alibaba.icbu.product.get",
+  "response": {
+    "product": {
+      "gmt_create": "2026-09-05 21:54:59",
+      "keywords": [
+        "Mens Casual Suede Loafers"
+      ],
+      "owner_member_display_name": "User name",
+      "subject": "Men's Casual Suede Loafers with Genuine Leather Lining for Everyday Wear",
+      "main_image": {
+        "images": [
+          "https://sc04.alicdn.com/kf/Ha9a593e0eeed4cf7acc771568046ef35P.png",
+          "https://sc04.alicdn.com/kf/H120d5a34621740c7bdb347434bc74a25z.png",
+          "https://sc04.alicdn.com/kf/H6df64b8725194a19993cda23952cd9d3P.png",
+          "https://sc04.alicdn.com/kf/H153c720667974055a1f923efcc7f6e8fO.png",
+          "https://sc04.alicdn.com/kf/H821be020b5f7400ea6407a57178b5980P.png",
+          "https://sc04.alicdn.com/kf/Hc18e75ccf10b40548ea3cc2b0cf7afc2T.png"
+        ]
+      },
+      "struct_detail_product": true,
+      "language": "ENGLISH",
+      "is_smart_edit": false,
+      "gmt_modified": "2026-09-29 15:42:44",
+      "product_sku": {
+        "skus": [
+          {
+            "attr2_value": "{\"222038415\":-801,\"191288010\":123085}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "31.70"
+              },
+              {
+                "start_quantity": 50,
+                "price": "30.80"
+              },
+              {
+                "start_quantity": 100,
+                "price": "29.90"
+              }
+            ],
+            "sku_id": 109752308151,
+            "sku_code": "HR006-C-BLUE-EU39"
+          },
+          {
+            "attr2_value": "{\"222038415\":-808,\"191288010\":123085}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "31.70"
+              },
+              {
+                "start_quantity": 50,
+                "price": "30.80"
+              },
+              {
+                "start_quantity": 100,
+                "price": "29.90"
+              }
+            ],
+            "sku_id": 109752308158,
+            "sku_code": "HR006-C-BLUE-EU46"
+          },
+          {
+            "attr2_value": "{\"222038415\":-806,\"191288010\":123085}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "31.70"
+              },
+              {
+                "start_quantity": 50,
+                "price": "30.80"
+              },
+              {
+                "start_quantity": 100,
+                "price": "29.90"
+              }
+            ],
+            "sku_id": 109752308156,
+            "sku_code": "HR006-C-BLUE-EU44"
+          },
+          {
+            "attr2_value": "{\"222038415\":-807,\"191288010\":123085}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "31.70"
+              },
+              {
+                "start_quantity": 50,
+                "price": "30.80"
+              },
+              {
+                "start_quantity": 100,
+                "price": "29.90"
+              }
+            ],
+            "sku_id": 109752308157,
+            "sku_code": "HR006-C-BLUE-EU45"
+          },
+          {
+            "attr2_value": "{\"222038415\":-804,\"191288010\":123085}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "31.70"
+              },
+              {
+                "start_quantity": 50,
+                "price": "30.80"
+              },
+              {
+                "start_quantity": 100,
+                "price": "29.90"
+              }
+            ],
+            "sku_id": 109752308154,
+            "sku_code": "HR006-C-BLUE-EU42"
+          },
+          {
+            "attr2_value": "{\"222038415\":-805,\"191288010\":123085}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "31.70"
+              },
+              {
+                "start_quantity": 50,
+                "price": "30.80"
+              },
+              {
+                "start_quantity": 100,
+                "price": "29.90"
+              }
+            ],
+            "sku_id": 109752308155,
+            "sku_code": "HR006-C-BLUE-EU43"
+          },
+          {
+            "attr2_value": "{\"222038415\":-802,\"191288010\":123085}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "31.70"
+              },
+              {
+                "start_quantity": 50,
+                "price": "30.80"
+              },
+              {
+                "start_quantity": 100,
+                "price": "29.90"
+              }
+            ],
+            "sku_id": 109752308152,
+            "sku_code": "HR006-C-BLUE-EU40"
+          },
+          {
+            "attr2_value": "{\"222038415\":-803,\"191288010\":123085}",
+            "inventory_dto_list": [
+              {
+                "store_code": "CN_LOCAL_01",
+                "inventory": 999
+              }
+            ],
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "31.70"
+              },
+              {
+                "start_quantity": 50,
+                "price": "30.80"
+              },
+              {
+                "start_quantity": 100,
+                "price": "29.90"
+              }
+            ],
+            "sku_id": 109752308153,
+            "sku_code": "HR006-C-BLUE-EU41"
+          }
+        ],
+        "sku_attributes": [
+          {
+            "attribute_id": 191288010,
+            "values": [
+              {
+                "system_value_name": "Blue",
+                "image_url": "https://sc04.alicdn.com/kf/H3c7b1802482348b1a79c63b61683f1fe1.png",
+                "value_id": 123085
+              }
+            ],
+            "attribute_name": "Color"
+          },
+          {
+            "attribute_id": 222038415,
+            "values": [
+              {
+                "system_value_name": "EU 39",
+                "value_id": -801
+              },
+              {
+                "system_value_name": "EU 46",
+                "value_id": -808
+              },
+              {
+                "system_value_name": "EU 44",
+                "value_id": -806
+              },
+              {
+                "system_value_name": "EU 45",
+                "value_id": -807
+              },
+              {
+                "system_value_name": "EU 42",
+                "value_id": -804
+              },
+              {
+                "system_value_name": "EU 43",
+                "value_id": -805
+              },
+              {
+                "system_value_name": "EU 40",
+                "value_id": -802
+              },
+              {
+                "system_value_name": "EU 41",
+                "value_id": -803
+              }
+            ],
+            "attribute_name": "EUR Size"
+          }
+        ]
+      },
+      "category_id": 202240835,
+      "product_id": "AAErjmk4AOWGex-cDVm7xeMu",
+      "sub_market_type": "customization",
+      "struct_detail": {
+        "company_image": {
+          "images": [
+            {
+              "image_set": {
+                "name": "Production workflow",
+                "id": 600,
+                "order": "2"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H36e700f5c3ee447a80c035d8ae7521d9a.jpg"
+            },
+            {
+              "image_set": {
+                "name": "Company overview",
+                "id": 400,
+                "order": "0"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/Ha8c1682092424e778eadf945763e79daU.jpg"
+            },
+            {
+              "image_set": {
+                "name": "Customization capabilities",
+                "id": 550,
+                "order": "1"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H496f7579171f4370a1d47c3adf30001bK.jpg"
+            },
+            {
+              "image_set": {
+                "name": "Packaging & shipping specifications",
+                "id": 700,
+                "order": "4"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H5f71c3cfb4064b51bb458d0a786cb402R.jpg"
+            },
+            {
+              "image_set": {
+                "name": "Factory profile",
+                "id": 500,
+                "order": "3"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H9f32c7ecea0f4d25bc5ddc9cd04c1e5dK.jpg"
+            }
+          ]
+        },
+        "product_faq": [
+          {
+            "question": "What materials are listed for this shoe?",
+            "answer": "The listed upper is suede, the lining is genuine leather, and the midsole and outsole are rubber."
+          },
+          {
+            "question": "Which color and sizes are listed?",
+            "answer": "Blue is listed in EU 39-46. Confirm the requested size mix for the order."
+          },
+          {
+            "question": "What is the minimum order quantity?",
+            "answer": "The listing MOQ is 2 pairs. Please confirm availability for the requested order."
+          },
+          {
+            "question": "What is the listed price?",
+            "answer": "Price breaks by quantity: USD 31.70 per pair for 2-49 pairs, USD 30.80 for 50-99 pairs, and USD 29.90 for 100 or more pairs. Please confirm availability and the final quotation for your requested size mix and order."
+          },
+          {
+            "question": "Can I request a sample?",
+            "answer": "Please share the requested sample size and destination so availability, price, and timing can be confirmed."
+          },
+          {
+            "question": "Can you review an OEM or ODM request?",
+            "answer": "Share the requested design or packaging scope for review; feasibility, cost, and timing are confirmed for each request."
+          },
+          {
+            "question": "What packaging is used?",
+            "answer": "Packing details are confirmed for the requested order before a freight quotation."
+          },
+          {
+            "question": "What information is needed for a freight quotation?",
+            "answer": "Please share destination, quantity, packaging needs, and requested trade term."
+          }
+        ],
+        "detail_image": {
+          "images": [
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350",
+                "order": "0"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H943ed97a7a0d4b7ab50b5b233f6cb48dB.png"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350",
+                "order": "0"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H415d4b270c234cd29a56c09504a253ef9.png"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350",
+                "order": "0"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H00409385ee874858a679dff76cdc0ed3N.png"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350",
+                "order": "0"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H0d8efffd430a4ff8ae15e6b6bb85e877m.png"
+            }
+          ]
+        },
+        "product_summary": "Wholesale men's blue suede slip-on loafers, EU 39-46: eight listed size options. Suede upper, genuine leather lining, rubber midsole and outsole. Listed USD/pair: 2-49 pairs 31.70, 50-99 pairs 30.80, 100+ pairs 29.90. Send pairs per EU size, destination and packing preference for final quotation.",
+        "company_summary": "Quanzhou Beiqiang Footwear & Apparel Co., Ltd. serves international B2B buyers with footwear wholesale inquiries and project coordination. Product supply arrangements and order details are confirmed for each style."
+      },
+      "display": "Y",
+      "pc_detail_url": "https://www.alibaba.com/product-detail/Men-s-Casual-Suede-Loafers-with_1601943364813.html",
+      "rts": false,
+      "product_type": "sourcing",
+      "sourcing_trade": {
+        "fob_min_price": "29.9",
+        "fob_currency": "USD",
+        "min_order_unit_type": "Pair",
+        "deliver_periods": [
+          {
+            "quantity": 100,
+            "process_period": 31
+          }
+        ],
+        "fob_max_price": "31.7",
+        "fob_unit_type": "Pair",
+        "min_order_quantity": "2"
+      },
+      "group_id": 972130291,
+      "price_type": "ladder_price",
+      "attributes": [
+        {
+          "attribute_id": 20700,
+          "attribute_name": "Midsole Material",
+          "value_id": 3338114,
+          "value_name": "Rubber"
+        },
+        {
+          "attribute_id": 191288243,
+          "attribute_name": "Style",
+          "value_id": 114030746,
+          "value_name": "Loafers"
+        },
+        {
+          "attribute_id": 191290426,
+          "attribute_name": "Outsole Material",
+          "value_id": 3338114,
+          "value_name": "Rubber"
+        },
+        {
+          "attribute_id": 191290428,
+          "attribute_name": "Upper Material",
+          "value_id": 190091205,
+          "value_name": "suede"
+        },
+        {
+          "attribute_id": 191290430,
+          "attribute_name": "Lining Material",
+          "value_id": 3242875,
+          "value_name": "Genuine Leather"
+        },
+        {
+          "attribute_id": 200000486,
+          "attribute_name": "Toe Style",
+          "value_id": 556500746,
+          "value_name": "Round Toe"
+        },
+        {
+          "attribute_id": 200001153,
+          "attribute_name": "Closure Type",
+          "value_id": 190091228,
+          "value_name": "Slip-On"
+        },
+        {
+          "attribute_id": 1,
+          "attribute_name": "Place of Origin",
+          "value_id": -1,
+          "value_name": "CN"
+        },
+        {
+          "attribute_id": 3,
+          "attribute_name": "Model Number",
+          "value_id": -1,
+          "value_name": "HR006-C"
+        }
+      ],
+      "owner_member": 286385890,
+      "status": "approved"
+    },
+    "request_id": "212c41d317916154078334382",
+    "_trace_id_": "2107a2f717916154078293523e984e"
+  }
+}

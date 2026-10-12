@@ -53,10 +53,15 @@
     "bank_images": 5,
     "bank_evidence": "当前上传回执.json",
     "bank_pixels_evidence": "图片银行像素核对.json",
-    "bound_product_count": 0,
-    "state": "PREPARED_NOT_BOUND",
+    "bound_product_count": 96,
+    "state": "BATCH_API_REPLACEMENT_IN_PROGRESS",
     "uploaded": true,
-    "bound": false
+    "bound": false,
+    "authorized_product_count": 449,
+    "positive_submission_count": 168,
+    "public_pass_count": 21,
+    "current_state_evidence": "当前替换.json",
+    "scope": "Only companyImage; historical source/copy not resolved"
   },
   "final_requests": {
     "C1": {
@@ -1280,6 +1285,6 @@
       "single_current_asset_path": true
     },
     "buyer_assessment": "身份页压短，开发/生产/检查/包装各自解决一个采购问题。表达更清楚、重复更少；缺少真实检查及包装作业照片，示意不等于履约记录，不能据此认定实力或效果超过凯顺。",
-    "replacement_condition": "先验收实款亮点FAQ；负责人已将159条历史链接单列待修。本期候选290条，源链接与离线重复款排除。逐ID核公司图正式及公开结果，未闭环不报替换完成。"
+    "replacement_condition": "实款文案已认可，8条关键词迁移差异已逐ID处理；负责人明确要求449条公司图替换含159条历史链接。历史鞋款来源和文案仍待修，保护源及5条离线重复款排除，逐ID核正式及公开结果。"
   }
 }

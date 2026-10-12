@@ -1,0 +1,23 @@
+{
+  "operation": "update",
+  "product_id": "1601943364813",
+  "category_id": 202240835,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "02_Alibaba运营/06_图片与检查记录/共享工厂详情/制作档案.json",
+    "02_Alibaba运营/06_图片与检查记录/共享工厂详情/当前上传回执.json",
+    "02_Alibaba运营/06_图片与检查记录/共享工厂详情/图片银行像素核对.json",
+    "02_Alibaba运营/06_图片与检查记录/共享工厂详情/替换准备.json"
+  ],
+  "current_schema": "current_schema.xml",
+  "current_schema_sha256": "aacfe283f3144060edb3e8b206e5de25ca809d25203fd17f42d80313de1f5ee2",
+  "schema_request_id": "212c41d317917702828812936",
+  "schema_acquired_at": "2026-10-12T01:58:00.284224+00:00",
+  "payload_xml": "payload.xml",
+  "field_ids": [
+    "companyImage"
+  ],
+  "dependency_ids": [
+    "productDescType"
+  ]
+}

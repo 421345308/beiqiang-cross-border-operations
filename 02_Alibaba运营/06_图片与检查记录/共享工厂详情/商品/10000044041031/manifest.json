@@ -1,0 +1,24 @@
+{
+  "operation": "update",
+  "product_id": "10000044041031",
+  "category_id": 201334413,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "02_Alibaba运营/06_图片与检查记录/共享工厂详情/制作档案.json",
+    "02_Alibaba运营/06_图片与检查记录/共享工厂详情/当前上传回执.json",
+    "02_Alibaba运营/06_图片与检查记录/共享工厂详情/图片银行像素核对.json",
+    "02_Alibaba运营/06_图片与检查记录/共享工厂详情/替换准备.json",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000044041031/copy.json"
+  ],
+  "current_schema": "current_schema.xml",
+  "current_schema_sha256": "a221917923af9f1280e1b6b1cc18cd45f9d9fdc1e23884a0d9843f3f64beea71",
+  "schema_request_id": "212c6fc617917697139661041",
+  "schema_acquired_at": "2026-10-12T01:48:31.201703+00:00",
+  "payload_xml": "payload.xml",
+  "field_ids": [
+    "companyImage"
+  ],
+  "dependency_ids": [
+    "productDescType"
+  ]
+}

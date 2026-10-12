@@ -1,0 +1,24 @@
+{
+  "product_id": "1601943561380",
+  "at": "2026-10-12T01:34:56.125690+00:00",
+  "model": "HR018-A",
+  "category_id": 201334413,
+  "detail_type": null,
+  "status": "approved",
+  "display": "Y",
+  "keywords": [
+    ""
+  ],
+  "historical_difference": [
+    {
+      "path": "/keywords/0",
+      "before": "Mens Casual Sneakers",
+      "after": ""
+    }
+  ],
+  "keyword_schema_fields": [
+    "<field id=\"productKeywords\" name=\"Product keywords \" type=\"complex\"><rules><rule name=\"tipRule\" value=\"Please fill in keywords with correct format: 'modifier words + product name + application scenario', e.g., ‘Red 8GB mp3 for sports’.\" /><rule name=\"minInputNumRule\" value=\"1\" exProperty=\"include\" /><rule name=\"maxInputNumRule\" value=\"1\" exProperty=\"include\" /><rule name=\"regexRule\" value=\"[^\\x04-\\x80≤≥‰±㎡℃℉°μΩé3²³㎡m³]+\" exProperty=\"not include\" /><rule name=\"regexRule\" value=\"\\w+(?:[\\-+.]\\w+)*@\\w+(?:[\\-.]\\w+)*\\.\\w+(?:[\\-.]\\w+)*\" exProperty=\"not include\" /><rule name=\"regexRule\" value=\"&lt;[^&gt;]+&gt;\" exProperty=\"not include\" /><rule name=\"regexRule\" value=\"[;:,,]+\" exProperty=\"not include\" /></rules><fields><field id=\"productKeywords_0\" name=\"Product keywords \" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"maxLengthRule\" value=\"384\" exProperty=\"include\" unit=\"byte\" /><rule name=\"tipRule\" value=\"Please fill in keywords with correct format: 'modifier words + product name + application scenario', e.g., ‘Red 8GB mp3 for sports’.\" /></rules></field></fields></field>"
+  ],
+  "textDesc_present": true,
+  "target_copy_still_matches": true
+}

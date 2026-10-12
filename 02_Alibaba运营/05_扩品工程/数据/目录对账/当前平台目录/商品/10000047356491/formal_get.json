@@ -1,6 +1,6 @@
 {
   "requested_product_id": "10000047356491",
-  "observed_at_utc": "2026-10-11T18:30:36.078891+00:00",
+  "observed_at_utc": "2026-10-12T02:47:50.473158+00:00",
   "method": "alibaba.icbu.product.get",
   "response": {
     "product": {
@@ -23,7 +23,7 @@
       "struct_detail_product": true,
       "language": "ENGLISH",
       "is_smart_edit": false,
-      "gmt_modified": "2026-10-12 01:48:54",
+      "gmt_modified": "2026-10-12 10:22:35",
       "product_sku": {
         "skus": [
           {
@@ -1214,38 +1214,38 @@
           "images": [
             {
               "image_set": {
-                "name": "Customization capabilities",
-                "id": 550
+                "name": "Packaging & shipping specifications",
+                "id": 700
               },
-              "image_url": "https://sc04.alicdn.com/kf/S2a3af5690d524680824086ad8419dbc9G.png"
+              "image_url": "https://sc04.alicdn.com/kf/H68cf387530d946a6ba6cf02ce258525dm.png"
             },
             {
               "image_set": {
                 "name": "Company overview",
                 "id": 400
               },
-              "image_url": "https://sc04.alicdn.com/kf/Sf587c854711748af9759e77ce5aeb03c3.png"
+              "image_url": "https://sc04.alicdn.com/kf/H4485e694f2a440db8d5601b04d4cce17d.png"
+            },
+            {
+              "image_set": {
+                "name": "Customization capabilities",
+                "id": 550
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H8e16babc58ce41d79e8b92623a045461w.png"
             },
             {
               "image_set": {
                 "name": "Production workflow",
                 "id": 600
               },
-              "image_url": "https://sc04.alicdn.com/kf/Sdc4e18f098e142b797df687e8befbfa14.png"
+              "image_url": "https://sc04.alicdn.com/kf/Hf249cf1234f84225af0b14aa8a0fa7773.png"
             },
             {
               "image_set": {
-                "name": "Packaging & shipping specifications",
-                "id": 700
+                "name": "Competitive advantages",
+                "id": 450
               },
-              "image_url": "https://sc04.alicdn.com/kf/Sc1dc6ec7d435404db6a31c6938a734a0g.png"
-            },
-            {
-              "image_set": {
-                "name": "Factory profile",
-                "id": 500
-              },
-              "image_url": "https://sc04.alicdn.com/kf/Sfea34bbd56ae4d0583aa855838eb1454F.png"
+              "image_url": "https://sc04.alicdn.com/kf/Hb696d63f52ca4f08a2e59442f29461835.png"
             }
           ]
         },
@@ -1314,7 +1314,7 @@
         "product_summary": "Knit lace-up casual shoes with a foamed sole and a rounded low-top shape. This style offers Floating Gold, Plant Grey, Spring Green and Cool White color directions. The fine woven upper and conventional laces retain a familiar everyday sneaker construction.",
         "company_summary": "Quanzhou Beiqiang Footwear & Apparel Co., Ltd. supplies OEM/ODM and wholesale casual footwear for importers, wholesalers, sourcing agents and private-label buyers."
       },
-      "display": "Y",
+      "display": "N",
       "pc_detail_url": "https://www.alibaba.com/product-detail/Wholesale-Model-AA811-Breathable-Knit-Lace_10000047356491.html",
       "rts": false,
       "product_type": "sourcing",
@@ -1403,9 +1403,9 @@
         }
       ],
       "owner_member": 286385890,
-      "status": "approved"
+      "status": "modified"
     },
-    "request_id": "0bbb3b2417917434401197865",
-    "_trace_id_": "212b4f9317917434401164679e0bc4"
+    "request_id": "0b0b3a2717917732743678058",
+    "_trace_id_": "2107a2f717917732743641672e0fc4"
   }
 }

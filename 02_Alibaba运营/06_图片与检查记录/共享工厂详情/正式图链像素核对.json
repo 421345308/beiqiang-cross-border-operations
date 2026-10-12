@@ -1,0 +1,96 @@
+{
+  "at": "2026-10-12T02:03:55.068141+00:00",
+  "asset_version": 6,
+  "observed_product_id": "1601976084873",
+  "status": "FIVE_EXACT_FORMAL_URL_IDENTITIES_VERIFIED",
+  "formal_get": "商品/1601976084873/after_get.json",
+  "formal_schema": "商品/1601976084873/after_render.json",
+  "scope": "Only these five exact bank/compact/editor-thumbnail aliases; no arbitrary URL suffix or query normalization",
+  "items": [
+    {
+      "asset": "C1",
+      "gallery_id": 400,
+      "file_id": "33800484757",
+      "source_sha256": "1a551ea790ac8d31da076250ec2ca38c872d3aca6ab46e9339e0d919f9e6b9ff",
+      "download_sha256": "1a551ea790ac8d31da076250ec2ca38c872d3aca6ab46e9339e0d919f9e6b9ff",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "accepted_urls": [
+        "https://sc04.alicdn.com/kf/H4485e694f2a440db8d5601b04d4cce17d/286385890/H4485e694f2a440db8d5601b04d4cce17d.png",
+        "https://sc04.alicdn.com/kf/H4485e694f2a440db8d5601b04d4cce17d.png",
+        "https://sc04.alicdn.com/kf/H4485e694f2a440db8d5601b04d4cce17d.png_350x350.png"
+      ],
+      "status": "EXACT_SOURCE_BYTES_AND_PIXELS"
+    },
+    {
+      "asset": "C2",
+      "gallery_id": 550,
+      "file_id": "33800520229",
+      "source_sha256": "6cbe80f600ddb5aa4a97e2a8f2050015ffbe03ac76806f44a15cf4fac84b2be7",
+      "download_sha256": "6cbe80f600ddb5aa4a97e2a8f2050015ffbe03ac76806f44a15cf4fac84b2be7",
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "accepted_urls": [
+        "https://sc04.alicdn.com/kf/H8e16babc58ce41d79e8b92623a045461w/286385890/H8e16babc58ce41d79e8b92623a045461w.png",
+        "https://sc04.alicdn.com/kf/H8e16babc58ce41d79e8b92623a045461w.png",
+        "https://sc04.alicdn.com/kf/H8e16babc58ce41d79e8b92623a045461w.png_350x350.png"
+      ],
+      "status": "EXACT_SOURCE_BYTES_AND_PIXELS"
+    },
+    {
+      "asset": "C3",
+      "gallery_id": 600,
+      "file_id": "33800472827",
+      "source_sha256": "88b3481f5aceefcd69325cdcba7d8fea3e48573ede70a312e13e54db6b643bf9",
+      "download_sha256": "88b3481f5aceefcd69325cdcba7d8fea3e48573ede70a312e13e54db6b643bf9",
+      "dimensions": [
+        1073,
+        1466
+      ],
+      "accepted_urls": [
+        "https://sc04.alicdn.com/kf/Hf249cf1234f84225af0b14aa8a0fa7773/286385890/Hf249cf1234f84225af0b14aa8a0fa7773.png",
+        "https://sc04.alicdn.com/kf/Hf249cf1234f84225af0b14aa8a0fa7773.png",
+        "https://sc04.alicdn.com/kf/Hf249cf1234f84225af0b14aa8a0fa7773.png_350x350.png"
+      ],
+      "status": "EXACT_SOURCE_BYTES_AND_PIXELS"
+    },
+    {
+      "asset": "C4",
+      "gallery_id": 450,
+      "file_id": "33800496326",
+      "source_sha256": "5a180afb8bebbd11fc7644d28ee5bd14e582b10c8693781041ff66385cb572cd",
+      "download_sha256": "5a180afb8bebbd11fc7644d28ee5bd14e582b10c8693781041ff66385cb572cd",
+      "dimensions": [
+        1092,
+        1440
+      ],
+      "accepted_urls": [
+        "https://sc04.alicdn.com/kf/Hb696d63f52ca4f08a2e59442f29461835/286385890/Hb696d63f52ca4f08a2e59442f29461835.png",
+        "https://sc04.alicdn.com/kf/Hb696d63f52ca4f08a2e59442f29461835.png",
+        "https://sc04.alicdn.com/kf/Hb696d63f52ca4f08a2e59442f29461835.png_350x350.png"
+      ],
+      "status": "EXACT_SOURCE_BYTES_AND_PIXELS"
+    },
+    {
+      "asset": "C5",
+      "gallery_id": 700,
+      "file_id": "33797425221",
+      "source_sha256": "cd557ec069f111bc12f36b280e88e5952e69c23d1e0705ba28e3a3e3df718504",
+      "download_sha256": "cd557ec069f111bc12f36b280e88e5952e69c23d1e0705ba28e3a3e3df718504",
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "accepted_urls": [
+        "https://sc04.alicdn.com/kf/H68cf387530d946a6ba6cf02ce258525dm/286385890/H68cf387530d946a6ba6cf02ce258525dm.png",
+        "https://sc04.alicdn.com/kf/H68cf387530d946a6ba6cf02ce258525dm.png",
+        "https://sc04.alicdn.com/kf/H68cf387530d946a6ba6cf02ce258525dm.png_350x350.png"
+      ],
+      "status": "EXACT_SOURCE_BYTES_AND_PIXELS"
+    }
+  ]
+}

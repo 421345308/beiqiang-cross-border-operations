@@ -1,0 +1,26 @@
+{
+  "at": "2026-10-12T01:57:43.743833+00:00",
+  "status": "MINIMAL_SCHEMA_PREPARED_NOT_SUBMITTED",
+  "copy_status": "HISTORICAL_COPY_DEFERRED",
+  "copy_public_status": "HISTORICAL_COPY_DEFERRED",
+  "copy_sha256": null,
+  "historical_company_only": true,
+  "source_status_unchanged": true,
+  "asset_version": 6,
+  "bank_file_ids": [
+    "33800484757",
+    "33800520229",
+    "33800472827",
+    "33800496326",
+    "33797425221"
+  ],
+  "field_scope": [
+    "companyImage"
+  ],
+  "dependency_ids": [
+    "productDescType"
+  ],
+  "requires_fresh_prewrite_compare": true,
+  "requires_first_update_formal_and_public_diagnosis_before_bulk": true,
+  "product_fields_written": false
+}
