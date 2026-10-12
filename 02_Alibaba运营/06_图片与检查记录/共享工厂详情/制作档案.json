@@ -1,6 +1,6 @@
 {
   "version": 8,
-  "status": "LOCAL_DRAFT_PENDING_OWNER_REVIEW",
+  "status": "APPROVED_FOR_BATCH_REPLACEMENT",
   "entry": "README.md",
   "current_media_root": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情",
   "raw_media_root": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片",
@@ -1039,7 +1039,7 @@
   },
   "review_draft": {
     "revision": 8,
-    "status": "LOCAL_DRAFT_PENDING_OWNER_REVIEW",
+    "status": "OWNER_APPROVED_EXECUTION_STARTED",
     "date": "2026-10-12",
     "published_revision": 6,
     "published_state_unchanged": true,
@@ -1084,7 +1084,7 @@
       "adopted": "公司简介/通用FAQ/包装/运输各有职责。",
       "not_adopted": "年限、集团、品牌客户、认证、固定质检或承运商关系。"
     },
-    "next_action": "负责人审核当前六图及公司简介/八问FAQ后，再按精确商品范围走API上传、最小差异替换、正式回读及双改。",
+    "next_action": "官方API分批替换六图、通用FAQ及公司简介；逐ID正式与公开核验",
     "visual_review": {
       "C1": "公司身份排版压缩，去掉与开发图重复的桌面图；原建筑招牌、窗户和楼层保留。",
       "C2": "四场景分别展示方向、材料选择、鞋身品牌细节和样品修订；没有以一双鞋代全店款式。",
@@ -1176,5 +1176,14 @@
       "published_v6_pixels_retained": true
     },
     "limits": "AI生成工作场景解释合作方式，不是实拍客户、订单或检验记录；原图未出现的厂区、设备数量、认证和产能未新增。"
+  },
+  "owner_approval": {
+    "source": "这个版本可以，与faq一起分批对商品进行全量替换",
+    "at": "2026-10-12",
+    "scope": [
+      "companyImage",
+      "companyDesc",
+      "companyFaqDesc"
+    ]
   }
 }

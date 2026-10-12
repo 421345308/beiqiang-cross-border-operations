@@ -11740,7 +11740,18 @@
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601976084873/after_get.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601976084873/after_render.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601976084873/verification.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601976084873/public_verification.json"
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601976084873/public_verification.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601976084873/V8/after_get.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601976084873/V8/after_render.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601976084873/V8/before_get.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601976084873/V8/before_render.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601976084873/V8/immediate_prewrite_get.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601976084873/V8/manifest.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601976084873/V8/prepared.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601976084873/V8/public_verification.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601976084873/V8/update_once.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601976084873/V8/update_receipt.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601976084873/V8/verification.json"
       ],
       "notes": [
         "来源采集色码（非实存）：黑色/灰色；EU 39/40/41/42/43/44/45/46/47/48"
@@ -55986,7 +55997,7 @@
         "legacy_keyword_status": "NOT_POPULATED"
       },
       "local_sync": {
-        "state": "FORMAL_SNAPSHOT_SAVED_FACTORY_FORMAL_PASS",
+        "state": "COMPANY_BUNDLE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601976084873/formal_get.json",
         "current_manifest": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2409准备/正式提交清单.json",
         "formal_readback_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2409准备/最新正式回读.json",
@@ -55996,7 +56007,7 @@
         "keyword_state": "NOT_POPULATED",
         "public_acceptance": "NOT_PUBLICLY_TESTED_BATCH_SAMPLE_POLICY",
         "observed_at": "2026-10-10T21:50:49.305896+00:00",
-        "next_action": "本轮工厂图验收完成；原下架链接保留下架，历史鞋款来源与文案按独立状态待修"
+        "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续"
       },
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2409准备/当前来源文本.txt",
@@ -56029,46 +56040,78 @@
           ],
           "next_action": "本轮亮点FAQ正式字段与当前中文公开正文已核；其他字段未纳入本次验收",
           "target_formal_copy_status": "TARGET_FORMAL_PASS",
-          "faq_order_match": true
+          "faq_order_match": true,
+          "current_faq_phase": "02_Alibaba运营/06_图片与检查记录/共享工厂详情/V8/当前替换.json",
+          "faq_superseded_by_general_template": true
         },
         "factory_gallery": {
-          "asset_version": 6,
-          "at": "2026-10-12T02:26:06.442002+00:00",
+          "asset_version": 8,
+          "at": "2026-10-12T11:18:29.107656+00:00",
           "state": "FORMAL_PASS",
           "scope": [
             "companyImage"
           ],
-          "historical_company_only": false,
-          "source_state_unchanged": true,
           "formal_binding_verified": true,
-          "public_status": "PUBLIC_FIVE_FACTORY_IMAGES_LOADED",
+          "public_status": "PUBLIC_SIX_IMAGES_INTRO_FAQ_PASS",
           "evidence": [
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601976084873/manifest.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601976084873/prepared.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601976084873/update_once.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601976084873/update_receipt.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601976084873/after_get.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601976084873/after_render.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601976084873/verification.json",
-            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601976084873/public_verification.json"
+            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601976084873/V8/after_get.json",
+            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601976084873/V8/after_render.json",
+            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601976084873/V8/before_get.json",
+            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601976084873/V8/before_render.json",
+            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601976084873/V8/immediate_prewrite_get.json",
+            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601976084873/V8/manifest.json",
+            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601976084873/V8/prepared.json",
+            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601976084873/V8/public_verification.json",
+            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601976084873/V8/update_once.json",
+            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601976084873/V8/update_receipt.json",
+            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601976084873/V8/verification.json"
           ],
-          "next_action": "本轮工厂图验收完成；原下架链接保留下架，历史鞋款来源与文案按独立状态待修",
-          "company_target_verified": true,
-          "scope_formal_accepted": true,
-          "association_acceptance": "NOT_APPLICABLE",
-          "unresolved_non_target_fields": [],
-          "non_target_changed_fields": [],
+          "source_state_unchanged": true,
+          "product_highlights_preserved": true,
+          "historical_source_and_highlights_deferred": false,
           "completed_this_scope": true,
-          "scope_state": "FACTORY_SCOPE_COMPLETE"
+          "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续",
+          "company_target_verified": true,
+          "scope_formal_accepted": true
+        },
+        "company_bundle": {
+          "asset_version": 8,
+          "at": "2026-10-12T11:18:29.107656+00:00",
+          "state": "FORMAL_PASS",
+          "scope": [
+            "companyImage",
+            "companyDesc",
+            "companyFaqDesc"
+          ],
+          "formal_binding_verified": true,
+          "public_status": "PUBLIC_SIX_IMAGES_INTRO_FAQ_PASS",
+          "evidence": [
+            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601976084873/V8/after_get.json",
+            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601976084873/V8/after_render.json",
+            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601976084873/V8/before_get.json",
+            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601976084873/V8/before_render.json",
+            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601976084873/V8/immediate_prewrite_get.json",
+            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601976084873/V8/manifest.json",
+            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601976084873/V8/prepared.json",
+            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601976084873/V8/public_verification.json",
+            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601976084873/V8/update_once.json",
+            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601976084873/V8/update_receipt.json",
+            "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601976084873/V8/verification.json"
+          ],
+          "source_state_unchanged": true,
+          "product_highlights_preserved": true,
+          "historical_source_and_highlights_deferred": false,
+          "completed_this_scope": true,
+          "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续"
         }
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601976084873/formal_get.json",
-        "at": "2026-10-12T02:26:06.442002+00:00",
-        "scope": "完整product.get；工厂图/审核和公开验收分别记录，不解除货源待核"
+        "at": "2026-10-12T11:18:29.107656+00:00",
+        "scope": "完整正式字段；公司六图、简介、通用FAQ单独验收"
       },
       "current_platform_fields": {
-        "at": "2026-10-12T02:26:06.442002+00:00",
+        "at": "2026-10-12T11:18:29.107656+00:00",
         "title": "Mens Winter Ankle Boots Dial Closure Plush Lining TPR Sole Wide Toe Box Wholesale Footwear EU 39-48",
         "keywords": [
           ""
@@ -56085,7 +56128,7 @@
         "display": "Y",
         "status": "approved",
         "url": "https://www.alibaba.com/product-detail/Mens-Winter-Ankle-Boots-Dial-Closure_1601976084873.html",
-        "scope": "按ID完整product.get正式字段；审核与公开验收分开"
+        "scope": "同ID正式回读；与公开验收分开"
       }
     },
     {
