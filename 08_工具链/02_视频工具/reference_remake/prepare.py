@@ -77,6 +77,15 @@ def prepare(package_path, root, ffprobe):
         raise ValueError('Need an actual video reference and product images, explicitly bound in prompt.')
     if package.get('planned_discard_windows', []) != []:
         raise ValueError('Whole-output workflow cannot pre-plan disposable paid footage.')
+    # Research packages can be checked without uploading a new reference or
+    # borrowing another template's account nodes. Binding happens separately.
+    platform = package.get('libtv')
+    if platform is not None:
+        keys = ('project_uuid', 'draft_node_id', 'reference_video_node_id')
+        if not isinstance(platform, dict) or any(
+                not isinstance(platform.get(key), str) or not platform[key].strip()
+                for key in keys):
+            raise ValueError('Provide all actual LibTV bindings, or libtv=null for local preparation.')
     width, height = picture['width'], picture['height']
     return {
         'schema': 'reference-remake-prepared-v1',
@@ -96,7 +105,9 @@ def prepare(package_path, root, ffprobe):
         'limits': ['input_integrity_only_not_creative_or_motion_acceptance',
                    'platform_quote_and_uploaded_readback_required',
                    'generated_result_must_be_watched_and_listened_to'],
-        'libtv': package['libtv'],
+        'platform_binding_status': 'bound_requires_readback' if platform else 'unbound_local_preparation',
+        'platform_staging_ready': bool(platform),
+        'libtv': platform,
     }
 
 

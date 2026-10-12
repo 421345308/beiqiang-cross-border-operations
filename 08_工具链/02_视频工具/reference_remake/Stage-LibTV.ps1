@@ -4,6 +4,9 @@ $ErrorActionPreference = 'Stop'
 $preparedPath = (Resolve-Path -LiteralPath $Prepared).Path
 $job = Get-Content -LiteralPath $preparedPath -Raw -Encoding utf8 | ConvertFrom-Json
 if ($job.schema -ne 'reference-remake-prepared-v1') { throw 'Unsupported prepared package.' }
+if (-not $job.libtv -or -not $job.libtv.project_uuid -or -not $job.libtv.draft_node_id -or -not $job.libtv.reference_video_node_id) {
+    throw 'Local research package has no actual platform bindings. No upload or CLI action performed.'
+}
 function Assert-Hash($Path, $Expected) {
     if ((Get-FileHash -LiteralPath $Path -Algorithm SHA256).Hash.ToLowerInvariant() -ne $Expected) {
         throw "Input changed: $Path. Prepare and review again."

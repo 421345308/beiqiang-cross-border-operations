@@ -11,6 +11,9 @@ $provider = Join-Path $toolRoot 'provider-libtv'
 $preparedPath = (Resolve-Path -LiteralPath $Prepared).Path
 $job = Get-Content -LiteralPath $preparedPath -Raw -Encoding utf8 | ConvertFrom-Json
 if ($job.schema -ne 'reference-remake-prepared-v1') { throw 'Unsupported prepared package.' }
+if (-not $job.libtv -or -not $job.libtv.project_uuid -or -not $job.libtv.draft_node_id -or -not $job.libtv.reference_video_node_id) {
+    throw 'Local research package is unbound. Bind its own actual platform nodes before creating a Runtime.'
+}
 New-Item -ItemType Directory -Force -Path $Workspace | Out-Null
 $nativeRoot = (Resolve-Path -LiteralPath $Workspace).Path
 $evidencePath = [IO.Path]::GetFullPath($EvidenceDirectory)

@@ -32,6 +32,8 @@ Hypit官方案例的代码和README说明了其生成依赖、三段口播和覆
 
 适配包沿用项目自身入口，至少包括 `product_id`、完整 `reference_video` path/hash/duration、同SKU `reference_images` path/hash/binding/status、prompt path/hash、model/provider/task、输出参数及 `libtv` 的 project_uuid/draft_node_id/reference_video_node_id。商品图的“已看过同款”状态只能在真正核图后写入，校验器本身不作视觉判断。输入长度超过本工具当前30秒范围会报错，不静默剪原片。
 
+**新参考的本地准备：** 尚未上传的新候选使用 `libtv: null`，仍能核完整音视频、商品图、提示词及输出参数，结果明确为 `unbound_local_preparation`。不借用上一条参考的节点编号凑通过；接线与Runtime初始化会在任何平台操作前拒绝这个包。每条候选先核作品ID、详情页标题和本地画面是否同源，再决定商品部位能否迁移。搜索页可能自动续播别的作品，当前播放器有视频不等于所选作品已获取。声音存在和语义听审分别记录。
+
 随后执行 `Stage-LibTV.ps1 -Prepared <prepared.json> -EvidenceDirectory <本项目执行证据目录>`。输出包含真实上传回执、绑定后的提示词、草稿回读、stage-state；复用匹配hash的上传回执。API失败或状态不明时停在该处，不能自动重试；丢失回执先查节点，不能因本地文件不存在就重复上传。平台状态及商品内容变化后重做准备和回读。
 
 2026-10-12实测：完整28.467秒带声输入和两张不同真实商品图通过校验；五类错误输入被拒绝。两图真实上传成功，未运行草稿的当前imageList/videoList、mixedListOrder、提示词和输出参数均已回读。CLI中节点编号引用必须用不带引号的 `{{Node UUID}}`，基础参数用 `-s duration=28` 等由schema路由，不用 `settings.duration` 作为键。
