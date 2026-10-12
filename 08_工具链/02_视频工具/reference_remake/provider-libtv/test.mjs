@@ -1,6 +1,6 @@
 // Uses the actual Hypit SDK with a simulated vendor transport. Never calls paid generation.
 import { pathToFileURL } from 'node:url';
-import { join } from 'node:path';
+import { join, resolve, dirname, basename } from 'node:path';
 import { mkdtemp, readFile, writeFile, rm } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { createHash } from 'node:crypto';
@@ -99,6 +99,9 @@ try {
   await assert.rejects(invoke({ authorization: authFile }), /download failure/u);
   const submitted = calls.filter(a => a.includes('--run')).length;
   failDownload = false;
+  node.data.url = ['different-task'];
+  await assert.rejects(invoke({ authorization: authFile }), /Remote completed output changed/u);
+  node.data.url = ['fixture-only'];
   const completed = await invoke({ authorization: authFile });
   verifyGeneratedVideoSet(completed.value.value);
   await invoke(); // Collection reuse allowed without another payment scope or another --run.
@@ -108,4 +111,8 @@ try {
   console.log(JSON.stringify({ sdk: 'Hypit 0.1.8 actual SDK', transport: 'simulated only', paid_calls: 0,
     passed: ['exact_support', 'artifact_mismatch', 'exclusive_lock', 'authorization_absent', 'authorization_mismatch', 'authorization_expired', 'stale_reference',
       'unknown_submit_no_retry', 'collect_resume_without_regeneration', 'model_result_type', 'output_integrity'] }));
-} finally { await rm(temp, { recursive: true, force: true }); }
+} finally {
+  const cleanup = resolve(temp);
+  assert(dirname(cleanup) === resolve(tmpdir()) && basename(cleanup).startsWith('libtv-provider-test-'), 'Unexpected cleanup target');
+  await rm(cleanup, { recursive: true, force: true });
+}

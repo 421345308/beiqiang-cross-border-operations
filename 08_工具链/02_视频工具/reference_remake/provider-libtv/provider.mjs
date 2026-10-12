@@ -131,7 +131,15 @@ export function createLibTVProvider(options, transport = createCliTransport(opti
         assert(previous.prepared_sha256 === preparedSha && previous.project_uuid === job.libtv.project_uuid
           && previous.draft_node_id === job.libtv.draft_node_id, 'Operation record belongs to another request.');
         assert(['remote_complete', 'collected'].includes(previous.phase), 'Previous submission is failed/unknown; automatic resubmission blocked.');
-        const file = previous.phase === 'collected' ? previous.output_file : await transport.download(job.libtv.project_uuid, job.libtv.draft_node_id, directory);
+        let file = previous.output_file;
+        if (previous.phase === 'remote_complete') {
+          const stage = await json(join(directory, 'stage-state.json'));
+          const current = await transport.json(['node', job.libtv.draft_node_id, '-p', job.libtv.project_uuid], directory);
+          assert(verifyDraft(current, job, stage, prompt) === previous.draft_sha256
+            && hash(JSON.stringify(current.data.url)) === previous.output_identity_sha256,
+            'Remote completed output changed; do not collect a different task.');
+          file = await transport.download(job.libtv.project_uuid, job.libtv.draft_node_id, directory);
+        }
         if (previous.output_sha256) assert(hash(await readFile(file)) === previous.output_sha256, 'Collected output changed.');
         const admitted = await admit(context, file, job, transport);
         await save(journalPath, { ...previous, phase: 'collected', output_file: file, output_sha256: admitted.outputSha });
@@ -159,7 +167,8 @@ export function createLibTVProvider(options, transport = createCliTransport(opti
       verifyDraft(completed, job, stage, prompt);
       assert(completed.data.url?.length === 1, 'LibTV returned no single completed video; no paid retry.');
       await save(journalPath, { schema: 'libtv-native-operation-v1', phase: 'remote_complete',
-        prepared_sha256: preparedSha, project_uuid: job.libtv.project_uuid, draft_node_id: job.libtv.draft_node_id });
+        prepared_sha256: preparedSha, draft_sha256: draftSha, output_identity_sha256: hash(JSON.stringify(completed.data.url)),
+        project_uuid: job.libtv.project_uuid, draft_node_id: job.libtv.draft_node_id });
       const file = await transport.download(job.libtv.project_uuid, job.libtv.draft_node_id, directory);
       const admitted = await admit(context, file, job, transport);
       await save(journalPath, { schema: 'libtv-native-operation-v1', phase: 'collected', prepared_sha256: preparedSha,
