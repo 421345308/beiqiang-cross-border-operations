@@ -39,6 +39,9 @@ def main():
   factory['non_target_changed_fields']=v.get('non_target_changed_fields',[])
   if v.get('unsubmitted_fields_preserved')is False:factory['next_action']='工厂图目标与非目标字段分别验收；旧关键词联动差异待负责人决定，不重放提交'
   if factory['scope_formal_accepted']and factory['association_acceptance']=='OWNER_ACCEPTED_LEGACY_KEYWORDS_ONLY':factory['next_action']='负责人已接受旧关键词迁移；继续核精确商品五张工厂图公开呈现，历史来源和文案仍待修'
+  factory['completed_this_scope']=factory['scope_formal_accepted']and factory['public_status']in ['PUBLIC_FIVE_FACTORY_IMAGES_LOADED','NOT_APPLICABLE_OFFLINE_DISPLAY_PRESERVED']
+  factory['scope_state']='FACTORY_SCOPE_COMPLETE'if factory['completed_this_scope']else'FACTORY_QA_PENDING'
+  if factory['completed_this_scope']:factory['next_action']='本轮工厂图验收完成；原下架链接保留下架，历史鞋款来源与文案按独立状态待修'
   listing.setdefault('optimization',{})['factory_gallery']=factory;states[pid]=state
   if v and(f/'after_get.json').exists():
    got=op.load(f/'after_get.json');actual=got['product'];formal=DETAILS/pid/'formal_get.json'

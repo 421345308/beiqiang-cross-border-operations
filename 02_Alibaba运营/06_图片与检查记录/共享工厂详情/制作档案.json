@@ -1,6 +1,6 @@
 {
   "version": 6,
-  "status": "ALL_449_FACTORY_BINDINGS_FORMAL_SCOPE_ACCEPTED_PUBLIC_QA_SEPARATE",
+  "status": "ALL_449_FACTORY_SCOPE_COMPLETE_444_PUBLIC_5_ORIGINAL_OFFLINE",
   "entry": "README.md",
   "current_media_root": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情",
   "raw_media_root": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片",
@@ -54,16 +54,18 @@
     "bank_evidence": "当前上传回执.json",
     "bank_pixels_evidence": "图片银行像素核对.json",
     "bound_product_count": 449,
-    "state": "ALL_FACTORY_FORMAL_SCOPE_ACCEPTED_PUBLIC_SEPARATE",
+    "state": "ALL_FACTORY_FORMAL_AND_PUBLIC_QA_COMPLETE",
     "uploaded": true,
     "bound": true,
     "authorized_product_count": 449,
     "positive_submission_count": 448,
-    "public_pass_count": 290,
+    "public_pass_count": 444,
     "current_state_evidence": "当前替换.json",
     "scope": "Company gallery target and explicitly accepted legacy-keyword association only; source/copy not resolved, public presentation separate",
     "strict_non_target_unchanged_count": 388,
-    "scope_formal_accepted_count": 449
+    "scope_formal_accepted_count": 449,
+    "original_offline_display_preserved_count": 5,
+    "factory_scope_complete": true
   },
   "final_requests": {
     "C1": {
