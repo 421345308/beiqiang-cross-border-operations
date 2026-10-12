@@ -115,26 +115,11 @@ python .\build_sooxie_prelisting_batch.py --workspace C:\Users\spq\Desktop\贝�
 
 ## 批量公开详情验收
 
-`audit_alibaba_public_batch.ps1` 用于在提交审核前后读取同一批商品的实时公开 `descComponentData.bodyLayout`，生成紧凑对比报告。它会记录在线/审核状态、pageId、详情长度、产品/公司图库标记，以及 `Flyknit`、退款抵扣、无依据宽楦、Accio 临时地址和嵌套 Alibaba URL 风险数量。公开风险未归零的商品不能计入“完全正确”。
+当前执行使用官方API正式回读和正常浏览器只读验收，流程以唯一商品SOP为准。按商品ID保留原值、提交回执、审核字段和真实公开页观察；API绑定完成与公开呈现完成分别记录，不能用抽样代替整批覆盖。
 
-输入使用 Workctl `batch call` 的只读 JSON 规范，每个步骤调用当前实时 schema 中的 `icbu.other.list-id`；命令若变更，应先按 `workctl schema` 修正规范，不复制旧命令。
+共享工厂图使用 `prepare_company_gallery.py`、`replace_company_gallery.py`、`save_company_public_observations.py` 和 `sync_company_gallery_records.py`；当前结果与逐ID证据统一由共享工厂详情入口关联。严格比较非目标字段；负责人接受的精确旧关键词迁移单独记范围，不放宽标题、描述或上架状态校验。
 
-```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File .\audit_alibaba_public_batch.ps1 `
-  -BatchSpec <批次只读查询.json> `
-  -RawOutput <原始回读.json> `
-  -Report <紧凑验收报告.json>
-```
-
-同一批同步前后必须保留两份紧凑报告。只有状态、结构化字段、公开 `bodyLayout`、真实图片像素、SKU 绑定和买家公开页全部通过，才可把商品标记为完成；本脚本不替代图片视觉验收。
-
-`stage_alibaba_public_images.ps1` 可从同一份 `batch call` 原始回读中下载每款公开主图、详情图、公司图和去重后的 SKU 颜色图，并生成 URL/本地文件清单。下载后可对每个 SKU 目录运行 `make_candidate_contact_sheets.ps1`，逐张核对货号身份、第三方标识、中文/国内营销风格、颜色绑定和图集角色。公开 URL 回读与像素验收必须使用同一批原始数据，避免只看本地预上架包。
-
-```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File .\stage_alibaba_public_images.ps1 `
-  -RawBatchOutput <原始回读.json> `
-  -OutputDirectory <公开图片验收目录>
-```
+旧 `audit_alibaba_public_batch.ps1` 和 `stage_alibaba_public_images.ps1` 依赖已退役的Workctl路线，仅保留历史追溯，不再执行。现行公开验收读取正常买家页实际DOM及已加载图像，核对应ID、五图身份、原生像素和栏目；不读取隐藏应用状态或用技术通道代替页面验收。
 
 ## API 发品后的 3.9 分修复门禁
 

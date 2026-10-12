@@ -10,7 +10,7 @@ def main():
  for row in rows:
   pid=row['id'];assert pid in prep['eligible_ids'] and row['matchedFive']is True and row['labelsMatched']is True
   f=op.BASE/'商品'/pid;v=op.load(f/'verification.json');got=op.load(f/'after_get.json')
-  assert v['status']=='FORMAL_PASS' and got['product']['display']=='Y' and row['url']==got['product']['pc_detail_url']
+  assert op.target_binding_verified(v) and got['product']['display']=='Y' and row['url']==got['product']['pc_detail_url']
   images=[{'asset':x['asset'],'gallery_id':x['gallery_id'],'url':x['accepted_urls'][1],'dimensions':x['dimensions'],'complete':True}for x in proof['items']]
   result={'product_id':pid,'asset_version':6,'observed_at':row['at'],'url':row['url'],'status':'PUBLIC_FIVE_FACTORY_IMAGES_LOADED','matched_image_identities':images,'company_labels_present':['Company overview','Competitive advantages','Customization capabilities','Production workflow','Packaging & shipping specifications'],'method':'Normal exact buyer-page browser DOM/accessibility plus rendered img src, complete and original natural dimensions; all five exact URLs matched. No hidden application state, iframe query tokens, form or platform write','formal_evidence':'verification.json','scope':'Exact product/time and V6 factory module only; source and other product fields separately assessed'}
   op.save(f/'public_verification.json',result);v['public_status']=result['status'];op.save(f/'verification.json',v)

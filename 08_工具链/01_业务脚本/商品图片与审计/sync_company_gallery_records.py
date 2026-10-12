@@ -27,10 +27,18 @@ def main():
   receipt=op.load(f/'update_receipt.json')if(f/'update_receipt.json').exists()else{}
   public=op.load(f/'public_verification.json')if(f/'public_verification.json').exists()else{}
   state=v.get('status')or receipt.get('status')or'STARTED_OUTCOME_UNKNOWN'
-  evidence=[rel(f/x)for x in ['manifest.json','prepared.json','update_once.json','update_receipt.json','after_get.json','after_render.json','verification.json','public_verification.json']if(f/x).exists()]
+  evidence=[rel(f/x)for x in ['manifest.json','prepared.json','update_once.json','update_receipt.json','after_get.json','after_render.json','verification.json','public_verification.json','non_target_difference.json','reconciliation.json']if(f/x).exists()]
+  evidence +=[rel(x)for phase in ['未生效修复','标题差异修复']for x in(f/phase).glob('*.json')]
   factory={'asset_version':6,'at':v.get('at')or receipt.get('attempted_at')or op.now(),'state':state,'scope':['companyImage'],'historical_company_only':pid in prep['historical_company_only_ids'],'source_state_unchanged':True,'formal_binding_verified':state=='FORMAL_PASS','public_status':public.get('status')or v.get('public_status')or'NOT_CHECKED','evidence':evidence,'next_action':'核精确商品公开工厂图；不重放已有提交'if state=='FORMAL_PASS'else'等待审核并独立回读；不重放已有提交'}
   if factory['public_status']=='PUBLIC_FIVE_FACTORY_IMAGES_LOADED':factory['next_action']='本轮五张工厂图正式与公开呈现已核；鞋款来源及其他商品问题按各自状态继续'
   elif factory['public_status']=='NOT_APPLICABLE_OFFLINE_DISPLAY_PRESERVED':factory['next_action']='保留原下架状态；本轮只核工厂图正式绑定，不计买家公开页通过'
+  factory['company_target_verified']=op.target_binding_verified(v)
+  factory['scope_formal_accepted']=op.scope_formal_accepted(v)
+  factory['association_acceptance']=v.get('association_acceptance','NOT_CHECKED')
+  factory['unresolved_non_target_fields']=v.get('unresolved_non_target_fields',[])
+  factory['non_target_changed_fields']=v.get('non_target_changed_fields',[])
+  if v.get('unsubmitted_fields_preserved')is False:factory['next_action']='工厂图目标与非目标字段分别验收；旧关键词联动差异待负责人决定，不重放提交'
+  if factory['scope_formal_accepted']and factory['association_acceptance']=='OWNER_ACCEPTED_LEGACY_KEYWORDS_ONLY':factory['next_action']='负责人已接受旧关键词迁移；继续核精确商品五张工厂图公开呈现，历史来源和文案仍待修'
   listing.setdefault('optimization',{})['factory_gallery']=factory;states[pid]=state
   if v and(f/'after_get.json').exists():
    got=op.load(f/'after_get.json');actual=got['product'];formal=DETAILS/pid/'formal_get.json'
