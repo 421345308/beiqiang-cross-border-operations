@@ -29,6 +29,8 @@ def main():
         complete=state=='FORMAL_PASS'and public_status in ('PUBLIC_SIX_IMAGES_INTRO_FAQ_PASS','NOT_APPLICABLE_OFFLINE_DISPLAY_PRESERVED')
         evidence=[rel(p)for p in f.glob('*.json')if p.name not in ('submit_error.json','prepare_error.json')]
         stage={'asset_version':8,'at':v.get('at',receipt.get('at')),'state':state,'scope':['companyImage','companyDesc','companyFaqDesc'],'formal_binding_verified':state=='FORMAL_PASS','public_status':public_status,'evidence':evidence,'source_state_unchanged':True,'product_highlights_preserved':v.get('unsubmitted_fields_preserved'),'historical_source_and_highlights_deferred':pid in scope['historical_ids'],'completed_this_scope':complete,'next_action':'本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续'if complete else'等待审核并核正式与公开结果；不重放未知写入'}
+        if state=='FORMAL_PASS' and not complete:
+            stage['next_action']='六图、公司简介与通用FAQ正式回读通过；只待该ID公开页呈现核验，不重复提交'
         opt=listing.setdefault('optimization',{});opt['company_bundle']=stage
         opt['factory_gallery']={**stage,'scope':['companyImage'],'company_target_verified':v.get('company_images_match',False),'scope_formal_accepted':state=='FORMAL_PASS'}
         # Earlier per-shoe FAQ reads remain historical; highlights retain their own acceptance.

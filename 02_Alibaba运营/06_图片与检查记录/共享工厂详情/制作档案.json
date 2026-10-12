@@ -62,14 +62,14 @@
   },
   "online_state": {
     "asset_version": 8,
-    "state": "BATCH_REPLACEMENT_IN_PROGRESS",
+    "state": "FORMAL_COMPLETE_PUBLIC_VERIFY_PENDING",
     "uploaded": true,
     "bank_evidence": "V8/bank.json",
     "bank_pixels_evidence": "V8/bank_pixels.json",
-    "bound_product_count": 261,
+    "bound_product_count": 449,
     "authorized_product_count": 449,
     "public_pass_count": 81,
-    "original_offline_display_preserved_count": 1,
+    "original_offline_display_preserved_count": 5,
     "current_state_evidence": "V8/当前替换.json",
     "scope": "Six company images, introduction and general FAQ only; per-shoe highlights and sources preserved"
   },
@@ -1284,7 +1284,7 @@
   },
   "public_verification_service": {
     "at": "2026-10-12T22:26:00.731711+00:00",
-    "state": "BROWSER_TRANSPORT_TIMEOUT_API_EXECUTION_CONTINUES",
+    "state": "IAB_TRANSPORT_TIMEOUT_CHROME_LOGIN_REQUIRED_PUBLIC_QA_PENDING",
     "verified_public_count": 81,
     "observed_failures": [
       "16 normal page navigations: page frame-tree reads timed out",
@@ -1298,7 +1298,14 @@
       "Reinitialized runtime and reconnected to the existing tab"
     ],
     "scope": "Remaining public-page QA only; does not block authorized API submission or formal readback",
-    "next_action": "Keep API execution running; resume exact-ID public checks when normal browser reads recover",
-    "authorization_unchanged": true
+    "next_action": "Keep formal API verification independent; resume exact-ID public checks through a normally authenticated browser",
+    "authorization_unchanged": true,
+    "chrome_normal_read": {
+      "at": "2026-10-12T23:39:00+00:00",
+      "product_id": "1601939626612",
+      "result": "NORMAL_CONNECTION_WORKS_PUBLIC_PAGE_REDIRECTS_TO_LOGIN",
+      "browser": "Chrome",
+      "no_credentials_entered": true
+    }
   }
 }
