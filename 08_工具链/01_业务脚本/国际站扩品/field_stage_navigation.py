@@ -8,7 +8,11 @@ def annotate(content,selected,dossier_path,root):
  rows=[];product_id=Path(dossier_path).parent.name;parent=Path(dossier_path).parent
  for listing in selected['listings']:
   if listing['product_id']!=product_id:continue
-  for key,label in [('buyer_copy','亮点与FAQ'),('factory_gallery','共享工厂图')]:
+  optimization=listing.get('optimization',{})
+  company_bundle=optimization.get('company_bundle')
+  stages=[('buyer_copy','商品亮点' if company_bundle else '亮点与FAQ')]
+  stages.append(('company_bundle','通用FAQ、公司简介与六张工厂图') if company_bundle else ('factory_gallery','共享工厂图'))
+  for key,label in stages:
    stage=listing.get('optimization',{}).get(key)
    if not stage:continue
    rows.append(f"- {listing['id']} · {label}：`{stage.get('state','')}`；公开：`{stage.get('public_status','NOT_CHECKED')}`。{stage.get('next_action','')}")

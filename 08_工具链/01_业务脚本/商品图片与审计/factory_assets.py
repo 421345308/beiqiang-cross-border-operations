@@ -96,7 +96,7 @@ def check():
         bank_assets=m.get('published_assets',m['assets'])
         for asset in bank_assets.values():
             assert hashlib.sha256((ROOT/asset['path']).read_bytes()).hexdigest()==asset['sha256']
-        assert pixels['status']=='FIVE_BANK_PIXELS_EXACT_PASS'
+        assert pixels['status']==('SIX_BANK_PIXELS_EXACT_PASS' if bank['asset_version']==8 else 'FIVE_BANK_PIXELS_EXACT_PASS')
         assert set(bank['items'])==set(bank_assets)
         for role,row in bank['items'].items():
             assert row['status']=='UPLOADED_OFFICIAL_BANK' and row['file_id']

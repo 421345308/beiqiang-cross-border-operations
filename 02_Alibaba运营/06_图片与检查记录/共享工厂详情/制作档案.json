@@ -61,23 +61,17 @@
     }
   },
   "online_state": {
-    "bank_images": 5,
-    "bank_evidence": "当前上传回执.json",
-    "bank_pixels_evidence": "图片银行像素核对.json",
-    "bound_product_count": 449,
-    "state": "ALL_FACTORY_FORMAL_AND_PUBLIC_QA_COMPLETE",
+    "asset_version": 8,
+    "state": "BATCH_REPLACEMENT_IN_PROGRESS",
     "uploaded": true,
-    "bound": true,
+    "bank_evidence": "V8/bank.json",
+    "bank_pixels_evidence": "V8/bank_pixels.json",
+    "bound_product_count": 189,
     "authorized_product_count": 449,
-    "positive_submission_count": 448,
-    "public_pass_count": 444,
-    "current_state_evidence": "当前替换.json",
-    "scope": "Company gallery target and explicitly accepted legacy-keyword association only; source/copy not resolved, public presentation separate",
-    "strict_non_target_unchanged_count": 388,
-    "scope_formal_accepted_count": 449,
-    "original_offline_display_preserved_count": 5,
-    "factory_scope_complete": true,
-    "asset_version": 6
+    "public_pass_count": 81,
+    "original_offline_display_preserved_count": 0,
+    "current_state_evidence": "V8/当前替换.json",
+    "scope": "Six company images, introduction and general FAQ only; per-shoe highlights and sources preserved"
   },
   "assets": {
     "C1": {
@@ -89,7 +83,7 @@
       ],
       "buyer_question": "贝强是谁，为采购方提供怎样的合作",
       "qa": "公司身份排版压缩，去掉与开发图重复的桌面图；原建筑招牌、窗户和楼层保留。",
-      "review": "LOCAL_VISUAL_REVIEWED_PENDING_OWNER_REVIEW",
+      "review": "OWNER_APPROVED",
       "scene_status": "AI_ENHANCED_EXISTING_PHOTO",
       "buyer_next_step": "贝强是谁，为采购方提供怎样的合作"
     },
@@ -102,7 +96,7 @@
       ],
       "buyer_question": "开发项目有哪些具体沟通选项和修订步骤",
       "qa": "四场景分别展示方向、材料选择、鞋身品牌细节和样品修订；没有以一双鞋代全店款式。",
-      "review": "LOCAL_VISUAL_REVIEWED_PENDING_OWNER_REVIEW",
+      "review": "OWNER_APPROVED",
       "scene_status": "AI_GENERATED_WORKFLOW_ILLUSTRATION",
       "buyer_next_step": "开发项目有哪些具体沟通选项和修订步骤"
     },
@@ -115,7 +109,7 @@
       ],
       "buyer_question": "已有设备和人工操作怎样组织生产",
       "qa": "原图全景中两名白衣及一名黑衣人员、设备、风扇及空间对应；两处原始操作特写保留，减少大标题与泛泛流程条。",
-      "review": "LOCAL_VISUAL_REVIEWED_PENDING_OWNER_REVIEW",
+      "review": "OWNER_APPROVED",
       "scene_status": "AI_ENHANCED_EXISTING_PHOTO",
       "buyer_next_step": "已有设备和人工操作怎样组织生产"
     },
@@ -128,7 +122,7 @@
       ],
       "buyer_question": "怎样检查外观、做工、标识与确认样差异",
       "qa": "四个不同检查动作，黑色套脚鞋、接缝特写、内标核对及靴款对照；不把示意当正式检验记录。",
-      "review": "LOCAL_VISUAL_REVIEWED_PENDING_OWNER_REVIEW",
+      "review": "OWNER_APPROVED",
       "scene_status": "AI_GENERATED_WORKFLOW_ILLUSTRATION",
       "buyer_next_step": "怎样检查外观、做工、标识与确认样差异"
     },
@@ -141,7 +135,7 @@
       ],
       "buyer_question": "包装、配货和外箱准备怎样衔接",
       "qa": "包装实际动作、配货清单、品牌包装示例与封箱各自说明事项，不再靠袋盒箱静态摆拍凑信息。",
-      "review": "LOCAL_VISUAL_REVIEWED_PENDING_OWNER_REVIEW",
+      "review": "OWNER_APPROVED",
       "scene_status": "AI_GENERATED_WORKFLOW_ILLUSTRATION",
       "buyer_next_step": "包装、配货和外箱准备怎样衔接"
     },
@@ -154,7 +148,7 @@
       ],
       "buyer_question": "不同货量和交付要求可以怎样讨论运输方案",
       "qa": "与其他模块统一白色页头；四项运输用途及正文保持，无承运商品牌或时效承诺。",
-      "review": "LOCAL_VISUAL_REVIEWED_PENDING_OWNER_REVIEW",
+      "review": "OWNER_APPROVED",
       "scene_status": "AI_GENERATED_WORKFLOW_ILLUSTRATION",
       "buyer_next_step": "不同货量和交付要求可以怎样讨论运输方案"
     }
@@ -1094,79 +1088,89 @@
       "C6": "与其他模块统一白色页头；四项运输用途及正文保持，无承运商品牌或时效承诺。"
     }
   },
-  "published_version": 6,
+  "published_version": 8,
   "published_assets": {
     "C1": {
-      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/1a551ea790ac8d31.png",
-      "sha256": "1a551ea790ac8d31da076250ec2ca38c872d3aca6ab46e9339e0d919f9e6b9ff",
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C1_factory.png",
+      "sha256": "e60e6be070cc030e40788df671a3138f5bc02ed201754af0e8bc1ec0a88f92bf",
       "pixels": [
-        1774,
-        887
+        1721,
+        914
       ],
-      "buyer_question": "贝强是谁、在哪里，怎样开展OEM/ODM与批发合作",
-      "qa": "短横幅保留公司全称、泉州地点和两种合作模式，去掉鞋类限定与买家渠道清单；原厂房小幅出现，未扩建场地。",
-      "review": "VISUAL_REVIEWED_LOCAL_DRAFT; PROCESS_FOCUSED_CROSS_CATEGORY",
-      "scene_status": "AI_ENHANCED_EXISTING_EXTERIOR; LOCAL_REVIEW_DRAFT",
-      "buyer_next_step": "Identify the supplier and cooperation model"
+      "buyer_question": "贝强是谁，为采购方提供怎样的合作",
+      "qa": "公司身份排版压缩，去掉与开发图重复的桌面图；原建筑招牌、窗户和楼层保留。",
+      "review": "LOCAL_VISUAL_REVIEWED_PENDING_OWNER_REVIEW",
+      "scene_status": "AI_ENHANCED_EXISTING_PHOTO",
+      "buyer_next_step": "贝强是谁，为采购方提供怎样的合作"
     },
     "C2": {
-      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/6cbe80f600ddb5aa.png",
-      "sha256": "6cbe80f600ddb5aa4a97e2a8f2050015ffbe03ac76806f44a15cf4fac84b2be7",
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C2_oem.png",
+      "sha256": "2e247e1be31b6eb3ea96a104233977b0758171a32563f4143b41e304c500d3b0",
       "pixels": [
-        1122,
-        1402
+        1106,
+        1422
       ],
-      "buyer_question": "怎样把参考与要求整理成可沟通、可修订的鞋类样品方向",
-      "qa": "三个场景分别解释方向、细节、样品修订；有Illustrative development workflow标识，鞋款只是流程示例，不表示固定商品、材料库或实际客户案例。",
-      "review": "VISUAL_REVIEWED_LOCAL_DRAFT; PROCESS_FOCUSED_CROSS_CATEGORY",
-      "scene_status": "ILLUSTRATIVE_DEVELOPMENT_WORKFLOW; NOT_ACTUAL_CUSTOMER_CASE",
-      "buyer_next_step": "Prepare a development brief and sample review inputs",
-      "illustrations": "Clearly identified process/packing examples, not SKU choices, completed customer work, inspection results or inventory."
+      "buyer_question": "开发项目有哪些具体沟通选项和修订步骤",
+      "qa": "四场景分别展示方向、材料选择、鞋身品牌细节和样品修订；没有以一双鞋代全店款式。",
+      "review": "LOCAL_VISUAL_REVIEWED_PENDING_OWNER_REVIEW",
+      "scene_status": "AI_GENERATED_WORKFLOW_ILLUSTRATION",
+      "buyer_next_step": "开发项目有哪些具体沟通选项和修订步骤"
     },
     "C3": {
-      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/88b3481f5aceefcd.png",
-      "sha256": "88b3481f5aceefcd69325cdcba7d8fea3e48573ede70a312e13e54db6b643bf9",
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C3_production.png",
+      "sha256": "a25ddc5c92f285b97016c5389f400537f95dba51bf9eb73bbf7ab1ec89adb12c",
       "pixels": [
-        1073,
-        1466
+        1106,
+        1422
       ],
-      "buyer_question": "现有设备和人工操作怎样支持生产衔接",
-      "qa": "原车间设备全景和两张人工操作特写，对照原图核场地、设备数量与动作；保留三名人员的场景组织，无新增设备或产能；移除重复三步图标条。",
-      "review": "VISUAL_REVIEWED_LOCAL_DRAFT; PROCESS_FOCUSED_CROSS_CATEGORY",
-      "scene_status": "AI_ENHANCED_EXISTING_WORKSHOP; NOT_ALL_SKU_PRODUCTION_PROOF",
-      "buyer_next_step": "Understand the visible workshop and manual operations"
+      "buyer_question": "已有设备和人工操作怎样组织生产",
+      "qa": "原图全景中两名白衣及一名黑衣人员、设备、风扇及空间对应；两处原始操作特写保留，减少大标题与泛泛流程条。",
+      "review": "LOCAL_VISUAL_REVIEWED_PENDING_OWNER_REVIEW",
+      "scene_status": "AI_ENHANCED_EXISTING_PHOTO",
+      "buyer_next_step": "已有设备和人工操作怎样组织生产"
     },
     "C4": {
-      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/5a180afb8bebbd11.png",
-      "sha256": "5a180afb8bebbd11fc7644d28ee5bd14e582b10c8693781041ff66385cb572cd",
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C4_quality.png",
+      "sha256": "a5516788d448147b8b91d1bdee924dff48dd51971ea59005fd35803fe35c6c97",
       "pixels": [
-        1092,
-        1440
+        1106,
+        1422
       ],
-      "buyer_question": "围绕确认样可以怎样核对外观、做工、规格及批次差异",
-      "qa": "删除不证明质检的生产线背景，四项改为具体动作示意；Illustrated review examples标识清楚，无合格结论、测试报告或全检承诺；示例鞋不限定全店结构。",
-      "review": "VISUAL_REVIEWED_LOCAL_DRAFT; PROCESS_FOCUSED_CROSS_CATEGORY",
-      "scene_status": "ILLUSTRATED_REVIEW_EXAMPLES; NOT_DOCUMENTED_INSPECTION_EVENT",
-      "buyer_next_step": "Discuss style-specific review points against the approved sample",
-      "illustrations": "Clearly identified process/packing examples, not SKU choices, completed customer work, inspection results or inventory."
+      "buyer_question": "怎样检查外观、做工、标识与确认样差异",
+      "qa": "四个不同检查动作，黑色套脚鞋、接缝特写、内标核对及靴款对照；不把示意当正式检验记录。",
+      "review": "LOCAL_VISUAL_REVIEWED_PENDING_OWNER_REVIEW",
+      "scene_status": "AI_GENERATED_WORKFLOW_ILLUSTRATION",
+      "buyer_next_step": "怎样检查外观、做工、标识与确认样差异"
     },
     "C5": {
-      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/cd557ec069f111bc.png",
-      "sha256": "cd557ec069f111bc12f36b280e88e5952e69c23d1e0705ba28e3a3e3df718504",
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C5_packing.png",
+      "sha256": "aaa6a7e241d10da3a600e8cab3c7587968c9fe045655549141ac4de1186fb0a2",
+      "pixels": [
+        1106,
+        1422
+      ],
+      "buyer_question": "包装、配货和外箱准备怎样衔接",
+      "qa": "包装实际动作、配货清单、品牌包装示例与封箱各自说明事项，不再靠袋盒箱静态摆拍凑信息。",
+      "review": "LOCAL_VISUAL_REVIEWED_PENDING_OWNER_REVIEW",
+      "scene_status": "AI_GENERATED_WORKFLOW_ILLUSTRATION",
+      "buyer_next_step": "包装、配货和外箱准备怎样衔接"
+    },
+    "C6": {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C6_shipping.png",
+      "sha256": "a5fca57c332ae23457d1974e5ceefe5d7385171a5d06aafd8ef25d8e8860d089",
       "pixels": [
         1122,
         1402
       ],
-      "buyer_question": "怎样把包装方式、色码数量与外箱标记对应起来",
-      "qa": "移除印字杂乱仓储大图，保留袋盒箱Packing examples、空白色码配货表与外箱标记示意，只出现一次询价入口；不表示真实订单、库存或包装默认包含。",
-      "review": "VISUAL_REVIEWED_LOCAL_DRAFT; PROCESS_FOCUSED_CROSS_CATEGORY",
-      "scene_status": "ILLUSTRATIVE_PACKING_EXAMPLES; NOT_ACTUAL_ORDER_RECORD",
-      "buyer_next_step": "Provide assortment, packing brief and destination",
-      "illustrations": "Clearly identified process/packing examples, not SKU choices, completed customer work, inspection results or inventory."
+      "buyer_question": "不同货量和交付要求可以怎样讨论运输方案",
+      "qa": "与其他模块统一白色页头；四项运输用途及正文保持，无承运商品牌或时效承诺。",
+      "review": "LOCAL_VISUAL_REVIEWED_PENDING_OWNER_REVIEW",
+      "scene_status": "AI_GENERATED_WORKFLOW_ILLUSTRATION",
+      "buyer_next_step": "不同货量和交付要求可以怎样讨论运输方案"
     }
   },
   "final_review": {
-    "status": "LOCAL_VISUAL_REVIEWED_PENDING_OWNER",
+    "status": "OWNER_APPROVED_LOCAL_AND_CANARY_VERIFIED",
     "scope": "C1–C6英文、原图场景、手部、信息角色与重复内容；不代表线上替换完成",
     "checks": {
       "distinct_buyer_roles": true,
@@ -1185,5 +1189,97 @@
       "companyDesc",
       "companyFaqDesc"
     ]
+  },
+  "previous_completed_online_state": {
+    "bank_images": 5,
+    "bank_evidence": "当前上传回执.json",
+    "bank_pixels_evidence": "图片银行像素核对.json",
+    "bound_product_count": 449,
+    "state": "ALL_FACTORY_FORMAL_AND_PUBLIC_QA_COMPLETE",
+    "uploaded": true,
+    "bound": true,
+    "authorized_product_count": 449,
+    "positive_submission_count": 448,
+    "public_pass_count": 444,
+    "current_state_evidence": "当前替换.json",
+    "scope": "Company gallery target and explicitly accepted legacy-keyword association only; source/copy not resolved, public presentation separate",
+    "strict_non_target_unchanged_count": 388,
+    "scope_formal_accepted_count": 449,
+    "original_offline_display_preserved_count": 5,
+    "factory_scope_complete": true,
+    "asset_version": 6
+  },
+  "previous_published_assets": {
+    "asset_version": 6,
+    "assets": {
+      "C1": {
+        "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/1a551ea790ac8d31.png",
+        "sha256": "1a551ea790ac8d31da076250ec2ca38c872d3aca6ab46e9339e0d919f9e6b9ff",
+        "pixels": [
+          1774,
+          887
+        ],
+        "buyer_question": "贝强是谁、在哪里，怎样开展OEM/ODM与批发合作",
+        "qa": "短横幅保留公司全称、泉州地点和两种合作模式，去掉鞋类限定与买家渠道清单；原厂房小幅出现，未扩建场地。",
+        "review": "VISUAL_REVIEWED_LOCAL_DRAFT; PROCESS_FOCUSED_CROSS_CATEGORY",
+        "scene_status": "AI_ENHANCED_EXISTING_EXTERIOR; LOCAL_REVIEW_DRAFT",
+        "buyer_next_step": "Identify the supplier and cooperation model"
+      },
+      "C2": {
+        "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/6cbe80f600ddb5aa.png",
+        "sha256": "6cbe80f600ddb5aa4a97e2a8f2050015ffbe03ac76806f44a15cf4fac84b2be7",
+        "pixels": [
+          1122,
+          1402
+        ],
+        "buyer_question": "怎样把参考与要求整理成可沟通、可修订的鞋类样品方向",
+        "qa": "三个场景分别解释方向、细节、样品修订；有Illustrative development workflow标识，鞋款只是流程示例，不表示固定商品、材料库或实际客户案例。",
+        "review": "VISUAL_REVIEWED_LOCAL_DRAFT; PROCESS_FOCUSED_CROSS_CATEGORY",
+        "scene_status": "ILLUSTRATIVE_DEVELOPMENT_WORKFLOW; NOT_ACTUAL_CUSTOMER_CASE",
+        "buyer_next_step": "Prepare a development brief and sample review inputs",
+        "illustrations": "Clearly identified process/packing examples, not SKU choices, completed customer work, inspection results or inventory."
+      },
+      "C3": {
+        "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/88b3481f5aceefcd.png",
+        "sha256": "88b3481f5aceefcd69325cdcba7d8fea3e48573ede70a312e13e54db6b643bf9",
+        "pixels": [
+          1073,
+          1466
+        ],
+        "buyer_question": "现有设备和人工操作怎样支持生产衔接",
+        "qa": "原车间设备全景和两张人工操作特写，对照原图核场地、设备数量与动作；保留三名人员的场景组织，无新增设备或产能；移除重复三步图标条。",
+        "review": "VISUAL_REVIEWED_LOCAL_DRAFT; PROCESS_FOCUSED_CROSS_CATEGORY",
+        "scene_status": "AI_ENHANCED_EXISTING_WORKSHOP; NOT_ALL_SKU_PRODUCTION_PROOF",
+        "buyer_next_step": "Understand the visible workshop and manual operations"
+      },
+      "C4": {
+        "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/5a180afb8bebbd11.png",
+        "sha256": "5a180afb8bebbd11fc7644d28ee5bd14e582b10c8693781041ff66385cb572cd",
+        "pixels": [
+          1092,
+          1440
+        ],
+        "buyer_question": "围绕确认样可以怎样核对外观、做工、规格及批次差异",
+        "qa": "删除不证明质检的生产线背景，四项改为具体动作示意；Illustrated review examples标识清楚，无合格结论、测试报告或全检承诺；示例鞋不限定全店结构。",
+        "review": "VISUAL_REVIEWED_LOCAL_DRAFT; PROCESS_FOCUSED_CROSS_CATEGORY",
+        "scene_status": "ILLUSTRATED_REVIEW_EXAMPLES; NOT_DOCUMENTED_INSPECTION_EVENT",
+        "buyer_next_step": "Discuss style-specific review points against the approved sample",
+        "illustrations": "Clearly identified process/packing examples, not SKU choices, completed customer work, inspection results or inventory."
+      },
+      "C5": {
+        "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/cd557ec069f111bc.png",
+        "sha256": "cd557ec069f111bc12f36b280e88e5952e69c23d1e0705ba28e3a3e3df718504",
+        "pixels": [
+          1122,
+          1402
+        ],
+        "buyer_question": "怎样把包装方式、色码数量与外箱标记对应起来",
+        "qa": "移除印字杂乱仓储大图，保留袋盒箱Packing examples、空白色码配货表与外箱标记示意，只出现一次询价入口；不表示真实订单、库存或包装默认包含。",
+        "review": "VISUAL_REVIEWED_LOCAL_DRAFT; PROCESS_FOCUSED_CROSS_CATEGORY",
+        "scene_status": "ILLUSTRATIVE_PACKING_EXAMPLES; NOT_ACTUAL_ORDER_RECORD",
+        "buyer_next_step": "Provide assortment, packing brief and destination",
+        "illustrations": "Clearly identified process/packing examples, not SKU choices, completed customer work, inspection results or inventory."
+      }
+    }
   }
 }

@@ -31,6 +31,15 @@ def load(p):return b.load(p)
 def save(p,x):b.save(p,x)
 def sha(p):return b.sha(p)
 def folder(pid):return BASE/'商品'/pid/'V8'
+def ledger_file(pid):
+    f=folder(pid);proof=f/'unknown_reconciliation.json'
+    if proof.exists():
+        x=load(proof)
+        assert x['status']=='TWO_FRESH_READS_CONFIRM_NO_EFFECT'
+        assert x['product_id']==pid and len(x['readback_request_ids'])==2
+        assert load(f/'update_once.json')['status']=='write_outcome_unknown'
+        return f/'recovery_update_once.json'
+    return f/'update_once.json'
 def approval():
     m=load(BASE/'制作档案.json');c=load(COPY/'通用FAQ与公司简介.json')
     assert m['version']==8 and m['status']=='APPROVED_FOR_BATCH_REPLACEMENT'
@@ -105,7 +114,7 @@ def establish_aliases(pid,p,xml,bank):
     save(PHASE/'url_identity.json',{'asset_version':8,'at':now(),'product_id':pid,'status':'SIX_EXACT_FORMAL_IDENTITIES_VERIFIED','items':rows})
 def work(mode,pid,api,cfg):
     m,c=approval();scope=load(PHASE/'scope.json');assert pid in scope['eligible_ids'] and pid not in scope['excluded_ids']
-    f=folder(pid);f.mkdir(parents=True,exist_ok=True);ledger=f/'update_once.json';bank=load(PHASE/'bank.json')
+    f=folder(pid);f.mkdir(parents=True,exist_ok=True);ledger=ledger_file(pid);bank=load(PHASE/'bank.json')
     assert bank['status']=='SIX_OFFICIAL_BANK_ASSETS_VERIFIED'
     def get():return read_only_call(api,cfg,'alibaba.icbu.product.get',{'product_id':pid,'language':'ENGLISH'})
     def render(p):return read_only_call(api,cfg,'alibaba.icbu.product.schema.render',{'param_product_top_publish_request':{'product_id':int(pid),'cat_id':int(p['category_id']),'language':'en_US'}})
@@ -156,7 +165,7 @@ def work(mode,pid,api,cfg):
         got=get();save(f/'immediate_prewrite_get.json',got)
         if got['product']!=load(f/'before_get.json')['product']:return {'product_id':pid,'status':'CURRENT_CHANGED_REPREPARE_NO_WRITE'}
         with ledger.open('x',encoding='utf8')as h:json.dump({'product_id':pid,'status':'STARTED_OUTCOME_UNKNOWN','at':now()},h)
-        receipt=pub.api_submit(api,cfg,listing,False,update_product_id=pid);save(f/'update_receipt.json',receipt);save(ledger,{'product_id':pid,'status':receipt['status'],'at':receipt['attempted_at'],'refs':receipt.get('refs')})
+        receipt=pub.api_submit(api,cfg,listing,False,update_product_id=pid);save(f/('recovery_update_receipt.json' if ledger.name=='recovery_update_once.json' else 'update_receipt.json'),receipt);save(ledger,{'product_id':pid,'status':receipt['status'],'at':receipt['attempted_at'],'refs':receipt.get('refs')})
         return {'product_id':pid,'status':receipt['status']}
     if not ledger.exists():return {'product_id':pid,'status':'NO_WRITE_LEDGER'}
     got=get();save(f/'after_get.json',got);p=got['product'];old=load(f/'before_get.json')['product']
@@ -169,9 +178,12 @@ def work(mode,pid,api,cfg):
             if pid==CANARY and not(PHASE/'url_identity.json').exists():establish_aliases(pid,p,xml,bank)
             actual=b.formal_copy(p);expected=[{k:x[k]for k in ('question','answers')}for x in c['companyFaqDesc']]
             snap=pub.field_snapshot(E.fromstring(xml));want=load(f/'prepared.json')['expected_fields']
+            before_snap=pub.field_snapshot(E.parse(f/'current_schema.xml').getroot())
+            schema_differences=[k for k in set(before_snap)|set(snap) if k not in FIELDS and before_snap.get(k)!=snap.get(k)]
             a,z=preserved(old),preserved(p);differences=[k for k in set(a)|set(z)if a.get(k)!=z.get(k)]
             v.update(company_images_match=image_match(pairs(p)),schema_images_match=image_match(schema_pairs(xml)),faq_match=b.faq_pairs_equivalent(actual['faq'],expected),company_intro_match=p.get('struct_detail',{}).get('company_summary')==c['companyDesc'],schema_copy_match=snap.get('companyDesc')==want['companyDesc']and b.faq_snapshot_content_equivalent(snap.get('companyFaqDesc'),want['companyFaqDesc']),non_target_changed_fields=differences,unsubmitted_fields_preserved=not differences,company_image_count=sum(pairs(p).values()))
-            passed=all(v[k]for k in ('company_images_match','schema_images_match','faq_match','company_intro_match','schema_copy_match','unsubmitted_fields_preserved','display_preserved'))
+            v.update(non_target_schema_changed_fields=schema_differences,unsubmitted_schema_fields_preserved=not schema_differences)
+            passed=all(v[k]for k in ('company_images_match','schema_images_match','faq_match','company_intro_match','schema_copy_match','unsubmitted_fields_preserved','unsubmitted_schema_fields_preserved','display_preserved'))
             v['status']='FORMAL_PASS'if passed else'MISMATCH_DIAGNOSE_NO_REPLAY'
     public=f/'public_verification.json'
     v['public_status']=load(public)['status']if public.exists()else'NOT_APPLICABLE_OFFLINE_DISPLAY_PRESERVED'if v['status']=='FORMAL_PASS'and old['display']=='N'else'PENDING_PUBLIC'
@@ -180,11 +192,20 @@ def aggregate():
     scope=load(PHASE/'scope.json');rows=[]
     for pid in scope['eligible_ids']:
         f=folder(pid);v=load(f/'verification.json')if(f/'verification.json').exists()else{}
-        l=load(f/'update_once.json')if(f/'update_once.json').exists()else{}
+        ledger=ledger_file(pid);l=load(ledger)if ledger.exists()else{}
+        if v.get('at','')<l.get('at',''):v={}
         rows.append({'product_id':pid,'status':v.get('status',l.get('status','NOT_SUBMITTED')),'submission_status':l.get('status','NOT_SUBMITTED'),'public_status':v.get('public_status','NOT_CHECKED')})
     counts=dict(Counter(x['status']for x in rows));public=dict(Counter(x['public_status']for x in rows))
     out={'asset_version':8,'at':now(),'authorized_count':len(rows),'counts':counts,'public_counts':public,'items':rows,'scope':['companyImage','companyDesc','companyFaqDesc'],'productTitle':'same original value explicitly preserved','historical_source_and_highlight_holds_unchanged':True}
-    save(PHASE/'当前替换.json',out);return {'counts':counts,'public_counts':public}
+    save(PHASE/'当前替换.json',out)
+    m=load(BASE/'制作档案.json')
+    if m.get('published_version')!=8:
+        m['previous_completed_online_state']=m['online_state']
+        m['previous_published_assets']={'asset_version':m.get('published_version',6),'assets':m['published_assets']}
+        m['published_version']=8;m['published_assets']=copy.deepcopy(m['assets'])
+    m['online_state']={'asset_version':8,'state':'BATCH_REPLACEMENT_IN_PROGRESS','uploaded':True,'bank_evidence':'V8/bank.json','bank_pixels_evidence':'V8/bank_pixels.json','bound_product_count':counts.get('FORMAL_PASS',0),'authorized_product_count':len(rows),'public_pass_count':public.get('PUBLIC_SIX_IMAGES_INTRO_FAQ_PASS',0),'original_offline_display_preserved_count':public.get('NOT_APPLICABLE_OFFLINE_DISPLAY_PRESERVED',0),'current_state_evidence':'V8/当前替换.json','scope':'Six company images, introduction and general FAQ only; per-shoe highlights and sources preserved'}
+    save(BASE/'制作档案.json',m)
+    return {'counts':counts,'public_counts':public}
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('mode',choices=['upload','prepare','submit','verify','aggregate']);ap.add_argument('--ids');ap.add_argument('--workers',type=int,default=4);a=ap.parse_args();sys.stdout.reconfigure(encoding='utf8')
     if a.mode=='aggregate':print(json.dumps(aggregate()));return

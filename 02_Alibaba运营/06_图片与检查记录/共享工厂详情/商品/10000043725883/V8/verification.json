@@ -1,11 +1,21 @@
 {
   "product_id": "10000043725883",
   "asset_version": 8,
-  "at": "2026-10-12T11:35:57.712469+00:00",
-  "request_id": "213d4e4917918049615234982",
-  "product_status": "modified",
-  "display": "N",
-  "display_preserved": false,
-  "status": "PENDING_REVIEW",
-  "public_status": "PENDING_PUBLIC"
+  "at": "2026-10-12T11:48:13.404555+00:00",
+  "request_id": "212cbf3217918056972323746",
+  "product_status": "approved",
+  "display": "Y",
+  "display_preserved": true,
+  "status": "FORMAL_PASS",
+  "company_images_match": true,
+  "schema_images_match": true,
+  "faq_match": true,
+  "company_intro_match": true,
+  "schema_copy_match": true,
+  "non_target_changed_fields": [],
+  "unsubmitted_fields_preserved": true,
+  "company_image_count": 6,
+  "public_status": "PUBLIC_SIX_IMAGES_INTRO_FAQ_PASS",
+  "non_target_schema_changed_fields": [],
+  "unsubmitted_schema_fields_preserved": true
 }
