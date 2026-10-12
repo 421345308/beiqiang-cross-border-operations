@@ -1,54 +1,65 @@
 {
-  "version": 6,
-  "status": "ALL_449_FACTORY_SCOPE_COMPLETE_444_PUBLIC_5_ORIGINAL_OFFLINE",
+  "version": 8,
+  "status": "LOCAL_DRAFT_PENDING_OWNER_REVIEW",
   "entry": "README.md",
   "current_media_root": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情",
   "raw_media_root": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片",
-  "owner_scope": "负责人要求缩小C1厂房照片、提高信息价值，C2不再出现不相干鞋款，深入参考凯顺信息组织并优化现有原图；本次重做C1/C2并精简C5重复流程。",
+  "owner_scope": "负责人要求用AI补足原素材的表达，全面优化原C1–C5及统一C6风格；整套审核后再安排平台替换。",
   "generation_mode": "built-in image_gen",
   "requests": {
     "C1": {
+      "prompt": "Edit image1 Company Profile poster. Image2 is original factory facade; preserve original building/sign/window/floors geometry, no invented extension. Major layout correction needed: remove both generic design-desk pictures and giant company name. These repeat the OEM module and communicate no new identity information. Make a COMPACT LANDSCAPE canvas about1600x850. Keep facade photo right35%, left65% a professionally typeset company introduction. White compact header same style as newothermodules: BEIQIANG left, vertical divider, \"Company Profile\" navy and orange; header <=12%canvas. Company Englishname max2lines and NO MORE than12%totalcanvasheight, not enormous hero. Body readable largerthanfineprint, generouslineheight. Keep exacttext:\n\"Quanzhou Beiqiang Footwear & Apparel Co., Ltd.\"\n\"Quanzhou, Fujian, China\"\n\"We work with importers, wholesalers, brands and e-commerce businesses on wholesale and OEM / ODM footwear projects.\"\nTwo SMALL text-only columnsunderbody, NOT pictures orbigicons:\n\"Wholesale cooperation\"\n\"Existing styles, trial-order discussions and assortment planning.\"\n\"OEM / ODM projects\"\n\"Design requirements, sample review and brand presentation.\"\nThin footer \"Tell us your product direction and purchasing needs.\"\nONLY photograph is originalfacade. No swatches/shoedrawings/sample/shoe hero/productionpanorama/packing map/processicons. No newclaims,numbers,brands,certification. No generalFootwearManufacturingPartner giantheading. Englishoverlayonly,retain incidentaloriginalChinese贝强鞋业sign. Navywhiteorange with restrainedtypography. One identitymessage, no repeats fromothermodules.",
       "referenced_image_paths": [
-        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C1_factory.png",
+        "E:/C盘迁移/Codex/.codex/generated_images/01a1164e-73c1-70d1-882c-299608adb19c/exec-1a99d312-5f6c-4a26-8855-b65f4f148d17.png",
         "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/大门.jpg"
       ],
       "transparent_background": false,
-      "prompt": "Create one polished B2B footwear supplier detail-page image for BEIQIANG, coherent navy/white/orange visual system, clean editorial photography and elegant restrained diagrams. This is a revision of the attached current module, not a collage of all references. English-only designed text; incidental real factory sign may remain. Buyers are footwear importers, wholesale buyers, brands and ecommerce businesses across different shoe types. Do NOT restrict the company to walking, casual, knit or any shoe category. No invented years, capacity, certifications, laboratory, test results, customer brands, fixed MOQ, turnaround promises or inventory. Make substantive procurement information prominent; avoid oversized headlines, repetitive icons and giant decorative blank areas. All exact text below, readable natural English. No price badges. Each image serves its unique module, do not introduce other module content.\nMODULE C1 supplier identity. Image 1 style/edit target, image 2 actual exterior photo; preserve real building facade geometry, floors, windows and full 贝强鞋业 sign. Improve lighting only, no enlarged factory or new site. Create a compact LANDSCAPE 4:3 canvas, approximately1024x768. Exterior occupies a modest right-hand 30% panel, NOT a full-width hero. Left clear identity and concise cooperation scope. Exact text:\n\"BEIQIANG\"\n\"Your Footwear Manufacturing Partner\"\n\"Quanzhou Beiqiang Footwear & Apparel Co., Ltd.\"\n\"Quanzhou, Fujian, China\"\nBottom two compact complementary blocks:\n\"OEM / ODM\" / \"Develop footwear around your project brief.\"\n\"Wholesale\" / \"Discuss styles, quantities and order requirements.\"\nNo shoe-category list, buyer-channel list, giant icon cards, design workflow, machines, quality checklist or packaging. Company English name sized to read without awkward clipping. Keep page short and professional; header not over18% of canvas."
+      "selected_output": "E:/C盘迁移/Codex/.codex/generated_images/01a1164e-73c1-70d1-882c-299608adb19c/exec-650e9796-b906-46fe-9a76-a4be800e3f4e.png"
     },
     "C2": {
+      "prompt": "Create ONE finished premium B2B footwear supplier detail poster. Image1 is our shipping poster, visual style reference only: white/pale cool background, navy #063266 and orange #ff7900, clear sans-serif type. Make this revision more credible and information-rich, editorial photographic scenes dominate, not giant headings or repeated icon cards. English designed text only. Compact header with BEIQIANG and module title, maximum10% canvas. Do not add generic slogans to every corner. Clear meaningful captions under images. Mobile-readable, body text not tiny. No stock/production numbers, invented years, capacity, certification, laboratories, customer brand logos, claim to serve named brands, price or fixed MOQ/lead time, or actual completed order/customer case. No duplicated panorama on separate posters. Distinct scene roles. No watermark. Exact text verbatim, no extra copy except required labels. Keep authentic texture, avoid excessive AI gloss.\nMODULE C2 OEM/ODM cooperation, portrait approximately1120x1440. Photorealistic AI process illustration. Main idea: buyers see tangible subjects to discuss, not generic paper stacks or large exploded sneaker. Show FOUR distinct close-up scenes in 2x2 editorial grid with asymmetrical photo details, no giant numeral circles. No full factory office or identifiable employee, no invented design-center.\nHeader \"OEM / ODM Development\" / \"Shape the project before production\"\nPanel1 \"Design direction\" / \"Reference style, intended use and construction.\" Photo of hands comparing several SMALL footwear silhouettes on a workboard (slip-on, lace-up, boot outlines) with compact specification sketch. Multiple shoe categories, no universal actualSKU claim.\nPanel2 \"Color & material choices\" / \"Discuss upper, lining and sole requirements.\" Tactile material chips and color swatches being examined alongside a small upper piece, no specific fiber/material names and not huge swatch fan.\nPanel3 \"Branding details\" / \"Logo placement, labels and visual identity.\" Close-up of hands holding a small sample footwear tongue with blank woven label, a heel tab, plain logo-placement diagram marked only by a small orange rectangle. No actualcustomerlogo or packing scene.\nPanel4 \"Sample revisions\" / \"Review the sample and agree the changes.\" Two physically different neutral shoe samples at modest size with a hand pointing at a specific collar/heel and a short marked sketch; no fake numerical measurement.\nBottom slim workflow line \"Brief → Options → Sample → Agreed specification\"\nSmall caption \"Development workflow illustration\"\nScenes are photo-like illustrations of collaboration, not presented as company documentary. No large shoe exploded layers, no QC tests/warehouse/transport, no repeated shoe across4panels. Visual information much denser than a three-step diagram, captions remain short.",
       "referenced_image_paths": [
-        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C2_oem.png"
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C6_shipping.png"
       ],
       "transparent_background": false,
-      "prompt": "Create one polished B2B footwear supplier detail-page image for BEIQIANG, coherent navy/white/orange visual system, clean editorial photography and elegant restrained diagrams. This is a revision of the attached current module, not a collage of all references. English-only designed text; incidental real factory sign may remain. Buyers are footwear importers, wholesale buyers, brands and ecommerce businesses across different shoe types. Do NOT restrict the company to walking, casual, knit or any shoe category. No invented years, capacity, certifications, laboratory, test results, customer brands, fixed MOQ, turnaround promises or inventory. Make substantive procurement information prominent; avoid oversized headlines, repetitive icons and giant decorative blank areas. All exact text below, readable natural English. No price badges. Each image serves its unique module, do not introduce other module content.\nMODULE C2 shoe-specific development communication. Existing image is style reference/edit target. Completely redesign it so it does not look like a generic fabric/cord/label catalogue. Portrait approximately1024x1280. Header:\n\"OEM / ODM Development\"\n\"From your reference to an agreed sample\"\nThree stacked 3D/editorial workboard scenes with small numbered labels, physically plausible footwear context. Heading/body:\n\"1  Define the direction\"\n\"Reference style, intended use and design requirements.\"\nVisual: clear shoe design reference card, proportion sketches, plain specification brief; not an actual company designer or workshop photo.\n\"2  Align the details\"\n\"Discuss colour, materials, construction and branding.\"\nVisual: one schematic shoe side profile with its upper and sole separated, 3 small material/colour reference chips, a branding-placement card. Shoe is small supporting example, not a SKU hero or promise of stock. Avoid huge swatch fan, loose ropes and garment labels as main image.\n\"3  Review the sample\"\n\"Compare the sample with the brief and agree revisions.\"\nVisual: two shoe sample/profile illustrations adjacent to marked specification sheets, revision comments and a pencil; no fixed dimensions, performance or material names.\nOne subtle readable caption \"Illustrative development workflow\" under header. Do not present as completed customer case. No quality checklist, packing, quote CTA, actual staff, new facility or repeated process strip; the three rows ARE the complete progression."
+      "selected_output": "E:/C盘迁移/Codex/.codex/generated_images/01a1164e-73c1-70d1-882c-299608adb19c/exec-1992eb02-ee0d-4903-8b73-863124e8f92e.png"
     },
     "C3": {
+      "prompt": "Create ONE finished premium B2B footwear supplier detail poster. Image1 is our shipping poster, visual style reference only: white/pale cool background, navy #063266 and orange #ff7900, clear sans-serif type. Make this revision more credible and information-rich, editorial photographic scenes dominate, not giant headings or repeated icon cards. English designed text only. Compact header with BEIQIANG and module title, maximum10% canvas. Do not add generic slogans to every corner. Clear meaningful captions under images. Mobile-readable, body text not tiny. No stock/production numbers, invented years, capacity, certification, laboratories, customer brand logos, claim to serve named brands, price or fixed MOQ/lead time, or actual completed order/customer case. No duplicated panorama on separate posters. Distinct scene roles. No watermark. Exact text verbatim, no extra copy except required labels. Keep authentic texture, avoid excessive AI gloss.\nMODULE C3 Production, portrait approx1120x1440. Image2 actual workshop panorama; images3and4 actual operation closeups. Rebuild from THESE real photos, not from generated previous poster. Documentary layout with one wide panorama50% and two distinct close-ups below. Image2 preserve same3workers (two white tops, one black top), same green machine row, white tunnel, blue roller/conveyor, ceiling fans/windows and room layout. Do not change apparel into uniforms. Improve exposure, straighten/crop, reduce obvious loose clutter, retain natural working texture. No added machines/workers/sites.\nHeader \"Equipment & Production\" / \"Workshop overview and hands-on operations\"\nWide panorama caption \"Workshop equipment\" / \"Workstations arranged along the production line.\"\nTwo lower large panels respectively from images3and4. Preserve actual hands, tool/black last-held upper/white outsole geometry. Do not replace with generic gray sneakers.\nCaption under photo3: \"Upper preparation\" / \"Preparing the upper at the workstation.\"\nCaption under photo4: \"Upper & sole assembly\" / \"Handling the components during assembly.\"\nTiny footer \"Production scenes from our workshop\"\nNo other numbered flow/Batch flow card, no extra bottomillustration. Header small and panoramic photo large soactualequipmentclearlyrecognizable. No inventedcutting/sewingmachines, QCscene,packaging, machine technicalnames or output claims.",
       "referenced_image_paths": [
-        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C3_production.png",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C6_shipping.png",
         "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/A9C9E3B935A11A476BE00DE0FD0C3BBC.png",
         "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/微信图片_20260530105010_227_16.jpg",
         "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/微信图片_20260530105149_230_16.jpg"
       ],
       "transparent_background": false,
-      "prompt": "Create one polished B2B footwear supplier detail-page image for BEIQIANG, coherent navy/white/orange visual system, clean editorial photography and elegant restrained diagrams. This is a revision of the attached current module, not a collage of all references. English-only designed text; incidental real factory sign may remain. Buyers are footwear importers, wholesale buyers, brands and ecommerce businesses across different shoe types. Do NOT restrict the company to walking, casual, knit or any shoe category. No invented years, capacity, certifications, laboratory, test results, customer brands, fixed MOQ, turnaround promises or inventory. Make substantive procurement information prominent; avoid oversized headlines, repetitive icons and giant decorative blank areas. All exact text below, readable natural English. No price badges. Each image serves its unique module, do not introduce other module content.\nMODULE C3 production organization. Image1 style/edit target, images2-4 actual source photos. Portrait approx1024x1400. Rebuild primarily from the original photos; don't recreate an expanded factory. Top header no more12%:\n\"Production in Action\"\n\"Equipment, manual operations and batch flow\"\nLarge scene below from original image2: existing green machinery/conveyor and SAME THREE workers, same workshop layout, fans, ceiling and machine count. Clean excess floor clutter, improve exposure naturally; don't add workers or equipment, avoid plastic AI gloss.\nCaption \"Workshop equipment & workstations\"\n\"Manual operations alongside the production line.\"\nBelow two large documentary close-up panels from original3 and4, preserve worker hands, actual last-held black knitted uppers and white sole geometry:\n\"Upper preparation\" / \"Preparing the upper at the workstation.\"\n\"Sole positioning\" / \"Aligning the upper and sole during assembly.\"\nKeep these captions below photos, never over hands. These are production examples, not universal shoe construction, no shoe class headline.\nBottom ONLY small useful line \"Batch flow\" / \"Components and shoes move between workstations in groups.\"\nNo redundant three-step shoe-icon strip, no QC, sample approval, pack/ship, stock numbers, shoe material names, equipment technical name or output claims. Natural realistic hands, maintain actual operation; final image has one panorama and two distinct closeups."
+      "selected_output": "E:/C盘迁移/Codex/.codex/generated_images/01a1164e-73c1-70d1-882c-299608adb19c/exec-a8cb884a-7c0c-497e-9b6f-e91e61c9d9d9.png"
     },
     "C4": {
+      "prompt": "Create ONE finished premium B2B footwear supplier detail poster. Image1 is our shipping poster, visual style reference only: white/pale cool background, navy #063266 and orange #ff7900, clear sans-serif type. Make this revision more credible and information-rich, editorial photographic scenes dominate, not giant headings or repeated icon cards. English designed text only. Compact header with BEIQIANG and module title, maximum10% canvas. Do not add generic slogans to every corner. Clear meaningful captions under images. Mobile-readable, body text not tiny. No stock/production numbers, invented years, capacity, certification, laboratories, customer brand logos, claim to serve named brands, price or fixed MOQ/lead time, or actual completed order/customer case. No duplicated panorama on separate posters. Distinct scene roles. No watermark. Exact text verbatim, no extra copy except required labels. Keep authentic texture, avoid excessive AI gloss.\nMODULE C4 quality checkpoints, portrait approximately1120x1440. Generate realistic close-up AI illustration scenes with real texture and believable hands. No invented test lab/modern factory/identifiableQCemployee. Avoid four views ofsamebeigelaceupsneaker. Header \"Quality Checkpoints\" / \"Review the details against the agreed requirements\"\nFour2x2panels distinct actions and framing:\n\"Appearance\" / \"Surface finish and consistency between pairs.\" Photo hands bringing two neutral blacksliponshoes side by side on worktable tocomparefinish, visibleupperstexturenormalnotgloss.\n\"Workmanship\" / \"Seams, joins and finishing details.\" Extreme macro of hands examining seam and upper-to-sole join of gray shoe, no magic scanningdevice.\n\"Size & markings\" / \"Size labels and specified product details.\" Hands checking shoe internalEUsize label and reference checklistwithnoactualreadable sizevalue; smallmeasuringtapeusedlikephysicalmeasure butnoinventednumericresult.\n\"Sample comparison\" / \"Compare the order sample with the agreed reference.\" Photoreal brownanklebootpair matchedonworktable with small two cards \"Reference\" / \"Order sample\", fingerpointingatmatchingfeature. No actualcompliancecertificateorPASSstamp.\nSmall bottom caption \"Illustrated inspection scenes\"\nFooter restrained: \"Record differences and agree the corrective action.\"\nNo guaranteed100%inspection, certifications,testresults, tensile/droptestmachines,fakecustomerorders, packingorlablogos. Realistic anatomical hands. Mainqualityactionsdominant instead oftechnicalformpaperfiller. Different footwear merely supports the generalworkflow,notmaterialorSKUfacts.",
       "referenced_image_paths": [
-        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C4_quality.png"
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C6_shipping.png"
       ],
       "transparent_background": false,
-      "prompt": "Create one polished B2B footwear supplier detail-page image for BEIQIANG, coherent navy/white/orange visual system, clean editorial photography and elegant restrained diagrams. This is a revision of the attached current module, not a collage of all references. English-only designed text; incidental real factory sign may remain. Buyers are footwear importers, wholesale buyers, brands and ecommerce businesses across different shoe types. Do NOT restrict the company to walking, casual, knit or any shoe category. No invented years, capacity, certifications, laboratory, test results, customer brands, fixed MOQ, turnaround promises or inventory. Make substantive procurement information prominent; avoid oversized headlines, repetitive icons and giant decorative blank areas. All exact text below, readable natural English. No price badges. Each image serves its unique module, do not introduce other module content.\nMODULE C4 practical sample-based quality review. Style/edit reference existing C4. Remove conveyor-background photo completely: it does not show an inspection. Build portrait approx1024x1350 four practical photo-real tabletop review examples, clearly labelled \"Illustrated review examples\" under header. This is visual explanation of review dimensions, not claimed documentary inspection or testing record. No invented staff/company laboratory. Four large panels in2x2 grid, each has shoes/component handling view PLUS one short caption, show clear actions instead of generic stitched rectangles or icons:\nHeader \"Quality Review\"\n\"Check each style against its approved sample\"\n1 \"Appearance\" / \"Review surface condition, finish and pair consistency.\"\nVisual hands turning a plain generic shoe to inspect upper surface beside its matching pair, good anatomy.\n2 \"Workmanship\" / \"Inspect seams, joins and finishing details.\"\nVisual hand reviewing a close-up upper-to-sole joint, no exaggerated shoe bend or strength test, no sewing implication on all shoes.\n3 \"Specification\" / \"Match style, colour, size and agreed markings.\"\nVisual plain shoe on size/specification card, plain ruler and placement reference tag. No numerical sizes, no US/EU, no invented tolerances or measured results; markings use neutral abstract blocks.\n4 \"Sample comparison\" / \"Compare the batch with the approved reference.\"\nVisual two matching neutral generic shoes on desk cards headed \"Approved sample\" and \"Batch sample\", together with blank observation sheet, no pass tick/status. Generic example shoes can be used to clarify actions but do not imply universal model/material/closure.\nBottom practical text \"Record findings and resolve differences against the agreed requirements.\"\nNo large photo of shoes on belt, no production machinery, no packing, no developer brief diagram, no claims of laboratory/performance/AQL/100% inspection. This should look like specific explainable review actions, not an empty checklist poster."
+      "selected_output": "E:/C盘迁移/Codex/.codex/generated_images/01a1164e-73c1-70d1-882c-299608adb19c/exec-08da1a5f-9f93-404e-bd49-346e7bb94c93.png"
     },
     "C5": {
+      "prompt": "Create ONE finished premium B2B footwear supplier detail poster. Image1 is our shipping poster, visual style reference only: white/pale cool background, navy #063266 and orange #ff7900, clear sans-serif type. Make this revision more credible and information-rich, editorial photographic scenes dominate, not giant headings or repeated icon cards. English designed text only. Compact header with BEIQIANG and module title, maximum10% canvas. Do not add generic slogans to every corner. Clear meaningful captions under images. Mobile-readable, body text not tiny. No stock/production numbers, invented years, capacity, certification, laboratories, customer brand logos, claim to serve named brands, price or fixed MOQ/lead time, or actual completed order/customer case. No duplicated panorama on separate posters. Distinct scene roles. No watermark. Exact text verbatim, no extra copy except required labels. Keep authentic texture, avoid excessive AI gloss.\nMODULE C5 Packing & Order Preparation. Portrait approximately1120x1440. Create a premium photographic process illustration, morephysicalactivityandcontentthantheoldstaticbagboxposter. Clean believable packingtablewithhands, unbranded materials. Do notgeneratefakefactorywarehouse panorama; tightscenesnotidentityproof.\nHeader \"Packing & Order Preparation\" / \"Keep the order assortment and cartons aligned\"\nUpper40%hero photo real-looking hand gently wrapping a neutral pair of shoes in plain tissue beside an open shoebox; another pair in clearpolybag at edge, allonactualpackingbench, no obvious duplicate shoes/clonedhands. Bodycaption \"Packing options\" / \"Pair bags or shoe boxes, with outer cartons.\"\nBelow three DISTINCT photo-processpanels (horizontalonewide+twoor2x2editorial; no repetitiousboximages):\n\"Assortment check\" / \"Match styles, colors, sizes and pairs to the order list.\" Handscheckingbatchesofplainshoeboxes orbagpairsagainstpackinglistwithheadingsonly \"Style | Color | Size | Pairs\", blank numericvalues.\n\"Brand packaging\" / \"Discuss custom boxes, labels and presentation.\" 2neutralsmallbrandedpackagingmockupswithONLY \"YOUR LOGO\" simpleliteraltextononebox; demonstrativechoice, no actualcustomer case.\n\"Carton preparation\" / \"Group the pairs and apply the agreed shipping marks.\" Handssealingonetidyoutercarton, attachedlabelheadings \"Style / Size / Quantity\" nofakeorderoraddressvalues.\nSmall caption \"Packing workflow illustration\"\nFooter one usefulaction \"Send your assortment and packing requirements for a quotation.\"\nDo notincludeairplanes/ships/trucks/worldmap/transportprice (C6willcovertransport), no giant emptycolor-sizetable, noassurancepackingincluded/free, no actualstock/salescount,Chineseprint,dense formtext. Make packingactivitytangible anddistinguishable fromOEMbrandingdevelopment(C2labelsareonshoe).",
       "referenced_image_paths": [
-        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C5_packing.png",
-        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/3D7E6320356123E5172283244B177B69.png"
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C6_shipping.png"
       ],
       "transparent_background": false,
-      "prompt": "Create one polished B2B footwear supplier detail-page image for BEIQIANG, coherent navy/white/orange visual system, clean editorial photography and elegant restrained diagrams. This is a revision of the attached current module, not a collage of all references. English-only designed text; incidental real factory sign may remain. Buyers are footwear importers, wholesale buyers, brands and ecommerce businesses across different shoe types. Do NOT restrict the company to walking, casual, knit or any shoe category. No invented years, capacity, certifications, laboratory, test results, customer brands, fixed MOQ, turnaround promises or inventory. Make substantive procurement information prominent; avoid oversized headlines, repetitive icons and giant decorative blank areas. All exact text below, readable natural English. No price badges. Each image serves its unique module, do not introduce other module content.\nMODULE C5 order assortment and packing. Reference1 oldstyle/edit target,2 actual shelving storage photo. New short portrait4:5 approximately1024x1280, precise practical content. Header \"Packing & Order Preparation\" / \"Keep the assortment and packing brief aligned\".\nSmall horizontal source-faithful storage photo only15-20% canvas, source2 closecrop same rack same boxes same volume; no enlarged warehouse, no new aisle. Prefer crop where incidental printing is less dominant, don't add company labels over original box marks. Caption \"Packing storage\".\nCentral large well-organized photographic ILLUSTRATIVE packing workbench, no staff/factory background: transparent pair bag with folded white tissue, plain open shoebox with tissue, one plain outer carton and packing-list sheet shown as distinct objects, in visual lefttorightsequence but no duplicate numbered strip. Add readable small caption \"Packing examples\", three labels \"Pair bag\", \"Shoe box\", \"Outer carton\". Don't put fixedSKUshoes in the box.\nBelow two concrete information panels:\n\"Assortment\" / \"Style, colour, size and pairs per size.\"\nVisual packing list grid with headings \"Style | Colour | Size | Pairs\" and clean BLANK cells, no false order values.\n\"Carton details\" / \"Packing format, carton quantities and shipping marks.\"\nVisual neutral carton label with headings \"Style / Colour / Size / Quantity\", blank values. No barcode pretending real order.\nOne footerCTA: \"Send your assortment, packing brief and destination for a quotation.\"\nNo repeated requestcards/shippingworkflow, no designmaterial/logo discussion, no manufacturing/QC. Show how order mix and markings organize packaging; no default included packaging or promised freight/leadtime."
+      "selected_output": "E:/C盘迁移/Codex/.codex/generated_images/01a1164e-73c1-70d1-882c-299608adb19c/exec-5c5a4d97-36d4-44fe-8a3b-81627342e166.png"
+    },
+    "C6": {
+      "prompt": "Edit ONLY header of attached Shipping & Delivery poster to match our new white-header factory-module set. Keep all 4cards, their photographs, captions, diagram, quotationinputs and bottomfooter EXACTLY intact, including wording, proportions, imageidentity. Change the topnavybar to WHITE header with BEIQIANG innavy/orangeunderline, thinverticalnavydivider, title \"Shipping & Delivery\" with Shipping innavy andDeliveryorange, subtitle \"Choose a route around your order needs.\" navy. Smallorange diagonal corner accent at top right. REMOVE top rightgeneric FOOTWEARMANUFACTURER/YOURRELIABLEPARTNER slogan. No otherchanges. Sameportraitcanvas andtextsize. No cropping/rearrangingbody,no addedclaims.",
+      "referenced_image_paths": [
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C6_shipping.png"
+      ],
+      "transparent_background": false,
+      "selected_output": "E:/C盘迁移/Codex/.codex/generated_images/01a1164e-73c1-70d1-882c-299608adb19c/exec-f4b8e3b0-36e3-4ef4-963e-6f7338d34104.png"
     }
   },
-  "iteration_history": "Git preserves text, prompts, source/asset hashes and decisions. Current media files use stable role names; no dated/versioned candidate folders.",
   "online_state": {
     "bank_images": 5,
     "bank_evidence": "当前上传回执.json",
@@ -65,117 +76,87 @@
     "strict_non_target_unchanged_count": 388,
     "scope_formal_accepted_count": 449,
     "original_offline_display_preserved_count": 5,
-    "factory_scope_complete": true
-  },
-  "final_requests": {
-    "C1": {
-      "referenced_image_paths": [
-        "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-258bb279-49c6-44e4-837c-025a28a65e8e.png",
-        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/大门.jpg"
-      ],
-      "transparent_background": false,
-      "prompt": "Correct ONE missing identity detail in image1. Image2 original exterior supports authenticity. Preserve compact 2:1 landscape, navy white orange, existing real exterior geometry and full sign, service rows, English text. The current graphic has OMITTED the company full name; it is essential. Add exact full legal company name clearly readable, two lines if needed: \"Quanzhou Beiqiang\" / \"Footwear & Apparel Co., Ltd.\" Make heading \"Footwear Manufacturing Partner\" smaller to provide space for this legal name between headline and \"Quanzhou, Fujian, China\". Also make BEIQIANG logo more modest and reduce wasted navy header space. Preserve service text exactly: \"OEM / ODM — Develop footwear around your project brief.\" and \"Wholesale — Discuss styles, quantities and order requirements.\" The final image MUST visibly contain BEIQIANG, Footwear Manufacturing Partner, Quanzhou Beiqiang Footwear & Apparel Co., Ltd., Quanzhou Fujian China, the two service lines, and original exterior. No shoe-category limitation or new capabilities. Do not crop off the company sign. Do not remove any required text to fit layout."
-    },
-    "C2": {
-      "referenced_image_paths": [
-        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C2_oem.png"
-      ],
-      "transparent_background": false,
-      "prompt": "Create one polished B2B footwear supplier detail-page image for BEIQIANG, coherent navy/white/orange visual system, clean editorial photography and elegant restrained diagrams. This is a revision of the attached current module, not a collage of all references. English-only designed text; incidental real factory sign may remain. Buyers are footwear importers, wholesale buyers, brands and ecommerce businesses across different shoe types. Do NOT restrict the company to walking, casual, knit or any shoe category. No invented years, capacity, certifications, laboratory, test results, customer brands, fixed MOQ, turnaround promises or inventory. Make substantive procurement information prominent; avoid oversized headlines, repetitive icons and giant decorative blank areas. All exact text below, readable natural English. No price badges. Each image serves its unique module, do not introduce other module content.\nMODULE C2 shoe-specific development communication. Existing image is style reference/edit target. Completely redesign it so it does not look like a generic fabric/cord/label catalogue. Portrait approximately1024x1280. Header:\n\"OEM / ODM Development\"\n\"From your reference to an agreed sample\"\nThree stacked 3D/editorial workboard scenes with small numbered labels, physically plausible footwear context. Heading/body:\n\"1  Define the direction\"\n\"Reference style, intended use and design requirements.\"\nVisual: clear shoe design reference card, proportion sketches, plain specification brief; not an actual company designer or workshop photo.\n\"2  Align the details\"\n\"Discuss colour, materials, construction and branding.\"\nVisual: one schematic shoe side profile with its upper and sole separated, 3 small material/colour reference chips, a branding-placement card. Shoe is small supporting example, not a SKU hero or promise of stock. Avoid huge swatch fan, loose ropes and garment labels as main image.\n\"3  Review the sample\"\n\"Compare the sample with the brief and agree revisions.\"\nVisual: two shoe sample/profile illustrations adjacent to marked specification sheets, revision comments and a pencil; no fixed dimensions, performance or material names.\nOne subtle readable caption \"Illustrative development workflow\" under header. Do not present as completed customer case. No quality checklist, packing, quote CTA, actual staff, new facility or repeated process strip; the three rows ARE the complete progression."
-    },
-    "C3": {
-      "referenced_image_paths": [
-        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C3_production.png",
-        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/A9C9E3B935A11A476BE00DE0FD0C3BBC.png",
-        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/微信图片_20260530105010_227_16.jpg",
-        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/微信图片_20260530105149_230_16.jpg"
-      ],
-      "transparent_background": false,
-      "prompt": "Create one polished B2B footwear supplier detail-page image for BEIQIANG, coherent navy/white/orange visual system, clean editorial photography and elegant restrained diagrams. This is a revision of the attached current module, not a collage of all references. English-only designed text; incidental real factory sign may remain. Buyers are footwear importers, wholesale buyers, brands and ecommerce businesses across different shoe types. Do NOT restrict the company to walking, casual, knit or any shoe category. No invented years, capacity, certifications, laboratory, test results, customer brands, fixed MOQ, turnaround promises or inventory. Make substantive procurement information prominent; avoid oversized headlines, repetitive icons and giant decorative blank areas. All exact text below, readable natural English. No price badges. Each image serves its unique module, do not introduce other module content.\nMODULE C3 production organization. Image1 style/edit target, images2-4 actual source photos. Portrait approx1024x1400. Rebuild primarily from the original photos; don't recreate an expanded factory. Top header no more12%:\n\"Production in Action\"\n\"Equipment, manual operations and batch flow\"\nLarge scene below from original image2: existing green machinery/conveyor and SAME THREE workers, same workshop layout, fans, ceiling and machine count. Clean excess floor clutter, improve exposure naturally; don't add workers or equipment, avoid plastic AI gloss.\nCaption \"Workshop equipment & workstations\"\n\"Manual operations alongside the production line.\"\nBelow two large documentary close-up panels from original3 and4, preserve worker hands, actual last-held black knitted uppers and white sole geometry:\n\"Upper preparation\" / \"Preparing the upper at the workstation.\"\n\"Sole positioning\" / \"Aligning the upper and sole during assembly.\"\nKeep these captions below photos, never over hands. These are production examples, not universal shoe construction, no shoe class headline.\nBottom ONLY small useful line \"Batch flow\" / \"Components and shoes move between workstations in groups.\"\nNo redundant three-step shoe-icon strip, no QC, sample approval, pack/ship, stock numbers, shoe material names, equipment technical name or output claims. Natural realistic hands, maintain actual operation; final image has one panorama and two distinct closeups."
-    },
-    "C4": {
-      "referenced_image_paths": [
-        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C4_quality.png"
-      ],
-      "transparent_background": false,
-      "prompt": "Create one polished B2B footwear supplier detail-page image for BEIQIANG, coherent navy/white/orange visual system, clean editorial photography and elegant restrained diagrams. This is a revision of the attached current module, not a collage of all references. English-only designed text; incidental real factory sign may remain. Buyers are footwear importers, wholesale buyers, brands and ecommerce businesses across different shoe types. Do NOT restrict the company to walking, casual, knit or any shoe category. No invented years, capacity, certifications, laboratory, test results, customer brands, fixed MOQ, turnaround promises or inventory. Make substantive procurement information prominent; avoid oversized headlines, repetitive icons and giant decorative blank areas. All exact text below, readable natural English. No price badges. Each image serves its unique module, do not introduce other module content.\nMODULE C4 practical sample-based quality review. Style/edit reference existing C4. Remove conveyor-background photo completely: it does not show an inspection. Build portrait approx1024x1350 four practical photo-real tabletop review examples, clearly labelled \"Illustrated review examples\" under header. This is visual explanation of review dimensions, not claimed documentary inspection or testing record. No invented staff/company laboratory. Four large panels in2x2 grid, each has shoes/component handling view PLUS one short caption, show clear actions instead of generic stitched rectangles or icons:\nHeader \"Quality Review\"\n\"Check each style against its approved sample\"\n1 \"Appearance\" / \"Review surface condition, finish and pair consistency.\"\nVisual hands turning a plain generic shoe to inspect upper surface beside its matching pair, good anatomy.\n2 \"Workmanship\" / \"Inspect seams, joins and finishing details.\"\nVisual hand reviewing a close-up upper-to-sole joint, no exaggerated shoe bend or strength test, no sewing implication on all shoes.\n3 \"Specification\" / \"Match style, colour, size and agreed markings.\"\nVisual plain shoe on size/specification card, plain ruler and placement reference tag. No numerical sizes, no US/EU, no invented tolerances or measured results; markings use neutral abstract blocks.\n4 \"Sample comparison\" / \"Compare the batch with the approved reference.\"\nVisual two matching neutral generic shoes on desk cards headed \"Approved sample\" and \"Batch sample\", together with blank observation sheet, no pass tick/status. Generic example shoes can be used to clarify actions but do not imply universal model/material/closure.\nBottom practical text \"Record findings and resolve differences against the agreed requirements.\"\nNo large photo of shoes on belt, no production machinery, no packing, no developer brief diagram, no claims of laboratory/performance/AQL/100% inspection. This should look like specific explainable review actions, not an empty checklist poster."
-    },
-    "C5": {
-      "referenced_image_paths": [
-        "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-944496f6-abf5-4376-ae18-484697574872.png"
-      ],
-      "transparent_background": false,
-      "prompt": "Precise revision of this BEIQIANG Packing & Order Preparation infographic. REMOVE THE ENTIRE green-box shelving factory photo beneath the header, including the Packing storage badge. Do not replace it with another photo or factory stock scene. Preserve and beautifully reflow ALL the remaining substantive content at native resolution into a shorter compact page around4:5 aspect. Navywhiteorange elegant same style, accurate English. Keep header \"Packing & Order Preparation\" / \"Keep the assortment and packing brief aligned.\" Then \"Packing examples\" with one coordinated tabletop still life: plain transparent pair bag, open neutral shoe box with tissue, plain outer carton, packing list; existing labels. Treat as illustrative packing options, not documentary order photos. Below preserve \"Assortment\" / \"Style, colour, size and pairs per size.\" with blank four-column table \"Style | Colour | Size | Pairs\". Preserve \"Carton details\" / \"Packing format, carton quantities and shipping marks.\" with neutral carton label headings \"Style / Colour / Size / Quantity\" and blank values. Keep only one footerCTA \"Send your assortment, packing brief and destination for a quotation.\" No warehouse/racks/photos, Chinese packaging text, third-party marks, extra facility, numerical order values, fixed shoe SKU, shipping timeline, inventory, price or included-packing claims. No repeated flow strip. The advantage is clear operational packing/assortment explanation with distinct physical examples, not filler factory imagery."
-    }
+    "factory_scope_complete": true,
+    "asset_version": 6
   },
   "assets": {
     "C1": {
       "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C1_factory.png",
-      "sha256": "1a551ea790ac8d31da076250ec2ca38c872d3aca6ab46e9339e0d919f9e6b9ff",
+      "sha256": "e60e6be070cc030e40788df671a3138f5bc02ed201754af0e8bc1ec0a88f92bf",
       "pixels": [
-        1774,
-        887
+        1721,
+        914
       ],
-      "buyer_question": "贝强是谁、在哪里，怎样开展OEM/ODM与批发合作",
-      "qa": "短横幅保留公司全称、泉州地点和两种合作模式，去掉鞋类限定与买家渠道清单；原厂房小幅出现，未扩建场地。",
-      "review": "VISUAL_REVIEWED_LOCAL_DRAFT; PROCESS_FOCUSED_CROSS_CATEGORY",
-      "scene_status": "AI_ENHANCED_EXISTING_EXTERIOR; LOCAL_REVIEW_DRAFT",
-      "buyer_next_step": "Identify the supplier and cooperation model"
+      "buyer_question": "贝强是谁，为采购方提供怎样的合作",
+      "qa": "公司身份排版压缩，去掉与开发图重复的桌面图；原建筑招牌、窗户和楼层保留。",
+      "review": "LOCAL_VISUAL_REVIEWED_PENDING_OWNER_REVIEW",
+      "scene_status": "AI_ENHANCED_EXISTING_PHOTO",
+      "buyer_next_step": "贝强是谁，为采购方提供怎样的合作"
     },
     "C2": {
       "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C2_oem.png",
-      "sha256": "6cbe80f600ddb5aa4a97e2a8f2050015ffbe03ac76806f44a15cf4fac84b2be7",
+      "sha256": "2e247e1be31b6eb3ea96a104233977b0758171a32563f4143b41e304c500d3b0",
       "pixels": [
-        1122,
-        1402
+        1106,
+        1422
       ],
-      "buyer_question": "怎样把参考与要求整理成可沟通、可修订的鞋类样品方向",
-      "qa": "三个场景分别解释方向、细节、样品修订；有Illustrative development workflow标识，鞋款只是流程示例，不表示固定商品、材料库或实际客户案例。",
-      "review": "VISUAL_REVIEWED_LOCAL_DRAFT; PROCESS_FOCUSED_CROSS_CATEGORY",
-      "scene_status": "ILLUSTRATIVE_DEVELOPMENT_WORKFLOW; NOT_ACTUAL_CUSTOMER_CASE",
-      "buyer_next_step": "Prepare a development brief and sample review inputs",
-      "illustrations": "Clearly identified process/packing examples, not SKU choices, completed customer work, inspection results or inventory."
+      "buyer_question": "开发项目有哪些具体沟通选项和修订步骤",
+      "qa": "四场景分别展示方向、材料选择、鞋身品牌细节和样品修订；没有以一双鞋代全店款式。",
+      "review": "LOCAL_VISUAL_REVIEWED_PENDING_OWNER_REVIEW",
+      "scene_status": "AI_GENERATED_WORKFLOW_ILLUSTRATION",
+      "buyer_next_step": "开发项目有哪些具体沟通选项和修订步骤"
     },
     "C3": {
       "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C3_production.png",
-      "sha256": "88b3481f5aceefcd69325cdcba7d8fea3e48573ede70a312e13e54db6b643bf9",
+      "sha256": "a25ddc5c92f285b97016c5389f400537f95dba51bf9eb73bbf7ab1ec89adb12c",
       "pixels": [
-        1073,
-        1466
+        1106,
+        1422
       ],
-      "buyer_question": "现有设备和人工操作怎样支持生产衔接",
-      "qa": "原车间设备全景和两张人工操作特写，对照原图核场地、设备数量与动作；保留三名人员的场景组织，无新增设备或产能；移除重复三步图标条。",
-      "review": "VISUAL_REVIEWED_LOCAL_DRAFT; PROCESS_FOCUSED_CROSS_CATEGORY",
-      "scene_status": "AI_ENHANCED_EXISTING_WORKSHOP; NOT_ALL_SKU_PRODUCTION_PROOF",
-      "buyer_next_step": "Understand the visible workshop and manual operations"
+      "buyer_question": "已有设备和人工操作怎样组织生产",
+      "qa": "原图全景中两名白衣及一名黑衣人员、设备、风扇及空间对应；两处原始操作特写保留，减少大标题与泛泛流程条。",
+      "review": "LOCAL_VISUAL_REVIEWED_PENDING_OWNER_REVIEW",
+      "scene_status": "AI_ENHANCED_EXISTING_PHOTO",
+      "buyer_next_step": "已有设备和人工操作怎样组织生产"
     },
     "C4": {
       "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C4_quality.png",
-      "sha256": "5a180afb8bebbd11fc7644d28ee5bd14e582b10c8693781041ff66385cb572cd",
+      "sha256": "a5516788d448147b8b91d1bdee924dff48dd51971ea59005fd35803fe35c6c97",
       "pixels": [
-        1092,
-        1440
+        1106,
+        1422
       ],
-      "buyer_question": "围绕确认样可以怎样核对外观、做工、规格及批次差异",
-      "qa": "删除不证明质检的生产线背景，四项改为具体动作示意；Illustrated review examples标识清楚，无合格结论、测试报告或全检承诺；示例鞋不限定全店结构。",
-      "review": "VISUAL_REVIEWED_LOCAL_DRAFT; PROCESS_FOCUSED_CROSS_CATEGORY",
-      "scene_status": "ILLUSTRATED_REVIEW_EXAMPLES; NOT_DOCUMENTED_INSPECTION_EVENT",
-      "buyer_next_step": "Discuss style-specific review points against the approved sample",
-      "illustrations": "Clearly identified process/packing examples, not SKU choices, completed customer work, inspection results or inventory."
+      "buyer_question": "怎样检查外观、做工、标识与确认样差异",
+      "qa": "四个不同检查动作，黑色套脚鞋、接缝特写、内标核对及靴款对照；不把示意当正式检验记录。",
+      "review": "LOCAL_VISUAL_REVIEWED_PENDING_OWNER_REVIEW",
+      "scene_status": "AI_GENERATED_WORKFLOW_ILLUSTRATION",
+      "buyer_next_step": "怎样检查外观、做工、标识与确认样差异"
     },
     "C5": {
       "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C5_packing.png",
-      "sha256": "cd557ec069f111bc12f36b280e88e5952e69c23d1e0705ba28e3a3e3df718504",
+      "sha256": "aaa6a7e241d10da3a600e8cab3c7587968c9fe045655549141ac4de1186fb0a2",
+      "pixels": [
+        1106,
+        1422
+      ],
+      "buyer_question": "包装、配货和外箱准备怎样衔接",
+      "qa": "包装实际动作、配货清单、品牌包装示例与封箱各自说明事项，不再靠袋盒箱静态摆拍凑信息。",
+      "review": "LOCAL_VISUAL_REVIEWED_PENDING_OWNER_REVIEW",
+      "scene_status": "AI_GENERATED_WORKFLOW_ILLUSTRATION",
+      "buyer_next_step": "包装、配货和外箱准备怎样衔接"
+    },
+    "C6": {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C6_shipping.png",
+      "sha256": "a5fca57c332ae23457d1974e5ceefe5d7385171a5d06aafd8ef25d8e8860d089",
       "pixels": [
         1122,
         1402
       ],
-      "buyer_question": "怎样把包装方式、色码数量与外箱标记对应起来",
-      "qa": "移除印字杂乱仓储大图，保留袋盒箱Packing examples、空白色码配货表与外箱标记示意，只出现一次询价入口；不表示真实订单、库存或包装默认包含。",
-      "review": "VISUAL_REVIEWED_LOCAL_DRAFT; PROCESS_FOCUSED_CROSS_CATEGORY",
-      "scene_status": "ILLUSTRATIVE_PACKING_EXAMPLES; NOT_ACTUAL_ORDER_RECORD",
-      "buyer_next_step": "Provide assortment, packing brief and destination",
-      "illustrations": "Clearly identified process/packing examples, not SKU choices, completed customer work, inspection results or inventory."
+      "buyer_question": "不同货量和交付要求可以怎样讨论运输方案",
+      "qa": "与其他模块统一白色页头；四项运输用途及正文保持，无承运商品牌或时效承诺。",
+      "review": "LOCAL_VISUAL_REVIEWED_PENDING_OWNER_REVIEW",
+      "scene_status": "AI_GENERATED_WORKFLOW_ILLUSTRATION",
+      "buyer_next_step": "不同货量和交付要求可以怎样讨论运输方案"
     }
   },
   "originals": [
@@ -960,177 +941,7 @@
     "C4": [],
     "C5": []
   },
-  "next_iteration": {
-    "C1": {
-      "current_image": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C1_factory.png",
-      "raw_sources": [
-        "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/大门.jpg"
-      ],
-      "prompt_pointer": "final_requests.C1.prompt"
-    },
-    "C2": {
-      "current_image": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C2_oem.png",
-      "raw_sources": [],
-      "prompt_pointer": "final_requests.C2.prompt"
-    },
-    "C3": {
-      "current_image": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C3_production.png",
-      "raw_sources": [
-        "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/A9C9E3B935A11A476BE00DE0FD0C3BBC.png",
-        "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/微信图片_20260530105010_227_16.jpg",
-        "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/微信图片_20260530105149_230_16.jpg"
-      ],
-      "prompt_pointer": "final_requests.C3.prompt"
-    },
-    "C4": {
-      "current_image": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C4_quality.png",
-      "raw_sources": [],
-      "prompt_pointer": "final_requests.C4.prompt"
-    },
-    "C5": {
-      "current_image": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C5_packing.png",
-      "raw_sources": [],
-      "prompt_pointer": "final_requests.C5.prompt"
-    }
-  },
   "media_directory_entry": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/README_使用说明.md",
-  "input_assets": {
-    "C1": [
-      {
-        "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C1_factory.png",
-        "sha256": "9e38079cfa1a33dc8fe1b0a0985f107af7470e3096e42c753f0bc969b67fdb9c",
-        "role": "previous_target_and_style"
-      },
-      {
-        "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/大门.jpg",
-        "sha256": "3658ce4531fca78a863464e85bcf364b27f4fb14d94b36851bc745783c667aa5",
-        "role": "source_photo"
-      }
-    ],
-    "C2": [
-      {
-        "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C2_oem.png",
-        "sha256": "bf2bc88cbc4794da8f85f5d6e9d94797fa19a00b46b2352f4e143ade6d562f23",
-        "role": "previous_target_and_style"
-      }
-    ],
-    "C3": [
-      {
-        "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C3_production.png",
-        "sha256": "de8a1625113cced8bb1f7e9d4c4def0ea2838f624a253e6821f0a3074e1d7b08",
-        "role": "previous_target_and_style"
-      },
-      {
-        "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/A9C9E3B935A11A476BE00DE0FD0C3BBC.png",
-        "sha256": "0d836cd15f370e62d7fba853cf6d7a767675542e76e27efef854f6ed7db2f2ac",
-        "role": "source_photo"
-      },
-      {
-        "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/微信图片_20260530105010_227_16.jpg",
-        "sha256": "1c643ba6032178aee8a65e345ad31876211d0fd5785ca7a15933e39dd14ffeb0",
-        "role": "source_photo"
-      },
-      {
-        "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/微信图片_20260530105149_230_16.jpg",
-        "sha256": "044f8d9f1b643f58e0a55bb9aaa1a66a087bf6e17c523b70a5f0f01fdabf2e9a",
-        "role": "source_photo"
-      }
-    ],
-    "C4": [
-      {
-        "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C4_quality.png",
-        "sha256": "7c036bee2862566695479637f3da3b0d59c2f166b2f2854d8a95b8ee1f9e7a0e",
-        "role": "previous_target_and_style"
-      }
-    ],
-    "C5": [
-      {
-        "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C5_packing.png",
-        "sha256": "557329f4433c3c5cec02b78642be914ce6bc42aa031b4ae5820ba1b24eba631e",
-        "role": "previous_target_and_style"
-      },
-      {
-        "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/3D7E6320356123E5172283244B177B69.png",
-        "sha256": "974f61a63d9e86270db0c3cf5dd61f6c10a2ee6a47f527879e5537bbabb80b48",
-        "role": "source_photo"
-      }
-    ]
-  },
-  "chapter_roles": {
-    "C1": {
-      "title": "供应商身份与合作",
-      "question": "贝强是谁、在哪里，怎样开展OEM/ODM与批发合作",
-      "topics": [
-        "company identity",
-        "location",
-        "OEM/ODM",
-        "wholesale"
-      ],
-      "exclude": [
-        "shoe-category limitation",
-        "unverified capability claims",
-        "another module's repeated workflow"
-      ]
-    },
-    "C2": {
-      "title": "开发沟通与样品",
-      "question": "怎样把参考与要求整理成可沟通、可修订的鞋类样品方向",
-      "topics": [
-        "development brief",
-        "detail alignment",
-        "sample revisions"
-      ],
-      "exclude": [
-        "shoe-category limitation",
-        "unverified capability claims",
-        "another module's repeated workflow"
-      ]
-    },
-    "C3": {
-      "title": "设备与人工操作",
-      "question": "现有设备和人工操作怎样支持生产衔接",
-      "topics": [
-        "actual equipment",
-        "manual operations",
-        "batch flow"
-      ],
-      "exclude": [
-        "shoe-category limitation",
-        "unverified capability claims",
-        "another module's repeated workflow"
-      ]
-    },
-    "C4": {
-      "title": "确认样与检查示意",
-      "question": "围绕确认样可以怎样核对外观、做工、规格及批次差异",
-      "topics": [
-        "appearance",
-        "workmanship",
-        "specification",
-        "approved-sample comparison"
-      ],
-      "exclude": [
-        "shoe-category limitation",
-        "unverified capability claims",
-        "another module's repeated workflow"
-      ]
-    },
-    "C5": {
-      "title": "包装配货与外箱标记",
-      "question": "怎样把包装方式、色码数量与外箱标记对应起来",
-      "topics": [
-        "packing examples",
-        "assortment matrix",
-        "carton markings",
-        "one quotation CTA"
-      ],
-      "exclude": [
-        "shoe-category limitation",
-        "unverified capability claims",
-        "another module's repeated workflow"
-      ]
-    }
-  },
   "coverage_audit": {
     "changes": [
       "短横幅保留公司全称、泉州地点和两种合作模式，去掉鞋类限定与买家渠道清单；原厂房小幅出现，未扩建场地。",
@@ -1215,55 +1026,6 @@
     "manual_review": "Five final images inspected: distinct identity/development/production/review/packing roles; no shoe-category restriction, no repeated generic process strip.",
     "note": "C2/C4/C5 use identified editorial examples; no new documentary evidence is inferred from their realistic rendering."
   },
-  "targeted_refinements": {
-    "C1": {
-      "request": {
-        "referenced_image_paths": [
-          "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-689e1261-ebfc-4eb3-8f7c-7ab64cbf3808.png",
-          "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/大门.jpg"
-        ],
-        "transparent_background": false,
-        "prompt": "Edit image1 BEIQIANG company identity poster. Image2 is the same actual building, preserve its geometry and full vertical 贝强鞋业 sign. Make a MUCH SHORTER LANDSCAPE 2:1 header module, about1536x768. Brand logo smaller, no oversized title or giant icon cards. Make identity readable and compact: exact text \"BEIQIANG\", \"Footwear Manufacturing Partner\", \"Quanzhou Beiqiang Footwear & Apparel Co., Ltd.\", \"Quanzhou, Fujian, China\". Company name left top, headline medium not gigantic. Two slim service rows under it: \"OEM / ODM — Develop footwear around your project brief.\" and \"Wholesale — Discuss styles, quantities and order requirements.\" No motto or buyer channels or category labels. Modest right panel actual exterior about25-30%width, show full company sign, no roof expansion or new facilities. Navy white orange tasteful corporate editorial style coherent with other modules. Do not repeat company name. Whitespace minimal balanced. All text English except the genuine sign visible in the building photo. This supplier identity is only a concise opening, not a long full detail poster."
-      },
-      "input_sha256": "66acd571cbe03f91eea2a30b4eaed82e6e91def8f920fa9a9a72becf16abf549",
-      "selected_output": "E:/C盘迁移/Codex/.codex/generated_images/01a1164e-73c1-70d1-882c-299608adb19c/exec-083de251-9577-436b-bd79-782d417ad766.png",
-      "reason": "Compact identity without shoe-category restriction",
-      "final_text_correction": {
-        "request": {
-          "referenced_image_paths": [
-            "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-258bb279-49c6-44e4-837c-025a28a65e8e.png",
-            "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/大门.jpg"
-          ],
-          "transparent_background": false,
-          "prompt": "Correct ONE missing identity detail in image1. Image2 original exterior supports authenticity. Preserve compact 2:1 landscape, navy white orange, existing real exterior geometry and full sign, service rows, English text. The current graphic has OMITTED the company full name; it is essential. Add exact full legal company name clearly readable, two lines if needed: \"Quanzhou Beiqiang\" / \"Footwear & Apparel Co., Ltd.\" Make heading \"Footwear Manufacturing Partner\" smaller to provide space for this legal name between headline and \"Quanzhou, Fujian, China\". Also make BEIQIANG logo more modest and reduce wasted navy header space. Preserve service text exactly: \"OEM / ODM — Develop footwear around your project brief.\" and \"Wholesale — Discuss styles, quantities and order requirements.\" The final image MUST visibly contain BEIQIANG, Footwear Manufacturing Partner, Quanzhou Beiqiang Footwear & Apparel Co., Ltd., Quanzhou Fujian China, the two service lines, and original exterior. No shoe-category limitation or new capabilities. Do not crop off the company sign. Do not remove any required text to fit layout."
-        },
-        "input_sha256": "d90c8d77e98927f234b8b1c2477073918b926a81643953b665c47b6dd292f72e",
-        "reason": "Restore required company full name while retaining the compact layout."
-      }
-    },
-    "C5": {
-      "request": {
-        "referenced_image_paths": [
-          "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-944496f6-abf5-4376-ae18-484697574872.png"
-        ],
-        "transparent_background": false,
-        "prompt": "Precise revision of this BEIQIANG Packing & Order Preparation infographic. REMOVE THE ENTIRE green-box shelving factory photo beneath the header, including the Packing storage badge. Do not replace it with another photo or factory stock scene. Preserve and beautifully reflow ALL the remaining substantive content at native resolution into a shorter compact page around4:5 aspect. Navywhiteorange elegant same style, accurate English. Keep header \"Packing & Order Preparation\" / \"Keep the assortment and packing brief aligned.\" Then \"Packing examples\" with one coordinated tabletop still life: plain transparent pair bag, open neutral shoe box with tissue, plain outer carton, packing list; existing labels. Treat as illustrative packing options, not documentary order photos. Below preserve \"Assortment\" / \"Style, colour, size and pairs per size.\" with blank four-column table \"Style | Colour | Size | Pairs\". Preserve \"Carton details\" / \"Packing format, carton quantities and shipping marks.\" with neutral carton label headings \"Style / Colour / Size / Quantity\" and blank values. Keep only one footerCTA \"Send your assortment, packing brief and destination for a quotation.\" No warehouse/racks/photos, Chinese packaging text, third-party marks, extra facility, numerical order values, fixed shoe SKU, shipping timeline, inventory, price or included-packing claims. No repeated flow strip. The advantage is clear operational packing/assortment explanation with distinct physical examples, not filler factory imagery."
-      },
-      "input_sha256": "e3e880fa1926281f79acb2ea00ee86093a3d1585d378690e1d2ade082bc049c8",
-      "selected_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-faf01306-26bd-4855-85d4-d74181683c66.png",
-      "reason": "Remove distracting warehouse/box labels and retain practical packing information"
-    }
-  },
-  "shared_use_review": {
-    "status": "LOCAL_VISUAL_REVIEWED",
-    "C1": "短横幅保留公司全称、泉州地点和两种合作模式，去掉鞋类限定与买家渠道清单；原厂房小幅出现，未扩建场地。",
-    "C2": "三个场景分别解释方向、细节、样品修订；有Illustrative development workflow标识，鞋款只是流程示例，不表示固定商品、材料库或实际客户案例。",
-    "C3": "原车间设备全景和两张人工操作特写，对照原图核场地、设备数量与动作；保留三名人员的场景组织，无新增设备或产能；移除重复三步图标条。",
-    "C4": "删除不证明质检的生产线背景，四项改为具体动作示意；Illustrated review examples标识清楚，无合格结论、测试报告或全检承诺；示例鞋不限定全店结构。",
-    "C5": "移除印字杂乱仓储大图，保留袋盒箱Packing examples、空白色码配货表与外箱标记示意，只出现一次询价入口；不表示真实订单、库存或包装默认包含。",
-    "boundary": "Shared factory modules explain cooperation and processes across footwear projects. Example shoes explain actions; actual materials, structure, options and feasibility remain product/order specific.",
-    "online": "Five version6 assets uploaded to official image bank and original pixels verified; no product company-image bindings changed."
-  },
   "benchmark_review": {
     "observed_date": "2026-10-11",
     "method": "Normal Chrome public page and CDN image visual inspection; Firecrawl unavailable.",
@@ -1275,24 +1037,8 @@
     "not_adopted": "Supplier experience, laboratory, employee count, client/brand claims and offered material library are not independently verified or Beiqiang facts.",
     "limits": "No conversion or capability superiority claimed. Current raw photos do not document dedicated inspection or packing actions; new illustrations explain them without claiming actual records."
   },
-  "final_review": {
-    "observed_at": "2026-10-11T16:04:42.380725+00:00",
-    "status": "PASS_FOR_REPLACEMENT_AFTER_BUYER_COPY",
-    "scope": "C1–C5第6版本地成品、原图追溯、英文与角色去重；不是全店线上视觉验收",
-    "reviewer": "active_agent",
-    "checks": {
-      "distinct_buyer_roles": true,
-      "no_category_specialism_restriction": true,
-      "illustrative_modules_labelled": true,
-      "originals_33_unchanged": true,
-      "preview_current_hashes": true,
-      "single_current_asset_path": true
-    },
-    "buyer_assessment": "身份页压短，开发/生产/检查/包装各自解决一个采购问题。表达更清楚、重复更少；缺少真实检查及包装作业照片，示意不等于履约记录，不能据此认定实力或效果超过凯顺。",
-    "replacement_condition": "实款文案已认可，8条关键词迁移差异已逐ID处理；负责人明确要求449条公司图替换含159条历史链接。历史鞋款来源和文案仍待修，保护源及5条离线重复款排除，逐ID核正式及公开结果。"
-  },
   "review_draft": {
-    "revision": 7,
+    "revision": 8,
     "status": "LOCAL_DRAFT_PENDING_OWNER_REVIEW",
     "date": "2026-10-12",
     "published_revision": 6,
@@ -1308,20 +1054,20 @@
       "C6"
     ],
     "changed": [
-      "Add company introduction text before the gallery",
-      "Replace shoe-specific FAQ with 8 general cooperation questions after approval",
-      "Add dedicated shipping module; C1–C5 images unchanged"
+      "C1–C5 complete remake",
+      "C6 header alignment",
+      "General8 FAQ and company introduction from preceding local review draft"
     ],
     "shipping": {
       "file": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C6_shipping.png",
-      "sha256": "ea004d9d80814f498c21531b2505a5aedba1dfc6799f326c1cbca5eba8341432",
+      "sha256": "a5fca57c332ae23457d1974e5ceefe5d7385171a5d06aafd8ef25d8e8860d089",
       "pixels": [
         1122,
         1402
       ],
       "generation_mode": "built-in image_gen",
-      "selected_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-ca0cb519-932f-476c-b4ef-db7454dfae0c.png",
-      "prompt": "Use case: ads-marketing. Create ONE finished supplier shipping-information poster for BEIQIANG footwear Alibaba B2B detail pages. Reference image 1 = our C5 packing poster, STYLE ONLY (navy white orange colors, clean type, compact navy top bar, professional realistic object renders). Reference image 2 = user shipping reference, buyer topic inspiration ONLY; do not copy its composition. New module C6 dedicated to TRANSPORT choices, not packaging.\nPortrait canvas roughly 1120x1400. English text only. Premium clean editorial infographic, navy #063266, orange #ff7900, pale cool white background. Header compact, less than 12% image. Exact header text: \"BEIQIANG\" and \"Shipping & Delivery\" and smaller \"Choose a route around your order needs\".\nThe content fills the page with FOUR distinct procurement options in balanced 2-by-2 generous cards; each has one well-rendered unbranded photographic visual and clear heading/text. Do not repeat large montage or duplicate ship/plane/truck elsewhere.\nCard1 \"Sea Freight\" / \"For larger-volume orders.\" / \"Plan around carton volume and sailing schedules.\" Visual one container vessel at sea.\nCard2 \"Air Freight\" / \"For time-sensitive bulk orders.\" / \"Compare freight cost with the required delivery date.\" Visual one believable commercial cargo aircraft at airport, no brand markings.\nCard3 \"Express Courier\" / \"For samples and small shipments.\" / \"Quote using parcel size, weight and destination.\" Visual courier parcel handled beside a small plain delivery van; NOT same large truck as userreference.\nCard4 \"Your Appointed Forwarder\" / \"Use your preferred logistics partner.\" / \"Coordinate pickup and shipment details.\" Visual concise original logistics diagram: carton -> forwarder -> destination, not second ship or plane, not packaging options showcase.\nBottom narrow light section heading \"For a shipping quotation\", with clean compact icons and words \"Destination\", \"Quantity\", \"Packing\", \"Delivery target\". Then one small navy footer exact text: \"Freight and trade terms are agreed before ordering.\"\nNo added words or typography artifacts. No company history, factory facilities, shoe models, material claims, courier brand logos, world-wide delivery guarantee, DDP guarantee, taxes paid, customs success, EXW/FOB legal definitions, lead-time numbers, free shipping, route map implying actual coverage, shoes, invoices, stock or fake actual shipments. These are logistics illustrations. No watermark. Large readable card body type at mobile width. Avoid giant title taking space, overly busy gradient, repetitive imagery, decorative bullet fluff. Four card roles are the whole message.\n",
+      "selected_output": "E:/C盘迁移/Codex/.codex/generated_images/01a1164e-73c1-70d1-882c-299608adb19c/exec-f4b8e3b0-36e3-4ef4-963e-6f7338d34104.png",
+      "prompt": "Edit ONLY header of attached Shipping & Delivery poster to match our new white-header factory-module set. Keep all 4cards, their photographs, captions, diagram, quotationinputs and bottomfooter EXACTLY intact, including wording, proportions, imageidentity. Change the topnavybar to WHITE header with BEIQIANG innavy/orangeunderline, thinverticalnavydivider, title \"Shipping & Delivery\" with Shipping innavy andDeliveryorange, subtitle \"Choose a route around your order needs.\" navy. Smallorange diagonal corner accent at top right. REMOVE top rightgeneric FOOTWEARMANUFACTURER/YOURRELIABLEPARTNER slogan. No otherchanges. Sameportraitcanvas andtextsize. No cropping/rearrangingbody,no addedclaims.",
       "reference_roles": [
         "C5 style reference only",
         "user shipping screenshot buyer-topic inspiration only"
@@ -1338,6 +1084,97 @@
       "adopted": "公司简介/通用FAQ/包装/运输各有职责。",
       "not_adopted": "年限、集团、品牌客户、认证、固定质检或承运商关系。"
     },
-    "next_action": "负责人审核该唯一预览中的简介、八问和C6后，再按已授权商品范围提出精确最小差异并通过API替换和双改。"
+    "next_action": "负责人审核当前六图及公司简介/八问FAQ后，再按精确商品范围走API上传、最小差异替换、正式回读及双改。",
+    "visual_review": {
+      "C1": "公司身份排版压缩，去掉与开发图重复的桌面图；原建筑招牌、窗户和楼层保留。",
+      "C2": "四场景分别展示方向、材料选择、鞋身品牌细节和样品修订；没有以一双鞋代全店款式。",
+      "C3": "原图全景中两名白衣及一名黑衣人员、设备、风扇及空间对应；两处原始操作特写保留，减少大标题与泛泛流程条。",
+      "C4": "四个不同检查动作，黑色套脚鞋、接缝特写、内标核对及靴款对照；不把示意当正式检验记录。",
+      "C5": "包装实际动作、配货清单、品牌包装示例与封箱各自说明事项，不再靠袋盒箱静态摆拍凑信息。",
+      "C6": "与其他模块统一白色页头；四项运输用途及正文保持，无承运商品牌或时效承诺。"
+    }
+  },
+  "published_version": 6,
+  "published_assets": {
+    "C1": {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/1a551ea790ac8d31.png",
+      "sha256": "1a551ea790ac8d31da076250ec2ca38c872d3aca6ab46e9339e0d919f9e6b9ff",
+      "pixels": [
+        1774,
+        887
+      ],
+      "buyer_question": "贝强是谁、在哪里，怎样开展OEM/ODM与批发合作",
+      "qa": "短横幅保留公司全称、泉州地点和两种合作模式，去掉鞋类限定与买家渠道清单；原厂房小幅出现，未扩建场地。",
+      "review": "VISUAL_REVIEWED_LOCAL_DRAFT; PROCESS_FOCUSED_CROSS_CATEGORY",
+      "scene_status": "AI_ENHANCED_EXISTING_EXTERIOR; LOCAL_REVIEW_DRAFT",
+      "buyer_next_step": "Identify the supplier and cooperation model"
+    },
+    "C2": {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/6cbe80f600ddb5aa.png",
+      "sha256": "6cbe80f600ddb5aa4a97e2a8f2050015ffbe03ac76806f44a15cf4fac84b2be7",
+      "pixels": [
+        1122,
+        1402
+      ],
+      "buyer_question": "怎样把参考与要求整理成可沟通、可修订的鞋类样品方向",
+      "qa": "三个场景分别解释方向、细节、样品修订；有Illustrative development workflow标识，鞋款只是流程示例，不表示固定商品、材料库或实际客户案例。",
+      "review": "VISUAL_REVIEWED_LOCAL_DRAFT; PROCESS_FOCUSED_CROSS_CATEGORY",
+      "scene_status": "ILLUSTRATIVE_DEVELOPMENT_WORKFLOW; NOT_ACTUAL_CUSTOMER_CASE",
+      "buyer_next_step": "Prepare a development brief and sample review inputs",
+      "illustrations": "Clearly identified process/packing examples, not SKU choices, completed customer work, inspection results or inventory."
+    },
+    "C3": {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/88b3481f5aceefcd.png",
+      "sha256": "88b3481f5aceefcd69325cdcba7d8fea3e48573ede70a312e13e54db6b643bf9",
+      "pixels": [
+        1073,
+        1466
+      ],
+      "buyer_question": "现有设备和人工操作怎样支持生产衔接",
+      "qa": "原车间设备全景和两张人工操作特写，对照原图核场地、设备数量与动作；保留三名人员的场景组织，无新增设备或产能；移除重复三步图标条。",
+      "review": "VISUAL_REVIEWED_LOCAL_DRAFT; PROCESS_FOCUSED_CROSS_CATEGORY",
+      "scene_status": "AI_ENHANCED_EXISTING_WORKSHOP; NOT_ALL_SKU_PRODUCTION_PROOF",
+      "buyer_next_step": "Understand the visible workshop and manual operations"
+    },
+    "C4": {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/5a180afb8bebbd11.png",
+      "sha256": "5a180afb8bebbd11fc7644d28ee5bd14e582b10c8693781041ff66385cb572cd",
+      "pixels": [
+        1092,
+        1440
+      ],
+      "buyer_question": "围绕确认样可以怎样核对外观、做工、规格及批次差异",
+      "qa": "删除不证明质检的生产线背景，四项改为具体动作示意；Illustrated review examples标识清楚，无合格结论、测试报告或全检承诺；示例鞋不限定全店结构。",
+      "review": "VISUAL_REVIEWED_LOCAL_DRAFT; PROCESS_FOCUSED_CROSS_CATEGORY",
+      "scene_status": "ILLUSTRATED_REVIEW_EXAMPLES; NOT_DOCUMENTED_INSPECTION_EVENT",
+      "buyer_next_step": "Discuss style-specific review points against the approved sample",
+      "illustrations": "Clearly identified process/packing examples, not SKU choices, completed customer work, inspection results or inventory."
+    },
+    "C5": {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/cd557ec069f111bc.png",
+      "sha256": "cd557ec069f111bc12f36b280e88e5952e69c23d1e0705ba28e3a3e3df718504",
+      "pixels": [
+        1122,
+        1402
+      ],
+      "buyer_question": "怎样把包装方式、色码数量与外箱标记对应起来",
+      "qa": "移除印字杂乱仓储大图，保留袋盒箱Packing examples、空白色码配货表与外箱标记示意，只出现一次询价入口；不表示真实订单、库存或包装默认包含。",
+      "review": "VISUAL_REVIEWED_LOCAL_DRAFT; PROCESS_FOCUSED_CROSS_CATEGORY",
+      "scene_status": "ILLUSTRATIVE_PACKING_EXAMPLES; NOT_ACTUAL_ORDER_RECORD",
+      "buyer_next_step": "Provide assortment, packing brief and destination",
+      "illustrations": "Clearly identified process/packing examples, not SKU choices, completed customer work, inspection results or inventory."
+    }
+  },
+  "final_review": {
+    "status": "LOCAL_VISUAL_REVIEWED_PENDING_OWNER",
+    "scope": "C1–C6英文、原图场景、手部、信息角色与重复内容；不代表线上替换完成",
+    "checks": {
+      "distinct_buyer_roles": true,
+      "source_photos_preserved": true,
+      "no_category_restriction": true,
+      "generated_workflows_labelled": true,
+      "published_v6_pixels_retained": true
+    },
+    "limits": "AI生成工作场景解释合作方式，不是实拍客户、订单或检验记录；原图未出现的厂区、设备数量、认证和产能未新增。"
   }
 }

@@ -55,10 +55,6 @@ def check_preview(m):
             if tag=='img':self.rows.append(dict(attrs))
     page=Images();page.feed((ENTRY/'预览.html').read_text(encoding='utf8'))
     expected=dict(m['assets'])
-    draft=m.get('review_draft',{})
-    if draft.get('shipping'):
-        shipping=draft['shipping']
-        expected['C6 Shipping & Delivery']={'path':shipping['file'],'sha256':shipping['sha256']}
     assert len(page.rows)==len(expected),'Preview image count differs from published assets and explicit review draft'
     assert {row.get('alt') for row in page.rows}==set(expected)
     for row in page.rows:
@@ -69,15 +65,8 @@ def check_preview(m):
 
 def check():
     m=manifest();plan=json.loads((ENTRY/'素材整理.json').read_text(encoding='utf8'))
-    assert set(m['assets'])=={'C1','C2','C3','C4','C5'}
+    assert set(m['assets'])==({'C1','C2','C3','C4','C5','C6'} if m.get('published_assets') else {'C1','C2','C3','C4','C5'})
     expected_files={Path(v['path']).name for v in m['assets'].values()}
-    draft=m.get('review_draft',{})
-    if draft.get('shipping'):
-        shipping=draft['shipping'];p=ROOT/shipping['file']
-        assert hashlib.sha256(p.read_bytes()).hexdigest()==shipping['sha256'],'Shipping review draft differs from inspected image'
-        assert draft['status']=='LOCAL_DRAFT_PENDING_OWNER_REVIEW'
-        assert draft['published_revision']==m['version'] and draft['published_state_unchanged'] is True
-        expected_files.add(p.name)
     assert {p.name for p in current_root().glob('*')}==expected_files
     for role in m['assets']:current_asset(role)
     check_preview(m)
@@ -103,14 +92,17 @@ def check():
     if m.get('online_state',{}).get('uploaded'):
         bank=json.loads((ENTRY/m['online_state']['bank_evidence']).read_text(encoding='utf8'))
         pixels=json.loads((ENTRY/m['online_state']['bank_pixels_evidence']).read_text(encoding='utf8'))
-        assert bank['asset_version']==pixels['asset_version']==m['version']
+        assert bank['asset_version']==pixels['asset_version']==m.get('published_version',m['version'])
+        bank_assets=m.get('published_assets',m['assets'])
+        for asset in bank_assets.values():
+            assert hashlib.sha256((ROOT/asset['path']).read_bytes()).hexdigest()==asset['sha256']
         assert pixels['status']=='FIVE_BANK_PIXELS_EXACT_PASS'
-        assert set(bank['items'])==set(m['assets'])
+        assert set(bank['items'])==set(bank_assets)
         for role,row in bank['items'].items():
             assert row['status']=='UPLOADED_OFFICIAL_BANK' and row['file_id']
-            assert row['sha256']==m['assets'][role]['sha256']
+            assert row['sha256']==bank_assets[role]['sha256']
         bank_images=len(bank['items'])
-    return {'ok':True,'current_images':5,'review_draft_images':int(bool(draft.get('shipping'))),'originals':33,'historical_unique':34,
+    return {'ok':True,'current_images':len(m['assets']),'review_draft_images':len(m['assets']) if m.get('published_assets') else 0,'originals':33,'historical_unique':plan['historical_unique_retained'],
             'redundant_or_obsolete_images_removed':65,'preview_images_verified':len(expected_files),
             'preview_versions_match_current_images':True,'bank_images_verified':bank_images,
             'scope':'Local media, source hashes, preview and recorded bank evidence; no product binding/public-page acceptance',
@@ -118,7 +110,7 @@ def check():
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--check',action='store_true')
-    parser.add_argument('--asset',choices=['C1','C2','C3','C4','C5'])
+    parser.add_argument('--asset',choices=['C1','C2','C3','C4','C5','C6'])
     args=parser.parse_args()
     if args.asset:print(current_asset(args.asset))
     else:print(json.dumps(check(),ensure_ascii=False))
