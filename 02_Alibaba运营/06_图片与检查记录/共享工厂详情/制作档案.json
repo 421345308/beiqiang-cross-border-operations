@@ -1290,5 +1290,54 @@
     },
     "buyer_assessment": "身份页压短，开发/生产/检查/包装各自解决一个采购问题。表达更清楚、重复更少；缺少真实检查及包装作业照片，示意不等于履约记录，不能据此认定实力或效果超过凯顺。",
     "replacement_condition": "实款文案已认可，8条关键词迁移差异已逐ID处理；负责人明确要求449条公司图替换含159条历史链接。历史鞋款来源和文案仍待修，保护源及5条离线重复款排除，逐ID核正式及公开结果。"
+  },
+  "review_draft": {
+    "revision": 7,
+    "status": "LOCAL_DRAFT_PENDING_OWNER_REVIEW",
+    "date": "2026-10-12",
+    "published_revision": 6,
+    "published_state_unchanged": true,
+    "company_intro_source": "../../02_单品优化记录/全店FAQ与产品亮点优化/通用FAQ与公司简介.json",
+    "faq_source": "../../02_单品优化记录/全店FAQ与产品亮点优化/通用FAQ与公司简介.json",
+    "images": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6"
+    ],
+    "changed": [
+      "Add company introduction text before the gallery",
+      "Replace shoe-specific FAQ with 8 general cooperation questions after approval",
+      "Add dedicated shipping module; C1–C5 images unchanged"
+    ],
+    "shipping": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C6_shipping.png",
+      "sha256": "ea004d9d80814f498c21531b2505a5aedba1dfc6799f326c1cbca5eba8341432",
+      "pixels": [
+        1122,
+        1402
+      ],
+      "generation_mode": "built-in image_gen",
+      "selected_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-ca0cb519-932f-476c-b4ef-db7454dfae0c.png",
+      "prompt": "Use case: ads-marketing. Create ONE finished supplier shipping-information poster for BEIQIANG footwear Alibaba B2B detail pages. Reference image 1 = our C5 packing poster, STYLE ONLY (navy white orange colors, clean type, compact navy top bar, professional realistic object renders). Reference image 2 = user shipping reference, buyer topic inspiration ONLY; do not copy its composition. New module C6 dedicated to TRANSPORT choices, not packaging.\nPortrait canvas roughly 1120x1400. English text only. Premium clean editorial infographic, navy #063266, orange #ff7900, pale cool white background. Header compact, less than 12% image. Exact header text: \"BEIQIANG\" and \"Shipping & Delivery\" and smaller \"Choose a route around your order needs\".\nThe content fills the page with FOUR distinct procurement options in balanced 2-by-2 generous cards; each has one well-rendered unbranded photographic visual and clear heading/text. Do not repeat large montage or duplicate ship/plane/truck elsewhere.\nCard1 \"Sea Freight\" / \"For larger-volume orders.\" / \"Plan around carton volume and sailing schedules.\" Visual one container vessel at sea.\nCard2 \"Air Freight\" / \"For time-sensitive bulk orders.\" / \"Compare freight cost with the required delivery date.\" Visual one believable commercial cargo aircraft at airport, no brand markings.\nCard3 \"Express Courier\" / \"For samples and small shipments.\" / \"Quote using parcel size, weight and destination.\" Visual courier parcel handled beside a small plain delivery van; NOT same large truck as userreference.\nCard4 \"Your Appointed Forwarder\" / \"Use your preferred logistics partner.\" / \"Coordinate pickup and shipment details.\" Visual concise original logistics diagram: carton -> forwarder -> destination, not second ship or plane, not packaging options showcase.\nBottom narrow light section heading \"For a shipping quotation\", with clean compact icons and words \"Destination\", \"Quantity\", \"Packing\", \"Delivery target\". Then one small navy footer exact text: \"Freight and trade terms are agreed before ordering.\"\nNo added words or typography artifacts. No company history, factory facilities, shoe models, material claims, courier brand logos, world-wide delivery guarantee, DDP guarantee, taxes paid, customs success, EXW/FOB legal definitions, lead-time numbers, free shipping, route map implying actual coverage, shoes, invoices, stock or fake actual shipments. These are logistics illustrations. No watermark. Large readable card body type at mobile width. Avoid giant title taking space, overly busy gradient, repetitive imagery, decorative bullet fluff. Four card roles are the whole message.\n",
+      "reference_roles": [
+        "C5 style reference only",
+        "user shipping screenshot buyer-topic inspiration only"
+      ],
+      "visual_review": "四项文字逐条核对；海/空/快递/指定货代职责清楚，图无货运品牌/价格/固定时长或DDP承诺；示意不作实际货运记录。",
+      "binding_plan": "Current saved Schema supports up to30 images per company gallery. Proposed C5+C6 in700 Packaging & shipping specifications, C1–C4 original roles; re-read target current Schema and build fresh minimal payload after owner review. No platform write yet."
+    },
+    "company_intro_plan": "companyDesc supported by saved current Schema; draft replaces brief quotation-request paragraph with company identity/cooperation value.",
+    "benchmark": {
+      "date": "2026-10-12",
+      "page": "https://www.alibaba.com/product-detail/Mid-Top-Barefoot-Shoes-Wide-Toe_1601959938117.html",
+      "method": "Normal IAB public DOM and two CDN image screenshots; Firecrawl unavailable",
+      "observed": "独立Company Profile段落，通用公司合作FAQ，Shipping与Package两图分开。",
+      "adopted": "公司简介/通用FAQ/包装/运输各有职责。",
+      "not_adopted": "年限、集团、品牌客户、认证、固定质检或承运商关系。"
+    },
+    "next_action": "负责人审核该唯一预览中的简介、八问和C6后，再按已授权商品范围提出精确最小差异并通过API替换和双改。"
   }
 }

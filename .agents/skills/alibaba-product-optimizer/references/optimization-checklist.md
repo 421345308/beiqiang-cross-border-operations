@@ -25,7 +25,7 @@ If a high-impact fact is missing, proceed with a conservative draft and list it 
 6. Attributes: align category, product group, required attributes, optional attributes, and custom attributes.
 7. Main images: define roles before generating or selecting images.
 8. Detail page: product proof first, company proof later.
-9. Highlights and FAQ: use [lifecycle SOP §6.1](../../../../02_Alibaba运营/00_运营SOP/国际站商品全生命周期SOP.md#61-产品亮点与-faq买家决策写法). Connect verified structure to selection value, answer actual buying questions first, and use one relevant next step. Do not reproduce internal unknowns, generic company FAQ or repeated quote prompts.
+9. Highlights and FAQ: use [lifecycle SOP §6.1](../../../../02_Alibaba运营/00_运营SOP/国际站商品全生命周期SOP.md#61-产品亮点与-faq买家决策写法). Connect verified product structure to selection value in highlights. FAQ uses the general factory-cooperation method, with verified commercial exceptions only; avoid repeated shoe color/size lists, internal unknowns and repeated quote prompts.
 10. Final QA: ensure title, images, attributes, and detail modules do not contradict each other.
 
 ## Title Starting Structure

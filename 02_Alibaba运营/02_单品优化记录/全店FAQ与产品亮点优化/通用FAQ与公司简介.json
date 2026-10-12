@@ -1,0 +1,62 @@
+{
+  "status": "LOCAL_DRAFT_PENDING_OWNER_REVIEW",
+  "updated_on": "2026-10-12",
+  "scope": "Store-wide cooperation FAQ and company introduction; product highlights remain product-specific. No live writes in this revision.",
+  "faq_role": "通用工厂合作问答；只在有效单款商业条件不同时改相应答案，不重复鞋款结构、颜色清单或尺码段。",
+  "companyDesc": "Quanzhou Beiqiang Footwear & Apparel Co., Ltd. is a footwear manufacturer based in Quanzhou, Fujian, China. We work with importers, wholesalers, brand owners and e-commerce businesses on wholesale and OEM/ODM footwear projects. From selecting existing styles to developing a design brief, reviewing samples and planning packaging, we help buyers turn their requirements into a clear order plan. Share your product direction and purchasing needs to discuss a suitable cooperation proposal.",
+  "companyDesc_zh_review": "泉州贝强鞋业服饰有限公司是一家位于中国福建泉州的鞋类工厂，为进口商、批发商、品牌商及电商企业提供鞋类批发与 OEM/ODM 合作。从现有款式选择，到开发需求沟通、样品评估和包装安排，我们协助买家将采购要求整理为清晰的订单方案。欢迎提供产品方向和采购需求，讨论合适的合作方式。",
+  "companyFaqDesc": [
+    {
+      "question": "Are you a factory or a trading company?",
+      "answers": "We are a footwear manufacturer based in Quanzhou, Fujian, China. We work with overseas B2B buyers on wholesale and OEM/ODM footwear projects.",
+      "question_zh_review": "你们是工厂还是贸易公司？",
+      "answers_zh_review": "我们是一家位于中国福建泉州的鞋类工厂，为海外 B2B 买家提供鞋类批发及 OEM/ODM 合作。"
+    },
+    {
+      "question": "What is your minimum order quantity?",
+      "answers": "Small trial orders are welcome for existing styles; the minimum quantity is shown on each product page. For custom orders, the MOQ depends on the design, materials, branding and packaging.",
+      "question_zh_review": "你们的最小起订量是多少？",
+      "answers_zh_review": "现有款式欢迎小批量试单，起订量见对应商品页。定制订单的起订量取决于设计、材料、品牌及包装要求。"
+    },
+    {
+      "question": "Can I mix colors and sizes in one order?",
+      "answers": "Yes. Mixed colors and sizes are supported for existing styles. Mixed-style orders can also be discussed according to the selected styles and order quantity.",
+      "question_zh_review": "一个订单可以混色混码吗？",
+      "answers_zh_review": "可以，现有款式支持混色混码。混款订单也可根据所选款式和数量商议。"
+    },
+    {
+      "question": "Can I order samples before a bulk order?",
+      "answers": "Yes. Samples can be arranged for you to check the workmanship and fit before bulk ordering. Sample and courier costs are quoted before payment.",
+      "question_zh_review": "批量订购前可以先订样品吗？",
+      "answers_zh_review": "可以安排样品，让您在批量订购前检查做工与穿着适配。样品费和快递费会在付款前报价。"
+    },
+    {
+      "question": "What packaging options do you offer?",
+      "answers": "Shoe boxes and polybags are available packing options. Custom boxes, labels and carton markings can be planned around your order and brand requirements.",
+      "question_zh_review": "你们提供哪些包装选项？",
+      "answers_zh_review": "可选择鞋盒或塑料袋包装。定制鞋盒、标签及外箱标记可按订单和品牌要求商议安排。"
+    },
+    {
+      "question": "Do you support logo customization and OEM/ODM?",
+      "answers": "Yes. We work with buyers on branding and footwear development. Send your logo artwork or design reference, target quantity and market requirements so we can develop a suitable proposal.",
+      "question_zh_review": "支持标志定制及 OEM/ODM 吗？",
+      "answers_zh_review": "支持品牌定制与鞋类开发合作。请提供标志文件或设计参考、目标数量及市场要求，以便制定合适方案。"
+    },
+    {
+      "question": "What is the lead time?",
+      "answers": "Lead time depends on product availability, order quantity and customization. Existing styles can usually be arranged sooner; the production or dispatch schedule is agreed when confirming the order.",
+      "question_zh_review": "交货时间是多久？",
+      "answers_zh_review": "交期取决于可供情况、订单数量及定制内容。现有款式通常可较快安排，具体生产或发货计划在确认订单时约定。"
+    },
+    {
+      "question": "How can you arrange shipping?",
+      "answers": "Samples and small shipments can use express courier. Bulk shipments can be planned by sea or air, or through your appointed forwarder. Send your destination and delivery target for a freight quotation.",
+      "question_zh_review": "运输可以怎样安排？",
+      "answers_zh_review": "样品和小批量货物可使用快递；大货可讨论海运、空运，或由您指定的货代安排。提供目的地与期望到货时间，即可获取运费报价。"
+    }
+  ],
+  "editorial_decision": "保留负责人旧FAQ前七项主题，轻量优化。第八项为什么选择我们融入公司简介；FAQ第八项改为运输。当前Schema最多8问，每问150、答案500字符。",
+  "facts": "公司身份/OEM/ODM按项目事实；混色混码、样品、包装沿负责人所给旧FAQ；无全店统一库存、免费样品、退款、定制MOQ或固定交期承诺。",
+  "exceptions": "未来逐ID写前核对该链接有效商业条件；159条历史鞋款来源与亮点继续待修，通用FAQ不解除其事实状态。",
+  "schema_evidence": "../../06_图片与检查记录/共享工厂详情/商品/1601974740583/current_schema.xml"
+}

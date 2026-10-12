@@ -32,7 +32,7 @@ Separate `HARD_CONSTRAINT` from `DEFAULT_HEURISTIC`. Source identity, SKU facts,
 
 ## Product highlights and FAQ
 
-For highlights or FAQ work, apply the single current writing method in [lifecycle SOP §6.1](../../../02_Alibaba运营/00_运营SOP/国际站商品全生命周期SOP.md#61-产品亮点与-faq买家决策写法). Explain the exact shoe's selection value and answer buying questions directly. Keep fact gaps in internal notes; do not turn them into selling points or fill every answer with confirmation language. Reuse observed competitor structure, then write original SKU-specific copy.
+For highlights or FAQ work, apply the single current writing method in [lifecycle SOP §6.1](../../../02_Alibaba运营/00_运营SOP/国际站商品全生命周期SOP.md#61-产品亮点与-faq买家决策写法). Write product highlights for the exact shoe; use the store-wide cooperation FAQ for factory identity, MOQ, mixing, samples, customization, packing, lead time and shipping. Only adjust an FAQ answer for a verified product-specific commercial exception. Keep fact gaps in internal notes; do not turn them into selling points or fill every answer with confirmation language. Reuse observed competitor structure, then write original product-specific highlights and general cooperation FAQ. Keep shoe structure and color/size lists in product content.
 
 ## Method
 

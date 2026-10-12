@@ -54,10 +54,15 @@ def check_preview(m):
         def handle_starttag(self,tag,attrs):
             if tag=='img':self.rows.append(dict(attrs))
     page=Images();page.feed((ENTRY/'预览.html').read_text(encoding='utf8'))
-    assert len(page.rows)==5,'Preview must reference exactly five current images'
-    assert {row.get('alt') for row in page.rows}==set(m['assets'])
+    expected=dict(m['assets'])
+    draft=m.get('review_draft',{})
+    if draft.get('shipping'):
+        shipping=draft['shipping']
+        expected['C6 Shipping & Delivery']={'path':shipping['file'],'sha256':shipping['sha256']}
+    assert len(page.rows)==len(expected),'Preview image count differs from published assets and explicit review draft'
+    assert {row.get('alt') for row in page.rows}==set(expected)
     for row in page.rows:
-        asset=m['assets'][row['alt']];url=urlsplit(row['src'])
+        asset=expected[row['alt']];url=urlsplit(row['src'])
         assert not url.scheme and not url.netloc,'Preview image must be local'
         assert (ENTRY/unquote(url.path)).resolve()==(ROOT/asset['path']).resolve()
         assert parse_qs(url.query).get('v')==[asset['sha256']],row['alt']+' preview version is stale'
@@ -65,7 +70,15 @@ def check_preview(m):
 def check():
     m=manifest();plan=json.loads((ENTRY/'素材整理.json').read_text(encoding='utf8'))
     assert set(m['assets'])=={'C1','C2','C3','C4','C5'}
-    assert {p.name for p in current_root().glob('*')}=={Path(v['path']).name for v in m['assets'].values()}
+    expected_files={Path(v['path']).name for v in m['assets'].values()}
+    draft=m.get('review_draft',{})
+    if draft.get('shipping'):
+        shipping=draft['shipping'];p=ROOT/shipping['file']
+        assert hashlib.sha256(p.read_bytes()).hexdigest()==shipping['sha256'],'Shipping review draft differs from inspected image'
+        assert draft['status']=='LOCAL_DRAFT_PENDING_OWNER_REVIEW'
+        assert draft['published_revision']==m['version'] and draft['published_state_unchanged'] is True
+        expected_files.add(p.name)
+    assert {p.name for p in current_root().glob('*')}==expected_files
     for role in m['assets']:current_asset(role)
     check_preview(m)
     if 'coverage_audit' in m:
@@ -97,8 +110,8 @@ def check():
             assert row['status']=='UPLOADED_OFFICIAL_BANK' and row['file_id']
             assert row['sha256']==m['assets'][role]['sha256']
         bank_images=len(bank['items'])
-    return {'ok':True,'current_images':5,'originals':33,'historical_unique':34,
-            'redundant_or_obsolete_images_removed':65,'preview_images_verified':5,
+    return {'ok':True,'current_images':5,'review_draft_images':int(bool(draft.get('shipping'))),'originals':33,'historical_unique':34,
+            'redundant_or_obsolete_images_removed':65,'preview_images_verified':len(expected_files),
             'preview_versions_match_current_images':True,'bank_images_verified':bank_images,
             'scope':'Local media, source hashes, preview and recorded bank evidence; no product binding/public-page acceptance',
             'state':m['status']}
