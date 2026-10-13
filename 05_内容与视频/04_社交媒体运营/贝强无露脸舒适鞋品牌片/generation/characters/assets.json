@@ -1,0 +1,69 @@
+{
+  "state": "CHARACTER_ASSETS_GENERATED_AWAITING_USER_REVIEW",
+  "created_on": "2026-10-13",
+  "tool": "built-in image_gen",
+  "video_generation_submitted": false,
+  "characters": {
+    "owner": "fictional adult Chinese woman age24-27; low ponytail; sage-green cardigan, white tee, light-blue ankle-length straight jeans",
+    "dog": "red-white Pembroke Welsh corgi; white blaze; sky-blue collar with round blank silver tag"
+  },
+  "product": {
+    "id": "BQ028",
+    "model": "7212",
+    "color": "White",
+    "unisex": true,
+    "reference": "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/BQ028_BISCUIT/03_颜色图/white.jpg",
+    "fact_basis": "current product identity and 00_上架填写表.md; user says daily comfortable slip-ons may be worn by both sexes",
+    "scope": "casting styling candidate, not measured-performance proof"
+  },
+  "assets": [
+    {
+      "id": "owner",
+      "file": "owner.png",
+      "purpose": "woman identity, wardrobe and bright white shoe styling",
+      "prompt": "Use case: photorealistic-natural. Create ONE vertical full-body casting-reference photograph for a live-action Chinese short comedy selling everyday comfortable shoes. A fictional Chinese woman age 24-27, naturally attractive, approachable and expressive rather than glamorous: oval face, dark almond eyes, subtly arched eyebrows, natural skin with pores, warm slight mischievous smile, black hair in a neat low ponytail with a few natural wisps. Slim healthy ordinary adult proportions, approximately 165 cm tall. Wardrobe to remain fixed for the story: a light sage-green short-sleeved knit cardigan worn open over a plain white crew-neck T-shirt, light-blue straight ankle-length jeans, tiny silver stud earrings, no conspicuous accessories. Wear a matched pair of the REAL WHITE SHOES in input image 1. That image is ONLY a footwear product-identity reference, not a person/background/style reference. Preserve exact visible shoe design: white knit slip-on without laces, elastic low collar, ribbed knit toe region, wider patterned knit midfoot, distinctive white biscuit-style rubber-looking toe wrap with vertical ribs, white low sole with diagonal chevron sidewall pattern, small cream heel pull loop. Do not add shoelaces, logos or change the product into athletic sneakers. Both shoes clearly visible and in natural perspective, worn on proper feet. Simple relaxed standing three-quarter stance, both arms and hands unobscured, looking toward camera; whole body from head to soles, generous small space around all extremities, no cropping. Setting a believable modest bright Chinese apartment living room, off-white walls, light oak floor, edge of beige sofa in soft background, daylight from a side window. 50 mm real photographic lens, camera around waist height, crisp face and garments and footwear, soft true shadows, restrained neutral color, ordinary lifestyle casting photo with commercial-quality lighting. One person only, no dog, no other people, no tablet, no text, no layout panels or collage, no glamour retouch, no cartoon, no anime, no 3D-render feel, no doll skin. This is a character asset, not a finished promotional poster. Portrait aspect ratio about 3:4.",
+      "reference_images": [
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/BQ028_BISCUIT/03_颜色图/white.jpg"
+      ],
+      "qa": "Full adult body, face, both feet and shoes visible; natural room/light. Shoe rendering is a styling reference; formal video product details still require original product reference QA.",
+      "width": 1086,
+      "height": 1448,
+      "sha256": "493f438b7c8f4621ff9b0f77a2c4ceddcd62bde237fb89ac1ff6d4124c22194a"
+    },
+    {
+      "id": "dog",
+      "file": "dog.png",
+      "purpose": "dog identity, blaze/fur/collar, attentive head tilt",
+      "prompt": "Use case: photorealistic-natural. One clean vertical full-body casting reference PHOTO of a fictional, extremely charming and intelligent-looking young adult red-and-white Pembroke Welsh corgi, for a real-world live-action Chinese lifestyle short comedy. This is a real living dog, NOT a cartoon or anthropomorphic character. Approximately 28 cm shoulder height, healthy compact adult body, naturally short legs and long torso, large but realistic upright triangular ears, dark brown lively eyes with normal canine proportions and catchlights, black moist nose, fox-like muzzle, crisp white blaze from nose between eyes, white muzzle, chest and four white paws, warm reddish-golden tan crown/back/flanks. Natural fur fibers of varied lengths, whiskers, believable joints, clear separate forepaws and hind legs. Wearing a simple muted sky-blue fabric collar with a small plain silver round tag with no writing. It sits upright naturally on all canine haunches, front paws both planted distinctly on the oak floor, whole dog from ear tips to paws unobscured. Slight thoughtful head tilt and closed-mouth attentive almost mischievous expression, as if it has just noticed something interesting on a low table off-camera. Looks engaging and perceptive enough to be cast as the dog who secretly orders shoes for its owner, without human eyebrows, human grin or altered anatomy. Eye-level dog-height camera at three-quarter angle, natural photographic medium shot, face and full body sharp, enough space around it, restrained shallow background blur. Bright ordinary Chinese apartment living room: warm light-oak floor, soft beige fabric sofa, pale linen curtains, gentle side-window daylight, realistic home not luxury mansion. Elegant but natural lifestyle photography, accurate warm-neutral white balance, 50mm lens look, no orange cinematic tint. Only ONE dog, no people, no shoes, no tablet or shopping objects in this identity reference, no costumes, no human hands, no CGI, no anime, no plush toy look, no giant baby eyes, no lettering, no watermark. Portrait aspect ratio about 3:4.",
+      "reference_images": [],
+      "qa": "Real-looking corgi; planted front paws and seated hind limbs; no human hands, costume or cartoon features.",
+      "width": 1086,
+      "height": 1448,
+      "sha256": "3237d1556276648296e8c6dff0740b0b7ffafdbea930da7eb31eabb71eae3cf4"
+    },
+    {
+      "id": "tablet-pose",
+      "file": "tablet-pose.png",
+      "purpose": "paired identity/relative size plus plausible paw-to-tablet pose; not a final time-of-day purchase keyframe",
+      "prompt": "Use case: identity-preserve and photorealistic-natural compositing. Create ONE vertical believable live-action lifestyle photograph combining the exact fictional young woman from reference image 1 and the exact red-and-white corgi from reference image 2 in the SAME ordinary apartment. These are casting identity references: preserve the woman's face, adult proportions, low black ponytail, sage-green short-sleeved cardigan, white tee and light-blue jeans; preserve the corgi's exact white blaze, red-gold fur distribution, fox muzzle, upright ears, white chest and paws, sky-blue fabric collar and round plain silver tag. Photorealistic candid frame for a playful Chinese short comedy, no cartoon or humanized dog anatomy. Foreground action: the corgi sits naturally on the light oak floor beside a small plain black tablet in a low stand, tablet leaning back about 30 degrees and facing the dog. Its left front paw is planted on the floor for support, right front paw is gently raised and lightly touching the bottom part of the tablet screen as a real dog's paw; natural bent canine wrist, correct shoulders and short limbs, all other paws anatomically believable. Dog has focused curious eyes looking at the screen, ears attentive, head slightly tilted, expression alert and clever without a human grin. The tablet screen shows only simple softly out-of-focus shopping-like picture shapes, no readable text, no logo or brand. The device is an ordinary tablet with correct screen thickness and perspective, not a giant computer. Mid-background on the beige sofa, the same young woman sits relaxed reading a paperback, looking at her book rather than the tablet, subtly unaware of the dog's little plan. Keep her face recognizably the same, natural hands holding the book properly, torso and lap visible; her feet may be outside the composition so this is a character relationship and tablet-pose reference rather than the final shoe purchase shot. Warm-neutral daylight from the left window, ordinary lived-in room, pale linen curtain, an oak shelf and a plant, no luxury showroom and no fantasy props. Three-quarter camera perspective at roughly dog head height, not top-down; corgi and entire tablet fully visible in foreground, woman recognizable in background, realistic dog-to-adult scale (dog shoulder 28 cm vs woman's height 165 cm). Dog dominates lower two thirds while woman remains an important readable presence. Crisp dog eyes/fur and paw-to-tablet contact, only mild background blur so her identity is readable. Real sensor grain and natural shadows, 35mm photographic lens, commercial lifestyle film frame, no orange grading. No extra people, no extra animals, no dog human hands, no glasses, no dog clothes, no oversized baby eyes, no collage, no speech bubbles, no subtitles, no watermark. Portrait aspect ratio about 3:4.",
+      "reference_images": [
+        "owner.png",
+        "dog.png"
+      ],
+      "repair_prompt": "Edit the supplied live-action photograph, changing ONLY the tablet orientation and the corgi's raised forepaw/gaze interaction with it. Keep the exact young woman, her face/hair/clothes/reading pose, the exact corgi identity/fur blaze/size/blue collar, room, lighting, framing, oak floor and sofa unchanged. Critical physical correction: turn the entire tablet and its stand so that the SCREEN FACES THE CORGI, not the viewer. The camera should see chiefly the thin side and part of the plain dark BACK of the tablet, with only a narrow oblique sliver of screen visible; this is correct, no shopping content needs to be visible. Tablet placed on floor directly in front of the dog's raised paw, about 15 cm away from planted front paw. The dog must be able to look DOWN at the actual front touchscreen. Lower its raised front paw so the underside of the real furry canine paw makes light, clear contact with the near lower part of the touchscreen; a small gentle single tap pose, not gripping. Keep the other front paw planted and both hind paws naturally supporting a seated dog. Preserve natural short corgi legs and animal joints: no hands, no fingers, no elongating its legs. Align the attentive dog's pupils and head with the touchscreen. Tablet's low folding stand stays mechanically believable and stable on the floor, no extra device, no levitation. Everything remains a realistic photographed humorous situation with a real-looking dog, no cartoon, no fantasy effects, no letters, no watermarks. The woman remains unaware and continues reading in the background. Do not redesign the photo or change identities.",
+      "repair_reference": "built-in generation exec-c164c920-3e25-4adb-b31a-948250264522.png",
+      "qa": "Initial screen direction and hovering paw were corrected. Selected image shows tablet back to camera/screen facing dog, gaze downward and near-paw interaction. Static pose does not establish continuous operation or completed purchase; final order scene requires evening light and independent full-motion QA.",
+      "width": 1086,
+      "height": 1448,
+      "sha256": "caaf3f83a6d59e3d1b6febd12ac19ba5eea0f7001bd68e0f383c7523aa7aaf5d"
+    }
+  ],
+  "selection": {
+    "finals": [
+      "owner.png",
+      "dog.png",
+      "tablet-pose.png"
+    ],
+    "discarded_scene_candidate": "First paired render not copied into project: tablet faced viewer and paw was beside device."
+  }
+}
