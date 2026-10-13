@@ -109,7 +109,7 @@ def build_plan() -> list[dict[str, object]]:
         match = re.match(r"^(BQ\d{3})_(.+)$", folder.name)
         if not match or match.group(1) not in TARGET_CODES:
             continue
-        if folder.name == "BQ052_116":
+        if folder.name == "BQ062_116/历史准备_BQ052误编号":
             continue
         products.append((match.group(1), folder))
 

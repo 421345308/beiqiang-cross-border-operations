@@ -20,6 +20,7 @@ Use this skill to answer B2B sourcing inquiries with practical, trust-building q
 
 ## Quote Discipline
 
+- Select a small number of well-matched real RFQs for individual review; confirm each model/source, quantity, price/terms and intended reply before an actual quotation. Writing or strategy approval never grants automatic bulk sending or advertising budget permission.
 - Triage each real RFQ by exact shoe/capability fit, quantity and commercial target, missing specs, buying stage, destination and technical-development needs. Explain the priority in plain terms; do not invent a platform ranking score or quote simply to use an allowance.
 - Reply to the buyer's stated requirement first, then show the matching evidenced model, conditional price or the one or two facts needed for a valid quote, and a concrete next step. A one-pair inquiry may be sample exploration rather than an automatic rejection or bulk-order signal.
 

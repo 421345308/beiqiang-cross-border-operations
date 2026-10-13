@@ -1,0 +1,34 @@
+{
+  "scope": "3522 current local Schema observed2026-10-02; historical HR044 catalog read supports nonempty keywords, not a proved create/update route.",
+  "current_schema_file": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-7\\3522_execution\\schema.xml",
+  "current_schema_sha256": "a1bcda51629a23767c36e42d17cf10687b311f302cad593d0f1761dc6cb6778c",
+  "keyword_schema_xml": "<field id=\"productKeywords\" name=\"Product keywords \" type=\"complex\"><rules><rule name=\"tipRule\" value=\"Please fill in keywords with correct format: 'modifier words + product name + application scenario', e.g., ‘Red 8GB mp3 for sports’.\" /><rule name=\"minInputNumRule\" value=\"1\" exProperty=\"include\" /><rule name=\"maxInputNumRule\" value=\"1\" exProperty=\"include\" /><rule name=\"regexRule\" value=\"[^\\x04-\\x80≤≥‰±㎡℃℉°μΩé3²³㎡m³]+\" exProperty=\"not include\" /><rule name=\"regexRule\" value=\"\\w+(?:[\\-+.]\\w+)*@\\w+(?:[\\-.]\\w+)*\\.\\w+(?:[\\-.]\\w+)*\" exProperty=\"not include\" /><rule name=\"regexRule\" value=\"&lt;[^&gt;]+&gt;\" exProperty=\"not include\" /><rule name=\"regexRule\" value=\"[;:,,]+\" exProperty=\"not include\" /></rules><fields><field id=\"productKeywords_0\" name=\"Product keywords \" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"maxLengthRule\" value=\"384\" exProperty=\"include\" unit=\"byte\" /><rule name=\"tipRule\" value=\"Please fill in keywords with correct format: 'modifier words + product name + application scenario', e.g., ‘Red 8GB mp3 for sports’.\" /></rules></field></fields></field>",
+  "positive_read": {
+    "product_id": "1601943650718",
+    "encrypted_id": "AAFmjmk4AOWGex-cDVm7zkZ9",
+    "keywords": [
+      "Mens Penny Loafers"
+    ],
+    "status": "approved",
+    "request_id": "0bab02fe17909505033341683",
+    "file": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-8\\69002\\reconcile_catalog_1.response.json",
+    "sha256": "5b990702ac36fa59d4dd1dd77b7b190894e137089ae87fa4462681a862b43585"
+  },
+  "negative_read": {
+    "public_id": "1601969920294",
+    "product_id": "AAEYjmk4AOWGex-cDVm8Xx7F",
+    "keywords": [
+      ""
+    ],
+    "status": "approved",
+    "request_id": "21501b8d17909564258394190",
+    "file": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-7\\3522_execution\\formal_get.flat.json",
+    "sha256": "ab87c66f12936081991e64a4345559961c5acf949bf8b9446c54db56c89fc0fa"
+  },
+  "official_sources": [
+    "https://developer.alibaba.com/docs/api.htm?apiId=25439",
+    "https://developer.alibaba.com/docs/doc.htm?articleId=119212&docType=1&treeId=456",
+    "https://developer.alibaba.com/docs/api.htm?apiId=27010"
+  ],
+  "write_capability": "Schema request format agrees with current docs but current3522/5998 keywords read empty; cause unestablished. Field-update3522 attempt unknown, reconcile before retry. Do not generalize unsupported or successful."
+}

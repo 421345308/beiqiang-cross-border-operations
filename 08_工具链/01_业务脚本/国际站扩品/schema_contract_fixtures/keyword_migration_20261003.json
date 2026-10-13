@@ -1,0 +1,91 @@
+{
+  "source": "Real redacted M001 get/render/public UIA and two normal editor observations; no tokens, no generated receipts",
+  "M001": {
+    "registry_row": {
+      "product_id": "1601970169467",
+      "encrypted_product_id": "AAGpjmk4AOWGex-cDVm8WuGY",
+      "category_id": "201153804",
+      "detail_type": "4",
+      "editor_observation_id": "M001_notice_sha256:677f40a5ebf291ff611afa9f94ce5d4e69c0d4c88ac50e96ef45a15b7d9932a5",
+      "observed_at": "2026-10-03T16:31:20.9945178Z",
+      "editor_url": "https://post.alibaba.com/product/publish.htm?itemId=1601970169467&from=common&catId=201153804",
+      "notice": "【副标题和关键词】已经合并升级为新版商品详描的【商品卖点】了！合并后可聚焦在商品卖点表达更多核心卖点，提升商品转化率，",
+      "level": "ui_schema_formal_public_verified",
+      "content_status": "CONTENT_COMPLETE",
+      "sources": [
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/HR进度核查_2026-10-03_task5/关键词迁移验收修正/M001_notice.png",
+          "kind": "ui_notice",
+          "sha256": "677f40a5ebf291ff611afa9f94ce5d4e69c0d4c88ac50e96ef45a15b7d9932a5"
+        },
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/HR进度核查_2026-10-03_task5/关键词迁移验收修正/M001_selling_points.png",
+          "kind": "ui_selling_points",
+          "sha256": "1609fdabb9bfd2293364aba10f1af30134fa85accf2d07c1d9e52025f9245be8"
+        },
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/HR进度核查_2026-10-03_task5/关键词迁移验收修正/M001_formal_get.json",
+          "kind": "formal_get",
+          "sha256": "cbce50bfa87a6fad1846f5b50f8823bc4f63e2a7bdf0c3da9259bd5f004708be"
+        },
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/HR进度核查_2026-10-03_task5/关键词迁移验收修正/M001_render.xml",
+          "kind": "render",
+          "sha256": "c7ba0fdd5734d200fbc2e2c94237b8bd10cdbcd89af5de1526821b63a12e8abf"
+        },
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/HR进度核查_2026-10-03_task5/关键词迁移验收修正/M001_public_summary.json",
+          "kind": "public_summary",
+          "sha256": "860b9c46e9e05ece5335fdd3fc3ae033fe0b119fdb92e3585ada38390aec39ae"
+        },
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/HR进度核查_2026-10-03_task5/关键词迁移验收修正/M001_ui_notice_metadata.json",
+          "kind": "ui_notice_metadata",
+          "sha256": "dcff39d338e3a812f0ae1de113c6a32f20899eba854b79e641b1d9a22ec4596c"
+        }
+      ],
+      "limits": "Observed current normal-edit behavior; no platform build number claimed; same-day acceptance snapshot only; old keywords remain empty, no write performed.",
+      "ui_verified_summary_sha256": "20bb20044a812197ad2215d152d959f58b1b8222e9f315b66dde26f3ad44ca7c"
+    },
+    "formal_get": {
+      "request_id": "210829b717910456284353389",
+      "product": {
+        "product_id": "AAGpjmk4AOWGex-cDVm8WuGY",
+        "category_id": 201153804,
+        "status": "approved",
+        "display": "Y",
+        "keywords": [
+          ""
+        ],
+        "struct_detail": {
+          "product_summary": "Closed-toe, open-heel slip-on mules with an EVA shoe body and upper, ribbed sidewalls, a textured vamp panel and separate orange sole pods. The body/upper material is specified in the source image; the orange pod, separate midsole, lining and insole compositions are not specified. Offered colors are Red and Grey. Original source size labels are 35-36, 37-38, 39-40, 40-41, 42-43 and 44-45; measured fit and international conversion are confirmed for the order. The Black underside detail illustrates the pod layout only and is not an offered color. Send color-size quantities, destination, packing and requested dispatch date for an order-specific quotation."
+        }
+      }
+    },
+    "schema_xml": "<itemSchema><field id=\"textDesc\" name=\"Product Highlights\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /></rules><value>Closed-toe, open-heel slip-on mules with an EVA shoe body and upper, ribbed sidewalls, a textured vamp panel and separate orange sole pods. The body/upper material is specified in the source image; the orange pod, separate midsole, lining and insole compositions are not specified. Offered colors are Red and Grey. Original source size labels are 35-36, 37-38, 39-40, 40-41, 42-43 and 44-45; measured fit and international conversion are confirmed for the order. The Black underside detail illustrates the pod layout only and is not an offered color. Send color-size quantities, destination, packing and requested dispatch date for an order-specific quotation.</value></field></itemSchema>",
+    "public_text": "Closed-toe, open-heel slip-on mules with an EVA shoe body and upper, ribbed sidewalls, a textured vamp panel and separate orange sole pods. The body/upper material is specified in the source image; the orange pod, separate midsole, lining and insole compositions are not specified. Offered colors are Red and Grey. Original source size labels are 35-36, 37-38, 39-40, 40-41, 42-43 and 44-45; measured fit and international conversion are confirmed for the order. The Black underside detail illustrates the pod layout only and is not an offered color. Send color-size quantities, destination, packing and requested dispatch date for an order-specific quotation.",
+    "observed_at": "2026-10-03T16:40:29.175371+00:00",
+    "public_text_source": "Exact verified visible summary excerpt; full original public UIA artifact remains hash-bound in sources"
+  },
+  "2627BSK": {
+    "registry_row": {
+      "product_id": "1601969885846",
+      "category_id": "201153804",
+      "detail_type": "4",
+      "editor_observation_id": "2627BSK_UIA_sha256:c6bdb931335a63b41488da721d9ac889ceed4492b62eacc41646be51f0501c5a",
+      "observed_at": "2026-10-03T16:59:08.1862938Z",
+      "editor_url": "https://post.alibaba.com/product/publish.htm?itemId=1601969885846&from=common&catId=201153804",
+      "notice": "【副标题和关键词】已经合并升级为新版商品详描的【商品卖点】了！合并后可聚焦在商品卖点表达更多核心卖点，提升商品转化率，",
+      "level": "ui_notice_only",
+      "content_status": "PENDING_FULL_CONTENT_BINDING",
+      "sources": [
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/HR进度核查_2026-10-03_task5/关键词迁移验收修正/2627BSK_ui_notice.json",
+          "kind": "ui_notice",
+          "sha256": "c6bdb931335a63b41488da721d9ac889ceed4492b62eacc41646be51f0501c5a"
+        }
+      ],
+      "limits": "Current notice observed; current full UI/schema/formal/public text chain not established; do not increment completion."
+    }
+  }
+}

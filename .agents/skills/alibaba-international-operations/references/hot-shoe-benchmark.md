@@ -9,7 +9,7 @@ Use this when preparing shoe product listings. It records patterns observed from
 - One visible public example: `https://www.alibaba.com/product-detail/Minimalist-Cross-Trainer-Shoes-Wide-Toe_1600906090281.html`
 - Another public example with high-volume wording: `https://www.alibaba.com/product-detail/Super-Hot-Item-200-000-Pairs_1601222962446.html`
 
-Because Alibaba ranking pages are dynamic and may change by country/time, use these as directional lessons and re-scan current competitors before major product image generation.
+These undated historical sample notes are presentation references, not current sales proof. Reuse dated applicable evidence; refresh only when a specific decision remains unresolved. Title wording such as high volume does not prove sales.
 
 ## What Mature Shoe Listings Commonly Do
 
@@ -43,6 +43,8 @@ First-image and scene-image benchmark reminders:
 
 Before finalizing a new important product:
 
-- Search Alibaba for 3-5 current high-ranking/high-selling listings under the same buyer intent.
+- Select enough dated, relevant samples to resolve the concrete buyer-intent or image question; no fixed count. Record market, query/sort when visible, observed signal and limits. Ranking, sold count, reviews and recent-purchase labels are distinct evidence; do not infer sales from search order or supplier wording.
 - Note first image style, title keyword cluster, gallery sequence, detail modules, MOQ/sample policy, customization signals, and repeated buyer trust elements.
 - Adapt the logic to Beiqiang's actual product. Do not copy claims, trademarks, reviews, certificates, or unsupported performance language.
+
+填写现有单款采集模板 B/C：海外需求代理信号→具体搜鞋实款的结构匹配→词证与未知搜索量。历史建议中的宽楦、透气、缓震等仅在当前款独立证实后使用；纹理/厚底照片不证明空气流量或缓震性能。蓝海无量化竞争证据时记为试验。

@@ -15,7 +15,7 @@ Identify the exact SKU/product ID, requested fields, existing value when editing
 
 ## Adaptive optimization rule
 
-Separate `HARD_CONSTRAINT` from `DEFAULT_HEURISTIC`. Source identity, SKU facts, compliance and publish/readback gates remain fixed. Title formulas, keyword placement, image order, module count beyond platform requirements, visual style and historical conversion advice are hypotheses. If fresh keyword data, current buyer intent, current platform behavior or a protected-link pilot supports a better approach, use it and record why. Read the adaptive-learning reference in `alibaba-international-operations` when a conflict is material.
+Separate `HARD_CONSTRAINT` from `DEFAULT_HEURISTIC`. Source identity, SKU facts, compliance and publish/readback gates remain fixed. Title formulas, keyword placement, image order, module count beyond platform requirements, visual style and historical conversion advice are hypotheses. If fresh keyword data, current buyer intent, current platform behavior or independent analysis of relevant excellent B2B competitors supports a better approach, use it and record why. Read the adaptive-learning reference in `alibaba-international-operations` when a conflict is material.
 
 ## Required reads
 
@@ -27,8 +27,12 @@ Separate `HARD_CONSTRAINT` from `DEFAULT_HEURISTIC`. Source identity, SKU facts,
 
 - For a complete page pass, use the [optimization checklist](references/optimization-checklist.md); select only its title section for title uncertainty.
 - For an unresolved buyer promise or positioning choice, use the [positioning card](../beiqiang-positioning/references/positioning-card.md). Reading a rule does not restart a full positioning workflow.
-- For material keyword uncertainty that current SKU/platform data cannot settle, consider [competitor research](../competitor-research-firecrawl/SKILL.md). External wording never supplies Beiqiang product facts.
+- For title, main-image or detail optimization, reuse relevant excellent B2B competitor evidence and apply [competitor analysis](../competitor-research-firecrawl/SKILL.md) to material gaps; combine it with exact SKU/supply facts and independent judgment. External wording never supplies Beiqiang facts; no mandatory A/B or wait for metrics.
 - For coordinated listing preparation or repair, use [Alibaba operations](../alibaba-international-operations/SKILL.md). For an authorized API write/readback, use [OpenAPI operator](../alibaba-openapi-operator/SKILL.md).
+
+## Product highlights and FAQ
+
+For highlights or FAQ work, apply the single current writing method in [lifecycle SOP §6.1](../../../02_Alibaba运营/00_运营SOP/国际站商品全生命周期SOP.md#61-产品亮点与-faq买家决策写法). Write product highlights for the exact shoe; use the store-wide cooperation FAQ for factory identity, MOQ, mixing, samples, customization, packing, lead time and shipping. Only adjust an FAQ answer for a verified product-specific commercial exception. Keep fact gaps in internal notes; do not turn them into selling points or fill every answer with confirmation language. Reuse observed competitor structure, then write original product-specific highlights and general cooperation FAQ. Keep shoe structure and color/size lists in product content.
 
 ## Method
 
@@ -43,3 +47,7 @@ Separate `HARD_CONSTRAINT` from `DEFAULT_HEURISTIC`. Source identity, SKU facts,
 For a title-only task, return the proposed title and brief evidence for its product terms, plus only blocking or material pending confirmations. Offer alternatives only when they represent useful buyer-intent choices. Do not append an image plan, full attributes, FAQ, quotation or publication receipt.
 
 For a complete optimization, return the requested page package and its evidence gaps. Claims about wide toe room, own-factory supply, material, sample, MOQ, packing and lead time need the exact SKU's evidence or confirmation. Completion means the draft matches the verified SKU and requested scope; it does not imply platform submission, approval, inventory accuracy or public-page acceptance.
+
+## 完整任务记录入口
+
+完整改造写入现有采集模板 C：核心词/属性长尾/采购服务逐词记录来源、日期、市场、实际查询或公开措辞、未知搜索量、本款支持、采用位置及弃词理由。供应商页面用词不等于海外买家查询；采购能力词不等于搜索量。正式回读空关键词时保留待补，不能以本地拟稿或5分代替持久化。入口：[现有单款采集模板](../../../02_Alibaba运营/05_扩品工程/工厂店外新款数据采集模板.md)；详细规则只读生命周期 SOP，窄范围请求不扩展为整套工作。

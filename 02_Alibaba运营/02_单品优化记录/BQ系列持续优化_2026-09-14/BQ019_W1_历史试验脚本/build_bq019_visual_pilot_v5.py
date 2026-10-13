@@ -1,3 +1,6 @@
+
+# HISTORICAL_FULL_PAGE_GENERATOR_RETIRED
+raise SystemExit("Historical whole-page generator retired; use the shared factory detail entry.")
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont, ImageOps
 

@@ -1,0 +1,191 @@
+{
+  "scope": "Historical local snapshots; no current business-status assertion or platform writes.",
+  "source_register": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\1688劳保鞋965493972088_API上架_2026-10-01.md",
+  "source_register_sha256": "9d748b723e147a24195a5066abc1d9a29186aa18f35de5db12eb03cfc87f3ba2",
+  "full_catalog_snapshot_files": [
+    {
+      "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-8\\69002\\reconcile_catalog_1.response.json",
+      "sha256": "5b990702ac36fa59d4dd1dd77b7b190894e137089ae87fa4462681a862b43585"
+    },
+    {
+      "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-8\\69002\\reconcile_catalog_10.response.json",
+      "sha256": "e67c5c77625bc575499eca283e0240ae31d8fb1021f3b266339ce630502a1cf0"
+    },
+    {
+      "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-8\\69002\\reconcile_catalog_11.response.json",
+      "sha256": "6e66921aa0b068c944314437d8857d711e63006cf785a0453a9472d5ddc77a91"
+    },
+    {
+      "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-8\\69002\\reconcile_catalog_12.response.json",
+      "sha256": "7308056dfd70c5025ebd710644dfd1c832d354b90236a16e7b86099f61854669"
+    },
+    {
+      "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-8\\69002\\reconcile_catalog_13.response.json",
+      "sha256": "5844efcdbdcfc5419f739a9b6ce2b96b98a742ac4101e2e24c86acf42f09950b"
+    },
+    {
+      "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-8\\69002\\reconcile_catalog_2.response.json",
+      "sha256": "3a398e9f1217de1d669df7614e8be8df4bdc9480397e0bf3cc4d60d60b14450d"
+    },
+    {
+      "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-8\\69002\\reconcile_catalog_3.response.json",
+      "sha256": "846c78573538187ec30ee3da54e617928bc3eaa9c06d263bffd79c6bb4166477"
+    },
+    {
+      "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-8\\69002\\reconcile_catalog_4.response.json",
+      "sha256": "6903c61dd337f7dcf859817fc5e908683e8089f6ee9ac17993e3f621a70e16ba"
+    },
+    {
+      "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-8\\69002\\reconcile_catalog_5.response.json",
+      "sha256": "99ae035be7a18e97313466fe7b0bc097d093c4bdca215dfd31e05c070676043f"
+    },
+    {
+      "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-8\\69002\\reconcile_catalog_6.response.json",
+      "sha256": "51a54ca23011d29ec38d700513a5c8565b35a9be45c3bb9eaa042ce87b4d3cf8"
+    },
+    {
+      "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-8\\69002\\reconcile_catalog_7.response.json",
+      "sha256": "02fbb6e25945c75d62a69e4d0dbe7c533d4385fdccf94bef9a9ecaab1f1317dc"
+    },
+    {
+      "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-8\\69002\\reconcile_catalog_8.response.json",
+      "sha256": "58d3e4cc1ffd8df2f8d05c69630b404900454d4da5ed43d1fe78b2dc491f13bd"
+    },
+    {
+      "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-8\\69002\\reconcile_catalog_9.response.json",
+      "sha256": "b2d9baa5c62bf2ad8188d71017559fa3580a04b50fccca27014bd34ac704c6d3"
+    }
+  ],
+  "full_catalog_record_count": 363,
+  "records": [
+    {
+      "product_id": "1601969707634",
+      "model_number": "BQ-W266",
+      "title": "Men's Low-Top Steel Toe Safety Shoes with Dial Closure",
+      "hero_url": "https://sc04.alicdn.com/kf/Hfc5a1e4fcbbe4addb4b647da0c92a166o.jpg",
+      "snapshot_request_id": "0bab02fe17909505033341683",
+      "snapshot_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-8\\69002\\reconcile_catalog_1.response.json",
+      "snapshot_sha256": "5b990702ac36fa59d4dd1dd77b7b190894e137089ae87fa4462681a862b43585",
+      "source": {
+        "reference": "https://detail.1688.com/offer/965493972088.html",
+        "style": "266",
+        "critical_facts": {
+          "profile": "low_top",
+          "upper_structure": "layered side stripes"
+        },
+        "evidence": [
+          "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\1688劳保鞋965493972088_API上架_2026-10-01.md"
+        ]
+      },
+      "search_intent": {
+        "key": "low_top_dial_steel_toe_workwear",
+        "evidence": [
+          "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\1688劳保鞋965493972088_API上架_2026-10-01.md"
+        ],
+        "limits": "Documented positioning only; not keyword persistence or traffic evidence."
+      },
+      "hero_review": {
+        "url": "https://sc04.alicdn.com/kf/Hfc5a1e4fcbbe4addb4b647da0c92a166o.jpg",
+        "aliases": [
+          "https://sc04.alicdn.com/kf/Hfc5a1e4fcbbe4addb4b647da0c92a166o.jpg",
+          "https://sc04.alicdn.com/kf/H966b882b83824bcf9f1c3d17b16fe8e4A/286385890/H966b882b83824bcf9f1c3d17b16fe8e4A.jpg"
+        ],
+        "sha256": "4b618f50c97c66e38b685923f6bae2da00d2c26ae704a755d44f33ca0aa120cd",
+        "content_key": "266_grey_low_top_three_quarter",
+        "label_status": "not_present",
+        "evidence": [
+          "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-4\\hr_control\\266_html_new\\new_formal_media_readback\\M1.jpg"
+        ],
+        "limits": "Actual M1 visual review found no visible model-number overlay; same brand marking does not prove same style. Old266 alias refers to its source-bank image."
+      }
+    },
+    {
+      "product_id": "1601969810495",
+      "model_number": "BQ-W262",
+      "title": "Men's High-Top Dial Closure Work Boots with Wave-Pattern Uppers",
+      "hero_url": "https://sc04.alicdn.com/kf/Hba33506c70c4488986816a181fec0ffcz.jpg",
+      "snapshot_request_id": "0bab02fe17909505033341683",
+      "snapshot_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-8\\69002\\reconcile_catalog_1.response.json",
+      "snapshot_sha256": "5b990702ac36fa59d4dd1dd77b7b190894e137089ae87fa4462681a862b43585",
+      "source": {
+        "reference": "https://detail.1688.com/offer/965493972088.html",
+        "style": "262",
+        "critical_facts": {
+          "profile": "high_top",
+          "upper_structure": "wave-pattern panels"
+        },
+        "evidence": [
+          "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\1688劳保鞋965493972088_API上架_2026-10-01.md"
+        ]
+      },
+      "search_intent": {
+        "key": "high_top_dial_wave_pattern_workwear",
+        "evidence": [
+          "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\1688劳保鞋965493972088_API上架_2026-10-01.md"
+        ],
+        "limits": "Documented positioning only; not keyword persistence or traffic evidence."
+      },
+      "hero_review": {
+        "url": "https://sc04.alicdn.com/kf/Hba33506c70c4488986816a181fec0ffcz.jpg",
+        "aliases": [
+          "https://sc04.alicdn.com/kf/Hba33506c70c4488986816a181fec0ffcz.jpg",
+          "https://sc04.alicdn.com/kf/H868b0059919a4fb59e329d2bc09450feZ/286385890/H868b0059919a4fb59e329d2bc09450feZ.jpg"
+        ],
+        "sha256": "d519073be614e8e1aa5bc4fa7b17a4e61ff12a59641fd58ca95ac03e7399673b",
+        "content_key": "262_grey_high_top_three_quarter",
+        "label_status": "not_present",
+        "evidence": [
+          "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-6\\262_publish\\formal_media_readback\\262_M1.jpg"
+        ],
+        "limits": "Actual M1 visual review found no visible model-number overlay; same brand marking does not prove same style. Old266 alias refers to its source-bank image."
+      }
+    },
+    {
+      "product_id": "1601969526580",
+      "model_number": "BQ-W266",
+      "title": "Men's Low-Top Steel Toe Safety Shoes with Dial Closure",
+      "hero_url": "https://sc04.alicdn.com/kf/H966b882b83824bcf9f1c3d17b16fe8e4A.jpg",
+      "snapshot_request_id": "0bab02fe17909505033341683",
+      "snapshot_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-8\\69002\\reconcile_catalog_1.response.json",
+      "snapshot_sha256": "5b990702ac36fa59d4dd1dd77b7b190894e137089ae87fa4462681a862b43585",
+      "source": {
+        "reference": "https://detail.1688.com/offer/965493972088.html",
+        "style": "266",
+        "critical_facts": {
+          "profile": "low_top",
+          "upper_structure": "layered side stripes"
+        },
+        "evidence": [
+          "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\1688劳保鞋965493972088_API上架_2026-10-01.md"
+        ]
+      },
+      "search_intent": {
+        "key": "low_top_dial_steel_toe_workwear",
+        "evidence": [
+          "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\1688劳保鞋965493972088_API上架_2026-10-01.md"
+        ],
+        "limits": "Documented positioning only; not keyword persistence or traffic evidence."
+      },
+      "hero_review": {
+        "url": "https://sc04.alicdn.com/kf/H966b882b83824bcf9f1c3d17b16fe8e4A.jpg",
+        "aliases": [
+          "https://sc04.alicdn.com/kf/Hfc5a1e4fcbbe4addb4b647da0c92a166o.jpg",
+          "https://sc04.alicdn.com/kf/H966b882b83824bcf9f1c3d17b16fe8e4A/286385890/H966b882b83824bcf9f1c3d17b16fe8e4A.jpg"
+        ],
+        "content_key": "266_grey_low_top_three_quarter",
+        "label_status": "not_present",
+        "evidence": [
+          "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-4\\hr_control\\266_html_new\\new_formal_media_readback\\M1.jpg"
+        ],
+        "limits": "Actual M1 visual review found no visible model-number overlay; same brand marking does not prove same style. Old266 alias refers to its source-bank image.",
+        "hash_scope": "No direct old266 served-file hash claimed; alias identity is from the existing source-bank/current-media mapping."
+      }
+    }
+  ],
+  "limits": "Real266/262 have distinct structure despite one supplier URL. Old/new266 share one actual style; IDs may now have later business actions not represented here.",
+  "reported_totals": [
+    363,
+    364
+  ],
+  "coverage_limit": "Saved13pages contain363rows; pages report changing total363/364. No assertion of stable full-shop coverage or current business state."
+}

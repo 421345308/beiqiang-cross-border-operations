@@ -33,7 +33,7 @@ Before publishing or regenerating assets, check:
 
 1. Category: accurate leaf category and product group.
 2. Title: relevant search terms, not overstuffed, core keyword appears naturally.
-3. Keywords/selling points: at least 3 relevant phrases when the page offers such fields; avoid repeating the same term.
+3. Keywords/selling points: use relevant evidenced phrases within current schema limits; no invented minimum count. Separate buyer queries, ad terms and public language; verify actual persistence.
 4. Attributes: required attributes complete; important optional/custom attributes filled.
 5. First main image: apply current placement rules, keep product recognizable at thumbnail size, and compare clean product views with credible product-led scenes when both are allowed. Any text needs evidence and legibility.
 6. Gallery: every image has a buyer-facing job; no filler.

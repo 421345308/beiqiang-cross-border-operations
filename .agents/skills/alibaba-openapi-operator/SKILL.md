@@ -39,7 +39,7 @@ The first authorization requires a user-approved OAuth grant in Alibaba. Authent
 
 ## Product operations
 
-For publishing or repair, read [references/product-publishing.md](references/product-publishing.md). The preferred sequence is:
+First query the [offline success-capability entry](../../../08_工具链/01_业务脚本/国际站扩品/README.md#schema-成功能力检索必须先查) by operation, detail type and category before any unsupported-field claim or browser fallback. For publishing or repair, read [references/product-publishing.md](references/product-publishing.md). The preferred sequence is:
 
 1. Resolve a leaf category and fetch its current publish Schema.
 2. Upload every local image through `alibaba.icbu.photobank.upload`; retain both returned image URL and file ID.

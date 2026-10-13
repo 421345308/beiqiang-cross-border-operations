@@ -1,0 +1,43 @@
+{
+  "create": {
+    "product_id": 1601969707634,
+    "biz_success": true,
+    "request_id": "0b51802d17909292841918889",
+    "trace_id": "2101dbd017909292829317308e0b9f"
+  },
+  "faq_update": {
+    "product_id": 1601969707634,
+    "biz_success": true,
+    "request_id": "21501b8d17909310882434553",
+    "trace_id": "2101dbd017909310879005328e0ed9"
+  },
+  "category_id": "32211",
+  "product_id": "1601969707634",
+  "formal_before": {
+    "request_id": "2105584317909310183525457",
+    "faq_count": 4
+  },
+  "formal_after": {
+    "request_id": "213c933517909317756362289",
+    "faq_count": 6,
+    "status": "approved",
+    "display": "Y"
+  },
+  "unrelated_formal_fields_unchanged": true,
+  "original_after_get_source": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-4\\hr_control\\266_html_new\\new_formal_get.response.json",
+  "original_after_get_params_source": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-4\\hr_control\\266_html_new\\new_formal_get.params.json",
+  "formal_approved": {
+    "product_id": 1601969707634,
+    "status": "approved",
+    "display": "Y",
+    "get_request_id": "213c933517909317756362289",
+    "render_request_id": "0b830ecc17909317786821357",
+    "get_FAQ_count": 6,
+    "render_FAQ_count": 6,
+    "get_exact": true,
+    "render_exact": true,
+    "protected_fields_changed": [],
+    "verdict": "PASS_APPROVED_FORMAL_FAQ6_ONLY_PUBLIC_PENDING",
+    "original_source": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-4\\hr_control\\266_html_new\\266_FAQ6_final_formal_checks.json"
+  }
+}

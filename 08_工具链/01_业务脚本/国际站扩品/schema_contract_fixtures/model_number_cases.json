@@ -1,0 +1,59 @@
+{
+  "cases": [
+    {
+      "case": "936",
+      "expected_model": "HR051-A",
+      "category_id": "201334413",
+      "schema": "<itemSchema><field id=\"catId\" type=\"input\"><value>201334413</value></field><field id=\"icbuCatProp\" type=\"complex\"><fields><field id=\"p-3\" name=\"Model Number\" type=\"input\"><rules><rule name=\"maxLengthRule\" value=\"50\" exProperty=\"include\" unit=\"byte\" /></rules></field></fields></field></itemSchema>",
+      "bad_create_model_field": "<field id=\"p-3\" type=\"input\"><value>HR051-A</value></field>",
+      "corrected_model_field": "<field id=\"p-3\" type=\"input\"><value inputValue=\"HR051-A\">-3</value></field>",
+      "source_schema": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-4\\hr_control\\936_publish\\schema_get.response.json",
+      "source_create": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-4\\hr_control\\936_publish\\936_formal_type4_add.params.json",
+      "source_correction": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-4\\hr_control\\936_publish\\936_model_details_minimal_repair.params.json",
+      "correction_evidence": "formal_model_readback_verified",
+      "sku_outer_id_examples": [
+        "HR051-A-Black-38",
+        "HR051-A-Black-39"
+      ],
+      "formal_model_field": "<field id=\"p-3\" name=\"Model Number\" type=\"input\"><value inputValue=\"HR051-A\">-2</value></field>",
+      "formal_source": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-4\\hr_control\\936_publish\\new_formal_render.response.json",
+      "formal_request_id": "0b51802d17909430712361678"
+    },
+    {
+      "case": "K858",
+      "expected_model": "BQ-M858",
+      "category_id": "201153804",
+      "schema": "<itemSchema><field id=\"catId\" type=\"input\"><value>201153804</value></field><field id=\"icbuCatProp\" type=\"complex\"><fields><field id=\"p-3\" name=\"Model Number\" type=\"input\"><rules><rule name=\"maxLengthRule\" value=\"50\" exProperty=\"include\" unit=\"byte\" /></rules></field></fields></field></itemSchema>",
+      "bad_create_model_field": "<field id=\"p-3\" type=\"input\"><value>BQ-M858</value></field>",
+      "corrected_model_field": "<field id=\"p-3\" type=\"input\"><value inputValue=\"BQ-M858\">-3</value></field>",
+      "source_schema": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-7\\K858_execution\\schema_get.response.json",
+      "source_create": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-7\\K858_execution\\formal_add.params.json",
+      "source_correction": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-7\\K858_execution\\model_repair\\model_only.params.json",
+      "correction_evidence": "formal_model_readback_verified",
+      "sku_outer_id_examples": [
+        "BQ-M858-Black-35",
+        "BQ-M858-Black-36"
+      ],
+      "formal_model_field": "<field id=\"p-3\" name=\"Model Number\" type=\"input\"><value inputValue=\"BQ-M858\">-2</value></field>",
+      "formal_source": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-7\\K858_execution\\model_repair\\after_render.response.json",
+      "formal_request_id": "2166c2ca17909446393723591"
+    },
+    {
+      "case": "5998",
+      "expected_model": "BQ-W5998",
+      "category_id": "201153805",
+      "schema": "<itemSchema><field id=\"catId\" type=\"input\"><value>201153805</value></field><field id=\"icbuCatProp\" type=\"complex\"><fields><field id=\"p-3\" name=\"Model Number\" type=\"input\"><rules><rule name=\"maxLengthRule\" value=\"50\" exProperty=\"include\" unit=\"byte\" /></rules></field></fields></field></itemSchema>",
+      "bad_create_model_field": "<field id=\"p-3\" type=\"input\"><value>BQ-W5998</value></field>",
+      "corrected_model_field": "<field id=\"p-3\" type=\"input\"><value inputValue=\"BQ-W5998\">-3</value></field>",
+      "source_schema": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-8\\5998\\schema_201153805.xml",
+      "source_create": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-8\\5998\\intended_payload.xml",
+      "source_correction": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-8\\5998\\model_only_repair_NOT_SENT.xml",
+      "correction_evidence": "prepared_not_sent_only",
+      "sku_outer_id_examples": [
+        "BQ-W5998-Beige-35",
+        "BQ-W5998-Beige-36"
+      ]
+    }
+  ],
+  "sample_limits": "5998 prepared_not_sent_only refers only to this historical NOT_SENT file. Owner confirms actual model correction subsequently submitted successfully; fixture does not downgrade current business status or verify that later request."
+}

@@ -1,0 +1,71 @@
+{
+  "task_id": "9968_EXISTING_AG_BINDING_20261002",
+  "role": "NEW",
+  "phase": "PUBLISHED_EXISTING_KEYWORD_AND_STRATEGIC_RETIREMENT_PENDING",
+  "writer": "task7 original product owner; this engineering path is read-only",
+  "next_action": "Original owner reconcile keyword followup and confirm HR052-A reservation/current associations before separately authorized retirement.",
+  "public_model": "BQ-MJ9968",
+  "category_id": 201152005,
+  "product_id": "1601969788941",
+  "source_identity": {
+    "reference": "https://qdnx.sooxie.com/detail/2532759",
+    "style": "9968",
+    "critical_facts": {
+      "profile": "closed toe closed heel flat Mary Jane",
+      "upper_structure": "colorblock synthetic leather with single instep strap",
+      "outsole_structure": "rubber outsole, visible low flat profile",
+      "closure": "Single hook-and-loop strap",
+      "lining": "Synthetic leather",
+      "functional_use": "Mary Jane casual assortment"
+    },
+    "evidence": [
+      "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\9968_API完整新建_2026-10-02\\facts_and_copy.json",
+      "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\9968_API完整新建_2026-10-02\\经营任务包.md"
+    ]
+  },
+  "search_intent": {
+    "key": "women colorblock single hook-and-loop Mary Jane flats",
+    "evidence": [
+      "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\9968_API完整新建_2026-10-02\\经营任务包.md",
+      "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\9968_API完整新建_2026-10-02\\facts_and_copy.json"
+    ],
+    "limits": "Documented buyer intent only; no inferred search volume or sales."
+  },
+  "hero_review": {
+    "url": "//sc04.alicdn.com/kf/He08f984ec3f24c9bb4e75288cd7c454fl/286385890/He08f984ec3f24c9bb4e75288cd7c454fl.jpg",
+    "aliases": [
+      "https://sc04.alicdn.com/kf/He08f984ec3f24c9bb4e75288cd7c454fl/286385890/He08f984ec3f24c9bb4e75288cd7c454fl.jpg"
+    ],
+    "sha256": "ade91f1552a452c2625f99fdb471674ff7e42a35c28eadebc7149a7d8a093973",
+    "content_key": "9968_GREY_SINGLE_WIDE_STRAP_CLOSED_HEEL_ACTUAL_M1",
+    "label_status": "not_present",
+    "evidence": [
+      "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\9968_API完整新建_2026-10-02\\visual_gate.json",
+      "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\9968_API完整新建_2026-10-02\\cdn_independent_acceptance.json",
+      "C:\\Users\\spq\\Desktop\\贝强\\08_工具链\\01_业务脚本\\国际站扩品\\schema_contract_fixtures\\9968_existing_binding\\M1_label_observation.json"
+    ]
+  },
+  "replacement_plan": {
+    "candidate": "9968",
+    "old_product_ids": [
+      "1601943742273"
+    ]
+  },
+  "evidence_files": [
+    {
+      "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\工厂店外新款数据采集模板.md",
+      "sha256": "d12b15e6516f6aef202732056588eba773fca273e901fc565c146509d3b44150",
+      "kind": "task_pack_template"
+    },
+    {
+      "path": "C:\\Users\\spq\\Desktop\\贝强\\08_工具链\\01_业务脚本\\国际站扩品\\schema_contract_fixtures\\9968_existing_binding\\taskpack_document_snapshot.md",
+      "sha256": "e5b34dc8d135e1edd1076ee6062bc5cea5f16e8d680fcafc5a7ded7397d36801",
+      "kind": "task_pack_document"
+    },
+    {
+      "path": "C:\\Users\\spq\\Desktop\\贝强\\08_工具链\\01_业务脚本\\国际站扩品\\schema_contract_fixtures\\9968_existing_binding\\mapping_snapshot.json",
+      "sha256": "58c3f58e2305437b58b458b1e2f6b958fff4b4575c0e2f661983ded7451f7fdb",
+      "kind": "replacement_mapping"
+    }
+  ]
+}

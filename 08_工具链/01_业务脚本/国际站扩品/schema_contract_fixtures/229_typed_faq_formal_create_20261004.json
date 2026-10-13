@@ -1,0 +1,22 @@
+{
+  "operation": "create",
+  "method": "alibaba.icbu.product.schema.add",
+  "detail_type": "4",
+  "date": "2026-10-04",
+  "category_id": "201334413",
+  "product_id": "1601970690721",
+  "business_response": {
+    "trace_id": "2101c5a717910952957327981e0bc3",
+    "product_id": 1601970690721,
+    "biz_success": true,
+    "request_id": "0bbb3b2417910952968977338",
+    "_trace_id_": "2101c5a717910952957327981e0bc3"
+  },
+  "formal_get_request_id": "212c41d317910955585156090",
+  "formal_status": "new",
+  "display": "N",
+  "SKU_count": 44,
+  "FAQ_payload_xml": "<field id=\"companyFaqDesc\" type=\"multiComplex\"><complex-values><field id=\"question\" type=\"input\"><value>What is the construction of these casual shoes?</value></field><field id=\"answers\" type=\"input\"><value>These sourced casual shoes have a slip-on opening, knitted textile upper and contrasting heel area. Construction and sole appearance vary by color as shown in the actual photos; confirm your selected color before ordering.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>Which colors and size labels are offered?</value></field><field id=\"answers\" type=\"input\"><value>This listing offers All Black, Black/White, Grey and Khaki in source size labels 35 through 45. The sizing system is unspecified; confirm measurements and quantities by color and size. Other supplier colors are not included in this listing.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>What are the upper, lining and sole materials?</value></field><field id=\"answers\" type=\"input\"><value>The source describes a knitted upper and an MD whole sole. Upper fiber composition, lining composition and separate midsole/outsole compositions are not specified. MD is not presented as proof of EVA composition. Confirm material requirements for your order.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>Can these photos be used to judge fit and performance?</value></field><field id=\"answers\" type=\"input\"><value>The original photos show the actual source appearance for each offered color. They do not establish tested slip resistance, durability or a guaranteed fit. Please confirm measurements and any sample requirements before ordering.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>What are the minimum order and quantity prices?</value></field><field id=\"answers\" type=\"input\"><value>Minimum order: 2 pairs. 2-49 pairs: USD 6.27/pair; 50-99 pairs: USD 5.85/pair; 100+ pairs: USD 5.43/pair. Packing and freight are confirmed for the selected order.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>What information is needed to confirm dispatch?</value></field><field id=\"answers\" type=\"input\"><value>Send quantities by color and size, destination and packing requirements. Standard non-custom lead time is estimated at 7 days and confirmed for the selected order. Listed labels are not a stock quantity guarantee; shipment measurements are confirmed with actual packing.</value></field></complex-values></field>",
+  "FAQ_current_definition_xml": "<field id=\"companyFaqDesc\" name=\"FAQs\" type=\"multiComplex\"><rules><rule name=\"maxItemsRule\" value=\"8\" exProperty=\"include\" /></rules><fields><field id=\"question\" name=\"question\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /><rule name=\"maxInputNumRule\" value=\"150\" exProperty=\"include\" /></rules></field><field id=\"answers\" name=\"answers\" type=\"input\"><rules><rule name=\"valueTypeRule\" value=\"text\" /><rule name=\"requiredRule\" value=\"true\" /><rule name=\"maxInputNumRule\" value=\"500\" exProperty=\"include\" /></rules></field></fields></field>",
+  "limits": "Actual successful formal create and exact formal get. This initial get is new/N: approval, score, current editor migration and public acceptance are not inferred. No keyword write, inventory, EVA composition or global category support inferred."
+}

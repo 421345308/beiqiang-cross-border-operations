@@ -73,3 +73,9 @@ Hot direction table fields:
 - Do not copy competitor wording into Beiqiang listings.
 - Do not use unsupported medical, orthopedic, waterproof, safety, or compliance claims.
 - Do not recommend high ad spend before title/image/detail quality and duplicate risk are checked.
+
+## 完整任务记录入口
+
+完整单款选品把需求源、观察日期、信号类型、与实款的异同和未知项写入现有采集模板 B；零售购买提示只证明原页面与观察期，评论数/品牌榜单是代理信号，不能迁移成本款销量。成熟证据复用并记录适用性，只补决策缺口；没有搜索量/竞争数据的蓝海记为试验假设。入口：[现有单款采集模板](../../../02_Alibaba运营/05_扩品工程/工厂店外新款数据采集模板.md)；详细规则只读生命周期 SOP，窄范围请求不扩展为整套工作。
+
+品牌与拟售路线按生命周期 SOP §3；完整图数默认及2627BSK例外按 §4，不在本 Skill复制规则全文。

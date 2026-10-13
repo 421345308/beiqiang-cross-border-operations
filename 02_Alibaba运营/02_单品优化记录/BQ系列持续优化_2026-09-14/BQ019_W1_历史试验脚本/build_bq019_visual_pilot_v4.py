@@ -1,4 +1,11 @@
+
+# HISTORICAL_FULL_PAGE_GENERATOR_RETIRED
+raise SystemExit("Historical whole-page generator retired; use the shared factory detail entry.")
 from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[4] / "08_工具链/01_业务脚本/商品图片与审计"))
+from factory_assets import legacy_asset
+# Historical asset lookup only; new company image work uses the shared factory entry.
 import shutil
 
 from PIL import Image, ImageDraw, ImageEnhance, ImageFont, ImageOps
@@ -16,7 +23,7 @@ for folder in (MAIN, DETAIL, COMPANY, FACTCHECK, PREVIEW):
 
 V3 = ROOT / "02_Alibaba运营/02_单品优化记录/BQ系列持续优化_2026-09-14/BQ019_W1_整页视觉样板_v3_2026-09-16"
 RAW = ROOT / "01_产品资产/01_原始数据包/已整理_BQ019_A206_A206情侣鞋图片/A206情侣鞋图片/主图"
-FACTORY = ROOT / "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/00_精选可用照片"
+FACTORY = legacy_asset('01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/00_精选可用照片')
 AI_WIDE = Path(r"C:\Users\spq\.codex\generated_images\01a094e6-52ec-7100-b16c-509ee49cbb58\exec-6898cb6e-e013-45d2-82df-913c20e2e995.png")
 AI_WORKSHOP = Path(r"C:\Users\spq\.codex\generated_images\01a094e6-52ec-7100-b16c-509ee49cbb58\exec-d2e28334-c0ba-44df-ab70-4f25b158705c.png")
 

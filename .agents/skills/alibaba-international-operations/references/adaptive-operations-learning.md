@@ -12,7 +12,7 @@ Apply guidance in this order:
 4. `RECENT_VALIDATED_LESSON`: a repeatable result supported by a dated pilot, multiple products, or reliable current benchmark evidence.
 5. `DEFAULT_HEURISTIC`: historical templates, default image sequences, suggested copy structures, and old operating habits. These are starting points, not permanent rules.
 
-When two items conflict, do not silently follow the older document. Identify each item's class, protect the hard constraints, and use the highest current evidence for the operating choice.
+When two items conflict, do not silently follow the older document. Identify each item's class, protect the hard constraints, and separate factual/platform evidence from authorization and strategy: current explicit scope decisions replace old task restrictions, without overriding product truth or compliance.
 
 ## Guidance labels
 
@@ -30,8 +30,8 @@ Record the date, scope, evidence, known counterexample, and review/sunset condit
 
 1. Observe a buyer problem, platform change, competitor pattern, or data gap.
 2. State the hypothesis and the buyer decision it should improve.
-3. Run the smallest safe pilot on an extension link or local asset set; protect proven source links.
-4. Verify both factual integrity and business outcome: search-card clarity, CTR, buyer understanding, inquiry quality, or conversion support.
+3. Study relevant excellent B2B competitors, combine their procurement/visual logic with exact SKU and supply evidence, and make an independent improvement. Protect proven source links; version changes for correction, not mandatory A/B testing.
+4. Verify factual integrity and public content, then review valid procurement opportunities and quote/sample/order progress. Exposure and CTR prioritize work and inform review; do not wait for samples or significance before an evident improvement.
 5. Promote, narrow, revise, or deprecate the lesson. Update the canonical SOP or relevant skill only when it is reusable.
 
 No pilot is successful merely because files were generated or uploaded. A visual is useful only if it answers a real buyer question with credible evidence and helps the buyer take a next step.

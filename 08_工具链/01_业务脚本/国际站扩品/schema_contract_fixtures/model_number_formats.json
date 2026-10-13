@@ -1,0 +1,25 @@
+{
+  "formats": [
+    {
+      "field_id": "p-3",
+      "field_type": "input",
+      "field_name": "Model Number",
+      "value_template": "<value inputValue=\"REDACTED\">-3</value>",
+      "verified_sources": [
+        {
+          "category_id": "201334413",
+          "request_source": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-4\\hr_control\\936_publish\\936_model_details_minimal_repair.params.json",
+          "formal_source": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-4\\hr_control\\936_publish\\new_formal_render.response.json",
+          "formal_request_id": "0b51802d17909430712361678"
+        },
+        {
+          "category_id": "201153804",
+          "request_source": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-7\\K858_execution\\model_repair\\model_only.params.json",
+          "formal_source": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-7\\K858_execution\\model_repair\\after_render.response.json",
+          "formal_request_id": "2166c2ca17909446393723591"
+        }
+      ],
+      "limits": "Matching current property ID/type/semantic name only; a serialization reference, not universal category write support. 5998 prepared correction is not success evidence."
+    }
+  ]
+}

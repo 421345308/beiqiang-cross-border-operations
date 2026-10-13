@@ -1,59 +1,20 @@
-# Video Review Template
+# Video review: current purpose and observable evidence
 
-Create or append:
+Save the review with the current video's project deliverables. Do not create an `output/seedance` directory at the workspace root. One section per actual task/version can record:
 
-```text
-output/seedance/reviews/<SKU>.md
-```
+- Project objective, audience/channel and acceptance criteria.
+- Requested model/provider, returned identity and any undisclosed fields.
+- Exact prompt/package, source-reference roles and output path.
+- Actual specifications, usage/cost evidence, QA run and source ID.
+- Whole-video observations and focused time-range checks.
+- What worked, observable defects and next decision.
 
-Use one section per task ID.
+## Dimensions to choose for the current task
 
-```markdown
-## <TASK_ID> — <DATE>
+Attractiveness, moving-image quality, narrative/action coherence, shoe identity/readability, physical contact/anatomy, rhythm, music/sound, brand/product communication and channel fit. Add B2B inquiry usefulness or benefit proof when that is the current objective; do not require every brand film to follow a direct-response proof format. Numerical scores are optional and do not replace time-range evidence.
 
-- Model:
-- Prompt:
-- Source images:
-- Specifications:
-- Tokens:
-- Estimated cost:
-- Output:
-- QA run directory:
-- Source ID:
+## Defect record
 
-### Scores
+`<start>–<end> | <severity> | <category> | <observable defect> | <KEEP/TRIM/REGENERATE>`
 
-| Dimension | Score / 10 | Evidence |
-|---|---:|---|
-| Product identity |  |  |
-| First-second hook |  |  |
-| Benefit proof |  |  |
-| Physical realism |  |  |
-| Editing rhythm |  |  |
-| Music and sound |  |  |
-| B2B usefulness |  |  |
-| Platform fit |  |  |
-
-### What Worked
-
-- 
-
-### Problems
-
-- `<start>–<end> | <severity> | <category> | <observable defect> | <KEEP/TRIM/REGENERATE>`
-
-### Next Prompt Changes
-
-1. 
-2. 
-```
-
-## Review Rules
-
-- Inspect the whole video, not only the first frame.
-- Use the shared `video-use` contact-sheet and focused-candidate workflow; open suspicious frames at original resolution before assigning severity.
-- Separate product-identity failures from creative-style preferences.
-- Prioritize defects that misrepresent the real product.
-- Write observable problems, not vague comments such as “make it better.”
-- Preserve `first_bad_frame`, `peak_bad_frame`, and `recovery_frame` in the linked `qa_report.json` when they can be established.
-- Carry the top two prompt changes into the next generation.
+Use the shared `video-use` severity/action vocabulary and whole-video/focused-candidate procedure. Preserve first/peak/recovery frames when established. A contact sheet helps locate issues; it does not complete motion or sound review. Separate product misrepresentation, technical defects and creative preference. Choose the highest-impact next changes for the actual defects, not a mandatory number of prompt constraints.

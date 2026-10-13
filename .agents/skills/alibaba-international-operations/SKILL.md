@@ -20,9 +20,9 @@ Treat product/source truth, compliance, authorization and live verification as h
 
 ## Conditional execution and references
 
-- Use [OpenAPI Operator](../alibaba-openapi-operator/SKILL.md) only for an authorized API operation or readback. Discover current Workctl commands only for functions that require Workctl. Browser work is for unsupported fields, consent and visible verification.
+- Use [OpenAPI Operator](../alibaba-openapi-operator/SKILL.md) only for an authorized API operation or readback. Workctl is retired under the workspace rules; do not discover or replay it. Browser work requires an actually available, supported control entry and session for unsupported fields, consent or visible verification; an installed Chrome alone proves neither control nor login.
 - Public Sooxie sourcing research is pre-authorized: search, open product/store pages, paginate or scroll, read fields, capture evidence and download publicly exposed product media without pausing for owner confirmation. This does not authorize login or account-permission changes, contacting suppliers, adding items to a sourcing cart, placing orders, paying, uploading/publishing, or submitting forms that change external state.
-- Persist only official Alibaba image-bank/CDN URLs. Complete live work against the SOP's full acceptance gates, not a partial tool result; do not start new listings while a catalog audit has blocking errors.
+- Persist only official Alibaba image-bank/CDN URLs. Complete live work against the SOP's full acceptance gates, not a partial tool result; use lifecycle SOP §9 for target/linked-field, shared-impact and genuine shop-wide risk scope; a local issue does not automatically block unrelated authorized work.
 - Apply claim rules directly. Read the [positioning card](../beiqiang-positioning/references/positioning-card.md) only for an unresolved buyer angle; the [technical buyer SOP](../../../07_知识库与Skills/01_运营SOP/技术型品牌买家询盘评估SOP.md) governs controlled specifications, tooling, testing, NDA or confidential tech packs.
 
 ## Read only the relevant reference
@@ -47,3 +47,7 @@ For a complete listing, identify the product role and buyer intent, check eviden
 - A narrow request receives the changed fields or files, relevant evidence and any blocking confirmation.
 - A complete listing/optimization package includes buyer intent, product group, title options, keyword cluster, attributes/selling points, main-image roles, detail modules, inquiry hook and pending commercial/evidence confirmations.
 - A live operation receives a completion receipt with product/SKU identifiers, what changed, verification results and unresolved review/propagation state. A successful tool wrapper is not proof of business success.
+
+## 单款任务包路由
+
+完整经营工作沿用[现有采集模板](../../../02_Alibaba运营/05_扩品工程/工厂店外新款数据采集模板.md)，按 SOP §2.1 串联需求证据、实款匹配、关键词/标题、逐图买家问题、API与真实评分/公开QA、旧新映射和授权普通旧品收尾。窄范围任务只填写相应部分，不重新启动全链研究。阶段验收与经营完成分开报告；模板字段是业务记录，不是未经验证的新API能力。

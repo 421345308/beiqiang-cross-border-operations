@@ -1,0 +1,89 @@
+{
+  "case": "HR021 scoped hero update did not preserve keywords",
+  "scope": {
+    "operation": "update",
+    "category_id": "201152005",
+    "observed_at": "2026-10-03T02:29:13Z"
+  },
+  "evidence": [
+    {
+      "label": "A",
+      "expected": [
+        "Womens Mary Jane Flats"
+      ],
+      "public_product_id": "1601943593293",
+      "actual_score": 5.0,
+      "product_get": {
+        "request_id": "2105044417909945529482925",
+        "product": {
+          "product_id": "AAGqjmk4AOWGex-cDVm7wWau",
+          "status": "approved",
+          "keywords": [
+            ""
+          ]
+        }
+      },
+      "sku_count": 12,
+      "unrelated_fields_unchanged": {
+        "product_sku": true,
+        "attributes": true,
+        "sourcing_trade": true,
+        "subject": true,
+        "struct_detail_product": true
+      }
+    },
+    {
+      "label": "B",
+      "expected": [
+        "Womens Buckle Strap Flats"
+      ],
+      "public_product_id": "1601943584343",
+      "actual_score": 3.9,
+      "product_get": {
+        "request_id": "213c932b17909945576901150",
+        "product": {
+          "product_id": "AAGDjmk4AOWGex-cDVm7wTm0",
+          "status": "approved",
+          "keywords": [
+            ""
+          ]
+        }
+      },
+      "sku_count": 12,
+      "unrelated_fields_unchanged": {
+        "product_sku": true,
+        "attributes": true,
+        "sourcing_trade": true,
+        "subject": true,
+        "struct_detail_product": true
+      }
+    },
+    {
+      "label": "C",
+      "expected": [
+        "Womens Casual Flats"
+      ],
+      "public_product_id": "1601943577329",
+      "actual_score": 3.9,
+      "product_get": {
+        "request_id": "213c934417909945631954077",
+        "product": {
+          "product_id": "AAHNjmk4AOWGex-cDVm7wSUS",
+          "status": "approved",
+          "keywords": [
+            ""
+          ]
+        }
+      },
+      "sku_count": 12,
+      "unrelated_fields_unchanged": {
+        "product_sku": true,
+        "attributes": true,
+        "sourcing_trade": true,
+        "subject": true,
+        "struct_detail_product": true
+      }
+    }
+  ],
+  "limits": "Three approved target readbacks prove original keywords were lost in this scoped update. One target score reached 5.0 despite loss. No global field-support or deletion-contract claim."
+}

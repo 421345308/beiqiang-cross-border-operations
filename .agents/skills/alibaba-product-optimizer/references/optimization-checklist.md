@@ -19,13 +19,13 @@ If a high-impact fact is missing, proceed with a conservative draft and list it 
 
 1. Positioning gate: check buyer-facing claims against the exact SKU and workspace facts; consult the positioning card only if a claim remains uncertain.
 2. Product role: new listing, variant, duplicate risk, seasonal style, or skip candidate.
-3. Competitor check: use `competitor-research-firecrawl` only if current SKU/platform evidence cannot settle a material keyword or image choice.
+3. Competitor analysis: reuse dated relevant excellent same-category B2B examples and fill material gaps with `competitor-research-firecrawl`; analyze buyer meaning, visual/procurement information, then independently optimize against exact SKU and supply evidence. No A/B prerequisite or waiting for samples.
 4. Keyword cluster: choose the core category and supported attribute/use terms for one buyer intent; label actual buyer queries, ad terms and unvalidated public candidates separately, with source, date and target market. Long-tail is an option, not a priority rule.
 5. Title: produce up to 3 useful options when comparison adds value; length and structure follow current keyword evidence and buyer clarity rather than a permanent character target.
 6. Attributes: align category, product group, required attributes, optional attributes, and custom attributes.
 7. Main images: define roles before generating or selecting images.
 8. Detail page: product proof first, company proof later.
-9. Inquiry conversion: add sample/MOQ/customization prompt.
+9. Highlights and FAQ: use [lifecycle SOP §6.1](../../../../02_Alibaba运营/00_运营SOP/国际站商品全生命周期SOP.md#61-产品亮点与-faq买家决策写法). Connect verified product structure to selection value in highlights. FAQ uses the general factory-cooperation method, with verified commercial exceptions only; avoid repeated shoe color/size lists, internal unknowns and repeated quote prompts.
 10. Final QA: ensure title, images, attributes, and detail modules do not contradict each other.
 
 ## Title Starting Structure

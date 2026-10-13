@@ -1,0 +1,152 @@
+{
+  "scope": {
+    "operation": "update",
+    "field": "scImages",
+    "detail_type": "4",
+    "category_id": "201339011",
+    "product_id": "1601970034464",
+    "submitted_date": "2026-10-02",
+    "verified_date": "2026-10-03",
+    "limits": "One approved hero replacement on existing F2888. No structured detail/company gallery update, keyword, all-category support or publishing permission inferred."
+  },
+  "submission": {
+    "status": "submitted_needs_readback",
+    "response": {
+      "trace_id": "2103346a17909835307965692e0ba1",
+      "product_id": 1601970034464,
+      "biz_success": true,
+      "request_id": "2105584317909835311337617",
+      "_trace_id_": "2103346a17909835307965692e0ba1"
+    },
+    "refs": {
+      "request_id": "2105584317909835311337617",
+      "trace_id": "2103346a17909835307965692e0ba1",
+      "message": null,
+      "error": null
+    }
+  },
+  "before": {
+    "observed_at": "2026-10-02T23:14:47.007406+00:00",
+    "request_id": "213e759c17909828917384965",
+    "images": [
+      "https://sc04.alicdn.com/kf/H33556850cd2342f69f7096fd93a3b72dD.png",
+      "https://sc04.alicdn.com/kf/H6330fdaa191344c68255a9cadafea2aeH.png",
+      "https://sc04.alicdn.com/kf/H5b53bf9355224b4c9175b49dff718e5aq.png",
+      "https://sc04.alicdn.com/kf/Hc4989580ba384292818ae0b000b86a89h.png",
+      "https://sc04.alicdn.com/kf/Ha710e2571d3d4cffb5c93d1660f0b60fM.png",
+      "https://sc04.alicdn.com/kf/H57692d821bb5484eb0917730ab68adab9.png"
+    ]
+  },
+  "after": {
+    "observed_at": "2026-10-03T01:45:53.972795+00:00",
+    "request_id": "2105044417909919532601148",
+    "status": "approved",
+    "display": "Y",
+    "images": [
+      "https://sc04.alicdn.com/kf/H5c31b0958aeb4df99e1c83afd1d4b874Z.png",
+      "https://sc04.alicdn.com/kf/H6330fdaa191344c68255a9cadafea2aeH.png",
+      "https://sc04.alicdn.com/kf/H5b53bf9355224b4c9175b49dff718e5aq.png",
+      "https://sc04.alicdn.com/kf/Hc4989580ba384292818ae0b000b86a89h.png",
+      "https://sc04.alicdn.com/kf/Ha710e2571d3d4cffb5c93d1660f0b60fM.png",
+      "https://sc04.alicdn.com/kf/H57692d821bb5484eb0917730ab68adab9.png"
+    ],
+    "sku_count": 24
+  },
+  "score": {
+    "observed_at": "2026-10-03T01:45:55.957689+00:00",
+    "request_id": "2166c2ca17909919553087959",
+    "actual_score": 5.0,
+    "problems": {
+      "ruleScoreMap": {
+        "title_word_miss_core_error": 0.0,
+        "imageQualityBad": 0.0,
+        "image_scale": 0.0,
+        "title_word_error": 0.0,
+        "image_num": 0.0
+      },
+      "errorReasonSkuImageMoreMap": {},
+      "errorReasonTitleWordMissErrorMap": {},
+      "errorReasonList": [],
+      "errorReasonTitleWordErrorMap": {},
+      "extendCheckMap": {
+        "imageText": true,
+        "sku_image": false,
+        "title_word_miss_core_error": true,
+        "imageQualityBad": true,
+        "sku_text": false,
+        "imageSubTitle": false,
+        "category": true,
+        "title_word_error": true,
+        "selling_point_attribute_conflict": false
+      },
+      "errorReasonCategoryMap": {},
+      "errorReasonSkuTextMap": {},
+      "errorReasonSubTitleMap": {},
+      "errorReasonMap": {},
+      "errorReasonSellingPointAttributeMap": {},
+      "errorReasonSkuImageMap": {},
+      "extendProblemMap": {
+        "imageText": false,
+        "title_word_miss_core_error": false,
+        "imageQualityBad": false,
+        "imageSubTitle": false,
+        "image_scale": false,
+        "inventory": false,
+        "title_word_error": false,
+        "selling_point_attribute_conflict": false,
+        "image_num": false,
+        "freightRate": false,
+        "sku_image": false,
+        "sku_text": false,
+        "price": false,
+        "category": false
+      },
+      "errorReasonQualityBadMap": {},
+      "errorReasonSkuTextMoreMap": {}
+    }
+  },
+  "invariants": {
+    "product_id": "1601970034464",
+    "status": "approved",
+    "display": "Y",
+    "actual_score": "5.00",
+    "observed_at": "2026-10-03T01:45:55.957689+00:00",
+    "score_request_id": "2166c2ca17909919553087959",
+    "unrelated_field_invariance": {
+      "product_sku": true,
+      "sourcing_trade": true,
+      "attributes": true,
+      "struct_detail": false,
+      "struct_detail_product": true,
+      "subject": true,
+      "category_id": true,
+      "price_type": true,
+      "keywords": true,
+      "struct_detail_after_order_normalization": true
+    },
+    "sku_count": 24,
+    "hero_changed": true,
+    "other_five_images_unchanged": true,
+    "public_full_qa": "NOT_VERIFIED",
+    "keyword_state": "EMPTY_REMAINS_UNRESOLVED",
+    "supplier_name": "尚潮鞋业",
+    "supplier_article": "F2888",
+    "source_url": "https://shangchao.sooxie.com/detail/2357652",
+    "detail_order_changed_by_platform": true,
+    "detail_images_and_roles_semantically_unchanged": true
+  },
+  "provenance": [
+    {
+      "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\single_agent_resume_2310\\F2888_hero_repair\\update_once_receipt.json",
+      "sha256": "7407630bcf260ea8a0a4a036d072e41cfc6b08c8c597949e9e9a052bffe2f611"
+    },
+    {
+      "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\single_agent_resume_2310\\F2888_review_20261003_0143\\after_get.json",
+      "sha256": "f042c20d28b06d42b98c6147eb949fa0ec2fb225565c516fc4f4f54497d9031c"
+    },
+    {
+      "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\single_agent_resume_2310\\F2888_review_20261003_0143\\after_score_get.json",
+      "sha256": "24f7e253f670740fd3de6e5cd23436e1d874f900c82f68bdc4bec2e4fe06e9fd"
+    }
+  ]
+}

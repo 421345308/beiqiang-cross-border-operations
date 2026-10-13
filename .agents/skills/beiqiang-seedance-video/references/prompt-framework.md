@@ -1,97 +1,25 @@
-# Prompt Framework
+# Seedance prompt guidance: scope before structure
 
-镜头语言模板来自工作区级模板库，本场景的取舍与改造见 [template-mapping.md](template-mapping.md)；模板库总索引见 [awesome-seedance 模板索引](../../../../07_知识库与Skills/04_AI视频知识体系/awesome-seedance-模板索引.md)。模板只提供镜头方法，产品事实仍回到单款证据。
+This reference supports Beiqiang product-video prompts. It does not choose a channel, language, model version, creative format, duration or edit cadence. Read the current project and chosen version/provider documentation first.
 
-## Structure
+## Build the prompt around the intended shot
 
-Write prompts in this order:
+State the scene, person/product, event or action, camera, light, sound and continuity that matter for this shot. Explain each reference's actual role: shoe identity, character, setting, movement, style or keyframe. Map people and shoes explicitly when several appear. Avoid conflicting sources and redundant descriptions of a precise reference.
 
-1. Platform, audience, duration, and style.
-2. Product identity lock.
-3. One primary product message.
-4. Time-coded shot plan.
-5. Camera and editing language.
-6. Original music and synchronized sound effects.
-7. Caption-safe negative space.
-8. Negative constraints.
+Use the timeline or shot-control syntax supported by the selected version. Do not assume 2.0 and 2.5 respond to the same time controls. A model's input limit is not a recommended reference count; select material needed for the shot.
 
-## TikTok Pattern
+For shoe identity, describe the distinctive visible features from that exact colorway: silhouette, upper pattern, laces, collar, pull tab, sole profile and logo if present. Decide which angles and wearing-state references are needed rather than imposing the same checklist on every shoe.
 
-- `0.0-1.2s`: Pattern interrupt showing the product benefit immediately.
-- `1.2-3.5s`: Close visual proof.
-- `3.5-7.0s`: On-foot or hand interaction.
-- `7.0-10.0s`: Second proof or contrast.
-- Final seconds: Hero frame or loop transition with CTA space.
+## Creative and sound choices
 
-Use cuts every 1.5-3 seconds. Keep the product large in frame.
+Hooks, shot duration, montage, lifestyle/UGC treatment and product close-ups follow the current advertising idea. A fast evidence-led TikTok clip is one option; brand films, domestic Douyin and other channels may need different structures. Do not force a fixed opening/problem/proof/CTA sequence onto a chosen story.
 
-## Wide-Toe Visual Proof
+Specify only the needed music, sound effects and speech. Language, lyrics and music style follow the audience and creative direction; licensing follows actual use. Generated text and subtitles need review; post-production text is an available way to preserve legibility, not evidence that every version is incapable of rendering text.
 
-Prefer visible evidence instead of written claims:
+Use a small set of relevant positive instructions and continuity requirements. Add negative constraints only for concrete risks in the current shot, not the entire archive of past failures.
 
-- Top-down forefoot silhouette.
-- Hand tracing or lightly pressing the forefoot width.
-- Natural on-foot toe-area close-up.
-- Stable comparison framing only when both compared objects are real references.
+## Historical observations: conditional, not current model facts
 
-Do not show transparent feet, internal anatomy, pain acting, measurements, or medical claims.
+The former skill summarized BQ017/BQ001 trials in its Seedance 2.0-era workflow: unwanted text, shoe deformation during foot insertion, identity drift with limited views, and an unintended Mini selection. The summary does not retain exact task IDs or settings here; consult original project evidence before making a model-specific claim.
 
-## Product Identity Lock
-
-Describe exact visible features from the references:
-
-- Color.
-- Knit or textile pattern.
-- Lace color and routing.
-- Collar and heel tab.
-- Outsole color, texture, and profile.
-- Logo placement when present.
-
-Repeat that these features must remain identical in every shot.
-
-## Music Prompt
-
-Specify:
-
-- Original instrumental.
-- BPM range.
-- Genre blend.
-- Main percussion and bass.
-- Energy level.
-- No vocals or recognizable melody.
-- Beat-synchronized actions and realistic product sounds.
-
-Example direction:
-
-```text
-Original 112 BPM upbeat indie-pop with light nu-disco and subtle UK-garage percussion, crisp kick, soft handclaps, bright clean bass, airy synth pluck, no vocals, no recognizable copyrighted melody.
-```
-
-## Negative Constraints
-
-Always reject:
-
-- Text generation.
-- Product redesign or color drift.
-- Changing laces, outsole, logo, or stitching.
-- Extra or duplicated shoes.
-- Deformed hands, feet, or gait.
-- Impossible bending or floating.
-- Fake factories, tests, reviews, certificates, prices, and claims.
-
-## Lessons From BQ017
-
-- A slow product turntable is too simple for TikTok.
-- Add a first-second pattern interrupt, multiple proof shots, on-foot movement, and beat-synchronized editing.
-- Verify the returned model ID; the first trial accidentally used Mini instead of full Seedance 2.0.
-- Multiple clean references improve identity, but avoid detail images containing text or unrelated graphics.
-- Generated text should be avoided; add captions in post-production.
-
-## Lessons From BQ001
-
-- Even with a `no text` instruction, the model may add fake typography in the final hero frame. Require an entirely blank background with no signs, labels, letters, symbols, or graphics.
-- A foot-entering-shoe action can deform the heel collar and foot. Prefer shots where the shoe is already worn, or use real footage for the slip-on demonstration.
-- One reference angle is insufficient for a product with a distinctive knit pattern and sculpted outsole. Use clean same-color top, side, three-quarter, and outsole references.
-- The wide-forefoot hook and hand-press proof read clearly; retain those structures.
-- Front-facing on-foot walking can enlarge or simplify the white toe bumper. Prefer low side or three-quarter walking angles and keep identity-critical claims on exact product-only footage.
-- Use lifestyle generation as a short insert between accurate product shots, not as the sole product proof.
+These observations can suggest targeted checks when the new shot has the same risk. They do not prohibit slipping on a shoe, front-view walking, lifestyle sequences or a different creative approach on a new model. Verify the intended model/variant at execution; evaluate current behavior with authorized evidence.

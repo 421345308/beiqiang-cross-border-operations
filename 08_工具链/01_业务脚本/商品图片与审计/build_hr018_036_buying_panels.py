@@ -1,6 +1,10 @@
 """Create procurement and optional-packing main panels for sourced HR018/036."""
 
 from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[3] / "08_工具链/01_业务脚本/商品图片与审计"))
+from factory_assets import legacy_asset
+# Historical asset lookup only; new company image work uses the shared factory entry.
 
 from PIL import Image, ImageDraw, ImageFont, ImageOps
 
@@ -8,7 +12,7 @@ from PIL import Image, ImageDraw, ImageFont, ImageOps
 ROOT = Path(__file__).resolve().parents[3]
 OUT = ROOT / "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/06_确定性图稿/HR018_036"
 SHOE = ROOT / "99_临时区/HR018_候选核验/路崎036_图2.jpg"
-PACK = ROOT / "02_Alibaba运营/06_图片与检查记录/公司图复用模板_v5_2026-09-23/C5_bag_box_options_candidate.png"
+PACK = legacy_asset('02_Alibaba运营/06_图片与检查记录/公司图复用模板_v5_2026-09-23/C5_bag_box_options_candidate.png')
 BOLD = "C:/Windows/Fonts/arialbd.ttf"
 REG = "C:/Windows/Fonts/arial.ttf"
 INK = (28, 45, 53)

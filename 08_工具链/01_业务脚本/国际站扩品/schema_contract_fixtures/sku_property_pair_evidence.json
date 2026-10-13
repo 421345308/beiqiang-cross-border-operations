@@ -1,0 +1,26 @@
+{
+  "scope": "create SKU wire format; 929 actual successful and M001 actual business-rejected; no universal category inference",
+  "successful_pair": {
+    "propId": "191288010",
+    "propName": "p-191288010",
+    "propValueId": "3327837",
+    "propValueName": "Black",
+    "text": "191288010:3327837"
+  },
+  "rejected_pair": {
+    "propId": "191288010",
+    "propName": "Color",
+    "propValueId": "3331260",
+    "propValueName": "Red",
+    "text": "3331260"
+  },
+  "rejected_receipt": {
+    "request_id": "0b830ecc17910030073376783",
+    "biz_success": false,
+    "product_id": null,
+    "codes": [
+      "CHK_COMP_DATA_FORMAT_ERROR",
+      "PUB_BIZCHECK_API_SKU_PROP_INVALID"
+    ]
+  }
+}

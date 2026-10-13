@@ -1,0 +1,72 @@
+export const FPS=24;
+export const TOTAL_FRAMES=576;
+type Scene={id:string;frames:number;from:number;src:string;title:string;sub?:string;video?:boolean;sourceFrame?:number;purpose?:string;internal_cuts?:number[]};
+export const TIMELINE:Scene[]=[
+  {
+    "id": "opening",
+    "frames": 108,
+    "src": "campaign-overhead.png",
+    "title": "针织袜子鞋",
+    "internal_cuts": [
+      24,
+      60
+    ],
+    "purpose": "织纹微距到完整双鞋，摄影景别建立品类",
+    "from": 0
+  },
+  {
+    "id": "touch",
+    "frames": 72,
+    "src": "dynamic/tactile.mp4",
+    "title": "",
+    "video": true,
+    "sourceFrame": 0,
+    "purpose": "真实可见的触摸事件，不复述动作",
+    "from": 108
+  },
+  {
+    "id": "knit",
+    "frames": 36,
+    "src": "sock-knit.png",
+    "title": "波纹针织鞋面",
+    "purpose": "由触感到织纹结构",
+    "from": 180
+  },
+  {
+    "id": "collar",
+    "frames": 60,
+    "src": "campaign-collar.png",
+    "title": "袜式鞋口",
+    "sub": "免系带 · 套脚结构",
+    "purpose": "明确结构信息，不用残缺穿鞋动作证明便利",
+    "from": 216
+  },
+  {
+    "id": "walk",
+    "frames": 144,
+    "src": "dynamic/walking.mp4",
+    "title": "穿进日常",
+    "video": true,
+    "sourceFrame": 0,
+    "purpose": "完整六秒生活穿着，原画幅无重复",
+    "from": 276
+  },
+  {
+    "id": "rest",
+    "frames": 48,
+    "src": "dynamic/settling.mp4",
+    "title": "",
+    "video": true,
+    "sourceFrame": 48,
+    "purpose": "落脚与起身作为动作落点",
+    "from": 420
+  },
+  {
+    "id": "closing",
+    "frames": 108,
+    "src": "campaign-product.png",
+    "title": "贝强",
+    "purpose": "单一完整双鞋品牌落版，稳定阅读",
+    "from": 468
+  }
+];

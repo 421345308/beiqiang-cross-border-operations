@@ -16,6 +16,10 @@ import re
 import time
 from copy import deepcopy
 from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[3] / "08_工具链/01_业务脚本/商品图片与审计"))
+from factory_assets import legacy_asset
+# Historical asset lookup only; new company image work uses the shared factory entry.
 from urllib.parse import urlparse
 from xml.etree import ElementTree as ET
 
@@ -25,7 +29,7 @@ CONFIG_PATH = Path.home() / ".config/beiqiang/alibaba-openapi.json"
 PRODUCT_ID = 10000047127570
 MODEL = "BQ041 / 202"
 ASSET_ROOT = Path(r"E:\贝强大文件\01_产品资产\02_可发布素材\00_最终上传\BQ041_202")
-COMPANY_ROOT = Path(r"E:\贝强大文件\01_产品资产\02_可发布素材\00_最终上传\00_共用中性公司图_v2_2026-09-04")
+COMPANY_ROOT = legacy_asset('01_产品资产/02_可发布素材/00_最终上传/00_共用中性公司图_v2_2026-09-04')
 AUDIT_ROOT = ROOT / "02_Alibaba运营/01_店铺与全店诊断/全量商品审查_2026-09-04"
 CACHE_PATH = AUDIT_ROOT / "bq041_image_bank_cache.json"
 RECEIPT_PATH = AUDIT_ROOT / "bq041_repair_receipt.json"
@@ -278,6 +282,8 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--apply", action="store_true", help="perform API uploads/update; omitted means local dry-run")
     args = parser.parse_args()
+    if args.apply:
+        raise RuntimeError("Historic company set is no longer a publishing source; use current product operations and shared factory entry.")
     assets = validate_assets()
     cache = json.loads(CACHE_PATH.read_text(encoding="utf-8")) if CACHE_PATH.is_file() else {}
     seed_shared_company_cache(cache)

@@ -20,7 +20,7 @@ Use this skill to convert weekly operation data into next actions. The review sh
 
 Before diagnosing, state coverage dates, report timezone, currency, product/family/link ID, channel, metric unit, deduplication and attribution. Missing is not zero. Do not add organic, recommendation, ads, RFQ and visitor marketing rows or different product/search-term dimensions without a common definition. The read-only [funnel aggregator](../../../08_工具链/01_业务脚本/funnel_metrics.py) rejects incompatible slices and calculates weighted CTR/CPC; valid-inquiry rates require buyer-level deduplication and click attribution.
 
-Write each finding as observation → competing explanations → best-supported cause → discriminating check → smallest correction → expected direction and failure signal. Zero exposure requires checking time, publish/review state, visibility, category, duplicate/compliance risk, matching demand and plan state before changing a title. Low CTR needs intent/placement/device/region and visible offer review; low inquiry needs traffic quality, product proof, terms and contact path. Small samples and zero inquiries support risk control, not a claim that the page lost a test. Record what is missing separately from evidence against a hypothesis.
+Write each finding as observation → competing explanations → best-supported cause → discriminating check → smallest correction → expected direction and failure signal. Zero exposure requires checking time, publish/review state, visibility, category, duplicate/compliance risk, matching demand and plan state before changing a title. Low CTR needs intent/placement/device/region and visible offer review; low inquiry needs traffic quality, product proof, terms and contact path. Small samples and zero inquiries do not establish a failed page. Metrics prioritize weaknesses and review results; improve evident title/image problems from excellent comparable B2B research and independent SKU/supply judgment, without waiting for A/B samples or significance. Record what is missing separately from evidence against a hypothesis.
 
 Diagnose in this order:
 
@@ -36,7 +36,7 @@ Diagnose in this order:
 
 ## 贝强业务规则
 
-- Diagnose data through Beiqiang's B2B buyer funnel: exposure, click, inquiry, quote, sample, bulk-order discussion.
+- Diagnose data through Beiqiang's B2B buyer funnel: exposure, click, valid procurement opportunity, quote, sample, bulk-order discussion. Deduplicate buyers and record product/quantity/market fit and actual next-stage progress; a platform score or inquiry count alone is not commercial success.
 - Prioritize verified product positioning, Alibaba product quality, inquiry conversion and buyer trust. Wide-toe positioning applies only to evidenced SKUs.
 - Tie every recommendation to a measurable next action.
 

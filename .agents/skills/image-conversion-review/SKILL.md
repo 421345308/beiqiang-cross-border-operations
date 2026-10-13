@@ -9,7 +9,7 @@ description: Review Beiqiang Alibaba.com main images and first gallery images fo
 
 - Read [workspace facts](../../../AGENTS.md), the exact SKU/source evidence, and the applicable image/claim gates in the [lifecycle SOP](../../../02_Alibaba运营/00_运营SOP/国际站商品全生命周期SOP.md).
 
-Use this skill to judge whether Alibaba product images can win clicks and help buyers understand the product quickly.
+Use this skill to improve product recognition and procurement understanding through excellent comparable B2B visuals, exact SKU/supply evidence and independent judgment. Metrics prioritize and review improvements, not delay them for A/B samples.
 
 ## 适用场景
 
@@ -117,3 +117,9 @@ AI候选进入正式图片银行前，至少完成：真实参考图可追溯、
 - Do not repeat near-identical images just to fill 6 slots.
 - Do not make a lifestyle image where the shoe is unclear or different from the real product.
 - Do not approve a factory visual that cannot state what credible buyer concern it resolves. AI-expanded architecture remains `FACT_CHECK_REQUIRED` until the owner confirms it matches the real site.
+
+## 完整任务记录入口
+
+完整验收沿用现有采集模板 D/E，逐张核对买家问题、原图/裁切有效像素和正式URL。放大不补细节证据；无价格标签、数量价格卡或纯文字占位。按SOP §4适用图数的产品详情与公司图各有信息角色；关键词持久化、真实评分、公开逐色点击与授权旧品收尾分别记录，不用一项PASS替代全链完成。入口：[现有单款采集模板](../../../02_Alibaba运营/05_扩品工程/工厂店外新款数据采集模板.md)；详细规则只读生命周期 SOP，窄范围请求不扩展为整套工作。
+
+品牌与拟售路线按生命周期 SOP §3；完整图数默认及2627BSK例外按 §4，不在本 Skill复制规则全文。

@@ -1,0 +1,47 @@
+{
+  "fixture_scope": "9968 selected historical mapping only; not current OFF authority",
+  "source_path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\HR系列真实货源改造_2026-09-21\\HR普通品一对一待替换映射_2026-10-02.json",
+  "source_sha256": "d325e493949bef694a4f04e06b51164037bd0e386bde9edeb1ba2022218900f6",
+  "observed_at": "2026-10-02T17:17:02.804964+00:00",
+  "rows": [
+    {
+      "candidate": "9968",
+      "old_listing": "HR052-A",
+      "old_product_id": "1601943742273",
+      "new_product_id": "1601969788941",
+      "owner": "task7/9968原owner",
+      "source_url": "https://qdnx.sooxie.com/detail/2532759",
+      "match_type": "STRATEGIC_RETIRE_AND_REAL_SOURCE_REPLACEMENT_NOT_IDENTICAL_SHOE",
+      "selection_reason": "旧女鞋通用占位HOLD_SOURCE，9968提供明确女式单搭带拼色平底实款；保留HR040询盘价值与HR021已有货源，不抢最近款。",
+      "old_title_snapshot": "Women's Shoes Model HR052-A",
+      "growth_tier": "普通品",
+      "growth_observed_at_utc": "2026-10-02 00:48:31",
+      "classification_source": "02_Alibaba运营/05_扩品工程/执行记录/266_API完整新建_2026-10-02/HR_201_growth_verified_register_2026-10-02.csv",
+      "classification_library_file_id": "libfile_aefe2a71cedc8191aeddbdb20d21283c",
+      "candidate_source": "02_Alibaba运营/05_扩品工程/执行记录/266_API完整新建_2026-10-02/HR_58_普通候选_2026-10-02.csv",
+      "protected": false,
+      "retained_siblings": [
+        {
+          "listing_id": "HR052-B",
+          "product_id": "1601943664760",
+          "growth_tier": "潜力优品",
+          "disposition": "KEEP_UNCHANGED"
+        },
+        {
+          "listing_id": "HR052-C",
+          "product_id": "1601943770128",
+          "growth_tier": "未核验",
+          "disposition": "KEEP_UNCHANGED"
+        }
+      ],
+      "authorization_scope": "父任务2026-10-02明确授权建立一对一待替换目标；本任务不下架",
+      "reservation_status": "PREOFF_CHECK_PASSED_AWAITING_PARENT_AUTHORIZED_OFF",
+      "new_acceptance": "CONFIRMED_PARENT_QUALITY5_PUBLIC_PASS; keyword专项独立",
+      "old_action": "NOT_SENT",
+      "whole_family_complete": false,
+      "next_action": "交父任务off owner逐确切ID可恢复off，单次回执+同ID下架回读，不互相等待",
+      "preoff_readonly_evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR首三款普通旧品收尾_2026-10-02/preoff_readonly_summary.json",
+      "preoff_finding": "EXACT_OLD_APPROVED_Y_TODAY_ORDINARY_NO_SCOPED_OWNER_CONFLICT_NO_MATCH_IN11_VISIBLE_ORDERS"
+    }
+  ]
+}

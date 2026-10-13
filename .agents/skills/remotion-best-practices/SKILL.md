@@ -15,6 +15,8 @@ Use this single project entry for Remotion work. Its mode documents are referenc
 
 Preserve user edits and inspect the target project's dependencies before using version-specific APIs. This bundle came from Remotion 4.0.522; the installed plugin inspected on 2026-09-11 contains 4.0.506 guidance. Local package versions and current official documentation decide compatibility.
 
+For visual product/brand films, also select the workspace [brand-film direction reference](../../../07_知识库与Skills/04_AI视频知识体系/ai-video-learning-system/references/brand-film-direction.md). Define the viewer's takeaway and review style frames and shot value before animation/rendering. Technical export success is not creative acceptance; do not use this reference for unrelated explanatory or software videos by default.
+
 | Task | Read |
 | --- | --- |
 | New video or composition, including an existing project | [Create](remotion-create/REFERENCE.md) |

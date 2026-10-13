@@ -38,7 +38,7 @@ Recommended after launch:
 - Start with small daily budgets and short cycles, then optimize from data.
 - Identify whether the target is standard keyword advertising, full-site smart promotion or another mode. Check actual controls, report grain, attribution, currency/timezone and any active contract or lock before proposing a keyword, time or geography change. The 2026-09-15 historical smart-plan case is not a current control map.
 - Distinguish bid keywords from buyer search terms. Candidate terms need source/date/market, exact SKU relevance, buyer intent and validation status. Long-tail cost or conversion advantage is a hypothesis, not a guarantee; there is no universal Top5/50% split or fixed click threshold.
-- Draft budget, bid, pause and scale changes with a risk cap and review condition; do not execute them without task authorization. Correct confirmed wrong category or misleading claims immediately; compare reasonable alternatives only when a controlled test can separate them.
+- Draft budget, bid, pause and scale changes with a risk cap and review condition; do not execute them without task authorization. Correct confirmed wrong category or misleading claims within task authorization; optimize titles/images directly from excellent comparable B2B evidence and independent judgment, without requiring a controlled test. Advertising changes remain separately authorized.
 
 ## 输出格式
 

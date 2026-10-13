@@ -78,3 +78,9 @@ When assets are insufficient, specify the exact view to photograph instead of in
 - Do not create dense Taobao/1688-style promotional layouts.
 - Do not put uncertain facts such as unconfirmed material or weight on buyer-facing images.
 - Do not present AI-outpainted buildings, equipment, production scale or factory processes as factual proof until the owner confirms the reconstruction. Mark such candidates `FACT_CHECK_REQUIRED`.
+
+## 完整任务记录入口
+
+完整图组沿用现有采集模板 D，逐张写买家问题、原图路径、原生与裁切有效像素、文字边界和下一步。放大画布不增加实物细节证据。全组禁价格标签、数量价格卡、纯文字占位凑数；按SOP §4适用图数的产品详情与公司图分别回答产品问题和供应商信任问题，不强迫固定六角度。入口：[现有单款采集模板](../../../02_Alibaba运营/05_扩品工程/工厂店外新款数据采集模板.md)；详细规则只读生命周期 SOP，窄范围请求不扩展为整套工作。
+
+品牌与拟售路线按生命周期 SOP §3；完整图数默认及2627BSK例外按 §4，不在本 Skill复制规则全文。

@@ -1,2 +1,6 @@
 # Store text consistently in Git; preserve binary assets without conversion.
 * text=auto
+# Imported source evidence keeps its original bytes for SHA-256 verification.
+/02_Alibaba运营/05_扩品工程/数据/来源证据/* -text -diff
+# Offline fixtures include hash-bound snapshots; keep their recorded bytes.
+/08_工具链/01_业务脚本/国际站扩品/schema_contract_fixtures/** -text
