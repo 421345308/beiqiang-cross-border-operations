@@ -1,0 +1,17 @@
+{
+  "authorization": "Owner 2026-10-13 authorized missing-source HR whole-shoe replacement, priority HR030 and HR042; existing IDs retained",
+  "targets": {
+    "HR030": {
+      "A": "1601943574507",
+      "B": "1601943545775"
+    },
+    "HR042": {
+      "A": "1601943703336",
+      "B": "1601943747024",
+      "C": "1601943639708"
+    }
+  },
+  "additional_hr_scope": "Other missing-source families require per-family current facts and formal ID review before extending exact targets",
+  "public_qa": "Separate from formal API fields and score",
+  "source_data": "Each family current facts/page plan, not historical script constants"
+}
