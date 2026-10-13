@@ -67,18 +67,39 @@ def sync():
   for name in ['素材清单.json','事实与页面计划.json','当前状态.json']:
    ref=rel(BASE/family/name)
    if ref not in p['evidence']:p['evidence'].append(ref)
+  if all(s=='FORMAL_FIELDS_SCORE_PASS'for s in states):
+   for key in ['group_quality_review','title_quality_review']:
+    if key in plan:plan[key].update(state='FORMAL_FIELDS_AND_ACTUAL_SCORE_PASS',observed_at=op.b.now())
+  if any((BASE/'商品'/pid/'company_quality_once.json').exists()for pid in targets.values()):
+   plan['company_bundle_review']={'state':'FORMAL_PASS'if all(s=='FORMAL_FIELDS_SCORE_PASS'for s in states)else'PENDING_FORMAL','evidence':[rel(BASE/'商品'/pid/'verification.json')for pid in targets.values()],'scope':'Approved V8 exact gallery roles, company intro and general eight FAQs verified separately from product highlights.'}
   op.b.save(BASE/family/'事实与页面计划.json',{**plan,'source_id':sid,'source_artno':source['artno'],'source_assets_root':rel(raw),'source_evidence':src['evidence'],'procurement_capability':'CURRENT_REAL_SHOE_AND_PROCUREMENT_ENTRY_VERIFIED_NOT_ORDER_STOCK','materials_evidence':plan.get('materials_evidence',[rel(raw/'09.jpg'),rel(raw/'13.jpg')]if family=='HR030'else[source['url']]),'seasons':plan['seasons'],'feature':plan.get('feature','Fashion Trend'),'target_ids':targets,'page_state':'FORMAL_FIELDS_SCORE_PASS'if all(s=='FORMAL_FIELDS_SCORE_PASS'for s in states)else'LOCAL_DRAFT'if all(s in ['LOCAL_DRAFT','LOCAL_PREPARATION']for s in states)else'REVIEW_PENDING','company_faq_source':'02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/通用FAQ与公司简介.json','do_not_claim':list(dict.fromkeys([*plan.get('do_not_claim',[]),'physical stock','tested slip resistance','medical comfort','unverified midsole material']))})
   op.b.save(BASE/family/'当前状态.json',{'at':op.b.now(),'family':family,'links':[r for r in summary if r['family']==family],'old_concept_images':'NOT_INCLUDED_IN_SUBMITTED_PAYLOAD','public_qa':'PENDING_NORMAL_BUYER_PAGE','source_price':source['price_cny'],'source_currency':'CNY'})
- ws={'name':'HR缺货源实款替换','status':'HR030/HR042优先；原ID实款换图文按逐ID证据登记正式和公开状态。','next_action':'负责人2026-10-13要求先完成HR缺货源商品全量实源替换，再继续路崎宽头鞋上架；已具备真实来源的页面先核实际绑定，不重复换款。','evidence':[rel(BASE/'README.md'),rel(BASE/'当前进度.json')]}
+ passed=sum(r['state']=='FORMAL_FIELDS_SCORE_PASS'for r in summary)
+ ws={'name':'HR缺货源实款替换','status':f'本轮{len(summary)}条原ID目标，{passed}条完整正式字段与实际5.00通过；其余按逐ID真实状态登记。','next_action':'先完成HR缺货源商品全量实源替换，再继续路崎宽头鞋上架；审核中只回读，不重复提交；路崎资料准备可独立推进。已有实源页面保留实鞋，未返回历史ID不新建。','evidence':[rel(BASE/'README.md'),rel(BASE/'当前进度.json')]}
  old=next((w for w in d['workstreams']if w['name']==ws['name']),None)
  if old:old.update(ws)
  else:d['workstreams'].append(ws)
- d['updated_on']=datetime.now(timezone(timedelta(hours=8))).date().isoformat();op.b.save(REG,d)
- remaining=[p['id']for p in d['products']if p['id'].startswith('HR')and p['source_state']in ['MISSING','CANDIDATE','CONFLICT']and p['id']not in op.TARGETS]
+ d['updated_on']=datetime.now(timezone(timedelta(hours=8))).date().isoformat()
+ unresolved=[p['id']for p in d['products']if p['id'].startswith('HR')and p['source_state']in ['MISSING','CANDIDATE','CONFLICT']and p['id']not in op.TARGETS]
+ catalog=op.b.load(ROOT/'99_临时区/HR实源替换/全量目录复核/catalog.json')
+ assert catalog['complete']and len(catalog['products'])==catalog['unique_ids']==catalog['total_item']
+ live_ids={str(p['id'])for p in catalog['products']};remaining=[];unreturned=[]
+ for family in unresolved:
+  links=[l for l in d['listings']if l['product_id']==family]
+  if any(l['id']in live_ids for l in links):remaining.append(family);continue
+  proofs=[BASE/'商品'/l['id']/'historical_presence_get.json'for l in links]
+  if not all(f.exists()and not op.b.load(f).get('product')for f in proofs):remaining.append(family);continue
+  for l,f in zip(links,proofs):
+   l.update(source_relation='HISTORICAL_NO_CURRENT_WRITABLE_PRODUCT_RETURNED',catalog_presence='NOT_OBSERVED',catalog_evidence=rel(ROOT/'99_临时区/HR实源替换/全量目录复核/catalog.json'))
+   l['observation']={'audit':'当前完整目录未返回；精确product.get未返回商品对象','display':'','at':datetime.fromtimestamp(f.stat().st_mtime,timezone.utc).isoformat(),'scope':'不推断已删除；无可写商品对象，不创建重复替代ID'}
+   if rel(f)not in l['evidence']:l['evidence'].append(rel(f))
+  products[family]['next_action']='当前完整目录及精确product.get未返回可写商品；保留历史身份与缺来源状态，不新建重复ID。只有后续正式返回原ID时再核实源替换。'
+  unreturned.append({'family':family,'ids':[l['id']for l in links],'state':'NO_CURRENT_WRITABLE_PRODUCT_RETURNED','evidence':[rel(f)for f in proofs]})
  progress_file=BASE/'当前进度.json'
  previous=op.b.load(progress_file)if progress_file.exists()else{}
- op.b.save(progress_file,{**previous,'at':op.b.now(),'priority_links':summary,'other_hr_families_needing_per_family_source_binding_review':remaining,'scope':'Registry source states require link-by-link evidence review; candidates are not automatically missing shoes.','hr030_c':'1601943529885 current official product.get returned only request/trace and no product; no new listing created.'})
+ op.b.save(progress_file,{**previous,'at':op.b.now(),'priority_links':summary,'other_hr_families_needing_per_family_source_binding_review':remaining,'historical_unreturned_families':unreturned,'scope':'Current writable targets and unreturned historical IDs are separate; missing history is not claimed repaired or deleted.','hr030_c':'1601943529885 current official product.get returned only request/trace and no product; no new listing created.'})
  errors=workspace.validate(d);assert not errors,errors
+ op.b.save(REG,d)
  generated=workspace.build(d)
  for path,raw in generated.items():workspace.write_generated(ROOT/path,raw)
  # A successful platform readback alone is not double-sync completion.

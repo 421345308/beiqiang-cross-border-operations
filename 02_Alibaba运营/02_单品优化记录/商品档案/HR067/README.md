@@ -2,73 +2,79 @@
 
 此页由唯一台账生成，是本款唯一资料入口；修改事实到下方唯一字段文件或台账，平台正式值到按ID保存的回读原件。原始包只读，候选/历史材料不当当前线上素材。
 
-来源状态：`MISSING`。下一步：补实鞋与有效采购入口；不按存量链接重复搜索。
+来源状态：`ADOPTED`。下一步：当前来源、正式字段及实际评分已核并双改；本轮API验收完成，公开抽检全量后统一进行，继续其余HR。
 
 ## 当前资料与实物证据
 
-- 本地事实/准备字段：尚未指定；不从线上页面证明自产或实物能力。
+- 本地事实/准备字段：[事实与页面计划.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/HR067/%E4%BA%8B%E5%AE%9E%E4%B8%8E%E9%A1%B5%E9%9D%A2%E8%AE%A1%E5%88%92.json)
+- 当前素材目录：[HR067](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR067)
+- 原始包：[HR067_D11](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/01_%E5%8E%9F%E5%A7%8B%E6%95%B0%E6%8D%AE%E5%8C%85/HR067_D11)
 
 ## 采购来源（内部使用）
 
-采购商品直链待补；不补造供应商、价格或供给。
+- 已采用记录：[长兴鞋业 / D11](https://cxxy.sooxie.com/detail/2093012)
+  - 保存的标价：CNY 32.00 / 双；原观察日期：2026-10-14。当前公开来源标价；拿货色码、数量、包装、运税与当日可供条件逐单确认，不代表已采购或固定交期。
+  - 供方店铺入口：[https://cxxy.sooxie.com](https://cxxy.sooxie.com)
+  - 来源原件：[source.json](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/01_%E5%8E%9F%E5%A7%8B%E6%95%B0%E6%8D%AE%E5%8C%85/HR067_D11/source.json)
+  - 来源原件：[素材清单.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/HR067/%E7%B4%A0%E6%9D%90%E6%B8%85%E5%8D%95.json)
 
 ## 国际站链接与本地正式字段
 
 ### HR067-C · 1601943658940
 
-- 平台链接：[1601943658940](https://www.alibaba.com/product-detail/Men-s-Shoes-Model-HR067-C_1601943658940.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943658940/formal_get.json)；UTC 2026-10-12T22:44:23.088721+00:00。
-- 当前正式标题：Men's Shoes Model HR067-C
+- 平台链接：[1601943658940](https://www.alibaba.com/product-detail/Camouflage-Panel-Textile-Casual-Shoes-with_1601943658940.html)
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943658940/formal_get.json)；UTC 2026-10-13T22:13:52.908115+00:00。
+- 当前正式标题：Camouflage Panel Textile Casual Shoes with Apron Toe Stitching and Rubber Outsole for Footwear Assortments
 - 审核/展示：approved / Y；平台类目ID：201334413。
-- 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, owner_member, owner_member_display_name, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
+- 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
 - SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。
-- 店内分组：Slip-On Casual Walking Shoes · 972130291；[平台分组回执](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%BA%97%E5%86%85%E5%88%86%E7%BB%84/972130291.json)。
+- 店内分组：Lace-Up Casual Shoes · 973003809；[平台分组回执](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%BA%97%E5%86%85%E5%88%86%E7%BB%84/973003809.json)。
 - 本地平台素材：[唯一素材索引](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90%E6%B8%85%E5%8D%95.json)；图片按内容哈希保存一份，图库/详情/SKU通过索引引用。
-  - M1：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/1bcfa3b46abd5900a2205cbaffa641edb9633ad1f3864e0411155d389c897a2f.png) · 1000×1000
-  - M2：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/acf0b5cef5f6366ee9cff521cba5619752d6beb14daf703d421a37ff520c3158.png) · 1000×1000
-  - M3：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/ababd2acca9d60da9b7f9acf0985cc73f31ff018b172507fc0a91a9a4406be12.png) · 1000×1000
-  - M4：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/8fd9a5b65438a0cc547f435c53b4056a9e6e4b30634c67a1be80af845e46bb97.png) · 1000×1000
-  - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/115e752062c7639f899497d8f33cc124ca0f35f38b12481e587d6fd43237a19c.png) · 1000×1000
-  - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/3415dd10825989a731cfc4a9566a1fde3828b8418bb2b3067beabf171918018a.png) · 1000×1000
-- 本地同步状态：`COMPANY_BUNDLE_FORMAL_PASS`。
+  - M1：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR067/M1.jpg) · 1000×1000
+  - M2：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR067/M2.jpg) · 1000×1000
+  - M3：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR067/M3.jpg) · 1000×1000
+  - M4：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR067/M4.jpg) · 1000×1000
+  - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR067/M5.jpg) · 1000×1000
+  - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/%E5%85%B1%E4%BA%AB%E7%B4%A0%E6%9D%90/%E8%B4%9D%E5%BC%BA%E5%85%AC%E5%8F%B8%E7%AE%80%E4%BB%8B%E5%9B%BE%E5%BA%93.jpg) · 1721×914
+- 本地同步状态：`HR_REAL_SOURCE_FORMAL_PASS`。
 - 本轮优化：``；
 
 ### HR067-A · 1601943662995
 
-- 平台链接：[1601943662995](https://www.alibaba.com/product-detail/Men-s-Breathable-Light-Weight-Walking_1601943662995.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943662995/formal_get.json)；UTC 2026-10-12T22:50:39.395640+00:00。
-- 当前正式标题：Men's Breathable Light Weight Walking Shoes Slip-On Model HR067-A
+- 平台链接：[1601943662995](https://www.alibaba.com/product-detail/Textile-Lace-Up-Casual-Shoes-with_1601943662995.html)
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943662995/formal_get.json)；UTC 2026-10-13T22:22:47.968817+00:00。
+- 当前正式标题：Textile Lace-Up Casual Shoes with Camouflage Panels and Rubber Sole for Wholesale Footwear Buyers
 - 审核/展示：approved / Y；平台类目ID：201334413。
-- 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, owner_member, owner_member_display_name, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
+- 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
 - SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。
-- 店内分组：Slip-On Casual Walking Shoes · 972130291；[平台分组回执](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%BA%97%E5%86%85%E5%88%86%E7%BB%84/972130291.json)。
+- 店内分组：Lace-Up Casual Shoes · 973003809；[平台分组回执](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%BA%97%E5%86%85%E5%88%86%E7%BB%84/973003809.json)。
 - 本地平台素材：[唯一素材索引](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90%E6%B8%85%E5%8D%95.json)；图片按内容哈希保存一份，图库/详情/SKU通过索引引用。
-  - M1：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/745ac9652ae6f59d6475647cba9a577935f8311044e39652af51c4eea13a537f.png) · 1000×1000
-  - M2：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/acf0b5cef5f6366ee9cff521cba5619752d6beb14daf703d421a37ff520c3158.png) · 1000×1000
-  - M3：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/ababd2acca9d60da9b7f9acf0985cc73f31ff018b172507fc0a91a9a4406be12.png) · 1000×1000
-  - M4：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/8fd9a5b65438a0cc547f435c53b4056a9e6e4b30634c67a1be80af845e46bb97.png) · 1000×1000
-  - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/115e752062c7639f899497d8f33cc124ca0f35f38b12481e587d6fd43237a19c.png) · 1000×1000
-  - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/3415dd10825989a731cfc4a9566a1fde3828b8418bb2b3067beabf171918018a.png) · 1000×1000
-- 本地同步状态：`COMPANY_BUNDLE_FORMAL_PASS`。
+  - M1：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR067/M1.jpg) · 1000×1000
+  - M2：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR067/M2.jpg) · 1000×1000
+  - M3：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR067/M3.jpg) · 1000×1000
+  - M4：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR067/M4.jpg) · 1000×1000
+  - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR067/M5.jpg) · 1000×1000
+  - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/%E5%85%B1%E4%BA%AB%E7%B4%A0%E6%9D%90/%E8%B4%9D%E5%BC%BA%E5%85%AC%E5%8F%B8%E7%AE%80%E4%BB%8B%E5%9B%BE%E5%BA%93.jpg) · 1721×914
+- 本地同步状态：`HR_REAL_SOURCE_FORMAL_PASS`。
 - 本轮优化：``；
 
 ### HR067-B · 1601943783263
 
-- 平台链接：[1601943783263](https://www.alibaba.com/product-detail/Men-s-Shoes-Model-HR067-B_1601943783263.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943783263/formal_get.json)；UTC 2026-10-12T23:06:17.534251+00:00。
-- 当前正式标题：Men's Shoes Model HR067-B
+- 平台链接：[1601943783263](https://www.alibaba.com/product-detail/Short-Lace-Casual-Sneakers-with-Woven_1601943783263.html)
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943783263/formal_get.json)；UTC 2026-10-13T22:13:52.866669+00:00。
+- 当前正式标题：Short Lace Casual Sneakers with Woven Quarter Panels and Speckled Sole Edge for Wholesale Shoe Collections
 - 审核/展示：approved / Y；平台类目ID：201334413。
-- 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, owner_member, owner_member_display_name, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
+- 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
 - SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。
-- 店内分组：Slip-On Casual Walking Shoes · 972130291；[平台分组回执](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%BA%97%E5%86%85%E5%88%86%E7%BB%84/972130291.json)。
+- 店内分组：Lace-Up Casual Shoes · 973003809；[平台分组回执](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%BA%97%E5%86%85%E5%88%86%E7%BB%84/973003809.json)。
 - 本地平台素材：[唯一素材索引](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90%E6%B8%85%E5%8D%95.json)；图片按内容哈希保存一份，图库/详情/SKU通过索引引用。
-  - M1：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/2aeb0d99e4aace47a8740be77b1f73751e0797b0adf7b8c68ee92c32f50cda92.png) · 1000×1000
-  - M2：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/acf0b5cef5f6366ee9cff521cba5619752d6beb14daf703d421a37ff520c3158.png) · 1000×1000
-  - M3：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/ababd2acca9d60da9b7f9acf0985cc73f31ff018b172507fc0a91a9a4406be12.png) · 1000×1000
-  - M4：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/8fd9a5b65438a0cc547f435c53b4056a9e6e4b30634c67a1be80af845e46bb97.png) · 1000×1000
-  - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/115e752062c7639f899497d8f33cc124ca0f35f38b12481e587d6fd43237a19c.png) · 1000×1000
-  - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/3415dd10825989a731cfc4a9566a1fde3828b8418bb2b3067beabf171918018a.png) · 1000×1000
-- 本地同步状态：`COMPANY_BUNDLE_FORMAL_PASS`。
+  - M1：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR067/M1.jpg) · 1000×1000
+  - M2：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR067/M2.jpg) · 1000×1000
+  - M3：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR067/M3.jpg) · 1000×1000
+  - M4：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR067/M4.jpg) · 1000×1000
+  - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR067/M5.jpg) · 1000×1000
+  - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/%E5%85%B1%E4%BA%AB%E7%B4%A0%E6%9D%90/%E8%B4%9D%E5%BC%BA%E5%85%AC%E5%8F%B8%E7%AE%80%E4%BB%8B%E5%9B%BE%E5%BA%93.jpg) · 1721×914
+- 本地同步状态：`HR_REAL_SOURCE_FORMAL_PASS`。
 - 本轮优化：``；
 
 ## 其他原始/正式证据
@@ -77,33 +83,26 @@
 - [prepared.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943658940/prepared.json)
 - [update_once.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943658940/update_once.json)
 - [update_receipt.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943658940/update_receipt.json)
-- [after_get.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943658940/after_get.json)
-- [after_render.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943658940/after_render.json)
-- [verification.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943658940/verification.json)
-- [public_verification.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943658940/public_verification.json)
 - [manifest.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943662995/manifest.json)
 - [prepared.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943662995/prepared.json)
 - [update_once.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943662995/update_once.json)
 - [update_receipt.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943662995/update_receipt.json)
-- [after_get.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943662995/after_get.json)
-- [after_render.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943662995/after_render.json)
-- [verification.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943662995/verification.json)
-- [public_verification.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943662995/public_verification.json)
 - [manifest.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943783263/manifest.json)
 - [prepared.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943783263/prepared.json)
 - [update_once.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943783263/update_once.json)
 - [update_receipt.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943783263/update_receipt.json)
+- [after_get.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943658940/after_get.json)
+- [after_render.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943658940/after_render.json)
+- [verification.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943658940/verification.json)
+- [after_get.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943662995/after_get.json)
+- [after_render.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943662995/after_render.json)
+- [verification.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943662995/verification.json)
 - [after_get.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943783263/after_get.json)
 - [after_render.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943783263/after_render.json)
 - [verification.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943783263/verification.json)
+- [public_verification.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943658940/public_verification.json)
+- [public_verification.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943662995/public_verification.json)
 - [public_verification.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943783263/public_verification.json)
-- [before_get.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943662995/V8/before_get.json)
-- [before_render.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943662995/V8/before_render.json)
-- [immediate_prewrite_get.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943662995/V8/immediate_prewrite_get.json)
-- [manifest.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943662995/V8/manifest.json)
-- [prepared.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943662995/V8/prepared.json)
-- [update_once.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943662995/V8/update_once.json)
-- [update_receipt.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943662995/V8/update_receipt.json)
 - [after_get.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943658940/V8/after_get.json)
 - [after_render.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943658940/V8/after_render.json)
 - [before_get.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943658940/V8/before_get.json)
@@ -114,6 +113,16 @@
 - [update_once.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943658940/V8/update_once.json)
 - [update_receipt.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943658940/V8/update_receipt.json)
 - [verification.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943658940/V8/verification.json)
+- [before_get.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943662995/V8/before_get.json)
+- [before_render.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943662995/V8/before_render.json)
+- [immediate_prewrite_get.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943662995/V8/immediate_prewrite_get.json)
+- [manifest.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943662995/V8/manifest.json)
+- [prepared.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943662995/V8/prepared.json)
+- [update_once.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943662995/V8/update_once.json)
+- [update_receipt.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943662995/V8/update_receipt.json)
+- [after_get.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943662995/V8/after_get.json)
+- [after_render.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943662995/V8/after_render.json)
+- [verification.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943662995/V8/verification.json)
 - [after_get.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943783263/V8/after_get.json)
 - [after_render.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943783263/V8/after_render.json)
 - [before_get.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943783263/V8/before_get.json)
@@ -124,8 +133,10 @@
 - [update_once.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943783263/V8/update_once.json)
 - [update_receipt.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943783263/V8/update_receipt.json)
 - [verification.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943783263/V8/verification.json)
-- [after_get.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943662995/V8/after_get.json)
-- [after_render.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943662995/V8/after_render.json)
-- [verification.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943662995/V8/verification.json)
+- [public_verification.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943658940/V8/public_verification.json)
+- [public_verification.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943662995/V8/public_verification.json)
+- [public_verification.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943783263/V8/public_verification.json)
+- [素材清单.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/HR067/%E7%B4%A0%E6%9D%90%E6%B8%85%E5%8D%95.json)
+- [当前状态.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/HR067/%E5%BD%93%E5%89%8D%E7%8A%B6%E6%80%81.json)
 
 原件、正式回执与当前资料通过本页关联，不再复制成第二套商品库。

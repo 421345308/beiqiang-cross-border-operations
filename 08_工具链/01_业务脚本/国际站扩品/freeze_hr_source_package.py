@@ -44,7 +44,7 @@ def main():
     proof={'family':args.family,'source':source,'raw_package':plan['source_assets_root'],
            'materials_evidence':plan['materials_evidence'],
            'identity_review':'All current product-photo sheets reviewed; specific original shoe geometry/colour/closure retained, sidebar recommendations excluded',
-           'dedup_review':plan['dedup'],'SKU_scope':'Confirmed numeric EU choices only; no inferred US/UK/foot-length conversion',
+           'dedup_review':plan['dedup'],'SKU_scope':'Confirmed source EU numbers or paired EU size units retained; no inferred US/UK/foot-length conversion',
            'IP_route':'No recognised global shoe mark on selected frames; actual shoe markings retained; no unbranded or own-factory-production claim'}
     (folder/'来源事实.json').write_text(json.dumps(proof,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
     print(args.family,'REVIEWED_RAW_SOURCE_FROZEN',len(copied))

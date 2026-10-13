@@ -1,0 +1,502 @@
+{
+  "family": "HR043",
+  "state": "VISUAL_PASS",
+  "items": {
+    "M1": {
+      "path": "01_产品资产/02_可发布素材/HR043/M1.jpg",
+      "sha256": "45bd3c52ae1e357f251a8dd7ff33d45e243d2d54049dd143e1f1d530d6364398",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M2": {
+      "path": "01_产品资产/02_可发布素材/HR043/M2.jpg",
+      "sha256": "b0db6b06594201e1f7650f6cbc39bb9416fec7dd5e26a5219066d6b585cda2c3",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M3": {
+      "path": "01_产品资产/02_可发布素材/HR043/M3.jpg",
+      "sha256": "3a7662c43402425770d1885762c41e012c4bee5882dd842b19db797840b245f2",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M4": {
+      "path": "01_产品资产/02_可发布素材/HR043/M4.jpg",
+      "sha256": "a45ce448dca1dc6c2a59b43e2b30718678a0115cc4d7af476216eb85b0d5a744",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M5": {
+      "path": "01_产品资产/02_可发布素材/HR043/M5.jpg",
+      "sha256": "c5e76192eec6c4d35e9ce8ba9e1d17b498bc8ca5c9202747d9c3059910974786",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "D1": {
+      "path": "01_产品资产/02_可发布素材/HR043/D1.jpg",
+      "sha256": "7bb91f4923f8e3731a9a7f153abcaed8a1213c6b3d025036c93da79c0c589513",
+      "dimensions": [
+        1000,
+        1250
+      ]
+    },
+    "D2": {
+      "path": "01_产品资产/02_可发布素材/HR043/D2.jpg",
+      "sha256": "9f05d2beb4edfbd38e7d770d40cf0220786d73bd102a44bc1310ae629d5e9be7",
+      "dimensions": [
+        1000,
+        1250
+      ]
+    },
+    "D3": {
+      "path": "01_产品资产/02_可发布素材/HR043/D3.jpg",
+      "sha256": "f1350733f6509305c54e353f884e659b80b9687b2ecb5f2620b0ea36990bf6dc",
+      "dimensions": [
+        1000,
+        1250
+      ]
+    },
+    "D4": {
+      "path": "01_产品资产/02_可发布素材/HR043/D4.jpg",
+      "sha256": "7907c35464d3d79b8890e9306494d2cd1da735c8956d947f3190dccef054f52a",
+      "dimensions": [
+        1000,
+        1250
+      ]
+    },
+    "SKU_BLACK": {
+      "path": "01_产品资产/02_可发布素材/HR043/SKU_BLACK.jpg",
+      "sha256": "17190446ba2c99d0ab05cd0f5e92e842e22d83e1c7b2f4c0a2a516b22436d203",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "SKU_DARK_GREY": {
+      "path": "01_产品资产/02_可发布素材/HR043/SKU_DARK_GREY.jpg",
+      "sha256": "1a5bbfd429ba2ca9581414b852cfbe718b9949927e70559249fb1a08e17e1838",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "SKU_NAVY": {
+      "path": "01_产品资产/02_可发布素材/HR043/SKU_NAVY.jpg",
+      "sha256": "a731e309e445b647f1c5020d04b6b293ad2709e038539ff9bf8a283194f5914c",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M6": {
+      "path": "01_产品资产/02_可发布素材/共享素材/贝强公司简介图库.jpg",
+      "sha256": "5164b4d0ac008fb79a20d60419d21713b4f49b9ecea0a845d6c7de104030f51e",
+      "dimensions": [
+        1721,
+        914
+      ]
+    }
+  },
+  "image_roles": {
+    "M1": {
+      "buyer_question": "What actual wide-toe shoe is offered?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR043_556\\01.jpg",
+          "crop": null,
+          "native_effective_pixels": [
+            800,
+            800
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": null
+    },
+    "M2": {
+      "buyer_question": "What forefoot shape is supplied?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR043_556\\09.jpg",
+          "crop": [
+            0,
+            285,
+            790,
+            995
+          ],
+          "native_effective_pixels": [
+            790,
+            710
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": "Widened knit forefoot"
+    },
+    "M3": {
+      "buyer_question": "What outsole pattern is supplied?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR043_556\\10.jpg",
+          "crop": [
+            0,
+            1070,
+            790,
+            1600
+          ],
+          "native_effective_pixels": [
+            790,
+            530
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": "EVA underside sections"
+    },
+    "M4": {
+      "buyer_question": "Which actual colours and EU choices are supplied?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR043_556\\08.jpg",
+          "crop": [
+            85,
+            510,
+            685,
+            825
+          ],
+          "native_effective_pixels": [
+            600,
+            315
+          ],
+          "uniform_resize": true
+        },
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR043_556\\08.jpg",
+          "crop": [
+            85,
+            925,
+            685,
+            1240
+          ],
+          "native_effective_pixels": [
+            600,
+            315
+          ],
+          "uniform_resize": true
+        },
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR043_556\\08.jpg",
+          "crop": [
+            85,
+            1330,
+            685,
+            1655
+          ],
+          "native_effective_pixels": [
+            600,
+            325
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [
+        {
+          "value": "Black",
+          "xy": [
+            45,
+            428
+          ],
+          "size": 23
+        },
+        {
+          "value": "Dark Grey",
+          "xy": [
+            45,
+            663
+          ],
+          "size": 23
+        },
+        {
+          "value": "Navy",
+          "xy": [
+            45,
+            898
+          ],
+          "size": 23
+        },
+        {
+          "value": "EU 39-46",
+          "xy": [
+            45,
+            950
+          ],
+          "size": 23
+        }
+      ],
+      "title": "3 colour options"
+    },
+    "M5": {
+      "buyer_question": "What does the entry look like?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR043_556\\10.jpg",
+          "crop": [
+            0,
+            160,
+            790,
+            745
+          ],
+          "native_effective_pixels": [
+            790,
+            585
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": "Notched collar & rear loop"
+    },
+    "D1": {
+      "buyer_question": "How does Black look in wear?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR043_556\\12.jpg",
+          "crop": [
+            0,
+            0,
+            790,
+            975
+          ],
+          "native_effective_pixels": [
+            790,
+            975
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": "Black side & rear profile"
+    },
+    "D2": {
+      "buyer_question": "How does Navy look in wear?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR043_556\\17.jpg",
+          "crop": null,
+          "native_effective_pixels": [
+            790,
+            968
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": "Navy everyday profile"
+    },
+    "D3": {
+      "buyer_question": "What is the Dark Grey profile?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR043_556\\23.jpg",
+          "crop": [
+            0,
+            0,
+            790,
+            970
+          ],
+          "native_effective_pixels": [
+            790,
+            970
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": "Dark Grey knit & sole edge"
+    },
+    "D4": {
+      "buyer_question": "Which actual colours and EU choices are supplied?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR043_556\\08.jpg",
+          "crop": [
+            85,
+            510,
+            685,
+            825
+          ],
+          "native_effective_pixels": [
+            600,
+            315
+          ],
+          "uniform_resize": true
+        },
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR043_556\\08.jpg",
+          "crop": [
+            85,
+            925,
+            685,
+            1240
+          ],
+          "native_effective_pixels": [
+            600,
+            315
+          ],
+          "uniform_resize": true
+        },
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR043_556\\08.jpg",
+          "crop": [
+            85,
+            1330,
+            685,
+            1655
+          ],
+          "native_effective_pixels": [
+            600,
+            325
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [
+        {
+          "value": "Black",
+          "xy": [
+            45,
+            473
+          ],
+          "size": 23
+        },
+        {
+          "value": "Dark Grey",
+          "xy": [
+            45,
+            763
+          ],
+          "size": 23
+        },
+        {
+          "value": "Navy",
+          "xy": [
+            45,
+            1053
+          ],
+          "size": 23
+        },
+        {
+          "value": "EU 39-46",
+          "xy": [
+            45,
+            1105
+          ],
+          "size": 23
+        },
+        {
+          "value": "2+ pairs $7.86 | 50+ $7.34 | 100+ $6.81",
+          "xy": [
+            45,
+            1155
+          ],
+          "size": 25
+        },
+        {
+          "value": "Price per pair; freight quoted separately.",
+          "xy": [
+            45,
+            1200
+          ],
+          "size": 23
+        }
+      ],
+      "title": "3 colour options"
+    },
+    "SKU_BLACK": {
+      "buyer_question": "Which actual colour is this SKU?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR043_556\\08.jpg",
+          "crop": [
+            85,
+            510,
+            685,
+            825
+          ],
+          "native_effective_pixels": [
+            600,
+            315
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": null
+    },
+    "SKU_DARK_GREY": {
+      "buyer_question": "Which actual colour is this SKU?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR043_556\\08.jpg",
+          "crop": [
+            85,
+            925,
+            685,
+            1240
+          ],
+          "native_effective_pixels": [
+            600,
+            315
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": null
+    },
+    "SKU_NAVY": {
+      "buyer_question": "Which actual colour is this SKU?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR043_556\\08.jpg",
+          "crop": [
+            85,
+            1330,
+            685,
+            1655
+          ],
+          "native_effective_pixels": [
+            600,
+            325
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": null
+    },
+    "M6": {
+      "buyer_question": "Who will coordinate the footwear order?",
+      "shared_approved_company_image": "01_产品资产/02_可发布素材/共享素材/贝强公司简介图库.jpg"
+    }
+  },
+  "review": {
+    "observed_on": "2026-10-14",
+    "scope": "All main/detail/colour roles viewed, native source crop boundaries, colour andclosure/sole geometry checked. Current EU/pairedEU choices,priceperpairtiers andsource-specific materials matched. No oldconcept images or invented outsole.",
+    "specific_review": "043 colourprofiles recropped from full source08 toe-to-heel; 046 chart enlarged actual800-frame colouredshoes; 045 pairedsizes fromexplicit05spec panel, body sizeempty recorded. No generatedshoe/clinical widthgrade/HandFree claim.",
+    "acceptance": "API_ONLY_NO_PUBLIC_BROWSER_CLAIM"
+  }
+}

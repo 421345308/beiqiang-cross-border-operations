@@ -1,0 +1,426 @@
+{
+  "candidate": "cxxy_2093012",
+  "source_artno": "D11",
+  "supplier": "长兴鞋业",
+  "source_url": "https://cxxy.sooxie.com/detail/2093012",
+  "source_price_cny": 32,
+  "source_color_labels": [
+    "黑色",
+    "米色"
+  ],
+  "colors": [
+    "Black",
+    "Beige"
+  ],
+  "sizes": [
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48
+  ],
+  "upper": "Textile",
+  "outsole": "Rubber",
+  "closure": "Lace-up",
+  "target_ids": {
+    "A": "1601943662995",
+    "B": "1601943783263",
+    "C": "1601943658940"
+  },
+  "local_intent_candidates": [
+    "迷彩拼接织物短系带休闲鞋"
+  ],
+  "materials_evidence": [
+    "Source06 describesfabricupper andtitle亚麻板鞋, actualwovenpanelshown; broadTextile only, no unverifiedlinen fibrepercentage. Source07 explicitRubber outsole. Lining/midsolecomposition notspecified:Other.",
+    "BodyD11/CNY32/BlackBeige/EU39-48 and21same-shoe photoschecked. Older04printed39-44footlengthchart excluded; currentbodylarge rangeused. Blackoption is graytextile withdarkcamopattern, Beige withsand/darkcamopattern, originalsource nameskept.",
+    "Actualtwo-eyeletcord row andapronseam confirmed. Nogrip/durability/medical/width/performance claim fromsource07 marketing."
+  ],
+  "dedup": "LongxingD11notShihaiD11:different suppliers/URLs/actualstructures. Also distinctfromHR062LongxingD02: D11 has camouflage forefoot/rear panels, contrasting coarsewovenquarter and speckledwhitesole edge; D02 plainapronpanels/colourrange different. No sameURL or recolour adoption.",
+  "do_not_claim": [
+    "linen fibre percentage",
+    "tested grip",
+    "physical stock",
+    "wide toe box",
+    "tested slip resistance",
+    "medical comfort",
+    "unverified midsole material"
+  ],
+  "custom": [
+    "Shoe Profile",
+    "Textile upper; camouflage toe panels; short laces; rubber outsole"
+  ],
+  "titles": {
+    "A": "Textile Lace-Up Casual Shoes with Camouflage Panels and Rubber Sole for Wholesale Footwear Buyers",
+    "B": "Short Lace Casual Sneakers with Woven Quarter Panels and Speckled Sole Edge for Wholesale Shoe Collections",
+    "C": "Camouflage Panel Textile Casual Shoes with Apron Toe Stitching and Rubber Outsole for Footwear Assortments"
+  },
+  "keywords": [
+    "Camouflage Textile Casual Shoes",
+    "Short Lace Woven Panel Sneakers",
+    "Rubber Outsole Casual Footwear"
+  ],
+  "highlights": "Contrasting textile panels: Coarse woven quarters combine with camouflage sections across the forefoot and heel.\n\nShort lace row: Two pairs of eyelets hold the front cord above the tongue, forming the actual low-cut lace-up profile.\n\nApron toe stitching: A raised seam follows the forefoot panel, visible in the original front and top views.\n\nRubber outsole: The underside photograph shows block and groove sections, while the light sidewall carries a speckled finish.\n\nTwo colour directions: The source lists Black and Beige in EU39-48 for wholesale colour-size assortments.",
+  "assets_layout": {
+    "M1": {
+      "buyer_question": "What actual textile casualshoe is offered?",
+      "title": null,
+      "photos": [
+        {
+          "index": 1,
+          "box": [
+            15,
+            15,
+            985,
+            985
+          ]
+        }
+      ]
+    },
+    "M2": {
+      "buyer_question": "What woven texture and quarter are supplied?",
+      "title": "Woven quarter & short laces",
+      "subtitle": "Actual Black option close-up.",
+      "photos": [
+        {
+          "index": 6,
+          "box": [
+            45,
+            215,
+            955,
+            935
+          ],
+          "crop": [
+            0,
+            390,
+            790,
+            1030
+          ]
+        }
+      ]
+    },
+    "M3": {
+      "buyer_question": "What rubber bottom is supplied?",
+      "title": "Rubber block & groove sections",
+      "subtitle": "Actual light outsole underside.",
+      "photos": [
+        {
+          "index": 7,
+          "box": [
+            45,
+            215,
+            955,
+            935
+          ],
+          "crop": [
+            0,
+            250,
+            790,
+            835
+          ]
+        }
+      ]
+    },
+    "M4": {
+      "buyer_question": "Which actual colours and EU choices are supplied?",
+      "title": "2 colour options",
+      "subtitle": "Actual source shoes for your colour selection.",
+      "photos": [
+        {
+          "index": 14,
+          "box": [
+            45,
+            215,
+            955,
+            480
+          ],
+          "crop": [
+            0,
+            230,
+            790,
+            770
+          ]
+        },
+        {
+          "index": 19,
+          "box": [
+            45,
+            555,
+            955,
+            820
+          ],
+          "crop": [
+            0,
+            230,
+            790,
+            790
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "Black",
+          "xy": [
+            45,
+            488
+          ],
+          "size": 23
+        },
+        {
+          "value": "Beige",
+          "xy": [
+            45,
+            828
+          ],
+          "size": 23
+        },
+        {
+          "value": "EU 39-48",
+          "xy": [
+            45,
+            950
+          ],
+          "size": 23
+        }
+      ]
+    },
+    "M5": {
+      "buyer_question": "What entry surface is supplied?",
+      "title": "Collar & interior close-up",
+      "subtitle": "Actual Black shoe opening.",
+      "photos": [
+        {
+          "index": 8,
+          "box": [
+            45,
+            215,
+            955,
+            935
+          ],
+          "crop": [
+            0,
+            250,
+            790,
+            835
+          ]
+        }
+      ]
+    },
+    "D1": {
+      "buyer_question": "How does Black look in wear?",
+      "title": "Black short-lace profile",
+      "subtitle": "Actual woven and camouflage panels.",
+      "photos": [
+        {
+          "index": 11,
+          "box": [
+            45,
+            215,
+            955,
+            1085
+          ]
+        }
+      ]
+    },
+    "D2": {
+      "buyer_question": "What is the actual front shape?",
+      "title": "Black toe & entry views",
+      "subtitle": "Original top view shows the apron seam.",
+      "photos": [
+        {
+          "index": 13,
+          "box": [
+            45,
+            215,
+            955,
+            1085
+          ]
+        }
+      ]
+    },
+    "D3": {
+      "buyer_question": "How does Beige look in wear?",
+      "title": "Beige camouflage profile",
+      "subtitle": "Original low-cut lace-up photograph.",
+      "photos": [
+        {
+          "index": 18,
+          "box": [
+            45,
+            215,
+            955,
+            1085
+          ]
+        }
+      ]
+    },
+    "D4": {
+      "buyer_question": "Which actual colours and EU choices are supplied?",
+      "title": "2 colour options",
+      "subtitle": "Actual source shoes for your colour selection.",
+      "photos": [
+        {
+          "index": 14,
+          "box": [
+            45,
+            215,
+            955,
+            550
+          ],
+          "crop": [
+            0,
+            230,
+            790,
+            770
+          ]
+        },
+        {
+          "index": 19,
+          "box": [
+            45,
+            645,
+            955,
+            980
+          ],
+          "crop": [
+            0,
+            230,
+            790,
+            790
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "Black",
+          "xy": [
+            45,
+            558
+          ],
+          "size": 23
+        },
+        {
+          "value": "Beige",
+          "xy": [
+            45,
+            988
+          ],
+          "size": 23
+        },
+        {
+          "value": "EU 39-48",
+          "xy": [
+            45,
+            1105
+          ],
+          "size": 23
+        },
+        {
+          "value": "2+ pairs $7.19 | 50+ $6.71 | 100+ $6.23",
+          "xy": [
+            45,
+            1155
+          ],
+          "size": 25
+        },
+        {
+          "value": "Price per pair; freight quoted separately.",
+          "xy": [
+            45,
+            1200
+          ],
+          "size": 23
+        }
+      ]
+    },
+    "SKU_BLACK": {
+      "buyer_question": "Which actual colour is this SKU?",
+      "title": null,
+      "photos": [
+        {
+          "index": 14,
+          "box": [
+            25,
+            25,
+            975,
+            975
+          ],
+          "crop": [
+            0,
+            95,
+            790,
+            920
+          ]
+        }
+      ]
+    },
+    "SKU_BEIGE": {
+      "buyer_question": "Which actual colour is this SKU?",
+      "title": null,
+      "photos": [
+        {
+          "index": 19,
+          "box": [
+            25,
+            25,
+            975,
+            975
+          ]
+        }
+      ]
+    }
+  },
+  "source_assets_root": "01_产品资产/01_原始数据包/HR067_D11",
+  "source_date": "2026-10-14",
+  "fx_cny_per_usd": 6.6837,
+  "tiers": [
+    [
+      2,
+      "7.19"
+    ],
+    [
+      50,
+      "6.71"
+    ],
+    [
+      100,
+      "6.23"
+    ]
+  ],
+  "page_state": "FORMAL_FIELDS_SCORE_PASS",
+  "category_id": 201334413,
+  "platform_group_id": 973003809,
+  "platform_group_name": "Lace-Up Casual Shoes",
+  "company_faq_source": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/通用FAQ与公司简介.json",
+  "seasons": [
+    "All Seasons"
+  ],
+  "feature": "Fashion Trend",
+  "style": [
+    "Casual Sneakers"
+  ],
+  "lining": "Other",
+  "midsole": "Other",
+  "selection_review": {
+    "state": "REVIEWED_ADOPT",
+    "private_backend_evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/经营数据与选款.json",
+    "reason": "依已确认的后台经营数据政策逐款选择；具体曝光、点击、询盘/TM数据及原始表只保留本地。公开本款真实来源、成本、差异和当前字段。",
+    "cost_usd": 4.787767254664333,
+    "gross_difference_usd": [
+      2.4022,
+      1.9222,
+      1.4422
+    ],
+    "comparison_limit": "Exact-model comparable Alibaba quote not verified. Low MOQ orders differ from bulk competitor quotes. Apply50/40/30% cost markup and evaluate freight/service/taxes perorder, no cheapest/netprofit guarantee."
+  },
+  "source_id": "src-hr-hr067-d11",
+  "source_evidence": [
+    "01_产品资产/01_原始数据包/HR067_D11/source.json",
+    "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR067/素材清单.json"
+  ],
+  "procurement_capability": "CURRENT_REAL_SHOE_AND_PROCUREMENT_ENTRY_VERIFIED_NOT_ORDER_STOCK"
+}

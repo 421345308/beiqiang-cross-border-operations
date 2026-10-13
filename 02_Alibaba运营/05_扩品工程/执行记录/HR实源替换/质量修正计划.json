@@ -1,8 +1,36 @@
 {
   "authorization": "Owner 2026-10-13 authorized missing-source HR whole-shoe replacement, priority HR030 and HR042; existing IDs retained",
   "items": [
-    {"id":"1601943574507","slug":"public_style","style":["Platform Sneakers","Lace-up"],"reason":"Normal public page translates the platform Style enum into 平台集装箱. Use the current Schema-supported custom footwear phrase while preserving all SKU IDs, materials and commercial fields."},
-    {"id":"1601943545775","slug":"public_style","style":["Platform Sneakers","Lace-up"],"reason":"Apply the same footwear Style correction to the sibling link after the current review completes; do not submit while reviewing."},
-    {"id":"1601943747024","slug":"hero_quality","image_roles":["M1","M2","M3","M4","M5","M6"],"reason":"The cleaned black hero is faithful on visual review but still receives the platform imageQualityBad flag and a 3.90 score. Use the same verified clean Khaki single-shoe hero that passed HR042-A at 5.00; retain all five color options and the supporting images."}
+    {
+      "id": "1601943574507",
+      "slug": "public_style",
+      "style": [
+        "Platform Sneakers",
+        "Lace-up"
+      ],
+      "reason": "Normal public page translates the platform Style enum into 平台集装箱. Use the current Schema-supported custom footwear phrase while preserving all SKU IDs, materials and commercial fields."
+    },
+    {
+      "id": "1601943545775",
+      "slug": "public_style",
+      "style": [
+        "Platform Sneakers",
+        "Lace-up"
+      ],
+      "reason": "Apply the same footwear Style correction to the sibling link after the current review completes; do not submit while reviewing."
+    },
+    {
+      "id": "1601943747024",
+      "slug": "hero_quality",
+      "image_roles": [
+        "M1",
+        "M2",
+        "M3",
+        "M4",
+        "M5",
+        "M6"
+      ],
+      "reason": "The cleaned black hero is faithful on visual review but still receives the platform imageQualityBad flag and a 3.90 score. Use the same verified clean Khaki single-shoe hero that passed HR042-A at 5.00; retain all five color options and the supporting images."
+    }
   ]
 }

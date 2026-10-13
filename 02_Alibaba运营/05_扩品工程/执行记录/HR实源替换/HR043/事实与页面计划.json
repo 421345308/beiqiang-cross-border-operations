@@ -1,0 +1,514 @@
+{
+  "candidate": "zesheng_2408854",
+  "source_artno": "556",
+  "supplier": "泽盛鞋业",
+  "source_url": "https://zesheng.sooxie.com/detail/2408854",
+  "source_price_cny": 35,
+  "source_color_labels": [
+    "黑色",
+    "深灰",
+    "深蓝"
+  ],
+  "colors": [
+    "Black",
+    "Dark Grey",
+    "Navy"
+  ],
+  "sizes": [
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "upper": "Textile",
+  "lining": "Textile",
+  "outsole": "EVA",
+  "closure": "Slip-On",
+  "style": [
+    "Casual Sneakers",
+    "Sock Sneakers"
+  ],
+  "platform_group_id": 915505550,
+  "platform_group_name": "Wide Toe Box Walking Shoes",
+  "target_ids": {
+    "A": "1601943607904",
+    "B": "1601943621884",
+    "C": "1601943695412"
+  },
+  "local_intent_candidates": [
+    "宽楦针织低鞋口套脚鞋"
+  ],
+  "materials_evidence": [
+    "Specific556title plus03/05/09 explicitly wide-last/widenedtoe, permitsWideToeBox but no2E/4E widthgrade ormedicalfit. Source08/09 specifies飞织袜套 upper and08内里织物/Textile lining, EVAmoldedsole. Midsole independentcomponent notspecified:Other.",
+    "Body556/CNY35/BlackDarkGreyNavy/EU39-46 matches28same-shoe frames. Source08WB-556 alias is same model, its footlength chart notadopted.",
+    "Unrelated footshape/ergonomics/comfort andGrip diagrams05/06 excluded frombuyerphotos. Rearloop/sliponopening shown, notHandsFree mechanism.",
+    "Actual10partial underside and12onfoot partialbottom used; not an invented standalonefulloutsole."
+  ],
+  "dedup": "No556 URL/model adoption. ComparedHR056555 open-heelknitmule andHR060AA23 low-entrysockshoe:556 has a closedheel withnotched ankleedge, finelyribbedforefoot andthinlargelystraightsoleband; not recolour of those shoes.",
+  "do_not_claim": [
+    "Hands Free",
+    "2E or4E widthgrade",
+    "medical alignment",
+    "tested grip",
+    "physical stock",
+    "tested slip resistance",
+    "medical comfort",
+    "unverified midsole material"
+  ],
+  "custom": [
+    "Shoe Profile",
+    "Wide toe box; knit slip-on upper; textile lining; EVA outsole"
+  ],
+  "titles": {
+    "A": "Wide Toe Box Knit Slip-On Casual Shoes with Textile Lining and EVA Outsole for Wholesale Footwear Buyers",
+    "B": "Wide Toe Knit Walking Style Sneakers with Notched Collar and Rear Pull Loop for Wholesale Shoe Collections",
+    "C": "Wide Toe Box Sock Style Casual Shoes with Slip-On Entry and Three Colours for Wholesale Footwear Assortments"
+  },
+  "keywords": [
+    "Wide Toe Box Knit Slip On Shoes",
+    "Textile Lining Casual Sock Sneakers",
+    "EVA Outsole Wide Toe Walking Shoes"
+  ],
+  "highlights": "Widened forefoot design: This specific style is described by the source as a wide-last shoe, with the actual rounded toe shown in close-up.\n\nKnitted upper and textile lining: Fine knit texture covers the forefoot, while the entry and interior are shown in original photographs.\n\nSlip-on collar: A notched opening and rear pull loop form the closed-heel entry without a lace fastening.\n\nEVA outsole pattern: A slim side band runs around the shoe and the actual underside shows repeated textured sections.\n\nThree colour options: Black, Dark Grey and Navy are listed in EU39-46 for wholesale assortments.",
+  "assets_layout": {
+    "M1": {
+      "buyer_question": "What actual wide-toe shoe is offered?",
+      "title": null,
+      "photos": [
+        {
+          "index": 1,
+          "box": [
+            15,
+            15,
+            985,
+            985
+          ]
+        }
+      ]
+    },
+    "M2": {
+      "buyer_question": "What forefoot shape is supplied?",
+      "title": "Widened knit forefoot",
+      "subtitle": "Actual Black toe and upper texture.",
+      "photos": [
+        {
+          "index": 9,
+          "box": [
+            45,
+            215,
+            955,
+            935
+          ],
+          "crop": [
+            0,
+            285,
+            790,
+            995
+          ]
+        }
+      ]
+    },
+    "M3": {
+      "buyer_question": "What outsole pattern is supplied?",
+      "title": "EVA underside sections",
+      "subtitle": "Actual Black bottom close-up.",
+      "photos": [
+        {
+          "index": 10,
+          "box": [
+            45,
+            215,
+            955,
+            935
+          ],
+          "crop": [
+            0,
+            1070,
+            790,
+            1600
+          ]
+        }
+      ]
+    },
+    "M4": {
+      "buyer_question": "Which actual colours and EU choices are supplied?",
+      "title": "3 colour options",
+      "subtitle": "Actual source shoes for your colour selection.",
+      "photos": [
+        {
+          "index": 8,
+          "box": [
+            45,
+            215,
+            955,
+            420
+          ],
+          "crop": [
+            85,
+            510,
+            685,
+            825
+          ]
+        },
+        {
+          "index": 8,
+          "box": [
+            45,
+            450,
+            955,
+            655
+          ],
+          "crop": [
+            85,
+            925,
+            685,
+            1240
+          ]
+        },
+        {
+          "index": 8,
+          "box": [
+            45,
+            685,
+            955,
+            890
+          ],
+          "crop": [
+            85,
+            1330,
+            685,
+            1655
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "Black",
+          "xy": [
+            45,
+            428
+          ],
+          "size": 23
+        },
+        {
+          "value": "Dark Grey",
+          "xy": [
+            45,
+            663
+          ],
+          "size": 23
+        },
+        {
+          "value": "Navy",
+          "xy": [
+            45,
+            898
+          ],
+          "size": 23
+        },
+        {
+          "value": "EU 39-46",
+          "xy": [
+            45,
+            950
+          ],
+          "size": 23
+        }
+      ]
+    },
+    "M5": {
+      "buyer_question": "What does the entry look like?",
+      "title": "Notched collar & rear loop",
+      "subtitle": "Actual Black knit entry.",
+      "photos": [
+        {
+          "index": 10,
+          "box": [
+            45,
+            215,
+            955,
+            935
+          ],
+          "crop": [
+            0,
+            160,
+            790,
+            745
+          ]
+        }
+      ]
+    },
+    "D1": {
+      "buyer_question": "How does Black look in wear?",
+      "title": "Black side & rear profile",
+      "subtitle": "Original photograph with actual sole edge.",
+      "photos": [
+        {
+          "index": 12,
+          "box": [
+            45,
+            215,
+            955,
+            1085
+          ],
+          "crop": [
+            0,
+            0,
+            790,
+            975
+          ]
+        }
+      ]
+    },
+    "D2": {
+      "buyer_question": "How does Navy look in wear?",
+      "title": "Navy everyday profile",
+      "subtitle": "Original front and side views.",
+      "photos": [
+        {
+          "index": 17,
+          "box": [
+            45,
+            215,
+            955,
+            1085
+          ]
+        }
+      ]
+    },
+    "D3": {
+      "buyer_question": "What is the Dark Grey profile?",
+      "title": "Dark Grey knit & sole edge",
+      "subtitle": "Actual rearloop and side construction.",
+      "photos": [
+        {
+          "index": 23,
+          "box": [
+            45,
+            215,
+            955,
+            1085
+          ],
+          "crop": [
+            0,
+            0,
+            790,
+            970
+          ]
+        }
+      ]
+    },
+    "D4": {
+      "buyer_question": "Which actual colours and EU choices are supplied?",
+      "title": "3 colour options",
+      "subtitle": "Actual source shoes for your colour selection.",
+      "photos": [
+        {
+          "index": 8,
+          "box": [
+            45,
+            215,
+            955,
+            465
+          ],
+          "crop": [
+            85,
+            510,
+            685,
+            825
+          ]
+        },
+        {
+          "index": 8,
+          "box": [
+            45,
+            505,
+            955,
+            755
+          ],
+          "crop": [
+            85,
+            925,
+            685,
+            1240
+          ]
+        },
+        {
+          "index": 8,
+          "box": [
+            45,
+            795,
+            955,
+            1045
+          ],
+          "crop": [
+            85,
+            1330,
+            685,
+            1655
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "Black",
+          "xy": [
+            45,
+            473
+          ],
+          "size": 23
+        },
+        {
+          "value": "Dark Grey",
+          "xy": [
+            45,
+            763
+          ],
+          "size": 23
+        },
+        {
+          "value": "Navy",
+          "xy": [
+            45,
+            1053
+          ],
+          "size": 23
+        },
+        {
+          "value": "EU 39-46",
+          "xy": [
+            45,
+            1105
+          ],
+          "size": 23
+        },
+        {
+          "value": "2+ pairs $7.86 | 50+ $7.34 | 100+ $6.81",
+          "xy": [
+            45,
+            1155
+          ],
+          "size": 25
+        },
+        {
+          "value": "Price per pair; freight quoted separately.",
+          "xy": [
+            45,
+            1200
+          ],
+          "size": 23
+        }
+      ]
+    },
+    "SKU_BLACK": {
+      "buyer_question": "Which actual colour is this SKU?",
+      "title": null,
+      "photos": [
+        {
+          "index": 8,
+          "box": [
+            25,
+            25,
+            975,
+            975
+          ],
+          "crop": [
+            85,
+            510,
+            685,
+            825
+          ]
+        }
+      ]
+    },
+    "SKU_DARK_GREY": {
+      "buyer_question": "Which actual colour is this SKU?",
+      "title": null,
+      "photos": [
+        {
+          "index": 8,
+          "box": [
+            25,
+            25,
+            975,
+            975
+          ],
+          "crop": [
+            85,
+            925,
+            685,
+            1240
+          ]
+        }
+      ]
+    },
+    "SKU_NAVY": {
+      "buyer_question": "Which actual colour is this SKU?",
+      "title": null,
+      "photos": [
+        {
+          "index": 8,
+          "box": [
+            25,
+            25,
+            975,
+            975
+          ],
+          "crop": [
+            85,
+            1330,
+            685,
+            1655
+          ]
+        }
+      ]
+    }
+  },
+  "source_assets_root": "01_产品资产/01_原始数据包/HR043_556",
+  "source_date": "2026-10-14",
+  "fx_cny_per_usd": 6.6837,
+  "tiers": [
+    [
+      2,
+      "7.86"
+    ],
+    [
+      50,
+      "7.34"
+    ],
+    [
+      100,
+      "6.81"
+    ]
+  ],
+  "page_state": "FORMAL_FIELDS_SCORE_PASS",
+  "category_id": 201334413,
+  "company_faq_source": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/通用FAQ与公司简介.json",
+  "seasons": [
+    "All Seasons"
+  ],
+  "feature": "Fashion Trend",
+  "midsole": "Other",
+  "selection_review": {
+    "state": "REVIEWED_ADOPT",
+    "private_backend_evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/经营数据与选款.json",
+    "reason": "依已确认的后台经营数据政策逐款选择；具体曝光、点击、询盘/TM数据及原始表只保留本地。公开本款真实来源、成本、差异和当前字段。",
+    "cost_usd": 5.236620434789113,
+    "gross_difference_usd": [
+      2.6234,
+      2.1034,
+      1.5734
+    ],
+    "comparison_limit": "Exact-model comparable Alibaba quote not verified. Low MOQ orders differ from bulk competitor quotes. Apply50/40/30% cost markup and evaluate freight/service/taxes perorder, no cheapest/netprofit guarantee."
+  },
+  "source_id": "src-hr-hr043-556",
+  "source_evidence": [
+    "01_产品资产/01_原始数据包/HR043_556/source.json",
+    "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR043/素材清单.json"
+  ],
+  "procurement_capability": "CURRENT_REAL_SHOE_AND_PROCUREMENT_ENTRY_VERIFIED_NOT_ORDER_STOCK"
+}

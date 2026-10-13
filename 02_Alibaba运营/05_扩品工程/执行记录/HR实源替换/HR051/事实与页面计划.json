@@ -433,7 +433,7 @@
   "selection_review": {
     "state": "REVIEWED_ADOPT",
     "private_backend_evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/经营数据与选款.json",
-    "reason": "Preserve already adopted936 real shoe and its two real-source aliases. Three legacy concept links share HR051 family; unify them with936 rather than invent a sixth listing or switch existing936 to a different shoe. Backend signal is inconclusive for the concept links; later936 aliases have missing period rows, not zero demand.",
+    "reason": "依已确认的后台经营数据政策逐款选择；具体曝光、点击、询盘/TM数据及原始表只保留本地。公开本款真实来源、成本、差异和当前字段。",
     "cost_usd": 12.268653590077353,
     "gross_difference_usd": [
       6.1413,
@@ -447,5 +447,16 @@
     "01_产品资产/01_原始数据包/HR051_936/source.json",
     "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR051/素材清单.json"
   ],
-  "procurement_capability": "CURRENT_REAL_SHOE_AND_PROCUREMENT_ENTRY_VERIFIED_NOT_ORDER_STOCK"
+  "procurement_capability": "CURRENT_REAL_SHOE_AND_PROCUREMENT_ENTRY_VERIFIED_NOT_ORDER_STOCK",
+  "company_bundle_review": {
+    "state": "PENDING_FORMAL",
+    "evidence": [
+      "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943653819/verification.json",
+      "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943750198/verification.json",
+      "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943651773/verification.json",
+      "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601969872083/verification.json",
+      "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601969906452/verification.json"
+    ],
+    "scope": "Approved V8 exact gallery roles, company intro and general eight FAQs verified separately from product highlights."
+  }
 }

@@ -17,7 +17,11 @@ def check(pid,family,variant):
  prep=o.b.load(f/('business_correction_prepared.json'if(f/'business_correction_once.json').exists()else'prepared.json'));schema=E.fromstring(o.b.load(f/'after_render.json')['data']);actual=o.contract.field_snapshot(schema);checks={}
  if(f/'gallery_repair_prepared.json').exists():prep['expected_schema']['scImages']=o.b.load(f/'gallery_repair_prepared.json')['expected_schema']['scImages']
  if(f/'hero_quality_prepared.json').exists():prep['expected_schema']['scImages']=o.b.load(f/'hero_quality_prepared.json')['expected_schema']['scImages']
- last=max((o.b.load(f/name).get('at','')for name in ['update_once.json','attribute_repair_once.json','gallery_repair_once.json','public_style_once.json','hero_quality_once.json','business_correction_once.json','optional_attribute_clear_once.json','title_repair_once.json']if(f/name).exists()),default='')
+ if(f/'title_quality_prepared.json').exists():prep['expected_schema']['productTitle']=o.b.load(f/'title_quality_prepared.json')['expected_schema']['productTitle']
+ if(f/'group_quality_prepared.json').exists():prep['expected_schema']['productGroup']=o.b.load(f/'group_quality_prepared.json')['expected_schema']['productGroup']
+ if(f/'company_quality_prepared.json').exists():
+  correction=o.b.load(f/'company_quality_prepared.json');prep['expected_schema'].update(correction['expected_schema']);prep['fields']=list(set(prep['fields'])|set(correction['fields']))
+ last=max((o.b.load(f/name).get('at','')for name in ['update_once.json','attribute_repair_once.json','gallery_repair_once.json','public_style_once.json','hero_quality_once.json','business_correction_once.json','optional_attribute_clear_once.json','title_repair_once.json','title_quality_once.json','group_quality_once.json','company_quality_once.json']if(f/name).exists()),default='')
  checks['formal_read_after_latest_write']=datetime.fromtimestamp((f/'after_get.json').stat().st_mtime,timezone.utc).isoformat()>last and datetime.fromtimestamp((f/'score.json').stat().st_mtime,timezone.utc).isoformat()>last
  for key,value in prep['expected_schema'].items():
   if key in ['sku','icbuCatProp','productKeywords']:continue
@@ -59,6 +63,15 @@ def check(pid,family,variant):
  checks['summary_exact']=p['struct_detail']['product_summary']==plan['highlights']
  checks['main_count_six']=len(p['main_image']['images'])==6
  checks['detail_count_four']=len(p['struct_detail']['detail_image']['images'])==4
+ common=o.b.load(o.ROOT/'02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/通用FAQ与公司简介.json')
+ bank=o.b.load(o.ROOT/'02_Alibaba运营/06_图片与检查记录/共享工厂详情/V8/bank.json')['items']
+ roles=[('C1','400'),('C2','550'),('C3','600'),('C4','450'),('C5','700'),('C6','700')]
+ checks['approved_company_six_exact']=Counter((str(x['image_set']['id']),o.contract._created_image_identity(x['image_url']))for x in p['struct_detail']['company_image']['images'])==Counter((role,o.contract._created_image_identity(bank[key]['url']))for key,role in roles)
+ checks['approved_general_faq_exact']=p['struct_detail']['product_faq']==[{'question':x['question'],'answer':x['answers']}for x in common['companyFaqDesc']]
+ checks['approved_company_intro_exact']=p['struct_detail']['company_summary']==common['companyDesc']
+ if(f/'company_quality_before_get.json').exists():
+  prior=o.b.load(f/'company_quality_before_get.json')['product']
+  checks['company_only_other_fields_preserved']=o.preserve(prior,prep['fields'])==o.preserve(p,prep['fields']) and prior['subject']==p['subject'] and prior['product_sku']==p['product_sku'] and prior['main_image']==p['main_image'] and prior['attributes']==p['attributes'] and prior['sourcing_trade']==p['sourcing_trade']
  scores=o.b.load(f/'score.json');result=scores.get('result',{});score=float(result['final_score'])if result.get('final_score')is not None else None;problem=json.loads(result['problem_map'])if isinstance(result.get('problem_map'),str)else result.get('problem_map',{})
  checks['actual_score_at_least_5']=score is not None and score>=5
  checks['score_diagnostics_clear']=not any(problem.get('extendProblemMap',{}).values())and not problem.get('errorReasonList')

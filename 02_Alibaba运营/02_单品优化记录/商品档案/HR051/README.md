@@ -22,95 +22,97 @@
 
 ### HR051-C · 1601943651773
 
-- 平台链接：[1601943651773](https://www.alibaba.com/product-detail/Men-s-Walking-Shoes-Breathable-Light_1601943651773.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943651773/formal_get.json)；UTC 2026-10-12T22:43:57.460904+00:00。
-- 当前正式标题：Men's Walking Shoes Breathable Light Weight Hook-and-Loop Strap Model HR051-C
+- 平台链接：[1601943651773](https://www.alibaba.com/product-detail/Textile-Panel-Casual-Sneakers-with-Rear_1601943651773.html)
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943651773/formal_get.json)；UTC 2026-10-13T21:34:21.618314+00:00。
+- 当前正式标题：Textile Panel Casual Sneakers with Rear Pull Loop and Contrast Heel Accents for Footwear Assortments
 - 审核/展示：approved / Y；平台类目ID：201334413。
-- 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, owner_member, owner_member_display_name, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
+- 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
 - SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。
-- 店内分组：Slip-On Casual Walking Shoes · 972130291；[平台分组回执](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%BA%97%E5%86%85%E5%88%86%E7%BB%84/972130291.json)。
+- 店内分组：Lace-Up Casual Shoes · 973003809；[平台分组回执](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%BA%97%E5%86%85%E5%88%86%E7%BB%84/973003809.json)。
 - 本地平台素材：[唯一素材索引](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90%E6%B8%85%E5%8D%95.json)；图片按内容哈希保存一份，图库/详情/SKU通过索引引用。
-  - M1：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/49998d38c4cae4871598bb1999b572dae5b0787d9aa28f0d9a8f5e05f6d10278.png) · 1000×1000
-  - M2：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/6a01380f48db90775d601c2ded7756c628c713817febbcd7ea6e08fdabc459df.png) · 1000×1000
-  - M3：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/7a8710bf9873174f8c67f8ead9db8abfb9bbb7e44f51bd8952db1e94925820c6.png) · 1000×1000
-  - M4：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/0f3490e199e299ac9f93112faa95dc3ade7a41e030d9540a11118e704c6b518e.png) · 1000×1000
-  - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/37933f2c7a3f7513d43dc18605717d33a7acf6cf724cd28d028818792450831d.png) · 1000×1000
-  - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/442b8aede4c0a880375caf35969c110ce38455e1b707d75f4e33a51df8466cb6.png) · 1000×1000
-- 本地同步状态：`COMPANY_BUNDLE_FORMAL_PASS`。
+  - M1：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR051/M1.jpg) · 1000×1000
+  - M2：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR051/M2.jpg) · 1000×1000
+  - M3：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR051/M3.jpg) · 1000×1000
+  - M4：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR051/M4.jpg) · 1000×1000
+  - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR051/M5.jpg) · 1000×1000
+  - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/%E5%85%B1%E4%BA%AB%E7%B4%A0%E6%9D%90/%E8%B4%9D%E5%BC%BA%E5%85%AC%E5%8F%B8%E7%AE%80%E4%BB%8B%E5%9B%BE%E5%BA%93.jpg) · 1721×914
+- 本地同步状态：`HR_REAL_SOURCE_FORMAL_PASS`。
 - 本轮优化：``；
 
 ### HR051-A · 1601943653819
 
-- 平台链接：[1601943653819](https://www.alibaba.com/product-detail/Men-s-Shoes-Model-HR051-A_1601943653819.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943653819/formal_get.json)；UTC 2026-10-12T22:44:10.241106+00:00。
-- 当前正式标题：Men's Shoes Model HR051-A
+- 平台链接：[1601943653819](https://www.alibaba.com/product-detail/Textile-Lace-Up-Casual-Sneakers-with_1601943653819.html)
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943653819/formal_get.json)；UTC 2026-10-13T21:34:21.630394+00:00。
+- 当前正式标题：Textile Lace-Up Casual Sneakers with Moulded Side Panels and Rubber Outsole for Wholesale Footwear Buyers
 - 审核/展示：approved / Y；平台类目ID：201334413。
-- 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, owner_member, owner_member_display_name, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
+- 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
 - SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。
-- 店内分组：Slip-On Casual Walking Shoes · 972130291；[平台分组回执](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%BA%97%E5%86%85%E5%88%86%E7%BB%84/972130291.json)。
+- 店内分组：Lace-Up Casual Shoes · 973003809；[平台分组回执](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%BA%97%E5%86%85%E5%88%86%E7%BB%84/973003809.json)。
 - 本地平台素材：[唯一素材索引](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90%E6%B8%85%E5%8D%95.json)；图片按内容哈希保存一份，图库/详情/SKU通过索引引用。
-  - M1：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/c7c46e3ff1019421281a9e93d9c843e75a4ef6ee1a307c6cd0c293f931eda8db.png) · 1000×1000
-  - M2：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/6a01380f48db90775d601c2ded7756c628c713817febbcd7ea6e08fdabc459df.png) · 1000×1000
-  - M3：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/7a8710bf9873174f8c67f8ead9db8abfb9bbb7e44f51bd8952db1e94925820c6.png) · 1000×1000
-  - M4：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/0f3490e199e299ac9f93112faa95dc3ade7a41e030d9540a11118e704c6b518e.png) · 1000×1000
-  - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/37933f2c7a3f7513d43dc18605717d33a7acf6cf724cd28d028818792450831d.png) · 1000×1000
-  - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/442b8aede4c0a880375caf35969c110ce38455e1b707d75f4e33a51df8466cb6.png) · 1000×1000
-- 本地同步状态：`COMPANY_BUNDLE_FORMAL_PASS`。
+  - M1：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR051/M1.jpg) · 1000×1000
+  - M2：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR051/M2.jpg) · 1000×1000
+  - M3：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR051/M3.jpg) · 1000×1000
+  - M4：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR051/M4.jpg) · 1000×1000
+  - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR051/M5.jpg) · 1000×1000
+  - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/%E5%85%B1%E4%BA%AB%E7%B4%A0%E6%9D%90/%E8%B4%9D%E5%BC%BA%E5%85%AC%E5%8F%B8%E7%AE%80%E4%BB%8B%E5%9B%BE%E5%BA%93.jpg) · 1721×914
+- 本地同步状态：`HR_REAL_SOURCE_FORMAL_PASS`。
 - 本轮优化：``；
 
 ### HR051-B · 1601943750198
 
-- 平台链接：[1601943750198](https://www.alibaba.com/product-detail/Men-s-Walking-Shoes-Model-HR051_1601943750198.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943750198/formal_get.json)；UTC 2026-10-12T22:58:42.818732+00:00。
-- 当前正式标题：Men's Walking Shoes Model HR051-B-Light Weight Breathable Hook-and-Loop Strap
+- 平台链接：[1601943750198](https://www.alibaba.com/product-detail/Casual-Walking-Style-Shoes-with-Cord_1601943750198.html)
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943750198/formal_get.json)；UTC 2026-10-13T21:42:08.147162+00:00。
+- 当前正式标题：Casual Walking Style Shoes with Cord Lacing and Sculpted Rubber Sole for Wholesale Shoe Collections
 - 审核/展示：approved / Y；平台类目ID：201334413。
-- 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, owner_member, owner_member_display_name, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
+- 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
 - SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。
-- 店内分组：Slip-On Casual Walking Shoes · 972130291；[平台分组回执](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%BA%97%E5%86%85%E5%88%86%E7%BB%84/972130291.json)。
+- 店内分组：Lace-Up Casual Shoes · 973003809；[平台分组回执](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%BA%97%E5%86%85%E5%88%86%E7%BB%84/973003809.json)。
 - 本地平台素材：[唯一素材索引](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90%E6%B8%85%E5%8D%95.json)；图片按内容哈希保存一份，图库/详情/SKU通过索引引用。
-  - M1：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/3dd0f64fa2644eb0b2a4951de49eed7b688821362b2f8632905eb2a296a95f89.png) · 1000×1000
-  - M2：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/6a01380f48db90775d601c2ded7756c628c713817febbcd7ea6e08fdabc459df.png) · 1000×1000
-  - M3：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/7a8710bf9873174f8c67f8ead9db8abfb9bbb7e44f51bd8952db1e94925820c6.png) · 1000×1000
-  - M4：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/0f3490e199e299ac9f93112faa95dc3ade7a41e030d9540a11118e704c6b518e.png) · 1000×1000
-  - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/37933f2c7a3f7513d43dc18605717d33a7acf6cf724cd28d028818792450831d.png) · 1000×1000
-  - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/442b8aede4c0a880375caf35969c110ce38455e1b707d75f4e33a51df8466cb6.png) · 1000×1000
-- 本地同步状态：`COMPANY_BUNDLE_FORMAL_PASS`。
+  - M1：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR051/M1.jpg) · 1000×1000
+  - M2：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR051/M2.jpg) · 1000×1000
+  - M3：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR051/M3.jpg) · 1000×1000
+  - M4：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR051/M4.jpg) · 1000×1000
+  - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR051/M5.jpg) · 1000×1000
+  - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/%E5%85%B1%E4%BA%AB%E7%B4%A0%E6%9D%90/%E8%B4%9D%E5%BC%BA%E5%85%AC%E5%8F%B8%E7%AE%80%E4%BB%8B%E5%9B%BE%E5%BA%93.jpg) · 1721×914
+- 本地同步状态：`HR_REAL_SOURCE_FORMAL_PASS`。
 - 本轮优化：``；
 
 ### HR051-A · 1601969872083
 
-- 平台链接：[1601969872083](https://www.alibaba.com/product-detail/Textile-Lace-Up-Casual-Sneakers-with_1601969872083.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601969872083/formal_get.json)；UTC 2026-10-10T06:55:36.170702+00:00。
-- 当前正式标题：Textile Lace-Up Casual Sneakers with Rubber Outsole
-- 审核/展示：approved / N；平台类目ID：201334413。
-- 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, is_smart_edit, keywords, language, main_image, owner_member, owner_member_display_name, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
+- 平台链接：[1601969872083](https://www.alibaba.com/product-detail/Textile-Casual-Lace-Up-Shoes-with_1601969872083.html)
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601969872083/formal_get.json)；UTC 2026-10-13T21:42:08.161465+00:00。
+- 当前正式标题：Textile Casual Lace-Up Shoes with Rubber Outsole and Moulded Quarter Panels for Wholesale Shoe Buyers
+- 审核/展示：approved / Y；平台类目ID：201334413。
+- 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
 - SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。
+- 店内分组：Lace-Up Casual Shoes · 973003809；[平台分组回执](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%BA%97%E5%86%85%E5%88%86%E7%BB%84/973003809.json)。
 - 本地平台素材：[唯一素材索引](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90%E6%B8%85%E5%8D%95.json)；图片按内容哈希保存一份，图库/详情/SKU通过索引引用。
-  - M1：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/efa1929a18b3c28de3b0cc24cc6921410d3f340e0398bac7357f2c8867b15633.png) · 1000×1000
-  - M2：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/1b9a57f61147a2e71311d948f5df9186c3c1798d19ba6a46cb9f3b9c6abfe6e6.png) · 1000×1000
-  - M3：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/388fb2da419f50257e7b6ec5902548cac2a432964d0dd81fc94de8cdca92b137.png) · 1000×1000
-  - M4：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/52a058ba8df82870bcd01b7a4a90632190e0b8521682b1d4b54ccb9b2b49c75e.png) · 1000×1000
-  - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/75e4b034e8647e95f70ad6c020d6be13e5afd30fd285689425155ef58ff66a34.png) · 1000×1000
-  - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/d5da232e108c5f2d68742b0bdb9ca28032582acb67f7a168b7c3b3605fc81738.png) · 1000×1000
-- 本地同步状态：`FORMAL_SNAPSHOT_SAVED`。
+  - M1：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR051/M1.jpg) · 1000×1000
+  - M2：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR051/M2.jpg) · 1000×1000
+  - M3：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR051/M3.jpg) · 1000×1000
+  - M4：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR051/M4.jpg) · 1000×1000
+  - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR051/M5.jpg) · 1000×1000
+  - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/%E5%85%B1%E4%BA%AB%E7%B4%A0%E6%9D%90/%E8%B4%9D%E5%BC%BA%E5%85%AC%E5%8F%B8%E7%AE%80%E4%BB%8B%E5%9B%BE%E5%BA%93.jpg) · 1721×914
+- 本地同步状态：`HR_REAL_SOURCE_FORMAL_PASS`。
 - 本轮优化：``；
 
 ### HR051-A · 1601969906452
 
-- 平台链接：[1601969906452](https://www.alibaba.com/product-detail/Textile-Lace-Up-Casual-Sneakers-with_1601969906452.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601969906452/formal_get.json)；UTC 2026-10-12T23:14:56.586826+00:00。
-- 当前正式标题：Wholesale Textile Lace Up Casual Sneakers and Walking Shoes with Rubber Outsoles for Everyday Wear
+- 平台链接：[1601969906452](https://www.alibaba.com/product-detail/Wholesale-Textile-Lace-Up-Casual-Sneakers_1601969906452.html)
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601969906452/formal_get.json)；UTC 2026-10-13T21:34:44.596911+00:00。
+- 当前正式标题：Wholesale Textile Lace-Up Casual Sneakers with Rubber Sole and Rear Pull Loop for Everyday Footwear
 - 审核/展示：approved / Y；平台类目ID：201334413。
-- 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, is_smart_edit, keywords, language, main_image, owner_member, owner_member_display_name, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
+- 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
 - SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。
+- 店内分组：Lace-Up Casual Shoes · 973003809；[平台分组回执](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%BA%97%E5%86%85%E5%88%86%E7%BB%84/973003809.json)。
 - 本地平台素材：[唯一素材索引](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90%E6%B8%85%E5%8D%95.json)；图片按内容哈希保存一份，图库/详情/SKU通过索引引用。
-  - M1：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/efa1929a18b3c28de3b0cc24cc6921410d3f340e0398bac7357f2c8867b15633.png) · 1000×1000
-  - M2：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/1b9a57f61147a2e71311d948f5df9186c3c1798d19ba6a46cb9f3b9c6abfe6e6.png) · 1000×1000
-  - M3：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/388fb2da419f50257e7b6ec5902548cac2a432964d0dd81fc94de8cdca92b137.png) · 1000×1000
-  - M4：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/52a058ba8df82870bcd01b7a4a90632190e0b8521682b1d4b54ccb9b2b49c75e.png) · 1000×1000
-  - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/75e4b034e8647e95f70ad6c020d6be13e5afd30fd285689425155ef58ff66a34.png) · 1000×1000
-  - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/d5da232e108c5f2d68742b0bdb9ca28032582acb67f7a168b7c3b3605fc81738.png) · 1000×1000
-- 本地同步状态：`COMPANY_BUNDLE_FORMAL_PASS`。
+  - M1：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR051/M1.jpg) · 1000×1000
+  - M2：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR051/M2.jpg) · 1000×1000
+  - M3：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR051/M3.jpg) · 1000×1000
+  - M4：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR051/M4.jpg) · 1000×1000
+  - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR051/M5.jpg) · 1000×1000
+  - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/%E5%85%B1%E4%BA%AB%E7%B4%A0%E6%9D%90/%E8%B4%9D%E5%BC%BA%E5%85%AC%E5%8F%B8%E7%AE%80%E4%BB%8B%E5%9B%BE%E5%BA%93.jpg) · 1721×914
+- 本地同步状态：`HR_REAL_SOURCE_FORMAL_PASS`。
 - 本轮优化：``；
 
 ## 其他原始/正式证据

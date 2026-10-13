@@ -6,7 +6,7 @@ an actual shoe. Preserve every ID's evidence and distinguish unresolved history.
 from pathlib import Path
 from collections import Counter
 from datetime import datetime
-import hashlib,json
+import hashlib,json,argparse
 
 ROOT=Path(__file__).resolve().parents[3]
 BASE=ROOT/'02_Alibaba运营/05_扩品工程/执行记录/HR实源替换'
@@ -14,7 +14,9 @@ CAT=ROOT/'99_临时区/HR实源替换/全量目录/catalog.json'
 REG=ROOT/'02_Alibaba运营/05_扩品工程/数据/产品与链接台账.json'
 
 def main():
-    catalog=json.loads(CAT.read_text(encoding='utf8'))
+    parser=argparse.ArgumentParser();parser.add_argument('--catalog',type=Path,default=CAT);args=parser.parse_args();catalog_path=args.catalog
+    if not catalog_path.is_absolute():catalog_path=ROOT/catalog_path
+    catalog=json.loads(catalog_path.read_text(encoding='utf8'))
     assert catalog['complete'] and len(catalog['products'])==catalog['unique_ids']==catalog['total_item']
     current={str(p['id']):p for p in catalog['products']}
     registry=json.loads(REG.read_text(encoding='utf8'))
@@ -30,7 +32,8 @@ def main():
         latest=l.get('current_platform_fields',{})
         use_latest=False
         if latest.get('at'):
-            use_latest=datetime.fromisoformat(latest['at'].replace('Z','+00:00'))>datetime.fromisoformat(catalog['observed_at_utc'].replace('Z','+00:00'))
+            row_time=catalog.get('row_observed_at_utc',{}).get(pid,catalog['observed_at_utc'])
+            use_latest=datetime.fromisoformat(latest['at'].replace('Z','+00:00'))>datetime.fromisoformat(row_time.replace('Z','+00:00'))
         if not live:state='NOT_FOUND_IN_CURRENT_COMPLETE_CATALOG'
         elif pid in target_ids:state=proof.get('state','PREPARED_OR_SUBMITTED')
         elif l.get('bound_source_id'):state='EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE'
@@ -41,7 +44,7 @@ def main():
                      'current_category_id':latest.get('category_id')if use_latest else live.get('category_id')if live else None,
                      'current_audit':latest.get('status')if use_latest else live.get('status')if live else None,
                      'current_display':latest.get('display')if use_latest else live.get('display')if live else None,
-                     'current_field_evidence':l.get('formal_fields',{}).get('file')if use_latest else CAT.relative_to(ROOT).as_posix(),
+                     'current_field_evidence':l.get('formal_fields',{}).get('file')if use_latest else catalog_path.relative_to(ROOT).as_posix(),
                      'bound_source_id':l.get('bound_source_id'),
                      'registry_source_state':p['source_state'],
                      'candidate_source_ids':p.get('candidate_source_ids',[]),
@@ -52,8 +55,8 @@ def main():
     progress['execution_sequence']=['HR缺货源商品全量实源替换','路崎宽头鞋继续上架']
     progress['acceptance']='官方API完整字段/EU组合/图片身份/approved状态/实际5.00及本地双改；本轮取消逐链接浏览器验收'
     progress['full_hr_scope']={'observed_at_utc':catalog['observed_at_utc'],
-        'catalog_file':CAT.relative_to(ROOT).as_posix(),
-        'catalog_sha256':hashlib.sha256(CAT.read_bytes()).hexdigest(),
+        'catalog_file':catalog_path.relative_to(ROOT).as_posix(),
+        'catalog_sha256':hashlib.sha256(catalog_path.read_bytes()).hexdigest(),
         'current_catalog_count':len(current),'registered_hr_history':len(rows),
         'current_hr_ids_found':sum(r['id']in current for r in rows),
         'states':dict(Counter(r['state']for r in rows)),

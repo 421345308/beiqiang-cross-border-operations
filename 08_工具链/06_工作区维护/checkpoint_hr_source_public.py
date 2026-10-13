@@ -39,6 +39,19 @@ def safe(value):
             safe(child)
 
 
+def public_selection_copy(value):
+    """Keep public source/cost decisions; internal seller metrics stay local."""
+    if isinstance(value, dict):
+        out = {k: public_selection_copy(v) for k, v in value.items()}
+        if isinstance(out.get('selection_review'), dict):
+            review = out['selection_review']
+            review['reason'] = '依已确认的后台经营数据政策逐款选择；具体曝光、点击、询盘/TM数据及原始表只保留本地。公开本款真实来源、成本、差异和当前字段。'
+        return out
+    if isinstance(value, list):
+        return [public_selection_copy(v) for v in value]
+    return value
+
+
 def load(path):
     return json.loads((ROOT/path).read_text(encoding='utf8'))
 
@@ -59,10 +72,13 @@ def main():
     replacement_ids = {pid for ids in scope['targets'].values() for pid in ids.values()}
     profiles = load(HR+'/已有实款对应.json')['families']
     binding_ids = {pid for p in profiles for pid in p['ids']}
-    hr_ids = replacement_ids | binding_ids
-    families = set(scope['targets']) | {p['family'] for p in profiles}
+    history = load(HR+'/当前进度.json').get('historical_unreturned_families',[])
+    historical_ids = {pid for row in history for pid in row['ids']}
+    hr_ids = replacement_ids | binding_ids | historical_ids
+    families = set(scope['targets']) | {p['family'] for p in profiles} | {p['family']for p in history}
     paths = [HR+'/'+name for name in ('README.md','scope.json','当前进度.json','质量修正计划.json','已有实款对应.json','双改与货源一致性核验.json')]
     paths += [p.relative_to(ROOT).as_posix()for p in (ROOT/HR).glob('*公开报价比较.json')]
+    paths += [HR+'/商品/'+pid+'/historical_presence_get.json'for pid in historical_ids]
     for family in scope['targets']:
         paths += [HR+'/'+family+'/'+name for name in ('事实与页面计划.json','当前状态.json','来源事实.json','素材清单.json','图片银行公开映射.json')]
         paths += [p.relative_to(ROOT).as_posix() for p in (ROOT/HR/family).glob('*.json') if p.name in ('AI主图审核.json','AI色码图审核.json','AI生成提示词.json','目标店内分组回读.json')]
@@ -80,7 +96,10 @@ def main():
                                 'hero_quality_once.json','hero_quality_receipt.json',
                                 'business_correction_once.json','business_correction_receipt.json',
                                 'optional_attribute_clear_once.json','optional_attribute_clear_receipt.json',
-                                'title_repair_once.json','title_repair_receipt.json')]
+                                'title_repair_once.json','title_repair_receipt.json',
+                                'title_quality_once.json','title_quality_receipt.json',
+                                'group_quality_once.json','group_quality_receipt.json',
+                                'company_quality_once.json','company_quality_receipt.json')]
     paths += ['08_工具链/01_业务脚本/国际站扩品/'+name for name in
               ('replace_hr_real_sources.py','verify_hr_real_sources.py',
                'repair_hr_source_quality.py','sync_hr_real_sources.py',
@@ -118,7 +137,9 @@ def main():
         text = raw.decode('utf8')
         assert not SECRET.search(text), path
         if path.endswith('.json'):
-            safe(json.loads(text))
+            payload = public_selection_copy(json.loads(text))
+            safe(payload)
+            raw = (json.dumps(payload,ensure_ascii=False,indent=2)+'\n').encode('utf8')
         frozen[path] = raw
     # The shared SOP can contain other active tasks' edits. Export only the
     # owner's exact current-batch acceptance change onto this branch's base.
@@ -151,8 +172,12 @@ def main():
                         'catalog_fields','formal_fields','local_sync','url','record_type','notes','platform_group'):
                 if key in ll[pid]:
                     listing[key] = copy.deepcopy(ll[pid][key])
-            field = 'source_replacement' if pid in replacement_ids else 'source_binding_reconciliation'
-            listing.setdefault('optimization',{})[field] = copy.deepcopy(ll[pid]['optimization'][field])
+            if pid in replacement_ids or pid in binding_ids:
+                field = 'source_replacement' if pid in replacement_ids else 'source_binding_reconciliation'
+                listing.setdefault('optimization',{})[field] = copy.deepcopy(ll[pid]['optimization'][field])
+            if pid in historical_ids:
+                for key in ('catalog_presence','catalog_evidence','evidence'):
+                    if key in ll[pid]:listing[key]=copy.deepcopy(ll[pid][key])
             current = ROOT / ll[pid].get('formal_fields',{}).get('file','missing')
             if current.is_file() and load(str(current.relative_to(ROOT))).get('sanitized_fields'):
                 raw = current.read_bytes().replace(b'\r\n',b'\n')
