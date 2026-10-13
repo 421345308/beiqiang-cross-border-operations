@@ -64,7 +64,7 @@ def main():
     paths = [HR+'/'+name for name in ('README.md','scope.json','当前进度.json','质量修正计划.json','已有实款对应.json','双改与货源一致性核验.json')]
     for family in scope['targets']:
         paths += [HR+'/'+family+'/'+name for name in ('事实与页面计划.json','当前状态.json','来源事实.json','素材清单.json','图片银行公开映射.json')]
-        paths += [p.relative_to(ROOT).as_posix() for p in (ROOT/HR/family).glob('*.json') if p.name in ('AI主图审核.json','AI生成提示词.json')]
+        paths += [p.relative_to(ROOT).as_posix() for p in (ROOT/HR/family).glob('*.json') if p.name in ('AI主图审核.json','AI生成提示词.json','目标店内分组回读.json')]
     for profile in profiles:
         paths += [HR+'/'+profile['family']+'/来源与正式绑定核验.json']
         for key in ('approved_bank','approved_visual','source_fact_file'):
@@ -78,7 +78,8 @@ def main():
                                 'public_style_once.json','public_style_receipt.json',
                                 'hero_quality_once.json','hero_quality_receipt.json',
                                 'business_correction_once.json','business_correction_receipt.json',
-                                'optional_attribute_clear_once.json','optional_attribute_clear_receipt.json')]
+                                'optional_attribute_clear_once.json','optional_attribute_clear_receipt.json',
+                                'title_repair_once.json','title_repair_receipt.json')]
     paths += ['08_工具链/01_业务脚本/国际站扩品/'+name for name in
               ('replace_hr_real_sources.py','verify_hr_real_sources.py',
                'repair_hr_source_quality.py','sync_hr_real_sources.py',
@@ -88,7 +89,8 @@ def main():
                'collect_hr_source_targets.py','repair_hr_rejected_profile.py',
                'collect_sooxie_public_package.py','analyze_hr_operating_selection.py',
                'retire_unsubmitted_hr_candidate.py','clear_optional_hr_attribute.py',
-               'schema_publish_contract.py')]
+               'schema_publish_contract.py','repair_hr_changed_title.py',
+               'run_hr_reviewed_pipeline.py','read_only_catalog.py','collect_hr_category_tree.py')]
     paths += ['02_Alibaba运营/00_运营SOP/国际站商品全生命周期SOP.md',FACTORY+'/README.md']
     paths += ['08_工具链/01_业务脚本/商品图片与审计/ingest_company_public_observations.py',
               '08_工具链/06_工作区维护/checkpoint_hr_source_public.py']

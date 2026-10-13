@@ -13,7 +13,7 @@ def check(pid,family,variant):
  prep=o.b.load(f/('business_correction_prepared.json'if(f/'business_correction_once.json').exists()else'prepared.json'));schema=E.fromstring(o.b.load(f/'after_render.json')['data']);actual=o.contract.field_snapshot(schema);checks={}
  if(f/'gallery_repair_prepared.json').exists():prep['expected_schema']['scImages']=o.b.load(f/'gallery_repair_prepared.json')['expected_schema']['scImages']
  if(f/'hero_quality_prepared.json').exists():prep['expected_schema']['scImages']=o.b.load(f/'hero_quality_prepared.json')['expected_schema']['scImages']
- last=max((o.b.load(f/name).get('at','')for name in ['update_once.json','attribute_repair_once.json','gallery_repair_once.json','public_style_once.json','hero_quality_once.json','business_correction_once.json','optional_attribute_clear_once.json']if(f/name).exists()),default='')
+ last=max((o.b.load(f/name).get('at','')for name in ['update_once.json','attribute_repair_once.json','gallery_repair_once.json','public_style_once.json','hero_quality_once.json','business_correction_once.json','optional_attribute_clear_once.json','title_repair_once.json']if(f/name).exists()),default='')
  checks['formal_read_after_latest_write']=datetime.fromtimestamp((f/'after_get.json').stat().st_mtime,timezone.utc).isoformat()>last and datetime.fromtimestamp((f/'score.json').stat().st_mtime,timezone.utc).isoformat()>last
  for key,value in prep['expected_schema'].items():
   if key in ['sku','icbuCatProp','productKeywords']:continue

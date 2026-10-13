@@ -5,6 +5,7 @@ an actual shoe. Preserve every ID's evidence and distinguish unresolved history.
 """
 from pathlib import Path
 from collections import Counter
+from datetime import datetime
 import hashlib,json
 
 ROOT=Path(__file__).resolve().parents[3]
@@ -26,16 +27,21 @@ def main():
         pid=l['id'];live=current.get(pid);p=products[l['product_id']]
         formal=BASE/'商品'/pid/'verification.json'
         proof=json.loads(formal.read_text(encoding='utf8'))if formal.exists()else{}
+        latest=l.get('current_platform_fields',{})
+        use_latest=False
+        if latest.get('at'):
+            use_latest=datetime.fromisoformat(latest['at'].replace('Z','+00:00'))>datetime.fromisoformat(catalog['observed_at_utc'].replace('Z','+00:00'))
         if not live:state='NOT_FOUND_IN_CURRENT_COMPLETE_CATALOG'
         elif pid in target_ids:state=proof.get('state','PREPARED_OR_SUBMITTED')
         elif l.get('bound_source_id'):state='EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE'
         else:state='CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW'
         rows.append({'id':pid,'model':l['model'],'family':l['model'].split('-')[0],
                      'product_identity':l['product_id'],'state':state,
-                     'current_title':live.get('subject')if live else None,
-                     'current_category_id':live.get('category_id')if live else None,
-                     'current_audit':live.get('status')if live else None,
-                     'current_display':live.get('display')if live else None,
+                     'current_title':latest.get('title')if use_latest else live.get('subject')if live else None,
+                     'current_category_id':latest.get('category_id')if use_latest else live.get('category_id')if live else None,
+                     'current_audit':latest.get('status')if use_latest else live.get('status')if live else None,
+                     'current_display':latest.get('display')if use_latest else live.get('display')if live else None,
+                     'current_field_evidence':l.get('formal_fields',{}).get('file')if use_latest else CAT.relative_to(ROOT).as_posix(),
                      'bound_source_id':l.get('bound_source_id'),
                      'registry_source_state':p['source_state'],
                      'candidate_source_ids':p.get('candidate_source_ids',[]),

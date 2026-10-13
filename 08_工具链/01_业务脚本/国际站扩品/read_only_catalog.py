@@ -3,7 +3,7 @@ from pathlib import Path
 import argparse, importlib.util, json, math, time
 from datetime import datetime, timezone
 
-READ_METHODS = frozenset({'alibaba.icbu.product.list', 'alibaba.icbu.product.get', 'alibaba.icbu.product.schema.get', 'alibaba.icbu.product.schema.render', 'alibaba.icbu.product.score.get', 'alibaba.icbu.photobank.list'})
+READ_METHODS = frozenset({'alibaba.icbu.product.list', 'alibaba.icbu.product.get', 'alibaba.icbu.product.schema.get', 'alibaba.icbu.product.schema.render', 'alibaba.icbu.product.score.get', 'alibaba.icbu.photobank.list', 'alibaba.icbu.category.get.new'})
 
 class ReadBusinessError(RuntimeError):
     def __init__(self, method, response, error):

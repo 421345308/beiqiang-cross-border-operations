@@ -1,0 +1,553 @@
+{
+  "candidate": "dmxy_2537203",
+  "source_artno": "5612",
+  "supplier": "大卖鞋业",
+  "source_url": "https://dmxy.sooxie.com/detail/2537203",
+  "source_price_cny": 30,
+  "source_color_labels": [
+    "黑色",
+    "灰色",
+    "卡其"
+  ],
+  "colors": [
+    "Black",
+    "Grey",
+    "Khaki"
+  ],
+  "sizes": [
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45
+  ],
+  "upper": "other",
+  "lining": "other",
+  "midsole": "other",
+  "outsole": "PVC",
+  "closure": "ZIP",
+  "style": [
+    "Fashion",
+    "zip-up"
+  ],
+  "seasons": [
+    "Autumn",
+    "Winter"
+  ],
+  "feature": "Fashion Trend",
+  "category_id": 201774304,
+  "extra_category_attributes": {
+    "Boot Height": [
+      "Ankle"
+    ]
+  },
+  "local_intent_candidates": [
+    "侧拉链踝靴/纹理鞋面PVC工装风靴"
+  ],
+  "materials_evidence": [
+    "Source04specification and08actual bottom detail explicitlyPVC鞋底. Upper舒适鞋面/lining柔软内里 not component chemistry; upper/lining/midsoleuseother. All23frames are the same side-zip ankle boot inBlack/Grey/Khaki. Current choicesEU38-45andhero01agree; generic embeddedtable39-44isnotused as currentchoice limit or foot-length chart. Source posters positionautumn/winter; no temperature, waterproof/grip/steel-toe or genuine-leather claim."
+  ],
+  "titles": {
+    "A": "Men's Side-Zip Ankle Boots with Textured Upper and Sculpted PVC Sole for Casual Outfits",
+    "B": "Zip-Up Casual Ankle Boots with Rear Pull Loop and Raised Toe Outline for Footwear Collections",
+    "C": "Textured Upper Ankle Boots with Side Zipper and Patterned PVC Sole for Street Style Wear"
+  },
+  "keywords": [
+    "Side Zip Ankle Boots",
+    "Textured Casual Boots",
+    "PVC Sole Zip Up Boots"
+  ],
+  "custom": [
+    "Shoe Profile",
+    "Side zip; textured upper; rear loop; sculpted PVC sole"
+  ],
+  "highlights": "Side-zip entry: A visible side zipper opens the ankle-height upper, offering an alternative to lace fastening.\n\nTextured upper panels: Creased surface details, curved side seams and a rear-quarter panel define the casual boot profile.\n\nSculpted PVC sole: The source identifies the sole as PVC. Raised sidewall sections and the stitched-looking toe outline give the boot a pronounced utility-inspired shape.\n\nRear pull loop: A visible loop above the heel provides a place to grip the boot when putting it on.\n\nAssortment planning: Black, Grey and Khaki are listed in EU38-45. Send colour-size quantities, packing preference and destination for a wholesale quotation.",
+  "target_ids": {
+    "A": "1601943790138",
+    "B": "1601943767266",
+    "C": "1601943779211"
+  },
+  "source_assets_root": "01_产品资产/01_原始数据包/HR059_5612",
+  "source_date": "2026-10-13",
+  "fx_cny_per_usd": 6.6837,
+  "tiers": [
+    [
+      2,
+      "6.74"
+    ],
+    [
+      50,
+      "6.29"
+    ],
+    [
+      100,
+      "5.84"
+    ]
+  ],
+  "page_state": "REVIEW_PENDING",
+  "selection_review": {
+    "state": "REVIEWED_ADOPT",
+    "private_backend_evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/经营数据与选款.json",
+    "reason": "Low exposure and no contact signals in both periods do not establish demand for the old unsupported concept. Owner permits another suitable actual style. Select coherent23-photo side-zip boot with current procurement entry, CNY30quote and threeEU38-45assortment options.",
+    "data_limit": "Neither vendorpageview count nor platformquality score proves demand; no claim of global hot-selling or new boot conversion.",
+    "cost_usd": 4.488531801247812,
+    "gross_difference_usd": [
+      2.2515,
+      1.8015,
+      1.3515
+    ],
+    "comparison_limit": "No exact same-model Alibaba complete quote verified; do not claim market-cheapest or guaranteed net profit. Packaging/QC/platform/payment/freight/tax estimated per order.",
+    "price_floor": "50/40/30percent procurement-cost markup."
+  },
+  "dedup": "Exact supplierURL/model absent in unique registry. Current23productframes reviewed in full; source toe/zip/sole/colours kept. Unsubmittedbootselection does not reuse an already adopted supplier/model. No recognised global brand on selected photos; source markings not erased or relabelled.",
+  "platform_group_id": 916200866,
+  "platform_group_name": "Regular Fit Casual Walking Shoes",
+  "store_group_review": "Existing generic casual store group verified by official group.get; no specific width grade or walking-performance claim. Platform leafMartinBoots verified currentcategory API; style descriptions remain genericzip-upankleboots and do not claim a Dr.Martens brand.",
+  "company_faq_source": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/通用FAQ与公司简介.json",
+  "do_not_claim": [
+    "physical stock",
+    "tested slip resistance",
+    "medical comfort",
+    "unverified midsole material"
+  ],
+  "assets_layout": {
+    "M1": {
+      "buyer_question": "What is the actual offered boot?",
+      "title": null,
+      "subtitle": "",
+      "photos": [
+        {
+          "index": 22,
+          "box": [
+            15,
+            15,
+            985,
+            985
+          ],
+          "crop": [
+            30,
+            530,
+            720,
+            1010
+          ]
+        }
+      ],
+      "text": []
+    },
+    "M2": {
+      "buyer_question": "How does it look worn?",
+      "title": "Casual utility boot profile",
+      "subtitle": "Actual Khaki option shown with casual trousers.",
+      "photos": [
+        {
+          "index": 10,
+          "box": [
+            45,
+            215,
+            955,
+            935
+          ],
+          "crop": [
+            20,
+            35,
+            740,
+            935
+          ]
+        }
+      ],
+      "text": []
+    },
+    "M3": {
+      "buyer_question": "How is the ankle upper opened?",
+      "title": "Side zipper & upper entry",
+      "subtitle": "Original close-up of the zip and upper opening.",
+      "photos": [
+        {
+          "index": 7,
+          "box": [
+            45,
+            215,
+            955,
+            935
+          ],
+          "crop": [
+            20,
+            80,
+            720,
+            565
+          ]
+        }
+      ],
+      "text": []
+    },
+    "M4": {
+      "buyer_question": "Which colours and EU sizes can I request?",
+      "title": "Colour & EU assortment",
+      "subtitle": "Three colour directions share the same side-zip structure.",
+      "photos": [
+        {
+          "index": 21,
+          "box": [
+            45,
+            230,
+            315,
+            810
+          ],
+          "crop": [
+            25,
+            105,
+            725,
+            535
+          ]
+        },
+        {
+          "index": 23,
+          "box": [
+            360,
+            230,
+            630,
+            810
+          ],
+          "crop": [
+            25,
+            105,
+            725,
+            535
+          ]
+        },
+        {
+          "index": 22,
+          "box": [
+            675,
+            230,
+            945,
+            810
+          ],
+          "crop": [
+            25,
+            105,
+            725,
+            535
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "Black",
+          "xy": [
+            50,
+            850
+          ],
+          "size": 25
+        },
+        {
+          "value": "Grey",
+          "xy": [
+            365,
+            850
+          ],
+          "size": 25
+        },
+        {
+          "value": "Khaki",
+          "xy": [
+            680,
+            850
+          ],
+          "size": 25
+        },
+        {
+          "value": "EU 38-45",
+          "xy": [
+            45,
+            930
+          ],
+          "size": 32
+        }
+      ]
+    },
+    "M5": {
+      "buyer_question": "What toe-outline and upper details are visible?",
+      "title": "Textured upper & raised toe edge",
+      "subtitle": "Original stitched-panel and toe-outline close view.",
+      "photos": [
+        {
+          "index": 6,
+          "box": [
+            45,
+            215,
+            955,
+            935
+          ],
+          "crop": [
+            40,
+            240,
+            710,
+            840
+          ]
+        }
+      ],
+      "text": []
+    },
+    "D1": {
+      "buyer_question": "What is the actual outsole pattern?",
+      "title": "PVC outsole layout",
+      "subtitle": "Block sections and grooves from the original bottom view.",
+      "photos": [
+        {
+          "index": 22,
+          "box": [
+            45,
+            215,
+            955,
+            1070
+          ],
+          "crop": [
+            35,
+            1030,
+            720,
+            1325
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "Raised sole sidewalls and a contrasting heel inset.",
+          "xy": [
+            45,
+            1140
+          ],
+          "size": 25
+        }
+      ]
+    },
+    "D2": {
+      "buyer_question": "What collar and heel features can I assess?",
+      "title": "Rear loop & zip-entry profile",
+      "subtitle": "Original Black option viewed at the ankle opening.",
+      "photos": [
+        {
+          "index": 20,
+          "box": [
+            45,
+            215,
+            955,
+            1070
+          ],
+          "crop": [
+            20,
+            20,
+            740,
+            735
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "A rear loop and side zip in an ankle-height upper.",
+          "xy": [
+            45,
+            1140
+          ],
+          "size": 25
+        }
+      ]
+    },
+    "D3": {
+      "buyer_question": "How does the Grey option appear in use?",
+      "title": "Everyday Grey boot profile",
+      "subtitle": "Actual source photograph of the shoe in a casual outfit.",
+      "photos": [
+        {
+          "index": 14,
+          "box": [
+            45,
+            215,
+            955,
+            1070
+          ],
+          "crop": [
+            20,
+            160,
+            740,
+            1080
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "Same zip-up structure across all three colour options.",
+          "xy": [
+            45,
+            1140
+          ],
+          "size": 25
+        }
+      ]
+    },
+    "D4": {
+      "buyer_question": "Which colours and EU sizes can I request?",
+      "title": "Colour & EU assortment",
+      "subtitle": "Three colour directions share the same side-zip structure.",
+      "photos": [
+        {
+          "index": 21,
+          "box": [
+            45,
+            230,
+            315,
+            810
+          ],
+          "crop": [
+            25,
+            105,
+            725,
+            535
+          ]
+        },
+        {
+          "index": 23,
+          "box": [
+            360,
+            230,
+            630,
+            810
+          ],
+          "crop": [
+            25,
+            105,
+            725,
+            535
+          ]
+        },
+        {
+          "index": 22,
+          "box": [
+            675,
+            230,
+            945,
+            810
+          ],
+          "crop": [
+            25,
+            105,
+            725,
+            535
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "Black",
+          "xy": [
+            50,
+            850
+          ],
+          "size": 25
+        },
+        {
+          "value": "Grey",
+          "xy": [
+            365,
+            850
+          ],
+          "size": 25
+        },
+        {
+          "value": "Khaki",
+          "xy": [
+            680,
+            850
+          ],
+          "size": 25
+        },
+        {
+          "value": "EU 38-45",
+          "xy": [
+            45,
+            1170
+          ],
+          "size": 32
+        }
+      ]
+    },
+    "SKU_BLACK": {
+      "buyer_question": "Which colour is this SKU?",
+      "title": null,
+      "subtitle": "",
+      "photos": [
+        {
+          "index": 21,
+          "box": [
+            25,
+            25,
+            975,
+            975
+          ],
+          "crop": [
+            25,
+            105,
+            725,
+            535
+          ]
+        }
+      ],
+      "text": []
+    },
+    "SKU_GREY": {
+      "buyer_question": "Which colour is this SKU?",
+      "title": null,
+      "subtitle": "",
+      "photos": [
+        {
+          "index": 23,
+          "box": [
+            25,
+            25,
+            975,
+            975
+          ],
+          "crop": [
+            25,
+            105,
+            725,
+            535
+          ]
+        }
+      ],
+      "text": []
+    },
+    "SKU_KHAKI": {
+      "buyer_question": "Which colour is this SKU?",
+      "title": null,
+      "subtitle": "",
+      "photos": [
+        {
+          "index": 22,
+          "box": [
+            25,
+            25,
+            975,
+            975
+          ],
+          "crop": [
+            25,
+            105,
+            725,
+            535
+          ]
+        }
+      ],
+      "text": []
+    }
+  },
+  "source_id": "src-hr-hr059-5612",
+  "source_evidence": [
+    "01_产品资产/01_原始数据包/HR059_5612/source.json",
+    "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR059/素材清单.json"
+  ],
+  "procurement_capability": "CURRENT_REAL_SHOE_AND_PROCUREMENT_ENTRY_VERIFIED_NOT_ORDER_STOCK"
+}

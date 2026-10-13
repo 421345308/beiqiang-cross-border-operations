@@ -218,7 +218,7 @@ def verify(family,api,cfg):
  def one(pid):
   f=BASE/'商品'/pid
   if(f/'verification.json').exists():
-   old=b.load(f/'verification.json');last=max((b.load(f/name).get('at','')for name in ['update_once.json','attribute_repair_once.json','gallery_repair_once.json','public_style_once.json','hero_quality_once.json','business_correction_once.json','optional_attribute_clear_once.json']if(f/name).exists()),default='')
+   old=b.load(f/'verification.json');last=max((b.load(f/name).get('at','')for name in ['update_once.json','attribute_repair_once.json','gallery_repair_once.json','public_style_once.json','hero_quality_once.json','business_correction_once.json','optional_attribute_clear_once.json','title_repair_once.json']if(f/name).exists()),default='')
    if old.get('state')=='FORMAL_FIELDS_SCORE_PASS' and old.get('get_observed_at','')>last:print(pid,'UNCHANGED_FORMAL_PASS',flush=True);return
   got=read_only_call(api,cfg,'alibaba.icbu.product.get',{'product_id':pid,'language':'ENGLISH'});b.save(f/'after_get.json',got);p=got['product']
   if p['status']!='approved':b.save(f/'verification.json',{'state':'REVIEWING','at':b.now(),'status':p['status'],'display':p['display']});print(pid,'REVIEWING',flush=True);return

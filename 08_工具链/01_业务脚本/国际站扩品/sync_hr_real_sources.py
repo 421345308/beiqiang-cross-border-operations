@@ -1,5 +1,5 @@
 from pathlib import Path
-from datetime import datetime,timezone
+from datetime import datetime,timezone,timedelta
 import json,sys,copy,importlib.util
 ROOT=Path(__file__).resolve().parents[3];BASE=ROOT/'02_Alibaba运营/05_扩品工程/执行记录/HR实源替换';REG=ROOT/'02_Alibaba运营/05_扩品工程/数据/产品与链接台账.json'
 sys.path.insert(0,str(Path(__file__).parent));import replace_hr_real_sources as op
@@ -68,7 +68,7 @@ def sync():
  old=next((w for w in d['workstreams']if w['name']==ws['name']),None)
  if old:old.update(ws)
  else:d['workstreams'].append(ws)
- d['updated_on']='2026-10-13';op.b.save(REG,d)
+ d['updated_on']=datetime.now(timezone(timedelta(hours=8))).date().isoformat();op.b.save(REG,d)
  remaining=[p['id']for p in d['products']if p['id'].startswith('HR')and p['source_state']in ['MISSING','CANDIDATE','CONFLICT']and p['id']not in op.TARGETS]
  progress_file=BASE/'当前进度.json'
  previous=op.b.load(progress_file)if progress_file.exists()else{}

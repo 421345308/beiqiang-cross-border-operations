@@ -1,0 +1,472 @@
+{
+  "candidate": "shnx_2527411",
+  "source_artno": "726C",
+  "supplier": "四海鞋业",
+  "source_url": "https://shnx.sooxie.com/detail/2527411",
+  "source_price_cny": 33,
+  "source_color_labels": [
+    "军绿色",
+    "黑色"
+  ],
+  "colors": [
+    "Military Green",
+    "Black"
+  ],
+  "sizes": [
+    39,
+    40,
+    41,
+    42,
+    43,
+    44
+  ],
+  "upper": "Mesh",
+  "lining": "Other",
+  "midsole": "Other",
+  "outsole": "Other",
+  "closure": "Lace-up",
+  "style": [
+    "Sporty",
+    "Mesh Panel Sneakers"
+  ],
+  "seasons": [
+    "All Seasons"
+  ],
+  "feature": "Fashion Trend",
+  "category_id": 201334413,
+  "local_intent_candidates": [
+    "网面拼接/系带运动休闲鞋"
+  ],
+  "materials_evidence": [
+    "Source photo04 explicitly describes 小网眼结构,06 macro shows actual open-texture mesh beneath overlay panels. Upper Mesh is a structural mesh-panel description, not a claim that all overlays share the fibre composition.05lists舒适鞋面/舒适内里/软弹大底 without chemistry; lining/midsole/outsoleOther. Source comfort/grip/heat-transfer statements not adopted as tested performance."
+  ],
+  "titles": {
+    "A": "Men's Mesh Panel Lace-Up Casual Sneakers with Layered Upper and Sculpted Sole Profile",
+    "B": "Lace-Up Athletic Style Casual Shoes with Mesh Panels and Patterned Outsole for Everyday Wear"
+  },
+  "keywords": [
+    "Mesh Panel Lace Up Sneakers",
+    "Athletic Style Casual Shoes",
+    "Layered Upper Casual Sneakers"
+  ],
+  "custom": [
+    "Shoe Profile",
+    "Mesh panels; layered overlays; lace-up; sculpted sole edge"
+  ],
+  "highlights": "Mesh-panel construction: Open-texture sections at the toe and side sit beneath contrasting stitched overlays for a layered athletic casual look.\n\nLace-up adjustment: Eyelet rows across the instep provide an adjustable fastening, with the actual lace guides visible in the top view.\n\nSculpted sole profile: Raised sidewall details and a patterned bottom give buyers a clear view of the sole layout.\n\nCollar and rear loop: A low-top opening with a textured lining surface and a visible heel pull loop completes the upper profile.\n\nAssortment planning: Military Green and Black are listed in EU39-44. Send colour-size quantities, packing preference and destination for a wholesale quotation.",
+  "target_ids": {
+    "A": "1601943544741",
+    "B": "1601943558646"
+  },
+  "source_assets_root": "01_产品资产/01_原始数据包/HR029_726C",
+  "source_date": "2026-10-13",
+  "fx_cny_per_usd": 6.6837,
+  "tiers": [
+    [
+      2,
+      "7.41"
+    ],
+    [
+      50,
+      "6.92"
+    ],
+    [
+      100,
+      "6.42"
+    ]
+  ],
+  "page_state": "FORMAL_FIELDS_SCORE_PASS",
+  "selection_review": {
+    "state": "REVIEWED_ADOPT",
+    "private_backend_evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/经营数据与选款.json",
+    "reason": "Existing HR029 contact signals prioritize preserving mesh-panel/lace-up athletic casual direction. Source726C CNY33 resembles the layered profile more closely than CNY20 thin-sidewall J55 and costs less than CNY41 solid-upper1712. Complete22actualphotos, original bottom/macro/wear/color evidence and current purchasing entrance.",
+    "data_limit": "Historical HR029 engagement does not prove future726C demand; old grey/navy colours not fabricated as source options.",
+    "cost_usd": 4.937384981372593,
+    "gross_difference_usd": [
+      2.4726,
+      1.9826,
+      1.4826
+    ],
+    "comparison_limit": "No exact same-model Alibaba quote verified. Procurement-cost difference against specific candidates recorded; not a market-cheapest or net-margin guarantee.",
+    "price_floor": "50/40/30 percent cost markup; order-level packing/QC/platform/payment/freight/tax estimate required."
+  },
+  "dedup": "Exact source726C URL and model absent from existing registry sources, and no existing product adopted this supplier/model. Entire22productframes reviewed, sidebar excluded; source genericFASHION marks kept. No shoe redraw, no worldwide-brand clone or invented sole performance.",
+  "platform_group_id": 971467417,
+  "platform_group_name": "Athletic & Running Style Shoes",
+  "store_group_review": "Official current existing athletic-style grouping reused; group name is not a performance-running promise.",
+  "company_faq_source": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/通用FAQ与公司简介.json",
+  "do_not_claim": [
+    "physical stock",
+    "tested slip resistance",
+    "medical comfort",
+    "unverified midsole material"
+  ],
+  "assets_layout": {
+    "M1": {
+      "buyer_question": "What is the actual offered shoe?",
+      "title": null,
+      "subtitle": "",
+      "photos": [
+        {
+          "index": 21,
+          "box": [
+            15,
+            15,
+            985,
+            985
+          ],
+          "crop": [
+            45,
+            115,
+            720,
+            455
+          ]
+        }
+      ],
+      "text": []
+    },
+    "M2": {
+      "buyer_question": "How does it look worn?",
+      "title": "Athletic casual profile",
+      "subtitle": "Mesh panels and a sculpted sidewall in an everyday outfit.",
+      "photos": [
+        {
+          "index": 12,
+          "box": [
+            45,
+            215,
+            955,
+            935
+          ],
+          "crop": [
+            65,
+            90,
+            755,
+            1210
+          ]
+        }
+      ],
+      "text": []
+    },
+    "M3": {
+      "buyer_question": "What are the mesh and overlay details?",
+      "title": "Mesh beneath stitched overlays",
+      "subtitle": "Original close-up of the panel construction.",
+      "photos": [
+        {
+          "index": 6,
+          "box": [
+            45,
+            215,
+            955,
+            935
+          ],
+          "crop": [
+            48,
+            220,
+            727,
+            850
+          ]
+        }
+      ],
+      "text": []
+    },
+    "M4": {
+      "buyer_question": "Which colours and EU sizes can I request?",
+      "title": "Colour & EU assortment",
+      "subtitle": "Military Green and Black share the same shoe construction.",
+      "photos": [
+        {
+          "index": 21,
+          "box": [
+            45,
+            240,
+            485,
+            850
+          ],
+          "crop": [
+            45,
+            115,
+            720,
+            455
+          ]
+        },
+        {
+          "index": 22,
+          "box": [
+            515,
+            240,
+            955,
+            850
+          ],
+          "crop": [
+            45,
+            115,
+            720,
+            450
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "Military Green",
+          "xy": [
+            65,
+            870
+          ],
+          "size": 25
+        },
+        {
+          "value": "Black",
+          "xy": [
+            535,
+            870
+          ],
+          "size": 25
+        },
+        {
+          "value": "EU 39-44",
+          "xy": [
+            45,
+            930
+          ],
+          "size": 32
+        }
+      ]
+    },
+    "M5": {
+      "buyer_question": "How are the laces and opening arranged?",
+      "title": "Lace guides & collar view",
+      "subtitle": "Actual top view of the Black shoe.",
+      "photos": [
+        {
+          "index": 16,
+          "box": [
+            45,
+            215,
+            955,
+            935
+          ],
+          "crop": [
+            20,
+            40,
+            785,
+            1030
+          ]
+        }
+      ],
+      "text": []
+    },
+    "D1": {
+      "buyer_question": "What bottom pattern can I assess?",
+      "title": "Actual outsole pattern",
+      "subtitle": "Original bottom view paired with the visible sole outline.",
+      "photos": [
+        {
+          "index": 21,
+          "box": [
+            45,
+            215,
+            955,
+            1070
+          ],
+          "crop": [
+            45,
+            855,
+            720,
+            1135
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "Raised tread blocks and sidewall detailing.",
+          "xy": [
+            45,
+            1140
+          ],
+          "size": 25
+        }
+      ]
+    },
+    "D2": {
+      "buyer_question": "What lining surface and opening are visible?",
+      "title": "Collar texture & low-top opening",
+      "subtitle": "Original close-up of the shoe opening.",
+      "photos": [
+        {
+          "index": 7,
+          "box": [
+            45,
+            215,
+            955,
+            1070
+          ],
+          "crop": [
+            105,
+            140,
+            718,
+            840
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "Rear pull loop shown in the profile photographs.",
+          "xy": [
+            45,
+            1140
+          ],
+          "size": 25
+        }
+      ]
+    },
+    "D3": {
+      "buyer_question": "How does the side profile appear?",
+      "title": "Layered side profile",
+      "subtitle": "Actual shoe worn in the source photograph.",
+      "photos": [
+        {
+          "index": 14,
+          "box": [
+            45,
+            215,
+            955,
+            1070
+          ],
+          "crop": [
+            40,
+            40,
+            785,
+            1030
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "Lace-up fastening and curved stitched overlays.",
+          "xy": [
+            45,
+            1140
+          ],
+          "size": 25
+        }
+      ]
+    },
+    "D4": {
+      "buyer_question": "Which colours and EU sizes can I request?",
+      "title": "Colour & EU assortment",
+      "subtitle": "Military Green and Black share the same shoe construction.",
+      "photos": [
+        {
+          "index": 21,
+          "box": [
+            45,
+            240,
+            485,
+            850
+          ],
+          "crop": [
+            45,
+            115,
+            720,
+            455
+          ]
+        },
+        {
+          "index": 22,
+          "box": [
+            515,
+            240,
+            955,
+            850
+          ],
+          "crop": [
+            45,
+            115,
+            720,
+            450
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "Military Green",
+          "xy": [
+            65,
+            870
+          ],
+          "size": 25
+        },
+        {
+          "value": "Black",
+          "xy": [
+            535,
+            870
+          ],
+          "size": 25
+        },
+        {
+          "value": "EU 39-44",
+          "xy": [
+            45,
+            1170
+          ],
+          "size": 32
+        }
+      ]
+    },
+    "SKU_MILITARY_GREEN": {
+      "buyer_question": "Which colour is this SKU?",
+      "title": null,
+      "subtitle": "",
+      "photos": [
+        {
+          "index": 21,
+          "box": [
+            25,
+            25,
+            975,
+            975
+          ],
+          "crop": [
+            45,
+            115,
+            720,
+            455
+          ]
+        }
+      ],
+      "text": []
+    },
+    "SKU_BLACK": {
+      "buyer_question": "Which colour is this SKU?",
+      "title": null,
+      "subtitle": "",
+      "photos": [
+        {
+          "index": 22,
+          "box": [
+            25,
+            25,
+            975,
+            975
+          ],
+          "crop": [
+            45,
+            115,
+            720,
+            450
+          ]
+        }
+      ],
+      "text": []
+    }
+  },
+  "source_id": "src-hr-hr029-726c",
+  "source_evidence": [
+    "01_产品资产/01_原始数据包/HR029_726C/source.json",
+    "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR029/素材清单.json"
+  ],
+  "procurement_capability": "CURRENT_REAL_SHOE_AND_PROCUREMENT_ENTRY_VERIFIED_NOT_ORDER_STOCK"
+}

@@ -5,7 +5,7 @@ Read-only toward Alibaba. Never infer source identity from titles or a score.
 from pathlib import Path
 from urllib.parse import urlsplit
 from collections import Counter
-from datetime import datetime,timezone
+from datetime import datetime,timezone,timedelta
 import hashlib,json,sys,argparse,time
 
 ROOT=Path(__file__).resolve().parents[3]
@@ -15,9 +15,16 @@ sys.path.insert(0,str(ROOT/'08_工具链/06_工作区维护'))
 import build_product_workspace as workspace
 
 def load(p):return json.loads((ROOT/p).read_text(encoding='utf8'))
-def save(p,v):
+def save(p,v,expected_sha=None):
     path=ROOT/p;path.parent.mkdir(parents=True,exist_ok=True)
-    path.write_text(json.dumps(v,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+    temporary=path.with_name(path.name+'.hr-reconcile.tmp')
+    temporary.write_text(json.dumps(v,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+    for attempt in range(3):
+        if expected_sha is not None:assert hashlib.sha256(path.read_bytes()).hexdigest()==expected_sha,'Current registry changed during read-only reconciliation; reload rather than overwrite'
+        try:temporary.replace(path);break
+        except OSError:
+            if attempt==2:raise
+            time.sleep(1)
 def ident(url):return urlsplit(url).path.rsplit('/',1)[-1].split('.')[0]
 
 def main():
@@ -26,16 +33,28 @@ def main():
     assert catalog['complete']
     live={str(x['id']):x for x in catalog['products']}
     profiles=load(BASE.relative_to(ROOT)/'已有实款对应.json')
-    registry=load(REG.relative_to(ROOT));products={p['id']:p for p in registry['products']}
+    registry_bytes=REG.read_bytes();registry=json.loads(registry_bytes);registry_sha=hashlib.sha256(registry_bytes).hexdigest();products={p['id']:p for p in registry['products']}
     now=datetime.now(timezone.utc).isoformat()
     for profile in profiles['families']:
         if args.family and profile['family']!=args.family:continue
         family=profile['family'];bank=load(profile['approved_bank']);rows=[]
         root_map=profile.get('evidence_format')=='ROOT_APPROVED_MAP'
-        current_five=profile.get('evidence_format') in ['CURRENT_PREFIXLESS_BANK','CURRENT_ROLE_MAP','CURRENT_ROLE_LIST','LAYERED_APPROVED_BANK']
+        current_five=profile.get('evidence_format') in ['CURRENT_PREFIXLESS_BANK','CURRENT_ROLE_MAP','CURRENT_ROLE_LIST','LAYERED_APPROVED_BANK','SPECIFIC_FACT_PACKET_BANK']
         if current_five:
             visual=load(profile['approved_visual']);fact=load(profile['source_fact_file'])
-            if profile['evidence_format']=='LAYERED_APPROVED_BANK':
+            if profile['evidence_format']=='SPECIFIC_FACT_PACKET_BANK':
+                assert family=='HR034' and fact['source_model']=='7869' and fact['url']==profile['source_url']
+                assert fact['materials']==profile['materials']
+                for file in fact['fact_documents']:
+                    assert hashlib.sha256((ROOT/file['file']).read_bytes()).hexdigest()==file['sha256']
+                originals=load(fact['raw_manifest']);assert originals['product_url']==profile['source_url']
+                for raw in originals['files']:
+                    assert hashlib.sha256((ROOT/fact['raw_photo_folder']/raw['file']).read_bytes()).hexdigest()==raw['sha256']
+                assert visual['all_current_main_roles_hash_verified'] and visual['source_colour_review']=='Grey source01/source04 only; other original colours excluded'
+                for role,row in bank.items():
+                    assert row['sha256']==visual['roles'][role]['sha256']==hashlib.sha256((ROOT/row['path']).read_bytes()).hexdigest()
+                raw_evidence=profile['approved_visual']
+            elif profile['evidence_format']=='LAYERED_APPROVED_BANK':
                 assert family=='HR044' and fact['source_model']=='L795' and fact['url']==profile['source_url']
                 from bs4 import BeautifulSoup
                 source_file=ROOT/fact['source_page_file']
@@ -122,8 +141,11 @@ def main():
                     path=Path(file.replace('\\\\','\\'))
                     assert hashlib.sha256(path.read_bytes()).hexdigest()==item['sourceSha256']
             raw_evidence=profile['approved_visual']
-        ls=[l for l in registry['listings']if l.get('product_id')==family]
-        assert {l['id']for l in ls}==set(profile['ids'])
+        family_links=[l for l in registry['listings']if l.get('product_id')==family]
+        missing=set(profile.get('not_returned_ids',[]))
+        assert not missing.intersection(live),'Unavailable-ID exception must match current complete catalog'
+        assert {l['id']for l in family_links}==set(profile['ids'])|missing
+        ls=[l for l in family_links if l['id']in profile['ids']]
         for l in ls:
             pid=l['id'];variant=l['model'].split('-')[-1];p=live[pid]
             if current_five:
@@ -189,7 +211,8 @@ def main():
                'source':source,'links':rows,'basis':profile['source_table_basis'],
                'source_current_access':profile['source_current_access'],
                'platform_mutation':'NONE_EXISTING_ACTUAL_SHOE_PRESERVED',
-               'physical_stock':'NOT_CONFIRMED_ORDER_SPECIFIC'}
+               'physical_stock':'NOT_CONFIRMED_ORDER_SPECIFIC',
+               'not_returned_ids':sorted(missing),'not_returned_scope':'Not returned in current complete catalog; not source-validated as current links, not recreated or deleted'}
         save((BASE/family/'来源与正式绑定核验.json').relative_to(ROOT),proof)
         ref=(BASE/family/'来源与正式绑定核验.json').relative_to(ROOT).as_posix()
         product['evidence']=list(dict.fromkeys([*product.get('evidence',[]),ref]))
@@ -200,7 +223,7 @@ def main():
             l.setdefault('optimization',{})['source_binding_reconciliation']={'state':proof['state'],'source_id':sid,'at':now,'evidence':[ref],'platform_mutation':'NONE'}
         print(family,'EXISTING_SOURCE_BOUND',len(rows),flush=True)
     errors=workspace.validate(registry);assert not errors,errors
-    registry['updated_on']='2026-10-13';save(REG.relative_to(ROOT),registry)
+    registry['updated_on']=datetime.now(timezone(timedelta(hours=8))).date().isoformat();save(REG.relative_to(ROOT),registry,expected_sha=registry_sha)
     for p,data in workspace.build(registry).items():
         for attempt in range(3):
             try:
