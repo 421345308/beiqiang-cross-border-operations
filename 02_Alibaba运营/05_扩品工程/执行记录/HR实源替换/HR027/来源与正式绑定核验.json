@@ -1,0 +1,78 @@
+{
+  "family": "HR027",
+  "at": "2026-10-13T17:08:26.624805+00:00",
+  "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+  "source": {
+    "id": "src-hr-hr027-26qzya22-130",
+    "url": "https://hzmshoes.en.made-in-china.com/product/oLNUdrYMATkK/China-Custom-Soft-Walking-Style-Suede-Lace-up-Ballet-Sneaker-for-Women-Casual-Sneakers-Manufacturer.html",
+    "shop_url": "https://hzmshoes.en.made-in-china.com",
+    "supplier": "Guangzhou Weirui Shoes Co., Ltd.",
+    "model": "26QZYA22-130",
+    "price": "未核当前进货报价",
+    "currency": "USD",
+    "unit": "双",
+    "price_terms": "历史已采用实款对应恢复；当前数量、价格、包装及交期逐单询价，不从平台售价或样品费反推采购价。",
+    "observed_at": "2026-09-28",
+    "evidence": [
+      "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR027/复用图审依据.json",
+      "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR027/复用图库绑定.json",
+      "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR027/来源与正式绑定核验.json"
+    ]
+  },
+  "links": [
+    {
+      "id": "1601943614355",
+      "model": "HR027-A",
+      "formal_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943614355/formal_get.json",
+      "formal_observed_at": "2026-10-12T22:43:05.474650+00:00",
+      "checks": {
+        "approved_actual_product_images_match": true,
+        "whole_six_images_match_current_catalog": true,
+        "raw_photo_hashes": true,
+        "materials_match_specific_model_table": true,
+        "source_eu_cartesian": true,
+        "approved_y": true
+      },
+      "main_images": [
+        "https://sc04.alicdn.com/kf/Hec00b497950f4ccd8d84e011cbb30f9ds.png",
+        "https://sc04.alicdn.com/kf/Hff3d401ed10b42c3bfa9a9cc8e342322v.png",
+        "https://sc04.alicdn.com/kf/H9e358df5cdda4cd7acb3a85f0a69578cz.png",
+        "https://sc04.alicdn.com/kf/Hbedf8ce9f5274476bfd2bd82122e9c763.png",
+        "https://sc04.alicdn.com/kf/Ha99e45748a444f40b64cae7e77ea60caE.png",
+        "https://sc04.alicdn.com/kf/Hb4c5010eff8046b3bcdda0daef75acfdb.png"
+      ],
+      "sku_count": 12
+    },
+    {
+      "id": "1601943654096",
+      "model": "HR027-B",
+      "formal_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943654096/formal_get.json",
+      "formal_observed_at": "2026-10-12T22:44:10.610653+00:00",
+      "checks": {
+        "approved_actual_product_images_match": true,
+        "whole_six_images_match_current_catalog": true,
+        "raw_photo_hashes": true,
+        "materials_match_specific_model_table": true,
+        "source_eu_cartesian": true,
+        "approved_y": true
+      },
+      "main_images": [
+        "https://sc04.alicdn.com/kf/H94c6f8c8ac404e4d8850c90fe53dd4a9j.png",
+        "https://sc04.alicdn.com/kf/Hff3d401ed10b42c3bfa9a9cc8e342322v.png",
+        "https://sc04.alicdn.com/kf/H9e358df5cdda4cd7acb3a85f0a69578cz.png",
+        "https://sc04.alicdn.com/kf/Hbedf8ce9f5274476bfd2bd82122e9c763.png",
+        "https://sc04.alicdn.com/kf/Ha99e45748a444f40b64cae7e77ea60caE.png",
+        "https://sc04.alicdn.com/kf/Hb4c5010eff8046b3bcdda0daef75acfdb.png"
+      ],
+      "sku_count": 12
+    }
+  ],
+  "basis": "Specific model source-page packet, original download SHA evidence, root-approved five product-role assets and current exact formal colour/EU/material/cartesian bindings. Preserve already-adopted real shoe; no duplicate replacement from stale missing-source metadata.",
+  "source_current_access": "Historical exact product procurement inquiry entrance retained; current quotation and actual stock not freshly verified. Platform price/MOQ preserved, not recalculated from sample fees.",
+  "platform_mutation": "NONE_EXISTING_ACTUAL_SHOE_PRESERVED",
+  "physical_stock": "NOT_CONFIRMED_ORDER_SPECIFIC",
+  "not_returned_ids": [
+    "1601943503989"
+  ],
+  "not_returned_scope": "Not returned in current complete catalog; not source-validated as current links, not recreated or deleted"
+}

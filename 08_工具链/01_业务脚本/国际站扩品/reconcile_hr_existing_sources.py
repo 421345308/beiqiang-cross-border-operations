@@ -39,18 +39,51 @@ def main():
         if args.family and profile['family']!=args.family:continue
         family=profile['family'];bank=load(profile['approved_bank']);rows=[]
         root_map=profile.get('evidence_format')=='ROOT_APPROVED_MAP'
-        current_five=profile.get('evidence_format') in ['CURRENT_PREFIXLESS_BANK','CURRENT_ROLE_MAP','CURRENT_ROLE_LIST','LAYERED_APPROVED_BANK','SPECIFIC_FACT_PACKET_BANK']
+        current_five=profile.get('evidence_format') in ['CURRENT_PREFIXLESS_BANK','CURRENT_ROLE_MAP','CURRENT_ROLE_LIST','LAYERED_APPROVED_BANK','SPECIFIC_FACT_PACKET_BANK','SOURCE_PACKET_BANK']
         if current_five:
             visual=load(profile['approved_visual']);fact=load(profile['source_fact_file'])
-            if profile['evidence_format']=='SPECIFIC_FACT_PACKET_BANK':
-                assert family=='HR034' and fact['source_model']=='7869' and fact['url']==profile['source_url']
+            if profile['evidence_format']=='SOURCE_PACKET_BANK':
+                assert family in ['HR026','HR027','HR028']
+                assert fact['source_model']==profile['source_model'] and fact['url']==profile['source_url']
+                assert fact['materials']==profile['materials'] and visual['all_current_main_roles_hash_verified']
+                source=ROOT/fact['source_page_file']
+                body=source.read_text(encoding='utf8')
+                assert hashlib.sha256(source.read_bytes()).hexdigest()==fact['source_page_sha256']
+                assert profile['source_url'] in body and profile['source_model'] in body
+                if fact['source_page_type']=='html':
+                    from bs4 import BeautifulSoup
+                    body=BeautifulSoup(body,'html.parser').get_text(' ',strip=True)
+                for token in fact['source_table_tokens']: assert token in body
+                manifest=ROOT/fact['raw_manifest']
+                assert hashlib.sha256(manifest.read_bytes()).hexdigest()==fact['raw_manifest_sha256']
+                if family in ['HR026','HR027']:
+                    raw_hashes={Path(x['Path']).name:x['Hash'].lower()for x in load(fact['raw_manifest'])}
+                else:
+                    raw_hashes={x.split('\t')[0]:x.split('\t')[2]for x in manifest.read_text(encoding='utf8').splitlines()if x.strip()}
+                for raw in fact['selected_originals']:
+                    assert raw_hashes[Path(raw['file']).name]==raw['sha256']==hashlib.sha256((ROOT/raw['file']).read_bytes()).hexdigest()
+                for document in fact['fact_documents']:
+                    assert hashlib.sha256((ROOT/document['file']).read_bytes()).hexdigest()==document['sha256']
+                for role,row in bank.items():
+                    assert row['sha256']==visual['roles'][role]['sha256']==hashlib.sha256((ROOT/row['path']).read_bytes()).hexdigest()
+                raw_evidence=profile['approved_visual']
+            elif profile['evidence_format']=='SPECIFIC_FACT_PACKET_BANK':
+                assert family in ['HR034','HR025'] and fact['source_model']==profile['source_model'] and fact['url']==profile['source_url']
                 assert fact['materials']==profile['materials']
                 for file in fact['fact_documents']:
                     assert hashlib.sha256((ROOT/file['file']).read_bytes()).hexdigest()==file['sha256']
-                originals=load(fact['raw_manifest']);assert originals['product_url']==profile['source_url']
-                for raw in originals['files']:
-                    assert hashlib.sha256((ROOT/fact['raw_photo_folder']/raw['file']).read_bytes()).hexdigest()==raw['sha256']
-                assert visual['all_current_main_roles_hash_verified'] and visual['source_colour_review']=='Grey source01/source04 only; other original colours excluded'
+                originals=load(fact['raw_manifest'])
+                if family=='HR034':
+                    assert originals['product_url']==profile['source_url']
+                    for raw in originals['files']:
+                        assert hashlib.sha256((ROOT/fact['raw_photo_folder']/raw['file']).read_bytes()).hexdigest()==raw['sha256']
+                    assert visual['source_colour_review']=='Grey source01/source04 only; other original colours excluded'
+                else:
+                    assert '24DZYA22-87'in originals['candidate']
+                    for raw in fact['selected_originals']:
+                        assert originals['files'][raw['manifest_key']]==raw['sha256']==hashlib.sha256((ROOT/raw['file']).read_bytes()).hexdigest()
+                    assert visual['source_colour_review']=='Coffee source1/source4 only; ambiguous grey/taupe excluded'
+                assert visual['all_current_main_roles_hash_verified']
                 for role,row in bank.items():
                     assert row['sha256']==visual['roles'][role]['sha256']==hashlib.sha256((ROOT/row['path']).read_bytes()).hexdigest()
                 raw_evidence=profile['approved_visual']

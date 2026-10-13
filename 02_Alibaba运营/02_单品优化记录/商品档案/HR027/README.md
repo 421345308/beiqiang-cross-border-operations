@@ -2,15 +2,20 @@
 
 此页由唯一台账生成，是本款唯一资料入口；修改事实到下方唯一字段文件或台账，平台正式值到按ID保存的回读原件。原始包只读，候选/历史材料不当当前线上素材。
 
-来源状态：`MISSING`。下一步：补实鞋与有效采购入口；不按存量链接重复搜索。
+来源状态：`ADOPTED`。下一步：已采用真实鞋型保持；原始像素、当前六图和EU材料对应已核，当前交易条件逐单确认，后续按本款质量问题优化。
 
 ## 当前资料与实物证据
 
-- 本地事实/准备字段：尚未指定；不从线上页面证明自产或实物能力。
+- 本地事实/准备字段：[来源与正式绑定核验.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/HR027/%E6%9D%A5%E6%BA%90%E4%B8%8E%E6%AD%A3%E5%BC%8F%E7%BB%91%E5%AE%9A%E6%A0%B8%E9%AA%8C.json)
 
 ## 采购来源（内部使用）
 
-采购商品直链待补；不补造供应商、价格或供给。
+- 已采用记录：[Guangzhou Weirui Shoes Co., Ltd. / 26QZYA22-130](https://hzmshoes.en.made-in-china.com/product/oLNUdrYMATkK/China-Custom-Soft-Walking-Style-Suede-Lace-up-Ballet-Sneaker-for-Women-Casual-Sneakers-Manufacturer.html)
+  - 保存的标价：USD 未核当前进货报价 / 双；原观察日期：2026-09-28。历史已采用实款对应恢复；当前数量、价格、包装及交期逐单询价，不从平台售价或样品费反推采购价。
+  - 供方店铺入口：[https://hzmshoes.en.made-in-china.com](https://hzmshoes.en.made-in-china.com)
+  - 来源原件：[复用图审依据.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/HR027/%E5%A4%8D%E7%94%A8%E5%9B%BE%E5%AE%A1%E4%BE%9D%E6%8D%AE.json)
+  - 来源原件：[复用图库绑定.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/HR027/%E5%A4%8D%E7%94%A8%E5%9B%BE%E5%BA%93%E7%BB%91%E5%AE%9A.json)
+  - 来源原件：[来源与正式绑定核验.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/HR027/%E6%9D%A5%E6%BA%90%E4%B8%8E%E6%AD%A3%E5%BC%8F%E7%BB%91%E5%AE%9A%E6%A0%B8%E9%AA%8C.json)
 
 ## 国际站链接与本地正式字段
 
@@ -61,15 +66,6 @@
 ## 其他原始/正式证据
 
 - [HR001-HR067_201条最终全链路回读.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E7%83%AD%E6%A6%9C%E6%8C%81%E7%BB%AD%E6%89%A9%E5%93%81_2026-09-05/HR001-HR067_201%E6%9D%A1%E6%9C%80%E7%BB%88%E5%85%A8%E9%93%BE%E8%B7%AF%E5%9B%9E%E8%AF%BB.json)
-- [manifest.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943654096/manifest.json)
-- [prepared.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943654096/prepared.json)
-- [update_once.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943654096/update_once.json)
-- [update_receipt.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943654096/update_receipt.json)
-- [after_get.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943654096/after_get.json)
-- [after_render.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943654096/after_render.json)
-- [verification.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943654096/verification.json)
-- [public_verification.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943654096/public_verification.json)
-- [non_target_difference.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943654096/non_target_difference.json)
 - [manifest.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943614355/manifest.json)
 - [prepared.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943614355/prepared.json)
 - [update_once.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943614355/update_once.json)
@@ -77,8 +73,17 @@
 - [after_get.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943614355/after_get.json)
 - [after_render.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943614355/after_render.json)
 - [verification.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943614355/verification.json)
-- [public_verification.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943614355/public_verification.json)
 - [non_target_difference.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943614355/non_target_difference.json)
+- [manifest.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943654096/manifest.json)
+- [prepared.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943654096/prepared.json)
+- [update_once.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943654096/update_once.json)
+- [update_receipt.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943654096/update_receipt.json)
+- [after_get.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943654096/after_get.json)
+- [after_render.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943654096/after_render.json)
+- [verification.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943654096/verification.json)
+- [non_target_difference.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943654096/non_target_difference.json)
+- [public_verification.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943614355/public_verification.json)
+- [public_verification.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943654096/public_verification.json)
 - [before_get.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943614355/V8/before_get.json)
 - [before_render.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943614355/V8/before_render.json)
 - [immediate_prewrite_get.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943614355/V8/immediate_prewrite_get.json)
@@ -86,6 +91,9 @@
 - [prepared.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943614355/V8/prepared.json)
 - [update_once.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943614355/V8/update_once.json)
 - [update_receipt.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943614355/V8/update_receipt.json)
+- [after_get.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943614355/V8/after_get.json)
+- [after_render.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943614355/V8/after_render.json)
+- [verification.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943614355/V8/verification.json)
 - [after_get.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943654096/V8/after_get.json)
 - [after_render.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943654096/V8/after_render.json)
 - [before_get.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943654096/V8/before_get.json)
@@ -96,8 +104,7 @@
 - [update_once.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943654096/V8/update_once.json)
 - [update_receipt.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943654096/V8/update_receipt.json)
 - [verification.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943654096/V8/verification.json)
-- [after_get.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943614355/V8/after_get.json)
-- [after_render.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943614355/V8/after_render.json)
-- [verification.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943614355/V8/verification.json)
+- [public_verification.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943614355/V8/public_verification.json)
+- [public_verification.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601943654096/V8/public_verification.json)
 
 原件、正式回执与当前资料通过本页关联，不再复制成第二套商品库。

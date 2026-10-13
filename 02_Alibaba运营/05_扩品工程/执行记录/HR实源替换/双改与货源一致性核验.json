@@ -1,6 +1,6 @@
 {
   "state": "CURRENT_SOURCE_PLATFORM_LOCAL_CONSISTENCY_PASS",
-  "at": "2026-10-13T16:22:08.648065+00:00",
+  "at": "2026-10-13T17:18:02.786511+00:00",
   "rows": [
     {
       "family": "HR030",
@@ -570,21 +570,65 @@
       "family": "HR059",
       "model": "HR059-A",
       "id": "1601943790138",
-      "state": "SUBMITTED",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
       "source_id": "src-hr-hr059-5612",
       "checks": {
         "one_current_real_source": true,
         "listing_state_matches_api": true,
         "source_plan_target_id": true,
-        "submission_stage_ledger_correct": true
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
       }
     },
     {
       "family": "HR059",
       "model": "HR059-B",
       "id": "1601943767266",
-      "state": "SUBMITTED",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
       "source_id": "src-hr-hr059-5612",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR059",
+      "model": "HR059-C",
+      "id": "1601943779211",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr059-5612",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR061",
+      "model": "HR061-A",
+      "id": "1601943700660",
+      "state": "REVIEWING",
+      "source_id": "src-hr-hr061-l895",
       "checks": {
         "one_current_real_source": true,
         "listing_state_matches_api": true,
@@ -593,11 +637,24 @@
       }
     },
     {
-      "family": "HR059",
-      "model": "HR059-C",
-      "id": "1601943779211",
-      "state": "SUBMITTED",
-      "source_id": "src-hr-hr059-5612",
+      "family": "HR061",
+      "model": "HR061-B",
+      "id": "1601943748344",
+      "state": "REVIEWING",
+      "source_id": "src-hr-hr061-l895",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true
+      }
+    },
+    {
+      "family": "HR061",
+      "model": "HR061-C",
+      "id": "1601943727538",
+      "state": "REVIEWING",
+      "source_id": "src-hr-hr061-l895",
       "checks": {
         "one_current_real_source": true,
         "listing_state_matches_api": true,
@@ -1255,6 +1312,104 @@
       "id": "1601943543826",
       "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
       "source_id": "src-hr-hr034-7869",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR025",
+      "model": "HR025-A",
+      "id": "1601943541766",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr025-24dzya22-87",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR025",
+      "model": "HR025-B",
+      "id": "1601943535810",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr025-24dzya22-87",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR025",
+      "model": "HR025-C",
+      "id": "1601943597447",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr025-24dzya22-87",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR027",
+      "model": "HR027-A",
+      "id": "1601943614355",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr027-26qzya22-130",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR027",
+      "model": "HR027-B",
+      "id": "1601943654096",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr027-26qzya22-130",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR028",
+      "model": "HR028-A",
+      "id": "1601943558633",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr028-24q2508-1",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR028",
+      "model": "HR028-B",
+      "id": "1601943592466",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr028-24q2508-1",
       "checks": {
         "one_current_real_source": true,
         "formal_source_bound": true,

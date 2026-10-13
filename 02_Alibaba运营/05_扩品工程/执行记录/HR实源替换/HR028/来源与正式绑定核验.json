@@ -1,0 +1,78 @@
+{
+  "family": "HR028",
+  "at": "2026-10-13T17:09:12.571273+00:00",
+  "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+  "source": {
+    "id": "src-hr-hr028-24q2508-1",
+    "url": "https://hzmshoes.en.made-in-china.com/product/ZFOThDarkBtd/China-Custom-Fashion-Trend-Genuine-Leather-Lace-up-Walking-Style-Soft-Casual-Shoes-Woman-Sneakers-Factory-German-Training-Shoes.html",
+    "shop_url": "https://hzmshoes.en.made-in-china.com",
+    "supplier": "Guangzhou Weirui Shoes Co., Ltd.",
+    "model": "24Q2508-1",
+    "price": "未核当前进货报价",
+    "currency": "USD",
+    "unit": "双",
+    "price_terms": "历史已采用实款对应恢复；当前数量、价格、包装及交期逐单询价，不从平台售价或样品费反推采购价。",
+    "observed_at": "2026-09-28",
+    "evidence": [
+      "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR028/复用图审依据.json",
+      "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR028/复用图库绑定.json",
+      "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR028/来源与正式绑定核验.json"
+    ]
+  },
+  "links": [
+    {
+      "id": "1601943558633",
+      "model": "HR028-A",
+      "formal_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943558633/formal_get.json",
+      "formal_observed_at": "2026-10-12T22:36:19.222657+00:00",
+      "checks": {
+        "approved_actual_product_images_match": true,
+        "whole_six_images_match_current_catalog": true,
+        "raw_photo_hashes": true,
+        "materials_match_specific_model_table": true,
+        "source_eu_cartesian": true,
+        "approved_y": true
+      },
+      "main_images": [
+        "https://sc04.alicdn.com/kf/H543feade016647748fa810a6d1dd51a8e.jpg",
+        "https://sc04.alicdn.com/kf/H4c96b9bd71f449a08e0de297324f96853.jpg",
+        "https://sc04.alicdn.com/kf/H79d23bb4716041f2aa48ecc78d192908V.png",
+        "https://sc04.alicdn.com/kf/H52e4aa62d8164b11b219e57f305170e2p.png",
+        "https://sc04.alicdn.com/kf/H1f4fec4e82494708afba4483a2c6f003G.png",
+        "https://sc04.alicdn.com/kf/Hb4e8ace9a77d4dfd9ca843864fcbf6f6x.png"
+      ],
+      "sku_count": 18
+    },
+    {
+      "id": "1601943592466",
+      "model": "HR028-B",
+      "formal_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943592466/formal_get.json",
+      "formal_observed_at": "2026-10-12T22:36:58.267564+00:00",
+      "checks": {
+        "approved_actual_product_images_match": true,
+        "whole_six_images_match_current_catalog": true,
+        "raw_photo_hashes": true,
+        "materials_match_specific_model_table": true,
+        "source_eu_cartesian": true,
+        "approved_y": true
+      },
+      "main_images": [
+        "https://sc04.alicdn.com/kf/H3c56aebb1ef74f5f9d19f439ce6502f4Q.jpg",
+        "https://sc04.alicdn.com/kf/H4c96b9bd71f449a08e0de297324f96853.jpg",
+        "https://sc04.alicdn.com/kf/H79d23bb4716041f2aa48ecc78d192908V.png",
+        "https://sc04.alicdn.com/kf/H52e4aa62d8164b11b219e57f305170e2p.png",
+        "https://sc04.alicdn.com/kf/H1f4fec4e82494708afba4483a2c6f003G.png",
+        "https://sc04.alicdn.com/kf/Hb4e8ace9a77d4dfd9ca843864fcbf6f6x.png"
+      ],
+      "sku_count": 18
+    }
+  ],
+  "basis": "Specific model source-page packet, original download SHA evidence, root-approved five product-role assets and current exact formal colour/EU/material/cartesian bindings. Preserve already-adopted real shoe; no duplicate replacement from stale missing-source metadata.",
+  "source_current_access": "Historical exact product procurement inquiry entrance retained; current quotation and actual stock not freshly verified. Platform price/MOQ preserved, not recalculated from sample fees.",
+  "platform_mutation": "NONE_EXISTING_ACTUAL_SHOE_PRESERVED",
+  "physical_stock": "NOT_CONFIRMED_ORDER_SPECIFIC",
+  "not_returned_ids": [
+    "1601943580536"
+  ],
+  "not_returned_scope": "Not returned in current complete catalog; not source-validated as current links, not recreated or deleted"
+}

@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-13T16:21:58.110933+00:00",
+  "at": "2026-10-13T17:17:54.399865+00:00",
   "priority_links": [
     {
       "family": "HR030",
@@ -185,29 +185,44 @@
       "family": "HR059",
       "model": "HR059-A",
       "id": "1601943790138",
-      "state": "SUBMITTED"
+      "state": "FORMAL_FIELDS_SCORE_PASS"
     },
     {
       "family": "HR059",
       "model": "HR059-B",
       "id": "1601943767266",
-      "state": "SUBMITTED"
+      "state": "FORMAL_FIELDS_SCORE_PASS"
     },
     {
       "family": "HR059",
       "model": "HR059-C",
       "id": "1601943779211",
-      "state": "SUBMITTED"
+      "state": "FORMAL_FIELDS_SCORE_PASS"
+    },
+    {
+      "family": "HR061",
+      "model": "HR061-A",
+      "id": "1601943700660",
+      "state": "REVIEWING"
+    },
+    {
+      "family": "HR061",
+      "model": "HR061-B",
+      "id": "1601943748344",
+      "state": "REVIEWING"
+    },
+    {
+      "family": "HR061",
+      "model": "HR061-C",
+      "id": "1601943727538",
+      "state": "REVIEWING"
     }
   ],
   "other_hr_families_needing_per_family_source_binding_review": [
     "HR009",
     "HR022",
     "HR023",
-    "HR025",
     "HR026",
-    "HR027",
-    "HR028",
     "HR032",
     "HR033",
     "HR037",
@@ -227,7 +242,6 @@
     "HR057",
     "HR058",
     "HR060",
-    "HR061",
     "HR062",
     "HR064",
     "HR066",

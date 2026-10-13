@@ -3711,6 +3711,73 @@
         "01_产品资产/01_原始数据包/HR059_5612/source.json",
         "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR059/素材清单.json"
       ]
+    },
+    {
+      "id": "src-hr-hr025-24dzya22-87",
+      "url": "https://hzmshoes.en.made-in-china.com/product/rFvtgzJLaXak/China-Custom-High-Quality-Casual-Soft-Genuine-Leather-Winter-Loafers-for-Women-Keep-Warm-Real-Wool-Buckle-Boat-Shoes-Wholesale.html",
+      "shop_url": "https://hzmshoes.en.made-in-china.com",
+      "supplier": "Guangzhou Weirui Shoes Co., Ltd.",
+      "model": "24DZYA22-87",
+      "price": "未核当前进货报价",
+      "currency": "USD",
+      "unit": "双",
+      "price_terms": "历史已采用实款对应恢复；当前数量、价格、包装及交期逐单询价，不从平台售价或样品费反推采购价。",
+      "observed_at": "2026-09-28",
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR025/复用图审依据.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR025/复用图库绑定.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR025/来源与正式绑定核验.json"
+      ]
+    },
+    {
+      "id": "src-hr-hr027-26qzya22-130",
+      "url": "https://hzmshoes.en.made-in-china.com/product/oLNUdrYMATkK/China-Custom-Soft-Walking-Style-Suede-Lace-up-Ballet-Sneaker-for-Women-Casual-Sneakers-Manufacturer.html",
+      "shop_url": "https://hzmshoes.en.made-in-china.com",
+      "supplier": "Guangzhou Weirui Shoes Co., Ltd.",
+      "model": "26QZYA22-130",
+      "price": "未核当前进货报价",
+      "currency": "USD",
+      "unit": "双",
+      "price_terms": "历史已采用实款对应恢复；当前数量、价格、包装及交期逐单询价，不从平台售价或样品费反推采购价。",
+      "observed_at": "2026-09-28",
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR027/复用图审依据.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR027/复用图库绑定.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR027/来源与正式绑定核验.json"
+      ]
+    },
+    {
+      "id": "src-hr-hr028-24q2508-1",
+      "url": "https://hzmshoes.en.made-in-china.com/product/ZFOThDarkBtd/China-Custom-Fashion-Trend-Genuine-Leather-Lace-up-Walking-Style-Soft-Casual-Shoes-Woman-Sneakers-Factory-German-Training-Shoes.html",
+      "shop_url": "https://hzmshoes.en.made-in-china.com",
+      "supplier": "Guangzhou Weirui Shoes Co., Ltd.",
+      "model": "24Q2508-1",
+      "price": "未核当前进货报价",
+      "currency": "USD",
+      "unit": "双",
+      "price_terms": "历史已采用实款对应恢复；当前数量、价格、包装及交期逐单询价，不从平台售价或样品费反推采购价。",
+      "observed_at": "2026-09-28",
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR028/复用图审依据.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR028/复用图库绑定.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR028/来源与正式绑定核验.json"
+      ]
+    },
+    {
+      "id": "src-hr-hr061-l895",
+      "url": "https://cxxy.sooxie.com/detail/2039333",
+      "shop_url": "https://cxxy.sooxie.com",
+      "supplier": "长兴鞋业",
+      "model": "L895",
+      "price": "39.00",
+      "currency": "CNY",
+      "unit": "双",
+      "price_terms": "当前公开来源标价；拿货色码、数量、包装、运税与当日可供条件逐单确认，不代表已采购或固定交期。",
+      "observed_at": "2026-10-13",
+      "evidence": [
+        "01_产品资产/01_原始数据包/HR061_L895/source.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR061/素材清单.json"
+      ]
     }
   ],
   "products": [
@@ -13638,39 +13705,40 @@
       "aliases": [
         "HR025"
       ],
-      "source_state": "MISSING",
-      "adopted_source_id": null,
-      "candidate_source_ids": [],
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-hr-hr025-24dzya22-87",
+      "candidate_source_ids": [
+        "src-hr-hr025-24dzya22-87"
+      ],
       "raw_packages": [],
       "evidence": [
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943535810/manifest.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943535810/prepared.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943535810/update_once.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943535810/update_receipt.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943535810/after_get.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943535810/after_render.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943535810/verification.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943535810/public_verification.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943535810/non_target_difference.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943597447/manifest.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943597447/prepared.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943597447/update_once.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943597447/update_receipt.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943597447/after_get.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943597447/after_render.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943597447/verification.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943597447/public_verification.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943597447/non_target_difference.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943541766/manifest.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943541766/prepared.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943541766/update_once.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943541766/update_receipt.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943597447/manifest.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943597447/prepared.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943597447/update_once.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943597447/update_receipt.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943535810/after_get.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943535810/after_render.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943535810/verification.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943541766/after_get.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943541766/after_render.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943541766/verification.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943541766/public_verification.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943597447/after_get.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943597447/after_render.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943597447/verification.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943535810/non_target_difference.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943541766/non_target_difference.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943535810/V8/after_get.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943597447/non_target_difference.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943535810/public_verification.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943541766/public_verification.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943597447/public_verification.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943535810/V8/before_get.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943535810/V8/before_render.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943535810/V8/immediate_prewrite_get.json",
@@ -13678,15 +13746,6 @@
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943535810/V8/prepared.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943535810/V8/update_once.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943535810/V8/update_receipt.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943535810/V8/verification.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943597447/V8/before_get.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943597447/V8/before_render.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943597447/V8/immediate_prewrite_get.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943597447/V8/manifest.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943597447/V8/prepared.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943597447/V8/update_once.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943597447/V8/update_receipt.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943541766/V8/after_get.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943541766/V8/before_get.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943541766/V8/before_render.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943541766/V8/immediate_prewrite_get.json",
@@ -13694,15 +13753,54 @@
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943541766/V8/prepared.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943541766/V8/update_once.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943541766/V8/update_receipt.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943535810/V8/after_get.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943535810/V8/verification.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943541766/V8/after_get.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943541766/V8/verification.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943597447/V8/before_get.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943597447/V8/before_render.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943597447/V8/immediate_prewrite_get.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943597447/V8/manifest.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943597447/V8/prepared.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943597447/V8/update_once.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943597447/V8/update_receipt.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943535810/V8/after_render.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943541766/V8/after_render.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943597447/V8/after_get.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943597447/V8/after_render.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943597447/V8/verification.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943535810/V8/after_render.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943541766/V8/after_render.json"
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943535810/V8/public_verification.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943541766/V8/public_verification.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943597447/V8/public_verification.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR025/来源与正式绑定核验.json"
       ],
       "notes": [],
-      "next_action": "补实鞋与有效采购入口；不按存量链接重复搜索。"
+      "next_action": "已采用真实鞋型保持；原始像素、当前六图和EU材料对应已核，当前交易条件逐单确认，后续按本款质量问题优化。",
+      "local_assets": {
+        "asset_roots": [],
+        "current_fields_file": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR025/来源与正式绑定核验.json",
+        "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+        "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题"
+      },
+      "classification": {
+        "local_intent_candidates": [
+          "套脚/袜套需求",
+          "步行/休闲需求"
+        ],
+        "state": "TITLE_OBSERVATION_PENDING_SKU_REVIEW",
+        "evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
+        "platform_category_ids": [
+          202240827
+        ],
+        "store_groups": [
+          {
+            "id": "972130291",
+            "name": "Slip-On Casual Walking Shoes"
+          }
+        ],
+        "store_group_state": "FORMAL_PRODUCT_AND_GROUP_READBACK"
+      },
+      "dossier_path": "02_Alibaba运营/02_单品优化记录/商品档案/HR025/README.md"
     },
     {
       "id": "HR026",
@@ -13780,21 +13878,14 @@
       "aliases": [
         "HR027"
       ],
-      "source_state": "MISSING",
-      "adopted_source_id": null,
-      "candidate_source_ids": [],
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-hr-hr027-26qzya22-130",
+      "candidate_source_ids": [
+        "src-hr-hr027-26qzya22-130"
+      ],
       "raw_packages": [],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/热榜持续扩品_2026-09-05/HR001-HR067_201条最终全链路回读.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943654096/manifest.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943654096/prepared.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943654096/update_once.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943654096/update_receipt.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943654096/after_get.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943654096/after_render.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943654096/verification.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943654096/public_verification.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943654096/non_target_difference.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943614355/manifest.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943614355/prepared.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943614355/update_once.json",
@@ -13802,8 +13893,17 @@
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943614355/after_get.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943614355/after_render.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943614355/verification.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943614355/public_verification.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943614355/non_target_difference.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943654096/manifest.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943654096/prepared.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943654096/update_once.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943654096/update_receipt.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943654096/after_get.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943654096/after_render.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943654096/verification.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943654096/non_target_difference.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943614355/public_verification.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943654096/public_verification.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943614355/V8/before_get.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943614355/V8/before_render.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943614355/V8/immediate_prewrite_get.json",
@@ -13811,6 +13911,9 @@
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943614355/V8/prepared.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943614355/V8/update_once.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943614355/V8/update_receipt.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943614355/V8/after_get.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943614355/V8/after_render.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943614355/V8/verification.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943654096/V8/after_get.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943654096/V8/after_render.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943654096/V8/before_get.json",
@@ -13821,42 +13924,68 @@
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943654096/V8/update_once.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943654096/V8/update_receipt.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943654096/V8/verification.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943614355/V8/after_get.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943614355/V8/after_render.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943614355/V8/verification.json"
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943614355/V8/public_verification.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943654096/V8/public_verification.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR027/来源与正式绑定核验.json"
       ],
       "notes": [],
-      "next_action": "补实鞋与有效采购入口；不按存量链接重复搜索。"
+      "next_action": "已采用真实鞋型保持；原始像素、当前六图和EU材料对应已核，当前交易条件逐单确认，后续按本款质量问题优化。",
+      "local_assets": {
+        "asset_roots": [],
+        "current_fields_file": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR027/来源与正式绑定核验.json",
+        "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+        "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题"
+      },
+      "classification": {
+        "local_intent_candidates": [
+          "系带步行/休闲需求"
+        ],
+        "state": "TITLE_OBSERVATION_PENDING_SKU_REVIEW",
+        "evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
+        "platform_category_ids": [
+          201152005
+        ],
+        "store_groups": [
+          {
+            "id": "973003809",
+            "name": "Lace-Up Casual Shoes"
+          }
+        ],
+        "store_group_state": "FORMAL_PRODUCT_AND_GROUP_READBACK"
+      },
+      "dossier_path": "02_Alibaba运营/02_单品优化记录/商品档案/HR027/README.md"
     },
     {
       "id": "HR028",
       "aliases": [
         "HR028"
       ],
-      "source_state": "MISSING",
-      "adopted_source_id": null,
-      "candidate_source_ids": [],
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-hr-hr028-24q2508-1",
+      "candidate_source_ids": [
+        "src-hr-hr028-24q2508-1"
+      ],
       "raw_packages": [],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/热榜持续扩品_2026-09-05/HR001-HR067_201条最终全链路回读.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943592466/manifest.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943592466/prepared.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943592466/update_once.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943592466/update_receipt.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943592466/after_get.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943592466/after_render.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943592466/verification.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943592466/public_verification.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943592466/non_target_difference.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943558633/manifest.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943558633/prepared.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943558633/update_once.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943558633/update_receipt.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943592466/manifest.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943592466/prepared.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943592466/update_once.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943592466/update_receipt.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943558633/after_get.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943558633/after_render.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943558633/verification.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943558633/public_verification.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943592466/after_get.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943592466/after_render.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943592466/verification.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943558633/non_target_difference.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943592466/non_target_difference.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943558633/public_verification.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943592466/public_verification.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943558633/V8/before_get.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943558633/V8/before_render.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943558633/V8/immediate_prewrite_get.json",
@@ -13876,10 +14005,37 @@
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943558633/V8/verification.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943592466/V8/after_get.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943592466/V8/after_render.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943592466/V8/verification.json"
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943592466/V8/verification.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943558633/V8/public_verification.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943592466/V8/public_verification.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR028/来源与正式绑定核验.json"
       ],
       "notes": [],
-      "next_action": "补实鞋与有效采购入口；不按存量链接重复搜索。"
+      "next_action": "已采用真实鞋型保持；原始像素、当前六图和EU材料对应已核，当前交易条件逐单确认，后续按本款质量问题优化。",
+      "local_assets": {
+        "asset_roots": [],
+        "current_fields_file": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR028/来源与正式绑定核验.json",
+        "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+        "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题"
+      },
+      "classification": {
+        "local_intent_candidates": [
+          "系带步行/休闲需求"
+        ],
+        "state": "TITLE_OBSERVATION_PENDING_SKU_REVIEW",
+        "evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
+        "platform_category_ids": [
+          201333014
+        ],
+        "store_groups": [
+          {
+            "id": "973003809",
+            "name": "Lace-Up Casual Shoes"
+          }
+        ],
+        "store_group_state": "FORMAL_PRODUCT_AND_GROUP_READBACK"
+      },
+      "dossier_path": "02_Alibaba运营/02_单品优化记录/商品档案/HR028/README.md"
     },
     {
       "id": "HR029",
@@ -16060,8 +16216,8 @@
       "aliases": [
         "HR059"
       ],
-      "source_state": "CANDIDATE",
-      "adopted_source_id": null,
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-hr-hr059-5612",
       "candidate_source_ids": [
         "src-hr-hr059-5612"
       ],
@@ -16131,13 +16287,13 @@
         "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR059/当前状态.json"
       ],
       "notes": [],
-      "next_action": "实源图文按逐ID阶段推进，未提交的保留本地草稿，已提交的只作完整正式回读；公开呈现分开登记。",
+      "next_action": "当前来源、正式字段及实际评分已核并双改；本轮API验收完成，公开抽检全量后统一进行，继续其余HR。",
       "local_assets": {
         "asset_roots": [
           "01_产品资产/02_可发布素材/HR059"
         ],
         "current_fields_file": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR059/事实与页面计划.json",
-        "state": "REAL_SOURCE_PLAN_SUBMITTED",
+        "state": "REAL_SOURCE_FORMAL_PASS",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题"
       },
       "classification": {
@@ -16147,12 +16303,12 @@
         "state": "REAL_SKU_SOURCE_PHOTO_REVIEWED",
         "evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
         "platform_category_ids": [
-          201334413
+          201774304
         ],
         "store_groups": [
           {
-            "id": "972130291",
-            "name": "Slip-On Casual Walking Shoes"
+            "id": "916200866",
+            "name": "Regular Fit Casual Walking Shoes"
           }
         ],
         "store_group_state": "FORMAL_PRODUCT_AND_GROUP_READBACK"
@@ -16225,42 +16381,39 @@
       "aliases": [
         "HR061"
       ],
-      "source_state": "MISSING",
+      "source_state": "CANDIDATE",
       "adopted_source_id": null,
-      "candidate_source_ids": [],
-      "raw_packages": [],
+      "candidate_source_ids": [
+        "src-hr-hr061-l895"
+      ],
+      "raw_packages": [
+        "01_产品资产/01_原始数据包/HR061_L895"
+      ],
       "evidence": [
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943700660/manifest.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943700660/prepared.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943700660/update_once.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943700660/update_receipt.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943700660/after_get.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943700660/after_render.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943700660/verification.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943700660/public_verification.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943748344/manifest.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943748344/prepared.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943748344/update_once.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943748344/update_receipt.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943748344/after_get.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943748344/after_render.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943748344/verification.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943727538/manifest.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943727538/prepared.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943727538/update_once.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943727538/update_receipt.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943748344/manifest.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943748344/prepared.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943748344/update_once.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943748344/update_receipt.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943700660/after_get.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943700660/after_render.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943700660/verification.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943727538/after_get.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943727538/after_render.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943727538/verification.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943748344/after_get.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943748344/after_render.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943748344/verification.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943700660/public_verification.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943727538/public_verification.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943748344/public_verification.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943727538/V8/before_get.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943727538/V8/before_render.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943727538/V8/immediate_prewrite_get.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943727538/V8/manifest.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943727538/V8/prepared.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943727538/V8/update_once.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943727538/V8/update_receipt.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943700660/V8/before_get.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943700660/V8/before_render.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943700660/V8/immediate_prewrite_get.json",
@@ -16268,6 +16421,13 @@
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943700660/V8/prepared.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943700660/V8/update_once.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943700660/V8/update_receipt.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943727538/V8/before_get.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943727538/V8/before_render.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943727538/V8/immediate_prewrite_get.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943727538/V8/manifest.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943727538/V8/prepared.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943727538/V8/update_once.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943727538/V8/update_receipt.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943748344/V8/before_get.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943748344/V8/before_render.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943748344/V8/immediate_prewrite_get.json",
@@ -16275,18 +16435,50 @@
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943748344/V8/prepared.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943748344/V8/update_once.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943748344/V8/update_receipt.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943748344/V8/after_get.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943748344/V8/after_render.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943748344/V8/verification.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943700660/V8/after_get.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943700660/V8/after_render.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943700660/V8/verification.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943727538/V8/after_get.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943727538/V8/after_render.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943727538/V8/verification.json"
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943727538/V8/verification.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943748344/V8/after_get.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943748344/V8/after_render.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943748344/V8/verification.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943700660/V8/public_verification.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943727538/V8/public_verification.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943748344/V8/public_verification.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR061/素材清单.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR061/事实与页面计划.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR061/当前状态.json"
       ],
       "notes": [],
-      "next_action": "补实鞋与有效采购入口；不按存量链接重复搜索。"
+      "next_action": "实源图文按逐ID阶段推进，未提交的保留本地草稿，已提交的只作完整正式回读；公开呈现分开登记。",
+      "local_assets": {
+        "asset_roots": [
+          "01_产品资产/02_可发布素材/HR061"
+        ],
+        "current_fields_file": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR061/事实与页面计划.json",
+        "state": "REAL_SOURCE_PLAN_SUBMITTED",
+        "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题"
+      },
+      "classification": {
+        "local_intent_candidates": [
+          "加绒高帮休闲鞋"
+        ],
+        "state": "REAL_SKU_SOURCE_PHOTO_REVIEWED",
+        "evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
+        "platform_category_ids": [
+          201334413
+        ],
+        "store_groups": [
+          {
+            "id": "972130291",
+            "name": "Slip-On Casual Walking Shoes"
+          }
+        ],
+        "store_group_state": "FORMAL_PRODUCT_AND_GROUP_READBACK"
+      },
+      "dossier_path": "02_Alibaba运营/02_单品优化记录/商品档案/HR061/README.md"
     },
     {
       "id": "HR062",
@@ -45507,7 +45699,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T16:21:56.128802+00:00",
+        "at": "2026-10-13T17:17:23.621929+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -45541,7 +45733,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/12000003229472/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/12000003229472/formal_render.json",
-        "at": "2026-10-13T16:21:56.128802+00:00"
+        "at": "2026-10-13T17:17:23.621929+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -45608,7 +45800,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-dz14546082-a-kb11",
           "real_artno": "KB11",
-          "at": "2026-10-13T16:21:57.637984+00:00",
+          "at": "2026-10-13T17:17:54.085293+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/12000003229472/prepared.json",
@@ -53786,7 +53978,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T16:21:55.885667+00:00",
+        "at": "2026-10-13T17:17:23.431397+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [
@@ -53822,7 +54014,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943497861/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943497861/formal_render.json",
-        "at": "2026-10-13T16:21:55.885667+00:00"
+        "at": "2026-10-13T17:17:23.431397+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -53899,7 +54091,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr020-9917",
           "real_artno": "9917",
-          "at": "2026-10-13T16:21:57.311838+00:00",
+          "at": "2026-10-13T17:17:53.891606+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943497861/prepared.json",
@@ -53950,7 +54142,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T16:21:55.903469+00:00",
+        "at": "2026-10-13T17:17:23.446268+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [
@@ -53986,7 +54178,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943530673/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943530673/formal_render.json",
-        "at": "2026-10-13T16:21:55.903469+00:00"
+        "at": "2026-10-13T17:17:23.446268+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -54053,7 +54245,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr020-9917",
           "real_artno": "9917",
-          "at": "2026-10-13T16:21:57.333571+00:00",
+          "at": "2026-10-13T17:17:53.903410+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943530673/prepared.json",
@@ -54104,7 +54296,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T16:21:55.921593+00:00",
+        "at": "2026-10-13T17:17:23.460714+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [
@@ -54140,7 +54332,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943558469/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943558469/formal_render.json",
-        "at": "2026-10-13T16:21:55.921593+00:00"
+        "at": "2026-10-13T17:17:23.460714+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -54207,7 +54399,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr020-9917",
           "real_artno": "9917",
-          "at": "2026-10-13T16:21:57.351792+00:00",
+          "at": "2026-10-13T17:17:53.916943+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943558469/prepared.json",
@@ -54796,7 +54988,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T16:21:55.940472+00:00",
+        "at": "2026-10-13T17:17:23.474776+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [
@@ -54832,7 +55024,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943527861/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943527861/formal_render.json",
-        "at": "2026-10-13T16:21:55.940472+00:00"
+        "at": "2026-10-13T17:17:23.474776+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -54899,7 +55091,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr024-8856",
           "real_artno": "8856",
-          "at": "2026-10-13T16:21:57.378886+00:00",
+          "at": "2026-10-13T17:17:53.935109+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943527861/prepared.json",
@@ -54950,7 +55142,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T16:21:55.959032+00:00",
+        "at": "2026-10-13T17:17:23.489665+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [
@@ -54986,7 +55178,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943622296/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943622296/formal_render.json",
-        "at": "2026-10-13T16:21:55.959032+00:00"
+        "at": "2026-10-13T17:17:23.489665+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -55053,7 +55245,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr024-8856",
           "real_artno": "8856",
-          "at": "2026-10-13T16:21:57.397583+00:00",
+          "at": "2026-10-13T17:17:53.948067+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943622296/prepared.json",
@@ -55098,9 +55290,9 @@
       "product_id": "HR025",
       "model": "HR025-A",
       "url": "https://www.alibaba.com/product-detail/Women-s-Leather-Loafers-with-Buckle_1601943541766.html",
-      "record_type": "来源待补",
-      "bound_source_id": null,
-      "source_relation": "SOURCE_EVIDENCE_MISSING",
+      "record_type": "当前实款正式绑定",
+      "bound_source_id": "src-hr-hr025-24dzya22-87",
+      "source_relation": "EXISTING_ACTUAL_SHOE_FORMAL_IMAGE_AND_SKU_MATCH",
       "observation": {
         "audit": "approved",
         "display": "Y",
@@ -55108,7 +55300,7 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "notes": "现有真实鞋款24DZYA22-87保持；已核当前六图、原件哈希、材料及EU组合对应。此处恢复货源绑定，不重复提交换款；交易条件按订单确认。",
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943541766/formal_get.json",
         "at": "2026-10-12T22:30:18.678870+00:00",
@@ -55137,7 +55329,7 @@
       "local_sync": {
         "state": "COMPANY_BUNDLE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943541766/formal_get.json",
-        "next_action": "六图、公司简介与通用FAQ正式回读通过；只待该ID公开页呈现核验，不重复提交"
+        "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续"
       },
       "optimization": {
         "factory_gallery": {
@@ -55199,7 +55391,42 @@
           "historical_source_and_highlights_deferred": true,
           "completed_this_scope": true,
           "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续"
+        },
+        "source_binding_reconciliation": {
+          "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+          "source_id": "src-hr-hr025-24dzya22-87",
+          "at": "2026-10-13T16:39:25.946565+00:00",
+          "evidence": [
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR025/来源与正式绑定核验.json"
+          ],
+          "platform_mutation": "NONE"
         }
+      },
+      "catalog_fields": {
+        "at": "2026-10-10T06:28:16.283236+00:00",
+        "model": "HR025-A",
+        "title": "Women's Leather Loafers with Buckle Strap for Winter Casual Wear",
+        "keywords": [
+          "Womens Leather Loafers"
+        ],
+        "main_images": [
+          "https://sc04.alicdn.com/kf/H4070569ad87048c9ab0c4388465d5205a.jpg",
+          "https://sc04.alicdn.com/kf/H122fdcca6ad944718e7d997d245f223aJ.jpg",
+          "https://sc04.alicdn.com/kf/H9811bb6f6f9a41c19959125b893bb6dcB.png",
+          "https://sc04.alicdn.com/kf/H758155e4de924ea3ba0d7f474de08186o.png",
+          "https://sc04.alicdn.com/kf/H9cc73976426c4c0eb5e6d5ac88ccedbfA.png",
+          "https://sc04.alicdn.com/kf/Hf23d7ed3b8384c5fb65f1a5c2611b0c1M.jpg"
+        ],
+        "category_id": 202240827,
+        "display": "Y",
+        "status": "approved",
+        "url": "https://www.alibaba.com/product-detail/Women-s-Leather-Loafers-with-Buckle_1601943541766.html",
+        "scope": "product.list；不是全字段/公开验收"
+      },
+      "platform_group": {
+        "id": "972130291",
+        "evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/店内分组/972130291.json",
+        "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       }
     },
     {
@@ -55207,9 +55434,9 @@
       "product_id": "HR025",
       "model": "HR025-B",
       "url": "https://www.alibaba.com/product-detail/Women-s-Slip-On-Loafers-with_1601943535810.html",
-      "record_type": "来源待补",
-      "bound_source_id": null,
-      "source_relation": "SOURCE_EVIDENCE_MISSING",
+      "record_type": "当前实款正式绑定",
+      "bound_source_id": "src-hr-hr025-24dzya22-87",
+      "source_relation": "EXISTING_ACTUAL_SHOE_FORMAL_IMAGE_AND_SKU_MATCH",
       "observation": {
         "audit": "approved",
         "display": "Y",
@@ -55217,7 +55444,7 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "notes": "现有真实鞋款24DZYA22-87保持；已核当前六图、原件哈希、材料及EU组合对应。此处恢复货源绑定，不重复提交换款；交易条件按订单确认。",
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943535810/formal_get.json",
         "at": "2026-10-12T22:30:17.771948+00:00",
@@ -55246,7 +55473,7 @@
       "local_sync": {
         "state": "COMPANY_BUNDLE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943535810/formal_get.json",
-        "next_action": "六图、公司简介与通用FAQ正式回读通过；只待该ID公开页呈现核验，不重复提交"
+        "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续"
       },
       "optimization": {
         "factory_gallery": {
@@ -55308,7 +55535,42 @@
           "historical_source_and_highlights_deferred": true,
           "completed_this_scope": true,
           "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续"
+        },
+        "source_binding_reconciliation": {
+          "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+          "source_id": "src-hr-hr025-24dzya22-87",
+          "at": "2026-10-13T16:39:25.946565+00:00",
+          "evidence": [
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR025/来源与正式绑定核验.json"
+          ],
+          "platform_mutation": "NONE"
         }
+      },
+      "catalog_fields": {
+        "at": "2026-10-10T06:28:16.283236+00:00",
+        "model": "HR025-B",
+        "title": "Women's Slip On Loafers with Wool Lining and Instep Buckle Strap",
+        "keywords": [
+          "Womens Wool Lined Loafers"
+        ],
+        "main_images": [
+          "https://sc04.alicdn.com/kf/H4070569ad87048c9ab0c4388465d5205a.jpg",
+          "https://sc04.alicdn.com/kf/H122fdcca6ad944718e7d997d245f223aJ.jpg",
+          "https://sc04.alicdn.com/kf/H9811bb6f6f9a41c19959125b893bb6dcB.png",
+          "https://sc04.alicdn.com/kf/H758155e4de924ea3ba0d7f474de08186o.png",
+          "https://sc04.alicdn.com/kf/H9cc73976426c4c0eb5e6d5ac88ccedbfA.png",
+          "https://sc04.alicdn.com/kf/Hf23d7ed3b8384c5fb65f1a5c2611b0c1M.jpg"
+        ],
+        "category_id": 202240827,
+        "display": "Y",
+        "status": "approved",
+        "url": "https://www.alibaba.com/product-detail/Women-s-Slip-On-Loafers-with_1601943535810.html",
+        "scope": "product.list；不是全字段/公开验收"
+      },
+      "platform_group": {
+        "id": "972130291",
+        "evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/店内分组/972130291.json",
+        "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       }
     },
     {
@@ -55316,9 +55578,9 @@
       "product_id": "HR025",
       "model": "HR025-C",
       "url": "https://www.alibaba.com/product-detail/Women-s-Low-Top-Buckle-Loafers_1601943597447.html",
-      "record_type": "来源待补",
-      "bound_source_id": null,
-      "source_relation": "SOURCE_EVIDENCE_MISSING",
+      "record_type": "当前实款正式绑定",
+      "bound_source_id": "src-hr-hr025-24dzya22-87",
+      "source_relation": "EXISTING_ACTUAL_SHOE_FORMAL_IMAGE_AND_SKU_MATCH",
       "observation": {
         "audit": "approved",
         "display": "Y",
@@ -55326,7 +55588,7 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "notes": "现有真实鞋款24DZYA22-87保持；已核当前六图、原件哈希、材料及EU组合对应。此处恢复货源绑定，不重复提交换款；交易条件按订单确认。",
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943597447/formal_get.json",
         "at": "2026-10-12T22:37:10.948975+00:00",
@@ -55355,7 +55617,7 @@
       "local_sync": {
         "state": "COMPANY_BUNDLE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943597447/formal_get.json",
-        "next_action": "六图、公司简介与通用FAQ正式回读通过；只待该ID公开页呈现核验，不重复提交"
+        "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续"
       },
       "optimization": {
         "factory_gallery": {
@@ -55417,7 +55679,42 @@
           "historical_source_and_highlights_deferred": true,
           "completed_this_scope": true,
           "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续"
+        },
+        "source_binding_reconciliation": {
+          "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+          "source_id": "src-hr-hr025-24dzya22-87",
+          "at": "2026-10-13T16:39:25.946565+00:00",
+          "evidence": [
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR025/来源与正式绑定核验.json"
+          ],
+          "platform_mutation": "NONE"
         }
+      },
+      "catalog_fields": {
+        "at": "2026-10-10T06:28:16.283236+00:00",
+        "model": "HR025-C",
+        "title": "Women's Low Top Buckle Loafers for Casual Footwear Collections",
+        "keywords": [
+          "Womens Buckle Loafers"
+        ],
+        "main_images": [
+          "https://sc04.alicdn.com/kf/H4070569ad87048c9ab0c4388465d5205a.jpg",
+          "https://sc04.alicdn.com/kf/H122fdcca6ad944718e7d997d245f223aJ.jpg",
+          "https://sc04.alicdn.com/kf/H9811bb6f6f9a41c19959125b893bb6dcB.png",
+          "https://sc04.alicdn.com/kf/H758155e4de924ea3ba0d7f474de08186o.png",
+          "https://sc04.alicdn.com/kf/H9cc73976426c4c0eb5e6d5ac88ccedbfA.png",
+          "https://sc04.alicdn.com/kf/Hf23d7ed3b8384c5fb65f1a5c2611b0c1M.jpg"
+        ],
+        "category_id": 202240827,
+        "display": "Y",
+        "status": "approved",
+        "url": "https://www.alibaba.com/product-detail/Women-s-Low-Top-Buckle-Loafers_1601943597447.html",
+        "scope": "product.list；不是全字段/公开验收"
+      },
+      "platform_group": {
+        "id": "972130291",
+        "evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/店内分组/972130291.json",
+        "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       }
     },
     {
@@ -55752,9 +56049,9 @@
       "product_id": "HR027",
       "model": "HR027-A",
       "url": "https://www.alibaba.com/product-detail/Women-s-Suede-Ballet-Flats-with_1601943614355.html",
-      "record_type": "来源待补",
-      "bound_source_id": null,
-      "source_relation": "SOURCE_EVIDENCE_MISSING",
+      "record_type": "当前实款正式绑定",
+      "bound_source_id": "src-hr-hr027-26qzya22-130",
+      "source_relation": "EXISTING_ACTUAL_SHOE_FORMAL_IMAGE_AND_SKU_MATCH",
       "observation": {
         "audit": "approved",
         "display": "Y",
@@ -55762,7 +56059,7 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "notes": "现有真实鞋款26QZYA22-130保持；已核当前六图、原件哈希、材料及EU组合对应。此处恢复货源绑定，不重复提交换款；交易条件按订单确认。",
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943614355/formal_get.json",
         "at": "2026-10-12T22:43:05.474650+00:00",
@@ -55791,7 +56088,7 @@
       "local_sync": {
         "state": "COMPANY_BUNDLE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943614355/formal_get.json",
-        "next_action": "六图、公司简介与通用FAQ正式回读通过；只待该ID公开页呈现核验，不重复提交"
+        "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续"
       },
       "optimization": {
         "factory_gallery": {
@@ -55853,7 +56150,42 @@
           "historical_source_and_highlights_deferred": true,
           "completed_this_scope": true,
           "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续"
+        },
+        "source_binding_reconciliation": {
+          "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+          "source_id": "src-hr-hr027-26qzya22-130",
+          "at": "2026-10-13T17:08:26.624805+00:00",
+          "evidence": [
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR027/来源与正式绑定核验.json"
+          ],
+          "platform_mutation": "NONE"
         }
+      },
+      "catalog_fields": {
+        "at": "2026-10-10T06:28:16.283236+00:00",
+        "model": "HR027-A",
+        "title": "Women's Suede Ballet Flats with Lace Up Front and Scalloped Collar",
+        "keywords": [
+          "Womens Suede Ballet Flats"
+        ],
+        "main_images": [
+          "https://sc04.alicdn.com/kf/Hec00b497950f4ccd8d84e011cbb30f9ds.png",
+          "https://sc04.alicdn.com/kf/Hff3d401ed10b42c3bfa9a9cc8e342322v.png",
+          "https://sc04.alicdn.com/kf/H9e358df5cdda4cd7acb3a85f0a69578cz.png",
+          "https://sc04.alicdn.com/kf/Hbedf8ce9f5274476bfd2bd82122e9c763.png",
+          "https://sc04.alicdn.com/kf/Ha99e45748a444f40b64cae7e77ea60caE.png",
+          "https://sc04.alicdn.com/kf/Hb4c5010eff8046b3bcdda0daef75acfdb.png"
+        ],
+        "category_id": 201152005,
+        "display": "Y",
+        "status": "approved",
+        "url": "https://www.alibaba.com/product-detail/Women-s-Suede-Ballet-Flats-with_1601943614355.html",
+        "scope": "product.list；不是全字段/公开验收"
+      },
+      "platform_group": {
+        "id": "973003809",
+        "evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/店内分组/973003809.json",
+        "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       }
     },
     {
@@ -55861,9 +56193,9 @@
       "product_id": "HR027",
       "model": "HR027-B",
       "url": "https://www.alibaba.com/product-detail/Women-s-Lace-Up-Casual-Flats_1601943654096.html",
-      "record_type": "来源待补",
-      "bound_source_id": null,
-      "source_relation": "SOURCE_EVIDENCE_MISSING",
+      "record_type": "当前实款正式绑定",
+      "bound_source_id": "src-hr-hr027-26qzya22-130",
+      "source_relation": "EXISTING_ACTUAL_SHOE_FORMAL_IMAGE_AND_SKU_MATCH",
       "observation": {
         "audit": "approved",
         "display": "Y",
@@ -55871,7 +56203,7 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "notes": "现有真实鞋款26QZYA22-130保持；已核当前六图、原件哈希、材料及EU组合对应。此处恢复货源绑定，不重复提交换款；交易条件按订单确认。",
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943654096/formal_get.json",
         "at": "2026-10-12T22:44:10.610653+00:00",
@@ -55900,7 +56232,7 @@
       "local_sync": {
         "state": "COMPANY_BUNDLE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943654096/formal_get.json",
-        "next_action": "六图、公司简介与通用FAQ正式回读通过；只待该ID公开页呈现核验，不重复提交"
+        "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续"
       },
       "optimization": {
         "factory_gallery": {
@@ -55962,7 +56294,42 @@
           "historical_source_and_highlights_deferred": true,
           "completed_this_scope": true,
           "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续"
+        },
+        "source_binding_reconciliation": {
+          "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+          "source_id": "src-hr-hr027-26qzya22-130",
+          "at": "2026-10-13T17:08:26.624805+00:00",
+          "evidence": [
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR027/来源与正式绑定核验.json"
+          ],
+          "platform_mutation": "NONE"
         }
+      },
+      "catalog_fields": {
+        "at": "2026-10-10T06:28:16.283236+00:00",
+        "model": "HR027-B",
+        "title": "Women's Lace Up Casual Flats with Scalloped Edge for Everyday Outfits",
+        "keywords": [
+          "Womens Casual Flats"
+        ],
+        "main_images": [
+          "https://sc04.alicdn.com/kf/H94c6f8c8ac404e4d8850c90fe53dd4a9j.png",
+          "https://sc04.alicdn.com/kf/Hff3d401ed10b42c3bfa9a9cc8e342322v.png",
+          "https://sc04.alicdn.com/kf/H9e358df5cdda4cd7acb3a85f0a69578cz.png",
+          "https://sc04.alicdn.com/kf/Hbedf8ce9f5274476bfd2bd82122e9c763.png",
+          "https://sc04.alicdn.com/kf/Ha99e45748a444f40b64cae7e77ea60caE.png",
+          "https://sc04.alicdn.com/kf/Hb4c5010eff8046b3bcdda0daef75acfdb.png"
+        ],
+        "category_id": 201152005,
+        "display": "Y",
+        "status": "approved",
+        "url": "https://www.alibaba.com/product-detail/Women-s-Lace-Up-Casual-Flats_1601943654096.html",
+        "scope": "product.list；不是全字段/公开验收"
+      },
+      "platform_group": {
+        "id": "973003809",
+        "evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/店内分组/973003809.json",
+        "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       }
     },
     {
@@ -55970,9 +56337,9 @@
       "product_id": "HR028",
       "model": "HR028-A",
       "url": "https://www.alibaba.com/product-detail/Women-s-Suede-Lace-Up-Casual_1601943558633.html",
-      "record_type": "来源待补",
-      "bound_source_id": null,
-      "source_relation": "SOURCE_EVIDENCE_MISSING",
+      "record_type": "当前实款正式绑定",
+      "bound_source_id": "src-hr-hr028-24q2508-1",
+      "source_relation": "EXISTING_ACTUAL_SHOE_FORMAL_IMAGE_AND_SKU_MATCH",
       "observation": {
         "audit": "approved",
         "display": "Y",
@@ -55980,7 +56347,7 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "notes": "现有真实鞋款24Q2508-1保持；已核当前六图、原件哈希、材料及EU组合对应。此处恢复货源绑定，不重复提交换款；交易条件按订单确认。",
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943558633/formal_get.json",
         "at": "2026-10-12T22:36:19.222657+00:00",
@@ -56009,7 +56376,7 @@
       "local_sync": {
         "state": "COMPANY_BUNDLE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943558633/formal_get.json",
-        "next_action": "六图、公司简介与通用FAQ正式回读通过；只待该ID公开页呈现核验，不重复提交"
+        "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续"
       },
       "optimization": {
         "factory_gallery": {
@@ -56071,7 +56438,42 @@
           "historical_source_and_highlights_deferred": true,
           "completed_this_scope": true,
           "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续"
+        },
+        "source_binding_reconciliation": {
+          "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+          "source_id": "src-hr-hr028-24q2508-1",
+          "at": "2026-10-13T17:09:12.571273+00:00",
+          "evidence": [
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR028/来源与正式绑定核验.json"
+          ],
+          "platform_mutation": "NONE"
         }
+      },
+      "catalog_fields": {
+        "at": "2026-10-10T06:28:16.283236+00:00",
+        "model": "HR028-A",
+        "title": "Women's Suede Lace Up Casual Shoes with a Low Profile for Daily Wear",
+        "keywords": [
+          "Womens Casual Shoes"
+        ],
+        "main_images": [
+          "https://sc04.alicdn.com/kf/H543feade016647748fa810a6d1dd51a8e.jpg",
+          "https://sc04.alicdn.com/kf/H4c96b9bd71f449a08e0de297324f96853.jpg",
+          "https://sc04.alicdn.com/kf/H79d23bb4716041f2aa48ecc78d192908V.png",
+          "https://sc04.alicdn.com/kf/H52e4aa62d8164b11b219e57f305170e2p.png",
+          "https://sc04.alicdn.com/kf/H1f4fec4e82494708afba4483a2c6f003G.png",
+          "https://sc04.alicdn.com/kf/Hb4e8ace9a77d4dfd9ca843864fcbf6f6x.png"
+        ],
+        "category_id": 201333014,
+        "display": "Y",
+        "status": "approved",
+        "url": "https://www.alibaba.com/product-detail/Women-s-Suede-Lace-Up-Casual_1601943558633.html",
+        "scope": "product.list；不是全字段/公开验收"
+      },
+      "platform_group": {
+        "id": "973003809",
+        "evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/店内分组/973003809.json",
+        "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       }
     },
     {
@@ -56079,9 +56481,9 @@
       "product_id": "HR028",
       "model": "HR028-B",
       "url": "https://www.alibaba.com/product-detail/Women-s-Low-Top-Lace-Up_1601943592466.html",
-      "record_type": "来源待补",
-      "bound_source_id": null,
-      "source_relation": "SOURCE_EVIDENCE_MISSING",
+      "record_type": "当前实款正式绑定",
+      "bound_source_id": "src-hr-hr028-24q2508-1",
+      "source_relation": "EXISTING_ACTUAL_SHOE_FORMAL_IMAGE_AND_SKU_MATCH",
       "observation": {
         "audit": "approved",
         "display": "Y",
@@ -56089,7 +56491,7 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "notes": "现有真实鞋款24Q2508-1保持；已核当前六图、原件哈希、材料及EU组合对应。此处恢复货源绑定，不重复提交换款；交易条件按订单确认。",
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943592466/formal_get.json",
         "at": "2026-10-12T22:36:58.267564+00:00",
@@ -56118,7 +56520,7 @@
       "local_sync": {
         "state": "COMPANY_BUNDLE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943592466/formal_get.json",
-        "next_action": "六图、公司简介与通用FAQ正式回读通过；只待该ID公开页呈现核验，不重复提交"
+        "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续"
       },
       "optimization": {
         "factory_gallery": {
@@ -56180,7 +56582,42 @@
           "historical_source_and_highlights_deferred": true,
           "completed_this_scope": true,
           "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续"
+        },
+        "source_binding_reconciliation": {
+          "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+          "source_id": "src-hr-hr028-24q2508-1",
+          "at": "2026-10-13T17:09:12.571273+00:00",
+          "evidence": [
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR028/来源与正式绑定核验.json"
+          ],
+          "platform_mutation": "NONE"
         }
+      },
+      "catalog_fields": {
+        "at": "2026-10-10T06:28:16.283236+00:00",
+        "model": "HR028-B",
+        "title": "Women's Low Top Lace Up Sneakers with Leather Lining for Casual Outfits",
+        "keywords": [
+          "Womens Low Top Sneakers"
+        ],
+        "main_images": [
+          "https://sc04.alicdn.com/kf/H3c56aebb1ef74f5f9d19f439ce6502f4Q.jpg",
+          "https://sc04.alicdn.com/kf/H4c96b9bd71f449a08e0de297324f96853.jpg",
+          "https://sc04.alicdn.com/kf/H79d23bb4716041f2aa48ecc78d192908V.png",
+          "https://sc04.alicdn.com/kf/H52e4aa62d8164b11b219e57f305170e2p.png",
+          "https://sc04.alicdn.com/kf/H1f4fec4e82494708afba4483a2c6f003G.png",
+          "https://sc04.alicdn.com/kf/Hb4e8ace9a77d4dfd9ca843864fcbf6f6x.png"
+        ],
+        "category_id": 201333014,
+        "display": "Y",
+        "status": "approved",
+        "url": "https://www.alibaba.com/product-detail/Women-s-Low-Top-Lace-Up_1601943592466.html",
+        "scope": "product.list；不是全字段/公开验收"
+      },
+      "platform_group": {
+        "id": "973003809",
+        "evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/店内分组/973003809.json",
+        "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       }
     },
     {
@@ -56194,7 +56631,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T16:21:56.149109+00:00",
+        "at": "2026-10-13T17:17:23.636286+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -56228,7 +56665,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943544741/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943544741/formal_render.json",
-        "at": "2026-10-13T16:21:56.149109+00:00"
+        "at": "2026-10-13T17:17:23.636286+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -56295,7 +56732,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr029-726c",
           "real_artno": "726C",
-          "at": "2026-10-13T16:21:57.671604+00:00",
+          "at": "2026-10-13T17:17:54.103078+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943544741/prepared.json",
@@ -56347,7 +56784,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T16:21:56.168610+00:00",
+        "at": "2026-10-13T17:17:23.651017+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -56381,7 +56818,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943558646/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943558646/formal_render.json",
-        "at": "2026-10-13T16:21:56.168610+00:00"
+        "at": "2026-10-13T17:17:23.651017+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -56448,7 +56885,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr029-726c",
           "real_artno": "726C",
-          "at": "2026-10-13T16:21:57.694699+00:00",
+          "at": "2026-10-13T17:17:54.114850+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943558646/prepared.json",
@@ -56500,7 +56937,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T16:21:55.714679+00:00",
+        "at": "2026-10-13T17:17:23.285004+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -56534,7 +56971,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943574507/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943574507/formal_render.json",
-        "at": "2026-10-13T16:21:55.714679+00:00"
+        "at": "2026-10-13T17:17:23.285004+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -56601,7 +57038,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr030-mna-1",
           "real_artno": "MNA-1",
-          "at": "2026-10-13T16:21:57.152488+00:00",
+          "at": "2026-10-13T17:17:53.784842+00:00",
           "next_action": "API验收、货源双改及既有公开图文/EU组合核验通过；旧keywords空值照实记录，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943574507/prepared.json",
@@ -56756,7 +57193,7 @@
           "state": "REVIEWING",
           "source_id": "src-hr-hr030-mna-1",
           "real_artno": "MNA-1",
-          "at": "2026-10-13T16:21:57.168844+00:00",
+          "at": "2026-10-13T17:17:53.796417+00:00",
           "next_action": "仅回读审核状态，审核通过后核材料/SKU/价格/图文与实际评分；不得重复提交。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943545775/prepared.json",
@@ -56807,7 +57244,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T16:21:56.052672+00:00",
+        "at": "2026-10-13T17:17:23.562863+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -56841,7 +57278,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943665060/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943665060/formal_render.json",
-        "at": "2026-10-13T16:21:56.052672+00:00"
+        "at": "2026-10-13T17:17:23.562863+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -56908,7 +57345,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr031-d11",
           "real_artno": "D11",
-          "at": "2026-10-13T16:21:57.521539+00:00",
+          "at": "2026-10-13T17:17:54.025669+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943665060/prepared.json",
@@ -56959,7 +57396,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T16:21:56.072118+00:00",
+        "at": "2026-10-13T17:17:23.577225+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -56993,7 +57430,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943651120/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943651120/formal_render.json",
-        "at": "2026-10-13T16:21:56.072118+00:00"
+        "at": "2026-10-13T17:17:23.577225+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -57060,7 +57497,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr031-d11",
           "real_artno": "D11",
-          "at": "2026-10-13T16:21:57.544021+00:00",
+          "at": "2026-10-13T17:17:54.038408+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943651120/prepared.json",
@@ -57835,7 +58272,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T16:21:55.976566+00:00",
+        "at": "2026-10-13T17:17:23.504288+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -57869,7 +58306,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943568763/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943568763/formal_render.json",
-        "at": "2026-10-13T16:21:55.976566+00:00"
+        "at": "2026-10-13T17:17:23.504288+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -57936,7 +58373,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr035-888-d",
           "real_artno": "888-D",
-          "at": "2026-10-13T16:21:57.425499+00:00",
+          "at": "2026-10-13T17:17:53.966750+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943568763/prepared.json",
@@ -57987,7 +58424,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T16:21:55.994135+00:00",
+        "at": "2026-10-13T17:17:23.518590+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -58021,7 +58458,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943680112/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943680112/formal_render.json",
-        "at": "2026-10-13T16:21:55.994135+00:00"
+        "at": "2026-10-13T17:17:23.518590+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -58088,7 +58525,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr035-888-d",
           "real_artno": "888-D",
-          "at": "2026-10-13T16:21:57.442474+00:00",
+          "at": "2026-10-13T17:17:53.978540+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943680112/prepared.json",
@@ -58139,7 +58576,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T16:21:56.092823+00:00",
+        "at": "2026-10-13T17:17:23.593922+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -58173,7 +58610,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943627431/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943627431/formal_render.json",
-        "at": "2026-10-13T16:21:56.092823+00:00"
+        "at": "2026-10-13T17:17:23.593922+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -58240,7 +58677,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr036-1936",
           "real_artno": "1936",
-          "at": "2026-10-13T16:21:57.576708+00:00",
+          "at": "2026-10-13T17:17:54.056617+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943627431/prepared.json",
@@ -58292,7 +58729,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T16:21:56.111154+00:00",
+        "at": "2026-10-13T17:17:23.607824+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -58326,7 +58763,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943561786/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943561786/formal_render.json",
-        "at": "2026-10-13T16:21:56.111154+00:00"
+        "at": "2026-10-13T17:17:23.607824+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -58393,7 +58830,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr036-1936",
           "real_artno": "1936",
-          "at": "2026-10-13T16:21:57.602910+00:00",
+          "at": "2026-10-13T17:17:54.067648+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943561786/prepared.json",
@@ -58663,7 +59100,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T16:21:56.012607+00:00",
+        "at": "2026-10-13T17:17:23.532301+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -58697,7 +59134,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943620588/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943620588/formal_render.json",
-        "at": "2026-10-13T16:21:56.012607+00:00"
+        "at": "2026-10-13T17:17:23.532301+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -58764,7 +59201,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr038-ar288",
           "real_artno": "AR288",
-          "at": "2026-10-13T16:21:57.472251+00:00",
+          "at": "2026-10-13T17:17:53.995911+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943620588/prepared.json",
@@ -58815,7 +59252,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T16:21:56.032728+00:00",
+        "at": "2026-10-13T17:17:23.547783+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -58849,7 +59286,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943677234/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943677234/formal_render.json",
-        "at": "2026-10-13T16:21:56.032728+00:00"
+        "at": "2026-10-13T17:17:23.547783+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -58916,7 +59353,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr038-ar288",
           "real_artno": "AR288",
-          "at": "2026-10-13T16:21:57.491393+00:00",
+          "at": "2026-10-13T17:17:54.007101+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943677234/prepared.json",
@@ -59956,7 +60393,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T16:21:55.737702+00:00",
+        "at": "2026-10-13T17:17:23.307420+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -59990,7 +60427,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943703336/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943703336/formal_render.json",
-        "at": "2026-10-13T16:21:55.737702+00:00"
+        "at": "2026-10-13T17:17:23.307420+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -60057,7 +60494,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr042-9818",
           "real_artno": "9818",
-          "at": "2026-10-13T16:21:57.180369+00:00",
+          "at": "2026-10-13T17:17:53.803955+00:00",
           "next_action": "API验收、货源双改及既有公开图文/EU组合核验通过；旧keywords空值照实记录，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943703336/prepared.json",
@@ -60114,7 +60551,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T16:21:55.780196+00:00",
+        "at": "2026-10-13T17:17:23.340942+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -60148,7 +60585,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943747024/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943747024/formal_render.json",
-        "at": "2026-10-13T16:21:55.780196+00:00"
+        "at": "2026-10-13T17:17:23.340942+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -60215,7 +60652,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr042-9818",
           "real_artno": "9818",
-          "at": "2026-10-13T16:21:57.199452+00:00",
+          "at": "2026-10-13T17:17:53.816434+00:00",
           "next_action": "API验收、货源双改及既有公开图文/EU组合核验通过；旧keywords空值照实记录，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943747024/prepared.json",
@@ -60272,7 +60709,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T16:21:55.804889+00:00",
+        "at": "2026-10-13T17:17:23.362455+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -60306,7 +60743,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943639708/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943639708/formal_render.json",
-        "at": "2026-10-13T16:21:55.804889+00:00"
+        "at": "2026-10-13T17:17:23.362455+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -60373,7 +60810,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr042-9818",
           "real_artno": "9818",
-          "at": "2026-10-13T16:21:57.216755+00:00",
+          "at": "2026-10-13T17:17:53.828891+00:00",
           "next_action": "API验收、货源双改及既有公开图文/EU组合核验通过；旧keywords空值照实记录，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943639708/prepared.json",
@@ -64064,7 +64501,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T16:21:55.828418+00:00",
+        "at": "2026-10-13T17:17:23.381658+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -64098,7 +64535,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943673716/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943673716/formal_render.json",
-        "at": "2026-10-13T16:21:55.828418+00:00"
+        "at": "2026-10-13T17:17:23.381658+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -64165,7 +64602,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr054-27975",
           "real_artno": "27975",
-          "at": "2026-10-13T16:21:57.244108+00:00",
+          "at": "2026-10-13T17:17:53.846558+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943673716/prepared.json",
@@ -64216,7 +64653,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T16:21:55.847182+00:00",
+        "at": "2026-10-13T17:17:23.397811+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -64250,7 +64687,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943741370/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943741370/formal_render.json",
-        "at": "2026-10-13T16:21:55.847182+00:00"
+        "at": "2026-10-13T17:17:23.397811+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -64317,7 +64754,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr054-27975",
           "real_artno": "27975",
-          "at": "2026-10-13T16:21:57.263195+00:00",
+          "at": "2026-10-13T17:17:53.858266+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943741370/prepared.json",
@@ -64368,7 +64805,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T16:21:55.864949+00:00",
+        "at": "2026-10-13T17:17:23.412418+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -64402,7 +64839,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943737356/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943737356/formal_render.json",
-        "at": "2026-10-13T16:21:55.864949+00:00"
+        "at": "2026-10-13T17:17:23.412418+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -64469,7 +64906,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr054-27975",
           "real_artno": "27975",
-          "at": "2026-10-13T16:21:57.282481+00:00",
+          "at": "2026-10-13T17:17:53.872362+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943737356/prepared.json",
@@ -65827,47 +66264,48 @@
       "id": "1601943790138",
       "product_id": "HR059",
       "model": "HR059-A",
-      "url": "https://www.alibaba.com/product-detail/Men-s-Shoes-Model-HR059-A_1601943790138.html",
-      "record_type": "来源待补",
-      "bound_source_id": null,
-      "source_relation": "REAL_SOURCE_CANDIDATE_REPLACEMENT_PENDING_FORMAL_READ",
+      "url": "https://www.alibaba.com/product-detail/Men-s-Side-Zip-Ankle-Boots_1601943790138.html",
+      "record_type": "当前实款正式绑定",
+      "bound_source_id": "src-hr-hr059-5612",
+      "source_relation": "SAME_ID_REAL_SOURCE_REPLACEMENT_FORMAL_PASS",
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-07T04:25:00.978045+00:00",
-        "scope": "历史目录回读；不等于来源/全内容验收"
+        "at": "2026-10-13T17:17:23.764321+00:00",
+        "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "notes": "当前采用大卖鞋业 5612，原ID整鞋替换正式字段及评分通过；旧候选、旧鞋型和旧采购价不参与当前执行。来源、当前图文和逐ID证据见本款唯一入口；已提交动作不重放。",
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943790138/formal_get.json",
-        "at": "2026-10-12T23:06:31.116046+00:00",
-        "scope": "完整正式字段；公司六图、简介、通用FAQ单独验收"
+        "at": "2026-10-13T16:36:25.168719+00:00",
+        "scope": "完整商品正式字段；本轮实源换款逐ID字段/5.00评分通过，公开与旧关键词迁移证据分列"
       },
       "current_platform_fields": {
-        "at": "2026-10-12T23:06:31.116046+00:00",
-        "title": "Men's Shoes Model HR059-A",
+        "at": "2026-10-13T16:36:25.168719+00:00",
+        "title": "Men's Side-Zip Ankle Boots with Textured Upper and Sculpted PVC Sole for Casual Outfits",
         "keywords": [
           ""
         ],
         "main_images": [
-          "https://sc04.alicdn.com/kf/H29e753567b5e4980abb07a9a121b6299S.png",
-          "https://sc04.alicdn.com/kf/H89bb0e9323564029b9ad2f2329ef05eez.png",
-          "https://sc04.alicdn.com/kf/H7daf86e212034bb9a82eb67069721c0f8.png",
-          "https://sc04.alicdn.com/kf/H3c633ef65ec84e5195e20a59a0c14dabZ.png",
-          "https://sc04.alicdn.com/kf/H4f80e3056f6647b69ff9316134d87dd0g.png",
-          "https://sc04.alicdn.com/kf/H8b795922dbcd4fc2bd374c6561e6bad2N.png"
+          "https://sc04.alicdn.com/kf/H3ce11d430f674599aa3a2d77950f7e37M.jpg",
+          "https://sc04.alicdn.com/kf/Hb56805598c4c43198372ac0ceb792b82U.jpg",
+          "https://sc04.alicdn.com/kf/Hd32d8a7173ad4eafa3d4337c60b0c77bA.jpg",
+          "https://sc04.alicdn.com/kf/H5df86df77f02483aaacbc645f7f3ad9fA.jpg",
+          "https://sc04.alicdn.com/kf/Hbdcc391fb08548849ed6a6a5bb3e5c830.jpg",
+          "https://sc04.alicdn.com/kf/H281467d09f4b48368c335900f583a9c9r.jpg"
         ],
-        "category_id": 201334413,
+        "category_id": 201774304,
         "display": "Y",
         "status": "approved",
-        "url": "https://www.alibaba.com/product-detail/Men-s-Shoes-Model-HR059-A_1601943790138.html",
-        "scope": "同ID正式回读；与公开验收分开"
+        "url": "https://www.alibaba.com/product-detail/Men-s-Side-Zip-Ankle-Boots_1601943790138.html",
+        "scope": "Exact-ID whole-shoe replacement formal get; public presentation and legacy keyword migration tracked separately"
       },
       "local_sync": {
-        "state": "COMPANY_BUNDLE_FORMAL_PASS",
+        "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943790138/formal_get.json",
-        "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续"
+        "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943790138/formal_render.json",
+        "at": "2026-10-13T17:17:23.764321+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -65931,90 +66369,96 @@
           "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续"
         },
         "source_replacement": {
-          "state": "SUBMITTED",
+          "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr059-5612",
           "real_artno": "5612",
-          "at": "2026-10-13T16:21:57.887276+00:00",
-          "next_action": "仅回读审核状态，审核通过后核材料/SKU/价格/图文与实际评分；不得重复提交。",
+          "at": "2026-10-13T17:17:54.222443+00:00",
+          "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943790138/prepared.json",
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943790138/update_once.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943790138/update_receipt.json"
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943790138/update_receipt.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943790138/verification.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943790138/after_get.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943790138/after_render.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943790138/score.json"
           ]
         }
       },
       "catalog_fields": {
-        "at": "2026-10-10T06:28:16.283236+00:00",
+        "at": "2026-10-13T16:36:25.168719+00:00",
         "model": "HR059-A",
-        "title": "Men's Shoes Model HR059-A",
+        "title": "Men's Side-Zip Ankle Boots with Textured Upper and Sculpted PVC Sole for Casual Outfits",
         "keywords": [
           ""
         ],
         "main_images": [
-          "https://sc04.alicdn.com/kf/H29e753567b5e4980abb07a9a121b6299S.png",
-          "https://sc04.alicdn.com/kf/H89bb0e9323564029b9ad2f2329ef05eez.png",
-          "https://sc04.alicdn.com/kf/H7daf86e212034bb9a82eb67069721c0f8.png",
-          "https://sc04.alicdn.com/kf/H3c633ef65ec84e5195e20a59a0c14dabZ.png",
-          "https://sc04.alicdn.com/kf/H4f80e3056f6647b69ff9316134d87dd0g.png",
-          "https://sc04.alicdn.com/kf/H8b795922dbcd4fc2bd374c6561e6bad2N.png"
+          "https://sc04.alicdn.com/kf/H3ce11d430f674599aa3a2d77950f7e37M.jpg",
+          "https://sc04.alicdn.com/kf/Hb56805598c4c43198372ac0ceb792b82U.jpg",
+          "https://sc04.alicdn.com/kf/Hd32d8a7173ad4eafa3d4337c60b0c77bA.jpg",
+          "https://sc04.alicdn.com/kf/H5df86df77f02483aaacbc645f7f3ad9fA.jpg",
+          "https://sc04.alicdn.com/kf/Hbdcc391fb08548849ed6a6a5bb3e5c830.jpg",
+          "https://sc04.alicdn.com/kf/H281467d09f4b48368c335900f583a9c9r.jpg"
         ],
-        "category_id": 201334413,
+        "category_id": 201774304,
         "display": "Y",
         "status": "approved",
-        "url": "https://www.alibaba.com/product-detail/Men-s-Shoes-Model-HR059-A_1601943790138.html",
-        "scope": "product.list；不是全字段/公开验收"
+        "url": "https://www.alibaba.com/product-detail/Men-s-Side-Zip-Ankle-Boots_1601943790138.html",
+        "scope": "Exact-ID whole-shoe replacement formal get; public presentation and legacy keyword migration tracked separately"
       },
       "platform_group": {
-        "id": "972130291",
-        "evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/店内分组/972130291.json",
-        "scope": "正式商品接口返回店内分组；不等于采购意图分类"
+        "id": "916200866",
+        "name": "Regular Fit Casual Walking Shoes",
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR059/目标店内分组回读.json",
+        "scope": "当前正式商品与已核官方店内分组；与本地采购分类分列"
       }
     },
     {
       "id": "1601943767266",
       "product_id": "HR059",
       "model": "HR059-B",
-      "url": "https://www.alibaba.com/product-detail/Men-s-Breathable-Lace-Up-Light_1601943767266.html",
-      "record_type": "来源待补",
-      "bound_source_id": null,
-      "source_relation": "REAL_SOURCE_CANDIDATE_REPLACEMENT_PENDING_FORMAL_READ",
+      "url": "https://www.alibaba.com/product-detail/Zip-Up-Casual-Ankle-Boots-with_1601943767266.html",
+      "record_type": "当前实款正式绑定",
+      "bound_source_id": "src-hr-hr059-5612",
+      "source_relation": "SAME_ID_REAL_SOURCE_REPLACEMENT_FORMAL_PASS",
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-07T04:25:00.978045+00:00",
-        "scope": "历史目录回读；不等于来源/全内容验收"
+        "at": "2026-10-13T17:17:23.780430+00:00",
+        "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "notes": "当前采用大卖鞋业 5612，原ID整鞋替换正式字段及评分通过；旧候选、旧鞋型和旧采购价不参与当前执行。来源、当前图文和逐ID证据见本款唯一入口；已提交动作不重放。",
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943767266/formal_get.json",
-        "at": "2026-10-12T22:59:08.545071+00:00",
-        "scope": "完整正式字段；公司六图、简介、通用FAQ单独验收"
+        "at": "2026-10-13T17:08:48.714746+00:00",
+        "scope": "完整商品正式字段；本轮实源换款逐ID字段/5.00评分通过，公开与旧关键词迁移证据分列"
       },
       "current_platform_fields": {
-        "at": "2026-10-12T22:59:08.545071+00:00",
-        "title": "Men's Breathable Lace-Up Light Weight Walking Shoes Model HR059-B",
+        "at": "2026-10-13T17:08:48.714746+00:00",
+        "title": "Zip-Up Casual Ankle Boots with Rear Pull Loop and Raised Toe Outline for Footwear Collections",
         "keywords": [
           ""
         ],
         "main_images": [
-          "https://sc04.alicdn.com/kf/H297c2b15fae246919fa28becf0b00b557.png",
-          "https://sc04.alicdn.com/kf/H89bb0e9323564029b9ad2f2329ef05eez.png",
-          "https://sc04.alicdn.com/kf/H7daf86e212034bb9a82eb67069721c0f8.png",
-          "https://sc04.alicdn.com/kf/H3c633ef65ec84e5195e20a59a0c14dabZ.png",
-          "https://sc04.alicdn.com/kf/H4f80e3056f6647b69ff9316134d87dd0g.png",
-          "https://sc04.alicdn.com/kf/H8b795922dbcd4fc2bd374c6561e6bad2N.png"
+          "https://sc04.alicdn.com/kf/H3ce11d430f674599aa3a2d77950f7e37M.jpg",
+          "https://sc04.alicdn.com/kf/Hb56805598c4c43198372ac0ceb792b82U.jpg",
+          "https://sc04.alicdn.com/kf/Hd32d8a7173ad4eafa3d4337c60b0c77bA.jpg",
+          "https://sc04.alicdn.com/kf/H5df86df77f02483aaacbc645f7f3ad9fA.jpg",
+          "https://sc04.alicdn.com/kf/Hbdcc391fb08548849ed6a6a5bb3e5c830.jpg",
+          "https://sc04.alicdn.com/kf/H281467d09f4b48368c335900f583a9c9r.jpg"
         ],
-        "category_id": 201334413,
+        "category_id": 201774304,
         "display": "Y",
         "status": "approved",
-        "url": "https://www.alibaba.com/product-detail/Men-s-Breathable-Lace-Up-Light_1601943767266.html",
-        "scope": "同ID正式回读；与公开验收分开"
+        "url": "https://www.alibaba.com/product-detail/Zip-Up-Casual-Ankle-Boots-with_1601943767266.html",
+        "scope": "Exact-ID whole-shoe replacement formal get; public presentation and legacy keyword migration tracked separately"
       },
       "local_sync": {
-        "state": "COMPANY_BUNDLE_FORMAL_PASS",
+        "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943767266/formal_get.json",
-        "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续"
+        "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943767266/formal_render.json",
+        "at": "2026-10-13T17:17:23.780430+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -66078,90 +66522,96 @@
           "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续"
         },
         "source_replacement": {
-          "state": "SUBMITTED",
+          "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr059-5612",
           "real_artno": "5612",
-          "at": "2026-10-13T16:21:57.892770+00:00",
-          "next_action": "仅回读审核状态，审核通过后核材料/SKU/价格/图文与实际评分；不得重复提交。",
+          "at": "2026-10-13T17:17:54.234201+00:00",
+          "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943767266/prepared.json",
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943767266/update_once.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943767266/update_receipt.json"
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943767266/update_receipt.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943767266/verification.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943767266/after_get.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943767266/after_render.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943767266/score.json"
           ]
         }
       },
       "catalog_fields": {
-        "at": "2026-10-10T06:28:16.283236+00:00",
+        "at": "2026-10-13T17:08:48.714746+00:00",
         "model": "HR059-B",
-        "title": "Men's Breathable Lace-Up Light Weight Walking Shoes Model HR059-B",
+        "title": "Zip-Up Casual Ankle Boots with Rear Pull Loop and Raised Toe Outline for Footwear Collections",
         "keywords": [
           ""
         ],
         "main_images": [
-          "https://sc04.alicdn.com/kf/H297c2b15fae246919fa28becf0b00b557.png",
-          "https://sc04.alicdn.com/kf/H89bb0e9323564029b9ad2f2329ef05eez.png",
-          "https://sc04.alicdn.com/kf/H7daf86e212034bb9a82eb67069721c0f8.png",
-          "https://sc04.alicdn.com/kf/H3c633ef65ec84e5195e20a59a0c14dabZ.png",
-          "https://sc04.alicdn.com/kf/H4f80e3056f6647b69ff9316134d87dd0g.png",
-          "https://sc04.alicdn.com/kf/H8b795922dbcd4fc2bd374c6561e6bad2N.png"
+          "https://sc04.alicdn.com/kf/H3ce11d430f674599aa3a2d77950f7e37M.jpg",
+          "https://sc04.alicdn.com/kf/Hb56805598c4c43198372ac0ceb792b82U.jpg",
+          "https://sc04.alicdn.com/kf/Hd32d8a7173ad4eafa3d4337c60b0c77bA.jpg",
+          "https://sc04.alicdn.com/kf/H5df86df77f02483aaacbc645f7f3ad9fA.jpg",
+          "https://sc04.alicdn.com/kf/Hbdcc391fb08548849ed6a6a5bb3e5c830.jpg",
+          "https://sc04.alicdn.com/kf/H281467d09f4b48368c335900f583a9c9r.jpg"
         ],
-        "category_id": 201334413,
+        "category_id": 201774304,
         "display": "Y",
         "status": "approved",
-        "url": "https://www.alibaba.com/product-detail/Men-s-Breathable-Lace-Up-Light_1601943767266.html",
-        "scope": "product.list；不是全字段/公开验收"
+        "url": "https://www.alibaba.com/product-detail/Zip-Up-Casual-Ankle-Boots-with_1601943767266.html",
+        "scope": "Exact-ID whole-shoe replacement formal get; public presentation and legacy keyword migration tracked separately"
       },
       "platform_group": {
-        "id": "972130291",
-        "evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/店内分组/972130291.json",
-        "scope": "正式商品接口返回店内分组；不等于采购意图分类"
+        "id": "916200866",
+        "name": "Regular Fit Casual Walking Shoes",
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR059/目标店内分组回读.json",
+        "scope": "当前正式商品与已核官方店内分组；与本地采购分类分列"
       }
     },
     {
       "id": "1601943779211",
       "product_id": "HR059",
       "model": "HR059-C",
-      "url": "https://www.alibaba.com/product-detail/Men-s-Light-Weight-Walking-Shoes_1601943779211.html",
-      "record_type": "来源待补",
-      "bound_source_id": null,
-      "source_relation": "REAL_SOURCE_CANDIDATE_REPLACEMENT_PENDING_FORMAL_READ",
+      "url": "https://www.alibaba.com/product-detail/Textured-Upper-Ankle-Boots-with-Side_1601943779211.html",
+      "record_type": "当前实款正式绑定",
+      "bound_source_id": "src-hr-hr059-5612",
+      "source_relation": "SAME_ID_REAL_SOURCE_REPLACEMENT_FORMAL_PASS",
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-07T04:25:00.978045+00:00",
-        "scope": "历史目录回读；不等于来源/全内容验收"
+        "at": "2026-10-13T17:17:23.796362+00:00",
+        "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "notes": "当前采用大卖鞋业 5612，原ID整鞋替换正式字段及评分通过；旧候选、旧鞋型和旧采购价不参与当前执行。来源、当前图文和逐ID证据见本款唯一入口；已提交动作不重放。",
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943779211/formal_get.json",
-        "at": "2026-10-12T23:06:17.560524+00:00",
-        "scope": "完整正式字段；公司六图、简介、通用FAQ单独验收"
+        "at": "2026-10-13T17:13:23.390890+00:00",
+        "scope": "完整商品正式字段；本轮实源换款逐ID字段/5.00评分通过，公开与旧关键词迁移证据分列"
       },
       "current_platform_fields": {
-        "at": "2026-10-12T23:06:17.560524+00:00",
-        "title": "Men's Light Weight Walking Shoes Model HR059-C",
+        "at": "2026-10-13T17:13:23.390890+00:00",
+        "title": "Textured Upper Ankle Boots with Side Zipper and Patterned PVC Sole for Street Style Wear",
         "keywords": [
           ""
         ],
         "main_images": [
-          "https://sc04.alicdn.com/kf/H17fbfce57e8548bf904d2db93a924881A.png",
-          "https://sc04.alicdn.com/kf/H89bb0e9323564029b9ad2f2329ef05eez.png",
-          "https://sc04.alicdn.com/kf/H7daf86e212034bb9a82eb67069721c0f8.png",
-          "https://sc04.alicdn.com/kf/H3c633ef65ec84e5195e20a59a0c14dabZ.png",
-          "https://sc04.alicdn.com/kf/H4f80e3056f6647b69ff9316134d87dd0g.png",
-          "https://sc04.alicdn.com/kf/H8b795922dbcd4fc2bd374c6561e6bad2N.png"
+          "https://sc04.alicdn.com/kf/H3ce11d430f674599aa3a2d77950f7e37M.jpg",
+          "https://sc04.alicdn.com/kf/Hb56805598c4c43198372ac0ceb792b82U.jpg",
+          "https://sc04.alicdn.com/kf/Hd32d8a7173ad4eafa3d4337c60b0c77bA.jpg",
+          "https://sc04.alicdn.com/kf/H5df86df77f02483aaacbc645f7f3ad9fA.jpg",
+          "https://sc04.alicdn.com/kf/Hbdcc391fb08548849ed6a6a5bb3e5c830.jpg",
+          "https://sc04.alicdn.com/kf/H281467d09f4b48368c335900f583a9c9r.jpg"
         ],
-        "category_id": 201334413,
+        "category_id": 201774304,
         "display": "Y",
         "status": "approved",
-        "url": "https://www.alibaba.com/product-detail/Men-s-Light-Weight-Walking-Shoes_1601943779211.html",
-        "scope": "同ID正式回读；与公开验收分开"
+        "url": "https://www.alibaba.com/product-detail/Textured-Upper-Ankle-Boots-with-Side_1601943779211.html",
+        "scope": "Exact-ID whole-shoe replacement formal get; public presentation and legacy keyword migration tracked separately"
       },
       "local_sync": {
-        "state": "COMPANY_BUNDLE_FORMAL_PASS",
+        "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943779211/formal_get.json",
-        "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续"
+        "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943779211/formal_render.json",
+        "at": "2026-10-13T17:17:23.796362+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -66225,43 +66675,48 @@
           "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续"
         },
         "source_replacement": {
-          "state": "SUBMITTED",
+          "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr059-5612",
           "real_artno": "5612",
-          "at": "2026-10-13T16:21:57.897046+00:00",
-          "next_action": "仅回读审核状态，审核通过后核材料/SKU/价格/图文与实际评分；不得重复提交。",
+          "at": "2026-10-13T17:17:54.246652+00:00",
+          "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943779211/prepared.json",
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943779211/update_once.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943779211/update_receipt.json"
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943779211/update_receipt.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943779211/verification.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943779211/after_get.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943779211/after_render.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943779211/score.json"
           ]
         }
       },
       "catalog_fields": {
-        "at": "2026-10-10T06:28:16.283236+00:00",
+        "at": "2026-10-13T17:13:23.390890+00:00",
         "model": "HR059-C",
-        "title": "Men's Light Weight Walking Shoes Model HR059-C",
+        "title": "Textured Upper Ankle Boots with Side Zipper and Patterned PVC Sole for Street Style Wear",
         "keywords": [
           ""
         ],
         "main_images": [
-          "https://sc04.alicdn.com/kf/H17fbfce57e8548bf904d2db93a924881A.png",
-          "https://sc04.alicdn.com/kf/H89bb0e9323564029b9ad2f2329ef05eez.png",
-          "https://sc04.alicdn.com/kf/H7daf86e212034bb9a82eb67069721c0f8.png",
-          "https://sc04.alicdn.com/kf/H3c633ef65ec84e5195e20a59a0c14dabZ.png",
-          "https://sc04.alicdn.com/kf/H4f80e3056f6647b69ff9316134d87dd0g.png",
-          "https://sc04.alicdn.com/kf/H8b795922dbcd4fc2bd374c6561e6bad2N.png"
+          "https://sc04.alicdn.com/kf/H3ce11d430f674599aa3a2d77950f7e37M.jpg",
+          "https://sc04.alicdn.com/kf/Hb56805598c4c43198372ac0ceb792b82U.jpg",
+          "https://sc04.alicdn.com/kf/Hd32d8a7173ad4eafa3d4337c60b0c77bA.jpg",
+          "https://sc04.alicdn.com/kf/H5df86df77f02483aaacbc645f7f3ad9fA.jpg",
+          "https://sc04.alicdn.com/kf/Hbdcc391fb08548849ed6a6a5bb3e5c830.jpg",
+          "https://sc04.alicdn.com/kf/H281467d09f4b48368c335900f583a9c9r.jpg"
         ],
-        "category_id": 201334413,
+        "category_id": 201774304,
         "display": "Y",
         "status": "approved",
-        "url": "https://www.alibaba.com/product-detail/Men-s-Light-Weight-Walking-Shoes_1601943779211.html",
-        "scope": "product.list；不是全字段/公开验收"
+        "url": "https://www.alibaba.com/product-detail/Textured-Upper-Ankle-Boots-with-Side_1601943779211.html",
+        "scope": "Exact-ID whole-shoe replacement formal get; public presentation and legacy keyword migration tracked separately"
       },
       "platform_group": {
-        "id": "972130291",
-        "evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/店内分组/972130291.json",
-        "scope": "正式商品接口返回店内分组；不等于采购意图分类"
+        "id": "916200866",
+        "name": "Regular Fit Casual Walking Shoes",
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR059/目标店内分组回读.json",
+        "scope": "当前正式商品与已核官方店内分组；与本地采购分类分列"
       }
     },
     {
@@ -66489,7 +66944,7 @@
       "url": "https://www.alibaba.com/product-detail/Men-s-Shoes-Model-HR061-A_1601943700660.html",
       "record_type": "来源待补",
       "bound_source_id": null,
-      "source_relation": "SOURCE_EVIDENCE_MISSING",
+      "source_relation": "REAL_SOURCE_CANDIDATE_REPLACEMENT_PENDING_FORMAL_READ",
       "observation": {
         "audit": "approved",
         "display": "Y",
@@ -66526,7 +66981,7 @@
       "local_sync": {
         "state": "COMPANY_BUNDLE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943700660/formal_get.json",
-        "next_action": "六图、公司简介与通用FAQ正式回读通过；只待该ID公开页呈现核验，不重复提交"
+        "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续"
       },
       "optimization": {
         "factory_gallery": {
@@ -66588,7 +67043,47 @@
           "historical_source_and_highlights_deferred": true,
           "completed_this_scope": true,
           "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续"
+        },
+        "source_replacement": {
+          "state": "REVIEWING",
+          "source_id": "src-hr-hr061-l895",
+          "real_artno": "L895",
+          "at": "2026-10-13T17:17:54.265755+00:00",
+          "next_action": "仅回读审核状态，审核通过后核材料/SKU/价格/图文与实际评分；不得重复提交。",
+          "evidence": [
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943700660/prepared.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943700660/update_once.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943700660/update_receipt.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943700660/verification.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943700660/after_get.json"
+          ]
         }
+      },
+      "catalog_fields": {
+        "at": "2026-10-10T06:28:16.283236+00:00",
+        "model": "HR061-A",
+        "title": "Men's Shoes Model HR061-A",
+        "keywords": [
+          ""
+        ],
+        "main_images": [
+          "https://sc04.alicdn.com/kf/Hdc675e610a884465980c5921175a8cfcE.png",
+          "https://sc04.alicdn.com/kf/Hc67b81c452354cc986644bc1030eae30x.png",
+          "https://sc04.alicdn.com/kf/Hade08fa74a004c2c90bc202c260afc6f3.png",
+          "https://sc04.alicdn.com/kf/He3828af8422d4df6a7cacfa988584061u.png",
+          "https://sc04.alicdn.com/kf/H103406bfcbac419587f081e92bcf5bebp.png",
+          "https://sc04.alicdn.com/kf/H31e3e7800fbd4f5ca2bc7b4c57a3b8ac5.png"
+        ],
+        "category_id": 201334413,
+        "display": "Y",
+        "status": "approved",
+        "url": "https://www.alibaba.com/product-detail/Men-s-Shoes-Model-HR061-A_1601943700660.html",
+        "scope": "product.list；不是全字段/公开验收"
+      },
+      "platform_group": {
+        "id": "972130291",
+        "evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/店内分组/972130291.json",
+        "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       }
     },
     {
@@ -66598,7 +67093,7 @@
       "url": "https://www.alibaba.com/product-detail/Men-s-Walking-Shoes-Light-Weight_1601943748344.html",
       "record_type": "来源待补",
       "bound_source_id": null,
-      "source_relation": "SOURCE_EVIDENCE_MISSING",
+      "source_relation": "REAL_SOURCE_CANDIDATE_REPLACEMENT_PENDING_FORMAL_READ",
       "observation": {
         "audit": "approved",
         "display": "Y",
@@ -66635,7 +67130,7 @@
       "local_sync": {
         "state": "COMPANY_BUNDLE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943748344/formal_get.json",
-        "next_action": "六图、公司简介与通用FAQ正式回读通过；只待该ID公开页呈现核验，不重复提交"
+        "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续"
       },
       "optimization": {
         "factory_gallery": {
@@ -66697,7 +67192,47 @@
           "historical_source_and_highlights_deferred": true,
           "completed_this_scope": true,
           "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续"
+        },
+        "source_replacement": {
+          "state": "REVIEWING",
+          "source_id": "src-hr-hr061-l895",
+          "real_artno": "L895",
+          "at": "2026-10-13T17:17:54.268567+00:00",
+          "next_action": "仅回读审核状态，审核通过后核材料/SKU/价格/图文与实际评分；不得重复提交。",
+          "evidence": [
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943748344/prepared.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943748344/update_once.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943748344/update_receipt.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943748344/verification.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943748344/after_get.json"
+          ]
         }
+      },
+      "catalog_fields": {
+        "at": "2026-10-10T06:28:16.283236+00:00",
+        "model": "HR061-B",
+        "title": "Men's Walking Shoes Light Weight Breathable Model HR061-B",
+        "keywords": [
+          ""
+        ],
+        "main_images": [
+          "https://sc04.alicdn.com/kf/H89f48d93f41040babe0245fe9c00c713c.png",
+          "https://sc04.alicdn.com/kf/Hc67b81c452354cc986644bc1030eae30x.png",
+          "https://sc04.alicdn.com/kf/Hade08fa74a004c2c90bc202c260afc6f3.png",
+          "https://sc04.alicdn.com/kf/He3828af8422d4df6a7cacfa988584061u.png",
+          "https://sc04.alicdn.com/kf/H103406bfcbac419587f081e92bcf5bebp.png",
+          "https://sc04.alicdn.com/kf/H31e3e7800fbd4f5ca2bc7b4c57a3b8ac5.png"
+        ],
+        "category_id": 201334413,
+        "display": "Y",
+        "status": "approved",
+        "url": "https://www.alibaba.com/product-detail/Men-s-Walking-Shoes-Light-Weight_1601943748344.html",
+        "scope": "product.list；不是全字段/公开验收"
+      },
+      "platform_group": {
+        "id": "972130291",
+        "evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/店内分组/972130291.json",
+        "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       }
     },
     {
@@ -66707,7 +67242,7 @@
       "url": "https://www.alibaba.com/product-detail/Men-s-Shoes-Model-HR061-C_1601943727538.html",
       "record_type": "来源待补",
       "bound_source_id": null,
-      "source_relation": "SOURCE_EVIDENCE_MISSING",
+      "source_relation": "REAL_SOURCE_CANDIDATE_REPLACEMENT_PENDING_FORMAL_READ",
       "observation": {
         "audit": "approved",
         "display": "Y",
@@ -66744,7 +67279,7 @@
       "local_sync": {
         "state": "COMPANY_BUNDLE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943727538/formal_get.json",
-        "next_action": "六图、公司简介与通用FAQ正式回读通过；只待该ID公开页呈现核验，不重复提交"
+        "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续"
       },
       "optimization": {
         "factory_gallery": {
@@ -66806,7 +67341,47 @@
           "historical_source_and_highlights_deferred": true,
           "completed_this_scope": true,
           "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续"
+        },
+        "source_replacement": {
+          "state": "REVIEWING",
+          "source_id": "src-hr-hr061-l895",
+          "real_artno": "L895",
+          "at": "2026-10-13T17:17:54.273048+00:00",
+          "next_action": "仅回读审核状态，审核通过后核材料/SKU/价格/图文与实际评分；不得重复提交。",
+          "evidence": [
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943727538/prepared.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943727538/update_once.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943727538/update_receipt.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943727538/verification.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943727538/after_get.json"
+          ]
         }
+      },
+      "catalog_fields": {
+        "at": "2026-10-10T06:28:16.283236+00:00",
+        "model": "HR061-C",
+        "title": "Men's Shoes Model HR061-C",
+        "keywords": [
+          ""
+        ],
+        "main_images": [
+          "https://sc04.alicdn.com/kf/H2d7a87ec6cf34520a3bccb57b2c06049M.png",
+          "https://sc04.alicdn.com/kf/Hc67b81c452354cc986644bc1030eae30x.png",
+          "https://sc04.alicdn.com/kf/Hade08fa74a004c2c90bc202c260afc6f3.png",
+          "https://sc04.alicdn.com/kf/He3828af8422d4df6a7cacfa988584061u.png",
+          "https://sc04.alicdn.com/kf/H103406bfcbac419587f081e92bcf5bebp.png",
+          "https://sc04.alicdn.com/kf/H31e3e7800fbd4f5ca2bc7b4c57a3b8ac5.png"
+        ],
+        "category_id": 201334413,
+        "display": "Y",
+        "status": "approved",
+        "url": "https://www.alibaba.com/product-detail/Men-s-Shoes-Model-HR061-C_1601943727538.html",
+        "scope": "product.list；不是全字段/公开验收"
+      },
+      "platform_group": {
+        "id": "972130291",
+        "evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/店内分组/972130291.json",
+        "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       }
     },
     {
@@ -67147,7 +67722,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T16:21:56.190096+00:00",
+        "at": "2026-10-13T17:17:23.666766+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -67181,7 +67756,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943653995/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943653995/formal_render.json",
-        "at": "2026-10-13T16:21:56.190096+00:00"
+        "at": "2026-10-13T17:17:23.666766+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -67248,7 +67823,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr063-1712",
           "real_artno": "1712",
-          "at": "2026-10-13T16:21:57.727524+00:00",
+          "at": "2026-10-13T17:17:54.130902+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943653995/prepared.json",
@@ -67300,7 +67875,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T16:21:56.215571+00:00",
+        "at": "2026-10-13T17:17:23.683595+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -67334,7 +67909,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943651966/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943651966/formal_render.json",
-        "at": "2026-10-13T16:21:56.215571+00:00"
+        "at": "2026-10-13T17:17:23.683595+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -67401,7 +67976,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr063-1712",
           "real_artno": "1712",
-          "at": "2026-10-13T16:21:57.749747+00:00",
+          "at": "2026-10-13T17:17:54.146549+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943651966/prepared.json",
@@ -67453,7 +68028,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T16:21:56.237983+00:00",
+        "at": "2026-10-13T17:17:23.702069+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -67487,7 +68062,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943764325/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943764325/formal_render.json",
-        "at": "2026-10-13T16:21:56.237983+00:00"
+        "at": "2026-10-13T17:17:23.702069+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -67554,7 +68129,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr063-1712",
           "real_artno": "1712",
-          "at": "2026-10-13T16:21:57.772452+00:00",
+          "at": "2026-10-13T17:17:54.159949+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943764325/prepared.json",
@@ -67606,7 +68181,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T16:21:56.261527+00:00",
+        "at": "2026-10-13T17:17:23.717931+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -67640,7 +68215,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943738486/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943738486/formal_render.json",
-        "at": "2026-10-13T16:21:56.261527+00:00"
+        "at": "2026-10-13T17:17:23.717931+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -67707,7 +68282,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr065-j55",
           "real_artno": "J55",
-          "at": "2026-10-13T16:21:57.810958+00:00",
+          "at": "2026-10-13T17:17:54.179869+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943738486/prepared.json",
@@ -67759,7 +68334,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T16:21:56.283644+00:00",
+        "at": "2026-10-13T17:17:23.733028+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -67793,7 +68368,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943703750/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943703750/formal_render.json",
-        "at": "2026-10-13T16:21:56.283644+00:00"
+        "at": "2026-10-13T17:17:23.733028+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -67860,7 +68435,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr065-j55",
           "real_artno": "J55",
-          "at": "2026-10-13T16:21:57.836600+00:00",
+          "at": "2026-10-13T17:17:54.192403+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943703750/prepared.json",
@@ -67912,7 +68487,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T16:21:56.303832+00:00",
+        "at": "2026-10-13T17:17:23.747024+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -67946,7 +68521,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943717639/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943717639/formal_render.json",
-        "at": "2026-10-13T16:21:56.303832+00:00"
+        "at": "2026-10-13T17:17:23.747024+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -68013,7 +68588,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr065-j55",
           "real_artno": "J55",
-          "at": "2026-10-13T16:21:57.860074+00:00",
+          "at": "2026-10-13T17:17:54.204074+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943717639/prepared.json",

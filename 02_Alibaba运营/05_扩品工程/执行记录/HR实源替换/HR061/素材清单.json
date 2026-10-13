@@ -1,0 +1,457 @@
+{
+  "family": "HR061",
+  "state": "VISUAL_PASS",
+  "items": {
+    "M1": {
+      "path": "01_产品资产/02_可发布素材/HR061/M1.jpg",
+      "sha256": "b5497dc32060864edf9f0e11f16a66acd952ffc4e0733a42a0e96d654d11adff",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M2": {
+      "path": "01_产品资产/02_可发布素材/HR061/M2.jpg",
+      "sha256": "1ebfeb760f6c68108755b776b650d39ea133b96b62aebf5bbaeea565fee7e096",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M3": {
+      "path": "01_产品资产/02_可发布素材/HR061/M3.jpg",
+      "sha256": "b1020a929233c617b20141d70dedc1fa382f3c4931c02d61fc5ba5ce062a75c9",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M4": {
+      "path": "01_产品资产/02_可发布素材/HR061/M4.jpg",
+      "sha256": "4190e902272877f22c9eda0eb9deb20071f78ef81730f43d1afa84bc3cc64e51",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M5": {
+      "path": "01_产品资产/02_可发布素材/HR061/M5.jpg",
+      "sha256": "692c6af62f081dc14ac6914ba06a26fecd0f5382e6893680c91f0a6cbd8aac64",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "D1": {
+      "path": "01_产品资产/02_可发布素材/HR061/D1.jpg",
+      "sha256": "32f135db956aec94bc15bb1f1c8fa810f333d6f0570fed958484bc80031cf259",
+      "dimensions": [
+        1000,
+        1250
+      ]
+    },
+    "D2": {
+      "path": "01_产品资产/02_可发布素材/HR061/D2.jpg",
+      "sha256": "3bd3b6da16883e9b1fdb180739b25cdcc49208160999941d6db007931cafc897",
+      "dimensions": [
+        1000,
+        1250
+      ]
+    },
+    "D3": {
+      "path": "01_产品资产/02_可发布素材/HR061/D3.jpg",
+      "sha256": "899d6e4f98141c3fb7c1a043386c842602435994d556a4f42bf1c8b166b8d35d",
+      "dimensions": [
+        1000,
+        1250
+      ]
+    },
+    "D4": {
+      "path": "01_产品资产/02_可发布素材/HR061/D4.jpg",
+      "sha256": "e1e61b7c793b97c0617606181dfbee56ea0b537fd75a87e42b17f76011165cdd",
+      "dimensions": [
+        1000,
+        1250
+      ]
+    },
+    "SKU_BLACK": {
+      "path": "01_产品资产/02_可发布素材/HR061/SKU_BLACK.jpg",
+      "sha256": "3ebe98eef0b72e16604b1eb18d9b660bb5f0800f320d0b3439f957eaab97eca8",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "SKU_KHAKI": {
+      "path": "01_产品资产/02_可发布素材/HR061/SKU_KHAKI.jpg",
+      "sha256": "d3c90ddc7871605c959bd073f2afb5bd0d3f782b136bac953342776d71e31b2d",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M6": {
+      "path": "01_产品资产/02_可发布素材/共享素材/贝强公司简介图库.jpg",
+      "sha256": "5164b4d0ac008fb79a20d60419d21713b4f49b9ecea0a845d6c7de104030f51e",
+      "dimensions": [
+        1721,
+        914
+      ]
+    }
+  },
+  "image_roles": {
+    "M1": {
+      "buyer_question": "What actual shoe is offered?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR061_L895\\20.jpg",
+          "crop": [
+            0,
+            25,
+            786,
+            690
+          ],
+          "native_effective_pixels": [
+            786,
+            665
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": null
+    },
+    "M2": {
+      "buyer_question": "How does the high-top look when worn?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR061_L895\\12.jpg",
+          "crop": [
+            20,
+            0,
+            785,
+            640
+          ],
+          "native_effective_pixels": [
+            765,
+            640
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": "High-top casual profile"
+    },
+    "M3": {
+      "buyer_question": "How is the lining arranged?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR061_L895\\10.jpg",
+          "crop": [
+            20,
+            375,
+            770,
+            1010
+          ],
+          "native_effective_pixels": [
+            750,
+            635
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": "Plush collar & rear loop"
+    },
+    "M4": {
+      "buyer_question": "Which colours and EU sizes can I order?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR061_L895\\14.jpg",
+          "crop": [
+            60,
+            185,
+            730,
+            585
+          ],
+          "native_effective_pixels": [
+            670,
+            400
+          ],
+          "uniform_resize": true
+        },
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR061_L895\\20.jpg",
+          "crop": [
+            20,
+            25,
+            786,
+            690
+          ],
+          "native_effective_pixels": [
+            766,
+            665
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [
+        {
+          "value": "Black",
+          "xy": [
+            45,
+            855
+          ],
+          "size": 25
+        },
+        {
+          "value": "Khaki",
+          "xy": [
+            520,
+            855
+          ],
+          "size": 25
+        },
+        {
+          "value": "EU 39-46",
+          "xy": [
+            45,
+            930
+          ],
+          "size": 32
+        }
+      ],
+      "title": "Colour & EU assortment"
+    },
+    "M5": {
+      "buyer_question": "What toe and sidewall details are visible?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR061_L895\\09.jpg",
+          "crop": [
+            20,
+            345,
+            770,
+            970
+          ],
+          "native_effective_pixels": [
+            750,
+            625
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": "Apron toe & wraparound sidewall"
+    },
+    "D1": {
+      "buyer_question": "How does the lace-up front look?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR061_L895\\13.jpg",
+          "crop": [
+            10,
+            30,
+            650,
+            800
+          ],
+          "native_effective_pixels": [
+            640,
+            770
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [
+        {
+          "value": "Actual Black source shoe shown on foot.",
+          "xy": [
+            45,
+            1140
+          ],
+          "size": 25
+        }
+      ],
+      "title": "Lace-up front layout"
+    },
+    "D2": {
+      "buyer_question": "What is the side silhouette of the second colour?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR061_L895\\21.jpg",
+          "crop": [
+            10,
+            10,
+            650,
+            780
+          ],
+          "native_effective_pixels": [
+            640,
+            770
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [
+        {
+          "value": "Raised collar, rear loop and continuous sole sidewall.",
+          "xy": [
+            45,
+            1140
+          ],
+          "size": 25
+        }
+      ],
+      "title": "Khaki side profile"
+    },
+    "D3": {
+      "buyer_question": "How can I examine the lining and entry?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR061_L895\\10.jpg",
+          "crop": [
+            20,
+            375,
+            770,
+            1010
+          ],
+          "native_effective_pixels": [
+            750,
+            635
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [
+        {
+          "value": "Review the collar and lining details for your collection.",
+          "xy": [
+            45,
+            1140
+          ],
+          "size": 25
+        }
+      ],
+      "title": "Plush lining close view"
+    },
+    "D4": {
+      "buyer_question": "Which colours and EU sizes can I order?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR061_L895\\14.jpg",
+          "crop": [
+            60,
+            185,
+            730,
+            585
+          ],
+          "native_effective_pixels": [
+            670,
+            400
+          ],
+          "uniform_resize": true
+        },
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR061_L895\\20.jpg",
+          "crop": [
+            20,
+            25,
+            786,
+            690
+          ],
+          "native_effective_pixels": [
+            766,
+            665
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [
+        {
+          "value": "Black",
+          "xy": [
+            45,
+            855
+          ],
+          "size": 25
+        },
+        {
+          "value": "Khaki",
+          "xy": [
+            520,
+            855
+          ],
+          "size": 25
+        },
+        {
+          "value": "EU 39-46",
+          "xy": [
+            45,
+            1170
+          ],
+          "size": 32
+        }
+      ],
+      "title": "Colour & EU assortment"
+    },
+    "SKU_BLACK": {
+      "buyer_question": "Which colour is this SKU?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR061_L895\\14.jpg",
+          "crop": [
+            60,
+            185,
+            730,
+            585
+          ],
+          "native_effective_pixels": [
+            670,
+            400
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": null
+    },
+    "SKU_KHAKI": {
+      "buyer_question": "Which colour is this SKU?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR061_L895\\20.jpg",
+          "crop": [
+            0,
+            25,
+            786,
+            690
+          ],
+          "native_effective_pixels": [
+            786,
+            665
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": null
+    },
+    "M6": {
+      "buyer_question": "Who will coordinate the footwear order?",
+      "shared_approved_company_image": "01_产品资产/02_可发布素材/共享素材/贝强公司简介图库.jpg"
+    }
+  },
+  "visual_review": {
+    "reviewed_on": "2026-10-14",
+    "reviewer": "root",
+    "whole_set_viewed": true,
+    "full_size_focal_roles": [
+      "M1",
+      "M3",
+      "M5",
+      "SKU_BLACK"
+    ],
+    "source_identity": "Reviewed original21photographs and compared whole-shoe colour/geometry/lace rows/plush texture/seam/sidewall. Whole shoes remain complete; source Chinese captions excluded. M6 reuses previously approved company asset.",
+    "limits": "No bottom photograph/performance/fibre claim; real markings retained. M1 source scene remains actual photograph, no synthetic shoe reconstruction."
+  }
+}
