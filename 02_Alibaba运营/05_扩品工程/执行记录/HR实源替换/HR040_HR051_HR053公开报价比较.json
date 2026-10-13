@@ -1,0 +1,29 @@
+{
+  "observed_on": "2026-10-14",
+  "families": [
+    "HR040",
+    "HR051",
+    "HR053"
+  ],
+  "source_cost_cny": {
+    "HR040": 28,
+    "HR051": 82,
+    "HR053": 29
+  },
+  "primary_comparable_pages": [
+    {
+      "url": "https://germany.alibaba.com/product-detail/OEM-Custom-EVA-Clogs-Hole-Shoes_1601268696663.html",
+      "public_price": "EUR4.34/300-1999pairs,4.07/2000-5999,3.37/6000-19999,2.50/20000+",
+      "comparable": false,
+      "reason": "Different photographed clog/model andsole version, EURcurrency, largerMOQ; not exactF263quote or landedcost."
+    },
+    {
+      "url": "https://www.alibaba.com/product-detail/2024-footwear-Wholesale-Price-Comfortable-Knit_1600880012423.html",
+      "public_price": null,
+      "comparable": false,
+      "reason": "No usable price table returned; not936identified model."
+    }
+  ],
+  "decision": "Apply verified source cost and50/40/30percent markup at2/50/100pairs; do not assert market-lowest or netprofit. Low MOQ andexactcolour-size source are meaningful; competing bulkclogquotes can becheaper and requireordercostcomparison.",
+  "source_observation": "Websearch primarysupplier snippets; exact-model global price advantage not established."
+}

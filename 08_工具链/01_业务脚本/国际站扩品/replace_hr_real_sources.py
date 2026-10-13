@@ -23,6 +23,13 @@ def model_number(family,variant):
 def attribute_values(value):
  return value if isinstance(value,list)else[value]
 
+def source_size_ids(sizes):
+ assert sizes and len(sizes)==len(set(sizes)),'Source size choices must be distinct'
+ ids={n:str(-800-n)if isinstance(n,int)else str(-2000-i)for i,n in enumerate(sizes,1)}
+ assert all(isinstance(n,int)or isinstance(n,str)and re.fullmatch(r'\d{2}-\d{2}',n)for n in sizes),'Only confirmed EU numbers or paired EU ranges are supported'
+ assert len(set(ids.values()))==len(sizes)
+ return ids
+
 def field(parent,fid,typ='input',value=None):
  x=E.SubElement(parent,'field',id=fid,type=typ)
  if value is not None:E.SubElement(x,'value').text=str(value)
@@ -121,14 +128,17 @@ def prepare(family):
    key=re.sub(r'[^A-Z0-9]+','_',color.upper()).strip('_');vid=str(-500-i);colors.append((color,key,vid))
    E.SubElement(cs,'value',inputValue=color,img=assets['SKU_'+key]['url'],remark=color).text=vid
   sz=field(cv,'p-222038415','multiCheck');vs=E.SubElement(sz,'values')
-  for n in p['sizes']:E.SubElement(vs,'value',inputValue=f'EU{n}').text=str(-800-n)
+  size_ids=source_size_ids(p['sizes'])
+  for n in p['sizes']:E.SubElement(vs,'value',inputValue=f'EU{n}').text=size_ids[n]
   sku=root.find("./field[@id='sku']")
   for child in list(sku):sku.remove(child)
   for color,key,cid in colors:
-   for n in p['sizes']:
+   color_sizes=p.get('sizes_by_color',{}).get(color,p['sizes'])
+   assert color_sizes and len(color_sizes)==len(set(color_sizes))and set(color_sizes)<=set(p['sizes']),'Invalid colour-specific source size range'
+   for n in color_sizes:
     row=E.SubElement(sku,'complex-values');field(row,'skuOuterId',value=f'{model_number(family,variant)}-{key}-EU{n}')
     props=field(row,'props','multiInput');vals=E.SubElement(props,'values')
-    for prop,vid,name in [(color_axis,cid,color),('222038415',str(-800-n),f'EU{n}')]:E.SubElement(vals,'value',propId=prop,propName='p-'+prop,propValueId=vid,propValueName=name).text=prop+':'+vid
+    for prop,vid,name in [(color_axis,cid,color),('222038415',size_ids[n],f'EU{n}')]:E.SubElement(vals,'value',propId=prop,propName='p-'+prop,propValueId=vid,propValueName=name).text=prop+':'+vid
   contract.validate_sku_property_pairs(root)
   title=p['titles'][variant];assert len(title)<=128 and family not in title
   pub.set_direct_value(root,'productTitle',title);old=root.find("./field[@id='productKeywords']");root.remove(old)
@@ -165,8 +175,8 @@ def prepare(family):
    root.append(field(E.Element('temporary'),'catId',value=category))
    xml=E.tostring(root,encoding='unicode')
   request={'param_product_top_publish_request':{'product_id':int(pid),'cat_id':category,'language':'en_US','xml':xml}}
-  b.save(f/'prepared.json',{'family':family,'variant':variant,'source':source['url'],'source_artno':source['artno'],'title':title,'fields':fields,'color_axis_id':color_axis,'keyword_submission_selection':submitted_keywords,'keyword_schema_capacity':len(keyword_contract['definitions']),'sku_count':len(colors)*len(p['sizes']),'colors':p['colors'],'sizes':[f'EU{n}'for n in p['sizes']],'tiers':tiers,'cost_analysis':{'source_cny':source['price_cny'],'fx_cny_per_usd':fx,'fx_source':'https://www.boc.cn/sourcedb/whpj/','fx_observed':'2026-10-13 10:57:20','fx_basis':'USD cashless buying 668.37 CNY per 100 USD','cost_usd':cost,'minimum_markup':min(price/cost-1 for _,price in tiers),'freight_service_tax':'Order-specific, not claimed included'},'inventory':'OMITTED_NOT_PHYSICAL_STOCK','source_truth':'Real current shoe and procurement entry; order availability still unconfirmed','company_bundle':'Approved V8 and canonical general FAQ preserved unchanged','request':request,'xml_sha256':hashlib.sha256(xml.encode()).hexdigest(),'expected_schema':contract.field_snapshot(root),'before_preserved':preserve(before,fields)})
-  print(pid,'PREPARED',len(colors)*len(p['sizes']),flush=True)
+  b.save(f/'prepared.json',{'family':family,'variant':variant,'source':source['url'],'source_artno':source['artno'],'title':title,'fields':fields,'color_axis_id':color_axis,'keyword_submission_selection':submitted_keywords,'keyword_schema_capacity':len(keyword_contract['definitions']),'sku_count':sum(len(p.get('sizes_by_color',{}).get(c,p['sizes']))for c in p['colors']),'colors':p['colors'],'sizes':[f'EU{n}'for n in p['sizes']],'sizes_by_color':{c:[f'EU{n}'for n in p.get('sizes_by_color',{}).get(c,p['sizes'])]for c in p['colors']},'tiers':tiers,'cost_analysis':{'source_cny':source['price_cny'],'fx_cny_per_usd':fx,'fx_source':'https://www.boc.cn/sourcedb/whpj/','fx_observed':'2026-10-13 10:57:20','fx_basis':'USD cashless buying 668.37 CNY per 100 USD','cost_usd':cost,'minimum_markup':min(price/cost-1 for _,price in tiers),'freight_service_tax':'Order-specific, not claimed included'},'inventory':'OMITTED_NOT_PHYSICAL_STOCK','source_truth':'Real current shoe and procurement entry; order availability still unconfirmed','company_bundle':'Approved V8 and canonical general FAQ preserved unchanged','request':request,'xml_sha256':hashlib.sha256(xml.encode()).hexdigest(),'expected_schema':contract.field_snapshot(root),'before_preserved':preserve(before,fields)})
+  print(pid,'PREPARED',sum(len(p.get('sizes_by_color',{}).get(c,p['sizes']))for c in p['colors']),flush=True)
 def preserve(p,fields=None):
  x=copy.deepcopy(p)
  for k in ['gmt_modified','status','display','attributes','subject','keywords','main_image','product_sku','sourcing_trade','pc_detail_url','category_id']:x.pop(k,None)

@@ -34,6 +34,10 @@ def main():
             'sizes_eu':plan['sizes'],'observed_on':plan['source_date'],
             'procurement_entry':'Current public single-pair fulfillment and supplier business enquiry entry; actual stock and transaction terms confirmed per order',
             'current_public_specs':specs,'images':copied}
+    if plan.get('sizes_by_color'):
+        assert set(plan['sizes_by_color'])<=set(plan['colors'])
+        assert all(v and len(v)==len(set(v))and set(v)<=set(plan['sizes'])for v in plan['sizes_by_color'].values())
+        source['sizes_by_color_eu']=plan['sizes_by_color']
     file=dest/'source.json'
     if file.exists():assert json.loads(file.read_text(encoding='utf8'))==source
     else:file.write_text(json.dumps(source,ensure_ascii=False,indent=2)+'\n',encoding='utf8')

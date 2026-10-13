@@ -13,8 +13,10 @@ def public_fields(value):
 def sync():
  d=json.loads(REG.read_text(encoding='utf8'));products={p['id']:p for p in d['products']};listings={p['id']:p for p in d['listings']};summary=[]
  for family,targets in op.TARGETS.items():
-  plan=op.PLANS[family];raw=ROOT/op.RAW_PATHS[family];source=op.b.load(raw/'source.json');sid='src-hr-'+family.lower()+'-'+source['artno'].lower()
+  plan=op.PLANS[family];raw=ROOT/op.RAW_PATHS[family];source=op.b.load(raw/'source.json');sid=plan.get('registry_source_id','src-hr-'+family.lower()+'-'+source['artno'].lower())
   existing=next((s for s in d['sources']if s['id']==sid),None)
+  if 'registry_source_id'in plan:
+   assert existing and existing['url'].rstrip('/')==source['url'].rstrip('/')and existing['model']==source['artno'],'Existing source identity must match exact reviewed shoe'
   source_date=source.get('observed_on')
   if not source_date:
    source_date=datetime.fromisoformat(source['observed_at']).astimezone(timezone(timedelta(hours=8))).date().isoformat()
@@ -65,7 +67,7 @@ def sync():
   for name in ['素材清单.json','事实与页面计划.json','当前状态.json']:
    ref=rel(BASE/family/name)
    if ref not in p['evidence']:p['evidence'].append(ref)
-  op.b.save(BASE/family/'事实与页面计划.json',{**plan,'source_id':sid,'source_artno':source['artno'],'source_assets_root':rel(raw),'source_evidence':src['evidence'],'procurement_capability':'CURRENT_REAL_SHOE_AND_PROCUREMENT_ENTRY_VERIFIED_NOT_ORDER_STOCK','materials_evidence':plan.get('materials_evidence',[rel(raw/'09.jpg'),rel(raw/'13.jpg')]if family=='HR030'else[source['url']]),'seasons':plan['seasons'],'feature':plan.get('feature','Fashion Trend'),'target_ids':targets,'page_state':'FORMAL_FIELDS_SCORE_PASS'if all(s=='FORMAL_FIELDS_SCORE_PASS'for s in states)else'LOCAL_DRAFT'if all(s in ['LOCAL_DRAFT','LOCAL_PREPARATION']for s in states)else'REVIEW_PENDING','company_faq_source':'02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/通用FAQ与公司简介.json','do_not_claim':['physical stock','tested slip resistance','medical comfort','unverified midsole material']})
+  op.b.save(BASE/family/'事实与页面计划.json',{**plan,'source_id':sid,'source_artno':source['artno'],'source_assets_root':rel(raw),'source_evidence':src['evidence'],'procurement_capability':'CURRENT_REAL_SHOE_AND_PROCUREMENT_ENTRY_VERIFIED_NOT_ORDER_STOCK','materials_evidence':plan.get('materials_evidence',[rel(raw/'09.jpg'),rel(raw/'13.jpg')]if family=='HR030'else[source['url']]),'seasons':plan['seasons'],'feature':plan.get('feature','Fashion Trend'),'target_ids':targets,'page_state':'FORMAL_FIELDS_SCORE_PASS'if all(s=='FORMAL_FIELDS_SCORE_PASS'for s in states)else'LOCAL_DRAFT'if all(s in ['LOCAL_DRAFT','LOCAL_PREPARATION']for s in states)else'REVIEW_PENDING','company_faq_source':'02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/通用FAQ与公司简介.json','do_not_claim':list(dict.fromkeys([*plan.get('do_not_claim',[]),'physical stock','tested slip resistance','medical comfort','unverified midsole material']))})
   op.b.save(BASE/family/'当前状态.json',{'at':op.b.now(),'family':family,'links':[r for r in summary if r['family']==family],'old_concept_images':'NOT_INCLUDED_IN_SUBMITTED_PAYLOAD','public_qa':'PENDING_NORMAL_BUYER_PAGE','source_price':source['price_cny'],'source_currency':'CNY'})
  ws={'name':'HR缺货源实款替换','status':'HR030/HR042优先；原ID实款换图文按逐ID证据登记正式和公开状态。','next_action':'负责人2026-10-13要求先完成HR缺货源商品全量实源替换，再继续路崎宽头鞋上架；已具备真实来源的页面先核实际绑定，不重复换款。','evidence':[rel(BASE/'README.md'),rel(BASE/'当前进度.json')]}
  old=next((w for w in d['workstreams']if w['name']==ws['name']),None)

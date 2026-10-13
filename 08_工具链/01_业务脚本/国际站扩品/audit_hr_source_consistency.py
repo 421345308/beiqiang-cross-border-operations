@@ -49,7 +49,7 @@ def main():
                     'current_local_details': actual['struct_detail'] == canonical['struct_detail'],
                     'bank_manifest_complete': load(BASE/family/'素材清单.json')['state'] == 'VISUAL_PASS',
                 })
-            rows.append({'family': family, 'model': family+'-'+variant, 'id': pid,
+            rows.append({'family': family, 'model': plan.get('model_numbers',{}).get(variant,family+'-'+variant), 'id': pid,
                          'state': state, 'source_id': source_id, 'checks': checks})
     for profile in load(BASE/'已有实款对应.json')['families']:
         family = profile['family']; source_id = profile['source_id']

@@ -1,0 +1,99 @@
+{
+  "family": "HR009",
+  "at": "2026-10-13T21:29:55.063392+00:00",
+  "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+  "source": {
+    "id": "src-hr-hr009-10-161",
+    "url": "https://jumushoe.en.made-in-china.com/product/bnERojLcYTYZ/China-10-161classic-Men-s-Casual-Sneakers-and-Small-White-Shoes.html",
+    "shop_url": "https://jumushoe.en.made-in-china.com",
+    "supplier": "Wenzhou Jumu Shoes Co., Ltd.",
+    "model": "10-161",
+    "price": "未核当前进货报价",
+    "currency": "USD",
+    "unit": "双",
+    "price_terms": "历史已采用实款对应恢复；当前数量、价格、包装及交期逐单询价，不从平台售价或样品费反推采购价。",
+    "observed_at": "2026-09-29",
+    "evidence": [
+      "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR009/复用图审依据.json",
+      "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR009/复用图库绑定.json",
+      "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR009/来源与正式绑定核验.json"
+    ]
+  },
+  "links": [
+    {
+      "id": "1601943434630",
+      "model": "HR009-A",
+      "formal_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943434630/formal_get.json",
+      "formal_observed_at": "2026-10-12T22:11:38.959558+00:00",
+      "checks": {
+        "approved_actual_product_images_match": true,
+        "whole_six_images_match_current_catalog": true,
+        "raw_photo_hashes": true,
+        "materials_match_specific_model_table": true,
+        "source_eu_cartesian": true,
+        "approved_y": true
+      },
+      "main_images": [
+        "https://sc04.alicdn.com/kf/Hddac180951ad4c9eb136ad9e0fa87dbcR.jpg",
+        "https://sc04.alicdn.com/kf/Ha30e55652a0d4aa4b5b49573e631adfbC.png",
+        "https://sc04.alicdn.com/kf/H5f68c80d33f44e54943f850f2921f94bh.png",
+        "https://sc04.alicdn.com/kf/Hcdb0dae4ff8b47dc88faed257a756a1b0.png",
+        "https://sc04.alicdn.com/kf/H7783cbd8e90e4d31a30dac256f076a6fR.png",
+        "https://sc04.alicdn.com/kf/H9f32c7ecea0f4d25bc5ddc9cd04c1e5dK.jpg"
+      ],
+      "sku_count": 6
+    },
+    {
+      "id": "1601943411769",
+      "model": "HR009-B",
+      "formal_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943411769/formal_get.json",
+      "formal_observed_at": "2026-10-12T22:11:13.813082+00:00",
+      "checks": {
+        "approved_actual_product_images_match": true,
+        "whole_six_images_match_current_catalog": true,
+        "raw_photo_hashes": true,
+        "materials_match_specific_model_table": true,
+        "source_eu_cartesian": true,
+        "approved_y": true
+      },
+      "main_images": [
+        "https://sc04.alicdn.com/kf/Hddac180951ad4c9eb136ad9e0fa87dbcR.jpg",
+        "https://sc04.alicdn.com/kf/Hcdb0dae4ff8b47dc88faed257a756a1b0.png",
+        "https://sc04.alicdn.com/kf/H5f68c80d33f44e54943f850f2921f94bh.png",
+        "https://sc04.alicdn.com/kf/Ha30e55652a0d4aa4b5b49573e631adfbC.png",
+        "https://sc04.alicdn.com/kf/H7783cbd8e90e4d31a30dac256f076a6fR.png",
+        "https://sc04.alicdn.com/kf/H9f32c7ecea0f4d25bc5ddc9cd04c1e5dK.jpg"
+      ],
+      "sku_count": 6
+    },
+    {
+      "id": "1601943520149",
+      "model": "HR009-C",
+      "formal_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943520149/formal_get.json",
+      "formal_observed_at": "2026-10-12T22:29:52.702369+00:00",
+      "checks": {
+        "approved_actual_product_images_match": true,
+        "whole_six_images_match_current_catalog": true,
+        "raw_photo_hashes": true,
+        "materials_match_specific_model_table": true,
+        "source_eu_cartesian": true,
+        "approved_y": true
+      },
+      "main_images": [
+        "https://sc04.alicdn.com/kf/Hddac180951ad4c9eb136ad9e0fa87dbcR.jpg",
+        "https://sc04.alicdn.com/kf/H7783cbd8e90e4d31a30dac256f076a6fR.png",
+        "https://sc04.alicdn.com/kf/Ha30e55652a0d4aa4b5b49573e631adfbC.png",
+        "https://sc04.alicdn.com/kf/H5f68c80d33f44e54943f850f2921f94bh.png",
+        "https://sc04.alicdn.com/kf/Hcdb0dae4ff8b47dc88faed257a756a1b0.png",
+        "https://sc04.alicdn.com/kf/H9f32c7ecea0f4d25bc5ddc9cd04c1e5dK.jpg"
+      ],
+      "sku_count": 6
+    }
+  ],
+  "basis": "Specific10-161 source HTML/material table and approved real original SHA, five current native derivative roles and official image identities, current formal sixEU SKUs; restore actual existing source without replacing the realshoe or commercial fields. OldA2510W candidate superseded by actual10-161.",
+  "source_current_access": "Primary public page inquiry entrance returned2026-10-14; no stock/livecost claim. Last supplierlogin shown2024 andquote order-specific. Singleview limited gallery quality remains separately pending.",
+  "platform_mutation": "NONE_EXISTING_ACTUAL_SHOE_PRESERVED",
+  "physical_stock": "NOT_CONFIRMED_ORDER_SPECIFIC",
+  "not_returned_ids": [],
+  "not_returned_scope": "Not returned in current complete catalog; not source-validated as current links, not recreated or deleted"
+}

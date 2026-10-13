@@ -65,7 +65,7 @@ def main():
     paths += [p.relative_to(ROOT).as_posix()for p in (ROOT/HR).glob('*公开报价比较.json')]
     for family in scope['targets']:
         paths += [HR+'/'+family+'/'+name for name in ('事实与页面计划.json','当前状态.json','来源事实.json','素材清单.json','图片银行公开映射.json')]
-        paths += [p.relative_to(ROOT).as_posix() for p in (ROOT/HR/family).glob('*.json') if p.name in ('AI主图审核.json','AI生成提示词.json','目标店内分组回读.json')]
+        paths += [p.relative_to(ROOT).as_posix() for p in (ROOT/HR/family).glob('*.json') if p.name in ('AI主图审核.json','AI色码图审核.json','AI生成提示词.json','目标店内分组回读.json')]
     for profile in profiles:
         paths += [HR+'/'+profile['family']+'/来源与正式绑定核验.json']
         for key in ('approved_bank','approved_visual','source_fact_file'):

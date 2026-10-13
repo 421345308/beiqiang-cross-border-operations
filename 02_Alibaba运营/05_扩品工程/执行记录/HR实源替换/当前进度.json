@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-13T20:04:15.828440+00:00",
+  "at": "2026-10-13T21:27:21.009197+00:00",
   "priority_links": [
     {
       "family": "HR030",
@@ -317,42 +317,156 @@
       "family": "HR041",
       "model": "HR041-A",
       "id": "1601943614836",
-      "state": "REVIEWING"
+      "state": "FORMAL_FIELDS_SCORE_PASS"
     },
     {
       "family": "HR041",
       "model": "HR041-B",
       "id": "1601943641737",
-      "state": "REVIEWING"
+      "state": "FORMAL_FIELDS_SCORE_PASS"
     },
     {
       "family": "HR041",
       "model": "HR041-C",
       "id": "1601943608942",
-      "state": "REVIEWING"
+      "state": "FORMAL_FIELDS_SCORE_PASS"
     },
     {
       "family": "HR037",
       "model": "HR037-A",
       "id": "1601943654301",
-      "state": "REVIEWING"
+      "state": "FORMAL_FIELDS_SCORE_PASS"
     },
     {
       "family": "HR037",
       "model": "HR037-B",
       "id": "1601943674209",
-      "state": "REVIEWING"
+      "state": "FORMAL_FIELDS_SCORE_PASS"
     },
     {
       "family": "HR032",
       "model": "HR032-A",
       "id": "1601943665138",
-      "state": "REVIEWING"
+      "state": "FORMAL_FIELDS_SCORE_PASS"
     },
     {
       "family": "HR032",
       "model": "HR032-B",
       "id": "1601943539818",
+      "state": "FORMAL_FIELDS_SCORE_PASS"
+    },
+    {
+      "family": "HR050",
+      "model": "HR050-A",
+      "id": "1601943774082",
+      "state": "FORMAL_FIELDS_SCORE_PASS"
+    },
+    {
+      "family": "HR050",
+      "model": "HR050-B",
+      "id": "1601943766117",
+      "state": "FORMAL_FIELDS_SCORE_PASS"
+    },
+    {
+      "family": "HR050",
+      "model": "HR050-C",
+      "id": "1601943660717",
+      "state": "FORMAL_FIELDS_SCORE_PASS"
+    },
+    {
+      "family": "HR056",
+      "model": "HR056-A",
+      "id": "1601943775160",
+      "state": "FORMAL_FIELDS_SCORE_PASS"
+    },
+    {
+      "family": "HR056",
+      "model": "HR056-B",
+      "id": "1601943751252",
+      "state": "FORMAL_FIELDS_SCORE_PASS"
+    },
+    {
+      "family": "HR056",
+      "model": "HR056-C",
+      "id": "1601943778191",
+      "state": "FORMAL_FIELDS_SCORE_PASS"
+    },
+    {
+      "family": "HR057",
+      "model": "HR057-A",
+      "id": "1601943768215",
+      "state": "FORMAL_FIELDS_SCORE_PASS"
+    },
+    {
+      "family": "HR057",
+      "model": "HR057-B",
+      "id": "1601943700590",
+      "state": "FORMAL_FIELDS_SCORE_PASS"
+    },
+    {
+      "family": "HR057",
+      "model": "HR057-C",
+      "id": "1601943771190",
+      "state": "FORMAL_FIELDS_SCORE_PASS"
+    },
+    {
+      "family": "HR051",
+      "model": "HR051-A",
+      "id": "1601943653819",
+      "state": "REVIEWING"
+    },
+    {
+      "family": "HR051",
+      "model": "HR051-B",
+      "id": "1601943750198",
+      "state": "REVIEWING"
+    },
+    {
+      "family": "HR051",
+      "model": "HR051-C",
+      "id": "1601943651773",
+      "state": "REVIEWING"
+    },
+    {
+      "family": "HR051",
+      "model": "HR051-A",
+      "id": "1601969872083",
+      "state": "REVIEWING"
+    },
+    {
+      "family": "HR051",
+      "model": "HR051-A",
+      "id": "1601969906452",
+      "state": "REVIEWING"
+    },
+    {
+      "family": "HR040",
+      "model": "HR040-A",
+      "id": "1601943686274",
+      "state": "REVIEWING"
+    },
+    {
+      "family": "HR040",
+      "model": "HR040-B",
+      "id": "1601943620678",
+      "state": "REVIEWING"
+    },
+    {
+      "family": "HR053",
+      "model": "HR053-A",
+      "id": "1601943687648",
+      "state": "REVIEWING"
+    },
+    {
+      "family": "HR053",
+      "model": "HR053-B",
+      "id": "1601943638954",
+      "state": "REVIEWING"
+    },
+    {
+      "family": "HR053",
+      "model": "HR053-C",
+      "id": "1601943784084",
       "state": "REVIEWING"
     }
   ],
@@ -360,16 +474,11 @@
     "HR009",
     "HR022",
     "HR023",
-    "HR040",
     "HR043",
     "HR045",
     "HR046",
     "HR047",
     "HR048",
-    "HR050",
-    "HR053",
-    "HR056",
-    "HR057",
     "HR058",
     "HR064",
     "HR067"
@@ -389,11 +498,11 @@
     "registered_hr_history": 203,
     "current_hr_ids_found": 177,
     "states": {
-      "FORMAL_FIELDS_SCORE_PASS": 50,
-      "REVIEWING": 8,
+      "FORMAL_FIELDS_SCORE_PASS": 66,
+      "REVIEWING": 11,
       "NOT_FOUND_IN_CURRENT_COMPLETE_CATALOG": 26,
-      "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE": 77,
-      "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW": 42
+      "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE": 79,
+      "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW": 21
     },
     "caution": "本轮未检出不等于下架/删除；旧候选或MISSING不证明现行页面缺实鞋。先核正式绑定，已采用实款保留并修资料。",
     "links": [
@@ -984,17 +1093,16 @@
         "model": "HR009-A",
         "family": "HR009",
         "product_identity": "HR009",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Men's Low Top Casual Sneakers with Lace Up Closure for Everyday Wear",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
         "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "bound_source_id": "src-hr-hr009-10-161",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
-          "src-b58f9f53f5b8",
-          "src-4a496746fb40"
+          "src-hr-hr009-10-161"
         ],
         "formal_proof": null
       },
@@ -1003,17 +1111,16 @@
         "model": "HR009-B",
         "family": "HR009",
         "product_identity": "HR009",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Men's Lace Up Casual Shoes with Genuine Leather Lining and Rubber Soles",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
         "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "bound_source_id": "src-hr-hr009-10-161",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
-          "src-b58f9f53f5b8",
-          "src-4a496746fb40"
+          "src-hr-hr009-10-161"
         ],
         "formal_proof": null
       },
@@ -1022,17 +1129,16 @@
         "model": "HR009-C",
         "family": "HR009",
         "product_identity": "HR009",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Mens Casual Sneakers with Low Top Design for Everyday Casual Outfits",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
         "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "bound_source_id": "src-hr-hr009-10-161",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
-          "src-b58f9f53f5b8",
-          "src-4a496746fb40"
+          "src-hr-hr009-10-161"
         ],
         "formal_proof": null
       },
@@ -2145,14 +2251,14 @@
         "model": "HR032-A",
         "family": "HR032",
         "product_identity": "HR032",
-        "state": "REVIEWING",
-        "current_title": "Men's Cream Green Retro Campus Walking Shoes Chunky Mesh Casual Sneakers EU 36-45 Model HR032-A",
+        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "current_title": "Mesh and Synthetic Leather Lace-Up Casual Sneakers with Layered Toe Overlay for Wholesale Footwear Collections",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
-        "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "current_field_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943665138/formal_get.json",
+        "bound_source_id": "src-hr-hr032-ch33",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
           "src-hr-hr032-ch33"
         ],
@@ -2163,14 +2269,14 @@
         "model": "HR032-B",
         "family": "HR032",
         "product_identity": "HR032",
-        "state": "REVIEWING",
-        "current_title": "Men's Navy Retro Walking Sneakers Chunky Sole Campus Shoes EU 36-45 Model HR032-B",
+        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "current_title": "Panelled Mesh Casual Shoes with Lace Closure and Segmented Sole Edge for Wholesale Shoe Assortments",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
-        "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "current_field_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943539818/formal_get.json",
+        "bound_source_id": "src-hr-hr032-ch33",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
           "src-hr-hr032-ch33"
         ],
@@ -2188,7 +2294,7 @@
         "current_display": null,
         "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
         "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
           "src-hr-hr032-ch33"
         ],
@@ -2415,14 +2521,14 @@
         "model": "HR037-A",
         "family": "HR037",
         "product_identity": "HR037",
-        "state": "REVIEWING",
-        "current_title": "Women's Retro Court Lace-up Walking Shoes Casual Sneakers EU 36-45 Model HR037-A",
+        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "current_title": "Panelled Lace-Up Casual Sneakers with Contrast Toe Overlay and Raised Sole Band for Wholesale Footwear Buyers",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
-        "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "current_field_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943654301/formal_get.json",
+        "bound_source_id": "src-hr-hr037-w33",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
           "src-hr-hr037-w33"
         ],
@@ -2433,14 +2539,14 @@
         "model": "HR037-B",
         "family": "HR037",
         "product_identity": "HR037",
-        "state": "REVIEWING",
-        "current_title": "Women's White Green Retro Lace-Up Walking Sneakers Low Top EVA Midsole Rubber Outsole EU 36-45 Model HR037-B",
+        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "current_title": "Low Top Casual Lace-Up Shoes with Layered Panels and Three Colour Directions for Footwear Collections",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
-        "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "current_field_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943674209/formal_get.json",
+        "bound_source_id": "src-hr-hr037-w33",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
           "src-hr-hr037-w33"
         ],
@@ -2458,7 +2564,7 @@
         "current_display": null,
         "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
         "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
           "src-hr-hr037-w33"
         ],
@@ -2571,32 +2677,36 @@
         "model": "HR040-A",
         "family": "HR040",
         "product_identity": "HR040",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "REVIEWING",
         "current_title": "Women's Ivory Knit Adjustable Strap Walking Shoes EU 36-45 Model HR040-A",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
         "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
         "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
-        "formal_proof": null
+        "registry_source_state": "CANDIDATE",
+        "candidate_source_ids": [
+          "src-hr-hr040-813"
+        ],
+        "formal_proof": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943686274/verification.json"
       },
       {
         "id": "1601943620678",
         "model": "HR040-B",
         "family": "HR040",
         "product_identity": "HR040",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "REVIEWING",
         "current_title": "Women's Black Knit Adjustable Strap Walking Shoes Breathable Light Weight EVA Midsole Rubber Outsole EU 36-45 Model HR040-B",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
         "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
         "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
-        "formal_proof": null
+        "registry_source_state": "CANDIDATE",
+        "candidate_source_ids": [
+          "src-hr-hr040-813"
+        ],
+        "formal_proof": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943620678/verification.json"
       },
       {
         "id": "1601943611671",
@@ -2610,8 +2720,10 @@
         "current_display": null,
         "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
         "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
+        "registry_source_state": "CANDIDATE",
+        "candidate_source_ids": [
+          "src-hr-hr040-813"
+        ],
         "formal_proof": null
       },
       {
@@ -2619,14 +2731,14 @@
         "model": "HR041-A",
         "family": "HR041",
         "product_identity": "HR041",
-        "state": "REVIEWING",
-        "current_title": "Wholesale Shoes Model HR041-A",
+        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "current_title": "Front-Zip Low Top Casual Shoes with Contrast Stitching and Rear Pull Tab for Wholesale Footwear Collections",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
-        "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "current_field_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943614836/formal_get.json",
+        "bound_source_id": "src-hr-hr041-c268",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
           "src-hr-hr041-c268"
         ],
@@ -2637,14 +2749,14 @@
         "model": "HR041-B",
         "family": "HR041",
         "product_identity": "HR041",
-        "state": "REVIEWING",
-        "current_title": "Wholesale Shoes Model HR041-B",
+        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "current_title": "Zip Closure Casual Sneakers with Eyelet Detail and Rounded Toe for Wholesale Shoe Assortments",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
-        "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "current_field_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943641737/formal_get.json",
+        "bound_source_id": "src-hr-hr041-c268",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
           "src-hr-hr041-c268"
         ],
@@ -2655,14 +2767,14 @@
         "model": "HR041-C",
         "family": "HR041",
         "product_identity": "HR041",
-        "state": "REVIEWING",
-        "current_title": "Wholesale Men's Breathable Taupe Side Zipper Perforated Walking Shoes Casual Footwear EU 36-45 Model HR041-C",
+        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "current_title": "Low Collar Front Zipper Casual Shoes with Contrast Seam Detail and Textured Sole for Footwear Buyers",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
-        "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "current_field_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943608942/formal_get.json",
+        "bound_source_id": "src-hr-hr041-c268",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
           "src-hr-hr041-c268"
         ],
@@ -3021,128 +3133,144 @@
         "model": "HR050-A",
         "family": "HR050",
         "product_identity": "HR050",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
-        "current_title": "Women's Shoes Model HR050-A",
+        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "current_title": "Retro Lace-Up Low Top Casual Sneakers with Contrast Side Bands and Rubber Sole for Wholesale Footwear Buyers",
         "current_category_id": 201334413,
         "current_audit": "approved",
-        "current_display": "N",
-        "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
-        "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
-        "formal_proof": null
+        "current_display": "Y",
+        "current_field_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943774082/formal_get.json",
+        "bound_source_id": "src-hr-hr050-315",
+        "registry_source_state": "ADOPTED",
+        "candidate_source_ids": [
+          "src-hr-hr050-315"
+        ],
+        "formal_proof": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943774082/verification.json"
       },
       {
         "id": "1601943766117",
         "model": "HR050-B",
         "family": "HR050",
         "product_identity": "HR050",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
-        "current_title": "Women's Shoes Model HR050-B",
+        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "current_title": "Low Top Casual Lace-Up Shoes with Wraparound Toe Overlay and Dark Sole for Footwear Collections",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
-        "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
-        "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
-        "formal_proof": null
+        "current_field_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943766117/formal_get.json",
+        "bound_source_id": "src-hr-hr050-315",
+        "registry_source_state": "ADOPTED",
+        "candidate_source_ids": [
+          "src-hr-hr050-315"
+        ],
+        "formal_proof": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943766117/verification.json"
       },
       {
         "id": "1601943660717",
         "model": "HR050-C",
         "family": "HR050",
         "product_identity": "HR050",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
-        "current_title": "Women's Shoes Model HR050-C",
+        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "current_title": "Retro Casual Sneakers with Eyelet Lacing and Contrast Heel Panels for Wholesale Shoe Assortments",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
-        "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
-        "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
-        "formal_proof": null
+        "current_field_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943660717/formal_get.json",
+        "bound_source_id": "src-hr-hr050-315",
+        "registry_source_state": "ADOPTED",
+        "candidate_source_ids": [
+          "src-hr-hr050-315"
+        ],
+        "formal_proof": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943660717/verification.json"
       },
       {
         "id": "1601943653819",
         "model": "HR051-A",
         "family": "HR051",
         "product_identity": "HR051",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "REVIEWING",
         "current_title": "Men's Shoes Model HR051-A",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
         "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
         "bound_source_id": null,
-        "registry_source_state": "ADOPTED",
-        "candidate_source_ids": [],
-        "formal_proof": null
+        "registry_source_state": "CANDIDATE",
+        "candidate_source_ids": [
+          "src-bded161d28f1"
+        ],
+        "formal_proof": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943653819/verification.json"
       },
       {
         "id": "1601969872083",
         "model": "HR051-A",
         "family": "HR051",
         "product_identity": "HR051",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "REVIEWING",
         "current_title": "Textile Lace-Up Casual Sneakers with Rubber Outsole",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "N",
         "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
         "bound_source_id": null,
-        "registry_source_state": "ADOPTED",
-        "candidate_source_ids": [],
-        "formal_proof": null
+        "registry_source_state": "CANDIDATE",
+        "candidate_source_ids": [
+          "src-bded161d28f1"
+        ],
+        "formal_proof": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601969872083/verification.json"
       },
       {
         "id": "1601969906452",
         "model": "HR051-A",
         "family": "HR051",
         "product_identity": "HR051",
-        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
+        "state": "REVIEWING",
         "current_title": "Wholesale Textile Lace Up Casual Sneakers and Walking Shoes with Rubber Outsoles for Everyday Wear",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
         "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
         "bound_source_id": "src-bded161d28f1",
-        "registry_source_state": "ADOPTED",
-        "candidate_source_ids": [],
-        "formal_proof": null
+        "registry_source_state": "CANDIDATE",
+        "candidate_source_ids": [
+          "src-bded161d28f1"
+        ],
+        "formal_proof": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601969906452/verification.json"
       },
       {
         "id": "1601943750198",
         "model": "HR051-B",
         "family": "HR051",
         "product_identity": "HR051",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "REVIEWING",
         "current_title": "Men's Walking Shoes Model HR051-B-Light Weight Breathable Hook-and-Loop Strap",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
         "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
         "bound_source_id": null,
-        "registry_source_state": "ADOPTED",
-        "candidate_source_ids": [],
-        "formal_proof": null
+        "registry_source_state": "CANDIDATE",
+        "candidate_source_ids": [
+          "src-bded161d28f1"
+        ],
+        "formal_proof": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943750198/verification.json"
       },
       {
         "id": "1601943651773",
         "model": "HR051-C",
         "family": "HR051",
         "product_identity": "HR051",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "REVIEWING",
         "current_title": "Men's Walking Shoes Breathable Light Weight Hook-and-Loop Strap Model HR051-C",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
         "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
         "bound_source_id": null,
-        "registry_source_state": "ADOPTED",
-        "candidate_source_ids": [],
-        "formal_proof": null
+        "registry_source_state": "CANDIDATE",
+        "candidate_source_ids": [
+          "src-bded161d28f1"
+        ],
+        "formal_proof": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943651773/verification.json"
       },
       {
         "id": "1601943742273",
@@ -3203,48 +3331,54 @@
         "model": "HR053-A",
         "family": "HR053",
         "product_identity": "HR053",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "REVIEWING",
         "current_title": "Men's Shoes Model HR053-A",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
         "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
         "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
-        "formal_proof": null
+        "registry_source_state": "CANDIDATE",
+        "candidate_source_ids": [
+          "src-hr-hr053-f263"
+        ],
+        "formal_proof": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943687648/verification.json"
       },
       {
         "id": "1601943638954",
         "model": "HR053-B",
         "family": "HR053",
         "product_identity": "HR053",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "REVIEWING",
         "current_title": "Men's Shoes Model HR053-B",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
         "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
         "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
-        "formal_proof": null
+        "registry_source_state": "CANDIDATE",
+        "candidate_source_ids": [
+          "src-hr-hr053-f263"
+        ],
+        "formal_proof": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943638954/verification.json"
       },
       {
         "id": "1601943784084",
         "model": "HR053-C",
         "family": "HR053",
         "product_identity": "HR053",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "REVIEWING",
         "current_title": "Men's Shoes Model HR053-C",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
         "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
         "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
-        "formal_proof": null
+        "registry_source_state": "CANDIDATE",
+        "candidate_source_ids": [
+          "src-hr-hr053-f263"
+        ],
+        "formal_proof": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943784084/verification.json"
       },
       {
         "id": "1601943672753",
@@ -3305,96 +3439,108 @@
         "model": "HR056-A",
         "family": "HR056",
         "product_identity": "HR056",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
-        "current_title": "Women's Shoes Model HR056-A",
-        "current_category_id": 201334413,
+        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "current_title": "Backless Knit Mule Slippers with Textile Lining and EVA Outsole for Wholesale Footwear Collections",
+        "current_category_id": 201340408,
         "current_audit": "approved",
         "current_display": "Y",
-        "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
-        "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
-        "formal_proof": null
+        "current_field_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943775160/formal_get.json",
+        "bound_source_id": "src-hr-hr056-555",
+        "registry_source_state": "ADOPTED",
+        "candidate_source_ids": [
+          "src-hr-hr056-555"
+        ],
+        "formal_proof": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943775160/verification.json"
       },
       {
         "id": "1601943751252",
         "model": "HR056-B",
         "family": "HR056",
         "product_identity": "HR056",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
-        "current_title": "Women's Shoes Model HR056-B",
-        "current_category_id": 201334413,
+        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "current_title": "Closed Toe Knit Casual Mules with Open Heel and Four Colour Options for Wholesale Shoe Buyers",
+        "current_category_id": 201340408,
         "current_audit": "approved",
         "current_display": "Y",
-        "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
-        "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
-        "formal_proof": null
+        "current_field_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943751252/formal_get.json",
+        "bound_source_id": "src-hr-hr056-555",
+        "registry_source_state": "ADOPTED",
+        "candidate_source_ids": [
+          "src-hr-hr056-555"
+        ],
+        "formal_proof": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943751252/verification.json"
       },
       {
         "id": "1601943778191",
         "model": "HR056-C",
         "family": "HR056",
         "product_identity": "HR056",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
-        "current_title": "Women's Shoes Model HR056-C",
-        "current_category_id": 201334413,
+        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "current_title": "Slip-On Knit Mule Shoes with Low Entry and Textured EVA Sole for Wholesale Footwear Assortments",
+        "current_category_id": 201340408,
         "current_audit": "approved",
         "current_display": "Y",
-        "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
-        "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
-        "formal_proof": null
+        "current_field_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943778191/formal_get.json",
+        "bound_source_id": "src-hr-hr056-555",
+        "registry_source_state": "ADOPTED",
+        "candidate_source_ids": [
+          "src-hr-hr056-555"
+        ],
+        "formal_proof": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943778191/verification.json"
       },
       {
         "id": "1601943768215",
         "model": "HR057-A",
         "family": "HR057",
         "product_identity": "HR057",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
-        "current_title": "Men's Shoes Model HR057-A",
+        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "current_title": "Knit Sock Style Casual Shoes with Ankle Collar and Sculpted EVA Outsole for Wholesale Footwear Buyers",
         "current_category_id": 201334413,
         "current_audit": "approved",
-        "current_display": "N",
-        "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
-        "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
-        "formal_proof": null
+        "current_display": "Y",
+        "current_field_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943768215/formal_get.json",
+        "bound_source_id": "src-hr-hr057-h10",
+        "registry_source_state": "ADOPTED",
+        "candidate_source_ids": [
+          "src-hr-hr057-h10"
+        ],
+        "formal_proof": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943768215/verification.json"
       },
       {
         "id": "1601943700590",
         "model": "HR057-B",
         "family": "HR057",
         "product_identity": "HR057",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
-        "current_title": "Men's Shoes Model HR057-B",
+        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "current_title": "Slip-On Knit Casual Sneakers with Continuous Sock Cuff and Rear Pull Loop for Footwear Collections",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
-        "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
-        "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
-        "formal_proof": null
+        "current_field_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943700590/formal_get.json",
+        "bound_source_id": "src-hr-hr057-h10",
+        "registry_source_state": "ADOPTED",
+        "candidate_source_ids": [
+          "src-hr-hr057-h10"
+        ],
+        "formal_proof": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943700590/verification.json"
       },
       {
         "id": "1601943771190",
         "model": "HR057-C",
         "family": "HR057",
         "product_identity": "HR057",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
-        "current_title": "Men's Shoes Model HR057-C",
+        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "current_title": "Ankle Collar Knit Sock Sneakers with EVA Sole and Six Colour Options for Wholesale Shoe Assortments",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
-        "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
-        "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
-        "formal_proof": null
+        "current_field_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943771190/formal_get.json",
+        "bound_source_id": "src-hr-hr057-h10",
+        "registry_source_state": "ADOPTED",
+        "candidate_source_ids": [
+          "src-hr-hr057-h10"
+        ],
+        "formal_proof": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943771190/verification.json"
       },
       {
         "id": "1601943793113",

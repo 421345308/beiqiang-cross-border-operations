@@ -1,0 +1,636 @@
+{
+  "candidate": "zesheng_2409766",
+  "source_artno": "555",
+  "supplier": "泽盛鞋业",
+  "source_url": "https://zesheng.sooxie.com/detail/2409766",
+  "source_price_cny": 35,
+  "source_color_labels": [
+    "黑色",
+    "深蓝",
+    "七彩",
+    "粉色"
+  ],
+  "colors": [
+    "Black",
+    "Navy",
+    "Multicolour Green",
+    "Multicolour Pink"
+  ],
+  "sizes": [
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "sizes_by_color": {
+    "Multicolour Pink": [
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42
+    ]
+  },
+  "upper": "Knit",
+  "lining": "Textile",
+  "midsole": "other",
+  "outsole": "EVA",
+  "closure": "Slip-On",
+  "category_attribute_omissions": [
+    "Closure Type"
+  ],
+  "category_absent_attributes_reviewed": [
+    "Closure Type"
+  ],
+  "category_id": 201340408,
+  "style": [
+    "Mules",
+    "Casual"
+  ],
+  "toe_style": "Closed Toe",
+  "platform_group_id": 972225685,
+  "platform_group_name": "Backless & Mule Casual Shoes",
+  "target_ids": {
+    "A": "1601943775160",
+    "B": "1601943751252",
+    "C": "1601943778191"
+  },
+  "local_intent_candidates": [
+    "低帮针织半拖鞋"
+  ],
+  "materials_evidence": [
+    "Source06 expressly飞织袜套 upper/织物内里/EVA outsole:Knit/Textile/EVA respectively. No midsole evidence:other;环保无味 sourcewording is not certification/non-toxic proof.",
+    "Sourcebody555 andsource06WB-555 alias checked across31coherentframes. BodylistsEU36-46 generally, but source06Pinkcolour explicitly36-42: preserve this percolour restriction, other3colours36-46. No43-46PinkSKU fabricated.",
+    "Fourcolour names map body黑色/深蓝/七彩/粉色 to actualsource06黑色/深蓝白/七彩绿/七彩粉. Pinkisolatedsource chart is directoriginalevidence, not recolouredBlackshoe.",
+    "Actualclosedtoe/openheel confirmed. Genericsource宽松description not specificwide-last proof; noWideToeBox/archsupport/medical/anti-slip promises. Physicalsoletexture only.",
+    "Source02/07/10 performance/compositepromo excluded; actual20 supplies a bottomview. All31sourceframes inspected, sourcefootlengthchart not adopted."
+  ],
+  "dedup": "555/sameURL not adopted. Compared HR055/B803 mule:555 has a low-entry plainknittoe withSPORTS mark, thinribbed soleedge anddifferentgroovedbottom; B803 has higher dense/openknitzones andsculpteddiagonallygroovedchunkysidewall. Differentupper/soleconstruction, not a recolour.",
+  "do_not_claim": [
+    "wide toe box",
+    "tested stability",
+    "non-toxic certification",
+    "tested grip",
+    "physical stock",
+    "tested slip resistance",
+    "medical comfort",
+    "unverified midsole material"
+  ],
+  "custom": [
+    "Shoe Profile",
+    "Open heel; closed knit toe; textile lining; EVA outsole"
+  ],
+  "titles": {
+    "A": "Backless Knit Mule Slippers with Textile Lining and EVA Outsole for Wholesale Footwear Collections",
+    "B": "Closed Toe Knit Casual Mules with Open Heel and Four Colour Options for Wholesale Shoe Buyers",
+    "C": "Slip-On Knit Mule Shoes with Low Entry and Textured EVA Sole for Wholesale Footwear Assortments"
+  },
+  "keywords": [
+    "Backless Knit Mule Slippers",
+    "Closed Toe Knit Casual Mules",
+    "EVA Outsole Knit Footwear"
+  ],
+  "highlights": "Open-heel entry: The closed knitted forefoot is paired with an open back, forming a low-cut casual mule profile.\n\nKnitted upper and textile lining: The source identifies both layers, with the actual surface texture shown in close views.\n\nEVA outsole profile: A ribbed side edge follows the rounded forefoot, while the bottom photograph shows broad grooves and textured sections.\n\nFour colour directions: Black, Navy, Multicolour Green and Multicolour Pink provide plain and multicolour knit options in the same design.\n\nColour-specific EU sizes: Black, Navy and Multicolour Green are listed in EU36-46; Multicolour Pink is listed in EU36-42.",
+  "assets_layout": {
+    "M1": {
+      "buyer_question": "What actual knitmule is offered?",
+      "title": null,
+      "photos": [
+        {
+          "index": 20,
+          "box": [
+            15,
+            15,
+            985,
+            985
+          ],
+          "crop": [
+            0,
+            0,
+            790,
+            700
+          ]
+        }
+      ]
+    },
+    "M2": {
+      "buyer_question": "What is the knit forefoot structure?",
+      "title": "Closed knit toe",
+      "subtitle": "Black source close-up of the textured upper.",
+      "photos": [
+        {
+          "index": 8,
+          "box": [
+            45,
+            215,
+            955,
+            935
+          ],
+          "crop": [
+            0,
+            505,
+            790,
+            1200
+          ]
+        }
+      ]
+    },
+    "M3": {
+      "buyer_question": "What is the actual bottom texture?",
+      "title": "EVA underside & sole profile",
+      "subtitle": "Multicolour Green option beside its actual underside.",
+      "photos": [
+        {
+          "index": 29,
+          "box": [
+            45,
+            215,
+            955,
+            935
+          ],
+          "crop": [
+            0,
+            885,
+            790,
+            1620
+          ]
+        }
+      ]
+    },
+    "M4": {
+      "buyer_question": "Which colour and EU sizes are offered?",
+      "title": "4 colour directions",
+      "subtitle": "Choose the colour and EU size mix for your order.",
+      "photos": [
+        {
+          "index": 12,
+          "box": [
+            45,
+            230,
+            480,
+            475
+          ],
+          "crop": [
+            0,
+            0,
+            790,
+            745
+          ]
+        },
+        {
+          "index": 31,
+          "box": [
+            520,
+            230,
+            955,
+            475
+          ],
+          "crop": [
+            0,
+            0,
+            790,
+            790
+          ]
+        },
+        {
+          "index": 22,
+          "box": [
+            45,
+            565,
+            480,
+            810
+          ],
+          "crop": [
+            0,
+            0,
+            790,
+            790
+          ]
+        },
+        {
+          "index": 6,
+          "box": [
+            520,
+            565,
+            955,
+            810
+          ],
+          "crop": [
+            397,
+            1220,
+            778,
+            1485
+          ],
+          "hero": true
+        }
+      ],
+      "text": [
+        {
+          "value": "Black",
+          "xy": [
+            45,
+            485
+          ],
+          "size": 24
+        },
+        {
+          "value": "Navy",
+          "xy": [
+            520,
+            485
+          ],
+          "size": 24
+        },
+        {
+          "value": "Multicolour Green",
+          "xy": [
+            45,
+            820
+          ],
+          "size": 24
+        },
+        {
+          "value": "Multicolour Pink",
+          "xy": [
+            520,
+            820
+          ],
+          "size": 24
+        },
+        {
+          "value": "Black / Navy / Green: EU 36-46",
+          "xy": [
+            45,
+            920
+          ],
+          "size": 24
+        },
+        {
+          "value": "Multicolour Pink: EU 36-42",
+          "xy": [
+            45,
+            953
+          ],
+          "size": 22
+        }
+      ]
+    },
+    "M5": {
+      "buyer_question": "How is the open-heel entry arranged?",
+      "title": "Low-entry mule opening",
+      "subtitle": "Original collar and inner surface.",
+      "photos": [
+        {
+          "index": 9,
+          "box": [
+            45,
+            215,
+            955,
+            935
+          ],
+          "crop": [
+            0,
+            345,
+            790,
+            965
+          ]
+        }
+      ]
+    },
+    "D1": {
+      "buyer_question": "How does the plain colour look in wear?",
+      "title": "Black in everyday wear",
+      "subtitle": "Closed toe with the open rear entry.",
+      "photos": [
+        {
+          "index": 16,
+          "box": [
+            45,
+            215,
+            955,
+            1085
+          ],
+          "crop": [
+            0,
+            0,
+            790,
+            790
+          ]
+        }
+      ]
+    },
+    "D2": {
+      "buyer_question": "What is the multicolour knit appearance?",
+      "title": "Multicolour Green in wear",
+      "subtitle": "Actual patterned knit and light sole edge.",
+      "photos": [
+        {
+          "index": 22,
+          "box": [
+            45,
+            215,
+            955,
+            1085
+          ],
+          "crop": [
+            0,
+            0,
+            790,
+            790
+          ]
+        }
+      ]
+    },
+    "D3": {
+      "buyer_question": "What is the Navy colour construction?",
+      "title": "Navy side & front profiles",
+      "subtitle": "Actual dark upper with a light EVA sole.",
+      "photos": [
+        {
+          "index": 31,
+          "box": [
+            45,
+            215,
+            955,
+            1085
+          ],
+          "crop": [
+            0,
+            0,
+            790,
+            790
+          ]
+        }
+      ]
+    },
+    "D4": {
+      "buyer_question": "Which colour-size mix and order quantity should I choose?",
+      "title": "4 colour directions",
+      "subtitle": "Choose the colour and EU size mix for your order.",
+      "photos": [
+        {
+          "index": 12,
+          "box": [
+            45,
+            230,
+            480,
+            510
+          ],
+          "crop": [
+            0,
+            0,
+            790,
+            745
+          ]
+        },
+        {
+          "index": 31,
+          "box": [
+            520,
+            230,
+            955,
+            510
+          ],
+          "crop": [
+            0,
+            0,
+            790,
+            790
+          ]
+        },
+        {
+          "index": 22,
+          "box": [
+            45,
+            645,
+            480,
+            925
+          ],
+          "crop": [
+            0,
+            0,
+            790,
+            790
+          ]
+        },
+        {
+          "index": 6,
+          "box": [
+            520,
+            645,
+            955,
+            925
+          ],
+          "crop": [
+            397,
+            1220,
+            778,
+            1485
+          ],
+          "hero": true
+        }
+      ],
+      "text": [
+        {
+          "value": "Black",
+          "xy": [
+            45,
+            520
+          ],
+          "size": 24
+        },
+        {
+          "value": "Navy",
+          "xy": [
+            520,
+            520
+          ],
+          "size": 24
+        },
+        {
+          "value": "Multicolour Green",
+          "xy": [
+            45,
+            935
+          ],
+          "size": 24
+        },
+        {
+          "value": "Multicolour Pink",
+          "xy": [
+            520,
+            935
+          ],
+          "size": 24
+        },
+        {
+          "value": "Black / Navy / Green: EU 36-46",
+          "xy": [
+            45,
+            1115
+          ],
+          "size": 24
+        },
+        {
+          "value": "Multicolour Pink: EU 36-42",
+          "xy": [
+            45,
+            1160
+          ],
+          "size": 22
+        },
+        {
+          "value": "2+ USD 7.86 | 50+ USD 7.34 | 100+ USD 6.81 / pair",
+          "xy": [
+            45,
+            1040
+          ],
+          "size": 23
+        },
+        {
+          "value": "Freight quoted separately. Order availability confirmed on enquiry.",
+          "xy": [
+            45,
+            1200
+          ],
+          "size": 22
+        }
+      ]
+    },
+    "SKU_BLACK": {
+      "buyer_question": "Which colour is this SKU?",
+      "title": null,
+      "photos": [
+        {
+          "index": 12,
+          "box": [
+            25,
+            25,
+            975,
+            975
+          ],
+          "crop": [
+            0,
+            0,
+            790,
+            745
+          ]
+        }
+      ]
+    },
+    "SKU_NAVY": {
+      "buyer_question": "Which colour is this SKU?",
+      "title": null,
+      "photos": [
+        {
+          "index": 31,
+          "box": [
+            25,
+            25,
+            975,
+            975
+          ],
+          "crop": [
+            0,
+            0,
+            790,
+            790
+          ]
+        }
+      ]
+    },
+    "SKU_MULTICOLOUR_GREEN": {
+      "buyer_question": "Which colour is this SKU?",
+      "title": null,
+      "photos": [
+        {
+          "index": 22,
+          "box": [
+            25,
+            25,
+            975,
+            975
+          ],
+          "crop": [
+            0,
+            0,
+            790,
+            790
+          ]
+        }
+      ]
+    },
+    "SKU_MULTICOLOUR_PINK": {
+      "buyer_question": "Which colour is this SKU?",
+      "title": null,
+      "photos": [
+        {
+          "index": 6,
+          "box": [
+            25,
+            25,
+            975,
+            975
+          ],
+          "crop": [
+            397,
+            1220,
+            778,
+            1485
+          ],
+          "hero": true
+        }
+      ]
+    }
+  },
+  "source_assets_root": "01_产品资产/01_原始数据包/HR056_555",
+  "source_date": "2026-10-14",
+  "fx_cny_per_usd": 6.6837,
+  "tiers": [
+    [
+      2,
+      "7.86"
+    ],
+    [
+      50,
+      "7.34"
+    ],
+    [
+      100,
+      "6.81"
+    ]
+  ],
+  "page_state": "FORMAL_FIELDS_SCORE_PASS",
+  "company_faq_source": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/通用FAQ与公司简介.json",
+  "seasons": [
+    "All Seasons"
+  ],
+  "feature": "Fashion Trend",
+  "selection_review": {
+    "state": "REVIEWED_ADOPT",
+    "private_backend_evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/经营数据与选款.json",
+    "reason": "HR056 recent3exposures/no clicks andSeptember39exposures/no clicks, no contacts. Trafficinconclusive; choose an economicalCNY35 knitmule direction with actualcomponent andcolour-specific size evidence rather than anunsupportedoldstyle.",
+    "cost_usd": 5.236620434789113,
+    "gross_difference_usd": [
+      2.6234,
+      2.1034,
+      1.5734
+    ],
+    "comparison_limit": "No exact-model comparable full Alibaba quote verified. Public genericGAT/gumsole and knit/slipper offers differ in materials/units/quantity/terms. Use50/40/30cost markup and evaluate freight,service,taxes perorder; no netprofit/lowestprice guarantee."
+  },
+  "source_id": "src-hr-hr056-555",
+  "source_evidence": [
+    "01_产品资产/01_原始数据包/HR056_555/source.json",
+    "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR056/素材清单.json"
+  ],
+  "procurement_capability": "CURRENT_REAL_SHOE_AND_PROCUREMENT_ENTRY_VERIFIED_NOT_ORDER_STOCK"
+}

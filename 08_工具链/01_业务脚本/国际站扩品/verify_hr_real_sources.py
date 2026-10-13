@@ -46,7 +46,7 @@ def check(pid,family,variant):
   inventory_observed.extend(row.get('inventory_dto_list',[]))
  if(f/'attribute_repair_before_get.json').exists():
   prior=o.b.load(f/'attribute_repair_before_get.json')['product']['product_sku']['skus'];checks['attribute_only_sku_ids_preserved']=bindings=={r['sku_code']:r['sku_id']for r in prior}
- checks['formal_sku_cartesian_complete']=pairset==Counter((c,s)for c in prep['colors']for s in prep['sizes'])
+ checks['formal_sku_cartesian_complete']=pairset==Counter((c,s)for c in prep['colors']for s in prep.get('sizes_by_color',{}).get(c,prep['sizes']))
  checks['formal_sku_tiers']=pricepass
  old=o.b.load(f/'before_get.json')['product'];oldpres=o.preserve(old,prep['fields']);newpres=o.preserve(p,prep['fields'])
  checks['non_target_get_fields_preserved']=oldpres==newpres
