@@ -3208,6 +3208,22 @@
         "01_产品资产/01_原始数据包/HR042_9818/source.json",
         "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR042/素材清单.json"
       ]
+    },
+    {
+      "id": "src-hr-hr054-27975",
+      "url": "https://mynx.sooxie.com/detail/2567065",
+      "shop_url": "https://mynx.sooxie.com",
+      "supplier": "铭阳鞋业",
+      "model": "27975",
+      "price": "37.00",
+      "currency": "CNY",
+      "unit": "双",
+      "price_terms": "当前公开来源标价；拿货色码、数量、包装、运税与当日可供条件逐单确认，不代表已采购或固定交期。",
+      "observed_at": "2026-10-13",
+      "evidence": [
+        "01_产品资产/01_原始数据包/HR054_27975/source.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR054/素材清单.json"
+      ]
     }
   ],
   "products": [
@@ -14437,35 +14453,46 @@
       "aliases": [
         "HR054"
       ],
-      "source_state": "MISSING",
+      "source_state": "CANDIDATE",
       "adopted_source_id": null,
-      "candidate_source_ids": [],
-      "raw_packages": [],
+      "candidate_source_ids": [
+        "src-hr-hr054-27975"
+      ],
+      "raw_packages": [
+        "01_产品资产/01_原始数据包/HR054_27975"
+      ],
       "evidence": [
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943737356/manifest.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943737356/prepared.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943737356/update_once.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943737356/update_receipt.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943737356/after_get.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943737356/after_render.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943737356/verification.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943741370/manifest.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943741370/prepared.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943741370/update_once.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943741370/update_receipt.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943741370/after_get.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943741370/after_render.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943741370/verification.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943673716/manifest.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943673716/prepared.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943673716/update_once.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943673716/update_receipt.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943737356/manifest.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943737356/prepared.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943737356/update_once.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943737356/update_receipt.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943741370/manifest.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943741370/prepared.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943741370/update_once.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943741370/update_receipt.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943673716/after_get.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943673716/after_render.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943673716/verification.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943737356/after_get.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943737356/after_render.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943737356/verification.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943741370/after_get.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943741370/after_render.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943741370/verification.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943673716/public_verification.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943737356/public_verification.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943741370/public_verification.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943673716/V8/before_get.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943673716/V8/before_render.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943673716/V8/immediate_prewrite_get.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943673716/V8/manifest.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943673716/V8/prepared.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943673716/V8/update_once.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943673716/V8/update_receipt.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943737356/V8/before_get.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943737356/V8/before_render.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943737356/V8/immediate_prewrite_get.json",
@@ -14480,25 +14507,50 @@
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943741370/V8/prepared.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943741370/V8/update_once.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943741370/V8/update_receipt.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943673716/V8/before_get.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943673716/V8/before_render.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943673716/V8/immediate_prewrite_get.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943673716/V8/manifest.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943673716/V8/prepared.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943673716/V8/update_once.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943673716/V8/update_receipt.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943741370/V8/after_get.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943741370/V8/after_render.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943741370/V8/verification.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943673716/V8/after_get.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943673716/V8/after_render.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943673716/V8/verification.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943737356/V8/after_get.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943737356/V8/after_render.json",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943737356/V8/verification.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943673716/V8/after_get.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943673716/V8/after_render.json",
-        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943673716/V8/verification.json"
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943741370/V8/after_get.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943741370/V8/after_render.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943741370/V8/verification.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943673716/V8/public_verification.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943737356/V8/public_verification.json",
+        "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943741370/V8/public_verification.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR054/素材清单.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR054/事实与页面计划.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR054/当前状态.json"
       ],
       "notes": [],
-      "next_action": "补实鞋与有效采购入口；不按存量链接重复搜索。"
+      "next_action": "实源图文已提交原ID，待完整正式核验；公开呈现分开登记。",
+      "local_assets": {
+        "asset_roots": [
+          "01_产品资产/02_可发布素材/HR054"
+        ],
+        "current_fields_file": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR054/事实与页面计划.json",
+        "state": "REAL_SOURCE_PLAN_SUBMITTED",
+        "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题"
+      },
+      "classification": {
+        "local_intent_candidates": [
+          "女式厚底/系带时尚休闲运动鞋"
+        ],
+        "state": "REAL_SKU_SOURCE_PHOTO_REVIEWED",
+        "evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
+        "platform_category_ids": [
+          201334413
+        ],
+        "store_groups": [
+          {
+            "id": "972130291",
+            "name": "Slip-On Casual Walking Shoes"
+          }
+        ],
+        "store_group_state": "FORMAL_PRODUCT_AND_GROUP_READBACK"
+      },
+      "dossier_path": "02_Alibaba运营/02_单品优化记录/商品档案/HR054/README.md"
     },
     {
       "id": "HR055",
@@ -53295,7 +53347,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T05:20:45.505974+00:00",
+        "at": "2026-10-13T07:12:25.733467+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -53329,7 +53381,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943574507/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943574507/formal_render.json",
-        "at": "2026-10-13T05:20:45.505974+00:00"
+        "at": "2026-10-13T07:12:25.733467+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -53396,7 +53448,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr030-mna-1",
           "real_artno": "MNA-1",
-          "at": "2026-10-13T06:52:04.037894+00:00",
+          "at": "2026-10-13T07:40:48.373298+00:00",
           "next_action": "正式字段、实际5.00及公开六主图四详情/EU末端组合通过；旧keywords空值和UI迁移独立待核，继续其他HR实源替换。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943574507/prepared.json",
@@ -53546,7 +53598,7 @@
           "state": "REVIEWING",
           "source_id": "src-hr-hr030-mna-1",
           "real_artno": "MNA-1",
-          "at": "2026-10-13T06:52:04.057870+00:00",
+          "at": "2026-10-13T07:40:48.385039+00:00",
           "next_action": "逐ID完成材料/SKU/价格/图库/详情正式回读及实际评分，再作公开页验收。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943545775/prepared.json",
@@ -56325,7 +56377,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T05:20:45.525360+00:00",
+        "at": "2026-10-13T07:12:25.758569+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -56359,7 +56411,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943703336/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943703336/formal_render.json",
-        "at": "2026-10-13T05:20:45.525360+00:00"
+        "at": "2026-10-13T07:12:25.758569+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -56426,7 +56478,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr042-9818",
           "real_artno": "9818",
-          "at": "2026-10-13T06:52:04.070279+00:00",
+          "at": "2026-10-13T07:40:48.393014+00:00",
           "next_action": "正式字段、实际5.00及公开六主图四详情/EU末端组合通过；旧keywords空值和UI迁移独立待核，继续其他HR实源替换。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943703336/prepared.json",
@@ -56478,7 +56530,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T05:20:45.555168+00:00",
+        "at": "2026-10-13T07:12:25.789510+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -56512,7 +56564,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943747024/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943747024/formal_render.json",
-        "at": "2026-10-13T05:20:45.555168+00:00"
+        "at": "2026-10-13T07:12:25.789510+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -56579,7 +56631,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr042-9818",
           "real_artno": "9818",
-          "at": "2026-10-13T06:52:04.090705+00:00",
+          "at": "2026-10-13T07:40:48.406403+00:00",
           "next_action": "正式字段、实际5.00及公开六主图四详情/EU末端组合通过；旧keywords空值和UI迁移独立待核，继续其他HR实源替换。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943747024/prepared.json",
@@ -56631,7 +56683,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T05:20:45.573317+00:00",
+        "at": "2026-10-13T07:12:25.811588+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -56665,7 +56717,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943639708/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943639708/formal_render.json",
-        "at": "2026-10-13T05:20:45.573317+00:00"
+        "at": "2026-10-13T07:12:25.811588+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -56732,7 +56784,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr042-9818",
           "real_artno": "9818",
-          "at": "2026-10-13T06:52:04.110799+00:00",
+          "at": "2026-10-13T07:40:48.419249+00:00",
           "next_action": "正式字段、实际5.00及公开六主图四详情/EU末端组合通过；旧keywords空值和UI迁移独立待核，继续其他HR实源替换。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943639708/prepared.json",
@@ -60309,7 +60361,7 @@
       "url": "https://www.alibaba.com/product-detail/Women-s-Shoes-Model-HR054-A_1601943673716.html",
       "record_type": "来源待补",
       "bound_source_id": null,
-      "source_relation": "SOURCE_EVIDENCE_MISSING",
+      "source_relation": "REAL_SOURCE_CANDIDATE_REPLACEMENT_PENDING_FORMAL_READ",
       "observation": {
         "audit": "approved",
         "display": "Y",
@@ -60346,7 +60398,7 @@
       "local_sync": {
         "state": "COMPANY_BUNDLE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943673716/formal_get.json",
-        "next_action": "六图、公司简介与通用FAQ正式回读通过；只待该ID公开页呈现核验，不重复提交"
+        "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续"
       },
       "optimization": {
         "factory_gallery": {
@@ -60408,7 +60460,42 @@
           "historical_source_and_highlights_deferred": true,
           "completed_this_scope": true,
           "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续"
+        },
+        "source_replacement": {
+          "state": "REVIEWING",
+          "source_id": "src-hr-hr054-27975",
+          "real_artno": "27975",
+          "at": "2026-10-13T07:40:48.437384+00:00",
+          "next_action": "逐ID完成材料/SKU/价格/图库/详情正式回读及实际评分，再作公开页验收。",
+          "evidence": [
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943673716/prepared.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943673716/update_once.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943673716/update_receipt.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943673716/verification.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943673716/after_get.json"
+          ]
         }
+      },
+      "catalog_fields": {
+        "at": "2026-10-10T06:28:16.283236+00:00",
+        "model": "HR054-A",
+        "title": "Women's Shoes Model HR054-A",
+        "keywords": [
+          ""
+        ],
+        "main_images": [
+          "https://sc04.alicdn.com/kf/H824ac8523ed44367aa4911accf3bae466.png",
+          "https://sc04.alicdn.com/kf/H038302590f424c539b396276c5f7e809M.png",
+          "https://sc04.alicdn.com/kf/Hb76190f98f8e4199aad0edc1af8bb8e6N.png",
+          "https://sc04.alicdn.com/kf/H19ae94924a744e0492d87d73362ceeafs.png",
+          "https://sc04.alicdn.com/kf/Hf987661c1f4543c8891d9c857f992dbak.png",
+          "https://sc04.alicdn.com/kf/H288762bb1d5d4ec8a8ba66fa55178140x.png"
+        ],
+        "category_id": 201334413,
+        "display": "Y",
+        "status": "approved",
+        "url": "https://www.alibaba.com/product-detail/Women-s-Shoes-Model-HR054-A_1601943673716.html",
+        "scope": "product.list；不是全字段/公开验收"
       }
     },
     {
@@ -60418,7 +60505,7 @@
       "url": "https://www.alibaba.com/product-detail/Women-s-Shoes-Model-HR054-B_1601943741370.html",
       "record_type": "来源待补",
       "bound_source_id": null,
-      "source_relation": "SOURCE_EVIDENCE_MISSING",
+      "source_relation": "REAL_SOURCE_CANDIDATE_REPLACEMENT_PENDING_FORMAL_READ",
       "observation": {
         "audit": "approved",
         "display": "Y",
@@ -60455,7 +60542,7 @@
       "local_sync": {
         "state": "COMPANY_BUNDLE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943741370/formal_get.json",
-        "next_action": "六图、公司简介与通用FAQ正式回读通过；只待该ID公开页呈现核验，不重复提交"
+        "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续"
       },
       "optimization": {
         "factory_gallery": {
@@ -60517,7 +60604,42 @@
           "historical_source_and_highlights_deferred": true,
           "completed_this_scope": true,
           "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续"
+        },
+        "source_replacement": {
+          "state": "REVIEWING",
+          "source_id": "src-hr-hr054-27975",
+          "real_artno": "27975",
+          "at": "2026-10-13T07:40:48.440029+00:00",
+          "next_action": "逐ID完成材料/SKU/价格/图库/详情正式回读及实际评分，再作公开页验收。",
+          "evidence": [
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943741370/prepared.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943741370/update_once.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943741370/update_receipt.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943741370/verification.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943741370/after_get.json"
+          ]
         }
+      },
+      "catalog_fields": {
+        "at": "2026-10-10T06:28:16.283236+00:00",
+        "model": "HR054-B",
+        "title": "Women's Shoes Model HR054-B",
+        "keywords": [
+          ""
+        ],
+        "main_images": [
+          "https://sc04.alicdn.com/kf/H1b6d7d407e6c49b1bb863458467a6ab6A.png",
+          "https://sc04.alicdn.com/kf/H038302590f424c539b396276c5f7e809M.png",
+          "https://sc04.alicdn.com/kf/Hb76190f98f8e4199aad0edc1af8bb8e6N.png",
+          "https://sc04.alicdn.com/kf/H19ae94924a744e0492d87d73362ceeafs.png",
+          "https://sc04.alicdn.com/kf/Hf987661c1f4543c8891d9c857f992dbak.png",
+          "https://sc04.alicdn.com/kf/H288762bb1d5d4ec8a8ba66fa55178140x.png"
+        ],
+        "category_id": 201334413,
+        "display": "Y",
+        "status": "approved",
+        "url": "https://www.alibaba.com/product-detail/Women-s-Shoes-Model-HR054-B_1601943741370.html",
+        "scope": "product.list；不是全字段/公开验收"
       }
     },
     {
@@ -60527,7 +60649,7 @@
       "url": "https://www.alibaba.com/product-detail/Women-s-Shoes-Model-HR054-C_1601943737356.html",
       "record_type": "来源待补",
       "bound_source_id": null,
-      "source_relation": "SOURCE_EVIDENCE_MISSING",
+      "source_relation": "REAL_SOURCE_CANDIDATE_REPLACEMENT_PENDING_FORMAL_READ",
       "observation": {
         "audit": "approved",
         "display": "Y",
@@ -60564,7 +60686,7 @@
       "local_sync": {
         "state": "COMPANY_BUNDLE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943737356/formal_get.json",
-        "next_action": "六图、公司简介与通用FAQ正式回读通过；只待该ID公开页呈现核验，不重复提交"
+        "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续"
       },
       "optimization": {
         "factory_gallery": {
@@ -60626,7 +60748,42 @@
           "historical_source_and_highlights_deferred": true,
           "completed_this_scope": true,
           "next_action": "本轮六图、通用FAQ与公司简介已核；鞋款来源与其他问题按各自状态继续"
+        },
+        "source_replacement": {
+          "state": "REVIEWING",
+          "source_id": "src-hr-hr054-27975",
+          "real_artno": "27975",
+          "at": "2026-10-13T07:40:48.442685+00:00",
+          "next_action": "逐ID完成材料/SKU/价格/图库/详情正式回读及实际评分，再作公开页验收。",
+          "evidence": [
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943737356/prepared.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943737356/update_once.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943737356/update_receipt.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943737356/verification.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943737356/after_get.json"
+          ]
         }
+      },
+      "catalog_fields": {
+        "at": "2026-10-10T06:28:16.283236+00:00",
+        "model": "HR054-C",
+        "title": "Women's Shoes Model HR054-C",
+        "keywords": [
+          ""
+        ],
+        "main_images": [
+          "https://sc04.alicdn.com/kf/Hf4de7568ddc640dba94a8a240ddcedbcN.png",
+          "https://sc04.alicdn.com/kf/H038302590f424c539b396276c5f7e809M.png",
+          "https://sc04.alicdn.com/kf/Hb76190f98f8e4199aad0edc1af8bb8e6N.png",
+          "https://sc04.alicdn.com/kf/H19ae94924a744e0492d87d73362ceeafs.png",
+          "https://sc04.alicdn.com/kf/Hf987661c1f4543c8891d9c857f992dbak.png",
+          "https://sc04.alicdn.com/kf/H288762bb1d5d4ec8a8ba66fa55178140x.png"
+        ],
+        "category_id": 201334413,
+        "display": "Y",
+        "status": "approved",
+        "url": "https://www.alibaba.com/product-detail/Women-s-Shoes-Model-HR054-C_1601943737356.html",
+        "scope": "product.list；不是全字段/公开验收"
       }
     },
     {

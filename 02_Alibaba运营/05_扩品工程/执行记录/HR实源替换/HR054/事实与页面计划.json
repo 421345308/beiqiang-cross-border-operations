@@ -1,0 +1,93 @@
+{
+  "source_artno": "27975",
+  "source_assets_root": "01_产品资产/01_原始数据包/HR054_27975",
+  "colors": [
+    "Beige",
+    "Blue",
+    "Yellow"
+  ],
+  "sizes": [
+    35,
+    36,
+    37,
+    38,
+    39,
+    40
+  ],
+  "upper": "Other",
+  "lining": "Other",
+  "closure": "Lace-up",
+  "style": [
+    "Platform Sneakers",
+    "Lace-up"
+  ],
+  "seasons": [
+    "All Seasons"
+  ],
+  "feature": "Fashion Trend",
+  "custom": [
+    "Shoe Profile",
+    "Low-top paneled platform sneaker"
+  ],
+  "category_id": 201332512,
+  "category_source": "Official category.get.new: 322 > 201152202 > 201331710 > 201332512 Chunky Shoes",
+  "local_intent_candidates": [
+    "女式厚底/系带时尚休闲运动鞋"
+  ],
+  "titles": {
+    "A": "Women's Platform Sneakers Lace-Up Low Top Casual Shoes with Paneled Upper and Rubber Outsole for Wholesale",
+    "B": "Women's Chunky Sole Lace-Up Sneakers Round Toe Low Top Casual Shoes for Fashion Footwear Wholesale",
+    "C": "Women's Low Top Platform Casual Sneakers Lace-Up Paneled Shoes with Rubber Outsole for Wholesale"
+  },
+  "keywords": "womens platform sneakers chunky sole lace up casual shoes fashion footwear wholesale",
+  "highlights": "Platform silhouette: A thick tan sole and low-top paneled upper create a bold casual sneaker look.\nLace-up construction: Flat laces and an additional patterned lace detail pair with the rounded toe profile.\nPanel details: Contrasting toe panels and two stitched side strips define the visible upper design.\nRubber outsole: The source photographs show a grooved bottom and textured sidewall around this platform style.\nAssortment options: Beige, Blue and Yellow, EU 35-40. Choose a color-size ratio for your wholesale range.",
+  "tiers": [
+    [
+      2,
+      8.29
+    ],
+    [
+      50,
+      7.89
+    ],
+    [
+      100,
+      7.39
+    ]
+  ],
+  "fx_cny_per_usd": 6.6837,
+  "materials_evidence": [
+    "01_产品资产/01_原始数据包/HR054_27975/06.jpg"
+  ],
+  "unknown_materials": [
+    "upper",
+    "lining",
+    "midsole"
+  ],
+  "ai_hero": {
+    "accepted_path": "E:/C盘迁移/Codex/.codex/generated_images/01a1164e-73c1-70d1-882c-299608adb19c/exec-21b07c83-2831-44a2-91fb-d19435b0583c.png",
+    "reference": "01_产品资产/01_原始数据包/HR054_27975/06.jpg",
+    "scope": "Neutral studio background and faithful single actual beige shoe; full topology visually reviewed",
+    "rejected_candidate": "exec-21ad942d-1a67-4dc6-9cc1-ee350965c8e6.png",
+    "rejection": "Pair hero re-rendered partially visible heel lettering; not selected or uploaded"
+  },
+  "target_ids": {
+    "A": "1601943673716",
+    "B": "1601943741370",
+    "C": "1601943737356"
+  },
+  "page_state": "REVIEW_PENDING",
+  "source_id": "src-hr-hr054-27975",
+  "source_evidence": [
+    "01_产品资产/01_原始数据包/HR054_27975/source.json",
+    "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR054/素材清单.json"
+  ],
+  "procurement_capability": "CURRENT_REAL_SHOE_AND_PROCUREMENT_ENTRY_VERIFIED_NOT_ORDER_STOCK",
+  "company_faq_source": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/通用FAQ与公司简介.json",
+  "do_not_claim": [
+    "physical stock",
+    "tested slip resistance",
+    "medical comfort",
+    "unverified midsole material"
+  ]
+}

@@ -42,12 +42,12 @@ def sync():
   p=products[family];p['candidate_source_ids']=list(dict.fromkeys([*p.get('candidate_source_ids',[]),sid]));p['local_assets']['current_fields_file']=rel(BASE/family/'事实与页面计划.json');p['local_assets']['state']='REAL_SOURCE_PLAN_SUBMITTED';p['local_assets']['asset_roots']=[f'01_产品资产/02_可发布素材/{family}'];p['raw_packages']=[rel(raw)]
   p['next_action']='实源图文已提交原ID，待完整正式核验；公开呈现分开登记。'
   p['source_state']='CANDIDATE'
-  p['classification'].update(state='REAL_SKU_SOURCE_PHOTO_REVIEWED',local_intent_candidates=['厚底/时尚帆布休闲鞋'if family=='HR030'else'镂空套脚/夏季休闲乐福鞋'])
+  p['classification'].update(state='REAL_SKU_SOURCE_PHOTO_REVIEWED',local_intent_candidates=plan.get('local_intent_candidates',['厚底/时尚帆布休闲鞋'if family=='HR030'else'镂空套脚/夏季休闲乐福鞋']))
   if all(s=='FORMAL_FIELDS_SCORE_PASS'for s in states):p.update(source_state='ADOPTED',adopted_source_id=sid,next_action='实款来源、正式字段及5.00评分已核；公开呈现和旧关键词迁移逐ID核验分开待验；其余缺源HR继续。');p['local_assets']['state']='REAL_SOURCE_FORMAL_PASS'
   for name in ['素材清单.json','事实与页面计划.json','当前状态.json']:
    ref=rel(BASE/family/name)
    if ref not in p['evidence']:p['evidence'].append(ref)
-  op.b.save(BASE/family/'事实与页面计划.json',{**plan,'source_id':sid,'source_artno':source['artno'],'source_assets_root':rel(raw),'source_evidence':src['evidence'],'procurement_capability':'CURRENT_REAL_SHOE_AND_PROCUREMENT_ENTRY_VERIFIED_NOT_ORDER_STOCK','materials_evidence':[rel(raw/'09.jpg'),rel(raw/'13.jpg')]if family=='HR030'else[source['url']],'seasons':['Autumn','Winter']if family=='HR030'else['Summer'],'feature':'Fashion Trend','target_ids':targets,'page_state':'FORMAL_FIELDS_SCORE_PASS'if all(s=='FORMAL_FIELDS_SCORE_PASS'for s in states)else'REVIEW_PENDING','company_faq_source':'02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/通用FAQ与公司简介.json','do_not_claim':['physical stock','tested slip resistance','medical comfort','unverified midsole material']})
+  op.b.save(BASE/family/'事实与页面计划.json',{**plan,'source_id':sid,'source_artno':source['artno'],'source_assets_root':rel(raw),'source_evidence':src['evidence'],'procurement_capability':'CURRENT_REAL_SHOE_AND_PROCUREMENT_ENTRY_VERIFIED_NOT_ORDER_STOCK','materials_evidence':plan.get('materials_evidence',[rel(raw/'09.jpg'),rel(raw/'13.jpg')]if family=='HR030'else[source['url']]),'seasons':plan['seasons'],'feature':plan.get('feature','Fashion Trend'),'target_ids':targets,'page_state':'FORMAL_FIELDS_SCORE_PASS'if all(s=='FORMAL_FIELDS_SCORE_PASS'for s in states)else'REVIEW_PENDING','company_faq_source':'02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/通用FAQ与公司简介.json','do_not_claim':['physical stock','tested slip resistance','medical comfort','unverified midsole material']})
   op.b.save(BASE/family/'当前状态.json',{'at':op.b.now(),'family':family,'links':[r for r in summary if r['family']==family],'old_concept_images':'NOT_INCLUDED_IN_SUBMITTED_PAYLOAD','public_qa':'PENDING_NORMAL_BUYER_PAGE','source_price':source['price_cny'],'source_currency':'CNY'})
  ws={'name':'HR缺货源实款替换','status':'HR030/HR042优先；原ID实款换图文按逐ID证据登记正式和公开状态。','next_action':'负责人2026-10-13要求先完成HR缺货源商品全量实源替换，再继续路崎宽头鞋上架；已具备真实来源的页面先核实际绑定，不重复换款。','evidence':[rel(BASE/'README.md'),rel(BASE/'当前进度.json')]}
  old=next((w for w in d['workstreams']if w['name']==ws['name']),None)
@@ -55,7 +55,9 @@ def sync():
  else:d['workstreams'].append(ws)
  d['updated_on']='2026-10-13';op.b.save(REG,d)
  remaining=[p['id']for p in d['products']if p['id'].startswith('HR')and p['source_state']in ['MISSING','CANDIDATE','CONFLICT']and p['id']not in op.TARGETS]
- op.b.save(BASE/'当前进度.json',{'at':op.b.now(),'priority_links':summary,'other_hr_families_needing_per_family_source_binding_review':remaining,'scope':'Registry source states require link-by-link evidence review; candidates are not automatically missing shoes.','hr030_c':'1601943529885 current official product.get returned only request/trace and no product; no new listing created.'})
+ progress_file=BASE/'当前进度.json'
+ previous=op.b.load(progress_file)if progress_file.exists()else{}
+ op.b.save(progress_file,{**previous,'at':op.b.now(),'priority_links':summary,'other_hr_families_needing_per_family_source_binding_review':remaining,'scope':'Registry source states require link-by-link evidence review; candidates are not automatically missing shoes.','hr030_c':'1601943529885 current official product.get returned only request/trace and no product; no new listing created.'})
  errors=workspace.validate(d);assert not errors,errors
  generated=workspace.build(d)
  for path,raw in generated.items():workspace.write_generated(ROOT/path,raw)

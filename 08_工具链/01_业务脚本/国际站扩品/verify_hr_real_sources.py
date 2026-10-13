@@ -20,7 +20,8 @@ def check(pid,family,variant):
  attrs=defaultdict(set)
  for a in p['attributes']:attrs[a['attribute_name']].add(a['value_name'])
  plan=o.PLANS[family]
- expected={'Place of Origin':{'CN'},'Midsole Material':{'Other'},'Outsole Material':{'Rubber'},'Lining Material':{plan['lining']},'Upper Material':{plan['upper']},'Closure Type':{plan['closure']},'Style':set(plan['style']),'Toe Style':{'Round Toe'},'Model Number':{family+'-'+variant},plan['custom'][0]:{plan['custom'][1]},'Season':{'Autumn','Winter'}if family=='HR030'else{'Summer'},'Feature':{'Fashion Trend'}}
+ expected={'Place of Origin':{'CN'},'Midsole Material':{'Other'},'Outsole Material':{'Rubber'},'Lining Material':{plan['lining']},'Upper Material':{plan['upper']},'Closure Type':{plan['closure']},'Style':set(plan['style']),'Toe Style':{'Round Toe'},'Model Number':{family+'-'+variant},plan['custom'][0]:{plan['custom'][1]},'Season':set(plan['seasons']),'Feature':{plan.get('feature','Fashion Trend')}}
+ checks['category_exact']=int(p['category_id'])==int(plan.get('category_id',o.b.load(f/'before_get.json')['product']['category_id']))
  if(f/'public_style_prepared.json').exists():expected['Style']={'Platform Sneakers','Lace-up'}
  checks['formal_attributes_exact']=dict(attrs)==expected
  axes={str(a['attribute_id']):a['values']for a in p['product_sku']['sku_attributes']}

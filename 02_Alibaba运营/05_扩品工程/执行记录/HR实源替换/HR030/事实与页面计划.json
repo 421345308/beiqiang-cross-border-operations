@@ -26,7 +26,7 @@
   "lining": "Textile",
   "closure": "Lace-up",
   "style": [
-    "Platform",
+    "Platform Sneakers",
     "Lace-up"
   ],
   "custom": [
@@ -62,5 +62,6 @@
     "tested slip resistance",
     "medical comfort",
     "unverified midsole material"
-  ]
+  ],
+  "style_reason": "Platform enum incorrectly auto-translated as 平台集装箱 on public page; exact custom Platform Sneakers is formally verified on A; B correction waits review."
 }

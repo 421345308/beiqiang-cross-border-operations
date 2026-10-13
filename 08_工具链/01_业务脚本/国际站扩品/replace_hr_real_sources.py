@@ -14,6 +14,7 @@ import schema_publish_contract as contract
 from read_only_catalog import read_only_call
 SCOPE=b.load(BASE/'scope.json')
 TARGETS=SCOPE['targets']
+FIELDS=['icbuCatProp','saleProp','sku','productTitle','productKeywords','scImages','detailImage','textDesc','customMoreProperty','scPrice','ladderPrice']
 PLANS={family:b.load(BASE/family/'事实与页面计划.json')for family in TARGETS}
 RAW_PATHS={family:plan['source_assets_root']for family,plan in PLANS.items()}
 
@@ -51,15 +52,23 @@ def bank(family,api,cfg):
  data['state']='COMPLETE';b.save(f,data)
 def prepare(family):
  p=PLANS[family];assets=b.load(BASE/family/'图片银行.json')['items'];source=b.load(ROOT/RAW_PATHS[family]/'source.json')
- assert source['artno'] in ['MNA-1','9818'];fx=6.6837;cost=source['price_cny']/fx
+ assert source['artno']==p['source_artno'];fx=p.get('fx_cny_per_usd',6.6837);cost=source['price_cny']/fx
  for variant,pid in TARGETS[family].items():
   f=BASE/'商品'/pid;assert not (f/'update_once.json').exists()
   before=b.load(f/'before_get.json')['product'];schema=E.fromstring(b.load(f/'before_render.json')['data'])
+  category=p.get('category_id',int(before['category_id']))
+  if category!=int(before['category_id']):
+   target=E.fromstring(b.load(BASE/family/'目标类目Schema.json')['data'])
+   # Preserve each target's non-product values; definitions for rebuilt category
+   # attributes come from the current destination schema, never the old category.
+   old=schema.find("./field[@id='icbuCatProp']");schema.remove(old)
+   schema.append(copy.deepcopy(target.find("./field[@id='icbuCatProp']")))
   root=pub.values_only(schema,operation='update',field_ids=FIELDS)
   cp=root.find("./field[@id='icbuCatProp']")
   for child in list(cp):cp.remove(child)
   cv=E.SubElement(cp,'complex-value')
   for name,texts in [('Place of Origin',['China']),('Midsole Material',['Other']),('Outsole Material',['Rubber']),('Lining Material',[p['lining']]),('Upper Material',[p['upper']]),('Style',p['style']),('Closure Type',[p['closure']]),('Toe Style',['Round Toe'])]:set_attr(schema,cv,name,texts)
+  for name,texts in [('Season',p['seasons']),('Feature',[p.get('feature','Fashion Trend')])]:set_attr(schema,cv,name,texts)
   cv.append(contract.serialize_product_model(schema,f'{family}-{variant}'))
   colors=[]
   sp=root.find("./field[@id='saleProp']")
@@ -98,12 +107,15 @@ def prepare(family):
   assert len(tiers)==3 and tiers[0][0]==2 and tiers[-1][1]>=cost*1.3
   assert all(tiers[i][0]<tiers[i+1][0]and tiers[i][1]>tiers[i+1][1]for i in range(2))
   xml=E.tostring(root,encoding='unicode');assert not root.findall(".//field[@id='skuStock']") and not root.findall(".//field[@id='skuId']")
-  request={'param_product_top_publish_request':{'product_id':int(pid),'cat_id':int(before['category_id']),'language':'en_US','xml':xml}}
+  if category!=int(before['category_id']):
+   root.append(field(E.Element('temporary'),'catId',value=category))
+   xml=E.tostring(root,encoding='unicode')
+  request={'param_product_top_publish_request':{'product_id':int(pid),'cat_id':category,'language':'en_US','xml':xml}}
   b.save(f/'prepared.json',{'family':family,'variant':variant,'source':source['url'],'source_artno':source['artno'],'title':title,'fields':FIELDS,'sku_count':len(colors)*len(p['sizes']),'colors':p['colors'],'sizes':[f'EU{n}'for n in p['sizes']],'tiers':tiers,'cost_analysis':{'source_cny':source['price_cny'],'fx_cny_per_usd':fx,'fx_source':'https://www.boc.cn/sourcedb/whpj/','fx_observed':'2026-10-13 10:57:20','fx_basis':'USD cashless buying 668.37 CNY per 100 USD','cost_usd':cost,'minimum_markup':min(price/cost-1 for _,price in tiers),'freight_service_tax':'Order-specific, not claimed included'},'inventory':'OMITTED_NOT_PHYSICAL_STOCK','source_truth':'Real current shoe and procurement entry; order availability still unconfirmed','company_bundle':'Approved V8 and canonical general FAQ preserved unchanged','request':request,'xml_sha256':hashlib.sha256(xml.encode()).hexdigest(),'expected_schema':contract.field_snapshot(root),'before_preserved':preserve(before)})
   print(pid,'PREPARED',len(colors)*len(p['sizes']),flush=True)
 def preserve(p):
  x=copy.deepcopy(p)
- for k in ['gmt_modified','status','display','attributes','subject','keywords','main_image','product_sku','sourcing_trade','pc_detail_url']:x.pop(k,None)
+ for k in ['gmt_modified','status','display','attributes','subject','keywords','main_image','product_sku','sourcing_trade','pc_detail_url','category_id']:x.pop(k,None)
  d=x.get('struct_detail')or{}
  for k in ['detail_image','product_summary']:d.pop(k,None)
  return x

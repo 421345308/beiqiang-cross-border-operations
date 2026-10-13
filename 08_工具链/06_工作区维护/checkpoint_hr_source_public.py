@@ -71,7 +71,9 @@ def main():
                                 'hero_quality_once.json','hero_quality_receipt.json')]
     paths += ['08_工具链/01_业务脚本/国际站扩品/'+name for name in
               ('replace_hr_real_sources.py','verify_hr_real_sources.py',
-               'repair_hr_source_quality.py','sync_hr_real_sources.py')]
+               'repair_hr_source_quality.py','sync_hr_real_sources.py',
+               'prepare_hr054_assets.py','build_hr_replacement_scope.py')]
+    paths += ['02_Alibaba运营/00_运营SOP/国际站商品全生命周期SOP.md',FACTORY+'/README.md']
     paths += ['08_工具链/01_业务脚本/商品图片与审计/ingest_company_public_observations.py',
               '08_工具链/06_工作区维护/checkpoint_hr_source_public.py']
     paths += [FACTORY+'/V8/'+name for name in ('当前替换.json','公开验收参考.json','双改同步.json')]
@@ -89,6 +91,18 @@ def main():
         if path.endswith('.json'):
             safe(json.loads(text))
         frozen[path] = raw
+    # The shared SOP can contain other active tasks' edits. Export only the
+    # owner's exact current-batch acceptance change onto this branch's base.
+    sop='02_Alibaba运营/00_运营SOP/国际站商品全生命周期SOP.md'
+    live_sop=(ROOT/sop).read_text(encoding='utf8')
+    section=re.search(r'^### 本轮 HR 全量替换及后续路崎上架的验收调整[^\n]*\n[\s\S]+?写入授权边界。\n',live_sop,re.M).group(0)
+    base_sop=git('show',base+':'+sop).decode('utf8')
+    old=re.search(r'^### 本轮 HR 全量替换及后续路崎上架的验收调整[^\n]*\n[\s\S]+?写入授权边界。\n',base_sop,re.M)
+    if old:base_sop=base_sop[:old.start()]+section+base_sop[old.end():]
+    else:
+        assert base_sop.count('## 8. 单款验收回执')==1
+        base_sop=base_sop.replace('## 8. 单款验收回执','## 8. 单款验收回执\n\n'+section.strip(),1)
+    frozen[sop]=base_sop.replace('\r\n','\n').encode('utf8')
     merged = json.loads(git('show',base+':'+REG))
     baseline = copy.deepcopy(merged)
     original_other_sources = {x['id']:copy.deepcopy(x) for x in merged['sources']}
