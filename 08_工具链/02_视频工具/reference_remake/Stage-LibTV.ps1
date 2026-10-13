@@ -64,7 +64,7 @@ foreach ($id in $expected) { $cli += @('--left-add', $id) }
 $s = $job.settings
 $cli += @('-s', 'model=Seedance 2.5', '-s', 'modeType=mixed2video', '-s', 'count=1',
           '-s', ('duration=' + $s.duration), '-s', ('ratio=' + $s.ratio),
-          '-s', ('resolution=' + $s.resolution), '-s', ('enableSound=' + $s.enableSound))
+          '-s', ('resolution=' + $s.resolution), '-s', ('enableSound=' + $s.enableSound), '-s', 'searchEnabled=0')
 # Intentionally no generation switch. This tool only stages uploaded references and draft settings.
 $null = Invoke-LibTVJson $cli 'draft-update.json'
 $after = Invoke-LibTVJson @('node', $draft, '-p', $project) 'draft-readback.json'
@@ -73,18 +73,23 @@ $p = $after.data.params
 # Check current per-type bindings/order and expose a stale cached mixedList separately.
 $actual = @($p.videoList | ForEach-Object nodeId) + @($p.imageList | ForEach-Object nodeId)
 if ((($actual | Sort-Object) -join ',') -ne (($expected | Sort-Object) -join ',')) { throw 'Reference bindings mismatch.' }
-if ((@($p.mixedListOrder) -join ',') -ne ($expected -join ',')) { throw 'Reference order mismatch.' }
+if ($p.mixedListOrder.Count -ne $expected.Count -or (@($p.mixedListOrder | Sort-Object -Unique).Count -ne $expected.Count) -or
+    ((@($p.mixedListOrder | Sort-Object) -join ',') -ne (($expected | Sort-Object) -join ','))) { throw 'Reference order coverage mismatch.' }
 $cachedIds = @($p.mixedList | ForEach-Object nodeId)
-$cacheMatches = (($cachedIds | Sort-Object) -join ',') -eq (($expected | Sort-Object) -join ',')
+$cachePresent = $null -ne $p.PSObject.Properties['mixedList']
+$cacheMatches = $cachePresent -and (($cachedIds -join ',') -eq (@($p.mixedListOrder) -join ','))
+$cacheState = if (-not $cachePresent) { 'absent_derived_from_typed_inputs' } elseif ($cacheMatches) { 'matches_current_inputs' } else { 'stale' }
 foreach ($key in @('duration', 'ratio', 'resolution', 'enableSound')) {
     if ($p.settings.$key -ne $s.$key) { throw "Setting mismatch: $key" }
 }
 if ($p.prompt.Replace("`r`n", "`n").TrimEnd() -ne $prompt.Replace("`r`n", "`n").TrimEnd() -or $p.count -ne 1 -or $p.modeType -ne 'mixed2video') { throw 'Prompt or generation contract mismatch.' }
+if ($p.advancedSettings.search_enabled -ne 0) { throw 'Web search must be disabled.' }
 if ($after.data.url.Count -gt 0) { throw 'Unexpected generated output.' }
 [ordered]@{ state='draft_bound_not_generated'; project_uuid=$project; draft_node_id=$draft;
     product_image_node_ids=$imageIds; reference_video_node_id=$video.nodeKey;
     prepared_sha256=(Get-FileHash -LiteralPath $preparedPath).Hash.ToLowerInvariant();
     generation_submitted=$false; quote_status='requires_current_page_read';
+    mixed_input_node_ids=@($p.mixedListOrder); mixed_list_cache_state=$cacheState;
     cached_mixed_list_matches=$cacheMatches; generation_ready=$false;
     remaining=@('logged_in_page_final_quote_and_visible_reference_confirmation', 'paid_generation_scope');
     whole_output_seconds=$s.duration } | ConvertTo-Json -Depth 10 |

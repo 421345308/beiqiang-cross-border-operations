@@ -27,10 +27,21 @@ try {
     reference_video_node_id: 'v', product_image_node_ids: ['i1', 'i2'] };
   const stagePath = join(temp, 'stage-state.json'); await writeFile(stagePath, JSON.stringify(stage));
   const node = { nodeKey: 'test-draft', nodeType: 'video', data: { url: [], params: {
-    ...job.settings, prompt: '{{Node v}} {{Node i1}} {{Node i2}}', settings: job.settings,
+    ...job.settings, prompt: '{{Node v}} {{Node i1}} {{Node i2}}', settings: job.settings, advancedSettings: { search_enabled: 0 },
     videoList: [{ nodeId: 'v' }], imageList: [{ nodeId: 'i1' }, { nodeId: 'i2' }], audioList: [],
     mixedListOrder: ['v', 'i1', 'i2'], mixedList: ['v', 'i1', 'i2'].map(nodeId => ({ nodeId })) } } };
   const draftSha = verifyDraft(node, job, stage, '@视频1 @图片1 @图片2');
+  const searchOn = structuredClone(node); searchOn.data.params.advancedSettings.search_enabled = 1;
+  assert.throws(() => verifyDraft(searchOn, job, stage, '@视频1 @图片1 @图片2'), /web search/u);
+  const fresh = structuredClone(node);
+  delete fresh.data.params.mixedList;
+  fresh.data.params.mixedListOrder = ['i1', 'i2', 'v'];
+  const freshStage = { ...stage, mixed_input_node_ids: ['i1', 'i2', 'v'] };
+  assert.equal(typeof verifyDraft(fresh, job, freshStage, '@视频1 @图片1 @图片2'), 'string');
+  assert.throws(() => verifyDraft(fresh, job, stage, '@视频1 @图片1 @图片2'), /input order/u);
+  fresh.data.params.mixedList = [];
+  assert.throws(() => verifyDraft(fresh, job, freshStage, '@视频1 @图片1 @图片2'), /cached references differ/u);
+  assert.throws(() => verifyDraft(node, job, { ...stage, mixed_input_node_ids: ['v', 'i1', 'i1'] }, '@视频1 @图片1 @图片2'), /Invalid staged/u);
   const authFile = join(temp, 'authorization.json');
   const authorization = { schema: 'libtv-paid-authorization-v1', confirmed_by_user: true,
     confirmation: 'TEST FIXTURE ONLY - no real CLI attached', prepared_sha256: preparedSha,
@@ -109,7 +120,7 @@ try {
   await writeFile(fakeOutput, 'changed');
   await assert.rejects(invoke(), /Collected output changed/u);
   console.log(JSON.stringify({ sdk: 'Hypit 0.1.8 actual SDK', transport: 'simulated only', paid_calls: 0,
-    passed: ['exact_support', 'artifact_mismatch', 'exclusive_lock', 'authorization_absent', 'authorization_mismatch', 'authorization_expired', 'stale_reference',
+    passed: ['fresh_cli_derived_order', 'changed_order_rejected', 'present_empty_cache_rejected', 'duplicate_binding_rejected', 'exact_support', 'artifact_mismatch', 'exclusive_lock', 'authorization_absent', 'authorization_mismatch', 'authorization_expired', 'stale_reference',
       'unknown_submit_no_retry', 'collect_resume_without_regeneration', 'model_result_type', 'output_integrity'] }));
 } finally {
   const cleanup = resolve(temp);

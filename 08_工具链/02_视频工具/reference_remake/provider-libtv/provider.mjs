@@ -71,19 +71,28 @@ export function verifyDraft(node, job, stage, prompt) {
   const p = node.data?.params;
   assert(node.nodeKey === job.libtv.draft_node_id && node.nodeType === 'video', 'Wrong LibTV draft.');
   assert(p?.model === 'Seedance 2.5' && p.modeType === 'mixed2video' && p.count === 1, 'Wrong LibTV model/mode/count.');
+  assert(p.advancedSettings?.search_enabled === 0, 'LibTV web search must be explicitly disabled.');
   assert(JSON.stringify(p.videoList?.map(i => i.nodeId)) === JSON.stringify(ids.slice(0, 1))
     && JSON.stringify(p.imageList?.map(i => i.nodeId)) === JSON.stringify(ids.slice(1))
     && (p.audioList?.length ?? 0) === 0, 'Wrong LibTV input bindings.');
-  assert(JSON.stringify(p.mixedListOrder) === JSON.stringify(ids), 'Wrong LibTV input order.');
-  // Cached mixedList is not manually writable through the official CLI. Never bypass its validation.
-  assert(JSON.stringify(p.mixedList?.map(i => i.nodeId)) === JSON.stringify(ids), 'LibTV cached references differ; resolve the draft before execution.');
+  // CLI derives mixed order from wiring (fresh drafts may group images before video).
+  // Freeze the observed order, while still requiring every intended input exactly once.
+  const order = stage.mixed_input_node_ids ?? ids;
+  assert(Array.isArray(order) && order.length === ids.length && new Set(order).size === ids.length
+    && ids.every(id => order.includes(id)), 'Invalid staged LibTV input order.');
+  assert(JSON.stringify(p.mixedListOrder) === JSON.stringify(order), 'Wrong LibTV input order.');
+  // A fresh CLI draft can omit this derived cache. A present cache must match exactly;
+  // stale, empty or extra references are never accepted or manually overwritten.
+  if (Object.hasOwn(p, 'mixedList'))
+    assert(Array.isArray(p.mixedList) && JSON.stringify(p.mixedList.map(i => i.nodeId)) === JSON.stringify(order),
+      'LibTV cached references differ; resolve the draft before execution.');
   for (const key of ['duration', 'ratio', 'resolution', 'enableSound'])
     assert(p.settings?.[key] === job.settings[key], `Wrong LibTV setting: ${key}`);
   let bound = prompt.replaceAll('@视频1', `{{Node ${ids[0]}}}`);
   job.reference_images.forEach((image, i) => { bound = bound.replaceAll(image.binding, `{{Node ${ids[i + 1]}}}`); });
   assert(normalize(p.prompt ?? '') === bound, 'Wrong LibTV prompt.');
   return hash(JSON.stringify({ project: job.libtv.project_uuid, node: node.nodeKey, prompt: bound,
-    ids, settings: job.settings }));
+    ids, mixedInputOrder: order, settings: job.settings, webSearch: false }));
 }
 
 export function verifyAuthorization(auth, { preparedSha, stageSha, draftSha, job }, now = Date.now()) {
@@ -150,7 +159,8 @@ export function createLibTVProvider(options, transport = createCliTransport(opti
       const stagePath = join(directory, 'stage-state.json'), stageBytes = await readFile(stagePath);
       const stage = JSON.parse(stageBytes.toString('utf8').replace(/^\uFEFF/u, ''));
       assert(stage.prepared_sha256 === preparedSha && stage.generation_ready === true
-        && stage.cached_mixed_list_matches === true, 'Draft staging/page quote verification not ready.');
+        && (stage.cached_mixed_list_matches === true || stage.mixed_list_cache_state === 'absent_derived_from_typed_inputs'),
+        'Draft staging/page quote verification not ready.');
       const node = await transport.json(['node', job.libtv.draft_node_id, '-p', job.libtv.project_uuid], directory);
       const draftSha = verifyDraft(node, job, stage, prompt);
       assert(node.data.url?.length === 0, 'Draft already has output; use a verified recorded result, do not overwrite.');
