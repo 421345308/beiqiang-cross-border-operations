@@ -1,0 +1,18 @@
+{
+  "family": "HR035",
+  "source_artno": "888-D",
+  "tool": "built-in image_gen",
+  "candidate1": {
+    "file": "01_产品资产/02_可发布素材/HR035/AI候选/主图候选1.png",
+    "state": "REJECTED",
+    "source": "01_产品资产/01_原始数据包/HR035_888-D/01.jpg",
+    "reason": "Compared with foreground source01 shoe, viewing angle and height/width proportions changed; do not upload."
+  },
+  "candidate2": {
+    "file": "01_产品资产/02_可发布素材/HR035/AI候选/主图候选2.png",
+    "state": "VISUAL_PASS",
+    "source": "01_产品资产/01_原始数据包/HR035_888-D/06.jpg",
+    "scope": "Upper single Brown cutout anchor; elevated three-quarter view, cream rounded toe cap/three-layer platform profile, six horizontal lace sections, brown upper seams, heel loop, actual MAFE/REECSE text and original Brown identity checked against source06 and source01/09/11. Used only as M1, not a generated SKU colour or outsole proof."
+  },
+  "supporting_images": "All other current product/SKU images use actual source photographs and crop/layout only; unknown fibre, lining and midsole not promoted."
+}

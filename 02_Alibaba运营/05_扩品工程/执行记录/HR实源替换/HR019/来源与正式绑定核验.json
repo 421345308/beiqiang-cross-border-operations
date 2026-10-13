@@ -1,0 +1,97 @@
+{
+  "family": "HR019",
+  "at": "2026-10-13T12:15:52.794397+00:00",
+  "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+  "source": {
+    "id": "src-hr-hr019-230630",
+    "url": "https://www.alibaba.com/product-detail/2024-footwear-Wholesale-Price-Comfortable-Knit_1600880012423.html",
+    "shop_url": "https://www.alibaba.com/product-detail/2024-footwear-Wholesale-Price-Comfortable-Knit_1600880012423.html",
+    "supplier": "Baoding Smart Trading Co., Ltd.",
+    "model": "230630",
+    "price": "未核当前进货报价",
+    "currency": "USD",
+    "unit": "双",
+    "price_terms": "历史已采用实款对应恢复；当前数量、价格、包装及交期逐单询价，不从平台售价或样品费反推采购价。",
+    "observed_at": "2026-09-29",
+    "evidence": [
+      "99_临时区/HR019_完整实款重核_2026-09-29/ROOT_images_approved.json",
+      "99_临时区/HR019_完整实款重核_2026-09-29/ROOT_bank_manifest.json",
+      "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR019/来源与正式绑定核验.json"
+    ]
+  },
+  "links": [
+    {
+      "id": "1601943493822",
+      "model": "HR019-A",
+      "formal_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943493822/formal_get.json",
+      "formal_observed_at": "2026-10-12T22:12:21.050043+00:00",
+      "checks": {
+        "approved_actual_product_images_match": true,
+        "whole_six_images_match_current_catalog": true,
+        "raw_photo_hashes": true,
+        "materials_match_specific_model_table": true,
+        "source_eu_cartesian": true,
+        "approved_y": true
+      },
+      "main_images": [
+        "https://sc04.alicdn.com/kf/Hfcb5a38ab4684a0ea8068ff3df12e867Y.png",
+        "https://sc04.alicdn.com/kf/He49ca9bb41224a0a9be1be43c0f3415bd.png",
+        "https://sc04.alicdn.com/kf/H27ad532fcf1647499e07b196daf16886Q.png",
+        "https://sc04.alicdn.com/kf/H0576ed8cff974bdaaf8570c6f8d95d30E.png",
+        "https://sc04.alicdn.com/kf/Hac454a6469254f679c360ad49e584eb41.png",
+        "https://sc04.alicdn.com/kf/H35ad23029ec64bca8895dfe5a8b86e89J.png"
+      ],
+      "sku_count": 21
+    },
+    {
+      "id": "1601943546524",
+      "model": "HR019-B",
+      "formal_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943546524/formal_get.json",
+      "formal_observed_at": "2026-10-12T22:36:05.799718+00:00",
+      "checks": {
+        "approved_actual_product_images_match": true,
+        "whole_six_images_match_current_catalog": true,
+        "raw_photo_hashes": true,
+        "materials_match_specific_model_table": true,
+        "source_eu_cartesian": true,
+        "approved_y": true
+      },
+      "main_images": [
+        "https://sc04.alicdn.com/kf/H07300e48b3d846bbb109d0d4b60cba15K.png",
+        "https://sc04.alicdn.com/kf/H05368f112a7e4235af6c6532072c9e1dK.png",
+        "https://sc04.alicdn.com/kf/Hc6277cba2fc44f0d8c46b435f950bf844.png",
+        "https://sc04.alicdn.com/kf/H3d40821d703e4517aba23e87b2daf020T.png",
+        "https://sc04.alicdn.com/kf/H2eeb4b361c404c7ea8f7cf64b4aa511dJ.png",
+        "https://sc04.alicdn.com/kf/H09b3e553799c4062866c4e53ed9fc644k.png"
+      ],
+      "sku_count": 21
+    },
+    {
+      "id": "1601943635041",
+      "model": "HR019-C",
+      "formal_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943635041/formal_get.json",
+      "formal_observed_at": "2026-10-12T22:43:31.121934+00:00",
+      "checks": {
+        "approved_actual_product_images_match": true,
+        "whole_six_images_match_current_catalog": true,
+        "raw_photo_hashes": true,
+        "materials_match_specific_model_table": true,
+        "source_eu_cartesian": true,
+        "approved_y": true
+      },
+      "main_images": [
+        "https://sc04.alicdn.com/kf/Had2af8d41aa749afadfe9d13d6791c82d.png",
+        "https://sc04.alicdn.com/kf/Hebf78d35a66c49109cd99e6016ad478ax.png",
+        "https://sc04.alicdn.com/kf/H9cd8a96943954ef3baa4eb017006e70cj.png",
+        "https://sc04.alicdn.com/kf/H5c9653ecf60947968332b2be253e7e65i.png",
+        "https://sc04.alicdn.com/kf/Hb0847f59c19e416bbabfc0a0f861dba9u.png",
+        "https://sc04.alicdn.com/kf/Hc96a8db1910e45ea8870d0be64288e2db.png"
+      ],
+      "sku_count": 21
+    }
+  ],
+  "basis": "Current specific-model source review plus immutable original byte hashes, approved actual product assets and current formal six-image/complete color-EU bindings; materials match supported model facts. Current shared M6 differs from historical company image and is verified through current formal/catalog equality.",
+  "source_current_access": "Source route last directly reviewed2026-09-29. Historical real-shoe adoption retained; no fresh stock, price or supplier transaction claim. This step only restores source binding and does not resubmit an existing actual shoe.",
+  "platform_mutation": "NONE_EXISTING_ACTUAL_SHOE_PRESERVED",
+  "physical_stock": "NOT_CONFIRMED_ORDER_SPECIFIC"
+}

@@ -64,6 +64,7 @@ def main():
     paths = [HR+'/'+name for name in ('README.md','scope.json','当前进度.json','质量修正计划.json','已有实款对应.json','双改与货源一致性核验.json')]
     for family in scope['targets']:
         paths += [HR+'/'+family+'/'+name for name in ('事实与页面计划.json','当前状态.json','来源事实.json','素材清单.json','图片银行公开映射.json')]
+        paths += [p.relative_to(ROOT).as_posix() for p in (ROOT/HR/family).glob('*.json') if p.name in ('AI主图审核.json','AI生成提示词.json')]
     for profile in profiles:
         paths += [HR+'/'+profile['family']+'/来源与正式绑定核验.json']
     for pid in replacement_ids:
@@ -73,12 +74,16 @@ def main():
                                 'attribute_repair_once.json','attribute_repair_receipt.json',
                                 'gallery_repair_once.json','gallery_repair_receipt.json',
                                 'public_style_once.json','public_style_receipt.json',
-                                'hero_quality_once.json','hero_quality_receipt.json')]
+                                'hero_quality_once.json','hero_quality_receipt.json',
+                                'business_correction_once.json','business_correction_receipt.json')]
     paths += ['08_工具链/01_业务脚本/国际站扩品/'+name for name in
               ('replace_hr_real_sources.py','verify_hr_real_sources.py',
                'repair_hr_source_quality.py','sync_hr_real_sources.py',
                'prepare_hr054_assets.py','prepare_hr020_assets.py','build_hr_replacement_scope.py',
-               'sync_hr_source_media.py','reconcile_hr_existing_sources.py','audit_hr_source_consistency.py')]
+               'sync_hr_source_media.py','reconcile_hr_existing_sources.py','audit_hr_source_consistency.py',
+               'prepare_hr_source_images.py','freeze_hr_source_package.py',
+               'collect_hr_source_targets.py','repair_hr_rejected_profile.py',
+               'collect_sooxie_public_package.py')]
     paths += ['02_Alibaba运营/00_运营SOP/国际站商品全生命周期SOP.md',FACTORY+'/README.md']
     paths += ['08_工具链/01_业务脚本/商品图片与审计/ingest_company_public_observations.py',
               '08_工具链/06_工作区维护/checkpoint_hr_source_public.py']

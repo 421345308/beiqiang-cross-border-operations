@@ -10,10 +10,10 @@ def check(pid,family,variant):
   return {'id':pid,'state':'LOCAL_PREPARATION_NOT_FORMALLY_SUBMITTED'}
  f=o.BASE/'商品'/pid;got=o.b.load(f/'after_get.json');p=got['product'];report={'id':pid,'at':o.b.now(),'state':'REVIEWING','status':p['status'],'display':p['display']}
  if p['status']!='approved':o.b.save(f/'verification.json',report);return report
- prep=o.b.load(f/'prepared.json');schema=E.fromstring(o.b.load(f/'after_render.json')['data']);actual=o.contract.field_snapshot(schema);checks={}
+ prep=o.b.load(f/('business_correction_prepared.json'if(f/'business_correction_once.json').exists()else'prepared.json'));schema=E.fromstring(o.b.load(f/'after_render.json')['data']);actual=o.contract.field_snapshot(schema);checks={}
  if(f/'gallery_repair_prepared.json').exists():prep['expected_schema']['scImages']=o.b.load(f/'gallery_repair_prepared.json')['expected_schema']['scImages']
  if(f/'hero_quality_prepared.json').exists():prep['expected_schema']['scImages']=o.b.load(f/'hero_quality_prepared.json')['expected_schema']['scImages']
- last=max((o.b.load(f/name).get('at','')for name in ['update_once.json','attribute_repair_once.json','gallery_repair_once.json','public_style_once.json','hero_quality_once.json']if(f/name).exists()),default='')
+ last=max((o.b.load(f/name).get('at','')for name in ['update_once.json','attribute_repair_once.json','gallery_repair_once.json','public_style_once.json','hero_quality_once.json','business_correction_once.json']if(f/name).exists()),default='')
  checks['formal_read_after_latest_write']=datetime.fromtimestamp((f/'after_get.json').stat().st_mtime,timezone.utc).isoformat()>last and datetime.fromtimestamp((f/'score.json').stat().st_mtime,timezone.utc).isoformat()>last
  for key,value in prep['expected_schema'].items():
   if key in ['sku','icbuCatProp','productKeywords']:continue
@@ -28,14 +28,15 @@ def check(pid,family,variant):
  if(f/'public_style_prepared.json').exists():expected['Style']={'Platform Sneakers','Lace-up'}
  checks['formal_attributes_exact']=dict(attrs)==expected
  axes={str(a['attribute_id']):a['values']for a in p['product_sku']['sku_attributes']}
- checks['formal_color_names']=set(v['system_value_name']for v in axes['191288010'])==set(prep['colors'])
+ color_axis=prep.get('color_axis_id','191288010')
+ checks['formal_color_names']=set(v['system_value_name']for v in axes[color_axis])==set(prep['colors'])
  checks['formal_eu_names']=set(v['system_value_name']for v in axes['222038415'])==set(prep['sizes'])
- col={str(v['value_id']):v['system_value_name']for v in axes['191288010']};sz={str(v['value_id']):v['system_value_name']for v in axes['222038415']}
+ col={str(v['value_id']):v['system_value_name']for v in axes[color_axis]};sz={str(v['value_id']):v['system_value_name']for v in axes['222038415']}
  pairset=Counter();pricepass=True;bindings={}
  tiers=[(int(q),float(pr))for q,pr in prep['tiers']]
  inventory_observed=[]
  for row in p['product_sku']['skus']:
-  prop=json.loads(row['attr2_value']);pairset[(col[str(prop['191288010'])],sz[str(prop['222038415'])])]+=1
+  prop=json.loads(row['attr2_value']);pairset[(col[str(prop[color_axis])],sz[str(prop['222038415'])])]+=1
   bindings[row['sku_code']]=row['sku_id'];prices=[(int(v['start_quantity']),float(v['price']))for v in row['bulk_discount_prices']];pricepass&=sorted(prices)==sorted(tiers)
   inventory_observed.extend(row.get('inventory_dto_list',[]))
  if(f/'attribute_repair_before_get.json').exists():
@@ -57,7 +58,8 @@ def check(pid,family,variant):
  checks['score_diagnostics_clear']=not any(problem.get('extendProblemMap',{}).values())and not problem.get('errorReasonList')
  checks['display_y']=p['display']=='Y'
  keywords=[v for v in p.get('keywords',[])if v]
- keyword_state='PERSISTED'if keywords==[plan['keywords']]else'LEGACY_FIELD_EMPTY_API_HIGHLIGHTS_MATCH_UI_PER_ID_PENDING'if not keywords and checks['summary_exact']else'MISMATCH'
+ wanted_keywords=prep.get('keyword_submission_selection',[plan['keywords']]if isinstance(plan['keywords'],str)else plan['keywords'])
+ keyword_state='PERSISTED'if keywords==wanted_keywords else'LEGACY_FIELD_EMPTY_API_HIGHLIGHTS_MATCH_UI_PER_ID_PENDING'if not keywords and checks['summary_exact']else'MISMATCH'
  checks['keyword_observation_recorded']=keyword_state!='MISMATCH'
  report.update(state='FORMAL_FIELDS_SCORE_PASS'if all(checks.values())else'FORMAL_MISMATCH',checks=checks,failed=[k for k,v in checks.items()if not v],actual_score=score,target_score=5.0,score_source={'method':'alibaba.icbu.product.score.get','request_id':scores.get('request_id')},get_observed_at=datetime.fromtimestamp((f/'after_get.json').stat().st_mtime,timezone.utc).isoformat(),score_observed_at=datetime.fromtimestamp((f/'score.json').stat().st_mtime,timezone.utc).isoformat(),diagnostics=problem,keyword_state=keyword_state,keyword_write_verified=keyword_state=='PERSISTED',public_qa='PENDING',sku_bindings=bindings,inventory={'write':'OMITTED','formal_rows':inventory_observed,'physical_stock':'NOT_CONFIRMED'},scope='Formal get/render and actual score only. Empty legacy keywords are not claimed written; per-ID UI/public migration not yet tested. Normalization is limited to known image URLs, schema ordering/custom IDs and numeric price formatting.')
  o.b.save(f/'verification.json',report);print(pid,report['state'],report.get('failed',[]));return report

@@ -27,7 +27,7 @@ def main():
         product = products[family]
         for variant, pid in targets.items():
             folder = BASE/'商品'/pid
-            verification = load(folder/'verification.json')
+            verification = load(folder/'verification.json') if (folder/'verification.json').exists() else {'state': 'SUBMITTED' if (folder/'update_once.json').exists() else 'LOCAL_DRAFT'}
             listing = listings[pid]
             state = verification['state']
             checks = {
@@ -35,7 +35,7 @@ def main():
                     and sources[source_id]['model'] == plan['source_artno'],
                 'listing_state_matches_api': listing['optimization']['source_replacement']['state'] == state,
                 'source_plan_target_id': plan['target_ids'][variant] == pid,
-                'submission_ledger_exists': (folder/'update_once.json').is_file(),
+                'submission_stage_ledger_correct': not (folder/'update_once.json').exists() if state in ['LOCAL_DRAFT','LOCAL_PREPARATION'] else (folder/'update_once.json').is_file(),
             }
             if state == 'FORMAL_FIELDS_SCORE_PASS':
                 actual = load(folder/'after_get.json')['product']

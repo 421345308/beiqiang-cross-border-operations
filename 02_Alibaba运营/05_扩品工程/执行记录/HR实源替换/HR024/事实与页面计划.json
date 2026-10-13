@@ -1,0 +1,555 @@
+{
+  "candidate": "longqin_2553461",
+  "source_artno": "8856",
+  "supplier": "隆钦工厂记",
+  "source_url": "https://longqin.sooxie.com/detail/2553461",
+  "source_price_cny": 88,
+  "colors": [
+    "Sand",
+    "Khaki"
+  ],
+  "source_color_labels": [
+    "沙色",
+    "卡其"
+  ],
+  "sizes": [
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45
+  ],
+  "upper": "Leather and Mesh",
+  "lining": "Other",
+  "midsole": "Other",
+  "outsole": "PVC",
+  "closure": "Lace-up",
+  "style": [
+    "Lace-up",
+    "Casual"
+  ],
+  "seasons": [
+    "All Seasons"
+  ],
+  "local_intent_candidates": [
+    "皮面拼接/镂孔低帮休闲鞋"
+  ],
+  "category_id": 201334413,
+  "materials_evidence": [
+    "source.html title: 头层猪皮; public source photograph07: 皮革鞋面; photograph08: PVC大底",
+    "Close-up07 shows woven mesh panels within leather overlays, not perforated all-leather panels; use current Schema custom Leather and Mesh value. No fibre or leather-grade claim."
+  ],
+  "titles": {
+    "A": "Men's Mesh Panel Casual Sneakers with Leather Overlays and Stitched Sole Edge for Daily Wear",
+    "B": "Men's Lace-Up Leather and Mesh Sneakers Low Top Casual Shoes with PVC Outsole for Wholesale",
+    "C": "Men's Stitched Edge Casual Sneakers with Mesh Panels and Leather Trim for Footwear Collections"
+  },
+  "keywords": [
+    "Mens Leather Mesh Sneakers",
+    "Lace Up Casual Shoes",
+    "Mesh Panel Sneakers"
+  ],
+  "highlights": "Leather and mesh upper: Woven mesh across the vamp and side panels is framed by stitched leather overlays, creating a distinct casual sneaker profile.\n\nVisible stitched sole edge: A continuous seam above the contrasting sole adds a clear construction detail for casual footwear collections.\n\nLace-up low-top design: Traditional laces adjust across the instep, while the low collar works with everyday trousers and relaxed outfits.\n\nPVC outsole: The photographed outsole has a repeating waved tread pattern and a layered sidewall profile.\n\nTwo neutral options: Sand and Khaki, with EU39-45 options. Send quantities by colour and EU size, packing preference and destination for a wholesale quotation.",
+  "custom": [
+    "Shoe Profile",
+    "Leather/mesh casual sneaker; lace-up; stitched edge; PVC sole"
+  ],
+  "image_brief": {
+    "hero": "Complete actual Sand pair on clean white, source22",
+    "structure": "Source07 woven mesh/leather overlay seams and source08 PVC tread below Chinese captions",
+    "colours": "Source21 Khaki and source22 Sand, exactly two colour identities",
+    "size": "Source14 worn profile plus confirmed EU39-45 labels, no inferred conversions",
+    "factory": "Current shared approved company gallery M6",
+    "details": "Profile, panel/tread closeups, two neutrals, EU assortment and quotation inputs; each with different photo/crop/role"
+  },
+  "target_ids": {
+    "B": "1601943527861",
+    "C": "1601943622296"
+  },
+  "source_assets_root": "01_产品资产/01_原始数据包/HR024_8856",
+  "source_date": "2026-10-13",
+  "fx_cny_per_usd": 6.6837,
+  "feature": "Fashion Trend",
+  "tiers": [
+    [
+      2,
+      "19.75"
+    ],
+    [
+      50,
+      "18.44"
+    ],
+    [
+      100,
+      "17.12"
+    ]
+  ],
+  "page_state": "FORMAL_FIELDS_SCORE_PASS",
+  "assets_layout": {
+    "M1": {
+      "buyer_question": "Which exact casual sneaker is offered?",
+      "title": null,
+      "subtitle": null,
+      "photos": [
+        {
+          "index": 22,
+          "box": [
+            25,
+            145,
+            975,
+            850
+          ]
+        }
+      ],
+      "text": []
+    },
+    "M2": {
+      "buyer_question": "How does the low-top profile look with everyday outfits?",
+      "title": "Everyday casual styling",
+      "subtitle": "Low collar, lace-up front and contrasting sole",
+      "photos": [
+        {
+          "index": 12,
+          "box": [
+            40,
+            205,
+            960,
+            935
+          ],
+          "crop": [
+            0,
+            170,
+            750,
+            1075
+          ]
+        }
+      ],
+      "text": []
+    },
+    "M3": {
+      "buyer_question": "What defines the upper construction?",
+      "title": "Leather and mesh panels",
+      "subtitle": "Woven texture, framed overlays and visible seams",
+      "photos": [
+        {
+          "index": 7,
+          "box": [
+            30,
+            220,
+            970,
+            835
+          ],
+          "crop": [
+            0,
+            320,
+            750,
+            996
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "PVC sole with a stitched upper edge",
+          "xy": [
+            45,
+            920
+          ],
+          "size": 31,
+          "bold": true
+        }
+      ]
+    },
+    "M4": {
+      "buyer_question": "Which two colourways are actually offered?",
+      "title": "Two neutral colourways",
+      "subtitle": "Sand / Khaki",
+      "photos": [
+        {
+          "index": 22,
+          "box": [
+            45,
+            200,
+            955,
+            515
+          ]
+        },
+        {
+          "index": 21,
+          "box": [
+            45,
+            575,
+            955,
+            875
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "Sand",
+          "xy": [
+            45,
+            520
+          ],
+          "size": 30,
+          "bold": true
+        },
+        {
+          "value": "Khaki",
+          "xy": [
+            45,
+            900
+          ],
+          "size": 30,
+          "bold": true
+        }
+      ]
+    },
+    "M5": {
+      "buyer_question": "Which EU size range can form the assortment?",
+      "title": "EU 39-45 assortment",
+      "subtitle": "Plan quantities by colour and EU size",
+      "photos": [
+        {
+          "index": 14,
+          "box": [
+            40,
+            210,
+            960,
+            745
+          ],
+          "crop": [
+            0,
+            145,
+            750,
+            983
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "EU 39   40   41   42   43   44   45",
+          "xy": [
+            45,
+            825
+          ],
+          "size": 37,
+          "bold": true
+        },
+        {
+          "value": "Select EU quantities for your intended range",
+          "xy": [
+            45,
+            920
+          ],
+          "size": 28,
+          "bold": false
+        }
+      ]
+    },
+    "D1": {
+      "buyer_question": "What is the complete model profile?",
+      "title": "Lace-up casual sneakers",
+      "subtitle": "Leather overlays, mesh panels and a PVC outsole",
+      "photos": [
+        {
+          "index": 20,
+          "box": [
+            40,
+            210,
+            960,
+            985
+          ],
+          "crop": [
+            0,
+            175,
+            750,
+            822
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "Low-top opening  /  Visible stitched sole edge",
+          "xy": [
+            45,
+            1070
+          ],
+          "size": 31,
+          "bold": true
+        },
+        {
+          "value": "A neutral style for everyday casual ranges",
+          "xy": [
+            45,
+            1150
+          ],
+          "size": 29,
+          "bold": false
+        }
+      ]
+    },
+    "D2": {
+      "buyer_question": "What upper and outsole details can be inspected?",
+      "title": "Examine the actual construction",
+      "subtitle": "Compare panel texture, seams and bottom tread",
+      "photos": [
+        {
+          "index": 7,
+          "box": [
+            40,
+            210,
+            490,
+            720
+          ],
+          "crop": [
+            0,
+            320,
+            750,
+            996
+          ]
+        },
+        {
+          "index": 8,
+          "box": [
+            520,
+            210,
+            960,
+            720
+          ],
+          "crop": [
+            0,
+            245,
+            750,
+            968
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "Leather / mesh panels",
+          "xy": [
+            45,
+            790
+          ],
+          "size": 30,
+          "bold": true
+        },
+        {
+          "value": "PVC bottom tread",
+          "xy": [
+            520,
+            790
+          ],
+          "size": 30,
+          "bold": true
+        },
+        {
+          "value": "Lace-up front and stitched sole edge",
+          "xy": [
+            45,
+            950
+          ],
+          "size": 32,
+          "bold": false
+        },
+        {
+          "value": "Review the visible finishing with a sample",
+          "xy": [
+            45,
+            1070
+          ],
+          "size": 29,
+          "bold": false
+        }
+      ]
+    },
+    "D3": {
+      "buyer_question": "How do the colours look in side-profile photographs?",
+      "title": "Build your neutral colour range",
+      "subtitle": "Two photographed colourways of the same shoe",
+      "photos": [
+        {
+          "index": 20,
+          "box": [
+            40,
+            210,
+            960,
+            610
+          ],
+          "crop": [
+            0,
+            175,
+            750,
+            822
+          ]
+        },
+        {
+          "index": 18,
+          "box": [
+            40,
+            710,
+            960,
+            1105
+          ],
+          "crop": [
+            0,
+            170,
+            750,
+            794
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "Sand",
+          "xy": [
+            45,
+            630
+          ],
+          "size": 31,
+          "bold": true
+        },
+        {
+          "value": "Khaki",
+          "xy": [
+            45,
+            1120
+          ],
+          "size": 31,
+          "bold": true
+        }
+      ]
+    },
+    "D4": {
+      "buyer_question": "What does the buyer need to specify for this assortment?",
+      "title": "Plan sizes and order quantities",
+      "subtitle": "EU sizes for your intended footwear range",
+      "photos": [
+        {
+          "index": 16,
+          "box": [
+            40,
+            210,
+            960,
+            740
+          ],
+          "crop": [
+            0,
+            175,
+            750,
+            1062
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "EU 39   40   41   42   43   44   45",
+          "xy": [
+            45,
+            820
+          ],
+          "size": 37,
+          "bold": true
+        },
+        {
+          "value": "Quantities by colour and EU size",
+          "xy": [
+            45,
+            940
+          ],
+          "size": 32,
+          "bold": false
+        },
+        {
+          "value": "Packing preference and destination",
+          "xy": [
+            45,
+            1025
+          ],
+          "size": 32,
+          "bold": false
+        },
+        {
+          "value": "Request a sample to review fit and finishing",
+          "xy": [
+            45,
+            1130
+          ],
+          "size": 28,
+          "bold": false
+        }
+      ]
+    },
+    "SKU_SAND": {
+      "buyer_question": "Which exact Sand pair is bound to this colour?",
+      "title": null,
+      "subtitle": null,
+      "photos": [
+        {
+          "index": 22,
+          "box": [
+            25,
+            120,
+            975,
+            850
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "Sand",
+          "xy": [
+            45,
+            900
+          ],
+          "size": 36,
+          "bold": true
+        }
+      ]
+    },
+    "SKU_KHAKI": {
+      "buyer_question": "Which exact Khaki pair is bound to this colour?",
+      "title": null,
+      "subtitle": null,
+      "photos": [
+        {
+          "index": 21,
+          "box": [
+            25,
+            120,
+            975,
+            850
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "Khaki",
+          "xy": [
+            45,
+            900
+          ],
+          "size": 36,
+          "bold": true
+        }
+      ]
+    }
+  },
+  "closure_request_input": "Lace-Up",
+  "closure_canonical_basis": "Current destination Schema option displayName and actual formal get both Lace-up; same enum value, no additional platform write.",
+  "source_id": "src-hr-hr024-8856",
+  "source_evidence": [
+    "01_产品资产/01_原始数据包/HR024_8856/source.json",
+    "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR024/素材清单.json"
+  ],
+  "procurement_capability": "CURRENT_REAL_SHOE_AND_PROCUREMENT_ENTRY_VERIFIED_NOT_ORDER_STOCK",
+  "company_faq_source": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/通用FAQ与公司简介.json",
+  "do_not_claim": [
+    "physical stock",
+    "tested slip resistance",
+    "medical comfort",
+    "unverified midsole material"
+  ]
+}

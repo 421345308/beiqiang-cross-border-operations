@@ -11,7 +11,9 @@ def sync():
  for row in o.b.load(o.ROOT/'02_Alibaba运营/06_图片与检查记录/共享工厂详情/V8/bank.json')['items'].values():assets[o.contract._created_image_identity(row['url'])]=row
  for ts in o.TARGETS.values():
   for pid in ts.values():
-   proof=o.b.load(o.BASE/'商品'/pid/'verification.json')
+   verification=o.BASE/'商品'/pid/'verification.json'
+   if not verification.exists():continue
+   proof=o.b.load(verification)
    if proof['state']!='FORMAL_FIELDS_SCORE_PASS':continue
    p=o.b.load(o.BASE/'商品'/pid/'after_get.json')['product'];sd=p['struct_detail'];roles={'main':p['main_image']['images'],'details':[x['image_url']for x in sd['detail_image']['images']],'company':[x['image_url']for x in sd['company_image']['images']],'sku':[v['image_url']for a in p['product_sku']['sku_attributes']for v in a['values']if v.get('image_url')],'html':[]}
    for urls in roles.values():

@@ -43,6 +43,17 @@ def bank(family,api,cfg):
   if old:
    assert old['state']=='UPLOADED' and old['sha256']==a['sha256'],'Unknown or changed upload must be reconciled'
    continue
+  if key=='M6':
+   reusable=[]
+   for previous in BASE.glob('*/图片银行.json'):
+    if previous==f:continue
+    candidate=b.load(previous).get('items',{}).get('M6',{})
+    if candidate.get('state')=='UPLOADED'and candidate.get('sha256')==a['sha256']and candidate.get('file_id')and candidate.get('url'):
+     reusable.append((previous,candidate))
+   if reusable:
+    previous,candidate=reusable[0]
+    data['items'][key]={**a,'state':'UPLOADED','url':candidate['url'],'file_id':candidate['file_id'],'reused_official_upload_from':previous.relative_to(ROOT).as_posix(),'at':b.now()}
+    b.save(f,data);print(family,key,'REUSED_OFFICIAL_IMAGE_BANK',flush=True);continue
   row={**a,'state':'OUTCOME_UNKNOWN','at':b.now()};data['items'][key]=row;b.save(f,data)
   res=api.upload_image(cfg,p,None);row['response']=res;b.save(f,data)
   r=res.get('upload_image_response',{});assert not api.api_error(res) and r.get('file_id')and r.get('photobank_url')
@@ -54,7 +65,8 @@ def prepare(family):
  p=PLANS[family];assets=b.load(BASE/family/'图片银行.json')['items'];source=b.load(ROOT/RAW_PATHS[family]/'source.json')
  assert source['artno']==p['source_artno'];fx=p.get('fx_cny_per_usd',6.6837);cost=source['price_cny']/fx
  for variant,pid in TARGETS[family].items():
-  f=BASE/'商品'/pid;assert not (f/'update_once.json').exists()
+  f=BASE/'商品'/pid
+  if(f/'update_once.json').exists():print(pid,'EXISTING_WRITE_LEDGER_PREPARE_SKIPPED',flush=True);continue
   before=b.load(f/'before_get.json')['product'];schema=E.fromstring(b.load(f/'before_render.json')['data'])
   category=p.get('category_id',int(before['category_id']))
   if category!=int(before['category_id']):
@@ -63,6 +75,8 @@ def prepare(family):
    # attributes come from the current destination schema, never the old category.
    old=schema.find("./field[@id='icbuCatProp']");schema.remove(old)
    schema.append(copy.deepcopy(target.find("./field[@id='icbuCatProp']")))
+   old=schema.find("./field[@id='saleProp']");schema.remove(old)
+   schema.append(copy.deepcopy(target.find("./field[@id='saleProp']")))
   root=pub.values_only(schema,operation='update',field_ids=FIELDS)
   cp=root.find("./field[@id='icbuCatProp']")
   for child in list(cp):cp.remove(child)
@@ -74,7 +88,10 @@ def prepare(family):
   colors=[]
   sp=root.find("./field[@id='saleProp']")
   for child in list(sp):sp.remove(child)
-  cv=E.SubElement(sp,'complex-value');c=field(cv,'p-191288010','multiCheck');cs=E.SubElement(c,'values')
+  color_defs=[d for d in schema.findall("./field[@id='saleProp']/fields/field")if d.get('name','').casefold()=='color']
+  assert len(color_defs)==1
+  color_field=color_defs[0].get('id');color_axis=color_field.removeprefix('p-')
+  cv=E.SubElement(sp,'complex-value');c=field(cv,color_field,'multiCheck');cs=E.SubElement(c,'values')
   for i,color in enumerate(p['colors'],1):
    key=color.upper().replace(' ','_');vid=str(-500-i);colors.append((color,key,vid))
    E.SubElement(cs,'value',inputValue=color,img=assets['SKU_'+key]['url'],remark=color).text=vid
@@ -86,10 +103,15 @@ def prepare(family):
    for n in p['sizes']:
     row=E.SubElement(sku,'complex-values');field(row,'skuOuterId',value=f'{family}-{variant}-{key}-EU{n}')
     props=field(row,'props','multiInput');vals=E.SubElement(props,'values')
-    for prop,vid,name in [('191288010',cid,color),('222038415',str(-800-n),f'EU{n}')]:E.SubElement(vals,'value',propId=prop,propName='p-'+prop,propValueId=vid,propValueName=name).text=prop+':'+vid
+    for prop,vid,name in [(color_axis,cid,color),('222038415',str(-800-n),f'EU{n}')]:E.SubElement(vals,'value',propId=prop,propName='p-'+prop,propValueId=vid,propValueName=name).text=prop+':'+vid
   contract.validate_sku_property_pairs(root)
   title=p['titles'][variant];assert len(title)<=128 and family not in title
-  pub.set_direct_value(root,'productTitle',title);old=root.find("./field[@id='productKeywords']");root.remove(old);root.append(contract.serialize_product_keywords(schema,p['keywords']))
+  pub.set_direct_value(root,'productTitle',title);old=root.find("./field[@id='productKeywords']");root.remove(old)
+  keyword_contract=contract.keyword_input_contract(schema)
+  reviewed_keywords=[p['keywords']]if isinstance(p['keywords'],str)else p['keywords']
+  submitted_keywords=reviewed_keywords[:min(keyword_contract['maximum'],len(keyword_contract['definitions']))]
+  assert len(submitted_keywords)>=keyword_contract['minimum']
+  root.append(contract.serialize_product_keywords(schema,submitted_keywords))
   order=['M1','M2','M3','M4','M5','M6']
   if family=='HR030'and variant=='B':order=['M2','M1','M3','M4','M5','M6']
   if family=='HR042'and variant=='B':order=['M2','M1','M3','M4','M5','M6']
@@ -112,7 +134,7 @@ def prepare(family):
    root.append(field(E.Element('temporary'),'catId',value=category))
    xml=E.tostring(root,encoding='unicode')
   request={'param_product_top_publish_request':{'product_id':int(pid),'cat_id':category,'language':'en_US','xml':xml}}
-  b.save(f/'prepared.json',{'family':family,'variant':variant,'source':source['url'],'source_artno':source['artno'],'title':title,'fields':FIELDS,'sku_count':len(colors)*len(p['sizes']),'colors':p['colors'],'sizes':[f'EU{n}'for n in p['sizes']],'tiers':tiers,'cost_analysis':{'source_cny':source['price_cny'],'fx_cny_per_usd':fx,'fx_source':'https://www.boc.cn/sourcedb/whpj/','fx_observed':'2026-10-13 10:57:20','fx_basis':'USD cashless buying 668.37 CNY per 100 USD','cost_usd':cost,'minimum_markup':min(price/cost-1 for _,price in tiers),'freight_service_tax':'Order-specific, not claimed included'},'inventory':'OMITTED_NOT_PHYSICAL_STOCK','source_truth':'Real current shoe and procurement entry; order availability still unconfirmed','company_bundle':'Approved V8 and canonical general FAQ preserved unchanged','request':request,'xml_sha256':hashlib.sha256(xml.encode()).hexdigest(),'expected_schema':contract.field_snapshot(root),'before_preserved':preserve(before)})
+  b.save(f/'prepared.json',{'family':family,'variant':variant,'source':source['url'],'source_artno':source['artno'],'title':title,'fields':FIELDS,'color_axis_id':color_axis,'keyword_submission_selection':submitted_keywords,'keyword_schema_capacity':len(keyword_contract['definitions']),'sku_count':len(colors)*len(p['sizes']),'colors':p['colors'],'sizes':[f'EU{n}'for n in p['sizes']],'tiers':tiers,'cost_analysis':{'source_cny':source['price_cny'],'fx_cny_per_usd':fx,'fx_source':'https://www.boc.cn/sourcedb/whpj/','fx_observed':'2026-10-13 10:57:20','fx_basis':'USD cashless buying 668.37 CNY per 100 USD','cost_usd':cost,'minimum_markup':min(price/cost-1 for _,price in tiers),'freight_service_tax':'Order-specific, not claimed included'},'inventory':'OMITTED_NOT_PHYSICAL_STOCK','source_truth':'Real current shoe and procurement entry; order availability still unconfirmed','company_bundle':'Approved V8 and canonical general FAQ preserved unchanged','request':request,'xml_sha256':hashlib.sha256(xml.encode()).hexdigest(),'expected_schema':contract.field_snapshot(root),'before_preserved':preserve(before)})
   print(pid,'PREPARED',len(colors)*len(p['sizes']),flush=True)
 def preserve(p):
  x=copy.deepcopy(p)
@@ -155,20 +177,21 @@ def repair_gallery(family,api,cfg):
   b.save(f/'verification.json',{'state':'SUBMITTED_AFTER_GALLERY_REPAIR','at':b.now(),'status':'Pending fresh get/render/score','public_qa':'PENDING','reason':'Prior verification precedes latest scImages mutation and cannot be used as current pass.'})
 def submit(family,api,cfg):
  for variant,pid in TARGETS[family].items():
-  f=BASE/'商品'/pid;ledger=f/'update_once.json';assert not ledger.exists(),'Already submitted: read back only'
+  f=BASE/'商品'/pid;ledger=f/'update_once.json'
+  if ledger.exists():print(pid,'EXISTING_WRITE_LEDGER_SUBMISSION_SKIPPED',flush=True);continue
   plan=b.load(f/'prepared.json');before=b.load(f/'before_get.json')['product']
   fresh=read_only_call(api,cfg,'alibaba.icbu.product.get',{'product_id':pid,'language':'ENGLISH'});b.save(f/'prewrite_get.json',fresh);assert fresh['product']==before,'Target changed after preparation'
   xml=plan['request']['param_product_top_publish_request']['xml'];assert hashlib.sha256(xml.encode()).hexdigest()==plan['xml_sha256']
   b.save(ledger,{'state':'OUTCOME_UNKNOWN','at':b.now(),'request_sha256':b.sha(f/'prepared.json'),'authorization':'Owner 2026-10-13 explicitly directed source replacement of missing-source HR family, priority HR030/HR042, and title/gallery/detail optimization','id':pid})
   res=api.top_call(cfg,'alibaba.icbu.product.schema.update',plan['request']);b.save(f/'update_receipt.json',res)
-  if api.api_error(res):b.save(ledger,{'state':'BUSINESS_REJECTED','response_file':str(f/'update_receipt.json'),'id':pid});print(pid,'REJECTED',flush=True);return
+  if api.api_error(res)or res.get('biz_success')is False:b.save(ledger,{'state':'BUSINESS_REJECTED','at':b.now(),'response_file':str(f/'update_receipt.json'),'id':pid,'request_id':res.get('request_id'),'message_code':res.get('msg_code')});print(pid,'BUSINESS_REJECTED',flush=True);continue
   assert res.get('biz_success') is True,res
   b.save(ledger,{'state':'SUBMITTED','id':pid,'at':b.now(),'request_id':res.get('request_id'),'trace_id':res.get('_trace_id_')});print(pid,'SUBMITTED',flush=True)
 def verify(family,api,cfg):
  def one(pid):
   f=BASE/'商品'/pid
   if(f/'verification.json').exists():
-   old=b.load(f/'verification.json');last=max((b.load(f/name).get('at','')for name in ['update_once.json','attribute_repair_once.json','gallery_repair_once.json','public_style_once.json','hero_quality_once.json']if(f/name).exists()),default='')
+   old=b.load(f/'verification.json');last=max((b.load(f/name).get('at','')for name in ['update_once.json','attribute_repair_once.json','gallery_repair_once.json','public_style_once.json','hero_quality_once.json','business_correction_once.json']if(f/name).exists()),default='')
    if old.get('state')=='FORMAL_FIELDS_SCORE_PASS' and old.get('get_observed_at','')>last:print(pid,'UNCHANGED_FORMAL_PASS',flush=True);return
   got=read_only_call(api,cfg,'alibaba.icbu.product.get',{'product_id':pid,'language':'ENGLISH'});b.save(f/'after_get.json',got);p=got['product']
   if p['status']!='approved':b.save(f/'verification.json',{'state':'REVIEWING','at':b.now(),'status':p['status'],'display':p['display']});print(pid,'REVIEWING',flush=True);return

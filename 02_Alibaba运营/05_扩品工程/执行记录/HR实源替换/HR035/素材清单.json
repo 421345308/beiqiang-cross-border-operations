@@ -1,0 +1,609 @@
+{
+  "family": "HR035",
+  "state": "VISUAL_PASS",
+  "items": {
+    "M1": {
+      "path": "01_产品资产/02_可发布素材/HR035/M1.jpg",
+      "sha256": "4d0d4320b032b612de3254e9f3159a1d758f1e8542b542db732bb97733da5b99",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M2": {
+      "path": "01_产品资产/02_可发布素材/HR035/M2.jpg",
+      "sha256": "fddecde18427533576fa499b605a92547d87074e322c349c4dd1391149e94e40",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M3": {
+      "path": "01_产品资产/02_可发布素材/HR035/M3.jpg",
+      "sha256": "9be8a176b8845b7b93da88cae577847f4ccd5410fc6652da4c16164333112012",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M4": {
+      "path": "01_产品资产/02_可发布素材/HR035/M4.jpg",
+      "sha256": "681057af9572d687810db2bae6be152a2723c8eb57faa5e78bc297cdb4b465fc",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M5": {
+      "path": "01_产品资产/02_可发布素材/HR035/M5.jpg",
+      "sha256": "817d59f3a041d9f4bd7f53e7642f29553f289d0b627f5be6907a7eab67856b66",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "D1": {
+      "path": "01_产品资产/02_可发布素材/HR035/D1.jpg",
+      "sha256": "775beab5ab9b457b0981a57f1789e406cd270ea2f475529c4fd150388c4af740",
+      "dimensions": [
+        1000,
+        1250
+      ]
+    },
+    "D2": {
+      "path": "01_产品资产/02_可发布素材/HR035/D2.jpg",
+      "sha256": "6814de9e375aee79f7b3eb5a33258195febd3136f72167c9b77aaa9df973d72c",
+      "dimensions": [
+        1000,
+        1250
+      ]
+    },
+    "D3": {
+      "path": "01_产品资产/02_可发布素材/HR035/D3.jpg",
+      "sha256": "4e44af1ab918a91e13ccc737358e9fdcff979a9e9a870e9c86ef8bedff67f707",
+      "dimensions": [
+        1000,
+        1250
+      ]
+    },
+    "D4": {
+      "path": "01_产品资产/02_可发布素材/HR035/D4.jpg",
+      "sha256": "bfac8e6409180b9626e82eabe11d0168c9330be1ac44e8f407a622f5e7f73d9d",
+      "dimensions": [
+        1000,
+        1250
+      ]
+    },
+    "SKU_CAMEL": {
+      "path": "01_产品资产/02_可发布素材/HR035/SKU_CAMEL.jpg",
+      "sha256": "a28de8d9b59292e64eab4f3682cbff5eb21e491b9db0e329a6e49017c27631c6",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "SKU_BROWN": {
+      "path": "01_产品资产/02_可发布素材/HR035/SKU_BROWN.jpg",
+      "sha256": "b85268fcb25b9742512dbea82a0c4d04b56407c729d6e6acc59c824393b37d92",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M6": {
+      "path": "01_产品资产/02_可发布素材/共享素材/贝强公司简介图库.jpg",
+      "sha256": "5164b4d0ac008fb79a20d60419d21713b4f49b9ecea0a845d6c7de104030f51e",
+      "dimensions": [
+        1721,
+        914
+      ]
+    }
+  },
+  "image_roles": {
+    "M1": {
+      "buyer_question": "Which exact platform ankle sneaker is offered?",
+      "source_pixels": [
+        {
+          "file": "01_产品资产\\02_可发布素材\\HR035\\AI候选\\主图候选2.png",
+          "crop": null,
+          "native_effective_pixels": [
+            1254,
+            1254
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": null
+    },
+    "M2": {
+      "buyer_question": "How does the platform silhouette look when worn?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR035_888-D\\14.jpg",
+          "crop": [
+            148,
+            35,
+            790,
+            888
+          ],
+          "native_effective_pixels": [
+            642,
+            853
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": "Platform styling in everyday outfits"
+    },
+    "M3": {
+      "buyer_question": "How are entry and bottom construction arranged?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR035_888-D\\09.jpg",
+          "crop": [
+            0,
+            270,
+            790,
+            968
+          ],
+          "native_effective_pixels": [
+            790,
+            698
+          ],
+          "uniform_resize": true
+        },
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR035_888-D\\11.jpg",
+          "crop": [
+            0,
+            270,
+            790,
+            957
+          ],
+          "native_effective_pixels": [
+            790,
+            687
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [
+        {
+          "value": "Side zipper",
+          "xy": [
+            45,
+            835
+          ],
+          "size": 31,
+          "bold": true
+        },
+        {
+          "value": "Geometric tread",
+          "xy": [
+            520,
+            835
+          ],
+          "size": 31,
+          "bold": true
+        }
+      ],
+      "title": "Side zip and rubber tread"
+    },
+    "M4": {
+      "buyer_question": "Which two neutral colours are offered?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR035_888-D\\06.jpg",
+          "crop": [
+            25,
+            800,
+            390,
+            1100
+          ],
+          "native_effective_pixels": [
+            365,
+            300
+          ],
+          "uniform_resize": true
+        },
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR035_888-D\\06.jpg",
+          "crop": [
+            410,
+            800,
+            775,
+            1100
+          ],
+          "native_effective_pixels": [
+            365,
+            300
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [
+        {
+          "value": "Camel",
+          "xy": [
+            45,
+            515
+          ],
+          "size": 31,
+          "bold": true
+        },
+        {
+          "value": "Brown",
+          "xy": [
+            45,
+            900
+          ],
+          "size": 31,
+          "bold": true
+        }
+      ],
+      "title": "Camel and Brown options"
+    },
+    "M5": {
+      "buyer_question": "Which EU sizes can be selected?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR035_888-D\\17.jpg",
+          "crop": [
+            35,
+            35,
+            710,
+            998
+          ],
+          "native_effective_pixels": [
+            675,
+            963
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [
+        {
+          "value": "EU 35   36   37   38   39   40",
+          "xy": [
+            65,
+            835
+          ],
+          "size": 38,
+          "bold": true
+        },
+        {
+          "value": "Choose quantities for each colour-size option",
+          "xy": [
+            45,
+            925
+          ],
+          "size": 28,
+          "bold": false
+        }
+      ],
+      "title": "EU 35-40 options"
+    },
+    "D1": {
+      "buyer_question": "What are the specific style and closure features?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR035_888-D\\21.jpg",
+          "crop": [
+            148,
+            35,
+            790,
+            888
+          ],
+          "native_effective_pixels": [
+            642,
+            853
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [
+        {
+          "value": "Layered sole  /  Rounded toe cap  /  Heel loop",
+          "xy": [
+            45,
+            1065
+          ],
+          "size": 30,
+          "bold": true
+        },
+        {
+          "value": "A fashion-focused casual footwear choice",
+          "xy": [
+            45,
+            1150
+          ],
+          "size": 29,
+          "bold": false
+        }
+      ],
+      "title": "Side zip platform sneakers"
+    },
+    "D2": {
+      "buyer_question": "Which details should a buyer compare in the sample?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR035_888-D\\09.jpg",
+          "crop": [
+            0,
+            270,
+            790,
+            968
+          ],
+          "native_effective_pixels": [
+            790,
+            698
+          ],
+          "uniform_resize": true
+        },
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR035_888-D\\11.jpg",
+          "crop": [
+            0,
+            270,
+            790,
+            957
+          ],
+          "native_effective_pixels": [
+            790,
+            687
+          ],
+          "uniform_resize": true
+        },
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR035_888-D\\10.jpg",
+          "crop": [
+            0,
+            270,
+            790,
+            953
+          ],
+          "native_effective_pixels": [
+            790,
+            683
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [
+        {
+          "value": "Side zipper",
+          "xy": [
+            45,
+            730
+          ],
+          "size": 28,
+          "bold": true
+        },
+        {
+          "value": "Rubber tread",
+          "xy": [
+            520,
+            730
+          ],
+          "size": 28,
+          "bold": true
+        },
+        {
+          "value": "Laces and ankle opening",
+          "xy": [
+            535,
+            885
+          ],
+          "size": 27,
+          "bold": true
+        },
+        {
+          "value": "Textured upper panels",
+          "xy": [
+            535,
+            980
+          ],
+          "size": 27,
+          "bold": false
+        },
+        {
+          "value": "Heel pull loop",
+          "xy": [
+            535,
+            1070
+          ],
+          "size": 27,
+          "bold": false
+        }
+      ],
+      "title": "Look closely at this construction"
+    },
+    "D3": {
+      "buyer_question": "How do the neutral colours coordinate with casual outfits?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR035_888-D\\19.jpg",
+          "crop": [
+            148,
+            35,
+            790,
+            995
+          ],
+          "native_effective_pixels": [
+            642,
+            960
+          ],
+          "uniform_resize": true
+        },
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR035_888-D\\22.jpg",
+          "crop": [
+            0,
+            35,
+            790,
+            895
+          ],
+          "native_effective_pixels": [
+            790,
+            860
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [
+        {
+          "value": "Camel",
+          "xy": [
+            45,
+            1110
+          ],
+          "size": 33,
+          "bold": true
+        },
+        {
+          "value": "Brown",
+          "xy": [
+            520,
+            1110
+          ],
+          "size": 33,
+          "bold": true
+        }
+      ],
+      "title": "Choose your colour direction"
+    },
+    "D4": {
+      "buyer_question": "What must the buyer specify for a wholesale quotation?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR035_888-D\\16.jpg",
+          "crop": [
+            0,
+            80,
+            790,
+            854
+          ],
+          "native_effective_pixels": [
+            790,
+            774
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [
+        {
+          "value": "EU 35   36   37   38   39   40",
+          "xy": [
+            65,
+            830
+          ],
+          "size": 38,
+          "bold": true
+        },
+        {
+          "value": "Quantities by colour and EU size",
+          "xy": [
+            45,
+            945
+          ],
+          "size": 32,
+          "bold": false
+        },
+        {
+          "value": "Packing preference and destination",
+          "xy": [
+            45,
+            1025
+          ],
+          "size": 32,
+          "bold": false
+        },
+        {
+          "value": "Request a sample to review fit and finishing",
+          "xy": [
+            45,
+            1130
+          ],
+          "size": 28,
+          "bold": false
+        }
+      ],
+      "title": "Plan EU sizes and quantities"
+    },
+    "SKU_CAMEL": {
+      "buyer_question": "Which exact Camel shoe is selected?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR035_888-D\\06.jpg",
+          "crop": [
+            25,
+            800,
+            390,
+            1100
+          ],
+          "native_effective_pixels": [
+            365,
+            300
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [
+        {
+          "value": "Camel",
+          "xy": [
+            45,
+            900
+          ],
+          "size": 36,
+          "bold": true
+        }
+      ],
+      "title": null
+    },
+    "SKU_BROWN": {
+      "buyer_question": "Which exact Brown shoe is selected?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR035_888-D\\06.jpg",
+          "crop": [
+            410,
+            800,
+            775,
+            1100
+          ],
+          "native_effective_pixels": [
+            365,
+            300
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [
+        {
+          "value": "Brown",
+          "xy": [
+            45,
+            900
+          ],
+          "size": 36,
+          "bold": true
+        }
+      ],
+      "title": null
+    },
+    "M6": {
+      "buyer_question": "Who will coordinate the footwear order?",
+      "shared_approved_company_image": "01_产品资产/02_可发布素材/共享素材/贝强公司简介图库.jpg"
+    }
+  },
+  "review": {
+    "at": "2026-10-13",
+    "scope": "All six main/four product detail/two SKU images viewed in current full-set sheet; complete hero silhouette, all colour identities, source-preserving non-hero photographs, EU-only labels, material evidence, no Chinese/promotional overlays/known global mark, measured text bounds, no filler price cards; selected factory image reviewed and reused.",
+    "source_originals": "All22 product photographs reviewed; sidebar recommendations excluded.",
+    "shoe_truth": "HR024 regular leather/mesh version and PVC bottom; HR035 rounded toe-cap side-zip platform/rubber tread, Camel and Brown; no height/performance/fibre claims.",
+    "AI": "HR035 M1 candidate2 approved against source06; first candidate rejected, SKU images remain actual original cutouts."
+  }
+}

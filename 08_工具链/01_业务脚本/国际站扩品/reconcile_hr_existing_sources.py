@@ -6,7 +6,7 @@ from pathlib import Path
 from urllib.parse import urlsplit
 from collections import Counter
 from datetime import datetime,timezone
-import hashlib,json,sys,argparse
+import hashlib,json,sys,argparse,time
 
 ROOT=Path(__file__).resolve().parents[3]
 BASE=ROOT/'02_Alibaba运营/05_扩品工程/执行记录/HR实源替换'
@@ -32,7 +32,44 @@ def main():
         if args.family and profile['family']!=args.family:continue
         family=profile['family'];bank=load(profile['approved_bank']);rows=[]
         root_map=profile.get('evidence_format')=='ROOT_APPROVED_MAP'
-        if root_map:
+        current_five=profile.get('evidence_format') in ['CURRENT_PREFIXLESS_BANK','CURRENT_ROLE_MAP','CURRENT_ROLE_LIST']
+        if current_five:
+            visual=load(profile['approved_visual']);fact=load(profile['source_fact_file'])
+            if profile['evidence_format']=='CURRENT_PREFIXLESS_BANK':
+                assert visual['status']=='ROOT_FULL_FRAME_11_ASSETS_APPROVED_BANK_ONLY'
+                assert fact['source']['model']==profile['source_model'] and fact['source']['url']==profile['source_url']
+                raw_evidence=profile['source_fact_file']
+                for role in ['RAW_BLACK','RAW_BLUE']:
+                    row=bank[role];assert row['exactBytePass']
+                    assert hashlib.sha256(Path(row['sourcePath']).read_bytes()).hexdigest()==row['sourceSha256']
+                for role in ['M1_hero_black','M2_option_size','M3_visible_details','M4_materials','M5_quote_inputs']:
+                    row=bank[role];asset=visual['assets'][role]
+                    assert row['exactBytePass'] and asset['rootFullFramePass'] and row['sourceSha256']==asset['sourceSha256']
+                    assert hashlib.sha256(Path(row['sourcePath']).read_bytes()).hexdigest()==row['sourceSha256']
+            elif profile['evidence_format']=='CURRENT_ROLE_MAP':
+                assert visual['all30FullFrameViewed']
+                frozen=load(fact['sourceFactFile']);assert hashlib.sha256(Path(fact['sourceFactFile']).read_bytes()).hexdigest()==fact['sourceFactSha256']
+                assert frozen['listing_source']['url']==profile['source_url'] and frozen['product_identity']['model_number']==profile['source_model']
+                assert fact['fixedColors']==profile['colors'] and fact['sizesEU']==profile['sizes_eu']
+                originals=[x for x in visual['assets'].values() if x.get('byteIdenticalOriginal')];assert originals
+                for item in originals:
+                    for file in item['originalPhotos']:assert hashlib.sha256(Path(file).read_bytes()).hexdigest()==item['sourceSha256']
+                for role,row in bank.items():
+                    if '_M'in role or '_D'in role:
+                        asset=visual['assets'][role];assert row['exactBytePass'] and asset['fullVisualReview']=='ROOT_PASS'
+                        assert row['sourceSha256']==asset['sourceSha256']==hashlib.sha256(Path(row['sourcePath']).read_bytes()).hexdigest()
+                raw_evidence=profile['approved_visual']
+            else:
+                assert visual['all30FullFrameViewed'] and fact['sourceModel']==profile['source_model']
+                route=next(x for x in load(profile['source_fact_routes'])['families'] if x['family']==family)
+                assert route['source_url']==profile['source_url'] and profile['source_model'] in route['source_model']
+                reviewed={x['role']:x for x in visual['records']}
+                for row in bank:
+                    asset=reviewed[row['role']];assert row['exactBytePass'] and row['success']
+                    assert row['sha256']==asset['sha256']==hashlib.sha256(Path(asset['path']).read_bytes()).hexdigest()
+                    for original in asset['sources']:assert hashlib.sha256(Path(original['path']).read_bytes()).hexdigest()==original['sha256']
+                raw_evidence=profile['approved_visual']
+        elif root_map:
             plan=load(profile['approved_buyer_plan']);visual=load(profile['approved_visual'])
             assert plan['sourceModelInternalOnly']==profile['source_model']
             assert plan['sourcePage']==profile['source_url']
@@ -74,7 +111,14 @@ def main():
         assert {l['id']for l in ls}==set(profile['ids'])
         for l in ls:
             pid=l['id'];variant=l['model'].split('-')[-1];p=live[pid]
-            if root_map:
+            if current_five:
+                bank_rows=list(bank.values())if isinstance(bank,dict) else bank
+                expected=[x for x in bank_rows if (x['role'].startswith(variant+'_M') or profile['evidence_format']=='CURRENT_PREFIXLESS_BANK' and x['role'].startswith('M')) and not x['role'].startswith(variant+'_M6')]
+                assert len(expected)==5 and len(p['main_image']['images'])==6
+                assert Counter(ident(x['url'])for x in expected)==Counter(ident(u)for u in p['main_image']['images'][:5])
+                hero=next(x for x in expected if x['role'].startswith(variant+'_M1')or x['role'].startswith('M1_'))
+                assert ident(hero['url'])==ident(p['main_image']['images'][0])
+            elif root_map:
                 expected=[bank['M'+str(i)]for i in range(1,6)]
                 assert len(p['main_image']['images'])==6
                 # Existing A/B/C use the same reviewed assets in different
@@ -142,6 +186,12 @@ def main():
         print(family,'EXISTING_SOURCE_BOUND',len(rows),flush=True)
     errors=workspace.validate(registry);assert not errors,errors
     registry['updated_on']='2026-10-13';save(REG.relative_to(ROOT),registry)
-    for p,data in workspace.build(registry).items():workspace.write_generated(ROOT/p,data)
+    for p,data in workspace.build(registry).items():
+        for attempt in range(3):
+            try:
+                workspace.write_generated(ROOT/p,data);break
+            except PermissionError:
+                if attempt==2:raise
+                time.sleep(1)
 
 if __name__=='__main__':main()
