@@ -38,13 +38,27 @@ def sync():
     current={'at':v.get('get_observed_at',v['at']),'title':p['subject'],'keywords':p.get('keywords',[]),'main_images':p['main_image']['images'],'category_id':p['category_id'],'display':p['display'],'status':p['status'],'url':p.get('pc_detail_url')or l['url'],'scope':'Exact-ID whole-shoe replacement formal get; public presentation and legacy keyword migration tracked separately'}
     l['current_platform_fields']=current;l['catalog_fields']={**l.get('catalog_fields',{}),**current};l['formal_fields']={'file':rel(canonical/'formal_get.json'),'at':current['at'],'scope':'完整商品正式字段；本轮实源换款逐ID字段/5.00评分通过，公开与旧关键词迁移证据分列'};l['url']=current['url']
     l['local_sync']={'state':'HR_REAL_SOURCE_FORMAL_PASS','current_fields_file':rel(canonical/'formal_get.json'),'current_schema_file':rel(canonical/'formal_render.json'),'at':v['at']}
+    if 'platform_group_id'in plan:
+     assert str(p['group_id'])==str(plan['platform_group_id'])
+     l['platform_group']={'id':str(p['group_id']),'name':plan['platform_group_name'],'evidence':rel(BASE/family/'目标店内分组回读.json'),'scope':'当前正式商品与已核官方店内分组；与本地采购分类分列'}
    else:l['source_relation']='REAL_SOURCE_CANDIDATE_REPLACEMENT_PENDING_FORMAL_READ'
-   summary.append({'family':family,'model':family+'-'+variant,'id':pid,'state':state})
+   summary.append({'family':family,'model':op.model_number(family,variant),'id':pid,'state':state})
   p=products[family];p['candidate_source_ids']=[sid];p['local_assets']['current_fields_file']=rel(BASE/family/'事实与页面计划.json');p['local_assets']['state']='REAL_SOURCE_LOCAL_DRAFT'if all(s in ['LOCAL_DRAFT','LOCAL_PREPARATION']for s in states)else'REAL_SOURCE_PLAN_SUBMITTED';p['local_assets']['asset_roots']=[f'01_产品资产/02_可发布素材/{family}'];p['raw_packages']=[rel(raw)]
   p['next_action']='实源图文按逐ID阶段推进，未提交的保留本地草稿，已提交的只作完整正式回读；公开呈现分开登记。'
   p['source_state']='CANDIDATE'
   p['classification'].update(state='REAL_SKU_SOURCE_PHOTO_REVIEWED',local_intent_candidates=plan.get('local_intent_candidates',['厚底/时尚帆布休闲鞋'if family=='HR030'else'镂空套脚/夏季休闲乐福鞋']))
-  if all(s=='FORMAL_FIELDS_SCORE_PASS'for s in states):p.update(source_state='ADOPTED',adopted_source_id=sid,next_action='当前来源、正式字段及实际评分已核并双改；本轮API验收完成，公开抽检全量后统一进行，继续其余HR。');p['local_assets']['state']='REAL_SOURCE_FORMAL_PASS'
+  if all(s=='FORMAL_FIELDS_SCORE_PASS'for s in states):
+   p.update(source_state='ADOPTED',adopted_source_id=sid,next_action='当前来源、正式字段及实际评分已核并双改；本轮API验收完成，公开抽检全量后统一进行，继续其余HR。');p['local_assets']['state']='REAL_SOURCE_FORMAL_PASS'
+   p['classification']['platform_category_ids']=sorted({listings[pid]['current_platform_fields']['category_id']for pid in targets.values()})
+   if 'platform_group_id'in plan:p['classification'].update(store_groups=[{'id':str(plan['platform_group_id']),'name':plan['platform_group_name']}],store_group_state='FORMAL_PRODUCT_AND_GROUP_READBACK')
+  retired=BASE/family/'候选取舍.json'
+  if retired.exists():
+   for candidate in op.b.load(retired)['retired_candidates']:
+    old_sid='src-hr-'+family.lower()+'-'+candidate['source_artno'].lower()
+    previous_source=next((s for s in d['sources']if s['id']==old_sid),None)
+    if previous_source:
+     previous_source['evidence']=[candidate['raw_package_retained']+'/source.json',candidate['archive_documents']+'/素材清单.json',rel(retired)]
+     previous_source['source_role']='SUPERSEDED_UNSUBMITTED_CANDIDATE_ALL_EVIDENCE_RETAINED'
   for name in ['素材清单.json','事实与页面计划.json','当前状态.json']:
    ref=rel(BASE/family/name)
    if ref not in p['evidence']:p['evidence'].append(ref)

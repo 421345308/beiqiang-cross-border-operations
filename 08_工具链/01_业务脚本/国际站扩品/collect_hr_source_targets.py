@@ -18,7 +18,7 @@ def main():
                 print(pid,'ALREADY_WRITTEN_INPUTS_PRESERVED',flush=True);continue
             got=read_only_call(api,cfg,'alibaba.icbu.product.get',{'product_id':pid,'language':'ENGLISH'})
             product=got.get('product');assert product and product['status']=='approved',(pid,'Not an approved editable original target')
-            assert b.model(product)==family+'-'+variant,(pid,b.model(product),'identity mismatch')
+            assert b.model(product)==plan.get('model_numbers',{}).get(variant,family+'-'+variant),(pid,b.model(product),'identity mismatch')
             rendered=read_only_call(api,cfg,'alibaba.icbu.product.schema.render',{'param_product_top_publish_request':{'product_id':int(pid),'cat_id':int(product['category_id']),'language':'en_US'}})
             assert rendered.get('data')
             b.save(folder/'before_get.json',got);b.save(folder/'before_render.json',rendered)

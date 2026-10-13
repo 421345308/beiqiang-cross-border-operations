@@ -32,10 +32,25 @@ def main():
         if args.family and profile['family']!=args.family:continue
         family=profile['family'];bank=load(profile['approved_bank']);rows=[]
         root_map=profile.get('evidence_format')=='ROOT_APPROVED_MAP'
-        current_five=profile.get('evidence_format') in ['CURRENT_PREFIXLESS_BANK','CURRENT_ROLE_MAP','CURRENT_ROLE_LIST']
+        current_five=profile.get('evidence_format') in ['CURRENT_PREFIXLESS_BANK','CURRENT_ROLE_MAP','CURRENT_ROLE_LIST','LAYERED_APPROVED_BANK']
         if current_five:
             visual=load(profile['approved_visual']);fact=load(profile['source_fact_file'])
-            if profile['evidence_format']=='CURRENT_PREFIXLESS_BANK':
+            if profile['evidence_format']=='LAYERED_APPROVED_BANK':
+                assert family=='HR044' and fact['source_model']=='L795' and fact['url']==profile['source_url']
+                from bs4 import BeautifulSoup
+                source_file=ROOT/fact['source_page_file']
+                assert hashlib.sha256(source_file.read_bytes()).hexdigest()==fact['source_page_sha256']
+                soup=BeautifulSoup(source_file.read_text(encoding='utf8'),'html.parser')
+                table={n.get_text(strip=True):n.find_next_sibling('dd').get_text(' ',strip=True)for n in soup.select('dt.product-attrs-label')}
+                assert table['Model NO.']=='L795'
+                assert {k:table[k]for k in profile['materials']}==profile['materials']
+                assert visual['approved'] and visual['all_current_main_roles_hash_verified']
+                for source in visual['originals']:
+                    assert hashlib.sha256((ROOT/source['file']).read_bytes()).hexdigest()==source['sha256']
+                for role,row in bank.items():
+                    assert row['sha256']==visual['roles'][role]['sha256']==hashlib.sha256((ROOT/row['path']).read_bytes()).hexdigest()
+                raw_evidence=profile['approved_visual']
+            elif profile['evidence_format']=='CURRENT_PREFIXLESS_BANK':
                 assert visual['status']=='ROOT_FULL_FRAME_11_ASSETS_APPROVED_BANK_ONLY'
                 assert fact['source']['model']==profile['source_model'] and fact['source']['url']==profile['source_url']
                 raw_evidence=profile['source_fact_file']

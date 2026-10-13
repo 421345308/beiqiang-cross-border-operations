@@ -1,0 +1,97 @@
+{
+  "family": "HR044",
+  "at": "2026-10-13T14:00:07.434369+00:00",
+  "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+  "source": {
+    "id": "src-hr-hr044-l795",
+    "url": "https://mbshoes.en.made-in-china.com/product/AUIRTgzbHwWN/China-Casual-British-Style-Men-s-Anti-Slip-Loafers-Soft-Leather-Lightweiqht-Comfortable-Business-Shoes-Winter-Spring-Versatile-Trendy.html",
+    "shop_url": "https://mbshoes.en.made-in-china.com",
+    "supplier": "MB SHOES (Made-in-China店铺，法律公司名未核)",
+    "model": "L795",
+    "price": "未核当前进货报价",
+    "currency": "USD",
+    "unit": "双",
+    "price_terms": "历史已采用实款对应恢复；当前数量、价格、包装及交期逐单询价，不从平台售价或样品费反推采购价。",
+    "observed_at": "2026-09-28",
+    "evidence": [
+      "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR044/复用图审依据.json",
+      "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR044/复用图库绑定.json",
+      "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR044/来源与正式绑定核验.json"
+    ]
+  },
+  "links": [
+    {
+      "id": "1601943650718",
+      "model": "HR044-A",
+      "formal_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943650718/formal_get.json",
+      "formal_observed_at": "2026-10-12T22:43:57.328252+00:00",
+      "checks": {
+        "approved_actual_product_images_match": true,
+        "whole_six_images_match_current_catalog": true,
+        "raw_photo_hashes": true,
+        "materials_match_specific_model_table": true,
+        "source_eu_cartesian": true,
+        "approved_y": true
+      },
+      "main_images": [
+        "https://sc04.alicdn.com/kf/Hb1f88151422a4400a8d2993d51040d6fZ.jpg",
+        "https://sc04.alicdn.com/kf/Hfbb00e6d3a964686811d0b1ea74f1a0bC.jpg",
+        "https://sc04.alicdn.com/kf/H20822622270b4dee8143c7ffc72599dfK.jpg",
+        "https://sc04.alicdn.com/kf/H9f42390628df426b878eacdfc2d990d2y.jpg",
+        "https://sc04.alicdn.com/kf/H5aff21d8ba3642e2ac1abe0c1ee5de6eA.jpg",
+        "https://sc04.alicdn.com/kf/H96be31d9713f4b039d0a9194c4b03bcdD.jpg"
+      ],
+      "sku_count": 8
+    },
+    {
+      "id": "1601943753087",
+      "model": "HR044-B",
+      "formal_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943753087/formal_get.json",
+      "formal_observed_at": "2026-10-12T22:58:54.210529+00:00",
+      "checks": {
+        "approved_actual_product_images_match": true,
+        "whole_six_images_match_current_catalog": true,
+        "raw_photo_hashes": true,
+        "materials_match_specific_model_table": true,
+        "source_eu_cartesian": true,
+        "approved_y": true
+      },
+      "main_images": [
+        "https://sc04.alicdn.com/kf/Heda51ffc35af469a8291fbd648b935e6T.jpg",
+        "https://sc04.alicdn.com/kf/Hfbb00e6d3a964686811d0b1ea74f1a0bC.jpg",
+        "https://sc04.alicdn.com/kf/H20822622270b4dee8143c7ffc72599dfK.jpg",
+        "https://sc04.alicdn.com/kf/H9f42390628df426b878eacdfc2d990d2y.jpg",
+        "https://sc04.alicdn.com/kf/H5aff21d8ba3642e2ac1abe0c1ee5de6eA.jpg",
+        "https://sc04.alicdn.com/kf/H96be31d9713f4b039d0a9194c4b03bcdD.jpg"
+      ],
+      "sku_count": 8
+    },
+    {
+      "id": "1601943607919",
+      "model": "HR044-C",
+      "formal_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943607919/formal_get.json",
+      "formal_observed_at": "2026-10-12T22:37:23.015978+00:00",
+      "checks": {
+        "approved_actual_product_images_match": true,
+        "whole_six_images_match_current_catalog": true,
+        "raw_photo_hashes": true,
+        "materials_match_specific_model_table": true,
+        "source_eu_cartesian": true,
+        "approved_y": true
+      },
+      "main_images": [
+        "https://sc04.alicdn.com/kf/Hb1f88151422a4400a8d2993d51040d6fZ.jpg",
+        "https://sc04.alicdn.com/kf/Hfbb00e6d3a964686811d0b1ea74f1a0bC.jpg",
+        "https://sc04.alicdn.com/kf/H20822622270b4dee8143c7ffc72599dfK.jpg",
+        "https://sc04.alicdn.com/kf/H9f42390628df426b878eacdfc2d990d2y.jpg",
+        "https://sc04.alicdn.com/kf/H5aff21d8ba3642e2ac1abe0c1ee5de6eA.jpg",
+        "https://sc04.alicdn.com/kf/H96be31d9713f4b039d0a9194c4b03bcdD.jpg"
+      ],
+      "sku_count": 8
+    }
+  ],
+  "basis": "Saved specific-model L795 table explicitly PU upper/Mesh lining/EVA midsole/Rubber outsole; exact original SHA and approved current product-gallery SHA/official asset IDs verified.",
+  "source_current_access": "Historical public source snapshot and buying/enquiry entrance retained; current transaction quote/physical stock not freshly verified; preserve already adopted actual shoe rather than repeat replacement.",
+  "platform_mutation": "NONE_EXISTING_ACTUAL_SHOE_PRESERVED",
+  "physical_stock": "NOT_CONFIRMED_ORDER_SPECIFIC"
+}

@@ -1,22 +1,16 @@
 {
-  "candidate": "longqin_2565877",
-  "source_artno": "92028",
-  "supplier": "隆钦工厂记",
-  "source_url": "https://longqin.sooxie.com/detail/2565877",
-  "source_price_cny": 78,
+  "candidate": "dmxy_2543447",
+  "source_artno": "AR288",
+  "supplier": "大卖鞋业",
+  "source_url": "https://dmxy.sooxie.com/detail/2543447",
+  "source_price_cny": 35,
   "colors": [
     "Black",
-    "White",
-    "Khaki",
-    "Light Brown",
-    "Red Brown"
+    "Brown"
   ],
   "source_color_labels": [
     "黑色",
-    "白色",
-    "卡其",
-    "浅棕",
-    "红棕"
+    "棕色"
   ],
   "sizes": [
     38,
@@ -26,594 +20,65 @@
     42,
     43,
     44,
-    45,
-    46,
-    47
+    45
   ],
-  "upper": "Microfiber",
+  "upper": "Other",
   "lining": "Other",
   "midsole": "Other",
-  "outsole": "Rubber",
+  "outsole": "PVC",
   "closure": "Lace-up",
   "style": [
-    "Lace-up",
-    "Casual"
+    "Casual",
+    "Chunky Casual Shoes"
   ],
   "seasons": [
     "All Seasons"
   ],
   "category_id": 201334413,
   "local_intent_candidates": [
-    "粗缝边/低帮系带日常休闲鞋"
+    "拼接系带工装风休闲鞋/厚底休闲鞋"
   ],
   "materials_evidence": [
-    "Current specific-model photo06 and macro08 explicitly 超纤鞋面; write custom Microfiber without claiming genuine leather or a specific fibre blend. Photo10 explicitly 橡胶鞋底. Lining/midsole composition not established."
+    "Source photo03 explicitly says PVC大底; upper舒适鞋面/lining舒适内里 do not establish composition. Current body options and first poster EU38-45; embedded generic table39-44 differs, so current exact product choices EU38-45 recorded without any foot-length chart. Outdoor-style public title is not a tested waterproof/grip/hiking evidence. Actual generic FASHION markings retained."
   ],
   "titles": {
-    "A": "Men's Lace-Up Casual Sneakers with Microfiber Upper and Wraparound Stitch Detail for Daily Wear",
-    "B": "Men's Low Top Casual Shoes with Lace Hook Detail and Rubber Outsole for Wholesale",
-    "C": "Men's Textured Microfiber Sneakers with Stitched Sole Edge for Casual Footwear Collections"
+    "A": "Lace-Up Chunky Casual Shoes with Stitched Panels and Sculpted PVC Sole for Utility Style Outfits",
+    "B": "Panelled Casual Shoes with Rear Pull Loop and Chunky PVC Sole for Everyday Footwear Collections"
   },
   "keywords": [
-    "Mens Stitched Casual Sneakers",
-    "Microfiber Lace Up Shoes",
-    "Rubber Sole Casual Shoes"
+    "Chunky Lace Up Casual Shoes",
+    "Utility Style Casual Shoes",
+    "Panelled PVC Sole Shoes"
   ],
   "custom": [
     "Shoe Profile",
-    "Microfiber lace-up sneaker; wraparound seams; rubber outsole"
+    "Lace-up; layered stitching; rear pull loop; sculpted PVC sole"
   ],
-  "highlights": "Wraparound stitch detail: Large visible stitches follow the upper and sole edge, giving this low-top sneaker a distinctive casual profile.\n\nTextured microfiber upper: Layered panels and a stitched toe section create visual depth without relying on a plain one-piece vamp.\n\nLace-up front with hook detail: Rope-style laces pass through loops and upper hooks, making the closure a clear part of the design. A heel loop sits behind the low collar.\n\nRubber outsole: The actual bottom photograph shows an oval-pattern tread and a sculpted sidewall.\n\nFive colour options: Black, White, Khaki, Light Brown and Red Brown, with EU38-47 options. Send colour-size quantities, packing preference and destination for a wholesale quotation.",
-  "dedup": "Exact source URL/model absent from registry; metal-hook lace system, wraparound stitch-through-looking edge and sculpted rubber sidewall differ from HR024 leather/mesh PVC sneaker and from HR030 canvas platform. No wide fit or hiking performance claim.",
+  "highlights": "Panelled casual upper: Curved stitched overlays, a contrasting side insert and small visible perforations define the utility-inspired profile.\n\nAdjustable lace front: Lace guides across the tongue let the buyer adjust the fastening at the instep.\n\nSculpted PVC sole: The supplier identifies the sole as PVC. Raised sidewall sections and a contrast heel accent give the shoe a pronounced casual outline.\n\nRear pull loop: A low-top collar and rear loop provide a place to grip the shoe when putting it on.\n\nAssortment planning: Black and Brown are currently listed in EU38-45. Send colour-size quantities, packing preference and destination for a wholesale quotation.",
+  "dedup": "Exact source URL/artno checked against unique registry; not currently adopted by another family. Raw photos reviewed in full, sidebar excluded; actual markings kept, no invented material or performance.",
   "target_ids": {
     "A": "1601943620588",
     "B": "1601943677234"
   },
-  "source_assets_root": "01_产品资产/01_原始数据包/HR038_92028",
+  "source_assets_root": "01_产品资产/01_原始数据包/HR038_AR288",
   "source_date": "2026-10-13",
   "feature": "Fashion Trend",
   "fx_cny_per_usd": 6.6837,
   "tiers": [
     [
       2,
-      "17.51"
+      "7.86"
     ],
     [
       50,
-      "16.34"
+      "7.34"
     ],
     [
       100,
-      "15.18"
+      "6.81"
     ]
   ],
-  "page_state": "LOCAL_DRAFT",
-  "assets_layout": {
-    "M1": {
-      "buyer_question": "What is the exact offered shoe?",
-      "title": null,
-      "subtitle": "",
-      "photos": [
-        {
-          "index": 30,
-          "box": [
-            35,
-            35,
-            965,
-            965
-          ]
-        }
-      ],
-      "text": []
-    },
-    "M2": {
-      "buyer_question": "How does it look when worn?",
-      "title": "Everyday casual profile",
-      "subtitle": "Low collar, rope-style laces and wraparound stitches.",
-      "photos": [
-        {
-          "index": 14,
-          "box": [
-            45,
-            200,
-            955,
-            945
-          ],
-          "crop": [
-            0,
-            95,
-            750,
-            938
-          ]
-        }
-      ],
-      "text": []
-    },
-    "M3": {
-      "buyer_question": "What is visible on the sole?",
-      "title": "Rubber outsole detail",
-      "subtitle": "Oval-pattern tread and a sculpted sidewall.",
-      "photos": [
-        {
-          "index": 10,
-          "box": [
-            45,
-            210,
-            955,
-            940
-          ],
-          "crop": [
-            0,
-            220,
-            750,
-            858
-          ]
-        }
-      ],
-      "text": []
-    },
-    "M4": {
-      "buyer_question": "Which colour and EU options can I request?",
-      "title": "Colour & EU options",
-      "subtitle": "Choose the colour-size quantities for your order.",
-      "photos": [
-        {
-          "index": 26,
-          "box": [
-            45,
-            200,
-            475,
-            368
-          ],
-          "crop": [
-            0,
-            345,
-            750,
-            840
-          ]
-        },
-        {
-          "index": 27,
-          "box": [
-            525,
-            200,
-            955,
-            368
-          ]
-        },
-        {
-          "index": 28,
-          "box": [
-            45,
-            433,
-            475,
-            601
-          ]
-        },
-        {
-          "index": 29,
-          "box": [
-            525,
-            433,
-            955,
-            601
-          ]
-        },
-        {
-          "index": 30,
-          "box": [
-            45,
-            666,
-            475,
-            834
-          ]
-        }
-      ],
-      "text": [
-        {
-          "value": "Black",
-          "xy": [
-            65,
-            378
-          ],
-          "size": 25
-        },
-        {
-          "value": "White",
-          "xy": [
-            545,
-            378
-          ],
-          "size": 25
-        },
-        {
-          "value": "Khaki",
-          "xy": [
-            65,
-            611
-          ],
-          "size": 25
-        },
-        {
-          "value": "Light Brown",
-          "xy": [
-            545,
-            611
-          ],
-          "size": 25
-        },
-        {
-          "value": "Red Brown",
-          "xy": [
-            65,
-            844
-          ],
-          "size": 25
-        },
-        {
-          "value": "EU 38-47",
-          "xy": [
-            45,
-            920
-          ],
-          "size": 32
-        }
-      ]
-    },
-    "M5": {
-      "buyer_question": "How are the upper and collar finished?",
-      "title": "Upper & collar details",
-      "subtitle": "Textured microfiber panels, low collar and rear loop.",
-      "photos": [
-        {
-          "index": 8,
-          "box": [
-            45,
-            220,
-            485,
-            900
-          ],
-          "crop": [
-            0,
-            402,
-            750,
-            983
-          ]
-        },
-        {
-          "index": 9,
-          "box": [
-            515,
-            220,
-            955,
-            900
-          ],
-          "crop": [
-            0,
-            205,
-            750,
-            782
-          ]
-        }
-      ],
-      "text": []
-    },
-    "D1": {
-      "buyer_question": "What distinguishes the upper?",
-      "title": "Stitch detail & texture",
-      "subtitle": "Visible wraparound seams and a layered microfiber upper.",
-      "photos": [
-        {
-          "index": 8,
-          "box": [
-            45,
-            210,
-            955,
-            990
-          ],
-          "crop": [
-            0,
-            402,
-            750,
-            983
-          ]
-        }
-      ],
-      "text": [
-        {
-          "value": "Large stitches follow the toe and sole edge.",
-          "xy": [
-            45,
-            1100
-          ],
-          "size": 25
-        }
-      ]
-    },
-    "D2": {
-      "buyer_question": "What outsole detail can I assess?",
-      "title": "Sole structure",
-      "subtitle": "Rubber outsole with an oval-pattern tread.",
-      "photos": [
-        {
-          "index": 10,
-          "box": [
-            45,
-            210,
-            955,
-            990
-          ],
-          "crop": [
-            0,
-            220,
-            750,
-            858
-          ]
-        }
-      ],
-      "text": [
-        {
-          "value": "Oval tread shapes and a raised sidewall.",
-          "xy": [
-            45,
-            1100
-          ],
-          "size": 25
-        }
-      ]
-    },
-    "D3": {
-      "buyer_question": "How does the closure look in use?",
-      "title": "Lace-up casual shape",
-      "subtitle": "Rope-style laces, lace hooks and a low ankle profile.",
-      "photos": [
-        {
-          "index": 12,
-          "box": [
-            45,
-            200,
-            485,
-            1000
-          ],
-          "crop": [
-            0,
-            180,
-            750,
-            1162
-          ]
-        },
-        {
-          "index": 16,
-          "box": [
-            515,
-            200,
-            955,
-            1000
-          ],
-          "crop": [
-            0,
-            90,
-            750,
-            882
-          ]
-        }
-      ],
-      "text": [
-        {
-          "value": "Style photographs show the actual offered shoe.",
-          "xy": [
-            45,
-            1120
-          ],
-          "size": 25
-        }
-      ]
-    },
-    "D4": {
-      "buyer_question": "Which colour and EU options can I request?",
-      "title": "Colour & EU options",
-      "subtitle": "Choose the colour-size quantities for your order.",
-      "photos": [
-        {
-          "index": 26,
-          "box": [
-            45,
-            200,
-            475,
-            451
-          ],
-          "crop": [
-            0,
-            345,
-            750,
-            840
-          ]
-        },
-        {
-          "index": 27,
-          "box": [
-            525,
-            200,
-            955,
-            451
-          ]
-        },
-        {
-          "index": 28,
-          "box": [
-            45,
-            516,
-            475,
-            767
-          ]
-        },
-        {
-          "index": 29,
-          "box": [
-            525,
-            516,
-            955,
-            767
-          ]
-        },
-        {
-          "index": 30,
-          "box": [
-            45,
-            832,
-            475,
-            1083
-          ]
-        }
-      ],
-      "text": [
-        {
-          "value": "Black",
-          "xy": [
-            65,
-            461
-          ],
-          "size": 25
-        },
-        {
-          "value": "White",
-          "xy": [
-            545,
-            461
-          ],
-          "size": 25
-        },
-        {
-          "value": "Khaki",
-          "xy": [
-            65,
-            777
-          ],
-          "size": 25
-        },
-        {
-          "value": "Light Brown",
-          "xy": [
-            545,
-            777
-          ],
-          "size": 25
-        },
-        {
-          "value": "Red Brown",
-          "xy": [
-            65,
-            1093
-          ],
-          "size": 25
-        },
-        {
-          "value": "EU 38-47",
-          "xy": [
-            45,
-            1170
-          ],
-          "size": 32
-        }
-      ]
-    },
-    "SKU_BLACK": {
-      "buyer_question": "Which actual colour is this SKU?",
-      "title": null,
-      "subtitle": "",
-      "photos": [
-        {
-          "index": 26,
-          "box": [
-            25,
-            25,
-            975,
-            975
-          ],
-          "crop": [
-            0,
-            345,
-            750,
-            840
-          ]
-        }
-      ],
-      "text": []
-    },
-    "SKU_WHITE": {
-      "buyer_question": "Which actual colour is this SKU?",
-      "title": null,
-      "subtitle": "",
-      "photos": [
-        {
-          "index": 27,
-          "box": [
-            25,
-            25,
-            975,
-            975
-          ]
-        }
-      ],
-      "text": []
-    },
-    "SKU_KHAKI": {
-      "buyer_question": "Which actual colour is this SKU?",
-      "title": null,
-      "subtitle": "",
-      "photos": [
-        {
-          "index": 28,
-          "box": [
-            25,
-            25,
-            975,
-            975
-          ]
-        }
-      ],
-      "text": []
-    },
-    "SKU_LIGHT_BROWN": {
-      "buyer_question": "Which actual colour is this SKU?",
-      "title": null,
-      "subtitle": "",
-      "photos": [
-        {
-          "index": 29,
-          "box": [
-            25,
-            25,
-            975,
-            975
-          ]
-        }
-      ],
-      "text": []
-    },
-    "SKU_RED_BROWN": {
-      "buyer_question": "Which actual colour is this SKU?",
-      "title": null,
-      "subtitle": "",
-      "photos": [
-        {
-          "index": 30,
-          "box": [
-            25,
-            25,
-            975,
-            975
-          ]
-        }
-      ],
-      "text": []
-    }
-  },
-  "source_id": "src-hr-hr038-92028",
-  "source_evidence": [
-    "01_产品资产/01_原始数据包/HR038_92028/source.json",
-    "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR038/素材清单.json"
-  ],
+  "page_state": "FORMAL_FIELDS_SCORE_PASS",
   "procurement_capability": "CURRENT_REAL_SHOE_AND_PROCUREMENT_ENTRY_VERIFIED_NOT_ORDER_STOCK",
   "company_faq_source": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/通用FAQ与公司简介.json",
   "do_not_claim": [
@@ -621,5 +86,387 @@
     "tested slip resistance",
     "medical comfort",
     "unverified midsole material"
+  ],
+  "selection_review": {
+    "state": "REVIEWED_ADOPT",
+    "private_backend_evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/经营数据与选款.json",
+    "data_limit": "Both observed periods have low exposure and no contact signals; insufficient traffic is not proof of absent demand. Do not retain high procurement cost or original concept automatically.",
+    "reason": "Owner permits cross-border-fit re-selection without approximate old shape. Complete source photos, available procurement entry, clear actual shoe and lower quoted cost than previous unsubmitted candidate.",
+    "old_candidate_quote_cny": 78,
+    "current_cost_usd": 5.236620434789113,
+    "gross_difference_usd": [
+      2.6234,
+      2.1034,
+      1.5734
+    ],
+    "margin_limit": "50/40/30 percent procurement-cost markup; packaging, procurement/QC, platform/payment, freight and tax assessed per order. Not net-profit guarantee.",
+    "competitor_comparison": "No exact same-model Alibaba bulk quote verified. Cost advantage versus the replaced local candidate is evidenced; do not claim same-model market cheapest."
+  },
+  "assets_layout": {
+    "M1": {
+      "buyer_question": "What is the actual offered shoe?",
+      "title": null,
+      "subtitle": "",
+      "photos": [
+        {
+          "index": 18,
+          "box": [
+            15,
+            15,
+            985,
+            985
+          ],
+          "crop": [
+            383,
+            113,
+            738,
+            323
+          ]
+        }
+      ],
+      "text": []
+    },
+    "M2": {
+      "buyer_question": "How does it look with casual trousers?",
+      "title": "Utility-inspired casual profile",
+      "subtitle": "Stitched panels and a sculpted PVC sole.",
+      "photos": [
+        {
+          "index": 7,
+          "box": [
+            45,
+            215,
+            955,
+            935
+          ],
+          "crop": [
+            0,
+            127,
+            750,
+            964
+          ]
+        }
+      ],
+      "text": []
+    },
+    "M3": {
+      "buyer_question": "What upper seams and inserts are visible?",
+      "title": "Stitched side panels",
+      "subtitle": "Curved overlays, contrasting inserts and small perforations.",
+      "photos": [
+        {
+          "index": 4,
+          "box": [
+            45,
+            215,
+            955,
+            935
+          ],
+          "crop": [
+            0,
+            0,
+            750,
+            868
+          ]
+        }
+      ],
+      "text": []
+    },
+    "M4": {
+      "buyer_question": "Which colours and EU sizes can I request?",
+      "title": "Colour & EU assortment",
+      "subtitle": "Choose the colour-size quantities for your order.",
+      "photos": [
+        {
+          "index": 18,
+          "box": [
+            45,
+            230,
+            485,
+            800
+          ],
+          "crop": [
+            10,
+            485,
+            738,
+            725
+          ]
+        },
+        {
+          "index": 18,
+          "box": [
+            525,
+            230,
+            955,
+            800
+          ],
+          "crop": [
+            10,
+            110,
+            738,
+            337
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "Black",
+          "xy": [
+            65,
+            840
+          ],
+          "size": 25
+        },
+        {
+          "value": "Brown",
+          "xy": [
+            545,
+            840
+          ],
+          "size": 25
+        },
+        {
+          "value": "EU 38-45",
+          "xy": [
+            45,
+            915
+          ],
+          "size": 32
+        }
+      ]
+    },
+    "M5": {
+      "buyer_question": "How is the front adjusted?",
+      "title": "Lace-guide construction",
+      "subtitle": "Actual close view of the lace rows and tongue.",
+      "photos": [
+        {
+          "index": 5,
+          "box": [
+            45,
+            215,
+            955,
+            935
+          ],
+          "crop": [
+            0,
+            0,
+            750,
+            896
+          ]
+        }
+      ],
+      "text": []
+    },
+    "D1": {
+      "buyer_question": "What sidewall detail can I assess?",
+      "title": "Sculpted PVC sole profile",
+      "subtitle": "Raised sidewall sections and a contrasting heel accent.",
+      "photos": [
+        {
+          "index": 15,
+          "box": [
+            45,
+            215,
+            955,
+            1065
+          ],
+          "crop": [
+            0,
+            173,
+            750,
+            896
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "Actual Black option, with source markings retained.",
+          "xy": [
+            45,
+            1140
+          ],
+          "size": 25
+        }
+      ]
+    },
+    "D2": {
+      "buyer_question": "How does the collar and heel appear?",
+      "title": "Opening & rear loop",
+      "subtitle": "Original rear-quarter view of the Brown option.",
+      "photos": [
+        {
+          "index": 9,
+          "box": [
+            45,
+            215,
+            955,
+            1065
+          ],
+          "crop": [
+            0,
+            82,
+            750,
+            950
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "Low-top collar and visible rear pull loop.",
+          "xy": [
+            45,
+            1140
+          ],
+          "size": 25
+        }
+      ]
+    },
+    "D3": {
+      "buyer_question": "What is the full shoe shape?",
+      "title": "Front & side shape",
+      "subtitle": "Actual Brown shoe shown with casual trousers.",
+      "photos": [
+        {
+          "index": 10,
+          "box": [
+            45,
+            215,
+            955,
+            1065
+          ],
+          "crop": [
+            0,
+            140,
+            750,
+            970
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "Panelled upper and adjustable lace front.",
+          "xy": [
+            45,
+            1140
+          ],
+          "size": 25
+        }
+      ]
+    },
+    "D4": {
+      "buyer_question": "Which colours and EU sizes can I request?",
+      "title": "Colour & EU assortment",
+      "subtitle": "Choose the colour-size quantities for your order.",
+      "photos": [
+        {
+          "index": 18,
+          "box": [
+            45,
+            230,
+            485,
+            1045
+          ],
+          "crop": [
+            10,
+            485,
+            738,
+            725
+          ]
+        },
+        {
+          "index": 18,
+          "box": [
+            525,
+            230,
+            955,
+            1045
+          ],
+          "crop": [
+            10,
+            110,
+            738,
+            337
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "Black",
+          "xy": [
+            65,
+            1095
+          ],
+          "size": 25
+        },
+        {
+          "value": "Brown",
+          "xy": [
+            545,
+            1095
+          ],
+          "size": 25
+        },
+        {
+          "value": "EU 38-45",
+          "xy": [
+            45,
+            1165
+          ],
+          "size": 32
+        }
+      ]
+    },
+    "SKU_BLACK": {
+      "buyer_question": "Which colour is this SKU?",
+      "title": null,
+      "subtitle": "",
+      "photos": [
+        {
+          "index": 18,
+          "box": [
+            25,
+            25,
+            975,
+            975
+          ],
+          "crop": [
+            385,
+            491,
+            738,
+            711
+          ]
+        }
+      ],
+      "text": []
+    },
+    "SKU_BROWN": {
+      "buyer_question": "Which colour is this SKU?",
+      "title": null,
+      "subtitle": "",
+      "photos": [
+        {
+          "index": 18,
+          "box": [
+            25,
+            25,
+            975,
+            975
+          ],
+          "crop": [
+            383,
+            113,
+            738,
+            323
+          ]
+        }
+      ],
+      "text": []
+    }
+  },
+  "source_id": "src-hr-hr038-ar288",
+  "source_evidence": [
+    "01_产品资产/01_原始数据包/HR038_AR288/source.json",
+    "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR038/素材清单.json"
   ]
 }

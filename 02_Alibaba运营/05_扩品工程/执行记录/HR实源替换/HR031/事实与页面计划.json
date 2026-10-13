@@ -1,25 +1,26 @@
 {
-  "candidate": "xingjue_2565818",
-  "source_artno": "R311",
-  "supplier": "星爵鞋业",
-  "source_url": "https://xingjue.sooxie.com/detail/2565818",
-  "source_price_cny": 82,
+  "candidate": "shnx_2512195",
+  "source_artno": "D11",
+  "supplier": "四海鞋业",
+  "source_url": "https://shnx.sooxie.com/detail/2512195",
+  "source_price_cny": 35,
   "colors": [
     "Black",
-    "Grey"
+    "Camel"
   ],
   "source_color_labels": [
     "黑色",
-    "灰色"
+    "驼色"
   ],
   "sizes": [
-    38,
     39,
     40,
     41,
     42,
     43,
-    44
+    44,
+    45,
+    46
   ],
   "upper": "Other",
   "lining": "Other",
@@ -35,51 +36,73 @@
   ],
   "category_id": 201334413,
   "local_intent_candidates": [
-    "纹理鞋面/系带商务休闲鞋"
+    "圆头德比/厚底系带休闲鞋"
   ],
   "materials_evidence": [
-    "Current source29 product photos provide structure but no specific component composition. 皮鞋 in generic source title is not a genuine-leather proof. No leather/rubber/fibre claim added."
+    "Six current photos confirm plain toe, open-lacing quarters and chunky notched sole edge. Public source does not specify component composition; no leather/suede/rubber claims. Actual numeric EU39-46 from current source choices; no foot-length conversion."
   ],
   "titles": {
-    "A": "Lace-Up Derby Shoes with Textured Upper and Contrast Sole Edge for Business Casual Wear",
-    "B": "Plain Toe Lace-Up Casual Shoes with Low Heel and Textured Finish for Office Footwear Collections",
-    "C": "Wholesale Textured Derby Shoes with Lace-Up Front and Contrast Sole Edge for Daily Outfits"
+    "A": "Plain Toe Derby Shoes with Lace-Up Quarters and Chunky Notched Sole for Casual Outfits",
+    "B": "Chunky Sole Lace-Up Casual Shoes with a Plain Toe Derby Profile for Everyday Footwear Collections"
   },
   "keywords": [
-    "Textured Lace Up Derby Shoes",
-    "Plain Toe Casual Shoes",
-    "Business Casual Footwear"
+    "Chunky Sole Derby Shoes",
+    "Plain Toe Lace Up Shoes",
+    "Casual Derby Footwear"
   ],
   "custom": [
     "Shoe Profile",
-    "Textured low-top Derby; lace-up front; contrast sole edge"
+    "Plain toe Derby; open lacing; chunky notched sole edge"
   ],
-  "highlights": "Textured plain-toe profile: A grained surface and uncluttered vamp give this lace-up shoe a clear business-casual direction.\n\nOpen-lacing construction: Separate eyelet panels sit over the vamp, with four visible lace rows for adjustment across the instep.\n\nContrast sole edge: A light border separates the upper from the darker low-heel sole, while the heel and side seams define the back profile.\n\nTwo neutral options: Black and Grey, with EU38-44 sizes for coordinated office and everyday footwear assortments.\n\nWholesale planning: Send colour-size quantities, packing preference and destination for an order quotation.",
-  "dedup": "Exact source URL/model absent. Plain toe/open-lacing quarters and low blocked heel differ from HR026 moc/apron-toe lace-up source; background Cadillac-prop photos24/25 excluded.",
+  "highlights": "Plain-toe Derby profile: An uncluttered rounded vamp and separate open-lacing quarters create a casual Derby shape.\n\nLace-up adjustment: Four visible lace rows let the buyer adjust the fastening across the instep.\n\nChunky sole edge: A substantial sidewall and deep edge notches give the low-top shoe a pronounced silhouette for contemporary casual outfits.\n\nTwo neutral colour directions: Black and Camel are listed in EU39-46 for colour-size assortment planning.\n\nWholesale planning: Send colour-size quantities, packing preference and destination for an order quotation.",
+  "dedup": "Exact source URL/artno checked against unique registry; not currently adopted by another family. Raw photos reviewed in full, sidebar excluded; actual markings kept, no invented material or performance.",
   "gender_scope": "No specific gender statement in public product title; buyer title remains adult-style and does not infer gender from numerical sizes.",
   "target_ids": {
     "A": "1601943665060",
     "B": "1601943651120"
   },
-  "source_assets_root": "01_产品资产/01_原始数据包/HR031_R311",
+  "source_assets_root": "01_产品资产/01_原始数据包/HR031_D11",
   "source_date": "2026-10-13",
   "feature": "Fashion Trend",
   "fx_cny_per_usd": 6.6837,
   "tiers": [
     [
       2,
-      "18.41"
+      "7.86"
     ],
     [
       50,
-      "17.18"
+      "7.34"
     ],
     [
       100,
-      "15.95"
+      "6.81"
     ]
   ],
-  "page_state": "LOCAL_DRAFT",
+  "page_state": "REVIEW_PENDING",
+  "procurement_capability": "CURRENT_REAL_SHOE_AND_PROCUREMENT_ENTRY_VERIFIED_NOT_ORDER_STOCK",
+  "company_faq_source": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/通用FAQ与公司简介.json",
+  "do_not_claim": [
+    "physical stock",
+    "tested slip resistance",
+    "medical comfort",
+    "unverified midsole material"
+  ],
+  "selection_review": {
+    "state": "REVIEWED_ADOPT",
+    "private_backend_evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/经营数据与选款.json",
+    "data_limit": "Both observed periods have low exposure and no contact signals; insufficient traffic is not proof of absent demand. Do not retain high procurement cost or original concept automatically.",
+    "reason": "Owner permits cross-border-fit re-selection without approximate old shape. Complete source photos, available procurement entry, clear actual shoe and lower quoted cost than previous unsubmitted candidate.",
+    "old_candidate_quote_cny": 82,
+    "current_cost_usd": 5.236620434789113,
+    "gross_difference_usd": [
+      2.6234,
+      2.1034,
+      1.5734
+    ],
+    "margin_limit": "50/40/30 percent procurement-cost markup; packaging, procurement/QC, platform/payment, freight and tax assessed per order. Not net-profit guarantee.",
+    "competitor_comparison": "No exact same-model Alibaba bulk quote verified. Cost advantage versus the replaced local candidate is evidenced; do not claim same-model market cheapest."
+  },
   "assets_layout": {
     "M1": {
       "buyer_question": "What is the exact offered shoe?",
@@ -87,7 +110,7 @@
       "subtitle": "",
       "photos": [
         {
-          "index": 20,
+          "index": 4,
           "box": [
             15,
             15,
@@ -99,60 +122,66 @@
       "text": []
     },
     "M2": {
-      "buyer_question": "How does it look with casual trousers?",
-      "title": "Business-casual profile",
-      "subtitle": "A textured plain toe and a contrast sole border.",
+      "buyer_question": "How does the Derby look worn?",
+      "title": "Casual Derby silhouette",
+      "subtitle": "A plain toe paired with a pronounced sole edge.",
       "photos": [
         {
-          "index": 17,
+          "index": 1,
           "box": [
             45,
-            200,
+            215,
             955,
-            945
+            935
           ]
         }
       ],
       "text": []
     },
     "M3": {
-      "buyer_question": "How are the quarters and sole edge finished?",
-      "title": "Side profile & sole edge",
-      "subtitle": "Open-lacing panels and a low block-style heel.",
+      "buyer_question": "How is the front fastened?",
+      "title": "Open-lacing quarters",
+      "subtitle": "Four lace rows above an uncluttered vamp.",
       "photos": [
         {
-          "index": 22,
+          "index": 6,
           "box": [
             45,
-            200,
+            215,
             955,
-            945
+            935
+          ],
+          "crop": [
+            100,
+            110,
+            755,
+            685
           ]
         }
       ],
       "text": []
     },
     "M4": {
-      "buyer_question": "Which colour and EU options can I request?",
-      "title": "Colour & EU options",
+      "buyer_question": "Which colours and EU sizes can I request?",
+      "title": "Colour & EU assortment",
       "subtitle": "Choose the colour-size quantities for your order.",
       "photos": [
         {
-          "index": 20,
+          "index": 2,
           "box": [
             45,
-            200,
-            475,
-            835
+            230,
+            485,
+            800
           ]
         },
         {
-          "index": 21,
+          "index": 3,
           "box": [
             525,
-            200,
+            230,
             955,
-            835
+            800
           ]
         }
       ],
@@ -161,63 +190,75 @@
           "value": "Black",
           "xy": [
             65,
-            845
+            840
           ],
           "size": 25
         },
         {
-          "value": "Grey",
+          "value": "Camel",
           "xy": [
             545,
-            845
+            840
           ],
           "size": 25
         },
         {
-          "value": "EU 38-44",
+          "value": "EU 39-46",
           "xy": [
             45,
-            920
+            915
           ],
           "size": 32
         }
       ]
     },
     "M5": {
-      "buyer_question": "What does the opening and toe look like?",
-      "title": "Top view & closure",
-      "subtitle": "Four lace rows and a plain stitched outline.",
+      "buyer_question": "How does the sole edge appear?",
+      "title": "Chunky sidewall profile",
+      "subtitle": "Deep notches define the visible sole edge.",
       "photos": [
         {
-          "index": 23,
+          "index": 4,
           "box": [
             45,
-            200,
+            215,
             955,
-            945
+            935
+          ],
+          "crop": [
+            20,
+            390,
+            770,
+            700
           ]
         }
       ],
       "text": []
     },
     "D1": {
-      "buyer_question": "What is the upper texture and panel structure?",
-      "title": "Textured Derby construction",
-      "subtitle": "The eyelet panels sit over an uncluttered vamp.",
+      "buyer_question": "What upper panels and seams are visible?",
+      "title": "Plain toe & quarter seams",
+      "subtitle": "Actual close view of the plain vamp and stitched panels.",
       "photos": [
         {
-          "index": 18,
+          "index": 4,
           "box": [
             45,
-            210,
+            215,
             955,
-            1060
+            1065
+          ],
+          "crop": [
+            20,
+            80,
+            770,
+            710
           ]
         }
       ],
       "text": [
         {
-          "value": "Lace-up front for instep adjustment.",
+          "value": "Separate eyelet panels sit over the plain vamp.",
           "xy": [
             45,
             1140
@@ -227,23 +268,29 @@
       ]
     },
     "D2": {
-      "buyer_question": "How does the sole and heel appear?",
-      "title": "Contrast sole border",
-      "subtitle": "Light edge detail separates the upper and dark sole.",
+      "buyer_question": "What sole features can I assess?",
+      "title": "Notched sole edge",
+      "subtitle": "Sidewall and front edge details from the actual shoe.",
       "photos": [
         {
-          "index": 22,
+          "index": 4,
           "box": [
             45,
-            210,
+            215,
             955,
-            1060
+            1065
+          ],
+          "crop": [
+            10,
+            400,
+            790,
+            785
           ]
         }
       ],
       "text": [
         {
-          "value": "Low heel and stitched quarter panels.",
+          "value": "Notched front edge and a substantial sole sidewall.",
           "xy": [
             45,
             1140
@@ -253,32 +300,23 @@
       ]
     },
     "D3": {
-      "buyer_question": "How can I style it?",
-      "title": "Office & everyday outfits",
-      "subtitle": "A neutral plain-toe option for casual trouser collections.",
+      "buyer_question": "How does it look in an everyday outfit?",
+      "title": "Everyday Derby styling",
+      "subtitle": "Camel shown with casual trousers in the source photograph.",
       "photos": [
         {
-          "index": 5,
+          "index": 1,
           "box": [
             45,
-            220,
-            485,
-            1050
-          ]
-        },
-        {
-          "index": 17,
-          "box": [
-            515,
-            220,
+            215,
             955,
-            1050
+            1065
           ]
         }
       ],
       "text": [
         {
-          "value": "Grey and Black shown in actual style photographs.",
+          "value": "Lace-up design and low-top opening.",
           "xy": [
             45,
             1140
@@ -288,26 +326,26 @@
       ]
     },
     "D4": {
-      "buyer_question": "Which colour and EU options can I request?",
-      "title": "Colour & EU options",
+      "buyer_question": "Which colours and EU sizes can I request?",
+      "title": "Colour & EU assortment",
       "subtitle": "Choose the colour-size quantities for your order.",
       "photos": [
         {
-          "index": 20,
+          "index": 2,
           "box": [
             45,
-            200,
-            475,
-            1085
+            230,
+            485,
+            1045
           ]
         },
         {
-          "index": 21,
+          "index": 3,
           "box": [
             525,
-            200,
+            230,
             955,
-            1085
+            1045
           ]
         }
       ],
@@ -321,7 +359,7 @@
           "size": 25
         },
         {
-          "value": "Grey",
+          "value": "Camel",
           "xy": [
             545,
             1095
@@ -329,22 +367,22 @@
           "size": 25
         },
         {
-          "value": "EU 38-44",
+          "value": "EU 39-46",
           "xy": [
             45,
-            1170
+            1165
           ],
           "size": 32
         }
       ]
     },
     "SKU_BLACK": {
-      "buyer_question": "Which actual colour is this SKU?",
+      "buyer_question": "Which colour is this SKU?",
       "title": null,
       "subtitle": "",
       "photos": [
         {
-          "index": 20,
+          "index": 2,
           "box": [
             25,
             25,
@@ -355,13 +393,13 @@
       ],
       "text": []
     },
-    "SKU_GREY": {
-      "buyer_question": "Which actual colour is this SKU?",
+    "SKU_CAMEL": {
+      "buyer_question": "Which colour is this SKU?",
       "title": null,
       "subtitle": "",
       "photos": [
         {
-          "index": 21,
+          "index": 3,
           "box": [
             25,
             25,
@@ -373,17 +411,9 @@
       "text": []
     }
   },
-  "source_id": "src-hr-hr031-r311",
+  "source_id": "src-hr-hr031-d11",
   "source_evidence": [
-    "01_产品资产/01_原始数据包/HR031_R311/source.json",
+    "01_产品资产/01_原始数据包/HR031_D11/source.json",
     "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR031/素材清单.json"
-  ],
-  "procurement_capability": "CURRENT_REAL_SHOE_AND_PROCUREMENT_ENTRY_VERIFIED_NOT_ORDER_STOCK",
-  "company_faq_source": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/通用FAQ与公司简介.json",
-  "do_not_claim": [
-    "physical stock",
-    "tested slip resistance",
-    "medical comfort",
-    "unverified midsole material"
   ]
 }

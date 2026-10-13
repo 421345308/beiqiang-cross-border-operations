@@ -39,6 +39,9 @@
     "HR036": {
       "A": "1601943627431",
       "B": "1601943561786"
+    },
+    "DZ14546082-A": {
+      "A": "12000003229472"
     }
   },
   "additional_hr_scope": "Other missing-source families require per-family current facts and formal ID review before extending exact targets",
@@ -48,5 +51,7 @@
     "Complete all missing-source HR real-shoe replacements",
     "Resume Luqi wide-toe new product listing"
   ],
-  "acceptance": "Owner 2026-10-13: full official API readback/approved/score/local double-sync; stop per-ID browser QA; public sampling after all products complete"
+  "acceptance": "Owner 2026-10-13: full official API readback/approved/score/local double-sync; stop per-ID browser QA; public sampling after all products complete",
+  "selection_policy": "BACKEND_DATA_AND_COST_REVIEW",
+  "additional_authorization": "2026-10-13 owner explicitly requested DZ14546082-A missing-source originalID replacement with similar athletic sneaker; retain exact model number."
 }

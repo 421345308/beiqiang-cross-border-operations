@@ -13,7 +13,7 @@ def check(pid,family,variant):
  prep=o.b.load(f/('business_correction_prepared.json'if(f/'business_correction_once.json').exists()else'prepared.json'));schema=E.fromstring(o.b.load(f/'after_render.json')['data']);actual=o.contract.field_snapshot(schema);checks={}
  if(f/'gallery_repair_prepared.json').exists():prep['expected_schema']['scImages']=o.b.load(f/'gallery_repair_prepared.json')['expected_schema']['scImages']
  if(f/'hero_quality_prepared.json').exists():prep['expected_schema']['scImages']=o.b.load(f/'hero_quality_prepared.json')['expected_schema']['scImages']
- last=max((o.b.load(f/name).get('at','')for name in ['update_once.json','attribute_repair_once.json','gallery_repair_once.json','public_style_once.json','hero_quality_once.json','business_correction_once.json']if(f/name).exists()),default='')
+ last=max((o.b.load(f/name).get('at','')for name in ['update_once.json','attribute_repair_once.json','gallery_repair_once.json','public_style_once.json','hero_quality_once.json','business_correction_once.json','optional_attribute_clear_once.json']if(f/name).exists()),default='')
  checks['formal_read_after_latest_write']=datetime.fromtimestamp((f/'after_get.json').stat().st_mtime,timezone.utc).isoformat()>last and datetime.fromtimestamp((f/'score.json').stat().st_mtime,timezone.utc).isoformat()>last
  for key,value in prep['expected_schema'].items():
   if key in ['sku','icbuCatProp','productKeywords']:continue
@@ -22,9 +22,10 @@ def check(pid,family,variant):
  attrs=defaultdict(set)
  for a in p['attributes']:attrs[a['attribute_name']].add(a['value_name'])
  plan=o.PLANS[family]
- expected={'Place of Origin':{'CN'},'Midsole Material':{plan.get('midsole','Other')},'Outsole Material':{plan.get('outsole','Rubber')},'Lining Material':{plan['lining']},'Upper Material':{plan['upper']},'Closure Type':{plan['closure']},'Style':set(plan['style']),'Toe Style':{plan.get('toe_style','Round Toe')},'Model Number':{family+'-'+variant},plan['custom'][0]:{plan['custom'][1]},'Season':set(plan['seasons']),'Feature':{plan.get('feature','Fashion Trend')}}
+ expected={'Place of Origin':{'CN'},'Midsole Material':{plan.get('midsole','Other')},'Outsole Material':{plan.get('outsole','Rubber')},'Lining Material':{plan['lining']},'Upper Material':{plan['upper']},'Closure Type':{plan['closure']},'Style':set(plan['style']),'Toe Style':{plan.get('toe_style','Round Toe')},'Model Number':{o.model_number(family,variant)},plan['custom'][0]:{plan['custom'][1]},'Season':set(plan['seasons']),'Feature':{plan.get('feature','Fashion Trend')}}
  checks['category_exact']=int(p['category_id'])==int(plan.get('category_id',o.b.load(f/'before_get.json')['product']['category_id']))
  expected.update({name:set(values)for name,values in plan.get('extra_category_attributes',{}).items()})
+ for name in plan.get('category_attribute_omissions',[]):expected.pop(name,None)
  if(f/'public_style_prepared.json').exists():expected['Style']={'Platform Sneakers','Lace-up'}
  checks['formal_attributes_exact']=dict(attrs)==expected
  axes={str(a['attribute_id']):a['values']for a in p['product_sku']['sku_attributes']}
@@ -43,13 +44,14 @@ def check(pid,family,variant):
   prior=o.b.load(f/'attribute_repair_before_get.json')['product']['product_sku']['skus'];checks['attribute_only_sku_ids_preserved']=bindings=={r['sku_code']:r['sku_id']for r in prior}
  checks['formal_sku_cartesian_complete']=pairset==Counter((c,s)for c in prep['colors']for s in prep['sizes'])
  checks['formal_sku_tiers']=pricepass
- old=o.b.load(f/'before_get.json')['product'];oldpres=o.preserve(old);newpres=o.preserve(p)
+ old=o.b.load(f/'before_get.json')['product'];oldpres=o.preserve(old,prep['fields']);newpres=o.preserve(p,prep['fields'])
  checks['non_target_get_fields_preserved']=oldpres==newpres
  tradeold=copy.deepcopy(old['sourcing_trade']);tradenew=copy.deepcopy(p['sourcing_trade'])
  for tr in [tradeold,tradenew]:
   for key in ['fob_min_price','fob_max_price']:tr.pop(key,None)
  checks['trade_unit_moq_currency_leadtime_preserved']=tradeold==tradenew
  checks['formal_price_range']=float(p['sourcing_trade']['fob_min_price'])==min(pr for _,pr in tiers)and float(p['sourcing_trade']['fob_max_price'])==max(pr for _,pr in tiers)
+ if 'platform_group_id'in plan:checks['store_group_exact']=str(p.get('group_id'))==str(plan['platform_group_id'])
  checks['summary_exact']=p['struct_detail']['product_summary']==plan['highlights']
  checks['main_count_six']=len(p['main_image']['images'])==6
  checks['detail_count_four']=len(p['struct_detail']['detail_image']['images'])==4

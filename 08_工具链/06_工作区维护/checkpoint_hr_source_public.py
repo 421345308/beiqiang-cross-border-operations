@@ -67,6 +67,8 @@ def main():
         paths += [p.relative_to(ROOT).as_posix() for p in (ROOT/HR/family).glob('*.json') if p.name in ('AI主图审核.json','AI生成提示词.json')]
     for profile in profiles:
         paths += [HR+'/'+profile['family']+'/来源与正式绑定核验.json']
+        for key in ('approved_bank','approved_visual','source_fact_file'):
+            if profile.get(key,'').startswith(HR+'/') and profile[key].endswith('.json'):paths.append(profile[key])
     for pid in replacement_ids:
         paths += [p.relative_to(ROOT).as_posix() for p in (ROOT/HR/'商品'/pid).glob('*.json')
                   if p.name in ('verification.json','public_verification.json','public_product_verification.json','score.json',
@@ -75,7 +77,8 @@ def main():
                                 'gallery_repair_once.json','gallery_repair_receipt.json',
                                 'public_style_once.json','public_style_receipt.json',
                                 'hero_quality_once.json','hero_quality_receipt.json',
-                                'business_correction_once.json','business_correction_receipt.json')]
+                                'business_correction_once.json','business_correction_receipt.json',
+                                'optional_attribute_clear_once.json','optional_attribute_clear_receipt.json')]
     paths += ['08_工具链/01_业务脚本/国际站扩品/'+name for name in
               ('replace_hr_real_sources.py','verify_hr_real_sources.py',
                'repair_hr_source_quality.py','sync_hr_real_sources.py',
@@ -83,7 +86,9 @@ def main():
                'sync_hr_source_media.py','reconcile_hr_existing_sources.py','audit_hr_source_consistency.py',
                'prepare_hr_source_images.py','freeze_hr_source_package.py',
                'collect_hr_source_targets.py','repair_hr_rejected_profile.py',
-               'collect_sooxie_public_package.py')]
+               'collect_sooxie_public_package.py','analyze_hr_operating_selection.py',
+               'retire_unsubmitted_hr_candidate.py','clear_optional_hr_attribute.py',
+               'schema_publish_contract.py')]
     paths += ['02_Alibaba运营/00_运营SOP/国际站商品全生命周期SOP.md',FACTORY+'/README.md']
     paths += ['08_工具链/01_业务脚本/商品图片与审计/ingest_company_public_observations.py',
               '08_工具链/06_工作区维护/checkpoint_hr_source_public.py']
@@ -95,6 +100,16 @@ def main():
             public_ids.add(proof['product_id'])
             paths += [path.relative_to(ROOT).as_posix(),path.with_name('verification.json').relative_to(ROOT).as_posix()]
     frozen = {}
+    retired_source_ids = set()
+    for family in scope['targets']:
+        file = ROOT/HR/family/'候选取舍.json'
+        if not file.exists():continue
+        proof = json.loads(file.read_text(encoding='utf8'))
+        public = {'family':family,'retired_candidates':[],'scope':'未提交候选完整归档保留，当前计划与回执分列；媒体留本地。'}
+        for candidate in proof['retired_candidates']:
+            retired_source_ids.add('src-hr-'+family.lower()+'-'+candidate['source_artno'].lower())
+            public['retired_candidates'].append({k:copy.deepcopy(candidate[k])for k in ('state','reason','source_artno','source_url','raw_package_retained','archive_documents','derivative_path_state')})
+        frozen[HR+'/'+family+'/候选归档引用.json']=(json.dumps(public,ensure_ascii=False,indent=2)+'\n').encode('utf8')
     for path in sorted(set(paths)):
         raw = (ROOT/path).read_bytes().replace(b'\r\n',b'\n')
         text = raw.decode('utf8')
@@ -119,7 +134,7 @@ def main():
     original_other_sources = {x['id']:copy.deepcopy(x) for x in merged['sources']}
     lp = {x['id']:x for x in live['products']}
     ll = {x['id']:x for x in live['listings']}
-    source_ids = {ll[pid]['optimization']['source_replacement']['source_id'] for pid in replacement_ids} | {p['source_id'] for p in profiles}
+    source_ids = {ll[pid]['optimization']['source_replacement']['source_id'] for pid in replacement_ids} | {p['source_id'] for p in profiles} | retired_source_ids
     sources = {x['id']:x for x in live['sources'] if x['id'] in source_ids}
     merged['sources'] = [x for x in merged['sources'] if x['id'] not in source_ids] + list(copy.deepcopy(sources).values())
     assert all(x == original_other_sources[x['id']] for x in merged['sources'] if x['id'] not in source_ids)
@@ -130,7 +145,7 @@ def main():
         pid = listing['id']
         if pid in hr_ids:
             for key in ('bound_source_id','source_relation','observation','current_platform_fields',
-                        'catalog_fields','formal_fields','local_sync','url','record_type','notes'):
+                        'catalog_fields','formal_fields','local_sync','url','record_type','notes','platform_group'):
                 if key in ll[pid]:
                     listing[key] = copy.deepcopy(ll[pid][key])
             field = 'source_replacement' if pid in replacement_ids else 'source_binding_reconciliation'

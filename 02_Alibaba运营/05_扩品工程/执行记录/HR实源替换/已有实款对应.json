@@ -530,6 +530,44 @@
       ],
       "source_table_basis": "Current specific-model source review plus immutable original byte hashes, approved actual product assets and current formal six-image/complete color-EU bindings; materials match supported model facts. Current shared M6 differs from historical company image and is verified through current formal/catalog equality.",
       "source_current_access": "Source route last directly reviewed2026-09-29. Historical real-shoe adoption retained; no fresh stock, price or supplier transaction claim. This step only restores source binding and does not resubmit an existing actual shoe."
+    },
+    {
+      "family": "HR044",
+      "ids": [
+        "1601943650718",
+        "1601943753087",
+        "1601943607919"
+      ],
+      "source_id": "src-hr-hr044-l795",
+      "source_model": "L795",
+      "supplier": "MB SHOES (Made-in-China店铺，法律公司名未核)",
+      "source_url": "https://mbshoes.en.made-in-china.com/product/AUIRTgzbHwWN/China-Casual-British-Style-Men-s-Anti-Slip-Loafers-Soft-Leather-Lightweiqht-Comfortable-Business-Shoes-Winter-Spring-Versatile-Trendy.html",
+      "last_direct_source_date": "2026-09-28",
+      "evidence_format": "LAYERED_APPROVED_BANK",
+      "approved_bank": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR044/复用图库绑定.json",
+      "approved_visual": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR044/复用图审依据.json",
+      "source_fact_file": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR044/已采用来源事实.json",
+      "materials": {
+        "Upper Material": "PU",
+        "Lining Material": "Mesh",
+        "Midsole Material": "EVA",
+        "Outsole Material": "Rubber"
+      },
+      "colors": [
+        "Black"
+      ],
+      "sizes_eu": [
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46
+      ],
+      "source_table_basis": "Saved specific-model L795 table explicitly PU upper/Mesh lining/EVA midsole/Rubber outsole; exact original SHA and approved current product-gallery SHA/official asset IDs verified.",
+      "source_current_access": "Historical public source snapshot and buying/enquiry entrance retained; current transaction quote/physical stock not freshly verified; preserve already adopted actual shoe rather than repeat replacement."
     }
   ]
 }

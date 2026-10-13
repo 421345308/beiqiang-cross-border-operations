@@ -1,0 +1,490 @@
+{
+  "family": "DZ14546082-A",
+  "state": "VISUAL_PASS",
+  "items": {
+    "M1": {
+      "path": "01_产品资产/02_可发布素材/DZ14546082-A/M1.jpg",
+      "sha256": "6d18fc80fd770cf764871826d9302a0f27af6ebac1c9cbaa40f8836079c6ce74",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M2": {
+      "path": "01_产品资产/02_可发布素材/DZ14546082-A/M2.jpg",
+      "sha256": "3c06b373c14c66f8dab2b5d9cdf02bddeb98b8d5959cce35f37299165622c4a2",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M3": {
+      "path": "01_产品资产/02_可发布素材/DZ14546082-A/M3.jpg",
+      "sha256": "9eb329b97887820900ed6d37e3d290f5966b632a292bbe894e8ec8f1a994fecc",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M4": {
+      "path": "01_产品资产/02_可发布素材/DZ14546082-A/M4.jpg",
+      "sha256": "8b95cf5e0ce4779e2e78982baaf77f8010a9e41267152f97a1718124f02e3080",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M5": {
+      "path": "01_产品资产/02_可发布素材/DZ14546082-A/M5.jpg",
+      "sha256": "ac5ad9ed0f12cb14e6dd8ae3fa440f495e3b68034a3c3040c426a76afef1e617",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "D1": {
+      "path": "01_产品资产/02_可发布素材/DZ14546082-A/D1.jpg",
+      "sha256": "d3154cf73fe328d6280bff1b2aaf7b637418228a56bb34cfcece1bfdd93ddd80",
+      "dimensions": [
+        1000,
+        1250
+      ]
+    },
+    "D2": {
+      "path": "01_产品资产/02_可发布素材/DZ14546082-A/D2.jpg",
+      "sha256": "d352441b1f5eb5d565bcbf0f7f59b298e7c7f932ce110ad6c62708891664c6bf",
+      "dimensions": [
+        1000,
+        1250
+      ]
+    },
+    "D3": {
+      "path": "01_产品资产/02_可发布素材/DZ14546082-A/D3.jpg",
+      "sha256": "7d4d93eeb56253b59d9d4092b2044d095f2990b79bef0fa1396375f69cfc53f1",
+      "dimensions": [
+        1000,
+        1250
+      ]
+    },
+    "D4": {
+      "path": "01_产品资产/02_可发布素材/DZ14546082-A/D4.jpg",
+      "sha256": "be3d397ba77738cf710b74b5a7f382fb9cf4997acc2ffbeabc8eb56fbd3cdf74",
+      "dimensions": [
+        1000,
+        1250
+      ]
+    },
+    "SKU_WHITE_NAVY": {
+      "path": "01_产品资产/02_可发布素材/DZ14546082-A/SKU_WHITE_NAVY.jpg",
+      "sha256": "5cbe1bea8e985847824531481ef0e5810cc05175854231a98e44e1fe4089cf80",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "SKU_WHITE_ORANGE": {
+      "path": "01_产品资产/02_可发布素材/DZ14546082-A/SKU_WHITE_ORANGE.jpg",
+      "sha256": "df0cdc2314008fe3428cb3dc32def7e67df5b599b958da2705c6a746e7dd0957",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M6": {
+      "path": "01_产品资产/02_可发布素材/共享素材/贝强公司简介图库.jpg",
+      "sha256": "5164b4d0ac008fb79a20d60419d21713b4f49b9ecea0a845d6c7de104030f51e",
+      "dimensions": [
+        1721,
+        914
+      ]
+    }
+  },
+  "image_roles": {
+    "M1": {
+      "buyer_question": "What is the actual offered shoe?",
+      "source_pixels": [
+        {
+          "file": "01_产品资产\\02_可发布素材\\DZ14546082-A\\AI候选\\KB11主图标签校正版.png",
+          "crop": null,
+          "native_effective_pixels": [
+            1254,
+            1254
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": null
+    },
+    "M2": {
+      "buyer_question": "How does the actual sneaker look worn?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\DZ14546082-A_KB11\\11.jpg",
+          "crop": [
+            90,
+            165,
+            770,
+            1210
+          ],
+          "native_effective_pixels": [
+            680,
+            1045
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": "Athletic casual profile"
+    },
+    "M3": {
+      "buyer_question": "How is the shoe fastened?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\DZ14546082-A_KB11\\15.jpg",
+          "crop": [
+            30,
+            15,
+            760,
+            772
+          ],
+          "native_effective_pixels": [
+            730,
+            757
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": "Dial & cord closure"
+    },
+    "M4": {
+      "buyer_question": "Which colours and EU sizes can I request?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\DZ14546082-A_KB11\\24.jpg",
+          "crop": [
+            0,
+            440,
+            397,
+            650
+          ],
+          "native_effective_pixels": [
+            397,
+            210
+          ],
+          "uniform_resize": true
+        },
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\DZ14546082-A_KB11\\23.jpg",
+          "crop": [
+            0,
+            460,
+            397,
+            685
+          ],
+          "native_effective_pixels": [
+            397,
+            225
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [
+        {
+          "value": "White / Navy",
+          "xy": [
+            65,
+            840
+          ],
+          "size": 25
+        },
+        {
+          "value": "White / Orange",
+          "xy": [
+            535,
+            840
+          ],
+          "size": 25
+        },
+        {
+          "value": "EU 39-44",
+          "xy": [
+            45,
+            905
+          ],
+          "size": 35
+        }
+      ],
+      "title": "Colour & EU assortment"
+    },
+    "M5": {
+      "buyer_question": "How are the collar and heel shaped?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\DZ14546082-A_KB11\\09.jpg",
+          "crop": [
+            63,
+            122,
+            727,
+            958
+          ],
+          "native_effective_pixels": [
+            664,
+            836
+          ],
+          "uniform_resize": true
+        },
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\DZ14546082-A_KB11\\10.jpg",
+          "crop": [
+            63,
+            47,
+            727,
+            915
+          ],
+          "native_effective_pixels": [
+            664,
+            868
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": "Collar & heel details"
+    },
+    "D1": {
+      "buyer_question": "What upper structures are visible?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\DZ14546082-A_KB11\\08.jpg",
+          "crop": [
+            90,
+            235,
+            790,
+            967
+          ],
+          "native_effective_pixels": [
+            700,
+            732
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [
+        {
+          "value": "Visible toe stitching and mesh forefoot.",
+          "xy": [
+            45,
+            1140
+          ],
+          "size": 25
+        }
+      ],
+      "title": "Mesh panels & layered overlays"
+    },
+    "D2": {
+      "buyer_question": "What bottom and heel details can I assess?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\DZ14546082-A_KB11\\24.jpg",
+          "crop": [
+            395,
+            460,
+            775,
+            641
+          ],
+          "native_effective_pixels": [
+            380,
+            181
+          ],
+          "uniform_resize": true
+        },
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\DZ14546082-A_KB11\\10.jpg",
+          "crop": [
+            63,
+            47,
+            727,
+            915
+          ],
+          "native_effective_pixels": [
+            664,
+            868
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [
+        {
+          "value": "Angular sidewall detail with a contrast heel accent.",
+          "xy": [
+            45,
+            1175
+          ],
+          "size": 25
+        }
+      ],
+      "title": "Outsole & sidewall profile"
+    },
+    "D3": {
+      "buyer_question": "How does the closure appear in use?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\DZ14546082-A_KB11\\15.jpg",
+          "crop": [
+            30,
+            15,
+            760,
+            772
+          ],
+          "native_effective_pixels": [
+            730,
+            757
+          ],
+          "uniform_resize": true
+        },
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\DZ14546082-A_KB11\\16.jpg",
+          "crop": [
+            0,
+            70,
+            790,
+            1005
+          ],
+          "native_effective_pixels": [
+            790,
+            935
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [
+        {
+          "value": "Same physical shoe structure across both colour options.",
+          "xy": [
+            45,
+            1140
+          ],
+          "size": 25
+        }
+      ],
+      "title": "Dial fastening in everyday outfits"
+    },
+    "D4": {
+      "buyer_question": "Which colours and EU sizes can I request?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\DZ14546082-A_KB11\\24.jpg",
+          "crop": [
+            0,
+            440,
+            397,
+            650
+          ],
+          "native_effective_pixels": [
+            397,
+            210
+          ],
+          "uniform_resize": true
+        },
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\DZ14546082-A_KB11\\23.jpg",
+          "crop": [
+            0,
+            460,
+            397,
+            685
+          ],
+          "native_effective_pixels": [
+            397,
+            225
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [
+        {
+          "value": "White / Navy",
+          "xy": [
+            65,
+            840
+          ],
+          "size": 25
+        },
+        {
+          "value": "White / Orange",
+          "xy": [
+            535,
+            840
+          ],
+          "size": 25
+        },
+        {
+          "value": "EU 39-44",
+          "xy": [
+            45,
+            1155
+          ],
+          "size": 35
+        }
+      ],
+      "title": "Colour & EU assortment"
+    },
+    "SKU_WHITE_NAVY": {
+      "buyer_question": "What is the exact White/Navy option?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\DZ14546082-A_KB11\\24.jpg",
+          "crop": [
+            0,
+            440,
+            397,
+            650
+          ],
+          "native_effective_pixels": [
+            397,
+            210
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": null
+    },
+    "SKU_WHITE_ORANGE": {
+      "buyer_question": "What is the exact White/Orange option?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\DZ14546082-A_KB11\\23.jpg",
+          "crop": [
+            0,
+            460,
+            397,
+            685
+          ],
+          "native_effective_pixels": [
+            397,
+            225
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": null
+    },
+    "M6": {
+      "buyer_question": "Who will coordinate the footwear order?",
+      "shared_approved_company_image": "01_产品资产/02_可发布素材/共享素材/贝强公司简介图库.jpg"
+    }
+  },
+  "visual_review": {
+    "reviewed_on": "2026-10-13",
+    "all12frames_viewed": true,
+    "source24frames_viewed": true,
+    "M1": "AI exact-source background extraction; proportion/dial/cord/cutout/sole/colour compared with physical source. Fabric label repaired with actual FASHION reference. Not asserted source byte-identical.",
+    "SKU_details": "Actual colour photographs and close-up photos; generated new colour/angle or sole-bottom not used.",
+    "unknown_components": "Lining/midsole/outsole chemistry not inferred from photos.",
+    "company": "Approved current shared M6; six company details and eight general FAQ preserved during official update."
+  }
+}

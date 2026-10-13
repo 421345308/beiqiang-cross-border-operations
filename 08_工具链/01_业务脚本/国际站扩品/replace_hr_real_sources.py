@@ -5,7 +5,7 @@ from concurrent.futures import ThreadPoolExecutor
 from xml.etree import ElementTree as E
 from collections import Counter
 from urllib.parse import urlparse
-import sys,json,copy,hashlib
+import sys,json,copy,hashlib,re
 ROOT=Path(__file__).resolve().parents[3];BASE=ROOT/'02_Alibaba运营/05_扩品工程/执行记录/HR实源替换'
 sys.path.insert(0,str(ROOT/'08_工具链/01_业务脚本/国际站扩品'))
 import refresh_buyer_copy as b
@@ -17,6 +17,9 @@ TARGETS=SCOPE['targets']
 FIELDS=['icbuCatProp','saleProp','sku','productTitle','productKeywords','scImages','detailImage','textDesc','customMoreProperty','scPrice','ladderPrice']
 PLANS={family:b.load(BASE/family/'事实与页面计划.json')for family in TARGETS}
 RAW_PATHS={family:plan['source_assets_root']for family,plan in PLANS.items()}
+
+def model_number(family,variant):
+ return PLANS[family].get('model_numbers',{}).get(variant,f'{family}-{variant}')
 
 def field(parent,fid,typ='input',value=None):
  x=E.SubElement(parent,'field',id=fid,type=typ)
@@ -61,6 +64,7 @@ def bank(family,api,cfg):
   assert urlparse(url).hostname=='sc04.alicdn.com'
   row.update(state='UPLOADED',url=url,file_id=str(r['file_id']));b.save(f,data);print(family,key,'UPLOADED',flush=True)
  data['state']='COMPLETE';b.save(f,data)
+ b.save(BASE/family/'图片银行公开映射.json',{'family':family,'state':'COMPLETE','items':{key:{k:v for k,v in row.items()if k!='response'}for key,row in data['items'].items()},'scope':'Official public CDN asset identities and reviewed local hashes; uploaded images alone do not prove product submission or acceptance.'})
 def prepare(family):
  p=PLANS[family];assets=b.load(BASE/family/'图片银行.json')['items'];source=b.load(ROOT/RAW_PATHS[family]/'source.json')
  assert source['artno']==p['source_artno'];fx=p.get('fx_cny_per_usd',6.6837);cost=source['price_cny']/fx
@@ -77,14 +81,27 @@ def prepare(family):
    schema.append(copy.deepcopy(target.find("./field[@id='icbuCatProp']")))
    old=schema.find("./field[@id='saleProp']");schema.remove(old)
    schema.append(copy.deepcopy(target.find("./field[@id='saleProp']")))
-  root=pub.values_only(schema,operation='update',field_ids=FIELDS)
+  fields=FIELDS+(['productGroup']if 'platform_group_id'in p else[])
+  root=pub.values_only(schema,operation='update',field_ids=fields)
+  if 'platform_group_id'in p:
+   group_proof=b.load(BASE/family/'目标店内分组回读.json')['product_group']
+   assert str(group_proof['group_id'])==str(p['platform_group_id'])and group_proof['group_name']==p['platform_group_name']and group_proof['parent_id']==-1
+   definition=schema.find("./field[@id='productGroup']/fields/field[@id='first_group_id']");assert definition is not None and definition.get('type')=='input'
+   group=root.find("./field[@id='productGroup']")
+   for child in list(group):group.remove(child)
+   field(E.SubElement(group,'complex-value'),'first_group_id','input',p['platform_group_id'])
   cp=root.find("./field[@id='icbuCatProp']")
   for child in list(cp):cp.remove(child)
   cv=E.SubElement(cp,'complex-value')
-  for name,texts in [('Place of Origin',['China']),('Midsole Material',[p.get('midsole','Other')]),('Outsole Material',[p.get('outsole','Rubber')]),('Lining Material',[p['lining']]),('Upper Material',[p['upper']]),('Style',p['style']),('Closure Type',[p['closure']]),('Toe Style',[p.get('toe_style','Round Toe')])]:set_attr(schema,cv,name,texts)
+  for name,texts in [('Place of Origin',['China']),('Midsole Material',[p.get('midsole','Other')]),('Outsole Material',[p.get('outsole','Rubber')]),('Lining Material',[p['lining']]),('Upper Material',[p['upper']]),('Style',p['style']),('Closure Type',[p['closure']]),('Toe Style',[p.get('toe_style','Round Toe')])]:
+   if name in p.get('category_attribute_omissions',[]):
+    definition=next(x for x in schema.findall("./field[@id='icbuCatProp']/fields/field")if x.get('name')==name)
+    assert not any(r.get('name')=='requiredRule'and r.get('value')=='true'for r in definition.findall('./rules/rule')),'Cannot omit mandatory category attribute'
+    continue
+   set_attr(schema,cv,name,texts)
   for name,texts in [('Season',p['seasons']),('Feature',[p.get('feature','Fashion Trend')])]:set_attr(schema,cv,name,texts)
   for name,texts in p.get('extra_category_attributes',{}).items():set_attr(schema,cv,name,texts)
-  cv.append(contract.serialize_product_model(schema,f'{family}-{variant}'))
+  cv.append(contract.serialize_product_model(schema,model_number(family,variant)))
   colors=[]
   sp=root.find("./field[@id='saleProp']")
   for child in list(sp):sp.remove(child)
@@ -93,7 +110,7 @@ def prepare(family):
   color_field=color_defs[0].get('id');color_axis=color_field.removeprefix('p-')
   cv=E.SubElement(sp,'complex-value');c=field(cv,color_field,'multiCheck');cs=E.SubElement(c,'values')
   for i,color in enumerate(p['colors'],1):
-   key=color.upper().replace(' ','_');vid=str(-500-i);colors.append((color,key,vid))
+   key=re.sub(r'[^A-Z0-9]+','_',color.upper()).strip('_');vid=str(-500-i);colors.append((color,key,vid))
    E.SubElement(cs,'value',inputValue=color,img=assets['SKU_'+key]['url'],remark=color).text=vid
   sz=field(cv,'p-222038415','multiCheck');vs=E.SubElement(sz,'values')
   for n in p['sizes']:E.SubElement(vs,'value',inputValue=f'EU{n}').text=str(-800-n)
@@ -101,7 +118,7 @@ def prepare(family):
   for child in list(sku):sku.remove(child)
   for color,key,cid in colors:
    for n in p['sizes']:
-    row=E.SubElement(sku,'complex-values');field(row,'skuOuterId',value=f'{family}-{variant}-{key}-EU{n}')
+    row=E.SubElement(sku,'complex-values');field(row,'skuOuterId',value=f'{model_number(family,variant)}-{key}-EU{n}')
     props=field(row,'props','multiInput');vals=E.SubElement(props,'values')
     for prop,vid,name in [(color_axis,cid,color),('222038415',str(-800-n),f'EU{n}')]:E.SubElement(vals,'value',propId=prop,propName='p-'+prop,propValueId=vid,propValueName=name).text=prop+':'+vid
   contract.validate_sku_property_pairs(root)
@@ -118,9 +135,15 @@ def prepare(family):
   if family=='HR042'and variant=='C':order=['M3','M1','M2','M4','M5','M6']
   pub.set_main_images(root,[assets[k]for k in order]);pub.set_gallery(root,'detailImage',[assets['D'+str(n)]for n in range(1,5)],[(300,'Detail shot'),(350,'Other product images'),(350,'Other product images'),(350,'Other product images')])
   pub.set_direct_value(root,'textDesc',p['highlights']);pub.set_direct_value(root,'scPrice','1')
-  more=root.find("./field[@id='customMoreProperty']");v=more.find("./complex-value/field[@id='customMoreProperty_0']/complex-value")
-  assert v is not None
-  v.find("./field[@id='propName']/value").text=p['custom'][0];v.find("./field[@id='valueName']/value").text=p['custom'][1]
+  more=root.find("./field[@id='customMoreProperty']")
+  definition=schema.find("./field[@id='customMoreProperty']/fields/field[@id='customMoreProperty_0']")
+  assert definition is not None and definition.get('type')=='complex'
+  assert len(p['custom'][1])<=70
+  for child in list(more):more.remove(child)
+  outer=E.SubElement(more,'complex-value');v=E.SubElement(field(outer,definition.get('id'),definition.get('type')),'complex-value')
+  for name,value in [('propName',p['custom'][0]),('valueName',p['custom'][1])]:
+   attr=definition.find("./fields/field[@id='"+name+"']");assert attr is not None and attr.get('type')=='input'
+   field(v,name,attr.get('type'),value)
   if 'tiers'in p:
    ladder=root.find("./field[@id='ladderPrice']")
    for child in list(ladder):ladder.remove(child)
@@ -134,11 +157,13 @@ def prepare(family):
    root.append(field(E.Element('temporary'),'catId',value=category))
    xml=E.tostring(root,encoding='unicode')
   request={'param_product_top_publish_request':{'product_id':int(pid),'cat_id':category,'language':'en_US','xml':xml}}
-  b.save(f/'prepared.json',{'family':family,'variant':variant,'source':source['url'],'source_artno':source['artno'],'title':title,'fields':FIELDS,'color_axis_id':color_axis,'keyword_submission_selection':submitted_keywords,'keyword_schema_capacity':len(keyword_contract['definitions']),'sku_count':len(colors)*len(p['sizes']),'colors':p['colors'],'sizes':[f'EU{n}'for n in p['sizes']],'tiers':tiers,'cost_analysis':{'source_cny':source['price_cny'],'fx_cny_per_usd':fx,'fx_source':'https://www.boc.cn/sourcedb/whpj/','fx_observed':'2026-10-13 10:57:20','fx_basis':'USD cashless buying 668.37 CNY per 100 USD','cost_usd':cost,'minimum_markup':min(price/cost-1 for _,price in tiers),'freight_service_tax':'Order-specific, not claimed included'},'inventory':'OMITTED_NOT_PHYSICAL_STOCK','source_truth':'Real current shoe and procurement entry; order availability still unconfirmed','company_bundle':'Approved V8 and canonical general FAQ preserved unchanged','request':request,'xml_sha256':hashlib.sha256(xml.encode()).hexdigest(),'expected_schema':contract.field_snapshot(root),'before_preserved':preserve(before)})
+  b.save(f/'prepared.json',{'family':family,'variant':variant,'source':source['url'],'source_artno':source['artno'],'title':title,'fields':fields,'color_axis_id':color_axis,'keyword_submission_selection':submitted_keywords,'keyword_schema_capacity':len(keyword_contract['definitions']),'sku_count':len(colors)*len(p['sizes']),'colors':p['colors'],'sizes':[f'EU{n}'for n in p['sizes']],'tiers':tiers,'cost_analysis':{'source_cny':source['price_cny'],'fx_cny_per_usd':fx,'fx_source':'https://www.boc.cn/sourcedb/whpj/','fx_observed':'2026-10-13 10:57:20','fx_basis':'USD cashless buying 668.37 CNY per 100 USD','cost_usd':cost,'minimum_markup':min(price/cost-1 for _,price in tiers),'freight_service_tax':'Order-specific, not claimed included'},'inventory':'OMITTED_NOT_PHYSICAL_STOCK','source_truth':'Real current shoe and procurement entry; order availability still unconfirmed','company_bundle':'Approved V8 and canonical general FAQ preserved unchanged','request':request,'xml_sha256':hashlib.sha256(xml.encode()).hexdigest(),'expected_schema':contract.field_snapshot(root),'before_preserved':preserve(before,fields)})
   print(pid,'PREPARED',len(colors)*len(p['sizes']),flush=True)
-def preserve(p):
+def preserve(p,fields=None):
  x=copy.deepcopy(p)
  for k in ['gmt_modified','status','display','attributes','subject','keywords','main_image','product_sku','sourcing_trade','pc_detail_url','category_id']:x.pop(k,None)
+ if fields and 'productGroup'in fields:
+  for k in ['group_id','group_name']:x.pop(k,None)
  d=x.get('struct_detail')or{}
  for k in ['detail_image','product_summary']:d.pop(k,None)
  return x
@@ -179,6 +204,8 @@ def submit(family,api,cfg):
  for variant,pid in TARGETS[family].items():
   f=BASE/'商品'/pid;ledger=f/'update_once.json'
   if ledger.exists():print(pid,'EXISTING_WRITE_LEDGER_SUBMISSION_SKIPPED',flush=True);continue
+  if SCOPE.get('selection_policy')=='BACKEND_DATA_AND_COST_REVIEW':
+   assert PLANS[family].get('selection_review',{}).get('state')=='REVIEWED_ADOPT','Latest owner requires backend-data and cost selection review before a new submission'
   plan=b.load(f/'prepared.json');before=b.load(f/'before_get.json')['product']
   fresh=read_only_call(api,cfg,'alibaba.icbu.product.get',{'product_id':pid,'language':'ENGLISH'});b.save(f/'prewrite_get.json',fresh);assert fresh['product']==before,'Target changed after preparation'
   xml=plan['request']['param_product_top_publish_request']['xml'];assert hashlib.sha256(xml.encode()).hexdigest()==plan['xml_sha256']
@@ -191,7 +218,7 @@ def verify(family,api,cfg):
  def one(pid):
   f=BASE/'商品'/pid
   if(f/'verification.json').exists():
-   old=b.load(f/'verification.json');last=max((b.load(f/name).get('at','')for name in ['update_once.json','attribute_repair_once.json','gallery_repair_once.json','public_style_once.json','hero_quality_once.json','business_correction_once.json']if(f/name).exists()),default='')
+   old=b.load(f/'verification.json');last=max((b.load(f/name).get('at','')for name in ['update_once.json','attribute_repair_once.json','gallery_repair_once.json','public_style_once.json','hero_quality_once.json','business_correction_once.json','optional_attribute_clear_once.json']if(f/name).exists()),default='')
    if old.get('state')=='FORMAL_FIELDS_SCORE_PASS' and old.get('get_observed_at','')>last:print(pid,'UNCHANGED_FORMAL_PASS',flush=True);return
   got=read_only_call(api,cfg,'alibaba.icbu.product.get',{'product_id':pid,'language':'ENGLISH'});b.save(f/'after_get.json',got);p=got['product']
   if p['status']!='approved':b.save(f/'verification.json',{'state':'REVIEWING','at':b.now(),'status':p['status'],'display':p['display']});print(pid,'REVIEWING',flush=True);return

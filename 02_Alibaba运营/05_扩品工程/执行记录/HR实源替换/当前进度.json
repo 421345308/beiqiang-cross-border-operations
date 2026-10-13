@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-13T12:08:06.121946+00:00",
+  "at": "2026-10-13T14:01:10.010583+00:00",
   "priority_links": [
     {
       "family": "HR030",
@@ -95,44 +95,47 @@
       "family": "HR038",
       "model": "HR038-A",
       "id": "1601943620588",
-      "state": "LOCAL_DRAFT"
+      "state": "FORMAL_FIELDS_SCORE_PASS"
     },
     {
       "family": "HR038",
       "model": "HR038-B",
       "id": "1601943677234",
-      "state": "LOCAL_DRAFT"
+      "state": "FORMAL_FIELDS_SCORE_PASS"
     },
     {
       "family": "HR031",
       "model": "HR031-A",
       "id": "1601943665060",
-      "state": "LOCAL_DRAFT"
+      "state": "REVIEWING"
     },
     {
       "family": "HR031",
       "model": "HR031-B",
       "id": "1601943651120",
-      "state": "LOCAL_DRAFT"
+      "state": "FORMAL_FIELDS_SCORE_PASS"
     },
     {
       "family": "HR036",
       "model": "HR036-A",
       "id": "1601943627431",
-      "state": "LOCAL_DRAFT"
+      "state": "FORMAL_FIELDS_SCORE_PASS"
     },
     {
       "family": "HR036",
       "model": "HR036-B",
       "id": "1601943561786",
-      "state": "LOCAL_DRAFT"
+      "state": "FORMAL_FIELDS_SCORE_PASS"
+    },
+    {
+      "family": "DZ14546082-A",
+      "model": "DZ14546082-A",
+      "id": "12000003229472",
+      "state": "FORMAL_FIELDS_SCORE_PASS"
     }
   ],
   "other_hr_families_needing_per_family_source_binding_review": [
     "HR009",
-    "HR010",
-    "HR017",
-    "HR019",
     "HR022",
     "HR023",
     "HR025",
@@ -147,7 +150,6 @@
     "HR040",
     "HR041",
     "HR043",
-    "HR044",
     "HR045",
     "HR046",
     "HR047",
@@ -185,12 +187,11 @@
     "registered_hr_history": 203,
     "current_hr_ids_found": 177,
     "states": {
-      "FORMAL_FIELDS_SCORE_PASS": 14,
-      "REVIEWING": 1,
+      "FORMAL_FIELDS_SCORE_PASS": 19,
+      "REVIEWING": 2,
       "NOT_FOUND_IN_CURRENT_COMPLETE_CATALOG": 26,
-      "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE": 51,
-      "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW": 105,
-      "PREPARED_OR_SUBMITTED": 6
+      "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE": 63,
+      "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW": 93
     },
     "caution": "本轮未检出不等于下架/删除；旧候选或MISSING不证明现行页面缺实鞋。先核正式绑定，已采用实款保留并修资料。",
     "links": [
@@ -802,15 +803,15 @@
         "model": "HR010-A",
         "family": "HR010",
         "product_identity": "HR010",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Men's Slip On Penny Loafers for Business Casual Outfits and Office Wear",
         "current_category_id": 202240835,
         "current_audit": "approved",
         "current_display": "Y",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "bound_source_id": "src-hr-hr010-26nc0086",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
-          "src-70df065670e4"
+          "src-hr-hr010-26nc0086"
         ],
         "formal_proof": null
       },
@@ -819,15 +820,15 @@
         "model": "HR010-B",
         "family": "HR010",
         "product_identity": "HR010",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Men's Low Top Penny Loafers with Rubber Sole for Everyday Casual Outfits",
         "current_category_id": 202240835,
         "current_audit": "approved",
         "current_display": "Y",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "bound_source_id": "src-hr-hr010-26nc0086",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
-          "src-70df065670e4"
+          "src-hr-hr010-26nc0086"
         ],
         "formal_proof": null
       },
@@ -836,15 +837,15 @@
         "model": "HR010-C",
         "family": "HR010",
         "product_identity": "HR010",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Men's Casual Penny Loafers with Slip On Design for Smart Casual Outfits",
         "current_category_id": 202240835,
         "current_audit": "approved",
         "current_display": "Y",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "bound_source_id": "src-hr-hr010-26nc0086",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
-          "src-70df065670e4"
+          "src-hr-hr010-26nc0086"
         ],
         "formal_proof": null
       },
@@ -1153,15 +1154,15 @@
         "model": "HR017-A",
         "family": "HR017",
         "product_identity": "HR017",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Men's Leather Flip Flops with Stitched Thong Straps for Casual Summer Wear",
         "current_category_id": 201340010,
         "current_audit": "approved",
         "current_display": "Y",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "bound_source_id": "src-hr-hr017-26nx85102",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
-          "src-8be93488b140"
+          "src-hr-hr017-26nx85102"
         ],
         "formal_proof": null
       },
@@ -1170,15 +1171,15 @@
         "model": "HR017-B",
         "family": "HR017",
         "product_identity": "HR017",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Men's Thong Sandals with Cowhide Leather Upper and Cloth Lining for Daily Wear",
         "current_category_id": 201340010,
         "current_audit": "approved",
         "current_display": "Y",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "bound_source_id": "src-hr-hr017-26nx85102",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
-          "src-8be93488b140"
+          "src-hr-hr017-26nx85102"
         ],
         "formal_proof": null
       },
@@ -1187,15 +1188,15 @@
         "model": "HR017-C",
         "family": "HR017",
         "product_identity": "HR017",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Men's Casual Leather Sandals with TPR Sole for Summer Footwear Collections",
         "current_category_id": 201340010,
         "current_audit": "approved",
         "current_display": "Y",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "bound_source_id": "src-hr-hr017-26nx85102",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
-          "src-8be93488b140"
+          "src-hr-hr017-26nx85102"
         ],
         "formal_proof": null
       },
@@ -1249,14 +1250,16 @@
         "model": "HR019-A",
         "family": "HR019",
         "product_identity": "HR019",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Women's Casual Knit Sneakers with Slip On Design for Everyday Wear",
         "current_category_id": 201333014,
         "current_audit": "approved",
         "current_display": "Y",
-        "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
+        "bound_source_id": "src-hr-hr019-230630",
+        "registry_source_state": "ADOPTED",
+        "candidate_source_ids": [
+          "src-hr-hr019-230630"
+        ],
         "formal_proof": null
       },
       {
@@ -1264,14 +1267,16 @@
         "model": "HR019-B",
         "family": "HR019",
         "product_identity": "HR019",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Women's Slip On Walking Shoes with Heel Pull Tab for Everyday Casual Wear",
         "current_category_id": 201333014,
         "current_audit": "approved",
         "current_display": "Y",
-        "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
+        "bound_source_id": "src-hr-hr019-230630",
+        "registry_source_state": "ADOPTED",
+        "candidate_source_ids": [
+          "src-hr-hr019-230630"
+        ],
         "formal_proof": null
       },
       {
@@ -1279,14 +1284,16 @@
         "model": "HR019-C",
         "family": "HR019",
         "product_identity": "HR019",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Women's Low Top Knit Sneakers with Pull On Design and Round Toe",
         "current_category_id": 201333014,
         "current_audit": "approved",
         "current_display": "Y",
-        "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
+        "bound_source_id": "src-hr-hr019-230630",
+        "registry_source_state": "ADOPTED",
+        "candidate_source_ids": [
+          "src-hr-hr019-230630"
+        ],
         "formal_proof": null
       },
       {
@@ -1756,7 +1763,7 @@
         "model": "HR031-A",
         "family": "HR031",
         "product_identity": "HR031",
-        "state": "PREPARED_OR_SUBMITTED",
+        "state": "REVIEWING",
         "current_title": "Men's Brown Breathable Mesh Lining Smart Casual Walking Shoes Microfiber Lace-Up Sneakers EU 36-45 Model HR031-A",
         "current_category_id": 201334413,
         "current_audit": "approved",
@@ -1764,26 +1771,26 @@
         "bound_source_id": null,
         "registry_source_state": "CANDIDATE",
         "candidate_source_ids": [
-          "src-hr-hr031-r311"
+          "src-hr-hr031-d11"
         ],
-        "formal_proof": null
+        "formal_proof": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943665060/verification.json"
       },
       {
         "id": "1601943651120",
         "model": "HR031-B",
         "family": "HR031",
         "product_identity": "HR031",
-        "state": "PREPARED_OR_SUBMITTED",
+        "state": "FORMAL_FIELDS_SCORE_PASS",
         "current_title": "Men's Black Office Walking Sneakers Casual Lace Up Shoes EU 36-45 Model HR031-B",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
-        "bound_source_id": null,
+        "bound_source_id": "src-hr-hr031-d11",
         "registry_source_state": "CANDIDATE",
         "candidate_source_ids": [
-          "src-hr-hr031-r311"
+          "src-hr-hr031-d11"
         ],
-        "formal_proof": null
+        "formal_proof": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943651120/verification.json"
       },
       {
         "id": "1601943550710",
@@ -1798,7 +1805,7 @@
         "bound_source_id": null,
         "registry_source_state": "CANDIDATE",
         "candidate_source_ids": [
-          "src-hr-hr031-r311"
+          "src-hr-hr031-d11"
         ],
         "formal_proof": null
       },
@@ -1993,34 +2000,34 @@
         "model": "HR036-A",
         "family": "HR036",
         "product_identity": "HR036",
-        "state": "PREPARED_OR_SUBMITTED",
+        "state": "FORMAL_FIELDS_SCORE_PASS",
         "current_title": "Men's Taupe Knit Moc Toe Walking Loafers Slip On Casual Shoes EU 36-45 Model HR036-A",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "bound_source_id": "src-hr-hr036-1936",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
-          "src-hr-hr036-s8759"
+          "src-hr-hr036-1936"
         ],
-        "formal_proof": null
+        "formal_proof": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943627431/verification.json"
       },
       {
         "id": "1601943561786",
         "model": "HR036-B",
         "family": "HR036",
         "product_identity": "HR036",
-        "state": "PREPARED_OR_SUBMITTED",
+        "state": "FORMAL_FIELDS_SCORE_PASS",
         "current_title": "Men's Navy Knit Slip on Walking Loafers Casual Shoes EU 36-45 Model HR036-B",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "bound_source_id": "src-hr-hr036-1936",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
-          "src-hr-hr036-s8759"
+          "src-hr-hr036-1936"
         ],
-        "formal_proof": null
+        "formal_proof": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943561786/verification.json"
       },
       {
         "id": "1601943541967",
@@ -2033,9 +2040,9 @@
         "current_audit": null,
         "current_display": null,
         "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
-          "src-hr-hr036-s8759"
+          "src-hr-hr036-1936"
         ],
         "formal_proof": null
       },
@@ -2089,34 +2096,34 @@
         "model": "HR038-A",
         "family": "HR038",
         "product_identity": "HR038",
-        "state": "PREPARED_OR_SUBMITTED",
+        "state": "FORMAL_FIELDS_SCORE_PASS",
         "current_title": "Men's Sand Olive Trail Walking Shoes Mesh Lace-up Outdoor Casual Sneakers EU 36-45 Model HR038-A",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "bound_source_id": "src-hr-hr038-ar288",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
-          "src-hr-hr038-92028"
+          "src-hr-hr038-ar288"
         ],
-        "formal_proof": null
+        "formal_proof": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943620588/verification.json"
       },
       {
         "id": "1601943677234",
         "model": "HR038-B",
         "family": "HR038",
         "product_identity": "HR038",
-        "state": "PREPARED_OR_SUBMITTED",
+        "state": "FORMAL_FIELDS_SCORE_PASS",
         "current_title": "Men's Charcoal Lace-up Mesh Trail Walking Sneakers Casual Shoes EU 36-45 Model HR038-B",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "bound_source_id": "src-hr-hr038-ar288",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
-          "src-hr-hr038-92028"
+          "src-hr-hr038-ar288"
         ],
-        "formal_proof": null
+        "formal_proof": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943677234/verification.json"
       },
       {
         "id": "1601943682202",
@@ -2129,9 +2136,9 @@
         "current_audit": null,
         "current_display": null,
         "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
-          "src-hr-hr038-92028"
+          "src-hr-hr038-ar288"
         ],
         "formal_proof": null
       },
@@ -2320,14 +2327,16 @@
         "model": "HR044-A",
         "family": "HR044",
         "product_identity": "HR044",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Men's Penny Loafers with Slip On Design for Business Casual Wear",
         "current_category_id": 202240835,
         "current_audit": "approved",
         "current_display": "Y",
-        "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
+        "bound_source_id": "src-hr-hr044-l795",
+        "registry_source_state": "ADOPTED",
+        "candidate_source_ids": [
+          "src-hr-hr044-l795"
+        ],
         "formal_proof": null
       },
       {
@@ -2335,14 +2344,16 @@
         "model": "HR044-B",
         "family": "HR044",
         "product_identity": "HR044",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Men's Casual Loafers with Apron Toe Stitching and a Low Top Profile",
         "current_category_id": 202240835,
         "current_audit": "approved",
         "current_display": "Y",
-        "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
+        "bound_source_id": "src-hr-hr044-l795",
+        "registry_source_state": "ADOPTED",
+        "candidate_source_ids": [
+          "src-hr-hr044-l795"
+        ],
         "formal_proof": null
       },
       {
@@ -2350,14 +2361,16 @@
         "model": "HR044-C",
         "family": "HR044",
         "product_identity": "HR044",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Men's Slip On Casual Shoes with Penny Strap for Everyday Outfits",
         "current_category_id": 202240835,
         "current_audit": "approved",
         "current_display": "Y",
-        "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
+        "bound_source_id": "src-hr-hr044-l795",
+        "registry_source_state": "ADOPTED",
+        "candidate_source_ids": [
+          "src-hr-hr044-l795"
+        ],
         "formal_proof": null
       },
       {
@@ -3395,7 +3408,19 @@
       "model": "DZ14546082-A",
       "product_id": "12000003229472",
       "source_state": "MISSING",
-      "direction": "白蓝网面拼接厚底系带运动鞋，寻找相近真实运动鞋"
+      "direction": "白蓝网面拼接厚底系带运动鞋，寻找相近真实运动鞋",
+      "candidate_review": {
+        "source1936": "CNY35 synthetic-leather upper differs more from current mesh look; AI foreground extraction changed camera angle/proportions and is not selected",
+        "sourceKB11": "CNY32, White/Navy and White/Orange EU39–44; actual mesh-panel and sculpted-sole athletic profile closer to owner-liked shape, dial closure explicitly shown; candidate only until all fields/assets/cost readback complete"
+      }
+    },
+    "backend_data": {
+      "state": "WEEK_AND_MONTH_VISIBLE_TABLES_COMPLETE_CHECKSUM_PASS",
+      "recent_week": "2026-10-04 through2026-10-10 PST /382 rows",
+      "previous_month": "2026-09 PST /357 rows",
+      "evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/经营数据与选款.json",
+      "zero_effect_tab": "Default180days view returned server-busy; not treated as proof of0 for missing period rows",
+      "already_adopted_real_styles": "Keep existing actual shoes; prioritize improvements using data instead of repeatedly replacing them"
     }
   }
 }
