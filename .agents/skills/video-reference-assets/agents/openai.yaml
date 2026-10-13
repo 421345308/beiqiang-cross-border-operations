@@ -1,0 +1,6 @@
+interface:
+  display_name: "视频参考资产与镜头准备"
+  short_description: "准备人物与动物多视图、独立商品道具和空景，再组合镜头并核对连续性"
+  default_prompt: "Use $video-reference-assets to prepare and review separated identity, product, prop and location references for this video project."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,72 @@
+{
+  "checked_on": "2026-10-13",
+  "tool_sha256": "60fc53cda039a4a366190023b2f0a1153f0c4901682fca5c0fbfc663c18cc834",
+  "all_passed": true,
+  "case_count": 8,
+  "cases": [
+    {
+      "case": "current_8_assets_7_shots",
+      "passed": true,
+      "actual": {
+        "ok": true,
+        "asset_count": 8,
+        "shot_count": 7,
+        "errors": [],
+        "warnings": [],
+        "pixel_review_performed": false,
+        "scope": "Files, metadata and declared continuity only; not image/video quality or permission."
+      }
+    },
+    {
+      "case": "duplicate_selected_asset",
+      "passed": true,
+      "errors": [
+        "duplicate active id: OWNER_BODY",
+        "OWNER_BODY: duplicate active file"
+      ]
+    },
+    {
+      "case": "stale_hash",
+      "passed": true,
+      "errors": [
+        "OWNER_BODY: stale sha256"
+      ]
+    },
+    {
+      "case": "deleted_tablet_reference",
+      "passed": true,
+      "errors": [
+        "OWNER_BODY: missing file generation/characters/tablet-pose.png"
+      ]
+    },
+    {
+      "case": "unknown_shot_reference",
+      "passed": true,
+      "errors": [
+        "S01: unknown active reference UNKNOWN"
+      ]
+    },
+    {
+      "case": "new_shoes_before_purchase",
+      "passed": true,
+      "errors": [
+        "S01: continuity violation owner_shoes: expected 'OLD_SHOES', got 'BQ028'"
+      ]
+    },
+    {
+      "case": "multiview_as_first_frame",
+      "passed": true,
+      "errors": [
+        "S01: multi-view sheet assigned as a video frame"
+      ]
+    },
+    {
+      "case": "missing_pixel_review",
+      "passed": true,
+      "errors": [
+        "S01: visual review not recorded as passed with notes"
+      ]
+    }
+  ],
+  "pixel_review_performed_by_validator": false
+}

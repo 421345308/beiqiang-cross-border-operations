@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "updated_on": "2026-10-13",
-  "state": "SEPARATED_REFERENCE_ASSETS_GENERATED_AWAITING_USER_REVIEW",
+  "state": "SEPARATED_ASSETS_AND_COMPOSED_SHOT_REFERENCES_READY_FOR_CREATIVE_REVIEW",
   "tool": "built-in image_gen",
   "paid_video_submitted": false,
   "base_path": "PROJECT.md directory; all selected asset files below are project-relative",
@@ -30,7 +30,8 @@
       "qa": "All four requested directions visible, same cardigan/jeans/ponytail, feet not cropped. White socks intentionally separate identity from old/new shoes.",
       "width": 1448,
       "height": 1086,
-      "sha256": "af0e5f7d0e601d4dea93a355ec73781e3968f467b47b4302075d36cff0bfd1ae"
+      "sha256": "af0e5f7d0e601d4dea93a355ec73781e3968f467b47b4302075d36cff0bfd1ae",
+      "view_kind": "multiview_sheet"
     },
     {
       "id": "OWNER_FACE",
@@ -56,7 +57,8 @@
       "qa": "Front and opposite three-quarter views of same adult identity; natural skin. This is identity reference, not a three-person or three-shot layout.",
       "width": 1448,
       "height": 1086,
-      "sha256": "2abe6794d3118c879c9ff205d532d3509b8e2b06587d0d7d1bca41284fffe8ea"
+      "sha256": "2abe6794d3118c879c9ff205d532d3509b8e2b06587d0d7d1bca41284fffe8ea",
+      "view_kind": "multiview_sheet"
     },
     {
       "id": "DOG_BODY",
@@ -82,7 +84,8 @@
       "qa": "Front, left/right profiles and back show the same fur/costume. Sun only on back; real canine anatomy without human hands.",
       "width": 1448,
       "height": 1086,
-      "sha256": "45310c7cc62e58564af6ddc9913c554a445d3e86ca09c96899c064342aab495f"
+      "sha256": "45310c7cc62e58564af6ddc9913c554a445d3e86ca09c96899c064342aab495f",
+      "view_kind": "multiview_sheet"
     },
     {
       "id": "TABLET",
@@ -104,7 +107,8 @@
       "qa": "Front/back/side distinguish screen from casing, front and rear camera positions, and triangular support. Touchscreen faces dog in use, not automatically camera.",
       "width": 1448,
       "height": 1086,
-      "sha256": "6a186333236b8ccdfd26eb29536f5ee75012bc8420414fda23ec499f884e5400"
+      "sha256": "6a186333236b8ccdfd26eb29536f5ee75012bc8420414fda23ec499f884e5400",
+      "view_kind": "multiview_sheet"
     },
     {
       "id": "LIVING_ROOM",
@@ -129,7 +133,8 @@
       "qa": "Empty room, no baked-in character/dog/shoes/tablet. Window/sofa/bookcase and entry opening are visible spatial anchors.",
       "width": 1672,
       "height": 941,
-      "sha256": "f11ee935ad2dc295beba0c2abf0cf99e949c54542859e0e2c8c017d043e161b1"
+      "sha256": "f11ee935ad2dc295beba0c2abf0cf99e949c54542859e0e2c8c017d043e161b1",
+      "view_kind": "empty_location"
     },
     {
       "id": "ENTRY_HALL",
@@ -151,7 +156,8 @@
       "qa": "Empty connected-entry view shares oak floor, sofa edge and door style with room. It is a visual continuity reference, not a verified 3D reconstruction.",
       "width": 1672,
       "height": 941,
-      "sha256": "aa34264e1de5e9847c286fbdc75b787f5f143dd2e7d53a21218532d4c9f221f1"
+      "sha256": "aa34264e1de5e9847c286fbdc75b787f5f143dd2e7d53a21218532d4c9f221f1",
+      "view_kind": "empty_location"
     },
     {
       "id": "WALKING_PATH",
@@ -171,7 +177,29 @@
       "qa": "Empty ordinary residential path, visible bench and fork; reused for before/after walks to support story continuity.",
       "width": 1672,
       "height": 941,
-      "sha256": "94484581d0b42eac2092a05531f1938c54893edbc6f4427dbfa6a74753a73e72"
+      "sha256": "94484581d0b42eac2092a05531f1938c54893edbc6f4427dbfa6a74753a73e72",
+      "view_kind": "empty_location"
+    },
+    {
+      "id": "OLD_SHOES",
+      "file": "generation/props/old-shoes.png",
+      "role": "fictional_old_shoe_prop",
+      "view_kind": "single_product_photo",
+      "prompt": "Use case: product-mockup. Create ONE photorealistic prop identity reference PHOTO of a matched left and right pair of fictional unbranded women's everyday OLD SHOES for a short comedy. These are not the advertised Beiqiang shoes and not identifiable competitor products. Two ordinary charcoal-taupe gray low-top canvas-textile lace-up casual shoes, simple muted gray laces, flat narrow low dark-gray soles, rounded toes, no logos or graphics. Clean but clearly previously worn through subtle fabric creases and minor sole-edge scuffing; no holes, torn seams, deformed soles or dramatic damage, no performance infographic. The fictional owner has personally found these shoes uncomfortable after a long walk; the picture itself must not pretend to prove that. Shoes look normal and plausible, not villainous. A real left/right pair arranged on a plain pale-gray studio surface, one in a three-quarter side view and the other more front-facing, full soles and heels inside frame, realistic wearable proportions, soft neutral product light, crisp textile and lace details. Distinct from the story's NEW white knit laceless slip-ons: keep these gray and visibly lace-up. No people, feet, dog, room, text, watermark, claims or brand. One studio product photograph, not a collage or grid. Landscape4:3. This is a reusable fictional prop asset for the pre-purchase shots, not actual SKU evidence.",
+      "input_images": [],
+      "inherit": [
+        "普通灰褐帆布系带低帮鞋",
+        "成对无品牌旧鞋"
+      ],
+      "exclude": [
+        "商品SKU身份",
+        "摄影棚",
+        "真实质量/性能对比证据"
+      ],
+      "qa": "普通轻微使用痕迹，不夸张破损、不指向可辨识品牌；仅为虚构故事道具",
+      "width": 1448,
+      "height": 1086,
+      "sha256": "8143b92450710932ac9200a6634425ffb149aad5804a1dbe0ad2ef6d397f289f"
     }
   ],
   "product_reference": {
@@ -239,5 +267,38 @@
       "auto_compliance_default": 1
     },
     "scope": "Official docs and current LibTV CLI schema checked. Multi-view is supported/useful for this small subject count, not a guarantee against deformation. Provider face acceptance and paid generation remain untested for these new sheets."
-  }
+  },
+  "shot_manifest": "generation/shots/shots.json",
+  "continuity_rules": [
+    {
+      "shot_ids": "*",
+      "field": "dog_wardrobe",
+      "equals": "blue_vest_sun"
+    },
+    {
+      "shot_ids": [
+        "S01",
+        "S02"
+      ],
+      "field": "owner_shoes",
+      "equals": "OLD_SHOES"
+    },
+    {
+      "shot_ids": [
+        "S03",
+        "S04"
+      ],
+      "field": "owner_shoes",
+      "equals": "SOCKS"
+    },
+    {
+      "shot_ids": [
+        "S05",
+        "S06",
+        "S07"
+      ],
+      "field": "owner_shoes",
+      "equals": "BQ028"
+    }
+  ]
 }

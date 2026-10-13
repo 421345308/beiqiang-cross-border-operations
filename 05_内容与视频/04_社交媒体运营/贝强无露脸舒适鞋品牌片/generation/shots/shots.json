@@ -1,0 +1,321 @@
+{
+  "schema_version": 1,
+  "updated_on": "2026-10-13",
+  "state": "COMPOSED_SHOT_REFERENCES_READY_FOR_CREATIVE_REVIEW",
+  "tool": "built-in image_gen",
+  "paid_video_submitted": false,
+  "video_quality_verified": false,
+  "visual_review_scope": "静帧身份、剧情用途及可见几何；不等于完整动作/音视频/商品测量或付费授权",
+  "planned_shot_ids": [
+    "S01",
+    "S02",
+    "S03",
+    "S04",
+    "S05",
+    "S06",
+    "S07"
+  ],
+  "require_all_planned_shots": true,
+  "shots": [
+    {
+      "id": "S01",
+      "time_range": [
+        0,
+        4
+      ],
+      "file": "generation/shots/01-old-shoes-walk.png",
+      "purpose": "狗仍想继续走，主人因旧鞋走久不舒服而停下",
+      "reference_ids": [
+        "OWNER_BODY",
+        "OWNER_FACE",
+        "DOG_BODY",
+        "OLD_SHOES",
+        "WALKING_PATH"
+      ],
+      "states": {
+        "owner_shoes": "OLD_SHOES",
+        "dog_wardrobe": "blue_vest_sun",
+        "location": "WALKING_PATH",
+        "lighting": "late_afternoon",
+        "tablet": "absent"
+      },
+      "action_start": "一段散步后，主人坐到长椅，狗仍朝前方路口探身",
+      "action_end": "主人说回家，狗回头看她，牵引绳始终松弛",
+      "prompt": "Photoreal live-action ordinary Chinese daily-life short comedy; ONE same fictional adult young Chinese woman and ONE same red-white corgi. References show multiple views of ONE identity, not extra people/dogs or a panel layout. Preserve the woman identity, low ponytail, sage-green short-sleeve cardigan, white tee and light-blue ankle-length straight jeans; tiny silver earrings. Preserve the corgi's red-white fur/blaze, blue collar/silver tag and powder-blue pet vest with cream binding and ONE small yellow sun on dorsal back only. Real animal anatomy, no human hands, costumes beyond this practical vest, no anime, no CGI. Use reference room/path ONLY for location structure; do not inherit reference grid, labels, studio backdrop, poses or daylight when the shot asks night. A clean SINGLE vertical 9:16 photographic film frame, no borders, text, subtitles, watermark or logo. Natural face/skin/fur/fabric detail, clear spatial storytelling; no product performance effects. This is a shot reference STILL, not evidence of completed motion.\nInput1 = woman's BODY/WARDROBE identity. Input2 = same woman's FACE. Input3 = sole corgi identity with final vest. Input4 = fictional OLD gray canvas lace-up shoe pair. Input5 = sole residential PATH with wooden bench on left and fork ahead.\nFrame: the same young woman sits on the LEFT wooden bench, full body visible, both feet wearing exactly the gray lace-up old shoes from input4. She has stopped after a walk, shoulders a little relaxed/tired, looks down toward her shoe and gently lifts one heel a small amount while toe still rests on the ground; no injury/grimace and no hand rubbing shoes. One hand rests on her knee; the other holds ONE simple blue fabric leash with visible slack. The leash runs naturally to a single attachment on dog's collar, no second leash or duplicated ropes.\nOn ground to her right, the corgi stands naturally on four paws angled toward the path/fork as if eager to continue, ears perked, head glancing back toward her. Preserve real small-dog-to-adult scale; shoulders28cm vs adult165cm, no giant dog. Puppy is alert and cheerful, not exhausted.\nMedium-wide 35mm camera at seated-adult chest height from path, framed vertically with woman's whole head/body/feet, whole dog and bench contact visible. Include clear gray paving and the recognizable fork/tree canopy from input5. Soft late-afternoon natural light and neutral warm domestic-commercial color. Leave no new white shoes or tablet in this pre-purchase moment. ONE coherent photographic frame, enough foreground and headroom, readable expressions and action intention without exaggerated acting.",
+      "visual_review": {
+        "status": "passed",
+        "notes": [
+          "旧灰鞋、两条腿及四足可见，女生和背心身份一致。",
+          "首图牵引绳落在后腰已修正，当前松弛单绳连接蓝项圈；未验证动态动作。"
+        ],
+        "reviewed_at": "2026-10-13"
+      },
+      "repairs": [
+        {
+          "issue": "牵引绳错误落在犬后腰",
+          "prompt": "Precisely repair ONLY the leash geometry in this photo. Preserve the woman's face, outfit, gray shoes, pose, bench, dog identity/vest/anatomy/pose and background. Remove the mistaken blue lead that terminates at the dog's rear flank. Instead ONE continuous blue fabric leash starts in her existing hand, hangs in a visibly slack curved arc across the open space IN FRONT of the dog's torso and connects with a tiny visible metal snap to the BLUE COLLAR at the base of its neck, just behind its silver round tag. All of its route is visible; it never attaches to legs, hip, vest or back. No duplicate strap. Maintain single vertical photographic film frame, no text. This is the same stopped-walk moment before new shoes."
+        }
+      ],
+      "width": 941,
+      "height": 1672,
+      "sha256": "08057407514ecb3368d8dd8e8b84aed0a9fff4efc3ee858d8d1cf9f03ac68e2e"
+    },
+    {
+      "id": "S02",
+      "time_range": [
+        4,
+        7
+      ],
+      "file": "generation/shots/02-not-today.png",
+      "purpose": "次日狗叼绳来约散步，主人因昨天鞋脚不适拒绝",
+      "reference_ids": [
+        "OWNER_BODY",
+        "OWNER_FACE",
+        "DOG_BODY",
+        "OLD_SHOES",
+        "ENTRY_HALL"
+      ],
+      "states": {
+        "owner_shoes": "OLD_SHOES",
+        "dog_wardrobe": "blue_vest_sun",
+        "location": "ENTRY_HALL",
+        "lighting": "morning",
+        "tablet": "absent"
+      },
+      "action_start": "狗叼一根蓝色牵引绳来到主人脚边，主人看旧鞋",
+      "action_end": "主人摆手说今天先不遛，狗放下绳并抬头",
+      "prompt": "Photoreal live-action ordinary Chinese daily-life short comedy; ONE same fictional adult young Chinese woman and ONE same red-white corgi. References show multiple views of ONE identity, not extra people/dogs or a panel layout. Preserve the woman identity, low ponytail, sage-green short-sleeve cardigan, white tee and light-blue ankle-length straight jeans; tiny silver earrings. Preserve the corgi's red-white fur/blaze, blue collar/silver tag and powder-blue pet vest with cream binding and ONE small yellow sun on dorsal back only. Real animal anatomy, no human hands, costumes beyond this practical vest, no anime, no CGI. Use reference room/path ONLY for location structure; do not inherit reference grid, labels, studio backdrop, poses or daylight when the shot asks night. A clean SINGLE vertical 9:16 photographic film frame, no borders, text, subtitles, watermark or logo. Natural face/skin/fur/fabric detail, clear spatial storytelling; no product performance effects. This is a shot reference STILL, not evidence of completed motion.\nInput1 woman body/wardrobe; input2 same face; input3 same dog/vest; input4 OLD gray canvas lace-up shoes; input5 entry hall layout.\nONE vertical medium-wide photo from interior facing entry door. Woman full body on left, BOTH gray lace-up shoes visible; she looks down at her eager corgi with a gentle apologetic half-smile, one hand makes a small low palm-out 'not today' gesture, other relaxed. Real morning sun. Corgi on right foreground on FOUR paws, head tilted up toward her, holding just the HANDLE LOOP of ONE loose blue fabric walking leash in its canine mouth. Rest of that leash with a small end clip rests visibly on floor. It is NOT clipped to collar in this moment, no taut leash, no second lead. The wall leash hook from location reference is EMPTY (remove hanging lead). Dog wears canonical vest with sun on back only. Dark walnut front door behind/right, oak shoe cabinet and circular mirror left, oak floor, sofa edge at far left, ordinary home atmosphere. No new white shoes, shoebox, tablet or extra dogs. Readable conflict: dog eager, owner politely declines; neither injured nor dog miserable. Camera eye level near woman's waist, full head to shoes and dog feet, no grid.",
+      "visual_review": {
+        "status": "passed",
+        "reviewed_at": "2026-10-13",
+        "notes": [
+          "单根牵引绳叼柄、端夹落地，没有同时牵引的第二根绳。",
+          "旧灰鞋、女生面容服装、柯基背心背部太阳及玄关方向一致；未验证放绳动态。"
+        ]
+      },
+      "width": 941,
+      "height": 1672,
+      "sha256": "b9f69c16c9823a45c6aea005499c7f12597c84d41a5ffbdfaa3b098458952eb3"
+    },
+    {
+      "id": "S03",
+      "time_range": [
+        7,
+        11
+      ],
+      "file": "generation/shots/03-dog-orders.png",
+      "purpose": "狗为恢复散步偷偷下单；平板有明确使用者和触控目的",
+      "reference_ids": [
+        "OWNER_BODY",
+        "OWNER_FACE",
+        "DOG_BODY",
+        "TABLET",
+        "LIVING_ROOM"
+      ],
+      "states": {
+        "owner_shoes": "SOCKS",
+        "dog_wardrobe": "blue_vest_sun",
+        "location": "LIVING_ROOM",
+        "lighting": "night",
+        "tablet": "screen_faces_dog"
+      },
+      "action_start": "狗看过旧鞋，在地面平板前抬起一只前爪",
+      "action_end": "前爪轻点朝自己的屏幕一次后放回地面，主人没察觉",
+      "prompt": "Photoreal live-action ordinary Chinese daily-life short comedy; ONE same fictional adult young Chinese woman and ONE same red-white corgi. References show multiple views of ONE identity, not extra people/dogs or a panel layout. Preserve the woman identity, low ponytail, sage-green short-sleeve cardigan, white tee and light-blue ankle-length straight jeans; tiny silver earrings. Preserve the corgi's red-white fur/blaze, blue collar/silver tag and powder-blue pet vest with cream binding and ONE small yellow sun on dorsal back only. Real animal anatomy, no human hands, costumes beyond this practical vest, no anime, no CGI. Use reference room/path ONLY for location structure; do not inherit reference grid, labels, studio backdrop, poses or daylight when the shot asks night. A clean SINGLE vertical 9:16 photographic film frame, no borders, text, subtitles, watermark or logo. Natural face/skin/fur/fabric detail, clear spatial storytelling; no product performance effects. This is a shot reference STILL, not evidence of completed motion.\nInput1 woman body; input2 face; input3 ONE corgi and vest; input4 sole tablet STRUCTURE/front-back/triangle stand; input5 livingroom LAYOUT only.\nNIGHTtime in same apartment. Warm practical lamps and dim blue-dark window at LEFT (no sun rays). Beige sofa back/right, oak coffee table displaced behind foreground action but unchanged design, backleft bookcase, oak floor. Woman on sofa reading an ordinary book, aware of nothing, white socks only, no new shoes. No shoes on foreground floor; old shoes are offscreen by the entry. The shoe obstacle was established by previous shots.\nAt foreground on oak floor, ONE corgi naturally SITS on its haunches RIGHT of ONE portrait10inch charcoal tablet LEFT, canine head turned LEFT toward its screen, curious focused eyes. Its far forepaw is planted for balance, nearer forepaw is raised with ordinary furry toes just about to tap the SCREEN, not backside or air. No hand, fingers or biped. Keep full ears/body/paws in frame, vest dorsal sun only.\nImportant spatial construction: tablet lower edge sits on floor, screen upright at65degrees facing RIGHT directly toward dog's face/paw, with triangular trifold case propping BEHIND it on its LEFT. Camera is dog/tablet side-three-quarter angle, so visible is tablet's FRONT screen in foreshortened oblique view plus the SIDE edge and part of triangular support. The screen must be the side contacted by dog; back camera belongs ONLY back face. Show a dim simple blurred white-shoe thumbnail in black bezel (no legible shopping app or text), no second screen on tablet backside. Dog's paw stops just short of glass, never penetrates. Film medium-wide framing, low camera around dog eyeheight, realistic dimensions dog28cm shoulder tablet24cm high, girl soft in background but identifiable, no table blocking plane.",
+      "visual_review": {
+        "status": "passed",
+        "reviewed_at": "2026-10-13",
+        "notes": [
+          "平板前屏朝狗，支架在背后，犬前爪悬在屏幕前未穿透；主人背景白袜阅读，夜景成立。",
+          "屏幕错鞋和多余按键已修正；屏幕缩略图只交代下单，不代替产品细节证据。",
+          "静帧尚未验证轻点并收爪的动态。"
+        ]
+      },
+      "repairs": [
+        {
+          "issue": "屏幕误生成带鞋带款及非参考按键",
+          "prompt": "Edit ONLY the tablet in image1; preserve photo, owner, dog, raised real paw, room/night lighting and tablet orientation/triangle stand. The screen already correctly faces dog's paw. Remove the tiny bottom home-button/symbol, keep blank continuous black bezel identical to canonical no-homebutton tablet. Replace current wrong lace-up sneaker thumbnail on display with a dim softly out-of-focus picture of the EXACT white KNITTED LACELESS SLIP-ON shoe from image2: ribbed biscuit toe bumper, chevron sole sidewall, cream heel pull loop. No visible laces or invented brand/text. Keep screen subordinate, not a legible ecommerce UI, no screen on backside. No other changes.",
+          "support_reference_ids": [
+            "BQ028"
+          ]
+        }
+      ],
+      "width": 941,
+      "height": 1672,
+      "sha256": "6c91c61779c834aa766c0498dee6f5aa05cdfddb5b19afbe57bb6f4952c82165"
+    },
+    {
+      "id": "S04",
+      "time_range": [
+        11,
+        15
+      ],
+      "file": "generation/shots/04-shoes-arrive.png",
+      "purpose": "到货揭示狗买的鞋并呈现真实商品身份",
+      "reference_ids": [
+        "OWNER_BODY",
+        "OWNER_FACE",
+        "DOG_BODY",
+        "BQ028",
+        "ENTRY_HALL"
+      ],
+      "states": {
+        "owner_shoes": "SOCKS",
+        "dog_wardrobe": "blue_vest_sun",
+        "location": "ENTRY_HALL",
+        "lighting": "morning",
+        "tablet": "absent"
+      },
+      "action_start": "主人蹲下将无字牛皮纸鞋盒盖抬起",
+      "action_end": "盒内露出完整白色同款左右鞋，主人转头问狗，狗抬头回应",
+      "prompt": "Photoreal live-action ordinary Chinese daily-life short comedy; ONE same fictional adult young Chinese woman and ONE same red-white corgi. References show multiple views of ONE identity, not extra people/dogs or a panel layout. Preserve the woman identity, low ponytail, sage-green short-sleeve cardigan, white tee and light-blue ankle-length straight jeans; tiny silver earrings. Preserve the corgi's red-white fur/blaze, blue collar/silver tag and powder-blue pet vest with cream binding and ONE small yellow sun on dorsal back only. Real animal anatomy, no human hands, costumes beyond this practical vest, no anime, no CGI. Use reference room/path ONLY for location structure; do not inherit reference grid, labels, studio backdrop, poses or daylight when the shot asks night. A clean SINGLE vertical 9:16 photographic film frame, no borders, text, subtitles, watermark or logo. Natural face/skin/fur/fabric detail, clear spatial storytelling; no product performance effects. This is a shot reference STILL, not evidence of completed motion.\nInput1 woman body/wardrobe; input2 same face; input3 dog/vest; input4 is the REAL BQ028 White PRODUCT and its physical appearance takes priority; input5 entry layout.\nONE vertical9:16 natural morning lifestyle photo in same entry. Woman crouches on LEFT beside an OPEN plain kraft cardboard shoebox on oak floor, both feet wear WHITE SOCKS only, no shoes prematurely on feet. Face and ponytail unchanged. One hand holds the REMOVED box lid upright beside the box (ordinary five fingers), other hand rests on own knee. She looks to her corgi RIGHT of the box with a small surprised amused smile. Corgi sits naturally looking back at her, same vest/sun on dorsal back, collar/tag, all paws unoccluded, not touching shoes/box with human-like hands.\nShoebox foreground center around38cm length, white tissue folded neatly around ONE complete LEFT+RIGHT pair, BOTH shoes fully visible side by side toes toward camera at slight diagonal; do not stack or crop them. EXACT PRODUCT from image4: white low knitted laceless slip-on, white ribbed biscuit wrap toe bumper, angular diagonal/chevron white sole sidewall, light cream heel pull loops; no laces, sock-boot collars, holes, logos, thick sneaker foam or smooth generic sole. Product footprint correct for adult woman EU38, box not giant. Natural fabric/sole detail clear. Two white socks and both shoes separate. Dark walnut door backright, oakcabinet/round mirror left, matchingfloor. One blue leash hanging on its empty-before-now hook in background (return home stage), no duplicate. Camera kneeheight slight downangle so reveal shoes interior and expression; everyday cinematic photograph not studioad, no text.",
+      "visual_review": {
+        "status": "passed",
+        "reviewed_at": "2026-10-13",
+        "notes": [
+          "双白袜与盒内新鞋分离，盒盖手势有用途；无无意义摸鞋。",
+          "实图对照无鞋带、针织块面、饼干式包头、浅色拉环及鞋垫点纹可见；侧墙结构须在上脚镜头另核。",
+          "狗看主人反应清晰，后躯边缘出框，此图不用作全身犬体参考或行走首帧。"
+        ]
+      },
+      "width": 941,
+      "height": 1672,
+      "sha256": "0a1c1117de2d9416b656a36858e257d08cfb6a503195f2df6e6fb71caf451f32"
+    },
+    {
+      "id": "S05",
+      "time_range": [
+        15,
+        18
+      ],
+      "file": "generation/shots/05-ready-to-walk.png",
+      "purpose": "省去穿入动作，用已上脚的新鞋承接出门试走",
+      "reference_ids": [
+        "OWNER_BODY",
+        "OWNER_FACE",
+        "DOG_BODY",
+        "BQ028",
+        "ENTRY_HALL"
+      ],
+      "states": {
+        "owner_shoes": "BQ028",
+        "dog_wardrobe": "blue_vest_sun",
+        "location": "ENTRY_HALL",
+        "lighting": "morning",
+        "tablet": "absent"
+      },
+      "action_start": "主人已穿好白色新鞋，拿着单根蓝绳看狗",
+      "action_end": "主人说走试试你的眼光，狗站起，她转向门",
+      "prompt": "Photoreal live-action ordinary Chinese daily-life short comedy; ONE same fictional adult young Chinese woman and ONE same red-white corgi. References show multiple views of ONE identity, not extra people/dogs or a panel layout. Preserve the woman identity, low ponytail, sage-green short-sleeve cardigan, white tee and light-blue ankle-length straight jeans; tiny silver earrings. Preserve the corgi's red-white fur/blaze, blue collar/silver tag and powder-blue pet vest with cream binding and ONE small yellow sun on dorsal back only. Real animal anatomy, no human hands, costumes beyond this practical vest, no anime, no CGI. Use reference room/path ONLY for location structure; do not inherit reference grid, labels, studio backdrop, poses or daylight when the shot asks night. A clean SINGLE vertical 9:16 photographic film frame, no borders, text, subtitles, watermark or logo. Natural face/skin/fur/fabric detail, clear spatial storytelling; no product performance effects. This is a shot reference STILL, not evidence of completed motion.\nInput1 woman BODY/clothing; input2 FACE; input3 dog/vest; input4 REAL BQ028 white PRODUCT mandatory; input5 entry layout.\nSame morning entry with full-body girl LEFT and full-body standing corgi RIGHT beside dark walnut door. Girl is NOW already wearing both white BQ028 KNITTED LACELESS LOW SLIP-ON shoes; do NOT copy the socks-only feet of body identity reference. Jeans ankle length, no skin/foot-insertion, no high-top. Exact product ribbed biscuit toe bumper and diagonal/chevron sole sidewalls/lightcream heelpull loops. Have nearer shoe in side-threequarter profile for visible texturedwall, farfoot clearly separate. Ordinary adult shoe scale. Her head turns smiling toward dog; one hand holds handle of ONE blue fabric walking lead, routed in simple visibly slack arc DIRECTLY to metal snap at dog's blue COLLAR near neck; other hand at side. Clear contact, no rope attached to dog's back/legs/vest. Corgi on four paws ears perked, head looking up. One sun only on dorsalvest. Door closed readytoopen, wall leashhook EMPTY because lead held. No second lead, no shoebox onfloor, no grayoldshoes, tablet or spare whiteshoes. Vertical9:16 mediumwide 35mm photo, camera hipheight, both feet soles visible onfloor, full body and dog, natural unposed lifestyle frame. Not stock glamourad; confident relaxed daily-life readiness. Door/cabinet/mirror/floor consistent.",
+      "visual_review": {
+        "status": "passed",
+        "reviewed_at": "2026-10-13",
+        "notes": [
+          "前包头竖肋、侧墙斜纹分区经两次定向修正；两只低帮无带针织鞋、后跟拉环及双腿可见。",
+          "单绳接项圈，墙钩为空；同女生、狗与玄关，图作为出门动作构图，鞋细节仍以商品原图优先。",
+          "未验证开门、起步动作。"
+        ]
+      },
+      "repairs": [
+        {
+          "issue": "侧墙被简化成细竖纹",
+          "prompt": "Precise product correction ONLY of the two white shoes on the woman's feet in image1 using image2 as REAL product shape evidence. Preserve all else (face/body/outfit/dog/vest/lead/room/pose/lighting). The far shoe turned in side profile MUST have broad diagonal-chevron sculpted sidewall segments like image2, not fine vertical ribs across entire sidewall or a plain soft fabric sock slipper. The NEAR shoe at threequarter view has DISTINCT vertical ribbed biscuit rubber TOE BUMPER wrapping the front, mesh-knit upper with large denser rectangular band on midfoot, proper asymmetrical adult shoe shape; cream heel pull loops. Keep same planted shoe positions, toes/soles not warped, laceLESS slipon LOW collar, no logos, no glow/exaggerated softness, no performance effects. Product construction must match image2 closely. No other edits."
+        },
+        {
+          "issue": "修侧墙同时误改前包头为斜纹",
+          "prompt": "Edit ONLY the FRONT TOE RUBBER BUMPER of each white shoe in image1. Keep current diagonal-chevron pattern on SIDE walls as is. The front semicircular toe bumper, and ONLY that front approximately quarter perimeter, must consist of thick regular VERTICAL STRAIGHT RIBS as in real shoe image2. No diagonal ribs across toes. Preserve sole thickness, knit panels, feet positions, girl/dog/lead/room/lighting absolutely. Pull loops only BACKHEEL never tongue. Product from image2 is appearance authority. One single photo."
+        }
+      ],
+      "width": 941,
+      "height": 1672,
+      "sha256": "14c5078cca2677ebfd9b889a8b198295df862dd4d51d29d418c5202f02c0f90e"
+    },
+    {
+      "id": "S06",
+      "time_range": [
+        18,
+        25
+      ],
+      "file": "generation/shots/06-walking-together.png",
+      "purpose": "真正走出去体验舒适日常，完整同行而非原地踏步",
+      "reference_ids": [
+        "OWNER_BODY",
+        "DOG_BODY",
+        "BQ028",
+        "WALKING_PATH"
+      ],
+      "states": {
+        "owner_shoes": "BQ028",
+        "dog_wardrobe": "blue_vest_sun",
+        "location": "WALKING_PATH",
+        "lighting": "late_afternoon",
+        "tablet": "absent"
+      },
+      "action_start": "主人和狗在同一小区步道自然同行，镜头随行",
+      "action_end": "完整走过几步到岔路口，主人轻松看向狗说这回穿着舒服",
+      "prompt": "Photoreal live-action ordinary Chinese daily-life short comedy; ONE same fictional adult young Chinese woman and ONE same red-white corgi. References show multiple views of ONE identity, not extra people/dogs or a panel layout. Preserve the woman identity, low ponytail, sage-green short-sleeve cardigan, white tee and light-blue ankle-length straight jeans; tiny silver earrings. Preserve the corgi's red-white fur/blaze, blue collar/silver tag and powder-blue pet vest with cream binding and ONE small yellow sun on dorsal back only. Real animal anatomy, no human hands, costumes beyond this practical vest, no anime, no CGI. Use reference room/path ONLY for location structure; do not inherit reference grid, labels, studio backdrop, poses or daylight when the shot asks night. A clean SINGLE vertical 9:16 photographic film frame, no borders, text, subtitles, watermark or logo. Natural face/skin/fur/fabric detail, clear spatial storytelling; no product performance effects. This is a shot reference STILL, not evidence of completed motion.\nINPUT1 woman's BODY/CLOTHING reference, INPUT2 corgi BODY/VEST, INPUT3 REAL WHITE BQ028 SHOES (appearance authority), INPUT4 PATH layout.\nA SINGLE vertical9:16 LIVEACTION LOW CAMERA tracking-shot reference of woman and corgi walking RIGHTWARD on gray residential path. Frame woman from JUST ABOVE HIPS down through BOTH FULL clearly separated legs and ankles to TWO full shoes, head intentionally outside crop; never sever legs inside frame. Show WHOLE corgi in right foreground, dog body fourlegs and bluevest complete, ears and nose in frame. Blue leash held by visible hand at TOP LEFT slacks across image to blue NECKCOLLAR's METAL SNAP (not vest), appropriate everyday walk. Bench/background soft. Camera only25cm offground with shoes prominently LARGE in lower half; near woman's right foot forward RIGHT planted, other full foot LEFT/rear gently liftsheel, both knees have separate silhouettes, dog a halfstep ahead.\nMust reproduce REALPRODUCT input3 in large clear detail: KNITTED WHITE LOW LACELESS SLIPON; dense RECTANGULAR knit instepband, open smallknit holes forefoot/sides; lightcream HEEL loop only at BACK. Thin-to-moderate WHITE rubber sidewall divided: FRONT semicircular TOE BUMPER has THICK STRAIGHT VERTICAL PARALLEL RIBS; SIDE midfoot toheel has BROAD ANGULAR DIAGONAL CHEVRON segments. NO chevron grooves on FRONT toe bumper! No verticalribs extending entire sidewall. Precisely copy heelheight/toeshape/sole thickness frominput3, not sockboot/pillow/foam platform/genericknitsneaker. TWO correctly handedshoes, no laces. No shoewarp or bounceeffects. Natural ordinary step and warm daylight, sharp shoe detail without productposter or text. No severed/missingleg, no extra limbs, no dog's human hands.",
+      "repairs": [
+        {
+          "issue": "正面遮腿且鞋拉环漂移，改侧面后仍有鞋纹分区偏差，改低机位使商品足够大可核",
+          "method": "reframe_with_product_priority"
+        }
+      ],
+      "visual_review": {
+        "status": "passed",
+        "reviewed_at": "2026-10-13",
+        "notes": [
+          "低机位从腰部下方展示两条连续腿、两鞋和柯基完整身体；上半身是有意构图裁切，不是缺腿。",
+          "商品前包头竖肋与侧墙斜纹分区、无带针织上部及后跟拉环比远景明确；仍以实图优先。",
+          "蓝绳金属端连接颈后蓝项圈，未接背心；真实轻松步态与接地需视频验收。"
+        ]
+      },
+      "width": 941,
+      "height": 1672,
+      "sha256": "947a05f300daa429cee99e8329587e7595bcb6d431aebe84f8e30ec7f66d8996"
+    },
+    {
+      "id": "S07",
+      "time_range": [
+        25,
+        30
+      ],
+      "file": "generation/shots/07-one-more-lap.png",
+      "purpose": "再走一圈实现狗的愿望，回收狗养主人的喜剧反差",
+      "reference_ids": [
+        "OWNER_BODY",
+        "OWNER_FACE",
+        "DOG_BODY",
+        "BQ028",
+        "WALKING_PATH"
+      ],
+      "states": {
+        "owner_shoes": "BQ028",
+        "dog_wardrobe": "blue_vest_sun",
+        "location": "WALKING_PATH",
+        "lighting": "late_afternoon",
+        "tablet": "absent"
+      },
+      "action_start": "到路口主人自然停一步看狗问再走一圈",
+      "action_end": "狗回头开心回应，再转向前路，与主人继续同行",
+      "prompt": "Photoreal live-action ordinary Chinese daily-life short comedy; ONE same fictional adult young Chinese woman and ONE same red-white corgi. References show multiple views of ONE identity, not extra people/dogs or a panel layout. Preserve the woman identity, low ponytail, sage-green short-sleeve cardigan, white tee and light-blue ankle-length straight jeans; tiny silver earrings. Preserve the corgi's red-white fur/blaze, blue collar/silver tag and powder-blue pet vest with cream binding and ONE small yellow sun on dorsal back only. Real animal anatomy, no human hands, costumes beyond this practical vest, no anime, no CGI. Use reference room/path ONLY for location structure; do not inherit reference grid, labels, studio backdrop, poses or daylight when the shot asks night. A clean SINGLE vertical 9:16 photographic film frame, no borders, text, subtitles, watermark or logo. Natural face/skin/fur/fabric detail, clear spatial storytelling; no product performance effects. This is a shot reference STILL, not evidence of completed motion.\nInput1 womanbody/clothes; input2 face; input3 solecorgi/vest; input4 REAL White BQ028 shoe; input5 path.\nONE vertical9:16 endofshortcomedy film frame at same treecanopy path FORK, leftbench further behind. Camera side-threequarter near waistheight. Woman stands on LEFT on BOTH separated clearly visible legs with BOTH actual white low laceless BQ028 shoes planted; nearestshoe SIDE profile toeRIGHT shows diagonal CHEVRON SIDEWALL, only TOE front bumper VERTICAL ribs, knit upper denser rectangular instepband, creamheelpullloop at REAR only (no tongueloop at front), correctadultscale. She angles body slightly along path to right, looks DOWN/RIGHT at dog with joyful relaxed amused smile, arm holding leash lowered. Corgi RIGHT fourpaws planted, BODY points along rightward newpath but HEAD looks BACK UP/LEFT at her eagerly, perkedears open canine mouth realexpression, one sun at back. Smalladultcorgi, not oversized. ONE slack bluelead visibly connects hand with smallmetalclip on BLUE NECK COLLAR, no secondrope/no waistattachment. Wholeadulthead/feet and wholedog/paws visible. Show clear nextpath and enough uncluttered pavement bottom to later add brand, NO generatedlettering. Warm natural daylight, noproducteffects. This is reaction beat BEFORE they continue, not repeatedfrontwalkingpose, not tired dog, no hero glamour. Same identities/homewarddailyfeeling.",
+      "visual_review": {
+        "status": "passed",
+        "reviewed_at": "2026-10-13",
+        "notes": [
+          "主人低头与犬回看方向成立，开心愿望兑现，无疲惫狗或额外人物；全身、两腿、四足可核。",
+          "绳夹位于蓝项圈而非背心，鞋为白色低帮无带针织款后跟拉环；此远景只锁构图与款式，不做精确纹理特写，真实商品图优先。",
+          "狗转向继续走、表演/声音笑点尚未视频验证。"
+        ]
+      },
+      "repairs": [
+        {
+          "issue": "远景鞋纹需按实图约束",
+          "prompt": "Correct ONLY the actual footwear product fidelity of image1. Image2 is REAL WHITE BQ028 shoe identity. Preserve complete photo girl/dog/lead/room/path/poses. Both FRONT TOE semicircular RUBBER bumpers have thick STRAIGHT VERTICAL PARALLEL RIBS; diagonal-chevron grooves are confined to SIDE WALL midfoot/heel. Copy knit smallhole pattern and dense rectangular instepband, creamy REAR heelpull loops, lowcollar, no laces. Do not change body or feet positions, do not invent brands/materialeffects. Keep same fronttoe shape and productscale. Clear knit-to-rubber boundary, not one cloth slipperskin. Image1 shoes currently wrongly blend toe/sole texture: accurate real product more important than current shoe design. No other edits."
+        }
+      ],
+      "width": 941,
+      "height": 1672,
+      "sha256": "337e9640dc47566414c7f8dc7666193380147ff5fe87ea47b5592456fc6a2673"
+    }
+  ]
+}

@@ -4,9 +4,11 @@
 
 | 工作类型 | 正确位置 | 先核对什么 |
 | --- | --- | --- |
+| LinkedIn / Facebook / TikTok跨平台运营 | [社媒入口](04_社交媒体运营/README.md) | 账号身份、可用连接、采购内容、真实发布与CRM；Instagram当前暂停主动运营 |
 | 贝强商品视频 | [商品视频索引](01_贝强商品视频/seedance/VIDEO_INDEX.md) | SKU 来源、版本、审核记录 |
 | TikTok 运营 | [TikTok目录](02_TikTok运营/) | 发布台账、来源链接、询盘与效果证据 |
 | 非鞋类创作、动画与模型实验 | [通用 AI 项目](03_通用AI视频实验/README.md) | 项目状态、PROJECT.md 与素材证据 |
+| AI视频参考资产与镜头图 | [video-reference-assets](../.agents/skills/video-reference-assets/SKILL.md) | 人物/动物多视图、商品、道具与空景分开；当前资产清单和连续性检查 |
 | 模型、剪辑工具、运行环境 | [视频工具](../08_工具链/02_视频工具/) | 当前 Skill、中央规范和命令帮助 |
 
 生成完成、剪辑完成、验收、正式发布与产生询盘是不同状态，分别取证。贝强商品内容遵守单款货源和 B2B 边界；通用创作不加载无关商品或获客记录。具体执行约束见 [AGENTS.md](AGENTS.md)。
