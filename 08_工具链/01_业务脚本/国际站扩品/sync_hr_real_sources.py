@@ -22,15 +22,16 @@ def sync():
   for variant,pid in targets.items():
    f=BASE/'商品'/pid;v=op.b.load(f/'verification.json')if(f/'verification.json').exists()else {'state':'SUBMITTED'};state=v['state'];states.append(state)
    l=listings[pid];opt=l.setdefault('optimization',{});evidence=[rel(f/name)for name in ['prepared.json','update_once.json','update_receipt.json','verification.json','after_get.json','after_render.json','score.json']if(f/name).exists()]
-   opt['source_replacement']={'state':state,'source_id':sid,'real_artno':source['artno'],'at':op.b.now(),'next_action':'逐ID完成材料/SKU/价格/图库/详情正式回读及实际评分，再作公开页验收。'if state!='FORMAL_FIELDS_SCORE_PASS'else'正式字段和评分通过；正常买家公开页与旧关键词迁移逐ID待验，其他HR款继续实源重建。','evidence':evidence}
+   opt['source_replacement']={'state':state,'source_id':sid,'real_artno':source['artno'],'at':op.b.now(),'next_action':'仅回读审核状态，审核通过后核材料/SKU/价格/图文与实际评分；不得重复提交。'if state!='FORMAL_FIELDS_SCORE_PASS'else'本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。','evidence':evidence}
    public_file=f/'public_product_verification.json'
    if public_file.exists():
     public=op.b.load(public_file)
     assert public['id']==pid
     opt['source_replacement']['public_product_qa']={'state':public['state'],'at':public['at'],'file':rel(public_file),'scope':'实际六主图、四产品详情、末端颜色EU尺码选择；旧keywords迁移未由此证明'}
-    if state=='FORMAL_FIELDS_SCORE_PASS' and public['state']=='PUBLIC_PRODUCT_IMAGE_SKU_PASS':opt['source_replacement']['next_action']='正式字段、实际5.00及公开六主图四详情/EU末端组合通过；旧keywords空值和UI迁移独立待核，继续其他HR实源替换。'
+    if state=='FORMAL_FIELDS_SCORE_PASS' and public['state']=='PUBLIC_PRODUCT_IMAGE_SKU_PASS':opt['source_replacement']['next_action']='API验收、货源双改及既有公开图文/EU组合核验通过；旧keywords空值照实记录，继续其他HR款。'
    if state=='FORMAL_FIELDS_SCORE_PASS':
     l['bound_source_id']=sid;l['source_relation']='SAME_ID_REAL_SOURCE_REPLACEMENT_FORMAL_PASS'
+    l['record_type']='当前实款正式绑定';l['notes']=f"当前采用{source['supplier']} {source['artno']}，原ID整鞋替换正式字段及评分通过；旧候选、旧鞋型和旧采购价不参与当前执行。来源、当前图文和逐ID证据见本款唯一入口；已提交动作不重放。"
     got=op.b.load(f/'after_get.json');p=got['product'];canonical=ROOT/'02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品'/pid
     canonical.mkdir(parents=True,exist_ok=True);op.b.save(canonical/'formal_get.json',{'requested_product_id':pid,'observed_at_utc':v.get('get_observed_at',v['at']),'method':'alibaba.icbu.product.get','response':public_fields(got),'sanitized_fields':['owner_member','owner_member_display_name','owner_member_id'],'raw_response_file':rel(f/'after_get.json')});op.b.save(canonical/'formal_render.json',op.b.load(f/'after_render.json'))
     l['observation']={'audit':p['status'],'display':p['display'],'at':v['at'],'scope':'Exact-ID current formal product and rendered schema'}
@@ -39,11 +40,11 @@ def sync():
     l['local_sync']={'state':'HR_REAL_SOURCE_FORMAL_PASS','current_fields_file':rel(canonical/'formal_get.json'),'current_schema_file':rel(canonical/'formal_render.json'),'at':v['at']}
    else:l['source_relation']='REAL_SOURCE_CANDIDATE_REPLACEMENT_PENDING_FORMAL_READ'
    summary.append({'family':family,'model':family+'-'+variant,'id':pid,'state':state})
-  p=products[family];p['candidate_source_ids']=list(dict.fromkeys([*p.get('candidate_source_ids',[]),sid]));p['local_assets']['current_fields_file']=rel(BASE/family/'事实与页面计划.json');p['local_assets']['state']='REAL_SOURCE_PLAN_SUBMITTED';p['local_assets']['asset_roots']=[f'01_产品资产/02_可发布素材/{family}'];p['raw_packages']=[rel(raw)]
+  p=products[family];p['candidate_source_ids']=[sid];p['local_assets']['current_fields_file']=rel(BASE/family/'事实与页面计划.json');p['local_assets']['state']='REAL_SOURCE_PLAN_SUBMITTED';p['local_assets']['asset_roots']=[f'01_产品资产/02_可发布素材/{family}'];p['raw_packages']=[rel(raw)]
   p['next_action']='实源图文已提交原ID，待完整正式核验；公开呈现分开登记。'
   p['source_state']='CANDIDATE'
   p['classification'].update(state='REAL_SKU_SOURCE_PHOTO_REVIEWED',local_intent_candidates=plan.get('local_intent_candidates',['厚底/时尚帆布休闲鞋'if family=='HR030'else'镂空套脚/夏季休闲乐福鞋']))
-  if all(s=='FORMAL_FIELDS_SCORE_PASS'for s in states):p.update(source_state='ADOPTED',adopted_source_id=sid,next_action='实款来源、正式字段及5.00评分已核；公开呈现和旧关键词迁移逐ID核验分开待验；其余缺源HR继续。');p['local_assets']['state']='REAL_SOURCE_FORMAL_PASS'
+  if all(s=='FORMAL_FIELDS_SCORE_PASS'for s in states):p.update(source_state='ADOPTED',adopted_source_id=sid,next_action='当前来源、正式字段及实际评分已核并双改；本轮API验收完成，公开抽检全量后统一进行，继续其余HR。');p['local_assets']['state']='REAL_SOURCE_FORMAL_PASS'
   for name in ['素材清单.json','事实与页面计划.json','当前状态.json']:
    ref=rel(BASE/family/name)
    if ref not in p['evidence']:p['evidence'].append(ref)

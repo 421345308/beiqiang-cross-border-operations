@@ -56,12 +56,17 @@ def main():
     base = git('rev-parse',args.base+'^{commit}').decode().strip()
     live = load(REG)
     scope = load(HR+'/scope.json')
-    hr_ids = {pid for ids in scope['targets'].values() for pid in ids.values()}
-    families = set(scope['targets'])
-    paths = [HR+'/'+name for name in ('README.md','scope.json','当前进度.json','质量修正计划.json')]
-    for family in families:
+    replacement_ids = {pid for ids in scope['targets'].values() for pid in ids.values()}
+    profiles = load(HR+'/已有实款对应.json')['families']
+    binding_ids = {pid for p in profiles for pid in p['ids']}
+    hr_ids = replacement_ids | binding_ids
+    families = set(scope['targets']) | {p['family'] for p in profiles}
+    paths = [HR+'/'+name for name in ('README.md','scope.json','当前进度.json','质量修正计划.json','已有实款对应.json','双改与货源一致性核验.json')]
+    for family in scope['targets']:
         paths += [HR+'/'+family+'/'+name for name in ('事实与页面计划.json','当前状态.json','来源事实.json','素材清单.json','图片银行公开映射.json')]
-    for pid in hr_ids:
+    for profile in profiles:
+        paths += [HR+'/'+profile['family']+'/来源与正式绑定核验.json']
+    for pid in replacement_ids:
         paths += [p.relative_to(ROOT).as_posix() for p in (ROOT/HR/'商品'/pid).glob('*.json')
                   if p.name in ('verification.json','public_verification.json','public_product_verification.json','score.json',
                                 'update_once.json','update_receipt.json',
@@ -72,7 +77,8 @@ def main():
     paths += ['08_工具链/01_业务脚本/国际站扩品/'+name for name in
               ('replace_hr_real_sources.py','verify_hr_real_sources.py',
                'repair_hr_source_quality.py','sync_hr_real_sources.py',
-               'prepare_hr054_assets.py','build_hr_replacement_scope.py')]
+               'prepare_hr054_assets.py','prepare_hr020_assets.py','build_hr_replacement_scope.py',
+               'sync_hr_source_media.py','reconcile_hr_existing_sources.py','audit_hr_source_consistency.py')]
     paths += ['02_Alibaba运营/00_运营SOP/国际站商品全生命周期SOP.md',FACTORY+'/README.md']
     paths += ['08_工具链/01_业务脚本/商品图片与审计/ingest_company_public_observations.py',
               '08_工具链/06_工作区维护/checkpoint_hr_source_public.py']
@@ -108,7 +114,7 @@ def main():
     original_other_sources = {x['id']:copy.deepcopy(x) for x in merged['sources']}
     lp = {x['id']:x for x in live['products']}
     ll = {x['id']:x for x in live['listings']}
-    source_ids = {ll[pid]['optimization']['source_replacement']['source_id'] for pid in hr_ids}
+    source_ids = {ll[pid]['optimization']['source_replacement']['source_id'] for pid in replacement_ids} | {p['source_id'] for p in profiles}
     sources = {x['id']:x for x in live['sources'] if x['id'] in source_ids}
     merged['sources'] = [x for x in merged['sources'] if x['id'] not in source_ids] + list(copy.deepcopy(sources).values())
     assert all(x == original_other_sources[x['id']] for x in merged['sources'] if x['id'] not in source_ids)
@@ -119,10 +125,11 @@ def main():
         pid = listing['id']
         if pid in hr_ids:
             for key in ('bound_source_id','source_relation','observation','current_platform_fields',
-                        'catalog_fields','formal_fields','local_sync','url'):
+                        'catalog_fields','formal_fields','local_sync','url','record_type','notes'):
                 if key in ll[pid]:
                     listing[key] = copy.deepcopy(ll[pid][key])
-            listing.setdefault('optimization',{})['source_replacement'] = copy.deepcopy(ll[pid]['optimization']['source_replacement'])
+            field = 'source_replacement' if pid in replacement_ids else 'source_binding_reconciliation'
+            listing.setdefault('optimization',{})[field] = copy.deepcopy(ll[pid]['optimization'][field])
             current = ROOT / ll[pid].get('formal_fields',{}).get('file','missing')
             if current.is_file() and load(str(current.relative_to(ROOT))).get('sanitized_fields'):
                 raw = current.read_bytes().replace(b'\r\n',b'\n')
@@ -172,7 +179,7 @@ def main():
         if args.check_only:
             print('EXACT_TASK_PUBLIC_SCOPE_PASS',len(changed),'HR IDs',len(hr_ids),'PUBLIC IDs',len(public_ids),'BASELINE_ONLY_ALIAS_ISSUES',len(baseline_errors))
             return
-        message = b'feat: repair HR source listings and verify approved factory FAQ on public pages\n'
+        message = b'feat: synchronize actual HR sources with approved products and prevent duplicate replacements\n'
         commit = git('commit-tree',tree,'-p',base,input=message).decode().strip()
         ref = 'refs/heads/'+args.branch
         exists = subprocess.run(['git','show-ref','--verify','--quiet',ref],cwd=ROOT).returncode == 0

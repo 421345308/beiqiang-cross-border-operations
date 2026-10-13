@@ -1,0 +1,97 @@
+{
+  "family": "HR015",
+  "at": "2026-10-13T09:10:15.657479+00:00",
+  "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+  "source": {
+    "id": "src-hr-hr015-24czya22-56",
+    "url": "https://hzmshoes.en.made-in-china.com/product/MwitEmarvKAb/China-Wholesale-Custom-Plus-Size-Retro-Soft-Genuine-Leather-Loafers-Shoes-for-Women-Boat-Shoes-Walking-Style-Moccasins-Flats-Shoes.html",
+    "shop_url": "https://hzmshoes.en.made-in-china.com",
+    "supplier": "Guangzhou Weirui Shoes Co., Ltd.",
+    "model": "24CZYA22-56",
+    "price": "未核当前进货报价",
+    "currency": "USD",
+    "unit": "双",
+    "price_terms": "历史已采用实款对应恢复；当前数量、价格、包装及交期逐单询价，不从平台售价或样品费反推采购价。",
+    "observed_at": "2026-09-29",
+    "evidence": [
+      "99_临时区/HR015_24CZYA22-56执行_2026-09-29/ROOT_images_approved.json",
+      "99_临时区/HR015_24CZYA22-56执行_2026-09-29/ROOT_approved_bank_mapping.json",
+      "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR015/来源与正式绑定核验.json"
+    ]
+  },
+  "links": [
+    {
+      "id": "1601943502604",
+      "model": "HR015-A",
+      "formal_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943502604/formal_get.json",
+      "formal_observed_at": "2026-10-12T22:23:46.891288+00:00",
+      "checks": {
+        "approved_actual_product_images_match": true,
+        "whole_six_images_match_current_catalog": true,
+        "raw_photo_hashes": true,
+        "materials_match_specific_model_table": true,
+        "source_eu_cartesian": true,
+        "approved_y": true
+      },
+      "main_images": [
+        "https://sc04.alicdn.com/kf/H5d7f4724b3004c79960aa76b9d83721aP.png",
+        "https://sc04.alicdn.com/kf/H2cdc77fc7be24449902b4e70e4915f78C.png",
+        "https://sc04.alicdn.com/kf/H65333265d5ce42afbb657002d1fe9790q.png",
+        "https://sc04.alicdn.com/kf/Hf281f25ee1f544c1b8f9d4b1d7603efbN.png",
+        "https://sc04.alicdn.com/kf/Hf85b2247f7054339871fbf074691585fW.png",
+        "https://sc04.alicdn.com/kf/H9f32c7ecea0f4d25bc5ddc9cd04c1e5dK.jpg"
+      ],
+      "sku_count": 14
+    },
+    {
+      "id": "1601943542329",
+      "model": "HR015-B",
+      "formal_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943542329/formal_get.json",
+      "formal_observed_at": "2026-10-12T22:30:30.910610+00:00",
+      "checks": {
+        "approved_actual_product_images_match": true,
+        "whole_six_images_match_current_catalog": true,
+        "raw_photo_hashes": true,
+        "materials_match_specific_model_table": true,
+        "source_eu_cartesian": true,
+        "approved_y": true
+      },
+      "main_images": [
+        "https://sc04.alicdn.com/kf/H5d7f4724b3004c79960aa76b9d83721aP.png",
+        "https://sc04.alicdn.com/kf/Hf281f25ee1f544c1b8f9d4b1d7603efbN.png",
+        "https://sc04.alicdn.com/kf/H65333265d5ce42afbb657002d1fe9790q.png",
+        "https://sc04.alicdn.com/kf/H2cdc77fc7be24449902b4e70e4915f78C.png",
+        "https://sc04.alicdn.com/kf/Hf85b2247f7054339871fbf074691585fW.png",
+        "https://sc04.alicdn.com/kf/H9f32c7ecea0f4d25bc5ddc9cd04c1e5dK.jpg"
+      ],
+      "sku_count": 14
+    },
+    {
+      "id": "1601943517454",
+      "model": "HR015-C",
+      "formal_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943517454/formal_get.json",
+      "formal_observed_at": "2026-10-12T22:29:39.650634+00:00",
+      "checks": {
+        "approved_actual_product_images_match": true,
+        "whole_six_images_match_current_catalog": true,
+        "raw_photo_hashes": true,
+        "materials_match_specific_model_table": true,
+        "source_eu_cartesian": true,
+        "approved_y": true
+      },
+      "main_images": [
+        "https://sc04.alicdn.com/kf/H5d7f4724b3004c79960aa76b9d83721aP.png",
+        "https://sc04.alicdn.com/kf/Hf85b2247f7054339871fbf074691585fW.png",
+        "https://sc04.alicdn.com/kf/H2cdc77fc7be24449902b4e70e4915f78C.png",
+        "https://sc04.alicdn.com/kf/H65333265d5ce42afbb657002d1fe9790q.png",
+        "https://sc04.alicdn.com/kf/Hf281f25ee1f544c1b8f9d4b1d7603efbN.png",
+        "https://sc04.alicdn.com/kf/H9f32c7ecea0f4d25bc5ddc9cd04c1e5dK.jpg"
+      ],
+      "sku_count": 14
+    }
+  ],
+  "basis": "Specific approved actual-model source plan and independently reviewed original/derivative hashes. All five product-image identities, full current six-image sequence, stated material fields and complete EU combinations are checked. Unspecified upper composition is not invented; prior MOQ/price/packing and current company FAQ remain unchanged. This restores actual source metadata without platform mutations.",
+  "source_current_access": "Historical accepted actual-source evidence dated2026-09-29; not a new direct-live access, stock or current quote confirmation.",
+  "platform_mutation": "NONE_EXISTING_ACTUAL_SHOE_PRESERVED",
+  "physical_stock": "NOT_CONFIRMED_ORDER_SPECIFIC"
+}

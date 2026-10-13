@@ -6,6 +6,8 @@ import json,sys,copy
 from datetime import datetime,timezone
 import replace_hr_real_sources as o
 def check(pid,family,variant):
+ if not(o.BASE/'商品'/pid/'after_get.json').exists():
+  return {'id':pid,'state':'LOCAL_PREPARATION_NOT_FORMALLY_SUBMITTED'}
  f=o.BASE/'商品'/pid;got=o.b.load(f/'after_get.json');p=got['product'];report={'id':pid,'at':o.b.now(),'state':'REVIEWING','status':p['status'],'display':p['display']}
  if p['status']!='approved':o.b.save(f/'verification.json',report);return report
  prep=o.b.load(f/'prepared.json');schema=E.fromstring(o.b.load(f/'after_render.json')['data']);actual=o.contract.field_snapshot(schema);checks={}
@@ -20,8 +22,9 @@ def check(pid,family,variant):
  attrs=defaultdict(set)
  for a in p['attributes']:attrs[a['attribute_name']].add(a['value_name'])
  plan=o.PLANS[family]
- expected={'Place of Origin':{'CN'},'Midsole Material':{'Other'},'Outsole Material':{'Rubber'},'Lining Material':{plan['lining']},'Upper Material':{plan['upper']},'Closure Type':{plan['closure']},'Style':set(plan['style']),'Toe Style':{'Round Toe'},'Model Number':{family+'-'+variant},plan['custom'][0]:{plan['custom'][1]},'Season':set(plan['seasons']),'Feature':{plan.get('feature','Fashion Trend')}}
+ expected={'Place of Origin':{'CN'},'Midsole Material':{plan.get('midsole','Other')},'Outsole Material':{plan.get('outsole','Rubber')},'Lining Material':{plan['lining']},'Upper Material':{plan['upper']},'Closure Type':{plan['closure']},'Style':set(plan['style']),'Toe Style':{plan.get('toe_style','Round Toe')},'Model Number':{family+'-'+variant},plan['custom'][0]:{plan['custom'][1]},'Season':set(plan['seasons']),'Feature':{plan.get('feature','Fashion Trend')}}
  checks['category_exact']=int(p['category_id'])==int(plan.get('category_id',o.b.load(f/'before_get.json')['product']['category_id']))
+ expected.update({name:set(values)for name,values in plan.get('extra_category_attributes',{}).items()})
  if(f/'public_style_prepared.json').exists():expected['Style']={'Platform Sneakers','Lace-up'}
  checks['formal_attributes_exact']=dict(attrs)==expected
  axes={str(a['attribute_id']):a['values']for a in p['product_sku']['sku_attributes']}

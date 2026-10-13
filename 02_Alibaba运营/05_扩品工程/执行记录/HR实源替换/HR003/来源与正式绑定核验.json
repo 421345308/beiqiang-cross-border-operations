@@ -1,0 +1,97 @@
+{
+  "family": "HR003",
+  "at": "2026-10-13T09:10:15.657479+00:00",
+  "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+  "source": {
+    "id": "src-hr-hr003-26nc0099",
+    "url": "https://hzmshoes.en.made-in-china.com/product/BYarxRpHuKWG/China-Custom-High-End-Business-Office-Formal-Suede-Loafers-Shoes-for-Men-Plus-Size-Walking-Style-Soft-Casual-Moccasins-Shoe-in-Summer.html",
+    "shop_url": "https://hzmshoes.en.made-in-china.com",
+    "supplier": "Guangzhou Weirui Shoes Co., Ltd.",
+    "model": "26NC0099",
+    "price": "未核当前进货报价",
+    "currency": "USD",
+    "unit": "双",
+    "price_terms": "历史已采用实款对应恢复；当前数量、价格、包装及交期逐单询价，不从平台售价或样品费反推采购价。",
+    "observed_at": "2026-09-28",
+    "evidence": [
+      "99_临时区/HR003_26NC0099_review_2026-09-28/highres_image_manifest.json",
+      "99_临时区/HR003_当前ABC图文复审_2026-09-29/bank_manifest.json",
+      "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR003/来源与正式绑定核验.json"
+    ]
+  },
+  "links": [
+    {
+      "id": "1601943312845",
+      "model": "HR003-A",
+      "formal_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943312845/formal_get.json",
+      "formal_observed_at": "2026-10-12T22:10:33.708425+00:00",
+      "checks": {
+        "approved_actual_product_images_match": true,
+        "whole_six_images_match_current_catalog": true,
+        "raw_photo_hashes": true,
+        "materials_match_specific_model_table": true,
+        "source_eu_cartesian": true,
+        "approved_y": true
+      },
+      "main_images": [
+        "https://sc04.alicdn.com/kf/H8829601093dd42fd8eb5bbcc87be3b455.jpg",
+        "https://sc04.alicdn.com/kf/H66913d7763d842cfab8f16cdad298ce0f.jpg",
+        "https://sc04.alicdn.com/kf/Hb0195f8e857c4eb2ad86ca61d06b96859.png",
+        "https://sc04.alicdn.com/kf/H499c3a93e62f417abc57cf58d6890567D.png",
+        "https://sc04.alicdn.com/kf/H3e2cd834c5704bc4840994681c22005aR.png",
+        "https://sc04.alicdn.com/kf/H87f03b584a964ed2870d08d2b2cbb56bi.png"
+      ],
+      "sku_count": 16
+    },
+    {
+      "id": "1601943335928",
+      "model": "HR003-B",
+      "formal_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943335928/formal_get.json",
+      "formal_observed_at": "2026-10-12T22:10:47.655171+00:00",
+      "checks": {
+        "approved_actual_product_images_match": true,
+        "whole_six_images_match_current_catalog": true,
+        "raw_photo_hashes": true,
+        "materials_match_specific_model_table": true,
+        "source_eu_cartesian": true,
+        "approved_y": true
+      },
+      "main_images": [
+        "https://sc04.alicdn.com/kf/H572da19e50c8436ab1682b91b6cef1cd1.jpg",
+        "https://sc04.alicdn.com/kf/H050569e9cf034b53b919b0530c21d7b2B.jpg",
+        "https://sc04.alicdn.com/kf/Hdbe658864777441387b12b1a21e128f1F.png",
+        "https://sc04.alicdn.com/kf/H961fbabc139f4b62a42cc69cdb5f34f2w.png",
+        "https://sc04.alicdn.com/kf/He25ba47997294dd0a860c70a9b1effad6.png",
+        "https://sc04.alicdn.com/kf/H74118dbe984d42059826fe1d3c4f995cS.png"
+      ],
+      "sku_count": 16
+    },
+    {
+      "id": "1601943467198",
+      "model": "HR003-C",
+      "formal_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943467198/formal_get.json",
+      "formal_observed_at": "2026-10-12T22:12:06.218246+00:00",
+      "checks": {
+        "approved_actual_product_images_match": true,
+        "whole_six_images_match_current_catalog": true,
+        "raw_photo_hashes": true,
+        "materials_match_specific_model_table": true,
+        "source_eu_cartesian": true,
+        "approved_y": true
+      },
+      "main_images": [
+        "https://sc04.alicdn.com/kf/He6682f21542f43fba9d8b99e21266dd5B.png",
+        "https://sc04.alicdn.com/kf/H66913d7763d842cfab8f16cdad298ce0f.jpg",
+        "https://sc04.alicdn.com/kf/He9edf00f3cc3466494350153bb5790e8t.png",
+        "https://sc04.alicdn.com/kf/H498e6eb114bc40ebb0e124713bac29f6t.png",
+        "https://sc04.alicdn.com/kf/H43dac1ecd61243fe95896ab1d3bf4076P.png",
+        "https://sc04.alicdn.com/kf/H6486fb0fc9f348ccae9706f99cbb67079.png"
+      ],
+      "sku_count": 16
+    }
+  ],
+  "basis": "Specific model table (Model26NC0099) states Suede upper/Genuine Leather lining/Rubber midsole and outsole; generic page attribute widget reverses upper/lining, so it is not substituted for the explicit model table. Original raw photo hashes and all current six-image sequences matched.",
+  "source_current_access": "2026-10-13 normal web retrieval returns the same exact model/specification table and public inquiry entry (provider cache). Direct public HTTP presents normal verification; no CAPTCHA was solved or bypassed. This is source-identity restoration, not current stock/price or direct-live-source verification.",
+  "platform_mutation": "NONE_EXISTING_ACTUAL_SHOE_PRESERVED",
+  "physical_stock": "NOT_CONFIRMED_ORDER_SPECIFIC"
+}

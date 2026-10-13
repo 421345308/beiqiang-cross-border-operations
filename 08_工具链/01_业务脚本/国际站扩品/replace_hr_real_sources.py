@@ -67,8 +67,9 @@ def prepare(family):
   cp=root.find("./field[@id='icbuCatProp']")
   for child in list(cp):cp.remove(child)
   cv=E.SubElement(cp,'complex-value')
-  for name,texts in [('Place of Origin',['China']),('Midsole Material',['Other']),('Outsole Material',['Rubber']),('Lining Material',[p['lining']]),('Upper Material',[p['upper']]),('Style',p['style']),('Closure Type',[p['closure']]),('Toe Style',['Round Toe'])]:set_attr(schema,cv,name,texts)
+  for name,texts in [('Place of Origin',['China']),('Midsole Material',[p.get('midsole','Other')]),('Outsole Material',[p.get('outsole','Rubber')]),('Lining Material',[p['lining']]),('Upper Material',[p['upper']]),('Style',p['style']),('Closure Type',[p['closure']]),('Toe Style',[p.get('toe_style','Round Toe')])]:set_attr(schema,cv,name,texts)
   for name,texts in [('Season',p['seasons']),('Feature',[p.get('feature','Fashion Trend')])]:set_attr(schema,cv,name,texts)
+  for name,texts in p.get('extra_category_attributes',{}).items():set_attr(schema,cv,name,texts)
   cv.append(contract.serialize_product_model(schema,f'{family}-{variant}'))
   colors=[]
   sp=root.find("./field[@id='saleProp']")

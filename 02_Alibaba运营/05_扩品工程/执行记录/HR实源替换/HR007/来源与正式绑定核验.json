@@ -1,0 +1,97 @@
+{
+  "family": "HR007",
+  "at": "2026-10-13T09:10:15.657479+00:00",
+  "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+  "source": {
+    "id": "src-hr-hr007-sh10015a-r-009",
+    "url": "https://wholesaler.alibaba.com/product-detail/sh10013a-New-model-men-canvas-shoes_60672146735.html",
+    "shop_url": "https://wholesaler.alibaba.com/product-detail/sh10013a-New-model-men-canvas-shoes_60672146735.html",
+    "supplier": "Hefei Shali Trade Co., Ltd.",
+    "model": "sh10015a-R-009",
+    "price": "未核当前进货报价",
+    "currency": "USD",
+    "unit": "双",
+    "price_terms": "历史已采用实款对应恢复；当前数量、价格、包装及交期逐单询价，不从平台售价或样品费反推采购价。",
+    "observed_at": "2026-09-28",
+    "evidence": [
+      "99_临时区/HR007_当前ABC图文复审_2026-09-29/ROOT_images_approved.json",
+      "99_临时区/HR007_当前ABC图文复审_2026-09-29/bank_manifest.json",
+      "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR007/来源与正式绑定核验.json"
+    ]
+  },
+  "links": [
+    {
+      "id": "1601943463020",
+      "model": "HR007-A",
+      "formal_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943463020/formal_get.json",
+      "formal_observed_at": "2026-10-12T22:11:53.650868+00:00",
+      "checks": {
+        "approved_actual_product_images_match": true,
+        "whole_six_images_match_current_catalog": true,
+        "raw_photo_hashes": true,
+        "materials_match_specific_model_table": true,
+        "source_eu_cartesian": true,
+        "approved_y": true
+      },
+      "main_images": [
+        "https://sc04.alicdn.com/kf/H550f959a1e8b47228d1dd4299ae23e806.jpg",
+        "https://sc04.alicdn.com/kf/Hf059173f2d624f35b5dfeff731cdbee9W.jpg",
+        "https://sc04.alicdn.com/kf/H5ffea45cd31b4928b8137765b5224859E.png",
+        "https://sc04.alicdn.com/kf/H26d7329dc57b4fc196eb24f7956b0df2a.png",
+        "https://sc04.alicdn.com/kf/H88509aeb1ee34be29f5fa81552fb5293l.png",
+        "https://sc04.alicdn.com/kf/H74cf8dcc588b4942af81f52473b413d3o.png"
+      ],
+      "sku_count": 60
+    },
+    {
+      "id": "1601943408495",
+      "model": "HR007-B",
+      "formal_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943408495/formal_get.json",
+      "formal_observed_at": "2026-10-12T22:11:13.455026+00:00",
+      "checks": {
+        "approved_actual_product_images_match": true,
+        "whole_six_images_match_current_catalog": true,
+        "raw_photo_hashes": true,
+        "materials_match_specific_model_table": true,
+        "source_eu_cartesian": true,
+        "approved_y": true
+      },
+      "main_images": [
+        "https://sc04.alicdn.com/kf/Hc8bbccaefb6b4225b69f3daff9aebaee1.jpg",
+        "https://sc04.alicdn.com/kf/H2e3c8bf963e94abf9736b30472bd8f9ak.jpg",
+        "https://sc04.alicdn.com/kf/H6a6cdb018bc043619d54f8104e8868f3t.png",
+        "https://sc04.alicdn.com/kf/H3c3e7fb989e04f7b91b63c21c66af012i.png",
+        "https://sc04.alicdn.com/kf/H8ca8937e0f27424cb82dab4763318916U.png",
+        "https://sc04.alicdn.com/kf/H079feb61e0504051a9a6fb65aac902bfK.png"
+      ],
+      "sku_count": 60
+    },
+    {
+      "id": "1601943332965",
+      "model": "HR007-C",
+      "formal_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943332965/formal_get.json",
+      "formal_observed_at": "2026-10-12T22:10:46.307040+00:00",
+      "checks": {
+        "approved_actual_product_images_match": true,
+        "whole_six_images_match_current_catalog": true,
+        "raw_photo_hashes": true,
+        "materials_match_specific_model_table": true,
+        "source_eu_cartesian": true,
+        "approved_y": true
+      },
+      "main_images": [
+        "https://sc04.alicdn.com/kf/Hc28279c3287c47f3a95bac67414481a3S.jpg",
+        "https://sc04.alicdn.com/kf/Hc3e24e569c7741b0b8e3a37cb17ba3535.jpg",
+        "https://sc04.alicdn.com/kf/H25bc73209f1c498288ec52810cece2987.png",
+        "https://sc04.alicdn.com/kf/He489413beda0436c8c43d8dd2fdbdaf3H.png",
+        "https://sc04.alicdn.com/kf/H9c8f1bc342e44058a87e8e6267c47cd0r.png",
+        "https://sc04.alicdn.com/kf/H2d86240f7abe4614aa87c48af829e716n.png"
+      ],
+      "sku_count": 60
+    }
+  ],
+  "basis": "Known accepted actual model facts and original-photo byte copies from the prior full visual review; current complete catalog six-image sequence, current formal material fields and color-EU Cartesian bindings must all match before replacing obsolete candidate metadata.",
+  "source_current_access": "Historical actual procurement route and source facts dated2026-09-28; no claim of fresh direct-source access, stock or current wholesale price. Retain actual style and confirm transaction terms per order.",
+  "platform_mutation": "NONE_EXISTING_ACTUAL_SHOE_PRESERVED",
+  "physical_stock": "NOT_CONFIRMED_ORDER_SPECIFIC"
+}

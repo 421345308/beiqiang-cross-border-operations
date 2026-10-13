@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-13T07:40:48.557425+00:00",
+  "at": "2026-10-13T09:10:47.177097+00:00",
   "priority_links": [
     {
       "family": "HR030",
@@ -35,38 +35,45 @@
       "family": "HR054",
       "model": "HR054-A",
       "id": "1601943673716",
-      "state": "REVIEWING"
+      "state": "FORMAL_FIELDS_SCORE_PASS"
     },
     {
       "family": "HR054",
       "model": "HR054-B",
       "id": "1601943741370",
-      "state": "REVIEWING"
+      "state": "FORMAL_FIELDS_SCORE_PASS"
     },
     {
       "family": "HR054",
       "model": "HR054-C",
       "id": "1601943737356",
-      "state": "REVIEWING"
+      "state": "FORMAL_FIELDS_SCORE_PASS"
+    },
+    {
+      "family": "HR020",
+      "model": "HR020-A",
+      "id": "1601943497861",
+      "state": "FORMAL_FIELDS_SCORE_PASS"
+    },
+    {
+      "family": "HR020",
+      "model": "HR020-B",
+      "id": "1601943530673",
+      "state": "FORMAL_FIELDS_SCORE_PASS"
+    },
+    {
+      "family": "HR020",
+      "model": "HR020-C",
+      "id": "1601943558469",
+      "state": "FORMAL_FIELDS_SCORE_PASS"
     }
   ],
   "other_hr_families_needing_per_family_source_binding_review": [
-    "HR003",
-    "HR004",
     "HR005",
-    "HR006",
-    "HR007",
-    "HR008",
     "HR009",
     "HR010",
-    "HR011",
-    "HR012",
-    "HR013",
-    "HR014",
-    "HR015",
     "HR017",
     "HR019",
-    "HR020",
     "HR022",
     "HR023",
     "HR024",
@@ -124,11 +131,11 @@
     "registered_hr_history": 203,
     "current_hr_ids_found": 177,
     "states": {
-      "FORMAL_FIELDS_SCORE_PASS": 4,
-      "REVIEWING": 4,
+      "FORMAL_FIELDS_SCORE_PASS": 10,
+      "REVIEWING": 1,
       "NOT_FOUND_IN_CURRENT_COMPLETE_CATALOG": 26,
-      "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE": 18,
-      "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW": 151
+      "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE": 48,
+      "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW": 118
     },
     "caution": "本轮未检出不等于下架/删除；旧候选或MISSING不证明现行页面缺实鞋。先核正式绑定，已采用实款保留并修资料。",
     "links": [
@@ -239,13 +246,13 @@
         "model": "HR054-A",
         "family": "HR054",
         "product_identity": "HR054",
-        "state": "REVIEWING",
+        "state": "FORMAL_FIELDS_SCORE_PASS",
         "current_title": "Women's Shoes Model HR054-A",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "bound_source_id": "src-hr-hr054-27975",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
           "src-hr-hr054-27975"
         ],
@@ -256,13 +263,13 @@
         "model": "HR054-B",
         "family": "HR054",
         "product_identity": "HR054",
-        "state": "REVIEWING",
+        "state": "FORMAL_FIELDS_SCORE_PASS",
         "current_title": "Women's Shoes Model HR054-B",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "bound_source_id": "src-hr-hr054-27975",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
           "src-hr-hr054-27975"
         ],
@@ -273,13 +280,13 @@
         "model": "HR054-C",
         "family": "HR054",
         "product_identity": "HR054",
-        "state": "REVIEWING",
+        "state": "FORMAL_FIELDS_SCORE_PASS",
         "current_title": "Women's Shoes Model HR054-C",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "bound_source_id": "src-hr-hr054-27975",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
           "src-hr-hr054-27975"
         ],
@@ -380,15 +387,15 @@
         "model": "HR003-A",
         "family": "HR003",
         "product_identity": "HR003",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Men's Perforated Suede Slip-On Loafers for Smart Casual Collections",
         "current_category_id": 202240835,
         "current_audit": "approved",
         "current_display": "Y",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "bound_source_id": "src-hr-hr003-26nc0099",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
-          "src-67cee5004a83"
+          "src-hr-hr003-26nc0099"
         ],
         "formal_proof": null
       },
@@ -397,15 +404,15 @@
         "model": "HR003-B",
         "family": "HR003",
         "product_identity": "HR003",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Men's Suede Moccasins with Genuine Leather Lining for Everyday Casual Wear",
         "current_category_id": 202240835,
         "current_audit": "approved",
         "current_display": "Y",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "bound_source_id": "src-hr-hr003-26nc0099",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
-          "src-67cee5004a83"
+          "src-hr-hr003-26nc0099"
         ],
         "formal_proof": null
       },
@@ -414,15 +421,15 @@
         "model": "HR003-C",
         "family": "HR003",
         "product_identity": "HR003",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Men's Suede Casual Loafers with Perforated Upper and Slip On Design",
         "current_category_id": 202240835,
         "current_audit": "approved",
         "current_display": "Y",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "bound_source_id": "src-hr-hr003-26nc0099",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
-          "src-67cee5004a83"
+          "src-hr-hr003-26nc0099"
         ],
         "formal_proof": null
       },
@@ -431,15 +438,15 @@
         "model": "HR004-A",
         "family": "HR004",
         "product_identity": "HR004",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Men's Leather Lace Up Casual Shoes with Round Apron Toe and Rubber Soles",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "bound_source_id": "src-hr-hr004-25qlfan15-36",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
-          "src-29a82eb9ba62"
+          "src-hr-hr004-25qlfan15-36"
         ],
         "formal_proof": null
       },
@@ -448,15 +455,15 @@
         "model": "HR004-B",
         "family": "HR004",
         "product_identity": "HR004",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Men's Two Eyelet Lace Up Shoes with Leather Upper and Genuine Leather Lining",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "bound_source_id": "src-hr-hr004-25qlfan15-36",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
-          "src-29a82eb9ba62"
+          "src-hr-hr004-25qlfan15-36"
         ],
         "formal_proof": null
       },
@@ -465,15 +472,15 @@
         "model": "HR004-C",
         "family": "HR004",
         "product_identity": "HR004",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Men's Casual Leather Shoes with Lace Up Closure for Smart Casual Outfits",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "bound_source_id": "src-hr-hr004-25qlfan15-36",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
-          "src-29a82eb9ba62"
+          "src-hr-hr004-25qlfan15-36"
         ],
         "formal_proof": null
       },
@@ -533,17 +540,15 @@
         "model": "HR006-A",
         "family": "HR006",
         "product_identity": "HR006",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Men's Suede Slip On Loafers with Braided Trim for Smart Casual Outfits",
         "current_category_id": 202240835,
         "current_audit": "approved",
         "current_display": "Y",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "bound_source_id": "src-hr-hr006-26nc0072",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
-          "src-b499bb089b3a",
-          "src-0f8bc349d9ce",
-          "src-1ed9afb5a5ae"
+          "src-hr-hr006-26nc0072"
         ],
         "formal_proof": null
       },
@@ -552,17 +557,15 @@
         "model": "HR006-B",
         "family": "HR006",
         "product_identity": "HR006",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Men's Suede Moccasins with Braided Trim and Apron-Toe Stitching for Casual Wear",
         "current_category_id": 202240835,
         "current_audit": "approved",
         "current_display": "Y",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "bound_source_id": "src-hr-hr006-26nc0072",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
-          "src-b499bb089b3a",
-          "src-0f8bc349d9ce",
-          "src-1ed9afb5a5ae"
+          "src-hr-hr006-26nc0072"
         ],
         "formal_proof": null
       },
@@ -571,17 +574,15 @@
         "model": "HR006-C",
         "family": "HR006",
         "product_identity": "HR006",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Men's Casual Suede Loafers with Genuine Leather Lining for Everyday Wear",
         "current_category_id": 202240835,
         "current_audit": "approved",
         "current_display": "Y",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "bound_source_id": "src-hr-hr006-26nc0072",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
-          "src-b499bb089b3a",
-          "src-0f8bc349d9ce",
-          "src-1ed9afb5a5ae"
+          "src-hr-hr006-26nc0072"
         ],
         "formal_proof": null
       },
@@ -590,16 +591,15 @@
         "model": "HR007-A",
         "family": "HR007",
         "product_identity": "HR007",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Men's Canvas Casual Sneakers with Lace Up Closure for Everyday Outfits",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "bound_source_id": "src-hr-hr007-sh10015a-r-009",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
-          "src-89eb9b6ece56",
-          "src-c0eff374dd6d"
+          "src-hr-hr007-sh10015a-r-009"
         ],
         "formal_proof": null
       },
@@ -608,16 +608,15 @@
         "model": "HR007-B",
         "family": "HR007",
         "product_identity": "HR007",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Men's Low Top Canvas Shoes with Cotton Fabric Lining for Everyday Casual Wear",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "bound_source_id": "src-hr-hr007-sh10015a-r-009",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
-          "src-89eb9b6ece56",
-          "src-c0eff374dd6d"
+          "src-hr-hr007-sh10015a-r-009"
         ],
         "formal_proof": null
       },
@@ -626,16 +625,15 @@
         "model": "HR007-C",
         "family": "HR007",
         "product_identity": "HR007",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Mens Casual Sneakers with Canvas Upper and Lace Up Design for Everyday Wear",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "bound_source_id": "src-hr-hr007-sh10015a-r-009",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
-          "src-89eb9b6ece56",
-          "src-c0eff374dd6d"
+          "src-hr-hr007-sh10015a-r-009"
         ],
         "formal_proof": null
       },
@@ -644,16 +642,15 @@
         "model": "HR008-A",
         "family": "HR008",
         "product_identity": "HR008",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Unisex PU Lace Up Casual Sneakers with Layered Sole Profile for Everyday Wear",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "bound_source_id": "src-hr-hr008-661",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
-          "src-fc7cd89d0814",
-          "src-ec11e7a32502"
+          "src-hr-hr008-661"
         ],
         "formal_proof": null
       },
@@ -662,16 +659,15 @@
         "model": "HR008-B",
         "family": "HR008",
         "product_identity": "HR008",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Unisex Low Top Lace Up Shoes with Paneled PU Upper and Mesh Lining",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "bound_source_id": "src-hr-hr008-661",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
-          "src-fc7cd89d0814",
-          "src-ec11e7a32502"
+          "src-hr-hr008-661"
         ],
         "formal_proof": null
       },
@@ -680,16 +676,15 @@
         "model": "HR008-C",
         "family": "HR008",
         "product_identity": "HR008",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Unisex Low Top Casual Sneakers with Lace Up Closure for Everyday Outfits",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "bound_source_id": "src-hr-hr008-661",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
-          "src-fc7cd89d0814",
-          "src-ec11e7a32502"
+          "src-hr-hr008-661"
         ],
         "formal_proof": null
       },
@@ -803,16 +798,15 @@
         "model": "HR011-A",
         "family": "HR011",
         "product_identity": "HR011",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Men's Chunky Lace Up Sneakers with Layered Panels for Everyday Casual Wear",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "bound_source_id": "src-hr-hr011-to12",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
-          "src-0c223e9e4c99",
-          "src-15bd571cf37e"
+          "src-hr-hr011-to12"
         ],
         "formal_proof": null
       },
@@ -821,16 +815,15 @@
         "model": "HR011-B",
         "family": "HR011",
         "product_identity": "HR011",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Men's Casual Sneakers with Mesh Lining and Rubber Soles for Daily Wear",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "bound_source_id": "src-hr-hr011-to12",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
-          "src-0c223e9e4c99",
-          "src-15bd571cf37e"
+          "src-hr-hr011-to12"
         ],
         "formal_proof": null
       },
@@ -839,16 +832,15 @@
         "model": "HR011-C",
         "family": "HR011",
         "product_identity": "HR011",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Men's Low Top Casual Sneakers with Chunky Sole Profile and Lace Up Design",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "bound_source_id": "src-hr-hr011-to12",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
-          "src-0c223e9e4c99",
-          "src-15bd571cf37e"
+          "src-hr-hr011-to12"
         ],
         "formal_proof": null
       },
@@ -857,15 +849,15 @@
         "model": "HR012-A",
         "family": "HR012",
         "product_identity": "HR012",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Men's Lace Up Casual Sneakers with Paneled Upper for Everyday Outfits",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "bound_source_id": "src-hr-hr012-ht03",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
-          "src-365fa1088ce4"
+          "src-hr-hr012-ht03"
         ],
         "formal_proof": null
       },
@@ -874,15 +866,15 @@
         "model": "HR012-B",
         "family": "HR012",
         "product_identity": "HR012",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Men's Low Top Sneakers with Mesh Lining and Rubber Soles for Casual Wear",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "bound_source_id": "src-hr-hr012-ht03",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
-          "src-365fa1088ce4"
+          "src-hr-hr012-ht03"
         ],
         "formal_proof": null
       },
@@ -891,15 +883,15 @@
         "model": "HR012-C",
         "family": "HR012",
         "product_identity": "HR012",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Mens Casual Sneakers with Lace Up Design and Layered Panels for Daily Wear",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "bound_source_id": "src-hr-hr012-ht03",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
-          "src-365fa1088ce4"
+          "src-hr-hr012-ht03"
         ],
         "formal_proof": null
       },
@@ -908,15 +900,15 @@
         "model": "HR013-A",
         "family": "HR013",
         "product_identity": "HR013",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Women's Suede Slip On Loafers with Stitched Edges for Everyday Casual Wear",
         "current_category_id": 202240827,
         "current_audit": "approved",
         "current_display": "Y",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "bound_source_id": "src-hr-hr013-23czyav066-3",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
-          "src-f9f3099a15ba"
+          "src-hr-hr013-23czyav066-3"
         ],
         "formal_proof": null
       },
@@ -925,15 +917,15 @@
         "model": "HR013-B",
         "family": "HR013",
         "product_identity": "HR013",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Women's Suede Flat Loafers with Leather Lining and Rubber Sole for Daily Wear",
         "current_category_id": 202240827,
         "current_audit": "approved",
         "current_display": "Y",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "bound_source_id": "src-hr-hr013-23czyav066-3",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
-          "src-f9f3099a15ba"
+          "src-hr-hr013-23czyav066-3"
         ],
         "formal_proof": null
       },
@@ -942,15 +934,15 @@
         "model": "HR013-C",
         "family": "HR013",
         "product_identity": "HR013",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Women's Suede Flat Loafers with Slip On Design for Everyday Casual Outfits",
         "current_category_id": 202240827,
         "current_audit": "approved",
         "current_display": "Y",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "bound_source_id": "src-hr-hr013-23czyav066-3",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
-          "src-f9f3099a15ba"
+          "src-hr-hr013-23czyav066-3"
         ],
         "formal_proof": null
       },
@@ -959,16 +951,15 @@
         "model": "HR014-A",
         "family": "HR014",
         "product_identity": "HR014",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Women's Suede Penny Loafers with Contrast Strap for Casual Wear",
         "current_category_id": 202240827,
         "current_audit": "approved",
         "current_display": "Y",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "bound_source_id": "src-hr-hr014-23ccxa23-37",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
-          "src-444ae2ca6df2",
-          "src-0b438ddc7090"
+          "src-hr-hr014-23ccxa23-37"
         ],
         "formal_proof": null
       },
@@ -977,16 +968,15 @@
         "model": "HR014-B",
         "family": "HR014",
         "product_identity": "HR014",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Women's Slip-On Loafers with Suede Lining and Rubber Sole for Everyday Wear",
         "current_category_id": 202240827,
         "current_audit": "approved",
         "current_display": "Y",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "bound_source_id": "src-hr-hr014-23ccxa23-37",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
-          "src-444ae2ca6df2",
-          "src-0b438ddc7090"
+          "src-hr-hr014-23ccxa23-37"
         ],
         "formal_proof": null
       },
@@ -995,16 +985,15 @@
         "model": "HR014-C",
         "family": "HR014",
         "product_identity": "HR014",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Women's Suede Penny Loafers with Slip On Design for Smart Casual Outfits",
         "current_category_id": 202240827,
         "current_audit": "approved",
         "current_display": "Y",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "bound_source_id": "src-hr-hr014-23ccxa23-37",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
-          "src-444ae2ca6df2",
-          "src-0b438ddc7090"
+          "src-hr-hr014-23ccxa23-37"
         ],
         "formal_proof": null
       },
@@ -1013,14 +1002,16 @@
         "model": "HR015-A",
         "family": "HR015",
         "product_identity": "HR015",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Women's Cowhide Leather Slip-On Loafers with Stitched Edges for Casual Wear",
         "current_category_id": 202240827,
         "current_audit": "approved",
         "current_display": "Y",
-        "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
+        "bound_source_id": "src-hr-hr015-24czya22-56",
+        "registry_source_state": "ADOPTED",
+        "candidate_source_ids": [
+          "src-hr-hr015-24czya22-56"
+        ],
         "formal_proof": null
       },
       {
@@ -1028,14 +1019,16 @@
         "model": "HR015-B",
         "family": "HR015",
         "product_identity": "HR015",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Women's Leather Casual Loafers with Segmented Rubber Sole for Everyday Wear",
         "current_category_id": 202240827,
         "current_audit": "approved",
         "current_display": "Y",
-        "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
+        "bound_source_id": "src-hr-hr015-24czya22-56",
+        "registry_source_state": "ADOPTED",
+        "candidate_source_ids": [
+          "src-hr-hr015-24czya22-56"
+        ],
         "formal_proof": null
       },
       {
@@ -1043,14 +1036,16 @@
         "model": "HR015-C",
         "family": "HR015",
         "product_identity": "HR015",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Women's Leather Slip On Loafers with Genuine Leather Lining for Casual Wear",
         "current_category_id": 202240827,
         "current_audit": "approved",
         "current_display": "Y",
-        "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
+        "bound_source_id": "src-hr-hr015-24czya22-56",
+        "registry_source_state": "ADOPTED",
+        "candidate_source_ids": [
+          "src-hr-hr015-24czya22-56"
+        ],
         "formal_proof": null
       },
       {
@@ -1244,45 +1239,51 @@
         "model": "HR020-A",
         "family": "HR020",
         "product_identity": "HR020",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "FORMAL_FIELDS_SCORE_PASS",
         "current_title": "Wholesale Shoes Model HR020-A",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
-        "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
-        "formal_proof": null
+        "bound_source_id": "src-hr-hr020-9917",
+        "registry_source_state": "ADOPTED",
+        "candidate_source_ids": [
+          "src-hr-hr020-9917"
+        ],
+        "formal_proof": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943497861/verification.json"
       },
       {
         "id": "1601943530673",
         "model": "HR020-B",
         "family": "HR020",
         "product_identity": "HR020",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "FORMAL_FIELDS_SCORE_PASS",
         "current_title": "Wholesale Shoes Model HR020-B",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
-        "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
-        "formal_proof": null
+        "bound_source_id": "src-hr-hr020-9917",
+        "registry_source_state": "ADOPTED",
+        "candidate_source_ids": [
+          "src-hr-hr020-9917"
+        ],
+        "formal_proof": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943530673/verification.json"
       },
       {
         "id": "1601943558469",
         "model": "HR020-C",
         "family": "HR020",
         "product_identity": "HR020",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "FORMAL_FIELDS_SCORE_PASS",
         "current_title": "Wholesale Men's Tan Perforated Slip On Walking Shoes Casual Loafer Sneakers EU 36-45 Model HR020-C",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
-        "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
-        "formal_proof": null
+        "bound_source_id": "src-hr-hr020-9917",
+        "registry_source_state": "ADOPTED",
+        "candidate_source_ids": [
+          "src-hr-hr020-9917"
+        ],
+        "formal_proof": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943558469/verification.json"
       },
       {
         "id": "1601943593293",

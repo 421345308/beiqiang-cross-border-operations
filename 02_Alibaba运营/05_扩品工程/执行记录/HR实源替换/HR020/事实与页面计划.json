@@ -1,0 +1,103 @@
+{
+  "source_artno": "9917",
+  "source_assets_root": "01_产品资产/01_原始数据包/HR020_9917",
+  "colors": [
+    "Black",
+    "Brown"
+  ],
+  "sizes": [
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44
+  ],
+  "upper": "Genuine Leather",
+  "lining": "Other",
+  "midsole": "Other",
+  "outsole": "Other",
+  "toe_style": "Closed Toe",
+  "closure": "Slip-On",
+  "style": [
+    "Casual",
+    "Slip-On"
+  ],
+  "extra_category_attributes": {
+    "Sandal Type": [
+      "Fisherman"
+    ]
+  },
+  "seasons": [
+    "Summer"
+  ],
+  "feature": "Fashion Trend",
+  "custom": [
+    "Shoe Profile",
+    "Closed-toe perforated slip-on sandal"
+  ],
+  "category_id": 201152907,
+  "local_intent_candidates": [
+    "男士闭趾/镂空套脚休闲凉鞋"
+  ],
+  "titles": {
+    "A": "Men's Closed Toe Leather Sandals Perforated Slip-On Casual Shoes with Side Cutouts for Summer Wholesale",
+    "B": "Men's Fisherman Style Leather Sandals Slip-On Closed Toe Summer Casual Shoes for Wholesale",
+    "C": "Men's Perforated Leather Slip-On Sandals Closed Toe Casual Shoes with Heel Loop for Summer Wholesale"
+  },
+  "keywords": "mens closed toe leather sandals perforated slip on fisherman summer casual shoes wholesale",
+  "highlights": "Closed-toe summer profile: A covered toe and heel combine with side openings for a casual sandal silhouette.\nPerforated cow-leather upper: Rows of small holes and larger side cutouts define the visible upper design.\nSlip-on opening: The low-cut opening and rear heel loop offer a lace-free dressing option.\nStitched panels and grooved tread: The source photos show stitched upper edges and a segmented outsole pattern.\nAssortment options: Black and Brown, EU 38-44. Plan your wholesale range with a preferred color-size mix.",
+  "tiers": [
+    [
+      2,
+      14.59
+    ],
+    [
+      50,
+      13.69
+    ],
+    [
+      100,
+      12.69
+    ]
+  ],
+  "fx_cny_per_usd": 6.6837,
+  "materials_evidence": [
+    "01_产品资产/01_原始数据包/HR020_9917/06.jpg",
+    "01_产品资产/01_原始数据包/HR020_9917/10.jpg"
+  ],
+  "material_conflict": "Source06/12 say PU outsole, source07 says rubber; no specific outsole composition claimed. Required field Other, sole geometry described only.",
+  "unknown_materials": [
+    "lining",
+    "midsole",
+    "outsole"
+  ],
+  "target_ids": {
+    "A": "1601943497861",
+    "B": "1601943530673",
+    "C": "1601943558469"
+  },
+  "page_state": "FORMAL_FIELDS_SCORE_PASS",
+  "no_claims": [
+    "tested anti-slip",
+    "waterproof",
+    "wide-toe-box width grade",
+    "medical benefit",
+    "physical stock"
+  ],
+  "upper_enum_basis": "Source specifically says cow leather (牛皮); destination Upper Material has Genuine Leather but no Cow Leather/custom input option. This encodes the stated leather composition, not a first-layer/certification/quality claim.",
+  "source_id": "src-hr-hr020-9917",
+  "source_evidence": [
+    "01_产品资产/01_原始数据包/HR020_9917/source.json",
+    "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR020/素材清单.json"
+  ],
+  "procurement_capability": "CURRENT_REAL_SHOE_AND_PROCUREMENT_ENTRY_VERIFIED_NOT_ORDER_STOCK",
+  "company_faq_source": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/通用FAQ与公司简介.json",
+  "do_not_claim": [
+    "physical stock",
+    "tested slip resistance",
+    "medical comfort",
+    "unverified midsole material"
+  ]
+}
