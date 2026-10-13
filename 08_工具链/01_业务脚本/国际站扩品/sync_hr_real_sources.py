@@ -62,5 +62,9 @@ def sync():
  errors=workspace.validate(d);assert not errors,errors
  generated=workspace.build(d)
  for path,raw in generated.items():workspace.write_generated(ROOT/path,raw)
+ # A successful platform readback alone is not double-sync completion.
+ # Check the source truth and all generated lookup entries before reporting it.
+ import audit_hr_source_consistency
+ audit_hr_source_consistency.main()
  print('LOCAL_DOUBLE_SYNC',len(summary),'priority links; remaining HR families to review',len(remaining))
 if __name__=='__main__':sync()
