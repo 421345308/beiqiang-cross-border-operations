@@ -1,69 +1,243 @@
 {
-  "state": "CHARACTER_ASSETS_GENERATED_AWAITING_USER_REVIEW",
-  "created_on": "2026-10-13",
+  "schema_version": 2,
+  "updated_on": "2026-10-13",
+  "state": "SEPARATED_REFERENCE_ASSETS_GENERATED_AWAITING_USER_REVIEW",
   "tool": "built-in image_gen",
-  "video_generation_submitted": false,
-  "characters": {
-    "owner": "fictional adult Chinese woman age24-27; low ponytail; sage-green cardigan, white tee, light-blue ankle-length straight jeans",
-    "dog": "red-white Pembroke Welsh corgi; white blaze; sky-blue collar with round blank silver tag"
-  },
-  "product": {
+  "paid_video_submitted": false,
+  "base_path": "PROJECT.md directory; all selected asset files below are project-relative",
+  "confirmed_direction": "young adult woman; photoreal live-action corgi in a practical vest; bright white unisex BQ028/7212 slip-on; characters, product, props and locations independent",
+  "selected_assets": [
+    {
+      "id": "OWNER_BODY",
+      "file": "generation/characters/owner/turnaround.png",
+      "role": "character_body_and_wardrobe",
+      "prompt": "Use case: identity-preserve. Asset type: professional PHOTOGRAPHIC character turnaround reference sheet, not a film still and not a storyboard. Reference image 1 is the sole identity and wardrobe source for the fictional adult woman. Reference image 2 is NOT needed for shoes: shoes will be provided separately downstream.\nMake a high-resolution landscape sheet in a precise 2-by-2 grid of four full-length STUDIO PHOTOGRAPHS of the SAME young Chinese woman from reference image 1, with matching face, age, skin, low black ponytail, tiny silver stud earrings, build and proportions. Her fixed outfit is exactly the sage-green short-sleeved cardigan worn open, plain white crew-neck tee and light-blue straight ankle-length jeans from the reference. For this BODY ASSET remove the shoes and have her wear plain white ankle socks: footwear identity is a separate product asset, so do not bake the new shoes into the character before the story purchase.\nTop-left: straight front view. Top-right: true LEFT profile looking toward the left edge. Bottom-left: true RIGHT profile looking toward the right edge. Bottom-right: straight rear view. Exactly four views, not four different people. Each panel fills most of its height with the whole body from top of ponytail to sock-covered feet, all limbs visible, no cropping, consistent head height and scale, ordinary healthy adult anatomy. Relaxed neutral upright stance, arms gently separated from torso so cardigan shape, hands and both legs are readable, no fashion pose. Face has neutral-friendly closed mouth, no dramatic smile. Rear view shows ponytail, back of cardigan and jeans; profiles genuinely show opposite sides, do not repeat front three-quarter images.\nPlain seamless LIGHT GRAY studio background and same soft neutral frontal light in every panel; no room, no furniture, no dog, no tablet, no brand, no decorative scene, no arbitrary accessories. Use natural photographic lens perspective (85mm), not illustration or engineering drawing, crisp realistic skin/knit/denim texture, no glamour smoothing, no CGI. Add only tiny black labels underneath each panel: FRONT, LEFT, RIGHT, BACK. Clean narrow grid gutters, no large border or logo. Landscape aspect ratio 4:3, largest practical resolution. The grid is only for comparison and identity reference; it is not four shots of a story.",
+      "input_images": [
+        "generation/characters/owner.png"
+      ],
+      "inherit": [
+        "adult body proportions",
+        "hair and outfit",
+        "front/opposite profiles/back"
+      ],
+      "exclude": [
+        "gray studio",
+        "four-panel layout",
+        "labels",
+        "standing pose",
+        "white socks as final story footwear"
+      ],
+      "qa": "All four requested directions visible, same cardigan/jeans/ponytail, feet not cropped. White socks intentionally separate identity from old/new shoes.",
+      "width": 1448,
+      "height": 1086,
+      "sha256": "af0e5f7d0e601d4dea93a355ec73781e3968f467b47b4302075d36cff0bfd1ae"
+    },
+    {
+      "id": "OWNER_FACE",
+      "file": "generation/characters/owner/face-angles.png",
+      "role": "character_face",
+      "prompt": "Use case: identity-preserve. Create one professional photographic FACE ANGLE identity reference sheet of the EXACT SAME fictional adult young Chinese woman from reference image 1, consistent with full-body turnaround reference image 2. Only these references define her identity; do not redesign the face. Three equal portrait panels in one horizontal row, each from top of head to upper chest, arranged left to right: frontal neutral view, three-quarter view facing camera-left 45 degrees, three-quarter view facing camera-right 45 degrees. Keep identical oval face, eyes/nose/lips/jaw, natural skin, realistic age24-27, low black ponytail, silver stud earrings, sage-green short-sleeve cardigan neckline and white tee. Calm neutral friendly closed-mouth expression in ALL panels, no glamour pose, no new makeup or earrings, no beauty filter or plastic skin. Hairline and ponytail attachment remain the same at different angles. Both three-quarter faces genuinely point opposite directions, not duplicate frontal crops. Pale gray seamless STUDIO background, same soft neutral daylight-balanced light, clearly visible pores and small natural skin texture, 85mm photographic lens, crisp enough to act as a face reference. No furniture, no dog, no tablet, no shoes, no fictional facial scars or tattoos, no CGI or illustration. Only tiny bottom labels FRONT, LEFT45, RIGHT45. Clean narrow white gutters between panels. Aspect ratio about 4:3; face closeups should occupy most of each panel. This is ONE character at THREE angles, not multiple characters and not a three-shot story.",
+      "input_images": [
+        "generation/characters/owner.png",
+        "generation/characters/owner/turnaround.png"
+      ],
+      "inherit": [
+        "face",
+        "skin",
+        "hairline",
+        "front/opposite three-quarter angles"
+      ],
+      "exclude": [
+        "panel borders",
+        "labels",
+        "studio light",
+        "portrait pose"
+      ],
+      "qa": "Front and opposite three-quarter views of same adult identity; natural skin. This is identity reference, not a three-person or three-shot layout.",
+      "width": 1448,
+      "height": 1086,
+      "sha256": "2abe6794d3118c879c9ff205d532d3509b8e2b06587d0d7d1bca41284fffe8ea"
+    },
+    {
+      "id": "DOG_BODY",
+      "file": "generation/characters/dog/turnaround.png",
+      "role": "dog_identity_and_costume",
+      "prompt": "Use case: identity-preserve. Asset type: photorealistic professional pet-character turnaround sheet. Use reference image 1 as the ONLY identity source for ONE same red-and-white Pembroke Welsh corgi: same attentive brown eyes, black nose, warm red-golden crown/back, white forehead-to-nose blaze, white muzzle/chest and four white paws, realistic ears and short adult corgi limbs. Add a real practical DOG VEST as the new fixed costume: sleeveless lightweight muted powder-blue cotton pet vest, cream narrow rib binding around neck, foreleg holes and lower hem. A single small flat mustard-yellow embroidered sun icon on the center of the upper BACK of the vest, NOT the chest, NOT duplicated around the garment; no letters or brand. No hood, no sleeves, no trousers, no boots. Keep the original light-blue collar and small plain silver round tag around the neck above the vest neckline, tag naturally visible in front but not magically visible from behind. Vest has a proper pet fit with clear foreleg holes and stops before hindquarters, no constricting chest, white fur remains visible at neck and paws.\nMake an exactly 2-by-2 grid of four studio PHOTOGRAPHS of this same clothed corgi standing naturally on all FOUR feet. Top-left straight FRONT. Top-right true LEFT profile facing frame-left. Bottom-left true RIGHT profile facing frame-right. Bottom-right straight BACK view showing rear hindquarters, natural short bob tail, dorsal sun embroidery and back of head/ears. No sitting views in this sheet, and no people; scale and shoulder height identical in each panel. Whole body and all ear tips, feet and tail completely inside each panel, no limb cropping. Maintain actual corgi proportions (roughly 28 cm at shoulder, short legs, longer compact torso), normal canine joints and paws, no human hands and no giant eyes. Calm alert natural expression where face visible. In profile the sun may be partly hidden because it is on the dorsal center, do not move it sideways for visibility.\nPlain pale-gray seamless studio floor/backdrop, same soft daylight-neutral lighting across every panel, natural fur and cotton weave detail, photographic 85mm lens perspective, no CGI, no cartoon, no plush-toy texture. Narrow clean panel gutters, tiny bottom labels FRONT, LEFT, RIGHT, BACK only. No tablet, room, furniture, props, leash, other animals or shoes. Landscape aspect ratio 4:3 at largest practical resolution. This is ONE dog from FOUR directions for identity/clothing consistency, not four animals and not story shots.",
+      "input_images": [
+        "generation/characters/dog.png"
+      ],
+      "inherit": [
+        "red-white corgi body/fur/blaze",
+        "sky-blue collar and silver round tag",
+        "powder-blue vest cream binding",
+        "single mustard-yellow sun on dorsal back"
+      ],
+      "exclude": [
+        "studio",
+        "four dogs",
+        "grid",
+        "labels",
+        "neutral stance"
+      ],
+      "qa": "Front, left/right profiles and back show the same fur/costume. Sun only on back; real canine anatomy without human hands.",
+      "width": 1448,
+      "height": 1086,
+      "sha256": "45310c7cc62e58564af6ddc9913c554a445d3e86ca09c96899c064342aab495f"
+    },
+    {
+      "id": "TABLET",
+      "file": "generation/props/tablet.png",
+      "role": "prop_structure",
+      "prompt": "Use case: product-mockup. Create a single PHOTOGRAPHIC prop design reference sheet for the same ONE unbranded realistic 10-inch dark charcoal-gray tablet with black bezel and a matching charcoal tri-fold protective case. Three equal panel STUDIO product photos, arranged horizontally, showing FRONT, BACK, and SIDE of the exact same object. The tablet is portrait orientation in all views, width-to-height 2:3, evenly rounded corners, thin black screen bezel, a tiny front-facing camera centered at the top bezel, a single small rear camera at upper left, no visible logos or text, matte dark gray body. The case folds into a stable triangular support behind the tablet, so it is always one tablet+case assembly; in side profile the triangle behind it is clearly legible and supports an approximately 65-degree screen angle from the horizontal floor. Front and back views show the SAME standing assembly rotated around its vertical axis for inspection, no orientation flip or new stand design. FRONT: camera sees the actual front black inactive screen with only soft neutral reflection, case mostly behind it. BACK: camera sees the matte rear of tablet and the same folded-case support, the rear camera position remains at object's top-left. SIDE: clearly show the tablet's thin edge, bezel/screen layer, rear case and triangular support structure in profile. The screen and the back are always distinct opposite sides; NEVER show a touchscreen printed on the back. Physical dimensions and proportions identical across all views, camera and case openings mechanically plausible. Plain pale-gray studio backdrop and tabletop, consistent neutral soft product light, realistic material texture and true soft shadows, no cartoon or schematic drawings. Whole object and all corners inside each panel, no people, dog, room, hands, shopping content, lettering, logos or extra devices. Tiny bottom panel labels FRONT, BACK, SIDE only. Landscape reference sheet about 4:3. This prop sheet defines one canonical tablet for downstream story shots; its front screen must face the user/dog during use, even if the camera then sees the tablet back.",
+      "input_images": [],
+      "inherit": [
+        "one charcoal tablet",
+        "front black touchscreen",
+        "back rear camera",
+        "tri-fold triangular support"
+      ],
+      "exclude": [
+        "three simultaneous devices",
+        "labels",
+        "studio surface"
+      ],
+      "qa": "Front/back/side distinguish screen from casing, front and rear camera positions, and triangular support. Touchscreen faces dog in use, not automatically camera.",
+      "width": 1448,
+      "height": 1086,
+      "sha256": "6a186333236b8ccdfd26eb29536f5ee75012bc8420414fda23ec499f884e5400"
+    },
+    {
+      "id": "LIVING_ROOM",
+      "file": "generation/locations/living-room.png",
+      "role": "location",
+      "prompt": "Use case: identity-preserve environment extraction. Reference image 1 supplies ONLY the apartment environment/material palette, not the woman, not her shoes, not her pose or original crop. Create ONE empty, believable real-world Chinese young woman's modest apartment living-room location reference photograph, WITHOUT people or animals and WITHOUT the tablet, shoes or plot props.\nPreserve the room's visual world: light-oak plank floor, off-white warm-neutral walls, a normal beige woven fabric sofa along the back-right wall, a plain low rectangular oak coffee table in front of sofa, oatmeal woven rug under sofa/table, tall daylight window on the left wall with pale linen curtains, low oak plant console under that window, one slim oak open bookcase with books and trailing green plant at the back-left corner, one small framed pale-toned landscape print on the right wall. Keep ordinary well-loved home scale (roughly 3.5m x 4.5m), no grand loft, no luxury mansion. The same main furniture silhouettes and simple cushions as reference. Include a glimpse of an open doorway near the far RIGHT edge leading toward the entry hall; do not duplicate windows or furniture.\nCamera from living-room entrance/front-left, eye height about1.2m, natural 28mm lens, wide view with vertical walls straight, full sofa/table/window and main circulation space readable. Make the foreground open oak floor a clear playable zone for a 28cm-shoulder corgi and floor-level tablet; coffee table stays further back beside sofa, not obstructing the dog's future foreground action. Empty room with realistic soft window daylight and normal neutral white balance, natural photographic texture in wood/linen/knit cushion/fabric, enough depth of field to identify spatial anchors. Elegant simple domestic lifestyle-ad setting, no CGI, no cartoon, no visible reflections of people, no dog, no human, no product shoes, no tablet, no staged human story. No text, captions, floor-plan drawings or panel grid. Landscape 16:9 high-resolution photograph. This is a LOCATION ASSET for later casting characters into different shots, not a finished frame.",
+      "input_images": [
+        "generation/characters/owner.png"
+      ],
+      "inherit": [
+        "window left",
+        "sofa right/back",
+        "oak shelf left/back",
+        "oak floor and furniture",
+        "open foreground",
+        "right entry opening"
+      ],
+      "exclude": [
+        "daylight when script specifies night",
+        "camera position for every shot"
+      ],
+      "qa": "Empty room, no baked-in character/dog/shoes/tablet. Window/sofa/bookcase and entry opening are visible spatial anchors.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "f11ee935ad2dc295beba0c2abf0cf99e949c54542859e0e2c8c017d043e161b1"
+    },
+    {
+      "id": "ENTRY_HALL",
+      "file": "generation/locations/entry-hall.png",
+      "role": "location",
+      "prompt": "Use case: photorealistic-natural environment-reference extension. Input image 1 is the canonical EMPTY apartment living room. Create ONE empty location photograph of the ENTRY HALL in this exact same apartment, reached through the opening on the far RIGHT of input image1. Preserve the same light-oak plank floor, warm off-white walls, ceiling height, domestic scale, visual materials and soft natural light. The actual dark walnut entry door visible at the right edge of the reference is now fully seen near center-right: same dark wood and simple vertical-panel design, black smart-lock unit with silver door lever on the left edge of door, correct hinges on right edge. Do not add a second entrance door. Camera is just inside the living-room/right doorway looking toward this single door, normal 28mm photographic lens, straight vertical walls. A low simple light-oak shoe cabinet/bench with two closed doors stands along the LEFT wall near the door, its top clear and usable for a future shoebox scene; a small round mirror hangs above it; one plain blue fabric leash on a wall hook at ordinary hand height, no readable markings. Beige doormat inside the door, no shoes, no shoebox, no people, no dog, no tablet. The leftmost foreground can show a narrow edge of the existing beige living-room sofa to make the connected location legible, but do not move the living room furniture into the hallway or add a sofa in the hall. Hall is modest and open enough for one adult and one corgi to stand with both feet/four paws visible, roughly2m wide, not a grand hotel lobby. Light enters indirectly from living room on camera-left; warm-neutral daylight, no dramatic lighting, realistic photographed wood/wall/linen texture. Landscape16:9, no multi-panel layout, no diagram, no text, no logos, no CGI. This is a clean separate EMPTY scene asset, not a finished character shot.",
+      "input_images": [
+        "generation/locations/living-room.png"
+      ],
+      "inherit": [
+        "same home materials",
+        "one walnut entrance door",
+        "left oak shoe cabinet",
+        "blue leash and round mirror"
+      ],
+      "exclude": [
+        "same camera position for every shot"
+      ],
+      "qa": "Empty connected-entry view shares oak floor, sofa edge and door style with room. It is a visual continuity reference, not a verified 3D reconstruction.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "aa34264e1de5e9847c286fbdc75b787f5f143dd2e7d53a21218532d4c9f221f1"
+    },
+    {
+      "id": "WALKING_PATH",
+      "file": "generation/locations/walking-path.png",
+      "role": "location",
+      "prompt": "Use case: photorealistic-natural. Asset type: EMPTY residential walking-path LOCATION reference, for a live-action Chinese young woman and her corgi in an everyday comfortable-shoe short comedy. One believable contemporary Chinese residential community courtyard, no resort or European arches. A flat medium-gray stone-tile pedestrian path about3m wide enters from foreground and leads toward a simple fork in the middle distance. One ordinary natural-wood slat bench with dark metal legs sits on camera-left foreground by low green shrubs, clearly visible seat/backrest/ground contact, with open ground beside it where a person and dog could stop. Several green shade trees form a relaxed canopy, planted beds and grass edges, one small flat walking route at the fork rather than stairs or a sports track. Pale beige ordinary apartment buildings subtly visible behind greenery in distance, not a luxury estate. Soft bright late-afternoon natural light and gentle dappled shadows; normal neutral color, clean but lived-in residential place. Camera eye height1.2m from along path, 35mm lens, straight perspective, clear bench-to-path-to-fork spatial anchors, natural depth of field so main scene layout is readable. The open gray paving will make bright white shoes stand out in later shots; do not insert any shoes now. Photograph textures of wood, bark, leaves and gray tiles realistic. Entire scene is EMPTY: no people, no animals, no tablets, no shoes, no signs, no text, no logos, no watermarks, no magic, no extreme blur, no cartoon or CG. Landscape16:9 reference photograph, no panels or storyboards. This is one canonical place to be reused for the uncomfortable old-shoe walk and the comfortable new-shoe walk, not different parks each time.",
+      "input_images": [],
+      "inherit": [
+        "left wooden bench",
+        "gray paving",
+        "fork ahead",
+        "residential trees/buildings"
+      ],
+      "exclude": [
+        "static camera for entire walk"
+      ],
+      "qa": "Empty ordinary residential path, visible bench and fork; reused for before/after walks to support story continuity.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "94484581d0b42eac2092a05531f1938c54893edbc6f4427dbfa6a74753a73e72"
+    }
+  ],
+  "product_reference": {
     "id": "BQ028",
     "model": "7212",
     "color": "White",
     "unisex": true,
-    "reference": "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/BQ028_BISCUIT/03_颜色图/white.jpg",
-    "fact_basis": "current product identity and 00_上架填写表.md; user says daily comfortable slip-ons may be worn by both sexes",
-    "scope": "casting styling candidate, not measured-performance proof"
+    "file": "../../../01_产品资产/02_可发布素材/00_最终上传/BQ028_BISCUIT/03_颜色图/white.jpg",
+    "role": "shoe_identity_not_performance_proof",
+    "note": "Original product image stays read-only. No generated shoe turnaround is used to prove original product structure."
   },
-  "assets": [
+  "input_only_sources": [
     {
-      "id": "owner",
-      "file": "owner.png",
-      "purpose": "woman identity, wardrobe and bright white shoe styling",
-      "prompt": "Use case: photorealistic-natural. Create ONE vertical full-body casting-reference photograph for a live-action Chinese short comedy selling everyday comfortable shoes. A fictional Chinese woman age 24-27, naturally attractive, approachable and expressive rather than glamorous: oval face, dark almond eyes, subtly arched eyebrows, natural skin with pores, warm slight mischievous smile, black hair in a neat low ponytail with a few natural wisps. Slim healthy ordinary adult proportions, approximately 165 cm tall. Wardrobe to remain fixed for the story: a light sage-green short-sleeved knit cardigan worn open over a plain white crew-neck T-shirt, light-blue straight ankle-length jeans, tiny silver stud earrings, no conspicuous accessories. Wear a matched pair of the REAL WHITE SHOES in input image 1. That image is ONLY a footwear product-identity reference, not a person/background/style reference. Preserve exact visible shoe design: white knit slip-on without laces, elastic low collar, ribbed knit toe region, wider patterned knit midfoot, distinctive white biscuit-style rubber-looking toe wrap with vertical ribs, white low sole with diagonal chevron sidewall pattern, small cream heel pull loop. Do not add shoelaces, logos or change the product into athletic sneakers. Both shoes clearly visible and in natural perspective, worn on proper feet. Simple relaxed standing three-quarter stance, both arms and hands unobscured, looking toward camera; whole body from head to soles, generous small space around all extremities, no cropping. Setting a believable modest bright Chinese apartment living room, off-white walls, light oak floor, edge of beige sofa in soft background, daylight from a side window. 50 mm real photographic lens, camera around waist height, crisp face and garments and footwear, soft true shadows, restrained neutral color, ordinary lifestyle casting photo with commercial-quality lighting. One person only, no dog, no other people, no tablet, no text, no layout panels or collage, no glamour retouch, no cartoon, no anime, no 3D-render feel, no doll skin. This is a character asset, not a finished promotional poster. Portrait aspect ratio about 3:4.",
-      "reference_images": [
-        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/BQ028_BISCUIT/03_颜色图/white.jpg"
-      ],
-      "qa": "Full adult body, face, both feet and shoes visible; natural room/light. Shoe rendering is a styling reference; formal video product details still require original product reference QA.",
-      "width": 1086,
-      "height": 1448,
-      "sha256": "493f438b7c8f4621ff9b0f77a2c4ceddcd62bde237fb89ac1ff6d4124c22194a"
+      "file": "generation/characters/owner.png",
+      "purpose": "original fictional woman identity anchor; not current production reference because includes room and new shoes"
     },
     {
-      "id": "dog",
-      "file": "dog.png",
-      "purpose": "dog identity, blaze/fur/collar, attentive head tilt",
-      "prompt": "Use case: photorealistic-natural. One clean vertical full-body casting reference PHOTO of a fictional, extremely charming and intelligent-looking young adult red-and-white Pembroke Welsh corgi, for a real-world live-action Chinese lifestyle short comedy. This is a real living dog, NOT a cartoon or anthropomorphic character. Approximately 28 cm shoulder height, healthy compact adult body, naturally short legs and long torso, large but realistic upright triangular ears, dark brown lively eyes with normal canine proportions and catchlights, black moist nose, fox-like muzzle, crisp white blaze from nose between eyes, white muzzle, chest and four white paws, warm reddish-golden tan crown/back/flanks. Natural fur fibers of varied lengths, whiskers, believable joints, clear separate forepaws and hind legs. Wearing a simple muted sky-blue fabric collar with a small plain silver round tag with no writing. It sits upright naturally on all canine haunches, front paws both planted distinctly on the oak floor, whole dog from ear tips to paws unobscured. Slight thoughtful head tilt and closed-mouth attentive almost mischievous expression, as if it has just noticed something interesting on a low table off-camera. Looks engaging and perceptive enough to be cast as the dog who secretly orders shoes for its owner, without human eyebrows, human grin or altered anatomy. Eye-level dog-height camera at three-quarter angle, natural photographic medium shot, face and full body sharp, enough space around it, restrained shallow background blur. Bright ordinary Chinese apartment living room: warm light-oak floor, soft beige fabric sofa, pale linen curtains, gentle side-window daylight, realistic home not luxury mansion. Elegant but natural lifestyle photography, accurate warm-neutral white balance, 50mm lens look, no orange cinematic tint. Only ONE dog, no people, no shoes, no tablet or shopping objects in this identity reference, no costumes, no human hands, no CGI, no anime, no plush toy look, no giant baby eyes, no lettering, no watermark. Portrait aspect ratio about 3:4.",
-      "reference_images": [],
-      "qa": "Real-looking corgi; planted front paws and seated hind limbs; no human hands, costume or cartoon features.",
-      "width": 1086,
-      "height": 1448,
-      "sha256": "3237d1556276648296e8c6dff0740b0b7ffafdbea930da7eb31eabb71eae3cf4"
-    },
-    {
-      "id": "tablet-pose",
-      "file": "tablet-pose.png",
-      "purpose": "paired identity/relative size plus plausible paw-to-tablet pose; not a final time-of-day purchase keyframe",
-      "prompt": "Use case: identity-preserve and photorealistic-natural compositing. Create ONE vertical believable live-action lifestyle photograph combining the exact fictional young woman from reference image 1 and the exact red-and-white corgi from reference image 2 in the SAME ordinary apartment. These are casting identity references: preserve the woman's face, adult proportions, low black ponytail, sage-green short-sleeved cardigan, white tee and light-blue jeans; preserve the corgi's exact white blaze, red-gold fur distribution, fox muzzle, upright ears, white chest and paws, sky-blue fabric collar and round plain silver tag. Photorealistic candid frame for a playful Chinese short comedy, no cartoon or humanized dog anatomy. Foreground action: the corgi sits naturally on the light oak floor beside a small plain black tablet in a low stand, tablet leaning back about 30 degrees and facing the dog. Its left front paw is planted on the floor for support, right front paw is gently raised and lightly touching the bottom part of the tablet screen as a real dog's paw; natural bent canine wrist, correct shoulders and short limbs, all other paws anatomically believable. Dog has focused curious eyes looking at the screen, ears attentive, head slightly tilted, expression alert and clever without a human grin. The tablet screen shows only simple softly out-of-focus shopping-like picture shapes, no readable text, no logo or brand. The device is an ordinary tablet with correct screen thickness and perspective, not a giant computer. Mid-background on the beige sofa, the same young woman sits relaxed reading a paperback, looking at her book rather than the tablet, subtly unaware of the dog's little plan. Keep her face recognizably the same, natural hands holding the book properly, torso and lap visible; her feet may be outside the composition so this is a character relationship and tablet-pose reference rather than the final shoe purchase shot. Warm-neutral daylight from the left window, ordinary lived-in room, pale linen curtain, an oak shelf and a plant, no luxury showroom and no fantasy props. Three-quarter camera perspective at roughly dog head height, not top-down; corgi and entire tablet fully visible in foreground, woman recognizable in background, realistic dog-to-adult scale (dog shoulder 28 cm vs woman's height 165 cm). Dog dominates lower two thirds while woman remains an important readable presence. Crisp dog eyes/fur and paw-to-tablet contact, only mild background blur so her identity is readable. Real sensor grain and natural shadows, 35mm photographic lens, commercial lifestyle film frame, no orange grading. No extra people, no extra animals, no dog human hands, no glasses, no dog clothes, no oversized baby eyes, no collage, no speech bubbles, no subtitles, no watermark. Portrait aspect ratio about 3:4.",
-      "reference_images": [
-        "owner.png",
-        "dog.png"
-      ],
-      "repair_prompt": "Edit the supplied live-action photograph, changing ONLY the tablet orientation and the corgi's raised forepaw/gaze interaction with it. Keep the exact young woman, her face/hair/clothes/reading pose, the exact corgi identity/fur blaze/size/blue collar, room, lighting, framing, oak floor and sofa unchanged. Critical physical correction: turn the entire tablet and its stand so that the SCREEN FACES THE CORGI, not the viewer. The camera should see chiefly the thin side and part of the plain dark BACK of the tablet, with only a narrow oblique sliver of screen visible; this is correct, no shopping content needs to be visible. Tablet placed on floor directly in front of the dog's raised paw, about 15 cm away from planted front paw. The dog must be able to look DOWN at the actual front touchscreen. Lower its raised front paw so the underside of the real furry canine paw makes light, clear contact with the near lower part of the touchscreen; a small gentle single tap pose, not gripping. Keep the other front paw planted and both hind paws naturally supporting a seated dog. Preserve natural short corgi legs and animal joints: no hands, no fingers, no elongating its legs. Align the attentive dog's pupils and head with the touchscreen. Tablet's low folding stand stays mechanically believable and stable on the floor, no extra device, no levitation. Everything remains a realistic photographed humorous situation with a real-looking dog, no cartoon, no fantasy effects, no letters, no watermarks. The woman remains unaware and continues reading in the background. Do not redesign the photo or change identities.",
-      "repair_reference": "built-in generation exec-c164c920-3e25-4adb-b31a-948250264522.png",
-      "qa": "Initial screen direction and hovering paw were corrected. Selected image shows tablet back to camera/screen facing dog, gaze downward and near-paw interaction. Static pose does not establish continuous operation or completed purchase; final order scene requires evening light and independent full-motion QA.",
-      "width": 1086,
-      "height": 1448,
-      "sha256": "caaf3f83a6d59e3d1b6febd12ac19ba5eea0f7001bd68e0f383c7523aa7aaf5d"
+      "file": "generation/characters/dog.png",
+      "purpose": "original fictional dog identity/fur anchor before adding vest; not current production reference because lacks final vest"
     }
   ],
-  "selection": {
-    "finals": [
-      "owner.png",
-      "dog.png",
-      "tablet-pose.png"
+  "discarded": {
+    "file": "generation/characters/tablet-pose.png",
+    "reason": "Rejected mixed composition with old wardrobe/prop assumptions; superseded by separate character/prop/location assets; remove from project and all current references",
+    "removed_from_project": true
+  },
+  "reference_usage": {
+    "mode": "LibTV Seedance2.5 multimodal reference planned; no generation authorized",
+    "boards": "Use boards as identity/design references, never as first frame or storyboard unless explicitly intended. Declare all views depict one subject. Do not inherit labels/grids/poses/background.",
+    "selection": "Select only useful assets per scene. Reference count maximum is not a target. If total entity count or board ambiguity requires independent angle images, derive those deliberately at preparation stage rather than filling the input limit.",
+    "example": "Images1-2: the same woman, body/wardrobe and face respectively. Image3: the only corgi, including vest. Image4: actual new shoe. Image5: only tablet prop. Images6-8: living room, entry and walkway, as applicable. Renumber against actual CLI upload order at submission; semantic asset IDs are not provider-native tokens.",
+    "before_after": "Character body has neutral white socks, not permanently attached new shoe. Script assigns unbranded old shoes before delivery and real BQ028 White after delivery.",
+    "contact": "Tablet front faces dog; camera may see back. Four canine paws/joints remain natural. Static board does not validate a tap or a whole walk."
+  },
+  "research": {
+    "checked_on": "2026-10-13",
+    "official_prompt_guide": "https://docs.volcengine.com/docs/ark/seedance-2-5-prompt-guide?lang=zh",
+    "official_model_guide": "https://docs.volcengine.com/docs/ark/seedance-2-5?lang=zh",
+    "case_mapping_reference": "https://github.com/LearnPrompt/awesome-seedance/blob/main/docs/templates/zh/character-reference-lock.md",
+    "cases_read": [
+      {
+        "source": "https://x.com/liyue_ai/status/2088956829590266002",
+        "local_source": "08_工具链/02_视频工具/awesome-seedance/docs/gallery-seedance-2-5-part-3.zh.md",
+        "observed": "Prompt individually locks identity, wardrobe, proportions and excludes reference background, composition and original light; original X page403, no independent full-clip review"
+      },
+      {
+        "source": "https://x.com/abxxai/status/2087189194720657649",
+        "local_source": "08_工具链/02_视频工具/awesome-seedance/docs/gallery-seedance-2-5-part-1.zh.md",
+        "observed": "Prompt separates location from hands/tools reference; reference mapping inspected, not full film quality or sales verified"
+      }
     ],
-    "discarded_scene_candidate": "First paired render not copied into project: tablet faced viewer and paw was beside device."
+    "provider_schema": "generation/workflow/seedance-model.json",
+    "provider_observed": {
+      "modelKey": "star-video2.5",
+      "image2video": [
+        1,
+        30
+      ],
+      "mixed_max_images": 30,
+      "duration": [
+        4,
+        30
+      ],
+      "resolution_default": "720p",
+      "auto_compliance_default": 1
+    },
+    "scope": "Official docs and current LibTV CLI schema checked. Multi-view is supported/useful for this small subject count, not a guarantee against deformation. Provider face acceptance and paid generation remain untested for these new sheets."
   }
 }
