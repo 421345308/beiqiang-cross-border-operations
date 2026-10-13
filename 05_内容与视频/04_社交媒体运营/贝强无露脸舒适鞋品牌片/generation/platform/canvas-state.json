@@ -1,0 +1,285 @@
+{
+  "project_uuid": "428c67fed30b443f99611efb7d50e9ff",
+  "canvas_url": "https://www.liblib.tv/canvas?projectId=428c67fed30b443f99611efb7d50e9ff",
+  "name": "贝强｜我家狗开始养我了",
+  "paid_authorization": false,
+  "generation_submitted": false,
+  "uploads": [
+    {
+      "asset_id": "OWNER_BODY",
+      "name": "人物｜女生身体与服装",
+      "nodeKey": "1eee6901-b837-43ba-bd38-9726b6cc5a13",
+      "file": "generation/characters/owner/turnaround.png",
+      "source_sha256": "af0e5f7d0e601d4dea93a355ec73781e3968f467b47b4302075d36cff0bfd1ae",
+      "position": [
+        0,
+        120
+      ]
+    },
+    {
+      "asset_id": "OWNER_FACE",
+      "name": "人物｜女生脸部角度",
+      "nodeKey": "b191be13-9fdf-4a30-991e-091e98e5e0e9",
+      "file": "generation/characters/owner/face-angles.png",
+      "source_sha256": "2abe6794d3118c879c9ff205d532d3509b8e2b06587d0d7d1bca41284fffe8ea",
+      "position": [
+        430,
+        120
+      ]
+    },
+    {
+      "asset_id": "DOG_BODY",
+      "name": "动物｜柯基与太阳背心",
+      "nodeKey": "a319adf8-8357-4f46-955b-f3f757177b5c",
+      "file": "generation/characters/dog/turnaround.png",
+      "source_sha256": "45310c7cc62e58564af6ddc9913c554a445d3e86ca09c96899c064342aab495f",
+      "position": [
+        860,
+        120
+      ]
+    },
+    {
+      "asset_id": "BQ028",
+      "name": "商品｜BQ028白色实图",
+      "nodeKey": "3776e01f-d4ee-4f21-9a68-22aac1ac7a79",
+      "file": "../../../01_产品资产/02_可发布素材/00_最终上传/BQ028_BISCUIT/03_颜色图/white.jpg",
+      "source_sha256": "78381b6fcd9efef9eaf1a71814d24e8465936e22d58a254d2527cd19eb7133f3",
+      "position": [
+        0,
+        710
+      ]
+    },
+    {
+      "asset_id": "OLD_SHOES",
+      "name": "道具｜购买前旧灰鞋",
+      "nodeKey": "a600a2ba-2d9c-487c-a29e-3b219c32fcbd",
+      "file": "generation/props/old-shoes.png",
+      "source_sha256": "8143b92450710932ac9200a6634425ffb149aad5804a1dbe0ad2ef6d397f289f",
+      "position": [
+        430,
+        710
+      ]
+    },
+    {
+      "asset_id": "TABLET",
+      "name": "道具｜平板正背与支架",
+      "nodeKey": "08017fcb-d5e3-44a9-af66-879aab2f195a",
+      "file": "generation/props/tablet.png",
+      "source_sha256": "6a186333236b8ccdfd26eb29536f5ee75012bc8420414fda23ec499f884e5400",
+      "position": [
+        860,
+        710
+      ]
+    },
+    {
+      "asset_id": "LIVING_ROOM",
+      "name": "场景｜客厅空景",
+      "nodeKey": "997bd16e-3d5e-4853-81a9-99d586799bf7",
+      "file": "generation/locations/living-room.png",
+      "source_sha256": "f11ee935ad2dc295beba0c2abf0cf99e949c54542859e0e2c8c017d043e161b1",
+      "position": [
+        0,
+        1300
+      ]
+    },
+    {
+      "asset_id": "ENTRY_HALL",
+      "name": "场景｜玄关空景",
+      "nodeKey": "863f592c-26ad-465f-a3f9-7323bb9fdd48",
+      "file": "generation/locations/entry-hall.png",
+      "source_sha256": "aa34264e1de5e9847c286fbdc75b787f5f143dd2e7d53a21218532d4c9f221f1",
+      "position": [
+        430,
+        1300
+      ]
+    },
+    {
+      "asset_id": "WALKING_PATH",
+      "name": "场景｜小区步道空景",
+      "nodeKey": "edb2a840-5a62-4191-b854-d47945dd753a",
+      "file": "generation/locations/walking-path.png",
+      "source_sha256": "94484581d0b42eac2092a05531f1938c54893edbc6f4427dbfa6a74753a73e72",
+      "position": [
+        860,
+        1300
+      ]
+    },
+    {
+      "asset_id": "S01",
+      "name": "S01｜狗仍想继续走，主人因旧鞋走久不舒服而停下",
+      "nodeKey": "7efef89d-8148-4f33-8387-f876e96194b6",
+      "file": "generation/shots/01-old-shoes-walk.png",
+      "source_sha256": "08057407514ecb3368d8dd8e8b84aed0a9fff4efc3ee858d8d1cf9f03ac68e2e",
+      "position": [
+        1450,
+        120
+      ]
+    },
+    {
+      "asset_id": "S02",
+      "name": "S02｜次日狗叼绳来约散步，主人因昨天鞋脚不适拒绝",
+      "nodeKey": "e870448e-727e-4c3e-9ed4-bb1c2af2d7c5",
+      "file": "generation/shots/02-not-today.png",
+      "source_sha256": "b9f69c16c9823a45c6aea005499c7f12597c84d41a5ffbdfaa3b098458952eb3",
+      "position": [
+        1910,
+        120
+      ]
+    },
+    {
+      "asset_id": "S03",
+      "name": "S03｜狗为恢复散步偷偷下单；平板有明确使用者和触控目的",
+      "nodeKey": "75353e11-fd71-44a0-9443-38d9ca21dd31",
+      "file": "generation/shots/03-dog-orders.png",
+      "source_sha256": "6c91c61779c834aa766c0498dee6f5aa05cdfddb5b19afbe57bb6f4952c82165",
+      "position": [
+        2370,
+        120
+      ]
+    },
+    {
+      "asset_id": "S04",
+      "name": "S04｜到货揭示狗买的鞋并呈现真实商品身份",
+      "nodeKey": "9f40aef7-dd64-4397-a4ad-e098b7c9198b",
+      "file": "generation/shots/04-shoes-arrive.png",
+      "source_sha256": "0a1c1117de2d9416b656a36858e257d08cfb6a503195f2df6e6fb71caf451f32",
+      "position": [
+        2830,
+        120
+      ]
+    },
+    {
+      "asset_id": "S05",
+      "name": "S05｜省去穿入动作，用已上脚的新鞋承接出门试走",
+      "nodeKey": "afd12283-1ca5-4dab-9b39-4defed4d5bb1",
+      "file": "generation/shots/05-ready-to-walk.png",
+      "source_sha256": "14c5078cca2677ebfd9b889a8b198295df862dd4d51d29d418c5202f02c0f90e",
+      "position": [
+        1450,
+        970
+      ]
+    },
+    {
+      "asset_id": "S06",
+      "name": "S06｜真正走出去体验舒适日常，完整同行而非原地踏步",
+      "nodeKey": "216e4fb0-1e52-4d6d-8be0-f29598f39150",
+      "file": "generation/shots/06-walking-together.png",
+      "source_sha256": "947a05f300daa429cee99e8329587e7595bcb6d431aebe84f8e30ec7f66d8996",
+      "position": [
+        1910,
+        970
+      ]
+    },
+    {
+      "asset_id": "S07",
+      "name": "S07｜再走一圈实现狗的愿望，回收狗养主人的喜剧反差",
+      "nodeKey": "db99c32d-aa7f-4e35-8900-720f95ae34e6",
+      "file": "generation/shots/07-one-more-lap.png",
+      "source_sha256": "337e9640dc47566414c7f8dc7666193380147ff5fe87ea47b5592456fc6a2673",
+      "position": [
+        2370,
+        970
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "name": "剧情镜头｜按用途逐镜审核",
+      "nodeKey": "0960dbc7-cd98-4595-8765-a303c7bc5207",
+      "type": "text",
+      "position": {
+        "x": 1450,
+        "y": -280
+      }
+    },
+    {
+      "name": "独立资产｜身份与实物",
+      "nodeKey": "3b84c9cd-0c1f-4c11-8024-c13136aeb07e",
+      "type": "text",
+      "position": {
+        "x": 0,
+        "y": -280
+      }
+    },
+    {
+      "name": "我家狗开始养我了｜30秒整条草稿",
+      "nodeKey": "5cd0d215-f745-4974-a0fd-dbd453a5956d",
+      "type": "video",
+      "position": {
+        "x": 3300,
+        "y": 160
+      }
+    },
+    {
+      "name": "整条30秒｜待审核，禁止生成",
+      "nodeKey": "74aabf0b-72b8-4875-a82d-e8007c9b2b2a",
+      "type": "text",
+      "position": {
+        "x": 3300,
+        "y": -280
+      }
+    }
+  ],
+  "draft_node_id": "5cd0d215-f745-4974-a0fd-dbd453a5956d",
+  "input_asset_ids": [
+    "OWNER_BODY",
+    "OWNER_FACE",
+    "DOG_BODY",
+    "BQ028",
+    "OLD_SHOES",
+    "TABLET",
+    "S01",
+    "S02",
+    "S03",
+    "S04",
+    "S05",
+    "S06",
+    "S07"
+  ],
+  "input_node_ids": [
+    "1eee6901-b837-43ba-bd38-9726b6cc5a13",
+    "b191be13-9fdf-4a30-991e-091e98e5e0e9",
+    "a319adf8-8357-4f46-955b-f3f757177b5c",
+    "3776e01f-d4ee-4f21-9a68-22aac1ac7a79",
+    "a600a2ba-2d9c-487c-a29e-3b219c32fcbd",
+    "08017fcb-d5e3-44a9-af66-879aab2f195a",
+    "7efef89d-8148-4f33-8387-f876e96194b6",
+    "e870448e-727e-4c3e-9ed4-bb1c2af2d7c5",
+    "75353e11-fd71-44a0-9443-38d9ca21dd31",
+    "9f40aef7-dd64-4397-a4ad-e098b7c9198b",
+    "afd12283-1ca5-4dab-9b39-4defed4d5bb1",
+    "216e4fb0-1e52-4d6d-8be0-f29598f39150",
+    "db99c32d-aa7f-4e35-8900-720f95ae34e6"
+  ],
+  "prompt_sha256": "c48dde887e31b9fa0f368a18980718a66de4ad0f0c082fb4778f013a8ab6e7b1",
+  "settings": {
+    "model": "Seedance 2.5",
+    "modeType": "image2video",
+    "ratio": "9:16",
+    "resolution": "720p",
+    "duration": 30,
+    "enableSound": "on",
+    "count": 1,
+    "autoCompliance": 1
+  },
+  "readback_checks": {
+    "20_nodes": true,
+    "all_16_images_present": true,
+    "13_reference_edges": true,
+    "reference_order": true,
+    "model": true,
+    "mode": true,
+    "duration": true,
+    "ratio": true,
+    "resolution": true,
+    "sound": true,
+    "count": true,
+    "compliance_enabled": true,
+    "full_prompt_preserved": true,
+    "no_video_output": true,
+    "no_task_submitted": true
+  },
+  "canvas_configured": true,
+  "quote_status": "not_verified",
+  "checked_on": "2026-10-13"
+}

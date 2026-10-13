@@ -227,7 +227,7 @@
     "removed_from_project": true
   },
   "reference_usage": {
-    "mode": "LibTV Seedance2.5 multimodal reference planned; no generation authorized",
+    "mode": "LibTV Seedance2.5 image2video reference configured; 13 connected inputs; no generation submitted or authorized",
     "boards": "Use boards as identity/design references, never as first frame or storyboard unless explicitly intended. Declare all views depict one subject. Do not inherit labels/grids/poses/background.",
     "selection": "Select only useful assets per scene. Reference count maximum is not a target. If total entity count or board ambiguity requires independent angle images, derive those deliberately at preparation stage rather than filling the input limit.",
     "example": "Images1-2: the same woman, body/wardrobe and face respectively. Image3: the only corgi, including vest. Image4: actual new shoe. Image5: only tablet prop. Images6-8: living room, entry and walkway, as applicable. Renumber against actual CLI upload order at submission; semantic asset IDs are not provider-native tokens.",
@@ -300,5 +300,6 @@
       "field": "owner_shoes",
       "equals": "BQ028"
     }
-  ]
+  ],
+  "platform_canvas": "generation/platform/canvas-state.json"
 }
