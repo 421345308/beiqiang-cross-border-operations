@@ -1,6 +1,6 @@
 {
   "requested_product_id": "1601969872083",
-  "observed_at_utc": "2026-10-13T21:42:08.161465+00:00",
+  "observed_at_utc": "2026-10-13T23:19:54.856605+00:00",
   "method": "alibaba.icbu.product.get",
   "response": {
     "product": {
@@ -22,7 +22,7 @@
       "struct_detail_product": true,
       "language": "ENGLISH",
       "is_smart_edit": false,
-      "gmt_modified": "2026-10-14 05:19:12",
+      "gmt_modified": "2026-10-14 07:04:16",
       "product_sku": {
         "skus": [
           {
@@ -353,65 +353,80 @@
           "images": [
             {
               "image_set": {
-                "name": "Customization capabilities",
-                "id": 550
+                "name": "Competitive advantages",
+                "id": 450
               },
-              "image_url": "https://sc04.alicdn.com/kf/H496f7579171f4370a1d47c3adf30001bK.jpg"
-            },
-            {
-              "image_set": {
-                "name": "Extended company profile",
-                "id": 750
-              },
-              "image_url": "https://sc04.alicdn.com/kf/H9f32c7ecea0f4d25bc5ddc9cd04c1e5dK.jpg"
-            },
-            {
-              "image_set": {
-                "name": "Packaging & shipping specifications",
-                "id": 700
-              },
-              "image_url": "https://sc04.alicdn.com/kf/H5f71c3cfb4064b51bb458d0a786cb402R.jpg"
-            },
-            {
-              "image_set": {
-                "name": "Production workflow",
-                "id": 600
-              },
-              "image_url": "https://sc04.alicdn.com/kf/H36e700f5c3ee447a80c035d8ae7521d9a.jpg"
+              "image_url": "https://sc04.alicdn.com/kf/H8779a3d5521c4cce910395f583af74505.png"
             },
             {
               "image_set": {
                 "name": "Company overview",
                 "id": 400
               },
-              "image_url": "https://sc04.alicdn.com/kf/Ha8c1682092424e778eadf945763e79daU.jpg"
+              "image_url": "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
+            },
+            {
+              "image_set": {
+                "name": "Production workflow",
+                "id": 600
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H76f31cce4cc0447a99b72496f0ae5c93l.png"
+            },
+            {
+              "image_set": {
+                "name": "Packaging & shipping specifications",
+                "id": 700
+              },
+              "image_url": "https://sc04.alicdn.com/kf/He558a164125f4bc295dfe3d70bb76066w.png"
+            },
+            {
+              "image_set": {
+                "name": "Customization capabilities",
+                "id": 550
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H2c23ba6ddeac47a686c0e1350c4ac294v.png"
+            },
+            {
+              "image_set": {
+                "name": "Packaging & shipping specifications",
+                "id": 700
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H7d0669b743e742c1a97e8108e6cc96eaV.png"
             }
           ]
         },
         "product_faq": [
           {
-            "question": "Which colors and sizes are listed?",
-            "answer": "Black and Sand, in sizes 38-44. Send the required quantity for each color and size so availability can be confirmed for your order."
+            "question": "Are you a factory or a trading company?",
+            "answer": "We are a footwear manufacturer based in Quanzhou, Fujian, China. We work with overseas B2B buyers on wholesale and OEM/ODM footwear projects."
           },
           {
-            "question": "What materials are confirmed?",
-            "answer": "Textile upper, molded decorative overlays and rubber outsole. If you need additional material specifications, include them with your inquiry for confirmation."
+            "question": "What is your minimum order quantity?",
+            "answer": "Small trial orders are welcome for existing styles; the minimum quantity is shown on each product page. For custom orders, the MOQ depends on the design, materials, branding and packaging."
           },
           {
-            "question": "What are the minimum order and quantity prices?",
-            "answer": "Minimum order: 2 pairs. 2-49 pairs: USD 18.37/pair; 50-99 pairs: USD 17.14/pair; 100+ pairs: USD 15.92/pair. Freight and order terms are quoted separately."
+            "question": "Can I mix colors and sizes in one order?",
+            "answer": "Yes. Mixed colors and sizes are supported for existing styles. Mixed-style orders can also be discussed according to the selected styles and order quantity."
           },
           {
-            "question": "Can all listed colors and sizes be supplied?",
-            "answer": "Availability is confirmed against your requested color, size and quantity breakdown before the order is finalized. The listed options are not a guarantee of current stock for every combination."
+            "question": "Can I order samples before a bulk order?",
+            "answer": "Yes. Samples can be arranged for you to check the workmanship and fit before bulk ordering. Sample and courier costs are quoted before payment."
           },
           {
-            "question": "What is the dispatch lead time?",
-            "answer": "Send your quantity and required dispatch date. Order-specific availability, packing and dispatch timing will be confirmed before the order is finalized."
+            "question": "What packaging options do you offer?",
+            "answer": "Shoe boxes and polybags are available packing options. Custom boxes, labels and carton markings can be planned around your order and brand requirements."
           },
           {
-            "question": "How can I request a quotation?",
-            "answer": "Send your color and size quantities, total quantity, destination and packing requirements. We will confirm the order details and provide an order-specific quotation."
+            "question": "Do you support logo customization and OEM/ODM?",
+            "answer": "Yes. We work with buyers on branding and footwear development. Send your logo artwork or design reference, target quantity and market requirements so we can develop a suitable proposal."
+          },
+          {
+            "question": "What is the lead time?",
+            "answer": "Lead time depends on product availability, order quantity and customization. Existing styles can usually be arranged sooner; the production or dispatch schedule is agreed when confirming the order."
+          },
+          {
+            "question": "How can you arrange shipping?",
+            "answer": "Samples and small shipments can use express courier. Bulk shipments can be planned by sea or air, or through your appointed forwarder. Send your destination and delivery target for a freight quotation."
           }
         ],
         "detail_image": {
@@ -425,17 +440,17 @@
             },
             {
               "image_set": {
-                "name": "Other product images",
-                "id": "350"
-              },
-              "image_url": "https://sc04.alicdn.com/kf/H1faa018d7e1949978e3c8e64bbf31dcd2.jpg"
-            },
-            {
-              "image_set": {
                 "name": "Detail shot",
                 "id": "300"
               },
               "image_url": "https://sc04.alicdn.com/kf/Ha186ea16e36e46a78ca418286413f00bX.jpg"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H1faa018d7e1949978e3c8e64bbf31dcd2.jpg"
             },
             {
               "image_set": {
@@ -447,7 +462,7 @@
           ]
         },
         "product_summary": "Textile upper with moulded overlays: Open knit zones combine with shaped quarter and heel panels for a layered casual sneaker profile.\n\nCord lacing: The front cord crosses through the eyelet panel, with toggle hardware shown in the actual close-up.\n\nSculpted rubber outsole: Diagonal ribs along the sidewall and the separate underside pattern are shown in original photographs.\n\nRear entry details: A pull loop, raised heel panel and contrast colour insert define the back of the shoe.\n\nTwo colour options: Sand and Black are listed in EU38-44 for wholesale colour-size assortments.",
-        "company_summary": "Company capabilities are shown below. Product-specific customization, samples, packing and dispatch arrangements are assessed against your order requirements before quotation."
+        "company_summary": "Quanzhou Beiqiang Footwear & Apparel Co., Ltd. is a footwear manufacturer based in Quanzhou, Fujian, China. We work with importers, wholesalers, brand owners and e-commerce businesses on wholesale and OEM/ODM footwear projects. From selecting existing styles to developing a design brief, reviewing samples and planning packaging, we help buyers turn their requirements into a clear order plan. Share your product direction and purchasing needs to discuss a suitable cooperation proposal."
       },
       "display": "Y",
       "pc_detail_url": "https://www.alibaba.com/product-detail/Textile-Casual-Lace-Up-Shoes-with_1601969872083.html",
@@ -539,8 +554,8 @@
       ],
       "status": "approved"
     },
-    "request_id": "0bbb637a17919277279783631",
-    "_trace_id_": "2141115b17919277278343257e0b9d"
+    "request_id": "21546a1d17919335946226082",
+    "_trace_id_": "212e559c17919335944774232e0e38"
   },
   "sanitized_fields": [
     "owner_member",

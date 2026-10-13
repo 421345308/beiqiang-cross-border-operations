@@ -18,6 +18,7 @@ ROOT = Path(__file__).resolve().parents[2]
 HR = '02_Alibaba运营/05_扩品工程/执行记录/HR实源替换'
 FACTORY = '02_Alibaba运营/06_图片与检查记录/共享工厂详情'
 REG = '02_Alibaba运营/05_扩品工程/数据/产品与链接台账.json'
+LUQI = '02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08'
 PRIVATE = {'owner_member','owner_member_display_name','owner_member_id',
            'access_token','refresh_token','app_secret','client_secret',
            'chatToken','buyer_email','buyer_phone','buyer_address',
@@ -79,6 +80,21 @@ def main():
     paths = [HR+'/'+name for name in ('README.md','scope.json','当前进度.json','质量修正计划.json','已有实款对应.json','双改与货源一致性核验.json')]
     paths += [p.relative_to(ROOT).as_posix()for p in (ROOT/HR).glob('*公开报价比较.json')]
     paths += [HR+'/商品/'+pid+'/historical_presence_get.json'for pid in historical_ids]
+    # Independent preparation is authorized while HR awaits review; no Luqi
+    # publication state is advanced. Only public sources/text/SHA records enter Git.
+    queue_path=LUQI+'/质量复核_2026-10-09/全分类处理队列.json'
+    queue=load(queue_path)
+    assert len(queue['rows'])==107
+    paths += [queue_path,LUQI+'/README.md','08_工具链/01_业务脚本/国际站扩品/collect_luqi_pending_sources.py']
+    for row in queue['rows']:
+        if row['publication_state']!='PENDING_STYLE_AND_QUALITY_REVIEW':continue
+        prefix=LUQI+'/'+row['style']+'准备'
+        index=ROOT/prefix/'01_产品来源原图/当前来源图像索引.json'
+        if index.exists()and load(index.relative_to(ROOT).as_posix()).get('collection')=='PUBLIC_HTTPS_NORMAL_TLS_PRODUCT_ONLY':
+            paths.append(index.relative_to(ROOT).as_posix())
+            for name in ('当前来源与色码核对.json','05_AI候选/AI颜色图审核.json','05_AI候选/AI主图审核.json','05_AI候选/AI选款图审核.json'):
+                file=ROOT/prefix/name
+                if file.exists():paths.append(file.relative_to(ROOT).as_posix())
     for family in scope['targets']:
         paths += [HR+'/'+family+'/'+name for name in ('事实与页面计划.json','当前状态.json','来源事实.json','素材清单.json','图片银行公开映射.json')]
         paths += [p.relative_to(ROOT).as_posix() for p in (ROOT/HR/family).glob('*.json') if p.name in ('AI主图审核.json','AI色码图审核.json','AI生成提示词.json','目标店内分组回读.json')]

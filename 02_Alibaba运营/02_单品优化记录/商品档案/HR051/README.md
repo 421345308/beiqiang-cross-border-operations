@@ -2,7 +2,7 @@
 
 此页由唯一台账生成，是本款唯一资料入口；修改事实到下方唯一字段文件或台账，平台正式值到按ID保存的回读原件。原始包只读，候选/历史材料不当当前线上素材。
 
-来源状态：`CANDIDATE`。下一步：实源图文按逐ID阶段推进，未提交的保留本地草稿，已提交的只作完整正式回读；公开呈现分开登记。
+来源状态：`ADOPTED`。下一步：当前来源、正式字段及实际评分已核并双改；本轮API验收完成，公开抽检全量后统一进行，继续其余HR。
 
 ## 当前资料与实物证据
 
@@ -80,7 +80,7 @@
 ### HR051-A · 1601969872083
 
 - 平台链接：[1601969872083](https://www.alibaba.com/product-detail/Textile-Casual-Lace-Up-Shoes-with_1601969872083.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601969872083/formal_get.json)；UTC 2026-10-13T21:42:08.161465+00:00。
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601969872083/formal_get.json)；UTC 2026-10-13T23:19:54.856605+00:00。
 - 当前正式标题：Textile Casual Lace-Up Shoes with Rubber Outsole and Moulded Quarter Panels for Wholesale Shoe Buyers
 - 审核/展示：approved / Y；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
