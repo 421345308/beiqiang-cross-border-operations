@@ -1,0 +1,38 @@
+{
+  "observed_on": "2026-10-14",
+  "search_scope": "Alibaba public shoe listings for plain lace-up casual shoes, black Derby shoes and closed-toe knit mules; no seller contacted.",
+  "queries": [
+    "site:alibaba.com/product-detail knit mule EVA slippers wholesale",
+    "site:alibaba.com/product-detail black derby shoes wholesale",
+    "site:alibaba.com/product-detail PVC Lace Up casual shoes",
+    "site:alibaba.com/product-detail knitted mules shoes"
+  ],
+  "observations": [
+    {
+      "url": "https://www.alibaba.com/product-detail/Business-Casual-for-M-en-Goog_1601368852450.html",
+      "observed": "Different mesh/PVC lace-up sport shoe in GBP with pieces pricing. Not B75; unit/specification/currency differ.",
+      "comparison_status": "REJECTED_NOT_SAME_SHOE"
+    },
+    {
+      "url": "https://www.alibaba.com/countrysearch/CN/black-derbies-shoe.html",
+      "observed": "Public search card for other black Derby shoesUSD11.87/MOQ1piece and leather/rubber versionsUSD21.99-32.99/MOQ1pair. No matchedD818 full quotation and exact photo identity.",
+      "comparison_status": "CATEGORY_REFERENCE_ONLY"
+    },
+    {
+      "url": "https://www.alibaba.com/discover/mens-black-derby.html",
+      "observed": "Different chunky Derby cardUSD5.87-6.75/MOQ30pairs. No exactD818 material/colour/spec/freight terms.",
+      "comparison_status": "CATEGORY_REFERENCE_ONLY"
+    },
+    {
+      "url": "https://www.alibaba.com/product-detail/Men-Slippers-2026-New-Summer-EVA_1601217085901.html",
+      "observed": "Open-toe allEVA slideJJ-1090,USD16.11/1-49pairs. Different construction fromB803 closed-toe knit mule.",
+      "comparison_status": "REJECTED_NOT_SAME_SHOE"
+    }
+  ],
+  "decision": "No exact same-model offer with comparable pair-unit, quantities, materials, packaging, customization, trade and freight terms verified. Do not claim lowest market price. Use documented sourcecost/three retailquantitytiers and evaluate actual fees per order.",
+  "families": [
+    "HR049",
+    "HR052",
+    "HR055"
+  ]
+}

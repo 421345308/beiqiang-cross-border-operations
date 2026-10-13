@@ -1,0 +1,423 @@
+{
+  "family": "HR041",
+  "state": "VISUAL_PASS",
+  "items": {
+    "M1": {
+      "path": "01_产品资产/02_可发布素材/HR041/M1.jpg",
+      "sha256": "8f413a405cf8dcacbd83109fc79b90bcbd565222ba9acd47e2c3361ae8edf385",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M2": {
+      "path": "01_产品资产/02_可发布素材/HR041/M2.jpg",
+      "sha256": "9b06001a747fe80ed29f240adbd6810362af707fa4a9464daf0b402238c766f8",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M3": {
+      "path": "01_产品资产/02_可发布素材/HR041/M3.jpg",
+      "sha256": "7b8fb174eae2797bb262810338a250cc3f06848e98a0d7db839c71f9e2939d06",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M4": {
+      "path": "01_产品资产/02_可发布素材/HR041/M4.jpg",
+      "sha256": "dcf7189d4156adf7b353c0fb40d9bf584ee0a8198179e1747203d60d994d17c0",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M5": {
+      "path": "01_产品资产/02_可发布素材/HR041/M5.jpg",
+      "sha256": "3f904cfdc26ee0da007adf9549576f0d16ce41897b7916cb6e5b1a6d7fff7696",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "D1": {
+      "path": "01_产品资产/02_可发布素材/HR041/D1.jpg",
+      "sha256": "f82f316f64c5bcf4a2ab8d1a6127cc4c2d4844c24eb516ded7e7d3a17e18cb6d",
+      "dimensions": [
+        1000,
+        1250
+      ]
+    },
+    "D2": {
+      "path": "01_产品资产/02_可发布素材/HR041/D2.jpg",
+      "sha256": "9ef60e2e64539982521576db8de072a678cca132d14d9dc1ca55b8f136ab12b5",
+      "dimensions": [
+        1000,
+        1250
+      ]
+    },
+    "D3": {
+      "path": "01_产品资产/02_可发布素材/HR041/D3.jpg",
+      "sha256": "c7c0626aa7b5987462ad26c79c1433aee88ee0e9ceb9d5f86be896be329ce560",
+      "dimensions": [
+        1000,
+        1250
+      ]
+    },
+    "D4": {
+      "path": "01_产品资产/02_可发布素材/HR041/D4.jpg",
+      "sha256": "b57e0f4a2543818db1b500e544ca7013b1a40d4d6d6b68780d1a9a37d95349f6",
+      "dimensions": [
+        1000,
+        1250
+      ]
+    },
+    "SKU_BLACK": {
+      "path": "01_产品资产/02_可发布素材/HR041/SKU_BLACK.jpg",
+      "sha256": "9d933e32795f62ef1907914882b58247ef6b351c5926fd55c52ff1d9a1b85c66",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "SKU_YELLOW": {
+      "path": "01_产品资产/02_可发布素材/HR041/SKU_YELLOW.jpg",
+      "sha256": "8bbacf0ff46f591a5562f875acf37ea658a7ca80e1b34d15d326278c94182a29",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M6": {
+      "path": "01_产品资产/02_可发布素材/共享素材/贝强公司简介图库.jpg",
+      "sha256": "5164b4d0ac008fb79a20d60419d21713b4f49b9ecea0a845d6c7de104030f51e",
+      "dimensions": [
+        1721,
+        914
+      ]
+    }
+  },
+  "image_roles": {
+    "M1": {
+      "buyer_question": "What actual zipper shoe is offered?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR041_C268\\17.jpg",
+          "crop": [
+            35,
+            295,
+            720,
+            735
+          ],
+          "native_effective_pixels": [
+            685,
+            440
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": null
+    },
+    "M2": {
+      "buyer_question": "Where is the front ZIP?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR041_C268\\08.jpg",
+          "crop": [
+            0,
+            195,
+            750,
+            970
+          ],
+          "native_effective_pixels": [
+            750,
+            775
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": "Centre-front zip detail"
+    },
+    "M3": {
+      "buyer_question": "What outsole is shown?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR041_C268\\23.jpg",
+          "crop": [
+            390,
+            440,
+            735,
+            625
+          ],
+          "native_effective_pixels": [
+            345,
+            185
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": "Red underside pattern"
+    },
+    "M4": {
+      "buyer_question": "Which colour and EU size options are offered?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR041_C268\\23.jpg",
+          "crop": [
+            0,
+            130,
+            750,
+            340
+          ],
+          "native_effective_pixels": [
+            750,
+            210
+          ],
+          "uniform_resize": true
+        },
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR041_C268\\22.jpg",
+          "crop": [
+            0,
+            110,
+            750,
+            310
+          ],
+          "native_effective_pixels": [
+            750,
+            200
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [
+        {
+          "value": "Black",
+          "xy": [
+            45,
+            505
+          ],
+          "size": 27
+        },
+        {
+          "value": "Yellow",
+          "xy": [
+            45,
+            845
+          ],
+          "size": 27
+        },
+        {
+          "value": "EU 39-44",
+          "xy": [
+            45,
+            945
+          ],
+          "size": 30
+        }
+      ],
+      "title": "2 colour directions"
+    },
+    "M5": {
+      "buyer_question": "What is the collar and pull loop?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR041_C268\\14.jpg",
+          "crop": [
+            0,
+            120,
+            750,
+            785
+          ],
+          "native_effective_pixels": [
+            750,
+            665
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": "Collar & rear loop"
+    },
+    "D1": {
+      "buyer_question": "How does the low-top shoe look when worn?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR041_C268\\21.jpg",
+          "crop": [
+            0,
+            115,
+            750,
+            900
+          ],
+          "native_effective_pixels": [
+            750,
+            785
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": "Black in everyday wear"
+    },
+    "D2": {
+      "buyer_question": "How do the zip strip and eyelets relate?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR041_C268\\07.jpg",
+          "crop": [
+            0,
+            280,
+            750,
+            1025
+          ],
+          "native_effective_pixels": [
+            750,
+            745
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": "Front closure layout"
+    },
+    "D3": {
+      "buyer_question": "What whole side profile is offered?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR041_C268\\15.jpg",
+          "crop": [
+            0,
+            30,
+            750,
+            975
+          ],
+          "native_effective_pixels": [
+            750,
+            945
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": "Yellow side & quarter profile"
+    },
+    "D4": {
+      "buyer_question": "Which colour and EU size options are offered?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR041_C268\\23.jpg",
+          "crop": [
+            0,
+            130,
+            750,
+            340
+          ],
+          "native_effective_pixels": [
+            750,
+            210
+          ],
+          "uniform_resize": true
+        },
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR041_C268\\22.jpg",
+          "crop": [
+            0,
+            110,
+            750,
+            310
+          ],
+          "native_effective_pixels": [
+            750,
+            200
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [
+        {
+          "value": "Black",
+          "xy": [
+            45,
+            575
+          ],
+          "size": 27
+        },
+        {
+          "value": "Yellow",
+          "xy": [
+            45,
+            1015
+          ],
+          "size": 27
+        },
+        {
+          "value": "EU 39-44",
+          "xy": [
+            45,
+            1175
+          ],
+          "size": 30
+        }
+      ],
+      "title": "2 colour directions"
+    },
+    "SKU_BLACK": {
+      "buyer_question": "Which colour is this SKU?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR041_C268\\23.jpg",
+          "crop": [
+            0,
+            130,
+            750,
+            340
+          ],
+          "native_effective_pixels": [
+            750,
+            210
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": null
+    },
+    "SKU_YELLOW": {
+      "buyer_question": "Which colour is this SKU?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR041_C268\\22.jpg",
+          "crop": [
+            0,
+            110,
+            750,
+            310
+          ],
+          "native_effective_pixels": [
+            750,
+            200
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": null
+    },
+    "M6": {
+      "buyer_question": "Who will coordinate the footwear order?",
+      "shared_approved_company_image": "01_产品资产/02_可发布素材/共享素材/贝强公司简介图库.jpg"
+    }
+  },
+  "review": {
+    "observed_on": "2026-10-14",
+    "scope": "All38 gallery/detail/SKU roles visually reviewed on complete contact sheets and crop/colour focal frames. Source shoe geometry and exact colours retained; no old concept image or invented outsole.",
+    "corrections": "HR037WhiteGrey complete sole boundary restored and Chinese header removed; HR032 two-colour chart uses original standalone profiles with footlength chart excluded.",
+    "public_pixel_qa": "NOT_CLAIMED_API_ONLY_BATCH"
+  }
+}

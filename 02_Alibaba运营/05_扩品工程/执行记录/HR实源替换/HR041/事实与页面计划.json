@@ -1,0 +1,434 @@
+{
+  "candidate": "wyxy_2490168",
+  "source_artno": "C268",
+  "supplier": "唯一鞋业",
+  "source_url": "https://wyxy.sooxie.com/detail/2490168",
+  "source_price_cny": 42,
+  "source_color_labels": [
+    "黑色",
+    "黄色"
+  ],
+  "colors": [
+    "Black",
+    "Yellow"
+  ],
+  "sizes": [
+    39,
+    40,
+    41,
+    42,
+    43,
+    44
+  ],
+  "upper": "Other",
+  "outsole": "Other",
+  "closure": "ZIP",
+  "target_ids": {
+    "A": "1601943614836",
+    "B": "1601943641737",
+    "C": "1601943608942"
+  },
+  "local_intent_candidates": [
+    "前拉链低帮休闲鞋"
+  ],
+  "materials_evidence": [
+    "Specific source says comfortableupper andelasticsole, not chemical/fibre components. Required materialOther only; no Canvas,Cotton,Leather,Rubber orEVA inference from appearance.",
+    "Actual23frames show centre-frontZIP strip, eyelet rows/cord details, contrast stitching, rearloop and lowcollar. OldHR041 sideZIP/holes must not be transferred.",
+    "Source19/22/23 actual bottom is red for both colours. Selected source18 IKEA backdrop excluded; source genericSPORT markings retained on actualshoe, no unbranded promise.",
+    "CurrentsourceC268/CNY42/BlackYellow/EU39-44 and procurement entry retained; no measuredcushioning/grip/stock guarantee."
+  ],
+  "dedup": "No C268/sameURL source adoption. Compared HR049/B75 plain lace-only lowtops andHR036/1936 panelled lace sneaker: C268 centred zipper strip is a different key closure structure; not a colour-only variant.",
+  "do_not_claim": [
+    "physical stock",
+    "tested slip resistance",
+    "medical comfort",
+    "unverified midsole material"
+  ],
+  "custom": [
+    "Shoe Profile",
+    "Front zip; eyelet trim; contrast seams; low collar; rear loop"
+  ],
+  "titles": {
+    "A": "Front-Zip Low Top Casual Shoes with Contrast Stitching and Rear Pull Tab for Wholesale Footwear Collections",
+    "B": "Zip Closure Casual Sneakers with Eyelet Detail and Rounded Toe for Wholesale Shoe Assortments",
+    "C": "Low Collar Front Zipper Casual Shoes with Contrast Seam Detail and Textured Sole for Footwear Buyers"
+  },
+  "keywords": [
+    "Front Zip Casual Shoes",
+    "Low Top Zipper Sneakers",
+    "Contrast Stitching Casual Footwear"
+  ],
+  "highlights": "Centre-front zip: A zipper runs along the centre of the front opening, providing the defining closure of this low-top casual shoe.\n\nContrast seam detail: Pale stitching traces the quarter and heel panels, with eyelet and cord details framing the zip strip.\n\nRounded toe silhouette: A plain rounded forefoot sits above a raised light-coloured sole band for a clean casual profile.\n\nRear pull loop: The low collar has a short centre-back loop, shown clearly in the side and paired shoe views.\n\nTwo colour directions: Black and Yellow are listed in EU39-44, with a red underside shown in the source photographs.",
+  "assets_layout": {
+    "M1": {
+      "buyer_question": "What actual zipper shoe is offered?",
+      "title": null,
+      "photos": [
+        {
+          "index": 17,
+          "box": [
+            15,
+            15,
+            985,
+            985
+          ],
+          "crop": [
+            35,
+            295,
+            720,
+            735
+          ]
+        }
+      ]
+    },
+    "M2": {
+      "buyer_question": "Where is the front ZIP?",
+      "title": "Centre-front zip detail",
+      "subtitle": "Yellow upper with the actual metal zip pull.",
+      "photos": [
+        {
+          "index": 8,
+          "box": [
+            45,
+            215,
+            955,
+            935
+          ],
+          "crop": [
+            0,
+            195,
+            750,
+            970
+          ]
+        }
+      ]
+    },
+    "M3": {
+      "buyer_question": "What outsole is shown?",
+      "title": "Red underside pattern",
+      "subtitle": "Actual Black option outsole view.",
+      "photos": [
+        {
+          "index": 23,
+          "box": [
+            45,
+            215,
+            955,
+            935
+          ],
+          "crop": [
+            390,
+            440,
+            735,
+            625
+          ]
+        }
+      ]
+    },
+    "M4": {
+      "buyer_question": "Which colour and EU size options are offered?",
+      "title": "2 colour directions",
+      "subtitle": "Same construction across the listed colour options.",
+      "photos": [
+        {
+          "index": 23,
+          "box": [
+            45,
+            230,
+            955,
+            495
+          ],
+          "crop": [
+            0,
+            130,
+            750,
+            340
+          ]
+        },
+        {
+          "index": 22,
+          "box": [
+            45,
+            570,
+            955,
+            835
+          ],
+          "crop": [
+            0,
+            110,
+            750,
+            310
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "Black",
+          "xy": [
+            45,
+            505
+          ],
+          "size": 27
+        },
+        {
+          "value": "Yellow",
+          "xy": [
+            45,
+            845
+          ],
+          "size": 27
+        },
+        {
+          "value": "EU 39-44",
+          "xy": [
+            45,
+            945
+          ],
+          "size": 30
+        }
+      ]
+    },
+    "M5": {
+      "buyer_question": "What is the collar and pull loop?",
+      "title": "Collar & rear loop",
+      "subtitle": "Yellow side view with the low entry.",
+      "photos": [
+        {
+          "index": 14,
+          "box": [
+            45,
+            215,
+            955,
+            935
+          ],
+          "crop": [
+            0,
+            120,
+            750,
+            785
+          ]
+        }
+      ]
+    },
+    "D1": {
+      "buyer_question": "How does the low-top shoe look when worn?",
+      "title": "Black in everyday wear",
+      "subtitle": "Zip strip and light sole band on the actual shoe.",
+      "photos": [
+        {
+          "index": 21,
+          "box": [
+            45,
+            215,
+            955,
+            1085
+          ],
+          "crop": [
+            0,
+            115,
+            750,
+            900
+          ]
+        }
+      ]
+    },
+    "D2": {
+      "buyer_question": "How do the zip strip and eyelets relate?",
+      "title": "Front closure layout",
+      "subtitle": "Actual Yellow toe and zip strip shown together.",
+      "photos": [
+        {
+          "index": 7,
+          "box": [
+            45,
+            215,
+            955,
+            1085
+          ],
+          "crop": [
+            0,
+            280,
+            750,
+            1025
+          ]
+        }
+      ]
+    },
+    "D3": {
+      "buyer_question": "What whole side profile is offered?",
+      "title": "Yellow side & quarter profile",
+      "subtitle": "Contrast seams and the low collar.",
+      "photos": [
+        {
+          "index": 15,
+          "box": [
+            45,
+            215,
+            955,
+            1085
+          ],
+          "crop": [
+            0,
+            30,
+            750,
+            975
+          ]
+        }
+      ]
+    },
+    "D4": {
+      "buyer_question": "Which colour and EU size options are offered?",
+      "title": "2 colour directions",
+      "subtitle": "Same construction across the listed colour options.",
+      "photos": [
+        {
+          "index": 23,
+          "box": [
+            45,
+            230,
+            955,
+            565
+          ],
+          "crop": [
+            0,
+            130,
+            750,
+            340
+          ]
+        },
+        {
+          "index": 22,
+          "box": [
+            45,
+            670,
+            955,
+            1005
+          ],
+          "crop": [
+            0,
+            110,
+            750,
+            310
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "Black",
+          "xy": [
+            45,
+            575
+          ],
+          "size": 27
+        },
+        {
+          "value": "Yellow",
+          "xy": [
+            45,
+            1015
+          ],
+          "size": 27
+        },
+        {
+          "value": "EU 39-44",
+          "xy": [
+            45,
+            1175
+          ],
+          "size": 30
+        }
+      ]
+    },
+    "SKU_BLACK": {
+      "buyer_question": "Which colour is this SKU?",
+      "title": null,
+      "photos": [
+        {
+          "index": 23,
+          "box": [
+            25,
+            25,
+            975,
+            975
+          ],
+          "crop": [
+            0,
+            130,
+            750,
+            340
+          ]
+        }
+      ]
+    },
+    "SKU_YELLOW": {
+      "buyer_question": "Which colour is this SKU?",
+      "title": null,
+      "photos": [
+        {
+          "index": 22,
+          "box": [
+            25,
+            25,
+            975,
+            975
+          ],
+          "crop": [
+            0,
+            110,
+            750,
+            310
+          ]
+        }
+      ]
+    }
+  },
+  "source_assets_root": "01_产品资产/01_原始数据包/HR041_C268",
+  "source_date": "2026-10-14",
+  "fx_cny_per_usd": 6.6837,
+  "tiers": [
+    [
+      2,
+      "9.43"
+    ],
+    [
+      50,
+      "8.80"
+    ],
+    [
+      100,
+      "8.17"
+    ]
+  ],
+  "page_state": "REVIEW_PENDING",
+  "category_id": 201334413,
+  "platform_group_id": 973003809,
+  "platform_group_name": "Lace-Up Casual Shoes",
+  "company_faq_source": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/通用FAQ与公司简介.json",
+  "seasons": [
+    "All Seasons"
+  ],
+  "feature": "Fashion Trend",
+  "style": [
+    "Casual Sneakers"
+  ],
+  "lining": "Other",
+  "midsole": "Other",
+  "selection_review": {
+    "state": "REVIEWED_ADOPT",
+    "private_backend_evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/经营数据与选款.json",
+    "reason": "HR041 September67exposures/7clicks/3TM, recent14exposures/1click. Preserve low-top casualzipper direction of old perforated lace-and-side-zip concept; adopt actualC268 frontzip shoe, clearly change to actual centred zip construction instead of pretending same exact shoe. PublicCNY42 cost and23same-shoe photos verified.",
+    "cost_usd": 6.283944521746936,
+    "gross_difference_usd": [
+      3.1461,
+      2.5161,
+      1.8861
+    ],
+    "comparison_limit": "No same-model full comparable Alibaba quote verified. Three quantity tiers use50/40/30cost markup; freight, service, taxes and net profit require order costing."
+  },
+  "source_id": "src-hr-hr041-c268",
+  "source_evidence": [
+    "01_产品资产/01_原始数据包/HR041_C268/source.json",
+    "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR041/素材清单.json"
+  ],
+  "procurement_capability": "CURRENT_REAL_SHOE_AND_PROCUREMENT_ENTRY_VERIFIED_NOT_ORDER_STOCK"
+}

@@ -11,7 +11,7 @@ sys.path.insert(0,str(ROOT/'08_工具链/01_业务脚本/国际站扩品'))
 import refresh_buyer_copy as b
 import publish_hot_rank_hr_a_batch as pub
 import schema_publish_contract as contract
-from read_only_catalog import read_only_call
+from read_only_catalog import read_only_call,ReadBusinessError
 SCOPE=b.load(BASE/'scope.json')
 TARGETS=SCOPE['targets']
 FIELDS=['icbuCatProp','saleProp','sku','productTitle','productKeywords','scImages','detailImage','textDesc','customMoreProperty','scPrice','ladderPrice']
@@ -20,6 +20,8 @@ RAW_PATHS={family:plan['source_assets_root']for family,plan in PLANS.items()}
 
 def model_number(family,variant):
  return PLANS[family].get('model_numbers',{}).get(variant,f'{family}-{variant}')
+def attribute_values(value):
+ return value if isinstance(value,list)else[value]
 
 def field(parent,fid,typ='input',value=None):
  x=E.SubElement(parent,'field',id=fid,type=typ)
@@ -28,6 +30,8 @@ def field(parent,fid,typ='input',value=None):
 def set_attr(schema,cv,name,texts):
  defs=[f for f in schema.findall("./field[@id='icbuCatProp']/fields/field")if f.get('name')==name];assert len(defs)==1,name
  d=defs[0];typ=d.get('type');assert typ in ['singleCheck','multiCheck']
+ assert len(texts)==len(set(texts))and texts,'Attribute values must be nonempty and distinct'
+ assert typ!='singleCheck'or len(texts)==1,'Single category attribute accepts only one reviewed value'
  x=field(cv,d.get('id'),typ);vs=E.SubElement(x,'values')if typ=='multiCheck' else x
  opts={o.get('displayName').casefold():o.get('value')for o in d.findall('./options/option')}
  for i,t in enumerate(texts):
@@ -93,10 +97,14 @@ def prepare(family):
   cp=root.find("./field[@id='icbuCatProp']")
   for child in list(cp):cp.remove(child)
   cv=E.SubElement(cp,'complex-value')
-  for name,texts in [('Place of Origin',['China']),('Midsole Material',[p.get('midsole','Other')]),('Outsole Material',[p.get('outsole','Rubber')]),('Lining Material',[p['lining']]),('Upper Material',[p['upper']]),('Style',p['style']),('Closure Type',[p['closure']]),('Toe Style',[p.get('toe_style','Round Toe')])]:
+  for name,texts in [('Place of Origin',['China']),('Midsole Material',attribute_values(p.get('midsole','Other'))),('Outsole Material',attribute_values(p.get('outsole','Rubber'))),('Lining Material',attribute_values(p['lining'])),('Upper Material',attribute_values(p['upper'])),('Style',p['style']),('Closure Type',[p['closure']]),('Toe Style',[p.get('toe_style','Round Toe')])]:
    if name in p.get('category_attribute_omissions',[]):
-    definition=next(x for x in schema.findall("./field[@id='icbuCatProp']/fields/field")if x.get('name')==name)
-    assert not any(r.get('name')=='requiredRule'and r.get('value')=='true'for r in definition.findall('./rules/rule')),'Cannot omit mandatory category attribute'
+    definitions=[x for x in schema.findall("./field[@id='icbuCatProp']/fields/field")if x.get('name')==name]
+    assert len(definitions)<=1,'Ambiguous category attribute definition'
+    if definitions:
+     assert not any(r.get('name')=='requiredRule'and r.get('value')=='true'for r in definitions[0].findall('./rules/rule')),'Cannot omit mandatory category attribute'
+    else:
+     assert name in p.get('category_absent_attributes_reviewed',[]),'Absent attribute needs explicit current-schema review'
     continue
    set_attr(schema,cv,name,texts)
   for name,texts in [('Season',p['seasons']),('Feature',[p.get('feature','Fashion Trend')])]:set_attr(schema,cv,name,texts)
@@ -225,7 +233,13 @@ def verify(family,api,cfg):
   r=read_only_call(api,cfg,'alibaba.icbu.product.schema.render',{'param_product_top_publish_request':{'product_id':int(pid),'cat_id':int(p['category_id']),'language':'en_US'}});b.save(f/'after_render.json',r)
   enc=api.top_call(cfg,'alibaba.icbu.product.id.encrypt',{'product_id':pid,'language':'ENGLISH'});b.save(f/'score_product_id.json',{'request_id':enc.get('request_id'),'status':'AVAILABLE'if enc.get('secret_id')else'UNAVAILABLE'})
   assert enc.get('secret_id'),'Actual score requires supported encrypted product ID'
-  s=read_only_call(api,cfg,'alibaba.icbu.product.score.get',{'product_id':enc['secret_id']});b.save(f/'score.json',s)
+  try:s=read_only_call(api,cfg,'alibaba.icbu.product.score.get',{'product_id':enc['secret_id']})
+  except ReadBusinessError as exc:
+   evidence={'at':b.now(),'id':pid,**exc.api_evidence,'scope':'Read-only score unavailable; preserved get/render. No product write replay.'}
+   b.save(f/'score_read_error.json',evidence)
+   b.save(f/'verification.json',{'state':'FORMAL_READ_PENDING_SCORE','at':b.now(),'status':p['status'],'display':p['display'],'score_read_error':evidence})
+   print(pid,'FORMAL_READ_PENDING_SCORE',exc.api_evidence.get('code'),exc.api_evidence.get('sub_code'),flush=True);return
+  b.save(f/'score.json',s)
   b.save(f/'verification.json',{'state':'FORMAL_READ_NEEDS_FIELD_REVIEW','at':b.now(),'display':p['display'],'schema_available':bool(r.get('data'))});print(pid,'FORMAL_READ',flush=True)
  with ThreadPoolExecutor(max_workers=3)as pool:list(pool.map(one,TARGETS[family].values()))
 if __name__=='__main__':

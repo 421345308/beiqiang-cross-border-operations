@@ -21,5 +21,14 @@ def sync():
      row=assets[o.contract._created_image_identity(url)];path=o.ROOT/row['path'];assert o.b.sha(path)==row['sha256'];w,h=Image.open(path).size
      d['assets'][url]={'state':'SAVED','file':row['path'],'sha256':row['sha256'],'bytes':path.stat().st_size,'width':w,'height':h,'pixel_qa':'Selected source-preserving current local image; formal CDN asset identity matched','at':proof['get_observed_at']}
    d['products'][pid]=roles
- d['urls']=len(d['assets']);d['saved_urls']=sum(v.get('state')=='SAVED'for v in d['assets'].values());d['unique_files']=len({v['sha256']for v in d['assets'].values()if v.get('state')=='SAVED'});d['errors']=sum(v.get('state')!='SAVED'for v in d['assets'].values());o.b.save(PATH,d);print('CURRENT_MEDIA_IDENTITY_SYNC')
+ d['urls']=len(d['assets']);d['saved_urls']=sum(v.get('state')=='SAVED'for v in d['assets'].values());d['unique_files']=len({v['sha256']for v in d['assets'].values()if v.get('state')=='SAVED'});d['errors']=sum(v.get('state')!='SAVED'for v in d['assets'].values());o.b.save(PATH,d)
+ # Product dossiers read the current media map. Rebuild them after its update,
+ # so a newly accepted source cannot leave an older gallery in the local entry.
+ import sys
+ sys.path.insert(0,str(o.ROOT/'08_工具链/06_工作区维护'))
+ import build_product_workspace as workspace
+ registry=o.b.load(o.ROOT/'02_Alibaba运营/05_扩品工程/数据/产品与链接台账.json')
+ assert not workspace.validate(registry)
+ for path,raw in workspace.build(registry).items():workspace.write_generated(o.ROOT/path,raw)
+ print('CURRENT_MEDIA_IDENTITY_AND_DOSSIER_SYNC')
 if __name__=='__main__':sync()

@@ -1,0 +1,334 @@
+{
+  "family": "HR052",
+  "state": "VISUAL_PASS",
+  "items": {
+    "M1": {
+      "path": "01_产品资产/02_可发布素材/HR052/M1.jpg",
+      "sha256": "ae0e5ed40931d3f1d92ce137b4f04ca6c8cce6afed17ec42e9b5182cdfdbf63c",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M2": {
+      "path": "01_产品资产/02_可发布素材/HR052/M2.jpg",
+      "sha256": "afe7e77ab8d20d882fb17cd5378b7d2d93ee3d18c5ec130b40815c5269f38011",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M3": {
+      "path": "01_产品资产/02_可发布素材/HR052/M3.jpg",
+      "sha256": "849a6be314764eb1b5827aa18e6d70f64636f97e802427d5cfb810501504a1c8",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M4": {
+      "path": "01_产品资产/02_可发布素材/HR052/M4.jpg",
+      "sha256": "b7b1480168349a1e2fe187886925ad4ddf8eecaee27d742c95e5376ae278f6a8",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M5": {
+      "path": "01_产品资产/02_可发布素材/HR052/M5.jpg",
+      "sha256": "863b2ae516e8dfe78c751232be30b6d60276b5f0d444af535418209b16078419",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "D1": {
+      "path": "01_产品资产/02_可发布素材/HR052/D1.jpg",
+      "sha256": "78f461a89904ca550feec508b1235a04f866f2dc929d6fcd58e6adfc3b87563e",
+      "dimensions": [
+        1000,
+        1250
+      ]
+    },
+    "D2": {
+      "path": "01_产品资产/02_可发布素材/HR052/D2.jpg",
+      "sha256": "3b957daf6ecc00030d532b09aad511c60e8dbdb1750b077b241f01e53a24f85c",
+      "dimensions": [
+        1000,
+        1250
+      ]
+    },
+    "D3": {
+      "path": "01_产品资产/02_可发布素材/HR052/D3.jpg",
+      "sha256": "1eb5da7d8704464bba4ed608612ca0f81d77cc9b6351f44a39d86a1c4ba67954",
+      "dimensions": [
+        1000,
+        1250
+      ]
+    },
+    "D4": {
+      "path": "01_产品资产/02_可发布素材/HR052/D4.jpg",
+      "sha256": "11086ae435d219a831cfe33a8c0a5a55bb0b264f53e55c403e7645fa2b899e33",
+      "dimensions": [
+        1000,
+        1250
+      ]
+    },
+    "SKU_BLACK": {
+      "path": "01_产品资产/02_可发布素材/HR052/SKU_BLACK.jpg",
+      "sha256": "878478c3544ab5ff5f0537c64dda4d4927035ac603bba08a3a43dc979ced4e16",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M6": {
+      "path": "01_产品资产/02_可发布素材/共享素材/贝强公司简介图库.jpg",
+      "sha256": "5164b4d0ac008fb79a20d60419d21713b4f49b9ecea0a845d6c7de104030f51e",
+      "dimensions": [
+        1721,
+        914
+      ]
+    }
+  },
+  "image_roles": {
+    "M1": {
+      "buyer_question": "What actual Derby shoe is offered?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR052_D818\\02.jpg",
+          "crop": [
+            110,
+            380,
+            710,
+            980
+          ],
+          "native_effective_pixels": [
+            600,
+            600
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": null
+    },
+    "M2": {
+      "buyer_question": "How does the whole shoe look in wear?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR052_D818\\04.jpg",
+          "crop": [
+            20,
+            35,
+            770,
+            970
+          ],
+          "native_effective_pixels": [
+            750,
+            935
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": "Rounded toe Derby profile"
+    },
+    "M3": {
+      "buyer_question": "What sole edge is visible?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR052_D818\\21.jpg",
+          "crop": [
+            400,
+            455,
+            762,
+            820
+          ],
+          "native_effective_pixels": [
+            362,
+            365
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": "Ribbed sole edge"
+    },
+    "M4": {
+      "buyer_question": "Which colour and EU sizes are offered?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR052_D818\\08.jpg",
+          "crop": [
+            15,
+            205,
+            775,
+            915
+          ],
+          "native_effective_pixels": [
+            760,
+            710
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [
+        {
+          "value": "EU 39 / 40 / 41 / 42 / 43 / 44",
+          "xy": [
+            45,
+            940
+          ],
+          "size": 28
+        }
+      ],
+      "title": "Black | EU 39-44"
+    },
+    "M5": {
+      "buyer_question": "How is the lace opening arranged?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR052_D818\\21.jpg",
+          "crop": [
+            25,
+            455,
+            392,
+            820
+          ],
+          "native_effective_pixels": [
+            367,
+            365
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": "Open eyelet lacing"
+    },
+    "D1": {
+      "buyer_question": "What is the plain forefoot shape?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR052_D818\\21.jpg",
+          "crop": [
+            25,
+            80,
+            392,
+            445
+          ],
+          "native_effective_pixels": [
+            367,
+            365
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": "Rounded closed toe"
+    },
+    "D2": {
+      "buyer_question": "How does the sole edge meet the quarter?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR052_D818\\21.jpg",
+          "crop": [
+            400,
+            80,
+            762,
+            445
+          ],
+          "native_effective_pixels": [
+            362,
+            365
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": "Quarter stitching & sole edge"
+    },
+    "D3": {
+      "buyer_question": "Where is the rear pull tab?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR052_D818\\21.jpg",
+          "crop": [
+            400,
+            455,
+            762,
+            820
+          ],
+          "native_effective_pixels": [
+            362,
+            365
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": "Rear entry detail"
+    },
+    "D4": {
+      "buyer_question": "Which EU sizes can I order?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR052_D818\\16.jpg",
+          "crop": [
+            25,
+            15,
+            765,
+            1060
+          ],
+          "native_effective_pixels": [
+            740,
+            1045
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [
+        {
+          "value": "EU 39 / 40 / 41 / 42 / 43 / 44",
+          "xy": [
+            45,
+            1140
+          ],
+          "size": 28
+        }
+      ],
+      "title": "Black | EU 39-44"
+    },
+    "SKU_BLACK": {
+      "buyer_question": "Which colour is this SKU?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR052_D818\\02.jpg",
+          "crop": [
+            110,
+            380,
+            710,
+            980
+          ],
+          "native_effective_pixels": [
+            600,
+            600
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": null
+    },
+    "M6": {
+      "buyer_question": "Who will coordinate the footwear order?",
+      "shared_approved_company_image": "01_产品资产/02_可发布素材/共享素材/贝强公司简介图库.jpg"
+    }
+  },
+  "review": {
+    "observed_on": "2026-10-14",
+    "scope": "All gallery/detail/SKU roles visually inspected on complete contact sheets; M1 and sensitive crop/colour focal frames inspected full-size. Native source pixels retained, whole shoe boundaries checked, per-colour SKU labels verified.",
+    "corrections": "HR049 lace close-up footer removed and two-colour/size charts enlarged; HR052 full pair cropped tighter without cutting shoe edges; HR055 actual backless structure and five correctly mapped colour options inspected.",
+    "public_pixel_qa": "NOT_CLAIMED_API_ONLY_BATCH"
+  }
+}

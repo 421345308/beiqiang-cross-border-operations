@@ -10,6 +10,10 @@ def check(pid,family,variant):
   return {'id':pid,'state':'LOCAL_PREPARATION_NOT_FORMALLY_SUBMITTED'}
  f=o.BASE/'商品'/pid;got=o.b.load(f/'after_get.json');p=got['product'];report={'id':pid,'at':o.b.now(),'state':'REVIEWING','status':p['status'],'display':p['display']}
  if p['status']!='approved':o.b.save(f/'verification.json',report);return report
+ missing=[name for name in ['prepared.json','after_render.json','score.json']if not(f/name).exists()]
+ if missing:
+  report.update(state='FORMAL_EVIDENCE_INCOMPLETE',missing_files=missing)
+  o.b.save(f/'verification.json',report);print(pid,report['state'],missing);return report
  prep=o.b.load(f/('business_correction_prepared.json'if(f/'business_correction_once.json').exists()else'prepared.json'));schema=E.fromstring(o.b.load(f/'after_render.json')['data']);actual=o.contract.field_snapshot(schema);checks={}
  if(f/'gallery_repair_prepared.json').exists():prep['expected_schema']['scImages']=o.b.load(f/'gallery_repair_prepared.json')['expected_schema']['scImages']
  if(f/'hero_quality_prepared.json').exists():prep['expected_schema']['scImages']=o.b.load(f/'hero_quality_prepared.json')['expected_schema']['scImages']
@@ -22,7 +26,7 @@ def check(pid,family,variant):
  attrs=defaultdict(set)
  for a in p['attributes']:attrs[a['attribute_name']].add(a['value_name'])
  plan=o.PLANS[family]
- expected={'Place of Origin':{'CN'},'Midsole Material':{plan.get('midsole','Other')},'Outsole Material':{plan.get('outsole','Rubber')},'Lining Material':{plan['lining']},'Upper Material':{plan['upper']},'Closure Type':{plan['closure']},'Style':set(plan['style']),'Toe Style':{plan.get('toe_style','Round Toe')},'Model Number':{o.model_number(family,variant)},plan['custom'][0]:{plan['custom'][1]},'Season':set(plan['seasons']),'Feature':{plan.get('feature','Fashion Trend')}}
+ expected={'Place of Origin':{'CN'},'Midsole Material':set(o.attribute_values(plan.get('midsole','Other'))),'Outsole Material':set(o.attribute_values(plan.get('outsole','Rubber'))),'Lining Material':set(o.attribute_values(plan['lining'])),'Upper Material':set(o.attribute_values(plan['upper'])),'Closure Type':{plan['closure']},'Style':set(plan['style']),'Toe Style':{plan.get('toe_style','Round Toe')},'Model Number':{o.model_number(family,variant)},plan['custom'][0]:{plan['custom'][1]},'Season':set(plan['seasons']),'Feature':{plan.get('feature','Fashion Trend')}}
  checks['category_exact']=int(p['category_id'])==int(plan.get('category_id',o.b.load(f/'before_get.json')['product']['category_id']))
  expected.update({name:set(values)for name,values in plan.get('extra_category_attributes',{}).items()})
  for name in plan.get('category_attribute_omissions',[]):expected.pop(name,None)
