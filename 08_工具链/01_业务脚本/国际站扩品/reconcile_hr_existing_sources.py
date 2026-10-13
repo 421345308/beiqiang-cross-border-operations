@@ -43,7 +43,7 @@ def main():
         if current_five:
             visual=load(profile['approved_visual']);fact=load(profile['source_fact_file'])
             if profile['evidence_format']=='SOURCE_PACKET_BANK':
-                assert family in ['HR026','HR027','HR028']
+                assert family in ['HR026','HR027','HR028','HR033']
                 assert fact['source_model']==profile['source_model'] and fact['url']==profile['source_url']
                 assert fact['materials']==profile['materials'] and visual['all_current_main_roles_hash_verified']
                 if family=='HR026':
@@ -58,7 +58,7 @@ def main():
                 for token in fact['source_table_tokens']: assert token in body
                 manifest=ROOT/fact['raw_manifest']
                 assert hashlib.sha256(manifest.read_bytes()).hexdigest()==fact['raw_manifest_sha256']
-                if family in ['HR026','HR027']:
+                if family in ['HR026','HR027','HR033']:
                     raw_hashes={Path(x['Path']).name:x['Hash'].lower()for x in load(fact['raw_manifest'])}
                 else:
                     raw_hashes={x.split('\t')[0]:x.split('\t')[2]for x in manifest.read_text(encoding='utf8').splitlines()if x.strip()}

@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-13T18:14:05.768852+00:00",
+  "at": "2026-10-13T18:29:41.190857+00:00",
   "priority_links": [
     {
       "family": "HR030",
@@ -271,7 +271,6 @@
     "HR022",
     "HR023",
     "HR032",
-    "HR033",
     "HR037",
     "HR040",
     "HR041",
@@ -309,8 +308,8 @@
       "FORMAL_FIELDS_SCORE_PASS": 42,
       "REVIEWING": 1,
       "NOT_FOUND_IN_CURRENT_COMPLETE_CATALOG": 26,
-      "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE": 75,
-      "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW": 59
+      "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE": 77,
+      "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW": 57
     },
     "caution": "本轮未检出不等于下架/删除；旧候选或MISSING不证明现行页面缺实鞋。先核正式绑定，已采用实款保留并修资料。",
     "links": [
@@ -2110,15 +2109,17 @@
         "model": "HR033-A",
         "family": "HR033",
         "product_identity": "HR033",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Women's Classic Leather Ballet Flats with Instep Strap for Everyday Casual Wear",
         "current_category_id": 201152005,
         "current_audit": "approved",
         "current_display": "Y",
         "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
-        "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
+        "bound_source_id": "src-hr-hr033-20c1860-55",
+        "registry_source_state": "ADOPTED",
+        "candidate_source_ids": [
+          "src-hr-hr033-20c1860-55"
+        ],
         "formal_proof": null
       },
       {
@@ -2126,15 +2127,17 @@
         "model": "HR033-B",
         "family": "HR033",
         "product_identity": "HR033",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Women's Round Toe Ballet Flats with Instep Strap for Casual Outfits",
         "current_category_id": 201152005,
         "current_audit": "approved",
         "current_display": "Y",
         "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
-        "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
+        "bound_source_id": "src-hr-hr033-20c1860-55",
+        "registry_source_state": "ADOPTED",
+        "candidate_source_ids": [
+          "src-hr-hr033-20c1860-55"
+        ],
         "formal_proof": null
       },
       {
@@ -2149,8 +2152,10 @@
         "current_display": null,
         "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
         "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
+        "registry_source_state": "ADOPTED",
+        "candidate_source_ids": [
+          "src-hr-hr033-20c1860-55"
+        ],
         "formal_proof": null
       },
       {

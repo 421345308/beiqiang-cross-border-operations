@@ -1,6 +1,6 @@
 {
   "state": "CURRENT_SOURCE_PLATFORM_LOCAL_CONSISTENCY_PASS",
-  "at": "2026-10-13T18:14:14.608525+00:00",
+  "at": "2026-10-13T18:35:51.556755+00:00",
   "rows": [
     {
       "family": "HR030",
@@ -1622,6 +1622,34 @@
       "id": "1601943546735",
       "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
       "source_id": "src-hr-hr026-25qlfan15-35",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR033",
+      "model": "HR033-A",
+      "id": "1601943593578",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr033-20c1860-55",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR033",
+      "model": "HR033-B",
+      "id": "1601943649254",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr033-20c1860-55",
       "checks": {
         "one_current_real_source": true,
         "formal_source_bound": true,

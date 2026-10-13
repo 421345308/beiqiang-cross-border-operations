@@ -1,0 +1,78 @@
+{
+  "family": "HR033",
+  "at": "2026-10-13T18:26:43.958407+00:00",
+  "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+  "source": {
+    "id": "src-hr-hr033-20c1860-55",
+    "url": "https://hzmshoes.en.made-in-china.com/product/ophrXyUvEtWS/China-China-Women-s-Shoes-Factory-Wholesale-Walking-Style-Soft-100-Genuine-Leather-Flats-for-Women-Sandals-Ballet-Flats-Shoes-Ladies.html",
+    "shop_url": "https://hzmshoes.en.made-in-china.com",
+    "supplier": "Guangzhou Weirui Shoes Co., Ltd.",
+    "model": "20C1860-55",
+    "price": "未核当前进货报价",
+    "currency": "USD",
+    "unit": "双",
+    "price_terms": "历史已采用实款对应恢复；当前数量、价格、包装及交期逐单询价，不从平台售价或样品费反推采购价。",
+    "observed_at": "2026-09-28",
+    "evidence": [
+      "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR033/复用图审依据.json",
+      "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR033/复用图库绑定.json",
+      "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR033/来源与正式绑定核验.json"
+    ]
+  },
+  "links": [
+    {
+      "id": "1601943593578",
+      "model": "HR033-A",
+      "formal_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943593578/formal_get.json",
+      "formal_observed_at": "2026-10-12T22:37:10.444466+00:00",
+      "checks": {
+        "approved_actual_product_images_match": true,
+        "whole_six_images_match_current_catalog": true,
+        "raw_photo_hashes": true,
+        "materials_match_specific_model_table": true,
+        "source_eu_cartesian": true,
+        "approved_y": true
+      },
+      "main_images": [
+        "https://sc04.alicdn.com/kf/Haf1cf94f060a4a06b51d64c7da78a0e3z.jpg",
+        "https://sc04.alicdn.com/kf/H53b10e3840c842cab72c1a7b1cb21f5bx.jpg",
+        "https://sc04.alicdn.com/kf/Hd374cd6787e34fa8b963a2940286f1a2Y.jpg",
+        "https://sc04.alicdn.com/kf/H5d1777b7d49047d8a62f30710fdc9a07K.jpg",
+        "https://sc04.alicdn.com/kf/H5feb17309f824beba21bb91a596c0153T.jpg",
+        "https://sc04.alicdn.com/kf/H17b03065a6864cedbc29bc732be4ecead.jpg"
+      ],
+      "sku_count": 12
+    },
+    {
+      "id": "1601943649254",
+      "model": "HR033-B",
+      "formal_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943649254/formal_get.json",
+      "formal_observed_at": "2026-10-12T22:43:44.424827+00:00",
+      "checks": {
+        "approved_actual_product_images_match": true,
+        "whole_six_images_match_current_catalog": true,
+        "raw_photo_hashes": true,
+        "materials_match_specific_model_table": true,
+        "source_eu_cartesian": true,
+        "approved_y": true
+      },
+      "main_images": [
+        "https://sc04.alicdn.com/kf/H53b10e3840c842cab72c1a7b1cb21f5bx.jpg",
+        "https://sc04.alicdn.com/kf/Haf1cf94f060a4a06b51d64c7da78a0e3z.jpg",
+        "https://sc04.alicdn.com/kf/Hd374cd6787e34fa8b963a2940286f1a2Y.jpg",
+        "https://sc04.alicdn.com/kf/H5d1777b7d49047d8a62f30710fdc9a07K.jpg",
+        "https://sc04.alicdn.com/kf/H5feb17309f824beba21bb91a596c0153T.jpg",
+        "https://sc04.alicdn.com/kf/H17b03065a6864cedbc29bc732be4ecead.jpg"
+      ],
+      "sku_count": 12
+    }
+  ],
+  "basis": "Exact20C1860-55 specific DOM/source packet, current preserved full-size Black/Green originals and prior root-approved derivatives with official upload IDs. Current formal colour/EU/material/cartesian binding, not generic fake shoe. EU35-40 common confirmed range retained,41excluded. Preserve real shoe/price/MOQ; repeated photo roles separately require quality optimization.",
+  "source_current_access": "Historical exact public procurement inquiry entrance retained; no live quote or stock claim. Current preserved originals hashed today, not invented historical freeze.",
+  "platform_mutation": "NONE_EXISTING_ACTUAL_SHOE_PRESERVED",
+  "physical_stock": "NOT_CONFIRMED_ORDER_SPECIFIC",
+  "not_returned_ids": [
+    "1601943573649"
+  ],
+  "not_returned_scope": "Not returned in current complete catalog; not source-validated as current links, not recreated or deleted"
+}
