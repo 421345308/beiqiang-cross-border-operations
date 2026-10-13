@@ -1,13 +1,13 @@
 {
   "id": "1601943748344",
-  "at": "2026-10-13T17:22:08.258475+00:00",
-  "state": "FORMAL_MISMATCH",
+  "at": "2026-10-13T18:12:53.145299+00:00",
+  "state": "FORMAL_FIELDS_SCORE_PASS",
   "status": "approved",
   "display": "Y",
   "checks": {
     "formal_read_after_latest_write": true,
     "saleProp": true,
-    "productTitle": false,
+    "productTitle": true,
     "scImages": true,
     "productGroup": true,
     "ladderPrice": true,
@@ -34,17 +34,15 @@
     "display_y": true,
     "keyword_observation_recorded": true
   },
-  "failed": [
-    "productTitle"
-  ],
+  "failed": [],
   "actual_score": 5.0,
   "target_score": 5.0,
   "score_source": {
     "method": "alibaba.icbu.product.score.get",
-    "request_id": "0b830ecc17919120561957899"
+    "request_id": "21501b6717919126773186007"
   },
-  "get_observed_at": "2026-10-13T17:20:36.314023+00:00",
-  "score_observed_at": "2026-10-13T17:20:56.344546+00:00",
+  "get_observed_at": "2026-10-13T17:30:58.787765+00:00",
+  "score_observed_at": "2026-10-13T17:31:17.464460+00:00",
   "diagnostics": {
     "ruleScoreMap": {
       "title_word_miss_core_error": 0.0,

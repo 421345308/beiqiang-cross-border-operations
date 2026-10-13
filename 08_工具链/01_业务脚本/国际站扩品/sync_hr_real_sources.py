@@ -15,7 +15,10 @@ def sync():
  for family,targets in op.TARGETS.items():
   plan=op.PLANS[family];raw=ROOT/op.RAW_PATHS[family];source=op.b.load(raw/'source.json');sid='src-hr-'+family.lower()+'-'+source['artno'].lower()
   existing=next((s for s in d['sources']if s['id']==sid),None)
-  src={'id':sid,'url':source['url'],'shop_url':source['url'].split('/detail/')[0],'supplier':source['supplier'],'model':source['artno'],'price':f"{source['price_cny']:.2f}",'currency':'CNY','unit':'双','price_terms':'当前公开来源标价；拿货色码、数量、包装、运税与当日可供条件逐单确认，不代表已采购或固定交期。','observed_at':'2026-10-13','evidence':[rel(raw/'source.json'),rel(BASE/family/'素材清单.json')]}
+  source_date=source.get('observed_on')
+  if not source_date:
+   source_date=datetime.fromisoformat(source['observed_at']).astimezone(timezone(timedelta(hours=8))).date().isoformat()
+  src={'id':sid,'url':source['url'],'shop_url':source['url'].split('/detail/')[0],'supplier':source['supplier'],'model':source['artno'],'price':f"{source['price_cny']:.2f}",'currency':'CNY','unit':'双','price_terms':'当前公开来源标价；拿货色码、数量、包装、运税与当日可供条件逐单确认，不代表已采购或固定交期。','observed_at':source_date,'evidence':[rel(raw/'source.json'),rel(BASE/family/'素材清单.json')]}
   if existing:existing.update(src)
   else:d['sources'].append(src)
   states=[]

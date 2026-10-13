@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-13T17:17:54.399865+00:00",
+  "at": "2026-10-13T18:14:05.768852+00:00",
   "priority_links": [
     {
       "family": "HR030",
@@ -203,26 +203,73 @@
       "family": "HR061",
       "model": "HR061-A",
       "id": "1601943700660",
-      "state": "REVIEWING"
+      "state": "FORMAL_FIELDS_SCORE_PASS"
     },
     {
       "family": "HR061",
       "model": "HR061-B",
       "id": "1601943748344",
-      "state": "REVIEWING"
+      "state": "FORMAL_FIELDS_SCORE_PASS"
     },
     {
       "family": "HR061",
       "model": "HR061-C",
       "id": "1601943727538",
-      "state": "REVIEWING"
+      "state": "FORMAL_FIELDS_SCORE_PASS"
+    },
+    {
+      "family": "HR062",
+      "model": "HR062-A",
+      "id": "1601943682804",
+      "state": "FORMAL_FIELDS_SCORE_PASS"
+    },
+    {
+      "family": "HR062",
+      "model": "HR062-B",
+      "id": "1601943799127",
+      "state": "FORMAL_FIELDS_SCORE_PASS"
+    },
+    {
+      "family": "HR062",
+      "model": "HR062-C",
+      "id": "1601943761346",
+      "state": "FORMAL_FIELDS_SCORE_PASS"
+    },
+    {
+      "family": "HR066",
+      "model": "HR066-A",
+      "id": "1601943734532",
+      "state": "FORMAL_FIELDS_SCORE_PASS"
+    },
+    {
+      "family": "HR066",
+      "model": "HR066-B",
+      "id": "1601943708668",
+      "state": "FORMAL_FIELDS_SCORE_PASS"
+    },
+    {
+      "family": "HR066",
+      "model": "HR066-C",
+      "id": "1601943670945",
+      "state": "FORMAL_FIELDS_SCORE_PASS"
+    },
+    {
+      "family": "HR060",
+      "model": "HR060-A",
+      "id": "1601943755354",
+      "state": "FORMAL_FIELDS_SCORE_PASS"
+    },
+    {
+      "family": "HR060",
+      "model": "HR060-B",
+      "id": "1601943705620",
+      "state": "FORMAL_FIELDS_SCORE_PASS"
     }
   ],
   "other_hr_families_needing_per_family_source_binding_review": [
     "HR009",
     "HR022",
     "HR023",
-    "HR026",
     "HR032",
     "HR033",
     "HR037",
@@ -241,10 +288,7 @@
     "HR056",
     "HR057",
     "HR058",
-    "HR060",
-    "HR062",
     "HR064",
-    "HR066",
     "HR067"
   ],
   "scope": "Registry source states require link-by-link evidence review; candidates are not automatically missing shoes.",
@@ -262,12 +306,11 @@
     "registered_hr_history": 203,
     "current_hr_ids_found": 177,
     "states": {
-      "FORMAL_FIELDS_SCORE_PASS": 28,
+      "FORMAL_FIELDS_SCORE_PASS": 42,
       "REVIEWING": 1,
       "NOT_FOUND_IN_CURRENT_COMPLETE_CATALOG": 26,
-      "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE": 65,
-      "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW": 80,
-      "PREPARED_OR_SUBMITTED": 3
+      "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE": 75,
+      "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW": 59
     },
     "caution": "本轮未检出不等于下架/删除；旧候选或MISSING不证明现行页面缺实鞋。先核正式绑定，已采用实款保留并修资料。",
     "links": [
@@ -1695,15 +1738,17 @@
         "model": "HR025-A",
         "family": "HR025",
         "product_identity": "HR025",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Women's Leather Loafers with Buckle Strap for Winter Casual Wear",
         "current_category_id": 202240827,
         "current_audit": "approved",
         "current_display": "Y",
         "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
-        "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
+        "bound_source_id": "src-hr-hr025-24dzya22-87",
+        "registry_source_state": "ADOPTED",
+        "candidate_source_ids": [
+          "src-hr-hr025-24dzya22-87"
+        ],
         "formal_proof": null
       },
       {
@@ -1711,15 +1756,17 @@
         "model": "HR025-B",
         "family": "HR025",
         "product_identity": "HR025",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Women's Slip On Loafers with Wool Lining and Instep Buckle Strap",
         "current_category_id": 202240827,
         "current_audit": "approved",
         "current_display": "Y",
         "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
-        "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
+        "bound_source_id": "src-hr-hr025-24dzya22-87",
+        "registry_source_state": "ADOPTED",
+        "candidate_source_ids": [
+          "src-hr-hr025-24dzya22-87"
+        ],
         "formal_proof": null
       },
       {
@@ -1727,15 +1774,17 @@
         "model": "HR025-C",
         "family": "HR025",
         "product_identity": "HR025",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Women's Low Top Buckle Loafers for Casual Footwear Collections",
         "current_category_id": 202240827,
         "current_audit": "approved",
         "current_display": "Y",
         "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
-        "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
+        "bound_source_id": "src-hr-hr025-24dzya22-87",
+        "registry_source_state": "ADOPTED",
+        "candidate_source_ids": [
+          "src-hr-hr025-24dzya22-87"
+        ],
         "formal_proof": null
       },
       {
@@ -1743,15 +1792,17 @@
         "model": "HR026-A",
         "family": "HR026",
         "product_identity": "HR026",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Men's Leather Lace Up Casual Shoes with Moc Toe Stitching for Daily Wear",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
         "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
-        "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
+        "bound_source_id": "src-hr-hr026-25qlfan15-35",
+        "registry_source_state": "ADOPTED",
+        "candidate_source_ids": [
+          "src-hr-hr026-25qlfan15-35"
+        ],
         "formal_proof": null
       },
       {
@@ -1759,15 +1810,17 @@
         "model": "HR026-B",
         "family": "HR026",
         "product_identity": "HR026",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Men's Lace Up Walking Style Shoes with Round Toe and Leather Lining",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
         "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
-        "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
+        "bound_source_id": "src-hr-hr026-25qlfan15-35",
+        "registry_source_state": "ADOPTED",
+        "candidate_source_ids": [
+          "src-hr-hr026-25qlfan15-35"
+        ],
         "formal_proof": null
       },
       {
@@ -1775,15 +1828,17 @@
         "model": "HR026-C",
         "family": "HR026",
         "product_identity": "HR026",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Men's Low Top Leather Lace Up Shoes for Everyday Casual Outfits",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
         "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
-        "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
+        "bound_source_id": "src-hr-hr026-25qlfan15-35",
+        "registry_source_state": "ADOPTED",
+        "candidate_source_ids": [
+          "src-hr-hr026-25qlfan15-35"
+        ],
         "formal_proof": null
       },
       {
@@ -1791,15 +1846,17 @@
         "model": "HR027-A",
         "family": "HR027",
         "product_identity": "HR027",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Women's Suede Ballet Flats with Lace Up Front and Scalloped Collar",
         "current_category_id": 201152005,
         "current_audit": "approved",
         "current_display": "Y",
         "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
-        "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
+        "bound_source_id": "src-hr-hr027-26qzya22-130",
+        "registry_source_state": "ADOPTED",
+        "candidate_source_ids": [
+          "src-hr-hr027-26qzya22-130"
+        ],
         "formal_proof": null
       },
       {
@@ -1807,15 +1864,17 @@
         "model": "HR027-B",
         "family": "HR027",
         "product_identity": "HR027",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Women's Lace Up Casual Flats with Scalloped Edge for Everyday Outfits",
         "current_category_id": 201152005,
         "current_audit": "approved",
         "current_display": "Y",
         "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
-        "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
+        "bound_source_id": "src-hr-hr027-26qzya22-130",
+        "registry_source_state": "ADOPTED",
+        "candidate_source_ids": [
+          "src-hr-hr027-26qzya22-130"
+        ],
         "formal_proof": null
       },
       {
@@ -1830,8 +1889,10 @@
         "current_display": null,
         "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
         "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
+        "registry_source_state": "ADOPTED",
+        "candidate_source_ids": [
+          "src-hr-hr027-26qzya22-130"
+        ],
         "formal_proof": null
       },
       {
@@ -1839,15 +1900,17 @@
         "model": "HR028-A",
         "family": "HR028",
         "product_identity": "HR028",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Women's Suede Lace Up Casual Shoes with a Low Profile for Daily Wear",
         "current_category_id": 201333014,
         "current_audit": "approved",
         "current_display": "Y",
         "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
-        "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
+        "bound_source_id": "src-hr-hr028-24q2508-1",
+        "registry_source_state": "ADOPTED",
+        "candidate_source_ids": [
+          "src-hr-hr028-24q2508-1"
+        ],
         "formal_proof": null
       },
       {
@@ -1855,15 +1918,17 @@
         "model": "HR028-B",
         "family": "HR028",
         "product_identity": "HR028",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
+        "state": "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE",
         "current_title": "Women's Low Top Lace Up Sneakers with Leather Lining for Casual Outfits",
         "current_category_id": 201333014,
         "current_audit": "approved",
         "current_display": "Y",
         "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
-        "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
+        "bound_source_id": "src-hr-hr028-24q2508-1",
+        "registry_source_state": "ADOPTED",
+        "candidate_source_ids": [
+          "src-hr-hr028-24q2508-1"
+        ],
         "formal_proof": null
       },
       {
@@ -1878,8 +1943,10 @@
         "current_display": null,
         "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
         "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
+        "registry_source_state": "ADOPTED",
+        "candidate_source_ids": [
+          "src-hr-hr028-24q2508-1"
+        ],
         "formal_proof": null
       },
       {
@@ -3257,86 +3324,90 @@
         "model": "HR059-A",
         "family": "HR059",
         "product_identity": "HR059",
-        "state": "PREPARED_OR_SUBMITTED",
-        "current_title": "Men's Shoes Model HR059-A",
-        "current_category_id": 201334413,
+        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "current_title": "Men's Side-Zip Ankle Boots with Textured Upper and Sculpted PVC Sole for Casual Outfits",
+        "current_category_id": 201774304,
         "current_audit": "approved",
         "current_display": "Y",
-        "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "current_field_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943790138/formal_get.json",
+        "bound_source_id": "src-hr-hr059-5612",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
           "src-hr-hr059-5612"
         ],
-        "formal_proof": null
+        "formal_proof": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943790138/verification.json"
       },
       {
         "id": "1601943767266",
         "model": "HR059-B",
         "family": "HR059",
         "product_identity": "HR059",
-        "state": "PREPARED_OR_SUBMITTED",
-        "current_title": "Men's Breathable Lace-Up Light Weight Walking Shoes Model HR059-B",
-        "current_category_id": 201334413,
+        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "current_title": "Zip-Up Casual Ankle Boots with Rear Pull Loop and Raised Toe Outline for Footwear Collections",
+        "current_category_id": 201774304,
         "current_audit": "approved",
         "current_display": "Y",
-        "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "current_field_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943767266/formal_get.json",
+        "bound_source_id": "src-hr-hr059-5612",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
           "src-hr-hr059-5612"
         ],
-        "formal_proof": null
+        "formal_proof": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943767266/verification.json"
       },
       {
         "id": "1601943779211",
         "model": "HR059-C",
         "family": "HR059",
         "product_identity": "HR059",
-        "state": "PREPARED_OR_SUBMITTED",
-        "current_title": "Men's Light Weight Walking Shoes Model HR059-C",
-        "current_category_id": 201334413,
+        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "current_title": "Textured Upper Ankle Boots with Side Zipper and Patterned PVC Sole for Street Style Wear",
+        "current_category_id": 201774304,
         "current_audit": "approved",
         "current_display": "Y",
-        "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "current_field_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943779211/formal_get.json",
+        "bound_source_id": "src-hr-hr059-5612",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
           "src-hr-hr059-5612"
         ],
-        "formal_proof": null
+        "formal_proof": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943779211/verification.json"
       },
       {
         "id": "1601943755354",
         "model": "HR060-A",
         "family": "HR060",
         "product_identity": "HR060",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
-        "current_title": "Women's Shoes Model HR060-A",
+        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "current_title": "Wide Toe Box Knit Slip-On Casual Shoes with Sculpted EVA Sole and Rear Pull Loop for Footwear Collections",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
-        "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
-        "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
-        "formal_proof": null
+        "current_field_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943755354/formal_get.json",
+        "bound_source_id": "src-hr-hr060-aa23",
+        "registry_source_state": "ADOPTED",
+        "candidate_source_ids": [
+          "src-hr-hr060-aa23"
+        ],
+        "formal_proof": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943755354/verification.json"
       },
       {
         "id": "1601943705620",
         "model": "HR060-B",
         "family": "HR060",
         "product_identity": "HR060",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
-        "current_title": "Women's Shoes Model HR060-B",
+        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "current_title": "Wide Toe Box Sock Style Walking Shoes with Knit Upper and Five Colour Assortments for Wholesale Buyers",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
-        "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
-        "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
-        "formal_proof": null
+        "current_field_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943705620/formal_get.json",
+        "bound_source_id": "src-hr-hr060-aa23",
+        "registry_source_state": "ADOPTED",
+        "candidate_source_ids": [
+          "src-hr-hr060-aa23"
+        ],
+        "formal_proof": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943705620/verification.json"
       },
       {
         "id": "1601943663897",
@@ -3350,8 +3421,10 @@
         "current_display": null,
         "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
         "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
+        "registry_source_state": "ADOPTED",
+        "candidate_source_ids": [
+          "src-hr-hr060-aa23"
+        ],
         "formal_proof": null
       },
       {
@@ -3359,96 +3432,108 @@
         "model": "HR061-A",
         "family": "HR061",
         "product_identity": "HR061",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
-        "current_title": "Men's Shoes Model HR061-A",
+        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "current_title": "Men's Plush Lined High Top Casual Shoes with Lace-Up Front and Rear Pull Loop for Winter Collections",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
-        "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
-        "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
-        "formal_proof": null
+        "current_field_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943700660/formal_get.json",
+        "bound_source_id": "src-hr-hr061-l895",
+        "registry_source_state": "ADOPTED",
+        "candidate_source_ids": [
+          "src-hr-hr061-l895"
+        ],
+        "formal_proof": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943700660/verification.json"
       },
       {
         "id": "1601943748344",
         "model": "HR061-B",
         "family": "HR061",
         "product_identity": "HR061",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
-        "current_title": "Men's Walking Shoes Light Weight Breathable Model HR061-B",
+        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "current_title": "Winter Casual High Top Sneakers with Plush Collar and Wraparound Sole Sidewall for Men's Footwear",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
-        "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
-        "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
-        "formal_proof": null
+        "current_field_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943748344/formal_get.json",
+        "bound_source_id": "src-hr-hr061-l895",
+        "registry_source_state": "ADOPTED",
+        "candidate_source_ids": [
+          "src-hr-hr061-l895"
+        ],
+        "formal_proof": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943748344/verification.json"
       },
       {
         "id": "1601943727538",
         "model": "HR061-C",
         "family": "HR061",
         "product_identity": "HR061",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
-        "current_title": "Men's Shoes Model HR061-C",
+        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "current_title": "Men's Lace-Up High Top Casual Shoes with Apron Toe Stitching and Plush Lining for Seasonal Assortments",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
-        "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
-        "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
-        "formal_proof": null
+        "current_field_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943727538/formal_get.json",
+        "bound_source_id": "src-hr-hr061-l895",
+        "registry_source_state": "ADOPTED",
+        "candidate_source_ids": [
+          "src-hr-hr061-l895"
+        ],
+        "formal_proof": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943727538/verification.json"
       },
       {
         "id": "1601943682804",
         "model": "HR062-A",
         "family": "HR062",
         "product_identity": "HR062",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
-        "current_title": "Women's Shoes Model HR062-A",
+        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "current_title": "Men's Textile Moc Toe Casual Shoes with Short Lace-Up Front and Speckled Sole for Everyday Outfits",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
-        "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
-        "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
-        "formal_proof": null
+        "current_field_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943682804/formal_get.json",
+        "bound_source_id": "src-hr-hr062-d02",
+        "registry_source_state": "ADOPTED",
+        "candidate_source_ids": [
+          "src-hr-hr062-d02"
+        ],
+        "formal_proof": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943682804/verification.json"
       },
       {
         "id": "1601943799127",
         "model": "HR062-B",
         "family": "HR062",
         "product_identity": "HR062",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
-        "current_title": "Women's Lace-up Walking Shoes Model HR062-B-Breathable & Light Weight EVA Midsole All Seasons",
+        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "current_title": "Lace-Up Textile Casual Shoes with Apron Toe Stitching and Rear Pull Loop for Men's Footwear Assortments",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
-        "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
-        "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
-        "formal_proof": null
+        "current_field_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943799127/formal_get.json",
+        "bound_source_id": "src-hr-hr062-d02",
+        "registry_source_state": "ADOPTED",
+        "candidate_source_ids": [
+          "src-hr-hr062-d02"
+        ],
+        "formal_proof": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943799127/verification.json"
       },
       {
         "id": "1601943761346",
         "model": "HR062-C",
         "family": "HR062",
         "product_identity": "HR062",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
-        "current_title": "Women's Shoes Model HR062-C",
+        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "current_title": "Men's Low Top Casual Shoes with Woven Texture Upper and Speckled Rubber Sole for Extended Size Collections",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
-        "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
-        "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
-        "formal_proof": null
+        "current_field_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943761346/formal_get.json",
+        "bound_source_id": "src-hr-hr062-d02",
+        "registry_source_state": "ADOPTED",
+        "candidate_source_ids": [
+          "src-hr-hr062-d02"
+        ],
+        "formal_proof": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943761346/verification.json"
       },
       {
         "id": "1601943653995",
@@ -3611,48 +3696,54 @@
         "model": "HR066-A",
         "family": "HR066",
         "product_identity": "HR066",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
-        "current_title": "Women's Shoes Model HR066-A",
+        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "current_title": "High Top Knit Sock Sneakers with Ribbed Shaft and Geometric Upper Pattern for Casual Footwear Collections",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
-        "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
-        "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
-        "formal_proof": null
+        "current_field_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943734532/formal_get.json",
+        "bound_source_id": "src-hr-hr066-ws6",
+        "registry_source_state": "ADOPTED",
+        "candidate_source_ids": [
+          "src-hr-hr066-ws6"
+        ],
+        "formal_proof": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943734532/verification.json"
       },
       {
         "id": "1601943708668",
         "model": "HR066-B",
         "family": "HR066",
         "product_identity": "HR066",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
-        "current_title": "Women's Shoes Model HR066-B",
+        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "current_title": "Slip-On Sock Style Casual Shoes with Sculpted Sole Sidewall and Tall Ribbed Collar for Everyday Outfits",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
-        "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
-        "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
-        "formal_proof": null
+        "current_field_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943708668/formal_get.json",
+        "bound_source_id": "src-hr-hr066-ws6",
+        "registry_source_state": "ADOPTED",
+        "candidate_source_ids": [
+          "src-hr-hr066-ws6"
+        ],
+        "formal_proof": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943708668/verification.json"
       },
       {
         "id": "1601943670945",
         "model": "HR066-C",
         "family": "HR066",
         "product_identity": "HR066",
-        "state": "CURRENT_SOURCE_AND_FORMAL_BINDING_REVIEW",
-        "current_title": "Women's Breathable Light Weight Mesh Lining Walking Shoes Model HR066-C",
+        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "current_title": "Geometric Knit High Top Casual Sneakers with Pull-On Shaft and Contrast Sole for Footwear Assortments",
         "current_category_id": 201334413,
         "current_audit": "approved",
         "current_display": "Y",
-        "current_field_evidence": "99_临时区/HR实源替换/全量目录/catalog.json",
-        "bound_source_id": null,
-        "registry_source_state": "MISSING",
-        "candidate_source_ids": [],
-        "formal_proof": null
+        "current_field_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943670945/formal_get.json",
+        "bound_source_id": "src-hr-hr066-ws6",
+        "registry_source_state": "ADOPTED",
+        "candidate_source_ids": [
+          "src-hr-hr066-ws6"
+        ],
+        "formal_proof": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943670945/verification.json"
       },
       {
         "id": "1601943662995",

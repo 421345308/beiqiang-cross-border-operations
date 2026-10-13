@@ -46,6 +46,8 @@ def main():
                 assert family in ['HR026','HR027','HR028']
                 assert fact['source_model']==profile['source_model'] and fact['url']==profile['source_url']
                 assert fact['materials']==profile['materials'] and visual['all_current_main_roles_hash_verified']
+                if family=='HR026':
+                    assert visual['roles']['A_M1']['current_official_decoded_pixel_match']['decoded_pixels_equal']is True
                 source=ROOT/fact['source_page_file']
                 body=source.read_text(encoding='utf8')
                 assert hashlib.sha256(source.read_bytes()).hexdigest()==fact['source_page_sha256']
