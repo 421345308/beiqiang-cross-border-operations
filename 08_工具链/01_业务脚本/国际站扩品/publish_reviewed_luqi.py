@@ -24,7 +24,7 @@ FIELDS=['catId','icbuCatProp','saleProp','sku','productTitle','scImages','pkgMea
 
 def configure(style):
     global STYLE,FOLDER,MODEL,CATEGORY,CATALOG,COLORS,PROFILE,EU_BY_COLOR,SCHEMA_NAME
-    assert style in ('995','2576','1712','2418','868','822','2579','2575','2505','931','02412','0922','923','323'), 'Only individually reviewed current source profiles are enabled'
+    assert style in ('995','2576','1712','2418','868','822','2579','2575','2505','931','02412','0922','923','323','909','1628','2772','2132','9705'), 'Only individually reviewed current source profiles are enabled'
     STYLE=style;FOLDER=BASE/(style+'准备');MODEL='BQ-LQ'+style;CATALOG=ROOT/('99_临时区/路崎'+style+'/当前目录/catalog.json')
     facts=load(FOLDER/'当前来源与色码核对.json');assert facts['style']==style;PROFILE=facts['publish_profile'];CATEGORY=PROFILE['category_id'];assert CATEGORY in (201334413,202248402)
     SCHEMA_NAME=PROFILE.get('schema_name','当前步行鞋Schema');assert SCHEMA_NAME in ('当前步行鞋Schema','当前雪地靴Schema')
@@ -226,7 +226,7 @@ def sync():
     product['classification']={**product.get('classification',{}),'local_intent_candidates':PROFILE['local_intent'],'state':'REAL_SOURCE_PHOTOS_AND_CURRENT_SCHEMA_REVIEWED','platform_category_ids':[CATEGORY],'platform_category_state':'CURRENT_EXACT_ID_API_OBSERVED'}
     source['latest_price_review']={'observed_at':facts['observed_at'],'price_cny':facts['source_price_cny'],'evidence':rel(FOLDER/'当前来源与色码核对.json'),'scope':'公开来源当次标价；非实物库存、已采购或固定报价。'}
     source['evidence']=list(dict.fromkeys(source.get('evidence',[])+[rel(FOLDER/'当前来源与色码核对.json')]))
-    routes={c:{'source':facts['source'],'source_id':sid,'source_artno':STYLE,'supplier_color':next(v['supplier_label'] for v in PROFILE['buyer_colours'] if v['buyer']==c),'EU':EU_BY_COLOR[c]} for c in COLORS}
+    routes={c:{'source':facts['source'],'source_id':sid,'source_artno':next(v.get('supplier_artno',STYLE)for v in PROFILE['buyer_colours']if v['buyer']==c),'supplier_color':next(v['supplier_label'] for v in PROFILE['buyer_colours'] if v['buyer']==c),'EU':EU_BY_COLOR[c]} for c in COLORS}
     assert not any(l['model']==MODEL and l['id']!=pid for l in registry['listings']), 'Model already has another ID; reconcile rather than append'
     listing=next((l for l in registry['listings'] if l['id']==pid),None)
     if listing is None:
@@ -273,7 +273,7 @@ def sync():
 
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('mode',choices=('schema','bank','prepare','create','verify','sync'));ap.add_argument('--style',required=True,choices=('995','2576','1712','2418','868','822','2579','2575','2505','931','02412','0922','923','323'));args=ap.parse_args();configure(args.style)
+    ap=argparse.ArgumentParser();ap.add_argument('mode',choices=('schema','bank','prepare','create','verify','sync'));ap.add_argument('--style',required=True,choices=('995','2576','1712','2418','868','822','2579','2575','2505','931','02412','0922','923','323','909','1628','2772','2132','9705'));args=ap.parse_args();configure(args.style)
     if args.mode=='prepare':prepare();return
     if args.mode=='sync':sync();return
     spec=importlib.util.spec_from_file_location('alibaba_client',ROOT/'.agents/skills/alibaba-openapi-operator/scripts/alibaba_openapi.py');client=importlib.util.module_from_spec(spec);spec.loader.exec_module(client);cfg=client.load_config(client.DEFAULT_CONFIG)

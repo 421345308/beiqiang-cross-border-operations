@@ -89,7 +89,7 @@ def main():
     luqi_ids={str(row['id']) for row in luqi_repairs}
     assert len(luqi_ids)==8
     new_luqi_ids=set()
-    for style in ('995','2576','1712','2418','868','822','2579','2575','2505','931','02412','0922','923','323'):
+    for style in ('995','2576','1712','2418','868','822','2579','2575','2505','931','02412','0922','923','323','909','1628','2772','2132','9705'):
         new_luqi_ledger=ROOT/LUQI/(style+'准备/create_once.json')
         if new_luqi_ledger.exists():
             created=load(new_luqi_ledger.relative_to(ROOT).as_posix())
@@ -112,7 +112,8 @@ def main():
     paths += ['08_工具链/01_业务脚本/国际站扩品/publish_reviewed_luqi.py']
     paths += ['08_工具链/01_业务脚本/国际站扩品/repair_luqi_price_rounding.py']
     paths += [LUQI+'/2409准备/'+name for name in ('实际评分回读.json','发布后字段核验.json')]
-    for style in ('995','2576','1712','2418','868','822','2579','2575','2505','931','02412','0922','923','323'):
+    paths += [LUQI+'/1628准备/标识形状比较/当前形状核对.json']
+    for style in ('995','2576','1712','2418','868','822','2579','2575','2505','931','02412','0922','923','323','909','1628','2772','2132','9705'):
         prefix=LUQI+'/'+style+'准备'
         paths += [p.relative_to(ROOT).as_posix() for p in (ROOT/prefix).glob('*.json') if p.name in ('当前来源与色码核对.json','当前来源刷新核对.json','物流标签回读诊断.json','prepared.json','manifest.json','图片银行公开映射.json','create_once.json','create_receipt.json','verification.json','score.json','双改核验.json','来源款式近似候选.json','发布前差异化审查.json')]
         paths += [p.relative_to(ROOT).as_posix() for p in (ROOT/prefix/'05_AI候选').glob('*.json')]
@@ -246,7 +247,7 @@ def main():
             # workspace changes. Preserve unrelated family fields from base.
             for key in ('source_state','adopted_source_id','candidate_source_ids','local_assets','material_role_review','family_color_expansion','source_routes_by_color','related_source_ids','next_action','notes','aliases','evidence','raw_packages','dossier_path'):
                 if key in lp[product['id']]:product[key]=copy.deepcopy(lp[product['id']][key])
-            if product['id'] in {'LQ-995','LQ-2576','LQ-1712','LQ-2418','LQ-868','LQ-822','LQ-2579','LQ-2575','LQ-2505','LQ-931','LQ-02412','LQ-0922','LQ-923','LQ-323'}:product['classification']=copy.deepcopy(lp[product['id']]['classification'])
+            if product['id'] in {'LQ-995','LQ-2576','LQ-1712','LQ-2418','LQ-868','LQ-822','LQ-2579','LQ-2575','LQ-2505','LQ-931','LQ-02412','LQ-0922','LQ-923','LQ-323','LQ-909','LQ-1628','LQ-2772','LQ-2132','LQ-9705'}:product['classification']=copy.deepcopy(lp[product['id']]['classification'])
     family_phase=ll['1601976101204'].get('optimization',{}).get('family_color_expansion',{})
     if family_phase.get('state') in ('FORMAL_FIELDS_SCORE_PASS','FORMAL_FIELDS_PASS_PENDING_SCORE') and 'LQ-2583' not in lp:
         assert not any(l['product_id']=='LQ-2583' for l in merged['listings'])

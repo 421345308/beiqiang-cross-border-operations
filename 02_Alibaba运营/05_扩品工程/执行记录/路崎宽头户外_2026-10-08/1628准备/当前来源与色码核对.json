@@ -1,0 +1,147 @@
+{
+  "style": "1628",
+  "source": "https://luqi.sooxie.com/detail/2063330",
+  "observed_at": "2026-10-14T18:24:40.111078+00:00",
+  "source_HTML_sha256": "748a9421cd2f0dcfe5201671b133efa7dabfb77a2e00e7518c7ff2c574212510",
+  "source_price_cny": "55.00",
+  "source_EU_by_color": {
+    "Black Standard": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ],
+    "Black Plush": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ]
+  },
+  "source_EU_combinations": 20,
+  "whole_source_contacts_actually_viewed": true,
+  "photo_count": 16,
+  "full_original_fact_indices_actually_viewed": [
+    1,
+    3,
+    7,
+    15,
+    16,
+    18
+  ],
+  "known_materials": {
+    "upper": "Source07皮面 generic surface description, smooth vamp/grained overlays visible; native other, no natural leather or PU chemistry assertion.",
+    "outsole": "Source03 MD防滑底 and07鞋底材质MD explicitly name MD outsole; publish MD only, no EVA inference or tested-slip claim.",
+    "midsole": "Separate material not identified, native other; do not move MD outsole evidence into midsole.",
+    "lining": "Two real black options: ordinary single lining fromsource07/18 and black Plush from01/07/15/16. Product-level chemical/fiber lining material other, each SKU/body/image identifies selected variant; do not say all variants Plush."
+  },
+  "wide_claim": "NO_WIDE_CLAIM_FROM_OUTDOOR_ONLY_SOURCE",
+  "source_color_aliases": {
+    "Black - Standard Lining": "黑色单鞋; ordinary collar edge, source18actual streetwear",
+    "Black - Plush Lining": "1628-1加绒; actual black plush collar/tongue edge, source01whitehero"
+  },
+  "variant_axis_note": "Supplier lists lining variants under Color. Custom Color labels include exact Black + lining choice to avoid two falsely different colours. Both explicit EU39-48, one real family and one new ID, not duplicate creates.",
+  "visible_structure": [
+    "Lace-up casual walking sneaker with rounded forefoot and stitched grained toe overlay",
+    "Plain lace openings, woven tongue keeper and smooth tongue tab",
+    "Curved quarter panels with narrow gold trim and stitched rear panel",
+    "Black MD outsole with sculpted sidewall and triangular tread units",
+    "Ordinary lining or black plush collar version; real rear pull loop"
+  ],
+  "identity_notes": "All16 readable source contacts/full01/03/07/15/16/18 and2772full01 reviewed. Actual1628 two curved gold-trim segments/large eyestay/front smooth tab/rear triangular stitching differ2772 single diagonal gold wave/printed tongue tab/rear wing overlays. 1628 standard and1628-1plush are same supplier family with explicit two options, no separate duplicate IDs. Exact source/current catalog dedup beforecreate. Gold-mark bounded official shape comparison at标识形状比较/当前形状核对.json: no positive identifiable official S match established, actual trim retained, no third-party brand/technology words or globallegalclearance claim.",
+  "title_draft": "Mens Lace Up Casual Walking Shoes MD Outsole Black Standard or Plush Lining Sneakers Wholesale EU 39-48",
+  "product_highlights_draft": [
+    "Two Black lining choices: Select Standard Lining for the ordinary collar version or Plush Lining for the version with a black plush collar and tongue edge.",
+    "Panelled sneaker upper: A smooth forefoot combines with grained overlays, curved stitched quarter panels and narrow gold-colour trim.",
+    "Lace-up construction: Crossed black cords run through plain eyestay openings over a tongue keeper, with a fabric loop at the heel.",
+    "MD outsole profile: The supplier identifies the black outsole as MD; the visible underside carries repeated triangular tread units.",
+    "Wholesale variant-size planning: Both Black lining options cover EU 39–48, with the lining choice included in each SKU label."
+  ],
+  "state": "CREATED_FORMAL_FIELDS_SCORE_PASS",
+  "pricing_draft": {
+    "source_cny": "55.00",
+    "fx": "6.6837",
+    "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+    "fx_observed": "2026-10-13 10:57:20",
+    "rounding": "ROUND_CEILING_TO_USD_CENT",
+    "tiers": [
+      [
+        2,
+        "12.35"
+      ],
+      [
+        50,
+        "11.53"
+      ],
+      [
+        100,
+        "10.70"
+      ]
+    ],
+    "freight_service_tax": "Currentsource public55CNY reference for family; per-variant final purchase quote/freight/service/tax order-specific, markup not netprofit."
+  },
+  "publish_profile": {
+    "category_id": 201334413,
+    "schema_name": "当前步行鞋Schema",
+    "buyer_colours": [
+      {
+        "buyer": "Black - Standard Lining",
+        "supplier_key": "Black Standard",
+        "supplier_label": "黑色单鞋",
+        "supplier_artno": "1628",
+        "image_role": "M4"
+      },
+      {
+        "buyer": "Black - Plush Lining",
+        "supplier_key": "Black Plush",
+        "supplier_label": "1628-1加绒",
+        "supplier_artno": "1628-1",
+        "image_role": "M1"
+      }
+    ],
+    "category_attributes": {
+      "Upper Material": [
+        "other"
+      ],
+      "Midsole Material": [
+        "other"
+      ],
+      "Outsole Material": [
+        "MD"
+      ],
+      "Lining Material": [
+        "other"
+      ],
+      "Closure Type": [
+        "Lace-up"
+      ]
+    },
+    "local_intent": [
+      "普通与绒里可选的系带休闲步行鞋"
+    ]
+  },
+  "hero_selection": "Actualraw01 cleanwhite Plush hero unchanged, actual18 Standardwear reusedStandardSKU, actual16Plushpairwear. Current specifics and lining-choice graphic prevent claiming all variantsplush.",
+  "title_bytes": 103,
+  "publication": {
+    "product_id": "1601980330662",
+    "audit": "approved",
+    "display": "Y",
+    "actual_score": "5.00",
+    "formal_verification": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1628准备/verification.json",
+    "local_sync_at": "2026-10-14T19:25:21.688007+00:00",
+    "no_replayed_create": true
+  },
+  "next_action": "该款正式字段、评分与来源已通过；继续其他款，不重复创建。"
+}

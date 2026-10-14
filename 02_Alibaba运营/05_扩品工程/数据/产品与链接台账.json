@@ -51,21 +51,6 @@
       ]
     },
     {
-      "id": "src-0563177eb488",
-      "url": "https://luqi.sooxie.com/detail/1809689",
-      "shop_url": "https://luqi.sooxie.com",
-      "supplier": "路崎鞋业工厂店",
-      "model": "909",
-      "price": "60.00",
-      "currency": "CNY",
-      "unit": "双",
-      "price_terms": "采购数量、版本、包装、运税与当天可供条件逐单确认。",
-      "observed_at": "2026-10-08T12:05:30.864687+00:00",
-      "evidence": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json"
-      ]
-    },
-    {
       "id": "src-05dc66a7c887",
       "url": "https://bqgcd.sooxie.com/detail/2318706",
       "shop_url": "https://bqgcd.sooxie.com",
@@ -926,21 +911,6 @@
       "observed_at": "2026-08-14",
       "evidence": [
         "02_Alibaba运营/05_扩品工程/数据/国际站预上架商品总表_2026-08-14.csv"
-      ]
-    },
-    {
-      "id": "src-4e2dadc34943",
-      "url": "https://luqi.sooxie.com/detail/2063330",
-      "shop_url": "https://luqi.sooxie.com",
-      "supplier": "路崎鞋业工厂店",
-      "model": "1628",
-      "price": "55.00",
-      "currency": "CNY",
-      "unit": "双",
-      "price_terms": "采购数量、版本、包装、运税与当天可供条件逐单确认。",
-      "observed_at": "2026-10-08T12:05:25.034867+00:00",
-      "evidence": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json"
       ]
     },
     {
@@ -2521,21 +2491,6 @@
       ]
     },
     {
-      "id": "src-e39fb7e34a8f",
-      "url": "https://luqi.sooxie.com/detail/1793759",
-      "shop_url": "https://luqi.sooxie.com",
-      "supplier": "路崎鞋业工厂店",
-      "model": "2772",
-      "price": "48.00",
-      "currency": "CNY",
-      "unit": "双",
-      "price_terms": "采购数量、版本、包装、运税与当天可供条件逐单确认。",
-      "observed_at": "2026-10-08T12:05:30.912985+00:00",
-      "evidence": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json"
-      ]
-    },
-    {
       "id": "src-e6a7e601ce05",
       "url": "https://luqi.sooxie.com/detail/2308868",
       "shop_url": "https://luqi.sooxie.com",
@@ -2765,21 +2720,6 @@
       "observed_at": "2026-10-08",
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1212准备/经营任务包.md",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json"
-      ]
-    },
-    {
-      "id": "src-f446bedb67c9",
-      "url": "https://luqi.sooxie.com/detail/1784551",
-      "shop_url": "https://luqi.sooxie.com",
-      "supplier": "路崎鞋业工厂店",
-      "model": "2132",
-      "price": "52.00",
-      "currency": "CNY",
-      "unit": "双",
-      "price_terms": "采购数量、版本、包装、运税与当天可供条件逐单确认。",
-      "observed_at": "2026-10-08T12:05:30.962529+00:00",
-      "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json"
       ]
     },
@@ -3958,24 +3898,46 @@
       ]
     },
     {
-      "id": "src-163b14a8c952",
-      "url": "https://luqi.sooxie.com/detail/2295867",
+      "id": "src-e39fb7e34a8f",
+      "url": "https://luqi.sooxie.com/detail/1793759",
       "shop_url": "https://luqi.sooxie.com",
       "supplier": "路崎鞋业工厂店",
-      "model": "995",
+      "model": "2772",
+      "price": "48.00",
+      "currency": "CNY",
+      "unit": "双",
+      "price_terms": "采购数量、版本、包装、运税与当天可供条件逐单确认。",
+      "observed_at": "2026-10-08T12:05:30.912985+00:00",
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2772准备/当前来源与色码核对.json"
+      ],
+      "latest_price_review": {
+        "observed_at": "2026-10-14T18:58:10.121581+00:00",
+        "price_cny": "48.00",
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2772准备/当前来源与色码核对.json",
+        "scope": "公开来源当次标价；非实物库存、已采购或固定报价。"
+      }
+    },
+    {
+      "id": "src-d438d7cece9b",
+      "url": "https://luqi.sooxie.com/detail/1984084",
+      "shop_url": "https://luqi.sooxie.com",
+      "supplier": "路崎鞋业工厂店",
+      "model": "0922",
       "price": "68.00",
       "currency": "CNY",
       "unit": "双",
       "price_terms": "采购数量、版本、包装、运税与当天可供条件逐单确认。",
-      "observed_at": "2026-10-08T12:05:24.890707+00:00",
+      "observed_at": "2026-10-08T12:05:25.183051+00:00",
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/995准备/当前来源与色码核对.json"
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/当前来源与色码核对.json"
       ],
       "latest_price_review": {
-        "observed_at": "2026-10-13T23:09:31.299511+00:00",
+        "observed_at": "2026-10-14T14:18:08.573072+00:00",
         "price_cny": "68.00",
-        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/995准备/当前来源与色码核对.json",
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/当前来源与色码核对.json",
         "scope": "公开来源当次标价；非实物库存、已采购或固定报价。"
       }
     },
@@ -4002,156 +3964,24 @@
       }
     },
     {
-      "id": "src-7f5d4e86e9a3",
-      "url": "https://luqi.sooxie.com/detail/2280715",
+      "id": "src-c536d5e0fae0",
+      "url": "https://luqi.sooxie.com/detail/2280202",
       "shop_url": "https://luqi.sooxie.com",
       "supplier": "路崎鞋业工厂店",
-      "model": "868",
-      "price": "52.00",
+      "model": "822",
+      "price": "48.00",
       "currency": "CNY",
       "unit": "双",
       "price_terms": "采购数量、版本、包装、运税与当天可供条件逐单确认。",
-      "observed_at": "2026-10-08T12:05:24.948886+00:00",
+      "observed_at": "2026-10-08T12:05:24.976009+00:00",
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/868准备/当前来源与色码核对.json"
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/822准备/当前来源与色码核对.json"
       ],
       "latest_price_review": {
-        "observed_at": "2026-10-13T23:12:34.589247+00:00",
-        "price_cny": "52.00",
-        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/868准备/当前来源与色码核对.json",
-        "scope": "公开来源当次标价；非实物库存、已采购或固定报价。"
-      }
-    },
-    {
-      "id": "src-7c30b934ce12",
-      "url": "https://luqi.sooxie.com/detail/2002980",
-      "shop_url": "https://luqi.sooxie.com",
-      "supplier": "路崎鞋业工厂店",
-      "model": "323",
-      "price": "68.00",
-      "currency": "CNY",
-      "unit": "双",
-      "price_terms": "采购数量、版本、包装、运税与当天可供条件逐单确认。",
-      "observed_at": "2026-10-08T12:05:25.123366+00:00",
-      "evidence": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/323准备/当前来源与色码核对.json"
-      ],
-      "latest_price_review": {
-        "observed_at": "2026-10-14T16:01:32.628118+00:00",
-        "price_cny": "68.00",
-        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/323准备/当前来源与色码核对.json",
-        "scope": "公开来源当次标价；非实物库存、已采购或固定报价。"
-      }
-    },
-    {
-      "id": "src-4a78572dfe44",
-      "url": "https://luqi.sooxie.com/detail/2353571",
-      "shop_url": "https://luqi.sooxie.com",
-      "supplier": "路崎鞋业工厂店",
-      "model": "2579",
-      "price": "98.00",
-      "currency": "CNY",
-      "unit": "双",
-      "price_terms": "采购数量、版本、包装、运税与当天可供条件逐单确认。",
-      "observed_at": "2026-10-08T12:05:24.797632+00:00",
-      "evidence": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2579准备/当前来源与色码核对.json"
-      ],
-      "latest_price_review": {
-        "observed_at": "2026-10-14T08:46:32.117049+00:00",
-        "price_cny": "98.00",
-        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2579准备/当前来源与色码核对.json",
-        "scope": "公开来源当次标价；非实物库存、已采购或固定报价。"
-      }
-    },
-    {
-      "id": "src-4cf1620d0e9b",
-      "url": "https://luqi.sooxie.com/detail/255844",
-      "shop_url": "https://luqi.sooxie.com",
-      "supplier": "路崎鞋业工厂店",
-      "model": "1712",
-      "price": "42.00",
-      "currency": "CNY",
-      "unit": "双",
-      "price_terms": "采购数量、版本、包装、运税与当天可供条件逐单确认。",
-      "observed_at": "2026-10-08T12:05:31.138126+00:00",
-      "evidence": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1712准备/当前来源与色码核对.json"
-      ],
-      "latest_price_review": {
-        "observed_at": "2026-10-14T04:40:26.853235+00:00",
-        "price_cny": "42.00",
-        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1712准备/当前来源与色码核对.json",
-        "scope": "公开来源当次标价；非实物库存、已采购或固定报价。"
-      }
-    },
-    {
-      "id": "src-797c9dded222",
-      "url": "https://luqi.sooxie.com/detail/2351916",
-      "shop_url": "https://luqi.sooxie.com",
-      "supplier": "路崎鞋业工厂店",
-      "model": "2575",
-      "price": "98.00",
-      "currency": "CNY",
-      "unit": "双",
-      "price_terms": "采购数量、版本、包装、运税与当天可供条件逐单确认。",
-      "observed_at": "2026-10-08T12:05:24.830175+00:00",
-      "evidence": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2575准备/当前来源与色码核对.json"
-      ],
-      "latest_price_review": {
-        "observed_at": "2026-10-14T09:37:20.271983+00:00",
-        "price_cny": "98.00",
-        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2575准备/当前来源与色码核对.json",
-        "scope": "公开来源当次标价；非实物库存、已采购或固定报价。"
-      }
-    },
-    {
-      "id": "src-8cfcee52f82e",
-      "url": "https://luqi.sooxie.com/detail/2046177",
-      "shop_url": "https://luqi.sooxie.com",
-      "supplier": "路崎鞋业工厂店",
-      "model": "2505",
-      "price": "68.00",
-      "currency": "CNY",
-      "unit": "双",
-      "price_terms": "采购数量、版本、包装、运税与当天可供条件逐单确认。",
-      "observed_at": "2026-10-08T12:05:25.064424+00:00",
-      "evidence": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2505准备/当前来源与色码核对.json"
-      ],
-      "latest_price_review": {
-        "observed_at": "2026-10-14T10:08:52.810781+00:00",
-        "price_cny": "68.00",
-        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2505准备/当前来源与色码核对.json",
-        "scope": "公开来源当次标价；非实物库存、已采购或固定报价。"
-      }
-    },
-    {
-      "id": "src-4a244dcb47c9",
-      "url": "https://luqi.sooxie.com/detail/1988331",
-      "shop_url": "https://luqi.sooxie.com",
-      "supplier": "路崎鞋业工厂店",
-      "model": "02412",
-      "price": "58.00",
-      "currency": "CNY",
-      "unit": "双",
-      "price_terms": "采购数量、版本、包装、运税与当天可供条件逐单确认。",
-      "observed_at": "2026-10-08T12:05:25.154264+00:00",
-      "evidence": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/02412准备/当前来源与色码核对.json"
-      ],
-      "latest_price_review": {
-        "observed_at": "2026-10-14T12:46:04.584007+00:00",
-        "price_cny": "58.00",
-        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/02412准备/当前来源与色码核对.json",
+        "observed_at": "2026-10-13T23:12:54.195493+00:00",
+        "price_cny": "48.00",
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/822准备/当前来源与色码核对.json",
         "scope": "公开来源当次标价；非实物库存、已采购或固定报价。"
       }
     },
@@ -4178,24 +4008,222 @@
       }
     },
     {
-      "id": "src-d438d7cece9b",
-      "url": "https://luqi.sooxie.com/detail/1984084",
+      "id": "src-f446bedb67c9",
+      "url": "https://luqi.sooxie.com/detail/1784551",
       "shop_url": "https://luqi.sooxie.com",
       "supplier": "路崎鞋业工厂店",
-      "model": "0922",
+      "model": "2132",
+      "price": "52.00",
+      "currency": "CNY",
+      "unit": "双",
+      "price_terms": "采购数量、版本、包装、运税与当天可供条件逐单确认。",
+      "observed_at": "2026-10-08T12:05:30.962529+00:00",
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2132准备/当前来源与色码核对.json"
+      ],
+      "latest_price_review": {
+        "observed_at": "2026-10-14T23:09:43.772997+00:00",
+        "price_cny": "52.00",
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2132准备/当前来源与色码核对.json",
+        "scope": "公开来源当次标价；非实物库存、已采购或固定报价。"
+      }
+    },
+    {
+      "id": "src-4a78572dfe44",
+      "url": "https://luqi.sooxie.com/detail/2353571",
+      "shop_url": "https://luqi.sooxie.com",
+      "supplier": "路崎鞋业工厂店",
+      "model": "2579",
+      "price": "98.00",
+      "currency": "CNY",
+      "unit": "双",
+      "price_terms": "采购数量、版本、包装、运税与当天可供条件逐单确认。",
+      "observed_at": "2026-10-08T12:05:24.797632+00:00",
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2579准备/当前来源与色码核对.json"
+      ],
+      "latest_price_review": {
+        "observed_at": "2026-10-14T08:46:32.117049+00:00",
+        "price_cny": "98.00",
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2579准备/当前来源与色码核对.json",
+        "scope": "公开来源当次标价；非实物库存、已采购或固定报价。"
+      }
+    },
+    {
+      "id": "src-8cfcee52f82e",
+      "url": "https://luqi.sooxie.com/detail/2046177",
+      "shop_url": "https://luqi.sooxie.com",
+      "supplier": "路崎鞋业工厂店",
+      "model": "2505",
       "price": "68.00",
       "currency": "CNY",
       "unit": "双",
       "price_terms": "采购数量、版本、包装、运税与当天可供条件逐单确认。",
-      "observed_at": "2026-10-08T12:05:25.183051+00:00",
+      "observed_at": "2026-10-08T12:05:25.064424+00:00",
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/当前来源与色码核对.json"
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2505准备/当前来源与色码核对.json"
       ],
       "latest_price_review": {
-        "observed_at": "2026-10-14T14:18:08.573072+00:00",
+        "observed_at": "2026-10-14T10:08:52.810781+00:00",
         "price_cny": "68.00",
-        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/当前来源与色码核对.json",
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2505准备/当前来源与色码核对.json",
+        "scope": "公开来源当次标价；非实物库存、已采购或固定报价。"
+      }
+    },
+    {
+      "id": "src-163b14a8c952",
+      "url": "https://luqi.sooxie.com/detail/2295867",
+      "shop_url": "https://luqi.sooxie.com",
+      "supplier": "路崎鞋业工厂店",
+      "model": "995",
+      "price": "68.00",
+      "currency": "CNY",
+      "unit": "双",
+      "price_terms": "采购数量、版本、包装、运税与当天可供条件逐单确认。",
+      "observed_at": "2026-10-08T12:05:24.890707+00:00",
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/995准备/当前来源与色码核对.json"
+      ],
+      "latest_price_review": {
+        "observed_at": "2026-10-13T23:09:31.299511+00:00",
+        "price_cny": "68.00",
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/995准备/当前来源与色码核对.json",
+        "scope": "公开来源当次标价；非实物库存、已采购或固定报价。"
+      }
+    },
+    {
+      "id": "src-4cf1620d0e9b",
+      "url": "https://luqi.sooxie.com/detail/255844",
+      "shop_url": "https://luqi.sooxie.com",
+      "supplier": "路崎鞋业工厂店",
+      "model": "1712",
+      "price": "42.00",
+      "currency": "CNY",
+      "unit": "双",
+      "price_terms": "采购数量、版本、包装、运税与当天可供条件逐单确认。",
+      "observed_at": "2026-10-08T12:05:31.138126+00:00",
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1712准备/当前来源与色码核对.json"
+      ],
+      "latest_price_review": {
+        "observed_at": "2026-10-14T04:40:26.853235+00:00",
+        "price_cny": "42.00",
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1712准备/当前来源与色码核对.json",
+        "scope": "公开来源当次标价；非实物库存、已采购或固定报价。"
+      }
+    },
+    {
+      "id": "src-4a244dcb47c9",
+      "url": "https://luqi.sooxie.com/detail/1988331",
+      "shop_url": "https://luqi.sooxie.com",
+      "supplier": "路崎鞋业工厂店",
+      "model": "02412",
+      "price": "58.00",
+      "currency": "CNY",
+      "unit": "双",
+      "price_terms": "采购数量、版本、包装、运税与当天可供条件逐单确认。",
+      "observed_at": "2026-10-08T12:05:25.154264+00:00",
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/02412准备/当前来源与色码核对.json"
+      ],
+      "latest_price_review": {
+        "observed_at": "2026-10-14T12:46:04.584007+00:00",
+        "price_cny": "58.00",
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/02412准备/当前来源与色码核对.json",
+        "scope": "公开来源当次标价；非实物库存、已采购或固定报价。"
+      }
+    },
+    {
+      "id": "src-0563177eb488",
+      "url": "https://luqi.sooxie.com/detail/1809689",
+      "shop_url": "https://luqi.sooxie.com",
+      "supplier": "路崎鞋业工厂店",
+      "model": "909",
+      "price": "60.00",
+      "currency": "CNY",
+      "unit": "双",
+      "price_terms": "采购数量、版本、包装、运税与当天可供条件逐单确认。",
+      "observed_at": "2026-10-08T12:05:30.864687+00:00",
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/909准备/当前来源与色码核对.json"
+      ],
+      "latest_price_review": {
+        "observed_at": "2026-10-14T17:34:27.102396+00:00",
+        "price_cny": "60.00",
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/909准备/当前来源与色码核对.json",
+        "scope": "公开来源当次标价；非实物库存、已采购或固定报价。"
+      }
+    },
+    {
+      "id": "src-797c9dded222",
+      "url": "https://luqi.sooxie.com/detail/2351916",
+      "shop_url": "https://luqi.sooxie.com",
+      "supplier": "路崎鞋业工厂店",
+      "model": "2575",
+      "price": "98.00",
+      "currency": "CNY",
+      "unit": "双",
+      "price_terms": "采购数量、版本、包装、运税与当天可供条件逐单确认。",
+      "observed_at": "2026-10-08T12:05:24.830175+00:00",
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2575准备/当前来源与色码核对.json"
+      ],
+      "latest_price_review": {
+        "observed_at": "2026-10-14T09:37:20.271983+00:00",
+        "price_cny": "98.00",
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2575准备/当前来源与色码核对.json",
+        "scope": "公开来源当次标价；非实物库存、已采购或固定报价。"
+      }
+    },
+    {
+      "id": "src-7c30b934ce12",
+      "url": "https://luqi.sooxie.com/detail/2002980",
+      "shop_url": "https://luqi.sooxie.com",
+      "supplier": "路崎鞋业工厂店",
+      "model": "323",
+      "price": "68.00",
+      "currency": "CNY",
+      "unit": "双",
+      "price_terms": "采购数量、版本、包装、运税与当天可供条件逐单确认。",
+      "observed_at": "2026-10-08T12:05:25.123366+00:00",
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/323准备/当前来源与色码核对.json"
+      ],
+      "latest_price_review": {
+        "observed_at": "2026-10-14T16:01:32.628118+00:00",
+        "price_cny": "68.00",
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/323准备/当前来源与色码核对.json",
+        "scope": "公开来源当次标价；非实物库存、已采购或固定报价。"
+      }
+    },
+    {
+      "id": "src-4e2dadc34943",
+      "url": "https://luqi.sooxie.com/detail/2063330",
+      "shop_url": "https://luqi.sooxie.com",
+      "supplier": "路崎鞋业工厂店",
+      "model": "1628",
+      "price": "55.00",
+      "currency": "CNY",
+      "unit": "双",
+      "price_terms": "采购数量、版本、包装、运税与当天可供条件逐单确认。",
+      "observed_at": "2026-10-08T12:05:25.034867+00:00",
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1628准备/当前来源与色码核对.json"
+      ],
+      "latest_price_review": {
+        "observed_at": "2026-10-14T18:24:40.111078+00:00",
+        "price_cny": "55.00",
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1628准备/当前来源与色码核对.json",
         "scope": "公开来源当次标价；非实物库存、已采购或固定报价。"
       }
     },
@@ -4244,24 +4272,24 @@
       }
     },
     {
-      "id": "src-c536d5e0fae0",
-      "url": "https://luqi.sooxie.com/detail/2280202",
+      "id": "src-7f5d4e86e9a3",
+      "url": "https://luqi.sooxie.com/detail/2280715",
       "shop_url": "https://luqi.sooxie.com",
       "supplier": "路崎鞋业工厂店",
-      "model": "822",
-      "price": "48.00",
+      "model": "868",
+      "price": "52.00",
       "currency": "CNY",
       "unit": "双",
       "price_terms": "采购数量、版本、包装、运税与当天可供条件逐单确认。",
-      "observed_at": "2026-10-08T12:05:24.976009+00:00",
+      "observed_at": "2026-10-08T12:05:24.948886+00:00",
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/822准备/当前来源与色码核对.json"
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/868准备/当前来源与色码核对.json"
       ],
       "latest_price_review": {
-        "observed_at": "2026-10-13T23:12:54.195493+00:00",
-        "price_cny": "48.00",
-        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/822准备/当前来源与色码核对.json",
+        "observed_at": "2026-10-13T23:12:34.589247+00:00",
+        "price_cny": "52.00",
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/868准备/当前来源与色码核对.json",
         "scope": "公开来源当次标价；非实物库存、已采购或固定报价。"
       }
     }
@@ -19425,20 +19453,89 @@
       "aliases": [
         "LQ-1628"
       ],
-      "source_state": "CANDIDATE",
-      "adopted_source_id": null,
-      "candidate_source_ids": [
-        "src-4e2dadc34943"
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-4e2dadc34943",
+      "candidate_source_ids": [],
+      "raw_packages": [
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1628准备/01_产品来源原图"
       ],
-      "raw_packages": [],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/质量复核_2026-10-09/全分类处理队列.json"
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/质量复核_2026-10-09/全分类处理队列.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1628准备/当前来源与色码核对.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1628准备/prepared.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1628准备/manifest.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1628准备/图片银行公开映射.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1628准备/create_once.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1628准备/create_receipt.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1628准备/verification.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1628准备/score.json"
       ],
       "notes": [
         "来源采集色码（非实存）：黑色单鞋/1628-1加绒；EU 39/40/41/42/43/44/45/46/47/48"
       ],
-      "next_action": "候选已采集；先做款式去重、事实/IP/图组质量，再按授权发布。"
+      "next_action": "当前实款、来源、图文和20EU正式一致；实际评分按当前核验，无需再创建1628，继续剩余路崎款。",
+      "local_assets": {
+        "asset_roots": [
+          "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1628准备/05_AI候选"
+        ],
+        "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601980330662/formal_get.json",
+        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
+        "source_fact_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1628准备/当前来源与色码核对.json"
+      },
+      "source_routes_by_color": {
+        "Black - Standard Lining": {
+          "source": "https://luqi.sooxie.com/detail/2063330",
+          "source_id": "src-4e2dadc34943",
+          "source_artno": "1628",
+          "supplier_color": "黑色单鞋",
+          "EU": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48
+          ]
+        },
+        "Black - Plush Lining": {
+          "source": "https://luqi.sooxie.com/detail/2063330",
+          "source_id": "src-4e2dadc34943",
+          "source_artno": "1628-1",
+          "supplier_color": "1628-1加绒",
+          "EU": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48
+          ]
+        }
+      },
+      "dossier_path": "02_Alibaba运营/02_单品优化记录/商品档案/LQ-1628/README.md",
+      "classification": {
+        "local_intent_candidates": [
+          "普通与绒里可选的系带休闲步行鞋"
+        ],
+        "state": "REAL_SOURCE_PHOTOS_AND_CURRENT_SCHEMA_REVIEWED",
+        "evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
+        "platform_category_ids": [
+          201334413
+        ],
+        "store_groups": [],
+        "store_group_state": "NOT_RETURNED_PENDING_REVIEW",
+        "platform_category_state": "CURRENT_EXACT_ID_API_OBSERVED"
+      }
     },
     {
       "id": "LQ-1680",
@@ -19580,15 +19677,113 @@
       "candidate_source_ids": [
         "src-f446bedb67c9"
       ],
-      "raw_packages": [],
+      "raw_packages": [
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2132准备/01_产品来源原图"
+      ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/质量复核_2026-10-09/全分类处理队列.json"
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/质量复核_2026-10-09/全分类处理队列.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2132准备/当前来源与色码核对.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2132准备/prepared.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2132准备/manifest.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2132准备/图片银行公开映射.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2132准备/create_once.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2132准备/create_receipt.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2132准备/verification.json"
       ],
       "notes": [
         "来源采集色码（非实存）：全黑/黑白/白灰/全黑加绒；EU 39/40/41/42/43/44/45/46"
       ],
-      "next_action": "候选已采集；先做款式去重、事实/IP/图组质量，再按授权发布。"
+      "next_action": "仅回读原ID审核、全字段与实际评分；不重复上传或创建2132，其他路崎款独立推进。",
+      "local_assets": {
+        "asset_roots": [
+          "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2132准备/05_AI候选"
+        ],
+        "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601980401860/formal_get.json",
+        "state": "REVIEWING",
+        "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
+        "source_fact_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2132准备/当前来源与色码核对.json"
+      },
+      "source_routes_by_color": {
+        "Black - Standard Lining": {
+          "source": "https://luqi.sooxie.com/detail/1784551",
+          "source_id": "src-f446bedb67c9",
+          "source_artno": "2132",
+          "supplier_color": "全黑",
+          "EU": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46
+          ]
+        },
+        "Black White - Standard Lining": {
+          "source": "https://luqi.sooxie.com/detail/1784551",
+          "source_id": "src-f446bedb67c9",
+          "source_artno": "2132",
+          "supplier_color": "黑白",
+          "EU": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46
+          ]
+        },
+        "White Grey - Standard Lining": {
+          "source": "https://luqi.sooxie.com/detail/1784551",
+          "source_id": "src-f446bedb67c9",
+          "source_artno": "2132",
+          "supplier_color": "白灰",
+          "EU": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46
+          ]
+        },
+        "Black - Plush Lining": {
+          "source": "https://luqi.sooxie.com/detail/1784551",
+          "source_id": "src-f446bedb67c9",
+          "source_artno": "2132",
+          "supplier_color": "全黑加绒",
+          "EU": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46
+          ]
+        }
+      },
+      "dossier_path": "02_Alibaba运营/02_单品优化记录/商品档案/LQ-2132/README.md",
+      "classification": {
+        "local_intent_candidates": [
+          "厚底中帮系带休闲鞋与黑色加绒可选"
+        ],
+        "state": "REAL_SOURCE_PHOTOS_AND_CURRENT_SCHEMA_REVIEWED",
+        "evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
+        "platform_category_ids": [
+          201334413
+        ],
+        "store_groups": [],
+        "store_group_state": "NOT_RETURNED_PENDING_REVIEW",
+        "platform_category_state": "CURRENT_EXACT_ID_API_OBSERVED"
+      }
     },
     {
       "id": "LQ-2409",
@@ -21447,31 +21642,109 @@
       "aliases": [
         "LQ-2772"
       ],
-      "source_state": "CANDIDATE",
-      "adopted_source_id": null,
-      "candidate_source_ids": [
-        "src-e39fb7e34a8f"
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-e39fb7e34a8f",
+      "candidate_source_ids": [],
+      "raw_packages": [
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2772准备/01_产品来源原图"
       ],
-      "raw_packages": [],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/质量复核_2026-10-09/全分类处理队列.json"
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/质量复核_2026-10-09/全分类处理队列.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2772准备/当前来源与色码核对.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2772准备/prepared.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2772准备/manifest.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2772准备/图片银行公开映射.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2772准备/create_once.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2772准备/create_receipt.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2772准备/verification.json"
       ],
       "notes": [
         "来源采集色码（非实存）：全黑/全黑加绒/黑白；EU 39/40/41/42/43/44/45/46"
       ],
-      "next_action": "候选已采集；先做款式去重、事实/IP/图组质量，再按授权发布。"
+      "next_action": "当前实款、来源、图文和24EU正式一致；实际评分按当前核验，无需再创建2772，继续剩余路崎款。",
+      "local_assets": {
+        "asset_roots": [
+          "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2772准备/05_AI候选"
+        ],
+        "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601980491300/formal_get.json",
+        "state": "FORMAL_FIELDS_PASS_PENDING_SCORE",
+        "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
+        "source_fact_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2772准备/当前来源与色码核对.json"
+      },
+      "source_routes_by_color": {
+        "Black - Standard Lining": {
+          "source": "https://luqi.sooxie.com/detail/1793759",
+          "source_id": "src-e39fb7e34a8f",
+          "source_artno": "2772",
+          "supplier_color": "全黑",
+          "EU": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46
+          ]
+        },
+        "Black - Plush Lining": {
+          "source": "https://luqi.sooxie.com/detail/1793759",
+          "source_id": "src-e39fb7e34a8f",
+          "source_artno": "2772",
+          "supplier_color": "全黑加绒",
+          "EU": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46
+          ]
+        },
+        "Black White - Standard Lining": {
+          "source": "https://luqi.sooxie.com/detail/1793759",
+          "source_id": "src-e39fb7e34a8f",
+          "source_artno": "2772",
+          "supplier_color": "黑白",
+          "EU": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46
+          ]
+        }
+      },
+      "dossier_path": "02_Alibaba运营/02_单品优化记录/商品档案/LQ-2772/README.md",
+      "classification": {
+        "local_intent_candidates": [
+          "普通或绒里与黑白底可选的系带休闲步行鞋"
+        ],
+        "state": "REAL_SOURCE_PHOTOS_AND_CURRENT_SCHEMA_REVIEWED",
+        "evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
+        "platform_category_ids": [
+          201334413
+        ],
+        "store_groups": [],
+        "store_group_state": "NOT_RETURNED_PENDING_REVIEW",
+        "platform_category_state": "CURRENT_EXACT_ID_API_OBSERVED"
+      }
     },
     {
       "id": "LQ-323",
       "aliases": [
         "LQ-323"
       ],
-      "source_state": "CANDIDATE",
-      "adopted_source_id": null,
-      "candidate_source_ids": [
-        "src-7c30b934ce12"
-      ],
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-7c30b934ce12",
+      "candidate_source_ids": [],
       "raw_packages": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/323准备/01_产品来源原图"
       ],
@@ -21484,18 +21757,19 @@
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/323准备/图片银行公开映射.json",
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/323准备/create_once.json",
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/323准备/create_receipt.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/323准备/verification.json"
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/323准备/verification.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/323准备/score.json"
       ],
       "notes": [
         "来源采集色码（非实存）：黑色/灰色；EU 39/40/41/42/43/44/45/46/47"
       ],
-      "next_action": "仅回读原ID审核、全字段与实际评分；不重复上传或创建323，其他路崎款独立推进。",
+      "next_action": "当前实款、来源、图文和18EU正式一致；实际评分按当前核验，无需再创建323，继续剩余路崎款。",
       "local_assets": {
         "asset_roots": [
           "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/323准备/05_AI候选"
         ],
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601980289624/formal_get.json",
-        "state": "REVIEWING",
+        "state": "FORMAL_FIELDS_SCORE_PASS",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "source_fact_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/323准备/当前来源与色码核对.json"
       },
@@ -21733,20 +22007,89 @@
       "aliases": [
         "LQ-909"
       ],
-      "source_state": "CANDIDATE",
-      "adopted_source_id": null,
-      "candidate_source_ids": [
-        "src-0563177eb488"
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-0563177eb488",
+      "candidate_source_ids": [],
+      "raw_packages": [
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/909准备/01_产品来源原图"
       ],
-      "raw_packages": [],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/质量复核_2026-10-09/全分类处理队列.json"
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/质量复核_2026-10-09/全分类处理队列.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/909准备/当前来源与色码核对.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/909准备/prepared.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/909准备/manifest.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/909准备/图片银行公开映射.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/909准备/create_once.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/909准备/create_receipt.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/909准备/verification.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/909准备/score.json"
       ],
       "notes": [
         "来源采集色码（非实存）：黑色/卡其；EU 39/40/41/42/43/44/45/46/47/48"
       ],
-      "next_action": "候选已采集；先做款式去重、事实/IP/图组质量，再按授权发布。"
+      "next_action": "当前实款、来源、图文和20EU正式一致；实际评分按当前核验，无需再创建909，继续剩余路崎款。",
+      "local_assets": {
+        "asset_roots": [
+          "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/909准备/05_AI候选"
+        ],
+        "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601980350419/formal_get.json",
+        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
+        "source_fact_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/909准备/当前来源与色码核对.json"
+      },
+      "source_routes_by_color": {
+        "Black": {
+          "source": "https://luqi.sooxie.com/detail/1809689",
+          "source_id": "src-0563177eb488",
+          "source_artno": "909",
+          "supplier_color": "黑色",
+          "EU": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48
+          ]
+        },
+        "Khaki": {
+          "source": "https://luqi.sooxie.com/detail/1809689",
+          "source_id": "src-0563177eb488",
+          "source_artno": "909",
+          "supplier_color": "卡其",
+          "EU": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48
+          ]
+        }
+      },
+      "dossier_path": "02_Alibaba运营/02_单品优化记录/商品档案/LQ-909/README.md",
+      "classification": {
+        "local_intent_candidates": [
+          "绒里中帮系带冬季雪地靴"
+        ],
+        "state": "REAL_SOURCE_PHOTOS_AND_CURRENT_SCHEMA_REVIEWED",
+        "evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
+        "platform_category_ids": [
+          202248402
+        ],
+        "store_groups": [],
+        "store_group_state": "NOT_RETURNED_PENDING_REVIEW",
+        "platform_category_state": "CURRENT_EXACT_ID_API_OBSERVED"
+      }
     },
     {
       "id": "LQ-923",
@@ -87737,6 +88080,1123 @@
       }
     },
     {
+      "id": "1601980491300",
+      "product_id": "LQ-2772",
+      "model": "BQ-LQ2772",
+      "url": "https://www.alibaba.com/product-detail/Mens-Lace-Up-Casual-Walking-Shoes_1601980491300.html",
+      "record_type": "当前实款正式绑定",
+      "source_relation": "REAL_SOURCE_FORMAL_FIELDS_PASS",
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2772准备/当前来源与色码核对.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2772准备/prepared.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2772准备/manifest.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2772准备/图片银行公开映射.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2772准备/create_once.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2772准备/create_receipt.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2772准备/verification.json"
+      ],
+      "current_platform_fields": {
+        "at": "2026-10-14T23:20:14.563540+00:00",
+        "title": "Mens Lace Up Casual Walking Shoes Black or Black White Sneakers Standard or Plush Lining Wholesale EU 39-46",
+        "keywords": [
+          ""
+        ],
+        "main_images": [
+          "https://sc04.alicdn.com/kf/Hc0dc4df712aa487fab494174ed5af56aw.png",
+          "https://sc04.alicdn.com/kf/H47275bf9fa7f48e2bbc4ae2a020d96685.png",
+          "https://sc04.alicdn.com/kf/H65056f328f064fbba24da8c81fca9a342.png",
+          "https://sc04.alicdn.com/kf/Hff063e69c01c41b6be5776d890f6d6ceh.jpg",
+          "https://sc04.alicdn.com/kf/Ha21ac103ab93444fb29c1abc9f68132bn.jpg",
+          "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
+        ],
+        "category_id": 201334413,
+        "status": "approved",
+        "display": "Y",
+        "url": "https://www.alibaba.com/product-detail/Mens-Lace-Up-Casual-Walking-Shoes_1601980491300.html",
+        "scope": "ExactID formal product read; current audit/score accepted only if the separate verification state passes."
+      },
+      "catalog_fields": {
+        "at": "2026-10-14T23:20:14.563540+00:00",
+        "title": "Mens Lace Up Casual Walking Shoes Black or Black White Sneakers Standard or Plush Lining Wholesale EU 39-46",
+        "keywords": [
+          ""
+        ],
+        "main_images": [
+          "https://sc04.alicdn.com/kf/Hc0dc4df712aa487fab494174ed5af56aw.png",
+          "https://sc04.alicdn.com/kf/H47275bf9fa7f48e2bbc4ae2a020d96685.png",
+          "https://sc04.alicdn.com/kf/H65056f328f064fbba24da8c81fca9a342.png",
+          "https://sc04.alicdn.com/kf/Hff063e69c01c41b6be5776d890f6d6ceh.jpg",
+          "https://sc04.alicdn.com/kf/Ha21ac103ab93444fb29c1abc9f68132bn.jpg",
+          "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
+        ],
+        "category_id": 201334413,
+        "status": "approved",
+        "display": "Y",
+        "url": "https://www.alibaba.com/product-detail/Mens-Lace-Up-Casual-Walking-Shoes_1601980491300.html",
+        "scope": "ExactID formal product read; current audit/score accepted only if the separate verification state passes."
+      },
+      "formal_fields": {
+        "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601980491300/formal_get.json",
+        "at": "2026-10-14T23:20:14.563540+00:00",
+        "scope": "当前API商品对象；审核、字段和实际评分按独立verification状态，不把待审当完成"
+      },
+      "local_sync": {
+        "state": "FORMAL_FIELDS_PASS_PENDING_SCORE",
+        "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601980491300/formal_get.json",
+        "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601980491300/formal_render.json",
+        "source_fact_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2772准备/当前来源与色码核对.json",
+        "at": "2026-10-14T23:20:14.563540+00:00"
+      },
+      "observation": {
+        "audit": "approved",
+        "display": "Y",
+        "at": "2026-10-14T23:20:14.563540+00:00",
+        "score": null,
+        "scope": "Full exact-ID API read, not browser presentation or physicalstock proof."
+      },
+      "optimization": {
+        "real_source_creation": {
+          "state": "FORMAL_FIELDS_PASS_PENDING_SCORE",
+          "source_id": "src-e39fb7e34a8f",
+          "source_artno": "2772",
+          "at": "2026-10-14T23:20:14.563540+00:00",
+          "evidence": [
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2772准备/当前来源与色码核对.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2772准备/prepared.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2772准备/manifest.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2772准备/图片银行公开映射.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2772准备/create_once.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2772准备/create_receipt.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2772准备/verification.json"
+          ],
+          "inventory_write": "OMITTED",
+          "next_action": "Only formal readback and exact field/score diagnosis; never repeat create or upload successful assets."
+        }
+      },
+      "source_routes_by_color": {
+        "Black - Standard Lining": {
+          "source": "https://luqi.sooxie.com/detail/1793759",
+          "source_id": "src-e39fb7e34a8f",
+          "source_artno": "2772",
+          "supplier_color": "全黑",
+          "EU": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46
+          ]
+        },
+        "Black - Plush Lining": {
+          "source": "https://luqi.sooxie.com/detail/1793759",
+          "source_id": "src-e39fb7e34a8f",
+          "source_artno": "2772",
+          "supplier_color": "全黑加绒",
+          "EU": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46
+          ]
+        },
+        "Black White - Standard Lining": {
+          "source": "https://luqi.sooxie.com/detail/1793759",
+          "source_id": "src-e39fb7e34a8f",
+          "source_artno": "2772",
+          "supplier_color": "黑白",
+          "EU": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46
+          ]
+        }
+      },
+      "bound_source_id": "src-e39fb7e34a8f"
+    },
+    {
+      "id": "1601980302105",
+      "product_id": "LQ-0922",
+      "model": "BQ-LQ0922",
+      "url": "https://www.alibaba.com/product-detail/Mens-Lace-Up-Winter-Snow-Boots_1601980302105.html",
+      "record_type": "当前实款正式绑定",
+      "source_relation": "REAL_SOURCE_FORMAL_FIELDS_PASS",
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/当前来源与色码核对.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/prepared.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/manifest.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/图片银行公开映射.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/create_once.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/create_receipt.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/verification.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/score.json"
+      ],
+      "current_platform_fields": {
+        "at": "2026-10-14T17:13:05.924800+00:00",
+        "title": "Mens Lace Up Winter Snow Boots Plush Lining EVA Outsole Mid Top Casual Outdoor Footwear Wholesale EU 39-48",
+        "keywords": [
+          ""
+        ],
+        "main_images": [
+          "https://sc04.alicdn.com/kf/Hff270abf8f5a40d5ae841a424428e8edt.jpg",
+          "https://sc04.alicdn.com/kf/H59b41f04e502422a8cc04f0c5bb8a9003.png",
+          "https://sc04.alicdn.com/kf/H4b33d2761353455593100cfd722db318F.png",
+          "https://sc04.alicdn.com/kf/Ha69266ceb3794d0298c6ef51fa3db28ce.png",
+          "https://sc04.alicdn.com/kf/H62c886d8db314a8085362aefd86a4425M.png",
+          "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
+        ],
+        "category_id": 202248402,
+        "status": "approved",
+        "display": "Y",
+        "url": "https://www.alibaba.com/product-detail/Mens-Lace-Up-Winter-Snow-Boots_1601980302105.html",
+        "scope": "ExactID formal product read; current audit/score accepted only if the separate verification state passes."
+      },
+      "catalog_fields": {
+        "at": "2026-10-14T17:13:05.924800+00:00",
+        "title": "Mens Lace Up Winter Snow Boots Plush Lining EVA Outsole Mid Top Casual Outdoor Footwear Wholesale EU 39-48",
+        "keywords": [
+          ""
+        ],
+        "main_images": [
+          "https://sc04.alicdn.com/kf/Hff270abf8f5a40d5ae841a424428e8edt.jpg",
+          "https://sc04.alicdn.com/kf/H59b41f04e502422a8cc04f0c5bb8a9003.png",
+          "https://sc04.alicdn.com/kf/H4b33d2761353455593100cfd722db318F.png",
+          "https://sc04.alicdn.com/kf/Ha69266ceb3794d0298c6ef51fa3db28ce.png",
+          "https://sc04.alicdn.com/kf/H62c886d8db314a8085362aefd86a4425M.png",
+          "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
+        ],
+        "category_id": 202248402,
+        "status": "approved",
+        "display": "Y",
+        "url": "https://www.alibaba.com/product-detail/Mens-Lace-Up-Winter-Snow-Boots_1601980302105.html",
+        "scope": "ExactID formal product read; current audit/score accepted only if the separate verification state passes."
+      },
+      "formal_fields": {
+        "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601980302105/formal_get.json",
+        "at": "2026-10-14T17:13:05.924800+00:00",
+        "scope": "当前API商品对象；审核、字段和实际评分按独立verification状态，不把待审当完成"
+      },
+      "local_sync": {
+        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601980302105/formal_get.json",
+        "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601980302105/formal_render.json",
+        "source_fact_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/当前来源与色码核对.json",
+        "at": "2026-10-14T17:13:05.924800+00:00"
+      },
+      "observation": {
+        "audit": "approved",
+        "display": "Y",
+        "at": "2026-10-14T17:13:05.924800+00:00",
+        "score": "5.00",
+        "scope": "Full exact-ID API read, not browser presentation or physicalstock proof."
+      },
+      "optimization": {
+        "real_source_creation": {
+          "state": "FORMAL_FIELDS_SCORE_PASS",
+          "source_id": "src-d438d7cece9b",
+          "source_artno": "0922",
+          "at": "2026-10-14T17:13:05.924800+00:00",
+          "evidence": [
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/当前来源与色码核对.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/prepared.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/manifest.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/图片银行公开映射.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/create_once.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/create_receipt.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/verification.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/score.json"
+          ],
+          "inventory_write": "OMITTED",
+          "next_action": "Only formal readback and exact field/score diagnosis; never repeat create or upload successful assets."
+        }
+      },
+      "source_routes_by_color": {
+        "Black": {
+          "source": "https://luqi.sooxie.com/detail/1984084",
+          "source_id": "src-d438d7cece9b",
+          "source_artno": "0922",
+          "supplier_color": "黑色",
+          "EU": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48
+          ]
+        },
+        "Black Grey": {
+          "source": "https://luqi.sooxie.com/detail/1984084",
+          "source_id": "src-d438d7cece9b",
+          "source_artno": "0922",
+          "supplier_color": "黑灰",
+          "EU": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48
+          ]
+        }
+      },
+      "bound_source_id": "src-d438d7cece9b"
+    },
+    {
+      "id": "1601979461922",
+      "product_id": "LQ-2418",
+      "model": "BQ-LQ2418",
+      "url": "https://www.alibaba.com/product-detail/Mens-Faux-Leather-Lace-Up-Casual_1601979461922.html",
+      "record_type": "当前实款正式绑定",
+      "source_relation": "REAL_SOURCE_FORMAL_FIELDS_PASS",
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/当前来源与色码核对.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/prepared.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/manifest.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/图片银行公开映射.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/create_once.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/create_receipt.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/verification.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/score.json"
+      ],
+      "current_platform_fields": {
+        "at": "2026-10-14T17:09:50.114071+00:00",
+        "title": "Mens Faux Leather Lace Up Casual Walking Shoes with Contrast Panels and MD Sole for Wholesale Footwear Buyers",
+        "keywords": [
+          ""
+        ],
+        "main_images": [
+          "https://sc04.alicdn.com/kf/H8731a6dd39504cfaa293185b962faf34x.png",
+          "https://sc04.alicdn.com/kf/He3b0d2cc7ddf4201b2ff52fc2da5e07aV.png",
+          "https://sc04.alicdn.com/kf/Hfcb696d5632a4986ad61dee5269d415dw.png",
+          "https://sc04.alicdn.com/kf/Hded5494a59c540849c2ee9361512d03ct.png",
+          "https://sc04.alicdn.com/kf/H00cfcdd61043447793aff46b082dd751c.png",
+          "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
+        ],
+        "category_id": 201334413,
+        "status": "approved",
+        "display": "Y",
+        "url": "https://www.alibaba.com/product-detail/Mens-Faux-Leather-Lace-Up-Casual_1601979461922.html",
+        "scope": "ExactID formal product read; current audit/score accepted only if the separate verification state passes."
+      },
+      "catalog_fields": {
+        "at": "2026-10-14T17:09:50.114071+00:00",
+        "title": "Mens Faux Leather Lace Up Casual Walking Shoes with Contrast Panels and MD Sole for Wholesale Footwear Buyers",
+        "keywords": [
+          ""
+        ],
+        "main_images": [
+          "https://sc04.alicdn.com/kf/H8731a6dd39504cfaa293185b962faf34x.png",
+          "https://sc04.alicdn.com/kf/He3b0d2cc7ddf4201b2ff52fc2da5e07aV.png",
+          "https://sc04.alicdn.com/kf/Hfcb696d5632a4986ad61dee5269d415dw.png",
+          "https://sc04.alicdn.com/kf/Hded5494a59c540849c2ee9361512d03ct.png",
+          "https://sc04.alicdn.com/kf/H00cfcdd61043447793aff46b082dd751c.png",
+          "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
+        ],
+        "category_id": 201334413,
+        "status": "approved",
+        "display": "Y",
+        "url": "https://www.alibaba.com/product-detail/Mens-Faux-Leather-Lace-Up-Casual_1601979461922.html",
+        "scope": "ExactID formal product read; current audit/score accepted only if the separate verification state passes."
+      },
+      "formal_fields": {
+        "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601979461922/formal_get.json",
+        "at": "2026-10-14T17:09:50.114071+00:00",
+        "scope": "当前API商品对象；审核、字段和实际评分按独立verification状态，不把待审当完成"
+      },
+      "local_sync": {
+        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601979461922/formal_get.json",
+        "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601979461922/formal_render.json",
+        "source_fact_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/当前来源与色码核对.json",
+        "at": "2026-10-14T17:09:50.114071+00:00"
+      },
+      "observation": {
+        "audit": "approved",
+        "display": "Y",
+        "at": "2026-10-14T17:09:50.114071+00:00",
+        "score": "5.00",
+        "scope": "Full exact-ID API read, not browser presentation or physicalstock proof."
+      },
+      "optimization": {
+        "real_source_creation": {
+          "state": "FORMAL_FIELDS_SCORE_PASS",
+          "source_id": "src-66e2c48586e7",
+          "source_artno": "2418",
+          "at": "2026-10-14T17:09:50.114071+00:00",
+          "evidence": [
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/当前来源与色码核对.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/prepared.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/manifest.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/图片银行公开映射.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/create_once.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/create_receipt.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/verification.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/score.json"
+          ],
+          "inventory_write": "OMITTED",
+          "next_action": "Only formal readback and exact field/score diagnosis; never repeat create or upload successful assets."
+        }
+      },
+      "source_routes_by_color": {
+        "Brown": {
+          "source": "https://luqi.sooxie.com/detail/2492421",
+          "source_id": "src-66e2c48586e7",
+          "source_artno": "2418",
+          "supplier_color": "黄色",
+          "EU": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48
+          ]
+        },
+        "Olive Grey": {
+          "source": "https://luqi.sooxie.com/detail/2492421",
+          "source_id": "src-66e2c48586e7",
+          "source_artno": "2418",
+          "supplier_color": "绿色",
+          "EU": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48
+          ]
+        }
+      },
+      "bound_source_id": "src-66e2c48586e7"
+    },
+    {
+      "id": "1601979745492",
+      "product_id": "LQ-822",
+      "model": "BQ-LQ822",
+      "url": "https://www.alibaba.com/product-detail/Mens-Synthetic-Leather-Casual-Walking-Shoes_1601979745492.html",
+      "record_type": "当前实款正式绑定",
+      "source_relation": "REAL_SOURCE_FORMAL_FIELDS_PASS",
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/822准备/当前来源与色码核对.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/822准备/prepared.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/822准备/manifest.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/822准备/图片银行公开映射.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/822准备/create_once.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/822准备/create_receipt.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/822准备/verification.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/822准备/score.json"
+      ],
+      "current_platform_fields": {
+        "at": "2026-10-14T17:10:27.656418+00:00",
+        "title": "Mens Synthetic Leather Casual Walking Shoes with Cord Lacing and EVA Sole for Wholesale Footwear Buyers",
+        "keywords": [
+          ""
+        ],
+        "main_images": [
+          "https://sc04.alicdn.com/kf/H22c39b5711f140bc89bfd813563857b8R.png",
+          "https://sc04.alicdn.com/kf/He3aba1b8dc5340109937139ca3afbe60B.png",
+          "https://sc04.alicdn.com/kf/H467c59aef65d49dfb959b605d72ad0e8d.png",
+          "https://sc04.alicdn.com/kf/H266d9912541a42159013cacf788516a1k.png",
+          "https://sc04.alicdn.com/kf/Hb12168241aa748dc884531d2e4713c3et.png",
+          "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
+        ],
+        "category_id": 201334413,
+        "status": "approved",
+        "display": "Y",
+        "url": "https://www.alibaba.com/product-detail/Mens-Synthetic-Leather-Casual-Walking-Shoes_1601979745492.html",
+        "scope": "ExactID formal product read; current audit/score accepted only if the separate verification state passes."
+      },
+      "catalog_fields": {
+        "at": "2026-10-14T17:10:27.656418+00:00",
+        "title": "Mens Synthetic Leather Casual Walking Shoes with Cord Lacing and EVA Sole for Wholesale Footwear Buyers",
+        "keywords": [
+          ""
+        ],
+        "main_images": [
+          "https://sc04.alicdn.com/kf/H22c39b5711f140bc89bfd813563857b8R.png",
+          "https://sc04.alicdn.com/kf/He3aba1b8dc5340109937139ca3afbe60B.png",
+          "https://sc04.alicdn.com/kf/H467c59aef65d49dfb959b605d72ad0e8d.png",
+          "https://sc04.alicdn.com/kf/H266d9912541a42159013cacf788516a1k.png",
+          "https://sc04.alicdn.com/kf/Hb12168241aa748dc884531d2e4713c3et.png",
+          "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
+        ],
+        "category_id": 201334413,
+        "status": "approved",
+        "display": "Y",
+        "url": "https://www.alibaba.com/product-detail/Mens-Synthetic-Leather-Casual-Walking-Shoes_1601979745492.html",
+        "scope": "ExactID formal product read; current audit/score accepted only if the separate verification state passes."
+      },
+      "formal_fields": {
+        "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601979745492/formal_get.json",
+        "at": "2026-10-14T17:10:27.656418+00:00",
+        "scope": "当前API商品对象；审核、字段和实际评分按独立verification状态，不把待审当完成"
+      },
+      "local_sync": {
+        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601979745492/formal_get.json",
+        "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601979745492/formal_render.json",
+        "source_fact_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/822准备/当前来源与色码核对.json",
+        "at": "2026-10-14T17:10:27.656418+00:00"
+      },
+      "observation": {
+        "audit": "approved",
+        "display": "Y",
+        "at": "2026-10-14T17:10:27.656418+00:00",
+        "score": "5.00",
+        "scope": "Full exact-ID API read, not browser presentation or physicalstock proof."
+      },
+      "optimization": {
+        "real_source_creation": {
+          "state": "FORMAL_FIELDS_SCORE_PASS",
+          "source_id": "src-c536d5e0fae0",
+          "source_artno": "822",
+          "at": "2026-10-14T17:10:27.656418+00:00",
+          "evidence": [
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/822准备/当前来源与色码核对.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/822准备/prepared.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/822准备/manifest.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/822准备/图片银行公开映射.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/822准备/create_once.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/822准备/create_receipt.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/822准备/verification.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/822准备/score.json"
+          ],
+          "inventory_write": "OMITTED",
+          "next_action": "Only formal readback and exact field/score diagnosis; never repeat create or upload successful assets."
+        }
+      },
+      "source_routes_by_color": {
+        "Black": {
+          "source": "https://luqi.sooxie.com/detail/2280202",
+          "source_id": "src-c536d5e0fae0",
+          "source_artno": "822",
+          "supplier_color": "黑色",
+          "EU": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48
+          ]
+        },
+        "Khaki": {
+          "source": "https://luqi.sooxie.com/detail/2280202",
+          "source_id": "src-c536d5e0fae0",
+          "source_artno": "822",
+          "supplier_color": "卡其",
+          "EU": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48
+          ]
+        }
+      },
+      "bound_source_id": "src-c536d5e0fae0"
+    },
+    {
+      "id": "1601979492425",
+      "product_id": "LQ-2576",
+      "model": "BQ-LQ2576",
+      "url": "https://www.alibaba.com/product-detail/Wide-Toe-Box-Knit-Slip-On_1601979492425.html",
+      "record_type": "当前实款正式绑定",
+      "source_relation": "REAL_SOURCE_FORMAL_FIELDS_PASS",
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/当前来源与色码核对.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/prepared.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/manifest.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/图片银行公开映射.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/create_once.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/create_receipt.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/verification.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/score.json"
+      ],
+      "current_platform_fields": {
+        "at": "2026-10-14T04:47:29.267633+00:00",
+        "title": "Wide Toe Box Knit Slip On Walking Shoes with Low Cut Collar for Wholesale Footwear Buyers",
+        "keywords": [
+          ""
+        ],
+        "main_images": [
+          "https://sc04.alicdn.com/kf/H17c1193fc4d64ec999fd502eaec24032g.png",
+          "https://sc04.alicdn.com/kf/H217b1d34830946b8938293da23d17ae5F.png",
+          "https://sc04.alicdn.com/kf/H2baf6a8bcdcc4404b4626de56540cf2cJ.png",
+          "https://sc04.alicdn.com/kf/H4771cf8ca906434181038bf32da37716D.png",
+          "https://sc04.alicdn.com/kf/Hf2cd61c8c652487082478e47e60081abR.png",
+          "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
+        ],
+        "category_id": 201334413,
+        "status": "approved",
+        "display": "Y",
+        "url": "https://www.alibaba.com/product-detail/Wide-Toe-Box-Knit-Slip-On_1601979492425.html",
+        "scope": "ExactID formal product read; current audit/score accepted only if the separate verification state passes."
+      },
+      "catalog_fields": {
+        "at": "2026-10-14T04:47:29.267633+00:00",
+        "title": "Wide Toe Box Knit Slip On Walking Shoes with Low Cut Collar for Wholesale Footwear Buyers",
+        "keywords": [
+          ""
+        ],
+        "main_images": [
+          "https://sc04.alicdn.com/kf/H17c1193fc4d64ec999fd502eaec24032g.png",
+          "https://sc04.alicdn.com/kf/H217b1d34830946b8938293da23d17ae5F.png",
+          "https://sc04.alicdn.com/kf/H2baf6a8bcdcc4404b4626de56540cf2cJ.png",
+          "https://sc04.alicdn.com/kf/H4771cf8ca906434181038bf32da37716D.png",
+          "https://sc04.alicdn.com/kf/Hf2cd61c8c652487082478e47e60081abR.png",
+          "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
+        ],
+        "category_id": 201334413,
+        "status": "approved",
+        "display": "Y",
+        "url": "https://www.alibaba.com/product-detail/Wide-Toe-Box-Knit-Slip-On_1601979492425.html",
+        "scope": "ExactID formal product read; current audit/score accepted only if the separate verification state passes."
+      },
+      "formal_fields": {
+        "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601979492425/formal_get.json",
+        "at": "2026-10-14T04:47:29.267633+00:00",
+        "scope": "当前API商品对象；审核、字段和实际评分按独立verification状态，不把待审当完成"
+      },
+      "local_sync": {
+        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601979492425/formal_get.json",
+        "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601979492425/formal_render.json",
+        "source_fact_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/当前来源与色码核对.json",
+        "at": "2026-10-14T04:47:29.267633+00:00"
+      },
+      "observation": {
+        "audit": "approved",
+        "display": "Y",
+        "at": "2026-10-14T04:47:29.267633+00:00",
+        "score": "5.00",
+        "scope": "Full exact-ID API read, not browser presentation or physicalstock proof."
+      },
+      "optimization": {
+        "real_source_creation": {
+          "state": "FORMAL_FIELDS_SCORE_PASS",
+          "source_id": "src-ff8d28f6cbcc",
+          "source_artno": "2576",
+          "at": "2026-10-14T04:47:29.267633+00:00",
+          "evidence": [
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/当前来源与色码核对.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/prepared.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/manifest.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/图片银行公开映射.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/create_once.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/create_receipt.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/verification.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/score.json"
+          ],
+          "inventory_write": "OMITTED",
+          "next_action": "Only formal readback and exact field/score diagnosis; never repeat create or upload successful assets."
+        }
+      },
+      "source_routes_by_color": {
+        "Black": {
+          "source": "https://luqi.sooxie.com/detail/2372147",
+          "source_id": "src-ff8d28f6cbcc",
+          "source_artno": "2576",
+          "supplier_color": "黑色",
+          "EU": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46
+          ]
+        },
+        "Beige": {
+          "source": "https://luqi.sooxie.com/detail/2372147",
+          "source_id": "src-ff8d28f6cbcc",
+          "source_artno": "2576",
+          "supplier_color": "米色",
+          "EU": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46
+          ]
+        }
+      },
+      "bound_source_id": "src-ff8d28f6cbcc"
+    },
+    {
+      "id": "1601980401860",
+      "product_id": "LQ-2132",
+      "model": "BQ-LQ2132",
+      "url": "https://www.alibaba.com/product-detail/Mens-Mid-Top-Lace-Up-Casual_1601980401860.html",
+      "record_type": "已创建实款；审核与评分分列",
+      "source_relation": "SOURCE_REVIEWED_CREATE_PENDING_FORMAL_ACCEPTANCE",
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2132准备/当前来源与色码核对.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2132准备/prepared.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2132准备/manifest.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2132准备/图片银行公开映射.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2132准备/create_once.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2132准备/create_receipt.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2132准备/verification.json"
+      ],
+      "current_platform_fields": {
+        "at": "2026-10-14T23:21:10.761491+00:00",
+        "title": "Mens Mid Top Lace Up Casual Walking Sneakers Chunky Sculpted Sole Standard or Plush Lining EU 39-46 Wholesale",
+        "keywords": [
+          ""
+        ],
+        "main_images": [
+          "https://sc04.alicdn.com/kf/H4b6edbbea4884821adeb7254adc7710al.jpg",
+          "https://sc04.alicdn.com/kf/Ha00344163013482e82693cd6fb8429f6b.png",
+          "https://sc04.alicdn.com/kf/H8b75811a4edf48c69ea3d2916f53b3e6a.png",
+          "https://sc04.alicdn.com/kf/H969516dddd5d442b95e47dd52bfe93b7c.jpg",
+          "https://sc04.alicdn.com/kf/H18e8f113a48d49a0953f61df3863c288F.jpg",
+          "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
+        ],
+        "category_id": 201334413,
+        "status": "new",
+        "display": "N",
+        "url": "https://www.alibaba.com/product-detail/Mens-Mid-Top-Lace-Up-Casual_1601980401860.html",
+        "scope": "ExactID formal product read; current audit/score accepted only if the separate verification state passes."
+      },
+      "catalog_fields": {
+        "at": "2026-10-14T23:21:10.761491+00:00",
+        "title": "Mens Mid Top Lace Up Casual Walking Sneakers Chunky Sculpted Sole Standard or Plush Lining EU 39-46 Wholesale",
+        "keywords": [
+          ""
+        ],
+        "main_images": [
+          "https://sc04.alicdn.com/kf/H4b6edbbea4884821adeb7254adc7710al.jpg",
+          "https://sc04.alicdn.com/kf/Ha00344163013482e82693cd6fb8429f6b.png",
+          "https://sc04.alicdn.com/kf/H8b75811a4edf48c69ea3d2916f53b3e6a.png",
+          "https://sc04.alicdn.com/kf/H969516dddd5d442b95e47dd52bfe93b7c.jpg",
+          "https://sc04.alicdn.com/kf/H18e8f113a48d49a0953f61df3863c288F.jpg",
+          "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
+        ],
+        "category_id": 201334413,
+        "status": "new",
+        "display": "N",
+        "url": "https://www.alibaba.com/product-detail/Mens-Mid-Top-Lace-Up-Casual_1601980401860.html",
+        "scope": "ExactID formal product read; current audit/score accepted only if the separate verification state passes."
+      },
+      "formal_fields": {
+        "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601980401860/formal_get.json",
+        "at": "2026-10-14T23:21:10.761491+00:00",
+        "scope": "当前API商品对象；审核、字段和实际评分按独立verification状态，不把待审当完成"
+      },
+      "local_sync": {
+        "state": "REVIEWING",
+        "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601980401860/formal_get.json",
+        "current_schema_file": null,
+        "source_fact_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2132准备/当前来源与色码核对.json",
+        "at": "2026-10-14T23:21:10.761491+00:00"
+      },
+      "observation": {
+        "audit": "new",
+        "display": "N",
+        "at": "2026-10-14T23:21:10.761491+00:00",
+        "score": null,
+        "scope": "Full exact-ID API read, not browser presentation or physicalstock proof."
+      },
+      "optimization": {
+        "real_source_creation": {
+          "state": "REVIEWING",
+          "source_id": "src-f446bedb67c9",
+          "source_artno": "2132",
+          "at": "2026-10-14T23:21:10.761491+00:00",
+          "evidence": [
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2132准备/当前来源与色码核对.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2132准备/prepared.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2132准备/manifest.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2132准备/图片银行公开映射.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2132准备/create_once.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2132准备/create_receipt.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2132准备/verification.json"
+          ],
+          "inventory_write": "OMITTED",
+          "next_action": "Only formal readback and exact field/score diagnosis; never repeat create or upload successful assets."
+        }
+      },
+      "source_routes_by_color": {
+        "Black - Standard Lining": {
+          "source": "https://luqi.sooxie.com/detail/1784551",
+          "source_id": "src-f446bedb67c9",
+          "source_artno": "2132",
+          "supplier_color": "全黑",
+          "EU": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46
+          ]
+        },
+        "Black White - Standard Lining": {
+          "source": "https://luqi.sooxie.com/detail/1784551",
+          "source_id": "src-f446bedb67c9",
+          "source_artno": "2132",
+          "supplier_color": "黑白",
+          "EU": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46
+          ]
+        },
+        "White Grey - Standard Lining": {
+          "source": "https://luqi.sooxie.com/detail/1784551",
+          "source_id": "src-f446bedb67c9",
+          "source_artno": "2132",
+          "supplier_color": "白灰",
+          "EU": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46
+          ]
+        },
+        "Black - Plush Lining": {
+          "source": "https://luqi.sooxie.com/detail/1784551",
+          "source_id": "src-f446bedb67c9",
+          "source_artno": "2132",
+          "supplier_color": "全黑加绒",
+          "EU": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46
+          ]
+        }
+      }
+    },
+    {
+      "id": "1601979948441",
+      "product_id": "LQ-2579",
+      "model": "BQ-LQ2579",
+      "url": "https://www.alibaba.com/product-detail/Mens-Lace-Up-Winter-Snow-Boots_1601979948441.html",
+      "record_type": "当前实款正式绑定",
+      "source_relation": "REAL_SOURCE_FORMAL_FIELDS_PASS",
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2579准备/当前来源与色码核对.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2579准备/prepared.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2579准备/manifest.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2579准备/图片银行公开映射.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2579准备/create_once.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2579准备/create_receipt.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2579准备/verification.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2579准备/score.json"
+      ],
+      "current_platform_fields": {
+        "at": "2026-10-14T17:10:54.439650+00:00",
+        "title": "Mens Lace Up Winter Snow Boots KPU and Microfiber Upper Plush Lining Rubber Outsole Wholesale EU 39-48",
+        "keywords": [
+          ""
+        ],
+        "main_images": [
+          "https://sc04.alicdn.com/kf/H73723643e9b9438d90704d948ba74e84t.png",
+          "https://sc04.alicdn.com/kf/H1f63eb5cb3ea4f6ab75f3e0fc90b42099.png",
+          "https://sc04.alicdn.com/kf/H09a6e51222594c858de6767b4dd5a2dcn.png",
+          "https://sc04.alicdn.com/kf/He43f39d72e024b66afcb6942e73d8363o.png",
+          "https://sc04.alicdn.com/kf/H17353967e43b476d9093d8667cb1c145p.png",
+          "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
+        ],
+        "category_id": 202248402,
+        "status": "approved",
+        "display": "Y",
+        "url": "https://www.alibaba.com/product-detail/Mens-Lace-Up-Winter-Snow-Boots_1601979948441.html",
+        "scope": "ExactID formal product read; current audit/score accepted only if the separate verification state passes."
+      },
+      "catalog_fields": {
+        "at": "2026-10-14T17:10:54.439650+00:00",
+        "title": "Mens Lace Up Winter Snow Boots KPU and Microfiber Upper Plush Lining Rubber Outsole Wholesale EU 39-48",
+        "keywords": [
+          ""
+        ],
+        "main_images": [
+          "https://sc04.alicdn.com/kf/H73723643e9b9438d90704d948ba74e84t.png",
+          "https://sc04.alicdn.com/kf/H1f63eb5cb3ea4f6ab75f3e0fc90b42099.png",
+          "https://sc04.alicdn.com/kf/H09a6e51222594c858de6767b4dd5a2dcn.png",
+          "https://sc04.alicdn.com/kf/He43f39d72e024b66afcb6942e73d8363o.png",
+          "https://sc04.alicdn.com/kf/H17353967e43b476d9093d8667cb1c145p.png",
+          "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
+        ],
+        "category_id": 202248402,
+        "status": "approved",
+        "display": "Y",
+        "url": "https://www.alibaba.com/product-detail/Mens-Lace-Up-Winter-Snow-Boots_1601979948441.html",
+        "scope": "ExactID formal product read; current audit/score accepted only if the separate verification state passes."
+      },
+      "formal_fields": {
+        "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601979948441/formal_get.json",
+        "at": "2026-10-14T17:10:54.439650+00:00",
+        "scope": "当前API商品对象；审核、字段和实际评分按独立verification状态，不把待审当完成"
+      },
+      "local_sync": {
+        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601979948441/formal_get.json",
+        "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601979948441/formal_render.json",
+        "source_fact_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2579准备/当前来源与色码核对.json",
+        "at": "2026-10-14T17:10:54.439650+00:00"
+      },
+      "observation": {
+        "audit": "approved",
+        "display": "Y",
+        "at": "2026-10-14T17:10:54.439650+00:00",
+        "score": "5.00",
+        "scope": "Full exact-ID API read, not browser presentation or physicalstock proof."
+      },
+      "optimization": {
+        "real_source_creation": {
+          "state": "FORMAL_FIELDS_SCORE_PASS",
+          "source_id": "src-4a78572dfe44",
+          "source_artno": "2579",
+          "at": "2026-10-14T17:10:54.439650+00:00",
+          "evidence": [
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2579准备/当前来源与色码核对.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2579准备/prepared.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2579准备/manifest.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2579准备/图片银行公开映射.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2579准备/create_once.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2579准备/create_receipt.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2579准备/verification.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2579准备/score.json"
+          ],
+          "inventory_write": "OMITTED",
+          "next_action": "Only formal readback and exact field/score diagnosis; never repeat create or upload successful assets."
+        }
+      },
+      "source_routes_by_color": {
+        "Black": {
+          "source": "https://luqi.sooxie.com/detail/2353571",
+          "source_id": "src-4a78572dfe44",
+          "source_artno": "2579",
+          "supplier_color": "黑色",
+          "EU": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48
+          ]
+        },
+        "Yellow": {
+          "source": "https://luqi.sooxie.com/detail/2353571",
+          "source_id": "src-4a78572dfe44",
+          "source_artno": "2579",
+          "supplier_color": "黄色",
+          "EU": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48
+          ]
+        }
+      },
+      "bound_source_id": "src-4a78572dfe44"
+    },
+    {
+      "id": "1601980077192",
+      "product_id": "LQ-2505",
+      "model": "BQ-LQ2505",
+      "url": "https://www.alibaba.com/product-detail/Mens-Lace-Up-Winter-Snow-Boots_1601980077192.html",
+      "record_type": "当前实款正式绑定",
+      "source_relation": "REAL_SOURCE_FORMAL_FIELDS_PASS",
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2505准备/当前来源与色码核对.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2505准备/prepared.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2505准备/manifest.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2505准备/图片银行公开映射.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2505准备/create_once.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2505准备/create_receipt.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2505准备/verification.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2505准备/score.json"
+      ],
+      "current_platform_fields": {
+        "at": "2026-10-14T17:11:46.898016+00:00",
+        "title": "Mens Lace Up Winter Snow Boots Smooth Upper Plush Lining TPR Outsole Ankle Boots Wholesale Black Tan EU 39-47",
+        "keywords": [
+          ""
+        ],
+        "main_images": [
+          "https://sc04.alicdn.com/kf/Hc657062cab654391aad9089802257f28g.png",
+          "https://sc04.alicdn.com/kf/H95f2a490f1df417da399c20f6ef33cea6.png",
+          "https://sc04.alicdn.com/kf/Hffe76421bd5d4a3795c7739fdfc0440bF.png",
+          "https://sc04.alicdn.com/kf/H42bef8d15a3e4d80a58a3b71ca49b15eo.png",
+          "https://sc04.alicdn.com/kf/H1290a7e94d5a40a1af1d41794e98b0f4d.png",
+          "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
+        ],
+        "category_id": 202248402,
+        "status": "approved",
+        "display": "Y",
+        "url": "https://www.alibaba.com/product-detail/Mens-Lace-Up-Winter-Snow-Boots_1601980077192.html",
+        "scope": "ExactID formal product read; current audit/score accepted only if the separate verification state passes."
+      },
+      "catalog_fields": {
+        "at": "2026-10-14T17:11:46.898016+00:00",
+        "title": "Mens Lace Up Winter Snow Boots Smooth Upper Plush Lining TPR Outsole Ankle Boots Wholesale Black Tan EU 39-47",
+        "keywords": [
+          ""
+        ],
+        "main_images": [
+          "https://sc04.alicdn.com/kf/Hc657062cab654391aad9089802257f28g.png",
+          "https://sc04.alicdn.com/kf/H95f2a490f1df417da399c20f6ef33cea6.png",
+          "https://sc04.alicdn.com/kf/Hffe76421bd5d4a3795c7739fdfc0440bF.png",
+          "https://sc04.alicdn.com/kf/H42bef8d15a3e4d80a58a3b71ca49b15eo.png",
+          "https://sc04.alicdn.com/kf/H1290a7e94d5a40a1af1d41794e98b0f4d.png",
+          "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
+        ],
+        "category_id": 202248402,
+        "status": "approved",
+        "display": "Y",
+        "url": "https://www.alibaba.com/product-detail/Mens-Lace-Up-Winter-Snow-Boots_1601980077192.html",
+        "scope": "ExactID formal product read; current audit/score accepted only if the separate verification state passes."
+      },
+      "formal_fields": {
+        "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601980077192/formal_get.json",
+        "at": "2026-10-14T17:11:46.898016+00:00",
+        "scope": "当前API商品对象；审核、字段和实际评分按独立verification状态，不把待审当完成"
+      },
+      "local_sync": {
+        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601980077192/formal_get.json",
+        "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601980077192/formal_render.json",
+        "source_fact_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2505准备/当前来源与色码核对.json",
+        "at": "2026-10-14T17:11:46.898016+00:00"
+      },
+      "observation": {
+        "audit": "approved",
+        "display": "Y",
+        "at": "2026-10-14T17:11:46.898016+00:00",
+        "score": "5.00",
+        "scope": "Full exact-ID API read, not browser presentation or physicalstock proof."
+      },
+      "optimization": {
+        "real_source_creation": {
+          "state": "FORMAL_FIELDS_SCORE_PASS",
+          "source_id": "src-8cfcee52f82e",
+          "source_artno": "2505",
+          "at": "2026-10-14T17:11:46.898016+00:00",
+          "evidence": [
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2505准备/当前来源与色码核对.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2505准备/prepared.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2505准备/manifest.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2505准备/图片银行公开映射.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2505准备/create_once.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2505准备/create_receipt.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2505准备/verification.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2505准备/score.json"
+          ],
+          "inventory_write": "OMITTED",
+          "next_action": "Only formal readback and exact field/score diagnosis; never repeat create or upload successful assets."
+        }
+      },
+      "source_routes_by_color": {
+        "Black": {
+          "source": "https://luqi.sooxie.com/detail/2046177",
+          "source_id": "src-8cfcee52f82e",
+          "source_artno": "2505",
+          "supplier_color": "黑色",
+          "EU": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47
+          ]
+        },
+        "Tan": {
+          "source": "https://luqi.sooxie.com/detail/2046177",
+          "source_id": "src-8cfcee52f82e",
+          "source_artno": "2505",
+          "supplier_color": "土黄",
+          "EU": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47
+          ]
+        }
+      },
+      "bound_source_id": "src-8cfcee52f82e"
+    },
+    {
       "id": "1601979365545",
       "product_id": "LQ-995",
       "model": "BQ-LQ995",
@@ -87889,545 +89349,6 @@
         }
       },
       "bound_source_id": "src-163b14a8c952"
-    },
-    {
-      "id": "1601979461922",
-      "product_id": "LQ-2418",
-      "model": "BQ-LQ2418",
-      "url": "https://www.alibaba.com/product-detail/Mens-Faux-Leather-Lace-Up-Casual_1601979461922.html",
-      "record_type": "当前实款正式绑定",
-      "source_relation": "REAL_SOURCE_FORMAL_FIELDS_PASS",
-      "evidence": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/当前来源与色码核对.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/prepared.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/manifest.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/图片银行公开映射.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/create_once.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/create_receipt.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/verification.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/score.json"
-      ],
-      "current_platform_fields": {
-        "at": "2026-10-14T17:09:50.114071+00:00",
-        "title": "Mens Faux Leather Lace Up Casual Walking Shoes with Contrast Panels and MD Sole for Wholesale Footwear Buyers",
-        "keywords": [
-          ""
-        ],
-        "main_images": [
-          "https://sc04.alicdn.com/kf/H8731a6dd39504cfaa293185b962faf34x.png",
-          "https://sc04.alicdn.com/kf/He3b0d2cc7ddf4201b2ff52fc2da5e07aV.png",
-          "https://sc04.alicdn.com/kf/Hfcb696d5632a4986ad61dee5269d415dw.png",
-          "https://sc04.alicdn.com/kf/Hded5494a59c540849c2ee9361512d03ct.png",
-          "https://sc04.alicdn.com/kf/H00cfcdd61043447793aff46b082dd751c.png",
-          "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
-        ],
-        "category_id": 201334413,
-        "status": "approved",
-        "display": "Y",
-        "url": "https://www.alibaba.com/product-detail/Mens-Faux-Leather-Lace-Up-Casual_1601979461922.html",
-        "scope": "ExactID formal product read; current audit/score accepted only if the separate verification state passes."
-      },
-      "catalog_fields": {
-        "at": "2026-10-14T17:09:50.114071+00:00",
-        "title": "Mens Faux Leather Lace Up Casual Walking Shoes with Contrast Panels and MD Sole for Wholesale Footwear Buyers",
-        "keywords": [
-          ""
-        ],
-        "main_images": [
-          "https://sc04.alicdn.com/kf/H8731a6dd39504cfaa293185b962faf34x.png",
-          "https://sc04.alicdn.com/kf/He3b0d2cc7ddf4201b2ff52fc2da5e07aV.png",
-          "https://sc04.alicdn.com/kf/Hfcb696d5632a4986ad61dee5269d415dw.png",
-          "https://sc04.alicdn.com/kf/Hded5494a59c540849c2ee9361512d03ct.png",
-          "https://sc04.alicdn.com/kf/H00cfcdd61043447793aff46b082dd751c.png",
-          "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
-        ],
-        "category_id": 201334413,
-        "status": "approved",
-        "display": "Y",
-        "url": "https://www.alibaba.com/product-detail/Mens-Faux-Leather-Lace-Up-Casual_1601979461922.html",
-        "scope": "ExactID formal product read; current audit/score accepted only if the separate verification state passes."
-      },
-      "formal_fields": {
-        "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601979461922/formal_get.json",
-        "at": "2026-10-14T17:09:50.114071+00:00",
-        "scope": "当前API商品对象；审核、字段和实际评分按独立verification状态，不把待审当完成"
-      },
-      "local_sync": {
-        "state": "FORMAL_FIELDS_SCORE_PASS",
-        "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601979461922/formal_get.json",
-        "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601979461922/formal_render.json",
-        "source_fact_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/当前来源与色码核对.json",
-        "at": "2026-10-14T17:09:50.114071+00:00"
-      },
-      "observation": {
-        "audit": "approved",
-        "display": "Y",
-        "at": "2026-10-14T17:09:50.114071+00:00",
-        "score": "5.00",
-        "scope": "Full exact-ID API read, not browser presentation or physicalstock proof."
-      },
-      "optimization": {
-        "real_source_creation": {
-          "state": "FORMAL_FIELDS_SCORE_PASS",
-          "source_id": "src-66e2c48586e7",
-          "source_artno": "2418",
-          "at": "2026-10-14T17:09:50.114071+00:00",
-          "evidence": [
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/当前来源与色码核对.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/prepared.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/manifest.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/图片银行公开映射.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/create_once.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/create_receipt.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/verification.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/score.json"
-          ],
-          "inventory_write": "OMITTED",
-          "next_action": "Only formal readback and exact field/score diagnosis; never repeat create or upload successful assets."
-        }
-      },
-      "source_routes_by_color": {
-        "Brown": {
-          "source": "https://luqi.sooxie.com/detail/2492421",
-          "source_id": "src-66e2c48586e7",
-          "source_artno": "2418",
-          "supplier_color": "黄色",
-          "EU": [
-            39,
-            40,
-            41,
-            42,
-            43,
-            44,
-            45,
-            46,
-            47,
-            48
-          ]
-        },
-        "Olive Grey": {
-          "source": "https://luqi.sooxie.com/detail/2492421",
-          "source_id": "src-66e2c48586e7",
-          "source_artno": "2418",
-          "supplier_color": "绿色",
-          "EU": [
-            39,
-            40,
-            41,
-            42,
-            43,
-            44,
-            45,
-            46,
-            47,
-            48
-          ]
-        }
-      },
-      "bound_source_id": "src-66e2c48586e7"
-    },
-    {
-      "id": "1601979572676",
-      "product_id": "LQ-868",
-      "model": "BQ-LQ868",
-      "url": "https://www.alibaba.com/product-detail/Mens-Synthetic-Leather-Lace-Up-Outdoor_1601979572676.html",
-      "record_type": "当前实款正式绑定",
-      "source_relation": "REAL_SOURCE_FORMAL_FIELDS_PASS",
-      "evidence": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/868准备/当前来源与色码核对.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/868准备/prepared.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/868准备/manifest.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/868准备/图片银行公开映射.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/868准备/create_once.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/868准备/create_receipt.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/868准备/verification.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/868准备/score.json"
-      ],
-      "current_platform_fields": {
-        "at": "2026-10-14T16:46:21.945297+00:00",
-        "title": "Mens Synthetic Leather Lace Up Outdoor Casual Shoes with TPR Outsole and Pull Loops for Wholesale Buyers",
-        "keywords": [
-          ""
-        ],
-        "main_images": [
-          "https://sc04.alicdn.com/kf/H2db18e3afbdf4993830205319f3f4825W.png",
-          "https://sc04.alicdn.com/kf/H0d5b865912c447f5a4d9e9d14ed35b7ad.png",
-          "https://sc04.alicdn.com/kf/H462740c2c3134e9cbb439f4cae711853X.png",
-          "https://sc04.alicdn.com/kf/H7e8ff68111744ca48f1cda3a8e75b939x.png",
-          "https://sc04.alicdn.com/kf/Hbff1f6876a414ed88e8c813861036b430.png",
-          "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
-        ],
-        "category_id": 201334413,
-        "status": "approved",
-        "display": "Y",
-        "url": "https://www.alibaba.com/product-detail/Mens-Synthetic-Leather-Lace-Up-Outdoor_1601979572676.html",
-        "scope": "ExactID formal product read; current audit/score accepted only if the separate verification state passes."
-      },
-      "catalog_fields": {
-        "at": "2026-10-14T16:46:21.945297+00:00",
-        "title": "Mens Synthetic Leather Lace Up Outdoor Casual Shoes with TPR Outsole and Pull Loops for Wholesale Buyers",
-        "keywords": [
-          ""
-        ],
-        "main_images": [
-          "https://sc04.alicdn.com/kf/H2db18e3afbdf4993830205319f3f4825W.png",
-          "https://sc04.alicdn.com/kf/H0d5b865912c447f5a4d9e9d14ed35b7ad.png",
-          "https://sc04.alicdn.com/kf/H462740c2c3134e9cbb439f4cae711853X.png",
-          "https://sc04.alicdn.com/kf/H7e8ff68111744ca48f1cda3a8e75b939x.png",
-          "https://sc04.alicdn.com/kf/Hbff1f6876a414ed88e8c813861036b430.png",
-          "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
-        ],
-        "category_id": 201334413,
-        "status": "approved",
-        "display": "Y",
-        "url": "https://www.alibaba.com/product-detail/Mens-Synthetic-Leather-Lace-Up-Outdoor_1601979572676.html",
-        "scope": "ExactID formal product read; current audit/score accepted only if the separate verification state passes."
-      },
-      "formal_fields": {
-        "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601979572676/formal_get.json",
-        "at": "2026-10-14T16:46:21.945297+00:00",
-        "scope": "当前API商品对象；审核、字段和实际评分按独立verification状态，不把待审当完成"
-      },
-      "local_sync": {
-        "state": "FORMAL_FIELDS_SCORE_PASS",
-        "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601979572676/formal_get.json",
-        "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601979572676/formal_render.json",
-        "source_fact_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/868准备/当前来源与色码核对.json",
-        "at": "2026-10-14T16:46:21.945297+00:00"
-      },
-      "observation": {
-        "audit": "approved",
-        "display": "Y",
-        "at": "2026-10-14T16:46:21.945297+00:00",
-        "score": "5.00",
-        "scope": "Full exact-ID API read, not browser presentation or physicalstock proof."
-      },
-      "optimization": {
-        "real_source_creation": {
-          "state": "FORMAL_FIELDS_SCORE_PASS",
-          "source_id": "src-7f5d4e86e9a3",
-          "source_artno": "868",
-          "at": "2026-10-14T16:46:21.945297+00:00",
-          "evidence": [
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/868准备/当前来源与色码核对.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/868准备/prepared.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/868准备/manifest.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/868准备/图片银行公开映射.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/868准备/create_once.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/868准备/create_receipt.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/868准备/verification.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/868准备/score.json"
-          ],
-          "inventory_write": "OMITTED",
-          "next_action": "Only formal readback and exact field/score diagnosis; never repeat create or upload successful assets."
-        }
-      },
-      "source_routes_by_color": {
-        "Black": {
-          "source": "https://luqi.sooxie.com/detail/2280715",
-          "source_id": "src-7f5d4e86e9a3",
-          "source_artno": "868",
-          "supplier_color": "黑色",
-          "EU": [
-            39,
-            40,
-            41,
-            42,
-            43,
-            44,
-            45,
-            46,
-            47,
-            48
-          ]
-        },
-        "Brown": {
-          "source": "https://luqi.sooxie.com/detail/2280715",
-          "source_id": "src-7f5d4e86e9a3",
-          "source_artno": "868",
-          "supplier_color": "卡其",
-          "EU": [
-            39,
-            40,
-            41,
-            42,
-            43,
-            44,
-            45,
-            46,
-            47,
-            48
-          ]
-        }
-      },
-      "bound_source_id": "src-7f5d4e86e9a3"
-    },
-    {
-      "id": "1601980289624",
-      "product_id": "LQ-323",
-      "model": "BQ-LQ323",
-      "url": "https://www.alibaba.com/product-detail/Mens-Lace-Up-Winter-Snow-Boots_1601980289624.html",
-      "record_type": "已创建实款；审核与评分分列",
-      "source_relation": "SOURCE_REVIEWED_CREATE_PENDING_FORMAL_ACCEPTANCE",
-      "evidence": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/323准备/当前来源与色码核对.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/323准备/prepared.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/323准备/manifest.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/323准备/图片银行公开映射.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/323准备/create_once.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/323准备/create_receipt.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/323准备/verification.json"
-      ],
-      "current_platform_fields": {
-        "at": "2026-10-14T17:28:55.858908+00:00",
-        "title": "Mens Lace Up Winter Snow Boots Plush Lining TPR Outsole Mid Top Casual Outdoor Footwear Wholesale Black Grey EU 39-47",
-        "keywords": [
-          ""
-        ],
-        "main_images": [
-          "https://sc04.alicdn.com/kf/Hd66c5c4de1e241fdad6f29d6c2ecf4cf1.png",
-          "https://sc04.alicdn.com/kf/Hd48cfdb127214430bd23b9ec3671dadeA.png",
-          "https://sc04.alicdn.com/kf/H8525fc850ae047368f93e5d89305408al.png",
-          "https://sc04.alicdn.com/kf/Hef510b2475c14bbeaa6abbc030045a08F.png",
-          "https://sc04.alicdn.com/kf/H2bb35d262add46e08a2df478ed05782dO.png",
-          "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
-        ],
-        "category_id": 202248402,
-        "status": "new",
-        "display": "N",
-        "url": "https://www.alibaba.com/product-detail/Mens-Lace-Up-Winter-Snow-Boots_1601980289624.html",
-        "scope": "ExactID formal product read; current audit/score accepted only if the separate verification state passes."
-      },
-      "catalog_fields": {
-        "at": "2026-10-14T17:28:55.858908+00:00",
-        "title": "Mens Lace Up Winter Snow Boots Plush Lining TPR Outsole Mid Top Casual Outdoor Footwear Wholesale Black Grey EU 39-47",
-        "keywords": [
-          ""
-        ],
-        "main_images": [
-          "https://sc04.alicdn.com/kf/Hd66c5c4de1e241fdad6f29d6c2ecf4cf1.png",
-          "https://sc04.alicdn.com/kf/Hd48cfdb127214430bd23b9ec3671dadeA.png",
-          "https://sc04.alicdn.com/kf/H8525fc850ae047368f93e5d89305408al.png",
-          "https://sc04.alicdn.com/kf/Hef510b2475c14bbeaa6abbc030045a08F.png",
-          "https://sc04.alicdn.com/kf/H2bb35d262add46e08a2df478ed05782dO.png",
-          "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
-        ],
-        "category_id": 202248402,
-        "status": "new",
-        "display": "N",
-        "url": "https://www.alibaba.com/product-detail/Mens-Lace-Up-Winter-Snow-Boots_1601980289624.html",
-        "scope": "ExactID formal product read; current audit/score accepted only if the separate verification state passes."
-      },
-      "formal_fields": {
-        "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601980289624/formal_get.json",
-        "at": "2026-10-14T17:28:55.858908+00:00",
-        "scope": "当前API商品对象；审核、字段和实际评分按独立verification状态，不把待审当完成"
-      },
-      "local_sync": {
-        "state": "REVIEWING",
-        "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601980289624/formal_get.json",
-        "current_schema_file": null,
-        "source_fact_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/323准备/当前来源与色码核对.json",
-        "at": "2026-10-14T17:28:55.858908+00:00"
-      },
-      "observation": {
-        "audit": "new",
-        "display": "N",
-        "at": "2026-10-14T17:28:55.858908+00:00",
-        "score": null,
-        "scope": "Full exact-ID API read, not browser presentation or physicalstock proof."
-      },
-      "optimization": {
-        "real_source_creation": {
-          "state": "REVIEWING",
-          "source_id": "src-7c30b934ce12",
-          "source_artno": "323",
-          "at": "2026-10-14T17:28:55.858908+00:00",
-          "evidence": [
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/323准备/当前来源与色码核对.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/323准备/prepared.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/323准备/manifest.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/323准备/图片银行公开映射.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/323准备/create_once.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/323准备/create_receipt.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/323准备/verification.json"
-          ],
-          "inventory_write": "OMITTED",
-          "next_action": "Only formal readback and exact field/score diagnosis; never repeat create or upload successful assets."
-        }
-      },
-      "source_routes_by_color": {
-        "Black": {
-          "source": "https://luqi.sooxie.com/detail/2002980",
-          "source_id": "src-7c30b934ce12",
-          "source_artno": "323",
-          "supplier_color": "黑色",
-          "EU": [
-            39,
-            40,
-            41,
-            42,
-            43,
-            44,
-            45,
-            46,
-            47
-          ]
-        },
-        "Grey": {
-          "source": "https://luqi.sooxie.com/detail/2002980",
-          "source_id": "src-7c30b934ce12",
-          "source_artno": "323",
-          "supplier_color": "灰色",
-          "EU": [
-            39,
-            40,
-            41,
-            42,
-            43,
-            44,
-            45,
-            46,
-            47
-          ]
-        }
-      }
-    },
-    {
-      "id": "1601979948441",
-      "product_id": "LQ-2579",
-      "model": "BQ-LQ2579",
-      "url": "https://www.alibaba.com/product-detail/Mens-Lace-Up-Winter-Snow-Boots_1601979948441.html",
-      "record_type": "当前实款正式绑定",
-      "source_relation": "REAL_SOURCE_FORMAL_FIELDS_PASS",
-      "evidence": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2579准备/当前来源与色码核对.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2579准备/prepared.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2579准备/manifest.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2579准备/图片银行公开映射.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2579准备/create_once.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2579准备/create_receipt.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2579准备/verification.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2579准备/score.json"
-      ],
-      "current_platform_fields": {
-        "at": "2026-10-14T17:10:54.439650+00:00",
-        "title": "Mens Lace Up Winter Snow Boots KPU and Microfiber Upper Plush Lining Rubber Outsole Wholesale EU 39-48",
-        "keywords": [
-          ""
-        ],
-        "main_images": [
-          "https://sc04.alicdn.com/kf/H73723643e9b9438d90704d948ba74e84t.png",
-          "https://sc04.alicdn.com/kf/H1f63eb5cb3ea4f6ab75f3e0fc90b42099.png",
-          "https://sc04.alicdn.com/kf/H09a6e51222594c858de6767b4dd5a2dcn.png",
-          "https://sc04.alicdn.com/kf/He43f39d72e024b66afcb6942e73d8363o.png",
-          "https://sc04.alicdn.com/kf/H17353967e43b476d9093d8667cb1c145p.png",
-          "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
-        ],
-        "category_id": 202248402,
-        "status": "approved",
-        "display": "Y",
-        "url": "https://www.alibaba.com/product-detail/Mens-Lace-Up-Winter-Snow-Boots_1601979948441.html",
-        "scope": "ExactID formal product read; current audit/score accepted only if the separate verification state passes."
-      },
-      "catalog_fields": {
-        "at": "2026-10-14T17:10:54.439650+00:00",
-        "title": "Mens Lace Up Winter Snow Boots KPU and Microfiber Upper Plush Lining Rubber Outsole Wholesale EU 39-48",
-        "keywords": [
-          ""
-        ],
-        "main_images": [
-          "https://sc04.alicdn.com/kf/H73723643e9b9438d90704d948ba74e84t.png",
-          "https://sc04.alicdn.com/kf/H1f63eb5cb3ea4f6ab75f3e0fc90b42099.png",
-          "https://sc04.alicdn.com/kf/H09a6e51222594c858de6767b4dd5a2dcn.png",
-          "https://sc04.alicdn.com/kf/He43f39d72e024b66afcb6942e73d8363o.png",
-          "https://sc04.alicdn.com/kf/H17353967e43b476d9093d8667cb1c145p.png",
-          "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
-        ],
-        "category_id": 202248402,
-        "status": "approved",
-        "display": "Y",
-        "url": "https://www.alibaba.com/product-detail/Mens-Lace-Up-Winter-Snow-Boots_1601979948441.html",
-        "scope": "ExactID formal product read; current audit/score accepted only if the separate verification state passes."
-      },
-      "formal_fields": {
-        "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601979948441/formal_get.json",
-        "at": "2026-10-14T17:10:54.439650+00:00",
-        "scope": "当前API商品对象；审核、字段和实际评分按独立verification状态，不把待审当完成"
-      },
-      "local_sync": {
-        "state": "FORMAL_FIELDS_SCORE_PASS",
-        "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601979948441/formal_get.json",
-        "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601979948441/formal_render.json",
-        "source_fact_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2579准备/当前来源与色码核对.json",
-        "at": "2026-10-14T17:10:54.439650+00:00"
-      },
-      "observation": {
-        "audit": "approved",
-        "display": "Y",
-        "at": "2026-10-14T17:10:54.439650+00:00",
-        "score": "5.00",
-        "scope": "Full exact-ID API read, not browser presentation or physicalstock proof."
-      },
-      "optimization": {
-        "real_source_creation": {
-          "state": "FORMAL_FIELDS_SCORE_PASS",
-          "source_id": "src-4a78572dfe44",
-          "source_artno": "2579",
-          "at": "2026-10-14T17:10:54.439650+00:00",
-          "evidence": [
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2579准备/当前来源与色码核对.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2579准备/prepared.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2579准备/manifest.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2579准备/图片银行公开映射.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2579准备/create_once.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2579准备/create_receipt.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2579准备/verification.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2579准备/score.json"
-          ],
-          "inventory_write": "OMITTED",
-          "next_action": "Only formal readback and exact field/score diagnosis; never repeat create or upload successful assets."
-        }
-      },
-      "source_routes_by_color": {
-        "Black": {
-          "source": "https://luqi.sooxie.com/detail/2353571",
-          "source_id": "src-4a78572dfe44",
-          "source_artno": "2579",
-          "supplier_color": "黑色",
-          "EU": [
-            39,
-            40,
-            41,
-            42,
-            43,
-            44,
-            45,
-            46,
-            47,
-            48
-          ]
-        },
-        "Yellow": {
-          "source": "https://luqi.sooxie.com/detail/2353571",
-          "source_id": "src-4a78572dfe44",
-          "source_artno": "2579",
-          "supplier_color": "黄色",
-          "EU": [
-            39,
-            40,
-            41,
-            42,
-            43,
-            44,
-            45,
-            46,
-            47,
-            48
-          ]
-        }
-      },
-      "bound_source_id": "src-4a78572dfe44"
     },
     {
       "id": "1601979415979",
@@ -88587,276 +89508,6 @@
       "bound_source_id": "src-4cf1620d0e9b"
     },
     {
-      "id": "1601979969696",
-      "product_id": "LQ-2575",
-      "model": "BQ-LQ2575",
-      "url": "https://www.alibaba.com/product-detail/Mens-Lace-Up-Winter-Snow-Boots_1601979969696.html",
-      "record_type": "当前实款正式绑定",
-      "source_relation": "REAL_SOURCE_FORMAL_FIELDS_PASS",
-      "evidence": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2575准备/当前来源与色码核对.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2575准备/prepared.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2575准备/manifest.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2575准备/图片银行公开映射.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2575准备/create_once.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2575准备/create_receipt.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2575准备/verification.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2575准备/score.json"
-      ],
-      "current_platform_fields": {
-        "at": "2026-10-14T17:11:19.989053+00:00",
-        "title": "Mens Lace Up Winter Snow Boots KPU Microfiber Upper Plush Lining Rubber Outsole Wholesale Black Grey EU 39-48",
-        "keywords": [
-          ""
-        ],
-        "main_images": [
-          "https://sc04.alicdn.com/kf/H50811bbf90164747a1e765f017056cabV.png",
-          "https://sc04.alicdn.com/kf/He01076c5484d40e8a538958343f7a565X.png",
-          "https://sc04.alicdn.com/kf/H75096c234cbc48feb3c9a849c0d4bfa3M.png",
-          "https://sc04.alicdn.com/kf/H20458e75baa64cfe8ac9fe55517ff1e7R.png",
-          "https://sc04.alicdn.com/kf/H24896fce095f4791b5d90b2319280a94d.png",
-          "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
-        ],
-        "category_id": 202248402,
-        "status": "approved",
-        "display": "Y",
-        "url": "https://www.alibaba.com/product-detail/Mens-Lace-Up-Winter-Snow-Boots_1601979969696.html",
-        "scope": "ExactID formal product read; current audit/score accepted only if the separate verification state passes."
-      },
-      "catalog_fields": {
-        "at": "2026-10-14T17:11:19.989053+00:00",
-        "title": "Mens Lace Up Winter Snow Boots KPU Microfiber Upper Plush Lining Rubber Outsole Wholesale Black Grey EU 39-48",
-        "keywords": [
-          ""
-        ],
-        "main_images": [
-          "https://sc04.alicdn.com/kf/H50811bbf90164747a1e765f017056cabV.png",
-          "https://sc04.alicdn.com/kf/He01076c5484d40e8a538958343f7a565X.png",
-          "https://sc04.alicdn.com/kf/H75096c234cbc48feb3c9a849c0d4bfa3M.png",
-          "https://sc04.alicdn.com/kf/H20458e75baa64cfe8ac9fe55517ff1e7R.png",
-          "https://sc04.alicdn.com/kf/H24896fce095f4791b5d90b2319280a94d.png",
-          "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
-        ],
-        "category_id": 202248402,
-        "status": "approved",
-        "display": "Y",
-        "url": "https://www.alibaba.com/product-detail/Mens-Lace-Up-Winter-Snow-Boots_1601979969696.html",
-        "scope": "ExactID formal product read; current audit/score accepted only if the separate verification state passes."
-      },
-      "formal_fields": {
-        "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601979969696/formal_get.json",
-        "at": "2026-10-14T17:11:19.989053+00:00",
-        "scope": "当前API商品对象；审核、字段和实际评分按独立verification状态，不把待审当完成"
-      },
-      "local_sync": {
-        "state": "FORMAL_FIELDS_SCORE_PASS",
-        "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601979969696/formal_get.json",
-        "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601979969696/formal_render.json",
-        "source_fact_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2575准备/当前来源与色码核对.json",
-        "at": "2026-10-14T17:11:19.989053+00:00"
-      },
-      "observation": {
-        "audit": "approved",
-        "display": "Y",
-        "at": "2026-10-14T17:11:19.989053+00:00",
-        "score": "5.00",
-        "scope": "Full exact-ID API read, not browser presentation or physicalstock proof."
-      },
-      "optimization": {
-        "real_source_creation": {
-          "state": "FORMAL_FIELDS_SCORE_PASS",
-          "source_id": "src-797c9dded222",
-          "source_artno": "2575",
-          "at": "2026-10-14T17:11:19.989053+00:00",
-          "evidence": [
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2575准备/当前来源与色码核对.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2575准备/prepared.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2575准备/manifest.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2575准备/图片银行公开映射.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2575准备/create_once.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2575准备/create_receipt.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2575准备/verification.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2575准备/score.json"
-          ],
-          "inventory_write": "OMITTED",
-          "next_action": "Only formal readback and exact field/score diagnosis; never repeat create or upload successful assets."
-        }
-      },
-      "source_routes_by_color": {
-        "Black": {
-          "source": "https://luqi.sooxie.com/detail/2351916",
-          "source_id": "src-797c9dded222",
-          "source_artno": "2575",
-          "supplier_color": "黑色",
-          "EU": [
-            39,
-            40,
-            41,
-            42,
-            43,
-            44,
-            45,
-            46,
-            47,
-            48
-          ]
-        },
-        "Grey": {
-          "source": "https://luqi.sooxie.com/detail/2351916",
-          "source_id": "src-797c9dded222",
-          "source_artno": "2575",
-          "supplier_color": "灰色",
-          "EU": [
-            39,
-            40,
-            41,
-            42,
-            43,
-            44,
-            45,
-            46,
-            47,
-            48
-          ]
-        }
-      },
-      "bound_source_id": "src-797c9dded222"
-    },
-    {
-      "id": "1601980077192",
-      "product_id": "LQ-2505",
-      "model": "BQ-LQ2505",
-      "url": "https://www.alibaba.com/product-detail/Mens-Lace-Up-Winter-Snow-Boots_1601980077192.html",
-      "record_type": "当前实款正式绑定",
-      "source_relation": "REAL_SOURCE_FORMAL_FIELDS_PASS",
-      "evidence": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2505准备/当前来源与色码核对.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2505准备/prepared.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2505准备/manifest.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2505准备/图片银行公开映射.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2505准备/create_once.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2505准备/create_receipt.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2505准备/verification.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2505准备/score.json"
-      ],
-      "current_platform_fields": {
-        "at": "2026-10-14T17:11:46.898016+00:00",
-        "title": "Mens Lace Up Winter Snow Boots Smooth Upper Plush Lining TPR Outsole Ankle Boots Wholesale Black Tan EU 39-47",
-        "keywords": [
-          ""
-        ],
-        "main_images": [
-          "https://sc04.alicdn.com/kf/Hc657062cab654391aad9089802257f28g.png",
-          "https://sc04.alicdn.com/kf/H95f2a490f1df417da399c20f6ef33cea6.png",
-          "https://sc04.alicdn.com/kf/Hffe76421bd5d4a3795c7739fdfc0440bF.png",
-          "https://sc04.alicdn.com/kf/H42bef8d15a3e4d80a58a3b71ca49b15eo.png",
-          "https://sc04.alicdn.com/kf/H1290a7e94d5a40a1af1d41794e98b0f4d.png",
-          "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
-        ],
-        "category_id": 202248402,
-        "status": "approved",
-        "display": "Y",
-        "url": "https://www.alibaba.com/product-detail/Mens-Lace-Up-Winter-Snow-Boots_1601980077192.html",
-        "scope": "ExactID formal product read; current audit/score accepted only if the separate verification state passes."
-      },
-      "catalog_fields": {
-        "at": "2026-10-14T17:11:46.898016+00:00",
-        "title": "Mens Lace Up Winter Snow Boots Smooth Upper Plush Lining TPR Outsole Ankle Boots Wholesale Black Tan EU 39-47",
-        "keywords": [
-          ""
-        ],
-        "main_images": [
-          "https://sc04.alicdn.com/kf/Hc657062cab654391aad9089802257f28g.png",
-          "https://sc04.alicdn.com/kf/H95f2a490f1df417da399c20f6ef33cea6.png",
-          "https://sc04.alicdn.com/kf/Hffe76421bd5d4a3795c7739fdfc0440bF.png",
-          "https://sc04.alicdn.com/kf/H42bef8d15a3e4d80a58a3b71ca49b15eo.png",
-          "https://sc04.alicdn.com/kf/H1290a7e94d5a40a1af1d41794e98b0f4d.png",
-          "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
-        ],
-        "category_id": 202248402,
-        "status": "approved",
-        "display": "Y",
-        "url": "https://www.alibaba.com/product-detail/Mens-Lace-Up-Winter-Snow-Boots_1601980077192.html",
-        "scope": "ExactID formal product read; current audit/score accepted only if the separate verification state passes."
-      },
-      "formal_fields": {
-        "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601980077192/formal_get.json",
-        "at": "2026-10-14T17:11:46.898016+00:00",
-        "scope": "当前API商品对象；审核、字段和实际评分按独立verification状态，不把待审当完成"
-      },
-      "local_sync": {
-        "state": "FORMAL_FIELDS_SCORE_PASS",
-        "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601980077192/formal_get.json",
-        "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601980077192/formal_render.json",
-        "source_fact_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2505准备/当前来源与色码核对.json",
-        "at": "2026-10-14T17:11:46.898016+00:00"
-      },
-      "observation": {
-        "audit": "approved",
-        "display": "Y",
-        "at": "2026-10-14T17:11:46.898016+00:00",
-        "score": "5.00",
-        "scope": "Full exact-ID API read, not browser presentation or physicalstock proof."
-      },
-      "optimization": {
-        "real_source_creation": {
-          "state": "FORMAL_FIELDS_SCORE_PASS",
-          "source_id": "src-8cfcee52f82e",
-          "source_artno": "2505",
-          "at": "2026-10-14T17:11:46.898016+00:00",
-          "evidence": [
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2505准备/当前来源与色码核对.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2505准备/prepared.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2505准备/manifest.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2505准备/图片银行公开映射.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2505准备/create_once.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2505准备/create_receipt.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2505准备/verification.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2505准备/score.json"
-          ],
-          "inventory_write": "OMITTED",
-          "next_action": "Only formal readback and exact field/score diagnosis; never repeat create or upload successful assets."
-        }
-      },
-      "source_routes_by_color": {
-        "Black": {
-          "source": "https://luqi.sooxie.com/detail/2046177",
-          "source_id": "src-8cfcee52f82e",
-          "source_artno": "2505",
-          "supplier_color": "黑色",
-          "EU": [
-            39,
-            40,
-            41,
-            42,
-            43,
-            44,
-            45,
-            46,
-            47
-          ]
-        },
-        "Tan": {
-          "source": "https://luqi.sooxie.com/detail/2046177",
-          "source_id": "src-8cfcee52f82e",
-          "source_artno": "2505",
-          "supplier_color": "土黄",
-          "EU": [
-            39,
-            40,
-            41,
-            42,
-            43,
-            44,
-            45,
-            46,
-            47
-          ]
-        }
-      },
-      "bound_source_id": "src-8cfcee52f82e"
-    },
-    {
       "id": "1601980268012",
       "product_id": "LQ-02412",
       "model": "BQ-LQ02412",
@@ -88993,96 +89644,96 @@
       "bound_source_id": "src-4a244dcb47c9"
     },
     {
-      "id": "1601979492425",
-      "product_id": "LQ-2576",
-      "model": "BQ-LQ2576",
-      "url": "https://www.alibaba.com/product-detail/Wide-Toe-Box-Knit-Slip-On_1601979492425.html",
+      "id": "1601980350419",
+      "product_id": "LQ-909",
+      "model": "BQ-LQ909",
+      "url": "https://www.alibaba.com/product-detail/Mens-Lace-Up-Winter-Snow-Boots_1601980350419.html",
       "record_type": "当前实款正式绑定",
       "source_relation": "REAL_SOURCE_FORMAL_FIELDS_PASS",
       "evidence": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/当前来源与色码核对.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/prepared.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/manifest.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/图片银行公开映射.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/create_once.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/create_receipt.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/verification.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/score.json"
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/909准备/当前来源与色码核对.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/909准备/prepared.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/909准备/manifest.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/909准备/图片银行公开映射.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/909准备/create_once.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/909准备/create_receipt.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/909准备/verification.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/909准备/score.json"
       ],
       "current_platform_fields": {
-        "at": "2026-10-14T04:47:29.267633+00:00",
-        "title": "Wide Toe Box Knit Slip On Walking Shoes with Low Cut Collar for Wholesale Footwear Buyers",
+        "at": "2026-10-14T18:33:16.841351+00:00",
+        "title": "Mens Lace Up Winter Snow Boots Plush Lining Mid Top Grained Upper Casual Outdoor Footwear Wholesale Black Khaki EU 39-48",
         "keywords": [
           ""
         ],
         "main_images": [
-          "https://sc04.alicdn.com/kf/H17c1193fc4d64ec999fd502eaec24032g.png",
-          "https://sc04.alicdn.com/kf/H217b1d34830946b8938293da23d17ae5F.png",
-          "https://sc04.alicdn.com/kf/H2baf6a8bcdcc4404b4626de56540cf2cJ.png",
-          "https://sc04.alicdn.com/kf/H4771cf8ca906434181038bf32da37716D.png",
-          "https://sc04.alicdn.com/kf/Hf2cd61c8c652487082478e47e60081abR.png",
+          "https://sc04.alicdn.com/kf/H324ea81bce694c8481574254b2b336ces.jpg",
+          "https://sc04.alicdn.com/kf/Hb1ab7f2be81e4df4b068bbf2125a7395p.png",
+          "https://sc04.alicdn.com/kf/H3062fb58c4044822a1a08ec7dbef4708I.png",
+          "https://sc04.alicdn.com/kf/H8ab15145812d45428aefcc496e9d0623B.jpg",
+          "https://sc04.alicdn.com/kf/H99a3a925d2ea43bf819f9b9aab264966x.jpg",
           "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
         ],
-        "category_id": 201334413,
+        "category_id": 202248402,
         "status": "approved",
         "display": "Y",
-        "url": "https://www.alibaba.com/product-detail/Wide-Toe-Box-Knit-Slip-On_1601979492425.html",
+        "url": "https://www.alibaba.com/product-detail/Mens-Lace-Up-Winter-Snow-Boots_1601980350419.html",
         "scope": "ExactID formal product read; current audit/score accepted only if the separate verification state passes."
       },
       "catalog_fields": {
-        "at": "2026-10-14T04:47:29.267633+00:00",
-        "title": "Wide Toe Box Knit Slip On Walking Shoes with Low Cut Collar for Wholesale Footwear Buyers",
+        "at": "2026-10-14T18:33:16.841351+00:00",
+        "title": "Mens Lace Up Winter Snow Boots Plush Lining Mid Top Grained Upper Casual Outdoor Footwear Wholesale Black Khaki EU 39-48",
         "keywords": [
           ""
         ],
         "main_images": [
-          "https://sc04.alicdn.com/kf/H17c1193fc4d64ec999fd502eaec24032g.png",
-          "https://sc04.alicdn.com/kf/H217b1d34830946b8938293da23d17ae5F.png",
-          "https://sc04.alicdn.com/kf/H2baf6a8bcdcc4404b4626de56540cf2cJ.png",
-          "https://sc04.alicdn.com/kf/H4771cf8ca906434181038bf32da37716D.png",
-          "https://sc04.alicdn.com/kf/Hf2cd61c8c652487082478e47e60081abR.png",
+          "https://sc04.alicdn.com/kf/H324ea81bce694c8481574254b2b336ces.jpg",
+          "https://sc04.alicdn.com/kf/Hb1ab7f2be81e4df4b068bbf2125a7395p.png",
+          "https://sc04.alicdn.com/kf/H3062fb58c4044822a1a08ec7dbef4708I.png",
+          "https://sc04.alicdn.com/kf/H8ab15145812d45428aefcc496e9d0623B.jpg",
+          "https://sc04.alicdn.com/kf/H99a3a925d2ea43bf819f9b9aab264966x.jpg",
           "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
         ],
-        "category_id": 201334413,
+        "category_id": 202248402,
         "status": "approved",
         "display": "Y",
-        "url": "https://www.alibaba.com/product-detail/Wide-Toe-Box-Knit-Slip-On_1601979492425.html",
+        "url": "https://www.alibaba.com/product-detail/Mens-Lace-Up-Winter-Snow-Boots_1601980350419.html",
         "scope": "ExactID formal product read; current audit/score accepted only if the separate verification state passes."
       },
       "formal_fields": {
-        "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601979492425/formal_get.json",
-        "at": "2026-10-14T04:47:29.267633+00:00",
+        "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601980350419/formal_get.json",
+        "at": "2026-10-14T18:33:16.841351+00:00",
         "scope": "当前API商品对象；审核、字段和实际评分按独立verification状态，不把待审当完成"
       },
       "local_sync": {
         "state": "FORMAL_FIELDS_SCORE_PASS",
-        "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601979492425/formal_get.json",
-        "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601979492425/formal_render.json",
-        "source_fact_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/当前来源与色码核对.json",
-        "at": "2026-10-14T04:47:29.267633+00:00"
+        "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601980350419/formal_get.json",
+        "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601980350419/formal_render.json",
+        "source_fact_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/909准备/当前来源与色码核对.json",
+        "at": "2026-10-14T18:33:16.841351+00:00"
       },
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-14T04:47:29.267633+00:00",
+        "at": "2026-10-14T18:33:16.841351+00:00",
         "score": "5.00",
         "scope": "Full exact-ID API read, not browser presentation or physicalstock proof."
       },
       "optimization": {
         "real_source_creation": {
           "state": "FORMAL_FIELDS_SCORE_PASS",
-          "source_id": "src-ff8d28f6cbcc",
-          "source_artno": "2576",
-          "at": "2026-10-14T04:47:29.267633+00:00",
+          "source_id": "src-0563177eb488",
+          "source_artno": "909",
+          "at": "2026-10-14T18:33:16.841351+00:00",
           "evidence": [
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/当前来源与色码核对.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/prepared.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/manifest.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/图片银行公开映射.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/create_once.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/create_receipt.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/verification.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/score.json"
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/909准备/当前来源与色码核对.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/909准备/prepared.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/909准备/manifest.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/909准备/图片银行公开映射.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/909准备/create_once.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/909准备/create_receipt.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/909准备/verification.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/909准备/score.json"
           ],
           "inventory_write": "OMITTED",
           "next_action": "Only formal readback and exact field/score diagnosis; never repeat create or upload successful assets."
@@ -89090,9 +89741,9 @@
       },
       "source_routes_by_color": {
         "Black": {
-          "source": "https://luqi.sooxie.com/detail/2372147",
-          "source_id": "src-ff8d28f6cbcc",
-          "source_artno": "2576",
+          "source": "https://luqi.sooxie.com/detail/1809689",
+          "source_id": "src-0563177eb488",
+          "source_artno": "909",
           "supplier_color": "黑色",
           "EU": [
             39,
@@ -89102,14 +89753,16 @@
             43,
             44,
             45,
-            46
+            46,
+            47,
+            48
           ]
         },
-        "Beige": {
-          "source": "https://luqi.sooxie.com/detail/2372147",
-          "source_id": "src-ff8d28f6cbcc",
-          "source_artno": "2576",
-          "supplier_color": "米色",
+        "Khaki": {
+          "source": "https://luqi.sooxie.com/detail/1809689",
+          "source_id": "src-0563177eb488",
+          "source_artno": "909",
+          "supplier_color": "卡其",
           "EU": [
             39,
             40,
@@ -89118,103 +89771,105 @@
             43,
             44,
             45,
-            46
+            46,
+            47,
+            48
           ]
         }
       },
-      "bound_source_id": "src-ff8d28f6cbcc"
+      "bound_source_id": "src-0563177eb488"
     },
     {
-      "id": "1601980302105",
-      "product_id": "LQ-0922",
-      "model": "BQ-LQ0922",
-      "url": "https://www.alibaba.com/product-detail/Mens-Lace-Up-Winter-Snow-Boots_1601980302105.html",
+      "id": "1601979969696",
+      "product_id": "LQ-2575",
+      "model": "BQ-LQ2575",
+      "url": "https://www.alibaba.com/product-detail/Mens-Lace-Up-Winter-Snow-Boots_1601979969696.html",
       "record_type": "当前实款正式绑定",
       "source_relation": "REAL_SOURCE_FORMAL_FIELDS_PASS",
       "evidence": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/当前来源与色码核对.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/prepared.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/manifest.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/图片银行公开映射.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/create_once.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/create_receipt.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/verification.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/score.json"
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2575准备/当前来源与色码核对.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2575准备/prepared.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2575准备/manifest.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2575准备/图片银行公开映射.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2575准备/create_once.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2575准备/create_receipt.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2575准备/verification.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2575准备/score.json"
       ],
       "current_platform_fields": {
-        "at": "2026-10-14T17:13:05.924800+00:00",
-        "title": "Mens Lace Up Winter Snow Boots Plush Lining EVA Outsole Mid Top Casual Outdoor Footwear Wholesale EU 39-48",
+        "at": "2026-10-14T17:11:19.989053+00:00",
+        "title": "Mens Lace Up Winter Snow Boots KPU Microfiber Upper Plush Lining Rubber Outsole Wholesale Black Grey EU 39-48",
         "keywords": [
           ""
         ],
         "main_images": [
-          "https://sc04.alicdn.com/kf/Hff270abf8f5a40d5ae841a424428e8edt.jpg",
-          "https://sc04.alicdn.com/kf/H59b41f04e502422a8cc04f0c5bb8a9003.png",
-          "https://sc04.alicdn.com/kf/H4b33d2761353455593100cfd722db318F.png",
-          "https://sc04.alicdn.com/kf/Ha69266ceb3794d0298c6ef51fa3db28ce.png",
-          "https://sc04.alicdn.com/kf/H62c886d8db314a8085362aefd86a4425M.png",
+          "https://sc04.alicdn.com/kf/H50811bbf90164747a1e765f017056cabV.png",
+          "https://sc04.alicdn.com/kf/He01076c5484d40e8a538958343f7a565X.png",
+          "https://sc04.alicdn.com/kf/H75096c234cbc48feb3c9a849c0d4bfa3M.png",
+          "https://sc04.alicdn.com/kf/H20458e75baa64cfe8ac9fe55517ff1e7R.png",
+          "https://sc04.alicdn.com/kf/H24896fce095f4791b5d90b2319280a94d.png",
           "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
         ],
         "category_id": 202248402,
         "status": "approved",
         "display": "Y",
-        "url": "https://www.alibaba.com/product-detail/Mens-Lace-Up-Winter-Snow-Boots_1601980302105.html",
+        "url": "https://www.alibaba.com/product-detail/Mens-Lace-Up-Winter-Snow-Boots_1601979969696.html",
         "scope": "ExactID formal product read; current audit/score accepted only if the separate verification state passes."
       },
       "catalog_fields": {
-        "at": "2026-10-14T17:13:05.924800+00:00",
-        "title": "Mens Lace Up Winter Snow Boots Plush Lining EVA Outsole Mid Top Casual Outdoor Footwear Wholesale EU 39-48",
+        "at": "2026-10-14T17:11:19.989053+00:00",
+        "title": "Mens Lace Up Winter Snow Boots KPU Microfiber Upper Plush Lining Rubber Outsole Wholesale Black Grey EU 39-48",
         "keywords": [
           ""
         ],
         "main_images": [
-          "https://sc04.alicdn.com/kf/Hff270abf8f5a40d5ae841a424428e8edt.jpg",
-          "https://sc04.alicdn.com/kf/H59b41f04e502422a8cc04f0c5bb8a9003.png",
-          "https://sc04.alicdn.com/kf/H4b33d2761353455593100cfd722db318F.png",
-          "https://sc04.alicdn.com/kf/Ha69266ceb3794d0298c6ef51fa3db28ce.png",
-          "https://sc04.alicdn.com/kf/H62c886d8db314a8085362aefd86a4425M.png",
+          "https://sc04.alicdn.com/kf/H50811bbf90164747a1e765f017056cabV.png",
+          "https://sc04.alicdn.com/kf/He01076c5484d40e8a538958343f7a565X.png",
+          "https://sc04.alicdn.com/kf/H75096c234cbc48feb3c9a849c0d4bfa3M.png",
+          "https://sc04.alicdn.com/kf/H20458e75baa64cfe8ac9fe55517ff1e7R.png",
+          "https://sc04.alicdn.com/kf/H24896fce095f4791b5d90b2319280a94d.png",
           "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
         ],
         "category_id": 202248402,
         "status": "approved",
         "display": "Y",
-        "url": "https://www.alibaba.com/product-detail/Mens-Lace-Up-Winter-Snow-Boots_1601980302105.html",
+        "url": "https://www.alibaba.com/product-detail/Mens-Lace-Up-Winter-Snow-Boots_1601979969696.html",
         "scope": "ExactID formal product read; current audit/score accepted only if the separate verification state passes."
       },
       "formal_fields": {
-        "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601980302105/formal_get.json",
-        "at": "2026-10-14T17:13:05.924800+00:00",
+        "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601979969696/formal_get.json",
+        "at": "2026-10-14T17:11:19.989053+00:00",
         "scope": "当前API商品对象；审核、字段和实际评分按独立verification状态，不把待审当完成"
       },
       "local_sync": {
         "state": "FORMAL_FIELDS_SCORE_PASS",
-        "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601980302105/formal_get.json",
-        "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601980302105/formal_render.json",
-        "source_fact_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/当前来源与色码核对.json",
-        "at": "2026-10-14T17:13:05.924800+00:00"
+        "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601979969696/formal_get.json",
+        "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601979969696/formal_render.json",
+        "source_fact_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2575准备/当前来源与色码核对.json",
+        "at": "2026-10-14T17:11:19.989053+00:00"
       },
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-14T17:13:05.924800+00:00",
+        "at": "2026-10-14T17:11:19.989053+00:00",
         "score": "5.00",
         "scope": "Full exact-ID API read, not browser presentation or physicalstock proof."
       },
       "optimization": {
         "real_source_creation": {
           "state": "FORMAL_FIELDS_SCORE_PASS",
-          "source_id": "src-d438d7cece9b",
-          "source_artno": "0922",
-          "at": "2026-10-14T17:13:05.924800+00:00",
+          "source_id": "src-797c9dded222",
+          "source_artno": "2575",
+          "at": "2026-10-14T17:11:19.989053+00:00",
           "evidence": [
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/当前来源与色码核对.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/prepared.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/manifest.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/图片银行公开映射.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/create_once.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/create_receipt.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/verification.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/score.json"
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2575准备/当前来源与色码核对.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2575准备/prepared.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2575准备/manifest.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2575准备/图片银行公开映射.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2575准备/create_once.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2575准备/create_receipt.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2575准备/verification.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2575准备/score.json"
           ],
           "inventory_write": "OMITTED",
           "next_action": "Only formal readback and exact field/score diagnosis; never repeat create or upload successful assets."
@@ -89222,9 +89877,9 @@
       },
       "source_routes_by_color": {
         "Black": {
-          "source": "https://luqi.sooxie.com/detail/1984084",
-          "source_id": "src-d438d7cece9b",
-          "source_artno": "0922",
+          "source": "https://luqi.sooxie.com/detail/2351916",
+          "source_id": "src-797c9dded222",
+          "source_artno": "2575",
           "supplier_color": "黑色",
           "EU": [
             39,
@@ -89239,11 +89894,11 @@
             48
           ]
         },
-        "Black Grey": {
-          "source": "https://luqi.sooxie.com/detail/1984084",
-          "source_id": "src-d438d7cece9b",
-          "source_artno": "0922",
-          "supplier_color": "黑灰",
+        "Grey": {
+          "source": "https://luqi.sooxie.com/detail/2351916",
+          "source_id": "src-797c9dded222",
+          "source_artno": "2575",
+          "supplier_color": "灰色",
           "EU": [
             39,
             40,
@@ -89258,7 +89913,277 @@
           ]
         }
       },
-      "bound_source_id": "src-d438d7cece9b"
+      "bound_source_id": "src-797c9dded222"
+    },
+    {
+      "id": "1601980289624",
+      "product_id": "LQ-323",
+      "model": "BQ-LQ323",
+      "url": "https://www.alibaba.com/product-detail/Mens-Lace-Up-Winter-Snow-Boots_1601980289624.html",
+      "record_type": "当前实款正式绑定",
+      "source_relation": "REAL_SOURCE_FORMAL_FIELDS_PASS",
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/323准备/当前来源与色码核对.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/323准备/prepared.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/323准备/manifest.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/323准备/图片银行公开映射.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/323准备/create_once.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/323准备/create_receipt.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/323准备/verification.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/323准备/score.json"
+      ],
+      "current_platform_fields": {
+        "at": "2026-10-14T17:59:28.113987+00:00",
+        "title": "Mens Lace Up Winter Snow Boots Plush Lining TPR Outsole Mid Top Casual Outdoor Footwear Wholesale Black Grey EU 39-47",
+        "keywords": [
+          ""
+        ],
+        "main_images": [
+          "https://sc04.alicdn.com/kf/Hd66c5c4de1e241fdad6f29d6c2ecf4cf1.png",
+          "https://sc04.alicdn.com/kf/Hd48cfdb127214430bd23b9ec3671dadeA.png",
+          "https://sc04.alicdn.com/kf/H8525fc850ae047368f93e5d89305408al.png",
+          "https://sc04.alicdn.com/kf/Hef510b2475c14bbeaa6abbc030045a08F.png",
+          "https://sc04.alicdn.com/kf/H2bb35d262add46e08a2df478ed05782dO.png",
+          "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
+        ],
+        "category_id": 202248402,
+        "status": "approved",
+        "display": "Y",
+        "url": "https://www.alibaba.com/product-detail/Mens-Lace-Up-Winter-Snow-Boots_1601980289624.html",
+        "scope": "ExactID formal product read; current audit/score accepted only if the separate verification state passes."
+      },
+      "catalog_fields": {
+        "at": "2026-10-14T17:59:28.113987+00:00",
+        "title": "Mens Lace Up Winter Snow Boots Plush Lining TPR Outsole Mid Top Casual Outdoor Footwear Wholesale Black Grey EU 39-47",
+        "keywords": [
+          ""
+        ],
+        "main_images": [
+          "https://sc04.alicdn.com/kf/Hd66c5c4de1e241fdad6f29d6c2ecf4cf1.png",
+          "https://sc04.alicdn.com/kf/Hd48cfdb127214430bd23b9ec3671dadeA.png",
+          "https://sc04.alicdn.com/kf/H8525fc850ae047368f93e5d89305408al.png",
+          "https://sc04.alicdn.com/kf/Hef510b2475c14bbeaa6abbc030045a08F.png",
+          "https://sc04.alicdn.com/kf/H2bb35d262add46e08a2df478ed05782dO.png",
+          "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
+        ],
+        "category_id": 202248402,
+        "status": "approved",
+        "display": "Y",
+        "url": "https://www.alibaba.com/product-detail/Mens-Lace-Up-Winter-Snow-Boots_1601980289624.html",
+        "scope": "ExactID formal product read; current audit/score accepted only if the separate verification state passes."
+      },
+      "formal_fields": {
+        "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601980289624/formal_get.json",
+        "at": "2026-10-14T17:59:28.113987+00:00",
+        "scope": "当前API商品对象；审核、字段和实际评分按独立verification状态，不把待审当完成"
+      },
+      "local_sync": {
+        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601980289624/formal_get.json",
+        "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601980289624/formal_render.json",
+        "source_fact_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/323准备/当前来源与色码核对.json",
+        "at": "2026-10-14T17:59:28.113987+00:00"
+      },
+      "observation": {
+        "audit": "approved",
+        "display": "Y",
+        "at": "2026-10-14T17:59:28.113987+00:00",
+        "score": "5.00",
+        "scope": "Full exact-ID API read, not browser presentation or physicalstock proof."
+      },
+      "optimization": {
+        "real_source_creation": {
+          "state": "FORMAL_FIELDS_SCORE_PASS",
+          "source_id": "src-7c30b934ce12",
+          "source_artno": "323",
+          "at": "2026-10-14T17:59:28.113987+00:00",
+          "evidence": [
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/323准备/当前来源与色码核对.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/323准备/prepared.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/323准备/manifest.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/323准备/图片银行公开映射.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/323准备/create_once.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/323准备/create_receipt.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/323准备/verification.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/323准备/score.json"
+          ],
+          "inventory_write": "OMITTED",
+          "next_action": "Only formal readback and exact field/score diagnosis; never repeat create or upload successful assets."
+        }
+      },
+      "source_routes_by_color": {
+        "Black": {
+          "source": "https://luqi.sooxie.com/detail/2002980",
+          "source_id": "src-7c30b934ce12",
+          "source_artno": "323",
+          "supplier_color": "黑色",
+          "EU": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47
+          ]
+        },
+        "Grey": {
+          "source": "https://luqi.sooxie.com/detail/2002980",
+          "source_id": "src-7c30b934ce12",
+          "source_artno": "323",
+          "supplier_color": "灰色",
+          "EU": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47
+          ]
+        }
+      },
+      "bound_source_id": "src-7c30b934ce12"
+    },
+    {
+      "id": "1601980330662",
+      "product_id": "LQ-1628",
+      "model": "BQ-LQ1628",
+      "url": "https://www.alibaba.com/product-detail/Mens-Lace-Up-Casual-Walking-Shoes_1601980330662.html",
+      "record_type": "当前实款正式绑定",
+      "source_relation": "REAL_SOURCE_FORMAL_FIELDS_PASS",
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1628准备/当前来源与色码核对.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1628准备/prepared.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1628准备/manifest.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1628准备/图片银行公开映射.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1628准备/create_once.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1628准备/create_receipt.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1628准备/verification.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1628准备/score.json"
+      ],
+      "current_platform_fields": {
+        "at": "2026-10-14T19:18:11.584993+00:00",
+        "title": "Mens Lace Up Casual Walking Shoes MD Outsole Black Standard or Plush Lining Sneakers Wholesale EU 39-48",
+        "keywords": [
+          ""
+        ],
+        "main_images": [
+          "https://sc04.alicdn.com/kf/H4274739636cb4da785eba0f04d0fc423d.jpg",
+          "https://sc04.alicdn.com/kf/H41d5b8c7c55c4118aa8b8e2785f162bag.png",
+          "https://sc04.alicdn.com/kf/H5b16efbbd71d4411bc8e323f8c8a7b5ba.png",
+          "https://sc04.alicdn.com/kf/H9ce4b569d9c34eb4874d72a493d60cc9X.jpg",
+          "https://sc04.alicdn.com/kf/Hedad2ce43e05417ba0151b53c015f57en.jpg",
+          "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
+        ],
+        "category_id": 201334413,
+        "status": "approved",
+        "display": "Y",
+        "url": "https://www.alibaba.com/product-detail/Mens-Lace-Up-Casual-Walking-Shoes_1601980330662.html",
+        "scope": "ExactID formal product read; current audit/score accepted only if the separate verification state passes."
+      },
+      "catalog_fields": {
+        "at": "2026-10-14T19:18:11.584993+00:00",
+        "title": "Mens Lace Up Casual Walking Shoes MD Outsole Black Standard or Plush Lining Sneakers Wholesale EU 39-48",
+        "keywords": [
+          ""
+        ],
+        "main_images": [
+          "https://sc04.alicdn.com/kf/H4274739636cb4da785eba0f04d0fc423d.jpg",
+          "https://sc04.alicdn.com/kf/H41d5b8c7c55c4118aa8b8e2785f162bag.png",
+          "https://sc04.alicdn.com/kf/H5b16efbbd71d4411bc8e323f8c8a7b5ba.png",
+          "https://sc04.alicdn.com/kf/H9ce4b569d9c34eb4874d72a493d60cc9X.jpg",
+          "https://sc04.alicdn.com/kf/Hedad2ce43e05417ba0151b53c015f57en.jpg",
+          "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
+        ],
+        "category_id": 201334413,
+        "status": "approved",
+        "display": "Y",
+        "url": "https://www.alibaba.com/product-detail/Mens-Lace-Up-Casual-Walking-Shoes_1601980330662.html",
+        "scope": "ExactID formal product read; current audit/score accepted only if the separate verification state passes."
+      },
+      "formal_fields": {
+        "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601980330662/formal_get.json",
+        "at": "2026-10-14T19:18:11.584993+00:00",
+        "scope": "当前API商品对象；审核、字段和实际评分按独立verification状态，不把待审当完成"
+      },
+      "local_sync": {
+        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601980330662/formal_get.json",
+        "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601980330662/formal_render.json",
+        "source_fact_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1628准备/当前来源与色码核对.json",
+        "at": "2026-10-14T19:18:11.584941+00:00"
+      },
+      "observation": {
+        "audit": "approved",
+        "display": "Y",
+        "at": "2026-10-14T19:18:11.584993+00:00",
+        "score": "5.00",
+        "scope": "Full exact-ID API read, not browser presentation or physicalstock proof."
+      },
+      "optimization": {
+        "real_source_creation": {
+          "state": "FORMAL_FIELDS_SCORE_PASS",
+          "source_id": "src-4e2dadc34943",
+          "source_artno": "1628",
+          "at": "2026-10-14T19:18:11.584941+00:00",
+          "evidence": [
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1628准备/当前来源与色码核对.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1628准备/prepared.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1628准备/manifest.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1628准备/图片银行公开映射.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1628准备/create_once.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1628准备/create_receipt.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1628准备/verification.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1628准备/score.json"
+          ],
+          "inventory_write": "OMITTED",
+          "next_action": "Only formal readback and exact field/score diagnosis; never repeat create or upload successful assets."
+        }
+      },
+      "source_routes_by_color": {
+        "Black - Standard Lining": {
+          "source": "https://luqi.sooxie.com/detail/2063330",
+          "source_id": "src-4e2dadc34943",
+          "source_artno": "1628",
+          "supplier_color": "黑色单鞋",
+          "EU": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48
+          ]
+        },
+        "Black - Plush Lining": {
+          "source": "https://luqi.sooxie.com/detail/2063330",
+          "source_id": "src-4e2dadc34943",
+          "source_artno": "1628-1",
+          "supplier_color": "1628-1加绒",
+          "EU": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48
+          ]
+        }
+      },
+      "bound_source_id": "src-4e2dadc34943"
     },
     {
       "id": "1601980209795",
@@ -89551,96 +90476,96 @@
       "bound_source_id": "src-743609de0090"
     },
     {
-      "id": "1601979745492",
-      "product_id": "LQ-822",
-      "model": "BQ-LQ822",
-      "url": "https://www.alibaba.com/product-detail/Mens-Synthetic-Leather-Casual-Walking-Shoes_1601979745492.html",
+      "id": "1601979572676",
+      "product_id": "LQ-868",
+      "model": "BQ-LQ868",
+      "url": "https://www.alibaba.com/product-detail/Mens-Synthetic-Leather-Lace-Up-Outdoor_1601979572676.html",
       "record_type": "当前实款正式绑定",
       "source_relation": "REAL_SOURCE_FORMAL_FIELDS_PASS",
       "evidence": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/822准备/当前来源与色码核对.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/822准备/prepared.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/822准备/manifest.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/822准备/图片银行公开映射.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/822准备/create_once.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/822准备/create_receipt.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/822准备/verification.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/822准备/score.json"
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/868准备/当前来源与色码核对.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/868准备/prepared.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/868准备/manifest.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/868准备/图片银行公开映射.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/868准备/create_once.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/868准备/create_receipt.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/868准备/verification.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/868准备/score.json"
       ],
       "current_platform_fields": {
-        "at": "2026-10-14T17:10:27.656418+00:00",
-        "title": "Mens Synthetic Leather Casual Walking Shoes with Cord Lacing and EVA Sole for Wholesale Footwear Buyers",
+        "at": "2026-10-14T16:46:21.945297+00:00",
+        "title": "Mens Synthetic Leather Lace Up Outdoor Casual Shoes with TPR Outsole and Pull Loops for Wholesale Buyers",
         "keywords": [
           ""
         ],
         "main_images": [
-          "https://sc04.alicdn.com/kf/H22c39b5711f140bc89bfd813563857b8R.png",
-          "https://sc04.alicdn.com/kf/He3aba1b8dc5340109937139ca3afbe60B.png",
-          "https://sc04.alicdn.com/kf/H467c59aef65d49dfb959b605d72ad0e8d.png",
-          "https://sc04.alicdn.com/kf/H266d9912541a42159013cacf788516a1k.png",
-          "https://sc04.alicdn.com/kf/Hb12168241aa748dc884531d2e4713c3et.png",
+          "https://sc04.alicdn.com/kf/H2db18e3afbdf4993830205319f3f4825W.png",
+          "https://sc04.alicdn.com/kf/H0d5b865912c447f5a4d9e9d14ed35b7ad.png",
+          "https://sc04.alicdn.com/kf/H462740c2c3134e9cbb439f4cae711853X.png",
+          "https://sc04.alicdn.com/kf/H7e8ff68111744ca48f1cda3a8e75b939x.png",
+          "https://sc04.alicdn.com/kf/Hbff1f6876a414ed88e8c813861036b430.png",
           "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
         ],
         "category_id": 201334413,
         "status": "approved",
         "display": "Y",
-        "url": "https://www.alibaba.com/product-detail/Mens-Synthetic-Leather-Casual-Walking-Shoes_1601979745492.html",
+        "url": "https://www.alibaba.com/product-detail/Mens-Synthetic-Leather-Lace-Up-Outdoor_1601979572676.html",
         "scope": "ExactID formal product read; current audit/score accepted only if the separate verification state passes."
       },
       "catalog_fields": {
-        "at": "2026-10-14T17:10:27.656418+00:00",
-        "title": "Mens Synthetic Leather Casual Walking Shoes with Cord Lacing and EVA Sole for Wholesale Footwear Buyers",
+        "at": "2026-10-14T16:46:21.945297+00:00",
+        "title": "Mens Synthetic Leather Lace Up Outdoor Casual Shoes with TPR Outsole and Pull Loops for Wholesale Buyers",
         "keywords": [
           ""
         ],
         "main_images": [
-          "https://sc04.alicdn.com/kf/H22c39b5711f140bc89bfd813563857b8R.png",
-          "https://sc04.alicdn.com/kf/He3aba1b8dc5340109937139ca3afbe60B.png",
-          "https://sc04.alicdn.com/kf/H467c59aef65d49dfb959b605d72ad0e8d.png",
-          "https://sc04.alicdn.com/kf/H266d9912541a42159013cacf788516a1k.png",
-          "https://sc04.alicdn.com/kf/Hb12168241aa748dc884531d2e4713c3et.png",
+          "https://sc04.alicdn.com/kf/H2db18e3afbdf4993830205319f3f4825W.png",
+          "https://sc04.alicdn.com/kf/H0d5b865912c447f5a4d9e9d14ed35b7ad.png",
+          "https://sc04.alicdn.com/kf/H462740c2c3134e9cbb439f4cae711853X.png",
+          "https://sc04.alicdn.com/kf/H7e8ff68111744ca48f1cda3a8e75b939x.png",
+          "https://sc04.alicdn.com/kf/Hbff1f6876a414ed88e8c813861036b430.png",
           "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
         ],
         "category_id": 201334413,
         "status": "approved",
         "display": "Y",
-        "url": "https://www.alibaba.com/product-detail/Mens-Synthetic-Leather-Casual-Walking-Shoes_1601979745492.html",
+        "url": "https://www.alibaba.com/product-detail/Mens-Synthetic-Leather-Lace-Up-Outdoor_1601979572676.html",
         "scope": "ExactID formal product read; current audit/score accepted only if the separate verification state passes."
       },
       "formal_fields": {
-        "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601979745492/formal_get.json",
-        "at": "2026-10-14T17:10:27.656418+00:00",
+        "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601979572676/formal_get.json",
+        "at": "2026-10-14T16:46:21.945297+00:00",
         "scope": "当前API商品对象；审核、字段和实际评分按独立verification状态，不把待审当完成"
       },
       "local_sync": {
         "state": "FORMAL_FIELDS_SCORE_PASS",
-        "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601979745492/formal_get.json",
-        "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601979745492/formal_render.json",
-        "source_fact_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/822准备/当前来源与色码核对.json",
-        "at": "2026-10-14T17:10:27.656418+00:00"
+        "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601979572676/formal_get.json",
+        "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601979572676/formal_render.json",
+        "source_fact_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/868准备/当前来源与色码核对.json",
+        "at": "2026-10-14T16:46:21.945297+00:00"
       },
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-14T17:10:27.656418+00:00",
+        "at": "2026-10-14T16:46:21.945297+00:00",
         "score": "5.00",
         "scope": "Full exact-ID API read, not browser presentation or physicalstock proof."
       },
       "optimization": {
         "real_source_creation": {
           "state": "FORMAL_FIELDS_SCORE_PASS",
-          "source_id": "src-c536d5e0fae0",
-          "source_artno": "822",
-          "at": "2026-10-14T17:10:27.656418+00:00",
+          "source_id": "src-7f5d4e86e9a3",
+          "source_artno": "868",
+          "at": "2026-10-14T16:46:21.945297+00:00",
           "evidence": [
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/822准备/当前来源与色码核对.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/822准备/prepared.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/822准备/manifest.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/822准备/图片银行公开映射.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/822准备/create_once.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/822准备/create_receipt.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/822准备/verification.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/822准备/score.json"
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/868准备/当前来源与色码核对.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/868准备/prepared.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/868准备/manifest.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/868准备/图片银行公开映射.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/868准备/create_once.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/868准备/create_receipt.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/868准备/verification.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/868准备/score.json"
           ],
           "inventory_write": "OMITTED",
           "next_action": "Only formal readback and exact field/score diagnosis; never repeat create or upload successful assets."
@@ -89648,9 +90573,9 @@
       },
       "source_routes_by_color": {
         "Black": {
-          "source": "https://luqi.sooxie.com/detail/2280202",
-          "source_id": "src-c536d5e0fae0",
-          "source_artno": "822",
+          "source": "https://luqi.sooxie.com/detail/2280715",
+          "source_id": "src-7f5d4e86e9a3",
+          "source_artno": "868",
           "supplier_color": "黑色",
           "EU": [
             39,
@@ -89665,10 +90590,10 @@
             48
           ]
         },
-        "Khaki": {
-          "source": "https://luqi.sooxie.com/detail/2280202",
-          "source_id": "src-c536d5e0fae0",
-          "source_artno": "822",
+        "Brown": {
+          "source": "https://luqi.sooxie.com/detail/2280715",
+          "source_id": "src-7f5d4e86e9a3",
+          "source_artno": "868",
           "supplier_color": "卡其",
           "EU": [
             39,
@@ -89684,7 +90609,7 @@
           ]
         }
       },
-      "bound_source_id": "src-c536d5e0fae0"
+      "bound_source_id": "src-7f5d4e86e9a3"
     }
   ],
   "workstreams": [

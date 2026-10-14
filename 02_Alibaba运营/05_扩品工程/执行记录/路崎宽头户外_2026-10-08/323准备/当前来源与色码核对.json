@@ -70,7 +70,7 @@
     "TPR outsole design: Black edge lug blocks sit beneath the sculpted grey sidewall; the supplier identifies the outsole as TPR.",
     "Wholesale colour-size options: Black with red accents and Grey with blue accents cover EU 39–47 for winter assortments."
   ],
-  "state": "CREATED_REVIEWING",
+  "state": "CREATED_FORMAL_FIELDS_SCORE_PASS",
   "pricing_draft": {
     "source_cny": "68.00",
     "fx": "6.6837",
@@ -131,12 +131,12 @@
   "title_bytes": 117,
   "publication": {
     "product_id": "1601980289624",
-    "audit": "new",
-    "display": "N",
-    "actual_score": null,
+    "audit": "approved",
+    "display": "Y",
+    "actual_score": "5.00",
     "formal_verification": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/323准备/verification.json",
-    "local_sync_at": "2026-10-14T17:29:55.734056+00:00",
+    "local_sync_at": "2026-10-14T18:01:51.592922+00:00",
     "no_replayed_create": true
   },
-  "next_action": "仅回读和诊断原ID；不重复创建或重传成功素材。"
+  "next_action": "该款正式字段、评分与来源已通过；继续其他款，不重复创建。"
 }
