@@ -1,9 +1,8 @@
 {
   "schema_version": 1,
   "updated_on": "2026-10-14",
-  "duration": 24,
-  "world_rule": "六句女生现场声、两句柯基内心；狗一次自然轻叫、无中文口型",
-  "timing_test_only": false,
+  "duration": 28,
+  "world_rule": "六句女生现场声，两句狗内心；一次轻叫，无狗的现场中文",
   "timing_status": "planned_not_measured",
   "final_voice_created": false,
   "lines": [
@@ -12,79 +11,79 @@
       "shot_id": "S01",
       "speaker": "女生",
       "text": "唉，走不动了，脚磨得好疼。",
-      "start": 0.05,
-      "slot_end": 3.7,
-      "acting": "一口气泄下来，边活动脚边抱怨疼；不朗诵，狗在她说话时回头"
+      "start": 1.5,
+      "slot_end": 4.85,
+      "acting": "短走后坐下泄一口气，边轻动旧鞋脚边抱怨，不冲狗发火"
     },
     {
       "id": "L02",
       "shot_id": "S02",
       "speaker": "女生",
       "text": "还遛啊？我脚还疼呢。",
-      "start": 4.1,
-      "slot_end": 6.3,
-      "acting": "看着叼绳的狗，有点无奈又亲昵；“还遛啊”直接回应眼前邀约"
+      "start": 5.1,
+      "slot_end": 7.4,
+      "acting": "对又叼绳来约出门的狗，亲昵中有点无奈"
     },
     {
       "id": "L03",
       "shot_id": "S03",
       "speaker": "柯基内心",
       "text": "得，给你换双鞋吧。",
-      "start": 6.55,
-      "slot_end": 8.65,
-      "acting": "像认领一件小事，干脆、认真，略有小算盘；无现场中文口型"
+      "start": 8.05,
+      "slot_end": 10.15,
+      "acting": "干脆地认领换鞋这件小事，聪明又关心主人，无现场中文口型"
     },
     {
       "id": "L04",
       "shot_id": "S04",
       "speaker": "女生",
       "text": "你给我买的啊？",
-      "start": 9.35,
-      "slot_end": 11.15,
-      "acting": "鞋刚露出来就转眼看狗，惊讶中带笑，不是盘问"
+      "start": 10.85,
+      "slot_end": 12.6,
+      "acting": "看到新鞋便转眼看狗，意外带笑，不盘问"
     },
     {
       "id": "L05",
       "shot_id": "S05",
       "speaker": "女生",
-      "text": "走，出门！",
-      "start": 12.05,
-      "slot_end": 13.1,
-      "acting": "短、利落，是平时招呼狗出门，不介绍新鞋"
+      "text": "诶，这双穿着舒服。",
+      "start": 14.8,
+      "slot_end": 17.15,
+      "acting": "先踩实和走两步才随口说感受，轻松但不夸张，不念广告"
     },
     {
       "id": "L06",
       "shot_id": "S06",
       "speaker": "女生",
-      "text": "这双不磨脚哎。",
-      "start": 16.15,
-      "slot_end": 18.35,
-      "acting": "边走边发现，尾音轻轻上扬；随口和狗说，不对镜头介绍产品"
+      "text": "走，出门！",
+      "start": 17.55,
+      "slot_end": 18.5,
+      "acting": "出门前短促招呼；后续散步靠行动和放松神态，不再补一遍鞋评价"
     },
     {
       "id": "L07",
       "shot_id": "S07",
       "speaker": "女生",
       "text": "再遛一圈呗？",
-      "start": 19.05,
-      "slot_end": 20.7,
-      "acting": "到路口主动征求狗意见，轻松带点邀请；不是念结尾总结"
+      "start": 23.55,
+      "slot_end": 25.1,
+      "acting": "到路口主动邀请，身心轻松；发现狗想歇就停下来等它"
     },
     {
       "id": "L08",
       "shot_id": "S07",
       "speaker": "柯基内心",
-      "text": "养个主人，真费钱。",
-      "start": 21.1,
-      "slot_end": 23.95,
-      "acting": "精神十足，边继续走边像随口算账；轻轻落在“钱”，不累趴、不拖长笑点"
+      "text": "走不动了……让我歇会儿。",
+      "start": 25.25,
+      "slot_end": 27.95,
+      "acting": "遛过一阵后的轻微累，低头站住小声请求歇一歇，不剧烈喘息或瘫倒，无现场中文口型"
     }
   ],
   "timing_check": {
     "all_lines_fit": null,
-    "duration_seconds": 24,
+    "duration_seconds": 28,
     "speech_seconds": null,
     "final_voice_or_performance_verified": false,
-    "reason": "Dialogue rewritten; prior 30-second mechanical TTS no longer applies."
+    "reason": "New progression and ending approved; unmeasured performance budget."
   }
 }
