@@ -1,9 +1,54 @@
 {
-  "2583-1": "SOURCE_COLOR_PHOTO_MISMATCH: source lists six colors including pink EU36-42 but photos only two closed-upper variants; do not fabricate six SKU images.",
-  "2627": "NEEDS_ADDITIONAL_DISTINCT_CLEAN_ASSETS",
-  "038": "NEEDS_COMPLETE_FOUR_COLOR_CLEAN_ASSETS",
-  "052": "NEEDS_DISTINCT_CLEAN_ASSETS_EXCLUDING_SUPPLIER_MARKS",
-  "020": "WITHDRAWAL_NOTICE_REQUIRES_CURRENT_VALID_ENTRY",
-  "026 / 026-1": "POSSIBLE_SAME_PRODUCT_FAMILY: source photos share identical upper and marketing panels; do not create two links based on suffix. Need distinct clean assets and outsole structure confirmation.",
-  "02503": "SOURCE_MARK_REVIEW_PENDING: original side panel has an unfamiliar stitched word/mark; retain original shoe evidence, do not erase physical mark or assume authorization from category membership."
+  "observed_at": "2026-10-14T12:48:00.852114+00:00",
+  "scope": "Current unresolvedsource/identity/accountbusinesscategoryissues only. Resolvedinitialmissingasset/familyquestions removed; formalhistoryretained inGit/objectreceipts. Earlier26imageconversionimprovement stilltracked byqualityreview, not inferredcompletefromscore.",
+  "active": {
+    "026": {
+      "state": "HOLD_ACCOUNT_RUNNING_BUSINESS_CATEGORY",
+      "issue": "026/026-1 actualsourcefamily already matched; noextraID. Primary026 officialrunningbusinesscategory rejection withnoID remains; followcurrentcategoryissue_evidence.",
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/026准备/商品预检与图组策略.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/026准备/经营类目拒绝诊断.json"
+      ]
+    },
+    "2569": {
+      "state": "HOLD_SOURCE_PHOTO_IDENTITY",
+      "issue": "",
+      "evidence": []
+    },
+    "2509": {
+      "state": "HOLD_ACCOUNT_HIKING_BUSINESS_CATEGORY",
+      "issue": "",
+      "evidence": [
+        "2509准备/经营类目拒绝诊断.json"
+      ]
+    },
+    "02505": {
+      "state": "HOLD_ACCOUNT_HIKING_BUSINESS_CATEGORY",
+      "issue": "",
+      "evidence": [
+        "2509准备/经营类目拒绝诊断.json"
+      ]
+    },
+    "02503": {
+      "state": "HOLD_ACCOUNT_HIKING_BUSINESS_CATEGORY",
+      "issue": "02503: own23 photos/EU39–48/title draft/actual source material review; official hiking root shares scoped business category hold; no own create attempted. Native optimized gallery and full identity review stillpending.",
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/02503准备/当前来源与色码核对.json"
+      ],
+      "identity_note": "Originalphysicalsideword/mark identity andnativegallery review remainuncompleted; do not erasephysicalmark or assumeauthorisation."
+    },
+    "2550": {
+      "state": "HOLD_ACCOUNT_HIKING_BUSINESS_CATEGORY",
+      "issue": "2550: own21 photos/EU39–48/title draft/actual source material review; official hiking root shares scoped business category hold; no own create attempted. Native optimized gallery and full identity review stillpending.",
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2550准备/当前来源与色码核对.json"
+      ]
+    },
+    "020": {
+      "state": "HOLD_WITHDRAWN_SOURCE",
+      "issue": "WITHDRAWAL_NOTICE_REQUIRES_CURRENT_VALID_ENTRY",
+      "evidence": []
+    }
+  },
+  "current_queue": "质量复核_2026-10-09/全分类处理队列.json"
 }

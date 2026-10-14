@@ -1,0 +1,149 @@
+{
+  "style": "931",
+  "source": "https://luqi.sooxie.com/detail/2030481",
+  "observed_at": "2026-10-14T10:49:06.447852+00:00",
+  "source_HTML_sha256": "2fb9ba1e65bd13da4837614004f6a9002481f941b3cdd3141e58f23069973596",
+  "source_price_cny": "68.00",
+  "source_EU_by_color": {
+    "Black": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ],
+    "Black Yellow": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ]
+  },
+  "source_EU_combinations": 20,
+  "whole_source_contacts_actually_viewed": true,
+  "photo_count": 15,
+  "full_original_fact_indices_actually_viewed": [
+    1,
+    2,
+    4,
+    9,
+    10,
+    13,
+    18
+  ],
+  "known_materials": {
+    "upper": "Original09革面 generic surfaceword, insufficientchemical/naturalleather specification; nativeother.",
+    "outsole": "Conflictingsourcewording: dedicatedoriginal10橡塑材质底 vs genericfooteroriginal18HIGHQUALITYEVA SOLE. No confirmedchemicalmaterial; currentnativeother, buyertextonlyactualvisiblepattern.",
+    "midsole": "Not independently specified; nativeother.",
+    "lining": "Source02加绒内里 andvisibleblackplushcollarrim; Plush only,no fibertypeor temperatureclaim."
+  },
+  "wide_claim": "NO_WIDE_CLAIM_FROM_OUTDOOR_ONLY_SOURCE",
+  "source_color_aliases": {
+    "Black": "黑色; allblackupper andsole/whiteanklebar",
+    "Black Yellow": "黑黄; mustardyellowvamp/quarter withblackoverlays andblacksole"
+  },
+  "visible_structure": [
+    "Midtoplaceupwintershoe withblackplushcollartrim",
+    "Wavystitchedquarter/forefootpanel boundaries andsmalldottedforefootpatch",
+    "Roundlowerlaceeyelets/upperpunchedguidezone andfrontandrearloops",
+    "Diagonalstripedheel/sidewalloverlay andsmallwhiteanklebar",
+    "Chunkysculptedblacksole; actualundersideovalcontacts/perimetertriangleblocks"
+  ],
+  "identity_notes": "Actualsourcecontactall15images compared2575angularslottedpanels,2579shield/wavewrapupper,2505plaincollar/tansole,02412lowmesh/dial and9705midtopdial/stripedquarter. 931separatetraditionalcrosslace/wavyquarter/diagonalheeloverlay/chunkysculptedsole, no common source identity. Whiteanklebar appearance only,noreflectivityrating.",
+  "title_draft": "Mens Mid Top Winter Snow Boots Lace Up Plush Lining Chunky Sole Outdoor Casual Footwear Wholesale EU 39-48",
+  "product_highlights_draft": [
+    "Mid-top winter profile: Wavy stitched panels and a sculpted black sole give this lace-up style a layered casual look.",
+    "Plush collar trim: Black pile is visible along the ankle opening, with pull loops at the tongue and heel.",
+    "Cross-lace closure: Round lower eyelets guide the laces across the tongue, below the shaped upper lace panel.",
+    "Patterned outsole: The actual underside combines oval contact sections with triangular perimeter blocks.",
+    "Wholesale colour-size choices: Black and Black Yellow are offered in EU 39–48 for winter assortments."
+  ],
+  "state": "CREATED_FORMAL_FIELDS_SCORE_PASS",
+  "pricing_draft": {
+    "source_cny": "68.00",
+    "fx": "6.6837",
+    "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+    "fx_observed": "2026-10-13 10:57:20",
+    "tiers": [
+      [
+        2,
+        "15.26"
+      ],
+      [
+        50,
+        "14.24"
+      ],
+      [
+        100,
+        "13.23"
+      ]
+    ],
+    "freight_service_tax": "Order-specific; markupbeforefreight/service/tax, notnetprofitguarantee."
+  },
+  "publish_profile": {
+    "category_id": 202248402,
+    "schema_name": "当前雪地靴Schema",
+    "buyer_colours": [
+      {
+        "buyer": "Black",
+        "supplier_key": "Black",
+        "supplier_label": "黑色",
+        "image_role": "SKU_Black"
+      },
+      {
+        "buyer": "Black Yellow",
+        "supplier_key": "Black Yellow",
+        "supplier_label": "黑黄",
+        "image_role": "M1"
+      }
+    ],
+    "category_attributes": {
+      "Upper Material": [
+        "other"
+      ],
+      "Midsole Material": [
+        "other"
+      ],
+      "Outsole Material": [
+        "other"
+      ],
+      "Lining Material": [
+        "Plush"
+      ]
+    },
+    "local_intent": [
+      "绒里中帮系带厚底冬季鞋"
+    ]
+  },
+  "title_bytes": 106,
+  "material_conflicts": {
+    "outsole": {
+      "sources": [
+        "01_产品来源原图/10.jpg",
+        "01_产品来源原图/18.jpg"
+      ],
+      "resolution": "No chemical materialclaim in title/highlights/images; formalother untilconsistentactualsource."
+    }
+  },
+  "publication": {
+    "product_id": "1601980063799",
+    "audit": "approved",
+    "display": "Y",
+    "actual_score": "5.00",
+    "formal_verification": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/931准备/verification.json",
+    "local_sync_at": "2026-10-14T13:01:04.882413+00:00",
+    "no_replayed_create": true
+  },
+  "next_action": "该款正式字段、评分与来源已通过；继续其他款，不重复创建。"
+}

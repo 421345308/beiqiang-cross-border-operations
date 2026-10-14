@@ -24,9 +24,9 @@ FIELDS=['catId','icbuCatProp','saleProp','sku','productTitle','scImages','pkgMea
 
 def configure(style):
     global STYLE,FOLDER,MODEL,CATEGORY,CATALOG,COLORS,PROFILE,EU_BY_COLOR,SCHEMA_NAME
-    assert style in ('995','2576','1712','2418','868','822','2579','2575','2505'), 'Only individually reviewed current source profiles are enabled'
+    assert style in ('995','2576','1712','2418','868','822','2579','2575','2505','931','02412'), 'Only individually reviewed current source profiles are enabled'
     STYLE=style;FOLDER=BASE/(style+'准备');MODEL='BQ-LQ'+style;CATALOG=ROOT/('99_临时区/路崎'+style+'/当前目录/catalog.json')
-    facts=load(FOLDER/'当前来源与色码核对.json');PROFILE=facts['publish_profile'];CATEGORY=PROFILE['category_id'];assert CATEGORY in (201334413,202248402)
+    facts=load(FOLDER/'当前来源与色码核对.json');assert facts['style']==style;PROFILE=facts['publish_profile'];CATEGORY=PROFILE['category_id'];assert CATEGORY in (201334413,202248402)
     SCHEMA_NAME=PROFILE.get('schema_name','当前步行鞋Schema');assert SCHEMA_NAME in ('当前步行鞋Schema','当前雪地靴Schema')
     COLORS={v['buyer']:(v['supplier_key'],v['image_role']) for v in PROFILE['buyer_colours']};assert len(COLORS)==len(PROFILE['buyer_colours'])
     EU_BY_COLOR={c:facts['source_EU_by_color'][alias] for c,(alias,_) in COLORS.items()}
@@ -242,6 +242,11 @@ def sync():
         cache['products'][pid]=roles;cache['urls']=len(cache['assets']);cache['saved_urls']=sum(x.get('state')=='SAVED' for x in cache['assets'].values());cache['unique_files']=len({x['sha256'] for x in cache['assets'].values() if x.get('state')=='SAVED'});cache['errors']=sum(x.get('state')!='SAVED' for x in cache['assets'].values());save(cache_path,cache)
     queue_file=BASE/'质量复核_2026-10-09/全分类处理队列.json';queue=load(queue_file)
     row=next(r for r in queue['rows'] if r['style']==STYLE);row.update(publication_state='CREATED_APPROVED_Y' if accepted else 'SUBMITTED_'+report['state'],product_id=pid,EU_combinations=sum(map(len,EU_BY_COLOR.values())),actual_score=report['actual_score'],score_status=report['state'],current_platform_evidence=rel(FOLDER/'verification.json'),preparation_evidence=rel(FOLDER/'prepared.json'))
+    selected=load(FOLDER/'05_AI候选/整组验收.json');assert selected['state']=='VISUAL_PASS_PENDING_PUBLISH_PREFLIGHT'
+    legacy_995=STYLE=='995' and selected.get('all_eleven_full_images_and_contact_actually_viewed') is True and len(selected['items'])==11
+    assert all(sha(ROOT/x['path'])==x['sha256'] and (x.get('decision')=='SELECTED_VISUAL_PASS' or legacy_995 and 'decision' not in x) for x in selected['items'])
+    row.update(source_collection='CURRENT_SOURCE_COLLECTED',image_cache='CURRENT_SOURCE_AND_FINAL_ASSETS',title_quality='LOCAL_REVIEW_PASS_FORMAL_MATCH' if accepted else 'LOCAL_REVIEW_PASS_PENDING_FORMAL',image_quality='BUYER_ROLE_REVIEW_PASS',image_apply_scope='PASS_COMPLETE_IMAGE_SCHEMA' if accepted else 'LOCAL_SELECTED_PENDING_FORMAL',current_source_evidence=rel(FOLDER/'当前来源与色码核对.json'),current_visual_evidence=rel(FOLDER/'05_AI候选/整组验收.json'),browser_policy='CURRENT_BATCH_FULL_API_NO_PER_PRODUCT_BROWSER')
+    row['local_issue']='Source material wording conflict handled by omitting composition claims; see current source facts.' if facts.get('material_conflicts') else ''
     from collections import Counter
     queue['state_counts']=dict(Counter(r['publication_state'] for r in queue['rows']));queue['observed_at']=now()
     for work in registry['workstreams']:
@@ -257,7 +262,7 @@ def sync():
 
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('mode',choices=('schema','bank','prepare','create','verify','sync'));ap.add_argument('--style',required=True,choices=('995','2576','1712','2418','868','822','2579','2575','2505'));args=ap.parse_args();configure(args.style)
+    ap=argparse.ArgumentParser();ap.add_argument('mode',choices=('schema','bank','prepare','create','verify','sync'));ap.add_argument('--style',required=True,choices=('995','2576','1712','2418','868','822','2579','2575','2505','931','02412'));args=ap.parse_args();configure(args.style)
     if args.mode=='prepare':prepare();return
     if args.mode=='sync':sync();return
     spec=importlib.util.spec_from_file_location('alibaba_client',ROOT/'.agents/skills/alibaba-openapi-operator/scripts/alibaba_openapi.py');client=importlib.util.module_from_spec(spec);spec.loader.exec_module(client);cfg=client.load_config(client.DEFAULT_CONFIG)
