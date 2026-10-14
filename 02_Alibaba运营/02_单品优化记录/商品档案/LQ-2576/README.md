@@ -2,11 +2,13 @@
 
 此页由唯一台账生成，是本款唯一资料入口；修改事实到下方唯一字段文件或台账，平台正式值到按ID保存的回读原件。原始包只读，候选/历史材料不当当前线上素材。
 
-来源状态：`CANDIDATE`。下一步：候选已采集；先做款式去重、事实/IP/图组质量，再按授权发布。
+来源状态：`CANDIDATE`。下一步：仅回读原ID审核、全字段与实际评分；不重复上传或创建2576，其他路崎款独立推进。
 
 ## 当前资料与实物证据
 
-- 本地事实/准备字段：尚未指定；不从线上页面证明自产或实物能力。
+- 本地事实/准备字段：[formal_get.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601979492425/formal_get.json)
+- 当前素材目录：[05_AI候选](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/2576%E5%87%86%E5%A4%87/05_AI%E5%80%99%E9%80%89)
+- 原始包：[01_产品来源原图](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/2576%E5%87%86%E5%A4%87/01_%E4%BA%A7%E5%93%81%E6%9D%A5%E6%BA%90%E5%8E%9F%E5%9B%BE)
 
 ## 采购来源（内部使用）
 
@@ -14,14 +16,41 @@
   - 保存的标价：CNY 59.00 / 双；原观察日期：2026-10-08T12:05:30.798838+00:00。采购数量、版本、包装、运税与当天可供条件逐单确认。
   - 供方店铺入口：[https://luqi.sooxie.com](https://luqi.sooxie.com)
   - 来源原件：[分类总清单.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/%E5%88%86%E7%B1%BB%E6%80%BB%E6%B8%85%E5%8D%95.json)
+  - 来源原件：[当前来源与色码核对.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/2576%E5%87%86%E5%A4%87/%E5%BD%93%E5%89%8D%E6%9D%A5%E6%BA%90%E4%B8%8E%E8%89%B2%E7%A0%81%E6%A0%B8%E5%AF%B9.json)
+
+### 按颜色采购入口
+
+同一基础鞋款的配色可能来自不同来源页。采购按下表核货号、颜色及EU范围；主来源链接不能代替每色入口。
+
+| 本店颜色 | 供方颜色 / 货号 | EU尺码 | 真实采购入口 |
+| --- | --- | --- | --- |
+| Black | 黑色 / 2576 | 39, 40, 41, 42, 43, 44, 45, 46 | [2576](https://luqi.sooxie.com/detail/2372147) |
+| Beige | 米色 / 2576 | 39, 40, 41, 42, 43, 44, 45, 46 | [2576](https://luqi.sooxie.com/detail/2372147) |
 
 ## 国际站链接与本地正式字段
 
-本地已有商品资料，未关联国际站商品ID；保留未发布身份，不冒充线上商品。
+### BQ-LQ2576 · 1601979492425
+
+- 平台链接：[1601979492425](https://www.alibaba.com/product-detail/Wide-Toe-Box-Knit-Slip-On_1601979492425.html)
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601979492425/formal_get.json)；UTC 2026-10-14T04:17:02.911943+00:00。
+- 当前正式标题：Wide Toe Box Knit Slip On Walking Shoes with Low Cut Collar for Wholesale Footwear Buyers
+- 审核/展示：new / N；平台类目ID：201334413。
+- 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
+- SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。
+- 本地平台图片缓存：待补；正式字段中的官方原URL已保留。
+- 本地同步状态：`REVIEWING`。
+- 本轮优化：``；
 
 ## 其他原始/正式证据
 
 - [分类总清单.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/%E5%88%86%E7%B1%BB%E6%80%BB%E6%B8%85%E5%8D%95.json)
 - [全分类处理队列.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8_2026-10-09/%E5%85%A8%E5%88%86%E7%B1%BB%E5%A4%84%E7%90%86%E9%98%9F%E5%88%97.json)
+- [当前来源与色码核对.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/2576%E5%87%86%E5%A4%87/%E5%BD%93%E5%89%8D%E6%9D%A5%E6%BA%90%E4%B8%8E%E8%89%B2%E7%A0%81%E6%A0%B8%E5%AF%B9.json)
+- [prepared.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/2576%E5%87%86%E5%A4%87/prepared.json)
+- [manifest.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/2576%E5%87%86%E5%A4%87/manifest.json)
+- [图片银行公开映射.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/2576%E5%87%86%E5%A4%87/%E5%9B%BE%E7%89%87%E9%93%B6%E8%A1%8C%E5%85%AC%E5%BC%80%E6%98%A0%E5%B0%84.json)
+- [create_once.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/2576%E5%87%86%E5%A4%87/create_once.json)
+- [create_receipt.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/2576%E5%87%86%E5%A4%87/create_receipt.json)
+- [verification.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/2576%E5%87%86%E5%A4%87/verification.json)
 
 原件、正式回执与当前资料通过本页关联，不再复制成第二套商品库。

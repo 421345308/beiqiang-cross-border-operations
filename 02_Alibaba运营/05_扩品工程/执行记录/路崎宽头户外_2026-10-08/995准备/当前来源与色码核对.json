@@ -114,7 +114,7 @@
     "M5": "Original3 Earth Yellow worn outdoors, preserve actual shoe/scene",
     "M6": "Approved company overview",
     "D1": "Original7 Black Khaki worn in urban setting",
-    "D2": "Black actual worn photo09 with original shoe/leg preserved, remove wet splashes/background to avoid an unverified waterproof demonstration; new distinct side-in-wear view.",
+    "D2": "Actual original07 BeigeBrown dry-city low-cut side profile. Original09 wet scene excluded; do not reconstruct water-obscured sole or imply waterproof.",
     "D3": "Distinct original2 side construction detail crop if it provides information absent from M2/M3",
     "D4": "Actual original01forefoot crop: shaped vamp and textured toe overlays. Separate proof role fromM2collar/M3sole/M4colour-EU choices; do not repeat size chart or blankorder-table filler."
   },
@@ -196,5 +196,49 @@
     10,
     11
   ],
-  "selected_structure_asset_review": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/995准备/05_AI候选/AI结构图审核.json"
+  "selected_structure_asset_review": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/995准备/05_AI候选/AI结构图审核.json",
+  "asset_stage": "ELEVEN_PRODUCT_FILES_LOCAL_VISUAL_PASS_PENDING_COMPLETE_SET_REVIEW_DEDUP_AND_SCHEMA",
+  "publish_profile": {
+    "category_id": 201334413,
+    "buyer_colours": [
+      {
+        "buyer": "Black",
+        "supplier_key": "Black",
+        "supplier_label": "黑色",
+        "image_role": "SKU_Black"
+      },
+      {
+        "buyer": "Beige Brown",
+        "supplier_key": "Black Khaki",
+        "supplier_label": "黑卡其",
+        "image_role": "SKU_BlackKhaki"
+      },
+      {
+        "buyer": "Tan",
+        "supplier_key": "Earth Yellow",
+        "supplier_label": "土黄",
+        "image_role": "M1"
+      }
+    ],
+    "category_attributes": {
+      "Upper Material": [
+        "Microfiber"
+      ],
+      "Midsole Material": [
+        "other"
+      ],
+      "Outsole Material": [
+        "other"
+      ],
+      "Lining Material": [
+        "other"
+      ],
+      "Closure Type": [
+        "Lace-up"
+      ]
+    },
+    "local_intent": [
+      "系带户外休闲步行鞋"
+    ]
+  }
 }

@@ -89,12 +89,13 @@ def main():
     luqi_ids={str(row['id']) for row in luqi_repairs}
     assert len(luqi_ids)==8
     new_luqi_ids=set()
-    new_luqi_ledger=ROOT/LUQI/'995准备/create_once.json'
-    if new_luqi_ledger.exists():
-        created=load(new_luqi_ledger.relative_to(ROOT).as_posix())
-        if created.get('product_id'):
-            assert created['model']=='BQ-LQ995' and str(created['product_id']).isdigit()
-            new_luqi_ids.add(str(created['product_id']))
+    for style in ('995','2576'):
+        new_luqi_ledger=ROOT/LUQI/(style+'准备/create_once.json')
+        if new_luqi_ledger.exists():
+            created=load(new_luqi_ledger.relative_to(ROOT).as_posix())
+            if created.get('product_id'):
+                assert created['model']=='BQ-LQ'+style and str(created['product_id']).isdigit()
+                new_luqi_ids.add(str(created['product_id']))
     luqi_ids |= new_luqi_ids
     luqi_families={ll['product_id'] for ll in live['listings'] if ll['id'] in luqi_ids}
     families = set(scope['targets']) | {p['family'] for p in profiles} | {p['family']for p in history}
@@ -108,9 +109,11 @@ def main():
     assert len(queue['rows'])==107
     paths += [queue_path,LUQI+'/README.md',LUQI+'/本批正式商品汇总.json','08_工具链/01_业务脚本/国际站扩品/collect_luqi_pending_sources.py','08_工具链/06_工作区维护/product_dossiers.py']
     paths += ['08_工具链/01_业务脚本/国际站扩品/'+name for name in ('repair_luqi_material_roles.py','expand_luqi_2583_family.py')]
-    paths += ['08_工具链/01_业务脚本/国际站扩品/publish_reviewed_luqi_995.py']
-    prefix=LUQI+'/995准备'
-    paths += [p.relative_to(ROOT).as_posix() for p in (ROOT/prefix).glob('*.json') if p.name in ('prepared.json','manifest.json','图片银行公开映射.json','create_once.json','create_receipt.json','verification.json','score.json','双改核验.json','来源款式近似候选.json','发布前差异化审查.json')]
+    paths += ['08_工具链/01_业务脚本/国际站扩品/publish_reviewed_luqi.py']
+    for style in ('995','2576'):
+        prefix=LUQI+'/'+style+'准备'
+        paths += [p.relative_to(ROOT).as_posix() for p in (ROOT/prefix).glob('*.json') if p.name in ('当前来源与色码核对.json','prepared.json','manifest.json','图片银行公开映射.json','create_once.json','create_receipt.json','verification.json','score.json','双改核验.json','来源款式近似候选.json','发布前差异化审查.json')]
+        paths += [p.relative_to(ROOT).as_posix() for p in (ROOT/prefix/'05_AI候选').glob('*.json')]
     paths += [luqi_audit+'/'+name for name in ('修正清单.json','当前正式材料.json','prepare_汇总.json','submit_汇总.json','verify_汇总.json','双改核验.json') if (ROOT/luqi_audit/name).exists()]
     for row in luqi_repairs:
         paths.append(row['source_facts'])
@@ -222,7 +225,7 @@ def main():
             # workspace changes. Preserve unrelated family fields from base.
             for key in ('source_state','adopted_source_id','candidate_source_ids','local_assets','material_role_review','family_color_expansion','source_routes_by_color','related_source_ids','next_action','notes','aliases','evidence','raw_packages','dossier_path'):
                 if key in lp[product['id']]:product[key]=copy.deepcopy(lp[product['id']][key])
-            if product['id']=='LQ-995':product['classification']=copy.deepcopy(lp[product['id']]['classification'])
+            if product['id'] in {'LQ-995','LQ-2576'}:product['classification']=copy.deepcopy(lp[product['id']]['classification'])
     family_phase=ll['1601976101204'].get('optimization',{}).get('family_color_expansion',{})
     if family_phase.get('state') in ('FORMAL_FIELDS_SCORE_PASS','FORMAL_FIELDS_PASS_PENDING_SCORE') and 'LQ-2583' not in lp:
         assert not any(l['product_id']=='LQ-2583' for l in merged['listings'])
@@ -258,12 +261,13 @@ def main():
             payload=load(current.relative_to(ROOT).as_posix());assert payload.get('sanitized_fields');safe(payload)
             frozen[current.relative_to(ROOT).as_posix()]=(json.dumps(payload,ensure_ascii=False,indent=2)+'\n').encode('utf8')
     for pid in new_luqi_ids:
-        assert pid not in {l['id'] for l in baseline['listings']} or next(l for l in baseline['listings'] if l['id']==pid)['model']=='BQ-LQ995'
+        assert pid not in {l['id'] for l in baseline['listings']} or next(l for l in baseline['listings'] if l['id']==pid)['model']==ll[pid]['model']
         merged['listings']=[l for l in merged['listings'] if l['id']!=pid]+[copy.deepcopy(ll[pid])]
         source_id=lp[ll[pid]['product_id']].get('adopted_source_id') or next(iter(lp[ll[pid]['product_id']].get('candidate_source_ids',[])),None)
         assert source_id
         source=next(s for s in live['sources'] if s['id']==source_id)
-        assert source['url']=='https://luqi.sooxie.com/detail/2295867'
+        expected_sources={'BQ-LQ995':'https://luqi.sooxie.com/detail/2295867','BQ-LQ2576':'https://luqi.sooxie.com/detail/2372147'}
+        assert source['url']==expected_sources[ll[pid]['model']]
         merged['sources']=[s for s in merged['sources'] if s['id']!=source_id]+[copy.deepcopy(source)]
     task = next(x for x in live['workstreams'] if x['name']=='HR缺货源实款替换')
     merged['workstreams'] = [x for x in merged['workstreams'] if x['name']!=task['name']] + [copy.deepcopy(task)]
@@ -284,6 +288,7 @@ def main():
     current_views=workspace.build(merged)
     retired_views={path.as_posix() for path in workspace.build(baseline) if path not in current_views}
     assert all(path.endswith('/LQ-2583/README.md') for path in retired_views), 'Only the exact merged candidate generated entry may be removed'
+    retired_views.add('08_工具链/01_业务脚本/国际站扩品/publish_reviewed_luqi_995.py')
     for path, raw in current_views.items():
         relative = path.relative_to(ROOT) if path.is_absolute() else path
         frozen[relative.as_posix()] = raw
@@ -315,7 +320,7 @@ def main():
         if args.check_only:
             print('EXACT_TASK_PUBLIC_SCOPE_PASS',len(changed),'HR IDs',len(hr_ids),'PUBLIC IDs',len(public_ids),'BASELINE_ONLY_ALIAS_ISSUES',len(baseline_errors))
             return
-        message = b'fix: align Luqi sole attributes and record original-ID colour expansion\n'
+        message = b'feat: publish reviewed Luqi real-source offers and synchronize supply records\n'
         commit = git('commit-tree',tree,'-p',base,input=message).decode().strip()
         ref = 'refs/heads/'+args.branch
         exists = subprocess.run(['git','show-ref','--verify','--quiet',ref],cwd=ROOT).returncode == 0

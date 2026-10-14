@@ -33,7 +33,7 @@
 ### BQ-LQ995 · 1601979365545
 
 - 平台链接：[1601979365545](https://www.alibaba.com/product-detail/Mens-Microfiber-Lace-Up-Outdoor-Casual_1601979365545.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601979365545/formal_get.json)；UTC 2026-10-14T03:26:42.031421+00:00。
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601979365545/formal_get.json)；UTC 2026-10-14T03:46:47.170601+00:00。
 - 当前正式标题：Mens Microfiber Lace Up Outdoor Casual Shoes with Padded Collar and Patterned Sole for Wholesale Buyers
 - 审核/展示：approved / Y；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
@@ -45,7 +45,7 @@
   - M4：[本地原图](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/995%E5%87%86%E5%A4%87/05_AI%E5%80%99%E9%80%89/M4.png) · 1254×1254
   - M5：[本地原图](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/995%E5%87%86%E5%A4%87/05_AI%E5%80%99%E9%80%89/M5.png) · 1254×1254
   - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/00_%E6%9C%80%E7%BB%88%E4%B8%8A%E4%BC%A0/00_%E5%8E%82%E5%AE%B6%E8%B5%84%E6%96%99/02_%E5%BD%93%E5%89%8D%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/C1_factory.png) · 1721×914
-- 本地同步状态：`FORMAL_FIELDS_PASS_PENDING_SCORE`。
+- 本地同步状态：`FORMAL_FIELDS_SCORE_PASS`。
 - 本轮优化：``；
 
 ## 其他原始/正式证据
@@ -59,5 +59,6 @@
 - [create_once.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/995%E5%87%86%E5%A4%87/create_once.json)
 - [create_receipt.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/995%E5%87%86%E5%A4%87/create_receipt.json)
 - [verification.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/995%E5%87%86%E5%A4%87/verification.json)
+- [score.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/995%E5%87%86%E5%A4%87/score.json)
 
 原件、正式回执与当前资料通过本页关联，不再复制成第二套商品库。
