@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "updated_on": "2026-10-13",
+  "duration": 30,
+  "world_rule": "女生现场自然说话；柯基仅自然犬叫/动作，两个内心独白不给嘴部中文口型",
+  "timing_test_only": true,
+  "timing_voice_scope": "WindowsHuihui、Rate1、单声线机械测时；不是最终表演/正式声线或声音审片通过",
+  "final_voice_created": false,
+  "lines": [
+    {
+      "id": "L01",
+      "shot_id": "S01",
+      "speaker": "女生",
+      "text": "哎，这鞋磨脚，回家吧。",
+      "start": 0.2,
+      "slot_end": 3.6,
+      "acting": "一声轻叹，随意商量回家，烦的是鞋",
+      "voice": "Microsoft Huihui Desktop",
+      "measured_tts_seconds": 3.187,
+      "measured_tts_end": 3.387,
+      "timing_slot_passed": true
+    },
+    {
+      "id": "L02",
+      "shot_id": "S02",
+      "speaker": "女生",
+      "text": "脚还疼，晚点啊。",
+      "start": 4.35,
+      "slot_end": 6.95,
+      "acting": "看旧鞋，再柔声安抚期待的狗",
+      "voice": "Microsoft Huihui Desktop",
+      "measured_tts_seconds": 2.482,
+      "measured_tts_end": 6.832,
+      "timing_slot_passed": true
+    },
+    {
+      "id": "L03",
+      "shot_id": "S03",
+      "speaker": "柯基内心",
+      "text": "这鞋，耽误我散步了。",
+      "start": 7.25,
+      "slot_end": 10.35,
+      "acting": "略带小算盘的认真吐槽，嘴不说人话",
+      "voice": "Microsoft Huihui Desktop",
+      "measured_tts_seconds": 2.697,
+      "measured_tts_end": 9.947,
+      "timing_slot_passed": true
+    },
+    {
+      "id": "L04",
+      "shot_id": "S04",
+      "speaker": "女生",
+      "text": "不会是你买的吧？",
+      "start": 11.55,
+      "slot_end": 14.05,
+      "acting": "看到鞋后看狗，惊讶又好笑，不是质问",
+      "voice": "Microsoft Huihui Desktop",
+      "measured_tts_seconds": 2.027,
+      "measured_tts_end": 13.577,
+      "timing_slot_passed": true
+    },
+    {
+      "id": "L05",
+      "shot_id": "S05",
+      "speaker": "女生",
+      "text": "走，试试新鞋！",
+      "start": 15.1,
+      "slot_end": 17.85,
+      "acting": "主动拿绳，像平常邀狗出门",
+      "voice": "Microsoft Huihui Desktop",
+      "measured_tts_seconds": 2.383,
+      "measured_tts_end": 17.483,
+      "timing_slot_passed": true
+    },
+    {
+      "id": "L06",
+      "shot_id": "S06",
+      "speaker": "女生",
+      "text": "诶，这双还挺好走的。",
+      "start": 21.25,
+      "slot_end": 24.45,
+      "acting": "走了几步后随口发现，语气不夸张",
+      "voice": "Microsoft Huihui Desktop",
+      "measured_tts_seconds": 2.814,
+      "measured_tts_end": 24.064,
+      "timing_slot_passed": true
+    },
+    {
+      "id": "L07",
+      "shot_id": "S07",
+      "speaker": "女生",
+      "text": "再走一圈？",
+      "start": 25.05,
+      "slot_end": 26.8,
+      "acting": "轻松主动，期待地看狗",
+      "voice": "Microsoft Huihui Desktop",
+      "measured_tts_seconds": 1.619,
+      "measured_tts_end": 26.669,
+      "timing_slot_passed": true
+    },
+    {
+      "id": "L08",
+      "shot_id": "S07",
+      "speaker": "柯基内心",
+      "text": "养个主人，真费钱。",
+      "start": 27.0,
+      "slot_end": 29.9,
+      "acting": "先开心回应，再略带得意地吐槽，尾句是唯一包袱",
+      "voice": "Microsoft Huihui Desktop",
+      "measured_tts_seconds": 2.653,
+      "measured_tts_end": 29.653,
+      "timing_slot_passed": true
+    }
+  ],
+  "timing_check": {
+    "all_lines_fit": true,
+    "duration_seconds": 30,
+    "speech_seconds": 19.862,
+    "final_voice_or_performance_verified": false
+  }
+}
