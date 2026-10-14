@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "beiqiang-commerce",
-  "version": "0.2.1",
-  "description": "贝强多平台电商经营：按平台位置、品类和目标准备商品内容、多种视频创意、营销任务、实验和字段变更审核包。",
+  "version": "0.3.0",
+  "description": "贝强电商经营：按当前国内/国外经营范围与客户类型组织商品、内容、咨询及审核；平台模板与实际进度分开。",
   "author": {
     "name": "Beiqiang"
   },
@@ -11,7 +11,7 @@
       "interface": {
         "displayName": "贝强电商经营 Agent",
         "shortDescription": "商品、内容、运营与商机协作",
-        "longDescription": "六个平台的位置分类、八类商品视角、十二种创意路线、同品多呈现、跨平台任务、可比经营数据及具体字段差异。宿主完成专业创作和判断；新增平台可准备但账号API尚未接通，付费与外部执行沿用现有授权流程。",
+        "longDescription": "围绕国际站、B2B独立站和海外社媒采购链，以及国内抖音与待开展的小红书、微信，按消费者、经销、海外采购和品牌客户分别准备。Amazon仅未来可选。宿主完成创作，后端保存策略、版本、审核与字段差异；外部执行沿实际连接和授权。",
         "developerName": "Beiqiang",
         "category": "Productivity",
         "defaultPrompt": "用贝强电商经营 Agent 处理当前任务，沿用真实商品资料和现有业务源。"

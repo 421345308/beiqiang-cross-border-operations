@@ -5,7 +5,7 @@ import unittest
 from unittest.mock import patch
 
 import test_runtime as fixtures
-from commerce.catalogs import PLATFORMS, LENSES, ROUTES
+from commerce.catalogs import PLATFORMS, LENSES, ROUTES, CHANNEL_SCOPE_PATH
 from commerce.strategy import catalog, experiment_outline
 from commerce.business import snapshot
 from commerce.runtime import Engine, CommerceError
@@ -56,8 +56,11 @@ class StrategyTests(unittest.TestCase):
                                  "asset_plan": ["Fixture source"], "production_checks": {"motion": "Fixture review"}} for v in p["variants"]]
         return data
 
-    def test_six_profiles_and_placements_are_distinct(self):
-        self.assertEqual(len(catalog()["platforms"]), 6)
+    def test_scope_templates_and_placements_are_distinct(self):
+        visible = {p["id"] for p in catalog()["platforms"]}
+        self.assertNotIn("amazon", visible)
+        self.assertTrue({"wechat", "linkedin", "facebook"}.issubset(visible))
+        self.assertIn("amazon", {p["id"] for p in catalog(include_future=True)["platforms"]})
         self.assertEqual(len(LENSES), 8)
         self.assertEqual(len(ROUTES), 12)
         note = PLATFORMS["xiaohongshu"]["placements"]["note"]
@@ -71,6 +74,63 @@ class StrategyTests(unittest.TestCase):
             self.assertEqual(p["strategy"]["targets"][0]["target"]["platform"], platform)
         self.assertEqual(PLATFORMS["amazon"]["live_status"]["write"], "not_connected")
         self.assertEqual(self.engine.capabilities()["external_writes"], [])
+
+    def scope(self):
+        return {"schema_version": 1, "source": "Synthetic scope fixture, not company evidence", "channels": {
+            "douyin": {"status": "started", "market_scope": "domestic", "progress": "Fixture started"},
+            "xiaohongshu": {"status": "planned_not_started", "market_scope": "domestic", "progress": "Fixture not started"},
+            "wechat": {"status": "planned_not_started", "market_scope": "domestic", "progress": "Fixture not started"},
+            "amazon": {"status": "future_option", "market_scope": "international", "progress": "Fixture future only"}}}
+
+    def test_company_operating_scope_is_loaded_not_inferred_from_templates(self):
+        self.assertTrue(all(p["operating_scope"]["status"] == "unverified" for p in self.engine.ws.catalog()["platforms"]))
+        self.f.write_json(CHANNEL_SCOPE_PATH, self.scope())
+        profiles = {p["id"]: p for p in self.engine.ws.catalog()["platforms"]}
+        self.assertEqual(profiles["douyin"]["operating_scope"]["status"], "started")
+        self.assertEqual(profiles["wechat"]["operating_scope"]["status"], "planned_not_started")
+        self.assertNotIn("amazon", profiles)
+        self.assertEqual(self.engine.capabilities()["future_options"][0]["id"], "amazon")
+
+    def test_same_channel_routes_consumers_domestic_procurement_and_brand_buyers(self):
+        r = self.request()
+        r["targets"] = [{"platform": "wechat"}]
+        consumer = self.engine.ws.strategy(r)["targets"][0]
+        r["targets"] = [{"platform": "wechat", "business_model": "b2b"}]
+        procurement = self.engine.ws.strategy(r)["targets"][0]
+        self.assertEqual(consumer["target"]["customer_segment"], "consumer")
+        self.assertEqual(procurement["target"]["customer_segment"], "domestic_business_buyer")
+        self.assertNotEqual(consumer["customer_route"]["cta"], procurement["customer_route"]["cta"])
+        self.assertNotEqual(consumer["variants"][0]["style"], procurement["variants"][0]["style"])
+        r["targets"][0]["customer_segment"] = "brand_buyer"
+        self.assertEqual(self.engine.ws.strategy(r)["targets"][0]["customer_route"]["name"], "品牌开发客户")
+        r["targets"][0]["business_model"] = "retail"
+        self.error("INVALID_REQUEST", lambda: self.engine.ws.strategy(r))
+
+    def test_language_does_not_determine_customer_geography(self):
+        r = self.request()
+        r["targets"] = [{"platform": "wechat", "business_model": "b2b", "language": "en"}]
+        target = self.engine.ws.strategy(r)["targets"][0]["target"]
+        self.assertEqual(target["market_scope"], "domestic")
+        self.assertEqual(target["customer_segment"], "domestic_business_buyer")
+        r["targets"] = [{"platform": "linkedin", "language": "zh-CN"}]
+        target = self.engine.ws.strategy(r)["targets"][0]["target"]
+        self.assertEqual(target["customer_segment"], "overseas_business_buyer")
+
+    def test_scope_correction_invalidates_previous_task_without_auto_refresh(self):
+        self.f.write_json(CHANNEL_SCOPE_PATH, self.scope())
+        t = self.engine.create_task(self.request(), "scope-version")
+        changed = self.scope()
+        changed["channels"]["douyin"]["progress"] = "Fixture corrected status"
+        self.f.write_json(CHANNEL_SCOPE_PATH, changed)
+        self.assertEqual(self.engine.get_task(t["id"])["status"], "needs_refresh")
+
+    def test_wechat_surfaces_do_not_invent_product_upload_or_messaging(self):
+        profile = catalog(platform="微信")["selected_platform"]
+        self.assertEqual(profile["placements"]["moments"]["media_type"], "image_text")
+        self.assertEqual(profile["placements"]["official_article"]["media_type"], "text")
+        self.assertEqual(profile["placements"]["video_channel"]["media_type"], "video")
+        self.assertNotIn("listing", profile["placements"])
+        self.assertEqual(profile["live_status"]["write"], "not_connected")
 
     def test_same_product_gets_multiple_creative_families(self):
         result = self.engine.ws.strategy(self.request())
@@ -193,6 +253,9 @@ class StrategyTests(unittest.TestCase):
         data["platform"] = "xiaohongshu"
         self.error("INVALID_ARTIFACT", lambda: self.engine.submit_artifact(task["id"], step["id"], data, task["revision"]))
         data = self.artifact(step, task)
+        data["customer_segment"] = "brand_buyer"
+        self.error("INVALID_ARTIFACT", lambda: self.engine.submit_artifact(task["id"], step["id"], data, task["revision"]))
+        data = self.artifact(step, task)
         data["variants"] = ["bad input"]
         self.error("INVALID_ARTIFACT", lambda: self.engine.submit_artifact(task["id"], step["id"], data, task["revision"]))
         data = self.artifact(step, task)
@@ -278,7 +341,7 @@ class StrategyTests(unittest.TestCase):
         self.assertIsNone(rows[0]["baseline"])
 
     def test_malformed_options_return_input_error(self):
-        for option in ({"affordances": [{}]}, {"creative": {"styles": [{}]}}, {"creative": {"max_complexity": True}}, {"targets": [{"platform": "amazon", "market": {}}]}):
+        for option in ({"affordances": [{}]}, {"creative": {"styles": [{}]}}, {"creative": {"max_complexity": True}}, {"targets": [{"platform": "amazon", "market": {}}]}, {"customer_segment": {}}, {"market_scope": {}}):
             r = self.request()
             r.update(option)
             self.error("INVALID_REQUEST", lambda: self.engine.ws.strategy(r))

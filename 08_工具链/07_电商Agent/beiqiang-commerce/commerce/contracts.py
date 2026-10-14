@@ -109,6 +109,9 @@ def validate_artifact(data, kind, workflow, target=None, strategy=None):
         require(target is not None, "target-scoped step required")
         require(data.get("target_id") == target["id"] and data.get("platform") == target["platform"] and data.get("placement") == target["placement"], "artifact target mismatch")
         require(data.get("language") == target["language"], "target language mismatch")
+        for field in ("market_scope", "customer_segment"):
+            if field in data:
+                require(data[field] == target[field], "artifact " + field + " mismatch")
         for name in ("claim_evidence", "unconfirmed"):
             require(isinstance(data.get(name), list), name + " required")
         if kind == "channel_listing":
@@ -165,7 +168,7 @@ def validate_artifact(data, kind, workflow, target=None, strategy=None):
 def validate_request(request):
     require(isinstance(request, dict), "request must be an object")
     allowed = {"workflow", "goal", "sku", "listing_id", "channel", "language", "project_path", "metrics_path", "customer_context_path",
-               "platform", "placement", "business_model", "market", "audience", "goal_type", "category", "affordances", "creative", "supporting_evidence", "targets"}
+               "platform", "placement", "business_model", "market", "audience", "goal_type", "market_scope", "customer_segment", "category", "affordances", "creative", "supporting_evidence", "targets"}
     require(not set(request) - allowed, "unknown request fields: " + str(sorted(set(request) - allowed)))
     require(request.get("workflow") in RECIPES, "select an explicit supported workflow")
     for name in ("goal", "channel", "language"):

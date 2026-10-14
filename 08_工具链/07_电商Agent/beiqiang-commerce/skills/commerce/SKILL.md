@@ -1,11 +1,11 @@
 ---
 name: commerce
-description: Prepare and coordinate Beiqiang ecommerce work across Alibaba, Douyin/Doudian, Xiaohongshu, Amazon, independent storefronts and TikTok. Use for channel-specific product content, category-aware video alternatives, multi-platform campaigns, comparable performance analysis or buyer drafts. Existing official skills handle authorized external execution; unrelated creativity/coding is outside this skill.
+description: Prepare and coordinate Beiqiang ecommerce work for current international B2B channels and domestic Douyin, with Xiaohongshu/WeChat preparation and optional future providers. Use for channel-specific product content, category-aware video alternatives, multi-platform campaigns, comparable performance analysis or buyer drafts. Existing official skills handle authorized external execution; unrelated creativity/coding is outside this skill.
 ---
 
 # 贝强电商经营 Agent
 
-宿主负责理解目标、创意、文案与证据判断，程序提供平台/品类/创意策略、任务依赖、版本/证据、经营数据与变更预览。平台“可准备”和账号/API“已接通”分开。复用当前产品台账、PROJECT、CRM和官方工具；不要建立新的商品或客户主库。
+宿主负责理解目标、创意、文案与证据判断，程序提供平台/品类/创意策略、任务依赖、版本/证据、经营数据与变更预览。读取00_总控台/数据/渠道经营范围.json，分清当前经营、已经开始、尚未开始和未来可选；平台模板不等于实际经营，开始也不等于账号/API已接通。复用当前产品台账、PROJECT、CRM和官方工具；不要建立新的商品或客户主库。
 
 ## 路由当前任务
 
@@ -21,6 +21,12 @@ description: Prepare and coordinate Beiqiang ecommerce work across Alibaba, Douy
 请求接口见 [artifact-contracts.md](references/artifact-contracts.md)。必填workflow/goal/channel/language，除纯数据分析外选SKU。platform/placement/business_model/market/audience/goal_type进一步限定位置；category是提问视角，affordances是已声明的商品呈现条件，不能由品类推断材料或性能。creative可选count/styles/duration_seconds/speech_mode/no_face/max_complexity；显式选择优先。supporting_evidence用kind/path/basis绑定实际文件，不能仅加“测试”“工厂”标签。
 
 用户只给自然语言时，由你整理已有信息；不把表单交回给用户。缺口只问影响当前决策的内容，独立部分继续推进。渠道不明确但已有项目时沿用项目，不能自动套英语B2B、固定模型或竖屏。
+
+## 客户与市场先分流
+
+market_scope区分domestic/international；customer_segment区分consumer、domestic_business_buyer、overseas_business_buyer和brand_buyer。两者与language、business_model独立；同一微信/抖音可以做消费者或经销内容，按真实客户需要选，不根据平台或语言臆断。
+
+国外默认沿国际站/B2B独立站/海外社媒服务采购，国内消费者先看场景、上脚和选择；国内采购或品牌开发客户改用对应规格、数量或样品目标问题。用户明确受众优先；已有客户上下文比默认路线更具体。小红书、微信当前尚未开始，准备稿标此状态。Amazon仅未来选项，不放进当前示例或默认经营清单。
 
 ## 专业方法按需读取
 

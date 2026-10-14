@@ -46,7 +46,7 @@ def run(workspace=None):
             target = step["target"]
             authored = content["deliverables"][target["platform"] + "_" + target["placement"]]
             data.update({k: v for k, v in authored.items() if k != "variants"})
-            data.update(target_id=target["id"], platform=target["platform"], placement=target["placement"], language=target["language"], claim_evidence=content["sources"], unconfirmed=content["unconfirmed"])
+            data.update(target_id=target["id"], platform=target["platform"], placement=target["placement"], language=target["language"], market_scope=target["market_scope"], customer_segment=target["customer_segment"], claim_evidence=content["sources"], unconfirmed=content["unconfirmed"])
             if "variants" in authored:
                 data["variants"] = [{"variant_id": v["variant_id"], **authored["variants"][v["style"]]} for v in step["target_profile"]["variants"]]
         elif step["id"] == "experiment":
@@ -60,7 +60,7 @@ def run(workspace=None):
                     data_needed="实际账号/页面数据、同一口径与时间窗、受众与投放条件、商品点击和后续有效询盘或订单归因；缺数据不报效果。",
                     stop_rule="先取得实际基线与预算再设测试门槛；产品错绑或主张无证据时停止。按明确观察窗复核主要指标和下游结果，不因单次播放高自动推广。"))
         elif step["id"] == "review":
-            evidence = dict(audience="采购者和零售购物者分别组织，网站保留B2B。", platform_fit="文案按发布位置组织；平台schema和账号连接缺口明确，未形成发布请求。",
+            evidence = dict(audience="国外采购、国内消费者和国内经销/品牌客户分别路由；当前示例的国内内容选消费者，网站保留B2B。", platform_fit="当前范围、已开始/未开始、未来选项及连接分别记录；Amazon排除，小红书和微信仅准备，未形成发布请求。",
                 claims="真实资料和虚构人物感受分开；价格库存、美国尺码、测试及自产主张不臆填。", creative_difference="生活因果、选择信息、试穿与细节各有具体事件/图页；并非只换平台名称。",
                 asset_feasibility="参考职责、动作接触和图文素材差异已列；这是制作方案检查，未证明新生成质量。", measurement="基线为null、归因待取得；方向探索与单变量测试分开，跨渠道不加总。",
                 handoff="仅交付方案；用户认可影片基线保持，未付费生成、发布、改平台字段或发送。")

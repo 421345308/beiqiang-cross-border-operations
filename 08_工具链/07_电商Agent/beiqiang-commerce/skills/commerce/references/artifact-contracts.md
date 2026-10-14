@@ -42,3 +42,11 @@ review.checks每项结构是 `{"status":"pass或not_applicable","evidence":"判�
 - commerce：以上五组的合并项目。
 
 这些是首版产物接口。平台发布、用户审核、付费生成、完整成片验收及真实发送有各自证据，不能由此JSON冒充。
+
+## 当前范围与客户路线
+
+commerce_catalog默认将future_option移到future_options；include_future:true用于查看扩展模板。实际范围只读00_总控台/数据/渠道经营范围.json，缺文件时经营进度为unverified，不从支持模板推断贝强已经做过。当前默认不列Amazon为经营渠道；明确选择它的准备任务仍标future_option。
+
+请求及targets可指定market_scope（domestic/international）和customer_segment（consumer/domestic_business_buyer/overseas_business_buyer/brand_buyer）；采购客户需business_model:b2b，消费者用retail/brand。地域、语言和客户类型独立。strategy返回目标经营状态和customer_route，包括需求、语气、CTA及应避免内容；方向排序也参考客户路线，明确风格仍优先。
+
+Wechat三个准备位置为moments图文、official_article文字、video_channel视频；不提供商品上传、群发、客户发送或支付接口。LinkedIn/Facebook图文及短视频也只准备。范围变化会使旧审核任务needs_refresh，不自动沿旧清单重跑。

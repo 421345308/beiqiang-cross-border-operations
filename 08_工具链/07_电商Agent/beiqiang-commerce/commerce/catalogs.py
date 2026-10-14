@@ -1,6 +1,7 @@
 """Editorial channel/category/creative catalogs. These are recommendations, not live platform schemas or SKU facts."""
 
-CATALOG_VERSION = "2026-10-14.1"
+CATALOG_VERSION = "2026-10-14.2"
+CHANNEL_SCOPE_PATH = "00_总控台/数据/渠道经营范围.json"
 
 def placement(kind, focus, sections, metrics, families, cta, media_type=None):
     return dict(artifact_kind=kind, focus=focus, sections=sections, metrics=metrics, family_preferences=families, cta=cta,
@@ -41,7 +42,7 @@ PLATFORMS = {
         }, "live_status": {"read": "not_connected", "write": "not_connected"},
     },
     "amazon": {
-        "name": "Amazon", "aliases": ["亚马逊", "amazon.com"], "default_business_model": "retail",
+        "name": "Amazon（未来可选）", "extension_only": True, "aliases": ["亚马逊", "amazon.com"], "default_business_model": "retail",
         "business_models": ["retail", "b2b"], "default_placement": "listing",
         "audience": "按搜索需求比较规格、用途和购买条件的人", "source_ids": ["amazon_listings"],
         "schema_basis": "marketplace＋productType动态JSON Schema；ASIN、卖家SKU、父子变体和offer分别处理",
@@ -71,6 +72,46 @@ PLATFORMS = {
         }, "live_status": {"read": "not_connected", "write": "not_connected"},
     },
 }
+
+# These profiles describe preparation capabilities, not operating progress.
+# Company scope/status is read from CHANNEL_SCOPE_PATH, never inferred here.
+PLATFORMS["wechat"] = {
+    "name": "微信", "aliases": ["微信", "weixin", "微信视频号"], "default_business_model": "retail",
+    "business_models": ["retail", "b2b", "brand"], "default_placement": "moments",
+    "audience": "已有关系或经内容进入的国内客户，按消费选择、经销采购及后续服务分别组织", "source_ids": ["bq_growth"],
+    "schema_basis": "朋友圈、公众号、视频号是不同位置；这里仅准备内容，不假定账号、支付、商店、客服或群发接口",
+    "placements": {
+        "moments": placement("channel_content", "在已有关系中提供可看懂的商品信息和咨询入口", ["具体场景或选择问题", "真实商品图", "适配说明", "下一咨询问题"], ["qualified_comments", "consultations", "qualified_inquiries", "paid_orders"], {"education": 3, "demo": 3, "routine": 1}, "按客户问题提供规格或选择资料，不自动群发", "image_text"),
+        "official_article": placement("channel_content", "把选择资料和常见问题讲清楚", ["读者问题", "实际资料", "选择步骤", "FAQ", "按客户类型承接"], ["reads", "consultations", "qualified_inquiries"], {"education": 3, "demo": 2}, "进入适用的选择咨询或采购讨论", "text"),
+        "video_channel": placement("channel_content", "简洁演示、品牌日常和选择说明", ["具体开头", "完整使用动作", "适用边界", "下一问题"], ["completion_rate", "consultations", "qualified_inquiries", "paid_orders"], {"demo": 3, "education": 2, "routine": 2}, "回答实际客户问题；商品或咨询挂载另核权限"),
+    }, "live_status": {"read": "not_connected", "write": "not_connected"},
+}
+for network, name, aliases in (("linkedin", "LinkedIn", ["领英"]), ("facebook", "Facebook", ["fb", "脸书"])):
+    PLATFORMS[network] = {
+        "name": name, "aliases": aliases, "default_business_model": "b2b", "business_models": ["b2b", "retail", "brand"],
+        "default_placement": "post", "audience": "海外采购、品牌和行业客户；消费者内容需明确另选受众", "source_ids": ["bq_growth"],
+        "schema_basis": "个人身份、公司Page、社区及消息各自核权限；内容准备不表示账号连接或发布成功",
+        "placements": {
+            "post": placement("channel_content", "以具体采购问题连接真实商品和咨询入口", ["客户问题", "真实资料/商品图", "适配边界", "下一采购问题"], ["link_clicks", "qualified_inquiries", "sample_discussions"], {"education": 3, "demo": 3, "trust": 2}, "进入对应选款或样品需求讨论；不自动建联发送", "image_text"),
+            "short_video": placement("channel_content", "通过短演示说明用途与采购选择", ["采购问题", "产品演示", "可核细节", "规格或样品下一步"], ["completion_rate", "qualified_inquiries", "sample_discussions"], {"demo": 3, "education": 3, "trust": 2}, "关联真实型号及采购需求；不以观看代替商机"),
+        }, "live_status": {"read": "not_connected", "write": "not_connected"},
+    }
+for channel in ("douyin", "xiaohongshu"):
+    PLATFORMS[channel]["business_models"].append("b2b")
+
+CUSTOMER_SEGMENTS = {
+    "consumer": {"name": "个人消费者", "business_models": ["retail", "brand"], "needs": ["使用场景", "外观和上脚", "尺码选择", "已核购买/服务条件"], "tone": "自然口语、具体生活信息和选择帮助", "cta": "确认款式尺码或继续选择咨询", "avoid": ["批发MOQ和采购术语堆砌", "虚构买家测评", "未核价格或性能保证"]},
+    "domestic_business_buyer": {"name": "国内经销/商家采购", "business_models": ["b2b"], "needs": ["款式与实际货源", "数量与规格", "报价/样品条件", "履约与包装待确认"], "tone": "中文采购信息清楚，需求先于促销", "cta": "说明数量、规格及采购用途再讨论报价/样品", "avoid": ["照抄海外贸易条款", "把零售兴趣当批发需求", "编库存和供货承诺"]},
+    "overseas_business_buyer": {"name": "海外进口/批发/电商采购", "business_models": ["b2b"], "needs": ["目标市场", "规格和尺码配比", "采购数量", "包装与样品目的", "报价及贸易条件逐单核"], "tone": "专业但清楚，术语只在采购决定需要时使用", "cta": "确认目标市场、数量和规格，推进样品或报价讨论", "avoid": ["把播放量当采购需求", "零售催单与固定交期", "未核自产/认证/性能"]},
+    "brand_buyer": {"name": "品牌开发客户", "business_models": ["b2b"], "needs": ["产品方向与技术目标", "已确认能力及不可调整项", "开发/样品交付物", "包装/品牌与保密范围"], "tone": "具体项目讨论；区分客户目标、现有能力与打样结果", "cta": "明确样品目的、规格和验收再推进", "avoid": ["用目录款外观证明定制能力", "凭空承诺测试结果或新模具", "混淆目标与实测结果"]},
+}
+for segment, preferences in {
+    "consumer": {"education": 2, "demo": 1, "routine": 1, "narrative": 1},
+    "domestic_business_buyer": {"education": 4, "demo": 1, "trust": 2},
+    "overseas_business_buyer": {"education": 4, "demo": 1, "trust": 3},
+    "brand_buyer": {"education": 4, "demo": 1, "trust": 3},
+}.items():
+    CUSTOMER_SEGMENTS[segment]["family_preferences"] = preferences
 
 LENSES = {
     "footwear": {"name": "鞋类", "candidate_affordances": ["wearable", "in_use", "size_selection", "visual_detail"], "questions": ["什么使用场景？", "鞋型/尺码/穿脱证据是什么？", "怎样在正常动作中读清鞋？"], "failure_modes": ["鞋型漂移", "步态或接地异常", "主观舒服被写成性能证明"]},

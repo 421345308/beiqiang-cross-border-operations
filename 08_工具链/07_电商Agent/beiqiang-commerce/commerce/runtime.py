@@ -17,6 +17,7 @@ import uuid
 from .contracts import LEDGER, ENTRIES, SKILLS, RECIPES, validate_request, validate_artifact, normalize_channel
 from . import VERSION
 from .strategy import strategy_for, campaign_steps, targets_for, catalog, experiment_outline
+from .catalogs import CHANNEL_SCOPE_PATH
 
 PLUGIN_ROOT = Path(__file__).resolve().parents[1]
 
@@ -131,11 +132,26 @@ class Workspace:
         p = self.ref_file({"origin": "plugin", "path": relative})
         return dict(origin="plugin", path=relative, sha256=file_hash(p), bytes=p.stat().st_size, module=module, platform=platform)
 
+    def channel_scope(self):
+        if not (self.root / CHANNEL_SCOPE_PATH).is_file():
+            return None
+        data = self.json(CHANNEL_SCOPE_PATH)
+        statuses = {"current", "started", "planned_not_started", "future_option"}
+        if not isinstance(data, dict) or data.get("schema_version") != 1 or not isinstance(data.get("channels"), dict):
+            fail("INVALID_SCOPE", "operating scope needs schema_version:1 and channels")
+        for row in data["channels"].values():
+            if not isinstance(row, dict) or row.get("status") not in statuses or row.get("market_scope") not in ("domestic", "international") or not isinstance(row.get("progress"), str):
+                fail("INVALID_SCOPE", "explicit market scope, operating status and progress required")
+        return data
+
+    def catalog(self, platform=None, category=None, include_future=False):
+        return catalog(platform, category, include_future, self.channel_scope())
+
     def strategy(self, request):
         try:
             request = validate_request(request)
             refs = [{**e, **self.reference(e["path"])} for e in request.get("supporting_evidence", [])]
-            return strategy_for(request, refs)
+            return strategy_for(request, refs, self.channel_scope())
         except ValueError as exc:
             fail("INVALID_REQUEST", str(exc))
 
@@ -153,6 +169,8 @@ class Workspace:
         # Identity lookup is local; it does not make every video task an Alibaba task.
         business_modules = list(dict.fromkeys(s["module"] for s in steps if s["id"] != "identity"))
         references = [{"path": "AGENTS.md", "module": "shared"}]
+        if strategy["targets"] and (self.root / CHANNEL_SCOPE_PATH).is_file():
+            references.append({"path": CHANNEL_SCOPE_PATH, "module": "shared"})
         platforms = {p["target"]["platform"] for p in strategy["targets"]}
         for module in business_modules:
             # Product facts are shared, but Alibaba policy must not become Amazon/XHS policy.
@@ -506,7 +524,9 @@ class Engine:
             lines += ["资料/产物变化，原审核需重新核对：", *["- " + p for p in task["stale_sources"]], ""]
         for p in task.get("strategy", {}).get("targets", []):
             t = p["target"]
-            lines += [f"## {t['platform']} / {t['placement']} / {t['language']}", "", f"受众：{t['audience']}；目标：{t['goal_type']}；商业模式：{t['business_model']}", "", p["focus"], ""]
+            lines += [f"## {t['platform']} / {t['placement']} / {t['language']}", "", f"受众：{t['audience']}；目标：{t['goal_type']}；商业模式：{t['business_model']}", "",
+                      "经营范围：" + t.get("market_scope", "待核") + "；状态：" + t.get("operating_status", "待核") + "；" + t.get("operating_progress", ""), "",
+                      "客户路线：" + p.get("customer_route", {}).get("name", "待核"), "", p["focus"], ""]
             for v in p["variants"]:
                 lines += [f"- {v['name']}：{v['angle']}；证据：{v['proof_method']}"]
             lines.append("")
@@ -527,11 +547,14 @@ class Engine:
         return dict(task_id=task_id, status=task["status"], path=path.relative_to(self.ws.root).as_posix(), absolute_path=str(path), sha256=file_hash(path), privacy="local only; buyer and runtime evidence not public")
 
     def capabilities(self):
+        preparation = self.ws.catalog()
         return dict(version=VERSION, workflows=list(RECIPES), model_execution="host Codex reasoning and existing skills",
                     runtime_actions=["canonical_product_lookup", "task_plan", "durable_tasks", "artifact_version_checks", "comparable_metrics", "platform_profiles", "creative_alternatives", "campaign_dependencies", "staged_change_preview", "review_export", "normalized_business_snapshot"],
                     platform_reads=["alibaba.product.get", "libtv.node"],
                     external_writes=[], paid_generation=False,
-                    platform_preparation=list(catalog()["platforms"]), category_lenses=catalog()["categories"], creative_routes=catalog()["styles"],
+                    platform_preparation=preparation["platforms"], future_options=preparation["future_options"], customer_segments=preparation["customer_segments"],
+                    operating_scope_source=CHANNEL_SCOPE_PATH if self.ws.channel_scope() else None,
+                    category_lenses=catalog()["categories"], creative_routes=catalog()["styles"],
                     extension_contract="Add catalog strategy, artifact contract and a verified backend capability independently. Do not duplicate the product ledger or CRM.")
 
     def doctor(self):

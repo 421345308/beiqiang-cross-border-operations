@@ -9,11 +9,12 @@ def obj(properties, required=()):
 
 STR = {"type": "string", "minLength": 1}
 INT = {"type": "integer", "minimum": 0}
+BOOL = {"type": "boolean"}
 TASK = {"task_id": STR}
 STEP = {**TASK, "step_id": STR}
 TOOLS = [
     ("commerce_capabilities", "Inspect preparation vs connected execution; platform profiles do not imply authenticated accounts.", obj({}), True),
-    ("commerce_catalog", "Discover platform placements, category lenses and creative routes; optionally read a selected profile.", obj({"platform": STR, "category": STR}), True),
+    ("commerce_catalog", "Read current/planned company channels separately from future templates, and inspect customer segments, placements and creative routes.", obj({"platform": STR, "category": STR, "include_future": BOOL}), True),
     ("commerce_strategy", "Prepare evidence-aware creative alternatives and channel-specific objectives/assets/metrics for a product request.", obj({"request": {"type": "object"}}, ("request",)), True),
     ("commerce_doctor", "Check local files and runtime, without reading or printing credentials.", obj({}), True),
     ("commerce_product", "Resolve SKU/alias and all selected listing/source evidence from the canonical local ledger.", obj({"sku": STR, "listing_id": STR}, ("sku",)), True),
@@ -51,7 +52,7 @@ def validate_arguments(name, args):
     for key, value in args.items():
         rule = schema["properties"][key]
         valid = {"string": isinstance(value, str) and bool(value.strip()), "integer": type(value) is int,
-                 "object": isinstance(value, dict)}[rule["type"]]
+                 "object": isinstance(value, dict), "boolean": type(value) is bool}[rule["type"]]
         if not valid or ("enum" in rule and value not in rule["enum"]):
             raise ValueError("invalid argument: " + key)
         if type(value) is int and (value < rule.get("minimum", value) or value > rule.get("maximum", value)):
@@ -61,7 +62,7 @@ def call(engine, name, args):
     validate_arguments(name, args)
     handlers = {
         "commerce_capabilities": engine.capabilities, "commerce_doctor": engine.doctor,
-        "commerce_catalog": catalog, "commerce_strategy": engine.ws.strategy,
+        "commerce_catalog": engine.ws.catalog, "commerce_strategy": engine.ws.strategy,
         "commerce_product": engine.ws.inspect_product, "commerce_plan": engine.ws.plan,
         "commerce_create": engine.create_task, "commerce_task": engine.get_task, "commerce_tasks": engine.list_tasks,
         "commerce_context": engine.context, "commerce_run": engine.run_step, "commerce_complete": engine.complete_step,
