@@ -47,6 +47,14 @@ def public_selection_copy(value):
         if isinstance(out.get('selection_review'), dict):
             review = out['selection_review']
             review['reason'] = '依已确认的后台经营数据政策逐款选择；具体曝光、点击、询盘/TM数据及原始表只保留本地。公开本款真实来源、成本、差异和当前字段。'
+        protected=out.get('protected_fields')
+        if isinstance(protected,dict):
+            names=[k for k in ('owner_member','owner_member_display_name','owner_member_id') if k in protected]
+            if names:
+                assert all(type(protected[k]) is bool for k in names), 'Only preservation-check booleans can be exported under neutral seller-identity label'
+                values=[protected.pop(k) for k in names]
+                preserved=all(values)
+                protected['seller_identity_fields_preserved']=preserved
         return out
     if isinstance(value, list):
         return [public_selection_copy(v) for v in value]
@@ -76,6 +84,11 @@ def main():
     history = load(HR+'/当前进度.json').get('historical_unreturned_families',[])
     historical_ids = {pid for row in history for pid in row['ids']}
     hr_ids = replacement_ids | binding_ids | historical_ids
+    luqi_audit=LUQI+'/质量复核_2026-10-09/材料字段复核'
+    luqi_repairs=load(luqi_audit+'/修正清单.json')['rows']
+    luqi_ids={str(row['id']) for row in luqi_repairs}
+    assert len(luqi_ids)==8
+    luqi_families={ll['product_id'] for ll in live['listings'] if ll['id'] in luqi_ids}
     families = set(scope['targets']) | {p['family'] for p in profiles} | {p['family']for p in history}
     paths = [HR+'/'+name for name in ('README.md','scope.json','当前进度.json','质量修正计划.json','已有实款对应.json','双改与货源一致性核验.json')]
     paths += [p.relative_to(ROOT).as_posix()for p in (ROOT/HR).glob('*公开报价比较.json')]
@@ -86,6 +99,16 @@ def main():
     queue=load(queue_path)
     assert len(queue['rows'])==107
     paths += [queue_path,LUQI+'/README.md','08_工具链/01_业务脚本/国际站扩品/collect_luqi_pending_sources.py']
+    paths += ['08_工具链/01_业务脚本/国际站扩品/'+name for name in ('repair_luqi_material_roles.py','expand_luqi_2583_family.py')]
+    paths += [luqi_audit+'/'+name for name in ('修正清单.json','当前正式材料.json','prepare_汇总.json','submit_汇总.json','verify_汇总.json','双改核验.json') if (ROOT/luqi_audit/name).exists()]
+    for row in luqi_repairs:
+        paths.append(row['source_facts'])
+        folder=ROOT/luqi_audit/'商品'/str(row['id'])
+        paths += [p.relative_to(ROOT).as_posix() for p in folder.glob('*.json') if p.name in ('prepared.json','manifest.json','update_once.json','update_receipt.json','verification.json','score.json')]
+    prefix=LUQI+'/2583-1准备/家族扩色'
+    paths += [p.relative_to(ROOT).as_posix() for p in (ROOT/prefix).glob('*.json') if p.name in ('家族来源与页面计划.json','图片银行公开映射.json','prepared.json','manifest.json','update_once.json','update_receipt.json','verification.json','score.json','当前状态.json','双改核验.json')]
+    prefix=LUQI+'/2583准备'
+    paths += [prefix+'/'+name for name in ('当前来源与色码核对.json','来源现状复核.json','05_AI候选/AI主图审核.json','05_AI候选/AI新增颜色完整提示词.json','05_AI候选/AI新增颜色审核.json','05_AI候选/AI家族详情完整提示词.json','05_AI候选/AI家族详情审核.json','标识形状比较/官方图形来源.json')]
     for row in queue['rows']:
         if row['publication_state']!='PENDING_STYLE_AND_QUALITY_REVIEW':continue
         prefix=LUQI+'/'+row['style']+'准备'
@@ -183,6 +206,15 @@ def main():
     for i, product in enumerate(merged['products']):
         if product['id'] in families:
             merged['products'][i] = copy.deepcopy(lp[product['id']])
+        elif product['id'] in luqi_families:
+            # Exact source-evidenced Luqi correction, not a sweep of all active
+            # workspace changes. Preserve unrelated family fields from base.
+            for key in ('local_assets','material_role_review','family_color_expansion','source_routes_by_color','related_source_ids','next_action','notes','aliases','evidence','raw_packages'):
+                if key in lp[product['id']]:product[key]=copy.deepcopy(lp[product['id']][key])
+    family_phase=ll['1601976101204'].get('optimization',{}).get('family_color_expansion',{})
+    if family_phase.get('state') in ('FORMAL_FIELDS_SCORE_PASS','FORMAL_FIELDS_PASS_PENDING_SCORE') and 'LQ-2583' not in lp:
+        assert not any(l['product_id']=='LQ-2583' for l in merged['listings'])
+        merged['products']=[p for p in merged['products'] if p['id']!='LQ-2583']
     for listing in merged['listings']:
         pid = listing['id']
         if pid in hr_ids:
@@ -204,6 +236,15 @@ def main():
         if pid in public_ids:
             for key in ('company_bundle','factory_gallery'):
                 listing.setdefault('optimization',{})[key] = copy.deepcopy(ll[pid]['optimization'][key])
+        if pid in luqi_ids:
+            for key in ('observation','current_platform_fields','catalog_fields','formal_fields','local_sync','source_routes_by_color','url','notes','current_repair_phase','evidence'):
+                if key in ll[pid]:listing[key]=copy.deepcopy(ll[pid][key])
+                elif key=='current_repair_phase':listing.pop(key,None)
+            for key in ('material_role_repair','family_color_expansion'):
+                if key in ll[pid].get('optimization',{}):listing.setdefault('optimization',{})[key]=copy.deepcopy(ll[pid]['optimization'][key])
+            current=ROOT/ll[pid]['formal_fields']['file']
+            payload=load(current.relative_to(ROOT).as_posix());assert payload.get('sanitized_fields');safe(payload)
+            frozen[current.relative_to(ROOT).as_posix()]=(json.dumps(payload,ensure_ascii=False,indent=2)+'\n').encode('utf8')
     task = next(x for x in live['workstreams'] if x['name']=='HR缺货源实款替换')
     merged['workstreams'] = [x for x in merged['workstreams'] if x['name']!=task['name']] + [copy.deepcopy(task)]
     merged['updated_on'] = live['updated_on']
@@ -245,7 +286,7 @@ def main():
         if args.check_only:
             print('EXACT_TASK_PUBLIC_SCOPE_PASS',len(changed),'HR IDs',len(hr_ids),'PUBLIC IDs',len(public_ids),'BASELINE_ONLY_ALIAS_ISSUES',len(baseline_errors))
             return
-        message = b'feat: synchronize actual HR sources with approved products and prevent duplicate replacements\n'
+        message = b'fix: align Luqi sole attributes and record original-ID colour expansion\n'
         commit = git('commit-tree',tree,'-p',base,input=message).decode().strip()
         ref = 'refs/heads/'+args.branch
         exists = subprocess.run(['git','show-ref','--verify','--quiet',ref],cwd=ROOT).returncode == 0

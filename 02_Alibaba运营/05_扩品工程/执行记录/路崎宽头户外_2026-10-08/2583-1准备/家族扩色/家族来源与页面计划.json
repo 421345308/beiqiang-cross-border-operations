@@ -1,0 +1,178 @@
+{
+  "at": "2026-10-14T01:46:51.411604+00:00",
+  "state": "SOURCE_FAMILY_REVIEWED_ASSETS_PREPARED_NO_CREATE",
+  "product_id": "1601976101204",
+  "model": "BQ-LQ2583-1",
+  "source_family": "Luqi2583",
+  "operation": "update",
+  "no_new_id": true,
+  "family_review": {
+    "supplier_title": "路崎2583款宽头情侣德迅鞋爆款加颜色",
+    "conclusion": "Same base family with colour-specific trim; expand the already-published original ID. Source family title is not sufficient alone: actual plain tongue/central lacekeeper, rounded lobed perforated toe overlays, double stitched flowing side panels, low collar, flat laces and concentric ring/edge-cluster sole compared across both raw sources. Colour-specific Y trim is a variation, not an independent product.",
+    "actual_photos_compared": [
+      "2583/01,08,10,12,18,26,27",
+      "2583-1/01,03,06,08,10,21"
+    ],
+    "prior_separate_offer_conclusion": "Superseded for current execution; original creation receipts retained as history."
+  },
+  "source_routes_by_color": {
+    "Black": {
+      "source": "https://luqi.sooxie.com/detail/2429716",
+      "source_artno": "2583-1",
+      "supplier_color": "黑色",
+      "EU": [
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48
+      ]
+    },
+    "Light Gray": {
+      "source": "https://luqi.sooxie.com/detail/2429716",
+      "source_artno": "2583-1",
+      "supplier_color": "浅灰",
+      "EU": [
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48
+      ]
+    },
+    "Beige": {
+      "source": "https://luqi.sooxie.com/detail/2356506",
+      "source_artno": "2583",
+      "supplier_color": "米色",
+      "EU": [
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48
+      ]
+    },
+    "Yellow": {
+      "source": "https://luqi.sooxie.com/detail/2356506",
+      "source_artno": "2583",
+      "supplier_color": "黄色",
+      "EU": [
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48
+      ]
+    },
+    "Green": {
+      "source": "https://luqi.sooxie.com/detail/2356506",
+      "source_artno": "2583",
+      "supplier_color": "绿色",
+      "EU": [
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48
+      ]
+    },
+    "Red": {
+      "source": "https://luqi.sooxie.com/detail/2356506",
+      "source_artno": "2583",
+      "supplier_color": "红色",
+      "EU": [
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ]
+    }
+  },
+  "EU_combinations": 72,
+  "existing_combinations_preserved": 26,
+  "new_combinations": 46,
+  "title": "Unisex Wide Toe Box Lace Up Walking Shoes with Synthetic Leather Upper and Rubber Sole for Wholesale",
+  "highlights": [
+    "Wide toe box design: A rounded forefoot and layered toe panels define this lace-up walking style.",
+    "Synthetic leather upper: Perforated panels and curved stitched overlays give the shoe its layered casual design.",
+    "Lace-up construction: Flat laces, a tongue lace keeper and a low-cut collar form the photographed opening.",
+    "Rubber sole: The photographed underside shows concentric grooves and small edge clusters.",
+    "Colour and EU assortment: Black, Light Gray, Beige, Yellow and Green in EU36-48; Red in EU36-42."
+  ],
+  "pricing": {
+    "source_cny": "59.00",
+    "source_price_rechecked": "来源现状复核.json",
+    "fx": "6.6837",
+    "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+    "fx_observed": "2026-10-13 10:57:20",
+    "tiers": [
+      [
+        2,
+        "13.25"
+      ],
+      [
+        50,
+        "12.36"
+      ],
+      [
+        100,
+        "11.48"
+      ]
+    ],
+    "freight_service_tax": "Order-specific, not net profit or market-lowest proof."
+  },
+  "keep_general_faq_and_company_bundle": true,
+  "preserve_existing_sku_ids_codes_pictures": true,
+  "current_material_roles": {
+    "Midsole Material": [
+      "Other"
+    ],
+    "Outsole Material": [
+      "Rubber"
+    ]
+  },
+  "next_action": "Upload reviewed new assets once, then fresh exact-ID get/render. Prepare/submit only after current material edit is approved; never replay pending updates."
+}

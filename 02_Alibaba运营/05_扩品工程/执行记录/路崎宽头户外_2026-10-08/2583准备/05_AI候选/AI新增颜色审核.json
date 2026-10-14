@@ -1,0 +1,43 @@
+{
+  "state": "FOUR_COLOR_SKU_VISUAL_PASS_NOT_UPLOADED",
+  "at": "2026-10-14T01:33:14.728275+00:00",
+  "prompt_file": "AI新增颜色完整提示词.json",
+  "items": [
+    {
+      "role": "SKU_Green",
+      "source": "01_产品来源原图/27.jpg",
+      "source_sha256": "512c5a572beb8afde930c41034a0cf94382a3c5413c64f1ef1ec41ea93cab9e3",
+      "path": "05_AI候选/SKU_Green.png",
+      "sha256": "4b730205b517519f6849bda31000892852c5cd24c21ae1b15c043af0498d6dca",
+      "visual_review": "PASS: single photographed side view; actual own colour, curved panels, colour-specific trim, low-cut collar, sole sidewall preserved; no new angle/recolour, Chinese, badges or garment remnants. Existing side/tread photographs remain detailed structure evidence; no measured geometry inferred from AI enlargement.",
+      "state": "VISUAL_PASS_NOT_UPLOADED"
+    },
+    {
+      "role": "SKU_Red",
+      "source": "01_产品来源原图/27.jpg",
+      "source_sha256": "512c5a572beb8afde930c41034a0cf94382a3c5413c64f1ef1ec41ea93cab9e3",
+      "path": "05_AI候选/SKU_Red.png",
+      "sha256": "c5b506798aefa14d222f4da26a8479b6ca3757760b7145c7f4ea7ff49797d098",
+      "visual_review": "PASS: single photographed side view; actual own colour, curved panels, colour-specific trim, low-cut collar, sole sidewall preserved; no new angle/recolour, Chinese, badges or garment remnants. Existing side/tread photographs remain detailed structure evidence; no measured geometry inferred from AI enlargement.",
+      "state": "VISUAL_PASS_NOT_UPLOADED"
+    },
+    {
+      "role": "SKU_Yellow",
+      "source": "01_产品来源原图/27.jpg",
+      "source_sha256": "512c5a572beb8afde930c41034a0cf94382a3c5413c64f1ef1ec41ea93cab9e3",
+      "path": "05_AI候选/SKU_Yellow.png",
+      "sha256": "1fc2d9ef2cb074975bb0eee9fa041424bd44db31c05ec40269cb88b1d8ea4e57",
+      "visual_review": "PASS: single photographed side view; actual own colour, curved panels, colour-specific trim, low-cut collar, sole sidewall preserved; no new angle/recolour, Chinese, badges or garment remnants. Existing side/tread photographs remain detailed structure evidence; no measured geometry inferred from AI enlargement.",
+      "state": "VISUAL_PASS_NOT_UPLOADED"
+    },
+    {
+      "role": "SKU_Beige",
+      "source": "01_产品来源原图/27.jpg",
+      "source_sha256": "512c5a572beb8afde930c41034a0cf94382a3c5413c64f1ef1ec41ea93cab9e3",
+      "path": "05_AI候选/SKU_Beige.png",
+      "sha256": "f57c93aa1d01fc21e46db95456090aeac73351a1f86b36f48c94c80a0175bdfc",
+      "visual_review": "PASS: single photographed side view; actual own colour, curved panels, colour-specific trim, low-cut collar, sole sidewall preserved; no new angle/recolour, Chinese, badges or garment remnants. Existing side/tread photographs remain detailed structure evidence; no measured geometry inferred from AI enlargement.",
+      "state": "VISUAL_PASS_NOT_UPLOADED"
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "scope": "Owner-authorized Luqi current catalogue repair;63read, eight exact semantic field mismatches identified;55otherlinks are not rewritten.",
+  "created_at": "2026-10-14T01:18:43.198562+00:00",
+  "status": "SOURCE_EVIDENCE_SCOPED_MATERIAL_ROLE_CORRECTION_READY",
+  "rows": [
+    {
+      "style": "2583-1",
+      "id": "1601976101204",
+      "category_id": 201334413,
+      "target_materials": {
+        "Midsole Material": [
+          "Other"
+        ],
+        "Outsole Material": [
+          "Rubber"
+        ]
+      },
+      "source": "https://luqi.sooxie.com/detail/2429716",
+      "source_facts": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2583-1准备/商品预检与图组策略.json",
+      "source_material_text": {
+        "upper": "Synthetic leather; original06/08 合成革",
+        "outsole": "Rubber; original06/10 橡胶大底",
+        "midsole": "Not specified",
+        "lining": "Not specified"
+      },
+      "reason": "Existing actualsource separately supports sole/outsole label, not a named midsole; old hardcoded p20700 submission placed outsole into Midsole Material. Correct by current Schema field NAME, preserving unrelated product data."
+    },
+    {
+      "style": "015",
+      "id": "1601975924693",
+      "category_id": 201334413,
+      "target_materials": {
+        "Midsole Material": [
+          "Other"
+        ],
+        "Outsole Material": [
+          "Rubber"
+        ]
+      },
+      "source": "https://luqi.sooxie.com/detail/2306239",
+      "source_facts": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/015准备/商品预检与图组策略.json",
+      "source_material_text": {
+        "upper": "Synthetic leather; exact original08鞋面采用合成革材料 and12合成革",
+        "outsole": "Rubber; source02/04 graphic explicitly橡胶底, no slip performance established",
+        "lining": "Not specified",
+        "midsole": "Not specified"
+      },
+      "reason": "Existing actualsource separately supports sole/outsole label, not a named midsole; old hardcoded p20700 submission placed outsole into Midsole Material. Correct by current Schema field NAME, preserving unrelated product data."
+    },
+    {
+      "style": "012",
+      "id": "1601975969050",
+      "category_id": 201334413,
+      "target_materials": {
+        "Midsole Material": [
+          "Other"
+        ],
+        "Outsole Material": [
+          "Rubber"
+        ]
+      },
+      "source": "https://luqi.sooxie.com/detail/2287828",
+      "source_facts": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/012准备/商品预检与图组策略.json",
+      "source_material_text": {
+        "upper": "Microfiber; current original08 and09 explicitly超纤. Do not infer genuine leather/PU composition.",
+        "outsole": "Rubber; original08 and12 explicitly橡胶. Supplier防滑 wording not adopted as tested performance.",
+        "midsole": "Not specified",
+        "lining": "Not specified; original08透气内里 does not establish composition."
+      },
+      "reason": "Existing actualsource separately supports sole/outsole label, not a named midsole; old hardcoded p20700 submission placed outsole into Midsole Material. Correct by current Schema field NAME, preserving unrelated product data."
+    },
+    {
+      "style": "013",
+      "id": "1601975911526",
+      "category_id": 201334413,
+      "target_materials": {
+        "Midsole Material": [
+          "Other"
+        ],
+        "Outsole Material": [
+          "Rubber"
+        ]
+      },
+      "source": "https://luqi.sooxie.com/detail/2286179",
+      "source_facts": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/013准备/商品预检与图组策略.json",
+      "source_material_text": {
+        "upper": "Microfiber; actual full original06 and contact07 specify超纤鞋面.",
+        "outsole": "Rubber; original06 and contact10 specify橡胶. No tested anti-slip assertion.",
+        "midsole": "Not specified",
+        "lining": "Not specified;透气内里 does not establish composition."
+      },
+      "reason": "Existing actualsource separately supports sole/outsole label, not a named midsole; old hardcoded p20700 submission placed outsole into Midsole Material. Correct by current Schema field NAME, preserving unrelated product data."
+    },
+    {
+      "style": "2417",
+      "id": "1601976139058",
+      "category_id": 201334413,
+      "target_materials": {
+        "Midsole Material": [
+          "Other"
+        ],
+        "Outsole Material": [
+          "MD secondary sole"
+        ]
+      },
+      "source": "https://luqi.sooxie.com/detail/2492418",
+      "source_facts": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2417准备/商品预检与图组策略.json",
+      "source_material_text": {
+        "upper": "Faux leather; original09/15 仿皮, no genuineleather/fibercomposition inferred",
+        "outsole": "MD secondary sole; original09/17 MD二次底, no EVA/rubbercompound inferred",
+        "midsole": "Not separately specified",
+        "lining": "Soft material/柔软材质 not composition; Not specified"
+      },
+      "reason": "Existing actualsource separately supports sole/outsole label, not a named midsole; old hardcoded p20700 submission placed outsole into Midsole Material. Correct by current Schema field NAME, preserving unrelated product data."
+    },
+    {
+      "style": "2416",
+      "id": "1601976114323",
+      "category_id": 201334413,
+      "target_materials": {
+        "Midsole Material": [
+          "Other"
+        ],
+        "Outsole Material": [
+          "MD secondary sole"
+        ]
+      },
+      "source": "https://luqi.sooxie.com/detail/2492413",
+      "source_facts": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2416准备/商品预检与图组策略.json",
+      "source_material_text": {
+        "upper": "CONFLICT_UNRESOLVED: original11仿布/12imitation cloth versus16仿皮/17faux leather; retain Not specified for composition until resolved; continue photographed structure and MDsole route.",
+        "outsole": "MD secondary sole; original11/20, no compound/dual density inferred from translated copy.",
+        "midsole": "Not specified",
+        "lining": "Not specified; comfort wording not composition."
+      },
+      "reason": "Existing actualsource separately supports sole/outsole label, not a named midsole; old hardcoded p20700 submission placed outsole into Midsole Material. Correct by current Schema field NAME, preserving unrelated product data."
+    },
+    {
+      "style": "2415",
+      "id": "1601976088655",
+      "category_id": 201334413,
+      "target_materials": {
+        "Midsole Material": [
+          "Other"
+        ],
+        "Outsole Material": [
+          "TPR"
+        ]
+      },
+      "source": "https://luqi.sooxie.com/detail/2492408",
+      "source_facts": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2415准备/商品预检与图组策略.json",
+      "source_material_text": {
+        "upper": "Supplier original12 English imitation leather; original11 abbreviated仿超, retain raw abbreviation and do not infer microfiber/suede subtype.",
+        "outsole": "TPR original11/14/15; no non-slip or measured performance inferred.",
+        "midsole": "Not separately specified",
+        "lining": "Soft interior, no fiber composition specified."
+      },
+      "reason": "Existing actualsource separately supports sole/outsole label, not a named midsole; old hardcoded p20700 submission placed outsole into Midsole Material. Correct by current Schema field NAME, preserving unrelated product data."
+    },
+    {
+      "style": "2413",
+      "id": "1601976190044",
+      "category_id": 201334413,
+      "target_materials": {
+        "Midsole Material": [
+          "Other"
+        ],
+        "Outsole Material": [
+          "TPR"
+        ]
+      },
+      "source": "https://luqi.sooxie.com/detail/2492397",
+      "source_facts": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2413准备/商品预检与图组策略.json",
+      "source_material_text": {
+        "upper": "Original07仿超 is a supplier abbreviation without full composition; keep raw text. Do not transfer imitation leather translation from2415 or infer microfiber/suede/fiber subtype. Proposed composition Not specified.",
+        "outsole": "TPR originals05/07. No measured grip/non-slip/weight claim.",
+        "midsole": "Not separately specified",
+        "lining": "No fiber composition specified"
+      },
+      "reason": "Existing actualsource separately supports sole/outsole label, not a named midsole; old hardcoded p20700 submission placed outsole into Midsole Material. Correct by current Schema field NAME, preserving unrelated product data."
+    }
+  ]
+}

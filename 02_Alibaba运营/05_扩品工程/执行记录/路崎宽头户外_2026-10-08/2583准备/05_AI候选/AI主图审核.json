@@ -1,0 +1,19 @@
+{
+  "style": "2583",
+  "role": "M1_Beige_pair",
+  "at": "2026-10-14T00:59:52.922465+00:00",
+  "state": "LOCAL_SOURCE_PRESERVING_VISUAL_PASS_NO_CREATE",
+  "source": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2583准备/01_产品来源原图/01.jpg",
+  "source_sha256": "ef75bf198285f9f7d4162f99dc9ccbb76f132288157d027b9bbe091c2e179377",
+  "current_asset": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2583准备/05_AI候选/M1.png",
+  "current_sha256": "507001bdf42f2b4c32db243563af4cb3dff18058019c5a8821020ee3a0082097",
+  "full_generation_prompt": "Precise source-preserving Alibaba product hero edit. Keep BOTH exact beige Luqi2583 shoes in the supplied photograph, retaining the two original upright/leaning poses and exact camera angles, spacing and proportions. Preserve their broad rounded forefoot, lobed stitched perforated toe panels, curved eyelet-panel outline, cream laces with their actual crossings and central tongue loop, plain beige tongue with its original stitching, light collar/lining appearance, layered curved side panels, light seams and brown sole with the photographed curved grooves at the edge. Do not replace the design with another wide-toe shoe or rotate the footwear to invent a different view. Remove ONLY the Apple computer/device, its logo and existing grey backdrop, placing the complete actual pair on a clean square white studio background with subtle natural contact shadow. Make the footwear prominent with clear 6-10 percent margins and readable actual texture. No added toe-width measurements, 2E/4E, zero-drop, medical, grip, waterproof, performance/certification claims, model codes, labels, captions, badges or logos. Keep the exact existing beige and brown colours. Improve clean separation/exposure only, not structural reconstruction. Output a premium faithful photographed-pair hero.",
+  "visual_checks": {
+    "both_complete_original_poses_colours_retained": true,
+    "toe_lobes_stitches_laces_tongue_loop_and_collar": true,
+    "actual_curved_side_panels_and_brown_sole": true,
+    "unrelated_device_logo_removed": true,
+    "no_claim_added_or_New_view": true
+  },
+  "scope": "Source-faithfulness only; not new physical width, stock or material testing evidence. Family dedup determines originalID update instead of an extra create."
+}

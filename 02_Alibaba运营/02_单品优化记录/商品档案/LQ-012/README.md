@@ -1,12 +1,13 @@
-# LQ-012 商品档案
+# LQ-012 / BQ-LQ012 商品档案
 
 此页由唯一台账生成，是本款唯一资料入口；修改事实到下方唯一字段文件或台账，平台正式值到按ID保存的回读原件。原始包只读，候选/历史材料不当当前线上素材。
 
-来源状态：`CANDIDATE`。下一步：候选已采集；先做款式去重、事实/IP/图组质量，再按授权发布。
+来源状态：`CANDIDATE`。下一步：原ID保持；适用API字段、正式图像及实际评分通过；浏览器仅异常与批次抽检。
 
 ## 当前资料与实物证据
 
-- 本地事实/准备字段：尚未指定；不从线上页面证明自产或实物能力。
+- 本地事实/准备字段：[formal_get.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601975969050/formal_get.json)
+- 当前素材目录：[05_AI候选](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/012%E5%87%86%E5%A4%87/05_AI%E5%80%99%E9%80%89)
 
 ## 采购来源（内部使用）
 
@@ -20,19 +21,27 @@
 ### BQ-LQ012 · 1601975969050
 
 - 平台链接：[1601975969050](https://www.alibaba.com/product-detail/Unisex-Wide-Toe-Box-Lace-Up_1601975969050.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601975969050/formal_get.json)；UTC 2026-10-12T23:39:42.320384+00:00。
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601975969050/formal_get.json)；UTC 2026-10-14T02:08:11.577174+00:00。
 - 当前正式标题：Unisex Wide Toe Box Lace Up Outdoor Walking Shoes Microfiber Upper Rubber Sole Textured Panels Wholesale EU 37-48
 - 审核/展示：approved / Y；平台类目ID：201334413。
-- 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, is_smart_edit, keywords, language, main_image, owner_member, owner_member_display_name, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
+- 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
 - SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。
 - 本地平台图片缓存：待补；正式字段中的官方原URL已保留。
-- 本地同步状态：`COMPANY_BUNDLE_FORMAL_PASS`。
+- 本地同步状态：`FORMAL_FIELDS_SCORE_PASS`。
 - 本轮优化：``；
 
 ## 其他原始/正式证据
 
 - [分类总清单.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/%E5%88%86%E7%B1%BB%E6%80%BB%E6%B8%85%E5%8D%95.json)
 - [全分类处理队列.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8_2026-10-09/%E5%85%A8%E5%88%86%E7%B1%BB%E5%A4%84%E7%90%86%E9%98%9F%E5%88%97.json)
+- [当前来源文本.txt](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/012%E5%87%86%E5%A4%87/%E5%BD%93%E5%89%8D%E6%9D%A5%E6%BA%90%E6%96%87%E6%9C%AC.txt)
+- [经营任务包.md](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/012%E5%87%86%E5%A4%87/%E7%BB%8F%E8%90%A5%E4%BB%BB%E5%8A%A1%E5%8C%85.md)
+- [整组验收.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/012%E5%87%86%E5%A4%87/05_AI%E5%80%99%E9%80%89/%E6%95%B4%E7%BB%84%E9%AA%8C%E6%94%B6.json)
+- [来源款式近似候选.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/012%E5%87%86%E5%A4%87/%E6%9D%A5%E6%BA%90%E6%AC%BE%E5%BC%8F%E8%BF%91%E4%BC%BC%E5%80%99%E9%80%89.json)
+- [发布前逐款核验.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/012%E5%87%86%E5%A4%87/%E5%8F%91%E5%B8%83%E5%89%8D%E9%80%90%E6%AC%BE%E6%A0%B8%E9%AA%8C.json)
+- [正式创建回执.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/012%E5%87%86%E5%A4%87/%E6%AD%A3%E5%BC%8F%E5%88%9B%E5%BB%BA%E5%9B%9E%E6%89%A7.json)
+- [发布后字段核验.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/012%E5%87%86%E5%A4%87/%E5%8F%91%E5%B8%83%E5%90%8E%E5%AD%97%E6%AE%B5%E6%A0%B8%E9%AA%8C.json)
+- [正式CDN像素核验.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/012%E5%87%86%E5%A4%87/%E6%AD%A3%E5%BC%8FCDN%E5%83%8F%E7%B4%A0%E6%A0%B8%E9%AA%8C.json)
 - [copy.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%95%86%E5%93%81/1601975969050/copy.json)
 - [update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%95%86%E5%93%81/1601975969050/update_receipt.json)
 - [after_get.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%95%86%E5%93%81/1601975969050/after_get.json)
@@ -46,7 +55,6 @@
 - [verification.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601975969050/verification.json)
 - [public_verification.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601975969050/public_verification.json)
 - [after_get.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601975969050/V8/after_get.json)
-- [after_render.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601975969050/V8/after_render.json)
 - [before_get.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601975969050/V8/before_get.json)
 - [before_render.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601975969050/V8/before_render.json)
 - [immediate_prewrite_get.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601975969050/V8/immediate_prewrite_get.json)
@@ -55,5 +63,15 @@
 - [update_once.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601975969050/V8/update_once.json)
 - [update_receipt.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601975969050/V8/update_receipt.json)
 - [verification.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601975969050/V8/verification.json)
+- [after_render.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601975969050/V8/after_render.json)
+- [public_verification.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601975969050/V8/public_verification.json)
+- [prepared.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8_2026-10-09/%E6%9D%90%E6%96%99%E5%AD%97%E6%AE%B5%E5%A4%8D%E6%A0%B8/%E5%95%86%E5%93%81/1601975969050/prepared.json)
+- [manifest.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8_2026-10-09/%E6%9D%90%E6%96%99%E5%AD%97%E6%AE%B5%E5%A4%8D%E6%A0%B8/%E5%95%86%E5%93%81/1601975969050/manifest.json)
+- [update_once.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8_2026-10-09/%E6%9D%90%E6%96%99%E5%AD%97%E6%AE%B5%E5%A4%8D%E6%A0%B8/%E5%95%86%E5%93%81/1601975969050/update_once.json)
+- [update_receipt.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8_2026-10-09/%E6%9D%90%E6%96%99%E5%AD%97%E6%AE%B5%E5%A4%8D%E6%A0%B8/%E5%95%86%E5%93%81/1601975969050/update_receipt.json)
+- [after_get.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8_2026-10-09/%E6%9D%90%E6%96%99%E5%AD%97%E6%AE%B5%E5%A4%8D%E6%A0%B8/%E5%95%86%E5%93%81/1601975969050/after_get.json)
+- [after_render.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8_2026-10-09/%E6%9D%90%E6%96%99%E5%AD%97%E6%AE%B5%E5%A4%8D%E6%A0%B8/%E5%95%86%E5%93%81/1601975969050/after_render.json)
+- [verification.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8_2026-10-09/%E6%9D%90%E6%96%99%E5%AD%97%E6%AE%B5%E5%A4%8D%E6%A0%B8/%E5%95%86%E5%93%81/1601975969050/verification.json)
+- [score.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8_2026-10-09/%E6%9D%90%E6%96%99%E5%AD%97%E6%AE%B5%E5%A4%8D%E6%A0%B8/%E5%95%86%E5%93%81/1601975969050/score.json)
 
 原件、正式回执与当前资料通过本页关联，不再复制成第二套商品库。
