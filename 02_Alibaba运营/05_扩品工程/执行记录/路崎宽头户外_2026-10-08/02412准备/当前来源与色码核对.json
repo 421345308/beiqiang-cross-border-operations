@@ -35,9 +35,12 @@
   "photo_count": 16,
   "full_original_fact_indices_actually_viewed": [
     1,
+    6,
     10,
     11,
-    14
+    14,
+    18,
+    19
   ],
   "known_materials": {
     "upper": "Original10/11仿超+网布; Mesh andgeneralSynthetic overlays supported. 仿超 notconfirmedactualmicrofiber/naturalleather.",
@@ -67,7 +70,7 @@
     "TPR outsole: The actual underside shows angular tread sections and curved channels below the contrasting grey sidewall.",
     "Wholesale colour-size options: Black and Dark Grey are offered in EU 39–48 for a neutral-colour assortment."
   ],
-  "state": "CURRENT_SOURCE_FACTS_REVIEWED_IMAGE_PREPARATION_NOT_CREATED",
+  "state": "CREATED_FORMAL_FIELDS_SCORE_PASS",
   "pricing_draft": {
     "source_cny": "58.00",
     "fx": "6.6837",
@@ -108,8 +111,7 @@
     ],
     "category_attributes": {
       "Upper Material": [
-        "Mesh",
-        "Synthetic"
+        "Mesh with synthetic overlays"
       ],
       "Midsole Material": [
         "other"
@@ -126,5 +128,24 @@
       "旋转扣网布低帮休闲步行鞋"
     ]
   },
-  "title_bytes": 118
+  "title_bytes": 118,
+  "current_schema_field_constraints": {
+    "Upper Material": {
+      "type": "singleCheck",
+      "custom_negative_value_supported": true,
+      "selected_text": "Mesh with synthetic overlays",
+      "evidence": "当前步行鞋Schema.xml",
+      "scope": "One compositecustomlabel describesverifiedmesh+仿超overlays; no guessedfiber/chemistry or forcedmultiplevalues."
+    }
+  },
+  "publication": {
+    "product_id": "1601980268012",
+    "audit": "approved",
+    "display": "Y",
+    "actual_score": "5.00",
+    "formal_verification": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/02412准备/verification.json",
+    "local_sync_at": "2026-10-14T14:48:47.086971+00:00",
+    "no_replayed_create": true
+  },
+  "next_action": "该款正式字段、评分与来源已通过；继续其他款，不重复创建。"
 }
