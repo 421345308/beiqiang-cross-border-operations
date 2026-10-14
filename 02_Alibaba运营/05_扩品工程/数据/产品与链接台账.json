@@ -914,21 +914,6 @@
       ]
     },
     {
-      "id": "src-4cf1620d0e9b",
-      "url": "https://luqi.sooxie.com/detail/255844",
-      "shop_url": "https://luqi.sooxie.com",
-      "supplier": "路崎鞋业工厂店",
-      "model": "1712",
-      "price": "42.00",
-      "currency": "CNY",
-      "unit": "双",
-      "price_terms": "采购数量、版本、包装、运税与当天可供条件逐单确认。",
-      "observed_at": "2026-10-08T12:05:31.138126+00:00",
-      "evidence": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json"
-      ]
-    },
-    {
       "id": "src-4dd365b04369",
       "url": "https://luqi.sooxie.com/detail/2417873",
       "shop_url": "https://luqi.sooxie.com",
@@ -1324,21 +1309,6 @@
       "observed_at": "2026-10-08",
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/058准备/经营任务包.md",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json"
-      ]
-    },
-    {
-      "id": "src-66e2c48586e7",
-      "url": "https://luqi.sooxie.com/detail/2492421",
-      "shop_url": "https://luqi.sooxie.com",
-      "supplier": "路崎鞋业工厂店",
-      "model": "2418",
-      "price": "78.00",
-      "currency": "CNY",
-      "unit": "双",
-      "price_terms": "采购数量、版本、包装、运税与当天可供条件逐单确认。",
-      "observed_at": "2026-10-08T12:05:24.572860+00:00",
-      "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json"
       ]
     },
@@ -4136,6 +4106,50 @@
         "01_产品资产/01_原始数据包/HR058_AS795/source.json",
         "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR058/素材清单.json"
       ]
+    },
+    {
+      "id": "src-4cf1620d0e9b",
+      "url": "https://luqi.sooxie.com/detail/255844",
+      "shop_url": "https://luqi.sooxie.com",
+      "supplier": "路崎鞋业工厂店",
+      "model": "1712",
+      "price": "42.00",
+      "currency": "CNY",
+      "unit": "双",
+      "price_terms": "采购数量、版本、包装、运税与当天可供条件逐单确认。",
+      "observed_at": "2026-10-08T12:05:31.138126+00:00",
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1712准备/当前来源与色码核对.json"
+      ],
+      "latest_price_review": {
+        "observed_at": "2026-10-14T04:40:26.853235+00:00",
+        "price_cny": "42.00",
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1712准备/当前来源与色码核对.json",
+        "scope": "公开来源当次标价；非实物库存、已采购或固定报价。"
+      }
+    },
+    {
+      "id": "src-66e2c48586e7",
+      "url": "https://luqi.sooxie.com/detail/2492421",
+      "shop_url": "https://luqi.sooxie.com",
+      "supplier": "路崎鞋业工厂店",
+      "model": "2418",
+      "price": "78.00",
+      "currency": "CNY",
+      "unit": "双",
+      "price_terms": "采购数量、版本、包装、运税与当天可供条件逐单确认。",
+      "observed_at": "2026-10-08T12:05:24.572860+00:00",
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/当前来源与色码核对.json"
+      ],
+      "latest_price_review": {
+        "observed_at": "2026-10-14T04:59:51.850353+00:00",
+        "price_cny": "78.00",
+        "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/当前来源与色码核对.json",
+        "scope": "公开来源当次标价；非实物库存、已采购或固定报价。"
+      }
     },
     {
       "id": "src-163b14a8c952",
@@ -19243,20 +19257,110 @@
       "aliases": [
         "LQ-1712"
       ],
-      "source_state": "CANDIDATE",
-      "adopted_source_id": null,
-      "candidate_source_ids": [
-        "src-4cf1620d0e9b"
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-4cf1620d0e9b",
+      "candidate_source_ids": [],
+      "raw_packages": [
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1712准备/01_当前家族来源原图"
       ],
-      "raw_packages": [],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/质量复核_2026-10-09/全分类处理队列.json"
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/质量复核_2026-10-09/全分类处理队列.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1712准备/当前来源与色码核对.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1712准备/prepared.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1712准备/manifest.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1712准备/图片银行公开映射.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1712准备/create_once.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1712准备/create_receipt.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1712准备/verification.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1712准备/score.json"
       ],
       "notes": [
         "来源采集色码（非实存）：军绿/深灰/棕色；EU 39/40/41/42/43/44/45/46/47/48/49"
       ],
-      "next_action": "候选已采集；先做款式去重、事实/IP/图组质量，再按授权发布。"
+      "next_action": "当前实款、来源、图文和33EU正式一致；实际评分按当前核验，无需再创建1712，继续剩余路崎款。",
+      "local_assets": {
+        "asset_roots": [
+          "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1712准备/05_AI候选"
+        ],
+        "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601979415979/formal_get.json",
+        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
+        "source_fact_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1712准备/当前来源与色码核对.json"
+      },
+      "source_routes_by_color": {
+        "Army Green": {
+          "source": "https://luqi.sooxie.com/detail/255844",
+          "source_id": "src-4cf1620d0e9b",
+          "source_artno": "1712",
+          "supplier_color": "军绿",
+          "EU": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49
+          ]
+        },
+        "Dark Grey": {
+          "source": "https://luqi.sooxie.com/detail/255844",
+          "source_id": "src-4cf1620d0e9b",
+          "source_artno": "1712",
+          "supplier_color": "深灰",
+          "EU": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49
+          ]
+        },
+        "Brown": {
+          "source": "https://luqi.sooxie.com/detail/255844",
+          "source_id": "src-4cf1620d0e9b",
+          "source_artno": "1712",
+          "supplier_color": "棕色",
+          "EU": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49
+          ]
+        }
+      },
+      "dossier_path": "02_Alibaba运营/02_单品优化记录/商品档案/LQ-1712/README.md",
+      "classification": {
+        "local_intent_candidates": [
+          "大码低帮系带户外休闲步行鞋"
+        ],
+        "state": "REAL_SOURCE_PHOTOS_AND_CURRENT_SCHEMA_REVIEWED",
+        "evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
+        "platform_category_ids": [
+          201334413
+        ],
+        "store_groups": [],
+        "store_group_state": "NOT_RETURNED_PENDING_REVIEW",
+        "platform_category_state": "CURRENT_EXACT_ID_API_OBSERVED"
+      }
     },
     {
       "id": "LQ-2132",
@@ -19660,15 +19764,85 @@
       "candidate_source_ids": [
         "src-66e2c48586e7"
       ],
-      "raw_packages": [],
+      "raw_packages": [
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/01_产品来源原图"
+      ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/质量复核_2026-10-09/全分类处理队列.json"
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/质量复核_2026-10-09/全分类处理队列.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/当前来源与色码核对.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/prepared.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/manifest.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/图片银行公开映射.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/create_once.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/create_receipt.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/verification.json"
       ],
       "notes": [
         "来源采集色码（非实存）：黄色/绿色；EU 39/40/41/42/43/44/45/46/47/48"
       ],
-      "next_action": "候选已采集；先做款式去重、事实/IP/图组质量，再按授权发布。"
+      "next_action": "仅回读原ID审核、全字段与实际评分；不重复上传或创建2418，其他路崎款独立推进。",
+      "local_assets": {
+        "asset_roots": [
+          "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/05_AI候选"
+        ],
+        "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601979461922/formal_get.json",
+        "state": "REVIEWING",
+        "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
+        "source_fact_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/当前来源与色码核对.json"
+      },
+      "source_routes_by_color": {
+        "Brown": {
+          "source": "https://luqi.sooxie.com/detail/2492421",
+          "source_id": "src-66e2c48586e7",
+          "source_artno": "2418",
+          "supplier_color": "黄色",
+          "EU": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48
+          ]
+        },
+        "Olive Grey": {
+          "source": "https://luqi.sooxie.com/detail/2492421",
+          "source_id": "src-66e2c48586e7",
+          "source_artno": "2418",
+          "supplier_color": "绿色",
+          "EU": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48
+          ]
+        }
+      },
+      "dossier_path": "02_Alibaba运营/02_单品优化记录/商品档案/LQ-2418/README.md",
+      "classification": {
+        "local_intent_candidates": [
+          "撞色拼片系带休闲步行鞋"
+        ],
+        "state": "REAL_SOURCE_PHOTOS_AND_CURRENT_SCHEMA_REVIEWED",
+        "evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
+        "platform_category_ids": [
+          201334413
+        ],
+        "store_groups": [],
+        "store_group_state": "NOT_RETURNED_PENDING_REVIEW",
+        "platform_category_state": "CURRENT_EXACT_ID_API_OBSERVED"
+      }
     },
     {
       "id": "LQ-25019",
@@ -20215,11 +20389,9 @@
       "aliases": [
         "LQ-2576"
       ],
-      "source_state": "CANDIDATE",
-      "adopted_source_id": null,
-      "candidate_source_ids": [
-        "src-ff8d28f6cbcc"
-      ],
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-ff8d28f6cbcc",
+      "candidate_source_ids": [],
       "raw_packages": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/01_产品来源原图"
       ],
@@ -20232,18 +20404,19 @@
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/图片银行公开映射.json",
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/create_once.json",
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/create_receipt.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/verification.json"
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/verification.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/score.json"
       ],
       "notes": [
         "来源采集色码（非实存）：黑色/米色；EU 39/40/41/42/43/44/45/46"
       ],
-      "next_action": "仅回读原ID审核、全字段与实际评分；不重复上传或创建2576，其他路崎款独立推进。",
+      "next_action": "当前实款、来源、图文和16EU正式一致；实际评分按当前核验，无需再创建2576，继续剩余路崎款。",
       "local_assets": {
         "asset_roots": [
           "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/05_AI候选"
         ],
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601979492425/formal_get.json",
-        "state": "REVIEWING",
+        "state": "FORMAL_FIELDS_SCORE_PASS",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "source_fact_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/当前来源与色码核对.json"
       },
@@ -86787,6 +86960,296 @@
       }
     },
     {
+      "id": "1601979415979",
+      "product_id": "LQ-1712",
+      "model": "BQ-LQ1712",
+      "url": "https://www.alibaba.com/product-detail/Mens-Low-Cut-Lace-Up-Outdoor_1601979415979.html",
+      "record_type": "当前实款正式绑定",
+      "source_relation": "REAL_SOURCE_FORMAL_FIELDS_PASS",
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1712准备/当前来源与色码核对.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1712准备/prepared.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1712准备/manifest.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1712准备/图片银行公开映射.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1712准备/create_once.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1712准备/create_receipt.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1712准备/verification.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1712准备/score.json"
+      ],
+      "current_platform_fields": {
+        "at": "2026-10-14T05:15:52.564851+00:00",
+        "title": "Mens Low Cut Lace Up Outdoor Casual Walking Shoes with Textured Upper and TPR Outsole for Wholesale Buyers",
+        "keywords": [
+          ""
+        ],
+        "main_images": [
+          "https://sc04.alicdn.com/kf/H4d100e6937ae451f8894fc0897542320x.png",
+          "https://sc04.alicdn.com/kf/H85836dd388e64e28b18de3f2df24beb1h.png",
+          "https://sc04.alicdn.com/kf/H7d4affa2aae844e090dd394a067c6ccdi.png",
+          "https://sc04.alicdn.com/kf/Hb7827cfd708843f19cea505f7785f2a4K.png",
+          "https://sc04.alicdn.com/kf/H4dd3a372e1c6498eba90a0548859504bC.png",
+          "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
+        ],
+        "category_id": 201334413,
+        "status": "approved",
+        "display": "Y",
+        "url": "https://www.alibaba.com/product-detail/Mens-Low-Cut-Lace-Up-Outdoor_1601979415979.html",
+        "scope": "ExactID formal product read; current audit/score accepted only if the separate verification state passes."
+      },
+      "catalog_fields": {
+        "at": "2026-10-14T05:15:52.564851+00:00",
+        "title": "Mens Low Cut Lace Up Outdoor Casual Walking Shoes with Textured Upper and TPR Outsole for Wholesale Buyers",
+        "keywords": [
+          ""
+        ],
+        "main_images": [
+          "https://sc04.alicdn.com/kf/H4d100e6937ae451f8894fc0897542320x.png",
+          "https://sc04.alicdn.com/kf/H85836dd388e64e28b18de3f2df24beb1h.png",
+          "https://sc04.alicdn.com/kf/H7d4affa2aae844e090dd394a067c6ccdi.png",
+          "https://sc04.alicdn.com/kf/Hb7827cfd708843f19cea505f7785f2a4K.png",
+          "https://sc04.alicdn.com/kf/H4dd3a372e1c6498eba90a0548859504bC.png",
+          "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
+        ],
+        "category_id": 201334413,
+        "status": "approved",
+        "display": "Y",
+        "url": "https://www.alibaba.com/product-detail/Mens-Low-Cut-Lace-Up-Outdoor_1601979415979.html",
+        "scope": "ExactID formal product read; current audit/score accepted only if the separate verification state passes."
+      },
+      "formal_fields": {
+        "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601979415979/formal_get.json",
+        "at": "2026-10-14T05:15:52.564851+00:00",
+        "scope": "当前API商品对象；审核、字段和实际评分按独立verification状态，不把待审当完成"
+      },
+      "local_sync": {
+        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601979415979/formal_get.json",
+        "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601979415979/formal_render.json",
+        "source_fact_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1712准备/当前来源与色码核对.json",
+        "at": "2026-10-14T05:15:52.564851+00:00"
+      },
+      "observation": {
+        "audit": "approved",
+        "display": "Y",
+        "at": "2026-10-14T05:15:52.564851+00:00",
+        "score": "5.00",
+        "scope": "Full exact-ID API read, not browser presentation or physicalstock proof."
+      },
+      "optimization": {
+        "real_source_creation": {
+          "state": "FORMAL_FIELDS_SCORE_PASS",
+          "source_id": "src-4cf1620d0e9b",
+          "source_artno": "1712",
+          "at": "2026-10-14T05:15:52.564851+00:00",
+          "evidence": [
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1712准备/当前来源与色码核对.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1712准备/prepared.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1712准备/manifest.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1712准备/图片银行公开映射.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1712准备/create_once.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1712准备/create_receipt.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1712准备/verification.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1712准备/score.json"
+          ],
+          "inventory_write": "OMITTED",
+          "next_action": "Only formal readback and exact field/score diagnosis; never repeat create or upload successful assets."
+        }
+      },
+      "source_routes_by_color": {
+        "Army Green": {
+          "source": "https://luqi.sooxie.com/detail/255844",
+          "source_id": "src-4cf1620d0e9b",
+          "source_artno": "1712",
+          "supplier_color": "军绿",
+          "EU": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49
+          ]
+        },
+        "Dark Grey": {
+          "source": "https://luqi.sooxie.com/detail/255844",
+          "source_id": "src-4cf1620d0e9b",
+          "source_artno": "1712",
+          "supplier_color": "深灰",
+          "EU": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49
+          ]
+        },
+        "Brown": {
+          "source": "https://luqi.sooxie.com/detail/255844",
+          "source_id": "src-4cf1620d0e9b",
+          "source_artno": "1712",
+          "supplier_color": "棕色",
+          "EU": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49
+          ]
+        }
+      },
+      "bound_source_id": "src-4cf1620d0e9b"
+    },
+    {
+      "id": "1601979461922",
+      "product_id": "LQ-2418",
+      "model": "BQ-LQ2418",
+      "url": "https://www.alibaba.com/product-detail/Mens-Faux-Leather-Lace-Up-Casual_1601979461922.html",
+      "record_type": "已创建实款；审核与评分分列",
+      "source_relation": "SOURCE_REVIEWED_CREATE_PENDING_FORMAL_ACCEPTANCE",
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/当前来源与色码核对.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/prepared.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/manifest.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/图片银行公开映射.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/create_once.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/create_receipt.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/verification.json"
+      ],
+      "current_platform_fields": {
+        "at": "2026-10-14T05:27:07.608948+00:00",
+        "title": "Mens Faux Leather Lace Up Casual Walking Shoes with Contrast Panels and MD Sole for Wholesale Footwear Buyers",
+        "keywords": [
+          ""
+        ],
+        "main_images": [
+          "https://sc04.alicdn.com/kf/H8731a6dd39504cfaa293185b962faf34x.png",
+          "https://sc04.alicdn.com/kf/He3b0d2cc7ddf4201b2ff52fc2da5e07aV.png",
+          "https://sc04.alicdn.com/kf/Hfcb696d5632a4986ad61dee5269d415dw.png",
+          "https://sc04.alicdn.com/kf/Hded5494a59c540849c2ee9361512d03ct.png",
+          "https://sc04.alicdn.com/kf/H00cfcdd61043447793aff46b082dd751c.png",
+          "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
+        ],
+        "category_id": 201334413,
+        "status": "new",
+        "display": "N",
+        "url": "https://www.alibaba.com/product-detail/Mens-Faux-Leather-Lace-Up-Casual_1601979461922.html",
+        "scope": "ExactID formal product read; current audit/score accepted only if the separate verification state passes."
+      },
+      "catalog_fields": {
+        "at": "2026-10-14T05:27:07.608948+00:00",
+        "title": "Mens Faux Leather Lace Up Casual Walking Shoes with Contrast Panels and MD Sole for Wholesale Footwear Buyers",
+        "keywords": [
+          ""
+        ],
+        "main_images": [
+          "https://sc04.alicdn.com/kf/H8731a6dd39504cfaa293185b962faf34x.png",
+          "https://sc04.alicdn.com/kf/He3b0d2cc7ddf4201b2ff52fc2da5e07aV.png",
+          "https://sc04.alicdn.com/kf/Hfcb696d5632a4986ad61dee5269d415dw.png",
+          "https://sc04.alicdn.com/kf/Hded5494a59c540849c2ee9361512d03ct.png",
+          "https://sc04.alicdn.com/kf/H00cfcdd61043447793aff46b082dd751c.png",
+          "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
+        ],
+        "category_id": 201334413,
+        "status": "new",
+        "display": "N",
+        "url": "https://www.alibaba.com/product-detail/Mens-Faux-Leather-Lace-Up-Casual_1601979461922.html",
+        "scope": "ExactID formal product read; current audit/score accepted only if the separate verification state passes."
+      },
+      "formal_fields": {
+        "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601979461922/formal_get.json",
+        "at": "2026-10-14T05:27:07.608948+00:00",
+        "scope": "当前API商品对象；审核、字段和实际评分按独立verification状态，不把待审当完成"
+      },
+      "local_sync": {
+        "state": "REVIEWING",
+        "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601979461922/formal_get.json",
+        "current_schema_file": null,
+        "source_fact_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/当前来源与色码核对.json",
+        "at": "2026-10-14T05:27:07.608948+00:00"
+      },
+      "observation": {
+        "audit": "new",
+        "display": "N",
+        "at": "2026-10-14T05:27:07.608948+00:00",
+        "score": null,
+        "scope": "Full exact-ID API read, not browser presentation or physicalstock proof."
+      },
+      "optimization": {
+        "real_source_creation": {
+          "state": "REVIEWING",
+          "source_id": "src-66e2c48586e7",
+          "source_artno": "2418",
+          "at": "2026-10-14T05:27:07.608948+00:00",
+          "evidence": [
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/当前来源与色码核对.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/prepared.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/manifest.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/图片银行公开映射.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/create_once.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/create_receipt.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/verification.json"
+          ],
+          "inventory_write": "OMITTED",
+          "next_action": "Only formal readback and exact field/score diagnosis; never repeat create or upload successful assets."
+        }
+      },
+      "source_routes_by_color": {
+        "Brown": {
+          "source": "https://luqi.sooxie.com/detail/2492421",
+          "source_id": "src-66e2c48586e7",
+          "source_artno": "2418",
+          "supplier_color": "黄色",
+          "EU": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48
+          ]
+        },
+        "Olive Grey": {
+          "source": "https://luqi.sooxie.com/detail/2492421",
+          "source_id": "src-66e2c48586e7",
+          "source_artno": "2418",
+          "supplier_color": "绿色",
+          "EU": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48
+          ]
+        }
+      }
+    },
+    {
       "id": "1601979365545",
       "product_id": "LQ-995",
       "model": "BQ-LQ995",
@@ -86945,8 +87408,8 @@
       "product_id": "LQ-2576",
       "model": "BQ-LQ2576",
       "url": "https://www.alibaba.com/product-detail/Wide-Toe-Box-Knit-Slip-On_1601979492425.html",
-      "record_type": "已创建实款；审核与评分分列",
-      "source_relation": "SOURCE_REVIEWED_CREATE_PENDING_FORMAL_ACCEPTANCE",
+      "record_type": "当前实款正式绑定",
+      "source_relation": "REAL_SOURCE_FORMAL_FIELDS_PASS",
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/当前来源与色码核对.json",
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/prepared.json",
@@ -86954,10 +87417,11 @@
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/图片银行公开映射.json",
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/create_once.json",
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/create_receipt.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/verification.json"
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/verification.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/score.json"
       ],
       "current_platform_fields": {
-        "at": "2026-10-14T04:17:02.911943+00:00",
+        "at": "2026-10-14T04:47:29.267633+00:00",
         "title": "Wide Toe Box Knit Slip On Walking Shoes with Low Cut Collar for Wholesale Footwear Buyers",
         "keywords": [
           ""
@@ -86971,13 +87435,13 @@
           "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
         ],
         "category_id": 201334413,
-        "status": "new",
-        "display": "N",
+        "status": "approved",
+        "display": "Y",
         "url": "https://www.alibaba.com/product-detail/Wide-Toe-Box-Knit-Slip-On_1601979492425.html",
         "scope": "ExactID formal product read; current audit/score accepted only if the separate verification state passes."
       },
       "catalog_fields": {
-        "at": "2026-10-14T04:17:02.911943+00:00",
+        "at": "2026-10-14T04:47:29.267633+00:00",
         "title": "Wide Toe Box Knit Slip On Walking Shoes with Low Cut Collar for Wholesale Footwear Buyers",
         "keywords": [
           ""
@@ -86991,36 +87455,36 @@
           "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
         ],
         "category_id": 201334413,
-        "status": "new",
-        "display": "N",
+        "status": "approved",
+        "display": "Y",
         "url": "https://www.alibaba.com/product-detail/Wide-Toe-Box-Knit-Slip-On_1601979492425.html",
         "scope": "ExactID formal product read; current audit/score accepted only if the separate verification state passes."
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601979492425/formal_get.json",
-        "at": "2026-10-14T04:17:02.911943+00:00",
+        "at": "2026-10-14T04:47:29.267633+00:00",
         "scope": "当前API商品对象；审核、字段和实际评分按独立verification状态，不把待审当完成"
       },
       "local_sync": {
-        "state": "REVIEWING",
+        "state": "FORMAL_FIELDS_SCORE_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601979492425/formal_get.json",
-        "current_schema_file": null,
+        "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601979492425/formal_render.json",
         "source_fact_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/当前来源与色码核对.json",
-        "at": "2026-10-14T04:17:02.911943+00:00"
+        "at": "2026-10-14T04:47:29.267633+00:00"
       },
       "observation": {
-        "audit": "new",
-        "display": "N",
-        "at": "2026-10-14T04:17:02.911943+00:00",
-        "score": null,
+        "audit": "approved",
+        "display": "Y",
+        "at": "2026-10-14T04:47:29.267633+00:00",
+        "score": "5.00",
         "scope": "Full exact-ID API read, not browser presentation or physicalstock proof."
       },
       "optimization": {
         "real_source_creation": {
-          "state": "REVIEWING",
+          "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-ff8d28f6cbcc",
           "source_artno": "2576",
-          "at": "2026-10-14T04:17:02.911943+00:00",
+          "at": "2026-10-14T04:47:29.267633+00:00",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/当前来源与色码核对.json",
             "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/prepared.json",
@@ -87028,7 +87492,8 @@
             "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/图片银行公开映射.json",
             "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/create_once.json",
             "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/create_receipt.json",
-            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/verification.json"
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/verification.json",
+            "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/score.json"
           ],
           "inventory_write": "OMITTED",
           "next_action": "Only formal readback and exact field/score diagnosis; never repeat create or upload successful assets."
@@ -87067,7 +87532,8 @@
             46
           ]
         }
-      }
+      },
+      "bound_source_id": "src-ff8d28f6cbcc"
     }
   ],
   "workstreams": [

@@ -1,0 +1,186 @@
+{
+  "style": "1712",
+  "source": "https://luqi.sooxie.com/detail/255844",
+  "observed_at": "2026-10-14T04:40:26.853235+00:00",
+  "source_HTML_sha256": "dfd998183c7efe4a77977b46de07d93d3ed877d516cc810a3dc8a196a041eff6",
+  "source_price_cny": "42.00",
+  "source_EU_by_color": {
+    "Army Green": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49
+    ],
+    "Dark Grey": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49
+    ],
+    "Brown": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49
+    ]
+  },
+  "source_EU_combinations": 33,
+  "source_colour_mapping": {
+    "Army Green": {
+      "supplier_colour": "军绿",
+      "frames": [
+        6,
+        16,
+        32,
+        38
+      ]
+    },
+    "Dark Grey": {
+      "supplier_colour": "深灰",
+      "frames": [
+        1,
+        6,
+        33,
+        39
+      ]
+    },
+    "Brown": {
+      "supplier_colour": "棕色",
+      "frames": [
+        5,
+        6,
+        11,
+        34
+      ]
+    }
+  },
+  "visible_structure": [
+    "Low-cut lace-up upper with short-pile surface",
+    "Mesh collar and tongue, metal upper lace guides",
+    "Stitched curved forefoot seam and curved heel overlay",
+    "Striped rear loop; grey sculpted sidewall and segmented black lug edge",
+    "Actual sole13 has grey triangular contact inserts; no unseen tread generated"
+  ],
+  "known_materials": {
+    "upper": "双面绒 source05/07: custom Fleece surface label, exact fibre/leather chemistry not inferred",
+    "outsole": "TPR source05 explicit",
+    "midsole": "Separate material unspecified, native other; not inferred from grey colour",
+    "lining": "舒适内里 is texture only, native other"
+  },
+  "wide_claim": "NO_WIDE_EVIDENCE_NO_WIDE_CLAIM",
+  "title_draft": "Mens Low Cut Lace Up Outdoor Casual Walking Shoes with Textured Upper and TPR Outsole for Wholesale Buyers",
+  "product_highlights_draft": [
+    "Low-cut lace-up design: A rounded forefoot and structured side panels give this style its everyday outdoor-casual profile.",
+    "Textured upper: Short-pile panels are joined by a curved stitched toe seam, with mesh around the collar and tongue.",
+    "Lace guides and rear loop: Metal upper guides finish the crossed laces; a striped pull loop marks the heel.",
+    "TPR outsole pattern: Grey triangular sections and a segmented black edge form the actual underside shown in the photos.",
+    "Wholesale size assortment: Army Green, Dark Grey and Brown are offered in EU 39–49 for colour-size order planning."
+  ],
+  "excluded_claims": [
+    "Genuine leather/suede chemical identity",
+    "Wide toe box/2E4E",
+    "Waterproof/certified grip/medical",
+    "Source advertising WARRIOR and outdoor-performance guarantees",
+    "Physical stock or fibre percentage"
+  ],
+  "image_role_plan": {
+    "M1": "Actual01 grey hero",
+    "M2": "Actual07 brown mesh collar crop",
+    "M3": "Actual13 brown underside geometry",
+    "M4": "Actual16 green worn order inputs",
+    "M5": "Actual10 brown worn styling",
+    "D1": "Actual05 brown toe-seam macro",
+    "D2": "Actual39 grey heel and loop macro",
+    "D3": "Actual01 grey metal lace guide macro",
+    "D4": "Actual06 threecolor EU39-49 options"
+  },
+  "pricing_draft": {
+    "source_cny": "42.00",
+    "fx": "6.6837",
+    "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+    "fx_observed": "2026-10-13 10:57:20",
+    "tiers": [
+      [
+        2,
+        "9.43"
+      ],
+      [
+        50,
+        "8.80"
+      ],
+      [
+        100,
+        "8.17"
+      ]
+    ],
+    "freight_service_tax": "Order-specific; not netprofit or marketlowest proof."
+  },
+  "publish_profile": {
+    "category_id": 201334413,
+    "buyer_colours": [
+      {
+        "buyer": "Army Green",
+        "supplier_key": "Army Green",
+        "supplier_label": "军绿",
+        "image_role": "SKU_ArmyGreen"
+      },
+      {
+        "buyer": "Dark Grey",
+        "supplier_key": "Dark Grey",
+        "supplier_label": "深灰",
+        "image_role": "M1"
+      },
+      {
+        "buyer": "Brown",
+        "supplier_key": "Brown",
+        "supplier_label": "棕色",
+        "image_role": "SKU_Brown"
+      }
+    ],
+    "category_attributes": {
+      "Upper Material": [
+        "Fleece"
+      ],
+      "Midsole Material": [
+        "other"
+      ],
+      "Outsole Material": [
+        "Tpr"
+      ],
+      "Lining Material": [
+        "other"
+      ],
+      "Closure Type": [
+        "Lace-up"
+      ]
+    },
+    "local_intent": [
+      "大码低帮系带户外休闲步行鞋"
+    ],
+    "source_index": "当前家族来源图像索引.json",
+    "original_dir": "01_当前家族来源原图"
+  },
+  "state": "CURRENT_SOURCE_FACTS_REVIEWED_IMAGES_IN_PROGRESS_NOT_CREATED",
+  "family_review": "1712 independent; K502/K502D same outer family different lining. Fullcurrentphotos override stale old recommendation covers."
+}

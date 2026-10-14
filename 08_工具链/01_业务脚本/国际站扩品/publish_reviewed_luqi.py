@@ -23,7 +23,7 @@ FIELDS=['catId','icbuCatProp','saleProp','sku','productTitle','scImages','pkgMea
 
 def configure(style):
     global STYLE,FOLDER,MODEL,CATEGORY,CATALOG,COLORS,PROFILE,EU_BY_COLOR
-    assert style in ('995','2576'), 'Only individually reviewed current source profiles are enabled'
+    assert style in ('995','2576','1712','2418'), 'Only individually reviewed current source profiles are enabled'
     STYLE=style;FOLDER=BASE/(style+'准备');MODEL='BQ-LQ'+style;CATALOG=ROOT/('99_临时区/路崎'+style+'/当前目录/catalog.json')
     facts=load(FOLDER/'当前来源与色码核对.json');PROFILE=facts['publish_profile'];CATEGORY=PROFILE['category_id'];assert CATEGORY==201334413
     COLORS={v['buyer']:(v['supplier_key'],v['image_role']) for v in PROFILE['buyer_colours']};assert len(COLORS)==len(PROFILE['buyer_colours'])
@@ -79,7 +79,7 @@ def bank(client,cfg):
 def prepare():
     assert not (FOLDER/'create_once.json').exists(),'Already attempted; read back or reconcile, never recreate'
     facts=load(FOLDER/'当前来源与色码核对.json');proof=load(FOLDER/'05_AI候选/整组验收.json');bank=load(FOLDER/'图片银行.json');assert bank['state']=='COMPLETE';assets=bank['items']
-    index=load(FOLDER/'01_产品来源原图/当前来源图像索引.json')
+    index=load(FOLDER/PROFILE.get('source_index','01_产品来源原图/当前来源图像索引.json'))
     assert index['style']==STYLE and index['source']==facts['source'] and urlparse(facts['source']).hostname=='luqi.sooxie.com'
     assert 'Wide Toe Box' not in facts['title_draft'] or facts['wide_claim'].startswith('EXPLICIT_SOURCE_')
     assert proof.get('dedup_review'), 'Actual source and nearest physical-style review must precede create'
@@ -176,7 +176,10 @@ def verify(client,cfg):
     # goods option. Check the exact ID, validity and its current option label;
     # do not ignore arbitrary attributes or accept a different goods class.
     options={o.get('value'):o.get('displayName') for o in schema.findall("./field[@id='logisticsProperty']/options/option")}
-    checks['schema_logisticsProperty']=len(logistics)==1 and logistics[0].text=='general_cargo_0' and set(logistics[0].attrib)<= {'valid','displayName'} and logistics[0].get('valid','true')=='true' and logistics[0].get('displayName')==options.get('general_cargo_0')
+    ordinary_labels={'Ordinary goods','普货'}
+    # Exact1712 render pairs English selected label with Chinese current
+    # option label under the SAME ID. Both observed labels mean ordinary goods.
+    checks['schema_logisticsProperty']=len(logistics)==1 and logistics[0].text=='general_cargo_0' and set(logistics[0].attrib)<= {'valid','displayName'} and logistics[0].get('valid','true')=='true' and logistics[0].get('displayName') in ordinary_labels and options.get('general_cargo_0') in ordinary_labels
     sku=contract.verify_create_skus(expected['sku'],actual.get('sku'));checks['sku_schema_bindings']=sku['status']=='verified'
     attrs=shared.attributes(p);checks['formal_brand_model_materials']=attrs.get('Brand Name')==['Beiqiang'] and attrs.get('Model Number')==[MODEL] and all(sorted(v.casefold() for v in attrs.get(name,[]))==sorted(v.casefold() for v in labels) for name,labels in PROFILE['category_attributes'].items())
     checks['origin_china']=attrs.get('Place of Origin') in (['China'],['CN'])
@@ -222,7 +225,7 @@ def sync():
     current={'at':report['get_observed_at'],'title':p['subject'],'keywords':p.get('keywords',[]),'main_images':p['main_image']['images'],'category_id':p['category_id'],'status':p['status'],'display':p['display'],'url':listing['url'],'scope':'ExactID formal product read; current audit/score accepted only if the separate verification state passes.'}
     listing.update(current_platform_fields=current,catalog_fields=copy.deepcopy(current),formal_fields={'file':rel(canonical/'formal_get.json'),'at':report['get_observed_at'],'scope':'当前API商品对象；审核、字段和实际评分按独立verification状态，不把待审当完成'},local_sync={'state':report['state'],'current_fields_file':rel(canonical/'formal_get.json'),'current_schema_file':rel(canonical/'formal_render.json') if (canonical/'formal_render.json').exists() else None,'source_fact_file':rel(FOLDER/'当前来源与色码核对.json'),'at':report['at']},observation={'audit':p['status'],'display':p['display'],'at':report['get_observed_at'],'score':report['actual_score'],'scope':'Full exact-ID API read, not browser presentation or physicalstock proof.'})
     listing.setdefault('optimization',{})['real_source_creation']={'state':report['state'],'source_id':sid,'source_artno':STYLE,'at':report['at'],'evidence':evidence,'inventory_write':'OMITTED','next_action':'Only formal readback and exact field/score diagnosis; never repeat create or upload successful assets.'}
-    listing['evidence']=list(dict.fromkeys(listing['evidence']+evidence));product['evidence']=list(dict.fromkeys(product.get('evidence',[])+evidence));product.setdefault('local_assets',{}).update(current_fields_file=rel(canonical/'formal_get.json'),source_fact_file=rel(FOLDER/'当前来源与色码核对.json'),asset_roots=[rel(FOLDER/'05_AI候选')],state=report['state']);product['raw_packages']=[rel(FOLDER/'01_产品来源原图')];product['next_action']=f'仅回读原ID审核、全字段与实际评分；不重复上传或创建{STYLE}，其他路崎款独立推进。'
+    listing['evidence']=list(dict.fromkeys(listing['evidence']+evidence));product['evidence']=list(dict.fromkeys(product.get('evidence',[])+evidence));product.setdefault('local_assets',{}).update(current_fields_file=rel(canonical/'formal_get.json'),source_fact_file=rel(FOLDER/'当前来源与色码核对.json'),asset_roots=[rel(FOLDER/'05_AI候选')],state=report['state']);product['raw_packages']=[rel(FOLDER/PROFILE.get('original_dir','01_产品来源原图'))];product['next_action']=f'仅回读原ID审核、全字段与实际评分；不重复上传或创建{STYLE}，其他路崎款独立推进。'
     product['source_routes_by_color']=routes;listing['source_routes_by_color']=copy.deepcopy(routes)
     accepted=report['state'] in ('FORMAL_FIELDS_SCORE_PASS','FORMAL_FIELDS_PASS_PENDING_SCORE','FORMAL_FIELDS_PASS_SCORE_BELOW_TARGET')
     if accepted:
@@ -249,7 +252,7 @@ def sync():
 
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('mode',choices=('schema','bank','prepare','create','verify','sync'));ap.add_argument('--style',required=True,choices=('995','2576'));args=ap.parse_args();configure(args.style)
+    ap=argparse.ArgumentParser();ap.add_argument('mode',choices=('schema','bank','prepare','create','verify','sync'));ap.add_argument('--style',required=True,choices=('995','2576','1712','2418'));args=ap.parse_args();configure(args.style)
     if args.mode=='prepare':prepare();return
     if args.mode=='sync':sync();return
     spec=importlib.util.spec_from_file_location('alibaba_client',ROOT/'.agents/skills/alibaba-openapi-operator/scripts/alibaba_openapi.py');client=importlib.util.module_from_spec(spec);spec.loader.exec_module(client);cfg=client.load_config(client.DEFAULT_CONFIG)

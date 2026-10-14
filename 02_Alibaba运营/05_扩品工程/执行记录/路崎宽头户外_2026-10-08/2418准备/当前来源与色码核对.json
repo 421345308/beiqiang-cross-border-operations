@@ -1,11 +1,10 @@
 {
   "style": "2418",
   "source": "https://luqi.sooxie.com/detail/2492421",
-  "observed_at": "2026-10-10T18:20:48.116768+00:00",
-  "collection": "PUBLIC_HTTPS_NORMAL_TLS_30_READABLE_IMAGES",
-  "source_HTML_file_sha256": "04632c67ccb9a0eeb282a6bc4899a0dadebdf31ae431359dddfdc522e85facbb",
+  "observed_at": "2026-10-14T04:59:51.850353+00:00",
+  "source_HTML_sha256": "fce27f68c36ad3495a7e4fd5557dc5e199cdb1aed89210caeb7e3d8051d24596",
   "source_price_cny": "78.00",
-  "source_offered_EU_by_label": {
+  "source_EU_by_color": {
     "Yellow": [
       39,
       40,
@@ -32,32 +31,132 @@
     ]
   },
   "source_EU_combinations": 20,
-  "actual_photo_review": "All30source images viewed in three contacts. Two pictured variants: brown upper/light-gray diagonal sideband/darkblue quarterpatch/whitegroovedsole/mustardheelpatch; gray-olive upper/tan diagonalband/darkquarter/whitegroovedsole. Source10 labels brown/khaki and11 brown/grey, whereas current HTML lists Yellow/Green. Preserve originals; do not silently bind a buyer-yellow swatch to brown photo.",
-  "known_materials": {
-    "upper": "Faux leather; original10/11/14/15 仿皮",
-    "sole": "MD secondary sole; original10/11/18/19, no confirmed EVA/rubbercompound orallocation",
-    "midsole": "Not separately specified",
-    "lining": "Comfortable/soft lining is not composition, unknown"
+  "source_colour_mapping": {
+    "Brown": {
+      "supplier_key": "Yellow",
+      "supplier_label": "黄色",
+      "actual_photo_label": "棕色/brown original10/11",
+      "frames": [
+        1,
+        8,
+        10,
+        13,
+        16,
+        20
+      ]
+    },
+    "Olive Grey": {
+      "supplier_key": "Green",
+      "supplier_label": "绿色",
+      "actual_photo_label": "卡其/grey original10/11",
+      "frames": [
+        9,
+        10,
+        27,
+        28,
+        29,
+        30
+      ]
+    }
   },
-  "gender": "Original10/11 explicitly Casual mens shoes/休闲男鞋",
-  "category_direction": "Source class27257 provides outdoor intent; original10/11 itself describes casual mens shoes and lowtop closedtoe/heel laceup actualdesign. Check appropriate current leaf from these facts, no technicalHiking/Running claim inferred.",
-  "wide_claim": "NOT_SUPPORTED_BY_THIS_SOURCE_NO_WIDE_CLAIM",
-  "duplicates": [
-    "02/03 same photographed source scene with Chinese/English decorated panels;01 same foregroundscene crop",
-    "04/05 same pair/screenshot translated",
-    "10/11 same facts panels translated",
-    "12/13 same photographed woodenpair translated",
-    "14/15 same photographed pair translated",
-    "16/17 same actualcollar partial translated",
-    "18/19 same actualsole partial translated",
-    "20/21 same rearheels translated",
-    "22/23 same onfootpair translated"
+  "colour_alias_resolution": "Current source options黄色/绿色 do not match original photo labels棕色/卡其 and brown/grey. Buyer Brown/Olive Grey chosen from actual matching photos; exact source option keys retained in internal colour routes. Not extra colours or swappedSKU.",
+  "visible_structure": [
+    "Low-cut lace-up casual silhouette",
+    "Pebbled faux-leather panels, curved double forefoot seam",
+    "Lightcontrast Y-shaped quarter overlay with small navy insert",
+    "Padded greycollar, visibleblueinsole, goldenheelpatch; no rear pullloop",
+    "Ivorygroovedsidewall/darkforefootcap; actual18onlyforefootunderside visible"
   ],
-  "status": "CURRENT_SOURCE_COLLECTED_COLOR_LABEL_RECONCILIATION_PENDING_NO_CREATE",
-  "remaining": [
-    "Resolve current supplierlabel Yellow/Green versus pictured brown/gray-olive and source10/11 labels before exact SKU binding",
-    "Current ownSchema and formal/source familydedup",
-    "Own native distinct sourceframe/partialregion roles and completeimage review",
-    "Singlecreate/formalfields/actualCDN/score only after scoped facts pass"
-  ]
+  "known_materials": {
+    "upper": "仿皮/faux leather original10/11/13; no PU/PVC/genuineleather inference",
+    "outsole": "MD二次底 original10/11/18: use source MD outsole label, no EVA expansion",
+    "midsole": "Separate midsole material unspecified; native other, not transfer source outsole to Midsole",
+    "lining": "舒适内里 is texture only, native other"
+  },
+  "wide_claim": "NO_WIDE_EVIDENCE_NO_WIDE_CLAIM",
+  "title_draft": "Mens Faux Leather Lace Up Casual Walking Shoes with Contrast Panels and MD Sole for Wholesale Footwear Buyers",
+  "product_highlights_draft": [
+    "Faux leather upper: Textured panels and a curved double-stitched forefoot seam define the casual profile.",
+    "Contrast panel design: Light quarter overlays and small navy inserts add a distinct side-view finish.",
+    "Lace-up low-cut shape: Crossed laces, metal upper eyelets and a padded collar form the photographed opening.",
+    "MD sole profile: A light sculpted sidewall pairs with forefoot grooves and a dark toe contact section.",
+    "Wholesale size assortment: Brown and Olive Grey are offered in EU 39–48 for colour-size order planning."
+  ],
+  "excluded_claims": [
+    "Wide toe box/2E4E fromappearance",
+    "Genuineleather/PU/PVC/EVAchemistry",
+    "Testedgrip/waterproof/medical/weightclaim",
+    "Pulltab/handsfree not present"
+  ],
+  "image_role_plan": {
+    "M1": "Actual13foregroundBrownsinglecleanhero",
+    "M2": "Actual16lowcollaropening",
+    "M3": "Actual18knownforefootbottomonly",
+    "M4": "Actual27OliveGreyorderinputs",
+    "M5": "Actual08Brownwear",
+    "D1": "Actual13forefootseamtexturemacro",
+    "D2": "Actual20heelpair",
+    "D3": "Actual10Browncontrastquartermacro",
+    "D4": "Actual10two-colourEU39-48choice"
+  },
+  "pricing_draft": {
+    "source_cny": "78.00",
+    "fx": "6.6837",
+    "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+    "fx_observed": "2026-10-13 10:57:20",
+    "tiers": [
+      [
+        2,
+        "17.51"
+      ],
+      [
+        50,
+        "16.34"
+      ],
+      [
+        100,
+        "15.17"
+      ]
+    ],
+    "freight_service_tax": "Order-specific; no marketlowest/netprofit claim."
+  },
+  "publish_profile": {
+    "category_id": 201334413,
+    "buyer_colours": [
+      {
+        "buyer": "Brown",
+        "supplier_key": "Yellow",
+        "supplier_label": "黄色",
+        "image_role": "M1"
+      },
+      {
+        "buyer": "Olive Grey",
+        "supplier_key": "Green",
+        "supplier_label": "绿色",
+        "image_role": "SKU_OliveGrey"
+      }
+    ],
+    "category_attributes": {
+      "Upper Material": [
+        "Faux Leather"
+      ],
+      "Midsole Material": [
+        "other"
+      ],
+      "Outsole Material": [
+        "MD"
+      ],
+      "Lining Material": [
+        "other"
+      ],
+      "Closure Type": [
+        "Lace-up"
+      ]
+    },
+    "local_intent": [
+      "撞色拼片系带休闲步行鞋"
+    ]
+  },
+  "state": "CURRENT_SOURCE_FACTS_REVIEWED_IMAGES_IN_PROGRESS_NOT_CREATED",
+  "family_review": "Compared2417/2416actual covers: sharedsegmentedsidewall but2418contrastYquarter/curvedtoeseam/lightoverlay differs2417largeplainquarter and rivet,2416broadrectangularpanel/rearlooppresent. 2413/2415differentcupsole andsidepanels. Not merely a colour/title variation. Currentcatalog/source dedup remains precreate gate."
 }
