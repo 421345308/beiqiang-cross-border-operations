@@ -1,0 +1,49 @@
+{
+  "style": "995",
+  "at": "2026-10-14T00:06:29.935305+00:00",
+  "items": [
+    {
+      "role": "M2",
+      "at": "2026-10-14T00:06:29.876286+00:00",
+      "state": "LOCAL_SOURCE_PRESERVING_VISUAL_PASS_NOT_UPLOADED",
+      "source": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/995准备/01_产品来源原图/11.jpg",
+      "source_sha256": "b6b1a8e64e6b4b7ee13e8a46db8772aff57cd24dee1e23653e2e4954227f5ef6",
+      "current_asset": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/995准备/05_AI候选/M2.png",
+      "current_sha256": "d6e151def8b696cce15c5988b13d15e110ffd3f8fe53fd6591fb8fcc25b0e366",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "full_generation_prompt": "Precise source-preserving B2B product detail edit, square canvas. Use ONLY the original photographed close-up in the lower part of the supplied Luqi995 image; remove ALL old promotional lettering and old poster border above it. Keep the exact cropped photograph boundaries and existing camera angle: black rear pull loop, dark raised padded-looking collar/opening, actual tan textured mesh quarter, the diagonal dark side insert with its tan border, the tan lace-guide detail at lower right and the original tan vamp/black tongue edge at right. Do NOT outpaint any missing shoe parts, make a whole shoe, add a heel, rotate the camera or invent internal structures. Improve faithful exposure, clarity and neutral clean framing only. Create a premium white layout with a restrained navy top header and a small orange underline. Header text exactly COLLAR & UPPER DETAILS. Short subline exactly Rear pull loop and textured quarter panels. Place the original close-up generously below, taking at least 70 percent of the canvas, keeping visible actual seams and textures. No added materials, breathability, comfort tests, footwear-width claims, certifications, price, MOQ, brand logos or unrelated images. English only. The task is to make actual construction details easy to inspect, not invent performance evidence.",
+      "visual_checks": {
+        "same_source_photo_geometry_colour_and_angle": true,
+        "source_seams_or_seven_sole_insets_and_arch_retained": true,
+        "English_text_correct_mobile_legible": true,
+        "old_promotional_claims_removed_no_new_performance_evidence": true
+      },
+      "scope": "M2entry/quarter detail, M3realbottom pattern; no repeated full-shoe proof, no invented angle."
+    },
+    {
+      "role": "M3",
+      "at": "2026-10-14T00:06:29.931472+00:00",
+      "state": "LOCAL_SOURCE_PRESERVING_VISUAL_PASS_NOT_UPLOADED",
+      "source": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/995准备/01_产品来源原图/10.jpg",
+      "source_sha256": "ca4937fbabd3537deef1ff68be449062b10d6489ca511d81810c39658fa3ed5c",
+      "current_asset": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/995准备/05_AI候选/M3.png",
+      "current_sha256": "cf78e77025ff41d9429dbc635dea3e7db5db4e3ca8c17072ff2982bb8f6df04a",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "full_generation_prompt": "Precise-object-edit of an actual Luqi995 outsole photograph for Alibaba. Use ONLY the ONE large full underside photograph on the RIGHT of the supplied source poster, preserving its EXACT complete outline, toe-at-top/heel-at-bottom orientation and photographed angle. Keep every actual tan/black region, the narrow longitudinal tan forefoot spine, ALL individual inset tan shapes, black perimeter/contact sections, curved forefoot grooves, diagonal ribbing and actual tan central arch/heel pattern exactly as photographed. Do not invent or simplify tread, add lugs, change materials, recolour or redesign any part. Remove BOTH circular duplicate inset photographs and ALL existing Chinese/marketing/grip lettering and old backdrop. On a square clean white canvas, show that single complete real sole generously, with clear top and bottom margins and light natural shadow only. A restrained navy header with small orange underline reads exactly SOLE PATTERN. A short subline reads exactly Contrast contact zones and curved grooves. No slip-resistance, grip test, waterproof, rubber/EVA material, hardness, dimensions, performance rating or other claims. No extra shoes, repeated insets, diagrams, logos or labels. Product detail comes from the actual sole photo; improve clean framing and faithful readability without adding physical evidence.",
+      "visual_checks": {
+        "same_source_photo_geometry_colour_and_angle": true,
+        "source_seams_or_seven_sole_insets_and_arch_retained": true,
+        "English_text_correct_mobile_legible": true,
+        "old_promotional_claims_removed_no_new_performance_evidence": true
+      },
+      "scope": "M2entry/quarter detail, M3realbottom pattern; no repeated full-shoe proof, no invented angle."
+    }
+  ],
+  "state": "TWO_DISTINCT_CURRENT_STRUCTURE_ROLES_VISUAL_PASS_NOT_UPLOADED"
+}

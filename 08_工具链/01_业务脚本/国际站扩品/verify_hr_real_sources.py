@@ -9,7 +9,8 @@ def check(pid,family,variant):
  if not(o.BASE/'商品'/pid/'after_get.json').exists():
   return {'id':pid,'state':'LOCAL_PREPARATION_NOT_FORMALLY_SUBMITTED'}
  f=o.BASE/'商品'/pid;got=o.b.load(f/'after_get.json');p=got['product'];report={'id':pid,'at':o.b.now(),'state':'REVIEWING','status':p['status'],'display':p['display']}
- if p['status']!='approved':o.b.save(f/'verification.json',report);return report
+ if p['status']!='approved':
+  report.update(state=o.product_readiness(p['status']),status_definition_source=o.PRODUCT_STATUS_DEFINITION_SOURCE);o.b.save(f/'verification.json',report);return report
  missing=[name for name in ['prepared.json','after_render.json','score.json']if not(f/name).exists()]
  if missing:
   report.update(state='FORMAL_EVIDENCE_INCOMPLETE',missing_files=missing)
@@ -22,7 +23,12 @@ def check(pid,family,variant):
  if(f/'company_quality_prepared.json').exists():
   correction=o.b.load(f/'company_quality_prepared.json');prep['expected_schema'].update(correction['expected_schema']);prep['fields']=list(set(prep['fields'])|set(correction['fields']))
  last=max((o.b.load(f/name).get('at','')for name in ['update_once.json','attribute_repair_once.json','gallery_repair_once.json','public_style_once.json','hero_quality_once.json','business_correction_once.json','optional_attribute_clear_once.json','title_repair_once.json','title_quality_once.json','group_quality_once.json','company_quality_once.json']if(f/name).exists()),default='')
- checks['formal_read_after_latest_write']=datetime.fromtimestamp((f/'after_get.json').stat().st_mtime,timezone.utc).isoformat()>last and datetime.fromtimestamp((f/'score.json').stat().st_mtime,timezone.utc).isoformat()>last
+ get_time=datetime.fromtimestamp((f/'after_get.json').stat().st_mtime,timezone.utc).isoformat()
+ render_time=datetime.fromtimestamp((f/'after_render.json').stat().st_mtime,timezone.utc).isoformat()
+ score_time=datetime.fromtimestamp((f/'score.json').stat().st_mtime,timezone.utc).isoformat()
+ score_error=o.b.load(f/'score_read_error.json')if(f/'score_read_error.json').exists()else{}
+ score_current=score_time>last and score_time>score_error.get('at','')
+ checks['formal_read_after_latest_write']=get_time>last and render_time>last
  for key,value in prep['expected_schema'].items():
   if key in ['sku','icbuCatProp','productKeywords']:continue
   checks[key]=o.contract.created_field_equivalent(key,value,actual.get(key))
@@ -72,15 +78,17 @@ def check(pid,family,variant):
  if(f/'company_quality_before_get.json').exists():
   prior=o.b.load(f/'company_quality_before_get.json')['product']
   checks['company_only_other_fields_preserved']=o.preserve(prior,prep['fields'])==o.preserve(p,prep['fields']) and prior['subject']==p['subject'] and prior['product_sku']==p['product_sku'] and prior['main_image']==p['main_image'] and prior['attributes']==p['attributes'] and prior['sourcing_trade']==p['sourcing_trade']
- scores=o.b.load(f/'score.json');result=scores.get('result',{});score=float(result['final_score'])if result.get('final_score')is not None else None;problem=json.loads(result['problem_map'])if isinstance(result.get('problem_map'),str)else result.get('problem_map',{})
+ scores=o.b.load(f/'score.json')if score_current else{};result=scores.get('result',{});score=float(result['final_score'])if result.get('final_score')is not None else None;problem=json.loads(result['problem_map'])if isinstance(result.get('problem_map'),str)else result.get('problem_map',{})
  checks['actual_score_at_least_5']=score is not None and score>=5
- checks['score_diagnostics_clear']=not any(problem.get('extendProblemMap',{}).values())and not problem.get('errorReasonList')
+ checks['score_diagnostics_clear']=score_current and not any(problem.get('extendProblemMap',{}).values())and not problem.get('errorReasonList')
  checks['display_y']=p['display']=='Y'
  keywords=[v for v in p.get('keywords',[])if v]
  wanted_keywords=prep.get('keyword_submission_selection',[plan['keywords']]if isinstance(plan['keywords'],str)else plan['keywords'])
  keyword_state='PERSISTED'if keywords==wanted_keywords else'LEGACY_FIELD_EMPTY_API_HIGHLIGHTS_MATCH_UI_PER_ID_PENDING'if not keywords and checks['summary_exact']else'MISMATCH'
  checks['keyword_observation_recorded']=keyword_state!='MISMATCH'
  report.update(state='FORMAL_FIELDS_SCORE_PASS'if all(checks.values())else'FORMAL_MISMATCH',checks=checks,failed=[k for k,v in checks.items()if not v],actual_score=score,target_score=5.0,score_source={'method':'alibaba.icbu.product.score.get','request_id':scores.get('request_id')},get_observed_at=datetime.fromtimestamp((f/'after_get.json').stat().st_mtime,timezone.utc).isoformat(),score_observed_at=datetime.fromtimestamp((f/'score.json').stat().st_mtime,timezone.utc).isoformat(),diagnostics=problem,keyword_state=keyword_state,keyword_write_verified=keyword_state=='PERSISTED',public_qa='PENDING',sku_bindings=bindings,inventory={'write':'OMITTED','formal_rows':inventory_observed,'physical_stock':'NOT_CONFIRMED'},scope='Formal get/render and actual score only. Empty legacy keywords are not claimed written; per-ID UI/public migration not yet tested. Normalization is limited to known image URLs, schema ordering/custom IDs and numeric price formatting.')
+ if not score_current:
+  report.update(state='FORMAL_FIELDS_PASS_PENDING_SCORE'if all(value for key,value in checks.items()if key not in ['actual_score_at_least_5','score_diagnostics_clear'])else'FORMAL_MISMATCH',score_observed_at=None,score_source={'method':'alibaba.icbu.product.score.get','available':False},score_read_error=score_error,prior_score_not_current=True)
  o.b.save(f/'verification.json',report);print(pid,report['state'],report.get('failed',[]));return report
 if __name__=='__main__':
  sys.stdout.reconfigure(encoding='utf8')

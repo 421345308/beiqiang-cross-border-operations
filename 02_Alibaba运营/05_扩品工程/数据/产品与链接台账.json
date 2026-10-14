@@ -14608,8 +14608,8 @@
       "aliases": [
         "HR030"
       ],
-      "source_state": "CANDIDATE",
-      "adopted_source_id": null,
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-hr-hr030-mna-1",
       "candidate_source_ids": [
         "src-hr-hr030-mna-1"
       ],
@@ -14661,13 +14661,13 @@
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943574507/V8/public_verification.json"
       ],
       "notes": [],
-      "next_action": "实源图文按逐ID阶段推进，未提交的保留本地草稿，已提交的只作完整正式回读；公开呈现分开登记。",
+      "next_action": "当前来源、正式字段及实际评分已核并双改；本轮API验收完成，公开抽检全量后统一进行，继续其余HR。",
       "local_assets": {
         "asset_roots": [
           "01_产品资产/02_可发布素材/HR030"
         ],
         "current_fields_file": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR030/事实与页面计划.json",
-        "state": "REAL_SOURCE_PLAN_SUBMITTED",
+        "state": "REAL_SOURCE_FORMAL_PASS",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题"
       },
       "classification": {
@@ -22873,7 +22873,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:15.536608+00:00",
+        "at": "2026-10-14T00:19:14.677469+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [
@@ -22909,7 +22909,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601969906452/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601969906452/formal_render.json",
-        "at": "2026-10-13T23:21:15.536608+00:00"
+        "at": "2026-10-14T00:19:14.677469+00:00"
       },
       "optimization": {
         "buyer_copy": {
@@ -22999,7 +22999,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-bded161d28f1",
           "real_artno": "936",
-          "at": "2026-10-13T23:21:18.828903+00:00",
+          "at": "2026-10-14T00:19:18.659026+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601969906452/prepared.json",
@@ -47052,7 +47052,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:14.124520+00:00",
+        "at": "2026-10-14T00:19:13.190417+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -47086,7 +47086,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/12000003229472/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/12000003229472/formal_render.json",
-        "at": "2026-10-13T23:21:14.124520+00:00"
+        "at": "2026-10-14T00:19:13.190417+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -47153,7 +47153,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-dz14546082-a-kb11",
           "real_artno": "KB11",
-          "at": "2026-10-13T23:21:17.241255+00:00",
+          "at": "2026-10-14T00:19:17.121775+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/12000003229472/prepared.json",
@@ -55436,7 +55436,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:13.769957+00:00",
+        "at": "2026-10-14T00:19:12.896201+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [
@@ -55472,7 +55472,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943497861/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943497861/formal_render.json",
-        "at": "2026-10-13T23:21:13.769957+00:00"
+        "at": "2026-10-14T00:19:12.896201+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -55549,7 +55549,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr020-9917",
           "real_artno": "9917",
-          "at": "2026-10-13T23:21:17.002092+00:00",
+          "at": "2026-10-14T00:19:16.875707+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943497861/prepared.json",
@@ -55600,7 +55600,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:13.801868+00:00",
+        "at": "2026-10-14T00:19:12.918870+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [
@@ -55636,7 +55636,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943530673/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943530673/formal_render.json",
-        "at": "2026-10-13T23:21:13.801868+00:00"
+        "at": "2026-10-14T00:19:12.918870+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -55703,7 +55703,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr020-9917",
           "real_artno": "9917",
-          "at": "2026-10-13T23:21:17.014928+00:00",
+          "at": "2026-10-14T00:19:16.891551+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943530673/prepared.json",
@@ -55754,7 +55754,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:13.827748+00:00",
+        "at": "2026-10-14T00:19:12.941158+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [
@@ -55790,7 +55790,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943558469/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943558469/formal_render.json",
-        "at": "2026-10-13T23:21:13.827748+00:00"
+        "at": "2026-10-14T00:19:12.941158+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -55857,7 +55857,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr020-9917",
           "real_artno": "9917",
-          "at": "2026-10-13T23:21:17.027300+00:00",
+          "at": "2026-10-14T00:19:16.908754+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943558469/prepared.json",
@@ -56494,7 +56494,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:13.856002+00:00",
+        "at": "2026-10-14T00:19:12.963722+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [
@@ -56530,7 +56530,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943527861/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943527861/formal_render.json",
-        "at": "2026-10-13T23:21:13.856002+00:00"
+        "at": "2026-10-14T00:19:12.963722+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -56597,7 +56597,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr024-8856",
           "real_artno": "8856",
-          "at": "2026-10-13T23:21:17.044953+00:00",
+          "at": "2026-10-14T00:19:16.937558+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943527861/prepared.json",
@@ -56648,7 +56648,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:13.884505+00:00",
+        "at": "2026-10-14T00:19:12.987178+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [
@@ -56684,7 +56684,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943622296/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943622296/formal_render.json",
-        "at": "2026-10-13T23:21:13.884505+00:00"
+        "at": "2026-10-14T00:19:12.987178+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -56751,7 +56751,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr024-8856",
           "real_artno": "8856",
-          "at": "2026-10-13T23:21:17.056291+00:00",
+          "at": "2026-10-14T00:19:16.952506+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943622296/prepared.json",
@@ -58242,7 +58242,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:14.158849+00:00",
+        "at": "2026-10-14T00:19:13.211817+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -58276,7 +58276,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943544741/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943544741/formal_render.json",
-        "at": "2026-10-13T23:21:14.158849+00:00"
+        "at": "2026-10-14T00:19:13.211817+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -58343,7 +58343,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr029-726c",
           "real_artno": "726C",
-          "at": "2026-10-13T23:21:17.266851+00:00",
+          "at": "2026-10-14T00:19:17.146975+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943544741/prepared.json",
@@ -58395,7 +58395,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:14.193768+00:00",
+        "at": "2026-10-14T00:19:13.232671+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -58429,7 +58429,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943558646/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943558646/formal_render.json",
-        "at": "2026-10-13T23:21:14.193768+00:00"
+        "at": "2026-10-14T00:19:13.232671+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -58496,7 +58496,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr029-726c",
           "real_artno": "726C",
-          "at": "2026-10-13T23:21:17.283055+00:00",
+          "at": "2026-10-14T00:19:17.162272+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943558646/prepared.json",
@@ -58548,7 +58548,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:13.525650+00:00",
+        "at": "2026-10-14T00:19:12.651558+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -58582,7 +58582,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943574507/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943574507/formal_render.json",
-        "at": "2026-10-13T23:21:13.525650+00:00"
+        "at": "2026-10-14T00:19:12.651558+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -58649,7 +58649,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr030-mna-1",
           "real_artno": "MNA-1",
-          "at": "2026-10-13T23:21:16.879810+00:00",
+          "at": "2026-10-14T00:19:16.729709+00:00",
           "next_action": "API验收、货源双改及既有公开图文/EU组合核验通过；旧keywords空值照实记录，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943574507/prepared.json",
@@ -58699,47 +58699,48 @@
       "id": "1601943545775",
       "product_id": "HR030",
       "model": "HR030-B",
-      "url": "https://www.alibaba.com/product-detail/Men-s-Cream-Canvas-Casual-Sneakers_1601943545775.html",
-      "record_type": "来源待补",
-      "bound_source_id": null,
-      "source_relation": "REAL_SOURCE_CANDIDATE_REPLACEMENT_PENDING_FORMAL_READ",
+      "url": "https://www.alibaba.com/product-detail/Unisex-Thick-Sole-Canvas-Sneakers-Lace_1601943545775.html",
+      "record_type": "当前实款正式绑定",
+      "bound_source_id": "src-hr-hr030-mna-1",
+      "source_relation": "SAME_ID_REAL_SOURCE_REPLACEMENT_FORMAL_PASS",
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-07T04:25:00.978045+00:00",
-        "scope": "历史目录回读；不等于来源/全内容验收"
+        "at": "2026-10-14T00:19:12.679744+00:00",
+        "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "notes": "当前采用铭阳鞋业 MNA-1，原ID整鞋替换正式字段及评分通过；旧候选、旧鞋型和旧采购价不参与当前执行。来源、当前图文和逐ID证据见本款唯一入口；已提交动作不重放。",
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943545775/formal_get.json",
-        "at": "2026-10-12T22:36:05.986488+00:00",
-        "scope": "完整正式字段；公司六图、简介、通用FAQ单独验收"
+        "at": "2026-10-14T00:15:19.273093+00:00",
+        "scope": "完整商品正式字段；本轮实源换款逐ID字段/5.00评分通过，公开与旧关键词迁移证据分列"
       },
       "current_platform_fields": {
-        "at": "2026-10-12T22:36:05.986488+00:00",
-        "title": "Men's Cream Canvas Casual Sneakers Vulcanized Walking Shoes EU 36-45 Model HR030-B",
+        "at": "2026-10-14T00:15:19.273093+00:00",
+        "title": "Unisex Thick Sole Canvas Sneakers Lace-Up Low Top Casual Shoes for Fashion Footwear Wholesale",
         "keywords": [
           ""
         ],
         "main_images": [
-          "https://sc04.alicdn.com/kf/A478275d4584f4b058e863bbfb4ea7d42X.png",
-          "https://sc04.alicdn.com/kf/A6a115534628c4030a3eca7ef784c1a948.png",
-          "https://sc04.alicdn.com/kf/A4252ab51b9704997be349ab9f7b83163O.png",
-          "https://sc04.alicdn.com/kf/A21ec0b571eeb455cb39870109cce62dbC.png",
-          "https://sc04.alicdn.com/kf/Afb7101b223b24272a4787a6c5cc6f0f5D.png",
-          "https://sc04.alicdn.com/kf/A45bc1684ee094f8e961db1436bab4dfft.png"
+          "https://sc04.alicdn.com/kf/H768fff115ecb4bc591d8708d9a102fcdZ.jpg",
+          "https://sc04.alicdn.com/kf/H1e22c86e1832401ab52694d977e43c62E.jpg",
+          "https://sc04.alicdn.com/kf/Hc21a8cb6251c4cdb94d7d7d1d799eeabc.jpg",
+          "https://sc04.alicdn.com/kf/H961710fe62fc4d3bbb39a4ecebb1e132I.jpg",
+          "https://sc04.alicdn.com/kf/H0dec2e3904fe4b049fcba6b7552942b9R.jpg",
+          "https://sc04.alicdn.com/kf/H281467d09f4b48368c335900f583a9c9r.jpg"
         ],
         "category_id": 201334413,
         "display": "Y",
         "status": "approved",
-        "url": "https://www.alibaba.com/product-detail/Men-s-Cream-Canvas-Casual-Sneakers_1601943545775.html",
-        "scope": "同ID正式回读；与公开验收分开"
+        "url": "https://www.alibaba.com/product-detail/Unisex-Thick-Sole-Canvas-Sneakers-Lace_1601943545775.html",
+        "scope": "Exact-ID whole-shoe replacement formal get; public presentation and legacy keyword migration tracked separately"
       },
       "local_sync": {
-        "state": "COMPANY_BUNDLE_FORMAL_PASS",
+        "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943545775/formal_get.json",
-        "next_action": "六图、公司简介与通用FAQ正式回读通过；只待该ID公开页呈现核验，不重复提交"
+        "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943545775/formal_render.json",
+        "at": "2026-10-14T00:19:12.679744+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -58801,11 +58802,11 @@
           "next_action": "六图、公司简介与通用FAQ正式回读通过；只待该ID公开页呈现核验，不重复提交"
         },
         "source_replacement": {
-          "state": "REVIEWING",
+          "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr030-mna-1",
           "real_artno": "MNA-1",
-          "at": "2026-10-13T23:21:16.892960+00:00",
-          "next_action": "仅回读审核状态，审核通过后核材料/SKU/价格/图文与实际评分；不得重复提交。",
+          "at": "2026-10-14T00:19:16.743874+00:00",
+          "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943545775/prepared.json",
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943545775/update_once.json",
@@ -58818,25 +58819,25 @@
         }
       },
       "catalog_fields": {
-        "at": "2026-10-10T06:28:16.283236+00:00",
+        "at": "2026-10-14T00:15:19.273093+00:00",
         "model": "HR030-B",
-        "title": "Men's Cream Canvas Casual Sneakers Vulcanized Walking Shoes EU 36-45 Model HR030-B",
+        "title": "Unisex Thick Sole Canvas Sneakers Lace-Up Low Top Casual Shoes for Fashion Footwear Wholesale",
         "keywords": [
           ""
         ],
         "main_images": [
-          "https://sc04.alicdn.com/kf/A478275d4584f4b058e863bbfb4ea7d42X.png",
-          "https://sc04.alicdn.com/kf/A6a115534628c4030a3eca7ef784c1a948.png",
-          "https://sc04.alicdn.com/kf/A4252ab51b9704997be349ab9f7b83163O.png",
-          "https://sc04.alicdn.com/kf/A21ec0b571eeb455cb39870109cce62dbC.png",
-          "https://sc04.alicdn.com/kf/Afb7101b223b24272a4787a6c5cc6f0f5D.png",
-          "https://sc04.alicdn.com/kf/A45bc1684ee094f8e961db1436bab4dfft.png"
+          "https://sc04.alicdn.com/kf/H768fff115ecb4bc591d8708d9a102fcdZ.jpg",
+          "https://sc04.alicdn.com/kf/H1e22c86e1832401ab52694d977e43c62E.jpg",
+          "https://sc04.alicdn.com/kf/Hc21a8cb6251c4cdb94d7d7d1d799eeabc.jpg",
+          "https://sc04.alicdn.com/kf/H961710fe62fc4d3bbb39a4ecebb1e132I.jpg",
+          "https://sc04.alicdn.com/kf/H0dec2e3904fe4b049fcba6b7552942b9R.jpg",
+          "https://sc04.alicdn.com/kf/H281467d09f4b48368c335900f583a9c9r.jpg"
         ],
         "category_id": 201334413,
         "display": "Y",
         "status": "approved",
-        "url": "https://www.alibaba.com/product-detail/Men-s-Cream-Canvas-Casual-Sneakers_1601943545775.html",
-        "scope": "product.list；不是全字段/公开验收"
+        "url": "https://www.alibaba.com/product-detail/Unisex-Thick-Sole-Canvas-Sneakers-Lace_1601943545775.html",
+        "scope": "Exact-ID whole-shoe replacement formal get; public presentation and legacy keyword migration tracked separately"
       },
       "platform_group": {
         "id": "972130291",
@@ -58855,7 +58856,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:14.011384+00:00",
+        "at": "2026-10-14T00:19:13.094273+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -58889,7 +58890,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943665060/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943665060/formal_render.json",
-        "at": "2026-10-13T23:21:14.011384+00:00"
+        "at": "2026-10-14T00:19:13.094273+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -58956,7 +58957,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr031-d11",
           "real_artno": "D11",
-          "at": "2026-10-13T23:21:17.148012+00:00",
+          "at": "2026-10-14T00:19:17.055190+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943665060/prepared.json",
@@ -59007,7 +59008,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:14.039857+00:00",
+        "at": "2026-10-14T00:19:13.121696+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -59041,7 +59042,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943651120/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943651120/formal_render.json",
-        "at": "2026-10-13T23:21:14.039857+00:00"
+        "at": "2026-10-14T00:19:13.121696+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -59108,7 +59109,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr031-d11",
           "real_artno": "D11",
-          "at": "2026-10-13T23:21:17.162736+00:00",
+          "at": "2026-10-14T00:19:17.067195+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943651120/prepared.json",
@@ -59159,7 +59160,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:15.151813+00:00",
+        "at": "2026-10-14T00:19:14.061605+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -59193,7 +59194,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943665138/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943665138/formal_render.json",
-        "at": "2026-10-13T23:21:15.151813+00:00"
+        "at": "2026-10-14T00:19:14.061605+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -59260,7 +59261,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr032-ch33",
           "real_artno": "CH33",
-          "at": "2026-10-13T23:21:18.426238+00:00",
+          "at": "2026-10-14T00:19:18.136221+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943665138/prepared.json",
@@ -59312,7 +59313,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:15.174371+00:00",
+        "at": "2026-10-14T00:19:14.085373+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -59346,7 +59347,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943539818/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943539818/formal_render.json",
-        "at": "2026-10-13T23:21:15.174371+00:00"
+        "at": "2026-10-14T00:19:14.085373+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -59413,7 +59414,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr032-ch33",
           "real_artno": "CH33",
-          "at": "2026-10-13T23:21:18.457500+00:00",
+          "at": "2026-10-14T00:19:18.156867+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943539818/prepared.json",
@@ -60041,7 +60042,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:13.908209+00:00",
+        "at": "2026-10-14T00:19:13.008780+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -60075,7 +60076,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943568763/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943568763/formal_render.json",
-        "at": "2026-10-13T23:21:13.908209+00:00"
+        "at": "2026-10-14T00:19:13.008780+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -60142,7 +60143,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr035-888-d",
           "real_artno": "888-D",
-          "at": "2026-10-13T23:21:17.076385+00:00",
+          "at": "2026-10-14T00:19:16.979156+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943568763/prepared.json",
@@ -60193,7 +60194,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:13.937403+00:00",
+        "at": "2026-10-14T00:19:13.030663+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -60227,7 +60228,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943680112/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943680112/formal_render.json",
-        "at": "2026-10-13T23:21:13.937403+00:00"
+        "at": "2026-10-14T00:19:13.030663+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -60294,7 +60295,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr035-888-d",
           "real_artno": "888-D",
-          "at": "2026-10-13T23:21:17.088484+00:00",
+          "at": "2026-10-14T00:19:16.992110+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943680112/prepared.json",
@@ -60345,7 +60346,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:14.067943+00:00",
+        "at": "2026-10-14T00:19:13.146729+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -60379,7 +60380,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943627431/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943627431/formal_render.json",
-        "at": "2026-10-13T23:21:14.067943+00:00"
+        "at": "2026-10-14T00:19:13.146729+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -60446,7 +60447,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr036-1936",
           "real_artno": "1936",
-          "at": "2026-10-13T23:21:17.195111+00:00",
+          "at": "2026-10-14T00:19:17.090194+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943627431/prepared.json",
@@ -60498,7 +60499,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:14.096102+00:00",
+        "at": "2026-10-14T00:19:13.168747+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -60532,7 +60533,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943561786/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943561786/formal_render.json",
-        "at": "2026-10-13T23:21:14.096102+00:00"
+        "at": "2026-10-14T00:19:13.168747+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -60599,7 +60600,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr036-1936",
           "real_artno": "1936",
-          "at": "2026-10-13T23:21:17.213262+00:00",
+          "at": "2026-10-14T00:19:17.101558+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943561786/prepared.json",
@@ -60651,7 +60652,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:15.093728+00:00",
+        "at": "2026-10-14T00:19:14.006337+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -60685,7 +60686,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943654301/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943654301/formal_render.json",
-        "at": "2026-10-13T23:21:15.093728+00:00"
+        "at": "2026-10-14T00:19:14.006337+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -60752,7 +60753,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr037-w33",
           "real_artno": "W33",
-          "at": "2026-10-13T23:21:18.366081+00:00",
+          "at": "2026-10-14T00:19:18.070021+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943654301/prepared.json",
@@ -60804,7 +60805,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:15.120883+00:00",
+        "at": "2026-10-14T00:19:14.035631+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -60838,7 +60839,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943674209/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943674209/formal_render.json",
-        "at": "2026-10-13T23:21:15.120883+00:00"
+        "at": "2026-10-14T00:19:14.035631+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -60905,7 +60906,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr037-w33",
           "real_artno": "W33",
-          "at": "2026-10-13T23:21:18.388943+00:00",
+          "at": "2026-10-14T00:19:18.096827+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943674209/prepared.json",
@@ -60957,7 +60958,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:13.961904+00:00",
+        "at": "2026-10-14T00:19:13.051497+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -60991,7 +60992,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943620588/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943620588/formal_render.json",
-        "at": "2026-10-13T23:21:13.961904+00:00"
+        "at": "2026-10-14T00:19:13.051497+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -61058,7 +61059,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr038-ar288",
           "real_artno": "AR288",
-          "at": "2026-10-13T23:21:17.110109+00:00",
+          "at": "2026-10-14T00:19:17.017040+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943620588/prepared.json",
@@ -61109,7 +61110,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:13.983572+00:00",
+        "at": "2026-10-14T00:19:13.073076+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -61143,7 +61144,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943677234/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943677234/formal_render.json",
-        "at": "2026-10-13T23:21:13.983572+00:00"
+        "at": "2026-10-14T00:19:13.073076+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -61210,7 +61211,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr038-ar288",
           "real_artno": "AR288",
-          "at": "2026-10-13T23:21:17.123769+00:00",
+          "at": "2026-10-14T00:19:17.030643+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943677234/prepared.json",
@@ -61705,7 +61706,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:15.557075+00:00",
+        "at": "2026-10-14T00:19:14.721635+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -61739,7 +61740,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943686274/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943686274/formal_render.json",
-        "at": "2026-10-13T23:21:15.557075+00:00"
+        "at": "2026-10-14T00:19:14.721635+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -61806,7 +61807,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr040-813",
           "real_artno": "813",
-          "at": "2026-10-13T23:21:18.854894+00:00",
+          "at": "2026-10-14T00:19:18.694726+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943686274/prepared.json",
@@ -61858,7 +61859,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:15.577630+00:00",
+        "at": "2026-10-14T00:19:14.764564+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -61892,7 +61893,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943620678/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943620678/formal_render.json",
-        "at": "2026-10-13T23:21:15.577630+00:00"
+        "at": "2026-10-14T00:19:14.764564+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -61959,7 +61960,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr040-813",
           "real_artno": "813",
-          "at": "2026-10-13T23:21:18.873246+00:00",
+          "at": "2026-10-14T00:19:18.712979+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943620678/prepared.json",
@@ -62011,7 +62012,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:15.016157+00:00",
+        "at": "2026-10-14T00:19:13.928042+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -62045,7 +62046,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943614836/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943614836/formal_render.json",
-        "at": "2026-10-13T23:21:15.016157+00:00"
+        "at": "2026-10-14T00:19:13.928042+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -62112,7 +62113,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr041-c268",
           "real_artno": "C268",
-          "at": "2026-10-13T23:21:18.288249+00:00",
+          "at": "2026-10-14T00:19:17.957322+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943614836/prepared.json",
@@ -62164,7 +62165,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:15.042685+00:00",
+        "at": "2026-10-14T00:19:13.951859+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -62198,7 +62199,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943641737/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943641737/formal_render.json",
-        "at": "2026-10-13T23:21:15.042685+00:00"
+        "at": "2026-10-14T00:19:13.951859+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -62265,7 +62266,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr041-c268",
           "real_artno": "C268",
-          "at": "2026-10-13T23:21:18.312052+00:00",
+          "at": "2026-10-14T00:19:17.987784+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943641737/prepared.json",
@@ -62317,7 +62318,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:15.068529+00:00",
+        "at": "2026-10-14T00:19:13.981700+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -62351,7 +62352,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943608942/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943608942/formal_render.json",
-        "at": "2026-10-13T23:21:15.068529+00:00"
+        "at": "2026-10-14T00:19:13.981700+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -62418,7 +62419,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr041-c268",
           "real_artno": "C268",
-          "at": "2026-10-13T23:21:18.331824+00:00",
+          "at": "2026-10-14T00:19:18.017360+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943608942/prepared.json",
@@ -62470,7 +62471,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:13.559168+00:00",
+        "at": "2026-10-14T00:19:12.705873+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -62504,7 +62505,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943703336/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943703336/formal_render.json",
-        "at": "2026-10-13T23:21:13.559168+00:00"
+        "at": "2026-10-14T00:19:12.705873+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -62571,7 +62572,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr042-9818",
           "real_artno": "9818",
-          "at": "2026-10-13T23:21:16.904065+00:00",
+          "at": "2026-10-14T00:19:16.763901+00:00",
           "next_action": "API验收、货源双改及既有公开图文/EU组合核验通过；旧keywords空值照实记录，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943703336/prepared.json",
@@ -62628,7 +62629,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:13.613753+00:00",
+        "at": "2026-10-14T00:19:12.757026+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -62662,7 +62663,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943747024/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943747024/formal_render.json",
-        "at": "2026-10-13T23:21:13.613753+00:00"
+        "at": "2026-10-14T00:19:12.757026+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -62729,7 +62730,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr042-9818",
           "real_artno": "9818",
-          "at": "2026-10-13T23:21:16.920312+00:00",
+          "at": "2026-10-14T00:19:16.779579+00:00",
           "next_action": "API验收、货源双改及既有公开图文/EU组合核验通过；旧keywords空值照实记录，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943747024/prepared.json",
@@ -62786,7 +62787,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:13.647060+00:00",
+        "at": "2026-10-14T00:19:12.789604+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -62820,7 +62821,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943639708/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943639708/formal_render.json",
-        "at": "2026-10-13T23:21:13.647060+00:00"
+        "at": "2026-10-14T00:19:12.789604+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -62887,7 +62888,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr042-9818",
           "real_artno": "9818",
-          "at": "2026-10-13T23:21:16.935671+00:00",
+          "at": "2026-10-14T00:19:16.794829+00:00",
           "next_action": "API验收、货源双改及既有公开图文/EU组合核验通过；旧keywords空值照实记录，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943639708/prepared.json",
@@ -62944,7 +62945,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:15.678669+00:00",
+        "at": "2026-10-14T00:19:14.931253+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -62978,7 +62979,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943607904/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943607904/formal_render.json",
-        "at": "2026-10-13T23:21:15.678669+00:00"
+        "at": "2026-10-14T00:19:14.931253+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -63045,7 +63046,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr043-556",
           "real_artno": "556",
-          "at": "2026-10-13T23:21:18.947963+00:00",
+          "at": "2026-10-14T00:19:18.822829+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943607904/prepared.json",
@@ -63097,7 +63098,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:15.703089+00:00",
+        "at": "2026-10-14T00:19:14.979333+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -63131,7 +63132,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943621884/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943621884/formal_render.json",
-        "at": "2026-10-13T23:21:15.703089+00:00"
+        "at": "2026-10-14T00:19:14.979333+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -63204,7 +63205,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr043-556",
           "real_artno": "556",
-          "at": "2026-10-13T23:21:18.961821+00:00",
+          "at": "2026-10-14T00:19:18.842627+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943621884/prepared.json",
@@ -63256,7 +63257,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:15.731853+00:00",
+        "at": "2026-10-14T00:19:15.033365+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -63290,7 +63291,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943695412/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943695412/formal_render.json",
-        "at": "2026-10-13T23:21:15.731853+00:00"
+        "at": "2026-10-14T00:19:15.033365+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -63357,7 +63358,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr043-556",
           "real_artno": "556",
-          "at": "2026-10-13T23:21:18.976020+00:00",
+          "at": "2026-10-14T00:19:18.861522+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943695412/prepared.json",
@@ -63841,7 +63842,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:15.759835+00:00",
+        "at": "2026-10-14T00:19:15.090432+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -63875,7 +63876,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943687504/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943687504/formal_render.json",
-        "at": "2026-10-13T23:21:15.759835+00:00"
+        "at": "2026-10-14T00:19:15.090432+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -63942,7 +63943,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr045-f18",
           "real_artno": "F18",
-          "at": "2026-10-13T23:21:19.001175+00:00",
+          "at": "2026-10-14T00:19:18.895954+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943687504/prepared.json",
@@ -63994,7 +63995,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:15.786089+00:00",
+        "at": "2026-10-14T00:19:15.135099+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -64028,7 +64029,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943660642/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943660642/formal_render.json",
-        "at": "2026-10-13T23:21:15.786089+00:00"
+        "at": "2026-10-14T00:19:15.135099+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -64095,7 +64096,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr045-f18",
           "real_artno": "F18",
-          "at": "2026-10-13T23:21:19.016992+00:00",
+          "at": "2026-10-14T00:19:18.914181+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943660642/prepared.json",
@@ -64147,7 +64148,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:15.808077+00:00",
+        "at": "2026-10-14T00:19:15.180945+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -64181,7 +64182,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943723312/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943723312/formal_render.json",
-        "at": "2026-10-13T23:21:15.808077+00:00"
+        "at": "2026-10-14T00:19:15.180945+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -64248,7 +64249,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr045-f18",
           "real_artno": "F18",
-          "at": "2026-10-13T23:21:19.032712+00:00",
+          "at": "2026-10-14T00:19:18.932500+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943723312/prepared.json",
@@ -64300,7 +64301,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:15.827348+00:00",
+        "at": "2026-10-14T00:19:15.230198+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -64334,7 +64335,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943660658/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943660658/formal_render.json",
-        "at": "2026-10-13T23:21:15.827348+00:00"
+        "at": "2026-10-14T00:19:15.230198+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -64401,7 +64402,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr046-ar299",
           "real_artno": "AR299",
-          "at": "2026-10-13T23:21:19.061855+00:00",
+          "at": "2026-10-14T00:19:18.965703+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943660658/prepared.json",
@@ -64453,7 +64454,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:15.848987+00:00",
+        "at": "2026-10-14T00:19:15.272938+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -64487,7 +64488,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943773037/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943773037/formal_render.json",
-        "at": "2026-10-13T23:21:15.848987+00:00"
+        "at": "2026-10-14T00:19:15.272938+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -64554,7 +64555,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr046-ar299",
           "real_artno": "AR299",
-          "at": "2026-10-13T23:21:19.079774+00:00",
+          "at": "2026-10-14T00:19:18.986180+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943773037/prepared.json",
@@ -64606,7 +64607,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:15.870387+00:00",
+        "at": "2026-10-14T00:19:15.318158+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -64640,7 +64641,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943694473/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943694473/formal_render.json",
-        "at": "2026-10-13T23:21:15.870387+00:00"
+        "at": "2026-10-14T00:19:15.318158+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -64707,7 +64708,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr046-ar299",
           "real_artno": "AR299",
-          "at": "2026-10-13T23:21:19.098145+00:00",
+          "at": "2026-10-14T00:19:19.001688+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943694473/prepared.json",
@@ -64759,7 +64760,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:15.893377+00:00",
+        "at": "2026-10-14T00:19:15.396727+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -64793,7 +64794,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943670678/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943670678/formal_render.json",
-        "at": "2026-10-13T23:21:15.893377+00:00"
+        "at": "2026-10-14T00:19:15.396727+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -64866,7 +64867,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr047-0073",
           "real_artno": "0073",
-          "at": "2026-10-13T23:21:19.133483+00:00",
+          "at": "2026-10-14T00:19:19.032438+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943670678/prepared.json",
@@ -64918,7 +64919,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:15.914493+00:00",
+        "at": "2026-10-14T00:19:15.491378+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -64952,7 +64953,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943677652/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943677652/formal_render.json",
-        "at": "2026-10-13T23:21:15.914493+00:00"
+        "at": "2026-10-14T00:19:15.491378+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -65019,7 +65020,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr047-0073",
           "real_artno": "0073",
-          "at": "2026-10-13T23:21:19.152792+00:00",
+          "at": "2026-10-14T00:19:19.048396+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943677652/prepared.json",
@@ -65071,7 +65072,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:15.935662+00:00",
+        "at": "2026-10-14T00:19:15.560507+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -65105,7 +65106,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943767083/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943767083/formal_render.json",
-        "at": "2026-10-13T23:21:15.935662+00:00"
+        "at": "2026-10-14T00:19:15.560507+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -65172,7 +65173,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr047-0073",
           "real_artno": "0073",
-          "at": "2026-10-13T23:21:19.174945+00:00",
+          "at": "2026-10-14T00:19:19.062761+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943767083/prepared.json",
@@ -65224,7 +65225,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:16.014743+00:00",
+        "at": "2026-10-14T00:19:15.757276+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -65258,7 +65259,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943649788/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943649788/formal_render.json",
-        "at": "2026-10-13T23:21:16.014743+00:00"
+        "at": "2026-10-14T00:19:15.757276+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -65325,7 +65326,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr048-964",
           "real_artno": "964",
-          "at": "2026-10-13T23:21:19.282918+00:00",
+          "at": "2026-10-14T00:19:19.155520+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943649788/prepared.json",
@@ -65377,7 +65378,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:16.037372+00:00",
+        "at": "2026-10-14T00:19:15.786553+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -65411,7 +65412,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943767092/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943767092/formal_render.json",
-        "at": "2026-10-13T23:21:16.037372+00:00"
+        "at": "2026-10-14T00:19:15.786553+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -65478,7 +65479,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr048-964",
           "real_artno": "964",
-          "at": "2026-10-13T23:21:19.307525+00:00",
+          "at": "2026-10-14T00:19:19.169486+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943767092/prepared.json",
@@ -65530,7 +65531,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:16.060892+00:00",
+        "at": "2026-10-14T00:19:15.813667+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -65564,7 +65565,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943607995/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943607995/formal_render.json",
-        "at": "2026-10-13T23:21:16.060892+00:00"
+        "at": "2026-10-14T00:19:15.813667+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -65631,7 +65632,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr048-964",
           "real_artno": "964",
-          "at": "2026-10-13T23:21:19.331721+00:00",
+          "at": "2026-10-14T00:19:19.185369+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943607995/prepared.json",
@@ -65683,7 +65684,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:14.766363+00:00",
+        "at": "2026-10-14T00:19:13.720562+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -65717,7 +65718,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943633918/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943633918/formal_render.json",
-        "at": "2026-10-13T23:21:14.766363+00:00"
+        "at": "2026-10-14T00:19:13.720562+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -65784,7 +65785,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr049-b75",
           "real_artno": "B75",
-          "at": "2026-10-13T23:21:17.983520+00:00",
+          "at": "2026-10-14T00:19:17.744326+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943633918/prepared.json",
@@ -65836,7 +65837,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:14.799207+00:00",
+        "at": "2026-10-14T00:19:13.745354+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -65870,7 +65871,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943710448/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943710448/formal_render.json",
-        "at": "2026-10-13T23:21:14.799207+00:00"
+        "at": "2026-10-14T00:19:13.745354+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -65937,7 +65938,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr049-b75",
           "real_artno": "B75",
-          "at": "2026-10-13T23:21:18.025202+00:00",
+          "at": "2026-10-14T00:19:17.759688+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943710448/prepared.json",
@@ -65989,7 +65990,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:14.825461+00:00",
+        "at": "2026-10-14T00:19:13.768073+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -66023,7 +66024,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943639863/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943639863/formal_render.json",
-        "at": "2026-10-13T23:21:14.825461+00:00"
+        "at": "2026-10-14T00:19:13.768073+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -66090,7 +66091,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr049-b75",
           "real_artno": "B75",
-          "at": "2026-10-13T23:21:18.059361+00:00",
+          "at": "2026-10-14T00:19:17.776773+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943639863/prepared.json",
@@ -66142,7 +66143,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:15.196347+00:00",
+        "at": "2026-10-14T00:19:14.111977+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -66176,7 +66177,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943774082/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943774082/formal_render.json",
-        "at": "2026-10-13T23:21:15.196347+00:00"
+        "at": "2026-10-14T00:19:14.111977+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -66249,7 +66250,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr050-315",
           "real_artno": "315",
-          "at": "2026-10-13T23:21:18.492305+00:00",
+          "at": "2026-10-14T00:19:18.187947+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943774082/prepared.json",
@@ -66301,7 +66302,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:15.218108+00:00",
+        "at": "2026-10-14T00:19:14.144024+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -66335,7 +66336,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943766117/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943766117/formal_render.json",
-        "at": "2026-10-13T23:21:15.218108+00:00"
+        "at": "2026-10-14T00:19:14.144024+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -66402,7 +66403,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr050-315",
           "real_artno": "315",
-          "at": "2026-10-13T23:21:18.513228+00:00",
+          "at": "2026-10-14T00:19:18.205249+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943766117/prepared.json",
@@ -66454,7 +66455,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:15.239628+00:00",
+        "at": "2026-10-14T00:19:14.175331+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -66488,7 +66489,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943660717/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943660717/formal_render.json",
-        "at": "2026-10-13T23:21:15.239628+00:00"
+        "at": "2026-10-14T00:19:14.175331+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -66555,7 +66556,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr050-315",
           "real_artno": "315",
-          "at": "2026-10-13T23:21:18.536326+00:00",
+          "at": "2026-10-14T00:19:18.233607+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943660717/prepared.json",
@@ -66607,7 +66608,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:15.431355+00:00",
+        "at": "2026-10-14T00:19:14.470203+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -66641,7 +66642,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943653819/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943653819/formal_render.json",
-        "at": "2026-10-13T23:21:15.431355+00:00"
+        "at": "2026-10-14T00:19:14.470203+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -66708,7 +66709,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-bded161d28f1",
           "real_artno": "936",
-          "at": "2026-10-13T23:21:18.754232+00:00",
+          "at": "2026-10-14T00:19:18.574185+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943653819/prepared.json",
@@ -66760,7 +66761,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:15.507601+00:00",
+        "at": "2026-10-14T00:19:14.623710+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -66815,7 +66816,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601969872083/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601969872083/formal_render.json",
-        "at": "2026-10-13T23:21:15.507601+00:00"
+        "at": "2026-10-14T00:19:14.623710+00:00"
       },
       "platform_group": {
         "id": "973003809",
@@ -66828,7 +66829,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-bded161d28f1",
           "real_artno": "936",
-          "at": "2026-10-13T23:21:18.812305+00:00",
+          "at": "2026-10-14T00:19:18.638658+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601969872083/prepared.json",
@@ -66853,7 +66854,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:15.455504+00:00",
+        "at": "2026-10-14T00:19:14.522904+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -66887,7 +66888,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943750198/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943750198/formal_render.json",
-        "at": "2026-10-13T23:21:15.455504+00:00"
+        "at": "2026-10-14T00:19:14.522904+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -66954,7 +66955,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-bded161d28f1",
           "real_artno": "936",
-          "at": "2026-10-13T23:21:18.776694+00:00",
+          "at": "2026-10-14T00:19:18.598348+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943750198/prepared.json",
@@ -67006,7 +67007,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:15.481153+00:00",
+        "at": "2026-10-14T00:19:14.572612+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -67040,7 +67041,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943651773/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943651773/formal_render.json",
-        "at": "2026-10-13T23:21:15.481153+00:00"
+        "at": "2026-10-14T00:19:14.572612+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -67107,7 +67108,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-bded161d28f1",
           "real_artno": "936",
-          "at": "2026-10-13T23:21:18.792666+00:00",
+          "at": "2026-10-14T00:19:18.618970+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943651773/prepared.json",
@@ -67159,7 +67160,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:14.850786+00:00",
+        "at": "2026-10-14T00:19:13.793094+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -67193,7 +67194,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943742273/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943742273/formal_render.json",
-        "at": "2026-10-13T23:21:14.850786+00:00"
+        "at": "2026-10-14T00:19:13.793094+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -67266,7 +67267,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr052-d818",
           "real_artno": "D818",
-          "at": "2026-10-13T23:21:18.109868+00:00",
+          "at": "2026-10-14T00:19:17.806299+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943742273/prepared.json",
@@ -67318,7 +67319,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:14.883248+00:00",
+        "at": "2026-10-14T00:19:13.816323+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -67352,7 +67353,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943664760/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943664760/formal_render.json",
-        "at": "2026-10-13T23:21:14.883248+00:00"
+        "at": "2026-10-14T00:19:13.816323+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -67419,7 +67420,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr052-d818",
           "real_artno": "D818",
-          "at": "2026-10-13T23:21:18.144189+00:00",
+          "at": "2026-10-14T00:19:17.823029+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943664760/prepared.json",
@@ -67471,7 +67472,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:15.603366+00:00",
+        "at": "2026-10-14T00:19:14.802739+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -67505,7 +67506,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943687648/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943687648/formal_render.json",
-        "at": "2026-10-13T23:21:15.603366+00:00"
+        "at": "2026-10-14T00:19:14.802739+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -67572,7 +67573,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr053-f263",
           "real_artno": "F263",
-          "at": "2026-10-13T23:21:18.900110+00:00",
+          "at": "2026-10-14T00:19:18.748484+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943687648/prepared.json",
@@ -67624,7 +67625,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:15.628351+00:00",
+        "at": "2026-10-14T00:19:14.843931+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -67658,7 +67659,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943638954/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943638954/formal_render.json",
-        "at": "2026-10-13T23:21:15.628351+00:00"
+        "at": "2026-10-14T00:19:14.843931+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -67725,7 +67726,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr053-f263",
           "real_artno": "F263",
-          "at": "2026-10-13T23:21:18.913439+00:00",
+          "at": "2026-10-14T00:19:18.769285+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943638954/prepared.json",
@@ -67777,7 +67778,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:15.653622+00:00",
+        "at": "2026-10-14T00:19:14.886913+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -67811,7 +67812,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943784084/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943784084/formal_render.json",
-        "at": "2026-10-13T23:21:15.653622+00:00"
+        "at": "2026-10-14T00:19:14.886913+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -67878,7 +67879,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr053-f263",
           "real_artno": "F263",
-          "at": "2026-10-13T23:21:18.927168+00:00",
+          "at": "2026-10-14T00:19:18.788671+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943784084/prepared.json",
@@ -67930,7 +67931,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:13.683766+00:00",
+        "at": "2026-10-14T00:19:12.823658+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -67964,7 +67965,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943673716/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943673716/formal_render.json",
-        "at": "2026-10-13T23:21:13.683766+00:00"
+        "at": "2026-10-14T00:19:12.823658+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -68031,7 +68032,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr054-27975",
           "real_artno": "27975",
-          "at": "2026-10-13T23:21:16.958078+00:00",
+          "at": "2026-10-14T00:19:16.821822+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943673716/prepared.json",
@@ -68082,7 +68083,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:13.711165+00:00",
+        "at": "2026-10-14T00:19:12.850759+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -68116,7 +68117,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943741370/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943741370/formal_render.json",
-        "at": "2026-10-13T23:21:13.711165+00:00"
+        "at": "2026-10-14T00:19:12.850759+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -68183,7 +68184,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr054-27975",
           "real_artno": "27975",
-          "at": "2026-10-13T23:21:16.970729+00:00",
+          "at": "2026-10-14T00:19:16.835798+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943741370/prepared.json",
@@ -68234,7 +68235,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:13.743414+00:00",
+        "at": "2026-10-14T00:19:12.874405+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -68268,7 +68269,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943737356/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943737356/formal_render.json",
-        "at": "2026-10-13T23:21:13.743414+00:00"
+        "at": "2026-10-14T00:19:12.874405+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -68335,7 +68336,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr054-27975",
           "real_artno": "27975",
-          "at": "2026-10-13T23:21:16.983327+00:00",
+          "at": "2026-10-14T00:19:16.849538+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943737356/prepared.json",
@@ -68386,7 +68387,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:14.911967+00:00",
+        "at": "2026-10-14T00:19:13.838528+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -68420,7 +68421,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943672753/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943672753/formal_render.json",
-        "at": "2026-10-13T23:21:14.911967+00:00"
+        "at": "2026-10-14T00:19:13.838528+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -68487,7 +68488,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr055-b803",
           "real_artno": "B803",
-          "at": "2026-10-13T23:21:18.187156+00:00",
+          "at": "2026-10-14T00:19:17.855738+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943672753/prepared.json",
@@ -68539,7 +68540,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:14.949844+00:00",
+        "at": "2026-10-14T00:19:13.873525+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -68573,7 +68574,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943711519/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943711519/formal_render.json",
-        "at": "2026-10-13T23:21:14.949844+00:00"
+        "at": "2026-10-14T00:19:13.873525+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -68640,7 +68641,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr055-b803",
           "real_artno": "B803",
-          "at": "2026-10-13T23:21:18.218126+00:00",
+          "at": "2026-10-14T00:19:17.880956+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943711519/prepared.json",
@@ -68692,7 +68693,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:14.983920+00:00",
+        "at": "2026-10-14T00:19:13.901391+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -68726,7 +68727,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943784098/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943784098/formal_render.json",
-        "at": "2026-10-13T23:21:14.983920+00:00"
+        "at": "2026-10-14T00:19:13.901391+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -68793,7 +68794,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr055-b803",
           "real_artno": "B803",
-          "at": "2026-10-13T23:21:18.245804+00:00",
+          "at": "2026-10-14T00:19:17.902698+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943784098/prepared.json",
@@ -68845,7 +68846,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:15.262190+00:00",
+        "at": "2026-10-14T00:19:14.208651+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -68879,7 +68880,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943775160/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943775160/formal_render.json",
-        "at": "2026-10-13T23:21:15.262190+00:00"
+        "at": "2026-10-14T00:19:14.208651+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -68946,7 +68947,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr056-555",
           "real_artno": "555",
-          "at": "2026-10-13T23:21:18.573068+00:00",
+          "at": "2026-10-14T00:19:18.308184+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943775160/prepared.json",
@@ -68998,7 +68999,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:15.287597+00:00",
+        "at": "2026-10-14T00:19:14.242623+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -69032,7 +69033,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943751252/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943751252/formal_render.json",
-        "at": "2026-10-13T23:21:15.287597+00:00"
+        "at": "2026-10-14T00:19:14.242623+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -69099,7 +69100,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr056-555",
           "real_artno": "555",
-          "at": "2026-10-13T23:21:18.601285+00:00",
+          "at": "2026-10-14T00:19:18.351154+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943751252/prepared.json",
@@ -69151,7 +69152,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:15.313534+00:00",
+        "at": "2026-10-14T00:19:14.278995+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -69185,7 +69186,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943778191/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943778191/formal_render.json",
-        "at": "2026-10-13T23:21:15.313534+00:00"
+        "at": "2026-10-14T00:19:14.278995+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -69252,7 +69253,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr056-555",
           "real_artno": "555",
-          "at": "2026-10-13T23:21:18.629983+00:00",
+          "at": "2026-10-14T00:19:18.385071+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943778191/prepared.json",
@@ -69304,7 +69305,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:15.341151+00:00",
+        "at": "2026-10-14T00:19:14.318586+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -69338,7 +69339,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943768215/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943768215/formal_render.json",
-        "at": "2026-10-13T23:21:15.341151+00:00"
+        "at": "2026-10-14T00:19:14.318586+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -69411,7 +69412,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr057-h10",
           "real_artno": "H10",
-          "at": "2026-10-13T23:21:18.671737+00:00",
+          "at": "2026-10-14T00:19:18.451425+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943768215/prepared.json",
@@ -69463,7 +69464,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:15.374595+00:00",
+        "at": "2026-10-14T00:19:14.368635+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -69497,7 +69498,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943700590/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943700590/formal_render.json",
-        "at": "2026-10-13T23:21:15.374595+00:00"
+        "at": "2026-10-14T00:19:14.368635+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -69564,7 +69565,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr057-h10",
           "real_artno": "H10",
-          "at": "2026-10-13T23:21:18.698956+00:00",
+          "at": "2026-10-14T00:19:18.488780+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943700590/prepared.json",
@@ -69616,7 +69617,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:15.403656+00:00",
+        "at": "2026-10-14T00:19:14.417885+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -69650,7 +69651,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943771190/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943771190/formal_render.json",
-        "at": "2026-10-13T23:21:15.403656+00:00"
+        "at": "2026-10-14T00:19:14.417885+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -69717,7 +69718,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr057-h10",
           "real_artno": "H10",
-          "at": "2026-10-13T23:21:18.720732+00:00",
+          "at": "2026-10-14T00:19:18.522186+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943771190/prepared.json",
@@ -69769,7 +69770,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:16.084522+00:00",
+        "at": "2026-10-14T00:19:15.844387+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -69803,7 +69804,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943793113/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943793113/formal_render.json",
-        "at": "2026-10-13T23:21:16.084522+00:00"
+        "at": "2026-10-14T00:19:15.844387+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -69870,7 +69871,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr058-as795",
           "real_artno": "AS795",
-          "at": "2026-10-13T23:21:19.362980+00:00",
+          "at": "2026-10-14T00:19:19.210658+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943793113/prepared.json",
@@ -69922,7 +69923,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:16.106070+00:00",
+        "at": "2026-10-14T00:19:15.875830+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -69956,7 +69957,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943721497/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943721497/formal_render.json",
-        "at": "2026-10-13T23:21:16.106070+00:00"
+        "at": "2026-10-14T00:19:15.875830+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -70023,7 +70024,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr058-as795",
           "real_artno": "AS795",
-          "at": "2026-10-13T23:21:19.384289+00:00",
+          "at": "2026-10-14T00:19:19.226324+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943721497/prepared.json",
@@ -70075,7 +70076,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:16.129744+00:00",
+        "at": "2026-10-14T00:19:15.902408+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -70109,7 +70110,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943773221/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943773221/formal_render.json",
-        "at": "2026-10-13T23:21:16.129744+00:00"
+        "at": "2026-10-14T00:19:15.902408+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -70176,7 +70177,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr058-as795",
           "real_artno": "AS795",
-          "at": "2026-10-13T23:21:19.408407+00:00",
+          "at": "2026-10-14T00:19:19.242381+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943773221/prepared.json",
@@ -70228,7 +70229,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:14.398898+00:00",
+        "at": "2026-10-14T00:19:13.391792+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -70262,7 +70263,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943790138/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943790138/formal_render.json",
-        "at": "2026-10-13T23:21:14.398898+00:00"
+        "at": "2026-10-14T00:19:13.391792+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -70329,7 +70330,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr059-5612",
           "real_artno": "5612",
-          "at": "2026-10-13T23:21:17.421557+00:00",
+          "at": "2026-10-14T00:19:17.362100+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943790138/prepared.json",
@@ -70381,7 +70382,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:14.422504+00:00",
+        "at": "2026-10-14T00:19:13.416520+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -70415,7 +70416,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943767266/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943767266/formal_render.json",
-        "at": "2026-10-13T23:21:14.422504+00:00"
+        "at": "2026-10-14T00:19:13.416520+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -70482,7 +70483,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr059-5612",
           "real_artno": "5612",
-          "at": "2026-10-13T23:21:17.438273+00:00",
+          "at": "2026-10-14T00:19:17.387839+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943767266/prepared.json",
@@ -70534,7 +70535,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:14.446994+00:00",
+        "at": "2026-10-14T00:19:13.438065+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -70568,7 +70569,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943779211/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943779211/formal_render.json",
-        "at": "2026-10-13T23:21:14.446994+00:00"
+        "at": "2026-10-14T00:19:13.438065+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -70635,7 +70636,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr059-5612",
           "real_artno": "5612",
-          "at": "2026-10-13T23:21:17.457484+00:00",
+          "at": "2026-10-14T00:19:17.412486+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943779211/prepared.json",
@@ -70687,7 +70688,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:14.704324+00:00",
+        "at": "2026-10-14T00:19:13.672673+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -70721,7 +70722,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943755354/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943755354/formal_render.json",
-        "at": "2026-10-13T23:21:14.704324+00:00"
+        "at": "2026-10-14T00:19:13.672673+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -70788,7 +70789,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr060-aa23",
           "real_artno": "AA23",
-          "at": "2026-10-13T23:21:17.836785+00:00",
+          "at": "2026-10-14T00:19:17.693955+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943755354/prepared.json",
@@ -70840,7 +70841,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:14.734306+00:00",
+        "at": "2026-10-14T00:19:13.696288+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -70874,7 +70875,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943705620/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943705620/formal_render.json",
-        "at": "2026-10-13T23:21:14.734306+00:00"
+        "at": "2026-10-14T00:19:13.696288+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -70941,7 +70942,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr060-aa23",
           "real_artno": "AA23",
-          "at": "2026-10-13T23:21:17.907565+00:00",
+          "at": "2026-10-14T00:19:17.712996+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943705620/prepared.json",
@@ -70993,7 +70994,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:14.474322+00:00",
+        "at": "2026-10-14T00:19:13.459560+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -71027,7 +71028,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943700660/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943700660/formal_render.json",
-        "at": "2026-10-13T23:21:14.474322+00:00"
+        "at": "2026-10-14T00:19:13.459560+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -71094,7 +71095,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr061-l895",
           "real_artno": "L895",
-          "at": "2026-10-13T23:21:17.488876+00:00",
+          "at": "2026-10-14T00:19:17.459348+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943700660/prepared.json",
@@ -71146,7 +71147,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:14.498464+00:00",
+        "at": "2026-10-14T00:19:13.482203+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -71180,7 +71181,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943748344/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943748344/formal_render.json",
-        "at": "2026-10-13T23:21:14.498464+00:00"
+        "at": "2026-10-14T00:19:13.482203+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -71247,7 +71248,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr061-l895",
           "real_artno": "L895",
-          "at": "2026-10-13T23:21:17.511705+00:00",
+          "at": "2026-10-14T00:19:17.482490+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943748344/prepared.json",
@@ -71299,7 +71300,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:14.523955+00:00",
+        "at": "2026-10-14T00:19:13.505598+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -71333,7 +71334,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943727538/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943727538/formal_render.json",
-        "at": "2026-10-13T23:21:14.523955+00:00"
+        "at": "2026-10-14T00:19:13.505598+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -71400,7 +71401,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr061-l895",
           "real_artno": "L895",
-          "at": "2026-10-13T23:21:17.535231+00:00",
+          "at": "2026-10-14T00:19:17.508878+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943727538/prepared.json",
@@ -71452,7 +71453,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:14.549436+00:00",
+        "at": "2026-10-14T00:19:13.533370+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -71486,7 +71487,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943682804/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943682804/formal_render.json",
-        "at": "2026-10-13T23:21:14.549436+00:00"
+        "at": "2026-10-14T00:19:13.533370+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -71553,7 +71554,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr062-d02",
           "real_artno": "D02",
-          "at": "2026-10-13T23:21:17.570310+00:00",
+          "at": "2026-10-14T00:19:17.548416+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943682804/prepared.json",
@@ -71605,7 +71606,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:14.576794+00:00",
+        "at": "2026-10-14T00:19:13.556687+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -71639,7 +71640,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943799127/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943799127/formal_render.json",
-        "at": "2026-10-13T23:21:14.576794+00:00"
+        "at": "2026-10-14T00:19:13.556687+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -71706,7 +71707,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr062-d02",
           "real_artno": "D02",
-          "at": "2026-10-13T23:21:17.594981+00:00",
+          "at": "2026-10-14T00:19:17.570209+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943799127/prepared.json",
@@ -71758,7 +71759,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:14.602113+00:00",
+        "at": "2026-10-14T00:19:13.583565+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -71792,7 +71793,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943761346/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943761346/formal_render.json",
-        "at": "2026-10-13T23:21:14.602113+00:00"
+        "at": "2026-10-14T00:19:13.583565+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -71859,7 +71860,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr062-d02",
           "real_artno": "D02",
-          "at": "2026-10-13T23:21:17.621394+00:00",
+          "at": "2026-10-14T00:19:17.593405+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943761346/prepared.json",
@@ -71911,7 +71912,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:14.225260+00:00",
+        "at": "2026-10-14T00:19:13.256256+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -71945,7 +71946,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943653995/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943653995/formal_render.json",
-        "at": "2026-10-13T23:21:14.225260+00:00"
+        "at": "2026-10-14T00:19:13.256256+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -72012,7 +72013,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr063-1712",
           "real_artno": "1712",
-          "at": "2026-10-13T23:21:17.305459+00:00",
+          "at": "2026-10-14T00:19:17.195832+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943653995/prepared.json",
@@ -72064,7 +72065,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:14.256798+00:00",
+        "at": "2026-10-14T00:19:13.281515+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -72098,7 +72099,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943651966/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943651966/formal_render.json",
-        "at": "2026-10-13T23:21:14.256798+00:00"
+        "at": "2026-10-14T00:19:13.281515+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -72165,7 +72166,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr063-1712",
           "real_artno": "1712",
-          "at": "2026-10-13T23:21:17.322226+00:00",
+          "at": "2026-10-14T00:19:17.217709+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943651966/prepared.json",
@@ -72217,7 +72218,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:14.288107+00:00",
+        "at": "2026-10-14T00:19:13.304011+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -72251,7 +72252,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943764325/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943764325/formal_render.json",
-        "at": "2026-10-13T23:21:14.288107+00:00"
+        "at": "2026-10-14T00:19:13.304011+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -72318,7 +72319,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr063-1712",
           "real_artno": "1712",
-          "at": "2026-10-13T23:21:17.338414+00:00",
+          "at": "2026-10-14T00:19:17.238563+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943764325/prepared.json",
@@ -72370,7 +72371,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:14.318704+00:00",
+        "at": "2026-10-14T00:19:13.326153+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -72404,7 +72405,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943738486/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943738486/formal_render.json",
-        "at": "2026-10-13T23:21:14.318704+00:00"
+        "at": "2026-10-14T00:19:13.326153+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -72471,7 +72472,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr065-j55",
           "real_artno": "J55",
-          "at": "2026-10-13T23:21:17.362245+00:00",
+          "at": "2026-10-14T00:19:17.278481+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943738486/prepared.json",
@@ -72523,7 +72524,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:14.345657+00:00",
+        "at": "2026-10-14T00:19:13.350722+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -72557,7 +72558,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943703750/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943703750/formal_render.json",
-        "at": "2026-10-13T23:21:14.345657+00:00"
+        "at": "2026-10-14T00:19:13.350722+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -72624,7 +72625,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr065-j55",
           "real_artno": "J55",
-          "at": "2026-10-13T23:21:17.376032+00:00",
+          "at": "2026-10-14T00:19:17.300088+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943703750/prepared.json",
@@ -72676,7 +72677,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:14.374494+00:00",
+        "at": "2026-10-14T00:19:13.371104+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -72710,7 +72711,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943717639/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943717639/formal_render.json",
-        "at": "2026-10-13T23:21:14.374494+00:00"
+        "at": "2026-10-14T00:19:13.371104+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -72777,7 +72778,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr065-j55",
           "real_artno": "J55",
-          "at": "2026-10-13T23:21:17.394789+00:00",
+          "at": "2026-10-14T00:19:17.321003+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943717639/prepared.json",
@@ -72829,7 +72830,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:14.630596+00:00",
+        "at": "2026-10-14T00:19:13.607011+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -72863,7 +72864,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943734532/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943734532/formal_render.json",
-        "at": "2026-10-13T23:21:14.630596+00:00"
+        "at": "2026-10-14T00:19:13.607011+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -72930,7 +72931,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr066-ws6",
           "real_artno": "WS6",
-          "at": "2026-10-13T23:21:17.661800+00:00",
+          "at": "2026-10-14T00:19:17.627804+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943734532/prepared.json",
@@ -72982,7 +72983,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:14.654388+00:00",
+        "at": "2026-10-14T00:19:13.629499+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -73016,7 +73017,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943708668/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943708668/formal_render.json",
-        "at": "2026-10-13T23:21:14.654388+00:00"
+        "at": "2026-10-14T00:19:13.629499+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -73083,7 +73084,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr066-ws6",
           "real_artno": "WS6",
-          "at": "2026-10-13T23:21:17.687822+00:00",
+          "at": "2026-10-14T00:19:17.646022+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943708668/prepared.json",
@@ -73135,7 +73136,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:14.679319+00:00",
+        "at": "2026-10-14T00:19:13.651519+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -73169,7 +73170,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943670945/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943670945/formal_render.json",
-        "at": "2026-10-13T23:21:14.679319+00:00"
+        "at": "2026-10-14T00:19:13.651519+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -73236,7 +73237,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr066-ws6",
           "real_artno": "WS6",
-          "at": "2026-10-13T23:21:17.719918+00:00",
+          "at": "2026-10-14T00:19:17.663495+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943670945/prepared.json",
@@ -73288,7 +73289,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:15.955114+00:00",
+        "at": "2026-10-14T00:19:15.617657+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -73322,7 +73323,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943662995/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943662995/formal_render.json",
-        "at": "2026-10-13T23:21:15.955114+00:00"
+        "at": "2026-10-14T00:19:15.617657+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -73389,7 +73390,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr067-d11",
           "real_artno": "D11",
-          "at": "2026-10-13T23:21:19.208137+00:00",
+          "at": "2026-10-14T00:19:19.091048+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943662995/prepared.json",
@@ -73441,7 +73442,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:15.974272+00:00",
+        "at": "2026-10-14T00:19:15.675716+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -73475,7 +73476,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943783263/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943783263/formal_render.json",
-        "at": "2026-10-13T23:21:15.974272+00:00"
+        "at": "2026-10-14T00:19:15.675716+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -73542,7 +73543,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr067-d11",
           "real_artno": "D11",
-          "at": "2026-10-13T23:21:19.227614+00:00",
+          "at": "2026-10-14T00:19:19.106489+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943783263/prepared.json",
@@ -73594,7 +73595,7 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-13T23:21:15.993310+00:00",
+        "at": "2026-10-14T00:19:15.722327+00:00",
         "scope": "Exact-ID current formal product and rendered schema"
       },
       "evidence": [],
@@ -73628,7 +73629,7 @@
         "state": "HR_REAL_SOURCE_FORMAL_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943658940/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943658940/formal_render.json",
-        "at": "2026-10-13T23:21:15.993310+00:00"
+        "at": "2026-10-14T00:19:15.722327+00:00"
       },
       "optimization": {
         "factory_gallery": {
@@ -73695,7 +73696,7 @@
           "state": "FORMAL_FIELDS_SCORE_PASS",
           "source_id": "src-hr-hr067-d11",
           "real_artno": "D11",
-          "at": "2026-10-13T23:21:19.250703+00:00",
+          "at": "2026-10-14T00:19:19.121409+00:00",
           "next_action": "本轮API验收及货源双改完成；旧keywords空值照实保留，公开抽检在全量完成后统一进行，继续其他HR款。",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943658940/prepared.json",
@@ -85323,7 +85324,7 @@
     },
     {
       "name": "HR缺货源实款替换",
-      "status": "本轮99条原ID目标，98条完整正式字段与实际5.00通过；其余按逐ID真实状态登记。",
+      "status": "本轮99条原ID目标，99条完整正式字段与实际5.00通过；其余按逐ID真实状态登记。",
       "next_action": "先完成HR缺货源商品全量实源替换，再继续路崎宽头鞋上架；审核中只回读，不重复提交；路崎资料准备可独立推进。已有实源页面保留实鞋，未返回历史ID不新建。",
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/README.md",

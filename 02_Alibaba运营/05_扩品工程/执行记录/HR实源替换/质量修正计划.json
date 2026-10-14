@@ -17,7 +17,12 @@
         "Platform Sneakers",
         "Lace-up"
       ],
-      "reason": "Apply the same footwear Style correction to the sibling link after the current review completes; do not submit while reviewing."
+      "reason": "Official product.get tbd means audit rejected, not reviewing. Current rejected product Schema is normally readable. Correct the independently documented legacy Style Platform to Platform Sneakers with Lace-up, matching real canvas platform shoe and the already passed sibling. Preserve current title and all other attributes/SKU/images/prices. This known content correction is not claimed to be the undisclosed audit-rejection cause. One new scoped correction ledger; no replay of accepted whole-shoe or season updates.",
+      "allowed_current_statuses": [
+        "approved",
+        "tbd"
+      ],
+      "status_definition_source": "https://developer.alibaba.com/doc2/apiDetail.htm?apiId=25439"
     },
     {
       "id": "1601943747024",

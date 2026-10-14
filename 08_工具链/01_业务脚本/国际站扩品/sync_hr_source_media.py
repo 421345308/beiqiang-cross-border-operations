@@ -14,7 +14,7 @@ def sync():
    verification=o.BASE/'商品'/pid/'verification.json'
    if not verification.exists():continue
    proof=o.b.load(verification)
-   if proof['state']!='FORMAL_FIELDS_SCORE_PASS':continue
+   if proof['state']not in ['FORMAL_FIELDS_SCORE_PASS','FORMAL_FIELDS_PASS_PENDING_SCORE']:continue
    p=o.b.load(o.BASE/'商品'/pid/'after_get.json')['product'];sd=p['struct_detail'];roles={'main':p['main_image']['images'],'details':[x['image_url']for x in sd['detail_image']['images']],'company':[x['image_url']for x in sd['company_image']['images']],'sku':[v['image_url']for a in p['product_sku']['sku_attributes']for v in a['values']if v.get('image_url')],'html':[]}
    for urls in roles.values():
     for url in urls:

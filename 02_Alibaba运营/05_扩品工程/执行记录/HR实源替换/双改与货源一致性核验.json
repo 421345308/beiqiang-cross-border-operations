@@ -1,6 +1,6 @@
 {
   "state": "CURRENT_SOURCE_PLATFORM_LOCAL_CONSISTENCY_PASS",
-  "at": "2026-10-13T23:21:49.853908+00:00",
+  "at": "2026-10-14T00:19:45.894166+00:00",
   "rows": [
     {
       "family": "HR030",
@@ -25,13 +25,19 @@
       "family": "HR030",
       "model": "HR030-B",
       "id": "1601943545775",
-      "state": "REVIEWING",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
       "source_id": "src-hr-hr030-mna-1",
       "checks": {
         "one_current_real_source": true,
         "listing_state_matches_api": true,
         "source_plan_target_id": true,
-        "submission_stage_ledger_correct": true
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
       }
     },
     {

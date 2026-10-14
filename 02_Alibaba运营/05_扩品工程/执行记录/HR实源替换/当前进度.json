@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-13T23:21:19.460622+00:00",
+  "at": "2026-10-14T00:19:19.289724+00:00",
   "priority_links": [
     {
       "family": "HR030",
@@ -11,7 +11,7 @@
       "family": "HR030",
       "model": "HR030-B",
       "id": "1601943545775",
-      "state": "REVIEWING"
+      "state": "FORMAL_FIELDS_SCORE_PASS"
     },
     {
       "family": "HR042",
@@ -612,8 +612,7 @@
     "registered_hr_history": 203,
     "current_hr_ids_found": 177,
     "states": {
-      "FORMAL_FIELDS_SCORE_PASS": 97,
-      "REVIEWING": 1,
+      "FORMAL_FIELDS_SCORE_PASS": 98,
       "NOT_FOUND_IN_CURRENT_COMPLETE_CATALOG": 26,
       "EXISTING_REAL_SOURCE_BINDING_RECHECK_KEEP_STYLE": 79
     },
@@ -631,7 +630,7 @@
         "current_display": "Y",
         "current_field_evidence": "99_临时区/HR实源替换/全量目录复核/catalog.json",
         "bound_source_id": "src-hr-hr030-mna-1",
-        "registry_source_state": "CANDIDATE",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
           "src-hr-hr030-mna-1"
         ],
@@ -642,14 +641,14 @@
         "model": "HR030-B",
         "family": "HR030",
         "product_identity": "HR030",
-        "state": "REVIEWING",
+        "state": "FORMAL_FIELDS_SCORE_PASS",
         "current_title": "Unisex Thick Sole Canvas Sneakers Lace-Up Low Top Casual Shoes for Fashion Footwear Wholesale",
         "current_category_id": 201334413,
-        "current_audit": "tbd",
-        "current_display": "N",
-        "current_field_evidence": "99_临时区/HR实源替换/全量目录复核/catalog.json",
-        "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "current_audit": "approved",
+        "current_display": "Y",
+        "current_field_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943545775/formal_get.json",
+        "bound_source_id": "src-hr-hr030-mna-1",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
           "src-hr-hr030-mna-1"
         ],
@@ -667,7 +666,7 @@
         "current_display": null,
         "current_field_evidence": "99_临时区/HR实源替换/全量目录复核/catalog.json",
         "bound_source_id": null,
-        "registry_source_state": "CANDIDATE",
+        "registry_source_state": "ADOPTED",
         "candidate_source_ids": [
           "src-hr-hr030-mna-1"
         ],

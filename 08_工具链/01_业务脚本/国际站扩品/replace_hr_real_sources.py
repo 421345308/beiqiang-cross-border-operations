@@ -11,7 +11,7 @@ sys.path.insert(0,str(ROOT/'08_工具链/01_业务脚本/国际站扩品'))
 import refresh_buyer_copy as b
 import publish_hot_rank_hr_a_batch as pub
 import schema_publish_contract as contract
-from read_only_catalog import read_only_call,ReadBusinessError
+from read_only_catalog import read_only_call,ReadBusinessError,product_readiness,PRODUCT_STATUS_DEFINITION_SOURCE
 SCOPE=b.load(BASE/'scope.json')
 TARGETS=SCOPE['targets']
 FIELDS=['icbuCatProp','saleProp','sku','productTitle','productKeywords','scImages','detailImage','textDesc','customMoreProperty','scPrice','ladderPrice']
@@ -242,7 +242,9 @@ def verify(family,api,cfg):
    old=b.load(f/'verification.json');last=max((b.load(f/name).get('at','')for name in ['update_once.json','attribute_repair_once.json','gallery_repair_once.json','public_style_once.json','hero_quality_once.json','business_correction_once.json','optional_attribute_clear_once.json','title_repair_once.json','title_quality_once.json','group_quality_once.json','company_quality_once.json']if(f/name).exists()),default='')
    if old.get('state')=='FORMAL_FIELDS_SCORE_PASS' and old.get('get_observed_at','')>last:print(pid,'UNCHANGED_FORMAL_PASS',flush=True);return
   got=read_only_call(api,cfg,'alibaba.icbu.product.get',{'product_id':pid,'language':'ENGLISH'});b.save(f/'after_get.json',got);p=got['product']
-  if p['status']!='approved':b.save(f/'verification.json',{'state':'REVIEWING','at':b.now(),'status':p['status'],'display':p['display']});print(pid,'REVIEWING',flush=True);return
+  if p['status']!='approved':
+   state=product_readiness(p['status'])
+   b.save(f/'verification.json',{'state':state,'at':b.now(),'status':p['status'],'display':p['display'],'status_definition_source':PRODUCT_STATUS_DEFINITION_SOURCE});print(pid,state,flush=True);return
   r=read_only_call(api,cfg,'alibaba.icbu.product.schema.render',{'param_product_top_publish_request':{'product_id':int(pid),'cat_id':int(p['category_id']),'language':'en_US'}});b.save(f/'after_render.json',r)
   enc=api.top_call(cfg,'alibaba.icbu.product.id.encrypt',{'product_id':pid,'language':'ENGLISH'});b.save(f/'score_product_id.json',{'request_id':enc.get('request_id'),'status':'AVAILABLE'if enc.get('secret_id')else'UNAVAILABLE'})
   assert enc.get('secret_id'),'Actual score requires supported encrypted product ID'

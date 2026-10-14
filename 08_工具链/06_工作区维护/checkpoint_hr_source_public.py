@@ -92,7 +92,7 @@ def main():
         index=ROOT/prefix/'01_产品来源原图/当前来源图像索引.json'
         if index.exists()and load(index.relative_to(ROOT).as_posix()).get('collection')=='PUBLIC_HTTPS_NORMAL_TLS_PRODUCT_ONLY':
             paths.append(index.relative_to(ROOT).as_posix())
-            for name in ('当前来源与色码核对.json','05_AI候选/AI颜色图审核.json','05_AI候选/AI主图审核.json','05_AI候选/AI选款图审核.json'):
+            for name in ('当前来源与色码核对.json','05_AI候选/AI颜色图审核.json','05_AI候选/AI主图审核.json','05_AI候选/AI选款图审核.json','05_AI候选/AI结构图审核.json'):
                 file=ROOT/prefix/name
                 if file.exists():paths.append(file.relative_to(ROOT).as_posix())
     for family in scope['targets']:
@@ -115,7 +115,8 @@ def main():
                                 'title_repair_once.json','title_repair_receipt.json',
                                 'title_quality_once.json','title_quality_receipt.json',
                                 'group_quality_once.json','group_quality_receipt.json',
-                                'company_quality_once.json','company_quality_receipt.json')]
+                                'company_quality_once.json','company_quality_receipt.json',
+                                '审核退回诊断.json')]
     paths += ['08_工具链/01_业务脚本/国际站扩品/'+name for name in
               ('replace_hr_real_sources.py','verify_hr_real_sources.py',
                'repair_hr_source_quality.py','sync_hr_real_sources.py',
@@ -128,6 +129,7 @@ def main():
                'schema_publish_contract.py','repair_hr_changed_title.py',
                'run_hr_reviewed_pipeline.py','read_only_catalog.py','collect_hr_category_tree.py')]
     paths += ['02_Alibaba运营/00_运营SOP/国际站商品全生命周期SOP.md',FACTORY+'/README.md']
+    paths += ['08_工具链/01_业务脚本/国际站扩品/README.md']
     paths += ['08_工具链/01_业务脚本/商品图片与审计/ingest_company_public_observations.py',
               '08_工具链/06_工作区维护/checkpoint_hr_source_public.py']
     paths += [FACTORY+'/V8/'+name for name in ('当前替换.json','公开验收参考.json','双改同步.json')]

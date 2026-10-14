@@ -34,7 +34,7 @@ def sync():
     assert public['id']==pid
     opt['source_replacement']['public_product_qa']={'state':public['state'],'at':public['at'],'file':rel(public_file),'scope':'实际六主图、四产品详情、末端颜色EU尺码选择；旧keywords迁移未由此证明'}
     if state=='FORMAL_FIELDS_SCORE_PASS' and public['state']=='PUBLIC_PRODUCT_IMAGE_SKU_PASS':opt['source_replacement']['next_action']='API验收、货源双改及既有公开图文/EU组合核验通过；旧keywords空值照实记录，继续其他HR款。'
-   if state=='FORMAL_FIELDS_SCORE_PASS':
+   if state in ['FORMAL_FIELDS_SCORE_PASS','FORMAL_FIELDS_PASS_PENDING_SCORE']:
     l['bound_source_id']=sid;l['source_relation']='SAME_ID_REAL_SOURCE_REPLACEMENT_FORMAL_PASS'
     l['record_type']='当前实款正式绑定';l['notes']=f"当前采用{source['supplier']} {source['artno']}，原ID整鞋替换正式字段及评分通过；旧候选、旧鞋型和旧采购价不参与当前执行。来源、当前图文和逐ID证据见本款唯一入口；已提交动作不重放。"
     got=op.b.load(f/'after_get.json');p=got['product'];canonical=ROOT/'02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品'/pid
@@ -43,6 +43,11 @@ def sync():
     current={'at':v.get('get_observed_at',v['at']),'title':p['subject'],'keywords':p.get('keywords',[]),'main_images':p['main_image']['images'],'category_id':p['category_id'],'display':p['display'],'status':p['status'],'url':p.get('pc_detail_url')or l['url'],'scope':'Exact-ID whole-shoe replacement formal get; public presentation and legacy keyword migration tracked separately'}
     l['current_platform_fields']=current;l['catalog_fields']={**l.get('catalog_fields',{}),**current};l['formal_fields']={'file':rel(canonical/'formal_get.json'),'at':current['at'],'scope':'完整商品正式字段；本轮实源换款逐ID字段/5.00评分通过，公开与旧关键词迁移证据分列'};l['url']=current['url']
     l['local_sync']={'state':'HR_REAL_SOURCE_FORMAL_PASS','current_fields_file':rel(canonical/'formal_get.json'),'current_schema_file':rel(canonical/'formal_render.json'),'at':v['at']}
+    if state=='FORMAL_FIELDS_PASS_PENDING_SCORE':
+     l.update(source_relation='REAL_SOURCE_FORMAL_FIELDS_PASS_PENDING_SCORE',record_type='当前实款正式绑定（最新评分待回读）',notes=f"当前正式实鞋为{source['supplier']} {source['artno']}，全部图文/材料/EU/SKU/交易字段已核并双改；最新评分API未返回，不能报整体完成，不重新换款或重放更新。")
+     l['formal_fields']['scope']='完整正式字段已核并同步；最新实际评分待回读，不声称5.00或整体完成'
+     l['local_sync']['state']='HR_REAL_SOURCE_FIELDS_PASS_PENDING_SCORE'
+     opt['source_replacement']['next_action']='仅回读最新实际评分；正式实鞋和本地来源已一致，不沿用旧评分，不重复换款。'
     if 'platform_group_id'in plan:
      assert str(p['group_id'])==str(plan['platform_group_id'])
      l['platform_group']={'id':str(p['group_id']),'name':plan['platform_group_name'],'evidence':rel(BASE/family/'目标店内分组回读.json'),'scope':'当前正式商品与已核官方店内分组；与本地采购分类分列'}
@@ -56,6 +61,10 @@ def sync():
    p.update(source_state='ADOPTED',adopted_source_id=sid,next_action='当前来源、正式字段及实际评分已核并双改；本轮API验收完成，公开抽检全量后统一进行，继续其余HR。');p['local_assets']['state']='REAL_SOURCE_FORMAL_PASS'
    p['classification']['platform_category_ids']=sorted({listings[pid]['current_platform_fields']['category_id']for pid in targets.values()})
    if 'platform_group_id'in plan:p['classification'].update(store_groups=[{'id':str(plan['platform_group_id']),'name':plan['platform_group_name']}],store_group_state='FORMAL_PRODUCT_AND_GROUP_READBACK')
+  elif all(s in ['FORMAL_FIELDS_SCORE_PASS','FORMAL_FIELDS_PASS_PENDING_SCORE']for s in states):
+   p.update(source_state='ADOPTED',adopted_source_id=sid,next_action='当前真实来源及正式图文/SKU已核并双改；仅最新实际评分待回读，不沿用旧分、不重放、不重复搜源或换款。')
+   p['local_assets']['state']='REAL_SOURCE_FIELDS_PASS_PENDING_SCORE'
+   p['classification']['platform_category_ids']=sorted({listings[pid]['current_platform_fields']['category_id']for pid in targets.values()})
   retired=BASE/family/'候选取舍.json'
   if retired.exists():
    for candidate in op.b.load(retired)['retired_candidates']:
@@ -72,8 +81,10 @@ def sync():
     if key in plan:plan[key].update(state='FORMAL_FIELDS_AND_ACTUAL_SCORE_PASS',observed_at=op.b.now())
   if any((BASE/'商品'/pid/'company_quality_once.json').exists()for pid in targets.values()):
    plan['company_bundle_review']={'state':'FORMAL_PASS'if all(s=='FORMAL_FIELDS_SCORE_PASS'for s in states)else'PENDING_FORMAL','evidence':[rel(BASE/'商品'/pid/'verification.json')for pid in targets.values()],'scope':'Approved V8 exact gallery roles, company intro and general eight FAQs verified separately from product highlights.'}
+  page_state='FORMAL_FIELDS_SCORE_PASS'if all(s=='FORMAL_FIELDS_SCORE_PASS'for s in states)else'FORMAL_FIELDS_PASS_PENDING_SCORE'if all(s in ['FORMAL_FIELDS_SCORE_PASS','FORMAL_FIELDS_PASS_PENDING_SCORE']for s in states)else'AUDIT_REJECTED'if'AUDIT_REJECTED'in states else'LOCAL_DRAFT'if all(s in ['LOCAL_DRAFT','LOCAL_PREPARATION']for s in states)else'REVIEW_PENDING'
   op.b.save(BASE/family/'事实与页面计划.json',{**plan,'source_id':sid,'source_artno':source['artno'],'source_assets_root':rel(raw),'source_evidence':src['evidence'],'procurement_capability':'CURRENT_REAL_SHOE_AND_PROCUREMENT_ENTRY_VERIFIED_NOT_ORDER_STOCK','materials_evidence':plan.get('materials_evidence',[rel(raw/'09.jpg'),rel(raw/'13.jpg')]if family=='HR030'else[source['url']]),'seasons':plan['seasons'],'feature':plan.get('feature','Fashion Trend'),'target_ids':targets,'page_state':'FORMAL_FIELDS_SCORE_PASS'if all(s=='FORMAL_FIELDS_SCORE_PASS'for s in states)else'LOCAL_DRAFT'if all(s in ['LOCAL_DRAFT','LOCAL_PREPARATION']for s in states)else'REVIEW_PENDING','company_faq_source':'02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/通用FAQ与公司简介.json','do_not_claim':list(dict.fromkeys([*plan.get('do_not_claim',[]),'physical stock','tested slip resistance','medical comfort','unverified midsole material']))})
   op.b.save(BASE/family/'当前状态.json',{'at':op.b.now(),'family':family,'links':[r for r in summary if r['family']==family],'old_concept_images':'NOT_INCLUDED_IN_SUBMITTED_PAYLOAD','public_qa':'PENDING_NORMAL_BUYER_PAGE','source_price':source['price_cny'],'source_currency':'CNY'})
+  current_plan=op.b.load(BASE/family/'事实与页面计划.json');current_plan['page_state']=page_state;op.b.save(BASE/family/'事实与页面计划.json',current_plan)
  passed=sum(r['state']=='FORMAL_FIELDS_SCORE_PASS'for r in summary)
  ws={'name':'HR缺货源实款替换','status':f'本轮{len(summary)}条原ID目标，{passed}条完整正式字段与实际5.00通过；其余按逐ID真实状态登记。','next_action':'先完成HR缺货源商品全量实源替换，再继续路崎宽头鞋上架；审核中只回读，不重复提交；路崎资料准备可独立推进。已有实源页面保留实鞋，未返回历史ID不新建。','evidence':[rel(BASE/'README.md'),rel(BASE/'当前进度.json')]}
  old=next((w for w in d['workstreams']if w['name']==ws['name']),None)

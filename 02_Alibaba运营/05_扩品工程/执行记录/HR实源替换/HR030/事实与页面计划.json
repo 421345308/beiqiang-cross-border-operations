@@ -55,7 +55,7 @@
     "A": "1601943574507",
     "B": "1601943545775"
   },
-  "page_state": "REVIEW_PENDING",
+  "page_state": "FORMAL_FIELDS_SCORE_PASS",
   "company_faq_source": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/通用FAQ与公司简介.json",
   "do_not_claim": [
     "physical stock",
@@ -63,5 +63,13 @@
     "medical comfort",
     "unverified midsole material"
   ],
-  "style_reason": "Platform enum incorrectly auto-translated as 平台集装箱 on public page; exact custom Platform Sneakers is formally verified on A; B correction waits review."
+  "style_reason": "Platform enum incorrectly auto-translated as 平台集装箱 on public page; exact custom Platform Sneakers is formally verified on A; B correction waits review.",
+  "style_review": {
+    "state": "EXACT_FORMAL_STYLE_PASS_BOTH_IDS",
+    "evidence": [
+      "商品/1601943574507/verification.json",
+      "商品/1601943545775/verification.json"
+    ],
+    "latest_actual_score": "A/B current actual5.00 and fullformalfieldPASS"
+  }
 }

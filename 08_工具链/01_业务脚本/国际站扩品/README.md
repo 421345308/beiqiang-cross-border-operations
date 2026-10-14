@@ -1,5 +1,7 @@
 # 国际站扩品工具
 
+当前 HR 实源替换入口为 `replace_hr_real_sources.py`、`verify_hr_real_sources.py`、`sync_hr_real_sources.py` 与[本轮业务总入口](../../../02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/README.md)。商品状态统一调用 `read_only_catalog.product_readiness`，含义及退回后的修正要求只按[生命周期 SOP §5](../../../02_Alibaba运营/00_运营SOP/国际站商品全生命周期SOP.md#5-openapi-与浏览器执行原则)；不得把审核不通过记为审核中而空等。当前准备、已提交、正式字段/评分通过、本地双改、公开呈现分别取证。
+
 ## 有效品牌原ID修复
 
 `repair_brand_text.py` 用于已授权商品的有效品牌文本修复。本批执行范围见路崎执行记录的`质量复核_2026-10-09/有效品牌与MD标签核验.json`；该初始清单冻结，当前结果另见`有效品牌与MD标签当前核验.json`，不得把待审核当作已上线。

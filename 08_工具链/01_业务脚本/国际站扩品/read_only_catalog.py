@@ -4,6 +4,16 @@ import argparse, importlib.util, json, math, time
 from datetime import datetime, timezone
 
 READ_METHODS = frozenset({'alibaba.icbu.product.list', 'alibaba.icbu.product.get', 'alibaba.icbu.product.schema.get', 'alibaba.icbu.product.schema.render', 'alibaba.icbu.product.score.get', 'alibaba.icbu.photobank.list', 'alibaba.icbu.category.get.new'})
+PRODUCT_STATUS_DEFINITION_SOURCE='https://developer.alibaba.com/doc2/apiDetail.htm?apiId=25439'
+
+def product_readiness(status):
+    """ICBU status meanings, distinct from 1688 enums and display visibility.
+
+    Rejecting every non-approved result as 'reviewing' causes rejected products
+    to be polled indefinitely. Unknown states require diagnosis, not a guess.
+    """
+    return {'approved':'APPROVED','tbd':'AUDIT_REJECTED','new':'REVIEWING',
+            'modified':'REVIEWING','sketch':'DRAFT'}.get(str(status).lower(),'NON_APPROVED_STATUS_REQUIRES_DIAGNOSIS')
 
 class ReadBusinessError(RuntimeError):
     def __init__(self, method, response, error):

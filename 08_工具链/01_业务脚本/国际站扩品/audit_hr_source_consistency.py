@@ -37,7 +37,7 @@ def main():
                 'source_plan_target_id': plan['target_ids'][variant] == pid,
                 'submission_stage_ledger_correct': not (folder/'update_once.json').exists() if state in ['LOCAL_DRAFT','LOCAL_PREPARATION'] else (folder/'update_once.json').is_file(),
             }
-            if state == 'FORMAL_FIELDS_SCORE_PASS':
+            if state in ['FORMAL_FIELDS_SCORE_PASS','FORMAL_FIELDS_PASS_PENDING_SCORE']:
                 actual = load(folder/'after_get.json')['product']
                 canonical = load(ROOT/listing['formal_fields']['file'])['response']['product']
                 current = listing['current_platform_fields']
@@ -49,6 +49,8 @@ def main():
                     'current_local_details': actual['struct_detail'] == canonical['struct_detail'],
                     'bank_manifest_complete': load(BASE/family/'素材清单.json')['state'] == 'VISUAL_PASS',
                 })
+                if state=='FORMAL_FIELDS_PASS_PENDING_SCORE':
+                    checks['pending_score_not_claimed_complete']=verification['actual_score']is None and listing['local_sync']['state']=='HR_REAL_SOURCE_FIELDS_PASS_PENDING_SCORE'
             rows.append({'family': family, 'model': plan.get('model_numbers',{}).get(variant,family+'-'+variant), 'id': pid,
                          'state': state, 'source_id': source_id, 'checks': checks})
     for profile in load(BASE/'已有实款对应.json')['families']:
