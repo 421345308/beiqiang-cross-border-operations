@@ -77,7 +77,7 @@
     "tiers": [
       [
         2,
-        "21.99"
+        "22.00"
       ],
       [
         50,
@@ -85,10 +85,12 @@
       ],
       [
         100,
-        "19.06"
+        "19.07"
       ]
     ],
-    "freight_service_tax": "Order-specific; markup beforefreight/service/tax, notguaranteednetprofit."
+    "freight_service_tax": "Order-specific; markup beforefreight/service/tax, notguaranteednetprofit.",
+    "rounding": "ROUND_CEILING_TO_USD_CENT",
+    "current_price_repair": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2575准备/价格取整修正/update_receipt.json"
   },
   "publish_profile": {
     "category_id": 202248402,
@@ -133,8 +135,13 @@
     "display": "Y",
     "actual_score": "5.00",
     "formal_verification": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2575准备/verification.json",
-    "local_sync_at": "2026-10-14T12:44:35.158275+00:00",
+    "local_sync_at": "2026-10-14T17:25:43.917086+00:00",
     "no_replayed_create": true
   },
-  "next_action": "该款正式字段、评分与来源已通过；继续其他款，不重复创建。"
+  "next_action": "该款正式字段、评分与来源已通过；继续其他款，不重复创建。",
+  "price_rounding_correction": {
+    "state": "FORMAL_FIELDS_SCORE_PASS",
+    "id": "1601979969696",
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2575准备/价格取整修正/prepared.json"
+  }
 }

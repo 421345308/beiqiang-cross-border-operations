@@ -411,13 +411,15 @@
     "status": "approved",
     "display": "Y",
     "sku_count": 20,
-    "score": null,
+    "score": "5.00",
     "EU_labels_match": true,
     "title_match": true,
     "unmatched_fields": [],
     "observed_at": "2026-10-10T21:50:49.305896+00:00",
     "latest_review_scope": null,
-    "latest_review_file": null
+    "latest_review_file": null,
+    "score_observed_at": "2026-10-14T15:17:20.672823+00:00",
+    "score_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2409准备/实际评分回读.json"
   },
   {
     "style": "2413",
@@ -988,7 +990,7 @@
     "display": "Y",
     "sku_count": 20,
     "score": "5.00",
-    "observed_at": "2026-10-14T05:49:48.477487+00:00",
+    "observed_at": "2026-10-14T17:09:50.114071+00:00",
     "latest_review_scope": "FORMAL_FIELDS_SCORE_PASS",
     "latest_review_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/verification.json"
   },
@@ -1000,7 +1002,7 @@
     "display": "Y",
     "sku_count": 20,
     "score": "5.00",
-    "observed_at": "2026-10-14T06:49:43.478193+00:00",
+    "observed_at": "2026-10-14T16:46:21.945297+00:00",
     "latest_review_scope": "FORMAL_FIELDS_SCORE_PASS",
     "latest_review_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/868准备/verification.json"
   },
@@ -1012,7 +1014,7 @@
     "display": "Y",
     "sku_count": 20,
     "score": "5.00",
-    "observed_at": "2026-10-14T08:14:24.578574+00:00",
+    "observed_at": "2026-10-14T17:10:27.656418+00:00",
     "latest_review_scope": "FORMAL_FIELDS_SCORE_PASS",
     "latest_review_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/822准备/verification.json"
   },
@@ -1024,7 +1026,7 @@
     "display": "Y",
     "sku_count": 20,
     "score": "5.00",
-    "observed_at": "2026-10-14T09:53:26.898490+00:00",
+    "observed_at": "2026-10-14T17:10:54.439650+00:00",
     "latest_review_scope": "FORMAL_FIELDS_SCORE_PASS",
     "latest_review_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2579准备/verification.json"
   },
@@ -1036,7 +1038,7 @@
     "display": "Y",
     "sku_count": 20,
     "score": "5.00",
-    "observed_at": "2026-10-14T10:31:00.652866+00:00",
+    "observed_at": "2026-10-14T17:11:19.989053+00:00",
     "latest_review_scope": "FORMAL_FIELDS_SCORE_PASS",
     "latest_review_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2575准备/verification.json"
   },
@@ -1048,7 +1050,7 @@
     "display": "Y",
     "sku_count": 18,
     "score": "5.00",
-    "observed_at": "2026-10-14T10:58:50.549466+00:00",
+    "observed_at": "2026-10-14T17:11:46.898016+00:00",
     "latest_review_scope": "FORMAL_FIELDS_SCORE_PASS",
     "latest_review_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2505准备/verification.json"
   },
@@ -1060,7 +1062,7 @@
     "display": "Y",
     "sku_count": 20,
     "score": "5.00",
-    "observed_at": "2026-10-14T12:57:22.299365+00:00",
+    "observed_at": "2026-10-14T17:12:11.931295+00:00",
     "latest_review_scope": "FORMAL_FIELDS_SCORE_PASS",
     "latest_review_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/931准备/verification.json"
   },
@@ -1072,8 +1074,44 @@
     "display": "Y",
     "sku_count": 20,
     "score": "5.00",
-    "observed_at": "2026-10-14T14:38:49.091148+00:00",
+    "observed_at": "2026-10-14T17:12:37.143750+00:00",
     "latest_review_scope": "FORMAL_FIELDS_SCORE_PASS",
     "latest_review_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/02412准备/verification.json"
+  },
+  {
+    "style": "0922",
+    "product_id": "1601980302105",
+    "url": "https://www.alibaba.com/product-detail/Mens-Lace-Up-Winter-Snow-Boots_1601980302105.html",
+    "status": "approved",
+    "display": "Y",
+    "sku_count": 20,
+    "score": "5.00",
+    "observed_at": "2026-10-14T17:13:05.924800+00:00",
+    "latest_review_scope": "FORMAL_FIELDS_SCORE_PASS",
+    "latest_review_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/verification.json"
+  },
+  {
+    "style": "923",
+    "product_id": "1601980209795",
+    "url": "https://www.alibaba.com/product-detail/Mens-Winter-Snow-Boots-Lace-Up_1601980209795.html",
+    "status": "approved",
+    "display": "Y",
+    "sku_count": 30,
+    "score": "5.00",
+    "observed_at": "2026-10-14T15:50:47.051735+00:00",
+    "latest_review_scope": "FORMAL_FIELDS_SCORE_PASS",
+    "latest_review_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/923准备/verification.json"
+  },
+  {
+    "style": "323",
+    "product_id": "1601980289624",
+    "url": "https://www.alibaba.com/product-detail/Mens-Lace-Up-Winter-Snow-Boots_1601980289624.html",
+    "status": "new",
+    "display": "N",
+    "sku_count": 18,
+    "score": null,
+    "observed_at": "2026-10-14T17:28:55.858908+00:00",
+    "latest_review_scope": "REVIEWING",
+    "latest_review_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/323准备/verification.json"
   }
 ]

@@ -1,0 +1,22 @@
+{
+  "operation": "update",
+  "product_id": "1601980063799",
+  "category_id": 202248402,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/931准备/当前来源与色码核对.json",
+    "02_Alibaba运营/00_运营SOP/国际站商品全生命周期SOP.md"
+  ],
+  "current_schema": "current_schema.xml",
+  "current_schema_sha256": "b3e18257e8139c49938c9176b43b543f89b74f9a6e024286ac63d7340b196be3",
+  "schema_request_id": "2166c2ca17919927709588878",
+  "schema_acquired_at": "2026-10-14T15:46:12.590899+00:00",
+  "payload_xml": "payload.xml",
+  "field_ids": [
+    "scPrice",
+    "ladderPrice",
+    "productTitle"
+  ],
+  "dependency_ids": [],
+  "unchanged_model_checked_before_write": "BQ-LQ931"
+}

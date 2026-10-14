@@ -8,7 +8,7 @@ from xml.etree import ElementTree as E
 from datetime import datetime,timezone
 import argparse,copy,importlib.util,json,sys,hashlib
 from urllib.parse import urlparse
-from decimal import Decimal
+from decimal import Decimal,ROUND_CEILING
 sys.path.insert(0,str(Path(__file__).parent))
 import repair_luqi_material_roles as shared
 import publish_hot_rank_hr_a_batch as pub
@@ -24,7 +24,7 @@ FIELDS=['catId','icbuCatProp','saleProp','sku','productTitle','scImages','pkgMea
 
 def configure(style):
     global STYLE,FOLDER,MODEL,CATEGORY,CATALOG,COLORS,PROFILE,EU_BY_COLOR,SCHEMA_NAME
-    assert style in ('995','2576','1712','2418','868','822','2579','2575','2505','931','02412','0922'), 'Only individually reviewed current source profiles are enabled'
+    assert style in ('995','2576','1712','2418','868','822','2579','2575','2505','931','02412','0922','923','323'), 'Only individually reviewed current source profiles are enabled'
     STYLE=style;FOLDER=BASE/(style+'准备');MODEL='BQ-LQ'+style;CATALOG=ROOT/('99_临时区/路崎'+style+'/当前目录/catalog.json')
     facts=load(FOLDER/'当前来源与色码核对.json');assert facts['style']==style;PROFILE=facts['publish_profile'];CATEGORY=PROFILE['category_id'];assert CATEGORY in (201334413,202248402)
     SCHEMA_NAME=PROFILE.get('schema_name','当前步行鞋Schema');assert SCHEMA_NAME in ('当前步行鞋Schema','当前雪地靴Schema')
@@ -81,6 +81,9 @@ def bank(client,cfg):
 def prepare():
     assert not (FOLDER/'create_once.json').exists(),'Already attempted; read back or reconcile, never recreate'
     facts=load(FOLDER/'当前来源与色码核对.json');proof=load(FOLDER/'05_AI候选/整组验收.json');bank=load(FOLDER/'图片银行.json');assert bank['state']=='COMPLETE';assets=bank['items']
+    fx=Decimal(str(facts['pricing_draft'].get('fx','6.6837')))
+    expected_tiers=[[n,str((Decimal(facts['source_price_cny'])*m/fx).quantize(Decimal('.01'),rounding=ROUND_CEILING))]for n,m in ((2,Decimal('1.5')),(50,Decimal('1.4')),(100,Decimal('1.3')))]
+    assert facts['pricing_draft']['tiers']==expected_tiers,'Current authorised cost markup requires rounding UP to USD cents'
     index=load(FOLDER/PROFILE.get('source_index','01_产品来源原图/当前来源图像索引.json'))
     assert index['style']==STYLE and index['source']==facts['source'] and urlparse(facts['source']).hostname=='luqi.sooxie.com'
     assert 'Wide Toe Box' not in facts['title_draft'] or facts['wide_claim'].startswith('EXPLICIT_SOURCE_')
@@ -171,6 +174,14 @@ def verify(client,cfg):
     rendered=read_only_call(client,cfg,'alibaba.icbu.product.schema.render',{'param_product_top_publish_request':{'product_id':int(pid),'cat_id':CATEGORY,'language':'en_US'}});save(FOLDER/'after_render.json',rendered)
     if not rendered.get('data'):report['state']='EDITABLE_SCHEMA_UNAVAILABLE';save(FOLDER/'verification.json',report);return
     schema=E.fromstring(rendered['data']);(FOLDER/'after_schema.xml').write_text(rendered['data'],encoding='utf8');actual=contract.field_snapshot(schema);expected=load(FOLDER/'prepared.json')['expected_schema'];checks={}
+    overlay_file=FOLDER/'价格取整修正/current_expected_overlay.json'
+    if overlay_file.exists():
+        overlay=load(overlay_file);assert overlay['product_id']==pid and overlay['operation']=='price_rounding_only'
+        receipt_file=ROOT/overlay['receipt'];assert receipt_file.parent==overlay_file.parent
+        price_receipt=load(receipt_file);assert price_receipt['status']=='submitted_needs_readback'
+        assert sha(overlay_file.parent/'payload.xml')==overlay['payload_sha256']
+        assert set(overlay['expected_schema'])=={'ladderPrice'}
+        expected=copy.deepcopy(expected);expected.update(overlay['expected_schema'])
     for fid,value in expected.items():
         if fid not in ('sku','icbuCatProp'):checks['schema_'+fid]=contract.created_field_equivalent(fid,value,actual.get(fid))
     logistics=schema.findall("./field[@id='logisticsProperty']/values/value")
@@ -262,7 +273,7 @@ def sync():
 
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('mode',choices=('schema','bank','prepare','create','verify','sync'));ap.add_argument('--style',required=True,choices=('995','2576','1712','2418','868','822','2579','2575','2505','931','02412','0922'));args=ap.parse_args();configure(args.style)
+    ap=argparse.ArgumentParser();ap.add_argument('mode',choices=('schema','bank','prepare','create','verify','sync'));ap.add_argument('--style',required=True,choices=('995','2576','1712','2418','868','822','2579','2575','2505','931','02412','0922','923','323'));args=ap.parse_args();configure(args.style)
     if args.mode=='prepare':prepare();return
     if args.mode=='sync':sync();return
     spec=importlib.util.spec_from_file_location('alibaba_client',ROOT/'.agents/skills/alibaba-openapi-operator/scripts/alibaba_openapi.py');client=importlib.util.module_from_spec(spec);spec.loader.exec_module(client);cfg=client.load_config(client.DEFAULT_CONFIG)

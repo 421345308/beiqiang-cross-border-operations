@@ -1,6 +1,6 @@
 {
   "requested_product_id": "1601979461922",
-  "observed_at_utc": "2026-10-14T05:49:48.477487+00:00",
+  "observed_at_utc": "2026-10-14T17:09:50.114071+00:00",
   "method": "alibaba.icbu.product.get",
   "response": {
     "product": {
@@ -22,7 +22,7 @@
       "struct_detail_product": true,
       "language": "ENGLISH",
       "is_smart_edit": false,
-      "gmt_modified": "2026-10-14 13:26:03",
+      "gmt_modified": "2026-10-15 00:48:01",
       "product_sku": {
         "skus": [
           {
@@ -38,7 +38,7 @@
               },
               {
                 "start_quantity": 100,
-                "price": "15.17"
+                "price": "15.18"
               }
             ],
             "sku_id": 109809271288,
@@ -57,7 +57,7 @@
               },
               {
                 "start_quantity": 100,
-                "price": "15.17"
+                "price": "15.18"
               }
             ],
             "sku_id": 109809271285,
@@ -76,7 +76,7 @@
               },
               {
                 "start_quantity": 100,
-                "price": "15.17"
+                "price": "15.18"
               }
             ],
             "sku_id": 109809271284,
@@ -95,7 +95,7 @@
               },
               {
                 "start_quantity": 100,
-                "price": "15.17"
+                "price": "15.18"
               }
             ],
             "sku_id": 109809271287,
@@ -114,7 +114,7 @@
               },
               {
                 "start_quantity": 100,
-                "price": "15.17"
+                "price": "15.18"
               }
             ],
             "sku_id": 109809271286,
@@ -133,7 +133,7 @@
               },
               {
                 "start_quantity": 100,
-                "price": "15.17"
+                "price": "15.18"
               }
             ],
             "sku_id": 109809271281,
@@ -152,7 +152,7 @@
               },
               {
                 "start_quantity": 100,
-                "price": "15.17"
+                "price": "15.18"
               }
             ],
             "sku_id": 109809271280,
@@ -171,7 +171,7 @@
               },
               {
                 "start_quantity": 100,
-                "price": "15.17"
+                "price": "15.18"
               }
             ],
             "sku_id": 109809271283,
@@ -190,7 +190,7 @@
               },
               {
                 "start_quantity": 100,
-                "price": "15.17"
+                "price": "15.18"
               }
             ],
             "sku_id": 109809271282,
@@ -209,7 +209,7 @@
               },
               {
                 "start_quantity": 100,
-                "price": "15.17"
+                "price": "15.18"
               }
             ],
             "sku_id": 109809271277,
@@ -228,7 +228,7 @@
               },
               {
                 "start_quantity": 100,
-                "price": "15.17"
+                "price": "15.18"
               }
             ],
             "sku_id": 109809271276,
@@ -247,7 +247,7 @@
               },
               {
                 "start_quantity": 100,
-                "price": "15.17"
+                "price": "15.18"
               }
             ],
             "sku_id": 109809271279,
@@ -266,7 +266,7 @@
               },
               {
                 "start_quantity": 100,
-                "price": "15.17"
+                "price": "15.18"
               }
             ],
             "sku_id": 109809271278,
@@ -285,7 +285,7 @@
               },
               {
                 "start_quantity": 100,
-                "price": "15.17"
+                "price": "15.18"
               }
             ],
             "sku_id": 109809271273,
@@ -304,7 +304,7 @@
               },
               {
                 "start_quantity": 100,
-                "price": "15.17"
+                "price": "15.18"
               }
             ],
             "sku_id": 109809271272,
@@ -323,7 +323,7 @@
               },
               {
                 "start_quantity": 100,
-                "price": "15.17"
+                "price": "15.18"
               }
             ],
             "sku_id": 109809271275,
@@ -342,7 +342,7 @@
               },
               {
                 "start_quantity": 100,
-                "price": "15.17"
+                "price": "15.18"
               }
             ],
             "sku_id": 109809271274,
@@ -361,7 +361,7 @@
               },
               {
                 "start_quantity": 100,
-                "price": "15.17"
+                "price": "15.18"
               }
             ],
             "sku_id": 109809271269,
@@ -380,7 +380,7 @@
               },
               {
                 "start_quantity": 100,
-                "price": "15.17"
+                "price": "15.18"
               }
             ],
             "sku_id": 109809271271,
@@ -399,7 +399,7 @@
               },
               {
                 "start_quantity": 100,
-                "price": "15.17"
+                "price": "15.18"
               }
             ],
             "sku_id": 109809271270,
@@ -595,7 +595,7 @@
       "rts": false,
       "product_type": "sourcing",
       "sourcing_trade": {
-        "fob_min_price": "15.17",
+        "fob_min_price": "15.18",
         "fob_currency": "USD",
         "min_order_unit_type": "Pair",
         "deliver_periods": [
@@ -661,8 +661,8 @@
       ],
       "status": "approved"
     },
-    "request_id": "0b0b3a2717919569881856710",
-    "_trace_id_": "213ba0c517919569880582259e0f12"
+    "request_id": "213f5a2117919977893888956",
+    "_trace_id_": "210141f717919977892421088e0c18"
   },
   "sanitized_fields": [
     "owner_member",

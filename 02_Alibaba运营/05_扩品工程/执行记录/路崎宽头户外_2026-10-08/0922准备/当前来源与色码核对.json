@@ -35,9 +35,13 @@
   "photo_count": 17,
   "full_original_fact_indices_actually_viewed": [
     1,
+    5,
     7,
+    11,
     12,
-    13
+    13,
+    14,
+    18
   ],
   "known_materials": {
     "upper": "Original07/09革面 generic surfaceword; usegrained/mattepanelappearance only,nativeother,no naturalleather/PUchemistry.",
@@ -66,7 +70,7 @@
     "EVA outsole profile: Angular tread blocks extend across the visible underside beneath a sculpted black sidewall.",
     "Wholesale colour-size options: Black and Black Grey are offered in EU 39–48 for winter assortments."
   ],
-  "state": "CURRENT_SOURCE_FACTS_REVIEWED_IMAGE_PREPARATION_NOT_CREATED",
+  "state": "CREATED_FORMAL_FIELDS_SCORE_PASS",
   "pricing_draft": {
     "source_cny": "68.00",
     "fx": "6.6837",
@@ -75,18 +79,20 @@
     "tiers": [
       [
         2,
-        "15.26"
+        "15.27"
       ],
       [
         50,
-        "14.24"
+        "14.25"
       ],
       [
         100,
         "13.23"
       ]
     ],
-    "freight_service_tax": "Order-specific; markupbeforefreight/service/tax, notguaranteednetprofit."
+    "freight_service_tax": "Order-specific; markupbeforefreight/service/tax, notguaranteednetprofit.",
+    "rounding": "ROUND_CEILING_TO_USD_CENT",
+    "current_price_repair": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/价格取整修正/update_receipt.json"
   },
   "publish_profile": {
     "category_id": 202248402,
@@ -124,5 +130,21 @@
     ]
   },
   "hero_selection": "Actualoriginal01 alreadycleanwhite/single/fullboot/noChinese orwatermark; selectunchanged800px original, no unnecessaryAIredraw. Othermissingbuyer-roles generatedasneeded.",
-  "title_bytes": 106
+  "title_bytes": 106,
+  "colour_selection_review": "CurrentBlackGreyusesactualframe18clearblackgrainedvamp/greymatteoverlays consistently; selectedSKUretainsoriginalwornpose/minimaltrousercontext, nocolourinventedfromswatch.",
+  "publication": {
+    "product_id": "1601980302105",
+    "audit": "approved",
+    "display": "Y",
+    "actual_score": "5.00",
+    "formal_verification": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/verification.json",
+    "local_sync_at": "2026-10-14T17:13:27.534382+00:00",
+    "no_replayed_create": true
+  },
+  "next_action": "该款正式字段、评分与来源已通过；继续其他款，不重复创建。",
+  "price_rounding_correction": {
+    "state": "FORMAL_FIELDS_SCORE_PASS",
+    "id": "1601980302105",
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/价格取整修正/prepared.json"
+  }
 }
