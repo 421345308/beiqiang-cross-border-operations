@@ -140,7 +140,9 @@ def verify(client,cfg):
     excluded={'subject','main_image','product_sku','struct_detail','sourcing_trade','pc_detail_url','gmt_modified','status','display'}
     checks['non_target_formal_product_preserved']=all(p.get(k)==v for k,v in before.items() if k not in excluded)
     checks['other_struct_detail_preserved']={k:v for k,v in p['struct_detail'].items() if k not in ('detail_image','product_summary')}=={k:v for k,v in before['struct_detail'].items() if k not in ('detail_image','product_summary')}
-    checks['highlights_exact']=p['struct_detail']['product_summary']==plan['highlights']
+    # textDesc is submitted as one newline-separated string. product.get
+    # returns that same string, rather than our planning list of bullet lines.
+    checks['highlights_exact']=p['struct_detail']['product_summary']=='\n'.join(plan['highlights'])
     checks['title_exact']=p['subject']==plan['title']
     checks['known_material_roles_unchanged']=shared.attributes(p)==shared.attributes(before)
     old_trade={k:v for k,v in before['sourcing_trade'].items() if k not in ('fob_min_price','fob_max_price')};new_trade={k:v for k,v in p['sourcing_trade'].items() if k not in ('fob_min_price','fob_max_price')};checks['trade_except_reviewed_prices_preserved']=old_trade==new_trade
@@ -191,6 +193,9 @@ def sync():
         listing['current_platform_fields']={**listing.get('current_platform_fields',{}),'at':report['at'],'title':p['subject'],'keywords':p.get('keywords',[]),'main_images':p['main_image']['images'],'status':p['status'],'display':p['display'],'category_id':p['category_id'],'url':p.get('pc_detail_url') or listing['url'],'colour_EU':SIZES,'sku_count':72};listing['catalog_fields']={**listing.get('catalog_fields',{}),**listing['current_platform_fields']};listing['url']=listing['current_platform_fields']['url']
         listing['source_routes_by_color']=routes;listing['local_sync']={**listing.get('local_sync',{}),'state':report['state'],'current_fields_file':rel(canonical/'formal_get.json'),'current_schema_file':rel(canonical/'formal_render.json'),'current_family_plan':rel(FOLDER/'家族来源与页面计划.json'),'family_verification':rel(FOLDER/'verification.json'),'observed_at':report['at']};listing['observation']={**listing.get('observation',{}),'audit':p['status'],'display':p['display'],'at':report['at'],'score':report['actual_score'],'sku_count':72,'scope':'OriginalID six-colour family formal API; no per-ID browser retest claimed.'};listing['notes']='2583/2583-1 shared base family on original ID; six photographed colours72EU with Red36-42, other five36-48. Existing26SKU IDs/codes/pictures retained, additional46 sourced by colour. Materialroles and currentV8/company generalFAQ preserved.'
         product['source_routes_by_color']=routes;product['related_source_ids']=sorted({v['source_id'] for v in routes.values()});product['local_assets']['current_fields_file']=rel(canonical/'formal_get.json');product['local_assets']['current_family_plan']=rel(FOLDER/'家族来源与页面计划.json');product['next_action']='六色72EU已正式绑定；评分按逐ID当前值，继续其他可执行路崎款，不重复创建2583。';product['notes']=['2583和2583-1为同一基础系列的配色与饰边变化，来源标题明确加颜色，已按两页实际结构和底纹核对；一个本店型号/原ID承接。','黑/浅灰来源2429716，其余四色来源2356506；Red不沿用另一页Pink文字。采购逐色回到真实货源，库存逐单核实。']
+        product['local_assets']['asset_roots']=list(dict.fromkeys(product['local_assets'].get('asset_roots',[])+[rel(CANDIDATE/'05_AI候选')]))
+        product['raw_packages']=list(dict.fromkeys(product.get('raw_packages',[])+[rel(BASE/'2583-1准备/01_产品来源原图'),rel(CANDIDATE/'01_产品来源原图')]))
+        sync_media(p,report)
         retired=next((x for x in data['products'] if x['id']=='LQ-2583'),None)
         retired_dossier=None
         if retired:
@@ -211,8 +216,12 @@ def sync():
         for row in queue['rows']:
             if row['style']=='2583':row.update(publication_state='MERGED_SOURCE_FAMILY_NO_EXTRA_CREATE',product_id=PID,EU_combinations=72,current_platform_evidence=rel(FOLDER/'verification.json'))
             if row['style']=='2583-1':row.update(publication_state='CREATED_APPROVED_Y',EU_combinations=72,current_platform_evidence=rel(FOLDER/'verification.json'),actual_score=report['actual_score'])
-        plan['state']=report['state'];plan['formal_verification']=rel(FOLDER/'verification.json');save(FOLDER/'家族来源与页面计划.json',plan)
-        facts=load(CANDIDATE/'当前来源与色码核对.json');facts.update(status=report['state'],state=report['state'],formal_original_product_id=PID,formal_EU_combinations=72,formal_verification=rel(FOLDER/'verification.json'));save(CANDIDATE/'当前来源与色码核对.json',facts)
+        summary_file=BASE/'本批正式商品汇总.json';summary=load(summary_file)
+        for row in summary:
+            if str(row['product_id'])==PID:row.update(status=p['status'],display=p['display'],sku_count=72,score=report['actual_score'],EU_labels_match=True,title_match=True,unmatched_fields=[],observed_at=report['at'],latest_review_scope='SOURCE_FAMILY_SIX_COLOURS_72EU_ORIGINAL26_SKU_IDS_PRESERVED',latest_review_file=rel(FOLDER/'verification.json'))
+        save(summary_file,summary)
+        plan['state']=report['state'];plan['formal_verification']=rel(FOLDER/'verification.json');plan['next_action']='原ID六色72EU正式字段与当前实际评分见核验，已同步逐色货源和本地素材；不再创建2583或重放扩色。继续其他路崎真实款。';save(FOLDER/'家族来源与页面计划.json',plan)
+        facts=load(CANDIDATE/'当前来源与色码核对.json');facts.update(status=report['state'],state=report['state'],formal_original_product_id=PID,formal_EU_combinations=72,formal_verification=rel(FOLDER/'verification.json'),next_action=plan['next_action']);save(CANDIDATE/'当前来源与色码核对.json',facts)
     else:
         listing['current_repair_phase']={'state':report['state'],'at':report['at'],'scope':'Family expansion pending; last accepted fields have26EU, target72not claimed accepted.','evidence':evidence}
     if report['state'] in ('FORMAL_FIELDS_SCORE_PASS','FORMAL_FIELDS_PASS_PENDING_SCORE'):listing.pop('current_repair_phase',None)
@@ -220,6 +229,23 @@ def sync():
     sys.path.insert(0,str(ROOT/'08_工具链/06_工作区维护'));import build_product_workspace as workspace
     for path,body in workspace.build(data).items():workspace.write_generated(ROOT/path,body)
     save(FOLDER/'双改核验.json',{'at':now(),'state':report['state'],'id':PID,'registry':rel(shared.REG),'no_extra_product_created':True,'target72not_claimed_until_formal_pass':True,'dossier_current':product.get('dossier_path')});print('FAMILY_LOCAL_SYNC',report['state'])
+
+
+def sync_media(product,proof):
+    from PIL import Image
+    file=ROOT/'02_Alibaba运营/05_扩品工程/数据/目录对账/当前素材清单.json';data=load(file);mapping={}
+    for row in load(BASE/'2583-1准备/正式图片银行映射.json'):
+        path=Path(row['local_file']);assert path.is_relative_to(ROOT)
+        mapping[contract._created_image_identity(row['url'])]={**row,'path':rel(path)}
+    for row in load(FOLDER/'图片银行.json')['items'].values():mapping[contract._created_image_identity(row['url'])]={**row,'path':rel(CANDIDATE/row['path'])}
+    for row in load(ROOT/'02_Alibaba运营/06_图片与检查记录/共享工厂详情/V8/bank.json')['items'].values():mapping[contract._created_image_identity(row['url'])]=row
+    sd=product['struct_detail'];roles={'main':product['main_image']['images'],'details':[x['image_url'] for x in sd['detail_image']['images']],'company':[x['image_url'] for x in sd['company_image']['images']],'sku':[v['image_url'] for a in product['product_sku']['sku_attributes'] for v in a['values'] if v.get('image_url')],'html':[]}
+    for urls in roles.values():
+        for url in urls:
+            row=mapping[contract._created_image_identity(url)];path=ROOT/row['path'];assert path.is_file() and sha(path)==row['sha256'];w,h=Image.open(path).size
+            data['assets'][url]={'state':'SAVED','file':row['path'],'sha256':row['sha256'],'bytes':path.stat().st_size,'width':w,'height':h,'pixel_qa':'Selected actual-source-preserving local image visually reviewed; formal CDN asset identity matches official upload. No new browser or remote pixel claim.','at':proof['get_observed_at']}
+    data['products'][PID]=roles;data['urls']=len(data['assets']);data['saved_urls']=sum(x.get('state')=='SAVED' for x in data['assets'].values());data['unique_files']=len({x['sha256'] for x in data['assets'].values() if x.get('state')=='SAVED'});data['errors']=sum(x.get('state')!='SAVED' for x in data['assets'].values());save(file,data)
+    save(FOLDER/'本地素材绑定核验.json',{'at':now(),'id':PID,'state':'CURRENT_FORMAL_CDN_IDENTITY_LOCAL_SHA_MATCH','roles':roles,'source_file':rel(file),'scope':'Known original and new official image bank identities mapped to already-reviewed local assets; no download, new original packet or duplicate local copy.'})
 
 
 def main():

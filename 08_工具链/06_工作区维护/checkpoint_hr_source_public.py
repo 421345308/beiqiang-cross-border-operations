@@ -88,6 +88,14 @@ def main():
     luqi_repairs=load(luqi_audit+'/修正清单.json')['rows']
     luqi_ids={str(row['id']) for row in luqi_repairs}
     assert len(luqi_ids)==8
+    new_luqi_ids=set()
+    new_luqi_ledger=ROOT/LUQI/'995准备/create_once.json'
+    if new_luqi_ledger.exists():
+        created=load(new_luqi_ledger.relative_to(ROOT).as_posix())
+        if created.get('product_id'):
+            assert created['model']=='BQ-LQ995' and str(created['product_id']).isdigit()
+            new_luqi_ids.add(str(created['product_id']))
+    luqi_ids |= new_luqi_ids
     luqi_families={ll['product_id'] for ll in live['listings'] if ll['id'] in luqi_ids}
     families = set(scope['targets']) | {p['family'] for p in profiles} | {p['family']for p in history}
     paths = [HR+'/'+name for name in ('README.md','scope.json','当前进度.json','质量修正计划.json','已有实款对应.json','双改与货源一致性核验.json')]
@@ -98,15 +106,18 @@ def main():
     queue_path=LUQI+'/质量复核_2026-10-09/全分类处理队列.json'
     queue=load(queue_path)
     assert len(queue['rows'])==107
-    paths += [queue_path,LUQI+'/README.md','08_工具链/01_业务脚本/国际站扩品/collect_luqi_pending_sources.py']
+    paths += [queue_path,LUQI+'/README.md',LUQI+'/本批正式商品汇总.json','08_工具链/01_业务脚本/国际站扩品/collect_luqi_pending_sources.py','08_工具链/06_工作区维护/product_dossiers.py']
     paths += ['08_工具链/01_业务脚本/国际站扩品/'+name for name in ('repair_luqi_material_roles.py','expand_luqi_2583_family.py')]
+    paths += ['08_工具链/01_业务脚本/国际站扩品/publish_reviewed_luqi_995.py']
+    prefix=LUQI+'/995准备'
+    paths += [p.relative_to(ROOT).as_posix() for p in (ROOT/prefix).glob('*.json') if p.name in ('prepared.json','manifest.json','图片银行公开映射.json','create_once.json','create_receipt.json','verification.json','score.json','双改核验.json','来源款式近似候选.json','发布前差异化审查.json')]
     paths += [luqi_audit+'/'+name for name in ('修正清单.json','当前正式材料.json','prepare_汇总.json','submit_汇总.json','verify_汇总.json','双改核验.json') if (ROOT/luqi_audit/name).exists()]
     for row in luqi_repairs:
         paths.append(row['source_facts'])
         folder=ROOT/luqi_audit/'商品'/str(row['id'])
         paths += [p.relative_to(ROOT).as_posix() for p in folder.glob('*.json') if p.name in ('prepared.json','manifest.json','update_once.json','update_receipt.json','verification.json','score.json')]
     prefix=LUQI+'/2583-1准备/家族扩色'
-    paths += [p.relative_to(ROOT).as_posix() for p in (ROOT/prefix).glob('*.json') if p.name in ('家族来源与页面计划.json','图片银行公开映射.json','prepared.json','manifest.json','update_once.json','update_receipt.json','verification.json','score.json','当前状态.json','双改核验.json')]
+    paths += [p.relative_to(ROOT).as_posix() for p in (ROOT/prefix).glob('*.json') if p.name in ('家族来源与页面计划.json','图片银行公开映射.json','prepared.json','manifest.json','update_once.json','update_receipt.json','verification.json','score.json','当前状态.json','双改核验.json','本地素材绑定核验.json')]
     prefix=LUQI+'/2583准备'
     paths += [prefix+'/'+name for name in ('当前来源与色码核对.json','来源现状复核.json','05_AI候选/AI主图审核.json','05_AI候选/AI新增颜色完整提示词.json','05_AI候选/AI新增颜色审核.json','05_AI候选/AI家族详情完整提示词.json','05_AI候选/AI家族详情审核.json','标识形状比较/官方图形来源.json')]
     for row in queue['rows']:
@@ -115,7 +126,7 @@ def main():
         index=ROOT/prefix/'01_产品来源原图/当前来源图像索引.json'
         if index.exists()and load(index.relative_to(ROOT).as_posix()).get('collection')=='PUBLIC_HTTPS_NORMAL_TLS_PRODUCT_ONLY':
             paths.append(index.relative_to(ROOT).as_posix())
-            for name in ('当前来源与色码核对.json','05_AI候选/AI颜色图审核.json','05_AI候选/AI主图审核.json','05_AI候选/AI选款图审核.json','05_AI候选/AI结构图审核.json'):
+            for name in ('当前来源与色码核对.json','05_AI候选/AI颜色图审核.json','05_AI候选/AI主图审核.json','05_AI候选/AI选款图审核.json','05_AI候选/AI结构图审核.json','05_AI候选/AI详情与穿着完整提示词.json','05_AI候选/AI详情与穿着审核.json','05_AI候选/整组验收.json'):
                 file=ROOT/prefix/name
                 if file.exists():paths.append(file.relative_to(ROOT).as_posix())
     for family in scope['targets']:
@@ -209,8 +220,9 @@ def main():
         elif product['id'] in luqi_families:
             # Exact source-evidenced Luqi correction, not a sweep of all active
             # workspace changes. Preserve unrelated family fields from base.
-            for key in ('local_assets','material_role_review','family_color_expansion','source_routes_by_color','related_source_ids','next_action','notes','aliases','evidence','raw_packages'):
+            for key in ('source_state','adopted_source_id','candidate_source_ids','local_assets','material_role_review','family_color_expansion','source_routes_by_color','related_source_ids','next_action','notes','aliases','evidence','raw_packages','dossier_path'):
                 if key in lp[product['id']]:product[key]=copy.deepcopy(lp[product['id']][key])
+            if product['id']=='LQ-995':product['classification']=copy.deepcopy(lp[product['id']]['classification'])
     family_phase=ll['1601976101204'].get('optimization',{}).get('family_color_expansion',{})
     if family_phase.get('state') in ('FORMAL_FIELDS_SCORE_PASS','FORMAL_FIELDS_PASS_PENDING_SCORE') and 'LQ-2583' not in lp:
         assert not any(l['product_id']=='LQ-2583' for l in merged['listings'])
@@ -245,23 +257,40 @@ def main():
             current=ROOT/ll[pid]['formal_fields']['file']
             payload=load(current.relative_to(ROOT).as_posix());assert payload.get('sanitized_fields');safe(payload)
             frozen[current.relative_to(ROOT).as_posix()]=(json.dumps(payload,ensure_ascii=False,indent=2)+'\n').encode('utf8')
+    for pid in new_luqi_ids:
+        assert pid not in {l['id'] for l in baseline['listings']} or next(l for l in baseline['listings'] if l['id']==pid)['model']=='BQ-LQ995'
+        merged['listings']=[l for l in merged['listings'] if l['id']!=pid]+[copy.deepcopy(ll[pid])]
+        source_id=lp[ll[pid]['product_id']].get('adopted_source_id') or next(iter(lp[ll[pid]['product_id']].get('candidate_source_ids',[])),None)
+        assert source_id
+        source=next(s for s in live['sources'] if s['id']==source_id)
+        assert source['url']=='https://luqi.sooxie.com/detail/2295867'
+        merged['sources']=[s for s in merged['sources'] if s['id']!=source_id]+[copy.deepcopy(source)]
     task = next(x for x in live['workstreams'] if x['name']=='HR缺货源实款替换')
     merged['workstreams'] = [x for x in merged['workstreams'] if x['name']!=task['name']] + [copy.deepcopy(task)]
+    luqi_work=next(x for x in live['workstreams'] if x['name']=='路崎宽头/户外全分类')
+    merged['workstreams']=[x for x in merged['workstreams'] if x['name']!=luqi_work['name']]+[copy.deepcopy(luqi_work)]
     merged['updated_on'] = live['updated_on']
     safe(merged)
     frozen[REG] = (json.dumps(merged,ensure_ascii=False,indent=2)+'\n').encode('utf8')
+    # Full media cache remains local per the repository media boundary. Export
+    # exact per-object official-bank maps and SHA binding proofs above instead
+    # of publishing a misleading partial global cache or unrelated assets.
     sys.path.insert(0,str(Path(__file__).parent))
     import build_product_workspace as workspace
     errors = workspace.validate(merged)
     baseline_errors = workspace.validate(baseline)
     assert set(errors) <= set(baseline_errors), errors
     assert not any(pid in error for pid in hr_ids for error in errors), errors
-    for path, raw in workspace.build(merged).items():
+    current_views=workspace.build(merged)
+    retired_views={path.as_posix() for path in workspace.build(baseline) if path not in current_views}
+    assert all(path.endswith('/LQ-2583/README.md') for path in retired_views), 'Only the exact merged candidate generated entry may be removed'
+    for path, raw in current_views.items():
         relative = path.relative_to(ROOT) if path.is_absolute() else path
         frozen[relative.as_posix()] = raw
     with tempfile.TemporaryDirectory(prefix='hr-public-git-',dir=ROOT/'99_临时区/HR实源替换') as temporary:
         env = dict(os.environ,GIT_INDEX_FILE=str(Path(temporary)/'index'))
         git('read-tree',base,env=env)
+        for path in sorted(retired_views):git('update-index','--force-remove','--',path,env=env)
         rows = list(frozen.items())
         files = []
         for i, (path, raw) in enumerate(rows):
@@ -280,7 +309,7 @@ def main():
         tree = git('write-tree',env=env).decode().strip()
         assert not git('diff','--check',base,tree)
         changed = [p for p in git('diff','--name-only','-z',base,tree).decode().split('\0') if p]
-        assert set(changed) <= set(frozen)
+        assert set(changed) <= set(frozen)|retired_views
         assert git('rev-parse','HEAD').decode().strip() == head
         assert git('write-tree').decode().strip() == original_index
         if args.check_only:

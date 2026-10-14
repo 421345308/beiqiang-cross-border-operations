@@ -1,6 +1,6 @@
 {
   "at": "2026-10-14T01:46:51.411604+00:00",
-  "state": "SOURCE_FAMILY_REVIEWED_ASSETS_PREPARED_NO_CREATE",
+  "state": "FORMAL_FIELDS_SCORE_PASS",
   "product_id": "1601976101204",
   "model": "BQ-LQ2583-1",
   "source_family": "Luqi2583",
@@ -174,5 +174,6 @@
       "Rubber"
     ]
   },
-  "next_action": "Upload reviewed new assets once, then fresh exact-ID get/render. Prepare/submit only after current material edit is approved; never replay pending updates."
+  "next_action": "原ID六色72EU正式字段与当前实际评分见核验，已同步逐色货源和本地素材；不再创建2583或重放扩色。继续其他路崎真实款。",
+  "formal_verification": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2583-1准备/家族扩色/verification.json"
 }

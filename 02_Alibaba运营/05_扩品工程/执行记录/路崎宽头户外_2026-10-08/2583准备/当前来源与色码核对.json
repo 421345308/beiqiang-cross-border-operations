@@ -120,13 +120,13 @@
     "next_action": "Retain actual ordinary side decoration, no branded keywords/claim. All four photographedcolour versions may be prepared; no recolouring.",
     "primary_comparator": "标识形状比较/官方图形来源.json"
   },
-  "status": "SAME_FAMILY_EXPANSION_PREPARED_NO_CREATE",
+  "status": "FORMAL_FIELDS_SCORE_PASS",
   "excluded": [
     "73percent rebound supplier graphic",
     "grip/stability/waterproof/medical/zero-drop claims",
     "Unphotographed Black/Light Gray SKU recoloring"
   ],
-  "next_action": "Upload reviewed new assets once, then fresh exact-ID get/render. Prepare/submit only after current material edit is approved; never replay pending updates.",
+  "next_action": "原ID六色72EU正式字段与当前实际评分见核验，已同步逐色货源和本地素材；不再创建2583或重放扩色。继续其他路崎真实款。",
   "initial_offer_EU_by_color": {
     "Black": [
       36,
@@ -267,7 +267,7 @@
     ],
     "freight_service_tax": "Order-specific, not net profit or market-lowest proof."
   },
-  "state": "SAME_FAMILY_EXPANSION_PREPARED_NO_CREATE",
+  "state": "FORMAL_FIELDS_SCORE_PASS",
   "family_original_product_id": "1601976101204",
   "source_routes_by_color": {
     "Black": {
@@ -385,5 +385,8 @@
       ]
     }
   },
-  "family_plan": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2583-1准备/家族扩色/家族来源与页面计划.json"
+  "family_plan": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2583-1准备/家族扩色/家族来源与页面计划.json",
+  "formal_original_product_id": "1601976101204",
+  "formal_EU_combinations": 72,
+  "formal_verification": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2583-1准备/家族扩色/verification.json"
 }

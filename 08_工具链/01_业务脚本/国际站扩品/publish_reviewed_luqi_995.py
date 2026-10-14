@@ -1,0 +1,243 @@
+"""One reviewed real Luqi995 offer, explicit current Schema, once-only create.
+
+No historical builder defaults or physical-material transfers are used.
+Original supplier colour aliases remain in the plan; buyer labels are explicit.
+"""
+from pathlib import Path
+from xml.etree import ElementTree as E
+from datetime import datetime,timezone
+import argparse,copy,importlib.util,json,sys,hashlib
+from urllib.parse import urlparse
+from decimal import Decimal
+sys.path.insert(0,str(Path(__file__).parent))
+import repair_luqi_material_roles as shared
+import publish_hot_rank_hr_a_batch as pub
+import schema_publish_contract as contract
+from read_only_catalog import read_only_call,product_readiness
+ROOT=shared.ROOT;BASE=shared.BASE;FOLDER=BASE/'995准备';REG=shared.REG;MODEL='BQ-LQ995';CATEGORY=201334413
+load,save,sha,rel,now=shared.load,shared.save,shared.sha,shared.rel,shared.now
+CATALOG=ROOT/'99_临时区/路崎995/当前目录/catalog.json'
+COLORS={'Black':('Black','SKU_Black'),'Beige Brown':('Black Khaki','SKU_BlackKhaki'),'Tan':('Earth Yellow','M1')}
+FIELDS=['catId','icbuCatProp','saleProp','sku','productTitle','scImages','pkgMeasure','pkgWeight','ladderPeriod','priceUnit','shippingTemplate','ladderPrice','saleType','scPrice','minOrderQuantity','productDescType','detailImage','textDesc','companyImage','companyDesc','companyFaqDesc','logisticsProperty']
+
+
+def scalar(parent,fid,typ='input',value=None):
+    field=E.SubElement(parent,'field',id=fid,type=typ)
+    if value is not None:E.SubElement(field,'value').text=str(value)
+    return field
+
+
+def choice(schema,fid,label):
+    definition=schema.find("./field[@id='%s']"%fid)
+    found=[o.get('value') for o in definition.findall('./options/option') if o.get('displayName').strip().casefold()==label.casefold()]
+    assert len(found)==1,'Missing/ambiguous current option '+fid+'/'+label
+    return found[0]
+
+
+def attribute(schema,cv,name,texts):
+    definitions=[d for d in schema.findall("./field[@id='icbuCatProp']/fields/field") if d.get('name')==name];assert len(definitions)==1
+    d=definitions[0];typ=d.get('type');assert typ in ('singleCheck','multiCheck') and texts and (typ!='singleCheck' or len(texts)==1)
+    f=scalar(cv,d.get('id'),typ);parent=E.SubElement(f,'values') if typ=='multiCheck' else f
+    options={o.get('displayName').casefold():(o.get('value'),o.get('displayName')) for o in d.findall('./options/option')}
+    for i,text in enumerate(texts):
+        native=options.get(text.casefold())
+        if native:value,label=native
+        else:
+            assert any(r.get('name')=='tipRule' and '负数' in r.get('value','') for r in d.findall('./rules/rule'))
+            value,label=str(-701-i),text
+        E.SubElement(parent,'value',inputValue=label).text=value
+
+
+def bank(client,cfg):
+    proof=load(FOLDER/'05_AI候选/整组验收.json');assert proof['state']=='VISUAL_PASS_PENDING_PUBLISH_PREFLIGHT' and len(proof['items'])==11
+    file=FOLDER/'图片银行.json';data=load(file) if file.exists() else {'state':'IN_PROGRESS','items':{}}
+    for item in proof['items']:
+        role=item['role'];path=ROOT/item['path'];assert sha(path)==item['sha256'] and path.stat().st_size<4194304
+        if role in data['items']:
+            old=data['items'][role];assert old['state']=='UPLOADED' and old['sha256']==item['sha256'],'Unknown image upload must be reconciled before continuing'
+            continue
+        row={**item,'state':'OUTCOME_UNKNOWN_NO_RETRY','at':now()};data['items'][role]=row;save(file,data)
+        result=client.upload_image(cfg,path,None);row['response']=result;save(file,data);raw=result.get('upload_image_response',{})
+        assert not client.api_error(result) and raw.get('file_id') and raw.get('photobank_url')
+        url=raw['photobank_url'];url='https:'+url if url.startswith('//') else url.replace('http:','https:');assert urlparse(url).hostname=='sc04.alicdn.com'
+        row.update(state='UPLOADED',url=url,file_id=str(raw['file_id']));save(file,data);print(role,'UPLOADED',flush=True)
+    data['state']='COMPLETE';save(file,data);save(FOLDER/'图片银行公开映射.json',{'state':'COMPLETE','items':{k:{a:b for a,b in row.items() if a!='response'} for k,row in data['items'].items()}})
+
+
+def prepare():
+    assert not (FOLDER/'create_once.json').exists(),'Already attempted; read back or reconcile, never recreate'
+    facts=load(FOLDER/'当前来源与色码核对.json');proof=load(FOLDER/'05_AI候选/整组验收.json');bank=load(FOLDER/'图片银行.json');assert bank['state']=='COMPLETE';assets=bank['items']
+    assert facts['source']=='https://luqi.sooxie.com/detail/2295867' and facts['wide_claim']=='NO_WIDE_EVIDENCE_NO_WIDE_CLAIM'
+    assert all(facts['source_EU_by_color'][alias]==list(range(39,49)) for alias,_ in COLORS.values())
+    catalog=load(CATALOG);assert catalog['complete'] and len(catalog['products'])==catalog['unique_ids']==catalog['total_item']
+    registry=load(REG);sources={s['id']:s for s in registry['sources']};listings={l['id']:l for l in registry['listings']}
+    assert not any(p.get('red_model')==MODEL for p in catalog['products'])
+    assert not any(sources.get(listings.get(str(p['id']),{}).get('bound_source_id'),{}).get('url','').rstrip('/')==facts['source'] for p in catalog['products']), 'Same source already bound; use existing ID instead'
+    response=load(FOLDER/'当前步行鞋Schema.json');schema=E.fromstring(response['data']);schema_file=FOLDER/'当前步行鞋Schema.xml';assert E.tostring(schema)==E.tostring(E.parse(schema_file).getroot())
+    root=E.Element('itemSchema');defs={f.get('id'):f for f in schema.findall('./field')}
+    for fid in FIELDS:root.append(E.Element('field',id=fid,type=defs[fid].get('type')))
+    cv=E.SubElement(root.find("./field[@id='icbuCatProp']"),'complex-value')
+    attribute(schema,cv,'Place of Origin',['China'])
+    verified_format=E.fromstring(load(BASE/'2583-1准备/家族扩色/after_render.json')['data'])
+    for name,value in [('Brand Name','Beiqiang'),('Model Number',MODEL)]:
+        definition=next(f for f in schema.findall("./field[@id='icbuCatProp']/fields/field") if f.get('name')==name)
+        reference=verified_format.find("./field[@id='icbuCatProp']/complex-value/field[@id='%s']"%definition.get('id'))
+        assert reference is not None and reference.get('type')==definition.get('type'), 'Acquire an actually rendered representation for this current input field'
+        cv.append(contract.serialize_product_attribute(schema,definition.get('id'),value,format_reference=reference))
+    for name,labels in [('Midsole Material',['other']),('Outsole Material',['other']),('Lining Material',['other']),('Upper Material',['Microfiber']),('Closure Type',['Lace-up'])]:attribute(schema,cv,name,labels)
+    # Optional seasons/performance/width/US conversion are deliberately absent:
+    # an unsupported optional value is not needed to describe this real shoe.
+    for fid,value in [('catId',CATEGORY),('productTitle',facts['title_draft']),('pkgWeight','0.5'),('minOrderQuantity','2'),('productDescType','4'),('textDesc','\n'.join(facts['product_highlights_draft']))]:pub.set_direct_value(root,fid,str(value))
+    for fid,label in [('priceUnit','Pair/Pairs'),('saleType','Unit'),('scPrice','Tiered pricing by quantity')]:pub.set_direct_value(root,fid,choice(schema,fid,label))
+    package=E.SubElement(root.find("./field[@id='pkgMeasure']"),'complex-value')
+    for name,value in [('length',34),('width',23),('height',13)]:scalar(package,name,value=value)
+    period=E.SubElement(root.find("./field[@id='ladderPeriod']"),'complex-value');row=E.SubElement(scalar(period,'ladderPeriod_0','complex'),'complex-value');scalar(row,'quantity',value=100);scalar(row,'day',value=31)
+    prices=E.SubElement(root.find("./field[@id='ladderPrice']"),'complex-value')
+    tiers=facts['pricing_draft']['tiers']
+    assert len(tiers)==3 and tiers[0][0]==2 and tiers[-1][0]==100
+    for i,(quantity,price) in enumerate(tiers):
+        row=E.SubElement(scalar(prices,f'ladderPrice_{i}','complex'),'complex-value');scalar(row,'quantity',value=quantity);scalar(row,'price',value=price)
+    shipping=E.SubElement(root.find("./field[@id='shippingTemplate']"),'complex-value');definition=schema.find("./field[@id='shippingTemplate']/fields/field[@id='templateType']");option=next(o for o in definition.findall('./options/option') if o.get('displayName')=='FREIGHT_NEGOTIATION');scalar(shipping,'templateType','singleCheck',option.get('value'))
+    normal=choice(schema,'logisticsProperty','Ordinary goods');E.SubElement(E.SubElement(root.find("./field[@id='logisticsProperty']"),'values'),'value').text=normal
+    sale=E.SubElement(root.find("./field[@id='saleProp']"),'complex-value');propdefs={f.get('name'):f for f in schema.findall("./field[@id='saleProp']/fields/field")}
+    size_id=propdefs['EUR Size'].get('id');color_id=propdefs['Color'].get('id');sid=size_id.removeprefix('p-');cid=color_id.removeprefix('p-');assert sid.isdigit() and cid.isdigit()
+    sizes=E.SubElement(scalar(sale,size_id,'multiCheck'),'values');colours=E.SubElement(scalar(sale,color_id,'multiCheck'),'values');sku=root.find("./field[@id='sku']")
+    for n in range(39,49):E.SubElement(sizes,'value',inputValue=f'EU {n}').text=str(-10000-n)
+    for i,(colour,(alias,image_role)) in enumerate(COLORS.items()):
+        marker=str(-200-i);E.SubElement(colours,'value',inputValue=colour,img=assets[image_role]['url']).text=marker
+        for n in range(39,49):
+            row=E.SubElement(sku,'complex-values');scalar(row,'skuOuterId',value=f'{MODEL}-{colour.upper().replace(" ","-")}-EU{n}');props=E.SubElement(scalar(row,'props','multiInput'),'values')
+            for prop,label,value in [(cid,colour,marker),(sid,f'EU {n}',str(-10000-n))]:E.SubElement(props,'value',propId=prop,propName='p-'+prop,propValueId=value,propValueName=label).text=prop+':'+value
+    company=load(ROOT/'02_Alibaba运营/06_图片与检查记录/共享工厂详情/V8/bank.json');assert company['asset_version']==8;company=company['items']
+    common=load(ROOT/'02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/通用FAQ与公司简介.json');assert len(common['companyFaqDesc'])==8
+    pub.set_main_images(root,[assets[f'M{i}'] for i in range(1,6)]+[company['C1']]);pub.set_gallery(root,'detailImage',[assets[f'D{i}'] for i in range(1,5)],[(300,'Detail shot')]*4)
+    roles=[('C1',400),('C2',550),('C3',600),('C4',450),('C5',700),('C6',700)]
+    options={o.get('value'):o.get('displayName') for o in schema.findall("./field[@id='companyImage']/fields/field[@id='gallery']/options/option")}
+    pub.set_gallery(root,'companyImage',[company[k] for k,_ in roles],[(n,options[str(n)]) for _,n in roles]);pub.set_direct_value(root,'companyDesc',common['companyDesc'])
+    faq=root.find("./field[@id='companyFaqDesc']")
+    for item in common['companyFaqDesc']:
+        row=E.SubElement(faq,'complex-values');scalar(row,'question',value=item['question']);scalar(row,'answers',value=item['answers'])
+    xml=pub.values_only(root,operation='create',field_ids=FIELDS);assert not xml.findall(".//field[@id='skuStock']") and not xml.findall(".//field[@id='skuId']");assert len(sku.findall('./complex-values'))==30
+    (FOLDER/'payload.xml').write_text(E.tostring(xml,encoding='unicode'),encoding='utf-8')
+    evidence=rel(FOLDER/'05_AI候选/整组验收.json');candidate={'model_number':MODEL,'title':facts['title_draft'],'hero_url':assets['M1']['url'],'source':{'reference':facts['source'],'style':'995','critical_facts':{'profile':'; '.join(facts['visible_structure'])},'evidence':[rel(FOLDER/'当前来源与色码核对.json'),evidence]},'search_intent':{'key':'Mens microfiber lace-up outdoor casual shoes, sculpted sole profile and padded low-cut collar, EU39-48','evidence':[evidence]},'hero_review':{'url':assets['M1']['url'],'aliases':[assets['M1']['url'].replace('https:','')],'sha256':assets['M1']['sha256'],'content_key':'Luqi995_actual_tan_source01','label_status':'not_present','evidence':[evidence]}}
+    records={}
+    for product in catalog['products']:
+        pid=str(product['id']);listing=listings.get(pid,{});source=sources.get(listing.get('bound_source_id'))
+        if source:records[pid]={'source':{'reference':source['url'],'style':source['model'],'evidence':[rel(REG)]}}
+    review={'candidate':candidate,'source_records':records,'observed_at':catalog['observed_at_utc'],'coverage_limit':'Complete current455ID metadata with registered source identities, 100 supplier covers/nearest12 physically inspected, reviewed actual995source and all11selectedimages. Not global all-angle or IP clearance.','evidence_files':[{'path':str(CATALOG),'sha256':sha(CATALOG),'kind':'catalog_snapshot'},{'path':str(REG),'sha256':sha(REG),'kind':'source_register'},{'path':str(ROOT/evidence),'sha256':sha(ROOT/evidence),'kind':'visual_review'}]}
+    save(FOLDER/'发布前差异化审查.json',review)
+    manifest={'operation':'create','category_id':CATEGORY,'facts_reviewed':True,'source_evidence':[rel(FOLDER/'当前来源与色码核对.json'),evidence,'02_Alibaba运营/00_运营SOP/国际站商品全生命周期SOP.md'],'current_schema':'当前步行鞋Schema.xml','current_schema_sha256':sha(schema_file),'schema_request_id':response['request_id'],'schema_acquired_at':datetime.fromtimestamp(schema_file.stat().st_mtime,timezone.utc).isoformat(),'payload_xml':'payload.xml','field_ids':FIELDS,'dependency_ids':[],'expected_model':MODEL,'differentiation_review':'发布前差异化审查.json','differentiation_review_sha256':sha(FOLDER/'发布前差异化审查.json')}
+    save(FOLDER/'manifest.json',manifest);listing=pub.load_submission_manifest(FOLDER/'manifest.json','create',None)
+    save(FOLDER/'prepared.json',{'at':now(),'state':'LOCAL_PREFLIGHT_PASS_NOT_CREATED','model':MODEL,'source':facts['source'],'source_price_cny':facts['source_price_cny'],'buyer_to_supplier_colour':{c:a for c,(a,_) in COLORS.items()},'EU_by_colour':{c:list(range(39,49)) for c in COLORS},'EU_combinations':30,'fields':FIELDS,'expected_schema':contract.field_snapshot(E.fromstring(listing['xml'])),'differentiation':listing['differentiation_review'],'company_version':8,'general_faq_count':8,'materials':{'upper':'Microfiber, no fibre percentage/polymer inference','outsole':'unknown/other','midsole':'unknown/other','lining':'unknown/other'},'commercial_baseline':'Owner SOP MOQ2,34x23x13cm/.5kg,quantity100/day31; quotation and shipping confirmed per order. Price tiers use dated sourcecost/FX; not a market-lowest or net-profit promise.','inventory':'OMITTED_NOT_PHYSICAL_STOCK','keywords':'No deprecated keyword field submitted; buyer phrases covered naturally in title and product-specific highlights, no traffic-volume claim.'});print('995_CREATE_PREFLIGHT_PASS_30EU',flush=True)
+
+
+def create(client,cfg):
+    file=FOLDER/'create_once.json'
+    if file.exists():print('EXISTING_CREATE_LEDGER_READBACK_OR_RECONCILE_ONLY');return
+    listing=pub.load_submission_manifest(FOLDER/'manifest.json','create',None)
+    with file.open('x',encoding='utf8') as f:json.dump({'state':'STARTED_OUTCOME_UNKNOWN_NO_REPLAY','model':MODEL,'at':now()},f)
+    result=pub.api_submit(client,cfg,listing,False);save(FOLDER/'create_receipt.json',result);pid=pub.extract_product_id(result.get('response') or {})
+    save(file,{'state':result['status'],'product_id':pid,'at':result['attempted_at'],'model':MODEL,'refs':result.get('refs')});print(json.dumps({'state':result['status'],'product_id':pid}),flush=True)
+
+
+def verify(client,cfg):
+    receipt=load(FOLDER/'create_receipt.json');pid=pub.extract_product_id(receipt.get('response') or {});assert pid and receipt['status']=='submitted_needs_readback'
+    # A local post-response bookkeeping exception must never trigger create
+    # again. Reconcile saved positive business result with exact-ID formal get.
+    got=read_only_call(client,cfg,'alibaba.icbu.product.get',{'product_id':pid,'language':'ENGLISH'});save(FOLDER/'after_get.json',got);p=got.get('product');assert p and shared.attributes(p).get('Model Number')==[MODEL]
+    save(FOLDER/'create_once.json',{'state':receipt['status'],'product_id':pid,'at':receipt['attempted_at'],'model':MODEL,'refs':receipt.get('refs'),'reconciled_saved_receipt_and_exact_model_get':True,'get_request_id':got['request_id'],'no_replayed_create':True})
+    report={'id':pid,'style':'995','at':now(),'state':product_readiness(p['status']),'status':p['status'],'display':p['display'],'actual_score':None,'get_observed_at':now(),'inventory_write':'OMITTED_NOT_PHYSICAL_STOCK','public_qa':'NOT_PUBLICLY_TESTED_BATCH_API_POLICY'}
+    if report['state']!='APPROVED' or p['display']!='Y':save(FOLDER/'verification.json',report);print(json.dumps(report));return
+    rendered=read_only_call(client,cfg,'alibaba.icbu.product.schema.render',{'param_product_top_publish_request':{'product_id':int(pid),'cat_id':CATEGORY,'language':'en_US'}});save(FOLDER/'after_render.json',rendered)
+    if not rendered.get('data'):report['state']='EDITABLE_SCHEMA_UNAVAILABLE';save(FOLDER/'verification.json',report);return
+    schema=E.fromstring(rendered['data']);(FOLDER/'after_schema.xml').write_text(rendered['data'],encoding='utf8');actual=contract.field_snapshot(schema);expected=load(FOLDER/'prepared.json')['expected_schema'];checks={}
+    for fid,value in expected.items():
+        if fid not in ('sku','icbuCatProp'):checks['schema_'+fid]=contract.created_field_equivalent(fid,value,actual.get(fid))
+    logistics=schema.findall("./field[@id='logisticsProperty']/values/value")
+    # Current render adds only descriptive annotations to the SAME ordinary-
+    # goods option. Check the exact ID, validity and its current option label;
+    # do not ignore arbitrary attributes or accept a different goods class.
+    options={o.get('value'):o.get('displayName') for o in schema.findall("./field[@id='logisticsProperty']/options/option")}
+    checks['schema_logisticsProperty']=len(logistics)==1 and logistics[0].text=='general_cargo_0' and set(logistics[0].attrib)<= {'valid','displayName'} and logistics[0].get('valid','true')=='true' and logistics[0].get('displayName')==options.get('general_cargo_0')
+    sku=contract.verify_create_skus(expected['sku'],actual.get('sku'));checks['sku_schema_bindings']=sku['status']=='verified'
+    attrs=shared.attributes(p);checks['formal_brand_model_materials']=attrs.get('Brand Name')==['Beiqiang'] and attrs.get('Model Number')==[MODEL] and attrs.get('Upper Material')==['Microfiber'] and all([v.casefold() for v in attrs.get(role,[])]==['other'] for role in ('Midsole Material','Outsole Material','Lining Material')) and attrs.get('Closure Type')==['Lace-up']
+    checks['origin_china']=attrs.get('Place of Origin') in (['China'],['CN'])
+    trade=p['sourcing_trade'];checks['moq_pair_usd']=str(trade['min_order_quantity'])=='2' and trade['fob_currency']=='USD' and trade['min_order_unit_type']=='Pair' and trade['fob_unit_type']=='Pair'
+    checks['category_exact']=int(p['category_id'])==CATEGORY
+    axes={str(a['attribute_id']):a['values'] for a in p['product_sku']['sku_attributes']};col={str(v['value_id']):v['system_value_name'] for v in axes['191288010']};sz={str(v['value_id']):v['system_value_name'] for v in axes['222038415']}
+    from collections import Counter
+    pairs=Counter();tiers=sorted((int(q),Decimal(pr)) for q,pr in load(FOLDER/'当前来源与色码核对.json')['pricing_draft']['tiers']);price_match=True
+    for row in p['product_sku']['skus']:
+        prop=json.loads(row['attr2_value']);pairs[(col[str(prop['191288010'])],sz[str(prop['222038415'])])]+=1;price_match&=sorted((int(x['start_quantity']),Decimal(x['price'])) for x in row['bulk_discount_prices'])==tiers
+    checks['exact30_colour_EU']=pairs==Counter((c,f'EU {n}') for c in COLORS for n in range(39,49));checks['all_sku_three_tiers']=price_match
+    facts=load(FOLDER/'当前来源与色码核对.json');checks['title_and_highlights_exact']=p['subject']==facts['title_draft'] and p['struct_detail']['product_summary']=='\n'.join(facts['product_highlights_draft'])
+    common=load(ROOT/'02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/通用FAQ与公司简介.json');company=load(ROOT/'02_Alibaba运营/06_图片与检查记录/共享工厂详情/V8/bank.json')['items'];sd=p['struct_detail'];checks['general8faq_exact']=sd['product_faq']==[{'question':x['question'],'answer':x['answers']} for x in common['companyFaqDesc']];checks['company_intro_exact']=sd['company_summary']==common['companyDesc'];checks['company6_roles_exact']=Counter((str(x['image_set']['id']),contract._created_image_identity(x['image_url'])) for x in sd['company_image']['images'])==Counter((r,contract._created_image_identity(company[c]['url'])) for c,r in [('C1','400'),('C2','550'),('C3','600'),('C4','450'),('C5','700'),('C6','700')])
+    bank=load(FOLDER/'图片银行.json')['items'];sale=pub.values_only(schema,operation='update',field_ids=['saleProp']);colors={v.get('inputValue'):v.get('img') for v in sale.findall("./field/complex-value/field[@id='p-191288010']/values/value")};checks['all3colour_images_exact']=set(colors)==set(COLORS) and all(contract._created_image_identity(colors[c])==contract._created_image_identity(bank[r]['url']) for c,(_,r) in COLORS.items())
+    report.update(checks=checks,failed=[k for k,v in checks.items() if not v],sku_bindings=sku.get('bindings',{}),sku_diagnostic=sku.get('reason'),state='FORMAL_FIELDS_PASS_PENDING_SCORE' if all(checks.values()) else 'FORMAL_MISMATCH')
+    enc=client.top_call(cfg,'alibaba.icbu.product.id.encrypt',{'product_id':pid,'language':'ENGLISH'});assert enc.get('secret_id')
+    try:
+        score=read_only_call(client,cfg,'alibaba.icbu.product.score.get',{'product_id':enc['secret_id']});save(FOLDER/'score.json',score);result=score.get('result',{});report['actual_score']=result.get('final_score');diag=result.get('problem_map') or {};diag=json.loads(diag) if isinstance(diag,str) else diag;report['score_diagnostics']=diag
+        if all(checks.values()) and report['actual_score'] is not None:report['state']='FORMAL_FIELDS_SCORE_PASS' if Decimal(str(report['actual_score']))>=5 and not any(diag.get('extendProblemMap',{}).values()) and not diag.get('errorReasonList') else 'FORMAL_FIELDS_PASS_SCORE_BELOW_TARGET'
+    except shared.ReadBusinessError as exc:report['score_read_error']=exc.api_evidence
+    save(FOLDER/'verification.json',report);print(json.dumps({k:report[k] for k in ('id','state','actual_score','failed')}),flush=True)
+
+
+def sync():
+    from PIL import Image
+    receipt=load(FOLDER/'create_receipt.json');pid=pub.extract_product_id(receipt.get('response') or {});assert pid and receipt['status']=='submitted_needs_readback'
+    report=load(FOLDER/'verification.json');got=load(FOLDER/'after_get.json');p=got['product'];assert shared.attributes(p)['Model Number']==[MODEL]
+    registry=load(REG);product=next(x for x in registry['products'] if x['id']=='LQ-995');facts=load(FOLDER/'当前来源与色码核对.json');source=next(s for s in registry['sources'] if s['url'].rstrip('/')==facts['source']);sid=source['id']
+    product['dossier_path']='02_Alibaba运营/02_单品优化记录/商品档案/LQ-995/README.md'
+    product['classification']={**product.get('classification',{}),'local_intent_candidates':['系带户外休闲步行鞋'],'state':'REAL_SOURCE_PHOTOS_AND_CURRENT_SCHEMA_REVIEWED','platform_category_ids':[CATEGORY],'platform_category_state':'CURRENT_EXACT_ID_API_OBSERVED'}
+    source['latest_price_review']={'observed_at':facts['observed_at'],'price_cny':facts['source_price_cny'],'evidence':rel(FOLDER/'当前来源与色码核对.json'),'scope':'公开来源当次标价；非实物库存、已采购或固定报价。'}
+    source['evidence']=list(dict.fromkeys(source.get('evidence',[])+[rel(FOLDER/'当前来源与色码核对.json')]))
+    routes={c:{'source':facts['source'],'source_id':sid,'source_artno':'995','supplier_color':{'Black':'黑色','Beige Brown':'黑卡其','Tan':'土黄'}[c],'EU':list(range(39,49))} for c in COLORS}
+    assert not any(l['model']==MODEL and l['id']!=pid for l in registry['listings']), 'Model already has another ID; reconcile rather than append'
+    listing=next((l for l in registry['listings'] if l['id']==pid),None)
+    if listing is None:
+        listing={'id':pid,'product_id':'LQ-995','model':MODEL,'url':p.get('pc_detail_url') or f'https://www.alibaba.com/product-detail/_{pid}.html','record_type':'已创建实款；审核与评分分列','source_relation':'SOURCE_REVIEWED_CREATE_PENDING_FORMAL_ACCEPTANCE','evidence':[]};registry['listings'].append(listing)
+    canonical=ROOT/'02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品'/pid;canonical.mkdir(parents=True,exist_ok=True)
+    save(canonical/'formal_get.json',{'requested_product_id':pid,'observed_at_utc':report['get_observed_at'],'method':'alibaba.icbu.product.get','response':shared.sanitized(got),'sanitized_fields':['owner_member','owner_member_display_name','owner_member_id'],'raw_response_file':rel(FOLDER/'after_get.json'),'acceptance_state':report['state']})
+    if (FOLDER/'after_render.json').exists():save(canonical/'formal_render.json',load(FOLDER/'after_render.json'))
+    evidence=[rel(FOLDER/name) for name in ('当前来源与色码核对.json','prepared.json','manifest.json','图片银行公开映射.json','create_once.json','create_receipt.json','verification.json','score.json') if (FOLDER/name).exists()]
+    current={'at':report['get_observed_at'],'title':p['subject'],'keywords':p.get('keywords',[]),'main_images':p['main_image']['images'],'category_id':p['category_id'],'status':p['status'],'display':p['display'],'url':listing['url'],'scope':'ExactID formal product read; current audit/score accepted only if the separate verification state passes.'}
+    listing.update(current_platform_fields=current,catalog_fields=copy.deepcopy(current),formal_fields={'file':rel(canonical/'formal_get.json'),'at':report['get_observed_at'],'scope':'当前API商品对象；审核、字段和实际评分按独立verification状态，不把待审当完成'},local_sync={'state':report['state'],'current_fields_file':rel(canonical/'formal_get.json'),'current_schema_file':rel(canonical/'formal_render.json') if (canonical/'formal_render.json').exists() else None,'source_fact_file':rel(FOLDER/'当前来源与色码核对.json'),'at':report['at']},observation={'audit':p['status'],'display':p['display'],'at':report['get_observed_at'],'score':report['actual_score'],'scope':'Full exact-ID API read, not browser presentation or physicalstock proof.'})
+    listing.setdefault('optimization',{})['real_source_creation']={'state':report['state'],'source_id':sid,'source_artno':'995','at':report['at'],'evidence':evidence,'inventory_write':'OMITTED','next_action':'Only formal readback and exact field/score diagnosis; never repeat create or upload successful assets.'}
+    listing['evidence']=list(dict.fromkeys(listing['evidence']+evidence));product['evidence']=list(dict.fromkeys(product.get('evidence',[])+evidence));product.setdefault('local_assets',{}).update(current_fields_file=rel(canonical/'formal_get.json'),source_fact_file=rel(FOLDER/'当前来源与色码核对.json'),asset_roots=[rel(FOLDER/'05_AI候选')],state=report['state']);product['raw_packages']=[rel(FOLDER/'01_产品来源原图')];product['next_action']='仅回读原ID审核、全字段与实际评分；不重复上传或创建995，其他路崎款独立推进。'
+    product['source_routes_by_color']=routes;listing['source_routes_by_color']=copy.deepcopy(routes)
+    accepted=report['state'] in ('FORMAL_FIELDS_SCORE_PASS','FORMAL_FIELDS_PASS_PENDING_SCORE','FORMAL_FIELDS_PASS_SCORE_BELOW_TARGET')
+    if accepted:
+        listing['bound_source_id']=sid;listing['source_relation']='REAL_SOURCE_FORMAL_FIELDS_PASS';product.update(source_state='ADOPTED',adopted_source_id=sid,candidate_source_ids=[])
+        listing['record_type']='当前实款正式绑定';product['next_action']='当前实款、来源、图文和30EU正式一致；实际评分按当前核验，无需再创建995，继续剩余路崎款。'
+        cache_path=ROOT/'02_Alibaba运营/05_扩品工程/数据/目录对账/当前素材清单.json';cache=load(cache_path);bank=load(FOLDER/'图片银行.json')['items'];mapping={contract._created_image_identity(row['url']):row for row in bank.values()}
+        for row in load(ROOT/'02_Alibaba运营/06_图片与检查记录/共享工厂详情/V8/bank.json')['items'].values():mapping[contract._created_image_identity(row['url'])]=row
+        sd=p['struct_detail'];roles={'main':p['main_image']['images'],'details':[x['image_url'] for x in sd['detail_image']['images']],'company':[x['image_url'] for x in sd['company_image']['images']],'sku':[v['image_url'] for a in p['product_sku']['sku_attributes'] for v in a['values'] if v.get('image_url')],'html':[]}
+        for urls in roles.values():
+            for url in urls:
+                row=mapping[contract._created_image_identity(url)];path=ROOT/row['path'];assert sha(path)==row['sha256'];w,h=Image.open(path).size;cache['assets'][url]={'state':'SAVED','file':row['path'],'sha256':row['sha256'],'bytes':path.stat().st_size,'width':w,'height':h,'pixel_qa':'Selected local actual-source-preserving image reviewed; formal CDN identity matches official upload, no browser claim.','at':report['get_observed_at']}
+        cache['products'][pid]=roles;cache['urls']=len(cache['assets']);cache['saved_urls']=sum(x.get('state')=='SAVED' for x in cache['assets'].values());cache['unique_files']=len({x['sha256'] for x in cache['assets'].values() if x.get('state')=='SAVED'});cache['errors']=sum(x.get('state')!='SAVED' for x in cache['assets'].values());save(cache_path,cache)
+    queue_file=BASE/'质量复核_2026-10-09/全分类处理队列.json';queue=load(queue_file)
+    row=next(r for r in queue['rows'] if r['style']=='995');row.update(publication_state='CREATED_APPROVED_Y' if accepted else 'SUBMITTED_'+report['state'],product_id=pid,EU_combinations=30,actual_score=report['actual_score'],score_status=report['state'],current_platform_evidence=rel(FOLDER/'verification.json'),preparation_evidence=rel(FOLDER/'prepared.json'))
+    for work in registry['workstreams']:
+        if work['name']=='路崎宽头/户外全分类':work.update(status='当前已创建ID、审核/全字段/实际评分按全分类队列逐条记录；2583两页已合并为原ID六色72EU，不再重复新建。',next_action='HR本轮原ID替换已完成，继续路崎剩余真实款；995已创建，只回读，不重建；FAQ与已批准V8六公司图复用。')
+    registry['updated_on']=datetime.now(timezone.utc).date().isoformat();save(queue_file,queue);save(REG,registry)
+    summary_file=BASE/'本批正式商品汇总.json';summary=load(summary_file);row=next((r for r in summary if str(r['product_id'])==pid),None)
+    if row is None:row={'style':'995','product_id':pid};summary.append(row)
+    row.update(url=listing['url'],status=p['status'],display=p['display'],sku_count=len(p.get('product_sku',{}).get('skus',[])),score=report['actual_score'],observed_at=report['get_observed_at'],latest_review_scope=report['state'],latest_review_file=rel(FOLDER/'verification.json'));save(summary_file,summary)
+    sys.path.insert(0,str(ROOT/'08_工具链/06_工作区维护'));import build_product_workspace as workspace
+    for path,body in workspace.build(registry).items():workspace.write_generated(ROOT/path,body)
+    save(FOLDER/'双改核验.json',{'at':now(),'id':pid,'state':report['state'],'source_id':sid,'source_url':facts['source'],'current_dossier':product.get('dossier_path'),'no_duplicate_create':True,'color_aliases':load(FOLDER/'prepared.json')['buyer_to_supplier_colour']});print('995_LOCAL_SYNC',pid,report['state'])
+
+
+def main():
+    ap=argparse.ArgumentParser();ap.add_argument('mode',choices=('bank','prepare','create','verify','sync'));args=ap.parse_args()
+    if args.mode=='prepare':prepare();return
+    if args.mode=='sync':sync();return
+    spec=importlib.util.spec_from_file_location('alibaba_client',ROOT/'.agents/skills/alibaba-openapi-operator/scripts/alibaba_openapi.py');client=importlib.util.module_from_spec(spec);spec.loader.exec_module(client);cfg=client.load_config(client.DEFAULT_CONFIG)
+    original=client.http_json;client.http_json=lambda request,timeout=25:original(request,timeout=timeout)
+    if args.mode=='bank':bank(client,cfg)
+    elif args.mode=='create':create(client,cfg)
+    else:verify(client,cfg)
+
+
+if __name__=='__main__':main()
