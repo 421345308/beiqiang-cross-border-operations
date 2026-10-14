@@ -122,9 +122,9 @@
     ],
     "freight_service_tax": "Order-specific, no market-lowest or net-profit guarantee"
   },
-  "state": "TEN_IMAGES_SOURCE_FACTS_REVIEWED_NOT_CREATED",
+  "state": "CREATED_FORMAL_FIELDS_SCORE_PASS",
   "at": "2026-10-14T03:45:26.177611+00:00",
-  "next_action": "Fresh Schema acquired, current456ID/source/physical-style checks before once-only create.",
+  "next_action": "该款正式字段、评分与来源已通过；继续其他款，不重复创建。",
   "publish_profile": {
     "category_id": 201334413,
     "buyer_colours": [
@@ -161,5 +161,14 @@
     "local_intent": [
       "宽头针织套脚步行鞋"
     ]
+  },
+  "publication": {
+    "product_id": "1601979492425",
+    "audit": "approved",
+    "display": "Y",
+    "actual_score": "5.00",
+    "formal_verification": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/verification.json",
+    "local_sync_at": "2026-10-14T05:57:51.969525+00:00",
+    "no_replayed_create": true
   }
 }

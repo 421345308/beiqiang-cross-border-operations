@@ -1,15 +1,17 @@
 {
-  "observed_at": "2026-10-10T21:57:19.113691+00:00",
+  "observed_at": "2026-10-14T09:32:37.743444+00:00",
   "scope": "107 sources; statuses are evidence stages, not 107 independent publishable products",
   "state_counts": {
-    "CREATED_APPROVED_Y": 63,
+    "CREATED_APPROVED_Y": 69,
     "EXISTING_SOURCE_MAPPING_DO_NOT_DUPLICATE": 3,
     "MERGED_SOURCE_FAMILY_026_NO_EXTRA_CREATE": 1,
     "HOLD_ACCOUNT_RUNNING_BUSINESS_CATEGORY": 1,
     "MERGED_SOURCE_FAMILY_2585_NO_EXTRA_CREATE": 1,
-    "PENDING_STYLE_AND_QUALITY_REVIEW": 32,
+    "MERGED_SOURCE_FAMILY_NO_EXTRA_CREATE": 1,
     "HOLD_SOURCE_PHOTO_IDENTITY": 1,
     "HOLD_ACCOUNT_HIKING_BUSINESS_CATEGORY": 4,
+    "SUBMITTED_REVIEWING": 1,
+    "PENDING_STYLE_AND_QUALITY_REVIEW": 24,
     "HOLD_WITHDRAWN_SOURCE": 1
   },
   "rows": [
@@ -1617,7 +1619,7 @@
       ],
       "source_collection": "CURRENT_SOURCE_COLLECTED",
       "image_cache": "CURRENT_EXACT_SOURCE_IMAGES_COLLECTED",
-      "publication_state": "SUBMITTED_REVIEWING",
+      "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
       "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
@@ -1628,8 +1630,8 @@
       "preparation_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/prepared.json",
       "product_id": "1601979461922",
       "EU_combinations": 20,
-      "actual_score": null,
-      "score_status": "REVIEWING",
+      "actual_score": "5.00",
+      "score_status": "FORMAL_FIELDS_SCORE_PASS",
       "current_platform_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/verification.json"
     },
     {
@@ -1798,14 +1800,20 @@
       ],
       "source_collection": "CURRENT_SOURCE_COLLECTED",
       "image_cache": "CONTACT_SHEET_ONLY_NOT_PUBLISHABLE",
-      "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
+      "publication_state": "SUBMITTED_REVIEWING",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
       "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
       "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
       "source_review": "ACTUAL_PHOTOS_AND_EU_OBSERVED",
       "local_issue": "Own20photos/20EU, KPU+microfiber generalupper andrubberoutsole supported, plushtexture notfiber; currentcatalog andnativeSnowBoot gates pending.",
-      "current_source_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2579准备/当前来源与色码核对.json"
+      "current_source_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2579准备/当前来源与色码核对.json",
+      "product_id": "1601979948441",
+      "EU_combinations": 20,
+      "actual_score": null,
+      "score_status": "REVIEWING",
+      "current_platform_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2579准备/verification.json",
+      "preparation_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2579准备/prepared.json"
     },
     {
       "style": "2575",
@@ -1889,13 +1897,19 @@
       ],
       "source_collection": "CURRENT_SOURCE_COLLECTED",
       "image_cache": "CURRENT_EXACT_SOURCE_IMAGES_COLLECTED_PENDING_REVIEW",
-      "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
+      "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
       "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
       "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
       "source_review": "CURRENT_SOURCE_PHOTOS_COLLECTED_PENDING_REVIEW",
-      "current_source_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/868准备/01_产品来源原图/当前来源图像索引.json"
+      "current_source_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/868准备/01_产品来源原图/当前来源图像索引.json",
+      "product_id": "1601979572676",
+      "EU_combinations": 20,
+      "actual_score": "5.00",
+      "score_status": "FORMAL_FIELDS_SCORE_PASS",
+      "current_platform_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/868准备/verification.json",
+      "preparation_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/868准备/prepared.json"
     },
     {
       "style": "822",
@@ -1905,13 +1919,19 @@
       ],
       "source_collection": "CURRENT_SOURCE_COLLECTED",
       "image_cache": "CURRENT_EXACT_SOURCE_IMAGES_COLLECTED_PENDING_REVIEW",
-      "publication_state": "PENDING_STYLE_AND_QUALITY_REVIEW",
+      "publication_state": "CREATED_APPROVED_Y",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
       "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
       "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
       "source_review": "PARTIAL_SOURCE_PHOTOS_PENDING_REVIEW",
-      "current_source_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/822准备/01_产品来源原图/当前来源图像索引.json"
+      "current_source_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/822准备/01_产品来源原图/当前来源图像索引.json",
+      "product_id": "1601979745492",
+      "EU_combinations": 20,
+      "actual_score": "5.00",
+      "score_status": "FORMAL_FIELDS_SCORE_PASS",
+      "current_platform_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/822准备/verification.json",
+      "preparation_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/822准备/prepared.json"
     },
     {
       "style": "924",

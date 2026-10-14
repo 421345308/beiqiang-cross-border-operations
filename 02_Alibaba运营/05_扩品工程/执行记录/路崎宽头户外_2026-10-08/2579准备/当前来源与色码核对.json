@@ -1,0 +1,146 @@
+{
+  "style": "2579",
+  "observed_at": "2026-10-14T08:46:32.117049+00:00",
+  "source": "https://luqi.sooxie.com/detail/2353571",
+  "source_HTML_sha256": "710833ee13d75fd04bfdfff67e95484e52e217586d5a281f14da3e0647a8211b",
+  "source_price_cny": "98.00",
+  "source_EU_by_color": {
+    "Black": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ],
+    "Yellow": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ]
+  },
+  "source_EU_combinations": 20,
+  "source_images": 20,
+  "whole_source_contacts_actually_viewed": true,
+  "full_original_fact_indices_actually_viewed": [
+    1,
+    5,
+    6,
+    8,
+    9,
+    11,
+    13,
+    14,
+    16,
+    18,
+    20
+  ],
+  "known_materials": {
+    "upper": "KPU+超纤 explicitly original08 and13; use KPU and general microfiber wording, no conversion of KPU to plain PU/TPU or natural leather.",
+    "outsole": "Original11 says橡胶外底; source13 givesMD+橡胶底片 composite bottom. Rubber outsole supported, no anti-slip/abrasion performance claim.",
+    "midsole": "MD+rubber bottom composite original11/12/13 retained; separate midsole composition not identified, formal Not specified.",
+    "lining": "Actual opened gray plush original13 top and09; general Plush only. No fiber Cotton/wool/fur specification or temperature claim."
+  },
+  "source_color_aliases": {
+    "Black": "HTML黑色 andoriginal13 lowerRIGHT 黑色 panel",
+    "Yellow": "HTML黄色 andoriginal13 lowerLEFT 土黄 panel matchesactualyellow version"
+  },
+  "identity_notes": "Ankle winter snow boot with black wraparound textured raised lower upper and nested wave/oval outlines, colored stitched high side panels, dotted shield-shaped ankle patch, three paired metal upper lace guides and three paired lower webbing guides, plain mesh tongue with colored top overlay, rear pull tab, sculpted sidewall and deep irregular block-lug underside. Yellow and Black exact actual color versions. Unlike2409 round dial and four paired webbing/plain leaf panel,25019 ring-eyelet plain upper,323 high winter upper with red slots/cord and narrower gray sole,909 plain mesh shaft/non-shield sides,2505 smooth tan upper/white sidewall,923 visibly furry collartop and polygonmesh/panel seams. 2575 similar winter bottom family but different large lettered ankle patch/sideoverlay and closure panel; no second listing based solely on color or title. Bounded actual source cover and selected original comparison, not global physical/IP clearance.",
+  "title_draft": "Mens Lace Up Winter Snow Boots KPU and Microfiber Upper Plush Lining Rubber Outsole Wholesale EU 39-48",
+  "title_bytes": 102,
+  "wide_claim": "NO_WIDE_CLAIM_FROM_OUTDOOR_ONLY_SOURCE",
+  "closure_count_review": "Actual full originals show three paired lowerwebbing and three paired uppermetal guides; initial common generation prompt countedfour. All selected native outputs reviewed against actualthree.",
+  "visible_structure": [
+    "Winterlace-upboot withblackcontouredwraparoundlowerupper",
+    "Stitchedcolouredshaft anddottedshieldanklepanel",
+    "Threepairedmetalupperguides andthreepairedlowerwebbingguides",
+    "Grayplushlining visiblyopened inoriginal13top",
+    "Rearpulltab/sculptedsidewall andirregularblackblocklugs"
+  ],
+  "product_highlights_draft": [
+    "KPU and microfiber upper: Stitched shaft panels and a dotted ankle patch give this winter style its layered profile.",
+    "Plush lining: Grey plush is visible inside the opened boot, along the shaft and tongue area.",
+    "Mixed lace guides: Metal upper guides and lower webbing loops hold the crossed laces, with a rear pull loop at the collar.",
+    "Rubber outsole design: The actual underside shows deep block-shaped lugs beneath the contoured lower upper.",
+    "Wholesale colour-size options: Black and Yellow are offered in EU 39–48 for assortment planning."
+  ],
+  "state": "CREATED_REVIEWING",
+  "pricing_draft": {
+    "source_cny": "98.00",
+    "fx": "6.6837",
+    "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+    "fx_observed": "2026-10-13 10:57:20",
+    "tiers": [
+      [
+        2,
+        "21.99"
+      ],
+      [
+        50,
+        "20.53"
+      ],
+      [
+        100,
+        "19.06"
+      ]
+    ],
+    "freight_service_tax": "Order-specific; highersourcecost thancasualstyles, no marketlowest/netprofit claim."
+  },
+  "publish_profile": {
+    "category_id": 202248402,
+    "schema_name": "当前雪地靴Schema",
+    "buyer_colours": [
+      {
+        "buyer": "Black",
+        "supplier_key": "Black",
+        "supplier_label": "黑色",
+        "image_role": "SKU_Black"
+      },
+      {
+        "buyer": "Yellow",
+        "supplier_key": "Yellow",
+        "supplier_label": "黄色",
+        "image_role": "SKU_Yellow"
+      }
+    ],
+    "category_attributes": {
+      "Upper Material": [
+        "KPU",
+        "Microfiber"
+      ],
+      "Midsole Material": [
+        "other"
+      ],
+      "Outsole Material": [
+        "Rubber"
+      ],
+      "Lining Material": [
+        "Plush"
+      ]
+    },
+    "local_intent": [
+      "绒毛内里系带冬季雪地靴"
+    ]
+  },
+  "publication": {
+    "product_id": "1601979948441",
+    "audit": "new",
+    "display": "N",
+    "actual_score": null,
+    "formal_verification": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2579准备/verification.json",
+    "local_sync_at": "2026-10-14T09:32:39.881363+00:00",
+    "no_replayed_create": true
+  },
+  "next_action": "仅回读和诊断原ID；不重复创建或重传成功素材。"
+}

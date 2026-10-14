@@ -1,0 +1,43 @@
+{
+  "operation": "create",
+  "category_id": 201334413,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/822准备/当前来源与色码核对.json",
+    "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/822准备/05_AI候选/整组验收.json",
+    "02_Alibaba运营/00_运营SOP/国际站商品全生命周期SOP.md"
+  ],
+  "current_schema": "当前步行鞋Schema.xml",
+  "current_schema_sha256": "3b93c6eea634d5b45565b5bd27fdeaff66a57d03b6ee7d8f30037e49e948fb94",
+  "schema_request_id": "2105584317919592595196541",
+  "schema_acquired_at": "2026-10-14T06:27:40.870188+00:00",
+  "payload_xml": "payload.xml",
+  "field_ids": [
+    "catId",
+    "icbuCatProp",
+    "saleProp",
+    "sku",
+    "productTitle",
+    "scImages",
+    "pkgMeasure",
+    "pkgWeight",
+    "ladderPeriod",
+    "priceUnit",
+    "shippingTemplate",
+    "ladderPrice",
+    "saleType",
+    "scPrice",
+    "minOrderQuantity",
+    "productDescType",
+    "detailImage",
+    "textDesc",
+    "companyImage",
+    "companyDesc",
+    "companyFaqDesc",
+    "logisticsProperty"
+  ],
+  "dependency_ids": [],
+  "expected_model": "BQ-LQ822",
+  "differentiation_review": "发布前差异化审查.json",
+  "differentiation_review_sha256": "cf198920ea65ec48de2cbd4e9f558f6082965b85d94498e950fa5bf1e7af1650"
+}

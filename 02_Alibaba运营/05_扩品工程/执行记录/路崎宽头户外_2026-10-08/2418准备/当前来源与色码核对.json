@@ -157,6 +157,16 @@
       "撞色拼片系带休闲步行鞋"
     ]
   },
-  "state": "CURRENT_SOURCE_FACTS_REVIEWED_IMAGES_IN_PROGRESS_NOT_CREATED",
-  "family_review": "Compared2417/2416actual covers: sharedsegmentedsidewall but2418contrastYquarter/curvedtoeseam/lightoverlay differs2417largeplainquarter and rivet,2416broadrectangularpanel/rearlooppresent. 2413/2415differentcupsole andsidepanels. Not merely a colour/title variation. Currentcatalog/source dedup remains precreate gate."
+  "state": "CREATED_FORMAL_FIELDS_SCORE_PASS",
+  "family_review": "Compared2417/2416actual covers: sharedsegmentedsidewall but2418contrastYquarter/curvedtoeseam/lightoverlay differs2417largeplainquarter and rivet,2416broadrectangularpanel/rearlooppresent. 2413/2415differentcupsole andsidepanels. Not merely a colour/title variation. Currentcatalog/source dedup remains precreate gate.",
+  "publication": {
+    "product_id": "1601979461922",
+    "audit": "approved",
+    "display": "Y",
+    "actual_score": "5.00",
+    "formal_verification": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/verification.json",
+    "local_sync_at": "2026-10-14T05:57:56.999644+00:00",
+    "no_replayed_create": true
+  },
+  "next_action": "该款正式字段、评分与来源已通过；继续其他款，不重复创建。"
 }

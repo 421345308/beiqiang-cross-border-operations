@@ -15,6 +15,7 @@ import publish_hot_rank_hr_a_batch as pub
 import schema_publish_contract as contract
 from read_only_catalog import read_only_call,product_readiness
 ROOT=shared.ROOT;BASE=shared.BASE;FOLDER=BASE/'995准备';REG=shared.REG;STYLE='995';MODEL='BQ-LQ995';CATEGORY=201334413;PROFILE={};EU_BY_COLOR={}
+SCHEMA_NAME='当前步行鞋Schema'
 load,save,sha,rel,now=shared.load,shared.save,shared.sha,shared.rel,shared.now
 CATALOG=ROOT/'99_临时区/路崎995/当前目录/catalog.json'
 COLORS={'Black':('Black','SKU_Black'),'Beige Brown':('Black Khaki','SKU_BlackKhaki'),'Tan':('Earth Yellow','M1')}
@@ -22,10 +23,11 @@ FIELDS=['catId','icbuCatProp','saleProp','sku','productTitle','scImages','pkgMea
 
 
 def configure(style):
-    global STYLE,FOLDER,MODEL,CATEGORY,CATALOG,COLORS,PROFILE,EU_BY_COLOR
-    assert style in ('995','2576','1712','2418'), 'Only individually reviewed current source profiles are enabled'
+    global STYLE,FOLDER,MODEL,CATEGORY,CATALOG,COLORS,PROFILE,EU_BY_COLOR,SCHEMA_NAME
+    assert style in ('995','2576','1712','2418','868','822','2579'), 'Only individually reviewed current source profiles are enabled'
     STYLE=style;FOLDER=BASE/(style+'准备');MODEL='BQ-LQ'+style;CATALOG=ROOT/('99_临时区/路崎'+style+'/当前目录/catalog.json')
-    facts=load(FOLDER/'当前来源与色码核对.json');PROFILE=facts['publish_profile'];CATEGORY=PROFILE['category_id'];assert CATEGORY==201334413
+    facts=load(FOLDER/'当前来源与色码核对.json');PROFILE=facts['publish_profile'];CATEGORY=PROFILE['category_id'];assert CATEGORY in (201334413,202248402)
+    SCHEMA_NAME=PROFILE.get('schema_name','当前步行鞋Schema');assert SCHEMA_NAME in ('当前步行鞋Schema','当前雪地靴Schema')
     COLORS={v['buyer']:(v['supplier_key'],v['image_role']) for v in PROFILE['buyer_colours']};assert len(COLORS)==len(PROFILE['buyer_colours'])
     EU_BY_COLOR={c:facts['source_EU_by_color'][alias] for c,(alias,_) in COLORS.items()}
     assert all(v and all(type(n) is int for n in v) and len(v)==len(set(v)) for v in EU_BY_COLOR.values())
@@ -87,7 +89,7 @@ def prepare():
     registry=load(REG);sources={s['id']:s for s in registry['sources']};listings={l['id']:l for l in registry['listings']}
     assert not any(p.get('red_model')==MODEL for p in catalog['products'])
     assert not any(sources.get(listings.get(str(p['id']),{}).get('bound_source_id'),{}).get('url','').rstrip('/')==facts['source'] for p in catalog['products']), 'Same source already bound; use existing ID instead'
-    response=load(FOLDER/'当前步行鞋Schema.json');schema=E.fromstring(response['data']);schema_file=FOLDER/'当前步行鞋Schema.xml';assert E.tostring(schema)==E.tostring(E.parse(schema_file).getroot())
+    response=load(FOLDER/(SCHEMA_NAME+'.json'));schema=E.fromstring(response['data']);schema_file=FOLDER/(SCHEMA_NAME+'.xml');assert E.tostring(schema)==E.tostring(E.parse(schema_file).getroot())
     root=E.Element('itemSchema');defs={f.get('id'):f for f in schema.findall('./field')}
     for fid in FIELDS:root.append(E.Element('field',id=fid,type=defs[fid].get('type')))
     cv=E.SubElement(root.find("./field[@id='icbuCatProp']"),'complex-value')
@@ -144,7 +146,7 @@ def prepare():
     else:frozen_register.write_bytes(REG.read_bytes())
     review={'candidate':candidate,'source_records':records,'observed_at':catalog['observed_at_utc'],'coverage_limit':f"Complete current{catalog['total_item']}ID metadata with registered source identities; exact source, nearest physical-style review and all selectedimages as recorded in visual proof. Not global all-angle or IP clearance.",'evidence_files':[{'path':str(CATALOG),'sha256':sha(CATALOG),'kind':'catalog_snapshot'},{'path':str(frozen_register),'sha256':sha(frozen_register),'kind':'source_register'},{'path':str(ROOT/evidence),'sha256':sha(ROOT/evidence),'kind':'visual_review'}]}
     save(FOLDER/'发布前差异化审查.json',review)
-    manifest={'operation':'create','category_id':CATEGORY,'facts_reviewed':True,'source_evidence':[rel(FOLDER/'当前来源与色码核对.json'),evidence,'02_Alibaba运营/00_运营SOP/国际站商品全生命周期SOP.md'],'current_schema':'当前步行鞋Schema.xml','current_schema_sha256':sha(schema_file),'schema_request_id':response['request_id'],'schema_acquired_at':datetime.fromtimestamp(schema_file.stat().st_mtime,timezone.utc).isoformat(),'payload_xml':'payload.xml','field_ids':FIELDS,'dependency_ids':[],'expected_model':MODEL,'differentiation_review':'发布前差异化审查.json','differentiation_review_sha256':sha(FOLDER/'发布前差异化审查.json')}
+    manifest={'operation':'create','category_id':CATEGORY,'facts_reviewed':True,'source_evidence':[rel(FOLDER/'当前来源与色码核对.json'),evidence,'02_Alibaba运营/00_运营SOP/国际站商品全生命周期SOP.md'],'current_schema':SCHEMA_NAME+'.xml','current_schema_sha256':sha(schema_file),'schema_request_id':response['request_id'],'schema_acquired_at':datetime.fromtimestamp(schema_file.stat().st_mtime,timezone.utc).isoformat(),'payload_xml':'payload.xml','field_ids':FIELDS,'dependency_ids':[],'expected_model':MODEL,'differentiation_review':'发布前差异化审查.json','differentiation_review_sha256':sha(FOLDER/'发布前差异化审查.json')}
     save(FOLDER/'manifest.json',manifest);listing=pub.load_submission_manifest(FOLDER/'manifest.json','create',None)
     save(FOLDER/'prepared.json',{'at':now(),'state':'LOCAL_PREFLIGHT_PASS_NOT_CREATED','model':MODEL,'source':facts['source'],'source_price_cny':facts['source_price_cny'],'buyer_to_supplier_colour':{c:a for c,(a,_) in COLORS.items()},'EU_by_colour':EU_BY_COLOR,'EU_combinations':sum(len(v) for v in EU_BY_COLOR.values()),'fields':FIELDS,'expected_schema':contract.field_snapshot(E.fromstring(listing['xml'])),'differentiation':listing['differentiation_review'],'company_version':8,'general_faq_count':8,'materials':PROFILE['category_attributes'],'commercial_baseline':'Owner SOP MOQ2,34x23x13cm/.5kg,quantity100/day31; quotation and shipping confirmed per order. Price tiers use dated sourcecost/FX; not a market-lowest or net-profit promise.','inventory':'OMITTED_NOT_PHYSICAL_STOCK','keywords':'No deprecated keyword field submitted; buyer phrases covered naturally in title and product-specific highlights, no traffic-volume claim.'});print(STYLE,'CREATE_PREFLIGHT_PASS',sum(len(v) for v in EU_BY_COLOR.values()),'EU',flush=True)
 
@@ -185,7 +187,7 @@ def verify(client,cfg):
     checks['origin_china']=attrs.get('Place of Origin') in (['China'],['CN'])
     trade=p['sourcing_trade'];checks['moq_pair_usd']=str(trade['min_order_quantity'])=='2' and trade['fob_currency']=='USD' and trade['min_order_unit_type']=='Pair' and trade['fob_unit_type']=='Pair'
     checks['category_exact']=int(p['category_id'])==CATEGORY
-    definitions={f.get('name'):f.get('id').removeprefix('p-') for f in E.parse(FOLDER/'当前步行鞋Schema.xml').getroot().findall("./field[@id='saleProp']/fields/field")};cid,sid=definitions['Color'],definitions['EUR Size']
+    definitions={f.get('name'):f.get('id').removeprefix('p-') for f in E.parse(FOLDER/(SCHEMA_NAME+'.xml')).getroot().findall("./field[@id='saleProp']/fields/field")};cid,sid=definitions['Color'],definitions['EUR Size']
     axes={str(a['attribute_id']):a['values'] for a in p['product_sku']['sku_attributes']};col={str(v['value_id']):v['system_value_name'] for v in axes[cid]};sz={str(v['value_id']):v['system_value_name'] for v in axes[sid]}
     from collections import Counter
     pairs=Counter();tiers=sorted((int(q),Decimal(pr)) for q,pr in load(FOLDER/'当前来源与色码核对.json')['pricing_draft']['tiers']);price_match=True
@@ -240,6 +242,8 @@ def sync():
         cache['products'][pid]=roles;cache['urls']=len(cache['assets']);cache['saved_urls']=sum(x.get('state')=='SAVED' for x in cache['assets'].values());cache['unique_files']=len({x['sha256'] for x in cache['assets'].values() if x.get('state')=='SAVED'});cache['errors']=sum(x.get('state')!='SAVED' for x in cache['assets'].values());save(cache_path,cache)
     queue_file=BASE/'质量复核_2026-10-09/全分类处理队列.json';queue=load(queue_file)
     row=next(r for r in queue['rows'] if r['style']==STYLE);row.update(publication_state='CREATED_APPROVED_Y' if accepted else 'SUBMITTED_'+report['state'],product_id=pid,EU_combinations=sum(map(len,EU_BY_COLOR.values())),actual_score=report['actual_score'],score_status=report['state'],current_platform_evidence=rel(FOLDER/'verification.json'),preparation_evidence=rel(FOLDER/'prepared.json'))
+    from collections import Counter
+    queue['state_counts']=dict(Counter(r['publication_state'] for r in queue['rows']));queue['observed_at']=now()
     for work in registry['workstreams']:
         if work['name']=='路崎宽头/户外全分类':work.update(status='当前已创建ID、审核/全字段/实际评分按全分类队列逐条记录；2583两页已合并为原ID六色72EU，不再重复新建。',next_action='HR本轮原ID替换已完成，继续路崎剩余真实款；995已创建，只回读，不重建；FAQ与已批准V8六公司图复用。')
     registry['updated_on']=datetime.now(timezone.utc).date().isoformat();save(queue_file,queue);save(REG,registry)
@@ -248,17 +252,18 @@ def sync():
     row.update(url=listing['url'],status=p['status'],display=p['display'],sku_count=len(p.get('product_sku',{}).get('skus',[])),score=report['actual_score'],observed_at=report['get_observed_at'],latest_review_scope=report['state'],latest_review_file=rel(FOLDER/'verification.json'));save(summary_file,summary)
     sys.path.insert(0,str(ROOT/'08_工具链/06_工作区维护'));import build_product_workspace as workspace
     for path,body in workspace.build(registry).items():workspace.write_generated(ROOT/path,body)
+    facts['state']='CREATED_'+report['state'];facts['publication']={'product_id':pid,'audit':p['status'],'display':p['display'],'actual_score':report['actual_score'],'formal_verification':rel(FOLDER/'verification.json'),'local_sync_at':now(),'no_replayed_create':True};facts['next_action']='仅回读和诊断原ID；不重复创建或重传成功素材。' if report['state']!='FORMAL_FIELDS_SCORE_PASS' else '该款正式字段、评分与来源已通过；继续其他款，不重复创建。';save(FOLDER/'当前来源与色码核对.json',facts)
     save(FOLDER/'双改核验.json',{'at':now(),'id':pid,'state':report['state'],'source_id':sid,'source_url':facts['source'],'current_dossier':product.get('dossier_path'),'no_duplicate_create':True,'color_aliases':load(FOLDER/'prepared.json')['buyer_to_supplier_colour']});print(STYLE,'LOCAL_SYNC',pid,report['state'])
 
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('mode',choices=('schema','bank','prepare','create','verify','sync'));ap.add_argument('--style',required=True,choices=('995','2576','1712','2418'));args=ap.parse_args();configure(args.style)
+    ap=argparse.ArgumentParser();ap.add_argument('mode',choices=('schema','bank','prepare','create','verify','sync'));ap.add_argument('--style',required=True,choices=('995','2576','1712','2418','868','822','2579'));args=ap.parse_args();configure(args.style)
     if args.mode=='prepare':prepare();return
     if args.mode=='sync':sync();return
     spec=importlib.util.spec_from_file_location('alibaba_client',ROOT/'.agents/skills/alibaba-openapi-operator/scripts/alibaba_openapi.py');client=importlib.util.module_from_spec(spec);spec.loader.exec_module(client);cfg=client.load_config(client.DEFAULT_CONFIG)
     original=client.http_json;client.http_json=lambda request,timeout=25:original(request,timeout=timeout)
     if args.mode=='schema':
-        result=read_only_call(client,cfg,'alibaba.icbu.product.schema.get',{'param_product_top_publish_request':{'cat_id':CATEGORY,'language':'en_US'}});assert result.get('data') and result.get('request_id');E.fromstring(result['data']);save(FOLDER/'当前步行鞋Schema.json',result);(FOLDER/'当前步行鞋Schema.xml').write_text(result['data'],encoding='utf8');print(STYLE,'CURRENT_SCHEMA_SAVED')
+        result=read_only_call(client,cfg,'alibaba.icbu.product.schema.get',{'param_product_top_publish_request':{'cat_id':CATEGORY,'language':'en_US'}});assert result.get('data') and result.get('request_id');E.fromstring(result['data']);save(FOLDER/(SCHEMA_NAME+'.json'),result);(FOLDER/(SCHEMA_NAME+'.xml')).write_text(result['data'],encoding='utf8');print(STYLE,'CURRENT_SCHEMA_SAVED')
     elif args.mode=='bank':bank(client,cfg)
     elif args.mode=='create':create(client,cfg)
     else:verify(client,cfg)
