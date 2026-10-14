@@ -1,0 +1,22 @@
+{
+  "request": {
+    "workflow": "campaign",
+    "goal": "BQ028同款跨平台审核示例：采购商品页、生活短片、选鞋笔记、零售详情视频和B2B独立站分别组织，保留已认可柯基影片基线",
+    "sku": "BQ028",
+    "channel": "multi",
+    "language": "zh-CN",
+    "category": "footwear",
+    "affordances": ["wearable", "in_use", "visual_detail"],
+    "creative": {"count": 3, "no_face": true},
+    "project_path": "05_内容与视频/04_社交媒体运营/贝强无露脸舒适鞋品牌片/PROJECT.md",
+    "targets": [
+      {"platform": "alibaba", "placement": "listing", "language": "en", "goal_type": "inquiry", "audience": "Importers and footwear wholesalers"},
+      {"platform": "douyin", "placement": "short_video", "language": "zh-CN", "goal_type": "discovery", "audience": "有日常遛狗和出门穿鞋需求的人"},
+      {"platform": "xiaohongshu", "placement": "note", "language": "zh-CN", "goal_type": "consideration", "audience": "想知道白色套脚鞋外观、搭配和试穿怎么判断的人"},
+      {"platform": "amazon", "placement": "listing", "language": "en", "market": "US", "goal_type": "purchase", "audience": "Shoppers evaluating a casual slip-on shoe"},
+      {"platform": "amazon", "placement": "product_video", "language": "en", "market": "US", "goal_type": "consideration", "audience": "Shoppers checking shape, movement and details before choosing"},
+      {"platform": "storefront", "placement": "landing_page", "language": "en", "business_model": "b2b", "goal_type": "inquiry", "audience": "Independent footwear brands and wholesale buyers"}
+    ]
+  },
+  "idempotency_key": "bq028-campaign-reviewed-example-v020"
+}

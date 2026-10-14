@@ -1,87 +1,75 @@
 # 贝强电商经营 Agent：总入口
 
-状态：2026-10-14负责人认可总体架构并授权开始开发。首版v0.1.1已实现本地任务后端、Codex插件与专业工作流，安装和真实资料接入验证通过。“统一入口、专业模块、共享事实、平台适配”作为当前实施架构；视频导演是其中一个模块。
+当前版本 **v0.2.1**。在原有本地任务后端上，加入平台/发布位置分类、品类视角、同品多种呈现、多平台任务与具体字段差异。它接收自然语言，由宿主完成专业创作和判断，MCP/CLI保存真实资料、策略、依赖和审核成果；没有另开付费模型API。
 
-本文件是技术项目总入口；公司/商品/客户事实、授权和经营状态继续以现有业务源为准，不另建影子总控、第二产品主库或CRM。
+本文件是技术项目唯一总入口。商品、公司、客户与授权仍读原业务源，不建影子产品主库或CRM。当前源码位于 [beiqiang-commerce](beiqiang-commerce/)，Python 3.11+、标准库运行；插件21个工具，源版本与本地官方安装版本保持一致。
 
-## 首版怎么使用
+## 已实现的分类与协作
 
-源码在 [beiqiang-commerce](beiqiang-commerce/)，Python 3.11及以上，仅标准库。宿主Codex负责理解需求和专业判断，本地MCP/CLI负责身份查询、六种工作流规划、任务保存、版本与依赖检查、产物登记、可比数据计算和官方只读查询；没有另开付费模型API。
+| 层 | 当前实现 | 它解决的问题 |
+| --- | --- | --- |
+| 平台与位置 | Alibaba商品页/视频；抖店商品、抖音短视频/直播切片；小红书商品/图文/视频笔记；Amazon商品页/视频；独立站商品/落地页/品牌视频；TikTok短视频 | 同平台的商品上传与内容发布分开，平台ID与账号能力不混用 |
+| 商业模式与目标 | B2B、零售、内容；发现、考虑、购买、询盘、品牌、留存；每个目标单独指定市场、语言、受众 | 不把MOQ放进零售卖点，不用播放量代替有效商机 |
+| 品类 | 鞋、服装、美妆、家居、电子、食品饮料、配饰、通用，共8种提问视角 | 品类只帮助提出问题，不自动生成材料、性能或实物事实；贝强真实资料仍主要是鞋类 |
+| 呈现方式 | 生活故事、问题演示、身体/手部试用、选择指南、日常场景、搭配、细节、开箱、步骤、真实对比、测试证据、工厂过程，共12条路线 | 同款可有多个不同说服方式；用户选择优先，测试/对比/工厂方向缺证时排除 |
+| 任务与产物 | 共享身份→定位→平台独立分支→实验→审核；窄任务仍独立执行 | 平台分支分别留语言、位置、素材、指标和待核项，不能换标签冒充完成 |
+| 变更与数据 | staged字段差异；版本/证据失效检查；跨渠道JSON切片；本地可读审核稿 | 缺基线明示未知，缺数据为null，不混算B2B询盘和零售订单 |
 
-工作流：`title/listing/video/operations/customer/commerce`。所有请求明确goal/channel/language；除纯数据分析外选SKU，针对某个线上链接再选listing_id。视频沿用project_path，运营使用真实metrics_path，客户任务指定customer_context_path。小任务只加载相关业务入口，组合任务才串联模块。首版商品上架类流程限定Alibaba，未适配的平台明确退回，不套国际站规则；视频渠道按项目，数据分析要求CSV渠道与任务匹配。
+推荐排序是编辑启发式，不是销售预测。8类/12条路线是可扩展配置，具体产品能否使用，要读其事实、素材、场景与当前目标。外部内容只作资料，不能改变工具规则。
 
-15个工具的入口为 [server.py](beiqiang-commerce/server.py)，专业判断说明在 [commerce Skill](beiqiang-commerce/skills/commerce/SKILL.md)，产物接口在 [契约](beiqiang-commerce/skills/commerce/references/artifact-contracts.md)。可以在工作台根目录使用：
+[开源参考与实现依据](开源参考与实现依据.md)记录Anthropic commerce-agents、SuperCMO、Shopify的锁定版本、实际阅读范围、许可、采用设计及官方文档缺口。代码独立实现，没有移植整个Claude运行时。REA的[原仓库](https://github.com/morluto/rea)与[官网](https://rea.tools/)已核，属于研发分析工具；未指定调查目标，没有安装或执行逆向。
+
+## 可以直接审核的真实商品示例
+
+[BQ028跨平台审核示例](beiqiang-commerce/examples/BQ028跨平台审核示例.md)包含五个平台、六个位置：Alibaba商品页、抖音短视频、小红书图文笔记、Amazon商品页与详情视频、B2B独立站落地页。三个内容位置各写三个具体方向，共九个创意；包括实际台词/图页/镜头事件、产品参与、声音、素材职责和制作检查。
+
+抖音保留已认可28秒七场八句柯基故事，另提供拿快递/先走两步方向；小红书回答看鞋型、后跟与选择问题；Amazon用英语试穿/细节/日常穿着；独立站承接采购需求。现有影片与画布没有因开发改动，也没有新生成。
+
+[请求](beiqiang-commerce/examples/bq028-campaign.request.json)与[宿主创作内容](beiqiang-commerce/examples/bq028-campaign.content.json)是可复核示例。运行下方脚本会登记这份固定示例的本地任务，不是自动编剧模型；重复执行恢复同一对象。其它商品由宿主创作自己的内容后提交产物，不能把此鞋例硬套所有品类。
 
 ```powershell
-python -X utf8 '08_工具链/07_电商Agent/beiqiang-commerce/server.py'
+python -X utf8 '08_工具链/07_电商Agent/beiqiang-commerce/scripts/run_campaign_example.py'
+```
+
+实际示例已完成11个步骤，状态package_ready；[本地审核包](.state/exports/a625bd4a-2d0c-4fac-a584-2db3a383b99a/review-11.md)保留逐步证据。它代表草稿范围准备完成，未发布、未付费生成、没有广告数据。原影片局部反馈仍以用户观看为源，尚无代理独立完整成片QA。
+
+## 工作流与使用
+
+单项工作流：title、listing、video、operations、customer；单平台有数据和客户上下文的组合准备用commerce；多平台/同品多呈现用campaign。自然语言需求由宿主整理为请求，不要求用户先填一大份表。
+
+必填workflow/goal/channel/language，除纯数据分析外选SKU。targets指定platform/placement/business_model/market/audience/goal_type/language；creative可选数量、明确风格、声音形式、时长、是否露脸和复杂度。图文位置不会继承视频时长。视频现有项目优先沿用PROJECT，当前任务不自动换语言/模型/画幅。
+
+[commerce Skill](beiqiang-commerce/skills/commerce/SKILL.md)按需路由到[平台方法](beiqiang-commerce/skills/commerce/references/platform-playbooks.md)、[视频导演](beiqiang-commerce/skills/commerce/references/video-director.md)、[运营方法](beiqiang-commerce/skills/commerce/references/operations-playbook.md)及[产物契约](beiqiang-commerce/skills/commerce/references/artifact-contracts.md)。21个工具可通过同一个[server.py](beiqiang-commerce/server.py)调用：
+
+```powershell
 python -X utf8 '08_工具链/07_电商Agent/beiqiang-commerce/server.py' --tools
-python -X utf8 '08_工具链/07_电商Agent/beiqiang-commerce/server.py' --tool commerce_create --args-file '08_工具链/07_电商Agent/beiqiang-commerce/examples/bq028-video.request.json'
+python -X utf8 '08_工具链/07_电商Agent/beiqiang-commerce/server.py' --tool commerce_create --args-file '08_工具链/07_电商Agent/beiqiang-commerce/examples/bq028-campaign.request.json'
 python -X utf8 -m unittest discover -s '08_工具链/07_电商Agent/beiqiang-commerce/tests' -v
 ```
 
-本地任务/版本/事件及草稿放 `.state/`，由Git忽略；正式成果仍回原业务项目，不把运行库当商品或客户主库。来源或已登记成果变动后任务显示needs_refresh；显式刷新会保留旧证据事件并要求重新检查，不能直接套用旧审核结论。相同请求/key恢复原任务；同key不同请求拒绝，修改步骤用revision防止覆盖。
+新增工具：commerce_catalog、commerce_strategy、commerce_stage_change、commerce_change、commerce_export、commerce_business_snapshot。身份/策略/指标步骤由后端执行，实际文案与判断由宿主完成后submit_artifact登记。相同key恢复任务；revision防覆盖；来源、策略或已登记产物变动后显示needs_refresh，须明确刷新和重审。
 
-审核包状态package_ready只代表本地准备完成。首版没有发布、素材上传、客户发送、广告或付费生成接口；这些动作在有具体授权时继续走已有官方技能并写回业务证据，后续再接精确的准备/提交/回读接口。平台查询会留本地原始回执，不自动改台账。首版已支持官方Alibaba product.get及LibTV节点读取，其它平台仍待实际适配。
+任务、草稿、回执和导出留本地`.state/`，包与校验记录放`.local/`，均被Git忽略。正式业务成果继续回相应入口；运行库不是事实主库。commerce_stage_change只保存具体字段前后差异，不执行提交；缺目标对象、schema、基线或适用授权的情况逐项显示。
 
-插件使用标准 [plugin.json](beiqiang-commerce/plugin.json) 和 [mcp.json](beiqiang-commerce/mcp.json)。本机Python已可用；MCP通过工作区或现有贝强目录定位真源。换机/换目录可设BEIQIANG_WORKSPACE，CLI可显式传--workspace。插件源包不携带资料、运行库或凭证；本地安装后新会话载入，当前会话可直接用CLI。
+## 连接状态与验收
 
-开发验收：29项自动检查已通过，涵盖组合准备闭环、身份/别名/错绑、重复与并发请求、版本冲突、资料/产物失效、断点恢复、不可比数据拒绝、客户草稿不冒充发送、未适配平台/渠道错配拒绝，以及实际stdio启动/工具发现/调用。官方plugin/mcp JSON Schema验证通过。本地Codex已发现并安装插件；安装副本启动、15工具发现和贝强工作区定位已通过。当前聊天需新会话载入插件工具，可立即用CLI。
+| 能力 | 实际状态 |
+| --- | --- |
+| Alibaba、LibTV官方读取 | 已接既有官方客户端；v0.1.1曾完成BQ028 product.get和现有节点实际读取，原回执只留本地 |
+| 六个平台内容准备 | 已实现位置化策略、产物和审核契约；不表示六个账号已经连接 |
+| 抖音/抖店、小红书、Amazon、TikTok账号 | 未连接；缺当前账号权限、对象映射与动态schema，不伪造发布成功 |
+| 独立站 | 沿用现有B2B网站入口，源码/CMS执行走实际项目工作流；Shopify只作为可选Provider研究 |
+| 平台写入、消息、广告、付费生成 | 插件没有这些执行接口；适用时走已有官方业务Skills和具体授权，再取正式回读/业务验收 |
+| 验证 | 55项程序检查、BQ028六位置完整准备与可读导出；安装副本stdio启动、21工具发现和调用检查 |
 
-真实接入：BQ028当前商品1601839105416经官方product.get读取，返回approved/Y；返回加密商品ID与该链接既有正式回执一致。LibTV现有节点已通过官方CLI读取。原始回执仅本地.state保留，不进公开Git。BQ028现有28秒、七场八句方案已经实际完成identity→brief→review三个本地步骤，状态package_ready；保留脚痛/步态/歪盒问题与“尚无独立完整成片QA”的范围，不修改原画布或重新生成。结构校验和合成数据测试不证明真实文案质量、成片或商业效果。
+程序检查覆盖身份/别名、平台错绑、位置/商业模式/静态图文、品类与不同方向、缺证排除、窄上下文、产物覆盖、变更基线/重复恢复/失效、数据归因与未知值，以及原v0.1任务兼容。结构和合成测试不能证明所有品类的创作质量或经营效果。
 
-安装/复现：工作区已有 `.agents/plugins/marketplace.json` 和本项目启用配置。源包修改后用官方CLI重新安装新版本，不手改缓存。可运行 `python -X utf8 '08_工具链/07_电商Agent/beiqiang-commerce/scripts/register_workspace.py'` 保留式登记，再执行 `codex plugin marketplace add <贝强工作区绝对路径>`、`codex plugin add beiqiang-commerce@beiqiang-workspace`。包校验/打包用 [verify_package.py](beiqiang-commerce/scripts/verify_package.py)，--online-schema查官方格式，--zip选择源目录外的本地ZIP；打包依据[官方插件文档](https://developers.openai.com/plugins/build/plugins)。
+## 安装、扩展与业务源
 
-## 一个入口，四个专业模块
+工作区已有`.agents/plugins/marketplace.json`和启用配置，插件名继续是beiqiang-commerce@beiqiang-workspace。源包更新后用官方`codex plugin add beiqiang-commerce@beiqiang-workspace --json`重新安装新版本，不编辑缓存。校验/打包用[verify_package.py](beiqiang-commerce/scripts/verify_package.py)；--online-schema查官方格式，--zip写源目录外的本地ZIP。已有会话未刷新工具时，可直接用CLI。
 
-| 模块 | 职责和交付 | 现有可复用来源 | 验收依据 |
-| --- | --- | --- | --- |
-| 商品与上架 | 商品核验、标题/关键词/属性/SKU、图库/详情、发布修复、平台回读 | [商品SOP](../../02_Alibaba运营/00_运营SOP/国际站商品全生命周期SOP.md)、[唯一台账](../../02_Alibaba运营/05_扩品工程/数据/产品与链接台账.json)、已验证OpenAPI及商品Skills | 真实商品对应、本地平台双改、正式字段/审核/公开呈现；提交成功不代替经营成效 |
-| 内容制作 | 主图/详情图、视频创意与导演、角色/商品/道具参考、生成、剪辑与完整审片 | [视频入口](../../05_内容与视频/AGENTS.md)、[视频子模块方案](../02_视频工具/电商视频Agent/README.md)、现有素材和工具 | 商品外观/主张、故事/表演/动作/声音、可用结果及用户反馈；不只检查文件/单帧 |
-| 运营与增长 | 关键词与竞品研究、曝光/点击/询盘分析、测试方案、内容分发和下一动作 | [增长总控](../../00_总控台/全渠道增长总控.md)、市场/P4P/周报Skills及当前平台数据 | 数据来源/日期、有效商机与后续进展；不以分数或播放量替代转化 |
-| 客户与商机 | RFQ、询盘评估、报价/样品、跟进、客户状态回写 | [客户总入口](../../04_客户开发/README.md)、当前CRM/客户原始记录、现有报价/技术询盘SOP | 真实发送/回复、订单条件和推进证据；客户原件不进入公开素材或Git |
+新增平台要分别补当前业务规则、账号/对象/类目schema、精确准备请求、提交/异步状态、正式回读及本地回写。新增品类要补真实商品资料和主张证据。共用任务、素材版本和反馈协议；不重复上传已有素材、不盲重跑待终态任务。
 
-总入口接收目标、读当前对象状态、拆任务和依赖、调用对应模块，再汇总已完成/待核/下一步。各模块可以先实现为同一程序中的Skills、工具和任务处理器，不要求四套独立服务或同时运行四个模型。
+商品模块读[商品SOP](../../02_Alibaba运营/00_运营SOP/国际站商品全生命周期SOP.md)和[唯一台账](../../02_Alibaba运营/05_扩品工程/数据/产品与链接台账.json)；内容模块读[视频入口](../../05_内容与视频/AGENTS.md)和[视频子模块](../02_视频工具/电商视频Agent/README.md)；运营读[增长总控](../../00_总控台/全渠道增长总控.md)；客户读[客户入口](../../04_客户开发/README.md)。既有身份、来源、事实、授权和验收规则按这些源执行。
 
-调用保留任务范围：只改标题就只调商品模块，独立视频任务只调内容模块；完整经营闭环才按依赖串联，不为每个小任务遍读全部资料或运行全部模块。
-
-分模块的原因：上架需要事实与字段精度，导演需要故事和表演，运营需要数据与假设检验，客户沟通需要商业条件及隐私范围。保持各自上下文和验收，同时共享同一商品来源；减少泛化提示导致的混用，也减少独立应用之间的重复录入和事实漂移。
-
-## 共用什么，分开什么
-
-共用：商品身份/来源、真实原件、素材索引与版本、品牌/主张边界、平台对象映射、已确认授权与经验、任务状态和正式证据引用。直接读取现有台账与CRM，生成图不进入实物事实层。
-
-分开：每个平台的类目/字段/媒介规格、账号连接、发布状态、操作能力及验收；商品发布、付费生成、广告投放和外部客户消息仍按各自已获授权执行。已有授权持续有效，只有新增范围才核；“统一入口”不把一项授权转给另一类动作。
-
-对同一SKU/平台链接的字段提交保留单一写入者与版本核对；素材和异步任务按身份复用、正式回读，避免重复上传、重复扣费、覆盖另一模块成果。不同链接各自验收，不因共用商品身份合并成一个发布结果。
-
-## 平台是适配层
-
-商品/内容/运营模块调用平台适配器，由它处理认证、类目和字段映射、上传/发布/查询、返回ID与正式回读。Alibaba当前执行使用已验证官方OpenAPI；视频当前可接官方LibTV CLI。其它平台依据当前真实连接与官方能力验证，不因写在架构里就宣称已接通。
-
-新增平台主要补适配与业务规则；新增品类补商品事实、主张/内容与市场规则。共同的任务状态、来源/版本和反馈流程保持复用。“通用”不等于所有商品、渠道都套同一标题、MOQ、内容形式和受众。
-
-## 第一条闭环
-
-选定一款真实商品 → 商品模块准备上架包 → 内容模块制作必要图片/视频 → 当前平台在授权内提交并回读 → 运营模块读曝光/点击/询盘 → 判断问题和下一动作 → 商机进入客户模块 → 反馈回到该商品与内容。
-
-先打通贝强现有Alibaba＋内容制作＋经营数据这条链，以有效采购商机和报价/样品/订单推进为目标；从BQ028等已核商品取证验证。其它平台与品类随后按真实需求扩展，不先宣称全平台全自动。
-
-首版复用当前工具和单入口，公共任务/产物契约、状态转换、能力说明及恢复方式已落地，SQLite仅保存本地任务索引。用现有任务继续验证是否减少用户纠正、重复操作与失败返工，再决定是否追加独立界面。
-
-## REA 已核身份与用途
-
-上一轮检索方向错误，把REA作为电商平台名查，没有核对逆向工程工具；此前视频子方案“REA未确定”的记录已纠正。
-
-已核：[REA官方仓库](https://github.com/morluto/rea)、[官方站](https://rea.tools/)、[当前英文README](https://github.com/morluto/rea/blob/main/README.md)。REA（Reverse Engineer Anything）向agent提供CLI/MCP形式的本地分析能力，覆盖可访问应用、原生二进制、JavaScript/Electron、.NET及网站；可调查、展示证据并辅助重建功能。原生分析返回伪代码和汇编，JavaScript/Electron分析恢复模块及关系，由agent据此编写和验证实现，不能把这些产物视为原始源码或整个应用已恢复。初次搜索命中illumi-ai/REA分叉，已从原仓库身份和官网交叉核验并纠正引用。
-
-适合在研发时研究明确功能：商品素材导入/管理、任务状态、前端交互、字段映射、批量操作和可访问的客户端规则。形成证据→可复用设计→独立实现→输入输出对照测试；REA是研发工具，不是贝强日常经营执行器。
-
-边界判断：网站能观察到的交互和请求不等于可访问远端托管模型、隐藏系统提示或完整导演算法；恢复多少逻辑需按实际证据判断。当前仍未指定要调查的平台/应用，没有安装REA或对任何目标执行逆向。
-
-主机支持须按当前原仓库能力目录和所选目标验证，不从旧分叉文档推断当前能力。原仓库列出JavaScript/Electron、网站及实验性Windows Ghidra等不同分析路线，各自有前提和范围；本机未做能力检测或安装。
-
-优先阅读开源实现和明确许可；REA用于有实际缺口、可访问且获授权的功能调查。商品经营仍按现有官方API/CLI与平台流程，不以研究得到的私有接口替代成熟生产路径。
-
-## 下一步
-
-先用当前真实商品/内容任务验证纠正次数、返工及资料复用，再接已有商品工具的精确准备/提交/回读流程，按已有授权逐对象执行。运营仍需要真实的 dated CSV，首版不宣称已接通自然流量API；客户资料仅本地处理。随后补其它平台适配及对具体开源功能的研究。REA在有明确调查目标时使用，首版运行不以安装REA为前提。
+下一条真实接入需要一个具体平台账号与业务对象，按上述接口逐项验证；当前开发不会冒用其它平台账号权限。后续评估看减少纠正、重复操作、失败返工及有效采购商机，不以配置数量或内容产量作为成功。

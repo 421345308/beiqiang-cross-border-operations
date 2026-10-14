@@ -233,10 +233,13 @@ class RuntimeTests(unittest.TestCase):
         del r["customer_context_path"]
         self.assert_code("INVALID_REQUEST", lambda: self.engine.ws.plan(r))
 
-    def test_unimplemented_listing_platform_is_not_silently_alibaba(self):
+    def test_amazon_preparation_does_not_silently_use_alibaba_rules(self):
         r = self.request()
         r["channel"] = "amazon"
-        self.assert_code("INVALID_REQUEST", lambda: self.engine.ws.plan(r))
+        plan = self.engine.ws.plan(r)
+        self.assertEqual(plan["strategy"]["targets"][0]["target"]["platform"], "amazon")
+        self.assertNotIn("02_Alibaba运营/AGENTS.md", [p["path"] for p in plan["source_refs"]])
+        self.assertEqual(plan["skills"]["product"], [])
 
     def test_operating_scope_must_match_csv_channel(self):
         r = self.request("operations")
@@ -331,7 +334,8 @@ class RuntimeTests(unittest.TestCase):
         self.assertEqual(response["result"]["protocolVersion"], "2025-11-25")
         self.assertIsNone(session.handle({"jsonrpc": "2.0", "method": "notifications/initialized"}))
         response = session.handle({"jsonrpc": "2.0", "id": 3, "method": "tools/list"})
-        self.assertEqual(len(response["result"]["tools"]), 15)
+        self.assertEqual(len(response["result"]["tools"]), len(tool_list()))
+        self.assertIn("commerce_strategy", [t["name"] for t in response["result"]["tools"]])
         response = session.handle({"jsonrpc": "2.0", "id": 4, "method": "tools/call", "params": {"name": "commerce_doctor", "arguments": {"shell": "x"}}})
         self.assertEqual(response["error"]["code"], -32602)
 
