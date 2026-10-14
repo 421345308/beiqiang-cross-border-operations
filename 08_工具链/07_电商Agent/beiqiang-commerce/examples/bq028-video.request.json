@@ -1,0 +1,11 @@
+{
+  "request": {
+    "workflow": "video",
+    "goal": "开发验收：将现有已认可的BQ028七场八句28秒方案纳入审核包任务，保留生成版满意方向，登记下一次脚痛、步态和开盒检查。只整理本地审核包。",
+    "sku": "BQ028",
+    "channel": "国内竖屏社交短视频",
+    "language": "zh-CN",
+    "project_path": "05_内容与视频/04_社交媒体运营/贝强无露脸舒适鞋品牌片/PROJECT.md"
+  },
+  "idempotency_key": "development-v0.1-bq028-video-package"
+}

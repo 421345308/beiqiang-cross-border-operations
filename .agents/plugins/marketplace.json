@@ -1,0 +1,20 @@
+{
+  "name": "beiqiang-workspace",
+  "interface": {
+    "displayName": "贝强工作台"
+  },
+  "plugins": [
+    {
+      "name": "beiqiang-commerce",
+      "source": {
+        "source": "local",
+        "path": "./08_工具链/07_电商Agent/beiqiang-commerce"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

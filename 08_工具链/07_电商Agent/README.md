@@ -1,8 +1,35 @@
-# 贝强电商经营 Agent：总体架构建议
+# 贝强电商经营 Agent：总入口
 
-状态：2026-10-14方案讨论，尚未实施。负责人提出商品上传、视频制作和运营是否应合成通用agent；下述“统一入口、专业模块、共享事实、平台适配”是当前建议，待确认实施范围。视频导演是其中一个模块，不能代表完整经营系统。
+状态：2026-10-14负责人认可总体架构并授权开始开发。首版v0.1.1已实现本地任务后端、Codex插件与专业工作流，安装和真实资料接入验证通过。“统一入口、专业模块、共享事实、平台适配”作为当前实施架构；视频导演是其中一个模块。
 
 本文件是技术项目总入口；公司/商品/客户事实、授权和经营状态继续以现有业务源为准，不另建影子总控、第二产品主库或CRM。
+
+## 首版怎么使用
+
+源码在 [beiqiang-commerce](beiqiang-commerce/)，Python 3.11及以上，仅标准库。宿主Codex负责理解需求和专业判断，本地MCP/CLI负责身份查询、六种工作流规划、任务保存、版本与依赖检查、产物登记、可比数据计算和官方只读查询；没有另开付费模型API。
+
+工作流：`title/listing/video/operations/customer/commerce`。所有请求明确goal/channel/language；除纯数据分析外选SKU，针对某个线上链接再选listing_id。视频沿用project_path，运营使用真实metrics_path，客户任务指定customer_context_path。小任务只加载相关业务入口，组合任务才串联模块。首版商品上架类流程限定Alibaba，未适配的平台明确退回，不套国际站规则；视频渠道按项目，数据分析要求CSV渠道与任务匹配。
+
+15个工具的入口为 [server.py](beiqiang-commerce/server.py)，专业判断说明在 [commerce Skill](beiqiang-commerce/skills/commerce/SKILL.md)，产物接口在 [契约](beiqiang-commerce/skills/commerce/references/artifact-contracts.md)。可以在工作台根目录使用：
+
+```powershell
+python -X utf8 '08_工具链/07_电商Agent/beiqiang-commerce/server.py'
+python -X utf8 '08_工具链/07_电商Agent/beiqiang-commerce/server.py' --tools
+python -X utf8 '08_工具链/07_电商Agent/beiqiang-commerce/server.py' --tool commerce_create --args-file '08_工具链/07_电商Agent/beiqiang-commerce/examples/bq028-video.request.json'
+python -X utf8 -m unittest discover -s '08_工具链/07_电商Agent/beiqiang-commerce/tests' -v
+```
+
+本地任务/版本/事件及草稿放 `.state/`，由Git忽略；正式成果仍回原业务项目，不把运行库当商品或客户主库。来源或已登记成果变动后任务显示needs_refresh；显式刷新会保留旧证据事件并要求重新检查，不能直接套用旧审核结论。相同请求/key恢复原任务；同key不同请求拒绝，修改步骤用revision防止覆盖。
+
+审核包状态package_ready只代表本地准备完成。首版没有发布、素材上传、客户发送、广告或付费生成接口；这些动作在有具体授权时继续走已有官方技能并写回业务证据，后续再接精确的准备/提交/回读接口。平台查询会留本地原始回执，不自动改台账。首版已支持官方Alibaba product.get及LibTV节点读取，其它平台仍待实际适配。
+
+插件使用标准 [plugin.json](beiqiang-commerce/plugin.json) 和 [mcp.json](beiqiang-commerce/mcp.json)。本机Python已可用；MCP通过工作区或现有贝强目录定位真源。换机/换目录可设BEIQIANG_WORKSPACE，CLI可显式传--workspace。插件源包不携带资料、运行库或凭证；本地安装后新会话载入，当前会话可直接用CLI。
+
+开发验收：29项自动检查已通过，涵盖组合准备闭环、身份/别名/错绑、重复与并发请求、版本冲突、资料/产物失效、断点恢复、不可比数据拒绝、客户草稿不冒充发送、未适配平台/渠道错配拒绝，以及实际stdio启动/工具发现/调用。官方plugin/mcp JSON Schema验证通过。本地Codex已发现并安装插件；安装副本启动、15工具发现和贝强工作区定位已通过。当前聊天需新会话载入插件工具，可立即用CLI。
+
+真实接入：BQ028当前商品1601839105416经官方product.get读取，返回approved/Y；返回加密商品ID与该链接既有正式回执一致。LibTV现有节点已通过官方CLI读取。原始回执仅本地.state保留，不进公开Git。BQ028现有28秒、七场八句方案已经实际完成identity→brief→review三个本地步骤，状态package_ready；保留脚痛/步态/歪盒问题与“尚无独立完整成片QA”的范围，不修改原画布或重新生成。结构校验和合成数据测试不证明真实文案质量、成片或商业效果。
+
+安装/复现：工作区已有 `.agents/plugins/marketplace.json` 和本项目启用配置。源包修改后用官方CLI重新安装新版本，不手改缓存。可运行 `python -X utf8 '08_工具链/07_电商Agent/beiqiang-commerce/scripts/register_workspace.py'` 保留式登记，再执行 `codex plugin marketplace add <贝强工作区绝对路径>`、`codex plugin add beiqiang-commerce@beiqiang-workspace`。包校验/打包用 [verify_package.py](beiqiang-commerce/scripts/verify_package.py)，--online-schema查官方格式，--zip选择源目录外的本地ZIP；打包依据[官方插件文档](https://developers.openai.com/plugins/build/plugins)。
 
 ## 一个入口，四个专业模块
 
@@ -39,7 +66,7 @@
 
 先打通贝强现有Alibaba＋内容制作＋经营数据这条链，以有效采购商机和报价/样品/订单推进为目标；从BQ028等已核商品取证验证。其它平台与品类随后按真实需求扩展，不先宣称全平台全自动。
 
-可先复用当前工具和单入口，不为架构先造多个应用、数据库或新服务。实现前补齐每个模块的输入/输出、状态转换、能力/权限说明及恢复方式；用现有任务验证是否减少用户纠正、重复操作与失败返工，再决定界面/插件形态。
+首版复用当前工具和单入口，公共任务/产物契约、状态转换、能力说明及恢复方式已落地，SQLite仅保存本地任务索引。用现有任务继续验证是否减少用户纠正、重复操作与失败返工，再决定是否追加独立界面。
 
 ## REA 已核身份与用途
 
@@ -57,4 +84,4 @@
 
 ## 下一步
 
-确认总体架构与首条闭环范围，盘点现有模块和平台能力，补最少的公共任务/版本接口。然后挑一个具体开源或平台功能研究，决定直接复用、用REA辅助理解或自研。当前仅完成架构建议及公开资料核验，未创建新应用/插件、部署服务、发布商品或付费生成。
+先用当前真实商品/内容任务验证纠正次数、返工及资料复用，再接已有商品工具的精确准备/提交/回读流程，按已有授权逐对象执行。运营仍需要真实的 dated CSV，首版不宣称已接通自然流量API；客户资料仅本地处理。随后补其它平台适配及对具体开源功能的研究。REA在有明确调查目标时使用，首版运行不以安装REA为前提。
