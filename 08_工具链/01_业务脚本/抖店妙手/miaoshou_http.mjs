@@ -15,6 +15,7 @@ const ENDPOINTS = Object.freeze({
   productBase: {method: 'POST', path: '/api/v2/product/product/getProductBaseEditInfo'},
   productSku: {method: 'POST', path: '/api/v2/product/product/getProductSkuEditInfo'},
   productAudit: {method: 'POST', path: '/api/v2/product/product/getProductAuditList'},
+  sizeTemplateInfo: {method: 'POST', path: '/api/v2/product/product/getSizeTemplateInfo'},
   products: {method: 'POST', path: '/api/v2/product/product/searchProductList'},
   sizeTemplateInit: {method: 'POST', path: '/api/v2/move/size_temp/getSizeTempInitData'},
   uploadImage: {method: 'POST', path: '/api/v2/move/batch/uploadImage'},
@@ -170,6 +171,12 @@ export class MiaoshouHttp {
   async getProductAudit(productId) {
     if (!/^\d+$/.test(String(productId))) throw new Error('Invalid productId');
     return await this.#request('productAudit', {productId: String(productId)});
+  }
+
+  async getSizeTemplateInfo(sizeInfoTemplateId) {
+    if (!/^\d+$/.test(String(sizeInfoTemplateId))) throw new Error('Invalid sizeInfoTemplateId');
+    // Observed index-3798b1c7.js calls exactly {sizeInfoTemplateId}.
+    return await this.#request('sizeTemplateInfo', {sizeInfoTemplateId: String(sizeInfoTemplateId)});
   }
 
   async getSizeTemplateInit(cateId) {

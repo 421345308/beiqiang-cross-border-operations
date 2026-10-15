@@ -5,7 +5,7 @@
   "channel": "douyin",
   "market_scope": "domestic",
   "audience": "consumer",
-  "stage": "HTTP_PUBLISHED_WITH_EXISTING_LISTING_HOLDS",
+  "stage": "15_STYLES_ON_SALE_WITH_3_DEFERRED",
   "source": {
     "archive_name": "贝强工厂店-M889-1-P55.00元-time10-14-231323.zip",
     "archive_sha256": "88c4d3019b983e0763aa56e50442f05e8ce0e62c7efecfda447bba50b33e02fe",
@@ -314,7 +314,7 @@
       71,
       75
     ],
-    "authority": "用户本轮回复：71.50，统一71—75，包邮，退换货按原店规则；本轮先统一71.50；用户后续要求价格按款变化，继续在71—75元内",
+    "authority": "现有标价按负责人最新要求不调整；此前71—75元仅为新建四款及候选基线，不覆盖旧在售款。H7212获明确授权沿用原50元商品券，标价148元保持。",
     "cost_m889_filename_only": 55,
     "other_cost": null,
     "freight_requested": "沿旧店包邮，新疆西藏等偏远地区除外",
@@ -328,16 +328,17 @@
       "three_guarantees_service": "保修期内提供维修(寄修)",
       "basis": "本轮读取原店同货号商品现有配置，具体对象仅本地保存"
     },
-    "pricing_mode": "按款分档，同款各色同价",
+    "pricing_mode": "保留各款现有标价；优惠价以官方当期预计值及实际领券/订单条件为准",
     "inventory_basis": "用户明确确认本批都有货，并授权库存及承诺发货按存量产品填报；已读存量SKU为100/码、次日发，作为发布初始填报基线，不冒充盘点数量",
     "initial_stock_per_verified_sku": 100,
     "confirmed_supply_by_user": true,
-    "freight_template_reference": ".local/执行进度.json，仅本地店铺执行配置"
+    "freight_template_reference": ".local/执行进度.json，仅本地店铺执行配置",
+    "current_price_authority": "负责人要求现有标价不调整；旧的71—75元仅对应此前新建四款与候选，不覆盖旧在售款；实际优惠取官方当前查询，优惠修改另按明确授权"
   },
   "global_gaps": [
-    "既有混款链接的产品身份、图片、服务及加绒SKU整理，避免重复铺货",
-    "A1888标记身份待核；AA188无授权排除，731本轮用户要求暂缓",
-    "买家页面视觉终验待Chrome组件恢复，已验证HTTP与正式审核不受此故障影响"
+    "731按负责人要求暂缓；A1888侧面标记待核；AA188无授权排除",
+    "买家商品页实际渲染、停售历史SKU是否仍显示待终验；Chrome连接已恢复",
+    "M889规格改名触发55个SKU编号迁移，映射已核；50元券抽核通过，未审计全部历史活动或订单"
   ],
   "image_edit": {
     "state": "APPLIED_READBACK_AUDIT_PASSED",
@@ -345,9 +346,20 @@
       "ZX9002",
       "ZX2116",
       "ZX9507",
-      "K6116"
+      "K6116",
+      "8811",
+      "A116",
+      "A1689",
+      "A212",
+      "A507",
+      "H7116",
+      "H7212",
+      "K6212",
+      "L0017",
+      "M889",
+      "R1811"
     ],
-    "reference": "数据/棉鞋内容优化.json",
+    "reference": "数据/棉鞋内容优化.json + 数据/旧混款整理.json",
     "prior_m889_attempt": {
       "state": "CONNECTION_FAILED_NO_OUTPUT",
       "attempts": 2,
@@ -452,7 +464,7 @@
       "product_ref": "BQ058",
       "identity_status": "MATCHED_SOURCE_MODEL",
       "fact_reference": "01_产品资产/02_可发布素材/00_最终上传/BQ058_8811/00_上架填写表.md",
-      "title_draft": "秋冬加绒棉鞋男女针织厚底休闲鞋8811",
+      "title_draft": "针织休闲鞋男女款套脚好穿脱低帮日常散步常规加绒可选",
       "structure": "套脚（源页标不系带，不把装饰绳等同功能系带）",
       "source_size_range": [
         35,
@@ -468,9 +480,9 @@
         45
       ],
       "size_evidence_scope": "2026-10-15贝强工厂店对应来源页当前尺码；不代表盘点数量",
-      "price": 74.9,
+      "price": 139.11,
       "stock": 100,
-      "stage": "HOLD_EXISTING_FLEECE_SKU",
+      "stage": "APPLIED_READBACK_AUDIT_PASSED",
       "blocking_notes": [
         "已在旧商品或旧889/8811混款链接中找到加绒SKU；保留原链接，待核清身份与素材后整理，不重复创建"
       ],
@@ -550,16 +562,15 @@
       "visual_plan": "首图黑白色，次图全黑；突出棱角外底，不写减震测试",
       "main_image_candidate": "8811黑白加绒.jpg",
       "detail_draft": [
-        "秋冬加绒款，款号8811。",
-        "可选颜色：黑白加绒、全黑加绒。",
-        "可选尺码：35—45码；请结合实际脚型选择，暂无实测偏码建议。",
-        "用于秋冬日常休闲穿搭；以对应颜色版本图片展示鞋型和鞋口细节。",
-        "现货次日发；沿店铺原包邮规则，新疆西藏等偏远地区例外，实际运费在下单页展示。",
-        "支持7天无理由退货；退换条件及运费险按店铺和平台实际规则执行。"
+        "下楼走走，套脚出门省事",
+        "后跟提环，辅助穿鞋更顺手",
+        "常规与加绒按颜色规格分别选购。",
+        "套脚设计，省去系鞋带步骤。",
+        "按对应颜色规格与脚长参考选码；发货、运费与售后沿店铺规则。"
       ],
       "douyin_product_id": null,
       "publish_receipt": null,
-      "price_basis": "用户71—75元范围内按款分档的首轮试价，非已证明最优价格；同款各色同价",
+      "price_basis": "沿对应已存在加绒规格保存价，本轮未调整；后台优惠预计价另存价格关系，不视为无条件实付价",
       "stock_basis": "已读存量SKU的100/码发布基线，用户授权沿用；不是盘点结果",
       "current_source": {
         "url": "https://bqgcd.sooxie.com/detail/2041812",
@@ -633,15 +644,36 @@
         ],
         "scope": "来源页字段候选；加绒颜色与普通版可能共用旧参数，季节、里料及宣传功能须按实际版本核对，不机械照搬"
       },
-      "current_scope": "已在旧商品或旧889/8811混款链接中找到加绒SKU；保留原链接，待核清身份与素材后整理，不重复创建",
-      "platform_evidence_ref": ".local/evidence/catalog-full-sku.json"
+      "current_scope": "已按真实款式对应图片和新版消费者详情，审核通过且后台在售；历史非本款SKU仅关闭，不删除订单",
+      "platform_evidence_ref": ".local/evidence/retail-family/8811/verification.json",
+      "title_current": "针织休闲鞋男女款套脚好穿脱低帮日常散步常规加绒可选",
+      "content_reference": "数据/旧混款整理.json#models/8811",
+      "current_retail_prices_cny": {
+        "regular": [
+          139.11
+        ],
+        "fleece": [
+          139.11
+        ]
+      },
+      "verified_fleece_sku_count": 22,
+      "detail_image_files": [
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/8811/优化/详情/01_出门场景与穿着利益.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/8811/优化/详情/02_舒适好穿结构讲解.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/8811/优化/详情/03_加绒日常场景.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/8811/优化/详情/04_轮廓搭配与外底实拍.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/8811/优化/详情/05_颜色规格选择.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/8811/优化/详情/06_商品参数.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/8811/优化/详情/07_脚长尺码指南.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/8811/优化/详情/08_发货与售后服务.png"
+      ]
     },
     {
       "source_model": "A116",
       "product_ref": "BQ018",
       "identity_status": "MATCHED_SOURCE_MODEL",
       "fact_reference": "01_产品资产/02_可发布素材/00_最终上传/BQ018_A116/00_上架填写表.md",
-      "title_draft": "秋冬加绒棉鞋男女系带针织休闲鞋A116",
+      "title_draft": "秋冬加绒棉鞋男女款系带可调松紧针织休闲鞋日常出门好搭",
       "structure": "系带",
       "source_size_range": [
         35,
@@ -657,9 +689,9 @@
         45
       ],
       "size_evidence_scope": "2026-10-15贝强工厂店对应来源页当前尺码；不代表盘点数量",
-      "price": 71.5,
+      "price": 133,
       "stock": 100,
-      "stage": "HOLD_EXISTING_FLEECE_SKU",
+      "stage": "APPLIED_READBACK_AUDIT_PASSED",
       "blocking_notes": [
         "已在旧商品或旧889/8811混款链接中找到加绒SKU；保留原链接，待核清身份与素材后整理，不重复创建"
       ],
@@ -739,16 +771,15 @@
       "visual_plan": "首图保留鞋面与外底全貌；绒里放大圈仅来源示意，不做绒量证明",
       "main_image_candidate": "A116黑白加绒.jpg",
       "detail_draft": [
-        "秋冬加绒款，款号A116。",
-        "可选颜色：黑白加绒、全黑加绒。",
-        "可选尺码：35—45码；请结合实际脚型选择，暂无实测偏码建议。",
-        "用于秋冬日常休闲穿搭；以对应颜色版本图片展示鞋型和鞋口细节。",
-        "现货次日发；沿店铺原包邮规则，新疆西藏等偏远地区例外，实际运费在下单页展示。",
-        "支持7天无理由退货；退换条件及运费险按店铺和平台实际规则执行。"
+        "脚背松紧，按自己习惯调",
+        "系带可调，秋冬加绒暖意相伴",
+        "加绒款，秋冬日常休闲穿着。",
+        "系带可调松紧，按脚背和袜厚选择。",
+        "按对应颜色规格与脚长参考选码；发货、运费与售后沿店铺规则。"
       ],
       "douyin_product_id": null,
       "publish_receipt": null,
-      "price_basis": "用户71—75元范围内按款分档的首轮试价，非已证明最优价格；同款各色同价",
+      "price_basis": "沿对应已存在加绒规格保存价，本轮未调整；后台优惠预计价另存价格关系，不视为无条件实付价",
       "stock_basis": "已读存量SKU的100/码发布基线，用户授权沿用；不是盘点结果",
       "current_source": {
         "url": "https://bqgcd.sooxie.com/detail/1547777",
@@ -806,15 +837,34 @@
         ],
         "scope": "来源页字段候选；加绒颜色与普通版可能共用旧参数，季节、里料及宣传功能须按实际版本核对，不机械照搬"
       },
-      "current_scope": "已在旧商品或旧889/8811混款链接中找到加绒SKU；保留原链接，待核清身份与素材后整理，不重复创建",
-      "platform_evidence_ref": ".local/evidence/catalog-full-sku.json"
+      "current_scope": "已按真实款式对应图片和新版消费者详情，审核通过且后台在售；历史非本款SKU仅关闭，不删除订单",
+      "platform_evidence_ref": ".local/evidence/retail-family/A116/verification.json",
+      "title_current": "秋冬加绒棉鞋男女款系带可调松紧针织休闲鞋日常出门好搭",
+      "content_reference": "数据/旧混款整理.json#models/A116",
+      "current_retail_prices_cny": {
+        "regular": [],
+        "fleece": [
+          133
+        ]
+      },
+      "verified_fleece_sku_count": 22,
+      "detail_image_files": [
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/A116/优化/详情/01_出门场景与穿着利益.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/A116/优化/详情/02_舒适好穿结构讲解.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/A116/优化/详情/03_加绒日常场景.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/A116/优化/详情/04_轮廓搭配与外底实拍.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/A116/优化/详情/05_颜色规格选择.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/A116/优化/详情/06_商品参数.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/A116/优化/详情/07_脚长尺码指南.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/A116/优化/详情/08_发货与售后服务.png"
+      ]
     },
     {
       "source_model": "A1689",
       "product_ref": "BQ025",
       "identity_status": "MATCHED_SOURCE_MODEL",
       "fact_reference": "01_产品资产/02_可发布素材/00_最终上传/BQ025_A1689/00_上架填写表.md",
-      "title_draft": "秋冬加绒棉鞋男女针织休闲鞋A1689",
+      "title_draft": "针织一脚蹬休闲鞋男女低帮套脚免系带日常出门加绒可选",
       "structure": "结构待核",
       "source_size_range": [
         35,
@@ -830,9 +880,9 @@
         45
       ],
       "size_evidence_scope": "2026-10-15贝强工厂店对应来源页当前尺码；不代表盘点数量",
-      "price": 72.9,
+      "price": 143,
       "stock": 100,
-      "stage": "HOLD_EXISTING_FLEECE_SKU",
+      "stage": "APPLIED_READBACK_AUDIT_PASSED",
       "blocking_notes": [
         "已在旧商品或旧889/8811混款链接中找到加绒SKU；保留原链接，待核清身份与素材后整理，不重复创建"
       ],
@@ -911,16 +961,15 @@
       "visual_plan": "原图已有鞋底视角；不因圆点底纹写专业防滑",
       "main_image_candidate": "A1689黑白加绒.jpg",
       "detail_draft": [
-        "秋冬加绒款，款号A1689。",
-        "可选颜色：黑白加绒、全黑加绒。",
-        "可选尺码：35—45码；请结合实际脚型选择，暂无实测偏码建议。",
-        "用于秋冬日常休闲穿搭；以对应颜色版本图片展示鞋型和鞋口细节。",
-        "现货次日发；沿店铺原包邮规则，新疆西藏等偏远地区例外，实际运费在下单页展示。",
-        "支持7天无理由退货；退换条件及运费险按店铺和平台实际规则执行。"
+        "想出门就走，少一道系带步骤",
+        "无系带套脚，日常穿脱省事",
+        "常规与加绒按颜色规格分别选购。",
+        "套脚设计，省去系鞋带步骤。",
+        "按对应颜色规格与脚长参考选码；发货、运费与售后沿店铺规则。"
       ],
       "douyin_product_id": null,
       "publish_receipt": null,
-      "price_basis": "用户71—75元范围内按款分档的首轮试价，非已证明最优价格；同款各色同价",
+      "price_basis": "沿对应已存在加绒规格保存价，本轮未调整；后台优惠预计价另存价格关系，不视为无条件实付价",
       "stock_basis": "已读存量SKU的100/码发布基线，用户授权沿用；不是盘点结果",
       "current_source": {
         "url": "https://bqgcd.sooxie.com/detail/1545440",
@@ -978,8 +1027,29 @@
         ],
         "scope": "来源页字段候选；加绒颜色与普通版可能共用旧参数，季节、里料及宣传功能须按实际版本核对，不机械照搬"
       },
-      "current_scope": "已在旧商品或旧889/8811混款链接中找到加绒SKU；保留原链接，待核清身份与素材后整理，不重复创建",
-      "platform_evidence_ref": ".local/evidence/catalog-full-sku.json"
+      "current_scope": "已按真实款式对应图片和新版消费者详情，审核通过且后台在售；历史非本款SKU仅关闭，不删除订单",
+      "platform_evidence_ref": ".local/evidence/retail-family/A1689/verification.json",
+      "title_current": "针织一脚蹬休闲鞋男女低帮套脚免系带日常出门加绒可选",
+      "content_reference": "数据/旧混款整理.json#models/A1689",
+      "current_retail_prices_cny": {
+        "regular": [
+          138
+        ],
+        "fleece": [
+          143
+        ]
+      },
+      "verified_fleece_sku_count": 22,
+      "detail_image_files": [
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/A1689/优化/详情/01_出门场景与穿着利益.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/A1689/优化/详情/02_舒适好穿结构讲解.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/A1689/优化/详情/03_加绒日常场景.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/A1689/优化/详情/04_轮廓搭配与外底实拍.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/A1689/优化/详情/05_颜色规格选择.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/A1689/优化/详情/06_商品参数.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/A1689/优化/详情/07_脚长尺码指南.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/A1689/优化/详情/08_发货与售后服务.png"
+      ]
     },
     {
       "source_model": "A1888",
@@ -1163,7 +1233,7 @@
       "product_ref": "BQ048",
       "identity_status": "MATCHED_SOURCE_MODEL",
       "fact_reference": "01_产品资产/02_可发布素材/00_最终上传/BQ048_A212/00_上架填写表.md",
-      "title_draft": "秋冬加绒棉鞋男女针织套脚休闲鞋A212",
+      "title_draft": "秋冬加绒棉鞋男女款针织一脚蹬休闲鞋套脚好穿脱黑白全黑",
       "structure": "套脚",
       "source_size_range": [
         35,
@@ -1181,7 +1251,7 @@
       "size_evidence_scope": "2026-10-15贝强工厂店对应来源页当前尺码；不代表盘点数量",
       "price": 71.5,
       "stock": 100,
-      "stage": "CREATED_WAREHOUSE_DUPLICATE_GUARD",
+      "stage": "APPLIED_READBACK_AUDIT_PASSED",
       "blocking_notes": [
         "先解决旧混款链接对应关系，再决定该独立页的销售状态"
       ],
@@ -1261,16 +1331,15 @@
       "visual_plan": "单鞋全貌清晰，首图去火焰，保留真实针孔与鞋口",
       "main_image_candidate": "A212黑白加绒.jpg",
       "detail_draft": [
-        "秋冬加绒款，款号A212。",
-        "可选颜色：黑白加绒、全黑加绒。",
-        "可选尺码：35—45码；请结合实际脚型选择，暂无实测偏码建议。",
-        "用于秋冬日常休闲穿搭；以对应颜色版本图片展示鞋型和鞋口细节。",
-        "现货次日发；沿店铺原包邮规则，新疆西藏等偏远地区例外，实际运费在下单页展示。",
-        "支持7天无理由退货；退换条件及运费险按店铺和平台实际规则执行。"
+        "下楼拿快递，套脚就出门",
+        "套脚鞋口配后跟提环，穿脱省事",
+        "加绒款，秋冬日常休闲穿着。",
+        "套脚设计，省去系鞋带步骤。",
+        "按对应颜色规格与脚长参考选码；发货、运费与售后沿店铺规则。"
       ],
       "douyin_product_id": null,
       "publish_receipt": ".local/evidence/A212-create/response.json",
-      "price_basis": "用户71—75元范围内按款分档的首轮试价，非已证明最优价格；同款各色同价",
+      "price_basis": "沿对应已存在加绒规格保存价，本轮未调整；后台优惠预计价另存价格关系，不视为无条件实付价",
       "stock_basis": "已读存量SKU的100/码发布基线，用户授权沿用；不是盘点结果",
       "current_source": {
         "url": "https://bqgcd.sooxie.com/detail/2076977",
@@ -1335,10 +1404,10 @@
         ],
         "scope": "来源页字段候选；加绒颜色与普通版可能共用旧参数，季节、里料及宣传功能须按实际版本核对，不机械照搬"
       },
-      "current_scope": "已创建并回读，进一步全SKU核对发现旧889混款链接含同款加绒，已主动转仓库并回读status=1，未删除或改动旧链接",
-      "platform_evidence_ref": ".local/evidence/duplicate-new-products-shelve-response.json",
+      "current_scope": "已按真实款式对应图片和新版消费者详情，审核通过且后台在售；历史非本款SKU仅关闭，不删除订单",
+      "platform_evidence_ref": ".local/evidence/retail-family/A212/verification.json",
       "platform_id_reference": ".local/执行进度.json#new_cotton，精确商品ID仅本地保存",
-      "title_current": "秋冬加绒棉鞋男女款针织套脚休闲鞋A212",
+      "title_current": "秋冬加绒棉鞋男女款针织一脚蹬休闲鞋套脚好穿脱黑白全黑",
       "active_size_range": [
         35,
         36,
@@ -1352,14 +1421,32 @@
         44,
         45
       ],
-      "verified_sku_count": 22
+      "verified_sku_count": 22,
+      "content_reference": "数据/旧混款整理.json#models/A212",
+      "current_retail_prices_cny": {
+        "regular": [],
+        "fleece": [
+          71.5
+        ]
+      },
+      "verified_fleece_sku_count": 22,
+      "detail_image_files": [
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/A212/优化/详情/01_出门场景与穿着利益.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/A212/优化/详情/02_舒适好穿结构讲解.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/A212/优化/详情/03_加绒日常场景.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/A212/优化/详情/04_轮廓搭配与外底实拍.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/A212/优化/详情/05_颜色规格选择.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/A212/优化/详情/06_商品参数.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/A212/优化/详情/07_脚长尺码指南.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/A212/优化/详情/08_发货与售后服务.png"
+      ]
     },
     {
       "source_model": "A507",
       "product_ref": "BQ014",
       "identity_status": "MATCHED_SOURCE_MODEL",
       "fact_reference": "01_产品资产/02_可发布素材/00_最终上传/BQ014_A507/00_上架填写表.md",
-      "title_draft": "秋冬加绒棉鞋男女套脚休闲鞋A507",
+      "title_draft": "针织休闲鞋男女款一脚蹬套脚免系带低帮日常通勤加绒可选",
       "structure": "套脚",
       "source_size_range": [
         35,
@@ -1375,9 +1462,9 @@
         45
       ],
       "size_evidence_scope": "2026-10-15贝强工厂店对应来源页当前尺码；不代表盘点数量",
-      "price": 72.9,
+      "price": 139,
       "stock": 100,
-      "stage": "HOLD_EXISTING_FLEECE_SKU",
+      "stage": "APPLIED_READBACK_AUDIT_PASSED",
       "blocking_notes": [
         "已在旧商品或旧889/8811混款链接中找到加绒SKU；保留原链接，待核清身份与素材后整理，不重复创建"
       ],
@@ -1457,16 +1544,15 @@
       "visual_plan": "鞋口可见绒里，保留实际绒量；不用免弯腰描述",
       "main_image_candidate": "A507黑白加绒.JPG",
       "detail_draft": [
-        "秋冬加绒款，款号A507。",
-        "可选颜色：黑白加绒、全黑加绒。",
-        "可选尺码：35—45码；请结合实际脚型选择，暂无实测偏码建议。",
-        "用于秋冬日常休闲穿搭；以对应颜色版本图片展示鞋型和鞋口细节。",
-        "现货次日发；沿店铺原包邮规则，新疆西藏等偏远地区例外，实际运费在下单页展示。",
-        "支持7天无理由退货；退换条件及运费险按店铺和平台实际规则执行。"
+        "日常赶着出门，省去系鞋带",
+        "简洁套脚，搭配日常休闲装",
+        "常规与加绒按颜色规格分别选购。",
+        "套脚设计，省去系鞋带步骤。",
+        "按对应颜色规格与脚长参考选码；发货、运费与售后沿店铺规则。"
       ],
       "douyin_product_id": null,
       "publish_receipt": null,
-      "price_basis": "用户71—75元范围内按款分档的首轮试价，非已证明最优价格；同款各色同价",
+      "price_basis": "沿对应已存在加绒规格保存价，本轮未调整；后台优惠预计价另存价格关系，不视为无条件实付价",
       "stock_basis": "已读存量SKU的100/码发布基线，用户授权沿用；不是盘点结果",
       "current_source": {
         "url": "https://bqgcd.sooxie.com/detail/2318706",
@@ -1532,8 +1618,29 @@
         ],
         "scope": "来源页字段候选；加绒颜色与普通版可能共用旧参数，季节、里料及宣传功能须按实际版本核对，不机械照搬"
       },
-      "current_scope": "已在旧商品或旧889/8811混款链接中找到加绒SKU；保留原链接，待核清身份与素材后整理，不重复创建",
-      "platform_evidence_ref": ".local/evidence/catalog-full-sku.json"
+      "current_scope": "已按真实款式对应图片和新版消费者详情，审核通过且后台在售；历史非本款SKU仅关闭，不删除订单",
+      "platform_evidence_ref": ".local/evidence/retail-family/A507/verification.json",
+      "title_current": "针织休闲鞋男女款一脚蹬套脚免系带低帮日常通勤加绒可选",
+      "content_reference": "数据/旧混款整理.json#models/A507",
+      "current_retail_prices_cny": {
+        "regular": [
+          139
+        ],
+        "fleece": [
+          139
+        ]
+      },
+      "verified_fleece_sku_count": 22,
+      "detail_image_files": [
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/A507/优化/详情/01_出门场景与穿着利益.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/A507/优化/详情/02_舒适好穿结构讲解.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/A507/优化/详情/03_加绒日常场景.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/A507/优化/详情/04_轮廓搭配与外底实拍.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/A507/优化/详情/05_颜色规格选择.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/A507/优化/详情/06_商品参数.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/A507/优化/详情/07_脚长尺码指南.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/A507/优化/详情/08_发货与售后服务.png"
+      ]
     },
     {
       "source_model": "AA188",
@@ -1610,7 +1717,7 @@
       "product_ref": "BQ037",
       "identity_status": "MATCHED_SOURCE_MODEL",
       "fact_reference": "01_产品资产/02_可发布素材/00_最终上传/BQ037_H7116/00_上架填写表.md",
-      "title_draft": "秋冬加绒棉鞋男女系带包头休闲鞋H7116",
+      "title_draft": "秋冬加绒棉鞋男女款针织系带休闲鞋黑白包头日常出门好搭",
       "structure": "系带包头",
       "source_size_range": [
         35,
@@ -1628,7 +1735,7 @@
       "size_evidence_scope": "2026-10-15贝强工厂店对应来源页当前尺码；不代表盘点数量",
       "price": 72.9,
       "stock": 100,
-      "stage": "CREATED_WAREHOUSE_DUPLICATE_GUARD",
+      "stage": "APPLIED_READBACK_AUDIT_PASSED",
       "blocking_notes": [
         "先解决旧混款链接对应关系，再决定该独立页的销售状态"
       ],
@@ -1681,16 +1788,15 @@
       "visual_plan": "顶视图展示包头；需补侧面真实加绒图，不从普通版伪造绒里",
       "main_image_candidate": "H7116黑白加绒.JPG",
       "detail_draft": [
-        "秋冬加绒款，款号H7116。",
-        "可选颜色：黑白加绒。",
-        "可选尺码：35—45码；请结合实际脚型选择，暂无实测偏码建议。",
-        "用于秋冬日常休闲穿搭；以对应颜色版本图片展示鞋型和鞋口细节。",
-        "现货次日发；沿店铺原包邮规则，新疆西藏等偏远地区例外，实际运费在下单页展示。",
-        "支持7天无理由退货；退换条件及运费险按店铺和平台实际规则执行。"
+        "天凉出门，加绒陪你走走",
+        "系带松紧可调，黑白日常好搭",
+        "加绒款，秋冬日常休闲穿着。",
+        "系带可调松紧，按脚背和袜厚选择。",
+        "按对应颜色规格与脚长参考选码；发货、运费与售后沿店铺规则。"
       ],
       "douyin_product_id": null,
       "publish_receipt": ".local/evidence/H7116-create/response.json",
-      "price_basis": "用户71—75元范围内按款分档的首轮试价，非已证明最优价格；同款各色同价",
+      "price_basis": "沿对应已存在加绒规格保存价，本轮未调整；后台优惠预计价另存价格关系，不视为无条件实付价",
       "stock_basis": "已读存量SKU的100/码发布基线，用户授权沿用；不是盘点结果",
       "current_source": {
         "url": "https://bqgcd.sooxie.com/detail/2040194",
@@ -1764,10 +1870,10 @@
         ],
         "scope": "来源页字段候选；加绒颜色与普通版可能共用旧参数，季节、里料及宣传功能须按实际版本核对，不机械照搬"
       },
-      "current_scope": "已创建并回读，进一步全SKU核对发现旧889混款链接含同款加绒，已主动转仓库并回读status=1，未删除或改动旧链接",
-      "platform_evidence_ref": ".local/evidence/duplicate-new-products-shelve-response.json",
+      "current_scope": "已按真实款式对应图片和新版消费者详情，审核通过且后台在售；历史非本款SKU仅关闭，不删除订单",
+      "platform_evidence_ref": ".local/evidence/retail-family/H7116/verification.json",
       "platform_id_reference": ".local/执行进度.json#new_cotton，精确商品ID仅本地保存",
-      "title_current": "秋冬加绒棉鞋男女款系带包头休闲鞋H7116",
+      "title_current": "秋冬加绒棉鞋男女款针织系带休闲鞋黑白包头日常出门好搭",
       "active_size_range": [
         35,
         36,
@@ -1781,14 +1887,32 @@
         44,
         45
       ],
-      "verified_sku_count": 11
+      "verified_sku_count": 11,
+      "content_reference": "数据/旧混款整理.json#models/H7116",
+      "current_retail_prices_cny": {
+        "regular": [],
+        "fleece": [
+          72.9
+        ]
+      },
+      "verified_fleece_sku_count": 11,
+      "detail_image_files": [
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/H7116/优化/详情/01_出门场景与穿着利益.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/H7116/优化/详情/02_舒适好穿结构讲解.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/H7116/优化/详情/03_加绒日常场景.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/H7116/优化/详情/04_轮廓搭配与外底实拍.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/H7116/优化/详情/05_颜色规格选择.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/H7116/优化/详情/06_商品参数.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/H7116/优化/详情/07_脚长尺码指南.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/H7116/优化/详情/08_发货与售后服务.png"
+      ]
     },
     {
       "source_model": "H7212",
       "product_ref": null,
       "identity_status": "PENDING_CANONICAL_BINDING",
       "fact_reference": null,
-      "title_draft": "秋冬加绒棉鞋套脚包头休闲鞋H7212",
+      "title_draft": "秋冬加绒棉鞋男女款一脚蹬包头休闲鞋套脚免系带日常好搭",
       "structure": "套脚包头",
       "source_size_range": [
         35,
@@ -1804,9 +1928,9 @@
         45
       ],
       "size_evidence_scope": "2026-10-15贝强工厂店对应来源页当前尺码；不代表盘点数量",
-      "price": 71.5,
+      "price": 148,
       "stock": 100,
-      "stage": "HOLD_EXISTING_FLEECE_SKU",
+      "stage": "APPLIED_READBACK_AUDIT_PASSED",
       "blocking_notes": [
         "已在旧商品或旧889/8811混款链接中找到加绒SKU；保留原链接，待核清身份与素材后整理，不重复创建"
       ],
@@ -1859,16 +1983,15 @@
       "visual_plan": "单张俯视图，需核鞋口与材料，不能照搬H7116",
       "main_image_candidate": "H7212黑白加绒.jpg",
       "detail_draft": [
-        "秋冬加绒款，款号H7212。",
-        "可选颜色：黑白加绒。",
-        "可选尺码：35—45码；请结合实际脚型选择，暂无实测偏码建议。",
-        "用于秋冬日常休闲穿搭；以对应颜色版本图片展示鞋型和鞋口细节。",
-        "现货次日发；沿店铺原包邮规则，新疆西藏等偏远地区例外，实际运费在下单页展示。",
-        "支持7天无理由退货；退换条件及运费险按店铺和平台实际规则执行。"
+        "下楼买点东西，套脚出门省事",
+        "加绒套脚款，免去系带步骤",
+        "加绒款，秋冬日常休闲穿着。",
+        "套脚设计，省去系鞋带步骤。",
+        "按对应颜色规格与脚长参考选码；发货、运费与售后沿店铺规则。"
       ],
       "douyin_product_id": null,
       "publish_receipt": null,
-      "price_basis": "用户71—75元范围内按款分档的首轮试价，非已证明最优价格；同款各色同价",
+      "price_basis": "沿对应已存在加绒规格保存价，本轮未调整；后台优惠预计价另存价格关系，不视为无条件实付价",
       "stock_basis": "已读存量SKU的100/码发布基线，用户授权沿用；不是盘点结果",
       "current_source": {
         "url": "https://bqgcd.sooxie.com/detail/2046059",
@@ -1939,15 +2062,34 @@
         ],
         "scope": "来源页字段候选；加绒颜色与普通版可能共用旧参数，季节、里料及宣传功能须按实际版本核对，不机械照搬"
       },
-      "current_scope": "已在旧商品或旧889/8811混款链接中找到加绒SKU；保留原链接，待核清身份与素材后整理，不重复创建",
-      "platform_evidence_ref": ".local/evidence/catalog-full-sku.json"
+      "current_scope": "已按真实款式对应图片和新版消费者详情，审核通过且后台在售；历史非本款SKU仅关闭，不删除订单",
+      "platform_evidence_ref": ".local/evidence/retail-family/H7212/verification.json",
+      "title_current": "秋冬加绒棉鞋男女款一脚蹬包头休闲鞋套脚免系带日常好搭",
+      "content_reference": "数据/旧混款整理.json#models/H7212",
+      "current_retail_prices_cny": {
+        "regular": [],
+        "fleece": [
+          148
+        ]
+      },
+      "verified_fleece_sku_count": 11,
+      "detail_image_files": [
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/H7212/优化/详情/01_出门场景与穿着利益.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/H7212/优化/详情/02_舒适好穿结构讲解.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/H7212/优化/详情/03_加绒日常场景.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/H7212/优化/详情/04_轮廓搭配与外底实拍.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/H7212/优化/详情/05_颜色规格选择.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/H7212/优化/详情/06_商品参数.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/H7212/优化/详情/07_脚长尺码指南.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/H7212/优化/详情/08_发货与售后服务.png"
+      ]
     },
     {
       "source_model": "K6116",
       "product_ref": "BQ027",
       "identity_status": "MATCHED_SOURCE_MODEL",
       "fact_reference": "01_产品资产/02_可发布素材/00_最终上传/BQ027_K6116/00_上架填写表.md",
-      "title_draft": "秋冬加绒棉鞋男女款系带针织低帮休闲鞋黑白全黑保暖35-45码K6116",
+      "title_draft": "秋冬加绒棉鞋男女款系带松紧可调针织休闲鞋黑白全黑好搭",
       "structure": "系带外观",
       "source_size_range": [
         35,
@@ -1965,7 +2107,7 @@
       "size_evidence_scope": "2026-10-15贝强工厂店对应来源页当前尺码；不代表盘点数量",
       "price": 72.9,
       "stock": 100,
-      "stage": "CONTENT_OPTIMIZED_AUDIT_PASSED_ON_SALE",
+      "stage": "APPLIED_READBACK_AUDIT_PASSED",
       "blocking_notes": [],
       "images": [
         {
@@ -2045,16 +2187,15 @@
       "visual_plan": "场景与穿着利益 → 结构特写讲解 → 加绒日常 → 轮廓外底 → 配色 → 参数 → 脚长选码 → 服务；当前图文引用数据/棉鞋内容优化.json#models/K6116",
       "main_image_candidate": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/K6116/工厂来源原图_2.jpg",
       "detail_draft": [
-        "日常休闲。穿搭轻松一点。",
-        "系带松紧可调，黑白日常随搭。",
-        "针织织物鞋面，系带结构可按脚背和袜厚调节松紧。",
-        "加绒版，人造短毛绒内里，适合秋冬日常休闲穿着。",
-        "可选颜色：黑白加绒、全黑加绒；尺码35—45，按脚长指南结合脚型选择。",
-        "次日发；沿原运费模板，偏远地区例外。7天无理由及90天寄修按店铺和平台现行规则。"
+        "日常休闲，穿搭轻松一点",
+        "系带松紧可调，黑白日常随搭",
+        "加绒款，秋冬日常休闲穿着。",
+        "系带可调松紧，按脚背和袜厚选择。",
+        "按对应颜色规格与脚长参考选码；发货、运费与售后沿店铺规则。"
       ],
       "douyin_product_id": null,
       "publish_receipt": ".local/evidence/K6116-create-final/response.json",
-      "price_basis": "用户71—75元范围内按款分档的首轮试价，非已证明最优价格；同款各色同价",
+      "price_basis": "沿对应已存在加绒规格保存价，本轮未调整；后台优惠预计价另存价格关系，不视为无条件实付价",
       "stock_basis": "已读存量SKU的100/码发布基线，用户授权沿用；不是盘点结果",
       "current_source": {
         "url": "https://bqgcd.sooxie.com/detail/1763985",
@@ -2135,7 +2276,7 @@
         }
       ],
       "image_selection_state": "FACTORY_ORIGINAL_SELECTED",
-      "title_current": "秋冬加绒棉鞋男女款系带针织低帮休闲鞋黑白全黑保暖35-45码K6116",
+      "title_current": "秋冬加绒棉鞋男女款系带松紧可调针织休闲鞋黑白全黑好搭",
       "active_size_range": [
         35,
         36,
@@ -2150,8 +2291,8 @@
         45
       ],
       "verified_sku_count": 22,
-      "current_scope": "全店旧SKU核对只有普通K6116；加绒版新建独立页，后台审核通过、上架，22SKU回读一致；与普通版的里料及季节区分",
-      "platform_evidence_ref": ".local/evidence/cotton-final-readback.json",
+      "current_scope": "已按真实款式对应图片和新版消费者详情，审核通过且后台在售；历史非本款SKU仅关闭，不删除订单",
+      "platform_evidence_ref": ".local/evidence/retail-family/K6116/verification.json",
       "material_values": {
         "upper": "织物",
         "lining": "人造短毛绒",
@@ -2168,14 +2309,21 @@
         "01_产品资产/02_可发布素材/抖店棉鞋_20261014/K6116/优化/详情/07_脚长尺码指南.png",
         "01_产品资产/02_可发布素材/抖店棉鞋_20261014/K6116/优化/详情/08_发货与售后服务.png"
       ],
-      "content_reference": "数据/棉鞋内容优化.json#models/K6116"
+      "content_reference": "数据/棉鞋内容优化.json#models/K6116",
+      "current_retail_prices_cny": {
+        "regular": [],
+        "fleece": [
+          72.9
+        ]
+      },
+      "verified_fleece_sku_count": 22
     },
     {
       "source_model": "K6212",
       "product_ref": "BQ021",
       "identity_status": "MATCHED_SOURCE_MODEL",
       "fact_reference": "01_产品资产/02_可发布素材/00_最终上传/BQ021_K6212/00_上架填写表.md",
-      "title_draft": "秋冬加绒棉鞋男女针织套脚休闲鞋K6212",
+      "title_draft": "秋冬加绒棉鞋男女款针织套脚一脚蹬休闲鞋黑白全黑日常搭",
       "structure": "套脚",
       "source_size_range": [
         35,
@@ -2193,7 +2341,7 @@
       "size_evidence_scope": "2026-10-15贝强工厂店对应来源页当前尺码；不代表盘点数量",
       "price": 71.5,
       "stock": 100,
-      "stage": "CREATED_WAREHOUSE_DUPLICATE_GUARD",
+      "stage": "APPLIED_READBACK_AUDIT_PASSED",
       "blocking_notes": [
         "先解决旧混款链接对应关系，再决定该独立页的销售状态"
       ],
@@ -2273,16 +2421,15 @@
       "visual_plan": "侧面完整，保留波纹外底；不推断防滑等级",
       "main_image_candidate": "K6212黑白加绒.jpg",
       "detail_draft": [
-        "秋冬加绒款，款号K6212。",
-        "可选颜色：黑白加绒、全黑加绒。",
-        "可选尺码：35—45码；请结合实际脚型选择，暂无实测偏码建议。",
-        "用于秋冬日常休闲穿搭；以对应颜色版本图片展示鞋型和鞋口细节。",
-        "现货次日发；沿店铺原包邮规则，新疆西藏等偏远地区例外，实际运费在下单页展示。",
-        "支持7天无理由退货；退换条件及运费险按店铺和平台实际规则执行。"
+        "日常出门，少一道系带步骤",
+        "套脚鞋口，黑白全黑随心搭",
+        "加绒款，秋冬日常休闲穿着。",
+        "套脚设计，省去系鞋带步骤。",
+        "按对应颜色规格与脚长参考选码；发货、运费与售后沿店铺规则。"
       ],
       "douyin_product_id": null,
       "publish_receipt": ".local/evidence/K6212-create/response.json",
-      "price_basis": "用户71—75元范围内按款分档的首轮试价，非已证明最优价格；同款各色同价",
+      "price_basis": "沿对应已存在加绒规格保存价，本轮未调整；后台优惠预计价另存价格关系，不视为无条件实付价",
       "stock_basis": "已读存量SKU的100/码发布基线，用户授权沿用；不是盘点结果",
       "current_source": {
         "url": "https://bqgcd.sooxie.com/detail/1785370",
@@ -2349,10 +2496,10 @@
         ],
         "scope": "来源页字段候选；加绒颜色与普通版可能共用旧参数，季节、里料及宣传功能须按实际版本核对，不机械照搬"
       },
-      "current_scope": "已创建并回读，进一步全SKU核对发现旧889混款链接含同款加绒，已主动转仓库并回读status=1，未删除或改动旧链接",
-      "platform_evidence_ref": ".local/evidence/duplicate-new-products-shelve-response.json",
+      "current_scope": "已按真实款式对应图片和新版消费者详情，审核通过且后台在售；历史非本款SKU仅关闭，不删除订单",
+      "platform_evidence_ref": ".local/evidence/retail-family/K6212/verification.json",
       "platform_id_reference": ".local/执行进度.json#new_cotton，精确商品ID仅本地保存",
-      "title_current": "秋冬加绒棉鞋男女款针织套脚休闲鞋K6212",
+      "title_current": "秋冬加绒棉鞋男女款针织套脚一脚蹬休闲鞋黑白全黑日常搭",
       "active_size_range": [
         35,
         36,
@@ -2366,14 +2513,32 @@
         44,
         45
       ],
-      "verified_sku_count": 22
+      "verified_sku_count": 22,
+      "content_reference": "数据/旧混款整理.json#models/K6212",
+      "current_retail_prices_cny": {
+        "regular": [],
+        "fleece": [
+          71.5
+        ]
+      },
+      "verified_fleece_sku_count": 22,
+      "detail_image_files": [
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/K6212/优化/详情/01_出门场景与穿着利益.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/K6212/优化/详情/02_舒适好穿结构讲解.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/K6212/优化/详情/03_加绒日常场景.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/K6212/优化/详情/04_轮廓搭配与外底实拍.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/K6212/优化/详情/05_颜色规格选择.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/K6212/优化/详情/06_商品参数.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/K6212/优化/详情/07_脚长尺码指南.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/K6212/优化/详情/08_发货与售后服务.png"
+      ]
     },
     {
       "source_model": "L0017",
       "product_ref": "BQ007",
       "identity_status": "MATCHED_SOURCE_MODEL",
       "fact_reference": "01_产品资产/02_可发布素材/00_最终上传/BQ007_L0017/00_上架填写表.md",
-      "title_draft": "秋冬加绒棉鞋男女休闲鞋L0017",
+      "title_draft": "系带针织休闲鞋男女款松紧可调低帮日常通勤常规加绒可选",
       "structure": "带鞋带外观",
       "source_size_range": [
         35,
@@ -2389,9 +2554,9 @@
         45
       ],
       "size_evidence_scope": "2026-10-15贝强工厂店对应来源页当前尺码；不代表盘点数量",
-      "price": 74.9,
+      "price": 178,
       "stock": 100,
-      "stage": "HOLD_EXISTING_FLEECE_SKU",
+      "stage": "APPLIED_READBACK_AUDIT_PASSED",
       "blocking_notes": [
         "已在旧商品或旧889/8811混款链接中找到加绒SKU；保留原链接，待核清身份与素材后整理，不重复创建"
       ],
@@ -2470,16 +2635,15 @@
       "visual_plan": "火焰与悬浮鞋底妨碍识别，应优先替换；旧限价98、旧成本65需核，71.50为本轮零售价并非30%毛利",
       "main_image_candidate": "L0017黑白加绒.jpg",
       "detail_draft": [
-        "秋冬加绒款，款号L0017。",
-        "可选颜色：黑白加绒、全黑加绒。",
-        "可选尺码：35—45码；请结合实际脚型选择，暂无实测偏码建议。",
-        "用于秋冬日常休闲穿搭；以对应颜色版本图片展示鞋型和鞋口细节。",
-        "现货次日发；沿店铺原包邮规则，新疆西藏等偏远地区例外，实际运费在下单页展示。",
-        "支持7天无理由退货；退换条件及运费险按店铺和平台实际规则执行。"
+        "每天出门，挑双日常好搭的",
+        "系带可调松紧，常规加绒按需选",
+        "常规与加绒按颜色规格分别选购。",
+        "系带可调松紧，按脚背和袜厚选择。",
+        "按对应颜色规格与脚长参考选码；发货、运费与售后沿店铺规则。"
       ],
       "douyin_product_id": null,
       "publish_receipt": null,
-      "price_basis": "用户71—75元范围内按款分档的首轮试价，非已证明最优价格；同款各色同价",
+      "price_basis": "沿对应已存在加绒规格保存价，本轮未调整；后台优惠预计价另存价格关系，不视为无条件实付价",
       "stock_basis": "已读存量SKU的100/码发布基线，用户授权沿用；不是盘点结果",
       "current_source": {
         "url": "https://bqgcd.sooxie.com/detail/2393363",
@@ -2549,15 +2713,36 @@
         ],
         "scope": "来源页字段候选；加绒颜色与普通版可能共用旧参数，季节、里料及宣传功能须按实际版本核对，不机械照搬"
       },
-      "current_scope": "已在旧商品或旧889/8811混款链接中找到加绒SKU；保留原链接，待核清身份与素材后整理，不重复创建",
-      "platform_evidence_ref": ".local/evidence/catalog-full-sku.json"
+      "current_scope": "已按真实款式对应图片和新版消费者详情，审核通过且后台在售；历史非本款SKU仅关闭，不删除订单",
+      "platform_evidence_ref": ".local/evidence/retail-family/L0017/verification.json",
+      "title_current": "系带针织休闲鞋男女款松紧可调低帮日常通勤常规加绒可选",
+      "content_reference": "数据/旧混款整理.json#models/L0017",
+      "current_retail_prices_cny": {
+        "regular": [
+          178
+        ],
+        "fleece": [
+          178
+        ]
+      },
+      "verified_fleece_sku_count": 22,
+      "detail_image_files": [
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/L0017/优化/详情/01_出门场景与穿着利益.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/L0017/优化/详情/02_舒适好穿结构讲解.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/L0017/优化/详情/03_加绒日常场景.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/L0017/优化/详情/04_轮廓搭配与外底实拍.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/L0017/优化/详情/05_颜色规格选择.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/L0017/优化/详情/06_商品参数.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/L0017/优化/详情/07_脚长尺码指南.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/L0017/优化/详情/08_发货与售后服务.png"
+      ]
     },
     {
       "source_model": "M889",
       "product_ref": "BQ038",
       "identity_status": "MATCHED_SOURCE_MODEL",
       "fact_reference": "01_产品资产/02_可发布素材/00_最终上传/BQ038_M889/00_上架填写表.md",
-      "title_draft": "秋冬加绒棉鞋男女款系带针织休闲鞋M889",
+      "title_draft": "针织系带休闲鞋男女款松紧可调低帮日常出门常规加绒可选",
       "structure": "系带",
       "source_size_range": [
         35,
@@ -2573,9 +2758,9 @@
         45
       ],
       "size_evidence_scope": "2026-10-15贝强工厂店对应来源页当前尺码；不代表盘点数量",
-      "price": 71.5,
+      "price": 148,
       "stock": 100,
-      "stage": "HOLD_EXISTING_FLEECE_SKU",
+      "stage": "CONTENT_PRICE_AUDIT_PASSED_SKU_MIGRATED_55",
       "blocking_notes": [
         "已在旧商品或旧889/8811混款链接中找到加绒SKU；保留原链接，待核清身份与素材后整理，不重复创建"
       ],
@@ -2682,16 +2867,15 @@
       "visual_plan": "黑白为首图，全黑为颜色图；去右上火焰，其余鞋型纹理绒里不变",
       "main_image_candidate": "M889黑白加绒.JPG",
       "detail_draft": [
-        "秋冬加绒款，款号M889（米白来源版本M889-1）。",
-        "可选颜色：黑白加绒、全黑加绒、米白加绒。",
-        "可选尺码：35—45码；请结合实际脚型选择，暂无实测偏码建议。",
-        "用于秋冬日常休闲穿搭；以对应颜色版本图片展示鞋型和鞋口细节。",
-        "现货次日发；沿店铺原包邮规则，新疆西藏等偏远地区例外，实际运费在下单页展示。",
-        "支持7天无理由退货；退换条件及运费险按店铺和平台实际规则执行。"
+        "脚背松紧，自己调得合适",
+        "系带休闲鞋，常规加绒按季节选",
+        "常规与加绒按颜色规格分别选购。",
+        "系带可调松紧，按脚背和袜厚选择。",
+        "按对应颜色规格与脚长参考选码；发货、运费与售后沿店铺规则。"
       ],
       "douyin_product_id": null,
       "publish_receipt": null,
-      "price_basis": "用户71—75元范围内按款分档的首轮试价，非已证明最优价格；同款各色同价",
+      "price_basis": "沿对应已存在加绒规格保存价，本轮未调整；后台优惠预计价另存价格关系，不视为无条件实付价",
       "stock_basis": "已读存量SKU的100/码发布基线，用户授权沿用；不是盘点结果",
       "current_source": {
         "url": "https://bqgcd.sooxie.com/detail/2073631",
@@ -2817,15 +3001,36 @@
         "proof": "原包无货号图片与工厂原图SHA256完全一致",
         "sha256": "f14f156a5cab4bc0dd4f48e7f7d15bf33e114c6875b2c2ac71532b8ba8989e50"
       },
-      "current_scope": "已在旧商品或旧889/8811混款链接中找到加绒SKU；保留原链接，待核清身份与素材后整理，不重复创建",
-      "platform_evidence_ref": ".local/evidence/catalog-full-sku.json"
+      "current_scope": "已按真实款式对应图片和新版消费者详情，审核通过且后台在售；历史非本款SKU仅关闭，不删除订单",
+      "platform_evidence_ref": ".local/evidence/retail-family/M889/verification.json",
+      "title_current": "针织系带休闲鞋男女款松紧可调低帮日常出门常规加绒可选",
+      "content_reference": "数据/旧混款整理.json#models/M889",
+      "current_retail_prices_cny": {
+        "regular": [
+          136
+        ],
+        "fleece": [
+          148
+        ]
+      },
+      "verified_fleece_sku_count": 33,
+      "detail_image_files": [
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/M889/优化/详情/01_出门场景与穿着利益.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/M889/优化/详情/02_舒适好穿结构讲解.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/M889/优化/详情/03_加绒日常场景.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/M889/优化/详情/04_轮廓搭配与外底实拍.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/M889/优化/详情/05_颜色规格选择.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/M889/优化/详情/06_商品参数.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/M889/优化/详情/07_脚长尺码指南.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/M889/优化/详情/08_发货与售后服务.png"
+      ]
     },
     {
       "source_model": "R1811",
       "product_ref": "BQ015",
       "identity_status": "MATCHED_SOURCE_MODEL",
       "fact_reference": "01_产品资产/02_可发布素材/00_最终上传/BQ015_R1811/00_上架填写表.md",
-      "title_draft": "秋冬加绒棉鞋男女休闲鞋R1811",
+      "title_draft": "针织低帮休闲鞋男女款后跟提环日常穿搭散步常规加绒可选",
       "structure": "带鞋带装饰",
       "source_size_range": [
         35,
@@ -2841,9 +3046,9 @@
         45
       ],
       "size_evidence_scope": "2026-10-15贝强工厂店对应来源页当前尺码；不代表盘点数量",
-      "price": 72.9,
+      "price": 143,
       "stock": 100,
-      "stage": "HOLD_EXISTING_FLEECE_SKU",
+      "stage": "APPLIED_READBACK_AUDIT_PASSED",
       "blocking_notes": [
         "已在旧商品或旧889/8811混款链接中找到加绒SKU；保留原链接，待核清身份与素材后整理，不重复创建"
       ],
@@ -2922,16 +3127,15 @@
       "visual_plan": "原图有鞋内绒里视角，可作真实细节图；不写真毛或羊毛",
       "main_image_candidate": "R1811黑白加绒.JPG",
       "detail_draft": [
-        "秋冬加绒款，款号R1811。",
-        "可选颜色：黑白加绒、全黑加绒。",
-        "可选尺码：35—45码；请结合实际脚型选择，暂无实测偏码建议。",
-        "用于秋冬日常休闲穿搭；以对应颜色版本图片展示鞋型和鞋口细节。",
-        "现货次日发；沿店铺原包邮规则，新疆西藏等偏远地区例外，实际运费在下单页展示。",
-        "支持7天无理由退货；退换条件及运费险按店铺和平台实际规则执行。"
+        "天凉日常出门，选对内里更贴心",
+        "常规与加绒分清楚，选适合自己的版本",
+        "常规与加绒按颜色规格分别选购。",
+        "后跟提环辅助穿鞋，按脚型选码。",
+        "按对应颜色规格与脚长参考选码；发货、运费与售后沿店铺规则。"
       ],
       "douyin_product_id": null,
       "publish_receipt": null,
-      "price_basis": "用户71—75元范围内按款分档的首轮试价，非已证明最优价格；同款各色同价",
+      "price_basis": "沿对应已存在加绒规格保存价，本轮未调整；后台优惠预计价另存价格关系，不视为无条件实付价",
       "stock_basis": "已读存量SKU的100/码发布基线，用户授权沿用；不是盘点结果",
       "current_source": {
         "url": "https://bqgcd.sooxie.com/detail/2337818",
@@ -2994,15 +3198,36 @@
         ],
         "scope": "来源页字段候选；加绒颜色与普通版可能共用旧参数，季节、里料及宣传功能须按实际版本核对，不机械照搬"
       },
-      "current_scope": "已在旧商品或旧889/8811混款链接中找到加绒SKU；保留原链接，待核清身份与素材后整理，不重复创建",
-      "platform_evidence_ref": ".local/evidence/catalog-full-sku.json"
+      "current_scope": "已按真实款式对应图片和新版消费者详情，审核通过且后台在售；历史非本款SKU仅关闭，不删除订单",
+      "platform_evidence_ref": ".local/evidence/retail-family/R1811/verification.json",
+      "title_current": "针织低帮休闲鞋男女款后跟提环日常穿搭散步常规加绒可选",
+      "content_reference": "数据/旧混款整理.json#models/R1811",
+      "current_retail_prices_cny": {
+        "regular": [
+          138
+        ],
+        "fleece": [
+          143
+        ]
+      },
+      "verified_fleece_sku_count": 22,
+      "detail_image_files": [
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/R1811/优化/详情/01_出门场景与穿着利益.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/R1811/优化/详情/02_舒适好穿结构讲解.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/R1811/优化/详情/03_加绒日常场景.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/R1811/优化/详情/04_轮廓搭配与外底实拍.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/R1811/优化/详情/05_颜色规格选择.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/R1811/优化/详情/06_商品参数.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/R1811/优化/详情/07_脚长尺码指南.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/R1811/优化/详情/08_发货与售后服务.png"
+      ]
     },
     {
       "source_model": "ZX2116",
       "product_ref": "BQ031",
       "identity_status": "MATCHED_SOURCE_MODEL",
       "fact_reference": "01_产品资产/02_可发布素材/00_最终上传/BQ031_ZX2116/00_上架填写表.md",
-      "title_draft": "棉鞋男秋冬加绒保暖系带针织休闲鞋黑色大码38-47日常通勤ZX2116",
+      "title_draft": "男士加绒棉鞋秋冬保暖系带可调松紧针织休闲鞋日常通勤",
       "structure": "系带外观",
       "source_size_range": [
         38,
@@ -3019,7 +3244,7 @@
       "size_evidence_scope": "2026-10-15贝强工厂店对应来源页当前尺码；不代表盘点数量",
       "price": 72.9,
       "stock": 100,
-      "stage": "CONTENT_OPTIMIZED_AUDIT_PASSED_ON_SALE",
+      "stage": "APPLIED_READBACK_AUDIT_PASSED",
       "blocking_notes": [],
       "images": [
         {
@@ -3097,16 +3322,15 @@
       "visual_plan": "场景与穿着利益 → 结构特写讲解 → 加绒日常 → 轮廓外底 → 配色 → 参数 → 脚长选码 → 服务；当前图文引用数据/棉鞋内容优化.json#models/ZX2116",
       "main_image_candidate": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX2116/优化/主图_黑白净图.png",
       "detail_draft": [
-        "脚背的松紧。自己调着穿。",
-        "系带可调，按脚背掌握松紧。",
-        "针织织物鞋面，系带结构可按脚背和袜厚调节松紧。",
-        "加绒版，人造短毛绒内里，适合秋冬日常休闲穿着。",
-        "可选颜色：黑白加绒、全黑加绒；尺码38—47，按脚长指南结合脚型选择。",
-        "次日发；沿原运费模板，偏远地区例外。7天无理由及90天寄修按店铺和平台现行规则。"
+        "脚背的松紧，自己调着穿",
+        "系带可调，按脚背掌握松紧",
+        "加绒款，秋冬日常休闲穿着。",
+        "系带可调松紧，按脚背和袜厚选择。",
+        "按对应颜色规格与脚长参考选码；发货、运费与售后沿店铺规则。"
       ],
       "douyin_product_id": null,
       "publish_receipt": ".local/evidence/ZX2116-create/response.json",
-      "price_basis": "用户71—75元范围内按款分档的首轮试价，非已证明最优价格；同款各色同价",
+      "price_basis": "沿对应已存在加绒规格保存价，本轮未调整；后台优惠预计价另存价格关系，不视为无条件实付价",
       "stock_basis": "已读存量SKU的100/码发布基线，用户授权沿用；不是盘点结果",
       "current_source": {
         "url": "https://bqgcd.sooxie.com/detail/2539168",
@@ -3184,8 +3408,8 @@
         46,
         47
       ],
-      "current_scope": "后台审核通过、上架状态，SKU、价、库存、服务正式回读；买家页面视觉检查单独待验",
-      "platform_evidence_ref": ".local/evidence/cotton-final-readback.json",
+      "current_scope": "已按真实款式对应图片和新版消费者详情，审核通过且后台在售；历史非本款SKU仅关闭，不删除订单",
+      "platform_evidence_ref": ".local/evidence/retail-family/ZX2116/verification.json",
       "material_values": {
         "upper": "织物",
         "lining": "人造短毛绒",
@@ -3194,7 +3418,7 @@
         "sole_basis": "ZX9507为图片判断通用塑胶，其他来自相应工厂单款/同家族参数"
       },
       "platform_id_reference": ".local/执行进度.json#new_cotton，精确商品ID仅本地保存",
-      "title_current": "棉鞋男秋冬加绒保暖系带针织休闲鞋黑色大码38-47日常通勤ZX2116",
+      "title_current": "男士加绒棉鞋秋冬保暖系带可调松紧针织休闲鞋日常通勤",
       "verified_sku_count": 20,
       "detail_image_files": [
         "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX2116/优化/详情/01_出门场景与穿着利益.png",
@@ -3206,14 +3430,21 @@
         "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX2116/优化/详情/07_脚长尺码指南.png",
         "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX2116/优化/详情/08_发货与售后服务.png"
       ],
-      "content_reference": "数据/棉鞋内容优化.json#models/ZX2116"
+      "content_reference": "数据/棉鞋内容优化.json#models/ZX2116",
+      "current_retail_prices_cny": {
+        "regular": [],
+        "fleece": [
+          72.9
+        ]
+      },
+      "verified_fleece_sku_count": 20
     },
     {
       "source_model": "ZX9002",
       "product_ref": null,
       "identity_status": "PENDING_CANONICAL_BINDING",
       "fact_reference": null,
-      "title_draft": "棉鞋男士秋冬加绒保暖一脚蹬针织休闲鞋大码38-47日常通勤ZX9002",
+      "title_draft": "秋冬加绒棉鞋男士一脚蹬针织休闲鞋大码好穿脱日常通勤",
       "structure": "套脚",
       "source_size_range": [
         38,
@@ -3230,7 +3461,7 @@
       "size_evidence_scope": "2026-10-15贝强工厂店对应来源页当前尺码；不代表盘点数量",
       "price": 74.9,
       "stock": 100,
-      "stage": "CONTENT_OPTIMIZED_AUDIT_PASSED_ON_SALE",
+      "stage": "APPLIED_READBACK_AUDIT_PASSED",
       "blocking_notes": [],
       "images": [
         {
@@ -3282,16 +3513,15 @@
       "visual_plan": "场景与穿着利益 → 结构特写讲解 → 加绒日常 → 轮廓外底 → 配色 → 参数 → 脚长选码 → 服务；当前图文引用数据/棉鞋内容优化.json#models/ZX9002",
       "main_image_candidate": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9002/优化/工厂补充_双鞋.jpg",
       "detail_draft": [
-        "赶着出门。少一道系带步骤。",
-        "套脚免系带，出门省事一点。",
-        "针织织物鞋面，套脚鞋口省去系带步骤。",
-        "加绒版，人造短毛绒内里，适合秋冬日常休闲穿着。",
-        "可选颜色：深灰黑加绒；尺码38—47，按脚长指南结合脚型选择。",
-        "次日发；沿原运费模板，偏远地区例外。7天无理由及90天寄修按店铺和平台现行规则。"
+        "赶着出门，少一道系带步骤",
+        "套脚免系带，出门省事一点",
+        "加绒款，秋冬日常休闲穿着。",
+        "套脚设计，省去系鞋带步骤。",
+        "按对应颜色规格与脚长参考选码；发货、运费与售后沿店铺规则。"
       ],
       "douyin_product_id": null,
       "publish_receipt": ".local/evidence/ZX9002-create-response.json",
-      "price_basis": "用户71—75元范围内按款分档的首轮试价，非已证明最优价格；同款各色同价",
+      "price_basis": "沿对应已存在加绒规格保存价，本轮未调整；后台优惠预计价另存价格关系，不视为无条件实付价",
       "stock_basis": "已读存量SKU的100/码发布基线，用户授权沿用；不是盘点结果",
       "current_source": {
         "url": "https://bqgcd.sooxie.com/detail/2542197",
@@ -3341,8 +3571,8 @@
         46,
         47
       ],
-      "current_scope": "后台审核通过、上架状态，SKU、价、库存、服务正式回读；买家页面视觉检查单独待验",
-      "platform_evidence_ref": ".local/evidence/cotton-final-readback.json",
+      "current_scope": "已按真实款式对应图片和新版消费者详情，审核通过且后台在售；历史非本款SKU仅关闭，不删除订单",
+      "platform_evidence_ref": ".local/evidence/retail-family/ZX9002/verification.json",
       "material_values": {
         "upper": "织物",
         "lining": "人造短毛绒",
@@ -3375,7 +3605,7 @@
         }
       ],
       "image_selection_state": "FACTORY_ORIGINAL_SELECTED",
-      "title_current": "棉鞋男士秋冬加绒保暖一脚蹬针织休闲鞋大码38-47日常通勤ZX9002",
+      "title_current": "秋冬加绒棉鞋男士一脚蹬针织休闲鞋大码好穿脱日常通勤",
       "verified_sku_count": 10,
       "material_evidence": {
         "source_page": "https://bqgcd.sooxie.com/detail/2536154",
@@ -3397,14 +3627,21 @@
         "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9002/优化/详情/07_脚长尺码指南.png",
         "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9002/优化/详情/08_发货与售后服务.png"
       ],
-      "content_reference": "数据/棉鞋内容优化.json#models/ZX9002"
+      "content_reference": "数据/棉鞋内容优化.json#models/ZX9002",
+      "current_retail_prices_cny": {
+        "regular": [],
+        "fleece": [
+          74.9
+        ]
+      },
+      "verified_fleece_sku_count": 10
     },
     {
       "source_model": "ZX9507",
       "product_ref": null,
       "identity_status": "PENDING_CANONICAL_BINDING",
       "fact_reference": null,
-      "title_draft": "男士棉鞋冬季加绒保暖套脚休闲鞋针织鞋面大码38-47出行ZX9507",
+      "title_draft": "秋冬加绒棉鞋男士套脚免系带针织休闲鞋黑杏全黑日常出门",
       "structure": "套脚",
       "source_size_range": [
         38,
@@ -3421,7 +3658,7 @@
       "size_evidence_scope": "2026-10-15贝强工厂店对应来源页当前尺码；不代表盘点数量",
       "price": 74.9,
       "stock": 100,
-      "stage": "CONTENT_OPTIMIZED_AUDIT_PASSED_ON_SALE",
+      "stage": "APPLIED_READBACK_AUDIT_PASSED",
       "blocking_notes": [],
       "images": [
         {
@@ -3499,16 +3736,15 @@
       "visual_plan": "场景与穿着利益 → 结构特写讲解 → 加绒日常 → 轮廓外底 → 配色 → 参数 → 脚长选码 → 服务；当前图文引用数据/棉鞋内容优化.json#models/ZX9507",
       "main_image_candidate": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9507/优化/主图_黑杏双鞋净图.png",
       "detail_draft": [
-        "下楼买菜散步。套上就出门。",
-        "套脚省事，日常出门好搭配。",
-        "针织织物鞋面，套脚鞋口省去系带步骤。",
-        "加绒版，人造短毛绒内里，适合秋冬日常休闲穿着。",
-        "可选颜色：黑杏加绒、全黑加绒；尺码38—47，按脚长指南结合脚型选择。",
-        "次日发；沿原运费模板，偏远地区例外。7天无理由及90天寄修按店铺和平台现行规则。"
+        "下楼买菜散步，套上就出门",
+        "套脚省事，日常出门好搭配",
+        "加绒款，秋冬日常休闲穿着。",
+        "套脚设计，省去系鞋带步骤。",
+        "按对应颜色规格与脚长参考选码；发货、运费与售后沿店铺规则。"
       ],
       "douyin_product_id": null,
       "publish_receipt": ".local/evidence/ZX9507-create/response.json",
-      "price_basis": "用户71—75元范围内按款分档的首轮试价，非已证明最优价格；同款各色同价",
+      "price_basis": "沿对应已存在加绒规格保存价，本轮未调整；后台优惠预计价另存价格关系，不视为无条件实付价",
       "stock_basis": "已读存量SKU的100/码发布基线，用户授权沿用；不是盘点结果",
       "current_source": {
         "url": "https://bqgcd.sooxie.com/detail/2540499",
@@ -3562,8 +3798,8 @@
         46,
         47
       ],
-      "current_scope": "后台审核通过、上架状态，SKU、价、库存、服务正式回读；买家页面视觉检查单独待验",
-      "platform_evidence_ref": ".local/evidence/cotton-final-readback.json",
+      "current_scope": "已按真实款式对应图片和新版消费者详情，审核通过且后台在售；历史非本款SKU仅关闭，不删除订单",
+      "platform_evidence_ref": ".local/evidence/retail-family/ZX9507/verification.json",
       "material_values": {
         "upper": "织物",
         "lining": "人造短毛绒",
@@ -3617,7 +3853,7 @@
         }
       ],
       "image_selection_state": "FACTORY_ORIGINAL_SELECTED",
-      "title_current": "男士棉鞋冬季加绒保暖套脚休闲鞋针织鞋面大码38-47出行ZX9507",
+      "title_current": "秋冬加绒棉鞋男士套脚免系带针织休闲鞋黑杏全黑日常出门",
       "verified_sku_count": 20,
       "detail_image_files": [
         "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9507/优化/详情/01_出门场景与穿着利益.png",
@@ -3629,7 +3865,14 @@
         "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9507/优化/详情/07_脚长尺码指南.png",
         "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9507/优化/详情/08_发货与售后服务.png"
       ],
-      "content_reference": "数据/棉鞋内容优化.json#models/ZX9507"
+      "content_reference": "数据/棉鞋内容优化.json#models/ZX9507",
+      "current_retail_prices_cny": {
+        "regular": [],
+        "fleece": [
+          74.9
+        ]
+      },
+      "verified_fleece_sku_count": 20
     }
   ],
   "source_authority": "用户确认所有产品从搜鞋网贝强工厂店拿货，缺项先从该店对应真实款式补",
@@ -3649,28 +3892,19 @@
     "basis": "沿原店38=24cm至45=27.5cm的脚长选码指南，每码递增0.5cm，46=28cm、47=28.5cm；用户确认标准码，不作为实测鞋内长"
   },
   "execution_summary": {
-    "created_total": 7,
-    "on_sale_audit_passed": 4,
-    "warehouse_duplicate_guard": 3,
-    "on_sale_sku_count": 72,
-    "evidence_reference": ".local/evidence/cotton-final-readback.json",
-    "buyer_visual_qa": "PENDING_BROWSER_RUNTIME_MISSING_COMPONENT",
-    "content_optimization": {
-      "applied_and_audit_passed": 4,
-      "main_images": [
-        4,
-        4,
-        5,
-        4
-      ],
-      "detail_screens_per_product": 8,
-      "title_weight": [
-        59,
-        59,
-        57,
-        60
-      ],
-      "reference": "数据/棉鞋内容优化.json"
-    }
+    "styles_on_sale": 15,
+    "fleece_colors": 28,
+    "fleece_skus": 303,
+    "main_images": 51,
+    "detail_screens": 120,
+    "existing_prices_changed": false,
+    "existing_stock_values_changed": false,
+    "sku_id_exception": "M889规格改名重分配55个SKU编号，旧新映射与逐码价格库存核对仅本地保存；其余现存SKU身份保留",
+    "deferred": [
+      "731按负责人要求跳过",
+      "A1888标记未核",
+      "AA188无品牌授权排除"
+    ],
+    "buyer_page_visual_qa": "PENDING_BUYER_PAGE_REVIEW"
   }
 }
