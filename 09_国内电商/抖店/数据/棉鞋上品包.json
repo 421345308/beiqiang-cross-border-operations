@@ -335,7 +335,6 @@
     "freight_template_reference": ".local/执行进度.json，仅本地店铺执行配置"
   },
   "global_gaps": [
-    "731仍待原页尺码；其余已补当前工厂店各自尺码",
     "完整同款及草稿去重与身份冲突核查",
     "加绒版必填材料逐款核实",
     "创建接口完整载荷、价格单位及写后回读尚未验证"
@@ -363,7 +362,7 @@
       "size_evidence_scope": "未取得来源，不估计尺码",
       "price": 74.9,
       "stock": 100,
-      "stage": "LOCAL_DRAFT_WITH_GAPS",
+      "stage": "HOLD_USER_SKIP",
       "blocking_notes": [
         "已查工厂店在售、搜索与下架页均未找到731，尺码与必填材料仍缺，不套用其他款"
       ],
@@ -440,7 +439,8 @@
       "douyin_product_id": null,
       "publish_receipt": null,
       "price_basis": "用户71—75元范围内按款分档的首轮试价，非已证明最优价格；同款各色同价",
-      "stock_basis": "已读存量SKU的100/码发布基线，用户授权沿用；不是盘点结果"
+      "stock_basis": "已读存量SKU的100/码发布基线，用户授权沿用；不是盘点结果",
+      "current_scope": "负责人2026-10-15确认未找到来源就先不管，本轮暂缓，不阻塞其余款"
     },
     {
       "source_model": "8811",
