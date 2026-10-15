@@ -20,7 +20,7 @@ load,save,sha,rel,now=shared.load,shared.save,shared.sha,shared.rel,shared.now
 CATALOG=ROOT/'99_临时区/路崎995/当前目录/catalog.json'
 COLORS={'Black':('Black','SKU_Black'),'Beige Brown':('Black Khaki','SKU_BlackKhaki'),'Tan':('Earth Yellow','M1')}
 FIELDS=['catId','icbuCatProp','saleProp','sku','productTitle','scImages','pkgMeasure','pkgWeight','ladderPeriod','priceUnit','shippingTemplate','ladderPrice','saleType','scPrice','minOrderQuantity','productDescType','detailImage','textDesc','companyImage','companyDesc','companyFaqDesc','logisticsProperty']
-SUPPORTED_STYLES=('995','2576','1712','2418','868','822','2579','2575','2505','931','02412','0922','923','323','909','1628','2772','2132','9705','1680','0323F','117-1','2509','026','02505','2550','02503','K502','2539')
+SUPPORTED_STYLES=('995','2576','1712','2418','868','822','2579','2575','2505','931','02412','0922','923','323','909','1628','2772','2132','9705','1680','0323F','117-1','2509','026','02505','2550','02503','K502','2539','924','1026','2593')
 
 
 def configure(style):
@@ -61,6 +61,28 @@ def attribute(schema,cv,name,texts):
         E.SubElement(parent,'value',inputValue=label).text=value
 
 
+def failed_tls_handshake_before_http(exc):
+    """Require the actual stdlib send -> connect -> TLS handshake stack.
+
+    Response/read timeouts and generic network failures remain unknown. A
+    failed initial TLS handshake precedes the business HTTP headers/body.
+    Never retain signed URLs, exception messages or raw transport telemetry.
+    """
+    import traceback,ssl,http.client
+    pending=[exc];seen=set();observed=[]
+    while pending:
+        current=pending.pop()
+        if not isinstance(current,BaseException) or id(current) in seen:continue
+        seen.add(id(current));frames=traceback.extract_tb(current.__traceback__)
+        selected=[(Path(f.filename).resolve(),f.name) for f in frames]
+        ssl_file=Path(ssl.__file__).resolve();http_file=Path(http.client.__file__).resolve()
+        if all(pair in selected for pair in ((http_file,'send'),(http_file,'connect'),(ssl_file,'do_handshake'))) and not any(path==http_file and name in ('getresponse','_read_status') for path,name in selected):
+            observed=[{'module':path.name,'function':name} for path,name in selected if path in (ssl_file,http_file)]
+            return {'phase':'initial_tls_handshake','business_request_sent':False,'stdlib_stack':observed}
+        pending.extend([current.__cause__,current.__context__,getattr(current,'reason',None)])
+    return None
+
+
 def bank(client,cfg):
     proof=load(FOLDER/'05_AI候选/整组验收.json');assert proof['state']=='VISUAL_PASS_PENDING_PUBLISH_PREFLIGHT'
     required={f'M{i}' for i in range(1,6)}|{f'D{i}' for i in range(1,5)}|{role for _,role in COLORS.values()}
@@ -69,10 +91,19 @@ def bank(client,cfg):
     for item in proof['items']:
         role=item['role'];path=ROOT/item['path'];assert sha(path)==item['sha256'] and path.stat().st_size<4194304
         if role in data['items']:
-            old=data['items'][role];assert old['state']=='UPLOADED' and old['sha256']==item['sha256'],'Unknown image upload must be reconciled before continuing'
-            continue
-        row={**item,'state':'OUTCOME_UNKNOWN_NO_RETRY','at':now()};data['items'][role]=row;save(file,data)
-        result=client.upload_image(cfg,path,None);row['response']=result;save(file,data);raw=result.get('upload_image_response',{})
+            old=data['items'][role];assert old['sha256']==item['sha256']
+            if old['state']=='UPLOADED':continue
+            assert old['state']=='LOCAL_CALL_FAILED_BEFORE_HTTP_PROVEN' and old.get('network_request_sent') is False,'Unknown image upload must be reconciled before continuing'
+        prior=data['items'].get(role);row={**item,'state':'OUTCOME_UNKNOWN_NO_RETRY','at':now()}
+        if prior:row['previous_attempts']=prior.get('previous_attempts',[])+[{k:prior[k] for k in ('state','at','sha256','network_request_sent','transport_evidence') if k in prior}]
+        data['items'][role]=row;save(file,data)
+        try:result=client.upload_image(cfg,path,None)
+        except client.ClientError as exc:
+            before=failed_tls_handshake_before_http(exc)
+            if before:row.update(state='LOCAL_CALL_FAILED_BEFORE_HTTP_PROVEN',network_request_sent=False,transport_evidence=before)
+            else:row['transport_scope']='UNKNOWN_NO_REPLAY; no confirmed initial TLS handshake stack'
+            save(file,data);raise
+        row['response']=result;save(file,data);raw=result.get('upload_image_response',{})
         assert not client.api_error(result) and raw.get('file_id') and raw.get('photobank_url')
         url=raw['photobank_url'];url='https:'+url if url.startswith('//') else url.replace('http:','https:');assert urlparse(url).hostname=='sc04.alicdn.com'
         row.update(state='UPLOADED',url=url,file_id=str(raw['file_id']));save(file,data);print(role,'UPLOADED',flush=True)
@@ -309,11 +340,11 @@ def sync():
 
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('mode',choices=('schema','bank','prepare','create','verify','sync'));ap.add_argument('--style',required=True,choices=SUPPORTED_STYLES);args=ap.parse_args();configure(args.style)
+    ap=argparse.ArgumentParser();ap.add_argument('mode',choices=('schema','bank','prepare','create','verify','sync'));ap.add_argument('--style',required=True,choices=SUPPORTED_STYLES);ap.add_argument('--http-transport',choices=('urllib','native'),default='urllib',help='Existing official-client verified-TLS transport; no trust/proxy overrides or unknown write replay');args=ap.parse_args();configure(args.style)
     if args.mode=='prepare':prepare();return
     if args.mode=='sync':sync();return
     spec=importlib.util.spec_from_file_location('alibaba_client',ROOT/'.agents/skills/alibaba-openapi-operator/scripts/alibaba_openapi.py');client=importlib.util.module_from_spec(spec);spec.loader.exec_module(client);cfg=client.load_config(client.DEFAULT_CONFIG)
-    original=client.http_json;client.http_json=lambda request,timeout=25:original(request,timeout=timeout)
+    original=client.native_http_json if args.http_transport=='native' else client.http_json;client.http_json=lambda request,timeout=25:original(request,timeout=timeout)
     if args.mode=='schema':
         result=read_only_call(client,cfg,'alibaba.icbu.product.schema.get',{'param_product_top_publish_request':{'cat_id':CATEGORY,'language':'en_US'}});assert result.get('data') and result.get('request_id');E.fromstring(result['data']);save(FOLDER/(SCHEMA_NAME+'.json'),result);(FOLDER/(SCHEMA_NAME+'.xml')).write_text(result['data'],encoding='utf8');print(STYLE,'CURRENT_SCHEMA_SAVED')
     elif args.mode=='bank':bank(client,cfg)

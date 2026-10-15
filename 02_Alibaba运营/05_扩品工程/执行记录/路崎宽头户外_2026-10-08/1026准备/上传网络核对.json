@@ -1,0 +1,40 @@
+{
+  "at": "2026-10-15T13:37:57.080498+00:00",
+  "style": "1026",
+  "role": "D4",
+  "state": "INITIAL_TLS_HANDSHAKE_FAILED_BEFORE_BUSINESS_HTTP",
+  "failed_attempt_at": "2026-10-15T13:32:54.081701+00:00",
+  "sha256": "767fc524e578eb32c038a15fc16eaac78cdce3fcea59d3da3a8fd26a92681eb4",
+  "observation_source": "Actual exec bank --style1026, session35322, exit1. Tool traceback entered HTTPConnection._send_output/send -> HTTPSConnection.connect -> SSLContext.wrap_socket -> SSLSocket.do_handshake before error. Not inferred merely from absent response.",
+  "observed_stack": [
+    "http.client._send_output",
+    "http.client.send",
+    "http.client.HTTPSConnection.connect",
+    "ssl.wrap_socket",
+    "ssl._create",
+    "ssl.do_handshake"
+  ],
+  "installed_stdlib_validation": {
+    "http_client_file_sha256": "5ebb56a7864c690da18594115857e75b7d5cd50e8e934434ebe48e8d5f7377af",
+    "ssl_file_sha256": "e532bbe0ff12313b341a81adc389acff5b9f7dda40588929a95ee23c02bfbf45",
+    "send_connect_precedes_sendall": true,
+    "connect_wraps_tls_before_return": true
+  },
+  "business_request_sent": false,
+  "scope": "Only1026D4 failed initial TLS handshake. Eight positive official uploads preserved. No TLS validation disabled, no proxy/trust/permission changes, no general response-timeout replay. Fresh normal verified-TLS upload of the one unsent asset can proceed.",
+  "recovery": "NINE_POSITIVE_UPLOADS_COMPLETE_EIGHT_NOT_REPLAYED",
+  "boundary_check": {
+    "at": "2026-10-15T13:39:42.729454+00:00",
+    "scope": "Real ephemeral loopback sockets; no Alibaba call/credential or trust overrides. InitialTLSfailure versus response-timeout-after-request boundaries.",
+    "initial_tls_failure": {
+      "normal_tls_checks_unchanged": true,
+      "server_received_tls_clienthello_without_http": true,
+      "classification": "PRE_BUSINESS_HTTP"
+    },
+    "http_response_timeout": {
+      "server_received_http_headers": true,
+      "classification": "UNKNOWN_NOT_REPLAYABLE"
+    },
+    "state": "PASS"
+  }
+}
