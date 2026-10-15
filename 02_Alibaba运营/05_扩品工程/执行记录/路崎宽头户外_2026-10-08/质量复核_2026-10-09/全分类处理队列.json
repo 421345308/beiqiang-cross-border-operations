@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-10-15T16:32:35.779022+00:00",
+  "observed_at": "2026-10-15T17:13:37.243926+00:00",
   "scope": "107 sources; statuses are evidence stages, not 107 independent publishable products",
   "state_counts": {
     "CREATED_APPROVED_Y": 97,
@@ -7,7 +7,7 @@
     "MERGED_SOURCE_FAMILY_026_NO_EXTRA_CREATE": 1,
     "MERGED_SOURCE_FAMILY_2585_NO_EXTRA_CREATE": 1,
     "MERGED_SOURCE_FAMILY_NO_EXTRA_CREATE": 1,
-    "HOLD_SOURCE_PHOTO_IDENTITY": 1,
+    "SUBMITTED_REVIEWING": 1,
     "HOLD_VISIBLE_MARK_IDENTITY": 1,
     "MERGED_SOURCE_FAMILY_0323F_NO_EXTRA_CREATE": 1,
     "MERGED_SOURCE_FAMILY_K502_NO_EXTRA_CREATE": 1
@@ -1098,19 +1098,70 @@
       "categories": [
         "27256"
       ],
-      "source_collection": "COLLECTED",
-      "image_cache": "CURRENT_READABLE_SOURCE_IMAGES",
-      "publication_state": "HOLD_SOURCE_PHOTO_IDENTITY",
-      "title_quality": "PENDING",
-      "image_quality": "HOLD_SOURCE_PHOTO_IDENTITY",
+      "source_collection": "CURRENT_SOURCE_COLLECTED",
+      "image_cache": "CURRENT_SOURCE_AND_FINAL_ASSETS",
+      "publication_state": "SUBMITTED_REVIEWING",
+      "title_quality": "LOCAL_REVIEW_PASS_PENDING_FORMAL",
+      "image_quality": "BUYER_ROLE_REVIEW_PASS",
       "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
-      "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+      "browser_policy": "CURRENT_BATCH_FULL_API_NO_PER_PRODUCT_BROWSER",
       "current_source_images": 14,
       "source_image_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2569准备/01_产品来源原图/当前来源图像索引.json",
       "source_visual_review": "CURRENT_CONTACT_SHEETS_REVIEWED_NOT_FINAL_ASSETS",
       "identity_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2569准备/身份一致性核验.json",
-      "EU_combinations": 46,
-      "next_action": "Review alternative exact2569photos/sourcepackage; continue other independent styles without replaying or publishing uncertain photos."
+      "EU_combinations": 13,
+      "next_action": "Review alternative exact2569photos/sourcepackage; continue other independent styles without replaying or publishing uncertain photos.",
+      "current_source_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2569准备/当前来源与色码核对.json",
+      "current_visual_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2569准备/05_AI候选/整组验收.json",
+      "deferred_source_options": {
+        "Black": [
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48
+        ],
+        "Green": [
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48
+        ],
+        "Pink": [
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42
+        ]
+      },
+      "deferred_EU_combinations": 33,
+      "local_issue": "Only selected colours are published; other source colours await clear independent actual photos. Excluded conflicting source frames remain excluded.",
+      "product_id": "1601981563053",
+      "actual_score": null,
+      "score_status": "REVIEWING",
+      "current_platform_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2569准备/verification.json",
+      "preparation_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2569准备/prepared.json",
+      "image_apply_scope": "LOCAL_SELECTED_PENDING_FORMAL"
     },
     {
       "style": "016",

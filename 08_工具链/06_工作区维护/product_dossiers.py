@@ -57,6 +57,13 @@ def builds(data):
                 lines.append(f"| {color} | {route['supplier_color']} / {route['source_artno']} | {', '.join(str(n) for n in sizes)} | [{source['model']}]({source['url']}) |")
             if assets.get('current_family_plan'):
                 lines += ['', '- 当前家族与色码计划：'+ref(assets['current_family_plan'],parent)]
+        deferred=product.get('deferred_source_options',{})
+        if deferred:
+            choices=deferred['colours']
+            assert deferred['EU_combinations']==sum(len(v) for v in choices.values())
+            lines += ['', '### 来源有记录但尚未上架的颜色', '', f"下列{deferred['EU_combinations']}个EU组合尚未上架，不算作当前可售SKU；待清晰实图补齐后在本款原ID增补。", '', '| 待补图颜色 | 尚未上架的EU尺码 |', '| --- | --- |']
+            for colour,sizes in choices.items():lines.append(f"| {colour} | {', '.join(str(n) for n in sizes)} |")
+            lines += ['', '- 范围依据：'+ref(deferred['evidence'],parent)]
         lines += ['', '## 国际站链接与本地正式字段', '']
         for listing in sorted(links.get(product['id'], []), key=lambda x:x['id']):
             pid = listing['id']
@@ -86,8 +93,9 @@ def builds(data):
             lines.append(f"- 本地同步状态：`{listing.get('local_sync',{}).get('state','UNVERIFIED')}`。")
             if listing.get('optimization'):
                 opt = listing['optimization']
-                lines += [f"- 本轮优化：`{opt.get('state','')}`；{opt.get('next_action','')}"]
-                for path in opt.get('evidence', []):
+                current_opt=opt.get('real_source_creation') or opt
+                lines += [f"- 本轮优化：`{current_opt.get('state','')}`；{current_opt.get('next_action','')}"]
+                for path in current_opt.get('evidence', []):
                     lines.append(f'  - 变更证据：{ref(path,parent)}')
                 if opt.get('gallery'):
                     lines.append(f"- 图库调整：`{opt['gallery'].get('state','')}`。")

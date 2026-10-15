@@ -305,12 +305,17 @@ def sync():
     listing.setdefault('optimization',{})['real_source_creation']={'state':report['state'],'source_id':sid,'source_artno':PROFILE.get('source_artno',STYLE),'at':report['at'],'evidence':evidence,'inventory_write':'OMITTED','next_action':'Only formal readback and exact field/score diagnosis; never repeat create or upload successful assets.'}
     listing['evidence']=list(dict.fromkeys(listing['evidence']+evidence));product['evidence']=list(dict.fromkeys(product.get('evidence',[])+evidence));product.setdefault('local_assets',{}).update(current_fields_file=rel(canonical/'formal_get.json'),source_fact_file=rel(FOLDER/'当前来源与色码核对.json'),asset_roots=[rel(FOLDER/'05_AI候选')],state=report['state']);original_root=ROOT/PROFILE['source_original_root'] if PROFILE.get('source_original_root') else FOLDER/PROFILE.get('original_dir','01_产品来源原图');assert original_root.is_dir();product['raw_packages']=[rel(original_root)];product['next_action']=f'仅回读原ID审核、全字段与实际评分；不重复上传或创建{STYLE}，其他路崎款独立推进。'
     product['source_routes_by_color']=routes;listing['source_routes_by_color']=copy.deepcopy(routes)
+    deferred=facts.get('deferred_source_options',{})
+    if deferred:
+        assert not set(deferred)&set(facts['source_EU_by_color']) and all(v and len(v)==len(set(v)) for v in deferred.values())
+        product['deferred_source_options']={'colours':copy.deepcopy(deferred),'EU_combinations':sum(map(len,deferred.values())),'reason':'Clear independent actual colour photos pending; these choices are not published.','evidence':rel(FOLDER/'当前来源与色码核对.json')}
     for root in PROFILE.get('additional_original_roots',[]):
         path=ROOT/root;assert path.is_dir();product['raw_packages']=list(dict.fromkeys(product['raw_packages']+[rel(path)]))
     accepted=report['state'] in ('FORMAL_FIELDS_SCORE_PASS','FORMAL_FIELDS_PASS_PENDING_SCORE','FORMAL_FIELDS_PASS_SCORE_BELOW_TARGET')
     if accepted:
         listing['bound_source_id']=sid;listing['source_relation']='REAL_SOURCE_FORMAL_FIELDS_PASS';product.update(source_state='ADOPTED',adopted_source_id=sid,candidate_source_ids=[])
         listing['record_type']='当前实款正式绑定';product['next_action']=f'当前实款、来源、图文和{sum(map(len,EU_BY_COLOR.values()))}EU正式一致；实际评分按当前核验，无需再创建{STYLE}，继续剩余路崎款。'
+        if deferred:product['next_action']+=f' 本款另有{sum(map(len,deferred.values()))}EU颜色组合待清晰实图，未发布；资料齐后仅扩原ID。'
         cache_path=ROOT/'02_Alibaba运营/05_扩品工程/数据/目录对账/当前素材清单.json';cache=load(cache_path);bank=load(FOLDER/'图片银行.json')['items'];mapping={contract._created_image_identity(row['url']):row for row in bank.values()}
         for row in load(ROOT/'02_Alibaba运营/06_图片与检查记录/共享工厂详情/V8/bank.json')['items'].values():mapping[contract._created_image_identity(row['url'])]=row
         sd=p['struct_detail'];roles={'main':p['main_image']['images'],'details':[x['image_url'] for x in sd['detail_image']['images']],'company':[x['image_url'] for x in sd['company_image']['images']],'sku':[v['image_url'] for a in p['product_sku']['sku_attributes'] for v in a['values'] if v.get('image_url')],'html':[]}
@@ -325,18 +330,28 @@ def sync():
     assert all(sha(ROOT/x['path'])==x['sha256'] and (x.get('decision')=='SELECTED_VISUAL_PASS' or legacy_995 and 'decision' not in x) for x in selected['items'])
     row.update(source_collection='CURRENT_SOURCE_COLLECTED',image_cache='CURRENT_SOURCE_AND_FINAL_ASSETS',title_quality='LOCAL_REVIEW_PASS_FORMAL_MATCH' if accepted else 'LOCAL_REVIEW_PASS_PENDING_FORMAL',image_quality='BUYER_ROLE_REVIEW_PASS',image_apply_scope='PASS_COMPLETE_IMAGE_SCHEMA' if accepted else 'LOCAL_SELECTED_PENDING_FORMAL',current_source_evidence=rel(FOLDER/'当前来源与色码核对.json'),current_visual_evidence=rel(FOLDER/'05_AI候选/整组验收.json'),browser_policy='CURRENT_BATCH_FULL_API_NO_PER_PRODUCT_BROWSER')
     row['local_issue']='Source material wording conflict handled by omitting composition claims; see current source facts.' if facts.get('material_conflicts') else ''
+    if deferred:
+        row.update(deferred_source_options=copy.deepcopy(deferred),deferred_EU_combinations=sum(map(len,deferred.values())),local_issue='Only selected colours are published; other source colours await clear independent actual photos. Excluded conflicting source frames remain excluded.')
+        issue_file=BASE/'待补资料与局部问题.json';issues=load(issue_file);issues['active'][STYLE]={'state':'PARTIAL_SOURCE_COLOURS_PENDING','published_colour_scope':list(COLORS),'published_EU_combinations':sum(map(len,EU_BY_COLOR.values())),'product_id':pid,'publication_state':report['state'],'deferred_source_options':copy.deepcopy(deferred),'deferred_EU_combinations':sum(map(len,deferred.values())),'issue':'Selected colour scope only; other colours not published. Excluded conflicting underside photos not adopted.','evidence':[rel(FOLDER/'当前来源与色码核对.json'),rel(FOLDER/'身份一致性核验.json')]};issues['observed_at']=now();save(issue_file,issues)
     from collections import Counter
     queue['state_counts']=dict(Counter(r['publication_state'] for r in queue['rows']));queue['observed_at']=now()
     for work in registry['workstreams']:
-        if work['name']=='路崎宽头/户外全分类':work.update(status='当前已创建ID、审核/全字段/实际评分按全分类队列逐条记录；2583两页已合并为原ID六色72EU，不再重复新建。',next_action='HR本轮原ID替换已完成，继续路崎剩余真实款；995已创建，只回读，不重建；FAQ与已批准V8六公司图复用。')
+        if work['name']=='路崎宽头/户外全分类':
+            pending=[r['style'] for r in queue['rows'] if r['publication_state'].startswith(('HOLD_','PENDING_'))]
+            deferred_counts={r['style']:r['deferred_EU_combinations'] for r in queue['rows'] if r.get('deferred_EU_combinations')}
+            work.update(status='已创建商品逐ID核审核、全字段、实际评分与双改；来源合并不重复新建；部分颜色待修与已发布范围分列。',next_action=f'已取得ID仅回读或原ID修正，不重建。来源/单款准备待办：{pending}；未发布的颜色EU组合：{deferred_counts}。当前数量与通过状态见本批正式汇总及全分类队列。')
     registry['updated_on']=datetime.now(timezone.utc).date().isoformat();save(queue_file,queue);save(REG,registry)
     summary_file=BASE/'本批正式商品汇总.json';summary=load(summary_file);row=next((r for r in summary if str(r['product_id'])==pid),None)
     if row is None:row={'style':STYLE,'product_id':pid};summary.append(row)
     row.update(url=listing['url'],status=p['status'],display=p['display'],sku_count=len(p.get('product_sku',{}).get('skus',[])),score=report['actual_score'],observed_at=report['get_observed_at'],latest_review_scope=report['state'],latest_review_file=rel(FOLDER/'verification.json'));save(summary_file,summary)
     sys.path.insert(0,str(ROOT/'08_工具链/06_工作区维护'));import build_product_workspace as workspace
     for path,body in workspace.build(registry).items():workspace.write_generated(ROOT/path,body)
-    facts['state']='CREATED_'+report['state'];facts['publication']={'product_id':pid,'audit':p['status'],'display':p['display'],'actual_score':report['actual_score'],'formal_verification':rel(FOLDER/'verification.json'),'local_sync_at':now(),'no_replayed_create':True};facts['next_action']='仅回读和诊断原ID；不重复创建或重传成功素材。' if report['state']!='FORMAL_FIELDS_SCORE_PASS' else '该款正式字段、评分与来源已通过；继续其他款，不重复创建。';save(FOLDER/'当前来源与色码核对.json',facts)
-    save(FOLDER/'双改核验.json',{'at':now(),'id':pid,'state':report['state'],'source_id':sid,'source_url':facts['source'],'current_dossier':product.get('dossier_path'),'no_duplicate_create':True,'color_aliases':load(FOLDER/'prepared.json')['buyer_to_supplier_colour']});print(STYLE,'LOCAL_SYNC',pid,report['state'])
+    facts['state']='CREATED_'+report['state'];facts['publication']={'product_id':pid,'audit':p['status'],'display':p['display'],'actual_score':report['actual_score'],'formal_verification':rel(FOLDER/'verification.json'),'local_sync_at':now(),'no_replayed_create':True};facts['next_action']='仅回读和诊断原ID；不重复创建或重传成功素材。' if report['state']!='FORMAL_FIELDS_SCORE_PASS' else '该款正式字段、评分与来源已通过；继续其他款，不重复创建。'
+    if deferred:facts['next_action']+=f' 本款另有{sum(map(len,deferred.values()))}EU颜色组合未发布，待清晰实图后仅扩原ID。'
+    save(FOLDER/'当前来源与色码核对.json',facts)
+    double_proof={'at':now(),'id':pid,'state':report['state'],'source_id':sid,'source_url':facts['source'],'current_dossier':product.get('dossier_path'),'no_duplicate_create':True,'color_aliases':load(FOLDER/'prepared.json')['buyer_to_supplier_colour']}
+    if deferred:double_proof.update(published_EU_combinations=sum(map(len,EU_BY_COLOR.values())),deferred_source_options=copy.deepcopy(deferred),deferred_EU_combinations=sum(map(len,deferred.values())))
+    save(FOLDER/'双改核验.json',double_proof);print(STYLE,'LOCAL_SYNC',pid,report['state'])
 
 
 def main():

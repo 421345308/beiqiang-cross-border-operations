@@ -1,7 +1,7 @@
 {
   "style": "2569",
   "observed_at": "2026-10-10T05:54:53.410306+00:00",
-  "status": "SCOPED_BEIGE_IDENTITY_REVIEWED_PENDING_IMAGE_REVIEW",
+  "status": "SCOPED_BEIGE_SELECTED_IMAGE_IDENTITY_PASS",
   "expected_sku_count": 46,
   "outsole_reference": "01_产品来源原图/10.jpg: distinct outlined central section, forefoot elongated raised oval pieces andrear outlined section",
   "conflicting_source_photos": [
@@ -24,7 +24,7 @@
   "formal_uploads": 0,
   "formal_create_calls": 0,
   "product_id": null,
-  "next_action": "Review newly selected actual-Beige9role image set; publish13EU only if source identity and image role checks pass. Keep other33EU pending.",
+  "next_action": "Only Beige13EU may proceed. Other33EU and excluded original outsole conflict remain unresolved; never count them as published.",
   "current_observed_at": "2026-10-15T15:57:48.920250+00:00",
   "previous_hold_scope": "All46offer and conflicting outsole frames remain unresolved; no fake whole-offer clearance.",
   "current_scope": {
@@ -59,5 +59,6 @@
     ],
     "outsole_claim": "No underside/material/performance claims; only visible matching edge in selected photos.",
     "remaining_photo_pending_EU": 33
-  }
+  },
+  "current_image_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2569准备/05_AI候选/整组验收.json"
 }

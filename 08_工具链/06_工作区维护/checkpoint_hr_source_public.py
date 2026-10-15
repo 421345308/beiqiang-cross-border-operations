@@ -19,7 +19,7 @@ HR = '02_Alibaba运营/05_扩品工程/执行记录/HR实源替换'
 FACTORY = '02_Alibaba运营/06_图片与检查记录/共享工厂详情'
 REG = '02_Alibaba运营/05_扩品工程/数据/产品与链接台账.json'
 LUQI = '02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08'
-CURRENT_LUQI_STYLES=('995','2576','1712','2418','868','822','2579','2575','2505','931','02412','0922','923','323','909','1628','2772','2132','9705','1680','0323F','117-1','2509','026','02505','2550','02503','K502','2539','924','1026','2593','020','ST-117')
+CURRENT_LUQI_STYLES=('995','2576','1712','2418','868','822','2579','2575','2505','931','02412','0922','923','323','909','1628','2772','2132','9705','1680','0323F','117-1','2509','026','02505','2550','02503','K502','2539','924','1026','2593','020','ST-117','2569')
 PRIVATE = {'owner_member','owner_member_display_name','owner_member_id',
            'access_token','refresh_token','app_secret','client_secret',
            'chatToken','buyer_email','buyer_phone','buyer_address',
@@ -121,10 +121,10 @@ def main():
     paths += [LUQI+'/0323F准备/家族归并.json']
     paths += ['08_工具链/01_业务脚本/国际站扩品/merge_reviewed_luqi_k502_family.py']
     paths += [LUQI+'/K502准备/'+name for name in ('家族来源与页面计划.json','家族归并.json')]
-    paths += [LUQI+'/2520准备/'+name for name in ('当前来源刷新核对.json','标识形状核对.json')]
+    paths += [LUQI+'/2520准备/'+name for name in ('当前来源刷新核对.json','标识形状核对.json','同货号公开检索.json')]
     paths += [LUQI+'/2520准备/01_产品来源原图/当前来源图像索引.json',LUQI+'/ST-117准备/当前来源刷新核对.json',LUQI+'/020准备/当前来源现状.json']
     paths += [LUQI+'/ST-117准备/'+name for name in ('家族来源与页面计划.json','测试页来源刷新核对.json')]
-    paths += [LUQI+'/2569准备/'+name for name in ('当前来源与色码核对.json','当前来源刷新核对.json','身份一致性核验.json','原图分辨率核对.json') if (ROOT/LUQI/'2569准备'/name).is_file()]
+    paths += [LUQI+'/2569准备/'+name for name in ('当前来源与色码核对.json','当前来源刷新核对.json','身份一致性核验.json','原图分辨率核对.json','商品预检与图组策略.json','图片生成与逐张核验.json') if (ROOT/LUQI/'2569准备'/name).is_file()]
     paths += [LUQI+'/2569准备/01_产品来源原图/当前来源图像索引.json']
     paths += [LUQI+'/'+style+'准备/'+name for style in ('K502','K502D') for name in ('当前来源刷新核对.json','当前家族来源图像索引.json')]
     # The JSON receipt already retains the exact Schema string. Its raw XML
@@ -281,7 +281,7 @@ def main():
         elif product['id'] in luqi_families:
             # Exact source-evidenced Luqi correction, not a sweep of all active
             # workspace changes. Preserve unrelated family fields from base.
-            for key in ('source_state','adopted_source_id','candidate_source_ids','local_assets','material_role_review','family_color_expansion','source_routes_by_color','related_source_ids','next_action','notes','aliases','evidence','raw_packages','dossier_path'):
+            for key in ('source_state','adopted_source_id','candidate_source_ids','local_assets','material_role_review','family_color_expansion','source_routes_by_color','related_source_ids','next_action','notes','aliases','evidence','raw_packages','dossier_path','deferred_source_options'):
                 if key in lp[product['id']]:product[key]=copy.deepcopy(lp[product['id']][key])
             if product['id'] in {'LQ-'+style for style in CURRENT_LUQI_STYLES}:product['classification']=copy.deepcopy(lp[product['id']]['classification'])
     family_phase=ll['1601976101204'].get('optimization',{}).get('family_color_expansion',{})
