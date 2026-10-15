@@ -1,8 +1,8 @@
 {
   "style": "02503",
-  "observed_at": "2026-10-10T21:50:31.669799+00:00",
+  "observed_at": "2026-10-15T07:24:07.363650+00:00",
   "source": "https://luqi.sooxie.com/detail/2492429",
-  "source_HTML_sha256": "646abbd1f03b33a916a11b54c928469f45c2a9e5b526d4045eef94ba7f7be0de",
+  "source_HTML_sha256": "f6e444a95bdfee85b2066f4fa8d493eb1ea7433818bbb99b7c7ecd7c61f2c09c",
   "source_price_cny": "65.00",
   "source_EU_by_color": {
     "Black": [
@@ -36,7 +36,10 @@
   "full_original_fact_indices_actually_viewed": [
     1,
     8,
-    10
+    10,
+    14,
+    17,
+    23
   ],
   "known_materials": {
     "upper": "Mesh visible; fiber and overlay composition not specified",
@@ -48,7 +51,7 @@
     "Black": "黑色",
     "Yellow": "黄色；原09/10实拍棕黄色，保留来源标签，发布前核对应关系，不重染色"
   },
-  "identity_notes": "Low-top mesh toe and side panels, round dial and cord through four paired webbing guides, outlined curved side panel with actual decorative letters, heel pull tab and block-lug sole. Distinct from2409 ankle/plush/closed side panel. Actual shoe markings retained; no BOA brand inference.",
+  "identity_notes": "Actual23frames/contact andnative01/08/10/14/17/23viewed. Repeatedsource01/02/03and04/05notseparatestyles. BuyerTan=sourceYellow(黄色), actualbrown-tanphotos09/10; no recolour or additionalbrown SKU. Meshforefoot/curvedoutlined grainedsidewindow differ02505widewhiteoutlinedsimplepanel/2509multiplelayers. Physicalsmallstylisedsideletters andOUTDOORsolewordretained; no BOAclaim. Boundedliteralwebqueries TORECC/TOREXC shoes on2026-10-15 returned unrelatednonfootwearresults, not a positivebrandidentification or global IPclearance; no trademarkownership/licence assertion.",
   "exact_duplicate_original_groups": [
     [
       1,
@@ -60,26 +63,103 @@
       5
     ]
   ],
-  "title_draft": "Mens Dial Closure Mesh Hiking Shoes Lugged Sole Heel Pull Tab Wholesale Outdoor Footwear EU 39-48",
-  "title_bytes": 97,
+  "title_draft": "Mens Dial Closure Mesh Panel Outdoor Shoes Low Top Lug Sole Casual Sneakers Black Tan Wholesale EU 39-48",
+  "title_bytes": 104,
   "wide_claim": "NO_WIDE_CLAIM_FROM_OUTDOOR_ONLY_SOURCE",
-  "status": "HOLD_ACCOUNT_HIKING_BUSINESS_CATEGORY",
-  "category_id": 127734034,
-  "category_name": "Hiking Shoes",
+  "status": "CURRENT_SOURCE_FACTS_REVIEWED_IMAGE_PREPARATION_NOT_CREATED",
+  "category_id": 32299,
+  "category_name": "Other Shoes",
   "category_path": [
-    127734034,
-    127726074,
-    202240208
+    32299,
+    322
   ],
   "category_evidence": "02503准备/当前类目_127734034.json and127726074.json and202240208.json",
   "category_block_evidence": "2509准备/经营类目拒绝诊断.json and026准备/经营类目影响范围.json",
-  "hold_scope": "Current source explicitly hiking/mountaineering; actual hiking structure. Existing same official root business-category restriction; no create attempted for this style, no new platform rejection claimed. Optional business-scope replacement would affect5 existing products; pending commercial decision is separate from authority/connection/TLS. Continue independent eligible products.",
-  "image_status": "ACTUAL_SOURCE_REVIEWED_OPTIMIZED_SET_NOT_GENERATED",
+  "hold_scope": "",
+  "image_status": "CURRENT_OPTIMIZED_SET_IN_PREPARATION",
   "pending": [
-    "Complete own style/catalog dedup",
-    "Own native optimized gallery/detail/SKU review",
-    "Business category scope resolved for hiking before official create",
-    "Current schema and singlecreate/formalfields/CDN/score"
+    "Nativegalleryreview/currentSchema/singlecreate/formalfields/actualscore"
   ],
-  "product_id": null
+  "product_id": null,
+  "state": "CURRENT_SOURCE_FACTS_REVIEWED_IMAGE_PREPARATION_NOT_CREATED",
+  "source_color_aliases": {
+    "Black": "黑色",
+    "Tan": "黄色"
+  },
+  "photo_count": 23,
+  "visible_structure": [
+    "Low-top dialshoe with cordthroughfourpairedfabricguides",
+    "Meshforefoot andquarter windows with grained stitchedoverlays",
+    "Curvedoutlinedsidepanelwith actualsmalllettering",
+    "Rear fabricpullloop and darkcollar",
+    "GreyorTansculptedsidewall andblacksegmentedtread"
+  ],
+  "product_highlights_draft": [
+    "Dial-and-cord closure: A rotary dial and four pairs of fabric guides organise the front fastening without traditional tied laces.",
+    "Mesh-panel construction: Textured forefoot and side sections sit between curved stitched overlays and a black toe overlay.",
+    "Outlined quarter design: A sweeping side panel and contrasting outline distinguish this style from simpler plain-side sneakers.",
+    "Low-top outdoor styling: A rear pull loop and dark collar meet a sculpted sidewall with segmented black tread sections.",
+    "Black and Tan EU 39–48: Two neutral colour choices cover ten EU sizes each for wholesale assortment planning."
+  ],
+  "pricing_draft": {
+    "source_cny": "65.00",
+    "fx": "6.6837",
+    "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+    "fx_observed": "2026-10-13 10:57:20",
+    "rounding": "ROUND_CEILING_TO_USD_CENT",
+    "tiers": [
+      [
+        2,
+        "14.59"
+      ],
+      [
+        50,
+        "13.62"
+      ],
+      [
+        100,
+        "12.65"
+      ]
+    ],
+    "freight_service_tax": "Datedsourcecost/FXreference,markupnotnetprofit; applicablefreighttaxfees assessedperorder."
+  },
+  "publish_profile": {
+    "category_id": 32299,
+    "schema_name": "当前其他鞋类Schema",
+    "buyer_colours": [
+      {
+        "buyer": "Black",
+        "supplier_key": "Black",
+        "supplier_label": "黑色",
+        "image_role": "M1"
+      },
+      {
+        "buyer": "Tan",
+        "supplier_key": "Yellow",
+        "supplier_label": "黄色",
+        "image_role": "M4"
+      }
+    ],
+    "category_attributes": {
+      "Upper Material": [
+        "other"
+      ],
+      "Outsole Material": [
+        "other"
+      ]
+    },
+    "local_intent": [
+      "旋钮闭合弧形侧片户外休闲鞋"
+    ]
+  },
+  "category_route": {
+    "at": "2026-10-15T07:30:14.755856+00:00",
+    "owner_direction": "2026-10-15 suitable sports/otherfootwearallowed, Hikingnotrequired.",
+    "category_id": 32299,
+    "leaf": "Other Shoes",
+    "root": 322,
+    "positive_route": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2509准备/create_receipt.json",
+    "scope": "No businessrootchange; nounsupportedMidsole/Lining/Closurefields copied."
+  },
+  "hero_selection": "Actual08singleBlackwhiteisolateM1/SKU; actual10Tan singleM4/SKU unchanged; actual23TanwearM3 and14BlackfrontwearM5 unchanged. Detailsactual08meshforefoot,10Tanquarter,17Blackheel/soleedge, two-colourEUmap."
 }

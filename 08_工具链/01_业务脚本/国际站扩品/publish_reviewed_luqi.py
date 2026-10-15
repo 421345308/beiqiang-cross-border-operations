@@ -20,7 +20,7 @@ load,save,sha,rel,now=shared.load,shared.save,shared.sha,shared.rel,shared.now
 CATALOG=ROOT/'99_临时区/路崎995/当前目录/catalog.json'
 COLORS={'Black':('Black','SKU_Black'),'Beige Brown':('Black Khaki','SKU_BlackKhaki'),'Tan':('Earth Yellow','M1')}
 FIELDS=['catId','icbuCatProp','saleProp','sku','productTitle','scImages','pkgMeasure','pkgWeight','ladderPeriod','priceUnit','shippingTemplate','ladderPrice','saleType','scPrice','minOrderQuantity','productDescType','detailImage','textDesc','companyImage','companyDesc','companyFaqDesc','logisticsProperty']
-SUPPORTED_STYLES=('995','2576','1712','2418','868','822','2579','2575','2505','931','02412','0922','923','323','909','1628','2772','2132','9705','1680','0323F','117-1','2509','026')
+SUPPORTED_STYLES=('995','2576','1712','2418','868','822','2579','2575','2505','931','02412','0922','923','323','909','1628','2772','2132','9705','1680','0323F','117-1','2509','026','02505','2550','02503')
 
 
 def configure(style):
@@ -203,9 +203,10 @@ def verify(client,cfg):
     # goods option. Check the exact ID, validity and its current option label;
     # do not ignore arbitrary attributes or accept a different goods class.
     options={o.get('value'):o.get('displayName') for o in schema.findall("./field[@id='logisticsProperty']/options/option")}
-    ordinary_labels={'Ordinary goods','普货'}
+    ordinary_labels={'Ordinary goods','普货','普貨'}
     # Exact1712 render pairs English selected label with Chinese current
-    # option label under the SAME ID. Both observed labels mean ordinary goods.
+    # option label under the SAME ID. Exact02505 also returns Traditional
+    # Chinese 普貨 for the option and Simplified 普货 for selected metadata.
     checks['schema_logisticsProperty']=len(logistics)==1 and logistics[0].text=='general_cargo_0' and set(logistics[0].attrib)<= {'valid','displayName'} and logistics[0].get('valid','true')=='true' and logistics[0].get('displayName') in ordinary_labels and options.get('general_cargo_0') in ordinary_labels
     sku=contract.verify_create_skus(expected['sku'],actual.get('sku'));checks['sku_schema_bindings']=sku['status']=='verified'
     attrs=shared.attributes(p);checks['formal_brand_model_materials']=attrs.get('Brand Name')==['Beiqiang'] and attrs.get('Model Number')==[MODEL] and all(sorted(v.casefold() for v in attrs.get(name,[]))==sorted(v.casefold() for v in labels) for name,labels in PROFILE['category_attributes'].items())

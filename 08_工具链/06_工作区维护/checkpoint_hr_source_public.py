@@ -19,7 +19,7 @@ HR = '02_Alibaba运营/05_扩品工程/执行记录/HR实源替换'
 FACTORY = '02_Alibaba运营/06_图片与检查记录/共享工厂详情'
 REG = '02_Alibaba运营/05_扩品工程/数据/产品与链接台账.json'
 LUQI = '02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08'
-CURRENT_LUQI_STYLES=('995','2576','1712','2418','868','822','2579','2575','2505','931','02412','0922','923','323','909','1628','2772','2132','9705','1680','0323F','117-1','2509','026')
+CURRENT_LUQI_STYLES=('995','2576','1712','2418','868','822','2579','2575','2505','931','02412','0922','923','323','909','1628','2772','2132','9705','1680','0323F','117-1','2509','026','02505','2550','02503')
 PRIVATE = {'owner_member','owner_member_display_name','owner_member_id',
            'access_token','refresh_token','app_secret','client_secret',
            'chatToken','buyer_email','buyer_phone','buyer_address',
@@ -103,6 +103,11 @@ def main():
     paths = [HR+'/'+name for name in ('README.md','scope.json','当前进度.json','质量修正计划.json','已有实款对应.json','双改与货源一致性核验.json')]
     paths += [p.relative_to(ROOT).as_posix()for p in (ROOT/HR).glob('*公开报价比较.json')]
     paths += [HR+'/商品/'+pid+'/historical_presence_get.json'for pid in historical_ids]
+    for pid in ('1601943766117','1601943620678'):
+        path=HR+'/商品/'+pid+'/当前目录缺项回读.json'
+        if (ROOT/path).exists():
+            assert pid in replacement_ids and load(path)['state']=='CURRENT_CATALOG_ABSENT_AND_EXACT_GET_NO_PRODUCT'
+            paths.append(path)
     # Independent preparation is authorized while HR awaits review; no Luqi
     # publication state is advanced. Only public sources/text/SHA records enter Git.
     queue_path=LUQI+'/质量复核_2026-10-09/全分类处理队列.json'

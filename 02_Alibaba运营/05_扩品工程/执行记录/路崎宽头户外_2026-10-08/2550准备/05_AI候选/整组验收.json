@@ -1,0 +1,179 @@
+{
+  "state": "VISUAL_PASS_PENDING_PUBLISH_PREFLIGHT",
+  "observed_at": "2026-10-15T07:19:51.232102+00:00",
+  "items": [
+    {
+      "role": "M1",
+      "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2550准备/01_产品来源原图/01.jpg",
+      "sha256": "809908b60997112cd1e851305328eb5f337a70ff86baca6d9eb394d017a891ec",
+      "size": [
+        800,
+        800
+      ],
+      "source_frames": [
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2550准备/01_产品来源原图/01.jpg",
+          "sha256": "809908b60997112cd1e851305328eb5f337a70ff86baca6d9eb394d017a891ec"
+        }
+      ],
+      "processing": "ORIGINAL_SELECTED_UNMODIFIED",
+      "decision": "SELECTED_VISUAL_PASS"
+    },
+    {
+      "role": "M2",
+      "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2550准备/05_AI候选/M2.png",
+      "sha256": "a90e52a8c1a5ea9135af1e95de8e4b97382933944712c2ed0ccd691464303b4d",
+      "size": [
+        1254,
+        1254
+      ],
+      "source_frames": [
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2550准备/01_产品来源原图/01.jpg",
+          "sha256": "809908b60997112cd1e851305328eb5f337a70ff86baca6d9eb394d017a891ec"
+        }
+      ],
+      "processing": "BUILTIN_IMAGEGEN_ACTUAL_SOURCE_CROP_OR_LAYOUT",
+      "decision": "SELECTED_VISUAL_PASS"
+    },
+    {
+      "role": "M3",
+      "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2550准备/05_AI候选/M3.png",
+      "sha256": "52ebd2adeb57bca0c12ef8522ea0fd0576e8ca347662b4ba4ce7fb281aa96f7c",
+      "size": [
+        1254,
+        1254
+      ],
+      "source_frames": [
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2550准备/01_产品来源原图/10.jpg",
+          "sha256": "4a6cb5a64b1d5114c19e7d960b16ffeeff90d6e6e3290937177fe3d3585b4e59"
+        }
+      ],
+      "processing": "BUILTIN_IMAGEGEN_ACTUAL_SOURCE_CROP_OR_LAYOUT",
+      "decision": "SELECTED_VISUAL_PASS"
+    },
+    {
+      "role": "M4",
+      "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2550准备/05_AI候选/M4.png",
+      "sha256": "5cda7dbbd3195377ed1edba399d123e118f75f626fcb0981bca70cd98dbae119",
+      "size": [
+        1122,
+        1402
+      ],
+      "source_frames": [
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2550准备/01_产品来源原图/04.jpg",
+          "sha256": "f0efed461e8dfe7365b1035d7ac41fa67a64d5c1811804e01a34a2bfcb5f3bf5"
+        }
+      ],
+      "processing": "BUILTIN_IMAGEGEN_ACTUAL_SOURCE_CROP_OR_LAYOUT",
+      "decision": "SELECTED_VISUAL_PASS"
+    },
+    {
+      "role": "M5",
+      "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2550准备/05_AI候选/M5.png",
+      "sha256": "be79120552a31c572af8559c7e9ac87a848716a16fa553d3e48f5126d18c142c",
+      "size": [
+        1122,
+        1402
+      ],
+      "source_frames": [
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2550准备/01_产品来源原图/19.jpg",
+          "sha256": "72d4e859187f55d68ae0028fd2c6742fc24d6a70b3e20e734febcd2c84e01edf"
+        }
+      ],
+      "processing": "BUILTIN_IMAGEGEN_ACTUAL_SOURCE_CROP_OR_LAYOUT",
+      "decision": "SELECTED_VISUAL_PASS"
+    },
+    {
+      "role": "D1",
+      "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2550准备/05_AI候选/D1.png",
+      "sha256": "822d16ae338338b130e8fc754bbcf0361d4b414d5ac4327d657b9b0ab526f409",
+      "size": [
+        1254,
+        1254
+      ],
+      "source_frames": [
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2550准备/01_产品来源原图/01.jpg",
+          "sha256": "809908b60997112cd1e851305328eb5f337a70ff86baca6d9eb394d017a891ec"
+        }
+      ],
+      "processing": "BUILTIN_IMAGEGEN_ACTUAL_SOURCE_CROP_OR_LAYOUT",
+      "decision": "SELECTED_VISUAL_PASS"
+    },
+    {
+      "role": "D2",
+      "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2550准备/05_AI候选/D2.png",
+      "sha256": "8f67997cc8f8e6c2665e05b14fcbc1a8de33e059cdb559e349dadf9e73bea5dd",
+      "size": [
+        1254,
+        1254
+      ],
+      "source_frames": [
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2550准备/01_产品来源原图/10.jpg",
+          "sha256": "4a6cb5a64b1d5114c19e7d960b16ffeeff90d6e6e3290937177fe3d3585b4e59"
+        }
+      ],
+      "processing": "BUILTIN_IMAGEGEN_ACTUAL_SOURCE_CROP_OR_LAYOUT",
+      "decision": "SELECTED_VISUAL_PASS"
+    },
+    {
+      "role": "D3",
+      "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2550准备/05_AI候选/D3.png",
+      "sha256": "d479b52de069fc42c5b000e005e2c2d4a0efbcb10c6463fb56e7d735eb7d3d23",
+      "size": [
+        1254,
+        1254
+      ],
+      "source_frames": [
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2550准备/01_产品来源原图/01.jpg",
+          "sha256": "809908b60997112cd1e851305328eb5f337a70ff86baca6d9eb394d017a891ec"
+        }
+      ],
+      "processing": "BUILTIN_IMAGEGEN_ACTUAL_SOURCE_CROP_OR_LAYOUT",
+      "decision": "SELECTED_VISUAL_PASS"
+    },
+    {
+      "role": "D4",
+      "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2550准备/05_AI候选/D4.png",
+      "sha256": "444e260d3970c08934e4278b606659230658c6cf957c0639387d85f5fdc2cda1",
+      "size": [
+        1254,
+        1254
+      ],
+      "source_frames": [
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2550准备/01_产品来源原图/01.jpg",
+          "sha256": "809908b60997112cd1e851305328eb5f337a70ff86baca6d9eb394d017a891ec"
+        }
+      ],
+      "processing": "BUILTIN_IMAGEGEN_ACTUAL_SOURCE_CROP_OR_LAYOUT",
+      "decision": "SELECTED_VISUAL_PASS"
+    }
+  ],
+  "dedup_review": {
+    "catalog": "99_临时区/路崎2550/当前目录/catalog.json",
+    "scope": "All21sourcephotos in2contacts/native01/04/09/10/12/19 and allselectednativeimages viewed. Ovalanklemesh/front-rearpulltabs/upperhookslower rings differdial2509/02505 andchunky2520styles. Currentcompletecatalog/source/modelexactprecreate required; no globalallangle/IPclearance."
+  },
+  "visual_review": {
+    "all_selected_native_outputs_actually_viewed": true,
+    "identity": "M1actual01Beigepair andupturnedsole unchanged; M2actual01nearcolumnhooks obliqueview replacingrejectedfrontalcandidate;M3actual10Blacksidewall/tread;M4actual04Blackwear/SKU;M5actual19Brownwear/SKU;D1Beigetoe;D2Blackovalanklemesh;D3actual01Beigesole crop;D4threecolour10EUranges. No sourceCAMEL marketingborder carried, no realphysicalshoemark erased.",
+    "text": "Black/Brown/Beige each39–48 currentselectors; Mesh+syntheticleatherUpper/TPRsource12. No fibrecomposition/plush/wide/impact/waterproof/sliptests/stockinference. D4labelBeigeshown explicit, no inventedothercolours or cmchart.",
+    "limits": "Localpixels/sourceclaims reviewed; APIaudit/fullfields/score/double-sync later.",
+    "group": "Actual9nativeimages andgroup viewed. Beigeproductpair/obliquehooks, Blacksidewall/tread andactualBlack/Brownwear arefive mainroles. Beige toe/Blackankle/Beigeunderside/3colourEUrange arefourdifferentdetailquestions. RejectedfrontalM2notselected/uploaded. CurrentM2correctobliquevisiblehardware, M1actual01noedit; Black/Brown actualonfoot pairsaccurateSKUcolour; no emptysheornewview. NativeEnglishreadandall39–48rangesexact."
+  },
+  "excluded_candidates": [
+    {
+      "prompt": "Edit source actualBeige Luqi2550 boot photograph into one square ecommerce detail. Crop exactly front-facing upright boot's upper lacearea/collar: lower ringeyelets and top2hooked metalfittings, laces, tongue/frontpullloop, ovalanklemeshwindow. Do not include the other boot's upturnedsole or show wholeboot. Preserve exact sourceviewpoint, count/geometry of laces/hooks/metaleyelets/mesh/stitches. Whiteheader15% navy exact 'Eyelets & Upper Lace Hooks', smaller 'Lace-up ankle profile', orange thinseparator. Lower82% large actualphotocrop, no inferredhiddenparts. No strongerprotection/fit/technology/materialclaims, arrows, otherbranding or texture inventions.",
+      "output_hint": "Generated images are saved to E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c as E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-2905c3aa-59b0-44ca-b8ff-55ee5586b54a.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "reason": "Changed actual three-quarter lace opening to a symmetric frontal view and invented hidden-side hardware geometry. Rejected; not selected or uploaded."
+    }
+  ],
+  "group_contact_actually_viewed": true,
+  "all_selected_native_outputs_actually_viewed": true
+}

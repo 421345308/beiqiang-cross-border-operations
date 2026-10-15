@@ -4291,5 +4291,19 @@
         "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943726572/historical_presence_get.json"
       ]
     }
-  ]
+  ],
+  "current_presence_changes": {
+    "at": "2026-10-15T11:23:02.856837+00:00",
+    "prior_target_replacement_pass": 99,
+    "current_target_ids_not_returned": [
+      "1601943766117",
+      "1601943620678"
+    ],
+    "reason": "UNKNOWN_NO_PRODUCT_IN_CURRENT_READ",
+    "evidence": [
+      "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943766117/当前目录缺项回读.json",
+      "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943620678/当前目录缺项回读.json"
+    ],
+    "no_replayed_create_or_update": true
+  }
 }

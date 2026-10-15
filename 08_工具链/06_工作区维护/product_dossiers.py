@@ -80,6 +80,9 @@ def builds(data):
                 else:lines.append('- 本地平台图片缓存：待补；正式字段中的官方原URL已保留。')
             else:
                 lines.append('- 当前完整正式回读：待补；历史ID未检出不自动判定删除。')
+            presence=listing.get('observation',{}).get('current_presence')
+            if presence:
+                lines.append(f"- 较新目录/原ID存在性：`{presence['state']}`；UTC {presence['at']}；{ref(presence['evidence'],parent,'精确回读证据')}。以上正式字段保留原核验日期；未返回原因未知，不重复创建。")
             lines.append(f"- 本地同步状态：`{listing.get('local_sync',{}).get('state','UNVERIFIED')}`。")
             if listing.get('optimization'):
                 opt = listing['optimization']
