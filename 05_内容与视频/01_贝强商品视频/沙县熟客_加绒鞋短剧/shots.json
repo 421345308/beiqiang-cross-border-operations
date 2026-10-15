@@ -11,6 +11,20 @@
   "color": "黑杏加绒",
   "model": null,
   "provider": null,
+  "tool_proposal": {
+    "status": "agent_recommendation_not_user_selected",
+    "image_preparation": "built-in image generation, not invoked",
+    "platform": "LibTV",
+    "video_model_display_name": "Seedance 2.5",
+    "video_model_key": "star-video2.5",
+    "schema_checked": "2026-10-15 via official libtv CLI",
+    "provider_exposed_duration_seconds": [4,30],
+    "provider_exposed_modes": ["image2video","mixed2video","audio2video"],
+    "editing": "existing local FFmpeg",
+    "actual_quote": null,
+    "quality_validated_for_this_film": false
+  },
+  "user_hold_visual_generation": true,
   "generation_submitted": false,
   "paid_generation_authorized": false,
   "continuity": {
