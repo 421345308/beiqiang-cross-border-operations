@@ -9,6 +9,8 @@ const DEFAULT_SESSION_PATH = fileURLToPath(new URL('./.local/session.json', impo
 const READ_ENDPOINTS = Object.freeze({
   importFiles: {method: 'POST', path: '/api/v2/move/import/getImportFileList'},
   categories: {method: 'GET', path: '/api/v2/product/batch/getProductCateTree'},
+  categoryInfo: {method: 'POST', path: '/api/v2/product/create_product/getCreateBaseInfoByCateId'},
+  freightTemplates: {method: 'POST', path: '/api/v2/product/create_product/getFreightTemplateList'},
 });
 
 export class MiaoshouError extends Error {
@@ -107,5 +109,16 @@ export class MiaoshouHttp {
       throw new MiaoshouError('Category response schema changed', 'schema_changed', 200);
     }
     return {productCateTree: result.productCateTree, recentCategoryList: result.recentCategoryList};
+  }
+
+  async getCategoryInfo(cateId) {
+    if (!/^\d+$/.test(String(cateId))) throw new Error('Invalid cateId');
+    // useGetCidInfo-cf7156fe.js passes exactly {cateId}; no fabricated fields.
+    return await this.#read('categoryInfo', {cateId: String(cateId)});
+  }
+
+  async getFreightTemplates() {
+    // refresh=0 reads existing settings without asking the provider to refresh them.
+    return await this.#read('freightTemplates', {refresh: 0});
   }
 }

@@ -1,0 +1,104 @@
+{
+  "collected_on": "2026-10-15",
+  "keyword_source": {
+    "url": "https://compass.jinritemai.com/shop/search/drainage-terms",
+    "category": "鞋靴箱包/鞋靴",
+    "ranking": "热度高",
+    "period": [
+      "2026-10-07",
+      "2026-10-13"
+    ],
+    "granularity": "平台区间，非本店预测",
+    "rows": [
+      {
+        "query": "棉鞋",
+        "term": "棉鞋",
+        "search_people": [
+          "5万",
+          "7.5万"
+        ],
+        "payment_cny": [
+          "10万",
+          "25万"
+        ],
+        "product_ctr": [
+          "50%",
+          "55%"
+        ],
+        "click_to_deal_rate": [
+          "10%",
+          "15%"
+        ]
+      },
+      {
+        "query": "保暖",
+        "term": "冬天保暖鞋",
+        "search_people": [
+          "1万",
+          "2.5万"
+        ],
+        "payment_cny": [
+          "7.5万",
+          "10万"
+        ],
+        "product_ctr": [
+          "55%",
+          "60%"
+        ],
+        "click_to_deal_rate": [
+          "7.5%",
+          "10%"
+        ]
+      },
+      {
+        "query": "加绒",
+        "term": null,
+        "empty_result": true,
+        "note": "当前榜单筛选无结果，不代表零需求"
+      }
+    ]
+  },
+  "official_page": {
+    "url": "https://fxg.jinritemai.com/ffa/g/create",
+    "title_chars_max": 60,
+    "title_hanzi_max": 30,
+    "main_image_min_width": 600,
+    "main_image_min_height": 600,
+    "main_image_rule": "高清商品正面图、清晰美观、主体突出",
+    "m889_title_counter": "36/60"
+  },
+  "category_readback": {
+    "endpoint": "/api/v2/product/create_product/getCreateBaseInfoByCateId",
+    "cateId": "1000007614",
+    "path": "鞋靴>男鞋>休闲鞋",
+    "required_attributes": [
+      "品牌",
+      "鞋面材质",
+      "鞋底材质",
+      "功能"
+    ],
+    "specs": [
+      {
+        "name": "颜色分类",
+        "id": 2752,
+        "required": true
+      },
+      {
+        "name": "鞋码大小",
+        "id": 4709,
+        "required": true
+      }
+    ],
+    "main_image_3_4": {
+      "isShow": true,
+      "mustInput": false
+    },
+    "three_guarantees_required": true,
+    "scope_note": "此类目查询只证明该类目当前规则；不是每款推荐类目或账号全部类目授权"
+  },
+  "sources": [
+    "https://fxg.jinritemai.com/ffa/morder/logistics/freight-list",
+    "https://fxg.jinritemai.com/ffa/maftersale/privileges/consumer-rights"
+  ],
+  "policy_limit": "未获取完整平台规则中心正文；已核发品页及动态字段，不冒称完整禁词库"
+}
