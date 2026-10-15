@@ -5,7 +5,8 @@
 ## 当前资料
 
 - `交付/Beiqiang_Product_Catalogue.pdf`：英文39页、128款；26款原始包对应工厂款及102款合作供应款。L1009/BQ008、L1026/BQ009分别在第3、4页大图展示；其余按工厂、休闲针织、户外靴款、凉拖乐福和童码分类。
-- `交付/Beiqiang_Business_Card.png`：手机转发用英文名片，带 WhatsApp 二维码。
+- `交付/Beiqiang_Business_Card.png`：手机转发用英文名片正面，使用已验收公司图中的厂房照片；含电话、WhatsApp、WeChat、邮箱及详细工厂地址，不放网址和二维码。
+- `交付/Beiqiang_Business_Card_Back.png`：名片背面，使用L1009及L1026产品照片。
 - `交付/Beiqiang_Business_Card_Print.pdf`：双面名片，成品90×54毫米，四边各3毫米出血；TrimBox已设置。
 - `交付/Beiqiang_Factory_Visit_Pack.zip`：对外附件包，只包含目录、名片和工厂视频。
 - 工厂视频复用[68秒实拍母版](../../../05_内容与视频/01_贝强商品视频/alibaba_real_video_batch_20260828/project.md)，不另建当前视频副本。打包时文件名为 `Beiqiang_Factory_Tour.mp4`。

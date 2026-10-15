@@ -1,4 +1,4 @@
-"""Build a factory-only catalogue and contact cards from verified local inputs.
+"""Build a source-mapped catalogue and photographic cards from verified local inputs.
 
 Contact configuration and customer information stay local. No network calls.
 """
@@ -199,53 +199,68 @@ def build_catalogue(root, data_dir, out, cfg):
 
 
 def build_card(out,cfg):
-    # Full-bleed digital artwork. Print PDF adds 3 mm bleed around 90 x 54 mm trim.
-    w,h=1600,960
-    im=Image.new('RGB',(w,h),NAVY); d=ImageDraw.Draw(im)
+    # Photograph-based editorial layout; contact facts stay in the local configuration.
+    w,h=1800,1080
+    ivory='#F6F5F1'; navy='#17323D'; gold='#AA7F43'
     reg=lambda n:ImageFont.truetype(str(FONT_DIR/'arial.ttf'),n)
     bold=lambda n:ImageFont.truetype(str(FONT_DIR/'arialbd.ttf'),n)
-    d.rectangle((0,0,24,h),fill=TEAL)
-    d.text((90,78),'BEIQIANG',font=bold(62),fill='white')
-    d.text((92,160),'FOOTWEAR  /  OEM & ODM',font=reg(25),fill='#BCD7D4')
-    d.line((92,238,1508,238),fill='#38505A',width=2)
-    d.text((90,292),cfg['name'],font=bold(96),fill='white')
-    d.text((95,410),cfg['role'],font=reg(39),fill='#BCD7D4')
-    d.text((95,536),'WhatsApp  '+cfg['phone'],font=reg(37),fill='white')
-    d.text((95,601),cfg['email'],font=reg(37),fill='white')
-    d.text((95,666),cfg['website'].replace('https://','').rstrip('/'),font=reg(37),fill='white')
-    d.text((95,810),cfg['company'],font=reg(28),fill='white')
-    d.text((95,861),'Quanzhou, Fujian, China',font=reg(28),fill='#BCD7D4')
-    widget=QrCodeWidget(cfg['whatsapp'],barLevel='M')
-    widget.qr.make()
-    matrix=widget.qr.modules
-    module=8; quiet=4
-    qr_size=(len(matrix)+quiet*2)*module
-    qr_image=Image.new('RGB',(qr_size,qr_size),'white')
-    qd=ImageDraw.Draw(qr_image)
-    for row,line in enumerate(matrix):
-        for col,dark in enumerate(line):
-            if dark:
-                x=(col+quiet)*module; y=(row+quiet)*module
-                qd.rectangle((x,y,x+module-1,y+module-1),fill=NAVY)
-    im.paste(qr_image,(1180,490))
-    d.text((1192,490+qr_size+18),'WHATSAPP',font=reg(22),fill='#BCD7D4')
+    factory=Image.open(cfg['card_factory_image']).convert('RGB')
+    factory=factory.crop(tuple(cfg['card_factory_crop']))
+    im=Image.new('RGB',(w,h),ivory)
+    im.paste(ImageOps.fit(factory,(790,h),centering=(0.42,0.5)),(1010,0))
+    d=ImageDraw.Draw(im)
+    d.polygon([(0,0),(1220,0),(1050,h),(0,h)],fill=ivory)
+    d.polygon([(1208,0),(1220,0),(1050,h),(1038,h)],fill=gold)
+    d.text((82,64),'BEIQIANG',font=bold(67),fill=navy)
+    d.text((85,146),'FOOTWEAR & APPAREL',font=reg(25),fill=gold)
+    d.text((83,210),'Quanzhou Beiqiang',font=reg(42),fill=navy)
+    d.text((83,260),'Footwear & Apparel Co., Ltd.',font=reg(42),fill=navy)
+    d.line((84,328,181,328),fill=gold,width=5)
+    d.text((78,365),cfg['name'],font=bold(84),fill=navy)
+    d.text((84,467),cfg['role'],font=reg(40),fill='#56676C')
+    contact=[('Phone',cfg['phone']),('WhatsApp',cfg['phone']),
+             ('WeChat',cfg['wechat']),('Email',cfg['email'])]
+    for index,(label,value) in enumerate(contact):
+        y=560+index*74
+        d.text((85,y+9),label.upper(),font=bold(32),fill=gold)
+        d.text((310,y),value,font=reg(46),fill=navy)
+    d.line((85,862,968,862),fill='#DAD5CA',width=2)
+    d.text((85,883),'FACTORY ADDRESS',font=bold(27),fill=gold)
+    for index,line in enumerate(cfg['address_lines']):
+        d.text((85,924+index*50),line,font=reg(42),fill=navy)
     png=out/'Beiqiang_Business_Card.png'; im.save(png)
+    back=Image.new('RGB',(w,h),ivory);bd=ImageDraw.Draw(back)
+    bd.text((85,64),'BEIQIANG',font=bold(67),fill=navy)
+    bd.text((89,157),'KNIT  /  CASUAL  /  OEM & ODM',font=reg(27),fill=gold)
+    for index,path in enumerate(cfg['card_shoe_images']):
+        shoe=Image.open(path).convert('RGB')
+        diff=ImageChops.difference(shoe,Image.new('RGB',shoe.size,'white')).convert('L')
+        box=diff.point(lambda p:255 if p>12 else 0).getbbox()
+        if box:shoe=shoe.crop(box)
+        panel=ImageOps.contain(shoe,(775,385))
+        x=85+index*855;back.paste(panel,(x+(775-panel.width)//2,273+(385-panel.height)//2))
+        bd.text((x,702),['L1009','L1026'][index],font=bold(40),fill=navy)
+    bd.rectangle((0,797,w,h),fill=navy)
+    bd.text((85,839),cfg['company'],font=reg(42),fill='white')
+    bd.text((85,902),cfg['name']+'  |  '+cfg['role'],font=reg(39),fill='#DBE3DD')
+    bd.text((85,970),cfg['address'],font=reg(39),fill='#DBE3DD')
+    back_path=out/'Beiqiang_Business_Card_Back.png';back.save(back_path)
     path=out/'Beiqiang_Business_Card_Print.pdf'
     mm=72/25.4; width,height=96*mm,60*mm
     c=canvas.Canvas(str(path),pagesize=(width,height))
     c.setTitle(cfg['name']+' | Beiqiang | Business Card | 90 x 54 mm + 3 mm bleed')
     c.setAuthor(cfg['company'])
-    c.setFillColor(HexColor(NAVY)); c.rect(0,0,width,height,fill=1,stroke=0)
-    c.drawImage(str(png),3*mm,3*mm,90*mm,54*mm)
-    c.setPageSize((width,height))
-    c.showPage()
-    c.setFillColor(HexColor(PAPER)); c.rect(0,0,width,height,fill=1,stroke=0)
-    text(c,20,141,'CONNECT WITH BEIQIANG',10,NAVY,True)
-    qr(c,cfg['whatsapp'],19,36,94)
-    text(c,126,105,'WhatsApp',11,TEAL,True)
-    text(c,126,85,cfg['phone'],9,NAVY)
-    text(c,126,60,'Scan to start',9,GREY)
-    text(c,126,45,'a conversation.',9,GREY)
+    for image in [im,back]:
+        # Extend only edge pixels into the bleed, keeping the entire trim artwork intact.
+        border=60
+        bleed=Image.new('RGB',(w+2*border,h+2*border))
+        bleed.paste(image,(border,border))
+        bleed.paste(image.crop((0,0,w,1)).resize((w,border)),(border,0))
+        bleed.paste(image.crop((0,h-1,w,h)).resize((w,border)),(border,h+border))
+        bleed.paste(bleed.crop((border,0,border+1,h+2*border)).resize((border,h+2*border)),(0,0))
+        bleed.paste(bleed.crop((w+border-1,0,w+border,h+2*border)).resize((border,h+2*border)),(w+border,0))
+        c.drawImage(ImageReader(bleed),0,0,width,height)
+        c.showPage()
     c.save()
     from pypdf import PdfReader, PdfWriter
     from pypdf.generic import RectangleObject
@@ -355,12 +370,11 @@ def build_expanded_catalogue(out,cfg):
     wrap(c,'Bring your ideas and selected model codes. We can discuss the next practical step for your footwear brand.',40,704,500,13,20)
     c.setFillColor(HexColor(NAVY));c.roundRect(40,285,515,310,10,fill=1,stroke=0)
     text(c,64,548,cfg['name'],29,'#FFFFFF',True);text(c,64,513,cfg['role'],13,'#BCD7D4')
-    text(c,64,458,'WhatsApp  '+cfg['phone'],12,'#FFFFFF');text(c,64,425,cfg['email'],12,'#FFFFFF')
-    text(c,64,392,cfg['website'].replace('https://','').rstrip('/'),12,'#FFFFFF')
-    wrap(c,cfg['company'],64,342,370,11,16,'#FFFFFF')
-    c.setFillColor(white);c.rect(430,479,99,99,fill=1,stroke=0);qr(c,cfg['whatsapp'],434,483,91)
-    text(c,444,463,'WhatsApp',9,'#FFFFFF')
-    for url,rect in [(cfg['whatsapp'],(63,451,360,476)),('mailto:'+cfg['email'],(63,419,360,443)),(cfg['website'],(63,384,360,410))]:c.linkURL(url,rect)
+    text(c,64,458,'Phone / WhatsApp  '+cfg['phone'],12,'#FFFFFF')
+    text(c,64,426,'WeChat  '+cfg['wechat'],12,'#FFFFFF')
+    text(c,64,394,cfg['email'],12,'#FFFFFF')
+    wrap(c,cfg['address'],64,354,462,10,15,'#FFFFFF')
+    for url,rect in [(cfg['whatsapp'],(63,451,450,476)),('mailto:'+cfg['email'],(63,384,450,410))]:c.linkURL(url,rect)
     wrap(c,'Factory and partner-sourced styles are identified individually. OEM/ODM options, samples, color-size combinations, packaging, pricing and lead time are confirmed per model and order.',40,225,510,11,17,GREY)
     text(c,40,125,'Your shortlist is the start of the conversation.',14,TEAL,True)
     c.save()
