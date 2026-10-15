@@ -3,7 +3,7 @@
   "updated": "2026-10-15",
   "status": "FIFTEEN_FAMILIES_ON_SALE_M889_SKU_ID_EXCEPTION_RECORDED",
   "authorization": "负责人要求继续款式拆分、图片对应、新版详情和定价关系整理；现有价格不调，C端标题以需求和穿着利益为先，去掉货号",
-  "price_policy": "现存SKU价格不调；H7212新加绒规格及M889米白加绒沿对应旧加绒价148元，新增库存按授权100/码；官方预计优惠价另记，不把活动猜测当证据",
+  "price_policy": "旧8款标价保持；新上7款以负责人确认71.50/72.90/74.90为券后目标，标价加5元与5元券承接。",
   "identity_policy": "优先复用已有单款链接；两条旧混款分别保留明确款式，只停售非目标历史SKU，不删除历史身份；独立页核实后才切换旧混款可售选项",
   "public_identity_note": "精确商品ID、SKU、库存、价格关系和正式执行证据仅存.local；本文件是渠道整理索引，不是第二套产品主库",
   "models": {
@@ -176,7 +176,7 @@
         "existing_sku_ids_preserved": true,
         "local_visual_qa": "PASSED",
         "published_media_content_and_color_binding": "PASSED",
-        "buyer_page_visual_qa": "PENDING_BUYER_PAGE_REVIEW",
+        "buyer_page_visual_qa": "H5_PREVIEW_PASSED_APP_PENDING",
         "private_evidence": ".local/evidence/retail-family/8811/verification.json"
       },
       "forecast_price": {
@@ -190,7 +190,14 @@
         ]
       },
       "title_current": "针织休闲鞋男女款套脚好穿脱低帮日常散步常规加绒可选",
-      "status": "APPLIED_READBACK_AUDIT_PASSED"
+      "status": "APPLIED_READBACK_AUDIT_PASSED",
+      "buyer_verification": {
+        "h5_title_main_images_details_order": "PASSED",
+        "h5_media_scope": "51张主图、120屏详情逐款匹配正式发布对象及顺序",
+        "app_disabled_specs": "PENDING_PHONE_CHECK",
+        "app_coupon_redemption": "PENDING_PHONE_CHECK",
+        "private_evidence": ".local/evidence/buyer-final/8811-h5-verification.json"
+      }
     },
     "A116": {
       "route": "RETAIN_FAMILY_ON_MIXED_SECOND",
@@ -372,7 +379,7 @@
         "existing_sku_ids_preserved": true,
         "local_visual_qa": "PASSED",
         "published_media_content_and_color_binding": "PASSED",
-        "buyer_page_visual_qa": "PENDING_BUYER_PAGE_REVIEW",
+        "buyer_page_visual_qa": "H5_PREVIEW_PASSED_APP_PENDING",
         "private_evidence": ".local/evidence/retail-family/A116/verification.json"
       },
       "forecast_price": {
@@ -386,7 +393,14 @@
         ]
       },
       "title_current": "秋冬加绒棉鞋男女款系带可调松紧针织休闲鞋日常出门好搭",
-      "status": "APPLIED_READBACK_AUDIT_PASSED"
+      "status": "APPLIED_READBACK_AUDIT_PASSED",
+      "buyer_verification": {
+        "h5_title_main_images_details_order": "PASSED",
+        "h5_media_scope": "51张主图、120屏详情逐款匹配正式发布对象及顺序",
+        "app_disabled_specs": "PENDING_PHONE_CHECK",
+        "app_coupon_redemption": "PENDING_PHONE_CHECK",
+        "private_evidence": ".local/evidence/buyer-final/A116-h5-verification.json"
+      }
     },
     "A1689": {
       "route": "REUSE_SINGLE_FAMILY",
@@ -553,7 +567,7 @@
         "existing_sku_ids_preserved": true,
         "local_visual_qa": "PASSED",
         "published_media_content_and_color_binding": "PASSED",
-        "buyer_page_visual_qa": "PENDING_BUYER_PAGE_REVIEW",
+        "buyer_page_visual_qa": "H5_PREVIEW_PASSED_APP_PENDING",
         "private_evidence": ".local/evidence/retail-family/A1689/verification.json"
       },
       "forecast_price": {
@@ -567,7 +581,14 @@
         ]
       },
       "title_current": "针织一脚蹬休闲鞋男女低帮套脚免系带日常出门加绒可选",
-      "status": "APPLIED_READBACK_AUDIT_PASSED"
+      "status": "APPLIED_READBACK_AUDIT_PASSED",
+      "buyer_verification": {
+        "h5_title_main_images_details_order": "PASSED",
+        "h5_media_scope": "51张主图、120屏详情逐款匹配正式发布对象及顺序",
+        "app_disabled_specs": "PENDING_PHONE_CHECK",
+        "app_coupon_redemption": "PENDING_PHONE_CHECK",
+        "private_evidence": ".local/evidence/buyer-final/A1689-h5-verification.json"
+      }
     },
     "A212": {
       "route": "REUSE_PREVIOUS_WAREHOUSE",
@@ -729,28 +750,48 @@
         ],
         "regular_price_cny": [],
         "fleece_price_cny": [
-          71.5
+          76.5
         ],
-        "existing_prices_preserved": true,
+        "existing_prices_preserved": false,
         "existing_stock_values_preserved": true,
         "existing_sku_ids_preserved": true,
         "local_visual_qa": "PASSED",
         "published_media_content_and_color_binding": "PASSED",
-        "buyer_page_visual_qa": "PENDING_BUYER_PAGE_REVIEW",
-        "private_evidence": ".local/evidence/retail-family/A212/verification.json"
+        "buyer_page_visual_qa": "H5_PREVIEW_PASSED_APP_PENDING",
+        "private_evidence": ".local/evidence/retail-family/A212/verification.json",
+        "price_change_authority": "负责人后续明确71.50/72.90/74.90为券后目标；新标价仅加5元承接5元商品券，不伪称历史原价",
+        "current_price_evidence": ".local/evidence/buyer-final/A212-coupon-price-verification.json"
       },
       "forecast_price": {
         "original": [
-          71.5,
-          71.5
+          76.5,
+          76.5
         ],
         "forecast_min": [
           71.5,
           71.5
-        ]
+        ],
+        "coupon_status": "已生效5元商品券，保存后重新打开核实",
+        "checked": "2026-10-15"
       },
       "title_current": "秋冬加绒棉鞋男女款针织一脚蹬休闲鞋套脚好穿脱黑白全黑",
-      "status": "APPLIED_READBACK_AUDIT_PASSED"
+      "status": "APPLIED_READBACK_AUDIT_PASSED",
+      "buyer_verification": {
+        "h5_title_main_images_details_order": "PASSED",
+        "h5_media_scope": "51张主图、120屏详情逐款匹配正式发布对象及顺序",
+        "app_disabled_specs": "PENDING_PHONE_CHECK",
+        "app_coupon_redemption": "PENDING_PHONE_CHECK",
+        "private_evidence": ".local/evidence/buyer-final/A212-h5-verification.json"
+      },
+      "current_coupon_pricing": {
+        "base_cny": 76.5,
+        "coupon_cny": 5,
+        "target_net_cny": 71.5,
+        "state": "ACTIVE_REOPENED_AND_OFFICIAL_FORECAST_VERIFIED",
+        "valid_until": "2026-11-14 23:59:59",
+        "auto_renew": true,
+        "private_evidence": ".local/evidence/buyer-final/A212-coupon-price-verification.json"
+      }
     },
     "A507": {
       "route": "REUSE_SINGLE_FAMILY",
@@ -918,7 +959,7 @@
         "existing_sku_ids_preserved": true,
         "local_visual_qa": "PASSED",
         "published_media_content_and_color_binding": "PASSED",
-        "buyer_page_visual_qa": "PENDING_BUYER_PAGE_REVIEW",
+        "buyer_page_visual_qa": "H5_PREVIEW_PASSED_APP_PENDING",
         "private_evidence": ".local/evidence/retail-family/A507/verification.json"
       },
       "forecast_price": {
@@ -932,7 +973,14 @@
         ]
       },
       "title_current": "针织休闲鞋男女款一脚蹬套脚免系带低帮日常通勤加绒可选",
-      "status": "APPLIED_READBACK_AUDIT_PASSED"
+      "status": "APPLIED_READBACK_AUDIT_PASSED",
+      "buyer_verification": {
+        "h5_title_main_images_details_order": "PASSED",
+        "h5_media_scope": "51张主图、120屏详情逐款匹配正式发布对象及顺序",
+        "app_disabled_specs": "PENDING_PHONE_CHECK",
+        "app_coupon_redemption": "PENDING_PHONE_CHECK",
+        "private_evidence": ".local/evidence/buyer-final/A507-h5-verification.json"
+      }
     },
     "H7116": {
       "route": "REUSE_PREVIOUS_WAREHOUSE",
@@ -1084,28 +1132,48 @@
         ],
         "regular_price_cny": [],
         "fleece_price_cny": [
-          72.9
+          77.9
         ],
-        "existing_prices_preserved": true,
+        "existing_prices_preserved": false,
         "existing_stock_values_preserved": true,
         "existing_sku_ids_preserved": true,
         "local_visual_qa": "PASSED",
         "published_media_content_and_color_binding": "PASSED",
-        "buyer_page_visual_qa": "PENDING_BUYER_PAGE_REVIEW",
-        "private_evidence": ".local/evidence/retail-family/H7116/verification.json"
+        "buyer_page_visual_qa": "H5_PREVIEW_PASSED_APP_PENDING",
+        "private_evidence": ".local/evidence/retail-family/H7116/verification.json",
+        "price_change_authority": "负责人后续明确71.50/72.90/74.90为券后目标；新标价仅加5元承接5元商品券，不伪称历史原价",
+        "current_price_evidence": ".local/evidence/buyer-final/H7116-coupon-price-verification.json"
       },
       "forecast_price": {
         "original": [
-          72.9,
-          72.9
+          77.9,
+          77.9
         ],
         "forecast_min": [
           72.9,
           72.9
-        ]
+        ],
+        "coupon_status": "已生效5元商品券，保存后重新打开核实",
+        "checked": "2026-10-15"
       },
       "title_current": "秋冬加绒棉鞋男女款针织系带休闲鞋黑白包头日常出门好搭",
-      "status": "APPLIED_READBACK_AUDIT_PASSED"
+      "status": "APPLIED_READBACK_AUDIT_PASSED",
+      "buyer_verification": {
+        "h5_title_main_images_details_order": "PASSED",
+        "h5_media_scope": "51张主图、120屏详情逐款匹配正式发布对象及顺序",
+        "app_disabled_specs": "PENDING_PHONE_CHECK",
+        "app_coupon_redemption": "PENDING_PHONE_CHECK",
+        "private_evidence": ".local/evidence/buyer-final/H7116-h5-verification.json"
+      },
+      "current_coupon_pricing": {
+        "base_cny": 77.9,
+        "coupon_cny": 5,
+        "target_net_cny": 72.9,
+        "state": "ACTIVE_REOPENED_AND_OFFICIAL_FORECAST_VERIFIED",
+        "valid_until": "2026-11-14 23:59:59",
+        "auto_renew": true,
+        "private_evidence": ".local/evidence/buyer-final/H7116-coupon-price-verification.json"
+      }
     },
     "H7212": {
       "route": "REUSE_WAREHOUSE_ADD_FLEECE_ONLY",
@@ -1274,7 +1342,7 @@
         "existing_sku_ids_preserved": true,
         "local_visual_qa": "PASSED",
         "published_media_content_and_color_binding": "PASSED",
-        "buyer_page_visual_qa": "PENDING_BUYER_PAGE_REVIEW",
+        "buyer_page_visual_qa": "H5_PREVIEW_PASSED_APP_PENDING",
         "private_evidence": ".local/evidence/retail-family/H7212/verification.json"
       },
       "forecast_price": {
@@ -1289,7 +1357,14 @@
         "coupon_status": "原50元商品券已增加H7212；保存后重新打开核实原价148、预估普惠及最低到手价98"
       },
       "title_current": "秋冬加绒棉鞋男女款一脚蹬包头休闲鞋套脚免系带日常好搭",
-      "status": "APPLIED_READBACK_AUDIT_PASSED"
+      "status": "APPLIED_READBACK_AUDIT_PASSED",
+      "buyer_verification": {
+        "h5_title_main_images_details_order": "PASSED",
+        "h5_media_scope": "51张主图、120屏详情逐款匹配正式发布对象及顺序",
+        "app_disabled_specs": "PENDING_PHONE_CHECK",
+        "app_coupon_redemption": "PENDING_PHONE_CHECK",
+        "private_evidence": ".local/evidence/buyer-final/H7212-h5-verification.json"
+      }
     },
     "K6212": {
       "route": "REUSE_PREVIOUS_WAREHOUSE",
@@ -1444,28 +1519,48 @@
         ],
         "regular_price_cny": [],
         "fleece_price_cny": [
-          71.5
+          76.5
         ],
-        "existing_prices_preserved": true,
+        "existing_prices_preserved": false,
         "existing_stock_values_preserved": true,
         "existing_sku_ids_preserved": true,
         "local_visual_qa": "PASSED",
         "published_media_content_and_color_binding": "PASSED",
-        "buyer_page_visual_qa": "PENDING_BUYER_PAGE_REVIEW",
-        "private_evidence": ".local/evidence/retail-family/K6212/verification.json"
+        "buyer_page_visual_qa": "H5_PREVIEW_PASSED_APP_PENDING",
+        "private_evidence": ".local/evidence/retail-family/K6212/verification.json",
+        "price_change_authority": "负责人后续明确71.50/72.90/74.90为券后目标；新标价仅加5元承接5元商品券，不伪称历史原价",
+        "current_price_evidence": ".local/evidence/buyer-final/K6212-coupon-price-verification.json"
       },
       "forecast_price": {
         "original": [
-          71.5,
-          71.5
+          76.5,
+          76.5
         ],
         "forecast_min": [
           71.5,
           71.5
-        ]
+        ],
+        "coupon_status": "已生效5元商品券，保存后重新打开核实",
+        "checked": "2026-10-15"
       },
       "title_current": "秋冬加绒棉鞋男女款针织套脚一脚蹬休闲鞋黑白全黑日常搭",
-      "status": "APPLIED_READBACK_AUDIT_PASSED"
+      "status": "APPLIED_READBACK_AUDIT_PASSED",
+      "buyer_verification": {
+        "h5_title_main_images_details_order": "PASSED",
+        "h5_media_scope": "51张主图、120屏详情逐款匹配正式发布对象及顺序",
+        "app_disabled_specs": "PENDING_PHONE_CHECK",
+        "app_coupon_redemption": "PENDING_PHONE_CHECK",
+        "private_evidence": ".local/evidence/buyer-final/K6212-h5-verification.json"
+      },
+      "current_coupon_pricing": {
+        "base_cny": 76.5,
+        "coupon_cny": 5,
+        "target_net_cny": 71.5,
+        "state": "ACTIVE_REOPENED_AND_OFFICIAL_FORECAST_VERIFIED",
+        "valid_until": "2026-11-14 23:59:59",
+        "auto_renew": true,
+        "private_evidence": ".local/evidence/buyer-final/K6212-coupon-price-verification.json"
+      }
     },
     "L0017": {
       "route": "REUSE_SINGLE_FAMILY",
@@ -1635,7 +1730,7 @@
         "existing_sku_ids_preserved": true,
         "local_visual_qa": "PASSED",
         "published_media_content_and_color_binding": "PASSED",
-        "buyer_page_visual_qa": "PENDING_BUYER_PAGE_REVIEW",
+        "buyer_page_visual_qa": "H5_PREVIEW_PASSED_APP_PENDING",
         "private_evidence": ".local/evidence/retail-family/L0017/verification.json"
       },
       "forecast_price": {
@@ -1649,7 +1744,14 @@
         ]
       },
       "title_current": "系带针织休闲鞋男女款松紧可调低帮日常通勤常规加绒可选",
-      "status": "APPLIED_READBACK_AUDIT_PASSED"
+      "status": "APPLIED_READBACK_AUDIT_PASSED",
+      "buyer_verification": {
+        "h5_title_main_images_details_order": "PASSED",
+        "h5_media_scope": "51张主图、120屏详情逐款匹配正式发布对象及顺序",
+        "app_disabled_specs": "PENDING_PHONE_CHECK",
+        "app_coupon_redemption": "PENDING_PHONE_CHECK",
+        "private_evidence": ".local/evidence/buyer-final/L0017-h5-verification.json"
+      }
     },
     "M889": {
       "route": "RETAIN_FAMILY_ON_MIXED_FIRST",
@@ -1836,7 +1938,7 @@
         "existing_sku_ids_preserved": false,
         "local_visual_qa": "PASSED",
         "published_media_content_and_color_binding": "PASSED",
-        "buyer_page_visual_qa": "PENDING_BUYER_PAGE_REVIEW",
+        "buyer_page_visual_qa": "H5_PREVIEW_PASSED_APP_PENDING",
         "private_evidence": ".local/evidence/retail-family/M889/verification.json"
       },
       "forecast_price": {
@@ -1854,7 +1956,14 @@
         ]
       },
       "title_current": "针织系带休闲鞋男女款松紧可调低帮日常出门常规加绒可选",
-      "status": "CONTENT_PRICE_AUDIT_PASSED_SKU_MIGRATED_55"
+      "status": "CONTENT_PRICE_AUDIT_PASSED_SKU_MIGRATED_55",
+      "buyer_verification": {
+        "h5_title_main_images_details_order": "PASSED",
+        "h5_media_scope": "51张主图、120屏详情逐款匹配正式发布对象及顺序",
+        "app_disabled_specs": "PENDING_PHONE_CHECK",
+        "app_coupon_redemption": "PENDING_PHONE_CHECK",
+        "private_evidence": ".local/evidence/buyer-final/M889-h5-verification.json"
+      }
     },
     "R1811": {
       "route": "REUSE_SINGLE_FAMILY",
@@ -2025,7 +2134,7 @@
         "existing_sku_ids_preserved": true,
         "local_visual_qa": "PASSED",
         "published_media_content_and_color_binding": "PASSED",
-        "buyer_page_visual_qa": "PENDING_BUYER_PAGE_REVIEW",
+        "buyer_page_visual_qa": "H5_PREVIEW_PASSED_APP_PENDING",
         "private_evidence": ".local/evidence/retail-family/R1811/verification.json"
       },
       "forecast_price": {
@@ -2039,7 +2148,14 @@
         ]
       },
       "title_current": "针织低帮休闲鞋男女款后跟提环日常穿搭散步常规加绒可选",
-      "status": "APPLIED_READBACK_AUDIT_PASSED"
+      "status": "APPLIED_READBACK_AUDIT_PASSED",
+      "buyer_verification": {
+        "h5_title_main_images_details_order": "PASSED",
+        "h5_media_scope": "51张主图、120屏详情逐款匹配正式发布对象及顺序",
+        "app_disabled_specs": "PENDING_PHONE_CHECK",
+        "app_coupon_redemption": "PENDING_PHONE_CHECK",
+        "private_evidence": ".local/evidence/buyer-final/R1811-h5-verification.json"
+      }
     }
   },
   "deferred": {

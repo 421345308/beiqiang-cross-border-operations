@@ -314,7 +314,7 @@
       71,
       75
     ],
-    "authority": "现有标价按负责人最新要求不调整；此前71—75元仅为新建四款及候选基线，不覆盖旧在售款。H7212获明确授权沿用原50元商品券，标价148元保持。",
+    "authority": "负责人后续明确新7款三个金额为券后目标；全店用券，旧直降保留各自原到手价转换，不重复降价。",
     "cost_m889_filename_only": 55,
     "other_cost": null,
     "freight_requested": "沿旧店包邮，新疆西藏等偏远地区除外",
@@ -328,12 +328,12 @@
       "three_guarantees_service": "保修期内提供维修(寄修)",
       "basis": "本轮读取原店同货号商品现有配置，具体对象仅本地保存"
     },
-    "pricing_mode": "保留各款现有标价；优惠价以官方当期预计值及实际领券/订单条件为准",
+    "pricing_mode": "使用商品优惠券销售；新上7款券后71.50/72.90/74.90，标价加5元；旧8款保留原标价与原券。",
     "inventory_basis": "用户明确确认本批都有货，并授权库存及承诺发货按存量产品填报；已读存量SKU为100/码、次日发，作为发布初始填报基线，不冒充盘点数量",
     "initial_stock_per_verified_sku": 100,
     "confirmed_supply_by_user": true,
     "freight_template_reference": ".local/执行进度.json，仅本地店铺执行配置",
-    "current_price_authority": "负责人要求现有标价不调整；旧的71—75元仅对应此前新建四款与候选，不覆盖旧在售款；实际优惠取官方当前查询，优惠修改另按明确授权"
+    "current_price_authority": "负责人后续明确新7款三个金额为券后目标；全店用券，旧直降保留各自原到手价转换，不重复降价。"
   },
   "global_gaps": [
     "731按负责人要求暂缓；A1888侧面标记待核；AA188无授权排除",
@@ -1249,7 +1249,7 @@
         45
       ],
       "size_evidence_scope": "2026-10-15贝强工厂店对应来源页当前尺码；不代表盘点数量",
-      "price": 71.5,
+      "price": 76.5,
       "stock": 100,
       "stage": "APPLIED_READBACK_AUDIT_PASSED",
       "blocking_notes": [
@@ -1439,7 +1439,9 @@
         "01_产品资产/02_可发布素材/抖店棉鞋_20261014/A212/优化/详情/06_商品参数.png",
         "01_产品资产/02_可发布素材/抖店棉鞋_20261014/A212/优化/详情/07_脚长尺码指南.png",
         "01_产品资产/02_可发布素材/抖店棉鞋_20261014/A212/优化/详情/08_发货与售后服务.png"
-      ]
+      ],
+      "coupon_amount": 5,
+      "coupon_target_price": 71.5
     },
     {
       "source_model": "A507",
@@ -1733,7 +1735,7 @@
         45
       ],
       "size_evidence_scope": "2026-10-15贝强工厂店对应来源页当前尺码；不代表盘点数量",
-      "price": 72.9,
+      "price": 77.9,
       "stock": 100,
       "stage": "APPLIED_READBACK_AUDIT_PASSED",
       "blocking_notes": [
@@ -1905,7 +1907,9 @@
         "01_产品资产/02_可发布素材/抖店棉鞋_20261014/H7116/优化/详情/06_商品参数.png",
         "01_产品资产/02_可发布素材/抖店棉鞋_20261014/H7116/优化/详情/07_脚长尺码指南.png",
         "01_产品资产/02_可发布素材/抖店棉鞋_20261014/H7116/优化/详情/08_发货与售后服务.png"
-      ]
+      ],
+      "coupon_amount": 5,
+      "coupon_target_price": 72.9
     },
     {
       "source_model": "H7212",
@@ -2105,7 +2109,7 @@
         45
       ],
       "size_evidence_scope": "2026-10-15贝强工厂店对应来源页当前尺码；不代表盘点数量",
-      "price": 72.9,
+      "price": 77.9,
       "stock": 100,
       "stage": "APPLIED_READBACK_AUDIT_PASSED",
       "blocking_notes": [],
@@ -2316,7 +2320,9 @@
           72.9
         ]
       },
-      "verified_fleece_sku_count": 22
+      "verified_fleece_sku_count": 22,
+      "coupon_amount": 5,
+      "coupon_target_price": 72.9
     },
     {
       "source_model": "K6212",
@@ -2339,7 +2345,7 @@
         45
       ],
       "size_evidence_scope": "2026-10-15贝强工厂店对应来源页当前尺码；不代表盘点数量",
-      "price": 71.5,
+      "price": 76.5,
       "stock": 100,
       "stage": "APPLIED_READBACK_AUDIT_PASSED",
       "blocking_notes": [
@@ -2531,7 +2537,9 @@
         "01_产品资产/02_可发布素材/抖店棉鞋_20261014/K6212/优化/详情/06_商品参数.png",
         "01_产品资产/02_可发布素材/抖店棉鞋_20261014/K6212/优化/详情/07_脚长尺码指南.png",
         "01_产品资产/02_可发布素材/抖店棉鞋_20261014/K6212/优化/详情/08_发货与售后服务.png"
-      ]
+      ],
+      "coupon_amount": 5,
+      "coupon_target_price": 71.5
     },
     {
       "source_model": "L0017",
@@ -3242,7 +3250,7 @@
         47
       ],
       "size_evidence_scope": "2026-10-15贝强工厂店对应来源页当前尺码；不代表盘点数量",
-      "price": 72.9,
+      "price": 77.9,
       "stock": 100,
       "stage": "APPLIED_READBACK_AUDIT_PASSED",
       "blocking_notes": [],
@@ -3437,7 +3445,9 @@
           72.9
         ]
       },
-      "verified_fleece_sku_count": 20
+      "verified_fleece_sku_count": 20,
+      "coupon_amount": 5,
+      "coupon_target_price": 72.9
     },
     {
       "source_model": "ZX9002",
@@ -3459,7 +3469,7 @@
         47
       ],
       "size_evidence_scope": "2026-10-15贝强工厂店对应来源页当前尺码；不代表盘点数量",
-      "price": 74.9,
+      "price": 79.9,
       "stock": 100,
       "stage": "APPLIED_READBACK_AUDIT_PASSED",
       "blocking_notes": [],
@@ -3634,7 +3644,9 @@
           74.9
         ]
       },
-      "verified_fleece_sku_count": 10
+      "verified_fleece_sku_count": 10,
+      "coupon_amount": 5,
+      "coupon_target_price": 74.9
     },
     {
       "source_model": "ZX9507",
@@ -3656,7 +3668,7 @@
         47
       ],
       "size_evidence_scope": "2026-10-15贝强工厂店对应来源页当前尺码；不代表盘点数量",
-      "price": 74.9,
+      "price": 79.9,
       "stock": 100,
       "stage": "APPLIED_READBACK_AUDIT_PASSED",
       "blocking_notes": [],
@@ -3872,7 +3884,9 @@
           74.9
         ]
       },
-      "verified_fleece_sku_count": 20
+      "verified_fleece_sku_count": 20,
+      "coupon_amount": 5,
+      "coupon_target_price": 74.9
     }
   ],
   "source_authority": "用户确认所有产品从搜鞋网贝强工厂店拿货，缺项先从该店对应真实款式补",
@@ -3897,7 +3911,7 @@
     "fleece_skus": 303,
     "main_images": 51,
     "detail_screens": 120,
-    "existing_prices_changed": false,
+    "existing_prices_changed": true,
     "existing_stock_values_changed": false,
     "sku_id_exception": "M889规格改名重分配55个SKU编号，旧新映射与逐码价格库存核对仅本地保存；其余现存SKU身份保留",
     "deferred": [
@@ -3905,6 +3919,19 @@
       "A1888标记未核",
       "AA188无品牌授权排除"
     ],
-    "buyer_page_visual_qa": "PENDING_BUYER_PAGE_REVIEW"
+    "buyer_page_visual_qa": "H5_PREVIEW_PASSED_APP_PENDING",
+    "buyer_review": {
+      "h5_media": "15款标题、51主图、120屏详情及顺序通过",
+      "app": "停售规格是否隐藏、实际核销待手机抖音确认",
+      "coupon": "已修复新7款及另4条普通款的无券缺口；旧两条直降已失效并关闭续期后转换用券"
+    },
+    "existing_price_change_scope": "后续明确授权新7款标价加5元，保持三个券后目标；旧8款不调标价。",
+    "coupon_coverage": {
+      "sale_products": 41,
+      "selector_existing_coupon": 36,
+      "remaining_five": "官方优惠叠加详情逐条核实均为公开优惠券",
+      "checked": "2026-10-15",
+      "private_evidence": ".local/evidence/buyer-final/"
+    }
   }
 }

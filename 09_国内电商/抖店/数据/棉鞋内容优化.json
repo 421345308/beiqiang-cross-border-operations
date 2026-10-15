@@ -157,15 +157,17 @@
         ],
         "regular_price_cny": [],
         "fleece_price_cny": [
-          74.9
+          79.9
         ],
-        "existing_prices_preserved": true,
+        "existing_prices_preserved": false,
         "existing_stock_values_preserved": true,
         "existing_sku_ids_preserved": true,
         "local_visual_qa": "PASSED",
         "published_media_content_and_color_binding": "PASSED",
-        "buyer_page_visual_qa": "PENDING_BUYER_PAGE_REVIEW",
-        "private_evidence": ".local/evidence/retail-family/ZX9002/verification.json"
+        "buyer_page_visual_qa": "H5_PREVIEW_PASSED_APP_PENDING",
+        "private_evidence": ".local/evidence/retail-family/ZX9002/verification.json",
+        "price_change_authority": "负责人后续明确71.50/72.90/74.90为券后目标；新标价仅加5元承接5元商品券，不伪称历史原价",
+        "current_price_evidence": ".local/evidence/buyer-final/ZX9002-coupon-price-verification.json"
       },
       "main_assets": [
         {
@@ -193,16 +195,34 @@
       "consumer_visual_qa": "PASSED",
       "forecast_price": {
         "original": [
-          74.9,
-          74.9
+          79.9,
+          79.9
         ],
         "forecast_min": [
           74.9,
           74.9
-        ]
+        ],
+        "coupon_status": "已生效5元商品券，保存后重新打开核实",
+        "checked": "2026-10-15"
       },
       "title_current": "秋冬加绒棉鞋男士一脚蹬针织休闲鞋大码好穿脱日常通勤",
-      "status": "APPLIED_READBACK_AUDIT_PASSED"
+      "status": "APPLIED_READBACK_AUDIT_PASSED",
+      "buyer_verification": {
+        "h5_title_main_images_details_order": "PASSED",
+        "h5_media_scope": "51张主图、120屏详情逐款匹配正式发布对象及顺序",
+        "app_disabled_specs": "PENDING_PHONE_CHECK",
+        "app_coupon_redemption": "PENDING_PHONE_CHECK",
+        "private_evidence": ".local/evidence/buyer-final/ZX9002-h5-verification.json"
+      },
+      "current_coupon_pricing": {
+        "base_cny": 79.9,
+        "coupon_cny": 5,
+        "target_net_cny": 74.9,
+        "state": "ACTIVE_REOPENED_AND_OFFICIAL_FORECAST_VERIFIED",
+        "valid_until": "2026-11-14 23:59:59",
+        "auto_renew": true,
+        "private_evidence": ".local/evidence/buyer-final/ZX9002-coupon-price-verification.json"
+      }
     },
     "ZX2116": {
       "title": "男士加绒棉鞋秋冬保暖系带可调松紧针织休闲鞋日常通勤",
@@ -359,15 +379,17 @@
         ],
         "regular_price_cny": [],
         "fleece_price_cny": [
-          72.9
+          77.9
         ],
-        "existing_prices_preserved": true,
+        "existing_prices_preserved": false,
         "existing_stock_values_preserved": true,
         "existing_sku_ids_preserved": true,
         "local_visual_qa": "PASSED",
         "published_media_content_and_color_binding": "PASSED",
-        "buyer_page_visual_qa": "PENDING_BUYER_PAGE_REVIEW",
-        "private_evidence": ".local/evidence/retail-family/ZX2116/verification.json"
+        "buyer_page_visual_qa": "H5_PREVIEW_PASSED_APP_PENDING",
+        "private_evidence": ".local/evidence/retail-family/ZX2116/verification.json",
+        "price_change_authority": "负责人后续明确71.50/72.90/74.90为券后目标；新标价仅加5元承接5元商品券，不伪称历史原价",
+        "current_price_evidence": ".local/evidence/buyer-final/ZX2116-coupon-price-verification.json"
       },
       "main_assets": [
         {
@@ -395,16 +417,34 @@
       "consumer_visual_qa": "PASSED",
       "forecast_price": {
         "original": [
-          72.9,
-          72.9
+          77.9,
+          77.9
         ],
         "forecast_min": [
           72.9,
           72.9
-        ]
+        ],
+        "coupon_status": "已生效5元商品券，保存后重新打开核实",
+        "checked": "2026-10-15"
       },
       "title_current": "男士加绒棉鞋秋冬保暖系带可调松紧针织休闲鞋日常通勤",
-      "status": "APPLIED_READBACK_AUDIT_PASSED"
+      "status": "APPLIED_READBACK_AUDIT_PASSED",
+      "buyer_verification": {
+        "h5_title_main_images_details_order": "PASSED",
+        "h5_media_scope": "51张主图、120屏详情逐款匹配正式发布对象及顺序",
+        "app_disabled_specs": "PENDING_PHONE_CHECK",
+        "app_coupon_redemption": "PENDING_PHONE_CHECK",
+        "private_evidence": ".local/evidence/buyer-final/ZX2116-h5-verification.json"
+      },
+      "current_coupon_pricing": {
+        "base_cny": 77.9,
+        "coupon_cny": 5,
+        "target_net_cny": 72.9,
+        "state": "ACTIVE_REOPENED_AND_OFFICIAL_FORECAST_VERIFIED",
+        "valid_until": "2026-11-14 23:59:59",
+        "auto_renew": true,
+        "private_evidence": ".local/evidence/buyer-final/ZX2116-coupon-price-verification.json"
+      }
     },
     "ZX9507": {
       "title": "秋冬加绒棉鞋男士套脚免系带针织休闲鞋黑杏全黑日常出门",
@@ -562,15 +602,17 @@
         ],
         "regular_price_cny": [],
         "fleece_price_cny": [
-          74.9
+          79.9
         ],
-        "existing_prices_preserved": true,
+        "existing_prices_preserved": false,
         "existing_stock_values_preserved": true,
         "existing_sku_ids_preserved": true,
         "local_visual_qa": "PASSED",
         "published_media_content_and_color_binding": "PASSED",
-        "buyer_page_visual_qa": "PENDING_BUYER_PAGE_REVIEW",
-        "private_evidence": ".local/evidence/retail-family/ZX9507/verification.json"
+        "buyer_page_visual_qa": "H5_PREVIEW_PASSED_APP_PENDING",
+        "private_evidence": ".local/evidence/retail-family/ZX9507/verification.json",
+        "price_change_authority": "负责人后续明确71.50/72.90/74.90为券后目标；新标价仅加5元承接5元商品券，不伪称历史原价",
+        "current_price_evidence": ".local/evidence/buyer-final/ZX9507-coupon-price-verification.json"
       },
       "main_assets": [
         {
@@ -603,16 +645,34 @@
       "consumer_visual_qa": "PASSED",
       "forecast_price": {
         "original": [
-          74.9,
-          74.9
+          79.9,
+          79.9
         ],
         "forecast_min": [
           74.9,
           74.9
-        ]
+        ],
+        "coupon_status": "已生效5元商品券，保存后重新打开核实",
+        "checked": "2026-10-15"
       },
       "title_current": "秋冬加绒棉鞋男士套脚免系带针织休闲鞋黑杏全黑日常出门",
-      "status": "APPLIED_READBACK_AUDIT_PASSED"
+      "status": "APPLIED_READBACK_AUDIT_PASSED",
+      "buyer_verification": {
+        "h5_title_main_images_details_order": "PASSED",
+        "h5_media_scope": "51张主图、120屏详情逐款匹配正式发布对象及顺序",
+        "app_disabled_specs": "PENDING_PHONE_CHECK",
+        "app_coupon_redemption": "PENDING_PHONE_CHECK",
+        "private_evidence": ".local/evidence/buyer-final/ZX9507-h5-verification.json"
+      },
+      "current_coupon_pricing": {
+        "base_cny": 79.9,
+        "coupon_cny": 5,
+        "target_net_cny": 74.9,
+        "state": "ACTIVE_REOPENED_AND_OFFICIAL_FORECAST_VERIFIED",
+        "valid_until": "2026-11-14 23:59:59",
+        "auto_renew": true,
+        "private_evidence": ".local/evidence/buyer-final/ZX9507-coupon-price-verification.json"
+      }
     },
     "K6116": {
       "title": "秋冬加绒棉鞋男女款系带松紧可调针织休闲鞋黑白全黑好搭",
@@ -769,15 +829,17 @@
         ],
         "regular_price_cny": [],
         "fleece_price_cny": [
-          72.9
+          77.9
         ],
-        "existing_prices_preserved": true,
+        "existing_prices_preserved": false,
         "existing_stock_values_preserved": true,
         "existing_sku_ids_preserved": true,
         "local_visual_qa": "PASSED",
         "published_media_content_and_color_binding": "PASSED",
-        "buyer_page_visual_qa": "PENDING_BUYER_PAGE_REVIEW",
-        "private_evidence": ".local/evidence/retail-family/K6116/verification.json"
+        "buyer_page_visual_qa": "H5_PREVIEW_PASSED_APP_PENDING",
+        "private_evidence": ".local/evidence/retail-family/K6116/verification.json",
+        "price_change_authority": "负责人后续明确71.50/72.90/74.90为券后目标；新标价仅加5元承接5元商品券，不伪称历史原价",
+        "current_price_evidence": ".local/evidence/buyer-final/K6116-coupon-price-verification.json"
       },
       "main_assets": [
         {
@@ -805,16 +867,34 @@
       "consumer_visual_qa": "PASSED",
       "forecast_price": {
         "original": [
-          72.9,
-          72.9
+          77.9,
+          77.9
         ],
         "forecast_min": [
           72.9,
           72.9
-        ]
+        ],
+        "coupon_status": "已生效5元商品券，保存后重新打开核实",
+        "checked": "2026-10-15"
       },
       "title_current": "秋冬加绒棉鞋男女款系带松紧可调针织休闲鞋黑白全黑好搭",
-      "status": "APPLIED_READBACK_AUDIT_PASSED"
+      "status": "APPLIED_READBACK_AUDIT_PASSED",
+      "buyer_verification": {
+        "h5_title_main_images_details_order": "PASSED",
+        "h5_media_scope": "51张主图、120屏详情逐款匹配正式发布对象及顺序",
+        "app_disabled_specs": "PENDING_PHONE_CHECK",
+        "app_coupon_redemption": "PENDING_PHONE_CHECK",
+        "private_evidence": ".local/evidence/buyer-final/K6116-h5-verification.json"
+      },
+      "current_coupon_pricing": {
+        "base_cny": 77.9,
+        "coupon_cny": 5,
+        "target_net_cny": 72.9,
+        "state": "ACTIVE_REOPENED_AND_OFFICIAL_FORECAST_VERIFIED",
+        "valid_until": "2026-11-14 23:59:59",
+        "auto_renew": true,
+        "private_evidence": ".local/evidence/buyer-final/K6116-coupon-price-verification.json"
+      }
     }
   },
   "quality_gate": {
