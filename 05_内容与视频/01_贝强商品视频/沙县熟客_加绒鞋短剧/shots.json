@@ -1,0 +1,51 @@
+{
+  "project": "沙县熟客与加绒鞋短剧",
+  "updated": "2026-10-15",
+  "status": "TEXT_AND_STORYBOARD_DRAFT",
+  "duration_seconds": 60,
+  "duration_basis": "unmeasured_performance_budget",
+  "aspect_ratio": "9:16",
+  "channel": "douyin",
+  "language": "zh-CN",
+  "product": "ZX9507",
+  "color": "黑杏加绒",
+  "model": null,
+  "provider": null,
+  "generation_submitted": false,
+  "paid_generation_authorized": false,
+  "continuity": {
+    "scene": "same neighborhood snack restaurant, same night and meal",
+    "axis": "man screen-left facing right, owner screen-right facing left; same camera half-space",
+    "old_shoes": "ordinary dark old shoes; not this product and not a named competitor",
+    "new_shoes": "ZX9507 black knit slip-on, beige sculpted outsole; no laces or heel loop",
+    "shoe_states": "S01-S08 old shoes; S09 visibly elides change; S10-S15 new shoes",
+    "product_boundary": "unseen lining requires real same-variant reference; no generated performance demonstration"
+  },
+  "production_groups": [
+    {"id":"G1","shots":["S01","S02","S03"],"purpose":"entry and guarded exchange"},
+    {"id":"G2","shots":["S04","S05","S06","S07","S08"],"purpose":"gift reveals care"},
+    {"id":"G3","shots":["S09","S10"],"purpose":"elliptical shoe change and quiet response"},
+    {"id":"G4","shots":["S11","S12","S13","S14","S15"],"purpose":"next visit and decision to stay"}
+  ],
+  "shots": [
+    {"id":"S01","start":0,"end":4,"framing":"entry medium","action":"Man lifts curtain and enters; owner wipes counter at rear right.","dialogue":[{"speaker":"man","text":"老样子。","delivery":"on-screen"},{"speaker":"owner","text":"菜单在那儿。","delivery":"off-screen"}],"shoe_state":"old","product_visible":false,"reference_roles":["man","owner","empty_location","old_shoes"],"status":"planned"},
+    {"id":"S02","start":4,"end":8,"framing":"owner medium close-up","action":"Owner continues wiping, avoids looking at him; his shoulder only anchors space.","dialogue":[{"speaker":"man","text":"还用看啊？","delivery":"off-screen"},{"speaker":"owner","text":"隔壁不用看？","delivery":"on-screen"}],"shoe_state":"old","product_visible":false,"reference_roles":["man","owner","empty_location","cloth"],"status":"planned"},
+    {"id":"S03","start":8,"end":11,"framing":"man medium close-up","action":"He pauses, accepts the rebuff and sits in his usual chair.","dialogue":[{"speaker":"man","text":"行，鸡腿饭。","delivery":"on-screen"}],"shoe_state":"old","product_visible":false,"reference_roles":["man","owner","empty_location","chair"],"status":"planned"},
+    {"id":"S04","start":11,"end":15,"framing":"two-person medium","action":"After an implied preparation interval, food is on table. She places the bag on adjacent empty stool.","dialogue":[{"speaker":"owner","text":"吃完，这个拿走。","delivery":"on-screen"}],"shoe_state":"old","product_visible":false,"reference_roles":["man","owner","empty_location","food","bag_and_box"],"status":"planned"},
+    {"id":"S05","start":15,"end":18,"framing":"man and bag medium","action":"He looks down at the bag and touches its opening; cut before a complex unboxing.","dialogue":[{"speaker":"man","text":"什么？","delivery":"on-screen"},{"speaker":"owner","text":"自己看。","delivery":"off-screen"}],"shoe_state":"old","product_visible":false,"reference_roles":["man","empty_location","bag_and_box"],"status":"planned"},
+    {"id":"S06","start":18,"end":23,"framing":"supported open box and shoes close-up","action":"Box is already open and supported on lap. He lightly touches collar; show only verified shoe surfaces.","dialogue":[{"speaker":"owner","text":"夜里穿，别老穿那双薄的。","delivery":"off-screen"}],"shoe_state":"old","product_visible":true,"reference_roles":["man","new_shoes_real","bag_and_box"],"requires":"same-variant lining reference if lining is exposed in detail","fallback":"verified upper and side angle without invented lining","status":"planned"},
+    {"id":"S07","start":23,"end":27,"framing":"man reaction close-up","action":"He looks from shoes to owner before a faint smile.","dialogue":[{"speaker":"man","text":"给我买的？","delivery":"on-screen"},{"speaker":"owner","text":"买错了。","delivery":"off-screen"}],"shoe_state":"old","product_visible":false,"reference_roles":["man","owner","empty_location"],"status":"planned"},
+    {"id":"S08","start":27,"end":31,"framing":"owner medium close-up","action":"She tidies the same chopstick holder to avoid eye contact.","dialogue":[{"speaker":"man","text":"四十一，还挺巧。","delivery":"off-screen"},{"speaker":"owner","text":"不穿拿回来。","delivery":"on-screen"}],"shoe_state":"old","product_visible":false,"reference_roles":["man","owner","empty_location","chopstick_holder"],"status":"planned"},
+    {"id":"S09","start":31,"end":35,"framing":"two inserts separated by clear elliptical cut","action":"He settles box beside him and reaches towards shoes; cut to new pair already on feet, hand straightens one heel collar.","dialogue":[{"speaker":"owner","text":"后跟提起来，别踩着。","delivery":"off-screen"}],"shoe_state":"old_to_new_via_cut","product_visible":true,"reference_roles":["man","new_shoes_real","old_shoes","empty_location","bag_and_box"],"constraint":"not a continuous morph or hands-free entry; old shoes go in bag","status":"planned"},
+    {"id":"S10","start":35,"end":38,"framing":"man medium close-up","action":"He settles his posture and smiles down quietly after fixing heel.","dialogue":[{"speaker":"man","text":"知道了。","delivery":"on-screen"}],"shoe_state":"new","product_visible":false,"reference_roles":["man","empty_location"],"status":"planned"},
+    {"id":"S11","start":38,"end":43,"framing":"table side medium","action":"He takes out phone; bag holds old shoes. She wipes at right, keeping same axis.","dialogue":[{"speaker":"man","text":"饭跟鞋，一起转你？","delivery":"on-screen"},{"speaker":"owner","text":"饭钱就行。","delivery":"off-screen"}],"shoe_state":"new","product_visible":false,"reference_roles":["man","owner","empty_location","phone","bag_and_box","food"],"constraint":"no readable payment UI or actual transaction","status":"planned"},
+    {"id":"S12","start":43,"end":47,"framing":"man medium close-up","action":"He waits with phone held still, looking at her.","dialogue":[{"speaker":"man","text":"那鞋呢？","delivery":"on-screen"}],"shoe_state":"new","product_visible":false,"reference_roles":["man","owner","empty_location","phone"],"status":"planned"},
+    {"id":"S13","start":47,"end":51,"framing":"owner close-up","action":"Her hand stops for half a beat then resumes wiping; voice softens slightly.","dialogue":[{"speaker":"owner","text":"下回来再说。","delivery":"on-screen"}],"shoe_state":"new","product_visible":false,"reference_roles":["owner","empty_location","cloth"],"status":"planned"},
+    {"id":"S14","start":51,"end":55,"framing":"low table side","action":"New pair visible. One foot pointing toward exit turns back and slides under table; phone settles audibly above frame.","dialogue":[{"speaker":"man","text":"还有咸菜吗？","delivery":"off-screen"}],"shoe_state":"new","product_visible":true,"reference_roles":["man","new_shoes_real","empty_location","table_and_chair"],"constraint":"natural small foot motion and grounded feet; preserve outsole shape","status":"planned"},
+    {"id":"S15","start":55,"end":60,"framing":"oblique table close-up","action":"A small pickle dish slides from her side to his hand beside the meal; her hand withdraws, hold the result.","dialogue":[],"shoe_state":"new","product_visible":false,"reference_roles":["man","owner","empty_location","food","pickle_dish"],"status":"planned"}
+  ],
+  "asset_status": "planning_only_no_generated_references",
+  "audio_status": "dialogue_text_only_no_readthrough",
+  "visual_review": "not_started",
+  "next_step": "Review script, make continuous readthrough and seven key compositions; select model/provider before exact executable prompts or paid generation."
+}
