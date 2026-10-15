@@ -1,47 +1,54 @@
 # 国内抖店妙手 HTTP 接入
 
-核验：2026-10-15。只服务已授权的国内抖店妙手账户，不使用跨境妙手 AppKey。
+核验：2026-10-15。使用已授权国内妙手的本机登录会话，不需要购买跨境套餐。这是网页业务接口接入，不是对外开放平台SDK；按当前前端验证参数。
 
-## 已验证
+业务入口：[抖店经营与棉鞋上品](../../../09_国内电商/抖店/README.md)。调用器：[miaoshou_http.mjs](miaoshou_http.mjs)。通过 `await MiaoshouHttp.fromSavedSession()` 加载会话，业务请求独立运行，不经过浏览器渲染或Computer Use。
 
-- 从已登录网页采样，再以独立 Node HTTPS 客户端请求；业务请求不经过浏览器渲染或 Computer Use。
-- `POST /api/v2/move/import/getImportFileList`，表单 `pageNo=1&pageSize=10`。匿名 HTTP 返回 `result=fail, code=50001`；当前授权会话的独立 HTTP 返回 `result=success, data={importTaskList:[], importTaskTotal:0}`，与网页一致。
-- `GET /api/v2/product/batch/getProductCateTree` 无请求体。当前会话独立 HTTP 成功，返回按类目 ID 索引的对象 `productCateTree` 及数组 `recentCategoryList`。
-- `POST /api/v2/product/create_product/getCreateBaseInfoByCateId`，表单 `cateId`；参数来自实际加载的 `useGetCidInfo-cf7156fe.js`。独立HTTP已成功读取成人男/女休闲鞋与靴子四个类目，返回属性、规格、SKU、三包、3:4图和履约规则。这不等于四类目均有账号发布资格或已获单款类目推荐。
-- `POST /api/v2/product/create_product/getFreightTemplateList`，表单 `refresh=0`；实际前端包装定义在 `product_quick_edit-2d86c738.js`。独立HTTP返回 `result=success,freightTemplatedList`，与原店模板页面对应，不修改模板。
-- 独立 HTTP 的上述查询未携带网页 `bx-v`、`deviceId`、`page-url` 等头，未关闭 TLS 校验，未重试或规避平台检查。这仅证明四项已测查询，不外推所有接口。
-- 会话采用网页当前已有认证 Cookie。负责人于2026-10-15明确要求本机持久化，现保存在本目录 `.local/session.json`，由目录内 `.gitignore` 排除。它是本机 JSON 会话文件，不作额外加密，不打印或推送；会话过期须正常续登并重新保存，遇平台拒绝停止，不自动重放写请求。
+## 实测能力
 
-调用器：[miaoshou_http.mjs](miaoshou_http.mjs)。后续使用 `await MiaoshouHttp.fromSavedSession()` 加载本机已保存会话，再调用 `listImportFiles()`、`getCategories()`、`getCategoryInfo(cateId)` 或 `getFreightTemplates()`，无需每轮打开浏览器。更新会话后调用 `saveSession()`；`clearSession()` 仅清除实例引用，不删除已保存文件。该模块只允许四项查询，没有通用 URL 透传或商品写入方法。私有类目及店铺配置回读保存至 `09_国内电商/抖店/.local/evidence/`。
+| 方法 | 业务能力 |
+| --- | --- |
+| `listImportFiles()` | 导入任务查询，已测页大小10 |
+| `getCategories()` / `getCategoryInfo(cateId)` | 类目树、动态属性、SKU与服务规则 |
+| `getFreightTemplates()` | 原店运费模板查询，不改模板 |
+| `listProducts({page,pageSize,isDraft})` | 完整分页读取商品、草稿；还需逐商品SKU查重 |
+| `getProductBase(id)` / `getProductSku(id)` | 正式字段与SKU回读，精确商品ID取字符串productIdStr |
+| `getProductAudit(id)` | 审核记录：-1等图片审核，0审核中，1通过，2不通过 |
+| `uploadImage(path)` | JPEG/PNG上传，返回临时图片地址 |
+| `recommendCategory({name,mainImgUrls})` | 真实标题与主图的官方推荐类目及凭据 |
+| `getSizeTemplateInit(cateId)` / `saveSizeTemplate(payload,{evidenceDir})` | 规则查询、新建独立尺码组件 |
+| `createProduct(payload,{evidenceDir})` | 已取得真实商品ID，回读价格、SKU、图片、履约 |
+| `saveProduct(payload,{evidenceDir})` | 已验证补46/47码，回读原图、价格与服务 |
+| `setProductStatus(ids,status,{evidenceDir})` | 固定上/下架操作，0上架、1仓库；转仓库接口已有成功回执 |
 
-棉鞋准备入口：`09_国内电商/抖店/README.md`。`build_cotton_preview.py` 从渠道准备包构建本地含图审核页，无外部写入。
+正式请求、回执和回读只存于 `09_国内电商/抖店/.local/evidence/`。提交、审核、买家页面检查分开记状态。
 
-## 工厂来源直接读取
+## 字段与执行约定
 
-`sooxie_source_read.mjs` 只读搜鞋网贝强工厂店公开详情，不使用账户Cookie。先取来源HTML当前页面nonce，再按实际前端 `info.min.js` 观察到的 `POST https://sooxie.com/api/Detail/index`（`id,token`）读取动态参数与图库。nonce只留请求内存，不输出、不持久化。已独立HTTP核验M889-1，批次中另读取19个来源；这不是搜鞋网开放平台授权或商品写入能力。
+- 创建实际路径 `POST /api/v2/product/create_product/createProduct`，正式提交commit=1、status=0；仓库status=1，草稿commit=0、status=2。草稿也是写入。
+- 普通表单使用括号索引编码嵌套对象、数组，不是整体JSON。编辑接口 `saveEditProductInfo` 的表单字段productInfo才是商品对象JSON字符串。
+- specPricesV2.price单位为元，71.50元传71.5；其他只读价格字段可能为分。创建包含stockNum，编辑保留既有skuId、原价和原库存参照，不反复重置现存SKU。
+- 推荐mainImgUrls为字符串数组；创建使用原样categoryRecommendId、categoryRecommendCheckStr，并核所选类目在推荐及账号权限范围内。
+- 上传字段uploadWarePreviewImg、uploadType=localImg、enableUploadMultiple=false。主图及颜色规格图必须原生1:1且尺寸达到当前规则；最短边600不代表比例合格，详情图另按规则检查。
+- 已测颜色图绑定使用specPic。单SKU的skuPictureUrl还有独立素材中心约束，临时地址曾被拒绝，调用器暂不开放该未完成验证的字段。
+- 尺码组件和销售规格必须完全一致。过滤共享旧表后，先创建独立组件，再使用实际ID；只传前端JSON不够，不覆盖原共享模板。
+- 创建三包字段为afterSaleServiceV2.three_guarantees.service_type/duration，回读为threeGuarantees.serviceType/duration，时长以单款授权为准。
+- 编辑异步落地，成功后立即读取可能仍是旧SKU；稍后只读核对，不能直接再写一次。图片CDN的p3/p9域名可能变化，按图片对象路径比较内容。
 
-示例：`node sooxie_source_read.mjs 2555441 --output source.json`。输出标题、源货号、标价、颜色、尺码、属性与图片地址，不作采购、上传或发布。源页常混用普通版/加绒版旧参数，读取成功不代表材料事实已核准；`是否库存`也不是数量。图库只记录来源，补图前仍须核款式、颜色和版本。
+查重必须核SKU颜色、编码及图片。旧889/8811链接可能混放别的货号，单看标题和主货号会漏。普通版与加绒版分别判断，不能把普通SKU的全局属性改成加绒。
 
-## 从实际页面代码学到、尚未执行的写入结构
+写入方法要求新的私有evidenceDir，独占保存request.json、attempt.json后发送，结果写response.json，失败写failure.json。同目录阻止再次写入，没有自动重试。网络超时先回读；只有明确失败、修正并核准后才能开始独立的下一次尝试。图片审核排队应正常等待并复用已上传地址，不反复上传同图。
 
-证据来源是当前网页实际加载的公开模块，不是猜测路径：
+## 会话与正常连接
 
-- `product_quick_edit-2d86c738.js` 定义 `/product/create_product` 前缀及 `createProduct`、`getCreateBaseInfoByCateId`、`getRecommendCategory`、`uploadDescImgByZip` 包装。
-- `index.vue_vue_type_script_setup_true_lang-96fd7eec.js` 定义创建表单及提交转换。预期完整路径为 `POST /api/v2/product/create_product/createProduct`；仅静态识别，未提交、未取得成功回执。
-- 核心载荷包括 `cateId`、`title`、`standardBrandId`、`attrValues`、`categoryPropertyPics`、`pics`、`mainImageThreeToFour`、`description`、`whiteBgImgUrl`、`qualityList`、`assocIds`、`specValues`、`specPricesV2`、`specPic`，以及按类目取得的服务、尺码、履约等字段。`specPricesV2` 转换中包含 `stockNum`。价格单位、完整 SKU 结构、图片存储及字段合法值仍须单独核验。
-- 保存草稿走相同创建接口；转换器对草稿设 `commit=0,status=2`，正式提交通常设 `commit=1`，实际还受当前 `status` 影响。草稿同样是平台写入，不作为只读验证。
-- 标题及主图会用于类目推荐；接口返回的 `categoryRecommendId`、`categoryRecommendCheckStr` 被加入创建载荷。不能编造或跳过该前置验证。
-- `/api/v2/move/batch/importProductUrls` 使用文件上传包装，字段 `productUrlsFile`，并附加 `conditions`；完整内容尚未上传验证。
-- 搬家任务代码还存在 `moveTaskMultiPartUploadSave`/`moveTaskMultiPartUploadSaveBySts`，涉及素材/数据分片上传及任务提交，不能当作一个简单商品 JSON 接口。
+负责人已明确授权本机持久化，保存在 `.local/session.json` 并由.gitignore排除；不另加密，不打印或推送。过期后正常续登再保存。使用Node内置HTTPS与正常TLS校验，不使用失效的本机7892代理，不更改系统代理。
 
-以上静态识别不等于发布已成功，接口契约可能随页面版本改变；写入前须用实际商品、类目及当前表单参数核准，建立失败回读和重复提交保护。
+Chrome桥接曾因插件缺少browser-service.mjs而不可用，属于组件故障；已测独立HTTP可继续执行，买家可视化检查仍单独待验。
 
-## 上货模板已核事实
+## 来源与图片准备
 
-网页“导入复制”下载的 CSV 仅有：`链接地址（必填）,商品标题（选填）,售卖价（选填）,货号（选填）`。这是来源链接导入，不能直接代替完整的本地商品资料包。
+`sooxie_source_read.mjs` 只读贝强工厂店公开详情，按页面当前nonce及实际前端参数请求搜鞋网Detail/index，不使用账户Cookie，不输出nonce。示例：`node sooxie_source_read.mjs 2555441 --output source.json`。
 
-## 正常连接问题
+来源普通/加绒旧参数可能混用，读取成功不等于材料全部核准；“是否库存”不是数量。`build_cotton_preview.py` 从当前准备包重建本地含图审核页，无外部写入。
 
-本机曾有指向 `127.0.0.1:7892` 的失效代理配置；直接 HTTPS 可达。调用器用 Node 内置 HTTPS，不读取这项代理，也不修改系统代理设置。
-
-官方帮助入口：https://v1o7zyazq9.feishu.cn/wiki/OpquwOPHeiAeAFkPFcCcqHoonYc
+契约取自当前entry-c0a63a8f.js引用的创建、编辑、属性、图片及尺码模块。链接搬家、分片导入和跨境开放平台仍未验证。[官方帮助](https://v1o7zyazq9.feishu.cn/wiki/OpquwOPHeiAeAFkPFcCcqHoonYc)。

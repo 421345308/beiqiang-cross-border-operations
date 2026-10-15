@@ -5,7 +5,7 @@
   "channel": "douyin",
   "market_scope": "domestic",
   "audience": "consumer",
-  "stage": "LOCAL_DRAFT_WITH_GAPS",
+  "stage": "HTTP_PUBLISHED_WITH_EXISTING_LISTING_HOLDS",
   "source": {
     "archive_name": "贝强工厂店-M889-1-P55.00元-time10-14-231323.zip",
     "archive_sha256": "88c4d3019b983e0763aa56e50442f05e8ce0e62c7efecfda447bba50b33e02fe",
@@ -335,9 +335,9 @@
     "freight_template_reference": ".local/执行进度.json，仅本地店铺执行配置"
   },
   "global_gaps": [
-    "完整同款及草稿去重与身份冲突核查",
-    "加绒版必填材料逐款核实",
-    "创建接口完整载荷、价格单位及写后回读尚未验证"
+    "既有混款链接的产品身份、图片、服务及加绒SKU整理，避免重复铺货",
+    "A1888标记身份待核；AA188无授权排除，731本轮用户要求暂缓",
+    "买家页面视觉终验待Chrome组件恢复，已验证HTTP与正式审核不受此故障影响"
   ],
   "image_edit": {
     "tool": "built-in image_gen",
@@ -465,8 +465,10 @@
       "size_evidence_scope": "2026-10-15贝强工厂店对应来源页当前尺码；不代表盘点数量",
       "price": 74.9,
       "stock": 100,
-      "stage": "LOCAL_DRAFT_WITH_GAPS",
-      "blocking_notes": [],
+      "stage": "HOLD_EXISTING_FLEECE_SKU",
+      "blocking_notes": [
+        "已在旧商品或旧889/8811混款链接中找到加绒SKU；保留原链接，待核清身份与素材后整理，不重复创建"
+      ],
       "images": [
         {
           "name": "8811黑白加绒.jpg",
@@ -625,7 +627,9 @@
           "是否库存:是"
         ],
         "scope": "来源页字段候选；加绒颜色与普通版可能共用旧参数，季节、里料及宣传功能须按实际版本核对，不机械照搬"
-      }
+      },
+      "current_scope": "已在旧商品或旧889/8811混款链接中找到加绒SKU；保留原链接，待核清身份与素材后整理，不重复创建",
+      "platform_evidence_ref": ".local/evidence/catalog-full-sku.json"
     },
     {
       "source_model": "A116",
@@ -650,8 +654,10 @@
       "size_evidence_scope": "2026-10-15贝强工厂店对应来源页当前尺码；不代表盘点数量",
       "price": 71.5,
       "stock": 100,
-      "stage": "LOCAL_DRAFT_WITH_GAPS",
-      "blocking_notes": [],
+      "stage": "HOLD_EXISTING_FLEECE_SKU",
+      "blocking_notes": [
+        "已在旧商品或旧889/8811混款链接中找到加绒SKU；保留原链接，待核清身份与素材后整理，不重复创建"
+      ],
       "images": [
         {
           "name": "A116黑白加绒.jpg",
@@ -794,7 +800,9 @@
           "是否库存:否"
         ],
         "scope": "来源页字段候选；加绒颜色与普通版可能共用旧参数，季节、里料及宣传功能须按实际版本核对，不机械照搬"
-      }
+      },
+      "current_scope": "已在旧商品或旧889/8811混款链接中找到加绒SKU；保留原链接，待核清身份与素材后整理，不重复创建",
+      "platform_evidence_ref": ".local/evidence/catalog-full-sku.json"
     },
     {
       "source_model": "A1689",
@@ -819,8 +827,10 @@
       "size_evidence_scope": "2026-10-15贝强工厂店对应来源页当前尺码；不代表盘点数量",
       "price": 72.9,
       "stock": 100,
-      "stage": "LOCAL_DRAFT_WITH_GAPS",
-      "blocking_notes": [],
+      "stage": "HOLD_EXISTING_FLEECE_SKU",
+      "blocking_notes": [
+        "已在旧商品或旧889/8811混款链接中找到加绒SKU；保留原链接，待核清身份与素材后整理，不重复创建"
+      ],
       "images": [
         {
           "name": "A1689黑白加绒.jpg",
@@ -962,7 +972,9 @@
           "是否库存:否"
         ],
         "scope": "来源页字段候选；加绒颜色与普通版可能共用旧参数，季节、里料及宣传功能须按实际版本核对，不机械照搬"
-      }
+      },
+      "current_scope": "已在旧商品或旧889/8811混款链接中找到加绒SKU；保留原链接，待核清身份与素材后整理，不重复创建",
+      "platform_evidence_ref": ".local/evidence/catalog-full-sku.json"
     },
     {
       "source_model": "A1888",
@@ -987,7 +999,7 @@
       "size_evidence_scope": "2026-10-15贝强工厂店对应来源页当前尺码；不代表盘点数量",
       "price": 74.9,
       "stock": 100,
-      "stage": "LOCAL_DRAFT_WITH_GAPS",
+      "stage": "HOLD_MARKING_UNVERIFIED",
       "blocking_notes": [
         "侧面黑色标记身份与品牌未核，正式发布前核对"
       ],
@@ -1164,8 +1176,10 @@
       "size_evidence_scope": "2026-10-15贝强工厂店对应来源页当前尺码；不代表盘点数量",
       "price": 71.5,
       "stock": 100,
-      "stage": "LOCAL_DRAFT_WITH_GAPS",
-      "blocking_notes": [],
+      "stage": "CREATED_WAREHOUSE_DUPLICATE_GUARD",
+      "blocking_notes": [
+        "先解决旧混款链接对应关系，再决定该独立页的销售状态"
+      ],
       "images": [
         {
           "name": "A212黑白加绒.jpg",
@@ -1250,7 +1264,7 @@
         "支持7天无理由退货；退换条件及运费险按店铺和平台实际规则执行。"
       ],
       "douyin_product_id": null,
-      "publish_receipt": null,
+      "publish_receipt": ".local/evidence/A212-create/response.json",
       "price_basis": "用户71—75元范围内按款分档的首轮试价，非已证明最优价格；同款各色同价",
       "stock_basis": "已读存量SKU的100/码发布基线，用户授权沿用；不是盘点结果",
       "current_source": {
@@ -1315,7 +1329,25 @@
           "是否库存:是"
         ],
         "scope": "来源页字段候选；加绒颜色与普通版可能共用旧参数，季节、里料及宣传功能须按实际版本核对，不机械照搬"
-      }
+      },
+      "current_scope": "已创建并回读，进一步全SKU核对发现旧889混款链接含同款加绒，已主动转仓库并回读status=1，未删除或改动旧链接",
+      "platform_evidence_ref": ".local/evidence/duplicate-new-products-shelve-response.json",
+      "platform_id_reference": ".local/执行进度.json#new_cotton，精确商品ID仅本地保存",
+      "title_current": "秋冬加绒棉鞋男女款针织套脚休闲鞋A212",
+      "active_size_range": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45
+      ],
+      "verified_sku_count": 22
     },
     {
       "source_model": "A507",
@@ -1340,9 +1372,9 @@
       "size_evidence_scope": "2026-10-15贝强工厂店对应来源页当前尺码；不代表盘点数量",
       "price": 72.9,
       "stock": 100,
-      "stage": "LOCAL_DRAFT_WITH_GAPS",
+      "stage": "HOLD_EXISTING_FLEECE_SKU",
       "blocking_notes": [
-        "工厂对应页可售颜色未列加绒版本，原包有加绒图；材料与配码需核对实际版本，当前来源价不能当加绒专价"
+        "已在旧商品或旧889/8811混款链接中找到加绒SKU；保留原链接，待核清身份与素材后整理，不重复创建"
       ],
       "images": [
         {
@@ -1494,7 +1526,9 @@
           "是否库存:否"
         ],
         "scope": "来源页字段候选；加绒颜色与普通版可能共用旧参数，季节、里料及宣传功能须按实际版本核对，不机械照搬"
-      }
+      },
+      "current_scope": "已在旧商品或旧889/8811混款链接中找到加绒SKU；保留原链接，待核清身份与素材后整理，不重复创建",
+      "platform_evidence_ref": ".local/evidence/catalog-full-sku.json"
     },
     {
       "source_model": "AA188",
@@ -1589,8 +1623,10 @@
       "size_evidence_scope": "2026-10-15贝强工厂店对应来源页当前尺码；不代表盘点数量",
       "price": 72.9,
       "stock": 100,
-      "stage": "LOCAL_DRAFT_WITH_GAPS",
-      "blocking_notes": [],
+      "stage": "CREATED_WAREHOUSE_DUPLICATE_GUARD",
+      "blocking_notes": [
+        "先解决旧混款链接对应关系，再决定该独立页的销售状态"
+      ],
       "images": [
         {
           "name": "H7116黑白加绒.JPG",
@@ -1648,7 +1684,7 @@
         "支持7天无理由退货；退换条件及运费险按店铺和平台实际规则执行。"
       ],
       "douyin_product_id": null,
-      "publish_receipt": null,
+      "publish_receipt": ".local/evidence/H7116-create/response.json",
       "price_basis": "用户71—75元范围内按款分档的首轮试价，非已证明最优价格；同款各色同价",
       "stock_basis": "已读存量SKU的100/码发布基线，用户授权沿用；不是盘点结果",
       "current_source": {
@@ -1722,7 +1758,25 @@
           "是否库存:是"
         ],
         "scope": "来源页字段候选；加绒颜色与普通版可能共用旧参数，季节、里料及宣传功能须按实际版本核对，不机械照搬"
-      }
+      },
+      "current_scope": "已创建并回读，进一步全SKU核对发现旧889混款链接含同款加绒，已主动转仓库并回读status=1，未删除或改动旧链接",
+      "platform_evidence_ref": ".local/evidence/duplicate-new-products-shelve-response.json",
+      "platform_id_reference": ".local/执行进度.json#new_cotton，精确商品ID仅本地保存",
+      "title_current": "秋冬加绒棉鞋男女款系带包头休闲鞋H7116",
+      "active_size_range": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45
+      ],
+      "verified_sku_count": 11
     },
     {
       "source_model": "H7212",
@@ -1747,8 +1801,10 @@
       "size_evidence_scope": "2026-10-15贝强工厂店对应来源页当前尺码；不代表盘点数量",
       "price": 71.5,
       "stock": 100,
-      "stage": "LOCAL_DRAFT_WITH_GAPS",
-      "blocking_notes": [],
+      "stage": "HOLD_EXISTING_FLEECE_SKU",
+      "blocking_notes": [
+        "已在旧商品或旧889/8811混款链接中找到加绒SKU；保留原链接，待核清身份与素材后整理，不重复创建"
+      ],
       "images": [
         {
           "name": "H7212黑白加绒.jpg",
@@ -1877,7 +1933,9 @@
           "是否库存:是"
         ],
         "scope": "来源页字段候选；加绒颜色与普通版可能共用旧参数，季节、里料及宣传功能须按实际版本核对，不机械照搬"
-      }
+      },
+      "current_scope": "已在旧商品或旧889/8811混款链接中找到加绒SKU；保留原链接，待核清身份与素材后整理，不重复创建",
+      "platform_evidence_ref": ".local/evidence/catalog-full-sku.json"
     },
     {
       "source_model": "K6116",
@@ -1902,7 +1960,7 @@
       "size_evidence_scope": "2026-10-15贝强工厂店对应来源页当前尺码；不代表盘点数量",
       "price": 72.9,
       "stock": 100,
-      "stage": "LOCAL_DRAFT_WITH_GAPS",
+      "stage": "AUDIT_PASSED_ON_SALE_API_VERIFIED",
       "blocking_notes": [],
       "images": [
         {
@@ -1978,7 +2036,7 @@
         "note": "描述词不冒充已有精确搜索量；男女适用依同货号历史证据与当前配码核验"
       },
       "visual_plan": "已有鞋底视角；闭合能力待核，不用免手穿脱；旧限价79留冲突待核",
-      "main_image_candidate": "K6116黑白加绒.jpg",
+      "main_image_candidate": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/K6116/工厂来源原图_2.jpg",
       "detail_draft": [
         "秋冬加绒款，款号K6116。",
         "可选颜色：黑白加绒、全黑加绒。",
@@ -1988,7 +2046,7 @@
         "支持7天无理由退货；退换条件及运费险按店铺和平台实际规则执行。"
       ],
       "douyin_product_id": null,
-      "publish_receipt": null,
+      "publish_receipt": ".local/evidence/K6116-create-final/response.json",
       "price_basis": "用户71—75元范围内按款分档的首轮试价，非已证明最优价格；同款各色同价",
       "stock_basis": "已读存量SKU的100/码发布基线，用户授权沿用；不是盘点结果",
       "current_source": {
@@ -2044,6 +2102,54 @@
           "是否库存:否"
         ],
         "scope": "来源页字段候选；加绒颜色与普通版可能共用旧参数，季节、里料及宣传功能须按实际版本核对，不机械照搬"
+      },
+      "platform_id_reference": ".local/执行进度.json#new_cotton，精确商品ID仅本地保存",
+      "selected_factory_images": [
+        {
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/K6116/工厂来源原图_2.jpg",
+          "sha256": "a76286ff487e051664007c9aa3829568f853309a7ebcd4eb81ac96616d856413",
+          "source_url": "https://images.xiecdn.com/bqgcd/iw1jnenrnijm0rtwqryiondru62iur3h.jpg!bac",
+          "source_page": "https://bqgcd.sooxie.com/detail/1763985",
+          "processing": "工厂来源原生照片，未AI修改；按款色目视核对"
+        },
+        {
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/K6116/工厂来源原图_1.jpg",
+          "sha256": "3b6c7a4645e7a6308f9f2be80ccac7f790a3414225045e22b58c3de55173c70a",
+          "source_url": "https://images.xiecdn.com/bqgcd/0bx0v8hnjt3z575ndj8lclr22uq355uz.jpg!bac",
+          "source_page": "https://bqgcd.sooxie.com/detail/1763985",
+          "processing": "工厂来源原生照片，未AI修改；按款色目视核对"
+        },
+        {
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/K6116/工厂来源原图_3.jpg",
+          "sha256": "4b38fe5985914d66b2f9bb84484322c8066c62e1f67831135f1d674b0d1cfca2",
+          "source_url": "https://images.xiecdn.com/bqgcd/upuvtw1bfh15x0zhzc1wymrbjfk14wsa.jpg!bac",
+          "source_page": "https://bqgcd.sooxie.com/detail/1763985",
+          "processing": "工厂来源原生照片，未AI修改；按款色目视核对"
+        }
+      ],
+      "image_selection_state": "FACTORY_ORIGINAL_SELECTED",
+      "title_current": "秋冬加绒棉鞋男女款系带休闲鞋K6116",
+      "active_size_range": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45
+      ],
+      "verified_sku_count": 22,
+      "current_scope": "全店旧SKU核对只有普通K6116；加绒版新建独立页，后台审核通过、上架，22SKU回读一致；与普通版的里料及季节区分",
+      "platform_evidence_ref": ".local/evidence/cotton-final-readback.json",
+      "material_values": {
+        "upper": "织物",
+        "lining": "人造短毛绒",
+        "sole": "塑胶",
+        "basis": "当前加绒来源页与用户原包；里料、通用塑胶按用户授权外观判断，非成分实测"
       }
     },
     {
@@ -2069,9 +2175,9 @@
       "size_evidence_scope": "2026-10-15贝强工厂店对应来源页当前尺码；不代表盘点数量",
       "price": 71.5,
       "stock": 100,
-      "stage": "LOCAL_DRAFT_WITH_GAPS",
+      "stage": "CREATED_WAREHOUSE_DUPLICATE_GUARD",
       "blocking_notes": [
-        "工厂对应页可售颜色未列加绒版本，原包有加绒图；材料与配码需核对实际版本，当前来源价不能当加绒专价"
+        "先解决旧混款链接对应关系，再决定该独立页的销售状态"
       ],
       "images": [
         {
@@ -2157,7 +2263,7 @@
         "支持7天无理由退货；退换条件及运费险按店铺和平台实际规则执行。"
       ],
       "douyin_product_id": null,
-      "publish_receipt": null,
+      "publish_receipt": ".local/evidence/K6212-create/response.json",
       "price_basis": "用户71—75元范围内按款分档的首轮试价，非已证明最优价格；同款各色同价",
       "stock_basis": "已读存量SKU的100/码发布基线，用户授权沿用；不是盘点结果",
       "current_source": {
@@ -2224,7 +2330,25 @@
           "是否库存:是"
         ],
         "scope": "来源页字段候选；加绒颜色与普通版可能共用旧参数，季节、里料及宣传功能须按实际版本核对，不机械照搬"
-      }
+      },
+      "current_scope": "已创建并回读，进一步全SKU核对发现旧889混款链接含同款加绒，已主动转仓库并回读status=1，未删除或改动旧链接",
+      "platform_evidence_ref": ".local/evidence/duplicate-new-products-shelve-response.json",
+      "platform_id_reference": ".local/执行进度.json#new_cotton，精确商品ID仅本地保存",
+      "title_current": "秋冬加绒棉鞋男女款针织套脚休闲鞋K6212",
+      "active_size_range": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45
+      ],
+      "verified_sku_count": 22
     },
     {
       "source_model": "L0017",
@@ -2249,9 +2373,9 @@
       "size_evidence_scope": "2026-10-15贝强工厂店对应来源页当前尺码；不代表盘点数量",
       "price": 74.9,
       "stock": 100,
-      "stage": "LOCAL_DRAFT_WITH_GAPS",
+      "stage": "HOLD_EXISTING_FLEECE_SKU",
       "blocking_notes": [
-        "当前来源标价65元，74.90元售价仅差9.90元且未扣运费平台售后成本，未达到进价加30%；用户71—75元上限优先，正式定价须核实际成本"
+        "已在旧商品或旧889/8811混款链接中找到加绒SKU；保留原链接，待核清身份与素材后整理，不重复创建"
       ],
       "images": [
         {
@@ -2406,7 +2530,9 @@
           "是否库存:否"
         ],
         "scope": "来源页字段候选；加绒颜色与普通版可能共用旧参数，季节、里料及宣传功能须按实际版本核对，不机械照搬"
-      }
+      },
+      "current_scope": "已在旧商品或旧889/8811混款链接中找到加绒SKU；保留原链接，待核清身份与素材后整理，不重复创建",
+      "platform_evidence_ref": ".local/evidence/catalog-full-sku.json"
     },
     {
       "source_model": "M889",
@@ -2431,9 +2557,9 @@
       "size_evidence_scope": "2026-10-15贝强工厂店对应来源页当前尺码；不代表盘点数量",
       "price": 71.5,
       "stock": 100,
-      "stage": "HOLD_EXISTING_LISTING",
+      "stage": "HOLD_EXISTING_FLEECE_SKU",
       "blocking_notes": [
-        "店铺已有同货号历史对象及SKU编码冲突，先按本地核验整改与确定身份，不直接复制发品"
+        "已在旧商品或旧889/8811混款链接中找到加绒SKU；保留原链接，待核清身份与素材后整理，不重复创建"
       ],
       "images": [
         {
@@ -2672,7 +2798,9 @@
         "color": "米白加绒",
         "proof": "原包无货号图片与工厂原图SHA256完全一致",
         "sha256": "f14f156a5cab4bc0dd4f48e7f7d15bf33e114c6875b2c2ac71532b8ba8989e50"
-      }
+      },
+      "current_scope": "已在旧商品或旧889/8811混款链接中找到加绒SKU；保留原链接，待核清身份与素材后整理，不重复创建",
+      "platform_evidence_ref": ".local/evidence/catalog-full-sku.json"
     },
     {
       "source_model": "R1811",
@@ -2697,9 +2825,9 @@
       "size_evidence_scope": "2026-10-15贝强工厂店对应来源页当前尺码；不代表盘点数量",
       "price": 72.9,
       "stock": 100,
-      "stage": "LOCAL_DRAFT_WITH_GAPS",
+      "stage": "HOLD_EXISTING_FLEECE_SKU",
       "blocking_notes": [
-        "工厂对应页可售颜色未列加绒版本，原包有加绒图；材料与配码需核对实际版本，当前来源价不能当加绒专价"
+        "已在旧商品或旧889/8811混款链接中找到加绒SKU；保留原链接，待核清身份与素材后整理，不重复创建"
       ],
       "images": [
         {
@@ -2847,7 +2975,9 @@
           "是否库存:否"
         ],
         "scope": "来源页字段候选；加绒颜色与普通版可能共用旧参数，季节、里料及宣传功能须按实际版本核对，不机械照搬"
-      }
+      },
+      "current_scope": "已在旧商品或旧889/8811混款链接中找到加绒SKU；保留原链接，待核清身份与素材后整理，不重复创建",
+      "platform_evidence_ref": ".local/evidence/catalog-full-sku.json"
     },
     {
       "source_model": "ZX2116",
@@ -2871,7 +3001,7 @@
       "size_evidence_scope": "2026-10-15贝强工厂店对应来源页当前尺码；不代表盘点数量",
       "price": 72.9,
       "stock": 100,
-      "stage": "LOCAL_DRAFT_WITH_GAPS",
+      "stage": "AUDIT_PASSED_ON_SALE_API_VERIFIED",
       "blocking_notes": [],
       "images": [
         {
@@ -2955,7 +3085,7 @@
         "支持7天无理由退货；退换条件及运费险按店铺和平台实际规则执行。"
       ],
       "douyin_product_id": null,
-      "publish_receipt": null,
+      "publish_receipt": ".local/evidence/ZX2116-create/response.json",
       "price_basis": "用户71—75元范围内按款分档的首轮试价，非已证明最优价格；同款各色同价",
       "stock_basis": "已读存量SKU的100/码发布基线，用户授权沿用；不是盘点结果",
       "current_source": {
@@ -3021,7 +3151,31 @@
           "是否库存:否"
         ],
         "scope": "来源页字段候选；加绒颜色与普通版可能共用旧参数，季节、里料及宣传功能须按实际版本核对，不机械照搬"
-      }
+      },
+      "active_size_range": [
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
+      "current_scope": "后台审核通过、上架状态，SKU、价、库存、服务正式回读；买家页面视觉检查单独待验",
+      "platform_evidence_ref": ".local/evidence/cotton-final-readback.json",
+      "material_values": {
+        "upper": "织物",
+        "lining": "人造短毛绒",
+        "sole": "EVA",
+        "lining_basis": "用户授权图片判断，非成分实测",
+        "sole_basis": "ZX9507为图片判断通用塑胶，其他来自相应工厂单款/同家族参数"
+      },
+      "platform_id_reference": ".local/执行进度.json#new_cotton，精确商品ID仅本地保存",
+      "title_current": "秋冬加绒棉鞋男款系带针织休闲鞋ZX2116",
+      "verified_sku_count": 20
     },
     {
       "source_model": "ZX9002",
@@ -3045,7 +3199,7 @@
       "size_evidence_scope": "2026-10-15贝强工厂店对应来源页当前尺码；不代表盘点数量",
       "price": 74.9,
       "stock": 100,
-      "stage": "LOCAL_DRAFT_WITH_GAPS",
+      "stage": "AUDIT_PASSED_ON_SALE_API_VERIFIED",
       "blocking_notes": [],
       "images": [
         {
@@ -3093,7 +3247,7 @@
         "note": "描述词不冒充已有精确搜索量；男女适用依同货号历史证据与当前配码核验"
       },
       "visual_plan": "仅深灰一色图；不从外底造型写气垫或专利",
-      "main_image_candidate": "ZX9002深灰加绒.JPG",
+      "main_image_candidate": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9002/工厂来源原图_1.jpg",
       "detail_draft": [
         "秋冬加绒款，款号ZX9002。",
         "可选颜色：深灰加绒。",
@@ -3103,7 +3257,7 @@
         "支持7天无理由退货；退换条件及运费险按店铺和平台实际规则执行。"
       ],
       "douyin_product_id": null,
-      "publish_receipt": null,
+      "publish_receipt": ".local/evidence/ZX9002-create-response.json",
       "price_basis": "用户71—75元范围内按款分档的首轮试价，非已证明最优价格；同款各色同价",
       "stock_basis": "已读存量SKU的100/码发布基线，用户授权沿用；不是盘点结果",
       "current_source": {
@@ -3141,6 +3295,64 @@
           "是否库存:否"
         ],
         "scope": "来源页字段候选；加绒颜色与普通版可能共用旧参数，季节、里料及宣传功能须按实际版本核对，不机械照搬"
+      },
+      "active_size_range": [
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
+      "current_scope": "后台审核通过、上架状态，SKU、价、库存、服务正式回读；买家页面视觉检查单独待验",
+      "platform_evidence_ref": ".local/evidence/cotton-final-readback.json",
+      "material_values": {
+        "upper": "织物",
+        "lining": "人造短毛绒",
+        "sole": "EVA",
+        "lining_basis": "用户授权图片判断，非成分实测",
+        "sole_basis": "ZX9507为图片判断通用塑胶，其他来自相应工厂单款/同家族参数"
+      },
+      "platform_id_reference": ".local/执行进度.json#new_cotton，精确商品ID仅本地保存",
+      "selected_factory_images": [
+        {
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9002/工厂来源原图_1.jpg",
+          "sha256": "4a163cea46ad255ef90a6c4030df152c3438fbc3d3c47afc92e00ee6f3304ed1",
+          "source_url": "https://images.xiecdn.com/bqgcd/decpptd3hd28l6mcu481lltpbib6nw4c.JPG!bac",
+          "source_page": "https://bqgcd.sooxie.com/detail/2542197",
+          "processing": "工厂来源原生照片，未AI修改；按款色目视核对"
+        },
+        {
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9002/工厂来源原图_3.jpg",
+          "sha256": "c6760a58abcb2ded322c1bf122a30cd86804da466aa31a60c5f129a4fb6af52d",
+          "source_url": "https://images.xiecdn.com/bqgcd/3ldx1vsat51cjip5mf6g3l6950p7cw26.JPG!bac",
+          "source_page": "https://bqgcd.sooxie.com/detail/2542197",
+          "processing": "工厂来源原生照片，未AI修改；按款色目视核对"
+        },
+        {
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9002/工厂来源原图_4.jpg",
+          "sha256": "ef4761c584618e759f22bfe6b3390614dfbd83c56dd6aa25c0cde00061742d9d",
+          "source_url": "https://images.xiecdn.com/bqgcd/wgdwivlgds306u7gt3rt0r8nvd6fgvcj.JPG!bac",
+          "source_page": "https://bqgcd.sooxie.com/detail/2542197",
+          "processing": "工厂来源原生照片，未AI修改；按款色目视核对"
+        }
+      ],
+      "image_selection_state": "FACTORY_ORIGINAL_SELECTED",
+      "title_current": "秋冬加绒棉鞋男款针织套脚休闲鞋ZX9002",
+      "verified_sku_count": 10,
+      "material_evidence": {
+        "source_page": "https://bqgcd.sooxie.com/detail/2536154",
+        "source_model": "9002普通版同家族",
+        "observed_on": "2026-10-15",
+        "attributes": [
+          "帮面材质: 织物",
+          "鞋底材质: EVA"
+        ],
+        "scope": "仅使用与加绒版原图同结构的鞋面、鞋底，不继承普通版里料；加绒里料另按用户授权原图判断"
       }
     },
     {
@@ -3165,7 +3377,7 @@
       "size_evidence_scope": "2026-10-15贝强工厂店对应来源页当前尺码；不代表盘点数量",
       "price": 74.9,
       "stock": 100,
-      "stage": "LOCAL_DRAFT_WITH_GAPS",
+      "stage": "AUDIT_PASSED_ON_SALE_API_VERIFIED",
       "blocking_notes": [],
       "images": [
         {
@@ -3239,7 +3451,7 @@
         "note": "描述词不冒充已有精确搜索量；男女适用依同货号历史证据与当前配码核验"
       },
       "visual_plan": "黑杏与全黑分别绑定，保留不规则外底形状，不写实测增高",
-      "main_image_candidate": "ZX9507黑杏加绒.JPG",
+      "main_image_candidate": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9507/工厂来源原图_2.jpg",
       "detail_draft": [
         "秋冬加绒款，款号ZX9507。",
         "可选颜色：黑杏加绒、全黑加绒。",
@@ -3249,7 +3461,7 @@
         "支持7天无理由退货；退换条件及运费险按店铺和平台实际规则执行。"
       ],
       "douyin_product_id": null,
-      "publish_receipt": null,
+      "publish_receipt": ".local/evidence/ZX9507-create/response.json",
       "price_basis": "用户71—75元范围内按款分档的首轮试价，非已证明最优价格；同款各色同价",
       "stock_basis": "已读存量SKU的100/码发布基线，用户授权沿用；不是盘点结果",
       "current_source": {
@@ -3291,8 +3503,100 @@
           "是否库存:否"
         ],
         "scope": "来源页字段候选；加绒颜色与普通版可能共用旧参数，季节、里料及宣传功能须按实际版本核对，不机械照搬"
-      }
+      },
+      "active_size_range": [
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
+      "current_scope": "后台审核通过、上架状态，SKU、价、库存、服务正式回读；买家页面视觉检查单独待验",
+      "platform_evidence_ref": ".local/evidence/cotton-final-readback.json",
+      "material_values": {
+        "upper": "织物",
+        "lining": "人造短毛绒",
+        "sole": "塑胶",
+        "lining_basis": "用户授权图片判断，非成分实测",
+        "sole_basis": "ZX9507为图片判断通用塑胶，其他来自相应工厂单款/同家族参数"
+      },
+      "platform_id_reference": ".local/执行进度.json#new_cotton，精确商品ID仅本地保存",
+      "selected_factory_images": [
+        {
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9507/工厂来源原图_2.jpg",
+          "sha256": "5bb25db02e42f6db3d3d7355ea868330eebda151673cb80e812a5d20904344f3",
+          "source_url": "https://images.xiecdn.com/bqgcd/f8dz49gq1fygy35dtlghrjaq266laooe.JPG!bac",
+          "source_page": "https://bqgcd.sooxie.com/detail/2540499",
+          "processing": "工厂来源原生照片，未AI修改；按款色目视核对"
+        },
+        {
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9507/工厂来源原图_3.jpg",
+          "sha256": "ad896e30d838b32b952b226bf61012a80edae077d3a1735a383463f90fd09ac0",
+          "source_url": "https://images.xiecdn.com/bqgcd/f2wr74x9scoi9k7caolpbbmk1d47ve96.JPG!bac",
+          "source_page": "https://bqgcd.sooxie.com/detail/2540499",
+          "processing": "工厂来源原生照片，未AI修改；按款色目视核对"
+        },
+        {
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9507/工厂来源原图_6.jpg",
+          "sha256": "33c266a6fd6e30864bb6ffa067f19b11be83b313cc586c9a9e37f82b52aa1664",
+          "source_url": "https://images.xiecdn.com/bqgcd/7zpzvpga24oibby8seoe0nffc4zbb35s.JPG!bac",
+          "source_page": "https://bqgcd.sooxie.com/detail/2540499",
+          "processing": "工厂来源原生照片，未AI修改；按款色目视核对"
+        },
+        {
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9507/工厂来源原图_7.jpg",
+          "sha256": "1ea90dd1696484708aef7f6fb8766e0c0c8ca24f81783cd11a07e69f6adf9810",
+          "source_url": "https://images.xiecdn.com/bqgcd/4tzrt138e1ssp9z3joaigojsww25ce2v.JPG!bac",
+          "source_page": "https://bqgcd.sooxie.com/detail/2540499",
+          "processing": "工厂来源原生照片，未AI修改；按款色目视核对"
+        },
+        {
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9507/工厂来源原图_4.jpg",
+          "sha256": "ee66ec520cff043c9d67759a6462159508d836e68faa62456497b73412ef6f72",
+          "source_url": "https://images.xiecdn.com/bqgcd/i0lcogout6hgcs8o26bq21cojh5g1vjw.JPG!bac",
+          "source_page": "https://bqgcd.sooxie.com/detail/2540499",
+          "processing": "工厂来源原生照片，未AI修改；按款色目视核对"
+        },
+        {
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9507/工厂来源原图_5.jpg",
+          "sha256": "d189d4d4b9547a844c147877e72cc13dd039ed9801e6a1f4c9251172def001e3",
+          "source_url": "https://images.xiecdn.com/bqgcd/t5o1hauaps5g8lf54e247e279ilwcxe3.JPG!bac",
+          "source_page": "https://bqgcd.sooxie.com/detail/2540499",
+          "processing": "工厂来源原生照片，未AI修改；按款色目视核对"
+        }
+      ],
+      "image_selection_state": "FACTORY_ORIGINAL_SELECTED",
+      "title_current": "秋冬加绒棉鞋男款套脚休闲鞋ZX9507",
+      "verified_sku_count": 20
     }
   ],
-  "source_authority": "用户确认所有产品从搜鞋网贝强工厂店拿货，缺项先从该店对应真实款式补"
+  "source_authority": "用户确认所有产品从搜鞋网贝强工厂店拿货，缺项先从该店对应真实款式补",
+  "material_judgment_authority": {
+    "date": "2026-10-15",
+    "user_instruction": "请继续跑通，根据图片自行确认材料就好",
+    "rule": "优先来源及单款档案，图片判断记为非成分实测；通用织物、人造短毛绒及塑胶可按可见结构填写，不认定羊毛真皮或精确成分"
+  },
+  "size_guide_authority": {
+    "date": "2026-10-15",
+    "user_instruction": "我们这是标准鞋码，按标准做就好了",
+    "scope": [
+      "ZX9002",
+      "ZX2116",
+      "ZX9507"
+    ],
+    "basis": "沿原店38=24cm至45=27.5cm的脚长选码指南，每码递增0.5cm，46=28cm、47=28.5cm；用户确认标准码，不作为实测鞋内长"
+  },
+  "execution_summary": {
+    "created_total": 7,
+    "on_sale_audit_passed": 4,
+    "warehouse_duplicate_guard": 3,
+    "on_sale_sku_count": 72,
+    "evidence_reference": ".local/evidence/cotton-final-readback.json",
+    "buyer_visual_qa": "PENDING_BROWSER_RUNTIME_MISSING_COMPONENT"
+  }
 }
