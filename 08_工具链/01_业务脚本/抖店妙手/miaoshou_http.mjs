@@ -1,6 +1,11 @@
 import https from 'node:https';
+import {mkdir, readFile, rename, writeFile} from 'node:fs/promises';
+import {dirname} from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {randomUUID} from 'node:crypto';
 
 const ORIGIN = 'https://v2-dd.chengji-inc.com';
+const DEFAULT_SESSION_PATH = fileURLToPath(new URL('./.local/session.json', import.meta.url));
 const READ_ENDPOINTS = Object.freeze({
   importFiles: {method: 'POST', path: '/api/v2/move/import/getImportFileList'},
   categories: {method: 'GET', path: '/api/v2/product/batch/getProductCateTree'},
@@ -15,18 +20,34 @@ export class MiaoshouError extends Error {
   }
 }
 
-// Use the user's existing, authorized session. Never print or persist it here.
+// Use the user's existing, authorized session. Persistence is explicit and local.
 // There is deliberately no arbitrary URL, write endpoint, or automatic login.
 export class MiaoshouHttp {
   #cookie;
-  constructor({cookie = process.env.MIAOSHOU_COOKIE, timeoutMs = 15000} = {}) {
-    if (!cookie || /[\r\n]/.test(cookie)) throw new Error('A valid in-memory MIAOSHOU_COOKIE is required');
+  constructor({cookie, timeoutMs = 15000} = {}) {
+    if (!cookie || /[\r\n]/.test(cookie)) throw new Error('A valid Miaoshou cookie is required');
     if (!Number.isFinite(timeoutMs) || timeoutMs <= 0) throw new Error('Invalid timeoutMs');
     this.#cookie = cookie;
     this.timeoutMs = timeoutMs;
   }
 
   clearSession() { this.#cookie = ''; }
+
+  static async fromSavedSession({sessionPath = DEFAULT_SESSION_PATH, ...options} = {}) {
+    const saved = JSON.parse(await readFile(sessionPath, 'utf8'));
+    if (saved.schemaVersion !== 1 || saved.origin !== ORIGIN) throw new Error('Unrecognized saved Miaoshou session');
+    return new MiaoshouHttp({...options, cookie: saved.cookie});
+  }
+
+  async saveSession({sessionPath = DEFAULT_SESSION_PATH} = {}) {
+    if (!this.#cookie) throw new Error('Session cleared');
+    await mkdir(dirname(sessionPath), {recursive: true});
+    const savedAt = new Date().toISOString();
+    const tempPath = `${sessionPath}.${randomUUID()}.tmp`;
+    await writeFile(tempPath, JSON.stringify({schemaVersion: 1, origin: ORIGIN, savedAt, cookie: this.#cookie}) + '\n', {mode: 0o600});
+    await rename(tempPath, sessionPath);
+    return {sessionPath, savedAt};
+  }
 
   async #read(endpoint, params = {}) {
     if (!this.#cookie) throw new Error('Session cleared');

@@ -8,9 +8,9 @@
 - `POST /api/v2/move/import/getImportFileList`，表单 `pageNo=1&pageSize=10`。匿名 HTTP 返回 `result=fail, code=50001`；当前授权会话的独立 HTTP 返回 `result=success, data={importTaskList:[], importTaskTotal:0}`，与网页一致。
 - `GET /api/v2/product/batch/getProductCateTree` 无请求体。当前会话独立 HTTP 成功，返回按类目 ID 索引的对象 `productCateTree` 及数组 `recentCategoryList`。
 - 独立 HTTP 的上述查询未携带网页 `bx-v`、`deviceId`、`page-url` 等头，未关闭 TLS 校验，未重试或规避平台检查。这仅证明两项已测查询，不外推所有接口。
-- 会话采用网页当前已有认证 Cookie。凭证没有写入本目录或公开仓库；调用器接收内存参数或环境变量，不自动采集、打印、持久化或刷新凭证。会话过期须正常登录；遇平台拒绝停止，不自动重放写请求。
+- 会话采用网页当前已有认证 Cookie。负责人于2026-10-15明确要求本机持久化，现保存在本目录 `.local/session.json`，由目录内 `.gitignore` 排除。它是本机 JSON 会话文件，不作额外加密，不打印或推送；会话过期须正常续登并重新保存，遇平台拒绝停止，不自动重放写请求。
 
-调用器：[miaoshou_http.mjs](miaoshou_http.mjs)。导入 `MiaoshouHttp`，以受控内存中的 `cookie` 实例化，再调用 `listImportFiles()` 或 `getCategories()`。`clearSession()` 清除实例引用。该模块只允许两项已测查询，没有通用 URL 透传或商品写入方法。
+调用器：[miaoshou_http.mjs](miaoshou_http.mjs)。后续使用 `await MiaoshouHttp.fromSavedSession()` 加载本机已保存会话，再调用 `listImportFiles()` 或 `getCategories()`，无需每轮打开浏览器。更新会话后调用 `saveSession()`；`clearSession()` 仅清除实例引用，不删除已保存文件。该模块只允许两项已测查询，没有通用 URL 透传或商品写入方法。
 
 ## 从实际页面代码学到、尚未执行的写入结构
 
