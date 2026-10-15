@@ -20,7 +20,7 @@ load,save,sha,rel,now=shared.load,shared.save,shared.sha,shared.rel,shared.now
 CATALOG=ROOT/'99_临时区/路崎995/当前目录/catalog.json'
 COLORS={'Black':('Black','SKU_Black'),'Beige Brown':('Black Khaki','SKU_BlackKhaki'),'Tan':('Earth Yellow','M1')}
 FIELDS=['catId','icbuCatProp','saleProp','sku','productTitle','scImages','pkgMeasure','pkgWeight','ladderPeriod','priceUnit','shippingTemplate','ladderPrice','saleType','scPrice','minOrderQuantity','productDescType','detailImage','textDesc','companyImage','companyDesc','companyFaqDesc','logisticsProperty']
-SUPPORTED_STYLES=('995','2576','1712','2418','868','822','2579','2575','2505','931','02412','0922','923','323','909','1628','2772','2132','9705','1680','0323F','117-1','2509','026','02505','2550','02503')
+SUPPORTED_STYLES=('995','2576','1712','2418','868','822','2579','2575','2505','931','02412','0922','923','323','909','1628','2772','2132','9705','1680','0323F','117-1','2509','026','02505','2550','02503','K502','2539')
 
 
 def configure(style):
@@ -92,7 +92,16 @@ def prepare():
     catalog=load(CATALOG);assert catalog['complete'] and len(catalog['products'])==catalog['unique_ids']==catalog['total_item']
     registry=load(REG);sources={s['id']:s for s in registry['sources']};listings={l['id']:l for l in registry['listings']}
     assert not any(p.get('red_model')==MODEL for p in catalog['products'])
-    assert not any(sources.get(listings.get(str(p['id']),{}).get('bound_source_id'),{}).get('url','').rstrip('/')==facts['source'] for p in catalog['products']), 'Same source already bound; use existing ID instead'
+    assert not any(l.get('model')==MODEL for l in registry['listings']), 'Model already recorded locally; reconcile exact ID rather than create'
+    source_urls={facts['source']}|{v['source_url'] for v in PROFILE['buyer_colours'] if v.get('source_url')}
+    for v in PROFILE['buyer_colours']:
+        if not v.get('source_url'):continue
+        variant=next(x for x in facts['variant_sources'] if x['source']==v['source_url'])
+        assert urlparse(variant['source']).hostname=='luqi.sooxie.com' and facts['source_EU_by_color'][v['supplier_key']]==variant['source_EU_by_color'][v['source_colour_key']]
+        observed=load(ROOT/variant['current_source_evidence']);assert observed['source']==variant['source'] and observed['sha256']==variant['source_HTML_sha256']
+        vi=ROOT/variant['current_image_index'];assert sha(vi)==variant['current_image_index_sha256'] and load(vi)['source']==variant['source']
+    assert not any(sources.get(listings.get(str(p['id']),{}).get('bound_source_id'),{}).get('url','').rstrip('/') in source_urls for p in catalog['products']), 'Same source already bound; use existing ID instead'
+    assert not any(sources.get(l.get('bound_source_id'),{}).get('url','').rstrip('/') in source_urls or any(route.get('source','').rstrip('/') in source_urls for route in l.get('source_routes_by_color',{}).values()) for l in registry['listings']), 'Source already bound in current registry, including creations after catalog snapshot'
     response=load(FOLDER/(SCHEMA_NAME+'.json'));schema=E.fromstring(response['data']);schema_file=FOLDER/(SCHEMA_NAME+'.xml');assert E.tostring(schema)==E.tostring(E.parse(schema_file).getroot())
     root=E.Element('itemSchema');defs={f.get('id'):f for f in schema.findall('./field')}
     for fid in FIELDS:root.append(E.Element('field',id=fid,type=defs[fid].get('type')))
@@ -243,7 +252,15 @@ def sync():
     product['classification']={**product.get('classification',{}),'local_intent_candidates':PROFILE['local_intent'],'state':'REAL_SOURCE_PHOTOS_AND_CURRENT_SCHEMA_REVIEWED','platform_category_ids':[CATEGORY],'platform_category_state':'CURRENT_EXACT_ID_API_OBSERVED'}
     source['latest_price_review']={'observed_at':facts['observed_at'],'price_cny':facts['source_price_cny'],'evidence':rel(FOLDER/'当前来源与色码核对.json'),'scope':'公开来源当次标价；非实物库存、已采购或固定报价。'}
     source['evidence']=list(dict.fromkeys(source.get('evidence',[])+[rel(FOLDER/'当前来源与色码核对.json')]))
-    routes={c:{'source':facts['source'],'source_id':sid,'source_artno':next(v.get('supplier_artno',STYLE)for v in PROFILE['buyer_colours']if v['buyer']==c),'supplier_color':next(v['supplier_label'] for v in PROFILE['buyer_colours'] if v['buyer']==c),'EU':EU_BY_COLOR[c]} for c in COLORS}
+    routes={}
+    for v in PROFILE['buyer_colours']:
+        url=v.get('source_url',facts['source']);route_source=next(s for s in registry['sources'] if s['url'].rstrip('/')==url);route_id=route_source['id'];colour=v['buyer']
+        routes[colour]={'source':url,'source_id':route_id,'source_artno':v.get('supplier_artno',STYLE),'supplier_color':v['supplier_label'],'EU':EU_BY_COLOR[colour]}
+        if url!=facts['source']:
+            variant=next(x for x in facts['variant_sources'] if x['source']==url)
+            route_source['latest_price_review']={'observed_at':variant['observed_at'],'price_cny':variant['source_price_cny'],'evidence':variant['current_source_evidence'],'scope':'Exact variant public reference cost, not stock or fixed quotation.'}
+            route_source['evidence']=list(dict.fromkeys(route_source.get('evidence',[])+[variant['current_source_evidence'],rel(FOLDER/'当前来源与色码核对.json')]))
+            product['related_source_ids']=list(dict.fromkeys(product.get('related_source_ids',[])+[route_id]))
     assert not any(l['model']==MODEL and l['id']!=pid for l in registry['listings']), 'Model already has another ID; reconcile rather than append'
     listing=next((l for l in registry['listings'] if l['id']==pid),None)
     if listing is None:
@@ -257,6 +274,8 @@ def sync():
     listing.setdefault('optimization',{})['real_source_creation']={'state':report['state'],'source_id':sid,'source_artno':STYLE,'at':report['at'],'evidence':evidence,'inventory_write':'OMITTED','next_action':'Only formal readback and exact field/score diagnosis; never repeat create or upload successful assets.'}
     listing['evidence']=list(dict.fromkeys(listing['evidence']+evidence));product['evidence']=list(dict.fromkeys(product.get('evidence',[])+evidence));product.setdefault('local_assets',{}).update(current_fields_file=rel(canonical/'formal_get.json'),source_fact_file=rel(FOLDER/'当前来源与色码核对.json'),asset_roots=[rel(FOLDER/'05_AI候选')],state=report['state']);original_root=ROOT/PROFILE['source_original_root'] if PROFILE.get('source_original_root') else FOLDER/PROFILE.get('original_dir','01_产品来源原图');assert original_root.is_dir();product['raw_packages']=[rel(original_root)];product['next_action']=f'仅回读原ID审核、全字段与实际评分；不重复上传或创建{STYLE}，其他路崎款独立推进。'
     product['source_routes_by_color']=routes;listing['source_routes_by_color']=copy.deepcopy(routes)
+    for root in PROFILE.get('additional_original_roots',[]):
+        path=ROOT/root;assert path.is_dir();product['raw_packages']=list(dict.fromkeys(product['raw_packages']+[rel(path)]))
     accepted=report['state'] in ('FORMAL_FIELDS_SCORE_PASS','FORMAL_FIELDS_PASS_PENDING_SCORE','FORMAL_FIELDS_PASS_SCORE_BELOW_TARGET')
     if accepted:
         listing['bound_source_id']=sid;listing['source_relation']='REAL_SOURCE_FORMAL_FIELDS_PASS';product.update(source_state='ADOPTED',adopted_source_id=sid,candidate_source_ids=[])

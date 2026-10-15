@@ -1,9 +1,9 @@
 {
   "style": "2539",
   "source": "https://luqi.sooxie.com/detail/2307806",
-  "observed_at": "2026-10-13T23:10:12.265092+00:00",
+  "observed_at": "2026-10-15T12:33:21.133602+00:00",
   "reviewed_at": "2026-10-13T23:24:27.622938+00:00",
-  "source_HTML_sha256": "89b989637d403420930d826392e3e2aa22627dfb133609da7aa58dd0911e3b64",
+  "source_HTML_sha256": "3a374638f70a7bd082c607541e059cff35428694f3641ff997a61114833ea89a",
   "source_price_cny": "65.00",
   "source_EU_by_color": {
     "Grey": [
@@ -89,35 +89,37 @@
     "No certified slip resistance, waterproof rating, cold-temperature rating or medical effect.",
     "No conversion of appearance to leather composition or numerical stack/drop."
   ],
-  "title_draft": "Mens High Top Lace Up Casual Boots with Mesh Panels and TPR Outsole for Wholesale Footwear Buyers",
+  "title_draft": "Mens Lace Up Outdoor Ankle Boots Mesh Panel Upper TPR Lug Sole Grey Military Green Wholesale EU 39-47",
   "product_highlights_draft": [
-    "Ankle-height profile: layered side panels and a padded collar create a structured casual boot silhouette.",
-    "Lace guide construction: metal upper guides and lower webbing guides hold the crossed laces; rear pull loops are shown in the actual photographs.",
-    "TPR outsole: the separate underside image shows perimeter lugs and opposing chevron sections, helping buyers inspect the actual sole design.",
-    "Two current colourways: Military Green and Grey with burgundy accents are listed in EU39–47 for wholesale assortments."
+    "Layered mesh-panel upper: Angular stitched overlays frame the forefoot and side mesh sections, with a contrasting black toe overlay.",
+    "Lace-up ankle profile: Metal upper lace guides and lower fabric loops hold the crossed laces along the front panel.",
+    "Padded collar and rear loop: The light-grey ankle rim and fabric pull loop are visible in the close-up and worn photographs.",
+    "TPR outsole pattern: Opposing chevron sections and pronounced perimeter lugs define the separate underside view.",
+    "Two colours in EU 39–47: Grey with burgundy accents and Military Green cover nine EU sizes each for wholesale assortment planning."
   ],
   "image_role_plan": {
-    "M1": "Original1 Grey single-shoe view, approved cleanup if needed",
-    "M2": "Original7 actual upper/mesh close-up",
-    "M3": "Original9 actual underside, clean supplier text without changing tread",
-    "M4": "Original5 actual two-colour profiles with EU39–47 current options",
-    "M5": "Original3 opening and collar in actual worn scene",
-    "M6": "Approved company overview",
-    "D1": "Original15 Grey rear/side worn detail",
-    "D2": "Original8 actual interior opening detail",
-    "D3": "Original13 Military Green side construction pair",
-    "D4": "Current EU assortment and ordering information, no invented size conversion"
+    "M1": "actual01 Grey single on rocks unchanged and Grey SKU",
+    "M2": "actual12 Military Green side worn/lacing unchanged",
+    "M3": "actual15 Grey rear worn unchanged",
+    "M4": "actual13 Military Green pair worn unchanged and matching SKU",
+    "M5": "actual17 Grey pair worn unchanged",
+    "D1": "actual07 mesh/overlay English close-up",
+    "D2": "actual08 padded rim English close-up",
+    "D3": "actual09 TPR sole English close-up",
+    "D4": "two actual colour panels and current18EU assortment"
   },
   "image_review": "SOURCE_CONTACT_AND_PRIMARY_MATERIAL_PANEL_REVIEW_ONLY",
   "deduplication": "Bounded visible comparison: different mesh/panel boundaries and tread from995 low-cut oval-sidewall,2579 shield/wave lower-upper andHR046AR299 leather-effect ankleprofile. Current fullcatalog/source-family dedup remains pending.",
-  "category_review": "Resolve current eligible leaf from actual casual-boot construction and source style; no misclassification to bypass an explicit operating-category rejection.",
+  "category_review": "Other Shoes32299 leaf under current allowed root322, source-supported outdoor/casual construction; no business-root change.",
   "company_bundle": "Approved V8 six company images, company intro and general eight FAQs.",
-  "state": "LOCAL_SOURCE_FACTS_DRAFT_NO_CREATE",
-  "publication_sequence": "Do not publish until HR current-target completion; independent source preparation only.",
+  "state": "CREATED_REVIEWING",
+  "publication_sequence": "HR original-target replacement complete; proceed under current API batch policy.",
   "pricing_draft": {
+    "source_cny": "65.00",
     "fx": "6.6837",
     "fx_source": "https://www.boc.cn/sourcedb/whpj/",
     "fx_observed": "2026-10-13 10:57:20",
+    "rounding": "ROUND_CEILING_TO_USD_CENT",
     "tiers": [
       [
         2,
@@ -132,6 +134,57 @@
         "12.65"
       ]
     ],
-    "freight_service_tax": "Order-specific; not net profit or market-lowest proof."
-  }
+    "freight_service_tax": "Cost markup is not net profit; packing, tax, freight and service costs assessed per order."
+  },
+  "full_original_fact_indices_actually_viewed": [
+    1,
+    4,
+    7,
+    8,
+    9,
+    12,
+    13,
+    15,
+    17
+  ],
+  "publish_profile": {
+    "category_id": 32299,
+    "schema_name": "当前其他鞋类Schema",
+    "buyer_colours": [
+      {
+        "buyer": "Grey",
+        "supplier_key": "Grey",
+        "supplier_label": "灰色",
+        "image_role": "M1"
+      },
+      {
+        "buyer": "Military Green",
+        "supplier_key": "Military Green",
+        "supplier_label": "军绿",
+        "image_role": "M4"
+      }
+    ],
+    "category_attributes": {
+      "Upper Material": [
+        "Mesh"
+      ],
+      "Outsole Material": [
+        "TPR"
+      ]
+    },
+    "local_intent": [
+      "网面拼接系带踝帮TPR底户外休闲靴"
+    ]
+  },
+  "title_bytes": 101,
+  "publication": {
+    "product_id": "1601981350440",
+    "audit": "new",
+    "display": "N",
+    "actual_score": null,
+    "formal_verification": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2539准备/verification.json",
+    "local_sync_at": "2026-10-15T12:55:24.664655+00:00",
+    "no_replayed_create": true
+  },
+  "next_action": "仅回读和诊断原ID；不重复创建或重传成功素材。"
 }

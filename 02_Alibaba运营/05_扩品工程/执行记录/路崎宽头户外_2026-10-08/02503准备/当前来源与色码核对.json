@@ -81,7 +81,7 @@
     "Nativegalleryreview/currentSchema/singlecreate/formalfields/actualscore"
   ],
   "product_id": null,
-  "state": "CURRENT_SOURCE_FACTS_REVIEWED_IMAGE_PREPARATION_NOT_CREATED",
+  "state": "CREATED_FORMAL_FIELDS_SCORE_PASS",
   "source_color_aliases": {
     "Black": "黑色",
     "Tan": "黄色"
@@ -161,5 +161,15 @@
     "positive_route": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2509准备/create_receipt.json",
     "scope": "No businessrootchange; nounsupportedMidsole/Lining/Closurefields copied."
   },
-  "hero_selection": "Actual08singleBlackwhiteisolateM1/SKU; actual10Tan singleM4/SKU unchanged; actual23TanwearM3 and14BlackfrontwearM5 unchanged. Detailsactual08meshforefoot,10Tanquarter,17Blackheel/soleedge, two-colourEUmap."
+  "hero_selection": "Actual08singleBlackwhiteisolateM1/SKU; actual10Tan singleM4/SKU unchanged; actual23TanwearM3 and14BlackfrontwearM5 unchanged. Detailsactual08meshforefoot,10Tanquarter,17Blackheel/soleedge, two-colourEUmap.",
+  "publication": {
+    "product_id": "1601981270699",
+    "audit": "approved",
+    "display": "Y",
+    "actual_score": "5.00",
+    "formal_verification": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/02503准备/verification.json",
+    "local_sync_at": "2026-10-15T12:14:41.315349+00:00",
+    "no_replayed_create": true
+  },
+  "next_action": "该款正式字段、评分与来源已通过；继续其他款，不重复创建。"
 }

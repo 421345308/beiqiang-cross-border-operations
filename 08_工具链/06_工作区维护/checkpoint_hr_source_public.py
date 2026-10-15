@@ -19,7 +19,7 @@ HR = '02_Alibaba运营/05_扩品工程/执行记录/HR实源替换'
 FACTORY = '02_Alibaba运营/06_图片与检查记录/共享工厂详情'
 REG = '02_Alibaba运营/05_扩品工程/数据/产品与链接台账.json'
 LUQI = '02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08'
-CURRENT_LUQI_STYLES=('995','2576','1712','2418','868','822','2579','2575','2505','931','02412','0922','923','323','909','1628','2772','2132','9705','1680','0323F','117-1','2509','026','02505','2550','02503')
+CURRENT_LUQI_STYLES=('995','2576','1712','2418','868','822','2579','2575','2505','931','02412','0922','923','323','909','1628','2772','2132','9705','1680','0323F','117-1','2509','026','02505','2550','02503','K502','2539')
 PRIVATE = {'owner_member','owner_member_display_name','owner_member_id',
            'access_token','refresh_token','app_secret','client_secret',
            'chatToken','buyer_email','buyer_phone','buyer_address',
@@ -119,6 +119,10 @@ def main():
     paths += ['08_工具链/01_业务脚本/国际站扩品/repair_luqi_price_rounding.py']
     paths += ['08_工具链/01_业务脚本/国际站扩品/'+name for name in ('merge_reviewed_luqi_0323_family.py','review_luqi_category_routes.py')]
     paths += [LUQI+'/0323F准备/家族归并.json']
+    paths += ['08_工具链/01_业务脚本/国际站扩品/merge_reviewed_luqi_k502_family.py']
+    paths += [LUQI+'/K502准备/'+name for name in ('家族来源与页面计划.json','家族归并.json')]
+    paths += [LUQI+'/2520准备/'+name for name in ('当前来源刷新核对.json','标识形状核对.json')]
+    paths += [LUQI+'/'+style+'准备/'+name for style in ('K502','K502D') for name in ('当前来源刷新核对.json','当前家族来源图像索引.json')]
     # The JSON receipt already retains the exact Schema string. Its raw XML
     # companion stays local, preserving platform whitespace without Git noise.
     paths += [p.relative_to(ROOT).as_posix() for p in (ROOT/LUQI/'质量复核_2026-10-09/类目适配核对').glob('*.json')]
@@ -126,6 +130,10 @@ def main():
     paths += [LUQI+'/1628准备/标识形状比较/当前形状核对.json']
     for style in CURRENT_LUQI_STYLES:
         prefix=LUQI+'/'+style+'准备'
+        facts_file=ROOT/prefix/'当前来源与色码核对.json'
+        if facts_file.exists():
+            facts=load(facts_file.relative_to(ROOT).as_posix());index_name=facts.get('publish_profile',{}).get('source_index','01_产品来源原图/当前来源图像索引.json')
+            if (ROOT/prefix/index_name).is_file():paths.append(prefix+'/'+index_name)
         paths += [p.relative_to(ROOT).as_posix() for p in (ROOT/prefix).glob('*.json') if p.name in ('当前来源与色码核对.json','当前来源刷新核对.json','物流标签回读诊断.json','prepared.json','manifest.json','图片银行公开映射.json','create_once.json','create_receipt.json','verification.json','score.json','双改核验.json','来源款式近似候选.json','发布前差异化审查.json')]
         paths += [p.relative_to(ROOT).as_posix() for p in (ROOT/prefix/'05_AI候选').glob('*.json')]
         paths += [p.relative_to(ROOT).as_posix() for p in (ROOT/prefix/'价格取整修正').glob('*.json') if p.name in ('prepared.json','manifest.json','update_once.json','update_receipt.json','current_expected_overlay.json','verification.json')]
@@ -281,6 +289,12 @@ def main():
         assert family_proof['state']=='ONE_CANONICAL_PRODUCT_AND_CURRENT_DOSSIER' and 'LQ-0323-1' in lp['LQ-0323F']['aliases']
         assert not any(l['product_id']=='LQ-0323-1' for l in merged['listings'])
         merged['products']=[p for p in merged['products'] if p['id']!='LQ-0323-1']
+    if 'LQ-K502D' not in lp:
+        family_proof=load(LUQI+'/K502准备/家族归并.json');accepted=load(LUQI+'/K502准备/verification.json')
+        assert accepted['id']==family_proof['product_id'] and accepted['state']=='FORMAL_FIELDS_SCORE_PASS' and not accepted['failed'] and str(accepted['actual_score'])=='5.00'
+        assert family_proof['state']=='ONE_CANONICAL_PRODUCT_AND_CURRENT_DOSSIER' and 'LQ-K502D' in lp['LQ-K502']['aliases']
+        assert not any(l['product_id']=='LQ-K502D' for l in merged['listings'])
+        merged['products']=[p for p in merged['products'] if p['id']!='LQ-K502D']
     for listing in merged['listings']:
         pid = listing['id']
         if pid in hr_ids:
@@ -327,6 +341,14 @@ def main():
         expected_sources={ll[known]['model']:load(LUQI+'/'+ll[known]['model'].removeprefix('BQ-LQ')+'准备/当前来源与色码核对.json')['source'] for known in new_luqi_ids}
         assert source['url']==expected_sources[ll[pid]['model']]
         merged['sources']=[s for s in merged['sources'] if s['id']!=source_id]+[copy.deepcopy(source)]
+        facts=load(LUQI+'/'+ll[pid]['model'].removeprefix('BQ-LQ')+'准备/当前来源与色码核对.json')
+        variants={v['source']:v for v in facts.get('variant_sources',[])}
+        for route in ll[pid].get('source_routes_by_color',{}).values():
+            if route['source_id']==source_id:continue
+            assert route['source'] in variants and route['source_artno']==variants[route['source']]['artno']
+            alternate=next(s for s in live['sources'] if s['id']==route['source_id']);assert alternate['url']==route['source']
+            assert alternate['latest_price_review']['price_cny']==variants[route['source']]['source_price_cny']
+            merged['sources']=[s for s in merged['sources'] if s['id']!=alternate['id']]+[copy.deepcopy(alternate)]
     task = next(x for x in live['workstreams'] if x['name']=='HR缺货源实款替换')
     merged['workstreams'] = [x for x in merged['workstreams'] if x['name']!=task['name']] + [copy.deepcopy(task)]
     luqi_work=next(x for x in live['workstreams'] if x['name']=='路崎宽头/户外全分类')
@@ -345,7 +367,7 @@ def main():
     assert not any(pid in error for pid in hr_ids for error in errors), errors
     current_views=workspace.build(merged)
     retired_views={path.as_posix() for path in workspace.build(baseline) if path not in current_views}
-    assert all(path.endswith(('/LQ-2583/README.md','/LQ-0323-1/README.md')) for path in retired_views), 'Only the exact merged candidate generated entry may be removed'
+    assert all(path.endswith(('/LQ-2583/README.md','/LQ-0323-1/README.md','/LQ-K502D/README.md')) for path in retired_views), 'Only the exact merged candidate generated entry may be removed'
     retired_views.add('08_工具链/01_业务脚本/国际站扩品/publish_reviewed_luqi_995.py')
     for path, raw in current_views.items():
         relative = path.relative_to(ROOT) if path.is_absolute() else path

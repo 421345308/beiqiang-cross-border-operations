@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-10-15T05:51:20.089198+00:00",
+  "observed_at": "2026-10-15T12:53:27.958182+00:00",
   "scope": "Current source/identity/individualproductreview issues only. Owner-approved broadercategory route successful for2509/026; no businessrootchange, no permissionblock.",
   "active": {
     "2569": {
@@ -7,32 +7,17 @@
       "issue": "",
       "evidence": []
     },
-    "02505": {
-      "state": "CATEGORY_ROUTE_AND_PRODUCT_REVIEW_PENDING",
-      "issue": "负责人2026-10-15允许适合的运动鞋/其他鞋类；2509的32299正式创建已成功。此款继续核当前Schema、实款身份与完整素材，不再保留旧经营类目阻塞。",
-      "evidence": [
-        "2509准备/经营类目拒绝诊断.json"
-      ]
-    },
-    "02503": {
-      "state": "CATEGORY_ROUTE_AND_PRODUCT_REVIEW_PENDING",
-      "issue": "负责人2026-10-15允许适合的运动鞋/其他鞋类；2509的32299正式创建已成功。此款继续核当前Schema、实款身份与完整素材，不再保留旧经营类目阻塞。",
-      "evidence": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/02503准备/当前来源与色码核对.json"
-      ],
-      "identity_note": "Originalphysicalsideword/mark identity andnativegallery review remainuncompleted; do not erasephysicalmark or assumeauthorisation."
-    },
-    "2550": {
-      "state": "CATEGORY_ROUTE_AND_PRODUCT_REVIEW_PENDING",
-      "issue": "负责人2026-10-15允许适合的运动鞋/其他鞋类；2509的32299正式创建已成功。此款继续核当前Schema、实款身份与完整素材，不再保留旧经营类目阻塞。",
-      "evidence": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2550准备/当前来源与色码核对.json"
-      ]
-    },
     "020": {
       "state": "HOLD_WITHDRAWN_SOURCE",
       "issue": "WITHDRAWAL_NOTICE_REQUIRES_CURRENT_VALID_ENTRY",
       "evidence": []
+    },
+    "2520": {
+      "state": "HOLD_VISIBLE_MARK_IDENTITY",
+      "issue": "实际鞋跟S形标记与公开品牌图形明显近似，未确认授权或可供无标实款；不抹标后发品。",
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2520准备/标识形状核对.json"
+      ]
     }
   },
   "current_queue": "质量复核_2026-10-09/全分类处理队列.json"
