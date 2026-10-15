@@ -1,61 +1,24 @@
 {
-  "observed_at": "2026-10-15T17:12:27.956516+00:00",
+  "observed_at": "2026-10-15T17:49:38.506446+00:00",
   "scope": "Current source/identity/individualproductreview issues only. Owner-approved broadercategory route successful for2509/026; no businessrootchange, no permissionblock.",
   "active": {
     "2569": {
-      "state": "PARTIAL_SOURCE_COLOURS_PENDING",
-      "published_colour_scope": [
-        "Beige"
-      ],
-      "published_EU_combinations": 13,
+      "state": "COLOUR_EXPANSION_PENDING",
       "product_id": "1601981563053",
-      "publication_state": "REVIEWING",
-      "deferred_source_options": {
-        "Black": [
-          36,
-          37,
-          38,
-          39,
-          40,
-          41,
-          42,
-          43,
-          44,
-          45,
-          46,
-          47,
-          48
-        ],
-        "Green": [
-          36,
-          37,
-          38,
-          39,
-          40,
-          41,
-          42,
-          43,
-          44,
-          45,
-          46,
-          47,
-          48
-        ],
-        "Pink": [
-          36,
-          37,
-          38,
-          39,
-          40,
-          41,
-          42
-        ]
-      },
-      "deferred_EU_combinations": 33,
-      "issue": "Selected colour scope only; other colours not published. Excluded conflicting underside photos not adopted.",
+      "last_accepted_EU": 13,
+      "target_EU": 46,
+      "additional_EU": 33,
+      "source_photos": "Four actual colours independently reviewed; no recolouring.",
       "evidence": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2569准备/当前来源与色码核对.json",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2569准备/身份一致性核验.json"
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2569准备/家族扩色/家族来源与页面计划.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2569准备/家族扩色/补充来源身份核验.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2569准备/家族扩色/图组验收.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2569准备/家族扩色/图片银行公开映射.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2569准备/家族扩色/prepared.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2569准备/家族扩色/manifest.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2569准备/家族扩色/update_once.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2569准备/家族扩色/update_receipt.json",
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2569准备/家族扩色/verification.json"
       ]
     },
     "2520": {

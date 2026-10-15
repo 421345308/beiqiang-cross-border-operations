@@ -126,6 +126,11 @@ def main():
     paths += [LUQI+'/ST-117准备/'+name for name in ('家族来源与页面计划.json','测试页来源刷新核对.json')]
     paths += [LUQI+'/2569准备/'+name for name in ('当前来源与色码核对.json','当前来源刷新核对.json','身份一致性核验.json','原图分辨率核对.json','商品预检与图组策略.json','图片生成与逐张核验.json') if (ROOT/LUQI/'2569准备'/name).is_file()]
     paths += [LUQI+'/2569准备/01_产品来源原图/当前来源图像索引.json']
+    paths += ['08_工具链/01_业务脚本/国际站扩品/expand_luqi_2569_colours.py']
+    paths += [LUQI+'/2569准备/01_产品来源原图/江上补充/当前来源图像索引.json']
+    expansion=ROOT/LUQI/'2569准备/家族扩色'
+    paths += [p.relative_to(ROOT).as_posix() for p in expansion.glob('*.json') if p.name in ('家族来源与页面计划.json','补充来源身份核验.json','图组验收.json','图组生成参数.json','图片银行公开映射.json','prepared.json','manifest.json','update_once.json','update_receipt.json','verification.json','score.json','当前状态.json','双改核验.json','当前素材映射.json','本地素材绑定核验.json')]
+    if (expansion/'payload.xml').is_file():paths.append((expansion/'payload.xml').relative_to(ROOT).as_posix())
     paths += [LUQI+'/'+style+'准备/'+name for style in ('K502','K502D') for name in ('当前来源刷新核对.json','当前家族来源图像索引.json')]
     # The JSON receipt already retains the exact Schema string. Its raw XML
     # companion stays local, preserving platform whitespace without Git noise.
@@ -284,6 +289,11 @@ def main():
             for key in ('source_state','adopted_source_id','candidate_source_ids','local_assets','material_role_review','family_color_expansion','source_routes_by_color','related_source_ids','next_action','notes','aliases','evidence','raw_packages','dossier_path','deferred_source_options'):
                 if key in lp[product['id']]:product[key]=copy.deepcopy(lp[product['id']][key])
             if product['id'] in {'LQ-'+style for style in CURRENT_LUQI_STYLES}:product['classification']=copy.deepcopy(lp[product['id']]['classification'])
+            if product['id']=='LQ-2569' and 'deferred_source_options' not in lp[product['id']]:
+                phase=lp[product['id']].get('family_color_expansion',{})
+                proof=load(LUQI+'/2569准备/家族扩色/verification.json')
+                assert phase['target_EU']==46 and proof['id']=='1601981563053' and proof['state'] in ('FORMAL_FIELDS_SCORE_PASS','FORMAL_FIELDS_PASS_PENDING_SCORE') and not proof['failed'] and proof['checks']['exact_46EU_pairs'] and proof['checks']['original_13_sku_ids_and_codes_preserved']
+                product.pop('deferred_source_options',None)
     family_phase=ll['1601976101204'].get('optimization',{}).get('family_color_expansion',{})
     if family_phase.get('state') in ('FORMAL_FIELDS_SCORE_PASS','FORMAL_FIELDS_PASS_PENDING_SCORE') and 'LQ-2583' not in lp:
         assert not any(l['product_id']=='LQ-2583' for l in merged['listings'])

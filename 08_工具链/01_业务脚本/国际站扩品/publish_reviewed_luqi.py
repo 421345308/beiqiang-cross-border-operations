@@ -356,6 +356,10 @@ def sync():
 
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('mode',choices=('schema','bank','prepare','create','verify','sync'));ap.add_argument('--style',required=True,choices=SUPPORTED_STYLES);ap.add_argument('--http-transport',choices=('urllib','native'),default='urllib',help='Existing official-client verified-TLS transport; no trust/proxy overrides or unknown write replay');args=ap.parse_args();configure(args.style)
+    family=None
+    if args.style=='2569' and args.mode in ('verify','sync') and (FOLDER/'家族扩色/update_once.json').exists():
+        family_spec=importlib.util.spec_from_file_location('current_2569_expansion',ROOT/'08_工具链/01_业务脚本/国际站扩品/expand_luqi_2569_colours.py');family=importlib.util.module_from_spec(family_spec);family_spec.loader.exec_module(family)
+        if args.mode=='sync':family.sync();return
     if args.mode=='prepare':prepare();return
     if args.mode=='sync':sync();return
     spec=importlib.util.spec_from_file_location('alibaba_client',ROOT/'.agents/skills/alibaba-openapi-operator/scripts/alibaba_openapi.py');client=importlib.util.module_from_spec(spec);spec.loader.exec_module(client);cfg=client.load_config(client.DEFAULT_CONFIG)
@@ -364,7 +368,7 @@ def main():
         result=read_only_call(client,cfg,'alibaba.icbu.product.schema.get',{'param_product_top_publish_request':{'cat_id':CATEGORY,'language':'en_US'}});assert result.get('data') and result.get('request_id');E.fromstring(result['data']);save(FOLDER/(SCHEMA_NAME+'.json'),result);(FOLDER/(SCHEMA_NAME+'.xml')).write_text(result['data'],encoding='utf8');print(STYLE,'CURRENT_SCHEMA_SAVED')
     elif args.mode=='bank':bank(client,cfg)
     elif args.mode=='create':create(client,cfg)
-    else:verify(client,cfg)
+    else:(family.verify if family is not None else verify)(client,cfg)
 
 
 if __name__=='__main__':main()

@@ -161,7 +161,7 @@
       "宽头低帮系带休闲户外鞋_米色先上"
     ]
   },
-  "state": "CREATED_REVIEWING",
+  "state": "CREATED_FORMAL_FIELDS_SCORE_PASS",
   "hero_selection": "Actual02singlecataloguehero;01unchangedBeigepairtopSKU;07rightwearcrop;13upperfrontpaircrop;12sideoutdoors. Details06actualroundlaces,02collarandpullstrip,12toe bumper,01singlecolour13EU. No underside proof from conflicting10.",
   "deferred_source_options": {
     "Black": [
@@ -213,12 +213,39 @@
   ],
   "publication": {
     "product_id": "1601981563053",
-    "audit": "new",
-    "display": "N",
-    "actual_score": null,
+    "audit": "approved",
+    "display": "Y",
+    "actual_score": "5.00",
     "formal_verification": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2569准备/verification.json",
-    "local_sync_at": "2026-10-15T17:12:29.870853+00:00",
+    "local_sync_at": "2026-10-15T17:22:01.838184+00:00",
     "no_replayed_create": true
   },
-  "next_action": "仅回读和诊断原ID；不重复创建或重传成功素材。 本款另有33EU颜色组合未发布，待清晰实图后仅扩原ID。"
+  "next_action": "新增三色33EU扩色仅回读原ID；米色13EU旧正式快照保留，目标46尚未验收；不重放写入。",
+  "current_family_plan": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2569准备/家族扩色/家族来源与页面计划.json",
+  "family_expansion": {
+    "state": "REVIEWING",
+    "at": "2026-10-15T17:48:00.564127+00:00",
+    "original_id": "1601981563053",
+    "target_EU": 46,
+    "existing13_sku_ids_preserved_in_payload": true,
+    "additional33": 33,
+    "no_new_product_id": true,
+    "evidence": [
+      "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2569准备/家族扩色/家族来源与页面计划.json",
+      "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2569准备/家族扩色/补充来源身份核验.json",
+      "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2569准备/家族扩色/图组验收.json",
+      "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2569准备/家族扩色/图片银行公开映射.json",
+      "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2569准备/家族扩色/prepared.json",
+      "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2569准备/家族扩色/manifest.json",
+      "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2569准备/家族扩色/update_once.json",
+      "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2569准备/家族扩色/update_receipt.json",
+      "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2569准备/家族扩色/verification.json"
+    ],
+    "next_action": "Only exact-ID verification/score and local sync; never replay update or create a second product."
+  },
+  "current_execution": {
+    "script": "08_工具链/01_业务脚本/国际站扩品/expand_luqi_2569_colours.py",
+    "directory": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2569准备/家族扩色",
+    "operation": "Existing-ID colour expansion pending; initial13 snapshot remains accepted"
+  }
 }

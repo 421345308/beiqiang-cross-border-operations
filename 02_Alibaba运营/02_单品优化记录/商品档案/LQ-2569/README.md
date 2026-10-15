@@ -2,7 +2,7 @@
 
 此页由唯一台账生成，是本款唯一资料入口；修改事实到下方唯一字段文件或台账，平台正式值到按ID保存的回读原件。原始包只读，候选/历史材料不当当前线上素材。
 
-来源状态：`CANDIDATE`。下一步：仅回读原ID审核、全字段与实际评分；不重复上传或创建2569，其他路崎款独立推进。
+来源状态：`ADOPTED`。下一步：新增三色33EU扩色仅回读原ID；米色13EU旧正式快照保留，目标46尚未验收；不重放写入。
 
 ## 当前资料与实物证据
 
@@ -12,7 +12,7 @@
 
 ## 采购来源（内部使用）
 
-- 候选未采用：[路崎鞋业工厂店 / 2569](https://luqi.sooxie.com/detail/2301941)
+- 已采用记录：[路崎鞋业工厂店 / 2569](https://luqi.sooxie.com/detail/2301941)
   - 保存的标价：CNY 59.00 / 双；原观察日期：2026-10-08T12:05:23.976263+00:00。采购数量、版本、包装、运税与当天可供条件逐单确认。
   - 供方店铺入口：[https://luqi.sooxie.com](https://luqi.sooxie.com)
   - 来源原件：[分类总清单.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/%E5%88%86%E7%B1%BB%E6%80%BB%E6%B8%85%E5%8D%95.json)
@@ -26,11 +26,11 @@
 | --- | --- | --- | --- |
 | Beige | 米色 / 2569 | 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48 | [2569](https://luqi.sooxie.com/detail/2301941) |
 
-### 来源有记录但尚未上架的颜色
+### 来源有记录但尚未验收上架的颜色
 
-下列33个EU组合尚未上架，不算作当前可售SKU；待清晰实图补齐后在本款原ID增补。
+下列33个EU组合尚未验收上架，不算作当前已验收SKU；只在本款原ID增补。待办：Supplementary actual colour photos reviewed; original-ID expansion awaits formal readback.。
 
-| 待补图颜色 | 尚未上架的EU尺码 |
+| 待完成颜色 | 尚未验收上架的EU尺码 |
 | --- | --- |
 | Black | 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48 |
 | Green | 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48 |
@@ -43,21 +43,29 @@
 ### BQ-LQ2569 · 1601981563053
 
 - 平台链接：[1601981563053](https://www.alibaba.com/product-detail/Unisex-Wide-Toe-Box-Lace-Up_1601981563053.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601981563053/formal_get.json)；UTC 2026-10-15T17:11:11.576304+00:00。
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601981563053/formal_get.json)；UTC 2026-10-15T17:20:40.136832+00:00。
 - 当前正式标题：Unisex Wide Toe Box Lace Up Casual Outdoor Shoes Synthetic Leather Upper Contrast Toe Bumper Beige Wholesale EU 36-48
-- 审核/展示：new / N；平台类目ID：32299。
+- 审核/展示：approved / Y；平台类目ID：32299。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
 - SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。
-- 本地平台图片缓存：待补；正式字段中的官方原URL已保留。
-- 本地同步状态：`REVIEWING`。
-- 本轮优化：`REVIEWING`；Only formal readback and exact field/score diagnosis; never repeat create or upload successful assets.
-  - 变更证据：[当前来源与色码核对.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/2569%E5%87%86%E5%A4%87/%E5%BD%93%E5%89%8D%E6%9D%A5%E6%BA%90%E4%B8%8E%E8%89%B2%E7%A0%81%E6%A0%B8%E5%AF%B9.json)
-  - 变更证据：[prepared.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/2569%E5%87%86%E5%A4%87/prepared.json)
-  - 变更证据：[manifest.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/2569%E5%87%86%E5%A4%87/manifest.json)
-  - 变更证据：[图片银行公开映射.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/2569%E5%87%86%E5%A4%87/%E5%9B%BE%E7%89%87%E9%93%B6%E8%A1%8C%E5%85%AC%E5%BC%80%E6%98%A0%E5%B0%84.json)
-  - 变更证据：[create_once.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/2569%E5%87%86%E5%A4%87/create_once.json)
-  - 变更证据：[create_receipt.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/2569%E5%87%86%E5%A4%87/create_receipt.json)
-  - 变更证据：[verification.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/2569%E5%87%86%E5%A4%87/verification.json)
+- 本地平台素材：[唯一素材索引](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90%E6%B8%85%E5%8D%95.json)；图片按内容哈希保存一份，图库/详情/SKU通过索引引用。
+  - M1：[本地原图](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/2569%E5%87%86%E5%A4%87/05_AI%E5%80%99%E9%80%89/Beige13_M1.png) · 1254×1254
+  - M2：[本地原图](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/2569%E5%87%86%E5%A4%87/01_%E4%BA%A7%E5%93%81%E6%9D%A5%E6%BA%90%E5%8E%9F%E5%9B%BE/01.jpg) · 800×800
+  - M3：[本地原图](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/2569%E5%87%86%E5%A4%87/05_AI%E5%80%99%E9%80%89/Beige13_M3.png) · 1254×1254
+  - M4：[本地原图](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/2569%E5%87%86%E5%A4%87/05_AI%E5%80%99%E9%80%89/Beige13_M4.png) · 1254×1254
+  - M5：[本地原图](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/2569%E5%87%86%E5%A4%87/05_AI%E5%80%99%E9%80%89/Beige13_M5.png) · 1254×1254
+  - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/00_%E6%9C%80%E7%BB%88%E4%B8%8A%E4%BC%A0/00_%E5%8E%82%E5%AE%B6%E8%B5%84%E6%96%99/02_%E5%BD%93%E5%89%8D%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/C1_factory.png) · 1721×914
+- 本地同步状态：`FORMAL_FIELDS_SCORE_PASS`。
+- 本轮优化：`REVIEWING`；Only exact-ID verification/score and local sync; never replay update or create a second product.
+  - 变更证据：[家族来源与页面计划.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/2569%E5%87%86%E5%A4%87/%E5%AE%B6%E6%97%8F%E6%89%A9%E8%89%B2/%E5%AE%B6%E6%97%8F%E6%9D%A5%E6%BA%90%E4%B8%8E%E9%A1%B5%E9%9D%A2%E8%AE%A1%E5%88%92.json)
+  - 变更证据：[补充来源身份核验.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/2569%E5%87%86%E5%A4%87/%E5%AE%B6%E6%97%8F%E6%89%A9%E8%89%B2/%E8%A1%A5%E5%85%85%E6%9D%A5%E6%BA%90%E8%BA%AB%E4%BB%BD%E6%A0%B8%E9%AA%8C.json)
+  - 变更证据：[图组验收.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/2569%E5%87%86%E5%A4%87/%E5%AE%B6%E6%97%8F%E6%89%A9%E8%89%B2/%E5%9B%BE%E7%BB%84%E9%AA%8C%E6%94%B6.json)
+  - 变更证据：[图片银行公开映射.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/2569%E5%87%86%E5%A4%87/%E5%AE%B6%E6%97%8F%E6%89%A9%E8%89%B2/%E5%9B%BE%E7%89%87%E9%93%B6%E8%A1%8C%E5%85%AC%E5%BC%80%E6%98%A0%E5%B0%84.json)
+  - 变更证据：[prepared.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/2569%E5%87%86%E5%A4%87/%E5%AE%B6%E6%97%8F%E6%89%A9%E8%89%B2/prepared.json)
+  - 变更证据：[manifest.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/2569%E5%87%86%E5%A4%87/%E5%AE%B6%E6%97%8F%E6%89%A9%E8%89%B2/manifest.json)
+  - 变更证据：[update_once.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/2569%E5%87%86%E5%A4%87/%E5%AE%B6%E6%97%8F%E6%89%A9%E8%89%B2/update_once.json)
+  - 变更证据：[update_receipt.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/2569%E5%87%86%E5%A4%87/%E5%AE%B6%E6%97%8F%E6%89%A9%E8%89%B2/update_receipt.json)
+  - 变更证据：[verification.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/2569%E5%87%86%E5%A4%87/%E5%AE%B6%E6%97%8F%E6%89%A9%E8%89%B2/verification.json)
 
 ## 其他原始/正式证据
 
@@ -70,5 +78,15 @@
 - [create_once.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/2569%E5%87%86%E5%A4%87/create_once.json)
 - [create_receipt.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/2569%E5%87%86%E5%A4%87/create_receipt.json)
 - [verification.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/2569%E5%87%86%E5%A4%87/verification.json)
+- [score.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/2569%E5%87%86%E5%A4%87/score.json)
+- [家族来源与页面计划.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/2569%E5%87%86%E5%A4%87/%E5%AE%B6%E6%97%8F%E6%89%A9%E8%89%B2/%E5%AE%B6%E6%97%8F%E6%9D%A5%E6%BA%90%E4%B8%8E%E9%A1%B5%E9%9D%A2%E8%AE%A1%E5%88%92.json)
+- [补充来源身份核验.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/2569%E5%87%86%E5%A4%87/%E5%AE%B6%E6%97%8F%E6%89%A9%E8%89%B2/%E8%A1%A5%E5%85%85%E6%9D%A5%E6%BA%90%E8%BA%AB%E4%BB%BD%E6%A0%B8%E9%AA%8C.json)
+- [图组验收.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/2569%E5%87%86%E5%A4%87/%E5%AE%B6%E6%97%8F%E6%89%A9%E8%89%B2/%E5%9B%BE%E7%BB%84%E9%AA%8C%E6%94%B6.json)
+- [图片银行公开映射.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/2569%E5%87%86%E5%A4%87/%E5%AE%B6%E6%97%8F%E6%89%A9%E8%89%B2/%E5%9B%BE%E7%89%87%E9%93%B6%E8%A1%8C%E5%85%AC%E5%BC%80%E6%98%A0%E5%B0%84.json)
+- [prepared.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/2569%E5%87%86%E5%A4%87/%E5%AE%B6%E6%97%8F%E6%89%A9%E8%89%B2/prepared.json)
+- [manifest.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/2569%E5%87%86%E5%A4%87/%E5%AE%B6%E6%97%8F%E6%89%A9%E8%89%B2/manifest.json)
+- [update_once.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/2569%E5%87%86%E5%A4%87/%E5%AE%B6%E6%97%8F%E6%89%A9%E8%89%B2/update_once.json)
+- [update_receipt.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/2569%E5%87%86%E5%A4%87/%E5%AE%B6%E6%97%8F%E6%89%A9%E8%89%B2/update_receipt.json)
+- [verification.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/2569%E5%87%86%E5%A4%87/%E5%AE%B6%E6%97%8F%E6%89%A9%E8%89%B2/verification.json)
 
 原件、正式回执与当前资料通过本页关联，不再复制成第二套商品库。

@@ -4,6 +4,8 @@
 
 同一2583系列扩色使用 `expand_luqi_2583_family.py plan/bank/prepare/submit/verify/sync`，只更新1601976101204，不新建2583。两页真实来源按颜色分列，保留原26个SKU ID/编码/色图，补46个组合至72EU；红色限EU36–42，其余五色EU36–48。当前Schema通过后才提交，正常审核期间继续其他素材；一般FAQ和已批准V8六公司图保全。旧两色素材与创建回执作为历史证据，不作后续新品默认值。
 
+2569 扩色使用 `expand_luqi_2569_colours.py bank/prepare/submit/verify/sync`，仅更新原ID1601981563053。当前计划及验收在 `2569准备/家族扩色/`：保留米色13个SKU编号、代码和色图，追加江上补充来源实拍的黑、绿各13及粉色7个EU组合，共四色46EU；无重绘配色。只改色码、标题亮点、第五张主图和第四色码详情，价格、属性、包装、FAQ与V8公司图保持。原创建控制器遇到本次扩色账本后，verify/sync自动路由到扩色核验，避免将最初13EU快照覆盖当前46EU；未知结果不重放。图数、来源、原SKU全行、字段保护和真实评分分别核对，计划46不计作正式验收。
+
 当前 HR 实源替换入口为 `replace_hr_real_sources.py`、`verify_hr_real_sources.py`、`sync_hr_real_sources.py` 与[本轮业务总入口](../../../02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/README.md)。商品状态统一调用 `read_only_catalog.product_readiness`，含义及退回后的修正要求只按[生命周期 SOP §5](../../../02_Alibaba运营/00_运营SOP/国际站商品全生命周期SOP.md#5-openapi-与浏览器执行原则)；不得把审核不通过记为审核中而空等。当前准备、已提交、正式字段/评分通过、本地双改、公开呈现分别取证。
 
 ## 有效品牌原ID修复
