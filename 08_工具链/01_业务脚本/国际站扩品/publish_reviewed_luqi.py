@@ -20,14 +20,15 @@ load,save,sha,rel,now=shared.load,shared.save,shared.sha,shared.rel,shared.now
 CATALOG=ROOT/'99_临时区/路崎995/当前目录/catalog.json'
 COLORS={'Black':('Black','SKU_Black'),'Beige Brown':('Black Khaki','SKU_BlackKhaki'),'Tan':('Earth Yellow','M1')}
 FIELDS=['catId','icbuCatProp','saleProp','sku','productTitle','scImages','pkgMeasure','pkgWeight','ladderPeriod','priceUnit','shippingTemplate','ladderPrice','saleType','scPrice','minOrderQuantity','productDescType','detailImage','textDesc','companyImage','companyDesc','companyFaqDesc','logisticsProperty']
+SUPPORTED_STYLES=('995','2576','1712','2418','868','822','2579','2575','2505','931','02412','0922','923','323','909','1628','2772','2132','9705','1680','0323F','117-1','2509','026')
 
 
 def configure(style):
     global STYLE,FOLDER,MODEL,CATEGORY,CATALOG,COLORS,PROFILE,EU_BY_COLOR,SCHEMA_NAME
-    assert style in ('995','2576','1712','2418','868','822','2579','2575','2505','931','02412','0922','923','323','909','1628','2772','2132','9705'), 'Only individually reviewed current source profiles are enabled'
+    assert style in SUPPORTED_STYLES, 'Only individually reviewed current source profiles are enabled'
     STYLE=style;FOLDER=BASE/(style+'准备');MODEL='BQ-LQ'+style;CATALOG=ROOT/('99_临时区/路崎'+style+'/当前目录/catalog.json')
-    facts=load(FOLDER/'当前来源与色码核对.json');assert facts['style']==style;PROFILE=facts['publish_profile'];CATEGORY=PROFILE['category_id'];assert CATEGORY in (201334413,202248402)
-    SCHEMA_NAME=PROFILE.get('schema_name','当前步行鞋Schema');assert SCHEMA_NAME in ('当前步行鞋Schema','当前雪地靴Schema')
+    facts=load(FOLDER/'当前来源与色码核对.json');assert facts['style']==style;PROFILE=facts['publish_profile'];CATEGORY=PROFILE['category_id'];assert CATEGORY in (201334413,202248402,32299)
+    SCHEMA_NAME=PROFILE.get('schema_name','当前步行鞋Schema');assert SCHEMA_NAME in ('当前步行鞋Schema','当前雪地靴Schema','当前其他鞋类Schema')
     COLORS={v['buyer']:(v['supplier_key'],v['image_role']) for v in PROFILE['buyer_colours']};assert len(COLORS)==len(PROFILE['buyer_colours'])
     EU_BY_COLOR={c:facts['source_EU_by_color'][alias] for c,(alias,_) in COLORS.items()}
     assert all(v and all(type(n) is int for n in v) and len(v)==len(set(v)) for v in EU_BY_COLOR.values())
@@ -184,6 +185,19 @@ def verify(client,cfg):
         expected=copy.deepcopy(expected);expected.update(overlay['expected_schema'])
     for fid,value in expected.items():
         if fid not in ('sku','icbuCatProp'):checks['schema_'+fid]=contract.created_field_equivalent(fid,value,actual.get(fid))
+    # Exact9705 get and render both replace U+2019 with ASCII apostrophe.
+    # Only this evidenced typography difference in textDesc is equivalent;
+    # no punctuation, words, other fields or products are ignored.
+    if STYLE=='9705' and not checks.get('schema_textDesc'):
+        def straight_apostrophe(value):
+            if isinstance(value,str):return value.replace('\u2019',"'")
+            if isinstance(value,list):return [straight_apostrophe(v) for v in value]
+            if isinstance(value,dict):return {k:straight_apostrophe(v) for k,v in value.items()}
+            return value
+        converted=straight_apostrophe(expected['textDesc'])
+        assert converted!=expected['textDesc'], 'Do not accept an unevidenced mismatch'
+        checks['schema_textDesc']=contract.created_field_equivalent('textDesc',converted,actual.get('textDesc'))
+        report['text_format_scope']='9705 textDesc only: U+2019 to ASCII apostrophe, observed in exact-ID get and render; every word and all other fields still exact.'
     logistics=schema.findall("./field[@id='logisticsProperty']/values/value")
     # Current render adds only descriptive annotations to the SAME ordinary-
     # goods option. Check the exact ID, validity and its current option label;
@@ -205,7 +219,9 @@ def verify(client,cfg):
     for row in p['product_sku']['skus']:
         prop=json.loads(row['attr2_value']);pairs[(col[str(prop[cid])],sz[str(prop[sid])])]+=1;price_match&=sorted((int(x['start_quantity']),Decimal(x['price'])) for x in row['bulk_discount_prices'])==tiers
     checks['exact_colour_EU_combinations']=pairs==Counter((c,f'EU {n}') for c in COLORS for n in EU_BY_COLOR[c]);checks['all_sku_three_tiers']=price_match
-    facts=load(FOLDER/'当前来源与色码核对.json');checks['title_and_highlights_exact']=p['subject']==facts['title_draft'] and p['struct_detail']['product_summary']=='\n'.join(facts['product_highlights_draft'])
+    facts=load(FOLDER/'当前来源与色码核对.json');expected_highlights='\n'.join(facts['product_highlights_draft'])
+    if STYLE=='9705':expected_highlights=expected_highlights.replace('\u2019',"'")
+    checks['title_and_highlights_exact']=p['subject']==facts['title_draft'] and p['struct_detail']['product_summary']==expected_highlights
     common=load(ROOT/'02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/通用FAQ与公司简介.json');company=load(ROOT/'02_Alibaba运营/06_图片与检查记录/共享工厂详情/V8/bank.json')['items'];sd=p['struct_detail'];checks['general8faq_exact']=sd['product_faq']==[{'question':x['question'],'answer':x['answers']} for x in common['companyFaqDesc']];checks['company_intro_exact']=sd['company_summary']==common['companyDesc'];checks['company6_roles_exact']=Counter((str(x['image_set']['id']),contract._created_image_identity(x['image_url'])) for x in sd['company_image']['images'])==Counter((r,contract._created_image_identity(company[c]['url'])) for c,r in [('C1','400'),('C2','550'),('C3','600'),('C4','450'),('C5','700'),('C6','700')])
     bank=load(FOLDER/'图片银行.json')['items'];sale=pub.values_only(schema,operation='update',field_ids=['saleProp']);colors={v.get('inputValue'):v.get('img') for v in sale.findall("./field/complex-value/field[@id='p-%s']/values/value"%cid)};checks['all_colour_images_exact']=set(colors)==set(COLORS) and all(contract._created_image_identity(colors[c])==contract._created_image_identity(bank[r]['url']) for c,(_,r) in COLORS.items())
     report.update(checks=checks,failed=[k for k,v in checks.items() if not v],sku_bindings=sku.get('bindings',{}),sku_diagnostic=sku.get('reason'),state='FORMAL_FIELDS_PASS_PENDING_SCORE' if all(checks.values()) else 'FORMAL_MISMATCH')
@@ -238,7 +254,7 @@ def sync():
     current={'at':report['get_observed_at'],'title':p['subject'],'keywords':p.get('keywords',[]),'main_images':p['main_image']['images'],'category_id':p['category_id'],'status':p['status'],'display':p['display'],'url':listing['url'],'scope':'ExactID formal product read; current audit/score accepted only if the separate verification state passes.'}
     listing.update(current_platform_fields=current,catalog_fields=copy.deepcopy(current),formal_fields={'file':rel(canonical/'formal_get.json'),'at':report['get_observed_at'],'scope':'当前API商品对象；审核、字段和实际评分按独立verification状态，不把待审当完成'},local_sync={'state':report['state'],'current_fields_file':rel(canonical/'formal_get.json'),'current_schema_file':rel(canonical/'formal_render.json') if (canonical/'formal_render.json').exists() else None,'source_fact_file':rel(FOLDER/'当前来源与色码核对.json'),'at':report['at']},observation={'audit':p['status'],'display':p['display'],'at':report['get_observed_at'],'score':report['actual_score'],'scope':'Full exact-ID API read, not browser presentation or physicalstock proof.'})
     listing.setdefault('optimization',{})['real_source_creation']={'state':report['state'],'source_id':sid,'source_artno':STYLE,'at':report['at'],'evidence':evidence,'inventory_write':'OMITTED','next_action':'Only formal readback and exact field/score diagnosis; never repeat create or upload successful assets.'}
-    listing['evidence']=list(dict.fromkeys(listing['evidence']+evidence));product['evidence']=list(dict.fromkeys(product.get('evidence',[])+evidence));product.setdefault('local_assets',{}).update(current_fields_file=rel(canonical/'formal_get.json'),source_fact_file=rel(FOLDER/'当前来源与色码核对.json'),asset_roots=[rel(FOLDER/'05_AI候选')],state=report['state']);product['raw_packages']=[rel(FOLDER/PROFILE.get('original_dir','01_产品来源原图'))];product['next_action']=f'仅回读原ID审核、全字段与实际评分；不重复上传或创建{STYLE}，其他路崎款独立推进。'
+    listing['evidence']=list(dict.fromkeys(listing['evidence']+evidence));product['evidence']=list(dict.fromkeys(product.get('evidence',[])+evidence));product.setdefault('local_assets',{}).update(current_fields_file=rel(canonical/'formal_get.json'),source_fact_file=rel(FOLDER/'当前来源与色码核对.json'),asset_roots=[rel(FOLDER/'05_AI候选')],state=report['state']);original_root=ROOT/PROFILE['source_original_root'] if PROFILE.get('source_original_root') else FOLDER/PROFILE.get('original_dir','01_产品来源原图');assert original_root.is_dir();product['raw_packages']=[rel(original_root)];product['next_action']=f'仅回读原ID审核、全字段与实际评分；不重复上传或创建{STYLE}，其他路崎款独立推进。'
     product['source_routes_by_color']=routes;listing['source_routes_by_color']=copy.deepcopy(routes)
     accepted=report['state'] in ('FORMAL_FIELDS_SCORE_PASS','FORMAL_FIELDS_PASS_PENDING_SCORE','FORMAL_FIELDS_PASS_SCORE_BELOW_TARGET')
     if accepted:
@@ -273,7 +289,7 @@ def sync():
 
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('mode',choices=('schema','bank','prepare','create','verify','sync'));ap.add_argument('--style',required=True,choices=('995','2576','1712','2418','868','822','2579','2575','2505','931','02412','0922','923','323','909','1628','2772','2132','9705'));args=ap.parse_args();configure(args.style)
+    ap=argparse.ArgumentParser();ap.add_argument('mode',choices=('schema','bank','prepare','create','verify','sync'));ap.add_argument('--style',required=True,choices=SUPPORTED_STYLES);args=ap.parse_args();configure(args.style)
     if args.mode=='prepare':prepare();return
     if args.mode=='sync':sync();return
     spec=importlib.util.spec_from_file_location('alibaba_client',ROOT/'.agents/skills/alibaba-openapi-operator/scripts/alibaba_openapi.py');client=importlib.util.module_from_spec(spec);spec.loader.exec_module(client);cfg=client.load_config(client.DEFAULT_CONFIG)

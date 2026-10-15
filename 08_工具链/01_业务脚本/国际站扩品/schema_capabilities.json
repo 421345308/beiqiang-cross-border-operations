@@ -434,6 +434,20 @@
       "level": "business_submission",
       "current_category_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/后续鞋款类目核验/202248402.json",
       "limits": "Positive exact-category business submission only. Each new style requires fresh ownSchema, exact source/colour/structure, audit, fullfields and actualscore. Not global category/content/browser acceptance."
+    },
+    {
+      "operation": "create",
+      "detail_type": "4",
+      "category_id": "32299",
+      "date": "2026-10-15",
+      "product_kind": "Real-source Luqi low-top outdoor-style shoe in Other Shoes",
+      "listing_id": "BQ-LQ2509",
+      "product_id": "1601980840117",
+      "source": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2509准备/create_receipt.json",
+      "payload_source": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2509准备/payload.xml",
+      "level": "business_submission",
+      "current_category_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/质量复核_2026-10-09/类目适配核对/32299.json",
+      "limits": "Positive exact-category type4 creation only under current normal shop scope. Owner permits suitable broadfootwear categories. No rootbusinessscope changed. Fresh source/profile/currentSchema/audit/fullfields/actualscore required for every laterstyle. Not globalpermission/support or publicQA."
     }
   ],
   "field_evidence": [

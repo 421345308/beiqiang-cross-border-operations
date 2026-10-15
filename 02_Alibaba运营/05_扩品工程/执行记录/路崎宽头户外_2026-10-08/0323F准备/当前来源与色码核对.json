@@ -1,0 +1,145 @@
+{
+  "style": "0323F",
+  "source": "https://luqi.sooxie.com/detail/1784568",
+  "observed_at": "2026-10-14T23:55:36.846787+00:00",
+  "source_HTML_sha256": "69ea6e01fb5c208cb7524b6462c340f23a1d78f130046e4d45c1239669699753",
+  "source_price_cny": "55.00",
+  "source_EU_by_color": {
+    "Black": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ],
+    "Black Plush": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ]
+  },
+  "source_EU_combinations": 20,
+  "whole_source_contacts_actually_viewed": true,
+  "photo_count": 31,
+  "full_original_fact_indices_actually_viewed": [
+    12,
+    15,
+    18,
+    19,
+    20,
+    27
+  ],
+  "known_materials": {
+    "upper": "Source titlegeneric皮面; exactchemical/animalcomposition notidentified, nativeother.",
+    "midsole": "No separate materialproof, nativeother.",
+    "outsole": "Actual18blacksegmentedpattern photo, no compositionproof, nativeother.",
+    "lining": "Actual12blackplush vs15ordinaryknitcollar option. Productlevelother becausebothchoices; no fiberchemistryinference."
+  },
+  "wide_claim": "NO_WIDE_CLAIM_FROM_OUTDOOR_ONLY_SOURCE",
+  "source_color_aliases": {
+    "Black - Standard Lining": "黑色",
+    "Black - Plush Lining": "黑色加绒"
+  },
+  "visible_structure": [
+    "Black low-top lace-up sneaker with zigzag eyestay border",
+    "Thin lightning-like side graphic and stitched forefoot overlay",
+    "Top two paired round eyelets above plain lace openings",
+    "Sculpted black sidewall, separate tread pads with fine triangular texture",
+    "Ordinary padded collar or black plush option, rear fabric loop"
+  ],
+  "identity_notes": "One0323F/0323-1sourcefamily evidenced by18identicalphotoSHAs andcurrenttwooptionmatrix. No extraIDfor0323-1. Different2132midtopcurvedinserts/scallopedsole,1628goldtrim and2772SPORTtongue. Sourceweightphoto22single314g hasunknownsize, omitted. Ordinarythinlightninggraphic notattributedasthirdpartybrand; no erasedmarks or techinference. Currentcatalog/sourceidentitycheck beforecreate.",
+  "title_draft": "Mens Lace Up Casual Walking Shoes Sculpted Black Sole Standard or Plush Lining Wholesale EU 39-48",
+  "product_highlights_draft": [
+    "Two black lining options: Standard Lining and Plush Lining are separate selections, each covering EU 39–48.",
+    "Distinctive side profile: A thin lightning-like side graphic and zigzag eyestay border sit above a sculpted black sole.",
+    "Lace-up construction: Flat black laces pass through plain front openings and paired round upper eyelets.",
+    "Tread appearance: Source underside photos show separate tread pads with a fine triangular surface texture.",
+    "Forefoot and heel details: A curved stitched toe overlay and rear fabric pull loop are visible on the actual shoe photos."
+  ],
+  "state": "CREATED_FORMAL_FIELDS_SCORE_PASS",
+  "family_alias_review": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0323F准备/来源款式近似候选.json",
+  "pricing_draft": {
+    "source_cny": "55.00",
+    "fx": "6.6837",
+    "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+    "fx_observed": "2026-10-13 10:57:20",
+    "rounding": "ROUND_CEILING_TO_USD_CENT",
+    "tiers": [
+      [
+        2,
+        "12.35"
+      ],
+      [
+        50,
+        "11.53"
+      ],
+      [
+        100,
+        "10.70"
+      ]
+    ],
+    "freight_service_tax": "Publiccostreference, order-specificfreight/service/tax; markup notnetprofit."
+  },
+  "publish_profile": {
+    "category_id": 201334413,
+    "schema_name": "当前步行鞋Schema",
+    "buyer_colours": [
+      {
+        "buyer": "Black - Standard Lining",
+        "supplier_key": "Black",
+        "supplier_label": "黑色",
+        "image_role": "M1"
+      },
+      {
+        "buyer": "Black - Plush Lining",
+        "supplier_key": "Black Plush",
+        "supplier_label": "黑色加绒",
+        "image_role": "M4"
+      }
+    ],
+    "category_attributes": {
+      "Upper Material": [
+        "other"
+      ],
+      "Midsole Material": [
+        "other"
+      ],
+      "Outsole Material": [
+        "other"
+      ],
+      "Lining Material": [
+        "other"
+      ],
+      "Closure Type": [
+        "Lace-up"
+      ]
+    },
+    "local_intent": [
+      "黑色普通与加绒可选的系带休闲步行鞋"
+    ]
+  },
+  "hero_selection": "Actual15ordinarycleanwhite single M1, actual18bottom M2, actual12Plush M4, actual27standardwear M5 unchanged. AI sourcebounded close-ups and two-option EUchart, no generatedtread.",
+  "title_bytes": 97,
+  "publication": {
+    "product_id": "1601980406877",
+    "audit": "approved",
+    "display": "Y",
+    "actual_score": "5.00",
+    "formal_verification": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0323F准备/verification.json",
+    "local_sync_at": "2026-10-15T04:48:34.016074+00:00",
+    "no_replayed_create": true
+  },
+  "next_action": "该款正式字段、评分与来源已通过；继续其他款，不重复创建。"
+}

@@ -1,0 +1,474 @@
+[
+  {
+    "id": "p-191288212",
+    "name": "Season",
+    "type": "multiCheck",
+    "rules": [
+      {
+        "name": "valueAttributeRule",
+        "value": "inputValue"
+      },
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      },
+      {
+        "name": "tipRule",
+        "value": "该属性支持自定义输入，输入值请填写value中inputValue属性,值为任意负数；多个输入值请保证value负数值不重复"
+      },
+      {
+        "name": "maxValueRule",
+        "value": "最大用户输入值个数[1]"
+      }
+    ],
+    "options": [
+      "All Seasons",
+      "Winter",
+      "Autumn",
+      "Spring",
+      "Summer",
+      "other"
+    ]
+  },
+  {
+    "id": "p-191290426",
+    "name": "Outsole Material",
+    "type": "multiCheck",
+    "rules": [
+      {
+        "name": "requiredRule",
+        "value": "true"
+      },
+      {
+        "name": "valueAttributeRule",
+        "value": "inputValue"
+      },
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      },
+      {
+        "name": "tipRule",
+        "value": "该属性支持自定义输入，输入值请填写value中inputValue属性,值为任意负数；多个输入值请保证value负数值不重复"
+      },
+      {
+        "name": "maxValueRule",
+        "value": "最大用户输入值个数[1]"
+      }
+    ],
+    "options": [
+      "Genuine Leather",
+      "PU",
+      "Plastic",
+      "Rubber",
+      "PVC",
+      "EVA",
+      "TPR",
+      "TPU",
+      "VIBRAM",
+      "other"
+    ]
+  },
+  {
+    "id": "p-191290428",
+    "name": "Upper Material",
+    "type": "multiCheck",
+    "rules": [
+      {
+        "name": "requiredRule",
+        "value": "true"
+      },
+      {
+        "name": "valueAttributeRule",
+        "value": "inputValue"
+      },
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      },
+      {
+        "name": "tipRule",
+        "value": "该属性支持自定义输入，输入值请填写value中inputValue属性,值为任意负数；多个输入值请保证value负数值不重复"
+      },
+      {
+        "name": "maxValueRule",
+        "value": "最大用户输入值个数[1]"
+      }
+    ],
+    "options": [
+      "Stretch Fabric",
+      "Genuine Leather",
+      "Denim",
+      "Down",
+      "Mesh",
+      "Microfiber",
+      "Faux Leather",
+      "Polyester",
+      "Plush",
+      "suede",
+      "Canvas",
+      "other"
+    ]
+  },
+  {
+    "id": "p-210200060",
+    "name": "Feature",
+    "type": "multiCheck",
+    "rules": [
+      {
+        "name": "valueAttributeRule",
+        "value": "inputValue"
+      },
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      },
+      {
+        "name": "tipRule",
+        "value": "该属性支持自定义输入，输入值请填写value中inputValue属性,值为任意负数；多个输入值请保证value负数值不重复"
+      },
+      {
+        "name": "maxValueRule",
+        "value": "最大用户输入值个数[1]"
+      }
+    ],
+    "options": [
+      "Waterproof",
+      "Flat ",
+      "Comfortable",
+      "Glow In The Dark",
+      "Detachable",
+      "Decoration",
+      "Light Weight",
+      "Eco-Friendly",
+      "Cute",
+      "Soft",
+      "Durable",
+      "Anti-Slip",
+      "Breathable",
+      "Warm",
+      "Cool",
+      "pattern",
+      "Rainproof",
+      "other"
+    ]
+  },
+  {
+    "id": "p-1",
+    "name": "Place of Origin",
+    "type": "singleCheck",
+    "rules": [
+      {
+        "name": "requiredRule",
+        "value": "true"
+      },
+      {
+        "name": "valueAttributeRule",
+        "value": "inputValue"
+      },
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      },
+      {
+        "name": "maxLengthRule",
+        "value": "50"
+      },
+      {
+        "name": "tipRule",
+        "value": "该属性支持自定义输入，输入值请填写value中inputValue属性,值为任意负数"
+      },
+      {
+        "name": "asyncQueryRule",
+        "value": "top.tmall.post.item.query.subProp.schema.get"
+      },
+      {
+        "name": "asyncQueryRule",
+        "value": "alibaba.icbu.category.schema.level.get"
+      }
+    ],
+    "options": [
+      "Andorra",
+      "United Arab Emirates",
+      "Afghanistan",
+      "Antigua and Barbuda",
+      "Anguilla",
+      "Albania",
+      "Aland Islands",
+      "Armenia",
+      "Netherlands Antilles",
+      "Angola",
+      "Antarctica",
+      "Argentina",
+      "American Samoa",
+      "Ascension Island",
+      "Austria",
+      "Australia",
+      "Aruba",
+      "Azerbaijan",
+      "Bosnia and Herzegovina",
+      "Barbados",
+      "Bangladesh",
+      "Belgium",
+      "Burkina Faso",
+      "Bulgaria",
+      "Bahrain",
+      "Burundi",
+      "Benin",
+      "Saint Barthelemy",
+      "Bermuda",
+      "Brunei Darussalam",
+      "Bolivia",
+      "Brazil",
+      "Bahamas",
+      "Bhutan",
+      "Bouvet Island",
+      "Botswana",
+      "Belarus",
+      "Belize",
+      "Canada",
+      "Cocos (Keeling) Islands",
+      "Central African Republic",
+      "Congo, The Republic of Congo",
+      "Switzerland",
+      "Cote D'Ivoire",
+      "Cook Islands",
+      "Chile",
+      "Cameroon",
+      "China",
+      "Colombia",
+      "Costa Rica",
+      "Cuba",
+      "Cape Verde",
+      "Curacao",
+      "Christmas Island",
+      "Cyprus",
+      "Czech Republic",
+      "Germany",
+      "Djibouti",
+      "Denmark",
+      "Dominica",
+      "Dominican Republic",
+      "Algeria",
+      "Zanzibar",
+      "Ecuador",
+      "Estonia",
+      "Egypt",
+      "Western Sahara",
+      "Eritrea",
+      "Spain",
+      "Ethiopia",
+      "Finland",
+      "Fiji",
+      "Falkland Islands (Malvinas)",
+      "Micronesia",
+      "Faroe Islands",
+      "France",
+      "France Metropolitan",
+      "Gabon",
+      "Alderney",
+      "Grenada",
+      "Georgia",
+      "French Guiana",
+      "Guernsey",
+      "Ghana",
+      "Gibraltar",
+      "Greenland",
+      "Gambia",
+      "Guinea",
+      "Guadeloupe",
+      "Equatorial Guinea",
+      "Greece",
+      "Guatemala",
+      "Guam",
+      "Guinea-Bissau",
+      "Guyana",
+      "Hong Kong S.A.R.",
+      "Heard and Mc Donald Islands",
+      "Honduras",
+      "Croatia (local name: Hrvatska)",
+      "Haiti",
+      "Hungary",
+      "Indonesia",
+      "Ireland",
+      "Israel",
+      "Isle of Man",
+      "India",
+      "British Indian Ocean Territory",
+      "Iraq",
+      "Iran (Islamic Republic of)",
+      "Iceland",
+      "Italy",
+      "Jersey",
+      "Jamaica",
+      "Jordan",
+      "Japan",
+      "Kenya",
+      "Kyrgyzstan",
+      "Cambodia",
+      "Kiribati",
+      "Comoros",
+      "Saint Kitts and Nevis",
+      "North Korea",
+      "South Korea",
+      "Kosovo",
+      "Kuwait",
+      "Cayman Islands",
+      "Kazakhstan",
+      "Lao People's Democratic Republic",
+      "Lebanon",
+      "Saint Lucia",
+      "Liechtenstein",
+      "Sri Lanka",
+      "Liberia",
+      "Lesotho",
+      "Lithuania",
+      "Luxembourg",
+      "Latvia",
+      "Libya",
+      "Morocco",
+      "Saint Martin",
+      "Monaco",
+      "Moldova",
+      "Madagascar",
+      "Marshall Islands",
+      "Macedonia",
+      "Mali",
+      "Myanmar",
+      "Mongolia",
+      "Montenegro",
+      "Macao S.A.R.",
+      "Northern Mariana Islands",
+      "Martinique",
+      "Mauritania",
+      "Montserrat",
+      "Malta",
+      "Mauritius",
+      "Maldives",
+      "Malawi",
+      "Mexico",
+      "Malaysia",
+      "Mozambique",
+      "Namibia",
+      "New Caledonia",
+      "Niger",
+      "Norfolk Island",
+      "Nigeria",
+      "Nicaragua",
+      "Netherlands",
+      "Norway",
+      "Nepal",
+      "Nauru",
+      "Niue",
+      "New Zealand",
+      "Oman",
+      "Panama",
+      "Peru",
+      "French Polynesia",
+      "Papua New Guinea",
+      "Philippines",
+      "Pakistan",
+      "Poland",
+      "St. Pierre and Miquelon",
+      "Pitcairn",
+      "Palestine",
+      "Portugal",
+      "Palau",
+      "Paraguay",
+      "Qatar",
+      "Reunion",
+      "Romania",
+      "Russian Federation",
+      "Rwanda",
+      "Saudi Arabia",
+      "Solomon Islands",
+      "Seychelles",
+      "Scotland",
+      "Sudan",
+      "Sweden",
+      "Singapore",
+      "South Georgia and the South Sandwich Islands",
+      "St. Helena",
+      "Slovenia",
+      "Svalbard and Jan Mayen Islands",
+      "Slovakia (Slovak Republic)",
+      "Sierra Leone",
+      "San Marino",
+      "Senegal",
+      "Somalia",
+      "Suriname",
+      "Serbia",
+      "South Sudan",
+      "Sao Tome and Principe",
+      "El Salvador",
+      "Sint Maarten",
+      "Syrian Arab Republic",
+      "Swaziland",
+      "Turks and Caicos Islands",
+      "Chad",
+      "French Southern Territories",
+      "Togo",
+      "Thailand",
+      "Tajikistan",
+      "Tokelau",
+      "Timor-Leste",
+      "Turkmenistan",
+      "Tunisia",
+      "Tonga",
+      "East Timor",
+      "Turkey",
+      "Trinidad and Tobago",
+      "Tuvalu",
+      "Taiwan, China",
+      "Tanzania",
+      "Ukraine",
+      "Uganda",
+      "United Kingdom",
+      "United States Minor Outlying Islands",
+      "United States",
+      "Uruguay",
+      "Uzbekistan",
+      "Vatican City State (Holy See)",
+      "Saint Vincent and the Grenadines",
+      "Venezuela",
+      "Virgin Islands (British)",
+      "Virgin Islands (U.S.)",
+      "Vietnam",
+      "Vanuatu",
+      "Wallis And Futuna Islands",
+      "Samoa",
+      "Yemen",
+      "Mayotte",
+      "Yugoslavia",
+      "South Africa",
+      "Zambia",
+      "Congo, The Democratic Republic Of The",
+      "Zimbabwe",
+      "other"
+    ]
+  },
+  {
+    "id": "p-2",
+    "name": "Brand Name",
+    "type": "input",
+    "rules": [
+      {
+        "name": "maxLengthRule",
+        "value": "50"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "p-3",
+    "name": "Model Number",
+    "type": "input",
+    "rules": [
+      {
+        "name": "maxLengthRule",
+        "value": "50"
+      }
+    ],
+    "options": []
+  }
+]

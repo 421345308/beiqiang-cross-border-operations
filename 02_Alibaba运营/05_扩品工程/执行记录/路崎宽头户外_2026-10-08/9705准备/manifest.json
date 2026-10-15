@@ -1,0 +1,43 @@
+{
+  "operation": "create",
+  "category_id": 202248402,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/9705准备/当前来源与色码核对.json",
+    "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/9705准备/05_AI候选/整组验收.json",
+    "02_Alibaba运营/00_运营SOP/国际站商品全生命周期SOP.md"
+  ],
+  "current_schema": "当前雪地靴Schema.xml",
+  "current_schema_sha256": "febe7b2dcf73e8c51761547e9aa19b839adc33ef0ecf3819ee8c8dbb003875b2",
+  "schema_request_id": "21501b6717920202334396740",
+  "schema_acquired_at": "2026-10-14T23:23:54.816764+00:00",
+  "payload_xml": "payload.xml",
+  "field_ids": [
+    "catId",
+    "icbuCatProp",
+    "saleProp",
+    "sku",
+    "productTitle",
+    "scImages",
+    "pkgMeasure",
+    "pkgWeight",
+    "ladderPeriod",
+    "priceUnit",
+    "shippingTemplate",
+    "ladderPrice",
+    "saleType",
+    "scPrice",
+    "minOrderQuantity",
+    "productDescType",
+    "detailImage",
+    "textDesc",
+    "companyImage",
+    "companyDesc",
+    "companyFaqDesc",
+    "logisticsProperty"
+  ],
+  "dependency_ids": [],
+  "expected_model": "BQ-LQ9705",
+  "differentiation_review": "发布前差异化审查.json",
+  "differentiation_review_sha256": "b5402be422830d89c91e92f20804c9c0b80411cde2ce2da503c7eba52d5dbfa0"
+}

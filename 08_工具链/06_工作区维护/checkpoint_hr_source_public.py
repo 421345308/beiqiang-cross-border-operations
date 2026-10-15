@@ -19,6 +19,7 @@ HR = '02_Alibaba运营/05_扩品工程/执行记录/HR实源替换'
 FACTORY = '02_Alibaba运营/06_图片与检查记录/共享工厂详情'
 REG = '02_Alibaba运营/05_扩品工程/数据/产品与链接台账.json'
 LUQI = '02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08'
+CURRENT_LUQI_STYLES=('995','2576','1712','2418','868','822','2579','2575','2505','931','02412','0922','923','323','909','1628','2772','2132','9705','1680','0323F','117-1','2509','026')
 PRIVATE = {'owner_member','owner_member_display_name','owner_member_id',
            'access_token','refresh_token','app_secret','client_secret',
            'chatToken','buyer_email','buyer_phone','buyer_address',
@@ -89,7 +90,7 @@ def main():
     luqi_ids={str(row['id']) for row in luqi_repairs}
     assert len(luqi_ids)==8
     new_luqi_ids=set()
-    for style in ('995','2576','1712','2418','868','822','2579','2575','2505','931','02412','0922','923','323','909','1628','2772','2132','9705'):
+    for style in CURRENT_LUQI_STYLES:
         new_luqi_ledger=ROOT/LUQI/(style+'准备/create_once.json')
         if new_luqi_ledger.exists():
             created=load(new_luqi_ledger.relative_to(ROOT).as_posix())
@@ -111,9 +112,14 @@ def main():
     paths += ['08_工具链/01_业务脚本/国际站扩品/'+name for name in ('repair_luqi_material_roles.py','expand_luqi_2583_family.py')]
     paths += ['08_工具链/01_业务脚本/国际站扩品/publish_reviewed_luqi.py']
     paths += ['08_工具链/01_业务脚本/国际站扩品/repair_luqi_price_rounding.py']
+    paths += ['08_工具链/01_业务脚本/国际站扩品/'+name for name in ('merge_reviewed_luqi_0323_family.py','review_luqi_category_routes.py')]
+    paths += [LUQI+'/0323F准备/家族归并.json']
+    # The JSON receipt already retains the exact Schema string. Its raw XML
+    # companion stays local, preserving platform whitespace without Git noise.
+    paths += [p.relative_to(ROOT).as_posix() for p in (ROOT/LUQI/'质量复核_2026-10-09/类目适配核对').glob('*.json')]
     paths += [LUQI+'/2409准备/'+name for name in ('实际评分回读.json','发布后字段核验.json')]
     paths += [LUQI+'/1628准备/标识形状比较/当前形状核对.json']
-    for style in ('995','2576','1712','2418','868','822','2579','2575','2505','931','02412','0922','923','323','909','1628','2772','2132','9705'):
+    for style in CURRENT_LUQI_STYLES:
         prefix=LUQI+'/'+style+'准备'
         paths += [p.relative_to(ROOT).as_posix() for p in (ROOT/prefix).glob('*.json') if p.name in ('当前来源与色码核对.json','当前来源刷新核对.json','物流标签回读诊断.json','prepared.json','manifest.json','图片银行公开映射.json','create_once.json','create_receipt.json','verification.json','score.json','双改核验.json','来源款式近似候选.json','发布前差异化审查.json')]
         paths += [p.relative_to(ROOT).as_posix() for p in (ROOT/prefix/'05_AI候选').glob('*.json')]
@@ -230,6 +236,17 @@ def main():
         raw=(ROOT/path).read_bytes().replace(b'\r\n',b'\n');assert not SECRET.search(raw.decode('utf8'))
         if path.endswith('.json'):safe(json.loads(raw))
         frozen[path]=raw
+    general=[x for x in live_caps['evidence'] if x.get('operation')=='create' and x.get('detail_type')=='4' and x.get('category_id')=='32299' and x.get('product_id')=='1601980840117']
+    if general:
+        assert len(general)==1 and general[0]['level']=='business_submission'
+        entry=general[0];receipt=load(entry['source']);assert receipt['method']=='alibaba.icbu.product.schema.add' and receipt['status']=='submitted_needs_readback'
+        payload=E.parse(ROOT/entry['payload_source']).getroot();assert payload.find("./field[@id='catId']/value").text=='32299' and payload.find("./field[@id='productDescType']/value").text=='4'
+        if entry not in base_caps['evidence']:base_caps['evidence'].append(copy.deepcopy(entry))
+        safe(base_caps);frozen[caps]=(json.dumps(base_caps,ensure_ascii=False,indent=2)+'\n').encode('utf8')
+        for path in (entry['source'],entry['payload_source'],entry['current_category_evidence']):
+            raw=(ROOT/path).read_bytes().replace(b'\r\n',b'\n');assert not SECRET.search(raw.decode('utf8'))
+            if path.endswith('.json'):safe(json.loads(raw))
+            frozen[path]=raw
     merged = json.loads(git('show',base+':'+REG))
     baseline = copy.deepcopy(merged)
     original_other_sources = {x['id']:copy.deepcopy(x) for x in merged['sources']}
@@ -247,11 +264,18 @@ def main():
             # workspace changes. Preserve unrelated family fields from base.
             for key in ('source_state','adopted_source_id','candidate_source_ids','local_assets','material_role_review','family_color_expansion','source_routes_by_color','related_source_ids','next_action','notes','aliases','evidence','raw_packages','dossier_path'):
                 if key in lp[product['id']]:product[key]=copy.deepcopy(lp[product['id']][key])
-            if product['id'] in {'LQ-995','LQ-2576','LQ-1712','LQ-2418','LQ-868','LQ-822','LQ-2579','LQ-2575','LQ-2505','LQ-931','LQ-02412','LQ-0922','LQ-923','LQ-323','LQ-909','LQ-1628','LQ-2772','LQ-2132','LQ-9705'}:product['classification']=copy.deepcopy(lp[product['id']]['classification'])
+            if product['id'] in {'LQ-'+style for style in CURRENT_LUQI_STYLES}:product['classification']=copy.deepcopy(lp[product['id']]['classification'])
     family_phase=ll['1601976101204'].get('optimization',{}).get('family_color_expansion',{})
     if family_phase.get('state') in ('FORMAL_FIELDS_SCORE_PASS','FORMAL_FIELDS_PASS_PENDING_SCORE') and 'LQ-2583' not in lp:
         assert not any(l['product_id']=='LQ-2583' for l in merged['listings'])
         merged['products']=[p for p in merged['products'] if p['id']!='LQ-2583']
+    if 'LQ-0323-1' not in lp:
+        family_proof=load(LUQI+'/0323F准备/家族归并.json')
+        accepted=load(LUQI+'/0323F准备/verification.json')
+        assert accepted['id']==family_proof['product_id']=='1601980406877' and accepted['state']=='FORMAL_FIELDS_SCORE_PASS' and not accepted['failed'] and str(accepted['actual_score'])=='5.00'
+        assert family_proof['state']=='ONE_CANONICAL_PRODUCT_AND_CURRENT_DOSSIER' and 'LQ-0323-1' in lp['LQ-0323F']['aliases']
+        assert not any(l['product_id']=='LQ-0323-1' for l in merged['listings'])
+        merged['products']=[p for p in merged['products'] if p['id']!='LQ-0323-1']
     for listing in merged['listings']:
         pid = listing['id']
         if pid in hr_ids:
@@ -316,7 +340,7 @@ def main():
     assert not any(pid in error for pid in hr_ids for error in errors), errors
     current_views=workspace.build(merged)
     retired_views={path.as_posix() for path in workspace.build(baseline) if path not in current_views}
-    assert all(path.endswith('/LQ-2583/README.md') for path in retired_views), 'Only the exact merged candidate generated entry may be removed'
+    assert all(path.endswith(('/LQ-2583/README.md','/LQ-0323-1/README.md')) for path in retired_views), 'Only the exact merged candidate generated entry may be removed'
     retired_views.add('08_工具链/01_业务脚本/国际站扩品/publish_reviewed_luqi_995.py')
     for path, raw in current_views.items():
         relative = path.relative_to(ROOT) if path.is_absolute() else path

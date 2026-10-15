@@ -1,0 +1,159 @@
+{
+  "style": "026",
+  "source": "https://luqi.sooxie.com/detail/2411777",
+  "observed_at": "2026-10-15T05:23:43.331082+00:00",
+  "source_HTML_sha256": "131ba032bfb82149794097d94ecf06d1481acb6cd790b1ae2fc6243b15fc48cf",
+  "source_price_cny": "78.00",
+  "source_EU_by_color": {
+    "Black": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ],
+    "Orange": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ],
+    "Green": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ]
+  },
+  "source_EU_combinations": 30,
+  "whole_source_contacts_actually_viewed": true,
+  "photo_count": 23,
+  "full_original_fact_indices_actually_viewed": [
+    9,
+    22
+  ],
+  "known_materials": {
+    "upper": "Jacquardmesh; original22贾卡网布, no fiber composition claim",
+    "outsole": "EVA; original22大底EVA. Darkbottompatch composition unspecified; no Rubber inferred",
+    "midsole": "EVA; original09EVA回弹中底, no rebound performanceclaim adopted",
+    "lining": "Not specified"
+  },
+  "wide_claim": "EXPLICIT_SOURCE_03_WIDE_LAST_AND04_WIDE_TOE_DESCRIPTION",
+  "source_color_aliases": {
+    "Black": "黑色",
+    "Orange": "桔红",
+    "Green": "绿色"
+  },
+  "visible_structure": [
+    "Wide toe lace-up low-top sports sneaker",
+    "Jacquard mesh upper with angular contrasting graphics",
+    "Moulded lace eyelet frame and rounded low collar",
+    "EVA midsole and EVA sole with diagonal sidewall relief",
+    "Black whitegraphics/allblacksole; Orange turquoise-redsideedge; Green yellow-bluesideedge"
+  ],
+  "identity_notes": "Mens lowtop lace-up Jacquardmesh shoe with broadtoe, angular bird-like graphic forefoot/longside panels, molded laceeyelet frame, round lowcollar, no rear/frontpulltab and thick diagonally sculptedsole. Black upper/sole with whitegraphics; Orange026upper blackgraphics, whitecore/blackbottom, frontturquoise-to-redsidegradient; Greenupper/sole blackgraphics and yellow-to-bluefrontsidegradient. Not Orange026-1lime-to-blue variant. EVAsole/midsole source22/09; bottomdarkpatch composition unknown. Liningunknown. Actualsource03explicit宽楦/04宽头 reviewed; no widthgrade or performanceassumption. Current39–48selector overrides outdatedstatic22size39–45. Samefamily026-1alternate alreadymerged; only026primarycurrentcolourtrim published.",
+  "title_draft": "Mens Wide Toe Box Lace Up Sports Sneakers Jacquard Mesh Upper EVA Sole Graphic Low Top Shoes Wholesale EU 39-48",
+  "product_highlights_draft": [
+    "Wide-toe sports style: The source identifies a wider last, paired with a rounded forefoot and a low-top lace-up profile.",
+    "Jacquard mesh upper: Angular contrasting graphics run across the toe and side panels, giving this style a distinctive sports appearance.",
+    "EVA sole construction: The source specifies an EVA midsole and EVA sole; the sculpted sidewall has diagonal relief and contrasting bottom sections.",
+    "Lace-up fit: Flat laces pass through a moulded eyelet frame above the rounded collar.",
+    "Three-colour EU 39–48 range: Black, Orange and Green provide neutral and bright assortment options for wholesale size-mix planning."
+  ],
+  "state": "CREATED_FORMAL_FIELDS_SCORE_PASS",
+  "pricing_draft": {
+    "source_cny": "78.00",
+    "fx": "6.6837",
+    "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+    "fx_observed": "2026-10-13 10:57:20",
+    "rounding": "ROUND_CEILING_TO_USD_CENT",
+    "tiers": [
+      [
+        2,
+        "17.51"
+      ],
+      [
+        50,
+        "16.34"
+      ],
+      [
+        100,
+        "15.18"
+      ]
+    ],
+    "freight_service_tax": "Datedsourcecostreference,markup notnetprofit; freight/tax/services perorder."
+  },
+  "publish_profile": {
+    "category_id": 32299,
+    "schema_name": "当前其他鞋类Schema",
+    "buyer_colours": [
+      {
+        "buyer": "Black",
+        "supplier_key": "Black",
+        "supplier_label": "黑色",
+        "image_role": "SKU_Black"
+      },
+      {
+        "buyer": "Orange",
+        "supplier_key": "Orange",
+        "supplier_label": "桔红",
+        "image_role": "SKU_Orange"
+      },
+      {
+        "buyer": "Green",
+        "supplier_key": "Green",
+        "supplier_label": "绿色",
+        "image_role": "SKU_Green"
+      }
+    ],
+    "category_attributes": {
+      "Upper Material": [
+        "Mesh"
+      ],
+      "Outsole Material": [
+        "EVA"
+      ]
+    },
+    "local_intent": [
+      "宽楦网面系带运动鞋"
+    ]
+  },
+  "category_route": {
+    "at": "2026-10-15T05:29:39.672912+00:00",
+    "owner_direction": "2026-10-15 user permits suitable sports/otherfootwearcategories; Running notmandatory.",
+    "category_id": 32299,
+    "leaf": "Other Shoes",
+    "root": 322,
+    "prior_explicit_rejection": "单次创建账本.json oldRunningnoID preserved",
+    "scope": "OtherShoescurrentSchema noMidsole/Closurefield; substantiatedEVAandlacefact retainedinpubliccopy, not unsupportedstructuredfields."
+  },
+  "hero_selection": "Reviewedoriginal01Orangepair; existing11AIcleanup/croplayout retainedonly afterall12nativeoutputsand23sourcecontacts reviewed; exactpositivebankreuse/no newupload.",
+  "title_bytes": 111,
+  "publication": {
+    "product_id": "1601980852086",
+    "audit": "approved",
+    "display": "Y",
+    "actual_score": "5.00",
+    "formal_verification": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/026准备/verification.json",
+    "local_sync_at": "2026-10-15T06:01:04.258848+00:00",
+    "no_replayed_create": true
+  },
+  "next_action": "该款正式字段、评分与来源已通过；继续其他款，不重复创建。"
+}
