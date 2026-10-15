@@ -66,6 +66,13 @@ def load(path):
     return json.loads((ROOT/path).read_text(encoding='utf8'))
 
 
+def public_product_snapshot(value):
+    """Derivative only: original seller-identity readback remains local."""
+    if isinstance(value,dict):return {k:public_product_snapshot(v)for k,v in value.items()if k not in ('owner_member','owner_member_display_name','owner_member_id')}
+    if isinstance(value,list):return [public_product_snapshot(v)for v in value]
+    return value
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--base', required=True)
@@ -98,6 +105,15 @@ def main():
                 assert created['model']=='BQ-LQ'+style and str(created['product_id']).isdigit()
                 new_luqi_ids.add(str(created['product_id']))
     luqi_ids |= new_luqi_ids
+    local_media_proofs={}
+    for row in load(LUQI+'/本批正式商品汇总.json'):
+        pid=str(row['product_id']);proof='02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/'+pid+'/本地素材绑定核验.json'
+        if not (ROOT/proof).is_file():continue
+        receipt=load(proof)
+        if receipt.get('state')!='CURRENT_FORMAL_URL_TO_REVIEWED_UPLOAD_FILE_SHA_MATCH':continue
+        assert receipt['id']==pid and receipt['reconciled_bindings'] and receipt['bank_evidence']==LUQI+'/'+row['style']+'准备/正式图片银行映射.json'
+        assert load(receipt['formal_snapshot'])['requested_product_id']==pid
+        local_media_proofs[pid]=(proof,receipt)
     luqi_families={ll['product_id'] for ll in live['listings'] if ll['id'] in luqi_ids}
     families = set(scope['targets']) | {p['family'] for p in profiles} | {p['family']for p in history}
     paths = [HR+'/'+name for name in ('README.md','scope.json','当前进度.json','质量修正计划.json','已有实款对应.json','双改与货源一致性核验.json')]
@@ -127,6 +143,8 @@ def main():
     paths += [LUQI+'/2569准备/'+name for name in ('当前来源与色码核对.json','当前来源刷新核对.json','身份一致性核验.json','原图分辨率核对.json','商品预检与图组策略.json','图片生成与逐张核验.json') if (ROOT/LUQI/'2569准备'/name).is_file()]
     paths += [LUQI+'/2569准备/01_产品来源原图/当前来源图像索引.json']
     paths += ['08_工具链/01_业务脚本/国际站扩品/expand_luqi_2569_colours.py']
+    paths += ['08_工具链/01_业务脚本/国际站扩品/reconcile_luqi_local_media.py']
+    for proof,receipt in local_media_proofs.values():paths += [proof,receipt['bank_evidence'],receipt['formal_snapshot']]
     paths += [LUQI+'/2569准备/01_产品来源原图/江上补充/当前来源图像索引.json']
     expansion=ROOT/LUQI/'2569准备/家族扩色'
     paths += [p.relative_to(ROOT).as_posix() for p in expansion.glob('*.json') if p.name in ('家族来源与页面计划.json','补充来源身份核验.json','图组验收.json','图组生成参数.json','图片银行公开映射.json','prepared.json','manifest.json','update_once.json','update_receipt.json','verification.json','score.json','当前状态.json','双改核验.json','当前素材映射.json','本地素材绑定核验.json')]
@@ -227,7 +245,11 @@ def main():
         text = raw.decode('utf8')
         assert not SECRET.search(text), path
         if path.endswith('.json'):
-            payload = public_selection_copy(json.loads(text))
+            payload=json.loads(text)
+            if path in {receipt['formal_snapshot']for _,receipt in local_media_proofs.values()}:
+                payload=public_product_snapshot(payload)
+                payload['sanitized_fields']=sorted(set(payload.get('sanitized_fields',[]))|{'owner_member','owner_member_display_name','owner_member_id'})
+            payload = public_selection_copy(payload)
             safe(payload)
             raw = (json.dumps(payload,ensure_ascii=False,indent=2)+'\n').encode('utf8')
         frozen[path] = raw
@@ -365,6 +387,14 @@ def main():
             alternate=next(s for s in live['sources'] if s['id']==route['source_id']);assert alternate['url']==route['source']
             assert alternate['latest_price_review']['price_cny']==variants[route['source']]['source_price_cny']
             merged['sources']=[s for s in merged['sources'] if s['id']!=alternate['id']]+[copy.deepcopy(alternate)]
+    # Local-only image reference repair: do not copy unrelated platform edits
+    # from the shared workspace for these otherwise unchanged source products.
+    for pid,(proof,receipt) in local_media_proofs.items():
+        current=ll[pid];listing=next(x for x in merged['listings']if x['id']==pid);product=next(x for x in merged['products']if x['id']==listing['product_id'])
+        assert listing['product_id']==current['product_id'] and listing['model']==current['model']
+        assert current['local_sync']['media_cache_evidence']==proof and lp[current['product_id']]['local_assets']['current_image_map']==proof
+        listing.setdefault('local_sync',{})['media_cache_evidence']=proof;product.setdefault('local_assets',{})['current_image_map']=proof
+        for obj in (listing,product):obj['evidence']=list(dict.fromkeys(obj.get('evidence',[])+[proof]))
     task = next(x for x in live['workstreams'] if x['name']=='HR缺货源实款替换')
     merged['workstreams'] = [x for x in merged['workstreams'] if x['name']!=task['name']] + [copy.deepcopy(task)]
     luqi_work=next(x for x in live['workstreams'] if x['name']=='路崎宽头/户外全分类')

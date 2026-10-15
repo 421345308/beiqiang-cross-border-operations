@@ -1,6 +1,6 @@
 {
   "at": "2026-10-15T17:27:20.608373+00:00",
-  "state": "SOURCE_AND_COLOURS_REVIEWED_ASSETS_PENDING_NO_UPDATE",
+  "state": "FORMAL_FIELDS_SCORE_PASS",
   "product_id": "1601981563053",
   "model": "BQ-LQ2569",
   "operation": "update",
@@ -126,5 +126,6 @@
     "SKU_Green": "JS28lower profile",
     "SKU_Pink": "JS27lower profile"
   },
-  "next_action": "Generate/review five exact-source assets; upload once, fresh exact-ID render, preserve13existingSKUrows, append33 only after preflight, then original-ID update and full readback/score/local sync."
+  "next_action": "四色46EU正式字段和颜色货源已同步，原米色13SKU保留；实际评分以本次家族扩色核验为准。只验原ID，不重复创建2569。",
+  "formal_verification": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2569准备/家族扩色/verification.json"
 }

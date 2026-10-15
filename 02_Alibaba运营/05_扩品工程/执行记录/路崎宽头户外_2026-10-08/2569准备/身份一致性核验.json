@@ -1,7 +1,7 @@
 {
   "style": "2569",
   "observed_at": "2026-10-10T05:54:53.410306+00:00",
-  "status": "SCOPED_BEIGE_SELECTED_IMAGE_IDENTITY_PASS",
+  "status": "CURRENT_FOUR_COLOUR_SOURCE_IDENTITIES_REVIEWED",
   "expected_sku_count": 46,
   "outsole_reference": "01_产品来源原图/10.jpg: distinct outlined central section, forefoot elongated raised oval pieces andrear outlined section",
   "conflicting_source_photos": [
@@ -21,44 +21,79 @@
     "M5"
   ],
   "image_identity_limit": "Upper silhouette similarity does not resolve differing sole design. Not an assertion that all sourcephotos are false or all colors unsupplied.",
-  "formal_uploads": 0,
-  "formal_create_calls": 0,
-  "product_id": null,
-  "next_action": "Only Beige13EU may proceed. Other33EU and excluded original outsole conflict remain unresolved; never count them as published.",
-  "current_observed_at": "2026-10-15T15:57:48.920250+00:00",
+  "formal_uploads": 14,
+  "formal_create_calls": 1,
+  "product_id": "1601981563053",
+  "next_action": "Four actual colours46EU accepted on originalID, original13SKUrows preserved, actual5.00. No new product or repeated update. Current material/stock limits remain in facts.",
+  "current_observed_at": "2026-10-15T18:30:27.385263+00:00",
   "previous_hold_scope": "All46offer and conflicting outsole frames remain unresolved; no fake whole-offer clearance.",
   "current_scope": {
-    "colour": "Beige",
-    "EU": [
-      36,
-      37,
-      38,
-      39,
-      40,
-      41,
-      42,
-      43,
-      44,
-      45,
-      46,
-      47,
-      48
-    ],
-    "selected_source_frames": [
-      1,
-      2,
-      6,
-      7,
-      12,
-      13
-    ],
-    "excluded_source_frames": [
+    "colours": {
+      "Beige": [
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48
+      ],
+      "Black": [
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48
+      ],
+      "Green": [
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48
+      ],
+      "Pink": [
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ]
+    },
+    "EU_combinations": 46,
+    "actual_source_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2569准备/家族扩色/补充来源身份核验.json",
+    "current_image_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2569准备/家族扩色/图组验收.json",
+    "excluded_original_underside_frames": [
       4,
       10,
       11
     ],
-    "outsole_claim": "No underside/material/performance claims; only visible matching edge in selected photos.",
-    "remaining_photo_pending_EU": 33
+    "limits": "Excluded original sole discrepancy is not claimed resolved; four colours rely on complete actual profiles/wear, no fabricated underside or new compound/test claim."
   },
-  "current_image_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2569准备/05_AI候选/整组验收.json"
+  "current_image_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2569准备/05_AI候选/整组验收.json",
+  "current_asset_count": 12
 }

@@ -7,6 +7,7 @@
 ## 当前资料与实物证据
 
 - 本地事实/准备字段：尚未指定；不从线上页面证明自产或实物能力。
+- 当前选图与正式CDN映射：[本地素材绑定核验.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601975754227/%E6%9C%AC%E5%9C%B0%E7%B4%A0%E6%9D%90%E7%BB%91%E5%AE%9A%E6%A0%B8%E9%AA%8C.json)
 
 ## 采购来源（内部使用）
 
@@ -25,7 +26,13 @@
 - 审核/展示：approved / Y；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, is_smart_edit, keywords, language, main_image, owner_member, owner_member_display_name, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
 - SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。
-- 本地平台图片缓存：待补；正式字段中的官方原URL已保留。
+- 本地平台素材：[唯一素材索引](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90%E6%B8%85%E5%8D%95.json)；图片按内容哈希保存一份，图库/详情/SKU通过索引引用。
+  - M1：[本地原图](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/029%E5%87%86%E5%A4%87/05_AI%E5%80%99%E9%80%89/M1.png) · 1254×1254
+  - M2：[本地原图](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/029%E5%87%86%E5%A4%87/05_AI%E5%80%99%E9%80%89/M2.png) · 1254×1254
+  - M3：[本地原图](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/029%E5%87%86%E5%A4%87/05_AI%E5%80%99%E9%80%89/M3.png) · 1254×1254
+  - M4：[本地原图](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/029%E5%87%86%E5%A4%87/05_AI%E5%80%99%E9%80%89/M4.png) · 1254×1254
+  - M5：[本地原图](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/%E8%B7%AF%E5%B4%8E%E5%AE%BD%E5%A4%B4%E6%88%B7%E5%A4%96_2026-10-08/029%E5%87%86%E5%A4%87/05_AI%E5%80%99%E9%80%89/M5.png) · 1254×1254
+  - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/778cae3a27b67c2197cf651dea936e41fbae1e9ddedeaaae0d0a769ac1d30b06.png) · 1254×1254
 - 本地同步状态：`COMPANY_BUNDLE_FORMAL_PASS`。
 - 本轮优化：``；
 
@@ -55,5 +62,6 @@
 - [update_once.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601975754227/V8/update_once.json)
 - [update_receipt.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601975754227/V8/update_receipt.json)
 - [verification.json](../../../06_%E5%9B%BE%E7%89%87%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%AE%B0%E5%BD%95/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%8E%82%E8%AF%A6%E6%83%85/%E5%95%86%E5%93%81/1601975754227/V8/verification.json)
+- [本地素材绑定核验.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601975754227/%E6%9C%AC%E5%9C%B0%E7%B4%A0%E6%9D%90%E7%BB%91%E5%AE%9A%E6%A0%B8%E9%AA%8C.json)
 
 原件、正式回执与当前资料通过本页关联，不再复制成第二套商品库。

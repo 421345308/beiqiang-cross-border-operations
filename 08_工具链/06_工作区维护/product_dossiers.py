@@ -31,6 +31,8 @@ def builds(data):
         lines += [f"- 本地事实/准备字段：{ref(current,parent)}" if current else '- 本地事实/准备字段：尚未指定；不从线上页面证明自产或实物能力。']
         for path in assets.get('asset_roots', []):
             lines.append(f'- 当前素材目录：{ref(path,parent,Path(path).name)}')
+        if assets.get('current_image_map'):
+            lines.append('- 当前选图与正式CDN映射：'+ref(assets['current_image_map'],parent))
         for path in product.get('raw_packages', []):
             lines.append(f'- 原始包：{ref(path,parent,Path(path).name)}')
         for path in product.get('historical_asset_roots', []):
