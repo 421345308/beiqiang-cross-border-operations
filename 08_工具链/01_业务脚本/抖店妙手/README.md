@@ -52,3 +52,9 @@ Chrome桥接曾因插件缺少browser-service.mjs而不可用，属于组件故�
 来源普通/加绒旧参数可能混用，读取成功不等于材料全部核准；“是否库存”不是数量。`build_cotton_preview.py` 从当前准备包重建本地含图审核页，无外部写入。
 
 契约取自当前entry-c0a63a8f.js引用的创建、编辑、属性、图片及尺码模块。链接搬家、分片导入和跨境开放平台仍未验证。[官方帮助](https://v1o7zyazq9.feishu.cn/wiki/OpquwOPHeiAeAFkPFcCcqHoonYc)。
+
+## 已有棉鞋内容优化
+
+`build_cotton_content.mjs` 读取渠道内 `数据/棉鞋内容优化.json`，将真实产品照片及明确标识的穿搭示意嵌入可编辑SVG，按场景与利益、结构讲解、加绒日常、外底轮廓、配色、参数、选码、服务渲染8屏详情与本地审核页。需要Node、`@resvg/resvg-js`及微软雅黑字体；渲染依赖留临时运行目录，或用 `BEIQIANG_RESVG_MODULE` 指定已安装模块。处理图、SVG、PNG与依赖不入普通Git。原图不覆盖，图像生成只作有留证的局部清理，不用生成角度证明实物。
+
+`optimize_cotton_existing.mjs <款号> prepare|apply|verify` 只针对已确认的4条在售棉鞋。可在操作后加可读修订标识（如`benefit-scenes`），独立保存本次正式请求及前后回读，复用此前已上传的相同素材；不覆盖上一轮正式回执。prepare保存当前字段、按文件SHA缓存上传并核推荐类目，apply只编辑base/mainImg/descImg，不传SKU写入组，verify回读标题、独立详情、SKU身份价格、履约与本次标题审核。素材须先视觉验收；限流正常等候，已上传素材复用。未知写入结果只读核实，明确失败后另留独立尝试证据。

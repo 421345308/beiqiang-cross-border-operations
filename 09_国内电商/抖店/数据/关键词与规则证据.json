@@ -100,5 +100,46 @@
     "https://fxg.jinritemai.com/ffa/morder/logistics/freight-list",
     "https://fxg.jinritemai.com/ffa/maftersale/privileges/consumer-rights"
   ],
-  "policy_limit": "未获取完整平台规则中心正文；已核发品页及动态字段，不冒称完整禁词库"
+  "policy_limit": "已取得上述官方规范索引正文及动态字段，非完整法规或永久禁词库；未获得竞品完整商品页或真实销量，不冒称学习了爆款数据。",
+  "official_content_rules": {
+    "checked_on": "2026-10-15",
+    "url": "https://school.jinritemai.com/doudian/web/articlev0/101800",
+    "published_on": "2025-12-03",
+    "access": "搜索索引返回官方正文，浏览器SPA正文未加载",
+    "title": "8汉字以上30汉字以下，含品名、真实属性和规格，不堆无关主体",
+    "main": "至少3张不完全重复，多角度，完整实物；除品牌logo不加文字水印",
+    "detail": "图文讲清信息，与SKU一致，法定标识另按对应规范执行"
+  },
+  "retail_observations": [
+    {
+      "url": "https://www.douyin.com/video/7683680147156782372",
+      "date": "2026-10-15",
+      "access": "公开索引标题；直开正文不可用",
+      "observed": "加绒棉鞋、一脚蹬、具体人群词靠前",
+      "adapt": "本店真实套脚款表达穿脱场景，系带款不套用；不继承真皮或手工缝线",
+      "limit": "未取销售、转化或完整商品详情，非优秀商家排名证据"
+    },
+    {
+      "url": "https://www.douyin.com/video/7582299109424385307",
+      "date": "2026-10-15",
+      "access": "公开索引标题及平台智能文稿",
+      "observed": "加绒、穿脱便捷、冬季场景组织讲解",
+      "adapt": "需求—结构—使用场景，按本款证据独立写；不继承高品质皮革、秒数、温标",
+      "limit": "智能文稿不是实测，也不能证明本店性能或此竞品销量"
+    },
+    {
+      "url": "https://item.jd.com/10169036176462.html",
+      "date": "2026-10-15",
+      "access": "图片搜索返回主图预览描述，直开商品正文受限",
+      "observed": "单一完整鞋型、针织鞋面与造型外底形成视觉焦点",
+      "adapt": "用真实多角度展示轮廓，不照搬P棉、增高厘米、促销价；抖店按本平台规则",
+      "limit": "跨平台视觉参考，未取得完整详情或销量"
+    }
+  ],
+  "buyer_funnel": {
+    "search": "棉鞋核心品类有既有罗盘区间；加绒/结构/颜色/尺码提供匹配，长尾量未知",
+    "click": "完整真实鞋型、占比和清晰度、配色对比；缩略图检查辨识度",
+    "conversion": "逐款结构讲解、加绒版本、配色、参数、脚长尺码、服务",
+    "verification": "信息质量不能只看提交成功；效果须读本店曝光点击支付及退货数据"
+  }
 }
