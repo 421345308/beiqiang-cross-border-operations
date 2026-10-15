@@ -1,7 +1,7 @@
 {
   "style": "2569",
   "observed_at": "2026-10-10T05:54:53.410306+00:00",
-  "status": "HOLD_SOURCE_PHOTO_IDENTITY",
+  "status": "SCOPED_BEIGE_IDENTITY_REVIEWED_PENDING_IMAGE_REVIEW",
   "expected_sku_count": 46,
   "outsole_reference": "01_产品来源原图/10.jpg: distinct outlined central section, forefoot elongated raised oval pieces andrear outlined section",
   "conflicting_source_photos": [
@@ -24,5 +24,40 @@
   "formal_uploads": 0,
   "formal_create_calls": 0,
   "product_id": null,
-  "next_action": "Review alternative exact2569photos/sourcepackage; continue other independent styles without replaying or publishing uncertain photos."
+  "next_action": "Review newly selected actual-Beige9role image set; publish13EU only if source identity and image role checks pass. Keep other33EU pending.",
+  "current_observed_at": "2026-10-15T15:57:48.920250+00:00",
+  "previous_hold_scope": "All46offer and conflicting outsole frames remain unresolved; no fake whole-offer clearance.",
+  "current_scope": {
+    "colour": "Beige",
+    "EU": [
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ],
+    "selected_source_frames": [
+      1,
+      2,
+      6,
+      7,
+      12,
+      13
+    ],
+    "excluded_source_frames": [
+      4,
+      10,
+      11
+    ],
+    "outsole_claim": "No underside/material/performance claims; only visible matching edge in selected photos.",
+    "remaining_photo_pending_EU": 33
+  }
 }

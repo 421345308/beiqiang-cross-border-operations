@@ -20,7 +20,7 @@ load,save,sha,rel,now=shared.load,shared.save,shared.sha,shared.rel,shared.now
 CATALOG=ROOT/'99_临时区/路崎995/当前目录/catalog.json'
 COLORS={'Black':('Black','SKU_Black'),'Beige Brown':('Black Khaki','SKU_BlackKhaki'),'Tan':('Earth Yellow','M1')}
 FIELDS=['catId','icbuCatProp','saleProp','sku','productTitle','scImages','pkgMeasure','pkgWeight','ladderPeriod','priceUnit','shippingTemplate','ladderPrice','saleType','scPrice','minOrderQuantity','productDescType','detailImage','textDesc','companyImage','companyDesc','companyFaqDesc','logisticsProperty']
-SUPPORTED_STYLES=('995','2576','1712','2418','868','822','2579','2575','2505','931','02412','0922','923','323','909','1628','2772','2132','9705','1680','0323F','117-1','2509','026','02505','2550','02503','K502','2539','924','1026','2593')
+SUPPORTED_STYLES=('995','2576','1712','2418','868','822','2579','2575','2505','931','02412','0922','923','323','909','1628','2772','2132','9705','1680','0323F','117-1','2509','026','02505','2550','02503','K502','2539','924','1026','2593','020','ST-117','2569')
 
 
 def configure(style):
@@ -117,7 +117,7 @@ def prepare():
     expected_tiers=[[n,str((Decimal(facts['source_price_cny'])*m/fx).quantize(Decimal('.01'),rounding=ROUND_CEILING))]for n,m in ((2,Decimal('1.5')),(50,Decimal('1.4')),(100,Decimal('1.3')))]
     assert facts['pricing_draft']['tiers']==expected_tiers,'Current authorised cost markup requires rounding UP to USD cents'
     index=load(FOLDER/PROFILE.get('source_index','01_产品来源原图/当前来源图像索引.json'))
-    assert index['style']==STYLE and index['source']==facts['source'] and urlparse(facts['source']).hostname=='luqi.sooxie.com'
+    assert index['style']==PROFILE.get('source_style',STYLE) and index['source']==facts['source'] and urlparse(facts['source']).hostname=='luqi.sooxie.com'
     assert 'Wide Toe Box' not in facts['title_draft'] or facts['wide_claim'].startswith('EXPLICIT_SOURCE_')
     assert proof.get('dedup_review'), 'Actual source and nearest physical-style review must precede create'
     catalog=load(CATALOG);assert catalog['complete'] and len(catalog['products'])==catalog['unique_ids']==catalog['total_item']
@@ -286,7 +286,7 @@ def sync():
     routes={}
     for v in PROFILE['buyer_colours']:
         url=v.get('source_url',facts['source']);route_source=next(s for s in registry['sources'] if s['url'].rstrip('/')==url);route_id=route_source['id'];colour=v['buyer']
-        routes[colour]={'source':url,'source_id':route_id,'source_artno':v.get('supplier_artno',STYLE),'supplier_color':v['supplier_label'],'EU':EU_BY_COLOR[colour]}
+        routes[colour]={'source':url,'source_id':route_id,'source_artno':v.get('supplier_artno',PROFILE.get('source_artno',STYLE)),'supplier_color':v['supplier_label'],'EU':EU_BY_COLOR[colour]}
         if url!=facts['source']:
             variant=next(x for x in facts['variant_sources'] if x['source']==url)
             route_source['latest_price_review']={'observed_at':variant['observed_at'],'price_cny':variant['source_price_cny'],'evidence':variant['current_source_evidence'],'scope':'Exact variant public reference cost, not stock or fixed quotation.'}
@@ -302,7 +302,7 @@ def sync():
     evidence=[rel(FOLDER/name) for name in ('当前来源与色码核对.json','prepared.json','manifest.json','图片银行公开映射.json','create_once.json','create_receipt.json','verification.json','score.json') if (FOLDER/name).exists()]
     current={'at':report['get_observed_at'],'title':p['subject'],'keywords':p.get('keywords',[]),'main_images':p['main_image']['images'],'category_id':p['category_id'],'status':p['status'],'display':p['display'],'url':listing['url'],'scope':'ExactID formal product read; current audit/score accepted only if the separate verification state passes.'}
     listing.update(current_platform_fields=current,catalog_fields=copy.deepcopy(current),formal_fields={'file':rel(canonical/'formal_get.json'),'at':report['get_observed_at'],'scope':'当前API商品对象；审核、字段和实际评分按独立verification状态，不把待审当完成'},local_sync={'state':report['state'],'current_fields_file':rel(canonical/'formal_get.json'),'current_schema_file':rel(canonical/'formal_render.json') if (canonical/'formal_render.json').exists() else None,'source_fact_file':rel(FOLDER/'当前来源与色码核对.json'),'at':report['at']},observation={'audit':p['status'],'display':p['display'],'at':report['get_observed_at'],'score':report['actual_score'],'scope':'Full exact-ID API read, not browser presentation or physicalstock proof.'})
-    listing.setdefault('optimization',{})['real_source_creation']={'state':report['state'],'source_id':sid,'source_artno':STYLE,'at':report['at'],'evidence':evidence,'inventory_write':'OMITTED','next_action':'Only formal readback and exact field/score diagnosis; never repeat create or upload successful assets.'}
+    listing.setdefault('optimization',{})['real_source_creation']={'state':report['state'],'source_id':sid,'source_artno':PROFILE.get('source_artno',STYLE),'at':report['at'],'evidence':evidence,'inventory_write':'OMITTED','next_action':'Only formal readback and exact field/score diagnosis; never repeat create or upload successful assets.'}
     listing['evidence']=list(dict.fromkeys(listing['evidence']+evidence));product['evidence']=list(dict.fromkeys(product.get('evidence',[])+evidence));product.setdefault('local_assets',{}).update(current_fields_file=rel(canonical/'formal_get.json'),source_fact_file=rel(FOLDER/'当前来源与色码核对.json'),asset_roots=[rel(FOLDER/'05_AI候选')],state=report['state']);original_root=ROOT/PROFILE['source_original_root'] if PROFILE.get('source_original_root') else FOLDER/PROFILE.get('original_dir','01_产品来源原图');assert original_root.is_dir();product['raw_packages']=[rel(original_root)];product['next_action']=f'仅回读原ID审核、全字段与实际评分；不重复上传或创建{STYLE}，其他路崎款独立推进。'
     product['source_routes_by_color']=routes;listing['source_routes_by_color']=copy.deepcopy(routes)
     for root in PROFILE.get('additional_original_roots',[]):
