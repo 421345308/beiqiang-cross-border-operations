@@ -1,0 +1,16 @@
+{
+  "user_feedback": "First sentence pauses too long; faster delivery and richer content.",
+  "scope": "Audio-only; keep V01 video compressed stream.",
+  "text": "牛仔裤怎么搭？试试这双黑杏套脚鞋！黑色针织鞋面，配杏色造型鞋底，简单穿搭也有亮点。套脚设计，不用系鞋带，出门少一道步骤。卫衣配牛仔裤，日常就这么搭。喜欢这款，看看颜色和尺码。",
+  "han_characters": 75,
+  "model": "Seed Audio 1.0",
+  "voice_speed_parameter": 1.12,
+  "generation_count_planned": 2,
+  "separate_stems": true,
+  "pause_goal_seconds": 0.18,
+  "bgm": "Quiet original instrumental, mixed independently.",
+  "prompts": [
+    "prompts/voice_v03.txt",
+    "prompts/bgm_v03.txt"
+  ]
+}
