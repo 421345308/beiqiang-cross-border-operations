@@ -1,0 +1,35 @@
+{
+  "feedback": "V04 voice is younger but sounds scripted; make it sound like a young friend sharing an outfit.",
+  "scope": "Keep V04 youthful preset; rewrite stiff copy into conversational language; preserve V03 BGM and V01 video.",
+  "text": "哎，你看这双，配牛仔裤是不是挺顺眼？黑色鞋面搭杏色鞋底，简单，但不单调。它是套脚的，不用系鞋带，卫衣、牛仔裤这么一搭，就能出门。喜欢这种风格，点开看看颜色和尺码。",
+  "parameters": {
+    "model": "Minimax-speech-2.8-hd",
+    "scene": "Text-to-Speech",
+    "voiceCard": {
+      "voiceId": "male-qn-daxuesheng",
+      "name": "青年大学生",
+      "language": "中文(普通话)",
+      "gender": "Male"
+    },
+    "speed": 1.16,
+    "voicePitch": 0,
+    "vol": 1,
+    "modifyPitch": 0,
+    "modifyIntensity": -8,
+    "modifyTimbre": 0,
+    "soundEffects": ""
+  },
+  "voice_catalog_source": "https://github.com/MiniMax-AI/skills/blob/main/skills/frontend-dev/references/minimax-voice-catalog.md",
+  "voice_selection": "Preserve the V04 youthful preset. Colloquial invitation and question, fewer noun lists; gentle intensity -8. No unsupported emotion parameter.",
+  "expected_audio_generation_count": 1,
+  "expected_video_generation_count": 0,
+  "prompt": "prompts/voice_v05.txt",
+  "no_pitch_shift_for_age": true,
+  "han_characters": 68,
+  "actual_audio_generation_count": 1,
+  "actual_video_generation_count": 0,
+  "actual_original_voice_duration": 17.294406,
+  "postprocess": "Trim only long low-level quiet middles; retain shorter natural pauses. Pitch-preserving tempo fit 1.04484.",
+  "creative_hypothesis": "Colloquial question and linked suggestions may reduce reading cadence; effect remains unconfirmed by user.",
+  "emotion_control_limitation": "LibTV schema exposes intensity and voice preset, but no native emotion field. No invented emotion parameter, no prose instructions sent as spoken text."
+}
