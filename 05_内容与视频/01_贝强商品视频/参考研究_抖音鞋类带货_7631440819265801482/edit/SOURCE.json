@@ -1,0 +1,29 @@
+{
+  "canonical_url": "https://www.douyin.com/video/7631440819265801482",
+  "author": "讲AI的小白同学（实战版）",
+  "title": "AI鞋子带货视频制作",
+  "observed_publication": "2026-04-22 12:48",
+  "research_date": "2026-10-16",
+  "source_file": "downloads/douyin_7631440819265801482.mp4",
+  "sha256": "31adb29f1ba179673d0382c110630ee84bf96fd7975e27cc58105e8c5e3c7633",
+  "source_id": "ad08b3deeb188bc5",
+  "previous_sampling_source_id": "a813e910126c2b38",
+  "relocation": "Byte-identical copy; source_id recomputed for the stable resolved path. Inspected frames retained unchanged.",
+  "bytes": 15510710,
+  "duration_seconds": 385.707007,
+  "width": 1024,
+  "height": 576,
+  "fps": 30,
+  "streams": [
+    "h264 video",
+    "aac audio"
+  ],
+  "paid_generation": false,
+  "evidence_basis": [
+    "local visual samples",
+    "visible on-screen subtitles",
+    "rendered page chapter headings"
+  ],
+  "audio_understanding": "unverified; official public MiniCPM backend_error; TokenHub OAuth expired; no inference submitted there",
+  "acquisition": "Browser observed HTTP video/audio tracks downloaded without credentials; merged with stream copy; byte lengths and ffprobe verified."
+}

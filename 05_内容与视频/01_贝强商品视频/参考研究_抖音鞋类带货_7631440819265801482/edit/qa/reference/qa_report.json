@@ -1,0 +1,93 @@
+{
+  "source_id": "ad08b3deeb188bc5",
+  "source_sha256": "31adb29f1ba179673d0382c110630ee84bf96fd7975e27cc58105e8c5e3c7633",
+  "review_kind": "reference workflow study; sampled visuals and visible subtitles",
+  "status": "REVIEWED_WITH_LIMITATIONS",
+  "all_frames_reviewed": false,
+  "whole_video_contact_sheet_inspected": true,
+  "original_resolution_inspected_seconds": [
+    83.876,
+    95,
+    117.407,
+    164,
+    188,
+    205,
+    217.998,
+    224,
+    230,
+    241,
+    249,
+    256,
+    262,
+    276,
+    280,
+    283,
+    289,
+    291,
+    301.824,
+    305,
+    316,
+    335.354,
+    352,
+    371,
+    378
+  ],
+  "focused_review_seconds": [
+    276,
+    370.2,
+    371,
+    371.8
+  ],
+  "audio_semantics_verified": false,
+  "generated_beiqiang_candidate": false,
+  "observations": [
+    {
+      "start": 55,
+      "end": 182,
+      "category": "workflow",
+      "description": "Portrait candidates, prompt cleanup for overexposure/angle, and upscale operation are shown."
+    },
+    {
+      "start": 182,
+      "end": 224,
+      "category": "product_reference",
+      "description": "White-background shoe generation and text removal shown; subtitles call a single angle insufficient."
+    },
+    {
+      "start": 224,
+      "end": 272,
+      "category": "scene_reference",
+      "description": "Fixed empty room is optional for product closeups, useful for a recurring full-body setting; blank-room result visible at 262s."
+    },
+    {
+      "start": 272,
+      "end": 286,
+      "category": "evidence_limit",
+      "description": "Script inversion described in subtitles; complete tool and execution are not displayed."
+    },
+    {
+      "start": 286,
+      "end": 330,
+      "category": "reference_binding",
+      "description": "Video interface and product upload shown; subtitles describe binding references and removing repeated scene/personal styling constraints."
+    },
+    {
+      "start": 370.2,
+      "end": 371.8,
+      "category": "camera_continuity",
+      "severity": "PASS",
+      "action": "KEEP",
+      "description": "Normal edit from tutorial UI to held shoes and then worn shoes; not evidence of an object disappearing within a continuous shot."
+    }
+  ],
+  "confirmed_generative_defects": [],
+  "limits": [
+    "Sampled reference analysis cannot certify temporal quality of every frame.",
+    "No trusted audio transcript or music judgment.",
+    "Tutorial does not expose a reproducible full generation request.",
+    "No real Beiqiang SKU or conversion outcome tested."
+  ],
+  "keep": "Reference for workflow and shot functions only; preserve source media locally.",
+  "trim": "No editing requested; no trim decision on the source.",
+  "regenerate": "No Beiqiang candidate exists; no regeneration decision."
+}
