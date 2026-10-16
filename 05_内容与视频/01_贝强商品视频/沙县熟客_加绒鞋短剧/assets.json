@@ -1,0 +1,157 @@
+{
+  "project": "只是店客",
+  "updated": "2026-10-16",
+  "selected_assets": [
+    {
+      "id": "MAN",
+      "file": "豆包30秒/图片/01_男熟客.png",
+      "role": "character_identity",
+      "view_kind": "multiview_sheet",
+      "inherit": [
+        "one adult male identity",
+        "jacket and trousers"
+      ],
+      "exclude": [
+        "reference-sheet panel layout and studio background",
+        "shoe state inferred from identity reference"
+      ],
+      "prompt": "Use case: photorealistic-natural. Create a casting identity reference sheet for ONE fictional Chinese man, age 29-33, an ordinary night-shift worker and regular customer in a small neighborhood Chinese snack restaurant. Landscape 3:2 image, clean light-grey studio background. Three clearly separated photographs of exactly the SAME man: left half a full body neutral standing front view; upper right a natural three-quarter head-and-shoulders portrait; lower right a true side-profile head-and-shoulders portrait. East Asian, short slightly untidy black hair, clean-shaven, ordinary attractive face with mild under-eye tiredness and believable pores, slim average build. A plain charcoal-blue quilted work jacket unzipped over a dark grey crewneck, straight dark charcoal trousers, dark grey socks, NO SHOES. He should look like a real approachable working adult, not a CEO, not a fashion model, no luxury styling. Hands relaxed and anatomically correct, face unobstructed, same outfit in all panels. Flat soft natural studio lighting, honest skin and textile texture, restrained neutral expression. No writing, captions, numbers, labels, logos, watermark or decorative borders. This sheet provides identity and wardrobe reference only; it is not a storyboard or first frame. Photorealistic high-quality film casting stills.",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "4644e7c95a96be496a6d1ade494bd8134c2ea8fe561b793c7974f52b6e756696",
+      "visual_review": {
+        "status": "passed",
+        "notes": "photorealistic male face and three consistent views; quilted dark jacket and dark trousers; grey socks are neutral identity state"
+      }
+    },
+    {
+      "id": "WOMAN",
+      "file": "豆包30秒/图片/02_女老板.png",
+      "role": "character_identity",
+      "view_kind": "multiview_sheet",
+      "inherit": [
+        "one adult female identity",
+        "hair and working clothes"
+      ],
+      "exclude": [
+        "reference-sheet panel layout and studio background",
+        "shoe state inferred from identity reference"
+      ],
+      "prompt": "Use case: photorealistic-natural. Create a casting identity reference sheet for ONE fictional Chinese woman, age 29-33, owner of a small neighborhood Chinese snack restaurant. Landscape 3:2 image, plain light-grey studio background. Three clearly separated photographs of exactly the SAME woman: left half a full body neutral front view, upper right a three-quarter head-and-shoulders portrait, lower right a true side profile portrait. East Asian, dark brown-black hair tied back in a practical low ponytail, natural ordinary pretty face, believable pores and no glamour makeup, average slim build. Wearing a plain dark brown knitted long-sleeve sweater, a clean slightly worn muted grey-green apron reaching below knees, straight black trousers and plain black practical shoes. Hands relaxed, no food, no cooking tool, no jewelry except an optional tiny simple stud. Approachable but reserved neutral expression, capable everyday shopkeeper, not an idol, not a CEO. Exactly same outfit, hair and facial identity in all panels. Soft neutral studio light with true skin and fabric texture. No text, numbers, labels, captions, watermark or visible brand. This sheet is only character identity and wardrobe reference, not a storyboard or first frame.",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "50f4fcf39b6fb3c055fcb3e6f37cd882a47dfb70057b9ef704cd7d39738480fd",
+      "visual_review": {
+        "status": "passed",
+        "notes": "same female identity in three views; low tied hair, brown sweater and grey-green apron; natural face and working clothes"
+      }
+    },
+    {
+      "id": "SHOP",
+      "file": "豆包30秒/图片/03_小店空景.png",
+      "role": "empty_location",
+      "view_kind": "single_view",
+      "inherit": [
+        "room layout",
+        "door and counter positions",
+        "warm interior lighting"
+      ],
+      "exclude": [
+        "reference shot composition as mandatory first frame",
+        "shoe state inferred from identity reference"
+      ],
+      "prompt": "Use case: photorealistic-natural. Create ONE realistic empty location reference photograph of a modest Chinese neighborhood Shaxian-style snack restaurant at winter night, landscape 4:3 composition. Camera just inside the entrance looking diagonally into the small room, eye level, natural 28-35mm equivalent perspective. A glass entrance door and simple hanging wind chime are visible at the far left edge; right rear has a compact brushed stainless-steel service counter, a plain rice cooker, a covered braising pot, a small plain chopstick holder and folded cleaning cloth. One light-wood laminate dining table with two simple square stools occupies front-left/center with enough aisle space to the counter; an additional empty stool is tucked to the side for a shoe bag. Practical clean pale tiles, a few minor everyday wear marks, warm-white fluorescent ceiling lamps, subtly cold dark blue street visible beyond the door. Unpretentious ordinary small-town warmth, believable human scale, uncluttered blocking for a two-person conversation. Only simple out-of-focus unlettered menu panels high on the wall. No humans, no food close-up, no shoes, no identifiable logos, no readable text, no luxury restaurant, no excessive cinematic haze, no snow or water on the floor. One coherent room, no collage. This is an empty location reference, not an advertising poster.",
+      "width": 1448,
+      "height": 1086,
+      "sha256": "aea09eb9be29d98943953fdec82bf0cd171e00560c61c109d9128b88010b323f",
+      "visual_review": {
+        "status": "passed",
+        "notes": "coherent room, door/chime left, dining table and stools foreground, counter rear; interior dry; exterior shows wet pavement, not a product test"
+      }
+    },
+    {
+      "id": "OLD",
+      "file": "豆包30秒/图片/04_破旧薄鞋.png",
+      "role": "prop_old_shoes",
+      "view_kind": "single_view",
+      "inherit": [
+        "matched worn grey canvas pair",
+        "frayed toe",
+        "thin non-fleece lining"
+      ],
+      "exclude": [
+        "reference shot composition as mandatory first frame",
+        "new product identity"
+      ],
+      "prompt": "Use case: product-mockup. Create a photorealistic prop identity reference of ONE matched pair of old generic unbranded men's thin canvas lace-up shoes, charcoal-grey faded fabric and dirty flat off-white rubber soles, clearly different from a modern black knit slip-on with beige sculpted chunky sole. Square image, simple light grey studio floor/background. Pair arranged in three-quarter view, both are the same size and design. Old thin flat woven canvas uppers, ordinary grey laces, worn abrasion at toe edges, one small clearly visible frayed tear across the outer toe canvas of the nearer shoe, showing only a dark thin plain textile interior, no human toes or body parts. Both shoe openings visible enough to see thin flat ordinary cloth lining and absolutely NO fleece or fur. A slightly loosened shoe lace rests beside one shoe. Everyday worn shoes still physically wearable, no gore, no injury, no disgusting grime, no giant cartoon holes, no snow, no temperature graphics. Accurate count: exactly two shoes, a left and a right; natural studio soft lighting and tactile fabric/rubber texture. No labels, words, brand marks, badges, watermark, collage or comparison product. This is a fictional old-shoe prop, not the product being sold.",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "4e7c910de18a322993a7b30c2c9b9ca1db3a4f23d4055b125845b2c1b7e9f4dc",
+      "visual_review": {
+        "status": "passed",
+        "notes": "matched grey canvas lace-up pair; frayed toe tear and thin dark plain lining; no fleece, toes, injury or new-shoe brand"
+      }
+    },
+    {
+      "id": "NEW_PAIR",
+      "file": "豆包30秒/图片/05_新鞋_真实双鞋.png",
+      "role": "actual_product_reference",
+      "view_kind": "product_photo",
+      "inherit": [
+        "ZX9507 black-beige colorway",
+        "knit upper, slip-on collar, no laces or heel loop",
+        "beige sculpted outsole geometry"
+      ],
+      "exclude": [
+        "studio background, display block and photographed product pose",
+        "unseen lining, performance or inventory inference"
+      ],
+      "prompt": "Unmodified copy of existing same-model product image, not newly generated.",
+      "source_workspace_relative": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9507/优化/主图_黑杏双鞋净图.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "6d5d1860f35dfda4901f9dffbdc5b1425138685757715e93615de83fe677f095",
+      "visual_review": {
+        "status": "passed",
+        "notes": "Same black knit upper and beige lobed outsole as inspected product photograph; copied file hash matches source. No unseen lining added."
+      }
+    },
+    {
+      "id": "NEW_SIDE",
+      "file": "豆包30秒/图片/06_新鞋_真实侧面.jpg",
+      "role": "actual_product_reference",
+      "view_kind": "product_photo",
+      "inherit": [
+        "ZX9507 black-beige colorway",
+        "knit upper, slip-on collar, no laces or heel loop",
+        "beige sculpted outsole geometry"
+      ],
+      "exclude": [
+        "studio background, display block and photographed product pose",
+        "unseen lining, performance or inventory inference"
+      ],
+      "prompt": "Unmodified copy of existing same-model product image, not newly generated.",
+      "source_workspace_relative": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9507/工厂来源原图_4.jpg",
+      "width": 800,
+      "height": 800,
+      "sha256": "ee66ec520cff043c9d67759a6462159508d836e68faa62456497b73412ef6f72",
+      "visual_review": {
+        "status": "passed",
+        "notes": "Same black knit upper and beige lobed outsole as inspected product photograph; copied file hash matches source. No unseen lining added."
+      }
+    }
+  ],
+  "product_reference": {
+    "id": "PRODUCT_AUTHORITY",
+    "file": "豆包30秒/图片/05_新鞋_真实双鞋.png",
+    "role": "same SKU visible appearance",
+    "sha256": "6d5d1860f35dfda4901f9dffbdc5b1425138685757715e93615de83fe677f095"
+  },
+  "input_only_sources": [],
+  "generation_authorization": {
+    "reference_images": "user explicitly requested prompt and pictures, 2026-10-16, superseding earlier image hold",
+    "video": "user will run in Doubao; no agent video generation"
+  },
+  "video_QA": "not_started",
+  "notes": "No composed first-frame or storyboard images were created. Character sheets are identity references only."
+}
