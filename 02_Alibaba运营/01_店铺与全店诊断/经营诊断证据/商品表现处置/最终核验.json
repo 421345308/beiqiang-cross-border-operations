@@ -1,0 +1,46 @@
+{
+  "at": "2026-10-16T15:58:06.248455+00:00",
+  "state": "PARTIAL_EXECUTION_WITH_PLATFORM_REJECTIONS",
+  "all_seven_actions_completed": false,
+  "current_catalog_ids": 488,
+  "current_catalog_states": {
+    "approved/Y": 480,
+    "tbd/N": 2,
+    "approved/N": 6
+  },
+  "actions": 7,
+  "accepted_optimization_or_offline_ids": [
+    "1601943411769",
+    "1601943753087",
+    "10000047220568",
+    "1601939692338",
+    "1601939663432"
+  ],
+  "states": {
+    "FORMAL_OFFLINE_NON_TARGET_PASS": 2,
+    "PLATFORM_IP_REJECTED_OWNER_CONFIRMED": 2,
+    "TITLE_FORMAL_SCORE_PASS": 2,
+    "TITLE_REVIEWED_VARIANT_FORMAL_SCORE_PASS": 1
+  },
+  "residuals": [
+    {
+      "id": "1601943574507",
+      "state": "PLATFORM_IP_REJECTED_OWNER_CONFIRMED",
+      "remaining": "负责人明确平台判定侵权退回，停止原鞋原图重提；具体权利类型/权利人通知尚未读取。属性校验独立，不作为退回主因。"
+    },
+    {
+      "id": "1601943545775",
+      "state": "PLATFORM_IP_REJECTED_OWNER_CONFIRMED",
+      "remaining": "负责人明确平台判定侵权退回，停止原鞋原图重提；具体权利类型/权利人通知尚未读取。属性校验独立，不作为退回主因。"
+    }
+  ],
+  "issues": [],
+  "checks": {
+    "same_complete_catalog": true,
+    "all_untouched_catalog_fields_unchanged": true,
+    "original_four_offline_preserved": true,
+    "protected_source_untouched": true,
+    "all_target_current_and_source_records_synced": true
+  },
+  "scope": "API exact-ID/catalog/score closure; no per-link public-browser QA; no ad-budget or source identity changes."
+}

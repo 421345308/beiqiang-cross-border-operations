@@ -1,0 +1,96 @@
+{
+  "method": "alibaba.icbu.product.schema.update",
+  "operation": "update",
+  "status": "submitted_needs_readback",
+  "content_status": "pending_readback",
+  "expected_fields": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Unisex Thick Sole Canvas Sneakers Lace-Up Low Top Casual Shoes for Fashion Footwear Wholesale",
+          []
+        ]
+      ]
+    ],
+    "customMoreProperty": [
+      "field",
+      [
+        [
+          "id",
+          "customMoreProperty"
+        ]
+      ],
+      "",
+      [
+        [
+          "complex-value",
+          [],
+          "",
+          []
+        ]
+      ]
+    ]
+  },
+  "sku_verification": null,
+  "task_pack": null,
+  "replacement_plan": null,
+  "replacement_transition": null,
+  "inventory_input": null,
+  "post_publish_acceptance": {
+    "phase": "post_publish_completion",
+    "target_score": 5.0,
+    "actual_score": null,
+    "observed_at": null,
+    "score_source": null,
+    "diagnostics": {
+      "status": "not_read"
+    },
+    "score_status": "pending_score",
+    "overall_status": "PENDING_SCORE",
+    "unverified_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "versioned_content": null,
+    "required_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "limits": "Platform listing score does not prove public content, source truth or real product quality."
+  },
+  "attempted_at": "2026-10-16T15:17:53.385512+00:00",
+  "response": {
+    "trace_id": "21310a5c17921638734695835e0ec4",
+    "product_id": 1601943545775,
+    "biz_success": true,
+    "request_id": "0bbb3b2417921638734727008",
+    "_trace_id_": "21310a5c17921638734695835e0ec4"
+  },
+  "refs": {
+    "request_id": "0bbb3b2417921638734727008",
+    "trace_id": "21310a5c17921638734695835e0ec4",
+    "message": null,
+    "error": null
+  },
+  "product_id": "1601943545775"
+}

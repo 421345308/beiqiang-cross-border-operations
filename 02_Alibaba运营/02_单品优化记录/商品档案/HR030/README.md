@@ -3,7 +3,7 @@
 此页由唯一台账生成，是本款唯一资料入口；修改事实到下方唯一字段文件或台账，平台正式值到按ID保存的回读原件。原始包只读，候选/历史材料不当当前线上素材。
 
 历史/关联查询别名：HR030。以各商品ID正式型号为准。
-来源状态：`ADOPTED`。下一步：当前BQ货号、统一工厂图及货源已同步；原ID 1601943574507, 1601943545775 当前平台退回，目标值已返回；取得具体审核原因后针对性修复，不盲目重投。
+来源状态：`ADOPTED`。下一步：BQ1030-A/B平台因侵权退回（负责人明确说明），停止原款原图重提。保留实源以追溯，核具体权利通知与鞋上标识/外观，替换合适实款前不恢复发布；属性校验独立记录。
 
 ## 当前资料与实物证据
 
@@ -36,7 +36,7 @@
 ### BQ1030-B · 1601943545775
 
 - 平台链接：[1601943545775](https://www.alibaba.com/product-detail/Unisex-Thick-Sole-Canvas-Sneakers-Lace_1601943545775.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943545775/formal_get.json)；UTC 2026-10-16T05:10:28.669919+00:00。
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943545775/formal_get.json)；UTC 2026-10-16T15:50:32.449831+00:00。
 - 当前正式标题：Unisex Thick Sole Canvas Sneakers Lace-Up Low Top Casual Shoes for Fashion Footwear Wholesale
 - 审核/展示：tbd / N；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, owner_member, owner_member_display_name, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
@@ -49,18 +49,17 @@
   - M4：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR030/M4.jpg) · 1000×1000
   - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR030/M5.jpg) · 1000×1000
   - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/00_%E6%9C%80%E7%BB%88%E4%B8%8A%E4%BC%A0/00_%E5%8E%82%E5%AE%B6%E8%B5%84%E6%96%99/03_%E5%BD%93%E5%89%8D%E5%B7%A5%E5%8E%82%E4%B8%BB%E5%9B%BE/F1_factory.png) · 1254×1254
-- 本地同步状态：`CURRENT_API_VALUES_SYNCED_ACCEPTANCE_PENDING`。
-- 本轮优化：`PLATFORM_REJECTED_TARGET_VALUES_RETURNED`；目标货号和工厂图已回读，当前平台退回；get/list未返回具体原因，需正常后台明确原因后针对性处理，禁止盲目重投。
-  - 变更证据：[prepared.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601943545775/prepared.json)
-  - 变更证据：[manifest.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601943545775/manifest.json)
-  - 变更证据：[update_once.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601943545775/update_once.json)
-  - 变更证据：[update_receipt.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601943545775/update_receipt.json)
-  - 变更证据：[verification.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601943545775/verification.json)
+- 本地同步状态：`CURRENT_RETURNED_VALUES_SYNCED_IP_REJECTION_HOLD`。
+- 本轮优化：`PLATFORM_IP_REJECTED_OWNER_CONFIRMED`；负责人已明确平台因侵权退回；当前tbd/N，停止原款原图重提。核平台具体权利通知及真实商品标识/外观；自定义属性错误独立记录，不能当退回主因。
+  - 变更证据：[prepared.json](../../../01_%E5%BA%97%E9%93%BA%E4%B8%8E%E5%85%A8%E5%BA%97%E8%AF%8A%E6%96%AD/%E7%BB%8F%E8%90%A5%E8%AF%8A%E6%96%AD%E8%AF%81%E6%8D%AE/%E5%95%86%E5%93%81%E8%A1%A8%E7%8E%B0%E5%A4%84%E7%BD%AE/%E5%95%86%E5%93%81/1601943545775/%E9%80%80%E5%9B%9E%E5%B1%9E%E6%80%A7%E4%BF%AE%E5%A4%8D/prepared.json)
+  - 变更证据：[manifest.json](../../../01_%E5%BA%97%E9%93%BA%E4%B8%8E%E5%85%A8%E5%BA%97%E8%AF%8A%E6%96%AD/%E7%BB%8F%E8%90%A5%E8%AF%8A%E6%96%AD%E8%AF%81%E6%8D%AE/%E5%95%86%E5%93%81%E8%A1%A8%E7%8E%B0%E5%A4%84%E7%BD%AE/%E5%95%86%E5%93%81/1601943545775/%E9%80%80%E5%9B%9E%E5%B1%9E%E6%80%A7%E4%BF%AE%E5%A4%8D/manifest.json)
+  - 变更证据：[receipt.json](../../../01_%E5%BA%97%E9%93%BA%E4%B8%8E%E5%85%A8%E5%BA%97%E8%AF%8A%E6%96%AD/%E7%BB%8F%E8%90%A5%E8%AF%8A%E6%96%AD%E8%AF%81%E6%8D%AE/%E5%95%86%E5%93%81%E8%A1%A8%E7%8E%B0%E5%A4%84%E7%BD%AE/%E5%95%86%E5%93%81/1601943545775/%E9%80%80%E5%9B%9E%E5%B1%9E%E6%80%A7%E4%BF%AE%E5%A4%8D/receipt.json)
+  - 变更证据：[verification.json](../../../01_%E5%BA%97%E9%93%BA%E4%B8%8E%E5%85%A8%E5%BA%97%E8%AF%8A%E6%96%AD/%E7%BB%8F%E8%90%A5%E8%AF%8A%E6%96%AD%E8%AF%81%E6%8D%AE/%E5%95%86%E5%93%81%E8%A1%A8%E7%8E%B0%E5%A4%84%E7%BD%AE/%E5%95%86%E5%93%81/1601943545775/%E9%80%80%E5%9B%9E%E5%B1%9E%E6%80%A7%E4%BF%AE%E5%A4%8D/verification.json)
 
 ### BQ1030-A · 1601943574507
 
 - 平台链接：[1601943574507](https://www.alibaba.com/product-detail/Unisex-Platform-Canvas-Sneakers-Lace-Up_1601943574507.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943574507/formal_get.json)；UTC 2026-10-16T05:10:28.669919+00:00。
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943574507/formal_get.json)；UTC 2026-10-16T15:50:31.906603+00:00。
 - 当前正式标题：Unisex Platform Canvas Sneakers Lace-Up Low Top Casual Shoes with Rubber Outsole for Wholesale
 - 审核/展示：tbd / N；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, owner_member, owner_member_display_name, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
@@ -73,13 +72,12 @@
   - M4：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR030/M4.jpg) · 1000×1000
   - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR030/M5.jpg) · 1000×1000
   - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/00_%E6%9C%80%E7%BB%88%E4%B8%8A%E4%BC%A0/00_%E5%8E%82%E5%AE%B6%E8%B5%84%E6%96%99/03_%E5%BD%93%E5%89%8D%E5%B7%A5%E5%8E%82%E4%B8%BB%E5%9B%BE/F1_factory.png) · 1254×1254
-- 本地同步状态：`CURRENT_API_VALUES_SYNCED_ACCEPTANCE_PENDING`。
-- 本轮优化：`PLATFORM_REJECTED_TARGET_VALUES_RETURNED`；目标货号和工厂图已回读，当前平台退回；get/list未返回具体原因，需正常后台明确原因后针对性处理，禁止盲目重投。
-  - 变更证据：[prepared.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601943574507/prepared.json)
-  - 变更证据：[manifest.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601943574507/manifest.json)
-  - 变更证据：[update_once.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601943574507/update_once.json)
-  - 变更证据：[update_receipt.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601943574507/update_receipt.json)
-  - 变更证据：[verification.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601943574507/verification.json)
+- 本地同步状态：`CURRENT_RETURNED_VALUES_SYNCED_IP_REJECTION_HOLD`。
+- 本轮优化：`PLATFORM_IP_REJECTED_OWNER_CONFIRMED`；负责人已明确平台因侵权退回；当前tbd/N，停止原款原图重提。核平台具体权利通知及真实商品标识/外观；自定义属性错误独立记录，不能当退回主因。
+  - 变更证据：[prepared.json](../../../01_%E5%BA%97%E9%93%BA%E4%B8%8E%E5%85%A8%E5%BA%97%E8%AF%8A%E6%96%AD/%E7%BB%8F%E8%90%A5%E8%AF%8A%E6%96%AD%E8%AF%81%E6%8D%AE/%E5%95%86%E5%93%81%E8%A1%A8%E7%8E%B0%E5%A4%84%E7%BD%AE/%E5%95%86%E5%93%81/1601943574507/%E9%80%80%E5%9B%9E%E5%B1%9E%E6%80%A7%E4%BF%AE%E5%A4%8D/prepared.json)
+  - 变更证据：[manifest.json](../../../01_%E5%BA%97%E9%93%BA%E4%B8%8E%E5%85%A8%E5%BA%97%E8%AF%8A%E6%96%AD/%E7%BB%8F%E8%90%A5%E8%AF%8A%E6%96%AD%E8%AF%81%E6%8D%AE/%E5%95%86%E5%93%81%E8%A1%A8%E7%8E%B0%E5%A4%84%E7%BD%AE/%E5%95%86%E5%93%81/1601943574507/%E9%80%80%E5%9B%9E%E5%B1%9E%E6%80%A7%E4%BF%AE%E5%A4%8D/manifest.json)
+  - 变更证据：[receipt.json](../../../01_%E5%BA%97%E9%93%BA%E4%B8%8E%E5%85%A8%E5%BA%97%E8%AF%8A%E6%96%AD/%E7%BB%8F%E8%90%A5%E8%AF%8A%E6%96%AD%E8%AF%81%E6%8D%AE/%E5%95%86%E5%93%81%E8%A1%A8%E7%8E%B0%E5%A4%84%E7%BD%AE/%E5%95%86%E5%93%81/1601943574507/%E9%80%80%E5%9B%9E%E5%B1%9E%E6%80%A7%E4%BF%AE%E5%A4%8D/receipt.json)
+  - 变更证据：[verification.json](../../../01_%E5%BA%97%E9%93%BA%E4%B8%8E%E5%85%A8%E5%BA%97%E8%AF%8A%E6%96%AD/%E7%BB%8F%E8%90%A5%E8%AF%8A%E6%96%AD%E8%AF%81%E6%8D%AE/%E5%95%86%E5%93%81%E8%A1%A8%E7%8E%B0%E5%A4%84%E7%BD%AE/%E5%95%86%E5%93%81/1601943574507/%E9%80%80%E5%9B%9E%E5%B1%9E%E6%80%A7%E4%BF%AE%E5%A4%8D/verification.json)
 
 ## 其他原始/正式证据
 

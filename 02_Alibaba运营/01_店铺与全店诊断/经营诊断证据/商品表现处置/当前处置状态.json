@@ -1,0 +1,16 @@
+{
+  "at": "2026-10-16T15:58:27.627084+00:00",
+  "actions": 7,
+  "states": {
+    "FORMAL_OFFLINE_NON_TARGET_PASS": 2,
+    "PLATFORM_IP_REJECTED_OWNER_CONFIRMED": 2,
+    "TITLE_FORMAL_SCORE_PASS": 2,
+    "TITLE_REVIEWED_VARIANT_FORMAL_SCORE_PASS": 1
+  },
+  "checks": {
+    "all_local_proofs_pass": true,
+    "no_new_registry_errors": true
+  },
+  "baseline_validation_issues": [],
+  "public_qa": "API closure; browser used for unavailable latest metrics and exact edit error only."
+}

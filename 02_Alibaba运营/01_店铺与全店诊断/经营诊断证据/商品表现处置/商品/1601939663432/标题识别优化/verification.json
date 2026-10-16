@@ -1,0 +1,28 @@
+{
+  "id": "1601939663432",
+  "at": "2026-10-16T15:48:58.298308+00:00",
+  "kind": "title_clarity",
+  "state": "TITLE_REVIEWED_VARIANT_FORMAL_SCORE_PASS",
+  "status": "approved",
+  "display": "Y",
+  "checks": {
+    "all_non_target_fields_preserved": true,
+    "model_exact": true,
+    "all_SKU_IDs_codes_colour_sizes_prices_inventory_preserved": true,
+    "all_main_images_preserved": true,
+    "title_matches_reviewed_target": true,
+    "non_target_schema_fields_preserved": true
+  },
+  "actual_score": "5.00",
+  "reason": "月周均低点击，旧题All Seasons Regular Fit挤占结构信息；将已核透气针织系带和EVA外底前置，去掉泛季节词。当前首图实鞋清晰，保留图、SKU和报价，本次不宣称改题必然带来询盘。",
+  "public_qa": "API closure; normal editor used only for specific validation error diagnosis",
+  "actual_title": "Breathable Knit Lace-Up Walking Shoes for Men Lightweight EVA Sole Casual Sneakers R1218 All Seasons Regular Fit Wholesale",
+  "requested_title_exact": false,
+  "returned_title_review": {
+    "observed_at": "2026-10-16T15:40:25+00:00",
+    "actual_title": "Breathable Knit Lace-Up Walking Shoes for Men Lightweight EVA Sole Casual Sneakers R1218 All Seasons Regular Fit Wholesale",
+    "state": "MANUALLY_REVIEWED_VARIANT_CORE_INTENT_PRESERVED",
+    "reviewer": "active_agent",
+    "reason": "随后平台回读增加原有All Seasons Regular Fit；改动来源未核，不归因为用户或平台自动优化。针织系带、轻量EVA和主要品类已前置，仍比原标题更易识别。本次接受这条实际标题变体，明确未完成去掉泛季节词这一拟稿细节；不重复覆盖未知修订。"
+  }
+}

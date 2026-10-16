@@ -1,0 +1,12 @@
+{
+  "id": "1601943574507",
+  "at": "2026-10-16T15:17:36.273452+00:00",
+  "kind": "repair_custom_attribute",
+  "reason": "正常编辑页唯一错误明确指出当前类目不支持自定义属性；只清空冗余Shoe Profile，原鞋型事实仍由标题和亮点表达。5分并未消除此校验错误；复审通过后再判断是否解决退回。",
+  "fields": [
+    "customMoreProperty",
+    "productTitle"
+  ],
+  "empty_custom_property_is_request_not_inferred_result": true,
+  "before_sha256": "8f61d53480d764e1368f396dc3ff71e272695679a7278ac26172257ac6192442"
+}

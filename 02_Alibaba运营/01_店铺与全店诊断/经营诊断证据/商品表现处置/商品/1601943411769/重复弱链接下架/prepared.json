@@ -1,0 +1,24 @@
+{
+  "id": "1601943411769",
+  "at": "2026-10-16T15:17:32.765308+00:00",
+  "kind": "pause_duplicate",
+  "reason": "同一真实鞋款、六张主图与全部商品详情相同，六项EU规格和三档价格相同；弱链接9月及第40周询盘/TM均为零，保留A款已有询盘和近期TM入口。停用重复链接，不认定实鞋无市场。",
+  "retained_id": "1601943434630",
+  "shared_main_images": 6,
+  "checks": {
+    "same_real_family_and_source": true,
+    "all_weak_SKUs_and_prices_retained": true,
+    "same_all_product_details": true,
+    "no_recent_weak_consultation_evidence": true,
+    "strong_entry_has_consultation": true
+  },
+  "method": "alibaba.icbu.product.batch.update.display",
+  "params": {
+    "new_display": "off",
+    "product_id_list": [
+      1601943411769
+    ]
+  },
+  "official_reference": "https://open.alibaba.com/doc/api.htm#/api?cid=20966&path=alibaba.icbu.product.batch.update.display&methodType=GET/POST",
+  "before_sha256": "651492d55dbbcd53c33662b36720163d8b17f00126277846791b0c4c363a00b8"
+}

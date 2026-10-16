@@ -79,9 +79,9 @@
 
 ### BQ003-R1 / R1218 · 1601939663432
 
-- 平台链接：[1601939663432](https://www.alibaba.com/product-detail/Men-s-Casual-Walking-Shoes-Breathable_1601939663432.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939663432/formal_get.json)；UTC 2026-10-16T04:40:51.192246+00:00。
-- 当前正式标题：Men's Casual Walking Shoes Breathable Knit Lightweight EVA Sole All Seasons Regular Fit Lace-Up Sneakers R1218
+- 平台链接：[1601939663432](https://www.alibaba.com/product-detail/Breathable-Knit-Lace-Up-Walking-Shoes_1601939663432.html)
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939663432/formal_get.json)；UTC 2026-10-16T15:48:58.298308+00:00。
+- 当前正式标题：Breathable Knit Lace-Up Walking Shoes for Men Lightweight EVA Sole Casual Sneakers R1218 All Seasons Regular Fit Wholesale
 - 审核/展示：approved / Y；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, owner_member, owner_member_display_name, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
 - SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。
@@ -93,13 +93,12 @@
   - M4：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/3a2e279bd379b26807ad87ee3ab411040970a4e3947e7f48bbd5b71c05d9feea.jpg) · 800×800
   - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/f2f36f1f6193315dc3ca04ee680f53198af6dc9f72519a76544a81af84252269.jpg) · 800×800
   - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/67652c64b88f9c19aae7292d0ae573a9f0e8a447f2bb65f29e59129ce3cbf091.jpg) · 800×800
-- 本地同步状态：`MODEL_FACTORY_GALLERY_DOUBLE_SYNC_PASS`。
-- 本轮优化：`FORMAL_FIELDS_SCORE_PASS`；当前正式字段/实际评分通过，来源与本地同步
-  - 变更证据：[prepared.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601939663432/prepared.json)
-  - 变更证据：[manifest.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601939663432/manifest.json)
-  - 变更证据：[update_once.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601939663432/update_once.json)
-  - 变更证据：[update_receipt.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601939663432/update_receipt.json)
-  - 变更证据：[verification.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601939663432/verification.json)
+- 本地同步状态：`PERFORMANCE_ACTION_DOUBLE_SYNC_PASS`。
+- 本轮优化：`TITLE_REVIEWED_VARIANT_FORMAL_SCORE_PASS`；标题正式通过；按后续完整窗口复核搜索点击与实际采购咨询，不把字段通过当增长。
+  - 变更证据：[prepared.json](../../../01_%E5%BA%97%E9%93%BA%E4%B8%8E%E5%85%A8%E5%BA%97%E8%AF%8A%E6%96%AD/%E7%BB%8F%E8%90%A5%E8%AF%8A%E6%96%AD%E8%AF%81%E6%8D%AE/%E5%95%86%E5%93%81%E8%A1%A8%E7%8E%B0%E5%A4%84%E7%BD%AE/%E5%95%86%E5%93%81/1601939663432/%E6%A0%87%E9%A2%98%E8%AF%86%E5%88%AB%E4%BC%98%E5%8C%96/prepared.json)
+  - 变更证据：[manifest.json](../../../01_%E5%BA%97%E9%93%BA%E4%B8%8E%E5%85%A8%E5%BA%97%E8%AF%8A%E6%96%AD/%E7%BB%8F%E8%90%A5%E8%AF%8A%E6%96%AD%E8%AF%81%E6%8D%AE/%E5%95%86%E5%93%81%E8%A1%A8%E7%8E%B0%E5%A4%84%E7%BD%AE/%E5%95%86%E5%93%81/1601939663432/%E6%A0%87%E9%A2%98%E8%AF%86%E5%88%AB%E4%BC%98%E5%8C%96/manifest.json)
+  - 变更证据：[receipt.json](../../../01_%E5%BA%97%E9%93%BA%E4%B8%8E%E5%85%A8%E5%BA%97%E8%AF%8A%E6%96%AD/%E7%BB%8F%E8%90%A5%E8%AF%8A%E6%96%AD%E8%AF%81%E6%8D%AE/%E5%95%86%E5%93%81%E8%A1%A8%E7%8E%B0%E5%A4%84%E7%BD%AE/%E5%95%86%E5%93%81/1601939663432/%E6%A0%87%E9%A2%98%E8%AF%86%E5%88%AB%E4%BC%98%E5%8C%96/receipt.json)
+  - 变更证据：[verification.json](../../../01_%E5%BA%97%E9%93%BA%E4%B8%8E%E5%85%A8%E5%BA%97%E8%AF%8A%E6%96%AD/%E7%BB%8F%E8%90%A5%E8%AF%8A%E6%96%AD%E8%AF%81%E6%8D%AE/%E5%95%86%E5%93%81%E8%A1%A8%E7%8E%B0%E5%A4%84%E7%BD%AE/%E5%95%86%E5%93%81/1601939663432/%E6%A0%87%E9%A2%98%E8%AF%86%E5%88%AB%E4%BC%98%E5%8C%96/verification.json)
 
 ### BQ003-O1 / R1218 · 1601939665367
 

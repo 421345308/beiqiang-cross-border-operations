@@ -1,0 +1,95 @@
+{
+  "owner_scope": "2026-10-16：了解国际站店铺数据，对数据差的产品进行优化或下架，要找到原因。",
+  "state": "REVIEWED_EXACT_ID_ACTIONS",
+  "protected_ids": [
+    "1601825074604"
+  ],
+  "items": [
+    {
+      "id": "1601943411769",
+      "model": "BQ1009-B",
+      "kind": "pause_duplicate",
+      "retained_id": "1601943434630",
+      "reason": "同一真实鞋款、六张主图与全部商品详情相同，六项EU规格和三档价格相同；弱链接9月及第40周询盘/TM均为零，保留A款已有询盘和近期TM入口。停用重复链接，不认定实鞋无市场。"
+    },
+    {
+      "id": "1601943753087",
+      "model": "BQ1044-B",
+      "kind": "pause_duplicate",
+      "retained_id": "1601943650718",
+      "reason": "同一真实鞋款、五张主图与全部商品详情相同，八项EU规格和三档价格相同；弱链接9月及第40周询盘/TM均为零，A款最近完整周和10月14日仍有询盘/TM。保留完整规格的强入口。"
+    },
+    {
+      "id": "1601943574507",
+      "model": "BQ1030-A",
+      "kind": "repair_custom_attribute",
+      "reason": "负责人明确平台因侵权退回；停止原款原图重提，独立属性校验错误不作为退回主因。",
+      "original_attempt_reason": "正常编辑页唯一错误明确指出当前类目不支持自定义属性；只清空冗余Shoe Profile，原鞋型事实仍由标题和亮点表达。5分并未消除此校验错误；复审通过后再判断是否解决退回。",
+      "execution_hold": "PLATFORM_IP_REJECTED_OWNER_CONFIRMED",
+      "rejection_evidence": {
+        "state": "PLATFORM_IP_REJECTED_OWNER_CONFIRMED",
+        "file": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/侵权退回事实.json",
+        "source": "负责人2026-10-16本会话明确说明：阿里巴巴认为上架商品侵权，退回来"
+      }
+    },
+    {
+      "id": "1601943545775",
+      "model": "BQ1030-B",
+      "kind": "repair_custom_attribute",
+      "reason": "负责人明确平台因侵权退回；停止原款原图重提，独立属性校验错误不作为退回主因。",
+      "original_attempt_reason": "与A同一类目、同一冗余Shoe Profile且当前tbd/N；按已证的类目限制清除同一自定义字段，保全原标题、实鞋、SKU、价格与图片，不盲目重投原载荷。",
+      "execution_hold": "PLATFORM_IP_REJECTED_OWNER_CONFIRMED",
+      "rejection_evidence": {
+        "state": "PLATFORM_IP_REJECTED_OWNER_CONFIRMED",
+        "file": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/侵权退回事实.json",
+        "source": "负责人2026-10-16本会话明确说明：阿里巴巴认为上架商品侵权，退回来"
+      }
+    },
+    {
+      "id": "10000047220568",
+      "model": "BQ049 / A230",
+      "kind": "title_clarity",
+      "before_title": "Wholesale Model A230 Knit Lace-Up Breathable Walking Shoes Lightweight Plastic Outsole Casual Sneakers for Men and Women",
+      "title": "Breathable Knit Lace-Up Walking Shoes for Men and Women Lightweight Casual Sneakers A230 Wholesale",
+      "source_evidence": [
+        "01_产品资产/02_可发布素材/00_最终上传/BQ049_A230/00_上架填写表.md"
+      ],
+      "reason": "原题以Wholesale Model A230占据前部，塑料鞋底词对采购识别帮助小；改为已核针织系带步行鞋和男女采购方向。九月仍有咨询，近期周CTR改善，保留在售和原首图；本次是可检验的识别优化，不称低CTR已证明由标题造成。",
+      "scope": "productTitle only; all other fields unchanged",
+      "expected_observation": "后续完整7/30日按同一商品ID比较搜索点击率、实际采购问题及询盘质量；无显著改善则重审搜索意图和首图，不把编辑成功算经营成功。"
+    },
+    {
+      "id": "1601939692338",
+      "model": "BQ027-R1 / K6116",
+      "kind": "title_clarity",
+      "before_title": "Grey Knit Lace Up Casual Walking Shoes Lightweight Breathable Sneakers for Men Women K6116",
+      "title": "Grey Knit Walking Shoes for Men and Women Lace Detail Casual Sneakers EU 35-45 Wholesale K6116",
+      "source_evidence": [
+        "01_产品资产/02_可发布素材/00_最终上传/BQ027_K6116/00_上架填写表.md"
+      ],
+      "reason": "灰色首图与标题保留一致；原Lace Up无法由来源一脚蹬与系带外观直接证明，改用可见Lace Detail，保留针织步行休闲和已核EU码段。九月及完整周点击率偏低，但样本不足判定款式无市场。",
+      "scope": "productTitle only; all other fields unchanged",
+      "expected_observation": "后续完整7/30日按同一商品ID比较搜索点击率、实际采购问题及询盘质量；无显著改善则重审搜索意图和首图，不把编辑成功算经营成功。"
+    },
+    {
+      "id": "1601939663432",
+      "model": "BQ003-R1 / R1218",
+      "kind": "title_clarity",
+      "before_title": "Men's Casual Walking Shoes Breathable Knit Lightweight EVA Sole All Seasons Regular Fit Lace-Up Sneakers R1218",
+      "title": "Breathable Knit Lace-Up Walking Shoes for Men Lightweight EVA Sole Casual Sneakers R1218 Wholesale",
+      "source_evidence": [
+        "01_产品资产/02_可发布素材/00_最终上传/BQ003_R1218/00_上架填写表.md"
+      ],
+      "reason": "月周均低点击，旧题All Seasons Regular Fit挤占结构信息；将已核透气针织系带和EVA外底前置，去掉泛季节词。当前首图实鞋清晰，保留图、SKU和报价，本次不宣称改题必然带来询盘。",
+      "scope": "productTitle only; all other fields unchanged",
+      "expected_observation": "后续完整7/30日按同一商品ID比较搜索点击率、实际采购问题及询盘质量；无显著改善则重审搜索意图和首图，不把编辑成功算经营成功。",
+      "returned_title_review": {
+        "observed_at": "2026-10-16T15:40:25+00:00",
+        "actual_title": "Breathable Knit Lace-Up Walking Shoes for Men Lightweight EVA Sole Casual Sneakers R1218 All Seasons Regular Fit Wholesale",
+        "state": "MANUALLY_REVIEWED_VARIANT_CORE_INTENT_PRESERVED",
+        "reviewer": "active_agent",
+        "reason": "随后平台回读增加原有All Seasons Regular Fit；改动来源未核，不归因为用户或平台自动优化。针织系带、轻量EVA和主要品类已前置，仍比原标题更易识别。本次接受这条实际标题变体，明确未完成去掉泛季节词这一拟稿细节；不重复覆盖未知修订。"
+      }
+    }
+  ]
+}

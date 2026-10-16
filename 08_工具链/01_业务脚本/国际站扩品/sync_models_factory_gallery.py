@@ -25,6 +25,10 @@ def main():
   pid=z['id'];f=n.BASE/'商品'/pid;p=products[z['product_key']];l=links[pid];v=n.load(f/'verification.json')if(f/'verification.json').exists()else{};prep=n.load(f/'prepared.json')if(f/'prepared.json').exists()else{};once=n.load(f/'update_once.json')if(f/'update_once.json').exists()else{}
   state=v.get('state')or('SUBMITTED_PENDING_FORMAL_VERIFY'if once else'PREPARED_NOT_SUBMITTED'if prep else'FROZEN_NOT_PREPARED');counts[state]+=1
   if z['model_change']:model_counts[state]+=1
+  # A later authorized performance disposition supersedes this historical
+  # migration snapshot. Never restore an older title or visibility locally.
+  newer=l.get('optimization',{}).get('product_performance_review',{})
+  if newer.get('at','')>v.get('at',''):continue
   refs=[n.rel(path)for path in [f/'prepared.json',f/'manifest.json',f/'update_once.json',f/'update_receipt.json',f/'verification.json']if path.exists()]
   opt={'state':state,'at':v.get('at')or at,'old_model':z['old_model'],'planned_model':z['new_model'],'actual_score':v.get('actual_score'),'gallery_slot':z['gallery_slot'],'factory_asset_sha256':n.ASSET_SHA,'evidence':refs,'public_qa':'未逐商品浏览器实测；按负责人API闭环范围执行','next_action':'当前正式字段/实际评分通过，来源与本地同步'if state=='FORMAL_FIELDS_SCORE_PASS'else'目标货号和工厂图已回读，当前平台退回；get/list未返回具体原因，需正常后台明确原因后针对性处理，禁止盲目重投。'if state=='PLATFORM_REJECTED_TARGET_VALUES_RETURNED'else'只按原ID继续回读；已有写入账本不重放'}
   if v.get('sku_reissue_mapping'):
@@ -69,7 +73,8 @@ def main():
  for p in r['products']:
   bound=[l for l in r['listings']if l['product_id']==p['id']and l['id']in{z['id']for z in plan['targets']}]
   if not bound:continue
-  if p.get('current_model')and p['id'].startswith('HR'):
+  later_performance=any(l.get('optimization',{}).get('product_performance_review',{}).get('at','')>l.get('optimization',{}).get('model_factory_normalization',{}).get('at','')for l in bound)
+  if p.get('current_model')and p['id'].startswith('HR')and not later_performance:
    rejected=[l['id']for l in bound if l.get('optimization',{}).get('model_factory_normalization',{}).get('state')=='PLATFORM_REJECTED_TARGET_VALUES_RETURNED']
    p['next_action']='当前BQ货号、统一工厂图及货源已同步；'+('原ID '+', '.join(rejected)+' 当前平台退回，目标值已返回；取得具体审核原因后针对性修复，不盲目重投。'if rejected else'维持已核实的实鞋与来源，按订单核采购条件；不重复换款或恢复旧HR编号。')
   categories=sorted({int(l['current_platform_fields']['category_id'])for l in bound if l.get('current_platform_fields',{}).get('category_id')})
@@ -80,7 +85,7 @@ def main():
  for fp,doc in changed_plans.items():n.save(fp,doc)
  for work in r.get('workstreams',[]):
   if work['name']=='路崎宽头/户外全分类':work['next_action']='原107来源均有明确处置，2520由负责人排除不发布。本期货号与工厂图结果见HR实源替换当前入口，不重建既有商品。'
-  if work['name']=='HR缺货源实款替换':
+  if work['name']=='HR缺货源实款替换'and not r.get('product_performance_review'):
    work['status']='实源替换完成后已进入稳定BQ货号和共用工厂主图维护；当前状态按唯一执行入口逐ID读取。';work['next_action']='175条当前HR型号已改BQ、483条F1已回读并双改；BQ1030-A/B当前退回原因待后台明确，其余481条正式及5.00通过，不重复换款或重投。';work['evidence']=list(dict.fromkeys([n.rel(n.BASE/'当前状态.json'),*work['evidence']]))
  errors=set(views.validate(r));assert errors<=baseline,sorted(errors-baseline)
  r['updated_on']='2026-10-16';r['model_factory_normalization']={'at':at,'scope':n.rel(n.BASE/'范围.json'),'status':dict(counts),'models':dict(model_counts),'double_sync_ids':len(proofs),'factory_asset':n.rel(n.ENTRY/'共用主图.json'),'owner_skipped_source':'2520，保留标识未核证据，不再推进，不发布。'};n.save(n.REG,r)

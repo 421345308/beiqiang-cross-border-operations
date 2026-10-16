@@ -1,5 +1,5 @@
 {
-  "observed_at_utc": "2026-10-16T05:10:28.669919+00:00",
+  "observed_at_utc": "2026-10-16T15:50:31.906603+00:00",
   "requested_product_id": "1601943574507",
   "response": {
     "product": {
@@ -21,7 +21,7 @@
       "struct_detail_product": true,
       "language": "ENGLISH",
       "is_smart_edit": false,
-      "gmt_modified": "2026-10-16 11:36:28",
+      "gmt_modified": "2026-10-16 23:17:52",
       "product_sku": {
         "skus": [
           {
@@ -697,8 +697,8 @@
       ],
       "status": "tbd"
     },
-    "request_id": "0b0b3a2717921274314858358",
-    "_trace_id_": "2106ee7717921274314832988e0e31"
+    "request_id": "212c6fc617921658315975486",
+    "_trace_id_": "2166b76317921658315953086e0f3d"
   },
-  "scope": "Current exact-ID official readback. Review/display and target checks are recorded independently."
+  "scope": "Exact-ID official get; current returned values, review state and scoped acceptance separate."
 }

@@ -55,7 +55,7 @@
     "A": "1601943574507",
     "B": "1601943545775"
   },
-  "page_state": "FORMAL_FIELDS_SCORE_PASS",
+  "page_state": "PLATFORM_IP_REJECTED_NO_RESUBMIT",
   "company_faq_source": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/通用FAQ与公司简介.json",
   "do_not_claim": [
     "physical stock",
@@ -70,7 +70,7 @@
       "商品/1601943574507/verification.json",
       "商品/1601943545775/verification.json"
     ],
-    "latest_actual_score": "A/B current actual5.00 and fullformalfieldPASS"
+    "latest_actual_score": "历史字段核验曾5.00；当前侵权退回，不能代替当前发布许可。"
   },
   "model_numbers": {
     "A": "BQ1030-A",
@@ -85,5 +85,51 @@
     "1601943574507": 201334413,
     "1601943545775": 201334413
   },
-  "category_scope": "category_id保留初始改造默认；当前平台叶子按current_platform_category_by_id逐ID读取，不把同源链接不同平台分类混成不同实鞋。"
+  "category_scope": "category_id保留初始改造默认；当前平台叶子按current_platform_category_by_id逐ID读取，不把同源链接不同平台分类混成不同实鞋。",
+  "current_platform_dispositions_by_id": {
+    "1601943574507": {
+      "at": "2026-10-16T15:50:31.906603+00:00",
+      "status": "tbd",
+      "display": "N",
+      "state": "PLATFORM_IP_REJECTED_OWNER_CONFIRMED",
+      "reason": "负责人明确平台因侵权退回；停止原款原图重提，独立属性校验错误不作为退回主因。",
+      "retained_id": null,
+      "evidence": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/商品/1601943574507/退回属性修复/verification.json"
+    },
+    "1601943545775": {
+      "at": "2026-10-16T15:50:32.449831+00:00",
+      "status": "tbd",
+      "display": "N",
+      "state": "PLATFORM_IP_REJECTED_OWNER_CONFIRMED",
+      "reason": "负责人明确平台因侵权退回；停止原款原图重提，独立属性校验错误不作为退回主因。",
+      "retained_id": null,
+      "evidence": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/商品/1601943545775/退回属性修复/verification.json"
+    }
+  },
+  "publish_hold": {
+    "state": "PLATFORM_IP_REJECTED_OWNER_CONFIRMED",
+    "file": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/侵权退回事实.json",
+    "source": "负责人2026-10-16本会话明确说明：阿里巴巴认为上架商品侵权，退回来"
+  },
+  "ip_review": {
+    "state": "PLATFORM_IP_REJECTED_OWNER_CONFIRMED",
+    "product_ids": [
+      "1601943574507",
+      "1601943545775"
+    ],
+    "models": [
+      "BQ1030-A",
+      "BQ1030-B"
+    ],
+    "source": "负责人2026-10-16本会话明确说明：阿里巴巴认为上架商品侵权，退回来",
+    "platform_notice_exact_text_read": false,
+    "right_type_and_rightsholder": "未读取具体通知，不猜商标/外观/版权或权利人",
+    "independent_image_review": {
+      "path": "01_产品资产/02_可发布素材/HR030/D2.jpg",
+      "observed": "鞋底与侧墙展示压印字样和图案，归属/授权未核；不推断这些标识就是平台命中的具体对象。",
+      "reviewer": "active_agent"
+    },
+    "operational_disposition": "保留当前tbd/N，停止原鞋原图重提；有实源不等于平台知识产权审核通过。改标题或删除自定义属性不能解决已知侵权退回；更换实际合适鞋款/明确授权和平台复核后才评估恢复。",
+    "attribution_correction": "此前仅找到独立的Shoe Profile编辑校验错误；它不是已知侵权退回的原因。"
+  }
 }

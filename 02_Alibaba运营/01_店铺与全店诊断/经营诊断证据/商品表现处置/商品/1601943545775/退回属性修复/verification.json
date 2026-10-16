@@ -1,0 +1,24 @@
+{
+  "id": "1601943545775",
+  "at": "2026-10-16T15:50:32.449831+00:00",
+  "kind": "repair_custom_attribute",
+  "state": "PLATFORM_IP_REJECTED_OWNER_CONFIRMED",
+  "status": "tbd",
+  "display": "N",
+  "checks": {
+    "all_non_target_fields_preserved": true,
+    "model_exact": true,
+    "all_SKU_IDs_codes_colour_sizes_prices_inventory_preserved": true,
+    "all_main_images_preserved": true,
+    "unsupported_custom_property_cleared": false
+  },
+  "actual_score": null,
+  "reason": "负责人明确平台因侵权退回；停止原款原图重提，独立属性校验错误不作为退回主因。",
+  "public_qa": "API closure; normal editor used only for specific validation error diagnosis",
+  "rejection_evidence": {
+    "state": "PLATFORM_IP_REJECTED_OWNER_CONFIRMED",
+    "file": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/侵权退回事实.json",
+    "source": "负责人2026-10-16本会话明确说明：阿里巴巴认为上架商品侵权，退回来"
+  },
+  "attribute_validation_is_independent": true
+}

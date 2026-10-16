@@ -1,0 +1,34 @@
+{
+  "observed_on": "2026-10-16",
+  "observed_id": "1601943574507",
+  "observed_model": "BQ1030-A",
+  "source_url": "https://post.alibaba.com/product/publish.htm?itemId=1601943574507",
+  "actual_visible_error": "当前类目不支持添加自定义属性，请删除",
+  "field": "自定义属性 / Shoe Profile / Low-top platform sneaker",
+  "visible_error_count": 1,
+  "visible_quality_score": "5.0",
+  "same_category_companion_id": "1601943545775",
+  "companion_scope": "API当前Schema核实同类目、同一customMoreProperty，当前tbd/N；按A的类目限制处理，不冒充B独立UI错误已观察。",
+  "inference": "已证页面校验错误，是本次退回最强可修假设；删除后仍须正式复审核验，不把UI提示单独称为已证全部审核原因。",
+  "browser_write": false,
+  "followup": {
+    "both_currently": "tbd/N at 2026-10-16T15:50:32+00:00",
+    "score": "曾短暂approved/Y时5.00；最终又退回，不以历史分数证明当前通过",
+    "empty_complex_clear": "NO_EFFECT_PROVEN_BY_GET_AND_RENDER",
+    "normal_editor_recovery_attempts": [
+      "原编辑页刷新仍只有页头及加载动画",
+      "正常新页面同一编辑地址仍持续加载"
+    ],
+    "permission_or_login_denial": false,
+    "official_update_reference": "https://developer.alibaba.com/docs/doc.htm?articleId=119214&docType=1&treeId=456",
+    "official_custom_property_reference": "https://developer.alibaba.com/docs/doc.htm?articleId=119213&docType=1&treeId=456",
+    "deletion_semantics_documented_in_read_sources": false,
+    "next_action": "负责人已明确侵权退回，停止原款原图重提；属性错误仅作为独立问题保留，不以删除属性作为恢复发布方案。"
+  },
+  "attribution_correction": {
+    "source": "负责人2026-10-16本会话明确说明：阿里巴巴认为上架商品侵权，退回来",
+    "actual_rejection_reason": "平台判定侵权",
+    "custom_attribute_error_role": "独立编辑校验，不能作为侵权退回原因",
+    "further_clear_attempt": "停止；优先真实商品/标识及平台权利通知复核，而非解决属性后重投。"
+  }
+}

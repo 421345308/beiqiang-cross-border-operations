@@ -1,0 +1,12 @@
+{
+  "id": "1601943545775",
+  "at": "2026-10-16T15:17:38.214847+00:00",
+  "kind": "repair_custom_attribute",
+  "reason": "与A同一类目、同一冗余Shoe Profile且当前tbd/N；按已证的类目限制清除同一自定义字段，保全原标题、实鞋、SKU、价格与图片，不盲目重投原载荷。",
+  "fields": [
+    "customMoreProperty",
+    "productTitle"
+  ],
+  "empty_custom_property_is_request_not_inferred_result": true,
+  "before_sha256": "6feee6307fd9515c219ffc3482d4a4439323b382d500429d2cb336aae58b98f0"
+}

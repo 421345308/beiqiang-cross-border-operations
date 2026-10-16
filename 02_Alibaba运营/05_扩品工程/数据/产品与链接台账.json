@@ -2652,7 +2652,25 @@
       "evidence": [
         "01_产品资产/01_原始数据包/HR030_MNA-1/source.json",
         "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR030/素材清单.json"
-      ]
+      ],
+      "current_listing_dispositions": {
+        "1601943574507": {
+          "at": "2026-10-16T15:50:31.906603+00:00",
+          "model": "BQ1030-A",
+          "status": "tbd",
+          "display": "N",
+          "state": "PLATFORM_IP_REJECTED_OWNER_CONFIRMED",
+          "evidence": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/商品/1601943574507/退回属性修复/verification.json"
+        },
+        "1601943545775": {
+          "at": "2026-10-16T15:50:32.449831+00:00",
+          "model": "BQ1030-B",
+          "status": "tbd",
+          "display": "N",
+          "state": "PLATFORM_IP_REJECTED_OWNER_CONFIRMED",
+          "evidence": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/商品/1601943545775/退回属性修复/verification.json"
+        }
+      }
     },
     {
       "id": "src-hr-hr042-9818",
@@ -3105,7 +3123,17 @@
         "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR044/复用图审依据.json",
         "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR044/复用图库绑定.json",
         "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR044/来源与正式绑定核验.json"
-      ]
+      ],
+      "current_listing_dispositions": {
+        "1601943753087": {
+          "at": "2026-10-16T15:31:00.232704+00:00",
+          "model": "BQ1044-B",
+          "status": "approved",
+          "display": "N",
+          "state": "FORMAL_OFFLINE_NON_TARGET_PASS",
+          "evidence": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/商品/1601943753087/重复弱链接下架/verification.json"
+        }
+      }
     },
     {
       "id": "src-hr-hr029-726c",
@@ -3528,7 +3556,17 @@
         "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR009/复用图审依据.json",
         "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR009/复用图库绑定.json",
         "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR009/来源与正式绑定核验.json"
-      ]
+      ],
+      "current_listing_dispositions": {
+        "1601943411769": {
+          "at": "2026-10-16T15:30:58.885459+00:00",
+          "model": "BQ1009-B",
+          "status": "approved",
+          "display": "N",
+          "state": "FORMAL_OFFLINE_NON_TARGET_PASS",
+          "evidence": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/商品/1601943411769/重复弱链接下架/verification.json"
+        }
+      }
     },
     {
       "id": "src-hr-hr043-556",
@@ -8559,6 +8597,9 @@
           "1601939663432": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601939663432/当前图库与货号.json",
           "1601939585904": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601939585904/当前图库与货号.json",
           "10000043200726": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/10000043200726/当前图库与货号.json"
+        },
+        "current_performance_by_id": {
+          "1601939663432": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/商品/1601939663432/标题识别优化/verification.json"
         }
       },
       "classification": {
@@ -12005,6 +12046,9 @@
           "1601939692338": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601939692338/当前图库与货号.json",
           "1601939616762": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601939616762/当前图库与货号.json",
           "10000044028277": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/10000044028277/当前图库与货号.json"
+        },
+        "current_performance_by_id": {
+          "1601939692338": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/商品/1601939692338/标题识别优化/verification.json"
         }
       },
       "classification": {
@@ -13532,6 +13576,9 @@
       "local_assets": {
         "current_gallery_by_id": {
           "10000047220568": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/10000047220568/当前图库与货号.json"
+        },
+        "current_performance_by_id": {
+          "10000047220568": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/商品/10000047220568/标题识别优化/verification.json"
         }
       },
       "classification": {
@@ -15076,6 +15123,9 @@
           "1601943520149": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943520149/当前图库与货号.json",
           "1601943434630": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943434630/当前图库与货号.json",
           "1601943411769": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943411769/当前图库与货号.json"
+        },
+        "current_performance_by_id": {
+          "1601943411769": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/商品/1601943411769/重复弱链接下架/verification.json"
         }
       },
       "classification": {
@@ -17403,17 +17453,21 @@
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943574507/V8/public_verification.json"
       ],
       "notes": [],
-      "next_action": "当前BQ货号、统一工厂图及货源已同步；原ID 1601943574507, 1601943545775 当前平台退回，目标值已返回；取得具体审核原因后针对性修复，不盲目重投。",
+      "next_action": "BQ1030-A/B平台因侵权退回（负责人明确说明），停止原款原图重提。保留实源以追溯，核具体权利通知与鞋上标识/外观，替换合适实款前不恢复发布；属性校验独立记录。",
       "local_assets": {
         "asset_roots": [
           "01_产品资产/02_可发布素材/HR030"
         ],
         "current_fields_file": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR030/事实与页面计划.json",
-        "state": "REAL_SOURCE_FORMAL_PASS",
+        "state": "REAL_SOURCE_EVIDENCE_RETAINED_PLATFORM_IP_HOLD",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
           "1601943574507": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943574507/当前图库与货号.json",
           "1601943545775": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943545775/当前图库与货号.json"
+        },
+        "current_performance_by_id": {
+          "1601943574507": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/商品/1601943574507/退回属性修复/verification.json",
+          "1601943545775": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/商品/1601943545775/退回属性修复/verification.json"
         }
       },
       "classification": {
@@ -17445,6 +17499,12 @@
         ],
         "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
         "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
+      },
+      "publication_disposition": {
+        "state": "PLATFORM_IP_REJECTED_NO_RESUBMIT",
+        "source": "负责人2026-10-16本会话明确说明阿里巴巴判定侵权退回",
+        "evidence": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/侵权退回事实.json",
+        "source_identity_unchanged": true
       }
     },
     {
@@ -18820,6 +18880,9 @@
           "1601943753087": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943753087/当前图库与货号.json",
           "1601943650718": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943650718/当前图库与货号.json",
           "1601943607919": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943607919/当前图库与货号.json"
+        },
+        "current_performance_by_id": {
+          "1601943753087": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/商品/1601943753087/重复弱链接下架/verification.json"
         }
       },
       "classification": {
@@ -37142,27 +37205,27 @@
       "id": "1601939663432",
       "product_id": "BQ003",
       "model": "BQ003-R1 / R1218",
-      "url": "https://www.alibaba.com/product-detail/Men-s-Casual-Walking-Shoes-Breathable_1601939663432.html",
+      "url": "https://www.alibaba.com/product-detail/Breathable-Knit-Lace-Up-Walking-Shoes_1601939663432.html",
       "record_type": "来源待补",
       "bound_source_id": null,
       "source_relation": "SOURCE_EVIDENCE_MISSING",
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-16T04:40:51.192246+00:00",
-        "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测"
+        "at": "2026-10-16T15:48:58.298308+00:00",
+        "scope": "商品表现处置精确ID回读"
       },
       "evidence": [],
       "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939663432/formal_get.json",
-        "at": "2026-10-16T04:40:51.192246+00:00",
-        "scope": "完整正式回读；不冒充公开呈现或来源真实性"
+        "at": "2026-10-16T15:48:58.298308+00:00",
+        "scope": "完整正式回读；审核中get可能仍为旧正式值，拟稿不冒充生效。"
       },
       "current_platform_fields": {
-        "at": "2026-10-16T04:40:51.192246+00:00",
+        "at": "2026-10-16T15:48:58.298308+00:00",
         "model": "BQ003-R1 / R1218",
-        "title": "Men's Casual Walking Shoes Breathable Knit Lightweight EVA Sole All Seasons Regular Fit Lace-Up Sneakers R1218",
+        "title": "Breathable Knit Lace-Up Walking Shoes for Men Lightweight EVA Sole Casual Sneakers R1218 All Seasons Regular Fit Wholesale",
         "keywords": [
           ""
         ],
@@ -37177,15 +37240,15 @@
         "category_id": 201334413,
         "display": "Y",
         "status": "approved",
-        "url": "https://www.alibaba.com/product-detail/Men-s-Casual-Walking-Shoes-Breathable_1601939663432.html",
-        "scope": "Current exact-ID official get; scoped target acceptance kept separately"
+        "url": "https://www.alibaba.com/product-detail/Breathable-Knit-Lace-Up-Walking-Shoes_1601939663432.html",
+        "scope": "Current official exact-ID get; no inferred public-page QA or physical inventory."
       },
       "local_sync": {
-        "state": "MODEL_FACTORY_GALLERY_DOUBLE_SYNC_PASS",
+        "at": "2026-10-16T15:48:58.298308+00:00",
+        "state": "PERFORMANCE_ACTION_DOUBLE_SYNC_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939663432/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939663432/formal_render.json",
-        "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601939663432/当前图库与货号.json",
-        "at": "2026-10-16T04:40:51.192246+00:00"
+        "verification": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/商品/1601939663432/标题识别优化/verification.json"
       },
       "optimization": {
         "buyer_copy": {
@@ -37289,12 +37352,28 @@
           ],
           "public_qa": "未逐商品浏览器实测；按负责人API闭环范围执行",
           "next_action": "当前正式字段/实际评分通过，来源与本地同步"
+        },
+        "product_performance_review": {
+          "at": "2026-10-16T15:48:58.298308+00:00",
+          "state": "TITLE_REVIEWED_VARIANT_FORMAL_SCORE_PASS",
+          "kind": "title_clarity",
+          "reason": "月周均低点击，旧题All Seasons Regular Fit挤占结构信息；将已核透气针织系带和EVA外底前置，去掉泛季节词。当前首图实鞋清晰，保留图、SKU和报价，本次不宣称改题必然带来询盘。",
+          "actual_score": "5.00",
+          "retained_id": null,
+          "planned_title": "Breathable Knit Lace-Up Walking Shoes for Men Lightweight EVA Sole Casual Sneakers R1218 Wholesale",
+          "evidence": [
+            "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/商品/1601939663432/标题识别优化/prepared.json",
+            "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/商品/1601939663432/标题识别优化/manifest.json",
+            "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/商品/1601939663432/标题识别优化/receipt.json",
+            "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/商品/1601939663432/标题识别优化/verification.json"
+          ],
+          "next_action": "标题正式通过；按后续完整窗口复核搜索点击与实际采购咨询，不把字段通过当增长。"
         }
       },
       "catalog_fields": {
-        "at": "2026-10-16T04:40:51.192246+00:00",
+        "at": "2026-10-16T15:48:58.298308+00:00",
         "model": "BQ003-R1 / R1218",
-        "title": "Men's Casual Walking Shoes Breathable Knit Lightweight EVA Sole All Seasons Regular Fit Lace-Up Sneakers R1218",
+        "title": "Breathable Knit Lace-Up Walking Shoes for Men Lightweight EVA Sole Casual Sneakers R1218 All Seasons Regular Fit Wholesale",
         "keywords": [
           ""
         ],
@@ -37309,8 +37388,8 @@
         "category_id": 201334413,
         "display": "Y",
         "status": "approved",
-        "url": "https://www.alibaba.com/product-detail/Men-s-Casual-Walking-Shoes-Breathable_1601939663432.html",
-        "scope": "Current exact-ID official get; scoped target acceptance kept separately"
+        "url": "https://www.alibaba.com/product-detail/Breathable-Knit-Lace-Up-Walking-Shoes_1601939663432.html",
+        "scope": "Current official exact-ID get; no inferred public-page QA or physical inventory."
       },
       "catalog_presence": "OBSERVED"
     },
@@ -55606,27 +55685,27 @@
       "id": "1601939692338",
       "product_id": "BQ027",
       "model": "BQ027-R1 / K6116",
-      "url": "https://www.alibaba.com/product-detail/Grey-Knit-Lace-Up-Casual-Walking_1601939692338.html",
+      "url": "https://www.alibaba.com/product-detail/Grey-Knit-Walking-Shoes-for-Men_1601939692338.html",
       "record_type": "来源待补",
       "bound_source_id": null,
       "source_relation": "SOURCE_EVIDENCE_MISSING",
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-16T04:40:38.344888+00:00",
-        "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测"
+        "at": "2026-10-16T15:40:22.710565+00:00",
+        "scope": "商品表现处置精确ID回读"
       },
       "evidence": [],
       "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939692338/formal_get.json",
-        "at": "2026-10-16T04:40:38.344888+00:00",
-        "scope": "完整正式回读；不冒充公开呈现或来源真实性"
+        "at": "2026-10-16T15:40:22.710565+00:00",
+        "scope": "完整正式回读；审核中get可能仍为旧正式值，拟稿不冒充生效。"
       },
       "current_platform_fields": {
-        "at": "2026-10-16T04:40:38.344888+00:00",
+        "at": "2026-10-16T15:40:22.710565+00:00",
         "model": "BQ027-R1 / K6116",
-        "title": "Grey Knit Lace Up Casual Walking Shoes Lightweight Breathable Sneakers for Men Women K6116",
+        "title": "Grey Knit Walking Shoes for Men and Women Lace Detail Casual Sneakers EU 35-45 Wholesale K6116",
         "keywords": [
           ""
         ],
@@ -55641,15 +55720,15 @@
         "category_id": 201334413,
         "display": "Y",
         "status": "approved",
-        "url": "https://www.alibaba.com/product-detail/Grey-Knit-Lace-Up-Casual-Walking_1601939692338.html",
-        "scope": "Current exact-ID official get; scoped target acceptance kept separately"
+        "url": "https://www.alibaba.com/product-detail/Grey-Knit-Walking-Shoes-for-Men_1601939692338.html",
+        "scope": "Current official exact-ID get; no inferred public-page QA or physical inventory."
       },
       "local_sync": {
-        "state": "MODEL_FACTORY_GALLERY_DOUBLE_SYNC_PASS",
+        "at": "2026-10-16T15:40:22.710565+00:00",
+        "state": "PERFORMANCE_ACTION_DOUBLE_SYNC_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939692338/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939692338/formal_render.json",
-        "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601939692338/当前图库与货号.json",
-        "at": "2026-10-16T04:40:38.344888+00:00"
+        "verification": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/商品/1601939692338/标题识别优化/verification.json"
       },
       "optimization": {
         "buyer_copy": {
@@ -55753,12 +55832,28 @@
           ],
           "public_qa": "未逐商品浏览器实测；按负责人API闭环范围执行",
           "next_action": "当前正式字段/实际评分通过，来源与本地同步"
+        },
+        "product_performance_review": {
+          "at": "2026-10-16T15:40:22.710565+00:00",
+          "state": "TITLE_FORMAL_SCORE_PASS",
+          "kind": "title_clarity",
+          "reason": "灰色首图与标题保留一致；原Lace Up无法由来源一脚蹬与系带外观直接证明，改用可见Lace Detail，保留针织步行休闲和已核EU码段。九月及完整周点击率偏低，但样本不足判定款式无市场。",
+          "actual_score": "5.00",
+          "retained_id": null,
+          "planned_title": "Grey Knit Walking Shoes for Men and Women Lace Detail Casual Sneakers EU 35-45 Wholesale K6116",
+          "evidence": [
+            "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/商品/1601939692338/标题识别优化/prepared.json",
+            "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/商品/1601939692338/标题识别优化/manifest.json",
+            "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/商品/1601939692338/标题识别优化/receipt.json",
+            "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/商品/1601939692338/标题识别优化/verification.json"
+          ],
+          "next_action": "标题正式通过；按后续完整窗口复核搜索点击与实际采购咨询，不把字段通过当增长。"
         }
       },
       "catalog_fields": {
-        "at": "2026-10-16T04:40:38.344888+00:00",
+        "at": "2026-10-16T15:40:22.710565+00:00",
         "model": "BQ027-R1 / K6116",
-        "title": "Grey Knit Lace Up Casual Walking Shoes Lightweight Breathable Sneakers for Men Women K6116",
+        "title": "Grey Knit Walking Shoes for Men and Women Lace Detail Casual Sneakers EU 35-45 Wholesale K6116",
         "keywords": [
           ""
         ],
@@ -55773,8 +55868,8 @@
         "category_id": 201334413,
         "display": "Y",
         "status": "approved",
-        "url": "https://www.alibaba.com/product-detail/Grey-Knit-Lace-Up-Casual-Walking_1601939692338.html",
-        "scope": "Current exact-ID official get; scoped target acceptance kept separately"
+        "url": "https://www.alibaba.com/product-detail/Grey-Knit-Walking-Shoes-for-Men_1601939692338.html",
+        "scope": "Current official exact-ID get; no inferred public-page QA or physical inventory."
       },
       "catalog_presence": "OBSERVED"
     },
@@ -61953,27 +62048,27 @@
       "id": "10000047220568",
       "product_id": "BQ049",
       "model": "BQ049 / A230",
-      "url": "https://www.alibaba.com/product-detail/Wholesale-Model-A230-Knit-Lace-Up_10000047220568.html",
+      "url": "https://www.alibaba.com/product-detail/Breathable-Knit-Lace-Up-Walking-Shoes_10000047220568.html",
       "record_type": "来源待补",
       "bound_source_id": null,
       "source_relation": "SOURCE_EVIDENCE_MISSING",
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-16T04:41:51.318694+00:00",
-        "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测"
+        "at": "2026-10-16T15:40:19.090755+00:00",
+        "scope": "商品表现处置精确ID回读"
       },
       "evidence": [],
       "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000047220568/formal_get.json",
-        "at": "2026-10-16T04:41:51.318694+00:00",
-        "scope": "完整正式回读；不冒充公开呈现或来源真实性"
+        "at": "2026-10-16T15:40:19.090755+00:00",
+        "scope": "完整正式回读；审核中get可能仍为旧正式值，拟稿不冒充生效。"
       },
       "current_platform_fields": {
-        "at": "2026-10-16T04:41:51.318694+00:00",
+        "at": "2026-10-16T15:40:19.090755+00:00",
         "model": "BQ049 / A230",
-        "title": "Wholesale Model A230 Knit Lace-Up Breathable Walking Shoes Lightweight Plastic Outsole Casual Sneakers for Men and Women",
+        "title": "Breathable Knit Lace-Up Walking Shoes for Men and Women Lightweight Casual Sneakers A230 Wholesale",
         "keywords": [
           ""
         ],
@@ -61988,15 +62083,15 @@
         "category_id": 201334413,
         "display": "Y",
         "status": "approved",
-        "url": "https://www.alibaba.com/product-detail/Wholesale-Model-A230-Knit-Lace-Up_10000047220568.html",
-        "scope": "Current exact-ID official get; scoped target acceptance kept separately"
+        "url": "https://www.alibaba.com/product-detail/Breathable-Knit-Lace-Up-Walking-Shoes_10000047220568.html",
+        "scope": "Current official exact-ID get; no inferred public-page QA or physical inventory."
       },
       "local_sync": {
-        "state": "MODEL_FACTORY_GALLERY_DOUBLE_SYNC_PASS",
+        "at": "2026-10-16T15:40:19.090755+00:00",
+        "state": "PERFORMANCE_ACTION_DOUBLE_SYNC_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000047220568/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000047220568/formal_render.json",
-        "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/10000047220568/当前图库与货号.json",
-        "at": "2026-10-16T04:41:51.318694+00:00"
+        "verification": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/商品/10000047220568/标题识别优化/verification.json"
       },
       "optimization": {
         "buyer_copy": {
@@ -62100,12 +62195,28 @@
           ],
           "public_qa": "未逐商品浏览器实测；按负责人API闭环范围执行",
           "next_action": "当前正式字段/实际评分通过，来源与本地同步"
+        },
+        "product_performance_review": {
+          "at": "2026-10-16T15:40:19.090755+00:00",
+          "state": "TITLE_FORMAL_SCORE_PASS",
+          "kind": "title_clarity",
+          "reason": "原题以Wholesale Model A230占据前部，塑料鞋底词对采购识别帮助小；改为已核针织系带步行鞋和男女采购方向。九月仍有咨询，近期周CTR改善，保留在售和原首图；本次是可检验的识别优化，不称低CTR已证明由标题造成。",
+          "actual_score": "5.00",
+          "retained_id": null,
+          "planned_title": "Breathable Knit Lace-Up Walking Shoes for Men and Women Lightweight Casual Sneakers A230 Wholesale",
+          "evidence": [
+            "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/商品/10000047220568/标题识别优化/prepared.json",
+            "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/商品/10000047220568/标题识别优化/manifest.json",
+            "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/商品/10000047220568/标题识别优化/receipt.json",
+            "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/商品/10000047220568/标题识别优化/verification.json"
+          ],
+          "next_action": "标题正式通过；按后续完整窗口复核搜索点击与实际采购咨询，不把字段通过当增长。"
         }
       },
       "catalog_fields": {
-        "at": "2026-10-16T04:41:51.318694+00:00",
+        "at": "2026-10-16T15:40:19.090755+00:00",
         "model": "BQ049 / A230",
-        "title": "Wholesale Model A230 Knit Lace-Up Breathable Walking Shoes Lightweight Plastic Outsole Casual Sneakers for Men and Women",
+        "title": "Breathable Knit Lace-Up Walking Shoes for Men and Women Lightweight Casual Sneakers A230 Wholesale",
         "keywords": [
           ""
         ],
@@ -62120,8 +62231,8 @@
         "category_id": 201334413,
         "display": "Y",
         "status": "approved",
-        "url": "https://www.alibaba.com/product-detail/Wholesale-Model-A230-Knit-Lace-Up_10000047220568.html",
-        "scope": "Current exact-ID official get; scoped target acceptance kept separately"
+        "url": "https://www.alibaba.com/product-detail/Breathable-Knit-Lace-Up-Walking-Shoes_10000047220568.html",
+        "scope": "Current official exact-ID get; no inferred public-page QA or physical inventory."
       },
       "catalog_presence": "OBSERVED"
     },
@@ -67800,9 +67911,9 @@
       "source_relation": "EXISTING_ACTUAL_SHOE_FORMAL_IMAGE_AND_SKU_MATCH",
       "observation": {
         "audit": "approved",
-        "display": "Y",
-        "at": "2026-10-16T04:27:57.229188+00:00",
-        "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测"
+        "display": "N",
+        "at": "2026-10-16T15:30:58.885459+00:00",
+        "scope": "商品表现处置精确ID回读"
       },
       "evidence": [
         "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
@@ -67810,11 +67921,11 @@
       "notes": "现有真实鞋款10-161保持；已核当前六图、原件哈希、材料及EU组合对应。此处恢复货源绑定，不重复提交换款；交易条件按订单确认。",
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943411769/formal_get.json",
-        "at": "2026-10-16T04:27:57.229188+00:00",
-        "scope": "完整正式回读；不冒充公开呈现或来源真实性"
+        "at": "2026-10-16T15:30:58.885459+00:00",
+        "scope": "完整正式回读；审核中get可能仍为旧正式值，拟稿不冒充生效。"
       },
       "current_platform_fields": {
-        "at": "2026-10-16T04:27:57.229188+00:00",
+        "at": "2026-10-16T15:30:58.885459+00:00",
         "model": "BQ1009-B",
         "title": "Men's Lace Up Casual Shoes with Genuine Leather Lining and Rubber Soles",
         "keywords": [
@@ -67829,17 +67940,17 @@
           "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
         ],
         "category_id": 201334413,
-        "display": "Y",
+        "display": "N",
         "status": "approved",
         "url": "https://www.alibaba.com/product-detail/Men-s-Lace-Up-Casual-Shoes_1601943411769.html",
-        "scope": "Current exact-ID official get; scoped target acceptance kept separately"
+        "scope": "Current official exact-ID get; no inferred public-page QA or physical inventory."
       },
       "local_sync": {
-        "state": "MODEL_FACTORY_GALLERY_DOUBLE_SYNC_PASS",
+        "at": "2026-10-16T15:30:58.885459+00:00",
+        "state": "PERFORMANCE_ACTION_DOUBLE_SYNC_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943411769/formal_get.json",
-        "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943411769/formal_render.json",
-        "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943411769/当前图库与货号.json",
-        "at": "2026-10-16T04:27:57.229188+00:00"
+        "current_schema_file": null,
+        "verification": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/商品/1601943411769/重复弱链接下架/verification.json"
       },
       "optimization": {
         "factory_gallery": {
@@ -67930,10 +68041,25 @@
           ],
           "public_qa": "未逐商品浏览器实测；按负责人API闭环范围执行",
           "next_action": "当前正式字段/实际评分通过，来源与本地同步"
+        },
+        "product_performance_review": {
+          "at": "2026-10-16T15:30:58.885459+00:00",
+          "state": "FORMAL_OFFLINE_NON_TARGET_PASS",
+          "kind": "pause_duplicate",
+          "reason": "同一真实鞋款、六张主图与全部商品详情相同，六项EU规格和三档价格相同；弱链接9月及第40周询盘/TM均为零，保留A款已有询盘和近期TM入口。停用重复链接，不认定实鞋无市场。",
+          "actual_score": null,
+          "retained_id": "1601943434630",
+          "planned_title": null,
+          "evidence": [
+            "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/商品/1601943411769/重复弱链接下架/prepared.json",
+            "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/商品/1601943411769/重复弱链接下架/receipt.json",
+            "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/商品/1601943411769/重复弱链接下架/verification.json"
+          ],
+          "next_action": "重复弱链接已下架；保留同源有咨询入口 1601943434630，不重建弱链接。"
         }
       },
       "catalog_fields": {
-        "at": "2026-10-16T04:27:57.229188+00:00",
+        "at": "2026-10-16T15:30:58.885459+00:00",
         "model": "BQ1009-B",
         "title": "Men's Lace Up Casual Shoes with Genuine Leather Lining and Rubber Soles",
         "keywords": [
@@ -67948,10 +68074,10 @@
           "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
         ],
         "category_id": 201334413,
-        "display": "Y",
+        "display": "N",
         "status": "approved",
         "url": "https://www.alibaba.com/product-detail/Men-s-Lace-Up-Casual-Shoes_1601943411769.html",
-        "scope": "Current exact-ID official get; scoped target acceptance kept separately"
+        "scope": "Current official exact-ID get; no inferred public-page QA or physical inventory."
       },
       "platform_group": {
         "id": "972130291",
@@ -77072,18 +77198,18 @@
       "observation": {
         "audit": "tbd",
         "display": "N",
-        "at": "2026-10-16T05:10:28.669919+00:00",
-        "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测"
+        "at": "2026-10-16T15:50:31.906603+00:00",
+        "scope": "商品表现处置精确ID回读"
       },
       "evidence": [],
       "notes": "当前采用铭阳鞋业 MNA-1，原ID整鞋替换正式字段及评分通过；旧候选、旧鞋型和旧采购价不参与当前执行。来源、当前图文和逐ID证据见本款唯一入口；已提交动作不重放。",
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943574507/formal_get.json",
-        "at": "2026-10-16T05:10:28.669919+00:00",
-        "scope": "完整正式回读；不冒充公开呈现或来源真实性"
+        "at": "2026-10-16T15:50:31.906603+00:00",
+        "scope": "完整正式回读；审核中get可能仍为旧正式值，拟稿不冒充生效。"
       },
       "current_platform_fields": {
-        "at": "2026-10-16T05:10:28.669919+00:00",
+        "at": "2026-10-16T15:50:31.906603+00:00",
         "model": "BQ1030-A",
         "title": "Unisex Platform Canvas Sneakers Lace-Up Low Top Casual Shoes with Rubber Outsole for Wholesale",
         "keywords": [
@@ -77101,14 +77227,14 @@
         "display": "N",
         "status": "tbd",
         "url": "https://www.alibaba.com/product-detail/Unisex-Platform-Canvas-Sneakers-Lace-Up_1601943574507.html",
-        "scope": "Current exact-ID official get; scoped target acceptance kept separately"
+        "scope": "Current official exact-ID get; no inferred public-page QA or physical inventory."
       },
       "local_sync": {
-        "state": "CURRENT_API_VALUES_SYNCED_ACCEPTANCE_PENDING",
+        "at": "2026-10-16T15:50:31.906603+00:00",
+        "state": "CURRENT_RETURNED_VALUES_SYNCED_IP_REJECTION_HOLD",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943574507/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943574507/formal_render.json",
-        "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943574507/当前图库与货号.json",
-        "at": "2026-10-16T05:10:28.669919+00:00"
+        "verification": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/商品/1601943574507/退回属性修复/verification.json"
       },
       "optimization": {
         "factory_gallery": {
@@ -77210,10 +77336,26 @@
           ],
           "public_qa": "未逐商品浏览器实测；按负责人API闭环范围执行",
           "next_action": "目标货号和工厂图已回读，当前平台退回；get/list未返回具体原因，需正常后台明确原因后针对性处理，禁止盲目重投。"
+        },
+        "product_performance_review": {
+          "at": "2026-10-16T15:50:31.906603+00:00",
+          "state": "PLATFORM_IP_REJECTED_OWNER_CONFIRMED",
+          "kind": "repair_custom_attribute",
+          "reason": "负责人明确平台因侵权退回；停止原款原图重提，独立属性校验错误不作为退回主因。",
+          "actual_score": null,
+          "retained_id": null,
+          "planned_title": null,
+          "evidence": [
+            "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/商品/1601943574507/退回属性修复/prepared.json",
+            "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/商品/1601943574507/退回属性修复/manifest.json",
+            "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/商品/1601943574507/退回属性修复/receipt.json",
+            "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/商品/1601943574507/退回属性修复/verification.json"
+          ],
+          "next_action": "负责人已明确平台因侵权退回；当前tbd/N，停止原款原图重提。核平台具体权利通知及真实商品标识/外观；自定义属性错误独立记录，不能当退回主因。"
         }
       },
       "catalog_fields": {
-        "at": "2026-10-16T05:10:28.669919+00:00",
+        "at": "2026-10-16T15:50:31.906603+00:00",
         "model": "BQ1030-A",
         "title": "Unisex Platform Canvas Sneakers Lace-Up Low Top Casual Shoes with Rubber Outsole for Wholesale",
         "keywords": [
@@ -77231,7 +77373,7 @@
         "display": "N",
         "status": "tbd",
         "url": "https://www.alibaba.com/product-detail/Unisex-Platform-Canvas-Sneakers-Lace-Up_1601943574507.html",
-        "scope": "Current exact-ID official get; scoped target acceptance kept separately"
+        "scope": "Current official exact-ID get; no inferred public-page QA or physical inventory."
       },
       "platform_group": {
         "id": "972130291",
@@ -77254,18 +77396,18 @@
       "observation": {
         "audit": "tbd",
         "display": "N",
-        "at": "2026-10-16T05:10:28.669919+00:00",
-        "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测"
+        "at": "2026-10-16T15:50:32.449831+00:00",
+        "scope": "商品表现处置精确ID回读"
       },
       "evidence": [],
       "notes": "当前采用铭阳鞋业 MNA-1，原ID整鞋替换正式字段及评分通过；旧候选、旧鞋型和旧采购价不参与当前执行。来源、当前图文和逐ID证据见本款唯一入口；已提交动作不重放。",
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943545775/formal_get.json",
-        "at": "2026-10-16T05:10:28.669919+00:00",
-        "scope": "完整正式回读；不冒充公开呈现或来源真实性"
+        "at": "2026-10-16T15:50:32.449831+00:00",
+        "scope": "完整正式回读；审核中get可能仍为旧正式值，拟稿不冒充生效。"
       },
       "current_platform_fields": {
-        "at": "2026-10-16T05:10:28.669919+00:00",
+        "at": "2026-10-16T15:50:32.449831+00:00",
         "model": "BQ1030-B",
         "title": "Unisex Thick Sole Canvas Sneakers Lace-Up Low Top Casual Shoes for Fashion Footwear Wholesale",
         "keywords": [
@@ -77283,14 +77425,14 @@
         "display": "N",
         "status": "tbd",
         "url": "https://www.alibaba.com/product-detail/Unisex-Thick-Sole-Canvas-Sneakers-Lace_1601943545775.html",
-        "scope": "Current exact-ID official get; scoped target acceptance kept separately"
+        "scope": "Current official exact-ID get; no inferred public-page QA or physical inventory."
       },
       "local_sync": {
-        "state": "CURRENT_API_VALUES_SYNCED_ACCEPTANCE_PENDING",
+        "at": "2026-10-16T15:50:32.449831+00:00",
+        "state": "CURRENT_RETURNED_VALUES_SYNCED_IP_REJECTION_HOLD",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943545775/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943545775/formal_render.json",
-        "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943545775/当前图库与货号.json",
-        "at": "2026-10-16T05:10:28.669919+00:00"
+        "verification": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/商品/1601943545775/退回属性修复/verification.json"
       },
       "optimization": {
         "factory_gallery": {
@@ -77384,10 +77526,26 @@
           ],
           "public_qa": "未逐商品浏览器实测；按负责人API闭环范围执行",
           "next_action": "目标货号和工厂图已回读，当前平台退回；get/list未返回具体原因，需正常后台明确原因后针对性处理，禁止盲目重投。"
+        },
+        "product_performance_review": {
+          "at": "2026-10-16T15:50:32.449831+00:00",
+          "state": "PLATFORM_IP_REJECTED_OWNER_CONFIRMED",
+          "kind": "repair_custom_attribute",
+          "reason": "负责人明确平台因侵权退回；停止原款原图重提，独立属性校验错误不作为退回主因。",
+          "actual_score": null,
+          "retained_id": null,
+          "planned_title": null,
+          "evidence": [
+            "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/商品/1601943545775/退回属性修复/prepared.json",
+            "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/商品/1601943545775/退回属性修复/manifest.json",
+            "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/商品/1601943545775/退回属性修复/receipt.json",
+            "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/商品/1601943545775/退回属性修复/verification.json"
+          ],
+          "next_action": "负责人已明确平台因侵权退回；当前tbd/N，停止原款原图重提。核平台具体权利通知及真实商品标识/外观；自定义属性错误独立记录，不能当退回主因。"
         }
       },
       "catalog_fields": {
-        "at": "2026-10-16T05:10:28.669919+00:00",
+        "at": "2026-10-16T15:50:32.449831+00:00",
         "model": "BQ1030-B",
         "title": "Unisex Thick Sole Canvas Sneakers Lace-Up Low Top Casual Shoes for Fashion Footwear Wholesale",
         "keywords": [
@@ -77405,7 +77563,7 @@
         "display": "N",
         "status": "tbd",
         "url": "https://www.alibaba.com/product-detail/Unisex-Thick-Sole-Canvas-Sneakers-Lace_1601943545775.html",
-        "scope": "Current exact-ID official get; scoped target acceptance kept separately"
+        "scope": "Current official exact-ID get; no inferred public-page QA or physical inventory."
       },
       "platform_group": {
         "id": "972130291",
@@ -82926,19 +83084,19 @@
       "source_relation": "EXISTING_ACTUAL_SHOE_FORMAL_IMAGE_AND_SKU_MATCH",
       "observation": {
         "audit": "approved",
-        "display": "Y",
-        "at": "2026-10-16T04:21:06.666867+00:00",
-        "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测"
+        "display": "N",
+        "at": "2026-10-16T15:31:00.232704+00:00",
+        "scope": "商品表现处置精确ID回读"
       },
       "evidence": [],
       "notes": "现有真实鞋款L795保持；已核当前六图、原件哈希、材料及EU组合对应。此处恢复货源绑定，不重复提交换款；交易条件按订单确认。",
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943753087/formal_get.json",
-        "at": "2026-10-16T04:21:06.666867+00:00",
-        "scope": "完整正式回读；不冒充公开呈现或来源真实性"
+        "at": "2026-10-16T15:31:00.232704+00:00",
+        "scope": "完整正式回读；审核中get可能仍为旧正式值，拟稿不冒充生效。"
       },
       "current_platform_fields": {
-        "at": "2026-10-16T04:21:06.666867+00:00",
+        "at": "2026-10-16T15:31:00.232704+00:00",
         "model": "BQ1044-B",
         "title": "Men's Casual Loafers with Apron Toe Stitching and a Low Top Profile",
         "keywords": [
@@ -82953,17 +83111,17 @@
           "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
         ],
         "category_id": 202240835,
-        "display": "Y",
+        "display": "N",
         "status": "approved",
         "url": "https://www.alibaba.com/product-detail/Men-s-Casual-Loafers-with-Apron_1601943753087.html",
-        "scope": "Current exact-ID official get; scoped target acceptance kept separately"
+        "scope": "Current official exact-ID get; no inferred public-page QA or physical inventory."
       },
       "local_sync": {
-        "state": "MODEL_FACTORY_GALLERY_DOUBLE_SYNC_PASS",
+        "at": "2026-10-16T15:31:00.232704+00:00",
+        "state": "PERFORMANCE_ACTION_DOUBLE_SYNC_PASS",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943753087/formal_get.json",
-        "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943753087/formal_render.json",
-        "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943753087/当前图库与货号.json",
-        "at": "2026-10-16T04:21:06.666867+00:00"
+        "current_schema_file": null,
+        "verification": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/商品/1601943753087/重复弱链接下架/verification.json"
       },
       "optimization": {
         "factory_gallery": {
@@ -83052,10 +83210,25 @@
           ],
           "public_qa": "未逐商品浏览器实测；按负责人API闭环范围执行",
           "next_action": "当前正式字段/实际评分通过，来源与本地同步"
+        },
+        "product_performance_review": {
+          "at": "2026-10-16T15:31:00.232704+00:00",
+          "state": "FORMAL_OFFLINE_NON_TARGET_PASS",
+          "kind": "pause_duplicate",
+          "reason": "同一真实鞋款、五张主图与全部商品详情相同，八项EU规格和三档价格相同；弱链接9月及第40周询盘/TM均为零，A款最近完整周和10月14日仍有询盘/TM。保留完整规格的强入口。",
+          "actual_score": null,
+          "retained_id": "1601943650718",
+          "planned_title": null,
+          "evidence": [
+            "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/商品/1601943753087/重复弱链接下架/prepared.json",
+            "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/商品/1601943753087/重复弱链接下架/receipt.json",
+            "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/商品/1601943753087/重复弱链接下架/verification.json"
+          ],
+          "next_action": "重复弱链接已下架；保留同源有咨询入口 1601943650718，不重建弱链接。"
         }
       },
       "catalog_fields": {
-        "at": "2026-10-16T04:21:06.666867+00:00",
+        "at": "2026-10-16T15:31:00.232704+00:00",
         "model": "BQ1044-B",
         "title": "Men's Casual Loafers with Apron Toe Stitching and a Low Top Profile",
         "keywords": [
@@ -83070,10 +83243,10 @@
           "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
         ],
         "category_id": 202240835,
-        "display": "Y",
+        "display": "N",
         "status": "approved",
         "url": "https://www.alibaba.com/product-detail/Men-s-Casual-Loafers-with-Apron_1601943753087.html",
-        "scope": "Current exact-ID official get; scoped target acceptance kept separately"
+        "scope": "Current official exact-ID get; no inferred public-page QA or physical inventory."
       },
       "platform_group": {
         "id": "972130291",
@@ -115631,7 +115804,7 @@
     {
       "name": "HR缺货源实款替换",
       "status": "实源替换完成后已进入稳定BQ货号和共用工厂主图维护；当前状态按唯一执行入口逐ID读取。",
-      "next_action": "175条当前HR型号已改BQ、483条F1已回读并双改；BQ1030-A/B当前退回原因待后台明确，其余481条正式及5.00通过，不重复换款或重投。",
+      "next_action": "稳定BQ货号与实源保持；两条重复弱入口已下架。BQ1030-A/B因平台判定侵权退回，停止原鞋原图重提，具体权利通知与实鞋标识/外观复核见经营诊断。",
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/当前状态.json",
         "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/README.md",
@@ -115695,5 +115868,17 @@
     "double_sync_ids": 483,
     "factory_asset": "02_Alibaba运营/06_图片与检查记录/共享工厂详情/共用主图.json",
     "owner_skipped_source": "2520，保留标识未核证据，不再推进，不发布。"
+  },
+  "product_performance_review": {
+    "at": "2026-10-16T15:58:27.627084+00:00",
+    "entry": "02_Alibaba运营/01_店铺与全店诊断/店铺经营诊断.md",
+    "plan": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/处置计划.json",
+    "states": {
+      "FORMAL_OFFLINE_NON_TARGET_PASS": 2,
+      "PLATFORM_IP_REJECTED_OWNER_CONFIRMED": 2,
+      "TITLE_FORMAL_SCORE_PASS": 2,
+      "TITLE_REVIEWED_VARIANT_FORMAL_SCORE_PASS": 1
+    },
+    "source_identity_unchanged": true
   }
 }
