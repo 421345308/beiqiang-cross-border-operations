@@ -1,0 +1,79 @@
+{
+  "source_id": "b2a6b0df57fd8cc6",
+  "source_sha256": "d31b64ff8b04cffdcc4fc02fa924f618e8abf01b21e9e897ee9d850340e2c674",
+  "status": "REVIEWED_PREVIEW_READY_PENDING_USER",
+  "whole_timeline_sampled": 16,
+  "original_resolution_reviewed": [
+    1.5,
+    7.0
+  ],
+  "focused_action_windows": [
+    1.5,
+    7.0,
+    9.8
+  ],
+  "edit_boundaries_reviewed": [
+    2.792,
+    5.208,
+    8.125,
+    11.75
+  ],
+  "issues": [
+    {
+      "start": 2.791667,
+      "end": 5.208333,
+      "severity": "MINOR",
+      "category": "camera_continuity",
+      "description": "The generated middle shot shows the person rising and upper-body outfit, not a full head-to-shoe view. Kept as narrative bridge; next shot brief should specify complete head-and-both-shoes framing rather than medium/full ambiguity.",
+      "action": "KEEP"
+    },
+    {
+      "start": 5.208333,
+      "end": 8.125,
+      "severity": "MINOR",
+      "category": "object_consistency",
+      "description": "Grey knit zoning and black sculpted sole are recognizable against factory references; fine stitches/embossing are AI reconstructions, not exact physical micro-detail proof.",
+      "action": "KEEP"
+    },
+    {
+      "start": 0,
+      "end": 2.791667,
+      "severity": "MINOR",
+      "category": "motion_continuity",
+      "description": "Both hands adjust the cuff rather than the single hand requested. This is coherent and retained; the visible cuff change is small, so do not sell a dramatic before/after transformation.",
+      "action": "KEEP"
+    }
+  ],
+  "audio": {
+    "expected_characters": 61,
+    "recovered_text": "牛仔裤，别把鞋全盖住，裤脚收一点，鞋型就出来了。你看，这双灰黑，鞋面有层次，黑底也不单调。套脚的，不用系鞋带。平时出门，你更爱配牛仔裤，还是休闲裤？",
+    "matches_after_punctuation_removal": true,
+    "evidence": "LibTV full MP4 video2text request; standard script not provided to reviewer. Model returned words absent from on-screen captions.",
+    "limit": "Text recovery supports voice-content input, not personal hearing, all-frame visual review or subjective attractiveness acceptance."
+  },
+  "model_review_corrections": [
+    "Model called the person shot full-body and said shoes near the bottom/blurred; direct pixels show upper-body crop with shoes outside the frame.",
+    "Model suggested extending final hold; direct timeline already has roughly3s stable shoe view, so not adopted mechanically."
+  ],
+  "technical": {
+    "frames": 361,
+    "dimensions": [
+      720,
+      1280
+    ],
+    "fps": 24,
+    "duration": 15.041667,
+    "full_decode_errors": false,
+    "integrated_lufs": -17.07,
+    "true_peak_dbtp": -4.2
+  },
+  "generation_counts": {
+    "video": 1,
+    "voice": 1,
+    "music": 0,
+    "text_review": 1
+  },
+  "coverage_note": "Whole-time contact sheet plus focused full-resolution/neighbour samples, not every frame semantically certified.",
+  "release": "NOT_PUBLISHED",
+  "next_action": "User reviews the whole15s candidate; measure retention/interaction/commerce only after an authorized real publication."
+}

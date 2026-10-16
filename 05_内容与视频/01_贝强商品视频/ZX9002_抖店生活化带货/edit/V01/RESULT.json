@@ -1,0 +1,65 @@
+{
+  "output": "edit/V01/ZX9002_V01_裤脚露鞋型_青年分享.mp4",
+  "output_sha256": "d31b64ff8b04cffdcc4fc02fa924f618e8abf01b21e9e897ee9d850340e2c674",
+  "generated_source_sha256": "f876f1387b2127dc77a9abe915a939e0e4eed31445710e8e8cc322f0d8177e23",
+  "duration": 15.041667,
+  "dimensions": [
+    720,
+    1280
+  ],
+  "fps": "24/1",
+  "frames": "361",
+  "full_decode_errors": false,
+  "integrated_lufs": -17.07,
+  "true_peak_dbtp": -4.2,
+  "audio": {
+    "text": "牛仔裤别把鞋全盖住，裤脚收一点，鞋型就出来了。你看这双灰黑，鞋面有层次，黑底也不单调。套脚的，不用系鞋带。平时出门，你更爱配牛仔裤，还是休闲裤？",
+    "voice_file": "edit/V01/generated_voice/ZX9002_A01_青年分享_裤脚穿搭.mp3",
+    "voice_sha256": "ca74764afb59efbafd173c84e1304625a01c90066cb283ae7a9862f24130f1db",
+    "original_duration": 16.086969,
+    "quiet_intervals_trimmed": [
+      [
+        1.857969,
+        2.375313
+      ],
+      [
+        4.6088439999999995,
+        5.148687000000001
+      ],
+      [
+        5.649906,
+        6.079219
+      ],
+      [
+        11.810562,
+        12.394469
+      ]
+    ],
+    "tightened_duration": 14.0165625,
+    "pitch_preserving_tempo": 1.0011830357142857,
+    "voice_end": 14.08,
+    "voice_id": "male-qn-daxuesheng",
+    "bgm_reused_from": "ZX9507 V03 original instrumental",
+    "bgm_sha256": "7d675ef5c15a629a241c1310e15b03811e74a9624b98e00611b95f6ebde803ca",
+    "new_voice_generation_count": 1,
+    "new_music_generation_count": 0,
+    "audio_file": "edit/V01/audio/mixed.wav",
+    "audio_sha256": "744a9f274324ae90ef3be4442c96dde9e4937e096a87462348fe320e6a510a72"
+  },
+  "new_ai_video_count": 1,
+  "new_ai_voice_count": 1,
+  "new_ai_music_count": 0,
+  "visual_review": "REVIEWED_PREVIEW_READY_PENDING_USER",
+  "published": false,
+  "source_id": "b2a6b0df57fd8cc6",
+  "narration_text_recovered_matches": true,
+  "review_model": "GVLM 3.1 Flash via LibTV; exact upstream undisclosed",
+  "audio_review_evidence": "Whole final MP4 submitted without expected transcript; returned full61-character narration matches apart from punctuation. Internal audio preprocessing is not disclosed.",
+  "native_demo_failure": "MiniCPM official public demo closed two sessions before answer; retained, not treated as review success.",
+  "canvas_uploaded": true,
+  "qa": "edit/V01/edit/qa/ZX9002_V01_裤脚露鞋型_青年分享/qa_20261016_191942/QA_REPORT.md",
+  "reported_generation_cost": null,
+  "cost_note": "No numeric charge/quote in current CLI generation receipts; unknown is not zero.",
+  "business_performance": null,
+  "user_acceptance": "PENDING"
+}
