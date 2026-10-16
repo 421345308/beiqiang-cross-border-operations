@@ -1,0 +1,71 @@
+{
+  "output": "ZX9507_Douyin_V04_年轻男声.mp4",
+  "output_sha256": "37f2731ff555ab2f2beae7c3fbceb06ec18573b1c0f4ced83cc175736088eed3",
+  "source_video_sha256": "4eadc78dc9616ff2735041b1e66fa17a9b4ad263356d3228b52076f65b4e3477",
+  "video_stream_identical": true,
+  "video_frames": 361,
+  "duration": 15.041667,
+  "narration_text": "牛仔裤怎么搭？试试这双黑杏套脚鞋！黑色针织鞋面，配杏色造型鞋底，简单穿搭也有亮点。套脚设计，不用系鞋带，出门少一道步骤。卫衣配牛仔裤，日常就这么搭。喜欢这款，看看颜色和尺码。",
+  "voice_model": "Minimax-speech-2.8-hd",
+  "voice_id": "male-qn-daxuesheng",
+  "generated_voice_duration": 20.97475,
+  "generation_speed": 1.12,
+  "removed_quiet_intervals": [
+    [
+      1.2287190000000001,
+      1.9921250000000001
+    ],
+    [
+      4.112594,
+      4.367156
+    ],
+    [
+      5.737344,
+      6.0371879999999996
+    ],
+    [
+      7.4224060000000005,
+      7.951936999999999
+    ],
+    [
+      9.474344,
+      10.127281
+    ],
+    [
+      11.039375,
+      11.406344
+    ],
+    [
+      12.298625,
+      12.811094
+    ],
+    [
+      14.308938,
+      14.93425
+    ],
+    [
+      16.26475,
+      16.697969
+    ],
+    [
+      17.852843999999997,
+      18.215438000000002
+    ],
+    [
+      19.01775,
+      19.544688
+    ]
+  ],
+  "tightened_duration": 15.64696875,
+  "pitch_preserving_fit_tempo": 1.1590347222222221,
+  "voice_end": 13.58,
+  "bgm_reused_from": "V03",
+  "bgm_sha256": "7d675ef5c15a629a241c1310e15b03811e74a9624b98e00611b95f6ebde803ca",
+  "video_generation_count": 0,
+  "audio_generation_count": 1,
+  "final_integrated_lufs": -16.84,
+  "true_peak_dbtp": -4.43,
+  "decode_errors": false,
+  "acceptance": "Pending user listening",
+  "native_audio_review": "Final full mixed audio yielded the same 75-character narration, apart from punctuation. Reviewer did not supply requested age/timbre details; no age or style acceptance inferred."
+}

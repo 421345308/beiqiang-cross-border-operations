@@ -1,0 +1,28 @@
+{
+  "feedback": "V03 sounds too old.",
+  "scope": "Replace voice identity only; preserve V03 narration and BGM and V01 video.",
+  "text": "牛仔裤怎么搭？试试这双黑杏套脚鞋！黑色针织鞋面，配杏色造型鞋底，简单穿搭也有亮点。套脚设计，不用系鞋带，出门少一道步骤。卫衣配牛仔裤，日常就这么搭。喜欢这款，看看颜色和尺码。",
+  "parameters": {
+    "model": "Minimax-speech-2.8-hd",
+    "scene": "Text-to-Speech",
+    "voiceCard": {
+      "voiceId": "male-qn-daxuesheng",
+      "name": "青年大学生",
+      "language": "中文(普通话)",
+      "gender": "Male"
+    },
+    "speed": 1.12,
+    "voicePitch": 0,
+    "vol": 1,
+    "modifyPitch": 0,
+    "modifyIntensity": 0,
+    "modifyTimbre": 0,
+    "soundEffects": ""
+  },
+  "voice_catalog_source": "https://github.com/MiniMax-AI/skills/blob/main/skills/frontend-dev/references/minimax-voice-catalog.md",
+  "voice_selection": "Explicit youthful male university-student preset instead of age described only in freeform prompt.",
+  "expected_audio_generation_count": 1,
+  "expected_video_generation_count": 0,
+  "prompt": "prompts/voice_v04.txt",
+  "no_pitch_shift_for_age": true
+}
