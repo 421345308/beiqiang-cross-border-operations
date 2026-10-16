@@ -1,0 +1,23 @@
+{
+  "status": "DRAFT_READBACK_VERIFIED",
+  "prompt_characters": 2828,
+  "prompt_sha256": "561923cfd3116d51a9b7ea05882c08bef3aa91394519e26bcdc4c0fa54ea3987",
+  "checks": {
+    "prompt_matches_after_node_reference_resolution": true,
+    "references_match_order": true,
+    "exactly_five_images": true,
+    "no_video_or_audio_reference": true,
+    "model": true,
+    "mode": true,
+    "count": true,
+    "settings": true,
+    "compliance_enabled": true,
+    "no_search_for_product_facts": true,
+    "no_generated_media": true
+  },
+  "comparison_normalization": "Resolve human-readable node names to node IDs and trim only outer whitespace; preserve the entire internal prompt.",
+  "numeric_quote_available": false,
+  "quote": null,
+  "paid_generation_submitted": false,
+  "scope": "Prompt, parameter and reference wiring readback; not model adherence or final video quality."
+}
