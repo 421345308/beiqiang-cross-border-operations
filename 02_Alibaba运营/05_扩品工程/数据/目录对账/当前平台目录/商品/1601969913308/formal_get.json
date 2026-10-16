@@ -1,14 +1,12 @@
 {
+  "observed_at_utc": "2026-10-16T04:20:26.384612+00:00",
   "requested_product_id": "1601969913308",
-  "observed_at_utc": "2026-10-11T17:21:10.481950+00:00",
-  "method": "alibaba.icbu.product.get",
   "response": {
     "product": {
       "gmt_create": "2026-10-02 23:20:32",
       "keywords": [
         ""
       ],
-      "owner_member_display_name": "User name",
       "subject": "Wholesale Mens High Top Work Boots with Dial Closure and Wave Pattern Uppers",
       "main_image": {
         "images": [
@@ -17,13 +15,13 @@
           "https://sc04.alicdn.com/kf/H9615dca55e6b49588ba2166849f2cd45Q.jpg",
           "https://sc04.alicdn.com/kf/H0e1860ad50a34ef39b3b45da9ff4147f1.jpg",
           "https://sc04.alicdn.com/kf/H36097ccbb57c4fb0bf467d3705ebc1fau.jpg",
-          "https://sc04.alicdn.com/kf/H2f46111c131d4f05af39c9d4b770f123a.jpg"
+          "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
         ]
       },
       "struct_detail_product": true,
       "language": "ENGLISH",
       "is_smart_edit": false,
-      "gmt_modified": "2026-10-12 01:04:20",
+      "gmt_modified": "2026-10-16 12:08:00",
       "product_sku": {
         "skus": [
           {
@@ -675,69 +673,80 @@
           "images": [
             {
               "image_set": {
-                "name": "Packaging & shipping specifications",
-                "id": 700
-              },
-              "image_url": "https://sc04.alicdn.com/kf/H5f71c3cfb4064b51bb458d0a786cb402R.jpg"
-            },
-            {
-              "image_set": {
                 "name": "Customization capabilities",
                 "id": 550
               },
-              "image_url": "https://sc04.alicdn.com/kf/H496f7579171f4370a1d47c3adf30001bK.jpg"
+              "image_url": "https://sc04.alicdn.com/kf/H2c23ba6ddeac47a686c0e1350c4ac294v.png"
             },
             {
               "image_set": {
-                "name": "Extended company profile",
-                "id": 750
+                "name": "Packaging & shipping specifications",
+                "id": 700
               },
-              "image_url": "https://sc04.alicdn.com/kf/H9f32c7ecea0f4d25bc5ddc9cd04c1e5dK.jpg"
-            },
-            {
-              "image_set": {
-                "name": "Company overview",
-                "id": 400
-              },
-              "image_url": "https://sc04.alicdn.com/kf/Ha8c1682092424e778eadf945763e79daU.jpg"
+              "image_url": "https://sc04.alicdn.com/kf/He558a164125f4bc295dfe3d70bb76066w.png"
             },
             {
               "image_set": {
                 "name": "Production workflow",
                 "id": 600
               },
-              "image_url": "https://sc04.alicdn.com/kf/H36e700f5c3ee447a80c035d8ae7521d9a.jpg"
+              "image_url": "https://sc04.alicdn.com/kf/H76f31cce4cc0447a99b72496f0ae5c93l.png"
+            },
+            {
+              "image_set": {
+                "name": "Company overview",
+                "id": 400
+              },
+              "image_url": "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
+            },
+            {
+              "image_set": {
+                "name": "Competitive advantages",
+                "id": 450
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H8779a3d5521c4cce910395f583af74505.png"
+            },
+            {
+              "image_set": {
+                "name": "Packaging & shipping specifications",
+                "id": 700
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H7d0669b743e742c1a97e8108e6cc96eaV.png"
             }
           ]
         },
         "product_faq": [
           {
-            "question": "Which color and EU size choices are listed?",
-            "answer": "Blue: EU 37–46; Black: EU 37–46; Grey: EU 37–46."
+            "question": "Are you a factory or a trading company?",
+            "answer": "We are a footwear manufacturer based in Quanzhou, Fujian, China. We work with overseas B2B buyers on wholesale and OEM/ODM footwear projects."
           },
           {
-            "question": "How does the closure differ from conventional laces?",
-            "answer": "A rotating dial adjusts the cable across the front. Front and rear pull loops provide grips when putting the boot on; assess the high opening and instep fit on a sample."
+            "question": "What is your minimum order quantity?",
+            "answer": "Small trial orders are welcome for existing styles; the minimum quantity is shown on each product page. For custom orders, the MOQ depends on the design, materials, branding and packaging."
           },
           {
-            "question": "What should I assess on a sample?",
-            "answer": "Try it with the intended socks and check toe room, instep fit and heel hold."
+            "question": "Can I mix colors and sizes in one order?",
+            "answer": "Yes. Mixed colors and sizes are supported for existing styles. Mixed-style orders can also be discussed according to the selected styles and order quantity."
           },
           {
-            "question": "What is the minimum order for the original style?",
-            "answer": "The listed original-style minimum is 2 pairs. Quantity pricing is shown on this page; logo and custom packaging proposals are quoted separately."
+            "question": "Can I order samples before a bulk order?",
+            "answer": "Yes. Samples can be arranged for you to check the workmanship and fit before bulk ordering. Sample and courier costs are quoted before payment."
           },
           {
-            "question": "How can I request a sample?",
-            "answer": "Send the selected color or lining option, EU size and delivery postcode for a sample quotation covering the pair, courier charge and proposed dispatch date."
+            "question": "What packaging options do you offer?",
+            "answer": "Shoe boxes and polybags are available packing options. Custom boxes, labels and carton markings can be planned around your order and brand requirements."
           },
           {
-            "question": "What should I send for logo or packaging requirements?",
-            "answer": "Send the logo artwork, preferred placement, packaging brief and order quantity. The proposal for this style will set out the applicable minimum, cost and sample process."
+            "question": "Do you support logo customization and OEM/ODM?",
+            "answer": "Yes. We work with buyers on branding and footwear development. Send your logo artwork or design reference, target quantity and market requirements so we can develop a suitable proposal."
           },
           {
-            "question": "How can I get a delivered quotation?",
-            "answer": "Send pair quantities by color and EU size, the destination postcode or port and the packaging request. The quotation separates product cost and freight and includes the proposed dispatch and transit schedule."
+            "question": "What is the lead time?",
+            "answer": "Lead time depends on product availability, order quantity and customization. Existing styles can usually be arranged sooner; the production or dispatch schedule is agreed when confirming the order."
+          },
+          {
+            "question": "How can you arrange shipping?",
+            "answer": "Samples and small shipments can use express courier. Bulk shipments can be planned by sea or air, or through your appointed forwarder. Send your destination and delivery target for a freight quotation."
           }
         ],
         "detail_image": {
@@ -773,7 +782,7 @@
           ]
         },
         "product_summary": "High-top work-style boots with a dial-and-cable closure and wave-pattern upper panels. The dial replaces conventional lace tying, while front and rear pull loops provide grips at the opening. A segmented sole sidewall and contrasting color accents give the boot a recognizable profile.",
-        "company_summary": "Quanzhou Beiqiang Footwear & Apparel Co., Ltd. is based in Quanzhou, Fujian, China. The images below introduce our company capabilities. Model-specific sample, customization, packing and dispatch arrangements are reviewed against your requirements before quotation."
+        "company_summary": "Quanzhou Beiqiang Footwear & Apparel Co., Ltd. is a footwear manufacturer based in Quanzhou, Fujian, China. We work with importers, wholesalers, brand owners and e-commerce businesses on wholesale and OEM/ODM footwear projects. From selecting existing styles to developing a design brief, reviewing samples and planning packaging, we help buyers turn their requirements into a clear order plan. Share your product direction and purchasing needs to discuss a suitable cooperation proposal."
       },
       "display": "Y",
       "pc_detail_url": "https://www.alibaba.com/product-detail/Wholesale-Mens-High-Top-Work-Boots_1601969913308.html",
@@ -805,7 +814,7 @@
           "attribute_id": 191290428,
           "attribute_name": "Upper Material",
           "value_id": 190091020,
-          "value_name": "Textile"
+          "value_name": "Fabric"
         },
         {
           "attribute_id": 1,
@@ -838,10 +847,10 @@
           "value_name": "Not specified"
         }
       ],
-      "owner_member": 286385890,
       "status": "approved"
     },
-    "request_id": "0b0b3a2717917392745741132",
-    "_trace_id_": "2107e85d17917392745715397e0d9e"
-  }
+    "request_id": "2105044417921244292064973",
+    "_trace_id_": "213d15bb17921244292034898e10e6"
+  },
+  "scope": "Current exact-ID official readback. Review/display and target checks are recorded independently."
 }

@@ -171,7 +171,8 @@ def prepare():
             for prop,label,value in [(cid,colour,marker),(sid,f'EU {n}',str(-10000-n))]:E.SubElement(props,'value',propId=prop,propName='p-'+prop,propValueId=value,propValueName=label).text=prop+':'+value
     company=load(ROOT/'02_Alibaba运营/06_图片与检查记录/共享工厂详情/V8/bank.json');assert company['asset_version']==8;company=company['items']
     common=load(ROOT/'02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/通用FAQ与公司简介.json');assert len(common['companyFaqDesc'])==8
-    pub.set_main_images(root,[assets[f'M{i}'] for i in range(1,6)]+[company['C1']]);pub.set_gallery(root,'detailImage',[assets[f'D{i}'] for i in range(1,5)],[(300,'Detail shot')]*4)
+    sys.path.insert(0,str(ROOT/'08_工具链/01_业务脚本/商品图片与审计'));from factory_assets import current_gallery_asset
+    pub.set_main_images(root,[assets[f'M{i}'] for i in range(1,6)]+[current_gallery_asset()]);pub.set_gallery(root,'detailImage',[assets[f'D{i}'] for i in range(1,5)],[(300,'Detail shot')]*4)
     roles=[('C1',400),('C2',550),('C3',600),('C4',450),('C5',700),('C6',700)]
     options={o.get('value'):o.get('displayName') for o in schema.findall("./field[@id='companyImage']/fields/field[@id='gallery']/options/option")}
     pub.set_gallery(root,'companyImage',[company[k] for k,_ in roles],[(n,options[str(n)]) for _,n in roles]);pub.set_direct_value(root,'companyDesc',common['companyDesc'])
@@ -356,6 +357,14 @@ def sync():
 
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('mode',choices=('schema','bank','prepare','create','verify','sync'));ap.add_argument('--style',required=True,choices=SUPPORTED_STYLES);ap.add_argument('--http-transport',choices=('urllib','native'),default='urllib',help='Existing official-client verified-TLS transport; no trust/proxy overrides or unknown write replay');args=ap.parse_args();configure(args.style)
+    if args.mode in ('verify','sync')and(FOLDER/'create_receipt.json').exists():
+        pid=pub.extract_product_id(load(FOLDER/'create_receipt.json').get('response')or{})
+        import normalize_models_factory_gallery as current
+        if pid and(current.BASE/'商品'/pid/'update_once.json').exists():
+            if args.mode=='sync':
+                import sync_models_factory_gallery as latest;latest.main();return
+            row=next(z for z in load(current.BASE/'范围.json')['targets']if z['id']==pid);client,cfg=current.b.api_client();client.http_json=client.native_http_json
+            print(json.dumps(current.operate(row,'verify',client,cfg),ensure_ascii=False));return
     family=None
     if args.style=='2569' and args.mode in ('verify','sync') and (FOLDER/'家族扩色/update_once.json').exists():
         family_spec=importlib.util.spec_from_file_location('current_2569_expansion',ROOT/'08_工具链/01_业务脚本/国际站扩品/expand_luqi_2569_colours.py');family=importlib.util.module_from_spec(family_spec);family_spec.loader.exec_module(family)

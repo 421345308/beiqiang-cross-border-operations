@@ -7,7 +7,7 @@
     "MERGED_SOURCE_FAMILY_026_NO_EXTRA_CREATE": 1,
     "MERGED_SOURCE_FAMILY_2585_NO_EXTRA_CREATE": 1,
     "MERGED_SOURCE_FAMILY_NO_EXTRA_CREATE": 1,
-    "HOLD_VISIBLE_MARK_IDENTITY": 1,
+    "OWNER_EXCLUDED_NOT_PUBLISHED": 1,
     "MERGED_SOURCE_FAMILY_0323F_NO_EXTRA_CREATE": 1,
     "MERGED_SOURCE_FAMILY_K502_NO_EXTRA_CREATE": 1
   },
@@ -1986,7 +1986,7 @@
       ],
       "source_collection": "CURRENT_SOURCE_COLLECTED",
       "image_cache": "CURRENT_EXACT_SOURCE_IMAGES_COLLECTED_PENDING_REVIEW",
-      "publication_state": "HOLD_VISIBLE_MARK_IDENTITY",
+      "publication_state": "OWNER_EXCLUDED_NOT_PUBLISHED",
       "title_quality": "PENDING",
       "image_quality": "PENDING",
       "Chrome": "NOT_REQUIRED_PER_PRODUCT_BATCH_SAMPLE_POLICY",
@@ -1995,7 +1995,13 @@
       "current_source_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2520准备/当前来源刷新核对.json",
       "local_issue": "实际鞋跟S形标记与公开品牌图形明显近似，未确认授权或可供无标实款；不抹标后发品。",
       "current_visual_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2520准备/标识形状核对.json",
-      "next_action": "Look for an evidenced unmarked version or another genuine source/style; continue otherLuqi products meanwhile."
+      "next_action": "负责人2026-10-16决定不再推进；不检索、不生成、不发布，保留原图与标识待核证据。",
+      "owner_disposition": {
+        "state": "OWNER_EXCLUDED_NOT_PUBLISHED",
+        "date": "2026-10-16",
+        "reason": "负责人决定不用再做；保留原标识待核事实，不再推进上架。"
+      },
+      "source_identity_state": "HOLD_VISIBLE_MARK_IDENTITY"
     },
     {
       "style": "868",

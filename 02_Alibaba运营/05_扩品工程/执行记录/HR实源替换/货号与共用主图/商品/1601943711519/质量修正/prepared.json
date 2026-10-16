@@ -1,0 +1,108 @@
+{
+  "id": "1601943711519",
+  "kind": "category",
+  "at": "2026-10-16T04:35:34.035371+00:00",
+  "state": "PREPARED",
+  "expected_title": "Backless Knit Casual Mule Shoes with EVA Sole and Five Colour Options for Footwear Collections",
+  "expected_attributes": [
+    {
+      "attribute_id": -1,
+      "attribute_name": "Shoe Profile",
+      "value_id": -1,
+      "value_name": "Closed toe; open heel; knit upper; sculpted EVA outsole"
+    },
+    {
+      "attribute_id": 191288212,
+      "attribute_name": "Season",
+      "value_id": 27034893,
+      "value_name": "All Seasons"
+    },
+    {
+      "attribute_id": 191290426,
+      "attribute_name": "Outsole Material",
+      "value_id": 3376399,
+      "value_name": "EVA"
+    },
+    {
+      "attribute_id": 200000486,
+      "attribute_name": "Toe Style",
+      "value_id": 108886227,
+      "value_name": "Closed Toe"
+    },
+    {
+      "attribute_id": 210200060,
+      "attribute_name": "Feature",
+      "value_id": 30925155,
+      "value_name": "Fashion Trend"
+    },
+    {
+      "attribute_id": 1,
+      "attribute_name": "Place of Origin",
+      "value_id": -1,
+      "value_name": "CN"
+    },
+    {
+      "attribute_id": 3,
+      "attribute_name": "Model Number",
+      "value_id": -1,
+      "value_name": "BQ1055-B"
+    },
+    {
+      "attribute_id": 20700,
+      "attribute_name": "Midsole Material",
+      "value_id": -1,
+      "value_name": "other"
+    },
+    {
+      "attribute_id": 191290430,
+      "attribute_name": "Lining Material",
+      "value_id": -1,
+      "value_name": "other"
+    },
+    {
+      "attribute_id": 191288243,
+      "attribute_name": "Style",
+      "value_id": 190091556,
+      "value_name": "Slip On"
+    },
+    {
+      "attribute_id": 191290428,
+      "attribute_name": "Upper Material",
+      "value_id": -1,
+      "value_name": "Knit"
+    }
+  ],
+  "before_category_id": 201340408,
+  "target_category_id": 201153804,
+  "compatibility": {
+    "all_selected_attribute_ids_and_types_match": true,
+    "all_native_values_match_target_options": true,
+    "all_required_properties_already_evidenced": true,
+    "sale_axes_exact": true,
+    "before_category_id": 201340408,
+    "target_category_id": 201153804,
+    "SKU_not_submitted": true,
+    "category_vocabulary_remaps": [
+      {
+        "field_id": "p-191288243",
+        "source_values": [
+          "Casual",
+          "Mules"
+        ],
+        "target_text": "Slip On",
+        "target_value": "190091556",
+        "meaning": "Knit/EVA facts retained; Slip On is the source-evidenced open-heel mule construction, with Mules expressed by the actual leaf category."
+      },
+      {
+        "field_id": "p-191290428",
+        "source_values": [
+          "Knit"
+        ],
+        "target_text": "Knit",
+        "target_value": "-701",
+        "meaning": "Knit/EVA facts retained; Slip On is the source-evidenced open-heel mule construction, with Mules expressed by the actual leaf category."
+      }
+    ]
+  },
+  "scope": "Restore originally requested title or platform-recommended source-compatible leaf with evidenced vocabulary remaps; no product identity/source/SKU/trade changes"
+}

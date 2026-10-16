@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "role": "F1_FACTORY_GALLERY_OVERVIEW",
+  "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_当前工厂主图/F1_factory.png",
+  "sha256": "13987d2f18fb1e3274ebf1d2eb2bed945d8ee12c33c2a0a5f23e3f41890ce29f",
+  "width": 1254,
+  "height": 1254,
+  "sources": [
+    {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/大门.jpg",
+      "sha256": "3658ce4531fca78a863464e85bcf364b27f4fb14d94b36851bc745783c667aa5"
+    },
+    {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/A9C9E3B935A11A476BE00DE0FD0C3BBC.png",
+      "sha256": "0d836cd15f370e62d7fba853cf6d7a767675542e76e27efef854f6ed7db2f2ac"
+    },
+    {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/微信图片_20260530105010_227_16.jpg",
+      "sha256": "1c643ba6032178aee8a65e345ad31876211d0fd5785ca7a15933e39dd14ffeb0"
+    },
+    {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/微信图片_20260530105149_230_16.jpg",
+      "sha256": "044f8d9f1b643f58e0a55bb9aaa1a66a087bf6e17c523b70a5f0f01fdabf2e9a"
+    }
+  ],
+  "prompt": "Use case: compositing / ads-marketing.\nCreate one polished square 1600x1600 English Alibaba B2B gallery supplier-overview image for BEIQIANG. This is a reusable late-gallery factory image, not the first product image. Composite the FOUR provided real photographs faithfully, with professional exposure, neutral white balance, restrained cleanup and typography. Do not invent a different factory, expand the building, add machinery or workers, or simulate a bigger production line.\nInputs: 1 real Beiqiang facade (identity insert); 2 real workshop overview (primary image); 3 real upper preparation at the workbench (close-up insert); 4 real upper and sole assembly operation (close-up insert). Preserve the building geometry and its real sign, workshop machinery, pipes, machines' arrangement, people and actual work actions. Keep all four scenes identifiable against their source. Preserve physically plausible hands and actual equipment. Do not convert the black shoe to another shoe. Do not add laboratory, automatic robotics, certificates, inventory claims or production quantities.\nDesign: clean premium navy, white and restrained orange, matching the current Beiqiang company visuals. Large photography occupies roughly 75% of the square. A compact top header reads BEIQIANG and FOOTWEAR PARTNER, with subline Quanzhou, Fujian, China. A large wide workshop photo forms the central hero. Below it, three generous photo tiles show the facade, upper preparation, and upper & sole assembly respectively; favor recognizable, useful crops over tiny mosaic snippets. Each small tile has one short clear English caption: Factory identity / Upper preparation / Upper & sole assembly. Put the main caption Workshop & production just above or below the large workshop image. Bottom band reads Wholesale | OEM / ODM, with small supporting line Product requirements • Sample review • Order coordination. Keep text exceptionally legible at 350px display width; no paragraphs, clutter, tiny badges or repeated text. No isolated product catalog hero shoe: shoes appear only within the actual workplace process photographs. Do not call every listed product self-manufactured; the image presents company-level real production scenes and cooperation only. No marketing superlatives, made-up years, guaranteed delivery, quantities or inspection claims. No watermarks. Do not copy Chinese promotional text into overlays; preserve actual facade sign only. Make a cohesive photo collage with straight clean edges and consistent color treatment, not a generated generic factory.\n",
+  "generation_mode": "built-in image_gen compositing",
+  "review": {
+    "state": "VISUAL_PASS",
+    "reviewer": "active_agent",
+    "actual_photos_preserved": true,
+    "text_checked": true,
+    "no_added_capacity_equipment_certification": true,
+    "company_level_only": true
+  },
+  "live_state": "ALL_TARGET_IMAGES_RETURNED_TWO_PLATFORM_REJECTIONS",
+  "scope": "One common main-gallery factory overview. Existing six company detail modules remain unchanged.",
+  "current_execution": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/当前状态.json",
+  "formal_pass_ids": 481,
+  "platform_rejected_with_target_values_returned": 2
+}

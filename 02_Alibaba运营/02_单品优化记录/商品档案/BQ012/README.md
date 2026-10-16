@@ -7,6 +7,11 @@
 ## 当前资料与实物证据
 
 - 本地事实/准备字段：尚未指定；不从线上页面证明自产或实物能力。
+- 当前主图库按商品ID对应（含最新统一工厂图）：
+  - [1601939681367 当前图库与货号](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601939681367/%E5%BD%93%E5%89%8D%E5%9B%BE%E5%BA%93%E4%B8%8E%E8%B4%A7%E5%8F%B7.json)
+  - [1601939650458 当前图库与货号](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601939650458/%E5%BD%93%E5%89%8D%E5%9B%BE%E5%BA%93%E4%B8%8E%E8%B4%A7%E5%8F%B7.json)
+  - [1601939606805 当前图库与货号](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601939606805/%E5%BD%93%E5%89%8D%E5%9B%BE%E5%BA%93%E4%B8%8E%E8%B4%A7%E5%8F%B7.json)
+  - [10000043744505 当前图库与货号](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/10000043744505/%E5%BD%93%E5%89%8D%E5%9B%BE%E5%BA%93%E4%B8%8E%E8%B4%A7%E5%8F%B7.json)
 - 原始包：[已整理_BQ012_M8506_M8506贝强新款35-45批58元](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/01_%E5%8E%9F%E5%A7%8B%E6%95%B0%E6%8D%AE%E5%8C%85/%E5%B7%B2%E6%95%B4%E7%90%86_BQ012_M8506_M8506%E8%B4%9D%E5%BC%BA%E6%96%B0%E6%AC%BE35-45%E6%89%B958%E5%85%83)
 
 ## 采购来源（内部使用）
@@ -22,7 +27,7 @@
 ### BQ-012 · 10000043744505
 
 - 平台链接：[10000043744505](https://www.alibaba.com/product-detail/Wholesale-Breathable-Knit-Chunky-Walking-Shoes_10000043744505.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/10000043744505/formal_get.json)；UTC 2026-10-12T11:48:13.923481+00:00。
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/10000043744505/formal_get.json)；UTC 2026-10-16T04:42:12.795264+00:00。
 - 当前正式标题：Wholesale Breathable Knit Chunky Walking Shoes M8506 Lightweight Cushion Midsole Mesh Solid Spring Autumn Casual Sneakers OEM
 - 审核/展示：approved / Y；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, owner_member, owner_member_display_name, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
@@ -34,14 +39,19 @@
   - M3：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/4a9d6c8c8371d654bb31b048046bcb25879f70ae6161550497abb105268f0f24.jpg) · 1200×1200
   - M4：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/fdaac976fa4242344f2acc59be92b181e56ae6c0f746e02072fe725dee84fe75.jpg) · 1200×1200
   - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/dc16e2289280f68fc7b5682c78fb2ca0fd042b0b65e9ad3fb333e715d239d359.jpg) · 1200×1200
-  - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/375a2216f1b1ede05851650d4cfd65827749979470c7f316d537e7aa492b94a0.jpg) · 1200×1200
-- 本地同步状态：`COMPANY_BUNDLE_FORMAL_PASS`。
-- 本轮优化：``；
+  - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/00_%E6%9C%80%E7%BB%88%E4%B8%8A%E4%BC%A0/00_%E5%8E%82%E5%AE%B6%E8%B5%84%E6%96%99/03_%E5%BD%93%E5%89%8D%E5%B7%A5%E5%8E%82%E4%B8%BB%E5%9B%BE/F1_factory.png) · 1254×1254
+- 本地同步状态：`MODEL_FACTORY_GALLERY_DOUBLE_SYNC_PASS`。
+- 本轮优化：`FORMAL_FIELDS_SCORE_PASS`；当前正式字段/实际评分通过，来源与本地同步
+  - 变更证据：[prepared.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/10000043744505/prepared.json)
+  - 变更证据：[manifest.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/10000043744505/manifest.json)
+  - 变更证据：[update_once.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/10000043744505/update_once.json)
+  - 变更证据：[update_receipt.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/10000043744505/update_receipt.json)
+  - 变更证据：[verification.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/10000043744505/verification.json)
 
 ### BQ012-O1 / M8506 · 1601939606805
 
-- 平台链接：[1601939606805](https://www.alibaba.com/product-detail/Custom-Logo-Black-Sole-Knit-Textile_1601939606805.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939606805/formal_get.json)；UTC 2026-10-12T12:14:11.759011+00:00。
+- 平台链接：[1601939606805](https://www.alibaba.com/product-detail/Slip-On-Knit-Walking-Shoes-Easy_1601939606805.html)
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939606805/formal_get.json)；UTC 2026-10-16T04:41:23.518090+00:00。
 - 当前正式标题：Slip-On Knit Walking Shoes Easy On and Off OEM ODM Private Label
 - 审核/展示：approved / Y；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, owner_member, owner_member_display_name, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
@@ -52,15 +62,20 @@
   - M2：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/3e9716ed0f178ec689f1e32a0ddd8dfeb6ef735289e895d40daee0be8d7cc61d.jpg) · 1000×1000
   - M3：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/9adcd16db70efe396f2d2d38837d5d25209796fddba8daf282675cc20d4bf12f.jpg) · 1000×1000
   - M4：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/a9d39137a665a0c66a9ee56ff80542265d20eb08c8d685744cf21b9be3e4acdd.jpg) · 1000×1000
-  - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/7cecfdafc64d85799642ae6b3ce35b3760a189c014361c0254bee973ebcabfc5.jpg) · 1000×1000
+  - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/00_%E6%9C%80%E7%BB%88%E4%B8%8A%E4%BC%A0/00_%E5%8E%82%E5%AE%B6%E8%B5%84%E6%96%99/03_%E5%BD%93%E5%89%8D%E5%B7%A5%E5%8E%82%E4%B8%BB%E5%9B%BE/F1_factory.png) · 1254×1254
   - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/03f233cb47c9b63b0c06d1361ee511fc088b82c47f29d0f30b4fd62f4bd2760a.jpg) · 1000×1000
-- 本地同步状态：`COMPANY_BUNDLE_FORMAL_PASS`。
-- 本轮优化：``；
+- 本地同步状态：`MODEL_FACTORY_GALLERY_DOUBLE_SYNC_PASS`。
+- 本轮优化：`FORMAL_FIELDS_SCORE_PASS`；当前正式字段/实际评分通过，来源与本地同步
+  - 变更证据：[prepared.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601939606805/prepared.json)
+  - 变更证据：[manifest.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601939606805/manifest.json)
+  - 变更证据：[update_once.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601939606805/update_once.json)
+  - 变更证据：[update_receipt.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601939606805/update_receipt.json)
+  - 变更证据：[verification.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601939606805/verification.json)
 
 ### BQ012-W1 / M8506 · 1601939650458
 
-- 平台链接：[1601939650458](https://www.alibaba.com/product-detail/Wholesale-Black-White-Knit-Textile-Slip_1601939650458.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939650458/formal_get.json)；UTC 2026-10-12T12:16:14.035470+00:00。
+- 平台链接：[1601939650458](https://www.alibaba.com/product-detail/Slip-On-Knit-Walking-Shoes-Easy_1601939650458.html)
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939650458/formal_get.json)；UTC 2026-10-16T04:41:01.726590+00:00。
 - 当前正式标题：Slip-On Knit Walking Shoes Easy On and Off Wholesale Casual Footwear
 - 审核/展示：approved / Y；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, owner_member, owner_member_display_name, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
@@ -72,14 +87,19 @@
   - M3：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/6c13d055f4a9c82fbe315240bab82cb58a156e663dce5044c50dd0be51e932d4.jpg) · 1000×1000
   - M4：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/3c3f6da6e9170264753d4b36b50824895f7b9fadedf61fbbd8ef598f2998b9dc.jpg) · 1000×1000
   - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/ad2c41a9c55d9662842ab12178c95b99e161bbec3047d8527af4894a6f4ecff2.jpg) · 1000×1000
-  - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/61a88871848ad7f21b032fbeaea96a3b1b7d69a00bb06a670c1b4f9d9b96ccfa.jpg) · 1000×1000
-- 本地同步状态：`COMPANY_BUNDLE_FORMAL_PASS`。
-- 本轮优化：``；
+  - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/00_%E6%9C%80%E7%BB%88%E4%B8%8A%E4%BC%A0/00_%E5%8E%82%E5%AE%B6%E8%B5%84%E6%96%99/03_%E5%BD%93%E5%89%8D%E5%B7%A5%E5%8E%82%E4%B8%BB%E5%9B%BE/F1_factory.png) · 1254×1254
+- 本地同步状态：`MODEL_FACTORY_GALLERY_DOUBLE_SYNC_PASS`。
+- 本轮优化：`FORMAL_FIELDS_SCORE_PASS`；当前正式字段/实际评分通过，来源与本地同步
+  - 变更证据：[prepared.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601939650458/prepared.json)
+  - 变更证据：[manifest.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601939650458/manifest.json)
+  - 变更证据：[update_once.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601939650458/update_once.json)
+  - 变更证据：[update_receipt.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601939650458/update_receipt.json)
+  - 变更证据：[verification.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601939650458/verification.json)
 
 ### BQ012-R1 / M8506 · 1601939681367
 
-- 平台链接：[1601939681367](https://www.alibaba.com/product-detail/Red-White-Knit-Textile-Breathable-Light_1601939681367.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939681367/formal_get.json)；UTC 2026-10-12T12:23:43.688254+00:00。
+- 平台链接：[1601939681367](https://www.alibaba.com/product-detail/Slip-On-Knit-Breathable-Lightweight-Walking_1601939681367.html)
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939681367/formal_get.json)；UTC 2026-10-16T04:40:43.237444+00:00。
 - 当前正式标题：Slip-On Knit Breathable Lightweight Walking Shoes with Chunky Cushion Midsole Easy on and off for Daily Wear All Seasons
 - 审核/展示：approved / Y；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, owner_member, owner_member_display_name, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
@@ -89,11 +109,16 @@
   - M1：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/fce860a28c2ef6edbb32dcf540c7d3bb0cb5970297b1dfc150940466498ab22e.png) · 1000×1000
   - M2：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/4f6907481ab322d4ef0729d28e8f4cc2611c87bd5c13520b54382126a09029be.jpg) · 1000×1000
   - M3：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/084011e27de54ee9c4e4a3154bee1b4a22c75fc8ad1de163b588489c3654aef5.jpg) · 1000×1000
-  - M4：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/f85d0ccb1f88851693800a2d5dce27275ace1df246cdf80c896c3102ccfee24a.jpg) · 1000×1000
+  - M4：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/00_%E6%9C%80%E7%BB%88%E4%B8%8A%E4%BC%A0/00_%E5%8E%82%E5%AE%B6%E8%B5%84%E6%96%99/03_%E5%BD%93%E5%89%8D%E5%B7%A5%E5%8E%82%E4%B8%BB%E5%9B%BE/F1_factory.png) · 1254×1254
   - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/06e7abbe42be7223ae6a58aad06064cbeedccb051ade20eb1b6c6f2b7f49e92e.jpg) · 1000×1000
   - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/dd97a25d9ad903e0a951ce19c84726831270177cff55ef5dcf2657003b0fe69f.jpg) · 1000×1000
-- 本地同步状态：`COMPANY_BUNDLE_FORMAL_PASS`。
-- 本轮优化：``；
+- 本地同步状态：`MODEL_FACTORY_GALLERY_DOUBLE_SYNC_PASS`。
+- 本轮优化：`FORMAL_FIELDS_SCORE_PASS`；当前正式字段/实际评分通过，来源与本地同步
+  - 变更证据：[prepared.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601939681367/prepared.json)
+  - 变更证据：[manifest.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601939681367/manifest.json)
+  - 变更证据：[update_once.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601939681367/update_once.json)
+  - 变更证据：[update_receipt.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601939681367/update_receipt.json)
+  - 变更证据：[verification.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601939681367/verification.json)
 
 ## 其他原始/正式证据
 

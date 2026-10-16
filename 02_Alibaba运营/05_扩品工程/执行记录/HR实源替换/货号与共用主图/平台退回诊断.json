@@ -1,0 +1,32 @@
+{
+  "at": "2026-10-16T05:15:22.287579+00:00",
+  "ids": [
+    "1601943574507",
+    "1601943545775"
+  ],
+  "models": [
+    "BQ1030-A",
+    "BQ1030-B"
+  ],
+  "state": "TARGET_MODEL_AND_FACTORY_IMAGE_RETURNED_CURRENT_PLATFORM_REJECTED",
+  "observed": {
+    "get_and_complete_catalog_agree": "tbd/N",
+    "all_target_and_non_target_formal_values_match": true,
+    "API_rejection_reason_present": false
+  },
+  "source_references": [
+    "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943574507/verification.json",
+    "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943545775/verification.json"
+  ],
+  "normal_browser_diagnosis": {
+    "state": "SELLER_EDITOR_REDIRECTED_TO_NORMAL_LOGIN",
+    "destination": "https://post.alibaba.com/product/publish.htm?itemId=1601943574507",
+    "read_only": true,
+    "new_product_write": false,
+    "login_data_entered": false,
+    "temporary_tab_closed": true
+  },
+  "official_status_reference": "https://developer.alibaba.com/docs/api.htm?apiId=25439",
+  "next_action": "保留当前BQ货号、F1及来源，待正常后台取得具体退回说明后针对性处理；没有原因不盲目重投，不新建或修改账号权限。",
+  "scope": "这两条不能计当前在架；其余481条独立正式字段和5.00分通过。"
+}

@@ -1,14 +1,12 @@
 {
+  "observed_at_utc": "2026-10-16T04:21:20.955485+00:00",
   "requested_product_id": "1601943584343",
-  "observed_at_utc": "2026-10-11T18:24:28.068625+00:00",
-  "method": "alibaba.icbu.product.get",
   "response": {
     "product": {
       "gmt_create": "2026-09-06 05:47:29",
       "keywords": [
         ""
       ],
-      "owner_member_display_name": "User name",
       "subject": "Women's Buckle Strap Casual Flats with Suede Upper and Round Toe",
       "main_image": {
         "images": [
@@ -17,13 +15,13 @@
           "https://sc04.alicdn.com/kf/H2b9ded2a709645f1a31cac020663bef9M.jpg",
           "https://sc04.alicdn.com/kf/H0b935009b85947beae92b8d6138411c42.jpg",
           "https://sc04.alicdn.com/kf/H005ce1c17ec14fa2a50262cde4a753f3m.jpg",
-          "https://sc04.alicdn.com/kf/H5705669c51814cd7b7af01137a5e9b58S.jpg"
+          "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
         ]
       },
       "struct_detail_product": true,
       "language": "ENGLISH",
       "is_smart_edit": false,
-      "gmt_modified": "2026-10-12 02:07:23",
+      "gmt_modified": "2026-10-16 12:09:56",
       "product_sku": {
         "skus": [
           {
@@ -49,7 +47,7 @@
               }
             ],
             "sku_id": 109757018942,
-            "sku_code": "HR021-B-COFFEE-EU40"
+            "sku_code": "BQ1021-B-COFFEE-EU40"
           },
           {
             "attr2_value": "{\"222038415\":190000791,\"191288010\":216016296}",
@@ -74,7 +72,7 @@
               }
             ],
             "sku_id": 109757018943,
-            "sku_code": "HR021-B-GREEN-EU35"
+            "sku_code": "BQ1021-B-GREEN-EU35"
           },
           {
             "attr2_value": "{\"222038415\":28388,\"191288010\":-401}",
@@ -99,7 +97,7 @@
               }
             ],
             "sku_id": 109757018940,
-            "sku_code": "HR021-B-COFFEE-EU38"
+            "sku_code": "BQ1021-B-COFFEE-EU38"
           },
           {
             "attr2_value": "{\"222038415\":190000792,\"191288010\":-401}",
@@ -124,7 +122,7 @@
               }
             ],
             "sku_id": 109757018941,
-            "sku_code": "HR021-B-COFFEE-EU39"
+            "sku_code": "BQ1021-B-COFFEE-EU39"
           },
           {
             "attr2_value": "{\"222038415\":190000105,\"191288010\":-401}",
@@ -149,7 +147,7 @@
               }
             ],
             "sku_id": 109757018938,
-            "sku_code": "HR021-B-COFFEE-EU36"
+            "sku_code": "BQ1021-B-COFFEE-EU36"
           },
           {
             "attr2_value": "{\"222038415\":29542,\"191288010\":-401}",
@@ -174,7 +172,7 @@
               }
             ],
             "sku_id": 109757018939,
-            "sku_code": "HR021-B-COFFEE-EU37"
+            "sku_code": "BQ1021-B-COFFEE-EU37"
           },
           {
             "attr2_value": "{\"222038415\":190000791,\"191288010\":-401}",
@@ -199,7 +197,7 @@
               }
             ],
             "sku_id": 109757018937,
-            "sku_code": "HR021-B-COFFEE-EU35"
+            "sku_code": "BQ1021-B-COFFEE-EU35"
           },
           {
             "attr2_value": "{\"222038415\":28389,\"191288010\":216016296}",
@@ -224,7 +222,7 @@
               }
             ],
             "sku_id": 109757018948,
-            "sku_code": "HR021-B-GREEN-EU40"
+            "sku_code": "BQ1021-B-GREEN-EU40"
           },
           {
             "attr2_value": "{\"222038415\":28388,\"191288010\":216016296}",
@@ -249,7 +247,7 @@
               }
             ],
             "sku_id": 109757018946,
-            "sku_code": "HR021-B-GREEN-EU38"
+            "sku_code": "BQ1021-B-GREEN-EU38"
           },
           {
             "attr2_value": "{\"222038415\":190000792,\"191288010\":216016296}",
@@ -274,7 +272,7 @@
               }
             ],
             "sku_id": 109757018947,
-            "sku_code": "HR021-B-GREEN-EU39"
+            "sku_code": "BQ1021-B-GREEN-EU39"
           },
           {
             "attr2_value": "{\"222038415\":190000105,\"191288010\":216016296}",
@@ -299,7 +297,7 @@
               }
             ],
             "sku_id": 109757018944,
-            "sku_code": "HR021-B-GREEN-EU36"
+            "sku_code": "BQ1021-B-GREEN-EU36"
           },
           {
             "attr2_value": "{\"222038415\":29542,\"191288010\":216016296}",
@@ -324,7 +322,7 @@
               }
             ],
             "sku_id": 109757018945,
-            "sku_code": "HR021-B-GREEN-EU37"
+            "sku_code": "BQ1021-B-GREEN-EU37"
           }
         ],
         "sku_attributes": [
@@ -384,74 +382,80 @@
           "images": [
             {
               "image_set": {
-                "name": "Customization capabilities",
-                "id": 550,
-                "order": "1"
+                "name": "Competitive advantages",
+                "id": 450
               },
-              "image_url": "https://sc04.alicdn.com/kf/H496f7579171f4370a1d47c3adf30001bK.jpg"
-            },
-            {
-              "image_set": {
-                "name": "Company overview",
-                "id": 400,
-                "order": "0"
-              },
-              "image_url": "https://sc04.alicdn.com/kf/Ha8c1682092424e778eadf945763e79daU.jpg"
+              "image_url": "https://sc04.alicdn.com/kf/H8779a3d5521c4cce910395f583af74505.png"
             },
             {
               "image_set": {
                 "name": "Production workflow",
-                "id": 600,
-                "order": "2"
+                "id": 600
               },
-              "image_url": "https://sc04.alicdn.com/kf/H36e700f5c3ee447a80c035d8ae7521d9a.jpg"
+              "image_url": "https://sc04.alicdn.com/kf/H76f31cce4cc0447a99b72496f0ae5c93l.png"
             },
             {
               "image_set": {
                 "name": "Packaging & shipping specifications",
-                "id": 700,
-                "order": "4"
+                "id": 700
               },
-              "image_url": "https://sc04.alicdn.com/kf/H5f71c3cfb4064b51bb458d0a786cb402R.jpg"
+              "image_url": "https://sc04.alicdn.com/kf/He558a164125f4bc295dfe3d70bb76066w.png"
             },
             {
               "image_set": {
-                "name": "Factory profile",
-                "id": 500,
-                "order": "3"
+                "name": "Customization capabilities",
+                "id": 550
               },
-              "image_url": "https://sc04.alicdn.com/kf/H9f32c7ecea0f4d25bc5ddc9cd04c1e5dK.jpg"
+              "image_url": "https://sc04.alicdn.com/kf/H2c23ba6ddeac47a686c0e1350c4ac294v.png"
+            },
+            {
+              "image_set": {
+                "name": "Company overview",
+                "id": 400
+              },
+              "image_url": "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
+            },
+            {
+              "image_set": {
+                "name": "Packaging & shipping specifications",
+                "id": 700
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H7d0669b743e742c1a97e8108e6cc96eaV.png"
             }
           ]
         },
         "product_faq": [
           {
-            "question": "Which color and EU size choices are listed?",
-            "answer": "Coffee: EU 35–40; Green: EU 35–40."
+            "question": "Are you a factory or a trading company?",
+            "answer": "We are a footwear manufacturer based in Quanzhou, Fujian, China. We work with overseas B2B buyers on wholesale and OEM/ODM footwear projects."
           },
           {
-            "question": "How do the two straps close?",
-            "answer": "Two buckle straps cross the open vamp. Adjust each strap for the instep, then assess toe room and heel hold with the intended socks."
+            "question": "What is your minimum order quantity?",
+            "answer": "Small trial orders are welcome for existing styles; the minimum quantity is shown on each product page. For custom orders, the MOQ depends on the design, materials, branding and packaging."
           },
           {
-            "question": "What should I assess on a sample?",
-            "answer": "Adjust both buckle straps with the intended socks, then check toe room and heel hold. Compare Coffee and Green full-shoe photos when selecting the contrast-panel direction."
+            "question": "Can I mix colors and sizes in one order?",
+            "answer": "Yes. Mixed colors and sizes are supported for existing styles. Mixed-style orders can also be discussed according to the selected styles and order quantity."
           },
           {
-            "question": "What is the minimum order for the original style?",
-            "answer": "The listed original-style minimum is 2 pairs. Quantity pricing is shown on this page; logo and custom packaging proposals are quoted separately."
+            "question": "Can I order samples before a bulk order?",
+            "answer": "Yes. Samples can be arranged for you to check the workmanship and fit before bulk ordering. Sample and courier costs are quoted before payment."
           },
           {
-            "question": "How can I request a sample?",
-            "answer": "Send the selected color, EU size and delivery postcode for a sample quotation covering the pair, courier charge and proposed dispatch date."
+            "question": "What packaging options do you offer?",
+            "answer": "Shoe boxes and polybags are available packing options. Custom boxes, labels and carton markings can be planned around your order and brand requirements."
           },
           {
-            "question": "What should I send for logo or packaging requirements?",
-            "answer": "Send the logo artwork, preferred placement, packaging brief and order quantity. The proposal for this style will set out the applicable minimum, cost and sample process."
+            "question": "Do you support logo customization and OEM/ODM?",
+            "answer": "Yes. We work with buyers on branding and footwear development. Send your logo artwork or design reference, target quantity and market requirements so we can develop a suitable proposal."
           },
           {
-            "question": "How can I get a delivered quotation?",
-            "answer": "Send pair quantities by color and EU size, the destination postcode or port and the packaging request. The quotation separates product cost and freight and includes the proposed dispatch and transit schedule."
+            "question": "What is the lead time?",
+            "answer": "Lead time depends on product availability, order quantity and customization. Existing styles can usually be arranged sooner; the production or dispatch schedule is agreed when confirming the order."
+          },
+          {
+            "question": "How can you arrange shipping?",
+            "answer": "Samples and small shipments can use express courier. Bulk shipments can be planned by sea or air, or through your appointed forwarder. Send your destination and delivery target for a freight quotation."
           }
         ],
         "detail_image": {
@@ -491,7 +495,7 @@
           ]
         },
         "product_summary": "Suede Mary Jane shoes with two buckle straps and contrasting white upper panels. The open vamp and double-strap arrangement create a recognizable flat casual silhouette. Genuine-leather lining and rubber sole layers form the construction in Coffee and Green.",
-        "company_summary": "Quanzhou Beiqiang Footwear & Apparel Co., Ltd. works with international B2B footwear buyers on product enquiries. Specifications, order options and quotations are confirmed for each selected style and order."
+        "company_summary": "Quanzhou Beiqiang Footwear & Apparel Co., Ltd. is a footwear manufacturer based in Quanzhou, Fujian, China. We work with importers, wholesalers, brand owners and e-commerce businesses on wholesale and OEM/ODM footwear projects. From selecting existing styles to developing a design brief, reviewing samples and planning packaging, we help buyers turn their requirements into a clear order plan. Share your product direction and purchasing needs to discuss a suitable cooperation proposal."
       },
       "display": "Y",
       "pc_detail_url": "https://www.alibaba.com/product-detail/Women-s-Buckle-Strap-Casual-Flats_1601943584343.html",
@@ -560,7 +564,7 @@
           "attribute_id": 3,
           "attribute_name": "Model Number",
           "value_id": -1,
-          "value_name": "HR021-B"
+          "value_name": "BQ1021-B"
         },
         {
           "attribute_id": 210194982,
@@ -569,10 +573,10 @@
           "value_name": "Suede"
         }
       ],
-      "owner_member": 286385890,
       "status": "approved"
     },
-    "request_id": "2166c2ca17917430721168926",
-    "_trace_id_": "2106ee7717917430721137670e1107"
-  }
+    "request_id": "21546a1d17921244837964909",
+    "_trace_id_": "21336b6617921244837938932e0d8b"
+  },
+  "scope": "Current exact-ID official readback. Review/display and target checks are recorded independently."
 }

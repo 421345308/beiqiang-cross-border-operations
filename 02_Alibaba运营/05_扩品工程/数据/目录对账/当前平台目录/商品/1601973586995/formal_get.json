@@ -1,14 +1,12 @@
 {
+  "observed_at_utc": "2026-10-16T04:20:08.650032+00:00",
   "requested_product_id": "1601973586995",
-  "observed_at_utc": "2026-10-11T17:24:06.283074+00:00",
-  "method": "alibaba.icbu.product.get",
   "response": {
     "product": {
       "gmt_create": "2026-10-08 17:42:28",
       "keywords": [
         ""
       ],
-      "owner_member_display_name": "User name",
       "subject": "Wholesale Mens Casual Sneakers Lace Up Low Top Walking Shoes with Stitched Side Panels in Black and Beige",
       "main_image": {
         "images": [
@@ -17,13 +15,13 @@
           "https://sc04.alicdn.com/kf/H070e504f056843178c41979e8b2d6306C.png",
           "https://sc04.alicdn.com/kf/Heb6974388d7e49e29b7d3b23433eaa7av.png",
           "https://sc04.alicdn.com/kf/Hedd4271865714cabb92e147f7fc2ace1W.png",
-          "https://sc04.alicdn.com/kf/S6c8cb1d46d8c4b018cf07f5cab50c1adi.png"
+          "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
         ]
       },
       "struct_detail_product": true,
       "language": "ENGLISH",
       "is_smart_edit": false,
-      "gmt_modified": "2026-10-12 01:07:43",
+      "gmt_modified": "2026-10-16 12:07:27",
       "product_sku": {
         "skus": [
           {
@@ -480,69 +478,80 @@
           "images": [
             {
               "image_set": {
+                "name": "Competitive advantages",
+                "id": 450
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H8779a3d5521c4cce910395f583af74505.png"
+            },
+            {
+              "image_set": {
                 "name": "Company overview",
                 "id": 400
               },
-              "image_url": "https://sc04.alicdn.com/kf/Ha8c1682092424e778eadf945763e79daU.jpg"
-            },
-            {
-              "image_set": {
-                "name": "Customization capabilities",
-                "id": 550
-              },
-              "image_url": "https://sc04.alicdn.com/kf/H496f7579171f4370a1d47c3adf30001bK.jpg"
-            },
-            {
-              "image_set": {
-                "name": "Packaging & shipping specifications",
-                "id": 700
-              },
-              "image_url": "https://sc04.alicdn.com/kf/H5f71c3cfb4064b51bb458d0a786cb402R.jpg"
+              "image_url": "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
             },
             {
               "image_set": {
                 "name": "Production workflow",
                 "id": 600
               },
-              "image_url": "https://sc04.alicdn.com/kf/H36e700f5c3ee447a80c035d8ae7521d9a.jpg"
+              "image_url": "https://sc04.alicdn.com/kf/H76f31cce4cc0447a99b72496f0ae5c93l.png"
             },
             {
               "image_set": {
-                "name": "Competitive advantages",
-                "id": 450
+                "name": "Packaging & shipping specifications",
+                "id": 700
               },
-              "image_url": "https://sc04.alicdn.com/kf/H9f32c7ecea0f4d25bc5ddc9cd04c1e5dK.jpg"
+              "image_url": "https://sc04.alicdn.com/kf/He558a164125f4bc295dfe3d70bb76066w.png"
+            },
+            {
+              "image_set": {
+                "name": "Customization capabilities",
+                "id": 550
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H2c23ba6ddeac47a686c0e1350c4ac294v.png"
+            },
+            {
+              "image_set": {
+                "name": "Packaging & shipping specifications",
+                "id": 700
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H7d0669b743e742c1a97e8108e6cc96eaV.png"
             }
           ]
         },
         "product_faq": [
           {
-            "question": "Which color and EU size choices are listed?",
-            "answer": "Black: EU 39–48; Beige: EU 39–48."
+            "question": "Are you a factory or a trading company?",
+            "answer": "We are a footwear manufacturer based in Quanzhou, Fujian, China. We work with overseas B2B buyers on wholesale and OEM/ODM footwear projects."
           },
           {
-            "question": "What are the pull loops and panel details?",
-            "answer": "Pull loops appear at the tongue and heel, and stitched panels define the sides and toe. Conventional laces adjust the low-top upper."
+            "question": "What is your minimum order quantity?",
+            "answer": "Small trial orders are welcome for existing styles; the minimum quantity is shown on each product page. For custom orders, the MOQ depends on the design, materials, branding and packaging."
           },
           {
-            "question": "What should I assess on a sample?",
-            "answer": "Adjust the laces with the intended socks, then check toe room, instep fit and heel hold before choosing the bulk EU size mix."
+            "question": "Can I mix colors and sizes in one order?",
+            "answer": "Yes. Mixed colors and sizes are supported for existing styles. Mixed-style orders can also be discussed according to the selected styles and order quantity."
           },
           {
-            "question": "What is the minimum order for the original style?",
-            "answer": "The listed original-style minimum is 2 pairs. Quantity pricing is shown on this page; logo and custom packaging proposals are quoted separately."
+            "question": "Can I order samples before a bulk order?",
+            "answer": "Yes. Samples can be arranged for you to check the workmanship and fit before bulk ordering. Sample and courier costs are quoted before payment."
           },
           {
-            "question": "How can I request a sample?",
-            "answer": "Send the selected color or lining option, EU size and delivery postcode for a sample quotation covering the pair, courier charge and proposed dispatch date."
+            "question": "What packaging options do you offer?",
+            "answer": "Shoe boxes and polybags are available packing options. Custom boxes, labels and carton markings can be planned around your order and brand requirements."
           },
           {
-            "question": "What should I send for logo or packaging requirements?",
-            "answer": "Send the logo artwork, preferred placement, packaging brief and order quantity. The proposal for this style will set out the applicable minimum, cost and sample process."
+            "question": "Do you support logo customization and OEM/ODM?",
+            "answer": "Yes. We work with buyers on branding and footwear development. Send your logo artwork or design reference, target quantity and market requirements so we can develop a suitable proposal."
           },
           {
-            "question": "How can I get a delivered quotation?",
-            "answer": "Send pair quantities by color and EU size, the destination postcode or port and the packaging request. The quotation separates product cost and freight and includes the proposed dispatch and transit schedule."
+            "question": "What is the lead time?",
+            "answer": "Lead time depends on product availability, order quantity and customization. Existing styles can usually be arranged sooner; the production or dispatch schedule is agreed when confirming the order."
+          },
+          {
+            "question": "How can you arrange shipping?",
+            "answer": "Samples and small shipments can use express courier. Bulk shipments can be planned by sea or air, or through your appointed forwarder. Send your destination and delivery target for a freight quotation."
           }
         ],
         "detail_image": {
@@ -578,7 +587,7 @@
           ]
         },
         "product_summary": "Low-top lace-up casual shoes with stitched side panels and pull loops at the tongue and heel. The restrained panel layout offers a cleaner appearance than heavily layered sneakers. Black and Beige provide dark and light options through EU 39–48.",
-        "company_summary": "Quanzhou Beiqiang Footwear & Apparel Co., Ltd. is based in Quanzhou, Fujian, China and serves overseas B2B footwear buyers. Share your footwear specifications, quantities, packaging needs and destination so we can review the requirements and prepare a quotation. Company images introduce company activities and order coordination."
+        "company_summary": "Quanzhou Beiqiang Footwear & Apparel Co., Ltd. is a footwear manufacturer based in Quanzhou, Fujian, China. We work with importers, wholesalers, brand owners and e-commerce businesses on wholesale and OEM/ODM footwear projects. From selecting existing styles to developing a design brief, reviewing samples and planning packaging, we help buyers turn their requirements into a clear order plan. Share your product direction and purchasing needs to discuss a suitable cooperation proposal."
       },
       "display": "Y",
       "pc_detail_url": "https://www.alibaba.com/product-detail/Wholesale-Mens-Casual-Sneakers-Lace-Up_1601973586995.html",
@@ -625,10 +634,10 @@
           "value_name": "Not specified"
         }
       ],
-      "owner_member": 286385890,
       "status": "approved"
     },
-    "request_id": "212c6fc617917394503161790",
-    "_trace_id_": "2108b42d17917394503136746e0ec6"
-  }
+    "request_id": "213d4e4917921244115148065",
+    "_trace_id_": "0b8f377a17921244115118790e0f69"
+  },
+  "scope": "Current exact-ID official readback. Review/display and target checks are recorded independently."
 }

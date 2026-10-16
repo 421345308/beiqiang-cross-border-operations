@@ -1,12 +1,21 @@
-# HR011 商品档案
+# BQ1011 商品档案
 
 此页由唯一台账生成，是本款唯一资料入口；修改事实到下方唯一字段文件或台账，平台正式值到按ID保存的回读原件。原始包只读，候选/历史材料不当当前线上素材。
 
-来源状态：`ADOPTED`。下一步：已采用真实鞋型保持；原始像素、当前六图和EU材料对应已核，当前交易条件逐单确认，后续按本款质量问题优化。
+历史/关联查询别名：HR011。以各商品ID正式型号为准。
+来源状态：`ADOPTED`。下一步：当前BQ货号、统一工厂图及货源已同步；维持已核实的实鞋与来源，按订单核采购条件；不重复换款或恢复旧HR编号。
 
 ## 当前资料与实物证据
 
+- 当前供货类型（内部）：外采；SOURCE_ROUTE_EVIDENCED。货号不随供货路径永久绑定，转产后更新证据与生效范围。
+- 供货分类依据：[ROOT_images_approved.json](../../../../99_%E4%B8%B4%E6%97%B6%E5%8C%BA/HR011_TO12%E6%89%A7%E8%A1%8C_2026-09-29/ROOT_images_approved.json)
+- 供货分类依据：[ROOT_approved_bank_mapping.json](../../../../99_%E4%B8%B4%E6%97%B6%E5%8C%BA/HR011_TO12%E6%89%A7%E8%A1%8C_2026-09-29/ROOT_approved_bank_mapping.json)
+- 供货分类依据：[来源与正式绑定核验.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/HR011/%E6%9D%A5%E6%BA%90%E4%B8%8E%E6%AD%A3%E5%BC%8F%E7%BB%91%E5%AE%9A%E6%A0%B8%E9%AA%8C.json)
 - 本地事实/准备字段：[来源与正式绑定核验.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/HR011/%E6%9D%A5%E6%BA%90%E4%B8%8E%E6%AD%A3%E5%BC%8F%E7%BB%91%E5%AE%9A%E6%A0%B8%E9%AA%8C.json)
+- 当前主图库按商品ID对应（含最新统一工厂图）：
+  - [1601943513336 当前图库与货号](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601943513336/%E5%BD%93%E5%89%8D%E5%9B%BE%E5%BA%93%E4%B8%8E%E8%B4%A7%E5%8F%B7.json)
+  - [1601943501378 当前图库与货号](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601943501378/%E5%BD%93%E5%89%8D%E5%9B%BE%E5%BA%93%E4%B8%8E%E8%B4%A7%E5%8F%B7.json)
+  - [1601943406882 当前图库与货号](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601943406882/%E5%BD%93%E5%89%8D%E5%9B%BE%E5%BA%93%E4%B8%8E%E8%B4%A7%E5%8F%B7.json)
 
 ## 采购来源（内部使用）
 
@@ -19,10 +28,10 @@
 
 ## 国际站链接与本地正式字段
 
-### HR011-B · 1601943406882
+### BQ1011-B · 1601943406882
 
 - 平台链接：[1601943406882](https://www.alibaba.com/product-detail/Men-s-Casual-Sneakers-with-Mesh_1601943406882.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943406882/formal_get.json)；UTC 2026-10-12T22:11:12.567854+00:00。
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943406882/formal_get.json)；UTC 2026-10-16T04:27:57.620685+00:00。
 - 当前正式标题：Men's Casual Sneakers with Mesh Lining and Rubber Soles for Daily Wear
 - 审核/展示：approved / Y；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, owner_member, owner_member_display_name, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
@@ -34,14 +43,19 @@
   - M3：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/d78e97061c9bad40854aec4c5b0238904aedcfa24b9faff4b0f92c4f691392d1.png) · 1200×1200
   - M4：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/1e1cc73c5531ef08aca94571b2c5a430353314652d9d9a4f1a6d8b4dc64a0dfe.png) · 1200×1200
   - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/a1f9c003b4fdb1bc7de547aa7ec433b3d94b73d7619ddca00d009953f8a0f825.png) · 1200×1200
-  - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/f32d682a7055a3e44f91eb074b678507beca63967da5565de8997f582a651bf5.jpg) · 1200×1200
-- 本地同步状态：`COMPANY_BUNDLE_FORMAL_PASS`。
-- 本轮优化：``；
+  - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/00_%E6%9C%80%E7%BB%88%E4%B8%8A%E4%BC%A0/00_%E5%8E%82%E5%AE%B6%E8%B5%84%E6%96%99/03_%E5%BD%93%E5%89%8D%E5%B7%A5%E5%8E%82%E4%B8%BB%E5%9B%BE/F1_factory.png) · 1254×1254
+- 本地同步状态：`MODEL_FACTORY_GALLERY_DOUBLE_SYNC_PASS`。
+- 本轮优化：`FORMAL_FIELDS_SCORE_PASS`；当前正式字段/实际评分通过，来源与本地同步
+  - 变更证据：[prepared.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601943406882/prepared.json)
+  - 变更证据：[manifest.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601943406882/manifest.json)
+  - 变更证据：[update_once.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601943406882/update_once.json)
+  - 变更证据：[update_receipt.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601943406882/update_receipt.json)
+  - 变更证据：[verification.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601943406882/verification.json)
 
-### HR011-A · 1601943501378
+### BQ1011-A · 1601943501378
 
 - 平台链接：[1601943501378](https://www.alibaba.com/product-detail/Men-s-Chunky-Lace-Up-Sneakers_1601943501378.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943501378/formal_get.json)；UTC 2026-10-12T22:23:32.131251+00:00。
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943501378/formal_get.json)；UTC 2026-10-16T04:21:49.578763+00:00。
 - 当前正式标题：Men's Chunky Lace Up Sneakers with Layered Panels for Everyday Casual Wear
 - 审核/展示：approved / Y；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, owner_member, owner_member_display_name, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
@@ -53,14 +67,19 @@
   - M3：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/d78e97061c9bad40854aec4c5b0238904aedcfa24b9faff4b0f92c4f691392d1.png) · 1200×1200
   - M4：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/34bee9a17ef9b33c9fc85830980b7c4489282ec6d9e3b09d4b819da7b0e0cc1e.png) · 1200×1200
   - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/a1f9c003b4fdb1bc7de547aa7ec433b3d94b73d7619ddca00d009953f8a0f825.png) · 1200×1200
-  - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/f32d682a7055a3e44f91eb074b678507beca63967da5565de8997f582a651bf5.jpg) · 1200×1200
-- 本地同步状态：`COMPANY_BUNDLE_FORMAL_PASS`。
-- 本轮优化：``；
+  - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/00_%E6%9C%80%E7%BB%88%E4%B8%8A%E4%BC%A0/00_%E5%8E%82%E5%AE%B6%E8%B5%84%E6%96%99/03_%E5%BD%93%E5%89%8D%E5%B7%A5%E5%8E%82%E4%B8%BB%E5%9B%BE/F1_factory.png) · 1254×1254
+- 本地同步状态：`MODEL_FACTORY_GALLERY_DOUBLE_SYNC_PASS`。
+- 本轮优化：`FORMAL_FIELDS_SCORE_PASS`；当前正式字段/实际评分通过，来源与本地同步
+  - 变更证据：[prepared.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601943501378/prepared.json)
+  - 变更证据：[manifest.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601943501378/manifest.json)
+  - 变更证据：[update_once.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601943501378/update_once.json)
+  - 变更证据：[update_receipt.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601943501378/update_receipt.json)
+  - 变更证据：[verification.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601943501378/verification.json)
 
-### HR011-C · 1601943513336
+### BQ1011-C · 1601943513336
 
 - 平台链接：[1601943513336](https://www.alibaba.com/product-detail/Men-s-Low-Top-Casual-Sneakers_1601943513336.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943513336/formal_get.json)；UTC 2026-10-12T22:29:39.774749+00:00。
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943513336/formal_get.json)；UTC 2026-10-16T04:21:48.736579+00:00。
 - 当前正式标题：Men's Low Top Casual Sneakers with Chunky Sole Profile and Lace Up Design
 - 审核/展示：approved / Y；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, owner_member, owner_member_display_name, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
@@ -72,9 +91,14 @@
   - M3：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/1e1cc73c5531ef08aca94571b2c5a430353314652d9d9a4f1a6d8b4dc64a0dfe.png) · 1200×1200
   - M4：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/d78e97061c9bad40854aec4c5b0238904aedcfa24b9faff4b0f92c4f691392d1.png) · 1200×1200
   - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/34bee9a17ef9b33c9fc85830980b7c4489282ec6d9e3b09d4b819da7b0e0cc1e.png) · 1200×1200
-  - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/f32d682a7055a3e44f91eb074b678507beca63967da5565de8997f582a651bf5.jpg) · 1200×1200
-- 本地同步状态：`COMPANY_BUNDLE_FORMAL_PASS`。
-- 本轮优化：``；
+  - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/00_%E6%9C%80%E7%BB%88%E4%B8%8A%E4%BC%A0/00_%E5%8E%82%E5%AE%B6%E8%B5%84%E6%96%99/03_%E5%BD%93%E5%89%8D%E5%B7%A5%E5%8E%82%E4%B8%BB%E5%9B%BE/F1_factory.png) · 1254×1254
+- 本地同步状态：`MODEL_FACTORY_GALLERY_DOUBLE_SYNC_PASS`。
+- 本轮优化：`FORMAL_FIELDS_SCORE_PASS`；当前正式字段/实际评分通过，来源与本地同步
+  - 变更证据：[prepared.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601943513336/prepared.json)
+  - 变更证据：[manifest.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601943513336/manifest.json)
+  - 变更证据：[update_once.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601943513336/update_once.json)
+  - 变更证据：[update_receipt.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601943513336/update_receipt.json)
+  - 变更证据：[verification.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601943513336/verification.json)
 
 ## 其他原始/正式证据
 

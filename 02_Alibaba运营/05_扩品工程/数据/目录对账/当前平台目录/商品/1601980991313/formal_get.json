@@ -1,7 +1,6 @@
 {
+  "observed_at_utc": "2026-10-16T04:17:25.991125+00:00",
   "requested_product_id": "1601980991313",
-  "observed_at_utc": "2026-10-15T11:14:08.194522+00:00",
-  "method": "alibaba.icbu.product.get",
   "response": {
     "product": {
       "gmt_create": "2026-10-15 15:23:43",
@@ -16,13 +15,13 @@
           "https://sc04.alicdn.com/kf/H9c18771c721a4ecc9a149acc4a9710379.png",
           "https://sc04.alicdn.com/kf/H4abdd8a6d838491f8de33336ec77f974q.png",
           "https://sc04.alicdn.com/kf/H616b52ed38db47bd9e907bbd5f8cdb25s.png",
-          "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
+          "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
         ]
       },
       "struct_detail_product": true,
       "language": "ENGLISH",
       "is_smart_edit": false,
-      "gmt_modified": "2026-10-15 15:23:43",
+      "gmt_modified": "2026-10-16 11:54:09",
       "product_sku": {
         "skus": [
           {
@@ -702,17 +701,17 @@
             },
             {
               "image_set": {
-                "name": "Packaging & shipping specifications",
-                "id": 700
-              },
-              "image_url": "https://sc04.alicdn.com/kf/H7d0669b743e742c1a97e8108e6cc96eaV.png"
-            },
-            {
-              "image_set": {
                 "name": "Company overview",
                 "id": 400
               },
               "image_url": "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
+            },
+            {
+              "image_set": {
+                "name": "Packaging & shipping specifications",
+                "id": 700
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H7d0669b743e742c1a97e8108e6cc96eaV.png"
             }
           ]
         },
@@ -844,14 +843,8 @@
       ],
       "status": "approved"
     },
-    "request_id": "2105044417920628499681233",
-    "_trace_id_": "0bb4a40617920628498426756e0d83"
+    "request_id": "2105584317921242488688111",
+    "_trace_id_": "2150384817921242488652214e0b4b"
   },
-  "sanitized_fields": [
-    "owner_member",
-    "owner_member_display_name",
-    "owner_member_id"
-  ],
-  "raw_response_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2550准备/after_get.json",
-  "acceptance_state": "FORMAL_FIELDS_SCORE_PASS"
+  "scope": "Current exact-ID official readback. Review/display and target checks are recorded independently."
 }

@@ -6,6 +6,12 @@ import json,sys,copy
 from datetime import datetime,timezone
 import replace_hr_real_sources as o
 def check(pid,family,variant):
+ import normalize_models_factory_gallery as current
+ latest=current.BASE/'商品'/pid
+ if(latest/'update_once.json').exists():
+  report=o.b.load(latest/'verification.json')if(latest/'verification.json').exists()else{'id':pid,'state':'PENDING_CURRENT_MODEL_FACTORY_VERIFY'}
+  report={**report,'current_scope_evidence':current.rel(latest),'historical_source_acceptance_preserved':True}
+  print(pid,report['state']);return report
  if not(o.BASE/'商品'/pid/'after_get.json').exists():
   return {'id':pid,'state':'LOCAL_PREPARATION_NOT_FORMALLY_SUBMITTED'}
  f=o.BASE/'商品'/pid;got=o.b.load(f/'after_get.json');p=got['product'];report={'id':pid,'at':o.b.now(),'state':'REVIEWING','status':p['status'],'display':p['display']}

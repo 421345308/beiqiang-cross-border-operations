@@ -1,0 +1,42 @@
+{
+  "id": "1601943711519",
+  "at": "2026-10-16T05:07:16.437247+00:00",
+  "state": "FORMAL_FIELDS_SCORE_PASS",
+  "status": "approved",
+  "display": "Y",
+  "actual_score": "5.00",
+  "public_qa": "NOT_PER_ITEM_BROWSER_TESTED_OWNER_API_SCOPE",
+  "readback_checks": {
+    "model": true,
+    "gallery": true,
+    "non_target_formal": true,
+    "unchanged_title": true,
+    "gallery_count": true,
+    "sku_binding_ids_match_declared_history": true,
+    "sku_rows_match_declared_history_and_code_change": true
+  },
+  "category_followup_evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943711519/质量修正/fields_overlay.json",
+  "sku_reissue_mapping": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943711519/质量修正/规格恢复/SKU编号变更映射.json",
+  "original_platform_SKU_ids_preserved": false,
+  "checks": {
+    "model": true,
+    "gallery": true,
+    "non_target_formal": true,
+    "unchanged_title": true,
+    "gallery_count": true,
+    "sku_binding_ids_match_declared_history": true,
+    "sku_rows_match_declared_history_and_code_change": true,
+    "render_model": true,
+    "unsubmitted_schema_fields_preserved": true
+  },
+  "formal_request_id": "212cbf3217921272392251438",
+  "schema_request_id": "213f5a2117921272396542016",
+  "new_model": "BQ1055-B",
+  "gallery_slot": 6,
+  "asset_sha256": "13987d2f18fb1e3274ebf1d2eb2bed945d8ee12c33c2a0a5f23e3f41890ce29f",
+  "score_diagnostics": {
+    "flags": {},
+    "deductions": {},
+    "errors": []
+  }
+}

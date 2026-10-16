@@ -11,6 +11,9 @@ def public_fields(value):
  if isinstance(value,list):return [public_fields(v)for v in value]
  return value
 def sync():
+ current=BASE/'货号与共用主图'
+ if(current/'范围.json').exists()and any((current/'商品'/pid/'update_once.json').exists()for targets in op.TARGETS.values()for pid in targets.values()):
+  import sync_models_factory_gallery as latest;latest.main();return
  d=json.loads(REG.read_text(encoding='utf8'));products={p['id']:p for p in d['products']};listings={p['id']:p for p in d['listings']};summary=[]
  for family,targets in op.TARGETS.items():
   plan=op.PLANS[family];raw=ROOT/op.RAW_PATHS[family];source=op.b.load(raw/'source.json');sid=plan.get('registry_source_id','src-hr-'+family.lower()+'-'+source['artno'].lower())

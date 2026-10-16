@@ -1,7 +1,6 @@
 {
+  "observed_at_utc": "2026-10-16T04:18:56.461994+00:00",
   "requested_product_id": "1601943558469",
-  "observed_at_utc": "2026-10-13T08:31:48.173886+00:00",
-  "method": "alibaba.icbu.product.get",
   "response": {
     "product": {
       "gmt_create": "2026-09-06 05:35:39",
@@ -16,13 +15,13 @@
           "https://sc04.alicdn.com/kf/H68dc80bc722e4f56ac15cdd367eb5dc3A.jpg",
           "https://sc04.alicdn.com/kf/H3488585328ca4c90a18dcfd449b2eb31x.jpg",
           "https://sc04.alicdn.com/kf/H3aeae7028e70406aacb6316735dc835dU.jpg",
-          "https://sc04.alicdn.com/kf/H281467d09f4b48368c335900f583a9c9r.jpg"
+          "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
         ]
       },
       "struct_detail_product": true,
       "language": "ENGLISH",
       "is_smart_edit": false,
-      "gmt_modified": "2026-10-13 16:13:31",
+      "gmt_modified": "2026-10-16 12:05:01",
       "product_sku": {
         "skus": [
           {
@@ -42,7 +41,7 @@
               }
             ],
             "sku_id": 109804664711,
-            "sku_code": "HR020-C-BLACK-EU39"
+            "sku_code": "BQ1020-C-BLACK-EU39"
           },
           {
             "attr2_value": "{\"222038415\":-838,\"191288010\":-501}",
@@ -61,7 +60,7 @@
               }
             ],
             "sku_id": 109804664710,
-            "sku_code": "HR020-C-BLACK-EU38"
+            "sku_code": "BQ1020-C-BLACK-EU38"
           },
           {
             "attr2_value": "{\"222038415\":-840,\"191288010\":-502}",
@@ -80,7 +79,7 @@
               }
             ],
             "sku_id": 109804664719,
-            "sku_code": "HR020-C-BROWN-EU40"
+            "sku_code": "BQ1020-C-BROWN-EU40"
           },
           {
             "attr2_value": "{\"222038415\":-839,\"191288010\":-502}",
@@ -99,7 +98,7 @@
               }
             ],
             "sku_id": 109804664718,
-            "sku_code": "HR020-C-BROWN-EU39"
+            "sku_code": "BQ1020-C-BROWN-EU39"
           },
           {
             "attr2_value": "{\"222038415\":-838,\"191288010\":-502}",
@@ -118,7 +117,7 @@
               }
             ],
             "sku_id": 109804664717,
-            "sku_code": "HR020-C-BROWN-EU38"
+            "sku_code": "BQ1020-C-BROWN-EU38"
           },
           {
             "attr2_value": "{\"222038415\":-844,\"191288010\":-501}",
@@ -137,7 +136,7 @@
               }
             ],
             "sku_id": 109804664716,
-            "sku_code": "HR020-C-BLACK-EU44"
+            "sku_code": "BQ1020-C-BLACK-EU44"
           },
           {
             "attr2_value": "{\"222038415\":-843,\"191288010\":-501}",
@@ -156,7 +155,7 @@
               }
             ],
             "sku_id": 109804664715,
-            "sku_code": "HR020-C-BLACK-EU43"
+            "sku_code": "BQ1020-C-BLACK-EU43"
           },
           {
             "attr2_value": "{\"222038415\":-842,\"191288010\":-501}",
@@ -175,7 +174,7 @@
               }
             ],
             "sku_id": 109804664714,
-            "sku_code": "HR020-C-BLACK-EU42"
+            "sku_code": "BQ1020-C-BLACK-EU42"
           },
           {
             "attr2_value": "{\"222038415\":-841,\"191288010\":-501}",
@@ -194,7 +193,7 @@
               }
             ],
             "sku_id": 109804664713,
-            "sku_code": "HR020-C-BLACK-EU41"
+            "sku_code": "BQ1020-C-BLACK-EU41"
           },
           {
             "attr2_value": "{\"222038415\":-840,\"191288010\":-501}",
@@ -213,7 +212,7 @@
               }
             ],
             "sku_id": 109804664712,
-            "sku_code": "HR020-C-BLACK-EU40"
+            "sku_code": "BQ1020-C-BLACK-EU40"
           },
           {
             "attr2_value": "{\"222038415\":-844,\"191288010\":-502}",
@@ -232,7 +231,7 @@
               }
             ],
             "sku_id": 109804664723,
-            "sku_code": "HR020-C-BROWN-EU44"
+            "sku_code": "BQ1020-C-BROWN-EU44"
           },
           {
             "attr2_value": "{\"222038415\":-843,\"191288010\":-502}",
@@ -251,7 +250,7 @@
               }
             ],
             "sku_id": 109804664722,
-            "sku_code": "HR020-C-BROWN-EU43"
+            "sku_code": "BQ1020-C-BROWN-EU43"
           },
           {
             "attr2_value": "{\"222038415\":-842,\"191288010\":-502}",
@@ -270,7 +269,7 @@
               }
             ],
             "sku_id": 109804664721,
-            "sku_code": "HR020-C-BROWN-EU42"
+            "sku_code": "BQ1020-C-BROWN-EU42"
           },
           {
             "attr2_value": "{\"222038415\":-841,\"191288010\":-502}",
@@ -289,7 +288,7 @@
               }
             ],
             "sku_id": 109804664720,
-            "sku_code": "HR020-C-BROWN-EU41"
+            "sku_code": "BQ1020-C-BROWN-EU41"
           }
         ],
         "sku_attributes": [
@@ -537,7 +536,7 @@
           "attribute_id": 3,
           "attribute_name": "Model Number",
           "value_id": -1,
-          "value_name": "HR020-C"
+          "value_name": "BQ1020-C"
         },
         {
           "attribute_id": 20700,
@@ -572,13 +571,8 @@
       ],
       "status": "approved"
     },
-    "request_id": "210829b717918803169653459",
-    "_trace_id_": "2108b42d17918803169617459e0bae"
+    "request_id": "21501b8d17921243393548075",
+    "_trace_id_": "0b8f377a17921243393516354e0efa"
   },
-  "sanitized_fields": [
-    "owner_member",
-    "owner_member_display_name",
-    "owner_member_id"
-  ],
-  "raw_response_file": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943558469/after_get.json"
+  "scope": "Current exact-ID official readback. Review/display and target checks are recorded independently."
 }

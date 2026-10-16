@@ -1,7 +1,6 @@
 {
+  "observed_at_utc": "2026-10-16T04:18:21.790360+00:00",
   "requested_product_id": "1601943639863",
-  "observed_at_utc": "2026-10-13T19:40:44.470829+00:00",
-  "method": "alibaba.icbu.product.get",
   "response": {
     "product": {
       "gmt_create": "2026-09-06 14:52:03",
@@ -16,13 +15,13 @@
           "https://sc04.alicdn.com/kf/H0f46af4f43854a84ba6653abddd432c40.jpg",
           "https://sc04.alicdn.com/kf/Ha5bf63bd00b24cccae949eee06781147r.jpg",
           "https://sc04.alicdn.com/kf/Hf093a21f1fd1400caed97bcbfde31e6d6.jpg",
-          "https://sc04.alicdn.com/kf/H281467d09f4b48368c335900f583a9c9r.jpg"
+          "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
         ]
       },
       "struct_detail_product": true,
       "language": "ENGLISH",
       "is_smart_edit": false,
-      "gmt_modified": "2026-10-14 03:28:07",
+      "gmt_modified": "2026-10-16 12:03:38",
       "product_sku": {
         "skus": [
           {
@@ -42,7 +41,7 @@
               }
             ],
             "sku_id": 109807588321,
-            "sku_code": "HR049-C-KHAKI-EU44"
+            "sku_code": "BQ1049-C-KHAKI-EU44"
           },
           {
             "attr2_value": "{\"222038415\":-843,\"191288010\":-502}",
@@ -61,7 +60,7 @@
               }
             ],
             "sku_id": 109807588320,
-            "sku_code": "HR049-C-KHAKI-EU43"
+            "sku_code": "BQ1049-C-KHAKI-EU43"
           },
           {
             "attr2_value": "{\"222038415\":-840,\"191288010\":-501}",
@@ -80,7 +79,7 @@
               }
             ],
             "sku_id": 109807588311,
-            "sku_code": "HR049-C-BLACK-EU40"
+            "sku_code": "BQ1049-C-BLACK-EU40"
           },
           {
             "attr2_value": "{\"222038415\":-839,\"191288010\":-501}",
@@ -99,7 +98,7 @@
               }
             ],
             "sku_id": 109807588310,
-            "sku_code": "HR049-C-BLACK-EU39"
+            "sku_code": "BQ1049-C-BLACK-EU39"
           },
           {
             "attr2_value": "{\"222038415\":-844,\"191288010\":-501}",
@@ -118,7 +117,7 @@
               }
             ],
             "sku_id": 109807588315,
-            "sku_code": "HR049-C-BLACK-EU44"
+            "sku_code": "BQ1049-C-BLACK-EU44"
           },
           {
             "attr2_value": "{\"222038415\":-843,\"191288010\":-501}",
@@ -137,7 +136,7 @@
               }
             ],
             "sku_id": 109807588314,
-            "sku_code": "HR049-C-BLACK-EU43"
+            "sku_code": "BQ1049-C-BLACK-EU43"
           },
           {
             "attr2_value": "{\"222038415\":-842,\"191288010\":-501}",
@@ -156,7 +155,7 @@
               }
             ],
             "sku_id": 109807588313,
-            "sku_code": "HR049-C-BLACK-EU42"
+            "sku_code": "BQ1049-C-BLACK-EU42"
           },
           {
             "attr2_value": "{\"222038415\":-841,\"191288010\":-501}",
@@ -175,7 +174,7 @@
               }
             ],
             "sku_id": 109807588312,
-            "sku_code": "HR049-C-BLACK-EU41"
+            "sku_code": "BQ1049-C-BLACK-EU41"
           },
           {
             "attr2_value": "{\"222038415\":-842,\"191288010\":-502}",
@@ -194,7 +193,7 @@
               }
             ],
             "sku_id": 109807588319,
-            "sku_code": "HR049-C-KHAKI-EU42"
+            "sku_code": "BQ1049-C-KHAKI-EU42"
           },
           {
             "attr2_value": "{\"222038415\":-841,\"191288010\":-502}",
@@ -213,7 +212,7 @@
               }
             ],
             "sku_id": 109807588318,
-            "sku_code": "HR049-C-KHAKI-EU41"
+            "sku_code": "BQ1049-C-KHAKI-EU41"
           },
           {
             "attr2_value": "{\"222038415\":-840,\"191288010\":-502}",
@@ -232,7 +231,7 @@
               }
             ],
             "sku_id": 109807588317,
-            "sku_code": "HR049-C-KHAKI-EU40"
+            "sku_code": "BQ1049-C-KHAKI-EU40"
           },
           {
             "attr2_value": "{\"222038415\":-839,\"191288010\":-502}",
@@ -251,7 +250,7 @@
               }
             ],
             "sku_id": 109807588316,
-            "sku_code": "HR049-C-KHAKI-EU39"
+            "sku_code": "BQ1049-C-KHAKI-EU39"
           }
         ],
         "sku_attributes": [
@@ -398,17 +397,17 @@
             },
             {
               "image_set": {
-                "name": "Other product images",
-                "id": "350"
-              },
-              "image_url": "https://sc04.alicdn.com/kf/H67a163147da84ea09a2767966876eb078.jpg"
-            },
-            {
-              "image_set": {
                 "name": "Detail shot",
                 "id": "300"
               },
               "image_url": "https://sc04.alicdn.com/kf/Hdef3b90f67e243d09f7182b80e84981dW.jpg"
+            },
+            {
+              "image_set": {
+                "name": "Other product images",
+                "id": "350"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H67a163147da84ea09a2767966876eb078.jpg"
             },
             {
               "image_set": {
@@ -507,7 +506,7 @@
           "attribute_id": 3,
           "attribute_name": "Model Number",
           "value_id": -1,
-          "value_name": "HR049-C"
+          "value_name": "BQ1049-C"
         },
         {
           "attribute_id": 191288243,
@@ -518,13 +517,8 @@
       ],
       "status": "approved"
     },
-    "request_id": "0bbb3b2417919204442737303",
-    "_trace_id_": "2140ca6817919204441437653e0d89"
+    "request_id": "213e759c17921243046862378",
+    "_trace_id_": "21310a5c17921243046833173e0f06"
   },
-  "sanitized_fields": [
-    "owner_member",
-    "owner_member_display_name",
-    "owner_member_id"
-  ],
-  "raw_response_file": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943639863/after_get.json"
+  "scope": "Current exact-ID official readback. Review/display and target checks are recorded independently."
 }

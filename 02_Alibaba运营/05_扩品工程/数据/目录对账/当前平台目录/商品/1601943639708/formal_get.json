@@ -1,7 +1,6 @@
 {
+  "observed_at_utc": "2026-10-16T04:19:02.057424+00:00",
   "requested_product_id": "1601943639708",
-  "observed_at_utc": "2026-10-13T04:24:16.843924+00:00",
-  "method": "alibaba.icbu.product.get",
   "response": {
     "product": {
       "gmt_create": "2026-09-06 13:42:41",
@@ -16,13 +15,13 @@
           "https://sc04.alicdn.com/kf/H5f06203c752d4ae19d997204882e89cbD.jpg",
           "https://sc04.alicdn.com/kf/Hbec1631f81bc48019b22256c8f6adc3e7.jpg",
           "https://sc04.alicdn.com/kf/Hd309e1945cac401583e30d2c2511d651m.jpg",
-          "https://sc04.alicdn.com/kf/H281467d09f4b48368c335900f583a9c9r.jpg"
+          "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
         ]
       },
       "struct_detail_product": true,
       "language": "ENGLISH",
       "is_smart_edit": false,
-      "gmt_modified": "2026-10-13 12:09:14",
+      "gmt_modified": "2026-10-16 12:05:15",
       "product_sku": {
         "skus": [
           {
@@ -42,7 +41,7 @@
               }
             ],
             "sku_id": 109802786256,
-            "sku_code": "HR042-C-YELLOW-EU39"
+            "sku_code": "BQ1042-C-YELLOW-EU39"
           },
           {
             "attr2_value": "{\"222038415\":-840,\"191288010\":-505}",
@@ -61,7 +60,7 @@
               }
             ],
             "sku_id": 109802786257,
-            "sku_code": "HR042-C-YELLOW-EU40"
+            "sku_code": "BQ1042-C-YELLOW-EU40"
           },
           {
             "attr2_value": "{\"222038415\":-841,\"191288010\":-505}",
@@ -80,7 +79,7 @@
               }
             ],
             "sku_id": 109802786258,
-            "sku_code": "HR042-C-YELLOW-EU41"
+            "sku_code": "BQ1042-C-YELLOW-EU41"
           },
           {
             "attr2_value": "{\"222038415\":-842,\"191288010\":-505}",
@@ -99,7 +98,7 @@
               }
             ],
             "sku_id": 109802786259,
-            "sku_code": "HR042-C-YELLOW-EU42"
+            "sku_code": "BQ1042-C-YELLOW-EU42"
           },
           {
             "attr2_value": "{\"222038415\":-843,\"191288010\":-505}",
@@ -118,7 +117,7 @@
               }
             ],
             "sku_id": 109802786260,
-            "sku_code": "HR042-C-YELLOW-EU43"
+            "sku_code": "BQ1042-C-YELLOW-EU43"
           },
           {
             "attr2_value": "{\"222038415\":-844,\"191288010\":-505}",
@@ -137,7 +136,7 @@
               }
             ],
             "sku_id": 109802786261,
-            "sku_code": "HR042-C-YELLOW-EU44"
+            "sku_code": "BQ1042-C-YELLOW-EU44"
           },
           {
             "attr2_value": "{\"222038415\":-845,\"191288010\":-505}",
@@ -156,7 +155,7 @@
               }
             ],
             "sku_id": 109802786262,
-            "sku_code": "HR042-C-YELLOW-EU45"
+            "sku_code": "BQ1042-C-YELLOW-EU45"
           },
           {
             "attr2_value": "{\"222038415\":-846,\"191288010\":-505}",
@@ -175,7 +174,7 @@
               }
             ],
             "sku_id": 109802786263,
-            "sku_code": "HR042-C-YELLOW-EU46"
+            "sku_code": "BQ1042-C-YELLOW-EU46"
           },
           {
             "attr2_value": "{\"222038415\":-840,\"191288010\":-504}",
@@ -194,7 +193,7 @@
               }
             ],
             "sku_id": 109802786248,
-            "sku_code": "HR042-C-WHITE-EU40"
+            "sku_code": "BQ1042-C-WHITE-EU40"
           },
           {
             "attr2_value": "{\"222038415\":-841,\"191288010\":-504}",
@@ -213,7 +212,7 @@
               }
             ],
             "sku_id": 109802786249,
-            "sku_code": "HR042-C-WHITE-EU41"
+            "sku_code": "BQ1042-C-WHITE-EU41"
           },
           {
             "attr2_value": "{\"222038415\":-842,\"191288010\":-504}",
@@ -232,7 +231,7 @@
               }
             ],
             "sku_id": 109802786250,
-            "sku_code": "HR042-C-WHITE-EU42"
+            "sku_code": "BQ1042-C-WHITE-EU42"
           },
           {
             "attr2_value": "{\"222038415\":-843,\"191288010\":-504}",
@@ -251,7 +250,7 @@
               }
             ],
             "sku_id": 109802786251,
-            "sku_code": "HR042-C-WHITE-EU43"
+            "sku_code": "BQ1042-C-WHITE-EU43"
           },
           {
             "attr2_value": "{\"222038415\":-844,\"191288010\":-504}",
@@ -270,7 +269,7 @@
               }
             ],
             "sku_id": 109802786252,
-            "sku_code": "HR042-C-WHITE-EU44"
+            "sku_code": "BQ1042-C-WHITE-EU44"
           },
           {
             "attr2_value": "{\"222038415\":-845,\"191288010\":-504}",
@@ -289,7 +288,7 @@
               }
             ],
             "sku_id": 109802786253,
-            "sku_code": "HR042-C-WHITE-EU45"
+            "sku_code": "BQ1042-C-WHITE-EU45"
           },
           {
             "attr2_value": "{\"222038415\":-846,\"191288010\":-504}",
@@ -308,7 +307,7 @@
               }
             ],
             "sku_id": 109802786254,
-            "sku_code": "HR042-C-WHITE-EU46"
+            "sku_code": "BQ1042-C-WHITE-EU46"
           },
           {
             "attr2_value": "{\"222038415\":-838,\"191288010\":-505}",
@@ -327,7 +326,7 @@
               }
             ],
             "sku_id": 109802786255,
-            "sku_code": "HR042-C-YELLOW-EU38"
+            "sku_code": "BQ1042-C-YELLOW-EU38"
           },
           {
             "attr2_value": "{\"222038415\":-841,\"191288010\":-503}",
@@ -346,7 +345,7 @@
               }
             ],
             "sku_id": 109802786240,
-            "sku_code": "HR042-C-KHAKI-EU41"
+            "sku_code": "BQ1042-C-KHAKI-EU41"
           },
           {
             "attr2_value": "{\"222038415\":-842,\"191288010\":-503}",
@@ -365,7 +364,7 @@
               }
             ],
             "sku_id": 109802786241,
-            "sku_code": "HR042-C-KHAKI-EU42"
+            "sku_code": "BQ1042-C-KHAKI-EU42"
           },
           {
             "attr2_value": "{\"222038415\":-843,\"191288010\":-503}",
@@ -384,7 +383,7 @@
               }
             ],
             "sku_id": 109802786242,
-            "sku_code": "HR042-C-KHAKI-EU43"
+            "sku_code": "BQ1042-C-KHAKI-EU43"
           },
           {
             "attr2_value": "{\"222038415\":-844,\"191288010\":-503}",
@@ -403,7 +402,7 @@
               }
             ],
             "sku_id": 109802786243,
-            "sku_code": "HR042-C-KHAKI-EU44"
+            "sku_code": "BQ1042-C-KHAKI-EU44"
           },
           {
             "attr2_value": "{\"222038415\":-845,\"191288010\":-503}",
@@ -422,7 +421,7 @@
               }
             ],
             "sku_id": 109802786244,
-            "sku_code": "HR042-C-KHAKI-EU45"
+            "sku_code": "BQ1042-C-KHAKI-EU45"
           },
           {
             "attr2_value": "{\"222038415\":-846,\"191288010\":-503}",
@@ -441,7 +440,7 @@
               }
             ],
             "sku_id": 109802786245,
-            "sku_code": "HR042-C-KHAKI-EU46"
+            "sku_code": "BQ1042-C-KHAKI-EU46"
           },
           {
             "attr2_value": "{\"222038415\":-838,\"191288010\":-504}",
@@ -460,7 +459,7 @@
               }
             ],
             "sku_id": 109802786246,
-            "sku_code": "HR042-C-WHITE-EU38"
+            "sku_code": "BQ1042-C-WHITE-EU38"
           },
           {
             "attr2_value": "{\"222038415\":-839,\"191288010\":-504}",
@@ -479,7 +478,7 @@
               }
             ],
             "sku_id": 109802786247,
-            "sku_code": "HR042-C-WHITE-EU39"
+            "sku_code": "BQ1042-C-WHITE-EU39"
           },
           {
             "attr2_value": "{\"222038415\":-842,\"191288010\":-502}",
@@ -498,7 +497,7 @@
               }
             ],
             "sku_id": 109802786232,
-            "sku_code": "HR042-C-BROWN-EU42"
+            "sku_code": "BQ1042-C-BROWN-EU42"
           },
           {
             "attr2_value": "{\"222038415\":-843,\"191288010\":-502}",
@@ -517,7 +516,7 @@
               }
             ],
             "sku_id": 109802786233,
-            "sku_code": "HR042-C-BROWN-EU43"
+            "sku_code": "BQ1042-C-BROWN-EU43"
           },
           {
             "attr2_value": "{\"222038415\":-844,\"191288010\":-502}",
@@ -536,7 +535,7 @@
               }
             ],
             "sku_id": 109802786234,
-            "sku_code": "HR042-C-BROWN-EU44"
+            "sku_code": "BQ1042-C-BROWN-EU44"
           },
           {
             "attr2_value": "{\"222038415\":-845,\"191288010\":-502}",
@@ -555,7 +554,7 @@
               }
             ],
             "sku_id": 109802786235,
-            "sku_code": "HR042-C-BROWN-EU45"
+            "sku_code": "BQ1042-C-BROWN-EU45"
           },
           {
             "attr2_value": "{\"222038415\":-846,\"191288010\":-502}",
@@ -574,7 +573,7 @@
               }
             ],
             "sku_id": 109802786236,
-            "sku_code": "HR042-C-BROWN-EU46"
+            "sku_code": "BQ1042-C-BROWN-EU46"
           },
           {
             "attr2_value": "{\"222038415\":-838,\"191288010\":-503}",
@@ -593,7 +592,7 @@
               }
             ],
             "sku_id": 109802786237,
-            "sku_code": "HR042-C-KHAKI-EU38"
+            "sku_code": "BQ1042-C-KHAKI-EU38"
           },
           {
             "attr2_value": "{\"222038415\":-839,\"191288010\":-503}",
@@ -612,7 +611,7 @@
               }
             ],
             "sku_id": 109802786238,
-            "sku_code": "HR042-C-KHAKI-EU39"
+            "sku_code": "BQ1042-C-KHAKI-EU39"
           },
           {
             "attr2_value": "{\"222038415\":-840,\"191288010\":-503}",
@@ -631,7 +630,7 @@
               }
             ],
             "sku_id": 109802786239,
-            "sku_code": "HR042-C-KHAKI-EU40"
+            "sku_code": "BQ1042-C-KHAKI-EU40"
           },
           {
             "attr2_value": "{\"222038415\":-843,\"191288010\":-501}",
@@ -650,7 +649,7 @@
               }
             ],
             "sku_id": 109802786224,
-            "sku_code": "HR042-C-BLACK-EU43"
+            "sku_code": "BQ1042-C-BLACK-EU43"
           },
           {
             "attr2_value": "{\"222038415\":-844,\"191288010\":-501}",
@@ -669,7 +668,7 @@
               }
             ],
             "sku_id": 109802786225,
-            "sku_code": "HR042-C-BLACK-EU44"
+            "sku_code": "BQ1042-C-BLACK-EU44"
           },
           {
             "attr2_value": "{\"222038415\":-845,\"191288010\":-501}",
@@ -688,7 +687,7 @@
               }
             ],
             "sku_id": 109802786226,
-            "sku_code": "HR042-C-BLACK-EU45"
+            "sku_code": "BQ1042-C-BLACK-EU45"
           },
           {
             "attr2_value": "{\"222038415\":-846,\"191288010\":-501}",
@@ -707,7 +706,7 @@
               }
             ],
             "sku_id": 109802786227,
-            "sku_code": "HR042-C-BLACK-EU46"
+            "sku_code": "BQ1042-C-BLACK-EU46"
           },
           {
             "attr2_value": "{\"222038415\":-838,\"191288010\":-502}",
@@ -726,7 +725,7 @@
               }
             ],
             "sku_id": 109802786228,
-            "sku_code": "HR042-C-BROWN-EU38"
+            "sku_code": "BQ1042-C-BROWN-EU38"
           },
           {
             "attr2_value": "{\"222038415\":-839,\"191288010\":-502}",
@@ -745,7 +744,7 @@
               }
             ],
             "sku_id": 109802786229,
-            "sku_code": "HR042-C-BROWN-EU39"
+            "sku_code": "BQ1042-C-BROWN-EU39"
           },
           {
             "attr2_value": "{\"222038415\":-840,\"191288010\":-502}",
@@ -764,7 +763,7 @@
               }
             ],
             "sku_id": 109802786230,
-            "sku_code": "HR042-C-BROWN-EU40"
+            "sku_code": "BQ1042-C-BROWN-EU40"
           },
           {
             "attr2_value": "{\"222038415\":-841,\"191288010\":-502}",
@@ -783,7 +782,7 @@
               }
             ],
             "sku_id": 109802786231,
-            "sku_code": "HR042-C-BROWN-EU41"
+            "sku_code": "BQ1042-C-BROWN-EU41"
           },
           {
             "attr2_value": "{\"222038415\":-838,\"191288010\":-501}",
@@ -802,7 +801,7 @@
               }
             ],
             "sku_id": 109802786219,
-            "sku_code": "HR042-C-BLACK-EU38"
+            "sku_code": "BQ1042-C-BLACK-EU38"
           },
           {
             "attr2_value": "{\"222038415\":-839,\"191288010\":-501}",
@@ -821,7 +820,7 @@
               }
             ],
             "sku_id": 109802786220,
-            "sku_code": "HR042-C-BLACK-EU39"
+            "sku_code": "BQ1042-C-BLACK-EU39"
           },
           {
             "attr2_value": "{\"222038415\":-840,\"191288010\":-501}",
@@ -840,7 +839,7 @@
               }
             ],
             "sku_id": 109802786221,
-            "sku_code": "HR042-C-BLACK-EU40"
+            "sku_code": "BQ1042-C-BLACK-EU40"
           },
           {
             "attr2_value": "{\"222038415\":-841,\"191288010\":-501}",
@@ -859,7 +858,7 @@
               }
             ],
             "sku_id": 109802786222,
-            "sku_code": "HR042-C-BLACK-EU41"
+            "sku_code": "BQ1042-C-BLACK-EU41"
           },
           {
             "attr2_value": "{\"222038415\":-842,\"191288010\":-501}",
@@ -878,7 +877,7 @@
               }
             ],
             "sku_id": 109802786223,
-            "sku_code": "HR042-C-BLACK-EU42"
+            "sku_code": "BQ1042-C-BLACK-EU42"
           }
         ],
         "sku_attributes": [
@@ -1167,7 +1166,7 @@
           "attribute_id": 3,
           "attribute_name": "Model Number",
           "value_id": -1,
-          "value_name": "HR042-C"
+          "value_name": "BQ1042-C"
         },
         {
           "attribute_id": 191290430,
@@ -1178,13 +1177,8 @@
       ],
       "status": "approved"
     },
-    "request_id": "213d4e4917918654656238712",
-    "_trace_id_": "213d15bb17918654656218305e0e11"
+    "request_id": "2105044417921243448112959",
+    "_trace_id_": "21057f9a17921243448088658e0cee"
   },
-  "sanitized_fields": [
-    "owner_member",
-    "owner_member_display_name",
-    "owner_member_id"
-  ],
-  "raw_response_file": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943639708/after_get.json"
+  "scope": "Current exact-ID official readback. Review/display and target checks are recorded independently."
 }

@@ -1,7 +1,6 @@
 {
+  "observed_at_utc": "2026-10-16T04:11:30.672819+00:00",
   "requested_product_id": "1601980302105",
-  "observed_at_utc": "2026-10-14T17:13:05.924800+00:00",
-  "method": "alibaba.icbu.product.get",
   "response": {
     "product": {
       "gmt_create": "2026-10-14 23:07:09",
@@ -16,13 +15,13 @@
           "https://sc04.alicdn.com/kf/H4b33d2761353455593100cfd722db318F.png",
           "https://sc04.alicdn.com/kf/Ha69266ceb3794d0298c6ef51fa3db28ce.png",
           "https://sc04.alicdn.com/kf/H62c886d8db314a8085362aefd86a4425M.png",
-          "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
+          "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
         ]
       },
       "struct_detail_product": true,
       "language": "ENGLISH",
       "is_smart_edit": false,
-      "gmt_modified": "2026-10-15 00:51:57",
+      "gmt_modified": "2026-10-16 11:57:12",
       "product_sku": {
         "skus": [
           {
@@ -655,14 +654,8 @@
       ],
       "status": "approved"
     },
-    "request_id": "2105044417919979855761427",
-    "_trace_id_": "2101075517919979854384525e0e25"
+    "request_id": "2105044417921238935717944",
+    "_trace_id_": "2150384817921238935683060e0e68"
   },
-  "sanitized_fields": [
-    "owner_member",
-    "owner_member_display_name",
-    "owner_member_id"
-  ],
-  "raw_response_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/after_get.json",
-  "acceptance_state": "FORMAL_FIELDS_SCORE_PASS"
+  "scope": "Current exact-ID official readback. Review/display and target checks are recorded independently."
 }

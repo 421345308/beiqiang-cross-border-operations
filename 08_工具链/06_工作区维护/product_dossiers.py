@@ -21,18 +21,29 @@ def builds(data):
         url = quote(Path(os.path.relpath(ROOT/path, ROOT/parent)).as_posix(), safe='/.:_-')
         return f'[{label or Path(path).name}]({url})'
     for product in data['products']:
-        parent = AREA / product['id']
-        lines = [f"# {' / '.join(product['aliases'])} 商品档案", '',
+        parent = Path(product['dossier_path']).parent if product.get('dossier_path') else AREA / product['id']
+        current_model=product.get('current_model')or product['aliases'][0]
+        lines = [f"# {current_model} 商品档案", '',
                  '此页由唯一台账生成，是本款唯一资料入口；修改事实到下方唯一字段文件或台账，平台正式值到按ID保存的回读原件。原始包只读，候选/历史材料不当当前线上素材。', '',
                  f"来源状态：`{product['source_state']}`。下一步：{product['next_action']}", '',
                  '## 当前资料与实物证据', '']
+        legacy=[x for x in product['aliases']if x!=current_model]
+        if legacy:lines.insert(4,'历史/关联查询别名：'+', '.join(legacy)+'。以各商品ID正式型号为准。')
+        route=product.get('supply_mode',{})
+        if route:
+            label={'EXTERNAL_FACTORY':'外采','OWN_FACTORY':'自产'}.get(route.get('current'),'供货类型待核')
+            lines += [f"- 当前供货类型（内部）：{label}；{route.get('state','')}。货号不随供货路径永久绑定，转产后更新证据与生效范围。"]
+            for path in route.get('evidence',[]):lines.append('- 供货分类依据：'+ref(path,parent))
         assets = product.get('local_assets', {})
         current = assets.get('current_fields_file')
         lines += [f"- 本地事实/准备字段：{ref(current,parent)}" if current else '- 本地事实/准备字段：尚未指定；不从线上页面证明自产或实物能力。']
         for path in assets.get('asset_roots', []):
             lines.append(f'- 当前素材目录：{ref(path,parent,Path(path).name)}')
+        if assets.get('current_gallery_by_id'):
+            lines.append('- 当前主图库按商品ID对应（含最新统一工厂图）：')
+            for pid,path in assets['current_gallery_by_id'].items():lines.append('  - '+ref(path,parent,pid+' 当前图库与货号'))
         if assets.get('current_image_map'):
-            lines.append('- 当前选图与正式CDN映射：'+ref(assets['current_image_map'],parent))
+            lines.append(('- 商品图制作映射（主图库以逐ID最新记录为准）：'if assets.get('current_gallery_by_id')else'- 当前选图与正式CDN映射：')+ref(assets['current_image_map'],parent))
         for path in product.get('raw_packages', []):
             lines.append(f'- 原始包：{ref(path,parent,Path(path).name)}')
         for path in product.get('historical_asset_roots', []):
@@ -95,7 +106,7 @@ def builds(data):
             lines.append(f"- 本地同步状态：`{listing.get('local_sync',{}).get('state','UNVERIFIED')}`。")
             if listing.get('optimization'):
                 opt = listing['optimization']
-                current_opt=opt.get('family_color_expansion') or opt.get('real_source_creation') or opt
+                current_opt=opt.get('model_factory_normalization') or opt.get('family_color_expansion') or opt.get('real_source_creation') or opt
                 lines += [f"- 本轮优化：`{current_opt.get('state','')}`；{current_opt.get('next_action','')}"]
                 for path in current_opt.get('evidence', []):
                     lines.append(f'  - 变更证据：{ref(path,parent)}')

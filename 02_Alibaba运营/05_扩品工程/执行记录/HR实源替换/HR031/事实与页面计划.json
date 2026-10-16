@@ -415,5 +415,19 @@
   "source_evidence": [
     "01_产品资产/01_原始数据包/HR031_D11/source.json",
     "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR031/素材清单.json"
-  ]
+  ],
+  "model_numbers": {
+    "A": "BQ1031-A",
+    "B": "BQ1031-B"
+  },
+  "current_models_by_id": {
+    "1601943665060": "BQ1031-A",
+    "1601943651120": "BQ1031-B"
+  },
+  "model_migration_evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/范围.json",
+  "current_platform_category_by_id": {
+    "1601943665060": 201334413,
+    "1601943651120": 201334413
+  },
+  "category_scope": "category_id保留初始改造默认；当前平台叶子按current_platform_category_by_id逐ID读取，不把同源链接不同平台分类混成不同实鞋。"
 }

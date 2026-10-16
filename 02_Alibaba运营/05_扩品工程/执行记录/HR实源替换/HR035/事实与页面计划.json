@@ -628,5 +628,19 @@
     "tested slip resistance",
     "medical comfort",
     "unverified midsole material"
-  ]
+  ],
+  "model_numbers": {
+    "A": "BQ1035-A",
+    "B": "BQ1035-B"
+  },
+  "current_models_by_id": {
+    "1601943568763": "BQ1035-A",
+    "1601943680112": "BQ1035-B"
+  },
+  "model_migration_evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/范围.json",
+  "current_platform_category_by_id": {
+    "1601943568763": 201332512,
+    "1601943680112": 201332512
+  },
+  "category_scope": "category_id保留初始改造默认；当前平台叶子按current_platform_category_by_id逐ID读取，不把同源链接不同平台分类混成不同实鞋。"
 }

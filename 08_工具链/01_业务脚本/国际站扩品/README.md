@@ -1,5 +1,9 @@
 # 国际站扩品工具
 
+货号与主图库工厂图统一使用 `normalize_models_factory_gallery.py freeze/bank/prepare/submit/verify` 和 `sync_models_factory_gallery.py`，唯一状态在HR实源替换当前入口的`货号与共用主图/`。HR货号迁移为稳定BQ1001–BQ1067，原SKU ID/色码/价格保全，外采/自产独立记内部当前供货路径，旧型号保留可查别名。F1方图只上传一次，逐图组选择位置保留唯一结构/底纹/颜色信息。当前既有官方客户端native传输实测正常且更快，仍验证TLS、不自动重放未知写入；每ID一次账本。原HR和路崎verify/sync入口遇到本期账本后路由当前控制器，不让旧模型或旧工厂图快照覆盖新值。后续新建路崎商品也读取共享工厂入口的F1，C1–C6继续用于公司详情。
+
+`audit_models_factory_prepared.py` 对精确当前Schema检查未改主图、属性、SKU ID/价格/库存/色码值；`test_model_factory_preservation.py`验证无序回读比较不放过丢图、换角色、换URL、丢SKU或商业数据变化。product.get的公司/详情图库行按完整角色/名称/URL及重复数比较，Schema实际顺序另核。`repair_model_factory_quality.py`保留一个标题及两条类目修正的历史账本与只读核验，已停用其部分字段类目准备路线；两条同ID实际重置规格后，`recover_category_reset_skus.py`按原正式快照恢复全部60/27项SKU数据，显式记录平台重发87个内部ID。中央契约及提交入口禁止缺少完整saleProp/sku/ladderPrice的类目更新。映射通过哈希、完整色码/图/价格及当前Schema绑定独立核验，不忽略或伪造身份变化。`audit_models_factory_completion.py --refresh-catalog`只读全目录并与本地逐ID对账，当前平台退回与目标字段已返回分开记录；不把一次approved或5.00当永久状态。唯一规则见商品SOP，当前事实见执行入口。
+
 路崎材料角色修正使用 `repair_luqi_material_roles.py prepare/submit/verify/sync`，执行对象仅为当前来源逐款复核后的八个原ID。属性ID从本款当前Schema的字段名称解析，大底/中底不共享硬编码；未知中底使用当前类目的other，不把供应商大底材料推断为中底。标题原样保全以防平台自动重组；其余正式字段与原商品比较，状态与实际评分分别回读，已留写入账本不重放。
 
 同一2583系列扩色使用 `expand_luqi_2583_family.py plan/bank/prepare/submit/verify/sync`，只更新1601976101204，不新建2583。两页真实来源按颜色分列，保留原26个SKU ID/编码/色图，补46个组合至72EU；红色限EU36–42，其余五色EU36–48。当前Schema通过后才提交，正常审核期间继续其他素材；一般FAQ和已批准V8六公司图保全。旧两色素材与创建回执作为历史证据，不作后续新品默认值。

@@ -1,14 +1,12 @@
 {
+  "observed_at_utc": "2026-10-16T04:41:47.824758+00:00",
   "requested_product_id": "10000047392343",
-  "observed_at_utc": "2026-10-12T02:38:34.672668+00:00",
-  "method": "alibaba.icbu.product.get",
   "response": {
     "product": {
       "gmt_create": "2026-08-26 19:06:39",
       "keywords": [
         ""
       ],
-      "owner_member_display_name": "User name",
       "subject": "High Top Slip-On Knit Sock Sneakers with Foamed Cushion Sole Light Weight Easy on and off for Daily Wear",
       "main_image": {
         "images": [
@@ -16,14 +14,14 @@
           "https://sc04.alicdn.com/kf/S69a21aa580004000a5c56217b5a5c111o.jpg",
           "https://sc04.alicdn.com/kf/S8d864c53ae8c4f939147b43fdfa4c929L.jpg",
           "https://sc04.alicdn.com/kf/Sa86992b4bd7d413ebab183261f1db9bdY.jpg",
-          "https://sc04.alicdn.com/kf/Hbdcc59a75b2041b09a7776708dc533e7w.jpg",
+          "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png",
           "https://sc04.alicdn.com/kf/S8e5fe7db08d64980835fb720c3e775e3Q.jpg"
         ]
       },
       "struct_detail_product": true,
       "language": "ENGLISH",
       "is_smart_edit": false,
-      "gmt_modified": "2026-10-12 10:22:49",
+      "gmt_modified": "2026-10-16 12:22:44",
       "product_sku": {
         "skus": [
           {
@@ -654,69 +652,80 @@
           "images": [
             {
               "image_set": {
-                "name": "Company overview",
-                "id": 400
+                "name": "Packaging & shipping specifications",
+                "id": 700
               },
-              "image_url": "https://sc04.alicdn.com/kf/H4485e694f2a440db8d5601b04d4cce17d.png"
+              "image_url": "https://sc04.alicdn.com/kf/He558a164125f4bc295dfe3d70bb76066w.png"
             },
             {
               "image_set": {
                 "name": "Customization capabilities",
                 "id": 550
               },
-              "image_url": "https://sc04.alicdn.com/kf/H8e16babc58ce41d79e8b92623a045461w.png"
-            },
-            {
-              "image_set": {
-                "name": "Production workflow",
-                "id": 600
-              },
-              "image_url": "https://sc04.alicdn.com/kf/Hf249cf1234f84225af0b14aa8a0fa7773.png"
+              "image_url": "https://sc04.alicdn.com/kf/H2c23ba6ddeac47a686c0e1350c4ac294v.png"
             },
             {
               "image_set": {
                 "name": "Competitive advantages",
                 "id": 450
               },
-              "image_url": "https://sc04.alicdn.com/kf/Hb696d63f52ca4f08a2e59442f29461835.png"
+              "image_url": "https://sc04.alicdn.com/kf/H8779a3d5521c4cce910395f583af74505.png"
+            },
+            {
+              "image_set": {
+                "name": "Company overview",
+                "id": 400
+              },
+              "image_url": "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
+            },
+            {
+              "image_set": {
+                "name": "Production workflow",
+                "id": 600
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H76f31cce4cc0447a99b72496f0ae5c93l.png"
             },
             {
               "image_set": {
                 "name": "Packaging & shipping specifications",
                 "id": 700
               },
-              "image_url": "https://sc04.alicdn.com/kf/H68cf387530d946a6ba6cf02ce258525dm.png"
+              "image_url": "https://sc04.alicdn.com/kf/H7d0669b743e742c1a97e8108e6cc96eaV.png"
             }
           ]
         },
         "product_faq": [
           {
-            "question": "Which color and EU size combinations are listed?",
-            "answer": "All Black: EU 35–45; Black/White: EU 35–45."
+            "question": "Are you a factory or a trading company?",
+            "answer": "We are a footwear manufacturer based in Quanzhou, Fujian, China. We work with overseas B2B buyers on wholesale and OEM/ODM footwear projects."
           },
           {
-            "question": "What makes this different from a low-cut slip-on?",
-            "answer": "A taller sock-style knit opening around the ankle. It remains a slip-on construction with no conventional laces, paired with a foamed sole."
+            "question": "What is your minimum order quantity?",
+            "answer": "Small trial orders are welcome for existing styles; the minimum quantity is shown on each product page. For custom orders, the MOQ depends on the design, materials, branding and packaging."
           },
           {
-            "question": "What should I check during a sample fitting?",
-            "answer": "Try the sample with the intended socks. Check toe room, instep fit, heel hold and the shoe opening before deciding the bulk EU size mix."
+            "question": "Can I mix colors and sizes in one order?",
+            "answer": "Yes. Mixed colors and sizes are supported for existing styles. Mixed-style orders can also be discussed according to the selected styles and order quantity."
           },
           {
-            "question": "What is the minimum order for the original style?",
-            "answer": "The listed original-style wholesale minimum is 2 pairs. Quantity pricing is shown on this page; branding and custom packaging are quoted separately."
+            "question": "Can I order samples before a bulk order?",
+            "answer": "Yes. Samples can be arranged for you to check the workmanship and fit before bulk ordering. Sample and courier costs are quoted before payment."
           },
           {
-            "question": "How can I request a sample?",
-            "answer": "Send the selected color or lining variant, EU size and delivery postcode for a sample quotation. It sets out the sample charge, courier cost and proposed dispatch date."
+            "question": "What packaging options do you offer?",
+            "answer": "Shoe boxes and polybags are available packing options. Custom boxes, labels and carton markings can be planned around your order and brand requirements."
           },
           {
-            "question": "What should I send for a branding or packaging proposal?",
-            "answer": "Send your logo artwork, preferred placement, packaging brief and order quantity. We can review the proposal for this style and set out the applicable minimum, cost and sample process."
+            "question": "Do you support logo customization and OEM/ODM?",
+            "answer": "Yes. We work with buyers on branding and footwear development. Send your logo artwork or design reference, target quantity and market requirements so we can develop a suitable proposal."
           },
           {
-            "question": "How can I get a delivered quotation?",
-            "answer": "Send pair quantities by color and EU size, the destination postcode or port and your packaging request. The quotation separates product cost from freight and includes the proposed dispatch and transit schedule."
+            "question": "What is the lead time?",
+            "answer": "Lead time depends on product availability, order quantity and customization. Existing styles can usually be arranged sooner; the production or dispatch schedule is agreed when confirming the order."
+          },
+          {
+            "question": "How can you arrange shipping?",
+            "answer": "Samples and small shipments can use express courier. Bulk shipments can be planned by sea or air, or through your appointed forwarder. Send your destination and delivery target for a freight quotation."
           }
         ],
         "detail_image": {
@@ -752,7 +761,7 @@
           ]
         },
         "product_summary": "High-top knit slip-on casual shoes with a foamed sole and a plain sock-style upper. The tall ribbed opening and lace-free front create a clean ankle-height appearance. Black White and All Black offer contrast and monochrome choices.",
-        "company_summary": "Quanzhou Beiqiang Footwear & Apparel Co., Ltd. supplies OEM/ODM and wholesale casual footwear for importers, wholesalers, sourcing agents and private-label buyers."
+        "company_summary": "Quanzhou Beiqiang Footwear & Apparel Co., Ltd. is a footwear manufacturer based in Quanzhou, Fujian, China. We work with importers, wholesalers, brand owners and e-commerce businesses on wholesale and OEM/ODM footwear projects. From selecting existing styles to developing a design brief, reviewing samples and planning packaging, we help buyers turn their requirements into a clear order plan. Share your product direction and purchasing needs to discuss a suitable cooperation proposal."
       },
       "display": "Y",
       "pc_detail_url": "https://www.alibaba.com/product-detail/High-Top-Slip-On-Knit-Sock_10000047392343.html",
@@ -842,10 +851,10 @@
           "value_name": "Textile"
         }
       ],
-      "owner_member": 286385890,
       "status": "approved"
     },
-    "request_id": "213c934417917727183322445",
-    "_trace_id_": "2133fc2917917727183307102e0bf9"
-  }
+    "request_id": "21546a1d17921257105926731",
+    "_trace_id_": "2150384d17921257105907568e0cba"
+  },
+  "scope": "Current exact-ID official readback. Review/display and target checks are recorded independently."
 }

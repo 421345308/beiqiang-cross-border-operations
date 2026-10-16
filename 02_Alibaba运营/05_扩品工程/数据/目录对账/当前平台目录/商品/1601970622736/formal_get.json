@@ -1,14 +1,12 @@
 {
+  "observed_at_utc": "2026-10-16T04:20:19.175684+00:00",
   "requested_product_id": "1601970622736",
-  "observed_at_utc": "2026-10-11T17:18:20.320855+00:00",
-  "method": "alibaba.icbu.product.get",
   "response": {
     "product": {
       "gmt_create": "2026-10-04 10:55:33",
       "keywords": [
         ""
       ],
-      "owner_member_display_name": "User name",
       "subject": "Wholesale Basketball Style Mesh Lace Up Casual Sneakers with Rear Pull Tabs for Daily Wear",
       "main_image": {
         "images": [
@@ -17,13 +15,13 @@
           "https://sc04.alicdn.com/kf/Hf69b4aff6133478a85c2e0f62af6125cH.png",
           "https://sc04.alicdn.com/kf/H29cb0ca76bea45bab8bda99bf106f9d3S.png",
           "https://sc04.alicdn.com/kf/H17e5d265d9c44cc6bdfe638c29921df5j.png",
-          "https://sc04.alicdn.com/kf/H4b73d30df4dc4434a2e196909e8d604bu.jpg"
+          "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
         ]
       },
       "struct_detail_product": true,
       "language": "ENGLISH",
       "is_smart_edit": false,
-      "gmt_modified": "2026-10-12 01:01:57",
+      "gmt_modified": "2026-10-16 12:07:47",
       "product_sku": {
         "skus": [
           {
@@ -1260,69 +1258,80 @@
           "images": [
             {
               "image_set": {
-                "name": "Company overview",
-                "id": 400
+                "name": "Competitive advantages",
+                "id": 450
               },
-              "image_url": "https://sc04.alicdn.com/kf/Ha8c1682092424e778eadf945763e79daU.jpg"
+              "image_url": "https://sc04.alicdn.com/kf/H8779a3d5521c4cce910395f583af74505.png"
             },
             {
               "image_set": {
-                "name": "Production workflow",
-                "id": 600
+                "name": "Company overview",
+                "id": 400
               },
-              "image_url": "https://sc04.alicdn.com/kf/H36e700f5c3ee447a80c035d8ae7521d9a.jpg"
+              "image_url": "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
             },
             {
               "image_set": {
                 "name": "Customization capabilities",
                 "id": 550
               },
-              "image_url": "https://sc04.alicdn.com/kf/H496f7579171f4370a1d47c3adf30001bK.jpg"
-            },
-            {
-              "image_set": {
-                "name": "Extended company profile",
-                "id": 750
-              },
-              "image_url": "https://sc04.alicdn.com/kf/H9f32c7ecea0f4d25bc5ddc9cd04c1e5dK.jpg"
+              "image_url": "https://sc04.alicdn.com/kf/H2c23ba6ddeac47a686c0e1350c4ac294v.png"
             },
             {
               "image_set": {
                 "name": "Packaging & shipping specifications",
                 "id": 700
               },
-              "image_url": "https://sc04.alicdn.com/kf/H5f71c3cfb4064b51bb458d0a786cb402R.jpg"
+              "image_url": "https://sc04.alicdn.com/kf/He558a164125f4bc295dfe3d70bb76066w.png"
+            },
+            {
+              "image_set": {
+                "name": "Production workflow",
+                "id": 600
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H76f31cce4cc0447a99b72496f0ae5c93l.png"
+            },
+            {
+              "image_set": {
+                "name": "Packaging & shipping specifications",
+                "id": 700
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H7d0669b743e742c1a97e8108e6cc96eaV.png"
             }
           ]
         },
         "product_faq": [
           {
-            "question": "Which color and EU size choices are listed?",
-            "answer": "White / Green: EU 36–45; White / Red: EU 36–45; White / Blue / Purple: EU 36–45; White / Lime: EU 36–45; Blue / Purple: EU 36–45; Pink / Blue: EU 36–45."
+            "question": "Are you a factory or a trading company?",
+            "answer": "We are a footwear manufacturer based in Quanzhou, Fujian, China. We work with overseas B2B buyers on wholesale and OEM/ODM footwear projects."
           },
           {
-            "question": "What gives the upper its layered appearance?",
-            "answer": "Mesh textile sections sit beneath angular side overlays. The front uses conventional laces, with a rear pull loop and a patterned rubber outsole."
+            "question": "What is your minimum order quantity?",
+            "answer": "Small trial orders are welcome for existing styles; the minimum quantity is shown on each product page. For custom orders, the MOQ depends on the design, materials, branding and packaging."
           },
           {
-            "question": "What should I assess on a sample?",
-            "answer": "Adjust the laces with the intended socks, then check toe room, instep fit and heel hold before choosing the bulk EU size mix."
+            "question": "Can I mix colors and sizes in one order?",
+            "answer": "Yes. Mixed colors and sizes are supported for existing styles. Mixed-style orders can also be discussed according to the selected styles and order quantity."
           },
           {
-            "question": "What is the minimum order for the original style?",
-            "answer": "The listed original-style minimum is 2 pairs. Quantity pricing is shown on this page; logo and custom packaging proposals are quoted separately."
+            "question": "Can I order samples before a bulk order?",
+            "answer": "Yes. Samples can be arranged for you to check the workmanship and fit before bulk ordering. Sample and courier costs are quoted before payment."
           },
           {
-            "question": "How can I request a sample?",
-            "answer": "Send the selected color or lining option, EU size and delivery postcode for a sample quotation covering the pair, courier charge and proposed dispatch date."
+            "question": "What packaging options do you offer?",
+            "answer": "Shoe boxes and polybags are available packing options. Custom boxes, labels and carton markings can be planned around your order and brand requirements."
           },
           {
-            "question": "What should I send for logo or packaging requirements?",
-            "answer": "Send the logo artwork, preferred placement, packaging brief and order quantity. The proposal for this style will set out the applicable minimum, cost and sample process."
+            "question": "Do you support logo customization and OEM/ODM?",
+            "answer": "Yes. We work with buyers on branding and footwear development. Send your logo artwork or design reference, target quantity and market requirements so we can develop a suitable proposal."
           },
           {
-            "question": "How can I get a delivered quotation?",
-            "answer": "Send pair quantities by color and EU size, the destination postcode or port and the packaging request. The quotation separates product cost and freight and includes the proposed dispatch and transit schedule."
+            "question": "What is the lead time?",
+            "answer": "Lead time depends on product availability, order quantity and customization. Existing styles can usually be arranged sooner; the production or dispatch schedule is agreed when confirming the order."
+          },
+          {
+            "question": "How can you arrange shipping?",
+            "answer": "Samples and small shipments can use express courier. Bulk shipments can be planned by sea or air, or through your appointed forwarder. Send your destination and delivery target for a freight quotation."
           }
         ],
         "detail_image": {
@@ -1358,7 +1367,7 @@
           ]
         },
         "product_summary": "Mesh-textile lace-up casual sneakers with angular side overlays and a sculpted sole profile. The layered upper gives the shoe a basketball-inspired appearance, while conventional laces adjust the front. A patterned rubber outsole completes the distinctive upper-and-sole combination.",
-        "company_summary": "Quanzhou Beiqiang Footwear & Apparel Co., Ltd. is based in Quanzhou, Fujian, China. The company images introduce our general footwear development and order coordination capabilities. Model-specific samples, customization, packing and dispatch arrangements are reviewed against your requirements before quotation."
+        "company_summary": "Quanzhou Beiqiang Footwear & Apparel Co., Ltd. is a footwear manufacturer based in Quanzhou, Fujian, China. We work with importers, wholesalers, brand owners and e-commerce businesses on wholesale and OEM/ODM footwear projects. From selecting existing styles to developing a design brief, reviewing samples and planning packaging, we help buyers turn their requirements into a clear order plan. Share your product direction and purchasing needs to discuss a suitable cooperation proposal."
       },
       "display": "Y",
       "pc_detail_url": "https://www.alibaba.com/product-detail/Wholesale-Basketball-Style-Mesh-Lace-Up_1601970622736.html",
@@ -1417,10 +1426,10 @@
           "value_name": "Not specified"
         }
       ],
-      "owner_member": 286385890,
       "status": "approved"
     },
-    "request_id": "212c41d317917391043274712",
-    "_trace_id_": "212c8ea417917391043245780e0b85"
-  }
+    "request_id": "0bbb3b2417921244220496609",
+    "_trace_id_": "213280d917921244220468775e0f97"
+  },
+  "scope": "Current exact-ID official readback. Review/display and target checks are recorded independently."
 }

@@ -1,7 +1,6 @@
 {
+  "observed_at_utc": "2026-10-16T04:17:34.988133+00:00",
   "requested_product_id": "1601976101204",
-  "observed_at_utc": "2026-10-14T02:42:22.057720+00:00",
-  "method": "alibaba.icbu.product.get",
   "response": {
     "product": {
       "gmt_create": "2026-10-11 02:10:48",
@@ -16,13 +15,13 @@
           "https://sc04.alicdn.com/kf/H61e51ba4cbe840e389ad9c31b3239c37F.png",
           "https://sc04.alicdn.com/kf/He462ec5dabc64ac6ba69ec6f9ee224738.png",
           "https://sc04.alicdn.com/kf/H30bf4cc2c0c84741ad2a9b8089a814f0S.png",
-          "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
+          "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
         ]
       },
       "struct_detail_product": true,
       "language": "ENGLISH",
       "is_smart_edit": false,
-      "gmt_modified": "2026-10-14 10:21:36",
+      "gmt_modified": "2026-10-16 12:01:31",
       "product_sku": {
         "skus": [
           {
@@ -1586,17 +1585,17 @@
             },
             {
               "image_set": {
-                "name": "Detail shot",
-                "id": "300"
-              },
-              "image_url": "https://sc04.alicdn.com/kf/H4438b2b4b01244d68f8d675295093c09u.png"
-            },
-            {
-              "image_set": {
                 "name": "Product dimensions",
                 "id": "150"
               },
               "image_url": "https://sc04.alicdn.com/kf/Hac07c522280c4c43bb9eae9b25d4cda4j.png"
+            },
+            {
+              "image_set": {
+                "name": "Detail shot",
+                "id": "300"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H4438b2b4b01244d68f8d675295093c09u.png"
             },
             {
               "image_set": {
@@ -1675,13 +1674,8 @@
       ],
       "status": "approved"
     },
-    "request_id": "2105584317919457416907612",
-    "_trace_id_": "2140ca6817919457415442858e0ebf"
+    "request_id": "0b51802d17921242578191780",
+    "_trace_id_": "21310a6617921242578168860e0d91"
   },
-  "sanitized_fields": [
-    "owner_member",
-    "owner_member_display_name",
-    "owner_member_id"
-  ],
-  "raw_response_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2583-1准备/家族扩色/after_get.json"
+  "scope": "Current exact-ID official readback. Review/display and target checks are recorded independently."
 }

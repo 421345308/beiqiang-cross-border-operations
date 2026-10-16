@@ -1,7 +1,6 @@
 {
+  "observed_at_utc": "2026-10-16T04:17:31.933917+00:00",
   "requested_product_id": "1601980289624",
-  "observed_at_utc": "2026-10-14T17:59:28.113987+00:00",
-  "method": "alibaba.icbu.product.get",
   "response": {
     "product": {
       "gmt_create": "2026-10-15 01:27:40",
@@ -16,13 +15,13 @@
           "https://sc04.alicdn.com/kf/H8525fc850ae047368f93e5d89305408al.png",
           "https://sc04.alicdn.com/kf/Hef510b2475c14bbeaa6abbc030045a08F.png",
           "https://sc04.alicdn.com/kf/H2bb35d262add46e08a2df478ed05782dO.png",
-          "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
+          "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
         ]
       },
       "struct_detail_product": true,
       "language": "ENGLISH",
       "is_smart_edit": false,
-      "gmt_modified": "2026-10-15 01:27:40",
+      "gmt_modified": "2026-10-16 11:56:46",
       "product_sku": {
         "skus": [
           {
@@ -458,13 +457,6 @@
             },
             {
               "image_set": {
-                "name": "Packaging & shipping specifications",
-                "id": 700
-              },
-              "image_url": "https://sc04.alicdn.com/kf/He558a164125f4bc295dfe3d70bb76066w.png"
-            },
-            {
-              "image_set": {
                 "name": "Competitive advantages",
                 "id": 450
               },
@@ -476,6 +468,13 @@
                 "id": 550
               },
               "image_url": "https://sc04.alicdn.com/kf/H2c23ba6ddeac47a686c0e1350c4ac294v.png"
+            },
+            {
+              "image_set": {
+                "name": "Packaging & shipping specifications",
+                "id": 700
+              },
+              "image_url": "https://sc04.alicdn.com/kf/He558a164125f4bc295dfe3d70bb76066w.png"
             }
           ]
         },
@@ -613,14 +612,8 @@
       ],
       "status": "approved"
     },
-    "request_id": "2105584317920007677577170",
-    "_trace_id_": "212e559c17920007676202794e0d93"
+    "request_id": "0b830ecc17921242547601719",
+    "_trace_id_": "0b5dcfa617921242547573783e0d77"
   },
-  "sanitized_fields": [
-    "owner_member",
-    "owner_member_display_name",
-    "owner_member_id"
-  ],
-  "raw_response_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/323准备/after_get.json",
-  "acceptance_state": "FORMAL_FIELDS_SCORE_PASS"
+  "scope": "Current exact-ID official readback. Review/display and target checks are recorded independently."
 }

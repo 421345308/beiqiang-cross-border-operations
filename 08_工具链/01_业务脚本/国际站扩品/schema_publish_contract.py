@@ -671,6 +671,8 @@ def prepare_scoped_listing(current_schema, intended_xml, *, operation, category_
     current = {f.get('id'): f for f in current_schema.findall('./field')}
     intended = {f.get('id'): f for f in intended_xml.findall('./field')}
     fields, dependencies = set(field_ids), set(dependency_ids)
+    if operation == 'update' and 'catId' in fields.union(dependencies) and not {'saleProp','sku','ladderPrice'} <= fields:
+        raise ValueError('category update requires explicitly reviewed complete saleProp, sku and ladderPrice; matching axes do not preserve platform SKU bindings')
     if not fields or fields & dependencies:
         raise ValueError('explicit disjoint target fields and dependencies required')
     inventory_input = None

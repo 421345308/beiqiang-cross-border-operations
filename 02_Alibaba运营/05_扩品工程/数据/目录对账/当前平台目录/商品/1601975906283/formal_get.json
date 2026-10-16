@@ -1,7 +1,6 @@
 {
+  "observed_at_utc": "2026-10-16T04:19:05.284940+00:00",
   "requested_product_id": "1601975906283",
-  "observed_at_utc": "2026-10-12T23:39:42.337944+00:00",
-  "method": "alibaba.icbu.product.get",
   "response": {
     "product": {
       "gmt_create": "2026-10-10 20:46:53",
@@ -16,13 +15,13 @@
           "https://sc04.alicdn.com/kf/H379f7d1da41d406cbf59bff4bab016c6v.png",
           "https://sc04.alicdn.com/kf/H618d08f51417479eb9ef29ebad126ddce.png",
           "https://sc04.alicdn.com/kf/Haa0a09086ccf4bdebd7a46a9533ae45dD.png",
-          "https://sc04.alicdn.com/kf/S6c8cb1d46d8c4b018cf07f5cab50c1adi.png"
+          "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
         ]
       },
       "struct_detail_product": true,
       "language": "ENGLISH",
       "is_smart_edit": false,
-      "gmt_modified": "2026-10-13 07:23:14",
+      "gmt_modified": "2026-10-16 12:05:21",
       "product_sku": {
         "skus": [
           {
@@ -1205,12 +1204,8 @@
       ],
       "status": "approved"
     },
-    "request_id": "213c932b17918483911505047",
-    "_trace_id_": "2106ee7717918483911474676e116a"
+    "request_id": "0b80d2d617921243480904635",
+    "_trace_id_": "2104f59517921243480656744e0d80"
   },
-  "sanitized_fields": [
-    "owner_member",
-    "owner_member_display_name",
-    "owner_member_id"
-  ]
+  "scope": "Current exact-ID official readback. Review/display and target checks are recorded independently."
 }

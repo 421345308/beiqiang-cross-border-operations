@@ -1,14 +1,12 @@
 {
+  "observed_at_utc": "2026-10-16T04:27:57.620685+00:00",
   "requested_product_id": "1601943406882",
-  "observed_at_utc": "2026-10-10T06:56:31.077493+00:00",
-  "method": "alibaba.icbu.product.get",
   "response": {
     "product": {
       "gmt_create": "2026-09-06 01:11:37",
       "keywords": [
-        "Mens Casual Sneakers"
+        ""
       ],
-      "owner_member_display_name": "User name",
       "subject": "Men's Casual Sneakers with Mesh Lining and Rubber Soles for Daily Wear",
       "main_image": {
         "images": [
@@ -17,13 +15,13 @@
           "https://sc04.alicdn.com/kf/H978ee7d935be4605bd21aa63519e0cd2k.png",
           "https://sc04.alicdn.com/kf/Haa4d0eda30d542878b49b00acabcbf1dp.png",
           "https://sc04.alicdn.com/kf/H1f85e79e7c6d4ffb90f5ef12970ca5bd7.png",
-          "https://sc04.alicdn.com/kf/H9f32c7ecea0f4d25bc5ddc9cd04c1e5dK.jpg"
+          "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
         ]
       },
       "struct_detail_product": true,
       "language": "ENGLISH",
       "is_smart_edit": false,
-      "gmt_modified": "2026-09-29 15:47:27",
+      "gmt_modified": "2026-10-16 12:17:53",
       "product_sku": {
         "skus": [
           {
@@ -49,7 +47,7 @@
               }
             ],
             "sku_id": 109752975488,
-            "sku_code": "HR011-B-WHITE-S39"
+            "sku_code": "BQ1011-B-WHITE-S39"
           },
           {
             "attr2_value": "{\"222038415\":28389,\"191288010\":3331185}",
@@ -74,7 +72,7 @@
               }
             ],
             "sku_id": 109752975489,
-            "sku_code": "HR011-B-WHITE-S40"
+            "sku_code": "BQ1011-B-WHITE-S40"
           },
           {
             "attr2_value": "{\"222038415\":28390,\"191288010\":3331185}",
@@ -99,7 +97,7 @@
               }
             ],
             "sku_id": 109752975490,
-            "sku_code": "HR011-B-WHITE-S41"
+            "sku_code": "BQ1011-B-WHITE-S41"
           },
           {
             "attr2_value": "{\"222038415\":28391,\"191288010\":3331185}",
@@ -124,7 +122,7 @@
               }
             ],
             "sku_id": 109752975491,
-            "sku_code": "HR011-B-WHITE-S42"
+            "sku_code": "BQ1011-B-WHITE-S42"
           },
           {
             "attr2_value": "{\"222038415\":28392,\"191288010\":3331185}",
@@ -149,7 +147,7 @@
               }
             ],
             "sku_id": 109752975492,
-            "sku_code": "HR011-B-WHITE-S43"
+            "sku_code": "BQ1011-B-WHITE-S43"
           },
           {
             "attr2_value": "{\"222038415\":28393,\"191288010\":3331185}",
@@ -174,7 +172,7 @@
               }
             ],
             "sku_id": 109752975493,
-            "sku_code": "HR011-B-WHITE-S44"
+            "sku_code": "BQ1011-B-WHITE-S44"
           }
         ],
         "sku_attributes": [
@@ -230,77 +228,79 @@
             {
               "image_set": {
                 "name": "Company overview",
-                "id": 400,
-                "order": "0"
+                "id": 400
               },
-              "image_url": "https://sc04.alicdn.com/kf/Ha8c1682092424e778eadf945763e79daU.jpg"
-            },
-            {
-              "image_set": {
-                "name": "Factory profile",
-                "id": 500,
-                "order": "3"
-              },
-              "image_url": "https://sc04.alicdn.com/kf/H9f32c7ecea0f4d25bc5ddc9cd04c1e5dK.jpg"
-            },
-            {
-              "image_set": {
-                "name": "Packaging & shipping specifications",
-                "id": 700,
-                "order": "4"
-              },
-              "image_url": "https://sc04.alicdn.com/kf/H5f71c3cfb4064b51bb458d0a786cb402R.jpg"
+              "image_url": "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
             },
             {
               "image_set": {
                 "name": "Customization capabilities",
-                "id": 550,
-                "order": "1"
+                "id": 550
               },
-              "image_url": "https://sc04.alicdn.com/kf/H496f7579171f4370a1d47c3adf30001bK.jpg"
+              "image_url": "https://sc04.alicdn.com/kf/H2c23ba6ddeac47a686c0e1350c4ac294v.png"
             },
             {
               "image_set": {
                 "name": "Production workflow",
-                "id": 600,
-                "order": "2"
+                "id": 600
               },
-              "image_url": "https://sc04.alicdn.com/kf/H36e700f5c3ee447a80c035d8ae7521d9a.jpg"
+              "image_url": "https://sc04.alicdn.com/kf/H76f31cce4cc0447a99b72496f0ae5c93l.png"
+            },
+            {
+              "image_set": {
+                "name": "Competitive advantages",
+                "id": 450
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H8779a3d5521c4cce910395f583af74505.png"
+            },
+            {
+              "image_set": {
+                "name": "Packaging & shipping specifications",
+                "id": 700
+              },
+              "image_url": "https://sc04.alicdn.com/kf/He558a164125f4bc295dfe3d70bb76066w.png"
+            },
+            {
+              "image_set": {
+                "name": "Packaging & shipping specifications",
+                "id": 700
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H7d0669b743e742c1a97e8108e6cc96eaV.png"
             }
           ]
         },
         "product_faq": [
           {
-            "question": "Which color is listed?",
-            "answer": "White with gray and silver trim, as shown in the product photos. Send your required size quantity breakdown with your enquiry."
+            "question": "Are you a factory or a trading company?",
+            "answer": "We are a footwear manufacturer based in Quanzhou, Fujian, China. We work with overseas B2B buyers on wholesale and OEM/ODM footwear projects."
           },
           {
-            "question": "Which sizes are listed?",
-            "answer": "The listing options show sizes 39-44. Share your required size chart and quantity per size for order specification confirmation."
+            "question": "What is your minimum order quantity?",
+            "answer": "Small trial orders are welcome for existing styles; the minimum quantity is shown on each product page. For custom orders, the MOQ depends on the design, materials, branding and packaging."
           },
           {
-            "question": "What materials are used?",
-            "answer": "Mesh lining with rubber midsole and rubber outsole. Send any additional material specifications with your enquiry."
+            "question": "Can I mix colors and sizes in one order?",
+            "answer": "Yes. Mixed colors and sizes are supported for existing styles. Mixed-style orders can also be discussed according to the selected styles and order quantity."
           },
           {
-            "question": "What is the minimum order quantity?",
-            "answer": "The listing MOQ is 120 pairs. Send your requested size mix and quantity for a quotation."
+            "question": "Can I order samples before a bulk order?",
+            "answer": "Yes. Samples can be arranged for you to check the workmanship and fit before bulk ordering. Sample and courier costs are quoted before payment."
           },
           {
-            "question": "How are the quantity prices arranged?",
-            "answer": "USD 8.50 per pair for 120-599 pairs, USD 8.30 per pair for 600-1199 pairs, and USD 8.00 per pair for 1200 pairs or more. Final order terms are confirmed before order placement."
+            "question": "What packaging options do you offer?",
+            "answer": "Shoe boxes and polybags are available packing options. Custom boxes, labels and carton markings can be planned around your order and brand requirements."
           },
           {
-            "question": "What information is needed for a quotation?",
-            "answer": "Send your total quantity, size breakdown, destination and packing requirements. Final quotation terms are reviewed for your order."
+            "question": "Do you support logo customization and OEM/ODM?",
+            "answer": "Yes. We work with buyers on branding and footwear development. Send your logo artwork or design reference, target quantity and market requirements so we can develop a suitable proposal."
           },
           {
-            "question": "Can I request a sample or customization?",
-            "answer": "Send the requested size, destination, logo artwork and quantity so availability and options can be reviewed before an order is arranged."
+            "question": "What is the lead time?",
+            "answer": "Lead time depends on product availability, order quantity and customization. Existing styles can usually be arranged sooner; the production or dispatch schedule is agreed when confirming the order."
           },
           {
-            "question": "How are packaging and delivery confirmed?",
-            "answer": "Share your packing requirements, destination and target delivery date. Actual package measurements, availability and timing are confirmed when reviewing the order."
+            "question": "How can you arrange shipping?",
+            "answer": "Samples and small shipments can use express courier. Bulk shipments can be planned by sea or air, or through your appointed forwarder. Send your destination and delivery target for a freight quotation."
           }
         ],
         "detail_image": {
@@ -340,7 +340,7 @@
           ]
         },
         "product_summary": "Men's white low-top lace-up chunky sneakers with mesh lining and rubber midsole and outsole. Listed sizes 39-44. Share the quantity and size breakdown, destination and packing requirements for an order quotation.",
-        "company_summary": "Quanzhou Beiqiang Footwear & Apparel Co., Ltd. supports international B2B footwear enquiries, OEM/ODM project discussions and wholesale order coordination. Product specifications, order options and quotations are reviewed for each selected style and order."
+        "company_summary": "Quanzhou Beiqiang Footwear & Apparel Co., Ltd. is a footwear manufacturer based in Quanzhou, Fujian, China. We work with importers, wholesalers, brand owners and e-commerce businesses on wholesale and OEM/ODM footwear projects. From selecting existing styles to developing a design brief, reviewing samples and planning packaging, we help buyers turn their requirements into a clear order plan. Share your product direction and purchasing needs to discuss a suitable cooperation proposal."
       },
       "display": "Y",
       "pc_detail_url": "https://www.alibaba.com/product-detail/Men-s-Casual-Sneakers-with-Mesh_1601943406882.html",
@@ -403,13 +403,13 @@
           "attribute_id": 3,
           "attribute_name": "Model Number",
           "value_id": -1,
-          "value_name": "HR011-B"
+          "value_name": "BQ1011-B"
         }
       ],
-      "owner_member": 286385890,
       "status": "approved"
     },
-    "request_id": "213c932b17916153911552693",
-    "_trace_id_": "2107d5c717916153911525874e0e47"
-  }
+    "request_id": "210829b717921248804681758",
+    "_trace_id_": "2108b42d17921248804647786e0c11"
+  },
+  "scope": "Current exact-ID official readback. Review/display and target checks are recorded independently."
 }

@@ -1,0 +1,127 @@
+{
+  "id": "1601970118386",
+  "at": "2026-10-16T05:06:24.966755+00:00",
+  "state": "FORMAL_REISSUED_IDS_AND_ORIGINAL_SKU_DATA_VERIFIED",
+  "original_platform_SKU_ids_preserved": false,
+  "items": {
+    "BQ-CS929-BK-45": {
+      "old_sku_id": "109767416956",
+      "current_sku_id": "109820403936"
+    },
+    "BQ-CS929-BK-46": {
+      "old_sku_id": "109767416957",
+      "current_sku_id": "109820403937"
+    },
+    "BQ-CS929-BK-47": {
+      "old_sku_id": "109767416958",
+      "current_sku_id": "109820403938"
+    },
+    "BQ-CS929-SL-39": {
+      "old_sku_id": "109767416959",
+      "current_sku_id": "109820403939"
+    },
+    "BQ-CS929-BK-41": {
+      "old_sku_id": "109767416952",
+      "current_sku_id": "109820403940"
+    },
+    "BQ-CS929-BK-42": {
+      "old_sku_id": "109767416953",
+      "current_sku_id": "109820403941"
+    },
+    "BQ-CS929-BK-43": {
+      "old_sku_id": "109767416954",
+      "current_sku_id": "109820403942"
+    },
+    "BQ-CS929-BK-44": {
+      "old_sku_id": "109767416955",
+      "current_sku_id": "109820403943"
+    },
+    "BQ-CS929-BK-39": {
+      "old_sku_id": "109767416950",
+      "current_sku_id": "109820403944"
+    },
+    "BQ-CS929-BK-40": {
+      "old_sku_id": "109767416951",
+      "current_sku_id": "109820403945"
+    },
+    "BQ-CS929-GB-47": {
+      "old_sku_id": "109767416976",
+      "current_sku_id": "109820403946"
+    },
+    "BQ-CS929-GB-43": {
+      "old_sku_id": "109767416972",
+      "current_sku_id": "109820403947"
+    },
+    "BQ-CS929-GB-44": {
+      "old_sku_id": "109767416973",
+      "current_sku_id": "109820403948"
+    },
+    "BQ-CS929-GB-45": {
+      "old_sku_id": "109767416974",
+      "current_sku_id": "109820403949"
+    },
+    "BQ-CS929-GB-46": {
+      "old_sku_id": "109767416975",
+      "current_sku_id": "109820403950"
+    },
+    "BQ-CS929-GB-39": {
+      "old_sku_id": "109767416968",
+      "current_sku_id": "109820403951"
+    },
+    "BQ-CS929-GB-40": {
+      "old_sku_id": "109767416969",
+      "current_sku_id": "109820403952"
+    },
+    "BQ-CS929-GB-41": {
+      "old_sku_id": "109767416970",
+      "current_sku_id": "109820403953"
+    },
+    "BQ-CS929-GB-42": {
+      "old_sku_id": "109767416971",
+      "current_sku_id": "109820403954"
+    },
+    "BQ-CS929-SL-44": {
+      "old_sku_id": "109767416964",
+      "current_sku_id": "109820403955"
+    },
+    "BQ-CS929-SL-45": {
+      "old_sku_id": "109767416965",
+      "current_sku_id": "109820403956"
+    },
+    "BQ-CS929-SL-46": {
+      "old_sku_id": "109767416966",
+      "current_sku_id": "109820403957"
+    },
+    "BQ-CS929-SL-47": {
+      "old_sku_id": "109767416967",
+      "current_sku_id": "109820403958"
+    },
+    "BQ-CS929-SL-40": {
+      "old_sku_id": "109767416960",
+      "current_sku_id": "109820403959"
+    },
+    "BQ-CS929-SL-41": {
+      "old_sku_id": "109767416961",
+      "current_sku_id": "109820403960"
+    },
+    "BQ-CS929-SL-42": {
+      "old_sku_id": "109767416962",
+      "current_sku_id": "109820403961"
+    },
+    "BQ-CS929-SL-43": {
+      "old_sku_id": "109767416963",
+      "current_sku_id": "109820403962"
+    }
+  },
+  "checks": {
+    "all_original_SKU_codes_prices_props_and_colour_images": true,
+    "unique_positive_current_SKU_ids": true,
+    "non_target_fields_preserved": true,
+    "same_product_encrypted_identity": true
+  },
+  "receipt": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601970118386/质量修正/规格恢复/update_receipt.json",
+  "receipt_sha256": "f167a4532f5f6c39402b0687e918d08ea4a8e20102846cb073321517fde90793",
+  "formal_get": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601970118386/质量修正/规格恢复/after_get.json",
+  "formal_get_sha256": "3c8e89b0acd8a3c752e8e14e886ae0b22015a68eecd4cd84704e7ca9cdee6966",
+  "current_schema_bindings_verified": true
+}

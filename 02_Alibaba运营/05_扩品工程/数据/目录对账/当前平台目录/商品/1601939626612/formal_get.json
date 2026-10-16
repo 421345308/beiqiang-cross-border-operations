@@ -1,21 +1,19 @@
 {
+  "observed_at_utc": "2026-10-16T04:41:12.594341+00:00",
   "requested_product_id": "1601939626612",
-  "observed_at_utc": "2026-10-12T02:48:48.877499+00:00",
-  "method": "alibaba.icbu.product.get",
   "response": {
     "product": {
       "gmt_create": "2026-09-02 10:41:43",
       "keywords": [
         ""
       ],
-      "owner_member_display_name": "User name",
       "subject": "Wholesale Men's Lightweight Walking Shoes Breathable Knit Lace-Up EVA Sole All Seasons Regular Fit A502",
       "main_image": {
         "images": [
           "https://sc04.alicdn.com/kf/S5908d9a1ab51461db81cbbdcbe6d88f1r.jpg",
           "https://sc04.alicdn.com/kf/S1b1e52c3b116467abf116198ff7eb0a4G.jpg",
           "https://sc04.alicdn.com/kf/S93d2b8951c704936a42a784fa1d6d4eet.jpg",
-          "https://sc04.alicdn.com/kf/S8e19e6bdc841467eb865ad01bc1ec72cP.jpg",
+          "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png",
           "https://sc04.alicdn.com/kf/Sbf3aa096e6c54c4ba0f86efd6fd8faa1T.jpg",
           "https://sc04.alicdn.com/kf/S92e2dfe5be1c46eebe5360ba896397bd0.png"
         ]
@@ -23,7 +21,7 @@
       "struct_detail_product": true,
       "language": "ENGLISH",
       "is_smart_edit": false,
-      "gmt_modified": "2026-10-12 10:33:29",
+      "gmt_modified": "2026-10-16 12:21:02",
       "product_sku": {
         "skus": [
           {
@@ -1497,66 +1495,77 @@
                 "name": "Customization capabilities",
                 "id": 550
               },
-              "image_url": "https://sc04.alicdn.com/kf/H8e16babc58ce41d79e8b92623a045461w.png"
-            },
-            {
-              "image_set": {
-                "name": "Company overview",
-                "id": 400
-              },
-              "image_url": "https://sc04.alicdn.com/kf/H4485e694f2a440db8d5601b04d4cce17d.png"
-            },
-            {
-              "image_set": {
-                "name": "Competitive advantages",
-                "id": 450
-              },
-              "image_url": "https://sc04.alicdn.com/kf/Hb696d63f52ca4f08a2e59442f29461835.png"
-            },
-            {
-              "image_set": {
-                "name": "Production workflow",
-                "id": 600
-              },
-              "image_url": "https://sc04.alicdn.com/kf/Hf249cf1234f84225af0b14aa8a0fa7773.png"
+              "image_url": "https://sc04.alicdn.com/kf/H2c23ba6ddeac47a686c0e1350c4ac294v.png"
             },
             {
               "image_set": {
                 "name": "Packaging & shipping specifications",
                 "id": 700
               },
-              "image_url": "https://sc04.alicdn.com/kf/H68cf387530d946a6ba6cf02ce258525dm.png"
+              "image_url": "https://sc04.alicdn.com/kf/He558a164125f4bc295dfe3d70bb76066w.png"
+            },
+            {
+              "image_set": {
+                "name": "Company overview",
+                "id": 400
+              },
+              "image_url": "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
+            },
+            {
+              "image_set": {
+                "name": "Production workflow",
+                "id": 600
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H76f31cce4cc0447a99b72496f0ae5c93l.png"
+            },
+            {
+              "image_set": {
+                "name": "Competitive advantages",
+                "id": 450
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H8779a3d5521c4cce910395f583af74505.png"
+            },
+            {
+              "image_set": {
+                "name": "Packaging & shipping specifications",
+                "id": 700
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H7d0669b743e742c1a97e8108e6cc96eaV.png"
             }
           ]
         },
         "product_faq": [
           {
-            "question": "Which color and EU size combinations are listed?",
-            "answer": "All Black: EU 35–45; Light Blue: EU 35–45; Grey Black: EU 35–45; Black White: EU 35–45; Orange Black: EU 35–45."
+            "question": "Are you a factory or a trading company?",
+            "answer": "We are a footwear manufacturer based in Quanzhou, Fujian, China. We work with overseas B2B buyers on wholesale and OEM/ODM footwear projects."
           },
           {
-            "question": "What is the closure design?",
-            "answer": "A lace-up front with a low-cut knit upper. Use the laces to adjust the fit over the instep and check the heel fit during a sample fitting."
+            "question": "What is your minimum order quantity?",
+            "answer": "Small trial orders are welcome for existing styles; the minimum quantity is shown on each product page. For custom orders, the MOQ depends on the design, materials, branding and packaging."
           },
           {
-            "question": "What should I check during a sample fitting?",
-            "answer": "Try the sample with the intended socks. Adjust the laces, then check toe room, instep fit and heel hold before deciding the bulk EU size mix."
+            "question": "Can I mix colors and sizes in one order?",
+            "answer": "Yes. Mixed colors and sizes are supported for existing styles. Mixed-style orders can also be discussed according to the selected styles and order quantity."
           },
           {
-            "question": "What is the minimum order for the original style?",
-            "answer": "The listed original-style wholesale minimum is 2 pairs. Quantity pricing is shown on this page; branding and custom packaging are quoted separately."
+            "question": "Can I order samples before a bulk order?",
+            "answer": "Yes. Samples can be arranged for you to check the workmanship and fit before bulk ordering. Sample and courier costs are quoted before payment."
           },
           {
-            "question": "How can I request a sample?",
-            "answer": "Send the selected color or lining variant, EU size and delivery postcode for a sample quotation. It sets out the sample charge, courier cost and proposed dispatch date."
+            "question": "What packaging options do you offer?",
+            "answer": "Shoe boxes and polybags are available packing options. Custom boxes, labels and carton markings can be planned around your order and brand requirements."
           },
           {
-            "question": "What should I send for a branding or packaging proposal?",
-            "answer": "Send your logo artwork, preferred placement, packaging brief and order quantity. We can review the proposal for this style and set out the applicable minimum, cost and sample process."
+            "question": "Do you support logo customization and OEM/ODM?",
+            "answer": "Yes. We work with buyers on branding and footwear development. Send your logo artwork or design reference, target quantity and market requirements so we can develop a suitable proposal."
           },
           {
-            "question": "How can I get a delivered quotation?",
-            "answer": "Send pair quantities by color and EU size, the destination postcode or port and your packaging request. The quotation separates product cost from freight and includes the proposed dispatch and transit schedule."
+            "question": "What is the lead time?",
+            "answer": "Lead time depends on product availability, order quantity and customization. Existing styles can usually be arranged sooner; the production or dispatch schedule is agreed when confirming the order."
+          },
+          {
+            "question": "How can you arrange shipping?",
+            "answer": "Samples and small shipments can use express courier. Bulk shipments can be planned by sea or air, or through your appointed forwarder. Send your destination and delivery target for a freight quotation."
           }
         ],
         "detail_image": {
@@ -1592,7 +1601,7 @@
           ]
         },
         "product_summary": "Knit lace-up walking shoes with a low collar and two-tone upper panels. The color-blocked toe and heel areas give the style a sporty casual appearance. Traditional laces let the wearer adjust the upper rather than rely only on a fixed shoe opening.",
-        "company_summary": "Quanzhou Beiqiang Footwear & Apparel Co., Ltd. supplies OEM/ODM and wholesale casual footwear for importers, wholesalers, sourcing agents and private-label buyers."
+        "company_summary": "Quanzhou Beiqiang Footwear & Apparel Co., Ltd. is a footwear manufacturer based in Quanzhou, Fujian, China. We work with importers, wholesalers, brand owners and e-commerce businesses on wholesale and OEM/ODM footwear projects. From selecting existing styles to developing a design brief, reviewing samples and planning packaging, we help buyers turn their requirements into a clear order plan. Share your product direction and purchasing needs to discuss a suitable cooperation proposal."
       },
       "display": "Y",
       "pc_detail_url": "https://www.alibaba.com/product-detail/Wholesale-Men-s-Lightweight-Walking-Shoes_1601939626612.html",
@@ -1688,10 +1697,10 @@
           "value_name": "Textile"
         }
       ],
-      "owner_member": 286385890,
       "status": "approved"
     },
-    "request_id": "213d4e4917917733327381810",
-    "_trace_id_": "0b5dcfa617917733327355620e0e2a"
-  }
+    "request_id": "213d4e4917921256754062101",
+    "_trace_id_": "0bf8de2417921256754047865e0b5a"
+  },
+  "scope": "Current exact-ID official readback. Review/display and target checks are recorded independently."
 }

@@ -1,7 +1,6 @@
 {
+  "observed_at_utc": "2026-10-16T05:07:16.437247+00:00",
   "requested_product_id": "1601943711519",
-  "observed_at_utc": "2026-10-13T19:57:07.094311+00:00",
-  "method": "alibaba.icbu.product.get",
   "response": {
     "product": {
       "gmt_create": "2026-09-06 15:26:04",
@@ -16,414 +15,15 @@
           "https://sc04.alicdn.com/kf/H71116200c2394ba6bf0a40c954760df3A.jpg",
           "https://sc04.alicdn.com/kf/H92975d6e7af14708af7438292a0f16e8h.jpg",
           "https://sc04.alicdn.com/kf/H8edcf3549c4d4a9086b52d4a8a38a704J.jpg",
-          "https://sc04.alicdn.com/kf/H281467d09f4b48368c335900f583a9c9r.jpg"
+          "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
         ]
       },
       "struct_detail_product": true,
       "language": "ENGLISH",
       "is_smart_edit": false,
-      "gmt_modified": "2026-10-14 03:46:07",
+      "gmt_modified": "2026-10-16 12:53:54",
       "product_sku": {
         "skus": [
-          {
-            "attr2_value": "{\"222038415\":-839,\"191288010\":-502}",
-            "bulk_discount_prices": [
-              {
-                "start_quantity": 2,
-                "price": "8.98"
-              },
-              {
-                "start_quantity": 50,
-                "price": "8.38"
-              },
-              {
-                "start_quantity": 100,
-                "price": "7.79"
-              }
-            ],
-            "sku_id": 109807608146,
-            "sku_code": "HR055-B-RED_BLACK-EU39"
-          },
-          {
-            "attr2_value": "{\"222038415\":-840,\"191288010\":-502}",
-            "bulk_discount_prices": [
-              {
-                "start_quantity": 2,
-                "price": "8.98"
-              },
-              {
-                "start_quantity": 50,
-                "price": "8.38"
-              },
-              {
-                "start_quantity": 100,
-                "price": "7.79"
-              }
-            ],
-            "sku_id": 109807608147,
-            "sku_code": "HR055-B-RED_BLACK-EU40"
-          },
-          {
-            "attr2_value": "{\"222038415\":-837,\"191288010\":-502}",
-            "bulk_discount_prices": [
-              {
-                "start_quantity": 2,
-                "price": "8.98"
-              },
-              {
-                "start_quantity": 50,
-                "price": "8.38"
-              },
-              {
-                "start_quantity": 100,
-                "price": "7.79"
-              }
-            ],
-            "sku_id": 109807608144,
-            "sku_code": "HR055-B-RED_BLACK-EU37"
-          },
-          {
-            "attr2_value": "{\"222038415\":-838,\"191288010\":-502}",
-            "bulk_discount_prices": [
-              {
-                "start_quantity": 2,
-                "price": "8.98"
-              },
-              {
-                "start_quantity": 50,
-                "price": "8.38"
-              },
-              {
-                "start_quantity": 100,
-                "price": "7.79"
-              }
-            ],
-            "sku_id": 109807608145,
-            "sku_code": "HR055-B-RED_BLACK-EU38"
-          },
-          {
-            "attr2_value": "{\"222038415\":-843,\"191288010\":-502}",
-            "bulk_discount_prices": [
-              {
-                "start_quantity": 2,
-                "price": "8.98"
-              },
-              {
-                "start_quantity": 50,
-                "price": "8.38"
-              },
-              {
-                "start_quantity": 100,
-                "price": "7.79"
-              }
-            ],
-            "sku_id": 109807608150,
-            "sku_code": "HR055-B-RED_BLACK-EU43"
-          },
-          {
-            "attr2_value": "{\"222038415\":-844,\"191288010\":-502}",
-            "bulk_discount_prices": [
-              {
-                "start_quantity": 2,
-                "price": "8.98"
-              },
-              {
-                "start_quantity": 50,
-                "price": "8.38"
-              },
-              {
-                "start_quantity": 100,
-                "price": "7.79"
-              }
-            ],
-            "sku_id": 109807608151,
-            "sku_code": "HR055-B-RED_BLACK-EU44"
-          },
-          {
-            "attr2_value": "{\"222038415\":-841,\"191288010\":-502}",
-            "bulk_discount_prices": [
-              {
-                "start_quantity": 2,
-                "price": "8.98"
-              },
-              {
-                "start_quantity": 50,
-                "price": "8.38"
-              },
-              {
-                "start_quantity": 100,
-                "price": "7.79"
-              }
-            ],
-            "sku_id": 109807608148,
-            "sku_code": "HR055-B-RED_BLACK-EU41"
-          },
-          {
-            "attr2_value": "{\"222038415\":-842,\"191288010\":-502}",
-            "bulk_discount_prices": [
-              {
-                "start_quantity": 2,
-                "price": "8.98"
-              },
-              {
-                "start_quantity": 50,
-                "price": "8.38"
-              },
-              {
-                "start_quantity": 100,
-                "price": "7.79"
-              }
-            ],
-            "sku_id": 109807608149,
-            "sku_code": "HR055-B-RED_BLACK-EU42"
-          },
-          {
-            "attr2_value": "{\"222038415\":-835,\"191288010\":-503}",
-            "bulk_discount_prices": [
-              {
-                "start_quantity": 2,
-                "price": "8.98"
-              },
-              {
-                "start_quantity": 50,
-                "price": "8.38"
-              },
-              {
-                "start_quantity": 100,
-                "price": "7.79"
-              }
-            ],
-            "sku_id": 109807608154,
-            "sku_code": "HR055-B-PURPLE_BLACK-EU35"
-          },
-          {
-            "attr2_value": "{\"222038415\":-836,\"191288010\":-503}",
-            "bulk_discount_prices": [
-              {
-                "start_quantity": 2,
-                "price": "8.98"
-              },
-              {
-                "start_quantity": 50,
-                "price": "8.38"
-              },
-              {
-                "start_quantity": 100,
-                "price": "7.79"
-              }
-            ],
-            "sku_id": 109807608155,
-            "sku_code": "HR055-B-PURPLE_BLACK-EU36"
-          },
-          {
-            "attr2_value": "{\"222038415\":-845,\"191288010\":-502}",
-            "bulk_discount_prices": [
-              {
-                "start_quantity": 2,
-                "price": "8.98"
-              },
-              {
-                "start_quantity": 50,
-                "price": "8.38"
-              },
-              {
-                "start_quantity": 100,
-                "price": "7.79"
-              }
-            ],
-            "sku_id": 109807608152,
-            "sku_code": "HR055-B-RED_BLACK-EU45"
-          },
-          {
-            "attr2_value": "{\"222038415\":-846,\"191288010\":-502}",
-            "bulk_discount_prices": [
-              {
-                "start_quantity": 2,
-                "price": "8.98"
-              },
-              {
-                "start_quantity": 50,
-                "price": "8.38"
-              },
-              {
-                "start_quantity": 100,
-                "price": "7.79"
-              }
-            ],
-            "sku_id": 109807608153,
-            "sku_code": "HR055-B-RED_BLACK-EU46"
-          },
-          {
-            "attr2_value": "{\"222038415\":-839,\"191288010\":-503}",
-            "bulk_discount_prices": [
-              {
-                "start_quantity": 2,
-                "price": "8.98"
-              },
-              {
-                "start_quantity": 50,
-                "price": "8.38"
-              },
-              {
-                "start_quantity": 100,
-                "price": "7.79"
-              }
-            ],
-            "sku_id": 109807608158,
-            "sku_code": "HR055-B-PURPLE_BLACK-EU39"
-          },
-          {
-            "attr2_value": "{\"222038415\":-840,\"191288010\":-503}",
-            "bulk_discount_prices": [
-              {
-                "start_quantity": 2,
-                "price": "8.98"
-              },
-              {
-                "start_quantity": 50,
-                "price": "8.38"
-              },
-              {
-                "start_quantity": 100,
-                "price": "7.79"
-              }
-            ],
-            "sku_id": 109807608159,
-            "sku_code": "HR055-B-PURPLE_BLACK-EU40"
-          },
-          {
-            "attr2_value": "{\"222038415\":-837,\"191288010\":-503}",
-            "bulk_discount_prices": [
-              {
-                "start_quantity": 2,
-                "price": "8.98"
-              },
-              {
-                "start_quantity": 50,
-                "price": "8.38"
-              },
-              {
-                "start_quantity": 100,
-                "price": "7.79"
-              }
-            ],
-            "sku_id": 109807608156,
-            "sku_code": "HR055-B-PURPLE_BLACK-EU37"
-          },
-          {
-            "attr2_value": "{\"222038415\":-838,\"191288010\":-503}",
-            "bulk_discount_prices": [
-              {
-                "start_quantity": 2,
-                "price": "8.98"
-              },
-              {
-                "start_quantity": 50,
-                "price": "8.38"
-              },
-              {
-                "start_quantity": 100,
-                "price": "7.79"
-              }
-            ],
-            "sku_id": 109807608157,
-            "sku_code": "HR055-B-PURPLE_BLACK-EU38"
-          },
-          {
-            "attr2_value": "{\"222038415\":-835,\"191288010\":-501}",
-            "bulk_discount_prices": [
-              {
-                "start_quantity": 2,
-                "price": "8.98"
-              },
-              {
-                "start_quantity": 50,
-                "price": "8.38"
-              },
-              {
-                "start_quantity": 100,
-                "price": "7.79"
-              }
-            ],
-            "sku_id": 109807608130,
-            "sku_code": "HR055-B-WHITE_GREEN-EU35"
-          },
-          {
-            "attr2_value": "{\"222038415\":-836,\"191288010\":-501}",
-            "bulk_discount_prices": [
-              {
-                "start_quantity": 2,
-                "price": "8.98"
-              },
-              {
-                "start_quantity": 50,
-                "price": "8.38"
-              },
-              {
-                "start_quantity": 100,
-                "price": "7.79"
-              }
-            ],
-            "sku_id": 109807608131,
-            "sku_code": "HR055-B-WHITE_GREEN-EU36"
-          },
-          {
-            "attr2_value": "{\"222038415\":-839,\"191288010\":-501}",
-            "bulk_discount_prices": [
-              {
-                "start_quantity": 2,
-                "price": "8.98"
-              },
-              {
-                "start_quantity": 50,
-                "price": "8.38"
-              },
-              {
-                "start_quantity": 100,
-                "price": "7.79"
-              }
-            ],
-            "sku_id": 109807608134,
-            "sku_code": "HR055-B-WHITE_GREEN-EU39"
-          },
-          {
-            "attr2_value": "{\"222038415\":-840,\"191288010\":-501}",
-            "bulk_discount_prices": [
-              {
-                "start_quantity": 2,
-                "price": "8.98"
-              },
-              {
-                "start_quantity": 50,
-                "price": "8.38"
-              },
-              {
-                "start_quantity": 100,
-                "price": "7.79"
-              }
-            ],
-            "sku_id": 109807608135,
-            "sku_code": "HR055-B-WHITE_GREEN-EU40"
-          },
-          {
-            "attr2_value": "{\"222038415\":-837,\"191288010\":-501}",
-            "bulk_discount_prices": [
-              {
-                "start_quantity": 2,
-                "price": "8.98"
-              },
-              {
-                "start_quantity": 50,
-                "price": "8.38"
-              },
-              {
-                "start_quantity": 100,
-                "price": "7.79"
-              }
-            ],
-            "sku_id": 109807608132,
-            "sku_code": "HR055-B-WHITE_GREEN-EU37"
-          },
           {
             "attr2_value": "{\"222038415\":-838,\"191288010\":-501}",
             "bulk_discount_prices": [
@@ -440,8 +40,8 @@
                 "price": "7.79"
               }
             ],
-            "sku_id": 109807608133,
-            "sku_code": "HR055-B-WHITE_GREEN-EU38"
+            "sku_id": 109820498294,
+            "sku_code": "BQ1055-B-WHITE_GREEN-EU38"
           },
           {
             "attr2_value": "{\"222038415\":-843,\"191288010\":-501}",
@@ -459,11 +59,11 @@
                 "price": "7.79"
               }
             ],
-            "sku_id": 109807608138,
-            "sku_code": "HR055-B-WHITE_GREEN-EU43"
+            "sku_id": 109820498295,
+            "sku_code": "BQ1055-B-WHITE_GREEN-EU43"
           },
           {
-            "attr2_value": "{\"222038415\":-844,\"191288010\":-501}",
+            "attr2_value": "{\"222038415\":-840,\"191288010\":-501}",
             "bulk_discount_prices": [
               {
                 "start_quantity": 2,
@@ -478,11 +78,11 @@
                 "price": "7.79"
               }
             ],
-            "sku_id": 109807608139,
-            "sku_code": "HR055-B-WHITE_GREEN-EU44"
+            "sku_id": 109820498292,
+            "sku_code": "BQ1055-B-WHITE_GREEN-EU40"
           },
           {
-            "attr2_value": "{\"222038415\":-841,\"191288010\":-501}",
+            "attr2_value": "{\"222038415\":-837,\"191288010\":-501}",
             "bulk_discount_prices": [
               {
                 "start_quantity": 2,
@@ -497,11 +97,11 @@
                 "price": "7.79"
               }
             ],
-            "sku_id": 109807608136,
-            "sku_code": "HR055-B-WHITE_GREEN-EU41"
+            "sku_id": 109820498293,
+            "sku_code": "BQ1055-B-WHITE_GREEN-EU37"
           },
           {
-            "attr2_value": "{\"222038415\":-842,\"191288010\":-501}",
+            "attr2_value": "{\"222038415\":-836,\"191288010\":-501}",
             "bulk_discount_prices": [
               {
                 "start_quantity": 2,
@@ -516,11 +116,11 @@
                 "price": "7.79"
               }
             ],
-            "sku_id": 109807608137,
-            "sku_code": "HR055-B-WHITE_GREEN-EU42"
+            "sku_id": 109820498290,
+            "sku_code": "BQ1055-B-WHITE_GREEN-EU36"
           },
           {
-            "attr2_value": "{\"222038415\":-835,\"191288010\":-502}",
+            "attr2_value": "{\"222038415\":-839,\"191288010\":-501}",
             "bulk_discount_prices": [
               {
                 "start_quantity": 2,
@@ -535,11 +135,11 @@
                 "price": "7.79"
               }
             ],
-            "sku_id": 109807608142,
-            "sku_code": "HR055-B-RED_BLACK-EU35"
+            "sku_id": 109820498291,
+            "sku_code": "BQ1055-B-WHITE_GREEN-EU39"
           },
           {
-            "attr2_value": "{\"222038415\":-836,\"191288010\":-502}",
+            "attr2_value": "{\"222038415\":-838,\"191288010\":-503}",
             "bulk_discount_prices": [
               {
                 "start_quantity": 2,
@@ -554,11 +154,11 @@
                 "price": "7.79"
               }
             ],
-            "sku_id": 109807608143,
-            "sku_code": "HR055-B-RED_BLACK-EU36"
+            "sku_id": 109820498288,
+            "sku_code": "BQ1055-B-PURPLE_BLACK-EU38"
           },
           {
-            "attr2_value": "{\"222038415\":-845,\"191288010\":-501}",
+            "attr2_value": "{\"222038415\":-835,\"191288010\":-501}",
             "bulk_discount_prices": [
               {
                 "start_quantity": 2,
@@ -573,8 +173,8 @@
                 "price": "7.79"
               }
             ],
-            "sku_id": 109807608140,
-            "sku_code": "HR055-B-WHITE_GREEN-EU45"
+            "sku_id": 109820498289,
+            "sku_code": "BQ1055-B-WHITE_GREEN-EU35"
           },
           {
             "attr2_value": "{\"222038415\":-846,\"191288010\":-501}",
@@ -592,8 +192,8 @@
                 "price": "7.79"
               }
             ],
-            "sku_id": 109807608141,
-            "sku_code": "HR055-B-WHITE_GREEN-EU46"
+            "sku_id": 109820498302,
+            "sku_code": "BQ1055-B-WHITE_GREEN-EU46"
           },
           {
             "attr2_value": "{\"222038415\":-835,\"191288010\":-505}",
@@ -611,11 +211,11 @@
                 "price": "7.79"
               }
             ],
-            "sku_id": 109807608178,
-            "sku_code": "HR055-B-ALL_BLACK-EU35"
+            "sku_id": 109820498303,
+            "sku_code": "BQ1055-B-ALL_BLACK-EU35"
           },
           {
-            "attr2_value": "{\"222038415\":-836,\"191288010\":-505}",
+            "attr2_value": "{\"222038415\":-836,\"191288010\":-502}",
             "bulk_discount_prices": [
               {
                 "start_quantity": 2,
@@ -630,11 +230,11 @@
                 "price": "7.79"
               }
             ],
-            "sku_id": 109807608179,
-            "sku_code": "HR055-B-ALL_BLACK-EU36"
+            "sku_id": 109820498300,
+            "sku_code": "BQ1055-B-RED_BLACK-EU36"
           },
           {
-            "attr2_value": "{\"222038415\":-845,\"191288010\":-504}",
+            "attr2_value": "{\"222038415\":-845,\"191288010\":-501}",
             "bulk_discount_prices": [
               {
                 "start_quantity": 2,
@@ -649,11 +249,11 @@
                 "price": "7.79"
               }
             ],
-            "sku_id": 109807608176,
-            "sku_code": "HR055-B-COFFEE-EU45"
+            "sku_id": 109820498301,
+            "sku_code": "BQ1055-B-WHITE_GREEN-EU45"
           },
           {
-            "attr2_value": "{\"222038415\":-846,\"191288010\":-504}",
+            "attr2_value": "{\"222038415\":-842,\"191288010\":-501}",
             "bulk_discount_prices": [
               {
                 "start_quantity": 2,
@@ -668,11 +268,11 @@
                 "price": "7.79"
               }
             ],
-            "sku_id": 109807608177,
-            "sku_code": "HR055-B-COFFEE-EU46"
+            "sku_id": 109820498298,
+            "sku_code": "BQ1055-B-WHITE_GREEN-EU42"
           },
           {
-            "attr2_value": "{\"222038415\":-839,\"191288010\":-505}",
+            "attr2_value": "{\"222038415\":-835,\"191288010\":-502}",
             "bulk_discount_prices": [
               {
                 "start_quantity": 2,
@@ -687,11 +287,11 @@
                 "price": "7.79"
               }
             ],
-            "sku_id": 109807608182,
-            "sku_code": "HR055-B-ALL_BLACK-EU39"
+            "sku_id": 109820498299,
+            "sku_code": "BQ1055-B-RED_BLACK-EU35"
           },
           {
-            "attr2_value": "{\"222038415\":-840,\"191288010\":-505}",
+            "attr2_value": "{\"222038415\":-844,\"191288010\":-501}",
             "bulk_discount_prices": [
               {
                 "start_quantity": 2,
@@ -706,11 +306,11 @@
                 "price": "7.79"
               }
             ],
-            "sku_id": 109807608183,
-            "sku_code": "HR055-B-ALL_BLACK-EU40"
+            "sku_id": 109820498296,
+            "sku_code": "BQ1055-B-WHITE_GREEN-EU44"
           },
           {
-            "attr2_value": "{\"222038415\":-837,\"191288010\":-505}",
+            "attr2_value": "{\"222038415\":-841,\"191288010\":-501}",
             "bulk_discount_prices": [
               {
                 "start_quantity": 2,
@@ -725,11 +325,11 @@
                 "price": "7.79"
               }
             ],
-            "sku_id": 109807608180,
-            "sku_code": "HR055-B-ALL_BLACK-EU37"
+            "sku_id": 109820498297,
+            "sku_code": "BQ1055-B-WHITE_GREEN-EU41"
           },
           {
-            "attr2_value": "{\"222038415\":-838,\"191288010\":-505}",
+            "attr2_value": "{\"222038415\":-844,\"191288010\":-502}",
             "bulk_discount_prices": [
               {
                 "start_quantity": 2,
@@ -744,11 +344,11 @@
                 "price": "7.79"
               }
             ],
-            "sku_id": 109807608181,
-            "sku_code": "HR055-B-ALL_BLACK-EU38"
+            "sku_id": 109820498278,
+            "sku_code": "BQ1055-B-RED_BLACK-EU44"
           },
           {
-            "attr2_value": "{\"222038415\":-843,\"191288010\":-505}",
+            "attr2_value": "{\"222038415\":-841,\"191288010\":-502}",
             "bulk_discount_prices": [
               {
                 "start_quantity": 2,
@@ -763,11 +363,11 @@
                 "price": "7.79"
               }
             ],
-            "sku_id": 109807608186,
-            "sku_code": "HR055-B-ALL_BLACK-EU43"
+            "sku_id": 109820498279,
+            "sku_code": "BQ1055-B-RED_BLACK-EU41"
           },
           {
-            "attr2_value": "{\"222038415\":-844,\"191288010\":-505}",
+            "attr2_value": "{\"222038415\":-838,\"191288010\":-502}",
             "bulk_discount_prices": [
               {
                 "start_quantity": 2,
@@ -782,11 +382,11 @@
                 "price": "7.79"
               }
             ],
-            "sku_id": 109807608187,
-            "sku_code": "HR055-B-ALL_BLACK-EU44"
+            "sku_id": 109820498276,
+            "sku_code": "BQ1055-B-RED_BLACK-EU38"
           },
           {
-            "attr2_value": "{\"222038415\":-841,\"191288010\":-505}",
+            "attr2_value": "{\"222038415\":-843,\"191288010\":-502}",
             "bulk_discount_prices": [
               {
                 "start_quantity": 2,
@@ -801,11 +401,11 @@
                 "price": "7.79"
               }
             ],
-            "sku_id": 109807608184,
-            "sku_code": "HR055-B-ALL_BLACK-EU41"
+            "sku_id": 109820498277,
+            "sku_code": "BQ1055-B-RED_BLACK-EU43"
           },
           {
-            "attr2_value": "{\"222038415\":-842,\"191288010\":-505}",
+            "attr2_value": "{\"222038415\":-840,\"191288010\":-502}",
             "bulk_discount_prices": [
               {
                 "start_quantity": 2,
@@ -820,11 +420,11 @@
                 "price": "7.79"
               }
             ],
-            "sku_id": 109807608185,
-            "sku_code": "HR055-B-ALL_BLACK-EU42"
+            "sku_id": 109820498274,
+            "sku_code": "BQ1055-B-RED_BLACK-EU40"
           },
           {
-            "attr2_value": "{\"222038415\":-845,\"191288010\":-505}",
+            "attr2_value": "{\"222038415\":-837,\"191288010\":-502}",
             "bulk_discount_prices": [
               {
                 "start_quantity": 2,
@@ -839,11 +439,11 @@
                 "price": "7.79"
               }
             ],
-            "sku_id": 109807608188,
-            "sku_code": "HR055-B-ALL_BLACK-EU45"
+            "sku_id": 109820498275,
+            "sku_code": "BQ1055-B-RED_BLACK-EU37"
           },
           {
-            "attr2_value": "{\"222038415\":-846,\"191288010\":-505}",
+            "attr2_value": "{\"222038415\":-839,\"191288010\":-502}",
             "bulk_discount_prices": [
               {
                 "start_quantity": 2,
@@ -858,11 +458,11 @@
                 "price": "7.79"
               }
             ],
-            "sku_id": 109807608189,
-            "sku_code": "HR055-B-ALL_BLACK-EU46"
+            "sku_id": 109820498273,
+            "sku_code": "BQ1055-B-RED_BLACK-EU39"
           },
           {
-            "attr2_value": "{\"222038415\":-843,\"191288010\":-503}",
+            "attr2_value": "{\"222038415\":-840,\"191288010\":-503}",
             "bulk_discount_prices": [
               {
                 "start_quantity": 2,
@@ -877,11 +477,11 @@
                 "price": "7.79"
               }
             ],
-            "sku_id": 109807608162,
-            "sku_code": "HR055-B-PURPLE_BLACK-EU43"
+            "sku_id": 109820498286,
+            "sku_code": "BQ1055-B-PURPLE_BLACK-EU40"
           },
           {
-            "attr2_value": "{\"222038415\":-844,\"191288010\":-503}",
+            "attr2_value": "{\"222038415\":-837,\"191288010\":-503}",
             "bulk_discount_prices": [
               {
                 "start_quantity": 2,
@@ -896,11 +496,11 @@
                 "price": "7.79"
               }
             ],
-            "sku_id": 109807608163,
-            "sku_code": "HR055-B-PURPLE_BLACK-EU44"
+            "sku_id": 109820498287,
+            "sku_code": "BQ1055-B-PURPLE_BLACK-EU37"
           },
           {
-            "attr2_value": "{\"222038415\":-841,\"191288010\":-503}",
+            "attr2_value": "{\"222038415\":-846,\"191288010\":-502}",
             "bulk_discount_prices": [
               {
                 "start_quantity": 2,
@@ -915,11 +515,11 @@
                 "price": "7.79"
               }
             ],
-            "sku_id": 109807608160,
-            "sku_code": "HR055-B-PURPLE_BLACK-EU41"
+            "sku_id": 109820498284,
+            "sku_code": "BQ1055-B-RED_BLACK-EU46"
           },
           {
-            "attr2_value": "{\"222038415\":-842,\"191288010\":-503}",
+            "attr2_value": "{\"222038415\":-839,\"191288010\":-503}",
             "bulk_discount_prices": [
               {
                 "start_quantity": 2,
@@ -934,11 +534,11 @@
                 "price": "7.79"
               }
             ],
-            "sku_id": 109807608161,
-            "sku_code": "HR055-B-PURPLE_BLACK-EU42"
+            "sku_id": 109820498285,
+            "sku_code": "BQ1055-B-PURPLE_BLACK-EU39"
           },
           {
-            "attr2_value": "{\"222038415\":-835,\"191288010\":-504}",
+            "attr2_value": "{\"222038415\":-836,\"191288010\":-503}",
             "bulk_discount_prices": [
               {
                 "start_quantity": 2,
@@ -953,11 +553,11 @@
                 "price": "7.79"
               }
             ],
-            "sku_id": 109807608166,
-            "sku_code": "HR055-B-COFFEE-EU35"
+            "sku_id": 109820498282,
+            "sku_code": "BQ1055-B-PURPLE_BLACK-EU36"
           },
           {
-            "attr2_value": "{\"222038415\":-836,\"191288010\":-504}",
+            "attr2_value": "{\"222038415\":-845,\"191288010\":-502}",
             "bulk_discount_prices": [
               {
                 "start_quantity": 2,
@@ -972,11 +572,11 @@
                 "price": "7.79"
               }
             ],
-            "sku_id": 109807608167,
-            "sku_code": "HR055-B-COFFEE-EU36"
+            "sku_id": 109820498283,
+            "sku_code": "BQ1055-B-RED_BLACK-EU45"
           },
           {
-            "attr2_value": "{\"222038415\":-845,\"191288010\":-503}",
+            "attr2_value": "{\"222038415\":-842,\"191288010\":-502}",
             "bulk_discount_prices": [
               {
                 "start_quantity": 2,
@@ -991,11 +591,11 @@
                 "price": "7.79"
               }
             ],
-            "sku_id": 109807608164,
-            "sku_code": "HR055-B-PURPLE_BLACK-EU45"
+            "sku_id": 109820498280,
+            "sku_code": "BQ1055-B-RED_BLACK-EU42"
           },
           {
-            "attr2_value": "{\"222038415\":-846,\"191288010\":-503}",
+            "attr2_value": "{\"222038415\":-835,\"191288010\":-503}",
             "bulk_discount_prices": [
               {
                 "start_quantity": 2,
@@ -1010,27 +610,8 @@
                 "price": "7.79"
               }
             ],
-            "sku_id": 109807608165,
-            "sku_code": "HR055-B-PURPLE_BLACK-EU46"
-          },
-          {
-            "attr2_value": "{\"222038415\":-839,\"191288010\":-504}",
-            "bulk_discount_prices": [
-              {
-                "start_quantity": 2,
-                "price": "8.98"
-              },
-              {
-                "start_quantity": 50,
-                "price": "8.38"
-              },
-              {
-                "start_quantity": 100,
-                "price": "7.79"
-              }
-            ],
-            "sku_id": 109807608170,
-            "sku_code": "HR055-B-COFFEE-EU39"
+            "sku_id": 109820498281,
+            "sku_code": "BQ1055-B-PURPLE_BLACK-EU35"
           },
           {
             "attr2_value": "{\"222038415\":-840,\"191288010\":-504}",
@@ -1048,8 +629,8 @@
                 "price": "7.79"
               }
             ],
-            "sku_id": 109807608171,
-            "sku_code": "HR055-B-COFFEE-EU40"
+            "sku_id": 109820498326,
+            "sku_code": "BQ1055-B-COFFEE-EU40"
           },
           {
             "attr2_value": "{\"222038415\":-837,\"191288010\":-504}",
@@ -1067,11 +648,11 @@
                 "price": "7.79"
               }
             ],
-            "sku_id": 109807608168,
-            "sku_code": "HR055-B-COFFEE-EU37"
+            "sku_id": 109820498327,
+            "sku_code": "BQ1055-B-COFFEE-EU37"
           },
           {
-            "attr2_value": "{\"222038415\":-838,\"191288010\":-504}",
+            "attr2_value": "{\"222038415\":-846,\"191288010\":-503}",
             "bulk_discount_prices": [
               {
                 "start_quantity": 2,
@@ -1086,11 +667,11 @@
                 "price": "7.79"
               }
             ],
-            "sku_id": 109807608169,
-            "sku_code": "HR055-B-COFFEE-EU38"
+            "sku_id": 109820498324,
+            "sku_code": "BQ1055-B-PURPLE_BLACK-EU46"
           },
           {
-            "attr2_value": "{\"222038415\":-843,\"191288010\":-504}",
+            "attr2_value": "{\"222038415\":-839,\"191288010\":-504}",
             "bulk_discount_prices": [
               {
                 "start_quantity": 2,
@@ -1105,11 +686,11 @@
                 "price": "7.79"
               }
             ],
-            "sku_id": 109807608174,
-            "sku_code": "HR055-B-COFFEE-EU43"
+            "sku_id": 109820498325,
+            "sku_code": "BQ1055-B-COFFEE-EU39"
           },
           {
-            "attr2_value": "{\"222038415\":-844,\"191288010\":-504}",
+            "attr2_value": "{\"222038415\":-836,\"191288010\":-504}",
             "bulk_discount_prices": [
               {
                 "start_quantity": 2,
@@ -1124,11 +705,11 @@
                 "price": "7.79"
               }
             ],
-            "sku_id": 109807608175,
-            "sku_code": "HR055-B-COFFEE-EU44"
+            "sku_id": 109820498322,
+            "sku_code": "BQ1055-B-COFFEE-EU36"
           },
           {
-            "attr2_value": "{\"222038415\":-841,\"191288010\":-504}",
+            "attr2_value": "{\"222038415\":-845,\"191288010\":-503}",
             "bulk_discount_prices": [
               {
                 "start_quantity": 2,
@@ -1143,8 +724,46 @@
                 "price": "7.79"
               }
             ],
-            "sku_id": 109807608172,
-            "sku_code": "HR055-B-COFFEE-EU41"
+            "sku_id": 109820498323,
+            "sku_code": "BQ1055-B-PURPLE_BLACK-EU45"
+          },
+          {
+            "attr2_value": "{\"222038415\":-842,\"191288010\":-503}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "8.98"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.38"
+              },
+              {
+                "start_quantity": 100,
+                "price": "7.79"
+              }
+            ],
+            "sku_id": 109820498320,
+            "sku_code": "BQ1055-B-PURPLE_BLACK-EU42"
+          },
+          {
+            "attr2_value": "{\"222038415\":-835,\"191288010\":-504}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "8.98"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.38"
+              },
+              {
+                "start_quantity": 100,
+                "price": "7.79"
+              }
+            ],
+            "sku_id": 109820498321,
+            "sku_code": "BQ1055-B-COFFEE-EU35"
           },
           {
             "attr2_value": "{\"222038415\":-842,\"191288010\":-504}",
@@ -1162,8 +781,388 @@
                 "price": "7.79"
               }
             ],
-            "sku_id": 109807608173,
-            "sku_code": "HR055-B-COFFEE-EU42"
+            "sku_id": 109820498332,
+            "sku_code": "BQ1055-B-COFFEE-EU42"
+          },
+          {
+            "attr2_value": "{\"222038415\":-844,\"191288010\":-504}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "8.98"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.38"
+              },
+              {
+                "start_quantity": 100,
+                "price": "7.79"
+              }
+            ],
+            "sku_id": 109820498330,
+            "sku_code": "BQ1055-B-COFFEE-EU44"
+          },
+          {
+            "attr2_value": "{\"222038415\":-841,\"191288010\":-504}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "8.98"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.38"
+              },
+              {
+                "start_quantity": 100,
+                "price": "7.79"
+              }
+            ],
+            "sku_id": 109820498331,
+            "sku_code": "BQ1055-B-COFFEE-EU41"
+          },
+          {
+            "attr2_value": "{\"222038415\":-838,\"191288010\":-504}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "8.98"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.38"
+              },
+              {
+                "start_quantity": 100,
+                "price": "7.79"
+              }
+            ],
+            "sku_id": 109820498328,
+            "sku_code": "BQ1055-B-COFFEE-EU38"
+          },
+          {
+            "attr2_value": "{\"222038415\":-843,\"191288010\":-504}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "8.98"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.38"
+              },
+              {
+                "start_quantity": 100,
+                "price": "7.79"
+              }
+            ],
+            "sku_id": 109820498329,
+            "sku_code": "BQ1055-B-COFFEE-EU43"
+          },
+          {
+            "attr2_value": "{\"222038415\":-838,\"191288010\":-505}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "8.98"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.38"
+              },
+              {
+                "start_quantity": 100,
+                "price": "7.79"
+              }
+            ],
+            "sku_id": 109820498310,
+            "sku_code": "BQ1055-B-ALL_BLACK-EU38"
+          },
+          {
+            "attr2_value": "{\"222038415\":-843,\"191288010\":-505}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "8.98"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.38"
+              },
+              {
+                "start_quantity": 100,
+                "price": "7.79"
+              }
+            ],
+            "sku_id": 109820498311,
+            "sku_code": "BQ1055-B-ALL_BLACK-EU43"
+          },
+          {
+            "attr2_value": "{\"222038415\":-840,\"191288010\":-505}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "8.98"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.38"
+              },
+              {
+                "start_quantity": 100,
+                "price": "7.79"
+              }
+            ],
+            "sku_id": 109820498308,
+            "sku_code": "BQ1055-B-ALL_BLACK-EU40"
+          },
+          {
+            "attr2_value": "{\"222038415\":-837,\"191288010\":-505}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "8.98"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.38"
+              },
+              {
+                "start_quantity": 100,
+                "price": "7.79"
+              }
+            ],
+            "sku_id": 109820498309,
+            "sku_code": "BQ1055-B-ALL_BLACK-EU37"
+          },
+          {
+            "attr2_value": "{\"222038415\":-846,\"191288010\":-504}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "8.98"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.38"
+              },
+              {
+                "start_quantity": 100,
+                "price": "7.79"
+              }
+            ],
+            "sku_id": 109820498306,
+            "sku_code": "BQ1055-B-COFFEE-EU46"
+          },
+          {
+            "attr2_value": "{\"222038415\":-839,\"191288010\":-505}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "8.98"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.38"
+              },
+              {
+                "start_quantity": 100,
+                "price": "7.79"
+              }
+            ],
+            "sku_id": 109820498307,
+            "sku_code": "BQ1055-B-ALL_BLACK-EU39"
+          },
+          {
+            "attr2_value": "{\"222038415\":-836,\"191288010\":-505}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "8.98"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.38"
+              },
+              {
+                "start_quantity": 100,
+                "price": "7.79"
+              }
+            ],
+            "sku_id": 109820498304,
+            "sku_code": "BQ1055-B-ALL_BLACK-EU36"
+          },
+          {
+            "attr2_value": "{\"222038415\":-845,\"191288010\":-504}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "8.98"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.38"
+              },
+              {
+                "start_quantity": 100,
+                "price": "7.79"
+              }
+            ],
+            "sku_id": 109820498305,
+            "sku_code": "BQ1055-B-COFFEE-EU45"
+          },
+          {
+            "attr2_value": "{\"222038415\":-844,\"191288010\":-503}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "8.98"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.38"
+              },
+              {
+                "start_quantity": 100,
+                "price": "7.79"
+              }
+            ],
+            "sku_id": 109820498318,
+            "sku_code": "BQ1055-B-PURPLE_BLACK-EU44"
+          },
+          {
+            "attr2_value": "{\"222038415\":-841,\"191288010\":-503}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "8.98"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.38"
+              },
+              {
+                "start_quantity": 100,
+                "price": "7.79"
+              }
+            ],
+            "sku_id": 109820498319,
+            "sku_code": "BQ1055-B-PURPLE_BLACK-EU41"
+          },
+          {
+            "attr2_value": "{\"222038415\":-846,\"191288010\":-505}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "8.98"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.38"
+              },
+              {
+                "start_quantity": 100,
+                "price": "7.79"
+              }
+            ],
+            "sku_id": 109820498316,
+            "sku_code": "BQ1055-B-ALL_BLACK-EU46"
+          },
+          {
+            "attr2_value": "{\"222038415\":-843,\"191288010\":-503}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "8.98"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.38"
+              },
+              {
+                "start_quantity": 100,
+                "price": "7.79"
+              }
+            ],
+            "sku_id": 109820498317,
+            "sku_code": "BQ1055-B-PURPLE_BLACK-EU43"
+          },
+          {
+            "attr2_value": "{\"222038415\":-842,\"191288010\":-505}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "8.98"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.38"
+              },
+              {
+                "start_quantity": 100,
+                "price": "7.79"
+              }
+            ],
+            "sku_id": 109820498314,
+            "sku_code": "BQ1055-B-ALL_BLACK-EU42"
+          },
+          {
+            "attr2_value": "{\"222038415\":-845,\"191288010\":-505}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "8.98"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.38"
+              },
+              {
+                "start_quantity": 100,
+                "price": "7.79"
+              }
+            ],
+            "sku_id": 109820498315,
+            "sku_code": "BQ1055-B-ALL_BLACK-EU45"
+          },
+          {
+            "attr2_value": "{\"222038415\":-844,\"191288010\":-505}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "8.98"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.38"
+              },
+              {
+                "start_quantity": 100,
+                "price": "7.79"
+              }
+            ],
+            "sku_id": 109820498312,
+            "sku_code": "BQ1055-B-ALL_BLACK-EU44"
+          },
+          {
+            "attr2_value": "{\"222038415\":-841,\"191288010\":-505}",
+            "bulk_discount_prices": [
+              {
+                "start_quantity": 2,
+                "price": "8.98"
+              },
+              {
+                "start_quantity": 50,
+                "price": "8.38"
+              },
+              {
+                "start_quantity": 100,
+                "price": "7.79"
+              }
+            ],
+            "sku_id": 109820498313,
+            "sku_code": "BQ1055-B-ALL_BLACK-EU41"
           }
         ],
         "sku_attributes": [
@@ -1171,9 +1170,9 @@
             "attribute_id": 191288010,
             "values": [
               {
-                "system_value_name": "Red/Black",
-                "image_url": "https://sc04.alicdn.com/kf/H10b1d71b1458406c988681e2624cf1aeM.jpg",
-                "value_id": -502
+                "system_value_name": "White/Green",
+                "image_url": "https://sc04.alicdn.com/kf/Hfab1821541e1499c8a1da16cd556c215j.jpg",
+                "value_id": -501
               },
               {
                 "system_value_name": "Purple/Black",
@@ -1181,14 +1180,14 @@
                 "value_id": -503
               },
               {
-                "system_value_name": "White/Green",
-                "image_url": "https://sc04.alicdn.com/kf/Hfab1821541e1499c8a1da16cd556c215j.jpg",
-                "value_id": -501
-              },
-              {
                 "system_value_name": "All Black",
                 "image_url": "https://sc04.alicdn.com/kf/Hed68df765a0d49bc83199cc2e44a18b8i.jpg",
                 "value_id": -505
+              },
+              {
+                "system_value_name": "Red/Black",
+                "image_url": "https://sc04.alicdn.com/kf/H10b1d71b1458406c988681e2624cf1aeM.jpg",
+                "value_id": -502
               },
               {
                 "system_value_name": "Coffee",
@@ -1202,8 +1201,12 @@
             "attribute_id": 222038415,
             "values": [
               {
-                "system_value_name": "EU39",
-                "value_id": -839
+                "system_value_name": "EU38",
+                "value_id": -838
+              },
+              {
+                "system_value_name": "EU43",
+                "value_id": -843
               },
               {
                 "system_value_name": "EU40",
@@ -1214,12 +1217,28 @@
                 "value_id": -837
               },
               {
-                "system_value_name": "EU38",
-                "value_id": -838
+                "system_value_name": "EU36",
+                "value_id": -836
               },
               {
-                "system_value_name": "EU43",
-                "value_id": -843
+                "system_value_name": "EU39",
+                "value_id": -839
+              },
+              {
+                "system_value_name": "EU35",
+                "value_id": -835
+              },
+              {
+                "system_value_name": "EU46",
+                "value_id": -846
+              },
+              {
+                "system_value_name": "EU45",
+                "value_id": -845
+              },
+              {
+                "system_value_name": "EU42",
+                "value_id": -842
               },
               {
                 "system_value_name": "EU44",
@@ -1228,33 +1247,13 @@
               {
                 "system_value_name": "EU41",
                 "value_id": -841
-              },
-              {
-                "system_value_name": "EU42",
-                "value_id": -842
-              },
-              {
-                "system_value_name": "EU35",
-                "value_id": -835
-              },
-              {
-                "system_value_name": "EU36",
-                "value_id": -836
-              },
-              {
-                "system_value_name": "EU45",
-                "value_id": -845
-              },
-              {
-                "system_value_name": "EU46",
-                "value_id": -846
               }
             ],
             "attribute_name": "EUR Size"
           }
         ]
       },
-      "category_id": 201340408,
+      "category_id": 201153804,
       "product_id": "AAHIjmk4AOWGex-cDVm7zyj8",
       "sub_market_type": "customization",
       "struct_detail": {
@@ -1409,26 +1408,14 @@
         {
           "attribute_id": 191288243,
           "attribute_name": "Style",
-          "value_id": 105432372,
-          "value_name": "Mules"
-        },
-        {
-          "attribute_id": 191288243,
-          "attribute_name": "Style",
-          "value_id": 190091503,
-          "value_name": "Casual"
+          "value_id": 190091556,
+          "value_name": "Slip On"
         },
         {
           "attribute_id": 191290426,
           "attribute_name": "Outsole Material",
           "value_id": 3376399,
           "value_name": "EVA"
-        },
-        {
-          "attribute_id": 191290428,
-          "attribute_name": "Upper Material",
-          "value_id": 4388665,
-          "value_name": "Knit"
         },
         {
           "attribute_id": 200000486,
@@ -1452,13 +1439,19 @@
           "attribute_id": 3,
           "attribute_name": "Model Number",
           "value_id": -1,
-          "value_name": "HR055-B"
+          "value_name": "BQ1055-B"
         },
         {
           "attribute_id": 20700,
           "attribute_name": "Midsole Material",
           "value_id": -1,
           "value_name": "other"
+        },
+        {
+          "attribute_id": 191290428,
+          "attribute_name": "Upper Material",
+          "value_id": -1,
+          "value_name": "Knit"
         },
         {
           "attribute_id": 191290430,
@@ -1469,13 +1462,8 @@
       ],
       "status": "approved"
     },
-    "request_id": "213c933517919214267897502",
-    "_trace_id_": "2101075517919214266487759e0c37"
+    "request_id": "212cbf3217921272392251438",
+    "_trace_id_": "2166b76317921272392234317e0d6f"
   },
-  "sanitized_fields": [
-    "owner_member",
-    "owner_member_display_name",
-    "owner_member_id"
-  ],
-  "raw_response_file": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943711519/after_get.json"
+  "scope": "Current exact-ID official readback. Review/display and target checks are recorded independently."
 }

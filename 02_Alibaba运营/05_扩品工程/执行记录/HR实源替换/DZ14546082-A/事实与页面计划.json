@@ -540,5 +540,9 @@
       "Mixed Colors"
     ]
   },
-  "pattern_review": "Existing Mixed Colors remained during whole-shoe update and optional Closure Type clear. Current actual White/Navy and White/Orange panel colour blocks support this retained value; no additional platform mutation."
+  "pattern_review": "Existing Mixed Colors remained during whole-shoe update and optional Closure Type clear. Current actual White/Navy and White/Orange panel colour blocks support this retained value; no additional platform mutation.",
+  "current_platform_category_by_id": {
+    "12000003229472": 201334413
+  },
+  "category_scope": "category_id保留初始改造默认；当前平台叶子按current_platform_category_by_id逐ID读取，不把同源链接不同平台分类混成不同实鞋。"
 }

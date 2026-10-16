@@ -1,20 +1,18 @@
 {
+  "observed_at_utc": "2026-10-16T04:42:06.204631+00:00",
   "requested_product_id": "10000044028277",
-  "observed_at_utc": "2026-10-12T02:34:43.112476+00:00",
-  "method": "alibaba.icbu.product.get",
   "response": {
     "product": {
       "gmt_create": "2026-06-21 22:56:43",
       "keywords": [
         ""
       ],
-      "owner_member_display_name": "User name",
       "subject": "Wholesale Knit Textile Lace Detail Casual Walking Shoes K6116 OEM ODM",
       "main_image": {
         "images": [
           "https://sc04.alicdn.com/kf/Had3034a03ef4499187ef7e4a92a793f3o.jpg",
           "https://sc04.alicdn.com/kf/Hd2b6516d1b024b6598e2f8a3952ba20fI.jpg",
-          "https://sc04.alicdn.com/kf/H9c7727b537ec4fa9b6c8452750b8f33fK.jpg",
+          "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png",
           "https://sc04.alicdn.com/kf/H3d3d73ce53b64886806e100be2b29f46C.jpg",
           "https://sc04.alicdn.com/kf/H49e9c6ac08094668bd6ab3514be42300n.jpg",
           "https://sc04.alicdn.com/kf/H28ca11ba8e3b42c298137f5779b620dd9.jpg"
@@ -23,7 +21,7 @@
       "struct_detail_product": true,
       "language": "ENGLISH",
       "is_smart_edit": false,
-      "gmt_modified": "2026-10-12 10:18:25",
+      "gmt_modified": "2026-10-16 12:23:28",
       "product_sku": {
         "skus": [
           {
@@ -906,69 +904,80 @@
           "images": [
             {
               "image_set": {
-                "name": "Production workflow",
-                "id": 600
-              },
-              "image_url": "https://sc04.alicdn.com/kf/Hf249cf1234f84225af0b14aa8a0fa7773.png"
-            },
-            {
-              "image_set": {
                 "name": "Company overview",
                 "id": 400
               },
-              "image_url": "https://sc04.alicdn.com/kf/H4485e694f2a440db8d5601b04d4cce17d.png"
-            },
-            {
-              "image_set": {
-                "name": "Competitive advantages",
-                "id": 450
-              },
-              "image_url": "https://sc04.alicdn.com/kf/Hb696d63f52ca4f08a2e59442f29461835.png"
+              "image_url": "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
             },
             {
               "image_set": {
                 "name": "Packaging & shipping specifications",
                 "id": 700
               },
-              "image_url": "https://sc04.alicdn.com/kf/H68cf387530d946a6ba6cf02ce258525dm.png"
+              "image_url": "https://sc04.alicdn.com/kf/He558a164125f4bc295dfe3d70bb76066w.png"
             },
             {
               "image_set": {
                 "name": "Customization capabilities",
                 "id": 550
               },
-              "image_url": "https://sc04.alicdn.com/kf/H8e16babc58ce41d79e8b92623a045461w.png"
+              "image_url": "https://sc04.alicdn.com/kf/H2c23ba6ddeac47a686c0e1350c4ac294v.png"
+            },
+            {
+              "image_set": {
+                "name": "Production workflow",
+                "id": 600
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H76f31cce4cc0447a99b72496f0ae5c93l.png"
+            },
+            {
+              "image_set": {
+                "name": "Competitive advantages",
+                "id": 450
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H8779a3d5521c4cce910395f583af74505.png"
+            },
+            {
+              "image_set": {
+                "name": "Packaging & shipping specifications",
+                "id": 700
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H7d0669b743e742c1a97e8108e6cc96eaV.png"
             }
           ]
         },
         "product_faq": [
           {
-            "question": "Which color and EU size combinations are listed?",
-            "answer": "Grey: EU 35–45; Black White: EU 35–45; Cream: EU 35–45; Black: EU 35–45."
+            "question": "Are you a factory or a trading company?",
+            "answer": "We are a footwear manufacturer based in Quanzhou, Fujian, China. We work with overseas B2B buyers on wholesale and OEM/ODM footwear projects."
           },
           {
-            "question": "What should I check during a sample fitting?",
-            "answer": "Try the sample with the intended socks. Adjust the laces, then check toe room, instep fit and heel hold before deciding the bulk EU size mix."
+            "question": "What is your minimum order quantity?",
+            "answer": "Small trial orders are welcome for existing styles; the minimum quantity is shown on each product page. For custom orders, the MOQ depends on the design, materials, branding and packaging."
           },
           {
-            "question": "What is the minimum order for the original style?",
-            "answer": "The listed original-style wholesale minimum is 2 pairs. Quantity pricing is shown on this page; branding and custom packaging are quoted separately."
+            "question": "Can I mix colors and sizes in one order?",
+            "answer": "Yes. Mixed colors and sizes are supported for existing styles. Mixed-style orders can also be discussed according to the selected styles and order quantity."
           },
           {
-            "question": "How can I request a sample?",
-            "answer": "Send the selected color or lining variant, EU size and delivery postcode for a sample quotation. It sets out the sample charge, courier cost and proposed dispatch date."
+            "question": "Can I order samples before a bulk order?",
+            "answer": "Yes. Samples can be arranged for you to check the workmanship and fit before bulk ordering. Sample and courier costs are quoted before payment."
           },
           {
-            "question": "What should I send for a branding or packaging proposal?",
-            "answer": "Send your logo artwork, preferred placement, packaging brief and order quantity. We can review the proposal for this style and set out the applicable minimum, cost and sample process."
+            "question": "What packaging options do you offer?",
+            "answer": "Shoe boxes and polybags are available packing options. Custom boxes, labels and carton markings can be planned around your order and brand requirements."
           },
           {
-            "question": "How can I get a delivered quotation?",
-            "answer": "Send pair quantities by color and EU size, the destination postcode or port and your packaging request. The quotation separates product cost from freight and includes the proposed dispatch and transit schedule."
+            "question": "Do you support logo customization and OEM/ODM?",
+            "answer": "Yes. We work with buyers on branding and footwear development. Send your logo artwork or design reference, target quantity and market requirements so we can develop a suitable proposal."
           },
           {
-            "question": "Which lining version does this listing offer?",
-            "answer": "This listing offers the regular K6116 version. For a fleece-lined option, request the separate K6116-1 style by its full model name."
+            "question": "What is the lead time?",
+            "answer": "Lead time depends on product availability, order quantity and customization. Existing styles can usually be arranged sooner; the production or dispatch schedule is agreed when confirming the order."
+          },
+          {
+            "question": "How can you arrange shipping?",
+            "answer": "Samples and small shipments can use express courier. Bulk shipments can be planned by sea or air, or through your appointed forwarder. Send your destination and delivery target for a freight quotation."
           }
         ],
         "detail_image": {
@@ -1008,7 +1017,7 @@
           ]
         },
         "product_summary": "Knit lace-up casual shoes with a rounded upper and a pronounced ribbed sole profile. The rear pull loop provides a grip when putting the shoe on. This style offers plain and contrasting color combinations for a textured everyday look.",
-        "company_summary": "Quanzhou Beiqiang Footwear & Apparel Co., Ltd. is a footwear factory supplier located in Quanzhou, Fujian, China. We supply casual walking shoes, lightweight slip-on shoes and related footwear for overseas B2B buyers. Product specifications, colors, size ratios, packing and customization requirements are confirmed according to the current style and order details."
+        "company_summary": "Quanzhou Beiqiang Footwear & Apparel Co., Ltd. is a footwear manufacturer based in Quanzhou, Fujian, China. We work with importers, wholesalers, brand owners and e-commerce businesses on wholesale and OEM/ODM footwear projects. From selecting existing styles to developing a design brief, reviewing samples and planning packaging, we help buyers turn their requirements into a clear order plan. Share your product direction and purchasing needs to discuss a suitable cooperation proposal."
       },
       "display": "Y",
       "pc_detail_url": "https://www.alibaba.com/product-detail/Wholesale-Knit-Textile-Lace-Detail-Casual_10000044028277.html",
@@ -1140,10 +1149,10 @@
           "value_name": "BQ027 / K6116"
         }
       ],
-      "owner_member": 286385890,
       "status": "approved"
     },
-    "request_id": "0bab02fe17917724870178022",
-    "_trace_id_": "2108b3a017917724870146723e0df1"
-  }
+    "request_id": "0b51802d17921257290731217",
+    "_trace_id_": "0bf8dd4417921257290704124e0d03"
+  },
+  "scope": "Current exact-ID official readback. Review/display and target checks are recorded independently."
 }

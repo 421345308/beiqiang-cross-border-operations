@@ -1,0 +1,17 @@
+{
+  "id": "1601970118386",
+  "at": "2026-10-16T05:06:22.804502+00:00",
+  "state": "SKU_DATA_RESTORED_PLATFORM_IDS_REISSUED_FORMAL_PASS",
+  "status": "approved",
+  "display": "Y",
+  "checks": {
+    "all_original_SKU_codes_prices_props_and_colour_images": true,
+    "unique_positive_current_SKU_ids": true,
+    "non_target_fields_preserved": true,
+    "same_product_encrypted_identity": true
+  },
+  "original_platform_SKU_ids_preserved": false,
+  "actual_SKUs": 27,
+  "original_SKUs": 27,
+  "actual_score": null
+}

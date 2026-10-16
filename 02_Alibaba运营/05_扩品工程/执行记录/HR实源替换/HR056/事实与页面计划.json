@@ -632,5 +632,22 @@
     "01_产品资产/01_原始数据包/HR056_555/source.json",
     "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR056/素材清单.json"
   ],
-  "procurement_capability": "CURRENT_REAL_SHOE_AND_PROCUREMENT_ENTRY_VERIFIED_NOT_ORDER_STOCK"
+  "procurement_capability": "CURRENT_REAL_SHOE_AND_PROCUREMENT_ENTRY_VERIFIED_NOT_ORDER_STOCK",
+  "model_numbers": {
+    "C": "BQ1056-C",
+    "A": "BQ1056-A",
+    "B": "BQ1056-B"
+  },
+  "current_models_by_id": {
+    "1601943778191": "BQ1056-C",
+    "1601943775160": "BQ1056-A",
+    "1601943751252": "BQ1056-B"
+  },
+  "model_migration_evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/范围.json",
+  "current_platform_category_by_id": {
+    "1601943775160": 201340408,
+    "1601943751252": 201340408,
+    "1601943778191": 201340408
+  },
+  "category_scope": "category_id保留初始改造默认；当前平台叶子按current_platform_category_by_id逐ID读取，不把同源链接不同平台分类混成不同实鞋。"
 }

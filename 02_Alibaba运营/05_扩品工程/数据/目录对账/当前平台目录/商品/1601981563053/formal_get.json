@@ -1,7 +1,6 @@
 {
+  "observed_at_utc": "2026-10-16T03:50:49.065513+00:00",
   "requested_product_id": "1601981563053",
-  "observed_at_utc": "2026-10-15T18:09:25.572923+00:00",
-  "method": "alibaba.icbu.product.get",
   "response": {
     "product": {
       "gmt_create": "2026-10-16 01:01:29",
@@ -16,13 +15,13 @@
           "https://sc04.alicdn.com/kf/Hc1a46e5ebf09457bab15d7492a67311b4.png",
           "https://sc04.alicdn.com/kf/H556e1407a9a0445abf4e8a2c50103df7g.png",
           "https://sc04.alicdn.com/kf/H03a59b4e023a4ff1b248c7d062841d9ck.png",
-          "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
+          "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
         ]
       },
       "struct_detail_product": true,
       "language": "ENGLISH",
       "is_smart_edit": false,
-      "gmt_modified": "2026-10-16 01:47:07",
+      "gmt_modified": "2026-10-16 11:36:02",
       "product_sku": {
         "skus": [
           {
@@ -1159,14 +1158,8 @@
       ],
       "status": "approved"
     },
-    "request_id": "0b0b3a2717920877685292912",
-    "_trace_id_": "2107e99617920877685272458e0e28"
+    "request_id": "2166c2ca17921226519244414",
+    "_trace_id_": "2107e85d17921226519218117e0ee8"
   },
-  "sanitized_fields": [
-    "owner_member",
-    "owner_member_display_name",
-    "owner_member_id"
-  ],
-  "raw_response_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2569准备/家族扩色/after_get.json",
-  "acceptance_state": "FORMAL_FIELDS_SCORE_PASS"
+  "scope": "Current exact-ID official readback. Review/display and target checks are recorded independently."
 }

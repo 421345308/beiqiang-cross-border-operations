@@ -1,7 +1,6 @@
 {
+  "observed_at_utc": "2026-10-16T04:18:18.894019+00:00",
   "requested_product_id": "1601943664760",
-  "observed_at_utc": "2026-10-13T19:42:58.383135+00:00",
-  "method": "alibaba.icbu.product.get",
   "response": {
     "product": {
       "gmt_create": "2026-09-06 15:03:21",
@@ -16,13 +15,13 @@
           "https://sc04.alicdn.com/kf/H8848475356b84334841d39021bc062b70.jpg",
           "https://sc04.alicdn.com/kf/H5187aeb4e6dc441daf1c3d87e4668e9dR.jpg",
           "https://sc04.alicdn.com/kf/He5ba480955664ccaaaa26c0f19ced407o.jpg",
-          "https://sc04.alicdn.com/kf/H281467d09f4b48368c335900f583a9c9r.jpg"
+          "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
         ]
       },
       "struct_detail_product": true,
       "language": "ENGLISH",
       "is_smart_edit": false,
-      "gmt_modified": "2026-10-14 03:29:37",
+      "gmt_modified": "2026-10-16 12:03:32",
       "product_sku": {
         "skus": [
           {
@@ -42,7 +41,7 @@
               }
             ],
             "sku_id": 109807502896,
-            "sku_code": "HR052-B-BLACK-EU41"
+            "sku_code": "BQ1052-B-BLACK-EU41"
           },
           {
             "attr2_value": "{\"222038415\":-842,\"191288010\":-501}",
@@ -61,7 +60,7 @@
               }
             ],
             "sku_id": 109807502897,
-            "sku_code": "HR052-B-BLACK-EU42"
+            "sku_code": "BQ1052-B-BLACK-EU42"
           },
           {
             "attr2_value": "{\"222038415\":-843,\"191288010\":-501}",
@@ -80,7 +79,7 @@
               }
             ],
             "sku_id": 109807502898,
-            "sku_code": "HR052-B-BLACK-EU43"
+            "sku_code": "BQ1052-B-BLACK-EU43"
           },
           {
             "attr2_value": "{\"222038415\":-844,\"191288010\":-501}",
@@ -99,7 +98,7 @@
               }
             ],
             "sku_id": 109807502899,
-            "sku_code": "HR052-B-BLACK-EU44"
+            "sku_code": "BQ1052-B-BLACK-EU44"
           },
           {
             "attr2_value": "{\"222038415\":-839,\"191288010\":-501}",
@@ -118,7 +117,7 @@
               }
             ],
             "sku_id": 109807502894,
-            "sku_code": "HR052-B-BLACK-EU39"
+            "sku_code": "BQ1052-B-BLACK-EU39"
           },
           {
             "attr2_value": "{\"222038415\":-840,\"191288010\":-501}",
@@ -137,7 +136,7 @@
               }
             ],
             "sku_id": 109807502895,
-            "sku_code": "HR052-B-BLACK-EU40"
+            "sku_code": "BQ1052-B-BLACK-EU40"
           }
         ],
         "sku_attributes": [
@@ -279,6 +278,13 @@
             },
             {
               "image_set": {
+                "name": "Detail shot",
+                "id": "300"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/He421821313b94e8f90d5cf9fc4b383c6m.jpg"
+            },
+            {
+              "image_set": {
                 "name": "Other product images",
                 "id": "350"
               },
@@ -290,13 +296,6 @@
                 "id": "350"
               },
               "image_url": "https://sc04.alicdn.com/kf/H2532c6ae27404f38ba1c39f232daae95T.jpg"
-            },
-            {
-              "image_set": {
-                "name": "Detail shot",
-                "id": "300"
-              },
-              "image_url": "https://sc04.alicdn.com/kf/He421821313b94e8f90d5cf9fc4b383c6m.jpg"
             }
           ]
         },
@@ -376,7 +375,7 @@
           "attribute_id": 3,
           "attribute_name": "Model Number",
           "value_id": -1,
-          "value_name": "HR052-B"
+          "value_name": "BQ1052-B"
         },
         {
           "attribute_id": 20700,
@@ -399,13 +398,8 @@
       ],
       "status": "approved"
     },
-    "request_id": "213c932b17919205781938831",
-    "_trace_id_": "2140ca6817919205780555280e107f"
+    "request_id": "0b830ecc17921243017551910",
+    "_trace_id_": "21310a5c17921243017521532e0c94"
   },
-  "sanitized_fields": [
-    "owner_member",
-    "owner_member_display_name",
-    "owner_member_id"
-  ],
-  "raw_response_file": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943664760/after_get.json"
+  "scope": "Current exact-ID official readback. Review/display and target checks are recorded independently."
 }

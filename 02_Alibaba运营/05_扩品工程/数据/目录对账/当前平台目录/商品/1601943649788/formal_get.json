@@ -1,7 +1,6 @@
 {
+  "observed_at_utc": "2026-10-16T04:11:49.715496+00:00",
   "requested_product_id": "1601943649788",
-  "observed_at_utc": "2026-10-13T23:04:53.717762+00:00",
-  "method": "alibaba.icbu.product.get",
   "response": {
     "product": {
       "gmt_create": "2026-09-06 14:42:06",
@@ -16,13 +15,13 @@
           "https://sc04.alicdn.com/kf/H280ba44ea9e1447489116aec7bdcdbe9L.jpg",
           "https://sc04.alicdn.com/kf/Hc91dd32d4b8549118cfdbd5eba85573eZ.jpg",
           "https://sc04.alicdn.com/kf/H18222b401e45419893de738bf29a9a22F.jpg",
-          "https://sc04.alicdn.com/kf/H281467d09f4b48368c335900f583a9c9r.jpg"
+          "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
         ]
       },
       "struct_detail_product": true,
       "language": "ENGLISH",
       "is_smart_edit": false,
-      "gmt_modified": "2026-10-14 06:51:47",
+      "gmt_modified": "2026-10-16 12:01:49",
       "product_sku": {
         "skus": [
           {
@@ -42,7 +41,7 @@
               }
             ],
             "sku_id": 109807617658,
-            "sku_code": "HR048-A-BLACK-EU40-41"
+            "sku_code": "BQ1048-A-BLACK-EU40-41"
           },
           {
             "attr2_value": "{\"222038415\":-2004,\"191288010\":-501}",
@@ -61,7 +60,7 @@
               }
             ],
             "sku_id": 109807617659,
-            "sku_code": "HR048-A-BLACK-EU42-43"
+            "sku_code": "BQ1048-A-BLACK-EU42-43"
           },
           {
             "attr2_value": "{\"222038415\":-2001,\"191288010\":-501}",
@@ -80,7 +79,7 @@
               }
             ],
             "sku_id": 109807617656,
-            "sku_code": "HR048-A-BLACK-EU36-37"
+            "sku_code": "BQ1048-A-BLACK-EU36-37"
           },
           {
             "attr2_value": "{\"222038415\":-2002,\"191288010\":-501}",
@@ -99,7 +98,7 @@
               }
             ],
             "sku_id": 109807617657,
-            "sku_code": "HR048-A-BLACK-EU38-39"
+            "sku_code": "BQ1048-A-BLACK-EU38-39"
           },
           {
             "attr2_value": "{\"222038415\":-2005,\"191288010\":-501}",
@@ -118,7 +117,7 @@
               }
             ],
             "sku_id": 109807617660,
-            "sku_code": "HR048-A-BLACK-EU44-45"
+            "sku_code": "BQ1048-A-BLACK-EU44-45"
           },
           {
             "attr2_value": "{\"222038415\":-2006,\"191288010\":-501}",
@@ -137,7 +136,7 @@
               }
             ],
             "sku_id": 109807617661,
-            "sku_code": "HR048-A-BLACK-EU46-47"
+            "sku_code": "BQ1048-A-BLACK-EU46-47"
           }
         ],
         "sku_attributes": [
@@ -376,7 +375,7 @@
           "attribute_id": 3,
           "attribute_name": "Model Number",
           "value_id": -1,
-          "value_name": "HR048-A"
+          "value_name": "BQ1048-A"
         },
         {
           "attribute_id": 20700,
@@ -399,13 +398,8 @@
       ],
       "status": "approved"
     },
-    "request_id": "21501be117919326935096906",
-    "_trace_id_": "2101075517919326933751007e0e25"
+    "request_id": "213c932b17921239126108172",
+    "_trace_id_": "2108b42717921239126068839e0d3b"
   },
-  "sanitized_fields": [
-    "owner_member",
-    "owner_member_display_name",
-    "owner_member_id"
-  ],
-  "raw_response_file": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943649788/after_get.json"
+  "scope": "Current exact-ID official readback. Review/display and target checks are recorded independently."
 }

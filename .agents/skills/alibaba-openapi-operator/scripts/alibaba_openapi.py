@@ -30,7 +30,11 @@ SIGN_METHOD = "sha256"
 
 
 class ClientError(RuntimeError):
-    pass
+    def __init__(self, message, *, transport_evidence=None):
+        super().__init__(message)
+        # In-memory only. Never serialize raw telemetry or signed request URLs.
+        self.transport_evidence = transport_evidence or {}
+
 
 
 def load_config(path: Path) -> dict:
@@ -77,16 +81,59 @@ def sign_request(api_name_prefix: str, params: dict[str, str], secret: str) -> s
 def http_json(request: Request, timeout: int = 60) -> dict:
     try:
         with urlopen(request, timeout=timeout) as response:
+            http_status = response.status
             raw = response.read().decode("utf-8", errors="replace")
     except HTTPError as exc:
         raw = exc.read().decode("utf-8", errors="replace")
-        raise ClientError(f"HTTP {exc.code}: {raw[:1200]}") from exc
+        raise ClientError(f"HTTP {exc.code}: response captured in memory", transport_evidence={"phase":"http_response","request_sent":True,"http_status":exc.code,"response_body":raw}) from exc
     except URLError as exc:
-        raise ClientError(f"Network error: {exc.reason}") from exc
+        raise ClientError("Network error; write outcome unknown", transport_evidence={"phase":"transport","request_sent":None,"stderr":str(exc.reason)}) from exc
     try:
         return json.loads(raw)
     except json.JSONDecodeError as exc:
-        raise ClientError(f"Non-JSON response: {raw[:1200]}") from exc
+        raise ClientError("Non-JSON response captured in memory", transport_evidence={"phase":"response_decode","request_sent":True,"http_status":http_status,"response_body":raw}) from exc
+
+
+def native_http_json(request: Request, timeout: int = 60) -> dict:
+    """Existing verified-TLS curl transport with in-memory error telemetry.
+
+    No retries, credentials/argv journal or TLS bypass. Caller must sanitize
+    transport_evidence before saving it. Response status is curl's write-out,
+    not inferred from stderr or JSON business fields.
+    """
+    from urllib.parse import urlsplit
+    import subprocess
+    target = urlsplit(request.full_url)
+    if target.scheme != 'https' or target.hostname not in ('open-api.alibaba.com','eco.taobao.com','gw.api.taobao.com'):
+        raise ClientError('Native transport endpoint rejected', transport_evidence={'phase':'pre_request','request_sent':False})
+    marker = '\n__BEIQIANG_HTTP_STATUS__:'
+    cmd = ['curl.exe','--silent','--show-error','--max-time',str(timeout),
+           '--request',request.get_method(),'--url',request.full_url,
+           '--write-out',marker+'%{http_code}']
+    for key, value in request.header_items():cmd.extend(['--header',key+': '+value])
+    if request.data is not None:cmd.extend(['--data-binary','@-'])
+    try:
+        result = subprocess.run(cmd,input=request.data,capture_output=True,timeout=timeout+5)
+    except OSError as exc:
+        raise ClientError('Native transport could not launch', transport_evidence={
+            'phase':'subprocess_launch','request_sent':False,'stderr':str(exc)}) from exc
+    except subprocess.TimeoutExpired as exc:
+        raise ClientError('Native transport timed out; outcome unknown', transport_evidence={
+            'phase':'transport','request_sent':None,'response_body':exc.stdout,'stderr':exc.stderr}) from exc
+    output = result.stdout.decode('utf-8',errors='replace')
+    body, separator, status = output.rpartition(marker)
+    http_status = int(status) if separator and len(status)==3 and status.isdigit() and status!='000' else None
+    if not separator:body=output
+    telemetry = {'phase':'http_response' if http_status else 'transport',
+                 'request_sent':True if http_status else None,
+                 'curl_exit_code':result.returncode,'http_status':http_status,
+                 'response_body':body,'stderr':result.stderr}
+    if result.returncode or (http_status is not None and http_status >= 400):
+        raise ClientError('Native HTTP transport failed; write outcome requires reconciliation', transport_evidence=telemetry)
+    try:return json.loads(body)
+    except json.JSONDecodeError as exc:
+        telemetry['phase']='response_decode'
+        raise ClientError('Native response was not JSON; outcome unknown', transport_evidence=telemetry) from exc
 
 
 def gop_call(config: dict, api_path: str, business: dict) -> dict:
@@ -117,7 +164,7 @@ def top_common(config: dict, api_method: str, require_token: bool = True) -> dic
     if require_token:
         token = config.get("accessToken")
         if not token:
-            raise ClientError("No access token. Complete OAuth authorization first.")
+            raise ClientError("No access token. Complete OAuth authorization first.", transport_evidence={"phase":"pre_request","request_sent":False})
         # Alibaba.com's current migrated-API HTTP example names this
         # parameter access_token. Do not substitute the legacy TOP name
         # "session" when making raw HTTP requests.

@@ -1,0 +1,61 @@
+{
+  "at": "2026-10-16T05:17:22.697536+00:00",
+  "targets": 483,
+  "states": {
+    "FORMAL_FIELDS_SCORE_PASS": 481,
+    "PLATFORM_REJECTED_TARGET_VALUES_RETURNED": 2
+  },
+  "model_states": {
+    "FORMAL_FIELDS_SCORE_PASS": 173,
+    "PLATFORM_REJECTED_TARGET_VALUES_RETURNED": 2
+  },
+  "double_sync_ids": 483,
+  "excluded": [
+    {
+      "id": "1601969860254",
+      "model": "BQ-M858",
+      "new_model": "BQ-M858",
+      "status": "approved",
+      "display": "N",
+      "reason": "PRESERVE_NON_ACTIVE_STATE_NO_REPUBLISH"
+    },
+    {
+      "id": "1601969707634",
+      "model": "BQ-W266",
+      "new_model": "BQ-W266",
+      "status": "approved",
+      "display": "N",
+      "reason": "PRESERVE_NON_ACTIVE_STATE_NO_REPUBLISH"
+    },
+    {
+      "id": "1601969810495",
+      "model": "BQ-W262",
+      "new_model": "BQ-W262",
+      "status": "approved",
+      "display": "N",
+      "reason": "PRESERVE_NON_ACTIVE_STATE_NO_REPUBLISH"
+    },
+    {
+      "id": "1601969526580",
+      "model": "BQ-W266",
+      "new_model": "BQ-W266",
+      "status": "approved",
+      "display": "N",
+      "reason": "PRESERVE_NON_ACTIVE_STATE_NO_REPUBLISH"
+    },
+    {
+      "id": "1601825074604",
+      "model": "BQ-009",
+      "new_model": "BQ-009",
+      "status": "approved",
+      "display": "Y",
+      "reason": "PROTECTED_SOURCE_READ_ONLY"
+    }
+  ],
+  "checks": {
+    "no_new_registry_errors": true,
+    "all_local_proofs_pass": true
+  },
+  "baseline_validation_issues": [],
+  "public_qa": "未逐商品浏览器实测"
+}

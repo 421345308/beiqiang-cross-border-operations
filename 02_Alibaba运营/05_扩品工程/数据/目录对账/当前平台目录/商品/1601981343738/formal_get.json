@@ -1,7 +1,6 @@
 {
+  "observed_at_utc": "2026-10-16T04:17:23.424007+00:00",
   "requested_product_id": "1601981343738",
-  "observed_at_utc": "2026-10-15T14:20:21.263571+00:00",
-  "method": "alibaba.icbu.product.get",
   "response": {
     "product": {
       "gmt_create": "2026-10-15 21:50:02",
@@ -16,13 +15,13 @@
           "https://sc04.alicdn.com/kf/Hc1669a84eec843ecbe73dfae8ecf2d47c.jpg",
           "https://sc04.alicdn.com/kf/H37fbbbccd1004a37a0c05494aad4b9938.jpg",
           "https://sc04.alicdn.com/kf/Hd7a149ed50234b12998b625ea1d7f9cfb.jpg",
-          "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
+          "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
         ]
       },
       "struct_detail_product": true,
       "language": "ENGLISH",
       "is_smart_edit": false,
-      "gmt_modified": "2026-10-15 21:50:02",
+      "gmt_modified": "2026-10-16 11:53:05",
       "product_sku": {
         "skus": [
           {
@@ -702,17 +701,17 @@
             },
             {
               "image_set": {
-                "name": "Packaging & shipping specifications",
-                "id": 700
-              },
-              "image_url": "https://sc04.alicdn.com/kf/H7d0669b743e742c1a97e8108e6cc96eaV.png"
-            },
-            {
-              "image_set": {
                 "name": "Company overview",
                 "id": 400
               },
               "image_url": "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
+            },
+            {
+              "image_set": {
+                "name": "Packaging & shipping specifications",
+                "id": 700
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H7d0669b743e742c1a97e8108e6cc96eaV.png"
             }
           ]
         },
@@ -820,14 +819,14 @@
         {
           "attribute_id": 191290428,
           "attribute_name": "Upper Material",
-          "value_id": -1,
-          "value_name": "Oxford fabric"
+          "value_id": 187600186,
+          "value_name": "Faux Leather"
         },
         {
           "attribute_id": 191290428,
           "attribute_name": "Upper Material",
-          "value_id": 187600186,
-          "value_name": "Faux Leather"
+          "value_id": -1,
+          "value_name": "Oxford fabric"
         },
         {
           "attribute_id": 2,
@@ -844,14 +843,8 @@
       ],
       "status": "approved"
     },
-    "request_id": "21501be117920740234226166",
-    "_trace_id_": "210141f717920740232797684e0eca"
+    "request_id": "0bbb3b2417921242462414152",
+    "_trace_id_": "2150384d17921242462396236e0e66"
   },
-  "sanitized_fields": [
-    "owner_member",
-    "owner_member_display_name",
-    "owner_member_id"
-  ],
-  "raw_response_file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2593准备/after_get.json",
-  "acceptance_state": "FORMAL_FIELDS_SCORE_PASS"
+  "scope": "Current exact-ID official readback. Review/display and target checks are recorded independently."
 }

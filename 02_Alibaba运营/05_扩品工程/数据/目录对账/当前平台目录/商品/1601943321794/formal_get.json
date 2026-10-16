@@ -1,14 +1,12 @@
 {
+  "observed_at_utc": "2026-10-16T04:40:07.390091+00:00",
   "requested_product_id": "1601943321794",
-  "observed_at_utc": "2026-10-11T18:23:49.580447+00:00",
-  "method": "alibaba.icbu.product.get",
   "response": {
     "product": {
       "gmt_create": "2026-09-05 20:33:08",
       "keywords": [
         ""
       ],
-      "owner_member_display_name": "User name",
       "subject": "Men's Leather Slip On Loafers for Business Casual and Office Wear",
       "main_image": {
         "images": [
@@ -17,13 +15,13 @@
           "https://sc04.alicdn.com/kf/H73f8376bbca4494c9ddb231cd5b0c9a4W.png",
           "https://sc04.alicdn.com/kf/Hb2feeaaf8d8d4e98a9d84c6c0209e1977.png",
           "https://sc04.alicdn.com/kf/H9e4dc816bbac44eda94c0562a7fbea2a2.png",
-          "https://sc04.alicdn.com/kf/Hd572bffc2a744596b3b2303f4a901dadM.png"
+          "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
         ]
       },
       "struct_detail_product": true,
       "language": "ENGLISH",
       "is_smart_edit": false,
-      "gmt_modified": "2026-10-12 02:05:43",
+      "gmt_modified": "2026-10-16 12:18:14",
       "product_sku": {
         "skus": [
           {
@@ -49,7 +47,7 @@
               }
             ],
             "sku_id": 109750198838,
-            "sku_code": "HR001-A-BLACK-EU44"
+            "sku_code": "BQ1001-A-BLACK-EU44"
           },
           {
             "attr2_value": "{\"222038415\":28391,\"191288010\":3327837}",
@@ -74,7 +72,7 @@
               }
             ],
             "sku_id": 109750198836,
-            "sku_code": "HR001-A-BLACK-EU42"
+            "sku_code": "BQ1001-A-BLACK-EU42"
           },
           {
             "attr2_value": "{\"222038415\":28392,\"191288010\":3327837}",
@@ -99,7 +97,7 @@
               }
             ],
             "sku_id": 109750198837,
-            "sku_code": "HR001-A-BLACK-EU43"
+            "sku_code": "BQ1001-A-BLACK-EU43"
           },
           {
             "attr2_value": "{\"222038415\":28389,\"191288010\":3327837}",
@@ -124,7 +122,7 @@
               }
             ],
             "sku_id": 109750198834,
-            "sku_code": "HR001-A-BLACK-EU40"
+            "sku_code": "BQ1001-A-BLACK-EU40"
           },
           {
             "attr2_value": "{\"222038415\":28390,\"191288010\":3327837}",
@@ -149,7 +147,7 @@
               }
             ],
             "sku_id": 109750198835,
-            "sku_code": "HR001-A-BLACK-EU41"
+            "sku_code": "BQ1001-A-BLACK-EU41"
           },
           {
             "attr2_value": "{\"222038415\":190000792,\"191288010\":3327837}",
@@ -174,7 +172,7 @@
               }
             ],
             "sku_id": 109750198833,
-            "sku_code": "HR001-A-BLACK-EU39"
+            "sku_code": "BQ1001-A-BLACK-EU39"
           }
         ],
         "sku_attributes": [
@@ -229,74 +227,80 @@
           "images": [
             {
               "image_set": {
-                "name": "Customization capabilities",
-                "id": 550,
-                "order": "1"
-              },
-              "image_url": "https://sc04.alicdn.com/kf/H496f7579171f4370a1d47c3adf30001bK.jpg"
-            },
-            {
-              "image_set": {
-                "name": "Factory profile",
-                "id": 500,
-                "order": "3"
-              },
-              "image_url": "https://sc04.alicdn.com/kf/H9f32c7ecea0f4d25bc5ddc9cd04c1e5dK.jpg"
-            },
-            {
-              "image_set": {
-                "name": "Packaging & shipping specifications",
-                "id": 700,
-                "order": "4"
-              },
-              "image_url": "https://sc04.alicdn.com/kf/H5f71c3cfb4064b51bb458d0a786cb402R.jpg"
-            },
-            {
-              "image_set": {
                 "name": "Production workflow",
-                "id": 600,
-                "order": "2"
+                "id": 600
               },
-              "image_url": "https://sc04.alicdn.com/kf/H36e700f5c3ee447a80c035d8ae7521d9a.jpg"
+              "image_url": "https://sc04.alicdn.com/kf/H76f31cce4cc0447a99b72496f0ae5c93l.png"
             },
             {
               "image_set": {
                 "name": "Company overview",
-                "id": 400,
-                "order": "0"
+                "id": 400
               },
-              "image_url": "https://sc04.alicdn.com/kf/Ha8c1682092424e778eadf945763e79daU.jpg"
+              "image_url": "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
+            },
+            {
+              "image_set": {
+                "name": "Competitive advantages",
+                "id": 450
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H8779a3d5521c4cce910395f583af74505.png"
+            },
+            {
+              "image_set": {
+                "name": "Customization capabilities",
+                "id": 550
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H2c23ba6ddeac47a686c0e1350c4ac294v.png"
+            },
+            {
+              "image_set": {
+                "name": "Packaging & shipping specifications",
+                "id": 700
+              },
+              "image_url": "https://sc04.alicdn.com/kf/He558a164125f4bc295dfe3d70bb76066w.png"
+            },
+            {
+              "image_set": {
+                "name": "Packaging & shipping specifications",
+                "id": 700
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H7d0669b743e742c1a97e8108e6cc96eaV.png"
             }
           ]
         },
         "product_faq": [
           {
-            "question": "Which color and EU size choices are listed?",
-            "answer": "Black: EU 39–44."
+            "question": "Are you a factory or a trading company?",
+            "answer": "We are a footwear manufacturer based in Quanzhou, Fujian, China. We work with overseas B2B buyers on wholesale and OEM/ODM footwear projects."
           },
           {
-            "question": "What gives this loafer its business-casual appearance?",
-            "answer": "A plain Black leather front, round toe and low-profile rubber sole. It has a slip-on opening with genuine-leather lining and no conventional laces."
+            "question": "What is your minimum order quantity?",
+            "answer": "Small trial orders are welcome for existing styles; the minimum quantity is shown on each product page. For custom orders, the MOQ depends on the design, materials, branding and packaging."
           },
           {
-            "question": "What should I assess on a sample?",
-            "answer": "Try the selected EU size with the intended socks. Check the shoe opening, toe room, instep fit and heel hold before choosing the bulk size mix."
+            "question": "Can I mix colors and sizes in one order?",
+            "answer": "Yes. Mixed colors and sizes are supported for existing styles. Mixed-style orders can also be discussed according to the selected styles and order quantity."
           },
           {
-            "question": "What is the minimum order for the original style?",
-            "answer": "The listed original-style minimum is 2 pairs. Quantity pricing is shown on this page; logo and custom packaging proposals are quoted separately."
+            "question": "Can I order samples before a bulk order?",
+            "answer": "Yes. Samples can be arranged for you to check the workmanship and fit before bulk ordering. Sample and courier costs are quoted before payment."
           },
           {
-            "question": "How can I request a sample?",
-            "answer": "Send the selected color, EU size and delivery postcode for a sample quotation covering the pair, courier charge and proposed dispatch date."
+            "question": "What packaging options do you offer?",
+            "answer": "Shoe boxes and polybags are available packing options. Custom boxes, labels and carton markings can be planned around your order and brand requirements."
           },
           {
-            "question": "What should I send for logo or packaging requirements?",
-            "answer": "Send the logo artwork, preferred placement, packaging brief and order quantity. The proposal for this style will set out the applicable minimum, cost and sample process."
+            "question": "Do you support logo customization and OEM/ODM?",
+            "answer": "Yes. We work with buyers on branding and footwear development. Send your logo artwork or design reference, target quantity and market requirements so we can develop a suitable proposal."
           },
           {
-            "question": "How can I get a delivered quotation?",
-            "answer": "Send pair quantities by color and EU size, the destination postcode or port and the packaging request. The quotation separates product cost and freight and includes the proposed dispatch and transit schedule."
+            "question": "What is the lead time?",
+            "answer": "Lead time depends on product availability, order quantity and customization. Existing styles can usually be arranged sooner; the production or dispatch schedule is agreed when confirming the order."
+          },
+          {
+            "question": "How can you arrange shipping?",
+            "answer": "Samples and small shipments can use express courier. Bulk shipments can be planned by sea or air, or through your appointed forwarder. Send your destination and delivery target for a freight quotation."
           }
         ],
         "detail_image": {
@@ -336,7 +340,7 @@
           ]
         },
         "product_summary": "Men's genuine-leather slip-on loafers with a closed round toe and a restrained low-profile sole. Genuine-leather lining and rubber sole layers form the construction. A clean Black upper gives this lace-free shape a business-casual and office-wear direction.",
-        "company_summary": "Quanzhou Beiqiang Footwear & Apparel Co., Ltd. supports international B2B footwear enquiries and quotations. Each selected style and order is reviewed against requested specifications, quantity, sizing and packing. Sample or customization requests are assessed for availability, feasibility, cost and timing before quotation."
+        "company_summary": "Quanzhou Beiqiang Footwear & Apparel Co., Ltd. is a footwear manufacturer based in Quanzhou, Fujian, China. We work with importers, wholesalers, brand owners and e-commerce businesses on wholesale and OEM/ODM footwear projects. From selecting existing styles to developing a design brief, reviewing samples and planning packaging, we help buyers turn their requirements into a clear order plan. Share your product direction and purchasing needs to discuss a suitable cooperation proposal."
       },
       "display": "Y",
       "pc_detail_url": "https://www.alibaba.com/product-detail/Men-s-Leather-Slip-On-Loafers_1601943321794.html",
@@ -411,13 +415,13 @@
           "attribute_id": 3,
           "attribute_name": "Model Number",
           "value_id": -1,
-          "value_name": "HR001-A"
+          "value_name": "BQ1001-A"
         }
       ],
-      "owner_member": 286385890,
       "status": "approved"
     },
-    "request_id": "213c932b17917430335726992",
-    "_trace_id_": "2108b3a517917430335704567e0bf6"
-  }
+    "request_id": "213e759c17921256102562511",
+    "_trace_id_": "212b4f9317921256102531788e0c09"
+  },
+  "scope": "Current exact-ID official readback. Review/display and target checks are recorded independently."
 }

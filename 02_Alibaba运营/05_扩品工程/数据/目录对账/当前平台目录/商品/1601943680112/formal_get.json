@@ -1,7 +1,6 @@
 {
+  "observed_at_utc": "2026-10-16T04:18:52.732859+00:00",
   "requested_product_id": "1601943680112",
-  "observed_at_utc": "2026-10-13T12:04:27.621233+00:00",
-  "method": "alibaba.icbu.product.get",
   "response": {
     "product": {
       "gmt_create": "2026-09-06 10:18:55",
@@ -16,13 +15,13 @@
           "https://sc04.alicdn.com/kf/Ha10a251d9b38416dac8d21642b693143n.jpg",
           "https://sc04.alicdn.com/kf/Hced5812541144ea5bb5758081c2293675.jpg",
           "https://sc04.alicdn.com/kf/H9ec20839f4314edc82a480a6e8465aa3w.jpg",
-          "https://sc04.alicdn.com/kf/H281467d09f4b48368c335900f583a9c9r.jpg"
+          "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
         ]
       },
       "struct_detail_product": true,
       "language": "ENGLISH",
       "is_smart_edit": false,
-      "gmt_modified": "2026-10-13 18:39:46",
+      "gmt_modified": "2026-10-16 12:04:52",
       "product_sku": {
         "skus": [
           {
@@ -42,7 +41,7 @@
               }
             ],
             "sku_id": 109805892105,
-            "sku_code": "HR035-B-CAMEL-EU35"
+            "sku_code": "BQ1035-B-CAMEL-EU35"
           },
           {
             "attr2_value": "{\"222038415\":-837,\"191288010\":-501}",
@@ -61,7 +60,7 @@
               }
             ],
             "sku_id": 109805892107,
-            "sku_code": "HR035-B-CAMEL-EU37"
+            "sku_code": "BQ1035-B-CAMEL-EU37"
           },
           {
             "attr2_value": "{\"222038415\":-836,\"191288010\":-501}",
@@ -80,7 +79,7 @@
               }
             ],
             "sku_id": 109805892106,
-            "sku_code": "HR035-B-CAMEL-EU36"
+            "sku_code": "BQ1035-B-CAMEL-EU36"
           },
           {
             "attr2_value": "{\"222038415\":-839,\"191288010\":-501}",
@@ -99,7 +98,7 @@
               }
             ],
             "sku_id": 109805892109,
-            "sku_code": "HR035-B-CAMEL-EU39"
+            "sku_code": "BQ1035-B-CAMEL-EU39"
           },
           {
             "attr2_value": "{\"222038415\":-838,\"191288010\":-501}",
@@ -118,7 +117,7 @@
               }
             ],
             "sku_id": 109805892108,
-            "sku_code": "HR035-B-CAMEL-EU38"
+            "sku_code": "BQ1035-B-CAMEL-EU38"
           },
           {
             "attr2_value": "{\"222038415\":-835,\"191288010\":-502}",
@@ -137,7 +136,7 @@
               }
             ],
             "sku_id": 109805892111,
-            "sku_code": "HR035-B-BROWN-EU35"
+            "sku_code": "BQ1035-B-BROWN-EU35"
           },
           {
             "attr2_value": "{\"222038415\":-840,\"191288010\":-501}",
@@ -156,7 +155,7 @@
               }
             ],
             "sku_id": 109805892110,
-            "sku_code": "HR035-B-CAMEL-EU40"
+            "sku_code": "BQ1035-B-CAMEL-EU40"
           },
           {
             "attr2_value": "{\"222038415\":-837,\"191288010\":-502}",
@@ -175,7 +174,7 @@
               }
             ],
             "sku_id": 109805892113,
-            "sku_code": "HR035-B-BROWN-EU37"
+            "sku_code": "BQ1035-B-BROWN-EU37"
           },
           {
             "attr2_value": "{\"222038415\":-836,\"191288010\":-502}",
@@ -194,7 +193,7 @@
               }
             ],
             "sku_id": 109805892112,
-            "sku_code": "HR035-B-BROWN-EU36"
+            "sku_code": "BQ1035-B-BROWN-EU36"
           },
           {
             "attr2_value": "{\"222038415\":-839,\"191288010\":-502}",
@@ -213,7 +212,7 @@
               }
             ],
             "sku_id": 109805892115,
-            "sku_code": "HR035-B-BROWN-EU39"
+            "sku_code": "BQ1035-B-BROWN-EU39"
           },
           {
             "attr2_value": "{\"222038415\":-838,\"191288010\":-502}",
@@ -232,7 +231,7 @@
               }
             ],
             "sku_id": 109805892114,
-            "sku_code": "HR035-B-BROWN-EU38"
+            "sku_code": "BQ1035-B-BROWN-EU38"
           },
           {
             "attr2_value": "{\"222038415\":-840,\"191288010\":-502}",
@@ -251,7 +250,7 @@
               }
             ],
             "sku_id": 109805892116,
-            "sku_code": "HR035-B-BROWN-EU40"
+            "sku_code": "BQ1035-B-BROWN-EU40"
           }
         ],
         "sku_attributes": [
@@ -398,6 +397,13 @@
             },
             {
               "image_set": {
+                "name": "Detail shot",
+                "id": "300"
+              },
+              "image_url": "https://sc04.alicdn.com/kf/Hb00f192d409247ea8cce27e003cf9a4e6.jpg"
+            },
+            {
+              "image_set": {
                 "name": "Other product images",
                 "id": "350"
               },
@@ -409,13 +415,6 @@
                 "id": "350"
               },
               "image_url": "https://sc04.alicdn.com/kf/Hc88485eb3ca546438bb1c53c5e8bfc6d0.jpg"
-            },
-            {
-              "image_set": {
-                "name": "Detail shot",
-                "id": "300"
-              },
-              "image_url": "https://sc04.alicdn.com/kf/Hb00f192d409247ea8cce27e003cf9a4e6.jpg"
             }
           ]
         },
@@ -489,7 +488,7 @@
           "attribute_id": 3,
           "attribute_name": "Model Number",
           "value_id": -1,
-          "value_name": "HR035-B"
+          "value_name": "BQ1035-B"
         },
         {
           "attribute_id": 20700,
@@ -500,14 +499,14 @@
         {
           "attribute_id": 191288243,
           "attribute_name": "Style",
-          "value_id": -1,
-          "value_name": "Platform Sneakers"
+          "value_id": 80806811,
+          "value_name": "Lace-up"
         },
         {
           "attribute_id": 191288243,
           "attribute_name": "Style",
-          "value_id": 80806811,
-          "value_name": "Lace-up"
+          "value_id": -1,
+          "value_name": "Platform Sneakers"
         },
         {
           "attribute_id": 191290428,
@@ -524,13 +523,8 @@
       ],
       "status": "approved"
     },
-    "request_id": "213c934417918930763607504",
-    "_trace_id_": "213ede3717918930763572867e0f3d"
+    "request_id": "0bbb3b2417921243356214644",
+    "_trace_id_": "21057f9a17921243356183801e0e59"
   },
-  "sanitized_fields": [
-    "owner_member",
-    "owner_member_display_name",
-    "owner_member_id"
-  ],
-  "raw_response_file": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943680112/after_get.json"
+  "scope": "Current exact-ID official readback. Review/display and target checks are recorded independently."
 }

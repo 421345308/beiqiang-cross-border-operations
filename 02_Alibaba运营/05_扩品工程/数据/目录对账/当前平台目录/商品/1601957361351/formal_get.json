@@ -1,14 +1,12 @@
 {
+  "observed_at_utc": "2026-10-16T04:20:58.689591+00:00",
   "requested_product_id": "1601957361351",
-  "observed_at_utc": "2026-10-11T18:24:40.481159+00:00",
-  "method": "alibaba.icbu.product.get",
   "response": {
     "product": {
       "gmt_create": "2026-09-19 22:18:14",
       "keywords": [
         ""
       ],
-      "owner_member_display_name": "User name",
       "subject": "Wholesale White Solid Breathable Knit Lace-Up Walking Shoes Lightweight EVA Mesh Upper Spring Summer Casual Sneakers R1218 BQ003",
       "main_image": {
         "images": [
@@ -17,13 +15,13 @@
           "https://sc04.alicdn.com/kf/H684a25e8a22b45b6842843d4d4a43546F.jpg",
           "https://sc04.alicdn.com/kf/H975383df91ec4986becf60fe671235dco.jpg",
           "https://sc04.alicdn.com/kf/H487dcaceaef64dc49d559d3372a62748k.jpg",
-          "https://sc04.alicdn.com/kf/Hc4fbb80cf2b74c54918edafe06968f1cB.jpg"
+          "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
         ]
       },
       "struct_detail_product": true,
       "language": "ENGLISH",
       "is_smart_edit": false,
-      "gmt_modified": "2026-10-12 02:07:50",
+      "gmt_modified": "2026-10-16 12:09:06",
       "product_sku": {
         "skus": [
           {
@@ -1494,69 +1492,80 @@
           "images": [
             {
               "image_set": {
+                "name": "Packaging & shipping specifications",
+                "id": 700
+              },
+              "image_url": "https://sc04.alicdn.com/kf/He558a164125f4bc295dfe3d70bb76066w.png"
+            },
+            {
+              "image_set": {
                 "name": "Customization capabilities",
                 "id": 550
               },
-              "image_url": "https://sc04.alicdn.com/kf/H496f7579171f4370a1d47c3adf30001bK.jpg"
-            },
-            {
-              "image_set": {
-                "name": "Factory profile",
-                "id": 500
-              },
-              "image_url": "https://sc04.alicdn.com/kf/H9f32c7ecea0f4d25bc5ddc9cd04c1e5dK.jpg"
-            },
-            {
-              "image_set": {
-                "name": "Company overview",
-                "id": 400
-              },
-              "image_url": "https://sc04.alicdn.com/kf/Ha8c1682092424e778eadf945763e79daU.jpg"
+              "image_url": "https://sc04.alicdn.com/kf/H2c23ba6ddeac47a686c0e1350c4ac294v.png"
             },
             {
               "image_set": {
                 "name": "Production workflow",
                 "id": 600
               },
-              "image_url": "https://sc04.alicdn.com/kf/H36e700f5c3ee447a80c035d8ae7521d9a.jpg"
+              "image_url": "https://sc04.alicdn.com/kf/H76f31cce4cc0447a99b72496f0ae5c93l.png"
+            },
+            {
+              "image_set": {
+                "name": "Company overview",
+                "id": 400
+              },
+              "image_url": "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png"
+            },
+            {
+              "image_set": {
+                "name": "Competitive advantages",
+                "id": 450
+              },
+              "image_url": "https://sc04.alicdn.com/kf/H8779a3d5521c4cce910395f583af74505.png"
             },
             {
               "image_set": {
                 "name": "Packaging & shipping specifications",
                 "id": 700
               },
-              "image_url": "https://sc04.alicdn.com/kf/H5f71c3cfb4064b51bb458d0a786cb402R.jpg"
+              "image_url": "https://sc04.alicdn.com/kf/H7d0669b743e742c1a97e8108e6cc96eaV.png"
             }
           ]
         },
         "product_faq": [
           {
-            "question": "Which color and EU size combinations are listed?",
-            "answer": "Grey: EU 35–45; Pink: EU 35–45; White: EU 35–45; Black White: EU 35–45; All Black: EU 35–45."
+            "question": "Are you a factory or a trading company?",
+            "answer": "We are a footwear manufacturer based in Quanzhou, Fujian, China. We work with overseas B2B buyers on wholesale and OEM/ODM footwear projects."
           },
           {
-            "question": "What distinguishes the toe and sole design?",
-            "answer": "A raised toe cap and contrasting sole edge frame the knitted upper. The sole is EVA, and conventional laces adjust the upper."
+            "question": "What is your minimum order quantity?",
+            "answer": "Small trial orders are welcome for existing styles; the minimum quantity is shown on each product page. For custom orders, the MOQ depends on the design, materials, branding and packaging."
           },
           {
-            "question": "What should I check during a sample fitting?",
-            "answer": "Try the sample with the intended socks. Adjust the laces, then check toe room, instep fit and heel hold before deciding the bulk EU size mix."
+            "question": "Can I mix colors and sizes in one order?",
+            "answer": "Yes. Mixed colors and sizes are supported for existing styles. Mixed-style orders can also be discussed according to the selected styles and order quantity."
           },
           {
-            "question": "What is the minimum order for the original style?",
-            "answer": "The listed original-style wholesale minimum is 2 pairs. Quantity pricing is shown on this page; branding and custom packaging are quoted separately."
+            "question": "Can I order samples before a bulk order?",
+            "answer": "Yes. Samples can be arranged for you to check the workmanship and fit before bulk ordering. Sample and courier costs are quoted before payment."
           },
           {
-            "question": "How can I request a sample?",
-            "answer": "Send the selected color or lining variant, EU size and delivery postcode for a sample quotation. It sets out the sample charge, courier cost and proposed dispatch date."
+            "question": "What packaging options do you offer?",
+            "answer": "Shoe boxes and polybags are available packing options. Custom boxes, labels and carton markings can be planned around your order and brand requirements."
           },
           {
-            "question": "What should I send for a branding or packaging proposal?",
-            "answer": "Send your logo artwork, preferred placement, packaging brief and order quantity. We can review the proposal for this style and set out the applicable minimum, cost and sample process."
+            "question": "Do you support logo customization and OEM/ODM?",
+            "answer": "Yes. We work with buyers on branding and footwear development. Send your logo artwork or design reference, target quantity and market requirements so we can develop a suitable proposal."
           },
           {
-            "question": "How can I get a delivered quotation?",
-            "answer": "Send pair quantities by color and EU size, the destination postcode or port and your packaging request. The quotation separates product cost from freight and includes the proposed dispatch and transit schedule."
+            "question": "What is the lead time?",
+            "answer": "Lead time depends on product availability, order quantity and customization. Existing styles can usually be arranged sooner; the production or dispatch schedule is agreed when confirming the order."
+          },
+          {
+            "question": "How can you arrange shipping?",
+            "answer": "Samples and small shipments can use express courier. Bulk shipments can be planned by sea or air, or through your appointed forwarder. Send your destination and delivery target for a freight quotation."
           }
         ],
         "detail_image": {
@@ -1592,7 +1601,7 @@
           ]
         },
         "product_summary": "Knit lace-up casual walking shoes with a raised toe cap, contrast sole edge and EVA sole. The textured upper and conventional laces combine a familiar sneaker shape with a distinctly casual profile. Mesh lining completes the construction.",
-        "company_summary": "Quanzhou Beiqiang Footwear & Apparel Co., Ltd. is a footwear factory supplier based in Quanzhou, Fujian, China. We serve importers, wholesalers, online sellers and private-label buyers with casual walking shoes and related footwear. Sample review, mixed size and color requirements, and OEM/ODM options can be discussed according to product availability, quantity, materials, logo and packing requirements. Product details and delivery arrangements are confirmed before order placement."
+        "company_summary": "Quanzhou Beiqiang Footwear & Apparel Co., Ltd. is a footwear manufacturer based in Quanzhou, Fujian, China. We work with importers, wholesalers, brand owners and e-commerce businesses on wholesale and OEM/ODM footwear projects. From selecting existing styles to developing a design brief, reviewing samples and planning packaging, we help buyers turn their requirements into a clear order plan. Share your product direction and purchasing needs to discuss a suitable cooperation proposal."
       },
       "display": "Y",
       "pc_detail_url": "https://www.alibaba.com/product-detail/Wholesale-White-Solid-Breathable-Knit-Lace_1601957361351.html",
@@ -1706,10 +1715,10 @@
           "value_name": "BQ003-S1 / R1218"
         }
       ],
-      "owner_member": 286385890,
       "status": "approved"
     },
-    "request_id": "0bab02fc17917430845005148",
-    "_trace_id_": "2107d5c717917430844981695e0dc3"
-  }
+    "request_id": "0b51802d17921244614255287",
+    "_trace_id_": "2150384d17921244614226268e0b92"
+  },
+  "scope": "Current exact-ID official readback. Review/display and target checks are recorded independently."
 }

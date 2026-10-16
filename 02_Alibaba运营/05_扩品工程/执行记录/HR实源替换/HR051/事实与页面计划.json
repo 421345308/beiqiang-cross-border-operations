@@ -33,8 +33,11 @@
     "E": "1601969906452"
   },
   "model_numbers": {
-    "D": "HR051-A",
-    "E": "HR051-A"
+    "D": "BQ1051-D",
+    "E": "BQ1051-E",
+    "B": "BQ1051-B",
+    "C": "BQ1051-C",
+    "A": "BQ1051-A"
   },
   "local_intent_candidates": [
     "织物拼接系带运动休闲鞋"
@@ -458,5 +461,21 @@
       "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601969906452/verification.json"
     ],
     "scope": "Approved V8 exact gallery roles, company intro and general eight FAQs verified separately from product highlights."
-  }
+  },
+  "current_models_by_id": {
+    "1601969872083": "BQ1051-D",
+    "1601943750198": "BQ1051-B",
+    "1601969906452": "BQ1051-E",
+    "1601943651773": "BQ1051-C",
+    "1601943653819": "BQ1051-A"
+  },
+  "model_migration_evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/范围.json",
+  "current_platform_category_by_id": {
+    "1601969906452": 201334413,
+    "1601943653819": 201334413,
+    "1601969872083": 201334413,
+    "1601943750198": 201334413,
+    "1601943651773": 201334413
+  },
+  "category_scope": "category_id保留初始改造默认；当前平台叶子按current_platform_category_by_id逐ID读取，不把同源链接不同平台分类混成不同实鞋。"
 }

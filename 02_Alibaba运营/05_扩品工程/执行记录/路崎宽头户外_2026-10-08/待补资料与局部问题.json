@@ -1,15 +1,7 @@
 {
   "observed_at": "2026-10-15T18:12:17.471194+00:00",
   "scope": "Current source/identity/individualproductreview issues only. Owner-approved broadercategory route successful for2509/026; no businessrootchange, no permissionblock.",
-  "active": {
-    "2520": {
-      "state": "HOLD_VISIBLE_MARK_IDENTITY",
-      "issue": "实际鞋跟S形标记与公开品牌图形明显近似，未确认授权或可供无标实款；不抹标后发品。",
-      "evidence": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2520准备/标识形状核对.json"
-      ]
-    }
-  },
+  "active": {},
   "current_queue": "质量复核_2026-10-09/全分类处理队列.json",
   "last_local_snapshot_consistency": {
     "at": "2026-10-15T18:14:06.874710+00:00",
@@ -42,6 +34,17 @@
       "local_sha256": "778cae3a27b67c2197cf651dea936e41fbae1e9ddedeaaae0d0a769ac1d30b06",
       "native_image_actually_viewed": true,
       "role": "Actual production/manual checking photograph collage retained in62main-galleries; distinct factory-proof role, not evidence these sourcedSKUs were produced there. Current company sections use V8six inall98."
+    }
+  },
+  "owner_excluded": {
+    "2520": {
+      "state": "OWNER_EXCLUDED_NOT_PUBLISHED",
+      "issue": "实际鞋跟S形标记与公开品牌图形明显近似，未确认授权或可供无标实款；不抹标后发品。",
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2520准备/标识形状核对.json"
+      ],
+      "at": "2026-10-16T03:45:28.892694+00:00",
+      "decision": "2026-10-16负责人：那就不用做吧；不继续核标识或上架。"
     }
   }
 }
