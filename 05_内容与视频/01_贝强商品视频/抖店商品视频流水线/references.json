@@ -1,0 +1,56 @@
+{
+  "observed_on": "2026-10-16",
+  "acquisition_notes": [
+    "Firecrawl unavailable; public web search used.",
+    "Anonymous Douyin search requires login; did not bypass it or ask user to log in for unrelated prep.",
+    "Bilibili source downloaded publicly at 720p using yt-dlp; no cookies, credentials or premium bypass."
+  ],
+  "references": [
+    {
+      "id": "7631440819265801482",
+      "url": "https://www.douyin.com/video/7631440819265801482",
+      "author": "讲AI的小白同学（实战版）",
+      "role": "Existing user-selected process reference",
+      "local_review": "../参考研究_抖音鞋类带货_7631440819265801482/PROJECT.md",
+      "engagement": null,
+      "hot_status": "UNVERIFIED",
+      "observation": "Existing local final-segment study shows product closeups, outfit shots and short walking actions. Do not reuse its identity, sound or wording."
+    },
+    {
+      "id": "BV15S411P7K4",
+      "url": "https://www.bilibili.com/video/BV15S411P7K4/",
+      "author": "鞋吧Sneakersbar",
+      "title": "【鞋吧SHOW】如何给球鞋拍「科技感大片」？| 李宁绝影3体验+美照+上脚展示",
+      "role": "Product-image and lighting tutorial, not a direct retail conversion model",
+      "engagement": {
+        "view_display": "3.1万",
+        "like_display": 891,
+        "basis": "Public indexed primary Bilibili page on 2026-10-16; may be stale, not live-count readback."
+      },
+      "hot_status": "MODEST_PUBLIC_REACH_NOT_VERIFIED_VIRAL",
+      "local_media": "edit/references/BV15S411P7K4/BV15S411P7K4.mp4",
+      "source_id": "b368e08e9e625b96",
+      "review": "edit/references/BV15S411P7K4/edit/qa/BV15S411P7K4/reference_20261016_182039/reference_shot_analysis.md",
+      "observed": "Uniform 24-frame visual review over 436.72s: 57s side profile separates shoe shape/texture; 132.934/189.885s on-foot movement; 208.868s three-quarter product; 284.802/360.736s upper/outsole texture. Includes still photography and compositing; do not describe all these frames as video camera moves.",
+      "adaptation": "Use clear side profile, material/detail anchors and an on-foot scale cue; no cosmic levitation, copied logos or asserted performance.",
+      "source_sha256": "2985875e83f40705ecc7ccc08276835c592c40b053d2c419e9ee24184db8b9dd"
+    },
+    {
+      "id": "7547651407445265690",
+      "url": "https://www.douyin.com/video/7547651407445265690",
+      "author": "小蟹说鞋",
+      "role": "Public interaction/sample-selection reference, not yet local visual analysis",
+      "engagement": {
+        "likes": 3294,
+        "comments": 163,
+        "favorites": 910,
+        "shares": 68,
+        "basis": "Public indexed Douyin post snapshot, 2026-10-16; not live current count."
+      },
+      "hot_status": "PUBLIC_INTERACTION_EVIDENCE_NOT_SALES_PROOF",
+      "observed": "Page text discusses responding to viewer questions and feedback. No complete local audiovisual analysis claimed.",
+      "adaptation": "Future topics may come from real consumer questions about this SKU; never import competitor technical claims."
+    }
+  ],
+  "principle": "Search position, author total likes, marketing copy and indexed numbers do not prove a specific video is viral or commercially effective."
+}

@@ -1,0 +1,60 @@
+{
+  "status": "DRAFT_PREPARED_NOT_GENERATED",
+  "sku": "ZX9002",
+  "model": "Seedance 2.5",
+  "provider_model_key": "star-video2.5",
+  "exact_upstream_build": "Not disclosed",
+  "parameters": {
+    "model": "Seedance 2.5",
+    "modeType": "image2video",
+    "count": 1,
+    "ratio": "9:16",
+    "resolution": "720p",
+    "duration": 15,
+    "enableSound": "off",
+    "searchEnabled": 0,
+    "autoCompliance": 1
+  },
+  "prompt": "prompts/video_brief.txt",
+  "prompt_sha256": "ff6e93eab1507cc80d6eb6a2e637fa16fe9ba345b45e3a325d3250c8edce84dd",
+  "prompt_characters": 1804,
+  "references": [
+    {
+      "name": "N9002_P01_工厂侧面_鞋型身份",
+      "role": "Product identity"
+    },
+    {
+      "name": "N9002_P02_工厂外底_仅结构",
+      "role": "Outsole geometry only"
+    },
+    {
+      "name": "N9002_P03_工厂双鞋_对照身份",
+      "role": "Both-shoe identity"
+    },
+    {
+      "name": "M01_男模三视图_身份服装非首帧",
+      "role": "Existing character/wardrobe"
+    },
+    {
+      "name": "L01_玄关空景_地点光线",
+      "role": "Existing location/light"
+    }
+  ],
+  "previous_sku_onfoot_reference_reused": false,
+  "references_reused_without_upload": [
+    "Character three-view",
+    "Empty entryway"
+  ],
+  "generation_submitted": false,
+  "cost_quote": null,
+  "cost_note": "CLI model discovery says per-second and reference-video duration counts; no numeric account quote returned. No reference video uploaded.",
+  "authorization_scope": "User requested continuing similar production and a repeatable pipeline. This draft is inspectable; no paid batch submitted.",
+  "narration_draft": "今天想穿得简单一点？这双灰黑配牛仔裤就挺顺。鞋面有点纹理，黑色鞋底也有自己的线条。套脚的，不用系鞋带，卫衣或者外套都能搭。喜欢深色这一挂，点开看看颜色和尺码。",
+  "quality_focus": [
+    "Grey knit zoning and rear pull-tab",
+    "Black sculpted sole identity",
+    "Ground contact and two feet",
+    "Product scale and clear first shot",
+    "Independent colloquial narration, no stiff generated in-video voice"
+  ]
+}
