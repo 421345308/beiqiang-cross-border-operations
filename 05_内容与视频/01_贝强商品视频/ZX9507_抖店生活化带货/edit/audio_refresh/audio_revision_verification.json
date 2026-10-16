@@ -1,0 +1,21 @@
+{
+  "source_sha256": "4eadc78dc9616ff2735041b1e66fa17a9b4ad263356d3228b52076f65b4e3477",
+  "output_file": "ZX9507_Douyin_V02_轻快配音轻BGM.mp4",
+  "output_sha256": "728493d43a1a05a4de6e4839e6093a4cb505b75e10dbe62706754811620fbccd",
+  "source_video_stream_hash": "SHA256=f468b9b9fb1a634a2c0e3063646dff7f542165634a2d0b2996afe7c68974b31d",
+  "output_video_stream_hash": "SHA256=f468b9b9fb1a634a2c0e3063646dff7f542165634a2d0b2996afe7c68974b31d",
+  "video_stream_identical": true,
+  "video_frames": 361,
+  "width": 720,
+  "height": 1280,
+  "fps": "24/1",
+  "duration": 15.041667,
+  "audio_replaced": true,
+  "new_audio_model": "Seed Audio 1.0 via LibTV",
+  "audio_generation_count": 1,
+  "speed_change_applied": false,
+  "cut_or_frame_change": false,
+  "audio_processing": "loudnorm=I=-16:TP=-1.5:LRA=7:measured_I=-13.22:measured_TP=-0.28:measured_LRA=4.10:measured_thresh=-25.43:offset=0.22:linear=true,afade=t=in:st=0:d=0.03,afade=t=out:st=14.841667000000001:d=0.2",
+  "full_decode_errors": false,
+  "semantic_voice_and_bgm_acceptance": "Candidate for user listening; see cloud review and source scope, not certified by hashes."
+}

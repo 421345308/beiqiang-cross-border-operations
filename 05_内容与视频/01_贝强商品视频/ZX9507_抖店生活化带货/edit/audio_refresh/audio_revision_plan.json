@@ -1,0 +1,29 @@
+{
+  "model": "Seed Audio 1.0",
+  "parameters": {
+    "model": "Seed Audio 1.0",
+    "modeType": "text2audio",
+    "language": "zh",
+    "sampleRate": 48000,
+    "format": "wav",
+    "speed": 1,
+    "pitch": 0,
+    "vol": 1
+  },
+  "prompt": "prompts/voice_bgm_refresh.txt",
+  "prompt_sha256": "914cc61025eda7ec1f048e74996228fdc5a41f8566943fe5df80166a1553ffd0",
+  "scope": "Audio-only voice performance and quiet BGM; retain original video stream.",
+  "expected_outputs": 1,
+  "generation_submitted": true,
+  "numeric_quote": null,
+  "routing_note": "audio2audio source-to-target edge rejected by CLI action validation; no request generated. Supported text2audio uses separately checked original narration.",
+  "generation_completed": true,
+  "output_audio": "edit/audio_refresh/generated/A01_轻松明快配音加BGM_纯文本.wav",
+  "output_video": "edit/audio_refresh/ZX9507_Douyin_V02_轻快配音轻BGM.mp4",
+  "model_returned": "seed-audio-1.0",
+  "audio_duration": 15,
+  "sample_rate": 48000,
+  "channels": 2,
+  "video_regenerated": false,
+  "cost_reported": null
+}
