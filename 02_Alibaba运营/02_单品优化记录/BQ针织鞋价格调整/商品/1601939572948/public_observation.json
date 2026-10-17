@@ -1,0 +1,38 @@
+{
+  "id": "1601939572948",
+  "at": "2026-10-17T12:31:05.530382+00:00",
+  "source": "正常买家页浏览器可见内容",
+  "url": "https://www.alibaba.com/product-detail/Slip-On-Textile-Breathable-Lightweight-Walking_1601939572948.html",
+  "state": "OLD_PRICE_VISIBLE_DURING_REVIEW",
+  "visible_tiers": [
+    [
+      2,
+      "9.45"
+    ],
+    [
+      50,
+      "9.15"
+    ],
+    [
+      100,
+      "9.05"
+    ]
+  ],
+  "expected_tiers": [
+    [
+      2,
+      "7.48"
+    ],
+    [
+      50,
+      "7.18"
+    ],
+    [
+      100,
+      "6.73"
+    ]
+  ],
+  "currency": "USD",
+  "unit": "pairs",
+  "conclusion": "API正式字段已返回目标价，但公开买家页仍显示原价；不能宣称公开改价完成。"
+}

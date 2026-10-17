@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-10-09",
+  "updated_on": "2026-10-17",
   "sources": [
     {
       "id": "src-038a36798455",
@@ -4218,7 +4218,13 @@
         "01_产品资产/02_可发布素材/00_最终上传/BQ001_数据包1/00_上架填写表.md"
       ],
       "notes": [],
-      "next_action": "按原始包继续；公开采购直链待补，不从目录名称猜网址。"
+      "next_action": "按原始包继续；公开采购直链待补，不从目录名称猜网址。",
+      "price_adjustment": {
+        "entry": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/README.md",
+        "states": [
+          "PRICE_FIELDS_PASS_REVIEW_PENDING"
+        ]
+      }
     },
     {
       "id": "BQ002",
@@ -4235,7 +4241,13 @@
         "01_产品资产/02_可发布素材/00_最终上传/BQ002_数据包2/00_上架填写表.md"
       ],
       "notes": [],
-      "next_action": "按原始包继续；公开采购直链待补，不从目录名称猜网址。"
+      "next_action": "按原始包继续；公开采购直链待补，不从目录名称猜网址。",
+      "price_adjustment": {
+        "entry": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/README.md",
+        "states": [
+          "PRICE_FIELDS_PASS_REVIEW_PENDING"
+        ]
+      }
     },
     {
       "id": "BQ003",
@@ -4254,7 +4266,13 @@
       ],
       "notes": [],
       "next_action": "历史款式映射已补；复核对应链接当前图文与该实款一致，接单核价/色码/包装/交期。",
-      "reference_source_id": "src-6ecbd1c25605"
+      "reference_source_id": "src-6ecbd1c25605",
+      "price_adjustment": {
+        "entry": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/README.md",
+        "states": [
+          "PRICE_FIELDS_PASS_REVIEW_PENDING"
+        ]
+      }
     },
     {
       "id": "BQ004",
@@ -4273,7 +4291,13 @@
       ],
       "notes": [],
       "next_action": "历史款式映射已补；复核对应链接当前图文与该实款一致，接单核价/色码/包装/交期。",
-      "reference_source_id": "src-c941b9f1e82a"
+      "reference_source_id": "src-c941b9f1e82a",
+      "price_adjustment": {
+        "entry": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/README.md",
+        "states": [
+          "PRICE_FIELDS_PASS_REVIEW_PENDING"
+        ]
+      }
     },
     {
       "id": "BQ005",
@@ -4292,7 +4316,13 @@
       ],
       "notes": [],
       "next_action": "历史款式映射已补；复核对应链接当前图文与该实款一致，接单核价/色码/包装/交期。",
-      "reference_source_id": "src-cf1121e21f0b"
+      "reference_source_id": "src-cf1121e21f0b",
+      "price_adjustment": {
+        "entry": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/README.md",
+        "states": [
+          "PRICE_FIELDS_PASS_REVIEW_PENDING"
+        ]
+      }
     },
     {
       "id": "BQ006",
@@ -4309,7 +4339,13 @@
         "01_产品资产/02_可发布素材/00_最终上传/BQ006_M8811/00_上架填写表.md"
       ],
       "notes": [],
-      "next_action": "按原始包继续；公开采购直链待补，不从目录名称猜网址。"
+      "next_action": "按原始包继续；公开采购直链待补，不从目录名称猜网址。",
+      "price_adjustment": {
+        "entry": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/README.md",
+        "states": [
+          "PRICE_FIELDS_PASS_REVIEW_PENDING"
+        ]
+      }
     },
     {
       "id": "BQ007",
@@ -4328,7 +4364,13 @@
       ],
       "notes": [],
       "next_action": "历史款式映射已补；复核对应链接当前图文与该实款一致，接单核价/色码/包装/交期。",
-      "reference_source_id": "src-4ff69bb6bde1"
+      "reference_source_id": "src-4ff69bb6bde1",
+      "price_adjustment": {
+        "entry": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/README.md",
+        "states": [
+          "PRICE_FIELDS_PASS_REVIEW_PENDING"
+        ]
+      }
     },
     {
       "id": "BQ008",
@@ -4385,7 +4427,13 @@
       ],
       "notes": [],
       "next_action": "历史款式映射已补；复核对应链接当前图文与该实款一致，接单核价/色码/包装/交期。",
-      "reference_source_id": "src-c9dd5912b00b"
+      "reference_source_id": "src-c9dd5912b00b",
+      "price_adjustment": {
+        "entry": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/README.md",
+        "states": [
+          "PRICE_FIELDS_PASS_REVIEW_PENDING"
+        ]
+      }
     },
     {
       "id": "BQ011",
@@ -4404,7 +4452,13 @@
       ],
       "notes": [],
       "next_action": "历史款式映射已补；复核对应链接当前图文与该实款一致，接单核价/色码/包装/交期。",
-      "reference_source_id": "src-8f6a0a86351f"
+      "reference_source_id": "src-8f6a0a86351f",
+      "price_adjustment": {
+        "entry": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/README.md",
+        "states": [
+          "PRICE_FIELDS_PASS_REVIEW_PENDING"
+        ]
+      }
     },
     {
       "id": "BQ012",
@@ -4423,7 +4477,13 @@
       ],
       "notes": [],
       "next_action": "历史款式映射已补；复核对应链接当前图文与该实款一致，接单核价/色码/包装/交期。",
-      "reference_source_id": "src-1dd3112464b5"
+      "reference_source_id": "src-1dd3112464b5",
+      "price_adjustment": {
+        "entry": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/README.md",
+        "states": [
+          "PRICE_FIELDS_PASS_REVIEW_PENDING"
+        ]
+      }
     },
     {
       "id": "BQ013",
@@ -4442,7 +4502,13 @@
       ],
       "notes": [],
       "next_action": "历史款式映射已补；复核对应链接当前图文与该实款一致，接单核价/色码/包装/交期。",
-      "reference_source_id": "src-952e28849015"
+      "reference_source_id": "src-952e28849015",
+      "price_adjustment": {
+        "entry": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/README.md",
+        "states": [
+          "PRICE_FIELDS_PASS_REVIEW_PENDING"
+        ]
+      }
     },
     {
       "id": "BQ014",
@@ -4461,7 +4527,13 @@
       ],
       "notes": [],
       "next_action": "历史款式映射已补；复核对应链接当前图文与该实款一致，接单核价/色码/包装/交期。",
-      "reference_source_id": "src-05dc66a7c887"
+      "reference_source_id": "src-05dc66a7c887",
+      "price_adjustment": {
+        "entry": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/README.md",
+        "states": [
+          "PRICE_FIELDS_PASS_REVIEW_PENDING"
+        ]
+      }
     },
     {
       "id": "BQ015",
@@ -4480,7 +4552,13 @@
       ],
       "notes": [],
       "next_action": "历史款式映射已补；复核对应链接当前图文与该实款一致，接单核价/色码/包装/交期。",
-      "reference_source_id": "src-2064f015e244"
+      "reference_source_id": "src-2064f015e244",
+      "price_adjustment": {
+        "entry": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/README.md",
+        "states": [
+          "PRICE_FIELDS_PASS_REVIEW_PENDING"
+        ]
+      }
     },
     {
       "id": "BQ016",
@@ -4497,7 +4575,13 @@
         "01_产品资产/02_可发布素材/00_最终上传/BQ016_201/00_上架填写表.md"
       ],
       "notes": [],
-      "next_action": "按原始包继续；公开采购直链待补，不从目录名称猜网址。"
+      "next_action": "按原始包继续；公开采购直链待补，不从目录名称猜网址。",
+      "price_adjustment": {
+        "entry": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/README.md",
+        "states": [
+          "PRICE_FIELDS_PASS_REVIEW_PENDING"
+        ]
+      }
     },
     {
       "id": "BQ017",
@@ -4516,7 +4600,13 @@
       ],
       "notes": [],
       "next_action": "历史款式映射已补；复核对应链接当前图文与该实款一致，接单核价/色码/包装/交期。",
-      "reference_source_id": "src-81443957dc2d"
+      "reference_source_id": "src-81443957dc2d",
+      "price_adjustment": {
+        "entry": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/README.md",
+        "states": [
+          "PRICE_FIELDS_PASS_REVIEW_PENDING"
+        ]
+      }
     },
     {
       "id": "BQ018",
@@ -4535,7 +4625,13 @@
       ],
       "notes": [],
       "next_action": "历史款式映射已补；复核对应链接当前图文与该实款一致，接单核价/色码/包装/交期。",
-      "reference_source_id": "src-45900f3e8258"
+      "reference_source_id": "src-45900f3e8258",
+      "price_adjustment": {
+        "entry": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/README.md",
+        "states": [
+          "PRICE_FIELDS_PASS_REVIEW_PENDING"
+        ]
+      }
     },
     {
       "id": "BQ019",
@@ -4554,7 +4650,13 @@
       ],
       "notes": [],
       "next_action": "历史款式映射已补；复核对应链接当前图文与该实款一致，接单核价/色码/包装/交期。",
-      "reference_source_id": "src-bcf97f11b892"
+      "reference_source_id": "src-bcf97f11b892",
+      "price_adjustment": {
+        "entry": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/README.md",
+        "states": [
+          "PRICE_FIELDS_PASS_REVIEW_PENDING"
+        ]
+      }
     },
     {
       "id": "BQ020",
@@ -4573,7 +4675,13 @@
       ],
       "notes": [],
       "next_action": "历史款式映射已补；复核对应链接当前图文与该实款一致，接单核价/色码/包装/交期。",
-      "reference_source_id": "src-7cdbc1975c3d"
+      "reference_source_id": "src-7cdbc1975c3d",
+      "price_adjustment": {
+        "entry": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/README.md",
+        "states": [
+          "PRICE_FIELDS_PASS_REVIEW_PENDING"
+        ]
+      }
     },
     {
       "id": "BQ021",
@@ -4592,7 +4700,13 @@
       ],
       "notes": [],
       "next_action": "历史款式映射已补；复核对应链接当前图文与该实款一致，接单核价/色码/包装/交期。",
-      "reference_source_id": "src-0d974524b70b"
+      "reference_source_id": "src-0d974524b70b",
+      "price_adjustment": {
+        "entry": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/README.md",
+        "states": [
+          "PRICE_FIELDS_PASS_REVIEW_PENDING"
+        ]
+      }
     },
     {
       "id": "BQ022",
@@ -4612,7 +4726,13 @@
       ],
       "notes": [],
       "next_action": "历史款式映射已补；复核对应链接当前图文与该实款一致，接单核价/色码/包装/交期。",
-      "reference_source_id": "src-c2f4be2a8ae1"
+      "reference_source_id": "src-c2f4be2a8ae1",
+      "price_adjustment": {
+        "entry": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/README.md",
+        "states": [
+          "PRICE_FIELDS_PASS_REVIEW_PENDING"
+        ]
+      }
     },
     {
       "id": "BQ023",
@@ -4629,7 +4749,13 @@
         "01_产品资产/02_可发布素材/00_最终上传/BQ023_A505/00_上架填写表.md"
       ],
       "notes": [],
-      "next_action": "按原始包继续；公开采购直链待补，不从目录名称猜网址。"
+      "next_action": "按原始包继续；公开采购直链待补，不从目录名称猜网址。",
+      "price_adjustment": {
+        "entry": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/README.md",
+        "states": [
+          "PRICE_FIELDS_PASS_REVIEW_PENDING"
+        ]
+      }
     },
     {
       "id": "BQ024",
@@ -4648,7 +4774,13 @@
       ],
       "notes": [],
       "next_action": "历史款式映射已补；复核对应链接当前图文与该实款一致，接单核价/色码/包装/交期。",
-      "reference_source_id": "src-1b02ec19841a"
+      "reference_source_id": "src-1b02ec19841a",
+      "price_adjustment": {
+        "entry": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/README.md",
+        "states": [
+          "PRICE_FIELDS_PASS_REVIEW_PENDING"
+        ]
+      }
     },
     {
       "id": "BQ025",
@@ -4667,7 +4799,13 @@
       ],
       "notes": [],
       "next_action": "历史款式映射已补；复核对应链接当前图文与该实款一致，接单核价/色码/包装/交期。",
-      "reference_source_id": "src-ae52e1297a40"
+      "reference_source_id": "src-ae52e1297a40",
+      "price_adjustment": {
+        "entry": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/README.md",
+        "states": [
+          "PRICE_FIELDS_PASS_REVIEW_PENDING"
+        ]
+      }
     },
     {
       "id": "BQ026",
@@ -4684,7 +4822,13 @@
         "01_产品资产/02_可发布素材/00_最终上传/BQ026_T5828/00_上架填写表.md"
       ],
       "notes": [],
-      "next_action": "按原始包继续；公开采购直链待补，不从目录名称猜网址。"
+      "next_action": "按原始包继续；公开采购直链待补，不从目录名称猜网址。",
+      "price_adjustment": {
+        "entry": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/README.md",
+        "states": [
+          "PRICE_FIELDS_PASS_REVIEW_PENDING"
+        ]
+      }
     },
     {
       "id": "BQ027",
@@ -4703,7 +4847,13 @@
       ],
       "notes": [],
       "next_action": "历史款式映射已补；复核对应链接当前图文与该实款一致，接单核价/色码/包装/交期。",
-      "reference_source_id": "src-04fd7c75f9dc"
+      "reference_source_id": "src-04fd7c75f9dc",
+      "price_adjustment": {
+        "entry": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/README.md",
+        "states": [
+          "PRICE_FIELDS_PASS_REVIEW_PENDING"
+        ]
+      }
     },
     {
       "id": "BQ028",
@@ -4722,7 +4872,13 @@
       ],
       "notes": [],
       "next_action": "历史款式映射已补；复核对应链接当前图文与该实款一致，接单核价/色码/包装/交期。",
-      "reference_source_id": "src-32ae508d4363"
+      "reference_source_id": "src-32ae508d4363",
+      "price_adjustment": {
+        "entry": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/README.md",
+        "states": [
+          "PRICE_FIELDS_PASS_REVIEW_PENDING"
+        ]
+      }
     },
     {
       "id": "BQ029",
@@ -4741,7 +4897,13 @@
       ],
       "notes": [],
       "next_action": "历史款式映射已补；复核对应链接当前图文与该实款一致，接单核价/色码/包装/交期。",
-      "reference_source_id": "src-7fd8f2ca8035"
+      "reference_source_id": "src-7fd8f2ca8035",
+      "price_adjustment": {
+        "entry": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/README.md",
+        "states": [
+          "PRICE_FIELDS_PASS_REVIEW_PENDING"
+        ]
+      }
     },
     {
       "id": "BQ030",
@@ -4760,7 +4922,13 @@
       ],
       "notes": [],
       "next_action": "历史款式映射已补；复核对应链接当前图文与该实款一致，接单核价/色码/包装/交期。",
-      "reference_source_id": "src-049a095a5d9c"
+      "reference_source_id": "src-049a095a5d9c",
+      "price_adjustment": {
+        "entry": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/README.md",
+        "states": [
+          "PRICE_FIELDS_PASS_REVIEW_PENDING"
+        ]
+      }
     },
     {
       "id": "BQ031",
@@ -8231,7 +8399,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.233939+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/10000042821848/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/10000042821848/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "10000042896165",
@@ -8248,7 +8442,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.236569+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/10000042896165/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/10000042896165/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "10000043201799",
@@ -8265,7 +8485,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.239205+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/10000043201799/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/10000043201799/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601825070472",
@@ -8282,7 +8528,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.241307+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601825070472/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601825070472/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601825021825",
@@ -8333,7 +8605,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.244479+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601825160204/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601825160204/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "10000043725883",
@@ -8350,7 +8648,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.247384+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/10000043725883/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/10000043725883/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "10000043744505",
@@ -8367,7 +8691,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.250270+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/10000043744505/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/10000043744505/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "10000043763325",
@@ -8384,7 +8734,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.252275+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/10000043763325/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/10000043763325/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "10000043732626",
@@ -8401,7 +8777,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.255276+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/10000043732626/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/10000043732626/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "10000044021584",
@@ -8418,7 +8820,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.257274+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/10000044021584/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/10000044021584/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "10000044034049",
@@ -8435,7 +8863,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.259274+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/10000044034049/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/10000044034049/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "10000044007878",
@@ -8452,7 +8906,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.261281+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/10000044007878/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/10000044007878/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "10000044041008",
@@ -8469,7 +8949,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.264934+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/10000044041008/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/10000044041008/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601838963947",
@@ -8486,7 +8992,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.266928+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601838963947/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601838963947/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "10000043991998",
@@ -8503,7 +9035,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.268936+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/10000043991998/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/10000043991998/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "10000046705043",
@@ -8605,7 +9163,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.271976+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939572948/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939572948/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939727104",
@@ -8622,7 +9206,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.274446+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939727104/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939727104/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601956115029",
@@ -8639,7 +9249,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.277187+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601956115029/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601956115029/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601957061462",
@@ -8656,7 +9292,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.279574+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601957061462/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601957061462/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601957079462",
@@ -8673,7 +9335,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.281580+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601957079462/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601957079462/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939707196",
@@ -8690,7 +9378,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.284618+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939707196/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939707196/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939635505",
@@ -8707,7 +9421,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.287620+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939635505/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939635505/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939614689",
@@ -8724,7 +9464,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.289634+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939614689/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939614689/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601956046603",
@@ -8741,7 +9507,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.291864+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601956046603/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601956046603/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601957092413",
@@ -8758,7 +9550,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.295647+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601957092413/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601957092413/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601957075451",
@@ -8775,7 +9593,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.297743+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601957075451/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601957075451/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939654418",
@@ -8792,7 +9636,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.299855+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939654418/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939654418/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "10000043200726",
@@ -8809,7 +9679,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.302997+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/10000043200726/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/10000043200726/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939665367",
@@ -8826,7 +9722,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.305090+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939665367/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939665367/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939663432",
@@ -8843,7 +9765,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.308508+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939663432/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939663432/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601957361351",
@@ -8860,7 +9808,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.310529+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601957361351/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601957361351/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601957476136",
@@ -8877,7 +9851,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.313613+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601957476136/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601957476136/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601957404574",
@@ -8894,7 +9894,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.316823+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601957404574/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601957404574/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601957388768",
@@ -8911,7 +9937,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.318881+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601957388768/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601957388768/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601957514145",
@@ -8928,7 +9980,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.322528+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601957514145/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601957514145/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939585904",
@@ -8945,7 +10023,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.325179+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939585904/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939585904/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939700200",
@@ -8962,7 +10066,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.327208+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939700200/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939700200/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939738037",
@@ -8979,7 +10109,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.329257+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939738037/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939738037/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601957577249",
@@ -8996,7 +10152,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.332395+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601957577249/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601957577249/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601957529565",
@@ -9013,7 +10195,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.335525+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601957529565/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601957529565/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601957502919",
@@ -9030,7 +10238,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.337533+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601957502919/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601957502919/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601957633351",
@@ -9047,7 +10281,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.340860+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601957633351/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601957633351/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939626612",
@@ -9064,7 +10324,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.343867+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939626612/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939626612/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601815020244",
@@ -9081,7 +10367,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.347199+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601815020244/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601815020244/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939631570",
@@ -9098,7 +10410,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.349865+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939631570/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939631570/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939712176",
@@ -9115,7 +10453,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.351872+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939712176/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939712176/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601957629892",
@@ -9132,7 +10496,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.353872+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601957629892/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601957629892/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601957664983",
@@ -9149,7 +10539,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.357000+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601957664983/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601957664983/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601957855049",
@@ -9166,7 +10582,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.360137+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601957855049/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601957855049/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601957778956",
@@ -9183,7 +10625,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.362225+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601957778956/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601957778956/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939599850",
@@ -9200,7 +10668,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.364384+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939599850/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939599850/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601814931739",
@@ -9217,7 +10711,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.367052+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601814931739/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601814931739/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939735063",
@@ -9234,7 +10754,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.369735+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939735063/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939735063/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939655430",
@@ -9251,7 +10797,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.372916+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939655430/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939655430/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601957955917",
@@ -9268,7 +10840,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.374914+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601957955917/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601957955917/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601958022991",
@@ -9285,7 +10883,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.376915+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601958022991/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601958022991/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601958195527",
@@ -9302,7 +10926,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.379913+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601958195527/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601958195527/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601958260477",
@@ -9319,7 +10969,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.382192+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601958260477/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601958260477/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601958239898",
@@ -9336,7 +11012,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.385365+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601958239898/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601958239898/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601958363305",
@@ -9353,7 +11055,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.387800+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601958363305/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601958363305/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601958770867",
@@ -9370,7 +11098,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.390809+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601958770867/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601958770867/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939660427",
@@ -9387,7 +11141,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.392193+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939660427/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939660427/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939701201",
@@ -9404,7 +11184,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.394568+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939701201/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939701201/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939711161",
@@ -9421,7 +11227,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.397727+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939711161/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939711161/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601958865699",
@@ -9438,7 +11270,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.400824+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601958865699/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601958865699/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601958993646",
@@ -9455,7 +11313,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.404023+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601958993646/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601958993646/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601959231056",
@@ -9472,7 +11356,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.406698+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601959231056/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601959231056/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601959746415",
@@ -9489,7 +11399,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.409893+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601959746415/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601959746415/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601959878246",
@@ -9506,7 +11442,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.412525+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601959878246/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601959878246/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939585913",
@@ -9523,7 +11485,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.415169+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939585913/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939585913/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939659415",
@@ -9642,7 +11630,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.419476+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939573998/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939573998/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939734070",
@@ -9659,7 +11673,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.421568+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939734070/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939734070/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939589876",
@@ -9676,7 +11716,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.423664+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939589876/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939589876/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939606803",
@@ -9693,7 +11759,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.425790+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939606803/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939606803/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939666421",
@@ -9710,7 +11802,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.427925+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939666421/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939666421/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939634522",
@@ -9727,7 +11845,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.430472+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939634522/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939634522/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939606805",
@@ -9744,7 +11888,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.432661+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939606805/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939606805/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939681367",
@@ -9761,7 +11931,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.434974+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939681367/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939681367/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939650458",
@@ -9778,7 +11974,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.437362+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939650458/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939650458/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939736061",
@@ -9795,7 +12017,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.439375+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939736061/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939736061/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939638522",
@@ -9812,7 +12060,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.441374+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939638522/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939638522/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939619687",
@@ -9829,7 +12103,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.444537+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939619687/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939619687/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939608686",
@@ -9846,7 +12146,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.446542+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939608686/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939608686/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939658415",
@@ -9863,7 +12189,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.449085+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939658415/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939658415/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939669411",
@@ -9880,7 +12232,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.451158+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939669411/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939669411/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939683302",
@@ -9897,7 +12275,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.453247+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939683302/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939683302/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939747001",
@@ -9914,7 +12318,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.455894+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939747001/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939747001/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939743040",
@@ -9931,7 +12361,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.457999+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939743040/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939743040/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939633580",
@@ -9948,7 +12404,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.460085+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939633580/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939633580/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939691301",
@@ -9965,7 +12447,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.461887+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939691301/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939691301/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939608691",
@@ -9982,7 +12490,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.464319+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939608691/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939608691/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939593839",
@@ -9999,7 +12533,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.466960+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939593839/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939593839/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939697271",
@@ -10016,7 +12576,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.468978+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939697271/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939697271/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939636508",
@@ -10033,7 +12619,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.471978+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939636508/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939636508/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939589890",
@@ -10050,7 +12662,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.474976+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939589890/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939589890/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939641542",
@@ -10067,7 +12705,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.476979+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939641542/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939641542/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939726170",
@@ -10084,7 +12748,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.478977+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939726170/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939726170/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939695286",
@@ -10101,7 +12791,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.481748+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939695286/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939695286/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939602873",
@@ -10118,7 +12834,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.483749+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939602873/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939602873/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939616747",
@@ -10135,7 +12877,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.486747+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939616747/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939616747/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601839073314",
@@ -10152,7 +12920,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.488804+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601839073314/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601839073314/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939625613",
@@ -10169,7 +12963,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.490891+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939625613/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939625613/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939590957",
@@ -10186,7 +13006,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.494307+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939590957/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939590957/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939712249",
@@ -10203,7 +13049,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.497028+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939712249/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939712249/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939739115",
@@ -10220,7 +13092,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.500156+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939739115/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939739115/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939709217",
@@ -10237,7 +13135,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.502781+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939709217/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939709217/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939606858",
@@ -10254,7 +13178,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.504838+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939606858/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939606858/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939709218",
@@ -10271,7 +13221,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.507838+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939709218/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939709218/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939659468",
@@ -10288,7 +13264,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.509838+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939659468/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939659468/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939641581",
@@ -10305,7 +13307,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.512609+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939641581/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939641581/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "10000044004948",
@@ -10322,7 +13350,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.514204+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/10000044004948/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/10000044004948/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939752005",
@@ -10339,7 +13393,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.516643+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939752005/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939752005/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939616754",
@@ -10356,7 +13436,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.518675+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939616754/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939616754/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939722180",
@@ -10373,7 +13479,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.521921+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939722180/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939722180/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "10000044041031",
@@ -10390,7 +13522,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.524077+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/10000044041031/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/10000044041031/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939691340",
@@ -10407,7 +13565,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.526188+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939691340/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939691340/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939684371",
@@ -10424,7 +13608,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.528553+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939684371/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939684371/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939691342",
@@ -10441,7 +13651,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.530646+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939691342/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939691342/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "10000044024484",
@@ -10458,7 +13694,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.532640+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/10000044024484/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/10000044024484/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939733108",
@@ -10475,7 +13737,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.534952+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939733108/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939733108/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939751016",
@@ -10492,7 +13780,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.536997+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939751016/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939751016/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939612707",
@@ -10509,7 +13823,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.540082+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939612707/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939612707/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "10000044011929",
@@ -10526,7 +13866,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.542084+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/10000044011929/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/10000044011929/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939714238",
@@ -10543,7 +13909,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.545195+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939714238/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939714238/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939725201",
@@ -10560,7 +13952,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.547305+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939725201/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939725201/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939745065",
@@ -10577,7 +13995,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.549911+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939745065/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939745065/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "10000044028277",
@@ -10594,7 +14038,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.552541+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/10000044028277/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/10000044028277/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939703288",
@@ -10611,7 +14081,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.554666+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939703288/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939703288/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939692338",
@@ -10628,7 +14124,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.556241+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939692338/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939692338/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939616762",
@@ -10645,7 +14167,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.558381+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939616762/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939616762/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601839105416",
@@ -10662,7 +14210,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.561513+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601839105416/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601839105416/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939705262",
@@ -10679,7 +14253,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.563514+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939705262/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939705262/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939625627",
@@ -10696,7 +14296,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.565518+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939625627/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939625627/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939720204",
@@ -10713,7 +14339,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.567514+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939720204/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939720204/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601839062659",
@@ -10730,7 +14382,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.569514+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601839062659/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601839062659/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939721228",
@@ -10747,7 +14425,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.572596+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939721228/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939721228/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939607770",
@@ -10764,7 +14468,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.574805+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939607770/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939607770/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939749045",
@@ -10781,7 +14511,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.577002+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939749045/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939749045/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601839050756",
@@ -10798,7 +14554,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.579003+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601839050756/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601839050756/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939615744",
@@ -10815,7 +14597,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.582011+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939615744/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939615744/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939679363",
@@ -10832,7 +14640,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.584134+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939679363/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939679363/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "1601939672381",
@@ -10849,7 +14683,33 @@
         "scope": "历史目录回读；不等于来源/全内容验收"
       },
       "evidence": [],
-      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。"
+      "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
+      "price_adjustment": {
+        "state": "PRICE_FIELDS_PASS_REVIEW_PENDING",
+        "at": "2026-10-17T12:35:22.586489+00:00",
+        "plan": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939672381/plan.json",
+        "verification": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/商品/1601939672381/verification.json",
+        "cny_targets": [
+          50,
+          48,
+          45
+        ],
+        "usd_tiers": [
+          [
+            2,
+            "7.48"
+          ],
+          [
+            50,
+            "7.18"
+          ],
+          [
+            100,
+            "6.73"
+          ]
+        ],
+        "public": "PENDING"
+      }
     },
     {
       "id": "10000046439033",
@@ -16624,6 +20484,15 @@
         "02_Alibaba运营/05_扩品工程/执行记录/停工交接总览_2026-10-02.md",
         "02_Alibaba运营/05_扩品工程/执行记录/单写入商品收尾_2026-10-03/formal_result_summary.json"
       ]
+    },
+    {
+      "name": "BQ001–BQ030针织鞋价格调整",
+      "status": "28款、142条链接；{\"PRICE_FIELDS_PASS_REVIEW_PENDING\": 142}",
+      "next_action": "按逐ID回读继续审核/公开抽检；L1009、L1026的8条链接价格保持不变。",
+      "evidence": [
+        "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/README.md",
+        "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/当前状态.json"
+      ]
     }
   ],
   "imported_evidence": [
@@ -16657,5 +20526,41 @@
       "sha256": "ea14f1bfce8b99699f2696e07b770e455262a9d3395b310c4cd32c3e9251fa5e",
       "scope": "原有商品来源证据归位；非新的事实确认"
     }
-  ]
+  ],
+  "bq_knit_price_adjustment": {
+    "at": "2026-10-17T12:35:22.630507+00:00",
+    "authorization": "负责人2026-10-17确认50/48/45元每双；数量档不变；排除L1009/L1026",
+    "families": [
+      "BQ001",
+      "BQ002",
+      "BQ003",
+      "BQ004",
+      "BQ005",
+      "BQ006",
+      "BQ007",
+      "BQ010",
+      "BQ011",
+      "BQ012",
+      "BQ013",
+      "BQ014",
+      "BQ015",
+      "BQ016",
+      "BQ017",
+      "BQ018",
+      "BQ019",
+      "BQ020",
+      "BQ021",
+      "BQ022",
+      "BQ023",
+      "BQ024",
+      "BQ025",
+      "BQ026",
+      "BQ027",
+      "BQ028",
+      "BQ029",
+      "BQ030"
+    ],
+    "entry": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/README.md",
+    "public": "PENDING"
+  }
 }
