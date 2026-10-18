@@ -1,0 +1,155 @@
+{
+  "style": "2593",
+  "source": "https://luqi.sooxie.com/detail/2421356",
+  "observed_at": "2026-10-15T13:15:40.159727+00:00",
+  "source_HTML_sha256": "0e1ba4a0f74f095c933cc9d0418fd177761556815f3d8a275c777925ff8a1b68",
+  "source_price_cny": "72.00",
+  "source_EU_by_color": {
+    "Black": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ],
+    "Brown": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ],
+    "Grey": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ]
+  },
+  "source_EU_combinations": 30,
+  "source_color_aliases": {
+    "Black": "黑色",
+    "Brown": "卡其",
+    "Grey": "灰色"
+  },
+  "photo_count": 22,
+  "whole_source_contacts_actually_viewed": true,
+  "full_original_fact_indices_actually_viewed": [
+    1,
+    4,
+    10,
+    12,
+    16,
+    19,
+    22
+  ],
+  "known_materials": {
+    "upper": "Source12 explicitly牛津布加合成革: Oxfordfabric andsyntheticleather; no naturalcowhide/PU/polymer inference.",
+    "outsole": "Source12TPRexplicit; source09separateTPRmidsole claim not transferred into unsupported structure fields.",
+    "lining": "Soft lining sourcewording not fibreproof; no plush/temperatureclaim."
+  },
+  "wide_claim": "NO_WIDE_CLAIM_FROM_OUTDOOR_ONLY_SOURCE",
+  "visible_structure": [
+    "Ankle-height round-lace boot with two uppermetal laceguides and lowerroundeyelets",
+    "Oxfordfabric forefoot/sidewindow with grained layered angularoverlays",
+    "Black toe/heel wrap overlays",
+    "Fabriccollar and rearpulltab",
+    "Grey sculptedsidewall and blocktread with geometric contrastpatches"
+  ],
+  "identity_notes": "All22source photos in3contacts andnative01/04/10/12/16/19/22 viewed. ActualBrown photograph corresponds currentsourceKhaki(卡其), oldphoto12label棕色, no separateKhaki/Sand SKU. K502shares outsolepattern but itsthree mouldedbars/grainedsolidquarter differs2593Oxfordfabric inset/angularlayeredpanels. 2539different meshborder/chevronunderside. Source12Oxfordfabric not naturalcowleather despite Chinese牛word. Sourceillustrative safety/grip/heightincreaseclaims not adopted.",
+  "title_draft": "Mens Lace Up Outdoor Ankle Boots Oxford Fabric Synthetic Leather Upper TPR Sole Black Brown Grey Wholesale EU 39-48",
+  "product_highlights_draft": [
+    "Oxford fabric and synthetic leather upper: Woven forefoot and side sections combine with grained overlays and a black wraparound toe panel.",
+    "Lace-up ankle profile: Two upper metal guides and lower round eyelets hold the crossed laces along the fabric tongue.",
+    "Layered side construction: Angular stitched panels frame the side fabric window, extending toward the contrasting black heel overlay.",
+    "TPR outsole: A grey sculpted sidewall meets black tread blocks and visible geometric contrast sections on the underside.",
+    "Three colours in EU 39–48: Black, Brown and Grey each cover ten EU sizes for wholesale assortment planning."
+  ],
+  "pricing_draft": {
+    "source_cny": "72.00",
+    "fx": "6.6837",
+    "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+    "fx_observed": "2026-10-13 10:57:20",
+    "rounding": "ROUND_CEILING_TO_USD_CENT",
+    "tiers": [
+      [
+        2,
+        "16.16"
+      ],
+      [
+        50,
+        "15.09"
+      ],
+      [
+        100,
+        "14.01"
+      ]
+    ],
+    "freight_service_tax": "Markupnotnetprofit; freight,tax,service,packaging assessedperorder."
+  },
+  "publish_profile": {
+    "category_id": 32299,
+    "schema_name": "当前其他鞋类Schema",
+    "buyer_colours": [
+      {
+        "buyer": "Black",
+        "supplier_key": "Black",
+        "supplier_label": "黑色",
+        "image_role": "M2"
+      },
+      {
+        "buyer": "Brown",
+        "supplier_key": "Brown",
+        "supplier_label": "卡其",
+        "image_role": "M4"
+      },
+      {
+        "buyer": "Grey",
+        "supplier_key": "Grey",
+        "supplier_label": "灰色",
+        "image_role": "M1"
+      }
+    ],
+    "category_attributes": {
+      "Upper Material": [
+        "Oxford fabric",
+        "Faux Leather"
+      ],
+      "Outsole Material": [
+        "TPR"
+      ]
+    },
+    "local_intent": [
+      "牛津布合成革拼接系带TPR底踝帮户外靴"
+    ]
+  },
+  "state": "CREATED_FORMAL_FIELDS_SCORE_PASS",
+  "hero_selection": "Actual01Grey singlewhitehero/SKU unchanged; source16BlackactualwearcropM2/SKU;22GreywearM3,19BrownwearM4/SKU,04contextM5unchanged. D1actual01forefoot, D2actual19Brownside, D3original10sole unchanged, D4threecoloursEU.",
+  "title_bytes": 115,
+  "publication": {
+    "product_id": "1601981343738",
+    "audit": "approved",
+    "display": "Y",
+    "actual_score": "5.00",
+    "formal_verification": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2593准备/verification.json",
+    "local_sync_at": "2026-10-15T14:21:31.839672+00:00",
+    "no_replayed_create": true
+  },
+  "next_action": "该款正式字段、评分与来源已通过；继续其他款，不重复创建。"
+}

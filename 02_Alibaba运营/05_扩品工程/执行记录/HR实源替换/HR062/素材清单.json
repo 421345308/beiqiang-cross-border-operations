@@ -1,0 +1,552 @@
+{
+  "family": "HR062",
+  "state": "VISUAL_PASS",
+  "items": {
+    "M1": {
+      "path": "01_产品资产/02_可发布素材/HR062/M1.jpg",
+      "sha256": "04d43ef7a8783332bbdfab4f08819c295af0fdb2e499437646be0df258e9b54c",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M2": {
+      "path": "01_产品资产/02_可发布素材/HR062/M2.jpg",
+      "sha256": "d25b55822c879b4c7ddf691bfc8f5ebad91dd60621a9a6213380cd70e15bb80b",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M3": {
+      "path": "01_产品资产/02_可发布素材/HR062/M3.jpg",
+      "sha256": "ca160325e5619f78987fcaa874aed64b9ac4ceed7f3527a8ff1d4716c3f3c57c",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M4": {
+      "path": "01_产品资产/02_可发布素材/HR062/M4.jpg",
+      "sha256": "ebdabbf403195e7470c09a9a485bb426b9752a501904f8d0d232473b263e27af",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M5": {
+      "path": "01_产品资产/02_可发布素材/HR062/M5.jpg",
+      "sha256": "f64a7b9a48a90238a789a30794c4272b2ba8f4474bcda95d3b0d977d1128e4c7",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "D1": {
+      "path": "01_产品资产/02_可发布素材/HR062/D1.jpg",
+      "sha256": "024010ee4f86f4e90a1cbde54ec5d130edfb87a90b432737ab4a32264be96ff1",
+      "dimensions": [
+        1000,
+        1250
+      ]
+    },
+    "D2": {
+      "path": "01_产品资产/02_可发布素材/HR062/D2.jpg",
+      "sha256": "781d58dc4e48fd388119533f08d1ca7b387d20937c0af1db0d48575a2d48a1f5",
+      "dimensions": [
+        1000,
+        1250
+      ]
+    },
+    "D3": {
+      "path": "01_产品资产/02_可发布素材/HR062/D3.jpg",
+      "sha256": "5e534cccc972b8b55d9bd43832dd62a476e4a87b4b38f6466afe13abbc605049",
+      "dimensions": [
+        1000,
+        1250
+      ]
+    },
+    "D4": {
+      "path": "01_产品资产/02_可发布素材/HR062/D4.jpg",
+      "sha256": "31733f7d2e65af98ad6b48d97b78628cba47b76eb1632fa12d3474d1f89ab36d",
+      "dimensions": [
+        1000,
+        1250
+      ]
+    },
+    "SKU_BLACK": {
+      "path": "01_产品资产/02_可发布素材/HR062/SKU_BLACK.jpg",
+      "sha256": "baf530555aabd8d0f52e1127dcde2f0b637ea44b1905b8f3fd76830c9262a05e",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "SKU_GREY": {
+      "path": "01_产品资产/02_可发布素材/HR062/SKU_GREY.jpg",
+      "sha256": "1330878827dd0a0189c4ec0e1c77b3137c4e9801cbb6df154559bc6f24858670",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "SKU_BEIGE": {
+      "path": "01_产品资产/02_可发布素材/HR062/SKU_BEIGE.jpg",
+      "sha256": "468280ceb898596098d172ac1a9ba9e1350eb89145788e25f61afe4bde1d9afc",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "SKU_BLUE": {
+      "path": "01_产品资产/02_可发布素材/HR062/SKU_BLUE.jpg",
+      "sha256": "874a1a810449becc59dd3fc345e261fff39864d84615ddd5ae5083d9b9dd6e41",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M6": {
+      "path": "01_产品资产/02_可发布素材/共享素材/贝强公司简介图库.jpg",
+      "sha256": "5164b4d0ac008fb79a20d60419d21713b4f49b9ecea0a845d6c7de104030f51e",
+      "dimensions": [
+        1721,
+        914
+      ]
+    }
+  },
+  "image_roles": {
+    "M1": {
+      "buyer_question": "What actual shoe is offered?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR062_D02\\27.jpg",
+          "crop": null,
+          "native_effective_pixels": [
+            790,
+            665
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": null
+    },
+    "M2": {
+      "buyer_question": "What do the short laces and woven surface look like?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR062_D02\\07.jpg",
+          "crop": [
+            0,
+            545,
+            790,
+            1250
+          ],
+          "native_effective_pixels": [
+            790,
+            705
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": "Short laces & textile upper"
+    },
+    "M3": {
+      "buyer_question": "What is the actual outsole pattern?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR062_D02\\09.jpg",
+          "crop": [
+            0,
+            280,
+            790,
+            960
+          ],
+          "native_effective_pixels": [
+            790,
+            680
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": "Segmented rubber sole"
+    },
+    "M4": {
+      "buyer_question": "Which actual colours and sizes are offered?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR062_D02\\13.jpg",
+          "crop": null,
+          "native_effective_pixels": [
+            790,
+            821
+          ],
+          "uniform_resize": true
+        },
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR062_D02\\21.jpg",
+          "crop": [
+            0,
+            0,
+            790,
+            660
+          ],
+          "native_effective_pixels": [
+            790,
+            660
+          ],
+          "uniform_resize": true
+        },
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR062_D02\\27.jpg",
+          "crop": null,
+          "native_effective_pixels": [
+            790,
+            665
+          ],
+          "uniform_resize": true
+        },
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR062_D02\\01.jpg",
+          "crop": null,
+          "native_effective_pixels": [
+            800,
+            800
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [
+        {
+          "value": "Black",
+          "xy": [
+            45,
+            520
+          ],
+          "size": 25
+        },
+        {
+          "value": "Grey",
+          "xy": [
+            520,
+            520
+          ],
+          "size": 25
+        },
+        {
+          "value": "Beige",
+          "xy": [
+            45,
+            840
+          ],
+          "size": 25
+        },
+        {
+          "value": "Blue",
+          "xy": [
+            520,
+            840
+          ],
+          "size": 25
+        },
+        {
+          "value": "EU 39-48",
+          "xy": [
+            45,
+            930
+          ],
+          "size": 32
+        }
+      ],
+      "title": "Four colour directions"
+    },
+    "M5": {
+      "buyer_question": "How is the collar and heel opening arranged?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR062_D02\\08.jpg",
+          "crop": [
+            0,
+            235,
+            790,
+            940
+          ],
+          "native_effective_pixels": [
+            790,
+            705
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": "Collar & rear pull loop"
+    },
+    "D1": {
+      "buyer_question": "How does the casual profile look when worn?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR062_D02\\16.jpg",
+          "crop": [
+            10,
+            0,
+            785,
+            828
+          ],
+          "native_effective_pixels": [
+            775,
+            828
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [
+        {
+          "value": "Short laces, apron toe stitching and contrast sole.",
+          "xy": [
+            45,
+            1140
+          ],
+          "size": 25
+        }
+      ],
+      "title": "Actual on-foot profile"
+    },
+    "D2": {
+      "buyer_question": "How is the forefoot panel and lace front arranged?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR062_D02\\21.jpg",
+          "crop": [
+            0,
+            0,
+            790,
+            660
+          ],
+          "native_effective_pixels": [
+            790,
+            660
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [
+        {
+          "value": "Original source photograph of the Grey option.",
+          "xy": [
+            45,
+            1140
+          ],
+          "size": 25
+        }
+      ],
+      "title": "Forefoot & lace layout"
+    },
+    "D3": {
+      "buyer_question": "What outsole layout is supplied?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR062_D02\\09.jpg",
+          "crop": [
+            0,
+            280,
+            790,
+            960
+          ],
+          "native_effective_pixels": [
+            790,
+            680
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [
+        {
+          "value": "Actual source sole photo, matched to this shoe.",
+          "xy": [
+            45,
+            1140
+          ],
+          "size": 25
+        }
+      ],
+      "title": "Outsole pattern overview"
+    },
+    "D4": {
+      "buyer_question": "Which actual colours and sizes are offered?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR062_D02\\13.jpg",
+          "crop": null,
+          "native_effective_pixels": [
+            790,
+            821
+          ],
+          "uniform_resize": true
+        },
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR062_D02\\21.jpg",
+          "crop": [
+            0,
+            0,
+            790,
+            660
+          ],
+          "native_effective_pixels": [
+            790,
+            660
+          ],
+          "uniform_resize": true
+        },
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR062_D02\\27.jpg",
+          "crop": null,
+          "native_effective_pixels": [
+            790,
+            665
+          ],
+          "uniform_resize": true
+        },
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR062_D02\\01.jpg",
+          "crop": null,
+          "native_effective_pixels": [
+            800,
+            800
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [
+        {
+          "value": "Black",
+          "xy": [
+            45,
+            520
+          ],
+          "size": 25
+        },
+        {
+          "value": "Grey",
+          "xy": [
+            520,
+            520
+          ],
+          "size": 25
+        },
+        {
+          "value": "Beige",
+          "xy": [
+            45,
+            840
+          ],
+          "size": 25
+        },
+        {
+          "value": "Blue",
+          "xy": [
+            520,
+            840
+          ],
+          "size": 25
+        },
+        {
+          "value": "EU 39-48",
+          "xy": [
+            45,
+            1170
+          ],
+          "size": 32
+        }
+      ],
+      "title": "Four colour directions"
+    },
+    "SKU_BLACK": {
+      "buyer_question": "Which colour is this SKU?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR062_D02\\13.jpg",
+          "crop": null,
+          "native_effective_pixels": [
+            790,
+            821
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": null
+    },
+    "SKU_GREY": {
+      "buyer_question": "Which colour is this SKU?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR062_D02\\22.jpg",
+          "crop": [
+            0,
+            0,
+            790,
+            690
+          ],
+          "native_effective_pixels": [
+            790,
+            690
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": null
+    },
+    "SKU_BEIGE": {
+      "buyer_question": "Which colour is this SKU?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR062_D02\\27.jpg",
+          "crop": null,
+          "native_effective_pixels": [
+            790,
+            665
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": null
+    },
+    "SKU_BLUE": {
+      "buyer_question": "Which colour is this SKU?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR062_D02\\01.jpg",
+          "crop": null,
+          "native_effective_pixels": [
+            800,
+            800
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": null
+    },
+    "M6": {
+      "buyer_question": "Who will coordinate the footwear order?",
+      "shared_approved_company_image": "01_产品资产/02_可发布素材/共享素材/贝强公司简介图库.jpg"
+    }
+  },
+  "visual_review": {
+    "reviewed_on": "2026-10-14",
+    "reviewer": "root",
+    "whole_set_viewed": true,
+    "full_size_focal_roles": [
+      "M1",
+      "M3",
+      "M4"
+    ],
+    "source_identity": "All27source photos and all14current role frames examined; actual woven upper, short lace rows, apron seam, heel loop and same sole pattern retained. Source headers/Chinese copy removed by bounded crops. Four colours agree with source05/02 and exact public options; numericEU39-48 no conversion.",
+    "scope": "Source-pixel layouts only, no invented bottom/linen-fibre/traction claim; previous shared company asset reused."
+  }
+}

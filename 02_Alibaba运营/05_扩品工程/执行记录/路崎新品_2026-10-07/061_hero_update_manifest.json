@@ -1,0 +1,20 @@
+{
+  "operation": "update",
+  "product_id": "1601972965417",
+  "category_id": 201334413,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "061_sourcehero_evidence.json",
+    "061_sourcehero_upload_ledger.json",
+    "061上架任务包.md"
+  ],
+  "current_schema": "061_hero_current_schema.xml",
+  "current_schema_sha256": "6600ed63a71f60d1c4e1c0250db72d1d75dce4016376639956454c08489b335f",
+  "schema_request_id": "2105584317913889990922124",
+  "schema_acquired_at": "2026-10-07T16:03:17.646002+00:00",
+  "payload_xml": "061_hero_update_payload.xml",
+  "field_ids": [
+    "scImages"
+  ],
+  "dependency_ids": []
+}

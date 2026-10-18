@@ -1,0 +1,366 @@
+{
+  "keyword_input": null,
+  "differentiation_review": null,
+  "category_id": 201334413,
+  "operation": "update",
+  "inventory_input": null,
+  "model_serialization": null,
+  "target_product_id": "1601924792152",
+  "field_ids": [
+    "companyFaqDesc",
+    "textDesc"
+  ],
+  "dependency_ids": [
+    "productDescType"
+  ],
+  "xml": "<itemSchema><field id=\"textDesc\" name=\"Product Highlights\" type=\"input\"><value>Men's knit slip-on walking shoes with an MD foam sole and visible side segmentation. A closed front and heel pull loop keep the construction straightforward. The EU 39–45 range and neutral color choices suit an adult casual assortment.</value></field><field id=\"companyFaqDesc\" name=\"FAQs\" type=\"multiComplex\"><complex-values><field id=\"question\" type=\"input\"><value>Which color and EU size combinations are listed?</value></field><field id=\"answers\" type=\"input\"><value>All Black: EU 39–45; Black/White: EU 39–45; Grey: EU 39–45.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>What are the sole and upper details?</value></field><field id=\"answers\" type=\"input\"><value>An MD foam sole with visible side segmentation, combined with a closed knit slip-on upper and heel pull loop.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>What should I check during a sample fitting?</value></field><field id=\"answers\" type=\"input\"><value>Try the sample with the intended socks. Check toe room, instep fit, heel hold and the shoe opening before deciding the bulk EU size mix.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>What is the minimum order for the original style?</value></field><field id=\"answers\" type=\"input\"><value>The listed original-style wholesale minimum is 2 pairs. Quantity pricing is shown on this page; branding and custom packaging are quoted separately.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>How can I request a sample?</value></field><field id=\"answers\" type=\"input\"><value>Send the selected color or lining variant, EU size and delivery postcode for a sample quotation. It sets out the sample charge, courier cost and proposed dispatch date.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>What should I send for a branding or packaging proposal?</value></field><field id=\"answers\" type=\"input\"><value>Send your logo artwork, preferred placement, packaging brief and order quantity. We can review the proposal for this style and set out the applicable minimum, cost and sample process.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>How can I get a delivered quotation?</value></field><field id=\"answers\" type=\"input\"><value>Send pair quantities by color and EU size, the destination postcode or port and your packaging request. The quotation separates product cost from freight and includes the proposed dispatch and transit schedule.</value></field></complex-values></field><field id=\"productDescType\" name=\"Product description\" type=\"singleCheck\"><value>4</value></field></itemSchema>",
+  "expected_fields": {
+    "textDesc": [
+      "field",
+      [
+        [
+          "id",
+          "textDesc"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Men's knit slip-on walking shoes with an MD foam sole and visible side segmentation. A closed front and heel pull loop keep the construction straightforward. The EU 39–45 range and neutral color choices suit an adult casual assortment.",
+          []
+        ]
+      ]
+    ],
+    "companyFaqDesc": [
+      "field",
+      [
+        [
+          "id",
+          "companyFaqDesc"
+        ]
+      ],
+      "",
+      [
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Which color and EU size combinations are listed?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "All Black: EU 39–45; Black/White: EU 39–45; Grey: EU 39–45.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "What are the sole and upper details?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "An MD foam sole with visible side segmentation, combined with a closed knit slip-on upper and heel pull loop.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "What should I check during a sample fitting?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Try the sample with the intended socks. Check toe room, instep fit, heel hold and the shoe opening before deciding the bulk EU size mix.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "What is the minimum order for the original style?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "The listed original-style wholesale minimum is 2 pairs. Quantity pricing is shown on this page; branding and custom packaging are quoted separately.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "How can I request a sample?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Send the selected color or lining variant, EU size and delivery postcode for a sample quotation. It sets out the sample charge, courier cost and proposed dispatch date.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "What should I send for a branding or packaging proposal?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Send your logo artwork, preferred placement, packaging brief and order quantity. We can review the proposal for this style and set out the applicable minimum, cost and sample process.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "How can I get a delivered quotation?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Send pair quantities by color and EU size, the destination postcode or port and your packaging request. The quotation separates product cost from freight and includes the proposed dispatch and transit schedule.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "prepared_from_current_schema": true,
+  "task_pack": null,
+  "replacement_plan": null,
+  "schema_provenance": {
+    "schema_request_id": "0bab02fe17917405419217139",
+    "schema_acquired_at": "2026-10-11T17:42:18.989996+00:00",
+    "current_schema_sha256": "8f0d0b476599f91980174b672aa142193cec1295274e78bec2412e978a65bb07",
+    "source_evidence": [
+      "copy.json",
+      "before_get.json",
+      "../../../../../01_产品资产/02_可发布素材/00_最终上传/BQ040_1689/00_上架填写表.md",
+      "../../../../../01_产品资产/01_原始数据包/待审_搜鞋网_2026-08-14/1689/原图/01.webp",
+      "current_get.json",
+      "../../../../00_运营SOP/国际站商品全生命周期SOP.md"
+    ]
+  }
+}

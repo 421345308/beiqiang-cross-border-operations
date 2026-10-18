@@ -1,0 +1,259 @@
+{
+  "method": "alibaba.icbu.product.schema.update",
+  "operation": "update",
+  "status": "submitted_needs_readback",
+  "content_status": "pending_readback",
+  "expected_fields": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "White Grey Breathable Knit Lace-Up Walking Shoes Lightweight EVA Casual Sneakers M8811 BQ006",
+          []
+        ]
+      ]
+    ],
+    "scImages": [
+      "field",
+      [
+        [
+          "id",
+          "scImages"
+        ]
+      ],
+      "",
+      [
+        [
+          "complex-value",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "scImages_1"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [
+                    [
+                      "fileFlag",
+                      "no"
+                    ],
+                    [
+                      "fileId",
+                      "0"
+                    ]
+                  ],
+                  "//sc04.alicdn.com/kf/H8475ec8eef134065b9909630c51dfa672.jpg_350x350.jpg",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "scImages_2"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [
+                    [
+                      "fileFlag",
+                      "no"
+                    ],
+                    [
+                      "fileId",
+                      "0"
+                    ]
+                  ],
+                  "//sc04.alicdn.com/kf/H2dfbeff2990b4765acd6ee10ccbe2502f.jpg_350x350.jpg",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "scImages_0"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [
+                    [
+                      "fileFlag",
+                      "no"
+                    ],
+                    [
+                      "fileId",
+                      "0"
+                    ]
+                  ],
+                  "//sc04.alicdn.com/kf/H5ce87b68d8e641a4863ef32f17323fcba.jpg_350x350.jpg",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "scImages_5"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [
+                    [
+                      "fileFlag",
+                      "no"
+                    ],
+                    [
+                      "fileId",
+                      "33867552628"
+                    ]
+                  ],
+                  "//sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120/286385890/Hea3fc4c6da4b46e0bb75c003260875120.png",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "scImages_3"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [
+                    [
+                      "fileFlag",
+                      "no"
+                    ],
+                    [
+                      "fileId",
+                      "0"
+                    ]
+                  ],
+                  "//sc04.alicdn.com/kf/Hae02934181d44a6f82e12283464e3243g.jpg_350x350.jpg",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "scImages_4"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [
+                    [
+                      "fileFlag",
+                      "no"
+                    ],
+                    [
+                      "fileId",
+                      "0"
+                    ]
+                  ],
+                  "//sc04.alicdn.com/kf/Hdd8e979c7b2e4395844e73a6c96246539.jpg_350x350.jpg",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "sku_verification": null,
+  "task_pack": null,
+  "replacement_plan": null,
+  "replacement_transition": null,
+  "inventory_input": null,
+  "post_publish_acceptance": {
+    "phase": "post_publish_completion",
+    "target_score": 5.0,
+    "actual_score": null,
+    "observed_at": null,
+    "score_source": null,
+    "diagnostics": {
+      "status": "not_read"
+    },
+    "score_status": "pending_score",
+    "overall_status": "PENDING_SCORE",
+    "unverified_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "versioned_content": null,
+    "required_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "limits": "Platform listing score does not prove public content, source truth or real product quality."
+  },
+  "attempted_at": "2026-10-16T04:08:34.098231+00:00",
+  "response": {
+    "trace_id": "2131137617921237173381220e0f49",
+    "product_id": 1601958022991,
+    "biz_success": true,
+    "request_id": "21546a1d17921237173431726",
+    "_trace_id_": "2131137617921237173381220e0f49"
+  },
+  "refs": {
+    "request_id": "21546a1d17921237173431726",
+    "trace_id": "2131137617921237173381220e0f49",
+    "message": null,
+    "error": null
+  },
+  "product_id": "1601958022991"
+}

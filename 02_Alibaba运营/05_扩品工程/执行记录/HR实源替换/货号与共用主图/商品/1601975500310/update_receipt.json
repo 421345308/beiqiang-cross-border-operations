@@ -1,0 +1,259 @@
+{
+  "method": "alibaba.icbu.product.schema.update",
+  "operation": "update",
+  "status": "submitted_needs_readback",
+  "content_status": "pending_readback",
+  "expected_fields": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Unisex Wide Toe Box Mesh Lace Up Retro Casual Sneakers Rubber Outsole EU 36-48 Wholesale Color Assortments",
+          []
+        ]
+      ]
+    ],
+    "scImages": [
+      "field",
+      [
+        [
+          "id",
+          "scImages"
+        ]
+      ],
+      "",
+      [
+        [
+          "complex-value",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "scImages_1"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [
+                    [
+                      "fileFlag",
+                      "no"
+                    ],
+                    [
+                      "fileId",
+                      "0"
+                    ]
+                  ],
+                  "//sc04.alicdn.com/kf/H18eb30a4285c4ce3912f0da22a1c35a4K.png_350x350.png",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "scImages_2"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [
+                    [
+                      "fileFlag",
+                      "no"
+                    ],
+                    [
+                      "fileId",
+                      "0"
+                    ]
+                  ],
+                  "//sc04.alicdn.com/kf/H12fd5872806e4672a8dfe0c16e1550621.png_350x350.png",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "scImages_0"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [
+                    [
+                      "fileFlag",
+                      "no"
+                    ],
+                    [
+                      "fileId",
+                      "0"
+                    ]
+                  ],
+                  "//sc04.alicdn.com/kf/H956b80dacaef46d2aa61ed32647c7ce7X.png_350x350.png",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "scImages_5"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [
+                    [
+                      "fileFlag",
+                      "no"
+                    ],
+                    [
+                      "fileId",
+                      "33867552628"
+                    ]
+                  ],
+                  "//sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120/286385890/Hea3fc4c6da4b46e0bb75c003260875120.png",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "scImages_3"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [
+                    [
+                      "fileFlag",
+                      "no"
+                    ],
+                    [
+                      "fileId",
+                      "0"
+                    ]
+                  ],
+                  "//sc04.alicdn.com/kf/Hb020d4bba50540e1ac5690a96968e09fH.png_350x350.png",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "scImages_4"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [
+                    [
+                      "fileFlag",
+                      "no"
+                    ],
+                    [
+                      "fileId",
+                      "0"
+                    ]
+                  ],
+                  "//sc04.alicdn.com/kf/H7393bd83e2e44192bb0d05471a0e5cedU.png_350x350.png",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "sku_verification": null,
+  "task_pack": null,
+  "replacement_plan": null,
+  "replacement_transition": null,
+  "inventory_input": null,
+  "post_publish_acceptance": {
+    "phase": "post_publish_completion",
+    "target_score": 5.0,
+    "actual_score": null,
+    "observed_at": null,
+    "score_source": null,
+    "diagnostics": {
+      "status": "not_read"
+    },
+    "score_status": "pending_score",
+    "overall_status": "PENDING_SCORE",
+    "unverified_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "versioned_content": null,
+    "required_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "limits": "Platform listing score does not prove public content, source truth or real product quality."
+  },
+  "attempted_at": "2026-10-16T04:05:38.625669+00:00",
+  "response": {
+    "trace_id": "0bf8de2417921235418631792e0f19",
+    "product_id": 1601975500310,
+    "biz_success": true,
+    "request_id": "0bbb637a17921235418674733",
+    "_trace_id_": "0bf8de2417921235418631792e0f19"
+  },
+  "refs": {
+    "request_id": "0bbb637a17921235418674733",
+    "trace_id": "0bf8de2417921235418631792e0f19",
+    "message": null,
+    "error": null
+  },
+  "product_id": "1601975500310"
+}

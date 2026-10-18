@@ -1,0 +1,45 @@
+{
+  "product_id": "10000047187673",
+  "model": "BQ046 / A155",
+  "source_file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\待审_搜鞋网_2026-08-14\\A155\\source.json",
+  "source_url": "https://bqgcd.sooxie.com/detail/1538205",
+  "source_snapshot_scope": "Original saved source packet, not a claim of current supplier stock",
+  "gap": "Fresh formal product and current rendered schema show no FAQ",
+  "existing_company_summary_preserved": true,
+  "FAQ_count": 8,
+  "schema_limits": {
+    "maxItemsRule": 8
+  },
+  "current_listing_minimum": "2",
+  "listing_prices": [
+    {
+      "start_quantity": 2,
+      "price": "9.49"
+    },
+    {
+      "start_quantity": 50,
+      "price": "9.19"
+    },
+    {
+      "start_quantity": 100,
+      "price": "9.09"
+    }
+  ],
+  "preserved_fields": [
+    "subject",
+    "main_image",
+    "product_sku",
+    "attributes",
+    "sourcing_trade",
+    "keywords",
+    "category_id"
+  ],
+  "material_ambiguity_note": "A155 formal outsole has Rubber and Plastic entries; FAQ requires exact composition confirmation without asserting either as a new product fact.",
+  "before_score_snapshot": 4.9,
+  "fields": [
+    "companyFaqDesc"
+  ],
+  "dependencies": [
+    "productDescType"
+  ]
+}

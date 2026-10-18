@@ -1,0 +1,113 @@
+{
+  "verdict": "PASS13_OF13_EXACT_BYTES",
+  "reviewer": "/root/review_9968",
+  "observed_at": "2026-10-02T14:18:25+00:00",
+  "method": "Four concurrent legitimate TLS read-only GET requests, certificate verification enabled, memory only",
+  "rows": [
+    {
+      "name": "M1",
+      "official_url": "https://sc04.alicdn.com/kf/He08f984ec3f24c9bb4e75288cd7c454fl/286385890/He08f984ec3f24c9bb4e75288cd7c454fl.jpg",
+      "file_id": "33714540835",
+      "http_status": 200,
+      "remote_sha256": "ade91f1552a452c2625f99fdb471674ff7e42a35c28eadebc7149a7d8a093973",
+      "remote_equals_ledger_and_local": true
+    },
+    {
+      "name": "M2",
+      "official_url": "https://sc04.alicdn.com/kf/H3ab36f5dbfa644079d68620fc16daf3aC/286385890/H3ab36f5dbfa644079d68620fc16daf3aC.jpg",
+      "file_id": "33716676200",
+      "http_status": 200,
+      "remote_sha256": "e7203197cc2b2d0ac69835bac875a1d5f878bc33cf3f06b650f1a4efc00ec69c",
+      "remote_equals_ledger_and_local": true
+    },
+    {
+      "name": "M3",
+      "official_url": "https://sc04.alicdn.com/kf/Hf3cf520ff20f4f86bf9a6d4e9cfc8e62o/286385890/Hf3cf520ff20f4f86bf9a6d4e9cfc8e62o.jpg",
+      "file_id": "33716664323",
+      "http_status": 200,
+      "remote_sha256": "b503305d94f665e12b6b425d4e6abd3b444cd34cf26d2a698c065365fcf55a65",
+      "remote_equals_ledger_and_local": true
+    },
+    {
+      "name": "M4",
+      "official_url": "https://sc04.alicdn.com/kf/H31afe7c937864c59950abd9fbe160f7bi/286385890/H31afe7c937864c59950abd9fbe160f7bi.jpg",
+      "file_id": "33716664326",
+      "http_status": 200,
+      "remote_sha256": "c7c75ba7091f9eb8e9959550344cd3e0f08d3fab937dbb999c391d83baf441db",
+      "remote_equals_ledger_and_local": true
+    },
+    {
+      "name": "M5",
+      "official_url": "https://sc04.alicdn.com/kf/H25dcb7778b53468a9104cc9f6c9be7a6y/286385890/H25dcb7778b53468a9104cc9f6c9be7a6y.jpg",
+      "file_id": "33714504935",
+      "http_status": 200,
+      "remote_sha256": "83111d86e61b06e6110408f66d64bf8fe1b35c3b62dedf23e8dae3cfd6ac7195",
+      "remote_equals_ledger_and_local": true
+    },
+    {
+      "name": "M6",
+      "official_url": "https://sc04.alicdn.com/kf/Ha61298a05f3840bb8123dc9161f6cb54A/286385890/Ha61298a05f3840bb8123dc9161f6cb54A.jpg",
+      "file_id": "33712501339",
+      "http_status": 200,
+      "remote_sha256": "429e50e6e0216407bd42e5b7f5ddfe89b124dbed2aa22e322fe5546fa5f7ae62",
+      "remote_equals_ledger_and_local": true
+    },
+    {
+      "name": "D1",
+      "official_url": "https://sc04.alicdn.com/kf/H4d72fb39ae714568bb2c09856868f260e/286385890/H4d72fb39ae714568bb2c09856868f260e.jpg",
+      "file_id": "33714612534",
+      "http_status": 200,
+      "remote_sha256": "c81d932c998e9af24629c75b327fe69cc07c739d16032c5ae592aa6bd9359fb4",
+      "remote_equals_ledger_and_local": true
+    },
+    {
+      "name": "D2",
+      "official_url": "https://sc04.alicdn.com/kf/H75d5c610a2a943fc86ebc8ea8b8ec0cdb/286385890/H75d5c610a2a943fc86ebc8ea8b8ec0cdb.jpg",
+      "file_id": "33716652302",
+      "http_status": 200,
+      "remote_sha256": "c5468208d766ef3910fb7183fcd42f1f5c6c3f894d2c6c8bf594696d0289422c",
+      "remote_equals_ledger_and_local": true
+    },
+    {
+      "name": "D3",
+      "official_url": "https://sc04.alicdn.com/kf/H84d1592f4dfd4290b918c0ce2fb8d0afM/286385890/H84d1592f4dfd4290b918c0ce2fb8d0afM.jpg",
+      "file_id": "33714025661",
+      "http_status": 200,
+      "remote_sha256": "18abe377fd172242c3540d9f7bc4dd91a85b3cbef210b2e47e0374e90e9011f4",
+      "remote_equals_ledger_and_local": true
+    },
+    {
+      "name": "D4",
+      "official_url": "https://sc04.alicdn.com/kf/H4be5e83031da43709668033dd6ab93357/286385890/H4be5e83031da43709668033dd6ab93357.jpg",
+      "file_id": "33716664405",
+      "http_status": 200,
+      "remote_sha256": "952c65c08d9beaefec123b378f9b6f74331e331c67b8d2751142718352245e81",
+      "remote_equals_ledger_and_local": true
+    },
+    {
+      "name": "Grey",
+      "official_url": "https://sc04.alicdn.com/kf/H2cee9643331c4454b830634700c5aa67P/286385890/H2cee9643331c4454b830634700c5aa67P.jpg",
+      "file_id": "33714049707",
+      "http_status": 200,
+      "remote_sha256": "813a45ea1cd56e968cd0221ebe07171a24011953b611d3d10eb6a63c18598993",
+      "remote_equals_ledger_and_local": true
+    },
+    {
+      "name": "Green",
+      "official_url": "https://sc04.alicdn.com/kf/H8b82990fc04744a4b97d7af7032bb08cy/286385890/H8b82990fc04744a4b97d7af7032bb08cy.jpg",
+      "file_id": "33712561093",
+      "http_status": 200,
+      "remote_sha256": "bf466675b93a26b5029cc66f34061245990391d6069b54b8b23e3ffc1979f074",
+      "remote_equals_ledger_and_local": true
+    },
+    {
+      "name": "Blue",
+      "official_url": "https://sc04.alicdn.com/kf/Hcc90c3a10a0f426e8142375a7d51d1a2S/286385890/Hcc90c3a10a0f426e8142375a7d51d1a2S.jpg",
+      "file_id": "33714025746",
+      "http_status": 200,
+      "remote_sha256": "c13ec7abb50bb918f1c31e3021413e51b12982acaa98710021899d32ec7eb3e8",
+      "remote_equals_ledger_and_local": true
+    }
+  ],
+  "public_interaction_acceptance": "Separate pending parent cloud browser; CDN retrieval is not page pixel acceptance"
+}

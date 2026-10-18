@@ -1,0 +1,27 @@
+{
+  "operation": "update",
+  "product_id": "1601939736061",
+  "category_id": 201334413,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "copy.json",
+    "before_get.json",
+    "../../../../../01_产品资产/02_可发布素材/00_最终上传/BQ013_T55836/00_上架填写表.md",
+    "../../../../../01_产品资产/01_原始数据包/已整理_BQ013_T55836_T55836贝强鞋业2025新款批53元/贝强鞋业2025新款T55836批53元/800X800主图/001.jpg",
+    "current_get.json",
+    "../../../../00_运营SOP/国际站商品全生命周期SOP.md"
+  ],
+  "current_schema": "current_schema.xml",
+  "current_schema_sha256": "61ba8dccc2641c55429419f6668f949693942895c0bcda2500ba2cf377ece5ff",
+  "schema_request_id": "213c934417917345380843143",
+  "schema_acquired_at": "2026-10-11T16:02:16.813681+00:00",
+  "payload_xml": "payload.xml",
+  "field_ids": [
+    "textDesc",
+    "companyFaqDesc"
+  ],
+  "dependency_ids": [
+    "productDescType"
+  ],
+  "observed_model": "BQ013-O1 / T55836"
+}

@@ -1,0 +1,259 @@
+{
+  "method": "alibaba.icbu.product.schema.update",
+  "operation": "update",
+  "status": "submitted_needs_readback",
+  "content_status": "pending_readback",
+  "expected_fields": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Men's Slip-On Knit Walking Shoes Easy On and Off Wholesale Casual Footwear",
+          []
+        ]
+      ]
+    ],
+    "scImages": [
+      "field",
+      [
+        [
+          "id",
+          "scImages"
+        ]
+      ],
+      "",
+      [
+        [
+          "complex-value",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "scImages_1"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [
+                    [
+                      "fileFlag",
+                      "no"
+                    ],
+                    [
+                      "fileId",
+                      "0"
+                    ]
+                  ],
+                  "//sc04.alicdn.com/kf/Hf11f3035adc0481e94478c189da35e7ey.jpg_350x350.jpg",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "scImages_2"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [
+                    [
+                      "fileFlag",
+                      "no"
+                    ],
+                    [
+                      "fileId",
+                      "0"
+                    ]
+                  ],
+                  "//sc04.alicdn.com/kf/Sbdf8cd59244a41288a8ae4da2b22991cG.jpg_350x350.jpg",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "scImages_0"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [
+                    [
+                      "fileFlag",
+                      "no"
+                    ],
+                    [
+                      "fileId",
+                      "0"
+                    ]
+                  ],
+                  "//sc04.alicdn.com/kf/H2e2364ddb03c425b97a2e191633d79a3A.jpg_350x350.jpg",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "scImages_5"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [
+                    [
+                      "fileFlag",
+                      "no"
+                    ],
+                    [
+                      "fileId",
+                      "0"
+                    ]
+                  ],
+                  "//sc04.alicdn.com/kf/H955edc1924bb4e238f12ba4084cbdc97Q.jpg_350x350.jpg",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "scImages_3"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [
+                    [
+                      "fileFlag",
+                      "no"
+                    ],
+                    [
+                      "fileId",
+                      "33867552628"
+                    ]
+                  ],
+                  "//sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120/286385890/Hea3fc4c6da4b46e0bb75c003260875120.png",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "scImages_4"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [
+                    [
+                      "fileFlag",
+                      "no"
+                    ],
+                    [
+                      "fileId",
+                      "0"
+                    ]
+                  ],
+                  "//sc04.alicdn.com/kf/H9af886dbb98e4b13bb6921b9fb27a86e3.jpg_350x350.jpg",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "sku_verification": null,
+  "task_pack": null,
+  "replacement_plan": null,
+  "replacement_transition": null,
+  "inventory_input": null,
+  "post_publish_acceptance": {
+    "phase": "post_publish_completion",
+    "target_score": 5.0,
+    "actual_score": null,
+    "observed_at": null,
+    "score_source": null,
+    "diagnostics": {
+      "status": "not_read"
+    },
+    "score_status": "pending_score",
+    "overall_status": "PENDING_SCORE",
+    "unverified_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "versioned_content": null,
+    "required_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "limits": "Platform listing score does not prove public content, source truth or real product quality."
+  },
+  "attempted_at": "2026-10-16T04:20:05.325720+00:00",
+  "response": {
+    "trace_id": "2104f59517921244086692747e0d1d",
+    "product_id": 1601939669411,
+    "biz_success": true,
+    "request_id": "213e759c17921244086744174",
+    "_trace_id_": "2104f59517921244086692747e0d1d"
+  },
+  "refs": {
+    "request_id": "213e759c17921244086744174",
+    "trace_id": "2104f59517921244086692747e0d1d",
+    "message": null,
+    "error": null
+  },
+  "product_id": "1601939669411"
+}

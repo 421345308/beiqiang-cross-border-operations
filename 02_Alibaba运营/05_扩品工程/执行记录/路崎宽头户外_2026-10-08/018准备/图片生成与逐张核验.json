@@ -1,0 +1,399 @@
+{
+  "style": "018",
+  "tool": "BUILTIN_IMAGE_GEN",
+  "observed_at": "2026-10-09T16:13:48.354139+00:00",
+  "rows": [
+    {
+      "role": "M1",
+      "buyer_question": "搜索识别完整黑绿单鞋",
+      "source_indices": [
+        1
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\018准备\\01_产品来源原图\\01.jpg"
+      ],
+      "source_sha256": [
+        "3bbd035e00c4b507c44647f18a7dd60bc844743fda32992dba3e5285abf19187"
+      ],
+      "source_dimensions": [
+        [
+          800,
+          800
+        ]
+      ],
+      "prompt": "Use case: precise-object-edit. Input image is the exact edit target, not an inspiration reference. Edit only framing, background clutter and supplier marketing overlays into one square English B2B footwear photograph. Preserve the exact actual Luqi018 shoe(s), photographed pose, count, color, stitching, metal eyelets, laces, broad rounded toe, raised black toe edge, curved long side panels, mesh collar, rear pull loop, black ribbed rounded sole and every naturally occluded or cropped boundary. Black is all black; Black Gray gray panels with black edging/sole; Black Green deep green panels/laces with black edging/sole; Black Khaki khaki panels with black edging/sole. No recoloring, no new viewpoint, no extra shoes, no reconstructed hidden contours, no marks added/removed on shoes. Remove original Chinese/performance wording, supplier decorative frames and irrelevant backdrop lettering only. No medical, orthopedic, barefoot, zero-drop, waterproof, grip, slip resistance, stability, lightweight, material chemistry, certifications or price claims. Keep actual photography as the visual majority with safe margins. Use simple legible black English headings, white or understated neutral background. Keep the one complete Black Green diagonal shoe exactly as photographed. White background, subtle natural shadow, no text, no additional objects.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\018准备\\05_AI候选\\M1.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-333bfb97-2cca-49e5-9dc4-134716eebcec.png",
+      "output_sha256": "42513739a745d67e92eeb95963ab25b62c3ae4837007af860cffbe9577f8e9c8",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-09T16:20:39.662892+00:00",
+      "review_note": "Exact full diagonal Black Green shoe, eyelets/lacing/panels/black edge/sole preserved; no text."
+    },
+    {
+      "role": "M2",
+      "buyer_question": "四种实际配色与EU范围",
+      "source_indices": [
+        13
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\018准备\\01_产品来源原图\\13.jpg"
+      ],
+      "source_sha256": [
+        "c0e8ec601afbec5ae22e2eaa97d42a80955487f556ec0f72c06c6ea3282c31e1"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1028
+        ]
+      ],
+      "prompt": "Use case: precise-object-edit. Input image is the exact edit target, not an inspiration reference. Edit only framing, background clutter and supplier marketing overlays into one square English B2B footwear photograph. Preserve the exact actual Luqi018 shoe(s), photographed pose, count, color, stitching, metal eyelets, laces, broad rounded toe, raised black toe edge, curved long side panels, mesh collar, rear pull loop, black ribbed rounded sole and every naturally occluded or cropped boundary. Black is all black; Black Gray gray panels with black edging/sole; Black Green deep green panels/laces with black edging/sole; Black Khaki khaki panels with black edging/sole. No recoloring, no new viewpoint, no extra shoes, no reconstructed hidden contours, no marks added/removed on shoes. Remove original Chinese/performance wording, supplier decorative frames and irrelevant backdrop lettering only. No medical, orthopedic, barefoot, zero-drop, waterproof, grip, slip resistance, stability, lightweight, material chemistry, certifications or price claims. Keep actual photography as the visual majority with safe margins. Use simple legible black English headings, white or understated neutral background. Use only the four complete photographed side-profile shoes in their original 2x2 order, Black Khaki upper left, Black Gray upper right, Black lower left, Black Green lower right. Omit the bottom specification table. No additional shots. Text exactly: COLOR OPTIONS; Black Khaki; Black Gray; Black; Black Green; EU 37-48 | Send your color and size mix.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\018准备\\05_AI候选\\M2.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-1059e27d-f350-4368-b981-0382c1d8e214.png",
+      "output_sha256": "851864d7c3e6d3710460423106df89c0b0a810d8bb38a783bae26599d8f7e0cd",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-09T16:20:39.676675+00:00",
+      "review_note": "Four original side profiles in correct2x2 color mapping, EU37–48; source13 lower material/performance table excluded."
+    },
+    {
+      "role": "M3",
+      "buyer_question": "黑灰正面上脚鞋型",
+      "source_indices": [
+        19
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\018准备\\01_产品来源原图\\19.jpg"
+      ],
+      "source_sha256": [
+        "178f33119aa3e8532f630586e703709e8ce7559aeadcfeb68d2d15009ecb7ca2"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1242
+        ]
+      ],
+      "prompt": "Use case: precise-object-edit. Input image is the exact edit target, not an inspiration reference. Edit only framing, background clutter and supplier marketing overlays into one square English B2B footwear photograph. Preserve the exact actual Luqi018 shoe(s), photographed pose, count, color, stitching, metal eyelets, laces, broad rounded toe, raised black toe edge, curved long side panels, mesh collar, rear pull loop, black ribbed rounded sole and every naturally occluded or cropped boundary. Black is all black; Black Gray gray panels with black edging/sole; Black Green deep green panels/laces with black edging/sole; Black Khaki khaki panels with black edging/sole. No recoloring, no new viewpoint, no extra shoes, no reconstructed hidden contours, no marks added/removed on shoes. Remove original Chinese/performance wording, supplier decorative frames and irrelevant backdrop lettering only. No medical, orthopedic, barefoot, zero-drop, waterproof, grip, slip resistance, stability, lightweight, material chemistry, certifications or price claims. Keep actual photography as the visual majority with safe margins. Use simple legible black English headings, white or understated neutral background. Preserve the exact two Black Gray on-foot shoes, white socks, photographed stance and actual chair scene. Crop the person naturally above lower legs, remove page frame. Text exactly: ON-FOOT PROFILE; Black Gray | Low-top lace-up footwear.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\018准备\\05_AI候选\\M3.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-dbb2d87b-1c9a-4d33-9b7f-6204df2ec2b9.png",
+      "output_sha256": "5cff2ce9aa10c971c97536959668b7a54a09cced6b02d259356bb51c03e34e14",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-09T16:20:39.692287+00:00",
+      "review_note": "Actual19 front Black Gray pair/legs/chair preserved, full toes. Source ankles have no visible white socks; prompt mention was inaccurate, result preserves actual source rather than adding socks."
+    },
+    {
+      "role": "M4",
+      "buyer_question": "实拍鞋口与后跟近景",
+      "source_indices": [
+        12
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\018准备\\01_产品来源原图\\12.jpg"
+      ],
+      "source_sha256": [
+        "8b912ae3551bee4aecb7738072e0b46fc99ae97f50f55d1508f4c8287cbe2d38"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1020
+        ]
+      ],
+      "prompt": "Use case: precise-object-edit. Input image is the exact edit target, not an inspiration reference. Edit only framing, background clutter and supplier marketing overlays into one square English B2B footwear photograph. Preserve the exact actual Luqi018 shoe(s), photographed pose, count, color, stitching, metal eyelets, laces, broad rounded toe, raised black toe edge, curved long side panels, mesh collar, rear pull loop, black ribbed rounded sole and every naturally occluded or cropped boundary. Black is all black; Black Gray gray panels with black edging/sole; Black Green deep green panels/laces with black edging/sole; Black Khaki khaki panels with black edging/sole. No recoloring, no new viewpoint, no extra shoes, no reconstructed hidden contours, no marks added/removed on shoes. Remove original Chinese/performance wording, supplier decorative frames and irrelevant backdrop lettering only. No medical, orthopedic, barefoot, zero-drop, waterproof, grip, slip resistance, stability, lightweight, material chemistry, certifications or price claims. Keep actual photography as the visual majority with safe margins. Use simple legible black English headings, white or understated neutral background. Keep the exact Black Green heel/collar macro, including the front clipped at the original left edge. Do not reconstruct the unseen toe or add full shoes. Remove all marketing frame wording including CAMEL which is outside the shoe. Text exactly: HEEL AND COLLAR; Actual photographed construction.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\018准备\\05_AI候选\\M4.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-c283b49c-a3d5-4f79-be4c-ab4fce892a01.png",
+      "output_sha256": "f49215f2b87f7626f804b984c7f09ee03301a4710bdde5c77e47065f5bf318f0",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-09T16:20:39.709138+00:00",
+      "review_note": "Actual12 intentional heel/collar macro, original left clipping unchanged; external CAMEL marketing frame removed, no shoe marks removed."
+    },
+    {
+      "role": "M5",
+      "buyer_question": "全黑上脚与询价输入",
+      "source_indices": [
+        22
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\018准备\\01_产品来源原图\\22.jpg"
+      ],
+      "source_sha256": [
+        "8171557967284e3735a72439af1226092b93e24b18cef4ffbe951eb1822feee2"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1227
+        ]
+      ],
+      "prompt": "Use case: precise-object-edit. Input image is the exact edit target, not an inspiration reference. Edit only framing, background clutter and supplier marketing overlays into one square English B2B footwear photograph. Preserve the exact actual Luqi018 shoe(s), photographed pose, count, color, stitching, metal eyelets, laces, broad rounded toe, raised black toe edge, curved long side panels, mesh collar, rear pull loop, black ribbed rounded sole and every naturally occluded or cropped boundary. Black is all black; Black Gray gray panels with black edging/sole; Black Green deep green panels/laces with black edging/sole; Black Khaki khaki panels with black edging/sole. No recoloring, no new viewpoint, no extra shoes, no reconstructed hidden contours, no marks added/removed on shoes. Remove original Chinese/performance wording, supplier decorative frames and irrelevant backdrop lettering only. No medical, orthopedic, barefoot, zero-drop, waterproof, grip, slip resistance, stability, lightweight, material chemistry, certifications or price claims. Keep actual photography as the visual majority with safe margins. Use simple legible black English headings, white or understated neutral background. Keep the exact two Black on-foot shoes with white socks/trousers and actual chair/grass scene; preserve natural occlusion on the rear shoe and lifted foreground pose. Text exactly: PLAN YOUR ASSORTMENT; Send color, EU size mix, pair quantity and destination.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\018准备\\05_AI候选\\M5.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-266518d9-4982-4527-8cb5-007042149226.png",
+      "output_sha256": "87c944eab1cb1580b255c732a1988e1db6d5d724049a6831fcf10309d151d0ea",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-09T16:20:39.723319+00:00",
+      "review_note": "Actual22 Black lifted shoe/rear grass occlusion retained, quotation inputs legible."
+    },
+    {
+      "role": "D1",
+      "buyer_question": "层叠鞋帮与鞋带结构",
+      "source_indices": [
+        17
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\018准备\\01_产品来源原图\\17.jpg"
+      ],
+      "source_sha256": [
+        "2acbc14293ff5ad0e1db244ee7228cae7fb78533c6ebd9bcce169905673e09ff"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1171
+        ]
+      ],
+      "prompt": "Use case: precise-object-edit. Input image is the exact edit target, not an inspiration reference. Edit only framing, background clutter and supplier marketing overlays into one square English B2B footwear photograph. Preserve the exact actual Luqi018 shoe(s), photographed pose, count, color, stitching, metal eyelets, laces, broad rounded toe, raised black toe edge, curved long side panels, mesh collar, rear pull loop, black ribbed rounded sole and every naturally occluded or cropped boundary. Black is all black; Black Gray gray panels with black edging/sole; Black Green deep green panels/laces with black edging/sole; Black Khaki khaki panels with black edging/sole. No recoloring, no new viewpoint, no extra shoes, no reconstructed hidden contours, no marks added/removed on shoes. Remove original Chinese/performance wording, supplier decorative frames and irrelevant backdrop lettering only. No medical, orthopedic, barefoot, zero-drop, waterproof, grip, slip resistance, stability, lightweight, material chemistry, certifications or price claims. Keep actual photography as the visual majority with safe margins. Use simple legible black English headings, white or understated neutral background. Keep the single Black Gray on-foot shoe in the original pose with the real hands adjusting trousers above ankle and actual table scene. Show actual panels and metal eyelets, no material claims. Text exactly: UPPER AND CLOSURE; Layered panels and lace-up construction.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\018准备\\05_AI候选\\D1.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-f29745be-2cb6-4a82-8cd6-41990ebeb868.png",
+      "output_sha256": "7b5ffc0438ceac32333fcb960d918ba8fc695f6a6dd012a28ae9155ac5aab802",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-09T16:20:39.737539+00:00",
+      "review_note": "Actual17 single Black Gray shoe/real hands/layered upper/metal eyelets, no invented material."
+    },
+    {
+      "role": "D2",
+      "buyer_question": "顶视鞋口与鞋带",
+      "source_indices": [
+        16
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\018准备\\01_产品来源原图\\16.jpg"
+      ],
+      "source_sha256": [
+        "540c7db80b57324b98145edf165340df8a10aa310a5b37206b575b174f629fdf"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1227
+        ]
+      ],
+      "prompt": "Use case: precise-object-edit. Input image is the exact edit target, not an inspiration reference. Edit only framing, background clutter and supplier marketing overlays into one square English B2B footwear photograph. Preserve the exact actual Luqi018 shoe(s), photographed pose, count, color, stitching, metal eyelets, laces, broad rounded toe, raised black toe edge, curved long side panels, mesh collar, rear pull loop, black ribbed rounded sole and every naturally occluded or cropped boundary. Black is all black; Black Gray gray panels with black edging/sole; Black Green deep green panels/laces with black edging/sole; Black Khaki khaki panels with black edging/sole. No recoloring, no new viewpoint, no extra shoes, no reconstructed hidden contours, no marks added/removed on shoes. Remove original Chinese/performance wording, supplier decorative frames and irrelevant backdrop lettering only. No medical, orthopedic, barefoot, zero-drop, waterproof, grip, slip resistance, stability, lightweight, material chemistry, certifications or price claims. Keep actual photography as the visual majority with safe margins. Use simple legible black English headings, white or understated neutral background. Keep the exact two Black Green shoes in their top-view photographed positions, original legs naturally occlude the opening; no empty shoe reconstruction. Text exactly: TOP VIEW; Photographed opening and lace arrangement.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\018准备\\05_AI候选\\D2.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-cec8ea2f-81c8-41a5-abe0-b38f0a6ea540.png",
+      "output_sha256": "f8f022f09156ffa7b5265b870b509d1370063d08c198dff1664f6d4d80a68644",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-09T16:20:39.751823+00:00",
+      "review_note": "Actual16 Black Green pair top view and leg occlusions retained."
+    },
+    {
+      "role": "D3",
+      "buyer_question": "实际后侧及局部底纹",
+      "source_indices": [
+        15
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\018准备\\01_产品来源原图\\15.jpg"
+      ],
+      "source_sha256": [
+        "d41e5df99e701c181a9351257e55cabe647a71d0349af7ff758edee794c66e13"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1138
+        ]
+      ],
+      "prompt": "Use case: precise-object-edit. Input image is the exact edit target, not an inspiration reference. Edit only framing, background clutter and supplier marketing overlays into one square English B2B footwear photograph. Preserve the exact actual Luqi018 shoe(s), photographed pose, count, color, stitching, metal eyelets, laces, broad rounded toe, raised black toe edge, curved long side panels, mesh collar, rear pull loop, black ribbed rounded sole and every naturally occluded or cropped boundary. Black is all black; Black Gray gray panels with black edging/sole; Black Green deep green panels/laces with black edging/sole; Black Khaki khaki panels with black edging/sole. No recoloring, no new viewpoint, no extra shoes, no reconstructed hidden contours, no marks added/removed on shoes. Remove original Chinese/performance wording, supplier decorative frames and irrelevant backdrop lettering only. No medical, orthopedic, barefoot, zero-drop, waterproof, grip, slip resistance, stability, lightweight, material chemistry, certifications or price claims. Keep actual photography as the visual majority with safe margins. Use simple legible black English headings, white or understated neutral background. Keep the exact two Black Green on-foot shoes: foreground heel raised showing only the actual partial tread, rear shoe planted with side profile. Preserve photographed partial grooves/hexagonal areas. No invented full outsole. Text exactly: REAR AND SIDE VIEW; Actual photographed rubber outsole.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\018准备\\05_AI候选\\D3.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-c0a55a6c-e040-419c-bc23-dd11952bec2c.png",
+      "output_sha256": "c276f3ce91a757119dc3612e8f7ec0a72bc38d0b179e3a5db7d6eb887fa99648",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-09T16:20:39.765624+00:00",
+      "review_note": "Actual15 raised heel/partial sole and planted second Black Green shoe preserved; no complete new sole angle."
+    },
+    {
+      "role": "D4",
+      "buyer_question": "黑卡其鞋型及配码",
+      "source_indices": [
+        24
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\018准备\\01_产品来源原图\\24.jpg"
+      ],
+      "source_sha256": [
+        "7139bb6609ab109ad7ae8ada67b7430f89745cfbb3c7629da6a44383881ae7ea"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1100
+        ]
+      ],
+      "prompt": "Use case: precise-object-edit. Input image is the exact edit target, not an inspiration reference. Edit only framing, background clutter and supplier marketing overlays into one square English B2B footwear photograph. Preserve the exact actual Luqi018 shoe(s), photographed pose, count, color, stitching, metal eyelets, laces, broad rounded toe, raised black toe edge, curved long side panels, mesh collar, rear pull loop, black ribbed rounded sole and every naturally occluded or cropped boundary. Black is all black; Black Gray gray panels with black edging/sole; Black Green deep green panels/laces with black edging/sole; Black Khaki khaki panels with black edging/sole. No recoloring, no new viewpoint, no extra shoes, no reconstructed hidden contours, no marks added/removed on shoes. Remove original Chinese/performance wording, supplier decorative frames and irrelevant backdrop lettering only. No medical, orthopedic, barefoot, zero-drop, waterproof, grip, slip resistance, stability, lightweight, material chemistry, certifications or price claims. Keep actual photography as the visual majority with safe margins. Use simple legible black English headings, white or understated neutral background. Keep the exact two complete Black Khaki on-foot shoes, white socks, actual chair/greenery and original top-view pose. Text exactly: EU SIZE PLANNING; EU 37-48 | Confirm your required color-size mix.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\018准备\\05_AI候选\\D4.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-b727e093-1948-407f-a477-be2a3b555cb5.png",
+      "output_sha256": "f94f3213460ea77231403c484c58e205f1014ae9dd6e5936ce8cae0e69c9147a",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-09T16:20:39.781424+00:00",
+      "review_note": "Actual24 Black Khaki top view/white socks preserved, EU37–48 wording."
+    },
+    {
+      "role": "SKU_Black",
+      "buyer_question": "全黑单色选择",
+      "source_indices": [
+        21
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\018准备\\01_产品来源原图\\21.jpg"
+      ],
+      "source_sha256": [
+        "c8c7fe421806749bac30bf0439c55c9e3eba6febf0d25b5beceb84e6577ff1b7"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          987
+        ]
+      ],
+      "prompt": "Use case: precise-object-edit. Input image is the exact edit target, not an inspiration reference. Edit only framing, background clutter and supplier marketing overlays into one square English B2B footwear photograph. Preserve the exact actual Luqi018 shoe(s), photographed pose, count, color, stitching, metal eyelets, laces, broad rounded toe, raised black toe edge, curved long side panels, mesh collar, rear pull loop, black ribbed rounded sole and every naturally occluded or cropped boundary. Black is all black; Black Gray gray panels with black edging/sole; Black Green deep green panels/laces with black edging/sole; Black Khaki khaki panels with black edging/sole. No recoloring, no new viewpoint, no extra shoes, no reconstructed hidden contours, no marks added/removed on shoes. Remove original Chinese/performance wording, supplier decorative frames and irrelevant backdrop lettering only. No medical, orthopedic, barefoot, zero-drop, waterproof, grip, slip resistance, stability, lightweight, material chemistry, certifications or price claims. Keep actual photography as the visual majority with safe margins. Use simple legible black English headings, white or understated neutral background. Keep the two actual complete Black on-foot shoes and white socks in the exact top-view pose on grass. Remove blue paper frame. Neutral understated backdrop; no text, no collage, no added shoes.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\018准备\\05_AI候选\\SKU_Black.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-4e597aa2-de53-4275-9e68-6266932a4593.png",
+      "output_sha256": "a883bf6f5cada4d44cd895fbcc7c6a60a701cdbf24de76caa1a07f8cb0fae1a9",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-09T16:20:39.798543+00:00",
+      "review_note": "Actual21 complete Black pair top view/white socks, no text/collage."
+    },
+    {
+      "role": "SKU_Black Gray",
+      "buyer_question": "黑灰单色选择",
+      "source_indices": [
+        18
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\018准备\\01_产品来源原图\\18.jpg"
+      ],
+      "source_sha256": [
+        "1e1c55bdaf43265663c30d2beb9c97f44798ff0141040cfa93492ab924ab7279"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1036
+        ]
+      ],
+      "prompt": "Use case: precise-object-edit. Input image is the exact edit target, not an inspiration reference. Edit only framing, background clutter and supplier marketing overlays into one square English B2B footwear photograph. Preserve the exact actual Luqi018 shoe(s), photographed pose, count, color, stitching, metal eyelets, laces, broad rounded toe, raised black toe edge, curved long side panels, mesh collar, rear pull loop, black ribbed rounded sole and every naturally occluded or cropped boundary. Black is all black; Black Gray gray panels with black edging/sole; Black Green deep green panels/laces with black edging/sole; Black Khaki khaki panels with black edging/sole. No recoloring, no new viewpoint, no extra shoes, no reconstructed hidden contours, no marks added/removed on shoes. Remove original Chinese/performance wording, supplier decorative frames and irrelevant backdrop lettering only. No medical, orthopedic, barefoot, zero-drop, waterproof, grip, slip resistance, stability, lightweight, material chemistry, certifications or price claims. Keep actual photography as the visual majority with safe margins. Use simple legible black English headings, white or understated neutral background. Keep the exact two Black Gray on-foot shoes and white socks, foreground heel lifted/toe grounded and rear shoe naturally planted in grass. Neutral understated backdrop; no text or collage.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\018准备\\05_AI候选\\SKU_Black_Gray.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-2189341e-f38d-4e4c-8323-25c6e4ef9509.png",
+      "output_sha256": "124f35e88ba180787ddbb3579f9efb517168e529bf071d399f0dbb5ce9ef3040",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-09T16:20:39.814549+00:00",
+      "review_note": "Actual18 Black Gray on-foot pose with bare ankles preserved; no socks added despite inaccurate prompt reference."
+    },
+    {
+      "role": "SKU_Black Green",
+      "buyer_question": "黑绿单色选择",
+      "source_indices": [
+        14
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\018准备\\01_产品来源原图\\14.jpg"
+      ],
+      "source_sha256": [
+        "a9096b42d5c7c2db038e07c2a2433d61f4b82c7cb6b5172662defabd06aa270c"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1276
+        ]
+      ],
+      "prompt": "Use case: precise-object-edit. Input image is the exact edit target, not an inspiration reference. Edit only framing, background clutter and supplier marketing overlays into one square English B2B footwear photograph. Preserve the exact actual Luqi018 shoe(s), photographed pose, count, color, stitching, metal eyelets, laces, broad rounded toe, raised black toe edge, curved long side panels, mesh collar, rear pull loop, black ribbed rounded sole and every naturally occluded or cropped boundary. Black is all black; Black Gray gray panels with black edging/sole; Black Green deep green panels/laces with black edging/sole; Black Khaki khaki panels with black edging/sole. No recoloring, no new viewpoint, no extra shoes, no reconstructed hidden contours, no marks added/removed on shoes. Remove original Chinese/performance wording, supplier decorative frames and irrelevant backdrop lettering only. No medical, orthopedic, barefoot, zero-drop, waterproof, grip, slip resistance, stability, lightweight, material chemistry, certifications or price claims. Keep actual photography as the visual majority with safe margins. Use simple legible black English headings, white or understated neutral background. Keep both exact Black Green shoes: the foreground actual shoe held by the original visible hand and rear shoe worn on foot on the table. Preserve actual hand, count, openings and poses; no additional shoes or angles. Neutral understated backdrop; no text or collage.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\018准备\\05_AI候选\\SKU_Black_Green.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-669b5995-7163-4269-bc49-79a69807b32b.png",
+      "output_sha256": "3132d6ee9f3e5155c2b991bf3413c9bac864fc690cb0cf133bbb0dace3be8cb6",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-09T16:20:39.829366+00:00",
+      "review_note": "Actual14 one shoe held by real hand and other shoe on foot/table, exactly two shoes/no collage/recolor."
+    },
+    {
+      "role": "SKU_Black Khaki",
+      "buyer_question": "黑卡其单色选择",
+      "source_indices": [
+        25
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\018准备\\01_产品来源原图\\25.jpg"
+      ],
+      "source_sha256": [
+        "e81eb15995353fec3c22b938e582d5b5d158b3154549ff9f9f65168a902198bd"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1250
+        ]
+      ],
+      "prompt": "Use case: precise-object-edit. Input image is the exact edit target, not an inspiration reference. Edit only framing, background clutter and supplier marketing overlays into one square English B2B footwear photograph. Preserve the exact actual Luqi018 shoe(s), photographed pose, count, color, stitching, metal eyelets, laces, broad rounded toe, raised black toe edge, curved long side panels, mesh collar, rear pull loop, black ribbed rounded sole and every naturally occluded or cropped boundary. Black is all black; Black Gray gray panels with black edging/sole; Black Green deep green panels/laces with black edging/sole; Black Khaki khaki panels with black edging/sole. No recoloring, no new viewpoint, no extra shoes, no reconstructed hidden contours, no marks added/removed on shoes. Remove original Chinese/performance wording, supplier decorative frames and irrelevant backdrop lettering only. No medical, orthopedic, barefoot, zero-drop, waterproof, grip, slip resistance, stability, lightweight, material chemistry, certifications or price claims. Keep actual photography as the visual majority with safe margins. Use simple legible black English headings, white or understated neutral background. Keep the exact Black Khaki on-foot pair on grass and white socks. Preserve naturally blurred rear shoe and sharp foreground shoe in original pose; do not reconstruct or sharpen invented structure. Neutral understated backdrop; no text or collage.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\018准备\\05_AI候选\\SKU_Black_Khaki.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-4137f472-c53c-40a8-bfa1-de3e43f5a8d0.png",
+      "output_sha256": "0cb958915c77a46bf3a88d1546ff497454eaa42f46e875c328276d65ffcfa86f",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-09T16:20:39.843674+00:00",
+      "review_note": "Actual25 foreground Black Khaki whole shoe and naturally blurred back shoe retained."
+    }
+  ],
+  "status": "ALL_13_LOCAL_ROLES_VISUALLY_ACCEPTED",
+  "review_limit": "Full native outputs compared against each actual source. Source geometry, actual colors, macros/occlusions and text checked; no buyer-page rendering inferred."
+}

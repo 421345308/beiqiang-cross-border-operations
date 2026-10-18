@@ -1,0 +1,100 @@
+{
+  "probe": "read_only_no_retries_no_proxy_or_trust_changes",
+  "rows": [
+    {
+      "target": "supplier",
+      "transport": "python_default",
+      "observed_at_utc": "2026-10-07T12:26:37.463361+00:00",
+      "verified_tls": true,
+      "http_status": 200,
+      "bytes": 21401,
+      "challenge_page": false,
+      "product_link_count": 0,
+      "supplier_sku_found": true,
+      "elapsed_seconds": 6.22
+    },
+    {
+      "target": "supplier",
+      "transport": "windows_native",
+      "observed_at_utc": "2026-10-07T12:26:43.683684+00:00",
+      "verified_tls": true,
+      "curl_exit": 0,
+      "http_status": 200,
+      "bytes": 21401,
+      "challenge_page": false,
+      "product_link_count": 0,
+      "supplier_sku_found": true,
+      "elapsed_seconds": 1.88
+    },
+    {
+      "target": "keyword",
+      "transport": "python_default",
+      "observed_at_utc": "2026-10-07T12:26:45.566065+00:00",
+      "verified_tls": true,
+      "http_status": 200,
+      "bytes": 4,
+      "challenge_page": false,
+      "product_link_count": 0,
+      "supplier_sku_found": false,
+      "elapsed_seconds": 6.19
+    },
+    {
+      "target": "keyword",
+      "transport": "windows_native",
+      "observed_at_utc": "2026-10-07T12:26:51.749281+00:00",
+      "verified_tls": true,
+      "curl_exit": 0,
+      "http_status": 200,
+      "bytes": 4,
+      "challenge_page": false,
+      "product_link_count": 0,
+      "supplier_sku_found": false,
+      "elapsed_seconds": 1.77
+    },
+    {
+      "target": "competitor",
+      "transport": "python_default",
+      "observed_at_utc": "2026-10-07T12:26:53.519860+00:00",
+      "verified_tls": true,
+      "http_status": 200,
+      "bytes": 90731,
+      "challenge_page": true,
+      "product_link_count": 0,
+      "supplier_sku_found": false,
+      "elapsed_seconds": 6.38
+    },
+    {
+      "target": "competitor",
+      "transport": "windows_native",
+      "observed_at_utc": "2026-10-07T12:26:59.884616+00:00",
+      "verified_tls": true,
+      "curl_exit": 0,
+      "http_status": 200,
+      "bytes": 90731,
+      "challenge_page": true,
+      "product_link_count": 0,
+      "supplier_sku_found": false,
+      "elapsed_seconds": 1.39
+    },
+    {
+      "target": "authorized_catalog_first_page",
+      "transport": "python_default",
+      "observed_at_utc": "2026-10-07T12:27:01.287154+00:00",
+      "verified_tls": true,
+      "business_success": true,
+      "total_item": 380,
+      "returned_rows": 30,
+      "request_id": "0b830ecc17913760308588898"
+    },
+    {
+      "target": "authorized_catalog_first_page",
+      "transport": "windows_native",
+      "observed_at_utc": "2026-10-07T12:27:08.500081+00:00",
+      "verified_tls": true,
+      "business_success": true,
+      "total_item": 380,
+      "returned_rows": 30,
+      "request_id": "21501be117913760335584018"
+    }
+  ]
+}

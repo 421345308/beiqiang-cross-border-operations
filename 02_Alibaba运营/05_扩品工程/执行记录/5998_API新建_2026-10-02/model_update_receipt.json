@@ -1,0 +1,87 @@
+{
+  "method": "alibaba.icbu.product.schema.update",
+  "operation": "update",
+  "status": "submitted_needs_readback",
+  "content_status": "pending_readback",
+  "expected_fields": {
+    "icbuCatProp": [
+      "field",
+      [
+        [
+          "id",
+          "icbuCatProp"
+        ]
+      ],
+      "",
+      [
+        [
+          "complex-value",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "p-3"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [
+                    [
+                      "inputValue",
+                      "BQ-W5998"
+                    ]
+                  ],
+                  "-3",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "post_publish_acceptance": {
+    "phase": "post_publish_completion",
+    "target_score": 5.0,
+    "actual_score": null,
+    "observed_at": null,
+    "score_source": null,
+    "diagnostics": {
+      "status": "not_read"
+    },
+    "score_status": "pending_score",
+    "overall_status": "PENDING_SCORE",
+    "unverified_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "limits": "Platform listing score does not prove public content, source truth or real product quality."
+  },
+  "attempted_at": "2026-10-02T12:39:35.781001+00:00",
+  "response": {
+    "trace_id": "2103135017909447831198145e0fd9",
+    "product_id": 1601969869242,
+    "biz_success": true,
+    "request_id": "0b0b3a2717909447834415572",
+    "_trace_id_": "2103135017909447831198145e0fd9"
+  },
+  "refs": {
+    "request_id": "0b0b3a2717909447834415572",
+    "trace_id": "2103135017909447831198145e0fd9",
+    "message": null,
+    "error": null
+  },
+  "product_id": "1601969869242"
+}

@@ -1,0 +1,31 @@
+{
+  "rows": [
+    {
+      "supplier_name": "尚潮鞋业",
+      "supplier_original_model": "F2888",
+      "supplier_original_direct_url": "https://shangchao.sooxie.com/detail/2357652",
+      "our_model": "BQ-WBF2888",
+      "international_product_id": "1601970034464",
+      "original_model_evidence": "evidence/page_text.txt: 货号：F2888; supplier 尚潮鞋业",
+      "old_listing": "HR056-A",
+      "old_product_id": "1601943775160",
+      "old_action": "NOT_SENT",
+      "knowledge_master_write": "PARENT_KNOWLEDGE_OWNER_ONLY",
+      "public_url": "https://www.alibaba.com/product-detail/Women-s-Quilted-Winter-Boots-with_1601970034464.html",
+      "publication_state": "CONFIRMED_CREATE_PENDING_REVIEW_SCORE_PUBLIC_QA_USER_PAUSED"
+    },
+    {
+      "supplier_name": "联晟鞋业",
+      "supplier_original_model": "H219",
+      "supplier_original_direct_url": "https://ls2017.sooxie.com/detail/1565538",
+      "our_model": "BQ-ABH219",
+      "international_product_id": "1601969936536",
+      "actual_score": 5.0,
+      "score_observed_at": "2026-10-02T17:50:29.345077+00:00",
+      "old_OFF": "NOT_SENT",
+      "source_model_evidence": "Original ls2017_1565538/page_text.txt has 货号：H219; supplier 联晟鞋业",
+      "status": "Prior completed create, no recreation in resumed session; public QA/keyword persistence pending browser owner"
+    }
+  ],
+  "master_table_writer": "Parent knowledge owner only; no shared master modification"
+}

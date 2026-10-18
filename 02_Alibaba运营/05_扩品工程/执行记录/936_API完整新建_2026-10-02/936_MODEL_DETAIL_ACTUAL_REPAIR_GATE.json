@@ -1,0 +1,194 @@
+{
+  "verdict": "PASS_ACTUAL_MODEL_AND_DETAIL_SAVED_PROTECTED_FIELDS_ONLY",
+  "product_id": 1601969872083,
+  "get_request_id": "21501b6717909424970654207",
+  "checks": {
+    "main_image_unchanged": true,
+    "product_sku_unchanged": true,
+    "sourcing_trade_unchanged": true,
+    "subject_unchanged": true,
+    "keywords_unchanged": true,
+    "category_id_unchanged": true,
+    "product_type_unchanged": true,
+    "product_faq_unchanged": true,
+    "product_summary_unchanged": true,
+    "company_summary_unchanged": true,
+    "company5_identity_role_set_unchanged": true,
+    "four_details_exact_bank_identity_role_set": true,
+    "model_HR051_A_saved": true,
+    "all_other_attributes_unchanged": true,
+    "review_pending_not_public": true,
+    "repair_once_business_success_verified": true
+  },
+  "company_compare": "URL bank identity + role set, API list order not replacement evidence",
+  "detail_actual_returned_order": [
+    "H76da36692a6f4556bf32fc0d49a34bd3k",
+    "H6b55ae75648d4c3599707875714257b84",
+    "H838b4f8bb2474ab8a2c1421d4f8b9ebcW",
+    "H1dff79beb0684e0db2c7a791798dfb35S"
+  ],
+  "public_detail_sequence": "PENDING_AFTER_APPROVED_PARENT_PUBLIC_ACCEPTANCE",
+  "actual_status": "modified",
+  "actual_display": "N",
+  "quality_5_0": "PENDING_NOT_ATTAINED; current score evidence reported3.90, not completion proof",
+  "actual_scores_evidence": [
+    {
+      "product_id": 1601969872083,
+      "checked_at_utc": "2026-10-02T11:58:00.470381+00:00",
+      "method": "alibaba.icbu.product.score.get",
+      "request_id": "2105044417909422851548434",
+      "actual_score": "3.90",
+      "meets_user_5_0": false,
+      "status": "BELOW_5_0",
+      "diagnostics_returned": {
+        "final_score": "3.90",
+        "boutique_tag": 1,
+        "problem_map": "{\"ruleScoreMap\":{\"title_word_miss_core_error\":0.0,\"imageQualityBad\":0.0,\"image_scale\":0.0,\"title_word_error\":0.0,\"image_num\":0.0},\"errorReasonSkuImageMoreMap\":{},\"errorReasonTitleWordMissErrorMap\":{},\"errorReasonList\":[],\"errorReasonTitleWordErrorMap\":{},\"extendCheckMap\":{\"imageText\":true,\"sku_image\":false,\"title_word_miss_core_error\":true,\"imageQualityBad\":true,\"sku_text\":false,\"imageSubTitle\":false,\"category\":true,\"title_word_error\":true,\"selling_point_attribute_conflict\":false},\"errorReasonCategoryMap\":{},\"errorReasonSkuTextMap\":{},\"errorReasonSubTitleMap\":{},\"errorReasonMap\":{},\"errorReasonSellingPointAttributeMap\":{},\"errorReasonSkuImageMap\":{},\"extendProblemMap\":{\"imageText\":false,\"title_word_miss_core_error\":false,\"imageQualityBad\":false,\"imageSubTitle\":false,\"image_scale\":false,\"inventory\":true,\"title_word_error\":false,\"selling_point_attribute_conflict\":false,\"image_num\":false,\"freightRate\":false,\"sku_image\":false,\"sku_text\":false,\"price\":false,\"category\":false},\"errorReasonQualityBadMap\":{},\"errorReasonSkuTextMoreMap\":{}}"
+      },
+      "error": null,
+      "diagnostics_decoded": {
+        "ruleScoreMap": {
+          "title_word_miss_core_error": 0.0,
+          "imageQualityBad": 0.0,
+          "image_scale": 0.0,
+          "title_word_error": 0.0,
+          "image_num": 0.0
+        },
+        "errorReasonSkuImageMoreMap": {},
+        "errorReasonTitleWordMissErrorMap": {},
+        "errorReasonList": [],
+        "errorReasonTitleWordErrorMap": {},
+        "extendCheckMap": {
+          "imageText": true,
+          "sku_image": false,
+          "title_word_miss_core_error": true,
+          "imageQualityBad": true,
+          "sku_text": false,
+          "imageSubTitle": false,
+          "category": true,
+          "title_word_error": true,
+          "selling_point_attribute_conflict": false
+        },
+        "errorReasonCategoryMap": {},
+        "errorReasonSkuTextMap": {},
+        "errorReasonSubTitleMap": {},
+        "errorReasonMap": {},
+        "errorReasonSellingPointAttributeMap": {},
+        "errorReasonSkuImageMap": {},
+        "extendProblemMap": {
+          "imageText": false,
+          "title_word_miss_core_error": false,
+          "imageQualityBad": false,
+          "imageSubTitle": false,
+          "image_scale": false,
+          "inventory": true,
+          "title_word_error": false,
+          "selling_point_attribute_conflict": false,
+          "image_num": false,
+          "freightRate": false,
+          "sku_image": false,
+          "sku_text": false,
+          "price": false,
+          "category": false
+        },
+        "errorReasonQualityBadMap": {},
+        "errorReasonSkuTextMoreMap": {}
+      },
+      "actual_positive_problem_flags": {
+        "inventory": true
+      },
+      "inventory_999_not_written_for_score": "No fabricated physical count. Existing submitted999 was an inquiry marker, formal0 is actual API readback; quality3.90 remains below standard."
+    },
+    {
+      "product_id": 1601969707634,
+      "checked_at_utc": "2026-10-02T11:57:59.588675+00:00",
+      "method": "alibaba.icbu.product.score.get",
+      "request_id": "213e759c17909422842554749",
+      "actual_score": "3.90",
+      "meets_user_5_0": false,
+      "status": "BELOW_5_0",
+      "diagnostics_returned": {
+        "final_score": "3.90",
+        "boutique_tag": 1,
+        "problem_map": "{\"ruleScoreMap\":{\"title_word_miss_core_error\":0.0,\"imageQualityBad\":0.0,\"image_scale\":0.0,\"title_word_error\":0.0,\"image_num\":0.0},\"errorReasonSkuImageMoreMap\":{},\"errorReasonTitleWordMissErrorMap\":{},\"errorReasonList\":[],\"errorReasonTitleWordErrorMap\":{},\"extendCheckMap\":{\"imageText\":true,\"sku_image\":false,\"title_word_miss_core_error\":true,\"imageQualityBad\":true,\"sku_text\":false,\"imageSubTitle\":false,\"category\":true,\"title_word_error\":true,\"selling_point_attribute_conflict\":false},\"errorReasonCategoryMap\":{},\"errorReasonSkuTextMap\":{},\"errorReasonSubTitleMap\":{},\"errorReasonMap\":{},\"errorReasonSellingPointAttributeMap\":{},\"errorReasonSkuImageMap\":{},\"extendProblemMap\":{\"imageText\":false,\"title_word_miss_core_error\":false,\"imageQualityBad\":false,\"imageSubTitle\":false,\"image_scale\":false,\"inventory\":true,\"title_word_error\":false,\"selling_point_attribute_conflict\":false,\"image_num\":false,\"freightRate\":false,\"sku_image\":false,\"sku_text\":false,\"price\":false,\"category\":false},\"errorReasonQualityBadMap\":{},\"errorReasonSkuTextMoreMap\":{}}"
+      },
+      "error": null,
+      "diagnostics_decoded": {
+        "ruleScoreMap": {
+          "title_word_miss_core_error": 0.0,
+          "imageQualityBad": 0.0,
+          "image_scale": 0.0,
+          "title_word_error": 0.0,
+          "image_num": 0.0
+        },
+        "errorReasonSkuImageMoreMap": {},
+        "errorReasonTitleWordMissErrorMap": {},
+        "errorReasonList": [],
+        "errorReasonTitleWordErrorMap": {},
+        "extendCheckMap": {
+          "imageText": true,
+          "sku_image": false,
+          "title_word_miss_core_error": true,
+          "imageQualityBad": true,
+          "sku_text": false,
+          "imageSubTitle": false,
+          "category": true,
+          "title_word_error": true,
+          "selling_point_attribute_conflict": false
+        },
+        "errorReasonCategoryMap": {},
+        "errorReasonSkuTextMap": {},
+        "errorReasonSubTitleMap": {},
+        "errorReasonMap": {},
+        "errorReasonSellingPointAttributeMap": {},
+        "errorReasonSkuImageMap": {},
+        "extendProblemMap": {
+          "imageText": false,
+          "title_word_miss_core_error": false,
+          "imageQualityBad": false,
+          "imageSubTitle": false,
+          "image_scale": false,
+          "inventory": true,
+          "title_word_error": false,
+          "selling_point_attribute_conflict": false,
+          "image_num": false,
+          "freightRate": false,
+          "sku_image": false,
+          "sku_text": false,
+          "price": false,
+          "category": false
+        },
+        "errorReasonQualityBadMap": {},
+        "errorReasonSkuTextMoreMap": {}
+      },
+      "actual_positive_problem_flags": {
+        "inventory": true
+      },
+      "inventory_999_not_written_for_score": "No fabricated physical count. Existing submitted999 was an inquiry marker, formal0 is actual API readback; quality3.90 remains below standard."
+    }
+  ],
+  "reviewer_platform_write": false,
+  "evidence_hashes": {
+    "before_minimal_repair_get.response.json": "ed419524d1c25c56b7e4cb8de6e717e4d16146bc27b2d03e23cf97d2d7d1eda6",
+    "new_formal_get.response.json": "a1122de93d2359108d69cd142505d559de59afe117a5f8d6871c25f9bc14626f",
+    "936_model_details_minimal_repair.params.json": "8b7500a28a033d742ccfbfa6d5a835a57953e8548b0bc1e205ea6ace01af1799",
+    "936_266_actual_scores.json": "79e320287d91800ce876f3010d4169d38199fc9fd052a22bcc197b86c2802a58",
+    "minimal_repair.response.json": "01530403655fc822052176fc51697227b2fcf169f5ca070589613f442fe5cc89",
+    "minimal_repair_once_ledger.json": "b2b297df111082a8d4a3415d7fc52ee17a562a9a1cec0373a9cf6bdb660c2abb"
+  },
+  "repair_business_request_id": "0bab02fc17909421815232354",
+  "score_summary": [
+    {
+      "product_id": 1601969872083,
+      "score": "3.90",
+      "only_problem_flag_inventory": true,
+      "request_id": "2105044417909422851548434"
+    },
+    {
+      "product_id": 1601969707634,
+      "score": "3.90",
+      "only_problem_flag_inventory": true,
+      "request_id": "213e759c17909422842554749"
+    }
+  ]
+}

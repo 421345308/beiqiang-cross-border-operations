@@ -1,0 +1,25 @@
+{
+  "style": "023",
+  "observed_at": "2026-10-09T15:43:04.606703+00:00",
+  "scope_result": "PASS",
+  "expected_sku_count": 39,
+  "exact_color_EU": true,
+  "title": "Unisex Wide Toe Box Synthetic Leather Casual Sneakers Lace Up Rubber Outsole EU 36-48 Wholesale",
+  "title_bytes": 95,
+  "main_images": 6,
+  "product_details": 4,
+  "company_images": 5,
+  "known_materials": {
+    "upper": "Synthetic leather; exact source13合成革; not natural leather or PU chemistry",
+    "lining": "Not specified; 柔软内里 gives no material",
+    "midsole": "Not specified; 软弹大底 gives no compound or separate midsole",
+    "outsole": "Rubber; source13橡胶"
+  },
+  "source_current": "25 exact current photographs, CNY59, three colors EU36–48; source13 Synthetic leather/Rubber, unknown lining/midsole materials.",
+  "formal_dedup": "Fresh full catalog429, exact source/model unbound;100 cover triage and nearest12 actual structure comparison.",
+  "dedup_limit": "Not global all-angle or physicalIP clearance",
+  "payload_sha256": "5220be56060fab68187708d198db170e358ba1abe29a106aa9855e05facae3d9",
+  "quality_evidence": "05_AI候选/整组验收.json",
+  "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+  "next_action": "One authorized create, read returned ID, never replay"
+}

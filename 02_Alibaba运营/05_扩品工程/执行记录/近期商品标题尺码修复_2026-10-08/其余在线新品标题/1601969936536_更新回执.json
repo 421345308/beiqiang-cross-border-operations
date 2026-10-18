@@ -1,0 +1,78 @@
+{
+  "method": "alibaba.icbu.product.schema.update",
+  "operation": "update",
+  "status": "submitted_needs_readback",
+  "content_status": "pending_readback",
+  "expected_fields": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Wholesale Womens PU Lace Up Ankle Boots with Side Zipper and Lug Sole for Casual Everyday Wear",
+          []
+        ]
+      ]
+    ]
+  },
+  "sku_verification": null,
+  "task_pack": null,
+  "replacement_plan": null,
+  "replacement_transition": null,
+  "inventory_input": null,
+  "post_publish_acceptance": {
+    "phase": "post_publish_completion",
+    "target_score": 5.0,
+    "actual_score": null,
+    "observed_at": null,
+    "score_source": null,
+    "diagnostics": {
+      "status": "not_read"
+    },
+    "score_status": "pending_score",
+    "overall_status": "PENDING_SCORE",
+    "unverified_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "versioned_content": null,
+    "required_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "limits": "Platform listing score does not prove public content, source truth or real product quality."
+  },
+  "attempted_at": "2026-10-08T01:47:18.912471+00:00",
+  "response": {
+    "trace_id": "0bb4a9bd17914240443134050e0dbd",
+    "product_id": 1601969936536,
+    "biz_success": true,
+    "request_id": "213c934417914240444425292",
+    "_trace_id_": "0bb4a9bd17914240443134050e0dbd"
+  },
+  "refs": {
+    "request_id": "213c934417914240444425292",
+    "trace_id": "0bb4a9bd17914240443134050e0dbd",
+    "message": null,
+    "error": null
+  },
+  "product_id": "1601969936536"
+}

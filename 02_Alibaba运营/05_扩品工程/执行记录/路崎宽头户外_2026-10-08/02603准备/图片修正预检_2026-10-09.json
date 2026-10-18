@@ -1,0 +1,137 @@
+{
+  "style": "02603",
+  "product_id": "1601973784646",
+  "observed_at": "2026-10-09T00:25:51.679683+00:00",
+  "stage": "SOURCE_TRIAGE_ONLY_NOT_FULL_IMAGE_REVIEW",
+  "source": "https://luqi.sooxie.com/detail/2494858",
+  "confirmed_colors": [
+    "Black",
+    "Green",
+    "DarkBrown"
+  ],
+  "EU_sizes": [
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48
+  ],
+  "EU_combinations": 30,
+  "formal_evidence": "Cached质量修正_2026-10-09/最新正式回读.json plus original upload ledger, not fresh API observation",
+  "current_title": "Mens Mesh Panel Outdoor Walking Shoes Lace Up Contrast Sole Edge Low Top Casual Sneakers EU 39-48 Wholesale",
+  "title_review": "Current differentiated title accurately describes mesh-panel lace-up, contrasting sole edge, low cut, owner-confirmed outdoor category, EU39-48 and wholesale. Retain after full set review; no keyword-volume/material/performance claim.",
+  "current_color_photo_bindings": [
+    {
+      "formal_color": "DarkBrown",
+      "source_image": 14,
+      "original_upload_role": "SKU_DarkBrown",
+      "formal_value_id": -202,
+      "binding": "CACHED_FORMAL_GET_MATCHES_ORIGINAL_UPLOAD_LEDGER"
+    },
+    {
+      "formal_color": "Green",
+      "source_image": 15,
+      "original_upload_role": "SKU_Green",
+      "formal_value_id": -201,
+      "binding": "CACHED_FORMAL_GET_MATCHES_ORIGINAL_UPLOAD_LEDGER"
+    },
+    {
+      "formal_color": "Black",
+      "source_image": 13,
+      "original_upload_role": "SKU_Black",
+      "formal_value_id": -200,
+      "binding": "CACHED_FORMAL_GET_MATCHES_ORIGINAL_UPLOAD_LEDGER"
+    }
+  ],
+  "observed_source_images_full": [
+    1,
+    7,
+    8,
+    9,
+    17,
+    23,
+    26,
+    27,
+    28,
+    31,
+    32,
+    33,
+    35
+  ],
+  "contact_sheets_reviewed": [
+    0,
+    1
+  ],
+  "confirmed_risk": "Actual lace-up shoe has fine two-tone mesh with punctured smooth toe/eyelet/curved side trim, ribbed low collar, heel loop and white layered sole with copper-brown edge; photographed outsole has two black patches. Black black mesh/trim with orange tongue tab; Green green/light green mesh/green trim with orange tongue tab; DarkBrown brown/black mesh/brown trim with DARK tongue tab. Preserve exact geometry/line/seams, no leather/composition inference. Source27 contains FIVE shoes, not six: Green2 floor, DarkBrown2 held, Black1 worn. Actual33 left Green shoe held by heel, right worn. Source2-6 unrelated recommendations excluded. Sole contrast edge is copper/brown, historical orange phrasing not a separate material fact.",
+  "preferred_color_sources": {
+    "Black": 9,
+    "Green": 7,
+    "DarkBrown": 8
+  },
+  "proposed_roles": {
+    "M1": {
+      "source": 1,
+      "action": "Exact DarkBrown hero pair, remove grey geometric backdrop only"
+    },
+    "M2": {
+      "source": 23,
+      "action": "Actual Black raised-heel/outsole pair, white sole with original two black patches"
+    },
+    "M3": {
+      "source": 33,
+      "action": "Actual Green top pair, one shoe worn and one held by heel, preserve real hand/foot/blue insole"
+    },
+    "M4": {
+      "source": [
+        9,
+        7,
+        8
+      ],
+      "action": "Clean exact Black/Green/DarkBrown close pair photos, EU39-48"
+    },
+    "M5": {
+      "source": 31,
+      "action": "Actual complete DarkBrown front on-foot pair with quotation inputs"
+    },
+    "D1": {
+      "source": 27,
+      "action": "Independent three-color overview: FIVE actual shoes total, two Green floor shoes, two DarkBrown hand-held shoes and ONE Black on-foot shoe; do not add sixth"
+    },
+    "D2": {
+      "source": 17,
+      "action": "Actual DarkBrown side/top pair only, preserve true mesh/punctured trim/blue insole"
+    },
+    "D3": {
+      "source": 35,
+      "action": "Actual Green raised outsole/standing rear pair, no grip or flexibility claim"
+    },
+    "D4": {
+      "source": 32,
+      "action": "Actual complete DarkBrown pair with hands adjusting trouser cuff, sample terms"
+    },
+    "SKU-Black": {
+      "source": 9,
+      "action": "Exact Black pair clean white; original orange tongue tab"
+    },
+    "SKU-Green": {
+      "source": 7,
+      "action": "Exact Green pair clean white; original orange tongue tab"
+    },
+    "SKU-DarkBrown": {
+      "source": 8,
+      "action": "Exact DarkBrown pair clean white; original DARK tongue tab, no orange recolor"
+    }
+  },
+  "next_steps": [
+    "Generate12 assets with exact color/tongue/sole fidelity; whole source/candidate/set inspection before accepting.",
+    "Fresh current Schema three existing Color IDs and30EU39-48 rows; original-ID gallery/detail and precise three img only, no SKU recreation.",
+    "Controlled official upload/once update/formal get and Schema readback."
+  ],
+  "mutations_this_plan": "NONE: no02603 generation/upload/update this phase",
+  "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+}

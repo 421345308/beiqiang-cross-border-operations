@@ -1,0 +1,18 @@
+{
+  "id": "1601943545775",
+  "at": "2026-10-16T05:10:28.669919+00:00",
+  "state": "PLATFORM_REJECTED_TARGET_VALUES_RETURNED",
+  "status": "tbd",
+  "display": "N",
+  "actual_score": null,
+  "public_qa": "NOT_PER_ITEM_BROWSER_TESTED_OWNER_API_SCOPE",
+  "readback_checks": {
+    "model": true,
+    "gallery": true,
+    "non_target_formal": true,
+    "unchanged_title": true,
+    "gallery_count": true,
+    "sku_binding_ids_match_declared_history": true,
+    "sku_rows_match_declared_history_and_code_change": true
+  }
+}

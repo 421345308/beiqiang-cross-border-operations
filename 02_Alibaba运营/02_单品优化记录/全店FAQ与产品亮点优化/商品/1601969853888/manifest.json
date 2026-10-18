@@ -1,0 +1,28 @@
+{
+  "operation": "update",
+  "product_id": "1601969853888",
+  "category_id": 201153804,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "copy.json",
+    "before_get.json",
+    "../../../../05_扩品工程/数据/来源证据/88562c165071.txt",
+    "../../../../05_扩品工程/数据/来源证据/6e1df35af433.md",
+    "../../../../../../../Documents/Codex/2026-10-02/task-2/HR_other_candidates_2026-10-02/niche_matches/huat/detail_11.jpg",
+    "current_get.json",
+    "../../../../00_运营SOP/国际站商品全生命周期SOP.md"
+  ],
+  "current_schema": "current_schema.xml",
+  "current_schema_sha256": "4ced62e87bb3bf4d67e8f4f3471a38b2ca4b410974a9c8fa20f6dbefb9dc9109",
+  "schema_request_id": "213f5a2117917373401925010",
+  "schema_acquired_at": "2026-10-11T16:48:57.294579+00:00",
+  "payload_xml": "payload.xml",
+  "field_ids": [
+    "textDesc",
+    "companyFaqDesc"
+  ],
+  "dependency_ids": [
+    "productDescType"
+  ],
+  "observed_model": "BQ-M858"
+}

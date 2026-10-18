@@ -1,0 +1,7025 @@
+[
+  {
+    "id": "infos",
+    "name": "信息",
+    "type": "label",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "productFeature",
+    "name": null,
+    "type": "multiCheck",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "catId",
+    "name": null,
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "long"
+      },
+      {
+        "name": "readOnlyRule",
+        "value": "true"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "icbuCatProp",
+    "name": "Product feature",
+    "type": "complex",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "p-1",
+    "name": "Place of Origin",
+    "type": "singleCheck",
+    "rules": [
+      {
+        "name": "requiredRule",
+        "value": "true"
+      },
+      {
+        "name": "valueAttributeRule",
+        "value": "inputValue",
+        "desc": "输入属性值"
+      },
+      {
+        "name": "valueTypeRule",
+        "value": "text",
+        "target": "attribute:inputValue"
+      },
+      {
+        "name": "maxLengthRule",
+        "value": "50",
+        "target": "attribute:inputValue",
+        "exProperty": "include",
+        "unit": "character"
+      },
+      {
+        "name": "tipRule",
+        "value": "该属性支持自定义输入，输入值请填写value中inputValue属性,值为任意负数"
+      },
+      {
+        "name": "asyncQueryRule",
+        "value": "top.tmall.post.item.query.subProp.schema.get",
+        "desc": "请使用异步查询接口补全数据后提交"
+      },
+      {
+        "name": "asyncQueryRule",
+        "value": "alibaba.icbu.category.schema.level.get",
+        "desc": "请使用异步查询接口补全数据后提交"
+      }
+    ],
+    "options": [
+      {
+        "displayName": "Andorra",
+        "value": "100000419"
+      },
+      {
+        "displayName": "United Arab Emirates",
+        "value": "100000637"
+      },
+      {
+        "displayName": "Afghanistan",
+        "value": "100000415"
+      },
+      {
+        "displayName": "Antigua and Barbuda",
+        "value": "100000423"
+      },
+      {
+        "displayName": "Anguilla",
+        "value": "100000421"
+      },
+      {
+        "displayName": "Albania",
+        "value": "100000416"
+      },
+      {
+        "displayName": "Aland Islands",
+        "value": "200019000"
+      },
+      {
+        "displayName": "Armenia",
+        "value": "100000425"
+      },
+      {
+        "displayName": "Netherlands Antilles",
+        "value": "100000564"
+      },
+      {
+        "displayName": "Angola",
+        "value": "100000420"
+      },
+      {
+        "displayName": "Antarctica",
+        "value": "100000422"
+      },
+      {
+        "displayName": "Argentina",
+        "value": "100000424"
+      },
+      {
+        "displayName": "American Samoa",
+        "value": "100000418"
+      },
+      {
+        "displayName": "Ascension Island",
+        "value": "200019002"
+      },
+      {
+        "displayName": "Austria",
+        "value": "100000428"
+      },
+      {
+        "displayName": "Australia",
+        "value": "100000427"
+      },
+      {
+        "displayName": "Aruba",
+        "value": "100000426"
+      },
+      {
+        "displayName": "Azerbaijan",
+        "value": "100000429"
+      },
+      {
+        "displayName": "Bosnia and Herzegovina",
+        "value": "100000441"
+      },
+      {
+        "displayName": "Barbados",
+        "value": "100000433"
+      },
+      {
+        "displayName": "Bangladesh",
+        "value": "100000432"
+      },
+      {
+        "displayName": "Belgium",
+        "value": "100000435"
+      },
+      {
+        "displayName": "Burkina Faso",
+        "value": "100000448"
+      },
+      {
+        "displayName": "Bulgaria",
+        "value": "100000447"
+      },
+      {
+        "displayName": "Bahrain",
+        "value": "100000431"
+      },
+      {
+        "displayName": "Burundi",
+        "value": "100000449"
+      },
+      {
+        "displayName": "Benin",
+        "value": "100000437"
+      },
+      {
+        "displayName": "Saint Barthelemy",
+        "value": "200019005"
+      },
+      {
+        "displayName": "Bermuda",
+        "value": "100000438"
+      },
+      {
+        "displayName": "Brunei Darussalam",
+        "value": "100000446"
+      },
+      {
+        "displayName": "Bolivia",
+        "value": "100000440"
+      },
+      {
+        "displayName": "Brazil",
+        "value": "100000444"
+      },
+      {
+        "displayName": "Bahamas",
+        "value": "100000430"
+      },
+      {
+        "displayName": "Bhutan",
+        "value": "100000439"
+      },
+      {
+        "displayName": "Bouvet Island",
+        "value": "100000443"
+      },
+      {
+        "displayName": "Botswana",
+        "value": "100000442"
+      },
+      {
+        "displayName": "Belarus",
+        "value": "100000434"
+      },
+      {
+        "displayName": "Belize",
+        "value": "100000436"
+      },
+      {
+        "displayName": "Canada",
+        "value": "100000452"
+      },
+      {
+        "displayName": "Cocos (Keeling) Islands",
+        "value": "100000460"
+      },
+      {
+        "displayName": "Central African Republic",
+        "value": "100000455"
+      },
+      {
+        "displayName": "Congo, The Republic of Congo",
+        "value": "100000463"
+      },
+      {
+        "displayName": "Switzerland",
+        "value": "100000620"
+      },
+      {
+        "displayName": "Cote D'Ivoire",
+        "value": "100000467"
+      },
+      {
+        "displayName": "Cook Islands",
+        "value": "100000465"
+      },
+      {
+        "displayName": "Chile",
+        "value": "100000457"
+      },
+      {
+        "displayName": "Cameroon",
+        "value": "100000451"
+      },
+      {
+        "displayName": "China",
+        "value": "100000458"
+      },
+      {
+        "displayName": "Colombia",
+        "value": "100000461"
+      },
+      {
+        "displayName": "Costa Rica",
+        "value": "100000466"
+      },
+      {
+        "displayName": "Cuba",
+        "value": "100000469"
+      },
+      {
+        "displayName": "Cape Verde",
+        "value": "100000453"
+      },
+      {
+        "displayName": "Curacao",
+        "value": "202042002"
+      },
+      {
+        "displayName": "Christmas Island",
+        "value": "100000459"
+      },
+      {
+        "displayName": "Cyprus",
+        "value": "100000470"
+      },
+      {
+        "displayName": "Czech Republic",
+        "value": "100000471"
+      },
+      {
+        "displayName": "Germany",
+        "value": "100000496"
+      },
+      {
+        "displayName": "Djibouti",
+        "value": "100000473"
+      },
+      {
+        "displayName": "Denmark",
+        "value": "100000472"
+      },
+      {
+        "displayName": "Dominica",
+        "value": "100000474"
+      },
+      {
+        "displayName": "Dominican Republic",
+        "value": "100000475"
+      },
+      {
+        "displayName": "Algeria",
+        "value": "100000417"
+      },
+      {
+        "displayName": "Zanzibar",
+        "value": "200019009"
+      },
+      {
+        "displayName": "Ecuador",
+        "value": "100000477"
+      },
+      {
+        "displayName": "Estonia",
+        "value": "100000482"
+      },
+      {
+        "displayName": "Egypt",
+        "value": "100000478"
+      },
+      {
+        "displayName": "Western Sahara",
+        "value": "100000650"
+      },
+      {
+        "displayName": "Eritrea",
+        "value": "100000481"
+      },
+      {
+        "displayName": "Spain",
+        "value": "100000611"
+      },
+      {
+        "displayName": "Ethiopia",
+        "value": "100000483"
+      },
+      {
+        "displayName": "Finland",
+        "value": "100000487"
+      },
+      {
+        "displayName": "Fiji",
+        "value": "100000486"
+      },
+      {
+        "displayName": "Falkland Islands (Malvinas)",
+        "value": "100000484"
+      },
+      {
+        "displayName": "Micronesia",
+        "value": "100000552"
+      },
+      {
+        "displayName": "Faroe Islands",
+        "value": "100000485"
+      },
+      {
+        "displayName": "France",
+        "value": "100000488"
+      },
+      {
+        "displayName": "France Metropolitan",
+        "value": "100000489"
+      },
+      {
+        "displayName": "Gabon",
+        "value": "100000493"
+      },
+      {
+        "displayName": "Alderney",
+        "value": "200019001"
+      },
+      {
+        "displayName": "Grenada",
+        "value": "100000501"
+      },
+      {
+        "displayName": "Georgia",
+        "value": "100000495"
+      },
+      {
+        "displayName": "French Guiana",
+        "value": "100000490"
+      },
+      {
+        "displayName": "Guernsey",
+        "value": "200019003"
+      },
+      {
+        "displayName": "Ghana",
+        "value": "100000497"
+      },
+      {
+        "displayName": "Gibraltar",
+        "value": "100000498"
+      },
+      {
+        "displayName": "Greenland",
+        "value": "100000500"
+      },
+      {
+        "displayName": "Gambia",
+        "value": "100000494"
+      },
+      {
+        "displayName": "Guinea",
+        "value": "100000505"
+      },
+      {
+        "displayName": "Guadeloupe",
+        "value": "100000502"
+      },
+      {
+        "displayName": "Equatorial Guinea",
+        "value": "100000480"
+      },
+      {
+        "displayName": "Greece",
+        "value": "100000499"
+      },
+      {
+        "displayName": "Guatemala",
+        "value": "100000504"
+      },
+      {
+        "displayName": "Guam",
+        "value": "100000503"
+      },
+      {
+        "displayName": "Guinea-Bissau",
+        "value": "100000506"
+      },
+      {
+        "displayName": "Guyana",
+        "value": "100000507"
+      },
+      {
+        "displayName": "Hong Kong S.A.R.",
+        "value": "100000511"
+      },
+      {
+        "displayName": "Heard and Mc Donald Islands",
+        "value": "100000509"
+      },
+      {
+        "displayName": "Honduras",
+        "value": "100000510"
+      },
+      {
+        "displayName": "Croatia (local name: Hrvatska)",
+        "value": "100000468"
+      },
+      {
+        "displayName": "Haiti",
+        "value": "100000508"
+      },
+      {
+        "displayName": "Hungary",
+        "value": "100000512"
+      },
+      {
+        "displayName": "Indonesia",
+        "value": "100000515"
+      },
+      {
+        "displayName": "Ireland",
+        "value": "100000518"
+      },
+      {
+        "displayName": "Israel",
+        "value": "100000519"
+      },
+      {
+        "displayName": "Isle of Man",
+        "value": "100012000"
+      },
+      {
+        "displayName": "India",
+        "value": "100000514"
+      },
+      {
+        "displayName": "British Indian Ocean Territory",
+        "value": "100000445"
+      },
+      {
+        "displayName": "Iraq",
+        "value": "100000517"
+      },
+      {
+        "displayName": "Iran (Islamic Republic of)",
+        "value": "100000516"
+      },
+      {
+        "displayName": "Iceland",
+        "value": "100000513"
+      },
+      {
+        "displayName": "Italy",
+        "value": "100000520"
+      },
+      {
+        "displayName": "Jersey",
+        "value": "200019004"
+      },
+      {
+        "displayName": "Jamaica",
+        "value": "100000521"
+      },
+      {
+        "displayName": "Jordan",
+        "value": "100000523"
+      },
+      {
+        "displayName": "Japan",
+        "value": "100000522"
+      },
+      {
+        "displayName": "Kenya",
+        "value": "100000525"
+      },
+      {
+        "displayName": "Kyrgyzstan",
+        "value": "100000528"
+      },
+      {
+        "displayName": "Cambodia",
+        "value": "100000450"
+      },
+      {
+        "displayName": "Kiribati",
+        "value": "100000526"
+      },
+      {
+        "displayName": "Comoros",
+        "value": "100000462"
+      },
+      {
+        "displayName": "Saint Kitts and Nevis",
+        "value": "100000594"
+      },
+      {
+        "displayName": "North Korea",
+        "value": "100000572"
+      },
+      {
+        "displayName": "South Korea",
+        "value": "100000610"
+      },
+      {
+        "displayName": "Kosovo",
+        "value": "200015000"
+      },
+      {
+        "displayName": "Kuwait",
+        "value": "100000527"
+      },
+      {
+        "displayName": "Cayman Islands",
+        "value": "100000454"
+      },
+      {
+        "displayName": "Kazakhstan",
+        "value": "100000524"
+      },
+      {
+        "displayName": "Lao People's Democratic Republic",
+        "value": "100000529"
+      },
+      {
+        "displayName": "Lebanon",
+        "value": "100000531"
+      },
+      {
+        "displayName": "Saint Lucia",
+        "value": "100000595"
+      },
+      {
+        "displayName": "Liechtenstein",
+        "value": "100000535"
+      },
+      {
+        "displayName": "Sri Lanka",
+        "value": "100000612"
+      },
+      {
+        "displayName": "Liberia",
+        "value": "100000533"
+      },
+      {
+        "displayName": "Lesotho",
+        "value": "100000532"
+      },
+      {
+        "displayName": "Lithuania",
+        "value": "100000536"
+      },
+      {
+        "displayName": "Luxembourg",
+        "value": "100000537"
+      },
+      {
+        "displayName": "Latvia",
+        "value": "100000530"
+      },
+      {
+        "displayName": "Libya",
+        "value": "100000534"
+      },
+      {
+        "displayName": "Morocco",
+        "value": "100000557"
+      },
+      {
+        "displayName": "Saint Martin",
+        "value": "200019006"
+      },
+      {
+        "displayName": "Monaco",
+        "value": "100000554"
+      },
+      {
+        "displayName": "Moldova",
+        "value": "100000553"
+      },
+      {
+        "displayName": "Madagascar",
+        "value": "100000540"
+      },
+      {
+        "displayName": "Marshall Islands",
+        "value": "100000546"
+      },
+      {
+        "displayName": "Macedonia",
+        "value": "100000539"
+      },
+      {
+        "displayName": "Mali",
+        "value": "100000544"
+      },
+      {
+        "displayName": "Myanmar",
+        "value": "100000559"
+      },
+      {
+        "displayName": "Mongolia",
+        "value": "100000555"
+      },
+      {
+        "displayName": "Montenegro",
+        "value": "100005001"
+      },
+      {
+        "displayName": "Macao S.A.R.",
+        "value": "100000538"
+      },
+      {
+        "displayName": "Northern Mariana Islands",
+        "value": "100000573"
+      },
+      {
+        "displayName": "Martinique",
+        "value": "100000547"
+      },
+      {
+        "displayName": "Mauritania",
+        "value": "100000548"
+      },
+      {
+        "displayName": "Montserrat",
+        "value": "100000556"
+      },
+      {
+        "displayName": "Malta",
+        "value": "100000545"
+      },
+      {
+        "displayName": "Mauritius",
+        "value": "100000549"
+      },
+      {
+        "displayName": "Maldives",
+        "value": "100000543"
+      },
+      {
+        "displayName": "Malawi",
+        "value": "100000541"
+      },
+      {
+        "displayName": "Mexico",
+        "value": "100000551"
+      },
+      {
+        "displayName": "Malaysia",
+        "value": "100000542"
+      },
+      {
+        "displayName": "Mozambique",
+        "value": "100000558"
+      },
+      {
+        "displayName": "Namibia",
+        "value": "100000560"
+      },
+      {
+        "displayName": "New Caledonia",
+        "value": "100000565"
+      },
+      {
+        "displayName": "Niger",
+        "value": "100000568"
+      },
+      {
+        "displayName": "Norfolk Island",
+        "value": "100000571"
+      },
+      {
+        "displayName": "Nigeria",
+        "value": "100000569"
+      },
+      {
+        "displayName": "Nicaragua",
+        "value": "100000567"
+      },
+      {
+        "displayName": "Netherlands",
+        "value": "100000563"
+      },
+      {
+        "displayName": "Norway",
+        "value": "100000574"
+      },
+      {
+        "displayName": "Nepal",
+        "value": "100000562"
+      },
+      {
+        "displayName": "Nauru",
+        "value": "100000561"
+      },
+      {
+        "displayName": "Niue",
+        "value": "100000570"
+      },
+      {
+        "displayName": "New Zealand",
+        "value": "100000566"
+      },
+      {
+        "displayName": "Oman",
+        "value": "100000575"
+      },
+      {
+        "displayName": "Panama",
+        "value": "100000580"
+      },
+      {
+        "displayName": "Peru",
+        "value": "100000583"
+      },
+      {
+        "displayName": "French Polynesia",
+        "value": "100000491"
+      },
+      {
+        "displayName": "Papua New Guinea",
+        "value": "100000581"
+      },
+      {
+        "displayName": "Philippines",
+        "value": "100000584"
+      },
+      {
+        "displayName": "Pakistan",
+        "value": "100000577"
+      },
+      {
+        "displayName": "Poland",
+        "value": "100000586"
+      },
+      {
+        "displayName": "St. Pierre and Miquelon",
+        "value": "100000614"
+      },
+      {
+        "displayName": "Pitcairn",
+        "value": "100000585"
+      },
+      {
+        "displayName": "Palestine",
+        "value": "100000579"
+      },
+      {
+        "displayName": "Portugal",
+        "value": "100000587"
+      },
+      {
+        "displayName": "Palau",
+        "value": "100000578"
+      },
+      {
+        "displayName": "Paraguay",
+        "value": "100000582"
+      },
+      {
+        "displayName": "Qatar",
+        "value": "100000589"
+      },
+      {
+        "displayName": "Reunion",
+        "value": "100000590"
+      },
+      {
+        "displayName": "Romania",
+        "value": "100000591"
+      },
+      {
+        "displayName": "Russian Federation",
+        "value": "100000592"
+      },
+      {
+        "displayName": "Rwanda",
+        "value": "100000593"
+      },
+      {
+        "displayName": "Saudi Arabia",
+        "value": "100000600"
+      },
+      {
+        "displayName": "Solomon Islands",
+        "value": "100000607"
+      },
+      {
+        "displayName": "Seychelles",
+        "value": "100000602"
+      },
+      {
+        "displayName": "Scotland",
+        "value": "200030001"
+      },
+      {
+        "displayName": "Sudan",
+        "value": "100000615"
+      },
+      {
+        "displayName": "Sweden",
+        "value": "100000619"
+      },
+      {
+        "displayName": "Singapore",
+        "value": "100000604"
+      },
+      {
+        "displayName": "South Georgia and the South Sandwich Islands",
+        "value": "200019007"
+      },
+      {
+        "displayName": "St. Helena",
+        "value": "100000613"
+      },
+      {
+        "displayName": "Slovenia",
+        "value": "100000606"
+      },
+      {
+        "displayName": "Svalbard and Jan Mayen Islands",
+        "value": "100000617"
+      },
+      {
+        "displayName": "Slovakia (Slovak Republic)",
+        "value": "100000605"
+      },
+      {
+        "displayName": "Sierra Leone",
+        "value": "100000603"
+      },
+      {
+        "displayName": "San Marino",
+        "value": "100000598"
+      },
+      {
+        "displayName": "Senegal",
+        "value": "100000601"
+      },
+      {
+        "displayName": "Somalia",
+        "value": "100000608"
+      },
+      {
+        "displayName": "Suriname",
+        "value": "100000616"
+      },
+      {
+        "displayName": "Serbia",
+        "value": "100005000"
+      },
+      {
+        "displayName": "South Sudan",
+        "value": "200031000"
+      },
+      {
+        "displayName": "Sao Tome and Principe",
+        "value": "100000599"
+      },
+      {
+        "displayName": "El Salvador",
+        "value": "100000479"
+      },
+      {
+        "displayName": "Sint Maarten",
+        "value": "202042003"
+      },
+      {
+        "displayName": "Syrian Arab Republic",
+        "value": "100000621"
+      },
+      {
+        "displayName": "Swaziland",
+        "value": "100000618"
+      },
+      {
+        "displayName": "Turks and Caicos Islands",
+        "value": "100000633"
+      },
+      {
+        "displayName": "Chad",
+        "value": "100000456"
+      },
+      {
+        "displayName": "French Southern Territories",
+        "value": "100000492"
+      },
+      {
+        "displayName": "Togo",
+        "value": "100000626"
+      },
+      {
+        "displayName": "Thailand",
+        "value": "100000625"
+      },
+      {
+        "displayName": "Tajikistan",
+        "value": "100000623"
+      },
+      {
+        "displayName": "Tokelau",
+        "value": "100000627"
+      },
+      {
+        "displayName": "Timor-Leste",
+        "value": "200019008"
+      },
+      {
+        "displayName": "Turkmenistan",
+        "value": "100000632"
+      },
+      {
+        "displayName": "Tunisia",
+        "value": "100000630"
+      },
+      {
+        "displayName": "Tonga",
+        "value": "100000628"
+      },
+      {
+        "displayName": "East Timor",
+        "value": "100000476"
+      },
+      {
+        "displayName": "Turkey",
+        "value": "100000631"
+      },
+      {
+        "displayName": "Trinidad and Tobago",
+        "value": "100000629"
+      },
+      {
+        "displayName": "Tuvalu",
+        "value": "100000634"
+      },
+      {
+        "displayName": "Taiwan, China",
+        "value": "100000622"
+      },
+      {
+        "displayName": "Tanzania",
+        "value": "100000624"
+      },
+      {
+        "displayName": "Ukraine",
+        "value": "100000636"
+      },
+      {
+        "displayName": "Uganda",
+        "value": "100000635"
+      },
+      {
+        "displayName": "United Kingdom",
+        "value": "100000638"
+      },
+      {
+        "displayName": "United States Minor Outlying Islands",
+        "value": "100000640"
+      },
+      {
+        "displayName": "United States",
+        "value": "100000639"
+      },
+      {
+        "displayName": "Uruguay",
+        "value": "100000641"
+      },
+      {
+        "displayName": "Uzbekistan",
+        "value": "100000642"
+      },
+      {
+        "displayName": "Vatican City State (Holy See)",
+        "value": "100000644"
+      },
+      {
+        "displayName": "Saint Vincent and the Grenadines",
+        "value": "100000596"
+      },
+      {
+        "displayName": "Venezuela",
+        "value": "100000645"
+      },
+      {
+        "displayName": "Virgin Islands (British)",
+        "value": "100000647"
+      },
+      {
+        "displayName": "Virgin Islands (U.S.)",
+        "value": "100000648"
+      },
+      {
+        "displayName": "Vietnam",
+        "value": "100000646"
+      },
+      {
+        "displayName": "Vanuatu",
+        "value": "100000643"
+      },
+      {
+        "displayName": "Wallis And Futuna Islands",
+        "value": "100000649"
+      },
+      {
+        "displayName": "Samoa",
+        "value": "100000597"
+      },
+      {
+        "displayName": "Yemen",
+        "value": "100000651"
+      },
+      {
+        "displayName": "Mayotte",
+        "value": "100000550"
+      },
+      {
+        "displayName": "Yugoslavia",
+        "value": "100000652"
+      },
+      {
+        "displayName": "South Africa",
+        "value": "100000609"
+      },
+      {
+        "displayName": "Zambia",
+        "value": "100000653"
+      },
+      {
+        "displayName": "Congo, The Democratic Republic Of The",
+        "value": "100000464"
+      },
+      {
+        "displayName": "Zimbabwe",
+        "value": "100000654"
+      },
+      {
+        "displayName": "other",
+        "value": "-1"
+      }
+    ]
+  },
+  {
+    "id": "p-2",
+    "name": "Brand Name",
+    "type": "input",
+    "rules": [
+      {
+        "name": "maxLengthRule",
+        "value": "50",
+        "exProperty": "include",
+        "unit": "byte"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "p-3",
+    "name": "Model Number",
+    "type": "input",
+    "rules": [
+      {
+        "name": "maxLengthRule",
+        "value": "50",
+        "exProperty": "include",
+        "unit": "byte"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "p-20700",
+    "name": "Midsole Material",
+    "type": "multiCheck",
+    "rules": [
+      {
+        "name": "requiredRule",
+        "value": "true"
+      },
+      {
+        "name": "valueAttributeRule",
+        "value": "inputValue",
+        "desc": "输入属性值"
+      },
+      {
+        "name": "valueTypeRule",
+        "value": "text",
+        "target": "attribute:inputValue"
+      },
+      {
+        "name": "tipRule",
+        "value": "该属性支持自定义输入，输入值请填写value中inputValue属性,值为任意负数；多个输入值请保证value负数值不重复"
+      },
+      {
+        "name": "maxValueRule",
+        "value": "最大用户输入值个数[1]",
+        "exProperty": "include"
+      }
+    ],
+    "options": [
+      {
+        "displayName": "Other",
+        "value": "-1"
+      },
+      {
+        "displayName": "Genuine Leather",
+        "value": "3242875"
+      },
+      {
+        "displayName": "Mesh",
+        "value": "6821988"
+      },
+      {
+        "displayName": "Textile",
+        "value": "19359186"
+      },
+      {
+        "displayName": "Latex",
+        "value": "190091172"
+      },
+      {
+        "displayName": "md",
+        "value": "190091264"
+      },
+      {
+        "displayName": "Popcorn",
+        "value": "190091505"
+      },
+      {
+        "displayName": "PVC",
+        "value": "29228"
+      },
+      {
+        "displayName": "PU",
+        "value": "3323086"
+      },
+      {
+        "displayName": "Rubber",
+        "value": "3338114"
+      },
+      {
+        "displayName": "EVA",
+        "value": "3376399"
+      },
+      {
+        "displayName": "Gel",
+        "value": "3722559"
+      },
+      {
+        "displayName": "Wood",
+        "value": "3963577"
+      },
+      {
+        "displayName": "Tpr",
+        "value": "6217318"
+      },
+      {
+        "displayName": "Straw",
+        "value": "28986571"
+      },
+      {
+        "displayName": "other",
+        "value": "-1"
+      }
+    ]
+  },
+  {
+    "id": "p-191288212",
+    "name": "Season",
+    "type": "multiCheck",
+    "rules": [],
+    "options": [
+      {
+        "displayName": "All Seasons",
+        "value": "27034893"
+      },
+      {
+        "displayName": "Winter",
+        "value": "3254739"
+      },
+      {
+        "displayName": "Summer",
+        "value": "3455309"
+      },
+      {
+        "displayName": "Spring",
+        "value": "3599743"
+      },
+      {
+        "displayName": "Autumn",
+        "value": "8168102"
+      }
+    ]
+  },
+  {
+    "id": "p-191288243",
+    "name": "Style",
+    "type": "multiCheck",
+    "rules": [
+      {
+        "name": "valueAttributeRule",
+        "value": "inputValue",
+        "desc": "输入属性值"
+      },
+      {
+        "name": "valueTypeRule",
+        "value": "text",
+        "target": "attribute:inputValue"
+      },
+      {
+        "name": "tipRule",
+        "value": "该属性支持自定义输入，输入值请填写value中inputValue属性,值为任意负数；多个输入值请保证value负数值不重复"
+      },
+      {
+        "name": "maxValueRule",
+        "value": "最大用户输入值个数[1]",
+        "exProperty": "include"
+      }
+    ],
+    "options": [
+      {
+        "displayName": "Other",
+        "value": "-1"
+      },
+      {
+        "displayName": "Chunky",
+        "value": "46141750"
+      },
+      {
+        "displayName": "Tennis Shoes",
+        "value": "78721220"
+      },
+      {
+        "displayName": "Basketball Shoes",
+        "value": "370148888"
+      },
+      {
+        "displayName": "Monk Strap",
+        "value": "366098"
+      },
+      {
+        "displayName": "Running shoes",
+        "value": "9411613"
+      },
+      {
+        "displayName": "Scoccer& football",
+        "value": "190065969"
+      },
+      {
+        "displayName": "Slip-On",
+        "value": "13325270"
+      },
+      {
+        "displayName": "espadrilles",
+        "value": "105820320"
+      },
+      {
+        "displayName": "Loafers",
+        "value": "114030746"
+      },
+      {
+        "displayName": "Oxfords",
+        "value": "232560594"
+      },
+      {
+        "displayName": "Moccasin Gommino",
+        "value": "240890119"
+      },
+      {
+        "displayName": "Walking Shoes",
+        "value": "19077592"
+      },
+      {
+        "displayName": "Retro Shoes",
+        "value": "142186206"
+      },
+      {
+        "displayName": "Vulcanize shoes",
+        "value": "190001051"
+      },
+      {
+        "displayName": "Court Sneakers",
+        "value": "190001052"
+      },
+      {
+        "displayName": "Lace-up",
+        "value": "80806811"
+      },
+      {
+        "displayName": "High top",
+        "value": "39634124"
+      },
+      {
+        "displayName": "Platform",
+        "value": "14798782"
+      },
+      {
+        "displayName": "Sporty",
+        "value": "3481972"
+      },
+      {
+        "displayName": "Air Cushion",
+        "value": "57909926"
+      },
+      {
+        "displayName": "other",
+        "value": "-1"
+      }
+    ]
+  },
+  {
+    "id": "p-191290426",
+    "name": "Outsole Material",
+    "type": "multiCheck",
+    "rules": [
+      {
+        "name": "requiredRule",
+        "value": "true"
+      },
+      {
+        "name": "valueAttributeRule",
+        "value": "inputValue",
+        "desc": "输入属性值"
+      },
+      {
+        "name": "valueTypeRule",
+        "value": "text",
+        "target": "attribute:inputValue"
+      },
+      {
+        "name": "tipRule",
+        "value": "该属性支持自定义输入，输入值请填写value中inputValue属性,值为任意负数；多个输入值请保证value负数值不重复"
+      },
+      {
+        "name": "maxValueRule",
+        "value": "最大用户输入值个数[1]",
+        "exProperty": "include"
+      }
+    ],
+    "options": [
+      {
+        "displayName": "Other",
+        "value": "-1"
+      },
+      {
+        "displayName": "PHYLON",
+        "value": "11055226"
+      },
+      {
+        "displayName": "Leather",
+        "value": "190091222"
+      },
+      {
+        "displayName": "Cotton Fabric",
+        "value": "384964283"
+      },
+      {
+        "displayName": "Cow Muscle",
+        "value": "1951040094"
+      },
+      {
+        "displayName": "PVC",
+        "value": "29228"
+      },
+      {
+        "displayName": "Genuine Leather",
+        "value": "3242875"
+      },
+      {
+        "displayName": "PU",
+        "value": "3323086"
+      },
+      {
+        "displayName": "Rubber",
+        "value": "3338114"
+      },
+      {
+        "displayName": "EVA",
+        "value": "3376399"
+      },
+      {
+        "displayName": "Cork",
+        "value": "3683446"
+      },
+      {
+        "displayName": "Plastic",
+        "value": "3954276"
+      },
+      {
+        "displayName": "Wood",
+        "value": "3963577"
+      },
+      {
+        "displayName": "vibram",
+        "value": "4224936"
+      },
+      {
+        "displayName": "Tpr",
+        "value": "6217318"
+      },
+      {
+        "displayName": "TPU",
+        "value": "7097887"
+      },
+      {
+        "displayName": "Bonded Leather",
+        "value": "22094351"
+      },
+      {
+        "displayName": "Straw",
+        "value": "28986571"
+      },
+      {
+        "displayName": "Oxford",
+        "value": "7803300"
+      },
+      {
+        "displayName": "other",
+        "value": "-1"
+      }
+    ]
+  },
+  {
+    "id": "p-191290430",
+    "name": "Lining Material",
+    "type": "multiCheck",
+    "rules": [
+      {
+        "name": "requiredRule",
+        "value": "true"
+      },
+      {
+        "name": "valueAttributeRule",
+        "value": "inputValue",
+        "desc": "输入属性值"
+      },
+      {
+        "name": "valueTypeRule",
+        "value": "text",
+        "target": "attribute:inputValue"
+      },
+      {
+        "name": "tipRule",
+        "value": "该属性支持自定义输入，输入值请填写value中inputValue属性,值为任意负数；多个输入值请保证value负数值不重复"
+      },
+      {
+        "name": "maxValueRule",
+        "value": "最大用户输入值个数[1]",
+        "exProperty": "include"
+      }
+    ],
+    "options": [
+      {
+        "displayName": "Other",
+        "value": "-1"
+      },
+      {
+        "displayName": "PVC",
+        "value": "29228"
+      },
+      {
+        "displayName": "Genuine Leather",
+        "value": "3242875"
+      },
+      {
+        "displayName": "PU",
+        "value": "3323086"
+      },
+      {
+        "displayName": "Plush",
+        "value": "4141322"
+      },
+      {
+        "displayName": "Mesh",
+        "value": "6821988"
+      },
+      {
+        "displayName": "Cotton Fabric",
+        "value": "384964283"
+      },
+      {
+        "displayName": "other",
+        "value": "-1"
+      }
+    ]
+  },
+  {
+    "id": "p-200000329",
+    "name": "Pattern Type",
+    "type": "singleCheck",
+    "rules": [],
+    "options": [
+      {
+        "displayName": "Other",
+        "value": "-1"
+      },
+      {
+        "displayName": "Leopard",
+        "value": "3580590"
+      },
+      {
+        "displayName": "Floral",
+        "value": "6176581"
+      },
+      {
+        "displayName": "Graffiti",
+        "value": "6905059"
+      },
+      {
+        "displayName": "Camouflage",
+        "value": "7948865"
+      },
+      {
+        "displayName": "Polka Dot",
+        "value": "11197199"
+      },
+      {
+        "displayName": "Paisley",
+        "value": "16914565"
+      },
+      {
+        "displayName": "Patchwork",
+        "value": "29832427"
+      },
+      {
+        "displayName": "Plaid",
+        "value": "30897142"
+      },
+      {
+        "displayName": "Geometric",
+        "value": "33294342"
+      },
+      {
+        "displayName": "Striped",
+        "value": "48669805"
+      },
+      {
+        "displayName": "Animal Prints",
+        "value": "74039156"
+      },
+      {
+        "displayName": "Heart-Shaped",
+        "value": "142189951"
+      },
+      {
+        "displayName": "Print",
+        "value": "200001250"
+      },
+      {
+        "displayName": "Bordered",
+        "value": "200001254"
+      },
+      {
+        "displayName": "Cartoon Animation",
+        "value": "308164072"
+      },
+      {
+        "displayName": "Mixed Colors",
+        "value": "411894439"
+      },
+      {
+        "displayName": "Gingham",
+        "value": "1954454308"
+      },
+      {
+        "displayName": "Checkered",
+        "value": "1954460265"
+      },
+      {
+        "displayName": "Hand-Painted",
+        "value": "1954460277"
+      },
+      {
+        "displayName": "Solid",
+        "value": "1954510751"
+      }
+    ]
+  },
+  {
+    "id": "p-200000388",
+    "name": "Closure Type",
+    "type": "singleCheck",
+    "rules": [],
+    "options": [
+      {
+        "displayName": "Button",
+        "value": "3835438"
+      },
+      {
+        "displayName": "ZIP",
+        "value": "6866597"
+      },
+      {
+        "displayName": "Slip-On",
+        "value": "13325270"
+      },
+      {
+        "displayName": "Sock",
+        "value": "16803133"
+      },
+      {
+        "displayName": "Lace-up",
+        "value": "80806811"
+      },
+      {
+        "displayName": "Hook & Loop",
+        "value": "159296723"
+      },
+      {
+        "displayName": "Buckle Strap",
+        "value": "320046328"
+      },
+      {
+        "displayName": "Elastic Band",
+        "value": "391726544"
+      }
+    ]
+  },
+  {
+    "id": "p-200000486",
+    "name": "Toe Style",
+    "type": "multiCheck",
+    "rules": [
+      {
+        "name": "valueAttributeRule",
+        "value": "inputValue",
+        "desc": "输入属性值"
+      },
+      {
+        "name": "valueTypeRule",
+        "value": "text",
+        "target": "attribute:inputValue"
+      },
+      {
+        "name": "tipRule",
+        "value": "该属性支持自定义输入，输入值请填写value中inputValue属性,值为任意负数；多个输入值请保证value负数值不重复"
+      },
+      {
+        "name": "maxValueRule",
+        "value": "最大用户输入值个数[1]",
+        "exProperty": "include"
+      }
+    ],
+    "options": [
+      {
+        "displayName": "Peep Toe",
+        "value": "110726877"
+      },
+      {
+        "displayName": "Zoris",
+        "value": "1951050026"
+      },
+      {
+        "displayName": "SQUARE TOE",
+        "value": "1327275102"
+      },
+      {
+        "displayName": "TOE BOX",
+        "value": "739632982"
+      },
+      {
+        "displayName": "Open Toe",
+        "value": "72533551"
+      },
+      {
+        "displayName": "Pointed Toe",
+        "value": "1879328947"
+      },
+      {
+        "displayName": "Round Toe",
+        "value": "556500746"
+      },
+      {
+        "displayName": "Closed Toe",
+        "value": "108886227"
+      },
+      {
+        "displayName": "Composite toe",
+        "value": "132855575"
+      },
+      {
+        "displayName": "Steel Toe",
+        "value": "3877533"
+      },
+      {
+        "displayName": "other",
+        "value": "-1"
+      }
+    ]
+  },
+  {
+    "id": "p-210190305",
+    "name": "Pattern",
+    "type": "multiCheck",
+    "rules": [
+      {
+        "name": "valueAttributeRule",
+        "value": "inputValue",
+        "desc": "输入属性值"
+      },
+      {
+        "name": "valueTypeRule",
+        "value": "text",
+        "target": "attribute:inputValue"
+      },
+      {
+        "name": "tipRule",
+        "value": "该属性支持自定义输入，输入值请填写value中inputValue属性,值为任意负数；多个输入值请保证value负数值不重复"
+      },
+      {
+        "name": "maxValueRule",
+        "value": "最大用户输入值个数[1]",
+        "exProperty": "include"
+      }
+    ],
+    "options": [
+      {
+        "displayName": "Print",
+        "value": "7336907"
+      },
+      {
+        "displayName": "GEOMETRY",
+        "value": "8113407"
+      },
+      {
+        "displayName": "Checkered",
+        "value": "13086543"
+      },
+      {
+        "displayName": "Argyle",
+        "value": "17250850"
+      },
+      {
+        "displayName": "Patchwork",
+        "value": "29832427"
+      },
+      {
+        "displayName": "Striped",
+        "value": "48669805"
+      },
+      {
+        "displayName": "Animal Prints",
+        "value": "74039156"
+      },
+      {
+        "displayName": "Solid",
+        "value": "190091323"
+      },
+      {
+        "displayName": "Camouflage",
+        "value": "190091501"
+      },
+      {
+        "displayName": "Blank",
+        "value": "190091504"
+      },
+      {
+        "displayName": "Mixed Colors",
+        "value": "411894439"
+      },
+      {
+        "displayName": "Plaids",
+        "value": "1875812559"
+      },
+      {
+        "displayName": "other",
+        "value": "-1"
+      }
+    ]
+  },
+  {
+    "id": "p-210194982",
+    "name": "Upper Material",
+    "type": "singleCheck",
+    "rules": [
+      {
+        "name": "valueAttributeRule",
+        "value": "inputValue",
+        "desc": "输入属性值"
+      },
+      {
+        "name": "valueTypeRule",
+        "value": "text",
+        "target": "attribute:inputValue"
+      },
+      {
+        "name": "maxLengthRule",
+        "value": "50",
+        "target": "attribute:inputValue",
+        "exProperty": "include",
+        "unit": "character"
+      },
+      {
+        "name": "tipRule",
+        "value": "该属性支持自定义输入，输入值请填写value中inputValue属性,值为任意负数"
+      }
+    ],
+    "options": [
+      {
+        "displayName": "Other",
+        "value": "-1"
+      },
+      {
+        "displayName": "PVC",
+        "value": "29228"
+      },
+      {
+        "displayName": "Stretch Fabric",
+        "value": "362061"
+      },
+      {
+        "displayName": "Genuine Leather",
+        "value": "3242875"
+      },
+      {
+        "displayName": "PU",
+        "value": "3323086"
+      },
+      {
+        "displayName": "Rubber",
+        "value": "3338114"
+      },
+      {
+        "displayName": "EVA",
+        "value": "3376399"
+      },
+      {
+        "displayName": "Spandex/Elastane",
+        "value": "3705463"
+      },
+      {
+        "displayName": "Canvas",
+        "value": "3767487"
+      },
+      {
+        "displayName": "Denim",
+        "value": "3800980"
+      },
+      {
+        "displayName": "Plastic",
+        "value": "3954276"
+      },
+      {
+        "displayName": "Plush",
+        "value": "4141322"
+      },
+      {
+        "displayName": "Down",
+        "value": "6115693"
+      },
+      {
+        "displayName": "Nylon",
+        "value": "6444210"
+      },
+      {
+        "displayName": "Mesh",
+        "value": "6821988"
+      },
+      {
+        "displayName": "Velvet",
+        "value": "7334550"
+      },
+      {
+        "displayName": "Hemp",
+        "value": "7485489"
+      },
+      {
+        "displayName": "Wool",
+        "value": "7629837"
+      },
+      {
+        "displayName": "Polyester",
+        "value": "7719852"
+      },
+      {
+        "displayName": "Microfiber Fabrics",
+        "value": "8083462"
+      },
+      {
+        "displayName": "Fur",
+        "value": "11646718"
+      },
+      {
+        "displayName": "Cane",
+        "value": "12535623"
+      },
+      {
+        "displayName": "Synthetic",
+        "value": "16369367"
+      },
+      {
+        "displayName": "Flannel",
+        "value": "27900001"
+      },
+      {
+        "displayName": "Straw",
+        "value": "28986571"
+      },
+      {
+        "displayName": "Patent Leather",
+        "value": "29538429"
+      },
+      {
+        "displayName": "Jute",
+        "value": "36822883"
+      },
+      {
+        "displayName": "Flock",
+        "value": "37376150"
+      },
+      {
+        "displayName": "Sheepskin",
+        "value": "37437704"
+      },
+      {
+        "displayName": "faux suede",
+        "value": "58427554"
+      },
+      {
+        "displayName": "PP",
+        "value": "104451652"
+      },
+      {
+        "displayName": "Horsehair",
+        "value": "117242095"
+      },
+      {
+        "displayName": "Viscose",
+        "value": "121441610"
+      },
+      {
+        "displayName": "Silk",
+        "value": "190000994"
+      },
+      {
+        "displayName": "Split Leather",
+        "value": "253258450"
+      },
+      {
+        "displayName": "Cotton Fabric",
+        "value": "384964283"
+      },
+      {
+        "displayName": "Jacquard Fabric",
+        "value": "417448242"
+      },
+      {
+        "displayName": "PC",
+        "value": "966766596"
+      },
+      {
+        "displayName": "Microfiber Leather",
+        "value": "1878493769"
+      },
+      {
+        "displayName": "Sequined Cloth",
+        "value": "1951040028"
+      },
+      {
+        "displayName": "None-Woven",
+        "value": "1951655668"
+      },
+      {
+        "displayName": "Satin",
+        "value": "1954480417"
+      },
+      {
+        "displayName": "Neoprene",
+        "value": "1954480439"
+      },
+      {
+        "displayName": "Lace",
+        "value": "1954508774"
+      },
+      {
+        "displayName": "Corduroy",
+        "value": "1954510353"
+      },
+      {
+        "displayName": "other",
+        "value": "-1"
+      }
+    ]
+  },
+  {
+    "id": "p-210200060",
+    "name": "Feature",
+    "type": "multiCheck",
+    "rules": [
+      {
+        "name": "valueAttributeRule",
+        "value": "inputValue",
+        "desc": "输入属性值"
+      },
+      {
+        "name": "valueTypeRule",
+        "value": "text",
+        "target": "attribute:inputValue"
+      },
+      {
+        "name": "tipRule",
+        "value": "该属性支持自定义输入，输入值请填写value中inputValue属性,值为任意负数；多个输入值请保证value负数值不重复"
+      },
+      {
+        "name": "maxValueRule",
+        "value": "最大用户输入值个数[1]",
+        "exProperty": "include"
+      }
+    ],
+    "options": [
+      {
+        "displayName": "Other",
+        "value": "-1"
+      },
+      {
+        "displayName": "USB",
+        "value": "22041"
+      },
+      {
+        "displayName": "Deodorization",
+        "value": "351723"
+      },
+      {
+        "displayName": "Insulative",
+        "value": "366125"
+      },
+      {
+        "displayName": "Light",
+        "value": "3913419"
+      },
+      {
+        "displayName": "Flat ",
+        "value": "8300572"
+      },
+      {
+        "displayName": "Printed",
+        "value": "8665793"
+      },
+      {
+        "displayName": "Shock-Absorbant",
+        "value": "1951166851"
+      },
+      {
+        "displayName": "Cushioning",
+        "value": "158583747"
+      },
+      {
+        "displayName": "Fashion Trend",
+        "value": "30925155"
+      },
+      {
+        "displayName": "EVERGREEN",
+        "value": "3879852"
+      },
+      {
+        "displayName": "Sweat-Absorbant",
+        "value": "1951168718"
+      },
+      {
+        "displayName": "Anti-Odor",
+        "value": "1806255398"
+      },
+      {
+        "displayName": "Light Weight",
+        "value": "46649883"
+      },
+      {
+        "displayName": "Disposable",
+        "value": "76328288"
+      },
+      {
+        "displayName": "Recyclable",
+        "value": "100098675"
+      },
+      {
+        "displayName": "Round",
+        "value": "3451537"
+      },
+      {
+        "displayName": "Massage",
+        "value": "3470540"
+      },
+      {
+        "displayName": "Steel Toe",
+        "value": "3877533"
+      },
+      {
+        "displayName": "Thermal",
+        "value": "4253945"
+      },
+      {
+        "displayName": "Waterproof",
+        "value": "7499010"
+      },
+      {
+        "displayName": "Breathable",
+        "value": "42283793"
+      },
+      {
+        "displayName": "Anti-Slippery",
+        "value": "271070427"
+      },
+      {
+        "displayName": "Anti-Slip",
+        "value": "61786742"
+      },
+      {
+        "displayName": "ARCH SUPPORT",
+        "value": "74087827"
+      },
+      {
+        "displayName": "Anti-static",
+        "value": "100200906"
+      },
+      {
+        "displayName": "Lighted",
+        "value": "132349884"
+      },
+      {
+        "displayName": "Quick Dry",
+        "value": "1875807207"
+      },
+      {
+        "displayName": "Hard-Wearing",
+        "value": "1880854905"
+      },
+      {
+        "displayName": "Height Increasing",
+        "value": "1951050082"
+      },
+      {
+        "displayName": "Electrically Heated",
+        "value": "1951054063"
+      },
+      {
+        "displayName": "Shock Resistant",
+        "value": "20541256"
+      },
+      {
+        "displayName": "slip resistant",
+        "value": "38685608"
+      },
+      {
+        "displayName": "Anitmicrobial",
+        "value": "190077491"
+      },
+      {
+        "displayName": "Stain Resistant",
+        "value": "17112005"
+      },
+      {
+        "displayName": "Cushioned",
+        "value": "140049271"
+      },
+      {
+        "displayName": "Soft",
+        "value": "4271424"
+      },
+      {
+        "displayName": "barefoot",
+        "value": "3976437"
+      },
+      {
+        "displayName": "Abrasion Resistance",
+        "value": "1875808236"
+      },
+      {
+        "displayName": "Flexible",
+        "value": "9225619"
+      },
+      {
+        "displayName": "comfort",
+        "value": "3496969"
+      },
+      {
+        "displayName": "other",
+        "value": "-1"
+      }
+    ]
+  },
+  {
+    "id": "p-210232962",
+    "name": "US Size",
+    "type": "multiCheck",
+    "rules": [
+      {
+        "name": "valueAttributeRule",
+        "value": "inputValue",
+        "desc": "输入属性值"
+      },
+      {
+        "name": "valueTypeRule",
+        "value": "text",
+        "target": "attribute:inputValue"
+      },
+      {
+        "name": "tipRule",
+        "value": "该属性支持自定义输入，输入值请填写value中inputValue属性,值为任意负数；多个输入值请保证value负数值不重复"
+      },
+      {
+        "name": "maxValueRule",
+        "value": "最大用户输入值个数[1]",
+        "exProperty": "include"
+      }
+    ],
+    "options": [
+      {
+        "displayName": "3.5",
+        "value": "23672"
+      },
+      {
+        "displayName": "4",
+        "value": "22029"
+      },
+      {
+        "displayName": "4.5",
+        "value": "3594804"
+      },
+      {
+        "displayName": "5",
+        "value": "27434"
+      },
+      {
+        "displayName": "5.5",
+        "value": "3282895"
+      },
+      {
+        "displayName": "6",
+        "value": "22032"
+      },
+      {
+        "displayName": "6.5",
+        "value": "3351361"
+      },
+      {
+        "displayName": "7",
+        "value": "27435"
+      },
+      {
+        "displayName": "7.5",
+        "value": "3417294"
+      },
+      {
+        "displayName": "8",
+        "value": "27436"
+      },
+      {
+        "displayName": "8.5",
+        "value": "6068197"
+      },
+      {
+        "displayName": "9",
+        "value": "3234815"
+      },
+      {
+        "displayName": "9.5",
+        "value": "4241880"
+      },
+      {
+        "displayName": "10",
+        "value": "27438"
+      },
+      {
+        "displayName": "10.5",
+        "value": "3892861"
+      },
+      {
+        "displayName": "11",
+        "value": "3232995"
+      },
+      {
+        "displayName": "11.5",
+        "value": "3270672"
+      },
+      {
+        "displayName": "12",
+        "value": "3234583"
+      },
+      {
+        "displayName": "12.5",
+        "value": "3587310"
+      },
+      {
+        "displayName": "13",
+        "value": "3239161"
+      },
+      {
+        "displayName": "13.5",
+        "value": "6353359"
+      },
+      {
+        "displayName": "14",
+        "value": "3241261"
+      },
+      {
+        "displayName": "14.5",
+        "value": "6184084"
+      },
+      {
+        "displayName": "15",
+        "value": "3238079"
+      },
+      {
+        "displayName": "15.5",
+        "value": "3927555"
+      },
+      {
+        "displayName": "16",
+        "value": "3250796"
+      },
+      {
+        "displayName": "16.5",
+        "value": "3922034"
+      },
+      {
+        "displayName": "17",
+        "value": "3247731"
+      },
+      {
+        "displayName": "17.5",
+        "value": "11031474"
+      },
+      {
+        "displayName": "18",
+        "value": "3241268"
+      },
+      {
+        "displayName": "18.5",
+        "value": "7081386"
+      },
+      {
+        "displayName": "19",
+        "value": "3283066"
+      },
+      {
+        "displayName": "19.5",
+        "value": "4031220"
+      },
+      {
+        "displayName": "20",
+        "value": "33255"
+      },
+      {
+        "displayName": "other",
+        "value": "-1"
+      }
+    ]
+  },
+  {
+    "id": "p-210214270",
+    "name": "Genuine Leather Type",
+    "type": "singleCheck",
+    "rules": [],
+    "options": [
+      {
+        "displayName": "Other",
+        "value": "-1"
+      },
+      {
+        "displayName": "Sheepskin",
+        "value": "37437704"
+      },
+      {
+        "displayName": "Snakeskin",
+        "value": "67141703"
+      },
+      {
+        "displayName": "Cow Leather",
+        "value": "94268521"
+      },
+      {
+        "displayName": "Pigskin",
+        "value": "204180378"
+      }
+    ]
+  },
+  {
+    "id": "p-272442562",
+    "name": "Logo position",
+    "type": "multiCheck",
+    "rules": [
+      {
+        "name": "valueAttributeRule",
+        "value": "inputValue",
+        "desc": "输入属性值"
+      },
+      {
+        "name": "valueTypeRule",
+        "value": "text",
+        "target": "attribute:inputValue"
+      },
+      {
+        "name": "tipRule",
+        "value": "该属性支持自定义输入，输入值请填写value中inputValue属性,值为任意负数；多个输入值请保证value负数值不重复"
+      },
+      {
+        "name": "maxValueRule",
+        "value": "最大用户输入值个数[1]",
+        "exProperty": "include"
+      }
+    ],
+    "options": [
+      {
+        "displayName": "A  Pair",
+        "value": "190089572"
+      },
+      {
+        "displayName": "Upper",
+        "value": "21753067"
+      },
+      {
+        "displayName": "Outside",
+        "value": "7979956"
+      },
+      {
+        "displayName": "Left",
+        "value": "3922038"
+      },
+      {
+        "displayName": "Bottom",
+        "value": "8857080"
+      },
+      {
+        "displayName": "Inside",
+        "value": "13654284"
+      },
+      {
+        "displayName": "Insole",
+        "value": "42149753"
+      },
+      {
+        "displayName": "back",
+        "value": "3259081"
+      },
+      {
+        "displayName": "shoe tongue",
+        "value": "190089571"
+      },
+      {
+        "displayName": "Right",
+        "value": "3265551"
+      },
+      {
+        "displayName": "other",
+        "value": "-1"
+      }
+    ]
+  },
+  {
+    "id": "p-210190788",
+    "name": "Logo Craft",
+    "type": "multiCheck",
+    "rules": [
+      {
+        "name": "valueAttributeRule",
+        "value": "inputValue",
+        "desc": "输入属性值"
+      },
+      {
+        "name": "valueTypeRule",
+        "value": "text",
+        "target": "attribute:inputValue"
+      },
+      {
+        "name": "tipRule",
+        "value": "该属性支持自定义输入，输入值请填写value中inputValue属性,值为任意负数；多个输入值请保证value负数值不重复"
+      },
+      {
+        "name": "maxValueRule",
+        "value": "最大用户输入值个数[1]",
+        "exProperty": "include"
+      }
+    ],
+    "options": [
+      {
+        "displayName": "Offset Printing",
+        "value": "484528529"
+      },
+      {
+        "displayName": "Embroidered",
+        "value": "7400116"
+      },
+      {
+        "displayName": "leather printing",
+        "value": "190089573"
+      },
+      {
+        "displayName": "Other",
+        "value": "-1"
+      },
+      {
+        "displayName": "3D Printing",
+        "value": "170202475"
+      },
+      {
+        "displayName": "Engraving",
+        "value": "32416302"
+      },
+      {
+        "displayName": "Embossing",
+        "value": "86276181"
+      },
+      {
+        "displayName": "Transfer Sticker",
+        "value": "190089458"
+      },
+      {
+        "displayName": "Silkscreen Printing",
+        "value": "3550"
+      },
+      {
+        "displayName": "rubber printing",
+        "value": "1879414167"
+      },
+      {
+        "displayName": "Laser Carving",
+        "value": "3552"
+      },
+      {
+        "displayName": "other",
+        "value": "-1"
+      }
+    ]
+  },
+  {
+    "id": "saleProp",
+    "name": "Sales Property",
+    "type": "complex",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "p-191288010",
+    "name": "Color",
+    "type": "multiCheck",
+    "rules": [
+      {
+        "name": "requiredRule",
+        "value": "true"
+      },
+      {
+        "name": "valueAttributeRule",
+        "value": "inputValue",
+        "desc": "输入属性值"
+      },
+      {
+        "name": "valueTypeRule",
+        "value": "text",
+        "target": "attribute:inputValue"
+      },
+      {
+        "name": "tipRule",
+        "value": "该属性支持自定义输入，输入值请填写value中inputValue属性,值为任意负数；多个输入值请保证value负数值不重复"
+      },
+      {
+        "name": "maxValueRule",
+        "value": "最大用户输入值个数[60]",
+        "exProperty": "include"
+      },
+      {
+        "name": "valueAttributeRule",
+        "value": "img",
+        "desc": "可上传图片"
+      },
+      {
+        "name": "valueAttributeRule",
+        "value": "remark",
+        "desc": "可使用色块"
+      },
+      {
+        "name": "maxInputNumRule",
+        "value": "40",
+        "exProperty": "include"
+      },
+      {
+        "name": "requiredRule",
+        "value": "true"
+      }
+    ],
+    "options": [
+      {
+        "displayName": "Pink",
+        "value": "3328925"
+      },
+      {
+        "displayName": "Gold",
+        "value": "3331116"
+      },
+      {
+        "displayName": "Silver",
+        "value": "3460547"
+      },
+      {
+        "displayName": "Orange",
+        "value": "3558409"
+      },
+      {
+        "displayName": "Sliver",
+        "value": "3787620"
+      },
+      {
+        "displayName": "Purple",
+        "value": "3851110"
+      },
+      {
+        "displayName": "Ivory",
+        "value": "4173850"
+      },
+      {
+        "displayName": "Plum",
+        "value": "6408090"
+      },
+      {
+        "displayName": "Blue",
+        "value": "123085"
+      },
+      {
+        "displayName": "Black",
+        "value": "3327837"
+      },
+      {
+        "displayName": "White",
+        "value": "3331185"
+      },
+      {
+        "displayName": "Red",
+        "value": "3331260"
+      },
+      {
+        "displayName": "Yellow",
+        "value": "3354417"
+      },
+      {
+        "displayName": "Brown",
+        "value": "3399503"
+      },
+      {
+        "displayName": "Grey",
+        "value": "3483425"
+      },
+      {
+        "displayName": "Beige",
+        "value": "5715155"
+      },
+      {
+        "displayName": "Green",
+        "value": "216016296"
+      },
+      {
+        "displayName": "other",
+        "value": "-1"
+      }
+    ]
+  },
+  {
+    "id": "p-222038415",
+    "name": "EUR Size",
+    "type": "multiCheck",
+    "rules": [
+      {
+        "name": "valueAttributeRule",
+        "value": "inputValue",
+        "desc": "输入属性值"
+      },
+      {
+        "name": "valueTypeRule",
+        "value": "text",
+        "target": "attribute:inputValue"
+      },
+      {
+        "name": "tipRule",
+        "value": "该属性支持自定义输入，输入值请填写value中inputValue属性,值为任意负数；多个输入值请保证value负数值不重复"
+      },
+      {
+        "name": "maxValueRule",
+        "value": "最大用户输入值个数[60]",
+        "exProperty": "include"
+      }
+    ],
+    "options": [
+      {
+        "displayName": "35",
+        "value": "190000791"
+      },
+      {
+        "displayName": "35.5",
+        "value": "44894"
+      },
+      {
+        "displayName": "36",
+        "value": "190000105"
+      },
+      {
+        "displayName": "36.5",
+        "value": "44895"
+      },
+      {
+        "displayName": "37",
+        "value": "29542"
+      },
+      {
+        "displayName": "37.5",
+        "value": "44896"
+      },
+      {
+        "displayName": "38",
+        "value": "28388"
+      },
+      {
+        "displayName": "38.5",
+        "value": "44897"
+      },
+      {
+        "displayName": "39",
+        "value": "190000792"
+      },
+      {
+        "displayName": "39.5",
+        "value": "44898"
+      },
+      {
+        "displayName": "40",
+        "value": "28389"
+      },
+      {
+        "displayName": "40.5",
+        "value": "44899"
+      },
+      {
+        "displayName": "41",
+        "value": "28390"
+      },
+      {
+        "displayName": "41.5",
+        "value": "44900"
+      },
+      {
+        "displayName": "42",
+        "value": "28391"
+      },
+      {
+        "displayName": "42.5",
+        "value": "44901"
+      },
+      {
+        "displayName": "43",
+        "value": "28392"
+      },
+      {
+        "displayName": "43.5",
+        "value": "44902"
+      },
+      {
+        "displayName": "44",
+        "value": "28393"
+      },
+      {
+        "displayName": "44.5",
+        "value": "44903"
+      },
+      {
+        "displayName": "45",
+        "value": "28394"
+      },
+      {
+        "displayName": "45.5",
+        "value": "44904"
+      },
+      {
+        "displayName": "46",
+        "value": "28395"
+      },
+      {
+        "displayName": "46.5",
+        "value": "44905"
+      },
+      {
+        "displayName": "47",
+        "value": "28396"
+      },
+      {
+        "displayName": "47.5",
+        "value": "44906"
+      },
+      {
+        "displayName": "48",
+        "value": "29543"
+      },
+      {
+        "displayName": "48.5",
+        "value": "44907"
+      },
+      {
+        "displayName": "49",
+        "value": "29544"
+      },
+      {
+        "displayName": "49.5",
+        "value": "44908"
+      },
+      {
+        "displayName": "50",
+        "value": "29545"
+      },
+      {
+        "displayName": "50.5",
+        "value": "44909"
+      },
+      {
+        "displayName": "51",
+        "value": "44910"
+      },
+      {
+        "displayName": "51.5",
+        "value": "24171578"
+      },
+      {
+        "displayName": "52",
+        "value": "3273546"
+      },
+      {
+        "displayName": "other",
+        "value": "-1"
+      }
+    ]
+  },
+  {
+    "id": "sku",
+    "name": "Product Specification Component",
+    "type": "multiComplex",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "skuOuterId",
+    "name": "Commodity code",
+    "type": "input",
+    "rules": [
+      {
+        "name": "maxLengthRule",
+        "value": "64",
+        "exProperty": "include",
+        "unit": "byte"
+      },
+      {
+        "name": "tipRule",
+        "value": "Commodity code"
+      },
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "props",
+    "name": "",
+    "type": "multiInput",
+    "rules": [
+      {
+        "name": "valueAttributeRule",
+        "value": "propId"
+      },
+      {
+        "name": "valueAttributeRule",
+        "value": "propName"
+      },
+      {
+        "name": "valueAttributeRule",
+        "value": "propValueId"
+      },
+      {
+        "name": "valueAttributeRule",
+        "value": "propValueName"
+      },
+      {
+        "name": "tipRule",
+        "value": "值为属性id属性value的组合"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "skuStock",
+    "name": "Inventory",
+    "type": "multiInput",
+    "rules": [
+      {
+        "name": "valueAttributeRule",
+        "value": "warehouseCode"
+      },
+      {
+        "name": "valueAttributeRule",
+        "value": "srcValue"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "price",
+    "name": "Single piece price (USD)",
+    "type": "input",
+    "rules": [
+      {
+        "name": "maxValueRule",
+        "value": "999999999",
+        "exProperty": "not include"
+      },
+      {
+        "name": "minValueRule",
+        "value": "0",
+        "exProperty": "not include"
+      },
+      {
+        "name": "regexRule",
+        "value": "([0-9]{0,9})(\\.[0-9]{0,2})?"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "skuId",
+    "name": "",
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "long"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "outerSupplyId",
+    "name": "supply id",
+    "type": "input",
+    "rules": [
+      {
+        "name": "maxLengthRule",
+        "value": "40",
+        "exProperty": "include",
+        "unit": "byte"
+      },
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "sampleSku",
+    "name": "SKU",
+    "type": "multiComplex",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "props",
+    "name": "",
+    "type": "multiInput",
+    "rules": [
+      {
+        "name": "valueAttributeRule",
+        "value": "propId"
+      },
+      {
+        "name": "valueAttributeRule",
+        "value": "propName"
+      },
+      {
+        "name": "valueAttributeRule",
+        "value": "propValueId"
+      },
+      {
+        "name": "valueAttributeRule",
+        "value": "propValueName"
+      },
+      {
+        "name": "tipRule",
+        "value": "值为属性id属性value的组合"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "price",
+    "name": "Sample price (USD)",
+    "type": "input",
+    "rules": [
+      {
+        "name": "requiredRule",
+        "value": "true"
+      },
+      {
+        "name": "maxValueRule",
+        "value": "999999999",
+        "exProperty": "not include"
+      },
+      {
+        "name": "minValueRule",
+        "value": "0",
+        "exProperty": "not include"
+      },
+      {
+        "name": "regexRule",
+        "value": "([0-9]{0,9})(\\.[0-9]{0,2})?"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "skuId",
+    "name": "",
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "long"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "productTitle",
+    "name": "Product name",
+    "type": "input",
+    "rules": [
+      {
+        "name": "tipRule",
+        "value": "The <div> should contain information such as product name, product characteristics (attributes), industry standards, certifications, and models to avoid listing and stacking. <br><a href=\"https://service.alibaba.com/page/knowledge? pageId = 127 & category = 9207967 & knowledge = 20142419 & language = zh \"target =\"_blank \"> How do I set the product title? </a>"
+      },
+      {
+        "name": "tipRule",
+        "value": "The key information of standardized products will be displaied by default, please do not repeat it in the product name"
+      },
+      {
+        "name": "requiredRule",
+        "value": "true"
+      },
+      {
+        "name": "maxLengthRule",
+        "value": "128",
+        "exProperty": "include",
+        "unit": "byte"
+      },
+      {
+        "name": "regexRule",
+        "value": "[^\\x04-\\x80≤≥‰±㎡℃℉°μΩé3²³㎡m³]+|[@@!！\\?？]",
+        "exProperty": "not include"
+      },
+      {
+        "name": "regexRule",
+        "value": "\\w+(?:[\\-+.]\\w+)*@\\w+(?:[\\-.]\\w+)*\\.\\w+(?:[\\-.]\\w+)*",
+        "exProperty": "not include"
+      },
+      {
+        "name": "regexRule",
+        "value": "<[^>]+>",
+        "exProperty": "not include"
+      },
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "inventory",
+    "name": "Inventory",
+    "type": "multiInput",
+    "rules": [
+      {
+        "name": "valueAttributeRule",
+        "value": "warehouseCode"
+      },
+      {
+        "name": "valueAttributeRule",
+        "value": "srcValue"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "scImages",
+    "name": "Product images",
+    "type": "complex",
+    "rules": [
+      {
+        "name": "requiredRule",
+        "value": "true"
+      },
+      {
+        "name": "maxInputNumRule",
+        "value": "6",
+        "exProperty": "include"
+      },
+      {
+        "name": "minInputNumRule",
+        "value": "1",
+        "exProperty": "include"
+      },
+      {
+        "name": "maxImageSizeRule",
+        "value": "4194304",
+        "exProperty": "include"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "scImages_0",
+    "name": "Product images",
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "url"
+      },
+      {
+        "name": "valueAttributeRule",
+        "value": "fileId",
+        "desc": "图片银行图片ID"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "scImages_1",
+    "name": "Product images",
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "url"
+      },
+      {
+        "name": "valueAttributeRule",
+        "value": "fileId",
+        "desc": "图片银行图片ID"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "scImages_2",
+    "name": "Product images",
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "url"
+      },
+      {
+        "name": "valueAttributeRule",
+        "value": "fileId",
+        "desc": "图片银行图片ID"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "scImages_3",
+    "name": "Product images",
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "url"
+      },
+      {
+        "name": "valueAttributeRule",
+        "value": "fileId",
+        "desc": "图片银行图片ID"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "scImages_4",
+    "name": "Product images",
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "url"
+      },
+      {
+        "name": "valueAttributeRule",
+        "value": "fileId",
+        "desc": "图片银行图片ID"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "scImages_5",
+    "name": "Product images",
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "url"
+      },
+      {
+        "name": "valueAttributeRule",
+        "value": "fileId",
+        "desc": "图片银行图片ID"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "imageVideo",
+    "name": "Product Video",
+    "type": "singleCheck",
+    "rules": [
+      {
+        "name": "tipRule",
+        "value": "The main video will be displayed on the first slide of your image carousel.   Make sure your video length does not exceed 45 seconds and the file size does not exceed 100MB. "
+      },
+      {
+        "name": "tipRule",
+        "value": "The product detail video will be displayed on the top of your product description.   Make sure your video length does not exceed 10 minutes and the file size does not exceed 500MB. "
+      },
+      {
+        "name": "tipRule",
+        "value": "•To encourage suppliers to upload high quality videos and detail videos, the available storage for videos has been increased from 1GB to 3GB."
+      },
+      {
+        "name": "maxLengthRule",
+        "value": "104857600",
+        "exProperty": "include",
+        "unit": "byte"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "detailVideo",
+    "name": "Additional videos",
+    "type": "singleCheck",
+    "rules": [
+      {
+        "name": "maxLengthRule",
+        "value": "524288000",
+        "exProperty": "include",
+        "unit": "byte"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "productKeywords",
+    "name": "Product keywords ",
+    "type": "complex",
+    "rules": [
+      {
+        "name": "tipRule",
+        "value": "Please fill in keywords with correct format: 'modifier words + product name + application scenario', e.g., ‘Red 8GB mp3 for sports’."
+      },
+      {
+        "name": "minInputNumRule",
+        "value": "1",
+        "exProperty": "include"
+      },
+      {
+        "name": "maxInputNumRule",
+        "value": "1",
+        "exProperty": "include"
+      },
+      {
+        "name": "regexRule",
+        "value": "[^\\x04-\\x80≤≥‰±㎡℃℉°μΩé3²³㎡m³]+",
+        "exProperty": "not include"
+      },
+      {
+        "name": "regexRule",
+        "value": "\\w+(?:[\\-+.]\\w+)*@\\w+(?:[\\-.]\\w+)*\\.\\w+(?:[\\-.]\\w+)*",
+        "exProperty": "not include"
+      },
+      {
+        "name": "regexRule",
+        "value": "<[^>]+>",
+        "exProperty": "not include"
+      },
+      {
+        "name": "regexRule",
+        "value": "[;:,,]+",
+        "exProperty": "not include"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "productKeywords_0",
+    "name": "Product keywords ",
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      },
+      {
+        "name": "maxLengthRule",
+        "value": "384",
+        "exProperty": "include",
+        "unit": "byte"
+      },
+      {
+        "name": "tipRule",
+        "value": "Please fill in keywords with correct format: 'modifier words + product name + application scenario', e.g., ‘Red 8GB mp3 for sports’."
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "pkgMeasure",
+    "name": "Dimensions",
+    "type": "complex",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "length",
+    "name": null,
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "double"
+      },
+      {
+        "name": "requiredRule",
+        "value": "false"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "width",
+    "name": null,
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "double"
+      },
+      {
+        "name": "requiredRule",
+        "value": "false"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "height",
+    "name": null,
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "double"
+      },
+      {
+        "name": "requiredRule",
+        "value": "false"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "pkgWeight",
+    "name": "Volume and weight (including logistics packaging)",
+    "type": "input",
+    "rules": [
+      {
+        "name": "tipRule",
+        "value": "If the transaction information is set to sell by piece, fill in the volume and weight of each item (including logistics packaging). br/> If the transaction information is set to sell by batch, fill in the overall volume and weight of each batch of goods (including logistics packaging)<br/> Please accurately fill in the product weight and size information (including logistics packaging), fill in the inaccurate will lead to freight differences."
+      },
+      {
+        "name": "valueTypeRule",
+        "value": "double"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "ApiPostLevelAttrAdapter",
+    "name": "ApiPostLevelAttrAdapter",
+    "type": "multiInput",
+    "rules": [
+      {
+        "name": "valueAttributeRule",
+        "value": "propName"
+      },
+      {
+        "name": "valueAttributeRule",
+        "value": "valueId"
+      },
+      {
+        "name": "valueAttributeRule",
+        "value": "valueName"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "productCertificate",
+    "name": "Product certifications",
+    "type": "multiCheck",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "long"
+      },
+      {
+        "name": "tipRule",
+        "value": "Please refer to <options> for the account's certificate list. Use the selected certificate ID as the component value, and enter the number (certificate number), type (certificate source), and body (certificate verification agency) into the attributes. Example:<field id=\\\"productCertificate\\\" name=\\\"Product certifications\\\" type=\\\"multiCheck\\\"><values><value number=\\\"test111\\\" type=\\\"PRODUCT\\\" body=\\\"BSI\\\">30000739412</value></values></field>。"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "boxPackaging",
+    "name": "Box gauge",
+    "type": "multiCheck",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "long"
+      },
+      {
+        "name": "tipRule",
+        "value": "账号下的箱规列表请参考<options>，并将选择的箱子id用作组件的value，并将totalWeight（装满后总重）、maxCount（最大装箱数量）填写到属性中。示例：<field id=\\\"boxPackaging\\\" name=\\\"Box gauge\\\" type=\\\"multiCheck\\\"><values><value maxCount=\\\"2\\\" totalWeight=\\\"5.79\\\">22275361</value></values></field>。"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "ladderPeriod",
+    "name": "Shipping",
+    "type": "complex",
+    "rules": [
+      {
+        "name": "minInputNumRule",
+        "value": "1",
+        "exProperty": "include"
+      },
+      {
+        "name": "maxInputNumRule",
+        "value": "3",
+        "exProperty": "include"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "ladderPeriod_0",
+    "name": null,
+    "type": "complex",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "quantity",
+    "name": "Quantity",
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "long"
+      },
+      {
+        "name": "requiredRule",
+        "value": "false"
+      },
+      {
+        "name": "maxInputNumRule",
+        "value": "999999999",
+        "exProperty": "include"
+      },
+      {
+        "name": "minInputNumRule",
+        "value": "1",
+        "exProperty": "include"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "day",
+    "name": "Estimated lead time",
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "long"
+      },
+      {
+        "name": "requiredRule",
+        "value": "false"
+      },
+      {
+        "name": "maxInputNumRule",
+        "value": "999999999",
+        "exProperty": "include"
+      },
+      {
+        "name": "minInputNumRule",
+        "value": "1",
+        "exProperty": "include"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "ladderPeriod_1",
+    "name": null,
+    "type": "complex",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "quantity",
+    "name": "Quantity",
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "long"
+      },
+      {
+        "name": "requiredRule",
+        "value": "false"
+      },
+      {
+        "name": "maxInputNumRule",
+        "value": "999999999",
+        "exProperty": "include"
+      },
+      {
+        "name": "minInputNumRule",
+        "value": "1",
+        "exProperty": "include"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "day",
+    "name": "Estimated lead time",
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "long"
+      },
+      {
+        "name": "requiredRule",
+        "value": "false"
+      },
+      {
+        "name": "maxInputNumRule",
+        "value": "999999999",
+        "exProperty": "include"
+      },
+      {
+        "name": "minInputNumRule",
+        "value": "1",
+        "exProperty": "include"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "ladderPeriod_2",
+    "name": null,
+    "type": "complex",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "quantity",
+    "name": "Quantity",
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "long"
+      },
+      {
+        "name": "requiredRule",
+        "value": "false"
+      },
+      {
+        "name": "maxInputNumRule",
+        "value": "999999999",
+        "exProperty": "include"
+      },
+      {
+        "name": "minInputNumRule",
+        "value": "1",
+        "exProperty": "include"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "day",
+    "name": "Estimated lead time",
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "long"
+      },
+      {
+        "name": "requiredRule",
+        "value": "false"
+      },
+      {
+        "name": "maxInputNumRule",
+        "value": "999999999",
+        "exProperty": "include"
+      },
+      {
+        "name": "minInputNumRule",
+        "value": "1",
+        "exProperty": "include"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "priceUnit",
+    "name": "Unit",
+    "type": "singleCheck",
+    "rules": [
+      {
+        "name": "requiredRule",
+        "value": "true"
+      },
+      {
+        "name": "valueTypeRule",
+        "value": "long"
+      }
+    ],
+    "options": [
+      {
+        "displayName": "Bag/Bags",
+        "value": "1"
+      },
+      {
+        "displayName": "Kilometer/Kilometers",
+        "value": "10"
+      },
+      {
+        "displayName": "Ton/Tons",
+        "value": "11"
+      },
+      {
+        "displayName": "Square Meter/Square Meters",
+        "value": "12"
+      },
+      {
+        "displayName": "Cubic Meter/Cubic Meters",
+        "value": "13"
+      },
+      {
+        "displayName": "Dozen/Dozens",
+        "value": "14"
+      },
+      {
+        "displayName": "Gallon/Gallons",
+        "value": "15"
+      },
+      {
+        "displayName": "Kilogram/Kilograms",
+        "value": "16"
+      },
+      {
+        "displayName": "Gram/Grams",
+        "value": "17"
+      },
+      {
+        "displayName": "Bushel/Bushels",
+        "value": "18"
+      },
+      {
+        "displayName": "Barrel/Barrels",
+        "value": "19"
+      },
+      {
+        "displayName": "Short Ton/Short Tons",
+        "value": "2"
+      },
+      {
+        "displayName": "Set/Sets",
+        "value": "20"
+      },
+      {
+        "displayName": "Pack/Packs",
+        "value": "21"
+      },
+      {
+        "displayName": "Liter/Liters",
+        "value": "22"
+      },
+      {
+        "displayName": "Yard/Yards",
+        "value": "23"
+      },
+      {
+        "displayName": "Milligram/Milligrams",
+        "value": "24"
+      },
+      {
+        "displayName": "Unit/Units",
+        "value": "25"
+      },
+      {
+        "displayName": "Acre/Acres",
+        "value": "26"
+      },
+      {
+        "displayName": "Ampere/Amperes",
+        "value": "27"
+      },
+      {
+        "displayName": "Box/Boxes",
+        "value": "28"
+      },
+      {
+        "displayName": "Carton/Cartons",
+        "value": "29"
+      },
+      {
+        "displayName": "Pound/Pounds",
+        "value": "3"
+      },
+      {
+        "displayName": "Case/Cases",
+        "value": "30"
+      },
+      {
+        "displayName": "Centimeter/Centimeters",
+        "value": "31"
+      },
+      {
+        "displayName": "Chain/Chains",
+        "value": "32"
+      },
+      {
+        "displayName": "Cubic Centimeter/Cubic Centimeters",
+        "value": "33"
+      },
+      {
+        "displayName": "Cubic Foot/Cubic Feet",
+        "value": "34"
+      },
+      {
+        "displayName": "Cubic Inch/Cubic Inches",
+        "value": "35"
+      },
+      {
+        "displayName": "Cubic Yard/Cubic Yards",
+        "value": "36"
+      },
+      {
+        "displayName": "Degrees Celsius",
+        "value": "37"
+      },
+      {
+        "displayName": "Degrees Fahrenheit",
+        "value": "38"
+      },
+      {
+        "displayName": "Dram/Drams",
+        "value": "39"
+      },
+      {
+        "displayName": "Piece/Pieces",
+        "value": "4"
+      },
+      {
+        "displayName": "Fluid Ounce/Fluid Ounces",
+        "value": "40"
+      },
+      {
+        "displayName": "Foot/Feet",
+        "value": "41"
+      },
+      {
+        "displayName": "Furlong/Furlongs",
+        "value": "42"
+      },
+      {
+        "displayName": "Gill/Gills",
+        "value": "43"
+      },
+      {
+        "displayName": "Grain/Grains",
+        "value": "44"
+      },
+      {
+        "displayName": "Hectare/Hectares",
+        "value": "45"
+      },
+      {
+        "displayName": "Hertz",
+        "value": "46"
+      },
+      {
+        "displayName": "Inch/Inches",
+        "value": "47"
+      },
+      {
+        "displayName": "Kiloampere/Kiloamperes",
+        "value": "48"
+      },
+      {
+        "displayName": "Kilohertz",
+        "value": "49"
+      },
+      {
+        "displayName": "Pair/Pairs",
+        "value": "5"
+      },
+      {
+        "displayName": "Kiloohm/Kiloohms",
+        "value": "50"
+      },
+      {
+        "displayName": "Kilovolt/Kilovolts",
+        "value": "51"
+      },
+      {
+        "displayName": "Kilowatt/Kilowatts",
+        "value": "52"
+      },
+      {
+        "displayName": "Megahertz",
+        "value": "53"
+      },
+      {
+        "displayName": "Mile/Miles",
+        "value": "54"
+      },
+      {
+        "displayName": "Milliampere/Milliamperes",
+        "value": "55"
+      },
+      {
+        "displayName": "Millihertz",
+        "value": "56"
+      },
+      {
+        "displayName": "Milliliter/Milliliters",
+        "value": "57"
+      },
+      {
+        "displayName": "Millimeter/Millimeters",
+        "value": "58"
+      },
+      {
+        "displayName": "Milliohm/Milliohms",
+        "value": "59"
+      },
+      {
+        "displayName": "Ounce/Ounces",
+        "value": "6"
+      },
+      {
+        "displayName": "Millivolt/Millivolts",
+        "value": "60"
+      },
+      {
+        "displayName": "Milliwatt/Milliwatts",
+        "value": "61"
+      },
+      {
+        "displayName": "Nautical Mile/Nautical Miles",
+        "value": "62"
+      },
+      {
+        "displayName": "Ohm/Ohms",
+        "value": "63"
+      },
+      {
+        "displayName": "Parcel/Parcels",
+        "value": "64"
+      },
+      {
+        "displayName": "Perch/Perches",
+        "value": "65"
+      },
+      {
+        "displayName": "Pint/Pints",
+        "value": "66"
+      },
+      {
+        "displayName": "Pole/Poles",
+        "value": "67"
+      },
+      {
+        "displayName": "Quart/Quarts",
+        "value": "68"
+      },
+      {
+        "displayName": "Quarter/Quarters",
+        "value": "69"
+      },
+      {
+        "displayName": "Metric Ton/Metric Tons",
+        "value": "7"
+      },
+      {
+        "displayName": "Rod/Rods",
+        "value": "70"
+      },
+      {
+        "displayName": "Roll/Rolls",
+        "value": "71"
+      },
+      {
+        "displayName": "Square Centimeter/Square Centimeters",
+        "value": "72"
+      },
+      {
+        "displayName": "Square Foot/Square Feet",
+        "value": "73"
+      },
+      {
+        "displayName": "Square Inch/Square Inches",
+        "value": "74"
+      },
+      {
+        "displayName": "Square Mile/Square Miles",
+        "value": "75"
+      },
+      {
+        "displayName": "Square Yard/Square Yards",
+        "value": "76"
+      },
+      {
+        "displayName": "Stone/Stones",
+        "value": "77"
+      },
+      {
+        "displayName": "Tonne/Tonnes",
+        "value": "78"
+      },
+      {
+        "displayName": "Tray/Trays",
+        "value": "79"
+      },
+      {
+        "displayName": "Meter/Meters",
+        "value": "8"
+      },
+      {
+        "displayName": "Volt/Volts",
+        "value": "80"
+      },
+      {
+        "displayName": "Watt/Watts",
+        "value": "81"
+      },
+      {
+        "displayName": "Wp",
+        "value": "82"
+      },
+      {
+        "displayName": "Twenty-Foot Container",
+        "value": "83"
+      },
+      {
+        "displayName": "Strand/Strands",
+        "value": "84"
+      },
+      {
+        "displayName": "Plant/Plants",
+        "value": "85"
+      },
+      {
+        "displayName": "Pallet/Pallets",
+        "value": "86"
+      },
+      {
+        "displayName": "Gross",
+        "value": "87"
+      },
+      {
+        "displayName": "Forty-Foot Container ",
+        "value": "88"
+      },
+      {
+        "displayName": "Sheet/Sheets",
+        "value": "89"
+      },
+      {
+        "displayName": "Long Ton/Long Tons",
+        "value": "9"
+      },
+      {
+        "displayName": "Carat/Carats",
+        "value": "90"
+      },
+      {
+        "displayName": "Blade/Blades",
+        "value": "91"
+      },
+      {
+        "displayName": "Combo/Combos",
+        "value": "92"
+      }
+    ]
+  },
+  {
+    "id": "platformLogisticsServices",
+    "name": "Semi-managed ",
+    "type": "multiCheck",
+    "rules": [],
+    "options": [
+      {
+        "displayName": "Semi-Managed Services",
+        "value": "1"
+      }
+    ]
+  },
+  {
+    "id": "shippingTemplate",
+    "name": "Logistics supply mode",
+    "type": "complex",
+    "rules": [
+      {
+        "name": "tipRule",
+        "value": "Recommend using the smart freight template, you can also add/manage your own logistics. If the intelligent freight template does not appear, there are two main reasons. First, the delivery time, length, width and height, weight and logistics attributes are not completely filled in. Second, according to the currently filled weight-volume logistics attribute box rules, Ali Logistics has no capacity line that can be carried, so no intelligent freight template has been recommend. At this time, merchants can create or select other freight templates by themselves."
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "templateType",
+    "name": null,
+    "type": "singleCheck",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      },
+      {
+        "name": "requiredRule",
+        "value": "true"
+      }
+    ],
+    "options": [
+      {
+        "displayName": "MERCHANT_OWN_TEMPLATE",
+        "value": "aliLogistics"
+      },
+      {
+        "displayName": "FREIGHT_NEGOTIATION",
+        "value": "freightNegotiation"
+      }
+    ]
+  },
+  {
+    "id": "shippingTemplateId",
+    "name": null,
+    "type": "singleCheck",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "integer"
+      },
+      {
+        "name": "requiredRule",
+        "value": "false"
+      }
+    ],
+    "options": [
+      {
+        "displayName": "智能运费模板",
+        "value": "10000014087002"
+      },
+      {
+        "displayName": "买卖双方协商物流",
+        "value": "10000014087001"
+      }
+    ]
+  },
+  {
+    "id": "newCustomizedServices",
+    "name": "Deep customization",
+    "type": "complex",
+    "rules": [
+      {
+        "name": "tipRule",
+        "value": "Customization capabilities have been upgraded. We recommend completing all customization details."
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "newCustomizedServices_0",
+    "name": null,
+    "type": "complex",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "custom_type",
+    "name": null,
+    "type": "singleCheck",
+    "rules": [],
+    "options": [
+      {
+        "displayName": "Midsole Material",
+        "value": "Other"
+      },
+      {
+        "displayName": "Midsole Material",
+        "value": "Genuine Leather"
+      },
+      {
+        "displayName": "Midsole Material",
+        "value": "Mesh"
+      },
+      {
+        "displayName": "Midsole Material",
+        "value": "Textile"
+      },
+      {
+        "displayName": "Midsole Material",
+        "value": "Latex"
+      },
+      {
+        "displayName": "Midsole Material",
+        "value": "md"
+      },
+      {
+        "displayName": "Midsole Material",
+        "value": "Popcorn"
+      },
+      {
+        "displayName": "Midsole Material",
+        "value": "PVC"
+      },
+      {
+        "displayName": "Midsole Material",
+        "value": "PU"
+      },
+      {
+        "displayName": "Midsole Material",
+        "value": "Rubber"
+      },
+      {
+        "displayName": "Midsole Material",
+        "value": "EVA"
+      },
+      {
+        "displayName": "Midsole Material",
+        "value": "Gel"
+      },
+      {
+        "displayName": "Midsole Material",
+        "value": "Wood"
+      },
+      {
+        "displayName": "Midsole Material",
+        "value": "Tpr"
+      },
+      {
+        "displayName": "Midsole Material",
+        "value": "Straw"
+      }
+    ]
+  },
+  {
+    "id": "custom_values",
+    "name": null,
+    "type": "multiComplex",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "increase_price",
+    "name": null,
+    "type": "input",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "moq",
+    "name": null,
+    "type": "input",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "custom_value",
+    "name": null,
+    "type": "singleCheck",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "image",
+    "name": null,
+    "type": "input",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "newCustomizedServices_1",
+    "name": null,
+    "type": "complex",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "custom_type",
+    "name": null,
+    "type": "singleCheck",
+    "rules": [],
+    "options": [
+      {
+        "displayName": "Color",
+        "value": "Pink"
+      },
+      {
+        "displayName": "Color",
+        "value": "Gold"
+      },
+      {
+        "displayName": "Color",
+        "value": "Silver"
+      },
+      {
+        "displayName": "Color",
+        "value": "Orange"
+      },
+      {
+        "displayName": "Color",
+        "value": "Sliver"
+      },
+      {
+        "displayName": "Color",
+        "value": "Purple"
+      },
+      {
+        "displayName": "Color",
+        "value": "Ivory"
+      },
+      {
+        "displayName": "Color",
+        "value": "Plum"
+      },
+      {
+        "displayName": "Color",
+        "value": "Blue"
+      },
+      {
+        "displayName": "Color",
+        "value": "Black"
+      },
+      {
+        "displayName": "Color",
+        "value": "White"
+      },
+      {
+        "displayName": "Color",
+        "value": "Red"
+      },
+      {
+        "displayName": "Color",
+        "value": "Yellow"
+      },
+      {
+        "displayName": "Color",
+        "value": "Brown"
+      },
+      {
+        "displayName": "Color",
+        "value": "Grey"
+      },
+      {
+        "displayName": "Color",
+        "value": "Beige"
+      },
+      {
+        "displayName": "Color",
+        "value": "Green"
+      }
+    ]
+  },
+  {
+    "id": "custom_values",
+    "name": null,
+    "type": "multiComplex",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "increase_price",
+    "name": null,
+    "type": "input",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "moq",
+    "name": null,
+    "type": "input",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "custom_value",
+    "name": null,
+    "type": "singleCheck",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "image",
+    "name": null,
+    "type": "input",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "newCustomizedServices_2",
+    "name": null,
+    "type": "complex",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "custom_type",
+    "name": null,
+    "type": "singleCheck",
+    "rules": [],
+    "options": [
+      {
+        "displayName": "Outsole Material",
+        "value": "Other"
+      },
+      {
+        "displayName": "Outsole Material",
+        "value": "PHYLON"
+      },
+      {
+        "displayName": "Outsole Material",
+        "value": "Leather"
+      },
+      {
+        "displayName": "Outsole Material",
+        "value": "Cotton Fabric"
+      },
+      {
+        "displayName": "Outsole Material",
+        "value": "Cow Muscle"
+      },
+      {
+        "displayName": "Outsole Material",
+        "value": "PVC"
+      },
+      {
+        "displayName": "Outsole Material",
+        "value": "Genuine Leather"
+      },
+      {
+        "displayName": "Outsole Material",
+        "value": "PU"
+      },
+      {
+        "displayName": "Outsole Material",
+        "value": "Rubber"
+      },
+      {
+        "displayName": "Outsole Material",
+        "value": "EVA"
+      },
+      {
+        "displayName": "Outsole Material",
+        "value": "Cork"
+      },
+      {
+        "displayName": "Outsole Material",
+        "value": "Plastic"
+      },
+      {
+        "displayName": "Outsole Material",
+        "value": "Wood"
+      },
+      {
+        "displayName": "Outsole Material",
+        "value": "vibram"
+      },
+      {
+        "displayName": "Outsole Material",
+        "value": "Tpr"
+      },
+      {
+        "displayName": "Outsole Material",
+        "value": "TPU"
+      },
+      {
+        "displayName": "Outsole Material",
+        "value": "Bonded Leather"
+      },
+      {
+        "displayName": "Outsole Material",
+        "value": "Straw"
+      },
+      {
+        "displayName": "Outsole Material",
+        "value": "Oxford"
+      }
+    ]
+  },
+  {
+    "id": "custom_values",
+    "name": null,
+    "type": "multiComplex",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "increase_price",
+    "name": null,
+    "type": "input",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "moq",
+    "name": null,
+    "type": "input",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "custom_value",
+    "name": null,
+    "type": "singleCheck",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "image",
+    "name": null,
+    "type": "input",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "newCustomizedServices_3",
+    "name": null,
+    "type": "complex",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "custom_type",
+    "name": null,
+    "type": "singleCheck",
+    "rules": [],
+    "options": [
+      {
+        "displayName": "Lining Material",
+        "value": "Other"
+      },
+      {
+        "displayName": "Lining Material",
+        "value": "PVC"
+      },
+      {
+        "displayName": "Lining Material",
+        "value": "Genuine Leather"
+      },
+      {
+        "displayName": "Lining Material",
+        "value": "PU"
+      },
+      {
+        "displayName": "Lining Material",
+        "value": "Plush"
+      },
+      {
+        "displayName": "Lining Material",
+        "value": "Mesh"
+      },
+      {
+        "displayName": "Lining Material",
+        "value": "Cotton Fabric"
+      }
+    ]
+  },
+  {
+    "id": "custom_values",
+    "name": null,
+    "type": "multiComplex",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "increase_price",
+    "name": null,
+    "type": "input",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "moq",
+    "name": null,
+    "type": "input",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "custom_value",
+    "name": null,
+    "type": "singleCheck",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "image",
+    "name": null,
+    "type": "input",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "newCustomizedServices_4",
+    "name": null,
+    "type": "complex",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "custom_type",
+    "name": null,
+    "type": "singleCheck",
+    "rules": [],
+    "options": [
+      {
+        "displayName": "Upper Material",
+        "value": "Other"
+      },
+      {
+        "displayName": "Upper Material",
+        "value": "PVC"
+      },
+      {
+        "displayName": "Upper Material",
+        "value": "Stretch Fabric"
+      },
+      {
+        "displayName": "Upper Material",
+        "value": "Genuine Leather"
+      },
+      {
+        "displayName": "Upper Material",
+        "value": "PU"
+      },
+      {
+        "displayName": "Upper Material",
+        "value": "Rubber"
+      },
+      {
+        "displayName": "Upper Material",
+        "value": "EVA"
+      },
+      {
+        "displayName": "Upper Material",
+        "value": "Spandex/Elastane"
+      },
+      {
+        "displayName": "Upper Material",
+        "value": "Canvas"
+      },
+      {
+        "displayName": "Upper Material",
+        "value": "Denim"
+      },
+      {
+        "displayName": "Upper Material",
+        "value": "Plastic"
+      },
+      {
+        "displayName": "Upper Material",
+        "value": "Plush"
+      },
+      {
+        "displayName": "Upper Material",
+        "value": "Down"
+      },
+      {
+        "displayName": "Upper Material",
+        "value": "Nylon"
+      },
+      {
+        "displayName": "Upper Material",
+        "value": "Mesh"
+      },
+      {
+        "displayName": "Upper Material",
+        "value": "Velvet"
+      },
+      {
+        "displayName": "Upper Material",
+        "value": "Hemp"
+      },
+      {
+        "displayName": "Upper Material",
+        "value": "Wool"
+      },
+      {
+        "displayName": "Upper Material",
+        "value": "Polyester"
+      },
+      {
+        "displayName": "Upper Material",
+        "value": "Microfiber Fabrics"
+      },
+      {
+        "displayName": "Upper Material",
+        "value": "Fur"
+      },
+      {
+        "displayName": "Upper Material",
+        "value": "Cane"
+      },
+      {
+        "displayName": "Upper Material",
+        "value": "Synthetic"
+      },
+      {
+        "displayName": "Upper Material",
+        "value": "Flannel"
+      },
+      {
+        "displayName": "Upper Material",
+        "value": "Straw"
+      },
+      {
+        "displayName": "Upper Material",
+        "value": "Patent Leather"
+      },
+      {
+        "displayName": "Upper Material",
+        "value": "Jute"
+      },
+      {
+        "displayName": "Upper Material",
+        "value": "Flock"
+      },
+      {
+        "displayName": "Upper Material",
+        "value": "Sheepskin"
+      },
+      {
+        "displayName": "Upper Material",
+        "value": "faux suede"
+      },
+      {
+        "displayName": "Upper Material",
+        "value": "PP"
+      },
+      {
+        "displayName": "Upper Material",
+        "value": "Horsehair"
+      },
+      {
+        "displayName": "Upper Material",
+        "value": "Viscose"
+      },
+      {
+        "displayName": "Upper Material",
+        "value": "Silk"
+      },
+      {
+        "displayName": "Upper Material",
+        "value": "Split Leather"
+      },
+      {
+        "displayName": "Upper Material",
+        "value": "Cotton Fabric"
+      },
+      {
+        "displayName": "Upper Material",
+        "value": "Jacquard Fabric"
+      },
+      {
+        "displayName": "Upper Material",
+        "value": "PC"
+      },
+      {
+        "displayName": "Upper Material",
+        "value": "Microfiber Leather"
+      },
+      {
+        "displayName": "Upper Material",
+        "value": "Sequined Cloth"
+      },
+      {
+        "displayName": "Upper Material",
+        "value": "None-Woven"
+      },
+      {
+        "displayName": "Upper Material",
+        "value": "Satin"
+      },
+      {
+        "displayName": "Upper Material",
+        "value": "Neoprene"
+      },
+      {
+        "displayName": "Upper Material",
+        "value": "Lace"
+      },
+      {
+        "displayName": "Upper Material",
+        "value": "Corduroy"
+      }
+    ]
+  },
+  {
+    "id": "custom_values",
+    "name": null,
+    "type": "multiComplex",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "increase_price",
+    "name": null,
+    "type": "input",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "moq",
+    "name": null,
+    "type": "input",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "custom_value",
+    "name": null,
+    "type": "singleCheck",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "image",
+    "name": null,
+    "type": "input",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "lightCustomizedServices",
+    "name": "Light Customization Service",
+    "type": "complex",
+    "rules": [
+      {
+        "name": "tipRule",
+        "value": "Customization capabilities have been upgraded. We recommend completing all customization details."
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "lightCustomizedServices_0",
+    "name": null,
+    "type": "complex",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "custom_type",
+    "name": null,
+    "type": "singleCheck",
+    "rules": [],
+    "options": [
+      {
+        "displayName": "Packaging",
+        "value": "Color Box"
+      },
+      {
+        "displayName": "Packaging",
+        "value": "Paper Bag"
+      },
+      {
+        "displayName": "Packaging",
+        "value": "Style 2"
+      },
+      {
+        "displayName": "Packaging",
+        "value": "Style 3"
+      },
+      {
+        "displayName": "Packaging",
+        "value": "Style 1"
+      },
+      {
+        "displayName": "Packaging",
+        "value": "Gift Box"
+      },
+      {
+        "displayName": "Packaging",
+        "value": "White Box"
+      },
+      {
+        "displayName": "Packaging",
+        "value": "Bubble Bag"
+      },
+      {
+        "displayName": "Packaging",
+        "value": "Plastic Box"
+      },
+      {
+        "displayName": "Packaging",
+        "value": "Kraft Paper Box"
+      },
+      {
+        "displayName": "Packaging",
+        "value": "PP Bag"
+      },
+      {
+        "displayName": "Packaging",
+        "value": "Cylinder Box"
+      },
+      {
+        "displayName": "Packaging",
+        "value": "Grid Box"
+      },
+      {
+        "displayName": "Packaging",
+        "value": "Packaging Bags"
+      },
+      {
+        "displayName": "Packaging",
+        "value": "Seal-Tape Bag"
+      },
+      {
+        "displayName": "Packaging",
+        "value": "Corrugated Paper Box"
+      },
+      {
+        "displayName": "Packaging",
+        "value": "Ziplock Bag"
+      }
+    ]
+  },
+  {
+    "id": "custom_values",
+    "name": null,
+    "type": "multiComplex",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "increase_price",
+    "name": null,
+    "type": "input",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "moq",
+    "name": null,
+    "type": "input",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "custom_value",
+    "name": null,
+    "type": "singleCheck",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "image",
+    "name": null,
+    "type": "input",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "lightCustomizedServices_1",
+    "name": null,
+    "type": "complex",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "custom_type",
+    "name": null,
+    "type": "singleCheck",
+    "rules": [],
+    "options": [
+      {
+        "displayName": "Logo/graphic design",
+        "value": "Laser Carving"
+      },
+      {
+        "displayName": "Logo/graphic design",
+        "value": "Hot Stamping"
+      },
+      {
+        "displayName": "Logo/graphic design",
+        "value": "Inkjet Printing"
+      },
+      {
+        "displayName": "Logo/graphic design",
+        "value": "Laser Printing"
+      },
+      {
+        "displayName": "Logo/graphic design",
+        "value": "Embroidery"
+      },
+      {
+        "displayName": "Logo/graphic design",
+        "value": "Embossing"
+      },
+      {
+        "displayName": "Logo/graphic design",
+        "value": "Heat Transfer Printing"
+      },
+      {
+        "displayName": "Logo/graphic design",
+        "value": "3D Printing"
+      },
+      {
+        "displayName": "Logo/graphic design",
+        "value": "Mobile Printing"
+      },
+      {
+        "displayName": "Logo/graphic design",
+        "value": "Sticker"
+      },
+      {
+        "displayName": "Logo/graphic design",
+        "value": "Screen Printing"
+      },
+      {
+        "displayName": "Logo/graphic design",
+        "value": "Digital Printing"
+      },
+      {
+        "displayName": "Logo/graphic design",
+        "value": "UV Printing"
+      },
+      {
+        "displayName": "Logo/graphic design",
+        "value": "Debossing"
+      },
+      {
+        "displayName": "Logo/graphic design",
+        "value": "Hot Foil Stamping"
+      },
+      {
+        "displayName": "Logo/graphic design",
+        "value": "Rediing"
+      },
+      {
+        "displayName": "Logo/graphic design",
+        "value": "Gold Stamping"
+      }
+    ]
+  },
+  {
+    "id": "custom_values",
+    "name": null,
+    "type": "multiComplex",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "increase_price",
+    "name": null,
+    "type": "input",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "moq",
+    "name": null,
+    "type": "input",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "custom_value",
+    "name": null,
+    "type": "singleCheck",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "image",
+    "name": null,
+    "type": "input",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "lightCustomizedServices_2",
+    "name": null,
+    "type": "complex",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "custom_type",
+    "name": null,
+    "type": "singleCheck",
+    "rules": [],
+    "options": [
+      {
+        "displayName": "Hang tag",
+        "value": "Plastic"
+      },
+      {
+        "displayName": "Hang tag",
+        "value": "Metal"
+      },
+      {
+        "displayName": "Hang tag",
+        "value": "Style 2"
+      },
+      {
+        "displayName": "Hang tag",
+        "value": "Style 3"
+      },
+      {
+        "displayName": "Hang tag",
+        "value": "Style 1"
+      },
+      {
+        "displayName": "Hang tag",
+        "value": "Cardboard"
+      },
+      {
+        "displayName": "Hang tag",
+        "value": "Cardstock Tags"
+      },
+      {
+        "displayName": "Hang tag",
+        "value": "PVC/PP Tags"
+      },
+      {
+        "displayName": "Hang tag",
+        "value": "Fabric Tags"
+      },
+      {
+        "displayName": "Hang tag",
+        "value": "Textured Art Paper Tags"
+      }
+    ]
+  },
+  {
+    "id": "custom_values",
+    "name": null,
+    "type": "multiComplex",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "increase_price",
+    "name": null,
+    "type": "input",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "moq",
+    "name": null,
+    "type": "input",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "custom_value",
+    "name": null,
+    "type": "singleCheck",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "image",
+    "name": null,
+    "type": "input",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "productGroup",
+    "name": "Product group",
+    "type": "complex",
+    "rules": [
+      {
+        "name": "tipRule",
+        "value": "产品组是您在网上公开展示产品的一个集合，您可以根据需要设置多个产品组，将同类产品放在一个产品组里面，方便买家查看。"
+      },
+      {
+        "name": "tipRule",
+        "value": "<br>每个产品一次只能在一个产品组中。<a target=\"_blank\" href=\"https://service.alibaba.com/hc/supplier/detail/20143879.htm\">了解更多</a>"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "first_group_id",
+    "name": null,
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "long"
+      },
+      {
+        "name": "requiredRule",
+        "value": "false"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "second_group_id",
+    "name": null,
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "long"
+      },
+      {
+        "name": "requiredRule",
+        "value": "false"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "third_group_id",
+    "name": null,
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "long"
+      },
+      {
+        "name": "requiredRule",
+        "value": "false"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "ladderPrice",
+    "name": "Quantity price",
+    "type": "complex",
+    "rules": [
+      {
+        "name": "minInputNumRule",
+        "value": "1",
+        "exProperty": "include"
+      },
+      {
+        "name": "maxInputNumRule",
+        "value": "4",
+        "exProperty": "include"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "ladderPrice_0",
+    "name": null,
+    "type": "complex",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "quantity",
+    "name": "MOQ",
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "long"
+      },
+      {
+        "name": "requiredRule",
+        "value": "true"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "price",
+    "name": "Single Piece price",
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "double"
+      },
+      {
+        "name": "requiredRule",
+        "value": "true"
+      },
+      {
+        "name": "minDecimalDigitsRule",
+        "value": "0.01",
+        "exProperty": "include"
+      },
+      {
+        "name": "maxDecimalDigitsRule",
+        "value": "9999999.99",
+        "exProperty": "include"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "ladderPrice_1",
+    "name": null,
+    "type": "complex",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "quantity",
+    "name": "MOQ",
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "long"
+      },
+      {
+        "name": "requiredRule",
+        "value": "true"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "price",
+    "name": "Single Piece price",
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "double"
+      },
+      {
+        "name": "requiredRule",
+        "value": "true"
+      },
+      {
+        "name": "minDecimalDigitsRule",
+        "value": "0.01",
+        "exProperty": "include"
+      },
+      {
+        "name": "maxDecimalDigitsRule",
+        "value": "9999999.99",
+        "exProperty": "include"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "ladderPrice_2",
+    "name": null,
+    "type": "complex",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "quantity",
+    "name": "MOQ",
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "long"
+      },
+      {
+        "name": "requiredRule",
+        "value": "true"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "price",
+    "name": "Single Piece price",
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "double"
+      },
+      {
+        "name": "requiredRule",
+        "value": "true"
+      },
+      {
+        "name": "minDecimalDigitsRule",
+        "value": "0.01",
+        "exProperty": "include"
+      },
+      {
+        "name": "maxDecimalDigitsRule",
+        "value": "9999999.99",
+        "exProperty": "include"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "ladderPrice_3",
+    "name": null,
+    "type": "complex",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "quantity",
+    "name": "MOQ",
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "long"
+      },
+      {
+        "name": "requiredRule",
+        "value": "true"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "price",
+    "name": "Single Piece price",
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "double"
+      },
+      {
+        "name": "requiredRule",
+        "value": "true"
+      },
+      {
+        "name": "minDecimalDigitsRule",
+        "value": "0.01",
+        "exProperty": "include"
+      },
+      {
+        "name": "maxDecimalDigitsRule",
+        "value": "9999999.99",
+        "exProperty": "include"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "customMoreProperty",
+    "name": "More details",
+    "type": "complex",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "customMoreProperty_0",
+    "name": null,
+    "type": "complex",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "propName",
+    "name": null,
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      },
+      {
+        "name": "requiredRule",
+        "value": "true"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "valueName",
+    "name": null,
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      },
+      {
+        "name": "requiredRule",
+        "value": "true"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "customMoreProperty_1",
+    "name": null,
+    "type": "complex",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "propName",
+    "name": null,
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      },
+      {
+        "name": "requiredRule",
+        "value": "true"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "valueName",
+    "name": null,
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      },
+      {
+        "name": "requiredRule",
+        "value": "true"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "customMoreProperty_2",
+    "name": null,
+    "type": "complex",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "propName",
+    "name": null,
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      },
+      {
+        "name": "requiredRule",
+        "value": "true"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "valueName",
+    "name": null,
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      },
+      {
+        "name": "requiredRule",
+        "value": "true"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "customMoreProperty_3",
+    "name": null,
+    "type": "complex",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "propName",
+    "name": null,
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      },
+      {
+        "name": "requiredRule",
+        "value": "true"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "valueName",
+    "name": null,
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      },
+      {
+        "name": "requiredRule",
+        "value": "true"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "customMoreProperty_4",
+    "name": null,
+    "type": "complex",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "propName",
+    "name": null,
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      },
+      {
+        "name": "requiredRule",
+        "value": "true"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "valueName",
+    "name": null,
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      },
+      {
+        "name": "requiredRule",
+        "value": "true"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "customMoreProperty_5",
+    "name": null,
+    "type": "complex",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "propName",
+    "name": null,
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      },
+      {
+        "name": "requiredRule",
+        "value": "true"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "valueName",
+    "name": null,
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      },
+      {
+        "name": "requiredRule",
+        "value": "true"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "customMoreProperty_6",
+    "name": null,
+    "type": "complex",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "propName",
+    "name": null,
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      },
+      {
+        "name": "requiredRule",
+        "value": "true"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "valueName",
+    "name": null,
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      },
+      {
+        "name": "requiredRule",
+        "value": "true"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "customMoreProperty_7",
+    "name": null,
+    "type": "complex",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "propName",
+    "name": null,
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      },
+      {
+        "name": "requiredRule",
+        "value": "true"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "valueName",
+    "name": null,
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      },
+      {
+        "name": "requiredRule",
+        "value": "true"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "customMoreProperty_8",
+    "name": null,
+    "type": "complex",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "propName",
+    "name": null,
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      },
+      {
+        "name": "requiredRule",
+        "value": "true"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "valueName",
+    "name": null,
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      },
+      {
+        "name": "requiredRule",
+        "value": "true"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "customMoreProperty_9",
+    "name": null,
+    "type": "complex",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "propName",
+    "name": null,
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      },
+      {
+        "name": "requiredRule",
+        "value": "true"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "valueName",
+    "name": null,
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      },
+      {
+        "name": "requiredRule",
+        "value": "true"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "fob",
+    "name": "Single Piece price",
+    "type": "complex",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "range_max",
+    "name": null,
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "double"
+      },
+      {
+        "name": "requiredRule",
+        "value": "true"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "range_min",
+    "name": null,
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "double"
+      },
+      {
+        "name": "requiredRule",
+        "value": "true"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "unit_type",
+    "name": null,
+    "type": "singleCheck",
+    "rules": [
+      {
+        "name": "valueAttributeRule",
+        "value": "text"
+      },
+      {
+        "name": "requiredRule",
+        "value": "true"
+      }
+    ],
+    "options": [
+      {
+        "displayName": "USD",
+        "value": "1"
+      },
+      {
+        "displayName": "NTD",
+        "value": "11"
+      },
+      {
+        "displayName": "HKD",
+        "value": "12"
+      },
+      {
+        "displayName": "NZD",
+        "value": "13"
+      },
+      {
+        "displayName": "SGD",
+        "value": "14"
+      },
+      {
+        "displayName": "RMB",
+        "value": "2"
+      },
+      {
+        "displayName": "EUR",
+        "value": "3"
+      },
+      {
+        "displayName": "Other",
+        "value": "4"
+      },
+      {
+        "displayName": "GBP",
+        "value": "5"
+      },
+      {
+        "displayName": "JPY",
+        "value": "6"
+      },
+      {
+        "displayName": "AUD",
+        "value": "7"
+      },
+      {
+        "displayName": "CAD",
+        "value": "8"
+      },
+      {
+        "displayName": "CHF",
+        "value": "9"
+      }
+    ]
+  },
+  {
+    "id": "saleType",
+    "name": "Sell product by",
+    "type": "singleCheck",
+    "rules": [
+      {
+        "name": "requiredRule",
+        "value": "true"
+      }
+    ],
+    "options": [
+      {
+        "displayName": "Unit",
+        "value": "normal"
+      },
+      {
+        "displayName": "Batch ",
+        "value": "batch"
+      }
+    ]
+  },
+  {
+    "id": "batchNum",
+    "name": "Set quantity for batch sales",
+    "type": "input",
+    "rules": [
+      {
+        "name": "maxValueRule",
+        "value": "999999999",
+        "exProperty": "not include"
+      },
+      {
+        "name": "minValueRule",
+        "value": "1",
+        "exProperty": "not include"
+      },
+      {
+        "name": "regexRule",
+        "value": "[1-9][0-9]{0,8}"
+      },
+      {
+        "name": "valueTypeRule",
+        "value": "integer"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "scPrice",
+    "name": "Price setting",
+    "type": "singleCheck",
+    "rules": [
+      {
+        "name": "requiredRule",
+        "value": "true"
+      }
+    ],
+    "options": [
+      {
+        "displayName": "Tiered pricing by quantity",
+        "value": "1"
+      },
+      {
+        "displayName": "SKU pricing",
+        "value": "3"
+      }
+    ]
+  },
+  {
+    "id": "minOrderQuantity",
+    "name": "Minimum order quantity (MOQ)",
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "double"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "productDescType",
+    "name": "Product description",
+    "type": "singleCheck",
+    "rules": [],
+    "options": [
+      {
+        "displayName": "智能编辑",
+        "value": "1"
+      },
+      {
+        "displayName": "普通编辑",
+        "value": "2"
+      }
+    ]
+  },
+  {
+    "id": "detailImage",
+    "name": "Details of the picture",
+    "type": "multiComplex",
+    "rules": [
+      {
+        "name": "requiredRule",
+        "value": "true"
+      },
+      {
+        "name": "maxCustomGalleryItem",
+        "value": "5"
+      },
+      {
+        "name": "supportCustomOrder",
+        "value": "true"
+      },
+      {
+        "name": "supportCustomGallery",
+        "value": "true"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "gallery",
+    "name": "gallery",
+    "type": "singleCheck",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "long"
+      },
+      {
+        "name": "maxInputNumRule",
+        "value": "50",
+        "exProperty": "include"
+      },
+      {
+        "name": "requiredRule",
+        "value": "true"
+      }
+    ],
+    "options": [
+      {
+        "displayName": "Product dimensions",
+        "value": "150",
+        "cnName": "尺寸图",
+        "supportText": "false"
+      },
+      {
+        "displayName": "Scene image",
+        "value": "200",
+        "cnName": "场景图",
+        "supportText": "false"
+      },
+      {
+        "displayName": "Detail shot",
+        "value": "300",
+        "cnName": "细节图",
+        "supportText": "true"
+      },
+      {
+        "displayName": "Other product images",
+        "value": "350",
+        "cnName": "其他商品图片",
+        "supportText": "false"
+      }
+    ]
+  },
+  {
+    "id": "images",
+    "name": "images",
+    "type": "multiComplex",
+    "rules": [
+      {
+        "name": "requiredRule",
+        "value": "true"
+      },
+      {
+        "name": "maxItemsRule",
+        "value": "30",
+        "exProperty": "include"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "imageURL",
+    "name": "imageURL",
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      },
+      {
+        "name": "requiredRule",
+        "value": "true"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "generalText",
+    "name": "generalText",
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      },
+      {
+        "name": "maxInputNumRule",
+        "value": "500",
+        "exProperty": "include"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "textDesc",
+    "name": "Product Highlights",
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "companyImage",
+    "name": "Company Picture",
+    "type": "multiComplex",
+    "rules": [
+      {
+        "name": "maxCustomGalleryItem",
+        "value": "3"
+      },
+      {
+        "name": "supportCustomOrder",
+        "value": "true"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "gallery",
+    "name": "gallery",
+    "type": "singleCheck",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "long"
+      },
+      {
+        "name": "maxInputNumRule",
+        "value": "50",
+        "exProperty": "include"
+      },
+      {
+        "name": "requiredRule",
+        "value": "true"
+      }
+    ],
+    "options": [
+      {
+        "displayName": "Company overview",
+        "value": "400",
+        "cnName": "公司介绍",
+        "supportText": "false"
+      },
+      {
+        "displayName": "Competitive advantages",
+        "value": "450",
+        "cnName": "公司优势",
+        "supportText": "false"
+      },
+      {
+        "displayName": "Factory profile",
+        "value": "500",
+        "cnName": "工厂情况",
+        "supportText": "false"
+      },
+      {
+        "displayName": "Customization capabilities",
+        "value": "550",
+        "cnName": "定制能力",
+        "supportText": "true"
+      },
+      {
+        "displayName": "Production workflow",
+        "value": "600",
+        "cnName": "生产流程",
+        "supportText": "false"
+      },
+      {
+        "displayName": "Trade show participation",
+        "value": "650",
+        "cnName": "参展情况",
+        "supportText": "false"
+      },
+      {
+        "displayName": "Packaging & shipping specifications",
+        "value": "700",
+        "cnName": "包装运输",
+        "supportText": "false"
+      },
+      {
+        "displayName": "Extended company profile",
+        "value": "750",
+        "cnName": "其他公司介绍",
+        "supportText": "false"
+      }
+    ]
+  },
+  {
+    "id": "images",
+    "name": "images",
+    "type": "multiComplex",
+    "rules": [
+      {
+        "name": "requiredRule",
+        "value": "true"
+      },
+      {
+        "name": "maxItemsRule",
+        "value": "30",
+        "exProperty": "include"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "imageURL",
+    "name": "imageURL",
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      },
+      {
+        "name": "requiredRule",
+        "value": "true"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "generalText",
+    "name": "generalText",
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      },
+      {
+        "name": "maxInputNumRule",
+        "value": "500",
+        "exProperty": "include"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "companyDesc",
+    "name": "Company Introduction",
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "companyFaqDesc",
+    "name": "FAQs",
+    "type": "multiComplex",
+    "rules": [
+      {
+        "name": "maxItemsRule",
+        "value": "8",
+        "exProperty": "include"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "question",
+    "name": "question",
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      },
+      {
+        "name": "requiredRule",
+        "value": "true"
+      },
+      {
+        "name": "maxInputNumRule",
+        "value": "150",
+        "exProperty": "include"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "answers",
+    "name": "answers",
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      },
+      {
+        "name": "requiredRule",
+        "value": "true"
+      },
+      {
+        "name": "maxInputNumRule",
+        "value": "500",
+        "exProperty": "include"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "productQuality",
+    "name": "Product quality",
+    "type": "complex",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "productQuality_score",
+    "name": "0",
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "productQuality_dataSource_0_text",
+    "name": "Commodity Category",
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "productQuality_dataSource_0_type",
+    "name": "success",
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "productQuality_dataSource_1_text",
+    "name": "Basic information",
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "productQuality_dataSource_1_type",
+    "name": "success",
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "productQuality_dataSource_2_text",
+    "name": "Trade Information",
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "productQuality_dataSource_2_type",
+    "name": "success",
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "productQuality_dataSource_3_text",
+    "name": "Logistics and shipping",
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "productQuality_dataSource_3_type",
+    "name": "success",
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "productQuality_dataSource_4_text",
+    "name": "Universal services/capabilities",
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "productQuality_dataSource_4_type",
+    "name": "success",
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "productQuality_dataSource_5_text",
+    "name": "Commodity Details",
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "productQuality_dataSource_5_type",
+    "name": "success",
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "marketSample",
+    "name": "Sample Service",
+    "type": "singleCheck",
+    "rules": [
+      {
+        "name": "tipRule",
+        "value": "Products and samples both support the same set of logistics information. You need to first set up the corresponding shipping fee template before configuring the sample service (samples can be sold starting from a single unit)."
+      }
+    ],
+    "options": [
+      {
+        "displayName": "Available (recommended)",
+        "value": "1"
+      },
+      {
+        "displayName": "Unavailable",
+        "value": "2"
+      }
+    ]
+  },
+  {
+    "id": "marketSamplingQuantity",
+    "name": "Maximum samples per order",
+    "type": "input",
+    "rules": [
+      {
+        "name": "tipRule",
+        "value": "The maximum number of samples included in a single sample purchased by the buyer cannot be changed, and the recommended upper limit is ≤ the minimum order quantity"
+      },
+      {
+        "name": "maxValueRule",
+        "value": "999999999",
+        "exProperty": "not include"
+      },
+      {
+        "name": "minValueRule",
+        "value": "1",
+        "exProperty": "not include"
+      },
+      {
+        "name": "regexRule",
+        "value": "[1-9][0-9]{0,8}"
+      },
+      {
+        "name": "valueTypeRule",
+        "value": "long"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "marketSamplingPrice",
+    "name": "Sample price",
+    "type": "input",
+    "rules": [
+      {
+        "name": "minValueRule",
+        "value": "0",
+        "exProperty": "not include"
+      },
+      {
+        "name": "regexRule",
+        "value": "([0-9]{0,9})(\\.[0-9]{0,2})?"
+      },
+      {
+        "name": "valueTypeRule",
+        "value": "double"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "multilangInfo",
+    "name": "多语言信息组件",
+    "type": "multiComplex",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "logisticsProperty",
+    "name": "Logistics attribute",
+    "type": "multiCheck",
+    "rules": [],
+    "options": [
+      {
+        "displayName": "普货",
+        "value": "general_cargo_0"
+      },
+      {
+        "displayName": "内置电池（非锂电池）:单块电池≤100Wh",
+        "value": "battery_0_0"
+      },
+      {
+        "displayName": "内置电池（非锂电池）:单块电池>100Wh",
+        "value": "battery_1_1"
+      },
+      {
+        "displayName": "内置电池（锂电池）:单块电池≤100Wh",
+        "value": "battery.builtinBatteryLithium.oneLessHundredWh"
+      },
+      {
+        "displayName": "内置电池（锂电池）:单块电池>100Wh",
+        "value": "battery.builtinBatteryLithium.oneMoreHundredWH"
+      },
+      {
+        "displayName": "配套电池（非锂电池）:单块电池≤100Wh",
+        "value": "battery_2_2"
+      },
+      {
+        "displayName": "配套电池（非锂电池）:单块电池>100Wh",
+        "value": "battery_3_3"
+      },
+      {
+        "displayName": "配套电池（锂电池）:单块电池≤100Wh",
+        "value": "battery.attachBatteryLithium.oneLessHundredWh"
+      },
+      {
+        "displayName": "配套电池（锂电池）:单块电池>100Wh",
+        "value": "battery.attachBatteryLithium.oneMoreHundredWH"
+      },
+      {
+        "displayName": "纯电池",
+        "value": "battery.pureBattery"
+      },
+      {
+        "displayName": "充电宝",
+        "value": "battery.powerBank"
+      },
+      {
+        "displayName": "纯电池(有限制):单块电池≤100Wh",
+        "value": "battery.pureBatteryLimit.oneLessHundredWh"
+      },
+      {
+        "displayName": "充电宝(有限制):单块电池≤100Wh",
+        "value": "battery.powerBankLimit.oneLessHundredWh"
+      },
+      {
+        "displayName": "弱磁",
+        "value": "Magnetic_0"
+      },
+      {
+        "displayName": "强磁",
+        "value": "Magnetic_2"
+      },
+      {
+        "displayName": "化妆品-粉饼",
+        "value": "powder_0"
+      },
+      {
+        "displayName": "化妆品-散粉",
+        "value": "powder_1"
+      },
+      {
+        "displayName": "硒鼓/墨盒",
+        "value": "powder_2"
+      },
+      {
+        "displayName": "植物提取物",
+        "value": "powder_3"
+      },
+      {
+        "displayName": "油状化妆品-不含酒精:单个商品≤100ml",
+        "value": "liquid.oilMakeupNonAlcohol.oneLessHundredMl"
+      },
+      {
+        "displayName": "油状化妆品-不含酒精:单个商品>100ml",
+        "value": "liquid_0"
+      },
+      {
+        "displayName": "膏状化妆品-不含酒精:单个商品≤100ml",
+        "value": "liquid.creamMakeupNonAlcohol.oneLessHundredMl"
+      },
+      {
+        "displayName": "膏状化妆品-不含酒精:单个商品>100ml ",
+        "value": "liquid_2"
+      },
+      {
+        "displayName": "水状化妆品-不含酒精:单个商品≤100ml",
+        "value": "liquid.waterMakeupNonAlcohol.oneLessHundredMl"
+      },
+      {
+        "displayName": "水状化妆品-不含酒精:单个商品>100ml ",
+        "value": "liquid_4"
+      },
+      {
+        "displayName": "香水:单个商品≤100ml",
+        "value": "liquid.perfume.oneLessHundredMl"
+      },
+      {
+        "displayName": "香水:单个商品>100ml",
+        "value": "liquid.perfume.oneMoreHundredMl"
+      },
+      {
+        "displayName": "成人用品",
+        "value": "Adult_products_0"
+      },
+      {
+        "displayName": "食品饮料:非充气包装零食",
+        "value": "special.foodAndBeverage.inflatedSnackBag"
+      },
+      {
+        "displayName": "食品饮料:充气包装零食",
+        "value": "food_beverage_0"
+      },
+      {
+        "displayName": "食品饮料:生鲜",
+        "value": "food_beverage_2"
+      },
+      {
+        "displayName": "食品饮料:饮料",
+        "value": "food_beverage_1"
+      },
+      {
+        "displayName": "医疗用品",
+        "value": "special.medical"
+      },
+      {
+        "displayName": "餐刀:未开刃",
+        "value": "special.dinnerKnives.unedged"
+      },
+      {
+        "displayName": "餐刀:开刃",
+        "value": "special.dinnerKnives.edged"
+      },
+      {
+        "displayName": "其他刀具:刃长≤15CM",
+        "value": "special.otherKnives.edgedLessFifteenCM"
+      },
+      {
+        "displayName": "动物提取物",
+        "value": "powder_4"
+      },
+      {
+        "displayName": "无人机",
+        "value": "special.drone"
+      },
+      {
+        "displayName": "无人机(有限制):民用",
+        "value": "special.droneLimit.civilianDrone"
+      },
+      {
+        "displayName": "玩具枪:模型枪-非1:1仿真",
+        "value": "special.toyGun.unSameSizeSimulation"
+      },
+      {
+        "displayName": "玩具枪:模型枪-1:1仿真",
+        "value": "special.toyGun.sameSizeSimulation"
+      },
+      {
+        "displayName": "玩具枪:其他玩具枪",
+        "value": "special.toyGun.otherToyGun"
+      },
+      {
+        "displayName": "打火机:无汽无油",
+        "value": "special.lighter.noGasNoOil"
+      },
+      {
+        "displayName": "固体含酒精",
+        "value": "alcohol.solidAlcohol"
+      },
+      {
+        "displayName": "液体含酒精",
+        "value": "alcohol.liquidAlcohol"
+      }
+    ]
+  },
+  {
+    "id": "logisticsSku",
+    "name": "Volume and weight (including logistics packaging)",
+    "type": "multiComplex",
+    "rules": [
+      {
+        "name": "tipRule",
+        "value": "If the transaction information is set to sell by piece, fill in the volume and weight of each item under this specification (including logistics packaging)<br/> If the transaction information is set to sell by batch, fill in the overall volume and weight of each batch of goods under this specification (including logistics packaging)<br/> Please accurately fill in the product weight and size information (including logistics packaging), fill in the inaccurate will lead to freight differences."
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "props",
+    "name": "",
+    "type": "multiInput",
+    "rules": [
+      {
+        "name": "valueAttributeRule",
+        "value": "propId"
+      },
+      {
+        "name": "valueAttributeRule",
+        "value": "propName"
+      },
+      {
+        "name": "valueAttributeRule",
+        "value": "propValueId"
+      },
+      {
+        "name": "valueAttributeRule",
+        "value": "propValueName"
+      },
+      {
+        "name": "tipRule",
+        "value": "值为属性id属性value的组合"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "skuId",
+    "name": "",
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "long"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "pkgWeightSku",
+    "name": "Weight",
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "double"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "pkgMeasureLengthSku",
+    "name": "sku long",
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "double"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "pkgMeasureWidthSku",
+    "name": "sku wide",
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "double"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "pkgMeasureHeightSku",
+    "name": "sku high",
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "double"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "boxPackagingSku",
+    "name": "Box gauge sku",
+    "type": "multiCheck",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "long"
+      },
+      {
+        "name": "tipRule",
+        "value": "账号下的箱规列表请参考<options>，并将选择的箱子id用作组件的value，并将totalWeight（装满后总重）、maxCount（最大装箱数量）填写到属性中。示例：<field id=\\\"boxPackaging\\\" name=\\\"Box gauge\\\" type=\\\"multiCheck\\\"><values><value maxCount=\\\"2\\\" totalWeight=\\\"5.79\\\">22275361</value></values></field>。"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "supportLogisticsSku",
+    "name": "",
+    "type": "singleCheck",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "semiManagedPeriod",
+    "name": "Semi-Managed Shipment Period",
+    "type": "input",
+    "rules": [
+      {
+        "name": "maxValueRule",
+        "value": "14",
+        "exProperty": "not include"
+      },
+      {
+        "name": "minValueRule",
+        "value": "1",
+        "exProperty": "not include"
+      },
+      {
+        "name": "valueTypeRule",
+        "value": "integer"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "tariffsHsCode",
+    "name": "US HS Code Maintenance ",
+    "type": "multiComplex",
+    "rules": [],
+    "options": []
+  },
+  {
+    "id": "toCountry",
+    "name": "toCountry",
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      },
+      {
+        "name": "requiredRule",
+        "value": "false"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "hsCode",
+    "name": "hsCode",
+    "type": "input",
+    "rules": [
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      },
+      {
+        "name": "requiredRule",
+        "value": "false"
+      }
+    ],
+    "options": []
+  },
+  {
+    "id": "designAndSampleService",
+    "name": "Plot out sample service",
+    "type": "multiCheck",
+    "rules": [
+      {
+        "name": "tipRule",
+        "value": "支持三天出图和七天出样服务，需要先报名相应活动并通过审核"
+      }
+    ],
+    "options": [
+      {
+        "displayName": "3 Day Design",
+        "value": "1"
+      },
+      {
+        "displayName": "7 Day Sample",
+        "value": "2"
+      }
+    ]
+  }
+]

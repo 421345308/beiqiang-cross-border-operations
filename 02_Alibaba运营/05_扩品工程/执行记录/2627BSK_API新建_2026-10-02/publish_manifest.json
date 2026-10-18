@@ -1,0 +1,43 @@
+{
+  "expected_model": "BQ-C2627",
+  "operation": "create",
+  "category_id": 201153804,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "facts_and_copy.json",
+    "source_attributes.json",
+    "asset_manifest_local.json",
+    "visual_gate.json",
+    "dedup_gate.json"
+  ],
+  "current_schema": "schema_201153804.xml",
+  "current_schema_sha256": "3bc35bcd7ce004a7be07eca25b2bdb48325f3d5717c5dac68f1b3809775c732a",
+  "schema_request_id": "213d4e4917909567566784591",
+  "schema_acquired_at": "2026-10-02T15:59:13.888568+00:00",
+  "payload_xml": "intended_payload.xml",
+  "field_ids": [
+    "catId",
+    "icbuCatProp",
+    "saleProp",
+    "sku",
+    "productTitle",
+    "productKeywords",
+    "scImages",
+    "priceUnit",
+    "saleType",
+    "scPrice",
+    "minOrderQuantity",
+    "ladderPrice",
+    "pkgMeasure",
+    "pkgWeight",
+    "productDescType",
+    "detailImage",
+    "companyImage",
+    "textDesc",
+    "companyDesc",
+    "companyFaqDesc"
+  ],
+  "dependency_ids": [],
+  "differentiation_review": "differentiation_review.json",
+  "differentiation_review_sha256": "d63663248d91801874a3afa8ca0021d26eca3427e3cca827a01ba10e002b7315"
+}

@@ -1,0 +1,107 @@
+{
+  "product_id": "1601969861694",
+  "observed_at": "2026-10-02T15:11:53.712074+00:00",
+  "get_request_id": "0bbb3b2417909535677475553",
+  "status": "approved",
+  "display": "Y",
+  "public_url": "https://www.alibaba.com/product-detail/EVA-Vented-Closed-Heel-Casual-Shoes_1601969861694.html",
+  "checks": {
+    "nonempty_product": true,
+    "title": true,
+    "category": true,
+    "model": true,
+    "main_6_exact_order": true,
+    "detail4_exact_role_set": true,
+    "company5_original_v3": true,
+    "FAQ6_exact": true,
+    "summary_exact": true,
+    "SKU15_unique": true,
+    "outer_codes_exact": true,
+    "paired_size_labels": true,
+    "colors_and_image_bindings": true,
+    "all_SKU_prices": true,
+    "MOQ2_pair": true,
+    "materials": true,
+    "SKU_actual_props_match_outer_codes": true
+  },
+  "content_result": "PASS",
+  "counts": {
+    "main": 6,
+    "detail": 4,
+    "company": 5,
+    "FAQ": 6,
+    "SKU": 15
+  },
+  "attributes": {
+    "Upper Material": "EVA",
+    "Place of Origin": "Not specified",
+    "Model Number": "BQ-CA67",
+    "Midsole Material": "Not specified",
+    "Outsole Material": "Not specified",
+    "Lining Material": "Not specified"
+  },
+  "keywords": [
+    ""
+  ],
+  "keywords_persistence": "EMPTY_READBACK_NOT_CLAIMED",
+  "inventory_writes": 0,
+  "review_acceptance": "PASS",
+  "quality": {
+    "product_id": "1601969861694",
+    "score": "5.00",
+    "meets_5_0": true,
+    "state": "PASS",
+    "diagnostics": {
+      "ruleScoreMap": {
+        "title_word_miss_core_error": 0.0,
+        "imageQualityBad": 0.0,
+        "image_scale": 0.0,
+        "title_word_error": 0.0,
+        "image_num": 0.0
+      },
+      "errorReasonSkuImageMoreMap": {},
+      "errorReasonTitleWordMissErrorMap": {},
+      "errorReasonList": [],
+      "errorReasonTitleWordErrorMap": {},
+      "extendCheckMap": {
+        "imageText": true,
+        "sku_image": false,
+        "title_word_miss_core_error": true,
+        "imageQualityBad": true,
+        "sku_text": false,
+        "imageSubTitle": false,
+        "category": true,
+        "title_word_error": true,
+        "selling_point_attribute_conflict": false
+      },
+      "errorReasonCategoryMap": {},
+      "errorReasonSkuTextMap": {},
+      "errorReasonSubTitleMap": {},
+      "errorReasonMap": {},
+      "errorReasonSellingPointAttributeMap": {},
+      "errorReasonSkuImageMap": {},
+      "extendProblemMap": {
+        "imageText": false,
+        "title_word_miss_core_error": false,
+        "imageQualityBad": false,
+        "imageSubTitle": false,
+        "image_scale": false,
+        "inventory": false,
+        "title_word_error": false,
+        "selling_point_attribute_conflict": false,
+        "image_num": false,
+        "freightRate": false,
+        "sku_image": false,
+        "sku_text": false,
+        "price": false,
+        "category": false
+      },
+      "errorReasonQualityBadMap": {},
+      "errorReasonSkuTextMoreMap": {}
+    },
+    "platform_error": {},
+    "request_id": "21501b6717909538207045055",
+    "observed_at": "2026-10-02T15:10:16.197531+00:00"
+  },
+  "public_acceptance": "PASS"
+}

@@ -1,0 +1,108 @@
+{
+  "product_id": "1601969885846",
+  "observed_at": "2026-10-02T17:44:02.972524+00:00",
+  "get_request_id": "0bbb637a17909624685292185",
+  "status": "approved",
+  "display": "Y",
+  "public_url": "https://www.alibaba.com/product-detail/EVA-Platform-Clogs-with-Heel-Strap_1601969885846.html",
+  "checks": {
+    "nonempty_product": true,
+    "title": true,
+    "category": true,
+    "model": true,
+    "main_6_exact_order": true,
+    "detail3_exact_role_set": true,
+    "company5_original_v3": true,
+    "FAQ6_exact": true,
+    "summary_exact": true,
+    "SKU15_unique": true,
+    "outer_codes_exact": true,
+    "paired_size_labels": true,
+    "colors_and_image_bindings": true,
+    "all_SKU_prices": true,
+    "MOQ2_pair": true,
+    "origin": true,
+    "materials": true,
+    "SKU_actual_props_match_outer_codes": true
+  },
+  "content_result": "PASS",
+  "counts": {
+    "main": 6,
+    "detail": 3,
+    "company": 5,
+    "FAQ": 6,
+    "SKU": 15
+  },
+  "attributes": {
+    "Place of Origin": "CN",
+    "Model Number": "BQ-C2627",
+    "Midsole Material": "Not specified",
+    "Outsole Material": "Not specified",
+    "Upper Material": "EVA",
+    "Lining Material": "Not specified"
+  },
+  "keywords": [
+    ""
+  ],
+  "keywords_persistence": "EMPTY_READBACK_NOT_CLAIMED",
+  "inventory_writes": 0,
+  "review_acceptance": "PASS",
+  "quality": {
+    "product_id": "1601969885846",
+    "score": "5.00",
+    "meets_5_0": true,
+    "state": "PASS",
+    "diagnostics": {
+      "ruleScoreMap": {
+        "title_word_miss_core_error": 0.0,
+        "imageQualityBad": 0.0,
+        "image_scale": 0.0,
+        "title_word_error": 0.0,
+        "image_num": 0.0
+      },
+      "errorReasonSkuImageMoreMap": {},
+      "errorReasonTitleWordMissErrorMap": {},
+      "errorReasonList": [],
+      "errorReasonTitleWordErrorMap": {},
+      "extendCheckMap": {
+        "imageText": true,
+        "sku_image": false,
+        "title_word_miss_core_error": true,
+        "imageQualityBad": true,
+        "sku_text": false,
+        "imageSubTitle": false,
+        "category": true,
+        "title_word_error": true,
+        "selling_point_attribute_conflict": false
+      },
+      "errorReasonCategoryMap": {},
+      "errorReasonSkuTextMap": {},
+      "errorReasonSubTitleMap": {},
+      "errorReasonMap": {},
+      "errorReasonSellingPointAttributeMap": {},
+      "errorReasonSkuImageMap": {},
+      "extendProblemMap": {
+        "imageText": false,
+        "title_word_miss_core_error": false,
+        "imageQualityBad": false,
+        "imageSubTitle": false,
+        "image_scale": false,
+        "inventory": false,
+        "title_word_error": false,
+        "selling_point_attribute_conflict": false,
+        "image_num": false,
+        "freightRate": false,
+        "sku_image": false,
+        "sku_text": false,
+        "price": false,
+        "category": false
+      },
+      "errorReasonQualityBadMap": {},
+      "errorReasonSkuTextMoreMap": {}
+    },
+    "platform_error": {},
+    "request_id": "213f5a2117909629871545503",
+    "observed_at": "2026-10-02T17:43:02.265466+00:00"
+  },
+  "public_acceptance": "BLOCKED_CAPTCHA"
+}

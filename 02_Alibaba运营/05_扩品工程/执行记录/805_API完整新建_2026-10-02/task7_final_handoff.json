@@ -1,0 +1,26 @@
+{
+  "stopped_at_utc": "2026-10-02T17:55:15.449404+00:00",
+  "805": {
+    "new_id": "1601969877983",
+    "model": "BQ-D805",
+    "formal": "approved/Y",
+    "render_nonempty": true,
+    "actual_score": 5.0,
+    "score_observed_at": "2026-10-02T17:45:15.754043+00:00",
+    "score_request_id": "0bbb3b2417909631207158535",
+    "public": "BLOCKED_CAPTCHA_NOT_VERIFIED",
+    "old_id": "1601943738486",
+    "old_model": "HR065-A",
+    "old_action": "NOT_SENT",
+    "unknown_writes": [],
+    "keyword": "Formal empty; no repair request sent"
+  },
+  "3522": {
+    "new_id": "1601969920294",
+    "core_formal_public_score": "Already handed off real5 + parent public PASS",
+    "keyword_unknown_write": "keyword_field_repair/write_once_ledger.json; one SSL-unknown field update, no replay",
+    "old_action": "Parent/offowner; not modified by this task"
+  },
+  "protected_other_work": "No929/other-candidate image decision or five-old-product OFF approval inferred from deadline",
+  "no_automatic_resume": true
+}

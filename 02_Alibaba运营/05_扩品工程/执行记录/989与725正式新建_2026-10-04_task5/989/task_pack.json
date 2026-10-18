@@ -1,0 +1,63 @@
+{
+  "task_id": "989_new_20261004",
+  "role": "NEW",
+  "phase": "REVIEWED_ONCE_CREATE",
+  "writer": "task-5",
+  "next_action": "Canonical once-create and exact new-ID acceptance; no old-off",
+  "public_model": "BQ-NS001",
+  "category_id": 201336512,
+  "product_id": null,
+  "source_identity": {
+    "reference": "https://weituo.sooxie.com/detail/2559336",
+    "style": "989",
+    "evidence": [
+      "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\sooxie_2559336_20261004\\facts_and_color_bindings.json",
+      "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\sooxie_2559336_20261004\\source_visible_text.txt"
+    ],
+    "critical_facts": {
+      "upper_structure": "wavy textured upper with graphic side panels",
+      "outsole_structure": "visible raised sidewall; material and performance unspecified",
+      "closure": "lace-up with tongue and rear pull tabs",
+      "profile": "basketball-style casual sneaker"
+    }
+  },
+  "search_intent": {
+    "key": "basketball style casual sneakers with wavy uppers and pull tabs",
+    "evidence": [
+      "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\sooxie_2559336_20261004\\buyer_copy_reviewed.json"
+    ],
+    "limits": "Observed construction positioning; not proof of demand, professional sporting performance or traffic"
+  },
+  "hero_review": {
+    "url": "https://sc04.alicdn.com/kf/H1e219c23a4df45978c951d52f8d86349i/286385890/H1e219c23a4df45978c951d52f8d86349i.jpg",
+    "aliases": [
+      "//sc04.alicdn.com/kf/H1e219c23a4df45978c951d52f8d86349i/286385890/H1e219c23a4df45978c951d52f8d86349i.jpg"
+    ],
+    "sha256": "2b9272eaa6b14428554488910d3c69d5c78bfd82e7ccd4da916b67ea98436080",
+    "content_key": "989_actual_yellow_wavy_upper_pair",
+    "label_status": "not_present",
+    "evidence": [
+      "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\sooxie_2559336_20261004\\original\\main.jpg"
+    ],
+    "limits": "Original visible decoration retained; source-register/catalog scope only; no global same-shoe clearance"
+  },
+  "source_traceability": {
+    "supplier_name": "维拓鞋业",
+    "supplier_original_model": "989",
+    "supplier_original_direct_url": "https://weituo.sooxie.com/detail/2559336",
+    "our_model": "BQ-NS001",
+    "international_product_id": null
+  },
+  "evidence_files": [
+    {
+      "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\工厂店外新款数据采集模板.md",
+      "sha256": "44b1efe1cebebc6987ee12bba887bf1f8b5976e0826b4fa5626e8159226db814",
+      "kind": "task_pack_template"
+    },
+    {
+      "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\sooxie_2559336_20261004\\single_product_task_pack.md",
+      "sha256": "66d7dc3892fc2f1db2b89b83c33ece85b006e5f5f880b71aae5b1becc7e4371f",
+      "kind": "task_pack_document"
+    }
+  ]
+}

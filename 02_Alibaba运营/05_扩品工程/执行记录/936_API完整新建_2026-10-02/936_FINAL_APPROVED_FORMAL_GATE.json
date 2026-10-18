@@ -1,0 +1,31 @@
+{
+  "verdict": "PASS_APPROVED_FORMAL_MODEL_GALLERY_SKU_FAQ_PRICE_ONLY",
+  "product_id": 1601969872083,
+  "checks": {
+    "approvedY_exact_get_render_biz": true,
+    "Model_get_render_HR051A_normalized_minus2": true,
+    "details_get_and_render_2groups4images_exact_bank_role_set": true,
+    "FAQ6_get_render_exact": true,
+    "main6_SKU14_prices_binding_preserved": true,
+    "trade_title_summary_protected": true,
+    "company5_identity_role_set_preserved": true,
+    "actual_details_visual_receipt4PASS": true,
+    "actual_main_color_receipt8PASS": true
+  },
+  "get_request_id": "21501b8d17909430725813092",
+  "render_request_id": "0b51802d17909430712361678",
+  "media_scope": "Reused actual visual receipts; no repeat pixel audit. Derivative previews do not imply broken original URLs or byte/pixel exactness.",
+  "pending": {
+    "public": "CAPTCHA_NO_PUBLIC_PASS_PARENT_OWNED",
+    "quality": "Last actual3.90;5.0 not verified, refresh pending",
+    "keyword": "Outside repair/core gate; previous empty"
+  },
+  "operational_completion": false,
+  "reviewer_platform_write": false,
+  "evidence_hashes": {
+    "hr_control/936_publish/new_formal_get.response.json": "3e044979ff9e039b246a7d673095c4bd7b9bab2ccd647609226dc300cf82231b",
+    "hr_control/936_publish/new_formal_render.response.json": "e3cf7e1491263268899a6f9e7dbd1e90d7f20615a5c6ea4465cd1efd07fc5881",
+    "visual_execution/936_incremental/936_actual_detail_fullurl_receipt.json": "f5f81f10b1e7300fc12b6154f931008290bcbc164695f2fb893d4eea1efce9a5",
+    "visual_execution/936_incremental/936_actual_served8_visual_receipt.json": "76ed98269020ad8ab3a73c76e9cb815d9cce1a40fd69031a3f1cb1dc9618d70a"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "status": "approved",
+  "platform": "Tencent Cloud TokenHub",
+  "site": "cn",
+  "area": "gz",
+  "model": "kling-video-v3",
+  "auth": {
+    "profile": "default",
+    "alias": "default",
+    "source": "CLI-managed local chat-config; read in memory only"
+  },
+  "api": {
+    "submit": "https://tokenhub.tencentmaas.com/v1/wand/kling/image-to-video",
+    "poll": "https://tokenhub.tencentmaas.com/v1/wand/kling/tasks/{task_id}",
+    "reference": "https://cloud.tencent.com/document/product/1823/135742"
+  },
+  "settings": {
+    "resolution": "1080p",
+    "duration": 5,
+    "multi_shot": false,
+    "audio": "off"
+  },
+  "estimated_cost": {
+    "currency": "CNY",
+    "per_output_second": 0.8,
+    "per_job": 4,
+    "jobs": 2,
+    "total": 8,
+    "source": "https://cloud.tencent.com/document/product/1823/130055",
+    "note": "两次成功生成均已完成，无额外重试；回读各400000用量单位，估计合计8元不作为已核对账单。实际费用以平台为准。"
+  },
+  "jobs": [
+    {
+      "id": "release",
+      "first_frame": "public/generated-wear-v3.png",
+      "last_frame": "public/dynamic-release-end-v1.png",
+      "prompt": "Single continuous locked-camera close-up, no cuts. Preserve the adult woman seated on the ivory stone bench, cream trousers, connected arm and both all-black high-top wave-rib knit sock shoes from the first frame. The shoe is already fully on her foot. Her right hand gently settles the rear pull tab, releases it, then lifts naturally away and pauses with relaxed fingers, matching the end image. The ankle and both soles remain grounded and still. A small, plausible everyday gesture, not a complete shoe-entry sequence. Keep the black knit organization, tall collar, rear tab, black heel counter and thick black sole stable. Warm ivory editorial light. No speech, captions or logos. No disconnected limbs, extra fingers, shoe redesign, white soles, exaggerated stretching or cloth melting."
+    },
+    {
+      "id": "step",
+      "first_frame": "public/sock-city.png",
+      "prompt": "Single continuous low locked-camera footwear shot, no cuts. Preserve the cream trouser legs, two matching all-black high-top wave-rib knit sock shoes, warm stone walkway and golden daylight from the first frame. From this supported stance, the farther rear foot lifts its heel, leaves the ground, swings forward past the nearer foot, and lands naturally ahead. The nearer foot remains in contact with the ground supporting the body during the swing. End just after one calm walking step with believable weight transfer and trouser movement. Keep both shoes attached to their ankles and preserve the wave ribs, tall collars, rear pull tabs, black heel counters and all-black thick soles. Camera stays in place; actual foot motion rather than global image zoom. No speech, captions or logos. No sliding, floating, extra feet, leg crossing, toe distortion, white sole, shoe melting or product redesign."
+    }
+  ],
+  "authorization": {
+    "source": "用户选择：按可灵 V3 生成这两段，预计8元",
+    "scope": "两段各一次，5秒，1080P，无声；无额外自动重试"
+  }
+}

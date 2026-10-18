@@ -1,0 +1,26 @@
+{
+  "source": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-7\\M001_execution\\native_crops\\Red.jpg",
+  "source_sha256": "2d309d02c9a57979920b04223c0cac8f49635c4530744358a379933f78ba1d9d",
+  "source_size": [
+    425,
+    630
+  ],
+  "output_size": [
+    700,
+    700
+  ],
+  "offset": [
+    135,
+    70
+  ],
+  "foreground_scale": 1,
+  "foreground_stretch": false,
+  "foreground_regenerated": false,
+  "opaque_foreground_pixel_equality": true,
+  "shoe_full_extent_height_fraction": 0.8571428571428571,
+  "background_generated": true,
+  "shadow_policy": "Original hand-held product; no invented floor contact shadow",
+  "output_sha256": "dd4332ca189311e03d892c220e58b8c9676cc0317ce9b732dcd0ebff043d134b",
+  "qa": "PASS",
+  "visual_review": "Complete source shoe silhouette, original perforations/ribs/lettering, no new shoe pixels or stretch, source hand preserved, no false floor contact shadow"
+}

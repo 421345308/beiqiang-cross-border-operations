@@ -1,0 +1,32 @@
+{
+  "request": {
+    "param_product_top_publish_request": {
+      "product_id": 1601943665060,
+      "cat_id": 201334413,
+      "language": "en_US",
+      "xml": "<itemSchema><field id=\"productTitle\" name=\"Product name\" type=\"input\"><value>Plain Toe Derby Shoes with Lace-Up Quarters and Chunky Notched Sole for Casual Outfits</value></field></itemSchema>"
+    }
+  },
+  "reason": "Formal title differs from reviewed submitted product title, changing Plain Toe to Round Toe and appending All Seasons Fashion Trend. Correct only title; exact cause of later change unconfirmed, not attributed to a person or platform automation.",
+  "expected_schema": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Plain Toe Derby Shoes with Lace-Up Quarters and Chunky Notched Sole for Casual Outfits",
+          []
+        ]
+      ]
+    ]
+  },
+  "xml_sha256": "b53b899fa986fa39b1f2745f1df44e9157ff2240435e05a85aa52a198a70aafe"
+}

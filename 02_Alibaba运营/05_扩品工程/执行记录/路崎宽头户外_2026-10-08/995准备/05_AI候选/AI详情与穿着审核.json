@@ -1,0 +1,72 @@
+{
+  "at": "2026-10-14T02:43:36.987043+00:00",
+  "state": "FIVE_CURRENT_ASSETS_VISUAL_PASS_NOT_UPLOADED",
+  "items": [
+    {
+      "role": "M5",
+      "path": "05_AI候选/M5.png",
+      "sha256": "6b88c74277eebf5b40a6d6b94817ecf2d1b4b7b5b9c6e78b76d933e3801fef0e",
+      "source": "01_产品来源原图/03.jpg",
+      "source_sha256": "0275909c4cfc4c8c7724235b3999613160a338126a6f294700ac5bce64678dd9",
+      "visual_review": "PASS: full image and actual source inspected; original scene/pose or intentional visible region preserved, original shoe panel/trim/sole design retained; English text exact. M5 actualTan rockwear03; D1 actualBeigeBrown04upperpanel, D2 actualdrycity07lowcutprofile, D3 actual01lace region, D4 actual01forefoot only. No water-test scene or invented material/measurement/performance. AI enlargement is not microscopic construction evidence.",
+      "state": "VISUAL_PASS_NOT_UPLOADED",
+      "dimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "role": "D1",
+      "path": "05_AI候选/D1.png",
+      "sha256": "b510d918ced7c1226d5f31d568fa2a8b6cc75e7cd0b907debe88a1cb55269e89",
+      "source": "01_产品来源原图/04.jpg",
+      "source_sha256": "16a4306af54e23003616d771401fb76f55731368eafff88a6a8c5782301205b1",
+      "visual_review": "PASS: full image and actual source inspected; original scene/pose or intentional visible region preserved, original shoe panel/trim/sole design retained; English text exact. M5 actualTan rockwear03; D1 actualBeigeBrown04upperpanel, D2 actualdrycity07lowcutprofile, D3 actual01lace region, D4 actual01forefoot only. No water-test scene or invented material/measurement/performance. AI enlargement is not microscopic construction evidence.",
+      "state": "VISUAL_PASS_NOT_UPLOADED",
+      "dimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "role": "D2",
+      "path": "05_AI候选/D2.png",
+      "sha256": "996c293c9ca0dc377a1097343e6f11feb52a5e071c2cf64f4553aba8d0886e39",
+      "source": "01_产品来源原图/07.jpg",
+      "source_sha256": "e5d7b77a8aa3d88bd055349e6387a2419fbb56b143d41fb07acc08ac053d3fc0",
+      "visual_review": "PASS: full image and actual source inspected; original scene/pose or intentional visible region preserved, original shoe panel/trim/sole design retained; English text exact. M5 actualTan rockwear03; D1 actualBeigeBrown04upperpanel, D2 actualdrycity07lowcutprofile, D3 actual01lace region, D4 actual01forefoot only. No water-test scene or invented material/measurement/performance. AI enlargement is not microscopic construction evidence.",
+      "state": "VISUAL_PASS_NOT_UPLOADED",
+      "dimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "role": "D3",
+      "path": "05_AI候选/D3.png",
+      "sha256": "757e363d8541b7b0f1deea459753cf08fcfc112930804b52d4688f5af831b0a3",
+      "source": "01_产品来源原图/01.jpg",
+      "source_sha256": "b324cc60342515d7874a80b0e60cfaa519742639ab52d09a5f14ff2bea4e08b4",
+      "visual_review": "PASS: full image and actual source inspected; original scene/pose or intentional visible region preserved, original shoe panel/trim/sole design retained; English text exact. M5 actualTan rockwear03; D1 actualBeigeBrown04upperpanel, D2 actualdrycity07lowcutprofile, D3 actual01lace region, D4 actual01forefoot only. No water-test scene or invented material/measurement/performance. AI enlargement is not microscopic construction evidence.",
+      "state": "VISUAL_PASS_NOT_UPLOADED",
+      "dimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "role": "D4",
+      "path": "05_AI候选/D4.png",
+      "sha256": "cd0189a3e980e198ce45429fce072c05588560e7e225621feb7a6f07561f78ea",
+      "source": "01_产品来源原图/01.jpg",
+      "source_sha256": "b324cc60342515d7874a80b0e60cfaa519742639ab52d09a5f14ff2bea4e08b4",
+      "visual_review": "PASS: full image and actual source inspected; original scene/pose or intentional visible region preserved, original shoe panel/trim/sole design retained; English text exact. M5 actualTan rockwear03; D1 actualBeigeBrown04upperpanel, D2 actualdrycity07lowcutprofile, D3 actual01lace region, D4 actual01forefoot only. No water-test scene or invented material/measurement/performance. AI enlargement is not microscopic construction evidence.",
+      "state": "VISUAL_PASS_NOT_UPLOADED",
+      "dimensions": [
+        1254,
+        1254
+      ]
+    }
+  ],
+  "prompt_file": "AI详情与穿着完整提示词.json"
+}

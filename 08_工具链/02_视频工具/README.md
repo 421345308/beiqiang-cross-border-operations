@@ -11,6 +11,7 @@
 | `awesome-seedance/` | **工作区级通用视频模板库**（第三方，上游每日同步，本地保留不进 Git）。25 个分类模板 / 463 案例 / 12 个可选 Skill；来源 `LearnPrompt/awesome-seedance`，许可为代码 MIT + 策展 CC BY 4.0 + 提示词归原作者。索引见 [模板索引](../../07_知识库与Skills/04_AI视频知识体系/awesome-seedance-模板索引.md) |
 | `Hypit/` | 已安装固定版 0.1.8，作为实验性可选编排与合成后端；本地参考抽帧、原型 Build/导出已验证。与 video-use 的分工见 [工具入口](Hypit/README.md)，不代表商业成片已验收 |
 | `reference_remake/` | 完整参考视频＋真实同SKU图片→LibTV整片草稿的准备与CLI接线工具；不调用生成、不安装模型或剪辑器。来源、职责和测试边界见[入口](reference_remake/README.md) |
+| `电商视频Agent/` | 将商品事实、导演/资产准备、执行、成片复核及反馈串成可复用制作流程的[首版方案](电商视频Agent/README.md)；当前仅可行性研究，未安装外部项目或实现插件 |
 | `Erduo/` | 已安装 erduo-broll-loop-engineering 固定版及 HyperFrames 0.7.104；Windows 两秒竖屏渲染、交接准备和缓存复用已验证。可选独立导演/章节创作/审片与局部返修；分工与边界见[入口](Erduo/README.md)，不代替鞋类素材与成片验收 |
 | `opencut-classic/` | OpenCut 原始代码实体目录，README已标明归档且不再维护；不当作新版MCP/批量渲染已接通 |
 | `Blender人体白模/` | Blender 人体白模相关工具和说明 |

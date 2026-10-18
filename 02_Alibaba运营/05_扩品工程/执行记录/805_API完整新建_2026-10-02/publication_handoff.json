@@ -1,0 +1,86 @@
+{
+  "product_id": "1601969877983",
+  "model": "BQ-D805",
+  "source": "https://yut.sooxie.com/detail/559264",
+  "old_product_id": "1601943738486",
+  "old_model": "HR065-A",
+  "old_action": "NOT_SENT_PARENT_OFFOWNER_ONLY",
+  "create_method": "alibaba.icbu.product.schema.add",
+  "create_once_receipt": {
+    "style": "805",
+    "model": "BQ-D805",
+    "status": "submitted_needs_readback",
+    "method": "alibaba.icbu.product.schema.add",
+    "time_utc": "2026-10-02T17:27:16.990730+00:00",
+    "xml_sha256": "6ea6bdd4fa7dd78b3df07b90714046221a09805c03f07e32cfddbbb0910a956f",
+    "other_products_written": [],
+    "product_id": "1601969877983",
+    "content_status": "pending_readback",
+    "refs": {
+      "request_id": "213f5a2117909620440486584",
+      "trace_id": "0bb4a9bd17909620434994509e0d23",
+      "message": null,
+      "error": null
+    }
+  },
+  "images_main_detail_company": [
+    6,
+    4,
+    5
+  ],
+  "SKU_count": 21,
+  "FAQ_count": 6,
+  "materials": {
+    "outsole": "Rubber",
+    "lining": "PU",
+    "upper": "Not specified",
+    "midsole": "Not specified"
+  },
+  "stock_input": "omitted_all",
+  "prices_USD": [
+    16.8,
+    15.68,
+    14.56
+  ],
+  "quantity_thresholds": [
+    2,
+    50,
+    100
+  ],
+  "MOQ_pairs": 2,
+  "first_readback": {
+    "status": "approved",
+    "display": "Y",
+    "product_get_nonempty": true,
+    "public_url": "https://www.alibaba.com/product-detail/Men-s-Tassel-Driving-Moccasins-with_1601969877983.html",
+    "formal_model": null,
+    "get_request_id": "0bab02fe17909632782215796",
+    "render_nonempty": true,
+    "render_request_id": "212c41d317909632821257276",
+    "actual_score": 5.0,
+    "score_observed_at": "2026-10-02T17:45:15.754043+00:00",
+    "score_request_id": "0bbb3b2417909631207158535",
+    "score_error": null,
+    "formal_content_checks": "PASS_EXCEPT_KEYWORD",
+    "keyword_persistence": false,
+    "observed_at": "2026-10-02T17:55:15.463553+00:00"
+  },
+  "public_acceptance": "BLOCKED_CAPTCHA_NOT_VERIFIED",
+  "keyword_contract": "Check actual formal persistence; earlier other styles empty is not proof this style persisted; no blind repair",
+  "stop_at_utc": "2026-10-02T18:00:00Z",
+  "updated_at": "2026-10-02T17:55:15.463553+00:00",
+  "public_reason": "Parent cloud CAPTCHA; stopped challenges, no public content verification; no Desktop browser takeover",
+  "completion_status": "FORMAL_AND_REAL_SCORE_PASS_PUBLIC_QA_PENDING",
+  "stop_reached": false,
+  "automatic_resume": false,
+  "task_stopped": true,
+  "stop_reason": "Parent final wind-down; no new sourcing, engineering scope, uploads, creation, or platform queries",
+  "stopped_at_utc": "2026-10-02T17:55:15.449404+00:00",
+  "own_watchers": "No own805 watcher process remains; exact-name CIM read verified",
+  "unknown_writes_this_product": [],
+  "remaining": [
+    "805 independent public content QA blocked by CAPTCHA; not verified",
+    "805 formal keywords empty; engineering special, no field repair sent",
+    "HR065-A old-product action remains parent-only; do not off before required public QA"
+  ]
+}

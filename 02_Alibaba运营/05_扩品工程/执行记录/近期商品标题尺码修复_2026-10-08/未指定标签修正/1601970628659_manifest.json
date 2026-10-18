@@ -1,0 +1,76 @@
+{
+  "operation": "update",
+  "product_id": "1601970628659",
+  "category_id": 201336512,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "02_Alibaba运营\\05_扩品工程\\执行记录\\989与725正式新建_2026-10-04_task5\\989\\facts_and_color_bindings.json"
+  ],
+  "source_sha256": "1478bbfe253f25f8f919c0e1d5b82e7381e4580fb4900647c9c9a24e8aa04ace",
+  "current_schema": "1601970628659_current_schema.xml",
+  "current_schema_sha256": "f753ec6943d95ae537ca1be6ca684f1ab95389d9db83f664e40a6cdd8f79071c",
+  "schema_request_id": "212c6fc617914229836111890",
+  "schema_acquired_at": "2026-10-08T01:29:47.219070+00:00",
+  "payload_xml": "1601970628659_payload.xml",
+  "field_ids": [
+    "productTitle",
+    "saleProp",
+    "sku"
+  ],
+  "dependency_ids": [],
+  "size_label_mapping": {
+    "-101": {
+      "before": "Label 38 (system unspecified)",
+      "after": "Size 38"
+    },
+    "-102": {
+      "before": "Label 39 (system unspecified)",
+      "after": "Size 39"
+    },
+    "-103": {
+      "before": "Label 40 (system unspecified)",
+      "after": "Size 40"
+    },
+    "-104": {
+      "before": "Label 41 (system unspecified)",
+      "after": "Size 41"
+    },
+    "-105": {
+      "before": "Label 42 (system unspecified)",
+      "after": "Size 42"
+    },
+    "-106": {
+      "before": "Label 43 (system unspecified)",
+      "after": "Size 43"
+    },
+    "-107": {
+      "before": "Label 44 (system unspecified)",
+      "after": "Size 44"
+    },
+    "-108": {
+      "before": "Label 45 (system unspecified)",
+      "after": "Size 45"
+    },
+    "-109": {
+      "before": "Label 46 (system unspecified)",
+      "after": "Size 46"
+    },
+    "-110": {
+      "before": "Label 47 (system unspecified)",
+      "after": "Size 47"
+    },
+    "-111": {
+      "before": "Label 48 (system unspecified)",
+      "after": "Size 48"
+    },
+    "-112": {
+      "before": "Label 49 (system unspecified)",
+      "after": "Size 49"
+    },
+    "-113": {
+      "before": "Label 50 (system unspecified)",
+      "after": "Size 50"
+    }
+  },
+  "size_system": "未确认EU；去掉误写提示，仅保留原件数字，不换算或改变尺码配比"
+}

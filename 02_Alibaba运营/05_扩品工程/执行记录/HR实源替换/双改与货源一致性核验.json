@@ -1,0 +1,2758 @@
+{
+  "state": "CURRENT_SOURCE_PLATFORM_LOCAL_CONSISTENCY_PASS",
+  "at": "2026-10-14T00:19:45.894166+00:00",
+  "rows": [
+    {
+      "family": "HR030",
+      "model": "HR030-A",
+      "id": "1601943574507",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr030-mna-1",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR030",
+      "model": "HR030-B",
+      "id": "1601943545775",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr030-mna-1",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR042",
+      "model": "HR042-A",
+      "id": "1601943703336",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr042-9818",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR042",
+      "model": "HR042-B",
+      "id": "1601943747024",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr042-9818",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR042",
+      "model": "HR042-C",
+      "id": "1601943639708",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr042-9818",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR054",
+      "model": "HR054-A",
+      "id": "1601943673716",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr054-27975",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR054",
+      "model": "HR054-B",
+      "id": "1601943741370",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr054-27975",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR054",
+      "model": "HR054-C",
+      "id": "1601943737356",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr054-27975",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR020",
+      "model": "HR020-A",
+      "id": "1601943497861",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr020-9917",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR020",
+      "model": "HR020-B",
+      "id": "1601943530673",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr020-9917",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR020",
+      "model": "HR020-C",
+      "id": "1601943558469",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr020-9917",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR024",
+      "model": "HR024-B",
+      "id": "1601943527861",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr024-8856",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR024",
+      "model": "HR024-C",
+      "id": "1601943622296",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr024-8856",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR035",
+      "model": "HR035-A",
+      "id": "1601943568763",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr035-888-d",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR035",
+      "model": "HR035-B",
+      "id": "1601943680112",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr035-888-d",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR038",
+      "model": "HR038-A",
+      "id": "1601943620588",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr038-ar288",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR038",
+      "model": "HR038-B",
+      "id": "1601943677234",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr038-ar288",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR031",
+      "model": "HR031-A",
+      "id": "1601943665060",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr031-d11",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR031",
+      "model": "HR031-B",
+      "id": "1601943651120",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr031-d11",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR036",
+      "model": "HR036-A",
+      "id": "1601943627431",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr036-1936",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR036",
+      "model": "HR036-B",
+      "id": "1601943561786",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr036-1936",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "DZ14546082-A",
+      "model": "DZ14546082-A",
+      "id": "12000003229472",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-dz14546082-a-kb11",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR029",
+      "model": "HR029-A",
+      "id": "1601943544741",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr029-726c",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR029",
+      "model": "HR029-B",
+      "id": "1601943558646",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr029-726c",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR063",
+      "model": "HR063-A",
+      "id": "1601943653995",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr063-1712",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR063",
+      "model": "HR063-B",
+      "id": "1601943651966",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr063-1712",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR063",
+      "model": "HR063-C",
+      "id": "1601943764325",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr063-1712",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR065",
+      "model": "HR065-A",
+      "id": "1601943738486",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr065-j55",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR065",
+      "model": "HR065-B",
+      "id": "1601943703750",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr065-j55",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR065",
+      "model": "HR065-C",
+      "id": "1601943717639",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr065-j55",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR059",
+      "model": "HR059-A",
+      "id": "1601943790138",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr059-5612",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR059",
+      "model": "HR059-B",
+      "id": "1601943767266",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr059-5612",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR059",
+      "model": "HR059-C",
+      "id": "1601943779211",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr059-5612",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR061",
+      "model": "HR061-A",
+      "id": "1601943700660",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr061-l895",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR061",
+      "model": "HR061-B",
+      "id": "1601943748344",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr061-l895",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR061",
+      "model": "HR061-C",
+      "id": "1601943727538",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr061-l895",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR062",
+      "model": "HR062-A",
+      "id": "1601943682804",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr062-d02",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR062",
+      "model": "HR062-B",
+      "id": "1601943799127",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr062-d02",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR062",
+      "model": "HR062-C",
+      "id": "1601943761346",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr062-d02",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR066",
+      "model": "HR066-A",
+      "id": "1601943734532",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr066-ws6",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR066",
+      "model": "HR066-B",
+      "id": "1601943708668",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr066-ws6",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR066",
+      "model": "HR066-C",
+      "id": "1601943670945",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr066-ws6",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR060",
+      "model": "HR060-A",
+      "id": "1601943755354",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr060-aa23",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR060",
+      "model": "HR060-B",
+      "id": "1601943705620",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr060-aa23",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR049",
+      "model": "HR049-A",
+      "id": "1601943633918",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr049-b75",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR049",
+      "model": "HR049-B",
+      "id": "1601943710448",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr049-b75",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR049",
+      "model": "HR049-C",
+      "id": "1601943639863",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr049-b75",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR052",
+      "model": "HR052-A",
+      "id": "1601943742273",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr052-d818",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR052",
+      "model": "HR052-B",
+      "id": "1601943664760",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr052-d818",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR055",
+      "model": "HR055-A",
+      "id": "1601943672753",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr055-b803",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR055",
+      "model": "HR055-B",
+      "id": "1601943711519",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr055-b803",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR055",
+      "model": "HR055-C",
+      "id": "1601943784098",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr055-b803",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR041",
+      "model": "HR041-A",
+      "id": "1601943614836",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr041-c268",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR041",
+      "model": "HR041-B",
+      "id": "1601943641737",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr041-c268",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR041",
+      "model": "HR041-C",
+      "id": "1601943608942",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr041-c268",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR037",
+      "model": "HR037-A",
+      "id": "1601943654301",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr037-w33",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR037",
+      "model": "HR037-B",
+      "id": "1601943674209",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr037-w33",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR032",
+      "model": "HR032-A",
+      "id": "1601943665138",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr032-ch33",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR032",
+      "model": "HR032-B",
+      "id": "1601943539818",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr032-ch33",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR050",
+      "model": "HR050-A",
+      "id": "1601943774082",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr050-315",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR050",
+      "model": "HR050-B",
+      "id": "1601943766117",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr050-315",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR050",
+      "model": "HR050-C",
+      "id": "1601943660717",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr050-315",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR056",
+      "model": "HR056-A",
+      "id": "1601943775160",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr056-555",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR056",
+      "model": "HR056-B",
+      "id": "1601943751252",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr056-555",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR056",
+      "model": "HR056-C",
+      "id": "1601943778191",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr056-555",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR057",
+      "model": "HR057-A",
+      "id": "1601943768215",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr057-h10",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR057",
+      "model": "HR057-B",
+      "id": "1601943700590",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr057-h10",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR057",
+      "model": "HR057-C",
+      "id": "1601943771190",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr057-h10",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR051",
+      "model": "HR051-A",
+      "id": "1601943653819",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-bded161d28f1",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR051",
+      "model": "HR051-B",
+      "id": "1601943750198",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-bded161d28f1",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR051",
+      "model": "HR051-C",
+      "id": "1601943651773",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-bded161d28f1",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR051",
+      "model": "HR051-A",
+      "id": "1601969872083",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-bded161d28f1",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR051",
+      "model": "HR051-A",
+      "id": "1601969906452",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-bded161d28f1",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR040",
+      "model": "HR040-A",
+      "id": "1601943686274",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr040-813",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR040",
+      "model": "HR040-B",
+      "id": "1601943620678",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr040-813",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR053",
+      "model": "HR053-A",
+      "id": "1601943687648",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr053-f263",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR053",
+      "model": "HR053-B",
+      "id": "1601943638954",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr053-f263",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR053",
+      "model": "HR053-C",
+      "id": "1601943784084",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr053-f263",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR043",
+      "model": "HR043-A",
+      "id": "1601943607904",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr043-556",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR043",
+      "model": "HR043-B",
+      "id": "1601943621884",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr043-556",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR043",
+      "model": "HR043-C",
+      "id": "1601943695412",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr043-556",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR045",
+      "model": "HR045-A",
+      "id": "1601943687504",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr045-f18",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR045",
+      "model": "HR045-B",
+      "id": "1601943660642",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr045-f18",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR045",
+      "model": "HR045-C",
+      "id": "1601943723312",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr045-f18",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR046",
+      "model": "HR046-A",
+      "id": "1601943660658",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr046-ar299",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR046",
+      "model": "HR046-B",
+      "id": "1601943773037",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr046-ar299",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR046",
+      "model": "HR046-C",
+      "id": "1601943694473",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr046-ar299",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR047",
+      "model": "HR047-A",
+      "id": "1601943670678",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr047-0073",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR047",
+      "model": "HR047-B",
+      "id": "1601943677652",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr047-0073",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR047",
+      "model": "HR047-C",
+      "id": "1601943767083",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr047-0073",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR067",
+      "model": "HR067-A",
+      "id": "1601943662995",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr067-d11",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR067",
+      "model": "HR067-B",
+      "id": "1601943783263",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr067-d11",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR067",
+      "model": "HR067-C",
+      "id": "1601943658940",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr067-d11",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR048",
+      "model": "HR048-A",
+      "id": "1601943649788",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr048-964",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR048",
+      "model": "HR048-B",
+      "id": "1601943767092",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr048-964",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR048",
+      "model": "HR048-C",
+      "id": "1601943607995",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr048-964",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR058",
+      "model": "HR058-A",
+      "id": "1601943793113",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr058-as795",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR058",
+      "model": "HR058-B",
+      "id": "1601943721497",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr058-as795",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR058",
+      "model": "HR058-C",
+      "id": "1601943773221",
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "source_id": "src-hr-hr058-as795",
+      "checks": {
+        "one_current_real_source": true,
+        "listing_state_matches_api": true,
+        "source_plan_target_id": true,
+        "submission_stage_ledger_correct": true,
+        "formal_source_bound": true,
+        "current_local_title": true,
+        "current_local_main_images": true,
+        "current_local_sku": true,
+        "current_local_details": true,
+        "bank_manifest_complete": true
+      }
+    },
+    {
+      "family": "HR003",
+      "model": "HR003-A",
+      "id": "1601943312845",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr003-26nc0099",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR003",
+      "model": "HR003-B",
+      "id": "1601943335928",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr003-26nc0099",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR003",
+      "model": "HR003-C",
+      "id": "1601943467198",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr003-26nc0099",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR004",
+      "model": "HR004-A",
+      "id": "1601943397351",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr004-25qlfan15-36",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR004",
+      "model": "HR004-B",
+      "id": "1601943405519",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr004-25qlfan15-36",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR004",
+      "model": "HR004-C",
+      "id": "1601943421458",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr004-25qlfan15-36",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR006",
+      "model": "HR006-A",
+      "id": "1601943439124",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr006-26nc0072",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR006",
+      "model": "HR006-B",
+      "id": "1601943450234",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr006-26nc0072",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR006",
+      "model": "HR006-C",
+      "id": "1601943364813",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr006-26nc0072",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR007",
+      "model": "HR007-A",
+      "id": "1601943463020",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr007-sh10015a-r-009",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR007",
+      "model": "HR007-B",
+      "id": "1601943408495",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr007-sh10015a-r-009",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR007",
+      "model": "HR007-C",
+      "id": "1601943332965",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr007-sh10015a-r-009",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR008",
+      "model": "HR008-A",
+      "id": "1601943348656",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr008-661",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR008",
+      "model": "HR008-B",
+      "id": "1601943422371",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr008-661",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR008",
+      "model": "HR008-C",
+      "id": "1601943451227",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr008-661",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR011",
+      "model": "HR011-A",
+      "id": "1601943501378",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr011-to12",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR011",
+      "model": "HR011-B",
+      "id": "1601943406882",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr011-to12",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR011",
+      "model": "HR011-C",
+      "id": "1601943513336",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr011-to12",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR012",
+      "model": "HR012-A",
+      "id": "1601943445780",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr012-ht03",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR012",
+      "model": "HR012-B",
+      "id": "1601943531277",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr012-ht03",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR012",
+      "model": "HR012-C",
+      "id": "1601943484576",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr012-ht03",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR013",
+      "model": "HR013-A",
+      "id": "1601943542214",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr013-23czyav066-3",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR013",
+      "model": "HR013-B",
+      "id": "1601943514448",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr013-23czyav066-3",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR013",
+      "model": "HR013-C",
+      "id": "1601943543192",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr013-23czyav066-3",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR014",
+      "model": "HR014-A",
+      "id": "1601943417982",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr014-23ccxa23-37",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR014",
+      "model": "HR014-B",
+      "id": "1601943481648",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr014-23ccxa23-37",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR014",
+      "model": "HR014-C",
+      "id": "1601943574061",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr014-23ccxa23-37",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR015",
+      "model": "HR015-A",
+      "id": "1601943502604",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr015-24czya22-56",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR015",
+      "model": "HR015-B",
+      "id": "1601943542329",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr015-24czya22-56",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR015",
+      "model": "HR015-C",
+      "id": "1601943517454",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr015-24czya22-56",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR005",
+      "model": "HR005-A",
+      "id": "1601943335751",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-d9aea7f2612e",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR005",
+      "model": "HR005-B",
+      "id": "1601943353831",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-d9aea7f2612e",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR005",
+      "model": "HR005-C",
+      "id": "1601943444273",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-d9aea7f2612e",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR010",
+      "model": "HR010-A",
+      "id": "1601943501309",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr010-26nc0086",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR010",
+      "model": "HR010-B",
+      "id": "1601943527175",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr010-26nc0086",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR010",
+      "model": "HR010-C",
+      "id": "1601943479449",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr010-26nc0086",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR017",
+      "model": "HR017-A",
+      "id": "1601943484872",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr017-26nx85102",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR017",
+      "model": "HR017-B",
+      "id": "1601943583193",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr017-26nx85102",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR017",
+      "model": "HR017-C",
+      "id": "1601943459958",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr017-26nx85102",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR019",
+      "model": "HR019-A",
+      "id": "1601943493822",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr019-230630",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR019",
+      "model": "HR019-B",
+      "id": "1601943546524",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr019-230630",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR019",
+      "model": "HR019-C",
+      "id": "1601943635041",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr019-230630",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR044",
+      "model": "HR044-A",
+      "id": "1601943650718",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr044-l795",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR044",
+      "model": "HR044-B",
+      "id": "1601943753087",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr044-l795",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR044",
+      "model": "HR044-C",
+      "id": "1601943607919",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr044-l795",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR034",
+      "model": "HR034-A",
+      "id": "1601943690007",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr034-7869",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR034",
+      "model": "HR034-B",
+      "id": "1601943543826",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr034-7869",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR025",
+      "model": "HR025-A",
+      "id": "1601943541766",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr025-24dzya22-87",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR025",
+      "model": "HR025-B",
+      "id": "1601943535810",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr025-24dzya22-87",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR025",
+      "model": "HR025-C",
+      "id": "1601943597447",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr025-24dzya22-87",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR027",
+      "model": "HR027-A",
+      "id": "1601943614355",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr027-26qzya22-130",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR027",
+      "model": "HR027-B",
+      "id": "1601943654096",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr027-26qzya22-130",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR028",
+      "model": "HR028-A",
+      "id": "1601943558633",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr028-24q2508-1",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR028",
+      "model": "HR028-B",
+      "id": "1601943592466",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr028-24q2508-1",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR026",
+      "model": "HR026-A",
+      "id": "1601943529870",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr026-25qlfan15-35",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR026",
+      "model": "HR026-B",
+      "id": "1601943582498",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr026-25qlfan15-35",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR026",
+      "model": "HR026-C",
+      "id": "1601943546735",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr026-25qlfan15-35",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR033",
+      "model": "HR033-A",
+      "id": "1601943593578",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr033-20c1860-55",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR033",
+      "model": "HR033-B",
+      "id": "1601943649254",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr033-20c1860-55",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR009",
+      "model": "HR009-A",
+      "id": "1601943434630",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr009-10-161",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR009",
+      "model": "HR009-B",
+      "id": "1601943411769",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr009-10-161",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    },
+    {
+      "family": "HR009",
+      "model": "HR009-C",
+      "id": "1601943520149",
+      "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+      "source_id": "src-hr-hr009-10-161",
+      "checks": {
+        "one_current_real_source": true,
+        "formal_source_bound": true,
+        "binding_evidence_matches": true,
+        "no_repeated_platform_replacement": true,
+        "formal_picture_sku_proof": true
+      }
+    }
+  ],
+  "failed": [],
+  "stale_source_projections": [],
+  "scope": "Exact recorded HR replacements and verified existing-real-source bindings only; pending review stays pending. Submission ledgers prevent replay. Physical stock and untested public presentation are not implied."
+}

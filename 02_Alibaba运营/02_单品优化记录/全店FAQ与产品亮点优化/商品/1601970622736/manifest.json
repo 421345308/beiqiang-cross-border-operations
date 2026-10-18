@@ -1,0 +1,27 @@
+{
+  "operation": "update",
+  "product_id": "1601970622736",
+  "category_id": 201334413,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "copy.json",
+    "before_get.json",
+    "../../../../05_扩品工程/执行记录/989与725正式新建_2026-10-04_task5/725/task_pack_complete.json",
+    "../../../../../../../Documents/Codex/2026-10-02/task-4/hr_control/basketball_casual_candidate_2026-10-02/725_detail_11.jpg",
+    "current_get.json",
+    "../../../../00_运营SOP/国际站商品全生命周期SOP.md"
+  ],
+  "current_schema": "current_schema.xml",
+  "current_schema_sha256": "3ed77a2baf57ae52b66d6e0cf3dfdd11c3147f21f4737772205a47ae63faf407",
+  "schema_request_id": "0b0b3a2717917372694336553",
+  "schema_acquired_at": "2026-10-11T16:47:46.492364+00:00",
+  "payload_xml": "payload.xml",
+  "field_ids": [
+    "textDesc",
+    "companyFaqDesc"
+  ],
+  "dependency_ids": [
+    "productDescType"
+  ],
+  "observed_model": "BQ-CS063C"
+}

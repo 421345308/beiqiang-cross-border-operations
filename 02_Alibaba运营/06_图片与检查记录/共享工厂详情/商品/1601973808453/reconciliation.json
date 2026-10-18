@@ -1,0 +1,16 @@
+{
+  "product_id": "1601973808453",
+  "status": "SINGLE_CORRECTIVE_REQUEST_FORMALLY_VERIFIED",
+  "first_read_at": "2026-10-12T04:22:05.708720+00:00",
+  "second_read_at": "2026-10-12T04:59:22.549531+00:00",
+  "second_read_file": "未生效修复/before_get.json",
+  "original_callback_preserved": true,
+  "original_fields_unchanged": true,
+  "original_company_images_unchanged": true,
+  "new_request_difference": "New current Schema request explicitly preserves original productTitle; original request had companyImage only",
+  "allow_single_corrective_attempt": true,
+  "source_state_unchanged": true,
+  "corrective_evidence": "未生效修复/update_receipt.json",
+  "current_verification": "verification.json",
+  "resolved_at": "2026-10-12T05:20:19.702484+00:00"
+}

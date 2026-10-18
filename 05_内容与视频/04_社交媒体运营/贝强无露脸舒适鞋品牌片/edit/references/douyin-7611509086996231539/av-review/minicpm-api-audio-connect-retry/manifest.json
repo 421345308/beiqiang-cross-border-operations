@@ -1,0 +1,28 @@
+{
+  "source": "C:\\Users\\spq\\Desktop\\贝强\\05_内容与视频\\04_社交媒体运营\\贝强无露脸舒适鞋品牌片\\edit\\references\\douyin-7611509086996231539\\audio\\audio.wav",
+  "source_sha256": "64efa3b2e19a72a19b12b2d7df010b6db407a6c2075e437fdb423eb2c163ec58",
+  "source_bytes": 909596,
+  "duration_seconds": 28.421,
+  "input_type": "audio_float32",
+  "audio_samples": 454736,
+  "audio_peak_abs": 1.0,
+  "endpoint": "wss://minicpmo45.modelbest.cn/v1/realtime?mode=chat",
+  "model": "MiniCPM-o4.5 official demo",
+  "prompt": "只分析上传的完整28.42秒音轨，勿推测画面。说明实际听到哪些人声/歌词、音乐、脚步或环境声；听不清直说。若有可辨词句，给短摘录和近似时间；描述主要音色、律动、变化、结尾。不要猜歌名，不把鼓点叫脚步。不采用先前对话结论；没有声音输入就明确说明。中文600字以内。",
+  "audio_complete_client": true,
+  "all_video_frames_seen": false,
+  "video_sampling": null,
+  "authorization": "user-approved public-reference analysis",
+  "status": "answered_unverified",
+  "paid_generation": false,
+  "api_key_used": false,
+  "session_id": "sess_107ff82591f8",
+  "backend": "pytorch",
+  "first_text_seconds": 5.688000000001921,
+  "metrics": {
+    "backend": "pytorch",
+    "kv_cache_length": 712
+  },
+  "elapsed_seconds": 15.89100000000326,
+  "response_seconds": 14.18800000000192
+}

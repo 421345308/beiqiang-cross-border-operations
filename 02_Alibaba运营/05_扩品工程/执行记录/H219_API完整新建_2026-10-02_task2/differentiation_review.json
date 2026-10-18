@@ -1,0 +1,77 @@
+{
+  "candidate": {
+    "source": {
+      "reference": "https://ls2017.sooxie.com/detail/1565538",
+      "style": "H219 single-shoe Brown/Black size35-40",
+      "evidence": "evidence/candidate.json + public_index.json + actual original detail_03/05/10/11/14",
+      "critical_facts": {
+        "profile": "women lace-up ankle boot",
+        "upper_structure": "PU round-toe ankle upper",
+        "outsole_structure": "rubber lug sole",
+        "closure": "front lacing and inner-side zipper",
+        "lining": "single-shoe composition not specified",
+        "functional_use": "casual ankle footwear"
+      }
+    },
+    "search_intent": {
+      "key": "women lace up ankle boots side zipper lug sole",
+      "evidence": "Existing H219 source facts and parent-delegated Target proxy; search volume unknown"
+    },
+    "hero_review": {
+      "content_key": "H219-black-pair-handheld-original-detail03",
+      "label_status": "not_present",
+      "evidence": "Source detail_03 and individually viewed H219_M1 output; complete actual shoes, no third-party footwear mark; no price/Chinese",
+      "url": "https://sc04.alicdn.com/kf/Hcf1ce3aff8f94438a4c81cb48e4d1c6al/286385890/Hcf1ce3aff8f94438a4c81cb48e4d1c6al.png",
+      "sha256": "d302eb336b989312d893b1ff60828a508e9bf977323e372279b028608ea27b53",
+      "aliases": [
+        "https://sc04.alicdn.com/kf/Hcf1ce3aff8f94438a4c81cb48e4d1c6al/286385890/Hcf1ce3aff8f94438a4c81cb48e4d1c6al.png",
+        "//sc04.alicdn.com/kf/Hcf1ce3aff8f94438a4c81cb48e4d1c6al/286385890/Hcf1ce3aff8f94438a4c81cb48e4d1c6al.png"
+      ]
+    }
+  },
+  "source_records": {},
+  "evidence_files": [
+    {
+      "path": "evidence\\live_catalog_1.flat.json",
+      "sha256": "4f4d389cf27a3a9954227e527769a02b1a6f7b40e712604a86e2e763a3ca1a94",
+      "kind": "catalog_snapshot"
+    },
+    {
+      "path": "evidence\\live_catalog_2.flat.json",
+      "sha256": "c9bba5d4a4171d9a86b7239ba10587205c6cbb27fd2b32752a178ac403e3ce48",
+      "kind": "catalog_snapshot"
+    },
+    {
+      "path": "evidence\\live_catalog_3.flat.json",
+      "sha256": "9a5b40eada8f868037ebf5a374d46df018ffc2b8e510913cd637f5a5a10c28fd",
+      "kind": "catalog_snapshot"
+    },
+    {
+      "path": "evidence\\candidate.json",
+      "sha256": "ce7c3b6f96f50540afef7cb21c54ca6430defe991578380914f61392fcee0f25",
+      "kind": "source_register"
+    },
+    {
+      "path": "evidence\\public_index.json",
+      "sha256": "253fc015610727b75fcbea327117a9b66a92cfe888383bafa6adc8ffbdbb1ecb",
+      "kind": "source_register"
+    },
+    {
+      "path": "evidence\\page_text.txt",
+      "sha256": "e1813f0ef8884c2a03931119d9ccebdfe1df5453ddd6e589dc1f65810da23a2b",
+      "kind": "source_register"
+    },
+    {
+      "path": "recent_catalog.flat.json",
+      "sha256": "011dc0213a5746ab8af9a7902520cbdb5382a1e9589de76550960f7dc328b9e9",
+      "kind": "catalog_snapshot"
+    },
+    {
+      "path": "old_catalog_projection.json",
+      "sha256": "5449ed8640a4d251c309f24ec15029663b96b0d040137ed3289ddc0b7fc3c0c3",
+      "kind": "catalog_snapshot"
+    }
+  ],
+  "observed_at": "2026-10-02T17:14:14.668738+00:00",
+  "coverage_limit": "Existing saved three catalog pages only; unknown source associations do not establish global clearance. No global re-audit performed."
+}

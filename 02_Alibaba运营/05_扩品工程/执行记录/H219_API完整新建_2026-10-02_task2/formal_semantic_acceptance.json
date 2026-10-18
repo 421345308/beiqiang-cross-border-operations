@@ -1,0 +1,140 @@
+{
+  "product_id": "1601969936536",
+  "observed_at": "2026-10-02T17:53:13.908461+00:00",
+  "source": "alibaba.icbu.product.get + schema.render + product.score.get and actual official CDN downloads",
+  "checks": {
+    "title_model_category": true,
+    "review_approved_display_Y": true,
+    "actual_12_SKU_unique_ids_and_codes": true,
+    "SKU_color_images": true,
+    "actual_ladder_prices": true,
+    "main6": true,
+    "detail4": true,
+    "company5_approved_v3": true,
+    "FAQ6": true,
+    "CDN17_exact_hashes": true,
+    "keyword_persistence": false,
+    "public_page_QA": false
+  },
+  "SKU_bindings": [
+    {
+      "sku_id": 109767077689,
+      "sku_code": "BQ-ABH219-Brown-36",
+      "attr2_value": "{\"222038415\":-36,\"191288010\":3399503}"
+    },
+    {
+      "sku_id": 109767077688,
+      "sku_code": "BQ-ABH219-Brown-35",
+      "attr2_value": "{\"222038415\":-35,\"191288010\":3399503}"
+    },
+    {
+      "sku_id": 109767077691,
+      "sku_code": "BQ-ABH219-Brown-38",
+      "attr2_value": "{\"222038415\":-38,\"191288010\":3399503}"
+    },
+    {
+      "sku_id": 109767077690,
+      "sku_code": "BQ-ABH219-Brown-37",
+      "attr2_value": "{\"222038415\":-37,\"191288010\":3399503}"
+    },
+    {
+      "sku_id": 109767077693,
+      "sku_code": "BQ-ABH219-Brown-40",
+      "attr2_value": "{\"222038415\":-40,\"191288010\":3399503}"
+    },
+    {
+      "sku_id": 109767077692,
+      "sku_code": "BQ-ABH219-Brown-39",
+      "attr2_value": "{\"222038415\":-39,\"191288010\":3399503}"
+    },
+    {
+      "sku_id": 109767077695,
+      "sku_code": "BQ-ABH219-Black-36",
+      "attr2_value": "{\"222038415\":-36,\"191288010\":3327837}"
+    },
+    {
+      "sku_id": 109767077694,
+      "sku_code": "BQ-ABH219-Black-35",
+      "attr2_value": "{\"222038415\":-35,\"191288010\":3327837}"
+    },
+    {
+      "sku_id": 109767077697,
+      "sku_code": "BQ-ABH219-Black-38",
+      "attr2_value": "{\"222038415\":-38,\"191288010\":3327837}"
+    },
+    {
+      "sku_id": 109767077696,
+      "sku_code": "BQ-ABH219-Black-37",
+      "attr2_value": "{\"222038415\":-37,\"191288010\":3327837}"
+    },
+    {
+      "sku_id": 109767077699,
+      "sku_code": "BQ-ABH219-Black-40",
+      "attr2_value": "{\"222038415\":-40,\"191288010\":3327837}"
+    },
+    {
+      "sku_id": 109767077698,
+      "sku_code": "BQ-ABH219-Black-39",
+      "attr2_value": "{\"222038415\":-39,\"191288010\":3327837}"
+    }
+  ],
+  "formal_keywords": [
+    ""
+  ],
+  "render_characters": 111261,
+  "score": 5.0,
+  "score_observed_at": "2026-10-02T17:50:29.345077+00:00",
+  "score_request_id": "210829b717909634341175473",
+  "diagnostics": {
+    "ruleScoreMap": {
+      "title_word_miss_core_error": 0.0,
+      "imageQualityBad": 0.0,
+      "image_scale": 0.0,
+      "title_word_error": 0.0,
+      "image_num": 0.0
+    },
+    "errorReasonSkuImageMoreMap": {},
+    "errorReasonTitleWordMissErrorMap": {},
+    "errorReasonList": [],
+    "errorReasonTitleWordErrorMap": {},
+    "extendCheckMap": {
+      "imageText": true,
+      "sku_image": false,
+      "title_word_miss_core_error": true,
+      "imageQualityBad": true,
+      "sku_text": false,
+      "imageSubTitle": false,
+      "category": true,
+      "title_word_error": true,
+      "selling_point_attribute_conflict": false
+    },
+    "errorReasonCategoryMap": {},
+    "errorReasonSkuTextMap": {},
+    "errorReasonSubTitleMap": {},
+    "errorReasonMap": {},
+    "errorReasonSellingPointAttributeMap": {},
+    "errorReasonSkuImageMap": {},
+    "extendProblemMap": {
+      "imageText": false,
+      "title_word_miss_core_error": false,
+      "imageQualityBad": false,
+      "imageSubTitle": false,
+      "image_scale": false,
+      "inventory": false,
+      "title_word_error": false,
+      "selling_point_attribute_conflict": false,
+      "image_num": false,
+      "freightRate": false,
+      "sku_image": false,
+      "sku_text": false,
+      "price": false,
+      "category": false
+    },
+    "errorReasonQualityBadMap": {},
+    "errorReasonSkuTextMoreMap": {}
+  },
+  "public_QA": "BLOCKED_CLOUD_CAPTCHA_PARENT_DELEGATED_OBSERVATION_2026-10-02_17:51",
+  "overall_status": "PENDING_CONTENT_PUBLIC_QA_AND_KEYWORD",
+  "old_action": "NOT_SENT",
+  "limits": "Formal semantic value and asset identity checks do not prove public page rendering, purchase flow, physical quality or current growth tier. Ignore old API boutique_tag for tier classification."
+}

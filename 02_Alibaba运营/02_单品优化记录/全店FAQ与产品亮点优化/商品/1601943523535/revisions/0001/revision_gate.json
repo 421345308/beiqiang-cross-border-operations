@@ -1,0 +1,44 @@
+{
+  "started_at": "2026-10-11T17:40:10.605531+00:00",
+  "product_id": "1601943523535",
+  "previous_verification": {
+    "product_id": "1601943523535",
+    "observed_at": "2026-10-11T17:38:12.432154+00:00",
+    "request_id": "213e759c17917402964775437",
+    "product_status": "approved",
+    "display": "Y",
+    "display_preserved_after_review": true,
+    "formal_highlights_match": true,
+    "formal_faq_match": true,
+    "unsubmitted_fields_preserved": false,
+    "public_status": "PENDING_APPLICABLE_TEXT_VERIFICATION",
+    "formal_highlights_apostrophe_equivalent": true,
+    "status": "MISMATCH_DIAGNOSE_NO_REPLAY",
+    "schema_target_fields_match": true,
+    "target_copy_status": "TARGET_FORMAL_PASS"
+  },
+  "candidate_sha256": "bf58a77f260b62a639cf7fd050b5778fe94be7cd50ae6da0e3780f86f811d828",
+  "scope": [
+    "textDesc",
+    "companyFaqDesc"
+  ],
+  "no_platform_write": true,
+  "archived_files": [
+    "copy.json",
+    "before_get.json",
+    "before_render.json",
+    "current_schema.xml",
+    "payload.xml",
+    "manifest.json",
+    "prepared.json",
+    "reviewed_baseline.json",
+    "immediate_prewrite_get.json",
+    "update_once.json",
+    "update_receipt.json",
+    "after_get.json",
+    "after_render.json",
+    "after_schema.xml",
+    "verification.json",
+    "non_target_difference.json"
+  ]
+}

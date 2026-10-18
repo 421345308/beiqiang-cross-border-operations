@@ -1,0 +1,4 @@
+python -B -m unittest test_schema_keywords test_schema_publish_contract test_keyword_attempt_diagnosis -v
+Ran 22 tests in 0.513s
+OK
+No network/product mutation performed by tests.

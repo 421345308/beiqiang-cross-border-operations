@@ -1,0 +1,22 @@
+{
+  "method": "alibaba.icbu.product.schema.add",
+  "request_sha256": "7be97ca590b0c1711b74cdbc17e17e8784d38340c243fba1f3c288bbdc41f286",
+  "user_authorized": true,
+  "independent_gates": [
+    "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-4\\independent_acceptance\\936_SCHEMA_COPY_ASSET_PRECHECK.json; exact payload review rolling separately"
+  ],
+  "status": "BUSINESS_VERIFIED",
+  "style_internal": "936",
+  "public_model": "HR051-A",
+  "scope": "Create one 936 complete listing; no old product writes, no OFF API",
+  "started_at_utc": "2026-10-02T11:40:16.580300+00:00",
+  "reply": {
+    "trace_id": "210325bb17909412261005641e0e61",
+    "product_id": 1601969872083,
+    "biz_success": true,
+    "request_id": "213d4e4917909412269454570",
+    "_trace_id_": "210325bb17909412261005641e0e61"
+  },
+  "exit_code": 0,
+  "finished_at_utc": "2026-10-02T11:40:24.847142+00:00"
+}

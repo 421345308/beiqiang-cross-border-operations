@@ -1,0 +1,16 @@
+{
+  "observed_at_UTC": "2026-10-02T22:36:33.986300+00:00",
+  "retrieval": "Public web read, pages crawled today/last week as indicated by provider",
+  "source_category": "https://www.walmart.com/c/best-sellers/women-s-snow-boots",
+  "examples": [
+    {
+      "url": "https://www.walmart.com/ip/Ecetana-Women-s-Snow-Boots-Faux-Fur-Lined-Short-Boots-Side-Zipper-Non-Slip-Outdoor-Winter-Boots-for-Women/20169416970",
+      "observed": "Winter boots, plush/faux-fur lining, side zipper; only1review on category sample. Claims not transferred."
+    },
+    {
+      "url": "https://www.walmart.com/ip/Ecetana-Womens-Snow-Boots-Winter-Shoes-With-Warm-Plush-Fleece-Lined-Ankle-Booties/672827970",
+      "observed": "Category lists plush-lined winter boot;4.5/248reviews observed, not product sales."
+    }
+  ],
+  "inference": "Use winter boot, lining and opening as buyer information order. Quilted modifier relies on F2888 source photos. No measured search volume or F2888 overseas sales evidence."
+}

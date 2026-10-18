@@ -1,0 +1,64 @@
+{
+  "style": "A67",
+  "model": "BQ-CA67",
+  "stage": "LOCAL_READY_PACKAGE_NO_PLATFORM_WRITES",
+  "source": "https://baoduo.sooxie.com/detail/2439758",
+  "category_id": 201334413,
+  "category_name": "Walking Style Shoes",
+  "category_reason": "Full-heel casual shoe for everyday outfits; no sport performance claim",
+  "schema_request_id": "21501b6717909512975776201",
+  "schema_sha256": "cb3be59dc64d9f4449a17a1bf77eb0f562cc0270c1f85786e7601f7a6d150f1e",
+  "verified_required_materials": {
+    "p-1": [
+      "Not specified",
+      -2
+    ],
+    "p-20700": [
+      "Not specified",
+      -2
+    ],
+    "p-191290426": [
+      "Not specified",
+      -2
+    ],
+    "p-191290430": [
+      "Not specified",
+      -2
+    ],
+    "p-210194982": [
+      "EVA",
+      3376399
+    ]
+  },
+  "required_source_fields": [
+    "p-1",
+    "p-20700",
+    "p-191290426",
+    "p-191290430"
+  ],
+  "model_serialization_xml": "<field id=\"p-3\" name=\"Model Number\" type=\"input\"><value inputValue=\"BQ-CA67\">-3</value></field>",
+  "main_local_assets": [
+    "A67\\assets\\M1.jpg",
+    "A67\\assets\\M2.jpg",
+    "A67\\assets\\M3.jpg",
+    "A67\\assets\\M4.jpg",
+    "A67\\assets\\M5.jpg",
+    "A67\\assets\\M6.jpg"
+  ],
+  "detail_local_assets": [
+    "A67\\assets\\D1.jpg",
+    "A67\\assets\\D2.jpg",
+    "A67\\assets\\D3.jpg",
+    "A67\\assets\\D4.jpg"
+  ],
+  "company_original_v3_manifest": "company_v3_manifest.json",
+  "FAQ_count": 6,
+  "SKU_plan": "SKU_plan_NOT_SENT.json",
+  "official_product_image_uploads": 0,
+  "schema_add_requests": 0,
+  "inventory_writes": 0,
+  "publishable_package_completed": true,
+  "next": "Independent final-asset gate, owner release authorization, official upload once, refresh schema if older than24h, assemble actual bank URL payload; never use fake image URLs. No submission authorized in this stage.",
+  "completion_scope": "Source,copy,13local images,5 original company references,15SKU plan and current-schema/model preflight. Official bank/product submission not performed.",
+  "updated_at": "2026-10-02T14:32:40.060781+00:00"
+}

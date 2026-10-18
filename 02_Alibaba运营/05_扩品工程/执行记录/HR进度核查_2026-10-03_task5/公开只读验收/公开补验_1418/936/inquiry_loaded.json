@@ -1,0 +1,3819 @@
+{
+  "atUTC": "2026-10-03T15:42:30.9864916Z",
+  "mode": "read",
+  "rows": [
+    {
+      "name": "最小化",
+      "type": "ControlType.Button",
+      "offscreen": false,
+      "enabled": true,
+      "x": 2324.0,
+      "y": 29.0,
+      "width": 68.0,
+      "height": 59.0
+    },
+    {
+      "name": "最大化",
+      "type": "ControlType.Button",
+      "offscreen": false,
+      "enabled": true,
+      "x": 2391.0,
+      "y": 29.0,
+      "width": 69.0,
+      "height": 59.0
+    },
+    {
+      "name": "关闭",
+      "type": "ControlType.Button",
+      "offscreen": false,
+      "enabled": true,
+      "x": 2460.0,
+      "y": 29.0,
+      "width": 69.0,
+      "height": 59.0
+    },
+    {
+      "name": "返回",
+      "type": "ControlType.Button",
+      "offscreen": false,
+      "enabled": true,
+      "x": 20.0,
+      "y": 96.0,
+      "width": 52.0,
+      "height": 51.0
+    },
+    {
+      "name": "前进",
+      "type": "ControlType.Button",
+      "offscreen": false,
+      "enabled": false,
+      "x": 74.0,
+      "y": 96.0,
+      "width": 52.0,
+      "height": 51.0
+    },
+    {
+      "name": "重新加载",
+      "type": "ControlType.Button",
+      "offscreen": false,
+      "enabled": true,
+      "x": 128.0,
+      "y": 96.0,
+      "width": 52.0,
+      "height": 51.0
+    },
+    {
+      "name": "查看网站信息",
+      "type": "ControlType.Button",
+      "offscreen": false,
+      "enabled": true,
+      "x": 200.0,
+      "y": 104.0,
+      "width": 37.0,
+      "height": 37.0
+    },
+    {
+      "name": "地址和搜索栏",
+      "type": "ControlType.Edit",
+      "offscreen": false,
+      "enabled": true,
+      "x": 248.0,
+      "y": 104.0,
+      "width": 1906.0,
+      "height": 37.0
+    },
+    {
+      "name": "翻译",
+      "type": "ControlType.Button",
+      "offscreen": false,
+      "enabled": true,
+      "x": 2165.0,
+      "y": 104.0,
+      "width": 37.0,
+      "height": 37.0
+    },
+    {
+      "name": "为此标签页添加书签",
+      "type": "ControlType.Button",
+      "offscreen": false,
+      "enabled": true,
+      "x": 2213.0,
+      "y": 104.0,
+      "width": 37.0,
+      "height": 37.0
+    },
+    {
+      "name": "ChatGPT\n可以访问此网站",
+      "type": "ControlType.Button",
+      "offscreen": false,
+      "enabled": true,
+      "x": 2280.0,
+      "y": 96.0,
+      "width": 51.0,
+      "height": 51.0
+    },
+    {
+      "name": "扩展程序",
+      "type": "ControlType.Button",
+      "offscreen": false,
+      "enabled": true,
+      "x": 2334.0,
+      "y": 96.0,
+      "width": 51.0,
+      "height": 51.0
+    },
+    {
+      "name": "培强",
+      "type": "ControlType.Button",
+      "offscreen": false,
+      "enabled": true,
+      "x": 2415.0,
+      "y": 96.0,
+      "width": 51.0,
+      "height": 51.0
+    },
+    {
+      "name": "Chrome",
+      "type": "ControlType.Button",
+      "offscreen": false,
+      "enabled": true,
+      "x": 2469.0,
+      "y": 96.0,
+      "width": 51.0,
+      "height": 51.0
+    },
+    {
+      "name": "Textile Lace-up Casual Sneakers With Rubber Outsole - Buy Product on Alibaba.com",
+      "type": "ControlType.Document",
+      "offscreen": false,
+      "enabled": true,
+      "x": 17.0,
+      "y": 158.0,
+      "width": 2513.0,
+      "height": 1359.0
+    },
+    {
+      "name": "What are you looking for?",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 506.0,
+      "y": 197.0,
+      "width": 272.0,
+      "height": 30.0
+    },
+    {
+      "name": "women’s intimates",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 506.0,
+      "y": 164.0,
+      "width": 200.0,
+      "height": 30.0
+    },
+    {
+      "name": "watch",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 506.0,
+      "y": 197.0,
+      "width": 65.0,
+      "height": 30.0
+    },
+    {
+      "name": "plus size lingerie",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 506.0,
+      "y": 230.0,
+      "width": 177.0,
+      "height": 30.0
+    },
+    {
+      "name": "laptop",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 506.0,
+      "y": 263.0,
+      "width": 69.0,
+      "height": 30.0
+    },
+    {
+      "name": "cars",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 506.0,
+      "y": 296.0,
+      "width": 46.0,
+      "height": 30.0
+    },
+    {
+      "name": "shoes",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 506.0,
+      "y": 329.0,
+      "width": 64.0,
+      "height": 30.0
+    },
+    {
+      "name": "squishy toys",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 506.0,
+      "y": 362.0,
+      "width": 132.0,
+      "height": 30.0
+    },
+    {
+      "name": "women’s intimates",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 506.0,
+      "y": 395.0,
+      "width": 200.0,
+      "height": 30.0
+    },
+    {
+      "name": "Search Alibaba",
+      "type": "ControlType.Edit",
+      "offscreen": false,
+      "enabled": true,
+      "x": 506.0,
+      "y": 195.0,
+      "width": 987.0,
+      "height": 34.0
+    },
+    {
+      "name": "Image search",
+      "type": "ControlType.Button",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1516.0,
+      "y": 194.0,
+      "width": 37.0,
+      "height": 36.0
+    },
+    {
+      "name": "Search",
+      "type": "ControlType.Button",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1564.0,
+      "y": 188.0,
+      "width": 153.0,
+      "height": 48.0
+    },
+    {
+      "name": "Deliver to:",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1783.0,
+      "y": 187.0,
+      "width": 81.0,
+      "height": 22.0
+    },
+    {
+      "name": "CN",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1819.0,
+      "y": 211.0,
+      "width": 32.0,
+      "height": 26.0
+    },
+    {
+      "name": "English-USD",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1951.0,
+      "y": 199.0,
+      "width": 118.0,
+      "height": 26.0
+    },
+    {
+      "name": "cart",
+      "type": "ControlType.Hyperlink",
+      "offscreen": false,
+      "enabled": true,
+      "x": 2117.0,
+      "y": 190.0,
+      "width": 36.0,
+      "height": 44.0
+    },
+    {
+      "name": "icon-order",
+      "type": "ControlType.Hyperlink",
+      "offscreen": false,
+      "enabled": true,
+      "x": 2273.0,
+      "y": 193.0,
+      "width": 36.0,
+      "height": 37.0
+    },
+    {
+      "name": "All categories",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 167.0,
+      "y": 268.0,
+      "width": 129.0,
+      "height": 26.0
+    },
+    {
+      "name": "Verified manufacturers",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 337.0,
+      "y": 268.0,
+      "width": 216.0,
+      "height": 26.0
+    },
+    {
+      "name": "Dropshipping",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 594.0,
+      "y": 268.0,
+      "width": 128.0,
+      "height": 26.0
+    },
+    {
+      "name": "About Alibaba.com",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1683.0,
+      "y": 268.0,
+      "width": 178.0,
+      "height": 26.0
+    },
+    {
+      "name": "Help Center",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1902.0,
+      "y": 268.0,
+      "width": 114.0,
+      "height": 26.0
+    },
+    {
+      "name": "Accio Work",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 2057.0,
+      "y": 268.0,
+      "width": 106.0,
+      "height": 26.0
+    },
+    {
+      "name": "Sell on Alibaba.com",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 2204.0,
+      "y": 268.0,
+      "width": 183.0,
+      "height": 26.0
+    },
+    {
+      "name": "Shoes & Accessories",
+      "type": "ControlType.Hyperlink",
+      "offscreen": false,
+      "enabled": true,
+      "x": 176.0,
+      "y": 321.0,
+      "width": 167.0,
+      "height": 25.0
+    },
+    {
+      "name": "Men's Shoes",
+      "type": "ControlType.Hyperlink",
+      "offscreen": false,
+      "enabled": true,
+      "x": 375.0,
+      "y": 321.0,
+      "width": 103.0,
+      "height": 25.0
+    },
+    {
+      "name": "Casual Shoes",
+      "type": "ControlType.Hyperlink",
+      "offscreen": false,
+      "enabled": true,
+      "x": 510.0,
+      "y": 321.0,
+      "width": 110.0,
+      "height": 25.0
+    },
+    {
+      "name": "Walking Style Shoes",
+      "type": "ControlType.Hyperlink",
+      "offscreen": false,
+      "enabled": true,
+      "x": 652.0,
+      "y": 321.0,
+      "width": 163.0,
+      "height": 25.0
+    },
+    {
+      "name": "Next slide",
+      "type": "ControlType.Button",
+      "offscreen": false,
+      "enabled": true,
+      "x": 204.0,
+      "y": 958.0,
+      "width": 49.0,
+      "height": 49.0
+    },
+    {
+      "name": "Next slide",
+      "type": "ControlType.Button",
+      "offscreen": false,
+      "enabled": true,
+      "x": 882.0,
+      "y": 670.0,
+      "width": 49.0,
+      "height": 49.0
+    },
+    {
+      "name": "Add to favorites",
+      "type": "ControlType.Button",
+      "offscreen": false,
+      "enabled": true,
+      "x": 882.0,
+      "y": 387.0,
+      "width": 49.0,
+      "height": 49.0
+    },
+    {
+      "name": "find similar",
+      "type": "ControlType.Hyperlink",
+      "offscreen": false,
+      "enabled": true,
+      "x": 882.0,
+      "y": 448.0,
+      "width": 49.0,
+      "height": 49.0
+    },
+    {
+      "name": "Quanzhou Beiqiang Footwear & Apparel Co., Ltd. logo",
+      "type": "ControlType.Hyperlink",
+      "offscreen": false,
+      "enabled": true,
+      "x": 194.0,
+      "y": 1060.0,
+      "width": 60.0,
+      "height": 61.0
+    },
+    {
+      "name": "Quanzhou Beiqiang Footwear & Apparel Co., Ltd.",
+      "type": "ControlType.Hyperlink",
+      "offscreen": false,
+      "enabled": true,
+      "x": 272.0,
+      "y": 1060.0,
+      "width": 659.0,
+      "height": 28.0
+    },
+    {
+      "name": "CN",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 303.0,
+      "y": 1094.0,
+      "width": 27.0,
+      "height": 22.0
+    },
+    {
+      "name": "1 yr",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 350.0,
+      "y": 1094.0,
+      "width": 27.0,
+      "height": 22.0
+    },
+    {
+      "name": "Manufacturer,Trading Company",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 397.0,
+      "y": 1094.0,
+      "width": 254.0,
+      "height": 22.0
+    },
+    {
+      "name": "<$1K",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 212.0,
+      "y": 1157.0,
+      "width": 49.0,
+      "height": 26.0
+    },
+    {
+      "name": "Online revenue",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 212.0,
+      "y": 1187.0,
+      "width": 122.0,
+      "height": 22.0
+    },
+    {
+      "name": "≤1h",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 571.0,
+      "y": 1157.0,
+      "width": 35.0,
+      "height": 26.0
+    },
+    {
+      "name": "Response time",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 571.0,
+      "y": 1187.0,
+      "width": 120.0,
+      "height": 22.0
+    },
+    {
+      "name": "Supplier vetting Generate report",
+      "type": "ControlType.Hyperlink",
+      "offscreen": false,
+      "enabled": true,
+      "x": 194.0,
+      "y": 1246.0,
+      "width": 737.0,
+      "height": 61.0
+    },
+    {
+      "name": "Textile Lace-Up Casual Sneakers with Rubber Outsole",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 996.0,
+      "y": 393.0,
+      "width": 790.0,
+      "height": 34.0
+    },
+    {
+      "name": "No reviews yet",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 996.0,
+      "y": 440.0,
+      "width": 138.0,
+      "height": 26.0
+    },
+    {
+      "name": "$18.37",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 996.0,
+      "y": 523.0,
+      "width": 119.0,
+      "height": 47.0
+    },
+    {
+      "name": "2-49 pairs",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 996.0,
+      "y": 581.0,
+      "width": 94.0,
+      "height": 25.0
+    },
+    {
+      "name": "$17.14",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1150.0,
+      "y": 523.0,
+      "width": 106.0,
+      "height": 47.0
+    },
+    {
+      "name": "50-99 pairs",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1150.0,
+      "y": 581.0,
+      "width": 108.0,
+      "height": 25.0
+    },
+    {
+      "name": "$15.92",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1293.0,
+      "y": 523.0,
+      "width": 118.0,
+      "height": 47.0
+    },
+    {
+      "name": "≥100 pairs",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1293.0,
+      "y": 581.0,
+      "width": 98.0,
+      "height": 25.0
+    },
+    {
+      "name": "Select now",
+      "type": "ControlType.Button",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1648.0,
+      "y": 658.0,
+      "width": 120.0,
+      "height": 36.0
+    },
+    {
+      "name": "Color",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 996.0,
+      "y": 661.0,
+      "width": 61.0,
+      "height": 29.0
+    },
+    {
+      "name": "Black",
+      "type": "ControlType.Button",
+      "offscreen": false,
+      "enabled": true,
+      "x": 996.0,
+      "y": 712.0,
+      "width": 78.0,
+      "height": 77.0
+    },
+    {
+      "name": "Black",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1033.0,
+      "y": 789.0,
+      "width": 53.0,
+      "height": 26.0
+    },
+    {
+      "name": "Sand",
+      "type": "ControlType.Button",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1085.0,
+      "y": 712.0,
+      "width": 78.0,
+      "height": 77.0
+    },
+    {
+      "name": "Sand",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1122.0,
+      "y": 789.0,
+      "width": 49.0,
+      "height": 26.0
+    },
+    {
+      "name": "EUR Size",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 996.0,
+      "y": 809.0,
+      "width": 99.0,
+      "height": 30.0
+    },
+    {
+      "name": "Size 38",
+      "type": "ControlType.Button",
+      "offscreen": false,
+      "enabled": true,
+      "x": 996.0,
+      "y": 860.0,
+      "width": 105.0,
+      "height": 55.0
+    },
+    {
+      "name": "Size 38",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1014.0,
+      "y": 874.0,
+      "width": 69.0,
+      "height": 26.0
+    },
+    {
+      "name": "Size 39",
+      "type": "ControlType.Button",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1112.0,
+      "y": 860.0,
+      "width": 103.0,
+      "height": 55.0
+    },
+    {
+      "name": "Size 39",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1130.0,
+      "y": 874.0,
+      "width": 67.0,
+      "height": 26.0
+    },
+    {
+      "name": "Size 40",
+      "type": "ControlType.Button",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1226.0,
+      "y": 860.0,
+      "width": 104.0,
+      "height": 55.0
+    },
+    {
+      "name": "Size 40",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1244.0,
+      "y": 874.0,
+      "width": 68.0,
+      "height": 26.0
+    },
+    {
+      "name": "Size 41",
+      "type": "ControlType.Button",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1341.0,
+      "y": 860.0,
+      "width": 99.0,
+      "height": 55.0
+    },
+    {
+      "name": "Size 41",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1359.0,
+      "y": 874.0,
+      "width": 63.0,
+      "height": 26.0
+    },
+    {
+      "name": "Size 42",
+      "type": "ControlType.Button",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1451.0,
+      "y": 860.0,
+      "width": 103.0,
+      "height": 55.0
+    },
+    {
+      "name": "Size 42",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1469.0,
+      "y": 874.0,
+      "width": 67.0,
+      "height": 26.0
+    },
+    {
+      "name": "Size 43",
+      "type": "ControlType.Button",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1565.0,
+      "y": 860.0,
+      "width": 103.0,
+      "height": 55.0
+    },
+    {
+      "name": "Size 43",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1583.0,
+      "y": 874.0,
+      "width": 67.0,
+      "height": 26.0
+    },
+    {
+      "name": "Size 44",
+      "type": "ControlType.Button",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1679.0,
+      "y": 860.0,
+      "width": 103.0,
+      "height": 55.0
+    },
+    {
+      "name": "Size 44",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1697.0,
+      "y": 874.0,
+      "width": 67.0,
+      "height": 26.0
+    },
+    {
+      "name": "Key attributes",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 996.0,
+      "y": 963.0,
+      "width": 790.0,
+      "height": 34.0
+    },
+    {
+      "name": "Outsole Material",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1014.0,
+      "y": 1033.0,
+      "width": 156.0,
+      "height": 26.0
+    },
+    {
+      "name": "Rubber",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1014.0,
+      "y": 1070.0,
+      "width": 83.0,
+      "height": 30.0
+    },
+    {
+      "name": "Place of Origin",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1297.0,
+      "y": 1033.0,
+      "width": 137.0,
+      "height": 26.0
+    },
+    {
+      "name": "China",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1297.0,
+      "y": 1070.0,
+      "width": 65.0,
+      "height": 30.0
+    },
+    {
+      "name": "Lining Material",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1581.0,
+      "y": 1033.0,
+      "width": 139.0,
+      "height": 26.0
+    },
+    {
+      "name": "Not specified",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1581.0,
+      "y": 1070.0,
+      "width": 151.0,
+      "height": 30.0
+    },
+    {
+      "name": "Closure Type",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1014.0,
+      "y": 1132.0,
+      "width": 123.0,
+      "height": 26.0
+    },
+    {
+      "name": "Lace-up",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1014.0,
+      "y": 1169.0,
+      "width": 92.0,
+      "height": 30.0
+    },
+    {
+      "name": "Midsole Material",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1297.0,
+      "y": 1132.0,
+      "width": 157.0,
+      "height": 26.0
+    },
+    {
+      "name": "Not specified",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1297.0,
+      "y": 1169.0,
+      "width": 151.0,
+      "height": 30.0
+    },
+    {
+      "name": "Upper Material",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1581.0,
+      "y": 1132.0,
+      "width": 141.0,
+      "height": 26.0
+    },
+    {
+      "name": "Textile",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1581.0,
+      "y": 1169.0,
+      "width": 74.0,
+      "height": 30.0
+    },
+    {
+      "name": "Shipping",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1863.0,
+      "y": 402.0,
+      "width": 99.0,
+      "height": 30.0
+    },
+    {
+      "name": "Shipping fee and delivery date to be negotiated. Chat with supplier now for more details.",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1863.0,
+      "y": 455.0,
+      "width": 450.0,
+      "height": 56.0
+    },
+    {
+      "name": "Alibaba.com order protection",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1863.0,
+      "y": 562.0,
+      "width": 324.0,
+      "height": 37.0
+    },
+    {
+      "name": "Secure payments",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1898.0,
+      "y": 616.0,
+      "width": 170.0,
+      "height": 31.0
+    },
+    {
+      "name": "Every payment you make on Alibaba.com is secured with strict SSL encryption and PCI DSS data protection protocols",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1902.0,
+      "y": 688.0,
+      "width": 414.0,
+      "height": 73.0
+    },
+    {
+      "name": "Money-back guarantee",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1899.0,
+      "y": 754.0,
+      "width": 227.0,
+      "height": 31.0
+    },
+    {
+      "name": "Get your money back for missing deliveries and defective or damaged products, plus free local returns for defects",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1902.0,
+      "y": 796.0,
+      "width": 415.0,
+      "height": 73.0
+    },
+    {
+      "name": "Send inquiry",
+      "type": "ControlType.Button",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1863.0,
+      "y": 868.0,
+      "width": 455.0,
+      "height": 73.0
+    },
+    {
+      "name": "Chat now",
+      "type": "ControlType.Button",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1863.0,
+      "y": 958.0,
+      "width": 455.0,
+      "height": 73.0
+    },
+    {
+      "name": "Only orders placed and paid through Alibaba.com can enjoy free protection by",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1863.0,
+      "y": 1055.0,
+      "width": 429.0,
+      "height": 46.0
+    },
+    {
+      "name": "Key attributes",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 176.0,
+      "y": 1523.0,
+      "width": 1543.0,
+      "height": 43.0
+    },
+    {
+      "name": "Outsole Material",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 201.0,
+      "y": 1621.0,
+      "width": 155.0,
+      "height": 26.0
+    },
+    {
+      "name": "Rubber",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 509.0,
+      "y": 1621.0,
+      "width": 72.0,
+      "height": 26.0
+    },
+    {
+      "name": "Midsole Material",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 971.0,
+      "y": 1621.0,
+      "width": 157.0,
+      "height": 26.0
+    },
+    {
+      "name": "Not specified",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1279.0,
+      "y": 1621.0,
+      "width": 132.0,
+      "height": 26.0
+    },
+    {
+      "name": "Lining Material",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 201.0,
+      "y": 1697.0,
+      "width": 139.0,
+      "height": 26.0
+    },
+    {
+      "name": "Not specified",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 509.0,
+      "y": 1697.0,
+      "width": 132.0,
+      "height": 26.0
+    },
+    {
+      "name": "Model Number",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 971.0,
+      "y": 1697.0,
+      "width": 143.0,
+      "height": 26.0
+    },
+    {
+      "name": "HR051-A",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1279.0,
+      "y": 1697.0,
+      "width": 86.0,
+      "height": 26.0
+    },
+    {
+      "name": "Place of Origin",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 201.0,
+      "y": 1773.0,
+      "width": 137.0,
+      "height": 26.0
+    },
+    {
+      "name": "China",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 509.0,
+      "y": 1773.0,
+      "width": 57.0,
+      "height": 26.0
+    },
+    {
+      "name": "Closure Type",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 971.0,
+      "y": 1773.0,
+      "width": 123.0,
+      "height": 26.0
+    },
+    {
+      "name": "Lace-up",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1279.0,
+      "y": 1773.0,
+      "width": 81.0,
+      "height": 26.0
+    },
+    {
+      "name": "Upper Material",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 201.0,
+      "y": 1849.0,
+      "width": 140.0,
+      "height": 26.0
+    },
+    {
+      "name": "Textile",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 509.0,
+      "y": 1849.0,
+      "width": 64.0,
+      "height": 26.0
+    },
+    {
+      "name": "Packaging and delivery",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 176.0,
+      "y": 1930.0,
+      "width": 1543.0,
+      "height": 37.0
+    },
+    {
+      "name": "Selling Units",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 201.0,
+      "y": 2010.0,
+      "width": 117.0,
+      "height": 26.0
+    },
+    {
+      "name": "Single item",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 509.0,
+      "y": 2010.0,
+      "width": 110.0,
+      "height": 26.0
+    },
+    {
+      "name": "Single package size",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 971.0,
+      "y": 2010.0,
+      "width": 185.0,
+      "height": 26.0
+    },
+    {
+      "name": "34X23X13 cm",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1279.0,
+      "y": 2010.0,
+      "width": 133.0,
+      "height": 26.0
+    },
+    {
+      "name": "Single gross weight",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 201.0,
+      "y": 2086.0,
+      "width": 183.0,
+      "height": 26.0
+    },
+    {
+      "name": "0.500 kg",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 509.0,
+      "y": 2086.0,
+      "width": 85.0,
+      "height": 26.0
+    },
+    {
+      "name": "Ratings & Reviews",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 176.0,
+      "y": 2234.0,
+      "width": 1543.0,
+      "height": 40.0
+    },
+    {
+      "name": "No reviews yet",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 176.0,
+      "y": 2483.0,
+      "width": 164.0,
+      "height": 30.0
+    },
+    {
+      "name": "Know your supplier",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 176.0,
+      "y": 2641.0,
+      "width": 1543.0,
+      "height": 43.0
+    },
+    {
+      "name": "company logo",
+      "type": "ControlType.Hyperlink",
+      "offscreen": true,
+      "enabled": true,
+      "x": 206.0,
+      "y": 2743.0,
+      "width": 96.0,
+      "height": 97.0
+    },
+    {
+      "name": "Quanzhou Beiqiang Footwear & Apparel Co., Ltd.",
+      "type": "ControlType.Hyperlink",
+      "offscreen": true,
+      "enabled": true,
+      "x": 320.0,
+      "y": 2749.0,
+      "width": 465.0,
+      "height": 26.0
+    },
+    {
+      "name": "Manufacturer,Trading Company",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 320.0,
+      "y": 2792.0,
+      "width": 269.0,
+      "height": 22.0
+    },
+    {
+      "name": "1 yr",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 603.0,
+      "y": 2792.0,
+      "width": 30.0,
+      "height": 22.0
+    },
+    {
+      "name": " on Alibaba.com",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 632.0,
+      "y": 2792.0,
+      "width": 127.0,
+      "height": 22.0
+    },
+    {
+      "name": "Located in CN",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 344.0,
+      "y": 2822.0,
+      "width": 114.0,
+      "height": 22.0
+    },
+    {
+      "name": "Trending Asia supplier",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 236.0,
+      "y": 2853.0,
+      "width": 207.0,
+      "height": 26.0
+    },
+    {
+      "name": "Company overview",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 236.0,
+      "y": 2950.0,
+      "width": 216.0,
+      "height": 30.0
+    },
+    {
+      "name": "Online revenue ⓘ <$1K",
+      "type": "ControlType.Button",
+      "offscreen": true,
+      "enabled": true,
+      "x": 236.0,
+      "y": 3007.0,
+      "width": 688.0,
+      "height": 85.0
+    },
+    {
+      "name": "Response time ⓘ ≤1h",
+      "type": "ControlType.Button",
+      "offscreen": true,
+      "enabled": true,
+      "x": 971.0,
+      "y": 3007.0,
+      "width": 688.0,
+      "height": 85.0
+    },
+    {
+      "name": "Company profile",
+      "type": "ControlType.Hyperlink",
+      "offscreen": true,
+      "enabled": true,
+      "x": 206.0,
+      "y": 3145.0,
+      "width": 732.0,
+      "height": 55.0
+    },
+    {
+      "name": "More products",
+      "type": "ControlType.Hyperlink",
+      "offscreen": true,
+      "enabled": true,
+      "x": 955.0,
+      "y": 3145.0,
+      "width": 734.0,
+      "height": 55.0
+    },
+    {
+      "name": "Product descriptions from the supplier",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 176.0,
+      "y": 3317.0,
+      "width": 553.0,
+      "height": 37.0
+    },
+    {
+      "name": "Report abuse",
+      "type": "ControlType.Hyperlink",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1592.0,
+      "y": 3321.0,
+      "width": 127.0,
+      "height": 28.0
+    },
+    {
+      "name": "Warning/Disclaimer",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 176.0,
+      "y": 3406.0,
+      "width": 193.0,
+      "height": 26.0
+    },
+    {
+      "name": "California Proposition 65 Consumer Warning",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 192.0,
+      "y": 3448.0,
+      "width": 415.0,
+      "height": 26.0
+    },
+    {
+      "name": "View more",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 612.0,
+      "y": 3448.0,
+      "width": 99.0,
+      "height": 26.0
+    },
+    {
+      "name": "Highlights at a glance",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 212.0,
+      "y": 3560.0,
+      "width": 985.0,
+      "height": 115.0
+    },
+    {
+      "name": "Casual lace-up sneakers with a textile upper, molded decorative overlays and a rubber outsole. Black and Sand color options, listed sizes 38-44. Minimum order: 2 pairs. Send your color and size quantities and destination for order confirmation.",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 230.0,
+      "y": 3721.0,
+      "width": 1393.0,
+      "height": 118.0
+    },
+    {
+      "name": "About this supplier",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 176.0,
+      "y": 10251.0,
+      "width": 435.0,
+      "height": 59.0
+    },
+    {
+      "name": "Company capabilities are shown below. Product-specific customization, samples, packing and dispatch arrangements are assessed against your order requirements before quotation.",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 176.0,
+      "y": 10362.0,
+      "width": 1512.0,
+      "height": 76.0
+    },
+    {
+      "name": "Company overview",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 176.0,
+      "y": 10516.0,
+      "width": 324.0,
+      "height": 44.0
+    },
+    {
+      "name": "Customization capabilities",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 176.0,
+      "y": 12209.0,
+      "width": 455.0,
+      "height": 44.0
+    },
+    {
+      "name": "Production workflow",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 176.0,
+      "y": 13902.0,
+      "width": 357.0,
+      "height": 44.0
+    },
+    {
+      "name": "Packaging & shipping specifications",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 176.0,
+      "y": 15595.0,
+      "width": 617.0,
+      "height": 44.0
+    },
+    {
+      "name": "Extended company profile",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 176.0,
+      "y": 17288.0,
+      "width": 447.0,
+      "height": 44.0
+    },
+    {
+      "name": "FAQs",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 176.0,
+      "y": 19059.0,
+      "width": 118.0,
+      "height": 59.0
+    },
+    {
+      "name": "Which colors and sizes are listed?",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 194.0,
+      "y": 19187.0,
+      "width": 478.0,
+      "height": 37.0
+    },
+    {
+      "name": "Black and Sand, in sizes 38-44. Send the required quantity for each color and size so availability can be confirmed for your order.",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 194.0,
+      "y": 19239.0,
+      "width": 1452.0,
+      "height": 76.0
+    },
+    {
+      "name": "What materials are confirmed?",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 194.0,
+      "y": 19359.0,
+      "width": 438.0,
+      "height": 37.0
+    },
+    {
+      "name": "Textile upper, molded decorative overlays and rubber outsole. If you need additional material specifications, include them with your inquiry for confirmation.",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 194.0,
+      "y": 19411.0,
+      "width": 1457.0,
+      "height": 76.0
+    },
+    {
+      "name": "What are the minimum order and quantity prices?",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 194.0,
+      "y": 19531.0,
+      "width": 703.0,
+      "height": 37.0
+    },
+    {
+      "name": "Minimum order: 2 pairs. 2-49 pairs: USD 18.37/pair; 50-99 pairs: USD 17.14/pair; 100+ pairs: USD 15.92/pair. Freight and order terms are quoted separately.",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 194.0,
+      "y": 19583.0,
+      "width": 1465.0,
+      "height": 76.0
+    },
+    {
+      "name": "Can all listed colors and sizes be supplied?",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 194.0,
+      "y": 19703.0,
+      "width": 606.0,
+      "height": 37.0
+    },
+    {
+      "name": "Availability is confirmed against your requested color, size and quantity breakdown before the order is finalized. The listed options are not a guarantee of current stock for every combination.",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 194.0,
+      "y": 19755.0,
+      "width": 1452.0,
+      "height": 76.0
+    },
+    {
+      "name": "What is the dispatch lead time?",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 194.0,
+      "y": 19875.0,
+      "width": 446.0,
+      "height": 37.0
+    },
+    {
+      "name": "Send your quantity and required dispatch date. Order-specific availability, packing and dispatch timing will be confirmed before the order is finalized.",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 194.0,
+      "y": 19927.0,
+      "width": 1435.0,
+      "height": 76.0
+    },
+    {
+      "name": "How can I request a quotation?",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 194.0,
+      "y": 20047.0,
+      "width": 441.0,
+      "height": 37.0
+    },
+    {
+      "name": "Send your color and size quantities, total quantity, destination and packing requirements. We will confirm the order details and provide an order-specific quotation.",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 194.0,
+      "y": 20099.0,
+      "width": 1505.0,
+      "height": 76.0
+    },
+    {
+      "name": "Frequently bought together",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 77.0,
+      "y": 20366.0,
+      "width": 2370.0,
+      "height": 40.0
+    },
+    {
+      "name": "All 2 colors",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 125.0,
+      "y": 20767.0,
+      "width": 88.0,
+      "height": 21.0
+    },
+    {
+      "name": "Women's Leather Slip On Loafers with Genuine Leather Lining for Casual Wear",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 77.0,
+      "y": 20803.0,
+      "width": 308.0,
+      "height": 79.0
+    },
+    {
+      "name": "$27.30-29",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 77.0,
+      "y": 20870.0,
+      "width": 113.0,
+      "height": 29.0
+    },
+    {
+      "name": "MOQ: 2 pairs",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 77.0,
+      "y": 20908.0,
+      "width": 121.0,
+      "height": 25.0
+    },
+    {
+      "name": "Women's Slip On Loafers with Wool Lining and Instep Buckle Strap",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 419.0,
+      "y": 20767.0,
+      "width": 298.0,
+      "height": 80.0
+    },
+    {
+      "name": "$31.50-33.40",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 419.0,
+      "y": 20834.0,
+      "width": 150.0,
+      "height": 30.0
+    },
+    {
+      "name": "MOQ: 2 pairs",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 419.0,
+      "y": 20872.0,
+      "width": 121.0,
+      "height": 26.0
+    },
+    {
+      "name": "All 2 colors",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 810.0,
+      "y": 20767.0,
+      "width": 88.0,
+      "height": 22.0
+    },
+    {
+      "name": "Women's Classic Leather Ballet Flats with Instep Strap for Everyday Casual Wear",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 762.0,
+      "y": 20803.0,
+      "width": 294.0,
+      "height": 80.0
+    },
+    {
+      "name": "$27.50",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 762.0,
+      "y": 20870.0,
+      "width": 76.0,
+      "height": 30.0
+    },
+    {
+      "name": "MOQ: 2 pairs",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 762.0,
+      "y": 20908.0,
+      "width": 121.0,
+      "height": 26.0
+    },
+    {
+      "name": "Women's Low Top Lace Up Shoes with Apron Toe Detail for Casual Outfits",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1105.0,
+      "y": 20767.0,
+      "width": 313.0,
+      "height": 80.0
+    },
+    {
+      "name": "$10.90-14.90",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1105.0,
+      "y": 20834.0,
+      "width": 141.0,
+      "height": 30.0
+    },
+    {
+      "name": "MOQ: 50 pairs",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1105.0,
+      "y": 20872.0,
+      "width": 135.0,
+      "height": 26.0
+    },
+    {
+      "name": "Previous slide",
+      "type": "ControlType.Button",
+      "offscreen": true,
+      "enabled": false,
+      "x": 77.0,
+      "y": 20547.0,
+      "width": 54.0,
+      "height": 55.0
+    },
+    {
+      "name": "Next slide",
+      "type": "ControlType.Button",
+      "offscreen": true,
+      "enabled": false,
+      "x": 2393.0,
+      "y": 20547.0,
+      "width": 54.0,
+      "height": 55.0
+    },
+    {
+      "name": "Supplier's popular products",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 77.0,
+      "y": 21043.0,
+      "width": 2370.0,
+      "height": 40.0
+    },
+    {
+      "name": "All 2 colors",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 125.0,
+      "y": 21443.0,
+      "width": 88.0,
+      "height": 22.0
+    },
+    {
+      "name": "Wholesale High Top Knit Sock Sneakers Slip-On EVA Sole Mesh Lining Casual Walking Shoes for Men and Women",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 77.0,
+      "y": 21479.0,
+      "width": 310.0,
+      "height": 107.0
+    },
+    {
+      "name": "$9.09-9.49",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 77.0,
+      "y": 21546.0,
+      "width": 119.0,
+      "height": 30.0
+    },
+    {
+      "name": "MOQ: 2 pairs",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 77.0,
+      "y": 21584.0,
+      "width": 121.0,
+      "height": 26.0
+    },
+    {
+      "name": "All 3 colors",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 488.0,
+      "y": 21443.0,
+      "width": 89.0,
+      "height": 22.0
+    },
+    {
+      "name": "Wholesale Shoes Model HR041-B",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 419.0,
+      "y": 21479.0,
+      "width": 301.0,
+      "height": 53.0
+    },
+    {
+      "name": "$9.11-9.51",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 419.0,
+      "y": 21546.0,
+      "width": 106.0,
+      "height": 30.0
+    },
+    {
+      "name": "MOQ: 2 pairs",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 419.0,
+      "y": 21584.0,
+      "width": 121.0,
+      "height": 26.0
+    },
+    {
+      "name": "All 2 colors",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 810.0,
+      "y": 21443.0,
+      "width": 88.0,
+      "height": 22.0
+    },
+    {
+      "name": "Men's Low Top Penny Loafers with Rubber Sole for Everyday Casual Outfits",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 762.0,
+      "y": 21479.0,
+      "width": 296.0,
+      "height": 80.0
+    },
+    {
+      "name": "$29.90-31.70",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 762.0,
+      "y": 21546.0,
+      "width": 143.0,
+      "height": 30.0
+    },
+    {
+      "name": "MOQ: 2 pairs",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 762.0,
+      "y": 21584.0,
+      "width": 121.0,
+      "height": 26.0
+    },
+    {
+      "name": "All 2 colors",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1153.0,
+      "y": 21443.0,
+      "width": 88.0,
+      "height": 22.0
+    },
+    {
+      "name": "Men's Leather Flip Flops with Stitched Thong Straps for Casual Summer Wear",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1105.0,
+      "y": 21479.0,
+      "width": 307.0,
+      "height": 80.0
+    },
+    {
+      "name": "$27.30-28.90",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1105.0,
+      "y": 21546.0,
+      "width": 147.0,
+      "height": 30.0
+    },
+    {
+      "name": "MOQ: 2 pairs",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1105.0,
+      "y": 21584.0,
+      "width": 121.0,
+      "height": 26.0
+    },
+    {
+      "name": "All 3 colors",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1517.0,
+      "y": 21443.0,
+      "width": 89.0,
+      "height": 22.0
+    },
+    {
+      "name": "Men's Cream Canvas Casual Sneakers Vulcanized Walking Shoes EU 36-45 Model HR030-B",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1448.0,
+      "y": 21479.0,
+      "width": 310.0,
+      "height": 80.0
+    },
+    {
+      "name": "$9.10-9.50",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1448.0,
+      "y": 21546.0,
+      "width": 116.0,
+      "height": 30.0
+    },
+    {
+      "name": "MOQ: 2 pairs",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1448.0,
+      "y": 21584.0,
+      "width": 121.0,
+      "height": 26.0
+    },
+    {
+      "name": "All 3 colors",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1860.0,
+      "y": 21443.0,
+      "width": 88.0,
+      "height": 22.0
+    },
+    {
+      "name": "Women's Shoes Model HR050-C",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1791.0,
+      "y": 21479.0,
+      "width": 308.0,
+      "height": 26.0
+    },
+    {
+      "name": "$9.07-9.47",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1791.0,
+      "y": 21519.0,
+      "width": 113.0,
+      "height": 30.0
+    },
+    {
+      "name": "MOQ: 2 pairs",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1791.0,
+      "y": 21557.0,
+      "width": 121.0,
+      "height": 26.0
+    },
+    {
+      "name": "Men's Slip-On Leather Loafers with a Round Toe for Smart Casual Outfits",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 2134.0,
+      "y": 21443.0,
+      "width": 282.0,
+      "height": 80.0
+    },
+    {
+      "name": "$32.50-34.50",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 2134.0,
+      "y": 21510.0,
+      "width": 153.0,
+      "height": 30.0
+    },
+    {
+      "name": "MOQ: 2 pairs",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 2134.0,
+      "y": 21548.0,
+      "width": 121.0,
+      "height": 26.0
+    },
+    {
+      "name": "All 4 colors",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 146.0,
+      "y": 21984.0,
+      "width": 87.0,
+      "height": 22.0
+    },
+    {
+      "name": "Wholesale Model 1888 High Top Knit Sock Sneakers PU Segmented Sole Casual Shoes with Fleece Option",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 77.0,
+      "y": 22020.0,
+      "width": 301.0,
+      "height": 107.0
+    },
+    {
+      "name": "$9.09-9.49",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 77.0,
+      "y": 22087.0,
+      "width": 119.0,
+      "height": 30.0
+    },
+    {
+      "name": "MOQ: 2 pairs",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 77.0,
+      "y": 22125.0,
+      "width": 121.0,
+      "height": 26.0
+    },
+    {
+      "name": "All 5 colors",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 488.0,
+      "y": 21984.0,
+      "width": 89.0,
+      "height": 22.0
+    },
+    {
+      "name": "White Khaki Slip-On Toe Regular Fit Walking Shoes Elastic Lace Breathable Knit Lightweight Daily Casual EVA Midsole All Seasons",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 419.0,
+      "y": 22020.0,
+      "width": 311.0,
+      "height": 107.0
+    },
+    {
+      "name": "$9.13-9.53",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 419.0,
+      "y": 22087.0,
+      "width": 115.0,
+      "height": 30.0
+    },
+    {
+      "name": "MOQ: 2 pairs",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 419.0,
+      "y": 22125.0,
+      "width": 121.0,
+      "height": 26.0
+    },
+    {
+      "name": "All 5 colors",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 831.0,
+      "y": 21984.0,
+      "width": 89.0,
+      "height": 22.0
+    },
+    {
+      "name": "Wholesale Light Weight Breathable Knit Textile Slip-On Biscuit Sole Casual Shoes Spring Autumn 7212 EU 35-45 OEM ODM",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 762.0,
+      "y": 22020.0,
+      "width": 309.0,
+      "height": 134.0
+    },
+    {
+      "name": "$9.09-9.49",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 762.0,
+      "y": 22087.0,
+      "width": 119.0,
+      "height": 30.0
+    },
+    {
+      "name": "MOQ: 2 pairs",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 762.0,
+      "y": 22125.0,
+      "width": 121.0,
+      "height": 26.0
+    },
+    {
+      "name": "All 5 colors",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1174.0,
+      "y": 21984.0,
+      "width": 89.0,
+      "height": 22.0
+    },
+    {
+      "name": "Wholesale Men's Casual Slip-On Walking Shoes Breathable Light Weight Knit Biscuit Sole EU 35-45 Model 7212",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1105.0,
+      "y": 22020.0,
+      "width": 313.0,
+      "height": 107.0
+    },
+    {
+      "name": "$9.09-9.49",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1105.0,
+      "y": 22087.0,
+      "width": 119.0,
+      "height": 30.0
+    },
+    {
+      "name": "MOQ: 2 pairs",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1105.0,
+      "y": 22125.0,
+      "width": 121.0,
+      "height": 26.0
+    },
+    {
+      "name": "Men's Suede Moccasins with Braided Trim and Apron-Toe Stitching for Casual Wear",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1448.0,
+      "y": 21984.0,
+      "width": 277.0,
+      "height": 80.0
+    },
+    {
+      "name": "$29.90-31.70",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1448.0,
+      "y": 22051.0,
+      "width": 142.0,
+      "height": 30.0
+    },
+    {
+      "name": "MOQ: 2 pairs",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1448.0,
+      "y": 22089.0,
+      "width": 121.0,
+      "height": 26.0
+    },
+    {
+      "name": "All 4 colors",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1860.0,
+      "y": 21984.0,
+      "width": 87.0,
+      "height": 22.0
+    },
+    {
+      "name": "Wholesale Model 8008 Knit Lace-Up Round Toe Chunky Sole EVA Midsole Walking Shoes Regular Fit EU 35-45 OEM ODM",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1791.0,
+      "y": 22020.0,
+      "width": 310.0,
+      "height": 107.0
+    },
+    {
+      "name": "$9.09-9.49",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1791.0,
+      "y": 22087.0,
+      "width": 119.0,
+      "height": 30.0
+    },
+    {
+      "name": "MOQ: 2 pairs",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1791.0,
+      "y": 22125.0,
+      "width": 121.0,
+      "height": 26.0
+    },
+    {
+      "name": "All 3 colors",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 2203.0,
+      "y": 21984.0,
+      "width": 88.0,
+      "height": 22.0
+    },
+    {
+      "name": "Wholesale Extra Wide Toe Box Walking Shoes Stretch Knit Breathable Lightweight Comfort Sneakers OEM ODM",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 2134.0,
+      "y": 22020.0,
+      "width": 302.0,
+      "height": 107.0
+    },
+    {
+      "name": "$9.19-9.49",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 2134.0,
+      "y": 22087.0,
+      "width": 113.0,
+      "height": 30.0
+    },
+    {
+      "name": "MOQ: 2 pairs",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 2134.0,
+      "y": 22125.0,
+      "width": 121.0,
+      "height": 26.0
+    },
+    {
+      "name": "All 3 colors",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 146.0,
+      "y": 22525.0,
+      "width": 88.0,
+      "height": 22.0
+    },
+    {
+      "name": "Wholesale Shoes Model HR024-B",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 77.0,
+      "y": 22561.0,
+      "width": 303.0,
+      "height": 53.0
+    },
+    {
+      "name": "$9.14-9.54",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 77.0,
+      "y": 22628.0,
+      "width": 114.0,
+      "height": 30.0
+    },
+    {
+      "name": "MOQ: 2 pairs",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 77.0,
+      "y": 22666.0,
+      "width": 121.0,
+      "height": 26.0
+    },
+    {
+      "name": "All 4 colors",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 488.0,
+      "y": 22525.0,
+      "width": 88.0,
+      "height": 22.0
+    },
+    {
+      "name": "Wholesale Men's Grey Green Breathable Mesh Light Weight All Seasons Athletic Walking Shoes Thick Sole Lace up Sneakers L1009",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 419.0,
+      "y": 22561.0,
+      "width": 304.0,
+      "height": 134.0
+    },
+    {
+      "name": "$9.09-9.49",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 419.0,
+      "y": 22628.0,
+      "width": 119.0,
+      "height": 30.0
+    },
+    {
+      "name": "MOQ: 2 pairs",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 419.0,
+      "y": 22666.0,
+      "width": 121.0,
+      "height": 26.0
+    },
+    {
+      "name": "All 3 colors",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 831.0,
+      "y": 22525.0,
+      "width": 89.0,
+      "height": 22.0
+    },
+    {
+      "name": "Wholesale Soft Knit Slip-On Walking Shoes A505 Breathable Thick Sole Casual Sneakers OEM ODM",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 762.0,
+      "y": 22561.0,
+      "width": 307.0,
+      "height": 107.0
+    },
+    {
+      "name": "$9.09-9.49",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 762.0,
+      "y": 22628.0,
+      "width": 119.0,
+      "height": 30.0
+    },
+    {
+      "name": "MOQ: 2 pairs",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 762.0,
+      "y": 22666.0,
+      "width": 121.0,
+      "height": 26.0
+    },
+    {
+      "name": "All 7 colors",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1174.0,
+      "y": 22525.0,
+      "width": 87.0,
+      "height": 22.0
+    },
+    {
+      "name": "Wholesale Knit Lace-Up Casual Shoes with Mesh Lining Rubber Toe Cap EVA Midsole & Outsole Fleece Option-Walking Sneakers",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1105.0,
+      "y": 22561.0,
+      "width": 310.0,
+      "height": 107.0
+    },
+    {
+      "name": "$9.09-9.49",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1105.0,
+      "y": 22628.0,
+      "width": 119.0,
+      "height": 30.0
+    },
+    {
+      "name": "MOQ: 2 pairs",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1105.0,
+      "y": 22666.0,
+      "width": 121.0,
+      "height": 26.0
+    },
+    {
+      "name": "All 7 colors",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1517.0,
+      "y": 22525.0,
+      "width": 87.0,
+      "height": 22.0
+    },
+    {
+      "name": "All Black Breathable Walking Shoes Knit Lace Up Chunky EVA Sole Custom Logo OEM ODM Sneakers M8811",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1448.0,
+      "y": 22561.0,
+      "width": 302.0,
+      "height": 107.0
+    },
+    {
+      "name": "$9.05-9.45",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1448.0,
+      "y": 22628.0,
+      "width": 120.0,
+      "height": 30.0
+    },
+    {
+      "name": "MOQ: 2 pairs",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1448.0,
+      "y": 22666.0,
+      "width": 121.0,
+      "height": 26.0
+    },
+    {
+      "name": "All 5 colors",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1860.0,
+      "y": 22525.0,
+      "width": 89.0,
+      "height": 22.0
+    },
+    {
+      "name": "Wholesale Breathable Knit Lace-Up Walking Shoes R1218 Lightweight EVA Sole Casual Sneakers OEM ODM",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1791.0,
+      "y": 22561.0,
+      "width": 305.0,
+      "height": 107.0
+    },
+    {
+      "name": "$9.09-9.49",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1791.0,
+      "y": 22628.0,
+      "width": 119.0,
+      "height": 30.0
+    },
+    {
+      "name": "MOQ: 2 pairs",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1791.0,
+      "y": 22666.0,
+      "width": 121.0,
+      "height": 26.0
+    },
+    {
+      "name": "All 2 colors",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 2182.0,
+      "y": 22525.0,
+      "width": 88.0,
+      "height": 22.0
+    },
+    {
+      "name": "Wholesale Low Cut Knit Textile Slip-On Walking Shoes A1689 Casual Shoes EU 35-45 OEM ODM",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 2134.0,
+      "y": 22561.0,
+      "width": 289.0,
+      "height": 107.0
+    },
+    {
+      "name": "$9.09-9.49",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 2134.0,
+      "y": 22628.0,
+      "width": 119.0,
+      "height": 30.0
+    },
+    {
+      "name": "MOQ: 2 pairs",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 2134.0,
+      "y": 22666.0,
+      "width": 121.0,
+      "height": 26.0
+    },
+    {
+      "name": "All 3 colors",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 146.0,
+      "y": 23066.0,
+      "width": 88.0,
+      "height": 22.0
+    },
+    {
+      "name": "Men's Shoes Model HR042-A",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 77.0,
+      "y": 23102.0,
+      "width": 274.0,
+      "height": 26.0
+    },
+    {
+      "name": "$9.10-9.50",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 77.0,
+      "y": 23142.0,
+      "width": 116.0,
+      "height": 30.0
+    },
+    {
+      "name": "MOQ: 2 pairs",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 77.0,
+      "y": 23180.0,
+      "width": 121.0,
+      "height": 26.0
+    },
+    {
+      "name": "All 3 colors",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 488.0,
+      "y": 23066.0,
+      "width": 89.0,
+      "height": 22.0
+    },
+    {
+      "name": "Wholesale Men Wide Toe Box Slip-On Walking Shoes Breathable Stretch Knit Lightweight Casual Sneakers OEM ODM",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 419.0,
+      "y": 23102.0,
+      "width": 276.0,
+      "height": 134.0
+    },
+    {
+      "name": "$7.69-9.49",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 419.0,
+      "y": 23169.0,
+      "width": 116.0,
+      "height": 30.0
+    },
+    {
+      "name": "MOQ: 2 pairs",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 419.0,
+      "y": 23207.0,
+      "width": 121.0,
+      "height": 26.0
+    },
+    {
+      "name": "All 5 colors",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 831.0,
+      "y": 23066.0,
+      "width": 89.0,
+      "height": 22.0
+    },
+    {
+      "name": "Wholesale Solid Light Weight Anti-Slip Comfort Lace-Up Walking Shoes T5828 Spring Autumn Casual Shoes OEM ODM",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 762.0,
+      "y": 23102.0,
+      "width": 310.0,
+      "height": 107.0
+    },
+    {
+      "name": "$9.09-9.49",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 762.0,
+      "y": 23169.0,
+      "width": 119.0,
+      "height": 30.0
+    },
+    {
+      "name": "MOQ: 2 pairs",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 762.0,
+      "y": 23207.0,
+      "width": 121.0,
+      "height": 26.0
+    },
+    {
+      "name": "All 7 colors",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1174.0,
+      "y": 23066.0,
+      "width": 87.0,
+      "height": 22.0
+    },
+    {
+      "name": "White Pink All Seasons Casual Walking Shoes Breathable Knit Lace-Up Light Weight Thick EVA Sole Regular Fit Toe Sneakers M8811",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1105.0,
+      "y": 23102.0,
+      "width": 302.0,
+      "height": 134.0
+    },
+    {
+      "name": "$9.13-9.53",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1105.0,
+      "y": 23169.0,
+      "width": 115.0,
+      "height": 30.0
+    },
+    {
+      "name": "MOQ: 2 pairs",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1105.0,
+      "y": 23207.0,
+      "width": 121.0,
+      "height": 26.0
+    },
+    {
+      "name": "All 2 colors",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1496.0,
+      "y": 23066.0,
+      "width": 88.0,
+      "height": 22.0
+    },
+    {
+      "name": "Wholesale Model A189 Men's High Top Knit Slip-On Shoes Breathable Light Weight Plastic EVA Blend Sole Casual Sock Sneakers",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1448.0,
+      "y": 23102.0,
+      "width": 295.0,
+      "height": 134.0
+    },
+    {
+      "name": "$9.09-9.49",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1448.0,
+      "y": 23169.0,
+      "width": 119.0,
+      "height": 30.0
+    },
+    {
+      "name": "MOQ: 2 pairs",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1448.0,
+      "y": 23207.0,
+      "width": 121.0,
+      "height": 26.0
+    },
+    {
+      "name": "All 4 colors",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1860.0,
+      "y": 23066.0,
+      "width": 87.0,
+      "height": 22.0
+    },
+    {
+      "name": "Wholesale Breathable Mesh Athletic Walking Shoes L1026 Thick Sole Lightweight Casual Sneakers OEM ODM",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1791.0,
+      "y": 23102.0,
+      "width": 289.0,
+      "height": 107.0
+    },
+    {
+      "name": "$9.09-9.49",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1791.0,
+      "y": 23169.0,
+      "width": 119.0,
+      "height": 30.0
+    },
+    {
+      "name": "MOQ: 2 pairs",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1791.0,
+      "y": 23207.0,
+      "width": 121.0,
+      "height": 26.0
+    },
+    {
+      "name": "All 4 colors",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 2203.0,
+      "y": 23066.0,
+      "width": 87.0,
+      "height": 22.0
+    },
+    {
+      "name": "Wholesale Kids Knit Textile Lace-Up Walking Shoes A811 EU 31-40 OEM ODM Light Weight Anti-Slip Comfort Mesh Solid Spring Autumn",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 2134.0,
+      "y": 23102.0,
+      "width": 307.0,
+      "height": 134.0
+    },
+    {
+      "name": "$9.09-9.49",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 2134.0,
+      "y": 23169.0,
+      "width": 119.0,
+      "height": 30.0
+    },
+    {
+      "name": "MOQ: 2 pairs",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 2134.0,
+      "y": 23207.0,
+      "width": 121.0,
+      "height": 26.0
+    },
+    {
+      "name": "All 4 colors",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 146.0,
+      "y": 23607.0,
+      "width": 87.0,
+      "height": 22.0
+    },
+    {
+      "name": "Wholesale Solid Spring Summer Breathable Mesh Athletic Walking Shoes L1009 Stretch Fabric Upper Thick Sole Lightweight Cushion",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 77.0,
+      "y": 23643.0,
+      "width": 300.0,
+      "height": 134.0
+    },
+    {
+      "name": "$9.09-9.49",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 77.0,
+      "y": 23710.0,
+      "width": 119.0,
+      "height": 30.0
+    },
+    {
+      "name": "MOQ: 2 pairs",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 77.0,
+      "y": 23748.0,
+      "width": 121.0,
+      "height": 26.0
+    },
+    {
+      "name": "All 3 colors",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 488.0,
+      "y": 23607.0,
+      "width": 89.0,
+      "height": 22.0
+    },
+    {
+      "name": "Wholesale Men's Casual Slip-On Shoes Lightweight Breathable Textile Walking Sneakers OEM ODM All Seasons Regular Fit",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 419.0,
+      "y": 23643.0,
+      "width": 302.0,
+      "height": 107.0
+    },
+    {
+      "name": "$9.09-9.49",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 419.0,
+      "y": 23710.0,
+      "width": 119.0,
+      "height": 30.0
+    },
+    {
+      "name": "MOQ: 2 pairs",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 419.0,
+      "y": 23748.0,
+      "width": 121.0,
+      "height": 26.0
+    },
+    {
+      "name": "All 4 colors",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 831.0,
+      "y": 23607.0,
+      "width": 87.0,
+      "height": 22.0
+    },
+    {
+      "name": "Custom Logo All Black Breathable Mesh Walking Shoes Thick Sole Lace Up Sneakers OEM ODM L1009",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 762.0,
+      "y": 23643.0,
+      "width": 307.0,
+      "height": 107.0
+    },
+    {
+      "name": "$9.05-9.45",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 762.0,
+      "y": 23710.0,
+      "width": 120.0,
+      "height": 30.0
+    },
+    {
+      "name": "MOQ: 2 pairs",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 762.0,
+      "y": 23748.0,
+      "width": 121.0,
+      "height": 26.0
+    },
+    {
+      "name": "All 3 colors",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1174.0,
+      "y": 23607.0,
+      "width": 89.0,
+      "height": 22.0
+    },
+    {
+      "name": "Wholesale Men's Breathable Textile Slip-On Walking Shoes Lightweight Casual Sneakers EU 39-45 A002",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1105.0,
+      "y": 23643.0,
+      "width": 303.0,
+      "height": 107.0
+    },
+    {
+      "name": "$9.13-9.53",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1105.0,
+      "y": 23710.0,
+      "width": 115.0,
+      "height": 30.0
+    },
+    {
+      "name": "MOQ: 2 pairs",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1105.0,
+      "y": 23748.0,
+      "width": 121.0,
+      "height": 26.0
+    },
+    {
+      "name": "All 4 colors",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1517.0,
+      "y": 23607.0,
+      "width": 87.0,
+      "height": 22.0
+    },
+    {
+      "name": "Wholesale Summer Light Weight Anti-Slip Comfort Knit Textile Lace up Walking Shoes A206 Casual EU 35-45 OEM ODM",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1448.0,
+      "y": 23643.0,
+      "width": 307.0,
+      "height": 107.0
+    },
+    {
+      "name": "$9.09-9.49",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1448.0,
+      "y": 23710.0,
+      "width": 119.0,
+      "height": 30.0
+    },
+    {
+      "name": "MOQ: 2 pairs",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1448.0,
+      "y": 23748.0,
+      "width": 121.0,
+      "height": 26.0
+    },
+    {
+      "name": "All 3 colors",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1860.0,
+      "y": 23607.0,
+      "width": 88.0,
+      "height": 22.0
+    },
+    {
+      "name": "Men's Casual Walking Shoes Breathable Knit Lightweight Slip-On Sneakers Cushioned Midsole Regular Fit Toe All Seasons Daily Wear",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1791.0,
+      "y": 23643.0,
+      "width": 304.0,
+      "height": 134.0
+    },
+    {
+      "name": "$9.13-9.53",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1791.0,
+      "y": 23710.0,
+      "width": 114.0,
+      "height": 30.0
+    },
+    {
+      "name": "MOQ: 2 pairs",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1791.0,
+      "y": 23748.0,
+      "width": 121.0,
+      "height": 26.0
+    },
+    {
+      "name": "All 4 colors",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 2203.0,
+      "y": 23607.0,
+      "width": 87.0,
+      "height": 22.0
+    },
+    {
+      "name": "Wholesale Slip-On Knit Walking Shoes A502 Lightweight Flexible Breathable Casual Loafers OEM ODM",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 2134.0,
+      "y": 23643.0,
+      "width": 308.0,
+      "height": 107.0
+    },
+    {
+      "name": "$9.09-9.49",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 2134.0,
+      "y": 23710.0,
+      "width": 119.0,
+      "height": 30.0
+    },
+    {
+      "name": "MOQ: 2 pairs",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 2134.0,
+      "y": 23748.0,
+      "width": 121.0,
+      "height": 26.0
+    },
+    {
+      "name": "Related searches",
+      "type": "ControlType.Text",
+      "offscreen": true,
+      "enabled": true,
+      "x": 77.0,
+      "y": 23883.0,
+      "width": 2370.0,
+      "height": 76.0
+    },
+    {
+      "name": "custom air force 1 fabric",
+      "type": "ControlType.Hyperlink",
+      "offscreen": true,
+      "enabled": true,
+      "x": 77.0,
+      "y": 23958.0,
+      "width": 273.0,
+      "height": 51.0
+    },
+    {
+      "name": "canvas shose for man",
+      "type": "ControlType.Hyperlink",
+      "offscreen": true,
+      "enabled": true,
+      "x": 379.0,
+      "y": 23958.0,
+      "width": 253.0,
+      "height": 51.0
+    },
+    {
+      "name": "Messenger",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 2388.0,
+      "y": 1161.0,
+      "width": 91.0,
+      "height": 21.0
+    },
+    {
+      "name": "Accio Work",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 2388.0,
+      "y": 1272.0,
+      "width": 91.0,
+      "height": 22.0
+    },
+    {
+      "name": "Install Alibaba Lens",
+      "type": "ControlType.Hyperlink",
+      "offscreen": false,
+      "enabled": true,
+      "x": 2372.0,
+      "y": 1328.0,
+      "width": 123.0,
+      "height": 87.0
+    },
+    {
+      "name": "Send Inquiry",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 947.0,
+      "y": 647.0,
+      "width": 189.0,
+      "height": 44.0
+    },
+    {
+      "name": "Send Inquiry",
+      "type": "ControlType.Document",
+      "offscreen": false,
+      "enabled": true,
+      "x": 917.0,
+      "y": 722.0,
+      "width": 1500.0,
+      "height": 795.0
+    },
+    {
+      "name": "Alibaba Manufacturer Directory - Suppliers, Manufacturers, Exporters & Importers",
+      "type": "ControlType.Document",
+      "offscreen": false,
+      "enabled": true,
+      "x": 917.0,
+      "y": 722.0,
+      "width": 1500.0,
+      "height": 795.0
+    },
+    {
+      "name": "To:",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 939.0,
+      "y": 752.0,
+      "width": 30.0,
+      "height": 22.0
+    },
+    {
+      "name": "User name",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1036.0,
+      "y": 752.0,
+      "width": 102.0,
+      "height": 22.0
+    },
+    {
+      "name": "|",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1152.0,
+      "y": 752.0,
+      "width": 6.0,
+      "height": 22.0
+    },
+    {
+      "name": "Quanzhou Beiqiang Footwear & Apparel Co., Ltd.",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1172.0,
+      "y": 752.0,
+      "width": 459.0,
+      "height": 22.0
+    },
+    {
+      "name": "Textile Lace-Up Casual Sneakers with Rubber Outsole",
+      "type": "ControlType.Hyperlink",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1029.0,
+      "y": 808.0,
+      "width": 966.0,
+      "height": 66.0
+    },
+    {
+      "name": "Quantity ",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 2072.0,
+      "y": 829.0,
+      "width": 86.0,
+      "height": 23.0
+    },
+    {
+      "name": "Pair/s",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 2285.0,
+      "y": 830.0,
+      "width": 58.0,
+      "height": 22.0
+    },
+    {
+      "name": "",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 2347.0,
+      "y": 825.0,
+      "width": 25.0,
+      "height": 26.0
+    },
+    {
+      "name": "* Detailed requirements: ",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 962.0,
+      "y": 922.0,
+      "width": 1387.0,
+      "height": 25.0
+    },
+    {
+      "name": "Enter product details such as color, size, materials etc. and other specification requirements to receive an accurate quote.",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 962.0,
+      "y": 961.0,
+      "width": 1144.0,
+      "height": 22.0
+    },
+    {
+      "name": "Please type in",
+      "type": "ControlType.Edit",
+      "offscreen": false,
+      "enabled": true,
+      "x": 962.0,
+      "y": 1003.0,
+      "width": 1387.0,
+      "height": 136.0
+    },
+    {
+      "name": "Please enter message",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 962.0,
+      "y": 1145.0,
+      "width": 179.0,
+      "height": 20.0
+    },
+    {
+      "name": "Check out these questions from other buyers. Click to insert the questions in the box above.",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1018.0,
+      "y": 1188.0,
+      "width": 764.0,
+      "height": 27.0
+    },
+    {
+      "name": "",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 2308.0,
+      "y": 1238.0,
+      "width": 25.0,
+      "height": 26.0
+    },
+    {
+      "name": "What is the best price you can offer?",
+      "type": "ControlType.Button",
+      "offscreen": false,
+      "enabled": true,
+      "x": 980.0,
+      "y": 1233.0,
+      "width": 340.0,
+      "height": 43.0
+    },
+    {
+      "name": "What is the shipping cost?",
+      "type": "ControlType.Button",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1336.0,
+      "y": 1233.0,
+      "width": 257.0,
+      "height": 43.0
+    },
+    {
+      "name": "Do you support customization?",
+      "type": "ControlType.Button",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1609.0,
+      "y": 1233.0,
+      "width": 302.0,
+      "height": 43.0
+    },
+    {
+      "name": "How long will it take to ship to my country?",
+      "type": "ControlType.Button",
+      "offscreen": true,
+      "enabled": true,
+      "x": 980.0,
+      "y": 1293.0,
+      "width": 400.0,
+      "height": 43.0
+    },
+    {
+      "name": "What is the MOQ for this product?",
+      "type": "ControlType.Button",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1396.0,
+      "y": 1293.0,
+      "width": 321.0,
+      "height": 43.0
+    },
+    {
+      "name": "Do you have a new catalog?",
+      "type": "ControlType.Button",
+      "offscreen": true,
+      "enabled": true,
+      "x": 1732.0,
+      "y": 1293.0,
+      "width": 272.0,
+      "height": 43.0
+    },
+    {
+      "name": "Can I get a sample first?",
+      "type": "ControlType.Button",
+      "offscreen": true,
+      "enabled": true,
+      "x": 2019.0,
+      "y": 1293.0,
+      "width": 239.0,
+      "height": 43.0
+    },
+    {
+      "name": "Can I add my own logo?",
+      "type": "ControlType.Button",
+      "offscreen": true,
+      "enabled": true,
+      "x": 980.0,
+      "y": 1353.0,
+      "width": 239.0,
+      "height": 43.0
+    },
+    {
+      "name": "",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 962.0,
+      "y": 1305.0,
+      "width": 24.0,
+      "height": 26.0
+    },
+    {
+      "name": " Add attachment",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 993.0,
+      "y": 1309.0,
+      "width": 158.0,
+      "height": 23.0
+    },
+    {
+      "name": "选择文件: 未选择任何文件",
+      "type": "ControlType.Button",
+      "offscreen": false,
+      "enabled": true,
+      "x": -27186.0,
+      "y": 1303.0,
+      "width": 28337.0,
+      "height": 2180.0
+    },
+    {
+      "name": "Send inquiry now",
+      "type": "ControlType.Button",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1513.0,
+      "y": 1445.0,
+      "width": 285.0,
+      "height": 54.0
+    },
+    {
+      "name": "Recommend matching suppliers if this supplier doesn't contact me on Message Center within 24 hours. RFQ",
+      "type": "ControlType.CheckBox",
+      "offscreen": false,
+      "enabled": true,
+      "x": 939.0,
+      "y": 1381.0,
+      "width": 20.0,
+      "height": 20.0
+    },
+    {
+      "name": "Recommend matching suppliers if this supplier doesn't contact me on Message Center within 24 hours.",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 969.0,
+      "y": 1381.0,
+      "width": 837.0,
+      "height": 20.0
+    },
+    {
+      "name": "RFQ",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1847.0,
+      "y": 1381.0,
+      "width": 36.0,
+      "height": 20.0
+    },
+    {
+      "name": "Agree to share Business Card with supplier.",
+      "type": "ControlType.CheckBox",
+      "offscreen": false,
+      "enabled": true,
+      "x": 939.0,
+      "y": 1418.0,
+      "width": 20.0,
+      "height": 21.0
+    },
+    {
+      "name": "Agree to share ",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 969.0,
+      "y": 1418.0,
+      "width": 123.0,
+      "height": 20.0
+    },
+    {
+      "name": "Business Card",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1091.0,
+      "y": 1418.0,
+      "width": 117.0,
+      "height": 20.0
+    },
+    {
+      "name": " with supplier.",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1207.0,
+      "y": 1418.0,
+      "width": 113.0,
+      "height": 20.0
+    },
+    {
+      "name": "Please make sure your contact information is correct (",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 939.0,
+      "y": 1459.0,
+      "width": 440.0,
+      "height": 20.0
+    },
+    {
+      "name": "View and Edit",
+      "type": "ControlType.Hyperlink",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1378.0,
+      "y": 1459.0,
+      "width": 110.0,
+      "height": 20.0
+    },
+    {
+      "name": "). Your message will be sent directly to the recipient(s) and will not be publicly displayed. Note that if the recipient is a Gold Supplier, they can view your contact information, including your registered email address. Alibaba will never distribute or sell your personal information to third parties without your express permission.Kindly note that we may share your name, company name and country with suppliers from partner platforms that sells on Alibaba.com.",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 939.0,
+      "y": 1459.0,
+      "width": 1427.0,
+      "height": 66.0
+    },
+    {
+      "name": "标签页搜索",
+      "type": "ControlType.Button",
+      "offscreen": false,
+      "enabled": true,
+      "x": 26.0,
+      "y": 36.0,
+      "width": 43.0,
+      "height": 42.0
+    },
+    {
+      "name": "关闭",
+      "type": "ControlType.Button",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1869.0,
+      "y": 36.0,
+      "width": 42.0,
+      "height": 42.0
+    },
+    {
+      "name": "新标签页",
+      "type": "ControlType.Button",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1991.0,
+      "y": 27.0,
+      "width": 43.0,
+      "height": 62.0
+    },
+    {
+      "name": "打开 Chrome 中的 Gemini",
+      "type": "ControlType.Button",
+      "offscreen": false,
+      "enabled": true,
+      "x": 2114.0,
+      "y": 27.0,
+      "width": 193.0,
+      "height": 60.0
+    },
+    {
+      "name": "翻译此页？",
+      "type": "ControlType.Text",
+      "offscreen": false,
+      "enabled": true,
+      "x": 1829.0,
+      "y": 141.0,
+      "width": 449.0,
+      "height": 153.0
+    },
+    {
+      "name": "翻译选项",
+      "type": "ControlType.Button",
+      "offscreen": false,
+      "enabled": true,
+      "x": 2153.0,
+      "y": 159.0,
+      "width": 37.0,
+      "height": 50.0
+    },
+    {
+      "name": "关闭",
+      "type": "ControlType.Button",
+      "offscreen": false,
+      "enabled": true,
+      "x": 2201.0,
+      "y": 159.0,
+      "width": 43.0,
+      "height": 50.0
+    }
+  ],
+  "platformMutations": 0,
+  "title": "Textile Lace-up Casual Sneakers With Rubber Outsole - Buy Product on Alibaba.com - Google Chrome",
+  "interaction": ""
+}

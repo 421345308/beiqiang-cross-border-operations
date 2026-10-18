@@ -1,0 +1,92 @@
+{
+  "candidate": {
+    "source": {
+      "reference": "https://shangchao.sooxie.com/detail/2357652",
+      "style": "F2888 winter boot Khaki/Black/Cream size35-42",
+      "evidence": "evidence/page_text.txt + public_index.json + source originals04/07/08/15/17",
+      "critical_facts": {
+        "profile": "women quilted winter boot",
+        "upper_structure": "quilted upper, exact chemical material not specified",
+        "outsole_structure": "visible sole profile; chemical composition not specified",
+        "closure": "side zipper",
+        "lining": "artificial long-plush shaft lining, artificial short-plush insole",
+        "functional_use": "casual winter footwear"
+      }
+    },
+    "search_intent": {
+      "key": "women quilted winter boots plush lining side zipper",
+      "evidence": "Walmart women snow boots bestseller category read2026-10-02: winter boot + plush lining + side zipper alternatives; quilted modifier comes from actual product photos. Proxy only; search/sales volumes unknown."
+    },
+    "hero_review": {
+      "content_key": "F2888-khaki-real-pair-source-main-crop",
+      "label_status": "not_present",
+      "evidence": "M1 original main.jpg native700x580 crop individually viewed: both complete shoes, side zip/plush opening clear, corner Chinese graphic wholly excluded, no brand or changed shoe pixels.",
+      "url": "https://sc04.alicdn.com/kf/H33556850cd2342f69f7096fd93a3b72dD/286385890/H33556850cd2342f69f7096fd93a3b72dD.png",
+      "sha256": "6883440bc6d989f44b4bc7af82a187cb825021de973be06b67d6d980aefaba19",
+      "aliases": [
+        "https://sc04.alicdn.com/kf/H33556850cd2342f69f7096fd93a3b72dD/286385890/H33556850cd2342f69f7096fd93a3b72dD.png",
+        "//sc04.alicdn.com/kf/H33556850cd2342f69f7096fd93a3b72dD/286385890/H33556850cd2342f69f7096fd93a3b72dD.png"
+      ]
+    }
+  },
+  "source_records": {},
+  "evidence_files": [
+    {
+      "path": "evidence/live_catalog_1.flat.json",
+      "sha256": "4f4d389cf27a3a9954227e527769a02b1a6f7b40e712604a86e2e763a3ca1a94",
+      "kind": "catalog_snapshot"
+    },
+    {
+      "path": "evidence/live_catalog_2.flat.json",
+      "sha256": "c9bba5d4a4171d9a86b7239ba10587205c6cbb27fd2b32752a178ac403e3ce48",
+      "kind": "catalog_snapshot"
+    },
+    {
+      "path": "evidence/live_catalog_3.flat.json",
+      "sha256": "9a5b40eada8f868037ebf5a374d46df018ffc2b8e510913cd637f5a5a10c28fd",
+      "kind": "catalog_snapshot"
+    },
+    {
+      "path": "evidence/candidate.json",
+      "sha256": "f15d3433ec0aa541d14cb2d5e6e56fcdb0f16a1128c82238d0bab1818a11a586",
+      "kind": "source_register"
+    },
+    {
+      "path": "evidence/public_index.json",
+      "sha256": "938de6c49c7c8ca6f7a636922c4699955c746163cda202a5658ef16533538025",
+      "kind": "source_register"
+    },
+    {
+      "path": "evidence/page_text.txt",
+      "sha256": "caf86d41d23cbf47559fd1bff7322349cdc8f5a94c33e52ee3e4c40a607cee0c",
+      "kind": "source_register"
+    },
+    {
+      "path": "evidence/source.html",
+      "sha256": "a15baccf5f13560190237b8d0de4ab44c7f17843462bfb4419d7529f487ff71d",
+      "kind": "source_register"
+    },
+    {
+      "path": "evidence/attributes_text.txt",
+      "sha256": "72336d5b7039e34da5019d73c48289450cdbcd303d176720d92d4bbf1f7a4613",
+      "kind": "source_register"
+    },
+    {
+      "path": "evidence/public_Stock.json",
+      "sha256": "c2a0d574f5781577a8e4cb5e2bcea26b2ae68931efde76a53c84b39d80084713",
+      "kind": "source_register"
+    },
+    {
+      "path": "recent_catalog.flat.json",
+      "sha256": "8e9c07ef180c86eb01591f14a4eb5101a1f53f80a9e0d8482a4b706877f3f30d",
+      "kind": "catalog_snapshot"
+    },
+    {
+      "path": "old_catalog_projection.json",
+      "sha256": "8f677e241f70bb9acdcff8c4ec2eac802a0c1b4e799ee140e6795fc4adc47315",
+      "kind": "catalog_snapshot"
+    }
+  ],
+  "observed_at": "2026-10-02T22:33:45.851720+00:00",
+  "coverage_limit": "Existing three catalog pages plus fresh first page and exact old HR056-A formal get only; unknown source associations do not prove full-store identity clearance."
+}

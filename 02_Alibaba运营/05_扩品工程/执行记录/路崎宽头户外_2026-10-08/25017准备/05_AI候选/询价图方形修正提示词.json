@@ -1,0 +1,19 @@
+{
+  "rejected": [
+    {
+      "file": "25017-M5-v2.png",
+      "reason": "1388x1133 non-square canvas; retains toe but gallery thumbnail may crop, replace with square framing"
+    }
+  ],
+  "replacement": {
+    "role": "M5",
+    "name": "25017-M5-v3.png",
+    "indices": [
+      14
+    ],
+    "prompt": "Edit attached finished image only. Output MUST be SQUARE 1:1 aspect ratio,1254x1254. Preserve all existing content as a whole, exact original entire two boots and layout/text including all boot toes/heels intact. DO NOT crop the source or zoom. Merely place the whole existing rectangular image centered on a SQUARE white canvas with equal white space added above/below as needed. Keep current typography and content unchanged, no new shoes, reconstruction or claims. This is canvas extension/framing only. Final output exactly square, all original image edges visible within white square. No new shapes or design.",
+    "referenced_image_paths": [
+      "C:/Users/spq/Desktop/贝强/02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/25017准备/05_AI候选/25017-M5-v2.png"
+    ]
+  }
+}

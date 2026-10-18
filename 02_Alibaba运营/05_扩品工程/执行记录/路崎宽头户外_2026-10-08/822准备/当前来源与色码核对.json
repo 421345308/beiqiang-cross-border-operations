@@ -1,0 +1,177 @@
+{
+  "style": "822",
+  "source": "https://luqi.sooxie.com/detail/2280202",
+  "observed_at": "2026-10-13T23:12:54.195493+00:00",
+  "source_HTML_sha256": "be476785e4952c377030c08a90fab8adfafb703c1bdacf89943aa72f37fc1622",
+  "source_price_cny": "48.00",
+  "source_EU_by_color": {
+    "Black": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ],
+    "Khaki": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ]
+  },
+  "source_EU_combinations": 20,
+  "source_colour_mapping": {
+    "Black": {
+      "supplier_colour": "黑色",
+      "frames": [
+        1,
+        3,
+        5,
+        8,
+        15
+      ]
+    },
+    "Khaki": {
+      "supplier_colour": "卡其",
+      "frames": [
+        4,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ]
+    }
+  },
+  "visible_structure": [
+    "Low-cutcasualshoe with cordlacing horizontalacrosstongue",
+    "Curved stitchedtoe-panelboundary andplainpebbledquarter",
+    "Metal upper eyelet, paddedblackcollar andsmallrearloop",
+    "Single-tone greybrown/greyblacksole sidewall withlonghorizontalgroove",
+    "Actual10soleforefoot hasovalcentralzone andperimetergrooves"
+  ],
+  "known_materials": {
+    "upper": "合成革 explicitoriginal07; no exactpolymer orgenuineleather inference",
+    "outsole": "EVA explicitoriginal07/10; no weight or testedgrip guarantee",
+    "midsole": "Separatematerialunspecified nativeother",
+    "lining": "柔软内里 source07/10 texture only, nativeother"
+  },
+  "wide_claim": "NO_WIDE_EVIDENCE_NO_WIDE_CLAIM",
+  "title_draft": "Mens Synthetic Leather Casual Walking Shoes with Cord Lacing and EVA Sole for Wholesale Footwear Buyers",
+  "product_highlights_draft": [
+    "Synthetic leather upper: A pebbled surface, plain side panels and a curved stitched forefoot seam create a clean casual silhouette.",
+    "Cord lacing: Looped cords cross the tongue, with a metal upper eyelet and visible stitched lace-panel edges.",
+    "Low-cut opening: A padded collar and small rear pull loop finish the photographed heel profile.",
+    "EVA outsole: The actual forefoot view shows an oval central section with surrounding grooves and textured contact zones.",
+    "Wholesale colour-size options: Black and Khaki are offered in EU 39–48 for assortment planning."
+  ],
+  "excluded_claims": [
+    "Handsfree or elastic-lace performance not proven",
+    "Wide toe box/widthgrade",
+    "Genuineleather/PU/PVC composition",
+    "Weight/testing/medical/waterproof/slipcertification",
+    "Stockguarantee or inventedsizeconversion"
+  ],
+  "image_role_plan": {
+    "M1": "Actual01blackheroisolation",
+    "M2": "Actual10topopeningonly",
+    "M3": "Actual10bottomforefootoutsoleonly",
+    "M4": "Actual11Khakiwearorderinputs",
+    "M5": "Actual03Blackwear",
+    "D1": "Actual09lowercordmacro",
+    "D2": "Actual04rearheelpanelmacro",
+    "D3": "Actual09topforefootseammacro",
+    "D4": "Actual08two-colourEU39-48"
+  },
+  "pricing_draft": {
+    "source_cny": "48.00",
+    "fx": "6.6837",
+    "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+    "fx_observed": "2026-10-13 10:57:20",
+    "tiers": [
+      [
+        2,
+        "10.78"
+      ],
+      [
+        50,
+        "10.06"
+      ],
+      [
+        100,
+        "9.34"
+      ]
+    ],
+    "freight_service_tax": "Order-specific; no netprofit or marketlowest proof.",
+    "rounding": "ROUND_CEILING_TO_USD_CENT",
+    "current_price_repair": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/822准备/价格取整修正/update_receipt.json"
+  },
+  "publish_profile": {
+    "category_id": 201334413,
+    "buyer_colours": [
+      {
+        "buyer": "Black",
+        "supplier_key": "Black",
+        "supplier_label": "黑色",
+        "image_role": "M1"
+      },
+      {
+        "buyer": "Khaki",
+        "supplier_key": "Khaki",
+        "supplier_label": "卡其",
+        "image_role": "SKU_Khaki"
+      }
+    ],
+    "category_attributes": {
+      "Upper Material": [
+        "Synthetic Leather"
+      ],
+      "Midsole Material": [
+        "other"
+      ],
+      "Outsole Material": [
+        "EVA"
+      ],
+      "Lining Material": [
+        "other"
+      ],
+      "Closure Type": [
+        "Lace-up"
+      ]
+    },
+    "local_intent": [
+      "绳带低帮合成革休闲步行鞋"
+    ]
+  },
+  "state": "CREATED_FORMAL_FIELDS_SCORE_PASS",
+  "family_review": "Actual14successfulsourcephotos reviewed. 822cordloops/plainquarter/smootherEVAsole andovalforefoot differ868zigzageyelets/TPRgreyinsertlugs and1712shortpileupper. Fullcurrentcatalog/nearestphysical/source check remains precreate gate.",
+  "publication": {
+    "product_id": "1601979745492",
+    "audit": "approved",
+    "display": "Y",
+    "actual_score": "5.00",
+    "formal_verification": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/822准备/verification.json",
+    "local_sync_at": "2026-10-14T17:25:31.042260+00:00",
+    "no_replayed_create": true
+  },
+  "next_action": "该款正式字段、评分与来源已通过；继续其他款，不重复创建。",
+  "price_rounding_correction": {
+    "state": "FORMAL_FIELDS_SCORE_PASS",
+    "id": "1601979745492",
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/822准备/价格取整修正/prepared.json"
+  }
+}

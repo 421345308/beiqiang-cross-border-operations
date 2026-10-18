@@ -1,0 +1,13 @@
+{
+  "status": "PASS_MINIMAL_MODEL_ONLY_READY",
+  "source_current_schema_request": "212cbf3217909439002714465",
+  "missing_product_model_confirmed": true,
+  "method": "alibaba.icbu.product.schema.update",
+  "product_id": 1601969860254,
+  "public_model": "BQ-M858",
+  "field": "icbuCatProp/p-3",
+  "format_basis": "Current target p-3 input type plus verified936_model_only_candidate negative value/inputValue encoding",
+  "other_fields_included": false,
+  "scope": "Only product-level model; SKU33/images6+4+5/prices/FAQ/materials/stock0 protected",
+  "sha256": "2bf463042c9c9d5172b7638fa4372f0691c0760bae2496520977480a33ba3331"
+}

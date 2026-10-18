@@ -1,0 +1,17 @@
+{
+  "status": "HOLD_CATEGORY_SETTING_NOT_AUTH_SERVICE",
+  "style": "2509",
+  "category_id": 127734034,
+  "business_result": false,
+  "product_id": null,
+  "request_id": "2166c2ca17914801977982249",
+  "trace_id": "212e559c17914801974252979e0e17",
+  "code": "isp.system-service-error:PUB_BIZCHECK_CAT_PUB_RESTRICT;",
+  "reason": "systemError:isp.system-service-error:PUB_BIZCHECK_CAT_PUB_RESTRICT:The current commodity category is not within the scope of online business category and cannot be delivered. Please go to store management-> Manage company information to complete the business category setting:;",
+  "attempt_count": 1,
+  "images": "Six-main/four-detail English candidate set passed locally; official images uploaded; no published product",
+  "official_documentation": "https://jaq-doc.alibaba.com/docs/doc.htm?articleId=119213&docType=1&treeId=456",
+  "supported_diagnosis": "Official code8 confirms seller business-category publishing scope. Current72-API inventory contains no documented company/business-category setter. Not a TLS/browser/approval/token failure.",
+  "normal_next_step": "Store Management > Manage Company Information > business category setting; verify availability and effects without replacing existing business categories. Current user waived Chrome work; keep this exact style and02505 pending, continue other work.",
+  "no_shortcut": "No retry same rejection, no wrong-category reroute, no company-scope change or browser reconnect without required facts."
+}

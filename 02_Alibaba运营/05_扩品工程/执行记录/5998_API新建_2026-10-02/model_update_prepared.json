@@ -1,0 +1,55 @@
+{
+  "category_id": 201153805,
+  "operation": "update",
+  "target_product_id": "1601969869242",
+  "field_ids": [
+    "icbuCatProp"
+  ],
+  "dependency_ids": [],
+  "xml": "<itemSchema><field id=\"icbuCatProp\" type=\"complex\"><complex-value><field id=\"p-3\" type=\"input\"><value inputValue=\"BQ-W5998\">-3</value></field></complex-value></field></itemSchema>",
+  "expected_fields": {
+    "icbuCatProp": [
+      "field",
+      [
+        [
+          "id",
+          "icbuCatProp"
+        ]
+      ],
+      "",
+      [
+        [
+          "complex-value",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "p-3"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [
+                    [
+                      "inputValue",
+                      "BQ-W5998"
+                    ]
+                  ],
+                  "-3",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "prepared_from_current_schema": true
+}

@@ -1,0 +1,40 @@
+{
+  "verdict": "PASS_OBSERVED_SAVED_FACTS_WITH_DETAIL_MODEL_RENDER_PENDING",
+  "new_product_id": 1601969872083,
+  "checks": {
+    "actual_add_exact_hash_success": true,
+    "title_summary_company_copy": true,
+    "company5_identity_roles_set": true,
+    "FAQ6_exact": true,
+    "14_unique_nonzero_SKU_exact_bindings": true,
+    "all14_three_prices": true,
+    "MOQ2_no_fixed_period": true,
+    "known_material_unknown_markers_saved": true,
+    "main6_present_only": true
+  },
+  "add_request_id": "213d4e4917909412269454570",
+  "get_request_id": "0bbb637a17909413330142420",
+  "status": "new",
+  "display": "N",
+  "pending": {
+    "four_detail_images": "No detail_image in current formal get struct_detail; submitted four images does not prove stored/public four images. Root further legitimate readback pending, cause unknown",
+    "model": "No attribute3 Model Number in current formal get; HR051-A SKU code not Model Number evidence",
+    "keywords": [
+      ""
+    ],
+    "main_pixel_mapping": "6 generated URLs need actual pixel mapping, not repeat source review",
+    "render": {
+      "ok": false,
+      "error": "Network error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)"
+    },
+    "public": "Review new/N; approval and public acceptance pending"
+  },
+  "inventory": "0 observed, inquiry listing nonblocking;999 is inquiry marker not physical stock",
+  "reviewer_platform_write": false,
+  "evidence_hashes": {
+    "formal_add.response.json": "2bdabf983513af23fdce1187d4111d973588162c1634e45253be44f230ffdfef",
+    "formal_add_once_ledger.json": "a1f0e216fb1ac3555181af9c2e9fbe1414ba0e303936f9da7a62be59b65ef64f",
+    "new_formal_get.response.json": "ecf96f01d47da124d3d531ad950df31ba625a192e8e578d0bfd30c7b3b6228ce",
+    "new_formal_render.response.json": "68cfa108c405efc35bd099aec8ae2353245b33006d6b199e4ffa8ec08b0c6656"
+  }
+}

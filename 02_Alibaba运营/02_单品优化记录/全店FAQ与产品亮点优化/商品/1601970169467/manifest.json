@@ -1,0 +1,26 @@
+{
+  "operation": "update",
+  "product_id": "1601970169467",
+  "category_id": 201153804,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "copy.json",
+    "before_get.json",
+    "../../../../05_扩品工程/数据/来源证据/e1b9347f19d5.json",
+    "current_get.json",
+    "../../../../00_运营SOP/国际站商品全生命周期SOP.md"
+  ],
+  "current_schema": "current_schema.xml",
+  "current_schema_sha256": "82535494442e220bfdd148b159b9d2d3b6847ce423eed4a67e9fea29a5d62973",
+  "schema_request_id": "212c6fc617917373276243971",
+  "schema_acquired_at": "2026-10-11T16:48:44.589067+00:00",
+  "payload_xml": "payload.xml",
+  "field_ids": [
+    "textDesc",
+    "companyFaqDesc"
+  ],
+  "dependency_ids": [
+    "productDescType"
+  ],
+  "observed_model": "BQ-M001"
+}

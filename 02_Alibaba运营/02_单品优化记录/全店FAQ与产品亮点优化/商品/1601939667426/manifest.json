@@ -1,0 +1,27 @@
+{
+  "operation": "update",
+  "product_id": "1601939667426",
+  "category_id": 201334413,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "copy.json",
+    "before_get.json",
+    "../../../../../01_产品资产/02_可发布素材/00_最终上传/BQ031_ZX2116/00_上架填写表.md",
+    "../../../../../01_产品资产/01_原始数据包/已整理_BQ031_ZX2116_贝强鞋业宽头大码38-47原始数据包/贝强鞋业ZX2116外贸速卖通跨境爆款宽头大码38-47批55元/ZX2116/800X800主图/01(1).jpg",
+    "current_get.json",
+    "../../../../00_运营SOP/国际站商品全生命周期SOP.md"
+  ],
+  "current_schema": "current_schema.xml",
+  "current_schema_sha256": "3a11fd8b288557e916e3776d38faaf1db50c896316df1faec3a1f4feb9e3b8f1",
+  "schema_request_id": "0b0b3a2717917405573817768",
+  "schema_acquired_at": "2026-10-11T17:42:34.714870+00:00",
+  "payload_xml": "payload.xml",
+  "field_ids": [
+    "textDesc",
+    "companyFaqDesc"
+  ],
+  "dependency_ids": [
+    "productDescType"
+  ],
+  "observed_model": "BQ031-R1 / ZX2116"
+}

@@ -1,0 +1,78 @@
+{
+  "method": "alibaba.icbu.product.schema.update",
+  "operation": "update",
+  "status": "submitted_needs_readback",
+  "content_status": "pending_readback",
+  "expected_fields": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Wholesale Womens Colorblock Mary Jane Flats with Hook and Loop Strap for Casual Everyday Wear",
+          []
+        ]
+      ]
+    ]
+  },
+  "sku_verification": null,
+  "task_pack": null,
+  "replacement_plan": null,
+  "replacement_transition": null,
+  "inventory_input": null,
+  "post_publish_acceptance": {
+    "phase": "post_publish_completion",
+    "target_score": 5.0,
+    "actual_score": null,
+    "observed_at": null,
+    "score_source": null,
+    "diagnostics": {
+      "status": "not_read"
+    },
+    "score_status": "pending_score",
+    "overall_status": "PENDING_SCORE",
+    "unverified_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "versioned_content": null,
+    "required_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "limits": "Platform listing score does not prove public content, source truth or real product quality."
+  },
+  "attempted_at": "2026-10-08T01:48:43.386571+00:00",
+  "response": {
+    "trace_id": "212e559c17914241287398415e0edd",
+    "product_id": 1601969788941,
+    "biz_success": true,
+    "request_id": "213d4e4917914241288727603",
+    "_trace_id_": "212e559c17914241287398415e0edd"
+  },
+  "refs": {
+    "request_id": "213d4e4917914241288727603",
+    "trace_id": "212e559c17914241287398415e0edd",
+    "message": null,
+    "error": null
+  },
+  "product_id": "1601969788941"
+}

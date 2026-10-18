@@ -1,0 +1,26 @@
+{
+  "operation": "update",
+  "product_id": "1601970034464",
+  "category_id": 201339011,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "copy.json",
+    "before_get.json",
+    "../../../../05_扩品工程/执行记录/F2888_API完整新建_2026-10-02_task2/facts_and_copy.json",
+    "current_get.json",
+    "../../../../00_运营SOP/国际站商品全生命周期SOP.md"
+  ],
+  "current_schema": "current_schema.xml",
+  "current_schema_sha256": "0efa498dba791289b8482eaf3740b179de950139d74c06a73857c7caaaee1dc2",
+  "schema_request_id": "2105044417917374960757542",
+  "schema_acquired_at": "2026-10-11T16:51:33.267733+00:00",
+  "payload_xml": "payload.xml",
+  "field_ids": [
+    "textDesc",
+    "companyFaqDesc"
+  ],
+  "dependency_ids": [
+    "productDescType"
+  ],
+  "observed_model": "BQ-WBF2888"
+}

@@ -1,0 +1,11 @@
+{
+  "verdict": "PASS_PARAMETER_CONTRACT",
+  "official_encrypt_evidence": "formal_encrypt.response.json/flat.json",
+  "score_params_evidence": "formal_score.params.json",
+  "top_level_product_id_is_string": true,
+  "equal_official_encrypt_secret_id": true,
+  "equal_formal_get_encrypted_product_id": true,
+  "numeric_plain_id_used_for_score": false,
+  "api_error15_cause": "Unestablished; new/N is observed separately, not inferred as sole cause",
+  "checked_at": "2026-10-02T14:17:53.498800+00:00"
+}

@@ -1,0 +1,34 @@
+{
+  "request": {
+    "param_product_top_publish_request": {
+      "product_id": 1601943711519,
+      "cat_id": 201340408,
+      "language": "en_US",
+      "xml": "<itemSchema><field id=\"productTitle\" name=\"Product name\" type=\"input\"><value>Backless Knit Casual Mule Shoes with EVA Sole and Five Colour Options for Footwear Collections</value></field></itemSchema>"
+    }
+  },
+  "reason": "Formal title differs from reviewed source-specific submitted product title. Correct only title; cause of later change unconfirmed, not attributed to a person or platform automation.",
+  "expected_title": "Backless Knit Casual Mule Shoes with EVA Sole and Five Colour Options for Footwear Collections",
+  "observed_title": "Backless Knit Casual Mule Shoes with Sculpted EVA Outsole and Five Color Options Fashion Trend",
+  "expected_schema": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Backless Knit Casual Mule Shoes with EVA Sole and Five Colour Options for Footwear Collections",
+          []
+        ]
+      ]
+    ]
+  },
+  "xml_sha256": "b5bca52c818abe66d4a7b20d224a791ca428560c2e5dced18df4a17cc4b790ad"
+}

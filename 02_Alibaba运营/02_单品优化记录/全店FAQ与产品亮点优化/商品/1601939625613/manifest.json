@@ -1,0 +1,27 @@
+{
+  "operation": "update",
+  "product_id": "1601939625613",
+  "category_id": 201334413,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "copy.json",
+    "before_get.json",
+    "../../../../../01_产品资产/02_可发布素材/00_最终上传/BQ020_A218/00_上架填写表.md",
+    "../../../../../01_产品资产/01_原始数据包/已整理_BQ020_A218_A218贝强鞋业夏季透孔一脚蹬男女鞋35-45批55元/A218贝强鞋业夏季透孔一脚蹬男女鞋35-45批55元/800X800主图/主图 (1).jpg",
+    "current_get.json",
+    "../../../../00_运营SOP/国际站商品全生命周期SOP.md"
+  ],
+  "current_schema": "current_schema.xml",
+  "current_schema_sha256": "d12d5b9b4981c64e7f665a1d61a4dfbf725f2f3ec5217ab760feb25b793958aa",
+  "schema_request_id": "0b51802d17917404942848661",
+  "schema_acquired_at": "2026-10-11T17:41:31.519016+00:00",
+  "payload_xml": "payload.xml",
+  "field_ids": [
+    "textDesc",
+    "companyFaqDesc"
+  ],
+  "dependency_ids": [
+    "productDescType"
+  ],
+  "observed_model": "BQ020-O1 / A218"
+}

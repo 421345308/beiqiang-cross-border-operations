@@ -1,0 +1,54 @@
+{
+  "style": "2590",
+  "source_url": "https://luqi.sooxie.com/detail/2549343",
+  "public_page_base_labels_rechecked": "2026-10-08; see 候选核验汇总.json",
+  "image_observation": "2026-09-29 originals, reviewed again this continuation",
+  "full_images_viewed": [
+    "04",
+    "07",
+    "10",
+    "11"
+  ],
+  "colors": [
+    "Khaki",
+    "White",
+    "Black"
+  ],
+  "size_labels": "39-48",
+  "size_system": "UNCONFIRMED_DO_NOT_INHERIT_OTHER_STYLE_EU_CONFIRMATION",
+  "upper": {
+    "proposed": "TPU and Oxford fabric",
+    "source_images": [
+      "07",
+      "10",
+      "11"
+    ],
+    "not_confirmed": "Textile fiber composition and lining; no tested performance claim"
+  },
+  "sole": {
+    "source_wording": "MD+TPR whole sole",
+    "source_images": [
+      "04",
+      "11"
+    ],
+    "segment_assignment": "UNCONFIRMED: do not infer midsole MD/EVA or outsole TPR from combined phrase"
+  },
+  "unknown_required_fields": [
+    "Midsole Material",
+    "Outsole Material",
+    "Lining Material"
+  ],
+  "schema_reference": "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎全店新品_2026-10-08\\当前类目预检\\201334413_current.xml",
+  "schema_sha256": "cb3be59dc64d9f4449a17a1bf77eb0f562cc0270c1f85786e7601f7a6d150f1e",
+  "schema_observation": {
+    "acquired_at": "2026-10-08T04:33:31.591368+00:00",
+    "request_id": "213f5a2117914340099897128",
+    "category_id": 201334413,
+    "read_only": true
+  },
+  "material_rule_status": "CURRENT_SCHEMA_EXPLICIT_CUSTOM_NEGATIVE_INPUTVALUE_RULE_OBSERVED; Not specified proposal requires actual complete payload/platform validation, not yet submitted.",
+  "width_performance": "Source promotions discarded; no wide-toe, gait/medical, grip, rebound, shock-absorption or test-score claim",
+  "supplier_stock": "Not confirmed by public page stock=no or Alibaba numeric inventory",
+  "no_product_created": true,
+  "color_note": "Current source page says 卡其, original color card 土黄; proposed Khaki kept tied to the pictured ochre shoe, not a second color."
+}

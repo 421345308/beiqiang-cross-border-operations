@@ -1,0 +1,29 @@
+{
+  "product_id": "1601969788941",
+  "model": "BQ-MJ9968",
+  "title": "Wholesale Womens Colorblock Mary Jane Flats with Hook and Loop Strap for Casual Everyday Wear",
+  "title_match": true,
+  "status": "modified",
+  "display": "N",
+  "protected_fields": {
+    "product_sku": true,
+    "main_image": true,
+    "struct_detail": true,
+    "attributes": true,
+    "category_id": true,
+    "sourcing_trade": true,
+    "keywords": true
+  },
+  "request_id": "0b51802d17914243587648151",
+  "observed_at": "2026-10-08T01:52:39.960780+00:00",
+  "limits": "仅标题正式字段验收；复审及公开页/整款历史遗留问题单列",
+  "raw_protected_fields": {
+    "product_sku": true,
+    "main_image": true,
+    "struct_detail": false,
+    "attributes": true,
+    "category_id": true,
+    "sourcing_trade": true
+  },
+  "detail_comparison": "API gallery return order normalized only; image URLs plus gallery roles, all text and FAQ values remain exact; main order remains strict"
+}

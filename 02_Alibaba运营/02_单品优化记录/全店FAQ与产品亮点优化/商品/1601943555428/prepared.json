@@ -1,0 +1,366 @@
+{
+  "keyword_input": null,
+  "differentiation_review": null,
+  "category_id": 201334413,
+  "operation": "update",
+  "inventory_input": null,
+  "model_serialization": null,
+  "target_product_id": "1601943555428",
+  "field_ids": [
+    "companyFaqDesc",
+    "textDesc"
+  ],
+  "dependency_ids": [
+    "productDescType"
+  ],
+  "xml": "<itemSchema><field id=\"textDesc\" name=\"Product Highlights\" type=\"input\"><value>Low-top mesh lace-up casual shoes with patterned upper openings and a thick sole profile. The side-panel outline and heel pull loop add visible structure to the knit-like mesh appearance. Mesh lining and an EVA midsole are specified, with Black and Beige choices through EU 39–48.</value></field><field id=\"companyFaqDesc\" name=\"FAQs\" type=\"multiComplex\"><complex-values><field id=\"question\" type=\"input\"><value>Which color and EU size choices are listed?</value></field><field id=\"answers\" type=\"input\"><value>Beige: EU 39–48; Black: EU 39–48.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>How is the mesh upper arranged?</value></field><field id=\"answers\" type=\"input\"><value>Patterned openings sit between the toe and side panels, with a conventional lace-up front and heel pull loop. The shoe has mesh lining and an EVA midsole.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>What should I assess on a sample?</value></field><field id=\"answers\" type=\"input\"><value>Adjust the laces with the intended socks, then check toe room, instep fit and heel hold before choosing the bulk EU size mix.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>What is the minimum order for the original style?</value></field><field id=\"answers\" type=\"input\"><value>The listed original-style minimum is 2 pairs. Quantity pricing is shown on this page; logo and custom packaging proposals are quoted separately.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>How can I request a sample?</value></field><field id=\"answers\" type=\"input\"><value>Send the selected color, EU size and delivery postcode for a sample quotation covering the pair, courier charge and proposed dispatch date.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>What should I send for logo or packaging requirements?</value></field><field id=\"answers\" type=\"input\"><value>Send the logo artwork, preferred placement, packaging brief and order quantity. The proposal for this style will set out the applicable minimum, cost and sample process.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>How can I get a delivered quotation?</value></field><field id=\"answers\" type=\"input\"><value>Send pair quantities by color and EU size, the destination postcode or port and the packaging request. The quotation separates product cost and freight and includes the proposed dispatch and transit schedule.</value></field></complex-values></field><field id=\"productDescType\" name=\"Product description\" type=\"singleCheck\"><value>4</value></field></itemSchema>",
+  "expected_fields": {
+    "textDesc": [
+      "field",
+      [
+        [
+          "id",
+          "textDesc"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Low-top mesh lace-up casual shoes with patterned upper openings and a thick sole profile. The side-panel outline and heel pull loop add visible structure to the knit-like mesh appearance. Mesh lining and an EVA midsole are specified, with Black and Beige choices through EU 39–48.",
+          []
+        ]
+      ]
+    ],
+    "companyFaqDesc": [
+      "field",
+      [
+        [
+          "id",
+          "companyFaqDesc"
+        ]
+      ],
+      "",
+      [
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Which color and EU size choices are listed?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Beige: EU 39–48; Black: EU 39–48.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "How is the mesh upper arranged?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Patterned openings sit between the toe and side panels, with a conventional lace-up front and heel pull loop. The shoe has mesh lining and an EVA midsole.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "What should I assess on a sample?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Adjust the laces with the intended socks, then check toe room, instep fit and heel hold before choosing the bulk EU size mix.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "What is the minimum order for the original style?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "The listed original-style minimum is 2 pairs. Quantity pricing is shown on this page; logo and custom packaging proposals are quoted separately.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "How can I request a sample?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Send the selected color, EU size and delivery postcode for a sample quotation covering the pair, courier charge and proposed dispatch date.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "What should I send for logo or packaging requirements?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Send the logo artwork, preferred placement, packaging brief and order quantity. The proposal for this style will set out the applicable minimum, cost and sample process.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "How can I get a delivered quotation?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Send pair quantities by color and EU size, the destination postcode or port and the packaging request. The quotation separates product cost and freight and includes the proposed dispatch and transit schedule.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "prepared_from_current_schema": true,
+  "task_pack": null,
+  "replacement_plan": null,
+  "schema_provenance": {
+    "schema_request_id": "0b51802d17917379190403358",
+    "schema_acquired_at": "2026-10-11T16:58:36.078336+00:00",
+    "current_schema_sha256": "8c3b2312ea4d977c5930372c7a6f34146c48e823f3422ed503b38f8ee62c3a70",
+    "source_evidence": [
+      "copy.json",
+      "before_get.json",
+      "../../../../05_扩品工程/HR系列真实货源改造_2026-09-21/HR018_2026-09-24在售替代货源核验.md",
+      "../../../../../99_临时区/HR018_候选核验/路崎036_首图.jpg",
+      "current_get.json",
+      "../../../../00_运营SOP/国际站商品全生命周期SOP.md"
+    ]
+  }
+}

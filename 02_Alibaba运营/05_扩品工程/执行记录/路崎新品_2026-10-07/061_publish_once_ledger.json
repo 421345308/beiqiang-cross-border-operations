@@ -1,0 +1,14 @@
+{
+  "status": "business_rejected",
+  "model": "BQ-LQ061",
+  "xml_sha256": "f9f25355b1871d5c4a86499237666b5b1372b04c1afb40af66b03676ab543655",
+  "attempted_at": "2026-10-07T15:32:20.601734+00:00",
+  "product_id": null,
+  "refs": {
+    "request_id": "2105584317913871501945186",
+    "trace_id": "0bb4a40617913871498212833e0d6d",
+    "message": "systemError:isp.system-service-error:PUB_BIZCHECK_CAT_PUB_RESTRICT:The current commodity category is not within the scope of online business category and cannot be delivered. Please go to store management-> Manage company information to complete the business category setting:;",
+    "error": null
+  },
+  "content_status": "unverified_content"
+}

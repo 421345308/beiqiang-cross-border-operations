@@ -1,0 +1,42 @@
+{
+  "rows": [
+    {
+      "candidate": "H219",
+      "old_listing": "HR048-B",
+      "old_product_id": "1601943767092",
+      "new_product_id": null,
+      "owner": "task2/01a0fa7b…",
+      "source_url": "https://ls2017.sooxie.com/detail/1565538",
+      "source_facts_parent_delegation": "CNY60；棕黑35–40/12SKU；系带侧拉链短靴；实际材料查owner",
+      "match_type": "STRATEGIC_RETIRE_AND_REAL_SOURCE_REPLACEMENT_NOT_IDENTICAL_SHOE",
+      "selection_reason": "旧侧拉链/系带采购问题相邻，非完全同鞋；A/C潜力保护",
+      "growth_tier": "普通品",
+      "growth_observed_at_utc": "2026-10-02 00:48:31",
+      "classification_source": "02_Alibaba运营/05_扩品工程/执行记录/266_API完整新建_2026-10-02/HR_201_growth_verified_register_2026-10-02.csv",
+      "protected": false,
+      "retained_siblings": [
+        {
+          "listing_id": "HR048-A",
+          "product_id": "1601943649788",
+          "growth_tier": "潜力优品",
+          "disposition": "KEEP_UNCHANGED"
+        },
+        {
+          "listing_id": "HR048-C",
+          "product_id": "1601943607995",
+          "growth_tier": "潜力优品",
+          "disposition": "KEEP_UNCHANGED"
+        }
+      ],
+      "authorization_scope": "父任务明确要求从今日普通列表补唯一目标，本任务不下架",
+      "reservation_status": "RESERVED_FOR_PARENT_CONFIRMED_SOURCE_OWNER",
+      "old_action": "NOT_SENT",
+      "new_acceptance": "PRODUCTION_IN_PROGRESS_OWNER_RECEIPTS_PENDING",
+      "whole_family_complete": false,
+      "next_action": "原owner绑定确切旧目标/首次新ID，不全店复查、不因未宣传可选测样停普通上架"
+    }
+  ],
+  "original_path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\HR系列真实货源改造_2026-09-21\\HR普通品一对一待替换映射_2026-10-02.json",
+  "original_sha256": "d325e493949bef694a4f04e06b51164037bd0e386bde9edeb1ba2022218900f6",
+  "normalization": "STRATEGIC_RETIRE_NOT_IDENTICAL_SHOE -> existing contract strategic real-source enum; no old-off authorization added"
+}

@@ -1,0 +1,41 @@
+{
+  "at": "2026-10-16T05:15:22.287579+00:00",
+  "ids": [
+    "1601943574507",
+    "1601943545775"
+  ],
+  "models": [
+    "BQ1030-A",
+    "BQ1030-B"
+  ],
+  "state": "TARGET_MODEL_AND_FACTORY_IMAGE_RETURNED_CURRENT_PLATFORM_REJECTED",
+  "observed": {
+    "get_and_complete_catalog_agree": "tbd/N",
+    "all_target_and_non_target_formal_values_match": true,
+    "API_rejection_reason_present": false
+  },
+  "source_references": [
+    "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943574507/verification.json",
+    "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943545775/verification.json"
+  ],
+  "normal_browser_diagnosis": {
+    "state": "SELLER_EDITOR_REDIRECTED_TO_NORMAL_LOGIN",
+    "destination": "https://post.alibaba.com/product/publish.htm?itemId=1601943574507",
+    "read_only": true,
+    "new_product_write": false,
+    "login_data_entered": false,
+    "temporary_tab_closed": true
+  },
+  "official_status_reference": "https://developer.alibaba.com/docs/api.htm?apiId=25439",
+  "next_action": "保留当前tbd/N，停止原鞋原图重提；有实源不等于平台知识产权审核通过。改标题或删除自定义属性不能解决已知侵权退回；更换实际合适鞋款/明确授权和平台复核后才评估恢复。",
+  "scope": "这两条不能计当前在架；其余481条独立正式字段和5.00分通过。",
+  "current_followup": {
+    "at": "2026-10-16T15:50:32+00:00",
+    "state": "PLATFORM_IP_REJECTED_OWNER_CONFIRMED",
+    "both_approved_visible_score_5": false,
+    "custom_property_clear_effective": false,
+    "evidence": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/侵权退回事实.json",
+    "note": "平台侵权退回是负责人明确事实；属性校验错误独立，不作为审核退回原因。",
+    "source": "负责人2026-10-16本会话明确说明：阿里巴巴认为上架商品侵权，退回来"
+  }
+}

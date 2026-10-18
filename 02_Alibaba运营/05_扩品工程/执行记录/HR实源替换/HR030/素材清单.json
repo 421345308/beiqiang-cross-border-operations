@@ -1,0 +1,129 @@
+{
+  "state": "VISUAL_PASS",
+  "family": "HR030",
+  "items": {
+    "D1": {
+      "path": "01_产品资产/02_可发布素材/HR030/D1.jpg",
+      "sha256": "147993271f0a632f0284be1be47c80c6d6b06e5b9ece642ec7c6fcbd296c2429",
+      "dimensions": [
+        1000,
+        1250
+      ]
+    },
+    "D2": {
+      "path": "01_产品资产/02_可发布素材/HR030/D2.jpg",
+      "sha256": "036fa660c2d97f368c345b18432887585db406bfdb5ab5764df58b4628f9dc36",
+      "dimensions": [
+        1000,
+        1250
+      ]
+    },
+    "D3": {
+      "path": "01_产品资产/02_可发布素材/HR030/D3.jpg",
+      "sha256": "e2144445b7455fa7403dc28bf0621e9ba048b98d3496eb49003fc4efa556737d",
+      "dimensions": [
+        1000,
+        1250
+      ]
+    },
+    "D4": {
+      "path": "01_产品资产/02_可发布素材/HR030/D4.jpg",
+      "sha256": "53d05a4e61cc61c79ce0cf937ea22fbdd48fc21a4638ff83d7f07b60181d03c5",
+      "dimensions": [
+        1000,
+        1250
+      ]
+    },
+    "M1": {
+      "path": "01_产品资产/02_可发布素材/HR030/M1.jpg",
+      "sha256": "bbfcce01af2f69c9c8b6a27c0f5bcebb341e32848ffd01a4a2a7f6d3fed99894",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M2": {
+      "path": "01_产品资产/02_可发布素材/HR030/M2.jpg",
+      "sha256": "eca6ee4aaaf763f57b6813ec2200bef2add879b3019ca95d0b8a353b65c7c325",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M3": {
+      "path": "01_产品资产/02_可发布素材/HR030/M3.jpg",
+      "sha256": "13431f3bdaee9132747a2639371d4855a456bcb4d7de2fd00f6b58326a1e3cf5",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M4": {
+      "path": "01_产品资产/02_可发布素材/HR030/M4.jpg",
+      "sha256": "03b627e9880499f832f2aa3a4d5f35e773931db830088b291908404110cc0bbd",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M5": {
+      "path": "01_产品资产/02_可发布素材/HR030/M5.jpg",
+      "sha256": "6a96cd1579f9b8145e09842b4ee9388dcdc3ffc62349208f38923ab5e9b7a779",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M6": {
+      "path": "01_产品资产/02_可发布素材/共享素材/贝强公司简介图库.jpg",
+      "sha256": "5164b4d0ac008fb79a20d60419d21713b4f49b9ecea0a845d6c7de104030f51e",
+      "dimensions": [
+        1721,
+        914
+      ]
+    },
+    "SKU_BLACK": {
+      "path": "01_产品资产/02_可发布素材/HR030/SKU_BLACK.jpg",
+      "sha256": "1803c81a2ebf09be58ee1e9b54be930f7cb310f7ea50b2a7d4a222cc776e0f0d",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "SKU_OFF_WHITE": {
+      "path": "01_产品资产/02_可发布素材/HR030/SKU_OFF_WHITE.jpg",
+      "sha256": "118b2399a6e9a44b1bd0e55239617c7f082319e8e62918af974efae580706055",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    }
+  },
+  "review": {
+    "reviewed_at": "2026-10-13",
+    "source_artno": "MNA-1",
+    "original_photos": "03/04/11/13 preserve exact shoe pixels in cropping and new editorial layouts",
+    "materials_evidence": "HR030_MNA1/原始证据/09.jpg shows rubber sole and textile lining; source title says canvas, 13 shows woven fabric closeup",
+    "colors": "Source 白色 is off-white/beige actual photographed shoe; 黑色 is black with cream outsole",
+    "rejected_generated_candidates": [
+      "exec-00390185-a9a8-4ae9-8f1a-15c819fe5dfd.png",
+      "exec-6a41d381-77e3-402d-9cac-b5fb87e3c81e.png"
+    ],
+    "rejection_reason": "Shoe embossing text altered; not uploaded or used as product evidence",
+    "roles": [
+      "real shoe identity",
+      "second color",
+      "on-foot platform profile",
+      "color options",
+      "EU size assortment",
+      "approved company evidence"
+    ],
+    "detail_roles": [
+      "material and style facts",
+      "three actual construction closeups",
+      "color selection",
+      "size and quote inputs"
+    ],
+    "limitations": "No slip resistance or height-gain guarantee; no actual stock promise"
+  }
+}

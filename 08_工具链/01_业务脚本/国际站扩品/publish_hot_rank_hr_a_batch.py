@@ -552,6 +552,8 @@ def api_submit(client, config, listing: dict, draft: bool, update_product_id: st
         raise ValueError("submission requires an explicit listing prepared against current Schema")
     root = ET.fromstring(listing["xml"])
     allowed = set(listing["field_ids"]) | set(listing["dependency_ids"])
+    if operation == 'update' and 'catId' in allowed and not {'saleProp','sku','ladderPrice'} <= set(listing['field_ids']):
+        raise ValueError('category update must explicitly include reviewed complete saleProp, sku and ladderPrice; partial category changes reset SKU bindings')
     if {f.get("id") for f in root.findall("./field")} != allowed:
         raise ValueError("unrelated or missing fields in submission payload")
     if update_product_id and str(listing.get("target_product_id")) != str(update_product_id):

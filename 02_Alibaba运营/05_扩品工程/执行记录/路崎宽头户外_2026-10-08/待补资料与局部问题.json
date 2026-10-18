@@ -1,0 +1,50 @@
+{
+  "observed_at": "2026-10-15T18:12:17.471194+00:00",
+  "scope": "Current source/identity/individualproductreview issues only. Owner-approved broadercategory route successful for2509/026; no businessrootchange, no permissionblock.",
+  "active": {},
+  "current_queue": "质量复核_2026-10-09/全分类处理队列.json",
+  "last_local_snapshot_consistency": {
+    "at": "2026-10-15T18:14:06.874710+00:00",
+    "scope": "Local official snapshots and current source/dossier/FAQ/V8 identities; no fresh shopwide live state or public UI assertion",
+    "ids": 98,
+    "EU": 2850,
+    "faq_counts": {
+      "8": 98
+    },
+    "company_counts": {
+      "6": 98
+    },
+    "issues": [],
+    "state": "LOCAL_REFERENCES_AND_COMMON_CONTENT_PASS",
+    "formal_acceptance": "Per-ID live review/field/score states remain in 本批正式商品汇总.json; this check does not advance platform state."
+  },
+  "last_local_image_integrity": {
+    "at": "2026-10-15T18:58:50.957329+00:00",
+    "scope": "Current98 official snapshot image identities to local files; local SHA checked, no new per-ID browser or fresh remote pixel assertion.",
+    "ids": 98,
+    "unique_official_urls": 1098,
+    "unique_local_file_hash_pairs_checked": 1098,
+    "issues": [],
+    "main6_asset_counts": {
+      "https://sc04.alicdn.com/kf/S6c8cb1d46d8c4b018cf07f5cab50c1adi.png": 62,
+      "sc04-kf-asset:Hedfb7ab8452d46f58abcb457f199c138Q": 36
+    },
+    "main6_role_review": {
+      "legacy_checking_url": "https://sc04.alicdn.com/kf/S6c8cb1d46d8c4b018cf07f5cab50c1adi.png",
+      "local_sha256": "778cae3a27b67c2197cf651dea936e41fbae1e9ddedeaaae0d0a769ac1d30b06",
+      "native_image_actually_viewed": true,
+      "role": "Actual production/manual checking photograph collage retained in62main-galleries; distinct factory-proof role, not evidence these sourcedSKUs were produced there. Current company sections use V8six inall98."
+    }
+  },
+  "owner_excluded": {
+    "2520": {
+      "state": "OWNER_EXCLUDED_NOT_PUBLISHED",
+      "issue": "实际鞋跟S形标记与公开品牌图形明显近似，未确认授权或可供无标实款；不抹标后发品。",
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2520准备/标识形状核对.json"
+      ],
+      "at": "2026-10-16T03:45:28.892694+00:00",
+      "decision": "2026-10-16负责人：那就不用做吧；不继续核标识或上架。"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "verdict": "PASS",
+  "reviewer": "/root/review_9968 GPT-6.1-sol medium independent read-only",
+  "reviewed_at_utc": "2026-10-02T13:59:29.059930+00:00",
+  "main": 6,
+  "details": 4,
+  "mobile_375": 10,
+  "image_hashes": {
+    "M1.jpg": "ade91f1552a452c2625f99fdb471674ff7e42a35c28eadebc7149a7d8a093973",
+    "M2.jpg": "e7203197cc2b2d0ac69835bac875a1d5f878bc33cf3f06b650f1a4efc00ec69c",
+    "M3.jpg": "b503305d94f665e12b6b425d4e6abd3b444cd34cf26d2a698c065365fcf55a65",
+    "M4.jpg": "c7c75ba7091f9eb8e9959550344cd3e0f08d3fab937dbb999c391d83baf441db",
+    "M5.jpg": "83111d86e61b06e6110408f66d64bf8fe1b35c3b62dedf23e8dae3cfd6ac7195",
+    "M6.jpg": "429e50e6e0216407bd42e5b7f5ddfe89b124dbed2aa22e322fe5546fa5f7ae62",
+    "D1.jpg": "c81d932c998e9af24629c75b327fe69cc07c739d16032c5ae592aa6bd9359fb4",
+    "D2.jpg": "c5468208d766ef3910fb7183fcd42f1f5c6c3f894d2c6c8bf594696d0289422c",
+    "D3.jpg": "18abe377fd172242c3540d9f7bc4dd91a85b3cbef210b2e47e0374e90e9011f4",
+    "D4.jpg": "952c65c08d9beaefec123b378f9b6f74331e331c67b8d2751142718352245e81"
+  },
+  "facts": [
+    "True same-style originals, no redraw or price cards",
+    "M1/M4/M6 complete-source-scene revisions remove other-shoe edge crop artifacts",
+    "PU insole only, synthetic leather upper/lining, rubber outsole, no invented midsole or performance",
+    "No product-specific own-factory claim"
+  ],
+  "review_provenance": "Root received independent review_9968 completion messages; all10 full size hashes matched and all10 mobile files visually reviewed"
+}

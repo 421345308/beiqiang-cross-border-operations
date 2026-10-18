@@ -1,7 +1,7 @@
 """Real migrated content evidence; offline tests never load a platform client."""
 from pathlib import Path
 from copy import deepcopy
-import contextlib,functools,hashlib,importlib.util,io,json,os,sys,tempfile,unittest
+import contextlib,hashlib,importlib.util,io,json,sys,tempfile,unittest
 from unittest.mock import patch
 from xml.etree import ElementTree as E
 import schema_publish_contract as c
@@ -14,7 +14,7 @@ class VersionedContentTests(unittest.TestCase):
  def evaluate(self,**changes):
   x=self.fx['M001'];kwargs=dict(product_id=x['registry_row']['product_id'],category_id=x['registry_row']['category_id'],editor_observation_id=x['registry_row']['editor_observation_id'],observed_at=x['observed_at'])
   schema=changes.pop('schema',E.fromstring(x['schema_xml']));get=changes.pop('get',deepcopy(x['formal_get']));text=changes.pop('public_text',x['public_text']);kwargs.update(changes)
-  return c.evaluate_versioned_content(schema,get,text,evidence_root=os.environ.get('BEIQIANG_TEST_EVIDENCE_ROOT'),**kwargs)
+  return c.evaluate_versioned_content(schema,get,text,**kwargs)
  def gate(self,result):
   checks={k:True for k in c.COMPLETION_CHECKS};checks['keyword_persistence']=False
   return c.post_publish_acceptance(checks,actual_score=5.0,observed_at=self.fx['M001']['observed_at'],score_source={'kind':'offline_actual_ui_score_fixture'},diagnostics={'status':'clear'},versioned_content=result)
@@ -81,8 +81,7 @@ class VersionedContentTests(unittest.TestCase):
   with tempfile.TemporaryDirectory() as directory:
    d=Path(directory);(d/'formal.xml').write_text(E.tostring(root,encoding='unicode'),encoding='utf-8')
    (d/'get.json').write_text(json.dumps(x['formal_get']),encoding='utf-8')
-   evidence_root=Path(os.environ.get('BEIQIANG_TEST_EVIDENCE_ROOT',HERE.resolve().parents[2]))
-   public_source=next(v for v in row['sources'] if v['kind']=='public_summary');raw=(evidence_root/public_source['path']).read_bytes();(d/'public.json').write_bytes(raw)
+   public_source=next(v for v in row['sources'] if v['kind']=='public_summary');raw=(HERE.resolve().parents[2]/public_source['path']).read_bytes();(d/'public.json').write_bytes(raw)
    receipt={'operation':'update','product_id':row['product_id'],'status':'submitted_needs_readback','attempted_at':'2026-10-03T13:00:00+00:00','expected_fields':c.field_snapshot(expected)};(d/'receipt.json').write_text(json.dumps(receipt),encoding='utf-8')
    evidence={'product_id':row['product_id'],'request_id':x['formal_get']['request_id'],'acquired_at':x['observed_at'],'schema_file':'formal.xml','schema_sha256':hashlib.sha256((d/'formal.xml').read_bytes()).hexdigest(),'content_checks':{k:True for k in c.COMPLETION_CHECKS},'post_publish_score':{'actual_score':5.0,'observed_at':x['observed_at'],'score_source':{'kind':'actual_editor_score_evidence'},'diagnostics':{'status':'clear'}}}
    evidence['content_checks']['keyword_persistence']=False
@@ -91,8 +90,7 @@ class VersionedContentTests(unittest.TestCase):
    for use_profile,code in [(False,2),(True,0)]:
     if use_profile:evidence['content_version']=profile
     (d/'evidence.json').write_text(json.dumps(evidence),encoding='utf-8')
-    evaluate=functools.partial(pub._contract.evaluate_versioned_content,evidence_root=evidence_root)
-    with patch.object(sys,'argv',argv),patch.object(pub,'load_client') as client,patch.object(pub._contract,'evaluate_versioned_content',evaluate),contextlib.redirect_stdout(io.StringIO()):self.assertEqual(pub.main(),code);client.assert_not_called()
+    with patch.object(sys,'argv',argv),patch.object(pub,'load_client') as client,contextlib.redirect_stdout(io.StringIO()):self.assertEqual(pub.main(),code);client.assert_not_called()
    profile['formal_get_sha256']='0'*64;(d/'evidence.json').write_text(json.dumps(evidence),encoding='utf-8')
    with patch.object(sys,'argv',argv),patch.object(pub,'load_client') as client,contextlib.redirect_stdout(io.StringIO()),self.assertRaises(ValueError):pub.main()
 

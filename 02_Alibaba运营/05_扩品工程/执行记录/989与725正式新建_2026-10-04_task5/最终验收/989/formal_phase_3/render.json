@@ -1,0 +1,21 @@
+{
+  "response": null,
+  "error": {
+    "exception_type": "ClientError",
+    "message": "Native HTTP transport failed; write outcome requires reconciliation",
+    "transport_phase": "transport",
+    "request_sent": null,
+    "curl_exit_code": 28,
+    "http_status": null,
+    "business_refs": {},
+    "response_summary": {
+      "format": "text",
+      "excerpt": ""
+    },
+    "stderr_excerpt": "[COMMAND_TEXT_OMITTED]",
+    "cause_types": [],
+    "limits": "Unavailable facts remain null/unknown. Curl errors and absence in catalog do not prove an uncommitted write; no automatic retry."
+  },
+  "observed_at": "2026-10-04T03:05:00.646257+00:00",
+  "operation_kind": "read_only"
+}

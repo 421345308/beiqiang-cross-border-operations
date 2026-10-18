@@ -1,0 +1,8 @@
+# 8815 / BQ-NS002 A-G task pack
+A: NEW. Single writer task-5; no assigned old-product replacement or OFF.
+B: Internal supply source C:\Users\spq\Documents\Codex\2026-10-02\task-5\sooxie_2559340_20261004\facts_and_color_bindings.json; C:\Users\spq\Documents\Codex\2026-10-02\task-5\sooxie_2559340_20261004\minimal_value_review.json; source cost CNY75; supplier original 8815; direct https://weituo.sooxie.com/detail/2559340.
+C: Current Walking Style Shoes category 201334413; actual panelled lace-up casual silhouette. Composition unspecified; no wide-toe, medical or tested sports claim.
+D: Khaki/Grey/Black x size labels38-47=30SKU, system unspecified, no inventory quantity. Seller MOQ2, three tiers USD16.79/15.67/14.55, CNY/USD operating6.7, markups50/40/30. 7-day estimate subject to order confirmation; package34x23x13/0.5kg quote baseline, not actual measurement.
+E: Four actual unmodified source pair photos; M1 grey, M2 black, M3 khaki; M4 general development input, M5 packing discussion, M6 order schedule exact company-v3 evidence. Four product gallery views showing source colors/panels/lacing and source lighting. Source emblem retained. No generated shoe views, copied competitor assets or fabricated capabilities.
+F: Public source + dated limited competitor positioning; explicit no price superiority/demand proof. Own model/source/catalog collision checks before single formal schema.add, current typed FAQ6.
+G: Exact business receipt/new ID, formal approval/fields/SKU, actual score, observed current selling points and public page checked separately. Unknown outcome never replay. No old-off/family closure.

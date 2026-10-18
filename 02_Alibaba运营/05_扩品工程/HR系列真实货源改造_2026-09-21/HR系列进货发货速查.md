@@ -1,10 +1,25 @@
+> **历史过程证据，停止追加和维护当前状态。** 当前款式、共用来源、关联ID与待办统一看[扩品总文件](../国际站合规扩品工程总控.md)；历史段落中的旧暂停、线程分工、候选、库存与待授权只解释当时过程，不能作为当前执行指令。
+
+<a id="hr021-source-verified-20261002"></a>
+## HR021 A/B/C真实来源已核（2026-10-02本地原件复核）
+这款不在搜鞋网：采购来源为Made-in-China，店铺hzmshoes/HZM，供方原页英文公司名 **Guangzhou Weirui Shoes Co., Ltd.**；中文工商名未核，不自行音译为已确认名称。原货号 **26CZYA22-113**，Coffee/Green、EU35–40，真实双扣Mary Jane（包括HR021-C），不是早期单搭带网面概念鞋。
+
+| 我们的型号 | 国际站商品ID | 供方/原货号/直达链接 | 证据日期与缺失状态 |
+| --- | --- | --- | --- |
+| HR021-A | 1601943593293 | Guangzhou Weirui Shoes Co., Ltd.；26CZYA22-113；[Made-in-China原款](https://hzmshoes.en.made-in-china.com/product/JYcRrUIDuBVm/China-OEM-ODM-High-Quality-Brown-Suede-Mary-Jane-Sneakers-for-Women-Walking-Style-Double-Buckle-Casual-Shoes-Manufacturer-in-Guangzhou.html) | 来源2026-09-29实图/事实核验；后来正式绑定已核，2026-10-01批次approved/Y及各12SKU；当次3.90边框/拼接、公开QA未闭环，今日实时状态/采购条件仍须原owner核。 |
+| HR021-B | 1601943584343 | Guangzhou Weirui Shoes Co., Ltd.；26CZYA22-113；[Made-in-China原款](https://hzmshoes.en.made-in-china.com/product/JYcRrUIDuBVm/China-OEM-ODM-High-Quality-Brown-Suede-Mary-Jane-Sneakers-for-Women-Walking-Style-Double-Buckle-Casual-Shoes-Manufacturer-in-Guangzhou.html) | 来源2026-09-29实图/事实核验；后来正式绑定已核，2026-10-01批次approved/Y及各12SKU；当次3.90边框/拼接、公开QA未闭环，今日实时状态/采购条件仍须原owner核。 |
+| HR021-C | 1601943577329 | Guangzhou Weirui Shoes Co., Ltd.；26CZYA22-113；[Made-in-China原款](https://hzmshoes.en.made-in-china.com/product/JYcRrUIDuBVm/China-OEM-ODM-High-Quality-Brown-Suede-Mary-Jane-Sneakers-for-Women-Walking-Style-Double-Buckle-Casual-Shoes-Manufacturer-in-Guangzhou.html) | 来源2026-09-29实图/事实核验；后来正式绑定已核，2026-10-01批次approved/Y及各12SKU；当次3.90边框/拼接、公开QA未闭环，今日实时状态/采购条件仍须原owner核。 |
+
+原件：[真实来源facts](../../../99_临时区/HR021_26CZYA22-113_候选独立核验_2026-09-29/facts.json)、[双扣真实像素](../../../99_临时区/HR021_26CZYA22-113_候选独立核验_2026-09-29/image_manifest.json)、[后来的正式采用回执](HR021_标题及主字段替换阶段回执_2026-09-29.md)；10-01批准/36SKU/3.90原始ROOT_HR021_正式批次核验.json位于99_临时区/WorkBuddy_HR020_可见试单_2026-10-01/04_执行回执/。
+9-23的SK18/5965A/2929/D666/699是早期淘汰/待核候选，不能拿来替代已采用26CZYA22-113。9-29候选复核中的“尚未采用”只描述该次先期复核，后来正式绑定是后续事实。ABC同一实款，标题/图片区别不解除MERGE_REVIEW；找到供应链接不等于可承诺当天库存、自产或交期。
+
 # HR 系列进货、发货速查
 
 > **暂停使用：这是 2026-09-24 的历史采购快照。** 表内 HR001 `9002` 等信息已被真实换款回执替代，不能据此报价、接单、采购或发货。先从[当前状态](../../../00_总控台/当前状态.md)定位最新家族回执，再核当天供应商、价格、可供色码与交期。保留此表仅追溯早期候选和判断。
 
 历史截面：2026-09-24。按不带 A/B/C 的 HR 家族编号追溯当时考虑的同一采购货号；本页未随最新换款同步，不能用作当日询价或下单清单。较完整的旧证据见[货源发货与图片总表](./HR系列货源发货与图片总表.md)及[逐款改造总控](./HR系列逐款改造总控.md)。
 
-每个 HR 家族的 A/B/C 全部改造并公开验收后，必须在本页留下同一真实货号的采购直达链接、供应商、核价日期与进货基准、可订颜色尺码、发货前核验事项，并在总表逐链接记录商品 ID、售价与上线状态。缺少进货入口时不得标记该家族为“改造完成”或“可发货”。
+该历史页已停止回写。后续采购直链、原货号、核价日期、可订色码及逐链接状态只维护产品与链接台账，并刷新扩品总文件。缺少进货入口时不得标记该家族为“改造完成”或“可发货”。
 
 执行口径：旧概念鞋找不到完全同款时，允许选择可采购的相似实款，让同一家族 A/B/C 一起换成该实款，不因外观不完全相同而停工。后台每个新 SKU 的 `999` 是店铺可询货设置，**不是**供应商逐码现货数量；定款和上架不要求算出实时精确库存。来源页面显示 `0`/“无库存”时先核对能否接单或另找同货号渠道，不能只凭库存数字否决一个鞋款。旧买家页尚未换成真实鞋款时，数字无论是 `0` 还是 `999` 都不能作为发货依据。每单实际采购数量、价格和交期仍以当次渠道回复为准。
 

@@ -1,0 +1,30 @@
+{
+  "product_id": "1601969920294",
+  "model": "BQ-L3522",
+  "method": "alibaba.icbu.product.update.field",
+  "scope": [
+    "keywords"
+  ],
+  "status": "WRITE_OUTCOME_UNKNOWN_STOP_NO_RETRY",
+  "attempted_at": "2026-10-02T15:50:51.517568+00:00",
+  "params_sha256": "bea746f0ccb2f9d6fc219076b85ed9b27e598760c62009d88f3ddca0177c9a25",
+  "failure_evidence": {
+    "exception_type": "ClientError",
+    "message": "Network error; write outcome unknown",
+    "transport_phase": "transport",
+    "request_sent": null,
+    "curl_exit_code": null,
+    "http_status": null,
+    "business_refs": {},
+    "response_summary": {
+      "format": "not_captured",
+      "excerpt": null
+    },
+    "stderr_excerpt": "[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)",
+    "cause_types": [
+      "URLError",
+      "SSLEOFError"
+    ],
+    "limits": "Unavailable facts remain null/unknown. Curl errors and absence in catalog do not prove an uncommitted write; no automatic retry."
+  }
+}

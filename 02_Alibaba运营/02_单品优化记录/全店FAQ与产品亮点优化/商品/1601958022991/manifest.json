@@ -1,0 +1,27 @@
+{
+  "operation": "update",
+  "product_id": "1601958022991",
+  "category_id": 201334413,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "copy.json",
+    "before_get.json",
+    "../../../../../01_产品资产/02_可发布素材/00_最终上传/BQ006_M8811/00_上架填写表.md",
+    "../../../../../01_产品资产/01_原始数据包/已整理_BQ006_M8811_贝强鞋业秋冬季新款M8811男女鞋35-45批58元/贝强鞋业秋冬季新款M8811男女鞋35-45批58元/主图/1.jpg",
+    "current_get.json",
+    "../../../../00_运营SOP/国际站商品全生命周期SOP.md"
+  ],
+  "current_schema": "current_schema.xml",
+  "current_schema_sha256": "b36c5e991e8fac9da1c2cba97fdad117cfde1b0c377fd23a2ac788a257d064f7",
+  "schema_request_id": "0b830ecc17917408265269000",
+  "schema_acquired_at": "2026-10-11T17:47:03.884742+00:00",
+  "payload_xml": "payload.xml",
+  "field_ids": [
+    "textDesc",
+    "companyFaqDesc"
+  ],
+  "dependency_ids": [
+    "productDescType"
+  ],
+  "observed_model": "BQ006-S2 / M8811"
+}

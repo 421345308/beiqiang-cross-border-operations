@@ -1,0 +1,42 @@
+{
+  "product_id": "1601970169467",
+  "final_read_at_utc": "2026-10-03T09:10:35.733656+00:00",
+  "score_read_at_utc": "2026-10-03T09:10:40.237061+00:00",
+  "approved": "Y",
+  "actual_score": 5.0,
+  "image_scale_deduction": 0,
+  "first_formal_image_size": [
+    700,
+    700
+  ],
+  "first_download_sha_matches_uploaded": true,
+  "other_original_sizes": {
+    "M2": [
+      1000,
+      1000
+    ],
+    "M3": [
+      1000,
+      1000
+    ],
+    "M4_original": "CDN challenge HTML, not bypassed; original uploaded file verified 1000x1000",
+    "M5": [
+      1000,
+      1000
+    ],
+    "M6": [
+      800,
+      800
+    ]
+  },
+  "all_350_variants_square": true,
+  "total_image_uploads_this_repair": 1,
+  "total_product_updates_this_repair": 1,
+  "extra_five_slots_changed": false,
+  "public_hero_visible": "PASS, public_loaded.png inspected",
+  "approval_timestamp": "Not returned; approved first observed 08:46:51 UTC",
+  "score_calculation_timestamp": "Not returned; 4.50 observed after approval, 5.00 observed 09:10:40 UTC",
+  "interpretation": "This case succeeds with only M1 changed. Other five slots do not require blanket replacement. Exact internal scoring refresh cause/time is unknown.",
+  "get_request_id": "212c41d317910186350784398",
+  "score_request_id": "2105044417910186396407637"
+}

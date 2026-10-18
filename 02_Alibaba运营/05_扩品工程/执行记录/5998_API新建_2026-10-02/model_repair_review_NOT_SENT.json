@@ -1,0 +1,24 @@
+{
+  "product_id": 1601969869242,
+  "state": "PREPARED_NOT_SENT_WAIT_APPROVED_CURRENT_TARGET_SCHEMA",
+  "method": "alibaba.icbu.product.schema.update",
+  "fields": [
+    "icbuCatProp.p-3"
+  ],
+  "xml_sha256": "6d39077a076b4bc3458b65ed5f97182fc17d6849393e2f72415b7e713dfd29be",
+  "diagnosis": "First create p-3 value text was not persisted. Current same-shop 936 minimal repair uses inputValue and negative typed marker -3. Parent explicitly directed p-3/inputValue verification.",
+  "evidence": "C:/Users/spq/Documents/Codex/2026-10-02/task-4/prepare_936_minimal_repair.py; current 5998 first get missing attr3",
+  "no_details_repair": "All four real detail image assets and roles are nonempty in current get. Do not infer gallery loss from unavailable render during new/N.",
+  "protected_fields": [
+    "sku",
+    "scImages",
+    "detailImage",
+    "companyImage",
+    "companyFaqDesc",
+    "ladderPrice",
+    "minOrderQuantity",
+    "inventory",
+    "ladderPeriod"
+  ],
+  "next": "After approved/Y and nonempty current schema.render, build scoped input manifest bound to this target, call once and formally reread; no retry on unknown outcome."
+}

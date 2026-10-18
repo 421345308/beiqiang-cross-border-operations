@@ -1,0 +1,64 @@
+{
+  "observed_at": "2026-10-07",
+  "candidate": {
+    "source": {
+      "reference": "https://luqi.sooxie.com/detail/2561975",
+      "style": "061",
+      "critical_facts": {
+        "profile": "low-cut lace-up outdoor shoe",
+        "upper_structure": "panelled upper with toe overlay",
+        "outsole_structure": "leaf polygon textured outsole and matching patterned sidewall",
+        "closure": "lace-up"
+      },
+      "evidence": [
+        "路崎061来源事实.json",
+        "061发布前分析.md",
+        "061_asset_manifest.json"
+      ]
+    },
+    "search_intent": {
+      "key": "unisex low top lace up casual walking shoes panelled uppers",
+      "evidence": [
+        "061关键词与标题草案.md",
+        "061上架任务包.md"
+      ]
+    },
+    "hero_review": {
+      "url": "https://sc04.alicdn.com/kf/H169a4b9be9be4d4dab59e921c07f46dcs/286385890/H169a4b9be9be4d4dab59e921c07f46dcs.jpg",
+      "aliases": [
+        "//sc04.alicdn.com/kf/H169a4b9be9be4d4dab59e921c07f46dcs/286385890/H169a4b9be9be4d4dab59e921c07f46dcs.jpg"
+      ],
+      "sha256": "aa7d7cd0b2777f1e58cf0e194e803ab5436295d2dead873b187da51c5f2d8ccc",
+      "content_key": "LQ061-beige-original13-panelled-leaf-polygon-sole",
+      "label_status": "not_present",
+      "evidence": [
+        "061_asset_manifest.json",
+        "061发布前分析.md"
+      ]
+    }
+  },
+  "source_records": {},
+  "coverage_limit": "Current saved 380-record catalog and supplier registry; visual comparison of seven associated outdoor/lace-up listings in HR002/HR016/HR038 using saved pixels. Other unassociated records remain unknown; this is not global visual clearance.",
+  "evidence_files": [
+    {
+      "path": "..\\..\\供应商产品总表\\平台目录快照_2026-10-07.json",
+      "sha256": "d9b4af3155cc45f8a8a20b5babfe5864139a55414c798e792129c30f68ba8cfa",
+      "kind": "catalog_snapshot"
+    },
+    {
+      "path": "..\\..\\供应商产品总表\\供应商产品总表.csv",
+      "sha256": "2106849195082ce3ab88ad6791615167c227a99af41bf67613478ee7ffa89343",
+      "kind": "source_register"
+    },
+    {
+      "path": "061发布前分析.md",
+      "sha256": "bf6a31d2225573297799c32a648784cb78f720d70f0cccc654cc9cadb7c7bcc0",
+      "kind": "visual_review"
+    },
+    {
+      "path": "路崎061来源事实.json",
+      "sha256": "f7636da6f4a58bcf8e8c0111504a04d0992130e57b3a87bbea508076fbb039fb",
+      "kind": "source_register"
+    }
+  ]
+}

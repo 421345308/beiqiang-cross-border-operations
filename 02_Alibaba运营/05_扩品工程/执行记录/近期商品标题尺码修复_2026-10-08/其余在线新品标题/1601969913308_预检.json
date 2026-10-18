@@ -1,0 +1,45 @@
+{
+  "keyword_input": null,
+  "differentiation_review": null,
+  "category_id": 32211,
+  "operation": "update",
+  "inventory_input": null,
+  "model_serialization": null,
+  "target_product_id": "1601969913308",
+  "field_ids": [
+    "productTitle"
+  ],
+  "dependency_ids": [],
+  "xml": "<itemSchema><field id=\"productTitle\" type=\"input\"><value>Wholesale Mens High Top Work Boots with Dial Closure and Wave Pattern Uppers</value></field></itemSchema>",
+  "expected_fields": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Wholesale Mens High Top Work Boots with Dial Closure and Wave Pattern Uppers",
+          []
+        ]
+      ]
+    ]
+  },
+  "prepared_from_current_schema": true,
+  "task_pack": null,
+  "replacement_plan": null,
+  "schema_provenance": {
+    "schema_request_id": "213e759c17914239108115869",
+    "schema_acquired_at": "2026-10-08T01:45:13.361733+00:00",
+    "current_schema_sha256": "119a0834cf34e4e3fefc5ffe1540fd6079637d15a8ceed0013fd931f794d5c2f",
+    "source_evidence": [
+      "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-4\\supply_selection\\262_实际可用事实_最新授权_2026-10-02.json"
+    ]
+  }
+}

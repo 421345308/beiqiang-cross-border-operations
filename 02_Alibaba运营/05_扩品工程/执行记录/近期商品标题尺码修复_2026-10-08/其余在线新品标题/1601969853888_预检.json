@@ -1,0 +1,45 @@
+{
+  "keyword_input": null,
+  "differentiation_review": null,
+  "category_id": 201153804,
+  "operation": "update",
+  "inventory_input": null,
+  "model_serialization": null,
+  "target_product_id": "1601969853888",
+  "field_ids": [
+    "productTitle"
+  ],
+  "dependency_ids": [],
+  "xml": "<itemSchema><field id=\"productTitle\" type=\"input\"><value>Wholesale Closed Toe Buckle Strap Mules Slip On Casual Shoes with Open Heels for Everyday Wear</value></field></itemSchema>",
+  "expected_fields": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Wholesale Closed Toe Buckle Strap Mules Slip On Casual Shoes with Open Heels for Everyday Wear",
+          []
+        ]
+      ]
+    ]
+  },
+  "prepared_from_current_schema": true,
+  "task_pack": null,
+  "replacement_plan": null,
+  "schema_provenance": {
+    "schema_request_id": "0b830ecc17914239025367313",
+    "schema_acquired_at": "2026-10-08T01:45:05.306705+00:00",
+    "current_schema_sha256": "ecb345dedf58362442d2b09023bf373afd4381aa8b4cc2535dc1c728a93d3e39",
+    "source_evidence": [
+      "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-2\\HR_other_candidates_2026-10-02\\niche_matches\\huat\\page_text.txt"
+    ]
+  }
+}

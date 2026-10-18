@@ -1,0 +1,9 @@
+{
+  "source": "Parent image-upload boundary: after read-only lookup finds no reusable receipt, one controlled retry with identical bytes/hash/filename in the original15-asset scope; preserve originals, no deletion or expanded batch",
+  "maximum_retry_count_each": 1,
+  "scope": [
+    "D3"
+  ],
+  "reason": "Image-bank late success may create redundant media only, not duplicate product",
+  "product_schema_add_rule": "Once only; unknown add must never blindly resend"
+}

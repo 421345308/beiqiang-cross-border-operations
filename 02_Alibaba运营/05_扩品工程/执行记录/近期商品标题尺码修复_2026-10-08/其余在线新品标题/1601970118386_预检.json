@@ -1,0 +1,45 @@
+{
+  "keyword_input": null,
+  "differentiation_review": null,
+  "category_id": 201153805,
+  "operation": "update",
+  "inventory_input": null,
+  "model_serialization": null,
+  "target_product_id": "1601970118386",
+  "field_ids": [
+    "productTitle"
+  ],
+  "dependency_ids": [],
+  "xml": "<itemSchema><field id=\"productTitle\" type=\"input\"><value>Wholesale Mens Chunky Mesh Casual Sneakers Low Top Lace Up Shoes with Contrast Panels for Daily Wear</value></field></itemSchema>",
+  "expected_fields": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Wholesale Mens Chunky Mesh Casual Sneakers Low Top Lace Up Shoes with Contrast Panels for Daily Wear",
+          []
+        ]
+      ]
+    ]
+  },
+  "prepared_from_current_schema": true,
+  "task_pack": null,
+  "replacement_plan": null,
+  "schema_provenance": {
+    "schema_request_id": "212c41d317914238354416542",
+    "schema_acquired_at": "2026-10-08T01:43:58.113977+00:00",
+    "current_schema_sha256": "425af78ef10065be2925f366b130cfb8ebe1c856a93029185885277379da4fd5",
+    "source_evidence": [
+      "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\02_单品优化记录\\929来源事实快照_2026-10-03.json"
+    ]
+  }
+}

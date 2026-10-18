@@ -1,0 +1,366 @@
+{
+  "keyword_input": null,
+  "differentiation_review": null,
+  "category_id": 201334413,
+  "operation": "update",
+  "inventory_input": null,
+  "model_serialization": null,
+  "target_product_id": "1601939705262",
+  "field_ids": [
+    "companyFaqDesc",
+    "textDesc"
+  ],
+  "dependency_ids": [
+    "productDescType"
+  ],
+  "xml": "<itemSchema><field id=\"textDesc\" name=\"Product Highlights\" type=\"input\"><value>Knit slip-on casual shoes with a raised toe cap and biscuit-style sole edge. The closed front gives a simple lace-free silhouette. Regular colors and a specific Black White Fleece option let buyers distinguish the lining version when selecting an assortment.</value></field><field id=\"companyFaqDesc\" name=\"FAQs\" type=\"multiComplex\"><complex-values><field id=\"question\" type=\"input\"><value>Which color and EU size combinations are listed?</value></field><field id=\"answers\" type=\"input\"><value>Black White: EU 35–45; White: EU 35–45; Apricot: EU 35–45; Grey: EU 35–45; Blue: EU 35–45.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>How should I specify the lining version?</value></field><field id=\"answers\" type=\"input\"><value>State the regular color or Black White Fleece explicitly. Fleece is a specific source variant, so a regular color name alone does not request the fleece version.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>What should I check during a sample fitting?</value></field><field id=\"answers\" type=\"input\"><value>Try the sample with the intended socks. Check toe room, instep fit, heel hold and the shoe opening before deciding the bulk EU size mix.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>What is the minimum order for the original style?</value></field><field id=\"answers\" type=\"input\"><value>The listed original-style wholesale minimum is 2 pairs. Quantity pricing is shown on this page; branding and custom packaging are quoted separately.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>How can I request a sample?</value></field><field id=\"answers\" type=\"input\"><value>Send the selected color or lining variant, EU size and delivery postcode for a sample quotation. It sets out the sample charge, courier cost and proposed dispatch date.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>What should I send for a branding or packaging proposal?</value></field><field id=\"answers\" type=\"input\"><value>Send your logo artwork, preferred placement, packaging brief and order quantity. We can review the proposal for this style and set out the applicable minimum, cost and sample process.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>How can I get a delivered quotation?</value></field><field id=\"answers\" type=\"input\"><value>Send pair quantities by color and EU size, the destination postcode or port and your packaging request. The quotation separates product cost from freight and includes the proposed dispatch and transit schedule.</value></field></complex-values></field><field id=\"productDescType\" name=\"Product description\" type=\"singleCheck\"><value>4</value></field></itemSchema>",
+  "expected_fields": {
+    "textDesc": [
+      "field",
+      [
+        [
+          "id",
+          "textDesc"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Knit slip-on casual shoes with a raised toe cap and biscuit-style sole edge. The closed front gives a simple lace-free silhouette. Regular colors and a specific Black White Fleece option let buyers distinguish the lining version when selecting an assortment.",
+          []
+        ]
+      ]
+    ],
+    "companyFaqDesc": [
+      "field",
+      [
+        [
+          "id",
+          "companyFaqDesc"
+        ]
+      ],
+      "",
+      [
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Which color and EU size combinations are listed?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Black White: EU 35–45; White: EU 35–45; Apricot: EU 35–45; Grey: EU 35–45; Blue: EU 35–45.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "How should I specify the lining version?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "State the regular color or Black White Fleece explicitly. Fleece is a specific source variant, so a regular color name alone does not request the fleece version.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "What should I check during a sample fitting?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Try the sample with the intended socks. Check toe room, instep fit, heel hold and the shoe opening before deciding the bulk EU size mix.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "What is the minimum order for the original style?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "The listed original-style wholesale minimum is 2 pairs. Quantity pricing is shown on this page; branding and custom packaging are quoted separately.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "How can I request a sample?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Send the selected color or lining variant, EU size and delivery postcode for a sample quotation. It sets out the sample charge, courier cost and proposed dispatch date.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "What should I send for a branding or packaging proposal?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Send your logo artwork, preferred placement, packaging brief and order quantity. We can review the proposal for this style and set out the applicable minimum, cost and sample process.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "How can I get a delivered quotation?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Send pair quantities by color and EU size, the destination postcode or port and your packaging request. The quotation separates product cost from freight and includes the proposed dispatch and transit schedule.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "prepared_from_current_schema": true,
+  "task_pack": null,
+  "replacement_plan": null,
+  "schema_provenance": {
+    "schema_request_id": "213d4e4917917349039802024",
+    "schema_acquired_at": "2026-10-11T16:08:20.988886+00:00",
+    "current_schema_sha256": "c6600ecbc12af729cd4d30e8bca724873d7229bc423c1cfd626b050d21bb5c0e",
+    "source_evidence": [
+      "copy.json",
+      "before_get.json",
+      "../../../../../01_产品资产/02_可发布素材/00_最终上传/BQ028_BISCUIT/00_上架填写表.md",
+      "../../../../../01_产品资产/01_原始数据包/待审_搜鞋网_2026-08-14/7212/原图/01.webp",
+      "current_get.json",
+      "../../../../00_运营SOP/国际站商品全生命周期SOP.md"
+    ]
+  }
+}

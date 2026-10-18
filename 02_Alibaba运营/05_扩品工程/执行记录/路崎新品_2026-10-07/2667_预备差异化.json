@@ -1,0 +1,134 @@
+{
+  "observed_at": "2026-10-07T17:27:29.384285+00:00",
+  "candidate": {
+    "source": {
+      "reference": "https://luqi.sooxie.com/detail/2561050",
+      "style": "2667",
+      "critical_facts": {
+        "profile": "low-top lace-up",
+        "upper_structure": "continuous stitched toe surround and textured side panel",
+        "outsole_structure": "continuous layered sole sidewall",
+        "closure": "lace-up"
+      },
+      "evidence": [
+        "2667_候选任务包.json",
+        "四款与既有相关鞋型对照.md"
+      ]
+    },
+    "search_intent": {
+      "key": "mens low top lace up casual walking shoes stitched toe panels",
+      "evidence": [
+        "2667候选任务包.md"
+      ]
+    },
+    "hero_review": {
+      "url": "https://sc04.alicdn.com/kf/Hfd5cbb56954e45429cbd96bfdc2a08721/286385890/Hfd5cbb56954e45429cbd96bfdc2a08721.jpg",
+      "aliases": [
+        "//sc04.alicdn.com/kf/Hfd5cbb56954e45429cbd96bfdc2a08721/286385890/Hfd5cbb56954e45429cbd96bfdc2a08721.jpg"
+      ],
+      "sha256": "f80e68cbcb195e17164f25e1a8293108ef9ce220a3ed8c6b76427bc213d33252",
+      "content_key": "Luqi2667-single-black-stitched-toe-original01",
+      "label_status": "not_present",
+      "evidence": [
+        "2667_上架包/素材清单.json",
+        "四款与既有相关鞋型对照.md"
+      ]
+    }
+  },
+  "source_records": {
+    "1601972951733": {
+      "source": {
+        "reference": "https://luqi.sooxie.com/detail/2559453",
+        "style": "059",
+        "critical_facts": {
+          "profile": "low-top lace-up",
+          "upper_structure": "loop eyelets and continuous side panel",
+          "outsole_structure": "leaf polygon segmented sidewall",
+          "closure": "lace-up"
+        },
+        "evidence": [
+          "四款与既有相关鞋型对照.md"
+        ]
+      },
+      "hero_review": {
+        "content_key": "Luqi059-reviewed-sourcehero",
+        "label_status": "not_present",
+        "evidence": [
+          "四款与既有相关鞋型对照.md"
+        ]
+      }
+    },
+    "1601972944790": {
+      "source": {
+        "reference": "https://luqi.sooxie.com/detail/2560210",
+        "style": "060",
+        "critical_facts": {
+          "profile": "low-top lace-up",
+          "upper_structure": "fabric lace loops contrast inserts and toe overlay",
+          "outsole_structure": "leaf polygon segmented sidewall",
+          "closure": "lace-up"
+        },
+        "evidence": [
+          "四款与既有相关鞋型对照.md"
+        ]
+      },
+      "hero_review": {
+        "content_key": "Luqi060-reviewed-sourcehero",
+        "label_status": "not_present",
+        "evidence": [
+          "四款与既有相关鞋型对照.md"
+        ]
+      }
+    },
+    "1601972965417": {
+      "source": {
+        "reference": "https://luqi.sooxie.com/detail/2561975",
+        "style": "061",
+        "critical_facts": {
+          "profile": "low-top lace-up",
+          "upper_structure": "round eyelets and irregular upper panels",
+          "outsole_structure": "leaf polygon segmented sidewall",
+          "closure": "lace-up"
+        },
+        "evidence": [
+          "四款与既有相关鞋型对照.md"
+        ]
+      },
+      "hero_review": {
+        "content_key": "Luqi061-reviewed-sourcehero",
+        "label_status": "not_present",
+        "evidence": [
+          "四款与既有相关鞋型对照.md"
+        ]
+      }
+    }
+  },
+  "coverage_limit": "380条保存完整目录及13条当前相关get投影；10条旧链接/4家族和061/059/060结构已看，不声称全店视觉清查。内里只在同链接图文询价确认，单一Black SKU不伪造内里为颜色。",
+  "evidence_files": [
+    {
+      "path": "..\\..\\供应商产品总表\\平台目录快照_2026-10-07.json",
+      "sha256": "d9b4af3155cc45f8a8a20b5babfe5864139a55414c798e792129c30f68ba8cfa",
+      "kind": "catalog_snapshot"
+    },
+    {
+      "path": "2667_相关款目录投影.json",
+      "sha256": "a6584925cd957c79a00d184207dfd377c4641da6cbe2590c4706cb2448d554f4",
+      "kind": "catalog_snapshot"
+    },
+    {
+      "path": "..\\..\\供应商产品总表\\供应商产品总表.csv",
+      "sha256": "e88f9ccff6783e9316385f7c8cfcd16044f8c35fc83b8f3c5a613eb0075a9b9f",
+      "kind": "source_register"
+    },
+    {
+      "path": "四款与既有相关鞋型对照.md",
+      "sha256": "7ec2f8b3ce51f3822c072f57377b6b6c53f88fa7cd405d54fc33443331dfe5a4",
+      "kind": "visual_review"
+    },
+    {
+      "path": "2667_候选任务包.json",
+      "sha256": "c21b590bbccb7e4b86022ac1cc73d083b96be06e38e8010b19002eec19007ddc",
+      "kind": "source_register"
+    }
+  ]
+}

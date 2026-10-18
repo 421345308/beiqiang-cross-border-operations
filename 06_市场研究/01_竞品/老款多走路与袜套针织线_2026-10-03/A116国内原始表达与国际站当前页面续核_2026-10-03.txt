@@ -1,0 +1,96 @@
+A116国内原始表达与国际站当前页面续核（2026-10-03）
+本报告更新此前对象诊断：用户已明确确认A116准确款在2024/2025年国内销售很好。这是用户证据，不再降级为不明款式；仍缺可拆分的销量、终端、价格和退货记录。本轮只读，无商品、预算、报价、消息写入。
+
+一、取得的数据与新旧区别
+已通过spq登录Chrome独立数据管家窗口，按准确产品ID逐条查询2026-09 (PST)，过滤中国大陆；不再只按已读前30行标题映射。月报窗口URL https://data.alibaba.com/product/overview。
+9月为09-01至09-30完整自然月。读取2026-10-03 10:02–10:17 UTC附近，逐条时间见JSON/CSV。字段为搜索曝光次数/搜索点击次数/搜索点击率/访问人数/询盘人数。
+
+型号/角色 | 查询ID | 曝光 | 点击 | CTR | 访问人数 | 询盘人数
+A116源 |10000044007878|768|2|0.26%|3|0
+A116 W1 |1601939726170|331|3|0.91%|5|0
+A116 R1 |1601939641542|178|0|0%|1|0
+A116 O1 |1601939589890|368|2|0.54%|6|0
+A206源 |10000044041008|92|0|0%|1|0
+A206 W1 |1601939616747|1138|10|0.88%|12|0
+A025源 |1601839062659|163|2|1.23%|4|0
+A025 W1 |1601939749045|125|0|0%|1|0
+A025 R1 |1601939607770|289|2|0.69%|5|0
+A025 O1 |1601939721228|322|3|0.93%|6|0
+
+A116四条合计搜索曝光1645、点击7，加权CTR0.4255%；访客累加15、询盘均0。A206两条1230/10，CTR0.813%；访客累加13。A025四条899/7，CTR0.779%；访客累加16。跨链接访客未去重，不能认定为15/13/16位独立买家；访问涵盖其他渠道，不接成搜索点击漏斗。搜索数据尚未证明纯自然，也没有各链接付费归因，本表不将搜索冒充自然。
+当前可观察的是点击取得较少；无询盘样本不足以判定采购表达是主因，更不能外推全部海外零售需求。缺每ID国家/搜索词/渠道、有效需求、报价回应、样品及付费订单的数据，尚不能把图、渠道、产品三个原因排成已证实的优先级。
+加载异常已剔除：A116源款初始读取仍为全店旧行，不采用；A025 O1初次读取仍为R1上一结果，重新查询并保存含输入ID1601939721228的已加载页面，正确值322/3/6/0，不用289/2/5/0。
+归一数据文件：老款三款_2026-09PST_ID查询数据.json / .csv；raw_file字段逐条指向页面JSON。历史第35周数据仍只是历史背景，不与上述月报拼趋势。
+
+二、A116当前买家页（已真实打开）
+读取约10:03–10:24 UTC；URL形如 https://www.alibaba.com/product-detail/_产品ID.html。
+源10000044007878：当前标题“2026 New Breathable Mesh Knit Walking Shoes Elastic Lace Chunky Cloud Sole Lavender Sneakers OEM ODM Spring Autumn”；淡紫完整单鞋首图，含FACTORY DIRECT / OEM/ODM、CUSTOM LOGO / MOQ 2 PAIRS / PRE-SHIPMENT QC小字。当前画廊缩略图仍有针织鞋面、系带适配等卡片。
+W1 1601939726170：标题“Wholesale Black White Walking Style Shoes Knit Lace Up Lightweight EVA Sole Casual Sneakers Factory Supply A116”；当前首图黑面白底完整鞋。前四画廊展示黑白、紫、米白、全黑；后段仍见黑鞋鞋面卡片及采购组合图。不是三条扩展首图都保留旧卡片。
+R1 1601939641542：标题“For Casual Walking Shoes Breathable Knit Lace up Lightweight EVA Sole Daily Wear Sneakers A116 All Seasons”；当前首图米白完整鞋，后续其他三色、卡片。该标题开头For Casual有语法/表达改进空间，不能由此断言造成0点击。
+O1 1601939589890：标题“All Black Walking Shoes Breathable Knit Lace up Lightweight EVA Sole Custom Logo OEM ODM Sneakers A116 All Seasons”；当前首图全黑完整鞋，随后黑白、紫、米白及卡片。
+源/W1价格USD9.49（2–49pairs）、9.19（50–99）、9.09（100以上）；R1为9.53/9.23/9.13；O1为9.45/9.15/9.05。展示价不等于已核真实供货成本、可混码条件或定制MOQ。四页EUR35–43可见及+2；源四颜色为Lavender/Cream/Black/Black White；扩展同四颜色。当前首图与默认SKU选择是两种页面机制，不凭二者初始不同就断言SKU错绑。
+源属性EVA外底、中底；Stretch Fabric鞋面、Mesh里衬；Breathable/Anti-Slip/Light Weight/comfort，型号BQ-018。扩展可读EVA外/中底、Textile里衬、Regular Fit/Lace-up、Light Weight/Breathable；源仍有Anti-Slip但本轮没有找到测试证明。
+单包装34×23×13cm、毛重0.5kg是物流字段，不是单鞋136g。运费与到货日需洽谈；不把页面询价入口当固定运费。
+
+实际详情可见：
+源“Highlights at a glance”说明按款、数量、材料、尺码配比、包装报价；Logo/颜色/包装可定制；出货前检查外观、配码、数量；样品可讨论。并非完全没有采购信息。
+源“Knitted Textile Upper”大图主要展示整鞋；“Key details for quotation and bulk order”写Samples can be arranged、Mixed colors and sizes can be discussed、鞋盒/袋按订单要求、MOQ/lead time/carton details下单前讨论。具体定制及混码MOQ、样品费/时间、批量交期仍未在此图落成可确认数值。
+W1/R1/O1实见共同Product Information卡：A116、Knitted Textile Upper、Cushion sole、Lace-Up、EU35–45、Spring/Summer/Autumn；主图片均用淡紫鞋，且写“Lightweight lace-up walking shoe for long daily wear”。它与R1/O1的All Seasons标题、源Summer/Spring/Autumn属性存在季节口径差异，需核定而非自动扩写。Cushion及long daily wear不是性能测试证据。
+源另实见工厂生产/人工检查图片，不能说整页只有空泛OEM口号。
+截图：A116-source-current-top/detail/detail2/detail3/detail4.png；A116-W1-current-photo/detail.png；A116-R1-current-top/current-detail-valid.png；A116-O1-current-top/detail.png。
+废弃图证据：A116-R1-current-detail.png曾被ChatGPT窗口遮挡，不作为商品证据；A116-O1-offscreen-attempt.png为最小化窗口黑屏，也不采用。
+
+三、A116国内原始资料：这次实际看到了消费表达
+原包：已整理_BQ018_A116_A116贝强工厂店多走路男鞋35-45批55元。内部乱码目录解码可辨为贝强数据包改、手机480、天猫790、主图800x800。790版共26张；文件夹名只说明素材适配格式，不能证明A116曾在天猫实际成交。未找到实际渠道店铺链接、零售价、订单、客服对话或退换记录。
+01.jpg：淡紫单鞋纯侧视，没有采购文字。
+790版_01：黑白鞋上脚配牛仔裤，走路鞋基本款/舒适款/365天行走0压力/四季鞋。
+_02–03：Bubble TEC轻弹科技，3S慢回弹、记忆棉、增加防勾丝层、透气性能倍增等宣传。
+_04：鞋面俯视近景、真实鞋底底纹，单只约136g；场景为休闲日常、周末逛街、公园散步。并有24H行走0负担/久行不累等旧宣传。
+_05–20：紫/米白/黑白/全黑多角度真实上脚与穿搭，给消费者看到实际鞋口、裤装配合、侧后和鞋底。不能仅凭模特图指定真实主客群年龄。
+_21：原图写织物、飞织工艺、欧斯莱抗菌鞋垫、EVA大底及Bubble TEC；休闲鞋/低帮/适中厚度/高弹/轻盈标签。
+_22–25：四色完整双鞋与侧视。
+_26：全家通用尺码表，脚长MM、欧码、单独多走路(DZL)码三行；提示两码之间取较小码、咨询客服，并有双脚测量示意。这是家庭通用旧尺码宣传，不是A116当前EU35–45实测鞋内长，也不能直接转换US/UK或照抄小一码规则。
+上述文字是原始营销主张，不自动成为已核产品性能。需要本款指定码实测重量、底材/鞋垫资料和回弹/防滑等证据；不能直接翻译3S、抗菌、0压力或24H不累。原包名批55元是历史供货标记，不是已成交零售价或当前出口报价。
+客服证据仅到旧尺码图导向咨询，没有实际咨询/退换案例。未发现A116“谁买、在哪卖、售价多少、主色主码、返单/退货原因”的业务记录。用户已确认国内畅销事实仍成立，资料缺口只是无法解释其机制。
+
+四、供云端核对同款的公开图URL
+来自9月14日A116 SKU颜色修复计划/执行记录，10月3日已直接下载验证可访问并逐张实看；为来源包锚定的已发布实物商品图，不冒充国内790营销原图的外链。
+Cream：https://sc04.alicdn.com/kf/S6c2add39ffa04564bffa92c22c639b7bC.jpg
+Lavender：https://sc04.alicdn.com/kf/Saa8be4cb586e4eb6881fe0419b4378e0I.jpg
+Black White：https://sc04.alicdn.com/kf/S616ed02bb2e9432a9ef8d7f39fa5a25f3.jpg
+Black：https://sc04.alicdn.com/kf/S783d5394ead14c42956e0eee6d570652U.jpg
+外观锚：低帮系带针织，鞋口略袜套形、后提带，圆润厚EVA侧墙/分段底边；不混为刀锋运动鞋或宽头赤足鞋。公开图未提供当前测试、销量或品牌授权。
+
+五、跨渠道解释（区分证据来源）
+国内A116原图实见：主要表达普通日常步行、逛街、散步的上脚/轻便/脚感和具体尺码咨询。没有客群占比与真正成交渠道，不能猜直播或实体为主。
+海外零售：父线程云研究2026-10-03另行核过Allbirds Tree Runner、Ryka Viv Next Knit、Walmart Avia Knit Jogger，以及多走路海湾零售渠道；不由本地窗口冒称逐页实见。它们支持海外存在针织舒适鞋的旅行/通勤/日常、价格价值、尺码/脚背/前掌/退换诉求，不证明A116同款畅销。
+父研究的关键原始链接：
+https://business.walmart.com/ip/Avia-Men-s-Knit-Running-Shoes/1372240037 （2024/2025实购使用诉求，当前售价/供货缺数）
+https://www.allbirds.com/products/womens-tree-runners?variant=12135289389125
+https://www.zappos.com/p/womens-allbirds-tree-runner/product/9973591
+https://www.belk.com/p/ryka-viv-next-knit-lace-up-sneaker/0480055444804.html
+https://duozoulu.me/products/cl-diamond-trainer-white
+https://www.emaarmalls.ae/malls-shop-details/dubai-hills-mall/duo-zou-lu/
+父研究同时注明海湾退换FAQ与正式政策不一致、尺寸单位异常，不借它们替A116承诺服务；京东A116同字符串搜索线索未核实图片/货源，不当同款销售证据。
+国际站B2B：采购人需要把鞋再售给具体终端，额外考虑色码组合、质量重复性、补货、包装/箱规、交期、到岸成本和售后责任。国际站采购曝光不是海外零售消费者总需求；不能从该组1645曝光/7点击推翻国内畅销或宣布海外淘汰。
+
+六、可先讨论的具体变化
+1. A116已上线的完整实鞋首图不用当旧图重做；优先恢复真实上脚、鞋口/系带穿脱、同色近景和本款尺码测量，减少后段只有整鞋加标签的图。源款保护不改，选择获授权的非保护扩展执行。
+2. 保留日常步行/通勤休闲任务，别把老款差异主要交给2026 New或泛化OEM。国内旧原图提供场景素材，但删去未验证性能；称重应给指定尺码、单只/一双、净重口径，0.5kg包装毛重另列。
+3. 把批发2双起与Logo/混色混码/打样的各自条件讲清。当前页面不是没有采购信息，而是很多具体条件留待询价；工厂提供真实边界后才能落成有效采购卡，不能编MOQ、样品费或交期。
+4. 数据先查该ID国家/关键词/付费与其他渠道，确定谁看到它。后续同口径记点击、访客、有效需求、报价回应、寄样和已付款订单，不以低样本零询盘判产品死刑。不因普通CTR低就加预算。
+5. 只有目标买家试穿、样品或退货明确指向压脚/滑跟/磨耗/开胶等结构问题，才讨论楦/底/工艺；若样品认可而订单卡在MOQ、补单、到岸成本，优先处理商业条件。
+
+报告保留本地文件与当前平台证据区别；没有重新导出客户数据。父线程跨渠道完整稿为另一证据来源，不由本报告缩写代替其异常和来源边界。
+
+附记：A206/A025当前页面实见（10:22–10:28 UTC）
+A206源10000044041008标题Wholesale Summer Light Weight Anti-Slip Comfort Knit Textile Lace up Walking Shoes A206 Casual EU35-45 OEM ODM；米白白底主鞋、带小型采购标签首图，后续鞋面/系带/颜色卡片。当前Color为Black/Cream/Light Grey/White，其中Light Grey图仍是另一种灰色外观，White为黑底背景双鞋图，并未被新版身份审计统一成一种结构。
+A206 W1 1601939616747标题Wholesale Men's Breathable Light Weight Casual Sneakers Knit Textile Lace Walking Shoes EVA Midsole Outsole Factory Supply A206；黑面白底完整鞋首图，前段含米白、其他角度真实鞋图。仍显示Black/White/Cream/Light Grey四项。详情Product Information写couple-style lace-up，Cushion sole、EU35–45、Spring/Summer/Autumn，采用黑面白底身份图。两页USD9.49/9.19/9.09三档、2pairs起、运费洽谈，源仍含Anti-Slip。
+当前颜色列表延续两种外观，这是具体待核风险，不能直接断言它们必然不同销售SKU或全部供货错误；底模、材质、颜色关系须由工厂确认。9月审计关于两视觉构造/无垂直外底图的证据仍不能被当前四按钮取代。
+A025源1601839062659标题Wholesale High Top Knit Textile Slip-On Walking Shoes Breathable Anti-Slip Comfort Spring Autumn A025 EU35–45 OEM ODM；黑色高袜套完整鞋、FACTORY DIRECT/OEM标签首图，随后结构/适配卡片。
+A025 W1 1601939749045标题Wholesale High Top Knit Slip-On Walking Shoes White Sole EU35–45 A025；当前黑面白底完整鞋首图，后续同色双鞋及真实上脚，另有全黑颜色图。不能沿用旧材料说它只有空鞋卡片。
+A025 R1 1601939607770标题High Top Knit Sock-Like Slip-On Walking Shoes Daily Casual Light Weight Breathable EVA Midsole Round Toe A025；首图为黑面白底真实上脚，后续完整鞋/实拍双鞋/其他上脚/全黑。已经有上脚表达，仍未获得穿脱或鞋口/脚踝尺寸测量。
+A025 O1 1601939721228标题All Black High Top Knit Slip-On Breathable Light Weight Walking Shoes All Seasons Custom Logo OEM ODM A025；当前全黑完整鞋首图，后续同色双鞋/黑白鞋/上脚。
+A025四页两颜色Black White/All Black；2pairs起，源/W1USD9.49/9.19/9.09，R1为9.53/9.23/9.13，O1为9.45/9.15/9.05；运费/交期洽谈。扩展EVA/Light Weight/Breathable，源另有Anti-Slip。
+A025扩展详情共同显示High Top Knit Textile Upper、Cushion sole、Slip-On、EU35–45、Autumn/Winter；O1标题All Seasons、源标题Spring/Autumn与该卡季节不同，需要统一真实范围。详情以全黑身份图为主，不代表其余颜色不可售。本轮仍没有证明A025就是用户此前高袜套畅销货号，或其海外热销。
+全部十条当前买家页已真实打开，页面JSON及本机截图保存。原后台窗口未恢复/切换；本任务独立窗口曾被全部最小化，本次只恢复自己的买家窗口继续只读，未保存或丢弃任何编辑表单。核查结束释放浏览器，不继续控制。

@@ -1,0 +1,30 @@
+{
+  "status": "product_summary_verified",
+  "target": "product_summary",
+  "product_id": "1601969906452",
+  "category_id": "201334413",
+  "editor_observation_id": "936_normal_notice_sha256:2cb8988a16ef8db9e9ad1c3211f5f3e8f45658c8a2f5083a5e06cffffd1e567d",
+  "legacy_keywords": [
+    ""
+  ],
+  "keyword_write_verified": false,
+  "replacement_closeout_verified": false,
+  "legacy_field_status": "LEGACY_FIELD_EMPTY_UI_MIGRATED",
+  "content_complete": true,
+  "schema_field": "textDesc",
+  "formal_field": "product.struct_detail.product_summary",
+  "summary_characters": 244,
+  "constraints": [],
+  "limits": "This exact observed edit version and product only; no keyword restoration, global support, source truth, score or old-product retirement inferred.",
+  "formal_get_observed_at": "2026-10-03T12:46:12.168085+00:00",
+  "legacy_keyword_observed_at": "2026-10-03T12:46:12.168085+00:00",
+  "fresh_formal_recheck": {
+    "source": "four_content_mapping_readonly\\936.json",
+    "at_utc": "2026-10-03T17:25:09.821530+00:00",
+    "request_id": "0b80d2d617910483030524227",
+    "summary": "Casual lace-up sneakers with a textile upper, molded decorative overlays and a rubber outsole. Black and Sand color options, listed sizes 38-44. Minimum order: 2 pairs. Send your color and size quantities and destination for order confirmation.",
+    "status": "approved",
+    "display": "Y",
+    "error": null
+  }
+}

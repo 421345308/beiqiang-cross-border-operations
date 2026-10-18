@@ -1,0 +1,32 @@
+{
+  "observed_at": "2026-10-02T14:16:54.284628+00:00",
+  "last_read_request_id": "0bab02fe17909505033341683",
+  "total_item": 364,
+  "known_new_record": [
+    {
+      "id": 1601969788941,
+      "subject": "Women's Colorblock Mary Jane Flats with Hook-and-Loop Strap",
+      "created": "2026-10-02 22:11:01",
+      "image_overlap_69002": [],
+      "confirmed_owner_style": "9968",
+      "confirmed_model": "BQ-MJ9968",
+      "official_create_request_id": "2105584317909502611455670",
+      "independent_local_evidence": "../task-7/9968_execution/publish_once_ledger.json; formal_get.flat.json; formal_checks.json"
+    }
+  ],
+  "69002_title_model_matches": [],
+  "original_error_evidence": {
+    "type": "ClientError",
+    "message": "NOT_PERSISTED_BY_CALLER",
+    "curl_exit": "NOT_PERSISTED",
+    "HTTP_status": "NOT_PERSISTED",
+    "HTTP_body": "NOT_PERSISTED",
+    "request_id": null,
+    "raw_response": null,
+    "origin": "api_submit except block returns only exception_type; native transport captures subprocess stderr/stdout without persistence"
+  },
+  "local_journal_search": "No 2026-10-02 local session directory; October directory contains only unrelated October1 rollout. SDK and native transport have no disk journal.",
+  "classification": "Transport failure or non-JSON response cannot be distinguished; no business rejection or never-sent evidence.",
+  "repeat_schema_add_authorized_by_evidence": false,
+  "next": "Official resolution of first write, or recover original process telemetry proving request unsent/business rejection. Do not resend from absence in catalog."
+}

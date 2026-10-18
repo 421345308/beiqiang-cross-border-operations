@@ -1,0 +1,22 @@
+{
+  "method": "alibaba.icbu.category.get.new",
+  "request": {
+    "cat_id": 201152907
+  },
+  "observed_at": "2026-10-13T15:13:02.910629+00:00",
+  "official_parameter_documentation": "https://developer.alibaba.com/docs/api.htm?apiId=50064",
+  "response": {
+    "category": {
+      "leaf_category": true,
+      "cn_name": "凉鞋",
+      "category_id": 201152907,
+      "level": 3,
+      "name": "Sandals",
+      "parent_ids": [
+        "201152905"
+      ]
+    },
+    "request_id": "2105584317919043917222479",
+    "_trace_id_": "2150384d17919043917193739e0cba"
+  }
+}

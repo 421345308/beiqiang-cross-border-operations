@@ -1,0 +1,32 @@
+{
+  "tool": "built-in image_gen",
+  "requests": [
+    {
+      "key": "D1",
+      "source": "19",
+      "prompt": "Use case: compositing. Create a square English Alibaba B2B product-detail module for Luqi 2509. Use the supplied source photograph as factual anchor. Preserve photographed shoes and every real dial mark, fabric loop, toe overlay, mesh panel, seam, outsole geometry and actual color. No new views, no recoloring, no inferred fiber composition, no tests/certification, no waterproof, slip rating, barefoot, zero-drop, load/medical or stock/delivery claims. Clean white/light layout, large product evidence, charcoal typography. Module role: product overview. Use the complete source Dark Brown pair photograph without cropping shoes. Exact header \"ROTARY DIAL HIKING SHOES\". Short facts exactly \"Low-top profile\", \"Panelled mesh upper\", \"Grey / Dark Brown\", \"EU 39-48\". Small footer exactly \"Confirm specifications for your order\". Arrange a prominent photograph with restrained specifications, no marketing badges. Do not add colors or material names."
+    },
+    {
+      "key": "D2",
+      "source": "23",
+      "prompt": "Use case: compositing. Create a square English Alibaba B2B product-detail module for Luqi 2509. Use the supplied source photograph as factual anchor. Preserve photographed shoes and every real dial mark, fabric loop, toe overlay, mesh panel, seam, outsole geometry and actual color. No new views, no recoloring, no inferred fiber composition, no tests/certification, no waterproof, slip rating, barefoot, zero-drop, load/medical or stock/delivery claims. Clean white/light layout, large product evidence, charcoal typography. Module role: closure and visible upper construction. Reuse faithful cropped regions from this actual Grey shoe photograph to show the existing rotary dial, three lace-loop positions and layered mesh panels. Do not invent mechanical diagrams, internal components, operating steps or unseen sides. Exact header \"DIAL & UPPER CONSTRUCTION\". Small caption exactly \"Visible closure, loops and side panels\". Show enough shoe context to identify the same SKU; no numerical magnification claim or performance arrows. Only crop/arrange the existing photographed details; do not reconstruct texture."
+    },
+    {
+      "key": "D3",
+      "source": "09",
+      "prompt": "Use case: compositing. Create a square English Alibaba B2B product-detail module for Luqi 2509. Use the supplied source photograph as factual anchor. Preserve photographed shoes and every real dial mark, fabric loop, toe overlay, mesh panel, seam, outsole geometry and actual color. No new views, no recoloring, no inferred fiber composition, no tests/certification, no waterproof, slip rating, barefoot, zero-drop, load/medical or stock/delivery claims. Clean white/light layout, large product evidence, charcoal typography. Module role: real outsole geometry. Keep the ENTIRE supplied on-foot source photograph visible, including the raised shoe with its exact existing tread pattern, angular central lugs, heel/toe blocks and grey midsole; do not redraw tread or remove foot/scene context. Place that full photo as a large photographic panel. Exact header \"OUTSOLE VIEW\". Small footer exactly \"Confirm footwear requirements for your intended terrain\". No grip ratings, hiking test, flexibility claim, comparison diagram or added tread teeth."
+    },
+    {
+      "key": "D4",
+      "source": "26",
+      "prompt": "Use case: compositing. Create a square English Alibaba B2B product-detail module for Luqi 2509. Use the supplied source photograph as factual anchor. Preserve photographed shoes and every real dial mark, fabric loop, toe overlay, mesh panel, seam, outsole geometry and actual color. No new views, no recoloring, no inferred fiber composition, no tests/certification, no waterproof, slip rating, barefoot, zero-drop, load/medical or stock/delivery claims. Clean white/light layout, large product evidence, charcoal typography. Module role: EU size and order information. Preserve the complete actual Grey pair photograph as a prominent photographic panel. Exact header \"SIZE & ORDER DETAILS\". Text exactly \"EU 39-48\", \"Grey / Dark Brown\", \"Send quantities for each color and EU size\", \"Include packaging needs and destination\". Small footer exactly \"Confirm fit and availability before ordering\". No foot-length or US conversion chart; no invented width dimensions, stock, standard-included packing or delivery terms. Keep product visible, no price or text-only filler."
+    }
+  ],
+  "review": {
+    "D1": "CANDIDATE_ACCEPT_PENDING_SET_REVIEW: complete original DarkBrown pair and supported basic specifications.",
+    "D2": "REJECT: excessive dial/texture magnification cannot be supported by source effective pixels; illustrated mark/texture may drift. Replace with full uncropped source photo and restrained English labels.",
+    "D3": "CANDIDATE_ACCEPT_PENDING_SET_REVIEW: visible sole geometry/source posture matches at overview scale. Original #09 remains sole factual anchor, generated sharpening adds no evidence.",
+    "D4": "REJECT_PENDING_LAYOUT_FIX: generated circles resemble physical material/color swatches without exact source inserts; remove circles, retain supported color names as plain text."
+  },
+  "status": "NOT_UPLOADED_NOT_PUBLISHED"
+}

@@ -1,0 +1,89 @@
+{
+  "status": "24s_local_review_complete_native_model_review_aborted",
+  "film": "out/贝强_针织袜子鞋_品牌片.mp4",
+  "source_id": "02becb69a9df729c",
+  "sha256": "002fc755a135764c4bc1c41433bff3e428d99ce5a12bb176afed181d4d9b9ac9",
+  "duration_seconds": 24,
+  "fps": 24,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "new_paid_video_submissions": 0,
+  "new_paid_video_cost_cny": 0,
+  "native_motion_seconds": 11,
+  "frame_checks": {
+    "whole_film_sample_points": 24,
+    "cut_before_first_after_points": 24,
+    "action_points": 37,
+    "original_resolution_inspected": [
+      2.5,
+      5.7,
+      14.3,
+      19.4,
+      23.7
+    ],
+    "style_frame_inspected_frames": [
+      82,
+      250,
+      360,
+      520
+    ]
+  },
+  "native_model_review": {
+    "model": "kimi-k3",
+    "status": "incomplete_not_accepted_as_review",
+    "finish_reason": "abort",
+    "request_id": "da5c9679-8800-46b9-8273-4816f09daa57",
+    "input_sha256": "002fc755a135764c4bc1c41433bff3e428d99ce5a12bb176afed181d4d9b9ac9",
+    "input_source_id": "0d19aafef668652e",
+    "input_path_at_submission": "edit/render/current.mp4",
+    "delivered_source_id": "02becb69a9df729c",
+    "usage": {
+      "prompt_tokens": 21948,
+      "completion_tokens": 2512,
+      "total_tokens": 24460,
+      "prompt_tokens_details": {
+        "cached_tokens": 64,
+        "cache_write_tokens": 0,
+        "cache_creation_input_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 2391
+      }
+    },
+    "estimated_cash_cost_cny": 0,
+    "postpaid_enabled": false,
+    "elapsed_seconds": 611.56,
+    "observed_limit": "Partial answer reports about10 sparse visual samples and no audio access; no completed creative verdict.",
+    "retry_count": 0
+  },
+  "creative_review": {
+    "keep": [
+      "Warm ivory/black knit contrast and purposeful touch",
+      "Full-frame6s walking exactly once",
+      "Complete pair and centered brand end card"
+    ],
+    "removed": [
+      "Entire incomplete donning assembly",
+      "Cutout shoe spotlight opener",
+      "Header that reduced walking area",
+      "Image-aperture effect joining different shoes",
+      "Literal descriptions of finger contact and getting up",
+      "Duplicate pair photo before end card"
+    ],
+    "remaining_limits": [
+      "Photographic stills remain about13s; this is not a physically dynamic product render.",
+      "Generated product details vary slightly across shots.",
+      "No continuous human playback/audio listening and aborted native model review."
+    ]
+  },
+  "audio_technical": {
+    "duration_seconds": 24,
+    "rate_hz": 48000,
+    "channels": 2,
+    "mean_dbfs": -16.8,
+    "peak_dbfs": -1.7,
+    "listening_completed": false
+  }
+}

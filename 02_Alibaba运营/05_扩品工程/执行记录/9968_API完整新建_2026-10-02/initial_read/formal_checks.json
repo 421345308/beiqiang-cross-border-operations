@@ -1,0 +1,124 @@
+{
+  "product_id": "1601969788941",
+  "model": "BQ-MJ9968",
+  "status": "new",
+  "display": "N",
+  "public_url": "https://www.alibaba.com/product-detail/Women-s-Colorblock-Mary-Jane-Flats_1601969788941.html",
+  "formal_fields": "PASS",
+  "title_model_exact": true,
+  "main": 6,
+  "detail": 4,
+  "company": 5,
+  "SKU": 18,
+  "stable_SKU_codes_and_platform_ids_verified": true,
+  "color_bindings_render_verified": false,
+  "FAQ": 6,
+  "price_tiers_exact": true,
+  "get_request_id": "213c932b17909502959512188",
+  "render_request_id": "0bbb637a17909502982936684",
+  "render_nonempty": false,
+  "optional_stock_input": "omitted_all",
+  "inventory_returned": [
+    {
+      "sku_id": 109766933263,
+      "sku_code": "BQ-MJ9968-Grey-38",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109766933262,
+      "sku_code": "BQ-MJ9968-Grey-37",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109766933261,
+      "sku_code": "BQ-MJ9968-Grey-36",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109766933260,
+      "sku_code": "BQ-MJ9968-Grey-35",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109766933271,
+      "sku_code": "BQ-MJ9968-Green-40",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109766933270,
+      "sku_code": "BQ-MJ9968-Green-39",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109766933269,
+      "sku_code": "BQ-MJ9968-Green-38",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109766933268,
+      "sku_code": "BQ-MJ9968-Green-37",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109766933267,
+      "sku_code": "BQ-MJ9968-Green-36",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109766933266,
+      "sku_code": "BQ-MJ9968-Green-35",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109766933265,
+      "sku_code": "BQ-MJ9968-Grey-40",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109766933264,
+      "sku_code": "BQ-MJ9968-Grey-39",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109766933277,
+      "sku_code": "BQ-MJ9968-Blue-40",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109766933276,
+      "sku_code": "BQ-MJ9968-Blue-39",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109766933275,
+      "sku_code": "BQ-MJ9968-Blue-38",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109766933274,
+      "sku_code": "BQ-MJ9968-Blue-37",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109766933273,
+      "sku_code": "BQ-MJ9968-Blue-36",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109766933272,
+      "sku_code": "BQ-MJ9968-Blue-35",
+      "returned_inventory_dto_list": null
+    }
+  ],
+  "target_score": 5.0,
+  "actual_score": null,
+  "observed_at": "2026-10-02T14:12:47.319573+00:00",
+  "score_source": "alibaba.icbu.product.score.get",
+  "diagnostics": {},
+  "score_status": "PENDING_SCORE",
+  "public_acceptance": "PENDING_INDEPENDENT_READ_ONLY",
+  "create_comparator_note": "Stable SKU fields compared directly; platform-generated skuId and default empty/zero stock retained as formal output evidence, not treated as creation failure",
+  "no_inventory_mutation": true,
+  "no_repeat_creation": true,
+  "audit_at_utc": "2026-10-02T14:14:14.971304+00:00"
+}

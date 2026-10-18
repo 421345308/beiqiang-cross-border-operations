@@ -1,0 +1,140 @@
+{
+  "style": "02505",
+  "source": "https://luqi.sooxie.com/detail/2492433",
+  "observed_at": "2026-10-15T06:00:12.478259+00:00",
+  "source_HTML_sha256": "325f304da45ab26f3fcfc98395b728fd9aa5fc8c745f5e0c19cc38c4c7ac6001",
+  "source_price_cny": "60.00",
+  "source_EU_by_color": {
+    "Black": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ],
+    "Grey": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ]
+  },
+  "source_EU_combinations": 20,
+  "whole_source_contacts_actually_viewed": true,
+  "photo_count": 21,
+  "full_original_fact_indices_actually_viewed": [
+    14,
+    17,
+    23
+  ],
+  "known_materials": {
+    "upper": "Actualmesh and smoothstitchedoverlays, chemistryunspecified; other.",
+    "outsole": "Original14actualtread, chemistryunknown; other."
+  },
+  "wide_claim": "NO_WIDE_CLAIM_FROM_OUTDOOR_ONLY_SOURCE",
+  "source_color_aliases": {
+    "Black": "黑色",
+    "Grey": "灰色"
+  },
+  "visible_structure": [
+    "Low-top rotarydial andcordshoe with fourpairedfabricguides",
+    "Mesh forefoot and quarters with curvedsmoothstitchedtoeoverlay",
+    "Largeangular sidepaneloutlined inwhite",
+    "Rear fabricpullloop and dark textilecollar",
+    "Palegrey sculptedsidewall with segmentedblacktread"
+  ],
+  "identity_notes": "Current21productphotos/contact/native14/17/23reviewed. Sidebar02–06differentstylesexcluded. Whiteoutlinedsidepanel/simplemesh/smoothoverlay differ2509multiplegrainedpanels and026lacegraphic. Real dialemblem retained, noBOAclaim. Black/Greyonly EU39–48, no liningversion invented.",
+  "title_draft": "Mens Dial Closure Mesh Panel Outdoor Shoes Low Top Casual Sneakers Black Grey Lug Sole Wholesale EU 39-48",
+  "product_highlights_draft": [
+    "Dial-and-cord fastening: A rotary dial routes the front cord through four pairs of fabric guides instead of traditional tied laces.",
+    "Mesh-panel upper: Open-textured forefoot and side sections meet a curved stitched toe overlay.",
+    "Outlined side design: A large angular dark panel with a white border gives this style a distinctive side profile.",
+    "Low-top construction: A rear fabric pull loop, dark textile collar and pale sculpted sidewall complete the design.",
+    "Black and Grey EU 39–48: Two neutral colour options and ten EU sizes support a practical wholesale assortment."
+  ],
+  "state": "CREATED_FORMAL_FIELDS_SCORE_PASS",
+  "pricing_draft": {
+    "source_cny": "60.00",
+    "fx": "6.6837",
+    "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+    "fx_observed": "2026-10-13 10:57:20",
+    "rounding": "ROUND_CEILING_TO_USD_CENT",
+    "tiers": [
+      [
+        2,
+        "13.47"
+      ],
+      [
+        50,
+        "12.57"
+      ],
+      [
+        100,
+        "11.68"
+      ]
+    ],
+    "freight_service_tax": "Datedsourcecostreference/markup notnetprofit; freighttaxservicesperorder."
+  },
+  "publish_profile": {
+    "category_id": 32299,
+    "schema_name": "当前其他鞋类Schema",
+    "source_original_root": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/图片/02505",
+    "buyer_colours": [
+      {
+        "buyer": "Black",
+        "supplier_key": "Black",
+        "supplier_label": "黑色",
+        "image_role": "M1"
+      },
+      {
+        "buyer": "Grey",
+        "supplier_key": "Grey",
+        "supplier_label": "灰色",
+        "image_role": "M4"
+      }
+    ],
+    "category_attributes": {
+      "Upper Material": [
+        "other"
+      ],
+      "Outsole Material": [
+        "other"
+      ]
+    },
+    "local_intent": [
+      "旋钮闭合网面休闲户外鞋"
+    ]
+  },
+  "category_route": {
+    "at": "2026-10-15T06:16:35.641492+00:00",
+    "owner_direction": "Suitablebroadfootwearcategory per2026-10-15ownerinstruction",
+    "category_id": 32299,
+    "leaf": "Other Shoes",
+    "root": 322,
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2509准备/create_receipt.json",
+    "scope": "OwncurrentSchema andfullpreflightstillrequired; no rootchange."
+  },
+  "hero_selection": "Actual23singleBlack isolatedwhite M1/SKU; actual17singleGrey unchangedM4/SKU; actual15BlacksidewearM3; actual11GreyfrontwearM5; source23/17closeups, actual14BlackundersideD3 andtwo-colour20EUmap.",
+  "title_bytes": 105,
+  "publication": {
+    "product_id": "1601980799940",
+    "audit": "approved",
+    "display": "Y",
+    "actual_score": "5.00",
+    "formal_verification": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/02505准备/verification.json",
+    "local_sync_at": "2026-10-15T07:13:51.528774+00:00",
+    "no_replayed_create": true
+  },
+  "next_action": "该款正式字段、评分与来源已通过；继续其他款，不重复创建。"
+}

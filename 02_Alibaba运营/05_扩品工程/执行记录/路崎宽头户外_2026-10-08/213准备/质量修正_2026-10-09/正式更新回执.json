@@ -1,0 +1,78 @@
+{
+  "method": "alibaba.icbu.product.schema.update",
+  "operation": "update",
+  "status": "submitted_needs_readback",
+  "content_status": "pending_readback",
+  "expected_fields": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Unisex Wide Toe Box Open Mesh Walking Shoes Toggle Bungee Closure Summer Casual Sneakers EU 36-48 Wholesale",
+          []
+        ]
+      ]
+    ]
+  },
+  "sku_verification": null,
+  "task_pack": null,
+  "replacement_plan": null,
+  "replacement_transition": null,
+  "inventory_input": null,
+  "post_publish_acceptance": {
+    "phase": "post_publish_completion",
+    "target_score": 5.0,
+    "actual_score": null,
+    "observed_at": null,
+    "score_source": null,
+    "diagnostics": {
+      "status": "not_read"
+    },
+    "score_status": "pending_score",
+    "overall_status": "PENDING_SCORE",
+    "unverified_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "versioned_content": null,
+    "required_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "limits": "Platform listing score does not prove public content, source truth or real product quality."
+  },
+  "attempted_at": "2026-10-08T16:44:04.755918+00:00",
+  "response": {
+    "trace_id": "0bb4a9bd17914778565634241e0c29",
+    "product_id": 1601973876011,
+    "biz_success": true,
+    "request_id": "0b51802d17914778566916825",
+    "_trace_id_": "0bb4a9bd17914778565634241e0c29"
+  },
+  "refs": {
+    "request_id": "0b51802d17914778566916825",
+    "trace_id": "0bb4a9bd17914778565634241e0c29",
+    "message": null,
+    "error": null
+  },
+  "product_id": "1601973876011"
+}

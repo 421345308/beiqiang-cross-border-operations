@@ -1,0 +1,481 @@
+{
+  "candidate": "longqin_2429296",
+  "source_artno": "936",
+  "supplier": "隆钦鞋业",
+  "source_url": "https://longqin.sooxie.com/detail/2429296",
+  "source_price_cny": 82,
+  "registry_source_id": "src-bded161d28f1",
+  "source_color_labels": [
+    "沙色",
+    "黑色"
+  ],
+  "colors": [
+    "Sand",
+    "Black"
+  ],
+  "sizes": [
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44
+  ],
+  "upper": "Textile",
+  "outsole": "Rubber",
+  "closure": "Lace-up",
+  "target_ids": {
+    "A": "1601943653819",
+    "B": "1601943750198",
+    "C": "1601943651773",
+    "D": "1601969872083",
+    "E": "1601969906452"
+  },
+  "model_numbers": {
+    "D": "BQ1051-D",
+    "E": "BQ1051-E",
+    "B": "BQ1051-B",
+    "C": "BQ1051-C",
+    "A": "BQ1051-A"
+  },
+  "local_intent_candidates": [
+    "织物拼接系带运动休闲鞋"
+  ],
+  "materials_evidence": [
+    "Source07 explicitly textile plus moulded overlays; use Textile upper without guessing overlay polymer. Source09 explicitly rubber outsole. Source08 identifies lining comfort only, no composition:Other; midsoleOther.",
+    "All21 original photos reviewed. Currentbody936/CNY82/Black/Sand/EU38-44 and normal procurement entry match. Source05 older2077poster alias is excluded as material/identity proof; source07/09 and actual photography used.",
+    "Existing canonical sourceID src-bded161d28f1 is retained; five original platform IDs preserved. Actual936 shoe already adopted in two links is retained.",
+    "Cord lacing and front toggle hardware are visible, no BOA/dial/HandsFree/medical or testedgrip claim. Original photos, not generated shoe pixels, support the package."
+  ],
+  "dedup": "936 is already the canonical HR051 actual shoe; deliberately consolidate five aliases into its single source identity. Other family sources have different upper panels/sole geometry; no new duplicate product created.",
+  "do_not_claim": [
+    "physical stock",
+    "tested grip",
+    "wide toe box",
+    "moulded overlay polymer",
+    "unverified midsole material",
+    "tested slip resistance",
+    "medical comfort"
+  ],
+  "custom": [
+    "Shoe Profile",
+    "Textile upper; cord lacing; moulded overlays; rubber outsole"
+  ],
+  "titles": {
+    "A": "Textile Lace-Up Casual Sneakers with Moulded Side Panels and Rubber Outsole for Wholesale Footwear Buyers",
+    "B": "Casual Walking Style Shoes with Cord Lacing and Sculpted Rubber Sole for Wholesale Shoe Collections",
+    "C": "Textile Panel Casual Sneakers with Rear Pull Loop and Contrast Heel Accents for Footwear Assortments",
+    "D": "Textile Casual Lace-Up Shoes with Rubber Outsole and Moulded Quarter Panels for Wholesale Shoe Buyers",
+    "E": "Wholesale Textile Lace-Up Casual Sneakers with Rubber Sole and Rear Pull Loop for Everyday Footwear"
+  },
+  "keywords": [
+    "Textile Lace Up Casual Sneakers",
+    "Moulded Panel Walking Style Shoes",
+    "Rubber Outsole Casual Footwear"
+  ],
+  "highlights": "Textile upper with moulded overlays: Open knit zones combine with shaped quarter and heel panels for a layered casual sneaker profile.\n\nCord lacing: The front cord crosses through the eyelet panel, with toggle hardware shown in the actual close-up.\n\nSculpted rubber outsole: Diagonal ribs along the sidewall and the separate underside pattern are shown in original photographs.\n\nRear entry details: A pull loop, raised heel panel and contrast colour insert define the back of the shoe.\n\nTwo colour options: Sand and Black are listed in EU38-44 for wholesale colour-size assortments.",
+  "assets_layout": {
+    "M1": {
+      "buyer_question": "What actual936 shoe is offered?",
+      "title": null,
+      "photos": [
+        {
+          "index": 20,
+          "box": [
+            15,
+            15,
+            985,
+            985
+          ],
+          "crop": [
+            20,
+            250,
+            730,
+            645
+          ]
+        }
+      ]
+    },
+    "M2": {
+      "buyer_question": "What is the upper construction?",
+      "title": "Textile & moulded panels",
+      "subtitle": "Actual Sand forefoot texture and eyelet panel.",
+      "photos": [
+        {
+          "index": 7,
+          "box": [
+            45,
+            215,
+            955,
+            935
+          ],
+          "crop": [
+            0,
+            290,
+            750,
+            1005
+          ]
+        }
+      ]
+    },
+    "M3": {
+      "buyer_question": "What is the rubber outsole pattern?",
+      "title": "Rubber underside pattern",
+      "subtitle": "Actual Sand bottom and sole edge.",
+      "photos": [
+        {
+          "index": 9,
+          "box": [
+            45,
+            215,
+            955,
+            935
+          ],
+          "crop": [
+            0,
+            285,
+            750,
+            970
+          ]
+        }
+      ]
+    },
+    "M4": {
+      "buyer_question": "Which actual colours and EU sizes are offered?",
+      "title": "2 colour options",
+      "subtitle": "Actual source shoes shown for colour selection.",
+      "photos": [
+        {
+          "index": 20,
+          "box": [
+            45,
+            215,
+            955,
+            480
+          ],
+          "crop": [
+            20,
+            250,
+            730,
+            645
+          ]
+        },
+        {
+          "index": 21,
+          "box": [
+            45,
+            555,
+            955,
+            820
+          ],
+          "crop": [
+            20,
+            115,
+            730,
+            530
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "Sand",
+          "xy": [
+            45,
+            488
+          ],
+          "size": 23
+        },
+        {
+          "value": "Black",
+          "xy": [
+            45,
+            828
+          ],
+          "size": 23
+        },
+        {
+          "value": "EU 38-44",
+          "xy": [
+            45,
+            950
+          ],
+          "size": 23
+        }
+      ]
+    },
+    "M5": {
+      "buyer_question": "What does the entry lining look like?",
+      "title": "Collar & interior close-up",
+      "subtitle": "Actual lining surface and rear entry.",
+      "photos": [
+        {
+          "index": 8,
+          "box": [
+            45,
+            215,
+            955,
+            935
+          ],
+          "crop": [
+            0,
+            240,
+            750,
+            913
+          ]
+        }
+      ]
+    },
+    "D1": {
+      "buyer_question": "How is the Sand shoe worn?",
+      "title": "Sand side & rear profile",
+      "subtitle": "Original on-foot photograph.",
+      "photos": [
+        {
+          "index": 11,
+          "box": [
+            45,
+            215,
+            955,
+            1085
+          ],
+          "crop": [
+            40,
+            0,
+            710,
+            760
+          ]
+        }
+      ]
+    },
+    "D2": {
+      "buyer_question": "How does the Black pair look?",
+      "title": "Black front & quarter views",
+      "subtitle": "Actual cord lacing and moulded side panels.",
+      "photos": [
+        {
+          "index": 19,
+          "box": [
+            45,
+            215,
+            955,
+            1085
+          ]
+        }
+      ]
+    },
+    "D3": {
+      "buyer_question": "What heel construction is offered?",
+      "title": "Rear loop & heel overlay",
+      "subtitle": "Sand pair from original side and rear views.",
+      "photos": [
+        {
+          "index": 15,
+          "box": [
+            45,
+            215,
+            955,
+            1085
+          ]
+        }
+      ]
+    },
+    "D4": {
+      "buyer_question": "Which actual colours and EU sizes are offered?",
+      "title": "2 colour options",
+      "subtitle": "Actual source shoes shown for colour selection.",
+      "photos": [
+        {
+          "index": 20,
+          "box": [
+            45,
+            215,
+            955,
+            550
+          ],
+          "crop": [
+            20,
+            250,
+            730,
+            645
+          ]
+        },
+        {
+          "index": 21,
+          "box": [
+            45,
+            645,
+            955,
+            980
+          ],
+          "crop": [
+            20,
+            115,
+            730,
+            530
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "Sand",
+          "xy": [
+            45,
+            558
+          ],
+          "size": 23
+        },
+        {
+          "value": "Black",
+          "xy": [
+            45,
+            988
+          ],
+          "size": 23
+        },
+        {
+          "value": "EU 38-44",
+          "xy": [
+            45,
+            1105
+          ],
+          "size": 23
+        },
+        {
+          "value": "2+ pairs $18.41 | 50+ $17.18 | 100+ $15.95",
+          "xy": [
+            45,
+            1155
+          ],
+          "size": 25
+        },
+        {
+          "value": "Price per pair; freight quoted separately.",
+          "xy": [
+            45,
+            1200
+          ],
+          "size": 23
+        }
+      ]
+    },
+    "SKU_SAND": {
+      "buyer_question": "Which actual colour is this?",
+      "title": null,
+      "photos": [
+        {
+          "index": 20,
+          "box": [
+            25,
+            25,
+            975,
+            975
+          ],
+          "crop": [
+            20,
+            250,
+            730,
+            645
+          ]
+        }
+      ]
+    },
+    "SKU_BLACK": {
+      "buyer_question": "Which actual colour is this?",
+      "title": null,
+      "photos": [
+        {
+          "index": 21,
+          "box": [
+            25,
+            25,
+            975,
+            975
+          ],
+          "crop": [
+            20,
+            115,
+            730,
+            530
+          ]
+        }
+      ]
+    }
+  },
+  "source_assets_root": "01_产品资产/01_原始数据包/HR051_936",
+  "source_date": "2026-10-14",
+  "fx_cny_per_usd": 6.6837,
+  "tiers": [
+    [
+      2,
+      "18.41"
+    ],
+    [
+      50,
+      "17.18"
+    ],
+    [
+      100,
+      "15.95"
+    ]
+  ],
+  "page_state": "FORMAL_FIELDS_SCORE_PASS",
+  "category_id": 201334413,
+  "platform_group_id": 973003809,
+  "platform_group_name": "Lace-Up Casual Shoes",
+  "company_faq_source": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/通用FAQ与公司简介.json",
+  "seasons": [
+    "All Seasons"
+  ],
+  "feature": "Fashion Trend",
+  "style": [
+    "Casual Sneakers"
+  ],
+  "lining": "Other",
+  "midsole": "Other",
+  "selection_review": {
+    "state": "REVIEWED_ADOPT",
+    "private_backend_evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/经营数据与选款.json",
+    "reason": "Preserve already adopted936 real shoe and its two real-source aliases. Three legacy concept links share HR051 family; unify them with936 rather than invent a sixth listing or switch existing936 to a different shoe. Backend signal is inconclusive for the concept links; later936 aliases have missing period rows, not zero demand.",
+    "cost_usd": 12.268653590077353,
+    "gross_difference_usd": [
+      6.1413,
+      4.9113,
+      3.6813
+    ],
+    "comparison_limit": "Exact-model comparable full Alibaba quote not verified; neighbouring offers differ in materials, quantity and terms. Cost markup50/40/30%; freight,service,taxes assessed per order. No netprofit/lowestprice guarantee."
+  },
+  "source_id": "src-bded161d28f1",
+  "source_evidence": [
+    "01_产品资产/01_原始数据包/HR051_936/source.json",
+    "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR051/素材清单.json"
+  ],
+  "procurement_capability": "CURRENT_REAL_SHOE_AND_PROCUREMENT_ENTRY_VERIFIED_NOT_ORDER_STOCK",
+  "company_bundle_review": {
+    "state": "FORMAL_PASS",
+    "evidence": [
+      "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943653819/verification.json",
+      "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943750198/verification.json",
+      "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601943651773/verification.json",
+      "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601969872083/verification.json",
+      "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/商品/1601969906452/verification.json"
+    ],
+    "scope": "Approved V8 exact gallery roles, company intro and general eight FAQs verified separately from product highlights."
+  },
+  "current_models_by_id": {
+    "1601969872083": "BQ1051-D",
+    "1601943750198": "BQ1051-B",
+    "1601969906452": "BQ1051-E",
+    "1601943651773": "BQ1051-C",
+    "1601943653819": "BQ1051-A"
+  },
+  "model_migration_evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/范围.json",
+  "current_platform_category_by_id": {
+    "1601969906452": 201334413,
+    "1601943653819": 201334413,
+    "1601969872083": 201334413,
+    "1601943750198": 201334413,
+    "1601943651773": 201334413
+  },
+  "category_scope": "category_id保留初始改造默认；当前平台叶子按current_platform_category_by_id逐ID读取，不把同源链接不同平台分类混成不同实鞋。"
+}

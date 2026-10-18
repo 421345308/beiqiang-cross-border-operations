@@ -1,0 +1,172 @@
+{
+  "status": "24s_local_review_complete_native_model_review_aborted",
+  "new_paid_submissions": 4,
+  "new_paid_cost_cny": 14.4,
+  "estimated_total_paid_cny": 34.4,
+  "actual_bill_verified": false,
+  "sources": [
+    {
+      "id": "release",
+      "source": "public/dynamic/release.mp4",
+      "sha256": "2127f3de814ff552c1d2d30725ea0fec1f3a11bd8f1ac47b6e9d5f960dcb14be",
+      "generation_receipt": "edit/generation/tokenhub-kling-v3/release.json",
+      "estimated_cny": 4,
+      "nominal_seconds": 5,
+      "used_seconds": 0,
+      "decision": "EXCLUDE weak hand event; no retained frames.",
+      "playback_rate": 1,
+      "current_source_ranges_seconds": []
+    },
+    {
+      "id": "step",
+      "source": "public/dynamic/step.mp4",
+      "sha256": "49f6d9a822b7d7a7475f423cde992f89ff10c8a6fe8ca9917a1d54df3ec62426",
+      "generation_receipt": "edit/generation/tokenhub-kling-v3/step.json",
+      "estimated_cny": 4,
+      "nominal_seconds": 5,
+      "used_seconds": 0,
+      "decision": "EXCLUDE: foot premise and edge framing failed natural walking goal",
+      "file_deleted": true
+    },
+    {
+      "id": "step-v2",
+      "source": "public/dynamic/step-v2.mp4",
+      "sha256": "43a23e03fa7695da80cad8db5c00a5d881f5c4282c24452fe58c2cfbe3562fc4",
+      "generation_receipt": "edit/generation/tokenhub-kling-v3/step-v2.json",
+      "estimated_cny": 4,
+      "nominal_seconds": 5,
+      "used_seconds": 0,
+      "decision": "DELETED: owner repeatedly reported missing leg; earlier visual acceptance revoked. No cropping or camera motion rescue.",
+      "file_deleted": true
+    },
+    {
+      "id": "entry-v4",
+      "source": "public/dynamic/entry-v4.mp4",
+      "sha256": "32df82869ccfd81bf37da6812d6d7f2f60bef6aa5823919f1660008596c06723",
+      "generation_receipt": "edit/generation/tokenhub-kling-v3/entry-v4.json",
+      "estimated_cny": 4,
+      "nominal_seconds": 5,
+      "used_seconds": 0,
+      "decision": "EXCLUDE: heel insertion failed and rear loop elongated",
+      "file_deleted": true
+    },
+    {
+      "id": "walk-v4",
+      "source": "public/dynamic/walk-v4.mp4",
+      "sha256": "4fe6c28543f27594d38c81a945df2e52d140ff90202533570be310c8ec3b5805",
+      "generation_receipt": "edit/generation/tokenhub-kling-v3/walk-v4.json",
+      "estimated_cny": 4,
+      "nominal_seconds": 5,
+      "used_seconds": 0,
+      "decision": "EXCLUDE: outsole crosses frame edge; no crop/insert rescue",
+      "file_deleted": true
+    },
+    {
+      "id": "tactile",
+      "source": "public/dynamic/tactile.mp4",
+      "sha256": "2a29496ddc8e074dd2d7f09110c39a81e5550c538d3a51eb8a3a2d2e30a17805",
+      "generation_receipt": "edit/generation/tokenhub-kling-v3/tactile.json",
+      "task_id": "1317587621-WandVideo-85d7e7d9f05f487fbcf9afc692fabd2d",
+      "nominal_seconds": 3,
+      "estimated_cny": 2.4,
+      "usage_tokens": 240000,
+      "used_seconds": 3,
+      "decision": "KEEP full nominal3s purposeful touch.",
+      "playback_rate": 1,
+      "current_source_ranges_seconds": [
+        [
+          0,
+          3
+        ]
+      ],
+      "film_range_seconds": [
+        4.5,
+        7.5
+      ]
+    },
+    {
+      "id": "donning",
+      "source": "public/dynamic/donning.mp4",
+      "sha256": "269f40c4a89676ca6893584d0b26f38ebaf78e4fbcaa15fca146c29a7b184d33",
+      "generation_receipt": "edit/generation/tokenhub-kling-v3/donning.json",
+      "task_id": "1317587621-WandVideo-67197f97e1674a0eaea661de2e58131b",
+      "nominal_seconds": 5,
+      "estimated_cny": 4.0,
+      "usage_tokens": 400000,
+      "used_seconds": 0,
+      "decision": "EXCLUDE and DELETE: incomplete event and geometric failure. Earlier ellipsis keep verdict revoked.",
+      "playback_rate": 1,
+      "current_source_ranges_seconds": [],
+      "file_deleted": true
+    },
+    {
+      "id": "walking",
+      "source": "public/dynamic/walking.mp4",
+      "sha256": "abe4fb963fc1402aee8c967ad563e79a30537a069c16d5d0f606529c8bf97ba3",
+      "generation_receipt": "edit/generation/tokenhub-kling-v3/walking.json",
+      "task_id": "1317587621-WandVideo-1087cd6cac944e7dad9b15d0efeefd16",
+      "nominal_seconds": 6,
+      "estimated_cny": 4.8,
+      "usage_tokens": 480000,
+      "used_seconds": 6,
+      "decision": "KEEP full nominal6s once12–18s.",
+      "playback_rate": 1,
+      "current_source_ranges_seconds": [
+        [
+          0,
+          6
+        ]
+      ],
+      "film_range_seconds": [
+        11.5,
+        17.5
+      ]
+    },
+    {
+      "id": "settling",
+      "source": "public/dynamic/settling.mp4",
+      "sha256": "2ceca4705b15c42f3057e2e2e077bf8a52768df7e7f984faa98709dba4a83ffc",
+      "generation_receipt": "edit/generation/tokenhub-kling-v3/settling.json",
+      "task_id": "1317587621-WandVideo-112d8e4aeaa141b099a9aa9e45a94d2d",
+      "nominal_seconds": 4,
+      "estimated_cny": 3.2,
+      "usage_tokens": 320000,
+      "used_seconds": 2,
+      "decision": "TRIM source0–2s; keep2–4s landing/rising.",
+      "playback_rate": 1,
+      "current_source_ranges_seconds": [
+        [
+          2,
+          4
+        ]
+      ],
+      "film_range_seconds": [
+        17.5,
+        19.5
+      ]
+    }
+  ],
+  "paid_source_nominal_seconds": 43,
+  "note": "Latest authorized batch4 jobs18 seconds estimated14.4CNY. This edit0 paid jobs0CNY. Retention11/18=61.1%, overall11/43=25.6%. Entire failed donning assembly removed; original and retouched MP4s deleted under owner standing authorization; receipts retained. Utilization is bookkeeping, not creative acceptance. Bill not independently reconciled.",
+  "selected_paid_source_seconds": 11,
+  "used_paid_source_seconds": 11,
+  "all_historical_paid_nominal_use_ratio": 0.14,
+  "current_video_source_id": "02becb69a9df729c",
+  "new_paid_nominal_seconds_used": 11,
+  "new_paid_nominal_use_ratio": 0.6111111111111112,
+  "current_video_sha256": "002fc755a135764c4bc1c41433bff3e428d99ce5a12bb176afed181d4d9b9ac9",
+  "current_video_duration": 24,
+  "all_paid_nominal_use_ratio": 0.2558139534883721,
+  "current_edit_paid_submissions": 0,
+  "current_edit_paid_cost_cny": 0,
+  "current_edit_new_paid_submissions": 0,
+  "current_edit_estimated_cost_cny": 0,
+  "native_motion_seconds": 11,
+  "native_motion_ratio": 0.4583333333333333,
+  "new_batch_used_seconds": 11,
+  "new_batch_nominal_seconds": 18,
+  "new_batch_utilization": 0.6111111111111112,
+  "overall_used_seconds": 11,
+  "overall_nominal_seconds": 43,
+  "overall_utilization": 0.2558139534883721
+}

@@ -111,3 +111,47 @@ Desktop.ini
 /dunhuang_project_staging/.venv_bpy/
 /00_总控台/项目整理_2026-09-08/*盘点.json
 /00_总控台/项目整理_2026-09-08/整理前已有改动.txt
+
+# Local accounts, private business evidence and auxiliary checkouts.
+/.workbuddy/
+/.codex/
+/.agents/plugins/
+/03_独立站/.worktrees/
+**/.local/
+/04_客户开发/01_线索与CRM/outputs/
+/04_客户开发/07_RFQ专岗/
+/04_客户开发/03_邮件与多渠道模板/WhatsApp优先批次_*.md
+/04_客户开发/03_邮件与多渠道模板/首触审核包_*.md
+/02_Alibaba运营/01_店铺与全店诊断/商品诊断数据.json
+/02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/
+/02_Alibaba运营/**/经营数据与选款.json
+
+# Full API envelopes, write payloads and intermediate snapshots stay local.
+# Public product fields, source indexes and bounded verification summaries remain tracked.
+/02_Alibaba运营/**/before_get.json
+/02_Alibaba运营/**/after_get.json
+/02_Alibaba运营/**/get.json
+/02_Alibaba运营/**/prewrite_get.json
+/02_Alibaba运营/**/immediate_prewrite_get.json
+/02_Alibaba运营/**/formal_get.json
+/02_Alibaba运营/**/before_render.json
+/02_Alibaba运营/**/after_render.json
+/02_Alibaba运营/**/formal_render.json
+/02_Alibaba运营/**/payload.xml
+/02_Alibaba运营/**/current_schema.xml
+/02_Alibaba运营/**/after_schema.xml
+/02_Alibaba运营/**/schema.xml
+/02_Alibaba运营/**/source_register_*.json
+/02_Alibaba运营/**/manifest.json
+/02_Alibaba运营/**/prepared_evidence.json
+
+# Historical raw catalogue envelopes also contain seller identity.
+/02_Alibaba运营/**/current_get.json
+/02_Alibaba运营/**/reviewed_baseline.json
+/02_Alibaba运营/**/最新正式回读.json
+/02_Alibaba运营/**/正式首次回读.json
+/02_Alibaba运营/**/更新前正式商品.json
+/02_Alibaba运营/**/当前目录与本批正式补充.json
+/02_Alibaba运营/**/修正前正式商品.json
+/02_Alibaba运营/**/目录页_*.json
+/02_Alibaba运营/**/平台目录快照_*.json

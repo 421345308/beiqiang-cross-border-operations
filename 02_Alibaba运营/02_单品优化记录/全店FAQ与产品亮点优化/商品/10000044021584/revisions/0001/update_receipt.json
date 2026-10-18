@@ -1,0 +1,391 @@
+{
+  "method": "alibaba.icbu.product.schema.update",
+  "operation": "update",
+  "status": "submitted_needs_readback",
+  "content_status": "pending_readback",
+  "expected_fields": {
+    "textDesc": [
+      "field",
+      [
+        [
+          "id",
+          "textDesc"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Knit slip-on shoes for a children’s and girls’ casual assortment, with an EU 31–40 source size range. A lace-free front and low collar provide a simple closure choice. Plain and zebra-stripe upper options create different looks within the same shoe style.",
+          []
+        ]
+      ]
+    ],
+    "companyFaqDesc": [
+      "field",
+      [
+        [
+          "id",
+          "companyFaqDesc"
+        ]
+      ],
+      "",
+      [
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Which color and EU size combinations are listed?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Pink: EU 35–45; Zebra Stripe: EU 35–45; Black: EU 35–45.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "How do the style choices differ?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "The source offers Black, Pink and Zebra Stripe. Black and Pink give a plainer upper appearance, while Zebra Stripe adds a graphic knit pattern; all use a slip-on construction.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "What should I check during a sample fitting?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Try the sample with the intended socks. Check toe room, instep fit, heel hold and the shoe opening before deciding the bulk EU size mix.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "What is the minimum order for the original style?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "The listed original-style wholesale minimum is 2 pairs. Quantity pricing is shown on this page; branding and custom packaging are quoted separately.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "How can I request a sample?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Send the selected color or lining variant, EU size and delivery postcode for a sample quotation. It sets out the sample charge, courier cost and proposed dispatch date.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "What should I send for a branding or packaging proposal?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Send your logo artwork, preferred placement, packaging brief and order quantity. We can review the proposal for this style and set out the applicable minimum, cost and sample process.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "How can I get a delivered quotation?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Send pair quantities by color and EU size, the destination postcode or port and your packaging request. The quotation separates product cost from freight and includes the proposed dispatch and transit schedule.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "sku_verification": null,
+  "task_pack": null,
+  "replacement_plan": null,
+  "replacement_transition": null,
+  "inventory_input": null,
+  "post_publish_acceptance": {
+    "phase": "post_publish_completion",
+    "target_score": 5.0,
+    "actual_score": null,
+    "observed_at": null,
+    "score_source": null,
+    "diagnostics": {
+      "status": "not_read"
+    },
+    "score_status": "pending_score",
+    "overall_status": "PENDING_SCORE",
+    "unverified_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "versioned_content": null,
+    "required_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "limits": "Platform listing score does not prove public content, source truth or real product quality."
+  },
+  "attempted_at": "2026-10-11T16:18:38.013786+00:00",
+  "response": {
+    "trace_id": "212b4f9317917355278053161e0e39",
+    "product_id": 10000044021584,
+    "biz_success": true,
+    "request_id": "0bbb3b2417917355278138952",
+    "_trace_id_": "212b4f9317917355278053161e0e39"
+  },
+  "refs": {
+    "request_id": "0bbb3b2417917355278138952",
+    "trace_id": "212b4f9317917355278053161e0e39",
+    "message": null,
+    "error": null
+  },
+  "product_id": "10000044021584"
+}

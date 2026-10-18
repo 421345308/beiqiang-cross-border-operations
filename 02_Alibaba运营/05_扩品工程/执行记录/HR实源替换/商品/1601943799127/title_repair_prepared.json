@@ -1,0 +1,34 @@
+{
+  "request": {
+    "param_product_top_publish_request": {
+      "product_id": 1601943799127,
+      "cat_id": 201334413,
+      "language": "en_US",
+      "xml": "<itemSchema><field id=\"productTitle\" name=\"Product name\" type=\"input\"><value>Lace-Up Textile Casual Shoes with Apron Toe Stitching and Rear Pull Loop for Men's Footwear Assortments</value></field></itemSchema>"
+    }
+  },
+  "reason": "Formal title differs from reviewed source-specific submitted product title. Correct only title; cause of later change unconfirmed, not attributed to a person or platform automation.",
+  "expected_title": "Lace-Up Textile Casual Shoes with Apron Toe Stitching and Rear Pull Loop for Men's Footwear Assortments",
+  "observed_title": "Lace-Up Textile Casual Shoes with Round Toe Apron Toe Seam Rubber Outsole Rear Pull Loop for Men's Fashion Trend",
+  "expected_schema": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Lace-Up Textile Casual Shoes with Apron Toe Stitching and Rear Pull Loop for Men's Footwear Assortments",
+          []
+        ]
+      ]
+    ]
+  },
+  "xml_sha256": "67d97e6922a8ff495c1fe6f3e7a9cda0a74d839ef274c34731cc6c1febc810e5"
+}

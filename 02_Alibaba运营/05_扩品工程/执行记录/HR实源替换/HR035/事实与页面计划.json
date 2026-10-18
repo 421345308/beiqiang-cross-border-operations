@@ -1,0 +1,646 @@
+{
+  "candidate": "mynx_2558972",
+  "source_artno": "888-D",
+  "supplier": "铭阳鞋业",
+  "source_url": "https://mynx.sooxie.com/detail/2558972",
+  "source_price_cny": 57,
+  "colors": [
+    "Camel",
+    "Brown"
+  ],
+  "source_color_labels": [
+    "驼色",
+    "棕色"
+  ],
+  "sizes": [
+    35,
+    36,
+    37,
+    38,
+    39,
+    40
+  ],
+  "upper": "Other",
+  "lining": "Other",
+  "midsole": "Other",
+  "outsole": "Rubber",
+  "closure": "Lace-up",
+  "style": [
+    "Platform Sneakers",
+    "Lace-up"
+  ],
+  "seasons": [
+    "All Seasons"
+  ],
+  "local_intent_candidates": [
+    "侧拉链/高帮厚底女休闲鞋"
+  ],
+  "category_id": 201332512,
+  "materials_evidence": [
+    "Photograph11 explicitly states 橡胶鞋底; upper/lining composition not specified and not promoted"
+  ],
+  "titles": {
+    "A": "Women's Platform High Top Sneakers with Side Zipper and Lace-Up Closure for Casual Wear",
+    "B": "Women's Chunky Sole Ankle Sneakers Lace-Up Side Zip Shoes with Rubber Outsole for Wholesale",
+    "C": "Women's Side Zip Platform Sneakers with Rounded Toe Cap for Casual Footwear Collections"
+  },
+  "keywords": [
+    "Womens Platform Sneakers",
+    "Side Zip High Top Shoes",
+    "Chunky Sole Casual Shoes"
+  ],
+  "highlights": "Ankle-height platform profile: A rounded toe cap and layered contrast sole frame the textured upper for a distinctive casual fashion collection.\n\nSide zipper plus laces: The side zip opens the ankle area, while the laces adjust across the instep. A heel loop completes the back of the shoe.\n\nRubber outsole: The photographed bottom shows a geometric tread pattern; the cream sidewall keeps the platform shape visually clear.\n\nTwo neutral colourways: Camel and Brown, with EU35-40 options for your women's footwear assortment.\n\nWholesale planning: Send quantities by colour and EU size, packing preference and destination for a quotation.",
+  "custom": [
+    "Shoe Profile",
+    "Platform ankle sneaker; side zip and laces; rubber outsole"
+  ],
+  "image_brief": {
+    "hero": "Preserve the complete real Brown shoe in source01; AI only cleans background, reject if geometry/lettering changes",
+    "structure": "Source09 zipper/heel, source10 collar lining and source11 actual tread cropped below Chinese captions",
+    "colours": "Source06 Camel/Brown individual shoe cutouts, no generated colours",
+    "size": "Source14 worn Camel photo with confirmed EU35-40 labels, no height guarantee or size conversion",
+    "factory": "Current shared approved company gallery M6",
+    "details": "Platform/closure profile, actual zip/tread, two neutral colours, EU assortment and quotation inputs; different source views/roles"
+  },
+  "target_ids": {
+    "A": "1601943568763",
+    "B": "1601943680112"
+  },
+  "source_assets_root": "01_产品资产/01_原始数据包/HR035_888-D",
+  "source_date": "2026-10-13",
+  "fx_cny_per_usd": 6.6837,
+  "feature": "Fashion Trend",
+  "tiers": [
+    [
+      2,
+      "12.80"
+    ],
+    [
+      50,
+      "11.94"
+    ],
+    [
+      100,
+      "11.09"
+    ]
+  ],
+  "page_state": "FORMAL_FIELDS_SCORE_PASS",
+  "assets_layout": {
+    "M1": {
+      "buyer_question": "Which exact platform ankle sneaker is offered?",
+      "title": null,
+      "subtitle": null,
+      "photos": [
+        {
+          "index": 6,
+          "box": [
+            30,
+            100,
+            970,
+            900
+          ],
+          "crop": [
+            205,
+            175,
+            565,
+            455
+          ],
+          "hero": true
+        }
+      ],
+      "text": []
+    },
+    "M2": {
+      "buyer_question": "How does the platform silhouette look when worn?",
+      "title": "Platform styling in everyday outfits",
+      "subtitle": "Ankle-height shape with a rounded toe cap",
+      "photos": [
+        {
+          "index": 14,
+          "box": [
+            40,
+            210,
+            960,
+            940
+          ],
+          "crop": [
+            148,
+            35,
+            790,
+            888
+          ]
+        }
+      ],
+      "text": []
+    },
+    "M3": {
+      "buyer_question": "How are entry and bottom construction arranged?",
+      "title": "Side zip and rubber tread",
+      "subtitle": "Actual photographed closure and outsole details",
+      "photos": [
+        {
+          "index": 9,
+          "box": [
+            40,
+            235,
+            490,
+            770
+          ],
+          "crop": [
+            0,
+            270,
+            790,
+            968
+          ]
+        },
+        {
+          "index": 11,
+          "box": [
+            520,
+            235,
+            960,
+            770
+          ],
+          "crop": [
+            0,
+            270,
+            790,
+            957
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "Side zipper",
+          "xy": [
+            45,
+            835
+          ],
+          "size": 31,
+          "bold": true
+        },
+        {
+          "value": "Geometric tread",
+          "xy": [
+            520,
+            835
+          ],
+          "size": 31,
+          "bold": true
+        }
+      ]
+    },
+    "M4": {
+      "buyer_question": "Which two neutral colours are offered?",
+      "title": "Camel and Brown options",
+      "subtitle": "Two real colourways of this platform style",
+      "photos": [
+        {
+          "index": 6,
+          "box": [
+            40,
+            205,
+            960,
+            495
+          ],
+          "crop": [
+            25,
+            800,
+            390,
+            1100
+          ]
+        },
+        {
+          "index": 6,
+          "box": [
+            40,
+            585,
+            960,
+            875
+          ],
+          "crop": [
+            410,
+            800,
+            775,
+            1100
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "Camel",
+          "xy": [
+            45,
+            515
+          ],
+          "size": 31,
+          "bold": true
+        },
+        {
+          "value": "Brown",
+          "xy": [
+            45,
+            900
+          ],
+          "size": 31,
+          "bold": true
+        }
+      ]
+    },
+    "M5": {
+      "buyer_question": "Which EU sizes can be selected?",
+      "title": "EU 35-40 options",
+      "subtitle": "Plan your colour and size assortment",
+      "photos": [
+        {
+          "index": 17,
+          "box": [
+            40,
+            215,
+            960,
+            745
+          ],
+          "crop": [
+            35,
+            35,
+            710,
+            998
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "EU 35   36   37   38   39   40",
+          "xy": [
+            65,
+            835
+          ],
+          "size": 38,
+          "bold": true
+        },
+        {
+          "value": "Choose quantities for each colour-size option",
+          "xy": [
+            45,
+            925
+          ],
+          "size": 28,
+          "bold": false
+        }
+      ]
+    },
+    "D1": {
+      "buyer_question": "What are the specific style and closure features?",
+      "title": "Side zip platform sneakers",
+      "subtitle": "Lace-up adjustment with an ankle-height opening",
+      "photos": [
+        {
+          "index": 21,
+          "box": [
+            40,
+            205,
+            960,
+            985
+          ],
+          "crop": [
+            148,
+            35,
+            790,
+            888
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "Layered sole  /  Rounded toe cap  /  Heel loop",
+          "xy": [
+            45,
+            1065
+          ],
+          "size": 30,
+          "bold": true
+        },
+        {
+          "value": "A fashion-focused casual footwear choice",
+          "xy": [
+            45,
+            1150
+          ],
+          "size": 29,
+          "bold": false
+        }
+      ]
+    },
+    "D2": {
+      "buyer_question": "Which details should a buyer compare in the sample?",
+      "title": "Look closely at this construction",
+      "subtitle": "Actual zipper, collar and rubber bottom",
+      "photos": [
+        {
+          "index": 9,
+          "box": [
+            40,
+            215,
+            490,
+            710
+          ],
+          "crop": [
+            0,
+            270,
+            790,
+            968
+          ]
+        },
+        {
+          "index": 11,
+          "box": [
+            520,
+            215,
+            960,
+            710
+          ],
+          "crop": [
+            0,
+            270,
+            790,
+            957
+          ]
+        },
+        {
+          "index": 10,
+          "box": [
+            40,
+            780,
+            490,
+            1170
+          ],
+          "crop": [
+            0,
+            270,
+            790,
+            953
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "Side zipper",
+          "xy": [
+            45,
+            730
+          ],
+          "size": 28,
+          "bold": true
+        },
+        {
+          "value": "Rubber tread",
+          "xy": [
+            520,
+            730
+          ],
+          "size": 28,
+          "bold": true
+        },
+        {
+          "value": "Laces and ankle opening",
+          "xy": [
+            535,
+            885
+          ],
+          "size": 27,
+          "bold": true
+        },
+        {
+          "value": "Textured upper panels",
+          "xy": [
+            535,
+            980
+          ],
+          "size": 27,
+          "bold": false
+        },
+        {
+          "value": "Heel pull loop",
+          "xy": [
+            535,
+            1070
+          ],
+          "size": 27,
+          "bold": false
+        }
+      ]
+    },
+    "D3": {
+      "buyer_question": "How do the neutral colours coordinate with casual outfits?",
+      "title": "Choose your colour direction",
+      "subtitle": "Camel and Brown in actual styling photographs",
+      "photos": [
+        {
+          "index": 19,
+          "box": [
+            40,
+            210,
+            490,
+            1050
+          ],
+          "crop": [
+            148,
+            35,
+            790,
+            995
+          ]
+        },
+        {
+          "index": 22,
+          "box": [
+            520,
+            210,
+            960,
+            1050
+          ],
+          "crop": [
+            0,
+            35,
+            790,
+            895
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "Camel",
+          "xy": [
+            45,
+            1110
+          ],
+          "size": 33,
+          "bold": true
+        },
+        {
+          "value": "Brown",
+          "xy": [
+            520,
+            1110
+          ],
+          "size": 33,
+          "bold": true
+        }
+      ]
+    },
+    "D4": {
+      "buyer_question": "What must the buyer specify for a wholesale quotation?",
+      "title": "Plan EU sizes and quantities",
+      "subtitle": "Build an assortment for your target range",
+      "photos": [
+        {
+          "index": 16,
+          "box": [
+            40,
+            215,
+            960,
+            750
+          ],
+          "crop": [
+            0,
+            80,
+            790,
+            854
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "EU 35   36   37   38   39   40",
+          "xy": [
+            65,
+            830
+          ],
+          "size": 38,
+          "bold": true
+        },
+        {
+          "value": "Quantities by colour and EU size",
+          "xy": [
+            45,
+            945
+          ],
+          "size": 32,
+          "bold": false
+        },
+        {
+          "value": "Packing preference and destination",
+          "xy": [
+            45,
+            1025
+          ],
+          "size": 32,
+          "bold": false
+        },
+        {
+          "value": "Request a sample to review fit and finishing",
+          "xy": [
+            45,
+            1130
+          ],
+          "size": 28,
+          "bold": false
+        }
+      ]
+    },
+    "SKU_CAMEL": {
+      "buyer_question": "Which exact Camel shoe is selected?",
+      "title": null,
+      "subtitle": null,
+      "photos": [
+        {
+          "index": 6,
+          "box": [
+            30,
+            125,
+            970,
+            850
+          ],
+          "crop": [
+            25,
+            800,
+            390,
+            1100
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "Camel",
+          "xy": [
+            45,
+            900
+          ],
+          "size": 36,
+          "bold": true
+        }
+      ]
+    },
+    "SKU_BROWN": {
+      "buyer_question": "Which exact Brown shoe is selected?",
+      "title": null,
+      "subtitle": null,
+      "photos": [
+        {
+          "index": 6,
+          "box": [
+            30,
+            125,
+            970,
+            850
+          ],
+          "crop": [
+            410,
+            800,
+            775,
+            1100
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "Brown",
+          "xy": [
+            45,
+            900
+          ],
+          "size": 36,
+          "bold": true
+        }
+      ]
+    }
+  },
+  "closure_request_input": "Lace-Up",
+  "closure_canonical_basis": "Current destination Schema option displayName and actual formal get both Lace-up; same enum value, no additional platform write.",
+  "source_id": "src-hr-hr035-888-d",
+  "source_evidence": [
+    "01_产品资产/01_原始数据包/HR035_888-D/source.json",
+    "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR035/素材清单.json"
+  ],
+  "procurement_capability": "CURRENT_REAL_SHOE_AND_PROCUREMENT_ENTRY_VERIFIED_NOT_ORDER_STOCK",
+  "company_faq_source": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/通用FAQ与公司简介.json",
+  "do_not_claim": [
+    "physical stock",
+    "tested slip resistance",
+    "medical comfort",
+    "unverified midsole material"
+  ],
+  "current_models_by_id": {
+    "1601943568763": "BQ1035-A",
+    "1601943680112": "BQ1035-B"
+  },
+  "model_migration_evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/范围.json",
+  "model_numbers": {
+    "A": "BQ1035-A",
+    "B": "BQ1035-B"
+  },
+  "current_platform_category_by_id": {
+    "1601943568763": 201332512,
+    "1601943680112": 201332512
+  },
+  "category_scope": "category_id保留初始改造默认；当前平台叶子按current_platform_category_by_id逐ID读取，不把同源链接不同平台分类混成不同实鞋。"
+}

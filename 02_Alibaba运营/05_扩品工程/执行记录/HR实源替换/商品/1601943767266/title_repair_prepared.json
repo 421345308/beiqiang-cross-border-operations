@@ -1,0 +1,34 @@
+{
+  "request": {
+    "param_product_top_publish_request": {
+      "product_id": 1601943767266,
+      "cat_id": 201774304,
+      "language": "en_US",
+      "xml": "<itemSchema><field id=\"productTitle\" name=\"Product name\" type=\"input\"><value>Zip-Up Casual Ankle Boots with Rear Pull Loop and Raised Toe Outline for Footwear Collections</value></field></itemSchema>"
+    }
+  },
+  "reason": "Formal title differs from reviewed source-specific submitted product title. Correct only title; cause of later change unconfirmed, not attributed to a person or platform automation.",
+  "expected_title": "Zip-Up Casual Ankle Boots with Rear Pull Loop and Raised Toe Outline for Footwear Collections",
+  "observed_title": "Zip-Up Casual Ankle Boots with Textured Upper Sculpted PVC Sole Rear Pull Loop Raised Toe Outline for Footwear Collections",
+  "expected_schema": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Zip-Up Casual Ankle Boots with Rear Pull Loop and Raised Toe Outline for Footwear Collections",
+          []
+        ]
+      ]
+    ]
+  },
+  "xml_sha256": "b3e3b4f470c611f2445acbbe99622d6b050fdf760fb71ba2ca0760a20b479e7b"
+}

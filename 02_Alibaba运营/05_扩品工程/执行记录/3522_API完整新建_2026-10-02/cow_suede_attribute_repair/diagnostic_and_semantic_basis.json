@@ -1,0 +1,26 @@
+{
+  "reason_basis": "Actual official score result, not a literal-string-only material judgement",
+  "semantic_truth": "Cow suede is a genuine-leather subtype; initial broad Genuine Leather was truthful. Custom Cow suede is source-supported refinement, not a denial that suede is leather.",
+  "actual_score_before": 3.9,
+  "observed_at_before": "2026-10-02T15:53:51.802458+00:00",
+  "score_request_id_before": "213c934417909564365666230",
+  "platform_problem_path": "result.problem_map.extendProblemMap.imageText",
+  "only_active_problem": "imageText",
+  "inventory_problem": false,
+  "platform_reason_path": "result.problem_map.errorReasonMap.en",
+  "platform_reason_verbatim": "The property value 'Suede' in the title conflicts with the 'Upper Material: Genuine Leather' in the attribute list. Suede and genuine leather are different materials, leading to a clear conflict.",
+  "changed_schema_value_path": "icbuCatProp/complex-value/field[@id='p-191290428']/values/value",
+  "old_value": {
+    "id": "3242875",
+    "inputValue": "Genuine Leather"
+  },
+  "source_supported_new_value": {
+    "id": "-2",
+    "inputValue": "Cow suede"
+  },
+  "change_count": 1,
+  "current_formal_get_upper": "Cow suede",
+  "current_live_public_upper": "Genuine Leather per parent cloud QA; awaiting modified/N review switch",
+  "next_step": "Wait for approval and score recalculation; no repeated relabeling or unsupported material changes",
+  "recorded_at": "2026-10-02T16:06:45.074575+00:00"
+}

@@ -1,0 +1,116 @@
+{
+  "rows": [
+    {
+      "product_id": "10000047392343",
+      "model": "BQ059 / A1888",
+      "observed_at": "2026-10-03T08:03:39.397288+00:00",
+      "status": "approved",
+      "display": "Y",
+      "get_error": null,
+      "get_request_id": "2105584317910146186025363",
+      "FAQ_count": 8,
+      "expected_FAQ_count": 8,
+      "formal_FAQ_exact_match": true,
+      "actual_FAQ": [
+        {
+          "question": "Which model does this listing cover?",
+          "answer": "This listing covers BQ059 / A1888, source model A1888. Select the photographed product and color-size options offered on this page; other models are not included."
+        },
+        {
+          "question": "What is the current listing minimum order quantity?",
+          "answer": "The current listing minimum for BQ059 / A1888 is 2 pairs. Send quantities for each selected color-size option to confirm availability and order terms."
+        },
+        {
+          "question": "What quantity prices are currently listed?",
+          "answer": "Current displayed unit prices for BQ059 / A1888: USD 9.49 from 2 pairs, USD 9.19 from 50 pairs, USD 9.09 from 100 pairs. Confirm the final quotation for the selected quantities and specifications; unquoted freight and taxes are excluded."
+        },
+        {
+          "question": "How should I request colors, sizes and fit information?",
+          "answer": "For A1888, choose from the current color-size options on this page and state the quantity for each option. Request measurements for the selected size before ordering; international size conversion and fit are confirmed for the actual product."
+        },
+        {
+          "question": "Can logo or packaging requests be reviewed?",
+          "answer": "Send your artwork, requested logo position and packaging specification for review. Feasibility, sample requirements and any charges must be confirmed for this style and order before agreement."
+        },
+        {
+          "question": "How are availability, dispatch and shipping confirmed?",
+          "answer": "Send the destination, postal code, quantities and requested dispatch date for A1888. Availability, production or dispatch timing and freight are confirmed in the order quotation; this answer does not promise ready stock."
+        },
+        {
+          "question": "Can I ask for a sample before a bulk order?",
+          "answer": "Ask about sample availability and charges for BQ059 / A1888. Review the actual sample, measurements and fit before agreeing a bulk order."
+        },
+        {
+          "question": "Which material specifications need confirmation?",
+          "answer": "For A1888, refer to the current product attributes and send the exact component composition, material grade or test standard required for your order. Any unspecified material detail and test evidence need confirmation; no additional tested performance or certification is promised."
+        }
+      ],
+      "unrelated_fields_unchanged": {
+        "subject": true,
+        "main_image": true,
+        "product_sku": true,
+        "attributes": true,
+        "sourcing_trade": true,
+        "keywords": true,
+        "category_id": true
+      },
+      "company_summary_unchanged": true,
+      "sku_count": 22,
+      "actual_score": 4.9,
+      "other_detail_fields_unchanged": {
+        "company_image": true,
+        "detail_image": true,
+        "product_summary": true
+      },
+      "score_error": null,
+      "score_request_id": "21501b6717910146210722589"
+    },
+    {
+      "product_id": "10000047396313",
+      "model": "BQ060 / A350",
+      "observed_at": "2026-10-03T08:04:02.802135+00:00",
+      "status": null,
+      "display": null,
+      "get_error": {
+        "exception_type": "ClientError",
+        "message": "Native HTTP transport failed; write outcome requires reconciliation",
+        "transport_phase": "transport",
+        "request_sent": null,
+        "curl_exit_code": 28,
+        "http_status": null,
+        "business_refs": {},
+        "response_summary": {
+          "format": "text",
+          "excerpt": ""
+        },
+        "stderr_excerpt": "[COMMAND_TEXT_OMITTED]",
+        "cause_types": [],
+        "limits": "Unavailable facts remain null/unknown. Curl errors and absence in catalog do not prove an uncommitted write; no automatic retry."
+      },
+      "get_request_id": null,
+      "FAQ_count": null,
+      "expected_FAQ_count": 8,
+      "formal_FAQ_exact_match": null,
+      "actual_FAQ": [],
+      "unrelated_fields_unchanged": {
+        "subject": null,
+        "main_image": null,
+        "product_sku": null,
+        "attributes": null,
+        "sourcing_trade": null,
+        "keywords": null,
+        "category_id": null
+      },
+      "company_summary_unchanged": null,
+      "sku_count": null,
+      "actual_score": null,
+      "other_detail_fields_unchanged": {
+        "company_image": null,
+        "detail_image": null,
+        "product_summary": null
+      },
+      "field_readback_state": "UNKNOWN_READ_UNAVAILABLE"
+    }
+  ],
+  "platform_writes_during_review": 0
+}

@@ -1,0 +1,63 @@
+{
+  "status": "approved",
+  "platform": "Tencent Cloud TokenHub",
+  "site": "cn",
+  "area": "gz",
+  "model": "kling-video-v3",
+  "auth": {
+    "profile": "default",
+    "alias": "default",
+    "source": "CLI-managed local config; key held in memory only"
+  },
+  "api": {
+    "submit": "https://tokenhub.tencentmaas.com/v1/wand/kling/image-to-video",
+    "poll": "https://tokenhub.tencentmaas.com/v1/wand/kling/tasks/{task_id}",
+    "reference": "https://cloud.tencent.com/document/product/1823/135742"
+  },
+  "settings": {
+    "resolution": "1080p",
+    "duration": 5,
+    "multi_shot": false,
+    "audio": "off"
+  },
+  "estimated_cost": {
+    "currency": "CNY",
+    "per_output_second": 0.8,
+    "per_job": 4,
+    "jobs": 1,
+    "total": 4,
+    "source": "https://cloud.tencent.com/document/product/1823/130055",
+    "note": "一次5秒无声生成，不含额外自动重试；实际费用以平台账单为准。"
+  },
+  "authorization": {
+    "source": "用户回应上一轮建议：认可，按你说的去做",
+    "scope": "沿用腾讯云可灵V3，重做一段更宽构图的完整迈步；各参数沿用已选择5秒1080P无声，预计新增4元。松手本地重剪，完整片本地制作，无额外自动付费重试。"
+  },
+  "jobs": [
+    {
+      "id": "step-v2",
+      "first_frame": "public/dynamic-step-wide-v2.png",
+      "last_frame": "public/dynamic-step-wide-end-v2.png",
+      "prompt": "Locked low side-view camera, one continuous shot. The far rear foot on the left lifts off the pavement, swings smoothly towards screen right, and lands FLAT a short distance ahead of the near foot, matching the end frame. The near foot stays planted at its original pavement location throughout. Finish with both soles grounded and pause. Complete the small step within the first three seconds, then stay still. Keep both entire shoes and their contact shadows inside the frame for the whole movement. Preserve the cream trousers and the matching all-black tall wave-rib knit sock shoes, black heel counters, rear pull loops and black grooved soles. Keep the architecture, pavement lines and camera framing fixed. Natural ankle and knee motion. No camera movement, zoom, cropped feet, extra step, sliding, hovering, merged legs, extra feet, white sole, shoe redesign, text or speech."
+    }
+  ],
+  "reference_edits": [
+    {
+      "file": "public/dynamic-step-wide-v2.png",
+      "inputs": [
+        "public/sock-city.png",
+        "public/sock-hero.png"
+      ],
+      "prompt": "Use case: ads-marketing / precise reference-based footwear editorial. Create ONE new 9:16 wider establishing reference photograph based on the two attached references. Image 1 is the scene and cream-trouser wearer reference; image 2 is the precise all-black shoe design reference. Preserve the golden warm ivory stone arcade, stone pavement, cream cuffed trousers, and same matched pair of ALL-BLACK high-top wave-rib knit sock shoes: tall ribbed collars, rear pull loops, black heel counters, rounded toes and thick black grooved soles. Change CAMERA FRAMING substantially: a locked low side-view medium-wide shot of both legs from just below the knees to the ground, with ample empty pavement to the RIGHT for one short forward step. Both entire shoes and their contact shadows are fully visible. The two legs sit in the LEFT-CENTER of the portrait frame, with the whole pair occupying only about 35 percent of image width, not a tight footwear close-up. The forward right foot is grounded near horizontal position 45 percent of frame, the rear left foot is grounded near 30 percent, both toes point naturally towards frame right. Keep their soles around vertical position 68 percent of frame. There is empty ground extending from the toes to the right edge, about 35 percent of frame width, so the rear foot can advance 15cm and land inside the frame. A natural balanced stance just before ONE small step. Keep clear leg separation and anatomically plausible connections; no cropped shoes, no foot crossing, no motion blur, no float, no white soles, no laces, no extra feet, no redesigned footwear. Premium realistic warm ivory fashion campaign photography, finely resolved knit, restrained sunlight, no text or logos. One coherent scene, not a collage.",
+      "tool": "builtin image_gen",
+      "review": "首帧双鞋完整，前鞋右侧约23%画宽留白，脚底约59%画高，地面空间增大。整体黑色高帮波浪纹和奶白长裤保留。"
+    },
+    {
+      "file": "public/dynamic-step-wide-end-v2.png",
+      "input": "public/dynamic-step-wide-v2.png",
+      "prompt": "Use case: precise-object-edit / advertising end-frame reference. Edit the attached warm ivory side-view footwear photograph into the end state of ONE short walking step. Keep the camera position, 9:16 framing, stone architecture, pavement line positions, golden light, cream cuffed trousers and the exact two all-black tall wave-rib knit sock shoes. The near/front shoe currently at image center-right STAYS planted in exactly its existing position. Move ONLY the farther/rear shoe and its connected trouser leg forward towards screen right so it now rests completely flat on the ground about 10cm AHEAD of the stationary shoe. Its entire toe and heel must remain fully inside the frame with clear right-edge margin. The advanced shoe should appear slightly smaller because it is the FAR foot, not a duplicate fused to the near leg. The far shin angles naturally forward, the trouser hem follows it, and both legs remain continuous. This is a calm finish with BOTH soles grounded, no further step. Preserve all-black thick grooved soles, wave rib layout, tall sock collars, rear pull loops and black heel counters. Do not change the stationary shoe, do not change camera, do not zoom, do not create third leg, extra shoe, floating heel, fused feet, mirror pose or motion blur. One coherent photorealistic frame, no text/logos.",
+      "tool": "builtin image_gen",
+      "review": "终帧远脚落在近脚前，双脚着地完整入画，近脚与地面位置基本保持；新图局部鞋纹有生成差异，不能单凭首尾图证明运动质量。"
+    }
+  ]
+}

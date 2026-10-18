@@ -1,0 +1,21 @@
+{
+  "method": "alibaba.icbu.product.schema.add",
+  "request_sha256": "9288740b9e092f6f786333342dac1fe5d15b18e058237ecee3df6e186c22481e",
+  "parent_authorized_route": true,
+  "independent_gates": [
+    "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-4\\independent_acceptance\\266_new_type4_gallery_corrected_static_gate.json"
+  ],
+  "status": "BUSINESS_VERIFIED",
+  "started_at_utc": "2026-10-02T08:21:15.288806+00:00",
+  "scope": "New 266 style complete product only; old1601969526580 and draft1601969738110 untouched",
+  "reason_for_new_payload": "Previous formal HTML was business-rejected without ID; corrected route uses same-shop verified type4 new-create gallery structure and independent company role fixes.",
+  "exit_code": 0,
+  "reply": {
+    "trace_id": "2101dbd017909292829317308e0b9f",
+    "product_id": 1601969707634,
+    "biz_success": true,
+    "request_id": "0b51802d17909292841918889",
+    "_trace_id_": "2101dbd017909292829317308e0b9f"
+  },
+  "finished_at_utc": "2026-10-02T08:21:22.207494+00:00"
+}

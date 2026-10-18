@@ -1,0 +1,72 @@
+{
+  "atUTC": "2026-10-04T06:03:24.259073+00:00",
+  "stage": "PUBLIC_SOURCE_RESEARCH_ONLY",
+  "operating_CNY_per_USD": 6.7,
+  "markups_percent": [
+    50,
+    40,
+    30
+  ],
+  "platform_image_uploads": 0,
+  "platform_product_creates": 0,
+  "competitor_research_sources": [
+    "https://www.alibaba.com/wholesale/cheap-sock-sneakers.html",
+    "https://www.alibaba.com/countrysearch/CN/socks-shoes.html"
+  ],
+  "competitor_limits": "Search/country pages crawled weeks/months earlier; directional context only, not current same-condition product quote evidence. No price advantage concluded.",
+  "candidates": [
+    {
+      "supplier": "维拓鞋业",
+      "model": "0833",
+      "source": "https://weituo.sooxie.com/detail/2541286",
+      "cost_CNY": 43,
+      "status": "CANDIDATE_NOT_CREATED",
+      "visible": "Knit-style slip-on and faceted sole, all six actual colors in source card",
+      "price_USD_plan": [
+        9.63,
+        8.99,
+        8.34
+      ],
+      "limits": "No cheapest claim: primary Alibaba mixed-market page shows nearby MOQ2 sock-shoe price ranges at USD5–9 and USD5.85–7.92; composition, fit and performance are not matched. Full current duplicate check pending. Brown labels39–45 only. Do not copy erroneous universal size-chart last column."
+    },
+    {
+      "supplier": "维拓鞋业",
+      "model": "9079",
+      "source": "https://weituo.sooxie.com/detail/915267",
+      "cost_CNY": 67.7,
+      "status": "CANDIDATE_NOT_CREATED",
+      "visible": "Lace-up striped textile-looking upper, retained KE-sports heel text and a source hero with large promotional overprint",
+      "limits": "No famous-brand identity conclusion from silhouette or unknown mark. No tested air/cushion claim; gallery and material truth not yet fully reviewed."
+    },
+    {
+      "supplier": "维拓鞋业",
+      "model": "2272",
+      "source": "https://weituo.sooxie.com/detail/2547988",
+      "cost_CNY": 62,
+      "status": "CANDIDATE_NOT_CREATED",
+      "visible": "Ankle-height shoe, crossing hook-and-loop straps, retained JLVT marking clearly visible on white original, cutout sole structure; black and white original photos both visually confirmed",
+      "price_USD_plan": [
+        13.88,
+        12.96,
+        12.03
+      ],
+      "colors": [
+        "Black",
+        "White"
+      ],
+      "size_labels": [
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
+      "limits": "Source option 有重量图 is reference information, not a third color. Weight reference varies by label and seller/platform measurement; do not blindly reuse generic0.5kg. No famous-brand conclusion from unknown JLVT marking. Current duplicate and actual comparable review pending."
+    }
+  ],
+  "next_step": "Finish 8815 public FAQ/inquiry after Chrome is released, then current comparable and duplicate review before selecting next real source."
+}

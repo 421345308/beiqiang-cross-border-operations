@@ -1,0 +1,64 @@
+{
+  "observed_at": "2026-10-02T16:19:06.064480+00:00",
+  "directions": [
+    {
+      "key": "F2888",
+      "direction": "女冬靴",
+      "url": "https://shangchao.sooxie.com/detail/2357652",
+      "cost_cny": 53,
+      "title": "Women's Quilted Winter Boots with Plush Lining and Side Zipper",
+      "hero": "detail_17.jpg",
+      "issues": [
+        "页面34–42与详情04图35–42不一致：生产暂取交集35–42，34暂不写入SKU。",
+        "全衬覆盖不是仅凭鞋口确定：来源分别列靴筒长绒和鞋垫短绒，可写plush lining，不写full fleece/sheepskin lining。",
+        "外底成分未取得；若当前Schema必填且无真实Unknown口径，阻断该字段，不编橡胶/EVA。"
+      ],
+      "old_product_ids": [],
+      "new_product_id": null
+    },
+    {
+      "key": "H219",
+      "direction": "女系带短靴（马丁靴方向）",
+      "url": "https://ls2017.sooxie.com/detail/1565538",
+      "cost_cny": 60,
+      "title": "Women's Lace-Up Ankle Boots with Side Zipper and Lug Sole",
+      "hero": "detail_26.jpg",
+      "issues": [
+        "结构与方向匹配，但真实厚底/平跟，不强称低粗跟。",
+        "单鞋与加棉为不同内里选项：内里字段/详情文字不同，先单鞋12 SKU准备，加棉暂不合并发布。",
+        "详情11写4CM厚底，未实测不写精确跟高；鞋体原图保持不变。"
+      ],
+      "old_product_ids": [],
+      "new_product_id": null
+    }
+  ],
+  "rejections": [
+    {
+      "url": "https://huat.sooxie.com/detail/2548898",
+      "reason": "SPORT鞋体标识；不是去标后直接生产"
+    },
+    {
+      "url": "https://bairong.sooxie.com/detail/2554236",
+      "reason": "OrBr后跟标签及识别性设计风险；不生产"
+    },
+    {
+      "url": "https://789.sooxie.com/detail/1460245",
+      "reason": "当前仅棕39；材料分层亦需核；不优先"
+    },
+    {
+      "url": "https://gaoku.sooxie.com/detail/2298432",
+      "reason": "SPORT鞋舌标、非易穿侧拉链优先"
+    },
+    {
+      "url": "https://songtai.sooxie.com/detail/2400815",
+      "reason": "CHINA-L.W图文标识、非侧拉链易穿优先"
+    },
+    {
+      "url": "https://mxk.sooxie.com/detail/2048442",
+      "reason": "鞋侧miumiu样式标识；不去标伪装"
+    }
+  ],
+  "deadline_utc": "2026-10-02T18:00:00Z",
+  "no_platform_write": true,
+  "no_supplier_contact": true
+}

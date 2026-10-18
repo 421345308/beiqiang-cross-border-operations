@@ -1,0 +1,25 @@
+{
+  "style": "016",
+  "observed_at": "2026-10-10T05:00:18.177894+00:00",
+  "scope_result": "PASS",
+  "expected_sku_count": 36,
+  "exact_color_EU": true,
+  "title": "Wide Toe Box Winter Ankle Boots Plush Lined Microfiber Upper Lace Up Rubber Outsole EU 37-48 Wholesale",
+  "title_bytes": 102,
+  "main_images": 6,
+  "product_details": 4,
+  "company_images": 5,
+  "known_materials": {
+    "upper": "Microfiber upper; original07鞋面超纤 and09超纤拼接鞋面. Exact chemical composition not supplied.",
+    "outsole": "Rubber; original07橡胶大底 and08橡胶加厚大底.",
+    "lining": "Plush; original07内里加绒 and actual plush collars in12/14/18/22/24/28. Fiber composition unspecified.",
+    "midsole": "Not specified; no compound evidence."
+  },
+  "source_current": "29 current readable frames; CNY65, three colors EU37–48; exact07/09 Microfiber upper,07/08Rubber outsole,07Plush lining; unknown fiber/midsole compositions.",
+  "formal_dedup": "Current catalog431; exact source/model unbound;100cover triage/nearest12/additional2772/323/25017/017 winter covers compared.",
+  "dedup_limit": "Not global all-angle or physicalIP clearance",
+  "payload_sha256": "09fe256629dcdd61bd4acbbdb12be66b6ccedec3cc4fce7f02a29620ec33bc72",
+  "quality_evidence": "05_AI候选/整组验收.json",
+  "browser_policy": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+  "next_action": "One authorized create, read returned ID; never replay unknown outcome"
+}

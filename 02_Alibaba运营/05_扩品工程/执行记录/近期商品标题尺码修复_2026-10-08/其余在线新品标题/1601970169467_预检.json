@@ -1,0 +1,45 @@
+{
+  "keyword_input": null,
+  "differentiation_review": null,
+  "category_id": 201153804,
+  "operation": "update",
+  "inventory_input": null,
+  "model_serialization": null,
+  "target_product_id": "1601970169467",
+  "field_ids": [
+    "productTitle"
+  ],
+  "dependency_ids": [],
+  "xml": "<itemSchema><field id=\"productTitle\" type=\"input\"><value>Wholesale Closed Toe Slip On EVA Mules with Ribbed Sidewalls and Orange Sole Pods for Casual Wear</value></field></itemSchema>",
+  "expected_fields": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Wholesale Closed Toe Slip On EVA Mules with Ribbed Sidewalls and Orange Sole Pods for Casual Wear",
+          []
+        ]
+      ]
+    ]
+  },
+  "prepared_from_current_schema": true,
+  "task_pack": null,
+  "replacement_plan": null,
+  "schema_provenance": {
+    "schema_request_id": "213f5a2117914238239283928",
+    "schema_acquired_at": "2026-10-08T01:43:46.697230+00:00",
+    "current_schema_sha256": "8eca40914d51c2227f6230b81c90db8d1e0fd141c10908c30fe960d2a0d7d25d",
+    "source_evidence": [
+      "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-7\\M001_execution\\facts_and_copy.json"
+    ]
+  }
+}

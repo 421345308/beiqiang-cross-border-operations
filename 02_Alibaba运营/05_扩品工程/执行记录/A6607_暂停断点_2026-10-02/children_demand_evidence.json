@@ -1,0 +1,25 @@
+{
+  "observed_at": "2026-10-02T22:34:49.224386+00:00",
+  "decision": "CHILD_SLIDE_DEMAND_SUPPORTED; A6607 assortment test, not validated same-product sales",
+  "primary_sources": [
+    {
+      "url": "https://www.decathlon.co.uk/p/kids-slides-550-fins-black/325537/c382c43c265m8981022",
+      "title": "Kids slides 550 Fins black",
+      "rating": 4.7,
+      "reviews": 868,
+      "GBP_price": 13.99,
+      "match": "Children, open-toe backless slides, no toe post, EVA outsole",
+      "differences": "Competitor PU/polyester upper, no A6607 vented molded upper/ABC MINO decoration; none of competitor composition, tests, safety, comfort, age conversion transferred."
+    },
+    {
+      "url": "https://www.decathlon.co.uk/sports/surf-beach/kids-slides",
+      "title": "Kids Slides category",
+      "item_count": 25,
+      "shown_550_reviews": 888,
+      "shown_Fins_GBP_price": 6.99,
+      "limitation": "Retail PDP and category cached displays differ. 550 range colour variants share ratings; do not count these as independent models or sum votes."
+    }
+  ],
+  "excluded_adult_demand": true,
+  "exact_A6607_sales_verified": false
+}

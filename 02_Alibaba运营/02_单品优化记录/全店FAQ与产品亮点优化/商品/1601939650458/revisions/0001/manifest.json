@@ -1,0 +1,27 @@
+{
+  "operation": "update",
+  "product_id": "1601939650458",
+  "category_id": 201334413,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "copy.json",
+    "before_get.json",
+    "../../../../../01_产品资产/02_可发布素材/00_最终上传/BQ012_M8506/00_上架填写表.md",
+    "../../../../../01_产品资产/01_原始数据包/已整理_BQ012_M8506_M8506贝强新款35-45批58元/M8506贝强新款35-45批58元/800X800主图/001.jpg",
+    "current_get.json",
+    "../../../../00_运营SOP/国际站商品全生命周期SOP.md"
+  ],
+  "current_schema": "current_schema.xml",
+  "current_schema_sha256": "dc4014edfaa1a234977889a040f31761fb9cfa920434078a345390eacea81acc",
+  "schema_request_id": "0bab02fe17917345274142909",
+  "schema_acquired_at": "2026-10-11T16:02:04.675736+00:00",
+  "payload_xml": "payload.xml",
+  "field_ids": [
+    "textDesc",
+    "companyFaqDesc"
+  ],
+  "dependency_ids": [
+    "productDescType"
+  ],
+  "observed_model": "BQ012-W1 / M8506"
+}

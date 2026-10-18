@@ -1,0 +1,19 @@
+{"type": "session.queue_done"}
+{"type": "session.created", "session_id": "sess_a24054fcfa40", "mode": "turn_based", "metrics": {"backend": "pytorch", "kv_cache_length": 712}, "server_send_ts": 1791780507.696055}
+{"type": "response.output.delta", "kind": "text", "session_id": "sess_a24054fcfa40", "response_id": "resp_9cc36076f430", "text": "[00:00-00:", "server_send_ts": 1791780512.3406582}
+{"type": "response.output.delta", "kind": "text", "session_id": "sess_a24054fcfa40", "response_id": "resp_9cc36076f430", "text": "30] 全程无明显人声", "server_send_ts": 1791780512.6114295}
+{"type": "response.output.delta", "kind": "text", "session_id": "sess_a24054fcfa40", "response_id": "resp_9cc36076f430", "text": "语音。音频背景为极其微弱的环境", "server_send_ts": 1791780512.8907692}
+{"type": "response.output.delta", "kind": "text", "session_id": "sess_a24054fcfa40", "response_id": "resp_9cc36076f430", "text": "底噪，未检测到清晰的音乐伴", "server_send_ts": 1791780513.174253}
+{"type": "response.output.delta", "kind": "text", "session_id": "sess_a24054fcfa40", "response_id": "resp_9cc36076f430", "text": "奏或歌词内容，整体声音环境安静，", "server_send_ts": 1791780513.4633765}
+{"type": "response.output.delta", "kind": "text", "session_id": "sess_a24054fcfa40", "response_id": "resp_9cc36076f430", "text": "主要伴随细微的衣物摩擦与动作产生的物理", "server_send_ts": 1791780513.7565663}
+{"type": "response.output.delta", "kind": "text", "session_id": "sess_a24054fcfa40", "response_id": "resp_9cc36076f430", "text": "声。\n\n画面中展示了一双浅绿色渐", "server_send_ts": 1791780514.0548024}
+{"type": "response.output.delta", "kind": "text", "session_id": "sess_a24054fcfa40", "response_id": "resp_9cc36076f430", "text": "变厚底运动鞋及配套的白色堆", "server_send_ts": 1791780514.359139}
+{"type": "response.output.delta", "kind": "text", "session_id": "sess_a24054fcfa40", "response_id": "resp_9cc36076f430", "text": "堆袜。展示者通过反复的穿脱", "server_send_ts": 1791780514.6678693}
+{"type": "response.output.delta", "kind": "text", "session_id": "sess_a24054fcfa40", "response_id": "resp_9cc36076f430", "text": "、踩踏、提拉和脚部旋转", "server_send_ts": 1791780514.9804103}
+{"type": "response.output.delta", "kind": "text", "session_id": "sess_a24054fcfa40", "response_id": "resp_9cc36076f430", "text": "动作来全方位呈现鞋子的外观细节，包括", "server_send_ts": 1791780515.2986336}
+{"type": "response.output.delta", "kind": "text", "session_id": "sess_a24054fcfa40", "response_id": "resp_9cc36076f430", "text": "鞋底纹路、侧面弧度以及袜", "server_send_ts": 1791780515.6220243}
+{"type": "response.output.delta", "kind": "text", "session_id": "sess_a24054fcfa40", "response_id": "resp_9cc36076f430", "text": "子的弹性与长度。相机保持固定机", "server_send_ts": 1791780515.9479835}
+{"type": "response.output.delta", "kind": "text", "session_id": "sess_a24054fcfa40", "response_id": "resp_9cc36076f430", "text": "位，未见明显的推拉摇移或", "server_send_ts": 1791780516.2795665}
+{"type": "response.output.delta", "kind": "text", "session_id": "sess_a24054fcfa40", "response_id": "resp_9cc36076f430", "text": "跟拍移动，属于典型的静态近景商品", "server_send_ts": 1791780516.6111214}
+{"type": "response.output.delta", "kind": "text", "session_id": "sess_a24054fcfa40", "response_id": "resp_9cc36076f430", "text": "展示拍摄。", "server_send_ts": 1791780516.711071}
+{"type": "response.done", "session_id": "sess_a24054fcfa40", "response_id": "resp_9cc36076f430", "text": "[00:00-00:30] 全程无明显人声语音。音频背景为极其微弱的环境底噪，未检测到清晰的音乐伴奏或歌词内容，整体声音环境安静，主要伴随细微的衣物摩擦与动作产生的物理声。\n\n画面中展示了一双浅绿色渐变厚底运动鞋及配套的白色堆堆袜。展示者通过反复的穿脱、踩踏、提拉和脚部旋转动作来全方位呈现鞋子的外观细节，包括鞋底纹路、侧面弧度以及袜子的弹性与长度。相机保持固定机位，未见明显的推拉摇移或跟拍移动，属于典型的静态近景商品展示拍摄。", "reason": "turn_end", "metrics": {"backend": "pytorch", "kv_cache_length": 2628}, "server_send_ts": 1791780516.7115188}

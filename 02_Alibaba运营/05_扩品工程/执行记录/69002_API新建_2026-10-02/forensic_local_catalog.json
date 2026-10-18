@@ -1,0 +1,52 @@
+{
+  "observed_at": "2026-10-02T14:12:51.243474+00:00",
+  "baseline_count": 361,
+  "current_count": 363,
+  "new_vs_361": [
+    {
+      "numeric_id": 1601969860254,
+      "encrypted_product_id": "AAFajmk4AOWGex-cDVm8Xil9",
+      "title": "Microfiber Closed-Toe Mules with Buckle Strap",
+      "created": "2026-10-02 20:00:45",
+      "modified": "2026-10-02 20:26:38",
+      "status": "approved",
+      "image_ids": [
+        "Haffc1f5050594e3f9b95188341cfe7d6w",
+        "Hc19380ca0e97446384b31ab76db72402t",
+        "Ha0a83f1e61ff4a4daa36e677b6b1c732n",
+        "H5fda4f1bc8924b15a45dbb52255a355at",
+        "Hf3d4fd1fd4de44e7beddb706ab7a9c2bo",
+        "H1411485e0512490ba54413d6ef1074d9E"
+      ],
+      "69002_image_overlap": []
+    },
+    {
+      "numeric_id": 1601969869242,
+      "encrypted_product_id": "AAFjjmk4AOWGex-cDVm8XlZZ",
+      "title": "Cow Leather Closed-Toe Mules with Buckle Strap for Everyday Wear",
+      "created": "2026-10-02 20:24:21",
+      "modified": "2026-10-02 20:39:44",
+      "status": "approved",
+      "image_ids": [
+        "Hb7fbbd2b1b9a45bab84ebb205e8a7de9V",
+        "Hc00b8425d47d4ca3b54953439f1d3a5ak",
+        "Hc6518136efaa428b9c89c941302b61ecu",
+        "H2010e3b849f545b6b3dee1ebf0530a3br",
+        "Hc9b7422b9c6f404f90b7bc20e10021a7F",
+        "H97301dc4f4f84a6cae4756f9352435fcr"
+      ],
+      "69002_image_overlap": []
+    }
+  ],
+  "all_catalog_image_matches": [],
+  "exact_recorded_exception_type": "ClientError",
+  "http_response_saved": false,
+  "request_id_saved": false,
+  "exception_message_saved": false,
+  "transport_journal_behavior": "sdk_runtime_5998.native captures curl stdout/stderr in memory only; api_submit catches exception and persists only class name. No HTTP or curl journal written.",
+  "cannot_classify": [
+    "curl nonzero TLS/transport error vs non-JSON response",
+    "whether HTTP request reached server"
+  ],
+  "conclusion": "Unknown write cannot be safely retried from available evidence."
+}

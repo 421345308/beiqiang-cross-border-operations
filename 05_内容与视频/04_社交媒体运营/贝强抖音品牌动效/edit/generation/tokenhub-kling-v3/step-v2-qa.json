@@ -1,0 +1,57 @@
+{
+  "status": "creative_hold_visual_acceptance_withdrawn",
+  "source": "public/dynamic/step-v2.mp4",
+  "source_id": "43a23e03fa7695da",
+  "sha256": "43A23E03FA7695DA80CAD8DB5C00A5D881F5C4282C24452FE58C2CFBE3562FC4",
+  "generation_receipt": "step-v2.json",
+  "recipe": "../../../tokenhub-step-v2.json",
+  "metadata": {
+    "width": 1080,
+    "height": 1916,
+    "fps": 24,
+    "duration": 5.041667,
+    "bytes": 4280116,
+    "codec": "h264",
+    "audio": false
+  },
+  "review": {
+    "method": "contact_sheet_and_focused_frames; not_continuous_playback",
+    "uniform_samples": {
+      "every_seconds": 0.5,
+      "sheet": "step-v2-contact.jpg"
+    },
+    "focused_motion": {
+      "start_seconds": 1.25,
+      "duration_seconds": 1.5,
+      "fps": 6,
+      "sheet": "step-v2-motion.jpg"
+    },
+    "focused_landing": {
+      "seconds": 3.5,
+      "file": "step-v2-land.png"
+    }
+  },
+  "observations": [
+    "后脚抬跟与离地、向右摆动、落地及停稳均可见，双鞋留在画内。",
+    "近脚与地面位置基本稳定，未见明显额外脚、白鞋底或人体叠化。",
+    "局部针织组织与裤褶有生成变化；未作精确生物力学验收。"
+  ],
+  "comparison": "上一段step落点出画；本段加宽构图并给定落地终帧后，落地保持可见。宽构图与终帧同时改变，不能单独归因某一个因素。",
+  "edit": {
+    "source_start_seconds": 0.5,
+    "duration_seconds": 3.5,
+    "playback_rate": 1
+  },
+  "paid_submissions_this_iteration": 1,
+  "automatic_paid_retries": 0,
+  "estimated_cost_cny": 4,
+  "usage_total_tokens": 400000,
+  "actual_bill_verified": false,
+  "review_correction": {
+    "date": "2026-10-10",
+    "reason": "负责人指出迈步终帧参考存在明显问题并质疑成本；撤回此前取样视觉通过结论。对照A025原件，生成鞋的波浪针织组织、鞋口与前掌轮廓存在差异，产品一致性未充分验收；单帧不足以确认左右脚或步态错误。",
+    "paid_new_jobs_this_review": 0,
+    "reference": "public/dynamic-step-wide-end-v2.png",
+    "technical_results_retained": true
+  }
+}

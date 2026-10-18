@@ -1,0 +1,42 @@
+{
+  "operation": "create",
+  "category_id": 202248402,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\25017准备\\经营任务包.md",
+    "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\25017准备\\图片本地验收.json",
+    "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\负责人分类事实确认.json"
+  ],
+  "current_schema": "../男款雪地靴Schema.xml",
+  "current_schema_sha256": "f93a15f7bbefede9f5081b2db593ba73c62ca940ddc6fabf58d3c7688348ea3d",
+  "schema_request_id": "0bbb3b2417914626617365506",
+  "schema_acquired_at": "2026-10-08T12:31:03.230069+00:00",
+  "payload_xml": "完整提交.xml",
+  "field_ids": [
+    "icbuCatProp",
+    "productTitle",
+    "textDesc",
+    "companyDesc",
+    "scImages",
+    "detailImage",
+    "companyImage",
+    "companyFaqDesc",
+    "catId",
+    "minOrderQuantity",
+    "pkgWeight",
+    "productDescType",
+    "priceUnit",
+    "saleType",
+    "scPrice",
+    "logisticsProperty",
+    "pkgMeasure",
+    "shippingTemplate",
+    "ladderPrice",
+    "saleProp",
+    "sku"
+  ],
+  "dependency_ids": [],
+  "expected_model": "BQ-LQ25017",
+  "differentiation_review": "发布前差异化审查.json",
+  "differentiation_review_sha256": "9e622ff2e24717f836d05ed7bc7bae404508152bf288a0c49dee0b9e724afb21"
+}

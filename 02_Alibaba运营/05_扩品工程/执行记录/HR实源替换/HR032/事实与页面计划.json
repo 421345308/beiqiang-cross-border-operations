@@ -1,0 +1,424 @@
+{
+  "candidate": "shnx_2541546",
+  "source_artno": "CH33",
+  "supplier": "四海鞋业",
+  "source_url": "https://shnx.sooxie.com/detail/2541546",
+  "source_price_cny": 38,
+  "source_color_labels": [
+    "黑色",
+    "绿色"
+  ],
+  "colors": [
+    "Black",
+    "Green"
+  ],
+  "sizes": [
+    39,
+    40,
+    41,
+    42,
+    43,
+    44
+  ],
+  "upper": "Synthetic Leather + Mesh",
+  "outsole": "Other",
+  "closure": "Lace-up",
+  "target_ids": {
+    "A": "1601943665138",
+    "B": "1601943539818"
+  },
+  "not_returned_ids": [
+    "1601943670111"
+  ],
+  "local_intent_candidates": [
+    "网面拼片系带休闲鞋"
+  ],
+  "materials_evidence": [
+    "Source05 explicitlynames合成革+网布 upper: recordSyntheticLeather andMesh as two actual upper components, no genuineleather. Genericlining/solewording not chemicalcomponents:Other.",
+    "SpecificbodyCH33/CNY38/BlackGreen/EU39-44 current; footlength table06 not adopted. Actualshoe markersCVRYLOR/star retained, no recognisedglobalbrand wording orunbranded promise.",
+    "Captured22of23current productframes; lastpublic CDN image returnedHTTP403. Only downloaded reviewable originals used, originalpage and partialscope retained; no network bypass. 22frames provide the full needed selection, structure and wear views.",
+    "Source11 shows a partial forefootunderside; do not describe it as a full-bottom view or tested traction. Source Chinesecomfort/grip/wear promises not adopted.",
+    "Current201334413Upper Material is singleCheck withexplicitcustom-input tipRule and50-character capacity. Record one exact composite custom label Synthetic Leather + Mesh, supported bysource05, retaining both actual components without guessedPU or genuineleather."
+  ],
+  "dedup": "CH33/sameURL not adopted. Compared726C and1936 actualgalleries: CH33 has large oval meshwindows, a broad wrapfront bumper and polygon-segmented darksole, distinct from726C narrower lacepanel and ribbedsidewall and1936 zip-decorated opaqueupper. Not a recolour-onlyduplicate.",
+  "do_not_claim": [
+    "physical stock",
+    "tested slip resistance",
+    "medical comfort",
+    "unverified midsole material"
+  ],
+  "custom": [
+    "Shoe Profile",
+    "Mesh windows; synthetic overlays; lace closure; polygon sole edge"
+  ],
+  "titles": {
+    "A": "Mesh and Synthetic Leather Lace-Up Casual Sneakers with Layered Toe Overlay for Wholesale Footwear Collections",
+    "B": "Panelled Mesh Casual Shoes with Lace Closure and Segmented Sole Edge for Wholesale Shoe Assortments"
+  },
+  "keywords": [
+    "Mesh Panelled Lace Up Shoes",
+    "Synthetic Leather Casual Sneakers",
+    "Layered Toe Casual Footwear"
+  ],
+  "highlights": "Mesh and overlay upper: Large mesh windows sit between synthetic leather panels around the front and quarter of this lace-up casual shoe.\n\nLayered toe outline: A broad overlay wraps around the front and side of the rounded forefoot, creating a clearly defined toe profile.\n\nLace adjustment: The eyelet row runs along the centre opening above the tongue, allowing the lacing to be adjusted over the instep.\n\nSegmented sole edge: Polygon-shaped sections along the dark sidewall form the distinctive outsole profile; a forefoot underside close-up shows the bottom texture.\n\nTwo colour directions: Black and Green are listed in EU39-44, each with matching panel and mesh geometry.",
+  "assets_layout": {
+    "M1": {
+      "buyer_question": "What actual mesh shoe is offered?",
+      "title": null,
+      "photos": [
+        {
+          "index": 1,
+          "box": [
+            15,
+            15,
+            985,
+            985
+          ]
+        }
+      ]
+    },
+    "M2": {
+      "buyer_question": "What are the upper components?",
+      "title": "Mesh windows & overlays",
+      "subtitle": "Synthetic leather panels frame the mesh areas.",
+      "photos": [
+        {
+          "index": 8,
+          "box": [
+            45,
+            215,
+            955,
+            935
+          ],
+          "crop": [
+            0,
+            330,
+            790,
+            955
+          ]
+        }
+      ]
+    },
+    "M3": {
+      "buyer_question": "What outsole texture is visible?",
+      "title": "Forefoot underside texture",
+      "subtitle": "Partial bottom close-up of the actual shoe.",
+      "photos": [
+        {
+          "index": 11,
+          "box": [
+            45,
+            215,
+            955,
+            935
+          ],
+          "crop": [
+            0,
+            340,
+            790,
+            950
+          ]
+        }
+      ]
+    },
+    "M4": {
+      "buyer_question": "Which colour and EU size options are offered?",
+      "title": "2 colour directions",
+      "subtitle": "Same construction across the listed colour options.",
+      "photos": [
+        {
+          "index": 6,
+          "box": [
+            45,
+            230,
+            955,
+            495
+          ],
+          "crop": [
+            405,
+            330,
+            750,
+            515
+          ]
+        },
+        {
+          "index": 6,
+          "box": [
+            45,
+            570,
+            955,
+            835
+          ],
+          "crop": [
+            50,
+            330,
+            385,
+            515
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "Black",
+          "xy": [
+            45,
+            505
+          ],
+          "size": 27
+        },
+        {
+          "value": "Green",
+          "xy": [
+            45,
+            845
+          ],
+          "size": 27
+        },
+        {
+          "value": "EU 39-44",
+          "xy": [
+            45,
+            945
+          ],
+          "size": 30
+        }
+      ]
+    },
+    "M5": {
+      "buyer_question": "What is the collar and pull loop?",
+      "title": "Collar & rear pull loop",
+      "subtitle": "Mesh-like inner texture beside the rear loop.",
+      "photos": [
+        {
+          "index": 10,
+          "box": [
+            45,
+            215,
+            955,
+            935
+          ],
+          "crop": [
+            0,
+            340,
+            790,
+            965
+          ]
+        }
+      ]
+    },
+    "D1": {
+      "buyer_question": "What whole shoe profile is offered?",
+      "title": "Green side profile in wear",
+      "subtitle": "Large mesh windows and the dark segmented sidewall.",
+      "photos": [
+        {
+          "index": 13,
+          "box": [
+            45,
+            215,
+            955,
+            1085
+          ]
+        }
+      ]
+    },
+    "D2": {
+      "buyer_question": "How do the toe and lace rows look?",
+      "title": "Green front & lace profiles",
+      "subtitle": "Full front view of the actual colour option.",
+      "photos": [
+        {
+          "index": 15,
+          "box": [
+            45,
+            215,
+            955,
+            1085
+          ]
+        }
+      ]
+    },
+    "D3": {
+      "buyer_question": "What rear structure is visible?",
+      "title": "Rear collar & sole edge",
+      "subtitle": "Pull loop and the polygon sole sections.",
+      "photos": [
+        {
+          "index": 9,
+          "box": [
+            45,
+            215,
+            955,
+            1085
+          ],
+          "crop": [
+            0,
+            365,
+            790,
+            950
+          ]
+        }
+      ]
+    },
+    "D4": {
+      "buyer_question": "Which colour and EU size options are offered?",
+      "title": "2 colour directions",
+      "subtitle": "Same construction across the listed colour options.",
+      "photos": [
+        {
+          "index": 6,
+          "box": [
+            45,
+            230,
+            955,
+            565
+          ],
+          "crop": [
+            405,
+            330,
+            750,
+            515
+          ]
+        },
+        {
+          "index": 6,
+          "box": [
+            45,
+            670,
+            955,
+            1005
+          ],
+          "crop": [
+            50,
+            330,
+            385,
+            515
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "Black",
+          "xy": [
+            45,
+            575
+          ],
+          "size": 27
+        },
+        {
+          "value": "Green",
+          "xy": [
+            45,
+            1015
+          ],
+          "size": 27
+        },
+        {
+          "value": "EU 39-44",
+          "xy": [
+            45,
+            1175
+          ],
+          "size": 30
+        }
+      ]
+    },
+    "SKU_BLACK": {
+      "buyer_question": "Which colour is this SKU?",
+      "title": null,
+      "photos": [
+        {
+          "index": 22,
+          "box": [
+            25,
+            25,
+            975,
+            975
+          ]
+        }
+      ]
+    },
+    "SKU_GREEN": {
+      "buyer_question": "Which colour is this SKU?",
+      "title": null,
+      "photos": [
+        {
+          "index": 1,
+          "box": [
+            25,
+            25,
+            975,
+            975
+          ]
+        }
+      ]
+    }
+  },
+  "source_assets_root": "01_产品资产/01_原始数据包/HR032_CH33",
+  "source_date": "2026-10-14",
+  "fx_cny_per_usd": 6.6837,
+  "tiers": [
+    [
+      2,
+      "8.53"
+    ],
+    [
+      50,
+      "7.96"
+    ],
+    [
+      100,
+      "7.40"
+    ]
+  ],
+  "page_state": "FORMAL_FIELDS_SCORE_PASS",
+  "category_id": 201334413,
+  "platform_group_id": 973003809,
+  "platform_group_name": "Lace-Up Casual Shoes",
+  "company_faq_source": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/通用FAQ与公司简介.json",
+  "seasons": [
+    "All Seasons"
+  ],
+  "feature": "Fashion Trend",
+  "style": [
+    "Casual Sneakers"
+  ],
+  "lining": "Other",
+  "midsole": "Other",
+  "selection_review": {
+    "state": "REVIEWED_ADOPT",
+    "private_backend_evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/经营数据与选款.json",
+    "reason": "HR032 recent69exposures/no clicks andSeptember516exposures/6clicks/no contacts. Select the documented mesh/panel shoe withCNY38cost; preserve broadcasual athletic intent but do not recreate creamgreen oldconcept or reuse abandonedS6077 missinggallery.",
+    "cost_usd": 5.685473614913895,
+    "gross_difference_usd": [
+      2.8445,
+      2.2745,
+      1.7145
+    ],
+    "comparison_limit": "No same-model full comparable Alibaba quote verified. Three quantity tiers use50/40/30cost markup; freight, service, taxes and net profit require order costing."
+  },
+  "upper_components_evidence": [
+    "Synthetic Leather",
+    "Mesh"
+  ],
+  "source_id": "src-hr-hr032-ch33",
+  "source_evidence": [
+    "01_产品资产/01_原始数据包/HR032_CH33/source.json",
+    "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR032/素材清单.json"
+  ],
+  "procurement_capability": "CURRENT_REAL_SHOE_AND_PROCUREMENT_ENTRY_VERIFIED_NOT_ORDER_STOCK",
+  "current_models_by_id": {
+    "1601943539818": "BQ1032-B",
+    "1601943665138": "BQ1032-A"
+  },
+  "model_migration_evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/范围.json",
+  "model_numbers": {
+    "B": "BQ1032-B",
+    "A": "BQ1032-A"
+  },
+  "current_platform_category_by_id": {
+    "1601943665138": 201334413,
+    "1601943539818": 201334413
+  },
+  "category_scope": "category_id保留初始改造默认；当前平台叶子按current_platform_category_by_id逐ID读取，不把同源链接不同平台分类混成不同实鞋。"
+}

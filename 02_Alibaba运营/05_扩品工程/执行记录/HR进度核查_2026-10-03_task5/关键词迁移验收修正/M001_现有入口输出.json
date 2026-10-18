@@ -1,0 +1,62 @@
+{
+  "status": "unverified",
+  "field": "productKeywords",
+  "field_evidence": [],
+  "content_acceptance_evidence": [
+    {
+      "product_id": "1601970169467",
+      "encrypted_product_id": "AAGpjmk4AOWGex-cDVm8WuGY",
+      "category_id": "201153804",
+      "detail_type": "4",
+      "editor_observation_id": "M001_notice_sha256:677f40a5ebf291ff611afa9f94ce5d4e69c0d4c88ac50e96ef45a15b7d9932a5",
+      "observed_at": "2026-10-03T16:31:20.9945178Z",
+      "editor_url": "https://post.alibaba.com/product/publish.htm?itemId=1601970169467&from=common&catId=201153804",
+      "notice": "【副标题和关键词】已经合并升级为新版商品详描的【商品卖点】了！合并后可聚焦在商品卖点表达更多核心卖点，提升商品转化率，",
+      "level": "ui_schema_formal_public_verified",
+      "content_status": "CONTENT_COMPLETE",
+      "sources": [
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/HR进度核查_2026-10-03_task5/关键词迁移验收修正/M001_notice.png",
+          "kind": "ui_notice",
+          "sha256": "677f40a5ebf291ff611afa9f94ce5d4e69c0d4c88ac50e96ef45a15b7d9932a5"
+        },
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/HR进度核查_2026-10-03_task5/关键词迁移验收修正/M001_selling_points.png",
+          "kind": "ui_selling_points",
+          "sha256": "1609fdabb9bfd2293364aba10f1af30134fa85accf2d07c1d9e52025f9245be8"
+        },
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/HR进度核查_2026-10-03_task5/关键词迁移验收修正/M001_formal_get.json",
+          "kind": "formal_get",
+          "sha256": "cbce50bfa87a6fad1846f5b50f8823bc4f63e2a7bdf0c3da9259bd5f004708be"
+        },
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/HR进度核查_2026-10-03_task5/关键词迁移验收修正/M001_render.xml",
+          "kind": "render",
+          "sha256": "c7ba0fdd5734d200fbc2e2c94237b8bd10cdbcd89af5de1526821b63a12e8abf"
+        },
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/HR进度核查_2026-10-03_task5/关键词迁移验收修正/M001_public_summary.json",
+          "kind": "public_summary",
+          "sha256": "860b9c46e9e05ece5335fdd3fc3ae033fe0b119fdb92e3585ada38390aec39ae"
+        },
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/HR进度核查_2026-10-03_task5/关键词迁移验收修正/M001_ui_notice_metadata.json",
+          "kind": "ui_notice_metadata",
+          "sha256": "dcff39d338e3a812f0ae1de113c6a32f20899eba854b79e641b1d9a22ec4596c"
+        }
+      ],
+      "limits": "Observed current normal-edit behavior; no platform build number claimed; same-day acceptance snapshot only; old keywords remain empty, no write performed.",
+      "ui_verified_summary_sha256": "20bb20044a812197ad2215d152d959f58b1b8222e9f315b66dde26f3ad44ca7c"
+    }
+  ],
+  "content_next_step": "evaluate_versioned_content_with_current_reads",
+  "operation": "update",
+  "method": "alibaba.icbu.product.schema.update",
+  "detail_type": "4",
+  "category_id": "201153804",
+  "implementation": null,
+  "evidence": [],
+  "next_step": "fetch_current_schema_and_validate_target",
+  "limits": "Historical submission only; no global category support, current permission, source truth, review approval or public-page acceptance inferred."
+}

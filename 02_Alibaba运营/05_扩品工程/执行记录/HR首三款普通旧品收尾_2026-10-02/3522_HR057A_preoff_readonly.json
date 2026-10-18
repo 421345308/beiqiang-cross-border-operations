@@ -1,0 +1,97 @@
+{
+  "candidate": "3522",
+  "old_listing": "HR057-A",
+  "old_product_id": "1601943768215",
+  "new_product_id": "1601969920294",
+  "observed_at_utc": "2026-10-02T17:09:28.328573+00:00",
+  "request_id": "0b51802d17909609731485623",
+  "read_status": "FOUND",
+  "formal_product": {
+    "subject": "Men's Shoes Model HR057-A",
+    "status": "approved",
+    "display": "Y",
+    "gmt_create": "2026-09-06 15:36:22",
+    "gmt_modified": "2026-09-25 02:31:20",
+    "category_id": 201334413,
+    "pc_detail_url": "https://www.alibaba.com/product-detail/Men-s-Shoes-Model-HR057-A_1601943768215.html"
+  },
+  "formal_model": "HR057-A",
+  "classification": {
+    "listing_id": "HR057-A",
+    "product_id": "1601943768215",
+    "family": "HR057",
+    "variant": "A",
+    "growth_tier": "普通品",
+    "scope": "普通品候选",
+    "quality_score": "",
+    "observed_at_utc": "2026-10-02 00:48:31",
+    "page": "2",
+    "remarks": "",
+    "source_tab": "普通品候选",
+    "source_url": "https://hz-productposting.alibaba.com/product_operate/product_growth.htm",
+    "library_file_id": "libfile_aefe2a71cedc8191aeddbdb20d21283c",
+    "candidate_only": "True"
+  },
+  "classification_source": {
+    "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\266_API完整新建_2026-10-02\\HR_201_growth_verified_register_2026-10-02.csv",
+    "sha256": "d6268c7ff233defb00e07295cf549b7e088b093f2b99ab9d8792d62ad384a465"
+  },
+  "order_linkage": {
+    "existing_11_snapshot_exact_encrypted_id_matches": [],
+    "query_scope": {
+      "params": {
+        "param_trade_ecology_order_list_query": {
+          "role": "seller",
+          "page_size": 100,
+          "start_page": 0,
+          "create_date_start": {
+            "date_str": "2026-08-01 00:00:00"
+          },
+          "create_date_end": {
+            "date_str": "2026-10-03 23:59:59"
+          }
+        }
+      },
+      "request_id": "212c41d317909582039372885",
+      "observed_at_utc": "2026-10-02T16:23:19.441505+00:00",
+      "order_ids": [
+        "316443427501020864",
+        "316409659501025320",
+        "316674243001020864",
+        "316340343501027603",
+        "316391946501022391",
+        "315414351001024781",
+        "314681283501023089",
+        "315357850501025643",
+        "315425114001024205",
+        "314010907501027934",
+        "28357841001035316"
+      ],
+      "total_count": 11,
+      "same_visible_order_ids_as_details": true,
+      "query_complete": true,
+      "new_visible_order_ids": []
+    },
+    "identity_mapping": {
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\3522_API完整新建_2026-10-02\\live_catalog.json",
+      "sha256": "1490739ddbd6a97dd9e52863abc4fe4bcd87564e7954c78021d2abc56374c56f",
+      "numeric_id": 1601943768215,
+      "encrypted_api_product_id": "AAEgjmk4AOWGex-cDVm7zAt0"
+    },
+    "scope_limit": "现有同日有限日期11单快照；不是终身无订单结论"
+  },
+  "owner_scope": {
+    "hits": [
+      "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\经营任务包_生产manifest工程交接_2026-10-02.json",
+      "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\3522_API完整新建_2026-10-02\\core_acceptance_and_keyword_special_handoff.json",
+      "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\3522_API完整新建_2026-10-02\\handoff_stop_condition.json",
+      "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\3522_API完整新建_2026-10-02\\经营任务包.md",
+      "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\HR系列真实货源改造_2026-09-21\\HR持续替换目标与货源队列_2026-10-02.md",
+      "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\HR系列真实货源改造_2026-09-21\\HR普通品一对一待替换映射_2026-10-02.json"
+    ],
+    "scope": "现有执行记录与HR目录业务命名文件2层，命中原任务包/本轮映射不当其他owner冲突，父任务路由优先"
+  },
+  "inquiry_linkage": "UNKNOWN",
+  "promotion_rights": "UNKNOWN",
+  "platform_write_count": 0
+}

@@ -1,0 +1,46 @@
+{
+  "product_id": 1601969872083,
+  "reported_at_utc": "2026-10-02T12:29:59.485016+00:00",
+  "verification_source": "Parent task cloud browser acceptance report, current round",
+  "source_parent_thread": "01a0f9fb-9712-72ef-a418-073ce2a59024",
+  "source_executor": "/root/verify_936_and_k858",
+  "local_browser_or_screenshot_evidence": false,
+  "public_acceptance": "PASS_PARENT_CLOUD_BROWSER_REPORTED",
+  "confirmed": {
+    "model": "HR051-A",
+    "main_images": 6,
+    "product_detail_images": 4,
+    "company_images": 5,
+    "FAQ": 6,
+    "images_clear_and_no_price_labels": true,
+    "colors": [
+      "Black",
+      "Sand"
+    ],
+    "size_labels": [
+      "38",
+      "39",
+      "40",
+      "41",
+      "42",
+      "43",
+      "44"
+    ],
+    "actual_selectable_combinations": 14,
+    "thumbnail_binding_matches": true,
+    "MOQ": 2,
+    "USD_tier_prices_correct": true,
+    "inquiry_click_opens_buyer_login": true
+  },
+  "not_performed": [
+    "buyer_login",
+    "inquiry_send",
+    "physical_mobile_device_test",
+    "quality_score_check_in_browser"
+  ],
+  "local_HTTP_history": "CAPTCHA observations retained; no longer imply whole-task public acceptance blocked",
+  "inventory_write_performed": false,
+  "inventory_decision": "WAIT_PARENT_USER_REPLY",
+  "operational_completion": false,
+  "remaining": "Latest actual quality3.90 below5.0; inventory decision pending"
+}

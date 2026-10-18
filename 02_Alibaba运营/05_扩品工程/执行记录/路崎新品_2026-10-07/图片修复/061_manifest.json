@@ -1,0 +1,76 @@
+{
+  "operation": "update",
+  "product_id": "1601972965417",
+  "category_id": 201334413,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "素材清单.json",
+    "图片上传账本.json"
+  ],
+  "current_schema": "061_current_schema.xml",
+  "current_schema_sha256": "c980cec8772d6658ea0934607fd2676b5c9469ed721001d53d0b1d6cce9c90f8",
+  "schema_request_id": "0bab02fc17914236787636205",
+  "schema_acquired_at": "2026-10-08T01:41:21.648523+00:00",
+  "payload_xml": "061_payload.xml",
+  "field_ids": [
+    "scImages",
+    "detailImage"
+  ],
+  "dependency_ids": [],
+  "intended_main": [
+    {
+      "url": "https://sc04.alicdn.com/kf/H3c3511b9ef504e799ec5d9fe4f3e2203d.jpg",
+      "file_id": "0"
+    },
+    {
+      "url": "https://sc04.alicdn.com/kf/H780c65a24c8a41bfb773ce65c4398664Y.jpg",
+      "file_id": "0"
+    },
+    {
+      "url": "https://sc04.alicdn.com/kf/Hd3dafc3d048849c8a36ce39c34d7a6aco.jpg",
+      "file_id": "0"
+    },
+    {
+      "url": "https://sc04.alicdn.com/kf/H19f206ab13a54846b9f7dfe75ec39696L.jpg",
+      "file_id": "0"
+    },
+    {
+      "url": "https://sc04.alicdn.com/kf/H48e2f05bf9db4927b8245c6f11bc45bdU.jpg",
+      "file_id": "0"
+    },
+    {
+      "name": "F",
+      "sha256": "778cae3a27b67c2197cf651dea936e41fbae1e9ddedeaaae0d0a769ac1d30b06",
+      "status": "VERIFIED",
+      "attempted_at": "2026-10-08T01:37:45.583128+00:00",
+      "url": "https://sc04.alicdn.com/kf/S6c8cb1d46d8c4b018cf07f5cab50c1adi/286385890/S6c8cb1d46d8c4b018cf07f5cab50c1adi.png",
+      "file_id": "30149993323",
+      "request_id": null
+    }
+  ],
+  "intended_details": [
+    {
+      "url": "https://sc04.alicdn.com/kf/H244c3b7deadb4f71b020c15935968fb8f.png",
+      "file_id": "0"
+    },
+    {
+      "name": "061_D2",
+      "sha256": "daadff03389facb8e3621450b082382eea792376822e961ee9150c94bf5022de",
+      "status": "VERIFIED",
+      "attempted_at": "2026-10-08T01:37:53.285048+00:00",
+      "url": "https://sc04.alicdn.com/kf/H76c57305a2cc42339e2cb55eb6608c12z/286385890/H76c57305a2cc42339e2cb55eb6608c12z.jpg",
+      "file_id": "33753564544",
+      "request_id": null
+    },
+    {
+      "url": "https://sc04.alicdn.com/kf/He8fb75003338458492625df1bbab78f0W.png",
+      "file_id": "0"
+    },
+    {
+      "url": "https://sc04.alicdn.com/kf/Hd9b867ae328e44f0833b558f4e444abfu.png",
+      "file_id": "0"
+    }
+  ],
+  "cross_group_whole_image_overlap": 0,
+  "main_factory_role": "company production/checking context only"
+}

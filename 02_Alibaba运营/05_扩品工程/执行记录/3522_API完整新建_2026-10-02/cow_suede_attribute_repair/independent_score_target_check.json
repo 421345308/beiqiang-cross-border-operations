@@ -1,0 +1,25 @@
+{
+  "verdict": "PASS_CORRECT_SCORE_TARGET",
+  "reviewer": "review_9968",
+  "product_id": "1601969920294",
+  "encrypted_id_consistent_across": [
+    "formal_encrypt.secret_id",
+    "formal_get.product.product_id",
+    "formal_score.params.product_id"
+  ],
+  "formal_status": "approved/Y",
+  "formal_model": "BQ-L3522",
+  "formal_upper": "Cow suede",
+  "SKU_count": 24,
+  "render_nonempty": true,
+  "render_upper_inputValue": "Cow suede",
+  "render_request_id": "0bbb637a17909574026702109",
+  "score_observed_at": "2026-10-02T16:11:57+00:00",
+  "actual_score": 3.9,
+  "score_request_id": "2105584317909575217566585",
+  "only_active_problem": "imageText",
+  "diagnostic_references_old_material": "Genuine Leather",
+  "inventory_problem": false,
+  "limits": "Target is proven consistent and material persisted. Whether score recomputed, its caching/asynchronous cause and reaching5.00 remain unproven.",
+  "review_recorded_at": "2026-10-02T16:17:54.299462+00:00"
+}

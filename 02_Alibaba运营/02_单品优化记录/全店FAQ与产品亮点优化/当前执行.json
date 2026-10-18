@@ -1,0 +1,71 @@
+{
+  "observed_at": "2026-10-12T02:20:52.008056+00:00",
+  "current_catalog_ids": 455,
+  "authored_links": 296,
+  "real_shoe_write_scope": 290,
+  "source_pending_links": 159,
+  "protected_source_ids": [
+    "1601825074604"
+  ],
+  "offline_copy_only_ids": [
+    "1601969526580",
+    "1601969707634",
+    "1601969810495",
+    "1601969860254",
+    "1601969872083"
+  ],
+  "owner_scope": "先验收实款，159条单列待修",
+  "current_revision_positive_receipts": 290,
+  "ever_submitted_real_links": 290,
+  "latest_verification": {
+    "FORMAL_PASS": 282,
+    "MISMATCH_DIAGNOSE_NO_REPLAY": 8
+  },
+  "target_formal_copy_content_pass": 290,
+  "faq_pair_content_preserved_but_order_changed": 81,
+  "public_semantic_pass_count": 9,
+  "public_pending_count": 281,
+  "public_pass_ids": [
+    "1601943305914",
+    "1601943419438",
+    "1601943555428",
+    "1601943561380",
+    "1601943583746",
+    "1601943607120",
+    "1601943650395",
+    "1601943670292",
+    "1601976084873"
+  ],
+  "current_exceptions": [],
+  "non_target_difference_evidence": [
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601939705262/revisions/0001/non_target_difference.json",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601943321794/revisions/0001/non_target_difference.json",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601943474137/revisions/0001/non_target_difference.json",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601943493004/revisions/0001/non_target_difference.json",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601943514625/revisions/0001/non_target_difference.json",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601943523535/revisions/0001/non_target_difference.json",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601943535517/revisions/0001/non_target_difference.json",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601943305914/non_target_difference.json",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601943419438/non_target_difference.json",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601943555428/non_target_difference.json",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601943561380/non_target_difference.json",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601943583746/non_target_difference.json",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601943607120/non_target_difference.json",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601943650395/non_target_difference.json",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601943670292/non_target_difference.json"
+  ],
+  "factory_images_uploaded": true,
+  "factory_bank_image_count": 5,
+  "factory_images_bound": false,
+  "status": "OWNER_ACCEPTED_REAL_COPY_KEYWORD_MIGRATION_RESOLVED_FACTORY_API_REPLACEMENT_IN_PROGRESS",
+  "scope": "Product-specific highlights and FAQ; factory replacement follows verified copy for its exact eligible IDs.",
+  "keyword_difference_resolution": "关键词差异处理.json",
+  "keyword_differences_resolved_count": 8,
+  "legacy_keyword_writes_this_resolution": 0,
+  "current_version_public_copy_verified_count": 8,
+  "historical_strict_verification": {
+    "FORMAL_PASS": 282,
+    "MISMATCH_DIAGNOSE_NO_REPLAY": 8
+  },
+  "factory_replacement_scope_count": 449
+}

@@ -1,0 +1,59 @@
+{
+  "observed_at_utc": "2026-10-03T07:03:37.887764+00:00",
+  "rows": [
+    {
+      "product_id": "10000047166193",
+      "model": "BQ042 / 206",
+      "formal_before_status": "approved",
+      "formal_before_display": "Y",
+      "FAQ_before": 0,
+      "company_summary_exists": true,
+      "SKU_count": 33,
+      "listing_MOQ_observed": "2",
+      "FAQ_prepared": 8,
+      "current_schema_read_verified": true,
+      "payload_file": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\single_agent_resume_2310\\low_score_repair_20261003\\batch1_FAQ\\10000047166193\\reviewed_payload.xml",
+      "write_state": "NOT_SENT_AUTO_REVIEW_REJECTED",
+      "actual_score_snapshot": 4.9,
+      "new_score_after_edit": null
+    },
+    {
+      "product_id": "10000047175212",
+      "model": "BQ043 / 8008",
+      "formal_before_status": "approved",
+      "formal_before_display": "Y",
+      "FAQ_before": 0,
+      "company_summary_exists": true,
+      "SKU_count": 44,
+      "listing_MOQ_observed": "2",
+      "FAQ_prepared": 8,
+      "current_schema_read_verified": false,
+      "payload_file": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\single_agent_resume_2310\\low_score_repair_20261003\\batch1_FAQ\\10000047175212\\older_schema_REVIEW_ONLY_NOT_READY.xml",
+      "write_state": "NOT_SENT_AUTO_REVIEW_REJECTED",
+      "actual_score_snapshot": 4.9,
+      "new_score_after_edit": null
+    },
+    {
+      "product_id": "10000047187673",
+      "model": "BQ046 / A155",
+      "formal_before_status": "approved",
+      "formal_before_display": "Y",
+      "FAQ_before": 0,
+      "company_summary_exists": true,
+      "SKU_count": 33,
+      "listing_MOQ_observed": "2",
+      "FAQ_prepared": 8,
+      "current_schema_read_verified": true,
+      "payload_file": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\single_agent_resume_2310\\low_score_repair_20261003\\batch1_FAQ\\10000047187673\\reviewed_payload.xml",
+      "write_state": "NOT_SENT_AUTO_REVIEW_REJECTED",
+      "actual_score_snapshot": 4.9,
+      "new_score_after_edit": null
+    }
+  ],
+  "external_write_calls": 0,
+  "auto_review_rejection": {
+    "action": "Three live Alibaba FAQ mutations",
+    "reason": "Trusted user messages authorize other specific product actions; claimed parent authorization for these FAQ mutations was considered untrusted. Do not bypass rejection."
+  },
+  "required_before_write": "Explicit trusted user authorization for exact three FAQ edits; BQ043 current Schema must also be obtained read-only. No new framework or whole-shop scan."
+}

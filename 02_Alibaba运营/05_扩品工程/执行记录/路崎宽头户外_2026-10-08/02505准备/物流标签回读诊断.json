@@ -1,0 +1,16 @@
+{
+  "at": "2026-10-15T06:56:19.518259+00:00",
+  "product_id": "1601980799940",
+  "state": "CURRENT_RENDER_SIMPLIFIED_SELECTED_TRADITIONAL_OPTION_LABEL",
+  "expected_value": "general_cargo_0",
+  "actual_value": "general_cargo_0",
+  "actual_attributes": {
+    "valid": "true",
+    "displayName": "普货"
+  },
+  "current_option_label": "普貨",
+  "current_schema_sha256": "5aed3b6f01aad97484f2366047bdf74cc64c0d1393065970d8001e77ec64fd7a",
+  "formal_render_sha256": "2c8645cde62dddef63f52fcfca14bcbab54dc1012b1ea95b24b28a190bbb463b",
+  "prepared_sha256": "a5b0077b591d851ed5e7085a6da9b927163b71695b6d861dda843b4cff169a12",
+  "scope": "ExactordinarygoodsIDandvalidtrue; Simplified普货 selectedlabel andTraditional普貨 optionlabel aretheonlyobserveddifference. Bothordinarygoods. Fullsnapshotomitsdescriptivelabelsbutaddsvalidtrue. No missingmetadatafallback, no fieldmutation or arbitrarygoodsclassnormalization; otherchecks unchanged."
+}

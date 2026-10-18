@@ -1,0 +1,191 @@
+{
+  "scope": "Read-only actual-served main6 + single-colour2 visual review; not public acceptance or approval confirmation",
+  "visual_pass_count": 8,
+  "assets": [
+    {
+      "slot": "M1",
+      "actual_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-4\\hr_control\\936_publish\\actual_main_readback\\M1.png",
+      "expected_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-2\\HR_other_candidates_2026-10-02\\936_english_content\\export_buyer_v2\\M1_buyer.png",
+      "actual_sha256": "f6cb6aaef098e82fbf851128df2849a67470b0aede1e87faac944f2a0d8d214b",
+      "expected_sha256": "efa1929a18b3c28de3b0cc24cc6921410d3f340e0398bac7357f2c8867b15633",
+      "dimensions": [
+        1000,
+        1000
+      ],
+      "same_dimensions": true,
+      "pixel_exact": false,
+      "rgb_mean_absolute_difference_0_255": [
+        0.691028,
+        0.548008,
+        0.725833
+      ],
+      "overall_mean_absolute_difference": 0.6549563333333334,
+      "visual_verdict": "PASS_VISUAL_IDENTITY_ORDER_COPY",
+      "visual_observation": "Same model, colour, geometry, background/photo, text and intended role; no swapped image or layout change seen."
+    },
+    {
+      "slot": "M2",
+      "actual_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-4\\hr_control\\936_publish\\actual_main_readback\\M2.png",
+      "expected_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-2\\HR_other_candidates_2026-10-02\\936_english_content\\export_buyer_v2\\M2_buyer.png",
+      "actual_sha256": "151b31a34355ef28b6fe521deafad1eacdb7891a95a025963fb237dd3b3b3f11",
+      "expected_sha256": "1b9a57f61147a2e71311d948f5df9186c3c1798d19ba6a46cb9f3b9c6abfe6e6",
+      "dimensions": [
+        1000,
+        1000
+      ],
+      "same_dimensions": true,
+      "pixel_exact": false,
+      "rgb_mean_absolute_difference_0_255": [
+        0.452629,
+        0.331546,
+        0.514788
+      ],
+      "overall_mean_absolute_difference": 0.4329876666666667,
+      "visual_verdict": "PASS_VISUAL_IDENTITY_ORDER_COPY",
+      "visual_observation": "Same model, colour, geometry, background/photo, text and intended role; no swapped image or layout change seen."
+    },
+    {
+      "slot": "M3",
+      "actual_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-4\\hr_control\\936_publish\\actual_main_readback\\M3.png",
+      "expected_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-2\\HR_other_candidates_2026-10-02\\936_english_content\\export_buyer_v2\\M3_buyer.png",
+      "actual_sha256": "825531a6b5d5160d8c33ac28de9eed583f4bf624af4feda9f5f60b28f74849bb",
+      "expected_sha256": "388fb2da419f50257e7b6ec5902548cac2a432964d0dd81fc94de8cdca92b137",
+      "dimensions": [
+        1000,
+        1000
+      ],
+      "same_dimensions": true,
+      "pixel_exact": false,
+      "rgb_mean_absolute_difference_0_255": [
+        1.479542,
+        1.196669,
+        1.75581
+      ],
+      "overall_mean_absolute_difference": 1.4773403333333333,
+      "visual_verdict": "PASS_VISUAL_IDENTITY_ORDER_COPY",
+      "visual_observation": "Same model, colour, geometry, background/photo, text and intended role; no swapped image or layout change seen."
+    },
+    {
+      "slot": "M4",
+      "actual_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-4\\hr_control\\936_publish\\actual_main_readback\\M4.png",
+      "expected_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-2\\HR_other_candidates_2026-10-02\\936_english_content\\export_buyer_v2\\M4_buyer.png",
+      "actual_sha256": "d601dd2c88c39c3dc63650aea5d8599d143a8030b6b8938d838d119a7188cafc",
+      "expected_sha256": "52a058ba8df82870bcd01b7a4a90632190e0b8521682b1d4b54ccb9b2b49c75e",
+      "dimensions": [
+        1000,
+        1000
+      ],
+      "same_dimensions": true,
+      "pixel_exact": false,
+      "rgb_mean_absolute_difference_0_255": [
+        1.380804,
+        1.01471,
+        1.83735
+      ],
+      "overall_mean_absolute_difference": 1.4109546666666668,
+      "visual_verdict": "PASS_VISUAL_IDENTITY_ORDER_COPY",
+      "visual_observation": "Same model, colour, geometry, background/photo, text and intended role; no swapped image or layout change seen."
+    },
+    {
+      "slot": "M5",
+      "actual_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-4\\hr_control\\936_publish\\actual_main_readback\\M5.png",
+      "expected_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-2\\HR_other_candidates_2026-10-02\\936_english_content\\export_buyer_v2\\M5_buyer.png",
+      "actual_sha256": "45bc09e3fe9a21a1c8babfb15707fdc847ca53ed3bda4d6c28c1212953a49f86",
+      "expected_sha256": "75e4b034e8647e95f70ad6c020d6be13e5afd30fd285689425155ef58ff66a34",
+      "dimensions": [
+        1000,
+        1000
+      ],
+      "same_dimensions": true,
+      "pixel_exact": false,
+      "rgb_mean_absolute_difference_0_255": [
+        1.147101,
+        0.94893,
+        1.362426
+      ],
+      "overall_mean_absolute_difference": 1.152819,
+      "visual_verdict": "PASS_VISUAL_IDENTITY_ORDER_COPY",
+      "visual_observation": "Same model, colour, geometry, background/photo, text and intended role; no swapped image or layout change seen."
+    },
+    {
+      "slot": "M6",
+      "actual_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-4\\hr_control\\936_publish\\actual_main_readback\\M6.png",
+      "expected_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-4\\visual_execution\\936_incremental\\936_M6_buyer.png",
+      "actual_sha256": "6f363cd97b2e8bab05dd9da35a21832e7ed9de0ed34c2c0f63349689d804bd6f",
+      "expected_sha256": "d5da232e108c5f2d68742b0bdb9ca28032582acb67f7a168b7c3b3605fc81738",
+      "dimensions": [
+        1000,
+        1000
+      ],
+      "same_dimensions": true,
+      "pixel_exact": false,
+      "rgb_mean_absolute_difference_0_255": [
+        1.148449,
+        0.91048,
+        1.301389
+      ],
+      "overall_mean_absolute_difference": 1.120106,
+      "visual_verdict": "PASS_VISUAL_IDENTITY_ORDER_COPY",
+      "visual_observation": "Same model, colour, geometry, background/photo, text and intended role; no swapped image or layout change seen."
+    },
+    {
+      "slot": "Black",
+      "actual_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-4\\hr_control\\936_publish\\actual_main_readback\\Black.jpg",
+      "expected_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-2\\HR_other_candidates_2026-10-02\\niche_matches\\longqin\\detail_19.jpg",
+      "actual_sha256": "b88cf56fedb828afc393b80097309c027d518ee05218f45d408b3cdfd09f4498",
+      "expected_sha256": "94dbfd0fd1bb31e66eac2a2deb8fb1fe532da819477a84c4ca7f07b7e06900e7",
+      "dimensions": [
+        750,
+        577
+      ],
+      "same_dimensions": true,
+      "pixel_exact": false,
+      "rgb_mean_absolute_difference_0_255": [
+        0.7555886770652802,
+        0.7527579433853264,
+        0.7557758521086078
+      ],
+      "overall_mean_absolute_difference": 0.7547074908530714,
+      "visual_verdict": "PASS_VISUAL_IDENTITY_ORDER_COPY",
+      "visual_observation": "Same model, colour, geometry, background/photo, text and intended role; no swapped image or layout change seen."
+    },
+    {
+      "slot": "Sand",
+      "actual_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-4\\hr_control\\936_publish\\actual_main_readback\\Sand.jpg",
+      "expected_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-2\\HR_other_candidates_2026-10-02\\niche_matches\\longqin\\detail_13.jpg",
+      "actual_sha256": "1c42ae445733b50ad104b88067120b197dfd96b8bd8fb38a6a03f5ff136a202c",
+      "expected_sha256": "a3bd14c9a87baffab212c552c08cd06874eafbe9125981526fdb0d4a2143c554",
+      "dimensions": [
+        750,
+        639
+      ],
+      "same_dimensions": true,
+      "pixel_exact": false,
+      "rgb_mean_absolute_difference_0_255": [
+        1.9253875847678665,
+        1.6103077725612938,
+        2.280548774126239
+      ],
+      "overall_mean_absolute_difference": 1.9387480438184665,
+      "visual_verdict": "PASS_VISUAL_IDENTITY_ORDER_COPY",
+      "visual_observation": "Same model, colour, geometry, background/photo, text and intended role; no swapped image or layout change seen."
+    }
+  ],
+  "main_order": [
+    "M1",
+    "M2",
+    "M3",
+    "M4",
+    "M5",
+    "M6"
+  ],
+  "sku_colour_binding_visual": {
+    "Black": "Black actual shoe correct",
+    "Sand": "Sand actual shoe correct"
+  },
+  "M6_current_role": "SIDE & HEEL DETAILS; new current incremental image, not obsolete repeated colour/size role",
+  "interpretation": "Nonzero byte/pixel differences alone do not establish wrong-image binding. Same-size low RGB differences plus manual inspection are compatible with platform recompression/reencoding; encoding mechanism not proven. Exact pixel PASS is not claimed.",
+  "audit_state_from_parent": "new/N; PUB_BIZCHECK_PRODUCT_IN_AUDITING; request0b0b3a2717909414326625844; do not resend",
+  "backend_write": false,
+  "images_changed": false
+}

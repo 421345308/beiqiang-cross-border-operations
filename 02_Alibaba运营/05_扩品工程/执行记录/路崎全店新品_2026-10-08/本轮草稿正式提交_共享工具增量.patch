@@ -1,0 +1,40 @@
+--- a/08_工具链/01_业务脚本/国际站扩品/publish_hot_rank_hr_a_batch.py
++++ b/08_工具链/01_业务脚本/国际站扩品/publish_hot_rank_hr_a_batch.py
+@@ -538,7 +538,8 @@
+ 
+ 
+ def api_submit(client, config, listing: dict, draft: bool, update_product_id: str | None = None,
+-               formal_readback: dict | None = None) -> dict:
++               formal_readback: dict | None = None, *, publish_draft_id: str | None = None,
++               draft_readback: dict | None = None) -> dict:
+     """One write attempt; an exception never triggers another creation/update.
+ 
+     A separately collected formal snapshot may be provided for value checks.
+@@ -564,12 +565,27 @@
+         validate_create_inventory_payload(root, listing.get('inventory_input'))
+     require_differentiation_review(root, listing, operation=operation)
+     category_id = int(listing.get("category_id") or CATEGORY_ID)
++    if publish_draft_id is not None:
++        if operation != 'create' or not str(publish_draft_id).isdigit():
++            raise ValueError('draft promotion requires formal create and an explicit numeric draft ID')
++        evidence = draft_readback or {}
++        if str(evidence.get('product_id')) != str(publish_draft_id) or not evidence.get('request_id') or not evidence.get('xml'):
++            raise ValueError('draft promotion requires independent target-bound draft render evidence')
++        observed = datetime.fromisoformat(evidence['acquired_at'])
++        if observed.tzinfo is None or not 0 <= (datetime.now(timezone.utc)-observed).total_seconds() <= 86400:
++            raise ValueError('draft render evidence must be recent and timezone-aware')
++        draft_root = ET.fromstring(evidence['xml'])
++        model = draft_root.find("./field[@id='icbuCatProp']/complex-value/field[@id='p-3']/value")
++        if model is None or model.get('inputValue') != listing['model_serialization']['expected_model']:
++            raise ValueError('draft model differs from prepared formal model')
+     if update_product_id:
+         method = "alibaba.icbu.product.schema.update"
+         payload = {"cat_id": category_id, "language": "en_US", "product_id": int(update_product_id), "xml": listing["xml"]}
+     else:
+         method = "alibaba.icbu.product.schema.add.draft" if draft else "alibaba.icbu.product.schema.add"
+         payload = {"cat_id": category_id, "language": "en_US", "xml": listing["xml"]}
++        if publish_draft_id is not None:
++            payload['product_id'] = int(publish_draft_id)
+     attempted_at = datetime.now(timezone.utc).isoformat()
+     try:
+         # The server may have committed a timed-out mutation. No automatic retry.

@@ -1,0 +1,27 @@
+{
+  "operation": "update",
+  "product_id": "1601959878246",
+  "category_id": 201334413,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "copy.json",
+    "before_get.json",
+    "../../../../../01_产品资产/02_可发布素材/00_最终上传/BQ007_L0017/00_上架填写表.md",
+    "../../../../../01_产品资产/01_原始数据包/已整理_BQ007_L0017_贝强鞋业35-45批65全网限价98/L0017贝强鞋业35-45批65全网限价98/800X800主图/01.jpg",
+    "current_get.json",
+    "../../../../00_运营SOP/国际站商品全生命周期SOP.md"
+  ],
+  "current_schema": "current_schema.xml",
+  "current_schema_sha256": "cc7170ffef83113f3dd43408f50db53521b4eb24bdf30915c3d3a15d1589ded4",
+  "schema_request_id": "213c932b17917408909757801",
+  "schema_acquired_at": "2026-10-11T17:48:08.342513+00:00",
+  "payload_xml": "payload.xml",
+  "field_ids": [
+    "textDesc",
+    "companyFaqDesc"
+  ],
+  "dependency_ids": [
+    "productDescType"
+  ],
+  "observed_model": "BQ007-S5 / L0017"
+}

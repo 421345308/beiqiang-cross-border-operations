@@ -1,0 +1,26 @@
+{
+  "product_id": 1601969861694,
+  "url": "https://www.alibaba.com/product-detail/EVA-Vented-Closed-Heel-Casual-Shoes_1601969861694.html",
+  "state": "PASS",
+  "verifier": "Parent source-thread cloud public readonly independent acceptance",
+  "reported_at": "2026-10-02T15:11:53.302323+00:00",
+  "parent_report": "6 main+4 detail+5 company actual visible;3colours15combinations;6FAQ;model/materials;three USD tiers/MOQ2 correct;unknown materials Not specified;no Chinese/product price images.",
+  "counts": {
+    "main": 6,
+    "detail": 4,
+    "company": 5,
+    "colors": 3,
+    "SKU": 15,
+    "FAQ": 6
+  },
+  "public_data_checks": [
+    "Visible images",
+    "Colour-size combinations",
+    "FAQ",
+    "Model/materials",
+    "MOQ/price tiers"
+  ],
+  "company_original_v3_identity": "Proven separately by actual formalget image IDs/roles vs original v3 manifest and15download pixel comparison. Publiccloud verifier did not independently prove provenance.",
+  "task8_browser_or_login_used": false,
+  "shared_Chrome_used": false
+}

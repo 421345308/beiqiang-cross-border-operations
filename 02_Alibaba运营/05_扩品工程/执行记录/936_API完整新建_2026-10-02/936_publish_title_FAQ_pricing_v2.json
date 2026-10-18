@@ -1,0 +1,61 @@
+{
+  "document_type": "936_exact_buyer_copy_and_authorized_price_candidate",
+  "version": "936-publish-copy-2026-10-02-v2",
+  "backend_write": false,
+  "platform_writer": "Root only",
+  "internal_source_model": "936",
+  "product_id": null,
+  "HR_mapping": null,
+  "title": "Textile Lace-Up Casual Sneakers with Rubber Outsole",
+  "single_keyword_candidate": "textile lace up casual sneakers",
+  "product_summary": "Casual lace-up sneakers with a textile upper, molded decorative overlays and a rubber outsole. Black and Sand color options, listed sizes 38-44. Minimum order: 2 pairs. Send your color and size quantities and destination for order confirmation.",
+  "pricing": {
+    "authority": "Current user explicitly authorized CNY82 cost plus 50%/40%/30% by quantity; CNY112 source limit is not a blocker per current user decision",
+    "procurement_cost_CNY": 82,
+    "MOQ_pairs": 2,
+    "quantity_brackets_source": "Current project three-tier convention 2/50/100 and store MOQ2; applied under current user authorization",
+    "FX_source": "https://www.boc.cn/sourcedb/whpj/",
+    "FX_source_name": "Bank of China exchange-rate page",
+    "FX_page_publication": "2026/10/02 19:01:19 as displayed on source page",
+    "FX_raw_USD_buying_CNY_per_100USD": 669.87,
+    "FX_CNY_per_USD": 6.6987,
+    "FX_basis": "Bank buying rate follows the project's prior BOC cashless-buying-reference conversion example; reference only, not an exchange settlement guarantee",
+    "rounding": "Ceiling to USD0.01 to avoid rounding below the user-authorized CNY markup amount",
+    "tiers": [
+      {"minimum_pairs": 2, "maximum_pairs": 49, "markup": 0.50, "CNY_equivalent": 123.00, "USD_per_pair": 18.37},
+      {"minimum_pairs": 50, "maximum_pairs": 99, "markup": 0.40, "CNY_equivalent": 114.80, "USD_per_pair": 17.14},
+      {"minimum_pairs": 100, "maximum_pairs": null, "markup": 0.30, "CNY_equivalent": 106.60, "USD_per_pair": 15.92}
+    ],
+    "freight_and_order_terms": "Quoted separately; no FOB/DDP/tax/destination-delivery term added",
+    "source_cost_and_limit_are_internal_only": true
+  },
+  "FAQ": [
+    {"slot": 1, "question": "Which colors and sizes are listed?", "answer": "Black and Sand, in sizes 38-44. Send the required quantity for each color and size so availability can be confirmed for your order."},
+    {"slot": 2, "question": "What materials are confirmed?", "answer": "Textile upper, molded decorative overlays and rubber outsole. If you need additional material specifications, include them with your inquiry for confirmation."},
+    {"slot": 3, "question": "What are the minimum order and quantity prices?", "answer": "Minimum order: 2 pairs. 2-49 pairs: USD 18.37/pair; 50-99 pairs: USD 17.14/pair; 100+ pairs: USD 15.92/pair. Freight and order terms are quoted separately."},
+    {"slot": 4, "question": "Can all listed colors and sizes be supplied?", "answer": "Availability is confirmed against your requested color, size and quantity breakdown before the order is finalized. The listed options are not a guarantee of current stock for every combination."},
+    {"slot": 5, "question": "What is the dispatch lead time?", "answer": "Send your quantity and required dispatch date. Order-specific availability, packing and dispatch timing will be confirmed before the order is finalized."},
+    {"slot": 6, "question": "How can I request a quotation?", "answer": "Send your color and size quantities, total quantity, destination and packing requirements. We will confirm the order details and provide an order-specific quotation."}
+  ],
+  "assets": {
+    "reuse_existing_ten_images": true,
+    "no_image_regeneration": true,
+    "baseline": "task-2/HR_other_candidates_2026-10-02/936_english_content/export_buyer_v2 and current task-4 independently accepted incremental assets"
+  },
+  "fact_limits": [
+    "No gender inferred from size labels; root must use current correct non-safety category schema",
+    "No EU/US/foot-length conversion or actual-stock quantity claim",
+    "No specific fiber, overlay chemistry, lining, insole or midsole value supplied by this copy",
+    "No safety certification, non-slip, waterproof, cushioning, breathability, lightweight or comfort performance added",
+    "No fixed dispatch days, sample or customization ability promised",
+    "CNY112 is removed as blocking condition under current user decision; source figures stay internal",
+    "Root owns exact category/material schema and any remaining required-field decision; copy does not provide invented required values"
+  ],
+  "reference_paths": [
+    "C:/Users/spq/Desktop/贝强/02_Alibaba运营/00_运营SOP/国际站商品全生命周期SOP.md - MOQ2 and existing-price convention",
+    "C:/Users/spq/Desktop/贝强/02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR002_2618_相似实款与图库预检_2026-09-24.md - historical use of BOC cashless buying reference; current-day FX must be refreshed",
+    "C:/Users/spq/Documents/Codex/2026-10-02/task-2/HR_other_candidates_2026-10-02/936_english_content/QA_2026-10-02.md",
+    "C:/Users/spq/Documents/Codex/2026-10-02/task-2/HR_other_candidates_2026-10-02/936_english_content/export_buyer_v2/changes_and_pending.txt",
+    "C:/Users/spq/Documents/Codex/2026-10-02/task-4/supply_selection/HR供货证据矩阵与拆批建议_2026-10-02.md - facts only; older CNY112 pricing gate superseded by current user"
+  ]
+}

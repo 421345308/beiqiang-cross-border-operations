@@ -1,0 +1,16 @@
+{
+  "method": "alibaba.icbu.product.batch.update.display",
+  "ids": [
+    "1601943621884",
+    "1601943670678",
+    "1601943742273",
+    "1601943768215",
+    "1601943774082"
+  ],
+  "params": {
+    "new_display": "off",
+    "product_id_list": "AAEMjmk4AOWGex-cDVm7wdcf,AAEgjmk4AOWGex-cDVm7zoh1,AAHmjmk4AOWGex-cDVm7z6Ci,AAEgjmk4AOWGex-cDVm7zAt0,AAEmjmk4AOWGex-cDVm7zCRh"
+  },
+  "intent": "Restore exact original display=N, not a new disposition",
+  "official_reference": "https://developer.alibaba.com/docs/api.htm?apiId=44413"
+}

@@ -1,0 +1,9 @@
+{
+  "tool": "built-in image_gen",
+  "prompt": "Use case: precise-object-edit. Asset type: square Alibaba search hero, Luqi 25012 Black slip-on shoes. Input 1 is the exact edit target. Replace ONLY the asphalt roadway and yellow/pink lane markings with a clean white studio background. Preserve the entire photographed pair in its existing positions and perspective: black closed upper, twin elastic side gores, central black/white woven pull strip, heel loops, exact stitched overlays, black toe guard, grey sculpted segmented midsole, black lug outsole and the existing generic molded OUTDOOR text. Do not remove or modify physical text. Keep both toes, heels and loops complete with comfortable small margins and high shoe occupancy. Natural soft light; no halo or dramatic shadow, at most faint contact shadows under sole. No product reshaping, no new colors, no additional eyelets or laces, no sole tread reconstruction, no labels, logos, claims, badges or props.",
+  "source": "../../图片/25012/01.jpg",
+  "candidate": "25012-hero-v1.png",
+  "decision": "REJECT_PENDING_CORRECTION",
+  "reason": "Back shoe sole appears to add a molded word not clearly present in the original visible inner-side sole; retain source side markings exactly. No upload or formal image replacement made.",
+  "next_action": "Use a stronger original angle or targeted background-only iteration; verify outsole and physical text before acceptance."
+}

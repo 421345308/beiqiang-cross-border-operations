@@ -1,0 +1,59 @@
+{
+  "id": "1601939615744",
+  "family": "BQ030",
+  "model": "BQ030-O1 / A811",
+  "at": "2026-10-17T12:24:56.711007+00:00",
+  "state": "PREPARED",
+  "category_id": 201334413,
+  "old_tiers": [
+    [
+      2,
+      "9.45"
+    ],
+    [
+      50,
+      "9.15"
+    ],
+    [
+      100,
+      "9.05"
+    ]
+  ],
+  "new_tiers": [
+    [
+      2,
+      "7.48"
+    ],
+    [
+      50,
+      "7.18"
+    ],
+    [
+      100,
+      "6.73"
+    ]
+  ],
+  "cny_targets": [
+    50,
+    48,
+    45
+  ],
+  "fx": {
+    "usd_cny": "6.6863",
+    "date": "2026-10-16",
+    "source": "https://www.investing.com/currencies/usd-cny-historical-data",
+    "rounding": "nearest USD cent"
+  },
+  "fields": [
+    "scPrice",
+    "ladderPrice",
+    "productTitle"
+  ],
+  "title_unchanged": true,
+  "source_fields": "01_产品资产/02_可发布素材/00_最终上传/BQ030_A811/00_上架填写表.md",
+  "video_fields_inspected": [
+    "imageVideo",
+    "detailVideo"
+  ],
+  "payload_sha256": "96aaee39f4c44d0046021261c6a1305f2972baa8c4d678028e7463673a2e139b"
+}

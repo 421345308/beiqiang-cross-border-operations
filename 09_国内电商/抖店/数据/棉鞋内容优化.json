@@ -1,0 +1,1033 @@
+{
+  "schema_version": 1,
+  "updated": "2026-10-15",
+  "source_batch": "数据/棉鞋上品包.json",
+  "scope": "四条棉鞋C端标题与独立详情更新，现有价格库存保持",
+  "status": "CONSUMER_CONTENT_ON_SALE_AUDIT_PASSED",
+  "models": {
+    "ZX9002": {
+      "title": "秋冬加绒棉鞋男士一脚蹬针织休闲鞋大码好穿脱日常通勤",
+      "headline": [
+        "秋冬加绒",
+        "套脚轻松出门"
+      ],
+      "strap": "针织鞋面 · 套脚设计 · 深灰黑配色",
+      "accent": "#536458",
+      "closure": "套脚",
+      "sole": "EVA",
+      "bottom": "立体造型外底",
+      "bottom_copy": "起伏造型与纹路实拍，选购前看清鞋底形状。",
+      "color_names": [
+        "深灰黑加绒"
+      ],
+      "color_files": [
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9002/优化/工厂补充_双鞋.jpg"
+      ],
+      "main_files": [
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9002/优化/工厂补充_双鞋.jpg",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9002/工厂来源原图_4.jpg",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9002/工厂来源原图_3.jpg",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9002/工厂来源原图_1.jpg"
+      ],
+      "detail_photo": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9002/工厂来源原图_4.jpg",
+      "sole_photo": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9002/工厂来源原图_3.jpg",
+      "start_size": 38,
+      "end_size": 47,
+      "title_weight": 50,
+      "detail_files": [
+        {
+          "role": "01_出门场景与穿着利益",
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9002/优化/详情/01_出门场景与穿着利益.png",
+          "source": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9002/优化/详情/01_出门场景与穿着利益.svg",
+          "width": 800,
+          "height": 1220,
+          "sha256": "da2cd4d2099a48f28220d657485db910b1ae0105e6c2a5be27e95b66e254f71b",
+          "bytes": 1365042
+        },
+        {
+          "role": "02_舒适好穿结构讲解",
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9002/优化/详情/02_舒适好穿结构讲解.png",
+          "source": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9002/优化/详情/02_舒适好穿结构讲解.svg",
+          "width": 800,
+          "height": 1200,
+          "sha256": "676761570e9f0f9949c23090c8e3246d8078ff945c85a507e9371940d6ff1a76",
+          "bytes": 552568
+        },
+        {
+          "role": "03_加绒日常场景",
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9002/优化/详情/03_加绒日常场景.png",
+          "source": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9002/优化/详情/03_加绒日常场景.svg",
+          "width": 800,
+          "height": 1200,
+          "sha256": "7b915b17140eaa09dc7a9692e7374edf547317eca85628d189a727dde585f4e6",
+          "bytes": 325940
+        },
+        {
+          "role": "04_轮廓搭配与外底实拍",
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9002/优化/详情/04_轮廓搭配与外底实拍.png",
+          "source": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9002/优化/详情/04_轮廓搭配与外底实拍.svg",
+          "width": 800,
+          "height": 1150,
+          "sha256": "716f4e5da9c80fca09c214ec3f497f6404e0a42912e39889d435e56c5e0373f0",
+          "bytes": 403673
+        },
+        {
+          "role": "05_颜色规格选择",
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9002/优化/详情/05_颜色规格选择.png",
+          "source": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9002/优化/详情/05_颜色规格选择.svg",
+          "width": 800,
+          "height": 1100,
+          "sha256": "72223656527412e26db5cec89f89808ef886ab4ca35fcf3680e195aa7eb72375",
+          "bytes": 437470
+        },
+        {
+          "role": "06_商品参数",
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9002/优化/详情/06_商品参数.png",
+          "source": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9002/优化/详情/06_商品参数.svg",
+          "width": 800,
+          "height": 1100,
+          "sha256": "84bbef43d098914b0f8f52b352b980e9f3f7a305415a3b2e0cce02f48a507f6e",
+          "bytes": 77843
+        },
+        {
+          "role": "07_脚长尺码指南",
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9002/优化/详情/07_脚长尺码指南.png",
+          "source": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9002/优化/详情/07_脚长尺码指南.svg",
+          "width": 800,
+          "height": 1210,
+          "sha256": "b2d650d70f7b17f2fd838d8303c997fed8646a045f96410ffe7bb00bdfc9b170",
+          "bytes": 78148
+        },
+        {
+          "role": "08_发货与售后服务",
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9002/优化/详情/08_发货与售后服务.png",
+          "source": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9002/优化/详情/08_发货与售后服务.svg",
+          "width": 800,
+          "height": 1120,
+          "sha256": "5eca5a7528170cd5528df66e1121106ffbc265f6ffc14f437588260dcd09e320",
+          "bytes": 92632
+        }
+      ],
+      "layout_method": "原生SVG信息排版，嵌入实物照片；产品摄影不由排版程序重画",
+      "rear_feature": [
+        "后跟提环",
+        "穿鞋时可辅助提拉后跟。"
+      ],
+      "choice_copy": "深灰黑鞋面搭配黑色外底，适合偏好深色休闲搭配的选择。",
+      "benefit_headline": [
+        "赶着出门",
+        "少一道系带步骤"
+      ],
+      "benefit_subtitle": "秋冬加绒 · 套脚设计 · 日常休闲",
+      "benefit_footer": "套脚免系带，出门省事一点",
+      "style_headline": [
+        "休闲穿搭",
+        "也有自己的轮廓"
+      ],
+      "style_subtitle": "深灰黑配色 · 立体造型外底",
+      "style_caption": "同色系搭配，突出鞋底轮廓",
+      "upper_crop": [
+        70,
+        330,
+        700,
+        380
+      ],
+      "scene_photo": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9002/优化/日常穿搭场景_AI示意.png",
+      "scene_kind": "ai_styling",
+      "value_evidence": {
+        "hook": "赶着出门→少一道系带步骤",
+        "wearing_benefit": "套脚结构省去系带步骤",
+        "comfort_scope": "日常舒适从合适尺码与松紧讲起，不宣称人人合脚或久走不累",
+        "breathability_scope": "本批为加绒版；展示针织鞋面结构，不从普通版网纱参数宣称整鞋不闷汗或全天透气",
+        "warmth": "已确认加绒版本，人造短毛绒内里；无温标、厚度或测试数值",
+        "scene": "ai_styling",
+        "scene_note": "AI图仅作穿搭示意，真实结构细节仍用原图；不当测试或真实试穿证据"
+      },
+      "previous_title": "秋冬加绒棉鞋男款针织套脚休闲鞋ZX9002",
+      "before_latest_revision_title": "棉鞋男士秋冬加绒保暖一脚蹬针织休闲鞋大码38-47日常通勤ZX9002",
+      "publication": {
+        "state": "APPLIED_READBACK_AUDIT_PASSED",
+        "on_sale": true,
+        "main_images": 4,
+        "detail_screens": 8,
+        "fleece_sku_count": 10,
+        "active_sku_count": 10,
+        "fleece_colors": [
+          "深灰黑加绒"
+        ],
+        "regular_price_cny": [],
+        "fleece_price_cny": [
+          79.9
+        ],
+        "existing_prices_preserved": false,
+        "existing_stock_values_preserved": true,
+        "existing_sku_ids_preserved": true,
+        "local_visual_qa": "PASSED",
+        "published_media_content_and_color_binding": "PASSED",
+        "buyer_page_visual_qa": "H5_PREVIEW_PASSED_APP_PENDING",
+        "private_evidence": ".local/evidence/retail-family/ZX9002/verification.json",
+        "price_change_authority": "负责人后续明确71.50/72.90/74.90为券后目标；新标价仅加5元承接5元商品券，不伪称历史原价",
+        "current_price_evidence": ".local/evidence/buyer-final/ZX9002-coupon-price-verification.json"
+      },
+      "main_assets": [
+        {
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9002/优化/工厂补充_双鞋.jpg",
+          "sha256": "b2f04cc1ae6907fb1ca792c4ec9d8ad127610e177f30a5eca22f99d7399819a8",
+          "bytes": 294480
+        },
+        {
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9002/工厂来源原图_4.jpg",
+          "sha256": "ef4761c584618e759f22bfe6b3390614dfbd83c56dd6aa25c0cde00061742d9d",
+          "bytes": 396318
+        },
+        {
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9002/工厂来源原图_3.jpg",
+          "sha256": "c6760a58abcb2ded322c1bf122a30cd86804da466aa31a60c5f129a4fb6af52d",
+          "bytes": 299510
+        },
+        {
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9002/工厂来源原图_1.jpg",
+          "sha256": "4a163cea46ad255ef90a6c4030df152c3438fbc3d3c47afc92e00ee6f3304ed1",
+          "bytes": 205291
+        }
+      ],
+      "before_consumer_title": "棉鞋男士秋冬加绒保暖一脚蹬针织休闲鞋大码38-47日常通勤ZX9002",
+      "consumer_visual_qa": "PASSED",
+      "forecast_price": {
+        "original": [
+          79.9,
+          79.9
+        ],
+        "forecast_min": [
+          74.9,
+          74.9
+        ],
+        "coupon_status": "已生效5元商品券，保存后重新打开核实",
+        "checked": "2026-10-15"
+      },
+      "title_current": "秋冬加绒棉鞋男士一脚蹬针织休闲鞋大码好穿脱日常通勤",
+      "status": "APPLIED_READBACK_AUDIT_PASSED",
+      "buyer_verification": {
+        "h5_title_main_images_details_order": "PASSED",
+        "h5_media_scope": "51张主图、120屏详情逐款匹配正式发布对象及顺序",
+        "app_disabled_specs": "PENDING_PHONE_CHECK",
+        "app_coupon_redemption": "PENDING_PHONE_CHECK",
+        "private_evidence": ".local/evidence/buyer-final/ZX9002-h5-verification.json"
+      },
+      "current_coupon_pricing": {
+        "base_cny": 79.9,
+        "coupon_cny": 5,
+        "target_net_cny": 74.9,
+        "state": "ACTIVE_REOPENED_AND_OFFICIAL_FORECAST_VERIFIED",
+        "valid_until": "2026-11-14 23:59:59",
+        "auto_renew": true,
+        "private_evidence": ".local/evidence/buyer-final/ZX9002-coupon-price-verification.json"
+      }
+    },
+    "ZX2116": {
+      "title": "男士加绒棉鞋秋冬保暖系带可调松紧针织休闲鞋日常通勤",
+      "headline": [
+        "系带低帮",
+        "加绒应对秋冬"
+      ],
+      "strap": "针织鞋面 · 系带设计 · 黑白 / 全黑",
+      "accent": "#7d6753",
+      "closure": "系带",
+      "sole": "EVA",
+      "bottom": "多向纹路外底",
+      "bottom_copy": "鞋底纹路与侧墙实拍，外观细节清楚展示。",
+      "color_names": [
+        "黑白加绒",
+        "全黑加绒"
+      ],
+      "color_files": [
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX2116/优化/主图_黑白净图.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX2116/优化/主图_全黑原构图净图.png"
+      ],
+      "main_files": [
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX2116/优化/主图_黑白净图.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX2116/优化/主图_全黑原构图净图.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX2116/优化/工厂补充_黑白俯视.jpg",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX2116/优化/工厂补充_全黑俯视.jpg"
+      ],
+      "detail_photo": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX2116/优化/主图_全黑原构图净图.png",
+      "sole_photo": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX2116/优化/工厂补充_全黑俯视.jpg",
+      "start_size": 38,
+      "end_size": 47,
+      "title_weight": 50,
+      "detail_files": [
+        {
+          "role": "01_出门场景与穿着利益",
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX2116/优化/详情/01_出门场景与穿着利益.png",
+          "source": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX2116/优化/详情/01_出门场景与穿着利益.svg",
+          "width": 800,
+          "height": 1220,
+          "sha256": "a20a3c0819c49b13394281f5c61248d6993a37a8c76c4a6089fadcfd3df1bddd",
+          "bytes": 1219021
+        },
+        {
+          "role": "02_舒适好穿结构讲解",
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX2116/优化/详情/02_舒适好穿结构讲解.png",
+          "source": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX2116/优化/详情/02_舒适好穿结构讲解.svg",
+          "width": 800,
+          "height": 1200,
+          "sha256": "b961662ab436c27b82b8493bb6a3c09949c935af87c2c315f7974f171c7a66ee",
+          "bytes": 656504
+        },
+        {
+          "role": "03_加绒日常场景",
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX2116/优化/详情/03_加绒日常场景.png",
+          "source": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX2116/优化/详情/03_加绒日常场景.svg",
+          "width": 800,
+          "height": 1200,
+          "sha256": "fe1b84cc98b16a0f672dd90fc916efc69e3579a905d9b657de5b02f162346f2c",
+          "bytes": 399855
+        },
+        {
+          "role": "04_轮廓搭配与外底实拍",
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX2116/优化/详情/04_轮廓搭配与外底实拍.png",
+          "source": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX2116/优化/详情/04_轮廓搭配与外底实拍.svg",
+          "width": 800,
+          "height": 1150,
+          "sha256": "8f5b9edebf520428d48902682dbfd5f1b7ec23f06324259b3865c6a29249244b",
+          "bytes": 456098
+        },
+        {
+          "role": "05_颜色规格选择",
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX2116/优化/详情/05_颜色规格选择.png",
+          "source": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX2116/优化/详情/05_颜色规格选择.svg",
+          "width": 800,
+          "height": 1100,
+          "sha256": "b0b3dad7db2e3ea4bb57e29642828a1194dc364465e32f2ebb4c3c7b73873d4e",
+          "bytes": 400330
+        },
+        {
+          "role": "06_商品参数",
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX2116/优化/详情/06_商品参数.png",
+          "source": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX2116/优化/详情/06_商品参数.svg",
+          "width": 800,
+          "height": 1100,
+          "sha256": "8de6b6be5f0c4a6b1687011ef25065b327f8d0124a38b949df7893530e115309",
+          "bytes": 78498
+        },
+        {
+          "role": "07_脚长尺码指南",
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX2116/优化/详情/07_脚长尺码指南.png",
+          "source": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX2116/优化/详情/07_脚长尺码指南.svg",
+          "width": 800,
+          "height": 1210,
+          "sha256": "ba453cc0791fed4ea33e723ce42c9b368bb9828d9bc1e36ad862f21b4de9e938",
+          "bytes": 78182
+        },
+        {
+          "role": "08_发货与售后服务",
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX2116/优化/详情/08_发货与售后服务.png",
+          "source": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX2116/优化/详情/08_发货与售后服务.svg",
+          "width": 800,
+          "height": 1120,
+          "sha256": "7263e0350c1d7af976e359a243955a180b4450f3f9b6c4d3b0aaa8dc18f25916",
+          "bytes": 93260
+        }
+      ],
+      "layout_method": "原生SVG信息排版，嵌入实物照片；产品摄影不由排版程序重画",
+      "rear_feature": [
+        "后跟提环",
+        "穿鞋时可辅助提拉后跟。"
+      ],
+      "choice_copy": "黑白配色有明暗对比，全黑配色更低调，按日常穿搭选择。",
+      "benefit_headline": [
+        "脚背的松紧",
+        "自己调着穿"
+      ],
+      "benefit_subtitle": "秋冬加绒 · 系带可调 · 黑白 / 全黑",
+      "benefit_footer": "系带可调，按脚背掌握松紧",
+      "style_headline": [
+        "黑面白底",
+        "简单配色也有层次"
+      ],
+      "style_subtitle": "针织鞋面 · 低帮休闲外观",
+      "style_caption": "白底明暗对比，全黑低调好搭",
+      "upper_crop": [
+        65,
+        370,
+        690,
+        340
+      ],
+      "scene_photo": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX2116/优化/日常穿搭场景_AI示意.png",
+      "scene_kind": "ai_styling",
+      "value_evidence": {
+        "hook": "脚背的松紧→自己调着穿",
+        "wearing_benefit": "系带结构可调松紧，帮助顾客按脚背选择",
+        "comfort_scope": "日常舒适从合适尺码与松紧讲起，不宣称人人合脚或久走不累",
+        "breathability_scope": "本批为加绒版；展示针织鞋面结构，不从普通版网纱参数宣称整鞋不闷汗或全天透气",
+        "warmth": "已确认加绒版本，人造短毛绒内里；无温标、厚度或测试数值",
+        "scene": "ai_styling",
+        "scene_note": "AI图仅作穿搭示意，真实结构细节仍用原图；不当测试或真实试穿证据"
+      },
+      "previous_title": "秋冬加绒棉鞋男款系带针织休闲鞋ZX2116",
+      "before_latest_revision_title": "棉鞋男秋冬加绒保暖系带针织休闲鞋黑色大码38-47日常通勤ZX2116",
+      "publication": {
+        "state": "APPLIED_READBACK_AUDIT_PASSED",
+        "on_sale": true,
+        "main_images": 4,
+        "detail_screens": 8,
+        "fleece_sku_count": 20,
+        "active_sku_count": 20,
+        "fleece_colors": [
+          "黑白加绒",
+          "全黑加绒"
+        ],
+        "regular_price_cny": [],
+        "fleece_price_cny": [
+          77.9
+        ],
+        "existing_prices_preserved": false,
+        "existing_stock_values_preserved": true,
+        "existing_sku_ids_preserved": true,
+        "local_visual_qa": "PASSED",
+        "published_media_content_and_color_binding": "PASSED",
+        "buyer_page_visual_qa": "H5_PREVIEW_PASSED_APP_PENDING",
+        "private_evidence": ".local/evidence/retail-family/ZX2116/verification.json",
+        "price_change_authority": "负责人后续明确71.50/72.90/74.90为券后目标；新标价仅加5元承接5元商品券，不伪称历史原价",
+        "current_price_evidence": ".local/evidence/buyer-final/ZX2116-coupon-price-verification.json"
+      },
+      "main_assets": [
+        {
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX2116/优化/主图_黑白净图.png",
+          "sha256": "90f3e8063622807581f2bb675277d9d54dbac543c1a2edd58be2c9f653cc254d",
+          "bytes": 2163447
+        },
+        {
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX2116/优化/主图_全黑原构图净图.png",
+          "sha256": "9aa07bc421657a479eeca45f2ccac8ebd485b1c6ca109353c34f28e23cc4031a",
+          "bytes": 2162525
+        },
+        {
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX2116/优化/工厂补充_黑白俯视.jpg",
+          "sha256": "8805bdf4f1c92f4eaef947bbd7860f7a24a7639f69b4fe3f826896f0f71cd289",
+          "bytes": 267315
+        },
+        {
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX2116/优化/工厂补充_全黑俯视.jpg",
+          "sha256": "ef0d72c8ac544ab2e960b09ff3ed4a93efe52a74b56deb3ee49bebc23dc8795d",
+          "bytes": 304758
+        }
+      ],
+      "before_consumer_title": "棉鞋男秋冬加绒保暖系带针织休闲鞋黑色大码38-47日常通勤ZX2116",
+      "consumer_visual_qa": "PASSED",
+      "forecast_price": {
+        "original": [
+          77.9,
+          77.9
+        ],
+        "forecast_min": [
+          72.9,
+          72.9
+        ],
+        "coupon_status": "已生效5元商品券，保存后重新打开核实",
+        "checked": "2026-10-15"
+      },
+      "title_current": "男士加绒棉鞋秋冬保暖系带可调松紧针织休闲鞋日常通勤",
+      "status": "APPLIED_READBACK_AUDIT_PASSED",
+      "buyer_verification": {
+        "h5_title_main_images_details_order": "PASSED",
+        "h5_media_scope": "51张主图、120屏详情逐款匹配正式发布对象及顺序",
+        "app_disabled_specs": "PENDING_PHONE_CHECK",
+        "app_coupon_redemption": "PENDING_PHONE_CHECK",
+        "private_evidence": ".local/evidence/buyer-final/ZX2116-h5-verification.json"
+      },
+      "current_coupon_pricing": {
+        "base_cny": 77.9,
+        "coupon_cny": 5,
+        "target_net_cny": 72.9,
+        "state": "ACTIVE_REOPENED_AND_OFFICIAL_FORECAST_VERIFIED",
+        "valid_until": "2026-11-14 23:59:59",
+        "auto_renew": true,
+        "private_evidence": ".local/evidence/buyer-final/ZX2116-coupon-price-verification.json"
+      }
+    },
+    "ZX9507": {
+      "title": "秋冬加绒棉鞋男士套脚免系带针织休闲鞋黑杏全黑日常出门",
+      "headline": [
+        "秋冬加绒",
+        "两色随心搭配"
+      ],
+      "strap": "套脚设计 · 立体外底 · 黑杏 / 全黑",
+      "accent": "#927244",
+      "closure": "套脚",
+      "sole": "塑胶",
+      "bottom": "立体造型外底",
+      "bottom_copy": "黑杏撞色突出外底层次，全黑配色更低调。",
+      "color_names": [
+        "黑杏加绒",
+        "全黑加绒"
+      ],
+      "color_files": [
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9507/优化/主图_黑杏双鞋净图.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9507/工厂来源原图_3.jpg"
+      ],
+      "main_files": [
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9507/优化/主图_黑杏双鞋净图.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9507/工厂来源原图_4.jpg",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9507/工厂来源原图_3.jpg",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9507/工厂来源原图_6.jpg",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9507/工厂来源原图_7.jpg"
+      ],
+      "detail_photo": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9507/工厂来源原图_4.jpg",
+      "sole_photo": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9507/工厂来源原图_7.jpg",
+      "start_size": 38,
+      "end_size": 47,
+      "title_weight": 52,
+      "detail_files": [
+        {
+          "role": "01_出门场景与穿着利益",
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9507/优化/详情/01_出门场景与穿着利益.png",
+          "source": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9507/优化/详情/01_出门场景与穿着利益.svg",
+          "width": 800,
+          "height": 1220,
+          "sha256": "df7c0bca4dc497d9e28f8b361eea309bc6e0fda33ebc92a470cc17a205774379",
+          "bytes": 1257304
+        },
+        {
+          "role": "02_舒适好穿结构讲解",
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9507/优化/详情/02_舒适好穿结构讲解.png",
+          "source": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9507/优化/详情/02_舒适好穿结构讲解.svg",
+          "width": 800,
+          "height": 1200,
+          "sha256": "50e7dc6c5c9a01601c6d09063e604f6c80c35691217a7effb8345f806d2c3ba5",
+          "bytes": 649793
+        },
+        {
+          "role": "03_加绒日常场景",
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9507/优化/详情/03_加绒日常场景.png",
+          "source": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9507/优化/详情/03_加绒日常场景.svg",
+          "width": 800,
+          "height": 1200,
+          "sha256": "d775d0586f32b0f51d195c65a92572414c04de555a032b87237ad7743ef0970d",
+          "bytes": 316355
+        },
+        {
+          "role": "04_轮廓搭配与外底实拍",
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9507/优化/详情/04_轮廓搭配与外底实拍.png",
+          "source": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9507/优化/详情/04_轮廓搭配与外底实拍.svg",
+          "width": 800,
+          "height": 1150,
+          "sha256": "49297f2260b9a7148a8d97a866b1db9331b8aa200e6b57d9fc221ff44847360f",
+          "bytes": 350584
+        },
+        {
+          "role": "05_颜色规格选择",
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9507/优化/详情/05_颜色规格选择.png",
+          "source": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9507/优化/详情/05_颜色规格选择.svg",
+          "width": 800,
+          "height": 1100,
+          "sha256": "1de9c2ffa0c843473af61669ec2561e1084dfe61fd7ca2189a37ca3c31252e90",
+          "bytes": 283328
+        },
+        {
+          "role": "06_商品参数",
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9507/优化/详情/06_商品参数.png",
+          "source": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9507/优化/详情/06_商品参数.svg",
+          "width": 800,
+          "height": 1100,
+          "sha256": "fb00ef93597c433f6bbde3cfcc51dd96228449c84b8768503be96f23772bc804",
+          "bytes": 78955
+        },
+        {
+          "role": "07_脚长尺码指南",
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9507/优化/详情/07_脚长尺码指南.png",
+          "source": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9507/优化/详情/07_脚长尺码指南.svg",
+          "width": 800,
+          "height": 1210,
+          "sha256": "4578b1f735acc01f72f857a38731392cce35aa555cce1e6517d54fa0df98a82b",
+          "bytes": 77994
+        },
+        {
+          "role": "08_发货与售后服务",
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9507/优化/详情/08_发货与售后服务.png",
+          "source": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9507/优化/详情/08_发货与售后服务.svg",
+          "width": 800,
+          "height": 1120,
+          "sha256": "8943788ad4f57955ced1fba9cc4b242e2e34324ab1cef24593c4e3c1ee92106d",
+          "bytes": 92185
+        }
+      ],
+      "layout_method": "原生SVG信息排版，嵌入实物照片；产品摄影不由排版程序重画",
+      "rear_feature": [
+        "包覆后跟",
+        "封闭后跟结构，搭配低帮套脚鞋口。"
+      ],
+      "choice_copy": "黑杏撞色更显外底层次，全黑配色更低调，按日常穿搭选择。",
+      "benefit_headline": [
+        "下楼买菜散步",
+        "套上就出门"
+      ],
+      "benefit_subtitle": "秋冬加绒 · 套脚设计 · 黑杏 / 全黑",
+      "benefit_footer": "套脚省事，日常出门好搭配",
+      "style_headline": [
+        "黑杏与全黑",
+        "换个配色换种心情"
+      ],
+      "style_subtitle": "立体造型外底 · 日常休闲搭配",
+      "style_caption": "黑杏突出层次，全黑更低调",
+      "upper_crop": [
+        70,
+        330,
+        700,
+        380
+      ],
+      "scene_photo": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9507/优化/日常穿搭场景_AI示意.png",
+      "scene_kind": "ai_styling",
+      "value_evidence": {
+        "hook": "下楼买菜散步→套上就出门",
+        "wearing_benefit": "套脚结构省去系带步骤",
+        "comfort_scope": "日常舒适从合适尺码与松紧讲起，不宣称人人合脚或久走不累",
+        "breathability_scope": "本批为加绒版；展示针织鞋面结构，不从普通版网纱参数宣称整鞋不闷汗或全天透气",
+        "warmth": "已确认加绒版本，人造短毛绒内里；无温标、厚度或测试数值",
+        "scene": "ai_styling",
+        "scene_note": "AI图仅作穿搭示意，真实结构细节仍用原图；不当测试或真实试穿证据"
+      },
+      "previous_title": "秋冬加绒棉鞋男款套脚休闲鞋ZX9507",
+      "before_latest_revision_title": "男士棉鞋冬季加绒保暖套脚休闲鞋针织鞋面大码38-47出行ZX9507",
+      "publication": {
+        "state": "APPLIED_READBACK_AUDIT_PASSED",
+        "on_sale": true,
+        "main_images": 5,
+        "detail_screens": 8,
+        "fleece_sku_count": 20,
+        "active_sku_count": 20,
+        "fleece_colors": [
+          "黑杏加绒",
+          "全黑加绒"
+        ],
+        "regular_price_cny": [],
+        "fleece_price_cny": [
+          79.9
+        ],
+        "existing_prices_preserved": false,
+        "existing_stock_values_preserved": true,
+        "existing_sku_ids_preserved": true,
+        "local_visual_qa": "PASSED",
+        "published_media_content_and_color_binding": "PASSED",
+        "buyer_page_visual_qa": "H5_PREVIEW_PASSED_APP_PENDING",
+        "private_evidence": ".local/evidence/retail-family/ZX9507/verification.json",
+        "price_change_authority": "负责人后续明确71.50/72.90/74.90为券后目标；新标价仅加5元承接5元商品券，不伪称历史原价",
+        "current_price_evidence": ".local/evidence/buyer-final/ZX9507-coupon-price-verification.json"
+      },
+      "main_assets": [
+        {
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9507/优化/主图_黑杏双鞋净图.png",
+          "sha256": "6d5d1860f35dfda4901f9dffbdc5b1425138685757715e93615de83fe677f095",
+          "bytes": 2118501
+        },
+        {
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9507/工厂来源原图_4.jpg",
+          "sha256": "ee66ec520cff043c9d67759a6462159508d836e68faa62456497b73412ef6f72",
+          "bytes": 361660
+        },
+        {
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9507/工厂来源原图_3.jpg",
+          "sha256": "ad896e30d838b32b952b226bf61012a80edae077d3a1735a383463f90fd09ac0",
+          "bytes": 170954
+        },
+        {
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9507/工厂来源原图_6.jpg",
+          "sha256": "33c266a6fd6e30864bb6ffa067f19b11be83b313cc586c9a9e37f82b52aa1664",
+          "bytes": 373163
+        },
+        {
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9507/工厂来源原图_7.jpg",
+          "sha256": "1ea90dd1696484708aef7f6fb8766e0c0c8ca24f81783cd11a07e69f6adf9810",
+          "bytes": 264445
+        }
+      ],
+      "before_consumer_title": "男士棉鞋冬季加绒保暖套脚休闲鞋针织鞋面大码38-47出行ZX9507",
+      "consumer_visual_qa": "PASSED",
+      "forecast_price": {
+        "original": [
+          79.9,
+          79.9
+        ],
+        "forecast_min": [
+          74.9,
+          74.9
+        ],
+        "coupon_status": "已生效5元商品券，保存后重新打开核实",
+        "checked": "2026-10-15"
+      },
+      "title_current": "秋冬加绒棉鞋男士套脚免系带针织休闲鞋黑杏全黑日常出门",
+      "status": "APPLIED_READBACK_AUDIT_PASSED",
+      "buyer_verification": {
+        "h5_title_main_images_details_order": "PASSED",
+        "h5_media_scope": "51张主图、120屏详情逐款匹配正式发布对象及顺序",
+        "app_disabled_specs": "PENDING_PHONE_CHECK",
+        "app_coupon_redemption": "PENDING_PHONE_CHECK",
+        "private_evidence": ".local/evidence/buyer-final/ZX9507-h5-verification.json"
+      },
+      "current_coupon_pricing": {
+        "base_cny": 79.9,
+        "coupon_cny": 5,
+        "target_net_cny": 74.9,
+        "state": "ACTIVE_REOPENED_AND_OFFICIAL_FORECAST_VERIFIED",
+        "valid_until": "2026-11-14 23:59:59",
+        "auto_renew": true,
+        "private_evidence": ".local/evidence/buyer-final/ZX9507-coupon-price-verification.json"
+      }
+    },
+    "K6116": {
+      "title": "秋冬加绒棉鞋男女款系带松紧可调针织休闲鞋黑白全黑好搭",
+      "headline": [
+        "黑白随搭",
+        "冬日加绒休闲"
+      ],
+      "strap": "男女可选 · 系带设计 · 35—45码",
+      "accent": "#3b4f59",
+      "closure": "系带",
+      "sole": "塑胶",
+      "bottom": "波纹造型外底",
+      "bottom_copy": "连贯波纹侧墙，搭配黑白或全黑日常休闲穿着。",
+      "color_names": [
+        "黑白加绒",
+        "全黑加绒"
+      ],
+      "color_files": [
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/K6116/优化/主图_黑白净图.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/K6116/优化/主图_全黑净图.png"
+      ],
+      "main_files": [
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/K6116/工厂来源原图_2.jpg",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/K6116/优化/主图_黑白净图.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/K6116/优化/主图_全黑净图.png",
+        "01_产品资产/02_可发布素材/抖店棉鞋_20261014/K6116/工厂来源原图_3.jpg"
+      ],
+      "detail_photo": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/K6116/工厂来源原图_3.jpg",
+      "sole_photo": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/K6116/优化/主图_全黑净图.png",
+      "start_size": 35,
+      "end_size": 45,
+      "title_weight": 52,
+      "detail_files": [
+        {
+          "role": "01_出门场景与穿着利益",
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/K6116/优化/详情/01_出门场景与穿着利益.png",
+          "source": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/K6116/优化/详情/01_出门场景与穿着利益.svg",
+          "width": 800,
+          "height": 1220,
+          "sha256": "55b1e57efb72ff39dd6fcc968515733547efa1ffff695d39f1d529b0bca96472",
+          "bytes": 853425
+        },
+        {
+          "role": "02_舒适好穿结构讲解",
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/K6116/优化/详情/02_舒适好穿结构讲解.png",
+          "source": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/K6116/优化/详情/02_舒适好穿结构讲解.svg",
+          "width": 800,
+          "height": 1200,
+          "sha256": "e86851bd163d790022b47f61ad439e5e26881023a4e9041cc5161e03ec610650",
+          "bytes": 496340
+        },
+        {
+          "role": "03_加绒日常场景",
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/K6116/优化/详情/03_加绒日常场景.png",
+          "source": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/K6116/优化/详情/03_加绒日常场景.svg",
+          "width": 800,
+          "height": 1200,
+          "sha256": "3fc0ab04c8586ebd1602425b398adf33207458461fcbcda8fdde9f3d58ae56d4",
+          "bytes": 427315
+        },
+        {
+          "role": "04_轮廓搭配与外底实拍",
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/K6116/优化/详情/04_轮廓搭配与外底实拍.png",
+          "source": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/K6116/优化/详情/04_轮廓搭配与外底实拍.svg",
+          "width": 800,
+          "height": 1150,
+          "sha256": "b8bf374651122af17099c84ff0f5aa8b1c7ffd993a58ebeb316cfc8539e1643e",
+          "bytes": 631237
+        },
+        {
+          "role": "05_颜色规格选择",
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/K6116/优化/详情/05_颜色规格选择.png",
+          "source": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/K6116/优化/详情/05_颜色规格选择.svg",
+          "width": 800,
+          "height": 1100,
+          "sha256": "82d6b92ce59ce7a7ff701f18385c45364c0a40b32913b868c5b874a362ce539d",
+          "bytes": 381971
+        },
+        {
+          "role": "06_商品参数",
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/K6116/优化/详情/06_商品参数.png",
+          "source": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/K6116/优化/详情/06_商品参数.svg",
+          "width": 800,
+          "height": 1100,
+          "sha256": "7b7b0bbda13111a1ea5698d2103125359f7a3b7dca358af424082a2265964acc",
+          "bytes": 78797
+        },
+        {
+          "role": "07_脚长尺码指南",
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/K6116/优化/详情/07_脚长尺码指南.png",
+          "source": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/K6116/优化/详情/07_脚长尺码指南.svg",
+          "width": 800,
+          "height": 1217,
+          "sha256": "c14f05841204184ed1fe2a14567bb6735e5e037a28cbdd9172e63e75344b6aa2",
+          "bytes": 79543
+        },
+        {
+          "role": "08_发货与售后服务",
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/K6116/优化/详情/08_发货与售后服务.png",
+          "source": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/K6116/优化/详情/08_发货与售后服务.svg",
+          "width": 800,
+          "height": 1120,
+          "sha256": "3c5649bf508e7682d4a29182c1af0034508ac387110abbb711ad5cc36bb07079",
+          "bytes": 92715
+        }
+      ],
+      "layout_method": "原生SVG信息排版，嵌入实物照片；产品摄影不由排版程序重画",
+      "rear_feature": [
+        "后跟提环",
+        "穿鞋时可辅助提拉后跟。"
+      ],
+      "choice_copy": "黑白配色有明暗对比，全黑配色更低调，按日常穿搭选择。",
+      "benefit_headline": [
+        "日常休闲",
+        "穿搭轻松一点"
+      ],
+      "benefit_subtitle": "秋冬加绒 · 系带设计 · 35—45码",
+      "benefit_footer": "系带松紧可调，黑白日常随搭",
+      "style_headline": [
+        "波纹侧墙",
+        "侧面也有辨识度"
+      ],
+      "style_subtitle": "黑白 / 全黑 · 低帮休闲外观",
+      "style_caption": "波纹造型，搭配日常休闲装",
+      "upper_crop": [
+        70,
+        310,
+        700,
+        390
+      ],
+      "scene_photo": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/K6116/工厂来源原图_2.jpg",
+      "scene_kind": "actual",
+      "value_evidence": {
+        "hook": "日常休闲→穿搭轻松一点",
+        "wearing_benefit": "系带结构可调松紧，帮助顾客按脚背选择",
+        "comfort_scope": "日常舒适从合适尺码与松紧讲起，不宣称人人合脚或久走不累",
+        "breathability_scope": "本批为加绒版；展示针织鞋面结构，不从普通版网纱参数宣称整鞋不闷汗或全天透气",
+        "warmth": "已确认加绒版本，人造短毛绒内里；无温标、厚度或测试数值",
+        "scene": "actual",
+        "scene_note": "工厂既有上脚外观展示，不证明绒里或脚感测量"
+      },
+      "previous_title": "秋冬加绒棉鞋男女款系带休闲鞋K6116",
+      "before_latest_revision_title": "秋冬加绒棉鞋男女款系带针织低帮休闲鞋黑白全黑保暖35-45码K6116",
+      "publication": {
+        "state": "APPLIED_READBACK_AUDIT_PASSED",
+        "on_sale": true,
+        "main_images": 4,
+        "detail_screens": 8,
+        "fleece_sku_count": 22,
+        "active_sku_count": 22,
+        "fleece_colors": [
+          "黑白加绒",
+          "全黑加绒"
+        ],
+        "regular_price_cny": [],
+        "fleece_price_cny": [
+          77.9
+        ],
+        "existing_prices_preserved": false,
+        "existing_stock_values_preserved": true,
+        "existing_sku_ids_preserved": true,
+        "local_visual_qa": "PASSED",
+        "published_media_content_and_color_binding": "PASSED",
+        "buyer_page_visual_qa": "H5_PREVIEW_PASSED_APP_PENDING",
+        "private_evidence": ".local/evidence/retail-family/K6116/verification.json",
+        "price_change_authority": "负责人后续明确71.50/72.90/74.90为券后目标；新标价仅加5元承接5元商品券，不伪称历史原价",
+        "current_price_evidence": ".local/evidence/buyer-final/K6116-coupon-price-verification.json"
+      },
+      "main_assets": [
+        {
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/K6116/工厂来源原图_2.jpg",
+          "sha256": "a76286ff487e051664007c9aa3829568f853309a7ebcd4eb81ac96616d856413",
+          "bytes": 279861
+        },
+        {
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/K6116/优化/主图_黑白净图.png",
+          "sha256": "e05479349c34b91cc9553f13a1d35e2ecd17f700305b8582365647d74365bd21",
+          "bytes": 1767438
+        },
+        {
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/K6116/优化/主图_全黑净图.png",
+          "sha256": "994d54af53846732a54422bffb96025009f89b06e9516f99a9704c42e5e7949f",
+          "bytes": 2212535
+        },
+        {
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/K6116/工厂来源原图_3.jpg",
+          "sha256": "4b38fe5985914d66b2f9bb84484322c8066c62e1f67831135f1d674b0d1cfca2",
+          "bytes": 350573
+        }
+      ],
+      "before_consumer_title": "秋冬加绒棉鞋男女款系带针织低帮休闲鞋黑白全黑保暖35-45码K6116",
+      "consumer_visual_qa": "PASSED",
+      "forecast_price": {
+        "original": [
+          77.9,
+          77.9
+        ],
+        "forecast_min": [
+          72.9,
+          72.9
+        ],
+        "coupon_status": "已生效5元商品券，保存后重新打开核实",
+        "checked": "2026-10-15"
+      },
+      "title_current": "秋冬加绒棉鞋男女款系带松紧可调针织休闲鞋黑白全黑好搭",
+      "status": "APPLIED_READBACK_AUDIT_PASSED",
+      "buyer_verification": {
+        "h5_title_main_images_details_order": "PASSED",
+        "h5_media_scope": "51张主图、120屏详情逐款匹配正式发布对象及顺序",
+        "app_disabled_specs": "PENDING_PHONE_CHECK",
+        "app_coupon_redemption": "PENDING_PHONE_CHECK",
+        "private_evidence": ".local/evidence/buyer-final/K6116-h5-verification.json"
+      },
+      "current_coupon_pricing": {
+        "base_cny": 77.9,
+        "coupon_cny": 5,
+        "target_net_cny": 72.9,
+        "state": "ACTIVE_REOPENED_AND_OFFICIAL_FORECAST_VERIFIED",
+        "valid_until": "2026-11-14 23:59:59",
+        "auto_renew": true,
+        "private_evidence": ".local/evidence/buyer-final/K6116-coupon-price-verification.json"
+      }
+    }
+  },
+  "quality_gate": {
+    "detail_screens_per_model": 8,
+    "exact_main_detail_duplicate_allowed": false,
+    "actual_photos_required": true,
+    "preserve_price_stock_skus_fulfilment": true,
+    "local_visual_qa": "32屏整套总览+重点页面原尺寸检查通过，款色/尺码/图文一致性核对",
+    "buyer_page_visual_qa": "PENDING_BUYER_PAGE_REVIEW",
+    "missing_real_assets": [
+      "四款加绒内里近距离实拍不足；本次不生成或引用普通版鞋内照片作加绒证明"
+    ],
+    "current_rule_reference": "数据/关键词与规则证据.json",
+    "traffic_result": "尚无本次修改后经营窗口数据，不能宣称流量或转化已提升",
+    "published_media_qa": "实回平台全部主图、详情及重点加绒色图与本地发布文件逐张比较通过"
+  },
+  "buyer_questions": [
+    "为什么点：完整鞋型、配色和清楚轮廓，缩略图也能辨款",
+    "为什么选：套脚便捷或系带可调，逐款讲清结构",
+    "怎么选：加绒版本、颜色、脚长尺码",
+    "怎么买：次日发、运费例外、退换和寄修规则"
+  ],
+  "content_revision": "benefit-scenes",
+  "image_edits": [
+    {
+      "model": "ZX2116",
+      "color": "黑白",
+      "input": "01_产品资产/01_原始数据包/抖店加绒鞋包_M889_20261014/图片/ZX2116黑白加绒.jpg",
+      "output": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX2116/优化/主图_黑白净图.png",
+      "input_sha256": "421f34bdc72fee911917c567f484453dcda26747eb46d9d1dd5014df6e4fa1be",
+      "output_sha256": "90f3e8063622807581f2bb675277d9d54dbac543c1a2edd58be2c9f653cc254d",
+      "tool": "内置imagegen",
+      "instruction_summary": "仅清理原图促销文字或火焰贴纸；保留对应真实鞋型、颜色、原有摄影角度与外底",
+      "review": "对照原图检查鞋型、针织纹理、系带/套脚、后跟与外底造型；不作为里料或性能证明"
+    },
+    {
+      "model": "ZX2116",
+      "color": "全黑",
+      "input": "01_产品资产/01_原始数据包/抖店加绒鞋包_M889_20261014/图片/ZX2116全黑加绒.jpg",
+      "output": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX2116/优化/主图_全黑原构图净图.png",
+      "input_sha256": "68dfa1427a355aef62c5afee2dab9bbbd8db82abf8b9081d5c55c506f57d863c",
+      "output_sha256": "9aa07bc421657a479eeca45f2ccac8ebd485b1c6ca109353c34f28e23cc4031a",
+      "tool": "内置imagegen",
+      "instruction_summary": "仅清理原图促销文字或火焰贴纸；保留对应真实鞋型、颜色、原有摄影角度与外底",
+      "review": "对照原图检查鞋型、针织纹理、系带/套脚、后跟与外底造型；不作为里料或性能证明",
+      "prompt_verbatim": "Edit target: the attached original ZX2116 all-black shoe product photograph. Only remove the red Chinese headline 冬季棉鞋 at the upper left and orange flame-shaped 加绒加厚 sticker at the upper right. Fill those text regions with the existing plain grey studio background. Preserve the exact original photographed composition: ONE all-black lace-up shoe side view in front, and ONE black outsole pointing across the upper part resting on a white display block. Preserve shoe shape, scale, knit texture, lace pattern, heel loop, outsole tread, black sole, shadows and all pixels outside the two text areas as closely as possible. Do not create a pair of shoes, do not make a collage, do not restage or redesign. No new angles, no new object, no new text. Same square photo, only the two overlays erased."
+    },
+    {
+      "model": "ZX9507",
+      "color": "黑杏",
+      "input": "01_产品资产/01_原始数据包/抖店加绒鞋包_M889_20261014/图片/ZX9507黑杏加绒.JPG",
+      "output": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9507/优化/主图_黑杏双鞋净图.png",
+      "input_sha256": "0ee30dc8e4dd32778da13be296fb89a31dc61b720c594d14b3c9e705bfb06425",
+      "output_sha256": "6d5d1860f35dfda4901f9dffbdc5b1425138685757715e93615de83fe677f095",
+      "tool": "内置imagegen",
+      "instruction_summary": "仅清理原图促销文字或火焰贴纸；保留对应真实鞋型、颜色、原有摄影角度与外底",
+      "review": "对照原图检查鞋型、针织纹理、系带/套脚、后跟与外底造型；不作为里料或性能证明",
+      "prompt_verbatim": "Edit target: the attached original ZX9507 black-and-beige shoe product photograph. Only erase the small orange flame-shaped 加绒加厚 promotional sticker in the upper right, filling that region with the surrounding plain grey studio background. Retain the original exact two photographed shoes, their placement, scale, black knit patterns, beige sculpted sole shape, white display block, shadows, framing and all pixels outside that badge area as closely as possible. Do not redesign, repaint, retouch, sharpen or restage the shoes. No new shoes, no new angle, no new details, no new text. Output the same square product photograph with only the orange sticker removed."
+    },
+    {
+      "model": "K6116",
+      "color": "黑白",
+      "input": "01_产品资产/01_原始数据包/抖店加绒鞋包_M889_20261014/图片/K6116黑白加绒.jpg",
+      "output": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/K6116/优化/主图_黑白净图.png",
+      "input_sha256": "2784b869a1721d6326a2b1edf39903e92b1c308e97307c0f06b39748508ac122",
+      "output_sha256": "e05479349c34b91cc9553f13a1d35e2ecd17f700305b8582365647d74365bd21",
+      "tool": "内置imagegen",
+      "instruction_summary": "仅清理原图促销文字或火焰贴纸；保留对应真实鞋型、颜色、原有摄影角度与外底",
+      "review": "对照原图检查鞋型、针织纹理、系带/套脚、后跟与外底造型；不作为里料或性能证明"
+    },
+    {
+      "model": "K6116",
+      "color": "全黑",
+      "input": "01_产品资产/01_原始数据包/抖店加绒鞋包_M889_20261014/图片/K6116全黑加绒.png",
+      "output": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/K6116/优化/主图_全黑净图.png",
+      "input_sha256": "d89c29dcac070baef3274d535efa2e0e677bc68c9fde3c80c1b55f17817d92b2",
+      "output_sha256": "994d54af53846732a54422bffb96025009f89b06e9516f99a9704c42e5e7949f",
+      "tool": "内置imagegen",
+      "instruction_summary": "仅清理原图促销文字或火焰贴纸；保留对应真实鞋型、颜色、原有摄影角度与外底",
+      "review": "对照原图检查鞋型、针织纹理、系带/套脚、后跟与外底造型；不作为里料或性能证明"
+    },
+    {
+      "model": "ZX9002",
+      "kind": "AI_STYLING_ILLUSTRATION",
+      "input": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9002/优化/工厂补充_双鞋.jpg",
+      "input_sha256": "b2f04cc1ae6907fb1ca792c4ec9d8ad127610e177f30a5eca22f99d7399819a8",
+      "output": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9002/优化/日常穿搭场景_AI示意.png",
+      "output_sha256": "0cbb85f6e9830e18d0295710fb59b9054e98e91aca08b8f7079ef87b6fa37ff4",
+      "tool": "内置imagegen",
+      "prompt_verbatim": "Create a photorealistic consumer footwear styling scene using the exact shoe model in the reference photograph as the product identity. Vertical 4:5 photo, cropped knees down only, no face. An adult man wearing charcoal straight-leg autumn trousers and plain dark socks stands naturally on a dry level stone sidewalk outside an everyday Chinese neighborhood building, warm late-afternoon light. The visible shoes MUST match the reference: grey knitted slip-on upper with the same prominent unbroken broad central strip, same large mesh pattern side areas, raised front tongue peak, grey heel pull loop, and very distinctive chunky irregular black bubble-shaped sculpted sole with matching height and profile. No laces, no logos, no embellishments, no altered material or toe shape. One foot slightly forward, both normally grounded, no running or implied athletic performance. Frame the shoes large in the lower 65% with generous calm softly blurred wall and trouser area above for later typography. Realistic shoe proportions and shadows. Ordinary daily outing, inviting and attainable, not a luxury fashion campaign. No snow, water, ice, smoke, heat glow, airflow arrows, claims, diagrams or text. This will be labeled AI styling illustration; do not create test results or lining cutaway.",
+      "display_label": "AI穿搭场景示意",
+      "review": "对照鞋面结构、系带/套脚、提环有无、配色和外底轮廓；不作为试穿、绒里或性能证明"
+    },
+    {
+      "model": "ZX2116",
+      "kind": "AI_STYLING_ILLUSTRATION",
+      "input": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX2116/优化/主图_黑白净图.png",
+      "input_sha256": "90f3e8063622807581f2bb675277d9d54dbac543c1a2edd58be2c9f653cc254d",
+      "output": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX2116/优化/日常穿搭场景_AI示意.png",
+      "output_sha256": "f576e14d53eb179d6fa041245f32e73728d56387ef4850fc8ae0ba2057d2a966",
+      "tool": "内置imagegen",
+      "prompt_verbatim": "Create a photorealistic everyday footwear styling photograph faithfully featuring the exact black-and-white lace-up shoe model in the reference. Vertical 4:5, cropped from knees down only, no face. Adult man in dark navy casual straight trousers and dark socks sitting on a simple neighborhood bench, feet resting naturally on dry level pavement. Shoes dominate the lower two-thirds: black fine knit fabric, traditional black round laces with exact eyelet placement, long simple low-top outline, little black heel pull loop, and flat clean WHITE outsole with the same thin fine horizontal sidewall ridges and modest toe rise as reference. Preserve shoe identity exactly, no thicker sporty sole, no logos, no extra panels, no stripes or new stitching, no material changes. One slightly angled front shoe reveals upper and laces; the second shows sidewall. Calm autumn morning, softly blurred modest street background, warm neutral palette, natural inviting consumer photo. Keep upper 25% simple for later typography. Do not tie laces with visible hands; no running, sports claims, snow, water, fire, arrows, synthetic fibers rendering, cutaway or text. This is a labeled AI outfit illustration, never a performance test.",
+      "display_label": "AI穿搭场景示意",
+      "review": "对照鞋面结构、系带/套脚、提环有无、配色和外底轮廓；不作为试穿、绒里或性能证明"
+    },
+    {
+      "model": "ZX9507",
+      "kind": "AI_STYLING_ILLUSTRATION",
+      "input": "01_产品资产/01_原始数据包/抖店加绒鞋包_M889_20261014/图片/ZX9507黑杏加绒.JPG",
+      "input_sha256": "0ee30dc8e4dd32778da13be296fb89a31dc61b720c594d14b3c9e705bfb06425",
+      "output": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9507/优化/日常穿搭场景_AI示意.png",
+      "output_sha256": "0a21c947a55ad61e3f99b0c29879d56aa8e348fa9440da9652e7d56b2464ae6c",
+      "tool": "内置imagegen",
+      "prompt_verbatim": "Generate a photorealistic consumer footwear outfit scene based on the EXACT reference shoe model, ignoring the orange promotional badge. Vertical 4:5 photograph cropped at knees, no face. Adult in warm grey cuffed casual trousers and plain dark socks, standing comfortably just outside an apartment doorway on a DRY LEVEL tiled landing; autumn daily outing. Both shoes visible large in lower two-thirds. Shoes must reproduce the black knitted slip-on upper, curved black side knit pattern, slightly peaked upper front collar, closed heel WITHOUT heel pull loop, rounded toe, and distinctive thick warm beige sculpted bubble sole with the same irregular rounded lobes and subtle wave grooves shown in the reference. No laces, no logos, no rigid heel cage, no extra textiles, no invented fur or visible lining, no change in sole geometry or shoe color. Natural placement with one foot a little forward, soles grounded, no hands-free stepping demonstration. Simple inviting warm daylight and soft blurred entry background, upper quarter has calm negative space for later title overlay. No water, ice, snow, airflow arrows, fire, text, logo, performance depiction, diagrams or exaggerated effects. A labeled AI styling illustration, not physical product proof.",
+      "display_label": "AI穿搭场景示意",
+      "review": "对照鞋面结构、系带/套脚、提环有无、配色和外底轮廓；不作为试穿、绒里或性能证明"
+    }
+  ],
+  "discarded_candidates": [
+    {
+      "model": "ZX9002",
+      "reason": "重构图针织纹理偏差，未使用；改用同款工厂真实双鞋照"
+    },
+    {
+      "model": "ZX2116",
+      "color": "全黑",
+      "reason": "第一版改变原摄影构图，未发布；改用保留原侧面鞋加鞋底构图的清理版"
+    }
+  ],
+  "consumer_revision": {
+    "status": "APPLIED_READBACK_AUDIT_PASSED",
+    "title_direction": "需求与穿着利益前置，去除货号",
+    "price_instruction": "保留现有价格和活动设置，只核定价关系",
+    "scope": "先完成已上新四款标题，再继续旧混款十一款的拆分与图文"
+  }
+}

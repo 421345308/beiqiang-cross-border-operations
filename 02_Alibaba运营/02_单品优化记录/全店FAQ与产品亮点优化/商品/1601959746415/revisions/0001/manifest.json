@@ -1,0 +1,27 @@
+{
+  "operation": "update",
+  "product_id": "1601959746415",
+  "category_id": 201334413,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "copy.json",
+    "before_get.json",
+    "../../../../../01_产品资产/02_可发布素材/00_最终上传/BQ007_L0017/00_上架填写表.md",
+    "../../../../../01_产品资产/01_原始数据包/已整理_BQ007_L0017_贝强鞋业35-45批65全网限价98/L0017贝强鞋业35-45批65全网限价98/800X800主图/01.jpg",
+    "current_get.json",
+    "../../../../00_运营SOP/国际站商品全生命周期SOP.md"
+  ],
+  "current_schema": "current_schema.xml",
+  "current_schema_sha256": "469b31b900ec24a2e02b2b9057113fe191720831d1e7582fb8bab64088df2e21",
+  "schema_request_id": "213c934417917344375124979",
+  "schema_acquired_at": "2026-10-11T16:00:34.759836+00:00",
+  "payload_xml": "payload.xml",
+  "field_ids": [
+    "textDesc",
+    "companyFaqDesc"
+  ],
+  "dependency_ids": [
+    "productDescType"
+  ],
+  "observed_model": "BQ007-S4 / L0017"
+}

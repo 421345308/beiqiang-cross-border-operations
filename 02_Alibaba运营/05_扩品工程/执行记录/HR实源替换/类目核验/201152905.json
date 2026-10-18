@@ -1,0 +1,31 @@
+{
+  "method": "alibaba.icbu.category.get.new",
+  "request": {
+    "cat_id": 201152905
+  },
+  "observed_at": "2026-10-13T15:12:51.874069+00:00",
+  "official_parameter_documentation": "https://developer.alibaba.com/docs/api.htm?apiId=50064",
+  "response": {
+    "category": {
+      "leaf_category": false,
+      "cn_name": "男鞋",
+      "category_id": 201152905,
+      "level": 2,
+      "name": "Men's Shoes",
+      "parent_ids": [
+        "322"
+      ],
+      "child_ids": [
+        "201773602",
+        "201339807",
+        "201153805",
+        "201154905",
+        "202240835",
+        "201152907",
+        "201337807"
+      ]
+    },
+    "request_id": "213e759c17919043806244067",
+    "_trace_id_": "2150384817919043806223282e0b4a"
+  }
+}

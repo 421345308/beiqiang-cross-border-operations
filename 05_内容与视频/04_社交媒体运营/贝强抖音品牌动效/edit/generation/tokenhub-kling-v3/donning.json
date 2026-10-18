@@ -1,0 +1,67 @@
+{
+  "job": "donning",
+  "model": "kling-video-v3",
+  "status": "succeeded",
+  "settings": {
+    "resolution": "1080p",
+    "multi_shot": false,
+    "audio": "off",
+    "duration": 5
+  },
+  "started_at": "2026-10-11T05:05:27.782Z",
+  "previous_transport_attempt": {
+    "job": "donning",
+    "model": "kling-video-v3",
+    "status": "transport_connect_failed",
+    "settings": {
+      "resolution": "1080p",
+      "multi_shot": false,
+      "audio": "off",
+      "duration": 5
+    },
+    "started_at": "2026-10-11T05:01:38.948Z",
+    "error": "fetch failed",
+    "error_code": "UND_ERR_CONNECT_TIMEOUT",
+    "error_evidence": "Original terminal session 93005 exited 1 with cause ConnectTimeoutError / UND_ERR_CONNECT_TIMEOUT; socket connection was not established, hence HTTP body not dispatched. Original error retained."
+  },
+  "task_id": "1317587621-WandVideo-67197f97e1674a0eaea661de2e58131b",
+  "response": {
+    "code": 0,
+    "message": "SUCCEED",
+    "request_id": "64c3ebea-d1b3-4275-aa39-1e4a1b7ea11a",
+    "data": {
+      "id": "1317587621-WandVideo-67197f97e1674a0eaea661de2e58131b",
+      "status": "submitted",
+      "message": "",
+      "create_time": 1791695130752,
+      "update_time": 1791695130752
+    }
+  },
+  "query_response": {
+    "code": 0,
+    "data": [
+      {
+        "update_time": 1791695454251,
+        "create_time": 1791695131000,
+        "id": "1317587621-WandVideo-67197f97e1674a0eaea661de2e58131b",
+        "message": "",
+        "outputs": [
+          {
+            "duration": "5.041",
+            "id": "938125795636674648",
+            "type": "video",
+            "url": "https://aigc-output-video-1326893053.cos.ap-guangzhou.myqcloud.com/1317587621/1317587621-WandVideo-67197f97e1674a0eaea661de2e58131b_0.mp4"
+          }
+        ],
+        "status": "succeeded"
+      }
+    ],
+    "message": "SUCCEED",
+    "request_id": "6189f4c8-2ae5-4fd0-860b-0e282e67f0dd",
+    "tokenhub_usage": {
+      "total_tokens": 400000
+    }
+  },
+  "checked_at": "2026-10-11T05:10:54.175Z",
+  "local_video": "public/dynamic/donning.mp4"
+}

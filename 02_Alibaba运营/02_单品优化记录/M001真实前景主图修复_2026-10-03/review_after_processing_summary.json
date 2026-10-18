@@ -1,0 +1,43 @@
+{
+  "product_id": "1601970169467",
+  "status": "modified",
+  "display": "N",
+  "actual_score": {
+    "final_score": "4.50",
+    "boutique_tag": 1,
+    "problem_map": "{\"ruleScoreMap\":{\"title_word_miss_core_error\":0.0,\"imageQualityBad\":0.0,\"image_scale\":-0.5,\"title_word_error\":0.0,\"image_num\":0.0},\"errorReasonSkuImageMoreMap\":{},\"errorReasonTitleWordMissErrorMap\":{},\"errorReasonList\":[],\"errorReasonTitleWordErrorMap\":{},\"extendCheckMap\":{\"imageText\":true,\"sku_image\":false,\"title_word_miss_core_error\":true,\"imageQualityBad\":true,\"sku_text\":false,\"imageSubTitle\":false,\"category\":true,\"title_word_error\":true,\"selling_point_attribute_conflict\":false},\"errorReasonCategoryMap\":{},\"errorReasonSkuTextMap\":{},\"errorReasonSubTitleMap\":{},\"errorReasonMap\":{},\"errorReasonSellingPointAttributeMap\":{},\"errorReasonSkuImageMap\":{},\"extendProblemMap\":{\"imageText\":false,\"title_word_miss_core_error\":false,\"imageQualityBad\":false,\"imageSubTitle\":false,\"image_scale\":true,\"inventory\":false,\"title_word_error\":false,\"selling_point_attribute_conflict\":false,\"image_num\":false,\"freightRate\":false,\"sku_image\":false,\"sku_text\":false,\"price\":false,\"category\":false},\"errorReasonQualityBadMap\":{},\"errorReasonSkuTextMoreMap\":{}}"
+  },
+  "first_image_matches": true,
+  "other_images_unchanged": true,
+  "all_other_business_content_unchanged": true,
+  "field_comparison": {
+    "gmt_create": true,
+    "keywords": true,
+    "owner_member_display_name": true,
+    "subject": true,
+    "struct_detail_product": true,
+    "language": true,
+    "is_smart_edit": true,
+    "product_sku": true,
+    "category_id": true,
+    "product_id": true,
+    "sub_market_type": true,
+    "pc_detail_url": true,
+    "rts": true,
+    "product_type": true,
+    "sourcing_trade": true,
+    "price_type": true,
+    "attributes": true,
+    "owner_member": true
+  },
+  "detail_comparison": {
+    "company_image": true,
+    "product_faq": true,
+    "product_summary": true,
+    "company_summary": true,
+    "detail_image_same_items": true
+  },
+  "detail_image_order_unchanged": false,
+  "get_request_id": "212cbf3217910167007538978",
+  "score_request_id": "213d4e4917910167032377828"
+}

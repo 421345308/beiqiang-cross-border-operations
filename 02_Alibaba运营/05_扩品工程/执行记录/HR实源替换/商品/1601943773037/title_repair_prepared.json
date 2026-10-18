@@ -1,0 +1,34 @@
+{
+  "request": {
+    "param_product_top_publish_request": {
+      "product_id": 1601943773037,
+      "cat_id": 201774304,
+      "language": "en_US",
+      "xml": "<itemSchema><field id=\"productTitle\" name=\"Product name\" type=\"input\"><value>Panelled Casual Lace-Up Boots with Padded Collar and Rear Pull Loop for Wholesale Shoe Collections</value></field></itemSchema>"
+    }
+  },
+  "reason": "Formal title differs from reviewed source-specific submitted product title. Correct only title; cause of later change unconfirmed, not attributed to a person or platform automation.",
+  "expected_title": "Panelled Casual Lace-Up Boots with Padded Collar and Rear Pull Loop for Wholesale Shoe Collections",
+  "observed_title": "Panelled Casual Lace-Up Ankle Boots with Metal Lace Guides Padded Collar Rear Pull Loop PVC Outsole for Wholesale Collections",
+  "expected_schema": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Panelled Casual Lace-Up Boots with Padded Collar and Rear Pull Loop for Wholesale Shoe Collections",
+          []
+        ]
+      ]
+    ]
+  },
+  "xml_sha256": "1ff9574fc8a7d93128a8c2dee50186b51efa2896bbd6f12872f074aca78e0275"
+}

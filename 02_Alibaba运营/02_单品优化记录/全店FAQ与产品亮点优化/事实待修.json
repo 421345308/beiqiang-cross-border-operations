@@ -1,0 +1,2091 @@
+{
+  "observed_at": "2026-10-11T16:49:05.870768+00:00",
+  "current_catalog_count": 455,
+  "facts_pending_count": 159,
+  "reasons": {
+    "OLD_LINK_NOT_REPLACED_BY_ADOPTED_REAL_SHOE": 3,
+    "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING": 117,
+    "REAL_SHOE_NOT_ADOPTED_CANDIDATE_ONLY": 39
+  },
+  "items": [
+    {
+      "product_id": "1601943653819",
+      "model": "HR051-A",
+      "family": "HR051",
+      "reason": "OLD_LINK_NOT_REPLACED_BY_ADOPTED_REAL_SHOE",
+      "source_state": "ADOPTED",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/来源证据/6e1df35af433.md"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943750198",
+      "model": "HR051-B",
+      "family": "HR051",
+      "reason": "OLD_LINK_NOT_REPLACED_BY_ADOPTED_REAL_SHOE",
+      "source_state": "ADOPTED",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/来源证据/6e1df35af433.md"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943651773",
+      "model": "HR051-C",
+      "family": "HR051",
+      "reason": "OLD_LINK_NOT_REPLACED_BY_ADOPTED_REAL_SHOE",
+      "source_state": "ADOPTED",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/来源证据/6e1df35af433.md"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "12000003229472",
+      "model": "DZ14546082-A",
+      "family": "DZ14546082-A",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943312845",
+      "model": "HR003-A",
+      "family": "HR003",
+      "reason": "REAL_SHOE_NOT_ADOPTED_CANDIDATE_ONLY",
+      "source_state": "CANDIDATE",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943335928",
+      "model": "HR003-B",
+      "family": "HR003",
+      "reason": "REAL_SHOE_NOT_ADOPTED_CANDIDATE_ONLY",
+      "source_state": "CANDIDATE",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943467198",
+      "model": "HR003-C",
+      "family": "HR003",
+      "reason": "REAL_SHOE_NOT_ADOPTED_CANDIDATE_ONLY",
+      "source_state": "CANDIDATE",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943397351",
+      "model": "HR004-A",
+      "family": "HR004",
+      "reason": "REAL_SHOE_NOT_ADOPTED_CANDIDATE_ONLY",
+      "source_state": "CANDIDATE",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943405519",
+      "model": "HR004-B",
+      "family": "HR004",
+      "reason": "REAL_SHOE_NOT_ADOPTED_CANDIDATE_ONLY",
+      "source_state": "CANDIDATE",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943421458",
+      "model": "HR004-C",
+      "family": "HR004",
+      "reason": "REAL_SHOE_NOT_ADOPTED_CANDIDATE_ONLY",
+      "source_state": "CANDIDATE",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943335751",
+      "model": "HR005-A",
+      "family": "HR005",
+      "reason": "REAL_SHOE_NOT_ADOPTED_CANDIDATE_ONLY",
+      "source_state": "CANDIDATE",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943353831",
+      "model": "HR005-B",
+      "family": "HR005",
+      "reason": "REAL_SHOE_NOT_ADOPTED_CANDIDATE_ONLY",
+      "source_state": "CANDIDATE",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943444273",
+      "model": "HR005-C",
+      "family": "HR005",
+      "reason": "REAL_SHOE_NOT_ADOPTED_CANDIDATE_ONLY",
+      "source_state": "CANDIDATE",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943439124",
+      "model": "HR006-A",
+      "family": "HR006",
+      "reason": "REAL_SHOE_NOT_ADOPTED_CANDIDATE_ONLY",
+      "source_state": "CANDIDATE",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943450234",
+      "model": "HR006-B",
+      "family": "HR006",
+      "reason": "REAL_SHOE_NOT_ADOPTED_CANDIDATE_ONLY",
+      "source_state": "CANDIDATE",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943364813",
+      "model": "HR006-C",
+      "family": "HR006",
+      "reason": "REAL_SHOE_NOT_ADOPTED_CANDIDATE_ONLY",
+      "source_state": "CANDIDATE",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943463020",
+      "model": "HR007-A",
+      "family": "HR007",
+      "reason": "REAL_SHOE_NOT_ADOPTED_CANDIDATE_ONLY",
+      "source_state": "CANDIDATE",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943408495",
+      "model": "HR007-B",
+      "family": "HR007",
+      "reason": "REAL_SHOE_NOT_ADOPTED_CANDIDATE_ONLY",
+      "source_state": "CANDIDATE",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943332965",
+      "model": "HR007-C",
+      "family": "HR007",
+      "reason": "REAL_SHOE_NOT_ADOPTED_CANDIDATE_ONLY",
+      "source_state": "CANDIDATE",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943348656",
+      "model": "HR008-A",
+      "family": "HR008",
+      "reason": "REAL_SHOE_NOT_ADOPTED_CANDIDATE_ONLY",
+      "source_state": "CANDIDATE",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943422371",
+      "model": "HR008-B",
+      "family": "HR008",
+      "reason": "REAL_SHOE_NOT_ADOPTED_CANDIDATE_ONLY",
+      "source_state": "CANDIDATE",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943451227",
+      "model": "HR008-C",
+      "family": "HR008",
+      "reason": "REAL_SHOE_NOT_ADOPTED_CANDIDATE_ONLY",
+      "source_state": "CANDIDATE",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943434630",
+      "model": "HR009-A",
+      "family": "HR009",
+      "reason": "REAL_SHOE_NOT_ADOPTED_CANDIDATE_ONLY",
+      "source_state": "CANDIDATE",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943411769",
+      "model": "HR009-B",
+      "family": "HR009",
+      "reason": "REAL_SHOE_NOT_ADOPTED_CANDIDATE_ONLY",
+      "source_state": "CANDIDATE",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943520149",
+      "model": "HR009-C",
+      "family": "HR009",
+      "reason": "REAL_SHOE_NOT_ADOPTED_CANDIDATE_ONLY",
+      "source_state": "CANDIDATE",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943501309",
+      "model": "HR010-A",
+      "family": "HR010",
+      "reason": "REAL_SHOE_NOT_ADOPTED_CANDIDATE_ONLY",
+      "source_state": "CANDIDATE",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943527175",
+      "model": "HR010-B",
+      "family": "HR010",
+      "reason": "REAL_SHOE_NOT_ADOPTED_CANDIDATE_ONLY",
+      "source_state": "CANDIDATE",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943479449",
+      "model": "HR010-C",
+      "family": "HR010",
+      "reason": "REAL_SHOE_NOT_ADOPTED_CANDIDATE_ONLY",
+      "source_state": "CANDIDATE",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943501378",
+      "model": "HR011-A",
+      "family": "HR011",
+      "reason": "REAL_SHOE_NOT_ADOPTED_CANDIDATE_ONLY",
+      "source_state": "CANDIDATE",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943406882",
+      "model": "HR011-B",
+      "family": "HR011",
+      "reason": "REAL_SHOE_NOT_ADOPTED_CANDIDATE_ONLY",
+      "source_state": "CANDIDATE",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943513336",
+      "model": "HR011-C",
+      "family": "HR011",
+      "reason": "REAL_SHOE_NOT_ADOPTED_CANDIDATE_ONLY",
+      "source_state": "CANDIDATE",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943445780",
+      "model": "HR012-A",
+      "family": "HR012",
+      "reason": "REAL_SHOE_NOT_ADOPTED_CANDIDATE_ONLY",
+      "source_state": "CANDIDATE",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943531277",
+      "model": "HR012-B",
+      "family": "HR012",
+      "reason": "REAL_SHOE_NOT_ADOPTED_CANDIDATE_ONLY",
+      "source_state": "CANDIDATE",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943484576",
+      "model": "HR012-C",
+      "family": "HR012",
+      "reason": "REAL_SHOE_NOT_ADOPTED_CANDIDATE_ONLY",
+      "source_state": "CANDIDATE",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943542214",
+      "model": "HR013-A",
+      "family": "HR013",
+      "reason": "REAL_SHOE_NOT_ADOPTED_CANDIDATE_ONLY",
+      "source_state": "CANDIDATE",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943514448",
+      "model": "HR013-B",
+      "family": "HR013",
+      "reason": "REAL_SHOE_NOT_ADOPTED_CANDIDATE_ONLY",
+      "source_state": "CANDIDATE",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943543192",
+      "model": "HR013-C",
+      "family": "HR013",
+      "reason": "REAL_SHOE_NOT_ADOPTED_CANDIDATE_ONLY",
+      "source_state": "CANDIDATE",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943417982",
+      "model": "HR014-A",
+      "family": "HR014",
+      "reason": "REAL_SHOE_NOT_ADOPTED_CANDIDATE_ONLY",
+      "source_state": "CANDIDATE",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943481648",
+      "model": "HR014-B",
+      "family": "HR014",
+      "reason": "REAL_SHOE_NOT_ADOPTED_CANDIDATE_ONLY",
+      "source_state": "CANDIDATE",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943574061",
+      "model": "HR014-C",
+      "family": "HR014",
+      "reason": "REAL_SHOE_NOT_ADOPTED_CANDIDATE_ONLY",
+      "source_state": "CANDIDATE",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943502604",
+      "model": "HR015-A",
+      "family": "HR015",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943542329",
+      "model": "HR015-B",
+      "family": "HR015",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943517454",
+      "model": "HR015-C",
+      "family": "HR015",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943484872",
+      "model": "HR017-A",
+      "family": "HR017",
+      "reason": "REAL_SHOE_NOT_ADOPTED_CANDIDATE_ONLY",
+      "source_state": "CANDIDATE",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943583193",
+      "model": "HR017-B",
+      "family": "HR017",
+      "reason": "REAL_SHOE_NOT_ADOPTED_CANDIDATE_ONLY",
+      "source_state": "CANDIDATE",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943459958",
+      "model": "HR017-C",
+      "family": "HR017",
+      "reason": "REAL_SHOE_NOT_ADOPTED_CANDIDATE_ONLY",
+      "source_state": "CANDIDATE",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943493822",
+      "model": "HR019-A",
+      "family": "HR019",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943546524",
+      "model": "HR019-B",
+      "family": "HR019",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943635041",
+      "model": "HR019-C",
+      "family": "HR019",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943497861",
+      "model": "HR020-A",
+      "family": "HR020",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943530673",
+      "model": "HR020-B",
+      "family": "HR020",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943558469",
+      "model": "HR020-C",
+      "family": "HR020",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943527861",
+      "model": "HR024-B",
+      "family": "HR024",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943622296",
+      "model": "HR024-C",
+      "family": "HR024",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943541766",
+      "model": "HR025-A",
+      "family": "HR025",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943535810",
+      "model": "HR025-B",
+      "family": "HR025",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943597447",
+      "model": "HR025-C",
+      "family": "HR025",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943529870",
+      "model": "HR026-A",
+      "family": "HR026",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943582498",
+      "model": "HR026-B",
+      "family": "HR026",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943546735",
+      "model": "HR026-C",
+      "family": "HR026",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943614355",
+      "model": "HR027-A",
+      "family": "HR027",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/热榜持续扩品_2026-09-05/HR001-HR067_201条最终全链路回读.json"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943654096",
+      "model": "HR027-B",
+      "family": "HR027",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/热榜持续扩品_2026-09-05/HR001-HR067_201条最终全链路回读.json"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943558633",
+      "model": "HR028-A",
+      "family": "HR028",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/热榜持续扩品_2026-09-05/HR001-HR067_201条最终全链路回读.json"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943592466",
+      "model": "HR028-B",
+      "family": "HR028",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/热榜持续扩品_2026-09-05/HR001-HR067_201条最终全链路回读.json"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943544741",
+      "model": "HR029-A",
+      "family": "HR029",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/热榜持续扩品_2026-09-05/HR001-HR067_201条最终全链路回读.json"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943558646",
+      "model": "HR029-B",
+      "family": "HR029",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/热榜持续扩品_2026-09-05/HR001-HR067_201条最终全链路回读.json"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943574507",
+      "model": "HR030-A",
+      "family": "HR030",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/热榜持续扩品_2026-09-05/HR001-HR067_201条最终全链路回读.json"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943545775",
+      "model": "HR030-B",
+      "family": "HR030",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/热榜持续扩品_2026-09-05/HR001-HR067_201条最终全链路回读.json"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943665060",
+      "model": "HR031-A",
+      "family": "HR031",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/热榜持续扩品_2026-09-05/HR001-HR067_201条最终全链路回读.json"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943651120",
+      "model": "HR031-B",
+      "family": "HR031",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/热榜持续扩品_2026-09-05/HR001-HR067_201条最终全链路回读.json"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943665138",
+      "model": "HR032-A",
+      "family": "HR032",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/热榜持续扩品_2026-09-05/HR001-HR067_201条最终全链路回读.json"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943539818",
+      "model": "HR032-B",
+      "family": "HR032",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/热榜持续扩品_2026-09-05/HR001-HR067_201条最终全链路回读.json"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943593578",
+      "model": "HR033-A",
+      "family": "HR033",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/热榜持续扩品_2026-09-05/HR001-HR067_201条最终全链路回读.json"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943649254",
+      "model": "HR033-B",
+      "family": "HR033",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/热榜持续扩品_2026-09-05/HR001-HR067_201条最终全链路回读.json"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943690007",
+      "model": "HR034-A",
+      "family": "HR034",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/热榜持续扩品_2026-09-05/HR001-HR067_201条最终全链路回读.json"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943543826",
+      "model": "HR034-B",
+      "family": "HR034",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/热榜持续扩品_2026-09-05/HR001-HR067_201条最终全链路回读.json"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943568763",
+      "model": "HR035-A",
+      "family": "HR035",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/热榜持续扩品_2026-09-05/HR001-HR067_201条最终全链路回读.json"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943680112",
+      "model": "HR035-B",
+      "family": "HR035",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/热榜持续扩品_2026-09-05/HR001-HR067_201条最终全链路回读.json"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943627431",
+      "model": "HR036-A",
+      "family": "HR036",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/热榜持续扩品_2026-09-05/HR001-HR067_201条最终全链路回读.json"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943561786",
+      "model": "HR036-B",
+      "family": "HR036",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/热榜持续扩品_2026-09-05/HR001-HR067_201条最终全链路回读.json"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943654301",
+      "model": "HR037-A",
+      "family": "HR037",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/热榜持续扩品_2026-09-05/HR001-HR067_201条最终全链路回读.json"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943674209",
+      "model": "HR037-B",
+      "family": "HR037",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/热榜持续扩品_2026-09-05/HR001-HR067_201条最终全链路回读.json"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943620588",
+      "model": "HR038-A",
+      "family": "HR038",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/热榜持续扩品_2026-09-05/HR001-HR067_201条最终全链路回读.json"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943677234",
+      "model": "HR038-B",
+      "family": "HR038",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/热榜持续扩品_2026-09-05/HR001-HR067_201条最终全链路回读.json"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943686274",
+      "model": "HR040-A",
+      "family": "HR040",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/热榜持续扩品_2026-09-05/HR001-HR067_201条最终全链路回读.json"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943620678",
+      "model": "HR040-B",
+      "family": "HR040",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/热榜持续扩品_2026-09-05/HR001-HR067_201条最终全链路回读.json"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943614836",
+      "model": "HR041-A",
+      "family": "HR041",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943641737",
+      "model": "HR041-B",
+      "family": "HR041",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943608942",
+      "model": "HR041-C",
+      "family": "HR041",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943703336",
+      "model": "HR042-A",
+      "family": "HR042",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943747024",
+      "model": "HR042-B",
+      "family": "HR042",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943639708",
+      "model": "HR042-C",
+      "family": "HR042",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943607904",
+      "model": "HR043-A",
+      "family": "HR043",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943621884",
+      "model": "HR043-B",
+      "family": "HR043",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943695412",
+      "model": "HR043-C",
+      "family": "HR043",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943650718",
+      "model": "HR044-A",
+      "family": "HR044",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943753087",
+      "model": "HR044-B",
+      "family": "HR044",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943607919",
+      "model": "HR044-C",
+      "family": "HR044",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943687504",
+      "model": "HR045-A",
+      "family": "HR045",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943660642",
+      "model": "HR045-B",
+      "family": "HR045",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943723312",
+      "model": "HR045-C",
+      "family": "HR045",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943660658",
+      "model": "HR046-A",
+      "family": "HR046",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943773037",
+      "model": "HR046-B",
+      "family": "HR046",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943694473",
+      "model": "HR046-C",
+      "family": "HR046",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943670678",
+      "model": "HR047-A",
+      "family": "HR047",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943677652",
+      "model": "HR047-B",
+      "family": "HR047",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943767083",
+      "model": "HR047-C",
+      "family": "HR047",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943649788",
+      "model": "HR048-A",
+      "family": "HR048",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943767092",
+      "model": "HR048-B",
+      "family": "HR048",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943607995",
+      "model": "HR048-C",
+      "family": "HR048",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943633918",
+      "model": "HR049-A",
+      "family": "HR049",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943710448",
+      "model": "HR049-B",
+      "family": "HR049",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943639863",
+      "model": "HR049-C",
+      "family": "HR049",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943774082",
+      "model": "HR050-A",
+      "family": "HR050",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943766117",
+      "model": "HR050-B",
+      "family": "HR050",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943660717",
+      "model": "HR050-C",
+      "family": "HR050",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943742273",
+      "model": "HR052-A",
+      "family": "HR052",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/热榜持续扩品_2026-09-05/HR001-HR067_201条最终全链路回读.json"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943664760",
+      "model": "HR052-B",
+      "family": "HR052",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/热榜持续扩品_2026-09-05/HR001-HR067_201条最终全链路回读.json"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943687648",
+      "model": "HR053-A",
+      "family": "HR053",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943638954",
+      "model": "HR053-B",
+      "family": "HR053",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943784084",
+      "model": "HR053-C",
+      "family": "HR053",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943673716",
+      "model": "HR054-A",
+      "family": "HR054",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943741370",
+      "model": "HR054-B",
+      "family": "HR054",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943737356",
+      "model": "HR054-C",
+      "family": "HR054",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943672753",
+      "model": "HR055-A",
+      "family": "HR055",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943711519",
+      "model": "HR055-B",
+      "family": "HR055",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943784098",
+      "model": "HR055-C",
+      "family": "HR055",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943775160",
+      "model": "HR056-A",
+      "family": "HR056",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943751252",
+      "model": "HR056-B",
+      "family": "HR056",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943778191",
+      "model": "HR056-C",
+      "family": "HR056",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943768215",
+      "model": "HR057-A",
+      "family": "HR057",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943700590",
+      "model": "HR057-B",
+      "family": "HR057",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943771190",
+      "model": "HR057-C",
+      "family": "HR057",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943793113",
+      "model": "HR058-A",
+      "family": "HR058",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943721497",
+      "model": "HR058-B",
+      "family": "HR058",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943773221",
+      "model": "HR058-C",
+      "family": "HR058",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943790138",
+      "model": "HR059-A",
+      "family": "HR059",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943767266",
+      "model": "HR059-B",
+      "family": "HR059",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943779211",
+      "model": "HR059-C",
+      "family": "HR059",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943755354",
+      "model": "HR060-A",
+      "family": "HR060",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/热榜持续扩品_2026-09-05/HR001-HR067_201条最终全链路回读.json"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943705620",
+      "model": "HR060-B",
+      "family": "HR060",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [
+        "02_Alibaba运营/05_扩品工程/热榜持续扩品_2026-09-05/HR001-HR067_201条最终全链路回读.json"
+      ],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943700660",
+      "model": "HR061-A",
+      "family": "HR061",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943748344",
+      "model": "HR061-B",
+      "family": "HR061",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943727538",
+      "model": "HR061-C",
+      "family": "HR061",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943682804",
+      "model": "HR062-A",
+      "family": "HR062",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943799127",
+      "model": "HR062-B",
+      "family": "HR062",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943761346",
+      "model": "HR062-C",
+      "family": "HR062",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943653995",
+      "model": "HR063-A",
+      "family": "HR063",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943651966",
+      "model": "HR063-B",
+      "family": "HR063",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943764325",
+      "model": "HR063-C",
+      "family": "HR063",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943738486",
+      "model": "HR065-A",
+      "family": "HR065",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943703750",
+      "model": "HR065-B",
+      "family": "HR065",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943717639",
+      "model": "HR065-C",
+      "family": "HR065",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943734532",
+      "model": "HR066-A",
+      "family": "HR066",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943708668",
+      "model": "HR066-B",
+      "family": "HR066",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943670945",
+      "model": "HR066-C",
+      "family": "HR066",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943662995",
+      "model": "HR067-A",
+      "family": "HR067",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943783263",
+      "model": "HR067-B",
+      "family": "HR067",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    },
+    {
+      "product_id": "1601943658940",
+      "model": "HR067-C",
+      "family": "HR067",
+      "reason": "REAL_SHOE_OR_PROCUREMENT_MAPPING_MISSING",
+      "source_state": "MISSING",
+      "bound_source_id": null,
+      "evidence": [],
+      "next_action": "First complete real-shoe mapping and matching full product identity; do not put new-shoe FAQ on old concept page.",
+      "copy_status": "NOT_AUTHORED_NOT_WRITTEN",
+      "phase_status": "DEFERRED_BY_OWNER_REAL_SHOE_ACCEPTANCE_FIRST"
+    }
+  ],
+  "user_scope_decision": {
+    "at": "2026-10-11T17:29:42.621233+00:00",
+    "decision": "先验收实款，159条单列待修",
+    "effect": "Excluded from this copy and shared factory image batch; no old-page sourcing replacement in this phase."
+  }
+}

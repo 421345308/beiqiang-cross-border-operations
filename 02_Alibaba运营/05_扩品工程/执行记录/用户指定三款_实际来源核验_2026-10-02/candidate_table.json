@@ -1,0 +1,220 @@
+{
+  "stage": "THREE_SOURCE_IDENTITY_DEMAND_AND_IMAGE_ROLE_PACKAGE",
+  "updated_UTC": "2026-10-02T15:48:43.333176+00:00",
+  "correction": "2482094 is only高级拖鞋. Corrected独立洞洞鞋source2557137; duplicate original URL was never counted as a separate product.",
+  "candidates": [
+    {
+      "user_role": "高级拖鞋",
+      "source_id": "2482094",
+      "source_url": "https://baiyou877.sooxie.com/detail/2482094",
+      "source_folder": "source2482094",
+      "article": "M001",
+      "CNY": 45,
+      "current_colors": [
+        "Red",
+        "Black",
+        "Grey"
+      ],
+      "current_size_labels": [
+        "35-36",
+        "37-38",
+        "39-40",
+        "40-41",
+        "42-43",
+        "44-45"
+      ],
+      "material_status": "Source06 design labels EVA arrow to shoe body;07 says全掌EVA. Use EVA shoe body as broad source statement only; independent lining/midsole/ground-contact pod formulations unconfirmed.",
+      "state": "CONTINUE_RED_GREY_ASSORTMENT_EVALUATION",
+      "dedup": "Independent exact sourceID/article check over5243 non-source files: no previous same-source publication found; not a full-store image guarantee.",
+      "original_manifest": "source2482094/source_image_manifest.json",
+      "confirmed_structure": "Closed-toe open-heel slip-on mule with sculpted sidewall and contrasting orange outsole pods; no vented garden-clog upper or heel strap.",
+      "title_hypothesis": "EVA Closed-Toe Slip-On Mules with Sculpted Sides and Contrast Sole Pods",
+      "safe_source_roles": {
+        "05": "Red wearer image",
+        "08": "Actual outsole pod close-up; no tested massage claim",
+        "11": "Grey shoe pair crop; omit surrounding illuminated marketing set",
+        "12": "Red shoe interior with Made in China text; no need erase product text"
+      },
+      "excluded_claims": [
+        "Massage/medical effect",
+        "Real lights/glow",
+        "Tested rebound",
+        "Premium quality verified",
+        "Overseas bestseller"
+      ],
+      "download_evidence": {
+        "full_original_count": 13,
+        "decoded": 13,
+        "failed": []
+      },
+      "visual_review": {
+        "reviewer": "review_5998_readonly",
+        "result": "LIMITED_ASSET_PACKAGE_ONLY",
+        "exact_gap": "Complete black shoe product image without synthetic lighting remains unverified. No product redraw or effect-removal invention allowed.",
+        "safe_roles": [
+          "Red wearer05",
+          "Actual pod close-up08",
+          "Grey shoe crop11, supplier image not authenticated full-scene photo",
+          "Red interior12 with actual Made in China wording"
+        ]
+      },
+      "considered_colors": [
+        "Red",
+        "Grey"
+      ],
+      "black": "Excluded until full true image without syntheticlighting verified",
+      "scope_note": "A missing Black full image need not block correctly pictured Red/Grey assortment; ordinary procurement availability confirmed per inquiry, no stock soft gate. Grey11 supplier product crop not represented as authenticated on-location photo."
+    },
+    {
+      "user_role": "拖鞋",
+      "source_id": "2544182",
+      "source_url": "https://thxy.sooxie.com/detail/2544182",
+      "source_folder": "source2544182",
+      "article": "A6607",
+      "CNY": 20,
+      "current_colors": [
+        "White",
+        "Black",
+        "Blue",
+        "Purple"
+      ],
+      "current_size_labels": [
+        "24-25",
+        "26-27",
+        "28-29",
+        "30-31",
+        "32-33",
+        "34-35"
+      ],
+      "upper": "EVA",
+      "state": "BRANDED_RESALE_IDENTITY_SCOPE_REVIEW",
+      "IP_evidence": "Actual ABC MINO lettering insideshoe and brand character charms, no conclusion of infringement; preserve brand and assess normal branded resale identity/scope, do not erase marks or claimunbranded/private-label authority.",
+      "dedup": "Independent exact sourceID/article check over5243 non-source files: no previous same-source publication found; not a full-store image guarantee.",
+      "original_manifest": "source2544182/source_image_manifest.json",
+      "confirmed_structure": "Kids closed-toe perforated open-heel slide, no heel retention strap; brand cartoon charms.",
+      "sole_source_description": "Parameter image08 states soleEVA, not separate layer proof.",
+      "sku_count": 24,
+      "download_evidence": {
+        "full_original_count": 25,
+        "decoded": 25,
+        "failed": []
+      },
+      "retail_demand_limit": "Adult gardenclog evidence does not establish kids closedtoe slide demand or certifications."
+    },
+    {
+      "user_role": "洞洞鞋",
+      "source_id": "2557137",
+      "source_url": "https://huohuo.sooxie.com/detail/2557137",
+      "source_folder": "source2557137",
+      "state": "NEXT_PACKAGE_SELECTED_SOURCE_VISUAL_PASS_NO_PUBLICATION_YET",
+      "dedup": "Independent exact sourceID/article check over5243 non-source files: no previous same-source publication found; not a full-store image guarantee.",
+      "original_manifest": "source2557137/source_image_manifest.json",
+      "article": "2627BSK",
+      "CNY": 23,
+      "current_colors": [
+        "Blue",
+        "Khaki",
+        "Beige",
+        "Light Pink",
+        "Black"
+      ],
+      "current_size_labels": [
+        "35-36",
+        "37-38",
+        "39-40"
+      ],
+      "sku_count": 15,
+      "upper": "EVA",
+      "lining": "Not specified",
+      "midsole": "Not specified",
+      "outsole": "Not specified",
+      "confirmed_structure": "Closed-toe perforated platform clog with heel strap and complete heel opening; sculpted thick sole profile.",
+      "title_hypothesis": "EVA Platform Clogs with Heel Strap and Closed Toe",
+      "long_tail_hypotheses": [
+        "EVA platform clogs with heel strap",
+        "closed toe platform clogs",
+        "five color casual clogs wholesale"
+      ],
+      "size_conversion": "Source paired size labels retained; do not import retailUS/UK charts. Source02 lists225/235/245mm suggested feet, not independently measured internal lengths.",
+      "pricing_reference": {
+        "FX_CNY_per_USD": "6.6987",
+        "MOQ_pairs": 2,
+        "tiers": [
+          {
+            "minimum_pairs": 2,
+            "USD": "5.16"
+          },
+          {
+            "minimum_pairs": 50,
+            "USD": "4.81"
+          },
+          {
+            "minimum_pairs": 100,
+            "USD": "4.47"
+          }
+        ]
+      },
+      "image_role_plan": {
+        "M1": "Complete actual pair crop from800px source; no product redraw",
+        "M2": "Five actual colour choices, source01 shoe crops",
+        "M3": "Visible heel strap and connection close-up; no strength guarantee",
+        "M4": "Closed toe, ventilation openings and platform side profile",
+        "M5": "Three exact paired labels; fitting inquiry, no inventedUS conversion",
+        "M6": "Beiqiang sourcing identity and inquiry information; no own-factory claim",
+        "D1": "Actual EVA upper structure; layer materials unspecified",
+        "D2": "Strap/side profile detail; no nonexistent bottom view or traction claim",
+        "D3": "Colour-size ordering table and fit confirmation",
+        "D4": "MOQ/order quantities/destination/packing/dispatch inquiry"
+      },
+      "quality_limit": "Images allow visual shape/mark screening only. No physical quality/durability/strap strength testing. These are order inquiry checks, not publication soft gates.",
+      "download_evidence": {
+        "full_original_count": 7,
+        "decoded": 7,
+        "failed": []
+      },
+      "visual_review": {
+        "reviewer": "review_5998_readonly",
+        "result": "SUFFICIENT_REAL_SOURCE_FOR_6M4D_LAYOUT",
+        "observed": "Blue/Khaki/Black complete shoe foreground plus wearer scene; same hole layout, pivot point and thicksole. No readable third-party mark. Oval side features are holes and inner texture.",
+        "strap_limit": "Pivot strap visible; current pictures show it rotated forward. Do not claim photographed rear-strap fit/retention strength test.",
+        "no_bottom_view": true,
+        "remaining_work": "Actual6M4D composition +independent finished visual review, nativecategory/schema, currentFX preflight, officialupload/payload/write once/formalreadback."
+      }
+    }
+  ],
+  "priority": "User-specified three sources supersede exploratory Mary Jane selection; existing Mary Jane materials retained.",
+  "schema_add_count_this_stage": 0,
+  "image_bank_uploads_this_stage": 0,
+  "inventory_writes": 0,
+  "stop_condition": {
+    "stop_at_UTC": "2026-10-02T18:00:00+00:00",
+    "stop_at_Beijing": "2026-10-03 02:00",
+    "supersedes": "Earlier quota-reset conditional stop",
+    "no_auto_resume": true,
+    "rule": "At18UTC cease new work/modifications/publication; only safe in-flight result reconciliation/checkpoint. No claim time itself proves quotareset."
+  },
+  "overseas_demand_match": {
+    "observed_UTC": "2026-10-02T15:48:43.333176+00:00",
+    "walmart_yard_shoe": {
+      "url": "https://www.walmart.com/c/kp/yard-shoe",
+      "observed": "Litfun gardenclogs Best seller,4.4/1605 reviews,fromUSD16.99; Vonmay thicksoleEVAclogs Best seller,4.0/936 reviews,fromUSD14.99 at current read.",
+      "applies_to": "2627BSK closed toe/perforation/heel strap matches gardenclog broad structure, platform fashion geometry remains distinct.",
+      "limits": "Retail category/product demand only; no supplier/model sales proof, no equivalent quality or protective/work suitability; no transfer of arch support/slipresistance promises."
+    },
+    "decathlon_slides": {
+      "url": "https://www.decathlon.co.uk/sports/surf-beach/slides",
+      "observed": "Men basic poolslideGBP6.99 and kids550GBP6.99 sale were visible, listings with votes across styles/variants.",
+      "limits": "Open-toe slides differ from M001 closedtoe/podsole and A6607 kids closedtoe brandslide; pricing context only, not exact structure bestseller evidence."
+    },
+    "cloud_slide_review": {
+      "url": "https://www.walmart.com/reviews/product/15788354008",
+      "own_read": "Robot/human access block; not bypassed.",
+      "parent_reported_questions": [
+        "Size band discrepancy",
+        "Heat deformation"
+      ],
+      "use": "Order fit/care inquiry questions only; no local claim that suppliers solve them."
+    },
+    "no_keyword_volume": "Long-tail terms come from verified structure and retailer category language, not measured search volumes."
+  }
+}

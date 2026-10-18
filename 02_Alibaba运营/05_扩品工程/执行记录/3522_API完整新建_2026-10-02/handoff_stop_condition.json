@@ -1,0 +1,45 @@
+{
+  "halt_at_utc": "2026-10-02T18:00:00+00:00",
+  "halt_at_beijing": "2026-10-03 02:00 Asia/Shanghai",
+  "reason": "User explicit stop time, supersedes previous quota-reset inference condition",
+  "at_deadline": "Pause all Beiqiang work; no new task/modification/publishing. Only safely verify in-flight results and save checkpoint. No automatic resume; wait for user reassignment. Near deadline do not start writes that cannot be closed.",
+  "quota_reset_confirmed": false,
+  "deadline_is_not_proof_of_reset": true,
+  "current_product_id": "1601969920294",
+  "new_model": "BQ-L3522",
+  "old_products_modified_or_deleted": [],
+  "known_writes": [
+    "schema.add successful one attempt",
+    "title/keyword schema.update successful; title confirmed, keyword empty",
+    "Cow suede attribute schema.update successful; attribute confirmed, review pending"
+  ],
+  "unknown_writes": [
+    {
+      "scope": "keywords only",
+      "method": "alibaba.icbu.product.update.field",
+      "attempted_at": "2026-10-02T15:50:51.517568+00:00",
+      "ledger": "keyword_field_repair/write_once_ledger.json",
+      "retries": 0,
+      "latest_keywords": [
+        ""
+      ],
+      "outcome": "Unknown; empty readback does not establish no server commit"
+    }
+  ],
+  "remaining": [
+    "Keyword unknown result/persistence专项; no replay",
+    "Parent/offowner final old-product check and own off operation"
+  ],
+  "recorded_at": "2026-10-02T16:00:39.080910+00:00",
+  "reserved_old_hr_mapping": {
+    "old_model": "HR057-A",
+    "old_id": "1601943768215",
+    "new_model": "BQ-L3522",
+    "new_id": "1601969920294",
+    "parent_register": "HR系列真实货源改造_2026-09-21/HR普通品一对一待替换映射_2026-10-02.json",
+    "off_owner": "Parent coordinated owner; task7 does not delete/offline",
+    "off_gate": "Actual new score>=5 + public + final old-product verification"
+  },
+  "current_formal_status": "approved/Y; Cow suede confirmed; real5.00 diagnostics clear",
+  "updated_at": "2026-10-02T16:13:04.216377+00:00"
+}

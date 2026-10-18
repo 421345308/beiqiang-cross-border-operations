@@ -1,0 +1,12 @@
+{
+  "initial_request": {
+    "cat_id": 201334413,
+    "language": "en_US"
+  },
+  "initial_response": {
+    "request_id": "0bbb637a17919373868508449",
+    "_trace_id_": "0bb4a9bd17919373866967471e0f4a",
+    "observed_at": "2026-10-14T00:23:07.059763+00:00"
+  },
+  "diagnosis": "Missing current documented param_product_top_publish_request envelope; no product mutation. Corrected normal read request, not an authentication or permission issue."
+}

@@ -1,0 +1,27 @@
+{
+  "tiers": [
+    {
+      "minimum_quantity": 2,
+      "USD_per_pair": "13.12",
+      "cost_CNY": 59,
+      "markup_factor": "1.5"
+    },
+    {
+      "minimum_quantity": 50,
+      "USD_per_pair": "12.24",
+      "cost_CNY": 59,
+      "markup_factor": "1.4"
+    },
+    {
+      "minimum_quantity": 100,
+      "USD_per_pair": "11.37",
+      "cost_CNY": 59,
+      "markup_factor": "1.3"
+    }
+  ],
+  "FX_CNY_per_USD": "6.7487",
+  "FX_source": "ChinaMoney official central parity notice 2026-09-21, retrieved 2026-10-07 from search index; historical reference, not current spot rate",
+  "FX_url": "https://www.chinamoney.com.cn/chinese/ccprnoticecontent/index.html?searchDate=2026-09-21",
+  "fees": "Purchase handling, inspection, packing, freight, taxes and service costs pending order-specific estimation. Markup is not net profit.",
+  "packaging": "34x23x13cm / 0.5kg user-authorized operational baseline; not measured actual parcel"
+}

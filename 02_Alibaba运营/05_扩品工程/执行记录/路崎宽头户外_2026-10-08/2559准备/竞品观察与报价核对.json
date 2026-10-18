@@ -1,0 +1,28 @@
+{
+  "style": "2559",
+  "source_price_cny": 52,
+  "observed_at": "2026-10-10T10:50:43.047904+00:00",
+  "provider": "public web fallback; Firecrawl tools unavailable",
+  "observations": [
+    {
+      "url": "https://www.alibaba.com/product-detail/Low-Top-Casual-Walking-Flats-shoes_1600338622135.html",
+      "status": "direct page unavailable; search metadata only",
+      "buyer_terms": [
+        "low top",
+        "casual walking",
+        "metal eyelets"
+      ],
+      "price_comparable": false
+    },
+    {
+      "url": "https://www.alibaba.com/product-detail/Outdoor-Men-Casual-Shoes-Men-Suede_1600321219021.html",
+      "status": "direct page returned no content; indexed introduction is not original field proof",
+      "buyer_terms": [
+        "men casual shoes",
+        "stitched casual profile"
+      ],
+      "price_comparable": false
+    }
+  ],
+  "decision": "Insufficient exactstyle/material/order/trade-term competitor evidence for price substitution. Retain authorized sourcecost52 and markup50/40/30percent for2/50/100pair tiers at existing6.7487referenceconversion; no volume/trend/material/performance inference."
+}

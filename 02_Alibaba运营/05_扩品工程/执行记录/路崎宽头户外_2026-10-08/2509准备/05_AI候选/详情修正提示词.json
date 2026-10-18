@@ -1,0 +1,24 @@
+{
+  "tool": "built-in image_gen",
+  "requests": [
+    {
+      "key": "D2_v2",
+      "paths": [
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/图片/2509/23.jpg"
+      ],
+      "prompt": "Use case: compositing. Square English Alibaba detail module. Use the ENTIRE supplied original Grey Luqi 2509 pair photograph as one large UN-CROPPED photo panel without altering any part of the shoes or photographed scene. Preserve every shoe edge, the original rotary-dial artwork, three fabric loops, upper panels, sole and color. Do NOT make macro insets, cutouts, magnify tiny marks, reconstruct mesh or tread, or add a new shoe angle. This is only a clean page layout around the original complete photograph. White margins outside the photograph. Header exactly \"DIAL CLOSURE & PANELLED UPPER\". Footer exactly \"Actual product view | Confirm order specifications\". Product photograph large and clear, restrained charcoal typography, no icons, swatches, diagrams, feature or material claims."
+    },
+    {
+      "key": "D4_v2",
+      "paths": [
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2509准备/05_AI候选/2509-detail4-v1.png"
+      ],
+      "prompt": "Use case: precise-object-edit. The supplied image is the edit target. Change ONLY the second information block on the right: REMOVE both circular color/material swatches. Retain the exact plain text \"Grey / Dark Brown\" centered in that block, with white or the same very light background. Do not replace circles with other icons, new colors, texture swatches or product pictures. Keep all other existing text verbatim and preserve the entire photographed shoe pair, dial marks, mesh, color, panel geometry, sole edges, layout and light exactly unchanged. No new material or size claims. This is a local graphic removal of invented swatch circles, not a change to the real shoes."
+    }
+  ],
+  "review": {
+    "D2_v2": "ACCEPT_CANDIDATE: returns to a complete source-backed pair view, avoids invented macro proof. Source #23 remains the factual anchor.",
+    "D4_v2": "ACCEPT_CANDIDATE: unsupported texture/color swatches removed; two confirmed source color names remain as text; no numeric conversion."
+  },
+  "complete_set_review": "PENDING: inspect raw M1/M2/M3 and combined six-main/four-detail/SKU group before official upload or create."
+}

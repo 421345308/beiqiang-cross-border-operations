@@ -1,0 +1,1311 @@
+{
+  "version": 8,
+  "status": "APPROVED_FOR_BATCH_REPLACEMENT",
+  "entry": "README.md",
+  "current_media_root": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情",
+  "raw_media_root": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片",
+  "owner_scope": "负责人要求用AI补足原素材的表达，全面优化原C1–C5及统一C6风格；整套审核后再安排平台替换。",
+  "generation_mode": "built-in image_gen",
+  "requests": {
+    "C1": {
+      "prompt": "Edit image1 Company Profile poster. Image2 is original factory facade; preserve original building/sign/window/floors geometry, no invented extension. Major layout correction needed: remove both generic design-desk pictures and giant company name. These repeat the OEM module and communicate no new identity information. Make a COMPACT LANDSCAPE canvas about1600x850. Keep facade photo right35%, left65% a professionally typeset company introduction. White compact header same style as newothermodules: BEIQIANG left, vertical divider, \"Company Profile\" navy and orange; header <=12%canvas. Company Englishname max2lines and NO MORE than12%totalcanvasheight, not enormous hero. Body readable largerthanfineprint, generouslineheight. Keep exacttext:\n\"Quanzhou Beiqiang Footwear & Apparel Co., Ltd.\"\n\"Quanzhou, Fujian, China\"\n\"We work with importers, wholesalers, brands and e-commerce businesses on wholesale and OEM / ODM footwear projects.\"\nTwo SMALL text-only columnsunderbody, NOT pictures orbigicons:\n\"Wholesale cooperation\"\n\"Existing styles, trial-order discussions and assortment planning.\"\n\"OEM / ODM projects\"\n\"Design requirements, sample review and brand presentation.\"\nThin footer \"Tell us your product direction and purchasing needs.\"\nONLY photograph is originalfacade. No swatches/shoedrawings/sample/shoe hero/productionpanorama/packing map/processicons. No newclaims,numbers,brands,certification. No generalFootwearManufacturingPartner giantheading. Englishoverlayonly,retain incidentaloriginalChinese贝强鞋业sign. Navywhiteorange with restrainedtypography. One identitymessage, no repeats fromothermodules.",
+      "referenced_image_paths": [
+        "E:/C盘迁移/Codex/.codex/generated_images/01a1164e-73c1-70d1-882c-299608adb19c/exec-1a99d312-5f6c-4a26-8855-b65f4f148d17.png",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/大门.jpg"
+      ],
+      "transparent_background": false,
+      "selected_output": "E:/C盘迁移/Codex/.codex/generated_images/01a1164e-73c1-70d1-882c-299608adb19c/exec-650e9796-b906-46fe-9a76-a4be800e3f4e.png"
+    },
+    "C2": {
+      "prompt": "Create ONE finished premium B2B footwear supplier detail poster. Image1 is our shipping poster, visual style reference only: white/pale cool background, navy #063266 and orange #ff7900, clear sans-serif type. Make this revision more credible and information-rich, editorial photographic scenes dominate, not giant headings or repeated icon cards. English designed text only. Compact header with BEIQIANG and module title, maximum10% canvas. Do not add generic slogans to every corner. Clear meaningful captions under images. Mobile-readable, body text not tiny. No stock/production numbers, invented years, capacity, certification, laboratories, customer brand logos, claim to serve named brands, price or fixed MOQ/lead time, or actual completed order/customer case. No duplicated panorama on separate posters. Distinct scene roles. No watermark. Exact text verbatim, no extra copy except required labels. Keep authentic texture, avoid excessive AI gloss.\nMODULE C2 OEM/ODM cooperation, portrait approximately1120x1440. Photorealistic AI process illustration. Main idea: buyers see tangible subjects to discuss, not generic paper stacks or large exploded sneaker. Show FOUR distinct close-up scenes in 2x2 editorial grid with asymmetrical photo details, no giant numeral circles. No full factory office or identifiable employee, no invented design-center.\nHeader \"OEM / ODM Development\" / \"Shape the project before production\"\nPanel1 \"Design direction\" / \"Reference style, intended use and construction.\" Photo of hands comparing several SMALL footwear silhouettes on a workboard (slip-on, lace-up, boot outlines) with compact specification sketch. Multiple shoe categories, no universal actualSKU claim.\nPanel2 \"Color & material choices\" / \"Discuss upper, lining and sole requirements.\" Tactile material chips and color swatches being examined alongside a small upper piece, no specific fiber/material names and not huge swatch fan.\nPanel3 \"Branding details\" / \"Logo placement, labels and visual identity.\" Close-up of hands holding a small sample footwear tongue with blank woven label, a heel tab, plain logo-placement diagram marked only by a small orange rectangle. No actualcustomerlogo or packing scene.\nPanel4 \"Sample revisions\" / \"Review the sample and agree the changes.\" Two physically different neutral shoe samples at modest size with a hand pointing at a specific collar/heel and a short marked sketch; no fake numerical measurement.\nBottom slim workflow line \"Brief → Options → Sample → Agreed specification\"\nSmall caption \"Development workflow illustration\"\nScenes are photo-like illustrations of collaboration, not presented as company documentary. No large shoe exploded layers, no QC tests/warehouse/transport, no repeated shoe across4panels. Visual information much denser than a three-step diagram, captions remain short.",
+      "referenced_image_paths": [
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C6_shipping.png"
+      ],
+      "transparent_background": false,
+      "selected_output": "E:/C盘迁移/Codex/.codex/generated_images/01a1164e-73c1-70d1-882c-299608adb19c/exec-1992eb02-ee0d-4903-8b73-863124e8f92e.png"
+    },
+    "C3": {
+      "prompt": "Create ONE finished premium B2B footwear supplier detail poster. Image1 is our shipping poster, visual style reference only: white/pale cool background, navy #063266 and orange #ff7900, clear sans-serif type. Make this revision more credible and information-rich, editorial photographic scenes dominate, not giant headings or repeated icon cards. English designed text only. Compact header with BEIQIANG and module title, maximum10% canvas. Do not add generic slogans to every corner. Clear meaningful captions under images. Mobile-readable, body text not tiny. No stock/production numbers, invented years, capacity, certification, laboratories, customer brand logos, claim to serve named brands, price or fixed MOQ/lead time, or actual completed order/customer case. No duplicated panorama on separate posters. Distinct scene roles. No watermark. Exact text verbatim, no extra copy except required labels. Keep authentic texture, avoid excessive AI gloss.\nMODULE C3 Production, portrait approx1120x1440. Image2 actual workshop panorama; images3and4 actual operation closeups. Rebuild from THESE real photos, not from generated previous poster. Documentary layout with one wide panorama50% and two distinct close-ups below. Image2 preserve same3workers (two white tops, one black top), same green machine row, white tunnel, blue roller/conveyor, ceiling fans/windows and room layout. Do not change apparel into uniforms. Improve exposure, straighten/crop, reduce obvious loose clutter, retain natural working texture. No added machines/workers/sites.\nHeader \"Equipment & Production\" / \"Workshop overview and hands-on operations\"\nWide panorama caption \"Workshop equipment\" / \"Workstations arranged along the production line.\"\nTwo lower large panels respectively from images3and4. Preserve actual hands, tool/black last-held upper/white outsole geometry. Do not replace with generic gray sneakers.\nCaption under photo3: \"Upper preparation\" / \"Preparing the upper at the workstation.\"\nCaption under photo4: \"Upper & sole assembly\" / \"Handling the components during assembly.\"\nTiny footer \"Production scenes from our workshop\"\nNo other numbered flow/Batch flow card, no extra bottomillustration. Header small and panoramic photo large soactualequipmentclearlyrecognizable. No inventedcutting/sewingmachines, QCscene,packaging, machine technicalnames or output claims.",
+      "referenced_image_paths": [
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C6_shipping.png",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/A9C9E3B935A11A476BE00DE0FD0C3BBC.png",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/微信图片_20260530105010_227_16.jpg",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/微信图片_20260530105149_230_16.jpg"
+      ],
+      "transparent_background": false,
+      "selected_output": "E:/C盘迁移/Codex/.codex/generated_images/01a1164e-73c1-70d1-882c-299608adb19c/exec-a8cb884a-7c0c-497e-9b6f-e91e61c9d9d9.png"
+    },
+    "C4": {
+      "prompt": "Create ONE finished premium B2B footwear supplier detail poster. Image1 is our shipping poster, visual style reference only: white/pale cool background, navy #063266 and orange #ff7900, clear sans-serif type. Make this revision more credible and information-rich, editorial photographic scenes dominate, not giant headings or repeated icon cards. English designed text only. Compact header with BEIQIANG and module title, maximum10% canvas. Do not add generic slogans to every corner. Clear meaningful captions under images. Mobile-readable, body text not tiny. No stock/production numbers, invented years, capacity, certification, laboratories, customer brand logos, claim to serve named brands, price or fixed MOQ/lead time, or actual completed order/customer case. No duplicated panorama on separate posters. Distinct scene roles. No watermark. Exact text verbatim, no extra copy except required labels. Keep authentic texture, avoid excessive AI gloss.\nMODULE C4 quality checkpoints, portrait approximately1120x1440. Generate realistic close-up AI illustration scenes with real texture and believable hands. No invented test lab/modern factory/identifiableQCemployee. Avoid four views ofsamebeigelaceupsneaker. Header \"Quality Checkpoints\" / \"Review the details against the agreed requirements\"\nFour2x2panels distinct actions and framing:\n\"Appearance\" / \"Surface finish and consistency between pairs.\" Photo hands bringing two neutral blacksliponshoes side by side on worktable tocomparefinish, visibleupperstexturenormalnotgloss.\n\"Workmanship\" / \"Seams, joins and finishing details.\" Extreme macro of hands examining seam and upper-to-sole join of gray shoe, no magic scanningdevice.\n\"Size & markings\" / \"Size labels and specified product details.\" Hands checking shoe internalEUsize label and reference checklistwithnoactualreadable sizevalue; smallmeasuringtapeusedlikephysicalmeasure butnoinventednumericresult.\n\"Sample comparison\" / \"Compare the order sample with the agreed reference.\" Photoreal brownanklebootpair matchedonworktable with small two cards \"Reference\" / \"Order sample\", fingerpointingatmatchingfeature. No actualcompliancecertificateorPASSstamp.\nSmall bottom caption \"Illustrated inspection scenes\"\nFooter restrained: \"Record differences and agree the corrective action.\"\nNo guaranteed100%inspection, certifications,testresults, tensile/droptestmachines,fakecustomerorders, packingorlablogos. Realistic anatomical hands. Mainqualityactionsdominant instead oftechnicalformpaperfiller. Different footwear merely supports the generalworkflow,notmaterialorSKUfacts.",
+      "referenced_image_paths": [
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C6_shipping.png"
+      ],
+      "transparent_background": false,
+      "selected_output": "E:/C盘迁移/Codex/.codex/generated_images/01a1164e-73c1-70d1-882c-299608adb19c/exec-08da1a5f-9f93-404e-bd49-346e7bb94c93.png"
+    },
+    "C5": {
+      "prompt": "Create ONE finished premium B2B footwear supplier detail poster. Image1 is our shipping poster, visual style reference only: white/pale cool background, navy #063266 and orange #ff7900, clear sans-serif type. Make this revision more credible and information-rich, editorial photographic scenes dominate, not giant headings or repeated icon cards. English designed text only. Compact header with BEIQIANG and module title, maximum10% canvas. Do not add generic slogans to every corner. Clear meaningful captions under images. Mobile-readable, body text not tiny. No stock/production numbers, invented years, capacity, certification, laboratories, customer brand logos, claim to serve named brands, price or fixed MOQ/lead time, or actual completed order/customer case. No duplicated panorama on separate posters. Distinct scene roles. No watermark. Exact text verbatim, no extra copy except required labels. Keep authentic texture, avoid excessive AI gloss.\nMODULE C5 Packing & Order Preparation. Portrait approximately1120x1440. Create a premium photographic process illustration, morephysicalactivityandcontentthantheoldstaticbagboxposter. Clean believable packingtablewithhands, unbranded materials. Do notgeneratefakefactorywarehouse panorama; tightscenesnotidentityproof.\nHeader \"Packing & Order Preparation\" / \"Keep the order assortment and cartons aligned\"\nUpper40%hero photo real-looking hand gently wrapping a neutral pair of shoes in plain tissue beside an open shoebox; another pair in clearpolybag at edge, allonactualpackingbench, no obvious duplicate shoes/clonedhands. Bodycaption \"Packing options\" / \"Pair bags or shoe boxes, with outer cartons.\"\nBelow three DISTINCT photo-processpanels (horizontalonewide+twoor2x2editorial; no repetitiousboximages):\n\"Assortment check\" / \"Match styles, colors, sizes and pairs to the order list.\" Handscheckingbatchesofplainshoeboxes orbagpairsagainstpackinglistwithheadingsonly \"Style | Color | Size | Pairs\", blank numericvalues.\n\"Brand packaging\" / \"Discuss custom boxes, labels and presentation.\" 2neutralsmallbrandedpackagingmockupswithONLY \"YOUR LOGO\" simpleliteraltextononebox; demonstrativechoice, no actualcustomer case.\n\"Carton preparation\" / \"Group the pairs and apply the agreed shipping marks.\" Handssealingonetidyoutercarton, attachedlabelheadings \"Style / Size / Quantity\" nofakeorderoraddressvalues.\nSmall caption \"Packing workflow illustration\"\nFooter one usefulaction \"Send your assortment and packing requirements for a quotation.\"\nDo notincludeairplanes/ships/trucks/worldmap/transportprice (C6willcovertransport), no giant emptycolor-sizetable, noassurancepackingincluded/free, no actualstock/salescount,Chineseprint,dense formtext. Make packingactivitytangible anddistinguishable fromOEMbrandingdevelopment(C2labelsareonshoe).",
+      "referenced_image_paths": [
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C6_shipping.png"
+      ],
+      "transparent_background": false,
+      "selected_output": "E:/C盘迁移/Codex/.codex/generated_images/01a1164e-73c1-70d1-882c-299608adb19c/exec-5c5a4d97-36d4-44fe-8a3b-81627342e166.png"
+    },
+    "C6": {
+      "prompt": "Edit ONLY header of attached Shipping & Delivery poster to match our new white-header factory-module set. Keep all 4cards, their photographs, captions, diagram, quotationinputs and bottomfooter EXACTLY intact, including wording, proportions, imageidentity. Change the topnavybar to WHITE header with BEIQIANG innavy/orangeunderline, thinverticalnavydivider, title \"Shipping & Delivery\" with Shipping innavy andDeliveryorange, subtitle \"Choose a route around your order needs.\" navy. Smallorange diagonal corner accent at top right. REMOVE top rightgeneric FOOTWEARMANUFACTURER/YOURRELIABLEPARTNER slogan. No otherchanges. Sameportraitcanvas andtextsize. No cropping/rearrangingbody,no addedclaims.",
+      "referenced_image_paths": [
+        "C:/Users/spq/Desktop/贝强/01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C6_shipping.png"
+      ],
+      "transparent_background": false,
+      "selected_output": "E:/C盘迁移/Codex/.codex/generated_images/01a1164e-73c1-70d1-882c-299608adb19c/exec-f4b8e3b0-36e3-4ef4-963e-6f7338d34104.png"
+    }
+  },
+  "online_state": {
+    "asset_version": 8,
+    "state": "FORMAL_COMPLETE_PUBLIC_VERIFY_PENDING",
+    "uploaded": true,
+    "bank_evidence": "V8/bank.json",
+    "bank_pixels_evidence": "V8/bank_pixels.json",
+    "bound_product_count": 449,
+    "authorized_product_count": 449,
+    "public_pass_count": 443,
+    "original_offline_display_preserved_count": 5,
+    "current_state_evidence": "V8/当前替换.json",
+    "scope": "Six company images, introduction and general FAQ only; per-shoe highlights and sources preserved"
+  },
+  "assets": {
+    "C1": {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C1_factory.png",
+      "sha256": "e60e6be070cc030e40788df671a3138f5bc02ed201754af0e8bc1ec0a88f92bf",
+      "pixels": [
+        1721,
+        914
+      ],
+      "buyer_question": "贝强是谁，为采购方提供怎样的合作",
+      "qa": "公司身份排版压缩，去掉与开发图重复的桌面图；原建筑招牌、窗户和楼层保留。",
+      "review": "OWNER_APPROVED",
+      "scene_status": "AI_ENHANCED_EXISTING_PHOTO",
+      "buyer_next_step": "贝强是谁，为采购方提供怎样的合作"
+    },
+    "C2": {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C2_oem.png",
+      "sha256": "2e247e1be31b6eb3ea96a104233977b0758171a32563f4143b41e304c500d3b0",
+      "pixels": [
+        1106,
+        1422
+      ],
+      "buyer_question": "开发项目有哪些具体沟通选项和修订步骤",
+      "qa": "四场景分别展示方向、材料选择、鞋身品牌细节和样品修订；没有以一双鞋代全店款式。",
+      "review": "OWNER_APPROVED",
+      "scene_status": "AI_GENERATED_WORKFLOW_ILLUSTRATION",
+      "buyer_next_step": "开发项目有哪些具体沟通选项和修订步骤"
+    },
+    "C3": {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C3_production.png",
+      "sha256": "a25ddc5c92f285b97016c5389f400537f95dba51bf9eb73bbf7ab1ec89adb12c",
+      "pixels": [
+        1106,
+        1422
+      ],
+      "buyer_question": "已有设备和人工操作怎样组织生产",
+      "qa": "原图全景中两名白衣及一名黑衣人员、设备、风扇及空间对应；两处原始操作特写保留，减少大标题与泛泛流程条。",
+      "review": "OWNER_APPROVED",
+      "scene_status": "AI_ENHANCED_EXISTING_PHOTO",
+      "buyer_next_step": "已有设备和人工操作怎样组织生产"
+    },
+    "C4": {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C4_quality.png",
+      "sha256": "a5516788d448147b8b91d1bdee924dff48dd51971ea59005fd35803fe35c6c97",
+      "pixels": [
+        1106,
+        1422
+      ],
+      "buyer_question": "怎样检查外观、做工、标识与确认样差异",
+      "qa": "四个不同检查动作，黑色套脚鞋、接缝特写、内标核对及靴款对照；不把示意当正式检验记录。",
+      "review": "OWNER_APPROVED",
+      "scene_status": "AI_GENERATED_WORKFLOW_ILLUSTRATION",
+      "buyer_next_step": "怎样检查外观、做工、标识与确认样差异"
+    },
+    "C5": {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C5_packing.png",
+      "sha256": "aaa6a7e241d10da3a600e8cab3c7587968c9fe045655549141ac4de1186fb0a2",
+      "pixels": [
+        1106,
+        1422
+      ],
+      "buyer_question": "包装、配货和外箱准备怎样衔接",
+      "qa": "包装实际动作、配货清单、品牌包装示例与封箱各自说明事项，不再靠袋盒箱静态摆拍凑信息。",
+      "review": "OWNER_APPROVED",
+      "scene_status": "AI_GENERATED_WORKFLOW_ILLUSTRATION",
+      "buyer_next_step": "包装、配货和外箱准备怎样衔接"
+    },
+    "C6": {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C6_shipping.png",
+      "sha256": "a5fca57c332ae23457d1974e5ceefe5d7385171a5d06aafd8ef25d8e8860d089",
+      "pixels": [
+        1122,
+        1402
+      ],
+      "buyer_question": "不同货量和交付要求可以怎样讨论运输方案",
+      "qa": "与其他模块统一白色页头；四项运输用途及正文保持，无承运商品牌或时效承诺。",
+      "review": "OWNER_APPROVED",
+      "scene_status": "AI_GENERATED_WORKFLOW_ILLUSTRATION",
+      "buyer_next_step": "不同货量和交付要求可以怎样讨论运输方案"
+    }
+  },
+  "originals": [
+    {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/312131B92967C3A2090BFAFDB951C0A4.png",
+      "sha256": "4d2aaf5c3709e890b567d2f42d8999ac79d6d4c1bc724a499b4351128070a992",
+      "pixels": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/3CD1A61634DA5270C85F4B3E4CCAD9F7.png",
+      "sha256": "9e48c5cb4c3c4c5d553dc9b68a00f623ed78b8bb284c14db17caba71064dd6b6",
+      "pixels": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/3D7E6320356123E5172283244B177B69.png",
+      "sha256": "974f61a63d9e86270db0c3cf5dd61f6c10a2ee6a47f527879e5537bbabb80b48",
+      "pixels": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/429528D5FACB6A995B4B6CD84C5A5EDA.png",
+      "sha256": "30d29a42138c60b28fd78174acf6a73d480331f76bf547f2ddf6ebbd9db5326a",
+      "pixels": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/6547C269B1439AC9E425D210A83A5BC7.png",
+      "sha256": "69e3f0c0908f54091f707eb05517102dc7fa40eb6e2dc8a610062321b9e7bd25",
+      "pixels": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/84FF9D0383A2DC0DB22BB759FA5F4EA8.png",
+      "sha256": "cb2135c4eaf058e4dee538ab6f64b37ac5d830edc94d0a99a1770a0e66e7981d",
+      "pixels": [
+        1280,
+        1707
+      ]
+    },
+    {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/9123A5EB607A681AC92FFFABE40B3005.png",
+      "sha256": "ce90beefa6ab90c7220b9a35da20a73e3d9e32ea400940bc1bde250437a01f09",
+      "pixels": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/954DF6E57610EA31389705E2C2BEA451.png",
+      "sha256": "217989b6c2587bdb30b1eabfbdf3a6e961566d1800d0bfd8a4c472c96b805924",
+      "pixels": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/A228768BC3566451DFC612A7F03B619D.png",
+      "sha256": "f47d5df4d5b260753f6afd48aec202dce19558f56eb7dcf259d15e8e42dc5ae3",
+      "pixels": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/A63A0FD1CBA98FD532B425D5C499173E.png",
+      "sha256": "20d0ba3a7ee31ecaea5d086dded0e22664e4999a31ccef6f48d49268ab7ae487",
+      "pixels": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/A9C9E3B935A11A476BE00DE0FD0C3BBC.png",
+      "sha256": "0d836cd15f370e62d7fba853cf6d7a767675542e76e27efef854f6ed7db2f2ac",
+      "pixels": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/ACEA6747ABAE6FF5FEB901FF40FE56F4.png",
+      "sha256": "d6136e2bb1ba98d236a3f7581a878bd08b352a217f110da667f544480ff60400",
+      "pixels": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/B39C1BFC809CBC9D104D4962E6FCEF23.png",
+      "sha256": "9e56f5f825e8a5abb1ac592529d5e394182e8c6b429a2df193f0952f2c0686df",
+      "pixels": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/C278DF7185486C15215089FAC3776592.png",
+      "sha256": "4a8a801ca733eea568246f6ab437f9994f8bed8970faf4004bfdce61e6c9cf9e",
+      "pixels": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/D226973837DEA739118B2588DF676E1D.png",
+      "sha256": "0d76fbab4c11bf00b7c9b96f4a5ad583cbb36f2ae2ba86561980f84636362892",
+      "pixels": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/D6C7FD5A226C319802D341A1CF7B4E06.png",
+      "sha256": "8f0ac769537b96f2562d957c58e4ab8af07782014ca3141c2ae719ad4c4be809",
+      "pixels": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/E33B3E32BABD18D4A9770DCED97ED38F.png",
+      "sha256": "ef1a6c42317c093ab42b9df5e52630e5bd547a87b9d42884d8cdfd13586dd771",
+      "pixels": [
+        1702,
+        1276
+      ]
+    },
+    {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/E7AE0BC4F8A9D61778E2322DDE44D6F6.png",
+      "sha256": "21a02572d1891fb5e651983011e5a8f282f435e6573e677e17f9b2e8b05ead5d",
+      "pixels": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/F2F48DD1B4E769302C6E95384FE1B7F2.png",
+      "sha256": "38bfedfab1107105020f16df2d0bc6d77edcabfc96966d65dfc31f4d46228597",
+      "pixels": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/F63979DAF5AA1EF22C546471DA671C7F.png",
+      "sha256": "845a65e5b1de795785b9bb5236ba83a604b0ca35420e31e435fcf2a200193e33",
+      "pixels": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/F9AE6735D3DB57639F7457C3BAC4C3F1.png",
+      "sha256": "70c8601c90b8a16ef17caadfc19f809673dc1a13399dd238b47b407cf20a6c19",
+      "pixels": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/FC87A87FE0658260F34EFA145338CBD1.png",
+      "sha256": "787edf5474cb1196219d11980e75f4018f51378045035c9b8e7763fa3fb6bfc8",
+      "pixels": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/FF0EB3E94E43735A20D8584C73B4242F.png",
+      "sha256": "fa377189125338ecc0208746305a639be3bd5f0391a9d70192a9329b89d6301b",
+      "pixels": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/大门.jpg",
+      "sha256": "3658ce4531fca78a863464e85bcf364b27f4fb14d94b36851bc745783c667aa5",
+      "pixels": [
+        1280,
+        1707
+      ]
+    },
+    {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/微信图片_20260530104856_224_16.jpg",
+      "sha256": "8e127c864699e53e2f83c745239a94fd51fb34dde6fab3f601060a66a00a6ea0",
+      "pixels": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/微信图片_20260530104930_225_16.jpg",
+      "sha256": "45f6a108276d4f704101bcaaa78bac9b9ccdd37da516fd01298de4c520ef5448",
+      "pixels": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/微信图片_20260530104952_226_16.jpg",
+      "sha256": "a94e9cf1e3c4f6ed34f1ab053a296b06568a6ef6da3a689cce9a11a13ffa9a18",
+      "pixels": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/微信图片_20260530105010_227_16.jpg",
+      "sha256": "1c643ba6032178aee8a65e345ad31876211d0fd5785ca7a15933e39dd14ffeb0",
+      "pixels": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/微信图片_20260530105055_228_16.jpg",
+      "sha256": "d0879c16778fd50681472750052e2ece5b0d3e38705aa21f298f54dc918323ab",
+      "pixels": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/微信图片_20260530105120_229_16.jpg",
+      "sha256": "f1f81b89a8fe62608754b2db667f150f2a3b66924db3e69c4d0c7bdccc13d176",
+      "pixels": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/微信图片_20260530105149_230_16.jpg",
+      "sha256": "044f8d9f1b643f58e0a55bb9aaa1a66a087bf6e17c523b70a5f0f01fdabf2e9a",
+      "pixels": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/微信图片_20260530105316_231_16.jpg",
+      "sha256": "8749ac5e72f71ec764d9599acacc5ec22ba071828907b3f4aa38e381adc1fafe",
+      "pixels": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/微信图片_20260530105505_232_16.jpg",
+      "sha256": "f3907c184e26cc44c0f366a86109ae77746b5f0fd5256822c11c70f6763392e3",
+      "pixels": [
+        1920,
+        1080
+      ]
+    }
+  ],
+  "source_resolution": {
+    "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/00_精选可用照片/01_公司优势库存/01_stock_sorting.jpg": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/微信图片_20260530104856_224_16.jpg",
+      "sha256": "8e127c864699e53e2f83c745239a94fd51fb34dde6fab3f601060a66a00a6ea0",
+      "reason": "BYTE_IDENTICAL_RAW_DUPLICATE"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/00_精选可用照片/01_公司优势库存/02_color_options.jpg": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/微信图片_20260530105316_231_16.jpg",
+      "sha256": "8749ac5e72f71ec764d9599acacc5ec22ba071828907b3f4aa38e381adc1fafe",
+      "reason": "BYTE_IDENTICAL_RAW_DUPLICATE"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/00_精选可用照片/01_公司优势库存/03_stock_boxes.jpg": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/微信图片_20260530105505_232_16.jpg",
+      "sha256": "f3907c184e26cc44c0f366a86109ae77746b5f0fd5256822c11c70f6763392e3",
+      "reason": "BYTE_IDENTICAL_RAW_DUPLICATE"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/00_精选可用照片/01_公司优势库存/04_warehouse_boxes.png": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/A228768BC3566451DFC612A7F03B619D.png",
+      "sha256": "f47d5df4d5b260753f6afd48aec202dce19558f56eb7dcf259d15e8e42dc5ae3",
+      "reason": "BYTE_IDENTICAL_RAW_DUPLICATE"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/00_精选可用照片/02_产品检查生产/01_upper_check.jpg": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/微信图片_20260530105010_227_16.jpg",
+      "sha256": "1c643ba6032178aee8a65e345ad31876211d0fd5785ca7a15933e39dd14ffeb0",
+      "reason": "BYTE_IDENTICAL_RAW_DUPLICATE"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/00_精选可用照片/02_产品检查生产/02_sole_check.jpg": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/微信图片_20260530105149_230_16.jpg",
+      "sha256": "044f8d9f1b643f58e0a55bb9aaa1a66a087bf6e17c523b70a5f0f01fdabf2e9a",
+      "reason": "BYTE_IDENTICAL_RAW_DUPLICATE"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/00_精选可用照片/02_产品检查生产/03_line_sorting.jpg": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/微信图片_20260530105055_228_16.jpg",
+      "sha256": "d0879c16778fd50681472750052e2ece5b0d3e38705aa21f298f54dc918323ab",
+      "reason": "BYTE_IDENTICAL_RAW_DUPLICATE"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/00_精选可用照片/02_产品检查生产/04_batch_check.jpg": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/微信图片_20260530104952_226_16.jpg",
+      "sha256": "a94e9cf1e3c4f6ed34f1ab053a296b06568a6ef6da3a689cce9a11a13ffa9a18",
+      "reason": "BYTE_IDENTICAL_RAW_DUPLICATE"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/00_精选可用照片/03_工厂仓库/01_workshop.png": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/84FF9D0383A2DC0DB22BB759FA5F4EA8.png",
+      "sha256": "cb2135c4eaf058e4dee538ab6f64b37ac5d830edc94d0a99a1770a0e66e7981d",
+      "reason": "BYTE_IDENTICAL_RAW_DUPLICATE"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/00_精选可用照片/03_工厂仓库/02_carton_storage.png": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/9123A5EB607A681AC92FFFABE40B3005.png",
+      "sha256": "ce90beefa6ab90c7220b9a35da20a73e3d9e32ea400940bc1bde250437a01f09",
+      "reason": "BYTE_IDENTICAL_RAW_DUPLICATE"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/00_精选可用照片/03_工厂仓库/03_workshop_line.png": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/D6C7FD5A226C319802D341A1CF7B4E06.png",
+      "sha256": "8f0ac769537b96f2562d957c58e4ab8af07782014ca3141c2ae719ad4c4be809",
+      "reason": "BYTE_IDENTICAL_RAW_DUPLICATE"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/00_精选可用照片/03_工厂仓库/04_workshop_area.png": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/E7AE0BC4F8A9D61778E2322DDE44D6F6.png",
+      "sha256": "21a02572d1891fb5e651983011e5a8f282f435e6573e677e17f9b2e8b05ead5d",
+      "reason": "BYTE_IDENTICAL_RAW_DUPLICATE"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/00_精选可用照片/03_工厂仓库/大门.jpg": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/大门.jpg",
+      "sha256": "3658ce4531fca78a863464e85bcf364b27f4fb14d94b36851bc745783c667aa5",
+      "reason": "PRESERVE_UNIQUE_ORIGINAL"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/00_精选可用照片/04_订单包装流程/01_manual_check.jpg": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/微信图片_20260530105010_227_16.jpg",
+      "sha256": "1c643ba6032178aee8a65e345ad31876211d0fd5785ca7a15933e39dd14ffeb0",
+      "reason": "BYTE_IDENTICAL_RAW_DUPLICATE"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/00_精选可用照片/04_订单包装流程/02_line_sorting.jpg": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/微信图片_20260530105055_228_16.jpg",
+      "sha256": "d0879c16778fd50681472750052e2ece5b0d3e38705aa21f298f54dc918323ab",
+      "reason": "BYTE_IDENTICAL_RAW_DUPLICATE"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/00_精选可用照片/04_订单包装流程/03_stock_boxes.jpg": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/微信图片_20260530105505_232_16.jpg",
+      "sha256": "f3907c184e26cc44c0f366a86109ae77746b5f0fd5256822c11c70f6763392e3",
+      "reason": "BYTE_IDENTICAL_RAW_DUPLICATE"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/00_精选可用照片/04_订单包装流程/04_carton_ready.png": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/3D7E6320356123E5172283244B177B69.png",
+      "sha256": "974f61a63d9e86270db0c3cf5dd61f6c10a2ee6a47f527879e5537bbabb80b48",
+      "reason": "BYTE_IDENTICAL_RAW_DUPLICATE"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/00_精选可用照片/04_订单包装流程/b671d.jpg": {
+      "target": null,
+      "sha256": "51344b6f83b6d24f3694ef1d69ba556d6aa1d22de921006322170aecd58dbd6f",
+      "reason": "RETIRED_GENERIC_SHIPPING_GRAPHIC"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/00_共用中性公司图/01_company.png": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/c049f481ae55f8b6.png",
+      "sha256": "c049f481ae55f8b61d16012bd1125028f3472047dfb718685b4279a6e41fa482",
+      "reason": "HISTORICAL_RECEIPT_OR_RENDER_REPLAY_ONLY"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/00_共用中性公司图/01_company_overview_safe.png": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/6e461622d0d2caf2.png",
+      "sha256": "6e461622d0d2caf218a1c4ef89cc4c45a2a7ba6016d5375bcbfcda6aa33a853e",
+      "reason": "HISTORICAL_RECEIPT_OR_RENDER_REPLAY_ONLY"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/00_共用中性公司图/02_company.png": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/de51cb6814ba2891.png",
+      "sha256": "de51cb6814ba2891ad95f6c228f7b18aaad85a80d70e9b1432c2fea82070fcda",
+      "reason": "HISTORICAL_RECEIPT_OR_RENDER_REPLAY_ONLY"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/00_共用中性公司图/02_production_checking_safe.png": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/de51cb6814ba2891.png",
+      "sha256": "de51cb6814ba2891ad95f6c228f7b18aaad85a80d70e9b1432c2fea82070fcda",
+      "reason": "HISTORICAL_RECEIPT_OR_RENDER_REPLAY_ONLY"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/00_共用中性公司图/03_company.png": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/1d2a3460b74bc328.png",
+      "sha256": "1d2a3460b74bc328d07b68f93a8ace8fadb7eb482fb578c5f88e4583d0021142",
+      "reason": "HISTORICAL_RECEIPT_OR_RENDER_REPLAY_ONLY"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/00_共用中性公司图/03_stock_packing_safe.png": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/1d2a3460b74bc328.png",
+      "sha256": "1d2a3460b74bc328d07b68f93a8ace8fadb7eb482fb578c5f88e4583d0021142",
+      "reason": "HISTORICAL_RECEIPT_OR_RENDER_REPLAY_ONLY"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/00_共用中性公司图/04_company.png": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/ff22f11bcb84a4fc.png",
+      "sha256": "ff22f11bcb84a4fc6d20883a83a381bfc0c57fc709d536e2d6ceac83503c844b",
+      "reason": "HISTORICAL_RECEIPT_OR_RENDER_REPLAY_ONLY"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/00_共用中性公司图/04_packing_shipping_safe.png": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/67cea742aabb711e.png",
+      "sha256": "67cea742aabb711e35f33bba04f19d247d9ff10665a8c354d2362ce2afe11a5e",
+      "reason": "HISTORICAL_RECEIPT_OR_RENDER_REPLAY_ONLY"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/00_共用中性公司图/05_company.png": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/c82bdafc924a4f49.png",
+      "sha256": "c82bdafc924a4f49eb17ad27c9f2d8d841fdd5a5c827acffae34ec167b3a147b",
+      "reason": "HISTORICAL_RECEIPT_OR_RENDER_REPLAY_ONLY"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/00_共用中性公司图/05_oem_process_safe.png": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/a0f24a8ceb728cbf.png",
+      "sha256": "a0f24a8ceb728cbfe0b46ef6d0488466a71ef0a058ec8ece2573dd4dd65e1478",
+      "reason": "HISTORICAL_RECEIPT_OR_RENDER_REPLAY_ONLY"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/00_共用中性公司图/CompanyOverview01.png": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/6e461622d0d2caf2.png",
+      "sha256": "6e461622d0d2caf218a1c4ef89cc4c45a2a7ba6016d5375bcbfcda6aa33a853e",
+      "reason": "HISTORICAL_RECEIPT_OR_RENDER_REPLAY_ONLY"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/00_共用中性公司图/OEMProcess05.png": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/a0f24a8ceb728cbf.png",
+      "sha256": "a0f24a8ceb728cbfe0b46ef6d0488466a71ef0a058ec8ece2573dd4dd65e1478",
+      "reason": "HISTORICAL_RECEIPT_OR_RENDER_REPLAY_ONLY"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/00_共用中性公司图/PackingShipping04.png": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/67cea742aabb711e.png",
+      "sha256": "67cea742aabb711e35f33bba04f19d247d9ff10665a8c354d2362ce2afe11a5e",
+      "reason": "HISTORICAL_RECEIPT_OR_RENDER_REPLAY_ONLY"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/00_共用中性公司图/ProductionChecking02.png": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/de51cb6814ba2891.png",
+      "sha256": "de51cb6814ba2891ad95f6c228f7b18aaad85a80d70e9b1432c2fea82070fcda",
+      "reason": "HISTORICAL_RECEIPT_OR_RENDER_REPLAY_ONLY"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/00_共用中性公司图/StockPacking03.png": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/1d2a3460b74bc328.png",
+      "sha256": "1d2a3460b74bc328d07b68f93a8ace8fadb7eb482fb578c5f88e4583d0021142",
+      "reason": "HISTORICAL_RECEIPT_OR_RENDER_REPLAY_ONLY"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/00_共用中性公司图_v2_2026-09-04/01_factory.jpg": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/d4fbe87d6770e6bb.jpg",
+      "sha256": "d4fbe87d6770e6bbfcb8377fb161727ba01c1a9e5d708950803f4f47bb4bda8c",
+      "reason": "HISTORICAL_RECEIPT_OR_RENDER_REPLAY_ONLY"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/00_共用中性公司图_v2_2026-09-04/02_customization.jpg": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/b7a503a470054cee.jpg",
+      "sha256": "b7a503a470054ceefc0d77e020ab29bb1209d76f57be17c6bda4ddb0f63fa167",
+      "reason": "HISTORICAL_RECEIPT_OR_RENDER_REPLAY_ONLY"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/00_共用中性公司图_v2_2026-09-04/03_production.jpg": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/adb940f30f04cfa0.jpg",
+      "sha256": "adb940f30f04cfa073683ebbca01e2f33d3e69bc245e61ed2d94567af3ccb566",
+      "reason": "HISTORICAL_RECEIPT_OR_RENDER_REPLAY_ONLY"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/00_共用中性公司图_v2_2026-09-04/04_quality.jpg": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/55adb28d9e534103.jpg",
+      "sha256": "55adb28d9e534103394f35b2e75c72c53a2f4106610d1a2198022aa344e0dfd1",
+      "reason": "HISTORICAL_RECEIPT_OR_RENDER_REPLAY_ONLY"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/00_共用中性公司图_v2_2026-09-04/05_packing.jpg": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/9b0afdf65447e970.jpg",
+      "sha256": "9b0afdf65447e9705891abe7eb1d0a0567302bcd2539d08d83e20305766f6356",
+      "reason": "HISTORICAL_RECEIPT_OR_RENDER_REPLAY_ONLY"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/00_共用中性公司图_v3_2026-09-04/00_ai_background.png": {
+      "target": null,
+      "sha256": "e15c3c4ba5207bf6f4f0783e46b503b949fa591f96dd6de4c0e925bffb8cb63b",
+      "reason": "RETIRED_GENERATION_INTERMEDIATE"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/00_共用中性公司图_v3_2026-09-04/00_ai_customization.png": {
+      "target": null,
+      "sha256": "ba57bdfc4a345742e1eaddc57226f391d70ddce9f1f5be687ca56d29b97f83a8",
+      "reason": "RETIRED_GENERATION_INTERMEDIATE"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/00_共用中性公司图_v3_2026-09-04/00_ai_factory_profile.png": {
+      "target": null,
+      "sha256": "0c3cae33f46ca1baee9c31d49fe2d32eb6896ce7351d4abfe151a0259177927c",
+      "reason": "RETIRED_GENERATION_INTERMEDIATE"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/00_共用中性公司图_v3_2026-09-04/00_ai_packing.png": {
+      "target": null,
+      "sha256": "7137bc0bcc808737cccc04439dc2d2690c06f13f1a297366bcb537e6e8864277",
+      "reason": "RETIRED_GENERATION_INTERMEDIATE"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/00_共用中性公司图_v3_2026-09-04/00_ai_production.png": {
+      "target": null,
+      "sha256": "b42a513a7659b040e935333566a4dcc1523d93020ba615d0ab84f450d4270ea7",
+      "reason": "RETIRED_GENERATION_INTERMEDIATE"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/00_共用中性公司图_v3_2026-09-04/00_ai_quality.png": {
+      "target": null,
+      "sha256": "85cf6228dc9651b3a447cba9509f3652630d83d6a566d40ff0aa7ba83d9455ba",
+      "reason": "RETIRED_GENERATION_INTERMEDIATE"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/00_共用中性公司图_v3_2026-09-04/01_factory_profile.jpg": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/23a34c8e425ae286.jpg",
+      "sha256": "23a34c8e425ae286d190ac1eb587c93e9a87421fdf490ec48f260e53e316149c",
+      "reason": "HISTORICAL_RECEIPT_OR_RENDER_REPLAY_ONLY"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/00_共用中性公司图_v3_2026-09-04/02_oem_odm_workflow.jpg": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/66624253f1d95ec6.jpg",
+      "sha256": "66624253f1d95ec68e060d792f13c61943c86f7d61e763167a0a2eb1146300f5",
+      "reason": "HISTORICAL_RECEIPT_OR_RENDER_REPLAY_ONLY"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/00_共用中性公司图_v3_2026-09-04/03_production_process.jpg": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/3ae00d6398224dd7.jpg",
+      "sha256": "3ae00d6398224dd7021ed2a266584bccb77b741b31fa9c72ca8ad66ab443f683",
+      "reason": "HISTORICAL_RECEIPT_OR_RENDER_REPLAY_ONLY"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/00_共用中性公司图_v3_2026-09-04/04_quality_control.jpg": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/f32d682a7055a3e4.jpg",
+      "sha256": "f32d682a7055a3e44f91eb074b678507beca63967da5565de8997f582a651bf5",
+      "reason": "HISTORICAL_RECEIPT_OR_RENDER_REPLAY_ONLY"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/00_共用中性公司图_v3_2026-09-04/05_packing_inquiry.jpg": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/d0f3916d920a9ec4.jpg",
+      "sha256": "d0f3916d920a9ec46fd822317a9cd3c684b6b7d60631208475fa2be138d05bc2",
+      "reason": "HISTORICAL_RECEIPT_OR_RENDER_REPLAY_ONLY"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/公司资料/01_公司详情图/01_company.jpg": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/fe01ed0f81e08a88.jpg",
+      "sha256": "fe01ed0f81e08a88422b0f6351af04ac2182fce3755edb049fc5e58d9eb65c94",
+      "reason": "HISTORICAL_RECEIPT_OR_RENDER_REPLAY_ONLY"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/公司资料/01_公司详情图/02_check.jpg": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/4db2f3172878839d.jpg",
+      "sha256": "4db2f3172878839dcc4495f004caedee46637a428e6b4b6dbb48f172bd8ec45c",
+      "reason": "HISTORICAL_RECEIPT_OR_RENDER_REPLAY_ONLY"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/公司资料/01_公司详情图/03_pack.jpg": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/d29c33f4b37efde0.jpg",
+      "sha256": "d29c33f4b37efde0eee4277e67366656f1ed4d30946dcf2b9735adfde7a5aaac",
+      "reason": "HISTORICAL_RECEIPT_OR_RENDER_REPLAY_ONLY"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/公司资料/02_公司详情图_中性2026-08-23/01_company_factory.png": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/8392dfb263f7a21e.png",
+      "sha256": "8392dfb263f7a21efc9bc02f51c1f3b0adc17192e667737271cd32619e407da7",
+      "reason": "HISTORICAL_RECEIPT_OR_RENDER_REPLAY_ONLY"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/公司资料/02_公司详情图_中性2026-08-23/02_production_checking.png": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/778cae3a27b67c21.png",
+      "sha256": "778cae3a27b67c2197cf651dea936e41fbae1e9ddedeaaae0d0a769ac1d30b06",
+      "reason": "HISTORICAL_RECEIPT_OR_RENDER_REPLAY_ONLY"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/公司资料/02_公司详情图_中性2026-08-23/03_stock_packing.png": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/294c563aba876789.png",
+      "sha256": "294c563aba876789d6c2ad8c0239cee14469ceb3a7da476db55df3ff7ba98d55",
+      "reason": "HISTORICAL_RECEIPT_OR_RENDER_REPLAY_ONLY"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/公司资料/02_公司详情图_中性2026-08-23/04_order_preparation.png": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/eb6f77992c7747ca.png",
+      "sha256": "eb6f77992c7747ca74a1be21d5374dd3773b19c3d3cc477acb4b454c33c9b2c0",
+      "reason": "HISTORICAL_RECEIPT_OR_RENDER_REPLAY_ONLY"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/公司资料/02_公司详情图_中性2026-08-23/05_inquiry_support.png": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/8c0281be4268103a.png",
+      "sha256": "8c0281be4268103ac711536d9da8314aeda599ddee08a4abdbc7df1f6c340235",
+      "reason": "HISTORICAL_RECEIPT_OR_RENDER_REPLAY_ONLY"
+    },
+    "01_产品资产/02_可发布素材/00_最终上传/公司资料/02_公司详情图_中性2026-08-23/06_oem_inquiry_safe.png": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/6f5de147d7dff36d.png",
+      "sha256": "6f5de147d7dff36d657eb903930caf679c24684c3e8c0d3dfd37b0e4ea8bf73a",
+      "reason": "HISTORICAL_RECEIPT_OR_RENDER_REPLAY_ONLY"
+    },
+    "01_产品资产/02_可发布素材/99_归档/整理归档_20260531/归档-旧版公司图/company-detail-v2/01_company.jpg": {
+      "target": null,
+      "sha256": "abc0efc632ceb83b0922f3847466c022da569bf66993548d267150a53fc86900",
+      "reason": "RETIRED_PRE_UPLOAD_COMPANY_TEMPLATE"
+    },
+    "01_产品资产/02_可发布素材/99_归档/整理归档_20260531/归档-旧版公司图/company-detail-v2/02_supplier.jpg": {
+      "target": null,
+      "sha256": "806584db5432d229615863290255ec4e6840f2974c48b835877f532fba43ff6f",
+      "reason": "RETIRED_PRE_UPLOAD_COMPANY_TEMPLATE"
+    },
+    "01_产品资产/02_可发布素材/99_归档/整理归档_20260531/归档-旧版公司图/company-detail-v2/03_quality.jpg": {
+      "target": null,
+      "sha256": "b55faf1edc11e04818b2872545d6863dbc157bc8eb033e34f7c0b62b0ab0852c",
+      "reason": "RETIRED_PRE_UPLOAD_COMPANY_TEMPLATE"
+    },
+    "01_产品资产/02_可发布素材/99_归档/整理归档_20260531/归档-旧版公司图/company-detail-v2/04_process.jpg": {
+      "target": null,
+      "sha256": "fde2a4ec83fe8e2eeab2ef186c64aa62f81f25bae003df056589e88838aedfda",
+      "reason": "RETIRED_PRE_UPLOAD_COMPANY_TEMPLATE"
+    },
+    "01_产品资产/02_可发布素材/99_归档/整理归档_20260531/归档-旧版公司图/company-detail-v2/05_pack.jpg": {
+      "target": null,
+      "sha256": "bb2cde7acc01cde52457499865ff233fbec60d38a1d9ff1ba575cb6484a14382",
+      "reason": "RETIRED_PRE_UPLOAD_COMPANY_TEMPLATE"
+    },
+    "01_产品资产/02_可发布素材/99_归档/整理归档_20260531/归档-旧版公司图/company-detail-v2/06_service.jpg": {
+      "target": null,
+      "sha256": "ce98d704b094cca6936915a2b265d22617a6be4b18d0eb53c3500f3ae8af7f15",
+      "reason": "RETIRED_PRE_UPLOAD_COMPANY_TEMPLATE"
+    },
+    "01_产品资产/02_可发布素材/99_归档/整理归档_20260531/归档-旧版公司图/company-detail-v2/preview.jpg": {
+      "target": null,
+      "sha256": "3a9a6c532b3ba0fc188bc70652a8fd1c99518cf8e4f72e240daac6e3235c22ee",
+      "reason": "RETIRED_PRE_UPLOAD_COMPANY_TEMPLATE"
+    },
+    "01_产品资产/02_可发布素材/99_归档/整理归档_20260531/归档-旧版公司图/company-detail-v3/01_company.jpg": {
+      "target": null,
+      "sha256": "5f14da3c86b6f8edf20617954959aa5fbf247f1c18b4afc2175fdb209f9ee6fe",
+      "reason": "RETIRED_PRE_UPLOAD_COMPANY_TEMPLATE"
+    },
+    "01_产品资产/02_可发布素材/99_归档/整理归档_20260531/归档-旧版公司图/company-detail-v3/02_advantage.jpg": {
+      "target": null,
+      "sha256": "b742411f9df342d291f5070750c499baeb78aca4c99e5465b4f16392c22169b9",
+      "reason": "RETIRED_PRE_UPLOAD_COMPANY_TEMPLATE"
+    },
+    "01_产品资产/02_可发布素材/99_归档/整理归档_20260531/归档-旧版公司图/company-detail-v3/03_factory.jpg": {
+      "target": null,
+      "sha256": "d241297a95d66b9d117fe4002bf187a4815b64592098e4075dbfd01d102cbcce",
+      "reason": "RETIRED_PRE_UPLOAD_COMPANY_TEMPLATE"
+    },
+    "01_产品资产/02_可发布素材/99_归档/整理归档_20260531/归档-旧版公司图/company-detail-v3/04_quality.jpg": {
+      "target": null,
+      "sha256": "80cf416eddbf21d28fb4a289dba0ed85b1d8cb9e14dfbdd5f972c9d36b391ec3",
+      "reason": "RETIRED_PRE_UPLOAD_COMPANY_TEMPLATE"
+    },
+    "01_产品资产/02_可发布素材/99_归档/整理归档_20260531/归档-旧版公司图/company-detail-v3/05_process.jpg": {
+      "target": null,
+      "sha256": "9f7daf95ae6e7fd5515e09398d35ca654e8849eb71cc3991952cbbce4cf44adb",
+      "reason": "RETIRED_PRE_UPLOAD_COMPANY_TEMPLATE"
+    },
+    "01_产品资产/02_可发布素材/99_归档/整理归档_20260531/归档-旧版公司图/company-detail-v3/06_pack.jpg": {
+      "target": null,
+      "sha256": "c26206047c65089017bb4dd20505d11775817df179e686b64ab09a1022c66df6",
+      "reason": "RETIRED_PRE_UPLOAD_COMPANY_TEMPLATE"
+    },
+    "01_产品资产/02_可发布素材/99_归档/整理归档_20260531/归档-旧版公司图/company-detail-v3/07_service.jpg": {
+      "target": null,
+      "sha256": "6b3592012c5bf3f8a2c6ae745df7538a23b165d9a68538767173b399118694f8",
+      "reason": "RETIRED_PRE_UPLOAD_COMPANY_TEMPLATE"
+    },
+    "01_产品资产/02_可发布素材/99_归档/整理归档_20260531/归档-旧版公司图/company-detail-v3/preview.jpg": {
+      "target": null,
+      "sha256": "1a732357d13f90b7d5c436a679b4143e9cd421a6e66828d454a9c00780285058",
+      "reason": "RETIRED_PRE_UPLOAD_COMPANY_TEMPLATE"
+    },
+    "01_产品资产/02_可发布素材/99_归档/整理归档_20260531/归档-旧版公司图/company-detail-vertical/01overview_en.jpg": {
+      "target": null,
+      "sha256": "af2974fcc3befedbee6b66587e94a5388671d10b9a59c43616e09505f159911c",
+      "reason": "RETIRED_PRE_UPLOAD_COMPANY_TEMPLATE"
+    },
+    "01_产品资产/02_可发布素材/99_归档/整理归档_20260531/归档-旧版公司图/company-detail-vertical/02_about_supplier_en.jpg": {
+      "target": null,
+      "sha256": "a7216e9e61928d58bebb4b7f212ece7241cfcf4cefe2558840b7e84a27551960",
+      "reason": "RETIRED_PRE_UPLOAD_COMPANY_TEMPLATE"
+    },
+    "01_产品资产/02_可发布素材/99_归档/整理归档_20260531/归档-旧版公司图/company-detail-vertical/03_product_quality_control_en.jpg": {
+      "target": null,
+      "sha256": "16795cb3c3cf10b40ef4b804ce25610c62741a47756eff776c47a4a85120a7df",
+      "reason": "RETIRED_PRE_UPLOAD_COMPANY_TEMPLATE"
+    },
+    "01_产品资产/02_可发布素材/99_归档/整理归档_20260531/归档-旧版公司图/company-detail-vertical/04_customization_process_en.jpg": {
+      "target": null,
+      "sha256": "a08bc6cd496c641784efe1a0f9f05b39f0075dcdd14ae5b0f7701c6190a940f3",
+      "reason": "RETIRED_PRE_UPLOAD_COMPANY_TEMPLATE"
+    },
+    "01_产品资产/02_可发布素材/99_归档/整理归档_20260531/归档-旧版公司图/company-detail-vertical/05_packaging_shipping_en.jpg": {
+      "target": null,
+      "sha256": "984b475fe07866650f84e50b6216c833bda989ea3c7cffb5bc0eee06facd7d23",
+      "reason": "RETIRED_PRE_UPLOAD_COMPANY_TEMPLATE"
+    },
+    "01_产品资产/02_可发布素材/99_归档/整理归档_20260531/归档-旧版公司图/company-detail-vertical/06_buyer_service_support_en.jpg": {
+      "target": null,
+      "sha256": "feed3bc617f5d14679fcdac4864ea79e328104663f3293a5609aa4cb6b42d9d4",
+      "reason": "RETIRED_PRE_UPLOAD_COMPANY_TEMPLATE"
+    },
+    "01_产品资产/02_可发布素材/99_归档/整理归档_20260531/归档-旧版公司图/company-detail-vertical/preview.jpg": {
+      "target": null,
+      "sha256": "59489f82e9111a6b061c52db85d21d72741fd814565acce71b886d8ccdf3ce22",
+      "reason": "RETIRED_PRE_UPLOAD_COMPANY_TEMPLATE"
+    },
+    "01_产品资产/02_可发布素材/99_归档/整理归档_20260531/归档-旧版公司图/公司详情-6张版/01_company.jpg": {
+      "target": null,
+      "sha256": "341933bdd962e271bd8bd6febeba6343eb0750e2ec621667ed9e28dd981c415b",
+      "reason": "RETIRED_PRE_UPLOAD_COMPANY_TEMPLATE"
+    },
+    "01_产品资产/02_可发布素材/99_归档/整理归档_20260531/归档-旧版公司图/公司详情-6张版/02_advantage.jpg": {
+      "target": null,
+      "sha256": "ca76163898c35f4d85b71c4da46528c8656392611b09801d979835c89ff8cc27",
+      "reason": "RETIRED_PRE_UPLOAD_COMPANY_TEMPLATE"
+    },
+    "01_产品资产/02_可发布素材/99_归档/整理归档_20260531/归档-旧版公司图/公司详情-6张版/03_factory.jpg": {
+      "target": null,
+      "sha256": "e7fb6589a8ad9f8010d25764857302f57c529af1d353aa79093760ab4f2fa9fd",
+      "reason": "RETIRED_PRE_UPLOAD_COMPANY_TEMPLATE"
+    },
+    "01_产品资产/02_可发布素材/99_归档/整理归档_20260531/归档-旧版公司图/公司详情-6张版/04_check.jpg": {
+      "target": null,
+      "sha256": "9cbdb3f730aa7abebc3466911cdc9ca232d9b29a7172f28c6b8bcfaac975544e",
+      "reason": "RETIRED_PRE_UPLOAD_COMPANY_TEMPLATE"
+    },
+    "01_产品资产/02_可发布素材/99_归档/整理归档_20260531/归档-旧版公司图/公司详情-6张版/05_process.jpg": {
+      "target": null,
+      "sha256": "be68d148fe5264eb28de3139a298d065d6651969dd99f2fd69dae660eb50c1bf",
+      "reason": "RETIRED_PRE_UPLOAD_COMPANY_TEMPLATE"
+    },
+    "01_产品资产/02_可发布素材/99_归档/整理归档_20260531/归档-旧版公司图/公司详情-6张版/06_pack.jpg": {
+      "target": null,
+      "sha256": "0b468cb92e190d7ad67fd1532879678457c9a052dcb3b38f8b35d24d0b4e88dc",
+      "reason": "RETIRED_PRE_UPLOAD_COMPANY_TEMPLATE"
+    },
+    "01_产品资产/02_可发布素材/99_归档/整理归档_20260531/归档-旧版公司图/公司详情-6张版/preview.jpg": {
+      "target": null,
+      "sha256": "82526b775cae2e834d34b466e74a531593cce621649d819354556d7b6d2e524b",
+      "reason": "RETIRED_PRE_UPLOAD_COMPANY_TEMPLATE"
+    },
+    "02_Alibaba运营/06_图片与检查记录/公司图复用模板_v4_2026-09-21/C1_real_factory_identity.jpg": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/4eff96dbda4a4057.jpg",
+      "sha256": "4eff96dbda4a405713f4372e8dfac65b14dc8f07ef1ceb1763829ef63ec0039e",
+      "reason": "HISTORICAL_RECEIPT_OR_RENDER_REPLAY_ONLY"
+    },
+    "02_Alibaba运营/06_图片与检查记录/公司图复用模板_v4_2026-09-21/C2_custom_project_flow.jpg": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/4e76ce5a5778c9e1.jpg",
+      "sha256": "4e76ce5a5778c9e1c07cbb51331e9e61505c72766ec6e1f453abda978579155e",
+      "reason": "HISTORICAL_RECEIPT_OR_RENDER_REPLAY_ONLY"
+    },
+    "02_Alibaba运营/06_图片与检查记录/公司图复用模板_v4_2026-09-21/C3_real_production_organization.jpg": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/1e176a6af8442491.jpg",
+      "sha256": "1e176a6af8442491976cdfefa16cfe6a13119eac33bd43f85322e03df46d21dc",
+      "reason": "HISTORICAL_RECEIPT_OR_RENDER_REPLAY_ONLY"
+    },
+    "02_Alibaba运营/06_图片与检查记录/公司图复用模板_v4_2026-09-21/C4_real_quality_checkpoints.jpg": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/8171fc953364b720.jpg",
+      "sha256": "8171fc953364b7204bb932b3cfe9465bd8acfaa2f6e6c7691c1ed055fe132de1",
+      "reason": "HISTORICAL_RECEIPT_OR_RENDER_REPLAY_ONLY"
+    },
+    "02_Alibaba运营/06_图片与检查记录/公司图复用模板_v4_2026-09-21/C5_packing_order_handoff.jpg": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/319722e4c85543cf.jpg",
+      "sha256": "319722e4c85543cf14bc55ed5533166e01219bad628fc94eb25af5119fd8b031",
+      "reason": "HISTORICAL_RECEIPT_OR_RENDER_REPLAY_ONLY"
+    },
+    "02_Alibaba运营/06_图片与检查记录/公司图复用模板_v5_2026-09-23/C5_bag_box_options_candidate.png": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/c6ced830a5343a21.png",
+      "sha256": "c6ced830a5343a214f45d81ebb0d828ec1d568af5efa4c1fd4046acfcfa3131f",
+      "reason": "HISTORICAL_RECEIPT_OR_RENDER_REPLAY_ONLY"
+    },
+    "02_Alibaba运营/06_图片与检查记录/公司图复用模板_v6_2026-09-24/C5_order_handoff_safe.png": {
+      "target": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/8598c1628666496b.png",
+      "sha256": "8598c1628666496b7cd03f53eda9702ac35fd5e96b34c811a1196ca2f072db33",
+      "reason": "HISTORICAL_RECEIPT_OR_RENDER_REPLAY_ONLY"
+    },
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/公司图稿/C1_factory.png": {
+      "target": null,
+      "sha256": "ce14d137e913b4d0fd64d65402bf27a941ae7eb89f09ab408ce8b38208b01359",
+      "reason": "SUPERSEDED_UNPUBLISHED_SQUARE_DRAFT"
+    },
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/公司图稿/C1_factory_v2.png": {
+      "target": null,
+      "sha256": "98fd2294e37336990fd6da5be06acedcb70a143be10f56463c9d12752f419056",
+      "reason": "SUPERSEDED_UNPUBLISHED_SQUARE_DRAFT"
+    },
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/公司图稿/C2_oem.png": {
+      "target": null,
+      "sha256": "bcd12b8ec44cfc0201bce6a8df8563635c484353cd866edbb96c9ead6947cac9",
+      "reason": "SUPERSEDED_UNPUBLISHED_SQUARE_DRAFT"
+    },
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/公司图稿/C3_production.png": {
+      "target": null,
+      "sha256": "189757b797bedaf8d5858f3773910df3fcb51a874fd40262d0647dea37a9005f",
+      "reason": "SUPERSEDED_UNPUBLISHED_SQUARE_DRAFT"
+    },
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/公司图稿/C4_quality.png": {
+      "target": null,
+      "sha256": "e07e2635310886c4763c66f64ebeb9c7c81e73ce2bd1b21346196bb0cfdbb2c9",
+      "reason": "SUPERSEDED_UNPUBLISHED_SQUARE_DRAFT"
+    },
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/公司图稿/C5_packing.png": {
+      "target": null,
+      "sha256": "68dfe966b6c0a48863166953b9176f3bb55dffe877b8356010daf7c215d572f2",
+      "reason": "SUPERSEDED_UNPUBLISHED_SQUARE_DRAFT"
+    }
+  },
+  "qa_scope": "All five revised final images individually inspected against role, text, source fidelity and shared-use requirements. No browser rendering or online binding acceptance claimed.",
+  "active_sources": {
+    "C1": [
+      "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/大门.jpg"
+    ],
+    "C2": [],
+    "C3": [
+      "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/A9C9E3B935A11A476BE00DE0FD0C3BBC.png",
+      "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/微信图片_20260530105010_227_16.jpg",
+      "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/01_原始厂家照片/微信图片_20260530105149_230_16.jpg"
+    ],
+    "C4": [],
+    "C5": []
+  },
+  "media_directory_entry": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/README_使用说明.md",
+  "coverage_audit": {
+    "changes": [
+      "短横幅保留公司全称、泉州地点和两种合作模式，去掉鞋类限定与买家渠道清单；原厂房小幅出现，未扩建场地。",
+      "三个场景分别解释方向、细节、样品修订；有Illustrative development workflow标识，鞋款只是流程示例，不表示固定商品、材料库或实际客户案例。",
+      "原车间设备全景和两张人工操作特写，对照原图核场地、设备数量与动作；保留三名人员的场景组织，无新增设备或产能；移除重复三步图标条。",
+      "删除不证明质检的生产线背景，四项改为具体动作示意；Illustrated review examples标识清楚，无合格结论、测试报告或全检承诺；示例鞋不限定全店结构。",
+      "移除印字杂乱仓储大图，保留袋盒箱Packing examples、空白色码配货表与外箱标记示意，只出现一次询价入口；不表示真实订单、库存或包装默认包含。"
+    ],
+    "raw_photo_pairs": [
+      {
+        "roles": [
+          "C1",
+          "C2"
+        ],
+        "shared_raw_photo_hashes": []
+      },
+      {
+        "roles": [
+          "C1",
+          "C3"
+        ],
+        "shared_raw_photo_hashes": []
+      },
+      {
+        "roles": [
+          "C1",
+          "C4"
+        ],
+        "shared_raw_photo_hashes": []
+      },
+      {
+        "roles": [
+          "C1",
+          "C5"
+        ],
+        "shared_raw_photo_hashes": []
+      },
+      {
+        "roles": [
+          "C2",
+          "C3"
+        ],
+        "shared_raw_photo_hashes": []
+      },
+      {
+        "roles": [
+          "C2",
+          "C4"
+        ],
+        "shared_raw_photo_hashes": []
+      },
+      {
+        "roles": [
+          "C2",
+          "C5"
+        ],
+        "shared_raw_photo_hashes": []
+      },
+      {
+        "roles": [
+          "C3",
+          "C4"
+        ],
+        "shared_raw_photo_hashes": []
+      },
+      {
+        "roles": [
+          "C3",
+          "C5"
+        ],
+        "shared_raw_photo_hashes": []
+      },
+      {
+        "roles": [
+          "C4",
+          "C5"
+        ],
+        "shared_raw_photo_hashes": []
+      }
+    ],
+    "visual_source_count": 4,
+    "manual_review": "Five final images inspected: distinct identity/development/production/review/packing roles; no shoe-category restriction, no repeated generic process strip.",
+    "note": "C2/C4/C5 use identified editorial examples; no new documentary evidence is inferred from their realistic rendering."
+  },
+  "benchmark_review": {
+    "observed_date": "2026-10-11",
+    "method": "Normal Chrome public page and CDN image visual inspection; Firecrawl unavailable.",
+    "page": "https://www.alibaba.com/product-detail/Breathable-Anti-Slip-Soft-Comfortable-Wide_1601735452315.html",
+    "factory_image": "https://sc04.alicdn.com/kf/H1a0394a97d1147209d4c5c83a78f5227F/242295340/H1a0394a97d1147209d4c5c83a78f5227F.jpg",
+    "customization_image": "https://sc04.alicdn.com/kf/H4fe40d2414584f509297118008c0fbccM/242295340/H4fe40d2414584f509297118008c0fbccM.jpg",
+    "observed": "Factory poster groups six different capability/photo subjects. Customization module separates colour, material and modification topics and uses concrete examples.",
+    "adopted": "Differentiated buyer decision roles and concrete process explanations; supplier identity does not restrict footwear categories. Existing factory scenes anchor C1/C3; other modules clearly identify examples.",
+    "not_adopted": "Supplier experience, laboratory, employee count, client/brand claims and offered material library are not independently verified or Beiqiang facts.",
+    "limits": "No conversion or capability superiority claimed. Current raw photos do not document dedicated inspection or packing actions; new illustrations explain them without claiming actual records."
+  },
+  "review_draft": {
+    "revision": 8,
+    "status": "OWNER_APPROVED_EXECUTION_STARTED",
+    "date": "2026-10-12",
+    "published_revision": 6,
+    "published_state_unchanged": true,
+    "company_intro_source": "../../02_单品优化记录/全店FAQ与产品亮点优化/通用FAQ与公司简介.json",
+    "faq_source": "../../02_单品优化记录/全店FAQ与产品亮点优化/通用FAQ与公司简介.json",
+    "images": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6"
+    ],
+    "changed": [
+      "C1–C5 complete remake",
+      "C6 header alignment",
+      "General8 FAQ and company introduction from preceding local review draft"
+    ],
+    "shipping": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C6_shipping.png",
+      "sha256": "a5fca57c332ae23457d1974e5ceefe5d7385171a5d06aafd8ef25d8e8860d089",
+      "pixels": [
+        1122,
+        1402
+      ],
+      "generation_mode": "built-in image_gen",
+      "selected_output": "E:/C盘迁移/Codex/.codex/generated_images/01a1164e-73c1-70d1-882c-299608adb19c/exec-f4b8e3b0-36e3-4ef4-963e-6f7338d34104.png",
+      "prompt": "Edit ONLY header of attached Shipping & Delivery poster to match our new white-header factory-module set. Keep all 4cards, their photographs, captions, diagram, quotationinputs and bottomfooter EXACTLY intact, including wording, proportions, imageidentity. Change the topnavybar to WHITE header with BEIQIANG innavy/orangeunderline, thinverticalnavydivider, title \"Shipping & Delivery\" with Shipping innavy andDeliveryorange, subtitle \"Choose a route around your order needs.\" navy. Smallorange diagonal corner accent at top right. REMOVE top rightgeneric FOOTWEARMANUFACTURER/YOURRELIABLEPARTNER slogan. No otherchanges. Sameportraitcanvas andtextsize. No cropping/rearrangingbody,no addedclaims.",
+      "reference_roles": [
+        "C5 style reference only",
+        "user shipping screenshot buyer-topic inspiration only"
+      ],
+      "visual_review": "四项文字逐条核对；海/空/快递/指定货代职责清楚，图无货运品牌/价格/固定时长或DDP承诺；示意不作实际货运记录。",
+      "binding_plan": "Current saved Schema supports up to30 images per company gallery. Proposed C5+C6 in700 Packaging & shipping specifications, C1–C4 original roles; re-read target current Schema and build fresh minimal payload after owner review. No platform write yet."
+    },
+    "company_intro_plan": "companyDesc supported by saved current Schema; draft replaces brief quotation-request paragraph with company identity/cooperation value.",
+    "benchmark": {
+      "date": "2026-10-12",
+      "page": "https://www.alibaba.com/product-detail/Mid-Top-Barefoot-Shoes-Wide-Toe_1601959938117.html",
+      "method": "Normal IAB public DOM and two CDN image screenshots; Firecrawl unavailable",
+      "observed": "独立Company Profile段落，通用公司合作FAQ，Shipping与Package两图分开。",
+      "adopted": "公司简介/通用FAQ/包装/运输各有职责。",
+      "not_adopted": "年限、集团、品牌客户、认证、固定质检或承运商关系。"
+    },
+    "next_action": "官方API分批替换六图、通用FAQ及公司简介；逐ID正式与公开核验",
+    "visual_review": {
+      "C1": "公司身份排版压缩，去掉与开发图重复的桌面图；原建筑招牌、窗户和楼层保留。",
+      "C2": "四场景分别展示方向、材料选择、鞋身品牌细节和样品修订；没有以一双鞋代全店款式。",
+      "C3": "原图全景中两名白衣及一名黑衣人员、设备、风扇及空间对应；两处原始操作特写保留，减少大标题与泛泛流程条。",
+      "C4": "四个不同检查动作，黑色套脚鞋、接缝特写、内标核对及靴款对照；不把示意当正式检验记录。",
+      "C5": "包装实际动作、配货清单、品牌包装示例与封箱各自说明事项，不再靠袋盒箱静态摆拍凑信息。",
+      "C6": "与其他模块统一白色页头；四项运输用途及正文保持，无承运商品牌或时效承诺。"
+    }
+  },
+  "published_version": 8,
+  "published_assets": {
+    "C1": {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C1_factory.png",
+      "sha256": "e60e6be070cc030e40788df671a3138f5bc02ed201754af0e8bc1ec0a88f92bf",
+      "pixels": [
+        1721,
+        914
+      ],
+      "buyer_question": "贝强是谁，为采购方提供怎样的合作",
+      "qa": "公司身份排版压缩，去掉与开发图重复的桌面图；原建筑招牌、窗户和楼层保留。",
+      "review": "LOCAL_VISUAL_REVIEWED_PENDING_OWNER_REVIEW",
+      "scene_status": "AI_ENHANCED_EXISTING_PHOTO",
+      "buyer_next_step": "贝强是谁，为采购方提供怎样的合作"
+    },
+    "C2": {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C2_oem.png",
+      "sha256": "2e247e1be31b6eb3ea96a104233977b0758171a32563f4143b41e304c500d3b0",
+      "pixels": [
+        1106,
+        1422
+      ],
+      "buyer_question": "开发项目有哪些具体沟通选项和修订步骤",
+      "qa": "四场景分别展示方向、材料选择、鞋身品牌细节和样品修订；没有以一双鞋代全店款式。",
+      "review": "LOCAL_VISUAL_REVIEWED_PENDING_OWNER_REVIEW",
+      "scene_status": "AI_GENERATED_WORKFLOW_ILLUSTRATION",
+      "buyer_next_step": "开发项目有哪些具体沟通选项和修订步骤"
+    },
+    "C3": {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C3_production.png",
+      "sha256": "a25ddc5c92f285b97016c5389f400537f95dba51bf9eb73bbf7ab1ec89adb12c",
+      "pixels": [
+        1106,
+        1422
+      ],
+      "buyer_question": "已有设备和人工操作怎样组织生产",
+      "qa": "原图全景中两名白衣及一名黑衣人员、设备、风扇及空间对应；两处原始操作特写保留，减少大标题与泛泛流程条。",
+      "review": "LOCAL_VISUAL_REVIEWED_PENDING_OWNER_REVIEW",
+      "scene_status": "AI_ENHANCED_EXISTING_PHOTO",
+      "buyer_next_step": "已有设备和人工操作怎样组织生产"
+    },
+    "C4": {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C4_quality.png",
+      "sha256": "a5516788d448147b8b91d1bdee924dff48dd51971ea59005fd35803fe35c6c97",
+      "pixels": [
+        1106,
+        1422
+      ],
+      "buyer_question": "怎样检查外观、做工、标识与确认样差异",
+      "qa": "四个不同检查动作，黑色套脚鞋、接缝特写、内标核对及靴款对照；不把示意当正式检验记录。",
+      "review": "LOCAL_VISUAL_REVIEWED_PENDING_OWNER_REVIEW",
+      "scene_status": "AI_GENERATED_WORKFLOW_ILLUSTRATION",
+      "buyer_next_step": "怎样检查外观、做工、标识与确认样差异"
+    },
+    "C5": {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C5_packing.png",
+      "sha256": "aaa6a7e241d10da3a600e8cab3c7587968c9fe045655549141ac4de1186fb0a2",
+      "pixels": [
+        1106,
+        1422
+      ],
+      "buyer_question": "包装、配货和外箱准备怎样衔接",
+      "qa": "包装实际动作、配货清单、品牌包装示例与封箱各自说明事项，不再靠袋盒箱静态摆拍凑信息。",
+      "review": "LOCAL_VISUAL_REVIEWED_PENDING_OWNER_REVIEW",
+      "scene_status": "AI_GENERATED_WORKFLOW_ILLUSTRATION",
+      "buyer_next_step": "包装、配货和外箱准备怎样衔接"
+    },
+    "C6": {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C6_shipping.png",
+      "sha256": "a5fca57c332ae23457d1974e5ceefe5d7385171a5d06aafd8ef25d8e8860d089",
+      "pixels": [
+        1122,
+        1402
+      ],
+      "buyer_question": "不同货量和交付要求可以怎样讨论运输方案",
+      "qa": "与其他模块统一白色页头；四项运输用途及正文保持，无承运商品牌或时效承诺。",
+      "review": "LOCAL_VISUAL_REVIEWED_PENDING_OWNER_REVIEW",
+      "scene_status": "AI_GENERATED_WORKFLOW_ILLUSTRATION",
+      "buyer_next_step": "不同货量和交付要求可以怎样讨论运输方案"
+    }
+  },
+  "final_review": {
+    "status": "OWNER_APPROVED_LOCAL_AND_CANARY_VERIFIED",
+    "scope": "C1–C6英文、原图场景、手部、信息角色与重复内容；不代表线上替换完成",
+    "checks": {
+      "distinct_buyer_roles": true,
+      "source_photos_preserved": true,
+      "no_category_restriction": true,
+      "generated_workflows_labelled": true,
+      "published_v6_pixels_retained": true
+    },
+    "limits": "AI生成工作场景解释合作方式，不是实拍客户、订单或检验记录；原图未出现的厂区、设备数量、认证和产能未新增。"
+  },
+  "owner_approval": {
+    "source": "这个版本可以，与faq一起分批对商品进行全量替换",
+    "at": "2026-10-12",
+    "scope": [
+      "companyImage",
+      "companyDesc",
+      "companyFaqDesc"
+    ]
+  },
+  "previous_completed_online_state": {
+    "bank_images": 5,
+    "bank_evidence": "当前上传回执.json",
+    "bank_pixels_evidence": "图片银行像素核对.json",
+    "bound_product_count": 449,
+    "state": "ALL_FACTORY_FORMAL_AND_PUBLIC_QA_COMPLETE",
+    "uploaded": true,
+    "bound": true,
+    "authorized_product_count": 449,
+    "positive_submission_count": 448,
+    "public_pass_count": 444,
+    "current_state_evidence": "当前替换.json",
+    "scope": "Company gallery target and explicitly accepted legacy-keyword association only; source/copy not resolved, public presentation separate",
+    "strict_non_target_unchanged_count": 388,
+    "scope_formal_accepted_count": 449,
+    "original_offline_display_preserved_count": 5,
+    "factory_scope_complete": true,
+    "asset_version": 6
+  },
+  "previous_published_assets": {
+    "asset_version": 6,
+    "assets": {
+      "C1": {
+        "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/1a551ea790ac8d31.png",
+        "sha256": "1a551ea790ac8d31da076250ec2ca38c872d3aca6ab46e9339e0d919f9e6b9ff",
+        "pixels": [
+          1774,
+          887
+        ],
+        "buyer_question": "贝强是谁、在哪里，怎样开展OEM/ODM与批发合作",
+        "qa": "短横幅保留公司全称、泉州地点和两种合作模式，去掉鞋类限定与买家渠道清单；原厂房小幅出现，未扩建场地。",
+        "review": "VISUAL_REVIEWED_LOCAL_DRAFT; PROCESS_FOCUSED_CROSS_CATEGORY",
+        "scene_status": "AI_ENHANCED_EXISTING_EXTERIOR; LOCAL_REVIEW_DRAFT",
+        "buyer_next_step": "Identify the supplier and cooperation model"
+      },
+      "C2": {
+        "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/6cbe80f600ddb5aa.png",
+        "sha256": "6cbe80f600ddb5aa4a97e2a8f2050015ffbe03ac76806f44a15cf4fac84b2be7",
+        "pixels": [
+          1122,
+          1402
+        ],
+        "buyer_question": "怎样把参考与要求整理成可沟通、可修订的鞋类样品方向",
+        "qa": "三个场景分别解释方向、细节、样品修订；有Illustrative development workflow标识，鞋款只是流程示例，不表示固定商品、材料库或实际客户案例。",
+        "review": "VISUAL_REVIEWED_LOCAL_DRAFT; PROCESS_FOCUSED_CROSS_CATEGORY",
+        "scene_status": "ILLUSTRATIVE_DEVELOPMENT_WORKFLOW; NOT_ACTUAL_CUSTOMER_CASE",
+        "buyer_next_step": "Prepare a development brief and sample review inputs",
+        "illustrations": "Clearly identified process/packing examples, not SKU choices, completed customer work, inspection results or inventory."
+      },
+      "C3": {
+        "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/88b3481f5aceefcd.png",
+        "sha256": "88b3481f5aceefcd69325cdcba7d8fea3e48573ede70a312e13e54db6b643bf9",
+        "pixels": [
+          1073,
+          1466
+        ],
+        "buyer_question": "现有设备和人工操作怎样支持生产衔接",
+        "qa": "原车间设备全景和两张人工操作特写，对照原图核场地、设备数量与动作；保留三名人员的场景组织，无新增设备或产能；移除重复三步图标条。",
+        "review": "VISUAL_REVIEWED_LOCAL_DRAFT; PROCESS_FOCUSED_CROSS_CATEGORY",
+        "scene_status": "AI_ENHANCED_EXISTING_WORKSHOP; NOT_ALL_SKU_PRODUCTION_PROOF",
+        "buyer_next_step": "Understand the visible workshop and manual operations"
+      },
+      "C4": {
+        "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/5a180afb8bebbd11.png",
+        "sha256": "5a180afb8bebbd11fc7644d28ee5bd14e582b10c8693781041ff66385cb572cd",
+        "pixels": [
+          1092,
+          1440
+        ],
+        "buyer_question": "围绕确认样可以怎样核对外观、做工、规格及批次差异",
+        "qa": "删除不证明质检的生产线背景，四项改为具体动作示意；Illustrated review examples标识清楚，无合格结论、测试报告或全检承诺；示例鞋不限定全店结构。",
+        "review": "VISUAL_REVIEWED_LOCAL_DRAFT; PROCESS_FOCUSED_CROSS_CATEGORY",
+        "scene_status": "ILLUSTRATED_REVIEW_EXAMPLES; NOT_DOCUMENTED_INSPECTION_EVENT",
+        "buyer_next_step": "Discuss style-specific review points against the approved sample",
+        "illustrations": "Clearly identified process/packing examples, not SKU choices, completed customer work, inspection results or inventory."
+      },
+      "C5": {
+        "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_历史图片证据/cd557ec069f111bc.png",
+        "sha256": "cd557ec069f111bc12f36b280e88e5952e69c23d1e0705ba28e3a3e3df718504",
+        "pixels": [
+          1122,
+          1402
+        ],
+        "buyer_question": "怎样把包装方式、色码数量与外箱标记对应起来",
+        "qa": "移除印字杂乱仓储大图，保留袋盒箱Packing examples、空白色码配货表与外箱标记示意，只出现一次询价入口；不表示真实订单、库存或包装默认包含。",
+        "review": "VISUAL_REVIEWED_LOCAL_DRAFT; PROCESS_FOCUSED_CROSS_CATEGORY",
+        "scene_status": "ILLUSTRATIVE_PACKING_EXAMPLES; NOT_ACTUAL_ORDER_RECORD",
+        "buyer_next_step": "Provide assortment, packing brief and destination",
+        "illustrations": "Clearly identified process/packing examples, not SKU choices, completed customer work, inspection results or inventory."
+      }
+    }
+  },
+  "public_verification_service": {
+    "at": "2026-10-12T22:26:00.731711+00:00",
+    "state": "IAB_TRANSPORT_TIMEOUT_CHROME_LOGIN_REQUIRED_PUBLIC_QA_PENDING",
+    "verified_public_count": 81,
+    "observed_failures": [
+      "16 normal page navigations: page frame-tree reads timed out",
+      "single fresh tab navigation timed out",
+      "single screenshot timed out and browser runtime reset",
+      "normal reconnect to existing tab still timed out"
+    ],
+    "attempted_normal_recovery": [
+      "Reduced concurrency to one tab",
+      "Closed only agent QA tabs and opened one fresh tab in the same browser",
+      "Reinitialized runtime and reconnected to the existing tab"
+    ],
+    "scope": "Remaining public-page QA only; does not block authorized API submission or formal readback",
+    "next_action": "Keep formal API verification independent; resume exact-ID public checks through a normally authenticated browser",
+    "authorization_unchanged": true,
+    "chrome_normal_read": {
+      "at": "2026-10-12T23:39:00+00:00",
+      "product_id": "1601939626612",
+      "result": "NORMAL_CONNECTION_WORKS_PUBLIC_PAGE_REDIRECTS_TO_LOGIN",
+      "browser": "Chrome",
+      "no_credentials_entered": true
+    }
+  }
+}

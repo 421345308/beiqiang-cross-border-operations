@@ -1,0 +1,8 @@
+# 989 / BQ-NS001 A-G task pack
+A: NEW, unique writer task-5. Ordinary-HR replacement target unassigned; no old product OFF.
+B: Internal source trace: Weituo, 989, https://weituo.sooxie.com/detail/2559336; observed 2026-10-04, cost CNY85. Supplier identity is not buyer product branding.
+C: Basketball Style Shoes, category201336512; casual visual style, no tested basketball performance. Upper/midsole/outsole/lining unspecified, current schema custom Not specified.
+D: Actual Black/Red, Yellow, SkyBlue x labels38-50 =39SKU; system unspecified, no inventory. Seller tiers2/50/100, USD19.03/17.76/16.49 from confirmed FX6.7 and cost markups50/40/30. 7-day estimated noncustom order leadtime, not stock guarantee. Package34x23x13cm/0.5kg existing quote baseline, not measured package.
+E: 6 reviewed main /4 distinct actual product views /5 exact previously reviewed company-v3 images /3 color-bound actual images. Six unique new original photographs uploaded; no shoe alteration.
+F: Canonical source/catalog/visual differentiation with explicit coverage limits. NEW own model BQ-NS001 collision check in available snapshots. Single schema.add formal create with actual current schema, full field types and six typed FAQ; reserve before request.
+G: Record exact business receipt/newID, formal review and actual score, current editor migration proof if required, full public FAQ/summary/images/color QA. Unknown write outcomes reconcile; no duplicate create.

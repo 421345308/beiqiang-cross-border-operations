@@ -1,0 +1,11 @@
+{
+  "source": "Parent delegated explicit user cutoff, supersedes inferred quota-reset timing",
+  "stop_at_utc": "2026-10-02T18:00:00+00:00",
+  "stop_at_beijing": "2026-10-03T02:00:00+08:00",
+  "before_cutoff": "Continue authorized work; no new write that cannot be reconciled before cutoff",
+  "at_cutoff": "Stop new tasks, modifications and publishing; only reconcile in-flight outcomes and save breakpoint",
+  "automatic_resume": false,
+  "quota_reset_confirmed": false,
+  "deadline_does_not_prove_quota_reset": true,
+  "recorded_at_utc": "2026-10-02T16:04:00.509245+00:00"
+}

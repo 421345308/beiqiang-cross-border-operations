@@ -1,0 +1,10 @@
+{
+  "name": "@beiqiang/provider-libtv",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "hypit": { "activation": "./activation.mjs" },
+  "exports": { ".": "./provider.mjs" },
+  "files": ["activation.mjs", "provider.mjs", "transport.mjs", "README.md"],
+  "devDependencies": { "@hypit/hypit": "0.1.8" }
+}

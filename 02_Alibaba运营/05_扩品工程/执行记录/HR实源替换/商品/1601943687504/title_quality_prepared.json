@@ -1,0 +1,37 @@
+{
+  "request": {
+    "param_product_top_publish_request": {
+      "product_id": 1601943687504,
+      "cat_id": 201336720,
+      "language": "en_US",
+      "xml": "<itemSchema><field id=\"productTitle\" name=\"Product name\" type=\"input\"><value>Open Toe Casual Slide Slippers with Broad Strap and Textured Sole for Wholesale Footwear Buyers</value></field></itemSchema>"
+    }
+  },
+  "expected_schema": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Open Toe Casual Slide Slippers with Broad Strap and Textured Sole for Wholesale Footwear Buyers",
+          []
+        ]
+      ]
+    ]
+  },
+  "old_title": "Open Toe Casual Slide Slippers with Broad Strap and Textured Footbed for Wholesale Footwear Buyers",
+  "title": "Open Toe Casual Slide Slippers with Broad Strap and Textured Sole for Wholesale Footwear Buyers",
+  "diagnostic": {
+    "en": "footbed",
+    "zh": "鞋垫"
+  },
+  "reason": "Remove title ambiguity: footbed was classified as a separateinsole byplatform; sole describes actual source08 outsole texture. Same realshoe, no price/stock/category write."
+}

@@ -8,7 +8,7 @@
 | Preference | 未指定模型的通用 AI 视频工具选择 | [视频工具偏好](preferences/collaboration/ai-video-tool-routing.md) |
 | Preference | 通用 AI 视频导演判断与剪辑 | [导演判断偏好](preferences/collaboration/video-direction-and-editing-judgment.md) |
 | Preference | 已核实鞋款的多链接图文差异 | [多链接视觉偏好](preferences/deliverables/alibaba-multilink-image-and-title-preferences.md) |
-| Preference | 对外场景使用公司/工厂图片 | [对外工厂图片偏好](preferences/deliverables/buyer-facing-factory-image-preference.md) |
+| Preference | 对外工厂图片偏好；当前素材从业务唯一入口读取 | [对外工厂图片偏好](preferences/deliverables/buyer-facing-factory-image-preference.md) |
 | Decision | 冷邮件暂停与小样本实验 | [获客实验决定](context/projects/outreach-experiment-2026-08-27.md) |
 | Decision | BQ 链接持续优化和源链接保护 | [BQ 优化决定](context/projects/alibaba-bq-link-optimization-goal-2026-09-14.md) |
 | Experience | 多链接图片重复与 Excel 导入复盘 | [多链接失败经验](knowledge/experiences/alibaba-multilink-visual-failure-2026-08-28.md) |

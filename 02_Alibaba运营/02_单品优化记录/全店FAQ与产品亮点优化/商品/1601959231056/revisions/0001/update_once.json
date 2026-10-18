@@ -1,0 +1,21 @@
+{
+  "product_id": "1601959231056",
+  "status": "submitted_needs_readback",
+  "attempted_at": "2026-10-11T16:54:08.061287+00:00",
+  "refs": {
+    "request_id": "212c6fc617917376578028880",
+    "trace_id": "2107e99617917376577942440e0cbe",
+    "message": null,
+    "error": null
+  },
+  "reconciled_previous_attempt": {
+    "original_attempt": {
+      "product_id": "1601959231056",
+      "status": "STARTED_OUTCOME_UNKNOWN",
+      "started_at": "2026-10-11T16:07:50.116099+00:00"
+    },
+    "resolution": "INDEPENDENT_GET_AND_EDITABLE_SCHEMA_NO_EFFECT",
+    "evidence": "unknown_reconciliation.json",
+    "reconciled_at": "2026-10-11T16:47:59.523718+00:00"
+  }
+}

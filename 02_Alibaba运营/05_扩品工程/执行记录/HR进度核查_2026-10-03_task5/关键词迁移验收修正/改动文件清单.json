@@ -1,0 +1,57 @@
+{
+  "files": [
+    {
+      "path": "08_工具链\\01_业务脚本\\国际站扩品\\schema_publish_contract.py",
+      "sha256": "31edca9c37ba57a5a7a5ddbe6a355516946d4031c0b7c476918641e0f265337c"
+    },
+    {
+      "path": "08_工具链\\01_业务脚本\\国际站扩品\\publish_hot_rank_hr_a_batch.py",
+      "sha256": "d9c7e5d01eea3ae4a2f65c1e053791696f11bcb3d5b48b82ee3471052e55d838"
+    },
+    {
+      "path": "08_工具链\\01_业务脚本\\国际站扩品\\schema_capabilities.json",
+      "sha256": "9578f322e623e98a487f96a41867f3ec962cf0cf8402849e476d451b6aed7ba4"
+    },
+    {
+      "path": "02_Alibaba运营\\00_运营SOP\\国际站商品全生命周期SOP.md",
+      "sha256": "888a594a360e2029d9b91358a63104efadb437f047b3808b043e56edcf33b9cb"
+    },
+    {
+      "path": "08_工具链\\01_业务脚本\\国际站扩品\\README.md",
+      "sha256": "8237df6366f06d47efa8dd21bbe0041da6f5a33ef4593eb74fcc2cbf954d897c"
+    },
+    {
+      "path": "08_工具链\\01_业务脚本\\国际站扩品\\test_versioned_content_acceptance.py",
+      "sha256": "d012dfece290c73f8b77a64678f4719871928e0fa3935894f46fe4a46d88b31f"
+    },
+    {
+      "path": "08_工具链\\01_业务脚本\\国际站扩品\\schema_contract_fixtures\\keyword_migration_20261003.json",
+      "sha256": "b5ce076d7029250d417511182fcb1eb573937f74e0e0de17a687f50ec013ffe8"
+    }
+  ],
+  "counts": {
+    "public_QA": {
+      "passed": 6,
+      "total": 6
+    },
+    "current_edit_content": {
+      "complete": 1,
+      "total": 6,
+      "complete_products": [
+        "1601970169467"
+      ],
+      "2627BSK": "CURRENT_UI_NOTICE_VERIFIED_FULL_TEXT_CHAIN_PENDING",
+      "other_four": "CURRENT_EDITOR_VERSION_UNVERIFIED; comparisons prepared separately"
+    },
+    "full_old_HR_replacement": {
+      "complete_this_branch": 0,
+      "total": 6,
+      "reason": "old-product disposition, fresh grade/protection and required associations pending; not all content failed"
+    },
+    "business_ledgers_modified": false,
+    "platform_write_count": 0,
+    "OFF_count": 0
+  },
+  "backup": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\versioned_content_before",
+  "platform_mutations": 0
+}

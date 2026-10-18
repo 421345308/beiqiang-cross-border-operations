@@ -1,0 +1,47 @@
+{
+  "status": "INCOMPLETE_FRAGMENT_DO_NOT_SUBMIT",
+  "observed_at": "2026-10-08T05:39:32.575591+00:00",
+  "schema_sha256": "cb3be59dc64d9f4449a17a1bf77eb0f562cc0270c1f85786e7601f7a6d150f1e",
+  "schema_request_id": "213f5a2117914340099897128",
+  "title": "Wholesale Mens Lace Up Casual Walking Shoes Low Top Sneakers with TPU and Oxford Fabric Uppers in Three Colors",
+  "title_utf8_bytes": 110,
+  "material_checks": [
+    {
+      "field_id": "p-20700",
+      "label": "Not specified",
+      "encoding": "current_explicit_custom_negative_rule",
+      "platform_acceptance": "NOT_SUBMITTED"
+    },
+    {
+      "field_id": "p-191290426",
+      "label": "Not specified",
+      "encoding": "current_explicit_custom_negative_rule",
+      "platform_acceptance": "NOT_SUBMITTED"
+    },
+    {
+      "field_id": "p-191290430",
+      "label": "Not specified",
+      "encoding": "current_explicit_custom_negative_rule",
+      "platform_acceptance": "NOT_SUBMITTED"
+    },
+    {
+      "field_id": "p-210194982",
+      "label": "TPU and Oxford Fabric",
+      "encoding": "current_explicit_custom_negative_rule",
+      "platform_acceptance": "NOT_SUBMITTED"
+    }
+  ],
+  "main_images": 6,
+  "detail_images": 4,
+  "company_images_reference": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎新品_2026-10-07\\061_company_v3_manifest.json",
+  "company_images_not_yet_serialized": 5,
+  "factory_context": "Reusable company production checking image only; no claim this sourced style is manufactured by Beiqiang.",
+  "not_included": [
+    "sales properties and SKU: size system not confirmed",
+    "commercial price fields and remaining current required fields",
+    "structured text/FAQ/company fields"
+  ],
+  "full_payload_validated": false,
+  "draft_created": false,
+  "product_created": false
+}

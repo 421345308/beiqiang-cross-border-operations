@@ -1,0 +1,34 @@
+{
+  "observed_on": "2026-10-14",
+  "families": [
+    "HR050",
+    "HR056",
+    "HR057"
+  ],
+  "source_cost_cny": {
+    "HR050": 43,
+    "HR056": 35,
+    "HR057": 42
+  },
+  "queries": [
+    "site:alibaba.com/product-detail retro gum sole casual MOQ",
+    "site:alibaba.com/product-detail315sneakers shoes",
+    "site:alibaba.com/product-detailknit mule EVA slippers wholesale"
+  ],
+  "observations": [
+    {
+      "url": "https://www.alibaba.com/product-detail/Men-s-Sneaker-Big-Size-Thick_1601266881935.html",
+      "finding": "ModelHY-XH-XV-315 is a differentmeshthicksole sportshoe, notGaoku315. Rejectednumberonlymatch."
+    },
+    {
+      "url": "https://www.alibaba.com/wholesale/gum-sole-sneakers.html",
+      "finding": "Nearby gumsole casualfootwear offers have differentmaterials/sole/quantityrequirements. No exactGaoku315 fullquote verified."
+    },
+    {
+      "url": "https://www.alibaba.com/product-detail/Men-Slippers-2026-New-Summer-EVA_1601217085901.html",
+      "finding": "Different open-toe EVA slide, notclosed-toe knit555orH10. Cannot transfer itsprice,grip orshipping promise."
+    }
+  ],
+  "result": "SOURCE_COST_AND_QUANTITY_TIERS_WITH_COMPARABLE_QUOTE_GAP_RECORDED",
+  "pricing_basis": "50/40/30percentcostmarkupsfor2/50/100pairs;grossdifferenceonly,freight/service/taxesactualordercostnotincluded orclaimednetprofit. Current sourcecostandpercolourEUranges preserved."
+}

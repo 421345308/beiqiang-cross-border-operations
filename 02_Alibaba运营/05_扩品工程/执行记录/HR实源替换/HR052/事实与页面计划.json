@@ -1,0 +1,369 @@
+{
+  "candidate": "shnx_2512651",
+  "source_artno": "D818",
+  "supplier": "四海鞋业",
+  "source_url": "https://shnx.sooxie.com/detail/2512651",
+  "source_price_cny": 23,
+  "source_color_labels": [
+    "黑色"
+  ],
+  "colors": [
+    "Black"
+  ],
+  "sizes": [
+    39,
+    40,
+    41,
+    42,
+    43,
+    44
+  ],
+  "upper": "Other",
+  "lining": "other",
+  "midsole": "other",
+  "outsole": "other",
+  "closure": "Lace-up",
+  "style": [
+    "Lace-up"
+  ],
+  "seasons": [
+    "All Seasons"
+  ],
+  "feature": "Fashion Trend",
+  "category_id": 201154905,
+  "target_ids": {
+    "A": "1601943742273",
+    "B": "1601943664760"
+  },
+  "not_returned_ids": [
+    "1601943770128"
+  ],
+  "platform_group_id": 973003809,
+  "platform_group_name": "Lace-Up Casual Shoes",
+  "local_intent_candidates": [
+    "圆头德比系带鞋"
+  ],
+  "materials_evidence": [
+    "Title says小皮鞋 as a shoe style, not proof of real leather fibre. No chemical component statements for upper/lining/midsole/outsole: requiredOther values only.",
+    "Actual21original photos include duplicate views; select only distinct actual pair, wear, entry and structural close-ups. No original standalone outsole view.",
+    "SourcebodyD818/CNY23/Black/EU39-44 and current procurement entry verified. No safety/work certification, waterproof or anti-slip claims from source title."
+  ],
+  "dedup": "Compared actual HR031/D11 product hero and D818 source21 detail: D818 has a finely horizontally ribbed sole edge/heel, pronounced rear pull tab, curved quarter stitch and four-eyelet open lacing; D11 has a thicker deeply notched chunky sole and different topline/lace panel. Sources are not same shoe with new colour. No D818/sameURL adoption found.",
+  "do_not_claim": [
+    "physical stock",
+    "tested slip resistance",
+    "medical comfort",
+    "unverified midsole material"
+  ],
+  "custom": [
+    "Shoe Profile",
+    "Rounded toe; open lacing; ribbed sole edge; rear pull tab"
+  ],
+  "titles": {
+    "A": "Black Derby Lace-Up Shoes with Rounded Toe and Ribbed Sole Edge for Wholesale Casual Footwear Buyers",
+    "B": "Men Black Lace-Up Derby Style Shoes with Rear Pull Tab and Plain Rounded Toe for Footwear Collections"
+  },
+  "keywords": [
+    "Black Derby Lace Up Shoes",
+    "Rounded Toe Casual Derby Shoes",
+    "Rear Pull Tab Lace Up Shoes"
+  ],
+  "highlights": "Plain rounded toe: The closed forefoot has an uninterrupted front panel with a smooth-looking finish and a raised sole edge.\n\nOpen lace construction: Two eyelet panels form the Derby-style lace opening, allowing adjustment over the instep.\n\nDistinct sole profile: Fine horizontal ribs run along the sole edge and heel, while larger notches are visible beneath the edge.\n\nRear pull tab: A short upright tab sits at the centre back beside the low collar, clearly shown in the detail photograph.\n\nBlack colour assortment: The source lists EU39-44 for this plain black lace-up shoe.",
+  "assets_layout": {
+    "M1": {
+      "buyer_question": "What actual Derby shoe is offered?",
+      "title": null,
+      "photos": [
+        {
+          "index": 2,
+          "box": [
+            15,
+            15,
+            985,
+            985
+          ],
+          "crop": [
+            110,
+            380,
+            710,
+            980
+          ]
+        }
+      ]
+    },
+    "M2": {
+      "buyer_question": "How does the whole shoe look in wear?",
+      "title": "Rounded toe Derby profile",
+      "subtitle": "Black on-foot view with open eyelet lacing.",
+      "photos": [
+        {
+          "index": 4,
+          "box": [
+            45,
+            215,
+            955,
+            935
+          ],
+          "crop": [
+            20,
+            35,
+            770,
+            970
+          ]
+        }
+      ],
+      "text": []
+    },
+    "M3": {
+      "buyer_question": "What sole edge is visible?",
+      "title": "Ribbed sole edge",
+      "subtitle": "Actual heel sidewall with its rear pull tab.",
+      "photos": [
+        {
+          "index": 21,
+          "box": [
+            45,
+            215,
+            955,
+            935
+          ],
+          "crop": [
+            400,
+            455,
+            762,
+            820
+          ]
+        }
+      ],
+      "text": []
+    },
+    "M4": {
+      "buyer_question": "Which colour and EU sizes are offered?",
+      "title": "Black | EU 39-44",
+      "subtitle": "Choose the EU size assortment for your order.",
+      "photos": [
+        {
+          "index": 8,
+          "box": [
+            45,
+            230,
+            955,
+            910
+          ],
+          "crop": [
+            15,
+            205,
+            775,
+            915
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "EU 39 / 40 / 41 / 42 / 43 / 44",
+          "xy": [
+            45,
+            940
+          ],
+          "size": 28
+        }
+      ]
+    },
+    "M5": {
+      "buyer_question": "How is the lace opening arranged?",
+      "title": "Open eyelet lacing",
+      "subtitle": "Close view of the two lace panels and collar.",
+      "photos": [
+        {
+          "index": 21,
+          "box": [
+            45,
+            215,
+            955,
+            935
+          ],
+          "crop": [
+            25,
+            455,
+            392,
+            820
+          ]
+        }
+      ],
+      "text": []
+    },
+    "D1": {
+      "buyer_question": "What is the plain forefoot shape?",
+      "title": "Rounded closed toe",
+      "subtitle": "Uninterrupted toe panel with a raised sole rim.",
+      "photos": [
+        {
+          "index": 21,
+          "box": [
+            45,
+            215,
+            955,
+            1070
+          ],
+          "crop": [
+            25,
+            80,
+            392,
+            445
+          ]
+        }
+      ],
+      "text": []
+    },
+    "D2": {
+      "buyer_question": "How does the sole edge meet the quarter?",
+      "title": "Quarter stitching & sole edge",
+      "subtitle": "Curved panel seam with a horizontally ribbed sidewall.",
+      "photos": [
+        {
+          "index": 21,
+          "box": [
+            45,
+            215,
+            955,
+            1070
+          ],
+          "crop": [
+            400,
+            80,
+            762,
+            445
+          ]
+        }
+      ],
+      "text": []
+    },
+    "D3": {
+      "buyer_question": "Where is the rear pull tab?",
+      "title": "Rear entry detail",
+      "subtitle": "Centre-back tab beside the low collar.",
+      "photos": [
+        {
+          "index": 21,
+          "box": [
+            45,
+            215,
+            955,
+            1070
+          ],
+          "crop": [
+            400,
+            455,
+            762,
+            820
+          ]
+        }
+      ],
+      "text": []
+    },
+    "D4": {
+      "buyer_question": "Which EU sizes can I order?",
+      "title": "Black | EU 39-44",
+      "subtitle": "Six numeric EU sizes for the same shoe design.",
+      "photos": [
+        {
+          "index": 16,
+          "box": [
+            45,
+            230,
+            955,
+            1070
+          ],
+          "crop": [
+            25,
+            15,
+            765,
+            1060
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "EU 39 / 40 / 41 / 42 / 43 / 44",
+          "xy": [
+            45,
+            1140
+          ],
+          "size": 28
+        }
+      ]
+    },
+    "SKU_BLACK": {
+      "buyer_question": "Which colour is this SKU?",
+      "title": null,
+      "photos": [
+        {
+          "index": 2,
+          "box": [
+            25,
+            25,
+            975,
+            975
+          ],
+          "crop": [
+            110,
+            380,
+            710,
+            980
+          ]
+        }
+      ]
+    }
+  },
+  "source_assets_root": "01_产品资产/01_原始数据包/HR052_D818",
+  "source_date": "2026-10-14",
+  "fx_cny_per_usd": 6.6837,
+  "tiers": [
+    [
+      2,
+      "5.17"
+    ],
+    [
+      50,
+      "4.82"
+    ],
+    [
+      100,
+      "4.48"
+    ]
+  ],
+  "page_state": "FORMAL_FIELDS_SCORE_PASS",
+  "company_faq_source": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/通用FAQ与公司简介.json",
+  "selection_review": {
+    "state": "REVIEWED_ADOPT",
+    "private_backend_evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/经营数据与选款.json",
+    "reason": "HR052 recent4exposures/no clicks andSeptember32exposures/no clicks, no contacts. Low exposure does not prove rejection. Select a low-cost plain black Derby direction with actual structure details; no need retain the old unsupported concept.",
+    "cost_usd": 3.4412077142899893,
+    "gross_difference_usd": [
+      1.7288,
+      1.3788,
+      1.0388
+    ],
+    "comparison_limit": "Public Alibaba discovery did not identify an exact source-model shoe with matching unit, quantities, specifications and freight/trade terms. Nearby offers are not proof of price advantage. Cost markup50/40/30%; actual service/fulfilment charges and net profit need order costing."
+  },
+  "source_id": "src-hr-hr052-d818",
+  "source_evidence": [
+    "01_产品资产/01_原始数据包/HR052_D818/source.json",
+    "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR052/素材清单.json"
+  ],
+  "procurement_capability": "CURRENT_REAL_SHOE_AND_PROCUREMENT_ENTRY_VERIFIED_NOT_ORDER_STOCK",
+  "current_models_by_id": {
+    "1601943664760": "BQ1052-B",
+    "1601943742273": "BQ1052-A"
+  },
+  "model_migration_evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/范围.json",
+  "model_numbers": {
+    "B": "BQ1052-B",
+    "A": "BQ1052-A"
+  },
+  "current_platform_category_by_id": {
+    "1601943742273": 201154905,
+    "1601943664760": 201154905
+  },
+  "category_scope": "category_id保留初始改造默认；当前平台叶子按current_platform_category_by_id逐ID读取，不把同源链接不同平台分类混成不同实鞋。"
+}

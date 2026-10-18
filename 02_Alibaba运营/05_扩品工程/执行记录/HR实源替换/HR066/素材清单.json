@@ -1,0 +1,507 @@
+{
+  "family": "HR066",
+  "state": "VISUAL_PASS",
+  "items": {
+    "M1": {
+      "path": "01_产品资产/02_可发布素材/HR066/M1.jpg",
+      "sha256": "b31753fac836fe786a1e23cdf6cca56221ed0be0fe4828bbd173b9ef06537727",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M2": {
+      "path": "01_产品资产/02_可发布素材/HR066/M2.jpg",
+      "sha256": "bf1d143ff03d52a96fe131ac28ee5bfc1f1675d999b24a9208051100efa983f0",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M3": {
+      "path": "01_产品资产/02_可发布素材/HR066/M3.jpg",
+      "sha256": "3d1f6566687197f94e8ebc0d40e82fd16b441afdd36bd1b46b5fd4286b0f2910",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M4": {
+      "path": "01_产品资产/02_可发布素材/HR066/M4.jpg",
+      "sha256": "2c8cc5afc4229aa3561717ed1d49d8bc57d168e30e162cfa1a0754ded16acc37",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M5": {
+      "path": "01_产品资产/02_可发布素材/HR066/M5.jpg",
+      "sha256": "13c5fc464d62363fe5df850ad43d81c1fa6f44a01c33ab8c70bf798fce66bdc8",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "D1": {
+      "path": "01_产品资产/02_可发布素材/HR066/D1.jpg",
+      "sha256": "d82b16a7678419903db3cb50590910381537852c235208e68d03f93242f8a353",
+      "dimensions": [
+        1000,
+        1250
+      ]
+    },
+    "D2": {
+      "path": "01_产品资产/02_可发布素材/HR066/D2.jpg",
+      "sha256": "754e677da32f9c677f6ae6dc58456f8323e660a5258e620097fba15887712f9f",
+      "dimensions": [
+        1000,
+        1250
+      ]
+    },
+    "D3": {
+      "path": "01_产品资产/02_可发布素材/HR066/D3.jpg",
+      "sha256": "1e3a59238e1fc21ff40f6003a4e8b0966f62768a419b304b40ddca8c612fab6b",
+      "dimensions": [
+        1000,
+        1250
+      ]
+    },
+    "D4": {
+      "path": "01_产品资产/02_可发布素材/HR066/D4.jpg",
+      "sha256": "cd40c948d9dd4ee3fcd3a45a9c53ee16219f938c93f7e954458b4635978a2b84",
+      "dimensions": [
+        1000,
+        1250
+      ]
+    },
+    "SKU_GREY": {
+      "path": "01_产品资产/02_可发布素材/HR066/SKU_GREY.jpg",
+      "sha256": "7baffb8dbe81079020de8480c726eddd8cdde44e4260a9996b7e919c3d3966bf",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "SKU_WHITE": {
+      "path": "01_产品资产/02_可发布素材/HR066/SKU_WHITE.jpg",
+      "sha256": "6911b2488d67b67b8c621bd6fd8d0e9c469113560ef9375954173f2a672da3c9",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "SKU_ALL_BLACK": {
+      "path": "01_产品资产/02_可发布素材/HR066/SKU_ALL_BLACK.jpg",
+      "sha256": "ce0ab6f90aa4b0c262f06defcbd2d5ffd6cb95ea6b2b298725813fecca142566",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "SKU_BLACK_WHITE": {
+      "path": "01_产品资产/02_可发布素材/HR066/SKU_BLACK_WHITE.jpg",
+      "sha256": "f93b17e177265125ae7cc9b7b3af44e8c03433cc972f17d3c193fa5260e75799",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M6": {
+      "path": "01_产品资产/02_可发布素材/共享素材/贝强公司简介图库.jpg",
+      "sha256": "5164b4d0ac008fb79a20d60419d21713b4f49b9ecea0a845d6c7de104030f51e",
+      "dimensions": [
+        1721,
+        914
+      ]
+    }
+  },
+  "image_roles": {
+    "M1": {
+      "buyer_question": "What is the offered shoe?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR066_WS6\\24.jpg",
+          "crop": null,
+          "native_effective_pixels": [
+            750,
+            750
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": null
+    },
+    "M2": {
+      "buyer_question": "How tall is the sock-style upper?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR066_WS6\\18.jpg",
+          "crop": null,
+          "native_effective_pixels": [
+            750,
+            750
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": "Tall ribbed sock-style shaft"
+    },
+    "M3": {
+      "buyer_question": "What is the front knit and toe layout?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR066_WS6\\20.jpg",
+          "crop": null,
+          "native_effective_pixels": [
+            750,
+            750
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": "Geometric knit forefoot"
+    },
+    "M4": {
+      "buyer_question": "Which colour-size assortments are available?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR066_WS6\\24.jpg",
+          "crop": null,
+          "native_effective_pixels": [
+            750,
+            750
+          ],
+          "uniform_resize": true
+        },
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR066_WS6\\25.jpg",
+          "crop": null,
+          "native_effective_pixels": [
+            750,
+            750
+          ],
+          "uniform_resize": true
+        },
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR066_WS6\\21.jpg",
+          "crop": null,
+          "native_effective_pixels": [
+            750,
+            750
+          ],
+          "uniform_resize": true
+        },
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR066_WS6\\23.jpg",
+          "crop": null,
+          "native_effective_pixels": [
+            750,
+            750
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [
+        {
+          "value": "Grey",
+          "xy": [
+            45,
+            525
+          ],
+          "size": 25
+        },
+        {
+          "value": "White",
+          "xy": [
+            520,
+            525
+          ],
+          "size": 25
+        },
+        {
+          "value": "All Black",
+          "xy": [
+            45,
+            835
+          ],
+          "size": 25
+        },
+        {
+          "value": "Black/White",
+          "xy": [
+            520,
+            835
+          ],
+          "size": 25
+        },
+        {
+          "value": "EU 38-46",
+          "xy": [
+            45,
+            930
+          ],
+          "size": 32
+        }
+      ],
+      "title": "Four sock-sneaker colour options"
+    },
+    "M5": {
+      "buyer_question": "How does the heel and sidewall look?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR066_WS6\\19.jpg",
+          "crop": null,
+          "native_effective_pixels": [
+            750,
+            750
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": "Heel & sculpted sidewall"
+    },
+    "D1": {
+      "buyer_question": "What is the underside of the actual shoe?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR066_WS6\\15.jpg",
+          "crop": null,
+          "native_effective_pixels": [
+            750,
+            750
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [
+        {
+          "value": "Same shoe and sole profile shown in the source gallery.",
+          "xy": [
+            45,
+            1140
+          ],
+          "size": 25
+        }
+      ],
+      "title": "Segmented outsole layout"
+    },
+    "D2": {
+      "buyer_question": "How are the knit panels arranged on the other side?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR066_WS6\\17.jpg",
+          "crop": null,
+          "native_effective_pixels": [
+            750,
+            750
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [
+        {
+          "value": "Ribbed shaft, angled knit zones and sculpted sole band.",
+          "xy": [
+            45,
+            1140
+          ],
+          "size": 25
+        }
+      ],
+      "title": "Opposite side knit layout"
+    },
+    "D3": {
+      "buyer_question": "What is the pull-on opening and rear outline?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR066_WS6\\22.jpg",
+          "crop": null,
+          "native_effective_pixels": [
+            750,
+            750
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [
+        {
+          "value": "Tall knitted opening with a continuous rear profile.",
+          "xy": [
+            45,
+            1140
+          ],
+          "size": 25
+        }
+      ],
+      "title": "Rear shaft & heel profile"
+    },
+    "D4": {
+      "buyer_question": "Which colour-size assortments are available?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR066_WS6\\24.jpg",
+          "crop": null,
+          "native_effective_pixels": [
+            750,
+            750
+          ],
+          "uniform_resize": true
+        },
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR066_WS6\\25.jpg",
+          "crop": null,
+          "native_effective_pixels": [
+            750,
+            750
+          ],
+          "uniform_resize": true
+        },
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR066_WS6\\21.jpg",
+          "crop": null,
+          "native_effective_pixels": [
+            750,
+            750
+          ],
+          "uniform_resize": true
+        },
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR066_WS6\\23.jpg",
+          "crop": null,
+          "native_effective_pixels": [
+            750,
+            750
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [
+        {
+          "value": "Grey",
+          "xy": [
+            45,
+            525
+          ],
+          "size": 25
+        },
+        {
+          "value": "White",
+          "xy": [
+            520,
+            525
+          ],
+          "size": 25
+        },
+        {
+          "value": "All Black",
+          "xy": [
+            45,
+            835
+          ],
+          "size": 25
+        },
+        {
+          "value": "Black/White",
+          "xy": [
+            520,
+            835
+          ],
+          "size": 25
+        },
+        {
+          "value": "EU 38-46",
+          "xy": [
+            45,
+            1170
+          ],
+          "size": 32
+        }
+      ],
+      "title": "Four sock-sneaker colour options"
+    },
+    "SKU_GREY": {
+      "buyer_question": "Which colour is this SKU?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR066_WS6\\24.jpg",
+          "crop": null,
+          "native_effective_pixels": [
+            750,
+            750
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": null
+    },
+    "SKU_WHITE": {
+      "buyer_question": "Which colour is this SKU?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR066_WS6\\25.jpg",
+          "crop": null,
+          "native_effective_pixels": [
+            750,
+            750
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": null
+    },
+    "SKU_ALL_BLACK": {
+      "buyer_question": "Which colour is this SKU?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR066_WS6\\21.jpg",
+          "crop": null,
+          "native_effective_pixels": [
+            750,
+            750
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": null
+    },
+    "SKU_BLACK_WHITE": {
+      "buyer_question": "Which colour is this SKU?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR066_WS6\\23.jpg",
+          "crop": null,
+          "native_effective_pixels": [
+            750,
+            750
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": null
+    },
+    "M6": {
+      "buyer_question": "Who will coordinate the footwear order?",
+      "shared_approved_company_image": "01_产品资产/02_可发布素材/共享素材/贝强公司简介图库.jpg"
+    }
+  },
+  "visual_review": {
+    "reviewed_on": "2026-10-14",
+    "reviewer": "root",
+    "whole_set_viewed": true,
+    "full_size_focal_roles": [
+      "M1",
+      "D1",
+      "M4"
+    ],
+    "source_identity": "Entire31source and all14current roles examined; original clean colour profiles match real Grey side/rear/front/bottom photographs, knit pattern and segmented sidewall/underside retained. Ribbed top shaft not cut off, whole shoe edges preserved. Four source colours match labels; numeric EU only.",
+    "scope": "Native source photographs and layout, source performance/health/foam-brand claims and AI-style lifestyle scenes excluded. Shared previously approvedM6 retained; visual review is not physical stock or laboratory proof."
+  }
+}

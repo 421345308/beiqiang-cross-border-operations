@@ -1,0 +1,78 @@
+{
+  "task_id": "F2888_2026-10-02_task2",
+  "role": "REPLACE",
+  "phase": "PREPARING_CURRENT_SCHEMA_CREATE",
+  "writer": "task2",
+  "next_action": "One current-schema create then formal score and parent public QA; no old-off",
+  "public_model": "BQ-WBF2888",
+  "category_id": 201339011,
+  "product_id": null,
+  "source_identity": {
+    "reference": "https://shangchao.sooxie.com/detail/2357652",
+    "style": "F2888 winter boot Khaki/Black/Cream size35-42",
+    "evidence": "evidence/page_text.txt + public_index.json + source originals04/07/08/15/17",
+    "critical_facts": {
+      "profile": "women quilted winter boot",
+      "upper_structure": "quilted upper, exact chemical material not specified",
+      "outsole_structure": "visible sole profile; chemical composition not specified",
+      "closure": "side zipper",
+      "lining": "artificial long-plush shaft lining, artificial short-plush insole",
+      "functional_use": "casual winter footwear"
+    }
+  },
+  "search_intent": {
+    "key": "women quilted winter boots plush lining side zipper",
+    "evidence": "Walmart women snow boots bestseller category read2026-10-02: winter boot + plush lining + side zipper alternatives; quilted modifier comes from actual product photos. Proxy only; search/sales volumes unknown."
+  },
+  "hero_review": {
+    "content_key": "F2888-khaki-real-pair-source-main-crop",
+    "label_status": "not_present",
+    "evidence": "M1 original main.jpg native700x580 crop individually viewed: both complete shoes, side zip/plush opening clear, corner Chinese graphic wholly excluded, no brand or changed shoe pixels.",
+    "url": "https://sc04.alicdn.com/kf/H33556850cd2342f69f7096fd93a3b72dD/286385890/H33556850cd2342f69f7096fd93a3b72dD.png",
+    "sha256": "6883440bc6d989f44b4bc7af82a187cb825021de973be06b67d6d980aefaba19",
+    "aliases": [
+      "https://sc04.alicdn.com/kf/H33556850cd2342f69f7096fd93a3b72dD/286385890/H33556850cd2342f69f7096fd93a3b72dD.png",
+      "//sc04.alicdn.com/kf/H33556850cd2342f69f7096fd93a3b72dD/286385890/H33556850cd2342f69f7096fd93a3b72dD.png"
+    ]
+  },
+  "replacement_plan": {
+    "candidate": "F2888",
+    "old_product_ids": [
+      "1601943775160"
+    ]
+  },
+  "source_traceability": {
+    "supplier_name": "尚潮鞋业",
+    "supplier_original_model": "F2888",
+    "supplier_original_direct_url": "https://shangchao.sooxie.com/detail/2357652",
+    "our_model": "BQ-WBF2888",
+    "international_product_id": null,
+    "original_model_evidence": "evidence/page_text.txt: 货号：F2888; supplier 尚潮鞋业",
+    "old_listing": "HR056-A",
+    "old_product_id": "1601943775160",
+    "old_action": "NOT_SENT",
+    "knowledge_master_write": "PARENT_KNOWLEDGE_OWNER_ONLY"
+  },
+  "evidence_files": [
+    {
+      "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\工厂店外新款数据采集模板.md",
+      "sha256": "63c5329767c7512348255c9bdfc54d3ffd3f700a430d54128f87d607d35a8466",
+      "kind": "task_pack_template"
+    },
+    {
+      "path": "经营任务包.md",
+      "sha256": "02c7287c334f1fcd4834124a2207ff2e9df8322959d6e9e69e8a9a8c4f26d95d",
+      "kind": "task_pack_document"
+    },
+    {
+      "path": "replacement_mapping_projection.json",
+      "sha256": "7f2d9c3c8ce2e6a558656cfb8374b0a9849fea2f5f1b0f94527a89a695a463a4",
+      "kind": "replacement_mapping"
+    },
+    {
+      "path": "evidence\\owner_mapping_original.json",
+      "sha256": "d5cdbaa08e9312d71ce22c3503ecc9e26775eb06fd54caea5654faa0bf8900b0",
+      "kind": "source_register"
+    }
+  ]
+}

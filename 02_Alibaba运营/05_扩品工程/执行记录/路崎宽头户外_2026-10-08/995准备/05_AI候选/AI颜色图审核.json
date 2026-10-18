@@ -1,0 +1,72 @@
+{
+  "style": "995",
+  "at": "2026-10-13T23:37:03.177697+00:00",
+  "state": "TWO_CURRENT_COLOR_ASSETS_VISUAL_PASS_NOT_UPLOADED",
+  "items": [
+    {
+      "at": "2026-10-13T23:32:13.907177+00:00",
+      "style": "995",
+      "role": "SKU_Black",
+      "state": "LOCAL_SOURCE_PRESERVING_VISUAL_PASS_NOT_UPLOADED",
+      "source": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/995准备/01_产品来源原图/04.jpg",
+      "source_sha256": "16a4306af54e23003616d771401fb76f55731368eafff88a6a8c5782301205b1",
+      "selected_source_region": "Exact all-black shoe upper-right of original04; other two colours and poster background removed.",
+      "current_asset": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/995准备/05_AI候选/SKU_Black.png",
+      "current_sha256": "009e51a7c18c3001d4bcd162da7e1be6bfafb7a181a62231f981cff354f910f7",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "generation_tool": "Built-in imagegen reference edit",
+      "prompt_brief": "Keep exact photographed angle, full silhouette, actual black upper/lace route, side insert, pull loop, heel pattern, swept sidewall and underside tread. White square SKU image, no scene/text/other shoes or new camera angle. Only clarity/exposure/edge cleanup.",
+      "visual_checks": {
+        "complete_actual_black_shoe": true,
+        "same_source_camera_angle": true,
+        "forefoot_panels_laces_side_insert": true,
+        "closed_heel_pull_loop_and_pattern": true,
+        "curved_sidewall_and_visible_tread_zones": true,
+        "no_added_claims_badges_or_logos": true,
+        "no_other_colour_scene_or_promotional_text": true
+      },
+      "limits": [
+        "Visual source-faithfulness, not pixel identity or new physical/material evidence.",
+        "AI enlargement does not add measured real-shoe detail.",
+        "No upload or publication before full per-style/source-family review and HR completion."
+      ],
+      "original_unchanged": "16a4306af54e23003616d771401fb76f55731368eafff88a6a8c5782301205b1",
+      "full_generation_prompt": "Use case: precise-object-edit / e-commerce SKU photograph. Extract ONLY the photographed all-black shoe in the UPPER RIGHT of the supplied Luqi 995 source poster, retaining its EXACT existing pose, orientation, viewing angle, complete photographed silhouette and actual sole/upper details. Put this single black shoe on a clean white square background with a subtle natural contact shadow, occupying roughly 80% of the width with clear margins. The source shoe points toe toward upper left and heel toward lower right, with the underside partially visible. Do NOT rotate it into a new camera angle. Preserve exactly the low-cut padded collar, black cord laces, layered toe overlay, black quarter mesh, small contrasting textured side insert as actually photographed, rear pull loop, small actual heel-panel pattern, curved swept sole sidewall with recessed oval at heel, and the photographed individual tread blocks/grooves. Keep the black/charcoal tonal differences so the structure is readable but do not change black into another colour. Improve only clarity, exposure and clean edge separation. Remove the other tan and cream/brown shoes, rocks, blue backdrop, Chinese promotional text and placeholder English text. No new shoes, new tread, fictional component views, badges, captions, extra logos, materials, claims or dimensions. This is a source-preserving SKU image for buyers to select the actual Black variant, not concept design or a re-created different sneaker. Output one premium photorealistic square product image."
+    },
+    {
+      "at": "2026-10-13T23:37:03.132379+00:00",
+      "style": "995",
+      "role": "SKU_BlackKhaki",
+      "state": "LOCAL_SOURCE_PRESERVING_VISUAL_PASS_NOT_UPLOADED",
+      "source": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/995准备/01_产品来源原图/04.jpg",
+      "source_sha256": "16a4306af54e23003616d771401fb76f55731368eafff88a6a8c5782301205b1",
+      "selected_source_region": "Cream/brown foreground shoe at bottom of original04; source supplier colour黑卡其, actual beige/brown upper and dark sole.",
+      "current_asset": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/995准备/05_AI候选/SKU_BlackKhaki.png",
+      "current_sha256": "91e4564c68e4e4157dcc3c6ee5d151286868883b8ba822023ca7a311c1955460",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "generation_tool": "Built-in imagegen reference edit",
+      "full_generation_prompt": "Precise source-preserving e-commerce SKU edit. Extract ONLY the cream/beige and brown shoe photographed in the LOWER foreground of the supplied Luqi995 poster. Keep the EXACT camera angle, toe-to-left pose, complete original silhouette, cream tongue/vamp/quarter panels, brown textured toe protection, brown heel/collar/pull loop, cream laces and their actual eyelet route, pale quarter mesh, diagonal cream side insert, original gold ornamental pattern on the brown heel panel, and dark swept sole sidewall with its existing recessed oval and original tread edge. Remove ONLY poster lettering, other shoes, rocks and background. Place this single actual shoe on a pure white square background with gentle natural contact shadow and clear margins. Improve exposure and clean edge definition while retaining the actual textures and stitching. No colour changes, redesigned panels, new outsole, new camera angle, invented views, captions, logos, badges, dimensions or material/performance claims. This is the source supplier Black Khaki colourway, whose actual photograph is beige with brown panels and dark sole; render the EXACT photographed colours, not an invented black shoe. Produce a sharp premium actual-product SKU photograph.",
+      "visual_checks": {
+        "whole_same_source_pose": true,
+        "cream_brown_actual_colours_no_recolour": true,
+        "front_overlay_and_lacing_route": true,
+        "quarter_mesh_diagonal_insert_and_heel_pattern": true,
+        "rear_pull_loop_and_dark_swept_sidewall": true,
+        "no_added_claims_badges_or_new_views": true
+      },
+      "limits": [
+        "Visual source-faithfulness, not pixel identity or new physical/material evidence.",
+        "AI enlargement does not add measured real-shoe detail.",
+        "No upload or publication before full per-style/source-family review and HR completion."
+      ],
+      "original_unchanged": "16a4306af54e23003616d771401fb76f55731368eafff88a6a8c5782301205b1"
+    }
+  ],
+  "current_path_policy": "One selected current asset per actual colour role; raw original04 remains immutable. Other full-gallery roles still pending."
+}

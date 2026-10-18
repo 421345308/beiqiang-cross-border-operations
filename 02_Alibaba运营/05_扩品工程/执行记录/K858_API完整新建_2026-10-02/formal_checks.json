@@ -1,0 +1,54 @@
+{
+  "product_id": 1601969860254,
+  "public_model": "BQ-M858",
+  "status": "approved",
+  "display": "Y",
+  "title": "Microfiber Closed-Toe Mules with Buckle Strap",
+  "main": 6,
+  "detail": 4,
+  "company": 5,
+  "SKU_count": 33,
+  "SKU_ids_unique": true,
+  "SKU_matrix_exact": true,
+  "FAQ_exact": true,
+  "price_exact": true,
+  "inventory_values": [
+    0
+  ],
+  "quality_score": "3.90",
+  "public_acceptance": "PENDING_PARENT_READ_ONLY",
+  "get_request_id": "213d4e4917909431844396478",
+  "read_time_utc": "2026-10-02T12:15:56.018602+00:00",
+  "main_price_card": false,
+  "detail_price_card": false,
+  "product_type": "sourcing",
+  "rts": false,
+  "inventory_write": "None; owner requires stock0 for inquiry listing",
+  "next_action": "Parent public pixel acceptance; read actual score>=5.0 when API returns a numeric score",
+  "quality_read_time_utc": "2026-10-02T12:25:01.205904+00:00",
+  "quality_error": null,
+  "quality_problems": {
+    "imageText": false,
+    "title_word_miss_core_error": false,
+    "imageQualityBad": false,
+    "imageSubTitle": false,
+    "image_scale": false,
+    "inventory": true,
+    "title_word_error": false,
+    "selling_point_attribute_conflict": false,
+    "image_num": false,
+    "freightRate": false,
+    "sku_image": false,
+    "sku_text": false,
+    "price": false,
+    "category": false
+  },
+  "model_attributes": [
+    {
+      "attribute_id": 3,
+      "attribute_name": "Model Number",
+      "value_id": -1,
+      "value_name": "BQ-M858"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "operation": "create",
+  "facts_reviewed": true,
+  "source_evidence": [
+    "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-4\\independent_acceptance\\936_FINAL_APPROVED_FORMAL_GATE.json",
+    "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-4\\independent_acceptance\\936_K858_CLEAN_NEW_EXACT_STATIC_GATES.json"
+  ],
+  "current_schema": "936_current_schema.xml",
+  "current_schema_sha256": "cb3be59dc64d9f4449a17a1bf77eb0f562cc0270c1f85786e7601f7a6d150f1e",
+  "schema_request_id": "21501b6717909553661261163",
+  "schema_acquired_at": "2026-10-02T15:36:02.769168+00:00",
+  "payload_xml": "936_production_clean.xml",
+  "category_id": 201334413,
+  "field_ids": [
+    "catId",
+    "icbuCatProp",
+    "saleProp",
+    "sku",
+    "productTitle",
+    "productKeywords",
+    "scImages",
+    "priceUnit",
+    "saleType",
+    "scPrice",
+    "minOrderQuantity",
+    "ladderPrice",
+    "pkgMeasure",
+    "pkgWeight",
+    "productDescType",
+    "detailImage",
+    "companyImage",
+    "textDesc",
+    "companyDesc",
+    "companyFaqDesc"
+  ],
+  "dependency_ids": [],
+  "expected_model": "HR051-A",
+  "replacement_source_product_id": 1601969872083,
+  "differentiation_review": "936_production_review.json",
+  "differentiation_review_sha256": "c6438249a8b615d13825f9a02626ea65dd8ebb35f2fb1df2c3f6028ec47df5e6"
+}

@@ -1,0 +1,543 @@
+{
+  "family": "HR024",
+  "state": "VISUAL_PASS",
+  "items": {
+    "M1": {
+      "path": "01_产品资产/02_可发布素材/HR024/M1.jpg",
+      "sha256": "db821e4139ed28e9a6e970b61ac95446f6d1604b1de3b447013fd6b818b6893d",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M2": {
+      "path": "01_产品资产/02_可发布素材/HR024/M2.jpg",
+      "sha256": "188f4c7a4c22288afbf6a63d66155600cc94623352e8ddf2ee5a1f8214554199",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M3": {
+      "path": "01_产品资产/02_可发布素材/HR024/M3.jpg",
+      "sha256": "8921a000083ea1d800080cd103fbf28f69aed474bd4ee09e0ecf6a7fe399fded",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M4": {
+      "path": "01_产品资产/02_可发布素材/HR024/M4.jpg",
+      "sha256": "df22e96fbf0983f74b05444eb1eec1fe48e7a626dc741580b775fe36ababc078",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M5": {
+      "path": "01_产品资产/02_可发布素材/HR024/M5.jpg",
+      "sha256": "1e1b43a4ba105e61512a24b9432b94a76b9b3e5fa9d94f8a7440e861dd50eda6",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "D1": {
+      "path": "01_产品资产/02_可发布素材/HR024/D1.jpg",
+      "sha256": "871d86931ee420b0b20015357ffc0e1cea2df533821bd96d9646caf0db24b9fb",
+      "dimensions": [
+        1000,
+        1250
+      ]
+    },
+    "D2": {
+      "path": "01_产品资产/02_可发布素材/HR024/D2.jpg",
+      "sha256": "2b491c658bf1c627313ffaea75b893b1cff41742b8f6f0907bd44e58892497c2",
+      "dimensions": [
+        1000,
+        1250
+      ]
+    },
+    "D3": {
+      "path": "01_产品资产/02_可发布素材/HR024/D3.jpg",
+      "sha256": "26e0b61201e5192b1bd02c87dd81fb2a5fa6bad1bfd394c9a254b123d8e84908",
+      "dimensions": [
+        1000,
+        1250
+      ]
+    },
+    "D4": {
+      "path": "01_产品资产/02_可发布素材/HR024/D4.jpg",
+      "sha256": "d9510955e98d1e930eb270f5a92e4f93be27920554dd5247c62a1739611d622f",
+      "dimensions": [
+        1000,
+        1250
+      ]
+    },
+    "SKU_SAND": {
+      "path": "01_产品资产/02_可发布素材/HR024/SKU_SAND.jpg",
+      "sha256": "f156752472bfec715cff31605db6bd10eaa726a34b27b39b34c389f5ab0af1d1",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "SKU_KHAKI": {
+      "path": "01_产品资产/02_可发布素材/HR024/SKU_KHAKI.jpg",
+      "sha256": "ee78944cc136bce96974385057df433679748764f35b6ce66f8b1ac9449c89c9",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M6": {
+      "path": "01_产品资产/02_可发布素材/共享素材/贝强公司简介图库.jpg",
+      "sha256": "5164b4d0ac008fb79a20d60419d21713b4f49b9ecea0a845d6c7de104030f51e",
+      "dimensions": [
+        1721,
+        914
+      ]
+    }
+  },
+  "image_roles": {
+    "M1": {
+      "buyer_question": "Which exact casual sneaker is offered?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR024_8856\\22.jpg",
+          "crop": null,
+          "native_effective_pixels": [
+            750,
+            497
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": null
+    },
+    "M2": {
+      "buyer_question": "How does the low-top profile look with everyday outfits?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR024_8856\\12.jpg",
+          "crop": [
+            0,
+            170,
+            750,
+            1075
+          ],
+          "native_effective_pixels": [
+            750,
+            905
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": "Everyday casual styling"
+    },
+    "M3": {
+      "buyer_question": "What defines the upper construction?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR024_8856\\07.jpg",
+          "crop": [
+            0,
+            320,
+            750,
+            996
+          ],
+          "native_effective_pixels": [
+            750,
+            676
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [
+        {
+          "value": "PVC sole with a stitched upper edge",
+          "xy": [
+            45,
+            920
+          ],
+          "size": 31,
+          "bold": true
+        }
+      ],
+      "title": "Leather and mesh panels"
+    },
+    "M4": {
+      "buyer_question": "Which two colourways are actually offered?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR024_8856\\22.jpg",
+          "crop": null,
+          "native_effective_pixels": [
+            750,
+            497
+          ],
+          "uniform_resize": true
+        },
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR024_8856\\21.jpg",
+          "crop": null,
+          "native_effective_pixels": [
+            750,
+            581
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [
+        {
+          "value": "Sand",
+          "xy": [
+            45,
+            520
+          ],
+          "size": 30,
+          "bold": true
+        },
+        {
+          "value": "Khaki",
+          "xy": [
+            45,
+            900
+          ],
+          "size": 30,
+          "bold": true
+        }
+      ],
+      "title": "Two neutral colourways"
+    },
+    "M5": {
+      "buyer_question": "Which EU size range can form the assortment?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR024_8856\\14.jpg",
+          "crop": [
+            0,
+            145,
+            750,
+            983
+          ],
+          "native_effective_pixels": [
+            750,
+            838
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [
+        {
+          "value": "EU 39   40   41   42   43   44   45",
+          "xy": [
+            45,
+            825
+          ],
+          "size": 37,
+          "bold": true
+        },
+        {
+          "value": "Select EU quantities for your intended range",
+          "xy": [
+            45,
+            920
+          ],
+          "size": 28,
+          "bold": false
+        }
+      ],
+      "title": "EU 39-45 assortment"
+    },
+    "D1": {
+      "buyer_question": "What is the complete model profile?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR024_8856\\20.jpg",
+          "crop": [
+            0,
+            175,
+            750,
+            822
+          ],
+          "native_effective_pixels": [
+            750,
+            647
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [
+        {
+          "value": "Low-top opening  /  Visible stitched sole edge",
+          "xy": [
+            45,
+            1070
+          ],
+          "size": 31,
+          "bold": true
+        },
+        {
+          "value": "A neutral style for everyday casual ranges",
+          "xy": [
+            45,
+            1150
+          ],
+          "size": 29,
+          "bold": false
+        }
+      ],
+      "title": "Lace-up casual sneakers"
+    },
+    "D2": {
+      "buyer_question": "What upper and outsole details can be inspected?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR024_8856\\07.jpg",
+          "crop": [
+            0,
+            320,
+            750,
+            996
+          ],
+          "native_effective_pixels": [
+            750,
+            676
+          ],
+          "uniform_resize": true
+        },
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR024_8856\\08.jpg",
+          "crop": [
+            0,
+            245,
+            750,
+            968
+          ],
+          "native_effective_pixels": [
+            750,
+            723
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [
+        {
+          "value": "Leather / mesh panels",
+          "xy": [
+            45,
+            790
+          ],
+          "size": 30,
+          "bold": true
+        },
+        {
+          "value": "PVC bottom tread",
+          "xy": [
+            520,
+            790
+          ],
+          "size": 30,
+          "bold": true
+        },
+        {
+          "value": "Lace-up front and stitched sole edge",
+          "xy": [
+            45,
+            950
+          ],
+          "size": 32,
+          "bold": false
+        },
+        {
+          "value": "Review the visible finishing with a sample",
+          "xy": [
+            45,
+            1070
+          ],
+          "size": 29,
+          "bold": false
+        }
+      ],
+      "title": "Examine the actual construction"
+    },
+    "D3": {
+      "buyer_question": "How do the colours look in side-profile photographs?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR024_8856\\20.jpg",
+          "crop": [
+            0,
+            175,
+            750,
+            822
+          ],
+          "native_effective_pixels": [
+            750,
+            647
+          ],
+          "uniform_resize": true
+        },
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR024_8856\\18.jpg",
+          "crop": [
+            0,
+            170,
+            750,
+            794
+          ],
+          "native_effective_pixels": [
+            750,
+            624
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [
+        {
+          "value": "Sand",
+          "xy": [
+            45,
+            630
+          ],
+          "size": 31,
+          "bold": true
+        },
+        {
+          "value": "Khaki",
+          "xy": [
+            45,
+            1120
+          ],
+          "size": 31,
+          "bold": true
+        }
+      ],
+      "title": "Build your neutral colour range"
+    },
+    "D4": {
+      "buyer_question": "What does the buyer need to specify for this assortment?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR024_8856\\16.jpg",
+          "crop": [
+            0,
+            175,
+            750,
+            1062
+          ],
+          "native_effective_pixels": [
+            750,
+            887
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [
+        {
+          "value": "EU 39   40   41   42   43   44   45",
+          "xy": [
+            45,
+            820
+          ],
+          "size": 37,
+          "bold": true
+        },
+        {
+          "value": "Quantities by colour and EU size",
+          "xy": [
+            45,
+            940
+          ],
+          "size": 32,
+          "bold": false
+        },
+        {
+          "value": "Packing preference and destination",
+          "xy": [
+            45,
+            1025
+          ],
+          "size": 32,
+          "bold": false
+        },
+        {
+          "value": "Request a sample to review fit and finishing",
+          "xy": [
+            45,
+            1130
+          ],
+          "size": 28,
+          "bold": false
+        }
+      ],
+      "title": "Plan sizes and order quantities"
+    },
+    "SKU_SAND": {
+      "buyer_question": "Which exact Sand pair is bound to this colour?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR024_8856\\22.jpg",
+          "crop": null,
+          "native_effective_pixels": [
+            750,
+            497
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [
+        {
+          "value": "Sand",
+          "xy": [
+            45,
+            900
+          ],
+          "size": 36,
+          "bold": true
+        }
+      ],
+      "title": null
+    },
+    "SKU_KHAKI": {
+      "buyer_question": "Which exact Khaki pair is bound to this colour?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR024_8856\\21.jpg",
+          "crop": null,
+          "native_effective_pixels": [
+            750,
+            581
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [
+        {
+          "value": "Khaki",
+          "xy": [
+            45,
+            900
+          ],
+          "size": 36,
+          "bold": true
+        }
+      ],
+      "title": null
+    },
+    "M6": {
+      "buyer_question": "Who will coordinate the footwear order?",
+      "shared_approved_company_image": "01_产品资产/02_可发布素材/共享素材/贝强公司简介图库.jpg"
+    }
+  },
+  "review": {
+    "at": "2026-10-13",
+    "scope": "All six main/four product detail/two SKU images viewed in current full-set sheet; complete hero silhouette, all colour identities, source-preserving non-hero photographs, EU-only labels, material evidence, no Chinese/promotional overlays/known global mark, measured text bounds, no filler price cards; selected factory image reviewed and reused.",
+    "source_originals": "All22 product photographs reviewed; sidebar recommendations excluded.",
+    "shoe_truth": "HR024 regular leather/mesh version and PVC bottom; HR035 rounded toe-cap side-zip platform/rubber tread, Camel and Brown; no height/performance/fibre claims.",
+    "AI": "No AI needed for the clean true source hero."
+  }
+}

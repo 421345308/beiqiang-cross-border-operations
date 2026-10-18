@@ -1,0 +1,14 @@
+{
+  "release": "v1.0.22",
+  "release_repository": "https://github.com/tc-mb/llama.cpp-omni",
+  "installer_sha256": "72cefacba846920c3063479bc4bbfcdc268bb494623ee84f5f1e57464202a514",
+  "server_sha256": "679bdc425d24b51658d744eb49b56a1fca32e63bc5bef7fc12fffcc08083d917",
+  "server_version": "74 (4d28373), MSVC 19.39.33523.0 Windows AMD64",
+  "weights_repository": "openbmb/MiniCPM-o-4_5-gguf",
+  "quantization": "Q4_K_M",
+  "tts": false,
+  "llm_gpu_layers": 16,
+  "context_size": 16384,
+  "download_mirror": "https://modelscope.cn/models/OpenBMB/MiniCPM-o-4_5-gguf",
+  "checksums_source": "https://huggingface.co/api/models/openbmb/MiniCPM-o-4_5-gguf/tree/main?recursive=true"
+}

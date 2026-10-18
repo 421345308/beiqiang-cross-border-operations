@@ -1,0 +1,56 @@
+{
+  "verdict": "PASS",
+  "scope": "K858 only",
+  "public_model": "BQ-M858",
+  "category": "Clogs & Mules",
+  "main": 6,
+  "detail": 4,
+  "company": 5,
+  "sku": 33,
+  "FAQ": 6,
+  "source_model_not_public": true,
+  "upper": "Microfiber synthetic leather, not genuine leather",
+  "outsole": "Rubber",
+  "assembly": "Cemented",
+  "unknown_required": "Lining and midsole custom Not specified",
+  "size_labels": "Source 35–45 labels with custom Size prefix; no international conversion",
+  "stock_marker": 999,
+  "price_basis": {
+    "MOQ_pairs": 2,
+    "MOQ_basis": "Current store commercial baseline in lifecycle SOP; not a newly observed supplier MOQ",
+    "current_public_source_price_CNY": 75,
+    "current_public_price_verified_date": "2026-10-02",
+    "current_order_cost_verified": false,
+    "price_authority": "Current user authorized same workflow: CNY75 marked price plus50/40/30%, quantity2/50/100, FX6.6987, ceiling to cents",
+    "FX_CNY_per_USD": 6.6987,
+    "FX_source": "https://www.boc.cn/sourcedb/whpj/",
+    "FX_reference_date": "2026-10-02; root-frozen reference same as936",
+    "rounding": "Ceiling to USD0.01",
+    "USD_price_tiers": [
+      {
+        "minimum_pairs": 2,
+        "maximum_pairs": 49,
+        "markup": 0.5,
+        "CNY_equivalent": 112.5,
+        "USD_per_pair": 16.8
+      },
+      {
+        "minimum_pairs": 50,
+        "maximum_pairs": 99,
+        "markup": 0.4,
+        "CNY_equivalent": 105.0,
+        "USD_per_pair": 15.68
+      },
+      {
+        "minimum_pairs": 100,
+        "maximum_pairs": null,
+        "markup": 0.3,
+        "CNY_equivalent": 97.5,
+        "USD_per_pair": 14.56
+      }
+    ],
+    "fixed_lead_time_days": null,
+    "cost_note": "Current same-model public price CNY75 is the user-authorized internal quotation cost basis; source price and markup remain internal and do not establish actual stock or fixed dispatch timing"
+  },
+  "write_hash": "a82fc10c4a1eccd54c815451464ccc1519a035b1d8cb6995887b745955210ccd"
+}

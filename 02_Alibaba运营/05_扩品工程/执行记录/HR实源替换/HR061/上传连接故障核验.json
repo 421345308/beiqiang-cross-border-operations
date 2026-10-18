@@ -1,0 +1,10 @@
+{
+  "family": "HR061",
+  "role": "M1",
+  "state": "FAILED_BEFORE_HTTP_POST_NO_ASSET_CREATED",
+  "at": "2026-10-13T17:02:31.518354+00:00",
+  "transport_evidence": "Exception was SSLEOFError inside ssl.wrap_socket/do_handshake called from HTTPSConnection.connect, before HTTP request transmission. Original tool execution70544 exit1. Verified TLS retained; no product update attempted.",
+  "official_readback": "99_临时区/HR实源替换/HR061_unknown_bank_page1.json",
+  "bank_latest_modified": "2026-10-14 00:18:51",
+  "scope": "Only the first M1 upload attempt; do not infer all network errors are unsent or retry unknown product writes."
+}

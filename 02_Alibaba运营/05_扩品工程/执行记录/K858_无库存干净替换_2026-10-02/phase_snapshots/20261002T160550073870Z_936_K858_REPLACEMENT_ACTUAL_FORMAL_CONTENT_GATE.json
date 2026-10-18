@@ -1,0 +1,131 @@
+{
+  "verdict": "PASS_BOTH_OBSERVED_FORMAL_CONTENT_ONLY",
+  "products": [
+    {
+      "style": "936",
+      "new_product_id": 1601969906452,
+      "verdict": "PASS_ACTUAL_FORMAL_CONTENT_SKU_BINDINGS_EMPTY_INVENTORY_ONLY",
+      "checks": {
+        "single_add_success_exact_newid_sha": true,
+        "title_summary_company_copy": true,
+        "Model_saved": true,
+        "main6_present_only": true,
+        "detail4_identity_role_set": true,
+        "company5_identity_role_set": true,
+        "FAQ6_full_exact": true,
+        "SKU_count_unique_nonzero_exactcodes": true,
+        "all_SKU_property_code_bindings_exact": true,
+        "all_SKU_ladder_prices_exact": true,
+        "MOQ_exact": true,
+        "colour_image_bank_keys_exact": true,
+        "inventory_success_zero_records_not_zero_values": true,
+        "unknown_required_preserved": true
+      },
+      "get_file": "hr_control\\936_K858_clean_replacement_candidates\\936_replacement_get.response.initial_native.json",
+      "get_request_id": "0bbb3b2417909559176754883",
+      "status": "new",
+      "display": "N",
+      "add_request_id": "0b0b3a2717909557539224718",
+      "inventory_request_id": "210829b717909560401665610",
+      "pending": {
+        "score": {
+          "error_response": {
+            "code": "15",
+            "type": "ISP",
+            "sub_code": "-1",
+            "sub_msg": "通用验证失败",
+            "msg": "Remote service error",
+            "request_id": "213f5a2117909560498936119",
+            "_trace_id_": "2103346417909560495922588e0c84"
+          }
+        },
+        "render": {
+          "msg_code": "isp.system-service-error:PUB_BIZCHECK_PRODUCT_IN_AUDITING;",
+          "trace_id": "210334ab17909560290853544e0d3c",
+          "biz_success": false,
+          "message": "systemError:isp.system-service-error:PUB_BIZCHECK_PRODUCT_IN_AUDITING:Your product is currently under review. Please do not resubmit.\n\n:;",
+          "request_id": "21501b8d17909560294315217",
+          "_trace_id_": "210334ab17909560290853544e0d3c"
+        },
+        "public": "Not signed by this formal review",
+        "actual_main_pixel_mapping": "Generated main URLs present; no current new-ID pixel review claim",
+        "keywords": [
+          ""
+        ]
+      },
+      "actual_score": null,
+      "meets_5_0": false,
+      "old_off_performed": false,
+      "evidence_hashes": {
+        "hr_control\\936_K858_clean_replacement_candidates\\936_ACTUAL_REPLACEMENT_CREATE.params.json": "7977790fe5cdd782064934cca73b992d6e303783494990c69566f20ab38ee5b6",
+        "hr_control\\936_K858_clean_replacement_candidates\\936_replacement_get.response.initial_native.json": "d85663d84e3aef6046f5ef4cbd8df1f0f914fc1c31ce5cd7efbcc3bce9c5a198",
+        "hr_control\\936_K858_clean_replacement_candidates\\936_replacement_inventory.response.json": "38294e427163183851be6f1065c3e132b18d9f4675040287cea201719fe3c01e",
+        "hr_control\\936_K858_clean_replacement_candidates\\936_REPLACEMENT_ADD_ONCE_ledger.json": "34cbdd75170889883bcbe1da14a75758d4c2180f3755aac10147235cdd92feb0"
+      }
+    },
+    {
+      "style": "K858",
+      "new_product_id": 1601969853888,
+      "verdict": "PASS_ACTUAL_FORMAL_CONTENT_SKU_BINDINGS_EMPTY_INVENTORY_ONLY",
+      "checks": {
+        "single_add_success_exact_newid_sha": true,
+        "title_summary_company_copy": true,
+        "Model_saved": true,
+        "main6_present_only": true,
+        "detail4_identity_role_set": true,
+        "company5_identity_role_set": true,
+        "FAQ6_full_exact": true,
+        "SKU_count_unique_nonzero_exactcodes": true,
+        "all_SKU_property_code_bindings_exact": true,
+        "all_SKU_ladder_prices_exact": true,
+        "MOQ_exact": true,
+        "colour_image_bank_keys_exact": true,
+        "inventory_success_zero_records_not_zero_values": true,
+        "unknown_required_preserved": true
+      },
+      "get_file": "hr_control\\936_K858_clean_replacement_candidates\\K858_fresh_status.response.json",
+      "get_request_id": "212c41d317909562241096873",
+      "status": "new",
+      "display": "N",
+      "add_request_id": "21501b8d17909557962674058",
+      "inventory_request_id": "21501b6717909561269738567",
+      "pending": {
+        "score": {
+          "error_response": {
+            "code": "15",
+            "type": "ISP",
+            "sub_code": "-1",
+            "sub_msg": "通用验证失败",
+            "msg": "Remote service error",
+            "request_id": "213d4e4917909561319098104",
+            "_trace_id_": "2103135017909561315777773e10e2"
+          }
+        },
+        "render": {
+          "msg_code": "isp.system-service-error:PUB_BIZCHECK_PRODUCT_IN_AUDITING;",
+          "trace_id": "210313ea17909561218786492e0b62",
+          "biz_success": false,
+          "message": "systemError:isp.system-service-error:PUB_BIZCHECK_PRODUCT_IN_AUDITING:Your product is currently under review. Please do not resubmit.\n\n:;",
+          "request_id": "212c6fc617909561222182684",
+          "_trace_id_": "210313ea17909561218786492e0b62"
+        },
+        "public": "Not signed by this formal review",
+        "actual_main_pixel_mapping": "Generated main URLs present; no current new-ID pixel review claim",
+        "keywords": [
+          ""
+        ]
+      },
+      "actual_score": null,
+      "meets_5_0": false,
+      "old_off_performed": false,
+      "evidence_hashes": {
+        "hr_control\\936_K858_clean_replacement_candidates\\K858_ACTUAL_REPLACEMENT_CREATE.params.json": "9409da8de6dc226aaa3257c07380025fa10210c4e568449915dd5adcd94d6ba0",
+        "hr_control\\936_K858_clean_replacement_candidates\\K858_fresh_status.response.json": "8579824b7893ba0c1c816c1b25b15e846503f46e05b5f7f66e88c75bc820a570",
+        "hr_control\\936_K858_clean_replacement_candidates\\K858_replacement_inventory.response.json": "dc88e3a995c2cc8da256b6de40f8e2e6bbe0d687ae10228c37626f645bca9fea",
+        "hr_control\\936_K858_clean_replacement_candidates\\K858_REPLACEMENT_ADD_ONCE_ledger.json": "61061c96c0359ba06aaca2a144f1790f2566f07bb2e285f43c12a763b46abd2f"
+      }
+    }
+  ],
+  "reviewer_platform_write": false,
+  "scope": "Actual content and SKU/bank identity readback; not approval/score/public/oldOFF completion"
+}

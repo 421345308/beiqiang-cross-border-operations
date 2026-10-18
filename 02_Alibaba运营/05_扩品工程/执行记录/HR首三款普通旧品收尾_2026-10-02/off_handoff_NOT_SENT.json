@@ -1,0 +1,96 @@
+{
+  "stage": "PREOFF_READONLY_PASSED_HANDOFF_PARENT_AUTHORIZED_OFF_OWNER",
+  "targets": [
+    {
+      "old_product_id": "1601943774082",
+      "old_listing": "HR050-A",
+      "new_product_id": "1601969869242",
+      "current_status": "approved/Y",
+      "get_request_id": "210829b717909578658153315",
+      "get_observed_at_utc": "2026-10-02T16:17:40.990132+00:00",
+      "classification": "普通品",
+      "classification_observed_at_utc": "2026-10-02 00:48:31",
+      "desired_old_action": "RECOVERABLE_OFF",
+      "actual_old_action_by_this_task": "NOT_SENT"
+    },
+    {
+      "old_product_id": "1601943742273",
+      "old_listing": "HR052-A",
+      "new_product_id": "1601969788941",
+      "current_status": "approved/Y",
+      "get_request_id": "0b51802d17909578707683919",
+      "get_observed_at_utc": "2026-10-02T16:17:45.957948+00:00",
+      "classification": "普通品",
+      "classification_observed_at_utc": "2026-10-02 00:48:31",
+      "desired_old_action": "RECOVERABLE_OFF",
+      "actual_old_action_by_this_task": "NOT_SENT"
+    },
+    {
+      "old_product_id": "1601943621884",
+      "old_listing": "HR043-B",
+      "new_product_id": "1601969861694",
+      "current_status": "approved/Y",
+      "get_request_id": "21501b8d17909578783675568",
+      "get_observed_at_utc": "2026-10-02T16:17:53.534157+00:00",
+      "classification": "普通品",
+      "classification_observed_at_utc": "2026-10-02 00:48:31",
+      "desired_old_action": "RECOVERABLE_OFF",
+      "actual_old_action_by_this_task": "NOT_SENT"
+    }
+  ],
+  "order_risk": {
+    "query": {
+      "params": {
+        "param_trade_ecology_order_list_query": {
+          "role": "seller",
+          "page_size": 100,
+          "start_page": 0,
+          "create_date_start": {
+            "date_str": "2026-08-01 00:00:00"
+          },
+          "create_date_end": {
+            "date_str": "2026-10-03 23:59:59"
+          }
+        }
+      },
+      "request_id": "212c41d317909582039372885",
+      "observed_at_utc": "2026-10-02T16:23:19.441505+00:00",
+      "order_ids": [
+        "316443427501020864",
+        "316409659501025320",
+        "316674243001020864",
+        "316340343501027603",
+        "316391946501022391",
+        "315414351001024781",
+        "314681283501023089",
+        "315357850501025643",
+        "315425114001024205",
+        "314010907501027934",
+        "28357841001035316"
+      ],
+      "total_count": 11,
+      "same_visible_order_ids_as_details": true,
+      "query_complete": true,
+      "new_visible_order_ids": []
+    },
+    "visible_orders": 11,
+    "detail_count": 11,
+    "exact_encrypted_id_matches": 0,
+    "limit": "仅所查日期及可见订单；非终身无订单结论"
+  },
+  "inquiry_linkage": "UNKNOWN",
+  "promotion_rights": "UNKNOWN",
+  "new_acceptance": "PARENT_CONFIRMED_QUALITY5_PUBLIC_PASS",
+  "keyword_work": "SEPARATE_NOT_BLOCKING_THIS_APPROVED_RETIREMENT",
+  "next_owner": "父任务指定可恢复off执行owner；本任务不抢Chrome/不下架",
+  "completion_required": [
+    "单次off业务回执",
+    "同一旧ID实际下架/非展示回读与时间",
+    "原映射更新old_OFF_verified且保护兄弟保留"
+  ],
+  "operational_complete": false,
+  "whole_family_complete": false,
+  "unknown_write": "先对账不盲重发；本任务平台写入0",
+  "deadline_utc": "2026-10-02 18:00Z",
+  "no_automatic_resume": true
+}

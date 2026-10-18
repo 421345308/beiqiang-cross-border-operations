@@ -1,0 +1,21 @@
+{
+  "method": "alibaba.icbu.category.get.new",
+  "request": {
+    "cat_id": 32299
+  },
+  "observed_at": "2026-10-15T04:46:09.351364+00:00",
+  "response": {
+    "category": {
+      "leaf_category": true,
+      "cn_name": "其他鞋类",
+      "category_id": 32299,
+      "level": 2,
+      "name": "Other Shoes",
+      "parent_ids": [
+        "322"
+      ]
+    },
+    "request_id": "21501b6717920395689288669",
+    "_trace_id_": "0bb4a40617920395687848650e0c57"
+  }
+}

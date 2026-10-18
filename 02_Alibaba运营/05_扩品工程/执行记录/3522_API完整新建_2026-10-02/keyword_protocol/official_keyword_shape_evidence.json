@@ -1,0 +1,8 @@
+{
+  "source": "https://developer.alibaba.com/docs/doc.htm?articleId=119212&docType=1&treeId=456",
+  "observed_at": "2026-10-02T15:45:31.856047+00:00",
+  "section": "2024-01-26 keyword three-to-one upgrade",
+  "documented_single_keyword_xml": "<field id=\"productKeywords\" type=\"complex\"><complex-value><field id=\"productKeywords_0\" type=\"input\"><value>key words</value></field></complex-value></field>",
+  "comparison": "The actual create and update keyword subtree has the same documented shape, one input node and direct text value. Schema business success nevertheless returned empty product.keywords. Exact cause unestablished; do not invent inputValue/negative marker formats or claim stored keywords.",
+  "read_only_reference_probe": "HR044A render SSL/native transport failed; historical renders contain definitions only; cannot assert saved nonempty format."
+}

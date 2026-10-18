@@ -1,0 +1,7 @@
+{
+  "stop_at_UTC": "2026-10-02T18:00:00+00:00",
+  "stop_at_Beijing": "2026-10-03 02:00",
+  "no_auto_resume": true,
+  "quota_reset_claim": false,
+  "rule": "Stop all new tasks/modifications/publication at deadline; only safely reconcile in-flight results and save checkpoint. Avoid starting a write too close to stop to safely read it back."
+}

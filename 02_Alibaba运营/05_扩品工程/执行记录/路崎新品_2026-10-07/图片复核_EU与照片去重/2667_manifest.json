@@ -1,0 +1,69 @@
+{
+  "operation": "update",
+  "product_id": "1601973009551",
+  "category_id": 201334413,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "素材清单.json",
+    "图片上传账本.json"
+  ],
+  "current_schema": "2667_current_schema.xml",
+  "current_schema_sha256": "1a7ee19b5f7daa32b98439785cd6a1dd7c3041fc3dde394adb19abdc0abe5d81",
+  "schema_request_id": "213c934417914253909214004",
+  "schema_acquired_at": "2026-10-08T02:09:53.698304+00:00",
+  "payload_xml": "2667_payload.xml",
+  "field_ids": [
+    "detailImage"
+  ],
+  "dependency_ids": [],
+  "intended_main": [
+    {
+      "url": "https://sc04.alicdn.com/kf/Hfd5cbb56954e45429cbd96bfdc2a08721.jpg",
+      "file_id": "0"
+    },
+    {
+      "url": "https://sc04.alicdn.com/kf/H414069a9c49a4af2ad3cb1c973b754b25.png",
+      "file_id": "0"
+    },
+    {
+      "url": "https://sc04.alicdn.com/kf/He125127456aa47f7a14e48019b5bbdc4k.png",
+      "file_id": "0"
+    },
+    {
+      "url": "https://sc04.alicdn.com/kf/Hb6795d0acfc94c0cbf99fec510ac0f4fD.png",
+      "file_id": "0"
+    },
+    {
+      "url": "https://sc04.alicdn.com/kf/H95b7d4f6fa214d3fa21d31fcf94a9494D.png",
+      "file_id": "0"
+    },
+    {
+      "url": "https://sc04.alicdn.com/kf/S6c8cb1d46d8c4b018cf07f5cab50c1adi.png",
+      "file_id": "0"
+    }
+  ],
+  "intended_details": [
+    {
+      "name": "2667_pair",
+      "sha256": "729e067b02d4dd44941670ba69079c9c6d3fe46288a5404b4a0b14dea1287626",
+      "status": "VERIFIED",
+      "url": "https://sc04.alicdn.com/kf/H350459fbe675467bb0aa3a795016660dY/286385890/H350459fbe675467bb0aa3a795016660dY.png",
+      "file_id": "33755340223",
+      "request_id": null
+    },
+    {
+      "url": "https://sc04.alicdn.com/kf/Hac2db86726344751a52342e52e4878d2G.png",
+      "file_id": "0"
+    },
+    {
+      "url": "https://sc04.alicdn.com/kf/He7a826b16e804e24a2f041fd9a5481d9v.png",
+      "file_id": "0"
+    },
+    {
+      "url": "https://sc04.alicdn.com/kf/H86112ad0a9f14466aecc49cd9686ccfe0.png",
+      "file_id": "0"
+    }
+  ],
+  "review": "EU标签一致；主图实物照片不再嵌入产品详情排版；6主4详5公司整图互斥",
+  "main_factory_role": "company production/checking only"
+}

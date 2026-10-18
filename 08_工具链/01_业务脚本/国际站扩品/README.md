@@ -1,5 +1,19 @@
 # 国际站扩品工具
 
+货号与主图库工厂图统一使用 `normalize_models_factory_gallery.py freeze/bank/prepare/submit/verify` 和 `sync_models_factory_gallery.py`，唯一状态在HR实源替换当前入口的`货号与共用主图/`。HR货号迁移为稳定BQ1001–BQ1067，原SKU ID/色码/价格保全，外采/自产独立记内部当前供货路径，旧型号保留可查别名。F1方图只上传一次，逐图组选择位置保留唯一结构/底纹/颜色信息。当前既有官方客户端native传输实测正常且更快，仍验证TLS、不自动重放未知写入；每ID一次账本。原HR和路崎verify/sync入口遇到本期账本后路由当前控制器，不让旧模型或旧工厂图快照覆盖新值。后续新建路崎商品也读取共享工厂入口的F1，C1–C6继续用于公司详情。
+
+`audit_models_factory_prepared.py` 对精确当前Schema检查未改主图、属性、SKU ID/价格/库存/色码值；`test_model_factory_preservation.py`验证无序回读比较不放过丢图、换角色、换URL、丢SKU或商业数据变化。product.get的公司/详情图库行按完整角色/名称/URL及重复数比较，Schema实际顺序另核。`repair_model_factory_quality.py`保留一个标题及两条类目修正的历史账本与只读核验，已停用其部分字段类目准备路线；两条同ID实际重置规格后，`recover_category_reset_skus.py`按原正式快照恢复全部60/27项SKU数据，显式记录平台重发87个内部ID。中央契约及提交入口禁止缺少完整saleProp/sku/ladderPrice的类目更新。映射通过哈希、完整色码/图/价格及当前Schema绑定独立核验，不忽略或伪造身份变化。`audit_models_factory_completion.py --refresh-catalog`只读全目录并与本地逐ID对账，当前平台退回与目标字段已返回分开记录；不把一次approved或5.00当永久状态。唯一规则见商品SOP，当前事实见执行入口。
+
+路崎材料角色修正使用 `repair_luqi_material_roles.py prepare/submit/verify/sync`，执行对象仅为当前来源逐款复核后的八个原ID。属性ID从本款当前Schema的字段名称解析，大底/中底不共享硬编码；未知中底使用当前类目的other，不把供应商大底材料推断为中底。标题原样保全以防平台自动重组；其余正式字段与原商品比较，状态与实际评分分别回读，已留写入账本不重放。
+
+同一2583系列扩色使用 `expand_luqi_2583_family.py plan/bank/prepare/submit/verify/sync`，只更新1601976101204，不新建2583。两页真实来源按颜色分列，保留原26个SKU ID/编码/色图，补46个组合至72EU；红色限EU36–42，其余五色EU36–48。当前Schema通过后才提交，正常审核期间继续其他素材；一般FAQ和已批准V8六公司图保全。旧两色素材与创建回执作为历史证据，不作后续新品默认值。
+
+2569 扩色使用 `expand_luqi_2569_colours.py bank/prepare/submit/verify/sync`，仅更新原ID1601981563053。当前计划及验收在 `2569准备/家族扩色/`：保留米色13个SKU编号、代码和色图，追加江上补充来源实拍的黑、绿各13及粉色7个EU组合，共四色46EU；无重绘配色。只改色码、标题亮点、第五张主图和第四色码详情，价格、属性、包装、FAQ与V8公司图保持。原创建控制器遇到本次扩色账本后，verify/sync自动路由到扩色核验，避免将最初13EU快照覆盖当前46EU；未知结果不重放。图数、来源、原SKU全行、字段保护和真实评分分别核对，计划46不计作正式验收。
+
+`reconcile_luqi_local_media.py` 对照本批当前正式快照、已有图片银行回执及本地文件 SHA，修复统一素材索引漏记；默认只预检，`--apply` 仅补本地索引、按ID证据和商品档案引用。无下载、复制媒体、生成、上传或平台商品修改，不以索引漏记推断线上图片丢失。未知/多义CDN映射、无正向上传回执或文件SHA不符时不写入。
+
+当前 HR 实源替换入口为 `replace_hr_real_sources.py`、`verify_hr_real_sources.py`、`sync_hr_real_sources.py` 与[本轮业务总入口](../../../02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/README.md)。商品状态统一调用 `read_only_catalog.product_readiness`，含义及退回后的修正要求只按[生命周期 SOP §5](../../../02_Alibaba运营/00_运营SOP/国际站商品全生命周期SOP.md#5-openapi-与浏览器执行原则)；不得把审核不通过记为审核中而空等。当前准备、已提交、正式字段/评分通过、本地双改、公开呈现分别取证。
+
 ## 有效品牌原ID修复
 
 `repair_brand_text.py` 用于已授权商品的有效品牌文本修复。本批执行范围见路崎执行记录的`质量复核_2026-10-09/有效品牌与MD标签核验.json`；该初始清单冻结，当前结果另见`有效品牌与MD标签当前核验.json`，不得把待审核当作已上线。

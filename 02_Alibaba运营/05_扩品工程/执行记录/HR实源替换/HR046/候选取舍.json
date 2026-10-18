@@ -1,0 +1,1289 @@
+{
+  "family": "HR046",
+  "retired_candidates": [
+    {
+      "state": "EXPLICIT_BUSINESS_CATEGORY_REJECTION_ORIGINAL_UNCHANGED",
+      "rejected_original_ids": [
+        "1601943660658",
+        "1601943773037",
+        "1601943694473"
+      ],
+      "reason": "A34 water-shoe leaf is outside current store business category; all three explicit rejected receipts and fresh full original-product equality proven. Select a different actual permitted casual shoe, not relabel A34 or change operating permissions.",
+      "source_artno": "A34",
+      "source_url": "https://huayang.sooxie.com/detail/1703880",
+      "raw_package_retained": "01_产品资产/01_原始数据包/HR046_A34",
+      "past_draft_plan_for_rebuilding_formal_upload_evidence_only": {
+        "candidate": "huayang_1703880",
+        "source_artno": "A34",
+        "supplier": "花样鞋业",
+        "source_url": "https://huayang.sooxie.com/detail/1703880",
+        "source_price_cny": 42,
+        "source_color_labels": [
+          "灰色白色",
+          "黑色",
+          "月色"
+        ],
+        "colors": [
+          "Grey/Orange",
+          "Black/Orange",
+          "White/Lime"
+        ],
+        "sizes": [
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46
+        ],
+        "upper": "Mesh",
+        "lining": "Mesh",
+        "closure": "Lace-up",
+        "category_id": 201345111,
+        "style": [],
+        "category_attribute_omissions": [
+          "Style",
+          "Closure Type"
+        ],
+        "category_absent_attributes_reviewed": [
+          "Style",
+          "Closure Type"
+        ],
+        "extra_category_attributes": {
+          "Gender": [
+            "Unisex"
+          ],
+          "Application": [
+            "Swim"
+          ]
+        },
+        "platform_group_id": 971467417,
+        "platform_group_name": "Athletic & Running Style Shoes",
+        "target_ids": {
+          "A": "1601943660658",
+          "B": "1601943773037",
+          "C": "1601943694473"
+        },
+        "local_intent_candidates": [
+          "网面束绳水鞋/溯溪鞋"
+        ],
+        "materials_evidence": [
+          "Specificcurrentsourceproductdetails says网布upper/网纱lining, permits Mesh/Mesh. No outsole/midsole chemicaldescription found:Other. Do not inferRubber fromflexibility/appearance.",
+          "Specifictitle游泳鞋/溯溪鞋 supportsWaterShoescategory andSwimapplication. No waterproof/quickdry/drainage/griptest/zeroDrop/wide-last claims. Toe endcolourpads visible, not separatetoe pockets.",
+          "19of20nativeframes read; no denied20 retry. Wholegrey/black/white originals showmatchingcordtoggle,upperwaves/rearloops/solepads; onlyactualside/top/bottom views used.",
+          "Sourcemergedlabel灰色白色 maps actualGrey/Orange, 黑色actualBlack/Orange, 月色actualWhite/Lime; sourceordering andthree colour galleries crosschecked. Use neutral Unisex category for the marketedrange andmixedwearphotos, no sex-specific fitclaim. Body startsEU36, not unoffered35 inoldtitle."
+        ],
+        "dedup": "A34source notadopted. Unlike DZKB11dial/highbuiltsole and HR032CH33mesh-lace panels, A34hascordtoggle,lowwater-shoeoutline,fivecolouredtoe-endpads andtheactualpolygon/circularbottom. Not an adoptedsamefamily recolour.",
+        "do_not_claim": [
+          "wide toe box",
+          "rubber composition",
+          "quick dry testing",
+          "waterproof",
+          "zero drop",
+          "tested grip",
+          "physical stock"
+        ],
+        "custom": [
+          "Shoe Profile",
+          "Mesh water shoe; cord toggle; rear loop; contrast toe accents"
+        ],
+        "titles": {
+          "A": "Mesh Aqua Water Shoes with Cord Toggle Closure and Contrast Toe Accents for Wholesale Footwear Buyers",
+          "B": "Swimming Style Mesh Water Shoes with Rear Pull Loop and Patterned Outsole for Wholesale Shoe Collections",
+          "C": "Aqua Shoes with Mesh Lining and Adjustable Cord Lacing for Wholesale Beach and Swimming Footwear Assortments"
+        },
+        "keywords": [
+          "Mesh Aqua Water Shoes",
+          "Cord Toggle Swimming Shoes",
+          "Mesh Lining Water Footwear"
+        ],
+        "highlights": "Mesh water-shoe profile: This source-listed swimming and creek shoe has a low-cut mesh upper and mesh lining.\n\nCord toggle closure: A front cord passes through the eyelet panel and is adjusted by the visible toggle above the forefoot.\n\nContrast toe accents: Five coloured sections follow the front edge of the sole, with wave-pattern upper panels continuing along the quarter.\n\nPatterned underside: Original bottom views show circular and angular sections with contrasting forefoot and heel accents.\n\nThree colour directions: Grey/Orange, Black/Orange and White/Lime are listed in EU36-46 for wholesale assortments.",
+        "assets_layout": {
+          "M1": {
+            "buyer_question": "What actual mesh water shoe is offered?",
+            "title": null,
+            "photos": [
+              {
+                "index": 8,
+                "box": [
+                  15,
+                  15,
+                  985,
+                  985
+                ]
+              }
+            ]
+          },
+          "M2": {
+            "buyer_question": "What cord closure and forefoot are supplied?",
+            "title": "Cord toggle & toe accents",
+            "subtitle": "Actual Grey front view.",
+            "photos": [
+              {
+                "index": 5,
+                "box": [
+                  45,
+                  215,
+                  955,
+                  935
+                ]
+              }
+            ]
+          },
+          "M3": {
+            "buyer_question": "What is the underside pattern?",
+            "title": "Circular & angular sole sections",
+            "subtitle": "Actual Grey bottom view.",
+            "photos": [
+              {
+                "index": 4,
+                "box": [
+                  45,
+                  215,
+                  955,
+                  935
+                ]
+              }
+            ]
+          },
+          "M4": {
+            "buyer_question": "Which actual colours and EU choices are supplied?",
+            "title": "3 colour options",
+            "subtitle": "Actual source shoes for your colour selection.",
+            "photos": [
+              {
+                "index": 8,
+                "box": [
+                  45,
+                  215,
+                  955,
+                  420
+                ],
+                "crop": [
+                  5,
+                  200,
+                  795,
+                  660
+                ]
+              },
+              {
+                "index": 14,
+                "box": [
+                  45,
+                  450,
+                  955,
+                  655
+                ],
+                "crop": [
+                  5,
+                  200,
+                  795,
+                  660
+                ]
+              },
+              {
+                "index": 19,
+                "box": [
+                  45,
+                  685,
+                  955,
+                  890
+                ],
+                "crop": [
+                  5,
+                  245,
+                  795,
+                  655
+                ]
+              }
+            ],
+            "text": [
+              {
+                "value": "Grey/Orange",
+                "xy": [
+                  45,
+                  428
+                ],
+                "size": 23
+              },
+              {
+                "value": "Black/Orange",
+                "xy": [
+                  45,
+                  663
+                ],
+                "size": 23
+              },
+              {
+                "value": "White/Lime",
+                "xy": [
+                  45,
+                  898
+                ],
+                "size": 23
+              },
+              {
+                "value": "EU 36-46",
+                "xy": [
+                  45,
+                  950
+                ],
+                "size": 23
+              }
+            ]
+          },
+          "M5": {
+            "buyer_question": "What rear entry is supplied?",
+            "title": "Rear pull loop & heel profile",
+            "subtitle": "Actual Grey rear view.",
+            "photos": [
+              {
+                "index": 6,
+                "box": [
+                  45,
+                  215,
+                  955,
+                  935
+                ]
+              }
+            ]
+          },
+          "D1": {
+            "buyer_question": "What is the Black upper construction?",
+            "title": "Black wave panels & cord closure",
+            "subtitle": "Actual top view of the mesh shoe.",
+            "photos": [
+              {
+                "index": 10,
+                "box": [
+                  45,
+                  215,
+                  955,
+                  1085
+                ]
+              }
+            ]
+          },
+          "D2": {
+            "buyer_question": "What is the White underside?",
+            "title": "White contrast sole accents",
+            "subtitle": "Actual bottom view with lime sections.",
+            "photos": [
+              {
+                "index": 15,
+                "box": [
+                  45,
+                  215,
+                  955,
+                  1085
+                ]
+              }
+            ]
+          },
+          "D3": {
+            "buyer_question": "How does White look when worn?",
+            "title": "White water-shoe profile",
+            "subtitle": "Original photograph with actual toe accents.",
+            "photos": [
+              {
+                "index": 1,
+                "box": [
+                  45,
+                  215,
+                  955,
+                  1085
+                ]
+              }
+            ]
+          },
+          "D4": {
+            "buyer_question": "Which actual colours and EU choices are supplied?",
+            "title": "3 colour options",
+            "subtitle": "Actual source shoes for your colour selection.",
+            "photos": [
+              {
+                "index": 8,
+                "box": [
+                  45,
+                  215,
+                  955,
+                  465
+                ],
+                "crop": [
+                  5,
+                  200,
+                  795,
+                  660
+                ]
+              },
+              {
+                "index": 14,
+                "box": [
+                  45,
+                  505,
+                  955,
+                  755
+                ],
+                "crop": [
+                  5,
+                  200,
+                  795,
+                  660
+                ]
+              },
+              {
+                "index": 19,
+                "box": [
+                  45,
+                  795,
+                  955,
+                  1045
+                ],
+                "crop": [
+                  5,
+                  245,
+                  795,
+                  655
+                ]
+              }
+            ],
+            "text": [
+              {
+                "value": "Grey/Orange",
+                "xy": [
+                  45,
+                  473
+                ],
+                "size": 23
+              },
+              {
+                "value": "Black/Orange",
+                "xy": [
+                  45,
+                  763
+                ],
+                "size": 23
+              },
+              {
+                "value": "White/Lime",
+                "xy": [
+                  45,
+                  1053
+                ],
+                "size": 23
+              },
+              {
+                "value": "EU 36-46",
+                "xy": [
+                  45,
+                  1105
+                ],
+                "size": 23
+              },
+              {
+                "value": "2+ pairs $9.43 | 50+ $8.80 | 100+ $8.17",
+                "xy": [
+                  45,
+                  1155
+                ],
+                "size": 25
+              },
+              {
+                "value": "Price per pair; freight quoted separately.",
+                "xy": [
+                  45,
+                  1200
+                ],
+                "size": 23
+              }
+            ]
+          },
+          "SKU_GREY_ORANGE": {
+            "buyer_question": "Which actual colour is this SKU?",
+            "title": null,
+            "photos": [
+              {
+                "index": 8,
+                "box": [
+                  25,
+                  25,
+                  975,
+                  975
+                ]
+              }
+            ]
+          },
+          "SKU_BLACK_ORANGE": {
+            "buyer_question": "Which actual colour is this SKU?",
+            "title": null,
+            "photos": [
+              {
+                "index": 14,
+                "box": [
+                  25,
+                  25,
+                  975,
+                  975
+                ]
+              }
+            ]
+          },
+          "SKU_WHITE_LIME": {
+            "buyer_question": "Which actual colour is this SKU?",
+            "title": null,
+            "photos": [
+              {
+                "index": 19,
+                "box": [
+                  25,
+                  25,
+                  975,
+                  975
+                ]
+              }
+            ]
+          }
+        },
+        "source_assets_root": "01_产品资产/01_原始数据包/HR046_A34",
+        "source_date": "2026-10-14",
+        "fx_cny_per_usd": 6.6837,
+        "tiers": [
+          [
+            2,
+            "9.43"
+          ],
+          [
+            50,
+            "8.80"
+          ],
+          [
+            100,
+            "8.17"
+          ]
+        ],
+        "page_state": "LOCAL_DRAFT",
+        "company_faq_source": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/通用FAQ与公司简介.json",
+        "seasons": [
+          "All Seasons"
+        ],
+        "feature": "Fashion Trend",
+        "midsole": "Other",
+        "outsole": "Other",
+        "selection_review": {
+          "state": "REVIEWED_ADOPT",
+          "private_backend_evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/经营数据与选款.json",
+          "reason": "HR046oldconcept has insufficient traffic/no contacts. Select actualA34 sourceidentified water shoe withmeshupper,cordtoggle anddistincttoe/solepattern; sourcecostCNY42, preserve sourceEU36-46 body rather than oldgenericlacewalker.",
+          "cost_usd": 6.283944521746936,
+          "gross_difference_usd": [
+            3.1461,
+            2.5161,
+            1.8861
+          ],
+          "comparison_limit": "Exact-model comparable Alibaba quote not verified. Low MOQ orders differ from bulk competitor quotes. Apply50/40/30% cost markup and evaluate freight/service/taxes perorder, no cheapest/netprofit guarantee."
+        }
+      },
+      "official_image_bank_receipts_preserved": {
+        "family": "HR046",
+        "items": {
+          "M1": {
+            "path": "01_产品资产/02_可发布素材/HR046/M1.jpg",
+            "sha256": "557b92bf8f02a25e545df53c153ccc9ef41287c70a7ad5d7f6699db72719b60a",
+            "dimensions": [
+              1000,
+              1000
+            ],
+            "state": "UPLOADED",
+            "at": "2026-10-13T21:47:05.234387+00:00",
+            "response": {
+              "upload_image_response": {
+                "file_name": "M1.jpg",
+                "file_id": 33831600106,
+                "photobank_url": "//sc04.alicdn.com/kf/H77ccb82fd8a54c108c8de32b8cae17c8p/286385890/H77ccb82fd8a54c108c8de32b8cae17c8p.jpg"
+              },
+              "request_id": "2166c2ca17919280319043514",
+              "_trace_id_": "2101075517919280312284457e0dc2"
+            },
+            "url": "https://sc04.alicdn.com/kf/H77ccb82fd8a54c108c8de32b8cae17c8p/286385890/H77ccb82fd8a54c108c8de32b8cae17c8p.jpg",
+            "file_id": "33831600106"
+          },
+          "M2": {
+            "path": "01_产品资产/02_可发布素材/HR046/M2.jpg",
+            "sha256": "2d28f95d981d26aadb0e17de1f11e73f2901e8a9159293dd0c9d6c93c4678b47",
+            "dimensions": [
+              1000,
+              1000
+            ],
+            "state": "UPLOADED",
+            "at": "2026-10-13T21:47:12.338995+00:00",
+            "response": {
+              "upload_image_response": {
+                "file_name": "M2.jpg",
+                "file_id": 33829417013,
+                "photobank_url": "//sc04.alicdn.com/kf/H235bd31526ab45a29798b5b99e3b1045Y/286385890/H235bd31526ab45a29798b5b99e3b1045Y.jpg"
+              },
+              "request_id": "213e759c17919280381983733",
+              "_trace_id_": "210141f717919280375764683e0f4e"
+            },
+            "url": "https://sc04.alicdn.com/kf/H235bd31526ab45a29798b5b99e3b1045Y/286385890/H235bd31526ab45a29798b5b99e3b1045Y.jpg",
+            "file_id": "33829417013"
+          },
+          "M3": {
+            "path": "01_产品资产/02_可发布素材/HR046/M3.jpg",
+            "sha256": "f1d74be87b836ce080783892f621df7cb1c2ec9987ccb6b8ffb1d397769bd33d",
+            "dimensions": [
+              1000,
+              1000
+            ],
+            "state": "UPLOADED",
+            "at": "2026-10-13T21:47:18.631079+00:00",
+            "response": {
+              "upload_image_response": {
+                "file_name": "M3.jpg",
+                "file_id": 33831133540,
+                "photobank_url": "//sc04.alicdn.com/kf/H8d0d3630192d46d2b454a9b3e641d44dA/286385890/H8d0d3630192d46d2b454a9b3e641d44dA.jpg"
+              },
+              "request_id": "213c934417919280448395299",
+              "_trace_id_": "2101075517919280442345573e0ff3"
+            },
+            "url": "https://sc04.alicdn.com/kf/H8d0d3630192d46d2b454a9b3e641d44dA/286385890/H8d0d3630192d46d2b454a9b3e641d44dA.jpg",
+            "file_id": "33831133540"
+          },
+          "M4": {
+            "path": "01_产品资产/02_可发布素材/HR046/M4.jpg",
+            "sha256": "e075a7458a7c8515f30d8c041b9aaf7c2d140b6c1e2d545b9757e1eb95f2d3a4",
+            "dimensions": [
+              1000,
+              1000
+            ],
+            "state": "UPLOADED",
+            "at": "2026-10-13T21:47:25.244873+00:00",
+            "response": {
+              "upload_image_response": {
+                "file_name": "M4.jpg",
+                "file_id": 33831109591,
+                "photobank_url": "//sc04.alicdn.com/kf/H3fdd6d34fcec49c1973d4b815b73117aU/286385890/H3fdd6d34fcec49c1973d4b815b73117aU.jpg"
+              },
+              "request_id": "0b830ecc17919280510673210",
+              "_trace_id_": "213ba0c517919280504113140e0ef1"
+            },
+            "url": "https://sc04.alicdn.com/kf/H3fdd6d34fcec49c1973d4b815b73117aU/286385890/H3fdd6d34fcec49c1973d4b815b73117aU.jpg",
+            "file_id": "33831109591"
+          },
+          "M5": {
+            "path": "01_产品资产/02_可发布素材/HR046/M5.jpg",
+            "sha256": "4da2a28f3b1165d03fc253cd7ac39b5de8d66369ddf6b820bffcb9ed595266fb",
+            "dimensions": [
+              1000,
+              1000
+            ],
+            "state": "UPLOADED",
+            "at": "2026-10-13T21:47:31.495148+00:00",
+            "response": {
+              "upload_image_response": {
+                "file_name": "M5.jpg",
+                "file_id": 33831049875,
+                "photobank_url": "//sc04.alicdn.com/kf/H802cb7e0c56245edba9de18460241f93l/286385890/H802cb7e0c56245edba9de18460241f93l.jpg"
+              },
+              "request_id": "0bbb3b2417919280572116011",
+              "_trace_id_": "210141f717919280565914973e0bf5"
+            },
+            "url": "https://sc04.alicdn.com/kf/H802cb7e0c56245edba9de18460241f93l/286385890/H802cb7e0c56245edba9de18460241f93l.jpg",
+            "file_id": "33831049875"
+          },
+          "D1": {
+            "path": "01_产品资产/02_可发布素材/HR046/D1.jpg",
+            "sha256": "64e660fdc26fb3cca5e13ad679538932e5ef7bab3f75062ab3e29a3242cb15f0",
+            "dimensions": [
+              1000,
+              1250
+            ],
+            "state": "UPLOADED",
+            "at": "2026-10-13T21:47:37.646430+00:00",
+            "response": {
+              "upload_image_response": {
+                "file_name": "D1.jpg",
+                "file_id": 33831133542,
+                "photobank_url": "//sc04.alicdn.com/kf/H0507efe791c54f65a507e2a7e0e3daeeK/286385890/H0507efe791c54f65a507e2a7e0e3daeeK.jpg"
+              },
+              "request_id": "21501be117919280633436654",
+              "_trace_id_": "2101075517919280627508175e0c36"
+            },
+            "url": "https://sc04.alicdn.com/kf/H0507efe791c54f65a507e2a7e0e3daeeK/286385890/H0507efe791c54f65a507e2a7e0e3daeeK.jpg",
+            "file_id": "33831133542"
+          },
+          "D2": {
+            "path": "01_产品资产/02_可发布素材/HR046/D2.jpg",
+            "sha256": "7c4547c2c678bfc2c152928d3f1c62723b8d890914ecc1d715beba8bd6bedd53",
+            "dimensions": [
+              1000,
+              1250
+            ],
+            "state": "UPLOADED",
+            "at": "2026-10-13T21:47:43.802953+00:00",
+            "response": {
+              "upload_image_response": {
+                "file_name": "D2.jpg",
+                "file_id": 33833412510,
+                "photobank_url": "//sc04.alicdn.com/kf/Hca31e06636854c42829272e62aca885c2/286385890/Hca31e06636854c42829272e62aca885c2.jpg"
+              },
+              "request_id": "212cbf3217919280695334415",
+              "_trace_id_": "2101075517919280688775446e0c37"
+            },
+            "url": "https://sc04.alicdn.com/kf/Hca31e06636854c42829272e62aca885c2/286385890/Hca31e06636854c42829272e62aca885c2.jpg",
+            "file_id": "33833412510"
+          },
+          "D3": {
+            "path": "01_产品资产/02_可发布素材/HR046/D3.jpg",
+            "sha256": "c0b84c5a8295274114ab0ac5d582896f97584fb6d2e2551951fe1f2701af783c",
+            "dimensions": [
+              1000,
+              1250
+            ],
+            "state": "UPLOADED",
+            "at": "2026-10-13T21:47:49.926124+00:00",
+            "response": {
+              "upload_image_response": {
+                "file_name": "D3.jpg",
+                "file_id": 33831576209,
+                "photobank_url": "//sc04.alicdn.com/kf/H3a3f9f62dd284b01bf4d688b8d00fec6N/286385890/H3a3f9f62dd284b01bf4d688b8d00fec6N.jpg"
+              },
+              "request_id": "0b0b3a2717919280756553542",
+              "_trace_id_": "2140ca6817919280750275154e0ef3"
+            },
+            "url": "https://sc04.alicdn.com/kf/H3a3f9f62dd284b01bf4d688b8d00fec6N/286385890/H3a3f9f62dd284b01bf4d688b8d00fec6N.jpg",
+            "file_id": "33831576209"
+          },
+          "D4": {
+            "path": "01_产品资产/02_可发布素材/HR046/D4.jpg",
+            "sha256": "144f9cd1df52284687a366fae08833ea0c5762c1ceb11b3ddebfc78e884943ba",
+            "dimensions": [
+              1000,
+              1250
+            ],
+            "state": "UPLOADED",
+            "at": "2026-10-13T21:47:56.086807+00:00",
+            "response": {
+              "upload_image_response": {
+                "file_name": "D4.jpg",
+                "file_id": 33829417023,
+                "photobank_url": "//sc04.alicdn.com/kf/Hdab59916828b4ad5a96756aeab55cd91e/286385890/Hdab59916828b4ad5a96756aeab55cd91e.jpg"
+              },
+              "request_id": "213f5a2117919280817145450",
+              "_trace_id_": "2140ca6817919280812051550e0e2e"
+            },
+            "url": "https://sc04.alicdn.com/kf/Hdab59916828b4ad5a96756aeab55cd91e/286385890/Hdab59916828b4ad5a96756aeab55cd91e.jpg",
+            "file_id": "33829417023"
+          },
+          "SKU_GREY_ORANGE": {
+            "path": "01_产品资产/02_可发布素材/HR046/SKU_GREY_ORANGE.jpg",
+            "sha256": "4741599ca7cb51c54a3da6a151c0ff13e20cc6eaf749f3edf4b9cd3b01d31524",
+            "dimensions": [
+              1000,
+              1000
+            ],
+            "state": "UPLOADED",
+            "at": "2026-10-13T21:48:02.153516+00:00",
+            "response": {
+              "upload_image_response": {
+                "file_name": "SKU_GREY_ORANGE.jpg",
+                "file_id": 33833376599,
+                "photobank_url": "//sc04.alicdn.com/kf/H6600f58b66754cd6afe3a6754d304bc7z/286385890/H6600f58b66754cd6afe3a6754d304bc7z.jpg"
+              },
+              "request_id": "213e759c17919280877904543",
+              "_trace_id_": "2101075517919280872842398e0c35"
+            },
+            "url": "https://sc04.alicdn.com/kf/H6600f58b66754cd6afe3a6754d304bc7z/286385890/H6600f58b66754cd6afe3a6754d304bc7z.jpg",
+            "file_id": "33833376599"
+          },
+          "SKU_BLACK_ORANGE": {
+            "path": "01_产品资产/02_可发布素材/HR046/SKU_BLACK_ORANGE.jpg",
+            "sha256": "338a059a03ca36dd8c3d716e377d3e92680dade5addd599ec3925c254ee953ab",
+            "dimensions": [
+              1000,
+              1000
+            ],
+            "state": "UPLOADED",
+            "at": "2026-10-13T21:48:08.217895+00:00",
+            "response": {
+              "upload_image_response": {
+                "file_name": "SKU_BLACK_ORANGE.jpg",
+                "file_id": 33833352755,
+                "photobank_url": "//sc04.alicdn.com/kf/Hedf10edd850f434bb3394a923dd646aeV/286385890/Hedf10edd850f434bb3394a923dd646aeV.jpg"
+              },
+              "request_id": "213e759c17919280938184653",
+              "_trace_id_": "2101075517919280932991867e0c5a"
+            },
+            "url": "https://sc04.alicdn.com/kf/Hedf10edd850f434bb3394a923dd646aeV/286385890/Hedf10edd850f434bb3394a923dd646aeV.jpg",
+            "file_id": "33833352755"
+          },
+          "SKU_WHITE_LIME": {
+            "path": "01_产品资产/02_可发布素材/HR046/SKU_WHITE_LIME.jpg",
+            "sha256": "8be51bc34131bcf001ab6c2ba78dd0512dfcf0d61149768befc4fcf93ec424b8",
+            "dimensions": [
+              1000,
+              1000
+            ],
+            "state": "UPLOADED",
+            "at": "2026-10-13T21:48:14.250570+00:00",
+            "response": {
+              "upload_image_response": {
+                "file_name": "SKU_WHITE_LIME.jpg",
+                "file_id": 33831097647,
+                "photobank_url": "//sc04.alicdn.com/kf/Hb77c7d16f5744fa097e57a784d6036b4P/286385890/Hb77c7d16f5744fa097e57a784d6036b4P.jpg"
+              },
+              "request_id": "21501b6717919281004351494",
+              "_trace_id_": "210141f717919280993651622e0bf6"
+            },
+            "url": "https://sc04.alicdn.com/kf/Hb77c7d16f5744fa097e57a784d6036b4P/286385890/Hb77c7d16f5744fa097e57a784d6036b4P.jpg",
+            "file_id": "33831097647"
+          },
+          "M6": {
+            "path": "01_产品资产/02_可发布素材/共享素材/贝强公司简介图库.jpg",
+            "sha256": "5164b4d0ac008fb79a20d60419d21713b4f49b9ecea0a845d6c7de104030f51e",
+            "dimensions": [
+              1721,
+              914
+            ],
+            "state": "UPLOADED",
+            "url": "https://sc04.alicdn.com/kf/H281467d09f4b48368c335900f583a9c9r/286385890/H281467d09f4b48368c335900f583a9c9r.jpg",
+            "file_id": "33817465899",
+            "reused_official_upload_from": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/DZ14546082-A/图片银行.json",
+            "at": "2026-10-13T21:48:20.930459+00:00"
+          }
+        },
+        "state": "COMPLETE"
+      },
+      "reviewed_manifest": {
+        "family": "HR046",
+        "state": "VISUAL_PASS",
+        "items": {
+          "M1": {
+            "path": "01_产品资产/02_可发布素材/HR046/M1.jpg",
+            "sha256": "557b92bf8f02a25e545df53c153ccc9ef41287c70a7ad5d7f6699db72719b60a",
+            "dimensions": [
+              1000,
+              1000
+            ]
+          },
+          "M2": {
+            "path": "01_产品资产/02_可发布素材/HR046/M2.jpg",
+            "sha256": "2d28f95d981d26aadb0e17de1f11e73f2901e8a9159293dd0c9d6c93c4678b47",
+            "dimensions": [
+              1000,
+              1000
+            ]
+          },
+          "M3": {
+            "path": "01_产品资产/02_可发布素材/HR046/M3.jpg",
+            "sha256": "f1d74be87b836ce080783892f621df7cb1c2ec9987ccb6b8ffb1d397769bd33d",
+            "dimensions": [
+              1000,
+              1000
+            ]
+          },
+          "M4": {
+            "path": "01_产品资产/02_可发布素材/HR046/M4.jpg",
+            "sha256": "e075a7458a7c8515f30d8c041b9aaf7c2d140b6c1e2d545b9757e1eb95f2d3a4",
+            "dimensions": [
+              1000,
+              1000
+            ]
+          },
+          "M5": {
+            "path": "01_产品资产/02_可发布素材/HR046/M5.jpg",
+            "sha256": "4da2a28f3b1165d03fc253cd7ac39b5de8d66369ddf6b820bffcb9ed595266fb",
+            "dimensions": [
+              1000,
+              1000
+            ]
+          },
+          "D1": {
+            "path": "01_产品资产/02_可发布素材/HR046/D1.jpg",
+            "sha256": "64e660fdc26fb3cca5e13ad679538932e5ef7bab3f75062ab3e29a3242cb15f0",
+            "dimensions": [
+              1000,
+              1250
+            ]
+          },
+          "D2": {
+            "path": "01_产品资产/02_可发布素材/HR046/D2.jpg",
+            "sha256": "7c4547c2c678bfc2c152928d3f1c62723b8d890914ecc1d715beba8bd6bedd53",
+            "dimensions": [
+              1000,
+              1250
+            ]
+          },
+          "D3": {
+            "path": "01_产品资产/02_可发布素材/HR046/D3.jpg",
+            "sha256": "c0b84c5a8295274114ab0ac5d582896f97584fb6d2e2551951fe1f2701af783c",
+            "dimensions": [
+              1000,
+              1250
+            ]
+          },
+          "D4": {
+            "path": "01_产品资产/02_可发布素材/HR046/D4.jpg",
+            "sha256": "144f9cd1df52284687a366fae08833ea0c5762c1ceb11b3ddebfc78e884943ba",
+            "dimensions": [
+              1000,
+              1250
+            ]
+          },
+          "SKU_GREY_ORANGE": {
+            "path": "01_产品资产/02_可发布素材/HR046/SKU_GREY_ORANGE.jpg",
+            "sha256": "4741599ca7cb51c54a3da6a151c0ff13e20cc6eaf749f3edf4b9cd3b01d31524",
+            "dimensions": [
+              1000,
+              1000
+            ]
+          },
+          "SKU_BLACK_ORANGE": {
+            "path": "01_产品资产/02_可发布素材/HR046/SKU_BLACK_ORANGE.jpg",
+            "sha256": "338a059a03ca36dd8c3d716e377d3e92680dade5addd599ec3925c254ee953ab",
+            "dimensions": [
+              1000,
+              1000
+            ]
+          },
+          "SKU_WHITE_LIME": {
+            "path": "01_产品资产/02_可发布素材/HR046/SKU_WHITE_LIME.jpg",
+            "sha256": "8be51bc34131bcf001ab6c2ba78dd0512dfcf0d61149768befc4fcf93ec424b8",
+            "dimensions": [
+              1000,
+              1000
+            ]
+          },
+          "M6": {
+            "path": "01_产品资产/02_可发布素材/共享素材/贝强公司简介图库.jpg",
+            "sha256": "5164b4d0ac008fb79a20d60419d21713b4f49b9ecea0a845d6c7de104030f51e",
+            "dimensions": [
+              1721,
+              914
+            ]
+          }
+        },
+        "image_roles": {
+          "M1": {
+            "buyer_question": "What actual mesh water shoe is offered?",
+            "source_pixels": [
+              {
+                "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR046_A34\\08.jpg",
+                "crop": null,
+                "native_effective_pixels": [
+                  800,
+                  800
+                ],
+                "uniform_resize": true
+              }
+            ],
+            "text": [],
+            "title": null
+          },
+          "M2": {
+            "buyer_question": "What cord closure and forefoot are supplied?",
+            "source_pixels": [
+              {
+                "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR046_A34\\05.jpg",
+                "crop": null,
+                "native_effective_pixels": [
+                  800,
+                  800
+                ],
+                "uniform_resize": true
+              }
+            ],
+            "text": [],
+            "title": "Cord toggle & toe accents"
+          },
+          "M3": {
+            "buyer_question": "What is the underside pattern?",
+            "source_pixels": [
+              {
+                "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR046_A34\\04.jpg",
+                "crop": null,
+                "native_effective_pixels": [
+                  800,
+                  800
+                ],
+                "uniform_resize": true
+              }
+            ],
+            "text": [],
+            "title": "Circular & angular sole sections"
+          },
+          "M4": {
+            "buyer_question": "Which actual colours and EU choices are supplied?",
+            "source_pixels": [
+              {
+                "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR046_A34\\08.jpg",
+                "crop": [
+                  5,
+                  200,
+                  795,
+                  660
+                ],
+                "native_effective_pixels": [
+                  790,
+                  460
+                ],
+                "uniform_resize": true
+              },
+              {
+                "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR046_A34\\14.jpg",
+                "crop": [
+                  5,
+                  200,
+                  795,
+                  660
+                ],
+                "native_effective_pixels": [
+                  790,
+                  460
+                ],
+                "uniform_resize": true
+              },
+              {
+                "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR046_A34\\19.jpg",
+                "crop": [
+                  5,
+                  245,
+                  795,
+                  655
+                ],
+                "native_effective_pixels": [
+                  790,
+                  410
+                ],
+                "uniform_resize": true
+              }
+            ],
+            "text": [
+              {
+                "value": "Grey/Orange",
+                "xy": [
+                  45,
+                  428
+                ],
+                "size": 23
+              },
+              {
+                "value": "Black/Orange",
+                "xy": [
+                  45,
+                  663
+                ],
+                "size": 23
+              },
+              {
+                "value": "White/Lime",
+                "xy": [
+                  45,
+                  898
+                ],
+                "size": 23
+              },
+              {
+                "value": "EU 36-46",
+                "xy": [
+                  45,
+                  950
+                ],
+                "size": 23
+              }
+            ],
+            "title": "3 colour options"
+          },
+          "M5": {
+            "buyer_question": "What rear entry is supplied?",
+            "source_pixels": [
+              {
+                "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR046_A34\\06.jpg",
+                "crop": null,
+                "native_effective_pixels": [
+                  800,
+                  800
+                ],
+                "uniform_resize": true
+              }
+            ],
+            "text": [],
+            "title": "Rear pull loop & heel profile"
+          },
+          "D1": {
+            "buyer_question": "What is the Black upper construction?",
+            "source_pixels": [
+              {
+                "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR046_A34\\10.jpg",
+                "crop": null,
+                "native_effective_pixels": [
+                  800,
+                  800
+                ],
+                "uniform_resize": true
+              }
+            ],
+            "text": [],
+            "title": "Black wave panels & cord closure"
+          },
+          "D2": {
+            "buyer_question": "What is the White underside?",
+            "source_pixels": [
+              {
+                "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR046_A34\\15.jpg",
+                "crop": null,
+                "native_effective_pixels": [
+                  800,
+                  800
+                ],
+                "uniform_resize": true
+              }
+            ],
+            "text": [],
+            "title": "White contrast sole accents"
+          },
+          "D3": {
+            "buyer_question": "How does White look when worn?",
+            "source_pixels": [
+              {
+                "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR046_A34\\01.jpg",
+                "crop": null,
+                "native_effective_pixels": [
+                  800,
+                  800
+                ],
+                "uniform_resize": true
+              }
+            ],
+            "text": [],
+            "title": "White water-shoe profile"
+          },
+          "D4": {
+            "buyer_question": "Which actual colours and EU choices are supplied?",
+            "source_pixels": [
+              {
+                "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR046_A34\\08.jpg",
+                "crop": [
+                  5,
+                  200,
+                  795,
+                  660
+                ],
+                "native_effective_pixels": [
+                  790,
+                  460
+                ],
+                "uniform_resize": true
+              },
+              {
+                "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR046_A34\\14.jpg",
+                "crop": [
+                  5,
+                  200,
+                  795,
+                  660
+                ],
+                "native_effective_pixels": [
+                  790,
+                  460
+                ],
+                "uniform_resize": true
+              },
+              {
+                "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR046_A34\\19.jpg",
+                "crop": [
+                  5,
+                  245,
+                  795,
+                  655
+                ],
+                "native_effective_pixels": [
+                  790,
+                  410
+                ],
+                "uniform_resize": true
+              }
+            ],
+            "text": [
+              {
+                "value": "Grey/Orange",
+                "xy": [
+                  45,
+                  473
+                ],
+                "size": 23
+              },
+              {
+                "value": "Black/Orange",
+                "xy": [
+                  45,
+                  763
+                ],
+                "size": 23
+              },
+              {
+                "value": "White/Lime",
+                "xy": [
+                  45,
+                  1053
+                ],
+                "size": 23
+              },
+              {
+                "value": "EU 36-46",
+                "xy": [
+                  45,
+                  1105
+                ],
+                "size": 23
+              },
+              {
+                "value": "2+ pairs $9.43 | 50+ $8.80 | 100+ $8.17",
+                "xy": [
+                  45,
+                  1155
+                ],
+                "size": 25
+              },
+              {
+                "value": "Price per pair; freight quoted separately.",
+                "xy": [
+                  45,
+                  1200
+                ],
+                "size": 23
+              }
+            ],
+            "title": "3 colour options"
+          },
+          "SKU_GREY_ORANGE": {
+            "buyer_question": "Which actual colour is this SKU?",
+            "source_pixels": [
+              {
+                "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR046_A34\\08.jpg",
+                "crop": null,
+                "native_effective_pixels": [
+                  800,
+                  800
+                ],
+                "uniform_resize": true
+              }
+            ],
+            "text": [],
+            "title": null
+          },
+          "SKU_BLACK_ORANGE": {
+            "buyer_question": "Which actual colour is this SKU?",
+            "source_pixels": [
+              {
+                "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR046_A34\\14.jpg",
+                "crop": null,
+                "native_effective_pixels": [
+                  800,
+                  800
+                ],
+                "uniform_resize": true
+              }
+            ],
+            "text": [],
+            "title": null
+          },
+          "SKU_WHITE_LIME": {
+            "buyer_question": "Which actual colour is this SKU?",
+            "source_pixels": [
+              {
+                "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR046_A34\\19.jpg",
+                "crop": null,
+                "native_effective_pixels": [
+                  800,
+                  800
+                ],
+                "uniform_resize": true
+              }
+            ],
+            "text": [],
+            "title": null
+          },
+          "M6": {
+            "buyer_question": "Who will coordinate the footwear order?",
+            "shared_approved_company_image": "01_产品资产/02_可发布素材/共享素材/贝强公司简介图库.jpg"
+          }
+        },
+        "review": {
+          "observed_on": "2026-10-14",
+          "scope": "All main/detail/colour roles viewed, native source crop boundaries, colour andclosure/sole geometry checked. Current EU/pairedEU choices,priceperpairtiers andsource-specific materials matched. No oldconcept images or invented outsole.",
+          "specific_review": "043 colourprofiles recropped from full source08 toe-to-heel; 046 chart enlarged actual800-frame colouredshoes; 045 pairedsizes fromexplicit05spec panel, body sizeempty recorded. No generatedshoe/clinical widthgrade/HandFree claim.",
+          "acceptance": "API_ONLY_NO_PUBLIC_BROWSER_CLAIM"
+        }
+      },
+      "archived_images": [
+        {
+          "original_path": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\HR046\\M1.jpg",
+          "retained_path": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\HR046\\候选证据\\A34\\M1.jpg",
+          "sha256": "557b92bf8f02a25e545df53c153ccc9ef41287c70a7ad5d7f6699db72719b60a"
+        },
+        {
+          "original_path": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\HR046\\M2.jpg",
+          "retained_path": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\HR046\\候选证据\\A34\\M2.jpg",
+          "sha256": "2d28f95d981d26aadb0e17de1f11e73f2901e8a9159293dd0c9d6c93c4678b47"
+        },
+        {
+          "original_path": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\HR046\\M3.jpg",
+          "retained_path": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\HR046\\候选证据\\A34\\M3.jpg",
+          "sha256": "f1d74be87b836ce080783892f621df7cb1c2ec9987ccb6b8ffb1d397769bd33d"
+        },
+        {
+          "original_path": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\HR046\\M4.jpg",
+          "retained_path": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\HR046\\候选证据\\A34\\M4.jpg",
+          "sha256": "e075a7458a7c8515f30d8c041b9aaf7c2d140b6c1e2d545b9757e1eb95f2d3a4"
+        },
+        {
+          "original_path": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\HR046\\M5.jpg",
+          "retained_path": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\HR046\\候选证据\\A34\\M5.jpg",
+          "sha256": "4da2a28f3b1165d03fc253cd7ac39b5de8d66369ddf6b820bffcb9ed595266fb"
+        },
+        {
+          "original_path": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\HR046\\D1.jpg",
+          "retained_path": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\HR046\\候选证据\\A34\\D1.jpg",
+          "sha256": "64e660fdc26fb3cca5e13ad679538932e5ef7bab3f75062ab3e29a3242cb15f0"
+        },
+        {
+          "original_path": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\HR046\\D2.jpg",
+          "retained_path": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\HR046\\候选证据\\A34\\D2.jpg",
+          "sha256": "7c4547c2c678bfc2c152928d3f1c62723b8d890914ecc1d715beba8bd6bedd53"
+        },
+        {
+          "original_path": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\HR046\\D3.jpg",
+          "retained_path": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\HR046\\候选证据\\A34\\D3.jpg",
+          "sha256": "c0b84c5a8295274114ab0ac5d582896f97584fb6d2e2551951fe1f2701af783c"
+        },
+        {
+          "original_path": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\HR046\\D4.jpg",
+          "retained_path": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\HR046\\候选证据\\A34\\D4.jpg",
+          "sha256": "144f9cd1df52284687a366fae08833ea0c5762c1ceb11b3ddebfc78e884943ba"
+        },
+        {
+          "original_path": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\HR046\\SKU_GREY_ORANGE.jpg",
+          "retained_path": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\HR046\\候选证据\\A34\\SKU_GREY_ORANGE.jpg",
+          "sha256": "4741599ca7cb51c54a3da6a151c0ff13e20cc6eaf749f3edf4b9cd3b01d31524"
+        },
+        {
+          "original_path": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\HR046\\SKU_BLACK_ORANGE.jpg",
+          "retained_path": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\HR046\\候选证据\\A34\\SKU_BLACK_ORANGE.jpg",
+          "sha256": "338a059a03ca36dd8c3d716e377d3e92680dade5addd599ec3925c254ee953ab"
+        },
+        {
+          "original_path": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\HR046\\SKU_WHITE_LIME.jpg",
+          "retained_path": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\HR046\\候选证据\\A34\\SKU_WHITE_LIME.jpg",
+          "sha256": "8be51bc34131bcf001ab6c2ba78dd0512dfcf0d61149768befc4fcf93ec424b8"
+        }
+      ],
+      "archive_documents": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR046/候选证据/A34",
+      "derivative_path_state": "All current candidate derivatives and intact bank/material evidence retained in source-artno-specific candidate evidence paths. Original path in historical manifest refers to pre-archive state; archived_images provides verified current locations. No live product was updated with this candidate."
+    }
+  ]
+}

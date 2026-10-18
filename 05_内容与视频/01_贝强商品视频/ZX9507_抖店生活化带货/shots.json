@@ -1,0 +1,38 @@
+{
+  "require_all_planned_shots": false,
+  "status": "S01 composition only; video motion and the other four shots are planned, not rendered",
+  "shots": [
+    {
+      "id": "S01",
+      "time_range": [
+        0,
+        3
+      ],
+      "purpose": "Opening on-foot product composition",
+      "file": "shots/hero_onfoot.png",
+      "reference_ids": [
+        "P_FACTORY_WHITE",
+        "P_FACTORY_SOLE",
+        "M01",
+        "L01"
+      ],
+      "prompt": "Use case: compositing. Asset type: a single vertical 9:16 footwear-video shot-reference photograph, not a collage. Image 1 is the factual product identity: the real black knit laceless slip-on with the distinctive warm beige/apricot sole, irregular pebble-like bulges and fine grooves. Image 2 provides the exact visible outsole structure, not scene composition; do not show a separate floating sole. Image 3 is the SAME fictional male model and his charcoal sweatshirt/washed blue straight-leg jeans wardrobe; replace his sock-only reference state with the actual shoes. Image 4 is the EMPTY apartment entryway location; retain oak door back-right, oak cabinet/bench left, light warm-grey floor and daylight from left. Compose a believable lower-body footwear hero photograph in that exact room, camera about 45 cm above the floor, natural 50mm-equivalent perspective, frame from mid-thigh to floor. Show the man standing naturally in the real shoes, both shoes fully in frame, soles contacting the floor with believable shadows, feet slightly staggered and each separated, no crossed or twisted ankles. One shoe presents its lateral outer side clearly toward camera; the second is only slightly angled, maintaining a correct left/right pair. Keep the exact black knitted construction, laceless instep, raised collar, correct collar-to-toe proportion and warm beige sculpted sole; do not turn them into lace-up sneakers or invent a logo. Jeans end above the collar with a small glimpse of medium-grey socks; no leg enters through solid fabric. Shoes should be large enough to inspect and occupy the lower central frame, natural human-foot scale. No hands, no face crop fragments, no text, no arrows, no graphics, no promotional labels, no mirror, no extra footwear. Photorealistic casual Chinese home fashion, crisp readable shoe texture, restrained natural warmth. Preserve real product features over stylistic embellishment.\n",
+      "states": {
+        "product": "ZX9507 黑杏加绒",
+        "wardrobe": "M01 charcoal sweatshirt and blue straight jeans",
+        "location": "L01 apartment entryway",
+        "wear_state": "Both correct shoes already worn, a little grey sock visible above collars; both feet planted"
+      },
+      "action_start": "Both feet already correctly inside shoes, shoes separated and grounded.",
+      "action_end": "Proposed slight weight shift; not verified by this static image.",
+      "frame_role": "composition_reference",
+      "width": 941,
+      "height": 1672,
+      "sha256": "f03e6114668f556780178b20559e57701bd8d4201331c0687d01993eeea92d97",
+      "visual_review": {
+        "status": "passed",
+        "notes": "Static composition reviewed: two shoe-worn feet, normal ankles, readable black upper/beige sculpted soles, jeans and left-lit entryway coherent. Product microtexture regenerated; use factory photos as primary identity, no temporal acceptance."
+      }
+    }
+  ]
+}

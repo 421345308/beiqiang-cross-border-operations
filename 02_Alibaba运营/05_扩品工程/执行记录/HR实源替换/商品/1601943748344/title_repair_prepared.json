@@ -1,0 +1,34 @@
+{
+  "request": {
+    "param_product_top_publish_request": {
+      "product_id": 1601943748344,
+      "cat_id": 201334413,
+      "language": "en_US",
+      "xml": "<itemSchema><field id=\"productTitle\" name=\"Product name\" type=\"input\"><value>Winter Casual High Top Sneakers with Plush Collar and Wraparound Sole Sidewall for Men's Footwear</value></field></itemSchema>"
+    }
+  },
+  "reason": "Formal title differs from reviewed source-specific submitted product title. Correct only title; cause of later change unconfirmed, not attributed to a person or platform automation.",
+  "expected_title": "Winter Casual High Top Sneakers with Plush Collar and Wraparound Sole Sidewall for Men's Footwear",
+  "observed_title": "Winter Casual Lace-Up High Top Sneakers with Plush Collar and Wraparound Sole Sidewall for Men's Footwear",
+  "expected_schema": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Winter Casual High Top Sneakers with Plush Collar and Wraparound Sole Sidewall for Men's Footwear",
+          []
+        ]
+      ]
+    ]
+  },
+  "xml_sha256": "efc75808fac5ec7586e9e804be81828be8b886de2309e9001eb6bd5b894673fc"
+}

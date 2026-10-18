@@ -1,0 +1,42 @@
+{
+  "style": "995",
+  "at": "2026-10-13T23:45:03.596676+00:00",
+  "role": "M4_colour_and_EU_options",
+  "state": "LOCAL_SELECTED_INFORMATION_IMAGE_VISUAL_PASS_NOT_UPLOADED",
+  "current_asset": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/995准备/05_AI候选/M4.png",
+  "current_sha256": "4021a19bf84d4d0f153f242bcf23e54616381ad22a87807101ddda8c1cdbafe4",
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "reference_assets": [
+    {
+      "file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/995准备/05_AI候选/M1.png",
+      "sha256": "a67396d9e5d629eb60484b31ee7586bc526e14f0ad3dc463808af7df7a073d7a"
+    },
+    {
+      "file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/995准备/05_AI候选/SKU_Black.png",
+      "sha256": "009e51a7c18c3001d4bcd162da7e1be6bfafb7a181a62231f981cff354f910f7"
+    },
+    {
+      "file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/995准备/05_AI候选/SKU_BlackKhaki.png",
+      "sha256": "91e4564c68e4e4157dcc3c6ee5d151286868883b8ba822023ca7a311c1955460"
+    }
+  ],
+  "source_evidence": [
+    "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/995准备/当前来源与色码核对.json",
+    "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/995准备/05_AI候选/AI主图审核.json",
+    "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/995准备/05_AI候选/AI颜色图审核.json"
+  ],
+  "generation_tool": "Built-in imagegen reference composition",
+  "full_generation_prompt": "Create a premium Alibaba B2B footwear colour-and-size selection infographic, square 1000x1000, white background, elegant navy typography and restrained orange accents, crisp mobile-legible English only. This image answers which actual colourways and EU size options are offered; it is not a price card. Use the three supplied product photos EXACTLY, preserving each actual shoe's entire silhouette, actual photographed angle/pose, colour, upper panel boundaries, laces, pull loop and sole design. Do not invent a matching new pose, recolour, redesign or crop away any shoe. Header exactly: COLOURS & EU SIZES. Under the header three balanced clean product cards or columns showing, in order: the tan shoe from reference1 labelled Tan; the black shoe from reference2 labelled Black; the beige/brown shoe from reference3 labelled Beige Brown. Black remains in its actual sole-visible tilted source angle. Make all three complete shoes visibly prominent with comfortable separation. Below the colour selection, a spacious panel with heading exactly EU size options and TEN distinct evenly spaced size chips in two rows of five, exactly 39, 40, 41, 42, 43 then 44, 45, 46, 47, 48. Every colour offers these same ten sizes. Bottom concise purchasing line exactly Share your colour and size assortment. No prices, MOQ numbers, made-up foot-length chart, US conversion, wide-toe claim, materials, grip/waterproof claims, technical diagrams, logos, fake stock badges, factory images or other shoes. Professional product-led layout, accurate English text and numbers, avoiding excessive blank space or repetitive product views.",
+  "visual_checks": {
+    "three_actual_colours_and_source_angles": true,
+    "complete_shoes_in_distinct_cards": true,
+    "exact_labels_Tan_Black_BeigeBrown": true,
+    "EU39_to_48_each_once": true,
+    "no_unconfirmed_material_stock_or_performance": true,
+    "English_only_mobile_legible": true
+  },
+  "role_separation": "M1 identifies the actual shoe; M4 answers colour/size selection with ten options, without repeating a close-up proof or company pitch. Full gallery still pending."
+}

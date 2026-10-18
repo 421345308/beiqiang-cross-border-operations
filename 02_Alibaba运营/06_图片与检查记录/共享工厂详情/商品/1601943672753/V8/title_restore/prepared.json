@@ -1,0 +1,49 @@
+{
+  "keyword_input": null,
+  "differentiation_review": null,
+  "category_id": 201334413,
+  "operation": "update",
+  "inventory_input": null,
+  "model_serialization": null,
+  "target_product_id": "1601943672753",
+  "field_ids": [
+    "productTitle"
+  ],
+  "dependency_ids": [
+    "productDescType"
+  ],
+  "xml": "<itemSchema><field id=\"productTitle\" name=\"Product name\" type=\"input\"><value>Men's Shoes Model HR055-A</value></field><field id=\"productDescType\" name=\"Product description\" type=\"singleCheck\"><value>4</value></field></itemSchema>",
+  "expected_fields": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Men's Shoes Model HR055-A",
+          []
+        ]
+      ]
+    ]
+  },
+  "prepared_from_current_schema": true,
+  "task_pack": null,
+  "replacement_plan": null,
+  "schema_provenance": {
+    "schema_request_id": "213d4e4917918462623554734",
+    "schema_acquired_at": "2026-10-12T23:04:14.813080+00:00",
+    "current_schema_sha256": "fadd69918deb07f5e3eeb9906dc20b91c3664ccbe922e8a6ce604d79bf70cce9",
+    "source_evidence": [
+      "../before_get.json",
+      "../update_receipt.json",
+      "before_get.json"
+    ]
+  }
+}

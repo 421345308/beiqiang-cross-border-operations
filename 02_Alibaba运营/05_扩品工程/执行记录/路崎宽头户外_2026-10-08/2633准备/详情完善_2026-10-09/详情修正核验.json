@@ -1,0 +1,31 @@
+{
+  "style": "2633",
+  "product_id": "1601973753470",
+  "observed_at": "2026-10-08T17:41:28.315450+00:00",
+  "status": "approved",
+  "display": "Y",
+  "protected_fields": {
+    "subject": true,
+    "category_id": true,
+    "attributes": true,
+    "product_sku": true,
+    "sourcing_trade": true,
+    "keywords": true,
+    "main_image": true
+  },
+  "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+  "actual_score": "5.00",
+  "scope_result": "PASS_WITH_DETAIL_ORDER_CHANGE",
+  "unsubmitted_schema_differences": [],
+  "detail_field_equivalent": true,
+  "detail_asset_order_match": false,
+  "score_source": "alibaba.icbu.product.score.get / 0bab02fc17914813215883192",
+  "score_observed_at": "2026-10-08T17:41:59.351786+00:00",
+  "score_diagnostics": "{\"ruleScoreMap\":{\"title_word_miss_core_error\":0.0,\"imageQualityBad\":0.0,\"image_scale\":0.0,\"title_word_error\":0.0,\"image_num\":0.0},\"errorReasonSkuImageMoreMap\":{},\"errorReasonTitleWordMissErrorMap\":{},\"errorReasonList\":[],\"errorReasonTitleWordErrorMap\":{},\"extendCheckMap\":{\"imageText\":true,\"sku_image\":false,\"title_word_miss_core_error\":true,\"imageQualityBad\":true,\"sku_text\":false,\"imageSubTitle\":false,\"category\":true,\"title_word_error\":true,\"selling_point_attribute_conflict\":false},\"errorReasonCategoryMap\":{},\"errorReasonSkuTextMap\":{},\"errorReasonSubTitleMap\":{},\"errorReasonMap\":{},\"errorReasonSellingPointAttributeMap\":{},\"errorReasonSkuImageMap\":{},\"extendProblemMap\":{\"imageText\":false,\"title_word_miss_core_error\":false,\"imageQualityBad\":false,\"imageSubTitle\":false,\"image_scale\":false,\"inventory\":false,\"title_word_error\":false,\"selling_point_attribute_conflict\":false,\"image_num\":false,\"freightRate\":false,\"sku_image\":false,\"sku_text\":false,\"price\":false,\"category\":false},\"errorReasonQualityBadMap\":{},\"errorReasonSkuTextMoreMap\":{}}",
+  "detail_asset_set_match": true,
+  "detail_asset_count": 4,
+  "detail_first_overview_preserved": true,
+  "normalization_notes": "Observed currentSchema merged four gallery300 rows and reordered toD1,D3,D4,D2. Same four exact ordered-key sets/count/group verified; overview stays first. Expected sequence not claimed; protected fields unchanged. No new write/read in this reconciliation.",
+  "raw_scope_result": "MISMATCH_REQUIRES_DIAGNOSIS",
+  "visual_remaining": "D1v2 repeats main-image pair anchor; D1v3 source11 candidate prepared for separate same-ID replacement."
+}

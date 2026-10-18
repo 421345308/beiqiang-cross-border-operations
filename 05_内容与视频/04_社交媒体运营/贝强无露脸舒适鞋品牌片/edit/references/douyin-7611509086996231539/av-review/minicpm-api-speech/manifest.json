@@ -1,0 +1,28 @@
+{
+  "source": "C:\\Users\\spq\\Desktop\\贝强\\99_临时区\\音视频审片\\minicpm-runtime\\known-speech.wav",
+  "source_sha256": "2f5befbfdcb9a87a753e06a01271a8861d6cdd03d1bb6aae8084dd5860342eac",
+  "source_bytes": 223086,
+  "duration_seconds": 6.97,
+  "input_type": "audio_float32",
+  "audio_samples": 111520,
+  "audio_peak_abs": 0.607574462890625,
+  "endpoint": "wss://minicpmo45.modelbest.cn/v1/realtime?mode=chat",
+  "model": "MiniCPM-o4.5 official demo",
+  "prompt": "请转写输入音频中实际说出的话。不猜画面或背景，不添加未听到的声音。中文200字以内。",
+  "audio_complete_client": true,
+  "all_video_frames_seen": false,
+  "video_sampling": null,
+  "authorization": "user-approved public-reference analysis",
+  "status": "answered_unverified",
+  "paid_generation": false,
+  "api_key_used": false,
+  "session_id": "sess_6d83256706a4",
+  "backend": "pytorch",
+  "first_text_seconds": 1.1880000000019209,
+  "metrics": {
+    "backend": "pytorch",
+    "kv_cache_length": 166
+  },
+  "elapsed_seconds": 3.9530000000013388,
+  "response_seconds": 1.375
+}

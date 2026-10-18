@@ -1,0 +1,238 @@
+{
+  "method": "alibaba.icbu.product.schema.update",
+  "operation": "update",
+  "status": "submitted_needs_readback",
+  "content_status": "pending_readback",
+  "expected_fields": {
+    "icbuCatProp": [
+      "field",
+      [
+        [
+          "id",
+          "icbuCatProp"
+        ]
+      ],
+      "",
+      [
+        [
+          "complex-value",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "p-191290430"
+                ]
+              ],
+              "",
+              [
+                [
+                  "values",
+                  [],
+                  "",
+                  [
+                    [
+                      "value",
+                      [
+                        [
+                          "inputValue",
+                          "Not specified"
+                        ]
+                      ],
+                      "-5",
+                      []
+                    ]
+                  ]
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "p-1"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [
+                    [
+                      "inputValue",
+                      "Not specified"
+                    ]
+                  ],
+                  "-1",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "p-20700"
+                ]
+              ],
+              "",
+              [
+                [
+                  "values",
+                  [],
+                  "",
+                  [
+                    [
+                      "value",
+                      [
+                        [
+                          "inputValue",
+                          "Not specified"
+                        ]
+                      ],
+                      "-3",
+                      []
+                    ]
+                  ]
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "p-191290426"
+                ]
+              ],
+              "",
+              [
+                [
+                  "values",
+                  [],
+                  "",
+                  [
+                    [
+                      "value",
+                      [
+                        [
+                          "inputValue",
+                          "Not specified"
+                        ]
+                      ],
+                      "-4",
+                      []
+                    ]
+                  ]
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "p-2"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [
+                    [
+                      "inputValue",
+                      "Beiqiang"
+                    ]
+                  ],
+                  "-2",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "p-3"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [
+                    [
+                      "inputValue",
+                      "BQ-LQ053"
+                    ]
+                  ],
+                  "__typed_model_marker__",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "sku_verification": null,
+  "task_pack": null,
+  "replacement_plan": null,
+  "replacement_transition": null,
+  "inventory_input": null,
+  "post_publish_acceptance": {
+    "phase": "post_publish_completion",
+    "target_score": 5.0,
+    "actual_score": null,
+    "observed_at": null,
+    "score_source": null,
+    "diagnostics": {
+      "status": "not_read"
+    },
+    "score_status": "pending_score",
+    "overall_status": "PENDING_SCORE",
+    "unverified_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "versioned_content": null,
+    "required_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "limits": "Platform listing score does not prove public content, source truth or real product quality."
+  },
+  "attempted_at": "2026-10-09T11:52:42.915574+00:00",
+  "response": {
+    "trace_id": "0bb4a40617915467709466527e0c36",
+    "product_id": 1601973846232,
+    "biz_success": true,
+    "request_id": "21546a1d17915467710803470",
+    "_trace_id_": "0bb4a40617915467709466527e0c36"
+  },
+  "refs": {
+    "request_id": "21546a1d17915467710803470",
+    "trace_id": "0bb4a40617915467709466527e0c36",
+    "message": null,
+    "error": null
+  },
+  "product_id": "1601973846232"
+}

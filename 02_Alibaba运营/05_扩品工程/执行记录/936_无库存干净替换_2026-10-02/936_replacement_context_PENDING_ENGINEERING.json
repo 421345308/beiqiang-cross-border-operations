@@ -1,0 +1,45 @@
+{
+  "replacement": {
+    "authorized": true,
+    "old_product_id": 1601969872083,
+    "reason": "Replace early inventory0 listing with truthful no-inventory sourcing listing; same model, intentional transition duplicate",
+    "candidate_sha256": "1feb31b12ffce5d5ea62dea0693b3523902e7e5dd5eea4947bae1c433014d33e",
+    "new_product_id": null,
+    "off_old_only_after_new_actual5_and_publicpass": true
+  },
+  "candidate": {
+    "model": "HR051-A",
+    "hero_url": "https://sc04.alicdn.com/kf/Hd587b715d7f44a5fa30e3b8c87db64e5f/286385890/Hd587b715d7f44a5fa30e3b8c87db64e5f.png",
+    "title": "Textile Lace-Up Casual Sneakers with Rubber Outsole",
+    "source": {
+      "style": "936"
+    },
+    "hero_review": {
+      "url": "https://sc04.alicdn.com/kf/Hd587b715d7f44a5fa30e3b8c87db64e5f/286385890/Hd587b715d7f44a5fa30e3b8c87db64e5f.png",
+      "aliases": [
+        "https://sc04.alicdn.com/kf/Hd587b715d7f44a5fa30e3b8c87db64e5f/286385890/Hd587b715d7f44a5fa30e3b8c87db64e5f.png"
+      ],
+      "evidence": "Existing product actualCDN independentvisualPASS reused"
+    }
+  },
+  "catalog": [
+    {
+      "product_id": 1601969872083,
+      "model": "HR051-A",
+      "hero_url": "https://sc04.alicdn.com/kf/Hd587b715d7f44a5fa30e3b8c87db64e5f/286385890/Hd587b715d7f44a5fa30e3b8c87db64e5f.png",
+      "title": "Textile Lace-Up Casual Sneakers with Rubber Outsole",
+      "source": {
+        "style": "936"
+      },
+      "hero_review": {
+        "url": "https://sc04.alicdn.com/kf/Hd587b715d7f44a5fa30e3b8c87db64e5f/286385890/Hd587b715d7f44a5fa30e3b8c87db64e5f.png",
+        "aliases": [
+          "https://sc04.alicdn.com/kf/Hd587b715d7f44a5fa30e3b8c87db64e5f/286385890/Hd587b715d7f44a5fa30e3b8c87db64e5f.png"
+        ],
+        "evidence": "Exactexistingownproduct replacement mapping"
+      }
+    }
+  ],
+  "provenance": "Explicitparent latestcleanreplacementauthorization; catalog list here exactownoldtarget only, existing fullcatalog dedup receipts must be supplied bypreflight integration",
+  "do_not_treat_as_global_clearance": true
+}

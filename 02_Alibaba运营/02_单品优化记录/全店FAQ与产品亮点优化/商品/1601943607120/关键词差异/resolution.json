@@ -1,0 +1,21 @@
+{
+  "product_id": "1601943607120",
+  "at": "2026-10-12T01:58:28.295193+00:00",
+  "status": "CURRENT_EDIT_VERSION_CONTENT_VERIFIED_LEGACY_EMPTY",
+  "legacy_keyword_status": "LEGACY_FIELD_EMPTY_UI_MIGRATED",
+  "legacy_keyword_restored": false,
+  "target_copy_ui_schema_formal_match": true,
+  "public_content_status": "PUBLIC_ENGLISH_HIGHLIGHTS_FAQ_EXACT_PASS",
+  "copy_sha256": "86703b356a3c84bd5024be926d1369a17db9c20167974718585d1a969bfbe738",
+  "historical_difference_preserved": "../non_target_difference.json",
+  "evidence": [
+    "ui_observation.json",
+    "current_get.json",
+    "current_render.json",
+    "public_observation.json",
+    "versioned_content.json"
+  ],
+  "scope": "Exact ID/date; resolves cause and selects current selling-point acceptance, not whole-product/source/public completion",
+  "versioned_content": "versioned_content.json",
+  "keyword_write_verified": false
+}

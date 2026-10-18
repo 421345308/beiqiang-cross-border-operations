@@ -1,0 +1,20 @@
+{
+  "operation": "update",
+  "product_id": "1601974689145",
+  "category_id": 201334413,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "修正依据.md",
+    "../经营任务包.md"
+  ],
+  "current_schema": "当前Schema.xml",
+  "current_schema_sha256": "9913653dc43d6718c564df96d8bf71fb0fa835209305d170b0a84a14a5cce56c",
+  "schema_request_id": "0bbb637a17915411364477348",
+  "schema_acquired_at": "2026-10-09T10:18:55.431942+00:00",
+  "payload_xml": "单属性载荷.xml",
+  "field_ids": [
+    "icbuCatProp"
+  ],
+  "dependency_ids": [],
+  "expected_model": "BQ-LQ2571"
+}

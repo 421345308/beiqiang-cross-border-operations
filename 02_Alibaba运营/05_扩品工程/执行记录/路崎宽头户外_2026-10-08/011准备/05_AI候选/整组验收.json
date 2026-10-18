@@ -1,0 +1,481 @@
+{
+  "status": "BUYER_ROLE_REVIEW_PASS",
+  "observed_at": "2026-10-10T12:42:55.969638+00:00",
+  "roles": [
+    {
+      "role": "M1",
+      "buyer_question": "搜索识别",
+      "source_indices": [
+        18
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\011准备\\01_产品来源原图\\18.jpg"
+      ],
+      "source_sha256": [
+        "849edeedcb4e0467c0ced047393012d629bc92d3698e0c0daab10a6a1d5f1061"
+      ],
+      "source_dimensions": [
+        [
+          800,
+          800
+        ]
+      ],
+      "source_region_key": "actual-photo-18",
+      "prompt": "Use case: precise-object-edit. Square English B2B footwear photograph at least1024px. Edit ONLY the attached actual Luqi011 photograph. Preserve exact photographed shoe count, original pose/angle, broad plain forefoot, crossing diamond-like stitched sidepanels, original FIVE lace positions including the TOP metal eyelet, round woven laces, low collar, front tongue loop and rear pulltab, shallow oval-block outsole and original fine matte/fuzzy surface. Do not add apron stitching, new seams, new angles or hidden geometry. No recolor: Gray stays gray/black lining/black sole; Black allblack; golden Khaki stays golden brown/tan lining/solid brown sole; Brown stays muted olive-brown/gray outercollar/black inner lining/black-khaki camouflage outsole. Keep original hands, bareankles, rolled trousers when present; no added socks. Remove Chinese wording/borders/arrows, unverified labels and thirdparty brand marks. Restrained clear English typography; product dominant. No material composition claims such as suede/leather/PU/rubber/EVA, no testedgrip/anti-slip/abrasion/waterproof/medical/zero-drop/barefoot/stock/dispatch promise. Preserve BOTH original Brown/camouflage-sole shoes in exact source18 studio pair angle. Clean white/pale background and natural contact shadows. No text, props or badges. CRITICAL: retain original short matte/fuzzy nap photograph texture exactly; no swirling/grain engraving, embossed pattern, pebbled leather texture or texture replacement. Minimal crop/background cleanup only, preserve original shoe pixels and stitched lines.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\011准备\\05_AI候选\\M1.jpg",
+      "selected_original_unchanged": true,
+      "native_output": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\011准备\\01_产品来源原图\\18.jpg",
+      "output_sha256": "849edeedcb4e0467c0ced047393012d629bc92d3698e0c0daab10a6a1d5f1061",
+      "output_dimensions": [
+        800,
+        800
+      ],
+      "review_at": "2026-10-10T12:42:55.969638+00:00",
+      "review_note": "Compared individually to011 actual originals: crossing stitched sidepanels and original forefoot borders, five lacepositions/topmetaleyelet, roundlaces, front/rear pulltabs and oval-block tread. Exact Black/Gray/Brown Camouflage Sole/Khaki Brown Sole colors and original poses. M1 unchanged clean800px source18 selected after two texture-drifting native attempts rejected. D1 originalGray partialpanel/lacing; D2 wholeoutsole matches actual fullsource17, no hidden geometry reconstructed; D3 originalBrown paircollars; D4 originalGrayfront EU37-48. Four distinct singleprofile sources7/15/4/12. Material compositions unspecified."
+    },
+    {
+      "role": "M2",
+      "buyer_question": "灰色实拍",
+      "source_indices": [
+        24
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\011准备\\01_产品来源原图\\24.jpg"
+      ],
+      "source_sha256": [
+        "547a5af00e688f639055101c0c74fb62e049f5e14e800f74686c57ef722ba9c8"
+      ],
+      "source_dimensions": [
+        [
+          800,
+          800
+        ]
+      ],
+      "source_region_key": "actual-photo-24",
+      "prompt": "Use case: precise-object-edit. Square English B2B footwear photograph at least1024px. Edit ONLY the attached actual Luqi011 photograph. Preserve exact photographed shoe count, original pose/angle, broad plain forefoot, crossing diamond-like stitched sidepanels, original FIVE lace positions including the TOP metal eyelet, round woven laces, low collar, front tongue loop and rear pulltab, shallow oval-block outsole and original fine matte/fuzzy surface. Do not add apron stitching, new seams, new angles or hidden geometry. No recolor: Gray stays gray/black lining/black sole; Black allblack; golden Khaki stays golden brown/tan lining/solid brown sole; Brown stays muted olive-brown/gray outercollar/black inner lining/black-khaki camouflage outsole. Keep original hands, bareankles, rolled trousers when present; no added socks. Remove Chinese wording/borders/arrows, unverified labels and thirdparty brand marks. Restrained clear English typography; product dominant. No material composition claims such as suede/leather/PU/rubber/EVA, no testedgrip/anti-slip/abrasion/waterproof/medical/zero-drop/barefoot/stock/dispatch promise. Preserve TWO original Gray shoes in exact source24 pair pose on original wooden seating surface and indoor background. Text: GRAY OPTION; Lace-up walking shoes.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\011准备\\05_AI候选\\M2.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-2ea776bd-3478-4289-841c-2e64e5130690.png",
+      "output_sha256": "bf0823af607764238b62893d3978fd58a2b01a98ffab8094c2bfaaa4c0c40473",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T12:42:55.969638+00:00",
+      "review_note": "Compared individually to011 actual originals: crossing stitched sidepanels and original forefoot borders, five lacepositions/topmetaleyelet, roundlaces, front/rear pulltabs and oval-block tread. Exact Black/Gray/Brown Camouflage Sole/Khaki Brown Sole colors and original poses. M1 unchanged clean800px source18 selected after two texture-drifting native attempts rejected. D1 originalGray partialpanel/lacing; D2 wholeoutsole matches actual fullsource17, no hidden geometry reconstructed; D3 originalBrown paircollars; D4 originalGrayfront EU37-48. Four distinct singleprofile sources7/15/4/12. Material compositions unspecified."
+    },
+    {
+      "role": "M3",
+      "buyer_question": "黑色实拍",
+      "source_indices": [
+        30
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\011准备\\01_产品来源原图\\30.jpg"
+      ],
+      "source_sha256": [
+        "fa3ad0b1ff7aee33a10386c6ad160a483efebdf81756a2fe7d0933abc3df6c60"
+      ],
+      "source_dimensions": [
+        [
+          800,
+          800
+        ]
+      ],
+      "source_region_key": "actual-photo-30",
+      "prompt": "Use case: precise-object-edit. Square English B2B footwear photograph at least1024px. Edit ONLY the attached actual Luqi011 photograph. Preserve exact photographed shoe count, original pose/angle, broad plain forefoot, crossing diamond-like stitched sidepanels, original FIVE lace positions including the TOP metal eyelet, round woven laces, low collar, front tongue loop and rear pulltab, shallow oval-block outsole and original fine matte/fuzzy surface. Do not add apron stitching, new seams, new angles or hidden geometry. No recolor: Gray stays gray/black lining/black sole; Black allblack; golden Khaki stays golden brown/tan lining/solid brown sole; Brown stays muted olive-brown/gray outercollar/black inner lining/black-khaki camouflage outsole. Keep original hands, bareankles, rolled trousers when present; no added socks. Remove Chinese wording/borders/arrows, unverified labels and thirdparty brand marks. Restrained clear English typography; product dominant. No material composition claims such as suede/leather/PU/rubber/EVA, no testedgrip/anti-slip/abrasion/waterproof/medical/zero-drop/barefoot/stock/dispatch promise. Preserve original source30 Black hand-held PAIR, original hand and real background. No new shoes or hands. Text: BLACK OPTION; Actual photographed style.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\011准备\\05_AI候选\\M3.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-9e34e37f-c6f0-4984-a4cb-d628bb4b2417.png",
+      "output_sha256": "6019a4aebee5eeec15bf22908646a9f2dab99a85999b6bf185f75178de99a62a",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T12:42:55.969638+00:00",
+      "review_note": "Compared individually to011 actual originals: crossing stitched sidepanels and original forefoot borders, five lacepositions/topmetaleyelet, roundlaces, front/rear pulltabs and oval-block tread. Exact Black/Gray/Brown Camouflage Sole/Khaki Brown Sole colors and original poses. M1 unchanged clean800px source18 selected after two texture-drifting native attempts rejected. D1 originalGray partialpanel/lacing; D2 wholeoutsole matches actual fullsource17, no hidden geometry reconstructed; D3 originalBrown paircollars; D4 originalGrayfront EU37-48. Four distinct singleprofile sources7/15/4/12. Material compositions unspecified."
+    },
+    {
+      "role": "M4",
+      "buyer_question": "卡其棕底配色",
+      "source_indices": [
+        14
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\011准备\\01_产品来源原图\\14.jpg"
+      ],
+      "source_sha256": [
+        "8756f2aa1c4fa739cf61e8b342fe6ca2f6cbf83686c5a36eafef666cf28d9eba"
+      ],
+      "source_dimensions": [
+        [
+          800,
+          800
+        ]
+      ],
+      "source_region_key": "actual-photo-14",
+      "prompt": "Use case: precise-object-edit. Square English B2B footwear photograph at least1024px. Edit ONLY the attached actual Luqi011 photograph. Preserve exact photographed shoe count, original pose/angle, broad plain forefoot, crossing diamond-like stitched sidepanels, original FIVE lace positions including the TOP metal eyelet, round woven laces, low collar, front tongue loop and rear pulltab, shallow oval-block outsole and original fine matte/fuzzy surface. Do not add apron stitching, new seams, new angles or hidden geometry. No recolor: Gray stays gray/black lining/black sole; Black allblack; golden Khaki stays golden brown/tan lining/solid brown sole; Brown stays muted olive-brown/gray outercollar/black inner lining/black-khaki camouflage outsole. Keep original hands, bareankles, rolled trousers when present; no added socks. Remove Chinese wording/borders/arrows, unverified labels and thirdparty brand marks. Restrained clear English typography; product dominant. No material composition claims such as suede/leather/PU/rubber/EVA, no testedgrip/anti-slip/abrasion/waterproof/medical/zero-drop/barefoot/stock/dispatch promise. Preserve BOTH original golden Khaki shoes in exact source14 studio pair pose, solid brown soles and tan collars. White/pale background and natural shadows. Text: KHAKI OPTION; Solid brown sole.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\011准备\\05_AI候选\\M4.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-d0d3d1ed-1308-462e-bf62-0dfb05e64553.png",
+      "output_sha256": "9378842b4dfdeacaea2b48980d74e16464e8585b605420ab737734db0a0704f5",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T12:42:55.969638+00:00",
+      "review_note": "Compared individually to011 actual originals: crossing stitched sidepanels and original forefoot borders, five lacepositions/topmetaleyelet, roundlaces, front/rear pulltabs and oval-block tread. Exact Black/Gray/Brown Camouflage Sole/Khaki Brown Sole colors and original poses. M1 unchanged clean800px source18 selected after two texture-drifting native attempts rejected. D1 originalGray partialpanel/lacing; D2 wholeoutsole matches actual fullsource17, no hidden geometry reconstructed; D3 originalBrown paircollars; D4 originalGrayfront EU37-48. Four distinct singleprofile sources7/15/4/12. Material compositions unspecified."
+    },
+    {
+      "role": "M5",
+      "buyer_question": "采购询价行动",
+      "source_indices": [
+        31
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\011准备\\01_产品来源原图\\31.jpg"
+      ],
+      "source_sha256": [
+        "7e8fad84a31eec32c6c31566c86c6be4143ddd50e3b5d5ff098040168fd9e9d5"
+      ],
+      "source_dimensions": [
+        [
+          800,
+          800
+        ]
+      ],
+      "source_region_key": "actual-photo-31",
+      "prompt": "Use case: precise-object-edit. Square English B2B footwear photograph at least1024px. Edit ONLY the attached actual Luqi011 photograph. Preserve exact photographed shoe count, original pose/angle, broad plain forefoot, crossing diamond-like stitched sidepanels, original FIVE lace positions including the TOP metal eyelet, round woven laces, low collar, front tongue loop and rear pulltab, shallow oval-block outsole and original fine matte/fuzzy surface. Do not add apron stitching, new seams, new angles or hidden geometry. No recolor: Gray stays gray/black lining/black sole; Black allblack; golden Khaki stays golden brown/tan lining/solid brown sole; Brown stays muted olive-brown/gray outercollar/black inner lining/black-khaki camouflage outsole. Keep original hands, bareankles, rolled trousers when present; no added socks. Remove Chinese wording/borders/arrows, unverified labels and thirdparty brand marks. Restrained clear English typography; product dominant. No material composition claims such as suede/leather/PU/rubber/EVA, no testedgrip/anti-slip/abrasion/waterproof/medical/zero-drop/barefoot/stock/dispatch promise. Preserve TWO original source31 Brown/camouflage sole shoes onfoot in exact pose, rolled darktrousers/bare ankles/original wood surface/indoorbackground. Crop below knees. Text: PLAN YOUR WHOLESALE ORDER; Color + EU size mix + Pair quantity + Destination.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\011准备\\05_AI候选\\M5.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-423bdd5e-1d66-4a44-ab51-49062117b29f.png",
+      "output_sha256": "c018d681e2cee4ade7d50e38e665644d48af940d0528f7ead73f8ee4d1a5abd5",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T12:42:55.969638+00:00",
+      "review_note": "Compared individually to011 actual originals: crossing stitched sidepanels and original forefoot borders, five lacepositions/topmetaleyelet, roundlaces, front/rear pulltabs and oval-block tread. Exact Black/Gray/Brown Camouflage Sole/Khaki Brown Sole colors and original poses. M1 unchanged clean800px source18 selected after two texture-drifting native attempts rejected. D1 originalGray partialpanel/lacing; D2 wholeoutsole matches actual fullsource17, no hidden geometry reconstructed; D3 originalBrown paircollars; D4 originalGrayfront EU37-48. Four distinct singleprofile sources7/15/4/12. Material compositions unspecified."
+    },
+    {
+      "role": "D1",
+      "buyer_question": "侧片与鞋头细节",
+      "source_indices": [
+        27
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\011准备\\01_产品来源原图\\27.jpg"
+      ],
+      "source_sha256": [
+        "caad7a76aeb231a4713cbc469ac293514ff44eb602c86e72ccb8ee87dbf3f2f3"
+      ],
+      "source_dimensions": [
+        [
+          800,
+          800
+        ]
+      ],
+      "source_region_key": "actual-photo-27",
+      "prompt": "Use case: precise-object-edit. Square English B2B footwear photograph at least1024px. Edit ONLY the attached actual Luqi011 photograph. Preserve exact photographed shoe count, original pose/angle, broad plain forefoot, crossing diamond-like stitched sidepanels, original FIVE lace positions including the TOP metal eyelet, round woven laces, low collar, front tongue loop and rear pulltab, shallow oval-block outsole and original fine matte/fuzzy surface. Do not add apron stitching, new seams, new angles or hidden geometry. No recolor: Gray stays gray/black lining/black sole; Black allblack; golden Khaki stays golden brown/tan lining/solid brown sole; Brown stays muted olive-brown/gray outercollar/black inner lining/black-khaki camouflage outsole. Keep original hands, bareankles, rolled trousers when present; no added socks. Remove Chinese wording/borders/arrows, unverified labels and thirdparty brand marks. Restrained clear English typography; product dominant. No material composition claims such as suede/leather/PU/rubber/EVA, no testedgrip/anti-slip/abrasion/waterproof/medical/zero-drop/barefoot/stock/dispatch promise. Strict PARTIAL closeup of original source27 Gray forefoot and crossing stitched sidepanel. Preserve actual original texture/seams/lacing edge; no whole shoe or rear reconstruction. Text: STITCHED PANEL DETAIL; Actual photographed construction.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\011准备\\05_AI候选\\D1.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-ee0cfe7b-bbe4-4bfe-a7a6-196e1ef1b1ca.png",
+      "output_sha256": "75d494d7708869d3e2f4b169d8d23b593ed94cde35f1bbcc415bd62d928253c9",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T12:42:55.969638+00:00",
+      "review_note": "Compared individually to011 actual originals: crossing stitched sidepanels and original forefoot borders, five lacepositions/topmetaleyelet, roundlaces, front/rear pulltabs and oval-block tread. Exact Black/Gray/Brown Camouflage Sole/Khaki Brown Sole colors and original poses. M1 unchanged clean800px source18 selected after two texture-drifting native attempts rejected. D1 originalGray partialpanel/lacing; D2 wholeoutsole matches actual fullsource17, no hidden geometry reconstructed; D3 originalBrown paircollars; D4 originalGrayfront EU37-48. Four distinct singleprofile sources7/15/4/12. Material compositions unspecified."
+    },
+    {
+      "role": "D2",
+      "buyer_question": "真实底纹",
+      "source_indices": [
+        17
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\011准备\\01_产品来源原图\\17.jpg"
+      ],
+      "source_sha256": [
+        "1bfd087f0d364507cf76658e522ac69d428f94b3a898f4cea4fa97f9ebac0241"
+      ],
+      "source_dimensions": [
+        [
+          800,
+          800
+        ]
+      ],
+      "source_region_key": "actual-photo-17",
+      "prompt": "Use case: precise-object-edit. Square English B2B footwear photograph at least1024px. Edit ONLY the attached actual Luqi011 photograph. Preserve exact photographed shoe count, original pose/angle, broad plain forefoot, crossing diamond-like stitched sidepanels, original FIVE lace positions including the TOP metal eyelet, round woven laces, low collar, front tongue loop and rear pulltab, shallow oval-block outsole and original fine matte/fuzzy surface. Do not add apron stitching, new seams, new angles or hidden geometry. No recolor: Gray stays gray/black lining/black sole; Black allblack; golden Khaki stays golden brown/tan lining/solid brown sole; Brown stays muted olive-brown/gray outercollar/black inner lining/black-khaki camouflage outsole. Keep original hands, bareankles, rolled trousers when present; no added socks. Remove Chinese wording/borders/arrows, unverified labels and thirdparty brand marks. Restrained clear English typography; product dominant. No material composition claims such as suede/leather/PU/rubber/EVA, no testedgrip/anti-slip/abrasion/waterproof/medical/zero-drop/barefoot/stock/dispatch promise. Strict PARTIAL closeup of original source17 camouflage outsole oval-block pattern and actual grooves; preserve original black/khaki patch arrangement. No full outsole reconstruction or new tread. Text: OUTSOLE TEXTURE; Actual photographed detail.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\011准备\\05_AI候选\\D2.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-6acc9492-cdc7-40aa-b7cd-2c20f3141000.png",
+      "output_sha256": "a62de8bf61a0a721f7a92b7df9a23a91f8527e6ba1a71651a753ccd7f362563d",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T12:42:55.969638+00:00",
+      "review_note": "Compared individually to011 actual originals: crossing stitched sidepanels and original forefoot borders, five lacepositions/topmetaleyelet, roundlaces, front/rear pulltabs and oval-block tread. Exact Black/Gray/Brown Camouflage Sole/Khaki Brown Sole colors and original poses. M1 unchanged clean800px source18 selected after two texture-drifting native attempts rejected. D1 originalGray partialpanel/lacing; D2 wholeoutsole matches actual fullsource17, no hidden geometry reconstructed; D3 originalBrown paircollars; D4 originalGrayfront EU37-48. Four distinct singleprofile sources7/15/4/12. Material compositions unspecified."
+    },
+    {
+      "role": "D3",
+      "buyer_question": "鞋口细节",
+      "source_indices": [
+        23
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\011准备\\01_产品来源原图\\23.jpg"
+      ],
+      "source_sha256": [
+        "21b3fe53df91d2c4658e01f4e302ecfc4a86d4109d9810e6ecf864772f791774"
+      ],
+      "source_dimensions": [
+        [
+          800,
+          800
+        ]
+      ],
+      "source_region_key": "actual-photo-23",
+      "prompt": "Use case: precise-object-edit. Square English B2B footwear photograph at least1024px. Edit ONLY the attached actual Luqi011 photograph. Preserve exact photographed shoe count, original pose/angle, broad plain forefoot, crossing diamond-like stitched sidepanels, original FIVE lace positions including the TOP metal eyelet, round woven laces, low collar, front tongue loop and rear pulltab, shallow oval-block outsole and original fine matte/fuzzy surface. Do not add apron stitching, new seams, new angles or hidden geometry. No recolor: Gray stays gray/black lining/black sole; Black allblack; golden Khaki stays golden brown/tan lining/solid brown sole; Brown stays muted olive-brown/gray outercollar/black inner lining/black-khaki camouflage outsole. Keep original hands, bareankles, rolled trousers when present; no added socks. Remove Chinese wording/borders/arrows, unverified labels and thirdparty brand marks. Restrained clear English typography; product dominant. No material composition claims such as suede/leather/PU/rubber/EVA, no testedgrip/anti-slip/abrasion/waterproof/medical/zero-drop/barefoot/stock/dispatch promise. Strict PARTIAL closeup of original source23 Brown pair COLLAR/visible inner textile and tongue loops. Preserve actual original hand if visible. Do not reconstruct hidden insole/forefoot or claim lining material. Text: COLLAR DETAIL; Low-top construction.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\011准备\\05_AI候选\\D3.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-882d045e-cd48-4d81-9fcc-8f29b03abebc.png",
+      "output_sha256": "9a901e80be13cc86f1d93c1b7fa711510e9d21ac2f21da8c15df0ccc70af801f",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T12:42:55.969638+00:00",
+      "review_note": "Compared individually to011 actual originals: crossing stitched sidepanels and original forefoot borders, five lacepositions/topmetaleyelet, roundlaces, front/rear pulltabs and oval-block tread. Exact Black/Gray/Brown Camouflage Sole/Khaki Brown Sole colors and original poses. M1 unchanged clean800px source18 selected after two texture-drifting native attempts rejected. D1 originalGray partialpanel/lacing; D2 wholeoutsole matches actual fullsource17, no hidden geometry reconstructed; D3 originalBrown paircollars; D4 originalGrayfront EU37-48. Four distinct singleprofile sources7/15/4/12. Material compositions unspecified."
+    },
+    {
+      "role": "D4",
+      "buyer_question": "EU尺码配比",
+      "source_indices": [
+        25
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\011准备\\01_产品来源原图\\25.jpg"
+      ],
+      "source_sha256": [
+        "7a2a1ba570dd746b2d1bd713f9d7055c85c503370041f1b9bcfb5c4525a9fbd2"
+      ],
+      "source_dimensions": [
+        [
+          800,
+          800
+        ]
+      ],
+      "source_region_key": "actual-photo-25",
+      "prompt": "Use case: precise-object-edit. Square English B2B footwear photograph at least1024px. Edit ONLY the attached actual Luqi011 photograph. Preserve exact photographed shoe count, original pose/angle, broad plain forefoot, crossing diamond-like stitched sidepanels, original FIVE lace positions including the TOP metal eyelet, round woven laces, low collar, front tongue loop and rear pulltab, shallow oval-block outsole and original fine matte/fuzzy surface. Do not add apron stitching, new seams, new angles or hidden geometry. No recolor: Gray stays gray/black lining/black sole; Black allblack; golden Khaki stays golden brown/tan lining/solid brown sole; Brown stays muted olive-brown/gray outercollar/black inner lining/black-khaki camouflage outsole. Keep original hands, bareankles, rolled trousers when present; no added socks. Remove Chinese wording/borders/arrows, unverified labels and thirdparty brand marks. Restrained clear English typography; product dominant. No material composition claims such as suede/leather/PU/rubber/EVA, no testedgrip/anti-slip/abrasion/waterproof/medical/zero-drop/barefoot/stock/dispatch promise. Preserve BOTH actual original source25 Gray shoes in exact top/front pair pose on original seating surface, plain forefoot and crossing seams, FIVE original lacing positions. Text: EU 37-48; Send your color-size mix for order confirmation. No US/cm conversions.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\011准备\\05_AI候选\\D4.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-3f668de4-4b5d-470b-a5d1-3166df92baa5.png",
+      "output_sha256": "cd3d77f8856a0b498a22d8c1f3dcd795ff070532808af0b44672fc2c119ab4e1",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T12:42:55.969638+00:00",
+      "review_note": "Compared individually to011 actual originals: crossing stitched sidepanels and original forefoot borders, five lacepositions/topmetaleyelet, roundlaces, front/rear pulltabs and oval-block tread. Exact Black/Gray/Brown Camouflage Sole/Khaki Brown Sole colors and original poses. M1 unchanged clean800px source18 selected after two texture-drifting native attempts rejected. D1 originalGray partialpanel/lacing; D2 wholeoutsole matches actual fullsource17, no hidden geometry reconstructed; D3 originalBrown paircollars; D4 originalGrayfront EU37-48. Four distinct singleprofile sources7/15/4/12. Material compositions unspecified."
+    },
+    {
+      "role": "SKU_Black",
+      "buyer_question": "黑色SKU绑定",
+      "source_indices": [
+        7
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\011准备\\01_产品来源原图\\07.jpg"
+      ],
+      "source_sha256": [
+        "a3cac9bf2261e453dd1c6103ba1b72c7345173ce992d2d53cad0fd46dfa95d17"
+      ],
+      "source_dimensions": [
+        [
+          800,
+          800
+        ]
+      ],
+      "source_region_key": "actual-photo-7",
+      "prompt": "Use case: precise-object-edit. Square English B2B footwear photograph at least1024px. Edit ONLY the attached actual Luqi011 photograph. Preserve exact photographed shoe count, original pose/angle, broad plain forefoot, crossing diamond-like stitched sidepanels, original FIVE lace positions including the TOP metal eyelet, round woven laces, low collar, front tongue loop and rear pulltab, shallow oval-block outsole and original fine matte/fuzzy surface. Do not add apron stitching, new seams, new angles or hidden geometry. No recolor: Gray stays gray/black lining/black sole; Black allblack; golden Khaki stays golden brown/tan lining/solid brown sole; Brown stays muted olive-brown/gray outercollar/black inner lining/black-khaki camouflage outsole. Keep original hands, bareankles, rolled trousers when present; no added socks. Remove Chinese wording/borders/arrows, unverified labels and thirdparty brand marks. Restrained clear English typography; product dominant. No material composition claims such as suede/leather/PU/rubber/EVA, no testedgrip/anti-slip/abrasion/waterproof/medical/zero-drop/barefoot/stock/dispatch promise. Preserve ONLY original source07 single Black sideprofile facing left, exact original shape/crossing seams/5lacepositions/pulltabs/blacksole. Clean white background and small shadow. No text or other shoe.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\011准备\\05_AI候选\\SKU_Black.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-e075fc9d-0f0c-4c66-ae9a-07546bfe9993.png",
+      "output_sha256": "7f48db92af2558cce8aae4ff79db8c7ff666689fe022a7603dba8bf19361c962",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T12:42:55.969638+00:00",
+      "review_note": "Compared individually to011 actual originals: crossing stitched sidepanels and original forefoot borders, five lacepositions/topmetaleyelet, roundlaces, front/rear pulltabs and oval-block tread. Exact Black/Gray/Brown Camouflage Sole/Khaki Brown Sole colors and original poses. M1 unchanged clean800px source18 selected after two texture-drifting native attempts rejected. D1 originalGray partialpanel/lacing; D2 wholeoutsole matches actual fullsource17, no hidden geometry reconstructed; D3 originalBrown paircollars; D4 originalGrayfront EU37-48. Four distinct singleprofile sources7/15/4/12. Material compositions unspecified."
+    },
+    {
+      "role": "SKU_Brown Camouflage Sole",
+      "buyer_question": "棕色拼色底SKU绑定",
+      "source_indices": [
+        15
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\011准备\\01_产品来源原图\\15.jpg"
+      ],
+      "source_sha256": [
+        "1d9faba8ab280ceeb4f10aa4324b040f4626face978ef19847c3950b118915fb"
+      ],
+      "source_dimensions": [
+        [
+          800,
+          800
+        ]
+      ],
+      "source_region_key": "actual-photo-15",
+      "prompt": "Use case: precise-object-edit. Square English B2B footwear photograph at least1024px. Edit ONLY the attached actual Luqi011 photograph. Preserve exact photographed shoe count, original pose/angle, broad plain forefoot, crossing diamond-like stitched sidepanels, original FIVE lace positions including the TOP metal eyelet, round woven laces, low collar, front tongue loop and rear pulltab, shallow oval-block outsole and original fine matte/fuzzy surface. Do not add apron stitching, new seams, new angles or hidden geometry. No recolor: Gray stays gray/black lining/black sole; Black allblack; golden Khaki stays golden brown/tan lining/solid brown sole; Brown stays muted olive-brown/gray outercollar/black inner lining/black-khaki camouflage outsole. Keep original hands, bareankles, rolled trousers when present; no added socks. Remove Chinese wording/borders/arrows, unverified labels and thirdparty brand marks. Restrained clear English typography; product dominant. No material composition claims such as suede/leather/PU/rubber/EVA, no testedgrip/anti-slip/abrasion/waterproof/medical/zero-drop/barefoot/stock/dispatch promise. Preserve ONLY original source15 single muted olive-Brown sideprofile facing left, gray outer collar, black inner lining and EXACT original black/khaki camouflage patch sidewall. Exact seams/5lacepositions/pulltabs. Clean white background/small shadow, no text or other shoe.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\011准备\\05_AI候选\\SKU_Brown Camouflage Sole.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-1210b1e6-d1fb-46e0-aea2-8f804a143963.png",
+      "output_sha256": "72d2096836c0ad5631a6c322a8a3a1748a3e218e4e96878a50549487c10ee67a",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T12:42:55.969638+00:00",
+      "review_note": "Compared individually to011 actual originals: crossing stitched sidepanels and original forefoot borders, five lacepositions/topmetaleyelet, roundlaces, front/rear pulltabs and oval-block tread. Exact Black/Gray/Brown Camouflage Sole/Khaki Brown Sole colors and original poses. M1 unchanged clean800px source18 selected after two texture-drifting native attempts rejected. D1 originalGray partialpanel/lacing; D2 wholeoutsole matches actual fullsource17, no hidden geometry reconstructed; D3 originalBrown paircollars; D4 originalGrayfront EU37-48. Four distinct singleprofile sources7/15/4/12. Material compositions unspecified."
+    },
+    {
+      "role": "SKU_Gray",
+      "buyer_question": "灰色SKU绑定",
+      "source_indices": [
+        4
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\011准备\\01_产品来源原图\\04.jpg"
+      ],
+      "source_sha256": [
+        "6c048f3d4edb713578c508e12e9474590dc517e533b4d655909baf13f8214d40"
+      ],
+      "source_dimensions": [
+        [
+          800,
+          800
+        ]
+      ],
+      "source_region_key": "actual-photo-4",
+      "prompt": "Use case: precise-object-edit. Square English B2B footwear photograph at least1024px. Edit ONLY the attached actual Luqi011 photograph. Preserve exact photographed shoe count, original pose/angle, broad plain forefoot, crossing diamond-like stitched sidepanels, original FIVE lace positions including the TOP metal eyelet, round woven laces, low collar, front tongue loop and rear pulltab, shallow oval-block outsole and original fine matte/fuzzy surface. Do not add apron stitching, new seams, new angles or hidden geometry. No recolor: Gray stays gray/black lining/black sole; Black allblack; golden Khaki stays golden brown/tan lining/solid brown sole; Brown stays muted olive-brown/gray outercollar/black inner lining/black-khaki camouflage outsole. Keep original hands, bareankles, rolled trousers when present; no added socks. Remove Chinese wording/borders/arrows, unverified labels and thirdparty brand marks. Restrained clear English typography; product dominant. No material composition claims such as suede/leather/PU/rubber/EVA, no testedgrip/anti-slip/abrasion/waterproof/medical/zero-drop/barefoot/stock/dispatch promise. Preserve ONLY original source04 single Gray sideprofile facing left, exact gray surface/stitched crossing panels/5lacepositions/pulltabs/blackcollar and blacksole. Clean whitebackground/smallshadow, no text/other shoe.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\011准备\\05_AI候选\\SKU_Gray.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-596b454c-c9b8-49a3-88e9-1f56b36e93d8.png",
+      "output_sha256": "7d822fd64d033d1701b468284d46424c56d24ab234d64d5e47491ce8c866f162",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T12:42:55.969638+00:00",
+      "review_note": "Compared individually to011 actual originals: crossing stitched sidepanels and original forefoot borders, five lacepositions/topmetaleyelet, roundlaces, front/rear pulltabs and oval-block tread. Exact Black/Gray/Brown Camouflage Sole/Khaki Brown Sole colors and original poses. M1 unchanged clean800px source18 selected after two texture-drifting native attempts rejected. D1 originalGray partialpanel/lacing; D2 wholeoutsole matches actual fullsource17, no hidden geometry reconstructed; D3 originalBrown paircollars; D4 originalGrayfront EU37-48. Four distinct singleprofile sources7/15/4/12. Material compositions unspecified."
+    },
+    {
+      "role": "SKU_Khaki Brown Sole",
+      "buyer_question": "卡其棕底SKU绑定",
+      "source_indices": [
+        12
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\011准备\\01_产品来源原图\\12.jpg"
+      ],
+      "source_sha256": [
+        "c9d9138a620ab3b52a3d9d163d167dfae18448a880eb087b555a29bc636c8378"
+      ],
+      "source_dimensions": [
+        [
+          800,
+          800
+        ]
+      ],
+      "source_region_key": "actual-photo-12",
+      "prompt": "Use case: precise-object-edit. Square English B2B footwear photograph at least1024px. Edit ONLY the attached actual Luqi011 photograph. Preserve exact photographed shoe count, original pose/angle, broad plain forefoot, crossing diamond-like stitched sidepanels, original FIVE lace positions including the TOP metal eyelet, round woven laces, low collar, front tongue loop and rear pulltab, shallow oval-block outsole and original fine matte/fuzzy surface. Do not add apron stitching, new seams, new angles or hidden geometry. No recolor: Gray stays gray/black lining/black sole; Black allblack; golden Khaki stays golden brown/tan lining/solid brown sole; Brown stays muted olive-brown/gray outercollar/black inner lining/black-khaki camouflage outsole. Keep original hands, bareankles, rolled trousers when present; no added socks. Remove Chinese wording/borders/arrows, unverified labels and thirdparty brand marks. Restrained clear English typography; product dominant. No material composition claims such as suede/leather/PU/rubber/EVA, no testedgrip/anti-slip/abrasion/waterproof/medical/zero-drop/barefoot/stock/dispatch promise. Preserve ONLY original source12 single golden Khaki sideprofile facing left, exact color/solidbrownsole/tancollar/crossing seams/5lacepositions/pulltabs. Clean whitebackground/smallshadow, no text/other shoe.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\011准备\\05_AI候选\\SKU_Khaki Brown Sole.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-791f8974-766d-49cc-9c95-8e1bda6622df.png",
+      "output_sha256": "e7d8c7b16d9488ead0d91bd81e2b0b2fb7cf3ac1d744389471eb392cb5740830",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T12:42:55.969638+00:00",
+      "review_note": "Compared individually to011 actual originals: crossing stitched sidepanels and original forefoot borders, five lacepositions/topmetaleyelet, roundlaces, front/rear pulltabs and oval-block tread. Exact Black/Gray/Brown Camouflage Sole/Khaki Brown Sole colors and original poses. M1 unchanged clean800px source18 selected after two texture-drifting native attempts rejected. D1 originalGray partialpanel/lacing; D2 wholeoutsole matches actual fullsource17, no hidden geometry reconstructed; D3 originalBrown paircollars; D4 originalGrayfront EU37-48. Four distinct singleprofile sources7/15/4/12. Material compositions unspecified."
+    }
+  ],
+  "M6": {
+    "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎新品_2026-10-07\\图片修复\\F.png",
+    "bank_url": "https://sc04.alicdn.com/kf/S6c8cb1d46d8c4b018cf07f5cab50c1adi/286385890/S6c8cb1d46d8c4b018cf07f5cab50c1adi.png",
+    "file_id": "30149993323"
+  },
+  "company": [
+    {
+      "role": "C1",
+      "usage": "ordinary_HTML_company_context",
+      "official_url": "https://sc04.alicdn.com/kf/Ha8c1682092424e778eadf945763e79daU/286385890/Ha8c1682092424e778eadf945763e79daU.jpg",
+      "file_id": "33355885480",
+      "local_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\266_quality_audit\\originals\\C01_factory_profile.jpg",
+      "sha256": "23a34c8e425ae286d190ac1eb587c93e9a87421fdf490ec48f260e53e316149c",
+      "local_hash_verified": true,
+      "pixel_edit": false
+    },
+    {
+      "role": "C2",
+      "usage": "ordinary_HTML_company_context",
+      "official_url": "https://sc04.alicdn.com/kf/H496f7579171f4370a1d47c3adf30001bK/286385890/H496f7579171f4370a1d47c3adf30001bK.jpg",
+      "file_id": "33358392283",
+      "local_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\266_quality_audit\\originals\\C02_oem_odm_workflow.jpg",
+      "sha256": "66624253f1d95ec68e060d792f13c61943c86f7d61e763167a0a2eb1146300f5",
+      "local_hash_verified": true,
+      "pixel_edit": false
+    },
+    {
+      "role": "C3",
+      "usage": "ordinary_HTML_company_context",
+      "official_url": "https://sc04.alicdn.com/kf/H36e700f5c3ee447a80c035d8ae7521d9a/286385890/H36e700f5c3ee447a80c035d8ae7521d9a.jpg",
+      "file_id": "33355813301",
+      "local_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\266_quality_audit\\originals\\C03_production_process.jpg",
+      "sha256": "3ae00d6398224dd7021ed2a266584bccb77b741b31fa9c72ca8ad66ab443f683",
+      "local_hash_verified": true,
+      "pixel_edit": false
+    },
+    {
+      "role": "C4",
+      "usage": "ordinary_HTML_company_context",
+      "official_url": "https://sc04.alicdn.com/kf/H9f32c7ecea0f4d25bc5ddc9cd04c1e5dK/286385890/H9f32c7ecea0f4d25bc5ddc9cd04c1e5dK.jpg",
+      "file_id": "33358345636",
+      "local_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\266_quality_audit\\originals\\C04_quality_control.jpg",
+      "sha256": "f32d682a7055a3e44f91eb074b678507beca63967da5565de8997f582a651bf5",
+      "local_hash_verified": true,
+      "pixel_edit": false
+    },
+    {
+      "role": "C5",
+      "usage": "ordinary_HTML_company_context",
+      "official_url": "https://sc04.alicdn.com/kf/H5f71c3cfb4064b51bb458d0a786cb402R/286385890/H5f71c3cfb4064b51bb458d0a786cb402R.jpg",
+      "file_id": "33358440083",
+      "local_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\266_quality_audit\\originals\\C05_packing_inquiry.jpg",
+      "sha256": "d0f3916d920a9ec46fd822317a9cd3c684b6b7d60631208475fa2be138d05bc2",
+      "local_hash_verified": true,
+      "pixel_edit": false
+    }
+  ],
+  "excluded_candidates": [
+    {
+      "role": "M1",
+      "native_path": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-d5945c2e-8db6-498a-8ede-23b6a34ed3f4.png",
+      "reason": "Generated surface developed etched swirling grain unlike original short matte nap; regenerate from original, not from candidate."
+    },
+    {
+      "role": "M1",
+      "native_path": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-f9cdbb22-2095-46e5-9c3a-8298c74472fc.png",
+      "reason": "Second native edit still changed original fine matte nap into patterned grain; do not upload. Clean square original800px source18 selected unchanged per SOP recommend1000, no hard minimum."
+    }
+  ],
+  "complete_set_visual_review_at": "2026-10-10T12:44:20.702511+00:00",
+  "complete_set_note": "Compared individually to011 actual originals: crossing stitched sidepanels and original forefoot borders, five lacepositions/topmetaleyelet, roundlaces, front/rear pulltabs and oval-block tread. Exact Black/Gray/Brown Camouflage Sole/Khaki Brown Sole colors and original poses. M1 unchanged clean800px source18 selected after two texture-drifting native attempts rejected. D1 originalGray partialpanel/lacing; D2 wholeoutsole matches actual fullsource17, no hidden geometry reconstructed; D3 originalBrown paircollars; D4 originalGrayfront EU37-48. Four distinct singleprofile sources7/15/4/12. Material compositions unspecified. Sixmain including actualfactoryM6, four distinctproductdetail and five companypanels checked; no public rendering proof."
+}

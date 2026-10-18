@@ -1,0 +1,34 @@
+{
+  "request": {
+    "param_product_top_publish_request": {
+      "product_id": 1601943779211,
+      "cat_id": 201774304,
+      "language": "en_US",
+      "xml": "<itemSchema><field id=\"productTitle\" name=\"Product name\" type=\"input\"><value>Textured Upper Ankle Boots with Side Zipper and Patterned PVC Sole for Street Style Wear</value></field></itemSchema>"
+    }
+  },
+  "reason": "Formal title differs from reviewed source-specific submitted product title. Correct only title; cause of later change unconfirmed, not attributed to a person or platform automation.",
+  "expected_title": "Textured Upper Ankle Boots with Side Zipper and Patterned PVC Sole for Street Style Wear",
+  "observed_title": "Textured Upper Ankle Boots with Side Zipper Rear Loop Sculpted PVC Sole for Street Style Wear",
+  "expected_schema": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Textured Upper Ankle Boots with Side Zipper and Patterned PVC Sole for Street Style Wear",
+          []
+        ]
+      ]
+    ]
+  },
+  "xml_sha256": "156b2c181b1e698ef5cc989a11f563a2ffef29fce036aa89231bfb39385e55b7"
+}

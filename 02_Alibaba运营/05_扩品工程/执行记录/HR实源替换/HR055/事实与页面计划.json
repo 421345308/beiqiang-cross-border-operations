@@ -1,0 +1,531 @@
+{
+  "candidate": "kaka_2564774",
+  "source_artno": "B803",
+  "supplier": "咔咔鞋业",
+  "source_url": "https://kaka.sooxie.com/detail/2564774",
+  "source_price_cny": 40,
+  "source_color_labels": [
+    "白绿",
+    "黑红",
+    "黑紫",
+    "咖啡",
+    "全黑"
+  ],
+  "colors": [
+    "White/Green",
+    "Red/Black",
+    "Purple/Black",
+    "Coffee",
+    "All Black"
+  ],
+  "sizes": [
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "upper": "Knit",
+  "lining": "other",
+  "midsole": "other",
+  "outsole": "EVA",
+  "closure": "Slip-On",
+  "category_attribute_omissions": [
+    "Closure Type"
+  ],
+  "category_absent_attributes_reviewed": [
+    "Closure Type"
+  ],
+  "style": [
+    "Mules",
+    "Casual"
+  ],
+  "seasons": [
+    "All Seasons"
+  ],
+  "feature": "Fashion Trend",
+  "toe_style": "Closed Toe",
+  "category_id": 201340408,
+  "target_ids": {
+    "A": "1601943672753",
+    "B": "1601943711519",
+    "C": "1601943784098"
+  },
+  "platform_group_id": 972225685,
+  "platform_group_name": "Backless & Mule Casual Shoes",
+  "local_intent_candidates": [
+    "闭头针织半拖鞋"
+  ],
+  "materials_evidence": [
+    "Source09 explicitly says飞织 upper; select officialKnit attribute without claiming fibre composition. Source06/09 explicitlyEVA outsole; no midsole orlining composition evidence,Other.",
+    "Specific title/bodyB803 and five coloursEU35-46 verified. Source BlackRed/BlackPurple names map to actual red/purple upper over black sole: buyer Red/Black,Purple/Black, preserving original labels internally.",
+    "Actual photos10-29 show a closed toe and fully open rear heel, not a full-backed slip-on sneaker. Specificsource has no width statement; storewide wide-toe navigation does not establish width.",
+    "Source05/07/08 promotional/AI-style scenes excluded. Source06 Chinese traction claims not adopted; actual26 partial bottom photo used without a fabricated full bottom.",
+    "Fresh Home Slippers201340408 schema has nativeMules/Casual/Knit/EVA/ClosedToe attributes and noClosureType field. Omit only absent category field; actual slip-on construction explained in page copy."
+  ],
+  "dedup": "B803 not adopted elsewhere. Compared HR060/AA23 full-backed low-cut knit slip-ons: B803 fully open heel is a key structural difference, not a colour change. Also distinct from HR066 tall full-backed knit sock design.",
+  "do_not_claim": [
+    "physical stock",
+    "tested slip resistance",
+    "medical comfort",
+    "unverified midsole material"
+  ],
+  "custom": [
+    "Shoe Profile",
+    "Closed toe; open heel; knit upper; sculpted EVA outsole"
+  ],
+  "titles": {
+    "A": "Closed Toe Knit Mule Slippers with Open Heel and Sculpted EVA Outsole for Wholesale Footwear Buyers",
+    "B": "Backless Knit Casual Mule Shoes with EVA Sole and Five Colour Options for Footwear Collections",
+    "C": "Slip-On Closed Toe Knit Slippers with Open Back and Textured EVA Sole for Wholesale Shoe Assortments"
+  },
+  "keywords": [
+    "Closed Toe Knit Mule Slippers",
+    "Backless Knit Casual Shoes",
+    "EVA Sole Knit Slippers"
+  ],
+  "highlights": "Open-heel mule construction: A closed toe is combined with a fully open back, allowing the foot to slide into the knitted upper.\n\nPatterned knit upper: Larger visible knit openings across the forefoot contrast with denser sections around the side and entry edge.\n\nSculpted EVA outsole: Angled grooves and a raised sidewall give the sole its distinctive profile, visible in the actual side and bottom photographs.\n\nFive colour directions: White/Green, Red/Black, Purple/Black, Coffee and All Black pair the knitted upper with matching or contrasting sole colours.\n\nWholesale assortments: This backless closed-toe style is listed in EU35-46 for colour-size mixes.",
+  "assets_layout": {
+    "M1": {
+      "buyer_question": "What actual backless shoe is offered?",
+      "title": null,
+      "photos": [
+        {
+          "index": 29,
+          "box": [
+            15,
+            15,
+            985,
+            985
+          ]
+        }
+      ]
+    },
+    "M2": {
+      "buyer_question": "What is the open-heel shape?",
+      "title": "Open back mule construction",
+      "subtitle": "All Black profile shows the uncovered rear heel.",
+      "photos": [
+        {
+          "index": 27,
+          "box": [
+            45,
+            215,
+            955,
+            935
+          ]
+        }
+      ],
+      "text": []
+    },
+    "M3": {
+      "buyer_question": "What sole texture is visible?",
+      "title": "EVA sole in wear",
+      "subtitle": "Actual partial bottom and side view.",
+      "photos": [
+        {
+          "index": 26,
+          "box": [
+            45,
+            215,
+            955,
+            935
+          ]
+        }
+      ],
+      "text": []
+    },
+    "M4": {
+      "buyer_question": "Which colour options are offered?",
+      "title": "5 colour options",
+      "subtitle": "Choose the colour and EU size assortment for your order.",
+      "photos": [
+        {
+          "index": 13,
+          "box": [
+            45,
+            230,
+            480,
+            415
+          ]
+        },
+        {
+          "index": 17,
+          "box": [
+            520,
+            230,
+            955,
+            415
+          ]
+        },
+        {
+          "index": 21,
+          "box": [
+            45,
+            465,
+            480,
+            650
+          ]
+        },
+        {
+          "index": 25,
+          "box": [
+            520,
+            465,
+            955,
+            650
+          ]
+        },
+        {
+          "index": 29,
+          "box": [
+            282,
+            700,
+            717,
+            885
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "White/Green",
+          "xy": [
+            45,
+            425
+          ],
+          "size": 24
+        },
+        {
+          "value": "Red/Black",
+          "xy": [
+            520,
+            425
+          ],
+          "size": 24
+        },
+        {
+          "value": "Purple/Black",
+          "xy": [
+            45,
+            660
+          ],
+          "size": 24
+        },
+        {
+          "value": "Coffee",
+          "xy": [
+            520,
+            660
+          ],
+          "size": 24
+        },
+        {
+          "value": "All Black",
+          "xy": [
+            282,
+            895
+          ],
+          "size": 24
+        }
+      ]
+    },
+    "M5": {
+      "buyer_question": "How is the closed toe arranged?",
+      "title": "Closed toe knit upper",
+      "subtitle": "Purple upper with a contrasting Black sole.",
+      "photos": [
+        {
+          "index": 19,
+          "box": [
+            45,
+            215,
+            955,
+            935
+          ]
+        }
+      ],
+      "text": []
+    },
+    "D1": {
+      "buyer_question": "How does the open-back shoe look when worn?",
+      "title": "Backless everyday profile",
+      "subtitle": "White & Green option with its open rear entry.",
+      "photos": [
+        {
+          "index": 11,
+          "box": [
+            45,
+            215,
+            955,
+            1070
+          ]
+        }
+      ],
+      "text": []
+    },
+    "D2": {
+      "buyer_question": "What outsole profile is visible?",
+      "title": "Sculpted EVA sole",
+      "subtitle": "All Black partial underside and sidewall in wear.",
+      "photos": [
+        {
+          "index": 26,
+          "box": [
+            45,
+            215,
+            955,
+            1070
+          ]
+        }
+      ],
+      "text": []
+    },
+    "D3": {
+      "buyer_question": "What knit pattern does the forefoot have?",
+      "title": "Forefoot knit zones",
+      "subtitle": "Red upper contrasts with the Black sculpted sidewall.",
+      "photos": [
+        {
+          "index": 15,
+          "box": [
+            45,
+            215,
+            955,
+            1070
+          ]
+        }
+      ],
+      "text": []
+    },
+    "D4": {
+      "buyer_question": "Which colour options are offered?",
+      "title": "5 colour options",
+      "subtitle": "Choose the colour and EU size assortment for your order.",
+      "photos": [
+        {
+          "index": 13,
+          "box": [
+            45,
+            230,
+            480,
+            455
+          ]
+        },
+        {
+          "index": 17,
+          "box": [
+            520,
+            230,
+            955,
+            455
+          ]
+        },
+        {
+          "index": 21,
+          "box": [
+            45,
+            540,
+            480,
+            765
+          ]
+        },
+        {
+          "index": 25,
+          "box": [
+            520,
+            540,
+            955,
+            765
+          ]
+        },
+        {
+          "index": 29,
+          "box": [
+            282,
+            850,
+            717,
+            1075
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "White/Green",
+          "xy": [
+            45,
+            465
+          ],
+          "size": 24
+        },
+        {
+          "value": "Red/Black",
+          "xy": [
+            520,
+            465
+          ],
+          "size": 24
+        },
+        {
+          "value": "Purple/Black",
+          "xy": [
+            45,
+            775
+          ],
+          "size": 24
+        },
+        {
+          "value": "Coffee",
+          "xy": [
+            520,
+            775
+          ],
+          "size": 24
+        },
+        {
+          "value": "All Black",
+          "xy": [
+            282,
+            1085
+          ],
+          "size": 24
+        }
+      ]
+    },
+    "SKU_WHITE_GREEN": {
+      "buyer_question": "Which colour is this SKU?",
+      "title": null,
+      "photos": [
+        {
+          "index": 13,
+          "box": [
+            25,
+            25,
+            975,
+            975
+          ]
+        }
+      ]
+    },
+    "SKU_RED_BLACK": {
+      "buyer_question": "Which colour is this SKU?",
+      "title": null,
+      "photos": [
+        {
+          "index": 17,
+          "box": [
+            25,
+            25,
+            975,
+            975
+          ]
+        }
+      ]
+    },
+    "SKU_PURPLE_BLACK": {
+      "buyer_question": "Which colour is this SKU?",
+      "title": null,
+      "photos": [
+        {
+          "index": 21,
+          "box": [
+            25,
+            25,
+            975,
+            975
+          ]
+        }
+      ]
+    },
+    "SKU_COFFEE": {
+      "buyer_question": "Which colour is this SKU?",
+      "title": null,
+      "photos": [
+        {
+          "index": 25,
+          "box": [
+            25,
+            25,
+            975,
+            975
+          ]
+        }
+      ]
+    },
+    "SKU_ALL_BLACK": {
+      "buyer_question": "Which colour is this SKU?",
+      "title": null,
+      "photos": [
+        {
+          "index": 29,
+          "box": [
+            25,
+            25,
+            975,
+            975
+          ]
+        }
+      ]
+    }
+  },
+  "source_assets_root": "01_产品资产/01_原始数据包/HR055_B803",
+  "source_date": "2026-10-14",
+  "fx_cny_per_usd": 6.6837,
+  "tiers": [
+    [
+      2,
+      "8.98"
+    ],
+    [
+      50,
+      "8.38"
+    ],
+    [
+      100,
+      "7.79"
+    ]
+  ],
+  "page_state": "FORMAL_FIELDS_SCORE_PASS",
+  "company_faq_source": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/通用FAQ与公司简介.json",
+  "selection_review": {
+    "state": "REVIEWED_ADOPT",
+    "private_backend_evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/经营数据与选款.json",
+    "reason": "HR055 recent17exposures/no clicks andSeptember30exposures/2clicks, no inquiry/TM. Select a distinct closed-toe backless knit mule with five actual colours rather than reconstruct an unsupported concept; small prior traffic remains inconclusive.",
+    "cost_usd": 5.984709068330416,
+    "gross_difference_usd": [
+      2.9953,
+      2.3953,
+      1.8053
+    ],
+    "comparison_limit": "Public Alibaba discovery did not identify an exact source-model shoe with matching unit, quantities, specifications and freight/trade terms. Nearby offers are not proof of price advantage. Cost markup50/40/30%; actual service/fulfilment charges and net profit need order costing."
+  },
+  "source_id": "src-hr-hr055-b803",
+  "source_evidence": [
+    "01_产品资产/01_原始数据包/HR055_B803/source.json",
+    "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR055/素材清单.json"
+  ],
+  "procurement_capability": "CURRENT_REAL_SHOE_AND_PROCUREMENT_ENTRY_VERIFIED_NOT_ORDER_STOCK",
+  "current_models_by_id": {
+    "1601943711519": "BQ1055-B",
+    "1601943784098": "BQ1055-C",
+    "1601943672753": "BQ1055-A"
+  },
+  "model_migration_evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/范围.json",
+  "model_numbers": {
+    "B": "BQ1055-B",
+    "C": "BQ1055-C",
+    "A": "BQ1055-A"
+  },
+  "current_platform_category_by_id": {
+    "1601943672753": 201340408,
+    "1601943711519": 201153804,
+    "1601943784098": 201340408
+  },
+  "category_scope": "category_id保留初始改造默认；当前平台叶子按current_platform_category_by_id逐ID读取，不把同源链接不同平台分类混成不同实鞋。"
+}

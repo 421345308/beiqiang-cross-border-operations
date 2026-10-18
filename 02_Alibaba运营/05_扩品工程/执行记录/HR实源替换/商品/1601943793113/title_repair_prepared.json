@@ -1,0 +1,34 @@
+{
+  "request": {
+    "param_product_top_publish_request": {
+      "product_id": 1601943793113,
+      "cat_id": 201334413,
+      "language": "en_US",
+      "xml": "<itemSchema><field id=\"productTitle\" name=\"Product name\" type=\"input\"><value>Chunky Lace-Up Casual Sneakers with Padded Collar and PVC Outsole for Wholesale Footwear Buyers</value></field></itemSchema>"
+    }
+  },
+  "reason": "Formal title differs from reviewed source-specific submitted product title. Correct only title; cause of later change unconfirmed, not attributed to a person or platform automation.",
+  "expected_title": "Chunky Lace-Up Casual Sneakers with Padded Collar and PVC Outsole for Wholesale Footwear Buyers",
+  "observed_title": "Chunky Lace-Up Casual Sneakers with Triangular Side Insets Round Toe Padded Collar PVC Outsole for Wholesale Footwear Buyers",
+  "expected_schema": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Chunky Lace-Up Casual Sneakers with Padded Collar and PVC Outsole for Wholesale Footwear Buyers",
+          []
+        ]
+      ]
+    ]
+  },
+  "xml_sha256": "6c63b0f4e1ed686a451073a4750fd68e992079d29dcc816436bcaf0de6586857"
+}

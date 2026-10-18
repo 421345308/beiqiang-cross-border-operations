@@ -1,0 +1,187 @@
+{
+  "at": "2026-10-15T11:59:11.771925+00:00",
+  "state": "ONE_FAMILY_48EU_FORMAL_FIELDS_SCORE_PASS",
+  "primary_style": "K502",
+  "secondary_style": "K502D",
+  "sources": [
+    {
+      "source": "https://luqi.sooxie.com/detail/916193",
+      "artno": "K502",
+      "lining": "Plush",
+      "source_price_cny": "68.00",
+      "source_EU_by_color": {
+        "Black": [
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46
+        ],
+        "Army Green": [
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46
+        ],
+        "Tan": [
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46
+        ]
+      },
+      "observed_at": "2026-10-15T11:54:56.105107+00:00",
+      "source_HTML_sha256": "87094dd970a4b5aa6b757f022c8c878e495c16072a26277f94a032f80bb70377",
+      "current_source_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/K502准备/当前来源刷新核对.json",
+      "current_image_index": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/K502准备/当前家族来源图像索引.json",
+      "current_image_index_sha256": "e30d7be92d163cbfc245f979a2a37a3e3d343830b261313197274e89a7dfd622"
+    },
+    {
+      "source": "https://luqi.sooxie.com/detail/916198",
+      "artno": "K502D",
+      "lining": "Standard",
+      "source_price_cny": "66.00",
+      "source_EU_by_color": {
+        "Black": [
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46
+        ],
+        "Army Green": [
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46
+        ],
+        "Tan": [
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46
+        ]
+      },
+      "observed_at": "2026-10-15T11:55:02.058038+00:00",
+      "source_HTML_sha256": "e39bdbea0df6d933adb8b3c86924cd368993f7511da8c2ee08c99239f0389835",
+      "current_source_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/K502D准备/当前来源刷新核对.json",
+      "current_image_index": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/K502D准备/当前家族来源图像索引.json",
+      "current_image_index_sha256": "257f6ccdfb5bcf1574b798b1ee1ff3fbda838451f5d7385b353dd641dc5dc75e"
+    }
+  ],
+  "buyer_variants": [
+    {
+      "buyer": "Black Plush",
+      "supplier_key": "Black Plush",
+      "supplier_label": "黑色",
+      "source_colour_key": "Black",
+      "supplier_artno": "K502",
+      "source_url": "https://luqi.sooxie.com/detail/916193",
+      "lining": "Plush",
+      "image_role": "M1"
+    },
+    {
+      "buyer": "Army Green Plush",
+      "supplier_key": "Army Green Plush",
+      "supplier_label": "军绿",
+      "source_colour_key": "Army Green",
+      "supplier_artno": "K502",
+      "source_url": "https://luqi.sooxie.com/detail/916193",
+      "lining": "Plush",
+      "image_role": "M4"
+    },
+    {
+      "buyer": "Tan Plush",
+      "supplier_key": "Tan Plush",
+      "supplier_label": "黄棕",
+      "source_colour_key": "Tan",
+      "supplier_artno": "K502",
+      "source_url": "https://luqi.sooxie.com/detail/916193",
+      "lining": "Plush",
+      "image_role": "M5"
+    },
+    {
+      "buyer": "Black Standard",
+      "supplier_key": "Black Standard",
+      "supplier_label": "黑色",
+      "source_colour_key": "Black",
+      "supplier_artno": "K502D",
+      "source_url": "https://luqi.sooxie.com/detail/916198",
+      "lining": "Standard",
+      "image_role": "SKU_Black_Standard"
+    },
+    {
+      "buyer": "Army Green Standard",
+      "supplier_key": "Army Green Standard",
+      "supplier_label": "军绿",
+      "source_colour_key": "Army Green",
+      "supplier_artno": "K502D",
+      "source_url": "https://luqi.sooxie.com/detail/916198",
+      "lining": "Standard",
+      "image_role": "SKU_ArmyGreen_Standard"
+    },
+    {
+      "buyer": "Tan Standard",
+      "supplier_key": "Tan Standard",
+      "supplier_label": "黄棕",
+      "source_colour_key": "Tan",
+      "supplier_artno": "K502D",
+      "source_url": "https://luqi.sooxie.com/detail/916198",
+      "lining": "Standard",
+      "image_role": "SKU_Tan_Standard"
+    }
+  ],
+  "source_EU_combinations": 48,
+  "scope": "Actualsixsourcecontacts/lining/geometrycomparison, no exactSHAequalityor independentfactoryproductionclaim. NoK502DextraID planned; mergeonly afterfullAPIacceptance and no prior secondarylisting.",
+  "cost_plan": {
+    "source_cny": "68.00",
+    "fx": "6.6837",
+    "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+    "fx_observed": "2026-10-13 10:57:20",
+    "rounding": "ROUND_CEILING_TO_USD_CENT",
+    "tiers": [
+      [
+        2,
+        "15.27"
+      ],
+      [
+        50,
+        "14.25"
+      ],
+      [
+        100,
+        "13.23"
+      ]
+    ],
+    "cost_basis": "Shared product-level quantitytiers use highest actuallyconfirmedvariant costCNY68. Standard sourcecostCNY66 remains separatelyrecorded, its markupabovebaseline; no variantcostmislabelling or lower-than-confirmedfloor. Not a claimoflowestmarketprice.",
+    "variant_cost_cny": {
+      "Plush": "68.00",
+      "Standard": "66.00"
+    },
+    "freight_service_tax": "Markupnotnetprofit; freighttaxinspectionpackingservices separatelyconfirmedperorder."
+  },
+  "product_id": "1601981328500",
+  "merge_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/K502准备/家族归并.json"
+}

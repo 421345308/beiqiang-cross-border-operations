@@ -1,0 +1,28 @@
+{
+  "source": "C:\\Users\\spq\\Desktop\\贝强\\99_临时区\\音视频审片\\minicpm-runtime\\whole-silence.wav",
+  "source_sha256": "17ee87534c8e7ad076f1df435e5038b016b0af1c78752a737633363aca09e407",
+  "source_bytes": 909596,
+  "duration_seconds": 28.421,
+  "input_type": "audio_float32",
+  "audio_samples": 454736,
+  "audio_peak_abs": 0.0,
+  "endpoint": "wss://minicpmo45.modelbest.cn/v1/realtime?mode=chat",
+  "model": "MiniCPM-o4.5 official demo",
+  "prompt": "请只听输入音频，判断有人讲话、音乐、环境声或其他声音吗？听到什么就说什么，不能推断录音设备的噪声。若有分离的声音事件，给出种类、次数与大致时刻；听不清说明。中文200字以内。",
+  "audio_complete_client": true,
+  "all_video_frames_seen": false,
+  "video_sampling": null,
+  "authorization": "user-approved public-reference analysis",
+  "status": "answered_unverified",
+  "paid_generation": false,
+  "api_key_used": false,
+  "session_id": "sess_9ac11fc5b3d0",
+  "backend": "pytorch",
+  "first_text_seconds": 4.26600000000326,
+  "metrics": {
+    "backend": "pytorch",
+    "kv_cache_length": 411
+  },
+  "elapsed_seconds": 5.875,
+  "response_seconds": 4.5
+}

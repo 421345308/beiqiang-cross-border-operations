@@ -1,0 +1,38 @@
+{
+  "tool": "builtin image_gen",
+  "date": "2026-10-10",
+  "user_direction": "拒绝纯代码鞋形，鞋子与穿着画面使用生成素材；代码负责排版、节奏与转场。",
+  "reference": "C:/Users/spq/Desktop/贝强/01_产品资产/01_原始数据包/已整理_BQ029_A025_贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/PNG/PD2A6333.png",
+  "assets": [
+    {
+      "file": "public/generated-hero-v3.png",
+      "prompt": "Use case: ads-marketing. Asset: portrait 9:16 key visual for Beiqiang premium knit sock-shoe brand film. Input image 1 is the exact physical shoe identity reference; input image 2 is a relit image of that same shoe, useful only for material clarity. Generate a complete photorealistic luxury footwear campaign photograph, not a diagram. Scene: warm ivory sculptural studio with an oversized softly curved sheet of black knitted fabric forming a graceful sweeping arc behind ONE all-black ribbed high-top sock shoe resting naturally on a pale travertine plinth. The shoe occupies the lower-middle half, toe pointing left, full sole and collar visible, carefully restrained perspective and beautiful grazing light that reveals yarn fibers and soft irregular wave ribs. Preserve the reference's wavy knit vamp, tall sock collar, rear pull tab, glossy black heel counter, rounded toe and all-black sole silhouette. The large background fabric is an abstract campaign prop, not an extra part of the shoe, not fake manufacturing evidence. Upper 34% clean softly lit warm ivory negative space reserved for later text. Refined black/ivory composition, tactile material, realistic fibers, elegant editorial product photography, soft shadows, subtle shallow depth, no cheap plastic look, no CAD wireframes. No text, no letters, no logo, no laces, no white sole, no new technical features. One shoe only, no person.",
+      "references": [
+        "C:/Users/spq/Desktop/贝强/01_产品资产/01_原始数据包/已整理_BQ029_A025_贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/PNG/PD2A6333.png",
+        "public/sock-hero.png"
+      ]
+    },
+    {
+      "file": "public/generated-wear-v3.png",
+      "prompt": "Use case: ads-marketing. Asset: portrait 9:16 photographic wearing keyframe for a Beiqiang knit sock-shoe commercial. Input image 1 is the exact shoe product identity. Input image 2 is the campaign's all-black shoe reference, not a pose to copy. Complete photorealistic scene, never a mannequin, 3D model, diagram, detached floating limb or transparent cutout. An adult woman seated on a warm pale stone bench in a quiet ivory interior, cropped naturally from waist down. Cream relaxed tailored trousers rolled just above the ankle. She is putting on ONE of the identical all-black high-top ribbed knit sock shoes: forefoot already inside, heel nearly seated, her natural right hand gently grasps the rear pull tab to help settle the heel. The other foot wearing the matching shoe remains grounded in the soft background. The active shoe is fully visible in the lower-middle frame with toe pointing left. Believable connected shin, ankle and foot, plausible hand gesture with five normal fingers; no exaggerated collar stretch, no exposed foot through the upper. Preserve tall wave-ribbed knit collar, wavy knitted vamp, black heel counter, black sole and toe silhouette. Soft warm window light, refined fashion editorial photography, rich true knit texture, natural skin details, ivory-black palette, human comfort and calm everyday mood. A single believable moment rather than multiple stages. Upper 30 percent mainly softly lit cream trouser/ivory interior with quiet space for later titles, avoid busy detail there. Frame extends wrist and leg to real image edges so no floating cropped limbs. No text, no logos, no laces, no white sole, no product redesign.",
+      "references": [
+        "C:/Users/spq/Desktop/贝强/01_产品资产/01_原始数据包/已整理_BQ029_A025_贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/PNG/PD2A6333.png",
+        "public/sock-hero.png"
+      ]
+    },
+    {
+      "file": "public/generated-knit-v3.png",
+      "prompt": "Use case: ads-marketing. Asset: portrait 9:16 macro photograph for the SAME Beiqiang all-black knit sock-shoe campaign. Reference image 1 is exact product identity and wavy knit pattern; reference image 2 clarifies material detail. Generate a photoreal extreme macro of the shoe's gently curving black knitted upper meeting its ribbed sock collar: beautifully resolved interlocking knitted yarn loops and soft individual fibers, diagonal sculptural wavy ribs running lower left to upper right, warm grazing window light, readable charcoal highlights and deep black shadow. The whole lower two-thirds is tactile black textile, with a shallow depth of field, center area very crisp and edges falling softly out of focus. Upper 30% warm blurred ivory studio negative space with the cloth curving into the scene, no crowded detail in this reserved title region. Realistic fine black yarn only, no fake wires, plastic corrugation, golden threads, metallic mesh, faux leather or invented technical pores. Preserve the knit logic of the reference. Luxurious restrained editorial product detail, recognizable curved shoe upper rather than a generic flat scarf. No human, no text, no labels, no diagram, no logos or icons. No claim of a measured feature.",
+      "references": [
+        "C:/Users/spq/Desktop/贝强/01_产品资产/01_原始数据包/已整理_BQ029_A025_贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/PNG/PD2A6333.png",
+        "public/sock-hero.png"
+      ]
+    }
+  ],
+  "reused_assets": [
+    "sock-city.png",
+    "sock-comfort.png",
+    "sock-park.png"
+  ],
+  "boundaries": "生成图片为广告演绎；没有生成视频或真实连续穿鞋动作，不证明产能、弹性、缓震或实测舒适表现。"
+}

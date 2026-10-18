@@ -1,0 +1,69 @@
+{
+  "product_id": "1601943660658",
+  "asset_version": 6,
+  "observed_at": "2026-10-12T06:29:38.917Z",
+  "url": "https://www.alibaba.com/product-detail/Women-s-Shoes-Model-HR046-A_1601943660658.html",
+  "status": "PUBLIC_FIVE_FACTORY_IMAGES_LOADED",
+  "matched_image_identities": [
+    {
+      "asset": "C1",
+      "gallery_id": 400,
+      "url": "https://sc04.alicdn.com/kf/H4485e694f2a440db8d5601b04d4cce17d.png",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "complete": true
+    },
+    {
+      "asset": "C2",
+      "gallery_id": 550,
+      "url": "https://sc04.alicdn.com/kf/H8e16babc58ce41d79e8b92623a045461w.png",
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "complete": true
+    },
+    {
+      "asset": "C3",
+      "gallery_id": 600,
+      "url": "https://sc04.alicdn.com/kf/Hf249cf1234f84225af0b14aa8a0fa7773.png",
+      "dimensions": [
+        1073,
+        1466
+      ],
+      "complete": true
+    },
+    {
+      "asset": "C4",
+      "gallery_id": 450,
+      "url": "https://sc04.alicdn.com/kf/Hb696d63f52ca4f08a2e59442f29461835.png",
+      "dimensions": [
+        1092,
+        1440
+      ],
+      "complete": true
+    },
+    {
+      "asset": "C5",
+      "gallery_id": 700,
+      "url": "https://sc04.alicdn.com/kf/H68cf387530d946a6ba6cf02ce258525dm.png",
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "complete": true
+    }
+  ],
+  "company_labels_present": [
+    "Company overview",
+    "Competitive advantages",
+    "Customization capabilities",
+    "Production workflow",
+    "Packaging & shipping specifications"
+  ],
+  "method": "Normal exact buyer-page browser DOM/accessibility plus rendered img src, complete and original natural dimensions; all five exact URLs matched. No hidden application state, iframe query tokens, form or platform write",
+  "formal_evidence": "verification.json",
+  "scope": "Exact product/time and V6 factory module only; source and other product fields separately assessed"
+}

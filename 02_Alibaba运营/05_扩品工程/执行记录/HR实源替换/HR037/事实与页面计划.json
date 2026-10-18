@@ -1,0 +1,498 @@
+{
+  "candidate": "cxxy_2001135",
+  "source_artno": "W33",
+  "supplier": "长兴鞋业",
+  "source_url": "https://cxxy.sooxie.com/detail/2001135",
+  "source_price_cny": 33,
+  "source_color_labels": [
+    "白灰",
+    "米黄",
+    "黑橘"
+  ],
+  "colors": [
+    "White/Grey",
+    "Beige/Navy",
+    "Black/Orange"
+  ],
+  "sizes": [
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48
+  ],
+  "upper": "Other",
+  "outsole": "Other",
+  "closure": "Lace-up",
+  "target_ids": {
+    "A": "1601943654301",
+    "B": "1601943674209"
+  },
+  "not_returned_ids": [
+    "1601943544956"
+  ],
+  "local_intent_candidates": [
+    "撞色拼片系带休闲鞋"
+  ],
+  "materials_evidence": [
+    "Source05 lists优质面料/舒适内里/防滑大底, without componentcomposition. Source title皮面 is not genuineleather evidence: all4Other.",
+    "CurrentbodyEU39-48 adopted; generic06 poster chart39-44 and footlength conversion not used. Three actual colour combinations mapped to full-shoe geometry.",
+    "Actualshoe hasVIP/FASHION YAP text and smallsole lettering; markings retained, no claim unbranded or ownfactory-production. Chinese anti-slip/rebound/wear promises omitted.",
+    "All23sourceframes reviewed; source10 supplies an original underside photo. Current W33/CNY33 and procurement entry verified."
+  ],
+  "dedup": "NoW33/sameURL source adopted. Full source gallery compared against HR036/1936 andHR029/726C: W33 distinct plain stitched forefoot, ovoid VIP sidepatch, wraparound toeoverlay and boxed heelsoleband differ in panel/sole construction; not same source with another colour.",
+  "do_not_claim": [
+    "physical stock",
+    "tested slip resistance",
+    "medical comfort",
+    "unverified midsole material"
+  ],
+  "custom": [
+    "Shoe Profile",
+    "Lace closure; contrast panels; wrap toe overlay; sculpted sole edge"
+  ],
+  "titles": {
+    "A": "Panelled Lace-Up Casual Sneakers with Contrast Toe Overlay and Raised Sole Band for Wholesale Footwear Buyers",
+    "B": "Low Top Casual Lace-Up Shoes with Layered Panels and Three Colour Directions for Footwear Collections"
+  },
+  "keywords": [
+    "Panelled Lace Up Casual Sneakers",
+    "Contrast Toe Casual Shoes",
+    "Layered Low Top Casual Footwear"
+  ],
+  "highlights": "Layered upper design: Contrasting quarter, toe and heel sections give the low-top shoe a clear panelled silhouette.\n\nAdjustable lace opening: The front eyelet row and laces sit above a closed tongue, with the actual opening shown in the close-up photograph.\n\nWraparound toe overlay: A darker overlay follows the front edge of the rounded toe and meets the raised sole band.\n\nDistinct sole edge: Recessed lines and contrasting heel sections create a segmented appearance along the sidewall; the original underside view shows the bottom layout.\n\nThree colour combinations: White/Grey, Beige/Navy and Black/Orange are listed in EU39-48 for wholesale assortments.",
+  "assets_layout": {
+    "M1": {
+      "buyer_question": "What actual panelled shoe is offered?",
+      "title": null,
+      "photos": [
+        {
+          "index": 1,
+          "box": [
+            15,
+            15,
+            985,
+            985
+          ]
+        }
+      ]
+    },
+    "M2": {
+      "buyer_question": "What is the lace and panel construction?",
+      "title": "Eyelets & layered panels",
+      "subtitle": "White / Grey lace close-up.",
+      "photos": [
+        {
+          "index": 8,
+          "box": [
+            45,
+            215,
+            955,
+            935
+          ],
+          "crop": [
+            0,
+            330,
+            790,
+            1060
+          ]
+        }
+      ]
+    },
+    "M3": {
+      "buyer_question": "What bottom layout is visible?",
+      "title": "Actual underside layout",
+      "subtitle": "Full bottom view of the White / Grey shoe.",
+      "photos": [
+        {
+          "index": 10,
+          "box": [
+            45,
+            215,
+            955,
+            935
+          ],
+          "crop": [
+            0,
+            480,
+            790,
+            805
+          ]
+        }
+      ]
+    },
+    "M4": {
+      "buyer_question": "Which colour and EU size options are offered?",
+      "title": "3 colour directions",
+      "subtitle": "Same construction across the listed colour options.",
+      "photos": [
+        {
+          "index": 15,
+          "box": [
+            45,
+            230,
+            480,
+            500
+          ],
+          "crop": [
+            0,
+            55,
+            790,
+            718
+          ]
+        },
+        {
+          "index": 1,
+          "box": [
+            520,
+            230,
+            955,
+            500
+          ]
+        },
+        {
+          "index": 19,
+          "box": [
+            282,
+            600,
+            717,
+            870
+          ],
+          "crop": [
+            0,
+            25,
+            790,
+            785
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "White/Grey",
+          "xy": [
+            45,
+            510
+          ],
+          "size": 27
+        },
+        {
+          "value": "Beige/Navy",
+          "xy": [
+            520,
+            510
+          ],
+          "size": 27
+        },
+        {
+          "value": "Black/Orange",
+          "xy": [
+            282,
+            880
+          ],
+          "size": 27
+        },
+        {
+          "value": "EU 39-48",
+          "xy": [
+            45,
+            945
+          ],
+          "size": 30
+        }
+      ]
+    },
+    "M5": {
+      "buyer_question": "What is the collar shape?",
+      "title": "Low collar & inner surface",
+      "subtitle": "White / Grey opening in close view.",
+      "photos": [
+        {
+          "index": 9,
+          "box": [
+            45,
+            215,
+            955,
+            935
+          ],
+          "crop": [
+            0,
+            320,
+            790,
+            990
+          ]
+        }
+      ]
+    },
+    "D1": {
+      "buyer_question": "How does the shoe look when worn?",
+      "title": "Beige & Navy in wear",
+      "subtitle": "Contrasting toe overlay and segmented sole edge.",
+      "photos": [
+        {
+          "index": 20,
+          "box": [
+            45,
+            215,
+            955,
+            1085
+          ],
+          "crop": [
+            0,
+            20,
+            790,
+            775
+          ]
+        }
+      ]
+    },
+    "D2": {
+      "buyer_question": "What is the rounded forefoot profile?",
+      "title": "Toe overlay & sole edge",
+      "subtitle": "The dark overlay follows the rounded front.",
+      "photos": [
+        {
+          "index": 11,
+          "box": [
+            45,
+            215,
+            955,
+            1085
+          ],
+          "crop": [
+            0,
+            320,
+            790,
+            1000
+          ]
+        }
+      ]
+    },
+    "D3": {
+      "buyer_question": "What is the darker colour direction?",
+      "title": "Black & Orange side profiles",
+      "subtitle": "Original pair view with its contrast heel patch.",
+      "photos": [
+        {
+          "index": 19,
+          "box": [
+            45,
+            215,
+            955,
+            1085
+          ],
+          "crop": [
+            0,
+            25,
+            790,
+            785
+          ]
+        }
+      ]
+    },
+    "D4": {
+      "buyer_question": "Which colour and EU size options are offered?",
+      "title": "3 colour directions",
+      "subtitle": "Same construction across the listed colour options.",
+      "photos": [
+        {
+          "index": 15,
+          "box": [
+            45,
+            230,
+            480,
+            500
+          ],
+          "crop": [
+            0,
+            55,
+            790,
+            718
+          ]
+        },
+        {
+          "index": 1,
+          "box": [
+            520,
+            230,
+            955,
+            500
+          ]
+        },
+        {
+          "index": 19,
+          "box": [
+            282,
+            600,
+            717,
+            870
+          ],
+          "crop": [
+            0,
+            25,
+            790,
+            785
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "White/Grey",
+          "xy": [
+            45,
+            510
+          ],
+          "size": 27
+        },
+        {
+          "value": "Beige/Navy",
+          "xy": [
+            520,
+            510
+          ],
+          "size": 27
+        },
+        {
+          "value": "Black/Orange",
+          "xy": [
+            282,
+            880
+          ],
+          "size": 27
+        },
+        {
+          "value": "EU 39-48",
+          "xy": [
+            45,
+            1175
+          ],
+          "size": 30
+        }
+      ]
+    },
+    "SKU_WHITE_GREY": {
+      "buyer_question": "Which colour is this SKU?",
+      "title": null,
+      "photos": [
+        {
+          "index": 15,
+          "box": [
+            25,
+            25,
+            975,
+            975
+          ],
+          "crop": [
+            0,
+            55,
+            790,
+            718
+          ]
+        }
+      ]
+    },
+    "SKU_BEIGE_NAVY": {
+      "buyer_question": "Which colour is this SKU?",
+      "title": null,
+      "photos": [
+        {
+          "index": 1,
+          "box": [
+            25,
+            25,
+            975,
+            975
+          ]
+        }
+      ]
+    },
+    "SKU_BLACK_ORANGE": {
+      "buyer_question": "Which colour is this SKU?",
+      "title": null,
+      "photos": [
+        {
+          "index": 19,
+          "box": [
+            25,
+            25,
+            975,
+            975
+          ],
+          "crop": [
+            0,
+            25,
+            790,
+            785
+          ]
+        }
+      ]
+    }
+  },
+  "source_assets_root": "01_产品资产/01_原始数据包/HR037_W33",
+  "source_date": "2026-10-14",
+  "fx_cny_per_usd": 6.6837,
+  "tiers": [
+    [
+      2,
+      "7.41"
+    ],
+    [
+      50,
+      "6.92"
+    ],
+    [
+      100,
+      "6.42"
+    ]
+  ],
+  "page_state": "FORMAL_FIELDS_SCORE_PASS",
+  "category_id": 201334413,
+  "platform_group_id": 973003809,
+  "platform_group_name": "Lace-Up Casual Shoes",
+  "company_faq_source": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/通用FAQ与公司简介.json",
+  "seasons": [
+    "All Seasons"
+  ],
+  "feature": "Fashion Trend",
+  "style": [
+    "Casual Sneakers"
+  ],
+  "lining": "Other",
+  "midsole": "Other",
+  "selection_review": {
+    "state": "REVIEWED_ADOPT",
+    "private_backend_evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/经营数据与选款.json",
+    "reason": "HR037 recent13exposures/1click andSeptember53exposures/2clicks withoutcontacts. Lowtraffic is inconclusive; choose a documented colourfulpanelled lacecasual direction withCNY33cost andEU39-48 instead of continuing an unsupported oldcourtshoe concept.",
+    "cost_usd": 4.937384981372593,
+    "gross_difference_usd": [
+      2.4726,
+      1.9826,
+      1.4826
+    ],
+    "comparison_limit": "No same-model full comparable Alibaba quote verified. Three quantity tiers use50/40/30cost markup; freight, service, taxes and net profit require order costing."
+  },
+  "source_id": "src-hr-hr037-w33",
+  "source_evidence": [
+    "01_产品资产/01_原始数据包/HR037_W33/source.json",
+    "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR037/素材清单.json"
+  ],
+  "procurement_capability": "CURRENT_REAL_SHOE_AND_PROCUREMENT_ENTRY_VERIFIED_NOT_ORDER_STOCK",
+  "current_models_by_id": {
+    "1601943674209": "BQ1037-B",
+    "1601943654301": "BQ1037-A"
+  },
+  "model_migration_evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/范围.json",
+  "model_numbers": {
+    "B": "BQ1037-B",
+    "A": "BQ1037-A"
+  },
+  "current_platform_category_by_id": {
+    "1601943654301": 201334413,
+    "1601943674209": 201334413
+  },
+  "category_scope": "category_id保留初始改造默认；当前平台叶子按current_platform_category_by_id逐ID读取，不把同源链接不同平台分类混成不同实鞋。"
+}

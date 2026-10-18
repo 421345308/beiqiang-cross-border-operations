@@ -22,7 +22,7 @@ REGISTRY = AREA / '数据/产品与链接台账.json'
 TOTAL = AREA / '国际站合规扩品工程总控.md'
 QUERY = AREA / '供应商产品总表/供应商产品查询.html'
 CSV = AREA / '供应商产品总表/供应商产品总表.csv'
-FIELDS = ['记录类型','本店型号','国际站商品ID','国际站直达链接','供应商','供应商店铺链接','供应商原货号','供应鞋款直达链接','来源页标价','币种','价格单位','价格条件','来源核价日期','本次整理日期','正式来源证据','来源关系状态','最近回读审核','最近回读展示','平台观察时间UTC','缺项与冲突']
+FIELDS = ['记录类型','本店型号','国际站商品ID','国际站直达链接','供应商','供应商店铺链接','供应商原货号','供应鞋款直达链接','来源页标价','币种','价格单位','价格条件','来源核价日期','本次整理日期','正式来源证据','来源关系状态','最近回读审核','最近回读展示','平台观察时间UTC','缺项与冲突','供货类型','供货类型核验','历史型号']
 
 def local_link(path: str, base: Path, label: str='证据') -> str:
     import os
@@ -84,7 +84,7 @@ def validate(data: dict, root: Path=ROOT) -> list[str]:
         # Every sibling shares identity, but formal source binding stays per listing.
         import re
         normalized=re.sub(r'^BQ-(\d{3})(?=[- /]|$)',r'BQ\1',listing['model'])
-        match=re.match(r'^(HR\d{3}|BQ\d{3})(?:[- /]|$)',normalized)
+        match=re.match(r'^(HR\d{3}|BQ1\d{3}|BQ\d{3})(?:[- /]|$)',normalized)
         if match and aliases.get(match[1])!=listing['product_id']:
             errors.append(f'{listing["id"]}: sibling is split from its family')
     for section in ('sources','products','listings','workstreams'):
@@ -156,9 +156,11 @@ def build(data: dict) -> dict[Path, bytes]:
             obs=link.get('observation',{})
             current=link.get('current_platform_fields',link.get('catalog_fields',{}))
             details.append({'model':label,'id':link['id'],'url':current.get('url') or link.get('url',''),'status':current.get('status') or obs.get('audit',''),'display':current.get('display') or obs.get('display',''),'observed_at':current.get('at') or obs.get('at',''),'source_bound':bool(link.get('bound_source_id')),'scope':current.get('scope') or obs.get('scope',''),'catalog_presence':link.get('catalog_presence','未核'),'catalog_fields':current,'local_sync':link.get('local_sync',{}).get('state','未核')})
+            details[-1]['legacy_model_aliases']=link.get('legacy_model_aliases',[])
         md.append(f"| {clean(' / '.join(p['aliases']))} | {src} | {states.get(p['source_state'],p['source_state'])} | {clean(price)} | {'<br>'.join(links) or '未关联正式ID'} | {clean(p['next_action'])} |")
         rendered.append({'id':pid,'aliases':p['aliases'],'source_state':p['source_state'],'source_label':states.get(p['source_state'],p['source_state']),'source':sources.get(p.get('adopted_source_id') or p.get('reference_source_id')),'candidates':[sources[x] for x in p.get('candidate_source_ids',[])],'raw_packages':p.get('raw_packages',[]),'next_action':p['next_action'],'notes':p.get('notes',[]),'listings':details,'evidence':p.get('evidence',[])})
         rendered[-1]['classification']=p.get('classification',{})
+        rendered[-1]['supply_mode']=p.get('supply_mode',{})
         assets=p.get('local_assets',{})
         import os
         rendered[-1]['local_assets']={'state':assets.get('state','待补'), 'files':[{'path':path,'url':quote(Path(os.path.relpath(ROOT/path,ROOT/QUERY.parent)).as_posix(),safe='/.:_-')} for path in ([assets['current_fields_file']] if assets.get('current_fields_file') else assets.get('asset_roots',[]))]}
@@ -182,6 +184,11 @@ function render(){const q=$('q').value.trim().toLowerCase(),state=$('state').val
     page=page.replace('<div class="sources">','<p><small>采购意图（状态 ${esc(p.classification.state)}）：${esc((p.classification.local_intent_candidates||[]).join(" / "))} · 平台类目ID ${esc((p.classification.platform_category_ids||[]).join(" / "))} · 店内分组 ${esc((p.classification.store_groups||[]).map(g=>g.name||g.id).join(" / ")||"接口未返回，待核")}</small></p><p>本地入口：${p.local_assets.files.map(f=>`<a href="${esc(f.url)}">${esc(f.path)}</a>`).join("<br>")||"当前档案待指定"}<br><small>${esc(p.local_assets.state)}</small></p><div class="sources">')
     page=page.replace('${esc(l.scope)}</td>', '${esc(l.scope)}<br>本轮目录：${esc(l.catalog_presence)} · 本地同步：${esc(l.local_sync)}<br>本轮标题：${esc(l.catalog_fields.title||"未检出")}</td>')
     page=page.replace("$('q').oninput=render;", "$('intent').innerHTML+=[...new Set(data.flatMap(p=>p.classification.local_intent_candidates||[]))].sort().map(x=>`<option value=\"${esc(x)}\">${esc(x)}</option>`).join('');$('intent').onchange=render;$('q').oninput=render;")
+    page=page.replace('<div class="sources">','<p>当前供货类型（内部）：${esc(({EXTERNAL_FACTORY:"外采",OWN_FACTORY:"自产"})[p.supply_mode.current]||"待核")} · ${esc(p.supply_mode.state||"尚未分类")}。转产后货号保持稳定。</p><div class="sources">')
+    page=page.replace('<span id="count">','<select id="supply" aria-label="供货类型"><option value="">全部供货类型</option><option value="EXTERNAL_FACTORY">外采</option><option value="OWN_FACTORY">自产</option></select><span id="count">')
+    page=page.replace("const rows=data.filter(p=>","const supply=$('supply').value;const rows=data.filter(p=>(!supply||p.supply_mode.current===supply)&&")
+    page=page.replace("$('intent').onchange=render;","$('intent').onchange=render;$('supply').onchange=render;")
+    page=page.replace('${a(l.url,l.model)}<br>${esc(l.id)}','${a(l.url,l.model)}${l.legacy_model_aliases.length?"<br>旧号："+esc(l.legacy_model_aliases.join(" / ")):""}<br>${esc(l.id)}')
     output=io.StringIO(newline='')
     writer=csv.DictWriter(output,fieldnames=FIELDS,lineterminator='\n')
     writer.writeheader()
@@ -190,7 +197,8 @@ function render(){const q=$('q').value.trim().toLowerCase(),state=$('state').val
         # Export formal per-link bindings only. Candidate URLs never become a supply assertion.
         s=sources.get(link.get('bound_source_id'),{})
         obs=link.get('observation',{})
-        writer.writerow(dict(zip(FIELDS,[link.get('record_type',''),link['model'],link['id'],link.get('url',''),s.get('supplier',''),s.get('shop_url',''),s.get('model',''),s.get('url',''),s.get('price',''),s.get('currency',''),s.get('unit',''),s.get('price_terms',''),s.get('observed_at',''),data['updated_on'],';'.join(link.get('evidence',[])),link.get('source_relation',''),obs.get('audit',''),obs.get('display',''),obs.get('at',''),link.get('notes','')])) )
+        route=p.get('supply_mode',{})
+        writer.writerow(dict(zip(FIELDS,[link.get('record_type',''),link['model'],link['id'],link.get('url',''),s.get('supplier',''),s.get('shop_url',''),s.get('model',''),s.get('url',''),s.get('price',''),s.get('currency',''),s.get('unit',''),s.get('price_terms',''),s.get('observed_at',''),data['updated_on'],';'.join(link.get('evidence',[])),link.get('source_relation',''),obs.get('audit',''),obs.get('display',''),obs.get('at',''),link.get('notes',''),{'EXTERNAL_FACTORY':'外采','OWN_FACTORY':'自产'}.get(route.get('current'),'待核'),route.get('state',''),' / '.join(link.get('legacy_model_aliases',[]))])) )
     from product_dossiers import builds
     return {TOTAL:('\n'.join(md)).encode('utf-8'),QUERY:page.encode('utf-8'),CSV:output.getvalue().encode('utf-8-sig'),**builds(data)}
 

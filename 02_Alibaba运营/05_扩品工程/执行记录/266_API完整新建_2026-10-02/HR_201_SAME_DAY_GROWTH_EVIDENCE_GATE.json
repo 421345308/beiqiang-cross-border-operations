@@ -1,0 +1,194 @@
+{
+  "verdict": "PASS_SAME_DAY_PER_ID_GROWTH_EVIDENCE_AND_CANDIDATE_SCOPE_ONLY",
+  "checks": {
+    "full_library_read": true,
+    "correct_library_identity": true,
+    "raw201_unique_listing_and_product_ids": true,
+    "exact67ABC_identity_set": true,
+    "parsed_all10_source_fields_match": true,
+    "tier_counts_exact": true,
+    "observed175_with_time_and_page": true,
+    "unknown26_retained_unobserved": true,
+    "ordinary58_families37": true,
+    "focus9_allordinary": true,
+    "020ABC_potential_protected": true,
+    "historical_id_mapping_unchanged": true,
+    "candidate_only_flags": true
+  },
+  "source_library_id": "libfile_aefe2a71cedc8191aeddbdb20d21283c",
+  "source_page": "https://hz-productposting.alibaba.com/product_operate/product_growth.htm",
+  "observation_window_utc": "2026-10-02 00:46:28–00:54:13",
+  "tiers": {
+    "普通品": 58,
+    "潜力优品": 102,
+    "优品": 11,
+    "低质品": 4,
+    "未核验": 26
+  },
+  "observed": 175,
+  "unknown_retained": 26,
+  "ordinary_families": 37,
+  "focus9": [
+    {
+      "listing_id": "HR047-A",
+      "product_id": "1601943670678",
+      "family": "HR047",
+      "variant": "A",
+      "growth_tier": "普通品",
+      "scope": "普通品候选",
+      "quality_score": "",
+      "observed_at_utc": "2026-10-02 00:48:31",
+      "page": "4",
+      "remarks": ""
+    },
+    {
+      "listing_id": "HR047-B",
+      "product_id": "1601943677652",
+      "family": "HR047",
+      "variant": "B",
+      "growth_tier": "普通品",
+      "scope": "普通品候选",
+      "quality_score": "",
+      "observed_at_utc": "2026-10-02 00:48:31",
+      "page": "4",
+      "remarks": ""
+    },
+    {
+      "listing_id": "HR047-C",
+      "product_id": "1601943767083",
+      "family": "HR047",
+      "variant": "C",
+      "growth_tier": "普通品",
+      "scope": "普通品候选",
+      "quality_score": "",
+      "observed_at_utc": "2026-10-02 00:48:31",
+      "page": "2",
+      "remarks": ""
+    },
+    {
+      "listing_id": "HR051-A",
+      "product_id": "1601943653819",
+      "family": "HR051",
+      "variant": "A",
+      "growth_tier": "普通品",
+      "scope": "普通品候选",
+      "quality_score": "",
+      "observed_at_utc": "2026-10-02 00:48:31",
+      "page": "4",
+      "remarks": ""
+    },
+    {
+      "listing_id": "HR051-B",
+      "product_id": "1601943750198",
+      "family": "HR051",
+      "variant": "B",
+      "growth_tier": "普通品",
+      "scope": "普通品候选",
+      "quality_score": "",
+      "observed_at_utc": "2026-10-02 00:48:31",
+      "page": "2",
+      "remarks": ""
+    },
+    {
+      "listing_id": "HR051-C",
+      "product_id": "1601943651773",
+      "family": "HR051",
+      "variant": "C",
+      "growth_tier": "普通品",
+      "scope": "普通品候选",
+      "quality_score": "",
+      "observed_at_utc": "2026-10-02 00:48:31",
+      "page": "5",
+      "remarks": ""
+    },
+    {
+      "listing_id": "HR058-A",
+      "product_id": "1601943793113",
+      "family": "HR058",
+      "variant": "A",
+      "growth_tier": "普通品",
+      "scope": "普通品候选",
+      "quality_score": "",
+      "observed_at_utc": "2026-10-02 00:48:31",
+      "page": "1",
+      "remarks": ""
+    },
+    {
+      "listing_id": "HR058-B",
+      "product_id": "1601943721497",
+      "family": "HR058",
+      "variant": "B",
+      "growth_tier": "普通品",
+      "scope": "普通品候选",
+      "quality_score": "",
+      "observed_at_utc": "2026-10-02 00:48:31",
+      "page": "3",
+      "remarks": ""
+    },
+    {
+      "listing_id": "HR058-C",
+      "product_id": "1601943773221",
+      "family": "HR058",
+      "variant": "C",
+      "growth_tier": "普通品",
+      "scope": "普通品候选",
+      "quality_score": "",
+      "observed_at_utc": "2026-10-02 00:48:31",
+      "page": "1",
+      "remarks": ""
+    }
+  ],
+  "protected020": [
+    {
+      "listing_id": "HR020-A",
+      "product_id": "1601943497861",
+      "family": "HR020",
+      "variant": "A",
+      "growth_tier": "潜力优品",
+      "scope": "保护",
+      "quality_score": "",
+      "observed_at_utc": "2026-10-02 00:51:09",
+      "page": "14",
+      "remarks": "ABC均为潜力优品，全部保护"
+    },
+    {
+      "listing_id": "HR020-B",
+      "product_id": "1601943530673",
+      "family": "HR020",
+      "variant": "B",
+      "growth_tier": "潜力优品",
+      "scope": "保护",
+      "quality_score": "",
+      "observed_at_utc": "2026-10-02 00:51:09",
+      "page": "17",
+      "remarks": "ABC均为潜力优品，全部保护"
+    },
+    {
+      "listing_id": "HR020-C",
+      "product_id": "1601943558469",
+      "family": "HR020",
+      "variant": "C",
+      "growth_tier": "潜力优品",
+      "scope": "保护",
+      "quality_score": "",
+      "observed_at_utc": "2026-10-02 00:51:09",
+      "page": "5",
+      "remarks": "ABC均为潜力优品，全部保护"
+    }
+  ],
+  "prior_zero_gate_correction": "Earlier 0 meant complete per-ID evidence was unavailable then. This same-day evidence supersedes that availability gate; old reports retained.",
+  "remaining_gates": {
+    "new_style_mapping": "HOLD_NO_APPROVED_MAPPING",
+    "write_or_delete": "CANDIDATE_EVIDENCE_IS_NOT_ACTION_AUTHORIZATION",
+    "unknown26": "RETAIN_PENDING_OBSERVATION_NOT_DELETED_NOT_COMPLETED",
+    "protected113": "EXCLUDED_FROM_ORDINARY_REPLACEMENT",
+    "low_quality4": "SEPARATE_REPAIR"
+  },
+  "no_API_write": true,
+  "no_old_history_edit": true,
+  "evidence_hashes": {
+    "HR_growth_library_full_evidence_2026-10-02.json": "987c8fb491c7ed7a666e36bdc1386fcb769b42eaae6affa5081345bba98beb32",
+    "HR_201_growth_verified_register_2026-10-02.csv": "d6268c7ff233defb00e07295cf549b7e088b093f2b99ab9d8792d62ad384a465",
+    "HR_growth_evidence_reconciliation_2026-10-02.json": "f47183fd2d423dda9a7efe460514f5ca5c4fdc195003fcfa768a6acce11a2be3"
+  }
+}

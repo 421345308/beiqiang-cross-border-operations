@@ -1,0 +1,77 @@
+{
+  "candidate": {
+    "source": {
+      "reference": "https://huohuo.sooxie.com/detail/2557137",
+      "style": "2627BSK",
+      "evidence": [
+        "facts_and_copy.json",
+        "source_attributes.json",
+        "three_detail_coverage_QA.json"
+      ],
+      "critical_facts": {
+        "profile": "Closed toe open heel sculpted platform clog",
+        "upper_structure": "Vented EVA upper",
+        "outsole_structure": "Sculpted sidewall; ground-contact layer composition unspecified",
+        "closure": "Visible pivot strap photographed forward",
+        "lining": "Not specified",
+        "functional_use": "Casual daily wear, no protective claim"
+      }
+    },
+    "search_intent": {
+      "key": "Closed toe EVA sculpted platform clogs with pivot strap for casual daily wear",
+      "evidence": [
+        "demand_title_image_basis.json",
+        "three_detail_coverage_QA.json"
+      ]
+    },
+    "hero_review": {
+      "url": "//sc04.alicdn.com/kf/H1e96c860f1e34dda9b85116b5d6bc358J/286385890/H1e96c860f1e34dda9b85116b5d6bc358J.jpg",
+      "aliases": [
+        "https://sc04.alicdn.com/kf/H1e96c860f1e34dda9b85116b5d6bc358J/286385890/H1e96c860f1e34dda9b85116b5d6bc358J.jpg"
+      ],
+      "content_key": "2627BSK actual blue vented sculpted-platform pivotstrap pair original00",
+      "sha256": "4a023724779ae09f22dbb7ffed263c020af2f0c38a70e90ec8f84e37b6b0e311",
+      "label_status": "not_present",
+      "evidence": [
+        "visual_gate.json",
+        "actual_xml_QA.json",
+        "bank_pixel_verification.json"
+      ]
+    }
+  },
+  "evidence_files": [
+    {
+      "path": "..\\5998\\catalog_current_1.response.json",
+      "sha256": "c474ac448c28fc9beb59c69cf7d6807292ab1b6df0731489403512197dc8eaff",
+      "kind": "catalog_snapshot"
+    },
+    {
+      "path": "catalog_prewrite_1.response.json",
+      "sha256": "324d07c0e1f149c7690c90811d0ec35036be90546066105a65305b41a8c74a76",
+      "kind": "catalog_snapshot"
+    },
+    {
+      "path": "..\\user_priority_sources\\candidate_table.json",
+      "sha256": "5c8c84e6df6a99d9e4d4465427d412e1456d076219ef17554f1931ebd62360e7",
+      "kind": "source_register"
+    },
+    {
+      "path": "facts_and_copy.json",
+      "sha256": "aff66c8bb0aee4f75a8fc2d2deca1c58d71da181a6268fc3183990a91d731507",
+      "kind": "source_facts"
+    },
+    {
+      "path": "actual_xml_QA.json",
+      "sha256": "e6edc5e0a7d2ab1420eec19c8c35983a073597af43dacb32226565740d1df7dc",
+      "kind": "visual_review"
+    },
+    {
+      "path": "bank_pixel_verification.json",
+      "sha256": "0d7877b4c50fc619701d249a4a6e2f8f124db4fcc4509e6949bf9c6981b04b17",
+      "kind": "visual_review"
+    }
+  ],
+  "source_records": {},
+  "observed_at": "2026-10-02T17:20:07.536337+00:00",
+  "coverage_limit": "Saved historical catalog snapshots plus fresh370-count page; independent exact source/article check over5243 files. Unknown unassociated records are not proof of global clearance; no same-shoe replacement waiver."
+}

@@ -1,0 +1,73 @@
+{
+  "request": {
+    "workflow": "campaign",
+    "goal": "BQ028当前经营与准备渠道审核示例：国外采购链、国内消费者链及不同客户分别组织；Amazon仅未来可选",
+    "sku": "BQ028",
+    "channel": "multi",
+    "language": "zh-CN",
+    "category": "footwear",
+    "affordances": [
+      "wearable",
+      "in_use",
+      "visual_detail"
+    ],
+    "creative": {
+      "count": 3,
+      "no_face": true
+    },
+    "project_path": "05_内容与视频/04_社交媒体运营/贝强无露脸舒适鞋品牌片/PROJECT.md",
+    "targets": [
+      {
+        "platform": "alibaba",
+        "placement": "listing",
+        "language": "en",
+        "goal_type": "inquiry",
+        "audience": "Importers and footwear wholesalers",
+        "customer_segment": "overseas_business_buyer"
+      },
+      {
+        "platform": "storefront",
+        "placement": "landing_page",
+        "language": "en",
+        "business_model": "b2b",
+        "goal_type": "inquiry",
+        "audience": "Independent footwear brands and wholesale buyers",
+        "customer_segment": "overseas_business_buyer"
+      },
+      {
+        "platform": "tiktok",
+        "placement": "short_video",
+        "language": "en",
+        "business_model": "b2b",
+        "goal_type": "inquiry",
+        "audience": "Overseas footwear buyers evaluating a casual slip-on model",
+        "customer_segment": "overseas_business_buyer"
+      },
+      {
+        "platform": "douyin",
+        "placement": "short_video",
+        "language": "zh-CN",
+        "goal_type": "discovery",
+        "audience": "有日常遛狗和出门穿鞋需求的人",
+        "customer_segment": "consumer"
+      },
+      {
+        "platform": "xiaohongshu",
+        "placement": "note",
+        "language": "zh-CN",
+        "goal_type": "consideration",
+        "audience": "想知道白色套脚鞋外观、搭配和试穿怎么判断的人",
+        "customer_segment": "consumer"
+      },
+      {
+        "platform": "wechat",
+        "placement": "moments",
+        "language": "zh-CN",
+        "goal_type": "consideration",
+        "audience": "通过已有关系看商品、询问款式与尺码的国内消费者",
+        "customer_segment": "consumer"
+      }
+    ]
+  },
+  "idempotency_key": "bq028-current-channels-reviewed-example-v030"
+}

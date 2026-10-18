@@ -1,0 +1,1568 @@
+{
+  "product_id": "1601973675393",
+  "observed_at": "2026-10-08T10:05:53.344963+00:00",
+  "schema_request_id": "0b51802d17914533493686619",
+  "checks": {
+    "icbuCatProp": {
+      "status": "MATCH",
+      "task_specific_semantic_review": {
+        "passed": true,
+        "reason": "Current exact values compared; ignore only reassigned negative category markers, numeric formatting and logistics display metadata respectively."
+      }
+    },
+    "productTitle": {
+      "status": "MATCH"
+    },
+    "scImages": {
+      "status": "MISMATCH_OR_NOOP",
+      "task_specific_semantic_review": {
+        "passed": true,
+        "reason": "Each indexed main field has the same Alibaba asset key; current render returns 350x350 thumbnail URLs and zero fileIds. Independent product.get preserves correct full-image keys/order. Original official-bank IDs remain in submitted payload, never copied from zero-valued render.",
+        "submitted_indexed_asset_keys": {
+          "scImages_0": "Hae32e599eda043d18577d6ca673d0c8a3",
+          "scImages_1": "Hb88d5e2b0d8b40c186ba77c15f2b7f5eL",
+          "scImages_2": "Ha10cc2202445451c92b80c6785a4f28fB",
+          "scImages_3": "Hc153be37bbe842a3bb586458003826b4z",
+          "scImages_4": "Hf53bfb859b65486d98e628936fb48fa65",
+          "scImages_5": "S6c8cb1d46d8c4b018cf07f5cab50c1adi"
+        },
+        "rendered_indexed_asset_keys": {
+          "scImages_1": "Hb88d5e2b0d8b40c186ba77c15f2b7f5eL",
+          "scImages_2": "Ha10cc2202445451c92b80c6785a4f28fB",
+          "scImages_0": "Hae32e599eda043d18577d6ca673d0c8a3",
+          "scImages_5": "S6c8cb1d46d8c4b018cf07f5cab50c1adi",
+          "scImages_3": "Hc153be37bbe842a3bb586458003826b4z",
+          "scImages_4": "Hf53bfb859b65486d98e628936fb48fa65"
+        },
+        "limits": "Confirms formal image identity/order only; actual public pixels and interactions remain pending."
+      }
+    },
+    "detailImage": {
+      "status": "MATCH"
+    },
+    "textDesc": {
+      "status": "MATCH"
+    },
+    "companyDesc": {
+      "status": "MATCH"
+    },
+    "companyFaqDesc": {
+      "status": "MATCH"
+    },
+    "companyImage": {
+      "status": "MATCH"
+    },
+    "catId": {
+      "status": "MATCH"
+    },
+    "priceUnit": {
+      "status": "MATCH"
+    },
+    "saleType": {
+      "status": "MATCH"
+    },
+    "scPrice": {
+      "status": "MATCH"
+    },
+    "minOrderQuantity": {
+      "status": "MATCH"
+    },
+    "pkgWeight": {
+      "status": "MATCH",
+      "task_specific_semantic_review": {
+        "passed": true,
+        "reason": "Current exact values compared; ignore only reassigned negative category markers, numeric formatting and logistics display metadata respectively."
+      }
+    },
+    "productDescType": {
+      "status": "MATCH"
+    },
+    "logisticsProperty": {
+      "status": "MISMATCH_OR_NOOP",
+      "task_specific_semantic_review": {
+        "passed": true,
+        "reason": "Current exact values compared; ignore only reassigned negative category markers, numeric formatting and logistics display metadata respectively."
+      }
+    },
+    "pkgMeasure": {
+      "status": "MATCH"
+    },
+    "shippingTemplate": {
+      "status": "MATCH"
+    },
+    "ladderPrice": {
+      "status": "MATCH"
+    },
+    "saleProp": {
+      "status": "MATCH"
+    },
+    "sku": {
+      "status": "verified",
+      "bindings": {
+        "BQ-LQ056-BLACK-EU36": "109782168256",
+        "BQ-LQ056-BLACK-EU37": "109782168257",
+        "BQ-LQ056-BLACK-EU38": "109782168258",
+        "BQ-LQ056-BLACK-EU39": "109782168259",
+        "BQ-LQ056-BLACK-EU40": "109782168260",
+        "BQ-LQ056-BLACK-EU41": "109782168261",
+        "BQ-LQ056-BLACK-EU42": "109782168262",
+        "BQ-LQ056-BLACK-EU43": "109782168263",
+        "BQ-LQ056-BLACK-EU44": "109782168264",
+        "BQ-LQ056-BLACK-EU45": "109782168265",
+        "BQ-LQ056-BLACK-EU46": "109782168266",
+        "BQ-LQ056-BLACK-EU47": "109782168267",
+        "BQ-LQ056-BLACK-EU48": "109782168268",
+        "BQ-LQ056-TAN-EU36": "109782168269",
+        "BQ-LQ056-TAN-EU37": "109782168270",
+        "BQ-LQ056-TAN-EU38": "109782168271",
+        "BQ-LQ056-TAN-EU39": "109782168272",
+        "BQ-LQ056-TAN-EU40": "109782168273",
+        "BQ-LQ056-TAN-EU41": "109782168274",
+        "BQ-LQ056-TAN-EU42": "109782168275",
+        "BQ-LQ056-TAN-EU43": "109782168276",
+        "BQ-LQ056-TAN-EU44": "109782168277",
+        "BQ-LQ056-TAN-EU45": "109782168278",
+        "BQ-LQ056-TAN-EU46": "109782168279",
+        "BQ-LQ056-TAN-EU47": "109782168280",
+        "BQ-LQ056-TAN-EU48": "109782168281",
+        "BQ-LQ056-DARKBROWN-EU36": "109782168282",
+        "BQ-LQ056-DARKBROWN-EU37": "109782168283",
+        "BQ-LQ056-DARKBROWN-EU38": "109782168284",
+        "BQ-LQ056-DARKBROWN-EU39": "109782168285",
+        "BQ-LQ056-DARKBROWN-EU40": "109782168286",
+        "BQ-LQ056-DARKBROWN-EU41": "109782168287",
+        "BQ-LQ056-DARKBROWN-EU42": "109782168288",
+        "BQ-LQ056-DARKBROWN-EU43": "109782168289",
+        "BQ-LQ056-DARKBROWN-EU44": "109782168290",
+        "BQ-LQ056-DARKBROWN-EU45": "109782168291",
+        "BQ-LQ056-DARKBROWN-EU46": "109782168292",
+        "BQ-LQ056-DARKBROWN-EU47": "109782168293",
+        "BQ-LQ056-DARKBROWN-EU48": "109782168294"
+      },
+      "unsubmitted_observations": {
+        "BQ-LQ056-BLACK-EU36": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ056-BLACK-EU37": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ056-BLACK-EU38": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ056-BLACK-EU39": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ056-BLACK-EU40": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ056-BLACK-EU41": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ056-BLACK-EU42": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ056-BLACK-EU43": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ056-BLACK-EU44": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ056-BLACK-EU45": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ056-BLACK-EU46": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ056-BLACK-EU47": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ056-BLACK-EU48": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ056-TAN-EU36": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ056-TAN-EU37": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ056-TAN-EU38": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ056-TAN-EU39": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ056-TAN-EU40": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ056-TAN-EU41": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ056-TAN-EU42": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ056-TAN-EU43": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ056-TAN-EU44": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ056-TAN-EU45": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ056-TAN-EU46": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ056-TAN-EU47": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ056-TAN-EU48": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ056-DARKBROWN-EU36": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ056-DARKBROWN-EU37": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ056-DARKBROWN-EU38": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ056-DARKBROWN-EU39": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ056-DARKBROWN-EU40": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ056-DARKBROWN-EU41": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ056-DARKBROWN-EU42": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ056-DARKBROWN-EU43": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ056-DARKBROWN-EU44": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ056-DARKBROWN-EU45": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ056-DARKBROWN-EU46": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ056-DARKBROWN-EU47": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ056-DARKBROWN-EU48": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        }
+      },
+      "limits": "Formal API row/ID binding only; first read establishes IDs, not prior history, physical stock or image pixel truth."
+    }
+  },
+  "unmatched_fields": [],
+  "diagnostics": {
+    "status": "clear",
+    "flagged": {},
+    "errors": {},
+    "deductions": {},
+    "checks_not_run": [
+      "sku_image",
+      "sku_text",
+      "imageSubTitle",
+      "selling_point_attribute_conflict"
+    ],
+    "request_id": "0bbb637a17914533579224365",
+    "observed_at": "2026-10-08T09:55:58.239414+00:00",
+    "limits": "Only this platform score diagnostic; unrun checks and public/keyword QA remain separate."
+  },
+  "acceptance": {
+    "phase": "post_publish_completion",
+    "target_score": 5.0,
+    "actual_score": 5.0,
+    "observed_at": "2026-10-08T09:55:58.239414+00:00",
+    "score_source": "alibaba.icbu.product.score.get / 0bbb637a17914533579224365",
+    "diagnostics": {
+      "status": "clear",
+      "flagged": {},
+      "errors": {},
+      "deductions": {},
+      "checks_not_run": [
+        "sku_image",
+        "sku_text",
+        "imageSubTitle",
+        "selling_point_attribute_conflict"
+      ],
+      "request_id": "0bbb637a17914533579224365",
+      "observed_at": "2026-10-08T09:55:58.239414+00:00",
+      "limits": "Only this platform score diagnostic; unrun checks and public/keyword QA remain separate."
+    },
+    "score_status": "threshold_met",
+    "overall_status": "PENDING_CONTENT",
+    "unverified_content_checks": [
+      "public_page",
+      "media_review",
+      "keyword_persistence"
+    ],
+    "versioned_content": null,
+    "required_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "limits": "Platform listing score does not prove public content, source truth or real product quality."
+  }
+}

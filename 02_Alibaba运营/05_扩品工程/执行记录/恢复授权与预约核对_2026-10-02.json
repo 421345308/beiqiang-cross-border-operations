@@ -1,0 +1,432 @@
+{
+  "authorization": {
+    "user_message_id": "Sentinel_c043320b2208819188af8aa3aea1259b",
+    "user_at_utc": "2026-10-02T22:13:00Z",
+    "source_thread": "01a0f9fb-9712-72ef-a418-073ce2a59024",
+    "verbatim": "可以恢复了，请继续进行任务\n929 的图片遇到工具兼容问题：图像工具无法读取 Windows 路径。可以改用本地程序对真实照片做裁切、缩放和英文排版，不生成或改造鞋体细节。允许这款按这种方式 继续\n洞洞鞋少一张图片而已可以不需要补传\n允许这五条可恢复下架",
+    "five_authorized_old_ids": [
+      "1601969860254",
+      "1601943774082",
+      "1601943742273",
+      "1601943621884",
+      "1601943768215"
+    ],
+    "authorization_is_not_execution": true,
+    "sole_browser_OFF_owner": "父任务已启动的唯一浏览器/OFF负责人",
+    "three_source_owners": {
+      "M001": "task7/恢复后唯一生产owner",
+      "F2888": "task2/恢复后唯一生产owner",
+      "929": "task6/恢复后唯一生产owner"
+    },
+    "images_2627_exception": "2627BSK现有3详情不补传，单款用户豁免；其余完整内容/公开QA仍验",
+    "permissions_boundary": "任何拒绝记录具体操作和目标，不更换路线规避"
+  },
+  "ordinary_register": {
+    "path": "02_Alibaba运营/05_扩品工程/执行记录/266_API完整新建_2026-10-02/HR_201_growth_verified_register_2026-10-02.csv",
+    "sha256": "d6268c7ff233defb00e07295cf549b7e088b093f2b99ab9d8792d62ad384a465",
+    "observed_at_utc": "2026-10-02 00:48:31",
+    "total_ids": 201,
+    "ordinary58": 58,
+    "current_live_refresh_by_this_task": false,
+    "counts": {
+      "reserved_exact": 12,
+      "existing_source_or_value_protected": 5,
+      "prior_assigned_family": 9,
+      "explicit_retained_sibling": 6,
+      "unassigned_requires_exact_source_identity_and_live_scope_check": 26
+    },
+    "classification": {
+      "reserved_exact": [
+        {
+          "listing_id": "HR043-B",
+          "product_id": "1601943621884",
+          "family": "HR043",
+          "growth_tier": "普通品"
+        },
+        {
+          "listing_id": "HR048-B",
+          "product_id": "1601943767092",
+          "family": "HR048",
+          "growth_tier": "普通品"
+        },
+        {
+          "listing_id": "HR050-A",
+          "product_id": "1601943774082",
+          "family": "HR050",
+          "growth_tier": "普通品"
+        },
+        {
+          "listing_id": "HR052-A",
+          "product_id": "1601943742273",
+          "family": "HR052",
+          "growth_tier": "普通品"
+        },
+        {
+          "listing_id": "HR053-A",
+          "product_id": "1601943687648",
+          "family": "HR053",
+          "growth_tier": "普通品"
+        },
+        {
+          "listing_id": "HR055-C",
+          "product_id": "1601943784098",
+          "family": "HR055",
+          "growth_tier": "普通品"
+        },
+        {
+          "listing_id": "HR056-A",
+          "product_id": "1601943775160",
+          "family": "HR056",
+          "growth_tier": "普通品"
+        },
+        {
+          "listing_id": "HR057-A",
+          "product_id": "1601943768215",
+          "family": "HR057",
+          "growth_tier": "普通品"
+        },
+        {
+          "listing_id": "HR059-C",
+          "product_id": "1601943779211",
+          "family": "HR059",
+          "growth_tier": "普通品"
+        },
+        {
+          "listing_id": "HR060-A",
+          "product_id": "1601943755354",
+          "family": "HR060",
+          "growth_tier": "普通品"
+        },
+        {
+          "listing_id": "HR063-C",
+          "product_id": "1601943764325",
+          "family": "HR063",
+          "growth_tier": "普通品"
+        },
+        {
+          "listing_id": "HR065-A",
+          "product_id": "1601943738486",
+          "family": "HR065",
+          "growth_tier": "普通品"
+        }
+      ],
+      "existing_source_or_value_protected": [
+        {
+          "listing_id": "HR003-B",
+          "product_id": "1601943335928",
+          "family": "HR003",
+          "growth_tier": "普通品"
+        },
+        {
+          "listing_id": "HR006-A",
+          "product_id": "1601943439124",
+          "family": "HR006",
+          "growth_tier": "普通品"
+        },
+        {
+          "listing_id": "HR006-C",
+          "product_id": "1601943364813",
+          "family": "HR006",
+          "growth_tier": "普通品"
+        },
+        {
+          "listing_id": "HR025-C",
+          "product_id": "1601943597447",
+          "family": "HR025",
+          "growth_tier": "普通品"
+        },
+        {
+          "listing_id": "HR040-B",
+          "product_id": "1601943620678",
+          "family": "HR040",
+          "growth_tier": "普通品"
+        }
+      ],
+      "prior_assigned_family": [
+        {
+          "listing_id": "HR047-A",
+          "product_id": "1601943670678",
+          "family": "HR047",
+          "growth_tier": "普通品"
+        },
+        {
+          "listing_id": "HR047-B",
+          "product_id": "1601943677652",
+          "family": "HR047",
+          "growth_tier": "普通品"
+        },
+        {
+          "listing_id": "HR047-C",
+          "product_id": "1601943767083",
+          "family": "HR047",
+          "growth_tier": "普通品"
+        },
+        {
+          "listing_id": "HR051-A",
+          "product_id": "1601943653819",
+          "family": "HR051",
+          "growth_tier": "普通品"
+        },
+        {
+          "listing_id": "HR051-B",
+          "product_id": "1601943750198",
+          "family": "HR051",
+          "growth_tier": "普通品"
+        },
+        {
+          "listing_id": "HR051-C",
+          "product_id": "1601943651773",
+          "family": "HR051",
+          "growth_tier": "普通品"
+        },
+        {
+          "listing_id": "HR058-A",
+          "product_id": "1601943793113",
+          "family": "HR058",
+          "growth_tier": "普通品"
+        },
+        {
+          "listing_id": "HR058-B",
+          "product_id": "1601943721497",
+          "family": "HR058",
+          "growth_tier": "普通品"
+        },
+        {
+          "listing_id": "HR058-C",
+          "product_id": "1601943773221",
+          "family": "HR058",
+          "growth_tier": "普通品"
+        }
+      ],
+      "explicit_retained_sibling": [
+        {
+          "listing_id": "HR043-A",
+          "product_id": "1601943607904",
+          "family": "HR043",
+          "growth_tier": "普通品"
+        },
+        {
+          "listing_id": "HR050-B",
+          "product_id": "1601943766117",
+          "family": "HR050",
+          "growth_tier": "普通品"
+        },
+        {
+          "listing_id": "HR053-B",
+          "product_id": "1601943638954",
+          "family": "HR053",
+          "growth_tier": "普通品"
+        },
+        {
+          "listing_id": "HR056-B",
+          "product_id": "1601943751252",
+          "family": "HR056",
+          "growth_tier": "普通品"
+        },
+        {
+          "listing_id": "HR059-B",
+          "product_id": "1601943767266",
+          "family": "HR059",
+          "growth_tier": "普通品"
+        },
+        {
+          "listing_id": "HR063-B",
+          "product_id": "1601943651966",
+          "family": "HR063",
+          "growth_tier": "普通品"
+        }
+      ],
+      "unassigned_requires_exact_source_identity_and_live_scope_check": [
+        {
+          "listing_id": "HR004-C",
+          "product_id": "1601943421458",
+          "family": "HR004",
+          "growth_tier": "普通品"
+        },
+        {
+          "listing_id": "HR007-B",
+          "product_id": "1601943408495",
+          "family": "HR007",
+          "growth_tier": "普通品"
+        },
+        {
+          "listing_id": "HR009-C",
+          "product_id": "1601943520149",
+          "family": "HR009",
+          "growth_tier": "普通品"
+        },
+        {
+          "listing_id": "HR010-C",
+          "product_id": "1601943479449",
+          "family": "HR010",
+          "growth_tier": "普通品"
+        },
+        {
+          "listing_id": "HR011-B",
+          "product_id": "1601943406882",
+          "family": "HR011",
+          "growth_tier": "普通品"
+        },
+        {
+          "listing_id": "HR014-B",
+          "product_id": "1601943481648",
+          "family": "HR014",
+          "growth_tier": "普通品"
+        },
+        {
+          "listing_id": "HR019-A",
+          "product_id": "1601943493822",
+          "family": "HR019",
+          "growth_tier": "普通品"
+        },
+        {
+          "listing_id": "HR019-C",
+          "product_id": "1601943635041",
+          "family": "HR019",
+          "growth_tier": "普通品"
+        },
+        {
+          "listing_id": "HR031-A",
+          "product_id": "1601943665060",
+          "family": "HR031",
+          "growth_tier": "普通品"
+        },
+        {
+          "listing_id": "HR035-A",
+          "product_id": "1601943568763",
+          "family": "HR035",
+          "growth_tier": "普通品"
+        },
+        {
+          "listing_id": "HR035-B",
+          "product_id": "1601943680112",
+          "family": "HR035",
+          "growth_tier": "普通品"
+        },
+        {
+          "listing_id": "HR037-B",
+          "product_id": "1601943674209",
+          "family": "HR037",
+          "growth_tier": "普通品"
+        },
+        {
+          "listing_id": "HR038-A",
+          "product_id": "1601943620588",
+          "family": "HR038",
+          "growth_tier": "普通品"
+        },
+        {
+          "listing_id": "HR038-B",
+          "product_id": "1601943677234",
+          "family": "HR038",
+          "growth_tier": "普通品"
+        },
+        {
+          "listing_id": "HR045-A",
+          "product_id": "1601943687504",
+          "family": "HR045",
+          "growth_tier": "普通品"
+        },
+        {
+          "listing_id": "HR045-B",
+          "product_id": "1601943660642",
+          "family": "HR045",
+          "growth_tier": "普通品"
+        },
+        {
+          "listing_id": "HR046-B",
+          "product_id": "1601943773037",
+          "family": "HR046",
+          "growth_tier": "普通品"
+        },
+        {
+          "listing_id": "HR046-C",
+          "product_id": "1601943694473",
+          "family": "HR046",
+          "growth_tier": "普通品"
+        },
+        {
+          "listing_id": "HR049-B",
+          "product_id": "1601943710448",
+          "family": "HR049",
+          "growth_tier": "普通品"
+        },
+        {
+          "listing_id": "HR049-C",
+          "product_id": "1601943639863",
+          "family": "HR049",
+          "growth_tier": "普通品"
+        },
+        {
+          "listing_id": "HR054-B",
+          "product_id": "1601943741370",
+          "family": "HR054",
+          "growth_tier": "普通品"
+        },
+        {
+          "listing_id": "HR054-C",
+          "product_id": "1601943737356",
+          "family": "HR054",
+          "growth_tier": "普通品"
+        },
+        {
+          "listing_id": "HR061-B",
+          "product_id": "1601943748344",
+          "family": "HR061",
+          "growth_tier": "普通品"
+        },
+        {
+          "listing_id": "HR062-A",
+          "product_id": "1601943682804",
+          "family": "HR062",
+          "growth_tier": "普通品"
+        },
+        {
+          "listing_id": "HR062-B",
+          "product_id": "1601943799127",
+          "family": "HR062",
+          "growth_tier": "普通品"
+        },
+        {
+          "listing_id": "HR067-A",
+          "product_id": "1601943662995",
+          "family": "HR067",
+          "growth_tier": "普通品"
+        }
+      ]
+    },
+    "limit": "清单真实存在并逐ID去重，但仅历史分层；未预约候选不等于有货源、无人占用、当前可下架或0询盘。精确执行对象由owner最终get/classification/关联价值核对。"
+  },
+  "actual_writes_by_this_task": {
+    "platform": 0,
+    "engine_code": 0
+  },
+  "current_baseline_as_of_stop": {
+    "styles": 11,
+    "create_ids": 15,
+    "actual5": 11,
+    "full_public_QA": 7,
+    "old_OFF": 5,
+    "scope": "historical verified baseline, no resume increment claimed yet"
+  },
+  "next_three": [
+    "929",
+    "F2888",
+    "M001"
+  ],
+  "next_actions": "四条已启任务等待原owner新回执；只吸收已存在证据，任何拒绝不换路线",
+  "current_pause": {
+    "at_utc": "2026-10-02T22:42:02.833507+00:00",
+    "user_message_id": "Sentinel_6ecc1ce493f081919c00bc62f8883936",
+    "verbatim": "先暂停咱们的上品任务，额度重置了",
+    "reason": "用户说明额度重置，不另核实",
+    "scope": "上品/相关改造/选品/工程/批量质量审查停止，只核既有在途和最小断点",
+    "automatic_resume": false,
+    "knowledge_thread_new_ids": 0,
+    "knowledge_thread_score_mutations": 0,
+    "knowledge_thread_old_OFF": 0,
+    "unknown_platform_writes": [],
+    "in_flight": [],
+    "observer_processes": []
+  }
+}

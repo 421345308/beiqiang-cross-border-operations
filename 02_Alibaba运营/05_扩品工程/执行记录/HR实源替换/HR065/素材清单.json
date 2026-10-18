@@ -1,0 +1,456 @@
+{
+  "family": "HR065",
+  "state": "VISUAL_PASS",
+  "items": {
+    "M1": {
+      "path": "01_产品资产/02_可发布素材/HR065/M1.jpg",
+      "sha256": "0b7244b6c6957d8daa48b28eb3815b125b50f3ff5b277fc1716c085227c89e8b",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M2": {
+      "path": "01_产品资产/02_可发布素材/HR065/M2.jpg",
+      "sha256": "ea2f93b6b604b491e9267ec62c15023d1107b1258af9da6668c6fd300cf6bc4e",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M3": {
+      "path": "01_产品资产/02_可发布素材/HR065/M3.jpg",
+      "sha256": "a58766e2635dced241b81d5fa2f74678f3b53cba0b02c64cc2fbc0e4fb45fd76",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M4": {
+      "path": "01_产品资产/02_可发布素材/HR065/M4.jpg",
+      "sha256": "e0dbf11b792eda53a2edfa0f34f130f9c0f8a27e43844c19a479526c1cfc19da",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M5": {
+      "path": "01_产品资产/02_可发布素材/HR065/M5.jpg",
+      "sha256": "08ae0ef1d8bbc786ccb08cff1ba2a8abfce9add95cb6301076f62999125c310b",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "D1": {
+      "path": "01_产品资产/02_可发布素材/HR065/D1.jpg",
+      "sha256": "c4ebdb9bd2a10af42f8e792e44cfc90eebe48280c02ba4dfe19969630dac47f4",
+      "dimensions": [
+        1000,
+        1250
+      ]
+    },
+    "D2": {
+      "path": "01_产品资产/02_可发布素材/HR065/D2.jpg",
+      "sha256": "288f0a98a7970e5abee7b9e111617aa23f8b3a5270db82479f609032ef173878",
+      "dimensions": [
+        1000,
+        1250
+      ]
+    },
+    "D3": {
+      "path": "01_产品资产/02_可发布素材/HR065/D3.jpg",
+      "sha256": "32f344bf2e596e33592f2feb5916561ae59d4c2396d728500a813ffc61f9c73f",
+      "dimensions": [
+        1000,
+        1250
+      ]
+    },
+    "D4": {
+      "path": "01_产品资产/02_可发布素材/HR065/D4.jpg",
+      "sha256": "2c6653bd7d1f6831aaec551a9de0216534271b3149b68df72f6c32ae8f19318d",
+      "dimensions": [
+        1000,
+        1250
+      ]
+    },
+    "SKU_WHITE_GREEN": {
+      "path": "01_产品资产/02_可发布素材/HR065/SKU_WHITE_GREEN.jpg",
+      "sha256": "7d6a101343b30214143847907e1f823531ac01f67a76ceec1e2400bc0293ddfb",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "SKU_WHITE_BLUE": {
+      "path": "01_产品资产/02_可发布素材/HR065/SKU_WHITE_BLUE.jpg",
+      "sha256": "8bc1fb08d3659749808b3aad4794bc5231b0bed74b93292ef89c60897a6d1bd2",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "SKU_BLACK_WHITE": {
+      "path": "01_产品资产/02_可发布素材/HR065/SKU_BLACK_WHITE.jpg",
+      "sha256": "3711b95f3e213185f12f8ff84686402ce470fbca10602fa8f2ee508b4a254535",
+      "dimensions": [
+        1000,
+        1000
+      ]
+    },
+    "M6": {
+      "path": "01_产品资产/02_可发布素材/共享素材/贝强公司简介图库.jpg",
+      "sha256": "5164b4d0ac008fb79a20d60419d21713b4f49b9ecea0a845d6c7de104030f51e",
+      "dimensions": [
+        1721,
+        914
+      ]
+    }
+  },
+  "image_roles": {
+    "M1": {
+      "buyer_question": "What is the offered shoe?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR065_J55\\05.jpg",
+          "crop": null,
+          "native_effective_pixels": [
+            800,
+            800
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": null
+    },
+    "M2": {
+      "buyer_question": "How does the full side profile look?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR065_J55\\08.jpg",
+          "crop": null,
+          "native_effective_pixels": [
+            800,
+            800
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": "Athletic casual silhouette"
+    },
+    "M3": {
+      "buyer_question": "What is the upper graphic and texture?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR065_J55\\10.jpg",
+          "crop": [
+            70,
+            170,
+            765,
+            650
+          ],
+          "native_effective_pixels": [
+            695,
+            480
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": "Textured forefoot & side graphics"
+    },
+    "M4": {
+      "buyer_question": "Which colours and EU sizes can I request?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR065_J55\\06.jpg",
+          "crop": null,
+          "native_effective_pixels": [
+            800,
+            800
+          ],
+          "uniform_resize": true
+        },
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR065_J55\\05.jpg",
+          "crop": null,
+          "native_effective_pixels": [
+            800,
+            800
+          ],
+          "uniform_resize": true
+        },
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR065_J55\\07.jpg",
+          "crop": null,
+          "native_effective_pixels": [
+            800,
+            800
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [
+        {
+          "value": "White/Green",
+          "xy": [
+            50,
+            850
+          ],
+          "size": 22
+        },
+        {
+          "value": "White/Blue",
+          "xy": [
+            365,
+            850
+          ],
+          "size": 22
+        },
+        {
+          "value": "Black/White",
+          "xy": [
+            680,
+            850
+          ],
+          "size": 22
+        },
+        {
+          "value": "EU 39-44",
+          "xy": [
+            45,
+            930
+          ],
+          "size": 32
+        }
+      ],
+      "title": "Colour & EU assortment"
+    },
+    "M5": {
+      "buyer_question": "What are the heel and collar details?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR065_J55\\04.jpg",
+          "crop": [
+            20,
+            325,
+            780,
+            650
+          ],
+          "native_effective_pixels": [
+            760,
+            325
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": "Side & rear profile"
+    },
+    "D1": {
+      "buyer_question": "How are the laces and front arranged?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR065_J55\\09.jpg",
+          "crop": null,
+          "native_effective_pixels": [
+            800,
+            800
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [
+        {
+          "value": "Curved side graphics and an adjustable lace front.",
+          "xy": [
+            45,
+            1140
+          ],
+          "size": 25
+        }
+      ],
+      "title": "Lace-up front construction"
+    },
+    "D2": {
+      "buyer_question": "What sidewall features are visible?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR065_J55\\06.jpg",
+          "crop": [
+            45,
+            550,
+            775,
+            670
+          ],
+          "native_effective_pixels": [
+            730,
+            120
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [
+        {
+          "value": "Contrast band and visible curved sidewall grooves.",
+          "xy": [
+            45,
+            1140
+          ],
+          "size": 25
+        }
+      ],
+      "title": "Layered sole sidewall"
+    },
+    "D3": {
+      "buyer_question": "How does the neutral option appear?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR065_J55\\07.jpg",
+          "crop": null,
+          "native_effective_pixels": [
+            800,
+            800
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [
+        {
+          "value": "Same lace-up structure across all three options.",
+          "xy": [
+            45,
+            1140
+          ],
+          "size": 25
+        }
+      ],
+      "title": "Black & White colour direction"
+    },
+    "D4": {
+      "buyer_question": "Which colours and EU sizes can I request?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR065_J55\\06.jpg",
+          "crop": null,
+          "native_effective_pixels": [
+            800,
+            800
+          ],
+          "uniform_resize": true
+        },
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR065_J55\\05.jpg",
+          "crop": null,
+          "native_effective_pixels": [
+            800,
+            800
+          ],
+          "uniform_resize": true
+        },
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR065_J55\\07.jpg",
+          "crop": null,
+          "native_effective_pixels": [
+            800,
+            800
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [
+        {
+          "value": "White/Green",
+          "xy": [
+            50,
+            850
+          ],
+          "size": 22
+        },
+        {
+          "value": "White/Blue",
+          "xy": [
+            365,
+            850
+          ],
+          "size": 22
+        },
+        {
+          "value": "Black/White",
+          "xy": [
+            680,
+            850
+          ],
+          "size": 22
+        },
+        {
+          "value": "EU 39-44",
+          "xy": [
+            45,
+            1170
+          ],
+          "size": 32
+        }
+      ],
+      "title": "Colour & EU assortment"
+    },
+    "SKU_WHITE_GREEN": {
+      "buyer_question": "Which colour is this SKU?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR065_J55\\06.jpg",
+          "crop": null,
+          "native_effective_pixels": [
+            800,
+            800
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": null
+    },
+    "SKU_WHITE_BLUE": {
+      "buyer_question": "Which colour is this SKU?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR065_J55\\05.jpg",
+          "crop": null,
+          "native_effective_pixels": [
+            800,
+            800
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": null
+    },
+    "SKU_BLACK_WHITE": {
+      "buyer_question": "Which colour is this SKU?",
+      "source_pixels": [
+        {
+          "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR065_J55\\07.jpg",
+          "crop": null,
+          "native_effective_pixels": [
+            800,
+            800
+          ],
+          "uniform_resize": true
+        }
+      ],
+      "text": [],
+      "title": null
+    },
+    "M6": {
+      "buyer_question": "Who will coordinate the footwear order?",
+      "shared_approved_company_image": "01_产品资产/02_可发布素材/共享素材/贝强公司简介图库.jpg"
+    }
+  },
+  "review": {
+    "observed_on": "2026-10-13",
+    "scope": "All13current image roles reviewed against10sourceframes; finalM5andD2 separately viewed at1000x1000/1000x1250 after correction. M5shows complete side shoe and rearheel view; D2shows entire intended sidewall edge. Prior bottom-clipped M5 rejected before anyHR065 bank upload. Shoe geometry/colour/markings/threeEU39-44options retained, no fabricated outsole underside or material/performance claim."
+  }
+}

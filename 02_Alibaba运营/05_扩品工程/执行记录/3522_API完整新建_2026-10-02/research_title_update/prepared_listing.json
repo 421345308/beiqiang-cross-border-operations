@@ -1,0 +1,72 @@
+{
+  "differentiation_review": null,
+  "category_id": 202240835,
+  "operation": "update",
+  "inventory_input": null,
+  "model_serialization": null,
+  "target_product_id": "1601969920294",
+  "field_ids": [
+    "productKeywords",
+    "productTitle"
+  ],
+  "dependency_ids": [],
+  "xml": "<itemSchema><field id=\"productTitle\" type=\"input\"><value>Men's Suede Slip-On Loafers with Perforated Side Panels</value></field><field id=\"productKeywords\" type=\"complex\"><complex-value><field id=\"productKeywords_0\" type=\"input\"><value>mens suede slip on loafers</value></field></complex-value></field></itemSchema>",
+  "expected_fields": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Men's Suede Slip-On Loafers with Perforated Side Panels",
+          []
+        ]
+      ]
+    ],
+    "productKeywords": [
+      "field",
+      [
+        [
+          "id",
+          "productKeywords"
+        ]
+      ],
+      "",
+      [
+        [
+          "complex-value",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "productKeywords_0"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "mens suede slip on loafers",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "prepared_from_current_schema": true
+}

@@ -1,0 +1,16 @@
+{
+  "tool": "built-in image_gen",
+  "jobs": [
+    {
+      "key": "D1v2",
+      "ref": "01.jpg",
+      "prompt": "Exact catalog-photo layout edit. Square white B2B shoe panel. Preserve attached photo as ONE WHOLE UNMODIFIED SQUARE PHOTO RECTANGLE at original aspect ratio, centered with generous margin. DO NOT cut out or enlarge individual shoe parts. DO NOT crop shoe boundaries. DO NOT make circles, insets, magnified callouts, swatches, diagrams, extra shoes or generated texture. It is a layout/text task; literal photo preservation is more important than decoration. Preserve mesh hole topology, shoe proportions, bungee slider/cord path, outsole, color and every real detail. No added brand, measurement, US conversion, performance, waterproof, medical, composition, stock or certification claims. Header above complete photo: 'WIDE TOE BOX MESH SHOES'. Keep the existing cabinet/floor IN THE PHOTO rather than rebuilding the product. Footer in two concise lines below photo: 'Toggle bungee closure | Open mesh upper' and 'EU 39–48 | Confirm order requirements'. Wide toe box and EU range are owner-confirmed exact SKU facts. Only one whole square source photo, NO additional cutout or close-up."
+    },
+    {
+      "key": "D4v2",
+      "ref": "33.jpg",
+      "prompt": "Exact catalog-photo layout edit. Square white B2B shoe panel. Preserve attached photo as ONE WHOLE UNMODIFIED SQUARE PHOTO RECTANGLE at original aspect ratio, centered with generous margin. DO NOT cut out or enlarge individual shoe parts. DO NOT crop shoe boundaries. DO NOT make circles, insets, magnified callouts, swatches, diagrams, extra shoes or generated texture. It is a layout/text task; literal photo preservation is more important than decoration. Preserve mesh hole topology, shoe proportions, bungee slider/cord path, outsole, color and every real detail. No added brand, measurement, US conversion, performance, waterproof, medical, composition, stock or certification claims. Put the complete SQUARE attached whole-pair/hand photo in the upper center, all shoe pixels remain inside photo boundaries with margins, no narrow column cutting off right shoe. Header: 'SIZE & ORDER DETAILS'. Below the photo arrange clear short text: 'EU 39–48', 'Black / LightGrey / OffWhite', 'Send quantities by color and EU size', 'Include packaging needs and destination'. Small footer: 'Confirm fit and availability before ordering'. Use text only, no swatches, foot diagrams, extra objects or new shoe renderings. Reduce photo modestly to fit all text; preserve full source square rather than cropping it."
+    }
+  ],
+  "review": "D1v2,D2v1,D3v1,D4v2 accepted after source/candidate full-size inspection.Whole source views retained; no added macro circles, shoe boundaries complete; exact colors and confirmed EU39-48. Enlargement is not measured/texture/performance evidence."
+}

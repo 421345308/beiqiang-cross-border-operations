@@ -1,0 +1,45 @@
+{
+  "keyword_input": null,
+  "differentiation_review": null,
+  "category_id": 201334413,
+  "operation": "update",
+  "inventory_input": null,
+  "model_serialization": null,
+  "target_product_id": "1601969906452",
+  "field_ids": [
+    "productTitle"
+  ],
+  "dependency_ids": [],
+  "xml": "<itemSchema><field id=\"productTitle\" type=\"input\"><value>Wholesale Textile Lace Up Casual Sneakers and Walking Shoes with Rubber Outsoles for Everyday Wear</value></field></itemSchema>",
+  "expected_fields": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Wholesale Textile Lace Up Casual Sneakers and Walking Shoes with Rubber Outsoles for Everyday Wear",
+          []
+        ]
+      ]
+    ]
+  },
+  "prepared_from_current_schema": true,
+  "task_pack": null,
+  "replacement_plan": null,
+  "schema_provenance": {
+    "schema_request_id": "210829b717914238944742528",
+    "schema_acquired_at": "2026-10-08T01:44:57.057645+00:00",
+    "current_schema_sha256": "f2f7385f440f0e70e42bdf27547ee8c06b70e12a7467b99c5f06736bc8664fcf",
+    "source_evidence": [
+      "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-4\\supply_selection\\936_K858_材料字段证据增量_2026-10-02.md"
+    ]
+  }
+}

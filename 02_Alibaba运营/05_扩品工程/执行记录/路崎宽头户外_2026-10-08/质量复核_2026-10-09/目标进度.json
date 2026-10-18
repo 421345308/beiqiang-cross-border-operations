@@ -1,0 +1,782 @@
+{
+  "observed_at": "2026-10-10T21:51:23.765055+00:00",
+  "source_urls": 107,
+  "created_products": 63,
+  "formal_EU_combinations": 1928,
+  "approved_before_quality_revision": 26,
+  "actual_score_5_before_quality_revision": 26,
+  "scope_status": "ACTIVE_NOT_COMPLETE",
+  "quality_revision_status": "26 original-ID title revisions PASS; full image/Schema readback and public visuals remain separately evidenced per product. Pending approval is not counted as online or complete.",
+  "title_plan_count": 26,
+  "new_candidates_awaiting_quality": 1,
+  "Chrome": "BATCH_SAMPLING_PER_PRODUCT_COMPLETE_BROWSER_STEP_REMOVED",
+  "prohibited_completion_shortcuts": [
+    "Do not count uploaded images as applied images",
+    "Do not count API 5.00 as visual or business conversion proof",
+    "Do not count source URLs as distinct publishable styles",
+    "Do not replay existing or outcome-unknown creates"
+  ],
+  "next_work": "107来源目标ACTIVE；63正式ID/1928EU，当前63approved/Y。2409唯一ID20EU/17实际图及2413唯一ID30EU/18实际图；审核、完整字段及评分按当前逐款证据；026经营一级类目限制仅单款待商业选择，其他独立款继续；完整字段及实际评分依当前逐款回执。继续独立款完整素材优化和单次创建；2569仅单款底纹冲突HOLD；浏览器仅异常与批次抽检。",
+  "revision_readbacks": 26,
+  "revision_scope_pass": 26,
+  "revision_pending_review": 0,
+  "revision_not_yet_read": 0,
+  "title_revision_scope_pass": 26,
+  "new_product_status": {
+    "02507": {
+      "product_id": "1601973978339",
+      "status": "approved",
+      "display": "Y",
+      "sku_count": 20,
+      "score": "5.00"
+    },
+    "02508": {
+      "product_id": "1601973995230",
+      "status": "approved",
+      "display": "Y",
+      "sku_count": 20,
+      "score": "5.00"
+    },
+    "028": {
+      "product_id": "1601974617075",
+      "status": "approved",
+      "display": "Y",
+      "sku_count": 39,
+      "score": "5.00"
+    },
+    "2571": {
+      "product_id": "1601974689145",
+      "status": "approved",
+      "display": "Y",
+      "sku_count": 24,
+      "score": "5.00"
+    },
+    "2572": {
+      "product_id": "1601974755167",
+      "status": "approved",
+      "display": "Y",
+      "sku_count": 16,
+      "score": "5.00"
+    },
+    "2573": {
+      "product_id": "1601974740583",
+      "status": "approved",
+      "display": "Y",
+      "sku_count": 16,
+      "score": "5.00"
+    },
+    "2619": {
+      "product_id": "1601974271772",
+      "status": "approved",
+      "display": "Y",
+      "sku_count": 46,
+      "score": "5.00"
+    },
+    "2585": {
+      "product_id": "1601974857344",
+      "status": "approved",
+      "display": "Y",
+      "sku_count": 20,
+      "score": "5.00",
+      "score_status": "PASS_SCORE_GATE",
+      "observed_at": "2026-10-09T13:28:02.630824+00:00"
+    },
+    "021": {
+      "product_id": "1601974859471",
+      "status": "approved",
+      "display": "Y",
+      "sku_count": 30,
+      "score": "5.00",
+      "score_status": "PASS_SCORE_GATE",
+      "observed_at": "2026-10-09T13:46:57.474042+00:00"
+    },
+    "2578": {
+      "product_id": "1601974917344",
+      "status": "approved",
+      "display": "Y",
+      "sku_count": 24,
+      "score": "5.00",
+      "score_status": "PASS_SCORE_GATE",
+      "observed_at": "2026-10-09T14:40:50.160777+00:00"
+    },
+    "2577": {
+      "product_id": "1601974939421",
+      "status": "approved",
+      "display": "Y",
+      "sku_count": 16,
+      "score": "5.00",
+      "score_status": "PASS_SCORE_GATE",
+      "observed_at": "2026-10-09T15:37:24.421137+00:00"
+    },
+    "023": {
+      "product_id": "1601974946496",
+      "status": "approved",
+      "display": "Y",
+      "sku_count": 39,
+      "score": "5.00",
+      "score_status": "PASS_SCORE_GATE",
+      "observed_at": "2026-10-09T16:22:26.016485+00:00"
+    },
+    "018": {
+      "product_id": "1601974978404",
+      "status": "approved",
+      "display": "Y",
+      "sku_count": 48,
+      "score": "5.00",
+      "score_status": "PASS_SCORE_GATE",
+      "observed_at": "2026-10-09T16:58:15.734732+00:00"
+    },
+    "017": {
+      "product_id": "1601975178233",
+      "status": "approved",
+      "display": "Y",
+      "sku_count": 36,
+      "score": "5.00",
+      "score_status": "PASS_SCORE_GATE",
+      "observed_at": "2026-10-10T04:39:28.332834+00:00"
+    },
+    "016": {
+      "product_id": "1601975285993",
+      "status": "approved",
+      "display": "Y",
+      "sku_count": 36,
+      "score": "5.00",
+      "score_status": "PASS_SCORE_GATE",
+      "observed_at": "2026-10-10T05:34:02.831054+00:00"
+    },
+    "2568": {
+      "product_id": "1601975313957",
+      "status": "approved",
+      "display": "Y",
+      "sku_count": 39,
+      "score": "5.00",
+      "score_status": "PASS_SCORE_GATE",
+      "observed_at": "2026-10-10T05:56:57.511270+00:00"
+    },
+    "052": {
+      "product_id": "1601975454376",
+      "status": "approved",
+      "display": "Y",
+      "sku_count": 16,
+      "score": "5.00",
+      "score_status": "PASS_SCORE_GATE",
+      "observed_at": "2026-10-10T06:41:27.191398+00:00"
+    },
+    "038": {
+      "product_id": "1601975500310",
+      "status": "approved",
+      "display": "Y",
+      "sku_count": 52,
+      "score": "5.00",
+      "score_status": "PASS_SCORE_GATE",
+      "observed_at": "2026-10-10T07:04:15.640620+00:00"
+    },
+    "2627": {
+      "product_id": "1601975638462",
+      "status": "approved",
+      "display": "Y",
+      "sku_count": 16,
+      "score": "5.00",
+      "score_status": "PASS_SCORE_GATE",
+      "observed_at": "2026-10-10T08:46:03.333059+00:00"
+    },
+    "2580": {
+      "product_id": "1601975631791",
+      "status": "approved",
+      "display": "Y",
+      "sku_count": 20,
+      "score": "5.00",
+      "score_status": "PASS_SCORE_GATE",
+      "observed_at": "2026-10-10T09:13:51.762696+00:00"
+    },
+    "029": {
+      "product_id": "1601975754227",
+      "status": "approved",
+      "display": "Y",
+      "sku_count": 20,
+      "score": "5.00",
+      "score_status": "PASS_SCORE_GATE",
+      "observed_at": "2026-10-10T09:56:20.514088+00:00"
+    },
+    "027": {
+      "product_id": "1601975774322",
+      "status": "approved",
+      "display": "Y",
+      "sku_count": 39,
+      "score": "5.00",
+      "score_status": "PASS_SCORE_GATE",
+      "observed_at": "2026-10-10T10:43:40.258400+00:00"
+    },
+    "2558": {
+      "product_id": "1601975843125",
+      "status": "approved",
+      "display": "Y",
+      "sku_count": 24,
+      "score": "5.00",
+      "score_status": "PASS_SCORE_GATE",
+      "observed_at": "2026-10-10T11:17:15.832787+00:00"
+    },
+    "2559": {
+      "product_id": "1601975753865",
+      "status": "approved",
+      "display": "Y",
+      "sku_count": 20,
+      "score": "5.00",
+      "score_status": "PASS_SCORE_GATE",
+      "observed_at": "2026-10-10T11:39:18.647339+00:00"
+    },
+    "2561": {
+      "product_id": "1601975844350",
+      "status": "approved",
+      "display": "Y",
+      "sku_count": 16,
+      "score": "5.00",
+      "score_status": "PASS_SCORE_GATE",
+      "observed_at": "2026-10-10T12:15:07.670294+00:00"
+    },
+    "2560": {
+      "product_id": "1601975826614",
+      "status": "approved",
+      "display": "Y",
+      "sku_count": 20,
+      "score": "5.00",
+      "score_status": "PASS_SCORE_GATE",
+      "observed_at": "2026-10-10T12:45:54.442431+00:00"
+    },
+    "011": {
+      "product_id": "1601975906283",
+      "status": "approved",
+      "display": "Y",
+      "sku_count": 48,
+      "score": "5.00",
+      "score_status": "PASS_SCORE_GATE",
+      "observed_at": "2026-10-10T13:30:36.925311+00:00"
+    },
+    "012": {
+      "product_id": "1601975969050",
+      "status": "approved",
+      "display": "Y",
+      "sku_count": 48,
+      "score": "5.00",
+      "score_status": "PASS_SCORE_GATE",
+      "observed_at": "2026-10-10T14:08:47.188882+00:00"
+    },
+    "013": {
+      "product_id": "1601975911526",
+      "status": "approved",
+      "display": "Y",
+      "sku_count": 36,
+      "score": "5.00",
+      "score_status": "PASS_SCORE_GATE",
+      "observed_at": "2026-10-10T14:27:13.532207+00:00"
+    },
+    "015": {
+      "product_id": "1601975924693",
+      "status": "approved",
+      "display": "Y",
+      "sku_count": 48,
+      "score": "5.00",
+      "score_status": "PASS_SCORE_GATE",
+      "observed_at": "2026-10-10T15:21:37.309817+00:00"
+    },
+    "25019": {
+      "product_id": "1601975986800",
+      "status": "approved",
+      "display": "Y",
+      "sku_count": 30,
+      "score": "5.00",
+      "score_status": "PASS_SCORE_GATE",
+      "observed_at": "2026-10-10T18:20:35.480329+00:00"
+    },
+    "2583-1": {
+      "product_id": "1601976101204",
+      "status": "approved",
+      "display": "Y",
+      "sku_count": 26,
+      "score": "5.00",
+      "score_status": "PASS_SCORE_GATE",
+      "observed_at": "2026-10-10T18:27:34.532805+00:00"
+    },
+    "2417": {
+      "product_id": "1601976139058",
+      "status": "approved",
+      "display": "Y",
+      "sku_count": 20,
+      "score": "5.00",
+      "score_status": "PASS_SCORE_GATE",
+      "observed_at": "2026-10-10T19:32:02.725728+00:00"
+    },
+    "2416": {
+      "product_id": "1601976114323",
+      "status": "approved",
+      "display": "Y",
+      "sku_count": 20,
+      "score": "5.00",
+      "score_status": "PASS_SCORE_GATE",
+      "observed_at": "2026-10-10T20:22:00.457357+00:00"
+    },
+    "2415": {
+      "product_id": "1601976088655",
+      "status": "approved",
+      "display": "Y",
+      "sku_count": 30,
+      "score": "5.00",
+      "score_status": "PASS_SCORE_GATE",
+      "observed_at": "2026-10-10T20:53:18.317534+00:00"
+    },
+    "2413": {
+      "product_id": "1601976190044",
+      "status": "approved",
+      "display": "Y",
+      "sku_count": 30,
+      "score": "5.00",
+      "score_status": "PASS_SCORE_GATE",
+      "observed_at": "2026-10-10T21:14:49.082023+00:00"
+    },
+    "2409": {
+      "product_id": "1601976084873",
+      "status": "approved",
+      "display": "Y",
+      "sku_count": 20,
+      "score": null,
+      "score_status": "PENDING_OR_BELOW_TARGET",
+      "observed_at": "2026-10-10T21:50:49.305896+00:00"
+    }
+  },
+  "current_approved_displayed": 63,
+  "complete_image_readback_pass_styles": [
+    "058",
+    "2633",
+    "2629",
+    "055",
+    "2628",
+    "2623",
+    "213",
+    "2626",
+    "053",
+    "050",
+    "033",
+    "1212",
+    "2619",
+    "2599-1",
+    "032",
+    "2598",
+    "2588-1",
+    "2597",
+    "2596",
+    "028",
+    "2571",
+    "2573",
+    "2572",
+    "25017",
+    "25016",
+    "25012",
+    "02603",
+    "02602",
+    "02601",
+    "25021",
+    "2510",
+    "02508",
+    "02507",
+    "2585",
+    "021",
+    "2578",
+    "2577",
+    "023",
+    "018",
+    "017",
+    "016",
+    "2568",
+    "052",
+    "038",
+    "2627",
+    "2580",
+    "029",
+    "027",
+    "2558",
+    "2559",
+    "2561",
+    "2560",
+    "011",
+    "012",
+    "013",
+    "015",
+    "25019",
+    "2583-1",
+    "2417",
+    "2416",
+    "2415",
+    "2413",
+    "2409"
+  ],
+  "pending_image_readback_styles": [],
+  "latest_title_refinement": {
+    "style": "033",
+    "target_title": "Unisex Wide Toe Box Mesh Panel Walking Sneakers Broad Angular Side Overlay Lace Up Casual Shoes EU 36-48 Wholesale",
+    "title_match": true,
+    "schema_title_match": true,
+    "scope_result": "PASS",
+    "observed_at": "2026-10-08T23:07:23.578830+00:00"
+  },
+  "browser_acceptance": "API_ALL_FIELDS_BROWSER_EXCEPTIONS_AND_BATCH_SAMPLES",
+  "pending_new_approval_styles": [],
+  "public_QA_pass_styles": [
+    "2619",
+    "028",
+    "2571",
+    "2573",
+    "2572",
+    "2510"
+  ],
+  "candidate2571": {
+    "product_id": "1601974689145",
+    "accepted_images": 12,
+    "EU_combinations": 24,
+    "title_bytes": 113,
+    "status": "APPROVED_Y_FULL_FIELDS_AND_PUBLIC_VISUAL_PASS",
+    "brand_repair": "PASS",
+    "MD_translation_repair": "PASS_PUBLIC"
+  },
+  "candidate2572": {
+    "product_id": "1601974755167",
+    "EU_combinations": 16,
+    "accepted_images": 11,
+    "rejected_images": 2,
+    "title_bytes": 107,
+    "status": "APPROVED_Y_API_PUBLIC_SCORE_PASS",
+    "score": "5.00"
+  },
+  "candidate2573": {
+    "product_id": "1601974740583",
+    "EU_combinations": 16,
+    "accepted_images": 11,
+    "rejected_images": 0,
+    "title_bytes": 107,
+    "status": "APPROVED_Y_API_PUBLIC_CONTENT_SCORE_PASS",
+    "score": "5.00"
+  },
+  "browser_policy_evidence": "02_Alibaba运营/00_运营SOP/国际站商品全生命周期SOP.md#5",
+  "attribute_repairs_required": [],
+  "effective_attribute_evidence": "有效品牌与MD标签当前核验.json",
+  "candidate027": {
+    "status": "API_FIELDS_SCORE_PASS",
+    "source": "https://luqi.sooxie.com/detail/2370261",
+    "EU_combinations": 39,
+    "product_id": "1601975774322",
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/027准备/发布后字段核验.json",
+    "formal_CDN_pixel_status": "FORMAL_CDN_PIXEL_AND_VISUAL_PASS"
+  },
+  "attribute_repairs_submitted_styles": [
+    "02507",
+    "02508",
+    "02601",
+    "02602",
+    "02603",
+    "032",
+    "033",
+    "050",
+    "053",
+    "055",
+    "058",
+    "1212",
+    "213",
+    "25012",
+    "25016",
+    "25017",
+    "25021",
+    "2510",
+    "2588-1",
+    "2596",
+    "2597",
+    "2598",
+    "2599-1",
+    "2619",
+    "2623",
+    "2626",
+    "2628",
+    "2629",
+    "2633"
+  ],
+  "attribute_repairs_pending_review_styles": [],
+  "attribute_repairs_scope_pass_styles": [
+    "02507",
+    "02508",
+    "02601",
+    "02602",
+    "02603",
+    "032",
+    "033",
+    "050",
+    "053",
+    "055",
+    "058",
+    "1212",
+    "213",
+    "25012",
+    "25016",
+    "25017",
+    "25021",
+    "2510",
+    "2588-1",
+    "2596",
+    "2597",
+    "2598",
+    "2599-1",
+    "2619",
+    "2623",
+    "2626",
+    "2628",
+    "2629",
+    "2633"
+  ],
+  "candidate2585": {
+    "status": "API_FIELDS_SCORE_PASS",
+    "product_id": "1601974857344",
+    "EU_combinations": 20,
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2585准备/发布后字段核验.json"
+  },
+  "candidate021": {
+    "status": "API_FIELDS_SCORE_PASS",
+    "product_id": "1601974859471",
+    "EU_combinations": 30,
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/021准备/发布后字段核验.json"
+  },
+  "candidate2578": {
+    "status": "API_FIELDS_SCORE_PASS",
+    "product_id": "1601974917344",
+    "EU_combinations": 24,
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2578准备/发布后字段核验.json"
+  },
+  "candidate2577": {
+    "status": "API_FIELDS_SCORE_PASS",
+    "product_id": "1601974939421",
+    "EU_combinations": 16,
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2577准备/发布后字段核验.json",
+    "formal_CDN_pixel_status": "FORMAL_CDN_PIXEL_AND_VISUAL_PASS",
+    "formal_CDN_pixel_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2577准备/正式CDN像素核验.json"
+  },
+  "candidate023": {
+    "status": "API_FIELDS_SCORE_PASS",
+    "product_id": "1601974946496",
+    "EU_combinations": 39,
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/023准备/发布后字段核验.json",
+    "formal_CDN_pixel_status": "FORMAL_CDN_PIXEL_AND_VISUAL_PASS",
+    "formal_CDN_pixel_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/023准备/正式CDN像素核验.json"
+  },
+  "candidate2583": {
+    "status": "CURRENT_SOURCE_COLLECTED_PRODUCT_SPECIFIC_IMAGE_REVIEW_PENDING",
+    "source_EU_combinations": 72,
+    "photo_evidenced_colors": [
+      "Beige",
+      "Yellow",
+      "Green",
+      "Red"
+    ],
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2583准备/当前来源与色码核对.json"
+  },
+  "candidate018": {
+    "status": "API_FIELDS_SCORE_PASS",
+    "source_EU_combinations": 48,
+    "title_bytes": 91,
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/018准备/发布后字段核验.json",
+    "product_id": "1601974978404",
+    "EU_combinations": 48,
+    "formal_CDN_pixel_status": "FORMAL_CDN_PIXEL_AND_VISUAL_PASS",
+    "formal_CDN_pixel_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/018准备/正式CDN像素核验.json"
+  },
+  "candidate017": {
+    "status": "API_FIELDS_SCORE_PASS",
+    "EU_combinations": 36,
+    "source_images": 21,
+    "readable_images": 19,
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/017准备/发布后字段核验.json",
+    "product_id": "1601975178233",
+    "formal_CDN_pixel_status": "FORMAL_CDN_PIXEL_AND_VISUAL_PASS",
+    "formal_CDN_pixel_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/017准备/正式CDN像素核验.json"
+  },
+  "candidate015": {
+    "status": "API_FIELDS_SCORE_PASS",
+    "EU_combinations": 48,
+    "readable_source_images": 12,
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/015准备/发布后字段核验.json",
+    "product_id": "1601975924693",
+    "formal_CDN_pixel_status": "FORMAL_CDN_PIXEL_AND_VISUAL_PASS"
+  },
+  "candidate016": {
+    "status": "API_FIELDS_SCORE_PASS",
+    "product_id": "1601975285993",
+    "EU_combinations": 36,
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/016准备/发布后字段核验.json",
+    "formal_CDN_pixel_status": "FORMAL_CDN_PIXEL_AND_VISUAL_PASS",
+    "formal_CDN_pixel_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/016准备/正式CDN像素核验.json"
+  },
+  "candidate2568": {
+    "status": "API_FIELDS_SCORE_PASS",
+    "product_id": "1601975313957",
+    "EU_combinations": 39,
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2568准备/发布后字段核验.json",
+    "formal_CDN_pixel_status": "FORMAL_CDN_PIXEL_AND_VISUAL_PASS",
+    "formal_CDN_pixel_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2568准备/正式CDN像素核验.json"
+  },
+  "candidate2569": {
+    "status": "HOLD_SOURCE_PHOTO_IDENTITY",
+    "generated_roles": 7,
+    "formal_uploads": 0,
+    "formal_create_calls": 0,
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2569准备/身份一致性核验.json"
+  },
+  "candidate052": {
+    "status": "API_FIELDS_SCORE_PASS",
+    "product_id": "1601975454376",
+    "EU_combinations": 16,
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/052准备/发布后字段核验.json",
+    "formal_CDN_pixel_status": "FORMAL_CDN_PIXEL_AND_VISUAL_PASS",
+    "formal_CDN_pixel_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/052准备/正式CDN像素核验.json"
+  },
+  "candidate038": {
+    "status": "API_FIELDS_SCORE_PASS",
+    "product_id": "1601975500310",
+    "EU_combinations": 52,
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/038准备/发布后字段核验.json",
+    "formal_CDN_pixel_status": "FORMAL_CDN_PIXEL_AND_VISUAL_PASS",
+    "formal_CDN_pixel_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/038准备/正式CDN像素核验.json"
+  },
+  "candidate2627": {
+    "status": "API_FIELDS_SCORE_PASS",
+    "product_id": "1601975638462",
+    "EU_combinations": 16,
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2627准备/发布后字段核验.json",
+    "formal_CDN_pixel_status": "FORMAL_CDN_PIXEL_AND_VISUAL_PASS"
+  },
+  "candidate2580": {
+    "status": "API_FIELDS_SCORE_PASS",
+    "product_id": "1601975631791",
+    "EU_combinations": 20,
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2580准备/发布后字段核验.json",
+    "formal_CDN_pixel_status": "FORMAL_CDN_PIXEL_AND_VISUAL_PASS"
+  },
+  "candidate029": {
+    "status": "API_FIELDS_SCORE_PASS",
+    "product_id": "1601975754227",
+    "EU_combinations": 20,
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/029准备/发布后字段核验.json",
+    "formal_CDN_pixel_status": "FORMAL_CDN_PIXEL_AND_VISUAL_PASS"
+  },
+  "candidate2558": {
+    "status": "API_FIELDS_SCORE_PASS",
+    "EU_combinations": 24,
+    "readable_source_images": 33,
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2558准备/发布后字段核验.json",
+    "product_id": "1601975843125",
+    "formal_CDN_pixel_status": "FORMAL_CDN_PIXEL_AND_VISUAL_PASS"
+  },
+  "candidate2559": {
+    "status": "API_FIELDS_SCORE_PASS",
+    "EU_combinations": 20,
+    "readable_source_images": 19,
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2559准备/发布后字段核验.json",
+    "product_id": "1601975753865",
+    "formal_CDN_pixel_status": "FORMAL_CDN_PIXEL_AND_VISUAL_PASS"
+  },
+  "candidate2561": {
+    "status": "API_FIELDS_SCORE_PASS",
+    "EU_combinations": 16,
+    "readable_source_images": 24,
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2561准备/发布后字段核验.json",
+    "product_id": "1601975844350",
+    "formal_CDN_pixel_status": "FORMAL_CDN_PIXEL_AND_VISUAL_PASS"
+  },
+  "candidate2560": {
+    "status": "API_FIELDS_SCORE_PASS",
+    "EU_combinations": 20,
+    "readable_source_images": 19,
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2560准备/发布后字段核验.json",
+    "product_id": "1601975826614",
+    "formal_CDN_pixel_status": "FORMAL_CDN_PIXEL_AND_VISUAL_PASS"
+  },
+  "candidate011": {
+    "status": "API_FIELDS_SCORE_PASS",
+    "EU_combinations": 48,
+    "readable_source_images": 32,
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/011准备/发布后字段核验.json",
+    "product_id": "1601975906283",
+    "formal_CDN_pixel_status": "FORMAL_CDN_PIXEL_AND_VISUAL_PASS"
+  },
+  "candidate012": {
+    "status": "API_FIELDS_SCORE_PASS",
+    "EU_combinations": 48,
+    "readable_source_images": 24,
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/012准备/发布后字段核验.json",
+    "product_id": "1601975969050",
+    "formal_CDN_pixel_status": "FORMAL_CDN_PIXEL_AND_VISUAL_PASS"
+  },
+  "candidate013": {
+    "status": "API_FIELDS_SCORE_PASS",
+    "EU_combinations": 36,
+    "readable_source_images": 28,
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/013准备/发布后字段核验.json",
+    "product_id": "1601975911526",
+    "formal_CDN_pixel_status": "FORMAL_CDN_PIXEL_AND_VISUAL_PASS"
+  },
+  "candidate026": {
+    "status": "HOLD_ACCOUNT_RUNNING_BUSINESS_CATEGORY",
+    "product_id": null,
+    "EU_combinations": 30,
+    "image_status": "BUYER_ROLE_REVIEW_PASS",
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/026准备/经营类目拒绝诊断.json"
+  },
+  "candidate026-1": {
+    "status": "MERGED_SOURCE_FAMILY_026_NO_EXTRA_CREATE",
+    "family_primary": "026",
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/026-1准备/来源家族与色码核对.json"
+  },
+  "candidate25019": {
+    "status": "API_FIELDS_SCORE_PASS",
+    "product_id": "1601975986800",
+    "EU_combinations": 30,
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/25019准备/发布后字段核验.json",
+    "formal_CDN_pixel_status": "FORMAL_CDN_PIXEL_AND_VISUAL_PASS"
+  },
+  "candidate2583-1": {
+    "status": "API_FIELDS_SCORE_PASS",
+    "product_id": "1601976101204",
+    "EU_combinations": 26,
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2583-1准备/发布后字段核验.json",
+    "formal_CDN_pixel_status": "FORMAL_CDN_PIXEL_AND_VISUAL_PASS"
+  },
+  "candidate2417": {
+    "status": "API_FIELDS_SCORE_PASS",
+    "product_id": "1601976139058",
+    "EU_combinations": 20,
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2417准备/发布后字段核验.json",
+    "formal_CDN_pixel_status": "FORMAL_CDN_PIXEL_AND_VISUAL_PASS"
+  },
+  "candidate2416": {
+    "status": "API_FIELDS_SCORE_PASS",
+    "product_id": "1601976114323",
+    "EU_combinations": 20,
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2416准备/发布后字段核验.json",
+    "formal_CDN_pixel_status": "FORMAL_CDN_PIXEL_AND_VISUAL_PASS"
+  },
+  "candidate2415": {
+    "status": "API_FIELDS_SCORE_PASS",
+    "product_id": "1601976088655",
+    "EU_combinations": 30,
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2415准备/发布后字段核验.json",
+    "formal_CDN_pixel_status": "FORMAL_CDN_PIXEL_AND_VISUAL_PASS"
+  },
+  "candidate2413": {
+    "status": "API_FIELDS_SCORE_PASS",
+    "product_id": "1601976190044",
+    "EU_combinations": 30,
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2413准备/发布后字段核验.json",
+    "formal_CDN_pixel_status": "FORMAL_CDN_PIXEL_AND_VISUAL_PASS"
+  },
+  "candidate2409": {
+    "status": "APPROVED_FIELDS_SCORE_PENDING",
+    "product_id": "1601976084873",
+    "EU_combinations": 20,
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2409准备/发布后字段核验.json",
+    "formal_CDN_pixel_status": "FORMAL_CDN_PIXEL_AND_VISUAL_PASS"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "style": "995",
+  "at": "2026-10-13T23:41:42.617216+00:00",
+  "role": "M1_Tan_and_SKU_Tan",
+  "state": "LOCAL_SOURCE_PRESERVING_VISUAL_PASS_NOT_UPLOADED",
+  "source": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/995准备/01_产品来源原图/01.jpg",
+  "source_sha256": "b324cc60342515d7874a80b0e60cfaa519742639ab52d09a5f14ff2bea4e08b4",
+  "current_asset": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/995准备/05_AI候选/M1.png",
+  "current_sha256": "a67396d9e5d629eb60484b31ee7586bc526e14f0ad3dc463808af7df7a073d7a",
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "generation_tool": "Built-in imagegen reference edit",
+  "full_generation_prompt": "Precise source-preserving Alibaba e-commerce hero photograph edit. Retain ONLY the EXACT single tan Luqi995 shoe already photographed here, with the exact same pose and viewing angle, toe toward lower left and heel upper right. Preserve full actual silhouette, tan forefoot/vamp panels, tan textured toe reinforcement, tan laces and their exact crossing/eyelet route, tan quarter mesh, narrow dark diagonal side insert, dark padded collar and tongue edge, rear pull loop, existing subtle heel-panel ornament, and actual tan curved swept sidewall with its recessed oval and original dark tread-edge inserts. Do not reconstruct another angle or change the footwear design. Improve the already-white presentation with crisp faithful edges, balanced exposure, readable authentic texture and a subtle natural contact shadow on a clean square white background. Keep generous 6-10 percent surrounding margin around the complete photographed shoe and product dominant. No captions, colours added, invented sole detail, labels, claims, badges, logos or other shoes. The output is a faithful actual-product main image, not a redesigned sneaker or fabricated performance illustration.",
+  "visual_checks": {
+    "same_source_angle_whole_shoe": true,
+    "tan_colour_and_dark_inserts": true,
+    "source_lace_count_and_panel_boundaries": true,
+    "collar_pull_loop_and_heel_pattern": true,
+    "actual_sidewall_recess_and_original_tread_edge": true,
+    "clean_white_product_dominant_no_added_claim": true
+  },
+  "limits": [
+    "Visual source-faithfulness; AI enlargement adds no physical/material/testing evidence.",
+    "Reuse M1 file for Tan SKU to avoid a redundant second current copy.",
+    "Full gallery review and source-family dedup pending; not uploaded or published."
+  ],
+  "original_unchanged": "b324cc60342515d7874a80b0e60cfaa519742639ab52d09a5f14ff2bea4e08b4"
+}

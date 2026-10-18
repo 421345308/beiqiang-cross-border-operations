@@ -1,0 +1,73 @@
+{
+  "observed_at": "2026-10-07T17:15:09.986517+00:00",
+  "style": "059",
+  "model": "BQ-LQ059",
+  "product_id": "1601972951733",
+  "url": "https://www.alibaba.com/product-detail/Unisex-Low-Top-Lace-Up-Casual_1601972951733.html",
+  "audit_status": "approved",
+  "display": "Y",
+  "checks": {
+    "model": true,
+    "category": true,
+    "title": true,
+    "main_6_ordered": true,
+    "detail_4": true,
+    "company_5": true,
+    "faq_5": true,
+    "colors_3": true,
+    "sku_3_unique": true,
+    "prices_all_skus": true,
+    "pair_unit": true,
+    "MOQ_2": true,
+    "product_summary_source_identity": true,
+    "company_summary_source_identity": true
+  },
+  "checks_passed": true,
+  "color_mapping": [
+    {
+      "color": "Black",
+      "actual": "https://sc04.alicdn.com/kf/H36697c47f13947ef8173a280ef971fdb5.jpg",
+      "expected": "https://sc04.alicdn.com/kf/H36697c47f13947ef8173a280ef971fdb5/286385890/H36697c47f13947ef8173a280ef971fdb5.jpg",
+      "match": true
+    },
+    {
+      "color": "Dark Grey",
+      "actual": "https://sc04.alicdn.com/kf/Hdb131cf34ad742039005d7ed00785b89z.jpg",
+      "expected": "https://sc04.alicdn.com/kf/Hdb131cf34ad742039005d7ed00785b89z/286385890/Hdb131cf34ad742039005d7ed00785b89z.jpg",
+      "match": true
+    },
+    {
+      "color": "Brown",
+      "actual": "https://sc04.alicdn.com/kf/H9a7460b025d24ea49b07139d2706ac84K.jpg",
+      "expected": "https://sc04.alicdn.com/kf/H9a7460b025d24ea49b07139d2706ac84K/286385890/H9a7460b025d24ea49b07139d2706ac84K.jpg",
+      "match": true
+    }
+  ],
+  "sku_id_bindings": [
+    {
+      "sku_id": 109779137083,
+      "sku_code": "BQ-LQ059-BLACK"
+    },
+    {
+      "sku_id": 109779137085,
+      "sku_code": "BQ-LQ059-DARK-GREY"
+    },
+    {
+      "sku_id": 109779137084,
+      "sku_code": "BQ-LQ059-BROWN"
+    }
+  ],
+  "get_request_id": "213d4e4917913932863096094",
+  "actual_official_score": 5.0,
+  "score_request_id": "210829b717913933032972293",
+  "keywords": [
+    ""
+  ],
+  "keyword_status": "LEGACY_EMPTY_CURRENT_VERSION_UNVERIFIED",
+  "pending": [
+    "normal browser public color clicks/full images/FAQ/detail",
+    "current keyword or exact-ID edit-version migration evidence"
+  ],
+  "completion_status": "APPROVED_Y_SCORE_5_FORMAL_READBACK_PUBLIC_ACCEPTANCE_PENDING",
+  "typed_fields_verified_except_legacy_keyword": true
+}

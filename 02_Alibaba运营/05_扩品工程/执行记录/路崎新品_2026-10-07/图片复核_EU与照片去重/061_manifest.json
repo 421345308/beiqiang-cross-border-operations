@@ -1,0 +1,74 @@
+{
+  "operation": "update",
+  "product_id": "1601972965417",
+  "category_id": 201334413,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "素材清单.json",
+    "图片上传账本.json"
+  ],
+  "current_schema": "061_current_schema.xml",
+  "current_schema_sha256": "451888a5a369d1ffc8b18e60b7d54acdb2458df96622389536d8835f28d1f1c7",
+  "schema_request_id": "213c932b17914253256972909",
+  "schema_acquired_at": "2026-10-08T02:08:48.472268+00:00",
+  "payload_xml": "061_payload.xml",
+  "field_ids": [
+    "scImages",
+    "detailImage"
+  ],
+  "dependency_ids": [],
+  "intended_main": [
+    {
+      "url": "https://sc04.alicdn.com/kf/H3c3511b9ef504e799ec5d9fe4f3e2203d.jpg",
+      "file_id": "0"
+    },
+    {
+      "url": "https://sc04.alicdn.com/kf/H780c65a24c8a41bfb773ce65c4398664Y.jpg",
+      "file_id": "0"
+    },
+    {
+      "url": "https://sc04.alicdn.com/kf/Hd3dafc3d048849c8a36ce39c34d7a6aco.jpg",
+      "file_id": "0"
+    },
+    {
+      "url": "https://sc04.alicdn.com/kf/H19f206ab13a54846b9f7dfe75ec39696L.jpg",
+      "file_id": "0"
+    },
+    {
+      "name": "061_M5_new",
+      "sha256": "e726e76d6176bebe5046be7de9cdacff89f9302878799d6e54702901399b7bb6",
+      "status": "VERIFIED",
+      "url": "https://sc04.alicdn.com/kf/H1ae8361047ab4f0c972f1823074cc962M/286385890/H1ae8361047ab4f0c972f1823074cc962M.jpg",
+      "file_id": "33753000473",
+      "request_id": null
+    },
+    {
+      "url": "https://sc04.alicdn.com/kf/S6c8cb1d46d8c4b018cf07f5cab50c1adi.png",
+      "file_id": "0"
+    }
+  ],
+  "intended_details": [
+    {
+      "name": "061_EU",
+      "sha256": "17f88772616541217f0ba3428b02b4ae825b4c17b98d8089f9ad5bf9bff5bb57",
+      "status": "VERIFIED",
+      "url": "https://sc04.alicdn.com/kf/H951d5924b63b4b0b9abaa203a5b633d36/286385890/H951d5924b63b4b0b9abaa203a5b633d36.png",
+      "file_id": "33752113911",
+      "request_id": null
+    },
+    {
+      "url": "https://sc04.alicdn.com/kf/H244c3b7deadb4f71b020c15935968fb8f.png",
+      "file_id": "0"
+    },
+    {
+      "url": "https://sc04.alicdn.com/kf/Hd9b867ae328e44f0833b558f4e444abfu.png",
+      "file_id": "0"
+    },
+    {
+      "url": "https://sc04.alicdn.com/kf/H76c57305a2cc42339e2cb55eb6608c12z.jpg",
+      "file_id": "0"
+    }
+  ],
+  "review": "EU标签一致；主图实物照片不再嵌入产品详情排版；6主4详5公司整图互斥",
+  "main_factory_role": "company production/checking only"
+}

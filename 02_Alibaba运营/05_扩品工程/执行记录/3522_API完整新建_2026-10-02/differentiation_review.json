@@ -1,0 +1,672 @@
+{
+  "observed_at": "2026-10-02T15:14:29.299459+00:00",
+  "coverage_limit": "Complete 365-row current API catalog. 30 close official main photos reviewed plus HR006C historical formal-source family evidence. Source metadata remains unassociated for catalog rows absent from the source registry; this is not a blanket global-clearance claim.",
+  "evidence_files": [
+    {
+      "path": "live_catalog_1.flat.json",
+      "sha256": "ded99fb4d402ea2c9cfb26dbbf1468953ec9fb01c4252fa69640fb9e9df7b179",
+      "kind": "catalog_snapshot"
+    },
+    {
+      "path": "live_catalog_10.flat.json",
+      "sha256": "0e2a4c566c07c47c72a41b0a768514cccc9921630f325ddc6d357c9dbeb0f568",
+      "kind": "catalog_snapshot"
+    },
+    {
+      "path": "live_catalog_11.flat.json",
+      "sha256": "6d0a69fc072736fced79955282e63211941330b57cf3f675b9d414c153656ebe",
+      "kind": "catalog_snapshot"
+    },
+    {
+      "path": "live_catalog_12.flat.json",
+      "sha256": "f6d166ffdea99920f1f84bdf52ff9927dca779a80ac68a8dd38aa2c9211ab2f4",
+      "kind": "catalog_snapshot"
+    },
+    {
+      "path": "live_catalog_13.flat.json",
+      "sha256": "2cae4865a02f671b954e4925e1e3e075c9866a72f417d3e6939ef47540fa87fa",
+      "kind": "catalog_snapshot"
+    },
+    {
+      "path": "live_catalog_2.flat.json",
+      "sha256": "7d102daed26c505ea7fcbda3c71a14cf86f78521703e648d5000bd324ba922aa",
+      "kind": "catalog_snapshot"
+    },
+    {
+      "path": "live_catalog_3.flat.json",
+      "sha256": "c9a517becf80392f941b5c95651e69098b815efc87be04151104778e268a7155",
+      "kind": "catalog_snapshot"
+    },
+    {
+      "path": "live_catalog_4.flat.json",
+      "sha256": "f877d93a09a3f42521099cbefb0254c832a49d451bb0591644b10df3b6288424",
+      "kind": "catalog_snapshot"
+    },
+    {
+      "path": "live_catalog_5.flat.json",
+      "sha256": "2a0983f185a8340a0b0f8b08529ac482e973e898aff63bc9a050833939967bf8",
+      "kind": "catalog_snapshot"
+    },
+    {
+      "path": "live_catalog_6.flat.json",
+      "sha256": "18ba6c5ca48e6c4a26385fea870a8e91e2749a060f8a8efcf2eab78194f94bf1",
+      "kind": "catalog_snapshot"
+    },
+    {
+      "path": "live_catalog_7.flat.json",
+      "sha256": "a9ab8facd50eb499cf6314b3c034b62278855d03b59752da4217f09f0f14356e",
+      "kind": "catalog_snapshot"
+    },
+    {
+      "path": "live_catalog_8.flat.json",
+      "sha256": "f2c465c25f0881100c8ad6978b506822950bf0876612cfef99fbfcc9fc873fce",
+      "kind": "catalog_snapshot"
+    },
+    {
+      "path": "live_catalog_9.flat.json",
+      "sha256": "033327675b408e0bea8dd30de1cc3459d78d634e8272df3c6dd4f208f4a43ea0",
+      "kind": "catalog_snapshot"
+    },
+    {
+      "path": "existing_source_queue.md",
+      "sha256": "78eec540b5a6515da13d00aa1d8c7a13a6b6cadb7bdfa7426415343c42b8bb78",
+      "kind": "source_register"
+    },
+    {
+      "path": "dedup_gate.json",
+      "sha256": "fac462ba2a2013f4e0ad1fbbbc3f7e8ed23a9a5d16d5e5501ad87d0bfa9b7624",
+      "kind": "visual_review"
+    },
+    {
+      "path": "source/source_attributes.json",
+      "sha256": "18a5843aaa8e62a0cbe3677e40ef31fd0655d3d0de14f09cf62242b9b97fa8b8",
+      "kind": "candidate_source"
+    }
+  ],
+  "source_records": {
+    "1601943753087": {
+      "existing_family": "HR044",
+      "hero_review": {
+        "content_key": "Glossy penny-strap loafer with thick continuous black sole",
+        "sha256": "247bca120f3e29a8bcdb3da96babf9d48801bc5ac747a7989c715118c46aad31",
+        "evidence": [
+          "dedup_contact.jpg",
+          "dedup_image_manifest.json",
+          "dedup_gate.json"
+        ]
+      },
+      "search_intent": {
+        "key": "Glossy penny-strap loafer with thick continuous black sole",
+        "evidence": [
+          "dedup_gate.json"
+        ]
+      }
+    },
+    "1601943607919": {
+      "existing_family": "HR044",
+      "hero_review": {
+        "content_key": "Glossy penny-strap loafer with thick continuous black sole",
+        "sha256": "ad205f410cd54bf7964177630830cfd8f59a9083315e6e4dd522a1dfe3963c64",
+        "evidence": [
+          "dedup_contact.jpg",
+          "dedup_image_manifest.json",
+          "dedup_gate.json"
+        ]
+      },
+      "search_intent": {
+        "key": "Glossy penny-strap loafer with thick continuous black sole",
+        "evidence": [
+          "dedup_gate.json"
+        ]
+      }
+    },
+    "1601943650718": {
+      "existing_family": "HR044",
+      "hero_review": {
+        "content_key": "Glossy penny-strap loafer with thick continuous black sole",
+        "sha256": "ad205f410cd54bf7964177630830cfd8f59a9083315e6e4dd522a1dfe3963c64",
+        "evidence": [
+          "dedup_contact.jpg",
+          "dedup_image_manifest.json",
+          "dedup_gate.json"
+        ]
+      },
+      "search_intent": {
+        "key": "Glossy penny-strap loafer with thick continuous black sole",
+        "evidence": [
+          "dedup_gate.json"
+        ]
+      }
+    },
+    "1601943597447": {
+      "existing_family": "HR025",
+      "hero_review": {
+        "content_key": "Women buckled instep strap closed heel flat with pale thick sole",
+        "sha256": "6dba349b288bed16252c4f16cc323f5f0dc14891829769c44441656c2ed6005e",
+        "evidence": [
+          "dedup_contact.jpg",
+          "dedup_image_manifest.json",
+          "dedup_gate.json"
+        ]
+      },
+      "search_intent": {
+        "key": "Women buckled instep strap closed heel flat with pale thick sole",
+        "evidence": [
+          "dedup_gate.json"
+        ]
+      }
+    },
+    "1601943535810": {
+      "existing_family": "HR025",
+      "hero_review": {
+        "content_key": "Women buckled instep strap closed heel flat with pale thick sole",
+        "sha256": "6dba349b288bed16252c4f16cc323f5f0dc14891829769c44441656c2ed6005e",
+        "evidence": [
+          "dedup_contact.jpg",
+          "dedup_image_manifest.json",
+          "dedup_gate.json"
+        ]
+      },
+      "search_intent": {
+        "key": "Women buckled instep strap closed heel flat with pale thick sole",
+        "evidence": [
+          "dedup_gate.json"
+        ]
+      }
+    },
+    "1601943541766": {
+      "existing_family": "HR025",
+      "hero_review": {
+        "content_key": "Women buckled instep strap closed heel flat with pale thick sole",
+        "sha256": "6dba349b288bed16252c4f16cc323f5f0dc14891829769c44441656c2ed6005e",
+        "evidence": [
+          "dedup_contact.jpg",
+          "dedup_image_manifest.json",
+          "dedup_gate.json"
+        ]
+      },
+      "search_intent": {
+        "key": "Women buckled instep strap closed heel flat with pale thick sole",
+        "evidence": [
+          "dedup_gate.json"
+        ]
+      }
+    },
+    "1601943517454": {
+      "existing_family": "HR015",
+      "hero_review": {
+        "content_key": "Women low-cut closed heel suede flat with segmented sole",
+        "sha256": "67b36bee4491618dedf7baec2a10fe276e2f936975db174979cef7abe47b5da6",
+        "evidence": [
+          "dedup_contact.jpg",
+          "dedup_image_manifest.json",
+          "dedup_gate.json"
+        ]
+      },
+      "search_intent": {
+        "key": "Women low-cut closed heel suede flat with segmented sole",
+        "evidence": [
+          "dedup_gate.json"
+        ]
+      }
+    },
+    "1601943543192": {
+      "existing_family": "HR013",
+      "hero_review": {
+        "content_key": "Women low-cut plain suede flat with brown low sole",
+        "sha256": "1d11dee4ca42057feb7816dc23ba201e1203f5472131292073359f8f10ec6de3",
+        "evidence": [
+          "dedup_contact.jpg",
+          "dedup_image_manifest.json",
+          "dedup_gate.json"
+        ]
+      },
+      "search_intent": {
+        "key": "Women low-cut plain suede flat with brown low sole",
+        "evidence": [
+          "dedup_gate.json"
+        ]
+      }
+    },
+    "1601943574061": {
+      "existing_family": "HR014",
+      "hero_review": {
+        "content_key": "Women suede penny strap contrast panel loafer",
+        "sha256": "cff94cfe053b704df2ae06be602157f991ba9857ba61304bd12b828d7b66ec51",
+        "evidence": [
+          "dedup_contact.jpg",
+          "dedup_image_manifest.json",
+          "dedup_gate.json"
+        ]
+      },
+      "search_intent": {
+        "key": "Women suede penny strap contrast panel loafer",
+        "evidence": [
+          "dedup_gate.json"
+        ]
+      }
+    },
+    "1601943542214": {
+      "existing_family": "HR013",
+      "hero_review": {
+        "content_key": "Women low-cut plain suede flat with brown low sole",
+        "sha256": "1d11dee4ca42057feb7816dc23ba201e1203f5472131292073359f8f10ec6de3",
+        "evidence": [
+          "dedup_contact.jpg",
+          "dedup_image_manifest.json",
+          "dedup_gate.json"
+        ]
+      },
+      "search_intent": {
+        "key": "Women low-cut plain suede flat with brown low sole",
+        "evidence": [
+          "dedup_gate.json"
+        ]
+      }
+    },
+    "1601943479449": {
+      "existing_family": "HR010",
+      "hero_review": {
+        "content_key": "Penny strap suede driver with black pebble sole",
+        "sha256": "4d27f495e27307a971af3d8884aa95bb94999942037e9afcd9eba4af0168c8ea",
+        "evidence": [
+          "dedup_contact.jpg",
+          "dedup_image_manifest.json",
+          "dedup_gate.json"
+        ]
+      },
+      "search_intent": {
+        "key": "Penny strap suede driver with black pebble sole",
+        "evidence": [
+          "dedup_gate.json"
+        ]
+      }
+    },
+    "1601943501309": {
+      "existing_family": "HR010",
+      "hero_review": {
+        "content_key": "Penny strap suede driver with black pebble sole",
+        "sha256": "4d27f495e27307a971af3d8884aa95bb94999942037e9afcd9eba4af0168c8ea",
+        "evidence": [
+          "dedup_contact.jpg",
+          "dedup_image_manifest.json",
+          "dedup_gate.json"
+        ]
+      },
+      "search_intent": {
+        "key": "Penny strap suede driver with black pebble sole",
+        "evidence": [
+          "dedup_gate.json"
+        ]
+      }
+    },
+    "1601943439124": {
+      "existing_family": "HR006",
+      "hero_review": {
+        "content_key": "Unperforated suede driver with metallic braided trim and dark segmented sole",
+        "sha256": "4f8aa34154745f9f8d23c458bddc3c78404bfce37fcb1e724b4bb57a741499ee",
+        "evidence": [
+          "dedup_contact.jpg",
+          "dedup_image_manifest.json",
+          "dedup_gate.json"
+        ]
+      },
+      "search_intent": {
+        "key": "Unperforated suede driver with metallic braided trim and dark segmented sole",
+        "evidence": [
+          "dedup_gate.json"
+        ]
+      }
+    },
+    "1601943364813": {
+      "existing_family": "HR006",
+      "hero_review": {
+        "content_key": "Unperforated suede driver with metallic braided trim and dark segmented sole",
+        "sha256": "3ab7837fe3b8bb53567ae613c9362ece8553f4bec668bad8e2da04c2689cdb92",
+        "evidence": [
+          "dedup_contact.jpg",
+          "dedup_image_manifest.json",
+          "dedup_gate.json"
+        ]
+      },
+      "search_intent": {
+        "key": "Unperforated suede driver with metallic braided trim and dark segmented sole",
+        "evidence": [
+          "dedup_gate.json"
+        ]
+      }
+    },
+    "1601943467198": {
+      "existing_family": "HR003",
+      "hero_review": {
+        "content_key": "Full perforated suede driver with metal-ended cord, thick moccasin edge and brown segmented pebble sole",
+        "sha256": "3ab90c3339aafbc1c8f254874cd5959c31e5c37bb6a0172d61b8163a5e6f10ad",
+        "evidence": [
+          "dedup_contact.jpg",
+          "dedup_image_manifest.json",
+          "dedup_gate.json"
+        ]
+      },
+      "search_intent": {
+        "key": "Full perforated suede driver with metal-ended cord, thick moccasin edge and brown segmented pebble sole",
+        "evidence": [
+          "dedup_gate.json"
+        ]
+      }
+    },
+    "1601943335928": {
+      "existing_family": "HR003",
+      "hero_review": {
+        "content_key": "Full perforated suede driver with metal-ended cord, thick moccasin edge and brown segmented pebble sole",
+        "sha256": "0399dd76bbbb6f5d5f4bc8dc3a2b619159f4cc300ff85af217e9abbe7c8e23cf",
+        "evidence": [
+          "dedup_contact.jpg",
+          "dedup_image_manifest.json",
+          "dedup_gate.json"
+        ]
+      },
+      "search_intent": {
+        "key": "Full perforated suede driver with metal-ended cord, thick moccasin edge and brown segmented pebble sole",
+        "evidence": [
+          "dedup_gate.json"
+        ]
+      }
+    },
+    "1601943474137": {
+      "existing_family": "HR001",
+      "hero_review": {
+        "content_key": "Plain leather walking slip-on with thick dark sole",
+        "sha256": "9687b0245bb453eb69388878f587db360819dd198c055b4c5d15817309936cda",
+        "evidence": [
+          "dedup_contact.jpg",
+          "dedup_image_manifest.json",
+          "dedup_gate.json"
+        ]
+      },
+      "search_intent": {
+        "key": "Plain leather walking slip-on with thick dark sole",
+        "evidence": [
+          "dedup_gate.json"
+        ]
+      }
+    },
+    "1601943321794": {
+      "existing_family": "HR001",
+      "hero_review": {
+        "content_key": "Plain leather walking slip-on with thick dark sole",
+        "sha256": "66578b8347dac2cc1ce61decfd09f4262b7f5fd3342bd712863e5e6349ff2a4c",
+        "evidence": [
+          "dedup_contact.jpg",
+          "dedup_image_manifest.json",
+          "dedup_gate.json"
+        ]
+      },
+      "search_intent": {
+        "key": "Plain leather walking slip-on with thick dark sole",
+        "evidence": [
+          "dedup_gate.json"
+        ]
+      }
+    },
+    "1601943312845": {
+      "existing_family": "HR003",
+      "hero_review": {
+        "content_key": "Full perforated suede driver with metal-ended cord, thick moccasin edge and brown segmented pebble sole",
+        "sha256": "9a9dc8407acea8c42153be30dd59e2da293296d48c3716e807fb468afe3b261f",
+        "evidence": [
+          "dedup_contact.jpg",
+          "dedup_image_manifest.json",
+          "dedup_gate.json"
+        ]
+      },
+      "search_intent": {
+        "key": "Full perforated suede driver with metal-ended cord, thick moccasin edge and brown segmented pebble sole",
+        "evidence": [
+          "dedup_gate.json"
+        ]
+      }
+    },
+    "1601943493004": {
+      "existing_family": "HR001",
+      "hero_review": {
+        "content_key": "Plain leather walking slip-on with thick dark sole",
+        "sha256": "4f1dd5f533e16bef39782f8b23f90a91f0520d0e935a8567f8387ad6aea2c2b2",
+        "evidence": [
+          "dedup_contact.jpg",
+          "dedup_image_manifest.json",
+          "dedup_gate.json"
+        ]
+      },
+      "search_intent": {
+        "key": "Plain leather walking slip-on with thick dark sole",
+        "evidence": [
+          "dedup_gate.json"
+        ]
+      }
+    },
+    "1601943542329": {
+      "existing_family": "HR015",
+      "hero_review": {
+        "content_key": "Women low-cut closed heel suede flat with segmented sole",
+        "sha256": "67b36bee4491618dedf7baec2a10fe276e2f936975db174979cef7abe47b5da6",
+        "evidence": [
+          "dedup_contact.jpg",
+          "dedup_image_manifest.json",
+          "dedup_gate.json"
+        ]
+      },
+      "search_intent": {
+        "key": "Women low-cut closed heel suede flat with segmented sole",
+        "evidence": [
+          "dedup_gate.json"
+        ]
+      }
+    },
+    "1601943502604": {
+      "existing_family": "HR015",
+      "hero_review": {
+        "content_key": "Women low-cut closed heel suede flat with segmented sole",
+        "sha256": "67b36bee4491618dedf7baec2a10fe276e2f936975db174979cef7abe47b5da6",
+        "evidence": [
+          "dedup_contact.jpg",
+          "dedup_image_manifest.json",
+          "dedup_gate.json"
+        ]
+      },
+      "search_intent": {
+        "key": "Women low-cut closed heel suede flat with segmented sole",
+        "evidence": [
+          "dedup_gate.json"
+        ]
+      }
+    },
+    "1601943481648": {
+      "existing_family": "HR014",
+      "hero_review": {
+        "content_key": "Women suede penny strap contrast panel loafer",
+        "sha256": "cff94cfe053b704df2ae06be602157f991ba9857ba61304bd12b828d7b66ec51",
+        "evidence": [
+          "dedup_contact.jpg",
+          "dedup_image_manifest.json",
+          "dedup_gate.json"
+        ]
+      },
+      "search_intent": {
+        "key": "Women suede penny strap contrast panel loafer",
+        "evidence": [
+          "dedup_gate.json"
+        ]
+      }
+    },
+    "1601943417982": {
+      "existing_family": "HR014",
+      "hero_review": {
+        "content_key": "Women suede penny strap contrast panel loafer",
+        "sha256": "cff94cfe053b704df2ae06be602157f991ba9857ba61304bd12b828d7b66ec51",
+        "evidence": [
+          "dedup_contact.jpg",
+          "dedup_image_manifest.json",
+          "dedup_gate.json"
+        ]
+      },
+      "search_intent": {
+        "key": "Women suede penny strap contrast panel loafer",
+        "evidence": [
+          "dedup_gate.json"
+        ]
+      }
+    },
+    "1601943514448": {
+      "existing_family": "HR013",
+      "hero_review": {
+        "content_key": "Women low-cut plain suede flat with brown low sole",
+        "sha256": "1d11dee4ca42057feb7816dc23ba201e1203f5472131292073359f8f10ec6de3",
+        "evidence": [
+          "dedup_contact.jpg",
+          "dedup_image_manifest.json",
+          "dedup_gate.json"
+        ]
+      },
+      "search_intent": {
+        "key": "Women low-cut plain suede flat with brown low sole",
+        "evidence": [
+          "dedup_gate.json"
+        ]
+      }
+    },
+    "1601943527175": {
+      "existing_family": "HR010",
+      "hero_review": {
+        "content_key": "Penny strap suede driver with black pebble sole",
+        "sha256": "4d27f495e27307a971af3d8884aa95bb94999942037e9afcd9eba4af0168c8ea",
+        "evidence": [
+          "dedup_contact.jpg",
+          "dedup_image_manifest.json",
+          "dedup_gate.json"
+        ]
+      },
+      "search_intent": {
+        "key": "Penny strap suede driver with black pebble sole",
+        "evidence": [
+          "dedup_gate.json"
+        ]
+      }
+    },
+    "1601943627431": {
+      "existing_family": "HR036",
+      "hero_review": {
+        "content_key": "Knit vamp slip-on walking shoe with segmented pale sole",
+        "sha256": "d3861e7a118d12c76bdb6ee7aac987d2b4de6de5a4e862b79c76743baebb2d5c",
+        "evidence": [
+          "dedup_contact.jpg",
+          "dedup_image_manifest.json",
+          "dedup_gate.json"
+        ]
+      },
+      "search_intent": {
+        "key": "Knit vamp slip-on walking shoe with segmented pale sole",
+        "evidence": [
+          "dedup_gate.json"
+        ]
+      }
+    },
+    "1601943561786": {
+      "existing_family": "HR036",
+      "hero_review": {
+        "content_key": "Knit vamp slip-on walking shoe with segmented pale sole",
+        "sha256": "6741bc05d7cfc84d2ded77ebf80eeeb672e52ad3d4be4ad5ed13b65dcc8b3361",
+        "evidence": [
+          "dedup_contact.jpg",
+          "dedup_image_manifest.json",
+          "dedup_gate.json"
+        ]
+      },
+      "search_intent": {
+        "key": "Knit vamp slip-on walking shoe with segmented pale sole",
+        "evidence": [
+          "dedup_gate.json"
+        ]
+      }
+    },
+    "1601943558469": {
+      "existing_family": "HR020",
+      "hero_review": {
+        "content_key": "Short wide full-perforated diamond-textured vamp with elastic inserts thick collar and multilayer sole",
+        "sha256": "0ec2c9d918d7d005b4396b92ee679e54e8422bb42ab6cf28fa1b8a0c7e15393c",
+        "evidence": [
+          "dedup_contact.jpg",
+          "dedup_image_manifest.json",
+          "dedup_gate.json"
+        ]
+      },
+      "search_intent": {
+        "key": "Short wide full-perforated diamond-textured vamp with elastic inserts thick collar and multilayer sole",
+        "evidence": [
+          "dedup_gate.json"
+        ]
+      }
+    },
+    "10000043201799": {
+      "existing_family": "BQ",
+      "hero_review": {
+        "content_key": "Visually reviewed different shoe in dedup_contact.jpg",
+        "sha256": "fd5f4b09ee0e442652b602842f929e95694996e57b46920f11b40a1996553c2a",
+        "evidence": [
+          "dedup_contact.jpg",
+          "dedup_image_manifest.json",
+          "dedup_gate.json"
+        ]
+      },
+      "search_intent": {
+        "key": "Existing different assortment",
+        "evidence": [
+          "dedup_gate.json"
+        ]
+      }
+    }
+  },
+  "candidate": {
+    "model_number": "BQ-L3522",
+    "hero_url": "https://sc04.alicdn.com/kf/H1eaef987b28f495bbb68e65950525c746/286385890/H1eaef987b28f495bbb68e65950525c746.jpg",
+    "source": {
+      "reference": "https://gediao.sooxie.com/detail/2541782",
+      "style": "3522",
+      "evidence": [
+        "source/source.html",
+        "source/source_attributes.json",
+        "source/published_manifest.json",
+        "ownership.json"
+      ],
+      "critical_facts": {
+        "profile": "Closed heel slip-on business casual loafer",
+        "upper_structure": "Long plain central U-shaped vamp, dense circular perforations only on surrounding panels, no cord strap or hardware",
+        "outsole_structure": "Visually continuous thin offwhite sole; material unknown",
+        "closure": "Slip-On",
+        "lining": "PU",
+        "functional_use": "Business casual assortment without instep decorations"
+      }
+    },
+    "search_intent": {
+      "key": "Plain cow suede business casual slip-on loafer with perforated surround and thin continuous pale sole",
+      "evidence": [
+        "facts_and_copy.json",
+        "dedup_gate.json",
+        "source/published_manifest.json"
+      ]
+    },
+    "hero_review": {
+      "url": "https://sc04.alicdn.com/kf/H1eaef987b28f495bbb68e65950525c746/286385890/H1eaef987b28f495bbb68e65950525c746.jpg",
+      "sha256": "aa0ed2b3506f418a90281d25e6ee12e69d918d98d69f94ebb38c3d0a6cf23355",
+      "content_key": "3522 beige closed heel plain long U-shaped suede vamp perforated surround without metal strap cord continuous thin pale sole",
+      "label_status": "not_present",
+      "evidence": [
+        "visual_gate.json",
+        "assets/M1.jpg",
+        "asset_manifest.json"
+      ],
+      "aliases": [
+        "//sc04.alicdn.com/kf/H1eaef987b28f495bbb68e65950525c746/286385890/H1eaef987b28f495bbb68e65950525c746.jpg"
+      ]
+    }
+  }
+}

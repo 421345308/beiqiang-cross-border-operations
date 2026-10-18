@@ -1,0 +1,242 @@
+{
+  "targets": {
+    "M001": [
+      "1601943687648",
+      "AAH8jmk4AOWGex-cDVm7ztYD"
+    ],
+    "2627BSK": [
+      "1601943755354",
+      "AAG6jmk4AOWGex-cDVm7z925"
+    ],
+    "805": [
+      "1601943738486",
+      "AAHYjmk4AOWGex-cDVm7z5-V"
+    ],
+    "H219": [
+      "1601943767092",
+      "AAGHjmk4AOWGex-cDVm7zA_X"
+    ],
+    "F2888": [
+      "1601943775160",
+      "AAEcjmk4AOWGex-cDVm7zCBb"
+    ],
+    "936": [
+      "1601943653819",
+      "AAFFjmk4AOWGex-cDVm7zkpY"
+    ]
+  },
+  "platform_mutations": 0,
+  "query_scope": {
+    "start": "2026-09-05 00:00:00",
+    "end": "2026-10-03 23:59:59",
+    "basis": "six formal gmt_create values are 2026-09-06; includes one preceding day; platform date_str semantics"
+  },
+  "list_receipts": [
+    {
+      "at_utc": "2026-10-03T16:40:31.578517+00:00",
+      "request_id": "213c932b17910456307912493",
+      "success_values": [
+        true
+      ],
+      "errors": [],
+      "params": {
+        "param_trade_ecology_order_list_query": {
+          "role": "seller",
+          "page_size": 100,
+          "start_page": 0,
+          "create_date_start": {
+            "date_str": "2026-09-05 00:00:00"
+          },
+          "create_date_end": {
+            "date_str": "2026-10-03 23:59:59"
+          }
+        }
+      },
+      "order_ids": [
+        "316443427501020864",
+        "316409659501025320",
+        "316674243001020864",
+        "316340343501027603",
+        "316391946501022391",
+        "315414351001024781",
+        "314681283501023089",
+        "315357850501025643",
+        "315425114001024205",
+        "314010907501027934"
+      ],
+      "total_values": [
+        10
+      ]
+    }
+  ],
+  "details": [
+    {
+      "at_utc": "2026-10-03T16:40:33.396975+00:00",
+      "request_id": "0b830ecc17910456324987973",
+      "success_values": [],
+      "errors": [],
+      "order_id": "316443427501020864",
+      "product_references": [
+        {
+          "key": "product_id",
+          "value": "AAESjmk4AOWGex-cDVm8VRDX"
+        }
+      ],
+      "target_matches": []
+    },
+    {
+      "at_utc": "2026-10-03T16:40:35.277980+00:00",
+      "request_id": "0bbb637a17910456343693895",
+      "success_values": [],
+      "errors": [],
+      "order_id": "316409659501025320",
+      "product_references": [
+        {
+          "key": "product_id",
+          "value": "AAHVjmk4AOWGex-cDVm6p7Cq"
+        }
+      ],
+      "target_matches": []
+    },
+    {
+      "at_utc": "2026-10-03T16:40:37.082635+00:00",
+      "request_id": "210829b717910456362234344",
+      "success_values": [],
+      "errors": [],
+      "order_id": "316674243001020864",
+      "product_references": [
+        {
+          "key": "product_id",
+          "value": "AAEzjmk4AOWGex-cDVm7jV10"
+        }
+      ],
+      "target_matches": []
+    },
+    {
+      "at_utc": "2026-10-03T16:40:38.830357+00:00",
+      "request_id": "0bbb637a17910456379374079",
+      "success_values": [],
+      "errors": [],
+      "order_id": "316340343501027603",
+      "product_references": [
+        {
+          "key": "product_id",
+          "value": "AAHXjmk4AOWGex-cDVm7iq7K"
+        },
+        {
+          "key": "product_id",
+          "value": "AAGdjmk4AOWGex-cDVm7jLiE"
+        }
+      ],
+      "target_matches": []
+    },
+    {
+      "at_utc": "2026-10-03T16:40:40.530028+00:00",
+      "request_id": "0b51802d17910456396628503",
+      "success_values": [],
+      "errors": [],
+      "order_id": "316391946501022391",
+      "product_references": [
+        {
+          "key": "product_id",
+          "value": "AAE3jmk4AOWGex-cDVm0sOpP"
+        }
+      ],
+      "target_matches": []
+    },
+    {
+      "at_utc": "2026-10-03T16:40:42.370990+00:00",
+      "request_id": "213f5a2117910456414164969",
+      "success_values": [],
+      "errors": [],
+      "order_id": "315414351001024781",
+      "product_references": [
+        {
+          "key": "product_id",
+          "value": "AAE2jmk4AOWGexecDTURxP71"
+        },
+        {
+          "key": "sku_id",
+          "value": "10001927816556"
+        },
+        {
+          "key": "sku_code",
+          "value": "BQ047-BLACK-WHITE-42"
+        }
+      ],
+      "target_matches": []
+    },
+    {
+      "at_utc": "2026-10-03T16:40:44.059384+00:00",
+      "request_id": "210829b717910456431884877",
+      "success_values": [],
+      "errors": [],
+      "order_id": "314681283501023089",
+      "product_references": [
+        {
+          "key": "product_id",
+          "value": "AAE3jmk4AOWGex-cDVm0sOpP"
+        }
+      ],
+      "target_matches": []
+    },
+    {
+      "at_utc": "2026-10-03T16:40:45.773676+00:00",
+      "request_id": "21546a1d17910456448898927",
+      "success_values": [],
+      "errors": [],
+      "order_id": "315357850501025643",
+      "product_references": [
+        {
+          "key": "product_id",
+          "value": "AAE3jmk4AOWGex-cDVm0sOpP"
+        }
+      ],
+      "target_matches": []
+    },
+    {
+      "at_utc": "2026-10-03T16:40:47.516815+00:00",
+      "request_id": "2105584317910456466375201",
+      "success_values": [],
+      "errors": [],
+      "order_id": "315425114001024205",
+      "product_references": [
+        {
+          "key": "product_id",
+          "value": "AAFPjmk4AOWGexecDTURhg87"
+        }
+      ],
+      "target_matches": []
+    },
+    {
+      "at_utc": "2026-10-03T16:40:49.659196+00:00",
+      "request_id": "213c933517910456484223884",
+      "success_values": [],
+      "errors": [],
+      "order_id": "314010907501027934",
+      "product_references": [
+        {
+          "key": "product_id",
+          "value": "AAE3jmk4AOWGex-cDVm0sOpP"
+        },
+        {
+          "key": "sku_id",
+          "value": "-1"
+        }
+      ],
+      "target_matches": []
+    }
+  ],
+  "quote_association": "UNVERIFIED_NOT_ORDER_API",
+  "at_utc": "2026-10-03T16:40:49.659196+00:00",
+  "list_complete_within_query": true,
+  "visible_order_count": 10,
+  "association_by_candidate": {
+    "M001": "UNVERIFIED",
+    "2627BSK": "UNVERIFIED",
+    "805": "UNVERIFIED",
+    "H219": "UNVERIFIED",
+    "F2888": "UNVERIFIED",
+    "936": "UNVERIFIED"
+  }
+}

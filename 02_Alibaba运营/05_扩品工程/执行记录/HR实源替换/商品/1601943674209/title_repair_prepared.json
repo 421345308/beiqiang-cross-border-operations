@@ -1,0 +1,34 @@
+{
+  "request": {
+    "param_product_top_publish_request": {
+      "product_id": 1601943674209,
+      "cat_id": 201334413,
+      "language": "en_US",
+      "xml": "<itemSchema><field id=\"productTitle\" name=\"Product name\" type=\"input\"><value>Low Top Casual Lace-Up Shoes with Layered Panels and Three Colour Directions for Footwear Collections</value></field></itemSchema>"
+    }
+  },
+  "reason": "Formal title differs from reviewed source-specific submitted product title. Correct only title; cause of later change unconfirmed, not attributed to a person or platform automation.",
+  "expected_title": "Low Top Casual Lace-Up Shoes with Layered Panels and Three Colour Directions for Footwear Collections",
+  "observed_title": "Low Top Casual Lace-Up Shoes with Layered Panels Sculpted Sole Edge Three Colour Directions for Footwear Collections-All Seasons",
+  "expected_schema": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Low Top Casual Lace-Up Shoes with Layered Panels and Three Colour Directions for Footwear Collections",
+          []
+        ]
+      ]
+    ]
+  },
+  "xml_sha256": "cd5ff68d72b2698f53acd35374650a6c1a66b435e1713a4bd4bd9a93fc60bc99"
+}

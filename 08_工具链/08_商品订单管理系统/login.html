@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="csrf" content="__CSRF__">
+  <title>登录 · 电商商品与订单管理系统</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body data-setup="__SETUP__">
+  <header><div><h1>电商商品与订单管理系统 <small>V1.0</small></h1><p>商品资料 · 库存流水 · 订单处理</p></div><span class="pill">本机登录 · 抖店未连接</span></header>
+  <main style="max-width:620px">
+    <div class="notice">__MODE_NOTICE__</div>
+    <section style="margin-top:24px">
+      <h2 id="loginTitle">登录本机系统</h2>
+      <form id="loginForm">
+        <label for="username">账号</label><input id="username" value="admin" readonly autocomplete="username">
+        <label for="password">本机密码</label><input id="password" type="password" required maxlength="200" autocomplete="current-password">
+        <label for="repeatPassword" id="repeatLabel" hidden>再次输入密码</label><input id="repeatPassword" type="password" maxlength="200" autocomplete="new-password" hidden>
+        <p id="loginError" role="status" style="color:#a33434"></p>
+        <button id="loginSubmit">登录</button>
+      </form>
+      <p class="muted">仅供本机使用，账号与抖店账号分开。正式库不设置默认密码，程序不向浏览器存储写入密码。重启服务后需要重新登录。</p>
+    </section>
+  </main>
+  <script src="/login.js"></script>
+</body>
+</html>

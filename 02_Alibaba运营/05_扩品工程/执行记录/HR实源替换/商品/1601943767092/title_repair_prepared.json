@@ -1,0 +1,34 @@
+{
+  "request": {
+    "param_product_top_publish_request": {
+      "product_id": 1601943767092,
+      "cat_id": 201153805,
+      "language": "en_US",
+      "xml": "<itemSchema><field id=\"productTitle\" name=\"Product name\" type=\"input\"><value>Slip-On Closed Heel Casual Shoes with Raised Instep and Textured Upper for Wholesale Shoe Collections</value></field></itemSchema>"
+    }
+  },
+  "reason": "Formal title differs from reviewed source-specific submitted product title. Correct only title; cause of later change unconfirmed, not attributed to a person or platform automation.",
+  "expected_title": "Slip-On Closed Heel Casual Shoes with Raised Instep and Textured Upper for Wholesale Shoe Collections",
+  "observed_title": "Slip-On Closed Heel Casual Shoes with Raised Instep and Textured Upper All Seasons Fashion Trend for Wholesale Shoe Collections",
+  "expected_schema": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Slip-On Closed Heel Casual Shoes with Raised Instep and Textured Upper for Wholesale Shoe Collections",
+          []
+        ]
+      ]
+    ]
+  },
+  "xml_sha256": "7f67c03a12a555c79439dafb0366ea29e5a1455f00ecd4d1851937bd371b9e59"
+}

@@ -1,0 +1,11 @@
+{
+  "style": "2560",
+  "observed_at": "2026-10-10",
+  "source_price_cny": 52,
+  "provider": "public web fallback; Firecrawl callable tools unavailable",
+  "observations": [
+    {"url": "https://www.alibaba.com/product-detail/Custom-with-logo-OEM-men-buckled_1600586610372.html", "status": "search metadata available; direct page returned no readable fields", "buyer_terms": ["men", "wide toe box", "walking shoes", "lace-up", "custom logo"], "price_comparable": false},
+    {"url": "https://www.alibaba.co.uk/product-detail/Wide-Toe-Box-Barefoot-Sneakers-Adult_1601378469895.html", "status": "search title available; direct page only image link, no readable fields", "buyer_terms": ["wide toe box", "adult men", "casual", "walking"], "price_comparable": false}
+  ],
+  "decision": "Buyer-word observations only, not same-SKU, volume or trend evidence. Retain own verified plain-toe/metal-eyelet/low-top/color/EU evidence. Do not copy barefoot, zero-drop, performance, material, customization promises or competitor prices. Authorized own sourcecost52 and markup50/40/30percent at2/50/100pairs use existing6.7487referenceconversion; exact comparable price evidence unavailable."
+}

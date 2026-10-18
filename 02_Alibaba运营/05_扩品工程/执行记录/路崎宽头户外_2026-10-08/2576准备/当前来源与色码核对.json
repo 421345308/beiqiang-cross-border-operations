@@ -1,0 +1,174 @@
+{
+  "style": "2576",
+  "source": "https://luqi.sooxie.com/detail/2372147",
+  "observed_at": "2026-10-13T23:21:55.784170+00:00",
+  "source_HTML_sha256": "69532f555d6bcf350d02803ef42f591e6990a1384186c30c8044fb7f27adafdb",
+  "source_price_cny": "59.00",
+  "source_EU_by_color": {
+    "Black": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "Beige": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46
+    ]
+  },
+  "source_EU_combinations": 16,
+  "source_colour_mapping": {
+    "Black": {
+      "supplier_colour": "黑色",
+      "frames": [
+        11,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    "Beige": {
+      "supplier_colour": "米色",
+      "frames": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ]
+    }
+  },
+  "visible_structure": [
+    "Low-cut laceless knit slip-on with raised knit instep flap",
+    "Rounded wide toe box: source title/category and original01/03/06 explicitly加宽",
+    "Ribbed flared heel panel; no pulltab or laces",
+    "Sculpted horizontal-wave paleMDsidewall on Beige, darkMDsidewall on Black",
+    "Source07/09 angled underside shows orange contact sections; no unseen full tread generated"
+  ],
+  "known_materials": {
+    "upper": "Knit/飞织 source11; fiber percentage and polymer unspecified",
+    "midsole": "MD source07 explicitly中底MD; no EVA chemical expansion inferred",
+    "outsole": "Source09/11牛津外底 maps to current native Oxford option only; this material label is not a claim of rubber/TPR/EVA chemistry or grip testing.",
+    "lining": "Soft lining is texture; composition unknown, Other"
+  },
+  "wide_claim": "EXPLICIT_SOURCE_WIDE_TOE_BOX_NO_WIDTH_GRADE",
+  "title_draft": "Wide Toe Box Knit Slip On Walking Shoes with Low Cut Collar for Wholesale Footwear Buyers",
+  "product_highlights_draft": [
+    "Wide toe box: A rounded forefoot gives this knit slip-on its widened toe profile.",
+    "Laceless knit upper: The low-cut opening and raised instep panel keep the silhouette clean for everyday walking.",
+    "Ribbed heel design: Curved horizontal ribs distinguish the heel panel and rear profile.",
+    "MD midsole: A wave-shaped sidewall pairs with visible orange contact sections beneath the sole.",
+    "Two-colour assortment: Choose Black or Beige in EU 39–46 for a wholesale colour-size mix."
+  ],
+  "excluded_claims": [
+    "Hands Free guarantee without actual entry demonstration",
+    "Slip-ins branded advertising",
+    "Vapor Foam branded/technology claim",
+    "Medical/bunion/orthopedic relief",
+    "2E/4E width grade",
+    "Tested grip/waterproof/rebound/density/drop measurements"
+  ],
+  "image_role_plan": {
+    "M1": "ActualBeigepair08neutralbackground, preservebothposes",
+    "M2": "Actual01low-cutopeningdetail, removefootmodels/arrows/Chinese",
+    "M3": "Actual09angledvisibleoutsole+sidewall, no reconstructedbottom",
+    "M4": "ActualBlackwear18wholesaleorderinputs, not duplicate fullcolour-sizechart",
+    "M5": "ActualBeigewear04citysteps, no inventedpersonorpose",
+    "D1": "Actual06knitforefoottexture",
+    "D2": "Actual12ribbedheelpanel, remove45degree/flash-entryclaims",
+    "D3": "Actual07whiteMDsidewallcloseup, no rebound/medical diagrams",
+    "D4": "Actual11Black/Beigesidephotos and EU39-46choices only"
+  },
+  "pricing_draft": {
+    "source_cny": "59.00",
+    "fx": "6.6837",
+    "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+    "fx_observed": "2026-10-13 10:57:20",
+    "tiers": [
+      [
+        2,
+        "13.25"
+      ],
+      [
+        50,
+        "12.36"
+      ],
+      [
+        100,
+        "11.48"
+      ]
+    ],
+    "freight_service_tax": "Order-specific, no market-lowest or net-profit guarantee"
+  },
+  "state": "CREATED_FORMAL_FIELDS_SCORE_PASS",
+  "at": "2026-10-14T03:45:26.177611+00:00",
+  "next_action": "该款正式字段、评分与来源已通过；继续其他款，不重复创建。",
+  "publish_profile": {
+    "category_id": 201334413,
+    "buyer_colours": [
+      {
+        "buyer": "Black",
+        "supplier_key": "Black",
+        "supplier_label": "黑色",
+        "image_role": "SKU_Black"
+      },
+      {
+        "buyer": "Beige",
+        "supplier_key": "Beige",
+        "supplier_label": "米色",
+        "image_role": "M1"
+      }
+    ],
+    "category_attributes": {
+      "Upper Material": [
+        "Knit"
+      ],
+      "Midsole Material": [
+        "MD"
+      ],
+      "Outsole Material": [
+        "Oxford"
+      ],
+      "Lining Material": [
+        "other"
+      ],
+      "Closure Type": [
+        "Slip-on"
+      ]
+    },
+    "local_intent": [
+      "宽头针织套脚步行鞋"
+    ]
+  },
+  "publication": {
+    "product_id": "1601979492425",
+    "audit": "approved",
+    "display": "Y",
+    "actual_score": "5.00",
+    "formal_verification": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/verification.json",
+    "local_sync_at": "2026-10-14T12:44:15.610032+00:00",
+    "no_replayed_create": true
+  }
+}

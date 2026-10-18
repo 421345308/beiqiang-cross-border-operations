@@ -1,0 +1,27 @@
+{
+  "operation": "update",
+  "product_id": "1601939727104",
+  "category_id": 201334413,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "copy.json",
+    "before_get.json",
+    "../../../../../01_产品资产/02_可发布素材/00_最终上传/BQ001_数据包1/00_上架填写表.md",
+    "../../../../../01_产品资产/01_原始数据包/已整理_BQ001_5.13贝强1数据包/800X800主图/01 (1).jpg",
+    "current_get.json",
+    "../../../../00_运营SOP/国际站商品全生命周期SOP.md"
+  ],
+  "current_schema": "current_schema.xml",
+  "current_schema_sha256": "953826e825669be27f8a478004a0f5d84b653b13db051073b7f78c709b774d19",
+  "schema_request_id": "213f5a2117917343230236532",
+  "schema_acquired_at": "2026-10-11T15:58:40.281509+00:00",
+  "payload_xml": "payload.xml",
+  "field_ids": [
+    "textDesc",
+    "companyFaqDesc"
+  ],
+  "dependency_ids": [
+    "productDescType"
+  ],
+  "observed_model": "BQ001-R1 / BQ001"
+}

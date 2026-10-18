@@ -1,0 +1,63 @@
+{
+  "style": "69002",
+  "model": "BQ-M69002",
+  "source": "https://yihongxy.sooxie.com/detail/2551134",
+  "stage": "SINGLE_WRITE_OUTCOME_UNKNOWN_RECONCILIATION_REQUIRED",
+  "publish": {
+    "style": "69002",
+    "status": "write_outcome_unknown",
+    "started_at_utc": "2026-10-02T14:04:52.501252+00:00",
+    "manifest_sha256": "af4737581ca926ff561f66a2fc7972184f0a0a86abfebd9e3fd5fe4a1f6aea08",
+    "xml_sha256": "d94766a8b83d96bb34e185381a282820359a54b5e63ff89798984b75b5ac343d",
+    "method": "alibaba.icbu.product.schema.add",
+    "new_product_only": true,
+    "other_products_written": [],
+    "product_id": null,
+    "content_status": "unverified_content",
+    "refs": {},
+    "finished_at_utc": "2026-10-02T14:05:14.775838+00:00"
+  },
+  "reconciliation": {
+    "observed_at": "2026-10-02T14:08:08.926194+00:00",
+    "total_item": 363,
+    "read_count": 363,
+    "unique_ids": 363,
+    "complete_pages": true,
+    "page_requests": [
+      "213c934417909499994064014",
+      "213d4e4917909500752257818",
+      "213d4e4917909500765267825",
+      "0bbb3b2417909500764764621",
+      "0bbb3b2417909500810304650",
+      "21546a1d17909500822577299",
+      "2105584317909500853333379",
+      "2166c2ca17909500852273901",
+      "21501b6717909500862598451",
+      "0bbb637a17909500895423074",
+      "0b80d2d617909500904277603",
+      "212c6fc617909500905044782",
+      "21546a1d17909500935477347"
+    ],
+    "matches": [],
+    "write_outcome": "UNKNOWN",
+    "repeat_write_sent": false,
+    "limits": "No matching title/model in current catalog does not prove the single uncertain write failed; no resend."
+  },
+  "media_counts": {
+    "main": 6,
+    "detail": 4,
+    "company_original_v3": 5,
+    "color": 2
+  },
+  "SKU": 14,
+  "FAQ": 6,
+  "inventory_writes": 0,
+  "old_HR_actions": 0,
+  "other_product_writes": 0,
+  "review": "NOT_VERIFIED",
+  "actual_quality_score": null,
+  "public_acceptance": "NOT_VERIFIED",
+  "completed": false,
+  "updated_at": "2026-10-02T14:18:23.982952+00:00",
+  "next": "Only read/reconcile or official resolution of unknown write. No repeated schema.add."
+}

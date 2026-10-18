@@ -1,0 +1,45 @@
+{
+  "keyword_input": null,
+  "differentiation_review": null,
+  "category_id": 201339011,
+  "operation": "update",
+  "inventory_input": null,
+  "model_serialization": null,
+  "target_product_id": "1601970034464",
+  "field_ids": [
+    "productTitle"
+  ],
+  "dependency_ids": [],
+  "xml": "<itemSchema><field id=\"productTitle\" type=\"input\"><value>Wholesale Womens Quilted Winter Boots with Plush Lining and Side Zipper for Cold Season Casual Wear</value></field></itemSchema>",
+  "expected_fields": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Wholesale Womens Quilted Winter Boots with Plush Lining and Side Zipper for Cold Season Casual Wear",
+          []
+        ]
+      ]
+    ]
+  },
+  "prepared_from_current_schema": true,
+  "task_pack": null,
+  "replacement_plan": null,
+  "schema_provenance": {
+    "schema_request_id": "2105044417914238514855258",
+    "schema_acquired_at": "2026-10-08T01:44:13.951475+00:00",
+    "current_schema_sha256": "d234b99ae1d1b5adacb91457d47785e6d111d1d9abcd6e61bc8d5351cb658a2e",
+    "source_evidence": [
+      "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\F2888_API完整新建_2026-10-02_task2\\facts_and_copy.json"
+    ]
+  }
+}

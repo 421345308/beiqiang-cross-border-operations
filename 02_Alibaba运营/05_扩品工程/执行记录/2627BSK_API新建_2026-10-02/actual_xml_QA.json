@@ -1,0 +1,15 @@
+{
+  "verdict": "PASS",
+  "reviewer": "review_5998_readonly",
+  "payload_sha256": "34ae5f3644167b31729d96ecbcb1f0315b761c33680455b5b23f503723d30bc1",
+  "counts": {
+    "main": 6,
+    "detail": 3,
+    "company_v3": 5,
+    "color": 5,
+    "SKU": 15,
+    "FAQ": 6
+  },
+  "checks": "Actual14 hashes officialURLs mainfileIDs roles materials model Origin MOQ prices colorSKUbindings; no D3 URL, stock or ladderPeriod",
+  "observed_UTC": "2026-10-02T17:17:08.365397+00:00"
+}

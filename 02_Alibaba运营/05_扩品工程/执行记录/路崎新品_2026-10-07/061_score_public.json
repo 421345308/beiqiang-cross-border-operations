@@ -1,0 +1,17 @@
+{
+  "observed_at": "2026-10-07T15:47:52.948500+00:00",
+  "params": {
+    "product_id": "1601972965417"
+  },
+  "response": {
+    "error_response": {
+      "code": "15",
+      "type": "ISP",
+      "sub_code": "-1",
+      "sub_msg": "通用验证失败",
+      "msg": "Remote service error",
+      "request_id": "213d4e4917913880762552012",
+      "_trace_id_": "212e559c17913880761183295e1006"
+    }
+  }
+}

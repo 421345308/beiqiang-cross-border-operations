@@ -1,0 +1,17 @@
+{
+  "product_id": "1601943523535",
+  "observed_at": "2026-10-11T17:27:51.328821+00:00",
+  "status": "TARGET_COPY_MATCHES_OTHER_FIELDS_CHANGED_SEPARATE_DIAGNOSIS",
+  "submitted_fields": [
+    "textDesc",
+    "companyFaqDesc"
+  ],
+  "changes": [
+    {
+      "path": "/keywords/0",
+      "before": "Mid Top Lace Up Casual Shoes",
+      "after": ""
+    }
+  ],
+  "action": "Do not overwrite concurrent or unexplained changes; retain exact historical differences. New wording revisions use fresh observed baseline."
+}

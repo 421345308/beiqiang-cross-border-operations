@@ -1,0 +1,26 @@
+{
+  "product_id": "1601970169467",
+  "status": "approved",
+  "display": "Y",
+  "main_image_returned": {
+    "images": [
+      "https://sc04.alicdn.com/kf/H872b924939bb410e8599c6ef1ab705d7O.jpg",
+      "https://sc04.alicdn.com/kf/H4990b3f02789457d8a637750f0c05930K.jpg",
+      "https://sc04.alicdn.com/kf/H5b9a11216ecf41f1aa5d40d10b5962dbm.jpg",
+      "https://sc04.alicdn.com/kf/H11d578f393164f8b86770466635c3731D.jpg",
+      "https://sc04.alicdn.com/kf/H270bebb7d64240cd8610e938a990ebfeS.jpg",
+      "https://sc04.alicdn.com/kf/Hc8b7812b40464e0eb86c027880085baaA.jpg"
+    ]
+  },
+  "get_error": null,
+  "get_request_id": "0b51802d17910128703812882",
+  "score_request_id": "212cbf3217910128728704521",
+  "crop_455_square_status": "PROPOSED_NOT_EXECUTED_BY_THIS_WRITER",
+  "post_create_image_update_receipts_present": false,
+  "external_writes_by_this_check": 0,
+  "score_result": {
+    "final_score": "4.50",
+    "boutique_tag": 1,
+    "problem_map": "{\"ruleScoreMap\":{\"title_word_miss_core_error\":0.0,\"imageQualityBad\":0.0,\"image_scale\":-0.5,\"title_word_error\":0.0,\"image_num\":0.0},\"errorReasonSkuImageMoreMap\":{},\"errorReasonTitleWordMissErrorMap\":{},\"errorReasonList\":[],\"errorReasonTitleWordErrorMap\":{},\"extendCheckMap\":{\"imageText\":true,\"sku_image\":false,\"title_word_miss_core_error\":true,\"imageQualityBad\":true,\"sku_text\":false,\"imageSubTitle\":false,\"category\":true,\"title_word_error\":true,\"selling_point_attribute_conflict\":false},\"errorReasonCategoryMap\":{},\"errorReasonSkuTextMap\":{},\"errorReasonSubTitleMap\":{},\"errorReasonMap\":{},\"errorReasonSellingPointAttributeMap\":{},\"errorReasonSkuImageMap\":{},\"extendProblemMap\":{\"imageText\":false,\"title_word_miss_core_error\":false,\"imageQualityBad\":false,\"imageSubTitle\":false,\"image_scale\":true,\"inventory\":false,\"title_word_error\":false,\"selling_point_attribute_conflict\":false,\"image_num\":false,\"freightRate\":false,\"sku_image\":false,\"sku_text\":false,\"price\":false,\"category\":false},\"errorReasonQualityBadMap\":{},\"errorReasonSkuTextMoreMap\":{}}"
+  }
+}

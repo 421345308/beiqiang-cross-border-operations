@@ -1,0 +1,28 @@
+{
+  "operation": "update",
+  "product_id": "1601943593293",
+  "category_id": 201152005,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "copy.json",
+    "before_get.json",
+    "../../../../../99_临时区/HR021_26CZYA22-113_候选独立核验_2026-09-29/facts.json",
+    "../../../../../99_临时区/HR021_26CZYA22-113_候选独立核验_2026-09-29/image_01.webp",
+    "../../../../05_扩品工程/HR系列真实货源改造_2026-09-21/HR021_标题及主字段替换阶段回执_2026-09-29.md",
+    "current_get.json",
+    "../../../../00_运营SOP/国际站商品全生命周期SOP.md"
+  ],
+  "current_schema": "current_schema.xml",
+  "current_schema_sha256": "168355acb1d47bed01fa67607b4293a5fcb5bb1447841467bb9dc2191d459c6e",
+  "schema_request_id": "0b80d2d617917379520417470",
+  "schema_acquired_at": "2026-10-11T16:59:09.245809+00:00",
+  "payload_xml": "payload.xml",
+  "field_ids": [
+    "textDesc",
+    "companyFaqDesc"
+  ],
+  "dependency_ids": [
+    "productDescType"
+  ],
+  "observed_model": "HR021-A"
+}

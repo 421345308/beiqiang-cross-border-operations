@@ -1,0 +1,494 @@
+{
+  "target": "M001",
+  "public_product_id": "1601970169467",
+  "bound_encrypted_get_id": "AAGpjmk4AOWGex-cDVm8WuGY",
+  "category_id": 201153804,
+  "reviewed_single_keyword_input": "closed toe EVA mules ribbed sole wholesale slip on footwear",
+  "UTF8_bytes": 59,
+  "source_truth": "existing source-bound M001 public and formal title, EVA material, ribbed sole; no gender/medical/performance claims",
+  "route": "current authenticated seller UI; keyword-only edit; no Workctl, no legacy API, no replay of HR021 Schema no-op",
+  "UI_route_current_validation": "UNTESTED; inspect a fresh exact-ID editor tab and the actual keyword field before any save",
+  "execution_authorization": "NOT EXECUTED; this delegated step is read-only/offline. Authorize one exact M001 keyword UI submission separately before writing.",
+  "fresh_before_write_required": true,
+  "reference_baseline_at": "2026-10-03T12:46 read; refresh immediately before a later authorized write",
+  "reference_formal_source": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\hr_public_readonly_20261003\\M001_get.json",
+  "protected_business_fields": {
+    "subject": "Closed-Toe EVA Mules with Ribbed Sides and Orange Sole Pods",
+    "category_id": 201153804,
+    "main_image": {
+      "images": [
+        "https://sc04.alicdn.com/kf/Hd8377dea8ee846f0b47e9f31486df700n.jpg",
+        "https://sc04.alicdn.com/kf/H4990b3f02789457d8a637750f0c05930K.jpg",
+        "https://sc04.alicdn.com/kf/H5b9a11216ecf41f1aa5d40d10b5962dbm.jpg",
+        "https://sc04.alicdn.com/kf/H11d578f393164f8b86770466635c3731D.jpg",
+        "https://sc04.alicdn.com/kf/H270bebb7d64240cd8610e938a990ebfeS.jpg",
+        "https://sc04.alicdn.com/kf/Hc8b7812b40464e0eb86c027880085baaA.jpg"
+      ]
+    },
+    "attributes": [
+      {
+        "attribute_id": 191288243,
+        "attribute_name": "Style",
+        "value_id": 190091556,
+        "value_name": "Slip On"
+      },
+      {
+        "attribute_id": 200000486,
+        "attribute_name": "Toe Style",
+        "value_id": 108886227,
+        "value_name": "Closed Toe"
+      },
+      {
+        "attribute_id": 1,
+        "attribute_name": "Place of Origin",
+        "value_id": -1,
+        "value_name": "CN"
+      },
+      {
+        "attribute_id": 3,
+        "attribute_name": "Model Number",
+        "value_id": -1,
+        "value_name": "BQ-M001"
+      },
+      {
+        "attribute_id": 20700,
+        "attribute_name": "Midsole Material",
+        "value_id": -1,
+        "value_name": "Not specified"
+      },
+      {
+        "attribute_id": 191290426,
+        "attribute_name": "Outsole Material",
+        "value_id": -1,
+        "value_name": "Not specified"
+      },
+      {
+        "attribute_id": 191290428,
+        "attribute_name": "Upper Material",
+        "value_id": -1,
+        "value_name": "EVA"
+      },
+      {
+        "attribute_id": 191290430,
+        "attribute_name": "Lining Material",
+        "value_id": -1,
+        "value_name": "Not specified"
+      }
+    ],
+    "product_sku": {
+      "skus": [
+        {
+          "attr2_value": "{\"222038415\":-106,\"191288010\":3331260}",
+          "bulk_discount_prices": [
+            {
+              "start_quantity": 2,
+              "price": "10.08"
+            },
+            {
+              "start_quantity": 50,
+              "price": "9.41"
+            },
+            {
+              "start_quantity": 100,
+              "price": "8.74"
+            }
+          ],
+          "sku_id": 109767530974,
+          "sku_code": "BQ-M001-RED-44-45"
+        },
+        {
+          "attr2_value": "{\"222038415\":-101,\"191288010\":3483425}",
+          "bulk_discount_prices": [
+            {
+              "start_quantity": 2,
+              "price": "10.08"
+            },
+            {
+              "start_quantity": 50,
+              "price": "9.41"
+            },
+            {
+              "start_quantity": 100,
+              "price": "8.74"
+            }
+          ],
+          "sku_id": 109767530975,
+          "sku_code": "BQ-M001-GREY-35-36"
+        },
+        {
+          "attr2_value": "{\"222038415\":-104,\"191288010\":3331260}",
+          "bulk_discount_prices": [
+            {
+              "start_quantity": 2,
+              "price": "10.08"
+            },
+            {
+              "start_quantity": 50,
+              "price": "9.41"
+            },
+            {
+              "start_quantity": 100,
+              "price": "8.74"
+            }
+          ],
+          "sku_id": 109767530972,
+          "sku_code": "BQ-M001-RED-40-41"
+        },
+        {
+          "attr2_value": "{\"222038415\":-105,\"191288010\":3331260}",
+          "bulk_discount_prices": [
+            {
+              "start_quantity": 2,
+              "price": "10.08"
+            },
+            {
+              "start_quantity": 50,
+              "price": "9.41"
+            },
+            {
+              "start_quantity": 100,
+              "price": "8.74"
+            }
+          ],
+          "sku_id": 109767530973,
+          "sku_code": "BQ-M001-RED-42-43"
+        },
+        {
+          "attr2_value": "{\"222038415\":-102,\"191288010\":3331260}",
+          "bulk_discount_prices": [
+            {
+              "start_quantity": 2,
+              "price": "10.08"
+            },
+            {
+              "start_quantity": 50,
+              "price": "9.41"
+            },
+            {
+              "start_quantity": 100,
+              "price": "8.74"
+            }
+          ],
+          "sku_id": 109767530970,
+          "sku_code": "BQ-M001-RED-37-38"
+        },
+        {
+          "attr2_value": "{\"222038415\":-103,\"191288010\":3331260}",
+          "bulk_discount_prices": [
+            {
+              "start_quantity": 2,
+              "price": "10.08"
+            },
+            {
+              "start_quantity": 50,
+              "price": "9.41"
+            },
+            {
+              "start_quantity": 100,
+              "price": "8.74"
+            }
+          ],
+          "sku_id": 109767530971,
+          "sku_code": "BQ-M001-RED-39-40"
+        },
+        {
+          "attr2_value": "{\"222038415\":-101,\"191288010\":3331260}",
+          "bulk_discount_prices": [
+            {
+              "start_quantity": 2,
+              "price": "10.08"
+            },
+            {
+              "start_quantity": 50,
+              "price": "9.41"
+            },
+            {
+              "start_quantity": 100,
+              "price": "8.74"
+            }
+          ],
+          "sku_id": 109767530969,
+          "sku_code": "BQ-M001-RED-35-36"
+        },
+        {
+          "attr2_value": "{\"222038415\":-106,\"191288010\":3483425}",
+          "bulk_discount_prices": [
+            {
+              "start_quantity": 2,
+              "price": "10.08"
+            },
+            {
+              "start_quantity": 50,
+              "price": "9.41"
+            },
+            {
+              "start_quantity": 100,
+              "price": "8.74"
+            }
+          ],
+          "sku_id": 109767530980,
+          "sku_code": "BQ-M001-GREY-44-45"
+        },
+        {
+          "attr2_value": "{\"222038415\":-104,\"191288010\":3483425}",
+          "bulk_discount_prices": [
+            {
+              "start_quantity": 2,
+              "price": "10.08"
+            },
+            {
+              "start_quantity": 50,
+              "price": "9.41"
+            },
+            {
+              "start_quantity": 100,
+              "price": "8.74"
+            }
+          ],
+          "sku_id": 109767530978,
+          "sku_code": "BQ-M001-GREY-40-41"
+        },
+        {
+          "attr2_value": "{\"222038415\":-105,\"191288010\":3483425}",
+          "bulk_discount_prices": [
+            {
+              "start_quantity": 2,
+              "price": "10.08"
+            },
+            {
+              "start_quantity": 50,
+              "price": "9.41"
+            },
+            {
+              "start_quantity": 100,
+              "price": "8.74"
+            }
+          ],
+          "sku_id": 109767530979,
+          "sku_code": "BQ-M001-GREY-42-43"
+        },
+        {
+          "attr2_value": "{\"222038415\":-102,\"191288010\":3483425}",
+          "bulk_discount_prices": [
+            {
+              "start_quantity": 2,
+              "price": "10.08"
+            },
+            {
+              "start_quantity": 50,
+              "price": "9.41"
+            },
+            {
+              "start_quantity": 100,
+              "price": "8.74"
+            }
+          ],
+          "sku_id": 109767530976,
+          "sku_code": "BQ-M001-GREY-37-38"
+        },
+        {
+          "attr2_value": "{\"222038415\":-103,\"191288010\":3483425}",
+          "bulk_discount_prices": [
+            {
+              "start_quantity": 2,
+              "price": "10.08"
+            },
+            {
+              "start_quantity": 50,
+              "price": "9.41"
+            },
+            {
+              "start_quantity": 100,
+              "price": "8.74"
+            }
+          ],
+          "sku_id": 109767530977,
+          "sku_code": "BQ-M001-GREY-39-40"
+        }
+      ],
+      "sku_attributes": [
+        {
+          "attribute_id": 191288010,
+          "values": [
+            {
+              "system_value_name": "Red",
+              "image_url": "https://sc04.alicdn.com/kf/Hc8b7812b40464e0eb86c027880085baaA.jpg",
+              "value_id": 3331260
+            },
+            {
+              "system_value_name": "Grey",
+              "image_url": "https://sc04.alicdn.com/kf/H665af50989a64c159d7fdbb976727c4bY.jpg",
+              "value_id": 3483425
+            }
+          ],
+          "attribute_name": "Color"
+        },
+        {
+          "attribute_id": 222038415,
+          "values": [
+            {
+              "system_value_name": "44-45",
+              "value_id": -106
+            },
+            {
+              "system_value_name": "35-36",
+              "value_id": -101
+            },
+            {
+              "system_value_name": "40-41",
+              "value_id": -104
+            },
+            {
+              "system_value_name": "42-43",
+              "value_id": -105
+            },
+            {
+              "system_value_name": "37-38",
+              "value_id": -102
+            },
+            {
+              "system_value_name": "39-40",
+              "value_id": -103
+            }
+          ],
+          "attribute_name": "EUR Size"
+        }
+      ]
+    },
+    "sourcing_trade": {
+      "fob_min_price": "8.74",
+      "fob_currency": "USD",
+      "min_order_unit_type": "Pair",
+      "fob_max_price": "10.08",
+      "fob_unit_type": "Pair",
+      "min_order_quantity": "2"
+    },
+    "struct_detail": {
+      "company_image": {
+        "images": [
+          {
+            "image_set": {
+              "name": "Packaging & shipping specifications",
+              "id": 700
+            },
+            "image_url": "https://sc04.alicdn.com/kf/H5f71c3cfb4064b51bb458d0a786cb402R.jpg"
+          },
+          {
+            "image_set": {
+              "name": "Customization capabilities",
+              "id": 550
+            },
+            "image_url": "https://sc04.alicdn.com/kf/H496f7579171f4370a1d47c3adf30001bK.jpg"
+          },
+          {
+            "image_set": {
+              "name": "Company overview",
+              "id": 400
+            },
+            "image_url": "https://sc04.alicdn.com/kf/Ha8c1682092424e778eadf945763e79daU.jpg"
+          },
+          {
+            "image_set": {
+              "name": "Production workflow",
+              "id": 600
+            },
+            "image_url": "https://sc04.alicdn.com/kf/H36e700f5c3ee447a80c035d8ae7521d9a.jpg"
+          },
+          {
+            "image_set": {
+              "name": "Extended company profile",
+              "id": 750
+            },
+            "image_url": "https://sc04.alicdn.com/kf/H9f32c7ecea0f4d25bc5ddc9cd04c1e5dK.jpg"
+          }
+        ]
+      },
+      "product_faq": [
+        {
+          "question": "What material information is confirmed?",
+          "answer": "The source identifies an EVA shoe body and upper. The orange pod, separate midsole, lining and insole compositions are not specified. Send specific material requirements with your inquiry for order-specific confirmation."
+        },
+        {
+          "question": "Which colors and size groups can I request?",
+          "answer": "Red and Grey are offered. Original source labels are 35-36, 37-38, 39-40, 40-41, 42-43 and 44-45. Specify quantities for each color and original size group. Fit, measurements and international size conversion are confirmed for the order."
+        },
+        {
+          "question": "What do the photos show?",
+          "answer": "Actual source images show a closed toe, open heel, ribbed sides, textured vamp panel and separate orange sole pods. The Black underside detail is for structure only; Black is not offered. No tested grip, massage, cushioning or rebound performance is claimed."
+        },
+        {
+          "question": "What are the minimum and quantity prices?",
+          "answer": "The listing minimum is 2 pairs. Indicative unit prices are USD 10.08 for 2-49 pairs, USD 9.41 for 50-99 pairs and USD 8.74 for 100 or more pairs. Final quotation depends on quantities, color-size mix, packing, destination and agreed terms; freight and taxes are confirmed separately."
+        },
+        {
+          "question": "Can I request samples or customized packing?",
+          "answer": "Send your sample quantity, requested colors and any logo or packing requirements. Feasibility, applicable minimums, sample charges and available customization options are assessed before quotation."
+        },
+        {
+          "question": "Are stock and dispatch guaranteed?",
+          "answer": "No ready-stock or fixed dispatch promise is made. Provide quantities, destination, packing and requested dispatch date. Supply, per-size availability, payment terms and dispatch arrangements are confirmed during inquiry."
+        }
+      ],
+      "detail_image": {
+        "images": [
+          {
+            "image_set": {
+              "name": "Other product images",
+              "id": "350"
+            },
+            "image_url": "https://sc04.alicdn.com/kf/H9f8e924b99ac4aeea5a7f65da4df37246.jpg"
+          },
+          {
+            "image_set": {
+              "name": "Detail shot",
+              "id": "300"
+            },
+            "image_url": "https://sc04.alicdn.com/kf/Heae9d876f2524757a0f9e51e92ec07e1x.jpg"
+          },
+          {
+            "image_set": {
+              "name": "Other product images",
+              "id": "350"
+            },
+            "image_url": "https://sc04.alicdn.com/kf/H30ae2d6d8069492889620a9ca7e43506H.jpg"
+          },
+          {
+            "image_set": {
+              "name": "Other product images",
+              "id": "350"
+            },
+            "image_url": "https://sc04.alicdn.com/kf/H63e27fa50e4346868e342bf09f959dd5T.jpg"
+          }
+        ]
+      },
+      "product_summary": "Closed-toe, open-heel slip-on mules with an EVA shoe body and upper, ribbed sidewalls, a textured vamp panel and separate orange sole pods. The body/upper material is specified in the source image; the orange pod, separate midsole, lining and insole compositions are not specified. Offered colors are Red and Grey. Original source size labels are 35-36, 37-38, 39-40, 40-41, 42-43 and 44-45; measured fit and international conversion are confirmed for the order. The Black underside detail illustrates the pod layout only and is not an offered color. Send color-size quantities, destination, packing and requested dispatch date for an order-specific quotation.",
+      "company_summary": "Quanzhou Beiqiang Footwear & Apparel Co., Ltd. is based in Quanzhou, Fujian, China. The images below introduce our company capabilities. Model-specific sample, customization, packing and dispatch arrangements are reviewed against your requirements before quotation."
+    },
+    "struct_detail_product": true,
+    "language": "ENGLISH",
+    "product_type": "sourcing",
+    "price_type": "ladder_price",
+    "rts": false,
+    "sub_market_type": "customization",
+    "is_smart_edit": false,
+    "pc_detail_url": "https://www.alibaba.com/product-detail/Closed-Toe-EVA-Mules-with-Ribbed_1601970169467.html"
+  },
+  "protected_fields_sha256": "478e9b7ded09b4f8ac4a10860892a030ad47918657a6a7d9c075887bd8d8fc65",
+  "max_formal_submissions": 1,
+  "stop_conditions": [
+    "wrong ID/category or protected field diff",
+    "any forced full-content migration or additional title/SKU/material/image/price/category change",
+    "CAPTCHA handled only through normal authorized UI; no bypass",
+    "save/submission outcome unknown: reserve ledger before click, reconcile independently, do not submit again",
+    "modified/new: pending, no repeated writes",
+    "approved UI value nonempty but get blank: READBACK_DISAGREES, no strict PASS"
+  ],
+  "verification": [
+    "save draft and reopen a fresh draft if UI provides separate draft stage; proves draft only",
+    "submit existing product once, preserve receipt/time and get/render references",
+    "after approved compare response.product.keywords with the exact one input and rendered values when actually present",
+    "compare all protected_business_fields and current Schema value snapshots including video/group/saleProp/sku/stock/logistics/FAQ/detail/company modules",
+    "independently verify fresh seller edit value; public keyword visibility is not expected and search indexing is a separate later check"
+  ],
+  "if_UI_works_and_API_blank": "Do not repeat Schema writes. Preserve UI/formal conflict and submit exact saved trace/read IDs to Alibaba support; contact only after authorization."
+}

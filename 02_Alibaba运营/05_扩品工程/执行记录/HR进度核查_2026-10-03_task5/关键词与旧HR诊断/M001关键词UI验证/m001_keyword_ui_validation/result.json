@@ -1,0 +1,53 @@
+{
+  "at_utc": "2026-10-03T16:43:49.125955+00:00",
+  "product_id": "1601970169467",
+  "category_id": 201153804,
+  "detail_type": "4",
+  "classification": "UI_KEYWORD_MIGRATED_TO_EXISTING_SELLING_POINTS_NOT_SAVED",
+  "keyword_support": "UNVERIFIED_FOR_CURRENT_FORMAL_KEYWORDS_FIELD",
+  "authorized_ui_scope": "M001 keyword only; all other fields frozen",
+  "platform_mutations": 0,
+  "keyword_inputs": 0,
+  "save_clicks": 0,
+  "formal_submissions": 0,
+  "before_after": {
+    "at_utc": "2026-10-03T16:40:29.181876+00:00",
+    "request_id": "210829b717910456284353389",
+    "status": "approved",
+    "display": "Y",
+    "keywords": [
+      ""
+    ],
+    "SKU": 12,
+    "changed_fields": [],
+    "platform_mutations": 0,
+    "classification": "UI_KEYWORD_MIGRATED_TO_EXISTING_SELLING_POINTS_NOT_SAVED"
+  },
+  "ui_evidence": {
+    "notice": "【副标题和关键词】已经合并升级为新版商品详情的【商品卖点】了！",
+    "destination": "商品卖点",
+    "existing_text_characters": 660,
+    "selling_points_modified": false,
+    "product_quality_ui": "5.0 优秀；不替代关键词验收"
+  },
+  "six_old_hr": {
+    "current_grade": "UNVERIFIED_CURRENT_UI_NO_PRODUCT_DATA",
+    "current_protection": "UNVERIFIED_CURRENT",
+    "historical_grade_date": "2026-10-02 00:48:31 UTC",
+    "historical_grade": "ordinary (historical only)",
+    "OFF_count": 0,
+    "siblings": "all 12 retain; protected siblings never touched",
+    "orders": {
+      "query_scope": {
+        "start": "2026-09-05 00:00:00",
+        "end": "2026-10-03 23:59:59",
+        "basis": "six formal gmt_create values are 2026-09-06; includes one preceding day; platform date_str semantics"
+      },
+      "list_count": 10,
+      "list_request_id": "213c932b17910456307912493",
+      "observed_reference_match": false,
+      "classification": "NO_OBSERVED_TARGET_REFERENCE_IN_10_RETURNED_SNAPSHOTS",
+      "limitations": "snapshot responses had no explicit success flag; full response identity binding not archived. Do not use this observation as definitive order clearance. Quotes not checked."
+    }
+  }
+}

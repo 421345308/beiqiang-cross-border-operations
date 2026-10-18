@@ -1,0 +1,27 @@
+{
+  "operation": "update",
+  "product_id": "10000047356491",
+  "category_id": 201334413,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "copy.json",
+    "before_get.json",
+    "../../../../../01_产品资产/02_可发布素材/00_最终上传/BQ061_AA811/00_上架填写表.md",
+    "../../../../../01_产品资产/01_原始数据包/待审_搜鞋网_2026-08-14/AA811/原图/01.webp",
+    "current_get.json",
+    "../../../../00_运营SOP/国际站商品全生命周期SOP.md"
+  ],
+  "current_schema": "current_schema.xml",
+  "current_schema_sha256": "36c66d80be7fb10a0844543a189732baa2f9a7caeb473f65cd1d750d88836fb2",
+  "schema_request_id": "2105584317917403259754919",
+  "schema_acquired_at": "2026-10-11T17:38:42.932430+00:00",
+  "payload_xml": "payload.xml",
+  "field_ids": [
+    "textDesc",
+    "companyFaqDesc"
+  ],
+  "dependency_ids": [
+    "productDescType"
+  ],
+  "observed_model": "BQ061 / AA811"
+}

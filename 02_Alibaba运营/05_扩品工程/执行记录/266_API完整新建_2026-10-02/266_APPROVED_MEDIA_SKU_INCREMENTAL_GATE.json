@@ -1,0 +1,266 @@
+{
+  "verdict": "PASS_APPROVED_FORMAL_MEDIA_AND_SKU_BINDING_ONLY",
+  "product_id": 1601969707634,
+  "checks": {
+    "approved_Y": true,
+    "render_biz_true_type4": true,
+    "actual15_byte_and_pixel_exact": true,
+    "actual15_urls_match_latest_formal_get": true,
+    "all30_color_size_code_bindings": true,
+    "two_color_image_source_identities": true,
+    "inventory_dedicated_read_matches30_actual_sku_ids": true
+  },
+  "get_request_id": "0b51802d17909301860658696",
+  "render_request_id": "213c934417909301889845186",
+  "inventory_request_id": "0bab02fe17909302868508286",
+  "sku_bindings": [
+    {
+      "sku_id": 109766332364,
+      "code": "BQ-W266-Black-40",
+      "color": "Black",
+      "size": 40,
+      "matches": true
+    },
+    {
+      "sku_id": 109766332365,
+      "code": "BQ-W266-Black-41",
+      "color": "Black",
+      "size": 41,
+      "matches": true
+    },
+    {
+      "sku_id": 109766332366,
+      "code": "BQ-W266-Black-42",
+      "color": "Black",
+      "size": 42,
+      "matches": true
+    },
+    {
+      "sku_id": 109766332367,
+      "code": "BQ-W266-Black-43",
+      "color": "Black",
+      "size": 43,
+      "matches": true
+    },
+    {
+      "sku_id": 109766332360,
+      "code": "BQ-W266-Black-36",
+      "color": "Black",
+      "size": 36,
+      "matches": true
+    },
+    {
+      "sku_id": 109766332361,
+      "code": "BQ-W266-Black-37",
+      "color": "Black",
+      "size": 37,
+      "matches": true
+    },
+    {
+      "sku_id": 109766332362,
+      "code": "BQ-W266-Black-38",
+      "color": "Black",
+      "size": 38,
+      "matches": true
+    },
+    {
+      "sku_id": 109766332363,
+      "code": "BQ-W266-Black-39",
+      "color": "Black",
+      "size": 39,
+      "matches": true
+    },
+    {
+      "sku_id": 109766332380,
+      "code": "BQ-W266-Grey-41",
+      "color": "Grey",
+      "size": 41,
+      "matches": true
+    },
+    {
+      "sku_id": 109766332381,
+      "code": "BQ-W266-Grey-42",
+      "color": "Grey",
+      "size": 42,
+      "matches": true
+    },
+    {
+      "sku_id": 109766332382,
+      "code": "BQ-W266-Grey-43",
+      "color": "Grey",
+      "size": 43,
+      "matches": true
+    },
+    {
+      "sku_id": 109766332383,
+      "code": "BQ-W266-Grey-44",
+      "color": "Grey",
+      "size": 44,
+      "matches": true
+    },
+    {
+      "sku_id": 109766332376,
+      "code": "BQ-W266-Grey-37",
+      "color": "Grey",
+      "size": 37,
+      "matches": true
+    },
+    {
+      "sku_id": 109766332377,
+      "code": "BQ-W266-Grey-38",
+      "color": "Grey",
+      "size": 38,
+      "matches": true
+    },
+    {
+      "sku_id": 109766332378,
+      "code": "BQ-W266-Grey-39",
+      "color": "Grey",
+      "size": 39,
+      "matches": true
+    },
+    {
+      "sku_id": 109766332379,
+      "code": "BQ-W266-Grey-40",
+      "color": "Grey",
+      "size": 40,
+      "matches": true
+    },
+    {
+      "sku_id": 109766332372,
+      "code": "BQ-W266-Black-48",
+      "color": "Black",
+      "size": 48,
+      "matches": true
+    },
+    {
+      "sku_id": 109766332373,
+      "code": "BQ-W266-Black-49",
+      "color": "Black",
+      "size": 49,
+      "matches": true
+    },
+    {
+      "sku_id": 109766332374,
+      "code": "BQ-W266-Black-50",
+      "color": "Black",
+      "size": 50,
+      "matches": true
+    },
+    {
+      "sku_id": 109766332375,
+      "code": "BQ-W266-Grey-36",
+      "color": "Grey",
+      "size": 36,
+      "matches": true
+    },
+    {
+      "sku_id": 109766332368,
+      "code": "BQ-W266-Black-44",
+      "color": "Black",
+      "size": 44,
+      "matches": true
+    },
+    {
+      "sku_id": 109766332369,
+      "code": "BQ-W266-Black-45",
+      "color": "Black",
+      "size": 45,
+      "matches": true
+    },
+    {
+      "sku_id": 109766332370,
+      "code": "BQ-W266-Black-46",
+      "color": "Black",
+      "size": 46,
+      "matches": true
+    },
+    {
+      "sku_id": 109766332371,
+      "code": "BQ-W266-Black-47",
+      "color": "Black",
+      "size": 47,
+      "matches": true
+    },
+    {
+      "sku_id": 109766332388,
+      "code": "BQ-W266-Grey-49",
+      "color": "Grey",
+      "size": 49,
+      "matches": true
+    },
+    {
+      "sku_id": 109766332389,
+      "code": "BQ-W266-Grey-50",
+      "color": "Grey",
+      "size": 50,
+      "matches": true
+    },
+    {
+      "sku_id": 109766332384,
+      "code": "BQ-W266-Grey-45",
+      "color": "Grey",
+      "size": 45,
+      "matches": true
+    },
+    {
+      "sku_id": 109766332385,
+      "code": "BQ-W266-Grey-46",
+      "color": "Grey",
+      "size": 46,
+      "matches": true
+    },
+    {
+      "sku_id": 109766332386,
+      "code": "BQ-W266-Grey-47",
+      "color": "Grey",
+      "size": 47,
+      "matches": true
+    },
+    {
+      "sku_id": 109766332387,
+      "code": "BQ-W266-Grey-48",
+      "color": "Grey",
+      "size": 48,
+      "matches": true
+    }
+  ],
+  "color_images_actual": [
+    {
+      "system_value_name": "Black",
+      "image_url": "https://sc04.alicdn.com/kf/H46c8258e046a4ece9cfca972d7d4c5a9T.jpg",
+      "value_id": 3327837
+    },
+    {
+      "system_value_name": "Grey",
+      "image_url": "https://sc04.alicdn.com/kf/H6a79d3afa4b8490491ad041ae7206625X.jpg",
+      "value_id": 3483425
+    }
+  ],
+  "keywords": {
+    "verdict": "HOLD_NOT_PERSISTED",
+    "formal_get": [
+      ""
+    ],
+    "render_complex_value_present": false
+  },
+  "inventory": {
+    "verdict": "HOLD_INQUIRY_MARKER_NOT_PERSISTED",
+    "actual_values": [
+      0
+    ],
+    "desired_authorized_inquiry_marker": 999,
+    "not_real_stock": true,
+    "dedicated_read_rows": 30,
+    "dedicated_success": true
+  },
+  "public_webpage": "PENDING_PARENT_PUBLIC_VISUAL_AND_COLOR_CLICK_ACCEPTANCE",
+  "operational_completion": false,
+  "reviewer_platform_writes": false,
+  "evidence_hashes": {
+    "new_formal_get.response.json": "5010e7598053c0048ed5ef9efc6736aef00e115effdfc259b7bc71fcf694e0f0",
+    "new_formal_render.response.json": "02ab15e31311f41e8e3179f2997eafecf69222304610e6d67a2ec171677d4144",
+    "new_inventory_get.response.json": "383e844fb5ba2093645efd67ee199c588f81862d800f8319f03c2e699e4b1e8e",
+    "266_new_actual_media_checks.json": "869acd26febcc15983b9a2adb142f5396b3ec4e6e2bd1e4eda119c164df65561"
+  }
+}

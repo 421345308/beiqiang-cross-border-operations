@@ -1,0 +1,75 @@
+{
+  "schema": "beiqiang-scene-review-assets-v1",
+  "reviewed_date": "2026-10-13",
+  "product": "BQ029/A025-all-black",
+  "image_tool": "built-in image_gen",
+  "items": [
+    {
+      "id": "01-pressure-loaded",
+      "path": "generation/references/01-pressure-loaded.png",
+      "sha256": "c7b3bbf191e0ff909151839fad5f59673bc9e0c31bfdbcca8bef10b3d242385a",
+      "width": 941,
+      "height": 1672,
+      "role": "conceptual_image_reference_not_real_performance_evidence"
+    },
+    {
+      "id": "01-pressure-recovered",
+      "path": "generation/references/01-pressure-recovered.png",
+      "sha256": "f286a86d57f383f0d06a52a17cce206bcd43f09e15e78f1b7380978b11ebb0cb",
+      "width": 941,
+      "height": 1672,
+      "role": "conceptual_image_reference_not_real_performance_evidence"
+    },
+    {
+      "id": "01-pressure-start",
+      "path": "generation/references/01-pressure-start.png",
+      "sha256": "2c5de83f37cced7c8a17986557c8a902dc8cdd60ad7f02265770a7896cf95e90",
+      "width": 941,
+      "height": 1672,
+      "role": "conceptual_image_reference_not_real_performance_evidence"
+    },
+    {
+      "id": "02-exit",
+      "path": "generation/references/02-exit.png",
+      "sha256": "08b7acbf545542aa52d57f43704ae8795732013cf5b337f01c6bad23eaacd53b",
+      "width": 941,
+      "height": 1672,
+      "role": "conceptual_image_reference_not_real_performance_evidence"
+    },
+    {
+      "id": "03-commute",
+      "path": "generation/references/03-commute.png",
+      "sha256": "58672a3b7a402c451c70143306fc9aad88f072dcd7e25fec9e27ca729ee84009",
+      "width": 941,
+      "height": 1672,
+      "role": "conceptual_image_reference_not_real_performance_evidence"
+    },
+    {
+      "id": "04-steps",
+      "path": "generation/references/04-steps.png",
+      "sha256": "085fe8d46a5e27e2515eec08aa4995ae7b34c3f57a7949addef6ce0277dde1a0",
+      "width": 941,
+      "height": 1672,
+      "role": "conceptual_image_reference_not_real_performance_evidence"
+    },
+    {
+      "id": "05-weekend",
+      "path": "generation/references/05-weekend.png",
+      "sha256": "7c808af7eef68fcab5ff85680e3f46c8f3af26d2b129db847ea264b148b49dfa",
+      "width": 941,
+      "height": 1672,
+      "role": "conceptual_image_reference_not_real_performance_evidence"
+    },
+    {
+      "id": "06-closing",
+      "path": "generation/references/06-closing.png",
+      "sha256": "5bf3c89a3221ebab188e3f6c8e502e90c35302837d8a1a2ce3e87e9e43b2fd05",
+      "width": 941,
+      "height": 1672,
+      "role": "conceptual_image_reference_not_real_performance_evidence"
+    }
+  ],
+  "video_generated": false,
+  "paid_video_authorized": false,
+  "planned_seconds": 26
+}

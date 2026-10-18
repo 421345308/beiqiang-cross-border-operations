@@ -1,0 +1,22 @@
+{
+  "style": "936",
+  "old_product_id": 1601969872083,
+  "new_product_id": "1601969906452",
+  "request_sha256": "7977790fe5cdd782064934cca73b992d6e303783494990c69566f20ab38ee5b6",
+  "method": "alibaba.icbu.product.schema.add",
+  "status": "submitted_needs_readback",
+  "started_at_utc": "2026-10-02T15:42:19.736771+00:00",
+  "inventory": "OMITTED_ALL",
+  "replacement_preflight": "PASS_AUTHORIZED_TRANSITION_OLD_RETAINED",
+  "parent_authorized": true,
+  "old_off_performed": false,
+  "refs": {
+    "request_id": "0b0b3a2717909557539224718",
+    "trace_id": "2101dd0617909557532911986e0b5b",
+    "message": null,
+    "error": null
+  },
+  "finished_at_utc": "2026-10-02T15:42:32.643043+00:00",
+  "content_status": "pending_readback",
+  "actual_transport_write_calls": 1
+}

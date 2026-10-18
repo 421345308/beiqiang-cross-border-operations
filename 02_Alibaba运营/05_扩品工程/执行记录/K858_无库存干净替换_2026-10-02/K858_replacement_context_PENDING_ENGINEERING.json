@@ -1,0 +1,45 @@
+{
+  "replacement": {
+    "authorized": true,
+    "old_product_id": 1601969860254,
+    "reason": "Replace early inventory0 listing with truthful no-inventory sourcing listing; same model, intentional transition duplicate",
+    "candidate_sha256": "ee9053b9c39276126aa861da5924799ed4ff2e53f0e9afceb11c1cac6b4867c3",
+    "new_product_id": null,
+    "off_old_only_after_new_actual5_and_publicpass": true
+  },
+  "candidate": {
+    "model": "BQ-M858",
+    "hero_url": "https://sc04.alicdn.com/kf/Hccdd9c6e31904c32b91b53d45ddccc9cj/286385890/Hccdd9c6e31904c32b91b53d45ddccc9cj.jpg",
+    "title": "Microfiber Closed-Toe Mules with Buckle Strap",
+    "source": {
+      "style": "K858"
+    },
+    "hero_review": {
+      "url": "https://sc04.alicdn.com/kf/Hccdd9c6e31904c32b91b53d45ddccc9cj/286385890/Hccdd9c6e31904c32b91b53d45ddccc9cj.jpg",
+      "aliases": [
+        "https://sc04.alicdn.com/kf/Hccdd9c6e31904c32b91b53d45ddccc9cj/286385890/Hccdd9c6e31904c32b91b53d45ddccc9cj.jpg"
+      ],
+      "evidence": "Existing product actualCDN independentvisualPASS reused"
+    }
+  },
+  "catalog": [
+    {
+      "product_id": 1601969860254,
+      "model": "BQ-M858",
+      "hero_url": "https://sc04.alicdn.com/kf/Hccdd9c6e31904c32b91b53d45ddccc9cj/286385890/Hccdd9c6e31904c32b91b53d45ddccc9cj.jpg",
+      "title": "Microfiber Closed-Toe Mules with Buckle Strap",
+      "source": {
+        "style": "K858"
+      },
+      "hero_review": {
+        "url": "https://sc04.alicdn.com/kf/Hccdd9c6e31904c32b91b53d45ddccc9cj/286385890/Hccdd9c6e31904c32b91b53d45ddccc9cj.jpg",
+        "aliases": [
+          "https://sc04.alicdn.com/kf/Hccdd9c6e31904c32b91b53d45ddccc9cj/286385890/Hccdd9c6e31904c32b91b53d45ddccc9cj.jpg"
+        ],
+        "evidence": "Exactexistingownproduct replacement mapping"
+      }
+    }
+  ],
+  "provenance": "Explicitparent latestcleanreplacementauthorization; catalog list here exactownoldtarget only, existing fullcatalog dedup receipts must be supplied bypreflight integration",
+  "do_not_treat_as_global_clearance": true
+}

@@ -1,0 +1,50 @@
+{
+  "id": "1601975911526",
+  "style": "013",
+  "at": "2026-10-14T02:08:11.486957+00:00",
+  "get_observed_at": "2026-10-14T02:08:11.486957+00:00",
+  "state": "FORMAL_FIELDS_SCORE_PASS",
+  "target_materials": {
+    "Midsole Material": [
+      "other"
+    ],
+    "Outsole Material": [
+      "Rubber"
+    ]
+  },
+  "effective_formal_match": true,
+  "schema_semantic_roles_match": true,
+  "rendered_values_match": true,
+  "protected_fields": {
+    "gmt_create": true,
+    "keywords": true,
+    "owner_member_display_name": true,
+    "subject": true,
+    "main_image": true,
+    "struct_detail_product": true,
+    "language": true,
+    "is_smart_edit": true,
+    "product_sku": true,
+    "category_id": true,
+    "product_id": true,
+    "sub_market_type": true,
+    "struct_detail": true,
+    "pc_detail_url": true,
+    "rts": true,
+    "product_type": true,
+    "sourcing_trade": true,
+    "price_type": true,
+    "owner_member": true,
+    "other_attributes": true
+  },
+  "status": "approved",
+  "display": "Y",
+  "request_id": "0b0b3a2717919436831933053",
+  "actual_score": "5.00",
+  "public_qa": "NOT_RETESTED_SCOPED_API_REPAIR",
+  "score_diagnostics": {
+    "flags": {},
+    "deductions": {},
+    "errors": []
+  }
+}

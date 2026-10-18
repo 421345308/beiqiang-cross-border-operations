@@ -1,0 +1,24 @@
+{
+  "method": "alibaba.icbu.product.batch.update.display",
+  "ids": [
+    "1601943621884",
+    "1601943670678",
+    "1601943742273",
+    "1601943768215",
+    "1601943774082"
+  ],
+  "params": {
+    "new_display": "off",
+    "product_id_list": [
+      1601943621884,
+      1601943670678,
+      1601943742273,
+      1601943768215,
+      1601943774082
+    ]
+  },
+  "intent": "Restore exact original display=N, not a new disposition",
+  "official_reference": "https://open.alibaba.com/doc/api.htm#/api?cid=20966&path=alibaba.icbu.product.batch.update.display&methodType=GET/POST",
+  "current_specification_observed": "product_id_list Number[] 商品明文id列表; current IOP sample [123,345]",
+  "previous_attempt": "Known MissingParameter business rejection; retained, not replayed unchanged"
+}

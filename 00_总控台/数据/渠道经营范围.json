@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "updated": "2026-10-15",
+  "source": "负责人本轮明确：当前经营独立站、国际站和海外社媒；国内抖音已开始，小红书、微信尚未开始；Amazon仅未来可考虑方向。",
+  "boundary": "经营范围及开始状态不等于账号已连接、内容已发布、店铺已开通或订单已成交；各项执行与效果仍查实际业务证据。",
+  "market_groups": {
+    "international": {
+      "name": "国外经营",
+      "default_customer_segment": "overseas_business_buyer",
+      "role": "国际站、独立站和海外社媒连接采购发现、选款、询盘、样品及订单讨论"
+    },
+    "domestic": {
+      "name": "国内经营",
+      "default_customer_segment": "consumer",
+      "role": "按国内消费者、经销/品牌客户分别组织内容、选择咨询和后续服务"
+    }
+  },
+  "channels": {
+    "alibaba": {
+      "market_scope": "international",
+      "status": "current",
+      "progress": "已有国际站经营",
+      "evidence_path": "02_Alibaba运营/AGENTS.md"
+    },
+    "storefront": {
+      "market_scope": "international",
+      "status": "current",
+      "progress": "已有B2B独立站经营",
+      "evidence_path": "03_独立站/README.md"
+    },
+    "linkedin": {
+      "market_scope": "international",
+      "status": "current",
+      "progress": "海外社媒经营范围；具体账号身份、发布进度和连接查社媒入口",
+      "evidence_path": "05_内容与视频/04_社交媒体运营/README.md"
+    },
+    "facebook": {
+      "market_scope": "international",
+      "status": "current",
+      "progress": "海外社媒经营范围；具体账号身份、发布进度和连接查社媒入口",
+      "evidence_path": "05_内容与视频/04_社交媒体运营/README.md"
+    },
+    "tiktok": {
+      "market_scope": "international",
+      "status": "current",
+      "progress": "海外社媒经营范围，已有历史作品；不等于系统运营或发布API已接通",
+      "evidence_path": "05_内容与视频/04_社交媒体运营/README.md"
+    },
+    "douyin": {
+      "market_scope": "domestic",
+      "status": "started",
+      "progress": "已核国内抖店与国内妙手登录；独立HTTP四项查询成功，工厂来源动态参数可直接读取；棉鞋全款已形成含缺口准备稿，另已提交并后台回读四条存量属性修复；本批棉鞋创建/正式上架尚未完成",
+      "evidence_path": "09_国内电商/抖店/README.md"
+    },
+    "xiaohongshu": {
+      "market_scope": "domestic",
+      "status": "planned_not_started",
+      "progress": "负责人确认尚未开始；可以准备方法与内容，不记为已经运营"
+    },
+    "wechat": {
+      "market_scope": "domestic",
+      "status": "planned_not_started",
+      "progress": "负责人确认尚未开始；账号形态、内容、客户承接与实际发送能力待明确"
+    },
+    "amazon": {
+      "market_scope": "international",
+      "status": "future_option",
+      "progress": "当前未开展，不属于当前经营清单；仅保留以后按需求扩展的模板"
+    }
+  }
+}

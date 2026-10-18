@@ -1,0 +1,63 @@
+{
+  "task_id": "8815_new_20261004",
+  "role": "NEW",
+  "phase": "REVIEWED_ONCE_CREATE",
+  "writer": "task-5",
+  "next_action": "Canonical once-create and exact new-ID acceptance; no old-off",
+  "public_model": "BQ-NS002",
+  "category_id": 201334413,
+  "product_id": null,
+  "source_identity": {
+    "reference": "https://weituo.sooxie.com/detail/2559340",
+    "style": "8815",
+    "evidence": [
+      "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\sooxie_2559340_20261004\\facts_and_color_bindings.json",
+      "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\sooxie_2559340_20261004\\source_visible_text.txt"
+    ],
+    "critical_facts": {
+      "upper_structure": "stitched panelled upper with eyelets and collar",
+      "outsole_structure": "visible raised sidewall; material and performance unspecified",
+      "closure": "lace-up with rear pull tab",
+      "profile": "panelled raised-sole casual sneaker"
+    }
+  },
+  "search_intent": {
+    "key": "panelled chunky casual sneakers with rear pull tabs",
+    "evidence": [
+      "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\sooxie_2559340_20261004\\buyer_copy_reviewed.json"
+    ],
+    "limits": "Observed construction positioning; not proof of demand, professional sporting performance or traffic"
+  },
+  "hero_review": {
+    "url": "https://sc04.alicdn.com/kf/H94f9408676a649a9aa2bca36d7960ab5q/286385890/H94f9408676a649a9aa2bca36d7960ab5q.jpg",
+    "aliases": [
+      "//sc04.alicdn.com/kf/H94f9408676a649a9aa2bca36d7960ab5q/286385890/H94f9408676a649a9aa2bca36d7960ab5q.jpg"
+    ],
+    "sha256": "a395c3ac591f0f33ef4401dd4aebd8603a37b7b735217acd069140fc8512ee82",
+    "content_key": "8815_actual_grey_panelled_pair",
+    "label_status": "not_present",
+    "evidence": [
+      "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\sooxie_2559340_20261004\\fresh_gallery_4.jpg"
+    ],
+    "limits": "Original visible decoration retained; source-register/catalog scope only; no global same-shoe clearance"
+  },
+  "source_traceability": {
+    "supplier_name": "维拓鞋业",
+    "supplier_original_model": "8815",
+    "supplier_original_direct_url": "https://weituo.sooxie.com/detail/2559340",
+    "our_model": "BQ-NS002",
+    "international_product_id": null
+  },
+  "evidence_files": [
+    {
+      "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\工厂店外新款数据采集模板.md",
+      "sha256": "44b1efe1cebebc6987ee12bba887bf1f8b5976e0826b4fa5626e8159226db814",
+      "kind": "task_pack_template"
+    },
+    {
+      "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\sooxie_2559340_20261004\\single_product_task_pack.md",
+      "sha256": "0571f7b50e81ebf89f70723291a5ec9d07ae93730c3a623391840777f0a1a1b1",
+      "kind": "task_pack_document"
+    }
+  ]
+}

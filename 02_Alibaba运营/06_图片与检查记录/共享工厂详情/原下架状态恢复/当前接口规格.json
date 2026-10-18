@@ -1,0 +1,12 @@
+{
+  "observed_at": "2026-10-12T04:47:00Z",
+  "official_url": "https://open.alibaba.com/doc/api.htm?apiName=alibaba.icbu.product.batch.update.display#/api?cid=20966&path=alibaba.icbu.product.batch.update.display&methodType=GET/POST",
+  "method": "alibaba.icbu.product.batch.update.display",
+  "parameters": {
+    "new_display": "String; on or off",
+    "product_id_list": "Number[]; 商品明文id列表"
+  },
+  "sample": "request.addApiParameter(\"product_id_list\", \"[123,345]\");",
+  "method_of_observation": "Normal current official browser API document table and SDK example; not credentials or hidden state",
+  "older_top_reference_not_current_contract": "TOP旧页类型为混淆ID字符串，与当前IOP不一致；旧请求明确MissingParameter且独立读回未改变状态；纠正数字数组请求后sub_success=true及5条approved/N均已核"
+}

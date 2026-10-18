@@ -1,0 +1,27 @@
+{
+  "operation": "update",
+  "product_id": "1601939631570",
+  "category_id": 201334413,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "copy.json",
+    "before_get.json",
+    "../../../../../01_产品资产/02_可发布素材/00_最终上传/BQ005_A503/00_上架填写表.md",
+    "../../../../../01_产品资产/01_原始数据包/已整理_BQ005_A503_贝强鞋业A503夏季镂空男女鞋35-45批55元/贝强鞋业A503夏季镂空男女鞋35-45批55元/主图-1/1.jpg",
+    "current_get.json",
+    "../../../../00_运营SOP/国际站商品全生命周期SOP.md"
+  ],
+  "current_schema": "current_schema.xml",
+  "current_schema_sha256": "d5c7844376cc71c0382d58483e7ddc7c74d2d1640ad08d628c3f6f2edf522c78",
+  "schema_request_id": "213e759c17917352203136269",
+  "schema_acquired_at": "2026-10-11T16:13:37.479937+00:00",
+  "payload_xml": "payload.xml",
+  "field_ids": [
+    "textDesc",
+    "companyFaqDesc"
+  ],
+  "dependency_ids": [
+    "productDescType"
+  ],
+  "observed_model": "BQ005-O1 / A503"
+}

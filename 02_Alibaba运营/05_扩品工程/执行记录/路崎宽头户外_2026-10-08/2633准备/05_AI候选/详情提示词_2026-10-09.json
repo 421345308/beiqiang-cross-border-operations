@@ -1,0 +1,29 @@
+{
+  "tool": "built-in image_gen",
+  "jobs": [
+    {
+      "key": "D1",
+      "ref": "01.jpg",
+      "prompt": "Use-case: text-localization / exact footwear catalog image edit. Create one square English B2B footwear detail panel, clean white margins, restrained charcoal sans-serif type. This is a real sourced shoe: preserve the exact source shoe geometry, toe proportions, mesh holes, side black/white stripe pattern, toggle bungee cord and slider, collar, pull loop and outsole shape/color. Keep the photographed shoe(s) as a literal photo inset or precise cutout; no new viewpoint, no invented texture or parts, no macros or magnification beyond source evidence, no generated color variants. No Chinese, no price, no supplier code, no extra logos, no certifications, no waterproof/grip/medical/weight/composition or stock promises. Product photo dominates, complete source shoe boundaries. Use the attached OffWhite pair photo as the only footwear source, remove cabinet/floor background around exact complete pair onto white with subtle natural grounding. Header: 'WIDE TOE BOX MESH SHOES'. Small factual labels in a side column: 'Toggle bungee closure', 'Open mesh upper', 'EU 39–48'. Footer: 'Confirm color-size mix and order requirements'. Wide toe is confirmed by the owner for this exact category; do not redraw or exaggerate the toe. Preserve both exact source shoes and brown soles."
+    },
+    {
+      "key": "D2",
+      "ref": "13.jpg",
+      "prompt": "Use-case: text-localization / exact footwear catalog image edit. Create one square English B2B footwear detail panel, clean white margins, restrained charcoal sans-serif type. This is a real sourced shoe: preserve the exact source shoe geometry, toe proportions, mesh holes, side black/white stripe pattern, toggle bungee cord and slider, collar, pull loop and outsole shape/color. Keep the photographed shoe(s) as a literal photo inset or precise cutout; no new viewpoint, no invented texture or parts, no macros or magnification beyond source evidence, no generated color variants. No Chinese, no price, no supplier code, no extra logos, no certifications, no waterproof/grip/medical/weight/composition or stock promises. Product photo dominates, complete source shoe boundaries. Place the WHOLE attached black pair on-foot photo intact in a large rectangular photo inset, including the hands handling the existing toggle. No cutout or crop of either shoe, no detailed magnified callout. Header: 'TOGGLE BUNGEE CLOSURE'. Footer: 'Actual closure view | Confirm specifications for your order'. Add no other facts. Preserve the existing slider, cord path, white side lines and source mesh exactly."
+    },
+    {
+      "key": "D3",
+      "ref": "31.jpg",
+      "prompt": "Use-case: text-localization / exact footwear catalog image edit. Create one square English B2B footwear detail panel, clean white margins, restrained charcoal sans-serif type. This is a real sourced shoe: preserve the exact source shoe geometry, toe proportions, mesh holes, side black/white stripe pattern, toggle bungee cord and slider, collar, pull loop and outsole shape/color. Keep the photographed shoe(s) as a literal photo inset or precise cutout; no new viewpoint, no invented texture or parts, no macros or magnification beyond source evidence, no generated color variants. No Chinese, no price, no supplier code, no extra logos, no certifications, no waterproof/grip/medical/weight/composition or stock promises. Product photo dominates, complete source shoe boundaries. Use the whole attached LightGrey on-foot side-profile photograph intact as one large photo inset. Preserve both shoes, black sole, source ground and soft background; do not add water splash or graphic grip effects. Header: 'ON-FOOT SIDE PROFILE'. A small footer only: 'LightGrey shown | Confirm intended use and fit before ordering'. This panel shows actual appearance and profile, not performance or measurements."
+    },
+    {
+      "key": "D4",
+      "ref": "33.jpg",
+      "prompt": "Use-case: text-localization / exact footwear catalog image edit. Create one square English B2B footwear detail panel, clean white margins, restrained charcoal sans-serif type. This is a real sourced shoe: preserve the exact source shoe geometry, toe proportions, mesh holes, side black/white stripe pattern, toggle bungee cord and slider, collar, pull loop and outsole shape/color. Keep the photographed shoe(s) as a literal photo inset or precise cutout; no new viewpoint, no invented texture or parts, no macros or magnification beyond source evidence, no generated color variants. No Chinese, no price, no supplier code, no extra logos, no certifications, no waterproof/grip/medical/weight/composition or stock promises. Product photo dominates, complete source shoe boundaries. Use the whole attached exact OffWhite pair photo, both shoes complete, in a large photo rectangle; retain source hand holding shoe and actual shoe appearance without moving parts. Make a narrow clear information column with exact text: 'SIZE & ORDER DETAILS', 'EU 39–48', 'Black / LightGrey / OffWhite', 'Send pair quantities for each color and EU size', 'Include packaging needs and destination'. Footer: 'Confirm fit and availability before ordering'. Color names only; do not draw color swatches, extra shoes, conversion tables, measurements or availability badges."
+    }
+  ],
+  "rejected": {
+    "D1": "Unrequested magnified mesh/toggle circles; do not use as detail evidence",
+    "D4": "Right shoe boundary too close/cropped against column; rework whole-photo inset"
+  }
+}

@@ -1,0 +1,483 @@
+{
+  "candidate": "shnx_2511301",
+  "source_artno": "J55",
+  "supplier": "四海鞋业",
+  "source_url": "https://shnx.sooxie.com/detail/2511301",
+  "source_price_cny": 20,
+  "source_color_labels": [
+    "白绿",
+    "白兰",
+    "黑白"
+  ],
+  "colors": [
+    "White/Green",
+    "White/Blue",
+    "Black/White"
+  ],
+  "sizes": [
+    39,
+    40,
+    41,
+    42,
+    43,
+    44
+  ],
+  "upper": "Other",
+  "lining": "Other",
+  "midsole": "Other",
+  "outsole": "Other",
+  "closure": "Lace-up",
+  "style": [
+    "Sporty",
+    "Casual Sneakers"
+  ],
+  "seasons": [
+    "All Seasons"
+  ],
+  "feature": "Fashion Trend",
+  "category_id": 201334413,
+  "target_ids": {
+    "A": "1601943738486",
+    "B": "1601943703750",
+    "C": "1601943717639"
+  },
+  "source_assets_root": "01_产品资产/01_原始数据包/HR065_J55",
+  "source_date": "2026-10-13",
+  "fx_cny_per_usd": 6.6837,
+  "tiers": [
+    [
+      2,
+      "4.49"
+    ],
+    [
+      50,
+      "4.19"
+    ],
+    [
+      100,
+      "3.90"
+    ]
+  ],
+  "page_state": "FORMAL_FIELDS_SCORE_PASS",
+  "selection_review": {
+    "state": "REVIEWED_ADOPT",
+    "private_backend_evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/经营数据与选款.json",
+    "reason": "No contact signal in either observed period and insufficient traffic. Owner permits selecting a different suitable actual shoe instead of recreating the unsupported original concept. Current source has complete coherent product photographs, public purchasing entrance and fixed quoted cost.",
+    "data_limit": "Low exposure does not prove absent buyer appeal; new source not claimed market-validated.",
+    "cost_usd": 2.992354534165208,
+    "gross_difference_usd": [
+      1.4976,
+      1.1976,
+      0.9076
+    ],
+    "comparison_limit": "Exact same-model Alibaba complete quote not verified; do not claim market-cheapest. Preserve50/40/30 cost markup and assess packaging/QC/platform/payment/freight/tax at order level, not net-profit guarantee."
+  },
+  "dedup": "Exact current supplier/model URL absent from unique source registry; raw galleries reviewed in full, not reused as another existing adopted family. Actual generic source markings retained; no recognised global-brand clone on selected photographs.",
+  "platform_group_id": 971467417,
+  "platform_group_name": "Athletic & Running Style Shoes",
+  "store_group_review": "Use the existing official athletic-style store group; name does not imply tested performance running.",
+  "company_faq_source": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/通用FAQ与公司简介.json",
+  "do_not_claim": [
+    "physical stock",
+    "tested slip resistance",
+    "medical comfort",
+    "unverified midsole material"
+  ],
+  "local_intent_candidates": [
+    "渐变配色系带运动休闲鞋"
+  ],
+  "materials_evidence": [
+    "Entire10source photos show low-top lace-up sneaker, textured upper with curved side graphics, contrasting layered sidewall and heel loop. Public source gives no component chemistry or actual bottom photograph: all4Other; no fibre/resin/outsole-material or tested running/grip promise. Three current source colour names mapped to exact photos06/05/07; numericEU39-44 only. Actual SS source lettering kept, not called unbranded."
+  ],
+  "titles": {
+    "A": "Lace-Up Casual Sneakers with Gradient Colour Panels and Curved Sole Sidewall for Everyday Outfits",
+    "B": "Athletic Style Casual Shoes with Textured Upper and Contrast Side Graphics for Footwear Collections",
+    "C": "Low-Top Lace-Up Casual Sneakers with Rear Pull Loop and Layered Sole Profile"
+  },
+  "keywords": [
+    "Gradient Colour Casual Sneakers",
+    "Lace Up Athletic Style Shoes",
+    "Low Top Casual Footwear"
+  ],
+  "custom": [
+    "Shoe Profile",
+    "Lace-up; textured upper; curved side graphics; rear loop"
+  ],
+  "highlights": "Graphic colour directions: White/Green and White/Blue combine gradient panels with curved side graphics, while Black/White offers a contrasting neutral option.\n\nLace-up front: Visible eyelet rows allow the fastening to be adjusted across the instep.\n\nLayered sole profile: Curved sidewall grooves and a contrasting band define the low-top athletic casual silhouette.\n\nRear entry details: A low-cut opening and a heel pull loop provide a place to grip the shoe when putting it on.\n\nWholesale assortment: All three options are listed in EU39-44. Send colour-size quantities, packing preference and destination for an order quotation.",
+  "assets_layout": {
+    "M1": {
+      "buyer_question": "What is the offered shoe?",
+      "title": null,
+      "subtitle": "",
+      "photos": [
+        {
+          "index": 5,
+          "box": [
+            15,
+            15,
+            985,
+            985
+          ]
+        }
+      ],
+      "text": []
+    },
+    "M2": {
+      "buyer_question": "How does the full side profile look?",
+      "title": "Athletic casual silhouette",
+      "subtitle": "Gradient panels and a curved sidewall outline.",
+      "photos": [
+        {
+          "index": 8,
+          "box": [
+            45,
+            215,
+            955,
+            935
+          ]
+        }
+      ],
+      "text": []
+    },
+    "M3": {
+      "buyer_question": "What is the upper graphic and texture?",
+      "title": "Textured forefoot & side graphics",
+      "subtitle": "Original close view of the Black/White option.",
+      "photos": [
+        {
+          "index": 10,
+          "box": [
+            45,
+            215,
+            955,
+            935
+          ],
+          "crop": [
+            70,
+            170,
+            765,
+            650
+          ]
+        }
+      ],
+      "text": []
+    },
+    "M4": {
+      "buyer_question": "Which colours and EU sizes can I request?",
+      "title": "Colour & EU assortment",
+      "subtitle": "Choose the colour-size quantities for your order.",
+      "photos": [
+        {
+          "index": 6,
+          "box": [
+            45,
+            280,
+            315,
+            810
+          ]
+        },
+        {
+          "index": 5,
+          "box": [
+            360,
+            280,
+            630,
+            810
+          ]
+        },
+        {
+          "index": 7,
+          "box": [
+            675,
+            280,
+            945,
+            810
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "White/Green",
+          "xy": [
+            50,
+            850
+          ],
+          "size": 22
+        },
+        {
+          "value": "White/Blue",
+          "xy": [
+            365,
+            850
+          ],
+          "size": 22
+        },
+        {
+          "value": "Black/White",
+          "xy": [
+            680,
+            850
+          ],
+          "size": 22
+        },
+        {
+          "value": "EU 39-44",
+          "xy": [
+            45,
+            930
+          ],
+          "size": 32
+        }
+      ]
+    },
+    "M5": {
+      "buyer_question": "What are the heel and collar details?",
+      "title": "Side & rear profile",
+      "subtitle": "Original Black/White source views.",
+      "photos": [
+        {
+          "index": 4,
+          "box": [
+            45,
+            215,
+            955,
+            935
+          ],
+          "crop": [
+            20,
+            325,
+            780,
+            650
+          ]
+        }
+      ],
+      "text": []
+    },
+    "D1": {
+      "buyer_question": "How are the laces and front arranged?",
+      "title": "Lace-up front construction",
+      "subtitle": "Original White/Green shoe profile.",
+      "photos": [
+        {
+          "index": 9,
+          "box": [
+            45,
+            215,
+            955,
+            1070
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "Curved side graphics and an adjustable lace front.",
+          "xy": [
+            45,
+            1140
+          ],
+          "size": 25
+        }
+      ]
+    },
+    "D2": {
+      "buyer_question": "What sidewall features are visible?",
+      "title": "Layered sole sidewall",
+      "subtitle": "Original close-up of the contrast sidewall band.",
+      "photos": [
+        {
+          "index": 6,
+          "box": [
+            45,
+            215,
+            955,
+            1070
+          ],
+          "crop": [
+            45,
+            550,
+            775,
+            670
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "Contrast band and visible curved sidewall grooves.",
+          "xy": [
+            45,
+            1140
+          ],
+          "size": 25
+        }
+      ]
+    },
+    "D3": {
+      "buyer_question": "How does the neutral option appear?",
+      "title": "Black & White colour direction",
+      "subtitle": "Actual paired shoes in the source photograph.",
+      "photos": [
+        {
+          "index": 7,
+          "box": [
+            45,
+            215,
+            955,
+            1070
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "Same lace-up structure across all three options.",
+          "xy": [
+            45,
+            1140
+          ],
+          "size": 25
+        }
+      ]
+    },
+    "D4": {
+      "buyer_question": "Which colours and EU sizes can I request?",
+      "title": "Colour & EU assortment",
+      "subtitle": "Choose the colour-size quantities for your order.",
+      "photos": [
+        {
+          "index": 6,
+          "box": [
+            45,
+            280,
+            315,
+            810
+          ]
+        },
+        {
+          "index": 5,
+          "box": [
+            360,
+            280,
+            630,
+            810
+          ]
+        },
+        {
+          "index": 7,
+          "box": [
+            675,
+            280,
+            945,
+            810
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "White/Green",
+          "xy": [
+            50,
+            850
+          ],
+          "size": 22
+        },
+        {
+          "value": "White/Blue",
+          "xy": [
+            365,
+            850
+          ],
+          "size": 22
+        },
+        {
+          "value": "Black/White",
+          "xy": [
+            680,
+            850
+          ],
+          "size": 22
+        },
+        {
+          "value": "EU 39-44",
+          "xy": [
+            45,
+            1170
+          ],
+          "size": 32
+        }
+      ]
+    },
+    "SKU_WHITE_GREEN": {
+      "buyer_question": "Which colour is this SKU?",
+      "title": null,
+      "subtitle": "",
+      "photos": [
+        {
+          "index": 6,
+          "box": [
+            25,
+            25,
+            975,
+            975
+          ]
+        }
+      ],
+      "text": []
+    },
+    "SKU_WHITE_BLUE": {
+      "buyer_question": "Which colour is this SKU?",
+      "title": null,
+      "subtitle": "",
+      "photos": [
+        {
+          "index": 5,
+          "box": [
+            25,
+            25,
+            975,
+            975
+          ]
+        }
+      ],
+      "text": []
+    },
+    "SKU_BLACK_WHITE": {
+      "buyer_question": "Which colour is this SKU?",
+      "title": null,
+      "subtitle": "",
+      "photos": [
+        {
+          "index": 7,
+          "box": [
+            25,
+            25,
+            975,
+            975
+          ]
+        }
+      ],
+      "text": []
+    }
+  },
+  "source_id": "src-hr-hr065-j55",
+  "source_evidence": [
+    "01_产品资产/01_原始数据包/HR065_J55/source.json",
+    "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR065/素材清单.json"
+  ],
+  "procurement_capability": "CURRENT_REAL_SHOE_AND_PROCUREMENT_ENTRY_VERIFIED_NOT_ORDER_STOCK",
+  "current_models_by_id": {
+    "1601943717639": "BQ1065-C",
+    "1601943703750": "BQ1065-B",
+    "1601943738486": "BQ1065-A"
+  },
+  "model_migration_evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/范围.json",
+  "model_numbers": {
+    "C": "BQ1065-C",
+    "B": "BQ1065-B",
+    "A": "BQ1065-A"
+  },
+  "current_platform_category_by_id": {
+    "1601943738486": 201334413,
+    "1601943703750": 201334413,
+    "1601943717639": 201334413
+  },
+  "category_scope": "category_id保留初始改造默认；当前平台叶子按current_platform_category_by_id逐ID读取，不把同源链接不同平台分类混成不同实鞋。"
+}

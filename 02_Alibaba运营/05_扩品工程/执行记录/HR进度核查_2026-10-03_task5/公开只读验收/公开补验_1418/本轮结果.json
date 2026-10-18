@@ -1,0 +1,89 @@
+{
+  "at_utc": "2026-10-03T15:47:17.953738+00:00",
+  "public_QA_complete": 6,
+  "products": [
+    {
+      "product": "M001",
+      "product_id": 1601970169467,
+      "public_QA": "PASS",
+      "scope_this_round": "full",
+      "result": "M001本轮公开补验_1418/阶段结果.json",
+      "evidence_files_verified": 48,
+      "keyword_persistence": "UNTESTED; exact-ID formal get empty",
+      "oldHR_treatment": "NOT_PERFORMED",
+      "strict_business_closure": false
+    },
+    {
+      "product": "2627BSK",
+      "product_id": 1601969885846,
+      "public_QA": "PASS",
+      "scope_this_round": "full",
+      "result": "公开补验_1418/2627BSK/验收结果.json",
+      "evidence_files_verified": 46,
+      "keyword_persistence": "UNTESTED; exact-ID formal get empty",
+      "oldHR_treatment": "NOT_PERFORMED",
+      "strict_business_closure": false
+    },
+    {
+      "product": "805",
+      "product_id": 1601969877983,
+      "public_QA": "PASS",
+      "scope_this_round": "full",
+      "result": "公开补验_1418/805/验收结果.json",
+      "evidence_files_verified": 50,
+      "keyword_persistence": "UNTESTED; exact-ID formal get empty",
+      "oldHR_treatment": "NOT_PERFORMED",
+      "strict_business_closure": false
+    },
+    {
+      "product": "H219",
+      "product_id": 1601969936536,
+      "public_QA": "PASS",
+      "scope_this_round": "full",
+      "result": "公开补验_1418/H219/验收结果.json",
+      "evidence_files_verified": 48,
+      "keyword_persistence": "UNTESTED; exact-ID formal get empty",
+      "oldHR_treatment": "NOT_PERFORMED",
+      "strict_business_closure": false
+    },
+    {
+      "product": "F2888",
+      "product_id": 1601970034464,
+      "public_QA": "PASS",
+      "scope_this_round": "full",
+      "result": "公开补验_1418/F2888/验收结果.json",
+      "evidence_files_verified": 50,
+      "keyword_persistence": "UNTESTED; exact-ID formal get empty",
+      "oldHR_treatment": "NOT_PERFORMED",
+      "strict_business_closure": false
+    },
+    {
+      "product": "936",
+      "product_id": 1601969906452,
+      "public_QA": "PASS",
+      "scope_this_round": "inquiry_only; prior accepted core QA retained",
+      "result": "公开补验_1418/936/验收结果.json",
+      "evidence_files_verified": 4,
+      "keyword_persistence": "UNTESTED; exact-ID formal get empty",
+      "oldHR_treatment": "NOT_PERFORMED",
+      "strict_business_closure": false
+    }
+  ],
+  "strict_business_closure_complete": 0,
+  "product_mutations": 0,
+  "inquiry_submissions": 0,
+  "message_sends": 0,
+  "evidence_files_verified": 246,
+  "browser_handoff": {
+    "pid": 20640,
+    "hwnd": 16452386,
+    "state": "minimized; QA control released",
+    "zoom": "100%",
+    "inquiry_form": "closed",
+    "message_panel": "closed",
+    "original_tabs_and_unsaved_editor": "preserved"
+  },
+  "historical_blocker_records": "13:04 CAPTCHA records retained as historical evidence; superseded for current public QA",
+  "936_prior_core_reference": "task/936_K858_public_closeout/qa_checkpoint.json (coordinator accepted evidence; not re-created or independently re-read this round)",
+  "unexpected_message_panel": "936 inquiry close revealed automatic underlying message panel; closed without selecting customer conversations or sending; temporary private capture deleted and excluded"
+}

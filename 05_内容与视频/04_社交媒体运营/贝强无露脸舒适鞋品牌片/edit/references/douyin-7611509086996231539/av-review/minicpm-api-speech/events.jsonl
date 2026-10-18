@@ -1,0 +1,5 @@
+{"type": "session.queue_done"}
+{"type": "session.created", "session_id": "sess_6d83256706a4", "mode": "turn_based", "metrics": {"backend": "pytorch", "kv_cache_length": 411}, "server_send_ts": 1791780197.1862266}
+{"type": "response.output.delta", "kind": "text", "session_id": "sess_6d83256706a4", "response_id": "resp_959bc01f60a2", "text": "现在是声音测试，北墙斜页。", "server_send_ts": 1791780198.4200914}
+{"type": "response.output.delta", "kind": "text", "session_id": "sess_6d83256706a4", "response_id": "resp_959bc01f60a2", "text": "一，二，三。", "server_send_ts": 1791780198.5857122}
+{"type": "response.done", "session_id": "sess_6d83256706a4", "response_id": "resp_959bc01f60a2", "text": "现在是声音测试，北墙斜页。一，二，三。", "reason": "turn_end", "metrics": {"backend": "pytorch", "kv_cache_length": 166}, "server_send_ts": 1791780198.5860941}

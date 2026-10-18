@@ -1,0 +1,437 @@
+{
+  "status": "BUYER_ROLE_REVIEW_PASS",
+  "observed_at": "2026-10-10T09:16:08.920711+00:00",
+  "roles": [
+    {
+      "role": "M1",
+      "buyer_question": "搜索识别",
+      "source_indices": [
+        1
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\029准备\\01_产品来源原图\\01.jpg"
+      ],
+      "source_sha256": [
+        "0b6bf39a29cb2c3bf3cd89008bca52e20bc1fb34a51230b83647b5a581e6d375"
+      ],
+      "source_dimensions": [
+        [
+          800,
+          800
+        ]
+      ],
+      "source_region_key": "actual-photo-1",
+      "prompt": "Use case: precise-object-edit. Square English B2B product photograph panel. Edit target exact Luqi029 photo. Preserve actual shoe count/pose, textured grain upper, undulating forefoot seam, flat black laces/single top metal eyelet, rear loop and smooth sculpted sole edge. All shoes remain black. Preserve photographed Mesh or Plush lining: regular smooth mesh collar vs fuzzy plush collar. Preserve original bareankles or white socks exactly, no swapping variant. Product dominant and neat readable English margins; remove old text/frames/brand names/flames/foot diagrams and performance icons. No new shoe, angle/rotation/recolor, hidden reconstruction or changed seams/tread. No leather composition, waterproof, slip resistance, medical, warmth rating, performance/test, price or delivery claims. Preserve exact one whole regular Black Mesh Lining shoe at original front-threequarter angle, complete original silhouette and shadow on white background; no text.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\029准备\\05_AI候选\\M1.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-1fdd7013-557e-4ae0-ba96-b3b2211e6fc8.png",
+      "output_sha256": "03e87b800429c45a529131b4066598e68a34d6ab2788b6d820ad9bac5c0746b7",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T09:16:08.920711+00:00",
+      "review_note": "Individually compared current source: exact grain/undulating stitch and soleedge, shoe counts/poses; original bareankles or white socks retained. D1 strict forefoot partial grain macro, D2 actual partial visible outsole strip without hidden reconstruction, D3 physical Mesh/Plush lining comparison, D4 EU39-48. SKU source11 two disjoint sideprofiles, source01 supports grain only, no angle invention. Three failed candidates excluded."
+    },
+    {
+      "role": "M2",
+      "buyer_question": "加绒前掌上脚",
+      "source_indices": [
+        13
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\029准备\\01_产品来源原图\\13.jpg"
+      ],
+      "source_sha256": [
+        "5c5a13e52b8c4e78ad8b495c7b46860ce3f5fe57fe7735772e0f278c858569c9"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1082
+        ]
+      ],
+      "source_region_key": "actual-photo-13",
+      "prompt": "Use case: precise-object-edit. Square English B2B product photograph panel. Edit target exact Luqi029 photo. Preserve actual shoe count/pose, textured grain upper, undulating forefoot seam, flat black laces/single top metal eyelet, rear loop and smooth sculpted sole edge. All shoes remain black. Preserve photographed Mesh or Plush lining: regular smooth mesh collar vs fuzzy plush collar. Preserve original bareankles or white socks exactly, no swapping variant. Product dominant and neat readable English margins; remove old text/frames/brand names/flames/foot diagrams and performance icons. No new shoe, angle/rotation/recolor, hidden reconstruction or changed seams/tread. No leather composition, waterproof, slip resistance, medical, warmth rating, performance/test, price or delivery claims. Keep original TWO Black Plush Lining onfoot shoes with original white socks/black pant hems on snow, front view. Frame below knees/no face or torso, retain actual snow without claiming suitability/test. Text: PLUSH LINING OPTION; Actual photographed front view.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\029准备\\05_AI候选\\M2.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-bf7bfcf2-b49c-4d40-828c-210156b2c5ed.png",
+      "output_sha256": "e725dbed2617ae8c97cd16664aca1215c5dc3fd35413696f30b745105f74e23b",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T09:16:08.920711+00:00",
+      "review_note": "Individually compared current source: exact grain/undulating stitch and soleedge, shoe counts/poses; original bareankles or white socks retained. D1 strict forefoot partial grain macro, D2 actual partial visible outsole strip without hidden reconstruction, D3 physical Mesh/Plush lining comparison, D4 EU39-48. SKU source11 two disjoint sideprofiles, source01 supports grain only, no angle invention. Three failed candidates excluded."
+    },
+    {
+      "role": "M3",
+      "buyer_question": "常规侧面结构",
+      "source_indices": [
+        7
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\029准备\\01_产品来源原图\\07.jpg"
+      ],
+      "source_sha256": [
+        "158766107402c65fdc5faf8f3c404dab0c7ff43b130718fec16a1b3e27d1dc14"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1206
+        ]
+      ],
+      "source_region_key": "actual-photo-7",
+      "prompt": "Use case: precise-object-edit. Square English B2B product photograph panel. Edit target exact Luqi029 photo. Preserve actual shoe count/pose, textured grain upper, undulating forefoot seam, flat black laces/single top metal eyelet, rear loop and smooth sculpted sole edge. All shoes remain black. Preserve photographed Mesh or Plush lining: regular smooth mesh collar vs fuzzy plush collar. Preserve original bareankles or white socks exactly, no swapping variant. Product dominant and neat readable English margins; remove old text/frames/brand names/flames/foot diagrams and performance icons. No new shoe, angle/rotation/recolor, hidden reconstruction or changed seams/tread. No leather composition, waterproof, slip resistance, medical, warmth rating, performance/test, price or delivery claims. Preserve exact TWO regular Black onfoot shoes at original raised/planted side pose with original bareankles/black cuffs on gravel. Frame below knees. Text: LACE-UP SIDE PROFILE; Textured upper and rear pull loop.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\029准备\\05_AI候选\\M3.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-f634c135-2d83-48ae-803c-44942a1ea5db.png",
+      "output_sha256": "fb9ae6d5a63267fbd3886a8b65fc35378363e1696c70435e23d232221302e206",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T09:16:08.920711+00:00",
+      "review_note": "Individually compared current source: exact grain/undulating stitch and soleedge, shoe counts/poses; original bareankles or white socks retained. D1 strict forefoot partial grain macro, D2 actual partial visible outsole strip without hidden reconstruction, D3 physical Mesh/Plush lining comparison, D4 EU39-48. SKU source11 two disjoint sideprofiles, source01 supports grain only, no angle invention. Three failed candidates excluded."
+    },
+    {
+      "role": "M4",
+      "buyer_question": "后跟轮廓",
+      "source_indices": [
+        19
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\029准备\\01_产品来源原图\\19.jpg"
+      ],
+      "source_sha256": [
+        "6bbca569653926eab10ad8ce6afaacadc78ffa8796b85cb03b05167d1c8b488b"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1079
+        ]
+      ],
+      "source_region_key": "actual-photo-19",
+      "prompt": "Use case: precise-object-edit. Square English B2B product photograph panel. Edit target exact Luqi029 photo. Preserve actual shoe count/pose, textured grain upper, undulating forefoot seam, flat black laces/single top metal eyelet, rear loop and smooth sculpted sole edge. All shoes remain black. Preserve photographed Mesh or Plush lining: regular smooth mesh collar vs fuzzy plush collar. Preserve original bareankles or white socks exactly, no swapping variant. Product dominant and neat readable English margins; remove old text/frames/brand names/flames/foot diagrams and performance icons. No new shoe, angle/rotation/recolor, hidden reconstruction or changed seams/tread. No leather composition, waterproof, slip resistance, medical, warmth rating, performance/test, price or delivery claims. Keep exact two Black onfoot shoes with bareankles/black cuffs, one foreground tilted shoe/other rearplanted heel view, original gravel pose. Frame below knees. Text: HEEL PROFILE; Actual photographed construction.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\029准备\\05_AI候选\\M4.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-b4fe15bf-7806-42fb-9c13-023b027fe678.png",
+      "output_sha256": "47bf9dca78b3f8a6083840e173f21120e30b0b3d2d7c06bcae07efd732694c69",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T09:16:08.920711+00:00",
+      "review_note": "Individually compared current source: exact grain/undulating stitch and soleedge, shoe counts/poses; original bareankles or white socks retained. D1 strict forefoot partial grain macro, D2 actual partial visible outsole strip without hidden reconstruction, D3 physical Mesh/Plush lining comparison, D4 EU39-48. SKU source11 two disjoint sideprofiles, source01 supports grain only, no angle invention. Three failed candidates excluded."
+    },
+    {
+      "role": "M5",
+      "buyer_question": "采购输入",
+      "source_indices": [
+        18
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\029准备\\01_产品来源原图\\18.jpg"
+      ],
+      "source_sha256": [
+        "a786273be60047a5739b0203c072ee49b01f88f69669b0c077598f114602b1a7"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1175
+        ]
+      ],
+      "source_region_key": "actual-photo-18",
+      "prompt": "Use case: precise-object-edit. Square English B2B product photograph panel. Edit target exact Luqi029 photo. Preserve actual shoe count/pose, textured grain upper, undulating forefoot seam, flat black laces/single top metal eyelet, rear loop and smooth sculpted sole edge. All shoes remain black. Preserve photographed Mesh or Plush lining: regular smooth mesh collar vs fuzzy plush collar. Preserve original bareankles or white socks exactly, no swapping variant. Product dominant and neat readable English margins; remove old text/frames/brand names/flames/foot diagrams and performance icons. No new shoe, angle/rotation/recolor, hidden reconstruction or changed seams/tread. No leather composition, waterproof, slip resistance, medical, warmth rating, performance/test, price or delivery claims. Use exact two Black regular shoes, one planted and one handheld at original collar with actual hand/bareankles/black cuffs/gravel. Frame below knees, no face/torso. Text: PLAN YOUR ASSORTMENT; Send lining option, EU size mix, pair quantity and destination.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\029准备\\05_AI候选\\M5.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-da0b521f-1e10-498c-aeb7-337a73ddff36.png",
+      "output_sha256": "db6bdd11c64e7f06c2ef7c3f21cdcc853c977a4ccb857d2f3e40f087a0e52de1",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T09:16:08.920711+00:00",
+      "review_note": "Individually compared current source: exact grain/undulating stitch and soleedge, shoe counts/poses; original bareankles or white socks retained. D1 strict forefoot partial grain macro, D2 actual partial visible outsole strip without hidden reconstruction, D3 physical Mesh/Plush lining comparison, D4 EU39-48. SKU source11 two disjoint sideprofiles, source01 supports grain only, no angle invention. Three failed candidates excluded."
+    },
+    {
+      "role": "D1",
+      "buyer_question": "鞋面纹理",
+      "source_indices": [
+        10
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\029准备\\01_产品来源原图\\10.jpg"
+      ],
+      "source_sha256": [
+        "788b0774cc570f70eb76528a6da002d5881a9f7ec08278e0a1a5761101e0a39e"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1422
+        ]
+      ],
+      "source_region_key": "actual-photo-10",
+      "prompt": "Use case: precise-object-edit. Square English B2B product photograph panel. Edit target exact Luqi029 photo. Preserve actual shoe count/pose, textured grain upper, undulating forefoot seam, flat black laces/single top metal eyelet, rear loop and smooth sculpted sole edge. All shoes remain black. Preserve photographed Mesh or Plush lining: regular smooth mesh collar vs fuzzy plush collar. Preserve original bareankles or white socks exactly, no swapping variant. Product dominant and neat readable English margins; remove old text/frames/brand names/flames/foot diagrams and performance icons. No new shoe, angle/rotation/recolor, hidden reconstruction or changed seams/tread. No leather composition, waterproof, slip resistance, medical, warmth rating, performance/test, price or delivery claims. Use only actual tilted Black shoe photograph. Tight partial macro of visible forefoot textured grain and undulating stitched panel/laces; partial photograph stays partial, no fullshoe reconstruction. Remove all old diagram/foam/text. Text: TEXTURED UPPER DETAIL; Actual photographed surface and stitching. CRITICAL CROP: show only forefoot grain surface, its curved stitched seam and at most bottom two lace crossings. BOTH heel and collar MUST be outside the frame. The toe front and sidewall may be partially cropped. No complete shoe silhouette, no heel loop, no tongue/collar/insole. This is one tight original-photo region, no inset.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\029准备\\05_AI候选\\D1.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-1b9e70d9-be8b-4011-9e3e-4e038842de3d.png",
+      "output_sha256": "99f089b8dcc40143966682f22fa6c869c4527fa3e7c1e59a27393f39f3efb4e7",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T09:16:08.920711+00:00",
+      "review_note": "Individually compared current source: exact grain/undulating stitch and soleedge, shoe counts/poses; original bareankles or white socks retained. D1 strict forefoot partial grain macro, D2 actual partial visible outsole strip without hidden reconstruction, D3 physical Mesh/Plush lining comparison, D4 EU39-48. SKU source11 two disjoint sideprofiles, source01 supports grain only, no angle invention. Three failed candidates excluded."
+    },
+    {
+      "role": "D2",
+      "buyer_question": "实际底纹",
+      "source_indices": [
+        17
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\029准备\\01_产品来源原图\\17.jpg"
+      ],
+      "source_sha256": [
+        "ae7d9ec487bec822e3ad4767fa950415ca7db463ddee0e39d43bf689a1519300"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          989
+        ]
+      ],
+      "source_region_key": "actual-photo-17",
+      "prompt": "Use case: precise-object-edit. Square English B2B product photograph panel. Edit target exact Luqi029 photo. Preserve actual shoe count/pose, textured grain upper, undulating forefoot seam, flat black laces/single top metal eyelet, rear loop and smooth sculpted sole edge. All shoes remain black. Preserve photographed Mesh or Plush lining: regular smooth mesh collar vs fuzzy plush collar. Preserve original bareankles or white socks exactly, no swapping variant. Product dominant and neat readable English margins; remove old text/frames/brand names/flames/foot diagrams and performance icons. No new shoe, angle/rotation/recolor, hidden reconstruction or changed seams/tread. No leather composition, waterproof, slip resistance, medical, warmth rating, performance/test, price or delivery claims. Use ONLY visible outsole on foreground raised Black shoe, macro crop of actual exposed tread edge/sections and sculpted sidewall. Partial outsole remains partial, no hidden complete sole; exclude other shoe if outside crop. Text: EVA OUTSOLE; Actual photographed tread section. CRITICAL OUTPUT: Exactly one extremely tight CROP of ORIGINAL rightmost visible black outsole edge/its herringbone tread sections and neighboring sculpted sidewall on raised foreground shoe. Do not show the upper, ankle, collar, other planted shoe or complete silhouette. No fullfoot photo, no inset/callout/magnifier/circle. Do not rotate shoe to reveal hidden bottom. Crop original visible narrow strip only and put two-line English caption in clean pale margin.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\029准备\\05_AI候选\\D2.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-16e2f797-197f-4188-a23d-cd28ce8519c1.png",
+      "output_sha256": "175301a28e879bec45f8bc87516f4a482ea79f585845b5e5ff4cb3da162e2fa8",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T09:16:08.920711+00:00",
+      "review_note": "Individually compared current source: exact grain/undulating stitch and soleedge, shoe counts/poses; original bareankles or white socks retained. D1 strict forefoot partial grain macro, D2 actual partial visible outsole strip without hidden reconstruction, D3 physical Mesh/Plush lining comparison, D4 EU39-48. SKU source11 two disjoint sideprofiles, source01 supports grain only, no angle invention. Three failed candidates excluded."
+    },
+    {
+      "role": "D3",
+      "buyer_question": "内里选择",
+      "source_indices": [
+        9
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\029准备\\01_产品来源原图\\09.jpg"
+      ],
+      "source_sha256": [
+        "2a8962f96583254d0b607b2ee648f059c119e667ab5a494cb508cdca5abe011d"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1523
+        ]
+      ],
+      "source_region_key": "actual-photo-9",
+      "prompt": "Use case: precise-object-edit. Square English B2B product photograph panel. Edit target exact Luqi029 photo. Preserve actual shoe count/pose, textured grain upper, undulating forefoot seam, flat black laces/single top metal eyelet, rear loop and smooth sculpted sole edge. All shoes remain black. Preserve photographed Mesh or Plush lining: regular smooth mesh collar vs fuzzy plush collar. Preserve original bareankles or white socks exactly, no swapping variant. Product dominant and neat readable English margins; remove old text/frames/brand names/flames/foot diagrams and performance icons. No new shoe, angle/rotation/recolor, hidden reconstruction or changed seams/tread. No leather composition, waterproof, slip resistance, medical, warmth rating, performance/test, price or delivery claims. Use ONLY actual upper large Plush collar/shoe photo and lowerRIGHT small Mesh collar photo. Preserve two original independent lining photos and label clearly in clean two-panel layout; no additional whole shoes. Remove old text/feathers/performance icons. Text: CHOOSE YOUR LINING; PLUSH LINING; MESH LINING; Confirm the option with your order.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\029准备\\05_AI候选\\D3.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-34e37d24-7714-4c36-ab5e-c052ce5f6fc3.png",
+      "output_sha256": "3d00b624e1dd94fc58e1efa66a5bc7b9513463b0cacf63c9fd0c882e446612dd",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T09:16:08.920711+00:00",
+      "review_note": "Individually compared current source: exact grain/undulating stitch and soleedge, shoe counts/poses; original bareankles or white socks retained. D1 strict forefoot partial grain macro, D2 actual partial visible outsole strip without hidden reconstruction, D3 physical Mesh/Plush lining comparison, D4 EU39-48. SKU source11 two disjoint sideprofiles, source01 supports grain only, no angle invention. Three failed candidates excluded."
+    },
+    {
+      "role": "D4",
+      "buyer_question": "EU尺码输入",
+      "source_indices": [
+        6
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\029准备\\01_产品来源原图\\06.jpg"
+      ],
+      "source_sha256": [
+        "6df7d598032602568721a67456a2aa296d648379e9b66c813172b6d3a58a81db"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1273
+        ]
+      ],
+      "source_region_key": "actual-photo-6",
+      "prompt": "Use case: precise-object-edit. Square English B2B product photograph panel. Edit target exact Luqi029 photo. Preserve actual shoe count/pose, textured grain upper, undulating forefoot seam, flat black laces/single top metal eyelet, rear loop and smooth sculpted sole edge. All shoes remain black. Preserve photographed Mesh or Plush lining: regular smooth mesh collar vs fuzzy plush collar. Preserve original bareankles or white socks exactly, no swapping variant. Product dominant and neat readable English margins; remove old text/frames/brand names/flames/foot diagrams and performance icons. No new shoe, angle/rotation/recolor, hidden reconstruction or changed seams/tread. No leather composition, waterproof, slip resistance, medical, warmth rating, performance/test, price or delivery claims. Use original actual foreground Black Plush Lining onfoot shoe with white sock/black pant hem on snow, retain visible background shoe fragment if included by crop. Frame below knees and crop out hand/torso. Preserve photographed pose and fuzzy collar, no new shoe. Text: EU SIZE PLANNING; EU 39-48; Confirm lining option and size mix.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\029准备\\05_AI候选\\D4.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-b9d6ff18-4da8-4f7a-9a31-3b1d3ecc1858.png",
+      "output_sha256": "c7cdc0b18f606ee7665e73cdba2d31b776786b10db446ab35e49e9f2cd109d09",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T09:16:08.920711+00:00",
+      "review_note": "Individually compared current source: exact grain/undulating stitch and soleedge, shoe counts/poses; original bareankles or white socks retained. D1 strict forefoot partial grain macro, D2 actual partial visible outsole strip without hidden reconstruction, D3 physical Mesh/Plush lining comparison, D4 EU39-48. SKU source11 two disjoint sideprofiles, source01 supports grain only, no angle invention. Three failed candidates excluded."
+    },
+    {
+      "role": "SKU_Black Mesh Lining",
+      "buyer_question": "网布内里SKU",
+      "source_indices": [
+        11,
+        1
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\029准备\\01_产品来源原图\\11.jpg",
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/029准备/01_产品来源原图/01.jpg"
+      ],
+      "source_sha256": [
+        "7fa0c1cab2888961ef1cfc8e2597c3ff8724edc4cfb093e86d7454ef15ad2886",
+        "0b6bf39a29cb2c3bf3cd89008bca52e20bc1fb34a51230b83647b5a581e6d375"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1637
+        ],
+        [
+          800,
+          800
+        ]
+      ],
+      "source_region_key": "SKU_Black Mesh Lining",
+      "prompt": "Use case: precise-object-edit. Square English B2B product photograph panel. Edit target exact Luqi029 photo. Preserve actual shoe count/pose, textured grain upper, undulating forefoot seam, flat black laces/single top metal eyelet, rear loop and smooth sculpted sole edge. All shoes remain black. Preserve photographed Mesh or Plush lining: regular smooth mesh collar vs fuzzy plush collar. Preserve original bareankles or white socks exactly, no swapping variant. Product dominant and neat readable English margins; remove old text/frames/brand names/flames/foot diagrams and performance icons. No new shoe, angle/rotation/recolor, hidden reconstruction or changed seams/tread. No leather composition, waterproof, slip resistance, medical, warmth rating, performance/test, price or delivery claims. Use ONLY lower-middle RIGHT actual single regular Mesh Lining side-profile shoe photograph below two collar closeups. Exclude LEFTplush shoe, both upper collar photos and all text. Whole original side-profile shoe on white background, no rotation/text/collage. Preserve smooth mesh collar. Second reference photo01 is TEXTURE SUPPORT only: preserve exact original irregular pebbled embossed grain upper. Outside upper is NOT a woven mesh, textile knit, net or regular hexagonal holes. Mesh refers ONLY to inner collar/lining of regular variant. Main edit target first reference11 lower-middle RIGHT regular actual single side-profile remains original SIDE profile, no angle change. Preserve original stitched panel geometry and black sculpted sole, correct actual grain with photo01 evidence. Regular variant has smooth mesh inner collar, pebbled grain exterior.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\029准备\\05_AI候选\\SKU_Black Mesh Lining.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-50388494-c1c6-4bc1-84fa-e4c93e2dcd9b.png",
+      "output_sha256": "86808db3523e740a8b38294c15f8df8e3dcf14b3b412d0519eb8e874b46d5a73",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T09:16:08.920711+00:00",
+      "review_note": "Individually compared current source: exact grain/undulating stitch and soleedge, shoe counts/poses; original bareankles or white socks retained. D1 strict forefoot partial grain macro, D2 actual partial visible outsole strip without hidden reconstruction, D3 physical Mesh/Plush lining comparison, D4 EU39-48. SKU source11 two disjoint sideprofiles, source01 supports grain only, no angle invention. Three failed candidates excluded."
+    },
+    {
+      "role": "SKU_Black Plush Lining",
+      "buyer_question": "加绒内里SKU",
+      "source_indices": [
+        11,
+        1
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\029准备\\01_产品来源原图\\11.jpg",
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/029准备/01_产品来源原图/01.jpg"
+      ],
+      "source_sha256": [
+        "7fa0c1cab2888961ef1cfc8e2597c3ff8724edc4cfb093e86d7454ef15ad2886",
+        "0b6bf39a29cb2c3bf3cd89008bca52e20bc1fb34a51230b83647b5a581e6d375"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1637
+        ],
+        [
+          800,
+          800
+        ]
+      ],
+      "source_region_key": "SKU_Black Plush Lining",
+      "prompt": "Use case: precise-object-edit. Square English B2B product photograph panel. Edit target exact Luqi029 photo. Preserve actual shoe count/pose, textured grain upper, undulating forefoot seam, flat black laces/single top metal eyelet, rear loop and smooth sculpted sole edge. All shoes remain black. Preserve photographed Mesh or Plush lining: regular smooth mesh collar vs fuzzy plush collar. Preserve original bareankles or white socks exactly, no swapping variant. Product dominant and neat readable English margins; remove old text/frames/brand names/flames/foot diagrams and performance icons. No new shoe, angle/rotation/recolor, hidden reconstruction or changed seams/tread. No leather composition, waterproof, slip resistance, medical, warmth rating, performance/test, price or delivery claims. Use ONLY lower-middle LEFT actual single Plush Lining side-profile shoe photograph below two collar closeups. Exclude RIGHTregular shoe, both upper collar photos and all text. Whole original side-profile shoe on white background, no rotation/text/collage. Preserve fuzzy plush collar. Second reference photo01 is TEXTURE SUPPORT only: preserve exact original irregular pebbled embossed grain upper. Outside upper is NOT a woven mesh, textile knit, net or regular hexagonal holes. Mesh refers ONLY to inner collar/lining of regular variant. Main edit target first reference11 lower-middle LEFT plush actual single side-profile remains original SIDE profile, no angle change. Preserve original stitched panel geometry and black sculpted sole, correct actual grain with photo01 evidence. Plush variant has fuzzy lining at collar only, not furry outside upper.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\029准备\\05_AI候选\\SKU_Black Plush Lining.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-3efbee10-edb8-4c9f-8cbf-7c79520f75de.png",
+      "output_sha256": "50cec58df7748f7b68716536ae0cd0abdc21bc5bd260c1eadaf946e714a863ea",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T09:16:08.920711+00:00",
+      "review_note": "Individually compared current source: exact grain/undulating stitch and soleedge, shoe counts/poses; original bareankles or white socks retained. D1 strict forefoot partial grain macro, D2 actual partial visible outsole strip without hidden reconstruction, D3 physical Mesh/Plush lining comparison, D4 EU39-48. SKU source11 two disjoint sideprofiles, source01 supports grain only, no angle invention. Three failed candidates excluded."
+    }
+  ],
+  "M6": {
+    "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎新品_2026-10-07\\图片修复\\F.png",
+    "bank_url": "https://sc04.alicdn.com/kf/S6c8cb1d46d8c4b018cf07f5cab50c1adi/286385890/S6c8cb1d46d8c4b018cf07f5cab50c1adi.png",
+    "file_id": "30149993323"
+  },
+  "company": [
+    {
+      "role": "C1",
+      "usage": "ordinary_HTML_company_context",
+      "official_url": "https://sc04.alicdn.com/kf/Ha8c1682092424e778eadf945763e79daU/286385890/Ha8c1682092424e778eadf945763e79daU.jpg",
+      "file_id": "33355885480",
+      "local_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\266_quality_audit\\originals\\C01_factory_profile.jpg",
+      "sha256": "23a34c8e425ae286d190ac1eb587c93e9a87421fdf490ec48f260e53e316149c",
+      "local_hash_verified": true,
+      "pixel_edit": false
+    },
+    {
+      "role": "C2",
+      "usage": "ordinary_HTML_company_context",
+      "official_url": "https://sc04.alicdn.com/kf/H496f7579171f4370a1d47c3adf30001bK/286385890/H496f7579171f4370a1d47c3adf30001bK.jpg",
+      "file_id": "33358392283",
+      "local_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\266_quality_audit\\originals\\C02_oem_odm_workflow.jpg",
+      "sha256": "66624253f1d95ec68e060d792f13c61943c86f7d61e763167a0a2eb1146300f5",
+      "local_hash_verified": true,
+      "pixel_edit": false
+    },
+    {
+      "role": "C3",
+      "usage": "ordinary_HTML_company_context",
+      "official_url": "https://sc04.alicdn.com/kf/H36e700f5c3ee447a80c035d8ae7521d9a/286385890/H36e700f5c3ee447a80c035d8ae7521d9a.jpg",
+      "file_id": "33355813301",
+      "local_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\266_quality_audit\\originals\\C03_production_process.jpg",
+      "sha256": "3ae00d6398224dd7021ed2a266584bccb77b741b31fa9c72ca8ad66ab443f683",
+      "local_hash_verified": true,
+      "pixel_edit": false
+    },
+    {
+      "role": "C4",
+      "usage": "ordinary_HTML_company_context",
+      "official_url": "https://sc04.alicdn.com/kf/H9f32c7ecea0f4d25bc5ddc9cd04c1e5dK/286385890/H9f32c7ecea0f4d25bc5ddc9cd04c1e5dK.jpg",
+      "file_id": "33358345636",
+      "local_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\266_quality_audit\\originals\\C04_quality_control.jpg",
+      "sha256": "f32d682a7055a3e44f91eb074b678507beca63967da5565de8997f582a651bf5",
+      "local_hash_verified": true,
+      "pixel_edit": false
+    },
+    {
+      "role": "C5",
+      "usage": "ordinary_HTML_company_context",
+      "official_url": "https://sc04.alicdn.com/kf/H5f71c3cfb4064b51bb458d0a786cb402R/286385890/H5f71c3cfb4064b51bb458d0a786cb402R.jpg",
+      "file_id": "33358440083",
+      "local_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\266_quality_audit\\originals\\C05_packing_inquiry.jpg",
+      "sha256": "d0f3916d920a9ec46fd822317a9cd3c684b6b7d60631208475fa2be138d05bc2",
+      "local_hash_verified": true,
+      "pixel_edit": false
+    }
+  ],
+  "excluded_candidates": [
+    {
+      "role": "D1",
+      "native_path": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-b7dcac3c-cefe-4bd7-a567-c32afa145c99.png",
+      "reason": "Details include nearly full shoe/collar; redo as strict partial forefoot stitched grain macro for independent role."
+    },
+    {
+      "role": "D2",
+      "native_path": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-49c7886a-0f5c-4234-bb88-b4e45a9b4592.png",
+      "reason": "Ignored tight partial tread crop; kept both entire onfoot shoes and invented redundant magnifier/inset. Retry no inset, no fullshoe."
+    },
+    {
+      "role": "SKU_Black Mesh Lining",
+      "native_path": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-d7f7498a-7967-45dd-b2d0-641dbbabe617.png",
+      "reason": "Outside upper texture became too regular hexagonal woven mesh; correct pebbled grain using current actual source01 texture support; lining mesh stays inside collar."
+    }
+  ],
+  "complete_set_visual_review_at": "2026-10-10T09:17:12.147053+00:00",
+  "complete_set_note": "Nine independent main/detail photographs and two disjoint source11 single-color photos plus real factoryM6 and five company panels compared visually. Photograph pose, grain upper/undulating seam/sculpted sole edge, Black Mesh/Black Plush lining options and EU39-48, source tread and independent main/detail roles checked. No public webpage rendering proof."
+}

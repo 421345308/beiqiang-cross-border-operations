@@ -1,0 +1,90 @@
+{
+  "observed_at": "2026-10-04T04:20:56.738640+00:00",
+  "cases": [
+    {
+      "name": "989",
+      "public_model": "BQ-NS001",
+      "product_id": "1601970628659",
+      "review": "approved",
+      "display": "Y",
+      "score": "5.00",
+      "category_name": "Basketball Style Shoes",
+      "prices_USD": [
+        19.03,
+        17.76,
+        16.49
+      ],
+      "quantity_tiers": [
+        "2–49",
+        "50–99",
+        "100+"
+      ],
+      "public_url": "https://www.alibaba.com/product-detail/Basketball-Style-Lace-Up-Casual-Sneakers_1601970628659.html",
+      "formal_content": "formal_fields_verified",
+      "SKU_count": 39,
+      "passed_public_checks": [
+        "all price tiers",
+        "all source colors and size labels",
+        "source-grounded material attributes",
+        "product detail content",
+        "company content visible",
+        "six FAQ answers accessible",
+        "actual visible summary matches formal textDesc",
+        "current editor migration notice and selling points"
+      ],
+      "gallery_visual": "M1–M5 enlarged reviewed; M6 thumbnail and formal asset identity checked",
+      "unconfirmed_public_checks": [
+        "inquiry form opening",
+        "M6 separately enlarged screenshot"
+      ],
+      "new_product_public_acceptance": "PENDING_ADDITIONAL_PUBLIC_CHECKS",
+      "old_off": 0,
+      "replacement_family_closed": false,
+      "receipt_path": "最终验收\\989\\create_once_receipt.json"
+    },
+    {
+      "name": "725",
+      "public_model": "BQ-CS063C",
+      "product_id": "1601970622736",
+      "review": "approved",
+      "display": "Y",
+      "score": "5.00",
+      "category_name": "Walking Style Shoes",
+      "prices_USD": [
+        13.43,
+        12.54,
+        11.65
+      ],
+      "quantity_tiers": [
+        "2–49",
+        "50–99",
+        "100+"
+      ],
+      "public_url": "https://www.alibaba.com/product-detail/Basketball-Inspired-Mesh-Lace-Up-Casual_1601970622736.html",
+      "formal_content": "formal_fields_verified",
+      "SKU_count": 60,
+      "passed_public_checks": [
+        "all price tiers",
+        "all source colors and size labels",
+        "source-grounded material attributes",
+        "product detail content",
+        "company content visible",
+        "six FAQ answers accessible",
+        "actual visible summary matches formal textDesc",
+        "current editor migration notice and selling points"
+      ],
+      "gallery_visual": "all six individually captured and reviewed",
+      "unconfirmed_public_checks": [
+        "inquiry form opening"
+      ],
+      "new_product_public_acceptance": "PENDING_ADDITIONAL_PUBLIC_CHECKS",
+      "old_off": 0,
+      "replacement_family_closed": false,
+      "receipt_path": "最终验收\\725\\create_faq_types_corrected_once_receipt.json"
+    }
+  ],
+  "old_off": 0,
+  "full_acceptance": 0,
+  "engineering_tests": "56 PASS; zero platform writes",
+  "next_candidate": "HQ308 materials staging; no upload/create executed"
+}

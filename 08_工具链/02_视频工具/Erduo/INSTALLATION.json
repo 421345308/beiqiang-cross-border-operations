@@ -1,0 +1,27 @@
+{
+  "installed_on": "2026-10-11",
+  "upstream_repository": "https://github.com/erduo1998-cell/erduo-broll-loop-engineering",
+  "upstream_commit": "741583ed973f9a431fcb262396556eae7fd13f15",
+  "release_file_version": "1.1.1",
+  "hyperframes_version": "0.7.104",
+  "skill_installation": "personal Codex skills/erduo-broll-loop-engineering; skill-installer pinned Git method",
+  "official_skills_repository": "https://github.com/heygen-com/hyperframes",
+  "official_skills_commit": "c96b30c7174984e684620556ce871a285381ec60",
+  "official_skills_directory": "official-skills",
+  "official_skills_count": 8,
+  "windows_adapters": ["Invoke-Erduo.ps1", "launch-windows.mjs", "render-windows.mjs"],
+  "verification": {
+    "scope": "single-shot 2-second silent technical fixture; not commercial or aesthetic approval",
+    "fixture": "99_临时区/Erduo_POC",
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "frames": 60,
+    "decode": "passed",
+    "preview_sha256": "b18de7d78ccf2bca8407fd2ec0e66a3ebff772be93e30db117f359bb586b1010",
+    "sheet_sha256": "1c06b29a39c1a12f438caff6d43dbba90c731baee44461f77ec0a2b2870b7d1c",
+    "cache_reuse": "1 shot reused; 0 rendered; preview reused",
+    "upstream_windows_status": "unverified"
+  },
+  "paid_generation_submitted": false
+}

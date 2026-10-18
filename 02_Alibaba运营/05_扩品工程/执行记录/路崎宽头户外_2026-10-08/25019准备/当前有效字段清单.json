@@ -1,0 +1,16 @@
+{
+  "projection": "CURRENT_EFFECTIVE_FIELDS_NOT_FOR_SUBMISSION",
+  "product_id": "1601975986800",
+  "base": "完整提交.xml",
+  "incremental_receipts": [
+    "内里属性修正/正式更新回执.json"
+  ],
+  "incremental_payloads": [
+    "内里属性修正/单属性载荷.xml"
+  ],
+  "current_fields": "当前有效字段.xml",
+  "sha256": "45e92805174b4b2a22f970bf2421a3297f1a5fad50b7834a15b04d2591e50ced",
+  "observed_at": "2026-10-10T18:09:21.675282+00:00",
+  "acceptance": "发布后字段核验.json",
+  "scope": "Plush describes observed lining structure; fiber composition remains unconfirmed. Original create payload/receipt retained."
+}

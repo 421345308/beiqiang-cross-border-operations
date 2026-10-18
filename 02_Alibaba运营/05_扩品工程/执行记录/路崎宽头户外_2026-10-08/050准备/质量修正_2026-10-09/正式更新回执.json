@@ -1,0 +1,78 @@
+{
+  "method": "alibaba.icbu.product.schema.update",
+  "operation": "update",
+  "status": "submitted_needs_readback",
+  "content_status": "pending_readback",
+  "expected_fields": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Unisex Wide Toe Box Mesh Walking Sneakers Angular Layered Side Panels Lace Up Casual Shoes EU 36-48 Wholesale",
+          []
+        ]
+      ]
+    ]
+  },
+  "sku_verification": null,
+  "task_pack": null,
+  "replacement_plan": null,
+  "replacement_transition": null,
+  "inventory_input": null,
+  "post_publish_acceptance": {
+    "phase": "post_publish_completion",
+    "target_score": 5.0,
+    "actual_score": null,
+    "observed_at": null,
+    "score_source": null,
+    "diagnostics": {
+      "status": "not_read"
+    },
+    "score_status": "pending_score",
+    "overall_status": "PENDING_SCORE",
+    "unverified_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "versioned_content": null,
+    "required_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "limits": "Platform listing score does not prove public content, source truth or real product quality."
+  },
+  "attempted_at": "2026-10-08T16:44:38.376247+00:00",
+  "response": {
+    "trace_id": "2141115b17914778884401457e0ef5",
+    "product_id": 1601973794508,
+    "biz_success": true,
+    "request_id": "212cbf3217914778885693967",
+    "_trace_id_": "2141115b17914778884401457e0ef5"
+  },
+  "refs": {
+    "request_id": "212cbf3217914778885693967",
+    "trace_id": "2141115b17914778884401457e0ef5",
+    "message": null,
+    "error": null
+  },
+  "product_id": "1601973794508"
+}

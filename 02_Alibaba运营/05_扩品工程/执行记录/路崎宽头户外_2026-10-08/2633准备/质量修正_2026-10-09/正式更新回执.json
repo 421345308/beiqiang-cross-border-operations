@@ -1,0 +1,547 @@
+{
+  "method": "alibaba.icbu.product.schema.update",
+  "operation": "update",
+  "status": "submitted_needs_readback",
+  "content_status": "pending_readback",
+  "expected_fields": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Mens Wide Toe Box Mesh Walking Shoes Toggle Bungee Closure Low Top Summer Casual Sneakers EU 39-48 Wholesale",
+          []
+        ]
+      ]
+    ],
+    "textDesc": [
+      "field",
+      [
+        [
+          "id",
+          "textDesc"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Wide toe box open mesh walking shoes with toggle bungee closure for summer casual footwear assortments. Black, Light Grey and Off White; EU 39-48. Photographs show the mesh panels, drawcord toggle, toe overlay and segmented sole. Share color-size mix, pair quantities, packaging needs and destination for a wholesale quotation. Final specifications and availability are confirmed before ordering.",
+          []
+        ]
+      ]
+    ],
+    "companyFaqDesc": [
+      "field",
+      [
+        [
+          "id",
+          "companyFaqDesc"
+        ]
+      ],
+      "",
+      [
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Which colors and sizes are offered?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Black, LightGrey, OffWhite; EU 39-48. Send your color-size mix for availability and size-chart confirmation.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "What is the footwear style?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Wide toe box low-top open mesh footwear with a toggle bungee closure for casual walking and everyday outdoor assortments. Confirm suitability for your intended use before ordering.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "What information is needed for a quotation?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Send pair quantity, color-size mix, packaging needs and destination. Product price, freight and service requirements are quoted for the requested order.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Can I request a sample?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Share the preferred color, EU size and destination. Sample availability, charges and timing will be confirmed.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Can branding and packaging be discussed?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Send artwork and packaging specifications for feasibility review. Style-specific options, minimum quantities, cost and timing require confirmation.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "When can orders be dispatched?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Dispatch depends on confirmed color-size availability, quantity and packaging requirements. The schedule is confirmed before ordering.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    ],
+    "scImages": [
+      "field",
+      [
+        [
+          "id",
+          "scImages"
+        ]
+      ],
+      "",
+      [
+        [
+          "complex-value",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "scImages_0"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [
+                    [
+                      "fileFlag",
+                      "no"
+                    ],
+                    [
+                      "fileId",
+                      "33761137224"
+                    ]
+                  ],
+                  "//sc04.alicdn.com/kf/H90a478fb114e494a9e5026b4a81b0822L/286385890/H90a478fb114e494a9e5026b4a81b0822L.png",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "scImages_1"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [
+                    [
+                      "fileFlag",
+                      "no"
+                    ],
+                    [
+                      "fileId",
+                      "33761125241"
+                    ]
+                  ],
+                  "//sc04.alicdn.com/kf/H4a188eb4e29e4b4c8a718d13e64836a3A/286385890/H4a188eb4e29e4b4c8a718d13e64836a3A.png",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "scImages_2"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [
+                    [
+                      "fileFlag",
+                      "no"
+                    ],
+                    [
+                      "fileId",
+                      "33763932403"
+                    ]
+                  ],
+                  "//sc04.alicdn.com/kf/Hffd9c54d59af4e3bb5a826a0d4d23dea3/286385890/Hffd9c54d59af4e3bb5a826a0d4d23dea3.jpg",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "scImages_3"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [
+                    [
+                      "fileFlag",
+                      "no"
+                    ],
+                    [
+                      "fileId",
+                      "33761101363"
+                    ]
+                  ],
+                  "//sc04.alicdn.com/kf/H72bc5a968e634ea69438afbb150cb484I/286385890/H72bc5a968e634ea69438afbb150cb484I.png",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "scImages_4"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [
+                    [
+                      "fileFlag",
+                      "no"
+                    ],
+                    [
+                      "fileId",
+                      "33762589755"
+                    ]
+                  ],
+                  "//sc04.alicdn.com/kf/H0fa0ab1e675c49bf8f49734654d1294dm/286385890/H0fa0ab1e675c49bf8f49734654d1294dm.png",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "scImages_5"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [
+                    [
+                      "fileFlag",
+                      "no"
+                    ],
+                    [
+                      "fileId",
+                      "30149993323"
+                    ]
+                  ],
+                  "//sc04.alicdn.com/kf/S6c8cb1d46d8c4b018cf07f5cab50c1adi/286385890/S6c8cb1d46d8c4b018cf07f5cab50c1adi.png",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "sku_verification": null,
+  "task_pack": null,
+  "replacement_plan": null,
+  "replacement_transition": null,
+  "inventory_input": null,
+  "post_publish_acceptance": {
+    "phase": "post_publish_completion",
+    "target_score": 5.0,
+    "actual_score": null,
+    "observed_at": null,
+    "score_source": null,
+    "diagnostics": {
+      "status": "not_read"
+    },
+    "score_status": "pending_score",
+    "overall_status": "PENDING_SCORE",
+    "unverified_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "versioned_content": null,
+    "required_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "limits": "Platform listing score does not prove public content, source truth or real product quality."
+  },
+  "attempted_at": "2026-10-08T16:37:26.753990+00:00",
+  "response": {
+    "trace_id": "2103346a17914774550675926e0e8d",
+    "product_id": 1601973753470,
+    "biz_success": true,
+    "request_id": "21501b8d17914774553813367",
+    "_trace_id_": "2103346a17914774550675926e0e8d"
+  },
+  "refs": {
+    "request_id": "21501b8d17914774553813367",
+    "trace_id": "2103346a17914774550675926e0e8d",
+    "message": null,
+    "error": null
+  },
+  "product_id": "1601973753470"
+}

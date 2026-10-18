@@ -1,0 +1,301 @@
+{
+  "style": "2627BSK",
+  "authorized": true,
+  "uploads": [
+    {
+      "name": "M1",
+      "file": "2627BSK\\assets\\M1.jpg",
+      "sha256": "4a023724779ae09f22dbb7ffed263c020af2f0c38a70e90ec8f84e37b6b0e311",
+      "status": "UPLOADED_BUSINESS_VERIFIED",
+      "started_at": "2026-10-02T16:10:13.508636+00:00",
+      "official_url": "https://sc04.alicdn.com/kf/H1e96c860f1e34dda9b85116b5d6bc358J/286385890/H1e96c860f1e34dda9b85116b5d6bc358J.jpg",
+      "file_id": "33713137363",
+      "request_id": "213f5a2117909574237945557"
+    },
+    {
+      "name": "M2",
+      "file": "2627BSK\\assets\\M2.jpg",
+      "sha256": "9c5287dc486fd41b77e760270980dff2108df6c6a47044274a99c74b91595178",
+      "status": "UPLOADED_BUSINESS_VERIFIED",
+      "started_at": "2026-10-02T16:10:19.537772+00:00",
+      "error_type": "ClientError",
+      "failure_evidence": {
+        "exception_type": "ClientError",
+        "message": "Native HTTP transport failed; write outcome requires reconciliation",
+        "transport_phase": "transport",
+        "request_sent": null,
+        "curl_exit_code": 55,
+        "http_status": null,
+        "business_refs": {},
+        "response_summary": {
+          "format": "text",
+          "excerpt": ""
+        },
+        "stderr_excerpt": "[COMMAND_TEXT_OMITTED]",
+        "cause_types": [],
+        "limits": "Unavailable facts remain null/unknown. Curl errors and absence in catalog do not prove an uncommitted write; no automatic retry."
+      },
+      "original_uncertain_attempt": {
+        "name": "M2",
+        "file": "2627BSK\\assets\\M2.jpg",
+        "sha256": "9c5287dc486fd41b77e760270980dff2108df6c6a47044274a99c74b91595178",
+        "status": "UNCERTAIN_OR_REJECTED_STOP_NO_RETRY",
+        "started_at": "2026-10-02T16:10:19.537772+00:00",
+        "error_type": "ClientError",
+        "failure_evidence": {
+          "exception_type": "ClientError",
+          "message": "Native HTTP transport failed; write outcome requires reconciliation",
+          "transport_phase": "transport",
+          "request_sent": null,
+          "curl_exit_code": 55,
+          "http_status": null,
+          "business_refs": {},
+          "response_summary": {
+            "format": "text",
+            "excerpt": ""
+          },
+          "stderr_excerpt": "[COMMAND_TEXT_OMITTED]",
+          "cause_types": [],
+          "limits": "Unavailable facts remain null/unknown. Curl errors and absence in catalog do not prove an uncommitted write; no automatic retry."
+        }
+      },
+      "official_url": "https://sc04.alicdn.com/kf/H1af3860f00eb4119967662aaea3f05f7c/286385890/H1af3860f00eb4119967662aaea3f05f7c.jpg",
+      "file_id": "33714601906",
+      "request_id": "2105044417909582839875734",
+      "resolved_by": "Parent-authorized single controlled media retry",
+      "controlled_retry_count": 1
+    },
+    {
+      "name": "M3",
+      "file": "2627BSK\\assets\\M3.jpg",
+      "sha256": "c4298a146eaad377d656587e534df3fce46b1d214ce2f73c7d52494f83f9300e",
+      "status": "UPLOADED_BUSINESS_VERIFIED",
+      "started_at": "2026-10-02T16:16:40.593904+00:00",
+      "error_type": "ClientError",
+      "failure_evidence": {
+        "exception_type": "ClientError",
+        "message": "Native HTTP transport failed; write outcome requires reconciliation",
+        "transport_phase": "transport",
+        "request_sent": null,
+        "curl_exit_code": 28,
+        "http_status": null,
+        "business_refs": {},
+        "response_summary": {
+          "format": "text",
+          "excerpt": ""
+        },
+        "stderr_excerpt": "[COMMAND_TEXT_OMITTED]",
+        "cause_types": [],
+        "limits": "Unavailable facts remain null/unknown. Curl errors and absence in catalog do not prove an uncommitted write; no automatic retry."
+      },
+      "original_uncertain_attempt": {
+        "name": "M3",
+        "file": "2627BSK\\assets\\M3.jpg",
+        "sha256": "c4298a146eaad377d656587e534df3fce46b1d214ce2f73c7d52494f83f9300e",
+        "status": "UNCERTAIN_OR_REJECTED_STOP_NO_RETRY",
+        "started_at": "2026-10-02T16:16:40.593904+00:00",
+        "error_type": "ClientError",
+        "failure_evidence": {
+          "exception_type": "ClientError",
+          "message": "Native HTTP transport failed; write outcome requires reconciliation",
+          "transport_phase": "transport",
+          "request_sent": null,
+          "curl_exit_code": 28,
+          "http_status": null,
+          "business_refs": {},
+          "response_summary": {
+            "format": "text",
+            "excerpt": ""
+          },
+          "stderr_excerpt": "[COMMAND_TEXT_OMITTED]",
+          "cause_types": [],
+          "limits": "Unavailable facts remain null/unknown. Curl errors and absence in catalog do not prove an uncommitted write; no automatic retry."
+        }
+      },
+      "official_url": "https://sc04.alicdn.com/kf/H622aecf34c2d4062b9c60578bd4f6b59i/286385890/H622aecf34c2d4062b9c60578bd4f6b59i.jpg",
+      "file_id": "33713185471",
+      "request_id": "21501b6717909582926846292",
+      "resolved_by": "Parent-authorized single controlled media retry",
+      "controlled_retry_count": 1
+    },
+    {
+      "name": "M4",
+      "file": "2627BSK\\assets\\M4.jpg",
+      "sha256": "cd965e95869046cb2e45c0f743da0a9755d439792512bc06b7f05025a3da0a47",
+      "status": "UPLOADED_BUSINESS_VERIFIED",
+      "started_at": "2026-10-02T16:26:40.464828+00:00",
+      "official_url": "https://sc04.alicdn.com/kf/H63c2689b0dd34b44abbad1a1f68ab859q/286385890/H63c2689b0dd34b44abbad1a1f68ab859q.jpg",
+      "file_id": "33714661645",
+      "request_id": "2166c2ca17909584116363941"
+    },
+    {
+      "name": "M5",
+      "file": "2627BSK\\assets\\M5.jpg",
+      "sha256": "202254f16dd5c95c0faeb4f79b42772df5741d648eac099d538252313359b5fc",
+      "status": "UPLOADED_BUSINESS_VERIFIED",
+      "started_at": "2026-10-02T16:26:47.477402+00:00",
+      "official_url": "https://sc04.alicdn.com/kf/H69809dc79ced4473934295db00114128y/286385890/H69809dc79ced4473934295db00114128y.jpg",
+      "file_id": "33717420164",
+      "request_id": "0b0b3a2717909584202984732"
+    },
+    {
+      "name": "M6",
+      "file": "2627BSK\\assets\\M6.jpg",
+      "sha256": "57b22e57602cfa2adbcb22ab195062ddf6efa54cf5d49fc61b036b8b0c5a22a9",
+      "status": "UPLOADED_BUSINESS_VERIFIED",
+      "started_at": "2026-10-02T16:26:55.835776+00:00",
+      "official_url": "https://sc04.alicdn.com/kf/H5c5e2a81767245e9b0c403671b5a4308T/286385890/H5c5e2a81767245e9b0c403671b5a4308T.jpg",
+      "file_id": "33714661652",
+      "request_id": "0bab02fe17909584269933946"
+    },
+    {
+      "name": "D1",
+      "file": "2627BSK\\assets\\D1.jpg",
+      "sha256": "adf4e6b6c90e3dd1335fd9c2e279f1edd15d42e61ce6b289d937ee642f063450",
+      "status": "UPLOADED_BUSINESS_VERIFIED",
+      "started_at": "2026-10-02T16:27:02.599848+00:00",
+      "official_url": "https://sc04.alicdn.com/kf/Hd2e783bc319d409db0bc7969e6c134c8d/286385890/Hd2e783bc319d409db0bc7969e6c134c8d.jpg",
+      "file_id": "33717420170",
+      "request_id": "21546a1d17909584362686919"
+    },
+    {
+      "name": "D2",
+      "file": "2627BSK\\assets\\D2.jpg",
+      "sha256": "ad9dc535d5d2a537fc7fa1f0379aae834a77d3f38fe87eaf0e3d6212f7367fba",
+      "status": "UPLOADED_BUSINESS_VERIFIED",
+      "started_at": "2026-10-02T16:27:11.905380+00:00",
+      "error_type": "ClientError",
+      "failure_evidence": {
+        "exception_type": "ClientError",
+        "message": "Native HTTP transport failed; write outcome requires reconciliation",
+        "transport_phase": "transport",
+        "request_sent": null,
+        "curl_exit_code": 56,
+        "http_status": null,
+        "business_refs": {},
+        "response_summary": {
+          "format": "text",
+          "excerpt": ""
+        },
+        "stderr_excerpt": "[COMMAND_TEXT_OMITTED]",
+        "cause_types": [],
+        "limits": "Unavailable facts remain null/unknown. Curl errors and absence in catalog do not prove an uncommitted write; no automatic retry."
+      },
+      "original_uncertain_attempt": {
+        "name": "D2",
+        "file": "2627BSK\\assets\\D2.jpg",
+        "sha256": "ad9dc535d5d2a537fc7fa1f0379aae834a77d3f38fe87eaf0e3d6212f7367fba",
+        "status": "UNCERTAIN_OR_REJECTED_STOP_NO_RETRY",
+        "started_at": "2026-10-02T16:27:11.905380+00:00",
+        "error_type": "ClientError",
+        "failure_evidence": {
+          "exception_type": "ClientError",
+          "message": "Native HTTP transport failed; write outcome requires reconciliation",
+          "transport_phase": "transport",
+          "request_sent": null,
+          "curl_exit_code": 56,
+          "http_status": null,
+          "business_refs": {},
+          "response_summary": {
+            "format": "text",
+            "excerpt": ""
+          },
+          "stderr_excerpt": "[COMMAND_TEXT_OMITTED]",
+          "cause_types": [],
+          "limits": "Unavailable facts remain null/unknown. Curl errors and absence in catalog do not prove an uncommitted write; no automatic retry."
+        }
+      },
+      "official_url": "https://sc04.alicdn.com/kf/H00c2586cbd9c4e87bfc23a431089c2489/286385890/H00c2586cbd9c4e87bfc23a431089c2489.jpg",
+      "file_id": "33714625972",
+      "request_id": "0b80d2d617909590625861526",
+      "resolved_by": "Parent-authorized single controlled media retry",
+      "controlled_retry_count": 1
+    },
+    {
+      "name": "D3",
+      "file": "2627BSK\\assets\\D3.jpg",
+      "sha256": "9de4cda7ece054141946278fbed8f74cb4422da87269e14e8e836fb8f0748668",
+      "status": "UNCERTAIN_OR_REJECTED_STOP_NO_RETRY",
+      "started_at": "2026-10-02T16:38:07.844272+00:00",
+      "error_type": "ClientError",
+      "failure_evidence": {
+        "exception_type": "ClientError",
+        "message": "Native HTTP transport failed; write outcome requires reconciliation",
+        "transport_phase": "transport",
+        "request_sent": null,
+        "curl_exit_code": 28,
+        "http_status": null,
+        "business_refs": {},
+        "response_summary": {
+          "format": "text",
+          "excerpt": ""
+        },
+        "stderr_excerpt": "[COMMAND_TEXT_OMITTED]",
+        "cause_types": [],
+        "limits": "Unavailable facts remain null/unknown. Curl errors and absence in catalog do not prove an uncommitted write; no automatic retry."
+      },
+      "controlled_retry_count": 1,
+      "controlled_retry_status": "UNCERTAIN_OR_REJECTED_STOP_NO_MORE_RETRY"
+    },
+    {
+      "name": "D4",
+      "file": "2627BSK\\assets\\D4.jpg",
+      "sha256": "5b55150fdf185f3bec9836fddf9d90a346d6c449395f4d6d3eb0b2c2f296e281",
+      "status": "UPLOADED_BUSINESS_VERIFIED",
+      "started_at": "2026-10-02T17:08:50.746498+00:00",
+      "official_url": "https://sc04.alicdn.com/kf/H522ecd2049b4491b8483d7d33b9ceb65y/286385890/H522ecd2049b4491b8483d7d33b9ceb65y.jpg",
+      "file_id": "33713353350",
+      "request_id": "212c41d317909609396695673"
+    },
+    {
+      "name": "Khaki",
+      "file": "2627BSK\\assets\\Khaki.jpg",
+      "sha256": "71fdc028cf71dc1d8996fb289299e638f665531f0286e8ca7da1ca37a48fda76",
+      "status": "UPLOADED_BUSINESS_VERIFIED",
+      "started_at": "2026-10-02T17:08:54.997796+00:00",
+      "official_url": "https://sc04.alicdn.com/kf/H8643944af48c4409a2f18e883651f38fy/286385890/H8643944af48c4409a2f18e883651f38fy.jpg",
+      "file_id": "33714865530",
+      "request_id": "0b830ecc17909609457774399"
+    },
+    {
+      "name": "Blue",
+      "file": "2627BSK\\assets\\Blue.jpg",
+      "sha256": "4515a881b42aec9bada97a2e72e4a8a07a2124382ead8394fb6601c596b102d1",
+      "status": "UPLOADED_BUSINESS_VERIFIED",
+      "started_at": "2026-10-02T17:09:01.071039+00:00",
+      "official_url": "https://sc04.alicdn.com/kf/H7417ebd098604d63842c19fdf5a1fc90m/286385890/H7417ebd098604d63842c19fdf5a1fc90m.jpg",
+      "file_id": "33714865531",
+      "request_id": "0b830ecc17909609492304534"
+    },
+    {
+      "name": "Light Pink",
+      "file": "2627BSK\\assets\\Light Pink.jpg",
+      "sha256": "08c715eb195b015ffeaf4af81a54b177eda308d505bfb4f2afa8e29d164a00e9",
+      "status": "UPLOADED_BUSINESS_VERIFIED",
+      "started_at": "2026-10-02T17:09:04.552122+00:00",
+      "official_url": "https://sc04.alicdn.com/kf/H8efc1fcf249b47c2a9eefd2321bb22fdU/286385890/H8efc1fcf249b47c2a9eefd2321bb22fdU.jpg",
+      "file_id": "33714865535",
+      "request_id": "0bbb3b2417909609531572160"
+    },
+    {
+      "name": "Black",
+      "file": "2627BSK\\assets\\Black.jpg",
+      "sha256": "362b129cd2bff0347eecb58b73cb75aae3e26ff561959858b3aa9e742f82156d",
+      "status": "UPLOADED_BUSINESS_VERIFIED",
+      "started_at": "2026-10-02T17:09:08.445256+00:00",
+      "official_url": "https://sc04.alicdn.com/kf/Hed740def2a954511892259aacfaedabci/286385890/Hed740def2a954511892259aacfaedabci.jpg",
+      "file_id": "33714841694",
+      "request_id": "213d4e4917909609558525485"
+    },
+    {
+      "name": "Beige",
+      "file": "2627BSK\\assets\\Beige.jpg",
+      "sha256": "2dc960b34c2912433b4e530aa2a17db0f1be897851d2bda56f6d6d34cb4be821",
+      "status": "UPLOADED_BUSINESS_VERIFIED",
+      "started_at": "2026-10-02T17:09:11.135567+00:00",
+      "official_url": "https://sc04.alicdn.com/kf/Haf9b476971354cb094ece60dca7e24dfZ/286385890/Haf9b476971354cb094ece60dca7e24dfZ.jpg",
+      "file_id": "33717504456",
+      "request_id": "21501be117909609587158177"
+    }
+  ]
+}

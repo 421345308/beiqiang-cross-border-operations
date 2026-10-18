@@ -1,0 +1,118 @@
+{
+  "asset_version": 8,
+  "items": {
+    "C1": {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C1_factory.png",
+      "sha256": "e60e6be070cc030e40788df671a3138f5bc02ed201754af0e8bc1ec0a88f92bf",
+      "at": "2026-10-12T11:03:10.154017+00:00",
+      "status": "UPLOADED_OFFICIAL_BANK",
+      "reconciled_previous_attempt": {
+        "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C1_factory.png",
+        "sha256": "e60e6be070cc030e40788df671a3138f5bc02ed201754af0e8bc1ec0a88f92bf",
+        "at": "2026-10-12T10:59:51.274929+00:00",
+        "status": "RECONCILED_NOT_UPLOADED_NORMAL_NETWORK_RETRY_AUTHORIZED",
+        "original_attempt_preserved": true,
+        "independent_bank_evidence": "99_临时区/全店FAQ与产品亮点优化/v8_bank_reconciliation.json",
+        "transport_diagnosis": "ConnectionRefusedError at socket.connect before HTTP request transmission; default sandbox network refused TCP connection. Normal external-network read succeeded. No product write attempted.",
+        "normal_retry_scope": "One official bank upload over normal permitted network; not automatic replay after sent request or business outcome unknown."
+      },
+      "response": {
+        "upload_image_response": {
+          "file_name": "C1_factory.png",
+          "file_id": 33810553901,
+          "photobank_url": "//sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q/286385890/Hedfb7ab8452d46f58abcb457f199c138Q.png"
+        },
+        "request_id": "210829b717918030011288753",
+        "_trace_id_": "2108b42e17918030003012687e0e25"
+      },
+      "url": "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q/286385890/Hedfb7ab8452d46f58abcb457f199c138Q.png",
+      "file_id": "33810553901"
+    },
+    "C2": {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C2_oem.png",
+      "sha256": "2e247e1be31b6eb3ea96a104233977b0758171a32563f4143b41e304c500d3b0",
+      "at": "2026-10-12T11:03:17.761026+00:00",
+      "status": "UPLOADED_OFFICIAL_BANK",
+      "response": {
+        "upload_image_response": {
+          "file_name": "C2_oem.png",
+          "file_id": 33811692169,
+          "photobank_url": "//sc04.alicdn.com/kf/H2c23ba6ddeac47a686c0e1350c4ac294v/286385890/H2c23ba6ddeac47a686c0e1350c4ac294v.png"
+        },
+        "request_id": "210829b717918030087281042",
+        "_trace_id_": "2107e99617918030077051163e0d83"
+      },
+      "url": "https://sc04.alicdn.com/kf/H2c23ba6ddeac47a686c0e1350c4ac294v/286385890/H2c23ba6ddeac47a686c0e1350c4ac294v.png",
+      "file_id": "33811692169"
+    },
+    "C3": {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C3_production.png",
+      "sha256": "a25ddc5c92f285b97016c5389f400537f95dba51bf9eb73bbf7ab1ec89adb12c",
+      "at": "2026-10-12T11:03:25.408778+00:00",
+      "status": "UPLOADED_OFFICIAL_BANK",
+      "response": {
+        "upload_image_response": {
+          "file_name": "C3_production.png",
+          "file_id": 33811704127,
+          "photobank_url": "//sc04.alicdn.com/kf/H76f31cce4cc0447a99b72496f0ae5c93l/286385890/H76f31cce4cc0447a99b72496f0ae5c93l.png"
+        },
+        "request_id": "0bab02fc17918030164096535",
+        "_trace_id_": "2133d9ef17918030154358787e0f23"
+      },
+      "url": "https://sc04.alicdn.com/kf/H76f31cce4cc0447a99b72496f0ae5c93l/286385890/H76f31cce4cc0447a99b72496f0ae5c93l.png",
+      "file_id": "33811704127"
+    },
+    "C4": {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C4_quality.png",
+      "sha256": "a5516788d448147b8b91d1bdee924dff48dd51971ea59005fd35803fe35c6c97",
+      "at": "2026-10-12T11:03:33.065090+00:00",
+      "status": "UPLOADED_OFFICIAL_BANK",
+      "response": {
+        "upload_image_response": {
+          "file_name": "C4_quality.png",
+          "file_id": 33810649619,
+          "photobank_url": "//sc04.alicdn.com/kf/H8779a3d5521c4cce910395f583af74505/286385890/H8779a3d5521c4cce910395f583af74505.png"
+        },
+        "request_id": "212c41d317918030235134718",
+        "_trace_id_": "2133d9ef17918030226755992e0f02"
+      },
+      "url": "https://sc04.alicdn.com/kf/H8779a3d5521c4cce910395f583af74505/286385890/H8779a3d5521c4cce910395f583af74505.png",
+      "file_id": "33810649619"
+    },
+    "C5": {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C5_packing.png",
+      "sha256": "aaa6a7e241d10da3a600e8cab3c7587968c9fe045655549141ac4de1186fb0a2",
+      "at": "2026-10-12T11:03:40.087156+00:00",
+      "status": "UPLOADED_OFFICIAL_BANK",
+      "response": {
+        "upload_image_response": {
+          "file_name": "C5_packing.png",
+          "file_id": 33811728059,
+          "photobank_url": "//sc04.alicdn.com/kf/He558a164125f4bc295dfe3d70bb76066w/286385890/He558a164125f4bc295dfe3d70bb76066w.png"
+        },
+        "request_id": "212c6fc617918030308188115",
+        "_trace_id_": "2166b76317918030298842779e1066"
+      },
+      "url": "https://sc04.alicdn.com/kf/He558a164125f4bc295dfe3d70bb76066w/286385890/He558a164125f4bc295dfe3d70bb76066w.png",
+      "file_id": "33811728059"
+    },
+    "C6": {
+      "path": "01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/02_当前工厂详情/C6_shipping.png",
+      "sha256": "a5fca57c332ae23457d1974e5ceefe5d7385171a5d06aafd8ef25d8e8860d089",
+      "at": "2026-10-12T11:03:47.531500+00:00",
+      "status": "UPLOADED_OFFICIAL_BANK",
+      "response": {
+        "upload_image_response": {
+          "file_name": "C6_shipping.png",
+          "file_id": 33809797424,
+          "photobank_url": "//sc04.alicdn.com/kf/H7d0669b743e742c1a97e8108e6cc96eaV/286385890/H7d0669b743e742c1a97e8108e6cc96eaV.png"
+        },
+        "request_id": "0b0b3a2717918030380184079",
+        "_trace_id_": "2108b42d17918030370428184e0d39"
+      },
+      "url": "https://sc04.alicdn.com/kf/H7d0669b743e742c1a97e8108e6cc96eaV/286385890/H7d0669b743e742c1a97e8108e6cc96eaV.png",
+      "file_id": "33809797424"
+    }
+  },
+  "status": "SIX_OFFICIAL_BANK_ASSETS_VERIFIED"
+}

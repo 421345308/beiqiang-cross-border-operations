@@ -1,0 +1,52 @@
+{
+  "at": "2026-10-16T05:18:07.575078+00:00",
+  "state": "CONTENT_DOUBLE_SYNC_COMPLETE_WITH_PLATFORM_REJECTIONS",
+  "catalog_ids": 488,
+  "updated_ids": 483,
+  "model_migration_ids": 175,
+  "formal_states": {
+    "FORMAL_FIELDS_SCORE_PASS": 481,
+    "PLATFORM_REJECTED_TARGET_VALUES_RETURNED": 2
+  },
+  "current_platform_exceptions": [
+    {
+      "id": "1601943574507",
+      "model": "BQ1030-A",
+      "status": "tbd",
+      "display": "N",
+      "state": "PLATFORM_REJECTED_TARGET_VALUES_RETURNED",
+      "reason": "Official get/list omit rejection reason; normal seller editor requires login. No guessed resubmission.",
+      "evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943574507/verification.json"
+    },
+    {
+      "id": "1601943545775",
+      "model": "BQ1030-B",
+      "status": "tbd",
+      "display": "N",
+      "state": "PLATFORM_REJECTED_TARGET_VALUES_RETURNED",
+      "reason": "Official get/list omit rejection reason; normal seller editor requires login. No guessed resubmission.",
+      "evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943545775/verification.json"
+    }
+  ],
+  "all_updated_listings_currently_approved": false,
+  "SKU_reissued_IDs": {
+    "1601943711519": {
+      "count": 60,
+      "mapping": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943711519/质量修正/规格恢复/SKU编号变更映射.json",
+      "original_platform_SKU_ids_preserved": false
+    },
+    "1601970118386": {
+      "count": 27,
+      "mapping": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601970118386/质量修正/规格恢复/SKU编号变更映射.json",
+      "original_platform_SKU_ids_preserved": false
+    }
+  },
+  "SKU_reissued_count": 87,
+  "excluded_ids": 5,
+  "issues": [],
+  "catalog": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/完成目录/catalog.json",
+  "catalog_sha256": "ad80c4f4dc25c87ecdacf0f9a4790c33efb2115b3d0dd577aaf97b0506b10fe9",
+  "registry_sha256": "6a2ef7de3ba4a4b0b0ef67da0c8f6629ff3e8e19fcb1ed4fbf114f65751e9ec7",
+  "public_qa": "未逐商品浏览器实测；按负责人API闭环验收",
+  "scope": "Exact frozen original IDs; no source identity or inventory claim inferred from platform status"
+}

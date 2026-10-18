@@ -1,0 +1,143 @@
+{
+  "audited_at": "2026-10-07T17:54:43.487944+00:00",
+  "status": "NOT_COMPLETE_PUBLIC_CONTENT_AND_CURRENT_KEYWORD_EVIDENCE_MISSING",
+  "products": [
+    {
+      "style": "061",
+      "product_id": "1601972965417",
+      "url": "https://www.alibaba.com/product-detail/Unisex-Low-Top-Lace-Up-Casual_1601972965417.html",
+      "core_checks": "14/14",
+      "audit": "approved/Y",
+      "actual_score": 5.0,
+      "score_observed_at": "2026-10-07T16:14:49.439760+00:00",
+      "score_source": "alibaba.icbu.product.score.get / 21546a1d17913896271976142",
+      "diagnostics": {
+        "status": "clear",
+        "request_id": "21546a1d17913896271976142",
+        "observed_at": "2026-10-07T16:14:49.439760+00:00",
+        "flagged": {},
+        "error_reasons": {},
+        "nonzero_rule_scores": {},
+        "checks_not_run": [
+          "sku_image",
+          "sku_text",
+          "imageSubTitle",
+          "selling_point_attribute_conflict"
+        ],
+        "limits": "只表示该次评分接口返回未见问题；未运行检查、公开图文和关键词须另验。"
+      },
+      "formal_evidence": "061_formal_field_acceptance.json",
+      "pending": [
+        "public_page",
+        "media_review",
+        "keyword_persistence"
+      ]
+    },
+    {
+      "style": "059",
+      "product_id": "1601972951733",
+      "url": "https://www.alibaba.com/product-detail/Unisex-Low-Top-Lace-Up-Casual_1601972951733.html",
+      "core_checks": "14/14",
+      "audit": "approved/Y",
+      "actual_score": 5.0,
+      "score_observed_at": "2026-10-07T17:15:09.986517+00:00",
+      "score_source": "alibaba.icbu.product.score.get / 210829b717913933032972293",
+      "diagnostics": {
+        "status": "clear",
+        "request_id": "210829b717913933032972293",
+        "observed_at": "2026-10-07T17:15:09.986517+00:00",
+        "flagged": {},
+        "error_reasons": {},
+        "nonzero_rule_scores": {},
+        "checks_not_run": [
+          "sku_image",
+          "sku_text",
+          "imageSubTitle",
+          "selling_point_attribute_conflict"
+        ],
+        "limits": "只表示本次评分接口返回未见问题；未运行的检查、公开图片和关键词必须另验。"
+      },
+      "formal_evidence": "059_正式回读\\完整字段验收.json",
+      "pending": [
+        "public_page",
+        "media_review",
+        "keyword_persistence"
+      ]
+    },
+    {
+      "style": "060",
+      "product_id": "1601972944790",
+      "url": "https://www.alibaba.com/product-detail/Unisex-Low-Top-Lace-Up-Casual_1601972944790.html",
+      "core_checks": "14/14",
+      "audit": "approved/Y",
+      "actual_score": 5.0,
+      "score_observed_at": "2026-10-07T17:16:07.301900+00:00",
+      "score_source": "alibaba.icbu.product.score.get / 0b80d2d617913933573346685",
+      "diagnostics": {
+        "status": "clear",
+        "request_id": "0b80d2d617913933573346685",
+        "observed_at": "2026-10-07T17:16:07.301900+00:00",
+        "flagged": {},
+        "error_reasons": {},
+        "nonzero_rule_scores": {},
+        "checks_not_run": [
+          "sku_image",
+          "sku_text",
+          "imageSubTitle",
+          "selling_point_attribute_conflict"
+        ],
+        "limits": "只表示本次评分接口返回未见问题；未运行的检查、公开图片和关键词必须另验。"
+      },
+      "formal_evidence": "060_正式回读\\完整字段验收.json",
+      "pending": [
+        "public_page",
+        "media_review",
+        "keyword_persistence"
+      ]
+    },
+    {
+      "style": "2667",
+      "product_id": "1601973009551",
+      "url": "https://www.alibaba.com/product-detail/Mens-Low-Top-Lace-Up-Casual_1601973009551.html",
+      "core_checks": "14/14",
+      "audit": "approved/Y",
+      "actual_score": 5.0,
+      "score_observed_at": "2026-10-07T17:48:55.431481+00:00",
+      "score_source": "alibaba.icbu.product.score.get / 0b830ecc17913953282184748",
+      "diagnostics": {
+        "status": "clear",
+        "request_id": "0b830ecc17913953282184748",
+        "observed_at": "2026-10-07T17:48:55.431481+00:00",
+        "flagged": {},
+        "error_reasons": {},
+        "nonzero_rule_scores": {},
+        "checks_not_run": [
+          "sku_image",
+          "sku_text",
+          "imageSubTitle",
+          "selling_point_attribute_conflict"
+        ],
+        "limits": "只表示本次评分接口返回未见问题；未运行的检查、公开图片和关键词必须另验。"
+      },
+      "formal_evidence": "2667_正式回读\\完整字段验收.json",
+      "pending": [
+        "public_page",
+        "media_review",
+        "keyword_persistence"
+      ]
+    }
+  ],
+  "requirements": {
+    "real_source_identity": "PROVEN_WITH_EXTERNALLY_SOURCED_LIMIT",
+    "scoped_differentiation": "PROVEN_WITH_SAVED_CATALOG_AND_RELATED_PIXEL_SCOPE",
+    "source_sizes": "PROVEN_RAW_LABELS_ONLY_NO_COUNTRY_CONVERSION",
+    "commercial_baseline": "PROVEN_CONDITIONAL_REFERENCE_NOT_FINAL_QUOTE_OR_STOCK",
+    "single_create": "PROVEN_FOUR_DISTINCT_RECEIPTS_AND_LEDGERS",
+    "API_formal_fields_except_legacy_keyword": "PROVEN_WITH_TASK_SPECIFIC_NORMALIZATIONS",
+    "official_score_and_returned_diagnostics": "PROVEN_4X5_00_CLEAR",
+    "normal_browser_public_color_click_and_full_content": "MISSING_SERVICE_REPORTED_SAVED_PERMISSION_UNVERIFIABLE",
+    "current_keyword_persistence_or_exact_ID_migration": "MISSING_LEGACY_EMPTY_NO_CURRENT_VERSION_PROOF"
+  },
+  "safe_next_action": "No product rewrite/recreate is justified. Await actual browser security-check recovery for normal same-browser public/edit-version acceptance; do not replace it with alternate browser/HTTP.",
+  "blocked_audit": "同一浏览器权限核验限制延续于原始目标回合、完成三款新增的自动续跑及本次补齐2667评分的自动续跑。此前仍有API和素材工作故未停止；现4款评分、正式字段及资料已齐，剩余证据均依赖受阻浏览器，已无可推进的授权安全动作。"
+}

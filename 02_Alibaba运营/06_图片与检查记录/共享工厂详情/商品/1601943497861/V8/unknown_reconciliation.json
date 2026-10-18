@@ -1,0 +1,17 @@
+{
+  "status": "TWO_FRESH_READS_CONFIRM_NO_EFFECT",
+  "product_id": "1601943497861",
+  "at": "2026-10-12T22:09:13.508025+00:00",
+  "first_attempt_ledger": "update_once.json",
+  "first_attempt_receipt": "update_receipt.json",
+  "readback_request_ids": [
+    "2166c2ca17918428832678678",
+    "213c932b17918429623277867"
+  ],
+  "checks": {
+    "both_fresh_products_exactly_equal_original": true,
+    "all_original_targets_retained": true,
+    "no_non_target_changes": true
+  },
+  "next_action": "One freshly prepared authorized corrective submission with separate recovery ledger"
+}

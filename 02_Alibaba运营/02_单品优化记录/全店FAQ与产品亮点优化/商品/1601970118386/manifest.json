@@ -1,0 +1,26 @@
+{
+  "operation": "update",
+  "product_id": "1601970118386",
+  "category_id": 201153805,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "copy.json",
+    "before_get.json",
+    "../../../929来源事实快照_2026-10-03.json",
+    "current_get.json",
+    "../../../../00_运营SOP/国际站商品全生命周期SOP.md"
+  ],
+  "current_schema": "current_schema.xml",
+  "current_schema_sha256": "e589a16b9595c221b2cc4094262d50845cc08003ca3114e009de452a49c23c77",
+  "schema_request_id": "213c934417917372818788896",
+  "schema_acquired_at": "2026-10-11T16:47:59.131225+00:00",
+  "payload_xml": "payload.xml",
+  "field_ids": [
+    "textDesc",
+    "companyFaqDesc"
+  ],
+  "dependency_ids": [
+    "productDescType"
+  ],
+  "observed_model": "BQ-CS929"
+}

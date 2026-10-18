@@ -1,0 +1,17 @@
+{
+  "verdict": "PASS",
+  "scope": "EXACT_MINIMAL_REPAIR_CANDIDATE_ONLY_NOT_PERSISTENCE",
+  "request_sha256": "8b7500a28a033d742ccfbfa6d5a835a57953e8548b0bc1e205ea6ace01af1799",
+  "checks": {
+    "exact_hash": true,
+    "target_new936_only": true,
+    "only_two_top_fields": true,
+    "only_p3_typed_model": true,
+    "detail4_exact_urls_order_and_roles": true,
+    "no_SKU_main_price_FAQ_company_fields": true
+  },
+  "target_product_id": 1601969872083,
+  "model_note": "p3 submitted as inputValue HR051-A plus negative marker -3. Current p3 schema only input/maxLength, not explicit marker storage guarantee; candidate implementation test, actual get/render must prove result.",
+  "gallery_note": "type4 detail update effect not yet verified. One authorized attempt then exact formal readback; no-op means stop, no retry loop.",
+  "reviewer_platform_write": false
+}

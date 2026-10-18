@@ -1,0 +1,31 @@
+{
+  "operation": "update",
+  "product_id": "1601973009551",
+  "category_id": 201334413,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "用户当次确认061/059/060 EU36–48及2667 EU39–48",
+    "../采购信息文案修正/2667_manifest.json",
+    "../../../../00_运营SOP/国际站商品全生命周期SOP.md"
+  ],
+  "current_schema": "2667_current_schema.xml",
+  "current_schema_sha256": "a343d70e00ab82eb300d012941d2bb71a942c95cfc0e59366d83061d823ce5fc",
+  "schema_request_id": "2105044417914225716296906",
+  "schema_acquired_at": "2026-10-08T01:22:54.967860+00:00",
+  "payload_xml": "2667_payload.xml",
+  "field_ids": [
+    "textDesc",
+    "companyDesc",
+    "companyFaqDesc",
+    "productTitle",
+    "productKeywords",
+    "saleProp",
+    "sku"
+  ],
+  "dependency_ids": [
+    "scPrice",
+    "ladderPrice"
+  ],
+  "sku_id_mapping": "Existing color-only SKU IDs retained once at first confirmed EU size; all additional color-size combinations omit skuId; no inventory supplied",
+  "image_scope": "图片单独修复，当前阶段不声称图片验收完成"
+}

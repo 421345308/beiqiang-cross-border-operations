@@ -1,0 +1,52 @@
+{
+  "job": "tactile",
+  "model": "kling-video-v3",
+  "status": "succeeded",
+  "settings": {
+    "resolution": "1080p",
+    "multi_shot": false,
+    "audio": "off",
+    "duration": 3
+  },
+  "started_at": "2026-10-11T05:01:23.790Z",
+  "task_id": "1317587621-WandVideo-85d7e7d9f05f487fbcf9afc692fabd2d",
+  "response": {
+    "code": 0,
+    "message": "SUCCEED",
+    "request_id": "989b8bd5-5689-469c-a692-26411b4b3519",
+    "data": {
+      "id": "1317587621-WandVideo-85d7e7d9f05f487fbcf9afc692fabd2d",
+      "status": "submitted",
+      "message": "",
+      "create_time": 1791694886754,
+      "update_time": 1791694886754
+    }
+  },
+  "query_response": {
+    "code": 0,
+    "data": [
+      {
+        "update_time": 1791695210154,
+        "create_time": 1791694887000,
+        "id": "1317587621-WandVideo-85d7e7d9f05f487fbcf9afc692fabd2d",
+        "message": "",
+        "outputs": [
+          {
+            "duration": "3.041",
+            "id": "938124760956285021",
+            "type": "video",
+            "url": "https://aigc-output-video-1326893053.cos.ap-guangzhou.myqcloud.com/1317587621/1317587621-WandVideo-85d7e7d9f05f487fbcf9afc692fabd2d_0.mp4"
+          }
+        ],
+        "status": "succeeded"
+      }
+    ],
+    "message": "SUCCEED",
+    "request_id": "6536d2c4-44ac-4637-955e-f49183df2e99",
+    "tokenhub_usage": {
+      "total_tokens": 240000
+    }
+  },
+  "checked_at": "2026-10-11T05:06:49.793Z",
+  "local_video": "public/dynamic/tactile.mp4"
+}

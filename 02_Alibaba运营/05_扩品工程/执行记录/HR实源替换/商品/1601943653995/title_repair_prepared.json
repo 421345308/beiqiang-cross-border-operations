@@ -1,0 +1,34 @@
+{
+  "request": {
+    "param_product_top_publish_request": {
+      "product_id": 1601943653995,
+      "cat_id": 201334413,
+      "language": "en_US",
+      "xml": "<itemSchema><field id=\"productTitle\" name=\"Product name\" type=\"input\"><value>Large Size Lace-Up Casual Shoes with Textured Upper and Contrast Sole for Utility Style Collections</value></field></itemSchema>"
+    }
+  },
+  "reason": "Formal title differs from reviewed source-specific submitted product title. Correct only title; cause of later change unconfirmed, not attributed to a person or platform automation.",
+  "expected_title": "Large Size Lace-Up Casual Shoes with Textured Upper and Contrast Sole for Utility Style Collections",
+  "observed_title": "Large Size Lace-Up Round Toe Casual Shoes with Textured Upper and Contrast Sole for All Seasons Utility Style Collections",
+  "expected_schema": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Large Size Lace-Up Casual Shoes with Textured Upper and Contrast Sole for Utility Style Collections",
+          []
+        ]
+      ]
+    ]
+  },
+  "xml_sha256": "6e0734ff3f5c347ddf3784544afbf679bfb271e8a88960acaaba2bf6a8f2b2c0"
+}

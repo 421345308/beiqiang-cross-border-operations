@@ -1,0 +1,20 @@
+{
+  "endpoint": "https://ark.cn-beijing.volces.com/api/v3/chat/completions",
+  "model": "doubao-seed-2-1-lite-260915",
+  "source": "C:\\Users\\spq\\Desktop\\贝强\\05_内容与视频\\04_社交媒体运营\\贝强无露脸舒适鞋品牌片\\edit\\references\\douyin-7611509086996231539\\av-review\\review-h264.mp4",
+  "source_sha256": "7e860379183c268508aa6d0a6cf820e7ba8a53837402d999f6838a2a2d37b2a3",
+  "duration_seconds": 28.466667,
+  "source_bytes": 4098491,
+  "native_video_with_audio": true,
+  "all_video_frames_seen": false,
+  "server_fps": 2,
+  "paid_video_generation": false,
+  "understanding_call_may_be_metered": true,
+  "status": "failed",
+  "upload_authorized_flag": true,
+  "call_authorized_flag": true,
+  "semantic_verification": "unverified",
+  "http_status": 404,
+  "error": "HTTPError; see saved service response",
+  "elapsed_seconds": 3.9690000000045984
+}

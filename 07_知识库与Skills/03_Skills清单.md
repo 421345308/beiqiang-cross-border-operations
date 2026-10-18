@@ -2,12 +2,13 @@
 
 先按实际动作选择一个主 Skill；只有工作包含另一项独立动作时才加载第二个。项目业务 Skill 统一在 `.agents/skills/`，个人工具与插件保持各自安装，不复制进项目。
 
-## 项目维护的 21 个入口
+## 项目维护的 22 个入口
 
-以下 21 个入口各有独立触发条件。业务规则仍由根与专项 `AGENTS.md`、唯一 SOP 和 SKU 原始证据维护，Skill 负责对应动作的方法。
+以下 22 个入口各有独立触发条件。业务规则仍由根与专项 `AGENTS.md`、唯一 SOP 和 SKU 原始证据维护，Skill 负责对应动作的方法。
 
 | 任务 | 项目入口 | 使用边界 |
 | --- | --- | --- |
+| AI视频参考资产与镜头准备 | [video-reference-assets](../.agents/skills/video-reference-assets/SKILL.md) | 角色/动物多视图、独立商品道具与空景；不把情境图当身份资产，结构检查不代替像素QA |
 | 买家定位与声明 | [beiqiang-positioning](../.agents/skills/beiqiang-positioning/SKILL.md) | 单款证据优先，宽楦不是全店默认 |
 | 发品、发布与修复规则 | [alibaba-international-operations](../.agents/skills/alibaba-international-operations/SKILL.md) | 唯一 SOP 负责规则，入口只按任务路由 |
 | API 执行与回读 | [alibaba-openapi-operator](../.agents/skills/alibaba-openapi-operator/SKILL.md) | 凭证在 Git 外，按已授权目标执行 |

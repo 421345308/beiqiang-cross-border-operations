@@ -1,0 +1,85 @@
+{
+  "tool": "Builtin image_gen",
+  "prompts": {
+    "M1": {
+      "prompt": "Edit reference image only: Luqi2509 Grey single low-top dial shoe. Create one square premium ecommerce hero: isolate the exact existing shoe from its white blocks and background onto pure white with a subtle realistic contact shadow. Preserve the exact photographed viewpoint, charcoal/grey panels, black mesh texture, dial emblem, cord routing and four paired fabric guides, toe overlay, grey sculpted sidewall, black lugs and heel loop. Shoe fills about85% frame. Do not change shoe anatomy, branding, colour, tread or view; no new hidden sides, no pair, no text/icons/labels. Original image is product identity authority.",
+      "output_hint": "Generated images are saved to E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c as E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-d665205a-4be1-45c7-a2af-b2117c3f7d14.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    "M2": {
+      "prompt": "Edit exact reference Luqi2509 Grey product photograph into square ecommerce detail, 1200x1200. Tight real crop of the photographed dial, cords and upper two fabric-guide pairs, keeping complete dial visible. This is not a whole-shoe hero: fill lower80% with large existing closure detail from the same viewpoint. White header15%, darknavy clean text exactly 'Dial & Cord Closure' and small subtitle 'Rotary dial with fabric guides'. Thin restrained orange separator. Preserve actual dial emblem, exact cord routing, four paired fabric guides and stitched mesh panels. Remove only source blocks/background outside crop; no invented anatomy, no ghost whole shoe, no hands/arrows/performanceclaims, no added logo or BOA text.",
+      "output_hint": "Generated images are saved to E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c as E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-7f7e6ccf-e3ff-4bb6-9eae-f2fadef3e1d7.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    "D1": {
+      "prompt": "Edit supplied actual Dark Brown Luqi2509 shoe photo into square B2B product detail. Use only a close crop of the outer quarter: brown grained stitched overlays crossing black/brown mesh openings below lace fabric guides, heel collar edge and brown sidewall edge. Large close-up occupies lower82%; no whole shoe inset. White topheader navy exact text 'Layered Side Panels'; smaller subtitle 'Stitched overlays around mesh sections'. Very thin orange separator. Keep exact same original viewpoint, real textures/seams/colour and panel geometry. Do not synthesize new fabric weave or construction; no material chemistry, waterproof, grip, testing or technology claims. No arrows, no exploded parts, no new emblem.",
+      "output_hint": "Generated images are saved to E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c as E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-e09c92c0-7e9e-42d7-9ea3-b5e500c56c7e.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    "D2": {
+      "prompt": "Edit actual Grey Luqi2509 reference photo into one square premium B2B product detail image. Tight real close-up crop of rounded forefoot: black textured toe overlay, curved seam joining dark grained panel, grey mesh area above and sculpted grey sole edge. Keep exact same viewpoint and actual geometry. This crop should not include the dial or full shoe. White header15%, navy exact heading 'Defined Forefoot Panels', small subtitle 'Rounded toe overlay with stitched edges'; thin orange separator. Lower82% is large authentic detail from reference only, original textures not exaggerated. No cross-section, new underlayers, width promise, protection or material claims, no addedmarks.",
+      "output_hint": "Generated images are saved to E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c as E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-1588636b-71b5-42b9-b87a-8c847ded9c69.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    }
+  },
+  "selected": {
+    "M1": [
+      "exec-d665205a-4be1-45c7-a2af-b2117c3f7d14.png",
+      [
+        25
+      ]
+    ],
+    "M2": [
+      "exec-7f7e6ccf-e3ff-4bb6-9eae-f2fadef3e1d7.png",
+      [
+        25
+      ]
+    ],
+    "M3": [
+      null,
+      [
+        14
+      ]
+    ],
+    "M4": [
+      "2509-options-v1.png",
+      [
+        1,
+        18
+      ]
+    ],
+    "M5": [
+      "2509-enquiry-v1.png",
+      [
+        18
+      ]
+    ],
+    "D1": [
+      "exec-e09c92c0-7e9e-42d7-9ea3-b5e500c56c7e.png",
+      [
+        20
+      ]
+    ],
+    "D2": [
+      "exec-1588636b-71b5-42b9-b87a-8c847ded9c69.png",
+      [
+        25
+      ]
+    ],
+    "D3": [
+      "2509-detail3-v1.png",
+      [
+        9
+      ]
+    ],
+    "D4": [
+      "2509-detail4-v2.png",
+      [
+        23
+      ]
+    ],
+    "SKU_DarkBrown": [
+      null,
+      [
+        20
+      ]
+    ]
+  },
+  "prior_selected_assets": "Existingactualoptions/order/outsole layout retained after nativecomparison. Only5exactpositivebankassets imported; newlygenerated4plusactual20SKU uploadedonce. Old failedHikingreceipts preserved."
+}

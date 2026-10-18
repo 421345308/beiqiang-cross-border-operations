@@ -1,0 +1,21 @@
+{
+  "at": "2026-10-15T16:10:49.201139+00:00",
+  "operation": "Same public product CDN resource without display transform suffix; normal TLS, no permission change",
+  "rows": [
+    {
+      "source_index": 9,
+      "http_status": 404,
+      "state": "NO_UNTRANSFORMED_IMAGE_AVAILABLE"
+    },
+    {
+      "source_index": 13,
+      "http_status": 404,
+      "state": "NO_UNTRANSFORMED_IMAGE_AVAILABLE"
+    },
+    {
+      "source_index": 14,
+      "http_status": 404,
+      "state": "NO_UNTRANSFORMED_IMAGE_AVAILABLE"
+    }
+  ]
+}

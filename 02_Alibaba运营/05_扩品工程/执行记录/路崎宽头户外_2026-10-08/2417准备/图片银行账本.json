@@ -1,0 +1,138 @@
+[
+  {
+    "role": "M1",
+    "source_image": 241710001,
+    "local_file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2417准备\\05_AI候选\\M1.jpg",
+    "sha256": "bb4643c9069b3531606b31917cff42bf3e50c096c1e86497bccfbc77254e675c",
+    "status": "NOT_SENT_CONNECT_REFUSED",
+    "observed_at": "2026-10-10T18:47:38.495152+00:00",
+    "transport_reconciliation": {
+      "observed_at": "2026-10-10T18:50:16.340464+00:00",
+      "scope": "Initial isolated-process connection failure; same-process read-only probe reports WinError10061 before socket connection; normal authorized-network official photobank.list succeeds with TLS checks intact. No HTTP body can be transmitted before TCP connection is established.",
+      "request_sent": false,
+      "error_code": "WinError10061",
+      "normal_read_evidence": "上传异常图片银行只读核对.json"
+    }
+  },
+  {
+    "role": "M1",
+    "source_image": 241710001,
+    "local_file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2417准备\\05_AI候选\\M1.jpg",
+    "sha256": "bb4643c9069b3531606b31917cff42bf3e50c096c1e86497bccfbc77254e675c",
+    "status": "VERIFIED",
+    "observed_at": "2026-10-10T18:50:21.662631+00:00",
+    "url": "https://sc04.alicdn.com/kf/H539c1accce8d4764be1e8920609c8e3bD/286385890/H539c1accce8d4764be1e8920609c8e3bD.jpg",
+    "file_id": "33792516551",
+    "request_id": null
+  },
+  {
+    "role": "M2",
+    "source_image": 241710002,
+    "local_file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2417准备\\05_AI候选\\M2.png",
+    "sha256": "e150b87cf0cc3039c8b907f3ddb0b28df04f7c94c174349006ff69ba5b4747a7",
+    "status": "VERIFIED",
+    "observed_at": "2026-10-10T18:50:28.271869+00:00",
+    "url": "https://sc04.alicdn.com/kf/H4b6ca801c4ff441b93c47d15c6daab32x/286385890/H4b6ca801c4ff441b93c47d15c6daab32x.png",
+    "file_id": "33792468868",
+    "request_id": null
+  },
+  {
+    "role": "M3",
+    "source_image": 241710003,
+    "local_file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2417准备\\05_AI候选\\M3.png",
+    "sha256": "d8be01dc416fd3e4aed9caefca9ac276166bf31912c801f6c7f88461f01f12a7",
+    "status": "VERIFIED",
+    "observed_at": "2026-10-10T18:50:45.258761+00:00",
+    "url": "https://sc04.alicdn.com/kf/H1d7eb12cab3344529d86b5ae56b17125j/286385890/H1d7eb12cab3344529d86b5ae56b17125j.png",
+    "file_id": "33792300142",
+    "request_id": null
+  },
+  {
+    "role": "M4",
+    "source_image": 241710004,
+    "local_file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2417准备\\05_AI候选\\M4.png",
+    "sha256": "70eb8973ba41ec4578da75be397dbe991af2d726c5afe2c544404ca5186b9e7f",
+    "status": "VERIFIED",
+    "observed_at": "2026-10-10T18:50:53.664472+00:00",
+    "url": "https://sc04.alicdn.com/kf/H08266ece2e4f4ff0a794f9fab4c75b30Z/286385890/H08266ece2e4f4ff0a794f9fab4c75b30Z.png",
+    "file_id": "33792276319",
+    "request_id": null
+  },
+  {
+    "role": "M5",
+    "source_image": 241710005,
+    "local_file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2417准备\\05_AI候选\\M5.png",
+    "sha256": "1251489de96fb11247d9f6089e548014fd004decf5c7a24bb634dae8fc44816c",
+    "status": "VERIFIED",
+    "observed_at": "2026-10-10T18:51:01.097351+00:00",
+    "url": "https://sc04.alicdn.com/kf/H0373ea693ece4cbaaf02ec1f4d5d0c62T/286385890/H0373ea693ece4cbaaf02ec1f4d5d0c62T.png",
+    "file_id": "33788797444",
+    "request_id": null
+  },
+  {
+    "role": "D1",
+    "source_image": 241710006,
+    "local_file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2417准备\\05_AI候选\\D1.png",
+    "sha256": "2bbc3ce8f1efa78a354d058727dd772d7ab50837cf4c81459a25edf878a57c60",
+    "status": "VERIFIED",
+    "observed_at": "2026-10-10T18:51:14.918377+00:00",
+    "url": "https://sc04.alicdn.com/kf/H3d56271f576a4b9ea919b793a709d1a6Z/286385890/H3d56271f576a4b9ea919b793a709d1a6Z.png",
+    "file_id": "33790669651",
+    "request_id": null
+  },
+  {
+    "role": "D2",
+    "source_image": 241710007,
+    "local_file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2417准备\\05_AI候选\\D2.png",
+    "sha256": "4df353415552210443601cb9de0cc7839291ec3458dd8dc3aa1f9c8259e9df6c",
+    "status": "VERIFIED",
+    "observed_at": "2026-10-10T18:51:21.955756+00:00",
+    "url": "https://sc04.alicdn.com/kf/H41c6bc008f824a1c839605e35893a616E/286385890/H41c6bc008f824a1c839605e35893a616E.png",
+    "file_id": "33792492786",
+    "request_id": null
+  },
+  {
+    "role": "D3",
+    "source_image": 241710008,
+    "local_file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2417准备\\05_AI候选\\D3.png",
+    "sha256": "2f11a7677c0cc75ae14d9e4bd21724653aea091bf3de3c63a41269087fb34270",
+    "status": "VERIFIED",
+    "observed_at": "2026-10-10T18:51:28.727827+00:00",
+    "url": "https://sc04.alicdn.com/kf/H216bf18d763c4009988fa62ffce72d1f9/286385890/H216bf18d763c4009988fa62ffce72d1f9.png",
+    "file_id": "33790669659",
+    "request_id": null
+  },
+  {
+    "role": "D4",
+    "source_image": 241710009,
+    "local_file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2417准备\\05_AI候选\\D4.png",
+    "sha256": "eeafa39119b903affec987a686c92a6d080123376e91b7264e8ffc06675d33e2",
+    "status": "VERIFIED",
+    "observed_at": "2026-10-10T18:51:45.016429+00:00",
+    "url": "https://sc04.alicdn.com/kf/H55a601614ab843f5bdc43fd7cdf46eaa8/286385890/H55a601614ab843f5bdc43fd7cdf46eaa8.png",
+    "file_id": "33792528560",
+    "request_id": null
+  },
+  {
+    "role": "SKU_Deep Gray Brown",
+    "source_image": 241710010,
+    "local_file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2417准备\\05_AI候选\\SKU_Deep Gray Brown.png",
+    "sha256": "9fd7964c294c43ed612e13b35a518bc32c95d96083990597b9b76df926ca62da",
+    "status": "VERIFIED",
+    "observed_at": "2026-10-10T18:51:53.980739+00:00",
+    "url": "https://sc04.alicdn.com/kf/Haa6ee2e4604a44f5989877f617e48385l/286385890/Haa6ee2e4604a44f5989877f617e48385l.png",
+    "file_id": "33792552507",
+    "request_id": null
+  },
+  {
+    "role": "SKU_Light Gray",
+    "source_image": 241710011,
+    "local_file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2417准备\\05_AI候选\\SKU_Light Gray.png",
+    "sha256": "9dbc5f87fc8a0ccd1fc4357a14933533aa7ba8f0a2cc58167c8d63839b553bd1",
+    "status": "VERIFIED",
+    "observed_at": "2026-10-10T18:52:01.139141+00:00",
+    "url": "https://sc04.alicdn.com/kf/Hb152947a2bce47eb8ad576349dcbf29f2/286385890/Hb152947a2bce47eb8ad576349dcbf29f2.png",
+    "file_id": "33792276326",
+    "request_id": null
+  }
+]

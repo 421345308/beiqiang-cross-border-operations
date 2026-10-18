@@ -1,0 +1,397 @@
+{
+  "key": "F2888",
+  "folder": "shangchao_2357652",
+  "direction": "女冬靴",
+  "url": "https://shangchao.sooxie.com/detail/2357652",
+  "supplier": "尚潮鞋业",
+  "cost_cny": 53,
+  "source_colors": [
+    "卡其",
+    "黑",
+    "米"
+  ],
+  "english_colors": [
+    "Khaki",
+    "Black",
+    "Cream"
+  ],
+  "page_sizes": [
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42
+  ],
+  "production_sizes": [
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42
+  ],
+  "source_title": "尚潮34-42冬季时尚加绒棉鞋女鞋雪地靴",
+  "title": "Women's Quilted Winter Boots with Plush Lining and Side Zipper",
+  "target": "美国/欧洲秋冬女鞋进口商、季节款批发商及电商买家；定位日常冬季短靴，非雪地性能装备。",
+  "facts": {
+    "upper": "太空革（原字段；合成面料具体聚合物未知，不能写PU或真皮）",
+    "shaft_upper": "混合材质",
+    "shaft_lining": "人造长毛绒",
+    "insole": "人造短毛绒",
+    "upper_lining": "棉（保留原文，不外推100% cotton成分）",
+    "outsole": "未知；详情只写弹力鞋底，不等于EVA/橡胶",
+    "construction": "胶粘鞋",
+    "closure": "侧拉链",
+    "toe": "圆头",
+    "heel": "平跟/平底",
+    "visual": "短筒外观、菱格绗缝、鞋口和拉链开口可见绒衬。属性筒高中筒与短筒外观不同，先用winter boots不提交测量筒高。"
+  },
+  "issues": [
+    "页面34–42与详情04图35–42不一致：生产暂取交集35–42，34暂不写入SKU。",
+    "全衬覆盖不是仅凭鞋口确定：来源分别列靴筒长绒和鞋垫短绒，可写plush lining，不写full fleece/sheepskin lining。",
+    "外底成分未取得；若当前Schema必填且无真实Unknown口径，阻断该字段，不编橡胶/EVA。"
+  ],
+  "demand": [
+    {
+      "url": "https://www.walmart.com/c/best-sellers/women-s-snow-boots",
+      "type": "PROXY / parent delegated observation",
+      "observed": "2026-10-02 parent snapshot: Ecetana slip-on 4.4/6713; Hobibear mid-calf 4.7/1120/from USD53.99",
+      "match": "女冬靴、易穿开口、可见毛绒内里方向匹配；本款为短筒侧拉链绗缝，不能继承零售样本防水/性能/销量。"
+    }
+  ],
+  "words": [
+    "winter boots",
+    "quilted upper",
+    "plush lining",
+    "side zipper"
+  ],
+  "hero": "detail_17.jpg",
+  "image_plan": [
+    [
+      "M1",
+      "完整短靴是否易认",
+      "detail_17.jpg",
+      "750×561，鞋完整；候选照片，待统一留白/裁切背景，不重画鞋"
+    ],
+    [
+      "M2",
+      "三种真实颜色怎么选",
+      "detail_04.jpg",
+      "750×998；裁掉规格中文字，分别提取三个真实色鞋，保留轮廓，不改色"
+    ],
+    [
+      "M3",
+      "侧拉链与鞋口实际结构",
+      "detail_08.jpg",
+      "750×830；保留两只同色靴与开口，裁底部模板句"
+    ],
+    [
+      "M4",
+      "绗缝鞋面是否清楚",
+      "detail_17.jpg",
+      "取真实鞋面近景；有效像素按最终裁切登记，不放大宣称细节"
+    ],
+    [
+      "M5",
+      "实际日常上脚比例",
+      "detail_07.jpg",
+      "750×813；裁脚部产品区；不写全天舒适/防滑"
+    ],
+    [
+      "M6",
+      "色码配比和询价需什么",
+      "detail_12.jpg",
+      "750×884；真实卡其鞋配轻量询价输入，不放价格卡"
+    ],
+    [
+      "D1",
+      "全款和真实色码",
+      "detail_04.jpg",
+      "35–42为本轮交集；34待核，不加国别换算"
+    ],
+    [
+      "D2",
+      "已知上部与绒衬部位",
+      "detail_08.jpg",
+      "开口、鞋面；源属性分层记录，不做全衬/纯羊毛承诺"
+    ],
+    [
+      "D3",
+      "外底轮廓与底纹",
+      "detail_05.jpg",
+      "750×839内的底纹区有效宽约200px，低清局部只能补充，需优先更大底图；不写化学材料或冰面抓地"
+    ],
+    [
+      "D4",
+      "询价输入",
+      "detail_16.jpg",
+      "750×555，黑色整鞋；color-size quantities/destination/packing/dispatch request"
+    ]
+  ],
+  "owner": "task-2",
+  "role": "TEST / sourcing candidate; not published",
+  "observed_at": "2026-10-02T16:19:06.064480+00:00",
+  "deadline_utc": "2026-10-02T18:00:00Z",
+  "no_auto_resume": true,
+  "old_product_ids": [],
+  "new_product_id": null,
+  "replacement_plan": "UNASSIGNED",
+  "platform_write": "NOT_SENT",
+  "source_access": "Public page HTTP200 and publicly loaded attribute read; no login, supplier contact or purchase",
+  "source_stock": "Public Stock response success=false; quantity unknown. This does not negate the live sourcing/contact entry.",
+  "supplier_moq": "Unknown; store listing MOQ2 is a separate authorized business baseline, not supplier MOQ",
+  "supplier_tiers": "Single posted unit price only; no supplier quantity-price ladder evidenced",
+  "price_policy": "Source costs recorded. External quotation, FX and quantity breaks to be frozen by publishing owner; no price or inventory submission in this task",
+  "protected": "PROTECT_SOURCE and potential/excellent links retained; live old tier and exact old-new identity must be verified before any replacement",
+  "global_dedup": "No live catalog calls. Scoped project text lookup found no exact candidate URLs; H219 substring hits were unrelated CDN tokens. Not full-store clearance",
+  "unknown_common": [
+    "Actual current per-size quantity",
+    "Supplier MOQ and quantity tiers",
+    "Image commercial usage rights",
+    "Measured fit / US sizes / foot lengths",
+    "Actual parcel size/weight for export",
+    "New current category Schema and required unknown enums",
+    "Exact old-new ordinary HR IDs and authorization binding",
+    "Public QA and actual score (not created)"
+  ],
+  "evidence_files": [
+    {
+      "name": "all_details_contact.jpg",
+      "sha256": "f2155ff51be3ad025bf1e3e808bc3b05cf607a6409583363b2d25c235b95fab3",
+      "bytes": 153821,
+      "native_pixels": [
+        1200,
+        1400
+      ]
+    },
+    {
+      "name": "attributes_text.txt",
+      "sha256": "72336d5b7039e34da5019d73c48289450cdbcd303d176720d92d4bbf1f7a4613",
+      "bytes": 404
+    },
+    {
+      "name": "detail_00.jpg",
+      "sha256": "178d57f22f6c76172763e3fbdb3ba8fb21e1b5c1ab06c6b617c21909c4e33fac",
+      "bytes": 462793,
+      "native_pixels": [
+        750,
+        1139
+      ]
+    },
+    {
+      "name": "detail_01.jpg",
+      "sha256": "c97ef46f2fea4b4bcaa963a41bac8a23c801102f49d88c0b1477b8e57434ca5a",
+      "bytes": 250882,
+      "native_pixels": [
+        750,
+        983
+      ]
+    },
+    {
+      "name": "detail_02.jpg",
+      "sha256": "e0be59cb09d019aa507aab7be10ddfdb05f3a1dba0b63dfa27ab3be2add6e8ba",
+      "bytes": 470354,
+      "native_pixels": [
+        750,
+        1320
+      ]
+    },
+    {
+      "name": "detail_03.jpg",
+      "sha256": "1dc270df26c90b631d1f0cdfd30610fae9ffcb57cdfbb6c75f1f34a8e306b9dd",
+      "bytes": 333400,
+      "native_pixels": [
+        750,
+        1188
+      ]
+    },
+    {
+      "name": "detail_04.jpg",
+      "sha256": "d71ce3a581d9ee1c8e00697163f9c00db4b6a043a50dde912e3127d3f0be232a",
+      "bytes": 151497,
+      "native_pixels": [
+        750,
+        998
+      ]
+    },
+    {
+      "name": "detail_05.jpg",
+      "sha256": "b10e5a71414aaecd6ef4960f60014c527fdf1fd46295d1387bdd0cb984cc86ac",
+      "bytes": 149440,
+      "native_pixels": [
+        750,
+        839
+      ]
+    },
+    {
+      "name": "detail_06.jpg",
+      "sha256": "f5e03bec460049893501b4287dc65155377598c56bc03b86a36b0fb2963ea443",
+      "bytes": 388128,
+      "native_pixels": [
+        750,
+        988
+      ]
+    },
+    {
+      "name": "detail_07.jpg",
+      "sha256": "005802de8499a43a2461bed329b123eb84e56707ca65711e5510a2e63acea01b",
+      "bytes": 229779,
+      "native_pixels": [
+        750,
+        813
+      ]
+    },
+    {
+      "name": "detail_08.jpg",
+      "sha256": "9a72794c1644df2f0dd05e397000774477537625e83650a4e5cd2cc2c2d05953",
+      "bytes": 305642,
+      "native_pixels": [
+        750,
+        830
+      ]
+    },
+    {
+      "name": "detail_09.jpg",
+      "sha256": "9c40854ead95c10a92fb32ca4a5118df2f2356d2fc08de19cd7b7bb84256c544",
+      "bytes": 261397,
+      "native_pixels": [
+        750,
+        692
+      ]
+    },
+    {
+      "name": "detail_10.jpg",
+      "sha256": "85f6d5bd457eba54c7159360cc83be6ab5e0bdfa2905e944ae364278aa2a3e28",
+      "bytes": 268301,
+      "native_pixels": [
+        750,
+        665
+      ]
+    },
+    {
+      "name": "detail_11.jpg",
+      "sha256": "17e6a26332dc0500bc94d11902ac32ff009c5d8db760d613e3fe61089d60990d",
+      "bytes": 230774,
+      "native_pixels": [
+        750,
+        803
+      ]
+    },
+    {
+      "name": "detail_12.jpg",
+      "sha256": "1edbdf4d1f90bffd241aa0547688bbd96a74327ad7d8a951ec9aab1ab17afa18",
+      "bytes": 371147,
+      "native_pixels": [
+        750,
+        884
+      ]
+    },
+    {
+      "name": "detail_13.jpg",
+      "sha256": "8719e4c98d3a9f757ce63689bbea6a1c3ee49c302ed162a352e82d790c404b8e",
+      "bytes": 217488,
+      "native_pixels": [
+        750,
+        814
+      ]
+    },
+    {
+      "name": "detail_14.jpg",
+      "sha256": "38809c34d5e519339f5fd02e7881d5a3a55c65c3c269b1ec8d539aea226a8e9e",
+      "bytes": 386672,
+      "native_pixels": [
+        750,
+        820
+      ]
+    },
+    {
+      "name": "detail_15.jpg",
+      "sha256": "af46b9d1c376b8727984063cc4a6d56ea08cea0bf88634416d18692b5b00772d",
+      "bytes": 227967,
+      "native_pixels": [
+        750,
+        642
+      ]
+    },
+    {
+      "name": "detail_16.jpg",
+      "sha256": "5ac7ad8cebe7f32e40d3fb20252ec1ba4ce251aeb4715720af85a1c3e004f3fe",
+      "bytes": 203191,
+      "native_pixels": [
+        750,
+        555
+      ]
+    },
+    {
+      "name": "detail_17.jpg",
+      "sha256": "2f379d4fcd69db23a173ba0fa411498c0774d513c8bff9e31b9a66c8c48e9523",
+      "bytes": 235285,
+      "native_pixels": [
+        750,
+        561
+      ]
+    },
+    {
+      "name": "gallery_00.jpg",
+      "sha256": "c85a10d641dc85cf86e7fbe6126256d5c97b520a5f990a039531524ac5ca43cf",
+      "bytes": 184375,
+      "native_pixels": [
+        800,
+        800
+      ]
+    },
+    {
+      "name": "gallery_02.jpg",
+      "sha256": "dc9a03e62d228405e81f69736809c8a1a40d33626f733dabf54ecb7376e97f51",
+      "bytes": 206495,
+      "native_pixels": [
+        800,
+        800
+      ]
+    },
+    {
+      "name": "gallery_03.jpg",
+      "sha256": "58a9f4cda532a3ee78927a5e3e8cec10ed008be68b706985e746c4f324a0f6a9",
+      "bytes": 191353,
+      "native_pixels": [
+        800,
+        800
+      ]
+    },
+    {
+      "name": "main.jpg",
+      "sha256": "4699e8c1e9d05feb14a3bde4e35b7dbd09174303cd9c558ebc8376ebb6cb73e8",
+      "bytes": 200708,
+      "native_pixels": [
+        800,
+        800
+      ]
+    },
+    {
+      "name": "page_text.txt",
+      "sha256": "caf86d41d23cbf47559fd1bff7322349cdc8f5a94c33e52ee3e4c40a607cee0c",
+      "bytes": 3197
+    },
+    {
+      "name": "public_index.json",
+      "sha256": "938de6c49c7c8ca6f7a636922c4699955c746163cda202a5658ef16533538025",
+      "bytes": 1555
+    },
+    {
+      "name": "public_Stock.json",
+      "sha256": "c2a0d574f5781577a8e4cb5e2bcea26b2ae68931efde76a53c84b39d80084713",
+      "bytes": 38
+    },
+    {
+      "name": "source.html",
+      "sha256": "a15baccf5f13560190237b8d0de4ab44c7f17843462bfb4419d7529f487ff71d",
+      "bytes": 19822
+    }
+  ]
+}

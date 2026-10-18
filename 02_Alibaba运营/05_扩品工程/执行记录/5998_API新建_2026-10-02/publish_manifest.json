@@ -1,0 +1,40 @@
+{
+  "operation": "create",
+  "category_id": 201153805,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "facts_and_copy.json",
+    "source_attributes.json",
+    "asset_manifest_local.json",
+    "visual_gate.json",
+    "dedup_gate.json"
+  ],
+  "current_schema": "schema_201153805.xml",
+  "current_schema_sha256": "373e827a6c57865ba4c1146407b68ffd33aa29dd90defc45828c090982188efa",
+  "schema_request_id": "213c932b17909425618686681",
+  "schema_acquired_at": "2026-10-02T12:02:39.058639+00:00",
+  "payload_xml": "intended_payload.xml",
+  "field_ids": [
+    "catId",
+    "icbuCatProp",
+    "saleProp",
+    "sku",
+    "productTitle",
+    "productKeywords",
+    "scImages",
+    "priceUnit",
+    "saleType",
+    "scPrice",
+    "minOrderQuantity",
+    "ladderPrice",
+    "pkgMeasure",
+    "pkgWeight",
+    "productDescType",
+    "detailImage",
+    "companyImage",
+    "textDesc",
+    "companyDesc",
+    "companyFaqDesc"
+  ],
+  "dependency_ids": []
+}

@@ -1,0 +1,12 @@
+{
+  "style": "2597",
+  "call_state": "TERMINAL_ABORTED_NO_LIVE_HANDLE",
+  "attempted_roles": ["SKU-Grey", "SKU-Black", "SKU-WhiteRed"],
+  "observed_at": "2026-10-09T02:53:23.626142+00:00",
+  "recovered": [
+    {"role":"SKU-Grey","output":"C:/Users/spq/.codex/generated_images/01a1164e-73c1-70d1-882c-299608adb19c/exec-13548296-1126-4ed6-ad56-44bb58da57b3.png","mtime_utc":"2026-10-09T02:46:24.649534+00:00","accepted_file":"2597-SKU-Grey-v1.png","review":"Full image inspected: exact source09 two Grey shoes, left worn/right held, mesh ribs/black twin bands/brown soles, original fingers/foot/pose and whole shoe boundaries retained. PASS."},
+    {"role":"SKU-Black","output":"C:/Users/spq/.codex/generated_images/01a1164e-73c1-70d1-882c-299608adb19c/exec-b7c8a3ad-1c2b-4cb5-b460-2e02f2d2a956.png","mtime_utc":"2026-10-09T02:46:44.889216+00:00","accepted_file":"2597-SKU-Black-v1.png","review":"Full image inspected: exact source26 two Black front on-foot shoes, white twin bands/brown soles, black trousers/feet and whole shoe edges retained. PASS."}
+  ],
+  "missing_output": ["SKU-WhiteRed"],
+  "resume": "No live job handle returned. Missing WhiteRed may be generated normally; preserve recovered two outputs and do not count missing image as received. Original generated files left in place."
+}

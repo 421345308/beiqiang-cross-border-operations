@@ -1,0 +1,90 @@
+{
+  "status": "approved",
+  "platform": "Tencent Cloud TokenHub",
+  "site": "cn",
+  "area": "gz",
+  "model": "kling-video-v3",
+  "auth": {
+    "profile": "default",
+    "alias": "default",
+    "source": "CLI-managed local config; key held in memory only"
+  },
+  "api": {
+    "submit": "https://tokenhub.tencentmaas.com/v1/wand/kling/image-to-video",
+    "poll": "https://tokenhub.tencentmaas.com/v1/wand/kling/tasks/{task_id}",
+    "reference": "https://cloud.tencent.com/document/product/1823/135742"
+  },
+  "settings": {
+    "resolution": "1080p",
+    "duration": 5,
+    "multi_shot": false,
+    "audio": "off"
+  },
+  "estimated_cost": {
+    "currency": "CNY",
+    "per_output_second": 0.8,
+    "per_job": 4,
+    "jobs": 2,
+    "total": 8,
+    "source": "https://cloud.tencent.com/document/product/1823/130055",
+    "note": "拟提交两段各一次；不含任何额外付费重试，实际账单以平台为准。"
+  },
+  "authorization": {
+    "source": "负责人本轮明确答复：按这两段生成，新增约8元",
+    "scope": "脚跟套入并松手 / 连续自然行走；腾讯云可灵V3，各5秒、1080P、无声，各提交一次，预计新增合计8元，不含额外付费重试。"
+  },
+  "jobs": [
+    {
+      "id": "entry-v4",
+      "first_frame": "public/entry-start-v4.png",
+      "last_frame": "public/entry-end-v4.png",
+      "prompt": "A warm ivory footwear commercial, one continuous 5-second close shot. The first frame shows the forefoot already inside the black knit sock shoe and the bare heel still outside its rear opening. The seated wearer gently lowers the heel THROUGH the top opening into the shoe while the hand guides the original rear pull loop. The knit collar briefly folds as the heel passes, then settles around the ankle. Once the heel is fully seated, the fingers release the loop and the hand lifts away naturally. Follow this exact action order, completing the heel insertion before release. Use the end frame as the worn finish. The intimate close framing keeps the heel and collar dominant; keep the camera framing and shoe floor position consistent with both reference frames. The sole stays grounded; preserve the rounded toe, black sole, heel counter and broad transverse wave-knit pattern of the SAME shoe throughout. Natural skin, ankle and finger anatomy; do not dissolve the heel into the fabric, split the shoe, or turn insertion into simply pulling a collar on an already-worn foot. Restrained, fluid everyday movement at normal speed, no dramatic stretching, no freeze for most of the clip. No text, speech, extra limbs, white sole or shoe redesign.",
+      "prompt_path": "edit/prompts-v4/entry-video.txt",
+      "review": "heel must visibly pass through opening before fingers release; no heel dissolve or shoe redesign",
+      "prompt_sha256": "13051c656ae469830cbc2b82d0ac96eaf552e9f1a82d9acf2c7e90d3a642017a",
+      "reference_sha256": {
+        "first_frame": "f0417ac9d49f7453278c936ae99917f496911e9da94af084dfea69e99e29ef19",
+        "last_frame": "fc9213176d92f2117ed7d716d6ac8322e25a6c4abf91cc42ac6c8b633a0986cd"
+      }
+    },
+    {
+      "id": "walk-v4",
+      "first_frame": "public/walk-start-v4.png",
+      "prompt": "A premium warm ivory footwear commercial, one continuous 5-second low lateral tracking shot. From this natural starting stride, the wearer continues walking to screen left with two relaxed, alternating steps. The rear foot pushes off through the forefoot, swings past and lands heel-to-forefoot; weight then transfers as the other foot follows. BOTH connected legs participate in continuous walking. The ankle-height camera tracks smoothly alongside at walking speed, keeping the shoes prominent and fully readable with floor margin; the floor and soft studio shadows move through the background with natural parallax. Do not leave one foot pinned to its original floor location. Let the cream trouser hems sway gently, and the shoe upper form small natural forefoot folds during push-off. Preserve the identical all-black tall sock shoes, broad transverse wavy knit ridges, fine side knit, black triangular heel counter, little rear loop, rounded toe and black grooved soles. Quiet confident fashion editorial energy, natural movement at normal speed, no exaggerated bounce or sole compression. Finish while the wearer is still progressing, not in a posed freeze. No foot sliding, crossed or fused legs, extra feet, floating contact shadows, white soles, text or speech.",
+      "prompt_path": "edit/prompts-v4/walk-video.txt",
+      "review": "natural alternating weight transfer, camera tracks, both legs move; no frozen support foot or sliding",
+      "prompt_sha256": "e7109b797f5bb834504de9a7988f8147b1aaf9a326b268d3065313a9a4b04194",
+      "reference_sha256": {
+        "first_frame": "3d412d22e92cfbe02c14855a27a0add77a0f261893a27381b6c7360e240db6ce"
+      }
+    }
+  ],
+  "reference_edits": [
+    {
+      "file": "public/entry-start-v4.png",
+      "inputs": [
+        "C:/Users/spq/Desktop/贝强/01_产品资产/01_原始数据包/已整理_BQ029_A025_贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/PNG/PD2A6333.png"
+      ],
+      "tool": "builtin image_gen",
+      "prompt_path": "edit/prompts-v4/entry-start-image.txt"
+    },
+    {
+      "file": "public/entry-end-v4.png",
+      "inputs": [
+        "public/entry-start-v4.png",
+        "C:/Users/spq/Desktop/贝强/01_产品资产/01_原始数据包/已整理_BQ029_A025_贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/PNG/PD2A6333.png"
+      ],
+      "tool": "builtin image_gen",
+      "prompt_path": "edit/prompts-v4/entry-end-image.txt"
+    },
+    {
+      "file": "public/walk-start-v4.png",
+      "inputs": [
+        "C:/Users/spq/Desktop/贝强/01_产品资产/01_原始数据包/已整理_BQ029_A025_贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/贝强鞋业A025高帮波浪纹35-45批58元全网限价88元/PNG/PD2A6333.png",
+        "public/entry-end-v4.png"
+      ],
+      "tool": "builtin image_gen",
+      "prompt_path": "edit/prompts-v4/walk-start-image.txt"
+    }
+  ]
+}

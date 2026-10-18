@@ -1,0 +1,86 @@
+{
+  "task_id": "725_resume_complete_20261003",
+  "role": "REPLACE",
+  "phase": "REVIEWED_ONCE_CREATE",
+  "writer": "task-5",
+  "next_action": "Bind actual photobank receipts, canonical once-create, then exact new-ID readback",
+  "public_model": "BQ-CS063C",
+  "category_id": 201334413,
+  "product_id": null,
+  "source_identity": {
+    "reference": "https://tuyuan.sooxie.com/detail/2541696",
+    "style": "725",
+    "evidence": [
+      "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\725_next_preparation_20261003\\materials_complete.json",
+      "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\725_next_preparation_20261003\\color_binding_complete.json"
+    ],
+    "critical_facts": {
+      "upper_structure": "mesh textile upper with angular side overlay",
+      "outsole_structure": "rubber outsole with patterned tread",
+      "closure": "lace-up",
+      "profile": "basketball-inspired casual sneaker"
+    }
+  },
+  "search_intent": {
+    "key": "mesh lace up casual sneakers with angular side panels and color choices",
+    "evidence": [
+      "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\725_next_preparation_20261003\\buyer_copy_complete_NOT_SENT.json"
+    ],
+    "limits": "Factual positioning, not proof of demand or traffic"
+  },
+  "hero_review": {
+    "url": "https://sc04.alicdn.com/kf/H1d529cc7333b46f98a28ffcfba2a63d0t/286385890/H1d529cc7333b46f98a28ffcfba2a63d0t.jpg",
+    "aliases": [
+      "//sc04.alicdn.com/kf/H1d529cc7333b46f98a28ffcfba2a63d0t/286385890/H1d529cc7333b46f98a28ffcfba2a63d0t.jpg"
+    ],
+    "sha256": "0b92f3a6a1737cd5cc9df4b634b3d3400f9ea957eb349203f1f5d585c5d2d0c9",
+    "content_key": "725_actual_white_lime_angular_side_hero",
+    "label_status": "not_present",
+    "evidence": [
+      "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-4\\hr_control\\basketball_casual_candidate_2026-10-02\\725_M1.jpg"
+    ],
+    "limits": "SPORT marking retained; no model overlay; unknown catalog sources remain unknown"
+  },
+  "replacement_plan": {
+    "candidate": "725",
+    "old_product_ids": [
+      "1601943764325"
+    ]
+  },
+  "source_traceability": {
+    "supplier_name": "途远鞋业",
+    "supplier_original_model": "725",
+    "supplier_original_direct_url": "https://tuyuan.sooxie.com/detail/2541696",
+    "our_model": "BQ-CS063C",
+    "international_product_id": null
+  },
+  "evidence_files": [
+    {
+      "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\工厂店外新款数据采集模板.md",
+      "sha256": "44b1efe1cebebc6987ee12bba887bf1f8b5976e0826b4fa5626e8159226db814",
+      "kind": "task_pack_template",
+      "prior_sha256": "8a033446ecfb505a770c9e24024ad58bc017005fbe44577cdb7e48d2144cb2b6"
+    },
+    {
+      "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\725_next_preparation_20261003\\A-G完整准备稿.md",
+      "sha256": "ec3654ab89059a4be529ad2f4500a9400fe8205e0b1d90fb309e7e918ec548b3",
+      "kind": "task_pack_document"
+    },
+    {
+      "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\725_next_preparation_20261003\\replacement_mapping_contract_projection.json",
+      "sha256": "3cf436ea32df744026132553a252194af0cdd29207de7dab216f14d205d8555b",
+      "kind": "replacement_mapping"
+    },
+    {
+      "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\HR系列真实货源改造_2026-09-21\\HR普通品一对一待替换映射_2026-10-02.json",
+      "sha256": "2621ea282eac127fc7ea7450daf089ad299bc33c864669ca34e8a9e1143266ca",
+      "kind": "original_business_mapping"
+    },
+    {
+      "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-4\\hr_control\\basketball_casual_candidate_2026-10-02\\PARENT_HANDOFF_CURRENT\\725_HR063_C_APPROVED_SOURCE_MAPPING.json",
+      "sha256": "6360ea36f2a6efadf0302079a0970448edc7838084851738956166fc71a9885e",
+      "kind": "original_authorization_evidence"
+    }
+  ],
+  "template_rebound_at": "2026-10-04"
+}

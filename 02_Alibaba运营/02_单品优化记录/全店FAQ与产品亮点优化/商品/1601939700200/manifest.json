@@ -1,0 +1,27 @@
+{
+  "operation": "update",
+  "product_id": "1601939700200",
+  "category_id": 201334413,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "copy.json",
+    "before_get.json",
+    "../../../../../01_产品资产/02_可发布素材/00_最终上传/BQ004_A502/00_上架填写表.md",
+    "../../../../../01_产品资产/01_原始数据包/已整理_BQ004_A502_贝强鞋业A502新款35-45批55元/贝强鞋业A502新款35-45批55元/800X800主图/001.jpg",
+    "current_get.json",
+    "../../../../00_运营SOP/国际站商品全生命周期SOP.md"
+  ],
+  "current_schema": "current_schema.xml",
+  "current_schema_sha256": "246920e77e45d1dfc3fcdedb651ea94df4d2d8ebd67e9421c8394f61ae88a535",
+  "schema_request_id": "2166c2ca17917343868626459",
+  "schema_acquired_at": "2026-10-11T15:59:44.193454+00:00",
+  "payload_xml": "payload.xml",
+  "field_ids": [
+    "textDesc",
+    "companyFaqDesc"
+  ],
+  "dependency_ids": [
+    "productDescType"
+  ],
+  "observed_model": "BQ004-O1 / A502"
+}

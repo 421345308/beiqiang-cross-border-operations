@@ -1,0 +1,80 @@
+{
+  "product_id": "1601972944790",
+  "observed_at": "2026-10-08T01:25:49.316850+00:00",
+  "status": "modified",
+  "display": "N",
+  "title": "Wholesale Unisex Casual Sneakers Low Top Lace Up Walking Shoes with Contrast Panels for Everyday Wear",
+  "title_match": true,
+  "expected_sku_count": 39,
+  "actual_sku_count": 39,
+  "size_attribute": {
+    "attribute_id": 222038415,
+    "values": [
+      {
+        "system_value_name": "EU 37",
+        "value_id": -10037
+      },
+      {
+        "system_value_name": "EU 39",
+        "value_id": -10039
+      },
+      {
+        "system_value_name": "EU 40",
+        "value_id": -10040
+      },
+      {
+        "system_value_name": "EU 36",
+        "value_id": -10036
+      },
+      {
+        "system_value_name": "EU 38",
+        "value_id": -10038
+      },
+      {
+        "system_value_name": "EU 41",
+        "value_id": -10041
+      },
+      {
+        "system_value_name": "EU 42",
+        "value_id": -10042
+      },
+      {
+        "system_value_name": "EU 44",
+        "value_id": -10044
+      },
+      {
+        "system_value_name": "EU 45",
+        "value_id": -10045
+      },
+      {
+        "system_value_name": "EU 43",
+        "value_id": -10043
+      },
+      {
+        "system_value_name": "EU 47",
+        "value_id": -10047
+      },
+      {
+        "system_value_name": "EU 48",
+        "value_id": -10048
+      },
+      {
+        "system_value_name": "EU 46",
+        "value_id": -10046
+      }
+    ],
+    "attribute_name": "EUR Size"
+  },
+  "all_color_size_pairs_match": true,
+  "all_prices_preserved": true,
+  "unique_sku_ids": true,
+  "public_source_terms_found": [],
+  "protected_fields": {
+    "category_id": true,
+    "attributes": true,
+    "main_image": true,
+    "sourcing_trade": true
+  },
+  "request_id": "21501b6717914227402096058",
+  "limits": "正式API标题与EU规格阶段验收；图片修复及公开页面验收尚未完成"
+}

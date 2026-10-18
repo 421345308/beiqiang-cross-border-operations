@@ -1,0 +1,21 @@
+{
+  "method": "alibaba.icbu.category.get.new",
+  "request": {
+    "cat_id": 202240835
+  },
+  "observed_at": "2026-10-15T04:41:31.432472+00:00",
+  "response": {
+    "category": {
+      "leaf_category": true,
+      "cn_name": "乐福鞋",
+      "category_id": 202240835,
+      "level": 3,
+      "name": "Loafers",
+      "parent_ids": [
+        "201152905"
+      ]
+    },
+    "request_id": "212c6fc617920392909873015",
+    "_trace_id_": "212e559c17920392908416308e0edd"
+  }
+}

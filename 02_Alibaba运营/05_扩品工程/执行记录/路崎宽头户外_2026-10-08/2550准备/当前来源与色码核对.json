@@ -1,0 +1,186 @@
+{
+  "style": "2550",
+  "observed_at": "2026-10-15T06:24:28.536253+00:00",
+  "source": "https://luqi.sooxie.com/detail/2422305",
+  "source_HTML_sha256": "a8eaecc2210b0bb7c71d412ffdaade097ee29c65744113b1f515eb15d9d111d5",
+  "source_price_cny": "72.00",
+  "source_EU_by_color": {
+    "Black": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ],
+    "Brown": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ],
+    "Beige": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ]
+  },
+  "source_EU_combinations": 30,
+  "source_images": 21,
+  "whole_source_contacts_actually_viewed": true,
+  "full_original_fact_indices_actually_viewed": [
+    1,
+    4,
+    9,
+    10,
+    12,
+    19
+  ],
+  "known_materials": {
+    "upper": "Original12 网布+合成革 supports mesh and general synthetic leather; no PU/fiber specification",
+    "outsole": "TPR original12",
+    "lining": "Original12 柔软内里 does not identify composition; Not specified",
+    "midsole": "Original09 TPR材质中底 source claim retained separately; not assume same composition by outsole appearance"
+  },
+  "source_color_labels": {
+    "Black": "黑色",
+    "Brown": "棕色",
+    "Beige": "米黄"
+  },
+  "identity_notes": "Ankle hiking boot, plain laces with lower ring eyelets and upper hooked hardware, perforated upper overlay with oval ankle mesh and long lower triangular mesh windows, front and rear pull tabs, wraparound toe overlay, sculpted sidewall and actual block-lug underside original01. No protective safety/impact, non-slip, waterproof or test claims.",
+  "exact_duplicate_original_groups": [],
+  "title_draft": "Mens Lace Up Ankle Outdoor Boots Mesh Synthetic Leather Upper TPR Sole Hook Eyelets Black Brown Beige Wholesale EU 39-48",
+  "title_bytes": 120,
+  "wide_claim": "NO_WIDE_CLAIM_FROM_OUTDOOR_ONLY_SOURCE",
+  "status": "CURRENT_SOURCE_FACTS_REVIEWED_IMAGE_PREPARATION_NOT_CREATED",
+  "category_id": 32299,
+  "category_name": "Other Shoes",
+  "category_path": [
+    32299,
+    322
+  ],
+  "category_evidence": "02503准备/当前类目_127734034.json and127726074.json and202240208.json",
+  "category_block_evidence": "2509准备/经营类目拒绝诊断.json and026准备/经营类目影响范围.json",
+  "hold_scope": "",
+  "image_status": "CURRENT_OPTIMIZED_SET_IN_PREPARATION",
+  "pending": [
+    "Native fullgallery/SKUreview/currentSchema/singlecreate/formalfields/actualscore"
+  ],
+  "product_id": null,
+  "state": "CREATED_FORMAL_FIELDS_SCORE_PASS",
+  "source_color_aliases": {
+    "Black": "黑色",
+    "Brown": "棕色",
+    "Beige": "米黄"
+  },
+  "photo_count": 21,
+  "visible_structure": [
+    "Ankle-height lace-up boot with lower ring eyelets and upper hooked hardware",
+    "Mesh sections framed by synthetic leather overlays",
+    "Oval ankle window and elongated lower mesh windows",
+    "Front and rear fabric pull loops",
+    "Wraparound toe overlay, sculpted sidewall and block-tread sole"
+  ],
+  "product_highlights_draft": [
+    "Lace-up ankle profile: Lower ring eyelets and upper hooked hardware organise the laces along the front of the boot.",
+    "Mesh and synthetic leather upper: Stitched overlays frame an oval ankle panel and elongated mesh windows along the sides.",
+    "TPR sole: The source specifies TPR, with a sculpted sidewall and block-pattern tread visible in the product photographs.",
+    "Practical pull tabs: Fabric loops at the tongue and heel accompany the raised collar and wraparound toe overlay.",
+    "Three-colour EU 39–48 selection: Black, Brown and Beige cover neutral outdoor footwear assortments, with ten EU sizes per colour."
+  ],
+  "pricing_draft": {
+    "source_cny": "72.00",
+    "fx": "6.6837",
+    "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+    "fx_observed": "2026-10-13 10:57:20",
+    "rounding": "ROUND_CEILING_TO_USD_CENT",
+    "tiers": [
+      [
+        2,
+        "16.16"
+      ],
+      [
+        50,
+        "15.09"
+      ],
+      [
+        100,
+        "14.01"
+      ]
+    ],
+    "freight_service_tax": "Datedsourcecost/FX reference;markup notnetprofit; applicablefreighttaxfees separatelyconfirmed."
+  },
+  "publish_profile": {
+    "category_id": 32299,
+    "schema_name": "当前其他鞋类Schema",
+    "buyer_colours": [
+      {
+        "buyer": "Black",
+        "supplier_key": "Black",
+        "supplier_label": "黑色",
+        "image_role": "M4"
+      },
+      {
+        "buyer": "Brown",
+        "supplier_key": "Brown",
+        "supplier_label": "棕色",
+        "image_role": "M5"
+      },
+      {
+        "buyer": "Beige",
+        "supplier_key": "Beige",
+        "supplier_label": "米黄",
+        "image_role": "M1"
+      }
+    ],
+    "category_attributes": {
+      "Upper Material": [
+        "Mesh",
+        "Faux Leather"
+      ],
+      "Outsole Material": [
+        "TPR"
+      ]
+    },
+    "local_intent": [
+      "系带踝帮户外靴"
+    ]
+  },
+  "category_route": {
+    "at": "2026-10-15T06:25:56.752916+00:00",
+    "owner_direction": "2026-10-15 suitable sports/otherfootwear allowed, Hikingnotrequired.",
+    "category_id": 32299,
+    "leaf": "Other Shoes",
+    "root": 322,
+    "positive_route": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2509准备/create_receipt.json",
+    "scope": "No businessrootchange; no unsupportedMidsole/Lining/Closurefields copied. OtherShoesactualUpperoptions/currentpreflight mustpass."
+  },
+  "hero_selection": "Actual01cleanBeigepair/undersideunchanged M1. Actual04Blackand19Brownphotocleanup preserve originalonfootpose/pair; labels/borders outsidephotoonlyremoved, no physicalshoe marks erased. Mainhooks/solecloseups andtoe/ankle/Beigebottom/details constrainedactual01/10.",
+  "publication": {
+    "product_id": "1601980991313",
+    "audit": "approved",
+    "display": "Y",
+    "actual_score": "5.00",
+    "formal_verification": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2550准备/verification.json",
+    "local_sync_at": "2026-10-15T11:16:57.275901+00:00",
+    "no_replayed_create": true
+  },
+  "next_action": "该款正式字段、评分与来源已通过；继续其他款，不重复创建。"
+}

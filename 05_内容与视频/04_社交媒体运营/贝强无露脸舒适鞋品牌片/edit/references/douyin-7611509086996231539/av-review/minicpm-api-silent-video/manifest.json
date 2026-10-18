@@ -1,0 +1,28 @@
+{
+  "source": "C:\\Users\\spq\\Desktop\\贝强\\99_临时区\\音视频审片\\minicpm-runtime\\silent-video.mp4",
+  "source_sha256": "a0e15ed0bb423d6ae7abec3bc8b79e2530dd7595a15d32f7b4f4ed5d79eeef89",
+  "source_bytes": 3877810,
+  "duration_seconds": 28.466667,
+  "input_type": "whole_mp4",
+  "audio_samples": null,
+  "audio_peak_abs": null,
+  "endpoint": "wss://minicpmo45.modelbest.cn/v1/realtime?mode=chat",
+  "model": "MiniCPM-o4.5 official demo",
+  "prompt": "先分析实际听到的人声、音乐、环境声和分离声音事件，给出次数与大致时刻，听不清说明，不根据脚的动作猜声音。再概括画面中的商品展示动作与相机是否运动。不要猜歌名，不添加没有听到的歌词。中文500字以内。",
+  "audio_complete_client": true,
+  "all_video_frames_seen": false,
+  "video_sampling": "server helper stack_frames=1",
+  "authorization": "user-approved public-reference analysis",
+  "status": "answered_unverified",
+  "paid_generation": false,
+  "api_key_used": false,
+  "session_id": "sess_a24054fcfa40",
+  "backend": "pytorch",
+  "first_text_seconds": 4.563000000001921,
+  "metrics": {
+    "backend": "pytorch",
+    "kv_cache_length": 2628
+  },
+  "elapsed_seconds": 10.578000000001339,
+  "response_seconds": 9.0
+}

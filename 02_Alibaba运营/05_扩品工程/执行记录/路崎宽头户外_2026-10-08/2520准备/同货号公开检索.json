@@ -1,0 +1,28 @@
+{
+  "at": "2026-10-15T17:12:25.840096+00:00",
+  "query": "https://luqi.sooxie.com/?s=2520",
+  "http_status": 200,
+  "form_basis": "Observed public store GET search input s",
+  "matching_rows": [
+    {
+      "url": "https://luqi.sooxie.com/detail/2290940",
+      "label": "",
+      "parent_text": "2520"
+    },
+    {
+      "url": "https://luqi.sooxie.com/detail/2290940",
+      "label": "路崎2520款大码户外徒步鞋跨境",
+      "parent_text": "路崎2520款大码户外徒步鞋跨境"
+    }
+  ],
+  "other_public_detail_links_count": 0,
+  "scope": "Read-only exact-code public search, not a whole-web or supplier-contact assertion",
+  "additional_shop_check": {
+    "at": "2026-10-15T18:30:35.563509+00:00",
+    "query": "https://jiangshang.sooxie.com?s=2520",
+    "http_status": 200,
+    "matching_rows": [],
+    "state": "NO_MATCHING_2520_PRODUCT_LINK_RETURNED",
+    "limit": "Only this shop/exact-code query; broadweb code matches alone do not establish same style or an unmarked variant."
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "source_folder": "HR042",
+  "colors": [
+    "Black",
+    "Brown",
+    "Khaki",
+    "White",
+    "Yellow"
+  ],
+  "sizes": [
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "titles": {
+    "A": "Men's Perforated Slip-On Loafers Microfiber Leather Casual Shoes with Rubber Outsole for Summer Wholesale",
+    "B": "Men's Summer Casual Loafers Perforated Microfiber Leather Slip-On Shoes with Stitched Sidewall for Wholesale",
+    "C": "Men's Slip-On Casual Shoes Perforated Microfiber Leather Loafers with Rubber Outsole for Wholesale"
+  },
+  "keywords": "mens perforated slip on loafers microfiber leather summer casual shoes wholesale",
+  "highlights": "Perforated microfiber leather upper: The visible hole pattern gives this low-cut loafer a distinct summer casual look.\nSlip-on opening: Side inserts and an open instep eliminate traditional lace tying.\nApron-toe and sidewall stitching: Visible seams and a textured sole edge define the rounded casual profile.\nMaterial combination: Microfiber leather lining, PU insole and rubber outsole are specified for this style.\nFive-color assortment: Black, Brown, Khaki, White and Yellow, EU 38-46. Share your target color-size mix for a wholesale quotation.",
+  "upper": "Microfiber Leather",
+  "lining": "Microfiber leather",
+  "closure": "Slip-On",
+  "style": [
+    "Loafers",
+    "Slip-On"
+  ],
+  "custom": [
+    "Shoe Profile",
+    "Perforated slip-on loafer"
+  ],
+  "tiers": [
+    [
+      2,
+      "14.59"
+    ],
+    [
+      50,
+      "13.69"
+    ],
+    [
+      100,
+      "12.69"
+    ]
+  ],
+  "min_markup": 0.3,
+  "source_id": "src-hr-hr042-9818",
+  "source_artno": "9818",
+  "source_assets_root": "01_产品资产/01_原始数据包/HR042_9818",
+  "source_evidence": [
+    "01_产品资产/01_原始数据包/HR042_9818/source.json",
+    "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR042/素材清单.json"
+  ],
+  "procurement_capability": "CURRENT_REAL_SHOE_AND_PROCUREMENT_ENTRY_VERIFIED_NOT_ORDER_STOCK",
+  "materials_evidence": [
+    "https://longqin.sooxie.com/detail/2473884"
+  ],
+  "seasons": [
+    "Summer"
+  ],
+  "feature": "Fashion Trend",
+  "target_ids": {
+    "A": "1601943703336",
+    "B": "1601943747024",
+    "C": "1601943639708"
+  },
+  "page_state": "FORMAL_FIELDS_SCORE_PASS",
+  "company_faq_source": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/通用FAQ与公司简介.json",
+  "do_not_claim": [
+    "physical stock",
+    "tested slip resistance",
+    "medical comfort",
+    "unverified midsole material"
+  ],
+  "current_models_by_id": {
+    "1601943747024": "BQ1042-B",
+    "1601943639708": "BQ1042-C",
+    "1601943703336": "BQ1042-A"
+  },
+  "model_migration_evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/范围.json",
+  "model_numbers": {
+    "B": "BQ1042-B",
+    "C": "BQ1042-C",
+    "A": "BQ1042-A"
+  },
+  "current_platform_category_by_id": {
+    "1601943703336": 201334413,
+    "1601943747024": 201334413,
+    "1601943639708": 201334413
+  },
+  "category_scope": "category_id保留初始改造默认；当前平台叶子按current_platform_category_by_id逐ID读取，不把同源链接不同平台分类混成不同实鞋。"
+}

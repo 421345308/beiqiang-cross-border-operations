@@ -1,0 +1,153 @@
+{
+  "project": "ZX9507_抖店生活化带货",
+  "selected_assets": [
+    {
+      "id": "P_WHITE",
+      "file": "assets/product_white.png",
+      "role": "product_background_derivative",
+      "inherit": [
+        "black knit upper and beige sole identity as secondary reference"
+      ],
+      "exclude": [
+        "new product truth",
+        "hidden surfaces",
+        "performance proof"
+      ],
+      "prompt": "Use case: precise-object-edit. Asset type: factual product-reference derivative for a Chinese footwear video. Input image 1 is the edit target and the sole authority for shoe identity. Replace ONLY the grey wall and wooden tabletop with a pure white seamless photographic background. Keep EXACTLY the same single black knit slip-on shoe, the same left-facing lateral orientation, toe pointing left, same camera angle, same framing, same shape, same opening and raised collar, same knitted zones and seams, same beige/apricot sculpted sole, all irregular raised pebble-shaped lobes and fine grooves in exactly their existing positions. Preserve the warm beige sole color; do not turn it white. Keep all existing product details, proportions and texture. Do not add laces, straps, logos, text, props or another shoe. Do not invent a new view or a hidden underside. Clean, neutral product photography with a subtle realistic grounding shadow; no pedestal, no showroom and no collage. The goal is a background replacement of this exact photographed shoe, not a redesigned similar shoe. Square image, complete uncropped shoe, generous white margin.\n",
+      "prompt_file": "prompts/white_product_prompt.txt",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "4513b83d738803b375333426d7a83c3837a44071419c1190af098c2caa5d1f93",
+      "visual_review": {
+        "status": "passed_for_declared_role",
+        "notes": "Viewed generated output against lateral factory source: silhouette, laceless collar and pebble-lobed beige sole recognizable; microtexture and lighting reconstructed, not pixel-exact. Factory photographs remain identity authority."
+      }
+    },
+    {
+      "id": "M01",
+      "file": "assets/model_three_views.png",
+      "role": "identity_wardrobe",
+      "inherit": [
+        "one fictional adult male identity",
+        "charcoal sweatshirt",
+        "blue straight-leg jeans",
+        "body proportions"
+      ],
+      "exclude": [
+        "studio background",
+        "multi-panel layout",
+        "sock-only state in final shoe-worn scenes"
+      ],
+      "prompt": "Use case: photorealistic-natural. Asset type: one consistent fictional adult male model identity and wardrobe reference sheet for a Chinese autumn casual footwear video. Create a clean horizontal three-panel photographic casting sheet of the SAME original 27-year-old Chinese man, medium slim build, natural proportions, short slightly textured black hair, natural skin texture, calm approachable expression. Panels show full-body front, full-body left profile, and full-body back, all head-to-toe, identical scale, clear gaps. Same outfit in every panel: plain charcoal cotton crewneck sweatshirt with no text or graphics, washed mid-blue straight-leg denim jeans ending neatly above the ankle without covering the footwear area, plain thin medium-grey ankle socks, no shoes. Arms naturally relaxed slightly away from torso, both hands visible, normal five-finger anatomy, neutral standing pose. Soft even frontal studio lighting and pale warm-grey seamless background, no dramatic shadows, no overexposed face, no fashion poses. Do not include accessories, phone, bags, jewelry, logos, labels or typography. All three panels must represent exactly the same identity, body, haircut, garment fit and sock color; this is a reference sheet, not a story scene. Photorealistic ordinary relatable Chinese male shopper, modest contemporary casual styling.\n",
+      "prompt_file": "prompts/model_prompt.txt",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "b3f4d4befabfc695c24239d1eb6e0b5fffc4a29958e3043904ea93e6b633c088",
+      "visual_review": {
+        "status": "passed_for_declared_role",
+        "notes": "Front/profile/back show coherent hairstyle, face, sweatshirt and jeans; full legs visible. Grey socks are base asset state. Three-view sheet is not a first frame."
+      }
+    },
+    {
+      "id": "L01",
+      "file": "assets/empty_entryway.png",
+      "role": "empty_location",
+      "inherit": [
+        "oak door on right",
+        "cabinet and bench on left",
+        "clear grey floor",
+        "daylight from left"
+      ],
+      "exclude": [
+        "people",
+        "product identity",
+        "mandatory eye-height camera"
+      ],
+      "prompt": "Use case: photorealistic-natural. Asset type: reusable EMPTY location reference for a vertical Chinese autumn footwear social video. Generate a natural believable modest contemporary Chinese apartment entrance/hallway, 9:16 vertical photograph, human eye height with a slightly downward field of view, natural 35mm perspective, no ultrawide distortion. A closed warm medium-oak apartment door on the back-right wall, simple low oak shoe cabinet on the left, a small plain upholstered bench beside it, off-white walls, a tiny green potted plant on the cabinet. Large uninterrupted matte light warm-grey stone-look floor in the foreground, uncluttered and wide enough for someone to take two or three natural steps across the frame. Soft diffused daylight enters from an unseen window on camera-left, gentle believable shadows, realistic fine floor texture, warm but neutral white balance. The floor and lower half of the frame will make black knitted shoes with beige soles readable. No people, no human reflections, no shoes, no slippers, no clothing, no product, no mirror, no text, no brand, no watermark, no luxury showroom staging. A single coherent empty room, not a multi-panel grid. Keep the door, cabinet and bench legible as stable spatial anchors while leaving a clear walking path and room for lower-camera closeups.\n",
+      "prompt_file": "prompts/scene_prompt.txt",
+      "width": 941,
+      "height": 1672,
+      "sha256": "d44e3c896b131083945bed88d4a9e8d0b9cec4acfbcb07bb2653d8f3d4398307",
+      "visual_review": {
+        "status": "passed_for_declared_role",
+        "notes": "Empty coherent room, stable furniture, no shoes/humans, readable floor. Direct sunlight is stronger than requested; accepted as current lighting language."
+      }
+    },
+    {
+      "id": "P_FACTORY_WHITE",
+      "file": "sources/product_factory_white.jpg",
+      "role": "actual_product",
+      "inherit": [
+        "real visible shoe silhouette",
+        "actual knit and sculpted beige sole"
+      ],
+      "exclude": [
+        "generated hidden views",
+        "material testing claims"
+      ],
+      "prompt": "Unmodified factory source; no generation.",
+      "prompt_file": null,
+      "width": 800,
+      "height": 800,
+      "sha256": "5bb25db02e42f6db3d3d7355ea868330eebda151673cb80e812a5d20904344f3",
+      "visual_review": {
+        "status": "passed_for_declared_role",
+        "notes": "Factory white-background side photograph inspected as primary product authority."
+      }
+    },
+    {
+      "id": "P_FACTORY_SOLE",
+      "file": "sources/product_factory_sole.jpg",
+      "role": "actual_product",
+      "inherit": [
+        "visible outsole shapes",
+        "visible shoe proportions"
+      ],
+      "exclude": [
+        "scene layout",
+        "generative performance demonstrations"
+      ],
+      "prompt": "Unmodified factory source; no generation.",
+      "prompt_file": null,
+      "width": 800,
+      "height": 800,
+      "sha256": "33c266a6fd6e30864bb6ffa067f19b11be83b313cc586c9a9e37f82b52aa1664",
+      "visual_review": {
+        "status": "passed_for_declared_role",
+        "notes": "Factory shoe and outsole photograph inspected; do not treat them as two separate floating products in final scenes."
+      }
+    }
+  ],
+  "input_only_sources": [
+    {
+      "file": "sources/product_factory_side.jpg",
+      "role": "white-background edit input"
+    },
+    {
+      "file": "sources/product_factory_pair.jpg",
+      "role": "original colorway/package identity evidence with promotional sticker; do not inherit sticker"
+    }
+  ],
+  "product_reference": {
+    "id": "P_PRIMARY",
+    "file": "sources/product_factory_white.jpg",
+    "evidence": "sources/provenance.json"
+  },
+  "continuity_rules": [
+    {
+      "shot_ids": "*",
+      "field": "product",
+      "equals": "ZX9507 黑杏加绒"
+    },
+    {
+      "shot_ids": "*",
+      "field": "wardrobe",
+      "equals": "M01 charcoal sweatshirt and blue straight jeans"
+    },
+    {
+      "shot_ids": "*",
+      "field": "location",
+      "equals": "L01 apartment entryway"
+    }
+  ]
+}

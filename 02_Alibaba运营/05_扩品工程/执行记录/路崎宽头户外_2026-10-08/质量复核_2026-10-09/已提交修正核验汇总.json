@@ -1,0 +1,2121 @@
+[
+  {
+    "style": "02601",
+    "product_id": "1601973814505",
+    "observed_at": "2026-10-08T16:58:28.757696+00:00",
+    "status": "approved",
+    "display": "Y",
+    "title_match": true,
+    "target_fields": [
+      "productTitle"
+    ],
+    "protected_fields": {
+      "category_id": true,
+      "attributes": true,
+      "product_sku": true,
+      "sourcing_trade": true,
+      "keywords": true,
+      "main_image": true,
+      "struct_detail": true
+    },
+    "Chrome_readback": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+    "actual_score": "5.00",
+    "image_detail_full_acceptance": "PENDING_REMAINING_DETAIL_ROLE_IMPROVEMENT",
+    "unsubmitted_schema_differences": [],
+    "target_field_matches": {
+      "productTitle": true
+    },
+    "raw_snapshot_comparison": {
+      "productTitle": true
+    },
+    "score_source": "alibaba.icbu.product.score.get / 0bab02fe17914787377117132",
+    "score_observed_at": "2026-10-08T16:58:55.400684+00:00",
+    "score_diagnostics": {
+      "ruleScoreMap": {
+        "title_word_miss_core_error": 0.0,
+        "imageQualityBad": 0.0,
+        "image_scale": 0.0,
+        "title_word_error": 0.0,
+        "image_num": 0.0
+      },
+      "errorReasonSkuImageMoreMap": {},
+      "errorReasonTitleWordMissErrorMap": {},
+      "errorReasonList": [],
+      "errorReasonTitleWordErrorMap": {},
+      "extendCheckMap": {
+        "imageText": true,
+        "sku_image": false,
+        "title_word_miss_core_error": true,
+        "imageQualityBad": true,
+        "sku_text": false,
+        "imageSubTitle": false,
+        "category": true,
+        "title_word_error": true,
+        "selling_point_attribute_conflict": false
+      },
+      "errorReasonCategoryMap": {},
+      "errorReasonSkuTextMap": {},
+      "errorReasonSubTitleMap": {},
+      "errorReasonMap": {},
+      "errorReasonSellingPointAttributeMap": {},
+      "errorReasonSkuImageMap": {},
+      "extendProblemMap": {
+        "imageText": false,
+        "title_word_miss_core_error": false,
+        "imageQualityBad": false,
+        "imageSubTitle": false,
+        "image_scale": false,
+        "inventory": false,
+        "title_word_error": false,
+        "selling_point_attribute_conflict": false,
+        "image_num": false,
+        "freightRate": false,
+        "sku_image": false,
+        "sku_text": false,
+        "price": false,
+        "category": false
+      },
+      "errorReasonQualityBadMap": {},
+      "errorReasonSkuTextMoreMap": {}
+    },
+    "scope_result": "PASS"
+  },
+  {
+    "style": "02602",
+    "product_id": "1601973869140",
+    "observed_at": "2026-10-08T16:57:54.303585+00:00",
+    "status": "approved",
+    "display": "Y",
+    "title_match": true,
+    "target_fields": [
+      "productTitle"
+    ],
+    "protected_fields": {
+      "category_id": true,
+      "attributes": true,
+      "product_sku": true,
+      "sourcing_trade": true,
+      "keywords": true,
+      "main_image": true,
+      "struct_detail": true
+    },
+    "Chrome_readback": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+    "actual_score": "5.00",
+    "image_detail_full_acceptance": "PENDING_REMAINING_DETAIL_ROLE_IMPROVEMENT",
+    "unsubmitted_schema_differences": [],
+    "target_field_matches": {
+      "productTitle": true
+    },
+    "raw_snapshot_comparison": {
+      "productTitle": true
+    },
+    "score_source": "alibaba.icbu.product.score.get / 212c41d317914787020081540",
+    "score_observed_at": "2026-10-08T16:58:19.653975+00:00",
+    "score_diagnostics": {
+      "ruleScoreMap": {
+        "title_word_miss_core_error": 0.0,
+        "imageQualityBad": 0.0,
+        "image_scale": 0.0,
+        "title_word_error": 0.0,
+        "image_num": 0.0
+      },
+      "errorReasonSkuImageMoreMap": {},
+      "errorReasonTitleWordMissErrorMap": {},
+      "errorReasonList": [],
+      "errorReasonTitleWordErrorMap": {},
+      "extendCheckMap": {
+        "imageText": true,
+        "sku_image": false,
+        "title_word_miss_core_error": true,
+        "imageQualityBad": true,
+        "sku_text": false,
+        "imageSubTitle": false,
+        "category": true,
+        "title_word_error": true,
+        "selling_point_attribute_conflict": false
+      },
+      "errorReasonCategoryMap": {},
+      "errorReasonSkuTextMap": {},
+      "errorReasonSubTitleMap": {},
+      "errorReasonMap": {},
+      "errorReasonSellingPointAttributeMap": {},
+      "errorReasonSkuImageMap": {},
+      "extendProblemMap": {
+        "imageText": false,
+        "title_word_miss_core_error": false,
+        "imageQualityBad": false,
+        "imageSubTitle": false,
+        "image_scale": false,
+        "inventory": false,
+        "title_word_error": false,
+        "selling_point_attribute_conflict": false,
+        "image_num": false,
+        "freightRate": false,
+        "sku_image": false,
+        "sku_text": false,
+        "price": false,
+        "category": false
+      },
+      "errorReasonQualityBadMap": {},
+      "errorReasonSkuTextMoreMap": {}
+    },
+    "scope_result": "PASS"
+  },
+  {
+    "style": "02603",
+    "product_id": "1601973784646",
+    "observed_at": "2026-10-08T16:57:19.478658+00:00",
+    "status": "approved",
+    "display": "Y",
+    "title_match": true,
+    "target_fields": [
+      "productTitle"
+    ],
+    "protected_fields": {
+      "category_id": true,
+      "attributes": true,
+      "product_sku": true,
+      "sourcing_trade": true,
+      "keywords": true,
+      "main_image": true,
+      "struct_detail": true
+    },
+    "Chrome_readback": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+    "actual_score": "5.00",
+    "image_detail_full_acceptance": "PENDING_REMAINING_DETAIL_ROLE_IMPROVEMENT",
+    "unsubmitted_schema_differences": [],
+    "target_field_matches": {
+      "productTitle": true
+    },
+    "raw_snapshot_comparison": {
+      "productTitle": true
+    },
+    "score_source": "alibaba.icbu.product.score.get / 0b51802d17914786685813628",
+    "score_observed_at": "2026-10-08T16:57:46.256042+00:00",
+    "score_diagnostics": {
+      "ruleScoreMap": {
+        "title_word_miss_core_error": 0.0,
+        "imageQualityBad": 0.0,
+        "image_scale": 0.0,
+        "title_word_error": 0.0,
+        "image_num": 0.0
+      },
+      "errorReasonSkuImageMoreMap": {},
+      "errorReasonTitleWordMissErrorMap": {},
+      "errorReasonList": [],
+      "errorReasonTitleWordErrorMap": {},
+      "extendCheckMap": {
+        "imageText": true,
+        "sku_image": false,
+        "title_word_miss_core_error": true,
+        "imageQualityBad": true,
+        "sku_text": false,
+        "imageSubTitle": false,
+        "category": true,
+        "title_word_error": true,
+        "selling_point_attribute_conflict": false
+      },
+      "errorReasonCategoryMap": {},
+      "errorReasonSkuTextMap": {},
+      "errorReasonSubTitleMap": {},
+      "errorReasonMap": {},
+      "errorReasonSellingPointAttributeMap": {},
+      "errorReasonSkuImageMap": {},
+      "extendProblemMap": {
+        "imageText": false,
+        "title_word_miss_core_error": false,
+        "imageQualityBad": false,
+        "imageSubTitle": false,
+        "image_scale": false,
+        "inventory": false,
+        "title_word_error": false,
+        "selling_point_attribute_conflict": false,
+        "image_num": false,
+        "freightRate": false,
+        "sku_image": false,
+        "sku_text": false,
+        "price": false,
+        "category": false
+      },
+      "errorReasonQualityBadMap": {},
+      "errorReasonSkuTextMoreMap": {}
+    },
+    "scope_result": "PASS"
+  },
+  {
+    "style": "032",
+    "product_id": "1601973736928",
+    "observed_at": "2026-10-08T16:56:12.034356+00:00",
+    "status": "approved",
+    "display": "Y",
+    "title_match": true,
+    "target_fields": [
+      "productTitle"
+    ],
+    "protected_fields": {
+      "category_id": true,
+      "attributes": true,
+      "product_sku": true,
+      "sourcing_trade": true,
+      "keywords": true,
+      "main_image": true,
+      "struct_detail": true
+    },
+    "Chrome_readback": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+    "actual_score": "5.00",
+    "image_detail_full_acceptance": "PENDING_REMAINING_DETAIL_ROLE_IMPROVEMENT",
+    "unsubmitted_schema_differences": [],
+    "target_field_matches": {
+      "productTitle": true
+    },
+    "raw_snapshot_comparison": {
+      "productTitle": true
+    },
+    "score_source": "alibaba.icbu.product.score.get / 0b0b3a2717914785994676949",
+    "score_observed_at": "2026-10-08T16:56:37.125461+00:00",
+    "score_diagnostics": {
+      "ruleScoreMap": {
+        "title_word_miss_core_error": 0.0,
+        "imageQualityBad": 0.0,
+        "image_scale": 0.0,
+        "title_word_error": 0.0,
+        "image_num": 0.0
+      },
+      "errorReasonSkuImageMoreMap": {},
+      "errorReasonTitleWordMissErrorMap": {},
+      "errorReasonList": [],
+      "errorReasonTitleWordErrorMap": {},
+      "extendCheckMap": {
+        "imageText": true,
+        "sku_image": false,
+        "title_word_miss_core_error": true,
+        "imageQualityBad": true,
+        "sku_text": false,
+        "imageSubTitle": false,
+        "category": true,
+        "title_word_error": true,
+        "selling_point_attribute_conflict": false
+      },
+      "errorReasonCategoryMap": {},
+      "errorReasonSkuTextMap": {},
+      "errorReasonSubTitleMap": {},
+      "errorReasonMap": {},
+      "errorReasonSellingPointAttributeMap": {},
+      "errorReasonSkuImageMap": {},
+      "extendProblemMap": {
+        "imageText": false,
+        "title_word_miss_core_error": false,
+        "imageQualityBad": false,
+        "imageSubTitle": false,
+        "image_scale": false,
+        "inventory": false,
+        "title_word_error": false,
+        "selling_point_attribute_conflict": false,
+        "image_num": false,
+        "freightRate": false,
+        "sku_image": false,
+        "sku_text": false,
+        "price": false,
+        "category": false
+      },
+      "errorReasonQualityBadMap": {},
+      "errorReasonSkuTextMoreMap": {}
+    },
+    "scope_result": "PASS"
+  },
+  {
+    "style": "033",
+    "product_id": "1601973792546",
+    "observed_at": "2026-10-08T17:10:24.223104+00:00",
+    "status": "approved",
+    "display": "Y",
+    "title_match": true,
+    "target_fields": [
+      "productTitle"
+    ],
+    "protected_fields": {
+      "category_id": true,
+      "attributes": true,
+      "product_sku": true,
+      "sourcing_trade": true,
+      "keywords": true,
+      "main_image": true,
+      "struct_detail": true
+    },
+    "Chrome_readback": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+    "actual_score": "5.00",
+    "image_detail_full_acceptance": "PENDING_REMAINING_DETAIL_ROLE_IMPROVEMENT",
+    "unsubmitted_schema_differences": [],
+    "target_field_matches": {
+      "productTitle": true
+    },
+    "raw_snapshot_comparison": {
+      "productTitle": true
+    },
+    "score_source": "alibaba.icbu.product.score.get / 0bbb637a17914794520728727",
+    "score_observed_at": "2026-10-08T17:10:49.730476+00:00",
+    "score_diagnostics": {
+      "ruleScoreMap": {
+        "title_word_miss_core_error": 0.0,
+        "imageQualityBad": 0.0,
+        "image_scale": 0.0,
+        "title_word_error": 0.0,
+        "image_num": 0.0
+      },
+      "errorReasonSkuImageMoreMap": {},
+      "errorReasonTitleWordMissErrorMap": {},
+      "errorReasonList": [],
+      "errorReasonTitleWordErrorMap": {},
+      "extendCheckMap": {
+        "imageText": true,
+        "sku_image": false,
+        "title_word_miss_core_error": true,
+        "imageQualityBad": true,
+        "sku_text": false,
+        "imageSubTitle": false,
+        "category": true,
+        "title_word_error": true,
+        "selling_point_attribute_conflict": false
+      },
+      "errorReasonCategoryMap": {},
+      "errorReasonSkuTextMap": {},
+      "errorReasonSubTitleMap": {},
+      "errorReasonMap": {},
+      "errorReasonSellingPointAttributeMap": {},
+      "errorReasonSkuImageMap": {},
+      "extendProblemMap": {
+        "imageText": false,
+        "title_word_miss_core_error": false,
+        "imageQualityBad": false,
+        "imageSubTitle": false,
+        "image_scale": false,
+        "inventory": false,
+        "title_word_error": false,
+        "selling_point_attribute_conflict": false,
+        "image_num": false,
+        "freightRate": false,
+        "sku_image": false,
+        "sku_text": false,
+        "price": false,
+        "category": false
+      },
+      "errorReasonQualityBadMap": {},
+      "errorReasonSkuTextMoreMap": {}
+    },
+    "scope_result": "PASS"
+  },
+  {
+    "style": "050",
+    "product_id": "1601973794508",
+    "observed_at": "2026-10-08T17:09:50.273944+00:00",
+    "status": "approved",
+    "display": "Y",
+    "title_match": true,
+    "target_fields": [
+      "productTitle"
+    ],
+    "protected_fields": {
+      "category_id": true,
+      "attributes": true,
+      "product_sku": true,
+      "sourcing_trade": true,
+      "keywords": true,
+      "main_image": true,
+      "struct_detail": true
+    },
+    "Chrome_readback": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+    "actual_score": "5.00",
+    "image_detail_full_acceptance": "PENDING_REMAINING_DETAIL_ROLE_IMPROVEMENT",
+    "unsubmitted_schema_differences": [],
+    "target_field_matches": {
+      "productTitle": true
+    },
+    "raw_snapshot_comparison": {
+      "productTitle": true
+    },
+    "score_source": "alibaba.icbu.product.score.get / 213c934417914794177687861",
+    "score_observed_at": "2026-10-08T17:10:15.595512+00:00",
+    "score_diagnostics": {
+      "ruleScoreMap": {
+        "title_word_miss_core_error": 0.0,
+        "imageQualityBad": 0.0,
+        "image_scale": 0.0,
+        "title_word_error": 0.0,
+        "image_num": 0.0
+      },
+      "errorReasonSkuImageMoreMap": {},
+      "errorReasonTitleWordMissErrorMap": {},
+      "errorReasonList": [],
+      "errorReasonTitleWordErrorMap": {},
+      "extendCheckMap": {
+        "imageText": true,
+        "sku_image": false,
+        "title_word_miss_core_error": true,
+        "imageQualityBad": true,
+        "sku_text": false,
+        "imageSubTitle": false,
+        "category": true,
+        "title_word_error": true,
+        "selling_point_attribute_conflict": false
+      },
+      "errorReasonCategoryMap": {},
+      "errorReasonSkuTextMap": {},
+      "errorReasonSubTitleMap": {},
+      "errorReasonMap": {},
+      "errorReasonSellingPointAttributeMap": {},
+      "errorReasonSkuImageMap": {},
+      "extendProblemMap": {
+        "imageText": false,
+        "title_word_miss_core_error": false,
+        "imageQualityBad": false,
+        "imageSubTitle": false,
+        "image_scale": false,
+        "inventory": false,
+        "title_word_error": false,
+        "selling_point_attribute_conflict": false,
+        "image_num": false,
+        "freightRate": false,
+        "sku_image": false,
+        "sku_text": false,
+        "price": false,
+        "category": false
+      },
+      "errorReasonQualityBadMap": {},
+      "errorReasonSkuTextMoreMap": {}
+    },
+    "scope_result": "PASS"
+  },
+  {
+    "style": "053",
+    "product_id": "1601973846232",
+    "observed_at": "2026-10-08T17:09:06.034606+00:00",
+    "status": "approved",
+    "display": "Y",
+    "title_match": true,
+    "target_fields": [
+      "productTitle"
+    ],
+    "protected_fields": {
+      "category_id": true,
+      "attributes": true,
+      "product_sku": true,
+      "sourcing_trade": true,
+      "keywords": true,
+      "main_image": true,
+      "struct_detail": true
+    },
+    "Chrome_readback": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+    "actual_score": "5.00",
+    "image_detail_full_acceptance": "PENDING_REMAINING_DETAIL_ROLE_IMPROVEMENT",
+    "unsubmitted_schema_differences": [],
+    "target_field_matches": {
+      "productTitle": true
+    },
+    "raw_snapshot_comparison": {
+      "productTitle": true
+    },
+    "score_source": "alibaba.icbu.product.score.get / 212c41d317914793739061391",
+    "score_observed_at": "2026-10-08T17:09:31.611309+00:00",
+    "score_diagnostics": {
+      "ruleScoreMap": {
+        "title_word_miss_core_error": 0.0,
+        "imageQualityBad": 0.0,
+        "image_scale": 0.0,
+        "title_word_error": 0.0,
+        "image_num": 0.0
+      },
+      "errorReasonSkuImageMoreMap": {},
+      "errorReasonTitleWordMissErrorMap": {},
+      "errorReasonList": [],
+      "errorReasonTitleWordErrorMap": {},
+      "extendCheckMap": {
+        "imageText": true,
+        "sku_image": false,
+        "title_word_miss_core_error": true,
+        "imageQualityBad": true,
+        "sku_text": false,
+        "imageSubTitle": false,
+        "category": true,
+        "title_word_error": true,
+        "selling_point_attribute_conflict": false
+      },
+      "errorReasonCategoryMap": {},
+      "errorReasonSkuTextMap": {},
+      "errorReasonSubTitleMap": {},
+      "errorReasonMap": {},
+      "errorReasonSellingPointAttributeMap": {},
+      "errorReasonSkuImageMap": {},
+      "extendProblemMap": {
+        "imageText": false,
+        "title_word_miss_core_error": false,
+        "imageQualityBad": false,
+        "imageSubTitle": false,
+        "image_scale": false,
+        "inventory": false,
+        "title_word_error": false,
+        "selling_point_attribute_conflict": false,
+        "image_num": false,
+        "freightRate": false,
+        "sku_image": false,
+        "sku_text": false,
+        "price": false,
+        "category": false
+      },
+      "errorReasonQualityBadMap": {},
+      "errorReasonSkuTextMoreMap": {}
+    },
+    "scope_result": "PASS"
+  },
+  {
+    "style": "055",
+    "product_id": "1601973841032",
+    "observed_at": "2026-10-08T17:05:53.256999+00:00",
+    "status": "approved",
+    "display": "Y",
+    "title_match": true,
+    "target_fields": [
+      "productTitle"
+    ],
+    "protected_fields": {
+      "category_id": true,
+      "attributes": true,
+      "product_sku": true,
+      "sourcing_trade": true,
+      "keywords": true,
+      "main_image": true,
+      "struct_detail": true
+    },
+    "Chrome_readback": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+    "actual_score": "5.00",
+    "image_detail_full_acceptance": "PENDING_REMAINING_DETAIL_ROLE_IMPROVEMENT",
+    "unsubmitted_schema_differences": [],
+    "target_field_matches": {
+      "productTitle": true
+    },
+    "raw_snapshot_comparison": {
+      "productTitle": true
+    },
+    "score_source": "alibaba.icbu.product.score.get / 0b830ecc17914791810441797",
+    "score_observed_at": "2026-10-08T17:06:18.690863+00:00",
+    "score_diagnostics": {
+      "ruleScoreMap": {
+        "title_word_miss_core_error": 0.0,
+        "imageQualityBad": 0.0,
+        "image_scale": 0.0,
+        "title_word_error": 0.0,
+        "image_num": 0.0
+      },
+      "errorReasonSkuImageMoreMap": {},
+      "errorReasonTitleWordMissErrorMap": {},
+      "errorReasonList": [],
+      "errorReasonTitleWordErrorMap": {},
+      "extendCheckMap": {
+        "imageText": true,
+        "sku_image": false,
+        "title_word_miss_core_error": true,
+        "imageQualityBad": true,
+        "sku_text": false,
+        "imageSubTitle": false,
+        "category": true,
+        "title_word_error": true,
+        "selling_point_attribute_conflict": false
+      },
+      "errorReasonCategoryMap": {},
+      "errorReasonSkuTextMap": {},
+      "errorReasonSubTitleMap": {},
+      "errorReasonMap": {},
+      "errorReasonSellingPointAttributeMap": {},
+      "errorReasonSkuImageMap": {},
+      "extendProblemMap": {
+        "imageText": false,
+        "title_word_miss_core_error": false,
+        "imageQualityBad": false,
+        "imageSubTitle": false,
+        "image_scale": false,
+        "inventory": false,
+        "title_word_error": false,
+        "selling_point_attribute_conflict": false,
+        "image_num": false,
+        "freightRate": false,
+        "sku_image": false,
+        "sku_text": false,
+        "price": false,
+        "category": false
+      },
+      "errorReasonQualityBadMap": {},
+      "errorReasonSkuTextMoreMap": {}
+    },
+    "scope_result": "PASS"
+  },
+  {
+    "style": "058",
+    "product_id": "1601973821133",
+    "observed_at": "2026-10-08T17:05:09.276969+00:00",
+    "status": "approved",
+    "display": "Y",
+    "title_match": true,
+    "target_fields": [
+      "productTitle"
+    ],
+    "protected_fields": {
+      "category_id": true,
+      "attributes": true,
+      "product_sku": true,
+      "sourcing_trade": true,
+      "keywords": true,
+      "main_image": true,
+      "struct_detail": true
+    },
+    "Chrome_readback": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+    "actual_score": "5.00",
+    "image_detail_full_acceptance": "PENDING_REMAINING_DETAIL_ROLE_IMPROVEMENT",
+    "unsubmitted_schema_differences": [],
+    "target_field_matches": {
+      "productTitle": true
+    },
+    "raw_snapshot_comparison": {
+      "productTitle": true
+    },
+    "score_source": "alibaba.icbu.product.score.get / 0b830ecc17914791368407793",
+    "score_observed_at": "2026-10-08T17:05:34.545247+00:00",
+    "score_diagnostics": {
+      "ruleScoreMap": {
+        "title_word_miss_core_error": 0.0,
+        "imageQualityBad": 0.0,
+        "image_scale": 0.0,
+        "title_word_error": 0.0,
+        "image_num": 0.0
+      },
+      "errorReasonSkuImageMoreMap": {},
+      "errorReasonTitleWordMissErrorMap": {},
+      "errorReasonList": [],
+      "errorReasonTitleWordErrorMap": {},
+      "extendCheckMap": {
+        "imageText": true,
+        "sku_image": false,
+        "title_word_miss_core_error": true,
+        "imageQualityBad": true,
+        "sku_text": false,
+        "imageSubTitle": false,
+        "category": true,
+        "title_word_error": true,
+        "selling_point_attribute_conflict": false
+      },
+      "errorReasonCategoryMap": {},
+      "errorReasonSkuTextMap": {},
+      "errorReasonSubTitleMap": {},
+      "errorReasonMap": {},
+      "errorReasonSellingPointAttributeMap": {},
+      "errorReasonSkuImageMap": {},
+      "extendProblemMap": {
+        "imageText": false,
+        "title_word_miss_core_error": false,
+        "imageQualityBad": false,
+        "imageSubTitle": false,
+        "image_scale": false,
+        "inventory": false,
+        "title_word_error": false,
+        "selling_point_attribute_conflict": false,
+        "image_num": false,
+        "freightRate": false,
+        "sku_image": false,
+        "sku_text": false,
+        "price": false,
+        "category": false
+      },
+      "errorReasonQualityBadMap": {},
+      "errorReasonSkuTextMoreMap": {}
+    },
+    "scope_result": "PASS"
+  },
+  {
+    "style": "1212",
+    "product_id": "1601973808453",
+    "observed_at": "2026-10-08T17:11:08.314265+00:00",
+    "status": "approved",
+    "display": "Y",
+    "title_match": true,
+    "target_fields": [
+      "productTitle"
+    ],
+    "protected_fields": {
+      "category_id": true,
+      "attributes": true,
+      "product_sku": true,
+      "sourcing_trade": true,
+      "keywords": true,
+      "main_image": true,
+      "struct_detail": true
+    },
+    "Chrome_readback": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+    "actual_score": "5.00",
+    "image_detail_full_acceptance": "PENDING_REMAINING_DETAIL_ROLE_IMPROVEMENT",
+    "unsubmitted_schema_differences": [],
+    "target_field_matches": {
+      "productTitle": true
+    },
+    "raw_snapshot_comparison": {
+      "productTitle": true
+    },
+    "score_source": "alibaba.icbu.product.score.get / 213c934417914794957743004",
+    "score_observed_at": "2026-10-08T17:11:33.435244+00:00",
+    "score_diagnostics": {
+      "ruleScoreMap": {
+        "title_word_miss_core_error": 0.0,
+        "imageQualityBad": 0.0,
+        "image_scale": 0.0,
+        "title_word_error": 0.0,
+        "image_num": 0.0
+      },
+      "errorReasonSkuImageMoreMap": {},
+      "errorReasonTitleWordMissErrorMap": {},
+      "errorReasonList": [],
+      "errorReasonTitleWordErrorMap": {},
+      "extendCheckMap": {
+        "imageText": true,
+        "sku_image": false,
+        "title_word_miss_core_error": true,
+        "imageQualityBad": true,
+        "sku_text": false,
+        "imageSubTitle": false,
+        "category": true,
+        "title_word_error": true,
+        "selling_point_attribute_conflict": false
+      },
+      "errorReasonCategoryMap": {},
+      "errorReasonSkuTextMap": {},
+      "errorReasonSubTitleMap": {},
+      "errorReasonMap": {},
+      "errorReasonSellingPointAttributeMap": {},
+      "errorReasonSkuImageMap": {},
+      "extendProblemMap": {
+        "imageText": false,
+        "title_word_miss_core_error": false,
+        "imageQualityBad": false,
+        "imageSubTitle": false,
+        "image_scale": false,
+        "inventory": false,
+        "title_word_error": false,
+        "selling_point_attribute_conflict": false,
+        "image_num": false,
+        "freightRate": false,
+        "sku_image": false,
+        "sku_text": false,
+        "price": false,
+        "category": false
+      },
+      "errorReasonQualityBadMap": {},
+      "errorReasonSkuTextMoreMap": {}
+    },
+    "scope_result": "PASS"
+  },
+  {
+    "style": "213",
+    "product_id": "1601973876011",
+    "observed_at": "2026-10-08T16:55:28.246909+00:00",
+    "status": "approved",
+    "display": "Y",
+    "title_match": true,
+    "target_fields": [
+      "productTitle"
+    ],
+    "protected_fields": {
+      "category_id": true,
+      "attributes": true,
+      "product_sku": true,
+      "sourcing_trade": true,
+      "keywords": true,
+      "main_image": true,
+      "struct_detail": true
+    },
+    "Chrome_readback": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+    "actual_score": "5.00",
+    "image_detail_full_acceptance": "PENDING_REMAINING_DETAIL_ROLE_IMPROVEMENT",
+    "unsubmitted_schema_differences": [],
+    "target_field_matches": {
+      "productTitle": true
+    },
+    "raw_snapshot_comparison": {
+      "productTitle": true
+    },
+    "score_source": "alibaba.icbu.product.score.get / 213d4e4917914785558046017",
+    "score_observed_at": "2026-10-08T16:55:53.477845+00:00",
+    "score_diagnostics": {
+      "ruleScoreMap": {
+        "title_word_miss_core_error": 0.0,
+        "imageQualityBad": 0.0,
+        "image_scale": 0.0,
+        "title_word_error": 0.0,
+        "image_num": 0.0
+      },
+      "errorReasonSkuImageMoreMap": {},
+      "errorReasonTitleWordMissErrorMap": {},
+      "errorReasonList": [],
+      "errorReasonTitleWordErrorMap": {},
+      "extendCheckMap": {
+        "imageText": true,
+        "sku_image": false,
+        "title_word_miss_core_error": true,
+        "imageQualityBad": true,
+        "sku_text": false,
+        "imageSubTitle": false,
+        "category": true,
+        "title_word_error": true,
+        "selling_point_attribute_conflict": false
+      },
+      "errorReasonCategoryMap": {},
+      "errorReasonSkuTextMap": {},
+      "errorReasonSubTitleMap": {},
+      "errorReasonMap": {},
+      "errorReasonSellingPointAttributeMap": {},
+      "errorReasonSkuImageMap": {},
+      "extendProblemMap": {
+        "imageText": false,
+        "title_word_miss_core_error": false,
+        "imageQualityBad": false,
+        "imageSubTitle": false,
+        "image_scale": false,
+        "inventory": false,
+        "title_word_error": false,
+        "selling_point_attribute_conflict": false,
+        "image_num": false,
+        "freightRate": false,
+        "sku_image": false,
+        "sku_text": false,
+        "price": false,
+        "category": false
+      },
+      "errorReasonQualityBadMap": {},
+      "errorReasonSkuTextMoreMap": {}
+    },
+    "scope_result": "PASS"
+  },
+  {
+    "style": "25012",
+    "product_id": "1601973838360",
+    "observed_at": "2026-10-08T16:56:45.088041+00:00",
+    "status": "approved",
+    "display": "Y",
+    "title_match": true,
+    "target_fields": [
+      "productTitle"
+    ],
+    "protected_fields": {
+      "category_id": true,
+      "attributes": true,
+      "product_sku": true,
+      "sourcing_trade": true,
+      "keywords": true,
+      "main_image": true,
+      "struct_detail": true
+    },
+    "Chrome_readback": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+    "actual_score": "5.00",
+    "image_detail_full_acceptance": "PENDING_REMAINING_DETAIL_ROLE_IMPROVEMENT",
+    "unsubmitted_schema_differences": [],
+    "target_field_matches": {
+      "productTitle": true
+    },
+    "raw_snapshot_comparison": {
+      "productTitle": true
+    },
+    "score_source": "alibaba.icbu.product.score.get / 2105584317914786337186721",
+    "score_observed_at": "2026-10-08T16:57:11.394798+00:00",
+    "score_diagnostics": {
+      "ruleScoreMap": {
+        "title_word_miss_core_error": 0.0,
+        "imageQualityBad": 0.0,
+        "image_scale": 0.0,
+        "title_word_error": 0.0,
+        "image_num": 0.0
+      },
+      "errorReasonSkuImageMoreMap": {},
+      "errorReasonTitleWordMissErrorMap": {},
+      "errorReasonList": [],
+      "errorReasonTitleWordErrorMap": {},
+      "extendCheckMap": {
+        "imageText": true,
+        "sku_image": false,
+        "title_word_miss_core_error": true,
+        "imageQualityBad": true,
+        "sku_text": false,
+        "imageSubTitle": false,
+        "category": true,
+        "title_word_error": true,
+        "selling_point_attribute_conflict": false
+      },
+      "errorReasonCategoryMap": {},
+      "errorReasonSkuTextMap": {},
+      "errorReasonSubTitleMap": {},
+      "errorReasonMap": {},
+      "errorReasonSellingPointAttributeMap": {},
+      "errorReasonSkuImageMap": {},
+      "extendProblemMap": {
+        "imageText": false,
+        "title_word_miss_core_error": false,
+        "imageQualityBad": false,
+        "imageSubTitle": false,
+        "image_scale": false,
+        "inventory": false,
+        "title_word_error": false,
+        "selling_point_attribute_conflict": false,
+        "image_num": false,
+        "freightRate": false,
+        "sku_image": false,
+        "sku_text": false,
+        "price": false,
+        "category": false
+      },
+      "errorReasonQualityBadMap": {},
+      "errorReasonSkuTextMoreMap": {}
+    },
+    "scope_result": "PASS"
+  },
+  {
+    "style": "25016",
+    "product_id": "1601973730776",
+    "observed_at": "2026-10-08T16:54:43.257515+00:00",
+    "status": "approved",
+    "display": "Y",
+    "title_match": true,
+    "target_fields": [
+      "productTitle"
+    ],
+    "protected_fields": {
+      "category_id": true,
+      "attributes": true,
+      "product_sku": true,
+      "sourcing_trade": true,
+      "keywords": true,
+      "main_image": true,
+      "struct_detail": true
+    },
+    "Chrome_readback": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+    "actual_score": "5.00",
+    "image_detail_full_acceptance": "PENDING_REMAINING_DETAIL_ROLE_IMPROVEMENT",
+    "unsubmitted_schema_differences": [],
+    "target_field_matches": {
+      "productTitle": true
+    },
+    "raw_snapshot_comparison": {
+      "productTitle": true
+    },
+    "score_source": "alibaba.icbu.product.score.get / 0b830ecc17914785105994283",
+    "score_observed_at": "2026-10-08T16:55:08.267277+00:00",
+    "score_diagnostics": {
+      "ruleScoreMap": {
+        "title_word_miss_core_error": 0.0,
+        "imageQualityBad": 0.0,
+        "image_scale": 0.0,
+        "title_word_error": 0.0,
+        "image_num": 0.0
+      },
+      "errorReasonSkuImageMoreMap": {},
+      "errorReasonTitleWordMissErrorMap": {},
+      "errorReasonList": [],
+      "errorReasonTitleWordErrorMap": {},
+      "extendCheckMap": {
+        "imageText": true,
+        "sku_image": false,
+        "title_word_miss_core_error": true,
+        "imageQualityBad": true,
+        "sku_text": false,
+        "imageSubTitle": false,
+        "category": true,
+        "title_word_error": true,
+        "selling_point_attribute_conflict": false
+      },
+      "errorReasonCategoryMap": {},
+      "errorReasonSkuTextMap": {},
+      "errorReasonSubTitleMap": {},
+      "errorReasonMap": {},
+      "errorReasonSellingPointAttributeMap": {},
+      "errorReasonSkuImageMap": {},
+      "extendProblemMap": {
+        "imageText": false,
+        "title_word_miss_core_error": false,
+        "imageQualityBad": false,
+        "imageSubTitle": false,
+        "image_scale": false,
+        "inventory": false,
+        "title_word_error": false,
+        "selling_point_attribute_conflict": false,
+        "image_num": false,
+        "freightRate": false,
+        "sku_image": false,
+        "sku_text": false,
+        "price": false,
+        "category": false
+      },
+      "errorReasonQualityBadMap": {},
+      "errorReasonSkuTextMoreMap": {}
+    },
+    "scope_result": "PASS"
+  },
+  {
+    "style": "25017",
+    "product_id": "1601973850058",
+    "observed_at": "2026-10-08T16:54:10.327837+00:00",
+    "status": "approved",
+    "display": "Y",
+    "title_match": true,
+    "target_fields": [
+      "productTitle"
+    ],
+    "protected_fields": {
+      "category_id": true,
+      "attributes": true,
+      "product_sku": true,
+      "sourcing_trade": true,
+      "keywords": true,
+      "main_image": true,
+      "struct_detail": true
+    },
+    "Chrome_readback": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+    "actual_score": "5.00",
+    "image_detail_full_acceptance": "PENDING_REMAINING_DETAIL_ROLE_IMPROVEMENT",
+    "unsubmitted_schema_differences": [],
+    "target_field_matches": {
+      "productTitle": true
+    },
+    "raw_snapshot_comparison": {
+      "productTitle": true
+    },
+    "score_source": "alibaba.icbu.product.score.get / 213d4e4917914784775731291",
+    "score_observed_at": "2026-10-08T16:54:35.321082+00:00",
+    "score_diagnostics": {
+      "ruleScoreMap": {
+        "title_word_miss_core_error": 0.0,
+        "imageQualityBad": 0.0,
+        "image_scale": 0.0,
+        "title_word_error": 0.0,
+        "image_num": 0.0
+      },
+      "errorReasonSkuImageMoreMap": {},
+      "errorReasonTitleWordMissErrorMap": {},
+      "errorReasonList": [],
+      "errorReasonTitleWordErrorMap": {},
+      "extendCheckMap": {
+        "imageText": true,
+        "sku_image": false,
+        "title_word_miss_core_error": true,
+        "imageQualityBad": true,
+        "sku_text": false,
+        "imageSubTitle": false,
+        "category": true,
+        "title_word_error": true,
+        "selling_point_attribute_conflict": false
+      },
+      "errorReasonCategoryMap": {},
+      "errorReasonSkuTextMap": {},
+      "errorReasonSubTitleMap": {},
+      "errorReasonMap": {},
+      "errorReasonSellingPointAttributeMap": {},
+      "errorReasonSkuImageMap": {},
+      "extendProblemMap": {
+        "imageText": false,
+        "title_word_miss_core_error": false,
+        "imageQualityBad": false,
+        "imageSubTitle": false,
+        "image_scale": false,
+        "inventory": false,
+        "title_word_error": false,
+        "selling_point_attribute_conflict": false,
+        "image_num": false,
+        "freightRate": false,
+        "sku_image": false,
+        "sku_text": false,
+        "price": false,
+        "category": false
+      },
+      "errorReasonQualityBadMap": {},
+      "errorReasonSkuTextMoreMap": {}
+    },
+    "scope_result": "PASS"
+  },
+  {
+    "style": "25021",
+    "product_id": "1601973854304",
+    "observed_at": "2026-10-08T17:01:27.272084+00:00",
+    "status": "approved",
+    "display": "Y",
+    "title_match": true,
+    "target_fields": [
+      "productTitle"
+    ],
+    "protected_fields": {
+      "category_id": true,
+      "attributes": true,
+      "product_sku": true,
+      "sourcing_trade": true,
+      "keywords": true,
+      "main_image": true,
+      "struct_detail": true
+    },
+    "Chrome_readback": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+    "actual_score": "5.00",
+    "image_detail_full_acceptance": "PENDING_REMAINING_DETAIL_ROLE_IMPROVEMENT",
+    "unsubmitted_schema_differences": [],
+    "target_field_matches": {
+      "productTitle": true
+    },
+    "raw_snapshot_comparison": {
+      "productTitle": true
+    },
+    "score_source": "alibaba.icbu.product.score.get / 0bab02fc17914789173977741",
+    "score_observed_at": "2026-10-08T17:01:55.056568+00:00",
+    "score_diagnostics": {
+      "ruleScoreMap": {
+        "title_word_miss_core_error": 0.0,
+        "imageQualityBad": 0.0,
+        "image_scale": 0.0,
+        "title_word_error": 0.0,
+        "image_num": 0.0
+      },
+      "errorReasonSkuImageMoreMap": {},
+      "errorReasonTitleWordMissErrorMap": {},
+      "errorReasonList": [],
+      "errorReasonTitleWordErrorMap": {},
+      "extendCheckMap": {
+        "imageText": true,
+        "sku_image": false,
+        "title_word_miss_core_error": true,
+        "imageQualityBad": true,
+        "sku_text": false,
+        "imageSubTitle": false,
+        "category": true,
+        "title_word_error": true,
+        "selling_point_attribute_conflict": false
+      },
+      "errorReasonCategoryMap": {},
+      "errorReasonSkuTextMap": {},
+      "errorReasonSubTitleMap": {},
+      "errorReasonMap": {},
+      "errorReasonSellingPointAttributeMap": {},
+      "errorReasonSkuImageMap": {},
+      "extendProblemMap": {
+        "imageText": false,
+        "title_word_miss_core_error": false,
+        "imageQualityBad": false,
+        "imageSubTitle": false,
+        "image_scale": false,
+        "inventory": false,
+        "title_word_error": false,
+        "selling_point_attribute_conflict": false,
+        "image_num": false,
+        "freightRate": false,
+        "sku_image": false,
+        "sku_text": false,
+        "price": false,
+        "category": false
+      },
+      "errorReasonQualityBadMap": {},
+      "errorReasonSkuTextMoreMap": {}
+    },
+    "scope_result": "PASS"
+  },
+  {
+    "style": "2510",
+    "product_id": "1601973747919",
+    "observed_at": "2026-10-08T17:02:03.060329+00:00",
+    "status": "approved",
+    "display": "Y",
+    "title_match": true,
+    "target_fields": [
+      "productTitle"
+    ],
+    "protected_fields": {
+      "category_id": true,
+      "attributes": true,
+      "product_sku": true,
+      "sourcing_trade": true,
+      "keywords": true,
+      "main_image": true,
+      "struct_detail": true
+    },
+    "Chrome_readback": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+    "actual_score": "5.00",
+    "image_detail_full_acceptance": "PENDING_REMAINING_DETAIL_ROLE_IMPROVEMENT",
+    "unsubmitted_schema_differences": [],
+    "target_field_matches": {
+      "productTitle": true
+    },
+    "raw_snapshot_comparison": {
+      "productTitle": true
+    },
+    "score_source": "alibaba.icbu.product.score.get / 0b0b3a2717914789504758378",
+    "score_observed_at": "2026-10-08T17:02:28.159039+00:00",
+    "score_diagnostics": {
+      "ruleScoreMap": {
+        "title_word_miss_core_error": 0.0,
+        "imageQualityBad": 0.0,
+        "image_scale": 0.0,
+        "title_word_error": 0.0,
+        "image_num": 0.0
+      },
+      "errorReasonSkuImageMoreMap": {},
+      "errorReasonTitleWordMissErrorMap": {},
+      "errorReasonList": [],
+      "errorReasonTitleWordErrorMap": {},
+      "extendCheckMap": {
+        "imageText": true,
+        "sku_image": false,
+        "title_word_miss_core_error": true,
+        "imageQualityBad": true,
+        "sku_text": false,
+        "imageSubTitle": false,
+        "category": true,
+        "title_word_error": true,
+        "selling_point_attribute_conflict": false
+      },
+      "errorReasonCategoryMap": {},
+      "errorReasonSkuTextMap": {},
+      "errorReasonSubTitleMap": {},
+      "errorReasonMap": {},
+      "errorReasonSellingPointAttributeMap": {},
+      "errorReasonSkuImageMap": {},
+      "extendProblemMap": {
+        "imageText": false,
+        "title_word_miss_core_error": false,
+        "imageQualityBad": false,
+        "imageSubTitle": false,
+        "image_scale": false,
+        "inventory": false,
+        "title_word_error": false,
+        "selling_point_attribute_conflict": false,
+        "image_num": false,
+        "freightRate": false,
+        "sku_image": false,
+        "sku_text": false,
+        "price": false,
+        "category": false
+      },
+      "errorReasonQualityBadMap": {},
+      "errorReasonSkuTextMoreMap": {}
+    },
+    "scope_result": "PASS"
+  },
+  {
+    "style": "2588-1",
+    "product_id": "1601973772709",
+    "observed_at": "2026-10-08T16:59:36.309160+00:00",
+    "status": "approved",
+    "display": "Y",
+    "title_match": true,
+    "target_fields": [
+      "productTitle"
+    ],
+    "protected_fields": {
+      "category_id": true,
+      "attributes": true,
+      "product_sku": true,
+      "sourcing_trade": true,
+      "keywords": true,
+      "main_image": true,
+      "struct_detail": true
+    },
+    "Chrome_readback": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+    "actual_score": "5.00",
+    "image_detail_full_acceptance": "PENDING_REMAINING_DETAIL_ROLE_IMPROVEMENT",
+    "unsubmitted_schema_differences": [],
+    "target_field_matches": {
+      "productTitle": true
+    },
+    "raw_snapshot_comparison": {
+      "productTitle": true
+    },
+    "score_source": "alibaba.icbu.product.score.get / 213f5a2117914788040964079",
+    "score_observed_at": "2026-10-08T17:00:01.749843+00:00",
+    "score_diagnostics": {
+      "ruleScoreMap": {
+        "title_word_miss_core_error": 0.0,
+        "imageQualityBad": 0.0,
+        "image_scale": 0.0,
+        "title_word_error": 0.0,
+        "image_num": 0.0
+      },
+      "errorReasonSkuImageMoreMap": {},
+      "errorReasonTitleWordMissErrorMap": {},
+      "errorReasonList": [],
+      "errorReasonTitleWordErrorMap": {},
+      "extendCheckMap": {
+        "imageText": true,
+        "sku_image": false,
+        "title_word_miss_core_error": true,
+        "imageQualityBad": true,
+        "sku_text": false,
+        "imageSubTitle": false,
+        "category": true,
+        "title_word_error": true,
+        "selling_point_attribute_conflict": false
+      },
+      "errorReasonCategoryMap": {},
+      "errorReasonSkuTextMap": {},
+      "errorReasonSubTitleMap": {},
+      "errorReasonMap": {},
+      "errorReasonSellingPointAttributeMap": {},
+      "errorReasonSkuImageMap": {},
+      "extendProblemMap": {
+        "imageText": false,
+        "title_word_miss_core_error": false,
+        "imageQualityBad": false,
+        "imageSubTitle": false,
+        "image_scale": false,
+        "inventory": false,
+        "title_word_error": false,
+        "selling_point_attribute_conflict": false,
+        "image_num": false,
+        "freightRate": false,
+        "sku_image": false,
+        "sku_text": false,
+        "price": false,
+        "category": false
+      },
+      "errorReasonQualityBadMap": {},
+      "errorReasonSkuTextMoreMap": {}
+    },
+    "scope_result": "PASS"
+  },
+  {
+    "style": "2596",
+    "product_id": "1601973842356",
+    "observed_at": "2026-10-08T17:00:54.118581+00:00",
+    "status": "approved",
+    "display": "Y",
+    "title_match": true,
+    "target_fields": [
+      "productTitle"
+    ],
+    "protected_fields": {
+      "category_id": true,
+      "attributes": true,
+      "product_sku": true,
+      "sourcing_trade": true,
+      "keywords": true,
+      "main_image": true,
+      "struct_detail": true
+    },
+    "Chrome_readback": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+    "actual_score": "5.00",
+    "image_detail_full_acceptance": "PENDING_REMAINING_DETAIL_ROLE_IMPROVEMENT",
+    "unsubmitted_schema_differences": [],
+    "target_field_matches": {
+      "productTitle": true
+    },
+    "raw_snapshot_comparison": {
+      "productTitle": true
+    },
+    "score_source": "alibaba.icbu.product.score.get / 0b80d2d617914788818024584",
+    "score_observed_at": "2026-10-08T17:01:19.450863+00:00",
+    "score_diagnostics": {
+      "ruleScoreMap": {
+        "title_word_miss_core_error": 0.0,
+        "imageQualityBad": 0.0,
+        "image_scale": 0.0,
+        "title_word_error": 0.0,
+        "image_num": 0.0
+      },
+      "errorReasonSkuImageMoreMap": {},
+      "errorReasonTitleWordMissErrorMap": {},
+      "errorReasonList": [],
+      "errorReasonTitleWordErrorMap": {},
+      "extendCheckMap": {
+        "imageText": true,
+        "sku_image": false,
+        "title_word_miss_core_error": true,
+        "imageQualityBad": true,
+        "sku_text": false,
+        "imageSubTitle": false,
+        "category": true,
+        "title_word_error": true,
+        "selling_point_attribute_conflict": false
+      },
+      "errorReasonCategoryMap": {},
+      "errorReasonSkuTextMap": {},
+      "errorReasonSubTitleMap": {},
+      "errorReasonMap": {},
+      "errorReasonSellingPointAttributeMap": {},
+      "errorReasonSkuImageMap": {},
+      "extendProblemMap": {
+        "imageText": false,
+        "title_word_miss_core_error": false,
+        "imageQualityBad": false,
+        "imageSubTitle": false,
+        "image_scale": false,
+        "inventory": false,
+        "title_word_error": false,
+        "selling_point_attribute_conflict": false,
+        "image_num": false,
+        "freightRate": false,
+        "sku_image": false,
+        "sku_text": false,
+        "price": false,
+        "category": false
+      },
+      "errorReasonQualityBadMap": {},
+      "errorReasonSkuTextMoreMap": {}
+    },
+    "scope_result": "PASS"
+  },
+  {
+    "style": "2597",
+    "product_id": "1601973797610",
+    "observed_at": "2026-10-08T17:00:20.803146+00:00",
+    "status": "approved",
+    "display": "Y",
+    "title_match": true,
+    "target_fields": [
+      "productTitle"
+    ],
+    "protected_fields": {
+      "category_id": true,
+      "attributes": true,
+      "product_sku": true,
+      "sourcing_trade": true,
+      "keywords": true,
+      "main_image": true,
+      "struct_detail": true
+    },
+    "Chrome_readback": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+    "actual_score": "5.00",
+    "image_detail_full_acceptance": "PENDING_REMAINING_DETAIL_ROLE_IMPROVEMENT",
+    "unsubmitted_schema_differences": [],
+    "target_field_matches": {
+      "productTitle": true
+    },
+    "raw_snapshot_comparison": {
+      "productTitle": true
+    },
+    "score_source": "alibaba.icbu.product.score.get / 210829b717914788484723289",
+    "score_observed_at": "2026-10-08T17:00:46.276841+00:00",
+    "score_diagnostics": {
+      "ruleScoreMap": {
+        "title_word_miss_core_error": 0.0,
+        "imageQualityBad": 0.0,
+        "image_scale": 0.0,
+        "title_word_error": 0.0,
+        "image_num": 0.0
+      },
+      "errorReasonSkuImageMoreMap": {},
+      "errorReasonTitleWordMissErrorMap": {},
+      "errorReasonList": [],
+      "errorReasonTitleWordErrorMap": {},
+      "extendCheckMap": {
+        "imageText": true,
+        "sku_image": false,
+        "title_word_miss_core_error": true,
+        "imageQualityBad": true,
+        "sku_text": false,
+        "imageSubTitle": false,
+        "category": true,
+        "title_word_error": true,
+        "selling_point_attribute_conflict": false
+      },
+      "errorReasonCategoryMap": {},
+      "errorReasonSkuTextMap": {},
+      "errorReasonSubTitleMap": {},
+      "errorReasonMap": {},
+      "errorReasonSellingPointAttributeMap": {},
+      "errorReasonSkuImageMap": {},
+      "extendProblemMap": {
+        "imageText": false,
+        "title_word_miss_core_error": false,
+        "imageQualityBad": false,
+        "imageSubTitle": false,
+        "image_scale": false,
+        "inventory": false,
+        "title_word_error": false,
+        "selling_point_attribute_conflict": false,
+        "image_num": false,
+        "freightRate": false,
+        "sku_image": false,
+        "sku_text": false,
+        "price": false,
+        "category": false
+      },
+      "errorReasonQualityBadMap": {},
+      "errorReasonSkuTextMoreMap": {}
+    },
+    "scope_result": "PASS"
+  },
+  {
+    "style": "2598",
+    "product_id": "1601973831465",
+    "observed_at": "2026-10-08T16:59:03.274557+00:00",
+    "status": "approved",
+    "display": "Y",
+    "title_match": true,
+    "target_fields": [
+      "productTitle"
+    ],
+    "protected_fields": {
+      "category_id": true,
+      "attributes": true,
+      "product_sku": true,
+      "sourcing_trade": true,
+      "keywords": true,
+      "main_image": true,
+      "struct_detail": true
+    },
+    "Chrome_readback": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+    "actual_score": "5.00",
+    "image_detail_full_acceptance": "PENDING_REMAINING_DETAIL_ROLE_IMPROVEMENT",
+    "unsubmitted_schema_differences": [],
+    "target_field_matches": {
+      "productTitle": true
+    },
+    "raw_snapshot_comparison": {
+      "productTitle": true
+    },
+    "score_source": "alibaba.icbu.product.score.get / 0b51802d17914787707771800",
+    "score_observed_at": "2026-10-08T16:59:28.459347+00:00",
+    "score_diagnostics": {
+      "ruleScoreMap": {
+        "title_word_miss_core_error": 0.0,
+        "imageQualityBad": 0.0,
+        "image_scale": 0.0,
+        "title_word_error": 0.0,
+        "image_num": 0.0
+      },
+      "errorReasonSkuImageMoreMap": {},
+      "errorReasonTitleWordMissErrorMap": {},
+      "errorReasonList": [],
+      "errorReasonTitleWordErrorMap": {},
+      "extendCheckMap": {
+        "imageText": true,
+        "sku_image": false,
+        "title_word_miss_core_error": true,
+        "imageQualityBad": true,
+        "sku_text": false,
+        "imageSubTitle": false,
+        "category": true,
+        "title_word_error": true,
+        "selling_point_attribute_conflict": false
+      },
+      "errorReasonCategoryMap": {},
+      "errorReasonSkuTextMap": {},
+      "errorReasonSubTitleMap": {},
+      "errorReasonMap": {},
+      "errorReasonSellingPointAttributeMap": {},
+      "errorReasonSkuImageMap": {},
+      "extendProblemMap": {
+        "imageText": false,
+        "title_word_miss_core_error": false,
+        "imageQualityBad": false,
+        "imageSubTitle": false,
+        "image_scale": false,
+        "inventory": false,
+        "title_word_error": false,
+        "selling_point_attribute_conflict": false,
+        "image_num": false,
+        "freightRate": false,
+        "sku_image": false,
+        "sku_text": false,
+        "price": false,
+        "category": false
+      },
+      "errorReasonQualityBadMap": {},
+      "errorReasonSkuTextMoreMap": {}
+    },
+    "scope_result": "PASS"
+  },
+  {
+    "style": "2599-1",
+    "product_id": "1601973741932",
+    "observed_at": "2026-10-08T17:11:41.446420+00:00",
+    "status": "approved",
+    "display": "Y",
+    "title_match": true,
+    "target_fields": [
+      "productTitle"
+    ],
+    "protected_fields": {
+      "category_id": true,
+      "attributes": true,
+      "product_sku": true,
+      "sourcing_trade": true,
+      "keywords": true,
+      "main_image": true,
+      "struct_detail": true
+    },
+    "Chrome_readback": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+    "actual_score": "5.00",
+    "image_detail_full_acceptance": "PENDING_REMAINING_DETAIL_ROLE_IMPROVEMENT",
+    "unsubmitted_schema_differences": [],
+    "target_field_matches": {
+      "productTitle": true
+    },
+    "raw_snapshot_comparison": {
+      "productTitle": true
+    },
+    "score_source": "alibaba.icbu.product.score.get / 2105584317914795290126963",
+    "score_observed_at": "2026-10-08T17:12:06.661007+00:00",
+    "score_diagnostics": {
+      "ruleScoreMap": {
+        "title_word_miss_core_error": 0.0,
+        "imageQualityBad": 0.0,
+        "image_scale": 0.0,
+        "title_word_error": 0.0,
+        "image_num": 0.0
+      },
+      "errorReasonSkuImageMoreMap": {},
+      "errorReasonTitleWordMissErrorMap": {},
+      "errorReasonList": [],
+      "errorReasonTitleWordErrorMap": {},
+      "extendCheckMap": {
+        "imageText": true,
+        "sku_image": false,
+        "title_word_miss_core_error": true,
+        "imageQualityBad": true,
+        "sku_text": false,
+        "imageSubTitle": false,
+        "category": true,
+        "title_word_error": true,
+        "selling_point_attribute_conflict": false
+      },
+      "errorReasonCategoryMap": {},
+      "errorReasonSkuTextMap": {},
+      "errorReasonSubTitleMap": {},
+      "errorReasonMap": {},
+      "errorReasonSellingPointAttributeMap": {},
+      "errorReasonSkuImageMap": {},
+      "extendProblemMap": {
+        "imageText": false,
+        "title_word_miss_core_error": false,
+        "imageQualityBad": false,
+        "imageSubTitle": false,
+        "image_scale": false,
+        "inventory": false,
+        "title_word_error": false,
+        "selling_point_attribute_conflict": false,
+        "image_num": false,
+        "freightRate": false,
+        "sku_image": false,
+        "sku_text": false,
+        "price": false,
+        "category": false
+      },
+      "errorReasonQualityBadMap": {},
+      "errorReasonSkuTextMoreMap": {}
+    },
+    "scope_result": "PASS"
+  },
+  {
+    "style": "2623",
+    "product_id": "1601973806430",
+    "observed_at": "2026-10-08T17:07:56.345877+00:00",
+    "status": "approved",
+    "display": "Y",
+    "title_match": true,
+    "target_fields": [
+      "productTitle"
+    ],
+    "protected_fields": {
+      "category_id": true,
+      "attributes": true,
+      "product_sku": true,
+      "sourcing_trade": true,
+      "keywords": true,
+      "main_image": true,
+      "struct_detail": true
+    },
+    "Chrome_readback": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+    "actual_score": "5.00",
+    "image_detail_full_acceptance": "PENDING_REMAINING_DETAIL_ROLE_IMPROVEMENT",
+    "unsubmitted_schema_differences": [],
+    "target_field_matches": {
+      "productTitle": true
+    },
+    "raw_snapshot_comparison": {
+      "productTitle": true
+    },
+    "score_source": "alibaba.icbu.product.score.get / 0bbb3b2417914793044666154",
+    "score_observed_at": "2026-10-08T17:08:22.122207+00:00",
+    "score_diagnostics": {
+      "ruleScoreMap": {
+        "title_word_miss_core_error": 0.0,
+        "imageQualityBad": 0.0,
+        "image_scale": 0.0,
+        "title_word_error": 0.0,
+        "image_num": 0.0
+      },
+      "errorReasonSkuImageMoreMap": {},
+      "errorReasonTitleWordMissErrorMap": {},
+      "errorReasonList": [],
+      "errorReasonTitleWordErrorMap": {},
+      "extendCheckMap": {
+        "imageText": true,
+        "sku_image": false,
+        "title_word_miss_core_error": true,
+        "imageQualityBad": true,
+        "sku_text": false,
+        "imageSubTitle": false,
+        "category": true,
+        "title_word_error": true,
+        "selling_point_attribute_conflict": false
+      },
+      "errorReasonCategoryMap": {},
+      "errorReasonSkuTextMap": {},
+      "errorReasonSubTitleMap": {},
+      "errorReasonMap": {},
+      "errorReasonSellingPointAttributeMap": {},
+      "errorReasonSkuImageMap": {},
+      "extendProblemMap": {
+        "imageText": false,
+        "title_word_miss_core_error": false,
+        "imageQualityBad": false,
+        "imageSubTitle": false,
+        "image_scale": false,
+        "inventory": false,
+        "title_word_error": false,
+        "selling_point_attribute_conflict": false,
+        "image_num": false,
+        "freightRate": false,
+        "sku_image": false,
+        "sku_text": false,
+        "price": false,
+        "category": false
+      },
+      "errorReasonQualityBadMap": {},
+      "errorReasonSkuTextMoreMap": {}
+    },
+    "scope_result": "PASS"
+  },
+  {
+    "style": "2626",
+    "product_id": "1601973769589",
+    "observed_at": "2026-10-08T17:08:32.015682+00:00",
+    "status": "approved",
+    "display": "Y",
+    "title_match": true,
+    "target_fields": [
+      "productTitle"
+    ],
+    "protected_fields": {
+      "category_id": true,
+      "attributes": true,
+      "product_sku": true,
+      "sourcing_trade": true,
+      "keywords": true,
+      "main_image": true,
+      "struct_detail": true
+    },
+    "Chrome_readback": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+    "actual_score": "5.00",
+    "image_detail_full_acceptance": "PENDING_REMAINING_DETAIL_ROLE_IMPROVEMENT",
+    "unsubmitted_schema_differences": [],
+    "target_field_matches": {
+      "productTitle": true
+    },
+    "raw_snapshot_comparison": {
+      "productTitle": true
+    },
+    "score_source": "alibaba.icbu.product.score.get / 0bbb3b2417914793404098400",
+    "score_observed_at": "2026-10-08T17:08:58.068039+00:00",
+    "score_diagnostics": {
+      "ruleScoreMap": {
+        "title_word_miss_core_error": 0.0,
+        "imageQualityBad": 0.0,
+        "image_scale": 0.0,
+        "title_word_error": 0.0,
+        "image_num": 0.0
+      },
+      "errorReasonSkuImageMoreMap": {},
+      "errorReasonTitleWordMissErrorMap": {},
+      "errorReasonList": [],
+      "errorReasonTitleWordErrorMap": {},
+      "extendCheckMap": {
+        "imageText": true,
+        "sku_image": false,
+        "title_word_miss_core_error": true,
+        "imageQualityBad": true,
+        "sku_text": false,
+        "imageSubTitle": false,
+        "category": true,
+        "title_word_error": true,
+        "selling_point_attribute_conflict": false
+      },
+      "errorReasonCategoryMap": {},
+      "errorReasonSkuTextMap": {},
+      "errorReasonSubTitleMap": {},
+      "errorReasonMap": {},
+      "errorReasonSellingPointAttributeMap": {},
+      "errorReasonSkuImageMap": {},
+      "extendProblemMap": {
+        "imageText": false,
+        "title_word_miss_core_error": false,
+        "imageQualityBad": false,
+        "imageSubTitle": false,
+        "image_scale": false,
+        "inventory": false,
+        "title_word_error": false,
+        "selling_point_attribute_conflict": false,
+        "image_num": false,
+        "freightRate": false,
+        "sku_image": false,
+        "sku_text": false,
+        "price": false,
+        "category": false
+      },
+      "errorReasonQualityBadMap": {},
+      "errorReasonSkuTextMoreMap": {}
+    },
+    "scope_result": "PASS"
+  },
+  {
+    "style": "2628",
+    "product_id": "1601973823209",
+    "observed_at": "2026-10-08T17:07:23.249172+00:00",
+    "status": "approved",
+    "display": "Y",
+    "title_match": true,
+    "target_fields": [
+      "productTitle"
+    ],
+    "protected_fields": {
+      "category_id": true,
+      "attributes": true,
+      "product_sku": true,
+      "sourcing_trade": true,
+      "keywords": true,
+      "main_image": true,
+      "struct_detail": true
+    },
+    "Chrome_readback": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+    "actual_score": "5.00",
+    "image_detail_full_acceptance": "PENDING_REMAINING_DETAIL_ROLE_IMPROVEMENT",
+    "unsubmitted_schema_differences": [],
+    "target_field_matches": {
+      "productTitle": true
+    },
+    "raw_snapshot_comparison": {
+      "productTitle": true
+    },
+    "score_source": "alibaba.icbu.product.score.get / 0b0b3a2717914792708034512",
+    "score_observed_at": "2026-10-08T17:07:48.497138+00:00",
+    "score_diagnostics": {
+      "ruleScoreMap": {
+        "title_word_miss_core_error": 0.0,
+        "imageQualityBad": 0.0,
+        "image_scale": 0.0,
+        "title_word_error": 0.0,
+        "image_num": 0.0
+      },
+      "errorReasonSkuImageMoreMap": {},
+      "errorReasonTitleWordMissErrorMap": {},
+      "errorReasonList": [],
+      "errorReasonTitleWordErrorMap": {},
+      "extendCheckMap": {
+        "imageText": true,
+        "sku_image": false,
+        "title_word_miss_core_error": true,
+        "imageQualityBad": true,
+        "sku_text": false,
+        "imageSubTitle": false,
+        "category": true,
+        "title_word_error": true,
+        "selling_point_attribute_conflict": false
+      },
+      "errorReasonCategoryMap": {},
+      "errorReasonSkuTextMap": {},
+      "errorReasonSubTitleMap": {},
+      "errorReasonMap": {},
+      "errorReasonSellingPointAttributeMap": {},
+      "errorReasonSkuImageMap": {},
+      "extendProblemMap": {
+        "imageText": false,
+        "title_word_miss_core_error": false,
+        "imageQualityBad": false,
+        "imageSubTitle": false,
+        "image_scale": false,
+        "inventory": false,
+        "title_word_error": false,
+        "selling_point_attribute_conflict": false,
+        "image_num": false,
+        "freightRate": false,
+        "sku_image": false,
+        "sku_text": false,
+        "price": false,
+        "category": false
+      },
+      "errorReasonQualityBadMap": {},
+      "errorReasonSkuTextMoreMap": {}
+    },
+    "scope_result": "PASS"
+  },
+  {
+    "style": "2629",
+    "product_id": "1601973749610",
+    "observed_at": "2026-10-08T17:06:37.156726+00:00",
+    "status": "approved",
+    "display": "Y",
+    "title_match": true,
+    "target_fields": [
+      "productTitle"
+    ],
+    "protected_fields": {
+      "category_id": true,
+      "attributes": true,
+      "product_sku": true,
+      "sourcing_trade": true,
+      "keywords": true,
+      "main_image": true,
+      "struct_detail": true
+    },
+    "Chrome_readback": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+    "actual_score": "5.00",
+    "image_detail_full_acceptance": "PENDING_REMAINING_DETAIL_ROLE_IMPROVEMENT",
+    "unsubmitted_schema_differences": [],
+    "target_field_matches": {
+      "productTitle": true
+    },
+    "raw_snapshot_comparison": {
+      "productTitle": true
+    },
+    "score_source": "alibaba.icbu.product.score.get / 0bbb3b2417914792269122122",
+    "score_observed_at": "2026-10-08T17:07:04.702543+00:00",
+    "score_diagnostics": {
+      "ruleScoreMap": {
+        "title_word_miss_core_error": 0.0,
+        "imageQualityBad": 0.0,
+        "image_scale": 0.0,
+        "title_word_error": 0.0,
+        "image_num": 0.0
+      },
+      "errorReasonSkuImageMoreMap": {},
+      "errorReasonTitleWordMissErrorMap": {},
+      "errorReasonList": [],
+      "errorReasonTitleWordErrorMap": {},
+      "extendCheckMap": {
+        "imageText": true,
+        "sku_image": false,
+        "title_word_miss_core_error": true,
+        "imageQualityBad": true,
+        "sku_text": false,
+        "imageSubTitle": false,
+        "category": true,
+        "title_word_error": true,
+        "selling_point_attribute_conflict": false
+      },
+      "errorReasonCategoryMap": {},
+      "errorReasonSkuTextMap": {},
+      "errorReasonSubTitleMap": {},
+      "errorReasonMap": {},
+      "errorReasonSellingPointAttributeMap": {},
+      "errorReasonSkuImageMap": {},
+      "extendProblemMap": {
+        "imageText": false,
+        "title_word_miss_core_error": false,
+        "imageQualityBad": false,
+        "imageSubTitle": false,
+        "image_scale": false,
+        "inventory": false,
+        "title_word_error": false,
+        "selling_point_attribute_conflict": false,
+        "image_num": false,
+        "freightRate": false,
+        "sku_image": false,
+        "sku_text": false,
+        "price": false,
+        "category": false
+      },
+      "errorReasonQualityBadMap": {},
+      "errorReasonSkuTextMoreMap": {}
+    },
+    "scope_result": "PASS"
+  },
+  {
+    "style": "2633",
+    "product_id": "1601973753470",
+    "observed_at": "2026-10-08T16:48:37.944668+00:00",
+    "status": "approved",
+    "display": "Y",
+    "title_match": true,
+    "target_fields": [
+      "companyFaqDesc",
+      "textDesc",
+      "scImages",
+      "productTitle"
+    ],
+    "protected_fields": {
+      "category_id": true,
+      "attributes": true,
+      "product_sku": true,
+      "sourcing_trade": true,
+      "keywords": true
+    },
+    "Chrome_readback": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+    "actual_score": "5.00",
+    "image_detail_full_acceptance": "PENDING_REMAINING_DETAIL_ROLE_IMPROVEMENT",
+    "six_main_order_match": true,
+    "summary_match": true,
+    "unsubmitted_schema_differences": [],
+    "target_field_matches": {
+      "companyFaqDesc": true,
+      "textDesc": true,
+      "scImages": true,
+      "productTitle": true
+    },
+    "score_source": "alibaba.icbu.product.score.get / 0b80d2d617914782232316280",
+    "score_observed_at": "2026-10-08T16:50:21.027981+00:00",
+    "score_diagnostics": {
+      "ruleScoreMap": {
+        "title_word_miss_core_error": 0.0,
+        "imageQualityBad": 0.0,
+        "image_scale": 0.0,
+        "title_word_error": 0.0,
+        "image_num": 0.0
+      },
+      "errorReasonSkuImageMoreMap": {},
+      "errorReasonTitleWordMissErrorMap": {},
+      "errorReasonList": [],
+      "errorReasonTitleWordErrorMap": {},
+      "extendCheckMap": {
+        "imageText": true,
+        "sku_image": false,
+        "title_word_miss_core_error": true,
+        "imageQualityBad": true,
+        "sku_text": false,
+        "imageSubTitle": false,
+        "category": true,
+        "title_word_error": true,
+        "selling_point_attribute_conflict": false
+      },
+      "errorReasonCategoryMap": {},
+      "errorReasonSkuTextMap": {},
+      "errorReasonSubTitleMap": {},
+      "errorReasonMap": {},
+      "errorReasonSellingPointAttributeMap": {},
+      "errorReasonSkuImageMap": {},
+      "extendProblemMap": {
+        "imageText": false,
+        "title_word_miss_core_error": false,
+        "imageQualityBad": false,
+        "imageSubTitle": false,
+        "image_scale": false,
+        "inventory": false,
+        "title_word_error": false,
+        "selling_point_attribute_conflict": false,
+        "image_num": false,
+        "freightRate": false,
+        "sku_image": false,
+        "sku_text": false,
+        "price": false,
+        "category": false
+      },
+      "errorReasonQualityBadMap": {},
+      "errorReasonSkuTextMoreMap": {}
+    },
+    "scope_result": "PASS",
+    "raw_snapshot_comparison": {
+      "companyFaqDesc": false,
+      "textDesc": true,
+      "scImages": false,
+      "productTitle": true
+    },
+    "normalization_notes": {
+      "companyFaqDesc": "Platform moved changed FAQ to end; all six exact question-answer pairs preserved.",
+      "scImages": "Platform readback fileId=0/resized URLs; six ordered CDN asset keys match original nonzero-ID upload/write evidence. No write or new API read during this reconciliation."
+    }
+  }
+]

@@ -2,5 +2,14 @@
 * text=auto
 # Imported source evidence keeps its original bytes for SHA-256 verification.
 /02_Alibaba运营/05_扩品工程/数据/来源证据/* -text -diff
-# Offline fixtures include hash-bound snapshots; keep their recorded bytes.
-/08_工具链/01_业务脚本/国际站扩品/schema_contract_fixtures/** -text
+
+# Imported public source pages are evidence: preserve original bytes and whitespace.
+/02_Alibaba运营/**/*公开来源HTML.html -text -diff -whitespace
+/02_Alibaba运营/**/*原始*.html -text -diff -whitespace
+
+# Hash-bound imported Alibaba XML and HTML evidence must survive Windows checkouts byte for byte.
+/02_Alibaba运营/**/*.xml -text -diff -whitespace
+/02_Alibaba运营/**/*.html -text -diff -whitespace
+
+# Preserve the remote main branch hash-bound offline fixtures exactly.
+/08_工具链/01_业务脚本/国际站扩品/schema_contract_fixtures/** -text -whitespace

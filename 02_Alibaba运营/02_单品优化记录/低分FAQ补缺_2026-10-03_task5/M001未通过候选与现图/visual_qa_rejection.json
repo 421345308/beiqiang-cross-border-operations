@@ -1,0 +1,42 @@
+{
+  "product_id": "1601970169467",
+  "source_original": "../task-8/user_priority_sources/source2482094/originals/05.jpg",
+  "prior_native_crop_box": [
+    145,
+    690,
+    775,
+    1145
+  ],
+  "current_formal_hero_size": [
+    630,
+    455
+  ],
+  "current_formal_hero_asset": "H872b924939bb410e8599c6ef1ab705d7O",
+  "actual_score": 4.5,
+  "score_request_id": "212cbf3217910128728704521",
+  "later_455_square_crop": "PROPOSED_NOT_EXECUTED",
+  "generated_candidate": "generated_candidate_REJECTED_SHOE_DETAIL_CHANGED.png",
+  "visual_QA": "FAIL_PRODUCT_FIDELITY",
+  "specific_visual_differences": [
+    "Recessed top-panel perforations became visibly larger and sparser than real source",
+    "Side ribs were re-rendered with stronger granular texture and altered edges",
+    "Toe perimeter and thin outsole lip were reinterpreted rather than retained"
+  ],
+  "background_and_composition": "Cleaner square background and greater footprint achieved; insufficient because shoe details changed",
+  "upload_count": 0,
+  "product_image_update_count": 0,
+  "competitor_composition_reference": "https://www.crocs.com.uy/catalogo/crocs-echo-clog-concrete_CR207937_2254",
+  "reference_scope": "Observed clean background, full footwear and dominant subject only; no sales-performance claim or copied shoe features",
+  "at_utc": "2026-10-03T07:44:28.390052+00:00",
+  "second_candidate": "generated_candidate2_REVIEW_REQUIRED.png",
+  "second_candidate_QA": "HOLD_PRODUCT_FIDELITY_NOT_ESTABLISHED",
+  "second_candidate_findings": [
+    "Overall original red shoe profile and origin wording retained, but foreground was re-synthesized rather than demonstrably held unchanged",
+    "Dense tiny top-panel dimple pattern and molded panel boundary cannot be verified as identical to the real source; generated edge appears more like a stitched seam",
+    "Generated hand and wrist context extends beyond source crop; must not treat invented context as actual production evidence"
+  ],
+  "generated_image_count": 2,
+  "acceptable_candidate_count": 0,
+  "current_platform_image_unchanged": true,
+  "requirement": "A foreground-preserving background workflow or a cleaner close source photograph is needed; no new shoe construction may be substituted merely to obtain 5.0."
+}

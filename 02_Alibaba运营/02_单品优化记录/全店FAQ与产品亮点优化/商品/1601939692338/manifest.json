@@ -1,0 +1,27 @@
+{
+  "operation": "update",
+  "product_id": "1601939692338",
+  "category_id": 201334413,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "copy.json",
+    "before_get.json",
+    "../../../../../01_产品资产/02_可发布素材/00_最终上传/BQ027_K6116/00_上架填写表.md",
+    "../../../../../01_产品资产/01_原始数据包/已整理_BQ027_K6116_贝强工厂店K6116情侣款35-45批55元限价79/贝强工厂店K6116情侣款35-45批55元限价79/K6116主图加绒/1.jpg",
+    "current_get.json",
+    "../../../../00_运营SOP/国际站商品全生命周期SOP.md"
+  ],
+  "current_schema": "current_schema.xml",
+  "current_schema_sha256": "1c518ef702eeb4c2f3a4242e264a22f90c5fd4e994ec88eb49008c5cf4a8c189",
+  "schema_request_id": "0bbb3b2417917406076974050",
+  "schema_acquired_at": "2026-10-11T17:43:25.073601+00:00",
+  "payload_xml": "payload.xml",
+  "field_ids": [
+    "textDesc",
+    "companyFaqDesc"
+  ],
+  "dependency_ids": [
+    "productDescType"
+  ],
+  "observed_model": "BQ027-R1 / K6116"
+}

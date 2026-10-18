@@ -23,6 +23,16 @@ def current_asset(role):
     return p
 def current_root():
     return ROOT/manifest()['current_media_root']
+
+def current_gallery_asset():
+    """One current square supplier-overview asset; C1-C6 remain detail modules."""
+    asset=json.loads((ENTRY/'共用主图.json').read_text(encoding='utf8'))
+    bank=json.loads((ENTRY/'共用主图公开映射.json').read_text(encoding='utf8'))
+    pixels=json.loads((ENTRY/'共用主图图链像素核验.json').read_text(encoding='utf8'))
+    assert asset['review']['state']=='VISUAL_PASS' and bank['state']=='UPLOADED'and bank['file_id']
+    assert hashlib.sha256((ROOT/asset['path']).read_bytes()).hexdigest()==asset['sha256']==bank['sha256']
+    assert pixels['pixels_exact']and pixels['same_dimensions']
+    return {**asset,'url':bank['url'],'file_id':bank['file_id']}
 def _aliases():
     return json.loads((ENTRY/'素材整理.json').read_text(encoding='utf8'))['aliases']
 class LegacyAssetPath(os.PathLike):

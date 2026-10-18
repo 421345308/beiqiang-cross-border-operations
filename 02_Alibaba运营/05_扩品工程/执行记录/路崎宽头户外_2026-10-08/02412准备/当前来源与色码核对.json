@@ -1,0 +1,158 @@
+{
+  "style": "02412",
+  "source": "https://luqi.sooxie.com/detail/1988331",
+  "observed_at": "2026-10-14T12:46:04.584007+00:00",
+  "source_HTML_sha256": "4164f95d8ebc200da70b3a485dde382320390b86d955049cf7b918f6356fb0d4",
+  "source_price_cny": "58.00",
+  "source_EU_by_color": {
+    "Black": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ],
+    "Dark Grey": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ]
+  },
+  "source_EU_combinations": 20,
+  "whole_source_contacts_actually_viewed": true,
+  "photo_count": 16,
+  "full_original_fact_indices_actually_viewed": [
+    1,
+    6,
+    10,
+    11,
+    14,
+    18,
+    19
+  ],
+  "known_materials": {
+    "upper": "Original10/11仿超+网布; Mesh andgeneralSynthetic overlays supported. 仿超 notconfirmedactualmicrofiber/naturalleather.",
+    "outsole": "Original10TPR大底 and14鞋底采用TPR材质 consistent; TPRonly,no sliptest.",
+    "midsole": "Separatematerialunspecified; nativeother.",
+    "lining": "柔软内里 describeshandfeel,nofibercomposition; nativeother."
+  },
+  "size_conflict_review": "Original10labels39–46; currentHTML39–48. Offercurrent39–48, sourceDarkGreycorrespondsoriginalGreyactualphoto.",
+  "wide_claim": "NO_WIDE_CLAIM_FROM_OUTDOOR_ONLY_SOURCE",
+  "source_color_aliases": {
+    "Black": "黑色/source10bottomleft",
+    "Dark Grey": "深灰/currentHTML; original10bottomright labelled灰色"
+  },
+  "visible_structure": [
+    "Lowcutclosedtoe/heelcasualwalkingprofile",
+    "Rotarydial atupper tongue withthinroutedcordandpairedwebbingguides",
+    "Meshforefoot/leafshapedquarteropening withstitchedsyntheticpanelboundaries",
+    "Paddedmeshcollar andrearpulltab",
+    "Greytexturedsidewall withactualOUTDOORmoulding,blackangularTPR tread"
+  ],
+  "identity_notes": "Actualsourceview compared0922full01midtopclassiclace/plush/metalhook,9705midtopdial/plush/leather-effectquarter,02412lowmesh/specificleafvents/plainnonplushcollar. 931chunkysole/wavyquarter/classiclace,2505smoothwinterboot differ. Dialphysicalgeometricmark preserved,no BOAbrandclaim. WalkingStyleShoes corresponds currentlowcutcasualsource, notreclassificationofrejectedhikingtarget.",
+  "title_draft": "Mens Rotary Dial Walking Shoes Mesh and Synthetic Upper TPR Outsole Low Cut Casual Outdoor Footwear Wholesale EU 39-48",
+  "product_highlights_draft": [
+    "Rotary dial closure: A tongue-mounted dial routes a thin cord through paired webbing guides across the instep.",
+    "Mesh and synthetic upper: Mesh covers the forefoot and leaf-shaped side openings, bordered by stitched synthetic overlays.",
+    "Low-cut collar: A padded mesh opening and rear pull loop complete the closed-heel casual walking profile.",
+    "TPR outsole: The actual underside shows angular tread sections and curved channels below the contrasting grey sidewall.",
+    "Wholesale colour-size options: Black and Dark Grey are offered in EU 39–48 for a neutral-colour assortment."
+  ],
+  "state": "CREATED_FORMAL_FIELDS_SCORE_PASS",
+  "pricing_draft": {
+    "source_cny": "58.00",
+    "fx": "6.6837",
+    "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+    "fx_observed": "2026-10-13 10:57:20",
+    "tiers": [
+      [
+        2,
+        "13.02"
+      ],
+      [
+        50,
+        "12.15"
+      ],
+      [
+        100,
+        "11.29"
+      ]
+    ],
+    "freight_service_tax": "Order-specific; markupbeforefreight/service/tax, notguaranteednetprofit.",
+    "rounding": "ROUND_CEILING_TO_USD_CENT",
+    "current_price_repair": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/02412准备/价格取整修正/update_receipt.json"
+  },
+  "publish_profile": {
+    "category_id": 201334413,
+    "schema_name": "当前步行鞋Schema",
+    "buyer_colours": [
+      {
+        "buyer": "Black",
+        "supplier_key": "Black",
+        "supplier_label": "黑色",
+        "image_role": "M1"
+      },
+      {
+        "buyer": "Dark Grey",
+        "supplier_key": "Dark Grey",
+        "supplier_label": "深灰",
+        "image_role": "SKU_DarkGrey"
+      }
+    ],
+    "category_attributes": {
+      "Upper Material": [
+        "Mesh with synthetic overlays"
+      ],
+      "Midsole Material": [
+        "other"
+      ],
+      "Outsole Material": [
+        "TPR"
+      ],
+      "Lining Material": [
+        "other"
+      ]
+    },
+    "closure_field_note": "CurrentcategoryClosureType offersButton/ZIP/SlipOn/Sock/Laceup/HookLoop/BuckleStrap/ElasticBand withoutcustomtip; no matchingrotarydial. Optionalattributeomitted, no falseBuckle/SlipOn; actualclosureinbuyertext/images.",
+    "local_intent": [
+      "旋转扣网布低帮休闲步行鞋"
+    ]
+  },
+  "title_bytes": 118,
+  "current_schema_field_constraints": {
+    "Upper Material": {
+      "type": "singleCheck",
+      "custom_negative_value_supported": true,
+      "selected_text": "Mesh with synthetic overlays",
+      "evidence": "当前步行鞋Schema.xml",
+      "scope": "One compositecustomlabel describesverifiedmesh+仿超overlays; no guessedfiber/chemistry or forcedmultiplevalues."
+    }
+  },
+  "publication": {
+    "product_id": "1601980268012",
+    "audit": "approved",
+    "display": "Y",
+    "actual_score": "5.00",
+    "formal_verification": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/02412准备/verification.json",
+    "local_sync_at": "2026-10-14T17:12:58.837780+00:00",
+    "no_replayed_create": true
+  },
+  "next_action": "该款正式字段、评分与来源已通过；继续其他款，不重复创建。",
+  "price_rounding_correction": {
+    "state": "FORMAL_FIELDS_SCORE_PASS",
+    "id": "1601980268012",
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/02412准备/价格取整修正/prepared.json"
+  }
+}

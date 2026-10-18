@@ -1,0 +1,293 @@
+{
+  "keyword_input": null,
+  "differentiation_review": null,
+  "category_id": 201334413,
+  "operation": "update",
+  "inventory_input": null,
+  "model_serialization": null,
+  "target_product_id": "1601973009551",
+  "field_ids": [
+    "companyDesc",
+    "companyFaqDesc",
+    "textDesc"
+  ],
+  "dependency_ids": [],
+  "xml": "<itemSchema><field id=\"textDesc\" type=\"input\"><value>Low-top lace-up casual walking shoes with stitched toe panels and a layered sole sidewall. Color options: Black. Size labels 39-48; confirm the size chart and fit before ordering. Send your color and size mix, pair quantity, packaging requirements and destination for a quotation. Material composition, availability, final price and dispatch timing are confirmed for each order. Sample availability and customization feasibility require review before confirmation. This listing has one Black color option and no separate online lining selector. Regular mesh-textured and fleece-textured lining options are shown; specify your lining version when enquiring. Listed prices are references, not a confirmed common price for both lining versions. Confirm the requested version and final quotation before ordering.</value></field><field id=\"companyDesc\" type=\"input\"><value>Quanzhou Beiqiang Footwear &amp; Apparel Co., Ltd. is based in Quanzhou, Fujian, China and serves overseas B2B footwear buyers. Company images show general company-level development, production, checking and order coordination activities. Product-specific specifications, availability and services are confirmed after receiving your order requirements.</value></field><field id=\"companyFaqDesc\" type=\"multiComplex\"><complex-values><field id=\"question\" type=\"input\"><value>How do I specify the lining and sizes?</value></field><field id=\"answers\" type=\"input\"><value>Regular mesh-textured and fleece-textured lining options are shown, both Black. There is one Black color option and no separate online lining selector. Tell us your lining version and size mix before ordering. Size labels are 39-48; confirm the size chart, with no EU/US conversion assumed.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>Do the listed prices apply to both lining versions?</value></field><field id=\"answers\" type=\"input\"><value>Listed prices are references and do not confirm the same price for both lining versions. We confirm the final quotation for your requested lining version, size mix, quantity, packaging and destination before proceeding. Freight, applicable taxes and additional services are confirmed separately.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>Which specifications should be confirmed before an order?</value></field><field id=\"answers\" type=\"input\"><value>Confirm the requested style, material specifications, color and size mix, quantity, packaging and any sample requirements. Product-specific details and availability are checked before the order is confirmed.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>Can I enquire about samples and custom branding?</value></field><field id=\"answers\" type=\"input\"><value>Send your color, size, logo artwork and packaging brief. Sample availability, customization feasibility, costs and timing are reviewed for this style before confirmation.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>When will the order be dispatched?</value></field><field id=\"answers\" type=\"input\"><value>Dispatch depends on availability, order quantity, size mix and packing requirements. Timing is confirmed for each order before proceeding.</value></field></complex-values></field></itemSchema>",
+  "expected_fields": {
+    "textDesc": [
+      "field",
+      [
+        [
+          "id",
+          "textDesc"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Low-top lace-up casual walking shoes with stitched toe panels and a layered sole sidewall. Color options: Black. Size labels 39-48; confirm the size chart and fit before ordering. Send your color and size mix, pair quantity, packaging requirements and destination for a quotation. Material composition, availability, final price and dispatch timing are confirmed for each order. Sample availability and customization feasibility require review before confirmation. This listing has one Black color option and no separate online lining selector. Regular mesh-textured and fleece-textured lining options are shown; specify your lining version when enquiring. Listed prices are references, not a confirmed common price for both lining versions. Confirm the requested version and final quotation before ordering.",
+          []
+        ]
+      ]
+    ],
+    "companyDesc": [
+      "field",
+      [
+        [
+          "id",
+          "companyDesc"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Quanzhou Beiqiang Footwear & Apparel Co., Ltd. is based in Quanzhou, Fujian, China and serves overseas B2B footwear buyers. Company images show general company-level development, production, checking and order coordination activities. Product-specific specifications, availability and services are confirmed after receiving your order requirements.",
+          []
+        ]
+      ]
+    ],
+    "companyFaqDesc": [
+      "field",
+      [
+        [
+          "id",
+          "companyFaqDesc"
+        ]
+      ],
+      "",
+      [
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "How do I specify the lining and sizes?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Regular mesh-textured and fleece-textured lining options are shown, both Black. There is one Black color option and no separate online lining selector. Tell us your lining version and size mix before ordering. Size labels are 39-48; confirm the size chart, with no EU/US conversion assumed.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Do the listed prices apply to both lining versions?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Listed prices are references and do not confirm the same price for both lining versions. We confirm the final quotation for your requested lining version, size mix, quantity, packaging and destination before proceeding. Freight, applicable taxes and additional services are confirmed separately.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Which specifications should be confirmed before an order?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Confirm the requested style, material specifications, color and size mix, quantity, packaging and any sample requirements. Product-specific details and availability are checked before the order is confirmed.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Can I enquire about samples and custom branding?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Send your color, size, logo artwork and packaging brief. Sample availability, customization feasibility, costs and timing are reviewed for this style before confirmation.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "When will the order be dispatched?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Dispatch depends on availability, order quantity, size mix and packing requirements. Timing is confirmed for each order before proceeding.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "prepared_from_current_schema": true,
+  "task_pack": null,
+  "replacement_plan": null,
+  "schema_provenance": {
+    "schema_request_id": "0b830ecc17914218806547665",
+    "schema_acquired_at": "2026-10-08T01:11:24.401192+00:00",
+    "current_schema_sha256": "a343d70e00ab82eb300d012941d2bb71a942c95cfc0e59366d83061d823ce5fc",
+    "source_evidence": [
+      "../执行范围纠正.md",
+      "../../../../00_运营SOP/国际站商品全生命周期SOP.md"
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "tool": "Builtin image_gen",
+  "prompts": {
+    "D1": {
+      "prompt": "Edit exact actual Tan 924 boot photo into square English B2B detail. Tight authentic crop of the two existing upper metallic hook fittings and adjacent round eyelets/lace crossing on the tan front panel, with grey mesh tongue behind. Preserve exact source oblique angle, hook count/shape, cordrouting/stitches and panel boundaries. Do not show wholeboot or reconstruct opposite side fittings. White top15%header navy title 'Hook & Eyelet Lacing', subtitle 'Upper hooks and lower round eyelets', thinorange rule. No eyelet/material chemistry, durability or performance claims. No arrows/insets, new branding or hidden anatomy.",
+      "refs": [
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/924准备/01_产品来源原图/24.jpg"
+      ],
+      "output_hint": "Generated images are saved to E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c as E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-aa1744c2-0e5b-4b5c-aee7-3affa8979f20.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    "D2": {
+      "prompt": "Edit exact Green 924 pair photo into square B2B construction detail. Use a tight crop of the FRONT shoe's existing green broad side panel, orange narrow side insert, stitched boundaries and tan sidewall edge. Keep actual original angle and dimensions; exclude backgroundshoe rather than duplicate it. White top15%header navy title 'Stitched Side Panels', subtitle 'A narrow contrasting insert', thin orange rule. Large authentic crop below. No whole-shoe redraw, leather chemistry claim, waterproof/support tests, arrows or invented parts.",
+      "refs": [
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/924准备/01_产品来源原图/31.jpg"
+      ],
+      "output_hint": "Generated images are saved to E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c as E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-90bb8184-0fb8-48c8-a44e-a6a91e500a43.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    "D4": {
+      "prompt": "Square English B2B colour/EU selection card using exact supplied 924 photos: ref1Tan singleboot, ref2Black pair, ref3Green pair. Keep actual shoes, original viewpoints, colours, stitches, eyelet/hook fittings and sole geometry. Compose three authentic photo panels labelled 'Tan', 'Black', 'Green'; crop existing panels only, do not generate new shoe angles or recolour. Heading 'Three Colours | EU 39–48'. Lower table 'Colour | EU Sizes' with rows Tan,Black,Green, each '39 40 41 42 43 44 45 46 47 48'. Footer 'Send your colour and EU size mix for a quotation'. White navy/orange style, readable text. No supplier/Chinese copy, width grade, foot-length or US conversion, stock or dispatch claims.",
+      "refs": [
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/924准备/01_产品来源原图/24.jpg",
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/924准备/01_产品来源原图/30.jpg",
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/924准备/01_产品来源原图/31.jpg"
+      ],
+      "output_hint": "Generated images are saved to E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c as E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-822fdb29-e1f7-4056-86d2-8282f1b4b4d8.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    }
+  },
+  "selected": {
+    "M1": [
+      24
+    ],
+    "M2": [
+      10
+    ],
+    "M3": [
+      6
+    ],
+    "M4": [
+      30
+    ],
+    "M5": [
+      31
+    ],
+    "D1": [
+      24
+    ],
+    "D2": [
+      31
+    ],
+    "D3": [
+      19
+    ],
+    "D4": [
+      24,
+      30,
+      31
+    ]
+  },
+  "rejected": {
+    "D3": {
+      "generation": {
+        "prompt": "Square English B2B photo detail from exact 924Tan worn source. Tight authentic crop of the existing REAR-facing boot at right showing real heel overlay, webbing pull loop and tan heel-sidewall steps. Keep its real visible ankle/jeans above, exact pose, stitches, collar and heelgeometry. Do not invent an empty collar or soleunderside. White topband navy title 'Rear Loop & Heel Profile', subtitle 'A closer look at the rear construction', orange thinrule. Enlarge genuine crop only, exclude other left boot if possible; no performance/impact/protection/durability promises, no new viewpoint or arrows.",
+        "refs": [
+          "C:/Users/spq/Desktop/贝强/02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/924准备/01_产品来源原图/06.jpg"
+        ],
+        "output_hint": "Generated images are saved to E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c as E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-09bdc857-4d2f-4997-8468-24d2ce4acab5.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      },
+      "decision": "REJECTED_NOT_UPLOADED",
+      "reason": "Enlarged small rear-facing Tan boot reconstructed a prominent arch-shaped layered heel seam beyond what the small original crop reliably resolves. Use actual19Black underside/heel worn image unchanged asD3; actual06Tan side/rear unchanged asM3. No invented hidden rear construction selected."
+    }
+  },
+  "limits": "Three selected AI crops/layouts only; six actual original photos unchanged. Source photos, not AI reconstruction, establish product geometry."
+}

@@ -1,0 +1,34 @@
+{
+  "request": {
+    "param_product_top_publish_request": {
+      "product_id": 1601943620678,
+      "cat_id": 201334413,
+      "language": "en_US",
+      "xml": "<itemSchema><field id=\"productTitle\" name=\"Product name\" type=\"input\"><value>Casual Court Style Lace-Up Shoes with Contrast Collar and Stitched Sole Edge for Wholesale Shoe Buyers</value></field></itemSchema>"
+    }
+  },
+  "reason": "Formal title differs from reviewed source-specific submitted product title. Correct only title; cause of later change unconfirmed, not attributed to a person or platform automation.",
+  "expected_title": "Casual Court Style Lace-Up Shoes with Contrast Collar and Stitched Sole Edge for Wholesale Shoe Buyers",
+  "observed_title": "Casual Court Style Low Top Lace-Up Shoes with Contrast Collar and Stitched Sole Edge for Wholesale Buyers All Seasons",
+  "expected_schema": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Casual Court Style Lace-Up Shoes with Contrast Collar and Stitched Sole Edge for Wholesale Shoe Buyers",
+          []
+        ]
+      ]
+    ]
+  },
+  "xml_sha256": "dc763f2a3feaf0891c970cc26562bfe7048f58aa64046840212f0ebc74febeec"
+}

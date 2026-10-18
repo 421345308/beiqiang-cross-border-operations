@@ -1,0 +1,9 @@
+{"type": "session.queue_done"}
+{"type": "session.created", "session_id": "sess_4876f69ea6db", "mode": "turn_based", "metrics": {"backend": "pytorch", "kv_cache_length": 166}, "server_send_ts": 1791780207.2229388}
+{"type": "response.output.delta", "kind": "text", "session_id": "sess_4876f69ea6db", "response_id": "resp_295c49d61efc", "text": "音频中未发现人声讲话。主要听到", "server_send_ts": 1791780209.6263986}
+{"type": "response.output.delta", "kind": "text", "session_id": "sess_4876f69ea6db", "response_id": "resp_295c49d61efc", "text": "一段持续的、高频且音调略显", "server_send_ts": 1791780209.9023736}
+{"type": "response.output.delta", "kind": "text", "session_id": "sess_4876f69ea6db", "response_id": "resp_295c49d61efc", "text": "尖锐的单音或短促哨音", "server_send_ts": 1791780210.1837778}
+{"type": "response.output.delta", "kind": "text", "session_id": "sess_4876f69ea6db", "response_id": "resp_295c49d61efc", "text": "，类似于哨子吹奏。声音在整个音频", "server_send_ts": 1791780210.469409}
+{"type": "response.output.delta", "kind": "text", "session_id": "sess_4876f69ea6db", "response_id": "resp_295c49d61efc", "text": "中反复出现，具有明显的节奏感和重复", "server_send_ts": 1791780210.7605925}
+{"type": "response.output.delta", "kind": "text", "session_id": "sess_4876f69ea6db", "response_id": "resp_295c49d61efc", "text": "性。", "server_send_ts": 1791780210.8195102}
+{"type": "response.done", "session_id": "sess_4876f69ea6db", "response_id": "resp_295c49d61efc", "text": "音频中未发现人声讲话。主要听到一段持续的、高频且音调略显尖锐的单音或短促哨音，类似于哨子吹奏。声音在整个音频中反复出现，具有明显的节奏感和重复性。", "reason": "turn_end", "metrics": {"backend": "pytorch", "kv_cache_length": 443}, "server_send_ts": 1791780210.8198042}

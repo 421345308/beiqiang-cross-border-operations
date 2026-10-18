@@ -1,0 +1,99 @@
+{
+  "tool": "Builtin image_gen",
+  "prompts": {
+    "M3": {
+      "referenced_image_paths": [
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0323F准备/01_产品来源原图/12.jpg"
+      ],
+      "transparent_background": false,
+      "prompt": "Create ONE square B2B gallery close-up by cropping/layout editing this exact black PLUSH OPTION sneaker. Buyer question: what distinguishes the plush option? Tight crop of actual black fuzzy collar rim and tongue edge, upper two round eyelets and adjoining side panel from the SAME camera angle. Keep real shoe construction, existing fluffy trim, laces and rear loop exactly. Do not open or fill the collar or invent a deeper interior. Crop to show rim detail, not the entire shoe. White background, navy heading 'BLACK PLUSH OPTION', smaller line 'Plush collar and tongue edge shown'. Spacious clean catalogue, large photo crop. No chemistry, wool, waterproof, temperature, medical, wide or performance statement. Don't change sole/quarter geometry or add marks."
+    },
+    "D1": {
+      "referenced_image_paths": [
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0323F准备/01_产品来源原图/15.jpg"
+      ],
+      "transparent_background": false,
+      "prompt": "Create ONE square B2B product-detail module by faithful crop/layout edit of this actual black STANDARD-LINED sneaker photo. Buyer question: what does the lace-up front look like? Frame the actual flat black laces, two upper round eyelets on visible side and zigzag border of eyestay, preserve exact lace topology/eyelet count and original view. Standard collar remains ordinary, no plush added. White background, restrained navy heading 'LACE-UP FRONT', smaller line 'Flat laces with round upper eyelets'. Large actual photo macro with generous margins, no whole-shoe repeat. Do not invent new eyelets, perforations, labels or surfaces. No materialchemistry/wide/waterproof/HandFree/support claim."
+    },
+    "D2": {
+      "referenced_image_paths": [
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0323F准备/01_产品来源原图/12.jpg"
+      ],
+      "transparent_background": false,
+      "prompt": "Create ONE square B2B footwear detail module through faithful crop/layout editing of this exact black sneaker photograph. Buyer question: how is the forefoot finished? Tight macro of the actual smooth black vamp and curved stitched toe overlay, original seam path and edge of sculpted sole as photographed, keep same angle. Crop above unseen underside, don't invent bottom tread, new panels, perforations or toe guard. White background, navy heading 'STITCHED TOE OVERLAY', smaller line 'Curved seam around the forefoot'. Large clean catalogue product crop, no full shoe repeat. No width/protection/medical/waterproof/composition/performance claim. Product texture and geometry stay as source."
+    },
+    "D3": {
+      "referenced_image_paths": [
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0323F准备/01_产品来源原图/19.jpg"
+      ],
+      "transparent_background": false,
+      "prompt": "Create ONE square B2B footwear detail module using a faithful crop/layout edit of this actual rear-view black STANDARD-lined sneaker. Buyer question: what is the heel finish? Crop upperrear only, show real black fabric pull loop over the stitched heel overlay and original ordinary paddedcollar opening with tongue behind it. Keep source cameraangle, exact panel edges, loop proportions and collar; no plush added and no invented interior. White background, navy header 'REAR PULL LOOP', smaller line 'Fabric loop above the stitched heel overlay'. Large sharp crop, spacious catalogue. Exclude most lower sole to avoid another sole view. No support/protection/HandsFree/composition/performance claim, no new marks, no whole shoe repeat."
+    },
+    "D4": {
+      "referenced_image_paths": [
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0323F准备/01_产品来源原图/15.jpg",
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0323F准备/01_产品来源原图/12.jpg"
+      ],
+      "transparent_background": false,
+      "prompt": "Create ONE square B2B footwear colour/lining/size option chart by arranging exactly the TWO provided ACTUAL black sneaker photos. Ref1 STANDARD collar ordinary woven rim; Ref2 PLUSH fuzzy black collar. Preserve exact shoe angles, all panel/sidegraphic/eyelet/sole shapes and actual lining. No recolouring, no invented colours or new views, no added branding. White/pale blue spacious two-row catalogue. Heading 'BLACK · TWO LINING OPTIONS'; subtitle 'EU 39–48 for both options'. Row1 exact label 'Black — Standard Lining', full actualref1 shoe left, chips RIGHT in two neat lines: '39 40 41 42 43' then '44 45 46 47 48'. Row2 exact 'Black — Plush Lining', actualref2 shoe left, same exact ten size chips ONCE. Clearly distinguish fuzzy rim in second photo. Bottom 'Specify lining and EU size mix for your wholesale quotation'. Mobile legible, fullshoes uncut, no productchemistry, prices, stock, USconversion, width, waterproof/cold/performance promises. No unrelated footwear."
+    }
+  },
+  "selected": {
+    "M1": [
+      null,
+      [
+        15
+      ]
+    ],
+    "M2": [
+      null,
+      [
+        18
+      ]
+    ],
+    "M3": [
+      "exec-83d7ecc0-3396-4500-ba62-d1e44a2abf90.png",
+      [
+        12
+      ]
+    ],
+    "M4": [
+      null,
+      [
+        12
+      ]
+    ],
+    "M5": [
+      null,
+      [
+        27
+      ]
+    ],
+    "D1": [
+      "exec-5d2f2450-4d07-4a9e-8736-c49f15080d80.png",
+      [
+        15
+      ]
+    ],
+    "D2": [
+      "exec-472640b6-d719-4c67-9b11-8491137bf8a9.png",
+      [
+        12
+      ]
+    ],
+    "D3": [
+      "exec-e7bbcdd8-c7be-4185-b270-2587c65a4800.png",
+      [
+        19
+      ]
+    ],
+    "D4": [
+      "exec-cc29d9e5-fbbc-490d-9ddf-e40ff0e3083a.png",
+      [
+        15,
+        12
+      ]
+    ]
+  },
+  "M1_M2_M4_M5": "Actualphotos unchanged; bottom18 notgenerated"
+}

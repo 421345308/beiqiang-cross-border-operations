@@ -1,0 +1,21 @@
+{
+  "generated_at": "2026-10-13",
+  "candidates": [
+    {
+      "source": "https://shnx.sooxie.com/detail/2520117",
+      "source_image": "99_临时区/HR实源替换/货源发现/shnx_2520117/photos/19.jpg",
+      "prompt": "Faithful catalogue extraction of the actual photograph. Extract ONLY the complete ivory-and-navy shoe in the foreground at the bottom of the reference; remove the rear shoe and orange studio surroundings. Keep the EXACT foreground shoe, original side-facing elevated three-quarter camera angle and proportions. Place it on seamless pure white, centred on a square canvas filling around 85% width, with a small soft contact shadow. Preserve the synthetic leather textured panels, small actual toe perforations, navy overlays, original laces, eyelets, side zipper, cream sculpted sole including the original diagonal fins, heel loop, padded collar and all exact shoe lettering and the hanging source tag (CVR, CVRNYLOM and printed tag). Do not invent mesh panels, change the upper, sole thickness or heel shape, rotate, reshoot, reinterpret any lettering, erase/replace the visible source marks, add a Beiqiang logo or remove actual footwear parts. No badges, copy, captions, measurement diagrams, second shoe or person. This is a precise background extraction and uniform enlargement of the photographed foreground shoe, not a redesign.",
+      "output": "E:/C盘迁移/Codex/.codex/generated_images/01a1164e-73c1-70d1-882c-299608adb19c/exec-a09ceca6-411e-4dd5-aa89-8b1d8c3f0aaa.png",
+      "state": "REJECTED_FOR_CURRENT_PRODUCT",
+      "reason": "Synthetic leather source differs more from current mesh intent; generated foreground view/proportions are changed."
+    },
+    {
+      "source": "https://shnx.sooxie.com/detail/2511302",
+      "source_image": "99_临时区/HR实源替换/货源发现/shnx_2511302/photos/20.jpg",
+      "prompt": "Precision catalogue background extraction, not a shoe redesign. From the provided photograph select ONLY the complete WHITE AND NAVY dial-closure shoe STANDING ON THE FLOOR at the very bottom; do NOT use the upper shoe being worn. Remove the upper worn shoe, leg, black doorway, stone floor and surrounding source text. Keep the EXACT bottom photographed shoe with its almost flat side-facing camera angle and original long low profile. Move it by uniform scaling onto a pure white square catalogue canvas, about85% of canvas width, with a tiny soft sole contact shadow. Crucially preserve the original mesh grid geometry, every cutout opening and white overlay edge, circular dial with its exact multi-colour star emblem, original cord guides/cord path, rear pull loop, navy heel accent shape, white sculpted outsole contours and every original toe/heel lug. The reference is the factual anchor: no enlarged toe, raised collar, thickened sole, different angle, new mesh holes, reconfigured dial, invented branding or text, replaced labels, missing shoe parts or added shoe details. Keep exact proportions of the ground-standing bottom shoe. No captions, diagrams, second shoe, person, decorative props or new logos.",
+      "output": "E:/C盘迁移/Codex/.codex/generated_images/01a1164e-73c1-70d1-882c-299608adb19c/exec-7eea3e43-656a-457d-bf7f-81b01609eb0c.png",
+      "state": "MAJOR_STRUCTURE_COLOR_GEOMETRY_REVIEW_PASS",
+      "reason": "Compared with source ground-standing shoe and all24 raw frames: mesh/overlays, dial/cord guides, loop, navy accent and sculpted sole retain actual design. AI rendition not asserted byte-identical; all SKU and supporting details use source photographs."
+    }
+  ]
+}

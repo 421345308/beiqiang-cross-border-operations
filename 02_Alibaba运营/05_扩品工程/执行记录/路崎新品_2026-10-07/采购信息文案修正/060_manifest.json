@@ -1,0 +1,21 @@
+{
+  "operation": "update",
+  "product_id": "1601972944790",
+  "category_id": 201334413,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "../执行范围纠正.md",
+    "../../../../00_运营SOP/国际站商品全生命周期SOP.md"
+  ],
+  "current_schema": "060_current_schema.xml",
+  "current_schema_sha256": "cf3613469e8cdadacde54ec4462a68fa1349ad1cc580bc804bf520d09ee66377",
+  "schema_request_id": "0bab02fc17914218551841144",
+  "schema_acquired_at": "2026-10-08T01:10:58.972360+00:00",
+  "payload_xml": "060_payload.xml",
+  "field_ids": [
+    "textDesc",
+    "companyDesc",
+    "companyFaqDesc"
+  ],
+  "dependency_ids": []
+}

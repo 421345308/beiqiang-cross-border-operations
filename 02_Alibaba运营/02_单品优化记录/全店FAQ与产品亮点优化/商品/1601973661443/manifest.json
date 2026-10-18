@@ -1,0 +1,27 @@
+{
+  "operation": "update",
+  "product_id": "1601973661443",
+  "category_id": 201334413,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "copy.json",
+    "before_get.json",
+    "../../../../05_扩品工程/执行记录/路崎全店新品_2026-10-08/2620准备/经营任务包.md",
+    "../../../../../99_临时区/HR017_男款货源续筛_2026-09-29/Luqi_2620/16.jpg",
+    "current_get.json",
+    "../../../../00_运营SOP/国际站商品全生命周期SOP.md"
+  ],
+  "current_schema": "current_schema.xml",
+  "current_schema_sha256": "d4715f94515c78268d4ed483afbc80c844aea0e8c4acc0c41028efadd1c890b1",
+  "schema_request_id": "212c41d317917376638086062",
+  "schema_acquired_at": "2026-10-11T16:54:20.866340+00:00",
+  "payload_xml": "payload.xml",
+  "field_ids": [
+    "textDesc",
+    "companyFaqDesc"
+  ],
+  "dependency_ids": [
+    "productDescType"
+  ],
+  "observed_model": "BQ-LQ2620"
+}

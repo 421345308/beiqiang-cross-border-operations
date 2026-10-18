@@ -1,0 +1,26 @@
+{
+  "operation": "update",
+  "product_id": "1601970691438",
+  "category_id": 201334413,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "copy.json",
+    "before_get.json",
+    "../../../../05_扩品工程/执行记录/8815正式新建_2026-10-04_task5/facts_and_color_bindings.json",
+    "current_get.json",
+    "../../../../00_运营SOP/国际站商品全生命周期SOP.md"
+  ],
+  "current_schema": "current_schema.xml",
+  "current_schema_sha256": "91efc840252b51f6c6270166baf53b474f51e767d013068e4b03ca68509a89b5",
+  "schema_request_id": "213c934417917373912658937",
+  "schema_acquired_at": "2026-10-11T16:49:48.291980+00:00",
+  "payload_xml": "payload.xml",
+  "field_ids": [
+    "textDesc",
+    "companyFaqDesc"
+  ],
+  "dependency_ids": [
+    "productDescType"
+  ],
+  "observed_model": "BQ-NS002"
+}

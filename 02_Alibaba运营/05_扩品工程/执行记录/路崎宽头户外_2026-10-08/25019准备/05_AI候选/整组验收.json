@@ -1,0 +1,438 @@
+{
+  "status": "BUYER_ROLE_REVIEW_PASS",
+  "observed_at": "2026-10-10T17:25:53.245616+00:00",
+  "roles": [
+    {
+      "role": "M1",
+      "source_indices": [
+        1
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\25019准备\\01_产品来源原图\\01.jpg"
+      ],
+      "source_sha256": [
+        "211d132994d579ca2135975b6e322936f450092d1b71c2c2a2f06c8a10278ed2"
+      ],
+      "source_dimensions": [
+        [
+          800,
+          800
+        ]
+      ],
+      "source_region_key": "M1",
+      "buyer_question": "搜索识别",
+      "prompt": "Use case: precise-object-edit. Edit ONLY this attached actual photographed Luqi25019 winter ankle boot image. Preserve exactly the pictured boot count, pose, camera angle, plain rounded toe, long/triangular double-stitched sidepanel and heel seam, black padded collar, round patterned laces/ringeyelets, plush tongue lining where visible, dark lugsole and steppedheel. No sidezip, rearpulltab, speedhooks, logos, recoloring, added boot or hidden reconstructed angle. Yellow actual wheat-yellow upper/black-yellow laces/gray edge; Black actual blackupper/blacklaces/grayedge; sourceKhaki actual gray-brown upper/brownlaces/tan-grayedge, do not turn it yellowtan. Preserve existing pants/ankles where onfoot; do not turn wornboot into emptycollar. Remove the decorative FIRE graphic completely and repair ONLY its background. No flame, snowflakes, thermometer, waterproof/fireproof/safety/thermal test, leather, rubber/EVA composition, non-slip/grip or medical claims. Requested English text may be placed outside boot; do not obscure boot. Preserve source aspect ratio and real visible geometry; do not make unknown fiber or sole composition claims. Keep BOTH real Yellow pair and originalfabric backdrop/pose. Only remove upper-rightfire icon; no text. Clean product-first image, no changedbackgroundscene.",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\25019准备\\05_AI候选\\M1.png",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-6f614f59-d08e-456d-b34b-0885bccd725a.png",
+      "output_sha256": "1ca90371f56367448168b429451867833c475d6633907d71f50a014b5e465d85",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T17:25:53.245616+00:00",
+      "review_note": "Actually compared all twelve native roles to own25019 originals. Plain rounded forefoot, long triangular double-stitched sidepanel/heel seam, black paddedcollar, round ringeyelet laces, visible plush tonguelining, darklug/steppedheel retained. No sidezip/pulltab/speedhook or unknowncomposition inferred. Yellow actualwheat, Black actualblack, sourceKhaki actualgray-brown withbrownlaces. M1original01pair cleaned/fire removed; M2Black22/M3Khaki27/M4Yellow17/M5Yellow19 actualonfoot scene/pose. D1original02 foregroundpartial lace/forefoot side stitching, croppedheel but tiny collarpartial retained; D2original21 actualraised underside and standingpair preserved rather than newflattenedsole; dark/tan tread geometry retained. D3original06 foregroundcollar/tongue/plush-edge partial withleftbootedge retained, no fulltoe or hiddenlining assembly; sourceupscale notfineconstruction proof. D4original30Khaki actualonfootfront pair EU39-48. ThreecolorSKU03/11/12 originalsingle inclinedboots onfabric support preserved, no newview. Main/detail use different sourceframes;01/04repeat source only01 used. All firegraphics removed, no thermal/test/waterproof/grip/composition claims.12 productroles plus M6 realfactory/five company; no publicUI interaction claimed."
+    },
+    {
+      "role": "M2",
+      "source_indices": [
+        22
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\25019准备\\01_产品来源原图\\22.jpg"
+      ],
+      "source_sha256": [
+        "edc25aa394ef55f779143b3841e843ecaeda1a697df00ff95375bc8a4e4eeb4e"
+      ],
+      "source_dimensions": [
+        [
+          800,
+          800
+        ]
+      ],
+      "source_region_key": "M2",
+      "buyer_question": "黑色选项",
+      "prompt": "Use case: precise-object-edit. Edit ONLY this attached actual photographed Luqi25019 winter ankle boot image. Preserve exactly the pictured boot count, pose, camera angle, plain rounded toe, long/triangular double-stitched sidepanel and heel seam, black padded collar, round patterned laces/ringeyelets, plush tongue lining where visible, dark lugsole and steppedheel. No sidezip, rearpulltab, speedhooks, logos, recoloring, added boot or hidden reconstructed angle. Yellow actual wheat-yellow upper/black-yellow laces/gray edge; Black actual blackupper/blacklaces/grayedge; sourceKhaki actual gray-brown upper/brownlaces/tan-grayedge, do not turn it yellowtan. Preserve existing pants/ankles where onfoot; do not turn wornboot into emptycollar. Remove the decorative FIRE graphic completely and repair ONLY its background. No flame, snowflakes, thermometer, waterproof/fireproof/safety/thermal test, leather, rubber/EVA composition, non-slip/grip or medical claims. Requested English text may be placed outside boot; do not obscure boot. Preserve source aspect ratio and real visible geometry; do not make unknown fiber or sole composition claims. Keep BOTH Black onfoot boots, originalrolledjeans/ankles and scene/pose. Remove fire. TEXT: BLACK OPTION; Lace-up winter ankle boots.",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\25019准备\\05_AI候选\\M2.png",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-35aa1b54-a06d-4906-9f86-ab6052632af6.png",
+      "output_sha256": "304bd51fe16ae1ddf3d910412aa3e8d70464c4cc6cb5d0799a39eb3952c93f8e",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T17:25:53.245616+00:00",
+      "review_note": "Actually compared all twelve native roles to own25019 originals. Plain rounded forefoot, long triangular double-stitched sidepanel/heel seam, black paddedcollar, round ringeyelet laces, visible plush tonguelining, darklug/steppedheel retained. No sidezip/pulltab/speedhook or unknowncomposition inferred. Yellow actualwheat, Black actualblack, sourceKhaki actualgray-brown withbrownlaces. M1original01pair cleaned/fire removed; M2Black22/M3Khaki27/M4Yellow17/M5Yellow19 actualonfoot scene/pose. D1original02 foregroundpartial lace/forefoot side stitching, croppedheel but tiny collarpartial retained; D2original21 actualraised underside and standingpair preserved rather than newflattenedsole; dark/tan tread geometry retained. D3original06 foregroundcollar/tongue/plush-edge partial withleftbootedge retained, no fulltoe or hiddenlining assembly; sourceupscale notfineconstruction proof. D4original30Khaki actualonfootfront pair EU39-48. ThreecolorSKU03/11/12 originalsingle inclinedboots onfabric support preserved, no newview. Main/detail use different sourceframes;01/04repeat source only01 used. All firegraphics removed, no thermal/test/waterproof/grip/composition claims.12 productroles plus M6 realfactory/five company; no publicUI interaction claimed."
+    },
+    {
+      "role": "M3",
+      "source_indices": [
+        27
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\25019准备\\01_产品来源原图\\27.jpg"
+      ],
+      "source_sha256": [
+        "5b0b4944bb94436cdfeba2d127a2d239413e26af57b12633607d5321ea246b81"
+      ],
+      "source_dimensions": [
+        [
+          800,
+          800
+        ]
+      ],
+      "source_region_key": "M3",
+      "buyer_question": "卡其选项",
+      "prompt": "Use case: precise-object-edit. Edit ONLY this attached actual photographed Luqi25019 winter ankle boot image. Preserve exactly the pictured boot count, pose, camera angle, plain rounded toe, long/triangular double-stitched sidepanel and heel seam, black padded collar, round patterned laces/ringeyelets, plush tongue lining where visible, dark lugsole and steppedheel. No sidezip, rearpulltab, speedhooks, logos, recoloring, added boot or hidden reconstructed angle. Yellow actual wheat-yellow upper/black-yellow laces/gray edge; Black actual blackupper/blacklaces/grayedge; sourceKhaki actual gray-brown upper/brownlaces/tan-grayedge, do not turn it yellowtan. Preserve existing pants/ankles where onfoot; do not turn wornboot into emptycollar. Remove the decorative FIRE graphic completely and repair ONLY its background. No flame, snowflakes, thermometer, waterproof/fireproof/safety/thermal test, leather, rubber/EVA composition, non-slip/grip or medical claims. Requested English text may be placed outside boot; do not obscure boot. Preserve source aspect ratio and real visible geometry; do not make unknown fiber or sole composition claims. Keep BOTH sourceKhaki gray-brown onfoot boots, originaljeans/ankles/scene. Remove fire. TEXT: KHAKI OPTION; Actual photographed color.",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\25019准备\\05_AI候选\\M3.png",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-99d2bc30-c514-41a5-bca2-76e0852bc4d9.png",
+      "output_sha256": "71fa6bbb6f2f3481a34a41e74813b8bfa775427611f77dcefc5180d839e5d794",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T17:25:53.245616+00:00",
+      "review_note": "Actually compared all twelve native roles to own25019 originals. Plain rounded forefoot, long triangular double-stitched sidepanel/heel seam, black paddedcollar, round ringeyelet laces, visible plush tonguelining, darklug/steppedheel retained. No sidezip/pulltab/speedhook or unknowncomposition inferred. Yellow actualwheat, Black actualblack, sourceKhaki actualgray-brown withbrownlaces. M1original01pair cleaned/fire removed; M2Black22/M3Khaki27/M4Yellow17/M5Yellow19 actualonfoot scene/pose. D1original02 foregroundpartial lace/forefoot side stitching, croppedheel but tiny collarpartial retained; D2original21 actualraised underside and standingpair preserved rather than newflattenedsole; dark/tan tread geometry retained. D3original06 foregroundcollar/tongue/plush-edge partial withleftbootedge retained, no fulltoe or hiddenlining assembly; sourceupscale notfineconstruction proof. D4original30Khaki actualonfootfront pair EU39-48. ThreecolorSKU03/11/12 originalsingle inclinedboots onfabric support preserved, no newview. Main/detail use different sourceframes;01/04repeat source only01 used. All firegraphics removed, no thermal/test/waterproof/grip/composition claims.12 productroles plus M6 realfactory/five company; no publicUI interaction claimed."
+    },
+    {
+      "role": "M4",
+      "source_indices": [
+        17
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\25019准备\\01_产品来源原图\\17.jpg"
+      ],
+      "source_sha256": [
+        "4da2ccb7a935329bb4e565fc2b0ce9c4d3fb8136188640872673fe37dcf143d7"
+      ],
+      "source_dimensions": [
+        [
+          800,
+          800
+        ]
+      ],
+      "source_region_key": "M4",
+      "buyer_question": "鞋口与系带",
+      "prompt": "Use case: precise-object-edit. Edit ONLY this attached actual photographed Luqi25019 winter ankle boot image. Preserve exactly the pictured boot count, pose, camera angle, plain rounded toe, long/triangular double-stitched sidepanel and heel seam, black padded collar, round patterned laces/ringeyelets, plush tongue lining where visible, dark lugsole and steppedheel. No sidezip, rearpulltab, speedhooks, logos, recoloring, added boot or hidden reconstructed angle. Yellow actual wheat-yellow upper/black-yellow laces/gray edge; Black actual blackupper/blacklaces/grayedge; sourceKhaki actual gray-brown upper/brownlaces/tan-grayedge, do not turn it yellowtan. Preserve existing pants/ankles where onfoot; do not turn wornboot into emptycollar. Remove the decorative FIRE graphic completely and repair ONLY its background. No flame, snowflakes, thermometer, waterproof/fireproof/safety/thermal test, leather, rubber/EVA composition, non-slip/grip or medical claims. Requested English text may be placed outside boot; do not obscure boot. Preserve source aspect ratio and real visible geometry; do not make unknown fiber or sole composition claims. Keep BOTH actualYellow onfoot boots, originaljeans/ankles/scene/pose. Remove fire. TEXT: PADDED COLLAR; Ring eyelets and round laces.",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\25019准备\\05_AI候选\\M4.png",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-b2bbd3b0-e464-44dc-95c5-336663134363.png",
+      "output_sha256": "e2584dd84c17acd2e7940b53982d837585e2a5bc730c1f2169d0055e476d0014",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T17:25:53.245616+00:00",
+      "review_note": "Actually compared all twelve native roles to own25019 originals. Plain rounded forefoot, long triangular double-stitched sidepanel/heel seam, black paddedcollar, round ringeyelet laces, visible plush tonguelining, darklug/steppedheel retained. No sidezip/pulltab/speedhook or unknowncomposition inferred. Yellow actualwheat, Black actualblack, sourceKhaki actualgray-brown withbrownlaces. M1original01pair cleaned/fire removed; M2Black22/M3Khaki27/M4Yellow17/M5Yellow19 actualonfoot scene/pose. D1original02 foregroundpartial lace/forefoot side stitching, croppedheel but tiny collarpartial retained; D2original21 actualraised underside and standingpair preserved rather than newflattenedsole; dark/tan tread geometry retained. D3original06 foregroundcollar/tongue/plush-edge partial withleftbootedge retained, no fulltoe or hiddenlining assembly; sourceupscale notfineconstruction proof. D4original30Khaki actualonfootfront pair EU39-48. ThreecolorSKU03/11/12 originalsingle inclinedboots onfabric support preserved, no newview. Main/detail use different sourceframes;01/04repeat source only01 used. All firegraphics removed, no thermal/test/waterproof/grip/composition claims.12 productroles plus M6 realfactory/five company; no publicUI interaction claimed."
+    },
+    {
+      "role": "M5",
+      "source_indices": [
+        19
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\25019准备\\01_产品来源原图\\19.jpg"
+      ],
+      "source_sha256": [
+        "5e6ebca88980aafc52b15e489cbc5bc409b378f7cb2ecccba505a1309ea7524d"
+      ],
+      "source_dimensions": [
+        [
+          800,
+          800
+        ]
+      ],
+      "source_region_key": "M5",
+      "buyer_question": "采购询价",
+      "prompt": "Use case: precise-object-edit. Edit ONLY this attached actual photographed Luqi25019 winter ankle boot image. Preserve exactly the pictured boot count, pose, camera angle, plain rounded toe, long/triangular double-stitched sidepanel and heel seam, black padded collar, round patterned laces/ringeyelets, plush tongue lining where visible, dark lugsole and steppedheel. No sidezip, rearpulltab, speedhooks, logos, recoloring, added boot or hidden reconstructed angle. Yellow actual wheat-yellow upper/black-yellow laces/gray edge; Black actual blackupper/blacklaces/grayedge; sourceKhaki actual gray-brown upper/brownlaces/tan-grayedge, do not turn it yellowtan. Preserve existing pants/ankles where onfoot; do not turn wornboot into emptycollar. Remove the decorative FIRE graphic completely and repair ONLY its background. No flame, snowflakes, thermometer, waterproof/fireproof/safety/thermal test, leather, rubber/EVA composition, non-slip/grip or medical claims. Requested English text may be placed outside boot; do not obscure boot. Preserve source aspect ratio and real visible geometry; do not make unknown fiber or sole composition claims. Keep BOTH actualYellow onfoot boots, originalone foot raised pose andjeans/ankles/scene. Remove fire. TEXT: PLAN YOUR WHOLESALE ORDER; Color + EU size mix + Pair quantity + Destination.",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\25019准备\\05_AI候选\\M5.png",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-76603f34-dd35-4e7a-ab00-5b2b80753a16.png",
+      "output_sha256": "c99488f49944e5d5b08d6c53d6d5f99a1f648d82f5cb2f5c565a47b4fdbb3b94",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T17:25:53.245616+00:00",
+      "review_note": "Actually compared all twelve native roles to own25019 originals. Plain rounded forefoot, long triangular double-stitched sidepanel/heel seam, black paddedcollar, round ringeyelet laces, visible plush tonguelining, darklug/steppedheel retained. No sidezip/pulltab/speedhook or unknowncomposition inferred. Yellow actualwheat, Black actualblack, sourceKhaki actualgray-brown withbrownlaces. M1original01pair cleaned/fire removed; M2Black22/M3Khaki27/M4Yellow17/M5Yellow19 actualonfoot scene/pose. D1original02 foregroundpartial lace/forefoot side stitching, croppedheel but tiny collarpartial retained; D2original21 actualraised underside and standingpair preserved rather than newflattenedsole; dark/tan tread geometry retained. D3original06 foregroundcollar/tongue/plush-edge partial withleftbootedge retained, no fulltoe or hiddenlining assembly; sourceupscale notfineconstruction proof. D4original30Khaki actualonfootfront pair EU39-48. ThreecolorSKU03/11/12 originalsingle inclinedboots onfabric support preserved, no newview. Main/detail use different sourceframes;01/04repeat source only01 used. All firegraphics removed, no thermal/test/waterproof/grip/composition claims.12 productroles plus M6 realfactory/five company; no publicUI interaction claimed."
+    },
+    {
+      "role": "D1",
+      "source_indices": [
+        2
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\25019准备\\01_产品来源原图\\02.jpg"
+      ],
+      "source_sha256": [
+        "25bd62b5c242afe26b45c18b476903a9a5c1ddb75819a7cc1feadaeae4c80320"
+      ],
+      "source_dimensions": [
+        [
+          800,
+          800
+        ]
+      ],
+      "source_region_key": "D1",
+      "buyer_question": "缝线鞋面",
+      "prompt": "Use case: precise-object-edit. Edit ONLY this attached actual photographed Luqi25019 winter ankle boot image. Preserve exactly the pictured boot count, pose, camera angle, plain rounded toe, long/triangular double-stitched sidepanel and heel seam, black padded collar, round patterned laces/ringeyelets, plush tongue lining where visible, dark lugsole and steppedheel. No sidezip, rearpulltab, speedhooks, logos, recoloring, added boot or hidden reconstructed angle. Yellow actual wheat-yellow upper/black-yellow laces/gray edge; Black actual blackupper/blacklaces/grayedge; sourceKhaki actual gray-brown upper/brownlaces/tan-grayedge, do not turn it yellowtan. Preserve existing pants/ankles where onfoot; do not turn wornboot into emptycollar. Remove the decorative FIRE graphic completely and repair ONLY its background. No flame, snowflakes, thermometer, waterproof/fireproof/safety/thermal test, leather, rubber/EVA composition, non-slip/grip or medical claims. Requested English text may be placed outside boot; do not obscure boot. Preserve source aspect ratio and real visible geometry; do not make unknown fiber or sole composition claims. Select ONLY actualforeground Yellow boot forefoot/lacepanel and longside stitching; crop actual partialfront/lowerboot, excluding rearboot/collar/backheel. No new bootview, no invented grain/fibers. White cleanportraitdetailcard. TEXT: STITCHED PANELS; Actual photographed detail.",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\25019准备\\05_AI候选\\D1.png",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-b4f21cb1-f5e3-499c-b0e6-45924c0e5ef3.png",
+      "output_sha256": "6ed7c0251b77096688082cd971b547757c9f2f0a548e849f171af989a71f57f1",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T17:25:53.245616+00:00",
+      "review_note": "Actually compared all twelve native roles to own25019 originals. Plain rounded forefoot, long triangular double-stitched sidepanel/heel seam, black paddedcollar, round ringeyelet laces, visible plush tonguelining, darklug/steppedheel retained. No sidezip/pulltab/speedhook or unknowncomposition inferred. Yellow actualwheat, Black actualblack, sourceKhaki actualgray-brown withbrownlaces. M1original01pair cleaned/fire removed; M2Black22/M3Khaki27/M4Yellow17/M5Yellow19 actualonfoot scene/pose. D1original02 foregroundpartial lace/forefoot side stitching, croppedheel but tiny collarpartial retained; D2original21 actualraised underside and standingpair preserved rather than newflattenedsole; dark/tan tread geometry retained. D3original06 foregroundcollar/tongue/plush-edge partial withleftbootedge retained, no fulltoe or hiddenlining assembly; sourceupscale notfineconstruction proof. D4original30Khaki actualonfootfront pair EU39-48. ThreecolorSKU03/11/12 originalsingle inclinedboots onfabric support preserved, no newview. Main/detail use different sourceframes;01/04repeat source only01 used. All firegraphics removed, no thermal/test/waterproof/grip/composition claims.12 productroles plus M6 realfactory/five company; no publicUI interaction claimed."
+    },
+    {
+      "role": "D2",
+      "source_indices": [
+        21
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\25019准备\\01_产品来源原图\\21.jpg"
+      ],
+      "source_sha256": [
+        "557784850a8b782cb1402ae60f79c7023b4d644102b0368e315889fa43267beb"
+      ],
+      "source_dimensions": [
+        [
+          800,
+          800
+        ]
+      ],
+      "source_region_key": "D2",
+      "buyer_question": "底纹细节",
+      "prompt": "Use case: precise-object-edit. Edit ONLY this attached actual photographed Luqi25019 winter ankle boot image. Preserve exactly the pictured boot count, pose, camera angle, plain rounded toe, long/triangular double-stitched sidepanel and heel seam, black padded collar, round patterned laces/ringeyelets, plush tongue lining where visible, dark lugsole and steppedheel. No sidezip, rearpulltab, speedhooks, logos, recoloring, added boot or hidden reconstructed angle. Yellow actual wheat-yellow upper/black-yellow laces/gray edge; Black actual blackupper/blacklaces/grayedge; sourceKhaki actual gray-brown upper/brownlaces/tan-grayedge, do not turn it yellowtan. Preserve existing pants/ankles where onfoot; do not turn wornboot into emptycollar. Remove the decorative FIRE graphic completely and repair ONLY its background. No flame, snowflakes, thermometer, waterproof/fireproof/safety/thermal test, leather, rubber/EVA composition, non-slip/grip or medical claims. Requested English text may be placed outside boot; do not obscure boot. Preserve source aspect ratio and real visible geometry; do not make unknown fiber or sole composition claims. Select ONLY actual raised Yellow boot underside region fromright side photograph; retain exact darklug tread/tan segmentedpatch geometry and originalpartialcrop if bottomtip goesoutside. No flattened rotation, no fullsole newview or gripclaim. Exclude leftstandingboot/fire. TEXT: LUG SOLE DETAIL; Actual photographed underside.",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\25019准备\\05_AI候选\\D2.png",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-49458989-d5f2-49c2-b2bb-b6269375f83e.png",
+      "output_sha256": "4b2eabcfb69b37e06b0208517ee9c5dadf9b0772878ea3df2f035526b931b8a9",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T17:25:53.245616+00:00",
+      "review_note": "Actually compared all twelve native roles to own25019 originals. Plain rounded forefoot, long triangular double-stitched sidepanel/heel seam, black paddedcollar, round ringeyelet laces, visible plush tonguelining, darklug/steppedheel retained. No sidezip/pulltab/speedhook or unknowncomposition inferred. Yellow actualwheat, Black actualblack, sourceKhaki actualgray-brown withbrownlaces. M1original01pair cleaned/fire removed; M2Black22/M3Khaki27/M4Yellow17/M5Yellow19 actualonfoot scene/pose. D1original02 foregroundpartial lace/forefoot side stitching, croppedheel but tiny collarpartial retained; D2original21 actualraised underside and standingpair preserved rather than newflattenedsole; dark/tan tread geometry retained. D3original06 foregroundcollar/tongue/plush-edge partial withleftbootedge retained, no fulltoe or hiddenlining assembly; sourceupscale notfineconstruction proof. D4original30Khaki actualonfootfront pair EU39-48. ThreecolorSKU03/11/12 originalsingle inclinedboots onfabric support preserved, no newview. Main/detail use different sourceframes;01/04repeat source only01 used. All firegraphics removed, no thermal/test/waterproof/grip/composition claims.12 productroles plus M6 realfactory/five company; no publicUI interaction claimed."
+    },
+    {
+      "role": "D3",
+      "source_indices": [
+        6
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\25019准备\\01_产品来源原图\\06.jpg"
+      ],
+      "source_sha256": [
+        "65f135215fad993d79de0fa644005356f1907005fc67fd3e3c5ef3656ad5588c"
+      ],
+      "source_dimensions": [
+        [
+          800,
+          800
+        ]
+      ],
+      "source_region_key": "D3",
+      "buyer_question": "鞋口与内里",
+      "prompt": "Use case: precise-object-edit. Edit ONLY this attached actual photographed Luqi25019 winter ankle boot image. Preserve exactly the pictured boot count, pose, camera angle, plain rounded toe, long/triangular double-stitched sidepanel and heel seam, black padded collar, round patterned laces/ringeyelets, plush tongue lining where visible, dark lugsole and steppedheel. No sidezip, rearpulltab, speedhooks, logos, recoloring, added boot or hidden reconstructed angle. Yellow actual wheat-yellow upper/black-yellow laces/gray edge; Black actual blackupper/blacklaces/grayedge; sourceKhaki actual gray-brown upper/brownlaces/tan-grayedge, do not turn it yellowtan. Preserve existing pants/ankles where onfoot; do not turn wornboot into emptycollar. Remove the decorative FIRE graphic completely and repair ONLY its background. No flame, snowflakes, thermometer, waterproof/fireproof/safety/thermal test, leather, rubber/EVA composition, non-slip/grip or medical claims. Requested English text may be placed outside boot; do not obscure boot. Preserve source aspect ratio and real visible geometry; do not make unknown fiber or sole composition claims. Select ONLY source06foreground RIGHT Yellow boot uppercollar/tongue/lace region; cropbelow midlacing so foreground roundedtoe/lowerboot notshown. Keep realblackpaddedcollar/whiteplush edge andactualtongue crop geometry, no extra unseen lining or material diagram. Exclude leftboot/fire. TEXT: COLLAR AND LINING; Visible photographed detail.",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\25019准备\\05_AI候选\\D3.png",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-3adcc0da-6064-4fc0-b341-45e62c9900ee.png",
+      "output_sha256": "90c392a5d3beffbccdd0adf7bbff7865faf2d586814eec459a93d6e295419b7c",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T17:25:53.245616+00:00",
+      "review_note": "Actually compared all twelve native roles to own25019 originals. Plain rounded forefoot, long triangular double-stitched sidepanel/heel seam, black paddedcollar, round ringeyelet laces, visible plush tonguelining, darklug/steppedheel retained. No sidezip/pulltab/speedhook or unknowncomposition inferred. Yellow actualwheat, Black actualblack, sourceKhaki actualgray-brown withbrownlaces. M1original01pair cleaned/fire removed; M2Black22/M3Khaki27/M4Yellow17/M5Yellow19 actualonfoot scene/pose. D1original02 foregroundpartial lace/forefoot side stitching, croppedheel but tiny collarpartial retained; D2original21 actualraised underside and standingpair preserved rather than newflattenedsole; dark/tan tread geometry retained. D3original06 foregroundcollar/tongue/plush-edge partial withleftbootedge retained, no fulltoe or hiddenlining assembly; sourceupscale notfineconstruction proof. D4original30Khaki actualonfootfront pair EU39-48. ThreecolorSKU03/11/12 originalsingle inclinedboots onfabric support preserved, no newview. Main/detail use different sourceframes;01/04repeat source only01 used. All firegraphics removed, no thermal/test/waterproof/grip/composition claims.12 productroles plus M6 realfactory/five company; no publicUI interaction claimed."
+    },
+    {
+      "role": "D4",
+      "source_indices": [
+        30
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\25019准备\\01_产品来源原图\\30.jpg"
+      ],
+      "source_sha256": [
+        "eb2c6d51299969e4c0704b8aea28ec873d8646f05935ffa1a50ed329d88fb899"
+      ],
+      "source_dimensions": [
+        [
+          800,
+          800
+        ]
+      ],
+      "source_region_key": "D4",
+      "buyer_question": "EU尺码",
+      "prompt": "Use case: precise-object-edit. Edit ONLY this attached actual photographed Luqi25019 winter ankle boot image. Preserve exactly the pictured boot count, pose, camera angle, plain rounded toe, long/triangular double-stitched sidepanel and heel seam, black padded collar, round patterned laces/ringeyelets, plush tongue lining where visible, dark lugsole and steppedheel. No sidezip, rearpulltab, speedhooks, logos, recoloring, added boot or hidden reconstructed angle. Yellow actual wheat-yellow upper/black-yellow laces/gray edge; Black actual blackupper/blacklaces/grayedge; sourceKhaki actual gray-brown upper/brownlaces/tan-grayedge, do not turn it yellowtan. Preserve existing pants/ankles where onfoot; do not turn wornboot into emptycollar. Remove the decorative FIRE graphic completely and repair ONLY its background. No flame, snowflakes, thermometer, waterproof/fireproof/safety/thermal test, leather, rubber/EVA composition, non-slip/grip or medical claims. Requested English text may be placed outside boot; do not obscure boot. Preserve source aspect ratio and real visible geometry; do not make unknown fiber or sole composition claims. Keep BOTH actualKhaki gray-brown frontonfoot boots andactualjeans/ankles/scene. Removefire. TEXT: EU 39-48; Send your color-size mix for order confirmation.",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\25019准备\\05_AI候选\\D4.png",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-c70290b3-5f3b-425a-80c0-bdac1fe304b9.png",
+      "output_sha256": "a24cd8f2cb1ab863994e834220c23bcd14d36274e975c1bf8cb03f9a9d66591a",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T17:25:53.245616+00:00",
+      "review_note": "Actually compared all twelve native roles to own25019 originals. Plain rounded forefoot, long triangular double-stitched sidepanel/heel seam, black paddedcollar, round ringeyelet laces, visible plush tonguelining, darklug/steppedheel retained. No sidezip/pulltab/speedhook or unknowncomposition inferred. Yellow actualwheat, Black actualblack, sourceKhaki actualgray-brown withbrownlaces. M1original01pair cleaned/fire removed; M2Black22/M3Khaki27/M4Yellow17/M5Yellow19 actualonfoot scene/pose. D1original02 foregroundpartial lace/forefoot side stitching, croppedheel but tiny collarpartial retained; D2original21 actualraised underside and standingpair preserved rather than newflattenedsole; dark/tan tread geometry retained. D3original06 foregroundcollar/tongue/plush-edge partial withleftbootedge retained, no fulltoe or hiddenlining assembly; sourceupscale notfineconstruction proof. D4original30Khaki actualonfootfront pair EU39-48. ThreecolorSKU03/11/12 originalsingle inclinedboots onfabric support preserved, no newview. Main/detail use different sourceframes;01/04repeat source only01 used. All firegraphics removed, no thermal/test/waterproof/grip/composition claims.12 productroles plus M6 realfactory/five company; no publicUI interaction claimed."
+    },
+    {
+      "role": "SKU_Yellow",
+      "source_indices": [
+        3
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\25019准备\\01_产品来源原图\\03.jpg"
+      ],
+      "source_sha256": [
+        "ba2b2f22b04f98ed47953096c895a45cb880da5f307d3b46ea1698b29beabcf3"
+      ],
+      "source_dimensions": [
+        [
+          800,
+          800
+        ]
+      ],
+      "source_region_key": "SKU_Yellow",
+      "buyer_question": "黄色SKU",
+      "prompt": "Use case: precise-object-edit. Edit ONLY this attached actual photographed Luqi25019 winter ankle boot image. Preserve exactly the pictured boot count, pose, camera angle, plain rounded toe, long/triangular double-stitched sidepanel and heel seam, black padded collar, round patterned laces/ringeyelets, plush tongue lining where visible, dark lugsole and steppedheel. No sidezip, rearpulltab, speedhooks, logos, recoloring, added boot or hidden reconstructed angle. Yellow actual wheat-yellow upper/black-yellow laces/gray edge; Black actual blackupper/blacklaces/grayedge; sourceKhaki actual gray-brown upper/brownlaces/tan-grayedge, do not turn it yellowtan. Preserve existing pants/ankles where onfoot; do not turn wornboot into emptycollar. Remove the decorative FIRE graphic completely and repair ONLY its background. No flame, snowflakes, thermometer, waterproof/fireproof/safety/thermal test, leather, rubber/EVA composition, non-slip/grip or medical claims. Requested English text may be placed outside boot; do not obscure boot. Preserve source aspect ratio and real visible geometry; do not make unknown fiber or sole composition claims. Keep original SINGLE Yellow inclinedboot onfabric support, originalorientation/contact andconstruction. Removefire. Keep originalneutralfabricbackdrop; no text, no newprofile/emptycollar.",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\25019准备\\05_AI候选\\SKU_Yellow.png",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-15007f7c-1219-4ceb-b988-ea02af3be5bd.png",
+      "output_sha256": "ed367a0f34a4f8745fecd780a30529f9ee963d435d2f161289af6f54f8b0b59a",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T17:25:53.245616+00:00",
+      "review_note": "Actually compared all twelve native roles to own25019 originals. Plain rounded forefoot, long triangular double-stitched sidepanel/heel seam, black paddedcollar, round ringeyelet laces, visible plush tonguelining, darklug/steppedheel retained. No sidezip/pulltab/speedhook or unknowncomposition inferred. Yellow actualwheat, Black actualblack, sourceKhaki actualgray-brown withbrownlaces. M1original01pair cleaned/fire removed; M2Black22/M3Khaki27/M4Yellow17/M5Yellow19 actualonfoot scene/pose. D1original02 foregroundpartial lace/forefoot side stitching, croppedheel but tiny collarpartial retained; D2original21 actualraised underside and standingpair preserved rather than newflattenedsole; dark/tan tread geometry retained. D3original06 foregroundcollar/tongue/plush-edge partial withleftbootedge retained, no fulltoe or hiddenlining assembly; sourceupscale notfineconstruction proof. D4original30Khaki actualonfootfront pair EU39-48. ThreecolorSKU03/11/12 originalsingle inclinedboots onfabric support preserved, no newview. Main/detail use different sourceframes;01/04repeat source only01 used. All firegraphics removed, no thermal/test/waterproof/grip/composition claims.12 productroles plus M6 realfactory/five company; no publicUI interaction claimed."
+    },
+    {
+      "role": "SKU_Black",
+      "source_indices": [
+        11
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\25019准备\\01_产品来源原图\\11.jpg"
+      ],
+      "source_sha256": [
+        "1893ab574f4bd4f2f86015d234d43cc78b5b48b4cde73ae41bc01fe15ab053e2"
+      ],
+      "source_dimensions": [
+        [
+          800,
+          800
+        ]
+      ],
+      "source_region_key": "SKU_Black",
+      "buyer_question": "黑色SKU",
+      "prompt": "Use case: precise-object-edit. Edit ONLY this attached actual photographed Luqi25019 winter ankle boot image. Preserve exactly the pictured boot count, pose, camera angle, plain rounded toe, long/triangular double-stitched sidepanel and heel seam, black padded collar, round patterned laces/ringeyelets, plush tongue lining where visible, dark lugsole and steppedheel. No sidezip, rearpulltab, speedhooks, logos, recoloring, added boot or hidden reconstructed angle. Yellow actual wheat-yellow upper/black-yellow laces/gray edge; Black actual blackupper/blacklaces/grayedge; sourceKhaki actual gray-brown upper/brownlaces/tan-grayedge, do not turn it yellowtan. Preserve existing pants/ankles where onfoot; do not turn wornboot into emptycollar. Remove the decorative FIRE graphic completely and repair ONLY its background. No flame, snowflakes, thermometer, waterproof/fireproof/safety/thermal test, leather, rubber/EVA composition, non-slip/grip or medical claims. Requested English text may be placed outside boot; do not obscure boot. Preserve source aspect ratio and real visible geometry; do not make unknown fiber or sole composition claims. Keep original SINGLE Black inclinedboot onfabric support, originalorientation/contact andconstruction. Removefire. Keep originalneutralfabricbackdrop; no text.",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\25019准备\\05_AI候选\\SKU_Black.png",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-d69c025d-a84e-4381-b801-4ab9b8669b9f.png",
+      "output_sha256": "0e718bbc5c072190631eb706e35ab925be772de94c35776c5d940eda00e49ba9",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T17:25:53.245616+00:00",
+      "review_note": "Actually compared all twelve native roles to own25019 originals. Plain rounded forefoot, long triangular double-stitched sidepanel/heel seam, black paddedcollar, round ringeyelet laces, visible plush tonguelining, darklug/steppedheel retained. No sidezip/pulltab/speedhook or unknowncomposition inferred. Yellow actualwheat, Black actualblack, sourceKhaki actualgray-brown withbrownlaces. M1original01pair cleaned/fire removed; M2Black22/M3Khaki27/M4Yellow17/M5Yellow19 actualonfoot scene/pose. D1original02 foregroundpartial lace/forefoot side stitching, croppedheel but tiny collarpartial retained; D2original21 actualraised underside and standingpair preserved rather than newflattenedsole; dark/tan tread geometry retained. D3original06 foregroundcollar/tongue/plush-edge partial withleftbootedge retained, no fulltoe or hiddenlining assembly; sourceupscale notfineconstruction proof. D4original30Khaki actualonfootfront pair EU39-48. ThreecolorSKU03/11/12 originalsingle inclinedboots onfabric support preserved, no newview. Main/detail use different sourceframes;01/04repeat source only01 used. All firegraphics removed, no thermal/test/waterproof/grip/composition claims.12 productroles plus M6 realfactory/five company; no publicUI interaction claimed."
+    },
+    {
+      "role": "SKU_Khaki",
+      "source_indices": [
+        12
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\25019准备\\01_产品来源原图\\12.jpg"
+      ],
+      "source_sha256": [
+        "bdbbdd218e8340501d3611ce73d1d6328774187e4d3ad6f1824e9f8adfc6161d"
+      ],
+      "source_dimensions": [
+        [
+          800,
+          800
+        ]
+      ],
+      "source_region_key": "SKU_Khaki",
+      "buyer_question": "卡其SKU",
+      "prompt": "Use case: precise-object-edit. Edit ONLY this attached actual photographed Luqi25019 winter ankle boot image. Preserve exactly the pictured boot count, pose, camera angle, plain rounded toe, long/triangular double-stitched sidepanel and heel seam, black padded collar, round patterned laces/ringeyelets, plush tongue lining where visible, dark lugsole and steppedheel. No sidezip, rearpulltab, speedhooks, logos, recoloring, added boot or hidden reconstructed angle. Yellow actual wheat-yellow upper/black-yellow laces/gray edge; Black actual blackupper/blacklaces/grayedge; sourceKhaki actual gray-brown upper/brownlaces/tan-grayedge, do not turn it yellowtan. Preserve existing pants/ankles where onfoot; do not turn wornboot into emptycollar. Remove the decorative FIRE graphic completely and repair ONLY its background. No flame, snowflakes, thermometer, waterproof/fireproof/safety/thermal test, leather, rubber/EVA composition, non-slip/grip or medical claims. Requested English text may be placed outside boot; do not obscure boot. Preserve source aspect ratio and real visible geometry; do not make unknown fiber or sole composition claims. Keep original SINGLE sourceKhaki gray-brown inclinedboot onfabric support, originalorientation/contact andconstruction. Removefire. Keep originalneutralfabricbackdrop; no text.",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\25019准备\\05_AI候选\\SKU_Khaki.png",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-dac1304d-9d22-4e52-9e38-b3777fb40298.png",
+      "output_sha256": "5eec6225931db2f8ae3a2c60ff3d47092ab8239ee834c9414d37f761abd4270a",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T17:25:53.245616+00:00",
+      "review_note": "Actually compared all twelve native roles to own25019 originals. Plain rounded forefoot, long triangular double-stitched sidepanel/heel seam, black paddedcollar, round ringeyelet laces, visible plush tonguelining, darklug/steppedheel retained. No sidezip/pulltab/speedhook or unknowncomposition inferred. Yellow actualwheat, Black actualblack, sourceKhaki actualgray-brown withbrownlaces. M1original01pair cleaned/fire removed; M2Black22/M3Khaki27/M4Yellow17/M5Yellow19 actualonfoot scene/pose. D1original02 foregroundpartial lace/forefoot side stitching, croppedheel but tiny collarpartial retained; D2original21 actualraised underside and standingpair preserved rather than newflattenedsole; dark/tan tread geometry retained. D3original06 foregroundcollar/tongue/plush-edge partial withleftbootedge retained, no fulltoe or hiddenlining assembly; sourceupscale notfineconstruction proof. D4original30Khaki actualonfootfront pair EU39-48. ThreecolorSKU03/11/12 originalsingle inclinedboots onfabric support preserved, no newview. Main/detail use different sourceframes;01/04repeat source only01 used. All firegraphics removed, no thermal/test/waterproof/grip/composition claims.12 productroles plus M6 realfactory/five company; no publicUI interaction claimed."
+    }
+  ],
+  "M6": {
+    "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎新品_2026-10-07\\图片修复\\F.png",
+    "bank_url": "https://sc04.alicdn.com/kf/S6c8cb1d46d8c4b018cf07f5cab50c1adi/286385890/S6c8cb1d46d8c4b018cf07f5cab50c1adi.png",
+    "file_id": "30149993323"
+  },
+  "company": [
+    {
+      "role": "C1",
+      "usage": "ordinary_HTML_company_context",
+      "official_url": "https://sc04.alicdn.com/kf/Ha8c1682092424e778eadf945763e79daU/286385890/Ha8c1682092424e778eadf945763e79daU.jpg",
+      "file_id": "33355885480",
+      "local_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\266_quality_audit\\originals\\C01_factory_profile.jpg",
+      "sha256": "23a34c8e425ae286d190ac1eb587c93e9a87421fdf490ec48f260e53e316149c",
+      "local_hash_verified": true,
+      "pixel_edit": false
+    },
+    {
+      "role": "C2",
+      "usage": "ordinary_HTML_company_context",
+      "official_url": "https://sc04.alicdn.com/kf/H496f7579171f4370a1d47c3adf30001bK/286385890/H496f7579171f4370a1d47c3adf30001bK.jpg",
+      "file_id": "33358392283",
+      "local_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\266_quality_audit\\originals\\C02_oem_odm_workflow.jpg",
+      "sha256": "66624253f1d95ec68e060d792f13c61943c86f7d61e763167a0a2eb1146300f5",
+      "local_hash_verified": true,
+      "pixel_edit": false
+    },
+    {
+      "role": "C3",
+      "usage": "ordinary_HTML_company_context",
+      "official_url": "https://sc04.alicdn.com/kf/H36e700f5c3ee447a80c035d8ae7521d9a/286385890/H36e700f5c3ee447a80c035d8ae7521d9a.jpg",
+      "file_id": "33355813301",
+      "local_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\266_quality_audit\\originals\\C03_production_process.jpg",
+      "sha256": "3ae00d6398224dd7021ed2a266584bccb77b741b31fa9c72ca8ad66ab443f683",
+      "local_hash_verified": true,
+      "pixel_edit": false
+    },
+    {
+      "role": "C4",
+      "usage": "ordinary_HTML_company_context",
+      "official_url": "https://sc04.alicdn.com/kf/H9f32c7ecea0f4d25bc5ddc9cd04c1e5dK/286385890/H9f32c7ecea0f4d25bc5ddc9cd04c1e5dK.jpg",
+      "file_id": "33358345636",
+      "local_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\266_quality_audit\\originals\\C04_quality_control.jpg",
+      "sha256": "f32d682a7055a3e44f91eb074b678507beca63967da5565de8997f582a651bf5",
+      "local_hash_verified": true,
+      "pixel_edit": false
+    },
+    {
+      "role": "C5",
+      "usage": "ordinary_HTML_company_context",
+      "official_url": "https://sc04.alicdn.com/kf/H5f71c3cfb4064b51bb458d0a786cb402R/286385890/H5f71c3cfb4064b51bb458d0a786cb402R.jpg",
+      "file_id": "33358440083",
+      "local_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\266_quality_audit\\originals\\C05_packing_inquiry.jpg",
+      "sha256": "d0f3916d920a9ec46fd822317a9cd3c684b6b7d60631208475fa2be138d05bc2",
+      "local_hash_verified": true,
+      "pixel_edit": false
+    }
+  ],
+  "excluded_candidates": [],
+  "complete_set_visual_review_at": "2026-10-10T17:28:50.159833+00:00",
+  "complete_set_note": "Actually compared all twelve native roles to own25019 originals. Plain rounded forefoot, long triangular double-stitched sidepanel/heel seam, black paddedcollar, round ringeyelet laces, visible plush tonguelining, darklug/steppedheel retained. No sidezip/pulltab/speedhook or unknowncomposition inferred. Yellow actualwheat, Black actualblack, sourceKhaki actualgray-brown withbrownlaces. M1original01pair cleaned/fire removed; M2Black22/M3Khaki27/M4Yellow17/M5Yellow19 actualonfoot scene/pose. D1original02 foregroundpartial lace/forefoot side stitching, croppedheel but tiny collarpartial retained; D2original21 actualraised underside and standingpair preserved rather than newflattenedsole; dark/tan tread geometry retained. D3original06 foregroundcollar/tongue/plush-edge partial withleftbootedge retained, no fulltoe or hiddenlining assembly; sourceupscale notfineconstruction proof. D4original30Khaki actualonfootfront pair EU39-48. ThreecolorSKU03/11/12 originalsingle inclinedboots onfabric support preserved, no newview. Main/detail use different sourceframes;01/04repeat source only01 used. All firegraphics removed, no thermal/test/waterproof/grip/composition claims.12 productroles plus M6 realfactory/five company; no publicUI interaction claimed."
+}

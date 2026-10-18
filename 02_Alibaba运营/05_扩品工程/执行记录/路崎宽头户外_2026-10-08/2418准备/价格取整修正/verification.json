@@ -1,0 +1,73 @@
+{
+  "id": "1601979461922",
+  "at": "2026-10-14T17:10:09.201957+00:00",
+  "state": "FORMAL_FIELDS_SCORE_PASS",
+  "full_current_verification": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/verification.json",
+  "protected_formal_product_except_exact_prices": true,
+  "all_other_schema_fields_preserved": {
+    "infos": true,
+    "productFeature": true,
+    "catId": true,
+    "icbuCatProp": true,
+    "saleProp": true,
+    "sku": true,
+    "sampleSku": true,
+    "productTitle": true,
+    "inventory": true,
+    "scImages": true,
+    "imageVideo": true,
+    "detailVideo": true,
+    "productKeywords": true,
+    "pkgMeasure": true,
+    "pkgWeight": true,
+    "ApiPostLevelAttrAdapter": true,
+    "productCertificate": true,
+    "boxPackaging": true,
+    "ladderPeriod": true,
+    "priceUnit": true,
+    "platformLogisticsServices": true,
+    "shippingTemplate": true,
+    "newCustomizedServices": true,
+    "lightCustomizedServices": true,
+    "productGroup": true,
+    "customMoreProperty": true,
+    "fob": true,
+    "saleType": true,
+    "batchNum": true,
+    "scPrice": true,
+    "minOrderQuantity": true,
+    "productDescType": true,
+    "superText": true,
+    "detailImage": true,
+    "textDesc": true,
+    "companyImage": true,
+    "companyDesc": true,
+    "companyFaqDesc": true,
+    "productQuality": true,
+    "marketSample": true,
+    "marketSamplingQuantity": true,
+    "marketSamplingPrice": true,
+    "multilangInfo": true,
+    "logisticsProperty": true,
+    "logisticsSku": true,
+    "supportLogisticsSku": true,
+    "semiManagedPeriod": true,
+    "tariffsHsCode": true,
+    "designAndSampleService": true
+  },
+  "actual_score": "5.00",
+  "tiers": [
+    [
+      2,
+      "17.51"
+    ],
+    [
+      50,
+      "16.34"
+    ],
+    [
+      100,
+      "15.18"
+    ]
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "at": "2026-10-15T14:08:08.327450+00:00",
+  "state": "RECOVERED_NORMAL_NATIVE_VERIFIED_TLS",
+  "scope": "Actual bank session54812 D3 failed in initialTLS handshake. Actual automatic exception-chain classifier recorded HTTPConnection.send/connect and ssl.do_handshake, business_request_sent false. Saved7positiveuploads preserved; onlyunsentD3 andremainingD4 sent normally by existing official-client native_http_json. Bothreturned positiveofficialbankURLs/fileIDs. No trust/proxy/security/permission changes.",
+  "normal_transport": "Installed curl8.5.0 Schannel, sameofficialopen-api.alibaba.com endpoint, defaultTLSvalidation",
+  "positive_recovery_roles": {
+    "D3": {
+      "url": "https://sc04.alicdn.com/kf/H5bad8c3370dd48b1bb21da0329cfb691w/286385890/H5bad8c3370dd48b1bb21da0329cfb691w.jpg",
+      "file_id": "33862332758",
+      "sha256": "b04b13a2499fa0418db70074e9b6e7b4861c1f9cd9ffa2f4f75fdd8c7c5bad82",
+      "at": "2026-10-15T13:48:31.708940+00:00"
+    },
+    "D4": {
+      "url": "https://sc04.alicdn.com/kf/Hecec06e923b94ae3b5c8526e4aa874a9Y/286385890/Hecec06e923b94ae3b5c8526e4aa874a9Y.png",
+      "file_id": "33862500080",
+      "sha256": "6fc7b4748bbf3fd64c8179b5cea75366f8e001bd0f9496ce3ca24befd7b123a3",
+      "at": "2026-10-15T13:48:37.252586+00:00"
+    }
+  },
+  "unknown_after_request_policy": "No automatic replay; reconcile formalbusinessstate first."
+}

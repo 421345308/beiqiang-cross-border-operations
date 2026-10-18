@@ -1,0 +1,12 @@
+{
+  "request": {
+    "param_product_top_publish_request": {
+      "product_id": 12000003229472,
+      "cat_id": 201334413,
+      "language": "en_US",
+      "xml": "<itemSchema><field id=\"icbuCatProp\" name=\"Product feature\" type=\"complex\"><complex-value><field id=\"p-200000388\" name=\"Closure Type\" type=\"singleCheck\"><value /></field><field id=\"p-191290430\" name=\"Lining Material\" type=\"multiCheck\"><values><value inputValue=\"Other\">4</value></values></field><field id=\"p-210190305\" name=\"Pattern\" type=\"multiCheck\"><values><value inputValue=\"Mixed Colors\">411894439</value></values></field><field id=\"p-1\" name=\"Place of Origin\" type=\"singleCheck\"><value inputValue=\"China\">100000458</value></field><field id=\"p-3\" name=\"Model Number\" type=\"input\"><value inputValue=\"DZ14546082-A\">-2</value></field><field id=\"p-20700\" name=\"Midsole Material\" type=\"multiCheck\"><values><value inputValue=\"Other\">4</value></values></field><field id=\"p-210194982\" name=\"Upper Material\" type=\"singleCheck\"><value inputValue=\"Mesh\">6821988</value></field><field id=\"p-210200060\" name=\"Feature\" type=\"multiCheck\"><values><value inputValue=\"Fashion Trend\">30925155</value></values></field><field id=\"p-191288212\" name=\"Season\" type=\"multiCheck\"><values><value inputValue=\"All Seasons\">27034893</value></values></field><field id=\"p-191290426\" name=\"Outsole Material\" type=\"multiCheck\"><values><value inputValue=\"Other\">4</value></values></field><field id=\"p-200000486\" name=\"Toe Style\" type=\"multiCheck\"><values><value inputValue=\"Round Toe\">556500746</value></values></field><field id=\"p-191288243\" name=\"Style\" type=\"multiCheck\"><values><value inputValue=\"Sporty\">3481972</value><value inputValue=\"Athletic Sneakers\">-3</value></values></field></complex-value></field></itemSchema>"
+    }
+  },
+  "xml_sha256": "9cf5fdf7c282cae507849dd4799e8f8dfde8e876f2ab2e21ba2c9106423a47de",
+  "reason": "Omitting the optional Closure Type retained old Lace-up in formal get. Explicit empty value clears that optional stale enum; actual Dial Closure remains in title, source-specific highlight and Shoe Profile. Other current category attributes copied literally."
+}

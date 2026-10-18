@@ -1,0 +1,40 @@
+{
+  "updated": "2026-10-16",
+  "jobs": [
+    {
+      "job_id": "ZX9507-V05",
+      "project": "../ZX9507_抖店生活化带货/PROJECT.md",
+      "stage": "USER_ACCEPTED_DIRECTION",
+      "product": "ZX9507",
+      "learning": "Young male voice, conversational wording and low BGM accepted as current direction; subjective naturalness remains a quality target."
+    },
+    {
+      "job_id": "ZX9507-E01",
+      "project": "../ZX9507_抖店生活化带货/PROJECT.md",
+      "manifest": "../ZX9507_抖店生活化带货/edit/product_first/E01/job.json",
+      "stage": "EDIT_PREVIEW_READY_DETAIL_FIDELITY_PENDING",
+      "product": "ZX9507",
+      "change": "Detail-first shot order and product still closer.",
+      "qa": "../ZX9507_抖店生活化带货/edit/product_first/E01/QA_REPORT.md",
+      "preview": "../ZX9507_抖店生活化带货/edit/product_first/E01/ZX9507_E01_细节先行_15秒_v2.mp4"
+    },
+    {
+      "job_id": "ZX9002-V01",
+      "project": "../ZX9002_抖店生活化带货/PROJECT.md",
+      "stage": "GENERATED_COMPOSED_PREVIEW_READY",
+      "product": "ZX9002",
+      "change": "Visible cuff-styling action, grey/black detail, natural steps and relevant outfit-choice question.",
+      "preview": "../ZX9002_抖店生活化带货/edit/V01/ZX9002_V01_裤脚露鞋型_青年分享.mp4",
+      "qa": "../ZX9002_抖店生活化带货/edit/V01/QA_REPORT.md",
+      "published": false
+    }
+  ],
+  "metrics": {
+    "published_video_count": 0,
+    "view_count": null,
+    "product_clicks": null,
+    "orders": null,
+    "refunds": null,
+    "note": "No published-performance evidence in this production task."
+  }
+}

@@ -1,0 +1,2261 @@
+{
+  "product_id": "1601970622736",
+  "editor_observation_id": "725_20261004_notice_sha256:1427efe97b185ac7c7d72d4a4b956162937425ffe1d3621e024a6a3d724b43de",
+  "versioned_content": {
+    "status": "product_summary_verified",
+    "target": "product_summary",
+    "product_id": "1601970622736",
+    "category_id": "201334413",
+    "editor_observation_id": "725_20261004_notice_sha256:1427efe97b185ac7c7d72d4a4b956162937425ffe1d3621e024a6a3d724b43de",
+    "legacy_keywords": [
+      ""
+    ],
+    "keyword_write_verified": false,
+    "replacement_closeout_verified": false,
+    "legacy_field_status": "LEGACY_FIELD_EMPTY_UI_MIGRATED",
+    "content_complete": true,
+    "schema_field": "textDesc",
+    "formal_field": "product.struct_detail.product_summary",
+    "summary_characters": 615,
+    "constraints": [],
+    "limits": "This exact observed edit version and product only; no keyword restoration, global support, source truth, score or old-product retirement inferred."
+  },
+  "formal_verification": {
+    "content_status": "formal_fields_verified",
+    "sku_verification": {
+      "status": "verified",
+      "bindings": {
+        "BQ-CS063C-C1-36": "109769191690",
+        "BQ-CS063C-C1-37": "109769191691",
+        "BQ-CS063C-C1-38": "109769191692",
+        "BQ-CS063C-C1-39": "109769191693",
+        "BQ-CS063C-C1-40": "109769191694",
+        "BQ-CS063C-C1-41": "109769191695",
+        "BQ-CS063C-C1-42": "109769191696",
+        "BQ-CS063C-C1-43": "109769191697",
+        "BQ-CS063C-C1-44": "109769191698",
+        "BQ-CS063C-C1-45": "109769191699",
+        "BQ-CS063C-C2-36": "109769191700",
+        "BQ-CS063C-C2-37": "109769191701",
+        "BQ-CS063C-C2-38": "109769191702",
+        "BQ-CS063C-C2-39": "109769191703",
+        "BQ-CS063C-C2-40": "109769191704",
+        "BQ-CS063C-C2-41": "109769191705",
+        "BQ-CS063C-C2-42": "109769191706",
+        "BQ-CS063C-C2-43": "109769191707",
+        "BQ-CS063C-C2-44": "109769191708",
+        "BQ-CS063C-C2-45": "109769191709",
+        "BQ-CS063C-C3-36": "109769191710",
+        "BQ-CS063C-C3-37": "109769191711",
+        "BQ-CS063C-C3-38": "109769191712",
+        "BQ-CS063C-C3-39": "109769191713",
+        "BQ-CS063C-C3-40": "109769191714",
+        "BQ-CS063C-C3-41": "109769191715",
+        "BQ-CS063C-C3-42": "109769191716",
+        "BQ-CS063C-C3-43": "109769191717",
+        "BQ-CS063C-C3-44": "109769191718",
+        "BQ-CS063C-C3-45": "109769191719",
+        "BQ-CS063C-C4-36": "109769191720",
+        "BQ-CS063C-C4-37": "109769191721",
+        "BQ-CS063C-C4-38": "109769191722",
+        "BQ-CS063C-C4-39": "109769191723",
+        "BQ-CS063C-C4-40": "109769191724",
+        "BQ-CS063C-C4-41": "109769191725",
+        "BQ-CS063C-C4-42": "109769191726",
+        "BQ-CS063C-C4-43": "109769191727",
+        "BQ-CS063C-C4-44": "109769191728",
+        "BQ-CS063C-C4-45": "109769191729",
+        "BQ-CS063C-C5-36": "109769191730",
+        "BQ-CS063C-C5-37": "109769191731",
+        "BQ-CS063C-C5-38": "109769191732",
+        "BQ-CS063C-C5-39": "109769191733",
+        "BQ-CS063C-C5-40": "109769191734",
+        "BQ-CS063C-C5-41": "109769191735",
+        "BQ-CS063C-C5-42": "109769191736",
+        "BQ-CS063C-C5-43": "109769191737",
+        "BQ-CS063C-C5-44": "109769191738",
+        "BQ-CS063C-C5-45": "109769191739",
+        "BQ-CS063C-C6-36": "109769191740",
+        "BQ-CS063C-C6-37": "109769191741",
+        "BQ-CS063C-C6-38": "109769191742",
+        "BQ-CS063C-C6-39": "109769191743",
+        "BQ-CS063C-C6-40": "109769191744",
+        "BQ-CS063C-C6-41": "109769191745",
+        "BQ-CS063C-C6-42": "109769191746",
+        "BQ-CS063C-C6-43": "109769191747",
+        "BQ-CS063C-C6-44": "109769191748",
+        "BQ-CS063C-C6-45": "109769191749"
+      },
+      "unsubmitted_observations": {
+        "BQ-CS063C-C1-36": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C1-37": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C1-38": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C1-39": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C1-40": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C1-41": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C1-42": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C1-43": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C1-44": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C1-45": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C2-36": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C2-37": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C2-38": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C2-39": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C2-40": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C2-41": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C2-42": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C2-43": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C2-44": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C2-45": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C3-36": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C3-37": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C3-38": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C3-39": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C3-40": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C3-41": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C3-42": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C3-43": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C3-44": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C3-45": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C4-36": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C4-37": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C4-38": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C4-39": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C4-40": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C4-41": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C4-42": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C4-43": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C4-44": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C4-45": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C5-36": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C5-37": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C5-38": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C5-39": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C5-40": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C5-41": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C5-42": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C5-43": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C5-44": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C5-45": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C6-36": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C6-37": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C6-38": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C6-39": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C6-40": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C6-41": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C6-42": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C6-43": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C6-44": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-CS063C-C6-45": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        }
+      },
+      "limits": "Formal API row/ID binding only; first read establishes IDs, not prior history, physical stock or image pixel truth."
+    },
+    "legacy_keyword_snapshot": {
+      "expected": [
+        "field",
+        [
+          [
+            "id",
+            "productKeywords"
+          ]
+        ],
+        "",
+        [
+          [
+            "complex-value",
+            [],
+            "",
+            [
+              [
+                "field",
+                [
+                  [
+                    "id",
+                    "productKeywords_0"
+                  ]
+                ],
+                "",
+                [
+                  [
+                    "value",
+                    [],
+                    "mesh lace up casual sneakers",
+                    []
+                  ]
+                ]
+              ]
+            ]
+          ]
+        ]
+      ],
+      "actual": [
+        "field",
+        [
+          [
+            "id",
+            "productKeywords"
+          ]
+        ],
+        "",
+        []
+      ],
+      "write_verified": false,
+      "status": "LEGACY_FIELD_UI_MIGRATED"
+    }
+  },
+  "registry_fixture": "725_typed_faq_formal_create_20261004.json",
+  "registry_before_sha256": "f16563e2c1448507d8118f459dac1b9ebb393dd575a345ab5dae0567d5dd9f3c",
+  "registry_after_sha256": "1713b0eb1ffcf021fd3a52ebb948569480ebe90f8867cbb652f08e7626123f87",
+  "raw_snapshot_differences": [
+    "icbuCatProp",
+    "scImages",
+    "saleProp",
+    "minOrderQuantity",
+    "ladderPrice",
+    "detailImage",
+    "companyImage",
+    "pkgMeasure"
+  ],
+  "unverified_fields": [],
+  "comparison_scope": "Create-only observed normalization. Raw receipt/schema unchanged; updates remain strict."
+}

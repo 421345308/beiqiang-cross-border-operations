@@ -1,0 +1,44 @@
+{
+  "style": "2652",
+  "status": "INCOMPLETE_FRAGMENT_DO_NOT_SUBMIT",
+  "observed_at": "2026-10-08T07:34:41.553473+00:00",
+  "schema_sha256": "cb3be59dc64d9f4449a17a1bf77eb0f562cc0270c1f85786e7601f7a6d150f1e",
+  "unit": "Pair/Pairs",
+  "min_order_quantity": 2,
+  "quantity_pricing_mode": "Tiered pricing by quantity",
+  "tiers": [
+    {
+      "minimum_quantity": 2,
+      "USD_per_pair": "14.45",
+      "cost_CNY": 65,
+      "markup_factor": "1.5"
+    },
+    {
+      "minimum_quantity": 50,
+      "USD_per_pair": "13.49",
+      "cost_CNY": 65,
+      "markup_factor": "1.4"
+    },
+    {
+      "minimum_quantity": 100,
+      "USD_per_pair": "12.53",
+      "cost_CNY": 65,
+      "markup_factor": "1.3"
+    }
+  ],
+  "FX_CNY_per_USD": "6.7487",
+  "FX_source": "ChinaMoney 2026-09-21 historical reference used by original Luqi draft; not current spot FX or final customer quotation",
+  "source_cost_status": "Dated source observation in this style task pack; not a guaranteed current procurement price",
+  "packaging": "34x23x13 cm / 0.5 kg / 1 pair, owner-confirmed store entry baseline, not measured style parcel",
+  "shipping_mode": "freightNegotiation current explicit option; optional shippingTemplateId omitted",
+  "not_written": [
+    "saleProp and sku because size system unconfirmed",
+    "inventory because no actual inventory evidence",
+    "ladderPeriod because no style-specific dispatch commitment",
+    "semiManagedPeriod default 3 not inherited",
+    "productKeywords persistence not claimed"
+  ],
+  "full_payload_validated": false,
+  "draft_created": false,
+  "product_created": false
+}

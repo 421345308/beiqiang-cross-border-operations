@@ -1,0 +1,27 @@
+{
+  "operation": "update",
+  "product_id": "1601939697271",
+  "category_id": 201334413,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "copy.json",
+    "before_get.json",
+    "../../../../../01_产品资产/02_可发布素材/00_最终上传/BQ017_A008/00_上架填写表.md",
+    "../../../../../01_产品资产/01_原始数据包/已整理_BQ017_A008_2024贝强鞋业A008套袜一脚蹬男女鞋35-45批55元/贝强鞋业A008套袜一脚蹬男女鞋35-45批55元/800X800主图/主图 (1).JPG",
+    "current_get.json",
+    "../../../../00_运营SOP/国际站商品全生命周期SOP.md"
+  ],
+  "current_schema": "current_schema.xml",
+  "current_schema_sha256": "c8fd68e6a2f919fce900fa3a4b370efb9d177e8dd3c089c545241004910672bb",
+  "schema_request_id": "21501be117917345912638694",
+  "schema_acquired_at": "2026-10-11T16:03:08.216709+00:00",
+  "payload_xml": "payload.xml",
+  "field_ids": [
+    "textDesc",
+    "companyFaqDesc"
+  ],
+  "dependency_ids": [
+    "productDescType"
+  ],
+  "observed_model": "BQ017-R1 / A008"
+}

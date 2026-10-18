@@ -1,0 +1,78 @@
+{
+  "family": "HR034",
+  "at": "2026-10-13T14:34:31.049117+00:00",
+  "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+  "source": {
+    "id": "src-hr-hr034-7869",
+    "url": "https://binfengshoes.en.made-in-china.com/product/NaHYobEgOtWu/China-2024-Spring-Women-s-New-Solid-Color-Simple-Casual-Lace-up-Leather-Shoes-Flat-Loafers.html",
+    "shop_url": "https://binfengshoes.en.made-in-china.com",
+    "supplier": "Quanzhou Binfeng Import & Export Co., Ltd.",
+    "model": "7869",
+    "price": "未核当前进货报价",
+    "currency": "USD",
+    "unit": "双",
+    "price_terms": "历史已采用实款对应恢复；当前数量、价格、包装及交期逐单询价，不从平台售价或样品费反推采购价。",
+    "observed_at": "2026-09-28",
+    "evidence": [
+      "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR034/复用图审依据.json",
+      "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR034/复用图库绑定.json",
+      "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR034/来源与正式绑定核验.json"
+    ]
+  },
+  "links": [
+    {
+      "id": "1601943690007",
+      "model": "HR034-A",
+      "formal_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943690007/formal_get.json",
+      "formal_observed_at": "2026-10-12T22:51:31.320550+00:00",
+      "checks": {
+        "approved_actual_product_images_match": true,
+        "whole_six_images_match_current_catalog": true,
+        "raw_photo_hashes": true,
+        "materials_match_specific_model_table": true,
+        "source_eu_cartesian": true,
+        "approved_y": true
+      },
+      "main_images": [
+        "https://sc04.alicdn.com/kf/H91a62972426843c38fcce594101e17f9b.jpg",
+        "https://sc04.alicdn.com/kf/H81ce9cb0504c4a069e0207264837f053Q.jpg",
+        "https://sc04.alicdn.com/kf/Hd234e9c7baaa4b0f9491cb45f445afb4a.jpg",
+        "https://sc04.alicdn.com/kf/Hd3a8e7672a964e10ae07d24b0adf286d1.jpg",
+        "https://sc04.alicdn.com/kf/H0f8e7a4302534a19a632f153a67773f6D.jpg",
+        "https://sc04.alicdn.com/kf/H7f2941763f64496f97d567b905be815aq.jpg"
+      ],
+      "sku_count": 7
+    },
+    {
+      "id": "1601943543826",
+      "model": "HR034-B",
+      "formal_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943543826/formal_get.json",
+      "formal_observed_at": "2026-10-12T22:36:05.950391+00:00",
+      "checks": {
+        "approved_actual_product_images_match": true,
+        "whole_six_images_match_current_catalog": true,
+        "raw_photo_hashes": true,
+        "materials_match_specific_model_table": true,
+        "source_eu_cartesian": true,
+        "approved_y": true
+      },
+      "main_images": [
+        "https://sc04.alicdn.com/kf/H9099db540794405bbe66fcd86f077189b.jpg",
+        "https://sc04.alicdn.com/kf/H81ce9cb0504c4a069e0207264837f053Q.jpg",
+        "https://sc04.alicdn.com/kf/Hd234e9c7baaa4b0f9491cb45f445afb4a.jpg",
+        "https://sc04.alicdn.com/kf/H91a62972426843c38fcce594101e17f9b.jpg",
+        "https://sc04.alicdn.com/kf/H0f8e7a4302534a19a632f153a67773f6D.jpg",
+        "https://sc04.alicdn.com/kf/H7f2941763f64496f97d567b905be815aq.jpg"
+      ],
+      "sku_count": 7
+    }
+  ],
+  "basis": "Specific7869 reviewed public fact packet has CowSuede/PU/TPR/TPR; raw photos1/4 match actualGrey style. Current official source assets checked to exact bank/local SHA. HistoricalC not in complete current catalog is retained as unresolved, not recreated.",
+  "source_current_access": "Historical public single-style packet/inquiry entrance retained; current inventory/quote not freshly verified. Preserve existing actual Grey shoe; source-binding recovery is not whole-page quality optimization.",
+  "platform_mutation": "NONE_EXISTING_ACTUAL_SHOE_PRESERVED",
+  "physical_stock": "NOT_CONFIRMED_ORDER_SPECIFIC",
+  "not_returned_ids": [
+    "1601943564735"
+  ],
+  "not_returned_scope": "Not returned in current complete catalog; not source-validated as current links, not recreated or deleted"
+}

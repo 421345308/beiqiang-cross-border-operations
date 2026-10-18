@@ -1,0 +1,27 @@
+{
+  "operation": "update",
+  "product_id": "1601969869242",
+  "category_id": 201153805,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "copy.json",
+    "before_get.json",
+    "../../../../05_扩品工程/执行记录/5998_API新建_2026-10-02/facts_and_copy.json",
+    "../../../../../../../Documents/Codex/2026-10-02/task-8/5998/originals/00.jpg",
+    "current_get.json",
+    "../../../../00_运营SOP/国际站商品全生命周期SOP.md"
+  ],
+  "current_schema": "current_schema.xml",
+  "current_schema_sha256": "07787338bea1a5f8d92f9ec4f5b22b0819ce0dfb21c9ac7788ea0cc6c4d4fe56",
+  "schema_request_id": "2105044417917374835736779",
+  "schema_acquired_at": "2026-10-11T16:51:20.632206+00:00",
+  "payload_xml": "payload.xml",
+  "field_ids": [
+    "textDesc",
+    "companyFaqDesc"
+  ],
+  "dependency_ids": [
+    "productDescType"
+  ],
+  "observed_model": "BQ-W5998"
+}

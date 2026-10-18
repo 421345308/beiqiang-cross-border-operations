@@ -1,0 +1,141 @@
+{
+  "style": "2509",
+  "source": "https://luqi.sooxie.com/detail/2493063",
+  "observed_at": "2026-10-15T04:58:49.353843+00:00",
+  "source_HTML_sha256": "9d9c9de53bd3ceef711cc0af4c4388693e38e909e0e6f5ebfce83cc6992901bd",
+  "source_price_cny": "68.00",
+  "source_EU_by_color": {
+    "Grey": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ],
+    "Dark Brown": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ]
+  },
+  "source_EU_combinations": 20,
+  "whole_source_contacts_actually_viewed": true,
+  "photo_count": 21,
+  "full_original_fact_indices_actually_viewed": [
+    9,
+    14,
+    20,
+    25
+  ],
+  "known_materials": {
+    "upper": "Mesh panels and grained overlays visible; composition not established. CurrentOtherShoes nativeother.",
+    "outsole": "Actual09/14 angular block tread; no chemistry proof, nativeother."
+  },
+  "wide_claim": "NO_WIDE_CLAIM_FROM_OUTDOOR_ONLY_SOURCE",
+  "source_color_aliases": {
+    "Grey": "灰色",
+    "Dark Brown": "深棕"
+  },
+  "visible_structure": [
+    "Low-top dial and cord closure with paired fabric guides",
+    "Layered stitched grained overlays around mesh sections",
+    "Black rounded forefoot overlay",
+    "Sculpted grey or brown sidewall and angular black tread blocks",
+    "Rear pull loop and dark textile collar"
+  ],
+  "identity_notes": "Actual2509body07–26 andcover01 only; unrelated sidebar02–06 excluded from current product-only imageindex. Native09/14/20/25 and actual selected images reviewed. Different actualdial/fabricguides/blocktread from026/995/9705. Existing oldHiking create businessrejected with noID retained; this is first current32299 submission after freshcatalogsource/modeldedup, not replay of unknownwrite.",
+  "title_draft": "Mens Dial Closure Outdoor Shoes Low Top Mesh Panel Casual Sneakers Lug Sole Grey Brown Wholesale EU 39-48",
+  "product_highlights_draft": [
+    "Dial-and-cord closure: A rotary dial draws the front cord through paired fabric guides, offering an alternative to traditional tied laces.",
+    "Layered upper design: Grained stitched overlays frame the mesh sections on the toe and side panels for a clearly defined outdoor-style appearance.",
+    "Low-top profile: A dark textile collar and rear pull loop accompany the rounded black forefoot overlay.",
+    "Sculpted sole details: Grey or brown sidewalls meet angular black tread blocks, visible in the actual wearing photographs.",
+    "Two-colour EU 39–48 range: Choose Grey or Dark Brown and specify the size mix for your wholesale quotation."
+  ],
+  "state": "CREATED_FORMAL_FIELDS_SCORE_PASS",
+  "pricing_draft": {
+    "source_cny": "68.00",
+    "fx": "6.6837",
+    "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+    "fx_observed": "2026-10-13 10:57:20",
+    "rounding": "ROUND_CEILING_TO_USD_CENT",
+    "tiers": [
+      [
+        2,
+        "15.27"
+      ],
+      [
+        50,
+        "14.25"
+      ],
+      [
+        100,
+        "13.23"
+      ]
+    ],
+    "freight_service_tax": "Dated sourcecost/FX quotation reference; markup not netprofit; actual fulfilment fees assessed perorder."
+  },
+  "publish_profile": {
+    "category_id": 32299,
+    "schema_name": "当前其他鞋类Schema",
+    "source_original_root": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/图片/2509",
+    "buyer_colours": [
+      {
+        "buyer": "Grey",
+        "supplier_key": "Grey",
+        "supplier_label": "灰色",
+        "image_role": "M1"
+      },
+      {
+        "buyer": "Dark Brown",
+        "supplier_key": "Dark Brown",
+        "supplier_label": "深棕",
+        "image_role": "SKU_DarkBrown"
+      }
+    ],
+    "category_attributes": {
+      "Upper Material": [
+        "other"
+      ],
+      "Outsole Material": [
+        "other"
+      ]
+    },
+    "local_intent": [
+      "旋钮闭合低帮户外风格鞋"
+    ]
+  },
+  "category_route": {
+    "at": "2026-10-15T05:08:12.172469+00:00",
+    "owner_direction": "2026-10-15 user permits suitable sports/otheroutdoor categories, not hikingonly.",
+    "category_id": 32299,
+    "leaf": "Other Shoes",
+    "root": 322,
+    "evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/质量复核_2026-10-09/类目适配核对/32299_schema.json",
+    "scope": "Generalfootwear route for real lowtopoutdoorstyle; no rootbusinessscopechange. No unsupported optional ClosureType/Midsole/Lining attributes copied."
+  },
+  "hero_selection": "Actual25single Grey isolatedwhite; SKU Grey sameidentity. DarkBrown actual20single unchanged. Actual14wear/tread M3; source09wear/tread detail. AIcloseups preserve exact panels/dial/cords; no inventedangles.",
+  "title_bytes": 105,
+  "publication": {
+    "product_id": "1601980840117",
+    "audit": "approved",
+    "display": "Y",
+    "actual_score": "5.00",
+    "formal_verification": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2509准备/verification.json",
+    "local_sync_at": "2026-10-15T05:59:55.926150+00:00",
+    "no_replayed_create": true
+  },
+  "next_action": "该款正式字段、评分与来源已通过；继续其他款，不重复创建。"
+}

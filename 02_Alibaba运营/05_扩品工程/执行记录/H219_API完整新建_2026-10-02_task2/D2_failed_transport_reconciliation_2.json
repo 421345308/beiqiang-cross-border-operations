@@ -1,0 +1,26 @@
+{
+  "verdict": "RECONCILED_NOT_SENT_ONE_IMAGE_RETRY_ALLOWED",
+  "failed_attempt": {
+    "name": "D2",
+    "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-2\\boots_supply_2026-10-02\\H219_execution\\assets\\H219_D2.png",
+    "sha256": "bdf7f2e4a28f013aafc24b4857af56a7e125fc77961e8c97944ed4e760b1fb77",
+    "status": "OUTCOME_UNKNOWN_STOP_NO_RETRY",
+    "time_utc": "2026-10-02T17:19:40.409650+00:00",
+    "error_type": "ClientError",
+    "retry_authorization": "D2_failed_transport_reconciliation.json",
+    "retry_count": 1,
+    "retry_time_utc": "2026-10-02T17:24:42.931610+00:00",
+    "transport_evidence": {
+      "phase": "transport",
+      "request_sent": null,
+      "stderr": "[WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。"
+    }
+  },
+  "time_utc": "2026-10-02T17:27:57.533869+00:00",
+  "bank_request_id": "212c41d317909620310337424",
+  "bank_covers_prior_D1": true,
+  "matching_D2_rows": [],
+  "source_sha256": "bdf7f2e4a28f013aafc24b4857af56a7e125fc77961e8c97944ed4e760b1fb77",
+  "transport_evidence": "Original captured failure stack: socket.create_connection -> socket.connect WinError10060, before HTTPS connection and request body; no HTTP upload transmitted",
+  "next_action": "Exactly one unchanged hash D2 retry; never retry committed assets or product creation"
+}

@@ -1,0 +1,26 @@
+{
+  "observed_at": "2026-10-02T14:50:16.428688+00:00",
+  "actual_sdk_entry": "sdk_runtime_5998.load sets sdk.http_json=sdk.native_http_json",
+  "publisher_persists_failure_evidence": true,
+  "contract_sha256": "d08eb66861fef28eed30081f080049414ce7fe1b7b783d8cf5dca2d7f34239d9",
+  "offline_cases": [
+    {
+      "case": 1,
+      "redaction_PASS": true,
+      "structured_curl_code_retained": true
+    },
+    {
+      "case": 2,
+      "redaction_PASS": true,
+      "structured_curl_code_retained": true
+    },
+    {
+      "case": 3,
+      "redaction_PASS": true,
+      "structured_curl_code_retained": true
+    }
+  ],
+  "actual_credentials_in_test": false,
+  "raw_test_text_persisted": false,
+  "result": "PASS"
+}

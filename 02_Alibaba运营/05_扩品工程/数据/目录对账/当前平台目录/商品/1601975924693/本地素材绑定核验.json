@@ -1,0 +1,198 @@
+{
+  "at": "2026-10-15T18:56:54.062532+00:00",
+  "id": "1601975924693",
+  "state": "CURRENT_FORMAL_URL_TO_REVIEWED_UPLOAD_FILE_SHA_MATCH",
+  "scope": "Existing upload receipt and current formal snapshot mapping repaired locally only; no product change, upload, download or generation.",
+  "formal_snapshot": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601975924693/formal_get.json",
+  "formal_snapshot_at": "2026-10-14T02:08:11.591586+00:00",
+  "bank_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/015准备/正式图片银行映射.json",
+  "reconciled_bindings": {
+    "https://sc04.alicdn.com/kf/H40d22ea91a464da29741a69b8f534b73p.jpg": {
+      "state": "SAVED",
+      "file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/015准备/05_AI候选/M1.jpg",
+      "sha256": "1af66a5403fa7e0ebbc841efee4ac5afb324334dd473c3cd845f36d6f82eb903",
+      "bytes": 419105,
+      "width": 800,
+      "height": 800,
+      "pixel_qa": "Previously reviewed original upload file; exact official CDN asset identity and positive bank fileID bound to current formal snapshot. Local SHA verified, no new remote pixel/UI claim.",
+      "at": "2026-10-15T18:56:53.163713+00:00",
+      "bank_file_id": "33787753397",
+      "bank_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/015准备/正式图片银行映射.json"
+    },
+    "https://sc04.alicdn.com/kf/H67dfe3cfb80d412883406e0d4e3ae136e.png": {
+      "state": "SAVED",
+      "file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/015准备/05_AI候选/M2.png",
+      "sha256": "f03269a218df0a570f76773150b94d161e7ccc4777042597867b310bca740f0b",
+      "bytes": 1943189,
+      "width": 1536,
+      "height": 1024,
+      "pixel_qa": "Previously reviewed original upload file; exact official CDN asset identity and positive bank fileID bound to current formal snapshot. Local SHA verified, no new remote pixel/UI claim.",
+      "at": "2026-10-15T18:56:53.167446+00:00",
+      "bank_file_id": "33787729496",
+      "bank_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/015准备/正式图片银行映射.json"
+    },
+    "https://sc04.alicdn.com/kf/H109e6f01d5fb4b30b40a2c250c16ac6ew.png": {
+      "state": "SAVED",
+      "file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/015准备/05_AI候选/M3.png",
+      "sha256": "fec7c4781b727e3604f17bc71f8b87686e0f7a027778520f775a9b3f82b7bf2a",
+      "bytes": 2422794,
+      "width": 1078,
+      "height": 1460,
+      "pixel_qa": "Previously reviewed original upload file; exact official CDN asset identity and positive bank fileID bound to current formal snapshot. Local SHA verified, no new remote pixel/UI claim.",
+      "at": "2026-10-15T18:56:53.172367+00:00",
+      "bank_file_id": "33791496977",
+      "bank_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/015准备/正式图片银行映射.json"
+    },
+    "https://sc04.alicdn.com/kf/H1a3755d189eb444e8647f356628c5b47u.png": {
+      "state": "SAVED",
+      "file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/015准备/05_AI候选/M4.png",
+      "sha256": "83da330b71d9fffd3e7476f37d87dfdf3ed1a084decc927b79e3dcf2969b4cd6",
+      "bytes": 2538387,
+      "width": 1200,
+      "height": 1311,
+      "pixel_qa": "Previously reviewed original upload file; exact official CDN asset identity and positive bank fileID bound to current formal snapshot. Local SHA verified, no new remote pixel/UI claim.",
+      "at": "2026-10-15T18:56:53.177193+00:00",
+      "bank_file_id": "33789493783",
+      "bank_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/015准备/正式图片银行映射.json"
+    },
+    "https://sc04.alicdn.com/kf/H08af65ae12844de2b69d92caeb0dcba04.png": {
+      "state": "SAVED",
+      "file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/015准备/05_AI候选/M5.png",
+      "sha256": "7bcf9a2cafcc0e16b7c912ea648d18702472d65ed0a714b6e4363efdcecbcd4a",
+      "bytes": 2417810,
+      "width": 890,
+      "height": 1768,
+      "pixel_qa": "Previously reviewed original upload file; exact official CDN asset identity and positive bank fileID bound to current formal snapshot. Local SHA verified, no new remote pixel/UI claim.",
+      "at": "2026-10-15T18:56:53.182022+00:00",
+      "bank_file_id": "33791208104",
+      "bank_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/015准备/正式图片银行映射.json"
+    },
+    "https://sc04.alicdn.com/kf/Hcc90bb3553e840489b254290b1c98b530.png": {
+      "state": "SAVED",
+      "file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/015准备/05_AI候选/D3.png",
+      "sha256": "8412dbbc1028c04746ddd00416137f5e6db065b03c22dcb9f112fe18ba96e84d",
+      "bytes": 1646140,
+      "width": 1145,
+      "height": 1374,
+      "pixel_qa": "Previously reviewed original upload file; exact official CDN asset identity and positive bank fileID bound to current formal snapshot. Local SHA verified, no new remote pixel/UI claim.",
+      "at": "2026-10-15T18:56:53.185867+00:00",
+      "bank_file_id": "33791532842",
+      "bank_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/015准备/正式图片银行映射.json"
+    },
+    "https://sc04.alicdn.com/kf/Hf2a9e6357daf48b68baef716411af9e6R.png": {
+      "state": "SAVED",
+      "file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/015准备/05_AI候选/D1.png",
+      "sha256": "17edb820f680ed23124cc84277fbbd331af17ad720c652d66f951a7f8b0a7995",
+      "bytes": 2358518,
+      "width": 1006,
+      "height": 1564,
+      "pixel_qa": "Previously reviewed original upload file; exact official CDN asset identity and positive bank fileID bound to current formal snapshot. Local SHA verified, no new remote pixel/UI claim.",
+      "at": "2026-10-15T18:56:53.190299+00:00",
+      "bank_file_id": "33791184266",
+      "bank_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/015准备/正式图片银行映射.json"
+    },
+    "https://sc04.alicdn.com/kf/H3b7c0c541206489ea84694faf60019fft.png": {
+      "state": "SAVED",
+      "file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/015准备/05_AI候选/D4.png",
+      "sha256": "359ba0f26f3e6aa22560161494d6cf62a1e9047cbf81cceee9672cc8a248b80b",
+      "bytes": 2709550,
+      "width": 907,
+      "height": 1733,
+      "pixel_qa": "Previously reviewed original upload file; exact official CDN asset identity and positive bank fileID bound to current formal snapshot. Local SHA verified, no new remote pixel/UI claim.",
+      "at": "2026-10-15T18:56:53.195655+00:00",
+      "bank_file_id": "33791172306",
+      "bank_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/015准备/正式图片银行映射.json"
+    },
+    "https://sc04.alicdn.com/kf/Hb706a3703bc84ae786383bc336113ab5v.png": {
+      "state": "SAVED",
+      "file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/015准备/05_AI候选/D2.png",
+      "sha256": "9775a96c167d5ce34e45458262b25e3d0637212f4e2ca0a1b65842112b352520",
+      "bytes": 2486631,
+      "width": 891,
+      "height": 1765,
+      "pixel_qa": "Previously reviewed original upload file; exact official CDN asset identity and positive bank fileID bound to current formal snapshot. Local SHA verified, no new remote pixel/UI claim.",
+      "at": "2026-10-15T18:56:53.201614+00:00",
+      "bank_file_id": "33791568629",
+      "bank_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/015准备/正式图片银行映射.json"
+    },
+    "https://sc04.alicdn.com/kf/Hb55d256a19b5431785e1724f06758e74A.png": {
+      "state": "SAVED",
+      "file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/015准备/05_AI候选/SKU_Black.png",
+      "sha256": "3785aadd67f86fbfe907d965e365c4f4aae4b38875ed3d9e23f07e5eea8cd772",
+      "bytes": 2247780,
+      "width": 1536,
+      "height": 1024,
+      "pixel_qa": "Previously reviewed original upload file; exact official CDN asset identity and positive bank fileID bound to current formal snapshot. Local SHA verified, no new remote pixel/UI claim.",
+      "at": "2026-10-15T18:56:53.206948+00:00",
+      "bank_file_id": "33791472967",
+      "bank_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/015准备/正式图片银行映射.json"
+    },
+    "https://sc04.alicdn.com/kf/Hab1fe7996dbf47159495f4532c777081I.png": {
+      "state": "SAVED",
+      "file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/015准备/05_AI候选/SKU_Black Gray.png",
+      "sha256": "00a71e3725e5e446cd503fc2323e7185d7a12b766bb3d1bec0ee8cb8a1c8306a",
+      "bytes": 2184165,
+      "width": 1254,
+      "height": 1254,
+      "pixel_qa": "Previously reviewed original upload file; exact official CDN asset identity and positive bank fileID bound to current formal snapshot. Local SHA verified, no new remote pixel/UI claim.",
+      "at": "2026-10-15T18:56:53.212823+00:00",
+      "bank_file_id": "33791544902",
+      "bank_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/015准备/正式图片银行映射.json"
+    },
+    "https://sc04.alicdn.com/kf/H6f405a74928e4f1596d1c3bf68cde9d9p.png": {
+      "state": "SAVED",
+      "file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/015准备/05_AI候选/SKU_Black Green.png",
+      "sha256": "c30deb2b8a49db6d90b3c5d3d2d39bdd9c892ac83d60cd4a256f7c10707a7205",
+      "bytes": 2835048,
+      "width": 1200,
+      "height": 1311,
+      "pixel_qa": "Previously reviewed original upload file; exact official CDN asset identity and positive bank fileID bound to current formal snapshot. Local SHA verified, no new remote pixel/UI claim.",
+      "at": "2026-10-15T18:56:53.219262+00:00",
+      "bank_file_id": "33787753438",
+      "bank_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/015准备/正式图片银行映射.json"
+    },
+    "https://sc04.alicdn.com/kf/Haacb8c8da316400dbc422f39655b37caw.png": {
+      "state": "SAVED",
+      "file": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/015准备/05_AI候选/SKU_Black Khaki.png",
+      "sha256": "fcd19d038bf22631d2483617858a45fa84cdb17c77267ed8033a42d98be49dab",
+      "bytes": 2644413,
+      "width": 1246,
+      "height": 1262,
+      "pixel_qa": "Previously reviewed original upload file; exact official CDN asset identity and positive bank fileID bound to current formal snapshot. Local SHA verified, no new remote pixel/UI claim.",
+      "at": "2026-10-15T18:56:53.225633+00:00",
+      "bank_file_id": "33791472979",
+      "bank_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/015准备/正式图片银行映射.json"
+    }
+  },
+  "current_roles": {
+    "main": [
+      "https://sc04.alicdn.com/kf/H40d22ea91a464da29741a69b8f534b73p.jpg",
+      "https://sc04.alicdn.com/kf/H67dfe3cfb80d412883406e0d4e3ae136e.png",
+      "https://sc04.alicdn.com/kf/H109e6f01d5fb4b30b40a2c250c16ac6ew.png",
+      "https://sc04.alicdn.com/kf/H1a3755d189eb444e8647f356628c5b47u.png",
+      "https://sc04.alicdn.com/kf/H08af65ae12844de2b69d92caeb0dcba04.png",
+      "https://sc04.alicdn.com/kf/S6c8cb1d46d8c4b018cf07f5cab50c1adi.png"
+    ],
+    "details": [
+      "https://sc04.alicdn.com/kf/Hcc90bb3553e840489b254290b1c98b530.png",
+      "https://sc04.alicdn.com/kf/Hf2a9e6357daf48b68baef716411af9e6R.png",
+      "https://sc04.alicdn.com/kf/H3b7c0c541206489ea84694faf60019fft.png",
+      "https://sc04.alicdn.com/kf/Hb706a3703bc84ae786383bc336113ab5v.png"
+    ],
+    "company": [
+      "https://sc04.alicdn.com/kf/Hedfb7ab8452d46f58abcb457f199c138Q.png",
+      "https://sc04.alicdn.com/kf/H76f31cce4cc0447a99b72496f0ae5c93l.png",
+      "https://sc04.alicdn.com/kf/H8779a3d5521c4cce910395f583af74505.png",
+      "https://sc04.alicdn.com/kf/He558a164125f4bc295dfe3d70bb76066w.png",
+      "https://sc04.alicdn.com/kf/H2c23ba6ddeac47a686c0e1350c4ac294v.png",
+      "https://sc04.alicdn.com/kf/H7d0669b743e742c1a97e8108e6cc96eaV.png"
+    ],
+    "sku": [
+      "https://sc04.alicdn.com/kf/Hb55d256a19b5431785e1724f06758e74A.png",
+      "https://sc04.alicdn.com/kf/Hab1fe7996dbf47159495f4532c777081I.png",
+      "https://sc04.alicdn.com/kf/H6f405a74928e4f1596d1c3bf68cde9d9p.png",
+      "https://sc04.alicdn.com/kf/Haacb8c8da316400dbc422f39655b37caw.png"
+    ],
+    "html": []
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "operation": "create",
+  "category_id": 202248402,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\25019准备\\经营任务包.md",
+    "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\25019准备\\图片本地验收.json",
+    "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\负责人分类事实确认.json"
+  ],
+  "current_schema": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\25019准备\\当前冬靴Schema.xml",
+  "current_schema_sha256": "f93a15f7bbefede9f5081b2db593ba73c62ca940ddc6fabf58d3c7688348ea3d",
+  "schema_request_id": "21501b6717916519607543543",
+  "schema_acquired_at": "2026-10-10T17:06:01.646696+00:00",
+  "payload_xml": "完整提交.xml",
+  "field_ids": [
+    "icbuCatProp",
+    "productTitle",
+    "textDesc",
+    "companyDesc",
+    "scImages",
+    "detailImage",
+    "companyImage",
+    "companyFaqDesc",
+    "catId",
+    "minOrderQuantity",
+    "pkgWeight",
+    "productDescType",
+    "priceUnit",
+    "saleType",
+    "scPrice",
+    "logisticsProperty",
+    "pkgMeasure",
+    "shippingTemplate",
+    "ladderPrice",
+    "saleProp",
+    "sku"
+  ],
+  "dependency_ids": [],
+  "expected_model": "BQ-LQ25019",
+  "differentiation_review": "发布前差异化审查.json",
+  "differentiation_review_sha256": "5b4769ff918e47621b86c8a10c60c3c623ae076454c40c11cbbd24cefcd82551"
+}

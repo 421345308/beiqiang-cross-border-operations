@@ -1,0 +1,38 @@
+{
+  "verdict": "PASS",
+  "scope": "STATIC_EXACT_NEW936_TYPE4_SCHEMA_ADD_ONLY",
+  "request_sha256": "7be97ca590b0c1711b74cdbc17e17e8784d38340c243fba1f3c288bbdc41f286",
+  "checks": {
+    "exact_hash": true,
+    "schema_material_types_options_custom_rules_and_gallery_scoped_valid": true,
+    "type4_matches_fresh_schema_default_and_same_shop_verified_route": true,
+    "category201334413": true,
+    "main6_exact_urls_ids_order": true,
+    "detail4_exact_D_order_350": true,
+    "company5_exact_original_roles": true,
+    "14_SKU_exact_colors_sizes_bindings": true,
+    "no_old_product_sku_ids": true,
+    "title_summary_FAQ6_keywords_exact": true,
+    "MOQ_prices": true,
+    "no_ladderPeriod": true,
+    "public_model_HR051_A": true,
+    "unknown_required_minus2_NotSpecified": true,
+    "upload12_raw_receipts_source_hashes_verified": true,
+    "no_266_materials": true
+  },
+  "schema_request_id": "21501b8d17909403059906886",
+  "sole_platform_writer": "root",
+  "notes": [
+    "Type4 valid current default despite options listing1/2, consistent previously successful same-shop route",
+    "Color remark is optional color-swatch metadata; image-based colors have img+inputValue",
+    "General packaging34x23x13cm/0.5kg is authorized SOP baseline, not measured936-specific claim",
+    "999 inquiry marker not physical stock",
+    "Unknown required placeholders current user authorized; no old materials inherited"
+  ],
+  "remaining_gates": [
+    "Actual new ID/business response",
+    "Formal persisted fields/SKU/media",
+    "Public operational acceptance"
+  ],
+  "reviewer_platform_writes": false
+}

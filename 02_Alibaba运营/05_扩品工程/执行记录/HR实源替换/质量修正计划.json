@@ -1,0 +1,41 @@
+{
+  "authorization": "Owner 2026-10-13 authorized missing-source HR whole-shoe replacement, priority HR030 and HR042; existing IDs retained",
+  "items": [
+    {
+      "id": "1601943574507",
+      "slug": "public_style",
+      "style": [
+        "Platform Sneakers",
+        "Lace-up"
+      ],
+      "reason": "Normal public page translates the platform Style enum into 平台集装箱. Use the current Schema-supported custom footwear phrase while preserving all SKU IDs, materials and commercial fields."
+    },
+    {
+      "id": "1601943545775",
+      "slug": "public_style",
+      "style": [
+        "Platform Sneakers",
+        "Lace-up"
+      ],
+      "reason": "Official product.get tbd means audit rejected, not reviewing. Current rejected product Schema is normally readable. Correct the independently documented legacy Style Platform to Platform Sneakers with Lace-up, matching real canvas platform shoe and the already passed sibling. Preserve current title and all other attributes/SKU/images/prices. This known content correction is not claimed to be the undisclosed audit-rejection cause. One new scoped correction ledger; no replay of accepted whole-shoe or season updates.",
+      "allowed_current_statuses": [
+        "approved",
+        "tbd"
+      ],
+      "status_definition_source": "https://developer.alibaba.com/doc2/apiDetail.htm?apiId=25439"
+    },
+    {
+      "id": "1601943747024",
+      "slug": "hero_quality",
+      "image_roles": [
+        "M1",
+        "M2",
+        "M3",
+        "M4",
+        "M5",
+        "M6"
+      ],
+      "reason": "The cleaned black hero is faithful on visual review but still receives the platform imageQualityBad flag and a 3.90 score. Use the same verified clean Khaki single-shoe hero that passed HR042-A at 5.00; retain all five color options and the supporting images."
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "family": "HR012",
+  "at": "2026-10-13T09:10:15.657479+00:00",
+  "state": "EXISTING_REAL_SOURCE_FORMAL_BINDING_VERIFIED",
+  "source": {
+    "id": "src-hr-hr012-ht03",
+    "url": "https://jumushoe.en.made-in-china.com/product/yQCRjVmEqGpr/China-Ht03fashion-Trend-Super-Fiber-Wear-Resistant-Men-s-Sports-Shoes-Casual-Shoes.html",
+    "shop_url": "https://jumushoe.en.made-in-china.com",
+    "supplier": "Wenzhou Jumu Shoes Co., Ltd.",
+    "model": "HT03",
+    "price": "未核当前进货报价",
+    "currency": "USD",
+    "unit": "双",
+    "price_terms": "历史已采用实款对应恢复；当前数量、价格、包装及交期逐单询价，不从平台售价或样品费反推采购价。",
+    "observed_at": "2026-09-29",
+    "evidence": [
+      "99_临时区/HR012_HT03执行_2026-09-29/ROOT_images_approved.json",
+      "99_临时区/HR012_HT03执行_2026-09-29/ROOT_approved_bank_mapping.json",
+      "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR012/来源与正式绑定核验.json"
+    ]
+  },
+  "links": [
+    {
+      "id": "1601943445780",
+      "model": "HR012-A",
+      "formal_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943445780/formal_get.json",
+      "formal_observed_at": "2026-10-12T22:11:39.901080+00:00",
+      "checks": {
+        "approved_actual_product_images_match": true,
+        "whole_six_images_match_current_catalog": true,
+        "raw_photo_hashes": true,
+        "materials_match_specific_model_table": true,
+        "source_eu_cartesian": true,
+        "approved_y": true
+      },
+      "main_images": [
+        "https://sc04.alicdn.com/kf/H6c1ef499dea048b4b49254a559ee1312y.png",
+        "https://sc04.alicdn.com/kf/H8c8e2e2c8ad746d5a6e1568aea1516a0P.png",
+        "https://sc04.alicdn.com/kf/Hf120aeaf124c4cde9e334eefad3590b34.png",
+        "https://sc04.alicdn.com/kf/Hc20c79a2c45440c886a2c50209f072c1p.png",
+        "https://sc04.alicdn.com/kf/H267c1d28cdc0421cb27de33be502dc23n.png",
+        "https://sc04.alicdn.com/kf/H9f32c7ecea0f4d25bc5ddc9cd04c1e5dK.jpg"
+      ],
+      "sku_count": 6
+    },
+    {
+      "id": "1601943531277",
+      "model": "HR012-B",
+      "formal_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943531277/formal_get.json",
+      "formal_observed_at": "2026-10-12T22:30:05.780174+00:00",
+      "checks": {
+        "approved_actual_product_images_match": true,
+        "whole_six_images_match_current_catalog": true,
+        "raw_photo_hashes": true,
+        "materials_match_specific_model_table": true,
+        "source_eu_cartesian": true,
+        "approved_y": true
+      },
+      "main_images": [
+        "https://sc04.alicdn.com/kf/H6c1ef499dea048b4b49254a559ee1312y.png",
+        "https://sc04.alicdn.com/kf/Hc20c79a2c45440c886a2c50209f072c1p.png",
+        "https://sc04.alicdn.com/kf/Hf120aeaf124c4cde9e334eefad3590b34.png",
+        "https://sc04.alicdn.com/kf/H8c8e2e2c8ad746d5a6e1568aea1516a0P.png",
+        "https://sc04.alicdn.com/kf/H267c1d28cdc0421cb27de33be502dc23n.png",
+        "https://sc04.alicdn.com/kf/H9f32c7ecea0f4d25bc5ddc9cd04c1e5dK.jpg"
+      ],
+      "sku_count": 6
+    },
+    {
+      "id": "1601943484576",
+      "model": "HR012-C",
+      "formal_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943484576/formal_get.json",
+      "formal_observed_at": "2026-10-12T22:12:19.644737+00:00",
+      "checks": {
+        "approved_actual_product_images_match": true,
+        "whole_six_images_match_current_catalog": true,
+        "raw_photo_hashes": true,
+        "materials_match_specific_model_table": true,
+        "source_eu_cartesian": true,
+        "approved_y": true
+      },
+      "main_images": [
+        "https://sc04.alicdn.com/kf/H6c1ef499dea048b4b49254a559ee1312y.png",
+        "https://sc04.alicdn.com/kf/H267c1d28cdc0421cb27de33be502dc23n.png",
+        "https://sc04.alicdn.com/kf/H8c8e2e2c8ad746d5a6e1568aea1516a0P.png",
+        "https://sc04.alicdn.com/kf/Hf120aeaf124c4cde9e334eefad3590b34.png",
+        "https://sc04.alicdn.com/kf/Hc20c79a2c45440c886a2c50209f072c1p.png",
+        "https://sc04.alicdn.com/kf/H9f32c7ecea0f4d25bc5ddc9cd04c1e5dK.jpg"
+      ],
+      "sku_count": 6
+    }
+  ],
+  "basis": "Specific approved actual-model source plan and independently reviewed original/derivative hashes. All five product-image identities, full current six-image sequence, stated material fields and complete EU combinations are checked. Unspecified upper composition is not invented; prior MOQ/price/packing and current company FAQ remain unchanged. This restores actual source metadata without platform mutations.",
+  "source_current_access": "Historical accepted actual-source evidence dated2026-09-29; not a new direct-live access, stock or current quote confirmation.",
+  "platform_mutation": "NONE_EXISTING_ACTUAL_SHOE_PRESERVED",
+  "physical_stock": "NOT_CONFIRMED_ORDER_SPECIFIC"
+}

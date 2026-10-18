@@ -1,0 +1,47 @@
+{
+  "tool": "Builtin image_gen",
+  "prompts": {
+    "SKU_Black": {
+      "role": "SKU_Black",
+      "prompt": "Square white-background SKU catalogue crop from exact JS2569 source28. Isolate ONLY the existing COMPLETE BLACK shoe in the UPPER panel, preserving its actual left-facing SIDEPROFILE, blackupper texture, roundlaces/metaleyelets, sidepanel seams, plaincollar/rearpullstrip, blacktoebumper and studdedblacksole edge exactly. Remove outside Chinese/size labels and LOWERGreen shoe bycrop. Naturalshadow, 85%width. No new angle, hiddenpart reconstruction, relightingtoGrey, logo, text or materialperformance claims.",
+      "referenced_image_paths": [
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2569准备/01_产品来源原图/江上补充/28.jpg"
+      ],
+      "output_hint": "Generated images are saved to E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c as E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-44130593-a059-4b51-8782-3a8bbd1ebfac.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    "SKU_Green": {
+      "role": "SKU_Green",
+      "prompt": "Square white-background SKU catalogue crop from exact JS2569 source28. Isolate ONLY the existing COMPLETE GREEN shoe in the LOWER panel, preserving its actual left-facing SIDEPROFILE, deepGreen uppertexture, Greenroundlaces/metaleyelets, sidepanel seams, plaincollar/rearpullstrip, BLACKtoebumper and studdedBLACKsoleedge exactly. Exclude outsideChinese/size labels and UPPERBlack shoe bycrop. Naturalshadow, 85%width. No new angle, recolour, hidden reconstruction, newlogos or text.",
+      "referenced_image_paths": [
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2569准备/01_产品来源原图/江上补充/28.jpg"
+      ],
+      "output_hint": "Generated images are saved to E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c as E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-c9209864-b6d3-4319-89dc-b07e22690de7.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    "SKU_Pink": {
+      "role": "SKU_Pink",
+      "prompt": "Square white-background SKU catalogue crop from exact JS2569 source27. Isolate ONLY the existing COMPLETE PINK shoe in the LOWER panel, preserving its actual left-facing SIDEPROFILE, Pinkuppertexture/Pinkroundlaces/metaleyelets, sidepanel seams, plaincollar/Pinkrearloop, BLACKtoe bumper and studdedBLACKsoleedge exactly. Exclude allChinese/size/material claims and UPPERBeige shoe bycrop. Naturalshadow, 85%width. No new angle, recolour, hiddenpart reconstruction, logos or text.",
+      "referenced_image_paths": [
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2569准备/01_产品来源原图/江上补充/27.jpg"
+      ],
+      "output_hint": "Generated images are saved to E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c as E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-abddbd4b-ac18-435d-87b9-41cd377ae27b.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    "M5": {
+      "role": "M5",
+      "prompt": "Square catalogue crop of ONLY TOP actual GREEN on-foot photo from exact JS2569 source17. Keep both photographed green shoes and white socks/lower shins at their actual forward-facing poses on original grey stone steps. Crop outside lower Chinese technical-midsole caption out completely. Preserve roundGREENlaces/metaleyelets, Greenupper, contrastingBLACKtoe bumpers, actual soleedges, shoe count, angles and original shadow. Shoes dominant, no invented sole underside, new pose, texture repaint, logos or text.",
+      "referenced_image_paths": [
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2569准备/01_产品来源原图/江上补充/17.jpg"
+      ],
+      "output_hint": "Generated images are saved to E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c as E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-c16c16f0-5e8e-4daa-9a9b-8049f5fa8d5b.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    "D4": {
+      "role": "D4",
+      "prompt": "Square English B2B colour/size selection infographic made from exact JS2569 source photos. Ref1source27 contains actual Beigeupper/Pinklower LEFT-facing single SIDEprofiles. Ref2source28 actual Blackupper/Greenlower LEFT-facing single SIDEprofiles. Use exact original photographed shoe profiles as cutouts, preserving four shoes total, actual colours, roundlaces/metaleyelets, panelgeometry, plaincollar/rearloops, BLACKtoe bumpers and studdedBLACKsole edges. NO recolouring/new angles/undersides. White/navy/orange clean2x2grid. Heading 'Colours & EU Size Choices'. Each panel shows ONE corresponding original complete shoe and exactly these labels: 'Beige | EU 36–48', 'Black | EU 36–48', 'Green | EU 36–48', 'Pink | EU 36–42'. Footer 'Send your colour and EU size mix for a quotation'. Remove sourceChinese/header/spec captions, do not repeat a table, invent width/US/cm conversions, stock/dispatch, rubber or performance claims. Keep all four toes and heels fully inside the panels.",
+      "referenced_image_paths": [
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2569准备/01_产品来源原图/江上补充/27.jpg",
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2569准备/01_产品来源原图/江上补充/28.jpg"
+      ],
+      "output_hint": "Generated images are saved to E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c as E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-939c82cd-e94c-473e-9f52-db4c09ca7adf.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    }
+  },
+  "limits": "Only actual photographed fourcolour views; no recolour, invented underside, performance or stock claims."
+}

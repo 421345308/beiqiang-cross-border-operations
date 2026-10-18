@@ -1,0 +1,78 @@
+{
+  "method": "alibaba.icbu.product.schema.update",
+  "operation": "update",
+  "status": "submitted_needs_readback",
+  "content_status": "pending_readback",
+  "expected_fields": {
+    "textDesc": [
+      "field",
+      [
+        [
+          "id",
+          "textDesc"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Wide toe box lace-up mesh walking shoes for summer casual footwear assortments. Black, LightGrey, OffWhite colors; EU 39-48 sizes. Open mesh low-cut lace-up upper with separate thin curved side cords, toe cap and segmented scalloped sole; three colors. Share your size mix, quantities, packaging needs and destination for a wholesale quotation. Final specifications and availability are confirmed before ordering.",
+          []
+        ]
+      ]
+    ]
+  },
+  "sku_verification": null,
+  "task_pack": null,
+  "replacement_plan": null,
+  "replacement_transition": null,
+  "inventory_input": null,
+  "post_publish_acceptance": {
+    "phase": "post_publish_completion",
+    "target_score": 5.0,
+    "actual_score": null,
+    "observed_at": null,
+    "score_source": null,
+    "diagnostics": {
+      "status": "not_read"
+    },
+    "score_status": "pending_score",
+    "overall_status": "PENDING_SCORE",
+    "unverified_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "versioned_content": null,
+    "required_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "limits": "Platform listing score does not prove public content, source truth or real product quality."
+  },
+  "attempted_at": "2026-10-08T12:52:33.667070+00:00",
+  "response": {
+    "trace_id": "212e559c17914639591543232e1150",
+    "product_id": 1601973753470,
+    "biz_success": true,
+    "request_id": "21501b8d17914639592868770",
+    "_trace_id_": "212e559c17914639591543232e1150"
+  },
+  "refs": {
+    "request_id": "21501b8d17914639592868770",
+    "trace_id": "212e559c17914639591543232e1150",
+    "message": null,
+    "error": null
+  },
+  "product_id": "1601973753470"
+}

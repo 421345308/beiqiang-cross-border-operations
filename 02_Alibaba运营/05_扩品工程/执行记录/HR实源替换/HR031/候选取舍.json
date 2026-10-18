@@ -1,0 +1,1102 @@
+{
+  "family": "HR031",
+  "retired_candidates": [
+    {
+      "state": "UNSUBMITTED_CANDIDATE_SUPERSEDED",
+      "reason": "后台近期与月度数据不足以支持原CNY82候选；采用CNY35 D11真实鞋，保留旧候选全部素材与回执供追溯。",
+      "source_artno": "R311",
+      "source_url": "https://xingjue.sooxie.com/detail/2565818",
+      "raw_package_retained": "01_产品资产/01_原始数据包/HR031_R311",
+      "past_draft_plan_for_rebuilding_formal_upload_evidence_only": {
+        "candidate": "xingjue_2565818",
+        "source_artno": "R311",
+        "supplier": "星爵鞋业",
+        "source_url": "https://xingjue.sooxie.com/detail/2565818",
+        "source_price_cny": 82,
+        "colors": [
+          "Black",
+          "Grey"
+        ],
+        "source_color_labels": [
+          "黑色",
+          "灰色"
+        ],
+        "sizes": [
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44
+        ],
+        "upper": "Other",
+        "lining": "Other",
+        "midsole": "Other",
+        "outsole": "Other",
+        "closure": "Lace-up",
+        "style": [
+          "Casual",
+          "Derby Shoes"
+        ],
+        "seasons": [
+          "All Seasons"
+        ],
+        "category_id": 201334413,
+        "local_intent_candidates": [
+          "纹理鞋面/系带商务休闲鞋"
+        ],
+        "materials_evidence": [
+          "Current source29 product photos provide structure but no specific component composition. 皮鞋 in generic source title is not a genuine-leather proof. No leather/rubber/fibre claim added."
+        ],
+        "titles": {
+          "A": "Lace-Up Derby Shoes with Textured Upper and Contrast Sole Edge for Business Casual Wear",
+          "B": "Plain Toe Lace-Up Casual Shoes with Low Heel and Textured Finish for Office Footwear Collections",
+          "C": "Wholesale Textured Derby Shoes with Lace-Up Front and Contrast Sole Edge for Daily Outfits"
+        },
+        "keywords": [
+          "Textured Lace Up Derby Shoes",
+          "Plain Toe Casual Shoes",
+          "Business Casual Footwear"
+        ],
+        "custom": [
+          "Shoe Profile",
+          "Textured low-top Derby; lace-up front; contrast sole edge"
+        ],
+        "highlights": "Textured plain-toe profile: A grained surface and uncluttered vamp give this lace-up shoe a clear business-casual direction.\n\nOpen-lacing construction: Separate eyelet panels sit over the vamp, with four visible lace rows for adjustment across the instep.\n\nContrast sole edge: A light border separates the upper from the darker low-heel sole, while the heel and side seams define the back profile.\n\nTwo neutral options: Black and Grey, with EU38-44 sizes for coordinated office and everyday footwear assortments.\n\nWholesale planning: Send colour-size quantities, packing preference and destination for an order quotation.",
+        "dedup": "Exact source URL/model absent. Plain toe/open-lacing quarters and low blocked heel differ from HR026 moc/apron-toe lace-up source; background Cadillac-prop photos24/25 excluded.",
+        "gender_scope": "No specific gender statement in public product title; buyer title remains adult-style and does not infer gender from numerical sizes.",
+        "target_ids": {
+          "A": "1601943665060",
+          "B": "1601943651120"
+        },
+        "source_assets_root": "01_产品资产/01_原始数据包/HR031_R311",
+        "source_date": "2026-10-13",
+        "feature": "Fashion Trend",
+        "fx_cny_per_usd": 6.6837,
+        "tiers": [
+          [
+            2,
+            "18.41"
+          ],
+          [
+            50,
+            "17.18"
+          ],
+          [
+            100,
+            "15.95"
+          ]
+        ],
+        "page_state": "LOCAL_DRAFT",
+        "assets_layout": {
+          "M1": {
+            "buyer_question": "What is the exact offered shoe?",
+            "title": null,
+            "subtitle": "",
+            "photos": [
+              {
+                "index": 20,
+                "box": [
+                  15,
+                  15,
+                  985,
+                  985
+                ]
+              }
+            ],
+            "text": []
+          },
+          "M2": {
+            "buyer_question": "How does it look with casual trousers?",
+            "title": "Business-casual profile",
+            "subtitle": "A textured plain toe and a contrast sole border.",
+            "photos": [
+              {
+                "index": 17,
+                "box": [
+                  45,
+                  200,
+                  955,
+                  945
+                ]
+              }
+            ],
+            "text": []
+          },
+          "M3": {
+            "buyer_question": "How are the quarters and sole edge finished?",
+            "title": "Side profile & sole edge",
+            "subtitle": "Open-lacing panels and a low block-style heel.",
+            "photos": [
+              {
+                "index": 22,
+                "box": [
+                  45,
+                  200,
+                  955,
+                  945
+                ]
+              }
+            ],
+            "text": []
+          },
+          "M4": {
+            "buyer_question": "Which colour and EU options can I request?",
+            "title": "Colour & EU options",
+            "subtitle": "Choose the colour-size quantities for your order.",
+            "photos": [
+              {
+                "index": 20,
+                "box": [
+                  45,
+                  200,
+                  475,
+                  835
+                ]
+              },
+              {
+                "index": 21,
+                "box": [
+                  525,
+                  200,
+                  955,
+                  835
+                ]
+              }
+            ],
+            "text": [
+              {
+                "value": "Black",
+                "xy": [
+                  65,
+                  845
+                ],
+                "size": 25
+              },
+              {
+                "value": "Grey",
+                "xy": [
+                  545,
+                  845
+                ],
+                "size": 25
+              },
+              {
+                "value": "EU 38-44",
+                "xy": [
+                  45,
+                  920
+                ],
+                "size": 32
+              }
+            ]
+          },
+          "M5": {
+            "buyer_question": "What does the opening and toe look like?",
+            "title": "Top view & closure",
+            "subtitle": "Four lace rows and a plain stitched outline.",
+            "photos": [
+              {
+                "index": 23,
+                "box": [
+                  45,
+                  200,
+                  955,
+                  945
+                ]
+              }
+            ],
+            "text": []
+          },
+          "D1": {
+            "buyer_question": "What is the upper texture and panel structure?",
+            "title": "Textured Derby construction",
+            "subtitle": "The eyelet panels sit over an uncluttered vamp.",
+            "photos": [
+              {
+                "index": 18,
+                "box": [
+                  45,
+                  210,
+                  955,
+                  1060
+                ]
+              }
+            ],
+            "text": [
+              {
+                "value": "Lace-up front for instep adjustment.",
+                "xy": [
+                  45,
+                  1140
+                ],
+                "size": 25
+              }
+            ]
+          },
+          "D2": {
+            "buyer_question": "How does the sole and heel appear?",
+            "title": "Contrast sole border",
+            "subtitle": "Light edge detail separates the upper and dark sole.",
+            "photos": [
+              {
+                "index": 22,
+                "box": [
+                  45,
+                  210,
+                  955,
+                  1060
+                ]
+              }
+            ],
+            "text": [
+              {
+                "value": "Low heel and stitched quarter panels.",
+                "xy": [
+                  45,
+                  1140
+                ],
+                "size": 25
+              }
+            ]
+          },
+          "D3": {
+            "buyer_question": "How can I style it?",
+            "title": "Office & everyday outfits",
+            "subtitle": "A neutral plain-toe option for casual trouser collections.",
+            "photos": [
+              {
+                "index": 5,
+                "box": [
+                  45,
+                  220,
+                  485,
+                  1050
+                ]
+              },
+              {
+                "index": 17,
+                "box": [
+                  515,
+                  220,
+                  955,
+                  1050
+                ]
+              }
+            ],
+            "text": [
+              {
+                "value": "Grey and Black shown in actual style photographs.",
+                "xy": [
+                  45,
+                  1140
+                ],
+                "size": 25
+              }
+            ]
+          },
+          "D4": {
+            "buyer_question": "Which colour and EU options can I request?",
+            "title": "Colour & EU options",
+            "subtitle": "Choose the colour-size quantities for your order.",
+            "photos": [
+              {
+                "index": 20,
+                "box": [
+                  45,
+                  200,
+                  475,
+                  1085
+                ]
+              },
+              {
+                "index": 21,
+                "box": [
+                  525,
+                  200,
+                  955,
+                  1085
+                ]
+              }
+            ],
+            "text": [
+              {
+                "value": "Black",
+                "xy": [
+                  65,
+                  1095
+                ],
+                "size": 25
+              },
+              {
+                "value": "Grey",
+                "xy": [
+                  545,
+                  1095
+                ],
+                "size": 25
+              },
+              {
+                "value": "EU 38-44",
+                "xy": [
+                  45,
+                  1170
+                ],
+                "size": 32
+              }
+            ]
+          },
+          "SKU_BLACK": {
+            "buyer_question": "Which actual colour is this SKU?",
+            "title": null,
+            "subtitle": "",
+            "photos": [
+              {
+                "index": 20,
+                "box": [
+                  25,
+                  25,
+                  975,
+                  975
+                ]
+              }
+            ],
+            "text": []
+          },
+          "SKU_GREY": {
+            "buyer_question": "Which actual colour is this SKU?",
+            "title": null,
+            "subtitle": "",
+            "photos": [
+              {
+                "index": 21,
+                "box": [
+                  25,
+                  25,
+                  975,
+                  975
+                ]
+              }
+            ],
+            "text": []
+          }
+        },
+        "source_id": "src-hr-hr031-r311",
+        "source_evidence": [
+          "01_产品资产/01_原始数据包/HR031_R311/source.json",
+          "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR031/素材清单.json"
+        ],
+        "procurement_capability": "CURRENT_REAL_SHOE_AND_PROCUREMENT_ENTRY_VERIFIED_NOT_ORDER_STOCK",
+        "company_faq_source": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/通用FAQ与公司简介.json",
+        "do_not_claim": [
+          "physical stock",
+          "tested slip resistance",
+          "medical comfort",
+          "unverified midsole material"
+        ]
+      },
+      "official_image_bank_receipts_preserved": {
+        "family": "HR031",
+        "items": {
+          "M1": {
+            "path": "01_产品资产/02_可发布素材/HR031/M1.jpg",
+            "sha256": "0e93c8fbad60c0c211c686df3d15ab402bf3ab07f393a7780bfd4225205e5c7b",
+            "dimensions": [
+              1000,
+              1000
+            ],
+            "state": "UPLOADED",
+            "at": "2026-10-13T11:38:47.587213+00:00",
+            "response": {
+              "upload_image_response": {
+                "file_name": "M1.jpg",
+                "file_id": 33829524785,
+                "photobank_url": "//sc04.alicdn.com/kf/Hf282acc5b3c24ba6a15d541031005eb8C/286385890/Hf282acc5b3c24ba6a15d541031005eb8C.jpg"
+              },
+              "request_id": "213e759c17918915429384150",
+              "_trace_id_": "21310a5d17918915427163896e0b69"
+            },
+            "url": "https://sc04.alicdn.com/kf/Hf282acc5b3c24ba6a15d541031005eb8C/286385890/Hf282acc5b3c24ba6a15d541031005eb8C.jpg",
+            "file_id": "33829524785"
+          },
+          "M2": {
+            "path": "01_产品资产/02_可发布素材/HR031/M2.jpg",
+            "sha256": "f68f2e38ab1be1513f13bbb418318619a5915366c13db4671b31275a45f92ad1",
+            "dimensions": [
+              1000,
+              1000
+            ],
+            "state": "UPLOADED",
+            "at": "2026-10-13T11:38:54.483880+00:00",
+            "response": {
+              "upload_image_response": {
+                "file_name": "M2.jpg",
+                "file_id": 33828168161,
+                "photobank_url": "//sc04.alicdn.com/kf/H3d9900a17b214a048b54d04196a2b97bq/286385890/H3d9900a17b214a048b54d04196a2b97bq.jpg"
+              },
+              "request_id": "2105044417918915487234430",
+              "_trace_id_": "0b51006817918915484766616e0b8a"
+            },
+            "url": "https://sc04.alicdn.com/kf/H3d9900a17b214a048b54d04196a2b97bq/286385890/H3d9900a17b214a048b54d04196a2b97bq.jpg",
+            "file_id": "33828168161"
+          },
+          "M3": {
+            "path": "01_产品资产/02_可发布素材/HR031/M3.jpg",
+            "sha256": "eb690fc6dfdb7b3d7a753e6720fb17430854c384683cd98fa5b63525bbbf9517",
+            "dimensions": [
+              1000,
+              1000
+            ],
+            "state": "UPLOADED",
+            "at": "2026-10-13T11:39:00.190040+00:00",
+            "response": {
+              "upload_image_response": {
+                "file_name": "M3.jpg",
+                "file_id": 33828204072,
+                "photobank_url": "//sc04.alicdn.com/kf/Hf263172a35124b108e8e6ba34a2be0e33/286385890/Hf263172a35124b108e8e6ba34a2be0e33.jpg"
+              },
+              "request_id": "21501b6717918915544371520",
+              "_trace_id_": "21057f9a17918915542163545e0db4"
+            },
+            "url": "https://sc04.alicdn.com/kf/Hf263172a35124b108e8e6ba34a2be0e33/286385890/Hf263172a35124b108e8e6ba34a2be0e33.jpg",
+            "file_id": "33828204072"
+          },
+          "M4": {
+            "path": "01_产品资产/02_可发布素材/HR031/M4.jpg",
+            "sha256": "e291faf1b02d83127bd7d0727dfb27f821fbe9679af02da1d09108229af18b8b",
+            "dimensions": [
+              1000,
+              1000
+            ],
+            "state": "UPLOADED",
+            "at": "2026-10-13T11:39:05.882951+00:00",
+            "response": {
+              "upload_image_response": {
+                "file_name": "M4.jpg",
+                "file_id": 33829524795,
+                "photobank_url": "//sc04.alicdn.com/kf/H95c0b48e98c34b1dbad5a9a9fd46a577P/286385890/H95c0b48e98c34b1dbad5a9a9fd46a577P.jpg"
+              },
+              "request_id": "2105584317918915601012911",
+              "_trace_id_": "210540fc17918915599203279e0c2c"
+            },
+            "url": "https://sc04.alicdn.com/kf/H95c0b48e98c34b1dbad5a9a9fd46a577P/286385890/H95c0b48e98c34b1dbad5a9a9fd46a577P.jpg",
+            "file_id": "33829524795"
+          },
+          "M5": {
+            "path": "01_产品资产/02_可发布素材/HR031/M5.jpg",
+            "sha256": "bf4dc893613915e1b9ad3308d5f3cdb359efde6bec1a1bd7d7d8f400885f9061",
+            "dimensions": [
+              1000,
+              1000
+            ],
+            "state": "UPLOADED",
+            "at": "2026-10-13T11:39:11.552875+00:00",
+            "response": {
+              "upload_image_response": {
+                "file_name": "M5.jpg",
+                "file_id": 33825961374,
+                "photobank_url": "//sc04.alicdn.com/kf/He03a8906fdb640d2ba24aed28deb38bb4/286385890/He03a8906fdb640d2ba24aed28deb38bb4.jpg"
+              },
+              "request_id": "0bbb637a17918915657917233",
+              "_trace_id_": "21310a5c17918915655642148e0f27"
+            },
+            "url": "https://sc04.alicdn.com/kf/He03a8906fdb640d2ba24aed28deb38bb4/286385890/He03a8906fdb640d2ba24aed28deb38bb4.jpg",
+            "file_id": "33825961374"
+          },
+          "D1": {
+            "path": "01_产品资产/02_可发布素材/HR031/D1.jpg",
+            "sha256": "fbeaf2224e54e8851f5e572bb35d6c7e9c3c6f0d4c9d399f25d2330b16b71207",
+            "dimensions": [
+              1000,
+              1250
+            ],
+            "state": "UPLOADED",
+            "at": "2026-10-13T11:39:17.258848+00:00",
+            "response": {
+              "upload_image_response": {
+                "file_name": "D1.jpg",
+                "file_id": 33829464914,
+                "photobank_url": "//sc04.alicdn.com/kf/H7b2c17966c2a436c89d524c09d45b4c8N/286385890/H7b2c17966c2a436c89d524c09d45b4c8N.jpg"
+              },
+              "request_id": "210829b717918915717131903",
+              "_trace_id_": "2133d9ef17918915714237857e0d34"
+            },
+            "url": "https://sc04.alicdn.com/kf/H7b2c17966c2a436c89d524c09d45b4c8N/286385890/H7b2c17966c2a436c89d524c09d45b4c8N.jpg",
+            "file_id": "33829464914"
+          },
+          "D2": {
+            "path": "01_产品资产/02_可发布素材/HR031/D2.jpg",
+            "sha256": "d7ad1c409bf540ee1beeca73aa73796bfd9147b887da0f3bb5b108dea1563db4",
+            "dimensions": [
+              1000,
+              1250
+            ],
+            "state": "UPLOADED",
+            "at": "2026-10-13T11:39:23.194221+00:00",
+            "response": {
+              "upload_image_response": {
+                "file_name": "D2.jpg",
+                "file_id": 33827713690,
+                "photobank_url": "//sc04.alicdn.com/kf/Hd6b84a9f108943b7b4736a395c64703bU/286385890/Hd6b84a9f108943b7b4736a395c64703bU.jpg"
+              },
+              "request_id": "212cbf3217918915774595001",
+              "_trace_id_": "2133d9ef17918915772103490e0f23"
+            },
+            "url": "https://sc04.alicdn.com/kf/Hd6b84a9f108943b7b4736a395c64703bU/286385890/Hd6b84a9f108943b7b4736a395c64703bU.jpg",
+            "file_id": "33827713690"
+          },
+          "D3": {
+            "path": "01_产品资产/02_可发布素材/HR031/D3.jpg",
+            "sha256": "c14bdbbfefc6779b2b9c51389e651809d7c7d8209056ca5fcb6a7c6610c5fb58",
+            "dimensions": [
+              1000,
+              1250
+            ],
+            "state": "UPLOADED",
+            "at": "2026-10-13T11:39:28.941501+00:00",
+            "response": {
+              "upload_image_response": {
+                "file_name": "D3.jpg",
+                "file_id": 33828180207,
+                "photobank_url": "//sc04.alicdn.com/kf/Hc7c2857c071749fe8075ad082dc29365E/286385890/Hc7c2857c071749fe8075ad082dc29365E.jpg"
+              },
+              "request_id": "213c934417918915839987006",
+              "_trace_id_": "2166b76317918915830535542e1087"
+            },
+            "url": "https://sc04.alicdn.com/kf/Hc7c2857c071749fe8075ad082dc29365E/286385890/Hc7c2857c071749fe8075ad082dc29365E.jpg",
+            "file_id": "33828180207"
+          },
+          "D4": {
+            "path": "01_产品资产/02_可发布素材/HR031/D4.jpg",
+            "sha256": "0e2dc2196631336a28955145626d6aa3066a290b1cfb5cc1e5cc5d45bef7b265",
+            "dimensions": [
+              1000,
+              1250
+            ],
+            "state": "UPLOADED",
+            "at": "2026-10-13T11:39:35.458893+00:00",
+            "response": {
+              "upload_image_response": {
+                "file_name": "D4.jpg",
+                "file_id": 33828108419,
+                "photobank_url": "//sc04.alicdn.com/kf/Hcd4168776e6f45d0a95f7cdc40dc5faeW/286385890/Hcd4168776e6f45d0a95f7cdc40dc5faeW.jpg"
+              },
+              "request_id": "212c6fc617918915896628674",
+              "_trace_id_": "2107e85d17918915894813729e0bef"
+            },
+            "url": "https://sc04.alicdn.com/kf/Hcd4168776e6f45d0a95f7cdc40dc5faeW/286385890/Hcd4168776e6f45d0a95f7cdc40dc5faeW.jpg",
+            "file_id": "33828108419"
+          },
+          "SKU_BLACK": {
+            "path": "01_产品资产/02_可发布素材/HR031/SKU_BLACK.jpg",
+            "sha256": "e7031af3717f887a02f535fb57dca5ce1fdf302ce4eca0a7ff633889f60dc4dc",
+            "dimensions": [
+              1000,
+              1000
+            ],
+            "state": "UPLOADED",
+            "at": "2026-10-13T11:39:41.171573+00:00",
+            "response": {
+              "upload_image_response": {
+                "file_name": "SKU_BLACK.jpg",
+                "file_id": 33827701755,
+                "photobank_url": "//sc04.alicdn.com/kf/H558ba6807acf408e855b7b752234095aR/286385890/H558ba6807acf408e855b7b752234095aR.jpg"
+              },
+              "request_id": "212c41d317918915954306018",
+              "_trace_id_": "2108b3a017918915952086555e0f7e"
+            },
+            "url": "https://sc04.alicdn.com/kf/H558ba6807acf408e855b7b752234095aR/286385890/H558ba6807acf408e855b7b752234095aR.jpg",
+            "file_id": "33827701755"
+          },
+          "SKU_GREY": {
+            "path": "01_产品资产/02_可发布素材/HR031/SKU_GREY.jpg",
+            "sha256": "43c3cbd5bc87166c53152df44dccc71dfd963c0eb009a369e5d748aa058a7e4f",
+            "dimensions": [
+              1000,
+              1000
+            ],
+            "state": "UPLOADED",
+            "at": "2026-10-13T11:39:46.895221+00:00",
+            "response": {
+              "upload_image_response": {
+                "file_name": "SKU_GREY.jpg",
+                "file_id": 33825949388,
+                "photobank_url": "//sc04.alicdn.com/kf/He0cdb63d4b99488d8cf344ff53f5f0a0O/286385890/He0cdb63d4b99488d8cf344ff53f5f0a0O.jpg"
+              },
+              "request_id": "213f5a2117918916011736272",
+              "_trace_id_": "2133fc2917918916009288661e0cb8"
+            },
+            "url": "https://sc04.alicdn.com/kf/He0cdb63d4b99488d8cf344ff53f5f0a0O/286385890/He0cdb63d4b99488d8cf344ff53f5f0a0O.jpg",
+            "file_id": "33825949388"
+          },
+          "M6": {
+            "path": "01_产品资产/02_可发布素材/共享素材/贝强公司简介图库.jpg",
+            "sha256": "5164b4d0ac008fb79a20d60419d21713b4f49b9ecea0a845d6c7de104030f51e",
+            "dimensions": [
+              1721,
+              914
+            ],
+            "state": "UPLOADED",
+            "url": "https://sc04.alicdn.com/kf/H281467d09f4b48368c335900f583a9c9r/286385890/H281467d09f4b48368c335900f583a9c9r.jpg",
+            "file_id": "33817465899",
+            "reused_official_upload_from": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR020/图片银行.json",
+            "at": "2026-10-13T11:39:52.651761+00:00"
+          }
+        },
+        "state": "COMPLETE"
+      },
+      "reviewed_manifest": {
+        "family": "HR031",
+        "state": "VISUAL_PASS",
+        "items": {
+          "M1": {
+            "path": "01_产品资产/02_可发布素材/HR031/M1.jpg",
+            "sha256": "0e93c8fbad60c0c211c686df3d15ab402bf3ab07f393a7780bfd4225205e5c7b",
+            "dimensions": [
+              1000,
+              1000
+            ]
+          },
+          "M2": {
+            "path": "01_产品资产/02_可发布素材/HR031/M2.jpg",
+            "sha256": "f68f2e38ab1be1513f13bbb418318619a5915366c13db4671b31275a45f92ad1",
+            "dimensions": [
+              1000,
+              1000
+            ]
+          },
+          "M3": {
+            "path": "01_产品资产/02_可发布素材/HR031/M3.jpg",
+            "sha256": "eb690fc6dfdb7b3d7a753e6720fb17430854c384683cd98fa5b63525bbbf9517",
+            "dimensions": [
+              1000,
+              1000
+            ]
+          },
+          "M4": {
+            "path": "01_产品资产/02_可发布素材/HR031/M4.jpg",
+            "sha256": "e291faf1b02d83127bd7d0727dfb27f821fbe9679af02da1d09108229af18b8b",
+            "dimensions": [
+              1000,
+              1000
+            ]
+          },
+          "M5": {
+            "path": "01_产品资产/02_可发布素材/HR031/M5.jpg",
+            "sha256": "bf4dc893613915e1b9ad3308d5f3cdb359efde6bec1a1bd7d7d8f400885f9061",
+            "dimensions": [
+              1000,
+              1000
+            ]
+          },
+          "D1": {
+            "path": "01_产品资产/02_可发布素材/HR031/D1.jpg",
+            "sha256": "fbeaf2224e54e8851f5e572bb35d6c7e9c3c6f0d4c9d399f25d2330b16b71207",
+            "dimensions": [
+              1000,
+              1250
+            ]
+          },
+          "D2": {
+            "path": "01_产品资产/02_可发布素材/HR031/D2.jpg",
+            "sha256": "d7ad1c409bf540ee1beeca73aa73796bfd9147b887da0f3bb5b108dea1563db4",
+            "dimensions": [
+              1000,
+              1250
+            ]
+          },
+          "D3": {
+            "path": "01_产品资产/02_可发布素材/HR031/D3.jpg",
+            "sha256": "c14bdbbfefc6779b2b9c51389e651809d7c7d8209056ca5fcb6a7c6610c5fb58",
+            "dimensions": [
+              1000,
+              1250
+            ]
+          },
+          "D4": {
+            "path": "01_产品资产/02_可发布素材/HR031/D4.jpg",
+            "sha256": "0e2dc2196631336a28955145626d6aa3066a290b1cfb5cc1e5cc5d45bef7b265",
+            "dimensions": [
+              1000,
+              1250
+            ]
+          },
+          "SKU_BLACK": {
+            "path": "01_产品资产/02_可发布素材/HR031/SKU_BLACK.jpg",
+            "sha256": "e7031af3717f887a02f535fb57dca5ce1fdf302ce4eca0a7ff633889f60dc4dc",
+            "dimensions": [
+              1000,
+              1000
+            ]
+          },
+          "SKU_GREY": {
+            "path": "01_产品资产/02_可发布素材/HR031/SKU_GREY.jpg",
+            "sha256": "43c3cbd5bc87166c53152df44dccc71dfd963c0eb009a369e5d748aa058a7e4f",
+            "dimensions": [
+              1000,
+              1000
+            ]
+          },
+          "M6": {
+            "path": "01_产品资产/02_可发布素材/共享素材/贝强公司简介图库.jpg",
+            "sha256": "5164b4d0ac008fb79a20d60419d21713b4f49b9ecea0a845d6c7de104030f51e",
+            "dimensions": [
+              1721,
+              914
+            ]
+          }
+        },
+        "image_roles": {
+          "M1": {
+            "buyer_question": "What is the exact offered shoe?",
+            "source_pixels": [
+              {
+                "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR031_R311\\20.jpg",
+                "crop": null,
+                "native_effective_pixels": [
+                  800,
+                  800
+                ],
+                "uniform_resize": true
+              }
+            ],
+            "text": [],
+            "title": null
+          },
+          "M2": {
+            "buyer_question": "How does it look with casual trousers?",
+            "source_pixels": [
+              {
+                "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR031_R311\\17.jpg",
+                "crop": null,
+                "native_effective_pixels": [
+                  800,
+                  800
+                ],
+                "uniform_resize": true
+              }
+            ],
+            "text": [],
+            "title": "Business-casual profile"
+          },
+          "M3": {
+            "buyer_question": "How are the quarters and sole edge finished?",
+            "source_pixels": [
+              {
+                "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR031_R311\\22.jpg",
+                "crop": null,
+                "native_effective_pixels": [
+                  800,
+                  800
+                ],
+                "uniform_resize": true
+              }
+            ],
+            "text": [],
+            "title": "Side profile & sole edge"
+          },
+          "M4": {
+            "buyer_question": "Which colour and EU options can I request?",
+            "source_pixels": [
+              {
+                "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR031_R311\\20.jpg",
+                "crop": null,
+                "native_effective_pixels": [
+                  800,
+                  800
+                ],
+                "uniform_resize": true
+              },
+              {
+                "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR031_R311\\21.jpg",
+                "crop": null,
+                "native_effective_pixels": [
+                  800,
+                  800
+                ],
+                "uniform_resize": true
+              }
+            ],
+            "text": [
+              {
+                "value": "Black",
+                "xy": [
+                  65,
+                  845
+                ],
+                "size": 25
+              },
+              {
+                "value": "Grey",
+                "xy": [
+                  545,
+                  845
+                ],
+                "size": 25
+              },
+              {
+                "value": "EU 38-44",
+                "xy": [
+                  45,
+                  920
+                ],
+                "size": 32
+              }
+            ],
+            "title": "Colour & EU options"
+          },
+          "M5": {
+            "buyer_question": "What does the opening and toe look like?",
+            "source_pixels": [
+              {
+                "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR031_R311\\23.jpg",
+                "crop": null,
+                "native_effective_pixels": [
+                  800,
+                  800
+                ],
+                "uniform_resize": true
+              }
+            ],
+            "text": [],
+            "title": "Top view & closure"
+          },
+          "D1": {
+            "buyer_question": "What is the upper texture and panel structure?",
+            "source_pixels": [
+              {
+                "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR031_R311\\18.jpg",
+                "crop": null,
+                "native_effective_pixels": [
+                  800,
+                  800
+                ],
+                "uniform_resize": true
+              }
+            ],
+            "text": [
+              {
+                "value": "Lace-up front for instep adjustment.",
+                "xy": [
+                  45,
+                  1140
+                ],
+                "size": 25
+              }
+            ],
+            "title": "Textured Derby construction"
+          },
+          "D2": {
+            "buyer_question": "How does the sole and heel appear?",
+            "source_pixels": [
+              {
+                "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR031_R311\\22.jpg",
+                "crop": null,
+                "native_effective_pixels": [
+                  800,
+                  800
+                ],
+                "uniform_resize": true
+              }
+            ],
+            "text": [
+              {
+                "value": "Low heel and stitched quarter panels.",
+                "xy": [
+                  45,
+                  1140
+                ],
+                "size": 25
+              }
+            ],
+            "title": "Contrast sole border"
+          },
+          "D3": {
+            "buyer_question": "How can I style it?",
+            "source_pixels": [
+              {
+                "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR031_R311\\05.jpg",
+                "crop": null,
+                "native_effective_pixels": [
+                  800,
+                  800
+                ],
+                "uniform_resize": true
+              },
+              {
+                "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR031_R311\\17.jpg",
+                "crop": null,
+                "native_effective_pixels": [
+                  800,
+                  800
+                ],
+                "uniform_resize": true
+              }
+            ],
+            "text": [
+              {
+                "value": "Grey and Black shown in actual style photographs.",
+                "xy": [
+                  45,
+                  1140
+                ],
+                "size": 25
+              }
+            ],
+            "title": "Office & everyday outfits"
+          },
+          "D4": {
+            "buyer_question": "Which colour and EU options can I request?",
+            "source_pixels": [
+              {
+                "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR031_R311\\20.jpg",
+                "crop": null,
+                "native_effective_pixels": [
+                  800,
+                  800
+                ],
+                "uniform_resize": true
+              },
+              {
+                "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR031_R311\\21.jpg",
+                "crop": null,
+                "native_effective_pixels": [
+                  800,
+                  800
+                ],
+                "uniform_resize": true
+              }
+            ],
+            "text": [
+              {
+                "value": "Black",
+                "xy": [
+                  65,
+                  1095
+                ],
+                "size": 25
+              },
+              {
+                "value": "Grey",
+                "xy": [
+                  545,
+                  1095
+                ],
+                "size": 25
+              },
+              {
+                "value": "EU 38-44",
+                "xy": [
+                  45,
+                  1170
+                ],
+                "size": 32
+              }
+            ],
+            "title": "Colour & EU options"
+          },
+          "SKU_BLACK": {
+            "buyer_question": "Which actual colour is this SKU?",
+            "source_pixels": [
+              {
+                "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR031_R311\\20.jpg",
+                "crop": null,
+                "native_effective_pixels": [
+                  800,
+                  800
+                ],
+                "uniform_resize": true
+              }
+            ],
+            "text": [],
+            "title": null
+          },
+          "SKU_GREY": {
+            "buyer_question": "Which actual colour is this SKU?",
+            "source_pixels": [
+              {
+                "file": "C:\\Users\\spq\\Desktop\\贝强\\01_产品资产\\01_原始数据包\\HR031_R311\\21.jpg",
+                "crop": null,
+                "native_effective_pixels": [
+                  800,
+                  800
+                ],
+                "uniform_resize": true
+              }
+            ],
+            "text": [],
+            "title": null
+          },
+          "M6": {
+            "buyer_question": "Who will coordinate the footwear order?",
+            "shared_approved_company_image": "01_产品资产/02_可发布素材/共享素材/贝强公司简介图库.jpg"
+          }
+        },
+        "visual_review": {
+          "reviewed_on": "2026-10-13",
+          "scope": "All current main/detail/SKU images and source originals visually compared; original shoe geometry preserved; foreign promotional text and logo props excluded; no invented material or performance claims; six main images include approved company image."
+        }
+      },
+      "archived_images": [
+        {
+          "original_path": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\HR031\\M1.jpg",
+          "retained_path": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\HR031\\候选证据\\R311\\M1.jpg",
+          "sha256": "0e93c8fbad60c0c211c686df3d15ab402bf3ab07f393a7780bfd4225205e5c7b"
+        },
+        {
+          "original_path": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\HR031\\M2.jpg",
+          "retained_path": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\HR031\\候选证据\\R311\\M2.jpg",
+          "sha256": "f68f2e38ab1be1513f13bbb418318619a5915366c13db4671b31275a45f92ad1"
+        },
+        {
+          "original_path": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\HR031\\M3.jpg",
+          "retained_path": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\HR031\\候选证据\\R311\\M3.jpg",
+          "sha256": "eb690fc6dfdb7b3d7a753e6720fb17430854c384683cd98fa5b63525bbbf9517"
+        },
+        {
+          "original_path": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\HR031\\M4.jpg",
+          "retained_path": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\HR031\\候选证据\\R311\\M4.jpg",
+          "sha256": "e291faf1b02d83127bd7d0727dfb27f821fbe9679af02da1d09108229af18b8b"
+        },
+        {
+          "original_path": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\HR031\\M5.jpg",
+          "retained_path": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\HR031\\候选证据\\R311\\M5.jpg",
+          "sha256": "bf4dc893613915e1b9ad3308d5f3cdb359efde6bec1a1bd7d7d8f400885f9061"
+        },
+        {
+          "original_path": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\HR031\\D1.jpg",
+          "retained_path": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\HR031\\候选证据\\R311\\D1.jpg",
+          "sha256": "fbeaf2224e54e8851f5e572bb35d6c7e9c3c6f0d4c9d399f25d2330b16b71207"
+        },
+        {
+          "original_path": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\HR031\\D2.jpg",
+          "retained_path": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\HR031\\候选证据\\R311\\D2.jpg",
+          "sha256": "d7ad1c409bf540ee1beeca73aa73796bfd9147b887da0f3bb5b108dea1563db4"
+        },
+        {
+          "original_path": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\HR031\\D3.jpg",
+          "retained_path": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\HR031\\候选证据\\R311\\D3.jpg",
+          "sha256": "c14bdbbfefc6779b2b9c51389e651809d7c7d8209056ca5fcb6a7c6610c5fb58"
+        },
+        {
+          "original_path": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\HR031\\D4.jpg",
+          "retained_path": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\HR031\\候选证据\\R311\\D4.jpg",
+          "sha256": "0e2dc2196631336a28955145626d6aa3066a290b1cfb5cc1e5cc5d45bef7b265"
+        },
+        {
+          "original_path": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\HR031\\SKU_BLACK.jpg",
+          "retained_path": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\HR031\\候选证据\\R311\\SKU_BLACK.jpg",
+          "sha256": "e7031af3717f887a02f535fb57dca5ce1fdf302ce4eca0a7ff633889f60dc4dc"
+        },
+        {
+          "original_path": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\HR031\\SKU_GREY.jpg",
+          "retained_path": "E:\\贝强大文件\\01_产品资产\\02_可发布素材\\HR031\\候选证据\\R311\\SKU_GREY.jpg",
+          "sha256": "43c3cbd5bc87166c53152df44dccc71dfd963c0eb009a369e5d748aa058a7e4f"
+        }
+      ],
+      "archive_documents": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR031/候选证据/R311",
+      "derivative_path_state": "All current candidate derivatives and intact bank/material evidence retained in source-artno-specific candidate evidence paths. Original path in historical manifest refers to pre-archive state; archived_images provides verified current locations. No live product was updated with this candidate."
+    }
+  ]
+}

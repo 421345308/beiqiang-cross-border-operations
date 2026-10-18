@@ -1,0 +1,322 @@
+{
+  "keyword_input": null,
+  "differentiation_review": null,
+  "category_id": 201153804,
+  "operation": "update",
+  "inventory_input": null,
+  "model_serialization": null,
+  "target_product_id": "1601970169467",
+  "field_ids": [
+    "companyFaqDesc",
+    "textDesc"
+  ],
+  "dependency_ids": [
+    "productDescType"
+  ],
+  "xml": "<itemSchema><field id=\"textDesc\" name=\"Product Highlights\" type=\"input\"><value>Closed-toe, open-heel EVA mules with ribbed sidewalls and a textured front panel. The open back gives this style a different wearing option from a fully enclosed slip-on. Red and Grey bodies contrast with the visible orange sole pods for a distinctive casual-mule assortment.</value></field><field id=\"companyFaqDesc\" name=\"FAQs\" type=\"multiComplex\"><complex-values><field id=\"question\" type=\"input\"><value>Which color and EU size choices are listed?</value></field><field id=\"answers\" type=\"input\"><value>Red: EU 35–36, 37–38, 39–40, 40–41, 42–43, 44–45; Grey: EU 35–36, 37–38, 39–40, 40–41, 42–43, 44–45.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>Are the size labels individual or paired sizes?</value></field><field id=\"answers\" type=\"input\"><value>They are complete paired EU labels, including both 39–40 and 40–41 as separate choices. Keep the selected label intact when requesting pairs, and assess foot placement and toe room in the open-heel sample.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>What is the minimum order for the original style?</value></field><field id=\"answers\" type=\"input\"><value>The listed original-style minimum is 2 pairs. Quantity pricing is shown on this page; logo and custom packaging proposals are quoted separately.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>How can I request a sample?</value></field><field id=\"answers\" type=\"input\"><value>Send the selected color or lining option, EU size and delivery postcode for a sample quotation covering the pair, courier charge and proposed dispatch date.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>What should I send for logo or packaging requirements?</value></field><field id=\"answers\" type=\"input\"><value>Send the logo artwork, preferred placement, packaging brief and order quantity. The proposal for this style will set out the applicable minimum, cost and sample process.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>How can I get a delivered quotation?</value></field><field id=\"answers\" type=\"input\"><value>Send pair quantities by color and EU size, the destination postcode or port and the packaging request. The quotation separates product cost and freight and includes the proposed dispatch and transit schedule.</value></field></complex-values></field><field id=\"productDescType\" name=\"Product description\" type=\"singleCheck\"><value>4</value></field></itemSchema>",
+  "expected_fields": {
+    "textDesc": [
+      "field",
+      [
+        [
+          "id",
+          "textDesc"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Closed-toe, open-heel EVA mules with ribbed sidewalls and a textured front panel. The open back gives this style a different wearing option from a fully enclosed slip-on. Red and Grey bodies contrast with the visible orange sole pods for a distinctive casual-mule assortment.",
+          []
+        ]
+      ]
+    ],
+    "companyFaqDesc": [
+      "field",
+      [
+        [
+          "id",
+          "companyFaqDesc"
+        ]
+      ],
+      "",
+      [
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Which color and EU size choices are listed?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Red: EU 35–36, 37–38, 39–40, 40–41, 42–43, 44–45; Grey: EU 35–36, 37–38, 39–40, 40–41, 42–43, 44–45.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Are the size labels individual or paired sizes?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "They are complete paired EU labels, including both 39–40 and 40–41 as separate choices. Keep the selected label intact when requesting pairs, and assess foot placement and toe room in the open-heel sample.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "What is the minimum order for the original style?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "The listed original-style minimum is 2 pairs. Quantity pricing is shown on this page; logo and custom packaging proposals are quoted separately.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "How can I request a sample?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Send the selected color or lining option, EU size and delivery postcode for a sample quotation covering the pair, courier charge and proposed dispatch date.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "What should I send for logo or packaging requirements?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Send the logo artwork, preferred placement, packaging brief and order quantity. The proposal for this style will set out the applicable minimum, cost and sample process.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "How can I get a delivered quotation?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Send pair quantities by color and EU size, the destination postcode or port and the packaging request. The quotation separates product cost and freight and includes the proposed dispatch and transit schedule.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "prepared_from_current_schema": true,
+  "task_pack": null,
+  "replacement_plan": null,
+  "schema_provenance": {
+    "schema_request_id": "212c6fc617917373276243971",
+    "schema_acquired_at": "2026-10-11T16:48:44.589067+00:00",
+    "current_schema_sha256": "82535494442e220bfdd148b159b9d2d3b6847ce423eed4a67e9fea29a5d62973",
+    "source_evidence": [
+      "copy.json",
+      "before_get.json",
+      "../../../../05_扩品工程/数据/来源证据/e1b9347f19d5.json",
+      "current_get.json",
+      "../../../../00_运营SOP/国际站商品全生命周期SOP.md"
+    ]
+  }
+}

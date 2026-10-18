@@ -1,0 +1,407 @@
+{
+  "keyword_input": null,
+  "differentiation_review": null,
+  "category_id": 201334413,
+  "operation": "update",
+  "inventory_input": null,
+  "model_serialization": null,
+  "target_product_id": "1601974859471",
+  "field_ids": [
+    "companyFaqDesc",
+    "textDesc"
+  ],
+  "dependency_ids": [
+    "productDescType"
+  ],
+  "xml": "<itemSchema><field id=\"textDesc\" name=\"Product Highlights\" type=\"input\"><value>Wide toe-box mesh lace-up walking sneakers with an EVA midsole and TPR outsole. Three color choices provide neutral alternatives for a casual footwear assortment.\nListed assortment: Black: EU 39–48; Light Gray: EU 39–48; Blue: EU 39–48.</value></field><field id=\"companyFaqDesc\" name=\"FAQs\" type=\"multiComplex\"><complex-values><field id=\"question\" type=\"input\"><value>Which color and EU size combinations are listed?</value></field><field id=\"answers\" type=\"input\"><value>Black: EU 39–48; Light Gray: EU 39–48; Blue: EU 39–48.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>What are the confirmed upper and sole materials?</value></field><field id=\"answers\" type=\"input\"><value>A mesh upper, EVA midsole and TPR outsole. Conventional laces adjust the upper.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>How should I build a color-size assortment?</value></field><field id=\"answers\" type=\"input\"><value>Select the color first, then list the pair quantity for each available EU size. The three colors are separate choices within the same shoe style.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>What should I check during a sample fitting?</value></field><field id=\"answers\" type=\"input\"><value>Try the sample with the socks you intend to wear. Assess toe space, heel fit and the upper closure before setting your bulk EU size assortment.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>What is the minimum order for the original style?</value></field><field id=\"answers\" type=\"input\"><value>The original-style wholesale minimum is 2 pairs. Quantity pricing is shown on this page; custom branding and packaging are quoted separately.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>How can I arrange a sample?</value></field><field id=\"answers\" type=\"input\"><value>Request a sample quotation with your preferred color, EU size and delivery postcode. The quotation includes the sample charge, shipping cost and proposed dispatch schedule.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>What should I send for a branding or packaging proposal?</value></field><field id=\"answers\" type=\"input\"><value>Send your logo artwork, preferred placement, packaging brief and order quantity. We can review the brief for this style and provide a proposal with the applicable minimum, cost and sample process.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>How can I get a delivered quotation?</value></field><field id=\"answers\" type=\"input\"><value>Send the color-size quantities and destination postcode or port, plus any packaging request. The quotation separates product cost from freight and sets out the dispatch plan and estimated transit time for your chosen shipping method.</value></field></complex-values></field><field id=\"productDescType\" name=\"Product description\" type=\"singleCheck\"><value>4</value></field></itemSchema>",
+  "expected_fields": {
+    "textDesc": [
+      "field",
+      [
+        [
+          "id",
+          "textDesc"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Wide toe-box mesh lace-up walking sneakers with an EVA midsole and TPR outsole. Three color choices provide neutral alternatives for a casual footwear assortment.\nListed assortment: Black: EU 39–48; Light Gray: EU 39–48; Blue: EU 39–48.",
+          []
+        ]
+      ]
+    ],
+    "companyFaqDesc": [
+      "field",
+      [
+        [
+          "id",
+          "companyFaqDesc"
+        ]
+      ],
+      "",
+      [
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Which color and EU size combinations are listed?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Black: EU 39–48; Light Gray: EU 39–48; Blue: EU 39–48.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "What are the confirmed upper and sole materials?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "A mesh upper, EVA midsole and TPR outsole. Conventional laces adjust the upper.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "How should I build a color-size assortment?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Select the color first, then list the pair quantity for each available EU size. The three colors are separate choices within the same shoe style.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "What should I check during a sample fitting?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Try the sample with the socks you intend to wear. Assess toe space, heel fit and the upper closure before setting your bulk EU size assortment.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "What is the minimum order for the original style?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "The original-style wholesale minimum is 2 pairs. Quantity pricing is shown on this page; custom branding and packaging are quoted separately.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "How can I arrange a sample?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Request a sample quotation with your preferred color, EU size and delivery postcode. The quotation includes the sample charge, shipping cost and proposed dispatch schedule.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "What should I send for a branding or packaging proposal?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Send your logo artwork, preferred placement, packaging brief and order quantity. We can review the brief for this style and provide a proposal with the applicable minimum, cost and sample process.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "How can I get a delivered quotation?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Send the color-size quantities and destination postcode or port, plus any packaging request. The quotation separates product cost from freight and sets out the dispatch plan and estimated transit time for your chosen shipping method.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "prepared_from_current_schema": true,
+  "task_pack": null,
+  "replacement_plan": null,
+  "schema_provenance": {
+    "schema_request_id": "0b51802d17916967044314723",
+    "schema_acquired_at": "2026-10-11T05:31:45.495504+00:00",
+    "current_schema_sha256": "a101aefeb6a4f84593a7dc9095f58f4c835f80923a625c24ac020cfcfe354766",
+    "source_evidence": [
+      "copy.json",
+      "before_get.json",
+      "../../../../05_扩品工程/执行记录/路崎宽头户外_2026-10-08/021准备/经营任务包.md",
+      "../../../../00_运营SOP/国际站商品全生命周期SOP.md"
+    ]
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "method": "alibaba.icbu.product.schema.update",
+  "operation": "update",
+  "status": "submitted_needs_readback",
+  "content_status": "pending_readback",
+  "expected_fields": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Men's Suede Slip-On Loafers with Perforated Side Panels",
+          []
+        ]
+      ]
+    ],
+    "productKeywords": [
+      "field",
+      [
+        [
+          "id",
+          "productKeywords"
+        ]
+      ],
+      "",
+      [
+        [
+          "complex-value",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "productKeywords_0"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "mens suede slip on loafers",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "sku_verification": null,
+  "replacement_transition": null,
+  "inventory_input": null,
+  "post_publish_acceptance": {
+    "phase": "post_publish_completion",
+    "target_score": 5.0,
+    "actual_score": null,
+    "observed_at": null,
+    "score_source": null,
+    "diagnostics": {
+      "status": "not_read"
+    },
+    "score_status": "pending_score",
+    "overall_status": "PENDING_SCORE",
+    "unverified_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "limits": "Platform listing score does not prove public content, source truth or real product quality."
+  },
+  "attempted_at": "2026-10-02T15:34:01.993107+00:00",
+  "response": {
+    "trace_id": "2101e68f17909552536891829e0c3f",
+    "product_id": 1601969920294,
+    "biz_success": true,
+    "request_id": "0bab02fe17909552540477653",
+    "_trace_id_": "2101e68f17909552536891829e0c3f"
+  },
+  "refs": {
+    "request_id": "0bab02fe17909552540477653",
+    "trace_id": "2101e68f17909552536891829e0c3f",
+    "message": null,
+    "error": null
+  },
+  "product_id": "1601969920294"
+}

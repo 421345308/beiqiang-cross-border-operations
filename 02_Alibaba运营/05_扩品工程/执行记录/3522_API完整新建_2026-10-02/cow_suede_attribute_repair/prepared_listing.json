@@ -1,0 +1,239 @@
+{
+  "differentiation_review": null,
+  "category_id": 202240835,
+  "operation": "update",
+  "inventory_input": null,
+  "model_serialization": {
+    "field_id": "p-3",
+    "field_type": "input",
+    "expected_model": "BQ-L3522",
+    "value_text": "-2",
+    "value_attributes": {
+      "inputValue": "BQ-L3522"
+    }
+  },
+  "target_product_id": "1601969920294",
+  "field_ids": [
+    "icbuCatProp"
+  ],
+  "dependency_ids": [],
+  "xml": "<itemSchema><field id=\"icbuCatProp\" name=\"Product feature\" type=\"complex\"><complex-value><field id=\"p-191290430\" name=\"Lining Material\" type=\"multiCheck\"><values><value inputValue=\"PU\">3323086</value></values></field><field id=\"p-1\" name=\"Place of Origin\" type=\"singleCheck\"><value inputValue=\"Not specified\">-1</value></field><field id=\"p-20700\" name=\"Midsole Material\" type=\"multiCheck\"><values><value inputValue=\"Not specified\">-3</value></values></field><field id=\"p-191290426\" name=\"Outsole Material\" type=\"multiCheck\"><values><value inputValue=\"Not specified\">-4</value></values></field><field id=\"p-191290428\" name=\"Upper Material\" type=\"multiCheck\"><values><value inputValue=\"Cow suede\">-2</value></values></field><field id=\"p-200001153\" name=\"Closure Type\" type=\"multiCheck\"><values><value inputValue=\"Slip-On\">190091228</value></values></field><field id=\"p-3\" name=\"Model Number\" type=\"input\"><value inputValue=\"BQ-L3522\">-2</value></field></complex-value></field></itemSchema>",
+  "expected_fields": {
+    "icbuCatProp": [
+      "field",
+      [
+        [
+          "id",
+          "icbuCatProp"
+        ]
+      ],
+      "",
+      [
+        [
+          "complex-value",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "p-191290430"
+                ]
+              ],
+              "",
+              [
+                [
+                  "values",
+                  [],
+                  "",
+                  [
+                    [
+                      "value",
+                      [
+                        [
+                          "inputValue",
+                          "PU"
+                        ]
+                      ],
+                      "3323086",
+                      []
+                    ]
+                  ]
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "p-1"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [
+                    [
+                      "inputValue",
+                      "Not specified"
+                    ]
+                  ],
+                  "-1",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "p-20700"
+                ]
+              ],
+              "",
+              [
+                [
+                  "values",
+                  [],
+                  "",
+                  [
+                    [
+                      "value",
+                      [
+                        [
+                          "inputValue",
+                          "Not specified"
+                        ]
+                      ],
+                      "-3",
+                      []
+                    ]
+                  ]
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "p-191290426"
+                ]
+              ],
+              "",
+              [
+                [
+                  "values",
+                  [],
+                  "",
+                  [
+                    [
+                      "value",
+                      [
+                        [
+                          "inputValue",
+                          "Not specified"
+                        ]
+                      ],
+                      "-4",
+                      []
+                    ]
+                  ]
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "p-191290428"
+                ]
+              ],
+              "",
+              [
+                [
+                  "values",
+                  [],
+                  "",
+                  [
+                    [
+                      "value",
+                      [
+                        [
+                          "inputValue",
+                          "Cow suede"
+                        ]
+                      ],
+                      "-2",
+                      []
+                    ]
+                  ]
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "p-200001153"
+                ]
+              ],
+              "",
+              [
+                [
+                  "values",
+                  [],
+                  "",
+                  [
+                    [
+                      "value",
+                      [
+                        [
+                          "inputValue",
+                          "Slip-On"
+                        ]
+                      ],
+                      "190091228",
+                      []
+                    ]
+                  ]
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "p-3"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [
+                    [
+                      "inputValue",
+                      "BQ-L3522"
+                    ]
+                  ],
+                  "__typed_model_marker__",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "prepared_from_current_schema": true
+}

@@ -1,0 +1,24 @@
+{
+  "at": "2026-10-17T12:35:22.630507+00:00",
+  "families": 28,
+  "links": 142,
+  "states": {
+    "PRICE_FIELDS_PASS_REVIEW_PENDING": 142
+  },
+  "cny_targets": [
+    50,
+    48,
+    45
+  ],
+  "usd_targets": [
+    "7.48",
+    "7.18",
+    "6.73"
+  ],
+  "excluded_families": [
+    "BQ008 / L1009",
+    "BQ009 / L1026"
+  ],
+  "public": "PENDING",
+  "scope": "逐ID价格/原数量门槛与非价格字段回读；审核和公开呈现分开记录"
+}

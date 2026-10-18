@@ -1,0 +1,45 @@
+{
+  "keyword_input": null,
+  "differentiation_review": null,
+  "category_id": 201334413,
+  "operation": "update",
+  "inventory_input": null,
+  "model_serialization": null,
+  "target_product_id": "1601969861694",
+  "field_ids": [
+    "productTitle"
+  ],
+  "dependency_ids": [],
+  "xml": "<itemSchema><field id=\"productTitle\" type=\"input\"><value>Wholesale Vented EVA Casual Shoes with Closed Heels for Everyday Wear</value></field></itemSchema>",
+  "expected_fields": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Wholesale Vented EVA Casual Shoes with Closed Heels for Everyday Wear",
+          []
+        ]
+      ]
+    ]
+  },
+  "prepared_from_current_schema": true,
+  "task_pack": null,
+  "replacement_plan": null,
+  "schema_provenance": {
+    "schema_request_id": "0bab02fe17914239187994912",
+    "schema_acquired_at": "2026-10-08T01:45:21.428807+00:00",
+    "current_schema_sha256": "69ccf3d0ca44887a60c2a4e30d656ce8814aca47c53ed49954d9bb69ed341940",
+    "source_evidence": [
+      "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\A67_API新建_2026-10-02\\facts_and_copy.json"
+    ]
+  }
+}

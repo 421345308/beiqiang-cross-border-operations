@@ -1,0 +1,262 @@
+{
+  "status": "generated_and_integrated",
+  "platform": "Tencent Cloud TokenHub",
+  "site": "cn",
+  "area": "gz",
+  "model": "kling-video-v3",
+  "auth": {
+    "profile": "default",
+    "alias": "default",
+    "source": "existing CLI local config; key memory only"
+  },
+  "settings": {
+    "resolution": "1080p",
+    "multi_shot": false,
+    "audio": "off"
+  },
+  "estimated_cost": {
+    "currency": "CNY",
+    "per_output_second": 0.8,
+    "total_seconds": 18,
+    "jobs": 4,
+    "total": 14.4,
+    "source": "https://cloud.tencent.com/document/product/1823/130055",
+    "retries_included": 0
+  },
+  "authorization": {
+    "status": "approved",
+    "source": "负责人本轮明确回复：按这四段生成，新增约14.4元",
+    "scope": "腾讯云可灵V3，1080P无声单镜头：触摸织纹3秒、脚穿入并就位5秒、连续行走6秒、坐姿放下脚4秒，各一次；共18秒，预计14.4元，不含额外重试。"
+  },
+  "full_film_plan": {
+    "duration": 32,
+    "native_motion_seconds_planned": 21.5,
+    "new_generated_seconds_planned": 18,
+    "existing_release_use": [
+      0,
+      3.5
+    ],
+    "new_source_use_target": 1,
+    "note": "100%是规划使用目标，不是模型成功率承诺；生成失败不得用裁切掩盖或自动付费重试。",
+    "timeline": [
+      {
+        "range": [
+          0,
+          3
+        ],
+        "source": "walking",
+        "source_range": [
+          0,
+          3
+        ],
+        "message": "贝强 · 针织袜子鞋；从真人行动开场"
+      },
+      {
+        "range": [
+          3,
+          4.5
+        ],
+        "source": "sock-knit.png",
+        "message": "从黑色织纹引入触感"
+      },
+      {
+        "range": [
+          4.5,
+          7.5
+        ],
+        "source": "tactile",
+        "source_range": [
+          0,
+          3
+        ],
+        "message": "触得到的针织纹理"
+      },
+      {
+        "range": [
+          7.5,
+          9.5
+        ],
+        "source": "campaign-collar.png",
+        "message": "袜式鞋口，免系带结构"
+      },
+      {
+        "range": [
+          9.5,
+          14.5
+        ],
+        "source": "donning",
+        "source_range": [
+          0,
+          5
+        ],
+        "message": "一脚蹬；连续穿入到就位"
+      },
+      {
+        "range": [
+          14.5,
+          18
+        ],
+        "source": "release",
+        "source_range": [
+          0,
+          3.5
+        ],
+        "message": "理好鞋口，再出门"
+      },
+      {
+        "range": [
+          18,
+          21
+        ],
+        "source": "walking",
+        "source_range": [
+          3,
+          6
+        ],
+        "message": "走一段"
+      },
+      {
+        "range": [
+          21,
+          25
+        ],
+        "source": "settling",
+        "source_range": [
+          0,
+          4
+        ],
+        "message": "歇一会儿"
+      },
+      {
+        "range": [
+          25,
+          27.5
+        ],
+        "source": "campaign-overhead.png",
+        "message": "回到完整对鞋，汇合针织与套脚主题"
+      },
+      {
+        "range": [
+          27.5,
+          32
+        ],
+        "source": "campaign-product.png",
+        "message": "贝强 / BEIQIANG / 把日常，穿得舒服一点；排版到齐后只留约2秒记忆停留"
+      }
+    ]
+  },
+  "jobs": [
+    {
+      "id": "tactile",
+      "first_frame": "public/motion-touch-start.png",
+      "settings": {
+        "duration": 3
+      },
+      "purpose": "指腹接触并顺着黑色织纹轻抚后移开；针织触感，不演示或承诺材料测试指标。",
+      "prompt": "Warm ivory fashion editorial, natural movement at normal speed, one uncut shot. Preserve the SAME all-black high sock-knit slip-on shoes: rounded toe, broad raised transverse wavy knit across vamp and collar, finer side knit, triangular black heel reinforcement, short rear pull loop and thick matte-black grooved sole. No logos or text; typography will be added later. Start moving immediately from the reference pose: during 0–0.5s the index finger moves down the small gap to touch the upper knit vamp, during 0.5–2.2s the fingertip slowly strokes once for about three centimetres along the raised black knit ribs, and during 2.2–3s lifts away. The hand's visible contact and separation are the event, not a camera move. The shoe remains grounded and its sole rigid, with only subtle natural fabric contact. Keep five plausible fingers attached to one hand. Fixed elevated three-quarter camera, full shoe retained with margin throughout; detailed grazing light on BLACK fibres. Complete the touch-and-withdraw event once without dead lead-in, big stretch, shoe rotation, fabric transforming or freeze.",
+      "source_use": [
+        [
+          0,
+          3
+        ]
+      ],
+      "failure_checks": [
+        "手指悬停代替接触",
+        "手指数量、连接或穿模",
+        "鞋面变灰白、织纹游移、鞋底被捏软"
+      ],
+      "first_frame_sha256": "f6260c4d9ea868d5b998758c9245eb2778af7f8ee4622631bebbcec7e084a23f",
+      "first_frame_review": "Reviewed full size before any paid submission; source identity, margins, anatomy and event start checked.",
+      "prompt_sha256": "a7af448697a0ce0e2958e502a8efb5c34436c1a8210bbe0374c9d0150c5e0957"
+    },
+    {
+      "id": "donning",
+      "first_frame": "public/motion-entry-start.png",
+      "settings": {
+        "duration": 5
+      },
+      "purpose": "从脚在鞋外到脚跟真正进鞋、扶口的手松开；一脚蹬的穿着过程。",
+      "prompt": "Warm ivory fashion editorial, natural movement at normal speed, one uncut shot. Preserve the SAME all-black high sock-knit slip-on shoes: rounded toe, broad raised transverse wavy knit across vamp and collar, finer side knit, triangular black heel reinforcement, short rear pull loop and thick matte-black grooved sole. No logos or text; typography will be added later. Fixed elevated three-quarter side view, exactly the opening geometry in the reference. The bare foot is visibly outside the empty shoe. Starting immediately, the foot moves a few centimetres toward the oval TOP mouth, tips the toes down INTO that opening, then slides the forefoot toward the shoe front during 0–1.7s. The foot cannot enter through the front knit or sidewall; maintain a continuous visible path from air to the interior. During 1.7–3.7s the forefoot settles inside and the heel lowers THROUGH that same top opening into the original black heel cup while the thumb and index finger hold only the rear collar rim. The shoe stays on its original sole position, the collar gives a small normal fold rather than growing. During 3.7–4.7s the heel is fully seated, then the fingers let go and the hand withdraws. End during 4.7–5s with the ankle continuously attached to the foot INSIDE the shoe and the upper naturally settled. This is toe-first donning, NOT pulling a loop on an already worn shoe, not a crossfade between foot-out and foot-in. Keep the complete toe, heel, open mouth and guiding fingers in frame; preserve the short loop and heel reinforcement. The bare heel must move inside the cavity, never dissolve into the outside fabric, pass through the sidewall or remain perched outside.",
+      "source_use": [
+        [
+          0,
+          5
+        ]
+      ],
+      "failure_checks": [
+        "首帧已穿好",
+        "脚跟融入鞋外壁而非穿过鞋口",
+        "后拉环变长或鞋口长出",
+        "穿入未完成就松手",
+        "手脚、鞋款或比例变化"
+      ],
+      "first_frame_sha256": "80cfed8a634421a8621dabc82fefbcbdfabc9177308292c86d7aa110f14a48b7",
+      "first_frame_review": "The entire bare foot is outside the empty shoe with visible gap; toes need a small alignment toward the oval TOP mouth before descent. Guiding hand present for opening; no already-worn heel. Higher-risk contact action, not guaranteed.",
+      "prompt_sha256": "bd01378683ec593be331284aa7dcd55e711489eb20ac7e8f6e2b8db028a5bfc1"
+    },
+    {
+      "id": "walking",
+      "first_frame": "public/campaign-city.png",
+      "settings": {
+        "duration": 6
+      },
+      "purpose": "相同人物在暖白街道自然交替走路；双腿、双鞋持续完整。",
+      "prompt": "Warm ivory fashion editorial, natural movement at normal speed, one uncut shot. Preserve the SAME all-black high sock-knit slip-on shoes: rounded toe, broad raised transverse wavy knit across vamp and collar, finer side knit, triangular black heel reinforcement, short rear pull loop and thick matte-black grooved sole. No logos or text; typography will be added later. Continue the woman's existing natural stride immediately for the entire six seconds, taking three to four relaxed alternating steps along the sunlit stone arcade. She keeps the same face, ivory cardigan, white top, cream wide trousers and tan handbag. Use a smooth full-body three-quarter tracking camera that retreats gently at her speed so head, both attached legs and BOTH complete shoes stay within the central 80 percent of the vertical frame with clear ground below the soles. The foot behind pushes off, swings forward and lands; the other foot then follows, with visible continuous weight transfer and natural trouser sway, handbag swing and background parallax. Maintain two connected legs and two separate identical black shoes at every instant, including occlusion; do not erase a leg. Moderate comfortable walking pace, no posing pauses, ankle-only crop, static support foot, sliding footwear or repeated boomerang cycle. End still walking IN FRAME, no exit or freeze. Do not alter architecture, shoe height, garment cut, face or skin.",
+      "source_use": [
+        [
+          0,
+          3
+        ],
+        [
+          3,
+          6
+        ]
+      ],
+      "failure_checks": [
+        "任何时刻腿消失或鞋脱离脚",
+        "鞋底滑行、不交替迈步",
+        "脚出画、缩成小点或躯干被裁",
+        "鞋款、脸、衣装漂移"
+      ],
+      "first_frame_sha256": "2c60d4ce7bc8f321fe24542be2c03480c08508a877fc2addef92f43dca59524d",
+      "first_frame_review": "Reviewed full size before any paid submission; source identity, margins, anatomy and event start checked.",
+      "prompt_sha256": "4f765f5f53e92e9b1c45dba12b32bf3290255393d312df9ef30daf312fcc645f"
+    },
+    {
+      "id": "settling",
+      "first_frame": "public/sock-park.png",
+      "settings": {
+        "duration": 4
+      },
+      "purpose": "坐姿从翘腿到放下脚、两鞋落地，表达日常放松；不拿静态姿势撑四秒。",
+      "prompt": "Warm ivory fashion editorial, natural movement at normal speed, one uncut shot. Preserve the SAME all-black high sock-knit slip-on shoes: rounded toe, broad raised transverse wavy knit across vamp and collar, finer side knit, triangular black heel reinforcement, short rear pull loop and thick matte-black grooved sole. No logos or text; typography will be added later. From the referenced seated crossed-leg pose, the woman gently uncrosses the raised leg and lowers its black shoe in one continuous natural arc to the ground beside, NOT on top of, the already grounded other shoe. Start the movement immediately, lower and plant during 0–2.8s, then settle both feet and knees naturally during 2.8–4s. Her hand rests naturally on the clothed knee for balance, never touches either shoe. Fixed framing as reference, both continuous trouser-shin-ankle-shoe connections remain readable, both full shoes retained with ground margin. Keep the original bench, sunlight, cream knit sleeve, cream trousers and BLACK knit shoes unchanged. A small natural shift in the trouser folds and foliage accompanies the movement; no new limbs, joint fusion, floating planted shoe, toe stretch, morphing camera zoom or four seconds of held photo. End with both soles grounded and feet relaxed.",
+      "source_use": [
+        [
+          0,
+          4
+        ]
+      ],
+      "failure_checks": [
+        "始终静止或只有镜头缩放",
+        "解开交叠时腿融合或断开",
+        "鞋接地浮起/阴影错误",
+        "手摸鞋却没有动作目的"
+      ],
+      "first_frame_sha256": "ebb75f79c7803b515eec5f6790b71474317774309316898a50544f0e1526deba",
+      "first_frame_review": "Reviewed full size before any paid submission; source identity, margins, anatomy and event start checked.",
+      "prompt_sha256": "e18bbde83dcb7342c8b8747db5a9f2e4d68d86b9c069bd173d35ff0fb376e11e"
+    }
+  ],
+  "result": {
+    "four_successful_jobs": 4,
+    "generation_tokens": 1440000,
+    "estimated_cny": 14.4,
+    "nominal_seconds_used": 13.25,
+    "film_seconds": 26,
+    "sha256": "4b789d4c92cc63899d620875adfc0e9b08e7ef1ea258d12cf721be9bb0aefe27",
+    "qa": "edit/qa/current/QA_REPORT.md",
+    "current_edit_paid_submissions": 0,
+    "current_edit_timeline": "edit/timeline.json",
+    "note": "Original recipe/source_use preserved as pre-generation intent. Current actual source ranges follow edit/timeline.json."
+  }
+}

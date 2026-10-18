@@ -1,0 +1,109 @@
+{
+  "scope": "Actual full URL downloads + existing actual D2; source compare only; no platform API",
+  "assets": [
+    {
+      "role": "D1",
+      "formal_short_url": "https://sc04.alicdn.com/kf/H1dff79beb0684e0db2c7a791798dfb35S.png",
+      "read_full_official_url": "https://sc04.alicdn.com/kf/H1dff79beb0684e0db2c7a791798dfb35S/286385890/H1dff79beb0684e0db2c7a791798dfb35S.png",
+      "same_asset_key": true,
+      "source_compare_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-2\\HR_other_candidates_2026-10-02\\936_english_content\\export_buyer_v2\\D1_buyer.png",
+      "http_status": 200,
+      "response_content_type": "image/png",
+      "read_mode": "Actual official full URL HTTP download; not source substitution",
+      "actual_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-4\\visual_execution\\936_incremental\\actual_detail_readback\\D1.png",
+      "actual_sha256": "069db62778f47f6bbec4c3b7f767861f0437582abb1ffa082631515d322fd679",
+      "dimensions": [
+        1200,
+        1200
+      ],
+      "source_sha256": "069db62778f47f6bbec4c3b7f767861f0437582abb1ffa082631515d322fd679",
+      "pixel_exact": true,
+      "rgb_mean_absolute_difference": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "status": "PASS_ACTUAL_VISUAL_IDENTITY_COPY_ROLE",
+      "visual_observation": "Two colors Black and Sand; correct same-model side profiles and lace-up casual sneakers copy"
+    },
+    {
+      "role": "D2",
+      "formal_short_url": "https://sc04.alicdn.com/kf/H6b55ae75648d4c3599707875714257b84.png",
+      "read_full_official_url": "https://sc04.alicdn.com/kf/H6b55ae75648d4c3599707875714257b84/286385890/H6b55ae75648d4c3599707875714257b84.png",
+      "same_asset_key": true,
+      "source_compare_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-2\\HR_other_candidates_2026-10-02\\936_english_content\\export_buyer_v2\\D2_buyer.png",
+      "read_mode": "Previously downloaded actual short-form URL; local read only",
+      "actual_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-4\\hr_control\\936_publish\\actual_main_readback\\D2.png",
+      "actual_sha256": "6ea3e952dbf6319946df4b179c0a06182a4138746c2394226c3e9d03cd47f1ef",
+      "dimensions": [
+        1200,
+        1200
+      ],
+      "source_sha256": "1b8fe5aed57255e4ed043a934f4086734f52788342a5f573c3281f1614448e0e",
+      "pixel_exact": false,
+      "rgb_mean_absolute_difference": [
+        1.3432222222222223,
+        1.087113888888889,
+        1.5869638888888888
+      ],
+      "status": "PASS_ACTUAL_VISUAL_IDENTITY_COPY_ROLE",
+      "visual_observation": "UPPER DETAILS; textile with molded decorative overlays; correct original toe and upper construction"
+    },
+    {
+      "role": "D3",
+      "formal_short_url": "https://sc04.alicdn.com/kf/H76da36692a6f4556bf32fc0d49a34bd3k.png",
+      "read_full_official_url": "https://sc04.alicdn.com/kf/H76da36692a6f4556bf32fc0d49a34bd3k/286385890/H76da36692a6f4556bf32fc0d49a34bd3k.png",
+      "same_asset_key": true,
+      "source_compare_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-2\\HR_other_candidates_2026-10-02\\936_english_content\\export_buyer_v2\\D3_buyer.png",
+      "http_status": 200,
+      "response_content_type": "image/png",
+      "read_mode": "Actual official full URL HTTP download; not source substitution",
+      "actual_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-4\\visual_execution\\936_incremental\\actual_detail_readback\\D3.png",
+      "actual_sha256": "ad869f784dfd90d825b49ca5aa9fae92d022e849672bb7464a13a43d0a8b8255",
+      "dimensions": [
+        1200,
+        1200
+      ],
+      "source_sha256": "ad869f784dfd90d825b49ca5aa9fae92d022e849672bb7464a13a43d0a8b8255",
+      "pixel_exact": true,
+      "rgb_mean_absolute_difference": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "status": "PASS_ACTUAL_VISUAL_IDENTITY_COPY_ROLE",
+      "visual_observation": "OUTSOLE DETAILS; rubber outsole and actual tread pattern; correct same-model sole geometry"
+    },
+    {
+      "role": "D4",
+      "formal_short_url": "https://sc04.alicdn.com/kf/H838b4f8bb2474ab8a2c1421d4f8b9ebcW.png",
+      "read_full_official_url": "https://sc04.alicdn.com/kf/H838b4f8bb2474ab8a2c1421d4f8b9ebcW/286385890/H838b4f8bb2474ab8a2c1421d4f8b9ebcW.png",
+      "same_asset_key": true,
+      "source_compare_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-2\\HR_other_candidates_2026-10-02\\936_english_content\\export_buyer_v2\\D4_buyer.png",
+      "http_status": 200,
+      "response_content_type": "image/png",
+      "read_mode": "Actual official full URL HTTP download; not source substitution",
+      "actual_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-4\\visual_execution\\936_incremental\\actual_detail_readback\\D4.png",
+      "actual_sha256": "68c4e5585822d9b65196d743f12753622b03b2a07283f60ec4398130712234d1",
+      "dimensions": [
+        1200,
+        1200
+      ],
+      "source_sha256": "68c4e5585822d9b65196d743f12753622b03b2a07283f60ec4398130712234d1",
+      "pixel_exact": true,
+      "rgb_mean_absolute_difference": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "status": "PASS_ACTUAL_VISUAL_IDENTITY_COPY_ROLE",
+      "visual_observation": "SIZE RANGE: 38–44; Sand pair correct; color/size mix/quantity/destination quotation CTA intact"
+    }
+  ],
+  "backend_write": false,
+  "visual_pass_count": 4,
+  "exact_byte_pixel_pass_count": 3,
+  "source_substitution": false,
+  "public_acceptance": false,
+  "interpretation": "D1/D3/D4 full official URL downloads exact to delivered files; D2 actual short-URL served image has mild RGB difference but manual identity/copy/layout PASS. This checks four roles, not HTML insertion order or approval."
+}

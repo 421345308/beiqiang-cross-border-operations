@@ -1,0 +1,450 @@
+{
+  "candidate": "dmxy_2543449",
+  "source_artno": "B75",
+  "supplier": "大卖鞋业",
+  "source_url": "https://dmxy.sooxie.com/detail/2543449",
+  "source_price_cny": 35,
+  "source_color_labels": [
+    "黑色",
+    "卡其"
+  ],
+  "colors": [
+    "Black",
+    "Khaki"
+  ],
+  "sizes": [
+    39,
+    40,
+    41,
+    42,
+    43,
+    44
+  ],
+  "upper": "Other",
+  "lining": "Other",
+  "midsole": "Other",
+  "outsole": "PVC",
+  "closure": "Lace-up",
+  "style": [
+    "Casual Sneakers"
+  ],
+  "seasons": [
+    "All Seasons"
+  ],
+  "feature": "Fashion Trend",
+  "category_id": 201334413,
+  "target_ids": {
+    "A": "1601943633918",
+    "B": "1601943710448",
+    "C": "1601943639863"
+  },
+  "platform_group_id": 973003809,
+  "platform_group_name": "Lace-Up Casual Shoes",
+  "local_intent_candidates": [
+    "低帮系带休闲板鞋"
+  ],
+  "materials_evidence": [
+    "Source03 specification and07 outsole annotation explicitly sayPVC outsole. Generic comfortable upper/lining wording does not prove composition; these and midsole remainOther.",
+    "Current sourcebody specifiesB75/CNY35/BlackKhaki/EU39-44; source03 confirms39-44; 20same-shoe photos, recommendations excluded.",
+    "Only actual forefoot underside is available: show that partial area, no invented full outsole. Chinese performance claims in source posters not adopted as tested grip."
+  ],
+  "dedup": "No B75/sameURL adoption in canonical registry. Compared HR036 panelled zip-decorated sneakers and other adopted footwear: B75 has plain forefoot, continuous quarter, thin striped off-white sole and low collar. It is not a recolour of the adopted chunky, knit or platform sources.",
+  "do_not_claim": [
+    "physical stock",
+    "tested slip resistance",
+    "medical comfort",
+    "unverified midsole material"
+  ],
+  "custom": [
+    "Shoe Profile",
+    "Low-top; lace closure; PVC sole; contrast sole stripe"
+  ],
+  "titles": {
+    "A": "Low Top Lace-Up Casual Sneakers with PVC Outsole and Contrast Sole Stripe for Wholesale Footwear Buyers",
+    "B": "Men Casual Lace-Up Shoes with Rounded Toe and Low Collar in Black or Khaki for Footwear Collections",
+    "C": "Low Cut Casual Sneakers with Eyelet Lacing and Textured PVC Sole for Wholesale Shoe Assortments"
+  },
+  "keywords": [
+    "Low Top Lace Up Casual Sneakers",
+    "Contrast Sole Casual Shoes",
+    "PVC Outsole Lace Up Shoes"
+  ],
+  "highlights": "Low-top everyday profile: A plain rounded forefoot and continuous side panel create a clean casual look for footwear collections.\n\nEyelet lacing: The front lace row allows the opening to be adjusted, with contrasting pale laces visible on both colour options.\n\nDistinctive sole stripe: A thin upper-edge stripe runs around the off-white PVC sole band, separating the upper from the sole.\n\nVisible outsole texture: The forefoot underside has a repeated geometric pattern shown in the close-up photograph.\n\nTwo colour directions: Black and Khaki are listed in EU39-44 for wholesale colour-size assortments.",
+  "assets_layout": {
+    "M1": {
+      "buyer_question": "What shoe is offered?",
+      "title": null,
+      "photos": [
+        {
+          "index": 1,
+          "box": [
+            15,
+            15,
+            985,
+            985
+          ]
+        }
+      ]
+    },
+    "M2": {
+      "buyer_question": "What is the lace construction?",
+      "title": "Eyelet lace adjustment",
+      "subtitle": "Contrast laces and the actual Black forefoot.",
+      "photos": [
+        {
+          "index": 5,
+          "box": [
+            45,
+            215,
+            955,
+            935
+          ],
+          "crop": [
+            0,
+            380,
+            750,
+            1250
+          ]
+        }
+      ],
+      "text": []
+    },
+    "M3": {
+      "buyer_question": "What outsole pattern is visible?",
+      "title": "PVC outsole texture",
+      "subtitle": "Close view of the forefoot underside.",
+      "photos": [
+        {
+          "index": 7,
+          "box": [
+            45,
+            215,
+            955,
+            935
+          ],
+          "crop": [
+            0,
+            300,
+            750,
+            995
+          ]
+        }
+      ],
+      "text": []
+    },
+    "M4": {
+      "buyer_question": "Which colour options are offered?",
+      "title": "2 colour options",
+      "subtitle": "Choose the colour and EU size assortment for your order.",
+      "photos": [
+        {
+          "index": 20,
+          "box": [
+            45,
+            235,
+            955,
+            515
+          ],
+          "crop": [
+            0,
+            285,
+            750,
+            500
+          ]
+        },
+        {
+          "index": 20,
+          "box": [
+            45,
+            580,
+            955,
+            860
+          ],
+          "crop": [
+            0,
+            650,
+            750,
+            867
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "Black",
+          "xy": [
+            45,
+            525
+          ],
+          "size": 28
+        },
+        {
+          "value": "Khaki",
+          "xy": [
+            45,
+            870
+          ],
+          "size": 28
+        },
+        {
+          "value": "EU 39 / 40 / 41 / 42 / 43 / 44",
+          "xy": [
+            45,
+            950
+          ],
+          "size": 28
+        }
+      ]
+    },
+    "M5": {
+      "buyer_question": "What is the collar shape?",
+      "title": "Low collar & inner texture",
+      "subtitle": "Black opening shown in close view.",
+      "photos": [
+        {
+          "index": 6,
+          "box": [
+            45,
+            215,
+            955,
+            935
+          ],
+          "crop": [
+            0,
+            380,
+            750,
+            1060
+          ]
+        }
+      ],
+      "text": []
+    },
+    "D1": {
+      "buyer_question": "How does the shoe look when worn?",
+      "title": "Khaki in wear",
+      "subtitle": "Low-top silhouette with the contrast sole band.",
+      "photos": [
+        {
+          "index": 12,
+          "box": [
+            45,
+            215,
+            955,
+            1070
+          ],
+          "crop": [
+            0,
+            80,
+            750,
+            1000
+          ]
+        }
+      ],
+      "text": []
+    },
+    "D2": {
+      "buyer_question": "What is the side profile?",
+      "title": "Black side & toe profiles",
+      "subtitle": "The thin sole stripe follows the whole shoe.",
+      "photos": [
+        {
+          "index": 19,
+          "box": [
+            45,
+            215,
+            955,
+            1070
+          ],
+          "crop": [
+            0,
+            105,
+            750,
+            995
+          ]
+        }
+      ],
+      "text": []
+    },
+    "D3": {
+      "buyer_question": "How does the upper meet the sole?",
+      "title": "Lace row & sole edge",
+      "subtitle": "Eyelets, contrast stitching and PVC sidewall.",
+      "photos": [
+        {
+          "index": 5,
+          "box": [
+            45,
+            215,
+            955,
+            1070
+          ],
+          "crop": [
+            0,
+            380,
+            750,
+            1250
+          ]
+        }
+      ],
+      "text": []
+    },
+    "D4": {
+      "buyer_question": "Which colour options are offered?",
+      "title": "2 colour options",
+      "subtitle": "Choose the colour and EU size assortment for your order.",
+      "photos": [
+        {
+          "index": 20,
+          "box": [
+            45,
+            235,
+            955,
+            570
+          ],
+          "crop": [
+            0,
+            285,
+            750,
+            500
+          ]
+        },
+        {
+          "index": 20,
+          "box": [
+            45,
+            665,
+            955,
+            1000
+          ],
+          "crop": [
+            0,
+            650,
+            750,
+            867
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "Black",
+          "xy": [
+            45,
+            580
+          ],
+          "size": 28
+        },
+        {
+          "value": "Khaki",
+          "xy": [
+            45,
+            1010
+          ],
+          "size": 28
+        },
+        {
+          "value": "EU 39 / 40 / 41 / 42 / 43 / 44",
+          "xy": [
+            45,
+            1155
+          ],
+          "size": 28
+        }
+      ]
+    },
+    "SKU_BLACK": {
+      "buyer_question": "Which colour is this SKU?",
+      "title": null,
+      "photos": [
+        {
+          "index": 20,
+          "box": [
+            25,
+            25,
+            975,
+            975
+          ],
+          "crop": [
+            0,
+            285,
+            750,
+            500
+          ]
+        }
+      ]
+    },
+    "SKU_KHAKI": {
+      "buyer_question": "Which colour is this SKU?",
+      "title": null,
+      "photos": [
+        {
+          "index": 20,
+          "box": [
+            25,
+            25,
+            975,
+            975
+          ],
+          "crop": [
+            0,
+            650,
+            750,
+            867
+          ]
+        }
+      ]
+    }
+  },
+  "source_assets_root": "01_产品资产/01_原始数据包/HR049_B75",
+  "source_date": "2026-10-14",
+  "fx_cny_per_usd": 6.6837,
+  "tiers": [
+    [
+      2,
+      "7.86"
+    ],
+    [
+      50,
+      "7.34"
+    ],
+    [
+      100,
+      "6.81"
+    ]
+  ],
+  "page_state": "FORMAL_FIELDS_SCORE_PASS",
+  "company_faq_source": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/通用FAQ与公司简介.json",
+  "selection_review": {
+    "state": "REVIEWED_ADOPT",
+    "private_backend_evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/经营数据与选款.json",
+    "reason": "HR049 recent14exposures/no clicks, September103exposures/2clicks, no inquiry orTM. Small exposure is inconclusive, not evidence of no demand. Select an economical plain lace-up casual direction with two real colour options rather than recreate the unsupported old concept.",
+    "cost_usd": 5.236620434789113,
+    "gross_difference_usd": [
+      2.6234,
+      2.1034,
+      1.5734
+    ],
+    "comparison_limit": "Public Alibaba discovery did not identify an exact source-model shoe with matching unit, quantities, specifications and freight/trade terms. Nearby offers are not proof of price advantage. Cost markup50/40/30%; actual service/fulfilment charges and net profit need order costing."
+  },
+  "source_id": "src-hr-hr049-b75",
+  "source_evidence": [
+    "01_产品资产/01_原始数据包/HR049_B75/source.json",
+    "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR049/素材清单.json"
+  ],
+  "procurement_capability": "CURRENT_REAL_SHOE_AND_PROCUREMENT_ENTRY_VERIFIED_NOT_ORDER_STOCK",
+  "current_models_by_id": {
+    "1601943710448": "BQ1049-B",
+    "1601943639863": "BQ1049-C",
+    "1601943633918": "BQ1049-A"
+  },
+  "model_migration_evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/范围.json",
+  "model_numbers": {
+    "B": "BQ1049-B",
+    "C": "BQ1049-C",
+    "A": "BQ1049-A"
+  },
+  "current_platform_category_by_id": {
+    "1601943633918": 201334413,
+    "1601943710448": 201334413,
+    "1601943639863": 201334413
+  },
+  "category_scope": "category_id保留初始改造默认；当前平台叶子按current_platform_category_by_id逐ID读取，不把同源链接不同平台分类混成不同实鞋。"
+}

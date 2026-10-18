@@ -1,0 +1,27 @@
+{
+  "operation": "update",
+  "product_id": "1601943514625",
+  "category_id": 201334413,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "copy.json",
+    "before_get.json",
+    "../../../../05_扩品工程/HR系列真实货源改造_2026-09-21/HR016_031_真实货源与材料预检_2026-09-24.md",
+    "../../../../../99_临时区/HR016_031_公开货源图_2026-09-24/01_土黄_白底_来源图.jpg",
+    "current_get.json",
+    "../../../../00_运营SOP/国际站商品全生命周期SOP.md"
+  ],
+  "current_schema": "current_schema.xml",
+  "current_schema_sha256": "ed4c5a5f5f827410fda70024f7eb79d2ba106f0046594ca55c6b3d16510a9f47",
+  "schema_request_id": "21501be117917407689322455",
+  "schema_acquired_at": "2026-10-11T17:46:06.238461+00:00",
+  "payload_xml": "payload.xml",
+  "field_ids": [
+    "textDesc",
+    "companyFaqDesc"
+  ],
+  "dependency_ids": [
+    "productDescType"
+  ],
+  "observed_model": "HR016-A"
+}

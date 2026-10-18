@@ -1,0 +1,193 @@
+{
+  "product_id": "1601969877983",
+  "model": "BQ-D805",
+  "status": "approved",
+  "display": "Y",
+  "public_url": "https://www.alibaba.com/product-detail/Men-s-Tassel-Driving-Moccasins-with_1601969877983.html",
+  "formal_fields": "PASS_EXCEPT_KEYWORD",
+  "keyword_persistence": false,
+  "actual_keywords": [
+    ""
+  ],
+  "expected_keywords": [
+    "mens tassel driving moccasins"
+  ],
+  "title_model_exact": true,
+  "main": 6,
+  "detail": 4,
+  "company": 5,
+  "SKU": 21,
+  "stable_SKU_codes_and_platform_ids_verified": true,
+  "color_bindings_render_verified": true,
+  "FAQ": 6,
+  "price_tiers_exact": true,
+  "get_request_id": "0bab02fe17909632782215796",
+  "render_request_id": "212c41d317909632821257276",
+  "render_nonempty": true,
+  "optional_stock_input": "omitted_all",
+  "inventory_returned": [
+    {
+      "sku_id": 109767176123,
+      "sku_code": "BQ-D805-Red-40",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109767176122,
+      "sku_code": "BQ-D805-Red-39",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109767176121,
+      "sku_code": "BQ-D805-Red-38",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109767176127,
+      "sku_code": "BQ-D805-Red-44",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109767176126,
+      "sku_code": "BQ-D805-Red-43",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109767176125,
+      "sku_code": "BQ-D805-Red-42",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109767176124,
+      "sku_code": "BQ-D805-Red-41",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109767176139,
+      "sku_code": "BQ-D805-Blue-42",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109767176138,
+      "sku_code": "BQ-D805-Blue-41",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109767176137,
+      "sku_code": "BQ-D805-Blue-40",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109767176136,
+      "sku_code": "BQ-D805-Blue-39",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109767176141,
+      "sku_code": "BQ-D805-Blue-44",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109767176140,
+      "sku_code": "BQ-D805-Blue-43",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109767176131,
+      "sku_code": "BQ-D805-Brown-41",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109767176130,
+      "sku_code": "BQ-D805-Brown-40",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109767176129,
+      "sku_code": "BQ-D805-Brown-39",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109767176128,
+      "sku_code": "BQ-D805-Brown-38",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109767176135,
+      "sku_code": "BQ-D805-Blue-38",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109767176134,
+      "sku_code": "BQ-D805-Brown-44",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109767176133,
+      "sku_code": "BQ-D805-Brown-43",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109767176132,
+      "sku_code": "BQ-D805-Brown-42",
+      "returned_inventory_dto_list": null
+    }
+  ],
+  "target_score": 5.0,
+  "actual_score": 5.0,
+  "observed_at": "2026-10-02T17:45:15.754043+00:00",
+  "score_source": "alibaba.icbu.product.score.get",
+  "diagnostics": {
+    "ruleScoreMap": {
+      "title_word_miss_core_error": 0.0,
+      "imageQualityBad": 0.0,
+      "image_scale": 0.0,
+      "title_word_error": 0.0,
+      "image_num": 0.0
+    },
+    "errorReasonSkuImageMoreMap": {},
+    "errorReasonTitleWordMissErrorMap": {},
+    "errorReasonList": [],
+    "errorReasonTitleWordErrorMap": {},
+    "extendCheckMap": {
+      "imageText": true,
+      "sku_image": false,
+      "title_word_miss_core_error": true,
+      "imageQualityBad": true,
+      "sku_text": false,
+      "imageSubTitle": false,
+      "category": true,
+      "title_word_error": true,
+      "selling_point_attribute_conflict": false
+    },
+    "errorReasonCategoryMap": {},
+    "errorReasonSkuTextMap": {},
+    "errorReasonSubTitleMap": {},
+    "errorReasonMap": {},
+    "errorReasonSellingPointAttributeMap": {},
+    "errorReasonSkuImageMap": {},
+    "extendProblemMap": {
+      "imageText": false,
+      "title_word_miss_core_error": false,
+      "imageQualityBad": false,
+      "imageSubTitle": false,
+      "image_scale": false,
+      "inventory": false,
+      "title_word_error": false,
+      "selling_point_attribute_conflict": false,
+      "image_num": false,
+      "freightRate": false,
+      "sku_image": false,
+      "sku_text": false,
+      "price": false,
+      "category": false
+    },
+    "errorReasonQualityBadMap": {},
+    "errorReasonSkuTextMoreMap": {}
+  },
+  "score_status": "PASS",
+  "public_acceptance": "PENDING_INDEPENDENT_READ_ONLY",
+  "create_comparator_note": "Stable SKU fields compared directly; platform-generated skuId and default empty/zero stock retained as formal output evidence, not treated as creation failure",
+  "no_inventory_mutation": true,
+  "no_repeat_creation": true,
+  "audit_at_utc": "2026-10-02T17:48:06.810166+00:00"
+}

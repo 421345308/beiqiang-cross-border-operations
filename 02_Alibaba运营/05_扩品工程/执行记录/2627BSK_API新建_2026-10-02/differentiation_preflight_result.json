@@ -1,0 +1,98 @@
+{
+  "status": "PASS",
+  "conflicts": [],
+  "comparisons": [],
+  "replacement_transition": null,
+  "missing_evidence": [],
+  "unassociated_catalog_ids": [
+    "1601969860254",
+    "1601969872083",
+    "1601969707634",
+    "1601969810495",
+    "1601969526580",
+    "1601957075451",
+    "1601943767266",
+    "1601957629892",
+    "1601943577329",
+    "1601943584343",
+    "1601943607919",
+    "1601943593293",
+    "1601943753087",
+    "1601943650718",
+    "1601943583746",
+    "1601943670292",
+    "1601943543826",
+    "1601943650395",
+    "1601943649254",
+    "1601943690007",
+    "1601943592466",
+    "1601943558633",
+    "1601943614355",
+    "1601943654096",
+    "1601943711519",
+    "1601943670945",
+    "1601958363305",
+    "1601943546735",
+    "1601943582498",
+    "1601943529870",
+    "1601969951162",
+    "1601969920294",
+    "1601969906452",
+    "1601969853888",
+    "1601969913308",
+    "1601969861694",
+    "1601969869242",
+    "1601969788941"
+  ],
+  "scope": "Provided local catalog/source evidence only; unknown records are not duplicates or proof of global clearance. No authorization, traffic or platform-policy exemption inferred.",
+  "payload_binding": {
+    "model_number": "BQ-C2627",
+    "hero_url": "//sc04.alicdn.com/kf/H1e96c860f1e34dda9b85116b5d6bc358J/286385890/H1e96c860f1e34dda9b85116b5d6bc358J.jpg",
+    "title": "EVA Platform Clogs with Heel Strap and Closed Toe"
+  },
+  "evidence_provenance": {
+    "review_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-8\\2627BSK\\differentiation_review.json",
+    "review_sha256": "d63663248d91801874a3afa8ca0021d26eca3427e3cca827a01ba10e002b7315",
+    "files": [
+      {
+        "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-8\\5998\\catalog_current_1.response.json",
+        "sha256": "c474ac448c28fc9beb59c69cf7d6807292ab1b6df0731489403512197dc8eaff",
+        "kind": "catalog_snapshot"
+      },
+      {
+        "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-8\\2627BSK\\catalog_prewrite_1.response.json",
+        "sha256": "324d07c0e1f149c7690c90811d0ec35036be90546066105a65305b41a8c74a76",
+        "kind": "catalog_snapshot"
+      },
+      {
+        "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-8\\user_priority_sources\\candidate_table.json",
+        "sha256": "5c8c84e6df6a99d9e4d4465427d412e1456d076219ef17554f1931ebd62360e7",
+        "kind": "source_register"
+      },
+      {
+        "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-8\\2627BSK\\facts_and_copy.json",
+        "sha256": "aff66c8bb0aee4f75a8fc2d2deca1c58d71da181a6268fc3183990a91d731507",
+        "kind": "source_facts"
+      },
+      {
+        "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-8\\2627BSK\\actual_xml_QA.json",
+        "sha256": "e6edc5e0a7d2ab1420eec19c8c35983a073597af43dacb32226565740d1df7dc",
+        "kind": "visual_review"
+      },
+      {
+        "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-8\\2627BSK\\bank_pixel_verification.json",
+        "sha256": "0d7877b4c50fc619701d249a4a6e2f8f124db4fcc4509e6949bf9c6981b04b17",
+        "kind": "visual_review"
+      }
+    ],
+    "catalog_records": 38,
+    "saved_rows": 60,
+    "reported_totals": [
+      362,
+      370
+    ],
+    "counts_match_reported_total": false,
+    "observed_at": "2026-10-02T17:20:07.536337+00:00",
+    "coverage_limit": "Saved historical catalog snapshots plus fresh370-count page; independent exact source/article check over5243 files. Unknown unassociated records are not proof of global clearance; no same-shoe replacement waiver."
+  }
+}

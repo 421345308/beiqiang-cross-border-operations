@@ -1,0 +1,59 @@
+{
+  "id": "1601939714238",
+  "family": "BQ026",
+  "model": "BQ026-O1 / T5828",
+  "at": "2026-10-17T12:24:48.774382+00:00",
+  "state": "PREPARED",
+  "category_id": 201334413,
+  "old_tiers": [
+    [
+      2,
+      "9.45"
+    ],
+    [
+      50,
+      "9.15"
+    ],
+    [
+      100,
+      "9.05"
+    ]
+  ],
+  "new_tiers": [
+    [
+      2,
+      "7.48"
+    ],
+    [
+      50,
+      "7.18"
+    ],
+    [
+      100,
+      "6.73"
+    ]
+  ],
+  "cny_targets": [
+    50,
+    48,
+    45
+  ],
+  "fx": {
+    "usd_cny": "6.6863",
+    "date": "2026-10-16",
+    "source": "https://www.investing.com/currencies/usd-cny-historical-data",
+    "rounding": "nearest USD cent"
+  },
+  "fields": [
+    "scPrice",
+    "ladderPrice",
+    "productTitle"
+  ],
+  "title_unchanged": true,
+  "source_fields": "01_产品资产/02_可发布素材/00_最终上传/BQ026_T5828/00_上架填写表.md",
+  "video_fields_inspected": [
+    "imageVideo",
+    "detailVideo"
+  ],
+  "payload_sha256": "c34c1fdb3613d07c7b8675b857e1f0863ebdc4f93be19310328bb1b067027402"
+}

@@ -6,6 +6,7 @@
 | 业务模板 | [模板目录](02_模板/) | 复用结构，事实从当前 SKU 与客户记录填入 |
 | 国际站完整经营任务 | [A–G单款任务包](../02_Alibaba运营/05_扩品工程/工厂店外新款数据采集模板.md) | 唯一完整任务字段入口；alibaba-product-template仅为窄范围页面草稿提纲，不替代执行/验收 |
 | Skills | [实际安装与任务路由](03_Skills清单.md) | 选中任务再读相关正文 |
+| 视频参考资产准备 | [video-reference-assets](../.agents/skills/video-reference-assets/SKILL.md) | 独立身份/服装、商品、道具、空景，再组合镜头并查连续性 |
 | 视频学习体系 | [工作区源](04_AI视频知识体系/ai-video-learning-system/SKILL.md) | 模型规格、项目结果、候选经验分开，不自动晋级 |
 | 通用视频模板库 | [awesome-seedance 模板索引](04_AI视频知识体系/awesome-seedance-模板索引.md) | 工作区级通用能力，25 个模板服务所有视频项目；模板本身无场景限制，约束随使用场景附加 |
 | 项目记忆 | [方法](05_项目记忆系统/README.md)、[索引](05_项目记忆系统/INDEX.md) | 按任务最小读取；日常新增确认，已授权整理直接执行 |

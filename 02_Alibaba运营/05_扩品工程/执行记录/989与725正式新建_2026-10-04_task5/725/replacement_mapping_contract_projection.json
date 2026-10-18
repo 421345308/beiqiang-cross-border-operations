@@ -1,0 +1,53 @@
+{
+  "rows": [
+    {
+      "candidate": "725",
+      "old_listing": "HR063-C",
+      "old_product_id": "1601943764325",
+      "new_product_id": null,
+      "owner": "task-5 单agent唯一执行者；原owner已停止",
+      "source_url": "https://tuyuan.sooxie.com/detail/2541696",
+      "selection_reason": "篮球风运动休闲相邻采购方向；旧男鞋HOLD_SOURCE占位，不声称原鞋同款；SPORT普通描述词不自动阻断",
+      "growth_tier": "普通品",
+      "growth_observed_at_utc": "2026-10-02 00:48:31",
+      "classification_source": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\266_API完整新建_2026-10-02\\HR_201_growth_verified_register_2026-10-02.csv",
+      "protected": false,
+      "retained_siblings": [
+        {
+          "listing_id": "HR063-B",
+          "product_id": "1601943651966",
+          "growth_tier": "普通品",
+          "disposition": "KEEP_UNCHANGED"
+        },
+        {
+          "listing_id": "HR063-A",
+          "product_id": "1601943653995",
+          "growth_tier": "潜力优品",
+          "disposition": "KEEP_UNCHANGED"
+        }
+      ],
+      "reservation_status": "RESERVED_FOR_PARENT_CONFIRMED_OWNER",
+      "old_action": "NOT_SENT",
+      "new_acceptance": "OWNER_PRODUCTION_NOT_PUBLISHED",
+      "whole_family_complete": false,
+      "next_action": "保留既有预留，实际当前Schema/定价档位未就绪，不抢四条已启主线，不按SPORT普通装饰词停款",
+      "source_url_status": "VERIFIED_EXISTING_OWNER_MAPPING_2026_10_02_17_33",
+      "source_evidence": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-4\\hr_control\\basketball_casual_candidate_2026-10-02\\PARENT_HANDOFF_CURRENT\\725_HR063_C_APPROVED_SOURCE_MAPPING.json",
+      "resume_observed_status_scope": "Business reservation reconciled from local receipts; historical ordinary tier not current live display/order rights proof",
+      "historical_owner": "task4/725既有预留owner，非本轮新启动任务",
+      "match_type": "STRATEGIC_RETIRE_AND_REAL_SOURCE_REPLACEMENT_NOT_IDENTICAL_SHOE",
+      "authorization_scope": "User authorizedreplacementpublishingforremainingordinaryHRlinks; parentexplicitclarified2026-10-02. Preparationnotreadyisnotabsenceofauthorization."
+    }
+  ],
+  "limits": "Local schema-contract projection, not a live classification or business state update",
+  "originals": [
+    {
+      "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\HR系列真实货源改造_2026-09-21\\HR普通品一对一待替换映射_2026-10-02.json",
+      "sha256": "2621ea282eac127fc7ea7450daf089ad299bc33c864669ca34e8a9e1143266ca"
+    },
+    {
+      "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-4\\hr_control\\basketball_casual_candidate_2026-10-02\\PARENT_HANDOFF_CURRENT\\725_HR063_C_APPROVED_SOURCE_MAPPING.json",
+      "sha256": "6360ea36f2a6efadf0302079a0970448edc7838084851738956166fc71a9885e"
+    }
+  ]
+}

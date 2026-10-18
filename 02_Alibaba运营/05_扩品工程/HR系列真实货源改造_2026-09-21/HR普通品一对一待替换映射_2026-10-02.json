@@ -1,0 +1,1049 @@
+{
+  "purpose": "既有经营队列的一对一待替换数据，不是第二套SOP或可直接执行载荷",
+  "as_of": "2026-10-02",
+  "rows": [
+    {
+      "candidate": "5998",
+      "old_listing": "HR050-A",
+      "old_product_id": "1601943774082",
+      "new_product_id": "1601969869242",
+      "owner": "task-5 单agent唯一执行者；原owner已停止",
+      "source_url": "https://bxxy.sooxie.com/detail/2025580",
+      "match_type": "STRATEGIC_RETIRE_AND_REAL_SOURCE_REPLACEMENT_NOT_IDENTICAL_SHOE",
+      "selection_reason": "旧女鞋通用占位无已建立真实货源档案；新闭头开后跟扣带实款有采购与内容证据。不是同款，未由旧标题推导新款性别。",
+      "old_title_snapshot": "Women's Shoes Model HR050-A",
+      "growth_tier": "普通品",
+      "growth_observed_at_utc": "2026-10-02 00:48:31",
+      "classification_source": "02_Alibaba运营/05_扩品工程/执行记录/266_API完整新建_2026-10-02/HR_201_growth_verified_register_2026-10-02.csv",
+      "classification_library_file_id": "libfile_aefe2a71cedc8191aeddbdb20d21283c",
+      "candidate_source": "02_Alibaba运营/05_扩品工程/执行记录/266_API完整新建_2026-10-02/HR_58_普通候选_2026-10-02.csv",
+      "protected": false,
+      "retained_siblings": [
+        {
+          "listing_id": "HR050-B",
+          "product_id": "1601943766117",
+          "growth_tier": "普通品",
+          "disposition": "KEEP_UNCHANGED"
+        },
+        {
+          "listing_id": "HR050-C",
+          "product_id": "1601943660717",
+          "growth_tier": "潜力优品",
+          "disposition": "KEEP_UNCHANGED"
+        }
+      ],
+      "authorization_scope": "用户2026-10-03在task-5直接解除只读限制并授权该明确目标可恢复下架",
+      "reservation_status": "OLD_OFF_FORMALLY_VERIFIED",
+      "new_acceptance": "CONFIRMED_PARENT_QUALITY5_PUBLIC_PASS; keyword专项独立",
+      "old_action": "OFF_VERIFIED",
+      "whole_family_complete": false,
+      "next_action": "精确旧ID已N；保持兄弟链接不变，关键词/新款验收单独处理，不计全家族完成。",
+      "preoff_readonly_evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR首三款普通旧品收尾_2026-10-02/preoff_readonly_summary.json",
+      "preoff_finding": "EXACT_OLD_APPROVED_Y_TODAY_ORDINARY_NO_SCOPED_OWNER_CONFLICT_NO_MATCH_IN11_VISIBLE_ORDERS",
+      "resume_observed_status_scope": "Business reservation reconciled from local receipts; historical ordinary tier not current live display/order rights proof",
+      "historical_owner": "5998原唯一执行owner，父任务确认交接",
+      "old_action_history": [
+        {
+          "recorded_at": "2026-10-03T04:30:05.195316+00:00",
+          "previous": {
+            "authorization_scope": "父任务2026-10-02明确授权建立一对一待替换目标；本任务不下架",
+            "reservation_status": "OFF_BLOCKED_BY_PLATFORM_APPROVAL_DO_NOT_RETRY",
+            "old_action": "NOT_SENT",
+            "next_action": "平台审批拒绝：转发许可未覆盖受信任旧HR限制。由父任务处理受支持授权或用户手工OFF后只读核验；此执行者不重试/不换路线。"
+          }
+        }
+      ],
+      "old_off_result": {
+        "product_id": "1601943774082",
+        "observed_at": "2026-10-03T04:26:49.183411+00:00",
+        "status": "approved",
+        "display": "N",
+        "get_error": null,
+        "request_id": "213f5a2117910016083012979",
+        "SKU_count": 30,
+        "role": "authorized_off_target"
+      }
+    },
+    {
+      "candidate": "9968",
+      "old_listing": "HR052-A",
+      "old_product_id": "1601943742273",
+      "new_product_id": "1601969788941",
+      "owner": "task-5 单agent唯一执行者；原owner已停止",
+      "source_url": "https://qdnx.sooxie.com/detail/2532759",
+      "match_type": "STRATEGIC_RETIRE_AND_REAL_SOURCE_REPLACEMENT_NOT_IDENTICAL_SHOE",
+      "selection_reason": "旧女鞋通用占位HOLD_SOURCE，9968提供明确女式单搭带拼色平底实款；保留HR040询盘价值与HR021已有货源，不抢最近款。",
+      "old_title_snapshot": "Women's Shoes Model HR052-A",
+      "growth_tier": "普通品",
+      "growth_observed_at_utc": "2026-10-02 00:48:31",
+      "classification_source": "02_Alibaba运营/05_扩品工程/执行记录/266_API完整新建_2026-10-02/HR_201_growth_verified_register_2026-10-02.csv",
+      "classification_library_file_id": "libfile_aefe2a71cedc8191aeddbdb20d21283c",
+      "candidate_source": "02_Alibaba运营/05_扩品工程/执行记录/266_API完整新建_2026-10-02/HR_58_普通候选_2026-10-02.csv",
+      "protected": false,
+      "retained_siblings": [
+        {
+          "listing_id": "HR052-B",
+          "product_id": "1601943664760",
+          "growth_tier": "潜力优品",
+          "disposition": "KEEP_UNCHANGED"
+        },
+        {
+          "listing_id": "HR052-C",
+          "product_id": "1601943770128",
+          "growth_tier": "未核验",
+          "disposition": "KEEP_UNCHANGED"
+        }
+      ],
+      "authorization_scope": "用户2026-10-03在task-5直接解除只读限制并授权该明确目标可恢复下架",
+      "reservation_status": "OLD_OFF_FORMALLY_VERIFIED",
+      "new_acceptance": "CONFIRMED_PARENT_QUALITY5_PUBLIC_PASS; keyword专项独立",
+      "old_action": "OFF_VERIFIED",
+      "whole_family_complete": false,
+      "next_action": "精确旧ID已N；保持兄弟链接不变，关键词/新款验收单独处理，不计全家族完成。",
+      "preoff_readonly_evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR首三款普通旧品收尾_2026-10-02/preoff_readonly_summary.json",
+      "preoff_finding": "EXACT_OLD_APPROVED_Y_TODAY_ORDINARY_NO_SCOPED_OWNER_CONFLICT_NO_MATCH_IN11_VISIBLE_ORDERS",
+      "resume_observed_status_scope": "Business reservation reconciled from local receipts; historical ordinary tier not current live display/order rights proof",
+      "historical_owner": "task7/9968原owner",
+      "old_action_history": [
+        {
+          "recorded_at": "2026-10-03T04:30:05.195316+00:00",
+          "previous": {
+            "authorization_scope": "父任务2026-10-02明确授权建立一对一待替换目标；本任务不下架",
+            "reservation_status": "OFF_BLOCKED_BY_PLATFORM_APPROVAL_DO_NOT_RETRY",
+            "old_action": "NOT_SENT",
+            "next_action": "平台审批拒绝：转发许可未覆盖受信任旧HR限制。由父任务处理受支持授权或用户手工OFF后只读核验；此执行者不重试/不换路线。"
+          }
+        }
+      ],
+      "old_off_result": {
+        "product_id": "1601943742273",
+        "observed_at": "2026-10-03T04:26:51.804491+00:00",
+        "status": "approved",
+        "display": "N",
+        "get_error": null,
+        "request_id": "212c6fc617910016109254623",
+        "SKU_count": 30,
+        "role": "authorized_off_target"
+      }
+    },
+    {
+      "candidate": "A67",
+      "old_listing": "HR043-B",
+      "old_product_id": "1601943621884",
+      "new_product_id": "1601969861694",
+      "owner": "task-5 单agent唯一执行者；原owner已停止",
+      "source_url": "https://baoduo.sooxie.com/detail/2439758",
+      "match_type": "STRATEGIC_RETIRE_AND_REAL_SOURCE_REPLACEMENT_NOT_IDENTICAL_SHOE",
+      "selection_reason": "旧Wholesale Shoes通用占位HOLD_SOURCE；以已发布完整后跟镂空实款补真实选择。HR043-A暂留，不分配给另一新货号。",
+      "old_title_snapshot": "Wholesale Shoes Model HR043-B",
+      "growth_tier": "普通品",
+      "growth_observed_at_utc": "2026-10-02 00:48:31",
+      "classification_source": "02_Alibaba运营/05_扩品工程/执行记录/266_API完整新建_2026-10-02/HR_201_growth_verified_register_2026-10-02.csv",
+      "classification_library_file_id": "libfile_aefe2a71cedc8191aeddbdb20d21283c",
+      "candidate_source": "02_Alibaba运营/05_扩品工程/执行记录/266_API完整新建_2026-10-02/HR_58_普通候选_2026-10-02.csv",
+      "protected": false,
+      "retained_siblings": [
+        {
+          "listing_id": "HR043-A",
+          "product_id": "1601943607904",
+          "growth_tier": "普通品",
+          "disposition": "KEEP_UNCHANGED"
+        },
+        {
+          "listing_id": "HR043-C",
+          "product_id": "1601943695412",
+          "growth_tier": "潜力优品",
+          "disposition": "KEEP_UNCHANGED"
+        }
+      ],
+      "authorization_scope": "用户2026-10-03在task-5直接解除只读限制并授权该明确目标可恢复下架",
+      "reservation_status": "OLD_OFF_FORMALLY_VERIFIED",
+      "new_acceptance": "CONFIRMED_PARENT_QUALITY5_PUBLIC_PASS; keyword专项独立",
+      "old_action": "OFF_VERIFIED",
+      "whole_family_complete": false,
+      "next_action": "精确旧ID已N；保持兄弟链接不变，关键词/新款验收单独处理，不计全家族完成。",
+      "preoff_readonly_evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR首三款普通旧品收尾_2026-10-02/preoff_readonly_summary.json",
+      "preoff_finding": "EXACT_OLD_APPROVED_Y_TODAY_ORDINARY_NO_SCOPED_OWNER_CONFLICT_NO_MATCH_IN11_VISIBLE_ORDERS",
+      "resume_observed_status_scope": "Business reservation reconciled from local receipts; historical ordinary tier not current live display/order rights proof",
+      "historical_owner": "task8/A67原owner",
+      "old_action_history": [
+        {
+          "recorded_at": "2026-10-03T04:30:05.195316+00:00",
+          "previous": {
+            "authorization_scope": "父任务2026-10-02明确授权建立一对一待替换目标；本任务不下架",
+            "reservation_status": "OFF_BLOCKED_BY_PLATFORM_APPROVAL_DO_NOT_RETRY",
+            "old_action": "NOT_SENT",
+            "next_action": "平台审批拒绝：转发许可未覆盖受信任旧HR限制。由父任务处理受支持授权或用户手工OFF后只读核验；此执行者不重试/不换路线。"
+          }
+        }
+      ],
+      "old_off_result": {
+        "product_id": "1601943621884",
+        "observed_at": "2026-10-03T04:26:54.159693+00:00",
+        "status": "approved",
+        "display": "N",
+        "get_error": null,
+        "request_id": "0b80d2d617910016132656399",
+        "SKU_count": 30,
+        "role": "authorized_off_target"
+      }
+    },
+    {
+      "candidate": "3522",
+      "old_listing": "HR057-A",
+      "old_product_id": "1601943768215",
+      "new_product_id": "1601969920294",
+      "owner": "task-5 单agent唯一执行者；原owner已停止",
+      "source_url": "https://gediao.sooxie.com/detail/2541782",
+      "match_type": "STRATEGIC_RETIRE_AND_REAL_SOURCE_REPLACEMENT_NOT_IDENTICAL_SHOE",
+      "selection_reason": "旧男鞋通用占位HOLD_SOURCE；新男式无penny带麂皮侧孔乐福供给已核。保留HR003/006等已映射真实货源，不因相似抢已有项目。",
+      "old_title_snapshot": "Men's Shoes Model HR057-A",
+      "growth_tier": "普通品",
+      "growth_observed_at_utc": "2026-10-02 00:48:31",
+      "classification_source": "02_Alibaba运营/05_扩品工程/执行记录/266_API完整新建_2026-10-02/HR_201_growth_verified_register_2026-10-02.csv",
+      "classification_library_file_id": "libfile_aefe2a71cedc8191aeddbdb20d21283c",
+      "candidate_source": "02_Alibaba运营/05_扩品工程/执行记录/266_API完整新建_2026-10-02/HR_58_普通候选_2026-10-02.csv",
+      "protected": false,
+      "retained_siblings": [
+        {
+          "listing_id": "HR057-B",
+          "product_id": "1601943700590",
+          "growth_tier": "潜力优品",
+          "disposition": "KEEP_UNCHANGED"
+        },
+        {
+          "listing_id": "HR057-C",
+          "product_id": "1601943771190",
+          "growth_tier": "潜力优品",
+          "disposition": "KEEP_UNCHANGED"
+        }
+      ],
+      "authorization_scope": "用户2026-10-03在task-5直接解除只读限制并授权该明确目标可恢复下架",
+      "reservation_status": "OLD_OFF_VERIFIED",
+      "new_acceptance": "CORE_APPROVED_Y_COW_SUEDE_24SKU_QUALITY5_PUBLIC_PASS; keywords separate empty",
+      "old_action": "DISPLAY_N_VERIFIED",
+      "whole_family_complete": false,
+      "next_action": "指定旧HR057-A已下架；新3522仍approved/Y24SKU，保留HR057-B/C。",
+      "preoff_readonly_evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR首三款普通旧品收尾_2026-10-02/3522_HR057A_preoff_readonly.json",
+      "preoff_finding": "OLD_APPROVED_Y_17_09_UTC_TODAY_ORDINARY_NO_MATCH_IN_SAVED11_ORDER_SNAPSHOTS",
+      "resume_observed_status_scope": "Business reservation reconciled from local receipts; historical ordinary tier not current live display/order rights proof",
+      "historical_owner": "task7/3522原owner",
+      "old_action_history": [
+        {
+          "recorded_at": "2026-10-03T04:30:05.195316+00:00",
+          "previous": {
+            "authorization_scope": "父任务2026-10-02明确授权建立一对一待替换目标；本任务不下架",
+            "reservation_status": "OFF_BLOCKED_BY_PLATFORM_APPROVAL_DO_NOT_RETRY",
+            "old_action": "NOT_SENT",
+            "next_action": "平台审批拒绝：转发许可未覆盖受信任旧HR限制。由父任务处理受支持授权或用户手工OFF后只读核验；此执行者不重试/不换路线。"
+          }
+        },
+        {
+          "recorded_at": "2026-10-03T06:00:52.271372+00:00",
+          "previous": {
+            "reservation_status": "OLD_OFF_ATTEMPTED_STILL_Y_NO_REPLAY",
+            "old_action": "ATTEMPTED_DISPLAY_STILL_Y",
+            "old_off_result": {
+              "product_id": "1601943768215",
+              "observed_at": "2026-10-03T04:26:56.490427+00:00",
+              "status": "approved",
+              "display": "Y",
+              "get_error": null,
+              "request_id": "0bbb637a17910016156201863",
+              "SKU_count": 30,
+              "role": "authorized_off_target"
+            },
+            "next_action": "界面服务异常且最终正式回读仍Y；未重复点击，需诊断已有失败证据。"
+          }
+        }
+      ],
+      "old_off_result": {
+        "product_id": "1601943768215",
+        "observed_at": "2026-10-03T05:57:07.969533+00:00",
+        "status": "approved",
+        "display": "N",
+        "get_error": null,
+        "request_id": "0b0b3a2717910070269456941",
+        "SKU_count": 30,
+        "role": "authorized_off_target"
+      }
+    },
+    {
+      "candidate": "M001",
+      "old_listing": "HR053-A",
+      "old_product_id": "1601943687648",
+      "new_product_id": "1601970169467",
+      "owner": "task-5 单agent唯一执行者；原owner已停止",
+      "source_url": "https://baiyou877.sooxie.com/detail/2482094",
+      "match_type": "STRATEGIC_RETIRE_AND_REAL_SOURCE_REPLACEMENT_NOT_IDENTICAL_SHOE",
+      "selection_reason": "旧通用男鞋HOLD_SOURCE，候选实款闭头后空便鞋；按相似休闲采购方向重新建事实，不声称原鞋完全相同。人群以源款事实决定。",
+      "old_title_snapshot": "Men's Shoes Model HR053-A",
+      "growth_tier": "普通品",
+      "growth_observed_at_utc": "2026-10-02 00:48:31",
+      "classification_source": "02_Alibaba运营/05_扩品工程/执行记录/266_API完整新建_2026-10-02/HR_201_growth_verified_register_2026-10-02.csv",
+      "classification_library_file_id": "libfile_aefe2a71cedc8191aeddbdb20d21283c",
+      "candidate_source": "02_Alibaba运营/05_扩品工程/执行记录/266_API完整新建_2026-10-02/HR_58_普通候选_2026-10-02.csv",
+      "protected": false,
+      "retained_siblings": [
+        {
+          "listing_id": "HR053-B",
+          "product_id": "1601943638954",
+          "growth_tier": "普通品",
+          "disposition": "KEEP_UNCHANGED"
+        },
+        {
+          "listing_id": "HR053-C",
+          "product_id": "1601943784084",
+          "growth_tier": "潜力优品",
+          "disposition": "KEEP_UNCHANGED"
+        }
+      ],
+      "authorization_scope": "父任务2026-10-02明确授权建立一对一待替换目标；本任务不下架",
+      "reservation_status": "NEW_CREATED_ACTUAL4_5_PUBLIC_PENDING",
+      "new_acceptance": {
+        "authorization": "Direct user: 允许按已备方案上传 M001、A6607 的商品图片，并各正式发布一次。",
+        "create_calls": 2,
+        "product_id": "1601970169467",
+        "status": "APPROVED_DISPLAY_Y_ACTUAL_4_5",
+        "request_id": "213e759c17910038598925619",
+        "trace_id": "210325bb17910030066971359e1114",
+        "business_error": null,
+        "verified_uploaded_roles": 11,
+        "unique_upload_successes": 11,
+        "unknown_upload_roles": [
+          "M6"
+        ],
+        "old_action": "NOT_SENT",
+        "next_action": "Same-ID image-aspect repair and public QA remain pending; never create this model again",
+        "successful_creates": 1,
+        "attempt2_request_id": "213e759c17910038598925619",
+        "first_attempt_business_rejected": true,
+        "formal_read_request_id": "0bbb3b2417910047913975543",
+        "formal_observed_at": "2026-10-03T05:19:52.196952+00:00",
+        "category_id": 201153804,
+        "SKU_count": 12,
+        "SKU_binding": "verified",
+        "FAQ_count": 6,
+        "prices": [
+          {
+            "min_pairs": 2,
+            "USD": 10.08
+          },
+          {
+            "min_pairs": 50,
+            "USD": 9.41
+          },
+          {
+            "min_pairs": 100,
+            "USD": 8.74
+          }
+        ],
+        "actual_score": 4.5,
+        "score_issue": "Official score image_scale -0.5; current native hero 630x455. Square colour composites reviewed and rejected as unsuitable heroes. No further image update sent.",
+        "source_url": "https://baiyou877.sooxie.com/detail/2482094",
+        "public_model": "BQ-M001",
+        "score_request_id": "0bab02fe17910057901777334",
+        "prior_failed_create_receipt": {
+          "request_id": "0b830ecc17910030073376783",
+          "business_error": "isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:PUB_BIZCHECK_API_SKU_PROP_INVALID;"
+        }
+      },
+      "old_action": "NOT_SENT",
+      "whole_family_complete": false,
+      "next_action": "已有新ID，禁止再次创建；同ID主图比例修正和公开QA未完成，旧HR053-A不在五条OFF授权内。",
+      "resume_observed_status_scope": "Business reservation reconciled from local receipts; historical ordinary tier not current live display/order rights proof",
+      "historical_owner": "task7/恢复后唯一生产owner",
+      "formal_create_attempt_20261003": {
+        "authorization": "Direct user: 允许按已备方案上传 M001、A6607 的商品图片，并各正式发布一次。",
+        "create_calls": 1,
+        "product_id": null,
+        "status": "business_rejected",
+        "request_id": "0b830ecc17910030073376783",
+        "trace_id": "210325bb17910030066971359e1114",
+        "business_error": "isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:CHK_COMP_DATA_FORMAT_ERROR;isp.system-service-error:PUB_BIZCHECK_API_SKU_PROP_INVALID;",
+        "verified_uploaded_roles": 11,
+        "unique_upload_successes": 11,
+        "unknown_upload_roles": [
+          "M6"
+        ],
+        "old_action": "NOT_SENT",
+        "next_action": "Corrected wire package prepared offline; no automatic second create"
+      },
+      "new_product_status": "approved",
+      "new_product_display": "Y",
+      "new_product_actual_score": 4.5
+    },
+    {
+      "candidate": "2627BSK",
+      "old_listing": "HR060-A",
+      "old_product_id": "1601943755354",
+      "new_product_id": "1601969885846",
+      "owner": "task-5 单agent唯一执行者；原owner已停止",
+      "source_url": "https://huohuo.sooxie.com/detail/2557137",
+      "match_type": "STRATEGIC_RETIRE_AND_REAL_SOURCE_REPLACEMENT_NOT_IDENTICAL_SHOE",
+      "selection_reason": "旧通用女鞋HOLD_SOURCE，新平台洞孔旋转带实款与35–40配对标签适合先做采购方向试验；方向相邻不证明本款女式或海外销量。",
+      "old_title_snapshot": "Women's Shoes Model HR060-A",
+      "growth_tier": "普通品",
+      "growth_observed_at_utc": "2026-10-02 00:48:31",
+      "classification_source": "02_Alibaba运营/05_扩品工程/执行记录/266_API完整新建_2026-10-02/HR_201_growth_verified_register_2026-10-02.csv",
+      "classification_library_file_id": "libfile_aefe2a71cedc8191aeddbdb20d21283c",
+      "candidate_source": "02_Alibaba运营/05_扩品工程/执行记录/266_API完整新建_2026-10-02/HR_58_普通候选_2026-10-02.csv",
+      "protected": false,
+      "retained_siblings": [
+        {
+          "listing_id": "HR060-B",
+          "product_id": "1601943705620",
+          "growth_tier": "潜力优品",
+          "disposition": "KEEP_UNCHANGED"
+        },
+        {
+          "listing_id": "HR060-C",
+          "product_id": "1601943663897",
+          "growth_tier": "未核验",
+          "disposition": "KEEP_UNCHANGED"
+        }
+      ],
+      "authorization_scope": "父任务2026-10-02明确授权建立一对一待替换目标；本任务不下架",
+      "reservation_status": "EXISTING_NEW_ID_BOUND_PUBLIC_QA_PENDING_OLD_RETAINED",
+      "new_acceptance": "FORMAL_APPROVED_Y_ACTUAL5_PUBLIC_PENDING",
+      "old_action": "NOT_SENT",
+      "whole_family_complete": false,
+      "next_action": "唯一浏览器owner验现有新ID公开QA；禁止再次create；旧目标不因新授权五旧品而自动OFF",
+      "resume_observed_status_scope": "Business reservation reconciled from local receipts; historical ordinary tier not current live display/order rights proof",
+      "historical_owner": "task8当前优先生产owner"
+    },
+    {
+      "candidate": "A6607",
+      "old_listing": "HR055-C",
+      "old_product_id": "1601943784098",
+      "new_product_id": null,
+      "owner": "task-5 单agent唯一执行者；原owner已停止",
+      "source_url": "https://thxy.sooxie.com/detail/2544182",
+      "match_type": "STRATEGIC_RETIRE_AND_REAL_SOURCE_REPLACEMENT_NOT_IDENTICAL_SHOE",
+      "selection_reason": "仅预留普通HOLD_SOURCE旧位；新为儿童24–35配对码，与旧男鞋用途不同。明确属于新细分方向试验，不能称同款/同意图匹配；儿童方向与合法品牌销售路径需父任务决策。",
+      "old_title_snapshot": "Men's Shoes Model HR055-C",
+      "growth_tier": "普通品",
+      "growth_observed_at_utc": "2026-10-02 00:48:31",
+      "classification_source": "02_Alibaba运营/05_扩品工程/执行记录/266_API完整新建_2026-10-02/HR_201_growth_verified_register_2026-10-02.csv",
+      "classification_library_file_id": "libfile_aefe2a71cedc8191aeddbdb20d21283c",
+      "candidate_source": "02_Alibaba运营/05_扩品工程/执行记录/266_API完整新建_2026-10-02/HR_58_普通候选_2026-10-02.csv",
+      "protected": false,
+      "retained_siblings": [
+        {
+          "listing_id": "HR055-A",
+          "product_id": "1601943672753",
+          "growth_tier": "潜力优品",
+          "disposition": "KEEP_UNCHANGED"
+        },
+        {
+          "listing_id": "HR055-B",
+          "product_id": "1601943711519",
+          "growth_tier": "潜力优品",
+          "disposition": "KEEP_UNCHANGED"
+        }
+      ],
+      "authorization_scope": "父任务2026-10-02明确授权建立一对一待替换目标；本任务不下架",
+      "reservation_status": "RESERVED_PENDING_CHILD_SEGMENT_AND_BRAND_ROUTE_DECISION",
+      "new_acceptance": "LOOKUP_LATEST_OWNER_RECEIPTS",
+      "old_action": "NOT_SENT",
+      "whole_family_complete": false,
+      "next_action": "owner确认目标未被另任务占用；仅核目标最新分类/关联价值和新款完成门后交父任务授权收尾，不重扫175全店",
+      "resume_observed_status_scope": "Business reservation reconciled from local receipts; historical ordinary tier not current live display/order rights proof",
+      "historical_owner": "父任务统筹；task8已取证，后续owner待分配",
+      "formal_create_attempt_20261003": {
+        "authorization": "Direct user: 允许按已备方案上传 M001、A6607 的商品图片，并各正式发布一次。",
+        "create_calls": 1,
+        "product_id": null,
+        "status": "business_rejected",
+        "request_id": "0b0b3a2717910030490695855",
+        "trace_id": "210334ab17910030484897639e0b91",
+        "business_error": "isp.system-service-error:PUB_BIZCHECK_CAT_PUB_RESTRICT;",
+        "verified_uploaded_roles": 14,
+        "unique_upload_successes": 13,
+        "unknown_upload_roles": [],
+        "old_action": "NOT_SENT",
+        "next_action": "Store business category restriction; do not change company settings or misclassify children slides"
+      }
+    },
+    {
+      "candidate": "H219",
+      "old_listing": "HR048-B",
+      "old_product_id": "1601943767092",
+      "new_product_id": "1601969936536",
+      "owner": "task-5 单agent唯一执行者；原owner已停止",
+      "source_url": "https://ls2017.sooxie.com/detail/1565538",
+      "source_facts_parent_delegation": "CNY60；棕黑35–40/12SKU；系带侧拉链短靴；实际材料查owner",
+      "match_type": "STRATEGIC_RETIRE_AND_REAL_SOURCE_REPLACEMENT_NOT_IDENTICAL_SHOE",
+      "selection_reason": "旧侧拉链/系带采购问题相邻，非完全同鞋；A/C潜力保护",
+      "growth_tier": "普通品",
+      "growth_observed_at_utc": "2026-10-02 00:48:31",
+      "classification_source": "02_Alibaba运营/05_扩品工程/执行记录/266_API完整新建_2026-10-02/HR_201_growth_verified_register_2026-10-02.csv",
+      "protected": false,
+      "retained_siblings": [
+        {
+          "listing_id": "HR048-A",
+          "product_id": "1601943649788",
+          "growth_tier": "潜力优品",
+          "disposition": "KEEP_UNCHANGED"
+        },
+        {
+          "listing_id": "HR048-C",
+          "product_id": "1601943607995",
+          "growth_tier": "潜力优品",
+          "disposition": "KEEP_UNCHANGED"
+        }
+      ],
+      "authorization_scope": "父任务明确要求从今日普通列表补唯一目标，本任务不下架",
+      "reservation_status": "NEW_ID_BOUND_PUBLIC_QA_BLOCKED_OLD_RETAINED",
+      "old_action": "NOT_SENT",
+      "new_acceptance": "FORMAL_APPROVED_Y_ACTUAL_SCORE5_CONTENT_GET_PASS_PUBLIC_CAPTCHA_BLOCKED_KEYWORD_EMPTY",
+      "whole_family_complete": false,
+      "next_action": "Saved and stopped; parent separately resumes same-ID independent public QA and keyword persistence. No automatic old-off.",
+      "actual_new_score": 5.0,
+      "score_observed_at": "2026-10-02T17:50:29.345077+00:00",
+      "resume_observed_status_scope": "Business reservation reconciled from local receipts; historical ordinary tier not current live display/order rights proof",
+      "historical_owner": "task2/01a0fa7b…"
+    },
+    {
+      "candidate": "F2888",
+      "old_listing": "HR056-A",
+      "old_product_id": "1601943775160",
+      "new_product_id": "1601970034464",
+      "owner": "task-5 单agent唯一执行者；原owner已停止",
+      "source_url": "https://shangchao.sooxie.com/detail/2357652",
+      "source_facts_parent_delegation": "CNY53；三色35–42交集24SKU；材料/温标不编",
+      "match_type": "STRATEGIC_RETIRE_NOT_IDENTICAL_SHOE",
+      "selection_reason": "旧女鞋通用占位HOLD_SOURCE；真实冬季方向试验，不伪称同款",
+      "growth_tier": "普通品",
+      "growth_observed_at_utc": "2026-10-02 00:48:31",
+      "classification_source": "02_Alibaba运营/05_扩品工程/执行记录/266_API完整新建_2026-10-02/HR_201_growth_verified_register_2026-10-02.csv",
+      "protected": false,
+      "retained_siblings": [
+        {
+          "listing_id": "HR056-B",
+          "product_id": "1601943751252",
+          "growth_tier": "普通品",
+          "disposition": "KEEP_UNCHANGED"
+        },
+        {
+          "listing_id": "HR056-C",
+          "product_id": "1601943778191",
+          "growth_tier": "潜力优品",
+          "disposition": "KEEP_UNCHANGED"
+        }
+      ],
+      "authorization_scope": "父任务明确要求从今日普通列表补唯一目标，本任务不下架",
+      "reservation_status": "EXISTING_CREATED_APPROVED_Y_ACTUAL5_PUBLIC_QA_PENDING",
+      "old_action": "NOT_SENT",
+      "new_acceptance": "2026-10-03 02:41 UTC approved/Y actual5.00; 24SKU unchanged; public QA not rechecked",
+      "whole_family_complete": false,
+      "next_action": "Use existing1601970034464; never recreate. Public QA and separately authorized old retirement remain independent.",
+      "resume_observed_status_scope": "Business reservation reconciled from local receipts; historical ordinary tier not current live display/order rights proof",
+      "historical_owner": "task2/恢复后唯一生产owner"
+    },
+    {
+      "candidate": "929",
+      "old_listing": "HR059-C",
+      "old_product_id": "1601943779211",
+      "new_product_id": "1601970118386",
+      "owner": "task-5 单agent唯一执行者；原owner已停止",
+      "source_url": "https://siji.sooxie.com/detail/2428686",
+      "source_facts_parent_delegation": "男网面厚底三色39–47；CNY95为原列表线索，报价按owner复核",
+      "match_type": "STRATEGIC_RETIRE_NOT_IDENTICAL_SHOE",
+      "selection_reason": "旧男鞋通用占位HOLD_SOURCE；男网面厚底实款替换，不继承轻量性能",
+      "growth_tier": "普通品",
+      "growth_observed_at_utc": "2026-10-02 00:48:31",
+      "classification_source": "02_Alibaba运营/05_扩品工程/执行记录/266_API完整新建_2026-10-02/HR_201_growth_verified_register_2026-10-02.csv",
+      "protected": false,
+      "retained_siblings": [
+        {
+          "listing_id": "HR059-B",
+          "product_id": "1601943767266",
+          "growth_tier": "普通品",
+          "disposition": "KEEP_UNCHANGED"
+        },
+        {
+          "listing_id": "HR059-A",
+          "product_id": "1601943790138",
+          "growth_tier": "潜力优品",
+          "disposition": "KEEP_UNCHANGED"
+        }
+      ],
+      "authorization_scope": "父任务明确要求从今日普通列表补唯一目标，本任务不下架",
+      "reservation_status": "CREATED_APPROVED_Y_ACTUAL5_CONTENT_ACCEPTANCE_PENDING",
+      "old_action": "NOT_SENT",
+      "new_acceptance": "APPROVED_ACTUAL5_SKU27_VERIFIED; PUBLIC_CATEGORY_MISMATCH_CLOGS; keywords empty; full public QA NOT_PASS",
+      "whole_family_complete": false,
+      "next_action": "保留1601970118386，禁止重建；公开类目Clogs不符实际系带运动鞋，修复路径尚未验证，关键词和公开全量QA仍独立待处理。",
+      "resume_observed_status_scope": "Business reservation reconciled from local receipts; historical ordinary tier not current live display/order rights proof",
+      "historical_owner": "task6/恢复后唯一生产owner",
+      "new_evidence": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\single_agent_resume_2310\\929_publish\\approved_score5_summary.json",
+      "keyword_persistence": "NOT_PERSISTED",
+      "public_qa": "NOT_RECHECKED",
+      "category_diagnosis_20261003": {
+        "at": "2026-10-03T05:00:30.832261+00:00",
+        "product_id": "1601970118386",
+        "original_cat_id": 201153805,
+        "original_leaf": "Clogs",
+        "correct_cat_id": 201339906,
+        "correct_leaf": "Chunky Shoes",
+        "category_read_request_id": "0b830ecc17910031568172247",
+        "current_schema_request_id": "213c933517910032041015366",
+        "root_cause": "Original task-6 929_schema_get.params.json requested 201153805; original type4 template and migrated canonical body preserved that incorrect category; formal/public match request.",
+        "category_mutation_calls": 0,
+        "route_status": "UNVERIFIED_EXISTING_CATEGORY_CHANGE",
+        "limits": "Official update DTO exposes cat_id but no category-change example was verified; current catId field declares readOnlyRule true. Cannot treat DTO presence as proven category-change support.",
+        "browser_status": "PAUSED_USER_FOREGROUND_CHATGPT",
+        "browser_foreground_pid": 48448,
+        "no_recreate": true,
+        "preserve": [
+          "27SKU",
+          "prices",
+          "gallery",
+          "materials",
+          "model",
+          "existing ID"
+        ]
+      }
+    },
+    {
+      "candidate": "725",
+      "old_listing": "HR063-C",
+      "old_product_id": "1601943764325",
+      "new_product_id": null,
+      "owner": "task-5 单agent唯一执行者；原owner已停止",
+      "source_url": "https://tuyuan.sooxie.com/detail/2541696",
+      "selection_reason": "篮球风运动休闲相邻采购方向；旧男鞋HOLD_SOURCE占位，不声称原鞋同款；SPORT普通描述词不自动阻断",
+      "growth_tier": "普通品",
+      "growth_observed_at_utc": "2026-10-02 00:48:31",
+      "classification_source": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\266_API完整新建_2026-10-02\\HR_201_growth_verified_register_2026-10-02.csv",
+      "protected": false,
+      "retained_siblings": [
+        {
+          "listing_id": "HR063-B",
+          "product_id": "1601943651966",
+          "growth_tier": "普通品",
+          "disposition": "KEEP_UNCHANGED"
+        },
+        {
+          "listing_id": "HR063-A",
+          "product_id": "1601943653995",
+          "growth_tier": "潜力优品",
+          "disposition": "KEEP_UNCHANGED"
+        }
+      ],
+      "reservation_status": "RESERVED_FOR_PARENT_CONFIRMED_OWNER",
+      "old_action": "NOT_SENT",
+      "new_acceptance": "OWNER_PRODUCTION_NOT_PUBLISHED",
+      "whole_family_complete": false,
+      "next_action": "保留既有预留，实际当前Schema/定价档位未就绪，不抢四条已启主线，不按SPORT普通装饰词停款",
+      "source_url_status": "VERIFIED_EXISTING_OWNER_MAPPING_2026_10_02_17_33",
+      "source_evidence": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-4\\hr_control\\basketball_casual_candidate_2026-10-02\\PARENT_HANDOFF_CURRENT\\725_HR063_C_APPROVED_SOURCE_MAPPING.json",
+      "resume_observed_status_scope": "Business reservation reconciled from local receipts; historical ordinary tier not current live display/order rights proof",
+      "historical_owner": "task4/725既有预留owner，非本轮新启动任务"
+    },
+    {
+      "candidate": "805",
+      "old_listing": "HR065-A",
+      "old_product_id": "1601943738486",
+      "new_product_id": "1601969877983",
+      "owner": "task-5 单agent唯一执行者；原owner已停止",
+      "source_url": "https://yut.sooxie.com/detail/559264",
+      "selection_reason": "源为套脚流苏豆豆鞋方向，旧男鞋HOLD_SOURCE通用位；保留HR003/006等已有真实源，不把普通平底3522硬叫豆豆",
+      "growth_tier": "普通品",
+      "growth_observed_at_utc": "2026-10-02 00:48:31",
+      "classification_source": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\266_API完整新建_2026-10-02\\HR_201_growth_verified_register_2026-10-02.csv",
+      "protected": false,
+      "retained_siblings": [
+        {
+          "listing_id": "HR065-B",
+          "product_id": "1601943703750",
+          "growth_tier": "潜力优品",
+          "disposition": "KEEP_UNCHANGED"
+        },
+        {
+          "listing_id": "HR065-C",
+          "product_id": "1601943717639",
+          "growth_tier": "潜力优品",
+          "disposition": "KEEP_UNCHANGED"
+        }
+      ],
+      "reservation_status": "EXISTING_NEW_ID_BOUND_PUBLIC_QA_PENDING_OLD_RETAINED",
+      "old_action": "NOT_SENT",
+      "new_acceptance": "FORMAL_APPROVED_Y_ACTUAL5_PUBLIC_PENDING",
+      "whole_family_complete": false,
+      "next_action": "唯一浏览器owner验现有新ID公开QA；禁止再次create；旧目标不因新授权五旧品而自动OFF",
+      "resume_observed_status_scope": "Business reservation reconciled from local receipts; historical ordinary tier not current live display/order rights proof",
+      "historical_owner": "task7/BQ-D805"
+    }
+  ],
+  "already_reserved_exclusions": [
+    "HR047→266原父任务",
+    "HR051→936/task4",
+    "HR058→262原父任务",
+    "K858/task4自身重建"
+  ],
+  "separate_inventory_rebuild_mappings": [
+    {
+      "style": "936",
+      "old_product_id": 1601969872083,
+      "new_product_id": 1601969906452,
+      "owner": "task4",
+      "scope": "自身库存干净重建，非本轮新分配HR目标",
+      "state": "CREATED_ONCE_FORMAL_CONTENT_PASS_EMPTY_STOCK_WAIT_REVIEW_SCORE_PUBLIC",
+      "old_action": "NOT_SENT_BY_THIS_TASK"
+    },
+    {
+      "style": "K858",
+      "old_product_id": 1601969860254,
+      "new_product_id": 1601969853888,
+      "owner": "task4",
+      "scope": "自身库存干净重建，非本轮新分配HR目标",
+      "state": "CREATED_ONCE_FORMAL_CONTENT_PASS_EMPTY_STOCK_WAIT_REVIEW_SCORE_PUBLIC",
+      "old_action": "NOT_SENT_BY_THIS_TASK"
+    }
+  ],
+  "engineering_contract": {
+    "fields": [
+      "old_product_id",
+      "old_listing",
+      "new_product_id",
+      "source_url",
+      "owner",
+      "growth_tier",
+      "growth_observed_at_utc",
+      "classification_source",
+      "protected",
+      "retained_siblings",
+      "selection_reason",
+      "authorization_scope",
+      "reservation_status",
+      "new_acceptance",
+      "old_action",
+      "whole_family_complete"
+    ],
+    "handoff_to": "task5/唯一共享Python工程writer，经父任务转交",
+    "gaps": [
+      "新建产品已有唯一ID，复用不再次创建",
+      "业务预留不等于平台OFF或工程临时重复授权",
+      "若映射因分类/占用变化失效，仅取消该条预留，不扩大删除或过滤旧品伪造去重PASS",
+      "目标OFF前只核这一个已分层目标的当前保护/询盘订单推广关联价值，不设重扫175全店门槛"
+    ],
+    "current_python_scope": "One-to-one strategic different-shoe register only: exact source/old ID, protected=false/ordinary classification with its dated source, preserved siblings/reservation; no automatic off or inquiry/order/traffic clearance. Complete formal/media/SKU/score/public QA and fresh old association/protection/owner ack remain retirement requirements. Separate same-SKU stock rebuild contract unchanged; two routes cannot mix.",
+    "business_to_production_mapping": {
+      "A": "Identity/category/model/source -> actual current Schema and source object, original commercial facts stay in reviewed payload; no defaults",
+      "B": "Demand references remain hash-bound in original taskpack document; never become product performance/sales facts",
+      "C": "Intent projection and current-Schema keyword validation; persistence independent get/render contract",
+      "D": "Actual hero review projection; accepted full imagery remains separately evidenced",
+      "E": "Existing formal/score/public raw evidence references and original accepted submission, no stage PASS promoted to whole completion",
+      "F": "Explicit strategic old IDs/assigned new ID/protection/retained siblings/reservation and pending retirement",
+      "G": "role/phase/writer/next_action preserved and original dated observation record referenced"
+    },
+    "actual_reader": "publish_hot_rank_hr_a_batch.py.load_submission_manifest -> load_task_pack_contract -> prepare_scoped_listing; actual api_submit receipts retain task_pack and replacement_plan. Existing CLI --mode inspect-existing is read-only, never loads client/credentials.",
+    "actual_task_pack_manifest_fields": {
+      "task_pack": "taskpack_projection.json",
+      "task_pack_sha256": "SHA256_FILE_BYTES"
+    },
+    "actual_projection_contract": {
+      "task_id": "Unique actual task",
+      "role": "NEW / REPLACE / OPTIMIZE / TEST",
+      "phase": "Actual current phase; no automatic completion",
+      "writer": "Original unique platform owner",
+      "next_action": "One actual next action",
+      "public_model": "Actual expected product model",
+      "category_id": "Actual current category",
+      "product_id": "null for genuinely uncreated candidate; existing ID for updates/inspect-existing",
+      "source_identity": "Canonical source object: reference/style/critical_facts/evidence; mapped explicitly to review.candidate.source, never an unread top-level label",
+      "search_intent": "key/evidence from taskpack C; mapped to review.candidate.search_intent, no traffic inference",
+      "hero_review": "actual url/aliases/sha256/content_key/label_status/evidence from taskpack D; mapped to review.candidate.hero_review, URLs bound to actual payload",
+      "replacement_plan": {
+        "candidate": "Exact candidate name in existing strategic register",
+        "old_product_ids": [
+          "Exact one-to-one old public ID; no family expansion"
+        ]
+      },
+      "evidence_files": [
+        {
+          "path": "Exact canonical template path",
+          "sha256": "FILE_BYTES",
+          "kind": "task_pack_template"
+        },
+        {
+          "path": "Existing individual A-G taskpack Markdown",
+          "sha256": "FILE_BYTES",
+          "kind": "task_pack_document"
+        },
+        {
+          "path": "Existing HR普通品一对一待替换映射_2026-10-02.json",
+          "sha256": "FILE_BYTES",
+          "kind": "replacement_mapping"
+        }
+      ]
+    },
+    "actual_source_contract": {
+      "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\task_pack_manifest_contract.json",
+      "sha256": "3435a6331b3cdedd4dd929d3720971c9e9a47c117bbc77559fb79e32d189eb79",
+      "offline_tests": "91 tests OK, including5 taskpack tests and5 keyword tests; real existing CLI never loads client; NEW and strategic REPLACE actual manifest paths tested using memory transport only."
+    },
+    "actual_existing_example": {
+      "wrapper": "C:\\Users\\spq\\Desktop\\贝强\\08_工具链\\01_业务脚本\\国际站扩品\\schema_contract_fixtures\\9968_existing_binding\\inspect_manifest.json",
+      "new_id": "1601969788941",
+      "old_id": "1601943742273",
+      "original_manifest_sha256": "9cd1eaeca3ca2549f8f47d2ac19aef9506af7816adfbeb8283b140f29cf7f133",
+      "original_manifest_unchanged": true,
+      "result": "EXISTING_EVIDENCE_BOUND_NEW_CREATION_DISABLED",
+      "keyword_followup": "Known formal keywords empty; separate owner task, not completed by this binding",
+      "no_old_off": true
+    }
+  },
+  "3522_owner_latest_snapshot": {
+    "status": "modified",
+    "display": "N",
+    "actual_score": 3.9,
+    "observed_at": "2026-10-02T15:57:57.828611+00:00",
+    "score_status": "PENDING_OPTIMIZATION",
+    "public_acceptance": "PENDING_INDEPENDENT_READ_ONLY",
+    "keyword_persistence": false,
+    "actual_keywords": [
+      ""
+    ],
+    "audit_at_utc": "2026-10-02T15:59:00.648298+00:00",
+    "get_request_id": "213c933517909566710467494",
+    "render_request_id": "0b0b3a2717909566739362755",
+    "title": "Men's Suede Slip-On Loafers with Perforated Side Panels",
+    "source_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-7\\3522_execution\\formal_checks.json"
+  },
+  "stop_instruction": "2026-10-02 18:00停工已执行并保留历史；用户2026-10-02 22:13 UTC明确恢复，本轮不再把过去截止作为当前停止指令；新停止时间未指定",
+  "first_three_off_handoff": "02_Alibaba运营/05_扩品工程/执行记录/HR首三款普通旧品收尾_2026-10-02/off_handoff_NOT_SENT.json",
+  "stop_instruction_history": {
+    "deadline_beijing": "2026-10-03 02:00 +08:00",
+    "deadline_utc": "2026-10-02 18:00Z",
+    "behavior": "到时停止新任务/修改/发布；仅核实在途结果和保存断点；不自动恢复，等待用户重新安排",
+    "quota_reset_status": "时间截止不证明额度重置；明确截止取代猜测重置作为本轮停工安排"
+  },
+  "resume_state": {
+    "observed_at": "2026-10-03T03:46:29.962495+00:00",
+    "authorization": {
+      "source": "Direct user message in task-5 execution thread",
+      "verbatim": "解除本任务原先只读限制，允许按已确认方案修改 HR021 三条至 5.0、发布 929，并可恢复下架已列明的五条旧商品",
+      "five_authorized_old_ids": [
+        "1601969860254",
+        "1601943774082",
+        "1601943742273",
+        "1601943621884",
+        "1601943768215"
+      ],
+      "authorization_is_not_execution": true
+    },
+    "current_four_tracks": [
+      "task-5 sole product/engineering writer; authorized API mutations and readback",
+      "Two parent-assigned read-only operating/data researchers; shared browser reserved",
+      "929 existing1601970118386 approved/Y actual5; no recreate",
+      "Low18: FAQ pilot saved, score still4.9; second empty companyDesc pending; no blind bulk updates"
+    ],
+    "scope": "Formal score/content/keyword/publicQA/oldOFF/source truth independent gates; all historical source owners stopped, no Workctl",
+    "checkpoint": "C:/Users/spq/Documents/Codex/2026-10-02/task-5/single_agent_resume_2310/CURRENT_SINGLE_AGENT_CHECKPOINT.json"
+  },
+  "single_agent_resume": {
+    "observed_at": "2026-10-03T03:46:29.962495+00:00",
+    "status": "ACTIVE_SINGLE_PRODUCT_WRITER_WITH_TWO_READONLY_RESEARCHERS",
+    "owner": "task-5",
+    "read_only_limit_lifted_by_direct_user": true,
+    "five_OFF_authorized": true,
+    "five_OFF_sent": 0,
+    "five_OFF_block": "TECHNICAL_EXECUTION_PATH_UNVERIFIED_NOT_AUTHORIZATION",
+    "unknown_no_replay": [
+      "929 M6 upload",
+      "3522 keyword update",
+      "69002 historical create"
+    ]
+  },
+  "latest_result_reconciliation": {
+    "at": "2026-10-03T03:33:13.413682+00:00",
+    "writer": "task-5 sole product writer",
+    "scope": "F2888 and929 actual new-result binding only; historical classification and old action retained",
+    "direct_authorization": "User in task explicitly lifted original read-only restriction and approvedHR021/929/exactfiveOFF; research readers use shared browser separately",
+    "source": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\single_agent_resume_2310\\CURRENT_SINGLE_AGENT_CHECKPOINT.json"
+  },
+  "resume_state_history": [
+    {
+      "authorization_evidence": "02_Alibaba运营/05_扩品工程/执行记录/恢复授权与预约核对_2026-10-02.json",
+      "authorization": {
+        "user_message_id": "Sentinel_c043320b2208819188af8aa3aea1259b",
+        "user_at_utc": "2026-10-02T22:13:00Z",
+        "source_thread": "01a0f9fb-9712-72ef-a418-073ce2a59024",
+        "verbatim": "可以恢复了，请继续进行任务\n929 的图片遇到工具兼容问题：图像工具无法读取 Windows 路径。可以改用本地程序对真实照片做裁切、缩放和英文排版，不生成或改造鞋体细节。允许这款按这种方式 继续\n洞洞鞋少一张图片而已可以不需要补传\n允许这五条可恢复下架",
+        "five_authorized_old_ids": [
+          "1601969860254",
+          "1601943774082",
+          "1601943742273",
+          "1601943621884",
+          "1601943768215"
+        ],
+        "authorization_is_not_execution": true,
+        "sole_browser_OFF_owner": "父任务已启动的唯一浏览器/OFF负责人",
+        "three_source_owners": {
+          "M001": "task7/恢复后唯一生产owner",
+          "F2888": "task2/恢复后唯一生产owner",
+          "929": "task6/恢复后唯一生产owner"
+        },
+        "images_2627_exception": "2627BSK现有3详情不补传，单款用户豁免；其余完整内容/公开QA仍验",
+        "permissions_boundary": "任何拒绝记录具体操作和目标，不更换路线规避"
+      },
+      "ordinary_snapshot_counts": {
+        "reserved_exact": 12,
+        "existing_source_or_value_protected": 5,
+        "prior_assigned_family": 9,
+        "explicit_retained_sibling": 6,
+        "unassigned_requires_exact_source_identity_and_live_scope_check": 26
+      },
+      "current_four_tracks": [
+        "唯一浏览器/OFF负责人：五旧品+2627/805/H219公开QA",
+        "task6：929裁排发布",
+        "task7：M001",
+        "task2：F2888"
+      ],
+      "scope": "实际实款/官方5分/公开QA/旧品OFF四项独立验收，按真实回执增量；本任务不执行平台动作"
+    }
+  ],
+  "single_agent_resume_history": [
+    {
+      "observed_at": "2026-10-02T23:17:41.581540+00:00",
+      "user_message": "Sentinel_76156ef680648191a1ede280cab3cb4e",
+      "status": "ACTIVE_SINGLE_AGENT_NO_SUBAGENTS",
+      "owner": "task-5",
+      "historical_pause_retained": true,
+      "five_off_block": "C:/Users/spq/Documents/Codex/2026-10-02/task/936_K858_public_closeout/resumed_off_rejected.json",
+      "unknown_no_replay": [
+        "929 M6 upload",
+        "3522 keyword update",
+        "69002 historical create"
+      ]
+    }
+  ],
+  "five_off_current_result": [
+    {
+      "product_id": "1601969860254",
+      "observed_at": "2026-10-03T04:26:46.521431+00:00",
+      "status": "approved",
+      "display": "N",
+      "get_error": null,
+      "request_id": "2105584317910016056021975",
+      "SKU_count": 33,
+      "role": "authorized_off_target"
+    },
+    {
+      "product_id": "1601943774082",
+      "observed_at": "2026-10-03T04:26:49.183411+00:00",
+      "status": "approved",
+      "display": "N",
+      "get_error": null,
+      "request_id": "213f5a2117910016083012979",
+      "SKU_count": 30,
+      "role": "authorized_off_target"
+    },
+    {
+      "product_id": "1601943742273",
+      "observed_at": "2026-10-03T04:26:51.804491+00:00",
+      "status": "approved",
+      "display": "N",
+      "get_error": null,
+      "request_id": "212c6fc617910016109254623",
+      "SKU_count": 30,
+      "role": "authorized_off_target"
+    },
+    {
+      "product_id": "1601943621884",
+      "observed_at": "2026-10-03T04:26:54.159693+00:00",
+      "status": "approved",
+      "display": "N",
+      "get_error": null,
+      "request_id": "0b80d2d617910016132656399",
+      "SKU_count": 30,
+      "role": "authorized_off_target"
+    },
+    {
+      "product_id": "1601943768215",
+      "observed_at": "2026-10-03T04:26:56.490427+00:00",
+      "status": "approved",
+      "display": "Y",
+      "get_error": null,
+      "request_id": "0bbb637a17910016156201863",
+      "SKU_count": 30,
+      "role": "authorized_off_target"
+    },
+    {
+      "product_id": "1601969853888",
+      "observed_at": "2026-10-03T04:26:58.992315+00:00",
+      "status": "approved",
+      "display": "Y",
+      "get_error": null,
+      "request_id": "212cbf3217910016182707238",
+      "SKU_count": 33,
+      "role": "protected_same_model"
+    }
+  ],
+  "five_off_success_count": 5,
+  "protected_new_links_current_20261003": [
+    {
+      "product_id": "1601969869242",
+      "observed_at": "2026-10-03T04:52:39.553844+00:00",
+      "status": "approved",
+      "display": "Y",
+      "get_error": null,
+      "request_id": "21501be117910031588875522",
+      "SKU_count": 22,
+      "role": "protected_replacement_link"
+    },
+    {
+      "product_id": "1601969788941",
+      "observed_at": "2026-10-03T04:52:40.960994+00:00",
+      "status": "approved",
+      "display": "Y",
+      "get_error": null,
+      "request_id": "21501b8d17910031602943793",
+      "SKU_count": 18,
+      "role": "protected_replacement_link"
+    },
+    {
+      "product_id": "1601969861694",
+      "observed_at": "2026-10-03T04:52:42.546628+00:00",
+      "status": "approved",
+      "display": "Y",
+      "get_error": null,
+      "request_id": "0bab02fe17910031617796995",
+      "SKU_count": 15,
+      "role": "protected_replacement_link"
+    },
+    {
+      "product_id": "1601969920294",
+      "observed_at": "2026-10-03T04:52:44.046979+00:00",
+      "status": "approved",
+      "display": "Y",
+      "get_error": null,
+      "request_id": "213c933517910031633684884",
+      "SKU_count": 24,
+      "role": "protected_replacement_link"
+    },
+    {
+      "product_id": "1601969853888",
+      "observed_at": "2026-10-03T04:52:45.545420+00:00",
+      "status": "approved",
+      "display": "Y",
+      "get_error": null,
+      "request_id": "21501be117910031647935645",
+      "SKU_count": 33,
+      "role": "protected_replacement_link"
+    }
+  ],
+  "five_off_latest_20261003_0557": {
+    "product_id": "1601943768215",
+    "observed_at": "2026-10-03T05:57:07.969533+00:00",
+    "status": "approved",
+    "display": "N",
+    "get_error": null,
+    "request_id": "0b0b3a2717910070269456941",
+    "SKU_count": 30,
+    "role": "authorized_off_target"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "endpoint": "https://tokenhub.tencentmaas.com/v1/chat/completions",
+  "model": "kimi-k3",
+  "input_type": "native video_url base64",
+  "sources": [
+    {
+      "label": "贝强针织袜子鞋品牌片，当前完整24秒导出",
+      "path": "../../render/current.mp4",
+      "bytes": 22007259,
+      "sha256": "002fc755a135764c4bc1c41433bff3e428d99ce5a12bb176afed181d4d9b9ac9",
+      "duration": 24
+    }
+  ],
+  "prompt": "你是一位有否决权的广告导演和剪辑师。独立评价这份竖屏针织袜子鞋品牌片，不要给制作方礼貌鼓励，不依据无黑帧、生成成本或已有素材利用率判好。目标是抖音观众记住贝强、黑色波纹针织袜子鞋、暖白日常气质；不要求获客，不证明真实工厂与材料性能。画面为广告演绎。请先说明你实际可见的视频时间采样数量或范围、是否具有声音访问能力，不把稀疏视觉样本当完整连续播放。然后给出：1.独立创意判断及具体时间范围证据；2.最值得保留的两点；3.最阻碍品牌记忆和观看吸引力的三点，指明镜头、版式或剪辑机制；4.对开场、材质触摸、鞋口、行走和结尾分别给出KEEP/TRIM/REWORK及理由；5.仅利用现有素材最值得进行的一项改进。尤其检查文字可读性、摄影景别关系、人物双腿和鞋的完整性、产品结构跨镜变化。不要杜撰未看到的动作或已听到音乐。没有证据请说明无法确定。",
+  "request_body_bytes": 29344494,
+  "reasoning_effort": "high",
+  "max_completion_tokens": 9000,
+  "stream": true,
+  "preflight": {
+    "model": "kimi-k3",
+    "status": "ACTIVE",
+    "charge_type": "FREE",
+    "payment_enabled": false,
+    "free_remaining_before": 470795,
+    "free_total": 1000000,
+    "request_id": "ef2dce5b-6bc3-4842-bc7b-1a7a8760d838"
+  },
+  "audio_review": "not assumed",
+  "automatic_retries": 0
+}

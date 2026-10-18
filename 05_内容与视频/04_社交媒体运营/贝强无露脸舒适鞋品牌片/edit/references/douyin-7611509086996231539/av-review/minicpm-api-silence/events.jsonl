@@ -1,0 +1,5 @@
+{"type": "session.queue_done"}
+{"type": "session.created", "session_id": "sess_9ac11fc5b3d0", "mode": "turn_based", "metrics": {"backend": "pytorch", "kv_cache_length": 23}, "server_send_ts": 1791780069.524767}
+{"type": "response.output.delta", "kind": "text", "session_id": "sess_9ac11fc5b3d0", "response_id": "resp_83739538bea1", "text": "全程为连续的中文语音讲解，无明显", "server_send_ts": 1791780073.7391114}
+{"type": "response.output.delta", "kind": "text", "session_id": "sess_9ac11fc5b3d0", "response_id": "resp_83739538bea1", "text": "背景音乐、环境噪音或其他非语音声。", "server_send_ts": 1791780074.0146124}
+{"type": "response.done", "session_id": "sess_9ac11fc5b3d0", "response_id": "resp_83739538bea1", "text": "全程为连续的中文语音讲解，无明显背景音乐、环境噪音或其他非语音声。", "reason": "turn_end", "metrics": {"backend": "pytorch", "kv_cache_length": 411}, "server_send_ts": 1791780074.0149655}

@@ -1,0 +1,2231 @@
+[
+  {
+    "id": "p-1",
+    "name": "Place of Origin",
+    "type": "singleCheck",
+    "required": true,
+    "options": [
+      [
+        "Andorra",
+        "100000419"
+      ],
+      [
+        "United Arab Emirates",
+        "100000637"
+      ],
+      [
+        "Afghanistan",
+        "100000415"
+      ],
+      [
+        "Antigua and Barbuda",
+        "100000423"
+      ],
+      [
+        "Anguilla",
+        "100000421"
+      ],
+      [
+        "Albania",
+        "100000416"
+      ],
+      [
+        "Aland Islands",
+        "200019000"
+      ],
+      [
+        "Armenia",
+        "100000425"
+      ],
+      [
+        "Netherlands Antilles",
+        "100000564"
+      ],
+      [
+        "Angola",
+        "100000420"
+      ],
+      [
+        "Antarctica",
+        "100000422"
+      ],
+      [
+        "Argentina",
+        "100000424"
+      ],
+      [
+        "American Samoa",
+        "100000418"
+      ],
+      [
+        "Ascension Island",
+        "200019002"
+      ],
+      [
+        "Austria",
+        "100000428"
+      ],
+      [
+        "Australia",
+        "100000427"
+      ],
+      [
+        "Aruba",
+        "100000426"
+      ],
+      [
+        "Azerbaijan",
+        "100000429"
+      ],
+      [
+        "Bosnia and Herzegovina",
+        "100000441"
+      ],
+      [
+        "Barbados",
+        "100000433"
+      ],
+      [
+        "Bangladesh",
+        "100000432"
+      ],
+      [
+        "Belgium",
+        "100000435"
+      ],
+      [
+        "Burkina Faso",
+        "100000448"
+      ],
+      [
+        "Bulgaria",
+        "100000447"
+      ],
+      [
+        "Bahrain",
+        "100000431"
+      ],
+      [
+        "Burundi",
+        "100000449"
+      ],
+      [
+        "Benin",
+        "100000437"
+      ],
+      [
+        "Saint Barthelemy",
+        "200019005"
+      ],
+      [
+        "Bermuda",
+        "100000438"
+      ],
+      [
+        "Brunei Darussalam",
+        "100000446"
+      ],
+      [
+        "Bolivia",
+        "100000440"
+      ],
+      [
+        "Brazil",
+        "100000444"
+      ],
+      [
+        "Bahamas",
+        "100000430"
+      ],
+      [
+        "Bhutan",
+        "100000439"
+      ],
+      [
+        "Bouvet Island",
+        "100000443"
+      ],
+      [
+        "Botswana",
+        "100000442"
+      ],
+      [
+        "Belarus",
+        "100000434"
+      ],
+      [
+        "Belize",
+        "100000436"
+      ],
+      [
+        "Canada",
+        "100000452"
+      ],
+      [
+        "Cocos (Keeling) Islands",
+        "100000460"
+      ],
+      [
+        "Central African Republic",
+        "100000455"
+      ],
+      [
+        "Congo, The Republic of Congo",
+        "100000463"
+      ],
+      [
+        "Switzerland",
+        "100000620"
+      ],
+      [
+        "Cote D'Ivoire",
+        "100000467"
+      ],
+      [
+        "Cook Islands",
+        "100000465"
+      ],
+      [
+        "Chile",
+        "100000457"
+      ],
+      [
+        "Cameroon",
+        "100000451"
+      ],
+      [
+        "China",
+        "100000458"
+      ],
+      [
+        "Colombia",
+        "100000461"
+      ],
+      [
+        "Costa Rica",
+        "100000466"
+      ],
+      [
+        "Cuba",
+        "100000469"
+      ],
+      [
+        "Cape Verde",
+        "100000453"
+      ],
+      [
+        "Curacao",
+        "202042002"
+      ],
+      [
+        "Christmas Island",
+        "100000459"
+      ],
+      [
+        "Cyprus",
+        "100000470"
+      ],
+      [
+        "Czech Republic",
+        "100000471"
+      ],
+      [
+        "Germany",
+        "100000496"
+      ],
+      [
+        "Djibouti",
+        "100000473"
+      ],
+      [
+        "Denmark",
+        "100000472"
+      ],
+      [
+        "Dominica",
+        "100000474"
+      ],
+      [
+        "Dominican Republic",
+        "100000475"
+      ],
+      [
+        "Algeria",
+        "100000417"
+      ],
+      [
+        "Zanzibar",
+        "200019009"
+      ],
+      [
+        "Ecuador",
+        "100000477"
+      ],
+      [
+        "Estonia",
+        "100000482"
+      ],
+      [
+        "Egypt",
+        "100000478"
+      ],
+      [
+        "Western Sahara",
+        "100000650"
+      ],
+      [
+        "Eritrea",
+        "100000481"
+      ],
+      [
+        "Spain",
+        "100000611"
+      ],
+      [
+        "Ethiopia",
+        "100000483"
+      ],
+      [
+        "Finland",
+        "100000487"
+      ],
+      [
+        "Fiji",
+        "100000486"
+      ],
+      [
+        "Falkland Islands (Malvinas)",
+        "100000484"
+      ],
+      [
+        "Micronesia",
+        "100000552"
+      ],
+      [
+        "Faroe Islands",
+        "100000485"
+      ],
+      [
+        "France",
+        "100000488"
+      ],
+      [
+        "France Metropolitan",
+        "100000489"
+      ],
+      [
+        "Gabon",
+        "100000493"
+      ],
+      [
+        "Alderney",
+        "200019001"
+      ],
+      [
+        "Grenada",
+        "100000501"
+      ],
+      [
+        "Georgia",
+        "100000495"
+      ],
+      [
+        "French Guiana",
+        "100000490"
+      ],
+      [
+        "Guernsey",
+        "200019003"
+      ],
+      [
+        "Ghana",
+        "100000497"
+      ],
+      [
+        "Gibraltar",
+        "100000498"
+      ],
+      [
+        "Greenland",
+        "100000500"
+      ],
+      [
+        "Gambia",
+        "100000494"
+      ],
+      [
+        "Guinea",
+        "100000505"
+      ],
+      [
+        "Guadeloupe",
+        "100000502"
+      ],
+      [
+        "Equatorial Guinea",
+        "100000480"
+      ],
+      [
+        "Greece",
+        "100000499"
+      ],
+      [
+        "Guatemala",
+        "100000504"
+      ],
+      [
+        "Guam",
+        "100000503"
+      ],
+      [
+        "Guinea-Bissau",
+        "100000506"
+      ],
+      [
+        "Guyana",
+        "100000507"
+      ],
+      [
+        "Hong Kong S.A.R.",
+        "100000511"
+      ],
+      [
+        "Heard and Mc Donald Islands",
+        "100000509"
+      ],
+      [
+        "Honduras",
+        "100000510"
+      ],
+      [
+        "Croatia (local name: Hrvatska)",
+        "100000468"
+      ],
+      [
+        "Haiti",
+        "100000508"
+      ],
+      [
+        "Hungary",
+        "100000512"
+      ],
+      [
+        "Indonesia",
+        "100000515"
+      ],
+      [
+        "Ireland",
+        "100000518"
+      ],
+      [
+        "Israel",
+        "100000519"
+      ],
+      [
+        "Isle of Man",
+        "100012000"
+      ],
+      [
+        "India",
+        "100000514"
+      ],
+      [
+        "British Indian Ocean Territory",
+        "100000445"
+      ],
+      [
+        "Iraq",
+        "100000517"
+      ],
+      [
+        "Iran (Islamic Republic of)",
+        "100000516"
+      ],
+      [
+        "Iceland",
+        "100000513"
+      ],
+      [
+        "Italy",
+        "100000520"
+      ],
+      [
+        "Jersey",
+        "200019004"
+      ],
+      [
+        "Jamaica",
+        "100000521"
+      ],
+      [
+        "Jordan",
+        "100000523"
+      ],
+      [
+        "Japan",
+        "100000522"
+      ],
+      [
+        "Kenya",
+        "100000525"
+      ],
+      [
+        "Kyrgyzstan",
+        "100000528"
+      ],
+      [
+        "Cambodia",
+        "100000450"
+      ],
+      [
+        "Kiribati",
+        "100000526"
+      ],
+      [
+        "Comoros",
+        "100000462"
+      ],
+      [
+        "Saint Kitts and Nevis",
+        "100000594"
+      ],
+      [
+        "North Korea",
+        "100000572"
+      ],
+      [
+        "South Korea",
+        "100000610"
+      ],
+      [
+        "Kosovo",
+        "200015000"
+      ],
+      [
+        "Kuwait",
+        "100000527"
+      ],
+      [
+        "Cayman Islands",
+        "100000454"
+      ],
+      [
+        "Kazakhstan",
+        "100000524"
+      ],
+      [
+        "Lao People's Democratic Republic",
+        "100000529"
+      ],
+      [
+        "Lebanon",
+        "100000531"
+      ],
+      [
+        "Saint Lucia",
+        "100000595"
+      ],
+      [
+        "Liechtenstein",
+        "100000535"
+      ],
+      [
+        "Sri Lanka",
+        "100000612"
+      ],
+      [
+        "Liberia",
+        "100000533"
+      ],
+      [
+        "Lesotho",
+        "100000532"
+      ],
+      [
+        "Lithuania",
+        "100000536"
+      ],
+      [
+        "Luxembourg",
+        "100000537"
+      ],
+      [
+        "Latvia",
+        "100000530"
+      ],
+      [
+        "Libya",
+        "100000534"
+      ],
+      [
+        "Morocco",
+        "100000557"
+      ],
+      [
+        "Saint Martin",
+        "200019006"
+      ],
+      [
+        "Monaco",
+        "100000554"
+      ],
+      [
+        "Moldova",
+        "100000553"
+      ],
+      [
+        "Madagascar",
+        "100000540"
+      ],
+      [
+        "Marshall Islands",
+        "100000546"
+      ],
+      [
+        "Macedonia",
+        "100000539"
+      ],
+      [
+        "Mali",
+        "100000544"
+      ],
+      [
+        "Myanmar",
+        "100000559"
+      ],
+      [
+        "Mongolia",
+        "100000555"
+      ],
+      [
+        "Montenegro",
+        "100005001"
+      ],
+      [
+        "Macao S.A.R.",
+        "100000538"
+      ],
+      [
+        "Northern Mariana Islands",
+        "100000573"
+      ],
+      [
+        "Martinique",
+        "100000547"
+      ],
+      [
+        "Mauritania",
+        "100000548"
+      ],
+      [
+        "Montserrat",
+        "100000556"
+      ],
+      [
+        "Malta",
+        "100000545"
+      ],
+      [
+        "Mauritius",
+        "100000549"
+      ],
+      [
+        "Maldives",
+        "100000543"
+      ],
+      [
+        "Malawi",
+        "100000541"
+      ],
+      [
+        "Mexico",
+        "100000551"
+      ],
+      [
+        "Malaysia",
+        "100000542"
+      ],
+      [
+        "Mozambique",
+        "100000558"
+      ],
+      [
+        "Namibia",
+        "100000560"
+      ],
+      [
+        "New Caledonia",
+        "100000565"
+      ],
+      [
+        "Niger",
+        "100000568"
+      ],
+      [
+        "Norfolk Island",
+        "100000571"
+      ],
+      [
+        "Nigeria",
+        "100000569"
+      ],
+      [
+        "Nicaragua",
+        "100000567"
+      ],
+      [
+        "Netherlands",
+        "100000563"
+      ],
+      [
+        "Norway",
+        "100000574"
+      ],
+      [
+        "Nepal",
+        "100000562"
+      ],
+      [
+        "Nauru",
+        "100000561"
+      ],
+      [
+        "Niue",
+        "100000570"
+      ],
+      [
+        "New Zealand",
+        "100000566"
+      ],
+      [
+        "Oman",
+        "100000575"
+      ],
+      [
+        "Panama",
+        "100000580"
+      ],
+      [
+        "Peru",
+        "100000583"
+      ],
+      [
+        "French Polynesia",
+        "100000491"
+      ],
+      [
+        "Papua New Guinea",
+        "100000581"
+      ],
+      [
+        "Philippines",
+        "100000584"
+      ],
+      [
+        "Pakistan",
+        "100000577"
+      ],
+      [
+        "Poland",
+        "100000586"
+      ],
+      [
+        "St. Pierre and Miquelon",
+        "100000614"
+      ],
+      [
+        "Pitcairn",
+        "100000585"
+      ],
+      [
+        "Palestine",
+        "100000579"
+      ],
+      [
+        "Portugal",
+        "100000587"
+      ],
+      [
+        "Palau",
+        "100000578"
+      ],
+      [
+        "Paraguay",
+        "100000582"
+      ],
+      [
+        "Qatar",
+        "100000589"
+      ],
+      [
+        "Reunion",
+        "100000590"
+      ],
+      [
+        "Romania",
+        "100000591"
+      ],
+      [
+        "Russian Federation",
+        "100000592"
+      ],
+      [
+        "Rwanda",
+        "100000593"
+      ],
+      [
+        "Saudi Arabia",
+        "100000600"
+      ],
+      [
+        "Solomon Islands",
+        "100000607"
+      ],
+      [
+        "Seychelles",
+        "100000602"
+      ],
+      [
+        "Scotland",
+        "200030001"
+      ],
+      [
+        "Sudan",
+        "100000615"
+      ],
+      [
+        "Sweden",
+        "100000619"
+      ],
+      [
+        "Singapore",
+        "100000604"
+      ],
+      [
+        "South Georgia and the South Sandwich Islands",
+        "200019007"
+      ],
+      [
+        "St. Helena",
+        "100000613"
+      ],
+      [
+        "Slovenia",
+        "100000606"
+      ],
+      [
+        "Svalbard and Jan Mayen Islands",
+        "100000617"
+      ],
+      [
+        "Slovakia (Slovak Republic)",
+        "100000605"
+      ],
+      [
+        "Sierra Leone",
+        "100000603"
+      ],
+      [
+        "San Marino",
+        "100000598"
+      ],
+      [
+        "Senegal",
+        "100000601"
+      ],
+      [
+        "Somalia",
+        "100000608"
+      ],
+      [
+        "Suriname",
+        "100000616"
+      ],
+      [
+        "Serbia",
+        "100005000"
+      ],
+      [
+        "South Sudan",
+        "200031000"
+      ],
+      [
+        "Sao Tome and Principe",
+        "100000599"
+      ],
+      [
+        "El Salvador",
+        "100000479"
+      ],
+      [
+        "Sint Maarten",
+        "202042003"
+      ],
+      [
+        "Syrian Arab Republic",
+        "100000621"
+      ],
+      [
+        "Swaziland",
+        "100000618"
+      ],
+      [
+        "Turks and Caicos Islands",
+        "100000633"
+      ],
+      [
+        "Chad",
+        "100000456"
+      ],
+      [
+        "French Southern Territories",
+        "100000492"
+      ],
+      [
+        "Togo",
+        "100000626"
+      ],
+      [
+        "Thailand",
+        "100000625"
+      ],
+      [
+        "Tajikistan",
+        "100000623"
+      ],
+      [
+        "Tokelau",
+        "100000627"
+      ],
+      [
+        "Timor-Leste",
+        "200019008"
+      ],
+      [
+        "Turkmenistan",
+        "100000632"
+      ],
+      [
+        "Tunisia",
+        "100000630"
+      ],
+      [
+        "Tonga",
+        "100000628"
+      ],
+      [
+        "East Timor",
+        "100000476"
+      ],
+      [
+        "Turkey",
+        "100000631"
+      ],
+      [
+        "Trinidad and Tobago",
+        "100000629"
+      ],
+      [
+        "Tuvalu",
+        "100000634"
+      ],
+      [
+        "Taiwan, China",
+        "100000622"
+      ],
+      [
+        "Tanzania",
+        "100000624"
+      ],
+      [
+        "Ukraine",
+        "100000636"
+      ],
+      [
+        "Uganda",
+        "100000635"
+      ],
+      [
+        "United Kingdom",
+        "100000638"
+      ],
+      [
+        "United States Minor Outlying Islands",
+        "100000640"
+      ],
+      [
+        "United States",
+        "100000639"
+      ],
+      [
+        "Uruguay",
+        "100000641"
+      ],
+      [
+        "Uzbekistan",
+        "100000642"
+      ],
+      [
+        "Vatican City State (Holy See)",
+        "100000644"
+      ],
+      [
+        "Saint Vincent and the Grenadines",
+        "100000596"
+      ],
+      [
+        "Venezuela",
+        "100000645"
+      ],
+      [
+        "Virgin Islands (British)",
+        "100000647"
+      ],
+      [
+        "Virgin Islands (U.S.)",
+        "100000648"
+      ],
+      [
+        "Vietnam",
+        "100000646"
+      ],
+      [
+        "Vanuatu",
+        "100000643"
+      ],
+      [
+        "Wallis And Futuna Islands",
+        "100000649"
+      ],
+      [
+        "Samoa",
+        "100000597"
+      ],
+      [
+        "Yemen",
+        "100000651"
+      ],
+      [
+        "Mayotte",
+        "100000550"
+      ],
+      [
+        "Yugoslavia",
+        "100000652"
+      ],
+      [
+        "South Africa",
+        "100000609"
+      ],
+      [
+        "Zambia",
+        "100000653"
+      ],
+      [
+        "Congo, The Democratic Republic Of The",
+        "100000464"
+      ],
+      [
+        "Zimbabwe",
+        "100000654"
+      ],
+      [
+        "other",
+        "-1"
+      ]
+    ]
+  },
+  {
+    "id": "p-2",
+    "name": "Brand Name",
+    "type": "input",
+    "required": false,
+    "options": []
+  },
+  {
+    "id": "p-3",
+    "name": "Model Number",
+    "type": "input",
+    "required": false,
+    "options": []
+  },
+  {
+    "id": "p-191288212",
+    "name": "Season",
+    "type": "multiCheck",
+    "required": false,
+    "options": [
+      [
+        "All Seasons",
+        "27034893"
+      ],
+      [
+        "Winter",
+        "3254739"
+      ],
+      [
+        "Summer",
+        "3455309"
+      ],
+      [
+        "Spring",
+        "3599743"
+      ],
+      [
+        "Autumn",
+        "8168102"
+      ]
+    ]
+  },
+  {
+    "id": "p-191288243",
+    "name": "Style",
+    "type": "multiCheck",
+    "required": false,
+    "options": [
+      [
+        "cowboy boots",
+        "42374158"
+      ],
+      [
+        "Retro",
+        "190091223"
+      ],
+      [
+        "Fashion",
+        "190091262"
+      ],
+      [
+        "Roman Boot",
+        "366086"
+      ],
+      [
+        "Tassel Boot",
+        "366088"
+      ],
+      [
+        "Other",
+        "-1"
+      ],
+      [
+        "Others",
+        "3252738"
+      ],
+      [
+        "Western",
+        "3992829"
+      ],
+      [
+        "CHUKKA BOOT",
+        "13839079"
+      ],
+      [
+        "CHELSEA BOOTS",
+        "15883651"
+      ],
+      [
+        "Desert Boots",
+        "84341806"
+      ],
+      [
+        "Rainboots",
+        "120838789"
+      ],
+      [
+        "Snow Boot",
+        "187406111"
+      ],
+      [
+        "zip-up",
+        "344316267"
+      ],
+      [
+        "Combat Boot",
+        "525612307"
+      ],
+      [
+        "Moto & Biker",
+        "1951659895"
+      ],
+      [
+        "TOOLING BOOT",
+        "190001044"
+      ],
+      [
+        "DUCK BOOT",
+        "190001045"
+      ],
+      [
+        "MOCCASIN BOOT",
+        "190001046"
+      ],
+      [
+        "Lace-up",
+        "80806811"
+      ],
+      [
+        "High top",
+        "39634124"
+      ],
+      [
+        "Platform",
+        "14798782"
+      ],
+      [
+        "Sporty",
+        "3481972"
+      ],
+      [
+        "Air Cushion",
+        "57909926"
+      ],
+      [
+        "Martin boot",
+        "1878893888"
+      ],
+      [
+        "other",
+        "-1"
+      ]
+    ]
+  },
+  {
+    "id": "p-191290426",
+    "name": "Outsole Material",
+    "type": "multiCheck",
+    "required": true,
+    "options": [
+      [
+        "Leather",
+        "190091222"
+      ],
+      [
+        "PVC",
+        "29228"
+      ],
+      [
+        "Genuine Leather",
+        "3242875"
+      ],
+      [
+        "PU",
+        "3323086"
+      ],
+      [
+        "Rubber",
+        "3338114"
+      ],
+      [
+        "EVA",
+        "3376399"
+      ],
+      [
+        "Cork",
+        "3683446"
+      ],
+      [
+        "Plastic",
+        "3954276"
+      ],
+      [
+        "Wood",
+        "3963577"
+      ],
+      [
+        "vibram",
+        "4224936"
+      ],
+      [
+        "Tpr",
+        "6217318"
+      ],
+      [
+        "TPU",
+        "7097887"
+      ],
+      [
+        "Oxford",
+        "7803300"
+      ],
+      [
+        "Bonded Leather",
+        "22094351"
+      ],
+      [
+        "Straw",
+        "28986571"
+      ],
+      [
+        "Cotton Fabric",
+        "384964283"
+      ],
+      [
+        "Cow Muscle",
+        "1951040094"
+      ],
+      [
+        "other",
+        "-1"
+      ]
+    ]
+  },
+  {
+    "id": "p-191290430",
+    "name": "Lining Material",
+    "type": "multiCheck",
+    "required": true,
+    "options": [
+      [
+        "Cloth",
+        "10813140"
+      ],
+      [
+        "Fur",
+        "11646718"
+      ],
+      [
+        "Cotton",
+        "190091022"
+      ],
+      [
+        "suede",
+        "190091205"
+      ],
+      [
+        "Pigskin",
+        "204180378"
+      ],
+      [
+        "PVC",
+        "29228"
+      ],
+      [
+        "Genuine Leather",
+        "3242875"
+      ],
+      [
+        "PU",
+        "3323086"
+      ],
+      [
+        "Plush",
+        "4141322"
+      ],
+      [
+        "Mesh",
+        "6821988"
+      ],
+      [
+        "Cotton Fabric",
+        "384964283"
+      ],
+      [
+        "other",
+        "-1"
+      ]
+    ]
+  },
+  {
+    "id": "p-200000329",
+    "name": "pattern",
+    "type": "multiCheck",
+    "required": false,
+    "options": [
+      [
+        "Other",
+        "-1"
+      ],
+      [
+        "Leopard",
+        "3580590"
+      ],
+      [
+        "Floral",
+        "6176581"
+      ],
+      [
+        "Graffiti",
+        "6905059"
+      ],
+      [
+        "Camouflage",
+        "7948865"
+      ],
+      [
+        "Polka Dot",
+        "11197199"
+      ],
+      [
+        "Paisley",
+        "16914565"
+      ],
+      [
+        "Patchwork",
+        "29832427"
+      ],
+      [
+        "Plaid",
+        "30897142"
+      ],
+      [
+        "Geometric",
+        "33294342"
+      ],
+      [
+        "Striped",
+        "48669805"
+      ],
+      [
+        "Animal Prints",
+        "74039156"
+      ],
+      [
+        "Heart-Shaped",
+        "142189951"
+      ],
+      [
+        "Print",
+        "200001250"
+      ],
+      [
+        "Bordered",
+        "200001254"
+      ],
+      [
+        "Cartoon Animation",
+        "308164072"
+      ],
+      [
+        "Mixed Colors",
+        "411894439"
+      ],
+      [
+        "Gingham",
+        "1954454308"
+      ],
+      [
+        "Checkered",
+        "1954460265"
+      ],
+      [
+        "Hand-Painted",
+        "1954460277"
+      ],
+      [
+        "Solid",
+        "1954510751"
+      ],
+      [
+        "other",
+        "-1"
+      ]
+    ]
+  },
+  {
+    "id": "p-200000388",
+    "name": "Closure Type",
+    "type": "multiCheck",
+    "required": false,
+    "options": [
+      [
+        "Button",
+        "3835438"
+      ],
+      [
+        "ZIP",
+        "6866597"
+      ],
+      [
+        "Slip-On",
+        "13325270"
+      ],
+      [
+        "Sock",
+        "16803133"
+      ],
+      [
+        "Lace-up",
+        "80806811"
+      ],
+      [
+        "Hook & Loop",
+        "159296723"
+      ],
+      [
+        "Buckle Strap",
+        "320046328"
+      ],
+      [
+        "Elastic Band",
+        "391726544"
+      ],
+      [
+        "other",
+        "-1"
+      ]
+    ]
+  },
+  {
+    "id": "p-200000475",
+    "name": "Boot Height",
+    "type": "multiCheck",
+    "required": false,
+    "options": [
+      [
+        "Mid-Calf",
+        "8325"
+      ],
+      [
+        "Ankle",
+        "6233079"
+      ],
+      [
+        "Knee-High",
+        "38967668"
+      ],
+      [
+        "Over-the-Knee",
+        "719314855"
+      ],
+      [
+        "Ankle & Bootie",
+        "190065970"
+      ],
+      [
+        "other",
+        "-1"
+      ]
+    ]
+  },
+  {
+    "id": "p-200000486",
+    "name": "Toe Style",
+    "type": "multiCheck",
+    "required": false,
+    "options": [
+      [
+        "Peep Toe",
+        "110726877"
+      ],
+      [
+        "Zoris",
+        "1951050026"
+      ],
+      [
+        "SQUARE TOE",
+        "1327275102"
+      ],
+      [
+        "TOE BOX",
+        "739632982"
+      ],
+      [
+        "Open Toe",
+        "72533551"
+      ],
+      [
+        "Pointed Toe",
+        "1879328947"
+      ],
+      [
+        "Round Toe",
+        "556500746"
+      ],
+      [
+        "Closed Toe",
+        "108886227"
+      ],
+      [
+        "Composite toe",
+        "132855575"
+      ],
+      [
+        "Steel Toe",
+        "3877533"
+      ],
+      [
+        "other",
+        "-1"
+      ]
+    ]
+  },
+  {
+    "id": "p-210194982",
+    "name": "Upper Material",
+    "type": "multiCheck",
+    "required": true,
+    "options": [
+      [
+        "Neoprene",
+        "9011142"
+      ],
+      [
+        "Artificial Leather",
+        "180316563"
+      ],
+      [
+        "Textile",
+        "190091020"
+      ],
+      [
+        "Leather",
+        "190091222"
+      ],
+      [
+        "PVC",
+        "29228"
+      ],
+      [
+        "Stretch Fabric",
+        "362061"
+      ],
+      [
+        "Silk",
+        "190000994"
+      ],
+      [
+        "Genuine Leather",
+        "3242875"
+      ],
+      [
+        "PU",
+        "3323086"
+      ],
+      [
+        "Rubber",
+        "3338114"
+      ],
+      [
+        "EVA",
+        "3376399"
+      ],
+      [
+        "Spandex/Elastane",
+        "3705463"
+      ],
+      [
+        "Canvas",
+        "3767487"
+      ],
+      [
+        "Denim",
+        "3800980"
+      ],
+      [
+        "Plastic",
+        "3954276"
+      ],
+      [
+        "Plush",
+        "4141322"
+      ],
+      [
+        "Down",
+        "6115693"
+      ],
+      [
+        "Nylon",
+        "6444210"
+      ],
+      [
+        "Mesh",
+        "6821988"
+      ],
+      [
+        "Velvet",
+        "7334550"
+      ],
+      [
+        "Hemp",
+        "7485489"
+      ],
+      [
+        "Wool",
+        "7629837"
+      ],
+      [
+        "Polyester",
+        "7719852"
+      ],
+      [
+        "Microfiber Fabrics",
+        "8083462"
+      ],
+      [
+        "Fur",
+        "11646718"
+      ],
+      [
+        "Cane",
+        "12535623"
+      ],
+      [
+        "Synthetic",
+        "16369367"
+      ],
+      [
+        "Flannel",
+        "27900001"
+      ],
+      [
+        "Straw",
+        "28986571"
+      ],
+      [
+        "Patent Leather",
+        "29538429"
+      ],
+      [
+        "Jute",
+        "36822883"
+      ],
+      [
+        "Flock",
+        "37376150"
+      ],
+      [
+        "Sheepskin",
+        "37437704"
+      ],
+      [
+        "faux suede",
+        "58427554"
+      ],
+      [
+        "PP",
+        "104451652"
+      ],
+      [
+        "Horsehair",
+        "117242095"
+      ],
+      [
+        "Viscose",
+        "121441610"
+      ],
+      [
+        "Split Leather",
+        "253258450"
+      ],
+      [
+        "Cotton Fabric",
+        "384964283"
+      ],
+      [
+        "Jacquard Fabric",
+        "417448242"
+      ],
+      [
+        "Microfiber Leather",
+        "1878493769"
+      ],
+      [
+        "Sequined Cloth",
+        "1951040028"
+      ],
+      [
+        "None-Woven",
+        "1951655668"
+      ],
+      [
+        "other",
+        "-1"
+      ]
+    ]
+  },
+  {
+    "id": "p-210200060",
+    "name": "Feature",
+    "type": "multiCheck",
+    "required": false,
+    "options": [
+      [
+        "USB",
+        "22041"
+      ],
+      [
+        "Deodorization",
+        "351723"
+      ],
+      [
+        "Insulative",
+        "366125"
+      ],
+      [
+        "Other",
+        "-1"
+      ],
+      [
+        "Round",
+        "3451537"
+      ],
+      [
+        "Massage",
+        "3470540"
+      ],
+      [
+        "Steel Toe",
+        "3877533"
+      ],
+      [
+        "EVERGREEN",
+        "3879852"
+      ],
+      [
+        "Light",
+        "3913419"
+      ],
+      [
+        "Thermal",
+        "4253945"
+      ],
+      [
+        "Waterproof",
+        "7499010"
+      ],
+      [
+        "Flat ",
+        "8300572"
+      ],
+      [
+        "Printed",
+        "8665793"
+      ],
+      [
+        "Fashion Trend",
+        "30925155"
+      ],
+      [
+        "Breathable",
+        "42283793"
+      ],
+      [
+        "Light Weight",
+        "46649883"
+      ],
+      [
+        "Anti-Slip",
+        "61786742"
+      ],
+      [
+        "ARCH SUPPORT",
+        "74087827"
+      ],
+      [
+        "Disposable",
+        "76328288"
+      ],
+      [
+        "Recyclable",
+        "100098675"
+      ],
+      [
+        "Anti-static",
+        "100200906"
+      ],
+      [
+        "Lighted",
+        "132349884"
+      ],
+      [
+        "Cushioning",
+        "158583747"
+      ],
+      [
+        "Anti-Slippery",
+        "271070427"
+      ],
+      [
+        "Anti-Odor",
+        "1806255398"
+      ],
+      [
+        "Quick Dry",
+        "1875807207"
+      ],
+      [
+        "Hard-Wearing",
+        "1880854905"
+      ],
+      [
+        "Height Increasing",
+        "1951050082"
+      ],
+      [
+        "Electrically Heated",
+        "1951054063"
+      ],
+      [
+        "Shock-Absorbant",
+        "1951166851"
+      ],
+      [
+        "Sweat-Absorbant",
+        "1951168718"
+      ],
+      [
+        "Shock Resistant",
+        "20541256"
+      ],
+      [
+        "slip resistant",
+        "38685608"
+      ],
+      [
+        "Anitmicrobial",
+        "190077491"
+      ],
+      [
+        "Stain Resistant",
+        "17112005"
+      ],
+      [
+        "Cushioned",
+        "140049271"
+      ],
+      [
+        "Soft",
+        "4271424"
+      ],
+      [
+        "barefoot",
+        "3976437"
+      ],
+      [
+        "Abrasion Resistance",
+        "1875808236"
+      ],
+      [
+        "Flexible",
+        "9225619"
+      ],
+      [
+        "comfort",
+        "3496969"
+      ],
+      [
+        "other",
+        "-1"
+      ]
+    ]
+  },
+  {
+    "id": "p-210232962",
+    "name": "US Size",
+    "type": "multiCheck",
+    "required": false,
+    "options": [
+      [
+        "3.5",
+        "23672"
+      ],
+      [
+        "4",
+        "22029"
+      ],
+      [
+        "4.5",
+        "3594804"
+      ],
+      [
+        "5",
+        "27434"
+      ],
+      [
+        "5.5",
+        "3282895"
+      ],
+      [
+        "6",
+        "22032"
+      ],
+      [
+        "6.5",
+        "3351361"
+      ],
+      [
+        "7",
+        "27435"
+      ],
+      [
+        "7.5",
+        "3417294"
+      ],
+      [
+        "8",
+        "27436"
+      ],
+      [
+        "8.5",
+        "6068197"
+      ],
+      [
+        "9",
+        "3234815"
+      ],
+      [
+        "9.5",
+        "4241880"
+      ],
+      [
+        "10",
+        "27438"
+      ],
+      [
+        "10.5",
+        "3892861"
+      ],
+      [
+        "11",
+        "3232995"
+      ],
+      [
+        "11.5",
+        "3270672"
+      ],
+      [
+        "12",
+        "3234583"
+      ],
+      [
+        "12.5",
+        "3587310"
+      ],
+      [
+        "13",
+        "3239161"
+      ],
+      [
+        "13.5",
+        "6353359"
+      ],
+      [
+        "14",
+        "3241261"
+      ],
+      [
+        "14.5",
+        "6184084"
+      ],
+      [
+        "15",
+        "3238079"
+      ],
+      [
+        "15.5",
+        "3927555"
+      ],
+      [
+        "16",
+        "3250796"
+      ],
+      [
+        "16.5",
+        "3922034"
+      ],
+      [
+        "17",
+        "3247731"
+      ],
+      [
+        "17.5",
+        "11031474"
+      ],
+      [
+        "18",
+        "3241268"
+      ],
+      [
+        "18.5",
+        "7081386"
+      ],
+      [
+        "19",
+        "3283066"
+      ],
+      [
+        "19.5",
+        "4031220"
+      ],
+      [
+        "20",
+        "33255"
+      ],
+      [
+        "other",
+        "-1"
+      ]
+    ]
+  },
+  {
+    "id": "p-390864271",
+    "name": "Weight",
+    "type": "input",
+    "required": false,
+    "options": []
+  },
+  {
+    "id": "p-20700",
+    "name": "Midsole Material",
+    "type": "multiCheck",
+    "required": true,
+    "options": [
+      [
+        "Leather",
+        "190091222"
+      ],
+      [
+        "Tpr",
+        "6217318"
+      ],
+      [
+        "Carbon",
+        "6170665"
+      ],
+      [
+        "Rubber",
+        "3338114"
+      ],
+      [
+        "EVA",
+        "3376399"
+      ],
+      [
+        "Wood",
+        "3963577"
+      ],
+      [
+        "Straw",
+        "28986571"
+      ],
+      [
+        "Gel",
+        "3722559"
+      ],
+      [
+        "PVC",
+        "29228"
+      ],
+      [
+        "TPU",
+        "7097887"
+      ],
+      [
+        "PU",
+        "3323086"
+      ],
+      [
+        "other",
+        "-1"
+      ]
+    ]
+  },
+  {
+    "id": "p-272442562",
+    "name": "Logo position",
+    "type": "multiCheck",
+    "required": false,
+    "options": [
+      [
+        "A  Pair",
+        "190089572"
+      ],
+      [
+        "Left",
+        "3922038"
+      ],
+      [
+        "Right",
+        "3265551"
+      ],
+      [
+        "Inside",
+        "13654284"
+      ],
+      [
+        "back",
+        "3259081"
+      ],
+      [
+        "Insole",
+        "42149753"
+      ],
+      [
+        "Outside",
+        "7979956"
+      ],
+      [
+        "Upper",
+        "21753067"
+      ],
+      [
+        "Bottom",
+        "8857080"
+      ],
+      [
+        "shoe tongue",
+        "190089571"
+      ],
+      [
+        "other",
+        "-1"
+      ]
+    ]
+  },
+  {
+    "id": "p-210190788",
+    "name": "Logo Craft",
+    "type": "multiCheck",
+    "required": false,
+    "options": [
+      [
+        "Offset Printing",
+        "484528529"
+      ],
+      [
+        "Silkscreen Printing",
+        "3550"
+      ],
+      [
+        "Other",
+        "-1"
+      ],
+      [
+        "Engraving",
+        "32416302"
+      ],
+      [
+        "Laser Carving",
+        "3552"
+      ],
+      [
+        "Embossing",
+        "86276181"
+      ],
+      [
+        "leather printing",
+        "190089573"
+      ],
+      [
+        "rubber printing",
+        "1879414167"
+      ],
+      [
+        "Transfer Sticker",
+        "190089458"
+      ],
+      [
+        "3D Printing",
+        "170202475"
+      ],
+      [
+        "Embroidered",
+        "7400116"
+      ],
+      [
+        "other",
+        "-1"
+      ]
+    ]
+  }
+]

@@ -1,0 +1,424 @@
+{
+  "style": "027",
+  "tool": "BUILTIN_IMAGE_GEN",
+  "observed_at": "2026-10-10T09:54:45.818951+00:00",
+  "status": "ALL_12_LOCAL_ROLES_VISUALLY_ACCEPTED",
+  "rows": [
+    {
+      "role": "M1",
+      "buyer_question": "搜索识别",
+      "source_indices": [
+        1
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\027准备\\01_产品来源原图\\01.jpg"
+      ],
+      "source_sha256": [
+        "ee0ce1b3c5ec05b43f1f011f6fb34021f615e28e758ecc027bef2d5efc704a7a"
+      ],
+      "source_dimensions": [
+        [
+          800,
+          800
+        ]
+      ],
+      "source_region_key": "actual-photo-1",
+      "prompt": "Use case: precise-object-edit. Square English B2B product photo. Exact Luqi027 source photograph only. Preserve actual shoe count/pose, curved stitched overlays, oval forefoot surround, dark textured panels, flat black laces/eyelets, low collar and shallow sole edge. Black Silver overlay stays silver; Black Gold overlay gold/tan sole; Black stays glossy black/black sole. No recolor, new angle, hidden geometry reconstruction, added branding, changed seams or tread. Preserve original bareankles or white socks exactly. Remove old Chinese wording, frames, arrows, icons, logos/brand labels and foot diagrams. Product dominant with neat English margins. No brand affiliation, performance, medical, waterproof, slip resistance or delivery claims. Preserve exact one Black Silver whole shoe original front-threequarter angle and shadow, white background, no text.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\027准备\\05_AI候选\\M1.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-eb13b60c-3038-410a-9062-06b82666944f.png",
+      "output_sha256": "455ea4c24b626922d2309a44d4ab80766c39f61bf0360d56bada355f2262f7b9",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T09:54:45.818951+00:00",
+      "review_note": "Exact source individually compared: curved stitched overlays, oval forefoot, dark fine woven/ribbed panels, original pose and shallow sole. D1 actual inset macro, D2 actual partial ringtread, D3 collar macro, D4 EU36-48; threeSKU disjoint source09 original profiles; source06 texture support only. Four rejected candidates excluded."
+    },
+    {
+      "role": "M2",
+      "buyer_question": "黑金前掌上脚",
+      "source_indices": [
+        12
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\027准备\\01_产品来源原图\\12.jpg"
+      ],
+      "source_sha256": [
+        "99c4f99409892b5cb8ba6172723a34196db0e5405e7e9d08dc9985a6b3e44187"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1088
+        ]
+      ],
+      "source_region_key": "actual-photo-12",
+      "prompt": "Use case: precise-object-edit. Square English B2B product photo. Exact Luqi027 source photograph only. Preserve actual shoe count/pose, curved stitched overlays, oval forefoot surround, dark textured panels, flat black laces/eyelets, low collar and shallow sole edge. Black Silver overlay stays silver; Black Gold overlay gold/tan sole; Black stays glossy black/black sole. No recolor, new angle, hidden geometry reconstruction, added branding, changed seams or tread. Preserve original bareankles or white socks exactly. Remove old Chinese wording, frames, arrows, icons, logos/brand labels and foot diagrams. Product dominant with neat English margins. No brand affiliation, performance, medical, waterproof, slip resistance or delivery claims. Keep TWO original Black Gold onfoot shoes, black pants/white socks, orange bench. Frame below knees; exclude torso/person face. Text: BLACK GOLD OPTION; Actual photographed front view.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\027准备\\05_AI候选\\M2.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-81cd187a-1d0e-443f-9d88-1dac4d35a4b4.png",
+      "output_sha256": "e9b1f45909a4eca7bd6bdab8c3b5ff57bfce4cab837a8b164dd049d6444a29d5",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T09:54:45.818951+00:00",
+      "review_note": "Exact source individually compared: curved stitched overlays, oval forefoot, dark fine woven/ribbed panels, original pose and shallow sole. D1 actual inset macro, D2 actual partial ringtread, D3 collar macro, D4 EU36-48; threeSKU disjoint source09 original profiles; source06 texture support only. Four rejected candidates excluded."
+    },
+    {
+      "role": "M3",
+      "buyer_question": "黑色侧面上脚",
+      "source_indices": [
+        17
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\027准备\\01_产品来源原图\\17.jpg"
+      ],
+      "source_sha256": [
+        "506d1b8963af84f0a22ce6837f8f4357161c18759157fe57fc617e373edefd76"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          946
+        ]
+      ],
+      "source_region_key": "actual-photo-17",
+      "prompt": "Use case: precise-object-edit. Square English B2B product photo. Exact Luqi027 source photograph only. Preserve actual shoe count/pose, curved stitched overlays, oval forefoot surround, dark textured panels, flat black laces/eyelets, low collar and shallow sole edge. Black Silver overlay stays silver; Black Gold overlay gold/tan sole; Black stays glossy black/black sole. No recolor, new angle, hidden geometry reconstruction, added branding, changed seams or tread. Preserve original bareankles or white socks exactly. Remove old Chinese wording, frames, arrows, icons, logos/brand labels and foot diagrams. Product dominant with neat English margins. No brand affiliation, performance, medical, waterproof, slip resistance or delivery claims. Keep TWO original Black onfoot shoes, blue jeans/bareankles on wooden surface, foreground planted/right and rear heelraised/left. Frame below knees, preserve hand fragment if visible. Text: LACE-UP SIDE PROFILE; Curved stitched overlays.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\027准备\\05_AI候选\\M3.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-4d48f8ea-e0d4-446d-af47-2e3ca6ec3ed9.png",
+      "output_sha256": "86af4e958a2c537d0688515002959792b1aad524c57aceb518f5a61efb15c2e3",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T09:54:45.818951+00:00",
+      "review_note": "Exact source individually compared: curved stitched overlays, oval forefoot, dark fine woven/ribbed panels, original pose and shallow sole. D1 actual inset macro, D2 actual partial ringtread, D3 collar macro, D4 EU36-48; threeSKU disjoint source09 original profiles; source06 texture support only. Four rejected candidates excluded."
+    },
+    {
+      "role": "M4",
+      "buyer_question": "黑银前掌上脚",
+      "source_indices": [
+        16
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\027准备\\01_产品来源原图\\16.jpg"
+      ],
+      "source_sha256": [
+        "2da55613827c46a5703c47c1a758483e4c22a09d4031eb2ffe2d0224a0f1e9e8"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1040
+        ]
+      ],
+      "source_region_key": "actual-photo-16",
+      "prompt": "Use case: precise-object-edit. Square English B2B product photo. Exact Luqi027 source photograph only. Preserve actual shoe count/pose, curved stitched overlays, oval forefoot surround, dark textured panels, flat black laces/eyelets, low collar and shallow sole edge. Black Silver overlay stays silver; Black Gold overlay gold/tan sole; Black stays glossy black/black sole. No recolor, new angle, hidden geometry reconstruction, added branding, changed seams or tread. Preserve original bareankles or white socks exactly. Remove old Chinese wording, frames, arrows, icons, logos/brand labels and foot diagrams. Product dominant with neat English margins. No brand affiliation, performance, medical, waterproof, slip resistance or delivery claims. Keep TWO original Black Silver onfoot shoes, white socks/black cuffs on orange bench, exact suspended pose. Frame below knees. Text: BLACK SILVER OPTION; Actual photographed construction.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\027准备\\05_AI候选\\M4.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-23387351-835f-4c12-808b-daaed09ed760.png",
+      "output_sha256": "fcb50c004106e34c9ab90e6ad454d0af424022eee566d1f403f9780613512cd2",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T09:54:45.818951+00:00",
+      "review_note": "Exact source individually compared: curved stitched overlays, oval forefoot, dark fine woven/ribbed panels, original pose and shallow sole. D1 actual inset macro, D2 actual partial ringtread, D3 collar macro, D4 EU36-48; threeSKU disjoint source09 original profiles; source06 texture support only. Four rejected candidates excluded."
+    },
+    {
+      "role": "M5",
+      "buyer_question": "采购输入",
+      "source_indices": [
+        19
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\027准备\\01_产品来源原图\\19.jpg"
+      ],
+      "source_sha256": [
+        "b82e8827346136ec8a7d1ad68c13de37e5f47828bb11a2f50bb665ade284e493"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          836
+        ]
+      ],
+      "source_region_key": "actual-photo-19",
+      "prompt": "Use case: precise-object-edit. Square English B2B product photo. Exact Luqi027 source photograph only. Preserve actual shoe count/pose, curved stitched overlays, oval forefoot surround, dark textured panels, flat black laces/eyelets, low collar and shallow sole edge. Black Silver overlay stays silver; Black Gold overlay gold/tan sole; Black stays glossy black/black sole. No recolor, new angle, hidden geometry reconstruction, added branding, changed seams or tread. Preserve original bareankles or white socks exactly. Remove old Chinese wording, frames, arrows, icons, logos/brand labels and foot diagrams. Product dominant with neat English margins. No brand affiliation, performance, medical, waterproof, slip resistance or delivery claims. Keep TWO original Black Gold onfoot shoes with bareankles/bluejeans, one heelraised/one planted on wooden surface, exact original pose. Frame below knees. Text: PLAN YOUR ASSORTMENT; Send color, EU size mix, pair quantity and destination.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\027准备\\05_AI候选\\M5.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-fe4bb8a5-1b5f-4abf-8e5b-8e7c037b8007.png",
+      "output_sha256": "b9d2eb8ae072f3b941afbf335c21b436e093aae7874ecd5fb32159b7677d9937",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T09:54:45.818951+00:00",
+      "review_note": "Exact source individually compared: curved stitched overlays, oval forefoot, dark fine woven/ribbed panels, original pose and shallow sole. D1 actual inset macro, D2 actual partial ringtread, D3 collar macro, D4 EU36-48; threeSKU disjoint source09 original profiles; source06 texture support only. Four rejected candidates excluded."
+    },
+    {
+      "role": "D1",
+      "buyer_question": "鞋面缝线细节",
+      "source_indices": [
+        6
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\027准备\\01_产品来源原图\\06.jpg"
+      ],
+      "source_sha256": [
+        "81b715c9d79f602e09c4ea04d43a76904d9fe7e9ecceb7d0c085500ab1c716b1"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1551
+        ]
+      ],
+      "source_region_key": "actual-photo-6",
+      "prompt": "Use case: precise-object-edit. Square English B2B product photo. Exact Luqi027 source photograph only. Preserve actual shoe count/pose, curved stitched overlays, oval forefoot surround, dark textured panels, flat black laces/eyelets, low collar and shallow sole edge. Black Silver overlay stays silver; Black Gold overlay gold/tan sole; Black stays glossy black/black sole. No recolor, new angle, hidden geometry reconstruction, added branding, changed seams or tread. Preserve original bareankles or white socks exactly. Remove old Chinese wording, frames, arrows, icons, logos/brand labels and foot diagrams. Product dominant with neat English margins. No brand affiliation, performance, medical, waterproof, slip resistance or delivery claims. Use ONLY lowerRIGHT inset actual close-up photograph of silver stitched overlays/dark textured upper. Tight partial macro remains partial. Exclude main large onfoot photo and all diagram elements. Text: STITCHED UPPER DETAIL; Actual photographed surface.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\027准备\\05_AI候选\\D1.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-65073ff8-eabb-4450-994e-491966518030.png",
+      "output_sha256": "4629e45a01d709deac5b9c15d57dc698699d55ff8d29cf16da9fcc5c3ec770be",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T09:54:45.818951+00:00",
+      "review_note": "Exact source individually compared: curved stitched overlays, oval forefoot, dark fine woven/ribbed panels, original pose and shallow sole. D1 actual inset macro, D2 actual partial ringtread, D3 collar macro, D4 EU36-48; threeSKU disjoint source09 original profiles; source06 texture support only. Four rejected candidates excluded."
+    },
+    {
+      "role": "D2",
+      "buyer_question": "真实大底纹路",
+      "source_indices": [
+        23
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\027准备\\01_产品来源原图\\23.jpg"
+      ],
+      "source_sha256": [
+        "d7c766d2425739d84b73e0b7342648d454cbb37fed46b929fca04b0608037195"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          836
+        ]
+      ],
+      "source_region_key": "actual-photo-23",
+      "prompt": "Use case: precise-object-edit. Square English B2B outsole DETAIL photograph, exact Luqi027 source23 ONLY. STRICT TIGHT MACRO CROP of the actual RIGHT foreground raised outsole. Output photograph contains only a PARTIAL rubber sole face, concentrated on its TWO photographed concentric oval ring zones and photographed perimeter texture. The source already has sole visible; keep its existing angle and ring geometry. Crop away the entire other planted shoe, hands, knees, most jeans and most upper. DO NOT output two-shoe lifestyle scene or complete shoe silhouette. DO NOT create new hidden sole/angle, extra magnifier inset or changed tread. Original black rubber material/geometry remains exact. Neat lower white margin text: RUBBER OUTSOLE; Actual photographed tread section. No performance, slip, test or medical claims.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\027准备\\05_AI候选\\D2.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-6bb578ea-95ad-4b8f-a9ea-b2ff9bf47718.png",
+      "output_sha256": "512ac9cc4976b6d6ba3dd0dd6e9ae8483ed3a4a1878dc492154d39fc94bc88b5",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T09:54:45.818951+00:00",
+      "review_note": "Exact source individually compared: curved stitched overlays, oval forefoot, dark fine woven/ribbed panels, original pose and shallow sole. D1 actual inset macro, D2 actual partial ringtread, D3 collar macro, D4 EU36-48; threeSKU disjoint source09 original profiles; source06 texture support only. Four rejected candidates excluded."
+    },
+    {
+      "role": "D3",
+      "buyer_question": "鞋领内里细节",
+      "source_indices": [
+        7
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\027准备\\01_产品来源原图\\07.jpg"
+      ],
+      "source_sha256": [
+        "0c66cf901548f6406918669c1f57da6095c4578bd1c8f806ce90e4b67c0faea3"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1744
+        ]
+      ],
+      "source_region_key": "actual-photo-7",
+      "prompt": "Use case: precise-object-edit. Square English B2B product photo. Exact Luqi027 source photograph only. Preserve actual shoe count/pose, curved stitched overlays, oval forefoot surround, dark textured panels, flat black laces/eyelets, low collar and shallow sole edge. Black Silver overlay stays silver; Black Gold overlay gold/tan sole; Black stays glossy black/black sole. No recolor, new angle, hidden geometry reconstruction, added branding, changed seams or tread. Preserve original bareankles or white socks exactly. Remove old Chinese wording, frames, arrows, icons, logos/brand labels and foot diagrams. Product dominant with neat English margins. No brand affiliation, performance, medical, waterproof, slip resistance or delivery claims. Use ONLY lowerRIGHT inset actual single shoe collar close-up, tight partial macro of photographed black collar/tongue/eyelet area. Exclude upper large handheld two-shoe photo. No material guess. Text: COLLAR DETAIL; Actual photographed lining and eyelets.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\027准备\\05_AI候选\\D3.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-89f9d277-78e3-47f3-9ceb-73a2668650a2.png",
+      "output_sha256": "ef6d9ee0446da7383fe72ffee9416f225fdd74a9342f1543bc3ba316e8a50990",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T09:54:45.818951+00:00",
+      "review_note": "Exact source individually compared: curved stitched overlays, oval forefoot, dark fine woven/ribbed panels, original pose and shallow sole. D1 actual inset macro, D2 actual partial ringtread, D3 collar macro, D4 EU36-48; threeSKU disjoint source09 original profiles; source06 texture support only. Four rejected candidates excluded."
+    },
+    {
+      "role": "D4",
+      "buyer_question": "EU尺码配比",
+      "source_indices": [
+        21
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\027准备\\01_产品来源原图\\21.jpg"
+      ],
+      "source_sha256": [
+        "f953a84dde634ff66c64cbe7044e22f59a06e359e2ad97e6c55a5d85b50fb595"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          942
+        ]
+      ],
+      "source_region_key": "actual-photo-21",
+      "prompt": "Use case: precise-object-edit. Square English B2B product photo. Exact Luqi027 source photograph only. Preserve actual shoe count/pose, curved stitched overlays, oval forefoot surround, dark textured panels, flat black laces/eyelets, low collar and shallow sole edge. Black Silver overlay stays silver; Black Gold overlay gold/tan sole; Black stays glossy black/black sole. No recolor, new angle, hidden geometry reconstruction, added branding, changed seams or tread. Preserve original bareankles or white socks exactly. Remove old Chinese wording, frames, arrows, icons, logos/brand labels and foot diagrams. Product dominant with neat English margins. No brand affiliation, performance, medical, waterproof, slip resistance or delivery claims. Use exact TWO Black Silver onfoot shoes with bluejeans/bareankles on wooden surface, both planted original side/frontthreequarter pose. Frame below knees, preserve original hand fragment. Text: EU SIZE PLANNING; EU 36-48; Confirm color and size mix.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\027准备\\05_AI候选\\D4.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-d0a4a363-3507-4ff6-acb2-6c7e6f0f7b80.png",
+      "output_sha256": "d9d94ed668da556102ba1b67bafc158438bdd1a106fc4936ddea6169d1f4aff3",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T09:54:45.818951+00:00",
+      "review_note": "Exact source individually compared: curved stitched overlays, oval forefoot, dark fine woven/ribbed panels, original pose and shallow sole. D1 actual inset macro, D2 actual partial ringtread, D3 collar macro, D4 EU36-48; threeSKU disjoint source09 original profiles; source06 texture support only. Four rejected candidates excluded."
+    },
+    {
+      "role": "SKU_Black",
+      "buyer_question": "黑色SKU",
+      "source_indices": [
+        9,
+        6
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\027准备\\01_产品来源原图\\09.jpg",
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\027准备\\01_产品来源原图\\06.jpg"
+      ],
+      "source_sha256": [
+        "1917259f8e7b7f478f82561db0779d41b45c877be0319c8ca1b90304aacad6c6",
+        "81b715c9d79f602e09c4ea04d43a76904d9fe7e9ecceb7d0c085500ab1c716b1"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1387
+        ],
+        [
+          790,
+          1551
+        ]
+      ],
+      "source_region_key": "SKU_Black",
+      "prompt": "Use case: precise-object-edit. Square English B2B product photo. Exact Luqi027 source photograph only. Preserve actual shoe count/pose, curved stitched overlays, oval forefoot surround, dark textured panels, flat black laces/eyelets, low collar and shallow sole edge. Black Silver overlay stays silver; Black Gold overlay gold/tan sole; Black stays glossy black/black sole. No recolor, new angle, hidden geometry reconstruction, added branding, changed seams or tread. Preserve original bareankles or white socks exactly. Remove old Chinese wording, frames, arrows, icons, logos/brand labels and foot diagrams. Product dominant with neat English margins. No brand affiliation, performance, medical, waterproof, slip resistance or delivery claims. Use ONLY lowerLEFT actual whole Black single shoe side-profile photograph, exclude upper silver and lowerRIGHT gold. Whole original shoe on white background, no rotation/text/collage. Preserve glossy black overlays, dark textile-looking panels and black sole. SECOND reference source06 is TEXTURE SUPPORT ONLY: its lowerRIGHT real macro shows original dark fine linear woven/ribbed panels with small regular parallel rows, NOT irregular pebbled leather grain. Correct dark panel texture to that original fine parallel textile-looking pattern. Keep exact source09 chosen SINGLE shoe sideprofile, all curved band geometry, pose and selected color/sole; do not copy source06 onfoot pose or its silver color if target Black or BlackGold. NO pebbled leather-grain/porous pebble texture.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\027准备\\05_AI候选\\SKU_Black.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-eba19eec-ddac-446d-9584-894a70736c38.png",
+      "output_sha256": "9178367e0a565383d2a743d8f5e9b224ebc2975e7b66f6485a921051ef8c88f2",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T09:54:45.818951+00:00",
+      "review_note": "Exact source individually compared: curved stitched overlays, oval forefoot, dark fine woven/ribbed panels, original pose and shallow sole. D1 actual inset macro, D2 actual partial ringtread, D3 collar macro, D4 EU36-48; threeSKU disjoint source09 original profiles; source06 texture support only. Four rejected candidates excluded."
+    },
+    {
+      "role": "SKU_Black Gold",
+      "buyer_question": "黑金SKU",
+      "source_indices": [
+        9,
+        6
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\027准备\\01_产品来源原图\\09.jpg",
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\027准备\\01_产品来源原图\\06.jpg"
+      ],
+      "source_sha256": [
+        "1917259f8e7b7f478f82561db0779d41b45c877be0319c8ca1b90304aacad6c6",
+        "81b715c9d79f602e09c4ea04d43a76904d9fe7e9ecceb7d0c085500ab1c716b1"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1387
+        ],
+        [
+          790,
+          1551
+        ]
+      ],
+      "source_region_key": "SKU_Black Gold",
+      "prompt": "Use case: precise-object-edit. Square English B2B product photo. Exact Luqi027 source photograph only. Preserve actual shoe count/pose, curved stitched overlays, oval forefoot surround, dark textured panels, flat black laces/eyelets, low collar and shallow sole edge. Black Silver overlay stays silver; Black Gold overlay gold/tan sole; Black stays glossy black/black sole. No recolor, new angle, hidden geometry reconstruction, added branding, changed seams or tread. Preserve original bareankles or white socks exactly. Remove old Chinese wording, frames, arrows, icons, logos/brand labels and foot diagrams. Product dominant with neat English margins. No brand affiliation, performance, medical, waterproof, slip resistance or delivery claims. Use ONLY lowerRIGHT actual whole Black Gold single shoe side-profile photograph, exclude upper silver and lowerLEFT black. Whole original shoe on white background, no rotation/text/collage. Preserve gold overlays, dark panels and tan outsole. SECOND reference source06 is TEXTURE SUPPORT ONLY: its lowerRIGHT real macro shows original dark fine linear woven/ribbed panels with small regular parallel rows, NOT irregular pebbled leather grain. Correct dark panel texture to that original fine parallel textile-looking pattern. Keep exact source09 chosen SINGLE shoe sideprofile, all curved band geometry, pose and selected color/sole; do not copy source06 onfoot pose or its silver color if target Black or BlackGold. NO pebbled leather-grain/porous pebble texture.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\027准备\\05_AI候选\\SKU_Black Gold.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-5c2e3f1e-6547-429a-afc4-105e3a2dc2bd.png",
+      "output_sha256": "e5595aa6ce5cc31d0f1b57e4406a2b9bb358c6e7e87eda0abe761b2eddaf417f",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T09:54:45.818951+00:00",
+      "review_note": "Exact source individually compared: curved stitched overlays, oval forefoot, dark fine woven/ribbed panels, original pose and shallow sole. D1 actual inset macro, D2 actual partial ringtread, D3 collar macro, D4 EU36-48; threeSKU disjoint source09 original profiles; source06 texture support only. Four rejected candidates excluded."
+    },
+    {
+      "role": "SKU_Black Silver",
+      "buyer_question": "黑银SKU",
+      "source_indices": [
+        9,
+        6
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\027准备\\01_产品来源原图\\09.jpg",
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\027准备\\01_产品来源原图\\06.jpg"
+      ],
+      "source_sha256": [
+        "1917259f8e7b7f478f82561db0779d41b45c877be0319c8ca1b90304aacad6c6",
+        "81b715c9d79f602e09c4ea04d43a76904d9fe7e9ecceb7d0c085500ab1c716b1"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1387
+        ],
+        [
+          790,
+          1551
+        ]
+      ],
+      "source_region_key": "SKU_Black Silver",
+      "prompt": "Use case: precise-object-edit. Square English B2B product photo. Exact Luqi027 source photograph only. Preserve actual shoe count/pose, curved stitched overlays, oval forefoot surround, dark textured panels, flat black laces/eyelets, low collar and shallow sole edge. Black Silver overlay stays silver; Black Gold overlay gold/tan sole; Black stays glossy black/black sole. No recolor, new angle, hidden geometry reconstruction, added branding, changed seams or tread. Preserve original bareankles or white socks exactly. Remove old Chinese wording, frames, arrows, icons, logos/brand labels and foot diagrams. Product dominant with neat English margins. No brand affiliation, performance, medical, waterproof, slip resistance or delivery claims. Use ONLY upperMIDDLE actual whole Black Silver single shoe side-profile photograph, exclude both lower shoes. Whole original shoe on white background, no rotation/text/collage. Preserve silver overlays, dark panels and black outsole. SECOND reference source06 is TEXTURE SUPPORT ONLY: its lowerRIGHT real macro shows original dark fine linear woven/ribbed panels with small regular parallel rows, NOT irregular pebbled leather grain. Correct dark panel texture to that original fine parallel textile-looking pattern. Keep exact source09 chosen SINGLE shoe sideprofile, all curved band geometry, pose and selected color/sole; do not copy source06 onfoot pose or its silver color if target Black or BlackGold. NO pebbled leather-grain/porous pebble texture.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\027准备\\05_AI候选\\SKU_Black Silver.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-2a55f3d6-9117-4343-9c0c-d931ca21832b.png",
+      "output_sha256": "b43957b6ca9d0349a0b26d8b31d07de9db61420cb721273bbb1b5209d9669e29",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T09:54:45.818951+00:00",
+      "review_note": "Exact source individually compared: curved stitched overlays, oval forefoot, dark fine woven/ribbed panels, original pose and shallow sole. D1 actual inset macro, D2 actual partial ringtread, D3 collar macro, D4 EU36-48; threeSKU disjoint source09 original profiles; source06 texture support only. Four rejected candidates excluded."
+    }
+  ],
+  "rejected_attempts": [
+    {
+      "role": "D2",
+      "native_path": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-1c814730-7288-4c14-a5d4-a17f973fbdfb.png",
+      "reason": "Whole two-foot scene retained; intended detail needs the exposed outsole crop alone. Not uploaded."
+    },
+    {
+      "role": "SKU_Black",
+      "native_path": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-e43d4ea2-f163-413b-a598-dd02dea9a75c.png",
+      "reason": "Dark upper panel changed to irregular pebbled grain instead of original fine parallel/woven texture. Not uploaded."
+    },
+    {
+      "role": "SKU_Black Gold",
+      "native_path": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-600337ca-c03e-4ff1-bbc9-590eb9c2625c.png",
+      "reason": "Dark upper panel changed to irregular pebbled grain instead of original fine parallel/woven texture. Not uploaded."
+    },
+    {
+      "role": "SKU_Black Silver",
+      "native_path": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-999ec43d-f87c-428c-a339-b2a0d73c0c9f.png",
+      "reason": "Dark upper panel changed to irregular pebbled grain instead of original fine parallel/woven texture. Not uploaded."
+    }
+  ],
+  "limits": "D1 side mesh macro; D2 partial original tread macro; D3 heelup view; photographs not physical performance tests or public page rendering proof."
+}

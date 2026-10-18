@@ -1,0 +1,279 @@
+{
+  "state": "COMPLETE",
+  "items": {
+    "M1": {
+      "role": "M1",
+      "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0323F准备/01_产品来源原图/15.jpg",
+      "sha256": "85d516551403c77d06c7bca9f6c492ec970d223a8e6810d8522d3d9dabb6d15b",
+      "size": [
+        800,
+        800
+      ],
+      "source_frames": [
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0323F准备/01_产品来源原图/15.jpg",
+          "sha256": "85d516551403c77d06c7bca9f6c492ec970d223a8e6810d8522d3d9dabb6d15b"
+        }
+      ],
+      "processing": "ORIGINAL_SELECTED_UNMODIFIED",
+      "decision": "SELECTED_VISUAL_PASS",
+      "state": "UPLOADED",
+      "at": "2026-10-15T00:05:43.674597+00:00",
+      "response": {
+        "upload_image_response": {
+          "file_name": "15.jpg",
+          "file_id": 33845761003,
+          "photobank_url": "//sc04.alicdn.com/kf/H4b3b0e2b048e4c10b794a26789583310P/286385890/H4b3b0e2b048e4c10b794a26789583310P.jpg"
+        },
+        "request_id": "0b51802d17920227515447152",
+        "_trace_id_": "0bb4a9bd17920227506637582e0f08"
+      },
+      "url": "https://sc04.alicdn.com/kf/H4b3b0e2b048e4c10b794a26789583310P/286385890/H4b3b0e2b048e4c10b794a26789583310P.jpg",
+      "file_id": "33845761003"
+    },
+    "M2": {
+      "role": "M2",
+      "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0323F准备/01_产品来源原图/18.jpg",
+      "sha256": "ecdbb5e29d5a93cfbde20a5f47f91636eaba0ab564bfb201d45aa6cf8d842f24",
+      "size": [
+        800,
+        800
+      ],
+      "source_frames": [
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0323F准备/01_产品来源原图/18.jpg",
+          "sha256": "ecdbb5e29d5a93cfbde20a5f47f91636eaba0ab564bfb201d45aa6cf8d842f24"
+        }
+      ],
+      "processing": "ORIGINAL_SELECTED_UNMODIFIED",
+      "decision": "SELECTED_VISUAL_PASS",
+      "state": "UPLOADED",
+      "at": "2026-10-15T00:05:52.188799+00:00",
+      "response": {
+        "upload_image_response": {
+          "file_name": "18.jpg",
+          "file_id": 33845665486,
+          "photobank_url": "//sc04.alicdn.com/kf/Ha8dcf30d9a2f48679706112e48562b6d6/286385890/Ha8dcf30d9a2f48679706112e48562b6d6.jpg"
+        },
+        "request_id": "213f5a2117920227578152583",
+        "_trace_id_": "212e559c17920227572555395e108a"
+      },
+      "url": "https://sc04.alicdn.com/kf/Ha8dcf30d9a2f48679706112e48562b6d6/286385890/Ha8dcf30d9a2f48679706112e48562b6d6.jpg",
+      "file_id": "33845665486"
+    },
+    "M3": {
+      "role": "M3",
+      "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0323F准备/05_AI候选/M3.png",
+      "sha256": "61264b0a2d611d284e8eaa3a3338d3fcefa6f6eda7ea45777305dc5bc5de149b",
+      "size": [
+        1254,
+        1254
+      ],
+      "source_frames": [
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0323F准备/01_产品来源原图/12.jpg",
+          "sha256": "4109b5b39d7ae02a3b3fd7bc396c749f8360cc25bd800a637456a727ce9d89c7"
+        }
+      ],
+      "processing": "BUILTIN_IMAGEGEN_ACTUAL_SOURCE_CROP_OR_LAYOUT",
+      "decision": "SELECTED_VISUAL_PASS",
+      "state": "UPLOADED",
+      "at": "2026-10-15T00:05:58.411138+00:00",
+      "response": {
+        "upload_image_response": {
+          "file_name": "M3.png",
+          "file_id": 33845665489,
+          "photobank_url": "//sc04.alicdn.com/kf/H259bebaabbf54fc3b2a2c533c490547eJ/286385890/H259bebaabbf54fc3b2a2c533c490547eJ.png"
+        },
+        "request_id": "0b0b3a2717920227652651154",
+        "_trace_id_": "212e559c17920227634716565e0f40"
+      },
+      "url": "https://sc04.alicdn.com/kf/H259bebaabbf54fc3b2a2c533c490547eJ/286385890/H259bebaabbf54fc3b2a2c533c490547eJ.png",
+      "file_id": "33845665489"
+    },
+    "M4": {
+      "role": "M4",
+      "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0323F准备/01_产品来源原图/12.jpg",
+      "sha256": "4109b5b39d7ae02a3b3fd7bc396c749f8360cc25bd800a637456a727ce9d89c7",
+      "size": [
+        800,
+        800
+      ],
+      "source_frames": [
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0323F准备/01_产品来源原图/12.jpg",
+          "sha256": "4109b5b39d7ae02a3b3fd7bc396c749f8360cc25bd800a637456a727ce9d89c7"
+        }
+      ],
+      "processing": "ORIGINAL_SELECTED_UNMODIFIED",
+      "decision": "SELECTED_VISUAL_PASS",
+      "state": "UPLOADED",
+      "at": "2026-10-15T00:06:06.092128+00:00",
+      "response": {
+        "upload_image_response": {
+          "file_name": "12.jpg",
+          "file_id": 33848448191,
+          "photobank_url": "//sc04.alicdn.com/kf/H0e25738c6da946fbb9fbc45145eb787ej/286385890/H0e25738c6da946fbb9fbc45145eb787ej.jpg"
+        },
+        "request_id": "21546a1d17920227740547151",
+        "_trace_id_": "2141115b17920227731718260e0beb"
+      },
+      "url": "https://sc04.alicdn.com/kf/H0e25738c6da946fbb9fbc45145eb787ej/286385890/H0e25738c6da946fbb9fbc45145eb787ej.jpg",
+      "file_id": "33848448191"
+    },
+    "M5": {
+      "role": "M5",
+      "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0323F准备/01_产品来源原图/27.jpg",
+      "sha256": "46b6d481f3dc5672284decde4fb53ea7e879c186431c064b551d31376de9ae01",
+      "size": [
+        800,
+        800
+      ],
+      "source_frames": [
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0323F准备/01_产品来源原图/27.jpg",
+          "sha256": "46b6d481f3dc5672284decde4fb53ea7e879c186431c064b551d31376de9ae01"
+        }
+      ],
+      "processing": "ORIGINAL_SELECTED_UNMODIFIED",
+      "decision": "SELECTED_VISUAL_PASS",
+      "state": "UPLOADED",
+      "at": "2026-10-15T00:06:14.650873+00:00",
+      "response": {
+        "upload_image_response": {
+          "file_name": "27.jpg",
+          "file_id": 33845653413,
+          "photobank_url": "//sc04.alicdn.com/kf/Hc82da822fcea4e0da63dbf9a12aeae2bI/286385890/Hc82da822fcea4e0da63dbf9a12aeae2bI.jpg"
+        },
+        "request_id": "213e759c17920227806861210",
+        "_trace_id_": "0bb4a40617920227797383207e0bd2"
+      },
+      "url": "https://sc04.alicdn.com/kf/Hc82da822fcea4e0da63dbf9a12aeae2bI/286385890/Hc82da822fcea4e0da63dbf9a12aeae2bI.jpg",
+      "file_id": "33845653413"
+    },
+    "D1": {
+      "role": "D1",
+      "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0323F准备/05_AI候选/D1.png",
+      "sha256": "b79644fa20804366096d47027f87836d16f3020632f0d387c73d43c54b0fe234",
+      "size": [
+        1254,
+        1254
+      ],
+      "source_frames": [
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0323F准备/01_产品来源原图/15.jpg",
+          "sha256": "85d516551403c77d06c7bca9f6c492ec970d223a8e6810d8522d3d9dabb6d15b"
+        }
+      ],
+      "processing": "BUILTIN_IMAGEGEN_ACTUAL_SOURCE_CROP_OR_LAYOUT",
+      "decision": "SELECTED_VISUAL_PASS",
+      "state": "UPLOADED",
+      "at": "2026-10-15T00:06:21.298256+00:00",
+      "response": {
+        "upload_image_response": {
+          "file_name": "D1.png",
+          "file_id": 33848820673,
+          "photobank_url": "//sc04.alicdn.com/kf/H4a6996af945240d6a5fa2b924fc08eefe/286385890/H4a6996af945240d6a5fa2b924fc08eefe.png"
+        },
+        "request_id": "0b0b3a2717920227877461564",
+        "_trace_id_": "212e559c17920227862595456e1150"
+      },
+      "url": "https://sc04.alicdn.com/kf/H4a6996af945240d6a5fa2b924fc08eefe/286385890/H4a6996af945240d6a5fa2b924fc08eefe.png",
+      "file_id": "33848820673"
+    },
+    "D2": {
+      "role": "D2",
+      "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0323F准备/05_AI候选/D2.png",
+      "sha256": "6981076c75d0899705c7456217702d49618c68c11738eb8bc885b4ceb71e05a1",
+      "size": [
+        1254,
+        1254
+      ],
+      "source_frames": [
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0323F准备/01_产品来源原图/12.jpg",
+          "sha256": "4109b5b39d7ae02a3b3fd7bc396c749f8360cc25bd800a637456a727ce9d89c7"
+        }
+      ],
+      "processing": "BUILTIN_IMAGEGEN_ACTUAL_SOURCE_CROP_OR_LAYOUT",
+      "decision": "SELECTED_VISUAL_PASS",
+      "state": "UPLOADED",
+      "at": "2026-10-15T00:06:28.549171+00:00",
+      "response": {
+        "upload_image_response": {
+          "file_name": "D2.png",
+          "file_id": 33847681888,
+          "photobank_url": "//sc04.alicdn.com/kf/Hc85035775b934c10830ecb2c77ef4234Z/286385890/Hc85035775b934c10830ecb2c77ef4234Z.png"
+        },
+        "request_id": "21546a1d17920227998018653",
+        "_trace_id_": "212e559c17920227944504506e0e38"
+      },
+      "url": "https://sc04.alicdn.com/kf/Hc85035775b934c10830ecb2c77ef4234Z/286385890/Hc85035775b934c10830ecb2c77ef4234Z.png",
+      "file_id": "33847681888"
+    },
+    "D3": {
+      "role": "D3",
+      "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0323F准备/05_AI候选/D3.png",
+      "sha256": "7d7042cfd1f8c7d21a9ec908015001156a579a60651ca3b0f8d0e60e2360d7a2",
+      "size": [
+        1254,
+        1254
+      ],
+      "source_frames": [
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0323F准备/01_产品来源原图/19.jpg",
+          "sha256": "a4606aa4b8833360b77cefebb8419de6fadb96eeca9f0220cfa3c316be2041f9"
+        }
+      ],
+      "processing": "BUILTIN_IMAGEGEN_ACTUAL_SOURCE_CROP_OR_LAYOUT",
+      "decision": "SELECTED_VISUAL_PASS",
+      "state": "UPLOADED",
+      "at": "2026-10-15T00:06:40.613980+00:00",
+      "response": {
+        "upload_image_response": {
+          "file_name": "D3.png",
+          "file_id": 33848736957,
+          "photobank_url": "//sc04.alicdn.com/kf/H9e72518327e5434a9be4ec66922bea43N/286385890/H9e72518327e5434a9be4ec66922bea43N.png"
+        },
+        "request_id": "213e759c17920228075772840",
+        "_trace_id_": "2141115b17920228056751597e0c45"
+      },
+      "url": "https://sc04.alicdn.com/kf/H9e72518327e5434a9be4ec66922bea43N/286385890/H9e72518327e5434a9be4ec66922bea43N.png",
+      "file_id": "33848736957"
+    },
+    "D4": {
+      "role": "D4",
+      "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0323F准备/05_AI候选/D4.png",
+      "sha256": "9b0098ff0c5fbb2ac7f6a2c7683a1dfb72b12733c57deaab13aca49286a2b973",
+      "size": [
+        1254,
+        1254
+      ],
+      "source_frames": [
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0323F准备/01_产品来源原图/15.jpg",
+          "sha256": "85d516551403c77d06c7bca9f6c492ec970d223a8e6810d8522d3d9dabb6d15b"
+        },
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0323F准备/01_产品来源原图/12.jpg",
+          "sha256": "4109b5b39d7ae02a3b3fd7bc396c749f8360cc25bd800a637456a727ce9d89c7"
+        }
+      ],
+      "processing": "BUILTIN_IMAGEGEN_ACTUAL_SOURCE_CROP_OR_LAYOUT",
+      "decision": "SELECTED_VISUAL_PASS",
+      "state": "UPLOADED",
+      "at": "2026-10-15T00:06:48.343622+00:00",
+      "response": {
+        "upload_image_response": {
+          "file_name": "D4.png",
+          "file_id": 33845689427,
+          "photobank_url": "//sc04.alicdn.com/kf/Hfb527a698f86406e9d07b543bf7e8269G/286385890/Hfb527a698f86406e9d07b543bf7e8269G.png"
+        },
+        "request_id": "2166c2ca17920228155053665",
+        "_trace_id_": "2141115b17920228134385686e0e53"
+      },
+      "url": "https://sc04.alicdn.com/kf/Hfb527a698f86406e9d07b543bf7e8269G/286385890/Hfb527a698f86406e9d07b543bf7e8269G.png",
+      "file_id": "33845689427"
+    }
+  }
+}

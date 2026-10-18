@@ -1,0 +1,60 @@
+{
+  "tool": "Builtin image_gen",
+  "prompts": {
+    "D1": {
+      "prompt": "Edit exact actual Burgundy1026 boot reference into a square English B2B constructiondetail. Tight authentic crop of the existing curved stitched forefoot seam, burgundy grained toe panel, small black toeoverlay and grey sidewall edge. Preserve exact real oblique view, stitchlines, shape and colour; do not show or invent a new fullshoe. White top15%header navy title 'Curved Forefoot Panel', subtitle 'Stitched overlay around the toe', thinorange separator. Largeactualcrop rest. No materialchemistry, waterproof, impact protection, comforttest or durability claim. No arrows/insets or new logos.",
+      "refs": [
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1026准备/01_产品来源原图/02.jpg"
+      ],
+      "output_hint": "Generated images are saved to E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c as E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-7e529ce0-af70-47b9-8b28-d0d4c9f7ae2c.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    "D2": {
+      "prompt": "Edit exact actual Grey1026 worn boot photograph. Tight crop around the FRONT boot's angular swept pointed quarter insert and its light outline, connecting stitched borders and grey soleedge. Preserve real sideangle, panelshape, stitching, colours and actual smallstylisedletters/OUTDOORmark if insidecrop. Keep any visible real ankle, no emptyshoe reconstruction. Square B2B detail with white top15%header navy 'Angular Side Panel', subtitle 'A swept insert with contrasting outline', thinorange rule. No wholeboot redraw, materialchemistry, support/grip/waterproof/durability claims, arrows or invented parts.",
+      "refs": [
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1026准备/01_产品来源原图/06.jpg"
+      ],
+      "output_hint": "Generated images are saved to E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c as E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-7a81b5df-da62-4e84-98b5-589f310a2212.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    "D4": {
+      "prompt": "Square B2B colour/EU assortment infographic from actual1026 references. Ref1Grey boot inwhite productphoto with rearsoleshoe; use its FRONT actualboot crop only. Ref2Black actualpair onsnow; Ref3Burgundyactualpair onsnow. Keep real colours, originalangles, dialguides, pointed sideinsert, stitching, greyplush rim, physicalsmallmarks and solegeometry; no new views or recolouring. Heading 'Colours & EU Size Ranges'. Three actualphoto panels labelled 'Grey', 'Black', 'Burgundy'. Lower table exact: 'Black | EU 36–48'; 'Grey | EU 39–48'; 'Burgundy | EU 36–41'. Footer 'Choose each colour from its own EU size range'. White navy/orange layout, readableEnglish. No footlength/US/width conversions, stock or dispatch/temperatureclaims. Greyplush texture asrealphotos, no inventedinsidecutaway.",
+      "refs": [
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1026准备/01_产品来源原图/01.jpg",
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1026准备/01_产品来源原图/27.jpg",
+        "C:/Users/spq/Desktop/贝强/02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1026准备/01_产品来源原图/29.jpg"
+      ],
+      "output_hint": "Generated images are saved to E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c as E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-a4a6b81e-5aca-432a-979a-36b89fcfe4d9.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    }
+  },
+  "selected": {
+    "M1": [
+      1
+    ],
+    "M2": [
+      11
+    ],
+    "M3": [
+      30
+    ],
+    "M4": [
+      27
+    ],
+    "M5": [
+      29
+    ],
+    "D1": [
+      2
+    ],
+    "D2": [
+      6
+    ],
+    "D3": [
+      9
+    ],
+    "D4": [
+      1,
+      27,
+      29
+    ]
+  },
+  "limits": "Actual source viewpoint/construction preserved; AI presentation is not new composition/performance/stock evidence. Source originals and final selection retained."
+}

@@ -1,0 +1,36 @@
+{
+  "verdict": "PASS_PUBLIC_CONTENT",
+  "product_id": "1601969920294",
+  "model": "BQ-L3522",
+  "observed_at": "2026-10-02T16:07:00+00:00",
+  "reviewer": "Parent independent cloud browser QA",
+  "public_url": "https://www.alibaba.com/product-detail/Men-s-Suede-Slip-On-Loafers_1601969920294.html",
+  "main_images": 6,
+  "product_details": 4,
+  "company_images": 5,
+  "FAQ": 6,
+  "SKU_rows": 24,
+  "actual_color_switches": "Green size46 and Black/Beige selections passed",
+  "tier_prices_USD": [
+    19.04,
+    17.77,
+    16.5
+  ],
+  "MOQ_pairs": 2,
+  "inquiry_entry": "Visible and operable; no inquiry submitted",
+  "no_product_price_or_Chinese_overlay": true,
+  "materials_visible": {
+    "upper_property": "Genuine Leather",
+    "body_images_FAQ": "Cow suede/PU",
+    "outsole": "Not specified",
+    "midsole": "Not specified"
+  },
+  "material_semantics": "Cow suede is a genuine-leather subtype; broad enum is not itself false",
+  "latest_Cow_suede_property_update_public_effect": "UNVERIFIED at this QA timestamp; do not use this older broad value to claim latest update is live",
+  "keywords": "UNKNOWN; not declared persisted",
+  "scope_limit": "Actual public content and interactions at16:07UTC; score/review/current update effect separately read from API",
+  "actual_score": 5.0,
+  "score_observed_at": "2026-10-02T16:15:43.529321+00:00",
+  "score_request_id": "213f5a2117909577483255773",
+  "completion_status": "PENDING"
+}

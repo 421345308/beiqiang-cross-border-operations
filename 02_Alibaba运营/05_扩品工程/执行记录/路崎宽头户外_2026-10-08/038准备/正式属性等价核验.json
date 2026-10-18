@@ -1,0 +1,94 @@
+{
+  "style": "038",
+  "observed_at": "2026-10-10T07:10:36.180447+00:00",
+  "status": "EXACT_ATTRIBUTE_LABEL_EQUIVALENCE_PASS",
+  "method": "Expected submission and formalSchema values resolved through exact current categorySchema options; formal product.get attribute names independently match all eight fields. Mesh custom label -2 was normalized by platform to current enum6821988 displayNameMesh; other custom negativeIDs reassigned and known enuminput labels added. product.get country CN corresponds to current Schema China at unchanged enum100000458; this single country-code normalization is recorded. No platform update or raw receipt rewrite.",
+  "expected": {
+    "p-3": [
+      "BQ-LQ038"
+    ],
+    "p-1": [
+      "China"
+    ],
+    "p-20700": [
+      "Not specified"
+    ],
+    "p-191290426": [
+      "Rubber"
+    ],
+    "p-191290430": [
+      "Not specified"
+    ],
+    "p-210194982": [
+      "Mesh"
+    ],
+    "p-200000388": [
+      "Lace-up"
+    ],
+    "p-2": [
+      "Beiqiang"
+    ]
+  },
+  "formal_schema": {
+    "p-200000388": [
+      "Lace-up"
+    ],
+    "p-2": [
+      "Beiqiang"
+    ],
+    "p-191290430": [
+      "Not specified"
+    ],
+    "p-1": [
+      "China"
+    ],
+    "p-3": [
+      "BQ-LQ038"
+    ],
+    "p-20700": [
+      "Not specified"
+    ],
+    "p-210194982": [
+      "Mesh"
+    ],
+    "p-191290426": [
+      "Rubber"
+    ]
+  },
+  "formal_get": {
+    "p-3": [
+      "BQ-LQ038"
+    ],
+    "p-1": [
+      "China"
+    ],
+    "p-20700": [
+      "Not specified"
+    ],
+    "p-191290426": [
+      "Rubber"
+    ],
+    "p-191290430": [
+      "Not specified"
+    ],
+    "p-210194982": [
+      "Mesh"
+    ],
+    "p-200000388": [
+      "Lace-up"
+    ],
+    "p-2": [
+      "Beiqiang"
+    ]
+  },
+  "mesh_enum": {
+    "value": "6821988",
+    "displayName": "Mesh"
+  },
+  "evidence_sha256": {
+    "最新步行鞋Schema.xml": "cb3be59dc64d9f4449a17a1bf77eb0f562cc0270c1f85786e7601f7a6d150f1e",
+    "完整提交.xml": "29b18e2d1e385c6a37bbe221dc0a6a9800dc64835026cce670e087cb52b6d8f8",
+    "正式Schema回读.xml": "b258c879f4fe1ccd8e92e06b051733ce211e9b2b5c0e7558719fe246fdbdb766",
+    "最新正式回读.json": "22ca28057b9b666017c5d470b460458d4997500a19ef4c127b5175952a231241"
+  }
+}

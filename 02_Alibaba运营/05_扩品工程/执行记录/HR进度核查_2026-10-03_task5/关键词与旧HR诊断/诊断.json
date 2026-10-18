@@ -1,0 +1,560 @@
+{
+  "at_utc": "2026-10-03T16:14:42.343905+00:00",
+  "platform_mutations": 0,
+  "history_proved_keyword_edit": {
+    "product_id": "1601943593293",
+    "category_id": "201152005",
+    "date": "2026-09-29",
+    "native_formal_keywords": [
+      ""
+    ],
+    "draft_recovery_formal_keywords": [
+      "Womens Mary Jane Flats"
+    ],
+    "route": "Workctl product-edit-draft-basic-info -> submit-draft -> product.get",
+    "execution_status": "RETIRED; history only, never revive",
+    "raw_sources": [
+      "E:\\贝强大文件\\99_临时区\\HR021_完整换款执行_2026-09-29\\A\\structured_basic_receipt_params.json",
+      "E:\\贝强大文件\\99_临时区\\HR021_完整换款执行_2026-09-29\\A\\structured_basic_receipt.json",
+      "E:\\贝强大文件\\99_临时区\\HR021_完整换款执行_2026-09-29\\A\\ROOT_submit_receipt.json",
+      "E:\\贝强大文件\\99_临时区\\HR021_完整换款执行_2026-09-29\\A\\native_after_formal.json",
+      "E:\\贝强大文件\\99_临时区\\HR021_完整换款执行_2026-09-29\\A\\ROOT_formal_after.json"
+    ]
+  },
+  "six_current_schemas": [
+    {
+      "product": "M001",
+      "public_product_id": "1601970169467",
+      "observed_at": "2026-10-03T12:46:17.125099+00:00",
+      "formal_read_path": "response.product.keywords",
+      "formal_values": [
+        ""
+      ],
+      "formal_status": "approved",
+      "Schema_parent": "productKeywords: complex",
+      "Schema_child": "productKeywords_0: input",
+      "current_count": [
+        1,
+        1
+      ],
+      "current_limit": "384 UTF-8 bytes",
+      "value_shape": "complex-value/field/value direct text; no inputValue marker",
+      "render_value_nodes": 0,
+      "render_value_state": "DEFINITIONS_ONLY; cannot infer a saved empty value",
+      "source": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\hr_public_readonly_20261003\\M001_formal_schema.xml"
+    },
+    {
+      "product": "2627BSK",
+      "public_product_id": "1601969885846",
+      "observed_at": "2026-10-03T12:45:46.387288+00:00",
+      "formal_read_path": "response.product.keywords",
+      "formal_values": [
+        ""
+      ],
+      "formal_status": "approved",
+      "Schema_parent": "productKeywords: complex",
+      "Schema_child": "productKeywords_0: input",
+      "current_count": [
+        1,
+        1
+      ],
+      "current_limit": "384 UTF-8 bytes",
+      "value_shape": "complex-value/field/value direct text; no inputValue marker",
+      "render_value_nodes": 0,
+      "render_value_state": "DEFINITIONS_ONLY; cannot infer a saved empty value",
+      "source": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\hr_public_readonly_20261003\\2627BSK_formal_schema.xml"
+    },
+    {
+      "product": "805",
+      "public_product_id": "1601969877983",
+      "observed_at": "2026-10-03T12:45:53.503029+00:00",
+      "formal_read_path": "response.product.keywords",
+      "formal_values": [
+        ""
+      ],
+      "formal_status": "approved",
+      "Schema_parent": "productKeywords: complex",
+      "Schema_child": "productKeywords_0: input",
+      "current_count": [
+        1,
+        1
+      ],
+      "current_limit": "384 UTF-8 bytes",
+      "value_shape": "complex-value/field/value direct text; no inputValue marker",
+      "render_value_nodes": 0,
+      "render_value_state": "DEFINITIONS_ONLY; cannot infer a saved empty value",
+      "source": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\hr_public_readonly_20261003\\805_formal_schema.xml"
+    },
+    {
+      "product": "H219",
+      "public_product_id": "1601969936536",
+      "observed_at": "2026-10-03T12:46:00.388754+00:00",
+      "formal_read_path": "response.product.keywords",
+      "formal_values": [
+        ""
+      ],
+      "formal_status": "approved",
+      "Schema_parent": "productKeywords: complex",
+      "Schema_child": "productKeywords_0: input",
+      "current_count": [
+        1,
+        1
+      ],
+      "current_limit": "384 UTF-8 bytes",
+      "value_shape": "complex-value/field/value direct text; no inputValue marker",
+      "render_value_nodes": 0,
+      "render_value_state": "DEFINITIONS_ONLY; cannot infer a saved empty value",
+      "source": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\hr_public_readonly_20261003\\H219_formal_schema.xml"
+    },
+    {
+      "product": "F2888",
+      "public_product_id": "1601970034464",
+      "observed_at": "2026-10-03T12:46:06.536372+00:00",
+      "formal_read_path": "response.product.keywords",
+      "formal_values": [
+        ""
+      ],
+      "formal_status": "approved",
+      "Schema_parent": "productKeywords: complex",
+      "Schema_child": "productKeywords_0: input",
+      "current_count": [
+        1,
+        1
+      ],
+      "current_limit": "384 UTF-8 bytes",
+      "value_shape": "complex-value/field/value direct text; no inputValue marker",
+      "render_value_nodes": 0,
+      "render_value_state": "DEFINITIONS_ONLY; cannot infer a saved empty value",
+      "source": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\hr_public_readonly_20261003\\F2888_formal_schema.xml"
+    },
+    {
+      "product": "936",
+      "public_product_id": "1601969906452",
+      "observed_at": "2026-10-03T12:46:12.168085+00:00",
+      "formal_read_path": "response.product.keywords",
+      "formal_values": [
+        ""
+      ],
+      "formal_status": "approved",
+      "Schema_parent": "productKeywords: complex",
+      "Schema_child": "productKeywords_0: input",
+      "current_count": [
+        1,
+        1
+      ],
+      "current_limit": "384 UTF-8 bytes",
+      "value_shape": "complex-value/field/value direct text; no inputValue marker",
+      "render_value_nodes": 0,
+      "render_value_state": "DEFINITIONS_ONLY; cannot infer a saved empty value",
+      "source": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\hr_public_readonly_20261003\\936_formal_schema.xml"
+    }
+  ],
+  "HR021_actual_keyword_attempt": {
+    "status": "accepted_keyword_noop",
+    "keyword_field_submitted": true,
+    "submitted_fields": [
+      "productKeywords"
+    ],
+    "write_capability_verified": false,
+    "retry_same_request": false,
+    "readback": {
+      "status": "keyword_not_persisted",
+      "expected": [
+        "Womens Mary Jane Flats"
+      ],
+      "get_values": [
+        ""
+      ],
+      "render_values": null,
+      "render_status": "definitions_only_or_absent"
+    }
+  },
+  "HR021_image_update_collateral_loss": {
+    "status": "unexpected_keyword_loss",
+    "keyword_field_submitted": false,
+    "submitted_fields": [
+      "scImages"
+    ],
+    "write_capability_verified": false,
+    "retry_same_request": false,
+    "readback": {
+      "status": "keyword_not_persisted",
+      "expected": [
+        "Womens Mary Jane Flats"
+      ],
+      "get_values": [
+        ""
+      ],
+      "render_values": null,
+      "render_status": "definitions_only_or_absent"
+    }
+  },
+  "HR021_current_noop_scope": {
+    "product_id": "1601943593293",
+    "category_id": "201152005",
+    "operation": "schema.update",
+    "at": "2026-10-03T03:09:47.525354+00:00",
+    "request_id": "0bbb3b2417909969893252103",
+    "trace_id": "2103245817909969889801361e0db5",
+    "approved_empty_get_request_id": "0bab02fe17909980320607531"
+  },
+  "root_cause_status": "SCOPED_NOOP_OBSERVED_CAUSE_UNRESOLVED",
+  "excluded_or_limited_causes": {
+    "wrong_field_name_or_type": "actual payload agrees with current rendered rules and official single-input XML; no evidence to change name/type",
+    "wrong_get_path": "response.product.keywords is present and bound; historical nonempty reads prove readability",
+    "review_pending": "03:16 modified was pending; 03:27 approved empty establishes no-op, not just moderation delay",
+    "clear_overwrite": "image-only scImages payload omitted keywords and loss was observed; keyword-only request contains nonempty direct text, not explicit clearing",
+    "later_overwrite": "no later conflicting request identified in saved scoped receipts; cannot exclude unlogged concurrent/platform processing without server trace",
+    "legacy_interface": "explicit INTERFACE_HAS_BEEN_OFFLINE; never retry",
+    "draft_vs_formal": "historical recovery includes formal product.get, not draft-only save",
+    "all_type4_categories": "no global unsupported conclusion; exact category/date/operation evidence only"
+  },
+  "oldHR_scope": [
+    {
+      "candidate": "M001",
+      "old_listing": "HR053-A",
+      "old_product_id": "1601943687648",
+      "new_product_id": "1601970169467",
+      "current_formal_status": "approved",
+      "current_display": "Y",
+      "current_observed_at": "2026-10-03T15:57:56.517767+00:00",
+      "current_get_request_id": "0b51802d17910430756448672",
+      "historical_growth_tier": "普通品",
+      "growth_observed_at": "2026-10-02 00:48:31",
+      "current_growth_tier": "UNVERIFIED; product.get does not return growth tier",
+      "mapping_protected": false,
+      "retained_siblings": [
+        {
+          "listing_id": "HR053-B",
+          "product_id": "1601943638954",
+          "historical_growth_tier": "普通品",
+          "disposition": "KEEP_UNCHANGED"
+        },
+        {
+          "listing_id": "HR053-C",
+          "product_id": "1601943784084",
+          "historical_growth_tier": "潜力优品",
+          "disposition": "KEEP_UNCHANGED"
+        }
+      ],
+      "possible_OFF_scope": [
+        "1601943687648"
+      ],
+      "OFF_performed": false,
+      "required_before_OFF": [
+        "fresh seller growth tier/protection and scoped association/ongoing-order check",
+        "explicit authorization for these exact six IDs; prior five-ID authorization does not cover them",
+        "verify intended new ID and public QA; do not include retained siblings or duplicate new IDs"
+      ],
+      "source": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\keyword_diagnosis_20261003\\M001_old_get.json"
+    },
+    {
+      "candidate": "2627BSK",
+      "old_listing": "HR060-A",
+      "old_product_id": "1601943755354",
+      "new_product_id": "1601969885846",
+      "current_formal_status": "approved",
+      "current_display": "Y",
+      "current_observed_at": "2026-10-03T15:57:59.520515+00:00",
+      "current_get_request_id": "213c934417910430782742151",
+      "historical_growth_tier": "普通品",
+      "growth_observed_at": "2026-10-02 00:48:31",
+      "current_growth_tier": "UNVERIFIED; product.get does not return growth tier",
+      "mapping_protected": false,
+      "retained_siblings": [
+        {
+          "listing_id": "HR060-B",
+          "product_id": "1601943705620",
+          "historical_growth_tier": "潜力优品",
+          "disposition": "KEEP_UNCHANGED"
+        },
+        {
+          "listing_id": "HR060-C",
+          "product_id": "1601943663897",
+          "historical_growth_tier": "未核验",
+          "disposition": "KEEP_UNCHANGED"
+        }
+      ],
+      "possible_OFF_scope": [
+        "1601943755354"
+      ],
+      "OFF_performed": false,
+      "required_before_OFF": [
+        "fresh seller growth tier/protection and scoped association/ongoing-order check",
+        "explicit authorization for these exact six IDs; prior five-ID authorization does not cover them",
+        "verify intended new ID and public QA; do not include retained siblings or duplicate new IDs"
+      ],
+      "source": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\keyword_diagnosis_20261003\\2627BSK_old_get.json"
+    },
+    {
+      "candidate": "805",
+      "old_listing": "HR065-A",
+      "old_product_id": "1601943738486",
+      "new_product_id": "1601969877983",
+      "current_formal_status": "approved",
+      "current_display": "Y",
+      "current_observed_at": "2026-10-03T15:58:02.343528+00:00",
+      "current_get_request_id": "0b80d2d617910430814051275",
+      "historical_growth_tier": "普通品",
+      "growth_observed_at": "2026-10-02 00:48:31",
+      "current_growth_tier": "UNVERIFIED; product.get does not return growth tier",
+      "mapping_protected": false,
+      "retained_siblings": [
+        {
+          "listing_id": "HR065-B",
+          "product_id": "1601943703750",
+          "historical_growth_tier": "潜力优品",
+          "disposition": "KEEP_UNCHANGED"
+        },
+        {
+          "listing_id": "HR065-C",
+          "product_id": "1601943717639",
+          "historical_growth_tier": "潜力优品",
+          "disposition": "KEEP_UNCHANGED"
+        }
+      ],
+      "possible_OFF_scope": [
+        "1601943738486"
+      ],
+      "OFF_performed": false,
+      "required_before_OFF": [
+        "fresh seller growth tier/protection and scoped association/ongoing-order check",
+        "explicit authorization for these exact six IDs; prior five-ID authorization does not cover them",
+        "verify intended new ID and public QA; do not include retained siblings or duplicate new IDs"
+      ],
+      "source": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\keyword_diagnosis_20261003\\805_old_get.json"
+    },
+    {
+      "candidate": "H219",
+      "old_listing": "HR048-B",
+      "old_product_id": "1601943767092",
+      "new_product_id": "1601969936536",
+      "current_formal_status": "approved",
+      "current_display": "Y",
+      "current_observed_at": "2026-10-03T15:58:05.169079+00:00",
+      "current_get_request_id": "0b830ecc17910430842058922",
+      "historical_growth_tier": "普通品",
+      "growth_observed_at": "2026-10-02 00:48:31",
+      "current_growth_tier": "UNVERIFIED; product.get does not return growth tier",
+      "mapping_protected": false,
+      "retained_siblings": [
+        {
+          "listing_id": "HR048-A",
+          "product_id": "1601943649788",
+          "historical_growth_tier": "潜力优品",
+          "disposition": "KEEP_UNCHANGED"
+        },
+        {
+          "listing_id": "HR048-C",
+          "product_id": "1601943607995",
+          "historical_growth_tier": "潜力优品",
+          "disposition": "KEEP_UNCHANGED"
+        }
+      ],
+      "possible_OFF_scope": [
+        "1601943767092"
+      ],
+      "OFF_performed": false,
+      "required_before_OFF": [
+        "fresh seller growth tier/protection and scoped association/ongoing-order check",
+        "explicit authorization for these exact six IDs; prior five-ID authorization does not cover them",
+        "verify intended new ID and public QA; do not include retained siblings or duplicate new IDs"
+      ],
+      "source": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\keyword_diagnosis_20261003\\H219_old_get.json"
+    },
+    {
+      "candidate": "F2888",
+      "old_listing": "HR056-A",
+      "old_product_id": "1601943775160",
+      "new_product_id": "1601970034464",
+      "current_formal_status": "approved",
+      "current_display": "Y",
+      "current_observed_at": "2026-10-03T15:58:07.754635+00:00",
+      "current_get_request_id": "213c932b17910430868337670",
+      "historical_growth_tier": "普通品",
+      "growth_observed_at": "2026-10-02 00:48:31",
+      "current_growth_tier": "UNVERIFIED; product.get does not return growth tier",
+      "mapping_protected": false,
+      "retained_siblings": [
+        {
+          "listing_id": "HR056-B",
+          "product_id": "1601943751252",
+          "historical_growth_tier": "普通品",
+          "disposition": "KEEP_UNCHANGED"
+        },
+        {
+          "listing_id": "HR056-C",
+          "product_id": "1601943778191",
+          "historical_growth_tier": "潜力优品",
+          "disposition": "KEEP_UNCHANGED"
+        }
+      ],
+      "possible_OFF_scope": [
+        "1601943775160"
+      ],
+      "OFF_performed": false,
+      "required_before_OFF": [
+        "fresh seller growth tier/protection and scoped association/ongoing-order check",
+        "explicit authorization for these exact six IDs; prior five-ID authorization does not cover them",
+        "verify intended new ID and public QA; do not include retained siblings or duplicate new IDs"
+      ],
+      "source": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\keyword_diagnosis_20261003\\F2888_old_get.json"
+    },
+    {
+      "candidate": "936",
+      "old_listing": "HR051-A",
+      "old_product_id": "1601943653819",
+      "new_product_id": "1601969906452",
+      "current_formal_status": "approved",
+      "current_display": "Y",
+      "current_observed_at": "2026-10-03T15:59:30.624988+00:00",
+      "current_get_request_id": "210829b717910431697773077",
+      "historical_growth_tier": "普通品",
+      "growth_observed_at": "2026-10-02 00:48:31",
+      "current_growth_tier": "UNVERIFIED; product.get does not return growth tier",
+      "mapping_protected": "not in primary mapping; historical ordinary candidate only",
+      "retained_siblings": [
+        {
+          "listing_id": "HR051-B",
+          "product_id": "1601943750198",
+          "historical_growth_tier": "普通品",
+          "disposition": "KEEP_UNCHANGED"
+        },
+        {
+          "listing_id": "HR051-C",
+          "product_id": "1601943651773",
+          "historical_growth_tier": "普通品",
+          "disposition": "KEEP_UNCHANGED"
+        }
+      ],
+      "possible_OFF_scope": [
+        "1601943653819"
+      ],
+      "OFF_performed": false,
+      "required_before_OFF": [
+        "fresh seller growth tier/protection and scoped association/ongoing-order check",
+        "explicit authorization for these exact six IDs; prior five-ID authorization does not cover them",
+        "verify intended new ID and public QA; do not include retained siblings or duplicate new IDs"
+      ],
+      "source": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\keyword_diagnosis_20261003\\936_old_get.json"
+    }
+  ],
+  "official_sources": {
+    "single_input_upgrade": "https://developer.alibaba.com/docs/doc.htm?articleId=119212&docType=1&treeId=456",
+    "incremental_update": "https://developer.alibaba.com/docs/doc.htm?articleId=119214&docType=1&treeId=456",
+    "schema_update": "https://developer.alibaba.com/docs/api.htm?apiId=50189",
+    "get_keywords": "https://developer.alibaba.com/docs/api.htm?apiId=25439",
+    "legacy_document_conflict": "https://developer.alibaba.com/docs/api.htm?apiId=27010"
+  },
+  "sources": [
+    {
+      "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\keyword_diagnosis_20261003\\M001_old_get.json",
+      "sha256": "32ab3698f533243b752db9fc57aedf2884297f4f56ffdec96f163d301be64c38"
+    },
+    {
+      "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\hr_public_readonly_20261003\\M001_formal_schema.xml",
+      "sha256": "fbdf1067177eb9bb662bfdc71ec7cdbc27e68c9441ec92c5b0819a519e03abdc"
+    },
+    {
+      "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\keyword_diagnosis_20261003\\2627BSK_old_get.json",
+      "sha256": "1bd0421282d67fdccc3d3c6d5c8645d631cdb69d2317583e3dd575d0b0cf765a"
+    },
+    {
+      "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\hr_public_readonly_20261003\\2627BSK_formal_schema.xml",
+      "sha256": "9369b0ae7537ef391bc95f7f636f872f42f43335ec961670aa942f60f5c083bf"
+    },
+    {
+      "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\keyword_diagnosis_20261003\\805_old_get.json",
+      "sha256": "165742a8f78fea86bc5ccaf6a051e0e2a70b2e2093d7a811061ee4bb8aa3d50b"
+    },
+    {
+      "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\hr_public_readonly_20261003\\805_formal_schema.xml",
+      "sha256": "ce2ebd0a39d932a5eb4ba755c37a5ef61b7818a26312ea26a75510bd2f1bc9c7"
+    },
+    {
+      "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\keyword_diagnosis_20261003\\H219_old_get.json",
+      "sha256": "8a09f33d9d38f32f6f38a6bfc3f9b1cb63f5cc2b7c1955544c575265d115f138"
+    },
+    {
+      "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\hr_public_readonly_20261003\\H219_formal_schema.xml",
+      "sha256": "30e6cd49037babaa630909f91ee3637002119da5326acc408bddc8f9b7560171"
+    },
+    {
+      "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\keyword_diagnosis_20261003\\F2888_old_get.json",
+      "sha256": "603b527a8ee75171495dc1125dcbea4c596a735ae57c2fcc7abf81f5b528cf50"
+    },
+    {
+      "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\hr_public_readonly_20261003\\F2888_formal_schema.xml",
+      "sha256": "4fc2cdd529ac30475ae579fff597b9ff9b207d9830a7d8e0ce4c1ce86fa93f68"
+    },
+    {
+      "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\keyword_diagnosis_20261003\\936_old_get.json",
+      "sha256": "24b94d109abf3a6fec586308ad1a95c17448dd20350f42f65057fbeb320ce822"
+    },
+    {
+      "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\hr_public_readonly_20261003\\936_formal_schema.xml",
+      "sha256": "c31b854647b28b7e042f387c0ecfc48959bdad107c63088fde1ec0932310a68a"
+    },
+    {
+      "path": "E:\\贝强大文件\\99_临时区\\HR021_完整换款执行_2026-09-29\\A\\structured_basic_receipt_params.json",
+      "sha256": "ba49b7f019ee3dc925700c62c99409af103a1d0944224f0a0a92305ce6c63783"
+    },
+    {
+      "path": "E:\\贝强大文件\\99_临时区\\HR021_完整换款执行_2026-09-29\\A\\structured_basic_receipt.json",
+      "sha256": "a1a349e7b5f2de54777314248c1415d4b13190c71cebfaffb4d6857259db0973"
+    },
+    {
+      "path": "E:\\贝强大文件\\99_临时区\\HR021_完整换款执行_2026-09-29\\A\\ROOT_submit_receipt.json",
+      "sha256": "bc86defa8d77d0b604ea1411ef40fc7f00dafce1ebb1cdb12c25ccd70980772c"
+    },
+    {
+      "path": "E:\\贝强大文件\\99_临时区\\HR021_完整换款执行_2026-09-29\\A\\native_after_formal.json",
+      "sha256": "4c52300de3455219fec12d1dd3d8fcf27b287350a3be92b7fb7fd680aebfacd9"
+    },
+    {
+      "path": "E:\\贝强大文件\\99_临时区\\HR021_完整换款执行_2026-09-29\\A\\ROOT_formal_after.json",
+      "sha256": "cabf7cfbc61883f6b1b07f2555d6389da35493cc428969176d9e492d9b1f7e5a"
+    },
+    {
+      "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\HR系列真实货源改造_2026-09-21\\HR普通品一对一待替换映射_2026-10-02.json",
+      "sha256": "2621ea282eac127fc7ea7450daf089ad299bc33c864669ca34e8a9e1143266ca"
+    },
+    {
+      "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\266_API完整新建_2026-10-02\\HR_201_growth_verified_register_2026-10-02.csv",
+      "sha256": "d6268c7ff233defb00e07295cf549b7e088b093f2b99ab9d8792d62ad384a465"
+    },
+    {
+      "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\HR进度核查_2026-10-03_task5\\原HR唯一目标进度.csv",
+      "sha256": "019ed3ddb144cc37e75247360d33c0897671fbe54b2f21b6909179267d444d98"
+    },
+    {
+      "path": "C:\\Users\\spq\\Desktop\\贝强\\08_工具链\\01_业务脚本\\国际站扩品\\schema_contract_fixtures\\HR021_keyword_diagnosis_case.json",
+      "sha256": "8a54668a1ba7df86d7127a8eb35d722fffe676c5f98b831f339fe9f9e477028c"
+    },
+    {
+      "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\single_agent_resume_2310\\HR021_review_20261003_0230\\A_get.json",
+      "sha256": "ccbb7ea37834af08e4de4d25ee4a8908657babad078bb88bea6d29ff68462221"
+    },
+    {
+      "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\single_agent_resume_2310\\HR021_A_photo_repair\\update_once_receipt.json",
+      "sha256": "1c52025599c12d8e9d177bf0be96ed8d909626df2d2681713b5f6f9177100514"
+    },
+    {
+      "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\single_agent_resume_2310\\HR021_A_keyword_restoration\\schema_keyword_once_receipt.json",
+      "sha256": "83103332de5f85f573f9ec32652ad7f896cb5e6d813efdaaa90e7b090ac36cc7"
+    },
+    {
+      "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\single_agent_resume_2310\\mutation_review_20261003_0327\\HR021A_get.json",
+      "sha256": "5e7746fb2f88f917a2059699e1df9f8868f57b9224ae626638fc2673ea35f08d"
+    },
+    {
+      "path": "C:\\Users\\spq\\Desktop\\贝强\\08_工具链\\01_业务脚本\\国际站扩品\\schema_publish_contract.py",
+      "sha256": "35e023c020bee4a5d69a9e1695561a4ff3001e98c231c7159b30ac9749ccba3c"
+    },
+    {
+      "path": "C:\\Users\\spq\\Desktop\\贝强\\08_工具链\\01_业务脚本\\国际站扩品\\test_keyword_attempt_diagnosis.py",
+      "sha256": "e49feb8580be21e811de0925358e5755907c7a1ea5f6e2e36283827ca64d38b5"
+    }
+  ],
+  "gallery_only_request_id": "21501b8d17909930192554963"
+}

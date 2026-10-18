@@ -1,0 +1,592 @@
+{
+  "observed_at_utc": "2026-10-03T12:39:49.430053+00:00",
+  "scope": "Local evidence reconciliation only; no platform API/browser calls. Current growth tier/catalog not refreshed.",
+  "counts": {
+    "historical_HR_objects": 201,
+    "historical_families": 67,
+    "ordinary_snapshot": 58,
+    "exact_bound_original_targets": 15,
+    "created_original_targets": 13,
+    "core_replacement_closures": 5,
+    "strict_all_applicable_fields_complete_verified": 0,
+    "created_pending_public_or_original_OFF": 8,
+    "ready_not_created_725": 1,
+    "business_rejected_A6607": 1,
+    "historical_unassigned": 26
+  },
+  "ordinary_snapshot_at": "2026-10-02 00:48:31 UTC",
+  "ordinary_historical_classification": {
+    "reserved_exact": [
+      {
+        "listing_id": "HR043-B",
+        "product_id": "1601943621884",
+        "family": "HR043",
+        "growth_tier": "普通品"
+      },
+      {
+        "listing_id": "HR048-B",
+        "product_id": "1601943767092",
+        "family": "HR048",
+        "growth_tier": "普通品"
+      },
+      {
+        "listing_id": "HR050-A",
+        "product_id": "1601943774082",
+        "family": "HR050",
+        "growth_tier": "普通品"
+      },
+      {
+        "listing_id": "HR052-A",
+        "product_id": "1601943742273",
+        "family": "HR052",
+        "growth_tier": "普通品"
+      },
+      {
+        "listing_id": "HR053-A",
+        "product_id": "1601943687648",
+        "family": "HR053",
+        "growth_tier": "普通品"
+      },
+      {
+        "listing_id": "HR055-C",
+        "product_id": "1601943784098",
+        "family": "HR055",
+        "growth_tier": "普通品"
+      },
+      {
+        "listing_id": "HR056-A",
+        "product_id": "1601943775160",
+        "family": "HR056",
+        "growth_tier": "普通品"
+      },
+      {
+        "listing_id": "HR057-A",
+        "product_id": "1601943768215",
+        "family": "HR057",
+        "growth_tier": "普通品"
+      },
+      {
+        "listing_id": "HR059-C",
+        "product_id": "1601943779211",
+        "family": "HR059",
+        "growth_tier": "普通品"
+      },
+      {
+        "listing_id": "HR060-A",
+        "product_id": "1601943755354",
+        "family": "HR060",
+        "growth_tier": "普通品"
+      },
+      {
+        "listing_id": "HR063-C",
+        "product_id": "1601943764325",
+        "family": "HR063",
+        "growth_tier": "普通品"
+      },
+      {
+        "listing_id": "HR065-A",
+        "product_id": "1601943738486",
+        "family": "HR065",
+        "growth_tier": "普通品"
+      }
+    ],
+    "existing_source_or_value_protected": [
+      {
+        "listing_id": "HR003-B",
+        "product_id": "1601943335928",
+        "family": "HR003",
+        "growth_tier": "普通品"
+      },
+      {
+        "listing_id": "HR006-A",
+        "product_id": "1601943439124",
+        "family": "HR006",
+        "growth_tier": "普通品"
+      },
+      {
+        "listing_id": "HR006-C",
+        "product_id": "1601943364813",
+        "family": "HR006",
+        "growth_tier": "普通品"
+      },
+      {
+        "listing_id": "HR025-C",
+        "product_id": "1601943597447",
+        "family": "HR025",
+        "growth_tier": "普通品"
+      },
+      {
+        "listing_id": "HR040-B",
+        "product_id": "1601943620678",
+        "family": "HR040",
+        "growth_tier": "普通品"
+      }
+    ],
+    "prior_assigned_family": [
+      {
+        "listing_id": "HR047-A",
+        "product_id": "1601943670678",
+        "family": "HR047",
+        "growth_tier": "普通品"
+      },
+      {
+        "listing_id": "HR047-B",
+        "product_id": "1601943677652",
+        "family": "HR047",
+        "growth_tier": "普通品"
+      },
+      {
+        "listing_id": "HR047-C",
+        "product_id": "1601943767083",
+        "family": "HR047",
+        "growth_tier": "普通品"
+      },
+      {
+        "listing_id": "HR051-A",
+        "product_id": "1601943653819",
+        "family": "HR051",
+        "growth_tier": "普通品"
+      },
+      {
+        "listing_id": "HR051-B",
+        "product_id": "1601943750198",
+        "family": "HR051",
+        "growth_tier": "普通品"
+      },
+      {
+        "listing_id": "HR051-C",
+        "product_id": "1601943651773",
+        "family": "HR051",
+        "growth_tier": "普通品"
+      },
+      {
+        "listing_id": "HR058-A",
+        "product_id": "1601943793113",
+        "family": "HR058",
+        "growth_tier": "普通品"
+      },
+      {
+        "listing_id": "HR058-B",
+        "product_id": "1601943721497",
+        "family": "HR058",
+        "growth_tier": "普通品"
+      },
+      {
+        "listing_id": "HR058-C",
+        "product_id": "1601943773221",
+        "family": "HR058",
+        "growth_tier": "普通品"
+      }
+    ],
+    "explicit_retained_sibling": [
+      {
+        "listing_id": "HR043-A",
+        "product_id": "1601943607904",
+        "family": "HR043",
+        "growth_tier": "普通品"
+      },
+      {
+        "listing_id": "HR050-B",
+        "product_id": "1601943766117",
+        "family": "HR050",
+        "growth_tier": "普通品"
+      },
+      {
+        "listing_id": "HR053-B",
+        "product_id": "1601943638954",
+        "family": "HR053",
+        "growth_tier": "普通品"
+      },
+      {
+        "listing_id": "HR056-B",
+        "product_id": "1601943751252",
+        "family": "HR056",
+        "growth_tier": "普通品"
+      },
+      {
+        "listing_id": "HR059-B",
+        "product_id": "1601943767266",
+        "family": "HR059",
+        "growth_tier": "普通品"
+      },
+      {
+        "listing_id": "HR063-B",
+        "product_id": "1601943651966",
+        "family": "HR063",
+        "growth_tier": "普通品"
+      }
+    ],
+    "unassigned_requires_exact_source_identity_and_live_scope_check": [
+      {
+        "listing_id": "HR004-C",
+        "product_id": "1601943421458",
+        "family": "HR004",
+        "growth_tier": "普通品"
+      },
+      {
+        "listing_id": "HR007-B",
+        "product_id": "1601943408495",
+        "family": "HR007",
+        "growth_tier": "普通品"
+      },
+      {
+        "listing_id": "HR009-C",
+        "product_id": "1601943520149",
+        "family": "HR009",
+        "growth_tier": "普通品"
+      },
+      {
+        "listing_id": "HR010-C",
+        "product_id": "1601943479449",
+        "family": "HR010",
+        "growth_tier": "普通品"
+      },
+      {
+        "listing_id": "HR011-B",
+        "product_id": "1601943406882",
+        "family": "HR011",
+        "growth_tier": "普通品"
+      },
+      {
+        "listing_id": "HR014-B",
+        "product_id": "1601943481648",
+        "family": "HR014",
+        "growth_tier": "普通品"
+      },
+      {
+        "listing_id": "HR019-A",
+        "product_id": "1601943493822",
+        "family": "HR019",
+        "growth_tier": "普通品"
+      },
+      {
+        "listing_id": "HR019-C",
+        "product_id": "1601943635041",
+        "family": "HR019",
+        "growth_tier": "普通品"
+      },
+      {
+        "listing_id": "HR031-A",
+        "product_id": "1601943665060",
+        "family": "HR031",
+        "growth_tier": "普通品"
+      },
+      {
+        "listing_id": "HR035-A",
+        "product_id": "1601943568763",
+        "family": "HR035",
+        "growth_tier": "普通品"
+      },
+      {
+        "listing_id": "HR035-B",
+        "product_id": "1601943680112",
+        "family": "HR035",
+        "growth_tier": "普通品"
+      },
+      {
+        "listing_id": "HR037-B",
+        "product_id": "1601943674209",
+        "family": "HR037",
+        "growth_tier": "普通品"
+      },
+      {
+        "listing_id": "HR038-A",
+        "product_id": "1601943620588",
+        "family": "HR038",
+        "growth_tier": "普通品"
+      },
+      {
+        "listing_id": "HR038-B",
+        "product_id": "1601943677234",
+        "family": "HR038",
+        "growth_tier": "普通品"
+      },
+      {
+        "listing_id": "HR045-A",
+        "product_id": "1601943687504",
+        "family": "HR045",
+        "growth_tier": "普通品"
+      },
+      {
+        "listing_id": "HR045-B",
+        "product_id": "1601943660642",
+        "family": "HR045",
+        "growth_tier": "普通品"
+      },
+      {
+        "listing_id": "HR046-B",
+        "product_id": "1601943773037",
+        "family": "HR046",
+        "growth_tier": "普通品"
+      },
+      {
+        "listing_id": "HR046-C",
+        "product_id": "1601943694473",
+        "family": "HR046",
+        "growth_tier": "普通品"
+      },
+      {
+        "listing_id": "HR049-B",
+        "product_id": "1601943710448",
+        "family": "HR049",
+        "growth_tier": "普通品"
+      },
+      {
+        "listing_id": "HR049-C",
+        "product_id": "1601943639863",
+        "family": "HR049",
+        "growth_tier": "普通品"
+      },
+      {
+        "listing_id": "HR054-B",
+        "product_id": "1601943741370",
+        "family": "HR054",
+        "growth_tier": "普通品"
+      },
+      {
+        "listing_id": "HR054-C",
+        "product_id": "1601943737356",
+        "family": "HR054",
+        "growth_tier": "普通品"
+      },
+      {
+        "listing_id": "HR061-B",
+        "product_id": "1601943748344",
+        "family": "HR061",
+        "growth_tier": "普通品"
+      },
+      {
+        "listing_id": "HR062-A",
+        "product_id": "1601943682804",
+        "family": "HR062",
+        "growth_tier": "普通品"
+      },
+      {
+        "listing_id": "HR062-B",
+        "product_id": "1601943799127",
+        "family": "HR062",
+        "growth_tier": "普通品"
+      },
+      {
+        "listing_id": "HR067-A",
+        "product_id": "1601943662995",
+        "family": "HR067",
+        "growth_tier": "普通品"
+      }
+    ]
+  },
+  "rows": [
+    {
+      "candidate": "5998",
+      "old_listing": "HR050-A",
+      "old_product_id": "1601943774082",
+      "new_product_id": "1601969869242",
+      "status": "主体替换闭环；关键词未闭环",
+      "actual5": true,
+      "full_public_QA": true,
+      "old_HR_OFF": true,
+      "strict_complete": false,
+      "next_action": "关键词持久化专项；保持保护兄弟与现ID。",
+      "evidence": "02_Alibaba运营\\05_扩品工程\\HR系列真实货源改造_2026-09-21\\HR普通品一对一待替换映射_2026-10-02.json"
+    },
+    {
+      "candidate": "9968",
+      "old_listing": "HR052-A",
+      "old_product_id": "1601943742273",
+      "new_product_id": "1601969788941",
+      "status": "主体替换闭环；关键词未闭环",
+      "actual5": true,
+      "full_public_QA": true,
+      "old_HR_OFF": true,
+      "strict_complete": false,
+      "next_action": "关键词持久化专项；保持保护兄弟与现ID。",
+      "evidence": "02_Alibaba运营\\05_扩品工程\\HR系列真实货源改造_2026-09-21\\HR普通品一对一待替换映射_2026-10-02.json"
+    },
+    {
+      "candidate": "A67",
+      "old_listing": "HR043-B",
+      "old_product_id": "1601943621884",
+      "new_product_id": "1601969861694",
+      "status": "主体替换闭环；关键词未闭环",
+      "actual5": true,
+      "full_public_QA": true,
+      "old_HR_OFF": true,
+      "strict_complete": false,
+      "next_action": "关键词持久化专项；保持保护兄弟与现ID。",
+      "evidence": "02_Alibaba运营\\05_扩品工程\\HR系列真实货源改造_2026-09-21\\HR普通品一对一待替换映射_2026-10-02.json"
+    },
+    {
+      "candidate": "3522",
+      "old_listing": "HR057-A",
+      "old_product_id": "1601943768215",
+      "new_product_id": "1601969920294",
+      "status": "主体替换闭环；关键词未闭环",
+      "actual5": true,
+      "full_public_QA": true,
+      "old_HR_OFF": true,
+      "strict_complete": false,
+      "next_action": "关键词持久化专项；保持保护兄弟与现ID。",
+      "evidence": "02_Alibaba运营\\05_扩品工程\\HR系列真实货源改造_2026-09-21\\HR普通品一对一待替换映射_2026-10-02.json"
+    },
+    {
+      "candidate": "M001",
+      "old_listing": "HR053-A",
+      "old_product_id": "1601943687648",
+      "new_product_id": "1601970169467",
+      "status": "已正式新建；待公开验收/旧HR处理",
+      "actual5": true,
+      "full_public_QA": false,
+      "old_HR_OFF": false,
+      "strict_complete": false,
+      "next_action": "5.00及首图公开已通过；继续完整SKU/详情/公司/FAQ/询价QA，旧HR未OFF。",
+      "evidence": "02_Alibaba运营\\05_扩品工程\\HR系列真实货源改造_2026-09-21\\HR普通品一对一待替换映射_2026-10-02.json"
+    },
+    {
+      "candidate": "2627BSK",
+      "old_listing": "HR060-A",
+      "old_product_id": "1601943755354",
+      "new_product_id": "1601969885846",
+      "status": "已正式新建；待公开验收/旧HR处理",
+      "actual5": true,
+      "full_public_QA": false,
+      "old_HR_OFF": false,
+      "strict_complete": false,
+      "next_action": "对现ID补完整公开QA；旧HR独立核关联/保护与明确授权后收尾，不再创建。",
+      "evidence": "02_Alibaba运营\\05_扩品工程\\HR系列真实货源改造_2026-09-21\\HR普通品一对一待替换映射_2026-10-02.json"
+    },
+    {
+      "candidate": "A6607",
+      "old_listing": "HR055-C",
+      "old_product_id": "1601943784098",
+      "new_product_id": "",
+      "status": "创建业务拒绝；经营类目限制",
+      "actual5": false,
+      "full_public_QA": false,
+      "old_HR_OFF": false,
+      "strict_complete": false,
+      "next_action": "确认经营类目限制的合规处理方式；不改变经营类目设置、不重复创建。",
+      "evidence": "02_Alibaba运营\\05_扩品工程\\HR系列真实货源改造_2026-09-21\\HR普通品一对一待替换映射_2026-10-02.json"
+    },
+    {
+      "candidate": "H219",
+      "old_listing": "HR048-B",
+      "old_product_id": "1601943767092",
+      "new_product_id": "1601969936536",
+      "status": "已正式新建；待公开验收/旧HR处理",
+      "actual5": true,
+      "full_public_QA": false,
+      "old_HR_OFF": false,
+      "strict_complete": false,
+      "next_action": "对现ID补完整公开QA；旧HR独立核关联/保护与明确授权后收尾，不再创建。",
+      "evidence": "02_Alibaba运营\\05_扩品工程\\HR系列真实货源改造_2026-09-21\\HR普通品一对一待替换映射_2026-10-02.json"
+    },
+    {
+      "candidate": "F2888",
+      "old_listing": "HR056-A",
+      "old_product_id": "1601943775160",
+      "new_product_id": "1601970034464",
+      "status": "已正式新建；待公开验收/旧HR处理",
+      "actual5": true,
+      "full_public_QA": false,
+      "old_HR_OFF": false,
+      "strict_complete": false,
+      "next_action": "对现ID补完整公开QA；旧HR独立核关联/保护与明确授权后收尾，不再创建。",
+      "evidence": "02_Alibaba运营\\05_扩品工程\\HR系列真实货源改造_2026-09-21\\HR普通品一对一待替换映射_2026-10-02.json"
+    },
+    {
+      "candidate": "929",
+      "old_listing": "HR059-C",
+      "old_product_id": "1601943779211",
+      "new_product_id": "1601970118386",
+      "status": "已正式新建；待公开验收/旧HR处理",
+      "actual5": true,
+      "full_public_QA": false,
+      "old_HR_OFF": false,
+      "strict_complete": false,
+      "next_action": "保留现ID；核同ID改类目SKU依赖及关联影响，修复授权与完整公开QA另行确认，不重建。",
+      "evidence": "02_Alibaba运营\\05_扩品工程\\HR系列真实货源改造_2026-09-21\\HR普通品一对一待替换映射_2026-10-02.json"
+    },
+    {
+      "candidate": "725",
+      "old_listing": "HR063-C",
+      "old_product_id": "1601943764325",
+      "new_product_id": "",
+      "status": "资料齐全待正式发布；审批拒绝",
+      "actual5": false,
+      "full_public_QA": false,
+      "old_HR_OFF": false,
+      "strict_complete": false,
+      "next_action": "等待本执行线程明确725发布授权；随后刷新Schema/模板hash并复核去重，最多正式创建一次。不得绕审批拒绝。",
+      "evidence": "02_Alibaba运营\\05_扩品工程\\HR系列真实货源改造_2026-09-21\\HR普通品一对一待替换映射_2026-10-02.json"
+    },
+    {
+      "candidate": "805",
+      "old_listing": "HR065-A",
+      "old_product_id": "1601943738486",
+      "new_product_id": "1601969877983",
+      "status": "已正式新建；待公开验收/旧HR处理",
+      "actual5": true,
+      "full_public_QA": false,
+      "old_HR_OFF": false,
+      "strict_complete": false,
+      "next_action": "对现ID补完整公开QA；旧HR独立核关联/保护与明确授权后收尾，不再创建。",
+      "evidence": "02_Alibaba运营\\05_扩品工程\\HR系列真实货源改造_2026-09-21\\HR普通品一对一待替换映射_2026-10-02.json"
+    },
+    {
+      "candidate": "266",
+      "old_listing": "HR047-A",
+      "old_product_id": "1601943670678",
+      "new_product_id": "1601969951162",
+      "status": "主体替换闭环；关键词未闭环",
+      "actual5": true,
+      "full_public_QA": true,
+      "old_HR_OFF": true,
+      "strict_complete": false,
+      "next_action": "关键词持久化专项；不要重复清理已OFF版本。",
+      "evidence": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\936_K858_public_closeout\\qa_checkpoint.json"
+    },
+    {
+      "candidate": "936",
+      "old_listing": "HR051-A",
+      "old_product_id": "1601943653819",
+      "new_product_id": "1601969906452",
+      "status": "已正式新建；原HR旧品OFF未证实",
+      "actual5": true,
+      "full_public_QA": false,
+      "old_HR_OFF": false,
+      "strict_complete": false,
+      "next_action": "核原HR旧ID当前展示/关联；936补询价入口服务验收；不把已OFF的新品旧版本当原HR下架。",
+      "evidence": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\936_K858_public_closeout\\qa_checkpoint.json"
+    },
+    {
+      "candidate": "262",
+      "old_listing": "HR058-A",
+      "old_product_id": "1601943793113",
+      "new_product_id": "1601969913308",
+      "status": "已正式新建；原HR旧品OFF未证实",
+      "actual5": true,
+      "full_public_QA": true,
+      "old_HR_OFF": false,
+      "strict_complete": false,
+      "next_action": "核原HR旧ID当前展示/关联；936补询价入口服务验收；不把已OFF的新品旧版本当原HR下架。",
+      "evidence": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\936_K858_public_closeout\\qa_checkpoint.json"
+    }
+  ],
+  "dedup_notes": [
+    "266 clean replacements remain one original HR047-A target.",
+    "936/K858/262 clean duplicate OFF are not original HR OFF.",
+    "Five latest OFF = four original HR plus one K858 duplicate.",
+    "Other BQ FAQ and HR021 same-ID score repair do not increase replacement count.",
+    "14独立新品历史快照不是14原HR闭环；69002未知创建不计成功、不重放。"
+  ],
+  "inputs": [
+    {
+      "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\HR系列真实货源改造_2026-09-21\\HR普通品一对一待替换映射_2026-10-02.json",
+      "sha256": "2621ea282eac127fc7ea7450daf089ad299bc33c864669ca34e8a9e1143266ca"
+    },
+    {
+      "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\恢复授权与预约核对_2026-10-02.json",
+      "sha256": "1ceb98ffa22a11fbd474159e40d387c2651d45619b91657bc4c7adf6fd3fb084"
+    }
+  ]
+}

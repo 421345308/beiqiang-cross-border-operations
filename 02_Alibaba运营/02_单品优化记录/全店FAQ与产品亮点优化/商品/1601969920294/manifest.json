@@ -1,0 +1,26 @@
+{
+  "operation": "update",
+  "product_id": "1601969920294",
+  "category_id": 202240835,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "copy.json",
+    "before_get.json",
+    "../../../../05_扩品工程/执行记录/3522_API完整新建_2026-10-02/facts_and_copy.json",
+    "current_get.json",
+    "../../../../00_运营SOP/国际站商品全生命周期SOP.md"
+  ],
+  "current_schema": "current_schema.xml",
+  "current_schema_sha256": "8030f843eccd621ef3cbd6996e79abf8d244d55d907b26f823d2a03f6608a7a8",
+  "schema_request_id": "0b0b3a2717917373149672394",
+  "schema_acquired_at": "2026-10-11T16:48:32.194937+00:00",
+  "payload_xml": "payload.xml",
+  "field_ids": [
+    "textDesc",
+    "companyFaqDesc"
+  ],
+  "dependency_ids": [
+    "productDescType"
+  ],
+  "observed_model": "BQ-L3522"
+}

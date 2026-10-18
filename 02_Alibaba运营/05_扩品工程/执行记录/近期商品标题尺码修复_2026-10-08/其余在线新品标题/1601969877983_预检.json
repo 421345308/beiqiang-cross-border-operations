@@ -1,0 +1,45 @@
+{
+  "keyword_input": null,
+  "differentiation_review": null,
+  "category_id": 202240835,
+  "operation": "update",
+  "inventory_input": null,
+  "model_serialization": null,
+  "target_product_id": "1601969877983",
+  "field_ids": [
+    "productTitle"
+  ],
+  "dependency_ids": [],
+  "xml": "<itemSchema><field id=\"productTitle\" type=\"input\"><value>Wholesale Mens Tassel Loafers Slip On Driving Moccasins with Segmented Rubber Soles for Casual Wear</value></field></itemSchema>",
+  "expected_fields": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Wholesale Mens Tassel Loafers Slip On Driving Moccasins with Segmented Rubber Soles for Casual Wear",
+          []
+        ]
+      ]
+    ]
+  },
+  "prepared_from_current_schema": true,
+  "task_pack": null,
+  "replacement_plan": null,
+  "schema_provenance": {
+    "schema_request_id": "212c41d317914238594021068",
+    "schema_acquired_at": "2026-10-08T01:44:21.863420+00:00",
+    "current_schema_sha256": "80d7904fca631c354ff542105ef3e9bd001289e12b2b14fb93bfb0db94af13a2",
+    "source_evidence": [
+      "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\805_API完整新建_2026-10-02\\facts_and_copy.json"
+    ]
+  }
+}

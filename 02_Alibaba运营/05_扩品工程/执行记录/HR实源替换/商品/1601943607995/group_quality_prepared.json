@@ -1,0 +1,50 @@
+{
+  "request": {
+    "param_product_top_publish_request": {
+      "product_id": 1601943607995,
+      "cat_id": 201153805,
+      "language": "en_US",
+      "xml": "<itemSchema><field id=\"productGroup\" name=\"Product group\" type=\"complex\"><complex-value><field id=\"first_group_id\" type=\"input\"><value>972130291</value></field></complex-value></field></itemSchema>"
+    }
+  },
+  "expected_schema": {
+    "productGroup": [
+      "field",
+      [
+        [
+          "id",
+          "productGroup"
+        ]
+      ],
+      "",
+      [
+        [
+          "complex-value",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "first_group_id"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "972130291",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "reason": "964isclosedtoe/fullheel, notbacklessmule. Keep actualClogsleaf/realshoe/materials/EU/prices; use existingSlipOnCasualWalkingstoregroup for buyer navigation."
+}

@@ -1,0 +1,26 @@
+{
+  "verdict": "PASS",
+  "catalog_count": 363,
+  "current_recent_pages": 3,
+  "baseline_full_catalog_count": 361,
+  "baseline_source": "K858_execution/dedup_catalog.json same-day official all pages",
+  "current_source": "live_catalog_1..3.flat.json",
+  "source_identity_matches": [],
+  "write_artifacts_before_reconnect": [],
+  "same_source_creation_found": false,
+  "HR021C": {
+    "product_id": 1601943577329,
+    "source_model": "26CZYA22-113",
+    "source_evidence": "E:\\贝强大文件\\99_临时区\\HR021_完整换款执行_2026-09-29\\C\\ROOT_formal_after.json",
+    "historical_request_id": "0bab02fc17906792198722370",
+    "live_request_id": "213c932b17909496895381269",
+    "live_status": "approved",
+    "live_display": "Y",
+    "C_M1_sha256": "e93eca735a75295a7e320561805f6495ab16e42133dcd246c15cf028231ef6eb",
+    "verdict": "Different actual shoe: HR021C double buckle, 9968 single wide hook-and-loop; different upper/heel panel and rubber outsole contours",
+    "independent_reviewer": "/root/review_9968"
+  },
+  "new_five_style_check": "Live catalog newest90 includes K858,5998,266,262,936 identities; different structure/source",
+  "observed_at": "2026-10-02T14:02:38.649039+00:00",
+  "limits": "Live full scan reached90 then verifiedTLS timeout; rest retained from same-day full official361 baseline. No unknown mutation occurred."
+}

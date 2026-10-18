@@ -1,0 +1,107 @@
+{
+  "project": "只是店客",
+  "updated": "2026-10-16",
+  "duration_seconds": 30,
+  "duration_limit_seconds": 30,
+  "execution": "user_in_doubao_UI",
+  "model_user_selected": "Doubao built-in Seedance 2.5",
+  "duration_availability_source": "user confirmed supports 30 seconds, 2026-10-16",
+  "agent_video_submission": false,
+  "shots": [
+    {
+      "id": "S01",
+      "start": 0,
+      "end": 4,
+      "purpose": "破旧无绒薄鞋，脚冷跺脚",
+      "dialogue_and_sound": "鞋都破了，还穿？",
+      "reference_ids": [
+        "MAN",
+        "WOMAN",
+        "SHOP",
+        "OLD"
+      ],
+      "shoe_state": "old",
+      "status": "prompt_prepared_video_not_generated"
+    },
+    {
+      "id": "S02",
+      "start": 4,
+      "end": 9,
+      "purpose": "她给加绒鞋，剪辑连接到新鞋已穿好并扶正鞋口",
+      "dialogue_and_sound": "加绒的，换上。",
+      "reference_ids": [
+        "MAN",
+        "WOMAN",
+        "SHOP",
+        "NEW_PAIR",
+        "NEW_SIDE"
+      ],
+      "shoe_state": "old_to_new_by_cut",
+      "status": "prompt_prepared_video_not_generated"
+    },
+    {
+      "id": "S03",
+      "start": 9,
+      "end": 13,
+      "purpose": "几天后穿新鞋去隔壁，她夹鸡腿的手停住并收回萝卜",
+      "dialogue_and_sound": "老样子？ / 今天去隔壁。 / 去吧。",
+      "reference_ids": [
+        "MAN",
+        "WOMAN",
+        "SHOP",
+        "NEW_PAIR",
+        "NEW_SIDE"
+      ],
+      "shoe_state": "new",
+      "status": "prompt_prepared_video_not_generated"
+    },
+    {
+      "id": "S04",
+      "start": 13,
+      "end": 20,
+      "purpose": "后来再来，她不认老样子，小菜位置空着",
+      "dialogue_and_sound": "老样子。 / 菜单在墙上。 / 萝卜呢？ / 给家里人吃的。",
+      "reference_ids": [
+        "MAN",
+        "WOMAN",
+        "SHOP",
+        "NEW_PAIR",
+        "NEW_SIDE"
+      ],
+      "shoe_state": "new",
+      "status": "prompt_prepared_video_not_generated"
+    },
+    {
+      "id": "S05",
+      "start": 20,
+      "end": 25,
+      "purpose": "看鞋反问，她嘴硬划清关系",
+      "dialogue_and_sound": "那这鞋呢？ / 我们只是店客关系。",
+      "reference_ids": [
+        "MAN",
+        "WOMAN",
+        "SHOP",
+        "NEW_PAIR",
+        "NEW_SIDE"
+      ],
+      "shoe_state": "new",
+      "status": "prompt_prepared_video_not_generated"
+    },
+    {
+      "id": "S06",
+      "start": 25,
+      "end": 30,
+      "purpose": "他准备走，她仍提醒他扶好后跟；回头和风铃留白",
+      "dialogue_and_sound": "后跟提起来，别踩着。",
+      "reference_ids": [
+        "MAN",
+        "WOMAN",
+        "SHOP",
+        "NEW_PAIR",
+        "NEW_SIDE"
+      ],
+      "shoe_state": "new",
+      "status": "prompt_prepared_video_not_generated"
+    }
+  ]
+}

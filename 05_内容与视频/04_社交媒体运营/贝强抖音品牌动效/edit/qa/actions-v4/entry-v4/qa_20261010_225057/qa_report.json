@@ -1,0 +1,92 @@
+{
+  "schema_version": "1",
+  "status": "reviewed_usable_only_with_trims_and_elliptical_edit",
+  "source_video": "C:\\Users\\spq\\Desktop\\贝强\\05_内容与视频\\04_社交媒体运营\\贝强抖音品牌动效\\public\\dynamic\\entry-v4.mp4",
+  "source_id": "2b27cecc143d1313",
+  "references": [
+    {
+      "role": "first_frame",
+      "path": "C:\\Users\\spq\\Desktop\\贝强\\05_内容与视频\\04_社交媒体运营\\贝强抖音品牌动效\\public\\entry-start-v4.png"
+    },
+    {
+      "role": "last_frame",
+      "path": "C:\\Users\\spq\\Desktop\\贝强\\05_内容与视频\\04_社交媒体运营\\贝强抖音品牌动效\\public\\entry-end-v4.png"
+    }
+  ],
+  "severity_vocabulary": [
+    "PASS",
+    "MINOR",
+    "MODERATE",
+    "SEVERE",
+    "CRITICAL"
+  ],
+  "action_vocabulary": [
+    "KEEP",
+    "TRIM",
+    "REGENERATE"
+  ],
+  "issue_schema": {
+    "start": "seconds",
+    "end": "seconds",
+    "first_bad_frame": "seconds|null",
+    "peak_bad_frame": "seconds|null",
+    "recovery_frame": "seconds|null",
+    "severity": "PASS|MINOR|MODERATE|SEVERE|CRITICAL",
+    "category": "character_consistency|anatomy|object_consistency|motion_continuity|camera_continuity|style_consistency|background_consistency|temporal_artifacts|delivery",
+    "description": "observable defect",
+    "action": "KEEP|TRIM|REGENERATE"
+  },
+  "issues": [
+    {
+      "start": 1.697,
+      "end": 4.333,
+      "first_bad_frame": 1.697,
+      "peak_bad_frame": 3.344,
+      "recovery_frame": 4.6,
+      "severity": "SEVERE",
+      "category": "object_consistency",
+      "description": "后提环与后鞋口被拉长，改变原件比例，连续套入过程不能完整入片。",
+      "action": "REGENERATE"
+    }
+  ],
+  "segments": {
+    "keep": [
+      [
+        0.033,
+        1.133
+      ],
+      [
+        4.966,
+        5.041
+      ]
+    ],
+    "trim": [
+      [
+        1.133,
+        4.966
+      ]
+    ],
+    "regenerate": [
+      "若必须连续演示套入，需替换整段；本轮未自动重试。"
+    ]
+  },
+  "top_three_issues": [
+    "后提环与后鞋口被拉长，改变原件比例，连续套入过程不能完整入片。"
+  ],
+  "sha256": "32df82869ccfd81bf37da6812d6d7f2f60bef6aa5823919f1660008596c06723",
+  "review": {
+    "whole_contact_sheet_viewed": true,
+    "original_resolution_frames_viewed": true,
+    "focused_candidates_viewed": true,
+    "method": "uniform_16_frames_and_focused_before_center_after; no_claim_of_continuous_playback"
+  },
+  "observations": [
+    "前掌已在鞋内、脚跟尚在后鞋口外的起点可见，终帧为穿好、手离开提环。",
+    "中段提环持续伸长；连续穿入验收不通过。精剪仅使用稳定穿前短镜头与最后一帧停留，并插入静态鞋口细节，不声称连续过程达标。"
+  ],
+  "billing": {
+    "usage_total_tokens": 400000,
+    "estimated_cny": 4,
+    "actual_bill_verified": false
+  }
+}

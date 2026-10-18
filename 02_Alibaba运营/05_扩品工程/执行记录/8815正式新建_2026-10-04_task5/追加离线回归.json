@@ -1,0 +1,10 @@
+{
+  "command": "python -B -m unittest test_schema_publish_contract test_faq_create_type_guard -v",
+  "exit_code": 0,
+  "tests_run": 10,
+  "seconds": 0.953,
+  "result": "OK",
+  "actual_tool_chunk": "46ce04",
+  "reason": "New8815 scoped fixture and registry registration; existing10 tests rerun, not additional10 unique tests.",
+  "platform_writes": 0
+}

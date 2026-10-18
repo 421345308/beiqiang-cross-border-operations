@@ -1,0 +1,29 @@
+{
+  "task": "805/BQ-D805",
+  "stop_requested_utc": "2026-10-02T18:00:00Z",
+  "actual_stopped_utc": "2026-10-02T17:55:15.449404+00:00",
+  "all_own805_observers_stopped": true,
+  "platform_mutations_unknown": [],
+  "no_automatic_resume": true,
+  "next_actions_requires_user_reassignment": true,
+  "do_not_off_old_id": "1601943738486",
+  "last_verified_get_request_id": "0bab02fe17909632782215796",
+  "last_actual_score_request_id": "0bbb3b2417909631207158535",
+  "latest_known_state": {
+    "status": "approved",
+    "display": "Y",
+    "product_get_nonempty": true,
+    "public_url": "https://www.alibaba.com/product-detail/Men-s-Tassel-Driving-Moccasins-with_1601969877983.html",
+    "formal_model": null,
+    "get_request_id": "0bab02fe17909632782215796",
+    "render_nonempty": true,
+    "render_request_id": "212c41d317909632821257276",
+    "actual_score": 5.0,
+    "score_observed_at": "2026-10-02T17:45:15.754043+00:00",
+    "score_request_id": "0bbb3b2417909631207158535",
+    "score_error": null,
+    "formal_content_checks": "PASS_EXCEPT_KEYWORD",
+    "keyword_persistence": false,
+    "observed_at": "2026-10-02T17:55:15.463553+00:00"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "verdict": "PASS",
+  "observed_at": "2026-10-02T15:08:14.635836+00:00",
+  "source_id": "2541782",
+  "public_model": "BQ-L3522",
+  "product_structure": "Plain central long U-shaped vamp, perforated surrounding panels, no strap/cord/hardware, closed heel, continuous thin offwhite sole",
+  "buyer_intent": "Business casual plain slip-on cow suede loafer assortment with perforated surround; structurally different from existing penny loafers, metal-trim drivers and knit walking slip-ons",
+  "coverage": "31 close catalog entries: 30 current formal-CDN main photos plus HR006C historical formal family-source visual review",
+  "evidence": [
+    "dedup_near_catalog.json",
+    "dedup_image_manifest.json",
+    "dedup_contact.jpg",
+    "ownership.json"
+  ],
+  "closest_cases": {
+    "HR003": "26NC0099 cord with metal ends, full perforation, moccasin hand-stitch edge and brown segmented pebble sole; different from3522",
+    "HR044": "MBShoes L795 penny strap glossyPU upper thick black sole; different from3522",
+    "HR020C": "Full perforated short wide vamp with diamond texture, side elastic inserts, thick collar and multilayer sole; different from3522",
+    "HR006C": "Formal family source HZM26NC0072 unperforated blue suede metallic braided instep trim and dark segmented sole; different from3522"
+  },
+  "independent_reviewer": "review_9968",
+  "same_source_catalog_gate": "Creation reconciliation must additionally pass immediately before mutation"
+}

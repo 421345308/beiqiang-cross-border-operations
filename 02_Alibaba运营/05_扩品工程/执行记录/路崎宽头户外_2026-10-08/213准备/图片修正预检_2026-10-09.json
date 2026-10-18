@@ -1,0 +1,99 @@
+{
+  "style": "213",
+  "product_id": "1601973876011",
+  "stage": "SOURCE_TRIAGE_ONLY_NOT_FULL_IMAGE_REVIEW",
+  "source": "https://luqi.sooxie.com/detail/2463673",
+  "confirmed_colors": [
+    "Black",
+    "DarkGrey",
+    "LightGrey"
+  ],
+  "EU_sizes": [
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48
+  ],
+  "EU_combinations": 39,
+  "observed_source_images_full": [
+    22,
+    27,
+    32
+  ],
+  "contact_sheets_reviewed": [
+    0,
+    1
+  ],
+  "confirmed_risk": "Sources22/27/32 used as existing color images contain tiny unverified EVA/lightweight/sweat/flexible marketing text as well as Fashion Stylish Men. Clean all marketing overlays while retaining exact source shoes. Several gallery/detail photographs share same generic tiny material header. Do not adopt poster/source composition as product material proof.",
+  "proposed_roles": {
+    "M1": {
+      "source": 1,
+      "action": "Remove orange/white rail background using actual LightGrey pair as exact hero"
+    },
+    "M2": {
+      "source": 24,
+      "action": "Actual DarkGrey toggle fit/closure angle; remove generic marketing and square contain whole photo"
+    },
+    "M3": {
+      "source": 29,
+      "action": "Actual Black on-foot side/heel profile; remove source headers and contain full photo"
+    },
+    "M4": {
+      "source": [
+        32,
+        27,
+        22
+      ],
+      "action": "Compose three accepted clean exact-color photos with EU36-48 labels"
+    },
+    "M5": {
+      "source": 21,
+      "action": "Actual LightGrey side photo with quotation inputs; remove unsupported tiny header/footer"
+    },
+    "D1": {
+      "source": 20,
+      "action": "Independent LightGrey on-foot product overview"
+    },
+    "D2": {
+      "source": 26,
+      "action": "Actual DarkGrey toggle/collar photograph, plain-text visible details"
+    },
+    "D3": {
+      "source": 25,
+      "action": "Actual DarkGrey side/mesh profile without composition/performance claims"
+    },
+    "D4": {
+      "source": 31,
+      "action": "Actual Black independent front pair for conditional sample planning"
+    },
+    "SKU_Black": {
+      "source": 32,
+      "action": "Clean all marketing only, exact Black mesh/bungee/sole preserved"
+    },
+    "SKU_DarkGrey": {
+      "source": 27,
+      "action": "Clean all marketing only, actual two-tone upper black sole retained"
+    },
+    "SKU_LightGrey": {
+      "source": 22,
+      "action": "Clean all marketing only, actual grey open mesh and brown sole retained"
+    }
+  },
+  "next_steps": [
+    "Inspect all proposed raw photos full-size before imagegen; source contacts alone are not final review.",
+    "Create traceable role prompts and inspect edited candidates source-side-by-side and whole set.",
+    "Use verified color-image incremental path supported for category201334413/detailtype4; exact current Schema and39EU require reinspection. Only Color img plus scImages/detailImage, no sku payload, no generic copying facts.",
+    "Keep original ID, all SKU rows/codes/prices/size values and unsubmitted fields; once-only ledger and read-only verification after review."
+  ],
+  "mutations_this_plan": "NONE: no generation, upload, prepare or submit performed for213 in this phase",
+  "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED"
+}

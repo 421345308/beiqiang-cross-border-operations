@@ -1,0 +1,63 @@
+{
+  "task_id": "229_new_20261004",
+  "role": "NEW",
+  "phase": "REVIEWED_ONCE_CREATE",
+  "writer": "task-5",
+  "next_action": "Canonical once-create and exact new-ID acceptance; no old-off",
+  "public_model": "BQ-NS003",
+  "category_id": 201334413,
+  "product_id": null,
+  "source_identity": {
+    "reference": "https://weituo.sooxie.com/detail/2261793",
+    "style": "229",
+    "evidence": [
+      "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\sooxie_2261793_20261004\\facts_and_color_bindings.json",
+      "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\sooxie_2261793_20261004\\source_visible_text.txt"
+    ],
+    "critical_facts": {
+      "upper_structure": "knitted textile upper; fiber composition unspecified",
+      "outsole_structure": "visible raised sidewall; material and performance unspecified",
+      "closure": "slip-on opening with contrast heel area",
+      "profile": "knitted slip-on casual shoe; color-specific construction retained"
+    }
+  },
+  "search_intent": {
+    "key": "knitted slip on casual sneakers with contrast heel panels",
+    "evidence": [
+      "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\sooxie_2261793_20261004\\buyer_copy_reviewed.json"
+    ],
+    "limits": "Observed construction positioning; not proof of demand, professional sporting performance or traffic"
+  },
+  "hero_review": {
+    "url": "https://sc04.alicdn.com/kf/Hdd5c0320f7634705a437f7420f2e1943S/286385890/Hdd5c0320f7634705a437f7420f2e1943S.jpg",
+    "aliases": [
+      "//sc04.alicdn.com/kf/Hdd5c0320f7634705a437f7420f2e1943S/286385890/Hdd5c0320f7634705a437f7420f2e1943S.jpg"
+    ],
+    "sha256": "d6971e629473d7af2833d0baf3fda37e64ecc7c1bf905e098081b3e3bbfb3bcb",
+    "content_key": "229_actual_all_black_knit_pair",
+    "label_status": "not_present",
+    "evidence": [
+      "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\sooxie_2261793_20261004\\source_0.jpg"
+    ],
+    "limits": "Original visible decoration retained; source-register/catalog scope only; no global same-shoe clearance"
+  },
+  "source_traceability": {
+    "supplier_name": "维拓鞋业",
+    "supplier_original_model": "229",
+    "supplier_original_direct_url": "https://weituo.sooxie.com/detail/2261793",
+    "our_model": "BQ-NS003",
+    "international_product_id": null
+  },
+  "evidence_files": [
+    {
+      "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\工厂店外新款数据采集模板.md",
+      "sha256": "44b1efe1cebebc6987ee12bba887bf1f8b5976e0826b4fa5626e8159226db814",
+      "kind": "task_pack_template"
+    },
+    {
+      "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-5\\sooxie_2261793_20261004\\single_product_task_pack.md",
+      "sha256": "224a9887ae4aba94e2f5471f032620fb1ff34c98a68d1f259b4f77e7f739127e",
+      "kind": "task_pack_document"
+    }
+  ]
+}

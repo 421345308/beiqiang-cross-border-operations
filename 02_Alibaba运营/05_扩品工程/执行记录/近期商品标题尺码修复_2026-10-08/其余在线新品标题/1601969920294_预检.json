@@ -1,0 +1,45 @@
+{
+  "keyword_input": null,
+  "differentiation_review": null,
+  "category_id": 202240835,
+  "operation": "update",
+  "inventory_input": null,
+  "model_serialization": null,
+  "target_product_id": "1601969920294",
+  "field_ids": [
+    "productTitle"
+  ],
+  "dependency_ids": [],
+  "xml": "<itemSchema><field id=\"productTitle\" type=\"input\"><value>Wholesale Mens Cow Suede Loafers Slip On Casual Shoes with Perforated Side Panels for Daily Wear</value></field></itemSchema>",
+  "expected_fields": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Wholesale Mens Cow Suede Loafers Slip On Casual Shoes with Perforated Side Panels for Daily Wear",
+          []
+        ]
+      ]
+    ]
+  },
+  "prepared_from_current_schema": true,
+  "task_pack": null,
+  "replacement_plan": null,
+  "schema_provenance": {
+    "schema_request_id": "21501b8d17914238860437378",
+    "schema_acquired_at": "2026-10-08T01:44:48.897756+00:00",
+    "current_schema_sha256": "d512057929c152d3a6f521f8079c2144182a5c1a0c1e7b7f02555d1302ef82b5",
+    "source_evidence": [
+      "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\3522_API完整新建_2026-10-02\\facts_and_copy.json"
+    ]
+  }
+}

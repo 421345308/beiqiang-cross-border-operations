@@ -1,0 +1,28 @@
+{
+  "observed_at": "2026-10-02T22:34:49.224386+00:00",
+  "US_children_route": {
+    "scope": "Children product intended primarily for age12 and under; actual age classification and destination assessed for order, not inferred from paired sizes",
+    "confirmed_requirements": [
+      {
+        "field": "CPC and compliance/test basis for accessible component lead limit100ppm",
+        "url": "https://www.cpsc.gov/Business--Manufacturing/Business-Education/Lead/Total-Lead-Content",
+        "missing": "A6607-specific applicable-rules assessment, component test basis or supported exemptions, CPC information and CPSC-accepted lab where required"
+      },
+      {
+        "field": "Tracking marks on product and packaging where practicable",
+        "url": "https://www.cpsc.gov/Business--Manufacturing/Business-Education/tracking-label",
+        "missing": "Manufacturer/private labeler, manufacture location/date, batch or cohort identification not evidenced by source photos"
+      },
+      {
+        "field": "Certificate eFiling for most regulated imports from July8,2026",
+        "url": "https://www.cpsc.gov/Business--Manufacturing/Testing-Certification/Childrens-Product-Certificate",
+        "missing": "Importing party and applicable certificate/eFiling arrangements"
+      }
+    ],
+    "route_status": "Not represented as US import-compliant; obtain destination-specific order documents before US order commitment",
+    "phthalates_and_toy_rules": "Not automatically applied to ordinary shoes; determine actual toy/childcare article scope if relevant. Character decorations alone do not prove toy classification."
+  },
+  "publication_scope": "General wholesale inquiry listing, no certification claims or guaranteed worldwide delivery. These exact US import gaps do not establish a universal listing prohibition. Native schema mandatory fields assessed separately.",
+  "EU_verification": "EUR-Lex robot challenge stopped; no responsible-person or EU market-ready claim invented",
+  "mandatory_source_origin": "Unknown, do not assume China from supplier address"
+}

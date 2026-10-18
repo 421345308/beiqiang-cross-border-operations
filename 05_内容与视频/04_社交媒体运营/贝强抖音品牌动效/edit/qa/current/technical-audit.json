@@ -1,0 +1,64 @@
+{
+  "source_id": "02becb69a9df729c",
+  "sha256": "002fc755a135764c4bc1c41433bff3e428d99ce5a12bb176afed181d4d9b9ac9",
+  "decoded_frames": 576,
+  "duration": 24.0,
+  "fps": 24,
+  "near_black_frames": [],
+  "exact_duplicate_adjacent_frames": [],
+  "intentional_static_hold_frames": [
+    478,
+    576
+  ],
+  "actual_video_usage": [
+    {
+      "source": "tactile",
+      "film_frames": [
+        108,
+        180
+      ],
+      "source_frames": [
+        0,
+        72
+      ],
+      "used_seconds": 3.0,
+      "mean_absolute_pixel_difference": 5.5433,
+      "maximum_frame_mean_difference": 5.6044,
+      "comparison_within_tolerance": true
+    },
+    {
+      "source": "walking",
+      "film_frames": [
+        276,
+        420
+      ],
+      "source_frames": [
+        0,
+        144
+      ],
+      "used_seconds": 6.0,
+      "mean_absolute_pixel_difference": 6.2769,
+      "maximum_frame_mean_difference": 7.5829,
+      "comparison_within_tolerance": true
+    },
+    {
+      "source": "settling",
+      "film_frames": [
+        420,
+        468
+      ],
+      "source_frames": [
+        48,
+        96
+      ],
+      "used_seconds": 2.0,
+      "mean_absolute_pixel_difference": 7.7605,
+      "maximum_frame_mean_difference": 8.0307,
+      "comparison_within_tolerance": true
+    }
+  ],
+  "new_paid_seconds_used": 11.0,
+  "motion_seconds_total": 11.0,
+  "current_edit_paid_submissions": 0,
+  "limits": "Decoding and source correspondence verify frame delivery and retention, not subjective continuous playback or audio listening."
+}

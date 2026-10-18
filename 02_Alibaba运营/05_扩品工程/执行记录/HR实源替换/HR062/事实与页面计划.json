@@ -1,0 +1,566 @@
+{
+  "candidate": "cxxy_2035629",
+  "source_artno": "D02",
+  "supplier": "长兴鞋业",
+  "source_url": "https://cxxy.sooxie.com/detail/2035629",
+  "source_price_cny": 31,
+  "source_color_labels": [
+    "黑色",
+    "灰色",
+    "米色",
+    "蓝色"
+  ],
+  "colors": [
+    "Black",
+    "Grey",
+    "Beige",
+    "Blue"
+  ],
+  "sizes": [
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48
+  ],
+  "upper": "Textile",
+  "lining": "Other",
+  "midsole": "Other",
+  "outsole": "Rubber",
+  "closure": "Lace-up",
+  "style": [
+    "Casual Sneakers"
+  ],
+  "seasons": [
+    "All Seasons"
+  ],
+  "feature": "Fashion Trend",
+  "category_id": 201334413,
+  "target_ids": {
+    "A": "1601943682804",
+    "B": "1601943799127",
+    "C": "1601943761346"
+  },
+  "source_assets_root": "01_产品资产/01_原始数据包/HR062_D02",
+  "source_date": "2026-10-14",
+  "fx_cny_per_usd": 6.6837,
+  "tiers": [
+    [
+      2,
+      "6.96"
+    ],
+    [
+      50,
+      "6.50"
+    ],
+    [
+      100,
+      "6.03"
+    ]
+  ],
+  "page_state": "FORMAL_FIELDS_SCORE_PASS",
+  "platform_group_id": 973003809,
+  "platform_group_name": "Lace-Up Casual Shoes",
+  "selection_review": {
+    "state": "REVIEWED_ADOPT",
+    "private_backend_evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/经营数据与选款.json",
+    "reason": "Recent3 exposures/no clicks and previous16 exposures/no clicks, no inquiries/TM; insufficient traffic to validate the old unsupported concept. Choose distinct woven-looking textile moc-toe casual shoes with27 coherent public photographs and CNY31 source cost, instead of reproducing an unverified old mockup.",
+    "cost_usd": 4.638149527956072,
+    "gross_difference_usd": [
+      2.3219,
+      1.8619,
+      1.3919
+    ],
+    "comparison_limit": "Exact same-model Alibaba complete quote not verified. Preserve50/40/30 cost markup; packaging/QC/platform/payment/freight/tax order-level costs unestimated, not net-profit or cheapest guarantee."
+  },
+  "materials_evidence": [
+    "Source full27-frame gallery reviewed as the same two-eyelet lace-up textile moc-toe shoe. Source05 expressly states fabric upper, no fibre chemistry, so Textile but no linen/cotton claim. Lining/midsole composition unspecified:Other.",
+    "Source18 English states the sole is made of rubber; exact outsole photographed in09. Rubber composition adopted without transferring anti-slip/wear/elasticity performance claims.",
+    "Source old05/06charts39-44 differ from currentpublic numericEU39-48. Current listedEUchoices adopted, not sourcefoot-length conversion. Black maps dark woven grey-looking option, Grey maps light-grey option, Beige andBlue map their sourcephotos; fourcolour family evident in02/05."
+  ],
+  "dedup": "Current unique registry has no exact D02 source URL or supplier/model adoption. Distinct moc-toe textile shoe from HR026leather moc-toe. Actual stitching, short lace arrangement, heel loop and speckled sole retained; no new fake outsole viewpoint.",
+  "store_group_review": "Use exact official existing Lace Up Casual Shoes group after normalAPIreadback, not inferred from old shoe grouping.",
+  "local_intent_candidates": [
+    "织物拼色鞋底系带休闲鞋"
+  ],
+  "company_faq_source": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/通用FAQ与公司简介.json",
+  "do_not_claim": [
+    "physical stock",
+    "tested slip resistance",
+    "medical comfort",
+    "unverified midsole material"
+  ],
+  "titles": {
+    "A": "Men's Textile Moc Toe Casual Shoes with Short Lace-Up Front and Speckled Sole for Everyday Outfits",
+    "B": "Lace-Up Textile Casual Shoes with Apron Toe Stitching and Rear Pull Loop for Men's Footwear Assortments",
+    "C": "Men's Low Top Casual Shoes with Woven Texture Upper and Speckled Rubber Sole for Extended Size Collections"
+  },
+  "keywords": [
+    "Textile Moc Toe Casual Shoes",
+    "Lace Up Casual Footwear for Men",
+    "Extended Size Textile Casual Shoes"
+  ],
+  "custom": [
+    "Shoe Profile",
+    "Textile upper; short lace front; apron toe seam; heel loop"
+  ],
+  "highlights": "Textile casual appearance: A visible woven surface and apron-shaped toe panel give this low-top shoe a relaxed everyday profile.\n\nShort lace-up front: Two rows of eyelets and a simple lace arrangement define the instep fastening.\n\nSpeckled rubber sole: The contrast sidewall has a fine speckled finish. Original sole photographs show the actual segmented bottom pattern.\n\nRear entry details: A low collar and rear pull loop make the opening and heel construction easy to inspect from the product photographs.\n\nExtended colour-size assortment: Black, Grey, Beige and Blue are listed in EU39-48 for wholesale assortments.",
+  "assets_layout": {
+    "M1": {
+      "buyer_question": "What actual shoe is offered?",
+      "title": null,
+      "photos": [
+        {
+          "index": 27,
+          "box": [
+            15,
+            15,
+            985,
+            985
+          ]
+        }
+      ]
+    },
+    "M2": {
+      "buyer_question": "What do the short laces and woven surface look like?",
+      "title": "Short laces & textile upper",
+      "subtitle": "Original close view of the upper and sole edge.",
+      "photos": [
+        {
+          "index": 7,
+          "box": [
+            45,
+            215,
+            955,
+            935
+          ],
+          "crop": [
+            0,
+            545,
+            790,
+            1250
+          ]
+        }
+      ],
+      "text": []
+    },
+    "M3": {
+      "buyer_question": "What is the actual outsole pattern?",
+      "title": "Segmented rubber sole",
+      "subtitle": "Original source sole-bottom photograph.",
+      "photos": [
+        {
+          "index": 9,
+          "box": [
+            45,
+            215,
+            955,
+            935
+          ],
+          "crop": [
+            0,
+            280,
+            790,
+            960
+          ]
+        }
+      ],
+      "text": []
+    },
+    "M4": {
+      "buyer_question": "Which actual colours and sizes are offered?",
+      "title": "Four colour directions",
+      "subtitle": "Black / Grey / Beige / Blue — EU 39-48",
+      "photos": [
+        {
+          "index": 13,
+          "box": [
+            45,
+            245,
+            480,
+            510
+          ]
+        },
+        {
+          "index": 21,
+          "box": [
+            520,
+            245,
+            955,
+            510
+          ],
+          "crop": [
+            0,
+            0,
+            790,
+            660
+          ]
+        },
+        {
+          "index": 27,
+          "box": [
+            45,
+            555,
+            480,
+            820
+          ]
+        },
+        {
+          "index": 1,
+          "box": [
+            520,
+            555,
+            955,
+            820
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "Black",
+          "xy": [
+            45,
+            520
+          ],
+          "size": 25
+        },
+        {
+          "value": "Grey",
+          "xy": [
+            520,
+            520
+          ],
+          "size": 25
+        },
+        {
+          "value": "Beige",
+          "xy": [
+            45,
+            840
+          ],
+          "size": 25
+        },
+        {
+          "value": "Blue",
+          "xy": [
+            520,
+            840
+          ],
+          "size": 25
+        },
+        {
+          "value": "EU 39-48",
+          "xy": [
+            45,
+            930
+          ],
+          "size": 32
+        }
+      ]
+    },
+    "M5": {
+      "buyer_question": "How is the collar and heel opening arranged?",
+      "title": "Collar & rear pull loop",
+      "subtitle": "Original close view of the shoe opening.",
+      "photos": [
+        {
+          "index": 8,
+          "box": [
+            45,
+            215,
+            955,
+            935
+          ],
+          "crop": [
+            0,
+            235,
+            790,
+            940
+          ]
+        }
+      ],
+      "text": []
+    },
+    "D1": {
+      "buyer_question": "How does the casual profile look when worn?",
+      "title": "Actual on-foot profile",
+      "subtitle": "Blue option shown with its low-top silhouette.",
+      "photos": [
+        {
+          "index": 16,
+          "box": [
+            45,
+            215,
+            955,
+            1070
+          ],
+          "crop": [
+            10,
+            0,
+            785,
+            828
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "Short laces, apron toe stitching and contrast sole.",
+          "xy": [
+            45,
+            1140
+          ],
+          "size": 25
+        }
+      ]
+    },
+    "D2": {
+      "buyer_question": "How is the forefoot panel and lace front arranged?",
+      "title": "Forefoot & lace layout",
+      "subtitle": "Grey option shown from above.",
+      "photos": [
+        {
+          "index": 21,
+          "box": [
+            45,
+            215,
+            955,
+            1070
+          ],
+          "crop": [
+            0,
+            0,
+            790,
+            660
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "Original source photograph of the Grey option.",
+          "xy": [
+            45,
+            1140
+          ],
+          "size": 25
+        }
+      ]
+    },
+    "D3": {
+      "buyer_question": "What outsole layout is supplied?",
+      "title": "Outsole pattern overview",
+      "subtitle": "Continuous sole with segmented raised bottom sections.",
+      "photos": [
+        {
+          "index": 9,
+          "box": [
+            45,
+            215,
+            955,
+            1070
+          ],
+          "crop": [
+            0,
+            280,
+            790,
+            960
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "Actual source sole photo, matched to this shoe.",
+          "xy": [
+            45,
+            1140
+          ],
+          "size": 25
+        }
+      ]
+    },
+    "D4": {
+      "buyer_question": "Which actual colours and sizes are offered?",
+      "title": "Four colour directions",
+      "subtitle": "Black / Grey / Beige / Blue — EU 39-48",
+      "photos": [
+        {
+          "index": 13,
+          "box": [
+            45,
+            245,
+            480,
+            510
+          ]
+        },
+        {
+          "index": 21,
+          "box": [
+            520,
+            245,
+            955,
+            510
+          ],
+          "crop": [
+            0,
+            0,
+            790,
+            660
+          ]
+        },
+        {
+          "index": 27,
+          "box": [
+            45,
+            555,
+            480,
+            820
+          ]
+        },
+        {
+          "index": 1,
+          "box": [
+            520,
+            555,
+            955,
+            820
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "Black",
+          "xy": [
+            45,
+            520
+          ],
+          "size": 25
+        },
+        {
+          "value": "Grey",
+          "xy": [
+            520,
+            520
+          ],
+          "size": 25
+        },
+        {
+          "value": "Beige",
+          "xy": [
+            45,
+            840
+          ],
+          "size": 25
+        },
+        {
+          "value": "Blue",
+          "xy": [
+            520,
+            840
+          ],
+          "size": 25
+        },
+        {
+          "value": "EU 39-48",
+          "xy": [
+            45,
+            1170
+          ],
+          "size": 32
+        }
+      ]
+    },
+    "SKU_BLACK": {
+      "buyer_question": "Which colour is this SKU?",
+      "title": null,
+      "photos": [
+        {
+          "index": 13,
+          "box": [
+            25,
+            25,
+            975,
+            975
+          ]
+        }
+      ]
+    },
+    "SKU_GREY": {
+      "buyer_question": "Which colour is this SKU?",
+      "title": null,
+      "photos": [
+        {
+          "index": 22,
+          "box": [
+            25,
+            25,
+            975,
+            975
+          ],
+          "crop": [
+            0,
+            0,
+            790,
+            690
+          ]
+        }
+      ]
+    },
+    "SKU_BEIGE": {
+      "buyer_question": "Which colour is this SKU?",
+      "title": null,
+      "photos": [
+        {
+          "index": 27,
+          "box": [
+            25,
+            25,
+            975,
+            975
+          ]
+        }
+      ]
+    },
+    "SKU_BLUE": {
+      "buyer_question": "Which colour is this SKU?",
+      "title": null,
+      "photos": [
+        {
+          "index": 1,
+          "box": [
+            25,
+            25,
+            975,
+            975
+          ]
+        }
+      ]
+    }
+  },
+  "source_id": "src-hr-hr062-d02",
+  "source_evidence": [
+    "01_产品资产/01_原始数据包/HR062_D02/source.json",
+    "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR062/素材清单.json"
+  ],
+  "procurement_capability": "CURRENT_REAL_SHOE_AND_PROCUREMENT_ENTRY_VERIFIED_NOT_ORDER_STOCK",
+  "current_models_by_id": {
+    "1601943799127": "BQ1062-B",
+    "1601943761346": "BQ1062-C",
+    "1601943682804": "BQ1062-A"
+  },
+  "model_migration_evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/范围.json",
+  "model_numbers": {
+    "B": "BQ1062-B",
+    "C": "BQ1062-C",
+    "A": "BQ1062-A"
+  },
+  "current_platform_category_by_id": {
+    "1601943682804": 201334413,
+    "1601943799127": 201334413,
+    "1601943761346": 201334413
+  },
+  "category_scope": "category_id保留初始改造默认；当前平台叶子按current_platform_category_by_id逐ID读取，不把同源链接不同平台分类混成不同实鞋。"
+}

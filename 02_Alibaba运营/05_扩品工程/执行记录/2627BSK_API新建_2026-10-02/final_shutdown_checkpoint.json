@@ -1,0 +1,25 @@
+{
+  "stopped_at_UTC": "2026-10-02T17:53:52.978171+00:00",
+  "hard_stop_UTC": "2026-10-02T18:00:00+00:00",
+  "automatic_resume": false,
+  "own_2627_observers_running": 0,
+  "new_work_or_platform_write_started": false,
+  "formal_completed": {
+    "5998": "1601969869242 publicPASS score5.00",
+    "A67": "1601969861694 publicPASS score5.00",
+    "2627BSK": "1601969885846 approved/Y contentPASS media14PASS score5.00 publicCaptchaPending"
+  },
+  "pending": [
+    "2627BSK public acceptance blockedCaptcha",
+    "2627BSK keywords empty readback not claimed persistent",
+    "B14 M001 A6607 are candidate/preparation only, no new publication"
+  ],
+  "unknown_product_write": {
+    "69002": "single schema.add outcome_unknown, no productID, not retried"
+  },
+  "unknown_image_write": {
+    "D3": "original and unique controlled retry no verified receipt; excluded, no further writes"
+  },
+  "old_HR_written": false,
+  "approval_decisions_inferred_from_deadline": false
+}

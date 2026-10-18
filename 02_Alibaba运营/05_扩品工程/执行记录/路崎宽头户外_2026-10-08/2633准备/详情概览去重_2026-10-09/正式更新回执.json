@@ -1,0 +1,209 @@
+{
+  "method": "alibaba.icbu.product.schema.update",
+  "operation": "update",
+  "status": "submitted_needs_readback",
+  "content_status": "pending_readback",
+  "expected_fields": {
+    "detailImage": [
+      "field",
+      [
+        [
+          "id",
+          "detailImage"
+        ]
+      ],
+      "",
+      [
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "images"
+                ]
+              ],
+              "",
+              [
+                [
+                  "complex-values",
+                  [],
+                  "",
+                  [
+                    [
+                      "field",
+                      [
+                        [
+                          "id",
+                          "imageURL"
+                        ]
+                      ],
+                      "",
+                      [
+                        [
+                          "value",
+                          [],
+                          "//sc04.alicdn.com/kf/H82902393606c48a18f57450895d9022fU/286385890/H82902393606c48a18f57450895d9022fU.png",
+                          []
+                        ]
+                      ]
+                    ]
+                  ]
+                ],
+                [
+                  "complex-values",
+                  [],
+                  "",
+                  [
+                    [
+                      "field",
+                      [
+                        [
+                          "id",
+                          "imageURL"
+                        ]
+                      ],
+                      "",
+                      [
+                        [
+                          "value",
+                          [],
+                          "//sc04.alicdn.com/kf/H4d5937a0e84941fcb37726524dc706e0R/286385890/H4d5937a0e84941fcb37726524dc706e0R.png",
+                          []
+                        ]
+                      ]
+                    ]
+                  ]
+                ],
+                [
+                  "complex-values",
+                  [],
+                  "",
+                  [
+                    [
+                      "field",
+                      [
+                        [
+                          "id",
+                          "imageURL"
+                        ]
+                      ],
+                      "",
+                      [
+                        [
+                          "value",
+                          [],
+                          "//sc04.alicdn.com/kf/He13676d710864d1ab1ba47aa8418fae8E/286385890/He13676d710864d1ab1ba47aa8418fae8E.png",
+                          []
+                        ]
+                      ]
+                    ]
+                  ]
+                ],
+                [
+                  "complex-values",
+                  [],
+                  "",
+                  [
+                    [
+                      "field",
+                      [
+                        [
+                          "id",
+                          "imageURL"
+                        ]
+                      ],
+                      "",
+                      [
+                        [
+                          "value",
+                          [],
+                          "//sc04.alicdn.com/kf/H11d92bccbac847c1aa1b1db3ab7595a4Z/286385890/H11d92bccbac847c1aa1b1db3ab7595a4Z.png",
+                          []
+                        ]
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "gallery"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "300",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "sku_verification": null,
+  "task_pack": null,
+  "replacement_plan": null,
+  "replacement_transition": null,
+  "inventory_input": null,
+  "post_publish_acceptance": {
+    "phase": "post_publish_completion",
+    "target_score": 5.0,
+    "actual_score": null,
+    "observed_at": null,
+    "score_source": null,
+    "diagnostics": {
+      "status": "not_read"
+    },
+    "score_status": "pending_score",
+    "overall_status": "PENDING_SCORE",
+    "unverified_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "versioned_content": null,
+    "required_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "limits": "Platform listing score does not prove public content, source truth or real product quality."
+  },
+  "attempted_at": "2026-10-08T17:53:08.594095+00:00",
+  "response": {
+    "trace_id": "212e559c17914819995466259e0f61",
+    "product_id": 1601973753470,
+    "biz_success": true,
+    "request_id": "21501be117914819996837676",
+    "_trace_id_": "212e559c17914819995466259e0f61"
+  },
+  "refs": {
+    "request_id": "21501be117914819996837676",
+    "trace_id": "212e559c17914819995466259e0f61",
+    "message": null,
+    "error": null
+  },
+  "product_id": "1601973753470"
+}

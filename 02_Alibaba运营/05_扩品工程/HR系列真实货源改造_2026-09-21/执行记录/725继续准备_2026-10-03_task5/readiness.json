@@ -1,0 +1,134 @@
+{
+  "prepared_at": "2026-10-03T09:32:29.193839+00:00",
+  "candidate": "725",
+  "old_id": "1601943764325",
+  "public_model": "HR063-C",
+  "new_product_id": null,
+  "source_url": "https://tuyuan.sooxie.com/detail/2541696",
+  "source_supplier": "途远鞋业",
+  "source_cost_cny": 60,
+  "source_price_observed_at": "2026-10-02T22:24:00Z",
+  "current_old_observation": {
+    "status": "approved",
+    "display": "Y",
+    "category_id": 201334413,
+    "red_model": null
+  },
+  "dedup_matches": [
+    {
+      "id": 1601943764325,
+      "red_model": "HR063-C",
+      "subject": "Men's Shoes Model HR063-C",
+      "display": "Y",
+      "status": "approved"
+    }
+  ],
+  "dedup_scope": "373-product Oct2 22:30 catalog plus current first page and exact old get; no full-store live image/source identity guarantee",
+  "schema_meta": {
+    "schema_request_id": "21501be117909804913755609",
+    "schema_acquired_at": "2026-10-02T22:35:01.083506+00:00",
+    "current_schema_sha256": "7032ba86116eb3387896c16dfe8fffcb1212567b33aeccf7fe6047cfc9597cba",
+    "category_id": 201334413
+  },
+  "faq_constraints": {
+    "status": "current_schema_rules",
+    "rules": [
+      {
+        "name": "maxItemsRule",
+        "value": "8",
+        "exProperty": "include"
+      },
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      },
+      {
+        "name": "requiredRule",
+        "value": "true"
+      },
+      {
+        "name": "maxInputNumRule",
+        "value": "150",
+        "exProperty": "include"
+      },
+      {
+        "name": "valueTypeRule",
+        "value": "text"
+      },
+      {
+        "name": "requiredRule",
+        "value": "true"
+      },
+      {
+        "name": "maxInputNumRule",
+        "value": "500",
+        "exProperty": "include"
+      }
+    ],
+    "item_fields": [
+      {
+        "id": "question",
+        "name": "question",
+        "type": "input"
+      },
+      {
+        "id": "answers",
+        "name": "answers",
+        "type": "input"
+      }
+    ],
+    "unit_interpretation": "unverified_unless_current_schema_defines_unit"
+  },
+  "offline_checks": {
+    "faq_current_saved_schema": "PASS_6_ITEMS",
+    "unique_sku_projection": "PASS_60_SOURCE_COMBINATIONS_NOT_STOCK",
+    "strict_price_tiers": "PASS"
+  },
+  "price_plan": {
+    "cost_cny": 60,
+    "quotation_conversion_basis_cny_per_usd": 6.7,
+    "conversion_basis_type": "Operating quotation basis, not a claim about live foreign exchange rates",
+    "tiers": [
+      {
+        "min_qty_pairs": 2,
+        "usd_per_pair": 13.43,
+        "cny_equivalent": 89.981,
+        "markup_percent": 49.9683333333
+      },
+      {
+        "min_qty_pairs": 50,
+        "usd_per_pair": 12.54,
+        "cny_equivalent": 84.018,
+        "markup_percent": 40.03
+      },
+      {
+        "min_qty_pairs": 100,
+        "usd_per_pair": 11.65,
+        "cny_equivalent": 78.055,
+        "markup_percent": 30.0916666667
+      }
+    ]
+  },
+  "gaps": [
+    "Exact source color alias/image binding and current category sale-property binding",
+    "Current schema before submission and truthful required material options; Rubber+MD is whole sole assembly, MD not inferred EVA",
+    "M2-M4 visual acceptance; source-derived detail gallery and company-v3 applicability review",
+    "Default six main images versus explicit prior five-image exception must retain precise scope; rejected M5 is excluded",
+    "Complete canonical A-G task pack, differentiation evidence and scoped manifest before formal create",
+    "Source price and per-order supply/fulfillment costs remain dated or unknown; not net profit"
+  ],
+  "platform_mutation_count": 0,
+  "unknown_external_write_outcomes": [],
+  "protected_or_retained_ids": [
+    "1601943653995",
+    "1601943651966"
+  ],
+  "old_off_sent": false,
+  "evidence_hashes": {
+    "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-4\\hr_control\\basketball_casual_candidate_2026-10-02\\725_buyer_copy_CURRENT_NOT_SENT.json": "ee7bec748474f4512eb6d9a7e83c6d8a58eb58b6b1ebda1275d76758b9bc4675",
+    "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-4\\hr_control\\basketball_casual_candidate_2026-10-02\\725_SOURCE_IDENTITY_CURRENT.json": "b92bb0dc91a290f5593598e3ed254d756b498c8495d11ab851c9c3a41588405e",
+    "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-4\\hr_control\\basketball_casual_candidate_2026-10-02\\current_schema.xml": "7032ba86116eb3387896c16dfe8fffcb1212567b33aeccf7fe6047cfc9597cba",
+    "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-4\\hr_control\\basketball_casual_candidate_2026-10-02\\725_M1.jpg": "0b92f3a6a1737cd5cc9df4b634b3d3400f9ea957eb349203f1f5d585c5d2d0c9",
+    "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-4\\hr_control\\basketball_casual_candidate_2026-10-02\\725_SKU_PRICE_PREPARATION_NOT_IMPORT.csv": "6f8947eb843e5b95856e440e3128c4bb44577f2643a7fdc61f251c13ce7e8b0d"
+  }
+}

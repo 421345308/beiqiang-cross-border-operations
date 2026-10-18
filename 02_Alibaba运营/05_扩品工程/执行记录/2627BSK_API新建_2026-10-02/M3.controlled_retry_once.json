@@ -1,0 +1,45 @@
+{
+  "name": "M3",
+  "filename": "M3.jpg",
+  "sha256": "c4298a146eaad377d656587e534df3fce46b1d214ce2f73c7d52494f83f9300e",
+  "status": "UPLOADED_BUSINESS_VERIFIED",
+  "authorization": {
+    "source": "Parent explicit instruction after two read-only reconciliations: one controlled retry each for M2/M3 using identical bytes/hash/filename; no deletion or expanded batch",
+    "maximum_retry_count_each": 1,
+    "scope": [
+      "M2",
+      "M3"
+    ],
+    "reason": "Image-bank late success may create redundant media only, not duplicate product",
+    "product_schema_add_rule": "Once only; unknown add must never blindly resend"
+  },
+  "original_attempt": {
+    "name": "M3",
+    "file": "2627BSK\\assets\\M3.jpg",
+    "sha256": "c4298a146eaad377d656587e534df3fce46b1d214ce2f73c7d52494f83f9300e",
+    "status": "UNCERTAIN_OR_REJECTED_STOP_NO_RETRY",
+    "started_at": "2026-10-02T16:16:40.593904+00:00",
+    "error_type": "ClientError",
+    "failure_evidence": {
+      "exception_type": "ClientError",
+      "message": "Native HTTP transport failed; write outcome requires reconciliation",
+      "transport_phase": "transport",
+      "request_sent": null,
+      "curl_exit_code": 28,
+      "http_status": null,
+      "business_refs": {},
+      "response_summary": {
+        "format": "text",
+        "excerpt": ""
+      },
+      "stderr_excerpt": "[COMMAND_TEXT_OMITTED]",
+      "cause_types": [],
+      "limits": "Unavailable facts remain null/unknown. Curl errors and absence in catalog do not prove an uncommitted write; no automatic retry."
+    }
+  },
+  "started_UTC": "2026-10-02T16:24:39.469852+00:00",
+  "official_url": "https://sc04.alicdn.com/kf/H622aecf34c2d4062b9c60578bd4f6b59i/286385890/H622aecf34c2d4062b9c60578bd4f6b59i.jpg",
+  "file_id": "33713185471",
+  "request_id": "21501b6717909582926846292",
+  "finished_UTC": "2026-10-02T16:24:48.198908+00:00"
+}

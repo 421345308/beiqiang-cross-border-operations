@@ -1,0 +1,21 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "beiqiang-commerce",
+  "version": "0.3.0",
+  "description": "贝强电商经营：按当前国内/国外经营范围与客户类型组织商品、内容、咨询及审核；平台模板与实际进度分开。",
+  "author": {
+    "name": "Beiqiang"
+  },
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "贝强电商经营 Agent",
+        "shortDescription": "商品、内容、运营与商机协作",
+        "longDescription": "围绕国际站、B2B独立站和海外社媒采购链，以及国内抖音与待开展的小红书、微信，按消费者、经销、海外采购和品牌客户分别准备。Amazon仅未来可选。宿主完成创作，后端保存策略、版本、审核与字段差异；外部执行沿实际连接和授权。",
+        "developerName": "Beiqiang",
+        "category": "Productivity",
+        "defaultPrompt": "用贝强电商经营 Agent 处理当前任务，沿用真实商品资料和现有业务源。"
+      }
+    }
+  }
+}

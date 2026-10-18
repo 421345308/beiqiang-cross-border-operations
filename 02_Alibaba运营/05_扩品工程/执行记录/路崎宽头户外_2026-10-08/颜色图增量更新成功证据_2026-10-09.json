@@ -1,0 +1,568 @@
+{
+  "observed_at": "2026-10-09T05:05:42.058350+00:00",
+  "scope": "Verified current-type4 category201334413 original-ID Color img update, together with galleries; no generic saleProp delete/material/price/SKU support inferred",
+  "evidence": [
+    {
+      "style": "2629",
+      "product_id": "1601973749610",
+      "operation": "alibaba.icbu.product.schema.update",
+      "detail_type": 4,
+      "category_id": 201334413,
+      "field_ids": [
+        "scImages",
+        "detailImage",
+        "saleProp"
+      ],
+      "dependency_ids": [],
+      "changed_saleProp": "Precisely three img attributes of current Color value nodes, no color ID/name/EU value changes",
+      "sku_submitted": false,
+      "preserved": "All39 SKU rows, IDs/codes/prices; all unsubmitted Schema fields",
+      "verification": "Formal approved/Y product.get and schema.render, both Color image bindings exact; main/detail order exact",
+      "scope_result": "PASS",
+      "observed_at": "2026-10-08T19:32:08.763645+00:00",
+      "source_reports": [
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2629准备\\整组图片修正_2026-10-09\\当前Schema回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2629准备\\整组图片修正_2026-10-09\\正式修正清单.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2629准备\\整组图片修正_2026-10-09\\最小图片载荷.xml",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2629准备\\整组图片修正_2026-10-09\\正式更新回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2629准备\\整组图片修正_2026-10-09\\最新正式回读.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2629准备\\整组图片修正_2026-10-09\\正式Schema回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2629准备\\整组图片修正_2026-10-09\\图片修正核验.json"
+      ]
+    },
+    {
+      "style": "2628",
+      "product_id": "1601973823209",
+      "operation": "alibaba.icbu.product.schema.update",
+      "detail_type": 4,
+      "category_id": 201334413,
+      "field_ids": [
+        "scImages",
+        "detailImage",
+        "saleProp"
+      ],
+      "dependency_ids": [],
+      "changed_saleProp": "Precisely three img attributes of current Color value nodes, no color ID/name/EU value changes",
+      "sku_submitted": false,
+      "preserved": "All39 SKU rows, IDs/codes/prices; all unsubmitted Schema fields",
+      "verification": "Formal approved/Y product.get and schema.render, both Color image bindings exact; main/detail order exact",
+      "scope_result": "PASS",
+      "observed_at": "2026-10-08T19:36:46.852292+00:00",
+      "source_reports": [
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2628准备\\整组图片修正_2026-10-09\\当前Schema回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2628准备\\整组图片修正_2026-10-09\\正式修正清单.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2628准备\\整组图片修正_2026-10-09\\最小图片载荷.xml",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2628准备\\整组图片修正_2026-10-09\\正式更新回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2628准备\\整组图片修正_2026-10-09\\最新正式回读.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2628准备\\整组图片修正_2026-10-09\\正式Schema回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2628准备\\整组图片修正_2026-10-09\\图片修正核验.json"
+      ]
+    },
+    {
+      "style": "213",
+      "product_id": "1601973876011",
+      "operation": "alibaba.icbu.product.schema.update",
+      "detail_type": 4,
+      "category_id": 201334413,
+      "field_ids": [
+        "scImages",
+        "detailImage",
+        "saleProp"
+      ],
+      "dependency_ids": [],
+      "changed_saleProp": "Precisely three current Color img attributes only; color IDs/names and EU values unchanged",
+      "sku_submitted": false,
+      "preserved": "All39 formal SKU rows, IDs/codes/prices; nonimage saleProp and all unsubmitted Schema fields",
+      "verification": "Formal approved/Y product.get and schema.render; all three Color image bindings exact; main/detail order exact",
+      "scope_result": "PASS",
+      "observed_at": "2026-10-08T21:07:13.978647+00:00",
+      "source_reports": [
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\213准备\\整组图片修正_2026-10-09\\当前Schema回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\213准备\\整组图片修正_2026-10-09\\正式修正清单.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\213准备\\整组图片修正_2026-10-09\\最小图片载荷.xml",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\213准备\\整组图片修正_2026-10-09\\正式更新回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\213准备\\整组图片修正_2026-10-09\\最新正式回读.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\213准备\\整组图片修正_2026-10-09\\正式Schema回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\213准备\\整组图片修正_2026-10-09\\图片修正核验.json"
+      ]
+    },
+    {
+      "style": "2626",
+      "product_id": "1601973769589",
+      "operation": "alibaba.icbu.product.schema.update",
+      "detail_type": 4,
+      "category_id": 201334413,
+      "field_ids": [
+        "scImages",
+        "detailImage",
+        "saleProp"
+      ],
+      "dependency_ids": [],
+      "changed_saleProp": "Precisely three current Color img attributes only; color IDs/names and EU values unchanged",
+      "sku_submitted": false,
+      "preserved": "All39 formal SKU rows, IDs/codes/prices; nonimage saleProp and all unsubmitted Schema fields",
+      "verification": "Formal approved/Y product.get and schema.render; all three Color image bindings exact; main/detail order exact",
+      "scope_result": "PASS",
+      "observed_at": "2026-10-08T21:25:15.910591+00:00",
+      "source_reports": [
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2626准备\\整组图片修正_2026-10-09\\当前Schema回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2626准备\\整组图片修正_2026-10-09\\正式修正清单.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2626准备\\整组图片修正_2026-10-09\\最小图片载荷.xml",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2626准备\\整组图片修正_2026-10-09\\正式更新回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2626准备\\整组图片修正_2026-10-09\\最新正式回读.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2626准备\\整组图片修正_2026-10-09\\正式Schema回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2626准备\\整组图片修正_2026-10-09\\图片修正核验.json"
+      ]
+    },
+    {
+      "style": "053",
+      "product_id": "1601973846232",
+      "operation": "alibaba.icbu.product.schema.update",
+      "detail_type": 4,
+      "category_id": 201334413,
+      "field_ids": [
+        "scImages",
+        "detailImage",
+        "saleProp"
+      ],
+      "dependency_ids": [],
+      "changed_saleProp": "Precisely three current Color img attributes only; color IDs/names and EU values unchanged",
+      "sku_submitted": false,
+      "preserved": "All39 formal SKU rows, IDs/codes/prices; nonimage saleProp and all unsubmitted Schema fields",
+      "verification": "Formal approved/Y product.get and schema.render; all three Color image bindings exact; main/detail order exact",
+      "scope_result": "PASS",
+      "observed_at": "2026-10-08T22:10:02.672444+00:00",
+      "source_reports": [
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\053准备\\整组图片修正_2026-10-09\\当前Schema回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\053准备\\整组图片修正_2026-10-09\\正式修正清单.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\053准备\\整组图片修正_2026-10-09\\最小图片载荷.xml",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\053准备\\整组图片修正_2026-10-09\\正式更新回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\053准备\\整组图片修正_2026-10-09\\最新正式回读.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\053准备\\整组图片修正_2026-10-09\\正式Schema回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\053准备\\整组图片修正_2026-10-09\\图片修正核验.json"
+      ]
+    },
+    {
+      "style": "050",
+      "product_id": "1601973794508",
+      "operation": "alibaba.icbu.product.schema.update",
+      "detail_type": 4,
+      "category_id": 201334413,
+      "field_ids": [
+        "scImages",
+        "detailImage",
+        "saleProp"
+      ],
+      "dependency_ids": [],
+      "changed_saleProp": "Precisely three WhiteSilver/WhiteBlack/BlackSilver img attributes among four Color nodes; AllBlack img unchanged; IDs/names and EU values unchanged",
+      "sku_submitted": false,
+      "preserved": "All52 SKU rows, IDs/codes/prices; AllBlack existing image; nonimage saleProp and unsubmitted Schema fields",
+      "verification": "Formal approved/Y product.get and schema.render; all four Color bindings exact, only three img changed; main/detail order exact",
+      "scope_result": "PASS",
+      "observed_at": "2026-10-08T22:42:25.470752+00:00",
+      "source_reports": [
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\050准备\\整组图片修正_2026-10-09\\当前Schema回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\050准备\\整组图片修正_2026-10-09\\正式修正清单.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\050准备\\整组图片修正_2026-10-09\\最小图片载荷.xml",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\050准备\\整组图片修正_2026-10-09\\正式更新回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\050准备\\整组图片修正_2026-10-09\\最新正式回读.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\050准备\\整组图片修正_2026-10-09\\正式Schema回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\050准备\\整组图片修正_2026-10-09\\图片修正核验.json"
+      ]
+    },
+    {
+      "style": "033",
+      "product_id": "1601973792546",
+      "operation": "alibaba.icbu.product.schema.update",
+      "detail_type": 4,
+      "category_id": 201334413,
+      "field_ids": [
+        "productTitle",
+        "scImages",
+        "detailImage",
+        "saleProp"
+      ],
+      "dependency_ids": [],
+      "changed_saleProp": "Precisely three AllBlack/BlackSilver/WhiteGreen Color img attributes; IDs/names/EU values unchanged",
+      "sku_submitted": false,
+      "preserved": "All39 original SKU rows/IDs/codes/prices, nonimage saleProp and all unsubmitted fields; title intentionally refined",
+      "verification": "Formal approved/Y get and Schema: exact114-character title, three Color bindings, six main and four detail order PASS",
+      "scope_result": "PASS",
+      "observed_at": "2026-10-08T23:07:23.578830+00:00",
+      "source_reports": [
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\033准备\\整组图片修正_2026-10-09\\当前Schema回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\033准备\\整组图片修正_2026-10-09\\正式修正清单.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\033准备\\整组图片修正_2026-10-09\\最小图片载荷.xml",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\033准备\\整组图片修正_2026-10-09\\正式更新回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\033准备\\整组图片修正_2026-10-09\\最新正式回读.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\033准备\\整组图片修正_2026-10-09\\正式Schema回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\033准备\\整组图片修正_2026-10-09\\图片修正核验.json"
+      ]
+    },
+    {
+      "style": "1212",
+      "product_id": "1601973808453",
+      "operation": "alibaba.icbu.product.schema.update",
+      "detail_type": 4,
+      "category_id": 201334413,
+      "field_ids": [
+        "scImages",
+        "detailImage",
+        "saleProp"
+      ],
+      "dependency_ids": [],
+      "changed_saleProp": "Precisely six existing Black/Brown/Beige/White/DarkGrey/LightGrey Color img attributes; IDs/names/EU values unchanged",
+      "sku_submitted": false,
+      "preserved": "All78 original SKU rows/IDs/codes/prices, title, nonimage saleProp and all unsubmitted fields",
+      "verification": "Fresh six-node current Schema; formal approved/Y get and Schema: exact six Color bindings, six main/four detail order and entire78-row protection PASS",
+      "scope_result": "PASS",
+      "observed_at": "2026-10-08T23:36:54.446427+00:00",
+      "source_reports": [
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\1212准备\\整组图片修正_2026-10-09\\当前Schema回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\1212准备\\整组图片修正_2026-10-09\\正式修正清单.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\1212准备\\整组图片修正_2026-10-09\\最小图片载荷.xml",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\1212准备\\整组图片修正_2026-10-09\\正式更新回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\1212准备\\整组图片修正_2026-10-09\\最新正式回读.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\1212准备\\整组图片修正_2026-10-09\\正式Schema回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\1212准备\\整组图片修正_2026-10-09\\图片修正核验.json"
+      ]
+    },
+    {
+      "style": "2599-1",
+      "product_id": "1601973741932",
+      "operation": "alibaba.icbu.product.schema.update",
+      "detail_type": 4,
+      "category_id": 201334413,
+      "field_ids": [
+        "scImages",
+        "detailImage",
+        "saleProp"
+      ],
+      "dependency_ids": [],
+      "changed_saleProp": "Precisely 3 existing Black/Beige/White Color img attributes; IDs/names/EU values unchanged",
+      "sku_submitted": false,
+      "preserved": "All30 original SKU rows/IDs/codes/prices, title, nonimage saleProp and all unsubmitted fields",
+      "verification": "Fresh 3-node current Schema; approved/Y get and Schema exact color bindings, six main/four detail order and entire30-row protection PASS",
+      "scope_result": "PASS",
+      "observed_at": "2026-10-09T00:02:42.889176+00:00",
+      "source_reports": [
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2599-1准备\\整组图片修正_2026-10-09\\当前Schema回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2599-1准备\\整组图片修正_2026-10-09\\正式修正清单.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2599-1准备\\整组图片修正_2026-10-09\\最小图片载荷.xml",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2599-1准备\\整组图片修正_2026-10-09\\正式更新回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2599-1准备\\整组图片修正_2026-10-09\\最新正式回读.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2599-1准备\\整组图片修正_2026-10-09\\正式Schema回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2599-1准备\\整组图片修正_2026-10-09\\图片修正核验.json"
+      ]
+    },
+    {
+      "style": "032",
+      "product_id": "1601973736928",
+      "operation": "alibaba.icbu.product.schema.update",
+      "detail_type": 4,
+      "category_id": 201334413,
+      "field_ids": [
+        "scImages",
+        "detailImage",
+        "saleProp"
+      ],
+      "dependency_ids": [],
+      "changed_saleProp": "Precisely 4 existing Black/DarkGrey/LightGrey/Khaki Color img attributes; IDs/names/EU values unchanged",
+      "sku_submitted": false,
+      "preserved": "All52 original SKU rows/IDs/codes/prices, title, nonimage saleProp and all unsubmitted fields",
+      "verification": "Fresh 4-node current Schema; approved/Y get and Schema exact color bindings, six main/four detail order and entire52-row protection PASS",
+      "scope_result": "PASS",
+      "observed_at": "2026-10-09T00:22:03.739246+00:00",
+      "source_reports": [
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\032准备\\整组图片修正_2026-10-09\\当前Schema回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\032准备\\整组图片修正_2026-10-09\\正式修正清单.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\032准备\\整组图片修正_2026-10-09\\最小图片载荷.xml",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\032准备\\整组图片修正_2026-10-09\\正式更新回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\032准备\\整组图片修正_2026-10-09\\最新正式回读.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\032准备\\整组图片修正_2026-10-09\\正式Schema回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\032准备\\整组图片修正_2026-10-09\\图片修正核验.json"
+      ]
+    },
+    {
+      "style": "25012",
+      "product_id": "1601973838360",
+      "operation": "alibaba.icbu.product.schema.update",
+      "detail_type": 4,
+      "category_id": 201334413,
+      "field_ids": [
+        "scImages",
+        "detailImage",
+        "saleProp"
+      ],
+      "dependency_ids": [],
+      "changed_saleProp": "Precisely 2 existing Black/Grey Color img attributes; IDs/names/EU values unchanged",
+      "sku_submitted": false,
+      "preserved": "All20 original SKU rows/IDs/codes/prices, title, nonimage saleProp and all unsubmitted fields",
+      "verification": "Fresh 2-node current Schema; approved/Y get and Schema exact color bindings, six main/four detail order and entire20-row protection PASS",
+      "scope_result": "PASS",
+      "observed_at": "2026-10-09T00:42:57.395599+00:00",
+      "source_reports": [
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\25012准备\\整组图片修正_2026-10-09\\当前Schema回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\25012准备\\整组图片修正_2026-10-09\\正式修正清单.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\25012准备\\整组图片修正_2026-10-09\\最小图片载荷.xml",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\25012准备\\整组图片修正_2026-10-09\\正式更新回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\25012准备\\整组图片修正_2026-10-09\\最新正式回读.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\25012准备\\整组图片修正_2026-10-09\\正式Schema回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\25012准备\\整组图片修正_2026-10-09\\图片修正核验.json"
+      ]
+    },
+    {
+      "style": "02603",
+      "product_id": "1601973784646",
+      "operation": "alibaba.icbu.product.schema.update",
+      "detail_type": 4,
+      "category_id": 201334413,
+      "field_ids": [
+        "scImages",
+        "detailImage",
+        "saleProp"
+      ],
+      "dependency_ids": [],
+      "changed_saleProp": "Precisely 3 existing Black/Green/DarkBrown Color img attributes; IDs/names/EU values unchanged",
+      "sku_submitted": false,
+      "preserved": "All30 original SKU rows/IDs/codes/prices, title, nonimage saleProp and all unsubmitted fields",
+      "verification": "Fresh 3-node current Schema; approved/Y get and Schema exact color bindings, six main/four detail order and entire30-row protection PASS",
+      "scope_result": "PASS",
+      "observed_at": "2026-10-09T01:05:09.980665+00:00",
+      "source_reports": [
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\02603准备\\整组图片修正_2026-10-09\\当前Schema回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\02603准备\\整组图片修正_2026-10-09\\正式修正清单.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\02603准备\\整组图片修正_2026-10-09\\最小图片载荷.xml",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\02603准备\\整组图片修正_2026-10-09\\正式更新回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\02603准备\\整组图片修正_2026-10-09\\最新正式回读.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\02603准备\\整组图片修正_2026-10-09\\正式Schema回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\02603准备\\整组图片修正_2026-10-09\\图片修正核验.json"
+      ]
+    },
+    {
+      "style": "02602",
+      "product_id": "1601973869140",
+      "operation": "alibaba.icbu.product.schema.update",
+      "detail_type": 4,
+      "category_id": 201334413,
+      "field_ids": [
+        "scImages",
+        "detailImage",
+        "saleProp"
+      ],
+      "dependency_ids": [],
+      "changed_saleProp": "Precisely 2 existing Blue/Yellow Color img attributes; IDs/names/EU values unchanged",
+      "sku_submitted": false,
+      "preserved": "All20 original SKU rows/IDs/codes/prices, title, nonimage saleProp and all unsubmitted fields",
+      "verification": "Fresh 2-node current Schema; approved/Y get and Schema exact color bindings, six main/four detail order and entire20-row protection PASS",
+      "scope_result": "PASS",
+      "observed_at": "2026-10-09T01:19:08.307943+00:00",
+      "source_reports": [
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\02602准备\\整组图片修正_2026-10-09\\当前Schema回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\02602准备\\整组图片修正_2026-10-09\\正式修正清单.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\02602准备\\整组图片修正_2026-10-09\\最小图片载荷.xml",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\02602准备\\整组图片修正_2026-10-09\\正式更新回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\02602准备\\整组图片修正_2026-10-09\\最新正式回读.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\02602准备\\整组图片修正_2026-10-09\\正式Schema回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\02602准备\\整组图片修正_2026-10-09\\图片修正核验.json"
+      ]
+    },
+    {
+      "style": "02601",
+      "product_id": "1601973814505",
+      "operation": "alibaba.icbu.product.schema.update",
+      "detail_type": 4,
+      "category_id": 201334413,
+      "field_ids": [
+        "scImages",
+        "detailImage",
+        "saleProp"
+      ],
+      "dependency_ids": [],
+      "changed_saleProp": "Precisely 3 existing Black/GreyYellow/GreyBlack Color img attributes; IDs/names/EU values unchanged",
+      "sku_submitted": false,
+      "preserved": "All30 original SKU rows/IDs/codes/prices, title, nonimage saleProp and all unsubmitted fields",
+      "verification": "Fresh 3-node current Schema; approved/Y get and Schema exact color bindings, six main/four detail order and entire30-row protection PASS",
+      "scope_result": "PASS",
+      "observed_at": "2026-10-09T02:03:15.046888+00:00",
+      "source_reports": [
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\02601准备\\整组图片修正_2026-10-09\\当前Schema回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\02601准备\\整组图片修正_2026-10-09\\正式修正清单.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\02601准备\\整组图片修正_2026-10-09\\最小图片载荷.xml",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\02601准备\\整组图片修正_2026-10-09\\正式更新回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\02601准备\\整组图片修正_2026-10-09\\最新正式回读.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\02601准备\\整组图片修正_2026-10-09\\正式Schema回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\02601准备\\整组图片修正_2026-10-09\\图片修正核验.json"
+      ]
+    },
+    {
+      "style": "2598",
+      "product_id": "1601973831465",
+      "operation": "alibaba.icbu.product.schema.update",
+      "detail_type": 4,
+      "category_id": 201334413,
+      "field_ids": [
+        "scImages",
+        "detailImage",
+        "saleProp"
+      ],
+      "dependency_ids": [],
+      "changed_saleProp": "Precisely 3 existing Black/Khaki/White Color img attributes; IDs/names/EU values unchanged",
+      "sku_submitted": false,
+      "preserved": "All30 original SKU rows/IDs/codes/prices, title, nonimage saleProp and all unsubmitted fields",
+      "verification": "Fresh 3-node current Schema; approved/Y get and Schema exact color bindings, six main/four detail order and entire30-row protection PASS",
+      "scope_result": "PASS",
+      "observed_at": "2026-10-09T02:18:42.667163+00:00",
+      "source_reports": [
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2598准备\\整组图片修正_2026-10-09\\当前Schema回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2598准备\\整组图片修正_2026-10-09\\正式修正清单.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2598准备\\整组图片修正_2026-10-09\\最小图片载荷.xml",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2598准备\\整组图片修正_2026-10-09\\正式更新回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2598准备\\整组图片修正_2026-10-09\\最新正式回读.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2598准备\\整组图片修正_2026-10-09\\正式Schema回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2598准备\\整组图片修正_2026-10-09\\图片修正核验.json"
+      ]
+    },
+    {
+      "style": "2588-1",
+      "product_id": "1601973772709",
+      "operation": "alibaba.icbu.product.schema.update",
+      "detail_type": 4,
+      "category_id": 201334413,
+      "field_ids": [
+        "scImages",
+        "detailImage",
+        "saleProp"
+      ],
+      "dependency_ids": [],
+      "changed_saleProp": "Precisely 3 existing White/BlackWhite/AllBlack Color img attributes; IDs/names/EU values unchanged",
+      "sku_submitted": false,
+      "preserved": "All27 original SKU rows/IDs/codes/prices, title, nonimage saleProp and all unsubmitted fields",
+      "verification": "Fresh 3-node current Schema; approved/Y get and Schema exact color bindings, six main/four detail order and entire27-row protection PASS",
+      "scope_result": "PASS",
+      "observed_at": "2026-10-09T02:53:42.295530+00:00",
+      "source_reports": [
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2588-1准备\\整组图片修正_2026-10-09\\当前Schema回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2588-1准备\\整组图片修正_2026-10-09\\正式修正清单.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2588-1准备\\整组图片修正_2026-10-09\\最小图片载荷.xml",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2588-1准备\\整组图片修正_2026-10-09\\正式更新回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2588-1准备\\整组图片修正_2026-10-09\\最新正式回读.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2588-1准备\\整组图片修正_2026-10-09\\正式Schema回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2588-1准备\\整组图片修正_2026-10-09\\图片修正核验.json"
+      ]
+    },
+    {
+      "style": "2597",
+      "product_id": "1601973797610",
+      "operation": "alibaba.icbu.product.schema.update",
+      "detail_type": 4,
+      "category_id": 201334413,
+      "field_ids": [
+        "scImages",
+        "detailImage",
+        "saleProp"
+      ],
+      "dependency_ids": [],
+      "changed_saleProp": "Precisely 3 existing Black/Grey/WhiteRed Color img attributes; IDs/names/EU values unchanged",
+      "sku_submitted": false,
+      "preserved": "All30 original SKU rows/IDs/codes/prices, title, nonimage saleProp and all unsubmitted fields",
+      "verification": "Fresh 3-node current Schema; approved/Y get and Schema exact color bindings, six main/four detail order and entire30-row protection PASS",
+      "scope_result": "PASS",
+      "observed_at": "2026-10-09T03:49:27.670529+00:00",
+      "source_reports": [
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2597准备\\整组图片修正_2026-10-09\\当前Schema回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2597准备\\整组图片修正_2026-10-09\\正式修正清单.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2597准备\\整组图片修正_2026-10-09\\最小图片载荷.xml",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2597准备\\整组图片修正_2026-10-09\\正式更新回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2597准备\\整组图片修正_2026-10-09\\最新正式回读.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2597准备\\整组图片修正_2026-10-09\\正式Schema回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2597准备\\整组图片修正_2026-10-09\\图片修正核验.json"
+      ]
+    },
+    {
+      "style": "2596",
+      "product_id": "1601973842356",
+      "operation": "alibaba.icbu.product.schema.update",
+      "detail_type": 4,
+      "category_id": 201334413,
+      "field_ids": [
+        "scImages",
+        "detailImage",
+        "saleProp"
+      ],
+      "dependency_ids": [],
+      "changed_saleProp": "Precisely 2 existing Black/WhiteOrangeRed Color img attributes; IDs/names/EU values unchanged",
+      "sku_submitted": false,
+      "preserved": "All20 original SKU rows/IDs/codes/prices, title, nonimage saleProp and all unsubmitted fields",
+      "verification": "Fresh 2-node current Schema; approved/Y get and Schema exact color bindings, six main/four detail order and entire20-row protection PASS",
+      "scope_result": "PASS",
+      "observed_at": "2026-10-09T04:10:35.271969+00:00",
+      "source_reports": [
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2596准备\\整组图片修正_2026-10-09\\当前Schema回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2596准备\\整组图片修正_2026-10-09\\正式修正清单.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2596准备\\整组图片修正_2026-10-09\\最小图片载荷.xml",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2596准备\\整组图片修正_2026-10-09\\正式更新回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2596准备\\整组图片修正_2026-10-09\\最新正式回读.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2596准备\\整组图片修正_2026-10-09\\正式Schema回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2596准备\\整组图片修正_2026-10-09\\图片修正核验.json"
+      ]
+    },
+    {
+      "style": "25021",
+      "product_id": "1601973854304",
+      "operation": "alibaba.icbu.product.schema.update",
+      "detail_type": 4,
+      "category_id": 201334413,
+      "field_ids": [
+        "scImages",
+        "detailImage",
+        "saleProp"
+      ],
+      "dependency_ids": [],
+      "changed_saleProp": "Precisely 2 existing Blue/Khaki Color img attributes; IDs/names/EU values unchanged",
+      "sku_submitted": false,
+      "preserved": "All20 original SKU rows/IDs/codes/prices, title, nonimage saleProp and all unsubmitted fields",
+      "verification": "Fresh 2-node current Schema; approved/Y get and Schema exact color bindings, six main/four detail order and entire20-row protection PASS",
+      "scope_result": "PASS",
+      "observed_at": "2026-10-09T04:46:51.962916+00:00",
+      "source_reports": [
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\25021准备\\整组图片修正_2026-10-09\\当前Schema回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\25021准备\\整组图片修正_2026-10-09\\正式修正清单.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\25021准备\\整组图片修正_2026-10-09\\最小图片载荷.xml",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\25021准备\\整组图片修正_2026-10-09\\正式更新回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\25021准备\\整组图片修正_2026-10-09\\最新正式回读.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\25021准备\\整组图片修正_2026-10-09\\正式Schema回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\25021准备\\整组图片修正_2026-10-09\\图片修正核验.json"
+      ]
+    },
+    {
+      "style": "2510",
+      "product_id": "1601973747919",
+      "operation": "alibaba.icbu.product.schema.update",
+      "detail_type": 4,
+      "category_id": 201334413,
+      "field_ids": [
+        "scImages",
+        "detailImage",
+        "saleProp"
+      ],
+      "dependency_ids": [],
+      "changed_saleProp": "Precisely 2 existing Blue/DarkGrey Color img attributes; IDs/names/EU values unchanged",
+      "sku_submitted": false,
+      "preserved": "All20 original SKU rows/IDs/codes/prices, title, nonimage saleProp and all unsubmitted fields",
+      "verification": "Fresh 2-node current Schema; approved/Y get and Schema exact color bindings, six main/four detail order and entire20-row protection PASS",
+      "scope_result": "PASS",
+      "observed_at": "2026-10-09T04:59:20.843706+00:00",
+      "source_reports": [
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2510准备\\整组图片修正_2026-10-09\\当前Schema回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2510准备\\整组图片修正_2026-10-09\\正式修正清单.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2510准备\\整组图片修正_2026-10-09\\最小图片载荷.xml",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2510准备\\整组图片修正_2026-10-09\\正式更新回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2510准备\\整组图片修正_2026-10-09\\最新正式回读.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2510准备\\整组图片修正_2026-10-09\\正式Schema回执.json",
+        "02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2510准备\\整组图片修正_2026-10-09\\图片修正核验.json"
+      ]
+    }
+  ],
+  "boundary": "Previous offline entry unverified was prior knowledge, superseded for this precise operation by these positive formal readbacks. Not a global category/cross-detail-type guarantee."
+}

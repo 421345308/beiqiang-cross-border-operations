@@ -1,0 +1,104 @@
+{
+  "style": "5998",
+  "product_id": "1601969869242",
+  "stage": "API_CONTENT_REVIEW_SCORE_PUBLIC_COMPLETE_INVENTORY_UNWRITTEN",
+  "official_business_receipt": {
+    "request_id": "0b80d2d617909438604403203",
+    "trace_id": "2101e68f17909438597947263e0b59",
+    "message": null,
+    "error": null
+  },
+  "formal_status": "approved",
+  "formal_display": "Y",
+  "official_public_url": "https://www.alibaba.com/product-detail/Cow-Leather-Closed-Toe-Mules-with_1601969869242.html",
+  "counts": {
+    "main": 6,
+    "detail": 4,
+    "company": 5,
+    "FAQ": 6,
+    "SKU": 22
+  },
+  "quality": {
+    "product_id": 1601969869242,
+    "read_at_utc": "2026-10-02T12:52:54.983999+00:00",
+    "score": "5.00",
+    "diagnostics": {
+      "ruleScoreMap": {
+        "title_word_miss_core_error": 0.0,
+        "imageQualityBad": 0.0,
+        "image_scale": 0.0,
+        "title_word_error": 0.0,
+        "image_num": 0.0
+      },
+      "errorReasonSkuImageMoreMap": {},
+      "errorReasonTitleWordMissErrorMap": {},
+      "errorReasonList": [],
+      "errorReasonTitleWordErrorMap": {},
+      "extendCheckMap": {
+        "imageText": true,
+        "sku_image": false,
+        "title_word_miss_core_error": true,
+        "imageQualityBad": true,
+        "sku_text": false,
+        "imageSubTitle": false,
+        "category": true,
+        "title_word_error": true,
+        "selling_point_attribute_conflict": false
+      },
+      "errorReasonCategoryMap": {},
+      "errorReasonSkuTextMap": {},
+      "errorReasonSubTitleMap": {},
+      "errorReasonMap": {},
+      "errorReasonSellingPointAttributeMap": {},
+      "errorReasonSkuImageMap": {},
+      "extendProblemMap": {
+        "imageText": false,
+        "title_word_miss_core_error": false,
+        "imageQualityBad": false,
+        "imageSubTitle": false,
+        "image_scale": false,
+        "inventory": false,
+        "title_word_error": false,
+        "selling_point_attribute_conflict": false,
+        "image_num": false,
+        "freightRate": false,
+        "sku_image": false,
+        "sku_text": false,
+        "price": false,
+        "category": false
+      },
+      "errorReasonQualityBadMap": {},
+      "errorReasonSkuTextMoreMap": {}
+    },
+    "request_id": "213c932b17909455798806755",
+    "platform_error": {},
+    "meets_5_0": true,
+    "state": "PASS"
+  },
+  "model_repair": {
+    "product_id": 1601969869242,
+    "read_at_utc": "2026-10-02T12:52:22.249654+00:00",
+    "status": "approved",
+    "display": "Y",
+    "model": "BQ-W5998",
+    "model_exact": true,
+    "protected_fields_changed": [],
+    "api_array_order_changes": [
+      "struct_detail image list returned order only; exact URL-role-value set unchanged"
+    ],
+    "request_id": "0b830ecc17909455471231939",
+    "public_url": "https://www.alibaba.com/product-detail/Cow-Leather-Closed-Toe-Mules-with_1601969869242.html",
+    "nonempty": true
+  },
+  "content_gate": "PASS",
+  "open_items": [
+    "Inventory writes paused pending explicit batch authorization; no inventory has been written.",
+    "Readback keywords are empty; do not claim they were saved."
+  ],
+  "old_HR_deleted": false,
+  "other_products_written": [],
+  "source": "https://bxxy.sooxie.com/detail/2025580",
+  "updated_at_utc": "2026-10-02T13:07:24.540903+00:00",
+  "workspace_owner": "task-8 only",
+  "public_acceptance": "PASS"
+}

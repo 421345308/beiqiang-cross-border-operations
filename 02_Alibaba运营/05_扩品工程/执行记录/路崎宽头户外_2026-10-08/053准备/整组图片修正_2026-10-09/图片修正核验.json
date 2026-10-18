@@ -1,0 +1,48 @@
+{
+  "style": "053",
+  "product_id": "1601973846232",
+  "observed_at": "2026-10-08T22:10:02.672444+00:00",
+  "status": "approved",
+  "display": "Y",
+  "sku_count": 39,
+  "protected_fields": {
+    "subject": true,
+    "category_id": true,
+    "attributes": true,
+    "product_sku": true,
+    "sourcing_trade": true,
+    "keywords": true
+  },
+  "Chrome": "WAIVED_THIS_PERIOD_NOT_VERIFIED",
+  "actual_score": "5.00",
+  "scope_result": "PASS",
+  "main_order_match": true,
+  "unsubmitted_schema_differences": [],
+  "detail_asset_order_match": true,
+  "detail_asset_set_match": true,
+  "detail_first_overview_preserved": true,
+  "actual_detail_order": [
+    "H00ee6c8ab52f4764ad5b4efc8a015c3dd",
+    "H0b8b1156ade945f8be61760bee402c6aY",
+    "H6075d86227a64c98a318efc35dd8e4352",
+    "H15647d99d0394d9f874fc54e23360f0ae"
+  ],
+  "schema_main_order_match": true,
+  "score_source": "alibaba.icbu.product.score.get / 21501be117914974335877253",
+  "score_observed_at": "2026-10-08T22:10:31.255584+00:00",
+  "product_sku_protection_scope": "Entire object except precisely three intended Color image_url fields; all39 rows/IDs/codes/prices/attributes unchanged",
+  "color_image_binding": {
+    "LightGrey": true,
+    "White": true,
+    "Black": true
+  },
+  "exact_three_colors": true,
+  "EU_labels_match": true,
+  "exact_39_combinations": true,
+  "saleProp_unchanged_except_color_img": true,
+  "schema_color_image_binding": {
+    "Black": true,
+    "LightGrey": true,
+    "White": true
+  }
+}

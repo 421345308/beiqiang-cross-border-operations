@@ -1,0 +1,47 @@
+{
+  "keyword_input": null,
+  "differentiation_review": null,
+  "category_id": 201334413,
+  "operation": "update",
+  "inventory_input": null,
+  "model_serialization": null,
+  "target_product_id": "1601973784646",
+  "field_ids": [
+    "productTitle"
+  ],
+  "dependency_ids": [],
+  "xml": "<itemSchema><field id=\"productTitle\" name=\"Product name\" type=\"input\"><value>Mens Mesh Panel Outdoor Walking Shoes Lace Up Contrast Sole Edge Low Top Casual Sneakers EU 39-48 Wholesale</value></field></itemSchema>",
+  "expected_fields": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Mens Mesh Panel Outdoor Walking Shoes Lace Up Contrast Sole Edge Low Top Casual Sneakers EU 39-48 Wholesale",
+          []
+        ]
+      ]
+    ]
+  },
+  "prepared_from_current_schema": true,
+  "task_pack": null,
+  "replacement_plan": null,
+  "schema_provenance": {
+    "schema_request_id": "212c6fc617914773300955199",
+    "schema_acquired_at": "2026-10-08T16:35:30.270596+00:00",
+    "current_schema_sha256": "6046b7bd3b04f82d27acde571b835c4a1ea40f1c7cb2d11a915c6b300f996fcc",
+    "source_evidence": [
+      "../经营任务包.md",
+      "../../质量复核_2026-10-09/标题修正计划.json",
+      "../../负责人分类事实确认.json"
+    ]
+  }
+}

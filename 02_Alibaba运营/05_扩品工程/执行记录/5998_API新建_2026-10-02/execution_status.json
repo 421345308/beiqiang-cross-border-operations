@@ -1,0 +1,14 @@
+{
+  "style": "5998",
+  "stage": "FORMAL_ADD_REQUEST_SENT_ONCE",
+  "main": 6,
+  "detail": 4,
+  "color_images": 2,
+  "company_v3": 5,
+  "bank_uploads": 12,
+  "inventory_write": "Omitted per current parent batch pending confirmation",
+  "prepublish_independent_XML_hash": "f2de1e6fa24c3f7ef42cd7653ad1d7f84f5c123080b275cb81e6d2b6911fd0b1",
+  "sent_XML_hash": "542d1e19e953dd87778b4d0f6962ec30fb51a0ad93074854ec63d46658334bb4",
+  "hash_delta": "Only omit all skuStock fields. Same 22 SKUs and all other values.",
+  "updated_at_utc": "2026-10-02T12:24:55.227851+00:00"
+}

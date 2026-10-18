@@ -1,0 +1,1063 @@
+{
+  "source_urls": 107,
+  "image_folders": 103,
+  "readable_images": 2844,
+  "failed_images": 104,
+  "limits": "Downloaded source assets and contact sheets only; not unique styles, validated facts, publishable sets or live listings",
+  "styles": [
+    {
+      "style": "011",
+      "total": 37,
+      "readable": 30,
+      "failed": [
+        {
+          "index": 8,
+          "error": "HTTPError"
+        },
+        {
+          "index": 12,
+          "error": "HTTPError"
+        },
+        {
+          "index": 14,
+          "error": "HTTPError"
+        },
+        {
+          "index": 19,
+          "error": "HTTPError"
+        },
+        {
+          "index": 23,
+          "error": "HTTPError"
+        },
+        {
+          "index": 32,
+          "error": "HTTPError"
+        },
+        {
+          "index": 34,
+          "error": "HTTPError"
+        }
+      ]
+    },
+    {
+      "style": "012",
+      "total": 29,
+      "readable": 28,
+      "failed": [
+        {
+          "index": 12,
+          "error": "HTTPError"
+        }
+      ]
+    },
+    {
+      "style": "013",
+      "total": 33,
+      "readable": 32,
+      "failed": [
+        {
+          "index": 32,
+          "error": "TimeoutError"
+        }
+      ]
+    },
+    {
+      "style": "015",
+      "total": 17,
+      "readable": 17,
+      "failed": []
+    },
+    {
+      "style": "016",
+      "total": 34,
+      "readable": 34,
+      "failed": []
+    },
+    {
+      "style": "017",
+      "total": 26,
+      "readable": 26,
+      "failed": []
+    },
+    {
+      "style": "018",
+      "total": 30,
+      "readable": 30,
+      "failed": []
+    },
+    {
+      "style": "021",
+      "total": 30,
+      "readable": 30,
+      "failed": []
+    },
+    {
+      "style": "023",
+      "total": 30,
+      "readable": 24,
+      "failed": [
+        {
+          "index": 21,
+          "error": "HTTPError"
+        },
+        {
+          "index": 22,
+          "error": "HTTPError"
+        },
+        {
+          "index": 24,
+          "error": "HTTPError"
+        },
+        {
+          "index": 26,
+          "error": "HTTPError"
+        },
+        {
+          "index": 27,
+          "error": "HTTPError"
+        },
+        {
+          "index": 29,
+          "error": "HTTPError"
+        }
+      ]
+    },
+    {
+      "style": "02412",
+      "total": 24,
+      "readable": 24,
+      "failed": []
+    },
+    {
+      "style": "02503",
+      "total": 28,
+      "readable": 28,
+      "failed": []
+    },
+    {
+      "style": "02505",
+      "total": 26,
+      "readable": 26,
+      "failed": []
+    },
+    {
+      "style": "02507",
+      "total": 26,
+      "readable": 26,
+      "failed": []
+    },
+    {
+      "style": "02508",
+      "total": 25,
+      "readable": 25,
+      "failed": []
+    },
+    {
+      "style": "026",
+      "total": 28,
+      "readable": 28,
+      "failed": []
+    },
+    {
+      "style": "026-1",
+      "total": 28,
+      "readable": 28,
+      "failed": []
+    },
+    {
+      "style": "02601",
+      "total": 36,
+      "readable": 36,
+      "failed": []
+    },
+    {
+      "style": "02602",
+      "total": 36,
+      "readable": 36,
+      "failed": []
+    },
+    {
+      "style": "02603",
+      "total": 36,
+      "readable": 36,
+      "failed": []
+    },
+    {
+      "style": "027",
+      "total": 28,
+      "readable": 28,
+      "failed": []
+    },
+    {
+      "style": "028",
+      "total": 27,
+      "readable": 27,
+      "failed": []
+    },
+    {
+      "style": "029",
+      "total": 24,
+      "readable": 24,
+      "failed": []
+    },
+    {
+      "style": "032",
+      "total": 33,
+      "readable": 33,
+      "failed": []
+    },
+    {
+      "style": "0323-1",
+      "total": 28,
+      "readable": 28,
+      "failed": []
+    },
+    {
+      "style": "0323F",
+      "total": 39,
+      "readable": 39,
+      "failed": []
+    },
+    {
+      "style": "033",
+      "total": 29,
+      "readable": 29,
+      "failed": []
+    },
+    {
+      "style": "038",
+      "total": 22,
+      "readable": 22,
+      "failed": []
+    },
+    {
+      "style": "050",
+      "total": 34,
+      "readable": 34,
+      "failed": []
+    },
+    {
+      "style": "052",
+      "total": 28,
+      "readable": 28,
+      "failed": []
+    },
+    {
+      "style": "053",
+      "total": 31,
+      "readable": 31,
+      "failed": []
+    },
+    {
+      "style": "055",
+      "total": 31,
+      "readable": 31,
+      "failed": []
+    },
+    {
+      "style": "058",
+      "total": 31,
+      "readable": 31,
+      "failed": []
+    },
+    {
+      "style": "0922",
+      "total": 23,
+      "readable": 23,
+      "failed": []
+    },
+    {
+      "style": "1026",
+      "total": 36,
+      "readable": 36,
+      "failed": []
+    },
+    {
+      "style": "117-1",
+      "total": 14,
+      "readable": 14,
+      "failed": []
+    },
+    {
+      "style": "1212",
+      "total": 30,
+      "readable": 30,
+      "failed": []
+    },
+    {
+      "style": "1628",
+      "total": 27,
+      "readable": 27,
+      "failed": []
+    },
+    {
+      "style": "1680",
+      "total": 36,
+      "readable": 29,
+      "failed": [
+        {
+          "index": 12,
+          "error": "HTTPError"
+        },
+        {
+          "index": 14,
+          "error": "HTTPError"
+        },
+        {
+          "index": 15,
+          "error": "HTTPError"
+        },
+        {
+          "index": 25,
+          "error": "HTTPError"
+        },
+        {
+          "index": 29,
+          "error": "HTTPError"
+        },
+        {
+          "index": 33,
+          "error": "HTTPError"
+        },
+        {
+          "index": 36,
+          "error": "HTTPError"
+        }
+      ]
+    },
+    {
+      "style": "1712",
+      "total": 16,
+      "readable": 16,
+      "failed": []
+    },
+    {
+      "style": "213",
+      "total": 32,
+      "readable": 32,
+      "failed": []
+    },
+    {
+      "style": "2132",
+      "total": 36,
+      "readable": 36,
+      "failed": []
+    },
+    {
+      "style": "2409",
+      "total": 24,
+      "readable": 23,
+      "failed": [
+        {
+          "index": 18,
+          "error": "HTTPError"
+        }
+      ]
+    },
+    {
+      "style": "2413",
+      "total": 25,
+      "readable": 25,
+      "failed": []
+    },
+    {
+      "style": "2415",
+      "total": 36,
+      "readable": 36,
+      "failed": []
+    },
+    {
+      "style": "2416",
+      "total": 35,
+      "readable": 28,
+      "failed": [
+        {
+          "index": 8,
+          "error": "HTTPError"
+        },
+        {
+          "index": 11,
+          "error": "HTTPError"
+        },
+        {
+          "index": 16,
+          "error": "HTTPError"
+        },
+        {
+          "index": 20,
+          "error": "HTTPError"
+        },
+        {
+          "index": 25,
+          "error": "HTTPError"
+        },
+        {
+          "index": 28,
+          "error": "HTTPError"
+        },
+        {
+          "index": 35,
+          "error": "HTTPError"
+        }
+      ]
+    },
+    {
+      "style": "2417",
+      "total": 36,
+      "readable": 33,
+      "failed": [
+        {
+          "index": 25,
+          "error": "HTTPError"
+        },
+        {
+          "index": 29,
+          "error": "HTTPError"
+        },
+        {
+          "index": 33,
+          "error": "HTTPError"
+        }
+      ]
+    },
+    {
+      "style": "2418",
+      "total": 35,
+      "readable": 28,
+      "failed": [
+        {
+          "index": 4,
+          "error": "HTTPError"
+        },
+        {
+          "index": 7,
+          "error": "HTTPError"
+        },
+        {
+          "index": 11,
+          "error": "HTTPError"
+        },
+        {
+          "index": 16,
+          "error": "HTTPError"
+        },
+        {
+          "index": 25,
+          "error": "HTTPError"
+        },
+        {
+          "index": 29,
+          "error": "HTTPError"
+        },
+        {
+          "index": 30,
+          "error": "HTTPError"
+        }
+      ]
+    },
+    {
+      "style": "25012",
+      "total": 26,
+      "readable": 26,
+      "failed": []
+    },
+    {
+      "style": "25016",
+      "total": 36,
+      "readable": 35,
+      "failed": [
+        {
+          "index": 27,
+          "error": "TimeoutError"
+        }
+      ]
+    },
+    {
+      "style": "25017",
+      "total": 36,
+      "readable": 36,
+      "failed": []
+    },
+    {
+      "style": "25019",
+      "total": 36,
+      "readable": 36,
+      "failed": []
+    },
+    {
+      "style": "25021",
+      "total": 28,
+      "readable": 28,
+      "failed": []
+    },
+    {
+      "style": "2505",
+      "total": 26,
+      "readable": 22,
+      "failed": [
+        {
+          "index": 11,
+          "error": "HTTPError"
+        },
+        {
+          "index": 15,
+          "error": "HTTPError"
+        },
+        {
+          "index": 17,
+          "error": "HTTPError"
+        },
+        {
+          "index": 23,
+          "error": "HTTPError"
+        }
+      ]
+    },
+    {
+      "style": "2509",
+      "total": 26,
+      "readable": 26,
+      "failed": []
+    },
+    {
+      "style": "2510",
+      "total": 25,
+      "readable": 25,
+      "failed": []
+    },
+    {
+      "style": "2520",
+      "total": 26,
+      "readable": 26,
+      "failed": []
+    },
+    {
+      "style": "2539",
+      "total": 22,
+      "readable": 22,
+      "failed": []
+    },
+    {
+      "style": "2550",
+      "total": 26,
+      "readable": 21,
+      "failed": [
+        {
+          "index": 3,
+          "error": "HTTPError"
+        },
+        {
+          "index": 9,
+          "error": "HTTPError"
+        },
+        {
+          "index": 14,
+          "error": "HTTPError"
+        },
+        {
+          "index": 19,
+          "error": "HTTPError"
+        },
+        {
+          "index": 22,
+          "error": "HTTPError"
+        }
+      ]
+    },
+    {
+      "style": "2558",
+      "total": 38,
+      "readable": 38,
+      "failed": []
+    },
+    {
+      "style": "2559",
+      "total": 24,
+      "readable": 24,
+      "failed": []
+    },
+    {
+      "style": "2560",
+      "total": 24,
+      "readable": 24,
+      "failed": []
+    },
+    {
+      "style": "2561",
+      "total": 29,
+      "readable": 29,
+      "failed": []
+    },
+    {
+      "style": "2568",
+      "total": 30,
+      "readable": 30,
+      "failed": []
+    },
+    {
+      "style": "2569",
+      "total": 19,
+      "readable": 19,
+      "failed": []
+    },
+    {
+      "style": "2571",
+      "total": 30,
+      "readable": 30,
+      "failed": []
+    },
+    {
+      "style": "2572",
+      "total": 29,
+      "readable": 29,
+      "failed": []
+    },
+    {
+      "style": "2573",
+      "total": 30,
+      "readable": 9,
+      "failed": [
+        {
+          "index": 1,
+          "error": "HTTPError"
+        },
+        {
+          "index": 3,
+          "error": "HTTPError"
+        },
+        {
+          "index": 6,
+          "error": "HTTPError"
+        },
+        {
+          "index": 7,
+          "error": "HTTPError"
+        },
+        {
+          "index": 8,
+          "error": "HTTPError"
+        },
+        {
+          "index": 9,
+          "error": "HTTPError"
+        },
+        {
+          "index": 11,
+          "error": "HTTPError"
+        },
+        {
+          "index": 12,
+          "error": "HTTPError"
+        },
+        {
+          "index": 14,
+          "error": "HTTPError"
+        },
+        {
+          "index": 15,
+          "error": "HTTPError"
+        },
+        {
+          "index": 16,
+          "error": "HTTPError"
+        },
+        {
+          "index": 17,
+          "error": "HTTPError"
+        },
+        {
+          "index": 19,
+          "error": "HTTPError"
+        },
+        {
+          "index": 20,
+          "error": "HTTPError"
+        },
+        {
+          "index": 21,
+          "error": "HTTPError"
+        },
+        {
+          "index": 22,
+          "error": "HTTPError"
+        },
+        {
+          "index": 24,
+          "error": "HTTPError"
+        },
+        {
+          "index": 25,
+          "error": "HTTPError"
+        },
+        {
+          "index": 26,
+          "error": "HTTPError"
+        },
+        {
+          "index": 29,
+          "error": "HTTPError"
+        },
+        {
+          "index": 30,
+          "error": "HTTPError"
+        }
+      ]
+    },
+    {
+      "style": "2575",
+      "total": 27,
+      "readable": 26,
+      "failed": [
+        {
+          "index": 4,
+          "error": "HTTPError"
+        }
+      ]
+    },
+    {
+      "style": "2576",
+      "total": 25,
+      "readable": 23,
+      "failed": [
+        {
+          "index": 20,
+          "error": "HTTPError"
+        },
+        {
+          "index": 23,
+          "error": "HTTPError"
+        }
+      ]
+    },
+    {
+      "style": "2577",
+      "total": 28,
+      "readable": 28,
+      "failed": []
+    },
+    {
+      "style": "2578",
+      "total": 25,
+      "readable": 25,
+      "failed": []
+    },
+    {
+      "style": "2579",
+      "total": 25,
+      "readable": 24,
+      "failed": [
+        {
+          "index": 23,
+          "error": "HTTPError"
+        }
+      ]
+    },
+    {
+      "style": "2580",
+      "total": 24,
+      "readable": 24,
+      "failed": []
+    },
+    {
+      "style": "2583",
+      "total": 32,
+      "readable": 10,
+      "failed": [
+        {
+          "index": 1,
+          "error": "HTTPError"
+        },
+        {
+          "index": 2,
+          "error": "HTTPError"
+        },
+        {
+          "index": 4,
+          "error": "HTTPError"
+        },
+        {
+          "index": 6,
+          "error": "HTTPError"
+        },
+        {
+          "index": 7,
+          "error": "HTTPError"
+        },
+        {
+          "index": 8,
+          "error": "HTTPError"
+        },
+        {
+          "index": 10,
+          "error": "HTTPError"
+        },
+        {
+          "index": 11,
+          "error": "HTTPError"
+        },
+        {
+          "index": 12,
+          "error": "HTTPError"
+        },
+        {
+          "index": 15,
+          "error": "HTTPError"
+        },
+        {
+          "index": 16,
+          "error": "HTTPError"
+        },
+        {
+          "index": 17,
+          "error": "HTTPError"
+        },
+        {
+          "index": 19,
+          "error": "HTTPError"
+        },
+        {
+          "index": 20,
+          "error": "HTTPError"
+        },
+        {
+          "index": 21,
+          "error": "HTTPError"
+        },
+        {
+          "index": 22,
+          "error": "HTTPError"
+        },
+        {
+          "index": 24,
+          "error": "HTTPError"
+        },
+        {
+          "index": 25,
+          "error": "HTTPError"
+        },
+        {
+          "index": 26,
+          "error": "HTTPError"
+        },
+        {
+          "index": 28,
+          "error": "HTTPError"
+        },
+        {
+          "index": 30,
+          "error": "HTTPError"
+        },
+        {
+          "index": 31,
+          "error": "HTTPError"
+        }
+      ]
+    },
+    {
+      "style": "2583-1",
+      "total": 26,
+      "readable": 26,
+      "failed": []
+    },
+    {
+      "style": "2585",
+      "total": 25,
+      "readable": 25,
+      "failed": []
+    },
+    {
+      "style": "2585-1",
+      "total": 24,
+      "readable": 24,
+      "failed": []
+    },
+    {
+      "style": "2588-1",
+      "total": 27,
+      "readable": 26,
+      "failed": [
+        {
+          "index": 16,
+          "error": "RemoteDisconnected"
+        }
+      ]
+    },
+    {
+      "style": "2593",
+      "total": 27,
+      "readable": 27,
+      "failed": []
+    },
+    {
+      "style": "2596",
+      "total": 33,
+      "readable": 33,
+      "failed": []
+    },
+    {
+      "style": "2597",
+      "total": 26,
+      "readable": 26,
+      "failed": []
+    },
+    {
+      "style": "2598",
+      "total": 29,
+      "readable": 29,
+      "failed": []
+    },
+    {
+      "style": "2599-1",
+      "total": 27,
+      "readable": 27,
+      "failed": []
+    },
+    {
+      "style": "2619",
+      "total": 30,
+      "readable": 30,
+      "failed": []
+    },
+    {
+      "style": "2623",
+      "total": 29,
+      "readable": 29,
+      "failed": []
+    },
+    {
+      "style": "2626",
+      "total": 31,
+      "readable": 31,
+      "failed": []
+    },
+    {
+      "style": "2627",
+      "total": 26,
+      "readable": 21,
+      "failed": [
+        {
+          "index": 8,
+          "error": "HTTPError"
+        },
+        {
+          "index": 9,
+          "error": "HTTPError"
+        },
+        {
+          "index": 19,
+          "error": "HTTPError"
+        },
+        {
+          "index": 23,
+          "error": "HTTPError"
+        },
+        {
+          "index": 24,
+          "error": "HTTPError"
+        }
+      ]
+    },
+    {
+      "style": "2628",
+      "total": 31,
+      "readable": 31,
+      "failed": []
+    },
+    {
+      "style": "2629",
+      "total": 30,
+      "readable": 30,
+      "failed": []
+    },
+    {
+      "style": "2633",
+      "total": 36,
+      "readable": 36,
+      "failed": []
+    },
+    {
+      "style": "2772",
+      "total": 36,
+      "readable": 36,
+      "failed": []
+    },
+    {
+      "style": "323",
+      "total": 28,
+      "readable": 28,
+      "failed": []
+    },
+    {
+      "style": "822",
+      "total": 22,
+      "readable": 22,
+      "failed": []
+    },
+    {
+      "style": "868",
+      "total": 24,
+      "readable": 24,
+      "failed": []
+    },
+    {
+      "style": "909",
+      "total": 36,
+      "readable": 35,
+      "failed": [
+        {
+          "index": 3,
+          "error": "HTTPError"
+        }
+      ]
+    },
+    {
+      "style": "923",
+      "total": 16,
+      "readable": 16,
+      "failed": []
+    },
+    {
+      "style": "924",
+      "total": 36,
+      "readable": 36,
+      "failed": []
+    },
+    {
+      "style": "931",
+      "total": 24,
+      "readable": 24,
+      "failed": []
+    },
+    {
+      "style": "9705",
+      "total": 36,
+      "readable": 36,
+      "failed": []
+    },
+    {
+      "style": "995",
+      "total": 16,
+      "readable": 16,
+      "failed": []
+    },
+    {
+      "style": "K502",
+      "total": 38,
+      "readable": 38,
+      "failed": []
+    },
+    {
+      "style": "K502D",
+      "total": 35,
+      "readable": 35,
+      "failed": []
+    },
+    {
+      "style": "ST-117",
+      "total": 7,
+      "readable": 7,
+      "failed": []
+    }
+  ]
+}

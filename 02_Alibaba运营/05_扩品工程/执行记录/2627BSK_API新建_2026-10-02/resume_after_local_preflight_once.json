@@ -1,0 +1,28 @@
+{
+  "state": "submitted_needs_readback",
+  "prior_execution": {
+    "style": "2627BSK",
+    "status": "STARTED_OUTCOME_UNKNOWN",
+    "started_at_utc": "2026-10-02T17:17:09.547960+00:00",
+    "manifest_sha256": "d9243546027b970c03df78717127a703cc415b067e32d92e660c734447b16763",
+    "xml_sha256": "34ae5f3644167b31729d96ecbcb1f0315b761c33680455b5b23f503723d30bc1",
+    "method": "alibaba.icbu.product.schema.add",
+    "new_product_only": true,
+    "other_products_written": []
+  },
+  "proof": {
+    "network_calls": 0,
+    "exception": "ValueError",
+    "local_preflight_message": "listing differentiation preflight: {\"status\": \"UNVERIFIED\", \"conflicts\": [], \"comparisons\": [], \"replacement_transition\": null, \"missing_evidence\": [\"hero_review\", \"search_intent\", \"source_identity\", \"hero_review_url_not_bound_to_payload\"], \"unassociated_catalog_ids\": [], \"scope\": \"Provided local catalog/source evidence only; unknown records are not duplicates or proof of global clearance. No authorization, traffic or platform-policy exemption inferred.\", \"payload_binding\": {\"model_number\": \"BQ-C2627\", \"hero_url\": \"//sc04.alicdn.com/kf/H1e96c860f1e34dda9b85116b5d6bc358J/286385890/H1e96c860f1e34dda9b85116b5d6bc358J.jpg\", \"title\": \"EVA Platform Clogs with Heel Strap and Closed Toe\"}, \"evidence_provenance\": null}"
+  },
+  "xml_sha256": "34ae5f3644167b31729d96ecbcb1f0315b761c33680455b5b23f503723d30bc1",
+  "actual_write_calls": 1,
+  "started_UTC": "2026-10-02T17:22:55.668496+00:00",
+  "product_id": "1601969885846",
+  "refs": {
+    "request_id": "213f5a2117909617845422844",
+    "trace_id": "0bb4a9bd17909617842926236e0d9c",
+    "message": null,
+    "error": null
+  }
+}

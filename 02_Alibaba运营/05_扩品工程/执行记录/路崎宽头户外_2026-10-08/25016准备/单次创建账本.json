@@ -1,0 +1,11 @@
+{
+  "status": "business_rejected",
+  "product_id": null,
+  "refs": {
+    "request_id": "213c933517914630762598654",
+    "trace_id": "0bb4a9bd17914630758552406e0d7b",
+    "message": "请求接口过于频繁触发限流",
+    "error": null
+  },
+  "attempted_at": "2026-10-08T12:37:50.454862+00:00"
+}

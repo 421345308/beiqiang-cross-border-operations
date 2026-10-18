@@ -31,13 +31,20 @@ def main():
             continue
         got = o.read_only_call(api, cfg, 'alibaba.icbu.product.get', {'product_id':pid,'language':'ENGLISH'})
         product = got['product']
-        if product['status'] != 'approved':
-            print(pid, 'WAIT_CURRENT_REVIEW', flush=True)
+        permitted=item.get('allowed_current_statuses',['approved'])
+        rejected_style=product['status']=='tbd'and'tbd'in permitted
+        if rejected_style:
+            assert slug=='public_style'and allowed[pid]=='HR030'
+            assert item['status_definition_source']=='https://developer.alibaba.com/doc2/apiDetail.htm?apiId=25439'
+        if product['status'] not in permitted:
+            print(pid, 'WAIT_CURRENT_REVIEW'if product['status']in ['new','modified']else'NON_APPROVED_REQUIRES_DIAGNOSIS', flush=True)
             continue
         rendered = o.read_only_call(api,cfg,'alibaba.icbu.product.schema.render',{'param_product_top_publish_request':{'product_id':int(pid),'cat_id':int(product['category_id']),'language':'en_US'}})
         schema = E.fromstring(rendered['data'])
         fields = ['icbuCatProp'] if slug == 'public_style' else ['scImages']
+        if rejected_style:fields.append('productTitle')
         root = o.pub.values_only(schema, operation='update', field_ids=fields)
+        if rejected_style:assert root.find("./field[@id='productTitle']/value").text==product['subject']
         if slug == 'public_style':
             assert allowed[pid] == 'HR030'
             definition = next(x for x in schema.findall("./field[@id='icbuCatProp']/fields/field") if x.get('name')=='Style')

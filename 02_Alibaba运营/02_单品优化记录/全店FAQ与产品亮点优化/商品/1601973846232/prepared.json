@@ -1,0 +1,408 @@
+{
+  "keyword_input": null,
+  "differentiation_review": null,
+  "category_id": 201334413,
+  "operation": "update",
+  "inventory_input": null,
+  "model_serialization": null,
+  "target_product_id": "1601973846232",
+  "field_ids": [
+    "companyFaqDesc",
+    "textDesc"
+  ],
+  "dependency_ids": [
+    "productDescType"
+  ],
+  "xml": "<itemSchema><field id=\"textDesc\" name=\"Product Highlights\" type=\"input\"><value>Wide toe-box lace-up mesh walking shoes with fine diagonal side ridges and a slotted side overlay. The detailed side construction and scalloped sole create a distinctive summer casual sneaker profile. Black, Light Grey and White support neutral footwear assortments.\nBlack, Light Grey, White; EU 36-48 provide color and size choices for wholesale assortments.</value></field><field id=\"companyFaqDesc\" name=\"FAQs\" type=\"multiComplex\"><complex-values><field id=\"question\" type=\"input\"><value>What are the available colors and sizes?</value></field><field id=\"answers\" type=\"input\"><value>Black, Light Grey, White; EU 36-48. List the pair quantity for each color and EU size to request your assortment.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>What are the key style details?</value></field><field id=\"answers\" type=\"input\"><value>A mesh low-top upper, fine diagonal side ridges, a slotted side overlay and a scalloped outsole profile. The closure uses conventional laces.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>What closure does this sneaker use?</value></field><field id=\"answers\" type=\"input\"><value>Conventional laces adjust the mesh low-top upper. The fine diagonal ridges and slotted side overlay are design details rather than a separate closure system.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>How should I choose a size?</value></field><field id=\"answers\" type=\"input\"><value>Request an EU sample size using your foot length and the socks you intend to wear. During the fitting, assess toe space, heel fit and the upper closure before choosing the bulk size assortment.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>What is the minimum order for the original style?</value></field><field id=\"answers\" type=\"input\"><value>The original-style wholesale minimum is 2 pairs. Quantity pricing is shown on this page. Logo, material or custom packaging requests are quoted separately from the original-style order.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>How can I arrange a sample?</value></field><field id=\"answers\" type=\"input\"><value>Request a sample quotation with your preferred color, EU size and delivery postcode. The quotation will include the sample charge, shipping cost and proposed dispatch schedule.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>What should I send for a branding or packaging quotation?</value></field><field id=\"answers\" type=\"input\"><value>Send your logo artwork, preferred placement, packaging brief and order quantity. We can review the brief for this style and provide a proposal with the applicable minimum, cost and sample process.</value></field></complex-values><complex-values><field id=\"question\" type=\"input\"><value>How can I get a delivered quotation and shipment schedule?</value></field><field id=\"answers\" type=\"input\"><value>Send the color-size quantities and destination postcode or port, plus any packaging request. The quotation separates product cost from freight and sets out the dispatch plan and estimated transit time for your chosen shipping method.</value></field></complex-values></field><field id=\"productDescType\" name=\"Product description\" type=\"singleCheck\"><value>4</value></field></itemSchema>",
+  "expected_fields": {
+    "textDesc": [
+      "field",
+      [
+        [
+          "id",
+          "textDesc"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Wide toe-box lace-up mesh walking shoes with fine diagonal side ridges and a slotted side overlay. The detailed side construction and scalloped sole create a distinctive summer casual sneaker profile. Black, Light Grey and White support neutral footwear assortments.\nBlack, Light Grey, White; EU 36-48 provide color and size choices for wholesale assortments.",
+          []
+        ]
+      ]
+    ],
+    "companyFaqDesc": [
+      "field",
+      [
+        [
+          "id",
+          "companyFaqDesc"
+        ]
+      ],
+      "",
+      [
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "What are the available colors and sizes?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Black, Light Grey, White; EU 36-48. List the pair quantity for each color and EU size to request your assortment.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "What are the key style details?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "A mesh low-top upper, fine diagonal side ridges, a slotted side overlay and a scalloped outsole profile. The closure uses conventional laces.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "What closure does this sneaker use?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Conventional laces adjust the mesh low-top upper. The fine diagonal ridges and slotted side overlay are design details rather than a separate closure system.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "How should I choose a size?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Request an EU sample size using your foot length and the socks you intend to wear. During the fitting, assess toe space, heel fit and the upper closure before choosing the bulk size assortment.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "What is the minimum order for the original style?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "The original-style wholesale minimum is 2 pairs. Quantity pricing is shown on this page. Logo, material or custom packaging requests are quoted separately from the original-style order.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "How can I arrange a sample?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Request a sample quotation with your preferred color, EU size and delivery postcode. The quotation will include the sample charge, shipping cost and proposed dispatch schedule.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "What should I send for a branding or packaging quotation?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Send your logo artwork, preferred placement, packaging brief and order quantity. We can review the brief for this style and provide a proposal with the applicable minimum, cost and sample process.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "complex-values",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "question"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "How can I get a delivered quotation and shipment schedule?",
+                  []
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "answers"
+                ]
+              ],
+              "",
+              [
+                [
+                  "value",
+                  [],
+                  "Send the color-size quantities and destination postcode or port, plus any packaging request. The quotation separates product cost from freight and sets out the dispatch plan and estimated transit time for your chosen shipping method.",
+                  []
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "prepared_from_current_schema": true,
+  "task_pack": null,
+  "replacement_plan": null,
+  "schema_provenance": {
+    "schema_request_id": "0bbb637a17916945455546769",
+    "schema_acquired_at": "2026-10-11T04:55:46.868125+00:00",
+    "current_schema_sha256": "eb5f92801f88a6c98ac694b67d8bdb0bfe3655f166fd0ba4a3a63eaeeffbed1c",
+    "source_evidence": [
+      "copy.json",
+      "before_get.json",
+      "../../../../05_扩品工程/执行记录/路崎宽头户外_2026-10-08/053准备/经营任务包.md",
+      "../../../../05_扩品工程/执行记录/路崎宽头户外_2026-10-08/首批三款图片角色与选词.json",
+      "../../../../00_运营SOP/国际站商品全生命周期SOP.md"
+    ]
+  }
+}

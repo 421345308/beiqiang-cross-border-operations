@@ -1,0 +1,389 @@
+{
+  "candidate": "xingjue_2565137",
+  "source_artno": "S8759",
+  "supplier": "星爵鞋业",
+  "source_url": "https://xingjue.sooxie.com/detail/2565137",
+  "source_price_cny": 75,
+  "colors": [
+    "Black",
+    "Brown"
+  ],
+  "source_color_labels": [
+    "黑色",
+    "棕色"
+  ],
+  "sizes": [
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44
+  ],
+  "upper": "Other",
+  "lining": "Other",
+  "midsole": "Other",
+  "outsole": "Other",
+  "closure": "Slip-on",
+  "style": [
+    "Penny Loafers",
+    "Casual"
+  ],
+  "seasons": [
+    "All Seasons"
+  ],
+  "category_id": 202240835,
+  "local_intent_candidates": [
+    "光泽鞋面/低跟套脚乐福鞋"
+  ],
+  "materials_evidence": [
+    "Current29 source photographs and enquiry entry support real style/colour/size, not specific component chemistry. Do not infer genuine leather/patent leather/rubber from surface sheen."
+  ],
+  "titles": {
+    "A": "Glossy Penny Loafers with Apron Toe Stitching and Low Heel for Business Casual Wear",
+    "B": "Slip-On Penny Loafer Shoes with Glossy Upper and Defined Sole Edge for Everyday Footwear",
+    "C": "Wholesale Penny Loafers with Slip-On Opening and Apron Toe Detail for Office Collections"
+  },
+  "keywords": [
+    "Glossy Penny Loafers",
+    "Slip On Loafer Shoes",
+    "Business Casual Loafers"
+  ],
+  "custom": [
+    "Shoe Profile",
+    "Glossy penny loafer; slip-on opening; apron toe; low heel"
+  ],
+  "highlights": "Classic penny-style vamp: A strap across the upper and an apron-shaped stitched toe give this loafer a recognisable dress-casual profile.\n\nGlossy upper finish: The photographed sheen adds a dressier appearance to simple trousers and coordinated office outfits.\n\nSlip-on opening: The lace-free upper and low collar offer a straightforward footwear choice for buyers building a loafer range.\n\nDefined sole and heel: A pronounced edge and low block-style heel distinguish this shape from flat driving shoes and fashion platform loafers.\n\nBlack and Brown options: EU38-44 sizes are listed. Send colour-size quantities, packing preference and destination for a wholesale quotation.",
+  "dedup": "Exact source URL/model absent. Visually compared current HR01026NC0086 driving-puck sole and HR044L795 thick fashion platform; this low block-heel/defined-edge dress loafer differs structurally. Marshall-prop photos25/26 excluded.",
+  "gender_scope": "Public title does not give a specific gender; no gender assertion added to buyer titles.",
+  "target_ids": {
+    "A": "1601943627431",
+    "B": "1601943561786"
+  },
+  "source_assets_root": "01_产品资产/01_原始数据包/HR036_S8759",
+  "source_date": "2026-10-13",
+  "feature": "Fashion Trend",
+  "fx_cny_per_usd": 6.6837,
+  "tiers": [
+    [
+      2,
+      "16.84"
+    ],
+    [
+      50,
+      "15.71"
+    ],
+    [
+      100,
+      "14.59"
+    ]
+  ],
+  "page_state": "LOCAL_DRAFT",
+  "assets_layout": {
+    "M1": {
+      "buyer_question": "What is the exact offered shoe?",
+      "title": null,
+      "subtitle": "",
+      "photos": [
+        {
+          "index": 27,
+          "box": [
+            15,
+            15,
+            985,
+            985
+          ]
+        }
+      ],
+      "text": []
+    },
+    "M2": {
+      "buyer_question": "How does it look when worn?",
+      "title": "Dress-casual slip-on",
+      "subtitle": "Penny-style strap and an apron-shaped toe.",
+      "photos": [
+        {
+          "index": 3,
+          "box": [
+            45,
+            200,
+            955,
+            945
+          ]
+        }
+      ],
+      "text": []
+    },
+    "M3": {
+      "buyer_question": "How does the sole and heel look?",
+      "title": "Defined sole & low heel",
+      "subtitle": "A pronounced sole edge and a block-style heel.",
+      "photos": [
+        {
+          "index": 22,
+          "box": [
+            45,
+            200,
+            955,
+            945
+          ]
+        }
+      ],
+      "text": []
+    },
+    "M4": {
+      "buyer_question": "Which colour and EU options can I request?",
+      "title": "Colour & EU options",
+      "subtitle": "Choose the colour-size quantities for your order.",
+      "photos": [
+        {
+          "index": 27,
+          "box": [
+            45,
+            200,
+            475,
+            835
+          ]
+        },
+        {
+          "index": 28,
+          "box": [
+            525,
+            200,
+            955,
+            835
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "Black",
+          "xy": [
+            65,
+            845
+          ],
+          "size": 25
+        },
+        {
+          "value": "Brown",
+          "xy": [
+            545,
+            845
+          ],
+          "size": 25
+        },
+        {
+          "value": "EU 38-44",
+          "xy": [
+            45,
+            920
+          ],
+          "size": 32
+        }
+      ]
+    },
+    "M5": {
+      "buyer_question": "What does the finish and opening look like?",
+      "title": "Glossy upper detail",
+      "subtitle": "Lace-free opening and visible apron-toe stitching.",
+      "photos": [
+        {
+          "index": 18,
+          "box": [
+            45,
+            200,
+            955,
+            945
+          ]
+        }
+      ],
+      "text": []
+    },
+    "D1": {
+      "buyer_question": "What gives the vamp its loafer shape?",
+      "title": "Penny-style vamp strap",
+      "subtitle": "Glossy finish and stitched apron-toe outline.",
+      "photos": [
+        {
+          "index": 17,
+          "box": [
+            45,
+            210,
+            955,
+            1060
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "Actual Black shoe, shown from above.",
+          "xy": [
+            45,
+            1140
+          ],
+          "size": 25
+        }
+      ]
+    },
+    "D2": {
+      "buyer_question": "What is the sole profile?",
+      "title": "Sole edge & heel profile",
+      "subtitle": "A defined edge runs beneath the upper.",
+      "photos": [
+        {
+          "index": 22,
+          "box": [
+            45,
+            210,
+            955,
+            1060
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "Low block-style heel, shown in Brown.",
+          "xy": [
+            45,
+            1140
+          ],
+          "size": 25
+        }
+      ]
+    },
+    "D3": {
+      "buyer_question": "How does it pair with daily outfits?",
+      "title": "Simple loafer styling",
+      "subtitle": "Slip-on footwear for business-casual assortments.",
+      "photos": [
+        {
+          "index": 5,
+          "box": [
+            45,
+            220,
+            485,
+            1050
+          ]
+        },
+        {
+          "index": 13,
+          "box": [
+            515,
+            220,
+            955,
+            1050
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "Black and Brown in actual wearing photographs.",
+          "xy": [
+            45,
+            1140
+          ],
+          "size": 25
+        }
+      ]
+    },
+    "D4": {
+      "buyer_question": "Which colour and EU options can I request?",
+      "title": "Colour & EU options",
+      "subtitle": "Choose the colour-size quantities for your order.",
+      "photos": [
+        {
+          "index": 27,
+          "box": [
+            45,
+            200,
+            475,
+            1085
+          ]
+        },
+        {
+          "index": 28,
+          "box": [
+            525,
+            200,
+            955,
+            1085
+          ]
+        }
+      ],
+      "text": [
+        {
+          "value": "Black",
+          "xy": [
+            65,
+            1095
+          ],
+          "size": 25
+        },
+        {
+          "value": "Brown",
+          "xy": [
+            545,
+            1095
+          ],
+          "size": 25
+        },
+        {
+          "value": "EU 38-44",
+          "xy": [
+            45,
+            1170
+          ],
+          "size": 32
+        }
+      ]
+    },
+    "SKU_BLACK": {
+      "buyer_question": "Which actual colour is this SKU?",
+      "title": null,
+      "subtitle": "",
+      "photos": [
+        {
+          "index": 27,
+          "box": [
+            25,
+            25,
+            975,
+            975
+          ]
+        }
+      ],
+      "text": []
+    },
+    "SKU_BROWN": {
+      "buyer_question": "Which actual colour is this SKU?",
+      "title": null,
+      "subtitle": "",
+      "photos": [
+        {
+          "index": 28,
+          "box": [
+            25,
+            25,
+            975,
+            975
+          ]
+        }
+      ],
+      "text": []
+    }
+  },
+  "source_id": "src-hr-hr036-s8759",
+  "source_evidence": [
+    "01_产品资产/01_原始数据包/HR036_S8759/source.json",
+    "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR036/素材清单.json"
+  ],
+  "procurement_capability": "CURRENT_REAL_SHOE_AND_PROCUREMENT_ENTRY_VERIFIED_NOT_ORDER_STOCK",
+  "company_faq_source": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/通用FAQ与公司简介.json",
+  "do_not_claim": [
+    "physical stock",
+    "tested slip resistance",
+    "medical comfort",
+    "unverified midsole material"
+  ]
+}

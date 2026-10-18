@@ -1,0 +1,27 @@
+{
+  "operation": "update",
+  "product_id": "1601969861694",
+  "category_id": 201334413,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "copy.json",
+    "before_get.json",
+    "../../../../05_扩品工程/执行记录/A67_API新建_2026-10-02/facts_and_copy.json",
+    "../../../../../../../Documents/Codex/2026-10-02/task-8/A67/originals/S13.jpg",
+    "current_get.json",
+    "../../../../00_运营SOP/国际站商品全生命周期SOP.md"
+  ],
+  "current_schema": "current_schema.xml",
+  "current_schema_sha256": "54f3dee08123179aa5f605761334e493c2cb3a42d0060dfa21803a71605cc0ba",
+  "schema_request_id": "0b830ecc17917372567101908",
+  "schema_acquired_at": "2026-10-11T16:47:33.946030+00:00",
+  "payload_xml": "payload.xml",
+  "field_ids": [
+    "textDesc",
+    "companyFaqDesc"
+  ],
+  "dependency_ids": [
+    "productDescType"
+  ],
+  "observed_model": "BQ-CA67"
+}

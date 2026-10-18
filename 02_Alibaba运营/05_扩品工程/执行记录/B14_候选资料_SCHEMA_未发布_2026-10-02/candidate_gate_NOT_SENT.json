@@ -1,0 +1,139 @@
+{
+  "source": "https://baoduo.sooxie.com/detail/2556611",
+  "article": "B14",
+  "stage": "PREPARATION_PAUSED_DEMAND_EVIDENCE",
+  "structure": "Closed round toe, complete heel, slip-on opening, bow-front ornament, low wedge heel; no instep fastening strap",
+  "current_source_facts": {
+    "CNY": 20,
+    "colors": [
+      "Black"
+    ],
+    "sizes": [
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40"
+    ],
+    "upper": "PU",
+    "lining": "PU",
+    "midsole": "Not specified",
+    "outsole": "Not specified",
+    "origin": "Not specified",
+    "heel_height_cm": null
+  },
+  "sku_count": 6,
+  "photo_discrepancy": "Original pictures also show cream. Current source SKU lists Black only; cream is excluded from sale and prepared image plans.",
+  "originals_downloaded": 18,
+  "schema": {
+    "category": 201152005,
+    "name": "Flats",
+    "required": {
+      "p-1": {
+        "name": "Place of Origin",
+        "custom_input": true
+      },
+      "p-20700": {
+        "name": "Midsole Material",
+        "custom_input": true
+      },
+      "p-191290426": {
+        "name": "Outsole Material",
+        "custom_input": true
+      },
+      "p-191290430": {
+        "name": "Lining Material",
+        "custom_input": true
+      },
+      "p-210194982": {
+        "name": "Upper Material",
+        "custom_input": false
+      }
+    },
+    "planned_values": {
+      "p-1": "Not specified",
+      "p-20700": "Not specified",
+      "p-191290426": "Not specified",
+      "p-191290430": "PU 3323086",
+      "p-210194982": "PU 3323086"
+    }
+  },
+  "pricing_reference": {
+    "FX_CNY_per_USD": "6.6987",
+    "MOQ_pairs": 2,
+    "tiers": [
+      {
+        "minimum_pairs": 2,
+        "USD": "4.48"
+      },
+      {
+        "minimum_pairs": 50,
+        "USD": "4.18"
+      },
+      {
+        "minimum_pairs": 100,
+        "USD": "3.89"
+      }
+    ],
+    "status": "Not submitted; project reference pending final quoted currency check"
+  },
+  "dedup": "Independent local source ID/article check: NO_SAME_SOURCE_PUBLICATION_FOUND. Not an all-store image-identity guarantee.",
+  "demand_gate": {
+    "result": "INSUFFICIENT_EXACT_STRUCTURE_EVIDENCE",
+    "searched_at_UTC": "2026-10-02T15:26:39.417837+00:00",
+    "sources": [
+      {
+        "url": "https://www.naturalizer.com/product/womens-mavis-bow-pump-3030689",
+        "limit": "Bow pumps exist; not verified low wedge identical structure or B14 demand."
+      },
+      {
+        "url": "https://www.macys.com/shop/product/soul-naturalizer-about-time-wedge-pumps?ID=19363115",
+        "limit": "Wedge pump customer feedback exists; not verified bow-front identical structure or bestseller evidence."
+      }
+    ],
+    "buyer_problem_hypothesis": "Slip-on dress-casual assortment with low wedge; fitting/heel slip needs inquiry, no tested comfort or work performance promised.",
+    "next": "Parent overseas research may establish a distinct buyer problem and same-structure demand. Do not infer popularity from price, intact photos or unrelated Crocs/Target styles."
+  },
+  "title_hypothesis": "Women PU Round-Toe Slip-On Shoes with Bow Detail and Low Wedge Heel",
+  "keywords_hypotheses": [
+    "women bow wedge shoes",
+    "round toe slip on wedge shoes",
+    "PU low wedge casual shoes"
+  ],
+  "keyword_search_volumes": null,
+  "official_image_uploads": 0,
+  "schema_add_count": 0,
+  "inventory_writes": 0,
+  "finished_image_pack": false,
+  "prohibited_claims": [
+    "Verified bestseller",
+    "Waterproof",
+    "Tested anti-slip",
+    "Nursing or workplace certification",
+    "All-day comfort guarantee",
+    "Guaranteed stock",
+    "Fixed dispatch time"
+  ],
+  "independent_original_visual_gate": {
+    "result": "PASS_WITH_SOURCE_VARIATION_NOTICE",
+    "safe_black_originals": [
+      0,
+      6,
+      9,
+      10,
+      11,
+      14,
+      15
+    ],
+    "not_used": [
+      8,
+      16,
+      17
+    ],
+    "readable_marks": "07 size38;16 decorative L-heart-VE outsole lettering, not identified as a third-party brand",
+    "source_variation_notice": "Original16 states factories may differ in sole pattern/side pattern/sole colour/lining/heel seam and random shipment. Do not promise uniform outsole pattern or ignore batch confirmation. Current material attribution comes only from current product attributes.",
+    "reviewer": "review_5998_readonly",
+    "writes": 0
+  }
+}

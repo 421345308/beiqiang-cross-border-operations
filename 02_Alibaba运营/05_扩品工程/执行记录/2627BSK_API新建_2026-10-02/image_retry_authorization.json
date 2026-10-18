@@ -1,0 +1,10 @@
+{
+  "source": "Parent explicit instruction after two read-only reconciliations: one controlled retry each for M2/M3 using identical bytes/hash/filename; no deletion or expanded batch",
+  "maximum_retry_count_each": 1,
+  "scope": [
+    "M2",
+    "M3"
+  ],
+  "reason": "Image-bank late success may create redundant media only, not duplicate product",
+  "product_schema_add_rule": "Once only; unknown add must never blindly resend"
+}

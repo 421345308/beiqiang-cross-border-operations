@@ -1,0 +1,122 @@
+{
+  "mapping_file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\HR系列真实货源改造_2026-09-21\\HR普通品一对一待替换映射_2026-10-02.json",
+  "rows": [
+    {
+      "candidate": "M001",
+      "old_listing": "HR053-A",
+      "old_product_id": "1601943687648",
+      "new_product_id": null,
+      "owner": "task8候选制作/平台owner父任务冻结",
+      "source_url": "https://baiyou877.sooxie.com/detail/2482094",
+      "match_type": "STRATEGIC_RETIRE_AND_REAL_SOURCE_REPLACEMENT_NOT_IDENTICAL_SHOE",
+      "selection_reason": "旧通用男鞋HOLD_SOURCE，候选实款闭头后空便鞋；按相似休闲采购方向重新建事实，不声称原鞋完全相同。人群以源款事实决定。",
+      "old_title_snapshot": "Men's Shoes Model HR053-A",
+      "growth_tier": "普通品",
+      "growth_observed_at_utc": "2026-10-02 00:48:31",
+      "classification_source": "02_Alibaba运营/05_扩品工程/执行记录/266_API完整新建_2026-10-02/HR_201_growth_verified_register_2026-10-02.csv",
+      "classification_library_file_id": "libfile_aefe2a71cedc8191aeddbdb20d21283c",
+      "candidate_source": "02_Alibaba运营/05_扩品工程/执行记录/266_API完整新建_2026-10-02/HR_58_普通候选_2026-10-02.csv",
+      "protected": false,
+      "retained_siblings": [
+        {
+          "listing_id": "HR053-B",
+          "product_id": "1601943638954",
+          "growth_tier": "普通品",
+          "disposition": "KEEP_UNCHANGED"
+        },
+        {
+          "listing_id": "HR053-C",
+          "product_id": "1601943784084",
+          "growth_tier": "潜力优品",
+          "disposition": "KEEP_UNCHANGED"
+        }
+      ],
+      "authorization_scope": "父任务2026-10-02明确授权建立一对一待替换目标；本任务不下架",
+      "reservation_status": "RESERVED_PENDING_OWNER_ACK_AND_FINAL_TARGET_READ",
+      "new_acceptance": "LOOKUP_LATEST_OWNER_RECEIPTS",
+      "old_action": "NOT_SENT_BY_TASK8",
+      "whole_family_complete": false,
+      "next_action": "owner确认目标未被另任务占用；仅核目标最新分类/关联价值和新款完成门后交父任务授权收尾，不重扫175全店",
+      "owner_ack": "2627BSK/M001 task8 confirms own prepared-source scope; A6607 conditional branded-child-segment candidate only, no new publication owner falsely assigned."
+    },
+    {
+      "candidate": "2627BSK",
+      "old_listing": "HR060-A",
+      "old_product_id": "1601943755354",
+      "new_product_id": null,
+      "owner": "task8当前优先生产owner",
+      "source_url": "https://huohuo.sooxie.com/detail/2557137",
+      "match_type": "STRATEGIC_RETIRE_AND_REAL_SOURCE_REPLACEMENT_NOT_IDENTICAL_SHOE",
+      "selection_reason": "旧通用女鞋HOLD_SOURCE，新平台洞孔旋转带实款与35–40配对标签适合先做采购方向试验；方向相邻不证明本款女式或海外销量。",
+      "old_title_snapshot": "Women's Shoes Model HR060-A",
+      "growth_tier": "普通品",
+      "growth_observed_at_utc": "2026-10-02 00:48:31",
+      "classification_source": "02_Alibaba运营/05_扩品工程/执行记录/266_API完整新建_2026-10-02/HR_201_growth_verified_register_2026-10-02.csv",
+      "classification_library_file_id": "libfile_aefe2a71cedc8191aeddbdb20d21283c",
+      "candidate_source": "02_Alibaba运营/05_扩品工程/执行记录/266_API完整新建_2026-10-02/HR_58_普通候选_2026-10-02.csv",
+      "protected": false,
+      "retained_siblings": [
+        {
+          "listing_id": "HR060-B",
+          "product_id": "1601943705620",
+          "growth_tier": "潜力优品",
+          "disposition": "KEEP_UNCHANGED"
+        },
+        {
+          "listing_id": "HR060-C",
+          "product_id": "1601943663897",
+          "growth_tier": "未核验",
+          "disposition": "KEEP_UNCHANGED"
+        }
+      ],
+      "authorization_scope": "父任务2026-10-02明确授权建立一对一待替换目标；本任务不下架",
+      "reservation_status": "RESERVED_PENDING_OWNER_ACK_AND_FINAL_TARGET_READ",
+      "new_acceptance": "LOOKUP_LATEST_OWNER_RECEIPTS",
+      "old_action": "NOT_SENT_BY_TASK8",
+      "whole_family_complete": false,
+      "next_action": "owner确认目标未被另任务占用；仅核目标最新分类/关联价值和新款完成门后交父任务授权收尾，不重扫175全店",
+      "owner_ack": "2627BSK/M001 task8 confirms own prepared-source scope; A6607 conditional branded-child-segment candidate only, no new publication owner falsely assigned."
+    },
+    {
+      "candidate": "A6607",
+      "old_listing": "HR055-C",
+      "old_product_id": "1601943784098",
+      "new_product_id": null,
+      "owner": "父任务统筹；task8已取证，后续owner待分配",
+      "source_url": "https://thxy.sooxie.com/detail/2544182",
+      "match_type": "STRATEGIC_RETIRE_AND_REAL_SOURCE_REPLACEMENT_NOT_IDENTICAL_SHOE",
+      "selection_reason": "仅预留普通HOLD_SOURCE旧位；新为儿童24–35配对码，与旧男鞋用途不同。明确属于新细分方向试验，不能称同款/同意图匹配；儿童方向与合法品牌销售路径需父任务决策。",
+      "old_title_snapshot": "Men's Shoes Model HR055-C",
+      "growth_tier": "普通品",
+      "growth_observed_at_utc": "2026-10-02 00:48:31",
+      "classification_source": "02_Alibaba运营/05_扩品工程/执行记录/266_API完整新建_2026-10-02/HR_201_growth_verified_register_2026-10-02.csv",
+      "classification_library_file_id": "libfile_aefe2a71cedc8191aeddbdb20d21283c",
+      "candidate_source": "02_Alibaba运营/05_扩品工程/执行记录/266_API完整新建_2026-10-02/HR_58_普通候选_2026-10-02.csv",
+      "protected": false,
+      "retained_siblings": [
+        {
+          "listing_id": "HR055-A",
+          "product_id": "1601943672753",
+          "growth_tier": "潜力优品",
+          "disposition": "KEEP_UNCHANGED"
+        },
+        {
+          "listing_id": "HR055-B",
+          "product_id": "1601943711519",
+          "growth_tier": "潜力优品",
+          "disposition": "KEEP_UNCHANGED"
+        }
+      ],
+      "authorization_scope": "父任务2026-10-02明确授权建立一对一待替换目标；本任务不下架",
+      "reservation_status": "RESERVED_PENDING_CHILD_SEGMENT_AND_BRAND_ROUTE_DECISION",
+      "new_acceptance": "LOOKUP_LATEST_OWNER_RECEIPTS",
+      "old_action": "NOT_SENT_BY_TASK8",
+      "whole_family_complete": false,
+      "next_action": "owner确认目标未被另任务占用；仅核目标最新分类/关联价值和新款完成门后交父任务授权收尾，不重扫175全店",
+      "owner_ack": "2627BSK/M001 task8 confirms own prepared-source scope; A6607 conditional branded-child-segment candidate only, no new publication owner falsely assigned."
+    }
+  ],
+  "invented_new_mappings": 0,
+  "off_owner": "Parent unique old-listing off owner; nottask8",
+  "source_not_identical_old_product": true
+}

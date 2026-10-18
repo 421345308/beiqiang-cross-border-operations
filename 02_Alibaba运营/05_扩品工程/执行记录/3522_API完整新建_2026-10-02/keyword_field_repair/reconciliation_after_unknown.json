@@ -1,0 +1,13 @@
+{
+  "observed_at": "2026-10-02T16:01:47.104534+00:00",
+  "conclusion": "UNKNOWN_STOP_NO_RETRY",
+  "request_ledger": "write_once_ledger.json",
+  "after_unknown_first_get_request_id": "21501b8d17909564258394190",
+  "after_unknown_first_formal_status": "approved/Y",
+  "after_unknown_first_keywords": [
+    ""
+  ],
+  "after_unknown_first_modified_at": "2026-10-02 23:34:14",
+  "later_independent_write": "Cow suede schema.update successful request0bab02fc17909566094071922; latest modified/N and Cow suede formal property confirmed",
+  "limits": "No observable keyword value after unknown attempt is not proof of uncommitted write. Do not automatically replay field-update or submit another keyword mutation without reconciling this ledger."
+}

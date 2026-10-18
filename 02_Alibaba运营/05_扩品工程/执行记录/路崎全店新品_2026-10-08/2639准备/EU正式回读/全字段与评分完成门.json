@@ -1,0 +1,884 @@
+{
+  "product_id": "1601973586995",
+  "observed_at": "2026-10-08T10:05:53.327421+00:00",
+  "schema_request_id": "0b830ecc17914533490462800",
+  "checks": {
+    "icbuCatProp": {
+      "status": "MATCH",
+      "task_specific_semantic_review": {
+        "passed": true,
+        "reason": "Current exact values compared; ignore only reassigned negative category markers, numeric formatting and logistics display metadata respectively."
+      }
+    },
+    "productTitle": {
+      "status": "MATCH"
+    },
+    "scImages": {
+      "status": "MISMATCH_OR_NOOP",
+      "task_specific_semantic_review": {
+        "passed": true,
+        "reason": "Each indexed main field has the same Alibaba asset key; current render returns 350x350 thumbnail URLs and zero fileIds. Independent product.get preserves correct full-image keys/order. Original official-bank IDs remain in submitted payload, never copied from zero-valued render.",
+        "submitted_indexed_asset_keys": {
+          "scImages_0": "H3cd629ac2702456ea5a471dc7f26b065J",
+          "scImages_1": "Hf34fcbb88f514ac6bb93d958253ccd8fK",
+          "scImages_2": "H070e504f056843178c41979e8b2d6306C",
+          "scImages_3": "Heb6974388d7e49e29b7d3b23433eaa7av",
+          "scImages_4": "Hedd4271865714cabb92e147f7fc2ace1W",
+          "scImages_5": "S6c8cb1d46d8c4b018cf07f5cab50c1adi"
+        },
+        "rendered_indexed_asset_keys": {
+          "scImages_1": "Hf34fcbb88f514ac6bb93d958253ccd8fK",
+          "scImages_2": "H070e504f056843178c41979e8b2d6306C",
+          "scImages_0": "H3cd629ac2702456ea5a471dc7f26b065J",
+          "scImages_5": "S6c8cb1d46d8c4b018cf07f5cab50c1adi",
+          "scImages_3": "Heb6974388d7e49e29b7d3b23433eaa7av",
+          "scImages_4": "Hedd4271865714cabb92e147f7fc2ace1W"
+        },
+        "limits": "Confirms formal image identity/order only; actual public pixels and interactions remain pending."
+      }
+    },
+    "detailImage": {
+      "status": "MATCH"
+    },
+    "textDesc": {
+      "status": "MATCH"
+    },
+    "companyDesc": {
+      "status": "MATCH"
+    },
+    "companyFaqDesc": {
+      "status": "MATCH"
+    },
+    "companyImage": {
+      "status": "MATCH"
+    },
+    "catId": {
+      "status": "MATCH"
+    },
+    "priceUnit": {
+      "status": "MATCH"
+    },
+    "saleType": {
+      "status": "MATCH"
+    },
+    "scPrice": {
+      "status": "MATCH"
+    },
+    "minOrderQuantity": {
+      "status": "MATCH"
+    },
+    "pkgWeight": {
+      "status": "MATCH",
+      "task_specific_semantic_review": {
+        "passed": true,
+        "reason": "Current exact values compared; ignore only reassigned negative category markers, numeric formatting and logistics display metadata respectively."
+      }
+    },
+    "productDescType": {
+      "status": "MATCH"
+    },
+    "logisticsProperty": {
+      "status": "MISMATCH_OR_NOOP",
+      "task_specific_semantic_review": {
+        "passed": true,
+        "reason": "Current exact values compared; ignore only reassigned negative category markers, numeric formatting and logistics display metadata respectively."
+      }
+    },
+    "pkgMeasure": {
+      "status": "MATCH"
+    },
+    "shippingTemplate": {
+      "status": "MATCH"
+    },
+    "ladderPrice": {
+      "status": "MATCH"
+    },
+    "saleProp": {
+      "status": "MATCH"
+    },
+    "sku": {
+      "status": "verified",
+      "bindings": {
+        "BQ-LQ2639-BLACK-EU39": "109782288124",
+        "BQ-LQ2639-BLACK-EU40": "109782288125",
+        "BQ-LQ2639-BLACK-EU41": "109782288126",
+        "BQ-LQ2639-BLACK-EU42": "109782288127",
+        "BQ-LQ2639-BLACK-EU43": "109782288128",
+        "BQ-LQ2639-BLACK-EU44": "109782288129",
+        "BQ-LQ2639-BLACK-EU45": "109782288130",
+        "BQ-LQ2639-BLACK-EU46": "109782288131",
+        "BQ-LQ2639-BLACK-EU47": "109782288132",
+        "BQ-LQ2639-BLACK-EU48": "109782288133",
+        "BQ-LQ2639-BEIGE-EU39": "109782288134",
+        "BQ-LQ2639-BEIGE-EU40": "109782288135",
+        "BQ-LQ2639-BEIGE-EU41": "109782288136",
+        "BQ-LQ2639-BEIGE-EU42": "109782288137",
+        "BQ-LQ2639-BEIGE-EU43": "109782288138",
+        "BQ-LQ2639-BEIGE-EU44": "109782288139",
+        "BQ-LQ2639-BEIGE-EU45": "109782288140",
+        "BQ-LQ2639-BEIGE-EU46": "109782288141",
+        "BQ-LQ2639-BEIGE-EU47": "109782288142",
+        "BQ-LQ2639-BEIGE-EU48": "109782288143"
+      },
+      "unsubmitted_observations": {
+        "BQ-LQ2639-BLACK-EU39": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ2639-BLACK-EU40": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ2639-BLACK-EU41": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ2639-BLACK-EU42": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ2639-BLACK-EU43": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ2639-BLACK-EU44": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ2639-BLACK-EU45": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ2639-BLACK-EU46": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ2639-BLACK-EU47": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ2639-BLACK-EU48": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ2639-BEIGE-EU39": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ2639-BEIGE-EU40": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ2639-BEIGE-EU41": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ2639-BEIGE-EU42": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ2639-BEIGE-EU43": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ2639-BEIGE-EU44": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ2639-BEIGE-EU45": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ2639-BEIGE-EU46": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ2639-BEIGE-EU47": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        },
+        "BQ-LQ2639-BEIGE-EU48": {
+          "price": [
+            "field",
+            [
+              [
+                "id",
+                "price"
+              ]
+            ],
+            "",
+            []
+          ],
+          "skuStock": [
+            "field",
+            [
+              [
+                "id",
+                "skuStock"
+              ]
+            ],
+            "",
+            []
+          ],
+          "outerSupplyId": [
+            "field",
+            [
+              [
+                "id",
+                "outerSupplyId"
+              ]
+            ],
+            "",
+            []
+          ]
+        }
+      },
+      "limits": "Formal API row/ID binding only; first read establishes IDs, not prior history, physical stock or image pixel truth."
+    }
+  },
+  "unmatched_fields": [],
+  "diagnostics": {
+    "status": "clear",
+    "flagged": {},
+    "errors": {},
+    "deductions": {},
+    "checks_not_run": [
+      "sku_image",
+      "sku_text",
+      "imageSubTitle",
+      "selling_point_attribute_conflict"
+    ],
+    "request_id": "21501b6717914536791791200",
+    "observed_at": "2026-10-08T10:01:19.402609+00:00",
+    "limits": "Only this platform score diagnostic; unrun checks and public/keyword QA remain separate."
+  },
+  "acceptance": {
+    "phase": "post_publish_completion",
+    "target_score": 5.0,
+    "actual_score": 5.0,
+    "observed_at": "2026-10-08T10:01:19.402609+00:00",
+    "score_source": "alibaba.icbu.product.score.get / 21501b6717914536791791200",
+    "diagnostics": {
+      "status": "clear",
+      "flagged": {},
+      "errors": {},
+      "deductions": {},
+      "checks_not_run": [
+        "sku_image",
+        "sku_text",
+        "imageSubTitle",
+        "selling_point_attribute_conflict"
+      ],
+      "request_id": "21501b6717914536791791200",
+      "observed_at": "2026-10-08T10:01:19.402609+00:00",
+      "limits": "Only this platform score diagnostic; unrun checks and public/keyword QA remain separate."
+    },
+    "score_status": "threshold_met",
+    "overall_status": "PENDING_CONTENT",
+    "unverified_content_checks": [
+      "public_page",
+      "media_review",
+      "keyword_persistence"
+    ],
+    "versioned_content": null,
+    "required_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "limits": "Platform listing score does not prove public content, source truth or real product quality."
+  }
+}

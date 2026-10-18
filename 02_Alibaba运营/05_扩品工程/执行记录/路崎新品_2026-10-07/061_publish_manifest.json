@@ -1,0 +1,43 @@
+{
+  "operation": "create",
+  "category_id": 127734034,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "路崎061来源事实.json",
+    "061_asset_manifest.json",
+    "061上架任务包.md"
+  ],
+  "current_schema": "061_schema_current.xml",
+  "current_schema_sha256": "f7da28db8ed14b621d5813497cbf24d65fdba477d51692aba81186ca2d6e1fec",
+  "schema_request_id": "213e759c17913863229727294",
+  "schema_acquired_at": "2026-10-07T15:18:41.213004+00:00",
+  "payload_xml": "061_intended_payload.xml",
+  "field_ids": [
+    "catId",
+    "icbuCatProp",
+    "saleProp",
+    "sku",
+    "productTitle",
+    "productKeywords",
+    "scImages",
+    "priceUnit",
+    "saleType",
+    "scPrice",
+    "minOrderQuantity",
+    "ladderPrice",
+    "pkgMeasure",
+    "pkgWeight",
+    "shippingTemplate",
+    "logisticsProperty",
+    "productDescType",
+    "detailImage",
+    "companyImage",
+    "textDesc",
+    "companyDesc",
+    "companyFaqDesc"
+  ],
+  "dependency_ids": [],
+  "expected_model": "BQ-LQ061",
+  "differentiation_review": "061_differentiation_review.json",
+  "differentiation_review_sha256": "125ac9bf713f5ff7e3aa787348cf3d9967b0de1ecb613ff89100f3a6531d407a"
+}

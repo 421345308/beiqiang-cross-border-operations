@@ -1,0 +1,46 @@
+{
+  "product_id": "10000047396313",
+  "model": "BQ060 / A350",
+  "observed_at": "2026-10-03T08:04:02.802135+00:00",
+  "status": null,
+  "display": null,
+  "get_error": {
+    "exception_type": "ClientError",
+    "message": "Native HTTP transport failed; write outcome requires reconciliation",
+    "transport_phase": "transport",
+    "request_sent": null,
+    "curl_exit_code": 28,
+    "http_status": null,
+    "business_refs": {},
+    "response_summary": {
+      "format": "text",
+      "excerpt": ""
+    },
+    "stderr_excerpt": "[COMMAND_TEXT_OMITTED]",
+    "cause_types": [],
+    "limits": "Unavailable facts remain null/unknown. Curl errors and absence in catalog do not prove an uncommitted write; no automatic retry."
+  },
+  "get_request_id": null,
+  "FAQ_count": null,
+  "expected_FAQ_count": 8,
+  "formal_FAQ_exact_match": null,
+  "actual_FAQ": [],
+  "unrelated_fields_unchanged": {
+    "subject": null,
+    "main_image": null,
+    "product_sku": null,
+    "attributes": null,
+    "sourcing_trade": null,
+    "keywords": null,
+    "category_id": null
+  },
+  "company_summary_unchanged": null,
+  "sku_count": null,
+  "actual_score": null,
+  "other_detail_fields_unchanged": {
+    "company_image": null,
+    "detail_image": null,
+    "product_summary": null
+  },
+  "field_readback_state": "UNKNOWN_READ_UNAVAILABLE"
+}

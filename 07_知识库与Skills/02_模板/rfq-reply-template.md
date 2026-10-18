@@ -1,13 +1,17 @@
 # RFQ 回复模板
 
+填写前先复用已确认单款证据；买家已经给出的数量、市场和规格不再全部重复问。第一句话回应实际需求，给最匹配的1–3款，只追问影响下一步的关键缺口。核价与交付用[内部核验模板](报价成本与交付核验模板.md)，技术开发仍走专门SOP。
+
 ## 首次报价模板
 
 ```text
 Hi [Name],
 
-Thank you for your inquiry. We are Quanzhou Beiqiang Footwear & Apparel Co., Ltd., a footwear factory in Quanzhou, Fujian, China. We focus on comfortable walking shoes, wide toe box shoes, and lightweight casual shoes for wholesale and OEM/ODM orders.
+For your [stated sourcing requirement], [verified style/code] is the closest option we can discuss based on [documented match]. [State one relevant confirmed specification.]
 
-Could you please share your quantity, target market, size range, colors, logo/packing needs, and expected delivery time? Then we can recommend the suitable style and confirm the quotation.
+We are Quanzhou Beiqiang Footwear & Apparel Co., Ltd., a footwear supplier in Quanzhou, China. The source and available options are confirmed for each style.
+
+To move this forward, could you confirm [the one or two missing facts that affect selection or quotation]? We will then check the sample option and prepare the conditional quotation.
 
 Best regards,
 [Name]
@@ -20,7 +24,7 @@ Hi [Name],
 
 For this style, the FOB reference price is about USD [range]/pair based on [quantity] pairs. Final price depends on material confirmation, size ratio, colors, packing, and order requirements.
 
-Samples can be arranged for checking before bulk order. Please confirm your target market, size ratio, and preferred colors so we can prepare the next details.
+We will check sample availability, version, cost and timing for this style before arranging shipment. Please confirm your target market, size ratio, and preferred colors so we can prepare the next details.
 ```
 
 ## DDP 报价模板
@@ -38,7 +42,7 @@ The product price and shipping cost should be confirmed separately before final 
 ```text
 Hi [Name],
 
-We suggest arranging samples first so you can check size, comfort, material, and market fit before bulk order. The sample fee can be discussed and may be deducted from the bulk order amount after order confirmation.
+We suggest arranging samples first so you can check size, comfort, material, and market fit before bulk order. We will confirm the sample version, availability, fee and shipping before payment. Any deduction against a bulk order requires a separate written agreement.
 
 Please send the sample receiver name, phone number, address, and preferred size/color.
 ```

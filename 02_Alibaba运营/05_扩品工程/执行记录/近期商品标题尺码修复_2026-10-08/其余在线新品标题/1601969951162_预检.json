@@ -1,0 +1,45 @@
+{
+  "keyword_input": null,
+  "differentiation_review": null,
+  "category_id": 32211,
+  "operation": "update",
+  "inventory_input": null,
+  "model_serialization": null,
+  "target_product_id": "1601969951162",
+  "field_ids": [
+    "productTitle"
+  ],
+  "dependency_ids": [],
+  "xml": "<itemSchema><field id=\"productTitle\" type=\"input\"><value>Wholesale Mens Low Top Steel Toe Safety Work Shoes with Dial Closure and Knitted Uppers</value></field></itemSchema>",
+  "expected_fields": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Wholesale Mens Low Top Steel Toe Safety Work Shoes with Dial Closure and Knitted Uppers",
+          []
+        ]
+      ]
+    ]
+  },
+  "prepared_from_current_schema": true,
+  "task_pack": null,
+  "replacement_plan": null,
+  "schema_provenance": {
+    "schema_request_id": "210829b717914238778461193",
+    "schema_acquired_at": "2026-10-08T01:44:40.568876+00:00",
+    "current_schema_sha256": "f6af48648c2a2ac25d15f02deef8eb392e28635341c9b519a8d36afffd2327c9",
+    "source_evidence": [
+      "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\266_readonly_preparation\\266_preparation.json"
+    ]
+  }
+}

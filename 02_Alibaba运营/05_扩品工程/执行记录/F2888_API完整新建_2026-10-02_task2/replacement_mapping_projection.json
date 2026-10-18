@@ -1,0 +1,43 @@
+{
+  "rows": [
+    {
+      "candidate": "F2888",
+      "old_listing": "HR056-A",
+      "old_product_id": "1601943775160",
+      "new_product_id": null,
+      "owner": "task2/恢复后唯一生产owner",
+      "source_url": "https://shangchao.sooxie.com/detail/2357652",
+      "source_facts_parent_delegation": "CNY53；三色35–42交集24SKU；材料/温标不编",
+      "match_type": "STRATEGIC_RETIRE_AND_REAL_SOURCE_REPLACEMENT_NOT_IDENTICAL_SHOE",
+      "selection_reason": "旧女鞋通用占位HOLD_SOURCE；真实冬季方向试验，不伪称同款",
+      "growth_tier": "普通品",
+      "growth_observed_at_utc": "2026-10-02 00:48:31",
+      "classification_source": "02_Alibaba运营/05_扩品工程/执行记录/266_API完整新建_2026-10-02/HR_201_growth_verified_register_2026-10-02.csv",
+      "protected": false,
+      "retained_siblings": [
+        {
+          "listing_id": "HR056-B",
+          "product_id": "1601943751252",
+          "growth_tier": "普通品",
+          "disposition": "KEEP_UNCHANGED"
+        },
+        {
+          "listing_id": "HR056-C",
+          "product_id": "1601943778191",
+          "growth_tier": "潜力优品",
+          "disposition": "KEEP_UNCHANGED"
+        }
+      ],
+      "authorization_scope": "父任务明确要求从今日普通列表补唯一目标，本任务不下架",
+      "reservation_status": "RESUME_ACTIVE_UNIQUE_OWNER_NO_CREATE_RECEIPT_YET",
+      "old_action": "NOT_SENT",
+      "new_acceptance": "PRODUCTION_IN_PROGRESS_OWNER_RECEIPTS_PENDING",
+      "whole_family_complete": false,
+      "next_action": "原owner继续已授权来源/图文/当前Schema事实核对，查once ledger和现有ID后最多单次创建；真实5分/公开QA/旧OFF分别验收",
+      "resume_observed_status_scope": "Business reservation reconciled from local receipts; historical ordinary tier not current live display/order rights proof"
+    }
+  ],
+  "original_path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\HR系列真实货源改造_2026-09-21\\HR普通品一对一待替换映射_2026-10-02.json",
+  "original_sha256": "d5cdbaa08e9312d71ce22c3503ecc9e26775eb06fd54caea5654faa0bf8900b0",
+  "normalization": "Enum spelling only; strategic different-shoe semantics unchanged. Original preserved, shared owner table not modified. No old-off authorization."
+}

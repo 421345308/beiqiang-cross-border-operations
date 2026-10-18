@@ -1,0 +1,24 @@
+{
+  "response": {
+    "error_response": {
+      "code": "15",
+      "type": "ISP",
+      "sub_code": "-1",
+      "sub_msg": "通用验证失败",
+      "msg": "Remote service error",
+      "request_id": "2166c2ca17910959311497106",
+      "_trace_id_": "2101d13c17910959308177074e0c02"
+    }
+  },
+  "error": {
+    "code": "15",
+    "type": "ISP",
+    "sub_code": "-1",
+    "sub_msg": "通用验证失败",
+    "msg": "Remote service error",
+    "request_id": "2166c2ca17910959311497106",
+    "_trace_id_": "2101d13c17910959308177074e0c02"
+  },
+  "observed_at": "2026-10-04T06:38:51.696882+00:00",
+  "operation_kind": "read_only"
+}

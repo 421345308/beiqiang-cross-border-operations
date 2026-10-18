@@ -1,0 +1,53 @@
+{
+  "at_utc": "2026-10-03T15:44:23.809851+00:00",
+  "product": "936",
+  "product_id": 1601969906452,
+  "public_url": "https://www.alibaba.com/product-detail/Textile-Lace-Up-Casual-Sneakers-with_1601969906452.html",
+  "public_QA": "PASS",
+  "scope_this_round": "inquiry_only",
+  "inquiry_target_actual_viewed": true,
+  "main_detail_company_actual_viewed": false,
+  "FAQ_exact_match": "PRIOR_CORE_QA_RETAINED",
+  "SKU_enabled_rows": "PRIOR_CORE_QA_RETAINED",
+  "prior_core_QA_retained": true,
+  "price_tiers": [
+    [
+      {
+        "price": "18.37",
+        "start_quantity": 2
+      },
+      {
+        "price": "17.14",
+        "start_quantity": 50
+      },
+      {
+        "price": "15.92",
+        "start_quantity": 100
+      }
+    ]
+  ],
+  "strict_business_closure": false,
+  "keyword_persistence": "UNTESTED; exact-ID formal get empty",
+  "oldHR_treatment": "NOT_PERFORMED",
+  "product_mutations": 0,
+  "inquiry_submissions": 0,
+  "message_sends": 0,
+  "files": [
+    {
+      "file": "resume_fresh_top.json",
+      "sha256": "28181987ac749f21d96dac009d54eba70df119baeea9be1507a95d856c890b1e"
+    },
+    {
+      "file": "resume_fresh_top.png",
+      "sha256": "96349a8257b0421df93550f9015d8c3fc40d26ea828ac3e70bf44badd6bdfbb3"
+    },
+    {
+      "file": "inquiry_loaded.json",
+      "sha256": "15e94158c0fc6daf2899b64f52e8694797642c45c92c0f8c00ecaefc481f082f"
+    },
+    {
+      "file": "inquiry_loaded.png",
+      "sha256": "603d5e8b8d0f4f6791bc4d720e7564507ff18fe2f0e273a01387ab320567a2d4"
+    }
+  ]
+}

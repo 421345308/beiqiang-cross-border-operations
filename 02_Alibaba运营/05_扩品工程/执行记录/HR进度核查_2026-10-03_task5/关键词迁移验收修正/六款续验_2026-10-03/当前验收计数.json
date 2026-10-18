@@ -1,0 +1,105 @@
+{
+  "current_version_content": {
+    "complete": 6,
+    "total": 6,
+    "products": [
+      {
+        "name": "M001",
+        "product_id": "1601970169467",
+        "category_id": "201153804",
+        "editor_observation_id": "M001_notice_sha256:677f40a5ebf291ff611afa9f94ce5d4e69c0d4c88ac50e96ef45a15b7d9932a5",
+        "observed_at": "2026-10-03T16:31:20.9945178Z",
+        "content_status": "CONTENT_COMPLETE",
+        "keyword_write_verified": false,
+        "replacement_closeout_verified": false
+      },
+      {
+        "name": "2627BSK",
+        "product_id": "1601969885846",
+        "category_id": "201153804",
+        "editor_observation_id": "2627BSK_normal_notice_sha256:e02c762cb108ef8d4420548a5840fba1ac50bfdb27f2d1d0c414c9918d538d3b",
+        "observed_at": "2026-10-03T17:53:38.6692982Z",
+        "content_status": "CONTENT_COMPLETE",
+        "keyword_write_verified": false,
+        "replacement_closeout_verified": false
+      },
+      {
+        "name": "805",
+        "product_id": "1601969877983",
+        "category_id": "202240835",
+        "editor_observation_id": "805_normal_notice_sha256:6c7fbd545d8a22a118d0d54965c0d273725300f6a7735a78a01e1d5eb9fdfee0",
+        "observed_at": "2026-10-03T17:59:43.9675867Z",
+        "content_status": "CONTENT_COMPLETE",
+        "keyword_write_verified": false,
+        "replacement_closeout_verified": false
+      },
+      {
+        "name": "H219",
+        "product_id": "1601969936536",
+        "category_id": "201768405",
+        "editor_observation_id": "H219_normal_notice_sha256:d6f1ef5ce13756b1e9aa7df166465b0af85cdd6067cd4e13c6964970380f86f5",
+        "observed_at": "2026-10-03T18:03:46.0145921Z",
+        "content_status": "CONTENT_COMPLETE",
+        "keyword_write_verified": false,
+        "replacement_closeout_verified": false
+      },
+      {
+        "name": "F2888",
+        "product_id": "1601970034464",
+        "category_id": "201339011",
+        "editor_observation_id": "F2888_normal_notice_sha256:5803b99d3328f4eca4410089ff7aabe3585b15fd1cf0ac8a8821363c7d8d0cee",
+        "observed_at": "2026-10-03T18:14:14.9533062Z",
+        "content_status": "CONTENT_COMPLETE",
+        "keyword_write_verified": false,
+        "replacement_closeout_verified": false
+      },
+      {
+        "name": "936",
+        "product_id": "1601969906452",
+        "category_id": "201334413",
+        "editor_observation_id": "936_normal_notice_sha256:2cb8988a16ef8db9e9ad1c3211f5f3e8f45658c8a2f5083a5e06cffffd1e567d",
+        "observed_at": "2026-10-03T18:16:26.7256929Z",
+        "content_status": "CONTENT_COMPLETE",
+        "keyword_write_verified": false,
+        "replacement_closeout_verified": false
+      }
+    ]
+  },
+  "public_QA": {
+    "passed": 6,
+    "total": 6,
+    "basis": "existing accepted public QA reused; only936 whole-summary gap read this round"
+  },
+  "full_old_HR_replacement": {
+    "complete_this_branch": 0,
+    "total": 6,
+    "remaining": "Current old-product grade/protection, old-product disposition and required associations not established; not a content failure"
+  },
+  "business_ledger_modified": false,
+  "platform_writes": 0,
+  "OFF_count": 0,
+  "growth": {
+    "observed_at": "2026-10-03T18:21:52.3043546Z",
+    "source": "02_Alibaba运营/05_扩品工程/执行记录/HR进度核查_2026-10-03_task5/关键词迁移验收修正/六款续验_2026-10-03/成长中心单次只读/loaded_once.json",
+    "status": "CURRENT_GRADE_PROTECTION_DATA_UNAVAILABLE",
+    "known_normal_url": "https://hz-productposting.alibaba.com/product_operate/product_growth.htm",
+    "observed": "待更新; five unnamed grade cards (0)/--; empty list; recommendation count 1 has no exact target ID",
+    "target_ids": [
+      "1601943687648",
+      "1601943755354",
+      "1601943738486",
+      "1601943767092",
+      "1601943775160",
+      "1601943653819"
+    ],
+    "ordinary_grade_verified": false,
+    "protection_verified": false,
+    "retry_or_refresh_count": 0,
+    "platform_writes": 0,
+    "OFF_count": 0
+  },
+  "tests": {
+    "passed": 45,
+    "seconds": 6.308
+  }
+}

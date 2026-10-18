@@ -1,0 +1,45 @@
+{
+  "keyword_input": null,
+  "differentiation_review": null,
+  "category_id": 201153804,
+  "operation": "update",
+  "inventory_input": null,
+  "model_serialization": null,
+  "target_product_id": "1601969885846",
+  "field_ids": [
+    "productTitle"
+  ],
+  "dependency_ids": [],
+  "xml": "<itemSchema><field id=\"productTitle\" type=\"input\"><value>Wholesale Closed Toe EVA Platform Clogs with Heel Strap for Everyday Casual Wear</value></field></itemSchema>",
+  "expected_fields": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Wholesale Closed Toe EVA Platform Clogs with Heel Strap for Everyday Casual Wear",
+          []
+        ]
+      ]
+    ]
+  },
+  "prepared_from_current_schema": true,
+  "task_pack": null,
+  "replacement_plan": null,
+  "schema_provenance": {
+    "schema_request_id": "2105584317914238697928886",
+    "schema_acquired_at": "2026-10-08T01:44:32.381502+00:00",
+    "current_schema_sha256": "9369b0ae7537ef391bc95f7f636f872f42f43335ec961670aa942f60f5c083bf",
+    "source_evidence": [
+      "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\2627BSK_API新建_2026-10-02\\facts_and_copy.json"
+    ]
+  }
+}

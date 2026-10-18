@@ -1,0 +1,101 @@
+{
+  "status": "GENERATED_AND_COMPOSED_PREVIEW_READY",
+  "sku": "ZX9002",
+  "model": "Seedance 2.5",
+  "provider_model_key": "star-video2.5",
+  "exact_upstream_build": "Not disclosed",
+  "parameters": {
+    "model": "Seedance 2.5",
+    "modeType": "image2video",
+    "count": 1,
+    "ratio": "9:16",
+    "resolution": "720p",
+    "duration": 15,
+    "enableSound": "off",
+    "searchEnabled": 0,
+    "autoCompliance": 1
+  },
+  "prompt": "prompts/video_brief.txt",
+  "prompt_sha256": "13d38f9909310bb800771792af970a7a41818e74c02a0116a6bd2b1dca46b56e",
+  "prompt_characters": 2014,
+  "references": [
+    {
+      "name": "N9002_P01_工厂侧面_鞋型身份",
+      "role": "Product identity"
+    },
+    {
+      "name": "N9002_P02_工厂外底_仅结构",
+      "role": "Outsole geometry only"
+    },
+    {
+      "name": "N9002_P03_工厂双鞋_对照身份",
+      "role": "Both-shoe identity"
+    },
+    {
+      "name": "M01_男模三视图_身份服装非首帧",
+      "role": "Existing character/wardrobe"
+    },
+    {
+      "name": "L01_玄关空景_地点光线",
+      "role": "Existing location/light"
+    }
+  ],
+  "previous_sku_onfoot_reference_reused": false,
+  "references_reused_without_upload": [
+    "Character three-view",
+    "Empty entryway"
+  ],
+  "generation_submitted": true,
+  "cost_quote": null,
+  "cost_note": "CLI model discovery says per-second and reference-video duration counts; no numeric account quote returned. No reference video uploaded.",
+  "authorization_scope": "Current prepared ZX9002 single15s720p clip and associated audio only; not unlimited batch, posting or ad spend.",
+  "narration_draft": "牛仔裤别把鞋全盖住，裤脚收一点，鞋型就出来了。你看这双灰黑，鞋面有层次，黑底也不单调。套脚的，不用系鞋带。平时出门，你更爱配牛仔裤，还是休闲裤？",
+  "quality_focus": [
+    "Grey knit zoning and rear pull-tab",
+    "Black sculpted sole identity",
+    "Ground contact and two feet",
+    "Product scale and clear first shot",
+    "Independent colloquial narration, no stiff generated in-video voice"
+  ],
+  "story": "Small visible trouser-hem styling action reveals the shoe, then complete outfit, texture, two steps and relevant outfit-choice question.",
+  "video_generation_limit": 1,
+  "voice_generation_limit": 1,
+  "paid_execution_authorized": true,
+  "authorization_quote": "可以，请继续，内容也要丰富好看起来，咱们是短视频，玩懂推荐算法才能成功",
+  "voice_parameters": {
+    "model": "Minimax-speech-2.8-hd",
+    "scene": "Text-to-Speech",
+    "voiceCard": {
+      "voiceId": "male-qn-daxuesheng",
+      "name": "青年大学生",
+      "language": "中文(普通话)",
+      "gender": "Male"
+    },
+    "speed": 1.16,
+    "voicePitch": 0,
+    "vol": 1,
+    "modifyPitch": 0,
+    "modifyIntensity": -8,
+    "modifyTimbre": 0,
+    "soundEffects": ""
+  },
+  "algorithm_basis": "Official Douyin explanation describes multi-objective behavior prediction. The hook/pacing/question are creative hypotheses, not guaranteed algorithm weights or traffic thresholds.",
+  "generation_completed": true,
+  "video_generation_count": 1,
+  "voice_generation_count": 1,
+  "text_review_count": 1,
+  "actual_duration": 15.041667,
+  "actual_dimensions": [
+    720,
+    1280
+  ],
+  "actual_fps": 24,
+  "actual_frames": 361,
+  "output": "edit/V01/ZX9002_V01_裤脚露鞋型_青年分享.mp4",
+  "output_sha256": "d31b64ff8b04cffdcc4fc02fa924f618e8abf01b21e9e897ee9d850340e2c674",
+  "returned_model_label": "Seedance 2.5",
+  "actual_cost_reported": null,
+  "qa": "edit/V01/QA_REPORT.md",
+  "user_acceptance": "PENDING",
+  "published": false
+}

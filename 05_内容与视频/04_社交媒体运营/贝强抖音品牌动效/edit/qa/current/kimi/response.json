@@ -1,0 +1,22 @@
+{
+  "id": "da5c9679-8800-46b9-8273-4816f09daa57",
+  "model": "kimi-k3",
+  "created": 1791712150,
+  "finish_reason": "abort",
+  "usage": {
+    "prompt_tokens": 21948,
+    "completion_tokens": 2512,
+    "total_tokens": 24460,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "cache_creation_input_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2391
+    }
+  },
+  "content": "我实际可见的不是24秒连续播放，而是提示词内嵌的稀疏静帧：约10个画面样本，覆盖00:00:00.000到00:00:21.625，大致每3秒一帧，个别时间点像有相邻/合成帧。没有声音访问能力，不能判断音乐、旁白、音效、节奏点，也不能从静帧确认真实步态、回弹、套脚动作是否顺滑。以下只基于这些可见样本；无证据处我会明说。\n\n结论：我不会以当前版本过片。它有“暖",
+  "elapsed_seconds": 611.56,
+  "reasoning_chars": 9540
+}

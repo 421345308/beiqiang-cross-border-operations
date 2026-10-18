@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="csrf" content="__CSRF__" />
+    <title>电商商品与订单管理系统</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>电商商品与订单管理系统 <small>V1.0</small></h1>
+        <p>商品资料 · 库存流水 · 订单处理</p>
+      </div>
+      <span class="pill">本地运行 · 抖店未连接</span>
+      <button class="secondary" id="logoutButton">退出本机登录</button>
+    </header>
+    <main>
+      <div class="notice" id="mode">正在读取系统状态</div>
+      <div class="cards" style="margin-top: 20px">
+        <div class="card">SKU数量<b id="skuCount">0</b></div>
+        <div class="card">登记可用库存<b id="stockCount">0</b></div>
+        <div class="card">待发货订单<b id="pendingCount">0</b></div>
+        <div class="card">本地订单金额<b id="amountCount">¥0</b></div>
+      </div>
+      <nav>
+        <button class="active" data-view="products">商品与SKU</button
+        ><button data-view="stock">库存流水</button
+        ><button data-view="orders">订单管理</button
+        ><button data-view="audit">操作记录</button>
+      </nav>
+      <div class="view active" id="products">
+        <div class="grid">
+          <section>
+            <h2>登记或更新SKU</h2>
+            <form id="skuForm">
+              <label>SKU编码</label
+              ><input name="code" maxlength="80" required /><label
+                >本店型号</label
+              ><select name="model" id="modelSelect" required></select>
+              <p class="muted">
+                型号只引用现有产品台账；这里登记渠道资料，不替代产品来源证据。
+              </p>
+              <label>渠道商品名称</label
+              ><input name="title" maxlength="120" required />
+              <div
+                style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px"
+              >
+                <div><label>颜色</label><input name="color" required /></div>
+                <div><label>尺码</label><input name="size" required /></div>
+              </div>
+              <label>价格 元</label
+              ><input
+                name="price"
+                type="number"
+                min="0"
+                step="0.01"
+                required
+              /><button>保存SKU</button>
+            </form>
+          </section>
+          <section>
+            <div class="toolbar">
+              <h2 style="flex: 1; margin: 0">渠道商品清单</h2>
+              <a class="link" href="/export.csv">导出CSV</a
+              ><button class="secondary" id="importToggle">导入CSV</button>
+            </div>
+            <input id="search" placeholder="搜索型号、SKU、名称、颜色或尺码" />
+            <div id="importPanel" class="hidden">
+              <p class="muted">
+                列顺序：code,model,title,color,size,price。导入整批校验，库存不会覆盖。
+              </p>
+              <input id="csvFile" type="file" accept=".csv,text/csv" />
+              <form id="importForm">
+                <textarea id="csvText" placeholder="粘贴SKU资料CSV"></textarea
+                ><button>校验并导入</button>
+              </form>
+            </div>
+            <div id="skuTable" class="scroll"></div>
+          </section>
+        </div>
+      </div>
+      <div class="view" id="stock">
+        <div class="grid">
+          <section>
+            <h2>登记库存变化</h2>
+            <form id="stockForm">
+              <label>SKU</label
+              ><select name="code" class="skuSelect" required></select
+              ><label>变化数量 入库为正 出库为负</label
+              ><input name="delta" type="number" step="1" required /><label
+                >实盘或凭证说明</label
+              ><textarea
+                name="note"
+                maxlength="500"
+                required
+                placeholder="填写实际盘点、入库或调整依据"
+              ></textarea
+              ><button>登记库存流水</button>
+            </form>
+            <p class="muted">
+              系统保存登记值，不自动证明实物库存。正式经营前逐款核实。
+            </p>
+          </section>
+          <section>
+            <h2>最近200条库存流水</h2>
+            <div id="movementTable" class="scroll"></div>
+          </section>
+        </div>
+      </div>
+      <div class="view" id="orders">
+        <div class="grid">
+          <section>
+            <h2>登记本地订单</h2>
+            <form id="orderForm">
+              <label>订单编号</label
+              ><input name="number" maxlength="80" required /><label
+                >订单来源说明</label
+              ><textarea
+                name="note"
+                maxlength="500"
+                required
+                placeholder="填写实际订单来源；演示模式仅填写测试说明"
+              ></textarea
+              ><label>SKU与数量</label>
+              <div id="orderLines"></div>
+              <button type="button" class="secondary" id="addLine">
+                增加商品行</button
+              ><button>登记订单并预留库存</button>
+            </form>
+            <p class="muted">
+              登记订单会减少可用库存；取消待发货订单返还数量；登记发货不重复扣减。不含顾客个人信息。
+            </p>
+          </section>
+          <section>
+            <h2>本地订单清单</h2>
+            <p class="muted">这里的发货和取消仅改变本地记录，不会通知抖店。</p>
+            <div id="orderTable" class="scroll"></div>
+          </section>
+        </div>
+      </div>
+      <div class="view" id="audit">
+        <section>
+          <h2>最近200条操作记录</h2>
+          <div id="auditTable" class="scroll"></div>
+        </section>
+      </div>
+    </main>
+    <div id="message" class="hidden" role="status"></div>
+    <div
+      id="actionDialog"
+      class="hidden"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="actionTitle"
+      style="
+        position: fixed;
+        inset: 0;
+        background: #142b4480;
+        display: none;
+        align-items: center;
+        justify-content: center;
+      "
+    >
+      <section style="width: 430px; max-width: 90vw">
+        <h2 id="actionTitle"></h2>
+        <p id="actionText"></p>
+        <input
+          id="trackingValue"
+          class="hidden"
+          placeholder="物流单号或发货凭证编号"
+        />
+        <div class="toolbar" style="margin-top: 20px">
+          <button id="actionConfirm">确认操作</button
+          ><button class="secondary" id="actionDismiss">返回</button>
+        </div>
+      </section>
+    </div>
+    <script src="/client.js" defer></script>
+  </body>
+</html>

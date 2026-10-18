@@ -1,0 +1,27 @@
+{
+  "status": "submitted_needs_readback",
+  "product_id": "1601975285993",
+  "cat_id": 202248402,
+  "refs": {
+    "request_id": "0b0b3a2717916088176236938",
+    "trace_id": "2133d9ef17916088174601089e0c4e",
+    "message": null,
+    "error": null
+  },
+  "attempted_at": "2026-10-10T05:06:52.095417+00:00",
+  "attempt_count": 2,
+  "attempt_history": [
+    {
+      "status": "business_rejected",
+      "product_id": null,
+      "cat_id": 201674304,
+      "receipt": "首次类目ID误写拒绝回执.json"
+    },
+    {
+      "status": "submitted_needs_readback",
+      "product_id": "1601975285993",
+      "cat_id": 202248402,
+      "receipt": "类目ID修正后正式创建回执.json"
+    }
+  ]
+}

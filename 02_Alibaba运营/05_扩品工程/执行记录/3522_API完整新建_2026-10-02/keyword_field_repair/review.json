@@ -1,0 +1,20 @@
+{
+  "target_id": "1601969920294",
+  "model": "BQ-L3522",
+  "scope": [
+    "keywords"
+  ],
+  "expected_keywords": [
+    "mens suede slip on loafers"
+  ],
+  "business_context_only": [
+    "product_id encrypted from same formal get",
+    "product_type sourcing from same product",
+    "language ENGLISH"
+  ],
+  "official_api_reference": "https://developer.alibaba.com/docs/api.htm?apiId=27010",
+  "schema_diagnosis_reference": "../keyword_protocol/official_keyword_shape_evidence.json",
+  "state_requirement_before_write": "approved/Y fresh formal get",
+  "single_attempt_no_retry": true,
+  "evidence_basis": "Parent-reviewed factual longtail for real suede slip-on loafer; no market-volume or performance claim"
+}

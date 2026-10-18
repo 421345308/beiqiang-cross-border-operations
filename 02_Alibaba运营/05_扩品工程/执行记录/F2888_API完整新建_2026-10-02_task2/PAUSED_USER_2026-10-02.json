@@ -1,0 +1,21 @@
+{
+  "paused": true,
+  "paused_at_UTC": "2026-10-02T22:41:14.282580+00:00",
+  "authorization": "User Sentinel_6ecc1ce493f081919c00bc62f8883936: 先暂停咱们的上品任务，额度重置了",
+  "since_resume_new_product_count": 1,
+  "new_product_id": "1601970034464",
+  "new_model": "BQ-WBF2888",
+  "last_formal_status": "new",
+  "last_display": "N",
+  "actual_score": null,
+  "score_status": "PENDING: read request returned generic validation failure while product new/N; no valid score returned",
+  "score_error_request_id": "213f5a2117909807503223158",
+  "old_OFF_count": 0,
+  "old_action": "NOT_SENT",
+  "old_product_id": "1601943775160",
+  "create_result": "CONFIRMED submitted_needs_readback",
+  "create_request_id": "21501be117909806946152074",
+  "unknown_or_inflight_writes": [],
+  "automatic_resume": false,
+  "next_action": "Require a new explicit user resume. Read same existing ID only; never recreate. Score and public QA pending. Parent knowledge owner binds shared mapping/new ID."
+}

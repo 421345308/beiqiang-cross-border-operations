@@ -1,0 +1,34 @@
+{
+  "id": "1601979461922",
+  "at": "2026-10-16T04:11:35.582756+00:00",
+  "state": "FORMAL_FIELDS_SCORE_PASS",
+  "status": "approved",
+  "display": "Y",
+  "actual_score": "5.00",
+  "public_qa": "NOT_PER_ITEM_BROWSER_TESTED_OWNER_API_SCOPE",
+  "readback_checks": {
+    "model": true,
+    "gallery": true,
+    "non_target_formal": true,
+    "unchanged_title": true,
+    "gallery_count": true
+  },
+  "checks": {
+    "model": true,
+    "gallery": true,
+    "non_target_formal": true,
+    "unchanged_title": true,
+    "gallery_count": true,
+    "unsubmitted_schema_fields_preserved": true
+  },
+  "formal_request_id": "0bbb3b2417921238984792048",
+  "schema_request_id": "21501be117921238988232807",
+  "new_model": "BQ-LQ2418",
+  "gallery_slot": 6,
+  "asset_sha256": "13987d2f18fb1e3274ebf1d2eb2bed945d8ee12c33c2a0a5f23e3f41890ce29f",
+  "score_diagnostics": {
+    "flags": {},
+    "deductions": {},
+    "errors": []
+  }
+}

@@ -1,0 +1,425 @@
+{
+  "status": "BUYER_ROLE_REVIEW_PASS",
+  "observed_at": "2026-10-10T04:56:24.607432+00:00",
+  "roles": [
+    {
+      "role": "M1",
+      "buyer_question": "冬季靴搜索识别",
+      "source_indices": [
+        1
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\016准备\\01_产品来源原图\\01.jpg"
+      ],
+      "source_sha256": [
+        "423d5c08d466cffc07bd3adeb509eb63dc4b70a897da20a704836cef989a372b"
+      ],
+      "source_dimensions": [
+        [
+          800,
+          800
+        ]
+      ],
+      "prompt": "Use case: precise-object-edit. Asset type: square English B2B footwear photo. Input is the exact edit target Luqi016 winter ankle boot. Change only background clutter, supplier text/graphics and framing. Preserve photographed boot pose/count, naturally clipped or occluded contours, microfiber-textured stitched upper, double curved toe seams, perforated side panel, two pairs of upper metal hooks and four eyelet pairs, round rope laces, rear strip/pull loop, plush collar and dense rounded studs/oval outsole pads. Yellow has brown sole and cream plush; Black has black sole and gray plush; Army Green has black sole with real yellow camouflage patches and gray plush. Never recolor, invent hidden geometry, add shoes or a new angle, remove actual shoe markings, or add factory/performance claims. Remove external Chinese wording, supplier frames, arrows and marketing icons. Clean white or understated neutral background, photograph dominates, safe margins, clear restrained English typography. No waterproof, anti-slip, grip, ankle support, thermal rating, medical, barefoot, zero-drop, cotton/wool/leather-composition, price or delivery claims. Keep exactly one complete Yellow diagonal boot. Replace snowy scene/rock with clean white and natural grounded shadow. Whole photographed outline and sole fit; no text or added objects.",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\016准备\\05_AI候选\\M1.png",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-c3287ba3-a7d9-4d2c-919b-ce1bb54cb12f.png",
+      "output_sha256": "d70c3529edfa9823b14597b3050b870e1901f76aac432745c4d2286c3ab1319f",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T04:56:24.489451+00:00",
+      "review_note": "Compared native output with exact recorded source: photographed pose/count, colors, upper seams, laces/hooks, plush collars and sole geometry preserved; no unsupported performance text."
+    },
+    {
+      "role": "M2",
+      "buyer_question": "三色和EU配码",
+      "source_indices": [
+        7
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\016准备\\01_产品来源原图\\07.jpg"
+      ],
+      "source_sha256": [
+        "8ea1d44ebf6f5cbe7ef359f9da1a26d523aea9f7ca8aaff2c336e2848ed84116"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1405
+        ]
+      ],
+      "prompt": "Use case: precise-object-edit. Asset type: square English B2B footwear photo. Input is the exact edit target Luqi016 winter ankle boot. Change only background clutter, supplier text/graphics and framing. Preserve photographed boot pose/count, naturally clipped or occluded contours, microfiber-textured stitched upper, double curved toe seams, perforated side panel, two pairs of upper metal hooks and four eyelet pairs, round rope laces, rear strip/pull loop, plush collar and dense rounded studs/oval outsole pads. Yellow has brown sole and cream plush; Black has black sole and gray plush; Army Green has black sole with real yellow camouflage patches and gray plush. Never recolor, invent hidden geometry, add shoes or a new angle, remove actual shoe markings, or add factory/performance claims. Remove external Chinese wording, supplier frames, arrows and marketing icons. Clean white or understated neutral background, photograph dominates, safe margins, clear restrained English typography. No waterproof, anti-slip, grip, ankle support, thermal rating, medical, barefoot, zero-drop, cotton/wool/leather-composition, price or delivery claims. Use ONLY the three actual complete profile photographs in lower half: Yellow above, Army Green lower left, Black lower right. Exclude specification table and all activity icons. Preserve exact sole patches/colors. Text exactly: COLOR OPTIONS; Yellow; Army Green; Black; EU 37-48 | Send your color-size mix.",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\016准备\\05_AI候选\\M2.png",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-4f1c6821-07d8-439d-b0dc-a1bb037d7979.png",
+      "output_sha256": "65ed3f704476406569410e63c6e4b972b780440a26bff5d9625dfc7f9431b420",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T04:56:24.498920+00:00",
+      "review_note": "Compared native output with exact recorded source: photographed pose/count, colors, upper seams, laces/hooks, plush collars and sole geometry preserved; no unsupported performance text."
+    },
+    {
+      "role": "M3",
+      "buyer_question": "实际正面上脚轮廓",
+      "source_indices": [
+        12
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\016准备\\01_产品来源原图\\12.jpg"
+      ],
+      "source_sha256": [
+        "973a89769218b06b58eb1c9fae1244c35376cee3b8c59e2e87dd8f4e8c67daae"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1115
+        ]
+      ],
+      "prompt": "Use case: precise-object-edit. Asset type: square English B2B footwear photo. Input is the exact edit target Luqi016 winter ankle boot. Change only background clutter, supplier text/graphics and framing. Preserve photographed boot pose/count, naturally clipped or occluded contours, microfiber-textured stitched upper, double curved toe seams, perforated side panel, two pairs of upper metal hooks and four eyelet pairs, round rope laces, rear strip/pull loop, plush collar and dense rounded studs/oval outsole pads. Yellow has brown sole and cream plush; Black has black sole and gray plush; Army Green has black sole with real yellow camouflage patches and gray plush. Never recolor, invent hidden geometry, add shoes or a new angle, remove actual shoe markings, or add factory/performance claims. Remove external Chinese wording, supplier frames, arrows and marketing icons. Clean white or understated neutral background, photograph dominates, safe margins, clear restrained English typography. No waterproof, anti-slip, grip, ankle support, thermal rating, medical, barefoot, zero-drop, cotton/wool/leather-composition, price or delivery claims. Keep exact Yellow on-foot pair and cuffed dark jeans, original front view and whole toes. No shoe pose change. Remove snow scene outside shoes, use understated neutral ground. Text exactly: ON-FOOT PROFILE; Plush-lined lace-up ankle boots.",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\016准备\\05_AI候选\\M3.png",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-865cd2ca-0b93-4319-8b3c-b0bf764d1dac.png",
+      "output_sha256": "2a7dbd9f51704dbfc00728aad21c8e5802f02762cd1b84329882d4493ee0fbf9",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T04:56:24.508847+00:00",
+      "review_note": "Compared native output with exact recorded source: photographed pose/count, colors, upper seams, laces/hooks, plush collars and sole geometry preserved; no unsupported performance text."
+    },
+    {
+      "role": "M4",
+      "buyer_question": "实拍橡胶底纹",
+      "source_indices": [
+        8
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\016准备\\01_产品来源原图\\08.jpg"
+      ],
+      "source_sha256": [
+        "8efcbe6f16809568fa81beb0f84b9581d17b51c9e8b81276930ae9b768e5007a"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1561
+        ]
+      ],
+      "prompt": "Use case: precise-object-edit. Asset type: square English B2B footwear photo. Input is the exact edit target Luqi016 winter ankle boot. Change only background clutter, supplier text/graphics and framing. Preserve photographed boot pose/count, naturally clipped or occluded contours, microfiber-textured stitched upper, double curved toe seams, perforated side panel, two pairs of upper metal hooks and four eyelet pairs, round rope laces, rear strip/pull loop, plush collar and dense rounded studs/oval outsole pads. Yellow has brown sole and cream plush; Black has black sole and gray plush; Army Green has black sole with real yellow camouflage patches and gray plush. Never recolor, invent hidden geometry, add shoes or a new angle, remove actual shoe markings, or add factory/performance claims. Remove external Chinese wording, supplier frames, arrows and marketing icons. Clean white or understated neutral background, photograph dominates, safe margins, clear restrained English typography. No waterproof, anti-slip, grip, ankle support, thermal rating, medical, barefoot, zero-drop, cotton/wool/leather-composition, price or delivery claims. Keep ONLY the one complete brown outsole photograph, diagonal exactly as photographed; retain each oval pad and rounded stud. Omit mountain artwork and all supplier claims. Text exactly: OUTSOLE DETAIL; Actual photographed rubber outsole.",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\016准备\\05_AI候选\\M4.png",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-7492a1a8-2e84-43ff-aa55-ea6b497cc809.png",
+      "output_sha256": "7842498e1d200a6678a164205ccd728822a6d7ae4e60c46a6802dee1e8de495b",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T04:56:24.518176+00:00",
+      "review_note": "Compared native output with exact recorded source: photographed pose/count, colors, upper seams, laces/hooks, plush collars and sole geometry preserved; no unsupported performance text."
+    },
+    {
+      "role": "M5",
+      "buyer_question": "询价输入和军绿色外观",
+      "source_indices": [
+        20
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\016准备\\01_产品来源原图\\20.jpg"
+      ],
+      "source_sha256": [
+        "6bbac898e814b4a81c425a0be26b747e638154aeae3361906e001b62ae463577"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1132
+        ]
+      ],
+      "prompt": "Use case: precise-object-edit. Asset type: square English B2B footwear photo. Input is the exact edit target Luqi016 winter ankle boot. Change only background clutter, supplier text/graphics and framing. Preserve photographed boot pose/count, naturally clipped or occluded contours, microfiber-textured stitched upper, double curved toe seams, perforated side panel, two pairs of upper metal hooks and four eyelet pairs, round rope laces, rear strip/pull loop, plush collar and dense rounded studs/oval outsole pads. Yellow has brown sole and cream plush; Black has black sole and gray plush; Army Green has black sole with real yellow camouflage patches and gray plush. Never recolor, invent hidden geometry, add shoes or a new angle, remove actual shoe markings, or add factory/performance claims. Remove external Chinese wording, supplier frames, arrows and marketing icons. Clean white or understated neutral background, photograph dominates, safe margins, clear restrained English typography. No waterproof, anti-slip, grip, ankle support, thermal rating, medical, barefoot, zero-drop, cotton/wool/leather-composition, price or delivery claims. Keep exact Army Green on-foot pair, one lifted heel and one planted, cuffed jeans and all yellow camouflage sole patches. Use understated actual-looking neutral ground, no added weather. Text exactly: PLAN YOUR ASSORTMENT; Send color, EU size mix, pair quantity and destination.",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\016准备\\05_AI候选\\M5.png",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-3716edf1-8bdd-4e5f-bfd9-364c2a79fef8.png",
+      "output_sha256": "20fa4e8c899ad47b05599508c4127ab2d215aa7379a22320a92900b80b51a6a6",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T04:56:24.527942+00:00",
+      "review_note": "Compared native output with exact recorded source: photographed pose/count, colors, upper seams, laces/hooks, plush collars and sole geometry preserved; no unsupported performance text."
+    },
+    {
+      "role": "D1",
+      "buyer_question": "鞋面拼接与系带细节",
+      "source_indices": [
+        9
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\016准备\\01_产品来源原图\\09.jpg"
+      ],
+      "source_sha256": [
+        "e68859dd8211f87373715b9a912b27cf72ee0ad56e8ee2f271b638c11f42e2b4"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1253
+        ]
+      ],
+      "prompt": "Use case: precise-object-edit. Asset type: square English B2B footwear photo. Input is the exact edit target Luqi016 winter ankle boot. Change only background clutter, supplier text/graphics and framing. Preserve photographed boot pose/count, naturally clipped or occluded contours, microfiber-textured stitched upper, double curved toe seams, perforated side panel, two pairs of upper metal hooks and four eyelet pairs, round rope laces, rear strip/pull loop, plush collar and dense rounded studs/oval outsole pads. Yellow has brown sole and cream plush; Black has black sole and gray plush; Army Green has black sole with real yellow camouflage patches and gray plush. Never recolor, invent hidden geometry, add shoes or a new angle, remove actual shoe markings, or add factory/performance claims. Remove external Chinese wording, supplier frames, arrows and marketing icons. Clean white or understated neutral background, photograph dominates, safe margins, clear restrained English typography. No waterproof, anti-slip, grip, ankle support, thermal rating, medical, barefoot, zero-drop, cotton/wool/leather-composition, price or delivery claims. Keep exact large Yellow forefoot/closure close-up, naturally cropped toe and right boundary. Exclude separate round texture magnifier and outside marketing wording. Preserve seams/hooks/eyelets/laces. Do not complete hidden shoe contours. Text exactly: UPPER AND CLOSURE; Microfiber upper | Lace-up construction.",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\016准备\\05_AI候选\\D1.png",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-fc0288a7-000c-4569-b603-4477ef4c6c31.png",
+      "output_sha256": "8df352d948965c457b4a6c01a4408e10fb6083974c24c385614cebd871790ad6",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T04:56:24.537780+00:00",
+      "review_note": "Compared native output with exact recorded source: photographed pose/count, colors, upper seams, laces/hooks, plush collars and sole geometry preserved; no unsupported performance text."
+    },
+    {
+      "role": "D2",
+      "buyer_question": "后跟及拉环结构",
+      "source_indices": [
+        10
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\016准备\\01_产品来源原图\\10.jpg"
+      ],
+      "source_sha256": [
+        "dbf240c317921ea749a1333705276648dcc0b1e2e16e2cb1720f4e46e53cc911"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1007
+        ]
+      ],
+      "prompt": "Use case: precise-object-edit. Asset type: square English B2B footwear photo. Input is the exact edit target Luqi016 winter ankle boot. Change only background clutter, supplier text/graphics and framing. Preserve photographed boot pose/count, naturally clipped or occluded contours, microfiber-textured stitched upper, double curved toe seams, perforated side panel, two pairs of upper metal hooks and four eyelet pairs, round rope laces, rear strip/pull loop, plush collar and dense rounded studs/oval outsole pads. Yellow has brown sole and cream plush; Black has black sole and gray plush; Army Green has black sole with real yellow camouflage patches and gray plush. Never recolor, invent hidden geometry, add shoes or a new angle, remove actual shoe markings, or add factory/performance claims. Remove external Chinese wording, supplier frames, arrows and marketing icons. Clean white or understated neutral background, photograph dominates, safe margins, clear restrained English typography. No waterproof, anti-slip, grip, ankle support, thermal rating, medical, barefoot, zero-drop, cotton/wool/leather-composition, price or delivery claims. Keep one exact rear view of Yellow boot, entire photographed heel and plush collar/pull loop. Remove turquoise overlay arrows and all support/weather wording, keep underlying actual seam positions. Text exactly: REAR CONSTRUCTION; Pull loop and stitched heel panels.",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\016准备\\05_AI候选\\D2.png",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-c9437f45-6bb3-4653-a90a-06842731325f.png",
+      "output_sha256": "fc396dd7fc6ffa87ef8a8b9d330c6ab1e119e01c88851e550563743ae1dcaf3a",
+      "output_dimensions": [
+        1111,
+        1416
+      ],
+      "review_at": "2026-10-10T04:56:24.552783+00:00",
+      "review_note": "Compared native output with exact recorded source: photographed pose/count, colors, upper seams, laces/hooks, plush collars and sole geometry preserved; no unsupported performance text."
+    },
+    {
+      "role": "D3",
+      "buyer_question": "真实加绒鞋口",
+      "source_indices": [
+        28
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\016准备\\01_产品来源原图\\28.jpg"
+      ],
+      "source_sha256": [
+        "af9a55e0a219bc42f79fc399f95456cb41d59d19c98c922a76e3143f7e54bcd1"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          819
+        ]
+      ],
+      "prompt": "Use case: precise-object-edit. Asset type: square English B2B footwear photo. Input is the exact edit target Luqi016 winter ankle boot. Change only background clutter, supplier text/graphics and framing. Preserve photographed boot pose/count, naturally clipped or occluded contours, microfiber-textured stitched upper, double curved toe seams, perforated side panel, two pairs of upper metal hooks and four eyelet pairs, round rope laces, rear strip/pull loop, plush collar and dense rounded studs/oval outsole pads. Yellow has brown sole and cream plush; Black has black sole and gray plush; Army Green has black sole with real yellow camouflage patches and gray plush. Never recolor, invent hidden geometry, add shoes or a new angle, remove actual shoe markings, or add factory/performance claims. Remove external Chinese wording, supplier frames, arrows and marketing icons. Clean white or understated neutral background, photograph dominates, safe margins, clear restrained English typography. No waterproof, anti-slip, grip, ankle support, thermal rating, medical, barefoot, zero-drop, cotton/wool/leather-composition, price or delivery claims. Keep exact two Black display boots with gray plush openings and black soles in same diagonal arrangement. Clean neutral background, no pose change. Show actual collars/laces as photographed. Text exactly: PLUSH LINING; Fiber composition requires confirmation.",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\016准备\\05_AI候选\\D3.png",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-c1c6a840-237d-4ea7-b7b1-7774a6041234.png",
+      "output_sha256": "31aaa56eb813066031456645b1825564cb7e4c11e1da046759e7c1e4a77054f9",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T04:56:24.561529+00:00",
+      "review_note": "Compared native output with exact recorded source: photographed pose/count, colors, upper seams, laces/hooks, plush collars and sole geometry preserved; no unsupported performance text."
+    },
+    {
+      "role": "D4",
+      "buyer_question": "EU配码与完整展示",
+      "source_indices": [
+        24
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\016准备\\01_产品来源原图\\24.jpg"
+      ],
+      "source_sha256": [
+        "f6bca0f7009dacacd6a154f536867b7c3605b5310c7dd2c22bc1efe18fa1f580"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          819
+        ]
+      ],
+      "prompt": "Use case: precise-object-edit. Asset type: square English B2B footwear photo. Input is the exact edit target Luqi016 winter ankle boot. Change only background clutter, supplier text/graphics and framing. Preserve photographed boot pose/count, naturally clipped or occluded contours, microfiber-textured stitched upper, double curved toe seams, perforated side panel, two pairs of upper metal hooks and four eyelet pairs, round rope laces, rear strip/pull loop, plush collar and dense rounded studs/oval outsole pads. Yellow has brown sole and cream plush; Black has black sole and gray plush; Army Green has black sole with real yellow camouflage patches and gray plush. Never recolor, invent hidden geometry, add shoes or a new angle, remove actual shoe markings, or add factory/performance claims. Remove external Chinese wording, supplier frames, arrows and marketing icons. Clean white or understated neutral background, photograph dominates, safe margins, clear restrained English typography. No waterproof, anti-slip, grip, ankle support, thermal rating, medical, barefoot, zero-drop, cotton/wool/leather-composition, price or delivery claims. Keep exact two Yellow display boots in original diagonal arrangement, actual brown soles and cream plush. Preserve both complete toes/heels. Neutral white, no extra shoe. Text exactly: EU SIZE PLANNING; EU 37-48 | Confirm your required color-size mix.",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\016准备\\05_AI候选\\D4.png",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-daa0e286-2a18-4350-8f4d-bf12a98a17b6.png",
+      "output_sha256": "28bc04d42019be1db85be8dcb08c081479a38d3d85652ab6d5bbbd7fb3a00553",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T04:56:24.569680+00:00",
+      "review_note": "Compared native output with exact recorded source: photographed pose/count, colors, upper seams, laces/hooks, plush collars and sole geometry preserved; no unsupported performance text."
+    },
+    {
+      "role": "SKU_Black",
+      "buyer_question": "黑色单色SKU",
+      "source_indices": [
+        18
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\016准备\\01_产品来源原图\\18.jpg"
+      ],
+      "source_sha256": [
+        "bae8cf14c16f3888574341ddb17b5751e4723c91b5c40a53b61d1d6947d480e3"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1041
+        ]
+      ],
+      "prompt": "Use case: precise-object-edit. Asset type: square English B2B footwear photo. Input is the exact edit target Luqi016 winter ankle boot. Change only background clutter, supplier text/graphics and framing. Preserve photographed boot pose/count, naturally clipped or occluded contours, microfiber-textured stitched upper, double curved toe seams, perforated side panel, two pairs of upper metal hooks and four eyelet pairs, round rope laces, rear strip/pull loop, plush collar and dense rounded studs/oval outsole pads. Yellow has brown sole and cream plush; Black has black sole and gray plush; Army Green has black sole with real yellow camouflage patches and gray plush. Never recolor, invent hidden geometry, add shoes or a new angle, remove actual shoe markings, or add factory/performance claims. Remove external Chinese wording, supplier frames, arrows and marketing icons. Clean white or understated neutral background, photograph dominates, safe margins, clear restrained English typography. No waterproof, anti-slip, grip, ankle support, thermal rating, medical, barefoot, zero-drop, cotton/wool/leather-composition, price or delivery claims. Keep exact Black on-foot pair, cuffed jeans, gray plush and black soles, original front stance. Understated neutral ground; no text or collage.",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\016准备\\05_AI候选\\SKU_Black.png",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-00cd3515-f968-4c7c-aecc-bf9ad0cad5dc.png",
+      "output_sha256": "10a132058ac0ff2976bb989c88279d633155c619688889e782218fd6614041c2",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T04:56:24.580162+00:00",
+      "review_note": "Compared native output with exact recorded source: photographed pose/count, colors, upper seams, laces/hooks, plush collars and sole geometry preserved; no unsupported performance text."
+    },
+    {
+      "role": "SKU_Yellow",
+      "buyer_question": "土黄单色SKU",
+      "source_indices": [
+        14
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\016准备\\01_产品来源原图\\14.jpg"
+      ],
+      "source_sha256": [
+        "c630d12a08d2b10bc636a21fa5dc59a51658d0a6bea79b9adb059a5aad5f916c"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1042
+        ]
+      ],
+      "prompt": "Use case: precise-object-edit. Asset type: square English B2B footwear photo. Input is the exact edit target Luqi016 winter ankle boot. Change only background clutter, supplier text/graphics and framing. Preserve photographed boot pose/count, naturally clipped or occluded contours, microfiber-textured stitched upper, double curved toe seams, perforated side panel, two pairs of upper metal hooks and four eyelet pairs, round rope laces, rear strip/pull loop, plush collar and dense rounded studs/oval outsole pads. Yellow has brown sole and cream plush; Black has black sole and gray plush; Army Green has black sole with real yellow camouflage patches and gray plush. Never recolor, invent hidden geometry, add shoes or a new angle, remove actual shoe markings, or add factory/performance claims. Remove external Chinese wording, supplier frames, arrows and marketing icons. Clean white or understated neutral background, photograph dominates, safe margins, clear restrained English typography. No waterproof, anti-slip, grip, ankle support, thermal rating, medical, barefoot, zero-drop, cotton/wool/leather-composition, price or delivery claims. Keep exact Yellow on-foot pair, foreground sharp/back naturally blurred, cuffed jeans, cream plush and brown soles. Understated neutral ground, no text or collage.",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\016准备\\05_AI候选\\SKU_Yellow.png",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-742c7872-b5fc-475b-942d-4f9e45c9d4aa.png",
+      "output_sha256": "2d8fba3dec185ee249eaf6c642fb398bd796ddb54be354f805d48397738ae6d9",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T04:56:24.589416+00:00",
+      "review_note": "Compared native output with exact recorded source: photographed pose/count, colors, upper seams, laces/hooks, plush collars and sole geometry preserved; no unsupported performance text."
+    },
+    {
+      "role": "SKU_Army Green",
+      "buyer_question": "军绿单色SKU",
+      "source_indices": [
+        22
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\016准备\\01_产品来源原图\\22.jpg"
+      ],
+      "source_sha256": [
+        "a085e45da58ced1c885f44dbe1ef4aaab19f5adabf632e7f6285ac44f69d3877"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1041
+        ]
+      ],
+      "prompt": "Use case: precise-object-edit. Asset type: square English B2B footwear photo. Input is the exact edit target Luqi016 winter ankle boot. Change only background clutter, supplier text/graphics and framing. Preserve photographed boot pose/count, naturally clipped or occluded contours, microfiber-textured stitched upper, double curved toe seams, perforated side panel, two pairs of upper metal hooks and four eyelet pairs, round rope laces, rear strip/pull loop, plush collar and dense rounded studs/oval outsole pads. Yellow has brown sole and cream plush; Black has black sole and gray plush; Army Green has black sole with real yellow camouflage patches and gray plush. Never recolor, invent hidden geometry, add shoes or a new angle, remove actual shoe markings, or add factory/performance claims. Remove external Chinese wording, supplier frames, arrows and marketing icons. Clean white or understated neutral background, photograph dominates, safe margins, clear restrained English typography. No waterproof, anti-slip, grip, ankle support, thermal rating, medical, barefoot, zero-drop, cotton/wool/leather-composition, price or delivery claims. Keep exact Army Green on-foot pair in original stance, sharp foreground and naturally blurred back boot, cuffed jeans. Keep all actual yellow sole camouflage patches and gray plush. Understated neutral ground, no text or collage.",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\016准备\\05_AI候选\\SKU_Army Green.png",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-ee96a0ac-9c0c-4aa6-8b8d-cfb857a5cd6a.png",
+      "output_sha256": "ab56baa0a8fa2fb38a2ea990be3301a4b639bf7eecdaa8002b69651898f8da27",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T04:56:24.599512+00:00",
+      "review_note": "Compared native output with exact recorded source: photographed pose/count, colors, upper seams, laces/hooks, plush collars and sole geometry preserved; no unsupported performance text."
+    }
+  ],
+  "M6": {
+    "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎新品_2026-10-07\\图片修复\\F.png",
+    "bank_url": "https://sc04.alicdn.com/kf/S6c8cb1d46d8c4b018cf07f5cab50c1adi/286385890/S6c8cb1d46d8c4b018cf07f5cab50c1adi.png",
+    "file_id": "30149993323"
+  },
+  "company": [
+    {
+      "role": "C1",
+      "usage": "ordinary_HTML_company_context",
+      "official_url": "https://sc04.alicdn.com/kf/Ha8c1682092424e778eadf945763e79daU/286385890/Ha8c1682092424e778eadf945763e79daU.jpg",
+      "file_id": "33355885480",
+      "local_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\266_quality_audit\\originals\\C01_factory_profile.jpg",
+      "sha256": "23a34c8e425ae286d190ac1eb587c93e9a87421fdf490ec48f260e53e316149c",
+      "local_hash_verified": true,
+      "pixel_edit": false
+    },
+    {
+      "role": "C2",
+      "usage": "ordinary_HTML_company_context",
+      "official_url": "https://sc04.alicdn.com/kf/H496f7579171f4370a1d47c3adf30001bK/286385890/H496f7579171f4370a1d47c3adf30001bK.jpg",
+      "file_id": "33358392283",
+      "local_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\266_quality_audit\\originals\\C02_oem_odm_workflow.jpg",
+      "sha256": "66624253f1d95ec68e060d792f13c61943c86f7d61e763167a0a2eb1146300f5",
+      "local_hash_verified": true,
+      "pixel_edit": false
+    },
+    {
+      "role": "C3",
+      "usage": "ordinary_HTML_company_context",
+      "official_url": "https://sc04.alicdn.com/kf/H36e700f5c3ee447a80c035d8ae7521d9a/286385890/H36e700f5c3ee447a80c035d8ae7521d9a.jpg",
+      "file_id": "33355813301",
+      "local_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\266_quality_audit\\originals\\C03_production_process.jpg",
+      "sha256": "3ae00d6398224dd7021ed2a266584bccb77b741b31fa9c72ca8ad66ab443f683",
+      "local_hash_verified": true,
+      "pixel_edit": false
+    },
+    {
+      "role": "C4",
+      "usage": "ordinary_HTML_company_context",
+      "official_url": "https://sc04.alicdn.com/kf/H9f32c7ecea0f4d25bc5ddc9cd04c1e5dK/286385890/H9f32c7ecea0f4d25bc5ddc9cd04c1e5dK.jpg",
+      "file_id": "33358345636",
+      "local_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\266_quality_audit\\originals\\C04_quality_control.jpg",
+      "sha256": "f32d682a7055a3e44f91eb074b678507beca63967da5565de8997f582a651bf5",
+      "local_hash_verified": true,
+      "pixel_edit": false
+    },
+    {
+      "role": "C5",
+      "usage": "ordinary_HTML_company_context",
+      "official_url": "https://sc04.alicdn.com/kf/H5f71c3cfb4064b51bb458d0a786cb402R/286385890/H5f71c3cfb4064b51bb458d0a786cb402R.jpg",
+      "file_id": "33358440083",
+      "local_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\266_quality_audit\\originals\\C05_packing_inquiry.jpg",
+      "sha256": "d0f3916d920a9ec46fd822317a9cd3c684b6b7d60631208475fa2be138d05bc2",
+      "local_hash_verified": true,
+      "pixel_edit": false
+    }
+  ],
+  "excluded_candidate": "Original06/11 flame/heat graphics excluded; D3 uses clean original28. D2 portrait accepted for full rear construction, not stretched to square.",
+  "review": "All12 outputs compared to full source frames and complete-set contact. Real M6/five company scope checked. Main/detail/SKU use12 independent source frames; D2 portrait for whole rear construction, no stretch or hidden reconstruction. No English performance claims or thirdparty shoe marks introduced."
+}

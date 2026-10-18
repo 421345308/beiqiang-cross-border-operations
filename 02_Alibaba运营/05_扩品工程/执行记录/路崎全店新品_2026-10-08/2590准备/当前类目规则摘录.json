@@ -1,0 +1,790 @@
+{
+  "category_id": 201334413,
+  "schema_sha256": "cb3be59dc64d9f4449a17a1bf77eb0f562cc0270c1f85786e7601f7a6d150f1e",
+  "request_id": "213f5a2117914340099897128",
+  "acquired_at": "2026-10-08T04:33:31.591368+00:00",
+  "fields": [
+    {
+      "id": "p-20700",
+      "name": "Midsole Material",
+      "type": "multiCheck",
+      "rules": [
+        {
+          "name": "requiredRule",
+          "value": "true"
+        },
+        {
+          "name": "valueAttributeRule",
+          "value": "inputValue",
+          "desc": "输入属性值"
+        },
+        {
+          "name": "valueTypeRule",
+          "value": "text",
+          "target": "attribute:inputValue"
+        },
+        {
+          "name": "tipRule",
+          "value": "该属性支持自定义输入，输入值请填写value中inputValue属性,值为任意负数；多个输入值请保证value负数值不重复"
+        },
+        {
+          "name": "maxValueRule",
+          "value": "最大用户输入值个数[1]",
+          "exProperty": "include"
+        }
+      ],
+      "options": [
+        {
+          "displayName": "Other",
+          "value": "-1"
+        },
+        {
+          "displayName": "Genuine Leather",
+          "value": "3242875"
+        },
+        {
+          "displayName": "Mesh",
+          "value": "6821988"
+        },
+        {
+          "displayName": "Textile",
+          "value": "19359186"
+        },
+        {
+          "displayName": "Latex",
+          "value": "190091172"
+        },
+        {
+          "displayName": "md",
+          "value": "190091264"
+        },
+        {
+          "displayName": "Popcorn",
+          "value": "190091505"
+        },
+        {
+          "displayName": "PVC",
+          "value": "29228"
+        },
+        {
+          "displayName": "PU",
+          "value": "3323086"
+        },
+        {
+          "displayName": "Rubber",
+          "value": "3338114"
+        },
+        {
+          "displayName": "EVA",
+          "value": "3376399"
+        },
+        {
+          "displayName": "Gel",
+          "value": "3722559"
+        },
+        {
+          "displayName": "Wood",
+          "value": "3963577"
+        },
+        {
+          "displayName": "Tpr",
+          "value": "6217318"
+        },
+        {
+          "displayName": "Straw",
+          "value": "28986571"
+        },
+        {
+          "displayName": "other",
+          "value": "-1"
+        }
+      ]
+    },
+    {
+      "id": "p-191290426",
+      "name": "Outsole Material",
+      "type": "multiCheck",
+      "rules": [
+        {
+          "name": "requiredRule",
+          "value": "true"
+        },
+        {
+          "name": "valueAttributeRule",
+          "value": "inputValue",
+          "desc": "输入属性值"
+        },
+        {
+          "name": "valueTypeRule",
+          "value": "text",
+          "target": "attribute:inputValue"
+        },
+        {
+          "name": "tipRule",
+          "value": "该属性支持自定义输入，输入值请填写value中inputValue属性,值为任意负数；多个输入值请保证value负数值不重复"
+        },
+        {
+          "name": "maxValueRule",
+          "value": "最大用户输入值个数[1]",
+          "exProperty": "include"
+        }
+      ],
+      "options": [
+        {
+          "displayName": "Other",
+          "value": "-1"
+        },
+        {
+          "displayName": "PHYLON",
+          "value": "11055226"
+        },
+        {
+          "displayName": "Leather",
+          "value": "190091222"
+        },
+        {
+          "displayName": "Cotton Fabric",
+          "value": "384964283"
+        },
+        {
+          "displayName": "Cow Muscle",
+          "value": "1951040094"
+        },
+        {
+          "displayName": "PVC",
+          "value": "29228"
+        },
+        {
+          "displayName": "Genuine Leather",
+          "value": "3242875"
+        },
+        {
+          "displayName": "PU",
+          "value": "3323086"
+        },
+        {
+          "displayName": "Rubber",
+          "value": "3338114"
+        },
+        {
+          "displayName": "EVA",
+          "value": "3376399"
+        },
+        {
+          "displayName": "Cork",
+          "value": "3683446"
+        },
+        {
+          "displayName": "Plastic",
+          "value": "3954276"
+        },
+        {
+          "displayName": "Wood",
+          "value": "3963577"
+        },
+        {
+          "displayName": "vibram",
+          "value": "4224936"
+        },
+        {
+          "displayName": "Tpr",
+          "value": "6217318"
+        },
+        {
+          "displayName": "TPU",
+          "value": "7097887"
+        },
+        {
+          "displayName": "Bonded Leather",
+          "value": "22094351"
+        },
+        {
+          "displayName": "Straw",
+          "value": "28986571"
+        },
+        {
+          "displayName": "Oxford",
+          "value": "7803300"
+        },
+        {
+          "displayName": "other",
+          "value": "-1"
+        }
+      ]
+    },
+    {
+      "id": "p-191290430",
+      "name": "Lining Material",
+      "type": "multiCheck",
+      "rules": [
+        {
+          "name": "requiredRule",
+          "value": "true"
+        },
+        {
+          "name": "valueAttributeRule",
+          "value": "inputValue",
+          "desc": "输入属性值"
+        },
+        {
+          "name": "valueTypeRule",
+          "value": "text",
+          "target": "attribute:inputValue"
+        },
+        {
+          "name": "tipRule",
+          "value": "该属性支持自定义输入，输入值请填写value中inputValue属性,值为任意负数；多个输入值请保证value负数值不重复"
+        },
+        {
+          "name": "maxValueRule",
+          "value": "最大用户输入值个数[1]",
+          "exProperty": "include"
+        }
+      ],
+      "options": [
+        {
+          "displayName": "Other",
+          "value": "-1"
+        },
+        {
+          "displayName": "PVC",
+          "value": "29228"
+        },
+        {
+          "displayName": "Genuine Leather",
+          "value": "3242875"
+        },
+        {
+          "displayName": "PU",
+          "value": "3323086"
+        },
+        {
+          "displayName": "Plush",
+          "value": "4141322"
+        },
+        {
+          "displayName": "Mesh",
+          "value": "6821988"
+        },
+        {
+          "displayName": "Cotton Fabric",
+          "value": "384964283"
+        },
+        {
+          "displayName": "other",
+          "value": "-1"
+        }
+      ]
+    },
+    {
+      "id": "p-210194982",
+      "name": "Upper Material",
+      "type": "singleCheck",
+      "rules": [
+        {
+          "name": "valueAttributeRule",
+          "value": "inputValue",
+          "desc": "输入属性值"
+        },
+        {
+          "name": "valueTypeRule",
+          "value": "text",
+          "target": "attribute:inputValue"
+        },
+        {
+          "name": "maxLengthRule",
+          "value": "50",
+          "target": "attribute:inputValue",
+          "exProperty": "include",
+          "unit": "character"
+        },
+        {
+          "name": "tipRule",
+          "value": "该属性支持自定义输入，输入值请填写value中inputValue属性,值为任意负数"
+        }
+      ],
+      "options": [
+        {
+          "displayName": "Other",
+          "value": "-1"
+        },
+        {
+          "displayName": "PVC",
+          "value": "29228"
+        },
+        {
+          "displayName": "Stretch Fabric",
+          "value": "362061"
+        },
+        {
+          "displayName": "Genuine Leather",
+          "value": "3242875"
+        },
+        {
+          "displayName": "PU",
+          "value": "3323086"
+        },
+        {
+          "displayName": "Rubber",
+          "value": "3338114"
+        },
+        {
+          "displayName": "EVA",
+          "value": "3376399"
+        },
+        {
+          "displayName": "Spandex/Elastane",
+          "value": "3705463"
+        },
+        {
+          "displayName": "Canvas",
+          "value": "3767487"
+        },
+        {
+          "displayName": "Denim",
+          "value": "3800980"
+        },
+        {
+          "displayName": "Plastic",
+          "value": "3954276"
+        },
+        {
+          "displayName": "Plush",
+          "value": "4141322"
+        },
+        {
+          "displayName": "Down",
+          "value": "6115693"
+        },
+        {
+          "displayName": "Nylon",
+          "value": "6444210"
+        },
+        {
+          "displayName": "Mesh",
+          "value": "6821988"
+        },
+        {
+          "displayName": "Velvet",
+          "value": "7334550"
+        },
+        {
+          "displayName": "Hemp",
+          "value": "7485489"
+        },
+        {
+          "displayName": "Wool",
+          "value": "7629837"
+        },
+        {
+          "displayName": "Polyester",
+          "value": "7719852"
+        },
+        {
+          "displayName": "Microfiber Fabrics",
+          "value": "8083462"
+        },
+        {
+          "displayName": "Fur",
+          "value": "11646718"
+        },
+        {
+          "displayName": "Cane",
+          "value": "12535623"
+        },
+        {
+          "displayName": "Synthetic",
+          "value": "16369367"
+        },
+        {
+          "displayName": "Flannel",
+          "value": "27900001"
+        },
+        {
+          "displayName": "Straw",
+          "value": "28986571"
+        },
+        {
+          "displayName": "Patent Leather",
+          "value": "29538429"
+        },
+        {
+          "displayName": "Jute",
+          "value": "36822883"
+        },
+        {
+          "displayName": "Flock",
+          "value": "37376150"
+        },
+        {
+          "displayName": "Sheepskin",
+          "value": "37437704"
+        },
+        {
+          "displayName": "faux suede",
+          "value": "58427554"
+        },
+        {
+          "displayName": "PP",
+          "value": "104451652"
+        },
+        {
+          "displayName": "Horsehair",
+          "value": "117242095"
+        },
+        {
+          "displayName": "Viscose",
+          "value": "121441610"
+        },
+        {
+          "displayName": "Silk",
+          "value": "190000994"
+        },
+        {
+          "displayName": "Split Leather",
+          "value": "253258450"
+        },
+        {
+          "displayName": "Cotton Fabric",
+          "value": "384964283"
+        },
+        {
+          "displayName": "Jacquard Fabric",
+          "value": "417448242"
+        },
+        {
+          "displayName": "PC",
+          "value": "966766596"
+        },
+        {
+          "displayName": "Microfiber Leather",
+          "value": "1878493769"
+        },
+        {
+          "displayName": "Sequined Cloth",
+          "value": "1951040028"
+        },
+        {
+          "displayName": "None-Woven",
+          "value": "1951655668"
+        },
+        {
+          "displayName": "Satin",
+          "value": "1954480417"
+        },
+        {
+          "displayName": "Neoprene",
+          "value": "1954480439"
+        },
+        {
+          "displayName": "Lace",
+          "value": "1954508774"
+        },
+        {
+          "displayName": "Corduroy",
+          "value": "1954510353"
+        },
+        {
+          "displayName": "other",
+          "value": "-1"
+        }
+      ]
+    },
+    {
+      "id": "p-191288010",
+      "name": "Color",
+      "type": "multiCheck",
+      "rules": [
+        {
+          "name": "requiredRule",
+          "value": "true"
+        },
+        {
+          "name": "valueAttributeRule",
+          "value": "inputValue",
+          "desc": "输入属性值"
+        },
+        {
+          "name": "valueTypeRule",
+          "value": "text",
+          "target": "attribute:inputValue"
+        },
+        {
+          "name": "tipRule",
+          "value": "该属性支持自定义输入，输入值请填写value中inputValue属性,值为任意负数；多个输入值请保证value负数值不重复"
+        },
+        {
+          "name": "maxValueRule",
+          "value": "最大用户输入值个数[60]",
+          "exProperty": "include"
+        },
+        {
+          "name": "valueAttributeRule",
+          "value": "img",
+          "desc": "可上传图片"
+        },
+        {
+          "name": "valueAttributeRule",
+          "value": "remark",
+          "desc": "可使用色块"
+        },
+        {
+          "name": "maxInputNumRule",
+          "value": "40",
+          "exProperty": "include"
+        },
+        {
+          "name": "requiredRule",
+          "value": "true"
+        }
+      ],
+      "options": [
+        {
+          "displayName": "Pink",
+          "value": "3328925"
+        },
+        {
+          "displayName": "Gold",
+          "value": "3331116"
+        },
+        {
+          "displayName": "Silver",
+          "value": "3460547"
+        },
+        {
+          "displayName": "Orange",
+          "value": "3558409"
+        },
+        {
+          "displayName": "Sliver",
+          "value": "3787620"
+        },
+        {
+          "displayName": "Purple",
+          "value": "3851110"
+        },
+        {
+          "displayName": "Ivory",
+          "value": "4173850"
+        },
+        {
+          "displayName": "Plum",
+          "value": "6408090"
+        },
+        {
+          "displayName": "Blue",
+          "value": "123085"
+        },
+        {
+          "displayName": "Black",
+          "value": "3327837"
+        },
+        {
+          "displayName": "White",
+          "value": "3331185"
+        },
+        {
+          "displayName": "Red",
+          "value": "3331260"
+        },
+        {
+          "displayName": "Yellow",
+          "value": "3354417"
+        },
+        {
+          "displayName": "Brown",
+          "value": "3399503"
+        },
+        {
+          "displayName": "Grey",
+          "value": "3483425"
+        },
+        {
+          "displayName": "Beige",
+          "value": "5715155"
+        },
+        {
+          "displayName": "Green",
+          "value": "216016296"
+        },
+        {
+          "displayName": "other",
+          "value": "-1"
+        }
+      ]
+    },
+    {
+      "id": "p-222038415",
+      "name": "EUR Size",
+      "type": "multiCheck",
+      "rules": [
+        {
+          "name": "valueAttributeRule",
+          "value": "inputValue",
+          "desc": "输入属性值"
+        },
+        {
+          "name": "valueTypeRule",
+          "value": "text",
+          "target": "attribute:inputValue"
+        },
+        {
+          "name": "tipRule",
+          "value": "该属性支持自定义输入，输入值请填写value中inputValue属性,值为任意负数；多个输入值请保证value负数值不重复"
+        },
+        {
+          "name": "maxValueRule",
+          "value": "最大用户输入值个数[60]",
+          "exProperty": "include"
+        }
+      ],
+      "options": [
+        {
+          "displayName": "35",
+          "value": "190000791"
+        },
+        {
+          "displayName": "35.5",
+          "value": "44894"
+        },
+        {
+          "displayName": "36",
+          "value": "190000105"
+        },
+        {
+          "displayName": "36.5",
+          "value": "44895"
+        },
+        {
+          "displayName": "37",
+          "value": "29542"
+        },
+        {
+          "displayName": "37.5",
+          "value": "44896"
+        },
+        {
+          "displayName": "38",
+          "value": "28388"
+        },
+        {
+          "displayName": "38.5",
+          "value": "44897"
+        },
+        {
+          "displayName": "39",
+          "value": "190000792"
+        },
+        {
+          "displayName": "39.5",
+          "value": "44898"
+        },
+        {
+          "displayName": "40",
+          "value": "28389"
+        },
+        {
+          "displayName": "40.5",
+          "value": "44899"
+        },
+        {
+          "displayName": "41",
+          "value": "28390"
+        },
+        {
+          "displayName": "41.5",
+          "value": "44900"
+        },
+        {
+          "displayName": "42",
+          "value": "28391"
+        },
+        {
+          "displayName": "42.5",
+          "value": "44901"
+        },
+        {
+          "displayName": "43",
+          "value": "28392"
+        },
+        {
+          "displayName": "43.5",
+          "value": "44902"
+        },
+        {
+          "displayName": "44",
+          "value": "28393"
+        },
+        {
+          "displayName": "44.5",
+          "value": "44903"
+        },
+        {
+          "displayName": "45",
+          "value": "28394"
+        },
+        {
+          "displayName": "45.5",
+          "value": "44904"
+        },
+        {
+          "displayName": "46",
+          "value": "28395"
+        },
+        {
+          "displayName": "46.5",
+          "value": "44905"
+        },
+        {
+          "displayName": "47",
+          "value": "28396"
+        },
+        {
+          "displayName": "47.5",
+          "value": "44906"
+        },
+        {
+          "displayName": "48",
+          "value": "29543"
+        },
+        {
+          "displayName": "48.5",
+          "value": "44907"
+        },
+        {
+          "displayName": "49",
+          "value": "29544"
+        },
+        {
+          "displayName": "49.5",
+          "value": "44908"
+        },
+        {
+          "displayName": "50",
+          "value": "29545"
+        },
+        {
+          "displayName": "50.5",
+          "value": "44909"
+        },
+        {
+          "displayName": "51",
+          "value": "44910"
+        },
+        {
+          "displayName": "51.5",
+          "value": "24171578"
+        },
+        {
+          "displayName": "52",
+          "value": "3273546"
+        },
+        {
+          "displayName": "other",
+          "value": "-1"
+        }
+      ]
+    }
+  ],
+  "validation_boundary": "Schema rule discovery only, not accepted submission nor formal listing."
+}

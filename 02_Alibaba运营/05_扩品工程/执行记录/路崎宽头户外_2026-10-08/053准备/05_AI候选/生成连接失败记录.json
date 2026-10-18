@@ -1,0 +1,14 @@
+{
+  "tasks": [
+    "M4-v2",
+    "M5-v2"
+  ],
+  "outcome": "TERMINAL_CONNECTION_FAILED_NO_GENERATED_RESULT",
+  "message": "image generation failed: connection failed: error sending request",
+  "action": "Retry same authorized imagegen prompt through normal tool; no image returned or accepted from failed call; no permission changes",
+  "resolution": "RESOLVED_NORMAL_SAME_TOOL_RETRY",
+  "accepted_outputs": [
+    "053-M4-v2.png",
+    "053-M5-v2.png"
+  ]
+}

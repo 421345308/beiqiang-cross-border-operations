@@ -1,0 +1,14 @@
+{
+  "status": "partial_creative_acceptance_pending_user_review",
+  "date": "2026-10-10",
+  "review_method": "contact_sheets_every_0.5_seconds_and_focused_full_resolution_frames; no_claim_of_continuous_playback_or_subjective_audio_review",
+  "sources": [
+    {"id":"release","path":"public/dynamic/release.mp4","sha256":"2127F3DE814FF552C1D2D30725EA0FEC1F3A11BD8F1AC47B6E9D5F960DCB14BE","dimensions":[1080,1916],"fps":24,"duration":5.041667,"audio":false,"contact":"release-contact.jpg","focused":{"seconds":4.8,"file":"release-end.png"},"decision":"visible_release_suitable_for_trial; slow_start_and_camera_push; minor_knit_variation"},
+    {"id":"step","path":"public/dynamic/step.mp4","sha256":"49F6D9A822B7D7A7475F423CDE992F89FF10C8A6FE8CA9917A1D54DF3EC62426","dimensions":[1080,1916],"fps":24,"duration":5.041667,"audio":false,"contact":"step-contact.jpg","focused":{"seconds":4.8,"file":"step-end.png"},"decision":"actual_foot_motion_but_landing_out_of_frame; full_step_acceptance_failed"},
+    {"id":"core","path":"out/贝强_针织袜子鞋_核心动态试片.mp4","sha256":"D10552A3527F635D6BDBF490CE4FC57989E8927412DADBB1978EF1A5654AD5D3","dimensions":[1080,1920],"fps":30,"frames":285,"duration":9.515,"bytes":6431382,"video":"h264/yuv420p/bt709","audio":"aac/48000/stereo","contact":"core-contact.jpg","focused":[{"seconds":4.95,"file":"core-release-end.png"},{"seconds":8.15,"file":"core-step-end.png"},{"seconds":9.45,"file":"../../../out/核心动态试片_封面.png"}],"decode":"passed","audio_mean_db":-26.5,"audio_peak_db":-11.9,"decision":"motion_direction_test_only; not_final_commercial_acceptance"}
+  ],
+  "editing":{"cloth_frames":[0,26],"knit_frames":[27,44],"release_frames":[45,149],"release_source_start_seconds":1.5,"step_frames":[150,245],"step_source_start_seconds":0,"step_playback_rate":1.45,"brand_frames":[246,284]},
+  "paid_submissions":2,
+  "paid_retries":0,
+  "published":false
+}

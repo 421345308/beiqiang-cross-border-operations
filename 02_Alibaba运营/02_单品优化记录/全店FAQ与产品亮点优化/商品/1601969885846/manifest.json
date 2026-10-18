@@ -1,0 +1,27 @@
+{
+  "operation": "update",
+  "product_id": "1601969885846",
+  "category_id": 201153804,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "copy.json",
+    "before_get.json",
+    "../../../../05_扩品工程/执行记录/2627BSK_API新建_2026-10-02/facts_and_copy.json",
+    "../../../../../../../Documents/Codex/2026-10-02/task-8/2627BSK/originals/00.jpg",
+    "current_get.json",
+    "../../../../00_运营SOP/国际站商品全生命周期SOP.md"
+  ],
+  "current_schema": "current_schema.xml",
+  "current_schema_sha256": "1e62fccee2bbd91be1642ca4f70a9ab33a5c658d1607665ca3455ce267b88279",
+  "schema_request_id": "21501b6717917372440921168",
+  "schema_acquired_at": "2026-10-11T16:47:21.232476+00:00",
+  "payload_xml": "payload.xml",
+  "field_ids": [
+    "textDesc",
+    "companyFaqDesc"
+  ],
+  "dependency_ids": [
+    "productDescType"
+  ],
+  "observed_model": "BQ-C2627"
+}

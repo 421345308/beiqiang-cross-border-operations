@@ -1,0 +1,35 @@
+{
+  "platform_writes": 0,
+  "total": 56,
+  "results": [
+    {
+      "command": "python -B -m unittest test_created_readback_normalization test_faq_create_type_guard test_schema_publish_contract test_schema_create_sku test_schema_keywords -v",
+      "tests": 26,
+      "seconds": 3.388,
+      "exit_code": 0,
+      "result": "OK",
+      "output": "离线测试26项.txt"
+    },
+    {
+      "command": "python -B -m unittest test_schema_verify_persistence test_versioned_content_acceptance test_six_current_content_acceptance test_schema_model_gallery test_schema_create_inventory -v",
+      "tests": 30,
+      "seconds": 6.705,
+      "exit_code": 0,
+      "result": "OK",
+      "observed_tool_output_chunk": "deb5a1",
+      "note": "Observed completed command result; no regenerated log or repeated run"
+    }
+  ],
+  "cwd": "C:\\Users\\spq\\Desktop\\贝强\\08_工具链\\01_业务脚本\\国际站扩品",
+  "code_sha256": {
+    "schema_publish_contract.py": "82401a24a634bd796a58f345451b34d48a2e7888d07cd18956dc4d92e89f72ee",
+    "schema_capabilities.json": "be4c458ac3d7ab77e616c7ee07d50ac6b7678e4a0d914b010c95912e0ba55e30",
+    "README.md": "2235df4d9aa8a8387f0633dc2fb2d9ad86512be0a56f8ffe39c6a68f820964ac",
+    "test_faq_create_type_guard.py": "4d16a63f13267125c7c230a6cc7cc1854d46696b479a49852bf3e6551bcedc19",
+    "test_created_readback_normalization.py": "94f62be0bce62426b84b6726cb5a02e58b9f3410904e665eed32b96d8510a6e5",
+    "schema_contract_fixtures/725_faq_type_rejection_20261004.json": "eb747bae90191d3f75f3dd8e9d608a9931cdbe6c05c2551ff1e9ea7735cbce66",
+    "schema_contract_fixtures/989_typed_faq_formal_create_20261004.json": "37a849ac62d9e32f61f6a41952f5db629ffb5d1c8d27e754649409a1982102fc",
+    "schema_contract_fixtures/725_typed_faq_formal_create_20261004.json": "bba86e58213fe1991d84302a4d2059896286ea867ba0b61b9f67c94141a54827",
+    "schema_contract_fixtures/create_readback_normalization_20261004.json": "b0f5d30bd9a38afe3866b01bb862eb7baabdfb7afbd9457ac558322a89631b88"
+  }
+}

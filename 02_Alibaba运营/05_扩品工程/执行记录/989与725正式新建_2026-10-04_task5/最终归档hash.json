@@ -1,0 +1,861 @@
+{
+  "at": "2026-10-04T04:20:56.738640+00:00",
+  "files": [
+    {
+      "path": "最终验收/725/approved_diagnostics_2/formal_schema.xml",
+      "bytes": 146500,
+      "sha256": "facdaf3747d7ca67ef10d86ddf65da528b18e03f06cdc8f5e8152be4712fbe0a"
+    },
+    {
+      "path": "最终验收/725/approved_diagnostics_2/render.json",
+      "bytes": 157196,
+      "sha256": "82901f38fcb241ba9d4e23cb5c1686a26f569ef710b24473d345a7e8e36c651b"
+    },
+    {
+      "path": "最终验收/725/approved_diagnostics_2/score.json",
+      "bytes": 1509,
+      "sha256": "6b946a14accda163c41bc39586d2f08058d7cf98c7afcf55483480041f7faa4c"
+    },
+    {
+      "path": "最终验收/725/browser/current_editor_initial.json",
+      "bytes": 12357,
+      "sha256": "3075dae39b135015cc4a9b75689647dd0a191eab8e50f93b01f65ac7968adc79"
+    },
+    {
+      "path": "最终验收/725/browser/current_editor_initial.png",
+      "bytes": 249170,
+      "sha256": "90108dee54a01695484431295d42b3835e4bc8299f0c8f9ab3d0df4906238421"
+    },
+    {
+      "path": "最终验收/725/browser/current_editor_ready.json",
+      "bytes": 76848,
+      "sha256": "2c68540493705bc965c96faf477c4a2920a560e44eceb388e3b3846607413cdf"
+    },
+    {
+      "path": "最终验收/725/browser/current_editor_ready.png",
+      "bytes": 554062,
+      "sha256": "1427efe97b185ac7c7d72d4a4b956162937425ffe1d3621e024a6a3d724b43de"
+    },
+    {
+      "path": "最终验收/725/browser/current_selling_points.json",
+      "bytes": 78407,
+      "sha256": "1e9c5fbf4bb7f2b5f07d99d413a4ea672949d639364f169df8f0bbc357b4893e"
+    },
+    {
+      "path": "最终验收/725/browser/current_selling_points.png",
+      "bytes": 459644,
+      "sha256": "3582a4f2b6c0961a542c795dee91242d34a86435dc20b6b14fa66512cdb57e2b"
+    },
+    {
+      "path": "最终验收/725/browser/editor_navigation.json",
+      "bytes": 232,
+      "sha256": "1b296dcbef3adc15f20f96a1ac2310bbcae0199db4b90031bff1adaeba2a34b5"
+    },
+    {
+      "path": "最终验收/725/create_faq_types_corrected_once_receipt.json",
+      "bytes": 195726,
+      "sha256": "aed21963b152676a5491bc0dfa9d2475c6115f93e1c50e088168bcf353f4a4a5"
+    },
+    {
+      "path": "最终验收/725/create_once_receipt.json",
+      "bytes": 199589,
+      "sha256": "f957028d6b903a11edc55f648880bd2b2fe4ef70a3fab7d749ce21036a26a510"
+    },
+    {
+      "path": "最终验收/725/current_content_and_formal_verification.json",
+      "bytes": 46130,
+      "sha256": "db67375ca53ca92e65467dfd5b9bbd48acc25fc3c7774117739fd59a7350fb34"
+    },
+    {
+      "path": "最终验收/725/formal_phase_3/formal_get.json",
+      "bytes": 44578,
+      "sha256": "c9f892bac7fd65d23e3e901fbc47eeeaaa017e9f0d46a29f6298ee6ca2cf0858"
+    },
+    {
+      "path": "最终验收/725/formal_phase_3/formal_schema.xml",
+      "bytes": 146500,
+      "sha256": "facdaf3747d7ca67ef10d86ddf65da528b18e03f06cdc8f5e8152be4712fbe0a"
+    },
+    {
+      "path": "最终验收/725/formal_phase_3/latest_page1.json",
+      "bytes": 46559,
+      "sha256": "a83df1c02c063a6bc3326bc6aba6d08207016ecd1b0d6678969e7c07e09f78a0"
+    },
+    {
+      "path": "最终验收/725/formal_phase_3/render.json",
+      "bytes": 157154,
+      "sha256": "6e8a9bb1e02cac94ab9a291372da2e44dca79a7561d8406d184ca086f98c8ba3"
+    },
+    {
+      "path": "最终验收/725/formal_phase_3/score.json",
+      "bytes": 652,
+      "sha256": "e4c410202016bc84f58af7ab379b5ad46563dfd903e579ee9594db7a47e1a241"
+    },
+    {
+      "path": "最终验收/725/formal_phase_3/summary.json",
+      "bytes": 556,
+      "sha256": "fb0f56c76228498e75d5a59d07bd8ab4f2802ae13049074aa805d6042c103355"
+    },
+    {
+      "path": "最终验收/725/public_QA/color_1.json",
+      "bytes": 179210,
+      "sha256": "2c3e23e9606ca6d1883c0f5101c930202fa3c0eac2f7338bc51774ac60111de3"
+    },
+    {
+      "path": "最终验收/725/public_QA/color_1.png",
+      "bytes": 815627,
+      "sha256": "5622176b52ec38a67a62e153602fe79df98eafa38d67bb2adc020a6463691f35"
+    },
+    {
+      "path": "最终验收/725/public_QA/color_2.json",
+      "bytes": 180280,
+      "sha256": "38debeab958177d074b6aed260ccee79c6bb3f53f6d5be4f78ba8e93c3587fc4"
+    },
+    {
+      "path": "最终验收/725/public_QA/color_2.png",
+      "bytes": 813360,
+      "sha256": "1e0097c4d0e2a3494980df35ac51db2024adfc9757cf80d3d30c3f6f2c9b83c0"
+    },
+    {
+      "path": "最终验收/725/public_QA/color_3.json",
+      "bytes": 180511,
+      "sha256": "bfddce990eeacddcd74f707bb5c1415339a78511b6d2b0c7b35e9068d37f88bf"
+    },
+    {
+      "path": "最终验收/725/public_QA/color_3.png",
+      "bytes": 963431,
+      "sha256": "21c14c299af5537b3c90416c79b75af17d6b809b9e42a7f664220adb8f88027b"
+    },
+    {
+      "path": "最终验收/725/public_QA/color_4.json",
+      "bytes": 180281,
+      "sha256": "3dee528f4a64a5b07ee30aa2261de231659385ebdcce1e445d5c29cc1310f607"
+    },
+    {
+      "path": "最终验收/725/public_QA/color_4.png",
+      "bytes": 1013406,
+      "sha256": "11a4f9c76c6253d55497eb8a0af5e5ad33b70dae04cd771c1883b78fa7582d24"
+    },
+    {
+      "path": "最终验收/725/public_QA/color_5.json",
+      "bytes": 180327,
+      "sha256": "2f9d2c40ff8e0f7eb964e11022aaabe2cd3190cd30d24d3c7c0c023773c5469d"
+    },
+    {
+      "path": "最终验收/725/public_QA/color_5.png",
+      "bytes": 1377848,
+      "sha256": "606cfad635da71e17eafc8c8c9f3fc29196a0ebe355a4a7079849cef5feccd3e"
+    },
+    {
+      "path": "最终验收/725/public_QA/color_6.json",
+      "bytes": 180327,
+      "sha256": "fd9fdf0e5a0ec773b36e3ab4665a57795ecd4cda1c2e73a239fe770ac998c775"
+    },
+    {
+      "path": "最终验收/725/public_QA/color_6.png",
+      "bytes": 1015746,
+      "sha256": "2c09af70a315f8bf3ea2aa2b68a768a1864b226d68f35914dafadf1de0cd6330"
+    },
+    {
+      "path": "最终验收/725/public_QA/colors_closed.json",
+      "bytes": 148484,
+      "sha256": "203db100b06b2943192696644cc868cfe5bc38b8bd90cd3aa3827cb6aaf158f6"
+    },
+    {
+      "path": "最终验收/725/public_QA/colors_closed.png",
+      "bytes": 877961,
+      "sha256": "02f74421fbfa4c9345e8f77518bd75c181a53a33387189f106c5c7e34d7aa74a"
+    },
+    {
+      "path": "最终验收/725/public_QA/colors_top.json",
+      "bytes": 148478,
+      "sha256": "1b88d056e637be634cbddda38e7f63322eca8e62e08dbad7535761ae94fb7470"
+    },
+    {
+      "path": "最终验收/725/public_QA/colors_top.png",
+      "bytes": 878365,
+      "sha256": "6ddc007b1c902ca4da06e6240bf90b94744df902d2dcb8fa4409e30f8700eefd"
+    },
+    {
+      "path": "最终验收/725/public_QA/company_views.json",
+      "bytes": 167149,
+      "sha256": "301e83a9031696503dbba815eff2cb5f49ee6f7df48a8c392bae8ee3fb79d935"
+    },
+    {
+      "path": "最终验收/725/public_QA/company_views.png",
+      "bytes": 2263778,
+      "sha256": "84d03d9bbeb5cb8547261edfb48681048699f2658bcf98fe4ff101b58798b14b"
+    },
+    {
+      "path": "最终验收/725/public_QA/detail_views.json",
+      "bytes": 167188,
+      "sha256": "9a391b2624345b79944be657a3754a0dda5a0b0308cbd91a1395efc7c937ff7a"
+    },
+    {
+      "path": "最终验收/725/public_QA/detail_views.png",
+      "bytes": 2616918,
+      "sha256": "a1fbd2a78c4f62f3ff3b927abe26d8ca1a60bdfec338f4002d1421736e347b01"
+    },
+    {
+      "path": "最终验收/725/public_QA/faq_area.json",
+      "bytes": 167112,
+      "sha256": "fb7e4d597142e8a815288e12fa9025b1a36cacd564b0bb70bd363303be64bd2e"
+    },
+    {
+      "path": "最终验收/725/public_QA/faq_area.png",
+      "bytes": 2273089,
+      "sha256": "953ffcf1ac909076c83ad3f4efb3fc1abfc260f597399748c077af356a2a016f"
+    },
+    {
+      "path": "最终验收/725/public_QA/faq_full.json",
+      "bytes": 167099,
+      "sha256": "8395c9d58fa7e69951d9ebb0c338df201c87062ab18e84c74a31ef06f6dc8c43"
+    },
+    {
+      "path": "最终验收/725/public_QA/faq_full.png",
+      "bytes": 822647,
+      "sha256": "0cf6303edf15d8135e79a079c7940d886d57ed57cc591a0d11406a0862dde7a8"
+    },
+    {
+      "path": "最终验收/725/public_QA/gallery_1.json",
+      "bytes": 148493,
+      "sha256": "071380b2075be9219dafbcddbdc3566c5540ae95313abc0fde88c3fe1b4b0a00"
+    },
+    {
+      "path": "最终验收/725/public_QA/gallery_1.png",
+      "bytes": 890002,
+      "sha256": "1a767bc1ee989c971ead003cec15150df66448af4430a7064a746945606b1c8e"
+    },
+    {
+      "path": "最终验收/725/public_QA/gallery_2.json",
+      "bytes": 148857,
+      "sha256": "ad38c35490d7d0ebd574be1ea2ed7384cdb2a067a36fe6f80c530fcc9514ec5c"
+    },
+    {
+      "path": "最终验收/725/public_QA/gallery_2.png",
+      "bytes": 889826,
+      "sha256": "0446225d2f3917c3691db12d2c6a3d4f78f436b53c795deaf4923f4387fe02b2"
+    },
+    {
+      "path": "最终验收/725/public_QA/gallery_3.json",
+      "bytes": 148857,
+      "sha256": "e5a0d86b9d991ee9ff3a2fabcf9621021f5753a77b106f493d3ee5f06b7e14b3"
+    },
+    {
+      "path": "最终验收/725/public_QA/gallery_3.png",
+      "bytes": 1125282,
+      "sha256": "209cfdd17c474a06cb9218e7c57843d9a3c4a40027fb7672da233dbb45ae73d1"
+    },
+    {
+      "path": "最终验收/725/public_QA/gallery_4.json",
+      "bytes": 148857,
+      "sha256": "9ddbe61da94a8088d46499198b48a49c2c24821670fa05ffd23d9658dec72bc3"
+    },
+    {
+      "path": "最终验收/725/public_QA/gallery_4.png",
+      "bytes": 1078106,
+      "sha256": "fadb836ef4ab1af6ce4d34dfa26d20bf9054c422241699bb12a27ccba061a423"
+    },
+    {
+      "path": "最终验收/725/public_QA/gallery_5.json",
+      "bytes": 148857,
+      "sha256": "7a0ded1216297b8665627bd847ca641953239be2c96145c0d9c07837581d008d"
+    },
+    {
+      "path": "最终验收/725/public_QA/gallery_5.png",
+      "bytes": 1141448,
+      "sha256": "40539c58a13226066ee9e42c62c3b82ca19f9e9f3300787d9422f3d93d824553"
+    },
+    {
+      "path": "最终验收/725/public_QA/gallery_6.json",
+      "bytes": 148497,
+      "sha256": "2b9e9265151216ad43ae44450c187711af3ac438a35afc0e65c2c445c1085420"
+    },
+    {
+      "path": "最终验收/725/public_QA/gallery_6.png",
+      "bytes": 1195461,
+      "sha256": "83f5b956f41468e485f8582dea0afb7d50fa69717e43c5e56164f0d1469bcb4b"
+    },
+    {
+      "path": "最终验收/725/public_QA/gallery_review_contact.jpg",
+      "bytes": 275561,
+      "sha256": "54f3af68b55dde48b7add913bab4f92541d8f4888b2f37528d290ef1afb4ba43"
+    },
+    {
+      "path": "最终验收/725/public_QA/inquiry_path.json",
+      "bytes": 148499,
+      "sha256": "030e51ea0098eb81669dc4dfa859e9dbb66139ed34631a48c9c1ddecdef75a03"
+    },
+    {
+      "path": "最终验收/725/public_QA/inquiry_path.png",
+      "bytes": 1195461,
+      "sha256": "83f5b956f41468e485f8582dea0afb7d50fa69717e43c5e56164f0d1469bcb4b"
+    },
+    {
+      "path": "最终验收/725/public_QA/minimal_checklist.json",
+      "bytes": 5116,
+      "sha256": "bc1957689a124c91bdc442f9056702fe9e40da2b5372d899e946c860c1d652d8"
+    },
+    {
+      "path": "最终验收/725/public_QA/navigation.json",
+      "bytes": 210,
+      "sha256": "0d748220eb2ccdb03194e20088e36496abc881c88fae7aed52cc2e9060b1a6af"
+    },
+    {
+      "path": "最终验收/725/public_QA/public_summary_full.json",
+      "bytes": 167162,
+      "sha256": "6740fc48b617d4fae21b2a7bfcf92cb9cff559e1cdd50502211fe3c95465b15a"
+    },
+    {
+      "path": "最终验收/725/public_QA/public_summary_full.png",
+      "bytes": 1806353,
+      "sha256": "7b86abfd5ca54b39a05e3b139a4389c4d4c4d693b5f3ec6c735ec9d59b9e1f00"
+    },
+    {
+      "path": "最终验收/725/public_QA/public_summary_verified.json",
+      "bytes": 167139,
+      "sha256": "533affc355e97cee2739415c4e7e314786b85f27c04cdee7d6c59d5aa8b16236"
+    },
+    {
+      "path": "最终验收/725/public_QA/public_summary_verified.png",
+      "bytes": 425092,
+      "sha256": "f093ad0f23c049bbe06bfd2302512c049f262a872c5b82a9b009f41962ab9550"
+    },
+    {
+      "path": "最终验收/725/public_QA/summary_location.json",
+      "bytes": 168224,
+      "sha256": "d23bb10cd9e1aecda7b9ee8a19fdbbfa5de0b44547dd7abbfd9a64140f277172"
+    },
+    {
+      "path": "最终验收/725/public_QA/summary_location.png",
+      "bytes": 424555,
+      "sha256": "159f78f6dffa1b2ad789f21ad7c081d05cf51f2f094de4d496cf14018eb0ac46"
+    },
+    {
+      "path": "最终验收/725/public_QA/top.json",
+      "bytes": 15377,
+      "sha256": "c072284e9088bb9fc3710d322679ded03b5c53b8db7325d337f45b97258798ab"
+    },
+    {
+      "path": "最终验收/725/public_QA/top.png",
+      "bytes": 775334,
+      "sha256": "7e5d2a9b5897abe7886fa327ad65d2849001a6d1c1e344671c0481a5a4702bce"
+    },
+    {
+      "path": "最终验收/725/public_QA/top_ready.json",
+      "bytes": 149564,
+      "sha256": "9534dc8488c31397af3339966a03b8a829e3e6017510e17301ac504f5aec2682"
+    },
+    {
+      "path": "最终验收/725/public_QA/top_ready.png",
+      "bytes": 877874,
+      "sha256": "ec79916b7dd4f8327e7ee377791fc0455aa24a5b969458d148a50a8fe4394a20"
+    },
+    {
+      "path": "最终验收/989/approved_diagnostics_2/formal_schema.xml",
+      "bytes": 127084,
+      "sha256": "f753ec6943d95ae537ca1be6ca684f1ab95389d9db83f664e40a6cdd8f79071c"
+    },
+    {
+      "path": "最终验收/989/approved_diagnostics_2/render.json",
+      "bytes": 136300,
+      "sha256": "176b6e1aea9116d760c7229896be1af5e921c40a31aed30afd893a42776cc729"
+    },
+    {
+      "path": "最终验收/989/approved_diagnostics_2/score.json",
+      "bytes": 1509,
+      "sha256": "6151e4e63d03cd784eb42fe86216c1c0613161c4295c46d848534aab26e2d946"
+    },
+    {
+      "path": "最终验收/989/browser/approved_editor_loaded.json",
+      "bytes": 12905,
+      "sha256": "6361c81892ee638fa7ff5228afed8640a539989fe37d25d2b2bd1e306672a9e9"
+    },
+    {
+      "path": "最终验收/989/browser/approved_editor_loaded.png",
+      "bytes": 157999,
+      "sha256": "c20eb4ad6fa3bc7dc3a5b713ab47d8979eb4524965d10bbd0900781009196519"
+    },
+    {
+      "path": "最终验收/989/browser/current_browser_state.json",
+      "bytes": 1481,
+      "sha256": "9c6d69efb93e5e86221475d9bf13030b3c732efb2cf02590eac6128d26abcd71"
+    },
+    {
+      "path": "最终验收/989/browser/current_editor_after_approved.json",
+      "bytes": 12756,
+      "sha256": "e82cde3399336141722a0f3e71ec963350798485241c016ec09d37c556eb2ab6"
+    },
+    {
+      "path": "最终验收/989/browser/current_editor_after_approved.png",
+      "bytes": 173784,
+      "sha256": "9aed8741097a690dfb0e11375ce6db4d8f339e4439db493df6c9d9066eb9780f"
+    },
+    {
+      "path": "最终验收/989/browser/current_editor_loaded.json",
+      "bytes": 12905,
+      "sha256": "d0b1ba104d3d2bfae8cfe492f92ac3cc12623ddbe444c85d2dcac7ced632597a"
+    },
+    {
+      "path": "最终验收/989/browser/current_editor_loaded.png",
+      "bytes": 157999,
+      "sha256": "c20eb4ad6fa3bc7dc3a5b713ab47d8979eb4524965d10bbd0900781009196519"
+    },
+    {
+      "path": "最终验收/989/browser/current_editor_notice.json",
+      "bytes": 12348,
+      "sha256": "289460c7f46b32b40fb1dd24ec529125b30fb5fab91f112d464d5fe5c28ec93a"
+    },
+    {
+      "path": "最终验收/989/browser/current_editor_notice.png",
+      "bytes": 184835,
+      "sha256": "2d0f4b063f66eda69a2868a7817f0238f4aa485a5f990a6e916434a20d501d81"
+    },
+    {
+      "path": "最终验收/989/browser/current_editor_ready.json",
+      "bytes": 75709,
+      "sha256": "90c5361389d09d2e76da4bbe915a3e807e46927ed9bcb3a68bc518b05600b0b0"
+    },
+    {
+      "path": "最终验收/989/browser/current_editor_ready.png",
+      "bytes": 666937,
+      "sha256": "2c74711390947ff7d00ab053cb2b320fbc1e66e32f091084ceea24aa91a4fd8d"
+    },
+    {
+      "path": "最终验收/989/browser/current_selling_points.json",
+      "bytes": 77320,
+      "sha256": "308795392c4fcced83530606acd8fa2dbecc7f5c605a50c83db3b01383d5dc80"
+    },
+    {
+      "path": "最终验收/989/browser/current_selling_points.png",
+      "bytes": 481944,
+      "sha256": "4848a9a648218712ff357cf59e5a663b1473bfa4c2cec06d84b896e8f28604b4"
+    },
+    {
+      "path": "最终验收/989/browser/editor_navigation.json",
+      "bytes": 232,
+      "sha256": "e69b681cbf9a7af9d51f3fb472bd0141e13a05bb62a63f92d8ff892be317bda7"
+    },
+    {
+      "path": "最终验收/989/browser/findbar_readonly_recovery.json",
+      "bytes": 622,
+      "sha256": "2f60b4306bc7730e033dfde9f9a3ae6d29567e69f6e40cd02d8b675cdf20f95c"
+    },
+    {
+      "path": "最终验收/989/browser/source.json",
+      "bytes": 26537,
+      "sha256": "e1d4e0a5d164a917fd0e469b93f8d0f03c9156b62ded2a7504ceaf98b6bf39f1"
+    },
+    {
+      "path": "最终验收/989/browser/source.png",
+      "bytes": 1855377,
+      "sha256": "6b16f7d347f1c561fbe6a62a9700441495ba56b6809a5e0111dd08641d066a9a"
+    },
+    {
+      "path": "最终验收/989/create_once_receipt.json",
+      "bytes": 145063,
+      "sha256": "e200f5435a6e709aff3e7e597c7df88418c04615d787a6744fc27122094244fd"
+    },
+    {
+      "path": "最终验收/989/current_content_and_formal_verification.json",
+      "bytes": 30965,
+      "sha256": "a0c57d093e98e20b394216e23110b38ee731cb252e917bd5a876822b7d8b01a6"
+    },
+    {
+      "path": "最终验收/989/formal_phase_3/formal_get.json",
+      "bytes": 33248,
+      "sha256": "078121b30ef888c570a32abd896d2c3baa9ba8a087a7867a593ffb494d530f86"
+    },
+    {
+      "path": "最终验收/989/formal_phase_3/latest_page1.json",
+      "bytes": 46554,
+      "sha256": "543aa89ef1ae24b3717ffd191813bbae5c9ee87d957883ff4ac036b56881063f"
+    },
+    {
+      "path": "最终验收/989/formal_phase_3/render.json",
+      "bytes": 700,
+      "sha256": "320a2e95d44fc3e5ab16c47a5231fa4aa02e3d0f08c9ca26b41825d2bf4d7805"
+    },
+    {
+      "path": "最终验收/989/formal_phase_3/score.json",
+      "bytes": 652,
+      "sha256": "0d1f35e94ebfbda35f756050b50b14641c6b93df9486470a402223bb3813146e"
+    },
+    {
+      "path": "最终验收/989/formal_phase_3/summary.json",
+      "bytes": 556,
+      "sha256": "aa8c8f95bd3f014b33a77091a540eab8b1c9e232794a91602c9ebe3a8e2cae0b"
+    },
+    {
+      "path": "最终验收/989/public_QA/color_blackred.json",
+      "bytes": 148025,
+      "sha256": "9f71b754f47a02ed80c4daa93845a58e227daef3372506c9243793ee99afed98"
+    },
+    {
+      "path": "最终验收/989/public_QA/color_blackred.png",
+      "bytes": 1459500,
+      "sha256": "5a05785693b4ef8e5ba4616727f60c30ec1112ca5841dfaafcbf4ecd6257ae66"
+    },
+    {
+      "path": "最终验收/989/public_QA/color_blackred_skus.json",
+      "bytes": 182341,
+      "sha256": "a897d6ad40d4d90ffe8db8a01624a4c73f3f22d7ce2634401dc38734bc935275"
+    },
+    {
+      "path": "最终验收/989/public_QA/color_blackred_skus.png",
+      "bytes": 1331538,
+      "sha256": "05cd45c2dd4d581019d9376dc65bbc03bd2eba62b288813f6ed5926f9bfdac5c"
+    },
+    {
+      "path": "最终验收/989/public_QA/color_skyblue.json",
+      "bytes": 182256,
+      "sha256": "77a14e5ac2c6e83784336914e7b07191c6df2c80ad49cdd1d5d7ea6100831d16"
+    },
+    {
+      "path": "最终验收/989/public_QA/color_skyblue.png",
+      "bytes": 1330679,
+      "sha256": "24e48100b72b5e56ac4ee248f8d7fbf500098d982ac0b9bc9aaab079984c6dd3"
+    },
+    {
+      "path": "最终验收/989/public_QA/color_yellow_skus.json",
+      "bytes": 183286,
+      "sha256": "3657f133e6d0a6494105823ded726548e8a220d40170186609a740cf73538172"
+    },
+    {
+      "path": "最终验收/989/public_QA/color_yellow_skus.png",
+      "bytes": 1324768,
+      "sha256": "1ac4b071e16c8bf490a7545d6cc3453df613fb325028831b23e6707176374e52"
+    },
+    {
+      "path": "最终验收/989/public_QA/company_1.json",
+      "bytes": 165185,
+      "sha256": "07d5b6af45e2ca1de7682a17fb64f122188edb928a8d94c5c39dc17663ce100c"
+    },
+    {
+      "path": "最终验收/989/public_QA/company_1.png",
+      "bytes": 2303414,
+      "sha256": "0ec5f2b9541985f1d0b4056493360963a571db663723d66a470537845eb31ff7"
+    },
+    {
+      "path": "最终验收/989/public_QA/company_2.json",
+      "bytes": 165106,
+      "sha256": "5f82cc072c27dc41fa6bb552649d2533c609a25d953c5461d219f686ff4f5e46"
+    },
+    {
+      "path": "最终验收/989/public_QA/company_2.png",
+      "bytes": 2490607,
+      "sha256": "edd340bc7fea69648cfd428669a01fa8a7baa762d53dbf07f3239fe904b2a678"
+    },
+    {
+      "path": "最终验收/989/public_QA/company_3_faq.json",
+      "bytes": 165108,
+      "sha256": "51dd72dbf9ffa681637cf7d8539c9960f684e5455115e3e808fc9dd170222467"
+    },
+    {
+      "path": "最终验收/989/public_QA/company_3_faq.png",
+      "bytes": 1454798,
+      "sha256": "48cae6ad2266c62752a46281825979b8d084ac76715f0e3e3b736a657d447ee7"
+    },
+    {
+      "path": "最终验收/989/public_QA/details_1.json",
+      "bytes": 165126,
+      "sha256": "014bb3e93be7457bc3ff50b2e9869073844a57300202eb47210175fea2c6f812"
+    },
+    {
+      "path": "最终验收/989/public_QA/details_1.png",
+      "bytes": 383701,
+      "sha256": "0d623a342e6ce39514007d45511eefc7051a447b0c3e0e7ac0e03dbb0b39b5d0"
+    },
+    {
+      "path": "最终验收/989/public_QA/details_2.json",
+      "bytes": 165178,
+      "sha256": "2f5c31278ec534bab2f34ab5494a9c3d1e68d6f4d15c872307af9d3c15a4f758"
+    },
+    {
+      "path": "最终验收/989/public_QA/details_2.png",
+      "bytes": 3603209,
+      "sha256": "1261a958a6d44b6aec54cd237f6bc579bf8d95c1f433532cd2483b8fc50ce2a7"
+    },
+    {
+      "path": "最终验收/989/public_QA/details_3.json",
+      "bytes": 165183,
+      "sha256": "a78f5038bfef260415b191a3408a9f069e16be85b9fed7d00da145ac7ca89475"
+    },
+    {
+      "path": "最终验收/989/public_QA/details_3.png",
+      "bytes": 2367353,
+      "sha256": "5bf95d46239e162b1d2741fdc486932344bcc5d98bc38c41f85b414569a6485d"
+    },
+    {
+      "path": "最终验收/989/public_QA/faq_full.json",
+      "bytes": 165107,
+      "sha256": "f1c4af61da1950fab64d0aeeab7439b63444eca42e8ddddf83f0f8a5c4d029a3"
+    },
+    {
+      "path": "最终验收/989/public_QA/faq_full.png",
+      "bytes": 455842,
+      "sha256": "0b71714ba4731d24b6aeec15fbc2d40180d6c899b8f28cd079a489ce88575ba9"
+    },
+    {
+      "path": "最终验收/989/public_QA/gallery_next_1.json",
+      "bytes": 145529,
+      "sha256": "5026d91741f14eaff6f7e4693cfde29898c802df06c4fa0245214b567ae5ac3e"
+    },
+    {
+      "path": "最终验收/989/public_QA/gallery_next_1.png",
+      "bytes": 1458080,
+      "sha256": "369b2040bf48543996b485f92bbd6dfa38e93c7e7964a573f204aa979c2d086c"
+    },
+    {
+      "path": "最终验收/989/public_QA/gallery_next_2.json",
+      "bytes": 148392,
+      "sha256": "601f1a4de5fba0902f7b69fac37127c0c61eafef8cc87b723e566e93d8b6963a"
+    },
+    {
+      "path": "最终验收/989/public_QA/gallery_next_2.png",
+      "bytes": 1271059,
+      "sha256": "3767b22d983fd37969a521818ef09e1e1785c00afea6e9dc258d3d955bc89b2d"
+    },
+    {
+      "path": "最终验收/989/public_QA/gallery_next_3.json",
+      "bytes": 148394,
+      "sha256": "abf0b662f89e8ffa18b6cf8b8091c084bdbc832bc6ba75ec24a41d27876c73e6"
+    },
+    {
+      "path": "最终验收/989/public_QA/gallery_next_3.png",
+      "bytes": 1352296,
+      "sha256": "444218dace46dc88057bf73b1e17c32a0c44b2406f8d5d4c3b91b6ccf771eba9"
+    },
+    {
+      "path": "最终验收/989/public_QA/gallery_next_4.json",
+      "bytes": 148394,
+      "sha256": "43c9fa0c6c0634146bf0ec558ead94a17ea66c7dab6523bfdc5e0cebaf7d2eed"
+    },
+    {
+      "path": "最终验收/989/public_QA/gallery_next_4.png",
+      "bytes": 1337690,
+      "sha256": "36bc297adb2ccfae6a6b0b22cdea5f709ed179387efa04419e038b32eb1029b4"
+    },
+    {
+      "path": "最终验收/989/public_QA/gallery_next_5.json",
+      "bytes": 148392,
+      "sha256": "9650d66eb508c3311e41c3e508be34da53c1e56ba622738ea389676036152092"
+    },
+    {
+      "path": "最终验收/989/public_QA/gallery_next_5.png",
+      "bytes": 1460354,
+      "sha256": "9935957a8459e27d8b4fae6b457604e25a9b4269534d7e117dde2330f7a4fb07"
+    },
+    {
+      "path": "最终验收/989/public_QA/gallery_review_contact.jpg",
+      "bytes": 254813,
+      "sha256": "6e3a776c54a851766ff48ec5dde90c82770353c1679b0344bf78af9be6434d93"
+    },
+    {
+      "path": "最终验收/989/public_QA/minimal_checklist.json",
+      "bytes": 5455,
+      "sha256": "d8d3b363397af056ba3dcfec5efcd386f153c2bac06799abf9a0a3816e9d90ff"
+    },
+    {
+      "path": "最终验收/989/public_QA/navigation.json",
+      "bytes": 211,
+      "sha256": "40f42e40514b186dac78e5b022e5aabace8aec9a45198f7177069819009d968b"
+    },
+    {
+      "path": "最终验收/989/public_QA/public_summary_verified.json",
+      "bytes": 164081,
+      "sha256": "45c8562d34ea2a35face8418e5ccd4a84ef2e57c0ca99b52fe542adefe078678"
+    },
+    {
+      "path": "最终验收/989/public_QA/public_summary_verified.png",
+      "bytes": 863864,
+      "sha256": "85f2f4af9f781cb913ba90452f1475a71bb473a805ffe32948bccd39cac51784"
+    },
+    {
+      "path": "最终验收/989/public_QA/public_summary_visible.json",
+      "bytes": 1753,
+      "sha256": "57bae7c6a9a9e69d24002ff7cc90ae469693784b68ef6cc88047556fef8b7896"
+    },
+    {
+      "path": "最终验收/989/public_QA/public_summary_visible.png",
+      "bytes": 867709,
+      "sha256": "3029c8219326f19438e353d3533307ebd66d6dadb93b105a2799767bdcb472a6"
+    },
+    {
+      "path": "最终验收/989/public_QA/skus_closed.json",
+      "bytes": 148022,
+      "sha256": "70709ff9ab7731035ecef914a37c4e6d557d1a4c309ba9dc78f433f7c270609c"
+    },
+    {
+      "path": "最终验收/989/public_QA/skus_closed.png",
+      "bytes": 1458449,
+      "sha256": "acf58144dcded56d7c3cdbae84d073b06b612371e8fd63cbb5c2bb2bcb4821c9"
+    },
+    {
+      "path": "最终验收/989/public_QA/top.json",
+      "bytes": 34591,
+      "sha256": "b9644b9d725e3f2e60cea922b866148909fcb5ee43407e1561e0e4baf6b5aa36"
+    },
+    {
+      "path": "最终验收/989/public_QA/top.png",
+      "bytes": 1359770,
+      "sha256": "143927cfaf8663e4fbd72acc215e1ca73b2eaeeac2c1a861c2bc6f566cc9e5bf"
+    },
+    {
+      "path": "最终验收/989/public_QA/top_ready.json",
+      "bytes": 149101,
+      "sha256": "da7ec9d802035a87c1277df0d6e2eea554680d47a290d8ddb63c2ce738624fa9"
+    },
+    {
+      "path": "最终验收/989/public_QA/top_ready.png",
+      "bytes": 1460109,
+      "sha256": "c2e2f371d36a0be277c51628cb98b5e985c05a62702863c40bfd05564b026050"
+    },
+    {
+      "path": "最终验收/下一款_HQ308_只读素材/03_候选交付包.txt",
+      "bytes": 6190,
+      "sha256": "4371ccb6c5265b0051ea4bad718ad0f1d8d2fff55605420c46345805e465cff6"
+    },
+    {
+      "path": "最终验收/下一款_HQ308_只读素材/assets.json",
+      "bytes": 326,
+      "sha256": "8da022bdad049c5c72772b86b005629bced3a9fe872b00b82e02117a34060f1c"
+    },
+    {
+      "path": "最终验收/下一款_HQ308_只读素材/full_01.jpg",
+      "bytes": 307536,
+      "sha256": "51bfb694cf5af3a48a438dd98a20fa56f3e157d7c0705973751414d869b3d897"
+    },
+    {
+      "path": "最终验收/下一款_HQ308_只读素材/full_02.jpg",
+      "bytes": 489176,
+      "sha256": "41cb09fcb60d642b2a7366ba0afd01e8552f3cac6fe1fd9c546872631ef3d5c4"
+    },
+    {
+      "path": "最终验收/下一款_HQ308_只读素材/full_03.jpg",
+      "bytes": 503010,
+      "sha256": "c257716445d97585e26de9b821680009c7ad8b94bc5545cb015e1debb5dca49f"
+    },
+    {
+      "path": "最终验收/下一款_HQ308_只读素材/full_assets.json",
+      "bytes": 894,
+      "sha256": "9633648b6c655127715be4adfcf7065041e39004a3d9053904d8653fa6287cd6"
+    },
+    {
+      "path": "最终验收/下一款_HQ308_只读素材/gallery_01.jpg",
+      "bytes": 2037,
+      "sha256": "aec421322d5ba8769868794720cfca9eb37255f3a4716b3a25ce71ca4b9780fb"
+    },
+    {
+      "path": "最终验收/下一款_HQ308_只读素材/gallery_02.jpg",
+      "bytes": 7423,
+      "sha256": "f84ccf118bc9c7f5415afe1db1e9f93e13ded59942cfc63b48b05f03696edc35"
+    },
+    {
+      "path": "最终验收/下一款_HQ308_只读素材/gallery_03.jpg",
+      "bytes": 7450,
+      "sha256": "25e6ae40303e76c33f13d5a7672fbb5f948987634ee7586e6123a8e1e3e56fd6"
+    },
+    {
+      "path": "最终验收/下一款_HQ308_只读素材/gallery_assets.json",
+      "bytes": 909,
+      "sha256": "bf0fc34b50f3d1352e6a1dc5006dc818b4bfdeee98f4faa77707d6c49f49becc"
+    },
+    {
+      "path": "最终验收/下一款_HQ308_只读素材/page.txt",
+      "bytes": 2907,
+      "sha256": "e48da20de097566568fec93119b6c2d4f1c545cb9ab43cdb0435b110c3325448"
+    },
+    {
+      "path": "最终验收/下一款_HQ308_只读素材/public_gallery.json",
+      "bytes": 607,
+      "sha256": "69361648adf2c8eb016e22185eaf162772d8c7f2abc286293770d28842d11863"
+    },
+    {
+      "path": "最终验收/下一款_HQ308_只读素材/read_manifest.json",
+      "bytes": 2301,
+      "sha256": "4e5408ec46aaf0a2dddeb7be8ff1276305cf3a8d504edb8795c523199b978a79"
+    },
+    {
+      "path": "最终验收/下一款_HQ308_只读素材/supplier_02.jpg",
+      "bytes": 353309,
+      "sha256": "f4f85b734abb4f33304361ae8ea4385b1b7e64d722c5702d0d5bb34f63087dcb"
+    },
+    {
+      "path": "最终验收/下一款_HQ308_只读素材/制作边界.json",
+      "bytes": 769,
+      "sha256": "14b3b798a639813140fbe9a6ff4feefc2d919e61ed8d13054f845304bd2e823e"
+    },
+    {
+      "path": "最终验收/工程/README.md",
+      "bytes": 46823,
+      "sha256": "2235df4d9aa8a8387f0633dc2fb2d9ad86512be0a56f8ffe39c6a68f820964ac"
+    },
+    {
+      "path": "最终验收/工程/schema_capabilities.json",
+      "bytes": 69149,
+      "sha256": "be4c458ac3d7ab77e616c7ee07d50ac6b7678e4a0d914b010c95912e0ba55e30"
+    },
+    {
+      "path": "最终验收/工程/schema_contract_fixtures/725_faq_type_rejection_20261004.json",
+      "bytes": 4946,
+      "sha256": "eb747bae90191d3f75f3dd8e9d608a9931cdbe6c05c2551ff1e9ea7735cbce66"
+    },
+    {
+      "path": "最终验收/工程/schema_contract_fixtures/725_typed_faq_formal_create_20261004.json",
+      "bytes": 6081,
+      "sha256": "bba86e58213fe1991d84302a4d2059896286ea867ba0b61b9f67c94141a54827"
+    },
+    {
+      "path": "最终验收/工程/schema_contract_fixtures/989_typed_faq_formal_create_20261004.json",
+      "bytes": 6677,
+      "sha256": "37a849ac62d9e32f61f6a41952f5db629ffb5d1c8d27e754649409a1982102fc"
+    },
+    {
+      "path": "最终验收/工程/schema_contract_fixtures/create_readback_normalization_20261004.json",
+      "bytes": 166862,
+      "sha256": "b0f5d30bd9a38afe3866b01bb862eb7baabdfb7afbd9457ac558322a89631b88"
+    },
+    {
+      "path": "最终验收/工程/schema_publish_contract.py",
+      "bytes": 78551,
+      "sha256": "82401a24a634bd796a58f345451b34d48a2e7888d07cd18956dc4d92e89f72ee"
+    },
+    {
+      "path": "最终验收/工程/test_created_readback_normalization.py",
+      "bytes": 4121,
+      "sha256": "94f62be0bce62426b84b6726cb5a02e58b9f3410904e665eed32b96d8510a6e5"
+    },
+    {
+      "path": "最终验收/工程/test_faq_create_type_guard.py",
+      "bytes": 1571,
+      "sha256": "4d16a63f13267125c7c230a6cc7cc1854d46696b479a49852bf3e6551bcedc19"
+    },
+    {
+      "path": "最终验收/工程/国际站商品全生命周期SOP.md",
+      "bytes": 60936,
+      "sha256": "3ba03020b14419d429f7195939bfe0b5561651341abe738b0ef1f49dbb2bce3d"
+    },
+    {
+      "path": "最终验收/当前改动.diff",
+      "bytes": 225954,
+      "sha256": "e00350ac6b9bf341d6cd914f9d302cc4654b74d082ab69787501b694727f0e2e"
+    },
+    {
+      "path": "最终验收/离线测试26项.txt",
+      "bytes": 4465,
+      "sha256": "951657c5fb804396628425b5d1fdf99af8d393a317e3c1b7b0579fea289d6c2b"
+    },
+    {
+      "path": "最终验收/离线测试证据.json",
+      "bytes": 2036,
+      "sha256": "19badb16cb36171c5fd821c07ba0f2d15dae219ba471ff37bcfc156af9034454"
+    },
+    {
+      "path": "最终交付.md",
+      "bytes": 3898,
+      "sha256": "93f0ed189be2acc4fccfaeb18718bc100aa9501b185382fb22e86b8d5c05b518"
+    }
+  ],
+  "note": "Fresh final manifest; earlier archive manifest remains historical"
+}

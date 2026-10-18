@@ -1,0 +1,22 @@
+{
+  "method": "alibaba.icbu.product.score.get",
+  "observed_at": "2026-10-04T05:13:26.624180+00:00",
+  "response": null,
+  "error": {
+    "exception_type": "ClientError",
+    "message": "Native HTTP transport failed; write outcome requires reconciliation",
+    "transport_phase": "transport",
+    "request_sent": null,
+    "curl_exit_code": 28,
+    "http_status": null,
+    "business_refs": {},
+    "response_summary": {
+      "format": "text",
+      "excerpt": ""
+    },
+    "stderr_excerpt": "[COMMAND_TEXT_OMITTED]",
+    "cause_types": [],
+    "limits": "Unavailable facts remain null/unknown. Curl errors and absence in catalog do not prove an uncommitted write; no automatic retry."
+  },
+  "platform_writes": 0
+}

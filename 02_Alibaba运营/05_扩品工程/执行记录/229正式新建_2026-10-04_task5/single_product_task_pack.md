@@ -1,0 +1,8 @@
+# 229 / BQ-NS003 A-G task pack
+A: NEW. Single writer task-5; old_HR=UNASSIGNED and no OFF.
+B: Source C:\Users\spq\Documents\Codex\2026-10-02\task-5\sooxie_2261793_20261004\facts_and_color_bindings.json; supplier 维拓鞋业, original229, direct https://weituo.sooxie.com/detail/2261793, CNY28/pair.
+C: Current Walking Style Shoes201334413. Actual knitted slip-on; no famous-brand identity inferred or unbranded/self-manufacture promise. Upper knitted textile, fiber unspecified; source MD whole sole not converted to EVA or component composition.
+D: Offered All Black,Black/White,Grey,Khaki x labels35-45=44SKU. Other colors excluded until actual name/size/photo bindings confirmed. No stock quantity. MOQ2, USD6.27/5.85/5.43 at2/50/100, operatingFX6.7, markups50/40/30. 7-day estimate subject to order confirmation; package34x23x13/0.5kg quotation baseline, not measured.
+E: Four actual original photos; black hero and color-specific black/white,grey,khaki preserved. M5 exact company-v3 general development inputs, M6 packing discussion. Four product detail images; no altered shoe pixels, fake angles, unsafe source performance wording or unsupported size chart uploaded.
+F: Nearby primary sock-sneaker listing price/MOQ context, exact quote terms not matched and no cheapest/demand claim. Current schema, source register, prior/current catalog and registry checked before one canonical create.
+G: Actual receipt/newID, formal fields/SKU, approval/score and public acceptance separate. Chrome human-input pause means public/browser proof remains pending; never use8815 UI proof for this product. Never replay unknown create.

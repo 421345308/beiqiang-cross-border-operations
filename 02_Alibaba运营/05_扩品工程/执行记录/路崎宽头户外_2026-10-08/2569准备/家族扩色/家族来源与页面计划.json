@@ -1,0 +1,131 @@
+{
+  "at": "2026-10-15T17:27:20.608373+00:00",
+  "state": "FORMAL_FIELDS_SCORE_PASS",
+  "product_id": "1601981563053",
+  "model": "BQ-LQ2569",
+  "operation": "update",
+  "category_id": 32299,
+  "no_new_id": true,
+  "source_routes_by_color": {
+    "Beige": {
+      "source": "https://luqi.sooxie.com/detail/2301941",
+      "source_artno": "2569",
+      "supplier_color": "米色",
+      "EU": [
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48
+      ]
+    },
+    "Black": {
+      "source": "https://jiangshang.sooxie.com/detail/2302942",
+      "source_artno": "2569",
+      "supplier_color": "黑色",
+      "EU": [
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48
+      ]
+    },
+    "Green": {
+      "source": "https://jiangshang.sooxie.com/detail/2302942",
+      "source_artno": "2569",
+      "supplier_color": "绿色",
+      "EU": [
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48
+      ]
+    },
+    "Pink": {
+      "source": "https://jiangshang.sooxie.com/detail/2302942",
+      "source_artno": "2569",
+      "supplier_color": "粉色",
+      "EU": [
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ]
+    }
+  },
+  "source_identity_evidence": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2569准备/家族扩色/补充来源身份核验.json",
+  "source_image_index": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2569准备/01_产品来源原图/江上补充/当前来源图像索引.json",
+  "existing_combinations_preserved": 13,
+  "new_combinations": 33,
+  "EU_combinations": 46,
+  "title": "Unisex Wide Toe Box Lace Up Outdoor Casual Shoes Synthetic Leather Upper Black Beige Green Pink Wholesale EU 36-48",
+  "highlights": [
+    "Wide toe box style: A rounded forefoot gives this lace-up shoe a broad front profile for casual outdoor assortments.",
+    "Synthetic leather upper: Stitched side panels contrast with a black toe bumper and dark sole edge across four colourways.",
+    "Extended lace-up front: Round laces pass through metal eyelets along the long vamp, with laces matched to each colourway.",
+    "Collar and heel details: A fabric collar and vertical rear pull strip finish the low-cut profile.",
+    "Four wholesale colourways: Black, Beige and Green cover EU 36–48; Pink covers EU 36–42 for size-mix planning."
+  ],
+  "pricing": {
+    "source_cny": "59.00",
+    "fx": "6.6837",
+    "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+    "fx_observed": "2026-10-13 10:57:20",
+    "rounding": "ROUND_CEILING_TO_USD_CENT",
+    "tiers": [
+      [
+        2,
+        "13.25"
+      ],
+      [
+        50,
+        "12.36"
+      ],
+      [
+        100,
+        "11.48"
+      ]
+    ],
+    "freight_service_tax": "Markupnotnetprofit; freight,tax,service andpackaging assessedperorder."
+  },
+  "preserve_current_13_sku_ids_codes_pictures": true,
+  "keep_general_faq_company_bundle_materials_and_trade": true,
+  "asset_changes": {
+    "M5": "Actual Green frontwear17, replacing repeated Beige angled-fullshoe role",
+    "D4": "Four actual profiles with colour-specific46EU",
+    "SKU_Black": "JS28upper profile",
+    "SKU_Green": "JS28lower profile",
+    "SKU_Pink": "JS27lower profile"
+  },
+  "next_action": "四色46EU正式字段和颜色货源已同步，原米色13SKU保留；实际评分以本次家族扩色核验为准。只验原ID，不重复创建2569。",
+  "formal_verification": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2569准备/家族扩色/verification.json"
+}

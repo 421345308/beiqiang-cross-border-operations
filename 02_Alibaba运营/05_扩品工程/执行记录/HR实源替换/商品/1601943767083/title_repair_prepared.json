@@ -1,0 +1,34 @@
+{
+  "request": {
+    "param_product_top_publish_request": {
+      "product_id": 1601943767083,
+      "cat_id": 202240835,
+      "language": "en_US",
+      "xml": "<itemSchema><field id=\"productTitle\" name=\"Product name\" type=\"input\"><value>Slip-On Leather Moccasin Style Shoes with Braided Knot Detail and Segmented Rubber Outsole for Footwear Assortments</value></field></itemSchema>"
+    }
+  },
+  "reason": "Formal title differs from reviewed source-specific submitted product title. Correct only title; cause of later change unconfirmed, not attributed to a person or platform automation.",
+  "expected_title": "Slip-On Leather Moccasin Style Shoes with Braided Knot Detail and Segmented Rubber Outsole for Footwear Assortments",
+  "observed_title": "Slip-On Leather Moccasin Style Shoes with Braided Knot Detail and Segmented Rubber Outsole for Footwear Assortments All Seasons",
+  "expected_schema": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Slip-On Leather Moccasin Style Shoes with Braided Knot Detail and Segmented Rubber Outsole for Footwear Assortments",
+          []
+        ]
+      ]
+    ]
+  },
+  "xml_sha256": "6d5a9d20915994a30dd1b00b78049ee2b7b43ae45e2f1e23dcb952200e336476"
+}

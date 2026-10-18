@@ -23,7 +23,7 @@ from urllib.parse import unquote
 
 BUSINESS = (
     "00_总控台", "01_产品资产", "02_Alibaba运营", "03_独立站", "04_客户开发",
-    "05_内容与视频", "06_市场研究", "07_知识库与Skills", "08_工具链", "90_归档", "99_临时区",
+    "05_内容与视频", "06_市场研究", "07_知识库与Skills", "08_工具链", "09_国内电商", "90_归档", "99_临时区",
 )
 ROOT_ALLOWED = set(BUSINESS) | {
     ".agents", ".git", ".gitignore", ".gitattributes", "AGENTS.md", "README.md", "skills-lock.json", "_codex_work",
@@ -31,7 +31,7 @@ ROOT_ALLOWED = set(BUSINESS) | {
     # workspace root; "outputs" is WorkBuddy's default deliverable staging dir. Neither is a business
     # directory: business results must still be relocated into the matching business directory, and
     # derived dumps must be moved to 99_临时区 (see 00_总控台/工作区维护.md).
-    ".workbuddy", "outputs", ".workctl",
+    ".workbuddy", ".codex", "outputs", ".workctl",
 }
 MEMORY_REQUIRED = {"id", "type", "title", "description", "status", "scope", "source", "privacy", "tags", "timestamp"}
 MEMORY_OPTIONAL = {"supersedes", "verify_when", "review_after"}

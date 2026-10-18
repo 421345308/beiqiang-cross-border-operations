@@ -1,0 +1,34 @@
+{
+  "request": {
+    "param_product_top_publish_request": {
+      "product_id": 1601943694473,
+      "cat_id": 201774304,
+      "language": "en_US",
+      "xml": "<itemSchema><field id=\"productTitle\" name=\"Product name\" type=\"input\"><value>Casual Ankle Boots with Stitched Forefoot Panels and Textured PVC Sole for Wholesale Footwear Assortments</value></field></itemSchema>"
+    }
+  },
+  "reason": "Formal title differs from reviewed source-specific submitted product title. Correct only title; cause of later change unconfirmed, not attributed to a person or platform automation.",
+  "expected_title": "Casual Ankle Boots with Stitched Forefoot Panels and Textured PVC Sole for Wholesale Footwear Assortments",
+  "observed_title": "Casual Ankle Boots Stitched Forefoot Panels Metal Lace Guides Padded Collar Textured PVC Sole for Wholesale Footwear Assortments",
+  "expected_schema": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Casual Ankle Boots with Stitched Forefoot Panels and Textured PVC Sole for Wholesale Footwear Assortments",
+          []
+        ]
+      ]
+    ]
+  },
+  "xml_sha256": "10ed8f94f51b106293b63d31a653982c6c407fbd918bfb0b9f682870a8eac995"
+}

@@ -1,0 +1,193 @@
+{
+  "state": "VISUAL_PASS_PENDING_PUBLISH_PREFLIGHT",
+  "observed_at": "2026-10-14T15:00:03.621895+00:00",
+  "tool": "UnchangedactualM1cleanphoto plusbuiltinimage_genactualsourceedits forotherroles",
+  "items": [
+    {
+      "role": "M1",
+      "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/01_产品来源原图/01.jpg",
+      "sha256": "3e117805e3e8522feb4f76a9995ab5a941c681c98ce2a5130a7ef528e954d0ba",
+      "size": [
+        800,
+        800
+      ],
+      "source_frames": [
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/01_产品来源原图/01.jpg",
+          "sha256": "3e117805e3e8522feb4f76a9995ab5a941c681c98ce2a5130a7ef528e954d0ba"
+        }
+      ],
+      "processing": "ORIGINAL_SELECTED_UNMODIFIED",
+      "decision": "SELECTED_VISUAL_PASS"
+    },
+    {
+      "role": "M2",
+      "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/05_AI候选/M2.png",
+      "sha256": "93bf2b3ffdba7b6044dd35c7b16bfc4925eecbe7cf54db4d91f30534f423c193",
+      "size": [
+        1254,
+        1254
+      ],
+      "source_frames": [
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/01_产品来源原图/13.jpg",
+          "sha256": "4a2a00e486412dd411428c88af4e1ced109db328bd32fc23aa4b1f2d09222474"
+        }
+      ],
+      "processing": "BUILTIN_IMAGEGEN_ACTUAL_SOURCE_EDIT",
+      "decision": "SELECTED_VISUAL_PASS"
+    },
+    {
+      "role": "M3",
+      "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/05_AI候选/M3.png",
+      "sha256": "d038c3d28e005bfef09a11dcba1a41ff72f2040afb8ec2c268849d32e8adaad0",
+      "size": [
+        1254,
+        1254
+      ],
+      "source_frames": [
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/01_产品来源原图/12.jpg",
+          "sha256": "63d553d3a0b7a1d58bda49e7ca85c3759c32200c394abdb0d0701eb8bce630b0"
+        }
+      ],
+      "processing": "BUILTIN_IMAGEGEN_ACTUAL_SOURCE_EDIT",
+      "decision": "SELECTED_VISUAL_PASS"
+    },
+    {
+      "role": "M4",
+      "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/05_AI候选/M4.png",
+      "sha256": "99e67710ee2d67f14f4f473d7ba35e2c0b60a03e9db873c5fdeb05aa2bc53340",
+      "size": [
+        1254,
+        1254
+      ],
+      "source_frames": [
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/01_产品来源原图/18.jpg",
+          "sha256": "f4391c086f344631bd98d986681d4b388b30e22c50e0198d4bfb97e2c22be14f"
+        }
+      ],
+      "processing": "BUILTIN_IMAGEGEN_ACTUAL_SOURCE_EDIT",
+      "decision": "SELECTED_VISUAL_PASS"
+    },
+    {
+      "role": "M5",
+      "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/05_AI候选/M5.png",
+      "sha256": "5fd3f5be36d80e6866f67560832ae8ae9bec6b806991f7dbb107db692b23fd2c",
+      "size": [
+        1254,
+        1254
+      ],
+      "source_frames": [
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/01_产品来源原图/14.jpg",
+          "sha256": "0f271c06ac527d904794ac8ecc693501f488a2139d5b6d92ce4078fe89962791"
+        }
+      ],
+      "processing": "BUILTIN_IMAGEGEN_ACTUAL_SOURCE_EDIT",
+      "decision": "SELECTED_VISUAL_PASS"
+    },
+    {
+      "role": "D1",
+      "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/05_AI候选/D1.png",
+      "sha256": "cc653645d2f842fcdf104747e98887e9f4df80c17f003e77cdd35b7eaddda913",
+      "size": [
+        1254,
+        1254
+      ],
+      "source_frames": [
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/01_产品来源原图/01.jpg",
+          "sha256": "3e117805e3e8522feb4f76a9995ab5a941c681c98ce2a5130a7ef528e954d0ba"
+        }
+      ],
+      "processing": "BUILTIN_IMAGEGEN_ACTUAL_SOURCE_EDIT",
+      "decision": "SELECTED_VISUAL_PASS"
+    },
+    {
+      "role": "D2",
+      "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/05_AI候选/D2.png",
+      "sha256": "2dafae20007817e5d2cf4877117aa93b4b4cd92956e3556b093ba17e22c59865",
+      "size": [
+        1254,
+        1254
+      ],
+      "source_frames": [
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/01_产品来源原图/01.jpg",
+          "sha256": "3e117805e3e8522feb4f76a9995ab5a941c681c98ce2a5130a7ef528e954d0ba"
+        }
+      ],
+      "processing": "BUILTIN_IMAGEGEN_ACTUAL_SOURCE_EDIT",
+      "decision": "SELECTED_VISUAL_PASS"
+    },
+    {
+      "role": "D3",
+      "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/05_AI候选/D3.png",
+      "sha256": "0cc8e63aee672d0ebc64c1a241d1eab6ae43012d2d7f63a7d419c192c034f75d",
+      "size": [
+        1254,
+        1254
+      ],
+      "source_frames": [
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/01_产品来源原图/11.jpg",
+          "sha256": "a07c05a1111a30141e724231dcff4580435af924a74166ddacd660bd3d0ba50f"
+        }
+      ],
+      "processing": "BUILTIN_IMAGEGEN_ACTUAL_SOURCE_EDIT",
+      "decision": "SELECTED_VISUAL_PASS"
+    },
+    {
+      "role": "D4",
+      "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/05_AI候选/D4.png",
+      "sha256": "c00cf2dac857c78f2a7de2fcf74f7d0ca52f5ae114e4fa12e88c1b1a347f035a",
+      "size": [
+        1254,
+        1254
+      ],
+      "source_frames": [
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/01_产品来源原图/01.jpg",
+          "sha256": "3e117805e3e8522feb4f76a9995ab5a941c681c98ce2a5130a7ef528e954d0ba"
+        },
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/01_产品来源原图/18.jpg",
+          "sha256": "f4391c086f344631bd98d986681d4b388b30e22c50e0198d4bfb97e2c22be14f"
+        }
+      ],
+      "processing": "BUILTIN_IMAGEGEN_ACTUAL_SOURCE_EDIT",
+      "decision": "SELECTED_VISUAL_PASS"
+    },
+    {
+      "role": "SKU_BlackGrey",
+      "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/05_AI候选/SKU_BlackGrey.png",
+      "sha256": "e6d14d931db79b4348dd471edcb8ee1759ee717b020c2fe3fdf84e178def38c9",
+      "size": [
+        1254,
+        1254
+      ],
+      "source_frames": [
+        {
+          "path": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/01_产品来源原图/18.jpg",
+          "sha256": "f4391c086f344631bd98d986681d4b388b30e22c50e0198d4bfb97e2c22be14f"
+        }
+      ],
+      "processing": "BUILTIN_IMAGEGEN_ACTUAL_SOURCE_EDIT",
+      "decision": "SELECTED_VISUAL_PASS"
+    }
+  ],
+  "dedup_review": {
+    "catalog": "99_临时区/路崎0922/当前目录/catalog.json",
+    "scope": "All17sourcephotos contacts andfull01/05/07/11/12/13/14/18reviewed. ActualST117full01lowcutchevronquarter/flatrectangularsole differs0922midtopwavyquarter/uppermetalguide/sculptedsole. Actual931stripedheel/chunkyfacets,2575slottedangularshaft,2579shieldwavewrap,2505plainupper differ. Current466catalog source/model check beforecreate. Bounded visiblecomparison, notglobalIP clearance."
+  },
+  "visual_review": {
+    "identity": "Everyselectednativeoutputviewed. M1actualclean800whitephoto unchanged. BlackGreyusesactualworn18asconsistentcolourbasisforM4/SKU/D4, retainingminimaltrousercontext ratherthaninventingemptycollar; M1Blackraw/reviewedGreySKUusedforD4layout. Metalguide/roundeyelets/two-tonepanelboundaries/frontandrearloops/stitchpaths preserved. M3visibleforefoot/midfoot outsole undersideonly, D3actualstraightbacksource11notnewangle.",
+    "roles": "M1Blackhero(reusedBlackSKU),M2openedplush,M3actualEVAoutsole,M4BlackGreywear,M5Blackorderinputs;D1lacing,D2forefoottextures,D3rearconstruction,D4two-colourEU39-48;BlackGreyseparateSKU. Main/detailwholehashunique.",
+    "text": "AllEnglishheaders andD4bothrowsEU39,40,41,42,43,44,45,46,47,48 exact. Dedicatedsource07/12bothEVAoutsole; noisolatedmidsoleinference. No genuineleather/fiber/temperature/waterproof/protection/griptest/weight/stockclaim.",
+    "scope": "Localfullpixels/source/group only;formalAPIstatus/scoreandlocalsyncseparate."
+  },
+  "all_ten_full_images_and_contact_actually_viewed": true,
+  "group_review_at": "2026-10-14T15:04:44.801334+00:00"
+}

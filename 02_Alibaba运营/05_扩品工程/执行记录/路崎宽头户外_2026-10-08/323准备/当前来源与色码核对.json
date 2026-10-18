@@ -1,0 +1,142 @@
+{
+  "style": "323",
+  "source": "https://luqi.sooxie.com/detail/2002980",
+  "observed_at": "2026-10-14T16:01:32.628118+00:00",
+  "source_HTML_sha256": "bad3bc6f96ca2d09537748cb428a7dfe9a8ee907263ca69f6704df0465ef1c3a",
+  "source_price_cny": "68.00",
+  "source_EU_by_color": {
+    "Black": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47
+    ],
+    "Grey": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47
+    ]
+  },
+  "source_EU_combinations": 18,
+  "whole_source_contacts_actually_viewed": true,
+  "photo_count": 18,
+  "full_original_fact_indices_actually_viewed": [
+    1,
+    6,
+    8,
+    11,
+    13,
+    16,
+    18,
+    22,
+    23
+  ],
+  "known_materials": {
+    "upper": "Dedicatedcard06革面 generic surfaceword; actual grained/mattepanels, no natural leather/PU chemistry. Native other.",
+    "outsole": "Source06鞋底材质TPR底 and13TPR大底 agreeexplicit outsole; blacklugs/grey sidewall appearance not chemical separation proof.",
+    "midsole": "Separate composition not identified; native other, do not assign TPR outsole evidence.",
+    "lining": "Actual opened08 grey plush inside shaft/tongue; native Plush, no fiber/temperature claim."
+  },
+  "wide_claim": "NO_WIDE_CLAIM_FROM_OUTDOOR_ONLY_SOURCE",
+  "source_color_aliases": {
+    "Black": "黑色; black upper/red curved ankle accents/red-blackcords, grey sidewall/blacklugs",
+    "Grey": "灰色; grey panels/blacktoe andheel/blue curvedankle accents, grey sidewall/blacklugs"
+  },
+  "size_discrepancy": "Original06 legacy card39-48; current sourceHTML39-47 only, so EU48 omitted.",
+  "visible_structure": [
+    "Mid-top lace-up winter boot with grey plush shaft/tongue",
+    "Grained forefoot overlay and curved stitched quarter panels",
+    "Metal lace guides and woven tongue keeper with contrast cord laces",
+    "Curved contrast accents on ankle quarter: redBlack/blueGrey",
+    "Rear pull loop and sculpted grey sidewall over black edge lugs"
+  ],
+  "identity_notes": "All18 readable sourcephotos contacts plus full01/06/08/13/16/22 reviewed. 323 curved red/blue ankle accents/grey scallopedsidewall/metal lowerguides differ 2539 layeredmeshchannels/redfrontloop, 0922wavyquarters, 923horizontalquarterinsert,931stripedheel. 0323-1 and0323F currentcovers angularlowcut/diagonalsidepanel/slabsoles differ, not numeric alias inference. Source denials retained, no blind retries.",
+  "title_draft": "Mens Lace Up Winter Snow Boots Plush Lining TPR Outsole Mid Top Casual Outdoor Footwear Wholesale Black Grey EU 39-47",
+  "product_highlights_draft": [
+    "Mid-top winter construction: Grained forefoot overlays and curved stitched side panels define the upper, with contrast accents at the ankle.",
+    "Grey plush lining: The opened boot shows plush across the inner shaft and tongue, with a mesh edge at the collar.",
+    "Lace-up hardware: Metal guides hold the crossed contrast cords, while a woven tongue keeper and rear pull loop complete the visible construction.",
+    "TPR outsole design: Black edge lug blocks sit beneath the sculpted grey sidewall; the supplier identifies the outsole as TPR.",
+    "Wholesale colour-size options: Black with red accents and Grey with blue accents cover EU 39–47 for winter assortments."
+  ],
+  "state": "CREATED_FORMAL_FIELDS_SCORE_PASS",
+  "pricing_draft": {
+    "source_cny": "68.00",
+    "fx": "6.6837",
+    "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+    "fx_observed": "2026-10-13 10:57:20",
+    "rounding": "ROUND_CEILING_TO_USD_CENT",
+    "tiers": [
+      [
+        2,
+        "15.27"
+      ],
+      [
+        50,
+        "14.25"
+      ],
+      [
+        100,
+        "13.23"
+      ]
+    ],
+    "freight_service_tax": "Order-specific; markup before freight/service/tax, not guaranteed netprofit."
+  },
+  "publish_profile": {
+    "category_id": 202248402,
+    "schema_name": "当前雪地靴Schema",
+    "buyer_colours": [
+      {
+        "buyer": "Black",
+        "supplier_key": "Black",
+        "supplier_label": "黑色",
+        "image_role": "M1"
+      },
+      {
+        "buyer": "Grey",
+        "supplier_key": "Grey",
+        "supplier_label": "灰色",
+        "image_role": "SKU_Grey"
+      }
+    ],
+    "category_attributes": {
+      "Upper Material": [
+        "other"
+      ],
+      "Midsole Material": [
+        "other"
+      ],
+      "Outsole Material": [
+        "TPR"
+      ],
+      "Lining Material": [
+        "Plush"
+      ]
+    },
+    "local_intent": [
+      "绒里中帮系带冬季雪地靴"
+    ]
+  },
+  "title_bytes": 117,
+  "publication": {
+    "product_id": "1601980289624",
+    "audit": "approved",
+    "display": "Y",
+    "actual_score": "5.00",
+    "formal_verification": "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/323准备/verification.json",
+    "local_sync_at": "2026-10-14T18:01:51.592922+00:00",
+    "no_replayed_create": true
+  },
+  "next_action": "该款正式字段、评分与来源已通过；继续其他款，不重复创建。"
+}

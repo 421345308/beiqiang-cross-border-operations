@@ -1,0 +1,22 @@
+{
+  "tool": "builtin image_gen",
+  "date": "2026-10-10",
+  "reference": "public/warm.png",
+  "assets": [
+    {
+      "key": "shoe",
+      "prompt": "Use case: background-extraction. Input image is the edit target. Extract ONLY the ivory slip-on shoe from this image onto a genuinely transparent alpha background. Preserve exactly its shoe design, fine knit texture, sole, existing perspective, diagonal angle, warm soft lighting, natural details and proportions. Remove ALL cloth ribbons, studio environment and cast floor shadows. Keep the whole shoe including toe, heel tab and sole, no cropping. Center the isolated shoe on a tightly but comfortably padded landscape canvas, shoe occupying about 85 percent of width. Clean antialiased alpha with no beige matte halo. No text, no new objects. This is a layered asset for independent motion in a brand film.",
+      "transparent_background": true
+    },
+    {
+      "key": "space",
+      "prompt": "Use case: precise-object-edit. Input image is edit target. Remove ONLY the central shoe entirely and reconstruct the background visible behind it. Preserve the original ivory woven textile loops, their exact positions, golden translucent fibers, soft warm cream studio atmosphere, floor shadow, light and 9:16 vertical composition. Fill the removed shoe area with the same warm atmospheric empty background and the existing cloth where appropriate; do not add any new shoe or object. No text, no logo. This background plate will be animated behind an independently composited shoe.",
+      "transparent_background": false
+    },
+    {
+      "key": "ribbon",
+      "prompt": "Use case: stylized-concept. Input image is reference for material and lighting only. Create one single broad elegant ivory woven textile ribbon, with exactly the same tactile open-weave fibers and warm soft rimlight as the reference. Ribbon forms one graceful large S curve in midair, running from lower left to upper right, with a slight continuous twist revealing its thin fabric edge. The S shape must read clearly, open spacious bends, no knots, no circular closed loop, no shoe, no extra object, no floor, no shadow on the background. Entire ribbon visible with comfortable padding. Landscape 3:2 composition, broad band about 15 percent of canvas width, fine individual natural fibers and frayed edge details. Actual transparent alpha background, isolated physical cloth asset for independent layered animation. No text, no logo, not shiny plastic.",
+      "transparent_background": true
+    }
+  ]
+}

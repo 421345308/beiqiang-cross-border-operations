@@ -1,0 +1,43 @@
+{
+  "stage": "LOCAL_6M4D5COLOR_AND_FACTS_READY_FINAL_VISUAL_PENDING",
+  "category_id": 201153804,
+  "category_name": "Clogs & Mules",
+  "required_fields_verified": {
+    "p-1": [
+      "China",
+      100000458
+    ],
+    "p-191290428": [
+      "EVA",
+      -2
+    ],
+    "p-20700": [
+      "Not specified",
+      -2
+    ],
+    "p-191290426": [
+      "Not specified",
+      -2
+    ],
+    "p-191290430": [
+      "Not specified",
+      -2
+    ]
+  },
+  "SKU_count": 15,
+  "main": 6,
+  "detail": 4,
+  "company": 5,
+  "FAQ": 6,
+  "schema_add_count": 0,
+  "image_bank_uploads": 0,
+  "inventory_writes": 0,
+  "source_dedup": "PASS independent5243-file exactsource/articlecheck",
+  "stop_condition": {
+    "stop_at_UTC": "2026-10-02T18:00:00+00:00",
+    "stop_at_Beijing": "2026-10-03 02:00",
+    "no_auto_resume": true,
+    "quota_reset_claim": false,
+    "rule": "Stop all new tasks/modifications/publication at deadline; only safely reconcile in-flight results and save checkpoint. Avoid starting a write too close to stop to safely read it back."
+  }
+}

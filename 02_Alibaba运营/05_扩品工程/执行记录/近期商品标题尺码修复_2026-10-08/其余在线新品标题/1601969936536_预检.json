@@ -1,0 +1,45 @@
+{
+  "keyword_input": null,
+  "differentiation_review": null,
+  "category_id": 201768405,
+  "operation": "update",
+  "inventory_input": null,
+  "model_serialization": null,
+  "target_product_id": "1601969936536",
+  "field_ids": [
+    "productTitle"
+  ],
+  "dependency_ids": [],
+  "xml": "<itemSchema><field id=\"productTitle\" type=\"input\"><value>Wholesale Womens PU Lace Up Ankle Boots with Side Zipper and Lug Sole for Casual Everyday Wear</value></field></itemSchema>",
+  "expected_fields": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Wholesale Womens PU Lace Up Ankle Boots with Side Zipper and Lug Sole for Casual Everyday Wear",
+          []
+        ]
+      ]
+    ]
+  },
+  "prepared_from_current_schema": true,
+  "task_pack": null,
+  "replacement_plan": null,
+  "schema_provenance": {
+    "schema_request_id": "2105584317914238436167992",
+    "schema_acquired_at": "2026-10-08T01:44:05.990891+00:00",
+    "current_schema_sha256": "065bfcb1e4964e8ed03870b095576ed3266fb102019e520f2f65d268dac5bfda",
+    "source_evidence": [
+      "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\H219_API完整新建_2026-10-02_task2\\facts_and_copy.json"
+    ]
+  }
+}

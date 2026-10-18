@@ -1,0 +1,61 @@
+{
+  "task_id": "H219_2026-10-02_task2",
+  "role": "REPLACE",
+  "phase": "PREPARING_CURRENT_SCHEMA_CREATE",
+  "writer": "task2",
+  "next_action": "Upload reviewed images, prepare and submit once, formal readback and public QA; no automatic old-off",
+  "public_model": "BQ-ABH219",
+  "category_id": 201768405,
+  "product_id": null,
+  "source_identity": {
+    "reference": "https://ls2017.sooxie.com/detail/1565538",
+    "style": "H219 single-shoe Brown/Black size35-40",
+    "evidence": "evidence/candidate.json + public_index.json + actual original detail_03/05/10/11/14",
+    "critical_facts": {
+      "profile": "women lace-up ankle boot",
+      "upper_structure": "PU round-toe ankle upper",
+      "outsole_structure": "rubber lug sole",
+      "closure": "front lacing and inner-side zipper",
+      "lining": "single-shoe composition not specified",
+      "functional_use": "casual ankle footwear"
+    }
+  },
+  "search_intent": {
+    "key": "women lace up ankle boots side zipper lug sole",
+    "evidence": "Existing H219 source facts and parent-delegated Target proxy; search volume unknown"
+  },
+  "hero_review": {
+    "content_key": "H219-black-pair-handheld-original-detail03",
+    "label_status": "not_present",
+    "evidence": "Source detail_03 and individually viewed H219_M1 output; complete actual shoes, no third-party footwear mark; no price/Chinese",
+    "url": "https://sc04.alicdn.com/kf/Hcf1ce3aff8f94438a4c81cb48e4d1c6al/286385890/Hcf1ce3aff8f94438a4c81cb48e4d1c6al.png",
+    "sha256": "d302eb336b989312d893b1ff60828a508e9bf977323e372279b028608ea27b53",
+    "aliases": [
+      "https://sc04.alicdn.com/kf/Hcf1ce3aff8f94438a4c81cb48e4d1c6al/286385890/Hcf1ce3aff8f94438a4c81cb48e4d1c6al.png",
+      "//sc04.alicdn.com/kf/Hcf1ce3aff8f94438a4c81cb48e4d1c6al/286385890/Hcf1ce3aff8f94438a4c81cb48e4d1c6al.png"
+    ]
+  },
+  "replacement_plan": {
+    "candidate": "H219",
+    "old_product_ids": [
+      "1601943767092"
+    ]
+  },
+  "evidence_files": [
+    {
+      "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\工厂店外新款数据采集模板.md",
+      "sha256": "63c5329767c7512348255c9bdfc54d3ffd3f700a430d54128f87d607d35a8466",
+      "kind": "task_pack_template"
+    },
+    {
+      "path": "经营任务包.md",
+      "sha256": "dfa7fe15d601fdb2dcefb9fcc315289d2bc9995937613011abb12ae5a7ef54fd",
+      "kind": "task_pack_document"
+    },
+    {
+      "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\HR系列真实货源改造_2026-09-21\\HR普通品一对一待替换映射_2026-10-02.json",
+      "sha256": "ed8f6e80d874a6a3a4c30a725b9adc66bab5e6d3d131724f17f6c3c5d04293db",
+      "kind": "replacement_mapping"
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "collected_on": "2026-10-15",
+  "keyword_source": {
+    "url": "https://compass.jinritemai.com/shop/search/drainage-terms",
+    "category": "鞋靴箱包/鞋靴",
+    "ranking": "热度高",
+    "period": [
+      "2026-10-07",
+      "2026-10-13"
+    ],
+    "granularity": "平台区间，非本店预测",
+    "rows": [
+      {
+        "query": "棉鞋",
+        "term": "棉鞋",
+        "search_people": [
+          "5万",
+          "7.5万"
+        ],
+        "payment_cny": [
+          "10万",
+          "25万"
+        ],
+        "product_ctr": [
+          "50%",
+          "55%"
+        ],
+        "click_to_deal_rate": [
+          "10%",
+          "15%"
+        ]
+      },
+      {
+        "query": "保暖",
+        "term": "冬天保暖鞋",
+        "search_people": [
+          "1万",
+          "2.5万"
+        ],
+        "payment_cny": [
+          "7.5万",
+          "10万"
+        ],
+        "product_ctr": [
+          "55%",
+          "60%"
+        ],
+        "click_to_deal_rate": [
+          "7.5%",
+          "10%"
+        ]
+      },
+      {
+        "query": "加绒",
+        "term": null,
+        "empty_result": true,
+        "note": "当前榜单筛选无结果，不代表零需求"
+      }
+    ]
+  },
+  "official_page": {
+    "url": "https://fxg.jinritemai.com/ffa/g/create",
+    "title_chars_max": 60,
+    "title_hanzi_max": 30,
+    "main_image_min_width": 600,
+    "main_image_min_height": 600,
+    "main_image_rule": "高清商品正面图、清晰美观、主体突出",
+    "m889_title_counter": "36/60"
+  },
+  "category_readback": {
+    "endpoint": "/api/v2/product/create_product/getCreateBaseInfoByCateId",
+    "cateId": "1000007614",
+    "path": "鞋靴>男鞋>休闲鞋",
+    "required_attributes": [
+      "品牌",
+      "鞋面材质",
+      "鞋底材质",
+      "功能"
+    ],
+    "specs": [
+      {
+        "name": "颜色分类",
+        "id": 2752,
+        "required": true
+      },
+      {
+        "name": "鞋码大小",
+        "id": 4709,
+        "required": true
+      }
+    ],
+    "main_image_3_4": {
+      "isShow": true,
+      "mustInput": false
+    },
+    "three_guarantees_required": true,
+    "scope_note": "此类目查询只证明该类目当前规则；不是每款推荐类目或账号全部类目授权"
+  },
+  "sources": [
+    "https://fxg.jinritemai.com/ffa/morder/logistics/freight-list",
+    "https://fxg.jinritemai.com/ffa/maftersale/privileges/consumer-rights"
+  ],
+  "policy_limit": "已取得上述官方规范索引正文及动态字段，非完整法规或永久禁词库；未获得竞品完整商品页或真实销量，不冒称学习了爆款数据。",
+  "official_content_rules": {
+    "checked_on": "2026-10-15",
+    "url": "https://school.jinritemai.com/doudian/web/articlev0/101800",
+    "published_on": "2025-12-03",
+    "access": "搜索索引返回官方正文，浏览器SPA正文未加载",
+    "title": "8汉字以上30汉字以下，含品名、真实属性和规格，不堆无关主体",
+    "main": "至少3张不完全重复，多角度，完整实物；除品牌logo不加文字水印",
+    "detail": "图文讲清信息，与SKU一致，法定标识另按对应规范执行"
+  },
+  "retail_observations": [
+    {
+      "url": "https://www.douyin.com/video/7683680147156782372",
+      "date": "2026-10-15",
+      "access": "公开索引标题；直开正文不可用",
+      "observed": "加绒棉鞋、一脚蹬、具体人群词靠前",
+      "adapt": "本店真实套脚款表达穿脱场景，系带款不套用；不继承真皮或手工缝线",
+      "limit": "未取销售、转化或完整商品详情，非优秀商家排名证据"
+    },
+    {
+      "url": "https://www.douyin.com/video/7582299109424385307",
+      "date": "2026-10-15",
+      "access": "公开索引标题及平台智能文稿",
+      "observed": "加绒、穿脱便捷、冬季场景组织讲解",
+      "adapt": "需求—结构—使用场景，按本款证据独立写；不继承高品质皮革、秒数、温标",
+      "limit": "智能文稿不是实测，也不能证明本店性能或此竞品销量"
+    },
+    {
+      "url": "https://item.jd.com/10169036176462.html",
+      "date": "2026-10-15",
+      "access": "图片搜索返回主图预览描述，直开商品正文受限",
+      "observed": "单一完整鞋型、针织鞋面与造型外底形成视觉焦点",
+      "adapt": "用真实多角度展示轮廓，不照搬P棉、增高厘米、促销价；抖店按本平台规则",
+      "limit": "跨平台视觉参考，未取得完整详情或销量"
+    }
+  ],
+  "buyer_funnel": {
+    "search": "棉鞋核心品类有既有罗盘区间；加绒/结构/颜色/尺码提供匹配，长尾量未知",
+    "click": "完整真实鞋型、占比和清晰度、配色对比；缩略图检查辨识度",
+    "conversion": "逐款结构讲解、加绒版本、配色、参数、脚长尺码、服务",
+    "verification": "信息质量不能只看提交成功；效果须读本店曝光点击支付及退货数据"
+  }
+}

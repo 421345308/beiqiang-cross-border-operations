@@ -1,0 +1,562 @@
+{
+  "recipient": "task5 / 01a0fbc2-1d77-73a2-a22f-9cbd787b401e，父任务转交",
+  "handoff_type": "ACTUAL_EXISTING_MANIFEST_INPUTS_AND_READER_MAPPING_NOT_EXECUTABLE_PUBLISH_PAYLOAD",
+  "correct_template": {
+    "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\工厂店外新款数据采集模板.md",
+    "sha256": "e94bfae0225100a08d86d1fd818bd44bbb760690b3ed30e2367bd0d20ef98014"
+  },
+  "canonical_sop": {
+    "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\00_运营SOP\\国际站商品全生命周期SOP.md",
+    "sha256": "7e4fa8e60b4938ea5a75e1eddc30ba5fcafc034e1fcf21c2f4ea2ad8253578b1"
+  },
+  "mapping_register": {
+    "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\HR系列真实货源改造_2026-09-21\\HR普通品一对一待替换映射_2026-10-02.json",
+    "sha256": "df93e1080108f0b0a5c0a7e9f18eee09afd1aad3c83569b5c12623cdb29d82ab"
+  },
+  "task_sections": {
+    "A": "实款事实/Schema/商业字段/去重原件",
+    "B": "海外需求来源日期与代理边界",
+    "C": "关键词/长尾/标题决策及正式持久化",
+    "D": "每图买家问题/原图有效像素/正式URL及首图验收",
+    "E": "实际API/正式字段/审核/真实分数/公开QA",
+    "F": "oldID→newID、授权/保护/保留兄弟、收尾回执",
+    "G": "唯一下一动作/试验观察/复用范围"
+  },
+  "actual_python_field_mapping": [
+    {
+      "business": "A 来源/结构证据",
+      "production": "differentiation_review.candidate.source（reference/style/critical_facts/evidence）；旧登记→source_records[productId].source",
+      "reader_status": "现有Python已读；新证据需hash绑定，不从模板自动生成"
+    },
+    {
+      "business": "C 买家意图",
+      "production": "candidate.search_intent.key/evidence与source_records[productId].search_intent",
+      "reader_status": "现有Python已读，不从标题换词推断"
+    },
+    {
+      "business": "D 首图事实验收",
+      "production": "candidate.hero_review.url/sha256/content_key/evidence、source_records旧hero_review；当前正式hero URL对应",
+      "reader_status": "现有Python已读；不等hash不是视觉差异证据"
+    },
+    {
+      "business": "A 去重原件及索引",
+      "production": "production manifest.differentiation_review + differentiation_review_sha256；review.evidence_files[].path/sha256/kind；catalog_snapshot与source_register需齐",
+      "reader_status": "现有Python已读；9968历史包当前缺绑定，需工程静态补接"
+    },
+    {
+      "business": "F 同SKU库存重建old_product_id",
+      "production": "manifest.replacement_source_product_id == review.replacement.replacement_source_product_id；authorization_evidence + acceptance_map + replacement_accepted_payload/replacement_acceptance_record",
+      "reader_status": "现有Python已读；仅936/K858自身干净重建适用，完整正式字段/SKU/实际图像验收hash必需"
+    },
+    {
+      "business": "F 不同实款旧HR→已建新品/候选",
+      "production": "本映射rows[].old_product_id/new_product_id、保护分类、授权范围及old_action：建议独立经营收尾引用绑定；字段名/读取由工程writer定稿",
+      "reader_status": "当前Python不读取模板replacement_plan/old_product_ids，也无本映射战略换款自动读取/收尾；需明确工程交接，不能宣称接通"
+    },
+    {
+      "business": "E 正式/实际分/公开QA与F旧品收尾",
+      "production": "对应原get/render/score/public回执路径及hash；现有replacement_transition.old_product_disposition仅待收尾，不执行OFF",
+      "reader_status": "业务唯一writer单独核验和获授权OFF；不得按一个PASS自动下架"
+    }
+  ],
+  "current_reader_files": [
+    {
+      "path": "C:\\Users\\spq\\Desktop\\贝强\\08_工具链\\01_业务脚本\\国际站扩品\\publish_hot_rank_hr_a_batch.py",
+      "sha256": "ce13b68f761ba7930b8151c0ad3198e4ad2a6910fc82372cf3b9daf53630e90c"
+    },
+    {
+      "path": "C:\\Users\\spq\\Desktop\\贝强\\08_工具链\\01_业务脚本\\国际站扩品\\schema_publish_contract.py",
+      "sha256": "fa314ebd68211f40045bb25dd63afccc6c5661967c6c387f6c4f9d828d62c163"
+    }
+  ],
+  "current_reader_limit": "SAME_SKU_STOCK_REBUILD_ONLY：现有replacement契约要求同源/型号/意图/首图及完整已验收载荷，仅可省略库存/旧平台skuId；本轮不同实款替换HR不能直接塞入此豁免。",
+  "production_inputs": [
+    {
+      "candidate": "5998",
+      "old_listing": "HR050-A",
+      "old_product_id": "1601943774082",
+      "new_product_id": "1601969869242",
+      "owner": "5998原唯一执行owner，父任务确认交接",
+      "scope": "只读现有产物，工程接实际manifest/续用验证；已建ID不得再create",
+      "production_inputs": [
+        {
+          "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\5998_API新建_2026-10-02\\经营任务包.md",
+          "sha256": "df02ea87f5d6ce97fd35c2bd1a08a03b0fc0cd9d46fd8fd80d636e5c82de8a70"
+        },
+        {
+          "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\5998_API新建_2026-10-02\\publish_manifest.json",
+          "sha256": "61648965507802bec9c37f21cc69fe7a16e4ead742222b36ff0d6247daaeb227"
+        },
+        {
+          "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\5998_API新建_2026-10-02\\prepared_listing.json",
+          "sha256": "d15da194c44587d66a51ade73580634d5d3da55346d1c75b1741ba97c26a6135"
+        },
+        {
+          "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\5998_API新建_2026-10-02\\facts_and_copy.json",
+          "sha256": "9ef3370f463ba843bbe1542c82575af3aa2e0711bf2cdd5587eebc8c3fe129fb"
+        },
+        {
+          "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\5998_API新建_2026-10-02\\asset_manifest_local.json",
+          "sha256": "b2a4cebd1b603a0701041506dfbb51e8c2e2247a6762af7f9bedc639dead3497"
+        },
+        {
+          "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\5998_API新建_2026-10-02\\dedup_gate.json",
+          "sha256": "579f392d730cc13b7bf361e5386d48c7ddff65a184f5e08baf7ce89e4e436d14"
+        },
+        {
+          "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\5998_API新建_2026-10-02\\intended_payload.xml",
+          "sha256": "542d1e19e953dd87778b4d0f6962ec30fb51a0ad93074854ec63d46658334bb4"
+        },
+        {
+          "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\5998_API新建_2026-10-02\\formal_content_checks.json",
+          "sha256": "9c0e59c494a6c634c86c061eb1693205307e933f77dac4f888c2e86da09da3ab"
+        },
+        {
+          "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\5998_API新建_2026-10-02\\public_acceptance_parent_receipt.json",
+          "sha256": "a2aafb2869e80baf0ffc82ba3f94d9edeb45992cdefc0d87c6bb3e7e8f0b2121"
+        }
+      ],
+      "actual_manifest_fields": {
+        "operation": "create",
+        "category_id": 201153805,
+        "current_schema": "schema_201153805.xml",
+        "current_schema_sha256": "373e827a6c57865ba4c1146407b68ffd33aa29dd90defc45828c090982188efa",
+        "schema_request_id": "213c932b17909425618686681",
+        "schema_acquired_at": "2026-10-02T12:02:39.058639+00:00",
+        "payload_xml": "intended_payload.xml",
+        "field_ids": [
+          "catId",
+          "icbuCatProp",
+          "saleProp",
+          "sku",
+          "productTitle",
+          "productKeywords",
+          "scImages",
+          "priceUnit",
+          "saleType",
+          "scPrice",
+          "minOrderQuantity",
+          "ladderPrice",
+          "pkgMeasure",
+          "pkgWeight",
+          "productDescType",
+          "detailImage",
+          "companyImage",
+          "textDesc",
+          "companyDesc",
+          "companyFaqDesc"
+        ],
+        "dependency_ids": [],
+        "expected_model": null,
+        "differentiation_review": null,
+        "differentiation_review_sha256": null
+      }
+    },
+    {
+      "candidate": "9968",
+      "old_listing": "HR052-A",
+      "old_product_id": "1601943742273",
+      "new_product_id": "1601969788941",
+      "owner": "task7/9968原owner",
+      "scope": "只读现有产物，工程接实际manifest/续用验证；已建ID不得再create",
+      "production_inputs": [
+        {
+          "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\9968_API完整新建_2026-10-02\\经营任务包.md",
+          "sha256": "a713484f68117d1458a655b657824902c2728cbe37addbec52979b99e802a77a"
+        },
+        {
+          "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\9968_API完整新建_2026-10-02\\publish_manifest.json",
+          "sha256": "9cd1eaeca3ca2549f8f47d2ac19aef9506af7816adfbeb8283b140f29cf7f133"
+        },
+        {
+          "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\9968_API完整新建_2026-10-02\\prepared_listing.json",
+          "sha256": "5b285f5e44ab6625c54787008b958890756fab29a69816e54bea8df818da0096"
+        },
+        {
+          "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\9968_API完整新建_2026-10-02\\facts_and_copy.json",
+          "sha256": "405f967fa2e79978cbca42a01e950cce48f4c24a1424c3b453949da0a4a3b8c4"
+        },
+        {
+          "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\9968_API完整新建_2026-10-02\\asset_manifest.json",
+          "sha256": "a3d680a4dc61843c4b39bd29e71274364ede5ac7532337154e8c6da0bf431d8d"
+        },
+        {
+          "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\9968_API完整新建_2026-10-02\\dedup_gate.json",
+          "sha256": "c62f55fdc03bc14c232462eed920734cd8bd7dd217903a80979ba928ac11365d"
+        },
+        {
+          "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\9968_API完整新建_2026-10-02\\intended_payload.xml",
+          "sha256": "dc74eaf00975890b98b045676faf9a5571401ac4d8cb97919ed49a8ca90dad60"
+        },
+        {
+          "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\9968_API完整新建_2026-10-02\\formal_checks.json",
+          "sha256": "d11a34bebe88dde1d9ad55045408c20f704616b2212e6f51072b5a0d288639d9"
+        },
+        {
+          "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\9968_API完整新建_2026-10-02\\parent_public_final_acceptance.json",
+          "sha256": "8fd76b82a63b91aae68171d3959420d4ad0671bd1b1b983ee8ff59094e88bfbb"
+        }
+      ],
+      "actual_manifest_fields": {
+        "operation": "create",
+        "category_id": 201152005,
+        "current_schema": "schema.xml",
+        "current_schema_sha256": "23311e1edcdb2cd1060b61871b35cbc9b75aa0b50565c7f861f981ff22f42786",
+        "schema_request_id": "21501b6717909472755944224",
+        "schema_acquired_at": "2026-10-02T13:21:11.984272+00:00",
+        "payload_xml": "intended_payload.xml",
+        "field_ids": [
+          "catId",
+          "icbuCatProp",
+          "saleProp",
+          "sku",
+          "productTitle",
+          "productKeywords",
+          "scImages",
+          "priceUnit",
+          "saleType",
+          "scPrice",
+          "minOrderQuantity",
+          "ladderPrice",
+          "pkgWeight",
+          "productDescType",
+          "detailImage",
+          "companyImage",
+          "textDesc",
+          "companyDesc",
+          "companyFaqDesc"
+        ],
+        "dependency_ids": [],
+        "expected_model": "BQ-MJ9968",
+        "differentiation_review": null,
+        "differentiation_review_sha256": null
+      },
+      "known_gaps": [
+        "formal keywords=[\"\"]",
+        "历史manifest缺hash-bound differentiation_review；dedup_gate独立文件不能替代reader绑定",
+        "source_identity为业务名称，现有reader实际字段是review.candidate.source，不凭新增未读顶层键称接通",
+        "保留实际5分/公开PASS，不重发"
+      ]
+    },
+    {
+      "candidate": "A67",
+      "old_listing": "HR043-B",
+      "old_product_id": "1601943621884",
+      "new_product_id": "1601969861694",
+      "owner": "task8/A67原owner",
+      "scope": "只读现有产物，工程接实际manifest/续用验证；已建ID不得再create",
+      "production_inputs": [
+        {
+          "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\A67_API新建_2026-10-02\\经营任务包.md",
+          "sha256": "78e800042249228806852276ee719936631fab141912c112eedd7e90cde02b2b"
+        },
+        {
+          "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\A67_API新建_2026-10-02\\publish_manifest.json",
+          "sha256": "0c86fb8d715beb46555ab7d4b8a6d0ed9306bc0cd173ee8e7d6db18c96789b9e"
+        },
+        {
+          "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\A67_API新建_2026-10-02\\prepared_listing.json",
+          "sha256": "0fbd8b07f4dbaa37b4529ed73b06bcced68f90d53dc2f869f14897ff6a1e33e2"
+        },
+        {
+          "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\A67_API新建_2026-10-02\\facts_and_copy.json",
+          "sha256": "5686e13ad8eac29da176fdecf6731432c2846226569cf989f68a56f6c8abdc88"
+        },
+        {
+          "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\A67_API新建_2026-10-02\\asset_manifest_local.json",
+          "sha256": "629ced92787c562cadd896a72737469ffb10480b88bf50540884147454074058"
+        },
+        {
+          "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\A67_API新建_2026-10-02\\dedup_gate.json",
+          "sha256": "ad7dcaa8d9d4f9f7768c0851bd3c91b29b2675839978edf779f215836b13e8cc"
+        },
+        {
+          "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\A67_API新建_2026-10-02\\intended_payload.xml",
+          "sha256": "3b823cf956dacdadf270cbc4fe23994d35d8111993fe8faaa1394621db3973c7"
+        },
+        {
+          "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\A67_API新建_2026-10-02\\formal_content_checks.json",
+          "sha256": "49e54379736957ee7240072f9ed05627ec0f6cf1c9adcedd5f2dad2b717317ae"
+        }
+      ],
+      "actual_manifest_fields": {
+        "operation": "create",
+        "category_id": 201334413,
+        "current_schema": "schema_201334413.xml",
+        "current_schema_sha256": "cb3be59dc64d9f4449a17a1bf77eb0f562cc0270c1f85786e7601f7a6d150f1e",
+        "schema_request_id": "21501b6717909512975776201",
+        "schema_acquired_at": "2026-10-02T14:28:14.723735+00:00",
+        "payload_xml": "intended_payload.xml",
+        "field_ids": [
+          "catId",
+          "icbuCatProp",
+          "saleProp",
+          "sku",
+          "productTitle",
+          "productKeywords",
+          "scImages",
+          "priceUnit",
+          "saleType",
+          "scPrice",
+          "minOrderQuantity",
+          "ladderPrice",
+          "pkgMeasure",
+          "pkgWeight",
+          "productDescType",
+          "detailImage",
+          "companyImage",
+          "textDesc",
+          "companyDesc",
+          "companyFaqDesc"
+        ],
+        "dependency_ids": [],
+        "expected_model": "BQ-CA67",
+        "differentiation_review": null,
+        "differentiation_review_sha256": null
+      }
+    },
+    {
+      "candidate": "3522",
+      "old_listing": "HR057-A",
+      "old_product_id": "1601943768215",
+      "new_product_id": "1601969920294",
+      "owner": "task7/3522原owner",
+      "scope": "只读现有产物，工程接实际manifest/续用验证；已建ID不得再create",
+      "production_inputs": [
+        {
+          "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\3522_API完整新建_2026-10-02\\经营任务包.md",
+          "sha256": "ed3b8be6b4ce8012a86b20b0d2db07ed138402bd5f7a7ef925fff3e5b66c7208"
+        },
+        {
+          "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\3522_API完整新建_2026-10-02\\publish_manifest.json",
+          "sha256": "a4f14874c04eb8f07f46dac913ad941b12d10e24b716f6dc52376c638af90556"
+        },
+        {
+          "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\3522_API完整新建_2026-10-02\\prepared_listing.json",
+          "sha256": "2081780854ac25e5980b8cc49aba101c11cc547b5479b7583dbc5c5cadf3611c"
+        },
+        {
+          "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\3522_API完整新建_2026-10-02\\facts_and_copy.json",
+          "sha256": "b93a8cc38e788c2cbb4cbce7fc0e700502c5333965e9e288189cfc925db56455"
+        },
+        {
+          "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\3522_API完整新建_2026-10-02\\asset_manifest.json",
+          "sha256": "9358bd55986707722fed8041e07aca6a245ee1c4f09b73fa81dd249b7ed6402b"
+        },
+        {
+          "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\3522_API完整新建_2026-10-02\\dedup_gate.json",
+          "sha256": "fac462ba2a2013f4e0ad1fbbbc3f7e8ed23a9a5d16d5e5501ad87d0bfa9b7624"
+        },
+        {
+          "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\3522_API完整新建_2026-10-02\\differentiation_review.json",
+          "sha256": "cd85926cf203212ecd842ba0865b414f749cab40bf75289a67d65eec47b65390"
+        },
+        {
+          "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\3522_API完整新建_2026-10-02\\intended_payload.xml",
+          "sha256": "168c2ea91f0049eee243b9fe9c1c703433dcc7d9338450aefe1f51eed2a79377"
+        },
+        {
+          "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\3522_API完整新建_2026-10-02\\formal_checks.json",
+          "sha256": "f860109388c787ccef69705c27d3ffd7945717762ae96c570699763503eb25f7"
+        }
+      ],
+      "actual_manifest_fields": {
+        "operation": "create",
+        "category_id": 202240835,
+        "current_schema": "schema.xml",
+        "current_schema_sha256": "a1bcda51629a23767c36e42d17cf10687b311f302cad593d0f1761dc6cb6778c",
+        "schema_request_id": "213e759c17909527681542063",
+        "schema_acquired_at": "2026-10-02T14:52:44.223168+00:00",
+        "payload_xml": "intended_payload.xml",
+        "field_ids": [
+          "catId",
+          "icbuCatProp",
+          "saleProp",
+          "sku",
+          "productTitle",
+          "productKeywords",
+          "scImages",
+          "priceUnit",
+          "saleType",
+          "scPrice",
+          "minOrderQuantity",
+          "ladderPrice",
+          "pkgWeight",
+          "productDescType",
+          "detailImage",
+          "companyImage",
+          "textDesc",
+          "companyDesc",
+          "companyFaqDesc"
+        ],
+        "dependency_ids": [],
+        "expected_model": "BQ-L3522",
+        "differentiation_review": "differentiation_review.json",
+        "differentiation_review_sha256": "cd85926cf203212ecd842ba0865b414f749cab40bf75289a67d65eec47b65390"
+      }
+    },
+    {
+      "candidate": "M001",
+      "old_listing": "HR053-A",
+      "old_product_id": "1601943687648",
+      "new_product_id": null,
+      "owner": "task8候选制作/平台owner父任务冻结",
+      "scope": "只交给原生产owner/task8或父任务冻结角色；本交接不创建、不上传、未把候选状态当完成",
+      "production_inputs": [
+        {
+          "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-8\\user_priority_sources\\candidate_table.json",
+          "sha256": "712ef96d43487e3af74e105061e271427f842bb9ffdb2871eee841f0397f73c7",
+          "entry_article": "M001"
+        }
+      ],
+      "source_candidate_snapshot": {
+        "source_url": "https://baiyou877.sooxie.com/detail/2482094",
+        "article": "M001",
+        "CNY": 45,
+        "current_colors": [
+          "Red",
+          "Black",
+          "Grey"
+        ],
+        "current_size_labels": [
+          "35-36",
+          "37-38",
+          "39-40",
+          "40-41",
+          "42-43",
+          "44-45"
+        ],
+        "upper": null,
+        "lining": null,
+        "midsole": null,
+        "outsole": null,
+        "sku_count": null,
+        "confirmed_structure": "Closed-toe open-heel slip-on mule with sculpted sidewall and contrasting orange outsole pods; no vented garden-clog upper or heel strap.",
+        "state": "HOLD_ASSETS_BLACK_FULL_SHOE_WITHOUT_SYNTHETIC_GLOW",
+        "image_role_plan": null,
+        "visual_review": {
+          "reviewer": "review_5998_readonly",
+          "result": "LIMITED_ASSET_PACKAGE_ONLY",
+          "exact_gap": "Complete black shoe product image without synthetic lighting remains unverified. No product redraw or effect-removal invention allowed.",
+          "safe_roles": [
+            "Red wearer05",
+            "Actual pod close-up08",
+            "Grey shoe crop11, supplier image not authenticated full-scene photo",
+            "Red interior12 with actual Made in China wording"
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "2627BSK",
+      "old_listing": "HR060-A",
+      "old_product_id": "1601943755354",
+      "new_product_id": null,
+      "owner": "task8当前优先生产owner",
+      "scope": "只交给原生产owner/task8或父任务冻结角色；本交接不创建、不上传、未把候选状态当完成",
+      "production_inputs": [
+        {
+          "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-8\\user_priority_sources\\candidate_table.json",
+          "sha256": "712ef96d43487e3af74e105061e271427f842bb9ffdb2871eee841f0397f73c7",
+          "entry_article": "2627BSK"
+        }
+      ],
+      "source_candidate_snapshot": {
+        "source_url": "https://huohuo.sooxie.com/detail/2557137",
+        "article": "2627BSK",
+        "CNY": 23,
+        "current_colors": [
+          "Blue",
+          "Khaki",
+          "Beige",
+          "Light Pink",
+          "Black"
+        ],
+        "current_size_labels": [
+          "35-36",
+          "37-38",
+          "39-40"
+        ],
+        "upper": "EVA",
+        "lining": "Not specified",
+        "midsole": "Not specified",
+        "outsole": "Not specified",
+        "sku_count": 15,
+        "confirmed_structure": "Closed-toe perforated platform clog with heel strap and complete heel opening; sculpted thick sole profile.",
+        "state": "NEXT_PACKAGE_SELECTED_SOURCE_VISUAL_PASS_NO_PUBLICATION_YET",
+        "image_role_plan": {
+          "M1": "Complete actual pair crop from800px source; no product redraw",
+          "M2": "Five actual colour choices, source01 shoe crops",
+          "M3": "Visible heel strap and connection close-up; no strength guarantee",
+          "M4": "Closed toe, ventilation openings and platform side profile",
+          "M5": "Three exact paired labels; fitting inquiry, no inventedUS conversion",
+          "M6": "Beiqiang sourcing identity and inquiry information; no own-factory claim",
+          "D1": "Actual EVA upper structure; layer materials unspecified",
+          "D2": "Strap/side profile detail; no nonexistent bottom view or traction claim",
+          "D3": "Colour-size ordering table and fit confirmation",
+          "D4": "MOQ/order quantities/destination/packing/dispatch inquiry"
+        },
+        "visual_review": {
+          "reviewer": "review_5998_readonly",
+          "result": "SUFFICIENT_REAL_SOURCE_FOR_6M4D_LAYOUT",
+          "observed": "Blue/Khaki/Black complete shoe foreground plus wearer scene; same hole layout, pivot point and thicksole. No readable third-party mark. Oval side features are holes and inner texture.",
+          "strap_limit": "Pivot strap visible; current pictures show it rotated forward. Do not claim photographed rear-strap fit/retention strength test.",
+          "no_bottom_view": true,
+          "remaining_work": "Actual6M4D composition +independent finished visual review, nativecategory/schema, currentFX preflight, officialupload/payload/write once/formalreadback."
+        }
+      }
+    },
+    {
+      "candidate": "A6607",
+      "old_listing": "HR055-C",
+      "old_product_id": "1601943784098",
+      "new_product_id": null,
+      "owner": "父任务统筹；task8已取证，后续owner待分配",
+      "scope": "只交给原生产owner/task8或父任务冻结角色；本交接不创建、不上传、未把候选状态当完成",
+      "production_inputs": [
+        {
+          "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-8\\user_priority_sources\\candidate_table.json",
+          "sha256": "712ef96d43487e3af74e105061e271427f842bb9ffdb2871eee841f0397f73c7",
+          "entry_article": "A6607"
+        }
+      ],
+      "source_candidate_snapshot": {
+        "source_url": "https://thxy.sooxie.com/detail/2544182",
+        "article": "A6607",
+        "CNY": 20,
+        "current_colors": [
+          "White",
+          "Black",
+          "Blue",
+          "Purple"
+        ],
+        "current_size_labels": [
+          "24-25",
+          "26-27",
+          "28-29",
+          "30-31",
+          "32-33",
+          "34-35"
+        ],
+        "upper": "EVA",
+        "lining": null,
+        "midsole": null,
+        "outsole": null,
+        "sku_count": 24,
+        "confirmed_structure": "Kids closed-toe perforated open-heel slide, no heel retention strap; brand cartoon charms.",
+        "state": "HOLD_IP_OBSERVED_BRAND",
+        "image_role_plan": null,
+        "visual_review": null
+      }
+    }
+  ],
+  "requested_engineering_next_step": [
+    "用上述真实manifest/已建ID及hash核续用输入，不能从旧模板推缺A–G",
+    "9968用现有来源、意图、视觉、目录原件构建并hash绑定review；仅静态核验，不再次create",
+    "不同实款HR替换的关联/收尾由工程明确读取契约或业务独立核验流程；不能调用同SKU库存重建豁免",
+    "对每个已建ID保留真实成果，目标OFF前仅核该目标保护/关联价值；完整适用新验收后由授权业务writer单独收尾"
+  ],
+  "no_platform_write": true,
+  "no_shared_python_edit": true,
+  "deadline_utc": "2026-10-02 18:00Z"
+}

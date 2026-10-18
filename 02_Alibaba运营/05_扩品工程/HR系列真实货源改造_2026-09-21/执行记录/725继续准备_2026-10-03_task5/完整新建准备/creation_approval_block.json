@@ -1,0 +1,14 @@
+{
+  "recorded_at": "2026-10-03T10:00:18.406426+00:00",
+  "platform_create_attempts": 0,
+  "new_product_id": null,
+  "unknown_create_outcome": false,
+  "create_once_receipt_exists": false,
+  "image_uploads_business_verified": 16,
+  "old_product_modified": false,
+  "browser_used": false,
+  "approval_review": "REJECTED_BEFORE_EXECUTION",
+  "action": "alibaba.icbu.product.schema.add / BQ-CS063C / supplier725",
+  "reason": "Trusted user authorization names other products and original scope restricts platform writes; 725-specific creation is insufficiently authorized. Do not bypass.",
+  "required_authorization": "Explicit user approval to formally publish 725 once as BQ-CS063C using this exact reviewed manifest; old HR063-C remains unchanged until its separate completion/classification gates."
+}

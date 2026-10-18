@@ -1,0 +1,28 @@
+{
+  "at_utc": "2026-10-03T16:40:18.540461+00:00",
+  "request_id": "212c41d317910456179334308",
+  "success_values": [],
+  "errors": [
+    {
+      "code": "ApiCallLimit",
+      "msg": "Api access frequency exceeds the limit. this ban will last 1 seconds"
+    }
+  ],
+  "candidate": "805",
+  "public_product_id": "1601943738486",
+  "status": "UNVERIFIED",
+  "display": "UNVERIFIED",
+  "gmt_create": null,
+  "gmt_modified": null,
+  "grade": "UNVERIFIED_CURRENT_UI_NO_PRODUCT_DATA",
+  "protection": "UNVERIFIED_CURRENT",
+  "platform_mutations": 0,
+  "error": {
+    "type": "ISV",
+    "code": "ApiCallLimit",
+    "msg": "Api access frequency exceeds the limit. this ban will last 1 seconds",
+    "request_id": "212c41d317910456179334308",
+    "_trace_id_": "2101d94717910456175697457e103d"
+  },
+  "identity_verified": false
+}

@@ -1,0 +1,407 @@
+{
+  "status": "BUYER_ROLE_REVIEW_PASS",
+  "observed_at": "2026-10-10T11:14:04.767190+00:00",
+  "roles": [
+    {
+      "role": "M1",
+      "buyer_question": "搜索识别",
+      "source_indices": [
+        1
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2559准备\\01_产品来源原图\\01.jpg"
+      ],
+      "source_sha256": [
+        "e25a0a844e78cb2cf3ee5758ad749a8ee48b9bafb8fceb40e01c9ff577e338e5"
+      ],
+      "source_dimensions": [
+        [
+          800,
+          800
+        ]
+      ],
+      "source_region_key": "actual-photo-1",
+      "prompt": "Use case: precise-object-edit. Square English B2B shoe image at least1024px. Edit ONLY exact actual Luqi2559 photograph, preserve original shoe count, pose, broad stitched oval apron toe, three pairs of metal eyelets, round laces, low collar, curved stitched side panels, original matte fine granular upper texture and shallow color-matched sole. Black remains Black; Khaki remains actual warm tan/khaki with black collar lining and matching tan sole. No recolor, new angle, reconstructed hidden geometry, new seam, added logo, smooth glossy leather or invented performance. No front or rear pull tabs. Preserve original hand/bareankle/pants when included; no new sock. Remove all Chinese wording, borders, arrows, supplier graphics and unverified performance labels. Clear restrained English typography, product dominant. No genuineleather/suede/PU/rubber/EVA claims, waterproof/anti-slip/zero-drop/medical/stock/dispatch promises. Preserve BOTH Khaki shoes in exact original front/side upright arrangement. Replace laptop and background completely with clean pale neutral studio backdrop and natural contact shadows. No device/logo/other props, no text.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2559准备\\05_AI候选\\M1.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-d0eee2b4-431d-417d-8071-c169923ada1f.png",
+      "output_sha256": "de3dc3e953499afa9a80ab4005a091203aeaa2e268885e0d43e625139e252f51",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T11:14:04.767190+00:00",
+      "review_note": "Compared individually to2559 originalphotos:3pairs metaleyelets, roundlaces, double stitched apron toe, curved stitched sidepanels, lowtop fine granular matte finish, shallow matched soles, exact Black/Khaki originalposes. D1 partialforefoot, D2 radiating polygon groove outsolemacro, D3 originalcollar, D4 originalfront EU39-48. Two source05 disjoint colorprofiles. Composition remains unspecified."
+    },
+    {
+      "role": "M2",
+      "buyer_question": "黑色配色",
+      "source_indices": [
+        16
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2559准备\\01_产品来源原图\\16.jpg"
+      ],
+      "source_sha256": [
+        "720753ac7a13811738848008789b07975391caa81dbb069781e7ab0958fd14dc"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          838
+        ]
+      ],
+      "source_region_key": "actual-photo-16",
+      "prompt": "Use case: precise-object-edit. Square English B2B shoe image at least1024px. Edit ONLY exact actual Luqi2559 photograph, preserve original shoe count, pose, broad stitched oval apron toe, three pairs of metal eyelets, round laces, low collar, curved stitched side panels, original matte fine granular upper texture and shallow color-matched sole. Black remains Black; Khaki remains actual warm tan/khaki with black collar lining and matching tan sole. No recolor, new angle, reconstructed hidden geometry, new seam, added logo, smooth glossy leather or invented performance. No front or rear pull tabs. Preserve original hand/bareankle/pants when included; no new sock. Remove all Chinese wording, borders, arrows, supplier graphics and unverified performance labels. Clear restrained English typography, product dominant. No genuineleather/suede/PU/rubber/EVA claims, waterproof/anti-slip/zero-drop/medical/stock/dispatch promises. Preserve TWO original Black shoes, identical front-threequarter arrangement, actual white cube and orange wall setting. Neat margin. Text: BLACK OPTION; Low-top lace-up shoes.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2559准备\\05_AI候选\\M2.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-b8b44bb9-e574-48d2-9130-d41a72bf5f90.png",
+      "output_sha256": "397c3169a882269e6a46729286117ef744635afc7c23b9612754b25d0efca9e3",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T11:14:04.767190+00:00",
+      "review_note": "Compared individually to2559 originalphotos:3pairs metaleyelets, roundlaces, double stitched apron toe, curved stitched sidepanels, lowtop fine granular matte finish, shallow matched soles, exact Black/Khaki originalposes. D1 partialforefoot, D2 radiating polygon groove outsolemacro, D3 originalcollar, D4 originalfront EU39-48. Two source05 disjoint colorprofiles. Composition remains unspecified."
+    },
+    {
+      "role": "M3",
+      "buyer_question": "卡其上脚侧面",
+      "source_indices": [
+        14
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2559准备\\01_产品来源原图\\14.jpg"
+      ],
+      "source_sha256": [
+        "cdc2efee4a0d6f9d55d1664280882cbee62418d6341bcf35c258a21f126eb655"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1230
+        ]
+      ],
+      "source_region_key": "actual-photo-14",
+      "prompt": "Use case: precise-object-edit. Square English B2B shoe image at least1024px. Edit ONLY exact actual Luqi2559 photograph, preserve original shoe count, pose, broad stitched oval apron toe, three pairs of metal eyelets, round laces, low collar, curved stitched side panels, original matte fine granular upper texture and shallow color-matched sole. Black remains Black; Khaki remains actual warm tan/khaki with black collar lining and matching tan sole. No recolor, new angle, reconstructed hidden geometry, new seam, added logo, smooth glossy leather or invented performance. No front or rear pull tabs. Preserve original hand/bareankle/pants when included; no new sock. Remove all Chinese wording, borders, arrows, supplier graphics and unverified performance labels. Clear restrained English typography, product dominant. No genuineleather/suede/PU/rubber/EVA claims, waterproof/anti-slip/zero-drop/medical/stock/dispatch promises. Preserve TWO original Khaki onfoot sideprofiles, black frayed pants/bareankles, same pale floor and brick wall. Crop below knees. Text: LOW-TOP SIDE PROFILE; Stitched panels and metal eyelets.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2559准备\\05_AI候选\\M3.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-0e065de0-9df2-46bc-a0d7-b36155a6d647.png",
+      "output_sha256": "100b29b989c1da793ef49812c61f912240c51dabba543f42a746f4cf780b9179",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T11:14:04.767190+00:00",
+      "review_note": "Compared individually to2559 originalphotos:3pairs metaleyelets, roundlaces, double stitched apron toe, curved stitched sidepanels, lowtop fine granular matte finish, shallow matched soles, exact Black/Khaki originalposes. D1 partialforefoot, D2 radiating polygon groove outsolemacro, D3 originalcollar, D4 originalfront EU39-48. Two source05 disjoint colorprofiles. Composition remains unspecified."
+    },
+    {
+      "role": "M4",
+      "buyer_question": "黑色手持与上脚",
+      "source_indices": [
+        12
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2559准备\\01_产品来源原图\\12.jpg"
+      ],
+      "source_sha256": [
+        "59a36b1405428219e68e752a3aa17a2a60b678bfa2cf5d23a87cfc8f40dd24c0"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1071
+        ]
+      ],
+      "source_region_key": "actual-photo-12",
+      "prompt": "Use case: precise-object-edit. Square English B2B shoe image at least1024px. Edit ONLY exact actual Luqi2559 photograph, preserve original shoe count, pose, broad stitched oval apron toe, three pairs of metal eyelets, round laces, low collar, curved stitched side panels, original matte fine granular upper texture and shallow color-matched sole. Black remains Black; Khaki remains actual warm tan/khaki with black collar lining and matching tan sole. No recolor, new angle, reconstructed hidden geometry, new seam, added logo, smooth glossy leather or invented performance. No front or rear pull tabs. Preserve original hand/bareankle/pants when included; no new sock. Remove all Chinese wording, borders, arrows, supplier graphics and unverified performance labels. Clear restrained English typography, product dominant. No genuineleather/suede/PU/rubber/EVA claims, waterproof/anti-slip/zero-drop/medical/stock/dispatch promises. Preserve original Black held shoe and one Black onfoot shoe, exact hand/bareankle and black frayed pants on original brick backdrop. TWO shoes only, belowknees frame. Text: BLACK ON-FOOT VIEW; Actual photographed style.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2559准备\\05_AI候选\\M4.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-c2b8b219-7490-4a3f-bbb1-8f8a193ebf45.png",
+      "output_sha256": "c1b38d1d0ddd132fa2ed66e2a46b49fc7a0d4d2a86a51310deae741c14172d41",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T11:14:04.767190+00:00",
+      "review_note": "Compared individually to2559 originalphotos:3pairs metaleyelets, roundlaces, double stitched apron toe, curved stitched sidepanels, lowtop fine granular matte finish, shallow matched soles, exact Black/Khaki originalposes. D1 partialforefoot, D2 radiating polygon groove outsolemacro, D3 originalcollar, D4 originalfront EU39-48. Two source05 disjoint colorprofiles. Composition remains unspecified."
+    },
+    {
+      "role": "M5",
+      "buyer_question": "采购询价行动",
+      "source_indices": [
+        18
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2559准备\\01_产品来源原图\\18.jpg"
+      ],
+      "source_sha256": [
+        "7ef0df4d0b19c1cb8b20cb7a6b4efcf51421d28592d4b3b15913a804eead5dc7"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          848
+        ]
+      ],
+      "source_region_key": "actual-photo-18",
+      "prompt": "Use case: precise-object-edit. Square English B2B shoe image at least1024px. Edit ONLY exact actual Luqi2559 photograph, preserve original shoe count, pose, broad stitched oval apron toe, three pairs of metal eyelets, round laces, low collar, curved stitched side panels, original matte fine granular upper texture and shallow color-matched sole. Black remains Black; Khaki remains actual warm tan/khaki with black collar lining and matching tan sole. No recolor, new angle, reconstructed hidden geometry, new seam, added logo, smooth glossy leather or invented performance. No front or rear pull tabs. Preserve original hand/bareankle/pants when included; no new sock. Remove all Chinese wording, borders, arrows, supplier graphics and unverified performance labels. Clear restrained English typography, product dominant. No genuineleather/suede/PU/rubber/EVA claims, waterproof/anti-slip/zero-drop/medical/stock/dispatch promises. Preserve original SINGLE Khaki shoe at same angled pose on actual white cube with orange wall/pale floor. Text: PLAN YOUR WHOLESALE ORDER; Color + EU size mix + Pair quantity + Destination.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2559准备\\05_AI候选\\M5.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-3f19d9b5-4622-4ae5-8cb4-b30f5c974d9d.png",
+      "output_sha256": "759cbbb644ef6d762449d2c4172e56353a4a18fe17349d005bf3f9b55adf5e0c",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T11:14:04.767190+00:00",
+      "review_note": "Compared individually to2559 originalphotos:3pairs metaleyelets, roundlaces, double stitched apron toe, curved stitched sidepanels, lowtop fine granular matte finish, shallow matched soles, exact Black/Khaki originalposes. D1 partialforefoot, D2 radiating polygon groove outsolemacro, D3 originalcollar, D4 originalfront EU39-48. Two source05 disjoint colorprofiles. Composition remains unspecified."
+    },
+    {
+      "role": "D1",
+      "buyer_question": "明线鞋头细节",
+      "source_indices": [
+        7
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2559准备\\01_产品来源原图\\07.jpg"
+      ],
+      "source_sha256": [
+        "39005bc9e788aab0c765335dca983d15a1327f33242c67122c05c58d33db76ca"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          998
+        ]
+      ],
+      "source_region_key": "actual-photo-7",
+      "prompt": "Use case: precise-object-edit. Square English B2B shoe image at least1024px. Edit ONLY exact actual Luqi2559 photograph, preserve original shoe count, pose, broad stitched oval apron toe, three pairs of metal eyelets, round laces, low collar, curved stitched side panels, original matte fine granular upper texture and shallow color-matched sole. Black remains Black; Khaki remains actual warm tan/khaki with black collar lining and matching tan sole. No recolor, new angle, reconstructed hidden geometry, new seam, added logo, smooth glossy leather or invented performance. No front or rear pull tabs. Preserve original hand/bareankle/pants when included; no new sock. Remove all Chinese wording, borders, arrows, supplier graphics and unverified performance labels. Clear restrained English typography, product dominant. No genuineleather/suede/PU/rubber/EVA claims, waterproof/anti-slip/zero-drop/medical/stock/dispatch promises. Strict partial crop of the actual Black forefoot and double stitched oval apron in lower source07 photo. Forefoot detail fills frame, no fullshoe/new heel. Text: STITCHED TOE DETAIL; Actual photographed construction.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2559准备\\05_AI候选\\D1.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-c8190cea-0721-43a1-9da5-90f052157691.png",
+      "output_sha256": "37c6c9965b3c72886c0a89155d7f6c33108ee8f9d7ed80e120be4d445bf6dca5",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T11:14:04.767190+00:00",
+      "review_note": "Compared individually to2559 originalphotos:3pairs metaleyelets, roundlaces, double stitched apron toe, curved stitched sidepanels, lowtop fine granular matte finish, shallow matched soles, exact Black/Khaki originalposes. D1 partialforefoot, D2 radiating polygon groove outsolemacro, D3 originalcollar, D4 originalfront EU39-48. Two source05 disjoint colorprofiles. Composition remains unspecified."
+    },
+    {
+      "role": "D2",
+      "buyer_question": "真实底纹",
+      "source_indices": [
+        9
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2559准备\\01_产品来源原图\\09.jpg"
+      ],
+      "source_sha256": [
+        "5f07051fa08ab02df9d0a58945b89f661e72928129b131dbc640a940d93e4684"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          966
+        ]
+      ],
+      "source_region_key": "actual-photo-9",
+      "prompt": "Use case: precise-object-edit. Square English B2B shoe image at least1024px. Edit ONLY exact actual Luqi2559 photograph, preserve original shoe count, pose, broad stitched oval apron toe, three pairs of metal eyelets, round laces, low collar, curved stitched side panels, original matte fine granular upper texture and shallow color-matched sole. Black remains Black; Khaki remains actual warm tan/khaki with black collar lining and matching tan sole. No recolor, new angle, reconstructed hidden geometry, new seam, added logo, smooth glossy leather or invented performance. No front or rear pull tabs. Preserve original hand/bareankle/pants when included; no new sock. Remove all Chinese wording, borders, arrows, supplier graphics and unverified performance labels. Clear restrained English typography, product dominant. No genuineleather/suede/PU/rubber/EVA claims, waterproof/anti-slip/zero-drop/medical/stock/dispatch promises. Strict partial closeup of original Black outsole photograph, showing actual radiating segmented polygon grooves and border texture. Preserve exact groove pattern. No wholeshoe, new tread or performance diagram. Text: OUTSOLE TEXTURE; Actual photographed detail.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2559准备\\05_AI候选\\D2.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-278d51e6-a96c-49dc-b1a8-c26c7bf2f769.png",
+      "output_sha256": "ecfc8d9d2d16d7168adc0b6073bce2c0081c1f7067b9cc23a67258c7d97aeccd",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T11:14:04.767190+00:00",
+      "review_note": "Compared individually to2559 originalphotos:3pairs metaleyelets, roundlaces, double stitched apron toe, curved stitched sidepanels, lowtop fine granular matte finish, shallow matched soles, exact Black/Khaki originalposes. D1 partialforefoot, D2 radiating polygon groove outsolemacro, D3 originalcollar, D4 originalfront EU39-48. Two source05 disjoint colorprofiles. Composition remains unspecified."
+    },
+    {
+      "role": "D3",
+      "buyer_question": "鞋口细节",
+      "source_indices": [
+        8
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2559准备\\01_产品来源原图\\08.jpg"
+      ],
+      "source_sha256": [
+        "c51ab4a107d2b6cad87bbbcfe140a9ff88b3d424cf031f2f57988570c69c28fa"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          987
+        ]
+      ],
+      "source_region_key": "actual-photo-8",
+      "prompt": "Use case: precise-object-edit. Square English B2B shoe image at least1024px. Edit ONLY exact actual Luqi2559 photograph, preserve original shoe count, pose, broad stitched oval apron toe, three pairs of metal eyelets, round laces, low collar, curved stitched side panels, original matte fine granular upper texture and shallow color-matched sole. Black remains Black; Khaki remains actual warm tan/khaki with black collar lining and matching tan sole. No recolor, new angle, reconstructed hidden geometry, new seam, added logo, smooth glossy leather or invented performance. No front or rear pull tabs. Preserve original hand/bareankle/pants when included; no new sock. Remove all Chinese wording, borders, arrows, supplier graphics and unverified performance labels. Clear restrained English typography, product dominant. No genuineleather/suede/PU/rubber/EVA claims, waterproof/anti-slip/zero-drop/medical/stock/dispatch promises. Strict partial closeup of original Black collar/visible inner fabric from source08. No forefoot or whole shoe reconstruction. Text: COLLAR DETAIL; Low-top construction. Do not state lining composition.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2559准备\\05_AI候选\\D3.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-adc73684-82e5-4657-ae2f-a9d103d8d355.png",
+      "output_sha256": "b3e1ae840b32169c45abfe1c9c2d0b0bc4cc1c915255a112a1bbca0771a86c67",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T11:14:04.767190+00:00",
+      "review_note": "Compared individually to2559 originalphotos:3pairs metaleyelets, roundlaces, double stitched apron toe, curved stitched sidepanels, lowtop fine granular matte finish, shallow matched soles, exact Black/Khaki originalposes. D1 partialforefoot, D2 radiating polygon groove outsolemacro, D3 originalcollar, D4 originalfront EU39-48. Two source05 disjoint colorprofiles. Composition remains unspecified."
+    },
+    {
+      "role": "D4",
+      "buyer_question": "EU尺码配比",
+      "source_indices": [
+        15
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2559准备\\01_产品来源原图\\15.jpg"
+      ],
+      "source_sha256": [
+        "785cf4f9a22b64d4122c0ccb575238938cdfa701da631e136fa3fb32ffb2c632"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1275
+        ]
+      ],
+      "source_region_key": "actual-photo-15",
+      "prompt": "Use case: precise-object-edit. Square English B2B shoe image at least1024px. Edit ONLY exact actual Luqi2559 photograph, preserve original shoe count, pose, broad stitched oval apron toe, three pairs of metal eyelets, round laces, low collar, curved stitched side panels, original matte fine granular upper texture and shallow color-matched sole. Black remains Black; Khaki remains actual warm tan/khaki with black collar lining and matching tan sole. No recolor, new angle, reconstructed hidden geometry, new seam, added logo, smooth glossy leather or invented performance. No front or rear pull tabs. Preserve original hand/bareankle/pants when included; no new sock. Remove all Chinese wording, borders, arrows, supplier graphics and unverified performance labels. Clear restrained English typography, product dominant. No genuineleather/suede/PU/rubber/EVA claims, waterproof/anti-slip/zero-drop/medical/stock/dispatch promises. Preserve TWO original Khaki shoes: empty held shoe left and onfoot shoe right, exact top-front angle, bareankle and original frayedpants only. Text: EU 39-48; Send your color-size mix for order confirmation. No US or centimeter conversion.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2559准备\\05_AI候选\\D4.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-f2e39085-458f-405f-ba0c-3f770693cb2d.png",
+      "output_sha256": "ecdd99ee39d822eb524fb644f8e280509c8505a319be28d988e5edf90f92dde0",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T11:14:04.767190+00:00",
+      "review_note": "Compared individually to2559 originalphotos:3pairs metaleyelets, roundlaces, double stitched apron toe, curved stitched sidepanels, lowtop fine granular matte finish, shallow matched soles, exact Black/Khaki originalposes. D1 partialforefoot, D2 radiating polygon groove outsolemacro, D3 originalcollar, D4 originalfront EU39-48. Two source05 disjoint colorprofiles. Composition remains unspecified."
+    },
+    {
+      "role": "SKU_Black",
+      "buyer_question": "黑色SKU绑定",
+      "source_indices": [
+        5
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2559准备\\01_产品来源原图\\05.jpg"
+      ],
+      "source_sha256": [
+        "d41ba48432319cd5e6e86e45e73103be535e9f5d68b8f78afb88b2fdcb7931dc"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          984
+        ]
+      ],
+      "source_region_key": "SKU_Black",
+      "prompt": "Use case: precise-object-edit. Square English B2B shoe image at least1024px. Edit ONLY exact actual Luqi2559 photograph, preserve original shoe count, pose, broad stitched oval apron toe, three pairs of metal eyelets, round laces, low collar, curved stitched side panels, original matte fine granular upper texture and shallow color-matched sole. Black remains Black; Khaki remains actual warm tan/khaki with black collar lining and matching tan sole. No recolor, new angle, reconstructed hidden geometry, new seam, added logo, smooth glossy leather or invented performance. No front or rear pull tabs. Preserve original hand/bareankle/pants when included; no new sock. Remove all Chinese wording, borders, arrows, supplier graphics and unverified performance labels. Clear restrained English typography, product dominant. No genuineleather/suede/PU/rubber/EVA claims, waterproof/anti-slip/zero-drop/medical/stock/dispatch promises. Extract ONLY original single Black shoe in UPPER photograph of source05. Keep exact sideprofile facing left, three metal eyelets, black matte fine granular upper, black sole, original seam geometry. White studio background and small shadow, no text/other shoe/labels.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2559准备\\05_AI候选\\SKU_Black.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-fa54b2b2-0101-4d95-8d49-617439319328.png",
+      "output_sha256": "536b35c93d213617ddba9a32278fa9c1f8d2e474e5a4e261cbec8b0477baf970",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T11:14:04.767190+00:00",
+      "review_note": "Compared individually to2559 originalphotos:3pairs metaleyelets, roundlaces, double stitched apron toe, curved stitched sidepanels, lowtop fine granular matte finish, shallow matched soles, exact Black/Khaki originalposes. D1 partialforefoot, D2 radiating polygon groove outsolemacro, D3 originalcollar, D4 originalfront EU39-48. Two source05 disjoint colorprofiles. Composition remains unspecified."
+    },
+    {
+      "role": "SKU_Khaki",
+      "buyer_question": "卡其SKU绑定",
+      "source_indices": [
+        5
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2559准备\\01_产品来源原图\\05.jpg"
+      ],
+      "source_sha256": [
+        "d41ba48432319cd5e6e86e45e73103be535e9f5d68b8f78afb88b2fdcb7931dc"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          984
+        ]
+      ],
+      "source_region_key": "SKU_Khaki",
+      "prompt": "Use case: precise-object-edit. Square English B2B shoe image at least1024px. Edit ONLY exact actual Luqi2559 photograph, preserve original shoe count, pose, broad stitched oval apron toe, three pairs of metal eyelets, round laces, low collar, curved stitched side panels, original matte fine granular upper texture and shallow color-matched sole. Black remains Black; Khaki remains actual warm tan/khaki with black collar lining and matching tan sole. No recolor, new angle, reconstructed hidden geometry, new seam, added logo, smooth glossy leather or invented performance. No front or rear pull tabs. Preserve original hand/bareankle/pants when included; no new sock. Remove all Chinese wording, borders, arrows, supplier graphics and unverified performance labels. Clear restrained English typography, product dominant. No genuineleather/suede/PU/rubber/EVA claims, waterproof/anti-slip/zero-drop/medical/stock/dispatch promises. Extract ONLY original single Khaki shoe in LOWER photograph of source05. Keep exact sideprofile facing left, three metal eyelets, tan matte fine granular upper and tan shallow sole, black collar lining, original seam geometry. White studio background and small shadow, no text/other shoe/labels.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\2559准备\\05_AI候选\\SKU_Khaki.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-a2e8f5c2-ae5e-49d0-8b0d-f1714966b90b.png",
+      "output_sha256": "363166b344632d0890257366dc08f146736b806c3d78aa0fcdae36c777f43085",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T11:14:04.767190+00:00",
+      "review_note": "Compared individually to2559 originalphotos:3pairs metaleyelets, roundlaces, double stitched apron toe, curved stitched sidepanels, lowtop fine granular matte finish, shallow matched soles, exact Black/Khaki originalposes. D1 partialforefoot, D2 radiating polygon groove outsolemacro, D3 originalcollar, D4 originalfront EU39-48. Two source05 disjoint colorprofiles. Composition remains unspecified."
+    }
+  ],
+  "M6": {
+    "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎新品_2026-10-07\\图片修复\\F.png",
+    "bank_url": "https://sc04.alicdn.com/kf/S6c8cb1d46d8c4b018cf07f5cab50c1adi/286385890/S6c8cb1d46d8c4b018cf07f5cab50c1adi.png",
+    "file_id": "30149993323"
+  },
+  "company": [
+    {
+      "role": "C1",
+      "usage": "ordinary_HTML_company_context",
+      "official_url": "https://sc04.alicdn.com/kf/Ha8c1682092424e778eadf945763e79daU/286385890/Ha8c1682092424e778eadf945763e79daU.jpg",
+      "file_id": "33355885480",
+      "local_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\266_quality_audit\\originals\\C01_factory_profile.jpg",
+      "sha256": "23a34c8e425ae286d190ac1eb587c93e9a87421fdf490ec48f260e53e316149c",
+      "local_hash_verified": true,
+      "pixel_edit": false
+    },
+    {
+      "role": "C2",
+      "usage": "ordinary_HTML_company_context",
+      "official_url": "https://sc04.alicdn.com/kf/H496f7579171f4370a1d47c3adf30001bK/286385890/H496f7579171f4370a1d47c3adf30001bK.jpg",
+      "file_id": "33358392283",
+      "local_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\266_quality_audit\\originals\\C02_oem_odm_workflow.jpg",
+      "sha256": "66624253f1d95ec68e060d792f13c61943c86f7d61e763167a0a2eb1146300f5",
+      "local_hash_verified": true,
+      "pixel_edit": false
+    },
+    {
+      "role": "C3",
+      "usage": "ordinary_HTML_company_context",
+      "official_url": "https://sc04.alicdn.com/kf/H36e700f5c3ee447a80c035d8ae7521d9a/286385890/H36e700f5c3ee447a80c035d8ae7521d9a.jpg",
+      "file_id": "33355813301",
+      "local_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\266_quality_audit\\originals\\C03_production_process.jpg",
+      "sha256": "3ae00d6398224dd7021ed2a266584bccb77b741b31fa9c72ca8ad66ab443f683",
+      "local_hash_verified": true,
+      "pixel_edit": false
+    },
+    {
+      "role": "C4",
+      "usage": "ordinary_HTML_company_context",
+      "official_url": "https://sc04.alicdn.com/kf/H9f32c7ecea0f4d25bc5ddc9cd04c1e5dK/286385890/H9f32c7ecea0f4d25bc5ddc9cd04c1e5dK.jpg",
+      "file_id": "33358345636",
+      "local_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\266_quality_audit\\originals\\C04_quality_control.jpg",
+      "sha256": "f32d682a7055a3e44f91eb074b678507beca63967da5565de8997f582a651bf5",
+      "local_hash_verified": true,
+      "pixel_edit": false
+    },
+    {
+      "role": "C5",
+      "usage": "ordinary_HTML_company_context",
+      "official_url": "https://sc04.alicdn.com/kf/H5f71c3cfb4064b51bb458d0a786cb402R/286385890/H5f71c3cfb4064b51bb458d0a786cb402R.jpg",
+      "file_id": "33358440083",
+      "local_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\266_quality_audit\\originals\\C05_packing_inquiry.jpg",
+      "sha256": "d0f3916d920a9ec46fd822317a9cd3c684b6b7d60631208475fa2be138d05bc2",
+      "local_hash_verified": true,
+      "pixel_edit": false
+    }
+  ],
+  "excluded_candidates": [],
+  "complete_set_visual_review_at": "2026-10-10T11:14:34.551109+00:00",
+  "complete_set_note": "Compared individually to2559 originalphotos:3pairs metaleyelets, roundlaces, double stitched apron toe, curved stitched sidepanels, lowtop fine granular matte finish, shallow matched soles, exact Black/Khaki originalposes. D1 partialforefoot, D2 radiating polygon groove outsolemacro, D3 originalcollar, D4 originalfront EU39-48. Two source05 disjoint colorprofiles. Composition remains unspecified. Sixmain including actualfactoryM6, four distinctproductdetail and five companypanels checked; no public rendering proof."
+}

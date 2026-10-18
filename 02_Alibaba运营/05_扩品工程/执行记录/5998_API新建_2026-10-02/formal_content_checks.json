@@ -1,0 +1,50 @@
+{
+  "product_id": 1601969869242,
+  "read_at_utc": "2026-10-02T12:54:09.119029+00:00",
+  "get_request_id": "210829b717909455774477783",
+  "status": "approved",
+  "display": "Y",
+  "checks": {
+    "nonempty_product": true,
+    "title": true,
+    "category": true,
+    "main_6_exact_order": true,
+    "detail_4_exact_assets_roles": true,
+    "company_v3_5_exact_set": true,
+    "FAQ6_exact": true,
+    "summary_exact": true,
+    "SKU22_unique": true,
+    "size_labels": true,
+    "color_bindings": true,
+    "all_SKU_prices": true,
+    "MOQ2_pairs": true,
+    "materials": true,
+    "model": true
+  },
+  "content_result": "PASS",
+  "actual_counts": {
+    "main": 6,
+    "detail": 4,
+    "company": 5,
+    "FAQ": 6,
+    "SKU": 22
+  },
+  "attributes": {
+    "Upper Material": "Genuine Leather",
+    "Place of Origin": "CN",
+    "Model Number": "BQ-W5998",
+    "Midsole Material": "Not specified",
+    "Outsole Material": "Not specified",
+    "Lining Material": "Unlined"
+  },
+  "inventory_status": "No stock values sent; synchronization held per parent current instruction",
+  "keywords": [
+    ""
+  ],
+  "public_acceptance": "PASS",
+  "quality_acceptance": "PASS",
+  "actual_quality_score": "5.00",
+  "quality_request_id": "213c932b17909455798806755",
+  "public_evidence": "public_acceptance_parent_receipt.json",
+  "public_accepted_at_utc": "2026-10-02T13:07:11.020327+00:00"
+}

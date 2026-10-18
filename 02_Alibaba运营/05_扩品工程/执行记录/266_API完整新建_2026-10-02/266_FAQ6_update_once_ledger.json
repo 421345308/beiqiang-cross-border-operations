@@ -1,0 +1,18 @@
+{
+  "status": "BUSINESS_VERIFIED_PENDING_FORMAL_FIELDS",
+  "product_id": 1601969707634,
+  "method": "alibaba.icbu.product.schema.update",
+  "request_sha256": "fe661a2fa141f4122599fdd799447e61d82157b93b4621f55d934d08242d60f9",
+  "parent_authorized_narrow_revision": true,
+  "only_field": "companyFaqDesc",
+  "started_at": "2026-10-02T08:51:20.079673+00:00",
+  "reply": {
+    "trace_id": "2101dbd017909310879005328e0ed9",
+    "product_id": 1601969707634,
+    "biz_success": true,
+    "request_id": "21501b8d17909310882434553",
+    "_trace_id_": "2101dbd017909310879005328e0ed9"
+  },
+  "exit_code": 0,
+  "finished_at": "2026-10-02T08:51:25.142051+00:00"
+}

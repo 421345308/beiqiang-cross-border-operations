@@ -1,0 +1,54 @@
+{
+  "verdict": "PASS",
+  "no_reviewer_API_write": true,
+  "remaining_gates": [
+    "Actual once-create newID",
+    "Formal content SKU model media no-inventory readback",
+    "Actual refreshed5.0",
+    "Public acceptance",
+    "OldID associated orders/inquiries/rights reconciliation before OFF"
+  ],
+  "risk": "Unknown risks not declared absent; oldIDs retained pending replacement acceptance",
+  "products": [
+    {
+      "style": "936",
+      "verdict": "PASS",
+      "request_sha256": "7977790fe5cdd782064934cca73b992d6e303783494990c69566f20ab38ee5b6",
+      "checks": {
+        "exact_hash": true,
+        "only_model_name_order_and_attribute_serialization_delta": true,
+        "nonxml_equal_no_product_id": true,
+        "current_schema_hash_matches": true,
+        "stock_optional_current_schema": true,
+        "no_inventory_or_old_skuID": true,
+        "counts14or33_6_4_5_6": true,
+        "real_replacement_review_PASS": true,
+        "fieldids_match_manifest": true
+      },
+      "schema_request_id": "21501b6717909553661261163",
+      "existing_old_id": 1601969872083,
+      "new_id": null,
+      "scope": "EXACT_ACTUAL_PRODUCTION_REPLACEMENT_CREATE_STATIC_ONLY"
+    },
+    {
+      "style": "K858",
+      "verdict": "PASS",
+      "request_sha256": "9409da8de6dc226aaa3257c07380025fa10210c4e568449915dd5adcd94d6ba0",
+      "checks": {
+        "exact_hash": true,
+        "only_model_name_order_and_attribute_serialization_delta": true,
+        "nonxml_equal_no_product_id": true,
+        "current_schema_hash_matches": true,
+        "stock_optional_current_schema": true,
+        "no_inventory_or_old_skuID": true,
+        "counts14or33_6_4_5_6": true,
+        "real_replacement_review_PASS": true,
+        "fieldids_match_manifest": true
+      },
+      "schema_request_id": "210829b717909553668868081",
+      "existing_old_id": 1601969860254,
+      "new_id": null,
+      "scope": "EXACT_ACTUAL_PRODUCTION_REPLACEMENT_CREATE_STATIC_ONLY"
+    }
+  ]
+}

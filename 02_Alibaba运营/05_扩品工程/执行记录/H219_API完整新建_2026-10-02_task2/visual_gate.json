@@ -1,0 +1,25 @@
+{
+  "verdict": "PASS",
+  "observed_at": "2026-10-02T17:17:41.548761+00:00",
+  "reviewer": "task2 individual view_image examination",
+  "image_hashes": {
+    "H219_M1.png": "d302eb336b989312d893b1ff60828a508e9bf977323e372279b028608ea27b53",
+    "H219_M2.png": "8fd382dc1521e724cdb4589f1ae475a62d6fdadb7b1f76a2e74713fc055e8577",
+    "H219_M3.png": "1fa10e8aa283b520efc6d516324fa08ef0f42079bb4b5f474e7407d46a2a7423",
+    "H219_M4.png": "2f97144f9953046886cdde0c27f4fddfb1ebef3d4460bfe05f7b2f4fea89c454",
+    "H219_M5.png": "7002c32a70f11026637cc59c686e3a479d45a64eed2f0f110d70f4a04e92796a",
+    "H219_M6.png": "e956ddc650e09e590a14791c885f66b847cc140a4c3416b573af7102a2a093c1",
+    "H219_D1.png": "7176c89427c42474e16f20143ee517e6b59857cd7be4f54efb8b590f1b4ca60e",
+    "H219_D2.png": "bdf7f2e4a28f013aafc24b4857af56a7e125fc77961e8c97944ed4e760b1fb77",
+    "H219_D3.png": "8a5bfeb1534c6a95be8761a33a5ada7ba99e880b2c3c0c5b3c5470eb14470b8f",
+    "H219_D4.png": "ac78bce34a4fa4a0014cc7e3cb77873e405c3dc387a915a653e2d963035081c2",
+    "H219_Brown.png": "60740b8c0547de441e7e332b7cc83ebf3c85643636f57ad61a71580b129ef03e",
+    "H219_Black.png": "c5b1cf67ff0cecaed328710bc482587d4e598c3d257ae73951434c71b13ccee0"
+  },
+  "main": 6,
+  "detail": 4,
+  "SKU_single_color_no_text": 2,
+  "shoe_structure": "Actual source shoes preserved",
+  "company": "Reused exactly approved v3 five assets by same bank IDs and hashes; no new company image generation",
+  "limitations": "Native crop pixels recorded; resizing does not create source detail; no performance, fit or shipping assertions"
+}

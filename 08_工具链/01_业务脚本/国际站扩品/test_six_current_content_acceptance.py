@@ -1,7 +1,7 @@
 """Actual observed content snapshots. Pure offline, no platform client."""
 from pathlib import Path
 from copy import deepcopy
-import json, os, unittest
+import json, unittest
 from xml.etree import ElementTree as E
 import schema_publish_contract as contract
 
@@ -13,8 +13,7 @@ class SixCurrentContentAcceptance(unittest.TestCase):
         row=case['registry_row']
         args=dict(product_id=row['product_id'],category_id=row['category_id'],editor_observation_id=row['editor_observation_id'],observed_at=case['observed_at'])
         args.update(changes)
-        evidence_root=os.environ.get('BEIQIANG_TEST_EVIDENCE_ROOT')
-        return contract.evaluate_versioned_content(E.fromstring(case['schema_xml']),case['formal_get'],case['public_text'],evidence_root=evidence_root,**args)
+        return contract.evaluate_versioned_content(E.fromstring(case['schema_xml']),case['formal_get'],case['public_text'],**args)
     def test_registered_actual_current_chains_pass_without_keyword_or_retirement_claims(self):
         self.assertGreaterEqual(len(self.cases),4)
         for name, case in self.cases.items():

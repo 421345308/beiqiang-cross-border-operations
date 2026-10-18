@@ -1,0 +1,31 @@
+{
+  "observed_at": "2026-10-08T03:26:44.904830+00:00",
+  "source_register_rows": 392,
+  "exact_source_matches": [],
+  "catalog_count": 384,
+  "catalog_observed_at": "2026-10-08T03:14:13.453058+00:00",
+  "model_matches": [],
+  "hero_previews": 384,
+  "preview_failures": [],
+  "visual_scope": "384 first-gallery thumbnails in 12 contact sheets; not all gallery images or public pages",
+  "candidate_features": [
+    "long tongue and heel pull tabs",
+    "two roughly parallel stitched side-panel seams",
+    "angular eyelet overlay",
+    "layered heel and forefoot sidewall lines"
+  ],
+  "neighbors": [
+    {
+      "product_id": "1601943544741",
+      "model": "HR029-A",
+      "comparison": "Full cached 420px preview inspected: mesh panel bordered by curved overlays, no long tongue tab; split heel/outsole geometry differs."
+    },
+    {
+      "product_id": "1601943651120",
+      "model": "HR031-B",
+      "comparison": "Full cached 420px preview inspected: plain low upper and conventional tongue, no long pull tabs or parallel side seams; flatter outsole differs."
+    }
+  ],
+  "result": "NO_OBVIOUS_SAME_STYLE_IN_FIRST_HERO_REVIEW; full differentiation contract pending before any submission",
+  "catalog_sha256": "92f92920d21468e3b17901ea0ab3691e5531897ae4688fc288218813381ed17c"
+}

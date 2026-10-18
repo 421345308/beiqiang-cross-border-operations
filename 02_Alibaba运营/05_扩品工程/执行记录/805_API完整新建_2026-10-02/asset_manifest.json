@@ -1,0 +1,460 @@
+{
+  "style": "805",
+  "public_model": "BQ-D805",
+  "assets": [
+    {
+      "name": "M1",
+      "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-7\\805_execution\\assets\\M1.jpg",
+      "role": "Actual red pair and segmented sole",
+      "dimensions": [
+        800,
+        800
+      ],
+      "sha256": "c7d8f47cd675261b95d640d36fc6a22149232a721b16a09dec82631e6e3e7fcc",
+      "sources": [
+        {
+          "source": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-7\\805_execution\\source\\published\\04.jpg",
+          "sha256": "1f517f3d2e22fe184dca92edd9fad91657e42dc11d247bb95e569feb575b1f94",
+          "upscaled": false,
+          "crop": null
+        }
+      ],
+      "product_redraw": false,
+      "price_label": false
+    },
+    {
+      "name": "M2",
+      "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-7\\805_execution\\assets\\M2.jpg",
+      "role": "Three genuine source colors, no recoloring",
+      "dimensions": [
+        1000,
+        1000
+      ],
+      "sha256": "ef4e3e77cd5830820a9de1a4e9583be0b5fd8109481d28bd47ae6a974a8366d8",
+      "sources": [
+        {
+          "source": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-7\\805_execution\\source\\published\\03.jpg",
+          "native": [
+            800,
+            800
+          ],
+          "crop": null,
+          "effective": [
+            800,
+            800
+          ],
+          "placed": [
+            345,
+            345
+          ],
+          "upscaled": false,
+          "sha256": "d7346325b90ace95a2c30ddd86749a48f9407171ce4eeb63f0203e951e3943ce"
+        },
+        {
+          "source": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-7\\805_execution\\source\\published\\01.jpg",
+          "native": [
+            800,
+            800
+          ],
+          "crop": null,
+          "effective": [
+            800,
+            800
+          ],
+          "placed": [
+            345,
+            345
+          ],
+          "upscaled": false,
+          "sha256": "f95559d591222159172cf2ead16a3de33497b1ab34aa1c7d638a1a8b134932be"
+        },
+        {
+          "source": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-7\\805_execution\\source\\published\\05.jpg",
+          "native": [
+            800,
+            800
+          ],
+          "crop": null,
+          "effective": [
+            800,
+            800
+          ],
+          "placed": [
+            345,
+            345
+          ],
+          "upscaled": false,
+          "sha256": "f4436caf01e910c969e608f7e01522b1d9809cc09e3fee3715d80733c978b28c"
+        }
+      ],
+      "product_redraw": false,
+      "price_label": false
+    },
+    {
+      "name": "M3",
+      "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-7\\805_execution\\assets\\M3.jpg",
+      "role": "Actual sole layout, no grip claim",
+      "dimensions": [
+        1000,
+        1000
+      ],
+      "sha256": "6ce48607f24a59099b5b9e6a1290a40fa947daef2bf8e5c15ea1a6a2cbe756b2",
+      "sources": [
+        {
+          "source": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-7\\805_execution\\source\\published\\04.jpg",
+          "native": [
+            800,
+            800
+          ],
+          "crop": null,
+          "effective": [
+            800,
+            800
+          ],
+          "placed": [
+            700,
+            700
+          ],
+          "upscaled": false,
+          "sha256": "1f517f3d2e22fe184dca92edd9fad91657e42dc11d247bb95e569feb575b1f94"
+        }
+      ],
+      "product_redraw": false,
+      "price_label": false
+    },
+    {
+      "name": "M4",
+      "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-7\\805_execution\\assets\\M4.jpg",
+      "role": "Actual Brown tassels, stitching and texture",
+      "dimensions": [
+        1000,
+        1000
+      ],
+      "sha256": "059bc5c3574c3fc938e35ec700820186d9a326cf5064c6c49f6992b8f6c0c198",
+      "sources": [
+        {
+          "source": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-7\\805_execution\\source\\published\\01.jpg",
+          "native": [
+            800,
+            800
+          ],
+          "crop": null,
+          "effective": [
+            800,
+            800
+          ],
+          "placed": [
+            700,
+            700
+          ],
+          "upscaled": false,
+          "sha256": "f95559d591222159172cf2ead16a3de33497b1ab34aa1c7d638a1a8b134932be"
+        }
+      ],
+      "product_redraw": false,
+      "price_label": false
+    },
+    {
+      "name": "M5",
+      "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-7\\805_execution\\assets\\M5.jpg",
+      "role": "Exact source size labels with actual Blue pair",
+      "dimensions": [
+        1000,
+        1000
+      ],
+      "sha256": "4fd5dee2fcfd6a05ed9054deb49d8f62beb9b4d962967c37cd614a3b4ce2aec2",
+      "sources": [
+        {
+          "source": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-7\\805_execution\\source\\published\\05.jpg",
+          "native": [
+            800,
+            800
+          ],
+          "crop": null,
+          "effective": [
+            800,
+            800
+          ],
+          "placed": [
+            700,
+            700
+          ],
+          "upscaled": false,
+          "sha256": "f4436caf01e910c969e608f7e01522b1d9809cc09e3fee3715d80733c978b28c"
+        }
+      ],
+      "product_redraw": false,
+      "price_label": false
+    },
+    {
+      "name": "M6",
+      "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-7\\805_execution\\assets\\M6.jpg",
+      "role": "True company identity with actual red pair",
+      "dimensions": [
+        1000,
+        1000
+      ],
+      "sha256": "30219491dc032e606932254ef6ffc3eccd999856bfdff707fbb188d7e7c9d8ee",
+      "sources": [
+        {
+          "source": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-7\\805_execution\\source\\published\\03.jpg",
+          "native": [
+            800,
+            800
+          ],
+          "crop": null,
+          "effective": [
+            800,
+            800
+          ],
+          "placed": [
+            575,
+            575
+          ],
+          "upscaled": false,
+          "sha256": "d7346325b90ace95a2c30ddd86749a48f9407171ce4eeb63f0203e951e3943ce"
+        },
+        {
+          "source": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\266_quality_audit\\originals\\C01_factory_profile.jpg",
+          "native": [
+            1200,
+            1200
+          ],
+          "crop": null,
+          "effective": [
+            1200,
+            1200
+          ],
+          "placed": [
+            285,
+            285
+          ],
+          "upscaled": false,
+          "sha256": "23a34c8e425ae286d190ac1eb587c93e9a87421fdf490ec48f260e53e316149c"
+        }
+      ],
+      "product_redraw": false,
+      "price_label": false
+    },
+    {
+      "name": "D1",
+      "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-7\\805_execution\\assets\\D1.jpg",
+      "role": "Confirmed Rubber and PU, truthful unknown layers",
+      "dimensions": [
+        1200,
+        1200
+      ],
+      "sha256": "f47f5377bc032feb44ec0a5d52990e7d8dbc5826c86138003e30c8997a1691df",
+      "sources": [
+        {
+          "source": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-7\\805_execution\\source\\published\\01.jpg",
+          "native": [
+            800,
+            800
+          ],
+          "crop": null,
+          "effective": [
+            800,
+            800
+          ],
+          "placed": [
+            695,
+            695
+          ],
+          "upscaled": false,
+          "sha256": "f95559d591222159172cf2ead16a3de33497b1ab34aa1c7d638a1a8b134932be"
+        }
+      ],
+      "product_redraw": false,
+      "price_label": false
+    },
+    {
+      "name": "D2",
+      "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-7\\805_execution\\assets\\D2.jpg",
+      "role": "Actual outsole and heel extension, no safety test claim",
+      "dimensions": [
+        1200,
+        1200
+      ],
+      "sha256": "5605427e5ab771fc143a6d36d45b65975fc7a469950cb9ef4e302f10ac3400d2",
+      "sources": [
+        {
+          "source": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-7\\805_execution\\source\\published\\04.jpg",
+          "native": [
+            800,
+            800
+          ],
+          "crop": null,
+          "effective": [
+            800,
+            800
+          ],
+          "placed": [
+            755,
+            755
+          ],
+          "upscaled": false,
+          "sha256": "1f517f3d2e22fe184dca92edd9fad91657e42dc11d247bb95e569feb575b1f94"
+        }
+      ],
+      "product_redraw": false,
+      "price_label": false
+    },
+    {
+      "name": "D3",
+      "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-7\\805_execution\\assets\\D3.jpg",
+      "role": "Actual colors, exact source size labels, no stock assertion",
+      "dimensions": [
+        1200,
+        1200
+      ],
+      "sha256": "ecf0e3f2940fd4df1247c3edc59df3c1fafe6c46fcf003a193b43601f06cf23b",
+      "sources": [
+        {
+          "source": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-7\\805_execution\\source\\published\\03.jpg",
+          "native": [
+            800,
+            800
+          ],
+          "crop": null,
+          "effective": [
+            800,
+            800
+          ],
+          "placed": [
+            380,
+            380
+          ],
+          "upscaled": false,
+          "sha256": "d7346325b90ace95a2c30ddd86749a48f9407171ce4eeb63f0203e951e3943ce"
+        },
+        {
+          "source": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-7\\805_execution\\source\\published\\01.jpg",
+          "native": [
+            800,
+            800
+          ],
+          "crop": null,
+          "effective": [
+            800,
+            800
+          ],
+          "placed": [
+            380,
+            380
+          ],
+          "upscaled": false,
+          "sha256": "f95559d591222159172cf2ead16a3de33497b1ab34aa1c7d638a1a8b134932be"
+        },
+        {
+          "source": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-7\\805_execution\\source\\published\\05.jpg",
+          "native": [
+            800,
+            800
+          ],
+          "crop": null,
+          "effective": [
+            800,
+            800
+          ],
+          "placed": [
+            380,
+            380
+          ],
+          "upscaled": false,
+          "sha256": "f4436caf01e910c969e608f7e01522b1d9809cc09e3fee3715d80733c978b28c"
+        }
+      ],
+      "product_redraw": false,
+      "price_label": false
+    },
+    {
+      "name": "D4",
+      "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-7\\805_execution\\assets\\D4.jpg",
+      "role": "Practical procurement inputs with actual Blue pair",
+      "dimensions": [
+        1200,
+        1200
+      ],
+      "sha256": "f4134b92338bc453d6dd6ef4548d3732fc441e93e29fd29775c5187ba4f78136",
+      "sources": [
+        {
+          "source": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-7\\805_execution\\source\\published\\05.jpg",
+          "native": [
+            800,
+            800
+          ],
+          "crop": null,
+          "effective": [
+            800,
+            800
+          ],
+          "placed": [
+            725,
+            725
+          ],
+          "upscaled": false,
+          "sha256": "f4436caf01e910c969e608f7e01522b1d9809cc09e3fee3715d80733c978b28c"
+        }
+      ],
+      "product_redraw": false,
+      "price_label": false
+    }
+  ],
+  "company_manifest": [
+    {
+      "role": "C1",
+      "usage": "ordinary_HTML_company_context",
+      "official_url": "https://sc04.alicdn.com/kf/Ha8c1682092424e778eadf945763e79daU/286385890/Ha8c1682092424e778eadf945763e79daU.jpg",
+      "file_id": "33355885480",
+      "local_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\266_quality_audit\\originals\\C01_factory_profile.jpg",
+      "sha256": "23a34c8e425ae286d190ac1eb587c93e9a87421fdf490ec48f260e53e316149c",
+      "local_hash_verified": true,
+      "pixel_edit": false
+    },
+    {
+      "role": "C2",
+      "usage": "ordinary_HTML_company_context",
+      "official_url": "https://sc04.alicdn.com/kf/H496f7579171f4370a1d47c3adf30001bK/286385890/H496f7579171f4370a1d47c3adf30001bK.jpg",
+      "file_id": "33358392283",
+      "local_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\266_quality_audit\\originals\\C02_oem_odm_workflow.jpg",
+      "sha256": "66624253f1d95ec68e060d792f13c61943c86f7d61e763167a0a2eb1146300f5",
+      "local_hash_verified": true,
+      "pixel_edit": false
+    },
+    {
+      "role": "C3",
+      "usage": "ordinary_HTML_company_context",
+      "official_url": "https://sc04.alicdn.com/kf/H36e700f5c3ee447a80c035d8ae7521d9a/286385890/H36e700f5c3ee447a80c035d8ae7521d9a.jpg",
+      "file_id": "33355813301",
+      "local_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\266_quality_audit\\originals\\C03_production_process.jpg",
+      "sha256": "3ae00d6398224dd7021ed2a266584bccb77b741b31fa9c72ca8ad66ab443f683",
+      "local_hash_verified": true,
+      "pixel_edit": false
+    },
+    {
+      "role": "C4",
+      "usage": "ordinary_HTML_company_context",
+      "official_url": "https://sc04.alicdn.com/kf/H9f32c7ecea0f4d25bc5ddc9cd04c1e5dK/286385890/H9f32c7ecea0f4d25bc5ddc9cd04c1e5dK.jpg",
+      "file_id": "33358345636",
+      "local_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\266_quality_audit\\originals\\C04_quality_control.jpg",
+      "sha256": "f32d682a7055a3e44f91eb074b678507beca63967da5565de8997f582a651bf5",
+      "local_hash_verified": true,
+      "pixel_edit": false
+    },
+    {
+      "role": "C5",
+      "usage": "ordinary_HTML_company_context",
+      "official_url": "https://sc04.alicdn.com/kf/H5f71c3cfb4064b51bb458d0a786cb402R/286385890/H5f71c3cfb4064b51bb458d0a786cb402R.jpg",
+      "file_id": "33358440083",
+      "local_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\266_quality_audit\\originals\\C05_packing_inquiry.jpg",
+      "sha256": "d0f3916d920a9ec46fd822317a9cd3c684b6b7d60631208475fa2be138d05bc2",
+      "local_hash_verified": true,
+      "pixel_edit": false
+    }
+  ],
+  "main6": true,
+  "detail4": true,
+  "no_AI_redraw": true,
+  "no_price_labels": true
+}

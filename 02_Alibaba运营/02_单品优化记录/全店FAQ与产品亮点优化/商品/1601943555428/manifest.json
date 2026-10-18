@@ -1,0 +1,27 @@
+{
+  "operation": "update",
+  "product_id": "1601943555428",
+  "category_id": 201334413,
+  "facts_reviewed": true,
+  "source_evidence": [
+    "copy.json",
+    "before_get.json",
+    "../../../../05_扩品工程/HR系列真实货源改造_2026-09-21/HR018_2026-09-24在售替代货源核验.md",
+    "../../../../../99_临时区/HR018_候选核验/路崎036_首图.jpg",
+    "current_get.json",
+    "../../../../00_运营SOP/国际站商品全生命周期SOP.md"
+  ],
+  "current_schema": "current_schema.xml",
+  "current_schema_sha256": "8c3b2312ea4d977c5930372c7a6f34146c48e823f3422ed503b38f8ee62c3a70",
+  "schema_request_id": "0b51802d17917379190403358",
+  "schema_acquired_at": "2026-10-11T16:58:36.078336+00:00",
+  "payload_xml": "payload.xml",
+  "field_ids": [
+    "textDesc",
+    "companyFaqDesc"
+  ],
+  "dependency_ids": [
+    "productDescType"
+  ],
+  "observed_model": "HR018-B"
+}

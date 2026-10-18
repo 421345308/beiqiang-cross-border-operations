@@ -1,0 +1,92 @@
+{
+  "observed_at": "2026-10-07T16:54:47.996561+00:00",
+  "candidate": {
+    "source": {
+      "reference": "https://luqi.sooxie.com/detail/2559453",
+      "style": "059",
+      "critical_facts": {
+        "profile": "low-top lace-up",
+        "upper_structure": "visible loop eyelets, a low-cut collar and panel seams",
+        "outsole_structure": "visible leaf-shaped patterned sidewall",
+        "closure": "lace-up"
+      },
+      "evidence": [
+        "059_候选任务包.json",
+        "四款与既有相关鞋型对照.md"
+      ]
+    },
+    "search_intent": {
+      "key": "unisex low top lace up casual walking shoes loop eyelets",
+      "evidence": [
+        "059候选任务包.md"
+      ]
+    },
+    "hero_review": {
+      "url": "https://sc04.alicdn.com/kf/Hc01c0f90b5ef40d9945f70b49386bcb9J/286385890/Hc01c0f90b5ef40d9945f70b49386bcb9J.jpg",
+      "aliases": [
+        "//sc04.alicdn.com/kf/Hc01c0f90b5ef40d9945f70b49386bcb9J/286385890/Hc01c0f90b5ef40d9945f70b49386bcb9J.jpg"
+      ],
+      "sha256": "301ac33379ac5eff9c53b327b45b5016fb3c6ad786f241e416b834717b1d82f2",
+      "content_key": "Luqi059-source01-reviewed-real-structure",
+      "label_status": "not_present",
+      "evidence": [
+        "059_上架包/素材清单.json",
+        "四款与既有相关鞋型对照.md"
+      ]
+    }
+  },
+  "source_records": {
+    "1601972965417": {
+      "source": {
+        "reference": "https://luqi.sooxie.com/detail/2561975",
+        "style": "061",
+        "critical_facts": {
+          "profile": "low-top lace-up",
+          "upper_structure": "panelled upper with round eyelets and toe overlay",
+          "outsole_structure": "leaf polygon textured sidewall",
+          "closure": "lace-up"
+        },
+        "evidence": [
+          "061上架任务包.md",
+          "061_readback_summary.json"
+        ]
+      },
+      "hero_review": {
+        "content_key": "Luqi061-beige-panelled-round-eyelets",
+        "label_status": "not_present",
+        "evidence": [
+          "四款与既有相关鞋型对照.md",
+          "061_sourcehero_evidence.json"
+        ]
+      }
+    }
+  },
+  "coverage_limit": "380条10-07完整保存目录+11条较新相关get投影；当前10条旧链接/4家族及061结构已观察。其余未关联来源/像素未知，不是全店视觉清查。仅为本地差异化核验范围，不代替公开终验；单款待验按SOP9限对应环节。",
+  "evidence_files": [
+    {
+      "path": "..\\..\\供应商产品总表\\平台目录快照_2026-10-07.json",
+      "sha256": "d9b4af3155cc45f8a8a20b5babfe5864139a55414c798e792129c30f68ba8cfa",
+      "kind": "catalog_snapshot"
+    },
+    {
+      "path": "已有相关款只读复核\\相关款当前目录投影.json",
+      "sha256": "7fdc7aaa58eb3aea054d983ec74f363c263313299e9f760484ffe288e8e6bb02",
+      "kind": "catalog_snapshot"
+    },
+    {
+      "path": "..\\..\\供应商产品总表\\供应商产品总表.csv",
+      "sha256": "bf04f1baee504a9408a885bbed7f9c72eb47b1e17fb05e46fdde4a47c068af93",
+      "kind": "source_register"
+    },
+    {
+      "path": "四款与既有相关鞋型对照.md",
+      "sha256": "7ec2f8b3ce51f3822c072f57377b6b6c53f88fa7cd405d54fc33443331dfe5a4",
+      "kind": "visual_review"
+    },
+    {
+      "path": "059_候选任务包.json",
+      "sha256": "09c0f44973e81ea0094046796c190956c0a1b7f45eec70e1aa041e7d6762d2f5",
+      "kind": "source_register"
+    }
+  ]
+}

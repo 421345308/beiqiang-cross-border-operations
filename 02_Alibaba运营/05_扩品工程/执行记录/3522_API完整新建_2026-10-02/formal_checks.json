@@ -1,0 +1,211 @@
+{
+  "product_id": "1601969920294",
+  "model": "BQ-L3522",
+  "status": "approved",
+  "display": "Y",
+  "public_url": "https://www.alibaba.com/product-detail/Men-s-Suede-Slip-On-Loafers_1601969920294.html",
+  "formal_fields": "PASS_EXCEPT_KEYWORD",
+  "keyword_persistence": false,
+  "actual_keywords": [
+    ""
+  ],
+  "expected_keywords": [
+    "mens suede slip on loafers"
+  ],
+  "title_model_exact": true,
+  "main": 6,
+  "detail": 4,
+  "company": 5,
+  "SKU": 24,
+  "stable_SKU_codes_and_platform_ids_verified": true,
+  "color_bindings_render_verified": true,
+  "FAQ": 6,
+  "price_tiers_exact": true,
+  "get_request_id": "212cbf3217909573989308521",
+  "render_request_id": "0bbb637a17909574026702109",
+  "render_nonempty": true,
+  "optional_stock_input": "omitted_all",
+  "inventory_returned": [
+    {
+      "sku_id": 109767000198,
+      "sku_code": "BQ-L3522-Black-46",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109767000199,
+      "sku_code": "BQ-L3522-Green-39",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109767000196,
+      "sku_code": "BQ-L3522-Black-44",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109767000197,
+      "sku_code": "BQ-L3522-Black-45",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109767000194,
+      "sku_code": "BQ-L3522-Black-42",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109767000195,
+      "sku_code": "BQ-L3522-Black-43",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109767000192,
+      "sku_code": "BQ-L3522-Black-40",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109767000193,
+      "sku_code": "BQ-L3522-Black-41",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109767000206,
+      "sku_code": "BQ-L3522-Green-46",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109767000207,
+      "sku_code": "BQ-L3522-Beige-39",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109767000204,
+      "sku_code": "BQ-L3522-Green-44",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109767000205,
+      "sku_code": "BQ-L3522-Green-45",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109767000202,
+      "sku_code": "BQ-L3522-Green-42",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109767000203,
+      "sku_code": "BQ-L3522-Green-43",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109767000200,
+      "sku_code": "BQ-L3522-Green-40",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109767000201,
+      "sku_code": "BQ-L3522-Green-41",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109767000214,
+      "sku_code": "BQ-L3522-Beige-46",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109767000212,
+      "sku_code": "BQ-L3522-Beige-44",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109767000213,
+      "sku_code": "BQ-L3522-Beige-45",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109767000210,
+      "sku_code": "BQ-L3522-Beige-42",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109767000211,
+      "sku_code": "BQ-L3522-Beige-43",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109767000208,
+      "sku_code": "BQ-L3522-Beige-40",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109767000209,
+      "sku_code": "BQ-L3522-Beige-41",
+      "returned_inventory_dto_list": null
+    },
+    {
+      "sku_id": 109767000191,
+      "sku_code": "BQ-L3522-Black-39",
+      "returned_inventory_dto_list": null
+    }
+  ],
+  "target_score": 5.0,
+  "actual_score": 5.0,
+  "observed_at": "2026-10-02T16:15:43.529321+00:00",
+  "score_source": "alibaba.icbu.product.score.get",
+  "diagnostics": {
+    "ruleScoreMap": {
+      "title_word_miss_core_error": 0.0,
+      "imageQualityBad": 0.0,
+      "image_scale": 0.0,
+      "title_word_error": 0.0,
+      "image_num": 0.0
+    },
+    "errorReasonSkuImageMoreMap": {},
+    "errorReasonTitleWordMissErrorMap": {},
+    "errorReasonList": [],
+    "errorReasonTitleWordErrorMap": {},
+    "extendCheckMap": {
+      "imageText": true,
+      "sku_image": false,
+      "title_word_miss_core_error": true,
+      "imageQualityBad": true,
+      "sku_text": false,
+      "imageSubTitle": false,
+      "category": true,
+      "title_word_error": true,
+      "selling_point_attribute_conflict": false
+    },
+    "errorReasonCategoryMap": {},
+    "errorReasonSkuTextMap": {},
+    "errorReasonSubTitleMap": {},
+    "errorReasonMap": {},
+    "errorReasonSellingPointAttributeMap": {},
+    "errorReasonSkuImageMap": {},
+    "extendProblemMap": {
+      "imageText": false,
+      "title_word_miss_core_error": false,
+      "imageQualityBad": false,
+      "imageSubTitle": false,
+      "image_scale": false,
+      "inventory": false,
+      "title_word_error": false,
+      "selling_point_attribute_conflict": false,
+      "image_num": false,
+      "freightRate": false,
+      "sku_image": false,
+      "sku_text": false,
+      "price": false,
+      "category": false
+    },
+    "errorReasonQualityBadMap": {},
+    "errorReasonSkuTextMoreMap": {}
+  },
+  "score_status": "PASS",
+  "public_acceptance": "PASS_PARENT_INDEPENDENT_CLOUD_BROWSER",
+  "create_comparator_note": "Stable SKU fields compared directly; platform-generated skuId and default empty/zero stock retained as formal output evidence, not treated as creation failure",
+  "no_inventory_mutation": true,
+  "no_repeat_creation": true,
+  "audit_at_utc": "2026-10-02T16:22:02.371011+00:00",
+  "completion_status": "PENDING",
+  "score_request_id": "213f5a2117909577483255773",
+  "diagnostics_reviewed": true
+}

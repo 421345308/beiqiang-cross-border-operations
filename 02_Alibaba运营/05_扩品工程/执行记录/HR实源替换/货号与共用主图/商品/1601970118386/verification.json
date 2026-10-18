@@ -1,0 +1,37 @@
+{
+  "id": "1601970118386",
+  "at": "2026-10-16T05:07:16.365572+00:00",
+  "state": "FORMAL_FIELDS_SCORE_PASS",
+  "status": "approved",
+  "display": "Y",
+  "actual_score": "5.00",
+  "public_qa": "NOT_PER_ITEM_BROWSER_TESTED_OWNER_API_SCOPE",
+  "readback_checks": {
+    "model": true,
+    "gallery": true,
+    "non_target_formal": true,
+    "unchanged_title": true,
+    "gallery_count": true
+  },
+  "category_followup_evidence": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601970118386/质量修正/fields_overlay.json",
+  "sku_reissue_mapping": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601970118386/质量修正/规格恢复/SKU编号变更映射.json",
+  "original_platform_SKU_ids_preserved": false,
+  "checks": {
+    "model": true,
+    "gallery": true,
+    "non_target_formal": true,
+    "unchanged_title": true,
+    "gallery_count": true,
+    "unsubmitted_schema_fields_preserved": true
+  },
+  "formal_request_id": "2166c2ca17921272392312017",
+  "schema_request_id": "0bab02fe17921272395846933",
+  "new_model": "BQ-CS929",
+  "gallery_slot": 6,
+  "asset_sha256": "13987d2f18fb1e3274ebf1d2eb2bed945d8ee12c33c2a0a5f23e3f41890ce29f",
+  "score_diagnostics": {
+    "flags": {},
+    "deductions": {},
+    "errors": []
+  }
+}

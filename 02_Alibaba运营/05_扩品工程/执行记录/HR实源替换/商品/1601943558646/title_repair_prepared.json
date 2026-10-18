@@ -1,0 +1,34 @@
+{
+  "request": {
+    "param_product_top_publish_request": {
+      "product_id": 1601943558646,
+      "cat_id": 201334413,
+      "language": "en_US",
+      "xml": "<itemSchema><field id=\"productTitle\" name=\"Product name\" type=\"input\"><value>Lace-Up Athletic Style Casual Shoes with Mesh Panels and Patterned Outsole for Everyday Wear</value></field></itemSchema>"
+    }
+  },
+  "reason": "Formal title differs from reviewed source-specific submitted product title. Correct only title; cause of later change unconfirmed, not attributed to a person or platform automation.",
+  "expected_title": "Lace-Up Athletic Style Casual Shoes with Mesh Panels and Patterned Outsole for Everyday Wear",
+  "observed_title": "Lace-Up Athletic Style Casual Shoes with Mesh Panels Layered Overlays Sculpted Sole Edge Patterned Outsole for Everyday Wear",
+  "expected_schema": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Lace-Up Athletic Style Casual Shoes with Mesh Panels and Patterned Outsole for Everyday Wear",
+          []
+        ]
+      ]
+    ]
+  },
+  "xml_sha256": "de07722c8da5898a48e965e00e926af10f3e7801a04300375a184e3c7bccbdb6"
+}

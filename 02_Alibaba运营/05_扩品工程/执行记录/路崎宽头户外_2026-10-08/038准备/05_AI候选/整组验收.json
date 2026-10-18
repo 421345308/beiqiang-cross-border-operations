@@ -1,0 +1,476 @@
+{
+  "status": "BUYER_ROLE_REVIEW_PASS",
+  "observed_at": "2026-10-10T06:39:57.980227+00:00",
+  "roles": [
+    {
+      "role": "M1",
+      "buyer_question": "搜索识别",
+      "source_indices": [
+        1
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\038准备\\01_产品来源原图\\01.jpg"
+      ],
+      "source_sha256": [
+        "f7470686fcf1b1a3d89cb02bd00ea5fdca51030b36588c6258eadca10dc98f97"
+      ],
+      "source_dimensions": [
+        [
+          800,
+          800
+        ]
+      ],
+      "source_region_key": "actual-photo-1",
+      "prompt": "Use case: precise-object-edit. Square English B2B panel using exact supplied Luqi038 photograph. Preserve actual shoe count, view, pose, mesh texture, two curved side bands, paired long mesh toe/vamp openings with central overlay, flat laces and eyelet panel, tongue loop, collar and actual sole/tread. White Blue means white shoe navy bands brown sole; Beige Green creamshoe green bands brown sole; Light Gray Red gray shoe redbands brown sole; Black allblack. Only remove external Chinese/English clutter, diagrams and unsupported claims; no recoloring, new shoe, hidden reconstruction, rotation, new angle or tread. Clean photograph-dominant layout. No barefoot/zero-drop, grip/anti-slip/medical/breathabilitytest/performance/price/delivery claims. Preserve actual two White Blue shoes leaningonconcrete blocks. Neutral pale external background, originalpose, no text.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\038准备\\05_AI候选\\M1.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-dce86a08-58bb-4f73-a90b-2e42567dd8a7.png",
+      "output_sha256": "7c2f7881b0e78deb464dd3fac71f46a333be2491dac51379795055d3bc65bdcc",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T06:39:57.980227+00:00",
+      "review_note": "Compared with exact source photo: Exact source shoes/count/paired long mesh vamp openings/central toe overlay, curvedbands/lacing/collar and soleedge compared. Whitesocks preserved for onfootphotos. D1/D2/D3 macro photograph sections; D3 minor portraitaspect retained in detail role, not hidden outsole. FourSKU06 use separate photographed colors. M4 caption shorter but accurate; no unsupported performance wording."
+    },
+    {
+      "role": "M2",
+      "buyer_question": "黑色整体结构",
+      "source_indices": [
+        5
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\038准备\\01_产品来源原图\\05.jpg"
+      ],
+      "source_sha256": [
+        "48ca72019595066fbd9b993e24a2d42ad27fa2777b78c7e450f22ef48680324f"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1239
+        ]
+      ],
+      "source_region_key": "actual-photo-5",
+      "prompt": "Use case: precise-object-edit. Square English B2B panel using exact supplied Luqi038 photograph. Preserve actual shoe count, view, pose, mesh texture, two curved side bands, paired long mesh toe/vamp openings with central overlay, flat laces and eyelet panel, tongue loop, collar and actual sole/tread. White Blue means white shoe navy bands brown sole; Beige Green creamshoe green bands brown sole; Light Gray Red gray shoe redbands brown sole; Black allblack. Only remove external Chinese/English clutter, diagrams and unsupported claims; no recoloring, new shoe, hidden reconstruction, rotation, new angle or tread. Clean photograph-dominant layout. No barefoot/zero-drop, grip/anti-slip/medical/breathabilitytest/performance/price/delivery claims. Preserve actual two Black shoes, leftfront and rightinclinedside, originalbluebackground. Remove all old wording. Text exactly: BLACK COLOR OPTION; Mesh lace-up casual footwear.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\038准备\\05_AI候选\\M2.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-24fd0dd2-5c02-4d3b-b6c7-b4d3b6c8507a.png",
+      "output_sha256": "92f78750a0d18545ef3dcf4f10446b96bf65831b912541323835ba63f059e504",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T06:39:57.980227+00:00",
+      "review_note": "Compared with exact source photo: Exact source shoes/count/paired long mesh vamp openings/central toe overlay, curvedbands/lacing/collar and soleedge compared. Whitesocks preserved for onfootphotos. D1/D2/D3 macro photograph sections; D3 minor portraitaspect retained in detail role, not hidden outsole. FourSKU06 use separate photographed colors. M4 caption shorter but accurate; no unsupported performance wording."
+    },
+    {
+      "role": "M3",
+      "buyer_question": "米绿色上脚",
+      "source_indices": [
+        4
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\038准备\\01_产品来源原图\\04.jpg"
+      ],
+      "source_sha256": [
+        "85b40bba080ad707b6e9039adf0a81dd6570d7d347304d19a6208854ac634490"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1313
+        ]
+      ],
+      "source_region_key": "actual-photo-4",
+      "prompt": "Use case: precise-object-edit. Square English B2B panel using exact supplied Luqi038 photograph. Preserve actual shoe count, view, pose, mesh texture, two curved side bands, paired long mesh toe/vamp openings with central overlay, flat laces and eyelet panel, tongue loop, collar and actual sole/tread. White Blue means white shoe navy bands brown sole; Beige Green creamshoe green bands brown sole; Light Gray Red gray shoe redbands brown sole; Black allblack. Only remove external Chinese/English clutter, diagrams and unsupported claims; no recoloring, new shoe, hidden reconstruction, rotation, new angle or tread. Clean photograph-dominant layout. No barefoot/zero-drop, grip/anti-slip/medical/breathabilitytest/performance/price/delivery claims. Actual two Beige Green onfoot shoes, whitesocks/lowerlegs/gravel and oneplantedoneheelraised; cropabove knees/excludeall old wording. Text: BEIGE GREEN ON-FOOT VIEW; Actual photographed color combination.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\038准备\\05_AI候选\\M3.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-afe8667d-6599-4f0a-9690-a21afaaf04a1.png",
+      "output_sha256": "f17f121efbbbb460523f2436794471bbdf7f3d6e34e34129033cbbf1bf6d9a96",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T06:39:57.980227+00:00",
+      "review_note": "Compared with exact source photo: Exact source shoes/count/paired long mesh vamp openings/central toe overlay, curvedbands/lacing/collar and soleedge compared. Whitesocks preserved for onfootphotos. D1/D2/D3 macro photograph sections; D3 minor portraitaspect retained in detail role, not hidden outsole. FourSKU06 use separate photographed colors. M4 caption shorter but accurate; no unsupported performance wording."
+    },
+    {
+      "role": "M4",
+      "buyer_question": "白蓝前掌视角",
+      "source_indices": [
+        13
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\038准备\\01_产品来源原图\\13.jpg"
+      ],
+      "source_sha256": [
+        "a36a251d59725fcb00e51b928b7a63ce2050a9d46b0087de2035ed4b3523ebc4"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1155
+        ]
+      ],
+      "source_region_key": "actual-photo-13",
+      "prompt": "Use case: precise-object-edit. Square English B2B panel using exact supplied Luqi038 photograph. Preserve actual shoe count, view, pose, mesh texture, two curved side bands, paired long mesh toe/vamp openings with central overlay, flat laces and eyelet panel, tongue loop, collar and actual sole/tread. White Blue means white shoe navy bands brown sole; Beige Green creamshoe green bands brown sole; Light Gray Red gray shoe redbands brown sole; Black allblack. Only remove external Chinese/English clutter, diagrams and unsupported claims; no recoloring, new shoe, hidden reconstruction, rotation, new angle or tread. Clean photograph-dominant layout. No barefoot/zero-drop, grip/anti-slip/medical/breathabilitytest/performance/price/delivery claims. Actual two White Blue shoes onfoot at front threequarter angle with whitesocks/lowerlegs/gravel; cropabove knees, removeold wordings. Text: WHITE BLUE FRONT PROFILE; Actual photographed toe and lace panels.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\038准备\\05_AI候选\\M4.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-42f7c416-2418-48fc-90d3-124fd2b57693.png",
+      "output_sha256": "0d01852307902ea5170640fb1e6dfe5d588bad1d14e1d08442943b0dd67d5ff7",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T06:39:57.980227+00:00",
+      "review_note": "Compared with exact source photo: Exact source shoes/count/paired long mesh vamp openings/central toe overlay, curvedbands/lacing/collar and soleedge compared. Whitesocks preserved for onfootphotos. D1/D2/D3 macro photograph sections; D3 minor portraitaspect retained in detail role, not hidden outsole. FourSKU06 use separate photographed colors. M4 caption shorter but accurate; no unsupported performance wording."
+    },
+    {
+      "role": "M5",
+      "buyer_question": "双色采购输入",
+      "source_indices": [
+        17
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\038准备\\01_产品来源原图\\17.jpg"
+      ],
+      "source_sha256": [
+        "6ba82fd296b092a257514fcc57adbaab7e891e14c83ef09134bb2b3792af083f"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1149
+        ]
+      ],
+      "source_region_key": "actual-photo-17",
+      "prompt": "Use case: precise-object-edit. Square English B2B panel using exact supplied Luqi038 photograph. Preserve actual shoe count, view, pose, mesh texture, two curved side bands, paired long mesh toe/vamp openings with central overlay, flat laces and eyelet panel, tongue loop, collar and actual sole/tread. White Blue means white shoe navy bands brown sole; Beige Green creamshoe green bands brown sole; Light Gray Red gray shoe redbands brown sole; Black allblack. Only remove external Chinese/English clutter, diagrams and unsupported claims; no recoloring, new shoe, hidden reconstruction, rotation, new angle or tread. Clean photograph-dominant layout. No barefoot/zero-drop, grip/anti-slip/medical/breathabilitytest/performance/price/delivery claims. Actual four onfoot shoes on two adults: White Blue foregroundwoman, Light Gray Red manbehind; preserve actualposes/count/whitesocks/ground. Cropabove knees so no faces/torso; removeoldwordings. Text: PLAN YOUR ASSORTMENT; Send color, EU size mix, pair quantity and destination.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\038准备\\05_AI候选\\M5.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-d6e6042c-c07d-4e6d-a24c-6fd083eca87a.png",
+      "output_sha256": "4caac1819a4b5a4bb3a97f18989c589c3cbbe48c7a0ca24356475a55828dbd3f",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T06:39:57.980227+00:00",
+      "review_note": "Compared with exact source photo: Exact source shoes/count/paired long mesh vamp openings/central toe overlay, curvedbands/lacing/collar and soleedge compared. Whitesocks preserved for onfootphotos. D1/D2/D3 macro photograph sections; D3 minor portraitaspect retained in detail role, not hidden outsole. FourSKU06 use separate photographed colors. M4 caption shorter but accurate; no unsupported performance wording."
+    },
+    {
+      "role": "D1",
+      "buyer_question": "网布鞋面",
+      "source_indices": [
+        9
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\038准备\\01_产品来源原图\\09.jpg"
+      ],
+      "source_sha256": [
+        "a51467500f5aede831b863ef17e22c5bdc4c42f83abaea5d01ed959a1a30aa4a"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1355
+        ]
+      ],
+      "source_region_key": "actual-photo-9",
+      "prompt": "Use case: precise-object-edit. Square English B2B panel using exact supplied Luqi038 photograph. Preserve actual shoe count, view, pose, mesh texture, two curved side bands, paired long mesh toe/vamp openings with central overlay, flat laces and eyelet panel, tongue loop, collar and actual sole/tread. White Blue means white shoe navy bands brown sole; Beige Green creamshoe green bands brown sole; Light Gray Red gray shoe redbands brown sole; Black allblack. Only remove external Chinese/English clutter, diagrams and unsupported claims; no recoloring, new shoe, hidden reconstruction, rotation, new angle or tread. Clean photograph-dominant layout. No barefoot/zero-drop, grip/anti-slip/medical/breathabilitytest/performance/price/delivery claims. Use actual single White Blue shoe centralphoto with mesh; crop upper front/side close macro without wholehiddenreconstruction. Remove arrow/Chinese/oldEnglish. Text: UPPER MATERIAL; Mesh upper | Actual photographed panels.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\038准备\\05_AI候选\\D1.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-8321307d-2166-4beb-94de-d9b4f5bfbe1f.png",
+      "output_sha256": "3e1ed97577149da797ebc1f6de16358e35239e2398bb784c4ad984f5bd745f2a",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T06:39:57.980227+00:00",
+      "review_note": "Compared with exact source photo: Exact source shoes/count/paired long mesh vamp openings/central toe overlay, curvedbands/lacing/collar and soleedge compared. Whitesocks preserved for onfootphotos. D1/D2/D3 macro photograph sections; D3 minor portraitaspect retained in detail role, not hidden outsole. FourSKU06 use separate photographed colors. M4 caption shorter but accurate; no unsupported performance wording."
+    },
+    {
+      "role": "D2",
+      "buyer_question": "前掌围片",
+      "source_indices": [
+        8
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\038准备\\01_产品来源原图\\08.jpg"
+      ],
+      "source_sha256": [
+        "9b0ea00145a10a6cffaf5c65c9a481a86ad4ba491db15066ea5f2c014adc2d18"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1224
+        ]
+      ],
+      "source_region_key": "actual-photo-8",
+      "prompt": "Use case: precise-object-edit. Square English B2B panel using exact supplied Luqi038 photograph. Preserve actual shoe count, view, pose, mesh texture, two curved side bands, paired long mesh toe/vamp openings with central overlay, flat laces and eyelet panel, tongue loop, collar and actual sole/tread. White Blue means white shoe navy bands brown sole; Beige Green creamshoe green bands brown sole; Light Gray Red gray shoe redbands brown sole; Black allblack. Only remove external Chinese/English clutter, diagrams and unsupported claims; no recoloring, new shoe, hidden reconstruction, rotation, new angle or tread. Clean photograph-dominant layout. No barefoot/zero-drop, grip/anti-slip/medical/breathabilitytest/performance/price/delivery claims. Use only LEFT actual toe/front partialphoto, exclude RIGHT footprint diagram and arrows/Chinese/oldEnglish. Preserve actual mesh openings and central overlay. Partialmacro, nohiddengeometry. Text: FOREFOOT CONSTRUCTION; Actual photographed toe panels.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\038准备\\05_AI候选\\D2.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-0fcbf2bc-84cf-41ee-9ea0-d22fc4844b23.png",
+      "output_sha256": "120f9006c255b2b61b133838cfb5358e5c27ca3ff68c4934c69b70638fcaf0f0",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T06:39:57.980227+00:00",
+      "review_note": "Compared with exact source photo: Exact source shoes/count/paired long mesh vamp openings/central toe overlay, curvedbands/lacing/collar and soleedge compared. Whitesocks preserved for onfootphotos. D1/D2/D3 macro photograph sections; D3 minor portraitaspect retained in detail role, not hidden outsole. FourSKU06 use separate photographed colors. M4 caption shorter but accurate; no unsupported performance wording."
+    },
+    {
+      "role": "D3",
+      "buyer_question": "真实底纹",
+      "source_indices": [
+        11
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\038准备\\01_产品来源原图\\11.jpg"
+      ],
+      "source_sha256": [
+        "09adecbc820186457441d98fb531f9c28819007e535fcc36ec0a37424dc6fe24"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1235
+        ]
+      ],
+      "source_region_key": "actual-photo-11",
+      "prompt": "Use case: precise-object-edit. ONE single square macro photograph crop from the actual LOWER shoe photo in supplied Luqi038 image. Crop ONLY a small rectangular portion of visible brown rubber tread centered on its dense small block rows, with a narrow sole edge. Do not show a complete shoe, complete outsole, upper, thumbnail, inset, collage, diagram or second picture. Preserve the exact photographed individual blocks and camera angle; copy the visible texture without inventing new blocks or rendering unseen areas. Remove all old wording. Leave a white header with exactly OUTSOLE DETAIL and Rubber outsole | Visible photographed tread. No performance claims or arrows. This must be a partial rectangular photographic crop only, with no complete shoe silhouette.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\038准备\\05_AI候选\\D3.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-ba7688b2-2c0d-4483-bd97-ffa6f7782337.png",
+      "output_sha256": "8632b0018b980797302e0edddca5891494a085ae147b34759e691c255fff11dc",
+      "output_dimensions": [
+        1199,
+        1312
+      ],
+      "review_at": "2026-10-10T06:39:57.980227+00:00",
+      "review_note": "Compared with exact source photo: Exact source shoes/count/paired long mesh vamp openings/central toe overlay, curvedbands/lacing/collar and soleedge compared. Whitesocks preserved for onfootphotos. D1/D2/D3 macro photograph sections; D3 minor portraitaspect retained in detail role, not hidden outsole. FourSKU06 use separate photographed colors. M4 caption shorter but accurate; no unsupported performance wording."
+    },
+    {
+      "role": "D4",
+      "buyer_question": "配码输入",
+      "source_indices": [
+        15
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\038准备\\01_产品来源原图\\15.jpg"
+      ],
+      "source_sha256": [
+        "167cec6fb72742e08ee1cd160b00a8b875a634b1eef29d6a09dad38770c89e9e"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          1136
+        ]
+      ],
+      "source_region_key": "actual-photo-15",
+      "prompt": "Use case: precise-object-edit. Square English B2B panel using exact supplied Luqi038 photograph. Preserve actual shoe count, view, pose, mesh texture, two curved side bands, paired long mesh toe/vamp openings with central overlay, flat laces and eyelet panel, tongue loop, collar and actual sole/tread. White Blue means white shoe navy bands brown sole; Beige Green creamshoe green bands brown sole; Light Gray Red gray shoe redbands brown sole; Black allblack. Only remove external Chinese/English clutter, diagrams and unsupported claims; no recoloring, new shoe, hidden reconstruction, rotation, new angle or tread. Clean photograph-dominant layout. No barefoot/zero-drop, grip/anti-slip/medical/breathabilitytest/performance/price/delivery claims. Actual two White Blue onfoot shoes with whitesocks, oneplantedoneheldheelraised and original handadjustingsock; cropaboveknees/removewording, keeporiginalgroundandpose. Text: EU SIZE PLANNING; EU 36-48; Confirm your required color-size mix.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\038准备\\05_AI候选\\D4.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-3ed372a9-7e5c-4d05-bb03-1eaf0ff3afb1.png",
+      "output_sha256": "ef59191a3bce9097b3fa9f22065bb110592f1a24484ecd39771e7053f569c50d",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T06:39:57.980227+00:00",
+      "review_note": "Compared with exact source photo: Exact source shoes/count/paired long mesh vamp openings/central toe overlay, curvedbands/lacing/collar and soleedge compared. Whitesocks preserved for onfootphotos. D1/D2/D3 macro photograph sections; D3 minor portraitaspect retained in detail role, not hidden outsole. FourSKU06 use separate photographed colors. M4 caption shorter but accurate; no unsupported performance wording."
+    },
+    {
+      "role": "SKU_White Blue",
+      "buyer_question": "白蓝SKU",
+      "source_indices": [
+        6
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\038准备\\01_产品来源原图\\06.jpg"
+      ],
+      "source_sha256": [
+        "1de7829407054a3333786839857eb0625ddb1f0c1b8fcef4c90955271bd07c3c"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          960
+        ]
+      ],
+      "source_region_key": "SKU_White Blue",
+      "prompt": "Use case: precise-object-edit. Square English B2B panel using exact supplied Luqi038 photograph. Preserve actual shoe count, view, pose, mesh texture, two curved side bands, paired long mesh toe/vamp openings with central overlay, flat laces and eyelet panel, tongue loop, collar and actual sole/tread. White Blue means white shoe navy bands brown sole; Beige Green creamshoe green bands brown sole; Light Gray Red gray shoe redbands brown sole; Black allblack. Only remove external Chinese/English clutter, diagrams and unsupported claims; no recoloring, new shoe, hidden reconstruction, rotation, new angle or tread. Clean photograph-dominant layout. No barefoot/zero-drop, grip/anti-slip/medical/breathabilitytest/performance/price/delivery claims. Use ONLY upperLEFT single White Blue sideprofile photograph. Remove background labels and entire otherthree colors. Keep exact sideview and sole, neutralwhite background, no text/collage.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\038准备\\05_AI候选\\SKU_White Blue.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-7b5c00d6-7855-478d-800a-5673ea8f07c9.png",
+      "output_sha256": "db9245de942179e32313e52bd0b17a24c1010ae3a187630e922c36485167a3bb",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T06:39:57.980227+00:00",
+      "review_note": "Compared with exact source photo: Exact source shoes/count/paired long mesh vamp openings/central toe overlay, curvedbands/lacing/collar and soleedge compared. Whitesocks preserved for onfootphotos. D1/D2/D3 macro photograph sections; D3 minor portraitaspect retained in detail role, not hidden outsole. FourSKU06 use separate photographed colors. M4 caption shorter but accurate; no unsupported performance wording."
+    },
+    {
+      "role": "SKU_Beige Green",
+      "buyer_question": "米绿SKU",
+      "source_indices": [
+        6
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\038准备\\01_产品来源原图\\06.jpg"
+      ],
+      "source_sha256": [
+        "1de7829407054a3333786839857eb0625ddb1f0c1b8fcef4c90955271bd07c3c"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          960
+        ]
+      ],
+      "source_region_key": "SKU_Beige Green",
+      "prompt": "Use case: precise-object-edit. Square English B2B panel using exact supplied Luqi038 photograph. Preserve actual shoe count, view, pose, mesh texture, two curved side bands, paired long mesh toe/vamp openings with central overlay, flat laces and eyelet panel, tongue loop, collar and actual sole/tread. White Blue means white shoe navy bands brown sole; Beige Green creamshoe green bands brown sole; Light Gray Red gray shoe redbands brown sole; Black allblack. Only remove external Chinese/English clutter, diagrams and unsupported claims; no recoloring, new shoe, hidden reconstruction, rotation, new angle or tread. Clean photograph-dominant layout. No barefoot/zero-drop, grip/anti-slip/medical/breathabilitytest/performance/price/delivery claims. Use ONLY upperRIGHT single Beige Green sideprofile photograph. Remove background labels and entire otherthree colors. Keep exact sideview and sole, neutralwhite background, no text/collage.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\038准备\\05_AI候选\\SKU_Beige Green.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-49e155c5-0753-4315-aaef-81db622ee4b2.png",
+      "output_sha256": "46d5ba759217e79bb4fd34e5f053e3901670fb627632b6f9da78cf6e30074502",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T06:39:57.980227+00:00",
+      "review_note": "Compared with exact source photo: Exact source shoes/count/paired long mesh vamp openings/central toe overlay, curvedbands/lacing/collar and soleedge compared. Whitesocks preserved for onfootphotos. D1/D2/D3 macro photograph sections; D3 minor portraitaspect retained in detail role, not hidden outsole. FourSKU06 use separate photographed colors. M4 caption shorter but accurate; no unsupported performance wording."
+    },
+    {
+      "role": "SKU_Light Gray Red",
+      "buyer_question": "浅灰红SKU",
+      "source_indices": [
+        6
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\038准备\\01_产品来源原图\\06.jpg"
+      ],
+      "source_sha256": [
+        "1de7829407054a3333786839857eb0625ddb1f0c1b8fcef4c90955271bd07c3c"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          960
+        ]
+      ],
+      "source_region_key": "SKU_Light Gray Red",
+      "prompt": "Use case: precise-object-edit. Square English B2B panel using exact supplied Luqi038 photograph. Preserve actual shoe count, view, pose, mesh texture, two curved side bands, paired long mesh toe/vamp openings with central overlay, flat laces and eyelet panel, tongue loop, collar and actual sole/tread. White Blue means white shoe navy bands brown sole; Beige Green creamshoe green bands brown sole; Light Gray Red gray shoe redbands brown sole; Black allblack. Only remove external Chinese/English clutter, diagrams and unsupported claims; no recoloring, new shoe, hidden reconstruction, rotation, new angle or tread. Clean photograph-dominant layout. No barefoot/zero-drop, grip/anti-slip/medical/breathabilitytest/performance/price/delivery claims. Use ONLY lowerLEFT single Light Gray Red sideprofile photograph. Remove background labels and entire otherthree colors. Keep exact sideview and sole, neutralwhite background, no text/collage.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\038准备\\05_AI候选\\SKU_Light Gray Red.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-552ebb44-fadf-4bf5-a999-45285bd06606.png",
+      "output_sha256": "c6b7141ae65210484d3355f8dae24af4736ea238f364253cbcc60bb3361da296",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T06:39:57.980227+00:00",
+      "review_note": "Compared with exact source photo: Exact source shoes/count/paired long mesh vamp openings/central toe overlay, curvedbands/lacing/collar and soleedge compared. Whitesocks preserved for onfootphotos. D1/D2/D3 macro photograph sections; D3 minor portraitaspect retained in detail role, not hidden outsole. FourSKU06 use separate photographed colors. M4 caption shorter but accurate; no unsupported performance wording."
+    },
+    {
+      "role": "SKU_Black",
+      "buyer_question": "黑色SKU",
+      "source_indices": [
+        6
+      ],
+      "source_paths": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\038准备\\01_产品来源原图\\06.jpg"
+      ],
+      "source_sha256": [
+        "1de7829407054a3333786839857eb0625ddb1f0c1b8fcef4c90955271bd07c3c"
+      ],
+      "source_dimensions": [
+        [
+          790,
+          960
+        ]
+      ],
+      "source_region_key": "SKU_Black",
+      "prompt": "Use case: precise-object-edit. Square English B2B panel using exact supplied Luqi038 photograph. Preserve actual shoe count, view, pose, mesh texture, two curved side bands, paired long mesh toe/vamp openings with central overlay, flat laces and eyelet panel, tongue loop, collar and actual sole/tread. White Blue means white shoe navy bands brown sole; Beige Green creamshoe green bands brown sole; Light Gray Red gray shoe redbands brown sole; Black allblack. Only remove external Chinese/English clutter, diagrams and unsupported claims; no recoloring, new shoe, hidden reconstruction, rotation, new angle or tread. Clean photograph-dominant layout. No barefoot/zero-drop, grip/anti-slip/medical/breathabilitytest/performance/price/delivery claims. Use ONLY lowerRIGHT single Black sideprofile photograph. Remove background labels and entire otherthree colors. Keep exact sideview and sole, neutralwhite background, no text/collage.",
+      "status": "ACCEPTED_LOCAL_ROLE",
+      "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎宽头户外_2026-10-08\\038准备\\05_AI候选\\SKU_Black.png",
+      "native_output": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-38cf888a-480b-4026-895e-65b0cf56ae30.png",
+      "output_sha256": "22c6f3b37d29058f674f1d19aebdffb24d45c5f9a7d3bc116c7e73ff75643824",
+      "output_dimensions": [
+        1254,
+        1254
+      ],
+      "review_at": "2026-10-10T06:39:57.980227+00:00",
+      "review_note": "Compared with exact source photo: Exact source shoes/count/paired long mesh vamp openings/central toe overlay, curvedbands/lacing/collar and soleedge compared. Whitesocks preserved for onfootphotos. D1/D2/D3 macro photograph sections; D3 minor portraitaspect retained in detail role, not hidden outsole. FourSKU06 use separate photographed colors. M4 caption shorter but accurate; no unsupported performance wording."
+    }
+  ],
+  "M6": {
+    "file": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\路崎新品_2026-10-07\\图片修复\\F.png",
+    "bank_url": "https://sc04.alicdn.com/kf/S6c8cb1d46d8c4b018cf07f5cab50c1adi/286385890/S6c8cb1d46d8c4b018cf07f5cab50c1adi.png",
+    "file_id": "30149993323"
+  },
+  "company": [
+    {
+      "role": "C1",
+      "usage": "ordinary_HTML_company_context",
+      "official_url": "https://sc04.alicdn.com/kf/Ha8c1682092424e778eadf945763e79daU/286385890/Ha8c1682092424e778eadf945763e79daU.jpg",
+      "file_id": "33355885480",
+      "local_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\266_quality_audit\\originals\\C01_factory_profile.jpg",
+      "sha256": "23a34c8e425ae286d190ac1eb587c93e9a87421fdf490ec48f260e53e316149c",
+      "local_hash_verified": true,
+      "pixel_edit": false
+    },
+    {
+      "role": "C2",
+      "usage": "ordinary_HTML_company_context",
+      "official_url": "https://sc04.alicdn.com/kf/H496f7579171f4370a1d47c3adf30001bK/286385890/H496f7579171f4370a1d47c3adf30001bK.jpg",
+      "file_id": "33358392283",
+      "local_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\266_quality_audit\\originals\\C02_oem_odm_workflow.jpg",
+      "sha256": "66624253f1d95ec68e060d792f13c61943c86f7d61e763167a0a2eb1146300f5",
+      "local_hash_verified": true,
+      "pixel_edit": false
+    },
+    {
+      "role": "C3",
+      "usage": "ordinary_HTML_company_context",
+      "official_url": "https://sc04.alicdn.com/kf/H36e700f5c3ee447a80c035d8ae7521d9a/286385890/H36e700f5c3ee447a80c035d8ae7521d9a.jpg",
+      "file_id": "33355813301",
+      "local_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\266_quality_audit\\originals\\C03_production_process.jpg",
+      "sha256": "3ae00d6398224dd7021ed2a266584bccb77b741b31fa9c72ca8ad66ab443f683",
+      "local_hash_verified": true,
+      "pixel_edit": false
+    },
+    {
+      "role": "C4",
+      "usage": "ordinary_HTML_company_context",
+      "official_url": "https://sc04.alicdn.com/kf/H9f32c7ecea0f4d25bc5ddc9cd04c1e5dK/286385890/H9f32c7ecea0f4d25bc5ddc9cd04c1e5dK.jpg",
+      "file_id": "33358345636",
+      "local_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\266_quality_audit\\originals\\C04_quality_control.jpg",
+      "sha256": "f32d682a7055a3e44f91eb074b678507beca63967da5565de8997f582a651bf5",
+      "local_hash_verified": true,
+      "pixel_edit": false
+    },
+    {
+      "role": "C5",
+      "usage": "ordinary_HTML_company_context",
+      "official_url": "https://sc04.alicdn.com/kf/H5f71c3cfb4064b51bb458d0a786cb402R/286385890/H5f71c3cfb4064b51bb458d0a786cb402R.jpg",
+      "file_id": "33358440083",
+      "local_path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task\\266_quality_audit\\originals\\C05_packing_inquiry.jpg",
+      "sha256": "d0f3916d920a9ec46fd822317a9cd3c684b6b7d60631208475fa2be138d05bc2",
+      "local_hash_verified": true,
+      "pixel_edit": false
+    }
+  ],
+  "excluded_candidates": [
+    {
+      "role": "D3",
+      "native_path": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-c7a64339-71f2-444a-9d77-1ed29fbe566a.png",
+      "reason": "Complete shoe with repeated photographic inset instead of planned single tread macro",
+      "status": "EXCLUDED_FROM_UPLOAD"
+    }
+  ],
+  "complete_set_visual_review_at": "2026-10-10T06:41:11.608268+00:00",
+  "complete_set_note": "Nine main/detail photographs and four disjoint actual color-subphotos plus real factoryM6 and five company panels compared visually. Photograph pose, holes/panels, colors, EU36-48 captions and four coloroptions, source tread and independent main/detail roles checked. No public webpage rendering proof."
+}

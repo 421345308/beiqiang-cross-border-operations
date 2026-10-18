@@ -1,0 +1,135 @@
+{
+  "candidate": {
+    "source": {
+      "reference": "https://huat.sooxie.com/detail/2484343",
+      "style": "K858",
+      "evidence": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-4\\supply_selection\\HR供货证据矩阵与拆批建议_2026-10-02.md"
+    },
+    "search_intent": {
+      "key": "Microfiber Closed-Toe Mules with Buckle Strap",
+      "evidence": "Same accepted product purpose retained in explicitreplacement"
+    },
+    "hero_review": {
+      "url": "https://sc04.alicdn.com/kf/Hccdd9c6e31904c32b91b53d45ddccc9cj/286385890/Hccdd9c6e31904c32b91b53d45ddccc9cj.jpg",
+      "aliases": [
+        "https://sc04.alicdn.com/kf/Hccdd9c6e31904c32b91b53d45ddccc9cj/286385890/Hccdd9c6e31904c32b91b53d45ddccc9cj.jpg"
+      ],
+      "content_key": "actualaccepted-K858-M1",
+      "label_status": "not_present",
+      "evidence": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-4\\independent_acceptance\\936_K858_CLEAN_NEW_EXACT_STATIC_GATES.json"
+    }
+  },
+  "source_records": {
+    "1601969860254": {
+      "source": {
+        "reference": "https://huat.sooxie.com/detail/2484343",
+        "style": "K858",
+        "evidence": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-4\\supply_selection\\HR供货证据矩阵与拆批建议_2026-10-02.md"
+      },
+      "search_intent": {
+        "key": "Microfiber Closed-Toe Mules with Buckle Strap",
+        "evidence": "Same accepted product purpose retained in explicitreplacement"
+      },
+      "hero_review": {
+        "url": "https://sc04.alicdn.com/kf/Hccdd9c6e31904c32b91b53d45ddccc9cj/286385890/Hccdd9c6e31904c32b91b53d45ddccc9cj.jpg",
+        "aliases": [
+          "https://sc04.alicdn.com/kf/Hccdd9c6e31904c32b91b53d45ddccc9cj/286385890/Hccdd9c6e31904c32b91b53d45ddccc9cj.jpg"
+        ],
+        "content_key": "actualaccepted-K858-M1",
+        "label_status": "not_present",
+        "evidence": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-4\\independent_acceptance\\936_K858_CLEAN_NEW_EXACT_STATIC_GATES.json"
+      }
+    }
+  },
+  "evidence_files": [
+    {
+      "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-4\\hr_control\\936_K858_clean_replacement_candidates\\K858_accepted_content_canonical.xml",
+      "sha256": "4cb7eb0a655f3da326fb7ffbd21d03bbf75e9f79ee62d368ffaba1b0421a6e06",
+      "kind": "replacement_accepted_payload"
+    },
+    {
+      "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\K858_API完整新建_2026-10-02\\formal_checks.json",
+      "sha256": "136c947bc43b6917ac340f56dff6978ac0d872c2950b5d080f4405e0f382779f",
+      "kind": "replacement_acceptance_record"
+    },
+    {
+      "path": "C:\\Users\\spq\\Documents\\Codex\\2026-10-02\\task-4\\supply_selection\\HR供货证据矩阵与拆批建议_2026-10-02.md",
+      "sha256": "3acdeff8a05170ef3eb94fe64aae6236be63701116b359dc88d6556168a7fd72",
+      "kind": "source_register"
+    },
+    {
+      "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\9968_API完整新建_2026-10-02\\live_catalog_1.flat.json",
+      "sha256": "4f4d389cf27a3a9954227e527769a02b1a6f7b40e712604a86e2e763a3ca1a94",
+      "kind": "catalog_snapshot"
+    },
+    {
+      "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\9968_API完整新建_2026-10-02\\live_catalog_2.flat.json",
+      "sha256": "c9bba5d4a4171d9a86b7239ba10587205c6cbb27fd2b32752a178ac403e3ce48",
+      "kind": "catalog_snapshot"
+    },
+    {
+      "path": "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\9968_API完整新建_2026-10-02\\live_catalog_3.flat.json",
+      "sha256": "9a5b40eada8f868037ebf5a374d46df018ffc2b8e510913cd637f5a5a10c28fd",
+      "kind": "catalog_snapshot"
+    }
+  ],
+  "replacement": {
+    "replacement_source_product_id": 1601969860254,
+    "authorization_evidence": [
+      "Parentthread01a0f9fb-9712-72ef-a418-073ce2a59024 latestexplicituserexecute936K858cleanreplacement, same model temporaryduplicate, actualnew5.00+formal/public thenoldOFF"
+    ],
+    "acceptance_map": {
+      "product_id": 1601969860254,
+      "accepted_payload_sha256": "4cb7eb0a655f3da326fb7ffbd21d03bbf75e9f79ee62d368ffaba1b0421a6e06",
+      "accepted_field_ids": [
+        "catId",
+        "icbuCatProp",
+        "saleProp",
+        "sku",
+        "productTitle",
+        "productKeywords",
+        "scImages",
+        "priceUnit",
+        "saleType",
+        "scPrice",
+        "minOrderQuantity",
+        "ladderPrice",
+        "pkgMeasure",
+        "pkgWeight",
+        "productDescType",
+        "detailImage",
+        "companyImage",
+        "textDesc",
+        "companyDesc",
+        "companyFaqDesc"
+      ],
+      "verified_field_ids": [
+        "catId",
+        "icbuCatProp",
+        "saleProp",
+        "sku",
+        "productTitle",
+        "productKeywords",
+        "scImages",
+        "priceUnit",
+        "saleType",
+        "scPrice",
+        "minOrderQuantity",
+        "ladderPrice",
+        "pkgMeasure",
+        "pkgWeight",
+        "productDescType",
+        "detailImage",
+        "companyImage",
+        "textDesc",
+        "companyDesc",
+        "companyFaqDesc"
+      ],
+      "evidence": [
+        "C:\\Users\\spq\\Desktop\\贝强\\02_Alibaba运营\\05_扩品工程\\执行记录\\K858_API完整新建_2026-10-02\\formal_checks.json"
+      ]
+    }
+  },
+  "observed_at": "2026-10-02T15:38:04.120992+00:00",
+  "coverage_limit": "Existing saved300of363 catalog rows include both selectedolds; originalwholecatalogdedupPASS reused; missingrows notclaimedclear, unrelatedduplicates remainblocked"
+}

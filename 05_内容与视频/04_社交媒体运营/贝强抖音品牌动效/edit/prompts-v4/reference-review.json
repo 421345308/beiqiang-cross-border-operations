@@ -1,0 +1,74 @@
+{
+  "status": "static_references_reviewed_motion_unverified",
+  "tool": "builtin image_gen",
+  "date": "2026-10-10",
+  "assets": [
+    {
+      "file": "public/entry-start-v4.png",
+      "sha256": "f0417ac9d49f7453278c936ae99917f496911e9da94af084dfea69e99e29ef19",
+      "width": 941,
+      "height": 1672,
+      "bytes": 2344910
+    },
+    {
+      "file": "public/entry-end-v4.png",
+      "sha256": "fc9213176d92f2117ed7d716d6ac8322e25a6c4abf91cc42ac6c8b633a0986cd",
+      "width": 941,
+      "height": 1672,
+      "bytes": 2230786
+    },
+    {
+      "file": "public/walk-start-v4.png",
+      "sha256": "3d412d22e92cfbe02c14855a27a0add77a0f261893a27381b6c7360e240db6ce",
+      "width": 941,
+      "height": 1672,
+      "bytes": 1968506
+    }
+  ],
+  "prompts": [
+    {
+      "file": "edit/prompts-v4/entry-end-image.txt",
+      "sha256": "5e759a07c515a4bc2d229917ffe0c14b6ebefa3edfb1befec851d6a923bdd495"
+    },
+    {
+      "file": "edit/prompts-v4/entry-start-image.txt",
+      "sha256": "e02974bc9a7360701257f7bffd614cbbd988b6c8bfa985c879dbe736e805ae53"
+    },
+    {
+      "file": "edit/prompts-v4/entry-video.txt",
+      "sha256": "13051c656ae469830cbc2b82d0ac96eaf552e9f1a82d9acf2c7e90d3a642017a"
+    },
+    {
+      "file": "edit/prompts-v4/walk-start-image.txt",
+      "sha256": "99606245deab27ae3afbbdb4bbbd0bd574d559ddeeed9ba144a95ff9f75c97f0"
+    },
+    {
+      "file": "edit/prompts-v4/walk-video.txt",
+      "sha256": "e7109b797f5bb834504de9a7988f8147b1aaf9a326b268d3065313a9a4b04194"
+    }
+  ],
+  "observations": [
+    "套入首帧可见裸露脚跟在后鞋口外、前掌已在鞋内，手扶后提环。",
+    "对应终帧裸露脚跟收进鞋内，手指与提环分离；鞋底前掌与地面位置大致稳定，裤脚与鞋口有局部变化。",
+    "行走参考为前脚落地、后脚抬跟的不同状态，能为交替走步提供起点；单帧不证明连续步态。",
+    "横向波浪纹、黑色侧后跟片、黑底圆头和后提环保留，但生成纹理不等于像素级原件匹配。"
+  ],
+  "not_verified": [
+    "continuous heel entry path",
+    "finger motion continuity",
+    "alternating gait biomechanics",
+    "exact shoe identity across all frames",
+    "subjective comfort or measured performance"
+  ],
+  "reviewer_scope": "仅为静态动作参考的候选复核，不能作为动态镜头或商业成片合格结论。",
+  "paid_video_submissions_this_iteration": 0,
+  "recipe_status": "draft_pending_current_paid_scope_confirmation",
+  "planned_video_cost_cny": 8,
+  "board_review": {
+    "page": "director-board-v4.html",
+    "screenshot": "out/v4-director-board.jpg",
+    "images_loaded": 3,
+    "zoom_dialog_open_close": "passed",
+    "motion_acceptance": false
+  }
+}
