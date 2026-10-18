@@ -7,6 +7,7 @@ const require=createRequire(import.meta.url);
 const {Resvg}=require(path.resolve(process.env.BEIQIANG_RESVG_MODULE||'99_临时区/抖店棉鞋优化/runtime/node_modules/@resvg/resvg-js'));
 const root='09_国内电商/抖店',media='01_产品资产/02_可发布素材/抖店品牌首发';
 const plan=JSON.parse(await fs.readFile(root+'/数据/品牌首发商品.json','utf8'));
+if(Object.values(plan.models).some(p=>/^(ON_SALE|PRODUCT_CREATED)/.test(p.publication?.state||'')))throw Error('Live listings exist: use build_cotton_content.mjs --review-only; do not reset their content/publication state');
 const x=s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('"','&quot;');
 const rect=(a,b,w,h,c)=>`<rect x="${a}" y="${b}" width="${w}" height="${h}" fill="${c}"/>`;
 const text=(a,b,s,n=30,c='#283b30',w=400)=>`<text x="${a}" y="${b}" font-size="${n}" fill="${c}" font-weight="${w}">${x(s)}</text>`;

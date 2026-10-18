@@ -164,9 +164,10 @@ export class MiaoshouHttp {
     return await this.#request('categoryInfo', {cateId: String(cateId)});
   }
 
-  async getFreightTemplates() {
-    // refresh=0 reads existing settings without asking the provider to refresh them.
-    return await this.#request('freightTemplates', {refresh: 0});
+  async getFreightTemplates({refresh = false} = {}) {
+    if (typeof refresh !== 'boolean') throw new Error('Invalid freight refresh');
+    // refresh=1 observed on the official freight refresh button, 2026-10-18.
+    return await this.#request('freightTemplates', {refresh: refresh ? 1 : 0});
   }
 
   async recommendCategory({name, mainImgUrls}) {

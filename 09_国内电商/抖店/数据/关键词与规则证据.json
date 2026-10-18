@@ -141,5 +141,56 @@
     "click": "完整真实鞋型、占比和清晰度、配色对比；缩略图检查辨识度",
     "conversion": "逐款结构讲解、加绒版本、配色、参数、脚长尺码、服务",
     "verification": "信息质量不能只看提交成功；效果须读本店曝光点击支付及退货数据"
+  },
+  "latest_review": {
+    "collected_on": "2026-10-18",
+    "sop": "商品内容SOP.md",
+    "official_rule": {
+      "url": "https://school.jinritemai.com/doudian/web/articlev0/101800",
+      "revision": "2025-12-03",
+      "title_max_chars": 60,
+      "title_max_hanzi": 30,
+      "main_images": "至少3张不同真实角度；除品牌Logo外不叠文字；首图完整商品"
+    },
+    "new_shop_industry": {
+      "period": [
+        "2026-10-11",
+        "2026-10-17"
+      ],
+      "result": "EMPTY_CATEGORY_AND_WORD_TABLE",
+      "meaning": "未取得该窗口新店行业推荐榜，不代表无需求"
+    },
+    "business_opportunities": {
+      "url": "https://fxg.jinritemai.com/ffa/bu/NewBusinessCenter/search",
+      "window": "近30天，页面未显示精确起止日",
+      "rows": [
+        {
+          "term": "冬季加绒棉鞋",
+          "search_count": [
+            "6万",
+            "6.5万"
+          ],
+          "search_growth_percent": 478.35,
+          "required_category": "男鞋>靴子",
+          "use": "只采用真实季节版本表达，不错改休闲鞋类目"
+        },
+        {
+          "term": "男士一脚蹬布鞋",
+          "search_count": [
+            "2万",
+            "2.5万"
+          ],
+          "search_growth_percent": 54.05,
+          "required_category": "男鞋>拖鞋",
+          "high_sales_price_cny": [
+            20,
+            34
+          ],
+          "use": "与89元针织加绒休闲鞋的人群、类目和价带有差异，不能照搬"
+        }
+      ]
+    },
+    "private_evidence": ".local/品牌新店/当前核验/",
+    "observation_limit": "同类实际标题、缩略图及公开内容，不是完整竞品详情页或可复现销售归因；原10-07—10-13行业数据保留原窗口"
   }
 }
