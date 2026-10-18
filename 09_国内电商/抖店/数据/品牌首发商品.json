@@ -1,0 +1,494 @@
+{
+  "schema_version": 1,
+  "updated_on": "2026-10-18",
+  "state": "ASSETS_UPLOADED_AWAITING_PRICE_AND_FULFILLMENT",
+  "scope": "雷丹森羊新品牌店两款加绒首发本地准备；不读取旧店对象或优惠，不创建平台草稿，不重置旧店素材和验收",
+  "brand": {
+    "name": "雷丹森羊",
+    "platform_registration": "新店自有品牌鞋靴资质生效；当前类目规则已返回品牌选项",
+    "assets": "品牌文字草案；商品照片保留无Logo实物",
+    "publication": "标题与品牌字段使用真实品牌；主详情不改绘鞋面，广告品牌文字放画面外"
+  },
+  "models": {
+    "ZX9002": {
+      "canonical": "数据/棉鞋内容优化.json#models.ZX9002",
+      "title": "雷丹森羊秋冬加绒棉鞋男士一脚蹬免系带针织大码休闲鞋",
+      "shortTitle": "男士加绒套脚休闲鞋",
+      "titleWeight": 50,
+      "closure": "套脚",
+      "sizes": [
+        38,
+        47
+      ],
+      "versions": [
+        "加绒"
+      ],
+      "colors": [
+        "深灰黑加绒"
+      ],
+      "sourceEvidence": [
+        {
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9002/工厂来源原图_4.jpg",
+          "sha256": "ef4761c584618e759f22bfe6b3390614dfbd83c56dd6aa25c0cde00061742d9d"
+        },
+        {
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9002/工厂来源原图_3.jpg",
+          "sha256": "c6760a58abcb2ded322c1bf122a30cd86804da466aa31a60c5f129a4fb6af52d"
+        },
+        {
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9002/优化/工厂补充_双鞋.jpg",
+          "sha256": "b2f04cc1ae6907fb1ca792c4ec9d8ad127610e177f30a5eca22f99d7399819a8"
+        }
+      ],
+      "main_files": [
+        "01_产品资产/02_可发布素材/抖店品牌首发/ZX9002/当前优化/主图01_选购理由.png",
+        "01_产品资产/02_可发布素材/抖店品牌首发/ZX9002/当前优化/主图02_穿脱结构.png",
+        "01_产品资产/02_可发布素材/抖店品牌首发/ZX9002/当前优化/主图03_内里版本.png",
+        "01_产品资产/02_可发布素材/抖店品牌首发/ZX9002/当前优化/主图04_颜色选择.png",
+        "01_产品资产/02_可发布素材/抖店品牌首发/ZX9002/当前优化/主图05_选码提醒.png"
+      ],
+      "main_assets": [
+        {
+          "role": "主图01_选购理由",
+          "path": "01_产品资产/02_可发布素材/抖店品牌首发/ZX9002/当前优化/主图01_选购理由.png",
+          "source": "01_产品资产/02_可发布素材/抖店品牌首发/ZX9002/当前优化/主图01_选购理由.svg",
+          "width": 800,
+          "height": 800,
+          "sha256": "9078d53851fdb77226680d092c26931b11e015e9de7f05f05e5c847e30c50846",
+          "bytes": 573529
+        },
+        {
+          "role": "主图02_穿脱结构",
+          "path": "01_产品资产/02_可发布素材/抖店品牌首发/ZX9002/当前优化/主图02_穿脱结构.png",
+          "source": "01_产品资产/02_可发布素材/抖店品牌首发/ZX9002/当前优化/主图02_穿脱结构.svg",
+          "width": 800,
+          "height": 800,
+          "sha256": "f23ad1d27854dd320f3afacab872c0f3adbedb36eda2d8d9425ccc2e08a478ee",
+          "bytes": 241630
+        },
+        {
+          "role": "主图03_内里版本",
+          "path": "01_产品资产/02_可发布素材/抖店品牌首发/ZX9002/当前优化/主图03_内里版本.png",
+          "source": "01_产品资产/02_可发布素材/抖店品牌首发/ZX9002/当前优化/主图03_内里版本.svg",
+          "width": 800,
+          "height": 800,
+          "sha256": "8ce75907ef7d2fb0c70c9797014bb54efea91e2494966c8a97127f748edad217",
+          "bytes": 177334
+        },
+        {
+          "role": "主图04_颜色选择",
+          "path": "01_产品资产/02_可发布素材/抖店品牌首发/ZX9002/当前优化/主图04_颜色选择.png",
+          "source": "01_产品资产/02_可发布素材/抖店品牌首发/ZX9002/当前优化/主图04_颜色选择.svg",
+          "width": 800,
+          "height": 800,
+          "sha256": "6e7f3a8a64d3e0b3eb44c7b35cf3fcb5372170092dc4dac5b73fdd92c03baf8b",
+          "bytes": 223033
+        },
+        {
+          "role": "主图05_选码提醒",
+          "path": "01_产品资产/02_可发布素材/抖店品牌首发/ZX9002/当前优化/主图05_选码提醒.png",
+          "source": "01_产品资产/02_可发布素材/抖店品牌首发/ZX9002/当前优化/主图05_选码提醒.svg",
+          "width": 800,
+          "height": 800,
+          "sha256": "9a81471120cf2036319bb73f1b09ef12f604de116ffea0224b9229078e7815e4",
+          "bytes": 462557
+        }
+      ],
+      "detail_files": [
+        {
+          "role": "详情01_需求与选择",
+          "path": "01_产品资产/02_可发布素材/抖店品牌首发/ZX9002/当前优化/详情01_需求与选择.png",
+          "source": "01_产品资产/02_可发布素材/抖店品牌首发/ZX9002/当前优化/详情01_需求与选择.svg",
+          "width": 800,
+          "height": 1100,
+          "sha256": "c528defed1deb5cad49f835eb76db1497f8b35f6ee181ef88eaa39c6e8189547",
+          "bytes": 291933
+        },
+        {
+          "role": "详情02_实物结构讲解",
+          "path": "01_产品资产/02_可发布素材/抖店品牌首发/ZX9002/当前优化/详情02_实物结构讲解.png",
+          "source": "01_产品资产/02_可发布素材/抖店品牌首发/ZX9002/当前优化/详情02_实物结构讲解.svg",
+          "width": 800,
+          "height": 1270,
+          "sha256": "69dc100542479ae35392931c2971423adb2fc8580ebdf2e08cbded8d2e6366f0",
+          "bytes": 497740
+        },
+        {
+          "role": "详情03_版本区别",
+          "path": "01_产品资产/02_可发布素材/抖店品牌首发/ZX9002/当前优化/详情03_版本区别.png",
+          "source": "01_产品资产/02_可发布素材/抖店品牌首发/ZX9002/当前优化/详情03_版本区别.svg",
+          "width": 800,
+          "height": 1100,
+          "sha256": "0f9e543ef2f69389ece774cc291831e195c6bd78d6bf41ce2da9108ebd7cd4f2",
+          "bytes": 259492
+        },
+        {
+          "role": "详情04_逐色对应",
+          "path": "01_产品资产/02_可发布素材/抖店品牌首发/ZX9002/当前优化/详情04_逐色对应.png",
+          "source": "01_产品资产/02_可发布素材/抖店品牌首发/ZX9002/当前优化/详情04_逐色对应.svg",
+          "width": 800,
+          "height": 1080,
+          "sha256": "fbfe4821348dbf18787352ce15732152967225aec429e7a17b4010e244c23155",
+          "bytes": 115667
+        },
+        {
+          "role": "详情05_外底与适用",
+          "path": "01_产品资产/02_可发布素材/抖店品牌首发/ZX9002/当前优化/详情05_外底与适用.png",
+          "source": "01_产品资产/02_可发布素材/抖店品牌首发/ZX9002/当前优化/详情05_外底与适用.svg",
+          "width": 800,
+          "height": 1100,
+          "sha256": "7d1cee8a2e58ba856d460f45eb2b48d80fca460d61141fede5ddf4b0fa9f0bac",
+          "bytes": 307400
+        },
+        {
+          "role": "详情06_脚型袜厚选码",
+          "path": "01_产品资产/02_可发布素材/抖店品牌首发/ZX9002/当前优化/详情06_脚型袜厚选码.png",
+          "source": "01_产品资产/02_可发布素材/抖店品牌首发/ZX9002/当前优化/详情06_脚型袜厚选码.svg",
+          "width": 800,
+          "height": 1100,
+          "sha256": "20127eb755b1b8b9d4b4156ed7316a4e5f7835853c960974958f42e981f55e6f",
+          "bytes": 98950
+        },
+        {
+          "role": "详情07_脚长参考表",
+          "path": "01_产品资产/02_可发布素材/抖店品牌首发/ZX9002/当前优化/详情07_脚长参考表.png",
+          "source": "01_产品资产/02_可发布素材/抖店品牌首发/ZX9002/当前优化/详情07_脚长参考表.svg",
+          "width": 800,
+          "height": 1100,
+          "sha256": "c690f0a1c969bdd184684acf5b44d0401cd1ed33fa51f0a1f9f43565251f79ac",
+          "bytes": 70179
+        },
+        {
+          "role": "详情08_参数与服务",
+          "path": "01_产品资产/02_可发布素材/抖店品牌首发/ZX9002/当前优化/详情08_参数与服务.png",
+          "source": "01_产品资产/02_可发布素材/抖店品牌首发/ZX9002/当前优化/详情08_参数与服务.svg",
+          "width": 800,
+          "height": 1160,
+          "sha256": "119dc6dd67ffd6c872a8dad846730fcf6ea63d3b64b853ac82070ca6ae1def15",
+          "bytes": 70501
+        }
+      ],
+      "identity_note": "新店独立加绒商品准备；真实鞋款及原图共享，品牌字段按新店生效资质及当前类目核对，不改绘鞋面标识",
+      "publication": {
+        "state": "ASSETS_UPLOADED_NOT_PRODUCT_CREATED",
+        "prices": "PENDING_NEW_STORE_DECISION",
+        "coupons": "PENDING_NEW_STORE_DECISION",
+        "fulfillment": "PENDING_NEW_STORE_CONFIGURATION",
+        "product_id": null,
+        "size_measurements": "PENDING_FACTORY",
+        "main_uploaded": 5,
+        "detail_uploaded": 8,
+        "color_uploaded": 1,
+        "audit": "NOT_SUBMITTED",
+        "buyer_preview": "NOT_AVAILABLE",
+        "private_evidence": ".local/品牌新店/商品准备/ZX9002/"
+      },
+      "media_binding": {
+        "version": "加绒",
+        "colors": [
+          "深灰黑加绒"
+        ],
+        "sku_color_files": [
+          {
+            "color": "深灰黑加绒",
+            "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/ZX9002/优化/工厂补充_双鞋.jpg"
+          }
+        ],
+        "note": "颜色规格图从当前来源档案逐色绑定；正式准备时按文件哈希和颜色名核，不把广告图填入SKU"
+      },
+      "source": {
+        "url": "https://bqgcd.sooxie.com/detail/2542197",
+        "observed_at": "2026-10-18T14:01:20.173Z",
+        "source_model": "9002-1",
+        "variant": "加绒",
+        "listed_price_cny": 55,
+        "listed_price_basis": "搜鞋网标价，不自动作为负责人实际结算成本",
+        "color_size_match": true,
+        "scope": "颜色尺码与加绒原图对应；源站旧普通版属性不继承为加绒内里，不作为实物库存证明"
+      },
+      "product_identity": {
+        "factory_model": "ZX9002",
+        "master_product_id": null,
+        "master_reference": "02_Alibaba运营/05_扩品工程/数据/产品与链接台账.json",
+        "scope": "保留真实原货号与原包/来源；当前主台账未查到ZX9002，待绑定，不自造BQ编号"
+      },
+      "platform_preparation": {
+        "category": "鞋靴>男鞋>休闲鞋",
+        "brand": "雷丹森羊",
+        "mandatory_attributes": "品牌/织物鞋面/EVA外底/加绒保暖已按当前动态选项准备",
+        "material_basis": "单款来源及负责人授权的图片通用材质判断；非成分实测",
+        "sku_count": 10,
+        "price": null,
+        "coupon": null,
+        "stock": null,
+        "fulfillment": null,
+        "ready_to_submit": false,
+        "private_prepared": ".local/品牌新店/商品准备/ZX9002/prepared.json"
+      }
+    },
+    "A1689": {
+      "canonical": "数据/旧混款整理.json#models.A1689",
+      "title": "雷丹森羊加绒套脚棉鞋针织一脚蹬免系带秋冬日常休闲鞋",
+      "shortTitle": "针织加绒套脚棉鞋",
+      "titleWeight": 50,
+      "closure": "套脚",
+      "sizes": [
+        35,
+        45
+      ],
+      "versions": [
+        "加绒"
+      ],
+      "colors": [
+        "黑白加绒",
+        "全黑加绒"
+      ],
+      "sourceEvidence": [
+        {
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/A1689/优化/素材/净图_blackwhite.png",
+          "sha256": "7086ffddff14c3836cd27b6d8afec17c84e913bc75cde0fe74c4bc2f628031c6"
+        },
+        {
+          "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/A1689/优化/素材/净图_allblack.png",
+          "sha256": "1a7a8230d8ae8612d2f6b694cc6735eea3b184eb1317b17ffb5837691d5c9294"
+        }
+      ],
+      "main_files": [
+        "01_产品资产/02_可发布素材/抖店品牌首发/A1689/当前优化/主图01_选购理由.png",
+        "01_产品资产/02_可发布素材/抖店品牌首发/A1689/当前优化/主图02_穿脱结构.png",
+        "01_产品资产/02_可发布素材/抖店品牌首发/A1689/当前优化/主图03_内里版本.png",
+        "01_产品资产/02_可发布素材/抖店品牌首发/A1689/当前优化/主图04_颜色选择.png",
+        "01_产品资产/02_可发布素材/抖店品牌首发/A1689/当前优化/主图05_选码提醒.png"
+      ],
+      "main_assets": [
+        {
+          "role": "主图01_选购理由",
+          "path": "01_产品资产/02_可发布素材/抖店品牌首发/A1689/当前优化/主图01_选购理由.png",
+          "source": "01_产品资产/02_可发布素材/抖店品牌首发/A1689/当前优化/主图01_选购理由.svg",
+          "width": 800,
+          "height": 800,
+          "sha256": "d7763fd0b69a16b3620eebd21240df63254ff72869d959f40a56ddb62a716766",
+          "bytes": 599198
+        },
+        {
+          "role": "主图02_穿脱结构",
+          "path": "01_产品资产/02_可发布素材/抖店品牌首发/A1689/当前优化/主图02_穿脱结构.png",
+          "source": "01_产品资产/02_可发布素材/抖店品牌首发/A1689/当前优化/主图02_穿脱结构.svg",
+          "width": 800,
+          "height": 800,
+          "sha256": "9e56a9ce0364aaeade6e2caece76f299a92b96050c2936117c10218fc15cf166",
+          "bytes": 299665
+        },
+        {
+          "role": "主图03_内里版本",
+          "path": "01_产品资产/02_可发布素材/抖店品牌首发/A1689/当前优化/主图03_内里版本.png",
+          "source": "01_产品资产/02_可发布素材/抖店品牌首发/A1689/当前优化/主图03_内里版本.svg",
+          "width": 800,
+          "height": 800,
+          "sha256": "e7eab86b6545f8407346ea3cb77692a798a4a113f9762f4c03eef79be6be496f",
+          "bytes": 263881
+        },
+        {
+          "role": "主图04_颜色选择",
+          "path": "01_产品资产/02_可发布素材/抖店品牌首发/A1689/当前优化/主图04_颜色选择.png",
+          "source": "01_产品资产/02_可发布素材/抖店品牌首发/A1689/当前优化/主图04_颜色选择.svg",
+          "width": 800,
+          "height": 800,
+          "sha256": "34b8623f3b25575b2c7a28d09adf2bb71eacfb829da8060b1b10474d647eaf47",
+          "bytes": 474525
+        },
+        {
+          "role": "主图05_选码提醒",
+          "path": "01_产品资产/02_可发布素材/抖店品牌首发/A1689/当前优化/主图05_选码提醒.png",
+          "source": "01_产品资产/02_可发布素材/抖店品牌首发/A1689/当前优化/主图05_选码提醒.svg",
+          "width": 800,
+          "height": 800,
+          "sha256": "cecdbbb54f1e42853724ed66e9a784e68d2ea928aa7cb8a1f38247d85907557f",
+          "bytes": 473706
+        }
+      ],
+      "detail_files": [
+        {
+          "role": "详情01_需求与选择",
+          "path": "01_产品资产/02_可发布素材/抖店品牌首发/A1689/当前优化/详情01_需求与选择.png",
+          "source": "01_产品资产/02_可发布素材/抖店品牌首发/A1689/当前优化/详情01_需求与选择.svg",
+          "width": 800,
+          "height": 1100,
+          "sha256": "853930e77e55ce501ae5015e52795f3bfc70ed461d7b0eaaaf3efcad90b34cc2",
+          "bytes": 417088
+        },
+        {
+          "role": "详情02_实物结构讲解",
+          "path": "01_产品资产/02_可发布素材/抖店品牌首发/A1689/当前优化/详情02_实物结构讲解.png",
+          "source": "01_产品资产/02_可发布素材/抖店品牌首发/A1689/当前优化/详情02_实物结构讲解.svg",
+          "width": 800,
+          "height": 1270,
+          "sha256": "4cdb7e210c30f305ddf443ff6cbc9828ecf72ceb0623711384dead5d3abe0010",
+          "bytes": 520051
+        },
+        {
+          "role": "详情03_版本区别",
+          "path": "01_产品资产/02_可发布素材/抖店品牌首发/A1689/当前优化/详情03_版本区别.png",
+          "source": "01_产品资产/02_可发布素材/抖店品牌首发/A1689/当前优化/详情03_版本区别.svg",
+          "width": 800,
+          "height": 1100,
+          "sha256": "c4e00fb2251a9e8e8c2297c1832626603c547d0faabb08e268bdcbd3ba03f745",
+          "bytes": 334566
+        },
+        {
+          "role": "详情04_逐色对应",
+          "path": "01_产品资产/02_可发布素材/抖店品牌首发/A1689/当前优化/详情04_逐色对应.png",
+          "source": "01_产品资产/02_可发布素材/抖店品牌首发/A1689/当前优化/详情04_逐色对应.svg",
+          "width": 800,
+          "height": 1080,
+          "sha256": "5be3537b044587ba1c5e95c8c104ca8b4845ab783348d59788a67ae18e47f929",
+          "bytes": 275265
+        },
+        {
+          "role": "详情05_外底与适用",
+          "path": "01_产品资产/02_可发布素材/抖店品牌首发/A1689/当前优化/详情05_外底与适用.png",
+          "source": "01_产品资产/02_可发布素材/抖店品牌首发/A1689/当前优化/详情05_外底与适用.svg",
+          "width": 800,
+          "height": 1100,
+          "sha256": "810c8a13c0b50bb157ed824d3d32e24e3d5d4d870c82a100aba450036d31fe9c",
+          "bytes": 452361
+        },
+        {
+          "role": "详情06_脚型袜厚选码",
+          "path": "01_产品资产/02_可发布素材/抖店品牌首发/A1689/当前优化/详情06_脚型袜厚选码.png",
+          "source": "01_产品资产/02_可发布素材/抖店品牌首发/A1689/当前优化/详情06_脚型袜厚选码.svg",
+          "width": 800,
+          "height": 1100,
+          "sha256": "0b84325f5419cba1b94b10ca0c338f3729ac91948dd5867228e80a18cdfa5c07",
+          "bytes": 103950
+        },
+        {
+          "role": "详情07_脚长参考表",
+          "path": "01_产品资产/02_可发布素材/抖店品牌首发/A1689/当前优化/详情07_脚长参考表.png",
+          "source": "01_产品资产/02_可发布素材/抖店品牌首发/A1689/当前优化/详情07_脚长参考表.svg",
+          "width": 800,
+          "height": 1154,
+          "sha256": "d7451ad0cc400c5221d8aa794f2bc18fe6eb622ac13ab008d3c57fb193ff17ac",
+          "bytes": 72586
+        },
+        {
+          "role": "详情08_参数与服务",
+          "path": "01_产品资产/02_可发布素材/抖店品牌首发/A1689/当前优化/详情08_参数与服务.png",
+          "source": "01_产品资产/02_可发布素材/抖店品牌首发/A1689/当前优化/详情08_参数与服务.svg",
+          "width": 800,
+          "height": 1160,
+          "sha256": "b437f6838eb99e8d805b8e9cdc079c43181ac80e826bcff479b803087c9062bd",
+          "bytes": 70609
+        }
+      ],
+      "identity_note": "新店独立加绒商品准备；真实鞋款及原图共享，品牌字段按新店生效资质及当前类目核对，不改绘鞋面标识",
+      "publication": {
+        "state": "ASSETS_UPLOADED_NOT_PRODUCT_CREATED",
+        "prices": "PENDING_NEW_STORE_DECISION",
+        "coupons": "PENDING_NEW_STORE_DECISION",
+        "fulfillment": "PENDING_NEW_STORE_CONFIGURATION",
+        "product_id": null,
+        "size_measurements": "PENDING_FACTORY",
+        "main_uploaded": 5,
+        "detail_uploaded": 8,
+        "color_uploaded": 2,
+        "audit": "NOT_SUBMITTED",
+        "buyer_preview": "NOT_AVAILABLE",
+        "private_evidence": ".local/品牌新店/商品准备/A1689/"
+      },
+      "media_binding": {
+        "version": "加绒",
+        "colors": [
+          "黑白加绒",
+          "全黑加绒"
+        ],
+        "sku_color_files": [
+          {
+            "color": "黑白加绒",
+            "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/A1689/优化/素材/净图_blackwhite.png"
+          },
+          {
+            "color": "全黑加绒",
+            "path": "01_产品资产/02_可发布素材/抖店棉鞋_20261014/A1689/优化/素材/净图_allblack.png"
+          }
+        ],
+        "note": "颜色规格图从当前来源档案逐色绑定；正式准备时按文件哈希和颜色名核，不把广告图填入SKU"
+      },
+      "source": {
+        "url": "https://bqgcd.sooxie.com/detail/1545440",
+        "observed_at": "2026-10-18T14:01:44.436Z",
+        "source_model": "A1689-1",
+        "variant": "加绒",
+        "listed_price_cny": 55,
+        "listed_price_basis": "搜鞋网标价，不自动作为负责人实际结算成本",
+        "color_size_match": true,
+        "scope": "颜色尺码与加绒原图对应；源站旧普通版属性不继承为加绒内里，不作为实物库存证明"
+      },
+      "product_identity": {
+        "factory_model": "A1689",
+        "master_product_id": "BQ025",
+        "master_reference": "02_Alibaba运营/05_扩品工程/数据/产品与链接台账.json",
+        "scope": "已存在BQ025/A1689家族；本轮加绒颜色及材料仍按国内单款证据，不继承国际站商业字段"
+      },
+      "platform_preparation": {
+        "category": "鞋靴>男鞋>休闲鞋",
+        "brand": "雷丹森羊",
+        "mandatory_attributes": "品牌/织物鞋面/EVA外底/加绒保暖已按当前动态选项准备",
+        "material_basis": "单款来源及负责人授权的图片通用材质判断；非成分实测",
+        "sku_count": 22,
+        "price": null,
+        "coupon": null,
+        "stock": null,
+        "fulfillment": null,
+        "ready_to_submit": false,
+        "private_prepared": ".local/品牌新店/商品准备/A1689/prepared.json"
+      }
+    }
+  },
+  "brand_assets": [
+    {
+      "path": "01_产品资产/02_可发布素材/抖店品牌首发/品牌展示草案/文字头像草案.png",
+      "source": "01_产品资产/02_可发布素材/抖店品牌首发/品牌展示草案/文字头像草案.svg",
+      "width": 512,
+      "height": 512,
+      "sha256": "7da54baef050c19088ebf4137fa467198ae016488898d7776accf14e4fb11c81",
+      "bytes": 11651,
+      "role": "文字头像设计草案，未上传店铺，不冒充商标注册图样"
+    },
+    {
+      "path": "01_产品资产/02_可发布素材/抖店品牌首发/品牌展示草案/店招设计草案.png",
+      "source": "01_产品资产/02_可发布素材/抖店品牌首发/品牌展示草案/店招设计草案.svg",
+      "width": 1600,
+      "height": 600,
+      "sha256": "3d1ea4e868222a4615f2387fc19f889054a92ac6e9786dc6703206a62cd5b8a5",
+      "bytes": 512717,
+      "role": "店招排版草案，1600×600为设计画布；未核平台槽位规格，未发布"
+    },
+    {
+      "model": "ZX9002",
+      "role": "广告静态素材草案；品牌文字位于画面外，无投放",
+      "path": "01_产品资产/02_可发布素材/抖店品牌首发/ZX9002/广告草案/品牌文字版.png",
+      "source": "01_产品资产/02_可发布素材/抖店品牌首发/ZX9002/广告草案/品牌文字版.svg",
+      "width": 800,
+      "height": 800,
+      "sha256": "840e189d56d602f278032c3c63fe1acabcca8b95f2089f82e82a45c9b787c7f0"
+    },
+    {
+      "model": "A1689",
+      "role": "广告静态素材草案；品牌文字位于画面外，无投放",
+      "path": "01_产品资产/02_可发布素材/抖店品牌首发/A1689/广告草案/品牌文字版.png",
+      "source": "01_产品资产/02_可发布素材/抖店品牌首发/A1689/广告草案/品牌文字版.svg",
+      "width": 800,
+      "height": 800,
+      "sha256": "1bbed274ed6ebf4d3d5300a26eecb3da8c7c9e656201f0ad24cc809d0f7109ef"
+    }
+  ],
+  "visual_qa": {
+    "state": "PASSED",
+    "reviewer": "agent",
+    "checked_on": "2026-10-18",
+    "asset_set_sha256": "53f7a1ea0fb0916799203f39e49b0ba27efb521f0a623d9beeedeb43adf9ffce",
+    "scope": "26张主详情经整套接触表及关键单图像素核对；修正ZX9002主体裁切、脚长示意文字重叠和广告品牌文字被裁切。全套素材哈希校验。",
+    "remaining": "ZX9002绒里近照和两款实际试穿待工厂；当前详情明确外观图，不伪造绒里或实测。平台审核、买家页与经营效果尚未验收。"
+  }
+}

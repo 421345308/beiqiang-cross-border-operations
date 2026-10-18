@@ -7,6 +7,7 @@ import {randomUUID} from 'node:crypto';
 const ORIGIN = 'https://v2-dd.chengji-inc.com';
 const DEFAULT_SESSION_PATH = fileURLToPath(new URL('./.local/session.json', import.meta.url));
 const ENDPOINTS = Object.freeze({
+  shopInfo: {method: 'POST', path: '/api/v2/common/overall/getShopInfo'},
   importFiles: {method: 'POST', path: '/api/v2/move/import/getImportFileList'},
   categories: {method: 'GET', path: '/api/v2/product/batch/getProductCateTree'},
   categoryInfo: {method: 'POST', path: '/api/v2/product/create_product/getCreateBaseInfoByCateId'},
@@ -50,10 +51,15 @@ export class MiaoshouError extends Error {
 // Only fixed, observed business endpoints are exposed. There is no automatic login.
 export class MiaoshouHttp {
   #cookie;
-  constructor({cookie, timeoutMs = 15000} = {}) {
+  #expectedShopId;
+  #expectedShopName;
+  constructor({cookie, timeoutMs = 15000, expectedShopId, expectedShopName} = {}) {
     if (!cookie || /[\r\n]/.test(cookie)) throw new Error('A valid Miaoshou cookie is required');
     if (!Number.isFinite(timeoutMs) || timeoutMs <= 0) throw new Error('Invalid timeoutMs');
     this.#cookie = cookie;
+    if (expectedShopId !== undefined && !/^\d+$/.test(String(expectedShopId))) throw new Error('Invalid expectedShopId');
+    this.#expectedShopId = expectedShopId === undefined ? undefined : String(expectedShopId);
+    this.#expectedShopName = expectedShopName;
     this.timeoutMs = timeoutMs;
   }
 
@@ -62,7 +68,8 @@ export class MiaoshouHttp {
   static async fromSavedSession({sessionPath = DEFAULT_SESSION_PATH, ...options} = {}) {
     const saved = JSON.parse(await readFile(sessionPath, 'utf8'));
     if (saved.schemaVersion !== 1 || saved.origin !== ORIGIN) throw new Error('Unrecognized saved Miaoshou session');
-    return new MiaoshouHttp({...options, cookie: saved.cookie});
+    if (options.expectedShopId !== undefined && saved.expectedShopId !== undefined && String(options.expectedShopId) !== String(saved.expectedShopId)) throw new Error('Session profile belongs to a different target shop');
+    return new MiaoshouHttp({expectedShopId: saved.expectedShopId, expectedShopName: saved.expectedShopName, ...options, cookie: saved.cookie});
   }
 
   async saveSession({sessionPath = DEFAULT_SESSION_PATH} = {}) {
@@ -70,9 +77,23 @@ export class MiaoshouHttp {
     await mkdir(dirname(sessionPath), {recursive: true});
     const savedAt = new Date().toISOString();
     const tempPath = `${sessionPath}.${randomUUID()}.tmp`;
-    await writeFile(tempPath, JSON.stringify({schemaVersion: 1, origin: ORIGIN, savedAt, cookie: this.#cookie}) + '\n', {mode: 0o600});
+    await writeFile(tempPath, JSON.stringify({schemaVersion: 1, origin: ORIGIN, savedAt, cookie: this.#cookie, expectedShopId: this.#expectedShopId, expectedShopName: this.#expectedShopName}) + '\n', {mode: 0o600});
     await rename(tempPath, sessionPath);
     return {sessionPath, savedAt};
+  }
+
+  async getShopIdentity() {
+    // Observed browser POST without a body. Discard token and unrelated account fields.
+    const result = await this.#request('shopInfo');
+    if (!/^\d+$/.test(String(result.shopId)) || typeof result.userNick !== 'string' || !result.userNick) throw new MiaoshouError('Shop identity response schema changed', 'schema_changed', 200);
+    return {shopId: String(result.shopId), shopName: result.userNick};
+  }
+
+  async #assertTargetShop() {
+    if (!this.#expectedShopId) throw new MiaoshouError('Write requires a session profile bound to an explicit target shop', 'shop_target_missing');
+    const actual = await this.getShopIdentity();
+    if (actual.shopId !== this.#expectedShopId) throw new MiaoshouError('Current server shop differs from the session target; no write sent', 'shop_mismatch');
+    return actual;
   }
 
   async #request(endpoint, params = {}, multipart = null) {
@@ -189,6 +210,7 @@ export class MiaoshouHttp {
     const isJpeg = bytes[0] === 0xff && bytes[1] === 0xd8;
     const isPng = bytes.subarray(0, 8).equals(Buffer.from([137,80,78,71,13,10,26,10]));
     if ((!isJpeg && !isPng) || !bytes.length || bytes.length > 10 * 1024 * 1024) throw new Error('Expected JPEG/PNG up to 10 MB');
+    await this.#assertTargetShop();
     const boundary = `----Beiqiang${randomUUID()}`;
     const type = isJpeg ? 'image/jpeg' : 'image/png';
     const ext = isJpeg ? 'jpg' : 'png';
@@ -201,10 +223,11 @@ export class MiaoshouHttp {
 
   async #recordWrite(endpoint, payload, evidenceDir) {
     if (!evidenceDir) throw new Error('A new private evidence directory is required for each reviewed write');
+    const targetShop = await this.#assertTargetShop();
     await mkdir(evidenceDir, {recursive: true});
     // Exclusive creation also blocks an unknown-result retry after a timeout or crash.
     await writeFile(`${evidenceDir}/request.json`, JSON.stringify(payload, null, 2) + '\n', {flag: 'wx', mode: 0o600});
-    await writeFile(`${evidenceDir}/attempt.json`, JSON.stringify({endpoint, startedAt: new Date().toISOString(), state: 'STARTED_DO_NOT_AUTO_RETRY'}) + '\n', {flag: 'wx', mode: 0o600});
+    await writeFile(`${evidenceDir}/attempt.json`, JSON.stringify({endpoint, targetShop, startedAt: new Date().toISOString(), state: 'STARTED_DO_NOT_AUTO_RETRY'}) + '\n', {flag: 'wx', mode: 0o600});
     try {
       const result = await this.#request(endpoint, payload);
       await writeFile(`${evidenceDir}/response.json`, JSON.stringify(result, null, 2) + '\n', {flag: 'wx', mode: 0o600});

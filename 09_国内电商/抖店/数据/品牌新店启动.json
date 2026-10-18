@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
   "updated_on": "2026-10-18",
-  "state": "RESEARCHED_PREPARATION_ONLY",
+  "state": "CONTENT_AND_HTTP_READY_AWAITING_COMMERCIAL_FULFILLMENT",
   "canonical_entry": "09_国内电商/抖店/README.md",
-  "scope": "独立新品牌店的启动建议；未创建平台草稿或商品，未发布装修、绑定账号、改价、建券或投放",
+  "scope": "负责人已认可启动并配置新店妙手；已独立读取与上传商品素材、取得当前类目/品牌规则。未创建平台商品或草稿、建券、改价、发布装修、绑定账号或投流",
   "evidence": {
     "private_capture": ".local/品牌新店/当前核验/",
     "product_source": "https://bqgcd.sooxie.com/",
@@ -33,14 +33,14 @@
       "action": "核履约与账号执行边界",
       "deliverable": "新店独立身份/会话与产品映射；发退货地址、电子面单、运费、客服及实际承诺清单",
       "gate": "未完成前可准备图文；先解决影响买家下单及按时发货的缺口，再上架销售",
-      "status": "OBSERVED_GAPS_NOT_CONFIGURED"
+      "status": "HTTP_SHOP_ISOLATION_VERIFIED_ADDRESS_AND_FREIGHT_PENDING"
     },
     {
       "step": 2,
       "action": "两款首发内容与基础装修并行准备",
       "deliverable": "每款独立标题/品牌字段、5张主图和独立详情、颜色版本与尺码、两条实拍；文字品牌头像/店招草案及按需求导航",
       "gate": "真实样品、款色版本对应、商业字段和当前类目规则完整；不以图数充当质量通过",
-      "status": "CANDIDATES_NOT_PUBLISHED"
+      "status": "TWO_FLEECE_PRODUCTS_CONTENT_REVIEWED_AND_UPLOADED_NOT_CREATED"
     },
     {
       "step": 3,
@@ -69,29 +69,29 @@
       "model": "A1689",
       "priority": 1,
       "role": "日常套脚便利候选",
-      "product_reference": "数据/重点商品优化.json#models.A1689",
+      "product_reference": "数据/品牌首发商品.json#models.A1689",
       "why": "结构容易用连续穿鞋动作解释，既有真实来源和图文可复用；旧店尺码售后提示须先解决版本选择",
-      "initial_scope": "先确认一个主版本及黑白/全黑真实可售色；普通和加绒如同时售卖要各有内里图，不以低价普通版配加绒宣传",
-      "title_draft": "雷丹森羊针织套脚休闲鞋免系带常规加绒可选日常出门",
+      "initial_scope": "黑白加绒、全黑加绒；35—45码，本轮只准备加绒",
+      "title_draft": "雷丹森羊加绒套脚棉鞋针织一脚蹬免系带秋冬日常休闲鞋",
       "title_condition": "仅在两版本实际同时上架时使用常规加绒可选；男女类目及具体人群词随实际所选类目与销售范围核",
       "hero_brief": "一双完整实鞋占主体，保留真实鞋口和后跟；文案突出套脚免系带，用真实动作补说明，不写免弯腰",
       "first_shoot": "门口拿钥匙准备出门，连续拍脚入鞋、手提后跟、站稳迈步；再拍鞋口、内里和整鞋侧面。开头：出门穿鞋，不想再系一遍鞋带。",
       "fit_priority": "实测常规/加绒样鞋，记录试穿脚长、脚围、袜子和选码感受，核脚背进入和后跟；不直接全店建议大一码",
-      "readiness": "候选；需实鞋版本、选码与新店商品包验收"
+      "readiness": "本地视觉通过；主详情/逐色图已上传新店，当前类目品牌及必填属性已准备；尚无商品ID，待定价、履约与最终发布验收"
     },
     {
       "model": "ZX9002",
       "priority": 2,
       "role": "秋冬男士加绒与大码候选",
-      "product_reference": "数据/重点商品优化.json#models.ZX9002",
+      "product_reference": "数据/品牌首发商品.json#models.ZX9002",
       "why": "加绒套脚及38—47码提供不同选购需求；旧店曝光样本过少，不能据此认定需求已验证或失败",
-      "initial_scope": "深灰黑加绒，38—47按本款供货与实际选码资料准备，不套其他款尺码实测",
+      "initial_scope": "深灰黑加绒；38—47码，本轮只准备加绒",
       "title_draft": "雷丹森羊秋冬加绒棉鞋男士一脚蹬免系带针织大码休闲鞋",
       "title_condition": "当前均为候选，最终按新店类目字段、字数及款式资料校验",
       "hero_brief": "真实完整鞋型与可见内里作为选购理由，第二图连续穿鞋，后续图独立解释绒里、侧面轮廓和大码选择",
       "first_shoot": "同一双鞋先拍整鞋和翻开鞋口的真实绒里，再连续穿上配日常长裤走几步。开头：买加绒鞋，先看清楚里面和上脚是什么样。",
       "fit_priority": "补大码46/47真实样鞋与袜子试穿，记录脚长及鞋内空间；28/28.5厘米仍是标准参考脚长，不冒充鞋内长",
-      "readiness": "候选；缺真实绒里近拍和大码试穿结果"
+      "readiness": "本地视觉通过；主详情/逐色图已上传新店，当前类目品牌及必填属性已准备；尚无商品ID，待定价、履约与最终发布验收"
     },
     {
       "model": "M889",
@@ -125,7 +125,16 @@
   "pricing_and_test": {
     "state": "NEW_STORE_PRICE_COUPON_BUDGET_UNDECIDED",
     "rule": "不沿搬旧店标价、券、活动或自动执行进价加30%；品牌名称不是任意溢价的证据",
-    "inputs": ["逐款成本", "发货运费", "包装", "平台及支付费用", "运费险", "退款比例与退回处理损失", "投放获客成本", "税费及目标利润"],
+    "inputs": [
+      "逐款成本",
+      "发货运费",
+      "包装",
+      "平台及支付费用",
+      "运费险",
+      "退款比例与退回处理损失",
+      "投放获客成本",
+      "税费及目标利润"
+    ],
     "measurement": "按新店、商品、素材、版本与订单批次独立记录曝光/点击/支付/退款；广告归因与全店成交分开",
     "early_read": "上线后3—7天先看内容是否带来有效商品点击、选码咨询和购买，样本不足延长，不以几单宣布胜出",
     "mature_read": "14—30天及后续继续观察退款、尺码售后与贡献利润；观察窗口不等于退款全部成熟",
@@ -134,16 +143,62 @@
   },
   "automation_next": [
     "单一真实产品来源共享；新旧店登录态和对象映射独立，不覆盖旧session来假装旧店续登完成",
-    "给HTTP写操作增加服务端当前店铺ID/名称与明确目标店铺匹配的检查；失败不写入",
+    "已实现服务端店铺ID与明确目标匹配及串店拦截测试；持续用于所有图片、商品、尺码与状态写入",
     "上传按文件SHA复用；新店类目、品牌、尺码模板、运费及优惠ID重新读取，不硬复制旧ID",
     "平台写入请求留一次尝试与回执，未知结果先回读；商品审核和买家端独立验收",
     "正常可用的商品查询/上品/图文/规格操作优先已有HTTP；登录、平台协议和手机端呈现保留必要人工入口",
     "罗盘未验证独立HTTP，不扩宣为全自动；优先正常导出/页面响应采样与离线分析，数据按店铺隔离"
   ],
   "official_sources": [
-    {"url": "https://school.jinritemai.com/doudian/web/article/aJBabpdAjFp3", "use": "专卖店商品品牌资质及配置要求；动态店铺已核生效"},
-    {"url": "https://school.jinritemai.com/doudian/wap/article/aJUR2vC4t3vd", "use": "官方账号长期绑定限制；不能据旧号意向承诺可迁移"},
-    {"url": "https://school.jinritemai.com/doudian/web/articlev0/aJq691ZQMKv2", "use": "广告素材品牌资质、真实性及落地页与实际发货一致要求"},
-    {"url": "https://school.jinritemai.com/doudian/web/course-series/cJRbRRvro6kx/cJRbRRvro6kxlJRcBHWSRUyz", "use": "新店支付、客服、物流、售后、选品、商品卡和装修的基础经营模块；本方案优先级为本店判断"}
-  ]
+    {
+      "url": "https://school.jinritemai.com/doudian/web/article/aJBabpdAjFp3",
+      "use": "专卖店商品品牌资质及配置要求；动态店铺已核生效"
+    },
+    {
+      "url": "https://school.jinritemai.com/doudian/wap/article/aJUR2vC4t3vd",
+      "use": "官方账号长期绑定限制；不能据旧号意向承诺可迁移"
+    },
+    {
+      "url": "https://school.jinritemai.com/doudian/web/articlev0/aJq691ZQMKv2",
+      "use": "广告素材品牌资质、真实性及落地页与实际发货一致要求"
+    },
+    {
+      "url": "https://school.jinritemai.com/doudian/web/course-series/cJRbRRvro6kx/cJRbRRvro6kxlJRcBHWSRUyz",
+      "use": "新店支付、客服、物流、售后、选品、商品卡和装修的基础经营模块；本方案优先级为本店判断"
+    }
+  ],
+  "execution": {
+    "updated_on": "2026-10-18",
+    "content": "数据/品牌首发商品.json",
+    "measurement_and_shooting": "数据/品牌首发实测与拍摄.json",
+    "review": ".local/品牌首发图文审核.html",
+    "factory_packet": ".local/品牌首发实测与拍摄.html",
+    "http": "独立会话；每次写入前核服务端店铺ID，错店拦截自动测试通过；商品/草稿完整查询0/0",
+    "uploaded": {
+      "main": 10,
+      "detail": 16,
+      "color": 3,
+      "total": 29
+    },
+    "decoration": "文字头像、店招和2张广告静态草案已准备，未发布或投放；正式装修槽位待核",
+    "address": "新店地址库0条；发退货联系人/电话/地址及面单需补",
+    "freight": "仅系统全国包邮模板，不符合自动继承旧店偏远地区例外的条件",
+    "commercial_proposal": {
+      "sale_price_cny": 94,
+      "coupon_cny": 5,
+      "after_coupon_cny": 89,
+      "scope": "首发两款加绒版建议，待负责人选择，未应用",
+      "unit_cost_estimate_cny": 50,
+      "profit": "负责人近似货成本；运费、售后、平台费用与投流未知，差额不等于净利润"
+    },
+    "pending_user": [
+      "首发定价与优惠选择",
+      "新店真实发退货资料及履约基线/快递"
+    ],
+    "pending_factory": [
+      "A1689加绒逐码实测，优先35、38/39、42、45",
+      "ZX9002真实绒里近拍和38、41/42、46/47优先试穿，再补齐其他码"
+    ],
+    "next": "收到商业履约信息后，建立新店适用模板和独立尺码组件，最终查重再创建商品；审核通过后核买家主详情、规格及领券应付价"
+  }
 }
