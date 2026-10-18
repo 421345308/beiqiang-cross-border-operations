@@ -14,10 +14,13 @@
     "commercial_action": "价格、优惠、SKU身份、库存和履约不变",
     "measurement": "分款、版本、尺码的实测空表，尚无工厂回填结果",
     "video": "四款各两条人工实拍脚本；未拍摄、未发布、未申请付费生成",
-    "brand": "雷丹森羊为已确认经营方向；商标/授权、Logo、包装标识及平台备案待核",
+    "brand": "雷丹森羊新品牌店鞋靴自有品牌资质已核生效；通用鞋盒、未做Logo。旧店本图文包不因此改品牌；新店启动独立准备",
     "expansion": "现有重点款线上验收与一轮经营回收后，再按缺口逐批扩真实可售款",
     "readback": "完整分页、日期单位与总额对平留私有证据；罗盘直接HTTP被环境风险检查拦截，未宣称已跑通",
-    "rules_checked": ["https://school.jinritemai.com/doudian/web/articlev0/aJQ9unUK5RyV", "https://school.jinritemai.com/doudian/web/articlev0/ahean96xqddv"]
+    "rules_checked": [
+      "https://school.jinritemai.com/doudian/web/articlev0/aJQ9unUK5RyV",
+      "https://school.jinritemai.com/doudian/web/articlev0/ahean96xqddv"
+    ]
   },
   "evidence_rules": [
     "经营私有指标、精确店铺对象与售后原始记录仅保存在.local。",
@@ -266,5 +269,6 @@
       "url": "https://compass.jinritemai.com/shop/search/drainage-terms",
       "use": "当前日期行业需求区间与词下商品样本"
     }
-  ]
+  ],
+  "shop_scope": "本档案原经营观察及当前四款优化属于旧店；新品牌店启动见数据/品牌新店启动.json，不将旧店成交当新店基线"
 }
