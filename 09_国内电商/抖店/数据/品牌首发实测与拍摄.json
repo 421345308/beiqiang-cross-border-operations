@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-10-18",
+  "updated_on": "2026-10-19",
   "status": "READY_FOR_FACTORY_MEASUREMENT_AND_FILMING",
   "common": {
     "format": "手机竖拍9:16，1080p以上；每镜留头尾各2秒，单独交原片，不加美颜/瘦身/鞋型变形滤镜；鞋子全程同款同版本，窗边柔光，清洁地面，保留同期声音。",
     "props": [
-      "纸、直尺、软尺",
+      "纸、直尺、软尺、可用的鞋内长量具",
       "薄袜与实际常穿厚袜",
-      "两条日常裤子",
-      "A1689黑白/全黑加绒、ZX9002深灰黑加绒实鞋"
+      "两条日常长裤",
+      "6款当前在售颜色的加绒实鞋，按每款清单取样，不放普通版代拍"
     ],
     "delivery": "按“款式/版本/颜色/日期/镜头序号”命名；交原视频、量尺原照片和填写结果。拍摄建议不是现成实测结论。",
     "brand": "新店雷丹森羊品牌资质已核生效，实际无Logo鞋面、通用鞋盒；品牌文字仅作片尾/字幕，不在实鞋或鞋盒上合成标识。"
@@ -19,8 +19,8 @@
       "鞋码与脚长不是同一数值；鞋垫长、有效鞋内长、外底长分列。鞋垫取不出记不可拆，不硬拆。",
       "鞋垫平铺不拉伸，量最长点；前掌最宽处量宽，两只分别测，每项两次。记录鞋内量具名称；没有合适量具，鞋内长留空。",
       "试穿人匿名P01/P02，站立左右脚分别量脚长，脚围沿前掌最宽处绕一周；记录薄/厚袜和脚背感受，不留姓名电话。",
-      "同款常规/加绒分别测；先覆盖每款每版本每个在售码的一种代表色。颜色换楦/批次/内里有差异时单独测，不能由一个颜色推全色。",
-      "首批A1689先做35、38/39、42、45，再补齐其他码；ZX9002先做38、41/42、46/47，再补齐其他码。两款只测加绒，颜色换楦或批次不同另测。",
+      "6款只测本轮在售加绒版；每个在售码先量代表色，颜色换楦/批次/内里有差异另测。",
+      "35—45码款先测35、38/39、42、45；38—47码款先测38、41/42、46、47，再补齐全部码。共63行，不把SKU数当独立测量行。",
       "试穿每版记录站立、平地走10—20步的真实反馈；不冒充长时间耐久、透气、防滑或医学测试。两只脚均记录，不只拍好看一边。"
     ],
     "shoe_fields": [
@@ -575,6 +575,1038 @@
           "notes": null
         }
       ]
+    },
+    "M889": {
+      "name": "三配色针织系带加绒款",
+      "sample": "黑白加绒主拍；全黑、米白加绒各补一双。35、38/39、42、45先测。",
+      "photo": "01_产品资产/02_可发布素材/抖店品牌首发/M889/当前优化/实物主图/主图01.png",
+      "sizes": [
+        35,
+        45
+      ],
+      "versions": [
+        "加绒"
+      ],
+      "measurements": [
+        {
+          "model": "M889",
+          "version": "加绒",
+          "size": 35,
+          "color": null,
+          "batch": null,
+          "left_insole_mm": null,
+          "right_insole_mm": null,
+          "left_forefoot_width_mm": null,
+          "right_forefoot_width_mm": null,
+          "left_inner_mm": null,
+          "right_inner_mm": null,
+          "method": null,
+          "photo": null,
+          "notes": null
+        },
+        {
+          "model": "M889",
+          "version": "加绒",
+          "size": 36,
+          "color": null,
+          "batch": null,
+          "left_insole_mm": null,
+          "right_insole_mm": null,
+          "left_forefoot_width_mm": null,
+          "right_forefoot_width_mm": null,
+          "left_inner_mm": null,
+          "right_inner_mm": null,
+          "method": null,
+          "photo": null,
+          "notes": null
+        },
+        {
+          "model": "M889",
+          "version": "加绒",
+          "size": 37,
+          "color": null,
+          "batch": null,
+          "left_insole_mm": null,
+          "right_insole_mm": null,
+          "left_forefoot_width_mm": null,
+          "right_forefoot_width_mm": null,
+          "left_inner_mm": null,
+          "right_inner_mm": null,
+          "method": null,
+          "photo": null,
+          "notes": null
+        },
+        {
+          "model": "M889",
+          "version": "加绒",
+          "size": 38,
+          "color": null,
+          "batch": null,
+          "left_insole_mm": null,
+          "right_insole_mm": null,
+          "left_forefoot_width_mm": null,
+          "right_forefoot_width_mm": null,
+          "left_inner_mm": null,
+          "right_inner_mm": null,
+          "method": null,
+          "photo": null,
+          "notes": null
+        },
+        {
+          "model": "M889",
+          "version": "加绒",
+          "size": 39,
+          "color": null,
+          "batch": null,
+          "left_insole_mm": null,
+          "right_insole_mm": null,
+          "left_forefoot_width_mm": null,
+          "right_forefoot_width_mm": null,
+          "left_inner_mm": null,
+          "right_inner_mm": null,
+          "method": null,
+          "photo": null,
+          "notes": null
+        },
+        {
+          "model": "M889",
+          "version": "加绒",
+          "size": 40,
+          "color": null,
+          "batch": null,
+          "left_insole_mm": null,
+          "right_insole_mm": null,
+          "left_forefoot_width_mm": null,
+          "right_forefoot_width_mm": null,
+          "left_inner_mm": null,
+          "right_inner_mm": null,
+          "method": null,
+          "photo": null,
+          "notes": null
+        },
+        {
+          "model": "M889",
+          "version": "加绒",
+          "size": 41,
+          "color": null,
+          "batch": null,
+          "left_insole_mm": null,
+          "right_insole_mm": null,
+          "left_forefoot_width_mm": null,
+          "right_forefoot_width_mm": null,
+          "left_inner_mm": null,
+          "right_inner_mm": null,
+          "method": null,
+          "photo": null,
+          "notes": null
+        },
+        {
+          "model": "M889",
+          "version": "加绒",
+          "size": 42,
+          "color": null,
+          "batch": null,
+          "left_insole_mm": null,
+          "right_insole_mm": null,
+          "left_forefoot_width_mm": null,
+          "right_forefoot_width_mm": null,
+          "left_inner_mm": null,
+          "right_inner_mm": null,
+          "method": null,
+          "photo": null,
+          "notes": null
+        },
+        {
+          "model": "M889",
+          "version": "加绒",
+          "size": 43,
+          "color": null,
+          "batch": null,
+          "left_insole_mm": null,
+          "right_insole_mm": null,
+          "left_forefoot_width_mm": null,
+          "right_forefoot_width_mm": null,
+          "left_inner_mm": null,
+          "right_inner_mm": null,
+          "method": null,
+          "photo": null,
+          "notes": null
+        },
+        {
+          "model": "M889",
+          "version": "加绒",
+          "size": 44,
+          "color": null,
+          "batch": null,
+          "left_insole_mm": null,
+          "right_insole_mm": null,
+          "left_forefoot_width_mm": null,
+          "right_forefoot_width_mm": null,
+          "left_inner_mm": null,
+          "right_inner_mm": null,
+          "method": null,
+          "photo": null,
+          "notes": null
+        },
+        {
+          "model": "M889",
+          "version": "加绒",
+          "size": 45,
+          "color": null,
+          "batch": null,
+          "left_insole_mm": null,
+          "right_insole_mm": null,
+          "left_forefoot_width_mm": null,
+          "right_forefoot_width_mm": null,
+          "left_inner_mm": null,
+          "right_inner_mm": null,
+          "method": null,
+          "photo": null,
+          "notes": null
+        }
+      ],
+      "story": [
+        {
+          "time": "0—3秒",
+          "scene": "玄关/裤脚低机位，鞋完整入镜",
+          "action": "手先松开鞋带，再将双鞋完整摆正",
+          "voice": "脚背这里想松一点？看看系带款怎么调。",
+          "text": "雷丹森羊 · 加绒款",
+          "check": "开头先看得到真实鞋型，不放货号"
+        },
+        {
+          "time": "3—10秒",
+          "scene": "侧前方中近景、固定相机",
+          "action": "松鞋带，脚入鞋，整理鞋舌后跟，再按脚背系好；保留完整动作",
+          "voice": "穿好后，鞋带可以按自己的脚背调整松紧。",
+          "text": "系带松紧可调",
+          "check": "不加速掩盖穿鞋动作；同款同色"
+        },
+        {
+          "time": "10—16秒",
+          "scene": "桌面柔光，鞋口俯拍再转鞋面",
+          "action": "拿起刚才同一双，手撑鞋口，真实绒里与外鞋轮廓同时入镜",
+          "voice": "加绒里面什么样，拿近给你看。",
+          "text": "同款实物加绒内里",
+          "check": "不得普通版代拍或合成内里"
+        },
+        {
+          "time": "16—24秒",
+          "scene": "同裤同机位，脚踝高度",
+          "action": "黑白、全黑、米白三色同机位正侧面各拍；换色清楚标注",
+          "voice": "黑白、全黑和米白，用你常穿的裤子看看怎么搭。",
+          "text": "配色以所选规格为准",
+          "check": "平地自然走，不用跑跳证明性能"
+        },
+        {
+          "time": "24—29秒",
+          "scene": "整鞋与真实尺码标，定格收尾",
+          "action": "实鞋站定，切真实标签，最后品牌文字在画面外",
+          "voice": "雷丹森羊，下单先对脚长、袜厚和本款尺码。",
+          "text": "35—45码｜先看本款选码",
+          "check": "不口播临时优惠或没有测过的脚感"
+        }
+      ],
+      "selection": [
+        {
+          "time": "0—7秒",
+          "scene": "俯拍标签与测脚",
+          "action": "写本款、加绒、颜色、批次和尺码卡；站立测左右脚长与前掌脚围",
+          "voice": "先量两只脚，记清脚长、脚围和袜厚。",
+          "text": "长度单位毫米",
+          "check": "尺子零位与脚跟线同框"
+        },
+        {
+          "time": "7—18秒",
+          "scene": "桌面柔光，量尺近景",
+          "action": "可拆鞋垫平铺量左右长与最宽处，每项两次；不可拆如实记",
+          "voice": "能取鞋垫就平放测，不能取不要硬拆。",
+          "text": "鞋垫长不等于鞋内长",
+          "check": "无内长量具则内长留空"
+        },
+        {
+          "time": "18—30秒",
+          "scene": "正、侧、后上脚连续镜头",
+          "action": "同人同码薄袜与常穿厚袜分别站立走10—20步；记录顶趾、前掌、脚背和后跟",
+          "voice": "合理调好鞋带，再分别看前掌、脚背和后跟。",
+          "text": "本人当下试穿记录",
+          "check": "不替别人保证合脚，不说未测偏大偏小"
+        },
+        {
+          "time": "30—38秒",
+          "scene": "边界尺码标签和表格",
+          "action": "按本款样鞋逐码填写；大码款46/47各自留原照，颜色换楦另测",
+          "voice": "把每个码的实际结果留下来，再给选码建议。",
+          "text": "35—45码逐码测",
+          "check": "不能用标准每码半厘米递增冒充实测"
+        }
+      ]
+    },
+    "H7212": {
+      "name": "黑白包头低帮加绒套脚款",
+      "sample": "只拿黑白加绒H7212，不拿外观接近的A1689代替；35、38/39、42、45先测。",
+      "photo": "01_产品资产/02_可发布素材/抖店品牌首发/H7212/当前优化/实物主图/主图02.png",
+      "sizes": [
+        35,
+        45
+      ],
+      "versions": [
+        "加绒"
+      ],
+      "measurements": [
+        {
+          "model": "H7212",
+          "version": "加绒",
+          "size": 35,
+          "color": null,
+          "batch": null,
+          "left_insole_mm": null,
+          "right_insole_mm": null,
+          "left_forefoot_width_mm": null,
+          "right_forefoot_width_mm": null,
+          "left_inner_mm": null,
+          "right_inner_mm": null,
+          "method": null,
+          "photo": null,
+          "notes": null
+        },
+        {
+          "model": "H7212",
+          "version": "加绒",
+          "size": 36,
+          "color": null,
+          "batch": null,
+          "left_insole_mm": null,
+          "right_insole_mm": null,
+          "left_forefoot_width_mm": null,
+          "right_forefoot_width_mm": null,
+          "left_inner_mm": null,
+          "right_inner_mm": null,
+          "method": null,
+          "photo": null,
+          "notes": null
+        },
+        {
+          "model": "H7212",
+          "version": "加绒",
+          "size": 37,
+          "color": null,
+          "batch": null,
+          "left_insole_mm": null,
+          "right_insole_mm": null,
+          "left_forefoot_width_mm": null,
+          "right_forefoot_width_mm": null,
+          "left_inner_mm": null,
+          "right_inner_mm": null,
+          "method": null,
+          "photo": null,
+          "notes": null
+        },
+        {
+          "model": "H7212",
+          "version": "加绒",
+          "size": 38,
+          "color": null,
+          "batch": null,
+          "left_insole_mm": null,
+          "right_insole_mm": null,
+          "left_forefoot_width_mm": null,
+          "right_forefoot_width_mm": null,
+          "left_inner_mm": null,
+          "right_inner_mm": null,
+          "method": null,
+          "photo": null,
+          "notes": null
+        },
+        {
+          "model": "H7212",
+          "version": "加绒",
+          "size": 39,
+          "color": null,
+          "batch": null,
+          "left_insole_mm": null,
+          "right_insole_mm": null,
+          "left_forefoot_width_mm": null,
+          "right_forefoot_width_mm": null,
+          "left_inner_mm": null,
+          "right_inner_mm": null,
+          "method": null,
+          "photo": null,
+          "notes": null
+        },
+        {
+          "model": "H7212",
+          "version": "加绒",
+          "size": 40,
+          "color": null,
+          "batch": null,
+          "left_insole_mm": null,
+          "right_insole_mm": null,
+          "left_forefoot_width_mm": null,
+          "right_forefoot_width_mm": null,
+          "left_inner_mm": null,
+          "right_inner_mm": null,
+          "method": null,
+          "photo": null,
+          "notes": null
+        },
+        {
+          "model": "H7212",
+          "version": "加绒",
+          "size": 41,
+          "color": null,
+          "batch": null,
+          "left_insole_mm": null,
+          "right_insole_mm": null,
+          "left_forefoot_width_mm": null,
+          "right_forefoot_width_mm": null,
+          "left_inner_mm": null,
+          "right_inner_mm": null,
+          "method": null,
+          "photo": null,
+          "notes": null
+        },
+        {
+          "model": "H7212",
+          "version": "加绒",
+          "size": 42,
+          "color": null,
+          "batch": null,
+          "left_insole_mm": null,
+          "right_insole_mm": null,
+          "left_forefoot_width_mm": null,
+          "right_forefoot_width_mm": null,
+          "left_inner_mm": null,
+          "right_inner_mm": null,
+          "method": null,
+          "photo": null,
+          "notes": null
+        },
+        {
+          "model": "H7212",
+          "version": "加绒",
+          "size": 43,
+          "color": null,
+          "batch": null,
+          "left_insole_mm": null,
+          "right_insole_mm": null,
+          "left_forefoot_width_mm": null,
+          "right_forefoot_width_mm": null,
+          "left_inner_mm": null,
+          "right_inner_mm": null,
+          "method": null,
+          "photo": null,
+          "notes": null
+        },
+        {
+          "model": "H7212",
+          "version": "加绒",
+          "size": 44,
+          "color": null,
+          "batch": null,
+          "left_insole_mm": null,
+          "right_insole_mm": null,
+          "left_forefoot_width_mm": null,
+          "right_forefoot_width_mm": null,
+          "left_inner_mm": null,
+          "right_inner_mm": null,
+          "method": null,
+          "photo": null,
+          "notes": null
+        },
+        {
+          "model": "H7212",
+          "version": "加绒",
+          "size": 45,
+          "color": null,
+          "batch": null,
+          "left_insole_mm": null,
+          "right_insole_mm": null,
+          "left_forefoot_width_mm": null,
+          "right_forefoot_width_mm": null,
+          "left_inner_mm": null,
+          "right_inner_mm": null,
+          "method": null,
+          "photo": null,
+          "notes": null
+        }
+      ],
+      "story": [
+        {
+          "time": "0—3秒",
+          "scene": "玄关/裤脚低机位，鞋完整入镜",
+          "action": "门口拿钥匙，镜头转向脚边完整黑白双鞋",
+          "voice": "日常出门，这双不用再系鞋带。",
+          "text": "雷丹森羊 · 加绒款",
+          "check": "开头先看得到真实鞋型，不放货号"
+        },
+        {
+          "time": "3—10秒",
+          "scene": "侧前方中近景、固定相机",
+          "action": "脚伸入鞋内，用手扶鞋口、提后跟，整理后站稳；整段连续拍",
+          "voice": "这是套脚款，穿好记得把鞋口和后跟整理到位。",
+          "text": "套脚免系带",
+          "check": "不加速掩盖穿鞋动作；同款同色"
+        },
+        {
+          "time": "10—16秒",
+          "scene": "桌面柔光，鞋口俯拍再转鞋面",
+          "action": "拿起刚才同一双，手撑鞋口，真实绒里与外鞋轮廓同时入镜",
+          "voice": "加绒里面什么样，拿近给你看。",
+          "text": "同款实物加绒内里",
+          "check": "不得普通版代拍或合成内里"
+        },
+        {
+          "time": "16—24秒",
+          "scene": "同裤同机位，脚踝高度",
+          "action": "固定脚踝高度，拍黑白款正面、侧面、后跟；再拍包头轮廓",
+          "voice": "黑白低帮配日常长裤，鞋型和上脚比例给你看清。",
+          "text": "配色以所选规格为准",
+          "check": "平地自然走，不用跑跳证明性能"
+        },
+        {
+          "time": "24—29秒",
+          "scene": "整鞋与真实尺码标，定格收尾",
+          "action": "实鞋站定，切真实标签，最后品牌文字在画面外",
+          "voice": "雷丹森羊，下单先对脚长、袜厚和本款尺码。",
+          "text": "35—45码｜先看本款选码",
+          "check": "不口播临时优惠或没有测过的脚感"
+        }
+      ],
+      "selection": [
+        {
+          "time": "0—7秒",
+          "scene": "俯拍标签与测脚",
+          "action": "写本款、加绒、颜色、批次和尺码卡；站立测左右脚长与前掌脚围",
+          "voice": "先量两只脚，记清脚长、脚围和袜厚。",
+          "text": "长度单位毫米",
+          "check": "尺子零位与脚跟线同框"
+        },
+        {
+          "time": "7—18秒",
+          "scene": "桌面柔光，量尺近景",
+          "action": "可拆鞋垫平铺量左右长与最宽处，每项两次；不可拆如实记",
+          "voice": "能取鞋垫就平放测，不能取不要硬拆。",
+          "text": "鞋垫长不等于鞋内长",
+          "check": "无内长量具则内长留空"
+        },
+        {
+          "time": "18—30秒",
+          "scene": "正、侧、后上脚连续镜头",
+          "action": "同人同码薄袜与常穿厚袜分别站立走10—20步；记录顶趾、前掌、脚背和后跟",
+          "voice": "穿好并整理鞋口，再看前掌、脚背和后跟。",
+          "text": "本人当下试穿记录",
+          "check": "不替别人保证合脚，不说未测偏大偏小"
+        },
+        {
+          "time": "30—38秒",
+          "scene": "边界尺码标签和表格",
+          "action": "按本款样鞋逐码填写；大码款46/47各自留原照，颜色换楦另测",
+          "voice": "把每个码的实际结果留下来，再给选码建议。",
+          "text": "35—45码逐码测",
+          "check": "不能用标准每码半厘米递增冒充实测"
+        }
+      ]
+    },
+    "ZX2116": {
+      "name": "大码针织系带加绒款",
+      "sample": "黑白加绒主拍、全黑加绒补配色；38、41/42、46、47先测，大码拿真实样鞋。",
+      "photo": "01_产品资产/02_可发布素材/抖店品牌首发/ZX2116/当前优化/实物主图/主图01.png",
+      "sizes": [
+        38,
+        47
+      ],
+      "versions": [
+        "加绒"
+      ],
+      "measurements": [
+        {
+          "model": "ZX2116",
+          "version": "加绒",
+          "size": 38,
+          "color": null,
+          "batch": null,
+          "left_insole_mm": null,
+          "right_insole_mm": null,
+          "left_forefoot_width_mm": null,
+          "right_forefoot_width_mm": null,
+          "left_inner_mm": null,
+          "right_inner_mm": null,
+          "method": null,
+          "photo": null,
+          "notes": null
+        },
+        {
+          "model": "ZX2116",
+          "version": "加绒",
+          "size": 39,
+          "color": null,
+          "batch": null,
+          "left_insole_mm": null,
+          "right_insole_mm": null,
+          "left_forefoot_width_mm": null,
+          "right_forefoot_width_mm": null,
+          "left_inner_mm": null,
+          "right_inner_mm": null,
+          "method": null,
+          "photo": null,
+          "notes": null
+        },
+        {
+          "model": "ZX2116",
+          "version": "加绒",
+          "size": 40,
+          "color": null,
+          "batch": null,
+          "left_insole_mm": null,
+          "right_insole_mm": null,
+          "left_forefoot_width_mm": null,
+          "right_forefoot_width_mm": null,
+          "left_inner_mm": null,
+          "right_inner_mm": null,
+          "method": null,
+          "photo": null,
+          "notes": null
+        },
+        {
+          "model": "ZX2116",
+          "version": "加绒",
+          "size": 41,
+          "color": null,
+          "batch": null,
+          "left_insole_mm": null,
+          "right_insole_mm": null,
+          "left_forefoot_width_mm": null,
+          "right_forefoot_width_mm": null,
+          "left_inner_mm": null,
+          "right_inner_mm": null,
+          "method": null,
+          "photo": null,
+          "notes": null
+        },
+        {
+          "model": "ZX2116",
+          "version": "加绒",
+          "size": 42,
+          "color": null,
+          "batch": null,
+          "left_insole_mm": null,
+          "right_insole_mm": null,
+          "left_forefoot_width_mm": null,
+          "right_forefoot_width_mm": null,
+          "left_inner_mm": null,
+          "right_inner_mm": null,
+          "method": null,
+          "photo": null,
+          "notes": null
+        },
+        {
+          "model": "ZX2116",
+          "version": "加绒",
+          "size": 43,
+          "color": null,
+          "batch": null,
+          "left_insole_mm": null,
+          "right_insole_mm": null,
+          "left_forefoot_width_mm": null,
+          "right_forefoot_width_mm": null,
+          "left_inner_mm": null,
+          "right_inner_mm": null,
+          "method": null,
+          "photo": null,
+          "notes": null
+        },
+        {
+          "model": "ZX2116",
+          "version": "加绒",
+          "size": 44,
+          "color": null,
+          "batch": null,
+          "left_insole_mm": null,
+          "right_insole_mm": null,
+          "left_forefoot_width_mm": null,
+          "right_forefoot_width_mm": null,
+          "left_inner_mm": null,
+          "right_inner_mm": null,
+          "method": null,
+          "photo": null,
+          "notes": null
+        },
+        {
+          "model": "ZX2116",
+          "version": "加绒",
+          "size": 45,
+          "color": null,
+          "batch": null,
+          "left_insole_mm": null,
+          "right_insole_mm": null,
+          "left_forefoot_width_mm": null,
+          "right_forefoot_width_mm": null,
+          "left_inner_mm": null,
+          "right_inner_mm": null,
+          "method": null,
+          "photo": null,
+          "notes": null
+        },
+        {
+          "model": "ZX2116",
+          "version": "加绒",
+          "size": 46,
+          "color": null,
+          "batch": null,
+          "left_insole_mm": null,
+          "right_insole_mm": null,
+          "left_forefoot_width_mm": null,
+          "right_forefoot_width_mm": null,
+          "left_inner_mm": null,
+          "right_inner_mm": null,
+          "method": null,
+          "photo": null,
+          "notes": null
+        },
+        {
+          "model": "ZX2116",
+          "version": "加绒",
+          "size": 47,
+          "color": null,
+          "batch": null,
+          "left_insole_mm": null,
+          "right_insole_mm": null,
+          "left_forefoot_width_mm": null,
+          "right_forefoot_width_mm": null,
+          "left_inner_mm": null,
+          "right_inner_mm": null,
+          "method": null,
+          "photo": null,
+          "notes": null
+        }
+      ],
+      "story": [
+        {
+          "time": "0—3秒",
+          "scene": "玄关/裤脚低机位，鞋完整入镜",
+          "action": "46、47标签与同款完整黑白双鞋同框，再手指鞋带",
+          "voice": "有大码需求，也想自己调一调鞋面松紧？",
+          "text": "雷丹森羊 · 加绒款",
+          "check": "开头先看得到真实鞋型，不放货号"
+        },
+        {
+          "time": "3—10秒",
+          "scene": "侧前方中近景、固定相机",
+          "action": "正常松带、穿入、整理鞋舌与后跟、按脚背系带；同一双连续拍",
+          "voice": "这款有鞋带，松紧自己调整，尺码还是先看脚长。",
+          "text": "系带松紧可调",
+          "check": "不加速掩盖穿鞋动作；同款同色"
+        },
+        {
+          "time": "10—16秒",
+          "scene": "桌面柔光，鞋口俯拍再转鞋面",
+          "action": "拿起刚才同一双，手撑鞋口，真实绒里与外鞋轮廓同时入镜",
+          "voice": "加绒里面什么样，拿近给你看。",
+          "text": "同款实物加绒内里",
+          "check": "不得普通版代拍或合成内里"
+        },
+        {
+          "time": "16—24秒",
+          "scene": "同裤同机位，脚踝高度",
+          "action": "黑白与全黑加绒同裤同机位走近站定；46、47分别补标签与实穿",
+          "voice": "黑白和全黑都给你看，大码也按自己的脚长和袜厚来选。",
+          "text": "配色以所选规格为准",
+          "check": "平地自然走，不用跑跳证明性能"
+        },
+        {
+          "time": "24—29秒",
+          "scene": "整鞋与真实尺码标，定格收尾",
+          "action": "实鞋站定，切真实标签，最后品牌文字在画面外",
+          "voice": "雷丹森羊，下单先对脚长、袜厚和本款尺码。",
+          "text": "38—47码｜先看本款选码",
+          "check": "不口播临时优惠或没有测过的脚感"
+        }
+      ],
+      "selection": [
+        {
+          "time": "0—7秒",
+          "scene": "俯拍标签与测脚",
+          "action": "写本款、加绒、颜色、批次和尺码卡；站立测左右脚长与前掌脚围",
+          "voice": "先量两只脚，记清脚长、脚围和袜厚。",
+          "text": "长度单位毫米",
+          "check": "尺子零位与脚跟线同框"
+        },
+        {
+          "time": "7—18秒",
+          "scene": "桌面柔光，量尺近景",
+          "action": "可拆鞋垫平铺量左右长与最宽处，每项两次；不可拆如实记",
+          "voice": "能取鞋垫就平放测，不能取不要硬拆。",
+          "text": "鞋垫长不等于鞋内长",
+          "check": "无内长量具则内长留空"
+        },
+        {
+          "time": "18—30秒",
+          "scene": "正、侧、后上脚连续镜头",
+          "action": "同人同码薄袜与常穿厚袜分别站立走10—20步；记录顶趾、前掌、脚背和后跟",
+          "voice": "合理调好鞋带，再分别看前掌、脚背和后跟。",
+          "text": "本人当下试穿记录",
+          "check": "不替别人保证合脚，不说未测偏大偏小"
+        },
+        {
+          "time": "30—38秒",
+          "scene": "边界尺码标签和表格",
+          "action": "按本款样鞋逐码填写；大码款46/47各自留原照，颜色换楦另测",
+          "voice": "把每个码的实际结果留下来，再给选码建议。",
+          "text": "38—47码逐码测",
+          "check": "不能用标准每码半厘米递增冒充实测"
+        }
+      ]
+    },
+    "ZX9507": {
+      "name": "黑杏全黑大码加绒套脚款",
+      "sample": "黑杏加绒主拍、全黑加绒补拍；38、41/42、46、47先测。外底与鞋口必须是本款。",
+      "photo": "01_产品资产/02_可发布素材/抖店品牌首发/ZX9507/当前优化/实物主图/主图01.png",
+      "sizes": [
+        38,
+        47
+      ],
+      "versions": [
+        "加绒"
+      ],
+      "measurements": [
+        {
+          "model": "ZX9507",
+          "version": "加绒",
+          "size": 38,
+          "color": null,
+          "batch": null,
+          "left_insole_mm": null,
+          "right_insole_mm": null,
+          "left_forefoot_width_mm": null,
+          "right_forefoot_width_mm": null,
+          "left_inner_mm": null,
+          "right_inner_mm": null,
+          "method": null,
+          "photo": null,
+          "notes": null
+        },
+        {
+          "model": "ZX9507",
+          "version": "加绒",
+          "size": 39,
+          "color": null,
+          "batch": null,
+          "left_insole_mm": null,
+          "right_insole_mm": null,
+          "left_forefoot_width_mm": null,
+          "right_forefoot_width_mm": null,
+          "left_inner_mm": null,
+          "right_inner_mm": null,
+          "method": null,
+          "photo": null,
+          "notes": null
+        },
+        {
+          "model": "ZX9507",
+          "version": "加绒",
+          "size": 40,
+          "color": null,
+          "batch": null,
+          "left_insole_mm": null,
+          "right_insole_mm": null,
+          "left_forefoot_width_mm": null,
+          "right_forefoot_width_mm": null,
+          "left_inner_mm": null,
+          "right_inner_mm": null,
+          "method": null,
+          "photo": null,
+          "notes": null
+        },
+        {
+          "model": "ZX9507",
+          "version": "加绒",
+          "size": 41,
+          "color": null,
+          "batch": null,
+          "left_insole_mm": null,
+          "right_insole_mm": null,
+          "left_forefoot_width_mm": null,
+          "right_forefoot_width_mm": null,
+          "left_inner_mm": null,
+          "right_inner_mm": null,
+          "method": null,
+          "photo": null,
+          "notes": null
+        },
+        {
+          "model": "ZX9507",
+          "version": "加绒",
+          "size": 42,
+          "color": null,
+          "batch": null,
+          "left_insole_mm": null,
+          "right_insole_mm": null,
+          "left_forefoot_width_mm": null,
+          "right_forefoot_width_mm": null,
+          "left_inner_mm": null,
+          "right_inner_mm": null,
+          "method": null,
+          "photo": null,
+          "notes": null
+        },
+        {
+          "model": "ZX9507",
+          "version": "加绒",
+          "size": 43,
+          "color": null,
+          "batch": null,
+          "left_insole_mm": null,
+          "right_insole_mm": null,
+          "left_forefoot_width_mm": null,
+          "right_forefoot_width_mm": null,
+          "left_inner_mm": null,
+          "right_inner_mm": null,
+          "method": null,
+          "photo": null,
+          "notes": null
+        },
+        {
+          "model": "ZX9507",
+          "version": "加绒",
+          "size": 44,
+          "color": null,
+          "batch": null,
+          "left_insole_mm": null,
+          "right_insole_mm": null,
+          "left_forefoot_width_mm": null,
+          "right_forefoot_width_mm": null,
+          "left_inner_mm": null,
+          "right_inner_mm": null,
+          "method": null,
+          "photo": null,
+          "notes": null
+        },
+        {
+          "model": "ZX9507",
+          "version": "加绒",
+          "size": 45,
+          "color": null,
+          "batch": null,
+          "left_insole_mm": null,
+          "right_insole_mm": null,
+          "left_forefoot_width_mm": null,
+          "right_forefoot_width_mm": null,
+          "left_inner_mm": null,
+          "right_inner_mm": null,
+          "method": null,
+          "photo": null,
+          "notes": null
+        },
+        {
+          "model": "ZX9507",
+          "version": "加绒",
+          "size": 46,
+          "color": null,
+          "batch": null,
+          "left_insole_mm": null,
+          "right_insole_mm": null,
+          "left_forefoot_width_mm": null,
+          "right_forefoot_width_mm": null,
+          "left_inner_mm": null,
+          "right_inner_mm": null,
+          "method": null,
+          "photo": null,
+          "notes": null
+        },
+        {
+          "model": "ZX9507",
+          "version": "加绒",
+          "size": 47,
+          "color": null,
+          "batch": null,
+          "left_insole_mm": null,
+          "right_insole_mm": null,
+          "left_forefoot_width_mm": null,
+          "right_forefoot_width_mm": null,
+          "left_inner_mm": null,
+          "right_inner_mm": null,
+          "method": null,
+          "photo": null,
+          "notes": null
+        }
+      ],
+      "story": [
+        {
+          "time": "0—3秒",
+          "scene": "玄关/裤脚低机位，鞋完整入镜",
+          "action": "同机位黑杏站定，再切全黑；鞋子完整入镜，标清换色",
+          "voice": "黑杏还是全黑？先看同一条裤子的上脚。",
+          "text": "雷丹森羊 · 加绒款",
+          "check": "开头先看得到真实鞋型，不放货号"
+        },
+        {
+          "time": "3—10秒",
+          "scene": "侧前方中近景、固定相机",
+          "action": "完整拍脚伸入、手整理鞋口和后跟、站稳；不使用一踩即入剪法",
+          "voice": "不用系鞋带，穿好把鞋口整理好，再看看上脚。",
+          "text": "套脚免系带",
+          "check": "不加速掩盖穿鞋动作；同款同色"
+        },
+        {
+          "time": "10—16秒",
+          "scene": "桌面柔光，鞋口俯拍再转鞋面",
+          "action": "拿起刚才同一双，手撑鞋口，真实绒里与外鞋轮廓同时入镜",
+          "voice": "加绒里面什么样，拿近给你看。",
+          "text": "同款实物加绒内里",
+          "check": "不得普通版代拍或合成内里"
+        },
+        {
+          "time": "16—24秒",
+          "scene": "同裤同机位，脚踝高度",
+          "action": "先拍黑杏侧面与整鞋外底，再换全黑；镜头保持相同距离",
+          "voice": "黑杏看配色，全黑看整体，选你平常更常穿的那一种。",
+          "text": "配色以所选规格为准",
+          "check": "平地自然走，不用跑跳证明性能"
+        },
+        {
+          "time": "24—29秒",
+          "scene": "整鞋与真实尺码标，定格收尾",
+          "action": "实鞋站定，切真实标签，最后品牌文字在画面外",
+          "voice": "雷丹森羊，下单先对脚长、袜厚和本款尺码。",
+          "text": "38—47码｜先看本款选码",
+          "check": "不口播临时优惠或没有测过的脚感"
+        }
+      ],
+      "selection": [
+        {
+          "time": "0—7秒",
+          "scene": "俯拍标签与测脚",
+          "action": "写本款、加绒、颜色、批次和尺码卡；站立测左右脚长与前掌脚围",
+          "voice": "先量两只脚，记清脚长、脚围和袜厚。",
+          "text": "长度单位毫米",
+          "check": "尺子零位与脚跟线同框"
+        },
+        {
+          "time": "7—18秒",
+          "scene": "桌面柔光，量尺近景",
+          "action": "可拆鞋垫平铺量左右长与最宽处，每项两次；不可拆如实记",
+          "voice": "能取鞋垫就平放测，不能取不要硬拆。",
+          "text": "鞋垫长不等于鞋内长",
+          "check": "无内长量具则内长留空"
+        },
+        {
+          "time": "18—30秒",
+          "scene": "正、侧、后上脚连续镜头",
+          "action": "同人同码薄袜与常穿厚袜分别站立走10—20步；记录顶趾、前掌、脚背和后跟",
+          "voice": "穿好并整理鞋口，再看前掌、脚背和后跟。",
+          "text": "本人当下试穿记录",
+          "check": "不替别人保证合脚，不说未测偏大偏小"
+        },
+        {
+          "time": "30—38秒",
+          "scene": "边界尺码标签和表格",
+          "action": "按本款样鞋逐码填写；大码款46/47各自留原照，颜色换楦另测",
+          "voice": "把每个码的实际结果留下来，再给选码建议。",
+          "text": "38—47码逐码测",
+          "check": "不能用标准每码半厘米递增冒充实测"
+        }
+      ]
     }
   },
   "still_photo_supplement": {
@@ -599,7 +1631,50 @@
           "03：完整双鞋外底、通用鞋盒和真实随货标签；标签细字单独近拍",
           "04：46、47码分别拍尺码标识与同人同袜试穿原片，按测量表记脚长、脚围和袜厚"
         ]
+      },
+      "M889": {
+        "take": "黑白加绒主拍；全黑、米白加绒各补一双。35、38/39、42、45先测。",
+        "photos": [
+          "01：各色加绒完整双鞋45度正斜面、正面；鞋头和后跟都留完整",
+          "02：完整侧面、后跟、鞋口与真实绒里各一张，外鞋轮廓和内里同框",
+          "03：本款整双外底、真实尺码标、通用鞋盒与随货合格信息正反面",
+          "04：按本款尺码优先级补量尺原照与同人同袜试穿，颜色换楦/批次不同另测"
+        ]
+      },
+      "H7212": {
+        "take": "只拿黑白加绒H7212，不拿外观接近的A1689代替；35、38/39、42、45先测。",
+        "photos": [
+          "01：各色加绒完整双鞋45度正斜面、正面；鞋头和后跟都留完整",
+          "02：完整侧面、后跟、鞋口与真实绒里各一张，外鞋轮廓和内里同框",
+          "03：本款整双外底、真实尺码标、通用鞋盒与随货合格信息正反面",
+          "04：按本款尺码优先级补量尺原照与同人同袜试穿，颜色换楦/批次不同另测"
+        ]
+      },
+      "ZX2116": {
+        "take": "黑白加绒主拍、全黑加绒补配色；38、41/42、46、47先测，大码拿真实样鞋。",
+        "photos": [
+          "01：各色加绒完整双鞋45度正斜面、正面；鞋头和后跟都留完整",
+          "02：完整侧面、后跟、鞋口与真实绒里各一张，外鞋轮廓和内里同框",
+          "03：本款整双外底、真实尺码标、通用鞋盒与随货合格信息正反面",
+          "04：按本款尺码优先级补量尺原照与同人同袜试穿，颜色换楦/批次不同另测"
+        ]
+      },
+      "ZX9507": {
+        "take": "黑杏加绒主拍、全黑加绒补拍；38、41/42、46、47先测。外底与鞋口必须是本款。",
+        "photos": [
+          "01：各色加绒完整双鞋45度正斜面、正面；鞋头和后跟都留完整",
+          "02：完整侧面、后跟、鞋口与真实绒里各一张，外鞋轮廓和内里同框",
+          "03：本款整双外底、真实尺码标、通用鞋盒与随货合格信息正反面",
+          "04：按本款尺码优先级补量尺原照与同人同袜试穿，颜色换楦/批次不同另测"
+        ]
       }
     }
+  },
+  "production_priority": "先交A1689、ZX9002各一条完整主图视频及绒里/标签照；其余4款随后按款拍摄。每款原片可剪商品主视频和选码讲解，第一批不必拍复杂剧情。",
+  "video_delivery": {
+    "main": "先交20—30秒竖拍原片；如后台槽位要求其他比例/时长，按当前规则裁切，保留整鞋与完整动作",
+    "sound": "保留自然同期声；口播可另录干声，每句尾留空；不直接带第三方版权音乐",
+    "editing": "先完整鞋型→实际穿脱/系带→真实绒里→上脚与选码；只用本款素材，品牌放字幕/片尾",
+    "review": "产品身份、鞋型/鞋底/颜色、音画、字幕和平台视频槽位分别审查，上传回读与真实投放另记"
   }
 }

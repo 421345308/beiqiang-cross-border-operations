@@ -29,7 +29,7 @@ const catalog=[];
 for(const [model,p]of Object.entries(plan.models)){
  if(process.argv[4]&&process.argv[4]!=='--review-only'&&model!==process.argv[4])continue;
  if(process.argv[4]==='--review-only'){catalog.push({model,title:p.title,main:p.main_files,details:p.detail_files});continue;}
- const dir=path.join('01_产品资产/02_可发布素材/抖店棉鞋_20261014',model,'优化','详情');await fs.mkdir(dir,{recursive:true});
+ const dir=p.detail_output_dir||path.join('01_产品资产/02_可发布素材/抖店棉鞋_20261014',model,'优化','详情');await fs.mkdir(dir,{recursive:true});
  const pages=[];
  // 1. Interest first: a daily scene and a specific wearing benefit.
  let b=text(56,144,p.benefit_headline[0],78,'#252c27',700)+text(56,237,p.benefit_headline[1],78,'#252c27',700)+text(56,282,p.benefit_subtitle,26,p.accent);
@@ -40,7 +40,7 @@ for(const [model,p]of Object.entries(plan.models)){
  // 2. Explain comfort through visible, real construction; crop the original photo.
  b=head('日常舒适，从合脚开始',p.closure==='套脚'?'免去系鞋带步骤，让日常出门省事一点':p.closure==='系带'?'松紧自己调，穿着更合自己的脚背':'穿前先核对脚型与尺码，日常选鞋更清楚',p.accent);
  b+=await img(p.main_files[0],56,244,688,410,{crop:p.upper_crop,round:22});
- b+=rect(76,596,280,40,'#fff',8,'fill-opacity=".94"')+text(94,624,'鞋面与穿脱结构 · 实拍局部',20,p.accent,600);
+ b+=rect(76,596,280,40,'#fff',8,'fill-opacity=".94"')+text(94,624,'鞋面与穿脱结构 · 实物展示',20,p.accent,600);
  const features=[['针织鞋面','织物鞋面，搭配日常休闲穿着。'],[p.closure==='套脚'?'省去系带步骤':p.closure==='系带'?'脚背松紧自己调':'鞋带装饰外观',p.closure==='套脚'?'套脚鞋口设计，出门少一道系鞋带的步骤。':p.closure==='系带'?'系带可以调整松紧，结合脚背和袜厚选择。':'选码结合脚型与穿袜厚度，合脚是日常舒适的开始。'],p.rear_feature];
  features.forEach((a,i)=>{const y=722+i*142;b+=rect(56,y-31,54,54,p.accent,14)+text(83,y+6,String(i+1).padStart(2,'0'),24,'#fff',700,'text-anchor="middle"')+text(130,y,a[0],36,'#252c27',700)+para(130,y+49,a[1],26,610,'#656e62',39);});
  pages.push(['02_舒适好穿结构讲解',1200,b]);

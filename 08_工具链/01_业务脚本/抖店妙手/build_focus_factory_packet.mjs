@@ -1,5 +1,8 @@
 import fs from 'node:fs/promises';import path from 'node:path';
 const brandLaunch=process.argv.includes('--brand-launch');
+// The live brand packet contains factory inputs and six per-style scripts.
+// Only render that current record; never replace measurements with empty rows.
+if(brandLaunch){await import('./render_brand_factory_packet.mjs');process.exit(0);}
 const root='09_国内电商/抖店',plan=JSON.parse(await fs.readFile(root+'/数据/'+(brandLaunch?'品牌首发商品':'重点商品优化')+'.json','utf8'));
 const common={format:'手机竖拍9:16，1080p以上；每镜留头尾各2秒，单独交原片，不加美颜/瘦身/鞋型变形滤镜；鞋子全程同款同版本，窗边柔光，清洁地面，保留同期声音。',props:['纸、直尺、软尺','薄袜与实际常穿厚袜','两条日常裤子','同款常规和加绒实鞋（只有加绒的款不摆其他鞋代替）'],delivery:'按“款式/版本/颜色/日期/镜头序号”命名；交原视频、量尺原照片和填写结果。拍摄建议不是现成实测结论。',brand:'当前只拍真实现有鞋盒与标识；雷丹森羊Logo/商标及抖店备案待核，不伪造吊牌或把品牌名中的羊当作羊毛材料。'};
 const shot=(time,scene,action,voice,text,check)=>({time,scene,action,voice,text,check});

@@ -1,6 +1,7 @@
 """Read-only CDN pixel acceptance for an existing, verified brand revision."""
 import hashlib
 import json
+import sys
 from pathlib import Path
 from urllib.parse import urlparse
 from urllib.request import Request, urlopen
@@ -8,7 +9,8 @@ from PIL import Image, ImageChops, ImageStat
 
 root = Path('09_国内电商/抖店')
 plan = json.loads((root / '数据/品牌首发商品.json').read_text(encoding='utf-8'))
-for model, product in plan['models'].items():
+for model in (sys.argv[1:] or list(plan['models'])):
+    product = plan['models'][model]
     evidence = root / product['publication']['private_content_evidence']
     file = evidence / 'verification.json'
     verification = json.loads(file.read_text(encoding='utf-8'))

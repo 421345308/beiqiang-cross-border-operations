@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-10-18",
-  "state": "TWO_PRODUCTS_ON_SALE_H5_VERIFIED_FULFILLMENT_HANDOFF_PENDING",
+  "updated_on": "2026-10-19",
+  "state": "SIX_STYLES_ON_SALE_H5_VERIFIED_REAL_VIDEO_AND_APP_PENDING",
   "canonical_entry": "09_国内电商/抖店/README.md",
-  "scope": "首发两款已创建在售，94元减5元券；60字符标题、3张实物主图/款、8屏独立详情/款已回读及H5核验；继续补实拍、实测与面单",
+  "scope": "雷丹森羊新店6款加绒商品已在售：原两款商业字段保留，新增4款按批准94/97减5元券；新旧店对象与素材隔离",
   "evidence": {
     "private_capture": ".local/品牌新店/当前核验/",
     "product_source": "https://bqgcd.sooxie.com/",
     "identity": "复用现有产品身份和真实来源；不新建第二套产品主库",
     "old_store_data": "旧店数据只用于提出选款和售后假设，不能当新店经营基线或品牌款表现",
-    "freshness": "后台状态为2026-10-18读取，不保证后续未变"
+    "freshness": "后台/完整目录及新增来源为2026-10-19读取；后续变化须重取，不将旧店数据当新店表现"
   },
   "brand": {
     "name": "雷丹森羊",
@@ -32,22 +32,22 @@
       "step": 1,
       "action": "核履约与账号执行边界",
       "deliverable": "新店独立身份/会话与产品映射；发退货地址、电子面单、运费、客服及实际承诺清单",
-      "gate": "地址、运费与承诺已配置；新店电子面单尚未开通，须尽快共享旧店中通或新申请网点并核打印发货",
-      "status": "ADDRESS_AND_FREIGHT_SAVED_WAYBILL_NOT_ACTIVE"
+      "gate": "真实地址、运费和承诺已配置；中通从原店共享给新店，平台显示已生效。首次正常订单打印尚待验证。",
+      "status": "ADDRESS_FREIGHT_SAVED_ZTO_SHARED_ACTIVE"
     },
     {
       "step": 2,
-      "action": "两款首发内容与基础装修并行准备",
-      "deliverable": "每款60字符标题、3张实物主图、8屏独立详情、逐色规格图与独立尺码组件；实拍和装修仍为准备",
+      "action": "6款商品内容与基础装修并行",
+      "deliverable": "每款60字符标题、3张实物主图、8屏讲解详情；11张逐色规格图、116SKU。装修仍为准备。",
       "gate": "真实样品、款色版本对应、商业字段和当前类目规则完整；不以图数充当质量通过",
-      "status": "TWO_PRODUCTS_ON_SALE_CONTENT_REVISED"
+      "status": "SIX_STYLES_ON_SALE_CONTENT_VERIFIED"
     },
     {
       "step": 3,
       "action": "发布与买家闭环验收",
       "deliverable": "审核通过；手机端主详情、规格、运费、领券资格与应付价一致；测试限于正常预览或真实交易，不刷单造评",
       "gate": "商品、页面、实际交付匹配；官方账号路径按真实账号条件确定",
-      "status": "AUDIT_BACKEND_PIXELS_H5_PASSED_APP_PENDING"
+      "status": "SIX_AUDIT_BACKEND_PIXELS_H5_PASSED_APP_PENDING"
     },
     {
       "step": 4,
@@ -58,61 +58,130 @@
     },
     {
       "step": 5,
-      "action": "按真实缺口扩品与完善装修",
-      "deliverable": "先增加第三款，再逐批扩至6款不同真实商品；达到有效商品条件后再启用精选页",
-      "gate": "先有当前商品验收、内容反馈和履约能力；继续观察退款成熟度。不复制同款链接凑精选页门槛",
-      "status": "PROPOSED"
+      "action": "按本轮授权先扩至6款，再补视频与装修承接",
+      "deliverable": "新增M889、H7212、ZX2116、ZX9507，只上各自加绒颜色尺码，不复制重复链接",
+      "gate": "本轮已完成来源、内容、商业与正式验收；下一批依据款式缺口及反馈，不把等待7日设为本轮扩品前置条件。",
+      "status": "SIX_DISTINCT_STYLES_ON_SALE"
     }
   ],
   "first_products": [
     {
       "model": "A1689",
       "priority": 1,
-      "role": "日常套脚便利候选",
+      "role": "套脚免系带与日常搭配",
       "product_reference": "数据/品牌首发商品.json#models.A1689",
       "why": "结构容易用连续穿鞋动作解释，既有真实来源和图文可复用；旧店尺码售后提示须先解决版本选择",
-      "initial_scope": "黑白加绒、全黑加绒；35—45码，本轮只准备加绒",
+      "initial_scope": "黑白加绒、全黑加绒；35—45码；只售加绒",
       "title_draft": "雷丹森羊冬季加绒棉鞋男针织一脚蹬免系带套脚保暖黑白全黑休闲鞋",
-      "title_condition": "仅在两版本实际同时上架时使用常规加绒可选；男女类目及具体人群词随实际所选类目与销售范围核",
-      "hero_brief": "主图完整实物、多角度，无叠加卖点文字；讲解放独立详情和视频",
-      "first_shoot": "门口拿钥匙准备出门，连续拍脚入鞋、手提后跟、站稳迈步；再拍鞋口、内里和整鞋侧面。开头：出门穿鞋，不想再系一遍鞋带。",
-      "fit_priority": "实测常规/加绒样鞋，记录试穿脚长、脚围、袜子和选码感受，核脚背进入和后跟；不直接全店建议大一码",
-      "readiness": "已在售；正式字段/SKU、媒体内容顺序及H5标题/94减5/详情通过；App选码核销、补拍实测及随货标签待办"
+      "title_condition": "当前正式在售标题60字符；货号仅供内部拿鞋，不作为消费者关键词",
+      "hero_brief": "3张真实主图无叠加文案；8屏详情解释本款结构、颜色、脚长参考及服务",
+      "first_shoot": "按数据/品牌首发实测与拍摄.json#models.A1689执行完整穿鞋/系带、真实绒里、上脚与逐码实测",
+      "fit_priority": "先35、38/39、42、45，再补其余码；颜色换楦另测",
+      "readiness": "已在售；审核、正式字段/SKU、平台媒体像素和H5标题/主详情/券后价通过；真实视频、实测、App规格与实际核销待办",
+      "commercial": {
+        "sale_price_cny": 94,
+        "coupon_cny": 5,
+        "target_price_cny": 89
+      }
     },
     {
       "model": "ZX9002",
       "priority": 2,
-      "role": "秋冬男士加绒与大码候选",
+      "role": "套脚免系带与日常搭配",
       "product_reference": "数据/品牌首发商品.json#models.ZX9002",
       "why": "加绒套脚及38—47码提供不同选购需求；旧店曝光样本过少，不能据此认定需求已验证或失败",
-      "initial_scope": "深灰黑加绒；38—47码，本轮只准备加绒",
+      "initial_scope": "深灰黑加绒；38—47码；只售加绒",
       "title_draft": "雷丹森羊冬季加绒棉鞋男针织一脚蹬免系带套脚保暖大码日常休闲鞋",
-      "title_condition": "当前均为候选，最终按新店类目字段、字数及款式资料校验",
-      "hero_brief": "主图完整实物、多角度，无叠加卖点文字；讲解放独立详情和视频",
-      "first_shoot": "同一双鞋先拍整鞋和翻开鞋口的真实绒里，再连续穿上配日常长裤走几步。开头：买加绒鞋，先看清楚里面和上脚是什么样。",
-      "fit_priority": "补大码46/47真实样鞋与袜子试穿，记录脚长及鞋内空间；28/28.5厘米仍是标准参考脚长，不冒充鞋内长",
-      "readiness": "已在售；正式字段/SKU、媒体内容顺序及H5标题/94减5/详情通过；App选码核销、补拍实测及随货标签待办"
+      "title_condition": "当前正式在售标题60字符；货号仅供内部拿鞋，不作为消费者关键词",
+      "hero_brief": "3张真实主图无叠加文案；8屏详情解释本款结构、颜色、脚长参考及服务",
+      "first_shoot": "按数据/品牌首发实测与拍摄.json#models.ZX9002执行完整穿鞋/系带、真实绒里、上脚与逐码实测",
+      "fit_priority": "先38、41/42、46、47，再补其余码；标准脚长不是鞋内长",
+      "readiness": "已在售；审核、正式字段/SKU、平台媒体像素和H5标题/主详情/券后价通过；真实视频、实测、App规格与实际核销待办",
+      "commercial": {
+        "sale_price_cny": 94,
+        "coupon_cny": 5,
+        "target_price_cny": 89
+      }
     },
     {
       "model": "M889",
       "priority": 3,
-      "role": "偏好系带调节的第三候选",
-      "product_reference": "数据/重点商品优化.json#models.M889",
+      "role": "系带松紧调整与日常搭配",
+      "product_reference": "数据/品牌首发商品.json#models.M889",
       "why": "与前两款结构不同，可用系带松紧调整作可见差别；历史混款及退款不能直接当新品牌款表现",
-      "initial_scope": "逐版核普通/加绒和颜色照片；不继承旧混款、历史停售SKU或旧商品优惠",
-      "title_draft": "雷丹森羊针织系带休闲鞋男女日常通勤常规加绒可选",
-      "title_condition": "两版本、人群及类目实际匹配后再用；货号不放消费者标题",
-      "hero_brief": "突出实际鞋带、完整轮廓和真实上脚，讲清与套脚款的选购区别",
-      "first_shoot": "真实系带与松紧调节特写，普通/加绒各拍鞋口；同人同袜试穿记录，不宣传适合所有脚型",
-      "fit_priority": "版本与脚背空间优先，排除旧混款资料；不复用A1689测量结果",
-      "readiness": "第二阶段候选；先完成版本与实测"
+      "initial_scope": "黑白加绒、全黑加绒、米白加绒；35—45码；只售加绒",
+      "title_draft": "雷丹森羊冬季加绒棉鞋男针织系带松紧可调黑白全黑米白日常休闲鞋",
+      "title_condition": "当前正式在售标题60字符；货号仅供内部拿鞋，不作为消费者关键词",
+      "hero_brief": "3张真实主图无叠加文案；8屏详情解释本款结构、颜色、脚长参考及服务",
+      "first_shoot": "按数据/品牌首发实测与拍摄.json#models.M889执行完整穿鞋/系带、真实绒里、上脚与逐码实测",
+      "fit_priority": "先35、38/39、42、45，再补其余码；颜色换楦另测",
+      "readiness": "已在售；审核、正式字段/SKU、平台媒体像素和H5标题/主详情/券后价通过；真实视频、实测、App规格与实际核销待办",
+      "commercial": {
+        "sale_price_cny": 94,
+        "coupon_cny": 5,
+        "target_price_cny": 89
+      }
+    },
+    {
+      "model": "H7212",
+      "priority": 4,
+      "role": "套脚免系带与日常搭配",
+      "product_reference": "数据/品牌首发商品.json#models.H7212",
+      "initial_scope": "黑白加绒；35—45码；只售加绒",
+      "title_draft": "雷丹森羊冬季加绒棉鞋男针织一脚蹬免系带包头低帮黑白日常休闲鞋",
+      "title_condition": "当前正式在售标题60字符；货号仅供内部拿鞋，不作为消费者关键词",
+      "hero_brief": "3张真实主图无叠加文案；8屏详情解释本款结构、颜色、脚长参考及服务",
+      "first_shoot": "按数据/品牌首发实测与拍摄.json#models.H7212执行完整穿鞋/系带、真实绒里、上脚与逐码实测",
+      "fit_priority": "先35、38/39、42、45，再补其余码；颜色换楦另测",
+      "readiness": "已在售；审核、正式字段/SKU、平台媒体像素和H5标题/主详情/券后价通过；真实视频、实测、App规格与实际核销待办",
+      "commercial": {
+        "sale_price_cny": 94,
+        "coupon_cny": 5,
+        "target_price_cny": 89
+      }
+    },
+    {
+      "model": "ZX2116",
+      "priority": 5,
+      "role": "系带松紧调整与日常搭配",
+      "product_reference": "数据/品牌首发商品.json#models.ZX2116",
+      "initial_scope": "黑白加绒、全黑加绒；38—47码；只售加绒",
+      "title_draft": "雷丹森羊冬季加绒棉鞋男针织系带松紧可调大码黑白全黑日常休闲鞋",
+      "title_condition": "当前正式在售标题60字符；货号仅供内部拿鞋，不作为消费者关键词",
+      "hero_brief": "3张真实主图无叠加文案；8屏详情解释本款结构、颜色、脚长参考及服务",
+      "first_shoot": "按数据/品牌首发实测与拍摄.json#models.ZX2116执行完整穿鞋/系带、真实绒里、上脚与逐码实测",
+      "fit_priority": "先38、41/42、46、47，再补其余码；标准脚长不是鞋内长",
+      "readiness": "已在售；审核、正式字段/SKU、平台媒体像素和H5标题/主详情/券后价通过；真实视频、实测、App规格与实际核销待办",
+      "commercial": {
+        "sale_price_cny": 97,
+        "coupon_cny": 5,
+        "target_price_cny": 92
+      }
+    },
+    {
+      "model": "ZX9507",
+      "priority": 6,
+      "role": "套脚免系带与日常搭配",
+      "product_reference": "数据/品牌首发商品.json#models.ZX9507",
+      "initial_scope": "黑杏加绒、全黑加绒；38—47码；只售加绒",
+      "title_draft": "雷丹森羊冬季加绒棉鞋男针织一脚蹬免系带大码黑杏全黑日常休闲鞋",
+      "title_condition": "当前正式在售标题60字符；货号仅供内部拿鞋，不作为消费者关键词",
+      "hero_brief": "3张真实主图无叠加文案；8屏详情解释本款结构、颜色、脚长参考及服务",
+      "first_shoot": "按数据/品牌首发实测与拍摄.json#models.ZX9507执行完整穿鞋/系带、真实绒里、上脚与逐码实测",
+      "fit_priority": "先38、41/42、46、47，再补其余码；标准脚长不是鞋内长",
+      "readiness": "已在售；审核、正式字段/SKU、平台媒体像素和H5标题/主详情/券后价通过；真实视频、实测、App规格与实际核销待办",
+      "commercial": {
+        "sale_price_cny": 97,
+        "coupon_cny": 5,
+        "target_price_cny": 92
+      }
     }
   ],
   "visual_and_store": {
-    "principle": "同一品牌文字、两款差异清楚、真实照片与生活情境优先；不直接把工厂目录改成零售首页",
+    "principle": "同一品牌文字，6款按穿脱、系带、颜色与尺码选择；不直接把工厂目录改成零售首页",
     "starter_modules": [
       "品牌文字与一句日常出门定位草案，使用现有真实产品照片",
-      "两款对照入口：套脚日常 / 秋冬加绒大码，第三款就绪后增加系带可调",
+      "6款选款入口：套脚免系带 / 系带松紧可调 / 38—47大码，按真实结构与商品关联",
       "各款真实内里、配色和上脚内容；售卖规格必须对应",
       "选码入口与客服说明，标准参考和实测样本分开标注",
       "按新店已配置的运费、发货及退换规则展示服务，不照抄旧店承诺"
@@ -123,7 +192,7 @@
     "catalog_expansion": "按人群、季节、结构及尺码缺口增款，不为凑装修数量拆重复链接"
   },
   "pricing_and_test": {
-    "state": "94_MINUS_5_ACTIVE_BUDGET_UNDECIDED",
+    "state": "94_OR_97_MINUS_5_ACTIVE_BUDGET_UNDECIDED",
     "rule": "不沿搬旧店标价、券、活动或自动执行进价加30%；品牌名称不是任意溢价的证据",
     "inputs": [
       "逐款成本",
@@ -168,41 +237,64 @@
     }
   ],
   "execution": {
-    "updated_on": "2026-10-18",
+    "updated_on": "2026-10-19",
     "content": "数据/品牌首发商品.json",
     "measurement_and_shooting": "数据/品牌首发实测与拍摄.json",
     "review": ".local/品牌首发图文审核.html",
     "factory_packet": ".local/品牌首发实测与拍摄.html",
-    "http": "独立品牌店会话；写入前核服务端身份；商品完整分页2、草稿0。创建及图文修订均有成功回执和审核通过",
+    "http": "独立品牌店会话正常续期；完整目录6、草稿0。4款一次正式创建、审核及SKU回读通过，原2款双基线保护通过",
     "uploaded": {
-      "main_current": 6,
-      "detail_current": 16,
-      "color_current": 3,
-      "total_current": 25
+      "main_current": 18,
+      "detail_current": 48,
+      "color_current": 11,
+      "total_current": 77
     },
     "decoration": "文字头像、店招和2张广告静态草案已准备，未发布或投放；正式装修槽位待核",
     "address": "真实发退货地址已保存，默认发货与退货生效；具体联系人/电话/地址仅留.local",
-    "freight": "新店独立模板：默认包邮；新疆、西藏首双18元、每加一双20元；两款正式字段已绑定",
+    "freight": "新店独立模板：默认包邮；新疆、西藏首双18元、每加一双20元，6款已绑定",
     "commercial_proposal": {
-      "sale_price_cny": 94,
       "coupon_cny": 5,
-      "after_coupon_cny": 89,
-      "scope": "负责人批准且已应用：两款标价94元；公开5元商品券已生效，重新打开核两款范围和预计89元，H5同显89元",
+      "price_by_model": {
+        "A1689": {
+          "sale_price_cny": 94,
+          "target_price_cny": 89
+        },
+        "ZX9002": {
+          "sale_price_cny": 94,
+          "target_price_cny": 89
+        },
+        "M889": {
+          "sale_price_cny": 94,
+          "target_price_cny": 89
+        },
+        "H7212": {
+          "sale_price_cny": 94,
+          "target_price_cny": 89
+        },
+        "ZX2116": {
+          "sale_price_cny": 97,
+          "target_price_cny": 92
+        },
+        "ZX9507": {
+          "sale_price_cny": 97,
+          "target_price_cny": 92
+        }
+      },
+      "scope": "负责人分档定价已应用；原5元商品券扩至6款，重新打开及6款H5券后89/92均通过",
       "unit_cost_estimate_cny": 50,
-      "profit": "负责人近似货成本；运费、售后、平台费用与投流未知，差额不等于净利润",
-      "coupon_window": "2026-10-18至2026-11-17 23:59:59，自动续期关闭；到期前复核，不承诺永久优惠"
+      "profit": "约50元为负责人近似货成本；ZX2116/ZX9507当前供应公开标58元，仅为来源标价非结算成本；逐款再核费用与投流，差额不是净利润",
+      "coupon_window": "2026-10-18至2026-11-17 23:59:59，公开领取、不限发放/每人，自动续期关闭"
     },
     "pending_user": [
-      "从旧店电子面单共享中通给新店，或取得旧店生成的授权码；当前新店入口已保留",
-      "手机App抽核颜色尺码及领券后订单应付价；不创建虚假订单"
+      "手机App抽核各款颜色尺码、偏远地区运费及领券后真实订单应付价；不创建虚假订单"
     ],
     "pending_factory": [
-      "A1689加绒逐码实测，优先35、38/39、42、45",
-      "ZX9002真实绒里近拍和38、41/42、46/47优先试穿，再补齐其他码",
-      "A1689黑白/全黑加绒各补完整双鞋正斜面、鞋口绒里、后跟；两款真实随货合格证/标识标签"
+      "先A1689、ZX9002各一条完整实鞋主图视频、真实绒里/随货标签",
+      "其余4款按12条分款脚本拍摄，不混普通版或别款",
+      "63行加绒逐码实测；大码款先46/47，其余款先边界与主销码，结果未知仍留空"
     ],
-    "next": "完成面单共享与App终验；按拍摄单补真实双鞋/绒里/标签及逐码试穿，再启动真实内容和有预算的测试",
-    "waybill": "NOT_ACTIVE：新店获取共享面单入口已打开，待旧店中通网点共享/授权码；未冒称已开通",
+    "next": "完成真实主图视频及选码补拍，视频审核通过后上传；核官方账号条件与装修槽位，再根据同窗口点击、成交、退款和成本提交预算方案。当前不新增投流",
+    "waybill": "SHARED_ACTIVE：平台共享给我页面显示原店中通洛江马甲镇网点已生效；首次正常订单打印待核",
     "content_sop": "商品内容SOP.md"
   }
 }
