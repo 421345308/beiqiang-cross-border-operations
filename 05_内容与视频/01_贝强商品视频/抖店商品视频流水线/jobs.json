@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-16",
+  "updated": "2026-10-19",
   "jobs": [
     {
       "job_id": "ZX9507-V05",
@@ -26,6 +26,15 @@
       "change": "Visible cuff-styling action, grey/black detail, natural steps and relevant outfit-choice question.",
       "preview": "../ZX9002_抖店生活化带货/edit/V01/ZX9002_V01_裤脚露鞋型_青年分享.mp4",
       "qa": "../ZX9002_抖店生活化带货/edit/V01/QA_REPORT.md",
+      "published": false
+    },
+    {
+      "job_id": "ZX9507-R01",
+      "project": "../ZX9507_抖店生活化带货/PROJECT.md",
+      "manifest": "../ZX9507_抖店生活化带货/main_video_R01_plan.json",
+      "stage": "RESEARCH_AND_STORYBOARD_READY_NO_NEW_GENERATION",
+      "product": "ZX9507",
+      "change": "品牌新店主图：结构仿写＋实物多角度参考，优先保真；现有音轨候选复用",
       "published": false
     }
   ],

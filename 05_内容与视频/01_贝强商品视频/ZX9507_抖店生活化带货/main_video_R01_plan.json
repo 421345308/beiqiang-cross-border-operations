@@ -1,0 +1,66 @@
+{
+  "candidate_id": "R01_BRAND_MAIN_VIDEO",
+  "updated_on": "2026-10-19",
+  "status": "STORYBOARD_READY_REFERENCE_SELECTION_AND_CURRENT_PAID_CONFIRMATION_PENDING",
+  "channel": "国内抖店雷丹森羊品牌店",
+  "product_reference": "09_国内电商/抖店/数据/品牌首发商品.json#models.ZX9507",
+  "color": "黑杏加绒",
+  "platform_proposal": "沿已打通LibTV",
+  "model_proposal": "Seedance 2.5",
+  "model_key": "star-video2.5",
+  "upstream_build": "provider not disclosed",
+  "proposed_parameters": {
+    "count": 1,
+    "duration": 15,
+    "ratio": "9:16",
+    "resolution": "720p",
+    "enableSound": "off"
+  },
+  "mode_selection": "mixed2video仅在具体参考视频已观看并绑定后；只用图片则image2video，提交前按当前schema复核",
+  "references": [
+    {
+      "file": "sources/product_factory_white.jpg",
+      "sha256": "5bb25db02e42f6db3d3d7355ea868330eebda151673cb80e812a5d20904344f3",
+      "role": "同款外部可见结构，不证明内里"
+    },
+    {
+      "file": "sources/product_factory_side.jpg",
+      "sha256": "ee66ec520cff043c9d67759a6462159508d836e68faa62456497b73412ef6f72",
+      "role": "同款外部可见结构，不证明内里"
+    },
+    {
+      "file": "sources/product_factory_sole.jpg",
+      "sha256": "33c266a6fd6e30864bb6ffa067f19b11be83b313cc586c9a9e37f82b52aa1664",
+      "role": "外底可见结构，非性能测试"
+    },
+    {
+      "file": "sources/product_factory_pair.jpg",
+      "sha256": "0ee30dc8e4dd32778da13be296fb89a31dc61b720c594d14b3c9e705bfb06425",
+      "role": "黑杏加绒双鞋原件"
+    }
+  ],
+  "prompt_path": "prompts/main_video_R01.txt",
+  "prompt_sha256": "1ab698595ebbe3b598e41428d6dba839b53019ab61b1bdd7abbbf56c2f178850",
+  "reference_video": null,
+  "reference_video_status": "尚未选定新的高互动成片；完整鞋类教程仅作制作方法参考，不冒称爆款已验",
+  "audio": "计划复用V05青年配音方向及已有BGM；实际是否适配须后期听看，不新增人声或音乐任务",
+  "quote": null,
+  "quote_state": "未取得本条积分/人民币数值，参考视频时长计费须一并核",
+  "paid_execution_authorized": false,
+  "generation_submitted": false,
+  "publication": false,
+  "first_review": [
+    "鞋头与套脚鞋口",
+    "黑杏分界与侧面比例",
+    "织纹和底纹与真实图对应",
+    "左右鞋及脚底接地",
+    "产品在首秒与全片占比",
+    "完整声音与字幕",
+    "平台主图槽位规格/AI标识及实际上传回读"
+  ],
+  "unresolved": [
+    "具体参考片完整观看与热度依据",
+    "当次单条付费确认与报价",
+    "平台主图视频槽位要求及HTTP上传字段实测"
+  ]
+}
