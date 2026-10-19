@@ -38,7 +38,7 @@
   {
     "scheduled_slot": "2026-10-19T21:00:00+08:00",
     "folder": "Post_02_BQ004_Online_Sellers",
-    "status": "PREPARED_NOT_PUBLISHED",
+    "status": "NOT_PUBLISHED_PAGE_LOAD_FAILURE",
     "sku": "BQ004 / A502",
     "photo_count": 4,
     "facts": "产品与链接台账.json + 对应00_上架填写表.md；普通楦，不用宽头或Hands Free主张；无库存、MOQ、运费或交期承诺",
@@ -67,6 +67,7 @@
         "file": "04_BQ004_black_white.jpg",
         "sha256": "CC9A3A5C967B3184CDAF010193288F3D9D50144B1C30E8F11998E2B3357B338A"
       }
-    ]
+    ],
+    "failure": "2026-10-19 21:00 Chrome connected; original/new tabs remain Facebook loading page after normal refresh; no composer or submit. Draft retained, no catch-up."
   }
 ]
