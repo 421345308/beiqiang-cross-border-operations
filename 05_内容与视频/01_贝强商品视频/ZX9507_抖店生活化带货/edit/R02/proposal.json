@@ -1,0 +1,139 @@
+{
+  "schema": "beiqiang-reference-adaptation-v1",
+  "updated": "2026-10-19",
+  "product": "ZX9507黑杏加绒针织套脚休闲鞋",
+  "brand": "雷丹森羊",
+  "status": "STORYBOARD_AND_SOURCE_CHECKED_PROVIDER_UNBOUND",
+  "positioning": "秋冬暖和，也穿得好看；加绒针织休闲穿搭",
+  "reference": {
+    "id": "7649978280061308186",
+    "url": "https://www.douyin.com/video/7649978280061308186",
+    "author": "回力登顶专卖店",
+    "published_at": "2026-06-11 15:00",
+    "duration_seconds": 19.033333,
+    "sha256": "22c7139f272b9951e8b5010f7cc7808834e6281cc6cf90c17d18623a7d432bd7",
+    "likes": 517,
+    "observed_on": "2026-10-19",
+    "label": "相近针织鞋拍法参考，不称大爆款"
+  },
+  "treatment": {
+    "wardrobe": "米白直筒长裤、浅灰袜、灰色袖口",
+    "scene": "暖灰空间、哑光灰地面、深棕木凳",
+    "product_images": [
+      "../../sources/product_factory_white.jpg",
+      "../../sources/product_factory_sole.jpg"
+    ],
+    "narration": "秋冬穿鞋，暖和也要好看。黑色针织，杏色造型底，配长裤就挺利落。加绒款，套脚免系带。雷丹森羊，出门换个新感觉。",
+    "captions": "后期按实际成片对齐；不是承诺生成模型逐字准确",
+    "shots": [
+      {
+        "id": "S1",
+        "target": [
+          0,
+          2.3
+        ],
+        "source": [
+          0,
+          3.5
+        ],
+        "frame": "0_600",
+        "title": "先让人看见：秋冬也能穿得利落",
+        "action": "后侧三分之四机位，双脚错开，小幅转脚露出杏色底侧。第一帧就是完整上脚鞋，不拍空房间开场。",
+        "transfer": "保留原片开场鞋占画面主体、脚跟转向带出底型的关系。",
+        "caption": "秋冬，也要穿得利落"
+      },
+      {
+        "id": "S2",
+        "target": [
+          2.3,
+          4.5
+        ],
+        "source": [
+          4.8,
+          6.7
+        ],
+        "frame": "6_600",
+        "title": "点地转脚，让造型底有存在感",
+        "action": "一脚轻点地、脚跟略抬，镜头顺着鞋外侧移动；看到鞋头到后跟的完整杏色轮廓。动作自然，不大力折鞋。",
+        "transfer": "保留脚尖接地、脚跟抬起时鞋底侧形变化；减少挤压，避免生成极端变形。",
+        "caption": "黑色针织 × 杏色造型底"
+      },
+      {
+        "id": "S3",
+        "target": [
+          4.5,
+          8.2
+        ],
+        "source": [
+          6.7,
+          11.7
+        ],
+        "frame": "10_500",
+        "title": "直筒长裤配这双，干净不拖沓",
+        "action": "从侧面换重心到正侧三分之四，米白直筒长裤落在鞋口上方，鞋头和造型底一直露出来。",
+        "transfer": "保留连续换角度展示上脚比例；裸腿改长裤，蓝色布景改暖灰空间。",
+        "caption": "秋冬长裤，也能搭得清爽"
+      },
+      {
+        "id": "S4",
+        "target": [
+          8.2,
+          12.4
+        ],
+        "source": [
+          12,
+          16.7
+        ],
+        "frame": "12_500",
+        "title": "手带着视线，看针织与套脚口",
+        "action": "模特半蹲，手指从鞋面轻轻带到鞋口，近看针织分区与免系带结构；保持一只完整鞋可读，触碰不遮满鞋。",
+        "transfer": "保留手部把注意力带向鞋面的讲解关系；不复制原片的鞋带孔和夏季薄网面。",
+        "caption": "加绒款 · 套脚免系带"
+      },
+      {
+        "id": "S5",
+        "target": [
+          12.4,
+          15
+        ],
+        "source": [
+          16.7,
+          19.03
+        ],
+        "frame": "18_600",
+        "title": "完整上脚收尾，记住雷丹森羊",
+        "action": "模特起身、双脚落稳，鞋子保持黑杏配色和原款轮廓。后期出现品牌字样，鞋身保持无Logo。",
+        "transfer": "保留由近景回到完整双鞋的落点，原品牌、台词、配乐和道具全部另做。",
+        "caption": "雷丹森羊｜秋冬加绒针织鞋"
+      }
+    ]
+  },
+  "planned_generation": {
+    "provider": "LibTV",
+    "model": "Seedance 2.5",
+    "duration_seconds": 15,
+    "count": 1,
+    "resolution": "720p",
+    "ratio": "9:16",
+    "sound": true,
+    "authorized": false,
+    "submitted": false,
+    "actual_cost": null,
+    "account_quote": null
+  },
+  "actual_this_phase": {
+    "video_generations": 0,
+    "image_generations": 0,
+    "audio_generations": 0,
+    "cloud_transcriptions": 0,
+    "local_asr": "复用已安装Whisper small权重，对19秒参考完成本地转写；非完整主观听审"
+  },
+  "workflow": {
+    "source": "hypit/whole.svml",
+    "run": "hypit/whole.svrun",
+    "platform_bindings": null,
+    "note": "Source/Run可先本地检查；后续实际执行仍需本项目LibTV素材绑定及当前报价，不借旧任务节点、不执行Build。",
+    "verification": "verification.json",
+    "execution_ready": false
+  }
+}

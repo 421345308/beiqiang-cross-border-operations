@@ -1,0 +1,26 @@
+<?svml using="@hypit/markup@1"?>
+<svml>
+  <import as="text" from="@hypit/text@1"/>
+  <import as="media" from="@hypit/media@1"/>
+  <import as="seedance" from="@hypit/seedance@1"/>
+  <text:Value id="direction">制作一条15秒、9:16、720p的中文秋冬针织休闲鞋穿搭短片。
+@视频1 只负责转脚、点地、侧身换角度、半蹲手带鞋面、完整双鞋收尾的动态关系与低机位拍法；将19秒原片的有效动作压成15秒。新片商品、长裤、空间、口播、音乐全部按下列说明重建，不复用原片文字、品牌、人物身份或配乐。
+@图片1 是本片唯一商品的真实整体外观，@图片2 补充真实鞋底形状。两图为同一款ZX9507黑杏加绒针织套脚休闲鞋：黑色针织鞋面，低帮套脚鞋口，无鞋带、无扣带、无鞋身Logo，杏色连续不规则圆润块状造型底。保持鞋头比例、针织分区、黑杏边界与底侧起伏，不能变成参考片的橙色系带网鞋。图片2的独立展示外底不进入场景。
+成年男性只拍腰以下和手，米白直筒长裤、浅灰袜、灰色袖口；暖灰拍摄角落、哑光灰地面、背景一角深棕木凳，柔和中性偏暖日光。整体是利落好看的秋冬穿搭，不是居家棉拖广告。
+0—2.3秒：后侧三分之四双鞋，小幅转脚露出杏色底侧，鞋先抓住注意力。
+2.3—4.5秒：一脚轻点地、脚跟略抬，低机位沿外侧看完整鞋型，动作轻，不猛折压鞋。
+4.5—8.2秒：侧面换重心到正侧三分之四，看长裤与黑杏配色，双鞋接地连贯。
+8.2—12.4秒：半蹲，手从鞋面轻带到套脚口，触碰轻柔，完整鞋形和针织细节可读。
+12.4—15秒：起身，双脚落稳，完整鞋子结束。
+声音：年轻自然的普通话男声画外音，像分享穿搭，不扮真实买家见证。轻快低音量器乐与自然脚步声，原创声音，不沿用参考或旧片音轨。
+旁白：秋冬穿鞋，暖和也要好看。黑色针织，杏色造型底，配长裤就挺利落。加绒款，套脚免系带。雷丹森羊，出门换个新感觉。
+画面不生成字幕和品牌文字，后期添加准确字幕及雷丹森羊字样；不生成价格、销量或性能测试。</text:Value>
+  <media:Video id="reference" src="./assets/reference/7649978280061308186.mp4"/>
+  <media:Image id="product1" src="./assets/product/product_factory_white.jpg"/>
+  <media:Image id="product2" src="./assets/product/product_factory_sole.jpg"/>
+  <seedance:ReferenceVideo id="whole" model="2.5" prompt={direction} duration="15" resolution="720p" aspect-ratio="9:16" generate-audio="true">
+    <seedance:Reference video={reference}/>
+    <seedance:Reference image={product1}/>
+    <seedance:Reference image={product2}/>
+  </seedance:ReferenceVideo>
+</svml>

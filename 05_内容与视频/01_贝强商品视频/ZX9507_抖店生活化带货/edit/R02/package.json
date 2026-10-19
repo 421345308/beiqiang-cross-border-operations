@@ -1,0 +1,34 @@
+{
+  "provider": "LibTV",
+  "model": "Seedance 2.5",
+  "task": "reference_generation_not_video_edit",
+  "product_id": "ZX9507",
+  "count": 1,
+  "duration_seconds": 15,
+  "resolution": "720p",
+  "ratio": "9:16",
+  "sound": true,
+  "reference_video": {
+    "path": "references/7649978280061308186/7649978280061308186.mp4",
+    "duration_seconds": 19.033333,
+    "sha256": "22c7139f272b9951e8b5010f7cc7808834e6281cc6cf90c17d18623a7d432bd7"
+  },
+  "reference_images": [
+    {
+      "path": "../../sources/product_factory_white.jpg",
+      "binding": "@图片1",
+      "sha256": "5bb25db02e42f6db3d3d7355ea868330eebda151673cb80e812a5d20904344f3",
+      "status": "visually_checked_real_same_sku"
+    },
+    {
+      "path": "../../sources/product_factory_sole.jpg",
+      "binding": "@图片2",
+      "sha256": "33c266a6fd6e30864bb6ffa067f19b11be83b313cc586c9a9e37f82b52aa1664",
+      "status": "visually_checked_real_same_sku"
+    }
+  ],
+  "prompt_path": "direction.txt",
+  "prompt_sha256": "77628fbf6e5340521e89ea1e68e378057f5f6f0a0e40c2040233802f1130866a",
+  "planned_discard_windows": [],
+  "libtv": null
+}

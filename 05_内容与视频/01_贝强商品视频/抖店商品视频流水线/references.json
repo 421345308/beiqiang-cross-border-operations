@@ -3,7 +3,8 @@
   "acquisition_notes": [
     "Firecrawl unavailable; public web search used.",
     "Anonymous Douyin search requires login; did not bypass it or ask user to log in for unrelated prep.",
-    "Bilibili source downloaded publicly at 720p using yt-dlp; no cookies, credentials or premium bypass."
+    "Bilibili source downloaded publicly at 720p using yt-dlp; no cookies, credentials or premium bypass.",
+    "2026-10-19 Chrome已登录页面正常搜索可用；R02两条原片按页面实际资源下载并核ID/时长，不导出cookies。"
   ],
   "references": [
     {
@@ -71,6 +72,47 @@
       "source_sha256": "87e545e45ebdb671d348863f1441162c5d6cba910084e33cae9bfdeebfe84311",
       "observation": "0—10秒俯拍、轻转脚、短步上脚；10秒后品牌尾卡。原鞋为高帮，借鉴动作节奏不继承鞋结构；原声未使用。",
       "adaptation": "原创住宅玄关，浅灰石纹地面、木门木柜、蓝色牛仔裤；同一黑杏鞋款"
+    },
+    {
+      "id": "7649978280061308186",
+      "url": "https://www.douyin.com/video/7649978280061308186",
+      "author": "回力登顶专卖店",
+      "role": "ZX9507 R02选定动作参考",
+      "engagement": {
+        "observed_on": "2026-10-19",
+        "likes_display": 517,
+        "metric_scope": "单条作品页面可见互动，不代表销量"
+      },
+      "observation": "针织与块状造型底接近；转脚、点地、手带鞋面，夏季改秋冬穿搭。",
+      "hot_status": "VISIBLE_INTERACTION_NOT_SALES_PROOF",
+      "local_review": "../ZX9507_抖店生活化带货/edit/R02/references/7649978280061308186/ANALYSIS.md",
+      "source_sha256": "22c7139f272b9951e8b5010f7cc7808834e6281cc6cf90c17d18623a7d432bd7"
+    },
+    {
+      "id": "7637174714129028858",
+      "url": "https://www.douyin.com/video/7637174714129028858",
+      "author": "必威优选鞋业",
+      "role": "R02备选，未选母版",
+      "engagement": {
+        "observed_on": "2026-10-19",
+        "likes_display": 2926,
+        "metric_scope": "单条作品页面可见互动，不代表销量"
+      },
+      "observation": "薄网面系带开车鞋，手持转鞋与上脚可借，夏季透光表达不移植。",
+      "hot_status": "VISIBLE_INTERACTION_NOT_SALES_PROOF"
+    },
+    {
+      "id": "7695045083170622649",
+      "url": "https://www.douyin.com/video/7695045083170622649",
+      "author": "老张的鞋",
+      "role": "高互动但未选，未下载整片",
+      "engagement": {
+        "observed_on": "2026-10-19",
+        "likes_display": "19.8万",
+        "metric_scope": "单条作品页面可见互动，不代表销量"
+      },
+      "observation": "羽绒棉鞋长测评，定位较远；页面互动含赠鞋/价格讨论，未证明成交。",
+      "hot_status": "VISIBLE_INTERACTION_NOT_SALES_PROOF"
     }
   ],
   "principle": "Search position, author total likes, marketing copy and indexed numbers do not prove a specific video is viral or commercially effective."
