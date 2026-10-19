@@ -47,5 +47,22 @@
     "browser_reason": "浏览器URL协议策略不允许file:；未启服务器或绕过。文件已请求在Codex打开，状态queued。"
   },
   "actual_new_generation_requests": 0,
-  "build_executed": false
+  "build_executed": false,
+  "execution_preparation": {
+    "actual_provider": "libtv.reference",
+    "source_check_passed": true,
+    "plan_requests": 1,
+    "provider_requests": 1,
+    "preflight": "ready",
+    "references": {
+      "video": 1,
+      "image": 2
+    },
+    "old_video_or_identity_inputs": 0,
+    "platform_quote_credits": 782,
+    "final_readback_after_page": true,
+    "user_paid_confirmation": false,
+    "generation_submitted": false,
+    "note": "原run_plan保留免费review工程当时未绑定的检查；本项为本轮私有执行工程实际接线后的结果。"
+  }
 }

@@ -3,7 +3,7 @@
   "updated": "2026-10-19",
   "product": "ZX9507黑杏加绒针织套脚休闲鞋",
   "brand": "雷丹森羊",
-  "status": "STORYBOARD_AND_SOURCE_CHECKED_PROVIDER_UNBOUND",
+  "status": "PRICED_DRAFT_AWAITING_USER_CONFIRMATION",
   "positioning": "秋冬暖和，也穿得好看；加绒针织休闲穿搭",
   "reference": {
     "id": "7649978280061308186",
@@ -119,7 +119,12 @@
     "authorized": false,
     "submitted": false,
     "actual_cost": null,
-    "account_quote": null
+    "account_quote": {
+      "source": "libtv_current_page",
+      "credits": 782,
+      "strikethrough_credits": 1564,
+      "checked_at": "2026-10-19T22:21:56+08:00"
+    }
   },
   "actual_this_phase": {
     "video_generations": 0,
@@ -132,8 +137,9 @@
     "source": "hypit/whole.svml",
     "run": "hypit/whole.svrun",
     "platform_bindings": null,
-    "note": "Source/Run可先本地检查；后续实际执行仍需本项目LibTV素材绑定及当前报价，不借旧任务节点、不执行Build。",
+    "note": "实际LibTV草稿已接本条参考和2张实鞋图；私有执行Source/Run/Profile检查通过，当前782积分，等待负责人费用确认。",
     "verification": "verification.json",
-    "execution_ready": false
+    "execution_ready": false,
+    "provider_bound": true
   }
 }
