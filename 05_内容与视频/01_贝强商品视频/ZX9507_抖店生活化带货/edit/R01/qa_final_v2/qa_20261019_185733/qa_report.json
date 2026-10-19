@@ -1,0 +1,109 @@
+{
+  "schema_version": "1",
+  "status": "REVIEWED_PREVIEW_ONLY_PRODUCT_MICRODETAIL_PENDING",
+  "source_video": "E:\\贝强大文件\\05_内容与视频\\01_贝强商品视频\\ZX9507_抖店生活化带货\\edit\\R01\\ZX9507_R01_黑杏加绒_15秒样片_v2.mp4",
+  "source_id": "48a1f22da5bd7d4c",
+  "references": [
+    {
+      "role": "master_image",
+      "path": "E:\\贝强大文件\\05_内容与视频\\01_贝强商品视频\\ZX9507_抖店生活化带货\\sources\\product_factory_white.jpg"
+    }
+  ],
+  "severity_vocabulary": [
+    "PASS",
+    "MINOR",
+    "MODERATE",
+    "SEVERE",
+    "CRITICAL"
+  ],
+  "action_vocabulary": [
+    "KEEP",
+    "TRIM",
+    "REGENERATE"
+  ],
+  "issue_schema": {
+    "start": "seconds",
+    "end": "seconds",
+    "first_bad_frame": "seconds|null",
+    "peak_bad_frame": "seconds|null",
+    "recovery_frame": "seconds|null",
+    "severity": "PASS|MINOR|MODERATE|SEVERE|CRITICAL",
+    "category": "character_consistency|anatomy|object_consistency|motion_continuity|camera_continuity|style_consistency|background_consistency|temporal_artifacts|delivery",
+    "description": "observable defect",
+    "action": "KEEP|TRIM|REGENERATE"
+  },
+  "issues": [
+    {
+      "start": 0,
+      "end": 3,
+      "first_bad_frame": null,
+      "peak_bad_frame": null,
+      "recovery_frame": null,
+      "severity": "MODERATE",
+      "category": "object_consistency",
+      "description": "AI穿搭示意保留套脚鞋、黑杏配色，正面针织分区和造型底微观起伏未达到实物完全保真；无同款真实正面上脚图逐项对证。",
+      "action": "KEEP"
+    },
+    {
+      "start": 7,
+      "end": 10.5,
+      "first_bad_frame": null,
+      "peak_bad_frame": 8.99,
+      "recovery_frame": null,
+      "severity": "MODERATE",
+      "category": "object_consistency",
+      "description": "迈步段脚鞋接地基本可读，黑杏身份可辨，但生成底纹和针织微差仍在；仅预览，不作商品实测或正式广告放行。7秒附近仍有很短的生成鞋侧过渡。",
+      "action": "KEEP"
+    },
+    {
+      "start": 10.5,
+      "end": 15,
+      "first_bad_frame": null,
+      "peak_bad_frame": null,
+      "recovery_frame": null,
+      "severity": "MINOR",
+      "category": "delivery",
+      "description": "真实商品图收尾停留4.5秒，有利看清结构与品牌，动态吸引力尚未验证；此为样片取舍，不声称爆款效果。",
+      "action": "KEEP"
+    }
+  ],
+  "segments": {
+    "keep": [
+      [
+        0,
+        15
+      ]
+    ],
+    "trim": [],
+    "regenerate": []
+  },
+  "top_three_issues": [
+    "AI上脚段微细节保真未完全通过",
+    "原厂图与AI镜头的质感切换较明显",
+    "4.5秒静态品牌收尾的吸引力待负责人试看"
+  ],
+  "reviewed_on": "2026-10-19",
+  "technical_checks": {
+    "duration": 15,
+    "frames": 360,
+    "resolution": [
+      720,
+      1280
+    ],
+    "full_decode_errors": false,
+    "lufs": -17.37,
+    "true_peak_dbtp": -3.93,
+    "reference_brand_tail_removed": true,
+    "all_text_is_postproduction": true
+  },
+  "review_scope": "16帧全片概览；原尺寸6.01、7.3、10.5秒等；7秒与10.5秒切点前/中/后帧；非逐帧语义审查",
+  "sound": {
+    "audio_source": "edit/audio_refresh/v05/mixed.wav",
+    "source_sha256": "bd70f6731388556060c73db3a607d3ccfd1b546673b4209e84fab6332deb3f64",
+    "new_generation_count": 0,
+    "continuous_timeline_seconds": 15,
+    "previous_full_transcript": "edit/audio_refresh/v05/plan.json#text",
+    "current_evidence": "沿用此前完整回读且负责人认可方向的V05混音，当前未剪切语音内容；音轨与解码/响度检查通过",
+    "new_subjective_listening": "本轮未取得独立听觉输入，不冒称重新听完或语气审美验收；负责人在本次预览中判断"
+  }
+}

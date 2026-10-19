@@ -116,18 +116,76 @@
         "status": "passed_for_declared_role",
         "notes": "Factory shoe and outsole photograph inspected; do not treat them as two separate floating products in final scenes."
       }
-    }
-  ],
-  "input_only_sources": [
-    {
-      "file": "sources/product_factory_side.jpg",
-      "role": "white-background edit input"
     },
     {
+      "id": "P_FACTORY_SIDE",
+      "file": "sources/product_factory_side.jpg",
+      "role": "actual_product",
+      "inherit": [
+        "完整外侧比例、黑色针织分区、杏色鞋底连接"
+      ],
+      "exclude": [
+        "墙面木桌背景",
+        "功能实测"
+      ],
+      "sha256": "ee66ec520cff043c9d67759a6462159508d836e68faa62456497b73412ef6f72",
+      "visual_review": {
+        "status": "passed_for_declared_role",
+        "notes": "2026-10-19实际查看原图或完整时段取样；商品事实仅来自工厂原图，参考视频只负责动作节奏。"
+      },
+      "width": 800,
+      "height": 800,
+      "prompt": "Unmodified factory source; no image generation.",
+      "prompt_file": null
+    },
+    {
+      "id": "P_FACTORY_PAIR",
       "file": "sources/product_factory_pair.jpg",
-      "role": "original colorway/package identity evidence with promotional sticker; do not inherit sticker"
+      "role": "actual_product",
+      "inherit": [
+        "真实黑杏加绒色款、两只鞋的完整形状"
+      ],
+      "exclude": [
+        "火焰贴纸和原图文字",
+        "台座、灰色背景"
+      ],
+      "sha256": "0ee30dc8e4dd32778da13be296fb89a31dc61b720c594d14b3c9e705bfb06425",
+      "visual_review": {
+        "status": "passed_for_declared_role",
+        "notes": "2026-10-19实际查看原图或完整时段取样；商品事实仅来自工厂原图，参考视频只负责动作节奏。"
+      },
+      "width": 800,
+      "height": 800,
+      "prompt": "Unmodified factory source; no image generation.",
+      "prompt_file": null
+    },
+    {
+      "id": "R01_MOTION_REF",
+      "file": "edit/R01/reference/7581072106546565523_motion_only_0-10s.mp4",
+      "role": "motion_reference",
+      "inherit": [
+        "轻俯拍看鞋、轻转脚、两步展示的节奏"
+      ],
+      "exclude": [
+        "原鞋结构",
+        "人物身份",
+        "多色款",
+        "水印尾卡",
+        "户外环境",
+        "原声音乐"
+      ],
+      "sha256": "b0ff6038e26d9eb26524d7ad906593091670937aecfbe34a7555b734751be733",
+      "visual_review": {
+        "status": "passed_for_declared_role",
+        "notes": "2026-10-19实际查看原图或完整时段取样；商品事实仅来自工厂原图，参考视频只负责动作节奏。"
+      },
+      "width": 540,
+      "height": 960,
+      "duration": 10,
+      "source": "edit/R01/reference/REFERENCE.json"
     }
   ],
+  "input_only_sources": [],
   "product_reference": {
     "id": "P_PRIMARY",
     "file": "sources/product_factory_white.jpg",
@@ -149,5 +207,23 @@
       "field": "location",
       "equals": "L01 apartment entryway"
     }
-  ]
+  ],
+  "current_generation": {
+    "candidate": "R01_BRAND_MAIN_VIDEO",
+    "plan": "main_video_R01_plan.json",
+    "selected_asset_ids": [
+      "P_FACTORY_WHITE",
+      "P_FACTORY_SIDE",
+      "P_FACTORY_PAIR",
+      "P_FACTORY_SOLE",
+      "M01",
+      "L01",
+      "R01_MOTION_REF"
+    ],
+    "excluded_ai_product_assets": [
+      "P_WHITE",
+      "shots/hero_onfoot.png"
+    ],
+    "reason": "实鞋身份优先，避免旧生成图中的底纹微差传递；人物与空景仅作各自职责参考"
+  }
 }

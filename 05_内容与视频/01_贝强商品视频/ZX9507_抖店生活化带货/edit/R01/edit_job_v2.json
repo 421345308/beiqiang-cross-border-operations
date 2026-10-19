@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "job_id": "ZX9507-R01",
+  "workspace_root": "C:\\Users\\spq\\Desktop\\贝强",
+  "sku": "ZX9507",
+  "channel": "domestic_douyin_retail",
+  "product_evidence": "09_国内电商/抖店/数据/品牌首发商品.json#models.ZX9507",
+  "accepted_baseline": "V05青年配音及轻BGM方向；不意味着新画面获验收",
+  "creative_change": "新生成片仅保留穿搭段；问题细节和参考品牌尾段以真实商品图替换。品牌与结构讲解后期添加，无新付费生成。",
+  "width": 720,
+  "height": 1280,
+  "fps": 24,
+  "expected_frames": 360,
+  "audio": "05_内容与视频/01_贝强商品视频/ZX9507_抖店生活化带货/edit/audio_refresh/v05/mixed.wav",
+  "audio_sha256": "bd70f6731388556060c73db3a607d3ccfd1b546673b4209e84fab6332deb3f64",
+  "shots": [
+    {
+      "kind": "video",
+      "source": "05_内容与视频/01_贝强商品视频/ZX9507_抖店生活化带货/edit/R01/generated/ZX9507_R01_Seedance25_original.mp4",
+      "source_sha256": "02f3e3f3809c9ec4a786617c24966d3829a3005da276c312a040496a1865481c",
+      "start_frame": 0,
+      "end_frame": 72,
+      "frames": 72,
+      "disclosure": "AI穿搭示意",
+      "title": "黑杏配色，配牛仔裤",
+      "detail": ""
+    },
+    {
+      "kind": "image",
+      "source": "05_内容与视频/01_贝强商品视频/ZX9507_抖店生活化带货/sources/product_factory_white.jpg",
+      "source_sha256": "5bb25db02e42f6db3d3d7355ea868330eebda151673cb80e812a5d20904344f3",
+      "frames": 54,
+      "disclosure": "原厂商品实图",
+      "title": "套脚设计，省去系鞋带",
+      "detail": "黑色针织鞋面 · 杏色造型底"
+    },
+    {
+      "kind": "image",
+      "source": "05_内容与视频/01_贝强商品视频/ZX9507_抖店生活化带货/sources/product_factory_sole.jpg",
+      "source_sha256": "33c266a6fd6e30864bb6ffa067f19b11be83b313cc586c9a9e37f82b52aa1664",
+      "frames": 42,
+      "disclosure": "原厂商品实图",
+      "title": "鞋底什么样，看实图",
+      "detail": "黑面杏底 · 不规则立体底纹"
+    },
+    {
+      "kind": "video",
+      "source": "05_内容与视频/01_贝强商品视频/ZX9507_抖店生活化带货/edit/R01/generated/ZX9507_R01_Seedance25_original.mp4",
+      "source_sha256": "02f3e3f3809c9ec4a786617c24966d3829a3005da276c312a040496a1865481c",
+      "start_frame": 168,
+      "end_frame": 252,
+      "frames": 84,
+      "disclosure": "AI穿搭示意",
+      "title": "日常搭配，看上脚比例",
+      "detail": ""
+    },
+    {
+      "kind": "image",
+      "source": "05_内容与视频/01_贝强商品视频/ZX9507_抖店生活化带货/sources/product_factory_white.jpg",
+      "source_sha256": "5bb25db02e42f6db3d3d7355ea868330eebda151673cb80e812a5d20904344f3",
+      "frames": 108,
+      "disclosure": "原厂商品实图",
+      "title": "雷丹森羊",
+      "detail": "黑杏加绒套脚休闲鞋｜查看颜色与尺码"
+    }
+  ],
+  "output": "05_内容与视频/01_贝强商品视频/ZX9507_抖店生活化带货/edit/R01/ZX9507_R01_黑杏加绒_15秒样片_v2.mp4",
+  "published": false,
+  "new_ai_video_generation": false,
+  "preview_only": true,
+  "remaining_limitation": "AI上脚段织纹和底形微细节未完全验收，不能当实穿或性能证据"
+}

@@ -1,0 +1,104 @@
+{
+  "schema_version": "1",
+  "status": "REVIEWED_NOT_ACCEPTED_AS_RAW_AD",
+  "source_video": "E:\\贝强大文件\\05_内容与视频\\01_贝强商品视频\\ZX9507_抖店生活化带货\\edit\\R01\\generated\\ZX9507_R01_Seedance25_original.mp4",
+  "source_id": "aa5fb2c1c15c4976",
+  "references": [
+    {
+      "role": "master_image",
+      "path": "E:\\贝强大文件\\05_内容与视频\\01_贝强商品视频\\ZX9507_抖店生活化带货\\sources\\product_factory_white.jpg"
+    }
+  ],
+  "severity_vocabulary": [
+    "PASS",
+    "MINOR",
+    "MODERATE",
+    "SEVERE",
+    "CRITICAL"
+  ],
+  "action_vocabulary": [
+    "KEEP",
+    "TRIM",
+    "REGENERATE"
+  ],
+  "issue_schema": {
+    "start": "seconds",
+    "end": "seconds",
+    "first_bad_frame": "seconds|null",
+    "peak_bad_frame": "seconds|null",
+    "recovery_frame": "seconds|null",
+    "severity": "PASS|MINOR|MODERATE|SEVERE|CRITICAL",
+    "category": "character_consistency|anatomy|object_consistency|motion_continuity|camera_continuity|style_consistency|background_consistency|temporal_artifacts|delivery",
+    "description": "observable defect",
+    "action": "KEEP|TRIM|REGENERATE"
+  },
+  "issues": [
+    {
+      "start": 10.6,
+      "end": 15.041667,
+      "first_bad_frame": 11.007,
+      "peak_bad_frame": 12.003,
+      "recovery_frame": null,
+      "severity": "SEVERE",
+      "category": "object_consistency",
+      "description": "末镜出现参考作者MURIQUI大字，10.6秒帧干净，11.007秒已出现；精确起点位于两者之间。必须整段剔除，不交付为自有品牌广告。",
+      "action": "TRIM"
+    },
+    {
+      "start": 3.5,
+      "end": 7.5,
+      "first_bad_frame": 4.034,
+      "peak_bad_frame": 5.031,
+      "recovery_frame": 7.023,
+      "severity": "MODERATE",
+      "category": "object_consistency",
+      "description": "外侧近景的针织和杏底细纹被重建，早段整鞋前端越过画面右边界；不达到细节原样保留。以原厂侧面/外底原图替换。",
+      "action": "TRIM"
+    },
+    {
+      "start": 0,
+      "end": 10.6,
+      "first_bad_frame": 0.05,
+      "peak_bad_frame": 9.015,
+      "recovery_frame": null,
+      "severity": "MODERATE",
+      "category": "object_consistency",
+      "description": "AI上脚段保留黑杏配色、套脚轮廓，但正面针织分区和鞋底凸起微观形状不能证明与实物完全一致；原件缺对应正面上脚视角，保真目标未完全通过。仅作明确标注AI穿搭示意的预览，不放行投流。",
+      "action": "KEEP"
+    }
+  ],
+  "segments": {
+    "keep": [
+      [
+        0,
+        3
+      ],
+      [
+        7,
+        10.5
+      ]
+    ],
+    "trim": [
+      [
+        3,
+        7
+      ],
+      [
+        10.5,
+        15.041667
+      ]
+    ],
+    "regenerate": []
+  },
+  "top_three_issues": [
+    "参考品牌文字污染，尾段剔除",
+    "近景裁鞋与织纹/底纹重建，以实图替换",
+    "上脚微细节保真尚未通过，仅作为AI示意样片"
+  ],
+  "reviewed_on": "2026-10-19",
+  "review_method": "16帧全时段概览，4个原尺寸关键帧，9秒及10.6秒前中后帧；不是逐帧全解码语义审查",
+  "sound": {
+    "generated_audio": false,
+    "note": "原始画面关闭声音，成片复用V05既有完整音轨，不新增音频任务。"
+  }
+}

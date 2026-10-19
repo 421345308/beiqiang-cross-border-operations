@@ -1,6 +1,6 @@
 {
   "require_all_planned_shots": false,
-  "status": "S01 composition only; video motion and the other four shots are planned, not rendered",
+  "status": "原S01为历史静态构图；当前R01四镜在下方current_video_plan，生成与验收以独立计划和实际结果为准",
   "shots": [
     {
       "id": "S01",
@@ -34,5 +34,107 @@
         "notes": "Static composition reviewed: two shoe-worn feet, normal ankles, readable black upper/beige sculpted soles, jeans and left-lit entryway coherent. Product microtexture regenerated; use factory photos as primary identity, no temporal acceptance."
       }
     }
-  ]
+  ],
+  "current_video_plan": {
+    "candidate": "R01_BRAND_MAIN_VIDEO",
+    "manifest": "main_video_R01_plan.json",
+    "shots": [
+      {
+        "id": "R01_S1",
+        "time_range": [
+          0,
+          3
+        ],
+        "purpose": "完整双鞋先出场，小幅转侧",
+        "reference_ids": [
+          "P_FACTORY_WHITE",
+          "P_FACTORY_SIDE",
+          "P_FACTORY_PAIR",
+          "P_FACTORY_SOLE",
+          "M01",
+          "L01",
+          "R01_MOTION_REF"
+        ],
+        "states": {
+          "product": "ZX9507 黑杏加绒",
+          "wardrobe": "M01 charcoal sweatshirt and blue straight jeans",
+          "location": "L01 apartment entryway"
+        },
+        "frame_role": "video_prompt_intent",
+        "review": "PENDING_ACTUAL_OUTPUT"
+      },
+      {
+        "id": "R01_S2",
+        "time_range": [
+          3,
+          7
+        ],
+        "purpose": "完整外侧低机位，鞋口与黑杏分界",
+        "reference_ids": [
+          "P_FACTORY_WHITE",
+          "P_FACTORY_SIDE",
+          "P_FACTORY_PAIR",
+          "P_FACTORY_SOLE",
+          "M01",
+          "L01",
+          "R01_MOTION_REF"
+        ],
+        "states": {
+          "product": "ZX9507 黑杏加绒",
+          "wardrobe": "M01 charcoal sweatshirt and blue straight jeans",
+          "location": "L01 apartment entryway"
+        },
+        "frame_role": "video_prompt_intent",
+        "review": "PENDING_ACTUAL_OUTPUT"
+      },
+      {
+        "id": "R01_S3",
+        "time_range": [
+          7,
+          11
+        ],
+        "purpose": "同款同裤自然两步，检查接地",
+        "reference_ids": [
+          "P_FACTORY_WHITE",
+          "P_FACTORY_SIDE",
+          "P_FACTORY_PAIR",
+          "P_FACTORY_SOLE",
+          "M01",
+          "L01",
+          "R01_MOTION_REF"
+        ],
+        "states": {
+          "product": "ZX9507 黑杏加绒",
+          "wardrobe": "M01 charcoal sweatshirt and blue straight jeans",
+          "location": "L01 apartment entryway"
+        },
+        "frame_role": "video_prompt_intent",
+        "review": "PENDING_ACTUAL_OUTPUT"
+      },
+      {
+        "id": "R01_S4",
+        "time_range": [
+          11,
+          15
+        ],
+        "purpose": "完整双鞋稳定收尾，品牌文字后期",
+        "reference_ids": [
+          "P_FACTORY_WHITE",
+          "P_FACTORY_SIDE",
+          "P_FACTORY_PAIR",
+          "P_FACTORY_SOLE",
+          "M01",
+          "L01",
+          "R01_MOTION_REF"
+        ],
+        "states": {
+          "product": "ZX9507 黑杏加绒",
+          "wardrobe": "M01 charcoal sweatshirt and blue straight jeans",
+          "location": "L01 apartment entryway"
+        },
+        "frame_role": "video_prompt_intent",
+        "review": "PENDING_ACTUAL_OUTPUT"
+      }
+    ]
+  }
 }

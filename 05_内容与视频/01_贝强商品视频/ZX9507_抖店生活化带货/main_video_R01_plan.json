@@ -1,11 +1,11 @@
 {
   "candidate_id": "R01_BRAND_MAIN_VIDEO",
   "updated_on": "2026-10-19",
-  "status": "STORYBOARD_READY_REFERENCE_SELECTION_AND_CURRENT_PAID_CONFIRMATION_PENDING",
+  "status": "ONE_GENERATED_EDITED_PREVIEW_READY_MICRODETAIL_PENDING",
   "channel": "国内抖店雷丹森羊品牌店",
   "product_reference": "09_国内电商/抖店/数据/品牌首发商品.json#models.ZX9507",
   "color": "黑杏加绒",
-  "platform_proposal": "沿已打通LibTV",
+  "platform_proposal": "LibTV官方CLI",
   "model_proposal": "Seedance 2.5",
   "model_key": "star-video2.5",
   "upstream_build": "provider not disclosed",
@@ -16,7 +16,7 @@
     "resolution": "720p",
     "enableSound": "off"
   },
-  "mode_selection": "mixed2video仅在具体参考视频已观看并绑定后；只用图片则image2video，提交前按当前schema复核",
+  "mode_selection": "mixed2video",
   "references": [
     {
       "file": "sources/product_factory_white.jpg",
@@ -40,14 +40,48 @@
     }
   ],
   "prompt_path": "prompts/main_video_R01.txt",
-  "prompt_sha256": "1ab698595ebbe3b598e41428d6dba839b53019ab61b1bdd7abbbf56c2f178850",
-  "reference_video": null,
-  "reference_video_status": "尚未选定新的高互动成片；完整鞋类教程仅作制作方法参考，不冒称爆款已验",
+  "prompt_sha256": "efac9634823535193bda9c34c1e3a2a014c08d78378e53c64045d1c1a26c126e",
+  "reference_video": {
+    "source_url": "https://www.douyin.com/video/7581072106546565523",
+    "author": "MRUQIQUI千特",
+    "published_at": "2025-12-07 19:11",
+    "observed_on": "2026-10-19",
+    "likes_display": "1.6万",
+    "comments": 230,
+    "favorites": 8411,
+    "shares_display": "1.9万",
+    "metric_scope": "该条视频页面显示互动；不是作者累计数据，不证明成交或投流来源",
+    "source_file": "edit/R01/reference/7581072106546565523.mp4",
+    "sha256": "87e545e45ebdb671d348863f1441162c5d6cba910084e33cae9bfdeebfe84311",
+    "duration": 13.5,
+    "resolution": [
+      540,
+      960
+    ],
+    "generation_reference_file": "edit/R01/reference/7581072106546565523_motion_only_0-10s.mp4",
+    "generation_reference_sha256": "b0ff6038e26d9eb26524d7ad906593091670937aecfbe34a7555b734751be733",
+    "generation_reference_duration": 10,
+    "derivative": "保留0—10秒动作段，H264兼容转码，移除原音轨；原片只读保留",
+    "acquisition": "已登录正常页面的实际video资源，公开HTTPS下载，无cookie导出",
+    "inherited": "俯拍快速看清双鞋、轻转脚、短步展示的镜头功能与自然节奏",
+    "excluded": [
+      "高帮板鞋结构",
+      "多颜色换鞋",
+      "人物身份",
+      "原声音乐",
+      "水印文字",
+      "品牌尾卡",
+      "户外深灰粗糙地面"
+    ],
+    "generation_scene": "原创住宅玄关，浅灰石纹地面、木门木柜、蓝色牛仔裤；同一黑杏鞋款",
+    "reference_qa": "edit/R01/qa_reference/reference_20261019_180554/"
+  },
+  "reference_video_status": "原片已获取并全时段取样分析，借鉴动作节奏；不证明成交",
   "audio": "计划复用V05青年配音方向及已有BGM；实际是否适配须后期听看，不新增人声或音乐任务",
   "quote": null,
-  "quote_state": "未取得本条积分/人民币数值，参考视频时长计费须一并核",
-  "paid_execution_authorized": false,
-  "generation_submitted": false,
+  "quote_state": "当前CLI模型schema未返回数值报价；用户当次明确授权一条，按15秒720p单条执行，10秒参考时长可能参与计费，实际扣费回读后留证",
+  "paid_execution_authorized": true,
+  "generation_submitted": true,
   "publication": false,
   "first_review": [
     "鞋头与套脚鞋口",
@@ -59,8 +93,31 @@
     "平台主图槽位规格/AI标识及实际上传回读"
   ],
   "unresolved": [
-    "具体参考片完整观看与热度依据",
-    "当次单条付费确认与报价",
-    "平台主图视频槽位要求及HTTP上传字段实测"
-  ]
+    "AI上脚针织和底纹微细节尚未完全验收；仅样片",
+    "本轮听感由负责人预览，沿用既有V05完整音轨",
+    "LibTV未在任务回执中返回精确扣费",
+    "正式投放/主图上传与实际平台槽位另项验收"
+  ],
+  "authorization": {
+    "date": "2026-10-19",
+    "source": "负责人本轮明确指定LibTV Seedance 2.5、ZX9507黑杏加绒15秒样片，允许生成一条",
+    "max_new_video_generations": 1,
+    "new_audio_generations": 0,
+    "publication_authorized": false
+  },
+  "submission_attempt_count": 1,
+  "actual_new_video_generation_count": 1,
+  "actual_new_audio_generation_count": 0,
+  "actual_output": {
+    "generated_original": "edit/R01/generated/ZX9507_R01_Seedance25_original.mp4",
+    "final_preview": "edit/R01/ZX9507_R01_黑杏加绒_15秒样片_v2.mp4",
+    "duration": 15,
+    "width": 720,
+    "height": 1280,
+    "fps": 24,
+    "sha256": "27657e50d0aff260744990d1cb77b4b0deb70da774de00f04df6bb9b2ec5d86e",
+    "qa": "edit/R01/qa_final_v2/qa_20261019_185733/QA_REPORT.md",
+    "qa_source_id": "48a1f22da5bd7d4c"
+  },
+  "product_fidelity_acceptance": false
 }
