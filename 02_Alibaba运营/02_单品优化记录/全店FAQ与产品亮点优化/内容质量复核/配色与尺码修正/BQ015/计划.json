@@ -1,0 +1,78 @@
+{
+  "family": "BQ015",
+  "source_id": "src-2064f015e244",
+  "ids": [
+    "1601939683302",
+    "1601939743040",
+    "1601939747001"
+  ],
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "source_evidence": [
+    "01_产品资产/02_可发布素材/00_最终上传/BQ015_R1811/00_上架填写表.md",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/来源核对/src-2064f015e244.json",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ015/素材审核.json"
+  ],
+  "add": {
+    "Green": {
+      "EU": [
+        "35",
+        "36",
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45"
+      ],
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ015_R1811/05_AI候选/SKU_Green.png",
+      "sha256": "4b1e14b5f1785c3abe2219b729222958ab4571d757f9ed9c09476374cb1edc6a",
+      "image_review": "PASS",
+      "source_file": "01_产品资产/02_可发布素材/00_最终上传/BQ015_R1811/01_来源原图/source_25.jpg"
+    },
+    "Pink": {
+      "EU": [
+        "35",
+        "36",
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45"
+      ],
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ015_R1811/05_AI候选/SKU_Pink.png",
+      "sha256": "555e57ded82096e94525a94e07f92837cb5811d10d1e0fbb8c7b780469746d11",
+      "image_review": "PASS",
+      "source_file": "01_产品资产/02_可发布素材/00_最终上传/BQ015_R1811/01_来源原图/source_26.jpg"
+    },
+    "Off White": {
+      "EU": [
+        "35",
+        "36",
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45"
+      ],
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ015_R1811/05_AI候选/SKU_OffWhite.png",
+      "sha256": "7375cb976acf794b1a02efa66538e7a3c743bab489ae41341a0f4a5697e9f142",
+      "image_review": "PASS",
+      "source_file": "01_产品资产/02_可发布素材/00_最终上传/BQ015_R1811/01_来源原图/source_28.jpg"
+    }
+  },
+  "restrict": {},
+  "unmapped_options": [],
+  "scope": "Original ID SKU correction only. Preserve retained SKU IDs/codes/prices and current title, functional highlights, gallery, FAQ, company, trade and visibility. Colour chart/gallery follow-up tracked separately."
+}

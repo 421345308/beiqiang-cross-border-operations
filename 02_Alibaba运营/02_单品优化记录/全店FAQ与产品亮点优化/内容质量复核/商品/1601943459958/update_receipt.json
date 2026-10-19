@@ -1,0 +1,96 @@
+{
+  "method": "alibaba.icbu.product.schema.update",
+  "operation": "update",
+  "status": "submitted_needs_readback",
+  "content_status": "pending_readback",
+  "expected_fields": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Men's Casual Leather Sandals with TPR Sole for Summer Footwear Collections",
+          []
+        ]
+      ]
+    ],
+    "textDesc": [
+      "field",
+      [
+        [
+          "id",
+          "textDesc"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Open summer construction: The thong strap holds across the forefoot while leaving the toes and heel exposed.\n\nLeather strap surface: Stitched cowhide leather straps have a cloth-lined underside at the foot contact area.\n\nTPR sole layers: TPR midsole and outsole form the base of this casual flip-flop.",
+          []
+        ]
+      ]
+    ]
+  },
+  "sku_verification": null,
+  "task_pack": null,
+  "replacement_plan": null,
+  "replacement_transition": null,
+  "inventory_input": null,
+  "post_publish_acceptance": {
+    "phase": "post_publish_completion",
+    "target_score": 5.0,
+    "actual_score": null,
+    "observed_at": null,
+    "score_source": null,
+    "diagnostics": {
+      "status": "not_read"
+    },
+    "score_status": "pending_score",
+    "overall_status": "PENDING_SCORE",
+    "unverified_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "versioned_content": null,
+    "required_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "limits": "Platform listing score does not prove public content, source truth or real product quality."
+  },
+  "attempted_at": "2026-10-19T18:16:17.397580+00:00",
+  "response": {
+    "trace_id": "2133fc3d17924337772714362e0e55",
+    "product_id": 1601943459958,
+    "biz_success": true,
+    "request_id": "2166c2ca17924337772756061",
+    "_trace_id_": "2133fc3d17924337772714362e0e55"
+  },
+  "refs": {
+    "request_id": "2166c2ca17924337772756061",
+    "trace_id": "2133fc3d17924337772714362e0e55",
+    "message": null,
+    "error": null
+  },
+  "product_id": "1601943459958"
+}

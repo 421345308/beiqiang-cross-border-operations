@@ -1,0 +1,102 @@
+{
+  "method": "alibaba.icbu.product.schema.update",
+  "operation": "update",
+  "status": "write_outcome_unknown",
+  "content_status": "unverified_content",
+  "response": null,
+  "post_publish_acceptance": {
+    "phase": "post_publish_completion",
+    "target_score": 5.0,
+    "actual_score": null,
+    "observed_at": null,
+    "score_source": null,
+    "diagnostics": {
+      "status": "not_read"
+    },
+    "score_status": "pending_score",
+    "overall_status": "PENDING_SCORE",
+    "unverified_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "versioned_content": null,
+    "required_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "limits": "Platform listing score does not prove public content, source truth or real product quality."
+  },
+  "refs": {},
+  "product_id": "1601981270699",
+  "attempted_at": "2026-10-19T18:30:50.666891+00:00",
+  "expected_fields": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Mens Dial Closure Mesh Panel Outdoor Shoes Low Top Lug Sole Casual Sneakers Black Tan Wholesale EU 39-48",
+          []
+        ]
+      ]
+    ],
+    "textDesc": [
+      "field",
+      [
+        [
+          "id",
+          "textDesc"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Dial-and-cord closure: A rotary dial and four pairs of fabric guides organise the front fastening without traditional tied laces.\n\nDial adjustment: Turning the dial tensions the front cord across the instep without tying conventional laces.\n\nA grip for entry: The pull loop provides a place to hold the shoe while guiding the foot into the opening.",
+          []
+        ]
+      ]
+    ]
+  },
+  "inventory_input": null,
+  "exception_type": "ClientError",
+  "failure_evidence": {
+    "exception_type": "ClientError",
+    "message": "Native HTTP transport failed; write outcome requires reconciliation",
+    "transport_phase": "transport",
+    "request_sent": null,
+    "curl_exit_code": 35,
+    "http_status": null,
+    "business_refs": {},
+    "response_summary": {
+      "format": "text",
+      "excerpt": ""
+    },
+    "stderr_excerpt": "[COMMAND_TEXT_OMITTED]",
+    "cause_types": [],
+    "limits": "Unavailable facts remain null/unknown. Curl errors and absence in catalog do not prove an uncommitted write; no automatic retry."
+  },
+  "task_pack": null,
+  "replacement_plan": null,
+  "replacement_transition": null,
+  "next_step": "stop_and_reconcile_target_or_creation_before_any_retry"
+}

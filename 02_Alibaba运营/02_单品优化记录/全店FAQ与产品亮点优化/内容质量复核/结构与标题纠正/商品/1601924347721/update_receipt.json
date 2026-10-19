@@ -1,0 +1,96 @@
+{
+  "method": "alibaba.icbu.product.schema.update",
+  "operation": "update",
+  "status": "submitted_needs_readback",
+  "content_status": "pending_readback",
+  "expected_fields": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Knit Lace-Up Walking Shoes with Raised Toe Cap EVA Sole Casual Sneakers Wholesale",
+          []
+        ]
+      ]
+    ],
+    "textDesc": [
+      "field",
+      [
+        [
+          "id",
+          "textDesc"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Knit lace-up casual shoes with a contrast toe cap and EVA sole.\n\nAdjustable instep fit: The front laces let the wearer loosen the opening for entry and set the tension over the foot.\n\nSeasonal lining choice: Standard and plush-lined versions offer different interior finishes within the same shoe shape.",
+          []
+        ]
+      ]
+    ]
+  },
+  "sku_verification": null,
+  "task_pack": null,
+  "replacement_plan": null,
+  "replacement_transition": null,
+  "inventory_input": null,
+  "post_publish_acceptance": {
+    "phase": "post_publish_completion",
+    "target_score": 5.0,
+    "actual_score": null,
+    "observed_at": null,
+    "score_source": null,
+    "diagnostics": {
+      "status": "not_read"
+    },
+    "score_status": "pending_score",
+    "overall_status": "PENDING_SCORE",
+    "unverified_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "versioned_content": null,
+    "required_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "limits": "Platform listing score does not prove public content, source truth or real product quality."
+  },
+  "attempted_at": "2026-10-19T19:03:15.326898+00:00",
+  "response": {
+    "trace_id": "2166b76317924365951888267e110b",
+    "product_id": 1601924347721,
+    "biz_success": true,
+    "request_id": "0bab02fe17924365951918980",
+    "_trace_id_": "2166b76317924365951888267e110b"
+  },
+  "refs": {
+    "request_id": "0bab02fe17924365951918980",
+    "trace_id": "2166b76317924365951888267e110b",
+    "message": null,
+    "error": null
+  },
+  "product_id": "1601924347721"
+}

@@ -1,0 +1,229 @@
+{
+  "id": "1601939726170",
+  "at": "2026-10-19T19:27:18.693058+00:00",
+  "state": "FORMAL_FIELDS_SCORE_PASS",
+  "status": "approved",
+  "display": "Y",
+  "checks": {
+    "exact_colour_EU": true,
+    "retained_sku_identity": true,
+    "removed_unsupported": true,
+    "unique_real_sku_ids": true,
+    "all_price_tiers_preserved": true,
+    "other_formal_fields": true,
+    "display": true,
+    "schema_targets": true,
+    "other_schema": true,
+    "score": true
+  },
+  "score": "5.00",
+  "public_status": "API_ACCEPTANCE_NO_BROWSER_PER_USER",
+  "diagnostics": {
+    "ruleScoreMap": {
+      "title_word_miss_core_error": 0.0,
+      "imageQualityBad": 0.0,
+      "image_scale": 0.0,
+      "title_word_error": 0.0,
+      "image_num": 0.0
+    },
+    "errorReasonSkuImageMoreMap": {},
+    "errorReasonTitleWordMissErrorMap": {},
+    "errorReasonList": [],
+    "errorReasonTitleWordErrorMap": {},
+    "extendCheckMap": {
+      "imageText": true,
+      "sku_image": false,
+      "title_word_miss_core_error": true,
+      "imageQualityBad": true,
+      "sku_text": false,
+      "imageSubTitle": false,
+      "category": true,
+      "title_word_error": true,
+      "selling_point_attribute_conflict": false
+    },
+    "errorReasonCategoryMap": {},
+    "errorReasonSkuTextMap": {},
+    "errorReasonSubTitleMap": {},
+    "errorReasonMap": {},
+    "errorReasonSellingPointAttributeMap": {},
+    "errorReasonSkuImageMap": {},
+    "extendProblemMap": {
+      "imageText": false,
+      "title_word_miss_core_error": false,
+      "imageQualityBad": false,
+      "imageSubTitle": false,
+      "image_scale": false,
+      "inventory": false,
+      "title_word_error": false,
+      "selling_point_attribute_conflict": false,
+      "image_num": false,
+      "freightRate": false,
+      "sku_image": false,
+      "sku_text": false,
+      "price": false,
+      "category": false
+    },
+    "errorReasonQualityBadMap": {},
+    "errorReasonSkuTextMoreMap": {}
+  },
+  "failed": [],
+  "pairs": [
+    [
+      "Cream",
+      "41"
+    ],
+    [
+      "Cream",
+      "42"
+    ],
+    [
+      "Cream",
+      "43"
+    ],
+    [
+      "Cream",
+      "44"
+    ],
+    [
+      "Cream",
+      "37"
+    ],
+    [
+      "Cream",
+      "38"
+    ],
+    [
+      "Cream",
+      "39"
+    ],
+    [
+      "Cream",
+      "40"
+    ],
+    [
+      "Cream",
+      "35"
+    ],
+    [
+      "Cream",
+      "36"
+    ],
+    [
+      "Lavender",
+      "40"
+    ],
+    [
+      "Lavender",
+      "36"
+    ],
+    [
+      "Lavender",
+      "37"
+    ],
+    [
+      "Lavender",
+      "38"
+    ],
+    [
+      "Lavender",
+      "39"
+    ],
+    [
+      "Lavender",
+      "35"
+    ],
+    [
+      "Black White",
+      "43"
+    ],
+    [
+      "Black White",
+      "44"
+    ],
+    [
+      "Black White",
+      "45"
+    ],
+    [
+      "Black White",
+      "39"
+    ],
+    [
+      "Black White",
+      "40"
+    ],
+    [
+      "Black White",
+      "41"
+    ],
+    [
+      "Black White",
+      "42"
+    ],
+    [
+      "Black White",
+      "35"
+    ],
+    [
+      "Black White",
+      "36"
+    ],
+    [
+      "Black White",
+      "37"
+    ],
+    [
+      "Black White",
+      "38"
+    ],
+    [
+      "Black",
+      "42"
+    ],
+    [
+      "Black",
+      "43"
+    ],
+    [
+      "Black",
+      "44"
+    ],
+    [
+      "Black",
+      "45"
+    ],
+    [
+      "Black",
+      "38"
+    ],
+    [
+      "Black",
+      "39"
+    ],
+    [
+      "Black",
+      "40"
+    ],
+    [
+      "Black",
+      "41"
+    ],
+    [
+      "Cream",
+      "45"
+    ],
+    [
+      "Black",
+      "35"
+    ],
+    [
+      "Black",
+      "36"
+    ],
+    [
+      "Black",
+      "37"
+    ]
+  ],
+  "sku_count": 39
+}

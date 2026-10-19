@@ -1,0 +1,96 @@
+{
+  "method": "alibaba.icbu.product.schema.update",
+  "operation": "update",
+  "status": "submitted_needs_readback",
+  "content_status": "pending_readback",
+  "expected_fields": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Knit Slip-On Walking Shoes with Lace Detail and Raised Toe Profile Casual Sneakers Wholesale",
+          []
+        ]
+      ]
+    ],
+    "textDesc": [
+      "field",
+      [
+        [
+          "id",
+          "textDesc"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Knit casual shoes with a slip-on construction, lace detailing and a raised toe area.\n\nSlip-on entry: The foot enters without tying a conventional lace knot; the front lace detail is part of the casual sneaker styling.",
+          []
+        ]
+      ]
+    ]
+  },
+  "sku_verification": null,
+  "task_pack": null,
+  "replacement_plan": null,
+  "replacement_transition": null,
+  "inventory_input": null,
+  "post_publish_acceptance": {
+    "phase": "post_publish_completion",
+    "target_score": 5.0,
+    "actual_score": null,
+    "observed_at": null,
+    "score_source": null,
+    "diagnostics": {
+      "status": "not_read"
+    },
+    "score_status": "pending_score",
+    "overall_status": "PENDING_SCORE",
+    "unverified_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "versioned_content": null,
+    "required_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "limits": "Platform listing score does not prove public content, source truth or real product quality."
+  },
+  "attempted_at": "2026-10-19T19:01:52.067857+00:00",
+  "response": {
+    "trace_id": "2108b42717924365129174933e0c55",
+    "product_id": 1601939683302,
+    "biz_success": true,
+    "request_id": "210829b717924365129216065",
+    "_trace_id_": "2108b42717924365129174933e0c55"
+  },
+  "refs": {
+    "request_id": "210829b717924365129216065",
+    "trace_id": "2108b42717924365129174933e0c55",
+    "message": null,
+    "error": null
+  },
+  "product_id": "1601939683302"
+}

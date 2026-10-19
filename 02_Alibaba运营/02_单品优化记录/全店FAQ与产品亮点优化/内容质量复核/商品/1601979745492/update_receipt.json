@@ -1,0 +1,96 @@
+{
+  "method": "alibaba.icbu.product.schema.update",
+  "operation": "update",
+  "status": "submitted_needs_readback",
+  "content_status": "pending_readback",
+  "expected_fields": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Mens Synthetic Leather Casual Walking Shoes with Cord Lacing and EVA Sole for Wholesale Footwear Buyers",
+          []
+        ]
+      ]
+    ],
+    "textDesc": [
+      "field",
+      [
+        [
+          "id",
+          "textDesc"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Synthetic leather upper: A pebbled surface, plain side panels and a curved stitched forefoot seam create a clean casual silhouette.\n\nAdjustable instep fit: The front laces let the wearer loosen the opening for entry and set the tension over the foot.\n\nA grip for entry: The pull loop provides a place to hold the shoe while guiding the foot into the opening.",
+          []
+        ]
+      ]
+    ]
+  },
+  "sku_verification": null,
+  "task_pack": null,
+  "replacement_plan": null,
+  "replacement_transition": null,
+  "inventory_input": null,
+  "post_publish_acceptance": {
+    "phase": "post_publish_completion",
+    "target_score": 5.0,
+    "actual_score": null,
+    "observed_at": null,
+    "score_source": null,
+    "diagnostics": {
+      "status": "not_read"
+    },
+    "score_status": "pending_score",
+    "overall_status": "PENDING_SCORE",
+    "unverified_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "versioned_content": null,
+    "required_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "limits": "Platform listing score does not prove public content, source truth or real product quality."
+  },
+  "attempted_at": "2026-10-19T18:29:40.092646+00:00",
+  "response": {
+    "trace_id": "2108b42e17924345799427976e0eeb",
+    "product_id": 1601979745492,
+    "biz_success": true,
+    "request_id": "212c41d317924345799452660",
+    "_trace_id_": "2108b42e17924345799427976e0eeb"
+  },
+  "refs": {
+    "request_id": "212c41d317924345799452660",
+    "trace_id": "2108b42e17924345799427976e0eeb",
+    "message": null,
+    "error": null
+  },
+  "product_id": "1601979745492"
+}

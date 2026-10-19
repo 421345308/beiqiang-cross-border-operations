@@ -1,0 +1,96 @@
+{
+  "method": "alibaba.icbu.product.schema.update",
+  "operation": "update",
+  "status": "submitted_needs_readback",
+  "content_status": "pending_readback",
+  "expected_fields": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Geometric Knit High Top Casual Sneakers with Pull-On Shaft and Contrast Sole for Footwear Assortments",
+          []
+        ]
+      ]
+    ],
+    "textDesc": [
+      "field",
+      [
+        [
+          "id",
+          "textDesc"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Tall sock-style shape: A ribbed shaft rises above the ankle and gives the shoe a distinctive high-top profile.\n\nSimple daily dressing: The slip-on opening removes the need to tie conventional laces when putting the shoes on.",
+          []
+        ]
+      ]
+    ]
+  },
+  "sku_verification": null,
+  "task_pack": null,
+  "replacement_plan": null,
+  "replacement_transition": null,
+  "inventory_input": null,
+  "post_publish_acceptance": {
+    "phase": "post_publish_completion",
+    "target_score": 5.0,
+    "actual_score": null,
+    "observed_at": null,
+    "score_source": null,
+    "diagnostics": {
+      "status": "not_read"
+    },
+    "score_status": "pending_score",
+    "overall_status": "PENDING_SCORE",
+    "unverified_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "versioned_content": null,
+    "required_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "limits": "Platform listing score does not prove public content, source truth or real product quality."
+  },
+  "attempted_at": "2026-10-19T18:22:07.215854+00:00",
+  "response": {
+    "trace_id": "212cf75117924341273815686e0de0",
+    "product_id": 1601943670945,
+    "biz_success": true,
+    "request_id": "213c934417924341273842627",
+    "_trace_id_": "212cf75117924341273815686e0de0"
+  },
+  "refs": {
+    "request_id": "213c934417924341273842627",
+    "trace_id": "212cf75117924341273815686e0de0",
+    "message": null,
+    "error": null
+  },
+  "product_id": "1601943670945"
+}

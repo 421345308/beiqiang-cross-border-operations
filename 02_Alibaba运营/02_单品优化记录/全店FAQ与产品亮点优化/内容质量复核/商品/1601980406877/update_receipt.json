@@ -1,0 +1,96 @@
+{
+  "method": "alibaba.icbu.product.schema.update",
+  "operation": "update",
+  "status": "submitted_needs_readback",
+  "content_status": "pending_readback",
+  "expected_fields": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Mens Lace Up Casual Walking Shoes Sculpted Black Sole Standard or Plush Lining Wholesale EU 39-48",
+          []
+        ]
+      ]
+    ],
+    "textDesc": [
+      "field",
+      [
+        [
+          "id",
+          "textDesc"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Seasonal interior choice: Standard and plush-lined versions share the same low-top lace-up construction.\n\nAdjustable instep fit: Front laces allow the wearer to loosen entry and set the fastening tension.\n\nRear pull loop: The heel loop gives the wearer a grip point when guiding the foot into the shoe.",
+          []
+        ]
+      ]
+    ]
+  },
+  "sku_verification": null,
+  "task_pack": null,
+  "replacement_plan": null,
+  "replacement_transition": null,
+  "inventory_input": null,
+  "post_publish_acceptance": {
+    "phase": "post_publish_completion",
+    "target_score": 5.0,
+    "actual_score": null,
+    "observed_at": null,
+    "score_source": null,
+    "diagnostics": {
+      "status": "not_read"
+    },
+    "score_status": "pending_score",
+    "overall_status": "PENDING_SCORE",
+    "unverified_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "versioned_content": null,
+    "required_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "limits": "Platform listing score does not prove public content, source truth or real product quality."
+  },
+  "attempted_at": "2026-10-19T18:30:28.259082+00:00",
+  "response": {
+    "trace_id": "2108b42717924346281356618e0dbf",
+    "product_id": 1601980406877,
+    "biz_success": true,
+    "request_id": "213f5a2117924346281392149",
+    "_trace_id_": "2108b42717924346281356618e0dbf"
+  },
+  "refs": {
+    "request_id": "213f5a2117924346281392149",
+    "trace_id": "2108b42717924346281356618e0dbf",
+    "message": null,
+    "error": null
+  },
+  "product_id": "1601980406877"
+}

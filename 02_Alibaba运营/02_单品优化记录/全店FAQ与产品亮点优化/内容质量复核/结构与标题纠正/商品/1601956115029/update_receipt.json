@@ -1,0 +1,96 @@
+{
+  "method": "alibaba.icbu.product.schema.update",
+  "operation": "update",
+  "status": "submitted_needs_readback",
+  "content_status": "pending_readback",
+  "expected_fields": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Wide Toe Box Knit Slip-On Walking Shoes with EVA Sole for Daily Casual Wear Wholesale",
+          []
+        ]
+      ]
+    ],
+    "textDesc": [
+      "field",
+      [
+        [
+          "id",
+          "textDesc"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Roomy walking fit: A wider toe box leaves more space at the front, paired with a knitted textile upper for everyday walking.\n\nLace-free entry: The slip-on front simplifies daily dressing without a lace knot to undo.\n\nEVA sole construction: The moulded sole forms the base of this low-cut knit walking shoe.",
+          []
+        ]
+      ]
+    ]
+  },
+  "sku_verification": null,
+  "task_pack": null,
+  "replacement_plan": null,
+  "replacement_transition": null,
+  "inventory_input": null,
+  "post_publish_acceptance": {
+    "phase": "post_publish_completion",
+    "target_score": 5.0,
+    "actual_score": null,
+    "observed_at": null,
+    "score_source": null,
+    "diagnostics": {
+      "status": "not_read"
+    },
+    "score_status": "pending_score",
+    "overall_status": "PENDING_SCORE",
+    "unverified_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "versioned_content": null,
+    "required_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "limits": "Platform listing score does not prove public content, source truth or real product quality."
+  },
+  "attempted_at": "2026-10-19T17:37:00.135259+00:00",
+  "response": {
+    "trace_id": "2133d9ef17924314200498434e0c0d",
+    "product_id": 1601956115029,
+    "biz_success": true,
+    "request_id": "212c41d317924314200546760",
+    "_trace_id_": "2133d9ef17924314200498434e0c0d"
+  },
+  "refs": {
+    "request_id": "212c41d317924314200546760",
+    "trace_id": "2133d9ef17924314200498434e0c0d",
+    "message": null,
+    "error": null
+  },
+  "product_id": "1601956115029"
+}

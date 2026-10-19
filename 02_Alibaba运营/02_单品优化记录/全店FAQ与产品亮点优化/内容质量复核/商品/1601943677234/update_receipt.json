@@ -1,0 +1,96 @@
+{
+  "method": "alibaba.icbu.product.schema.update",
+  "operation": "update",
+  "status": "submitted_needs_readback",
+  "content_status": "pending_readback",
+  "expected_fields": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Panelled Casual Shoes with Rear Pull Loop and Chunky PVC Sole for Everyday Footwear Collections",
+          []
+        ]
+      ]
+    ],
+    "textDesc": [
+      "field",
+      [
+        [
+          "id",
+          "textDesc"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Lace adjustment: Front lace guides allow the wearer to set the instep tension.\n\nVentilation details: Small upper perforations leave openings between the stitched side panels.\n\nHeel pull loop: A rear grip point helps guide the foot into the low-cut opening.",
+          []
+        ]
+      ]
+    ]
+  },
+  "sku_verification": null,
+  "task_pack": null,
+  "replacement_plan": null,
+  "replacement_transition": null,
+  "inventory_input": null,
+  "post_publish_acceptance": {
+    "phase": "post_publish_completion",
+    "target_score": 5.0,
+    "actual_score": null,
+    "observed_at": null,
+    "score_source": null,
+    "diagnostics": {
+      "status": "not_read"
+    },
+    "score_status": "pending_score",
+    "overall_status": "PENDING_SCORE",
+    "unverified_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "versioned_content": null,
+    "required_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "limits": "Platform listing score does not prove public content, source truth or real product quality."
+  },
+  "attempted_at": "2026-10-19T18:20:09.109637+00:00",
+  "response": {
+    "trace_id": "2107d5c717924340090242070e0c18",
+    "product_id": 1601943677234,
+    "biz_success": true,
+    "request_id": "0bab02fc17924340090262879",
+    "_trace_id_": "2107d5c717924340090242070e0c18"
+  },
+  "refs": {
+    "request_id": "0bab02fc17924340090262879",
+    "trace_id": "2107d5c717924340090242070e0c18",
+    "message": null,
+    "error": null
+  },
+  "product_id": "1601943677234"
+}

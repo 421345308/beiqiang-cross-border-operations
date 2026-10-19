@@ -3,7 +3,7 @@ from pathlib import Path
 import argparse, importlib.util, json, math, time
 from datetime import datetime, timezone
 
-READ_METHODS = frozenset({'alibaba.icbu.product.list', 'alibaba.icbu.product.get', 'alibaba.icbu.product.schema.get', 'alibaba.icbu.product.schema.render', 'alibaba.icbu.product.score.get', 'alibaba.icbu.photobank.list', 'alibaba.icbu.category.get.new'})
+READ_METHODS = frozenset({'alibaba.icbu.product.list', 'alibaba.icbu.product.get', 'alibaba.icbu.product.schema.get', 'alibaba.icbu.product.schema.render', 'alibaba.icbu.product.id.encrypt', 'alibaba.icbu.product.score.get', 'alibaba.icbu.photobank.list', 'alibaba.icbu.category.get.new'})
 PRODUCT_STATUS_DEFINITION_SOURCE='https://developer.alibaba.com/doc2/apiDetail.htm?apiId=25439'
 
 def product_readiness(status):

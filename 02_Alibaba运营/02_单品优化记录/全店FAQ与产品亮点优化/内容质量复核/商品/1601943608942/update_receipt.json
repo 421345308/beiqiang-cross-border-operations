@@ -1,0 +1,96 @@
+{
+  "method": "alibaba.icbu.product.schema.update",
+  "operation": "update",
+  "status": "submitted_needs_readback",
+  "content_status": "pending_readback",
+  "expected_fields": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Low Collar Front Zipper Casual Shoes with Contrast Seam Detail and Textured Sole for Footwear Buyers",
+          []
+        ]
+      ]
+    ],
+    "textDesc": [
+      "field",
+      [
+        [
+          "id",
+          "textDesc"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Centre-front zip: A zipper runs along the centre of the front opening, providing the defining closure of this low-top casual shoe.\n\nFront-zip entry: The central zipper opens the instep area to put the shoe on without tying conventional laces.\n\nA grip for entry: The pull loop provides a place to hold the shoe while guiding the foot into the opening.",
+          []
+        ]
+      ]
+    ]
+  },
+  "sku_verification": null,
+  "task_pack": null,
+  "replacement_plan": null,
+  "replacement_transition": null,
+  "inventory_input": null,
+  "post_publish_acceptance": {
+    "phase": "post_publish_completion",
+    "target_score": 5.0,
+    "actual_score": null,
+    "observed_at": null,
+    "score_source": null,
+    "diagnostics": {
+      "status": "not_read"
+    },
+    "score_status": "pending_score",
+    "overall_status": "PENDING_SCORE",
+    "unverified_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "versioned_content": null,
+    "required_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "limits": "Platform listing score does not prove public content, source truth or real product quality."
+  },
+  "attempted_at": "2026-10-19T18:19:48.119872+00:00",
+  "response": {
+    "trace_id": "210827f617924339890274876e0b69",
+    "product_id": 1601943608942,
+    "biz_success": true,
+    "request_id": "0bab02fe17924339890315045",
+    "_trace_id_": "210827f617924339890274876e0b69"
+  },
+  "refs": {
+    "request_id": "0bab02fe17924339890315045",
+    "trace_id": "210827f617924339890274876e0b69",
+    "message": null,
+    "error": null
+  },
+  "product_id": "1601943608942"
+}

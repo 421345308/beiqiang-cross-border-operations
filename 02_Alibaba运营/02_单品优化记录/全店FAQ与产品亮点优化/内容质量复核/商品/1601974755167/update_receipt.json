@@ -1,0 +1,96 @@
+{
+  "method": "alibaba.icbu.product.schema.update",
+  "operation": "update",
+  "status": "submitted_needs_readback",
+  "content_status": "pending_readback",
+  "expected_fields": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Wide Toe Box Mesh Sneakers Lace Up Low Top Casual Walking Shoes Knit Collar Heel Pull Tab PU Sole Wholesale",
+          []
+        ]
+      ]
+    ],
+    "textDesc": [
+      "field",
+      [
+        [
+          "id",
+          "textDesc"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Wide toe-box mesh lace-up walking sneakers with a knit collar and heel pull loop.\n\nRoom for the forefoot: The wider toe design gives the toes more space at the front of the shoe for everyday walking.\n\nAdjustable instep fit: The front laces let the wearer loosen the opening for entry and set the tension over the foot.\n\nA grip for entry: The pull loop provides a place to hold the shoe while guiding the foot into the opening.",
+          []
+        ]
+      ]
+    ]
+  },
+  "sku_verification": null,
+  "task_pack": null,
+  "replacement_plan": null,
+  "replacement_transition": null,
+  "inventory_input": null,
+  "post_publish_acceptance": {
+    "phase": "post_publish_completion",
+    "target_score": 5.0,
+    "actual_score": null,
+    "observed_at": null,
+    "score_source": null,
+    "diagnostics": {
+      "status": "not_read"
+    },
+    "score_status": "pending_score",
+    "overall_status": "PENDING_SCORE",
+    "unverified_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "versioned_content": null,
+    "required_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "limits": "Platform listing score does not prove public content, source truth or real product quality."
+  },
+  "attempted_at": "2026-10-19T18:27:45.677353+00:00",
+  "response": {
+    "trace_id": "2108b3c817924344666624364e0c77",
+    "product_id": 1601974755167,
+    "biz_success": true,
+    "request_id": "2166c2ca17924344666674309",
+    "_trace_id_": "2108b3c817924344666624364e0c77"
+  },
+  "refs": {
+    "request_id": "2166c2ca17924344666674309",
+    "trace_id": "2108b3c817924344666624364e0c77",
+    "message": null,
+    "error": null
+  },
+  "product_id": "1601974755167"
+}

@@ -840,7 +840,8 @@ def load_submission_manifest(path: Path, operation: str, product_id: str | None)
         operation=operation, category_id=manifest["category_id"], target_product_id=product_id,
         field_ids=manifest.get("field_ids", []), dependency_ids=manifest.get("dependency_ids", []),
         expected_model=manifest.get('expected_model'),
-        differentiation_context=context)
+        differentiation_context=context,
+        reviewed_sku_removals=manifest.get('reviewed_sku_removals'))
     listing["task_pack"]=task_pack
     listing["replacement_plan"]=replacement_plan
     listing["schema_provenance"] = {k: manifest[k] for k in

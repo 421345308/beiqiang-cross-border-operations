@@ -659,7 +659,8 @@ def validate_sku_property_pairs(payload):
 
 def prepare_scoped_listing(current_schema, intended_xml, *, operation, category_id,
                            target_product_id=None, field_ids=(), dependency_ids=(),
-                           expected_model=None, model_format_reference=None, differentiation_context=None):
+                           expected_model=None, model_format_reference=None, differentiation_context=None,
+                           reviewed_sku_removals=None):
     """Prepare approved explicit values against the target's current Schema.
 
     Update dependencies are selected from the current target, not historical
@@ -733,7 +734,27 @@ def prepare_scoped_listing(current_schema, intended_xml, *, operation, category_
     if operation == 'update' and 'sku' in fields.union(dependencies):
         old = [n.text for n in current['sku'].findall(".//field[@id='skuId']/value")]
         new = [n.text for n in merged.find("./field[@id='sku']").findall(".//field[@id='skuId']/value")]
-        if not old or old != new:
+        expected_ids = old
+        if reviewed_sku_removals is not None:
+            # Explicit source-range repair only. Default updates still preserve
+            # every original ID; this route cannot add/rebind unrelated rows.
+            review = reviewed_sku_removals
+            removed = review.get('ids', []) if isinstance(review, dict) else []
+            if (not removed or len(removed) != len(set(removed)) or
+                    not set(removed) < set(old) or not review.get('reason') or
+                    not review.get('source_evidence')):
+                raise ValueError('SKU removal requires exact proper-subset IDs, reason and source evidence')
+            expected_ids = [i for i in old if i not in removed]
+            rows = merged.find("./field[@id='sku']").findall('./complex-values')
+            if len(rows) != len(expected_ids):
+                raise ValueError('SKU removal cannot also add unbound rows')
+            old_pairs = {r.findtext("./field[@id='skuId']/value"):
+                         ET.tostring(r.find("./field[@id='props']/values"))
+                         for r in current['sku'].findall('./complex-values')}
+            if any(ET.tostring(r.find("./field[@id='props']/values")) !=
+                   old_pairs.get(r.findtext("./field[@id='skuId']/value")) for r in rows):
+                raise ValueError('SKU removal must preserve retained colour-size bindings')
+        if not old or expected_ids != new:
             raise ValueError('SKU update must preserve current target SKU IDs')
     payload = values_only(merged, operation=operation, field_ids=fields.union(dependencies))
     if operation != 'update':

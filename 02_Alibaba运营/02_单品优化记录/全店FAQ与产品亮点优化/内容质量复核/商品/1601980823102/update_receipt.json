@@ -1,0 +1,96 @@
+{
+  "method": "alibaba.icbu.product.schema.update",
+  "operation": "update",
+  "status": "submitted_needs_readback",
+  "content_status": "pending_readback",
+  "expected_fields": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Mens Black Plush Lined Winter Walking Shoes Lace Up Low Top Casual Sneakers Segmented Sole Wholesale EU 39-48",
+          []
+        ]
+      ]
+    ],
+    "textDesc": [
+      "field",
+      [
+        [
+          "id",
+          "textDesc"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Plush-lined winter style: Black fluffy trim is around the collar and tongue edge on the shoe.\n\nAdjustable instep fit: The front laces let the wearer loosen the opening for entry and set the tension over the foot.\n\nSoft winter interior: The plush lining adds a soft contact surface around the foot for cold-season casual wear.",
+          []
+        ]
+      ]
+    ]
+  },
+  "sku_verification": null,
+  "task_pack": null,
+  "replacement_plan": null,
+  "replacement_transition": null,
+  "inventory_input": null,
+  "post_publish_acceptance": {
+    "phase": "post_publish_completion",
+    "target_score": 5.0,
+    "actual_score": null,
+    "observed_at": null,
+    "score_source": null,
+    "diagnostics": {
+      "status": "not_read"
+    },
+    "score_status": "pending_score",
+    "overall_status": "PENDING_SCORE",
+    "unverified_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "versioned_content": null,
+    "required_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "limits": "Platform listing score does not prove public content, source truth or real product quality."
+  },
+  "attempted_at": "2026-10-19T18:30:40.164128+00:00",
+  "response": {
+    "trace_id": "2133d6a317924346401403614e10dc",
+    "product_id": 1601980823102,
+    "biz_success": true,
+    "request_id": "213f5a2117924346401452718",
+    "_trace_id_": "2133d6a317924346401403614e10dc"
+  },
+  "refs": {
+    "request_id": "213f5a2117924346401452718",
+    "trace_id": "2133d6a317924346401403614e10dc",
+    "message": null,
+    "error": null
+  },
+  "product_id": "1601980823102"
+}

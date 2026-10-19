@@ -1,0 +1,96 @@
+{
+  "method": "alibaba.icbu.product.schema.update",
+  "operation": "update",
+  "status": "submitted_needs_readback",
+  "content_status": "pending_readback",
+  "expected_fields": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Unisex Wide Toe Box Lace Up Walking Shoes with Synthetic Leather Upper and Rubber Sole for Wholesale",
+          []
+        ]
+      ]
+    ],
+    "textDesc": [
+      "field",
+      [
+        [
+          "id",
+          "textDesc"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Roomy forefoot: A wider toe box gives the toes more space within a low-top retro walking shoe.\n\nAdjustable lace fastening: Flat laces and a tongue lace keeper let the wearer set tension over the instep.\n\nPerforated upper: Openings through the synthetic-leather panels leave ventilation spaces between curved stitched overlays.",
+          []
+        ]
+      ]
+    ]
+  },
+  "sku_verification": null,
+  "task_pack": null,
+  "replacement_plan": null,
+  "replacement_transition": null,
+  "inventory_input": null,
+  "post_publish_acceptance": {
+    "phase": "post_publish_completion",
+    "target_score": 5.0,
+    "actual_score": null,
+    "observed_at": null,
+    "score_source": null,
+    "diagnostics": {
+      "status": "not_read"
+    },
+    "score_status": "pending_score",
+    "overall_status": "PENDING_SCORE",
+    "unverified_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "versioned_content": null,
+    "required_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "limits": "Platform listing score does not prove public content, source truth or real product quality."
+  },
+  "attempted_at": "2026-10-19T18:29:15.065983+00:00",
+  "response": {
+    "trace_id": "2133fc3d17924345549814028e0b7f",
+    "product_id": 1601976101204,
+    "biz_success": true,
+    "request_id": "212cbf3217924345549867007",
+    "_trace_id_": "2133fc3d17924345549814028e0b7f"
+  },
+  "refs": {
+    "request_id": "212cbf3217924345549867007",
+    "trace_id": "2133fc3d17924345549814028e0b7f",
+    "message": null,
+    "error": null
+  },
+  "product_id": "1601976101204"
+}

@@ -1,0 +1,96 @@
+{
+  "method": "alibaba.icbu.product.schema.update",
+  "operation": "update",
+  "status": "submitted_needs_readback",
+  "content_status": "pending_readback",
+  "expected_fields": {
+    "productTitle": [
+      "field",
+      [
+        [
+          "id",
+          "productTitle"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "Stretch Knit High Top Slip-On Sock Sneakers with Segmented Foamed Sole Wholesale",
+          []
+        ]
+      ]
+    ],
+    "textDesc": [
+      "field",
+      [
+        [
+          "id",
+          "textDesc"
+        ]
+      ],
+      "",
+      [
+        [
+          "value",
+          [],
+          "High-top stretch-knit slip-on casual shoes with a segmented foamed sole.\n\nSimple daily dressing: The slip-on opening removes the need to tie conventional laces when putting the shoes on.",
+          []
+        ]
+      ]
+    ]
+  },
+  "sku_verification": null,
+  "task_pack": null,
+  "replacement_plan": null,
+  "replacement_transition": null,
+  "inventory_input": null,
+  "post_publish_acceptance": {
+    "phase": "post_publish_completion",
+    "target_score": 5.0,
+    "actual_score": null,
+    "observed_at": null,
+    "score_source": null,
+    "diagnostics": {
+      "status": "not_read"
+    },
+    "score_status": "pending_score",
+    "overall_status": "PENDING_SCORE",
+    "unverified_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "versioned_content": null,
+    "required_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "limits": "Platform listing score does not prove public content, source truth or real product quality."
+  },
+  "attempted_at": "2026-10-19T19:01:45.940558+00:00",
+  "response": {
+    "trace_id": "2107d5c717924365061303039e0d3f",
+    "product_id": 1601924755368,
+    "biz_success": true,
+    "request_id": "0b0b3a2717924365061338257",
+    "_trace_id_": "2107d5c717924365061303039e0d3f"
+  },
+  "refs": {
+    "request_id": "0b0b3a2717924365061338257",
+    "trace_id": "2107d5c717924365061303039e0d3f",
+    "message": null,
+    "error": null
+  },
+  "product_id": "1601924755368"
+}

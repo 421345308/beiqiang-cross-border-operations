@@ -11,3 +11,16 @@
 BQ1030-A/B已由负责人明确为平台侵权退回，计划与来源当前档案均标记停止原鞋原图重提，执行工具在调用API前拒绝这两项的准备/提交。Shoe Profile校验是独立编辑错误，不能当作侵权退回原因；历史5分和短暂approved不代替当前发布状态。具体平台权利通知尚未读取，不猜权利类型或靠抹图/改题重新投放。
 
 后台原始统计、账号、登录和客户资料只保留本地；公开Git只同步派生经营结论、非敏感工具、公开商品字段与核验。运行安全测试：`python -m unittest discover -s 08_工具链/01_业务脚本/国际站经营诊断 -p test_*.py`。
+
+## 当前内容质量复核
+
+业务入口为[内容质量复核](../../../../02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/README.md)，不从旧批次脚本继承商品事实。
+
+- `read_content_quality_catalog.py`：只读完整当前目录、逐 ID 正式字段与对应公开来源。
+- `audit_current_gallery_visuals.py`：去重下载当前图库，生成家族联系表作人工筛查；生成成功不代表视觉通过。
+- `collect_exact_source_photos.py --families ...`：按台账对应精确来源采集原图，不搜索替代鞋冒充同款。
+- `revise_catalog_content.py prepare|submit|verify|sync [--ids ...]`：只改已审核的标题/功能亮点，保护通用 FAQ、图片、SKU 和商业字段。`--correction` 使用单独纠正证据，`--followup-phase 正式差异收尾` 仅供已回读的具体后续差异；账本存在时不重放写入。
+- `repair_m001_catalog.py bank|prepare|submit|verify|sync`：M001 原 ID 的三色18并码、原SKU保留和整组图文专项；当前已正式通过，不再提交。
+- `repair_source_assortment.py bank|prepare|submit|verify|sync --family ...`：读取逐款已审计划，补实图颜色或移除有来源依据的误扩尺码，保留其余 SKU ID/编码/价格与页面。移除须声明精确旧SKU ID、理由和来源；合同校验仍拒绝静默删SKU、保留行换绑和同时新增无绑定行。新颜色图须原图对照和图审通过后才上传。每色范围分别填写，不把来源全店范围扩到受限颜色。
+
+API 核验只证明正式字段、审核和评分，不代表原尺寸图审、实物库存或公开页面视觉通过。所有写入先准备当前 Schema、提交前检查当前值、每 ID 留一次账本，未知结果独立回读后决定具体修正。
