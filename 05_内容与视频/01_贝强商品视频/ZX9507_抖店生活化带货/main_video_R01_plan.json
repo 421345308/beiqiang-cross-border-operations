@@ -1,7 +1,7 @@
 {
   "candidate_id": "R01_BRAND_MAIN_VIDEO",
   "updated_on": "2026-10-19",
-  "status": "ONE_GENERATED_EDITED_PREVIEW_READY_MICRODETAIL_PENDING",
+  "status": "USER_REJECTED_TOO_SIMILAR_TO_PREVIOUS_VIDEO",
   "channel": "国内抖店雷丹森羊品牌店",
   "product_reference": "09_国内电商/抖店/数据/品牌首发商品.json#models.ZX9507",
   "color": "黑杏加绒",
@@ -119,5 +119,15 @@
     "qa": "edit/R01/qa_final_v2/qa_20261019_185733/QA_REPORT.md",
     "qa_source_id": "48a1f22da5bd7d4c"
   },
-  "product_fidelity_acceptance": false
+  "product_fidelity_acceptance": false,
+  "user_acceptance": false,
+  "further_paid_generation_authorized": false,
+  "user_feedback": {
+    "date": "2026-10-19",
+    "source": "负责人实际试看后反馈：跟之前长得一模一样，不相信爆款这样拍，并质疑浪费有限生成额度",
+    "decision": "本条为失败样片，不作为创意验收或批量模板；停止后续付费生成，先审免费参考拆解和与旧片的具体差异",
+    "verified_generation_count": 1,
+    "new_audio_generation_count": 0,
+    "billing_amount": "任务回执和当前CLI帮助均未提供本条账单数值，未知，不推算"
+  }
 }
