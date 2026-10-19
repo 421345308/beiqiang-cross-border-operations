@@ -3,3 +3,7 @@ hypit/.hypit/
 hypit/hypit.runtime.json
 references/*/audio/
 .local/
+qa_generated/**/frames/
+qa_generated/**/focused/
+qa_generated/**/sampling_manifest.json
+qa_generated/**/video_metadata.json

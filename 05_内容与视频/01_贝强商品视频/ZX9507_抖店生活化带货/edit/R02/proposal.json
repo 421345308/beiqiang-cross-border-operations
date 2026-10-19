@@ -1,9 +1,9 @@
 {
   "schema": "beiqiang-reference-adaptation-v1",
-  "updated": "2026-10-19",
+  "updated": "2026-10-20",
   "product": "ZX9507黑杏加绒针织套脚休闲鞋",
   "brand": "雷丹森羊",
-  "status": "PRICED_DRAFT_AWAITING_USER_CONFIRMATION",
+  "status": "USER_ACCEPTED_VISUAL_DIRECTION_BGM_PREVIEW_READY",
   "positioning": "秋冬暖和，也穿得好看；加绒针织休闲穿搭",
   "reference": {
     "id": "7649978280061308186",
@@ -116,15 +116,16 @@
     "resolution": "720p",
     "ratio": "9:16",
     "sound": true,
-    "authorized": false,
-    "submitted": false,
+    "authorized": true,
+    "submitted": true,
     "actual_cost": null,
     "account_quote": {
       "source": "libtv_current_page",
       "credits": 782,
       "strikethrough_credits": 1564,
       "checked_at": "2026-10-19T22:21:56+08:00"
-    }
+    },
+    "authorization_consumed": true
   },
   "actual_this_phase": {
     "video_generations": 0,
@@ -137,9 +138,18 @@
     "source": "hypit/whole.svml",
     "run": "hypit/whole.svrun",
     "platform_bindings": null,
-    "note": "实际LibTV草稿已接本条参考和2张实鞋图；私有执行Source/Run/Profile检查通过，当前782积分，等待负责人费用确认。",
+    "note": "一次授权已用于1条生成；结果已取得。后续不允许再生成，BGM版只改音轨。",
     "verification": "verification.json",
     "execution_ready": false,
-    "provider_bound": true
+    "provider_bound": true,
+    "execution_completed": true
+  },
+  "actual_generation": {
+    "video_submissions": 1,
+    "video_outputs": 1,
+    "paid_retries": 0,
+    "approved_credits": 782,
+    "result": "result.json",
+    "new_bgm_generation_credits": 0
   }
 }

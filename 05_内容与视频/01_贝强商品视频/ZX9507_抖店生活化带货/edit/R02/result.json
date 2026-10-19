@@ -1,0 +1,41 @@
+{
+  "schema": "beiqiang-generated-video-result-v1",
+  "updated": "2026-10-20",
+  "product": "ZX9507黑杏加绒针织鞋",
+  "status": "USER_ACCEPTED_VISUAL_DIRECTION_BGM_PREVIEW_READY",
+  "provider": "LibTV",
+  "requested_model": "Seedance 2.5",
+  "execution_route": "Hypit Source/Run -> native LibTV Provider -> official CLI -> verified downloaded output",
+  "source": "generated/ZX9507_R02_黑杏加绒_15秒原片.mp4",
+  "source_sha256": "a103e12dffe165cc274a7838a13c705fd30a223413aff9fb685e6de9426ef78c",
+  "preview": "ZX9507_R02_黑杏加绒_15秒_BGM版.mp4",
+  "preview_sha256": "ad7195bdd2e7262db306df2c4dbe880f1fab016353b974ad437db09de2d1c346",
+  "video": {
+    "width": 720,
+    "height": 1280,
+    "fps": 24,
+    "frames": 361,
+    "picture_seconds": 15.041667,
+    "container_seconds": 15.072,
+    "has_audio": true
+  },
+  "actual_video_generation_submissions": 1,
+  "actual_video_outputs": 1,
+  "automatic_generation_retries": 0,
+  "authorized_credits": 782,
+  "quoted_credits": 782,
+  "actual_billing_receipt_amount": null,
+  "billing_note": "782为当前页面实时报价及负责人明确确认；正式逐任务扣费账单尚未读取，不把报价写成账单核验。",
+  "new_paid_image_or_audio_generations": 0,
+  "further_paid_generation_authorized": false,
+  "user_feedback": "我觉得可以，请帮我配上相关的bgm",
+  "bgm_edit": "bgm_edit.json",
+  "bgm_license": "music/SOURCE.json",
+  "new_bgm_generation_credits": 0,
+  "QA": "qa_generated/qa_20261020_001810/QA_REPORT.md",
+  "published": false,
+  "review_limits": [
+    "完整时段抽帧及两处局部检查已完成；未声称逐帧连续动态/主观声音审美已验收。",
+    "鞋型与黑杏配色可识别；针织与底纹有局部重建，不承诺逐像素锁定。"
+  ]
+}

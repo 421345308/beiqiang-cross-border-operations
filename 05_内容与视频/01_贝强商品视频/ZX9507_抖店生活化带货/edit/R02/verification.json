@@ -61,8 +61,19 @@
     "old_video_or_identity_inputs": 0,
     "platform_quote_credits": 782,
     "final_readback_after_page": true,
-    "user_paid_confirmation": false,
-    "generation_submitted": false,
+    "user_paid_confirmation": true,
+    "generation_submitted": true,
     "note": "原run_plan保留免费review工程当时未绑定的检查；本项为本轮私有执行工程实际接线后的结果。"
+  },
+  "completed_execution": {
+    "provider_result_complete": true,
+    "video_outputs": 1,
+    "submission_count": 1,
+    "paid_retries": 0,
+    "download_verified": true,
+    "video_frames_preserved_in_bgm": 361,
+    "video_stream_identical": true,
+    "final_decode_passed": true,
+    "result": "result.json"
   }
 }

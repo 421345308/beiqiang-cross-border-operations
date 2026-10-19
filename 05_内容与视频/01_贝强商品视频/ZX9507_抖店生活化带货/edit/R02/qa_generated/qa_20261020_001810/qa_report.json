@@ -1,0 +1,94 @@
+{
+  "schema_version": "1",
+  "status": "sampled_visual_and_technical_review_complete_subjective_audio_pending",
+  "source_video": "E:\\贝强大文件\\05_内容与视频\\01_贝强商品视频\\ZX9507_抖店生活化带货\\edit\\R02\\generated\\ZX9507_R02_黑杏加绒_15秒原片.mp4",
+  "source_id": "964487bf305d5c9b",
+  "references": [
+    {
+      "role": "master_image",
+      "path": "E:\\贝强大文件\\05_内容与视频\\01_贝强商品视频\\ZX9507_抖店生活化带货\\sources\\product_factory_white.jpg"
+    }
+  ],
+  "severity_vocabulary": [
+    "PASS",
+    "MINOR",
+    "MODERATE",
+    "SEVERE",
+    "CRITICAL"
+  ],
+  "action_vocabulary": [
+    "KEEP",
+    "TRIM",
+    "REGENERATE"
+  ],
+  "issue_schema": {
+    "start": "seconds",
+    "end": "seconds",
+    "first_bad_frame": "seconds|null",
+    "peak_bad_frame": "seconds|null",
+    "recovery_frame": "seconds|null",
+    "severity": "PASS|MINOR|MODERATE|SEVERE|CRITICAL",
+    "category": "character_consistency|anatomy|object_consistency|motion_continuity|camera_continuity|style_consistency|background_consistency|temporal_artifacts|delivery",
+    "description": "observable defect",
+    "action": "KEEP|TRIM|REGENERATE"
+  },
+  "issues": [
+    {
+      "start": 0,
+      "end": 3,
+      "first_bad_frame": null,
+      "peak_bad_frame": 2.042,
+      "recovery_frame": null,
+      "severity": "MINOR",
+      "category": "object_consistency",
+      "description": "黑杏与不规则块状造型底保留；外底细沟、局部块形由模型重建，不能认证逐像素同原件。",
+      "action": "KEEP"
+    },
+    {
+      "start": 10.5,
+      "end": 12.8,
+      "first_bad_frame": null,
+      "peak_bad_frame": 11.5,
+      "recovery_frame": 13.996,
+      "severity": "MINOR",
+      "category": "delivery",
+      "description": "手指鞋面近景时鞋尖一度贴近/轻出右边界，完整双鞋在收尾恢复；主体针织与套脚口可读。",
+      "action": "KEEP"
+    }
+  ],
+  "segments": {
+    "keep": [
+      {
+        "start": 0,
+        "end": 15.041667
+      }
+    ],
+    "trim": [],
+    "regenerate": []
+  },
+  "top_three_issues": [
+    "微织纹与底纹局部重建",
+    "手部近景鞋尖短时轻裁边"
+  ],
+  "reviewed_evidence": [
+    "contact_sheet.jpg",
+    "frames/t_0000002042ms.jpg",
+    "frames/t_0000011007ms.jpg",
+    "frames/t_0000014992ms.jpg",
+    "focused/t_0000001500ms_20261020_001924/focused_candidates.jpg",
+    "focused/t_0000011500ms_20261020_001928/focused_candidates.jpg"
+  ],
+  "user_visual_acceptance": "负责人说“我觉得可以”，并要求配BGM；BGM版尚待实际试听。",
+  "audio_review": {
+    "asr": "本地恢复秋冬暖和好看、黑色针织/杏色造型底、长裤搭配、加绒/套脚等主体；未识别品牌名，不能单凭ASR确认是否缺词。",
+    "subjective_listening_complete": false,
+    "final_audio_peak_dbfs": -0.6,
+    "final_audio_mean_dbfs": -15.9,
+    "full_decode_passed": true
+  },
+  "bgm_video_identity": {
+    "encoded_video_stream_identical": true,
+    "frames": 361,
+    "reference": "../../bgm_edit.json"
+  }
+}
