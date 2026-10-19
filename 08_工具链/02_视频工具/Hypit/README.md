@@ -54,3 +54,11 @@ Provider不运行本地推理、不启动常驻服务、并发容量为1。未�
 - `build` 前先检查 Run 的 Needs；包含托管转录、图像、视频、语音或云 GPU 的 Build，仍需负责人按当前任务明确授权费用和范围。
 - HypiHub 会接收其 Provider 所需的素材；贝强 SKU 原件、客户素材和未公开品牌文件不默认上传。
 - H3 生成必须继续通过贝强中央 Prompt、官方工作流和校验器；未建设贝强自有 Provider 前，不用 Hypit 绕过该流程。
+
+## 2026-10-19参考改编复核
+
+负责人要求充分研究Hypit等“参考视频变自家商品”的工具后，已重新读当前Skill的reference-video、transformations、video-direction及Model/Provider关系，核对官方podcast换商品源代码。当前结论及对比统一写在[抖店商品视频流水线](../../../05_内容与视频/01_贝强商品视频/抖店商品视频流水线/PROJECT.md#参考改编工具与当前决策)，不另立第二份选型主报告。
+
+本机`--version`实际为0.1.8；`--help`、`media --help`、`paths`与对既有参考原件的`media probe`在正常审批下通过。普通沙箱中的esbuild子进程曾报spawn EPERM，不能解释成未安装或未获用户授权。没有执行Build、转录、Provider调用、安装更新或登录；根项目未选Runtime Profile。原片读取为13.5秒、540×960、30fps、有音轨；此结果不证明语义听审完成。
+
+现有LibTV Provider维持“已接入、免费准备与模拟运输验证，付费完整闭环未测”的状态。ZX9507 R01直接CLI生成及后期被负责人否决，不成为Hypit的成功案例。免费参考理解与编排可先推进，账户报价和当次付费范围仍以实际执行对象核验。
