@@ -1,0 +1,63 @@
+{
+  "family": "BQ021_功能图正式精修",
+  "kind": "mixed_slots",
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "ids": [
+    "1601939739115",
+    "1601939709217",
+    "1601939606858"
+  ],
+  "assets": {
+    "BQ021_profile": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ021_K6212/06_当前图文/功能/BQ021_profile.png",
+      "sha256": "77f0c6bea6b96936d6fb6ae470488e55bc1a0e16e89567019130d7ec96ba15ba",
+      "state": "PASS"
+    }
+  },
+  "main_replacements_by_id": {
+    "1601939739115": {},
+    "1601939709217": {},
+    "1601939606858": {}
+  },
+  "detail_replacements_by_id": {
+    "1601939739115": {
+      "https://sc04.alicdn.com/kf/Hc1eda81a347d458391937f0e3f69d487Q.jpg": "BQ021_profile"
+    },
+    "1601939709217": {
+      "https://sc04.alicdn.com/kf/Hc1eda81a347d458391937f0e3f69d487Q.jpg": "BQ021_profile"
+    },
+    "1601939606858": {
+      "https://sc04.alicdn.com/kf/Hc1eda81a347d458391937f0e3f69d487Q.jpg": "BQ021_profile"
+    }
+  },
+  "expected_old_by_id": {
+    "1601939739115": [
+      "https://sc04.alicdn.com/kf/S75d1d87067b342cb940167c6ebb48ee7K.jpg",
+      "https://sc04.alicdn.com/kf/H30bc6ef2c77c45bd9525528a2292f7c9n.jpg",
+      "https://sc04.alicdn.com/kf/Hc1eda81a347d458391937f0e3f69d487Q.jpg",
+      "https://sc04.alicdn.com/kf/Hc1f3ae8ad7b04f8ca2623c8249f027f0Z.png"
+    ],
+    "1601939709217": [
+      "https://sc04.alicdn.com/kf/Hc1eda81a347d458391937f0e3f69d487Q.jpg",
+      "https://sc04.alicdn.com/kf/Hc1f3ae8ad7b04f8ca2623c8249f027f0Z.png",
+      "https://sc04.alicdn.com/kf/S75d1d87067b342cb940167c6ebb48ee7K.jpg",
+      "https://sc04.alicdn.com/kf/H30bc6ef2c77c45bd9525528a2292f7c9n.jpg"
+    ],
+    "1601939606858": [
+      "https://sc04.alicdn.com/kf/Hc1f3ae8ad7b04f8ca2623c8249f027f0Z.png",
+      "https://sc04.alicdn.com/kf/H30bc6ef2c77c45bd9525528a2292f7c9n.jpg",
+      "https://sc04.alicdn.com/kf/Hc1eda81a347d458391937f0e3f69d487Q.jpg",
+      "https://sc04.alicdn.com/kf/S75d1d87067b342cb940167c6ebb48ee7K.jpg"
+    ]
+  },
+  "detail_deletions_by_id": {
+    "1601939739115": [],
+    "1601939709217": [],
+    "1601939606858": []
+  },
+  "source_evidence": [
+    "01_产品资产/02_可发布素材/00_最终上传/BQ021_K6212/06_当前图文/功能/BQ021_profile_图稿依据.json"
+  ],
+  "scope": "Replace individually reviewed product proofs with exact-shoe buyer-facing diagrams. Remove internal instructions, unsupported claim labels and redundant detail filler. Keep factory F1 at existing position, company suite, all copy, SKU, prices, stock and other fields unchanged."
+}

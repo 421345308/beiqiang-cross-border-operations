@@ -31,7 +31,7 @@
 ### BQ1057-B · 1601943700590
 
 - 平台链接：[1601943700590](https://www.alibaba.com/product-detail/Slip-On-Knit-Casual-Sneakers-with_1601943700590.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943700590/formal_get.json)；UTC 2026-10-20T09:17:30.225063+00:00。
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943700590/formal_get.json)；UTC 2026-10-20T12:11:07.437209+00:00。
 - 当前正式标题：Slip-On Knit Casual Sneakers with Continuous Sock Cuff and Rear Pull Loop for Footwear Collections
 - 审核/展示：approved / Y；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
@@ -41,7 +41,7 @@
   - M1：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR057/M1.jpg) · 1000×1000
   - M2：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR057/M2.jpg) · 1000×1000
   - M3：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR057/M3.jpg) · 1000×1000
-  - M4：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR057/M4.jpg) · 1000×1000
+  - M4：本地图片待补；官方来源 https://sc04.alicdn.com/kf/H850a86dd44bc47358b6d47d1953d45a8Z.png
   - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR057/M5.jpg) · 1000×1000
   - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/00_%E6%9C%80%E7%BB%88%E4%B8%8A%E4%BC%A0/00_%E5%8E%82%E5%AE%B6%E8%B5%84%E6%96%99/03_%E5%BD%93%E5%89%8D%E5%B7%A5%E5%8E%82%E4%B8%BB%E5%9B%BE/F1_factory.png) · 1254×1254
 - 本地同步状态：`FORMAL_FIELDS_SCORE_PASS`。
@@ -53,7 +53,7 @@
 ### BQ1057-A · 1601943768215
 
 - 平台链接：[1601943768215](https://www.alibaba.com/product-detail/Knit-Sock-Style-Casual-Shoes-with_1601943768215.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943768215/formal_get.json)；UTC 2026-10-20T09:17:26.214510+00:00。
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943768215/formal_get.json)；UTC 2026-10-20T12:11:04.384741+00:00。
 - 当前正式标题：Knit Sock Style Casual Shoes with Ankle Collar and Sculpted EVA Outsole for Wholesale Footwear Buyers
 - 审核/展示：approved / Y；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
@@ -63,7 +63,7 @@
   - M1：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR057/M1.jpg) · 1000×1000
   - M2：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR057/M2.jpg) · 1000×1000
   - M3：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR057/M3.jpg) · 1000×1000
-  - M4：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR057/M4.jpg) · 1000×1000
+  - M4：本地图片待补；官方来源 https://sc04.alicdn.com/kf/H850a86dd44bc47358b6d47d1953d45a8Z.png
   - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR057/M5.jpg) · 1000×1000
   - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/00_%E6%9C%80%E7%BB%88%E4%B8%8A%E4%BC%A0/00_%E5%8E%82%E5%AE%B6%E8%B5%84%E6%96%99/03_%E5%BD%93%E5%89%8D%E5%B7%A5%E5%8E%82%E4%B8%BB%E5%9B%BE/F1_factory.png) · 1254×1254
 - 本地同步状态：`FORMAL_FIELDS_SCORE_PASS`。
@@ -75,7 +75,7 @@
 ### BQ1057-C · 1601943771190
 
 - 平台链接：[1601943771190](https://www.alibaba.com/product-detail/Ankle-Collar-Knit-Sock-Sneakers-with_1601943771190.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943771190/formal_get.json)；UTC 2026-10-20T09:17:34.478804+00:00。
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943771190/formal_get.json)；UTC 2026-10-20T12:11:13.675638+00:00。
 - 当前正式标题：Ankle Collar Knit Sock Sneakers with EVA Sole and Six Colour Options for Wholesale Shoe Assortments
 - 审核/展示：approved / Y；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
@@ -85,7 +85,7 @@
   - M1：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR057/M1.jpg) · 1000×1000
   - M2：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR057/M2.jpg) · 1000×1000
   - M3：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR057/M3.jpg) · 1000×1000
-  - M4：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR057/M4.jpg) · 1000×1000
+  - M4：本地图片待补；官方来源 https://sc04.alicdn.com/kf/H850a86dd44bc47358b6d47d1953d45a8Z.png
   - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/HR057/M5.jpg) · 1000×1000
   - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/00_%E6%9C%80%E7%BB%88%E4%B8%8A%E4%BC%A0/00_%E5%8E%82%E5%AE%B6%E8%B5%84%E6%96%99/03_%E5%BD%93%E5%89%8D%E5%B7%A5%E5%8E%82%E4%B8%BB%E5%9B%BE/F1_factory.png) · 1254×1254
 - 本地同步状态：`FORMAL_FIELDS_SCORE_PASS`。
@@ -176,5 +176,16 @@
 - [prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E9%85%8D%E8%89%B2%E4%B8%8E%E5%B0%BA%E7%A0%81%E4%BF%AE%E6%AD%A3/HR057_%E8%A7%84%E6%A0%BC%E5%9B%BE%E6%B8%85%E7%90%86/%E5%95%86%E5%93%81/1601943771190/prepared.json)
 - [update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E9%85%8D%E8%89%B2%E4%B8%8E%E5%B0%BA%E7%A0%81%E4%BF%AE%E6%AD%A3/HR057_%E8%A7%84%E6%A0%BC%E5%9B%BE%E6%B8%85%E7%90%86/%E5%95%86%E5%93%81/1601943771190/update_receipt.json)
 - [verification.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E9%85%8D%E8%89%B2%E4%B8%8E%E5%B0%BA%E7%A0%81%E4%BF%AE%E6%AD%A3/HR057_%E8%A7%84%E6%A0%BC%E5%9B%BE%E6%B8%85%E7%90%86/%E5%95%86%E5%93%81/1601943771190/verification.json)
+- [计划.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/HR057_%E9%85%8D%E8%89%B2%E8%AF%A6%E6%83%85%E7%B2%BE%E4%BF%AE/%E8%AE%A1%E5%88%92.json)
+- [图片银行.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/HR057_%E9%85%8D%E8%89%B2%E8%AF%A6%E6%83%85%E7%B2%BE%E4%BF%AE/%E5%9B%BE%E7%89%87%E9%93%B6%E8%A1%8C.json)
+- [prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/HR057_%E9%85%8D%E8%89%B2%E8%AF%A6%E6%83%85%E7%B2%BE%E4%BF%AE/%E5%95%86%E5%93%81/1601943768215/prepared.json)
+- [update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/HR057_%E9%85%8D%E8%89%B2%E8%AF%A6%E6%83%85%E7%B2%BE%E4%BF%AE/%E5%95%86%E5%93%81/1601943768215/update_receipt.json)
+- [verification.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/HR057_%E9%85%8D%E8%89%B2%E8%AF%A6%E6%83%85%E7%B2%BE%E4%BF%AE/%E5%95%86%E5%93%81/1601943768215/verification.json)
+- [prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/HR057_%E9%85%8D%E8%89%B2%E8%AF%A6%E6%83%85%E7%B2%BE%E4%BF%AE/%E5%95%86%E5%93%81/1601943700590/prepared.json)
+- [update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/HR057_%E9%85%8D%E8%89%B2%E8%AF%A6%E6%83%85%E7%B2%BE%E4%BF%AE/%E5%95%86%E5%93%81/1601943700590/update_receipt.json)
+- [verification.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/HR057_%E9%85%8D%E8%89%B2%E8%AF%A6%E6%83%85%E7%B2%BE%E4%BF%AE/%E5%95%86%E5%93%81/1601943700590/verification.json)
+- [prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/HR057_%E9%85%8D%E8%89%B2%E8%AF%A6%E6%83%85%E7%B2%BE%E4%BF%AE/%E5%95%86%E5%93%81/1601943771190/prepared.json)
+- [update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/HR057_%E9%85%8D%E8%89%B2%E8%AF%A6%E6%83%85%E7%B2%BE%E4%BF%AE/%E5%95%86%E5%93%81/1601943771190/update_receipt.json)
+- [verification.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/HR057_%E9%85%8D%E8%89%B2%E8%AF%A6%E6%83%85%E7%B2%BE%E4%BF%AE/%E5%95%86%E5%93%81/1601943771190/verification.json)
 
 原件、正式回执与当前资料通过本页关联，不再复制成第二套商品库。

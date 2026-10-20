@@ -23,18 +23,19 @@ def eu_number(label):
     assert match,'Unsupported size label: '+label
     return match.group(1)
 
-def diagram(rows,detail):
+def diagram(rows,detail,include_sizes=True):
     horizontal=len(rows)==2
     cols=1 if horizontal else 2 if detail or len(rows)<=4 else 3
     cardw=(900-(cols-1)*22)/cols;cardh=360 if detail else 325
     rowcount=math.ceil(len(rows)/cols);height=185+rowcount*(cardh+20)+100
     if not detail:height=max(height,1000)
-    ystart=175;header='Colour & Size Selection'
+    ystart=175;header='Colour & Size Selection'if include_sizes else'Colour Selection'
+    subtitle=f'{len(rows)} colour options'+(' · European sizes'if include_sizes else'')
     svg=[f'<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="{height}" viewBox="0 0 1000 {height}">',
         '<rect width="1000" height="100%" fill="#ffffff"/>',
         f'<text x="50" y="74" fill="#092b50" font-family="Arial,sans-serif" font-size="48" font-weight="700">{escape(header)}</text>',
         '<rect x="50" y="99" width="76" height="6" rx="3" fill="#f47720"/>',
-        f'<text x="50" y="142" fill="#4f6072" font-family="Arial,sans-serif" font-size="25">{len(rows)} colour options · European sizes</text>']
+        f'<text x="50" y="142" fill="#4f6072" font-family="Arial,sans-serif" font-size="25">{escape(subtitle)}</text>']
     all_sizes=[]
     for i,r in enumerate(rows):
         last_count=len(rows)%cols
@@ -49,9 +50,10 @@ def diagram(rows,detail):
             f'<image x="{x+10}" y="{y+10}" width="{photo_w}" height="{photo_h}" preserveAspectRatio="xMidYMid meet" xlink:href="{data}"/>',
             f'<text x="{label_x}" y="{label_y}" text-anchor="middle" fill="#092b50" font-family="Arial,sans-serif" font-size="{25 if cols==3 else 29}" font-weight="700">{escape(r["colour"])}</text>']
         sizes=r['EU'];compact=(sizes[0]+'–'+sizes[-1])if all(int(sizes[j+1])-int(sizes[j])==1 for j in range(len(sizes)-1))else', '.join(sizes)
-        svg.append(f'<text x="{label_x}" y="{label_y+42 if horizontal else y+cardh-21}" text-anchor="middle" fill="#4f6072" font-family="Arial,sans-serif" font-size="24">EU {escape(compact)}</text>')
+        if include_sizes:svg.append(f'<text x="{label_x}" y="{label_y+42 if horizontal else y+cardh-21}" text-anchor="middle" fill="#4f6072" font-family="Arial,sans-serif" font-size="24">EU {escape(compact)}</text>')
         all_sizes+=sizes
-    svg.append(f'<text x="50" y="{height-34}" fill="#526277" font-family="Arial,sans-serif" font-size="22">Select your preferred colour and size assortment.</text></svg>')
+    footer='Select your preferred colour'+(' and size'if include_sizes else'')+' assortment.'
+    svg.append(f'<text x="50" y="{height-34}" fill="#526277" font-family="Arial,sans-serif" font-size="22">{escape(footer)}</text></svg>')
     return ''.join(svg)
 
 def main():

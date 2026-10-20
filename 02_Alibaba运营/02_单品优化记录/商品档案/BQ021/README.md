@@ -50,7 +50,7 @@
 ### BQ021-W1 / K6212 · 1601939606858
 
 - 平台链接：[1601939606858](https://www.alibaba.com/product-detail/Slip-On-Knit-Walking-Shoes-Easy_1601939606858.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939606858/formal_get.json)；UTC 2026-10-20T05:03:49.996320+00:00。
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939606858/formal_get.json)；UTC 2026-10-20T17:05:57.032922+00:00。
 - 当前正式标题：Knit Slip-On Walking Shoes with Heel Pull Loop and Sculpted Sole Wholesale
 - 审核/展示：approved / Y；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
@@ -72,7 +72,7 @@
 ### BQ021-R1 / K6212 · 1601939709217
 
 - 平台链接：[1601939709217](https://www.alibaba.com/product-detail/Slip-On-Knit-Walking-Shoes-Easy_1601939709217.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939709217/formal_get.json)；UTC 2026-10-20T05:03:56.164851+00:00。
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939709217/formal_get.json)；UTC 2026-10-20T17:05:48.915645+00:00。
 - 当前正式标题：Knit Slip-On Walking Shoes with Heel Pull Loop and Sculpted Sole Wholesale
 - 审核/展示：approved / Y；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
@@ -94,7 +94,7 @@
 ### BQ021-O1 / K6212 · 1601939739115
 
 - 平台链接：[1601939739115](https://www.alibaba.com/product-detail/Slip-On-Knit-Lightweight-Breathable-Walking_1601939739115.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939739115/formal_get.json)；UTC 2026-10-20T05:04:00.634006+00:00。
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939739115/formal_get.json)；UTC 2026-10-20T17:05:43.850012+00:00。
 - 当前正式标题：Knit Slip-On Walking Shoes with Heel Pull Loop and Sculpted Sole Wholesale
 - 审核/展示：approved / Y；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
@@ -261,5 +261,16 @@
 - [prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ021_%E9%85%8D%E8%89%B2%E5%9B%BE%E9%87%8D%E5%BB%BA_95331ecfceda/%E5%95%86%E5%93%81/1601838963947/prepared.json)
 - [update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ021_%E9%85%8D%E8%89%B2%E5%9B%BE%E9%87%8D%E5%BB%BA_95331ecfceda/%E5%95%86%E5%93%81/1601838963947/update_receipt.json)
 - [verification.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ021_%E9%85%8D%E8%89%B2%E5%9B%BE%E9%87%8D%E5%BB%BA_95331ecfceda/%E5%95%86%E5%93%81/1601838963947/verification.json)
+- [计划.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ021_%E5%8A%9F%E8%83%BD%E5%9B%BE%E6%AD%A3%E5%BC%8F%E7%B2%BE%E4%BF%AE/%E8%AE%A1%E5%88%92.json)
+- [图片银行.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ021_%E5%8A%9F%E8%83%BD%E5%9B%BE%E6%AD%A3%E5%BC%8F%E7%B2%BE%E4%BF%AE/%E5%9B%BE%E7%89%87%E9%93%B6%E8%A1%8C.json)
+- [prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ021_%E5%8A%9F%E8%83%BD%E5%9B%BE%E6%AD%A3%E5%BC%8F%E7%B2%BE%E4%BF%AE/%E5%95%86%E5%93%81/1601939739115/prepared.json)
+- [update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ021_%E5%8A%9F%E8%83%BD%E5%9B%BE%E6%AD%A3%E5%BC%8F%E7%B2%BE%E4%BF%AE/%E5%95%86%E5%93%81/1601939739115/update_receipt.json)
+- [verification.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ021_%E5%8A%9F%E8%83%BD%E5%9B%BE%E6%AD%A3%E5%BC%8F%E7%B2%BE%E4%BF%AE/%E5%95%86%E5%93%81/1601939739115/verification.json)
+- [prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ021_%E5%8A%9F%E8%83%BD%E5%9B%BE%E6%AD%A3%E5%BC%8F%E7%B2%BE%E4%BF%AE/%E5%95%86%E5%93%81/1601939709217/prepared.json)
+- [update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ021_%E5%8A%9F%E8%83%BD%E5%9B%BE%E6%AD%A3%E5%BC%8F%E7%B2%BE%E4%BF%AE/%E5%95%86%E5%93%81/1601939709217/update_receipt.json)
+- [verification.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ021_%E5%8A%9F%E8%83%BD%E5%9B%BE%E6%AD%A3%E5%BC%8F%E7%B2%BE%E4%BF%AE/%E5%95%86%E5%93%81/1601939709217/verification.json)
+- [prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ021_%E5%8A%9F%E8%83%BD%E5%9B%BE%E6%AD%A3%E5%BC%8F%E7%B2%BE%E4%BF%AE/%E5%95%86%E5%93%81/1601939606858/prepared.json)
+- [update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ021_%E5%8A%9F%E8%83%BD%E5%9B%BE%E6%AD%A3%E5%BC%8F%E7%B2%BE%E4%BF%AE/%E5%95%86%E5%93%81/1601939606858/update_receipt.json)
+- [verification.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ021_%E5%8A%9F%E8%83%BD%E5%9B%BE%E6%AD%A3%E5%BC%8F%E7%B2%BE%E4%BF%AE/%E5%95%86%E5%93%81/1601939606858/verification.json)
 
 原件、正式回执与当前资料通过本页关联，不再复制成第二套商品库。

@@ -102,5 +102,10 @@
   "source_evidence": [
     "01_产品资产/02_可发布素材/00_最终上传/BQ006_M8811/00_上架填写表.md"
   ],
-  "scope": "Replace exact reviewed US/foot-length or unhelpful old size graphic by current exact colour/EU matrix; no conversion, foot length, SKU, colour, price or other content change."
+  "scope": "Replace exact reviewed US/foot-length or unhelpful old size graphic by current exact colour/EU matrix; no conversion, foot length, SKU, colour, price or other content change. Remove redundant old company photo inside product-detail gallery; old image makes non-SKU-specific wide/EVA/slip-on claims. Approved separate company, factory and shipping gallery remains unchanged, with at least four useful product detail images retained.",
+  "detail_deletions_by_id": {
+    "1601814931739": [
+      "https://sc04.alicdn.com/kf/S85b6763402114d958afb753952d130e6n.png"
+    ]
+  }
 }

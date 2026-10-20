@@ -1,0 +1,63 @@
+{
+  "family": "BQ044",
+  "execution_key": "BQ044_规格照片精修",
+  "ids": [
+    "10000047221334"
+  ],
+  "source_id": null,
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "source_evidence": [
+    "01_产品资产/02_可发布素材/00_最终上传/BQ044_811/01_来源原图/sku_board_05.jpg",
+    "01_产品资产/02_可发布素材/00_最终上传/BQ044_811/06_当前图文/规格照片/AllBlack.json",
+    "01_产品资产/02_可发布素材/00_最终上传/BQ044_811/01_来源原图/sku_board_06.jpg",
+    "01_产品资产/02_可发布素材/00_最终上传/BQ044_811/06_当前图文/规格照片/WhiteGrey.json",
+    "01_产品资产/02_可发布素材/00_最终上传/BQ044_811/01_来源原图/sku_board_06.jpg",
+    "01_产品资产/02_可发布素材/00_最终上传/BQ044_811/06_当前图文/规格照片/WhitePink.json",
+    "01_产品资产/02_可发布素材/00_最终上传/BQ044_811/01_来源原图/sku_board_06.jpg",
+    "01_产品资产/02_可发布素材/00_最终上传/BQ044_811/06_当前图文/规格照片/WhitePurple.json"
+  ],
+  "image_assets": {
+    "AllBlack": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ044_811/06_当前图文/规格照片/AllBlack.png",
+      "sha256": "6472733f097f24d63665bc7779d6a3e2176ebac74dfeab0da8b22092b1f7aca0",
+      "image_review": "PASS"
+    },
+    "WhiteGrey": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ044_811/06_当前图文/规格照片/WhiteGrey.png",
+      "sha256": "7f21759758aedfca36285b28c7de99982fd19b799d948d56fc9028a6f7847bde",
+      "image_review": "PASS"
+    },
+    "WhitePink": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ044_811/06_当前图文/规格照片/WhitePink.png",
+      "sha256": "a966002f77abac5855167296bdd8792627af0eecf6d584b8c21a7dc6ee155aec",
+      "image_review": "PASS"
+    },
+    "WhitePurple": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ044_811/06_当前图文/规格照片/WhitePurple.png",
+      "sha256": "35d236cd4516e3413479a76a7309aecf754aeaadccd1d10a18548ce1a77d7607",
+      "image_review": "PASS"
+    }
+  },
+  "rebind_image_roles": {
+    "All Black": "AllBlack",
+    "White/Grey": "WhiteGrey",
+    "White/Pink": "WhitePink",
+    "White/Purple": "WhitePurple"
+  },
+  "expected_images_by_id": {
+    "10000047221334": {
+      "All Black": "https://sc04.alicdn.com/kf/S9352f71669e6455aabe20ad7ac41073fm.jpg",
+      "White/Grey": "https://sc04.alicdn.com/kf/Sa4659d92c4f5477288d68f3f4673191f7.jpg",
+      "White/Pink": "https://sc04.alicdn.com/kf/S2932b14953194ad7be3e9ae17a9a74abl.jpg",
+      "White/Purple": "https://sc04.alicdn.com/kf/S7040a856ef4147e29edb3de8e8b02395K.jpg"
+    }
+  },
+  "scope": "SKU photograph only. Exact same original colour and source shoe, single complete shoe on white. Remove unrelated text, people and other colours. Keep SKU IDs, colour labels, size ranges, all prices, stock and page unchanged.",
+  "rebind_images": {
+    "All Black": "https://sc04.alicdn.com/kf/H1d4aa1e2c7094269970fc1b756431957f/286385890/H1d4aa1e2c7094269970fc1b756431957f.png",
+    "White/Grey": "https://sc04.alicdn.com/kf/Ha49672aa0ab947469b1450779fc9b7c0M/286385890/Ha49672aa0ab947469b1450779fc9b7c0M.png",
+    "White/Pink": "https://sc04.alicdn.com/kf/He387f2e3228449f58baf2913e86506a6f/286385890/He387f2e3228449f58baf2913e86506a6f.png",
+    "White/Purple": "https://sc04.alicdn.com/kf/H6233cb693ccc4273a56ad829128bec909/286385890/H6233cb693ccc4273a56ad829128bec909.png"
+  }
+}

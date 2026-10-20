@@ -1,0 +1,54 @@
+{
+  "family": "BQ051_功能图正式精修",
+  "kind": "mixed_slots",
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "ids": [
+    "10000047216427"
+  ],
+  "assets": {
+    "BQ051_colour_detail": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ051_K6689/06_当前图文/功能/BQ051_colour_detail.png",
+      "sha256": "01bf96b1968a5e3db24e45cff7f92c216d2f588de058f818dfa2e2059f177223",
+      "state": "PASS"
+    },
+    "BQ051_colour_main": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ051_K6689/06_当前图文/功能/BQ051_colour_main.png",
+      "sha256": "74ac53ec7fd5a510f01817024f36108cac225c0d8ed114f32f3159d28c076b8d",
+      "state": "PASS"
+    },
+    "BQ051_eu": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ051_K6689/06_当前图文/功能/BQ051_eu.png",
+      "sha256": "dfd3e28034c26c786562c8d97fc258e120fec0651575920e38d07cea5e294470",
+      "state": "PASS"
+    }
+  },
+  "main_replacements_by_id": {
+    "10000047216427": {
+      "https://sc04.alicdn.com/kf/S339294d0699d4f0c8eec1e0e0741b2707.jpg": "BQ051_colour_main"
+    }
+  },
+  "detail_replacements_by_id": {
+    "10000047216427": {
+      "https://sc04.alicdn.com/kf/S3bc183e837a74f0aa95eb1b7a0bd3526P.jpg": "BQ051_colour_detail",
+      "https://sc04.alicdn.com/kf/Sacfb78d7fd6540e4b1e437a644a22aceo.jpg": "BQ051_eu"
+    }
+  },
+  "expected_old_by_id": {
+    "10000047216427": [
+      "https://sc04.alicdn.com/kf/Sacfb78d7fd6540e4b1e437a644a22aceo.jpg",
+      "https://sc04.alicdn.com/kf/Sfc299019cd504f40bdb343768691911ee.jpg",
+      "https://sc04.alicdn.com/kf/S3bc183e837a74f0aa95eb1b7a0bd3526P.jpg",
+      "https://sc04.alicdn.com/kf/S242671255a904e25b674e7b587ae18a89.jpg"
+    ]
+  },
+  "detail_deletions_by_id": {
+    "10000047216427": []
+  },
+  "source_evidence": [
+    "01_产品资产/02_可发布素材/00_最终上传/BQ051_K6689/06_当前图文/功能/BQ051_colour_detail_图稿依据.json",
+    "01_产品资产/02_可发布素材/00_最终上传/BQ051_K6689/06_当前图文/功能/BQ051_colour_main_图稿依据.json",
+    "01_产品资产/02_可发布素材/00_最终上传/BQ051_K6689/06_当前图文/功能/BQ051_eu_图稿依据.json"
+  ],
+  "scope": "Replace individually reviewed product proofs with exact-shoe buyer-facing diagrams. Remove internal instructions, unsupported claim labels and redundant detail filler. Keep factory F1 at existing position, company suite, all copy, SKU, prices, stock and other fields unchanged."
+}

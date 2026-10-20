@@ -12,6 +12,7 @@ import json
 import os
 from pathlib import Path
 import tempfile
+import time
 from contextlib import contextmanager
 
 PRODUCTS = Path('00_总控台/产品中心/数据/产品.json')
@@ -68,7 +69,16 @@ def atomic_write(path, body):
         stream.write(body)
         temporary = Path(stream.name)
     try:
-        os.replace(temporary, path)
+        # Antivirus/indexer reads can briefly deny replacement on Windows.
+        # Keep the atomic operation and the surrounding stale-writer lock.
+        for attempt in range(6):
+            try:
+                os.replace(temporary, path)
+                break
+            except PermissionError:
+                if attempt == 5:
+                    raise
+                time.sleep(0.2 * (attempt + 1))
     finally:
         temporary.unlink(missing_ok=True)
 

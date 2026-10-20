@@ -1,0 +1,42 @@
+{
+  "family": "BQ007_功能图正式精修_回读纠正",
+  "kind": "mixed_slots",
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "ids": [
+    "1601939585913"
+  ],
+  "assets": {
+    "BQ007_construction": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ007_L0017/06_当前图文/功能/BQ007_construction.png",
+      "sha256": "9c6fce5535eaeecfb73c7fe1ab5e23d3bb87020cdeff6596decdcb48ebd98eaa",
+      "state": "PASS"
+    }
+  },
+  "main_replacements_by_id": {
+    "1601939585913": {}
+  },
+  "detail_replacements_by_id": {
+    "1601939585913": {
+      "https://sc04.alicdn.com/kf/H2b24f45a85bb440fb1ae523f6d104026U.jpg": "BQ007_construction"
+    }
+  },
+  "expected_old_by_id": {
+    "1601939585913": [
+      "https://sc04.alicdn.com/kf/S0bf315200a224216a0ea8616df9956d0V.png",
+      "https://sc04.alicdn.com/kf/H2b24f45a85bb440fb1ae523f6d104026U.jpg",
+      "https://sc04.alicdn.com/kf/Hc9094a1419f14b659e349eac9dca717e8.jpg",
+      "https://sc04.alicdn.com/kf/H98c99b14ebb74e34a44b30a4314345cfd.png"
+    ]
+  },
+  "detail_deletions_by_id": {
+    "1601939585913": []
+  },
+  "source_evidence": [
+    "01_产品资产/02_可发布素材/00_最终上传/BQ007_L0017/06_当前图文/功能/BQ007_construction_图稿依据.json",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ007_功能图正式精修/计划.json",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ007_功能图正式精修/商品/1601939585913/verification.json",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ007_功能图正式精修_回读纠正/商品/1601939585913/independent_get.json"
+  ],
+  "scope": "Replace individually reviewed product proofs with exact-shoe buyer-facing diagrams. Remove internal instructions, unsupported claim labels and redundant detail filler. Keep factory F1 at existing position, company suite, all copy, SKU, prices, stock and other fields unchanged."
+}

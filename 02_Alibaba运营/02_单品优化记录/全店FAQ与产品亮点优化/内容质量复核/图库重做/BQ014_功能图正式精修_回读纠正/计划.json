@@ -1,0 +1,51 @@
+{
+  "family": "BQ014_功能图正式精修_回读纠正",
+  "kind": "mixed_slots",
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "ids": [
+    "1601939658415"
+  ],
+  "assets": {
+    "BQ014_colour_detail": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ014_A507/06_当前图文/功能/BQ014_colour_detail.png",
+      "sha256": "871b1154734b60a88b1a8db2a4196ff7643622eb386c16c673a196d97a22d3b8",
+      "state": "PASS"
+    },
+    "BQ014_sole_detail": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ014_A507/06_当前图文/功能/BQ014_sole_detail.png",
+      "sha256": "8ef3acacc43ed83ef4f8650d7e86cc27ebcc27e46856c63b385011e7f2f26ec3",
+      "state": "PASS"
+    }
+  },
+  "main_replacements_by_id": {
+    "1601939658415": {}
+  },
+  "detail_replacements_by_id": {
+    "1601939658415": {
+      "https://sc04.alicdn.com/kf/S93b7df511a9c4527bf16610b12670cbda.jpg": "BQ014_sole_detail",
+      "https://sc04.alicdn.com/kf/Sc6c17cb480414d9088a01afe97bd5a65d.png": "BQ014_colour_detail"
+    }
+  },
+  "expected_old_by_id": {
+    "1601939658415": [
+      "https://sc04.alicdn.com/kf/Sc6c17cb480414d9088a01afe97bd5a65d.png",
+      "https://sc04.alicdn.com/kf/S93b7df511a9c4527bf16610b12670cbda.jpg",
+      "https://sc04.alicdn.com/kf/S9a6bced57f7240059bdb0a105ca02e356.jpg",
+      "https://sc04.alicdn.com/kf/S0d77807b7333402db4aeff7170f104ae9.jpg"
+    ]
+  },
+  "detail_deletions_by_id": {
+    "1601939658415": []
+  },
+  "source_evidence": [
+    "01_产品资产/02_可发布素材/00_最终上传/BQ014_A507/06_当前图文/功能/BQ014_colour_detail_图稿依据.json",
+    "01_产品资产/02_可发布素材/00_最终上传/BQ014_A507/06_当前图文/功能/BQ014_colour_main_图稿依据.json",
+    "01_产品资产/02_可发布素材/00_最终上传/BQ014_A507/06_当前图文/功能/BQ014_sole_图稿依据.json",
+    "01_产品资产/02_可发布素材/00_最终上传/BQ014_A507/06_当前图文/功能/BQ014_sole_detail_图稿依据.json",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ014_功能图正式精修/计划.json",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ014_功能图正式精修/商品/1601939658415/verification.json",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ014_功能图正式精修_回读纠正/商品/1601939658415/independent_get.json"
+  ],
+  "scope": "Replace individually reviewed product proofs with exact-shoe buyer-facing diagrams. Remove internal instructions, unsupported claim labels and redundant detail filler. Keep factory F1 at existing position, company suite, all copy, SKU, prices, stock and other fields unchanged."
+}

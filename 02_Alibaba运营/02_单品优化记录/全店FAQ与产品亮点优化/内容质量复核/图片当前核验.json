@@ -1,7 +1,7 @@
 {
-  "at": "2026-10-20T10:00:55.625819+00:00",
+  "at": "2026-10-20T18:19:00.655114+00:00",
   "scope": "Per-ID formal image repair evidence; scopes overlap and counts must not be added. This is not a whole-store visual completion statement.",
-  "unique_ids_with_verified_repairs_in_these_indexes": 98,
+  "unique_ids_with_verified_repairs_in_these_indexes": 159,
   "indexes": {
     "颜色绑定修正.json": {
       "ids": 39,
@@ -28,15 +28,27 @@
       }
     },
     "首图修复执行.json": {
-      "ids": 1,
+      "ids": 13,
       "states": {
-        "REVIEW_PENDING": 1
+        "FORMAL_FIELDS_SCORE_PASS": 13
       }
     },
     "补充尺码图执行.json": {
       "ids": 34,
       "states": {
-        "REVIEWED_NOT_SUBMITTED": 34
+        "FORMAL_FIELDS_SCORE_PASS": 34
+      }
+    },
+    "专款配色详情执行.json": {
+      "ids": 8,
+      "states": {
+        "FORMAL_FIELDS_SCORE_PASS": 8
+      }
+    },
+    "功能详情精修执行.json": {
+      "ids": 56,
+      "states": {
+        "FORMAL_FIELDS_SCORE_PASS": 56
       }
     }
   },

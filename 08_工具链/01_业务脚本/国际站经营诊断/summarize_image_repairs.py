@@ -7,7 +7,7 @@ sys.path.insert(0,str(Path(__file__).parent));import revise_catalog_content as s
 
 def main():
     sys.stdout.reconfigure(encoding='utf8');summary={};updated=set();binding_proofs={}
-    for filename,category in [('颜色绑定修正.json','配色与尺码修正'),('配色图执行.json','图库重做'),('旧报价图执行.json','图库重做'),('报价图正式纠正执行.json','图库重做'),('首图修复执行.json','图库重做'),('补充尺码图执行.json','图库重做')]:
+    for filename,category in [('颜色绑定修正.json','配色与尺码修正'),('配色图执行.json','图库重做'),('旧报价图执行.json','图库重做'),('报价图正式纠正执行.json','图库重做'),('首图修复执行.json','图库重做'),('补充尺码图执行.json','图库重做'),('专款配色详情执行.json','图库重做'),('功能详情精修执行.json','图库重做')]:
         file=s.BASE/filename
         if not file.exists():continue
         index=s.load(file);observations={}
@@ -18,6 +18,12 @@ def main():
                 if filename=='旧报价图执行.json'and(pid in ('11000037600317','1601943501378')):
                     newer=s.BASE/'图库重做'/(group['family'].replace('_旧报价图替换','_旧报价图正式纠正'))/'商品'/pid/'verification.json'
                     if newer.exists()and s.load(newer).get('at','')>row.get('at',''):proof=newer;row=s.load(proof)
+                if filename=='补充尺码图执行.json'and pid=='10000043725883':
+                    newer=s.BASE/'图库重做/BQ011_功能图正式精修/商品'/pid/'verification.json'
+                    if newer.exists()and s.load(newer).get('state')=='FORMAL_FIELDS_SCORE_PASS':proof=newer;row=s.load(proof)
+                if filename=='首图修复执行.json'and pid=='10000043763325':
+                    newer=s.BASE/'图库重做/BQ013_功能图正式精修/商品'/pid/'verification.json'
+                    if newer.exists()and s.load(newer).get('state')=='FORMAL_FIELDS_SCORE_PASS':proof=newer;row=s.load(proof)
                 state=row.get('state','REVIEWED_NOT_SUBMITTED');states[pid]={'state':state,'proof':s.rel(proof)if proof.exists()else None,'at':row.get('at')}
                 if state=='FORMAL_FIELDS_SCORE_PASS':updated.add(pid)
                 if filename=='颜色绑定修正.json'and state=='FORMAL_FIELDS_SCORE_PASS':binding_proofs.setdefault(group['family'],[]).append(s.rel(proof))

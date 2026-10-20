@@ -1,0 +1,70 @@
+{
+  "id": "1601825021825",
+  "at": "2026-10-20T14:05:41.607442+00:00",
+  "state": "FORMAL_FIELDS_SCORE_PASS",
+  "status": "approved",
+  "display": "Y",
+  "checks": {
+    "gallery_urls": true,
+    "detail_urls": true,
+    "other_formal_fields": true,
+    "detail_gallery_associations": true,
+    "display": true,
+    "schema_targets": true,
+    "other_schema": true,
+    "score": true
+  },
+  "score": "5.00",
+  "detail_order_equal": false,
+  "detail_order_scope": "Exact same-gallery image identity repair; order within the same gallery is diagnostic, memberships and all image multiplicities remain protected.",
+  "public_status": "API_ACCEPTANCE_NO_BROWSER_PER_USER",
+  "diagnostics": {
+    "ruleScoreMap": {
+      "title_word_miss_core_error": 0.0,
+      "imageQualityBad": 0.0,
+      "image_scale": 0.0,
+      "title_word_error": 0.0,
+      "image_num": 0.0
+    },
+    "errorReasonSkuImageMoreMap": {},
+    "errorReasonTitleWordMissErrorMap": {},
+    "errorReasonList": [],
+    "errorReasonTitleWordErrorMap": {},
+    "extendCheckMap": {
+      "imageText": true,
+      "sku_image": false,
+      "title_word_miss_core_error": true,
+      "imageQualityBad": true,
+      "sku_text": false,
+      "imageSubTitle": false,
+      "category": true,
+      "title_word_error": true,
+      "selling_point_attribute_conflict": false
+    },
+    "errorReasonCategoryMap": {},
+    "errorReasonSkuTextMap": {},
+    "errorReasonSubTitleMap": {},
+    "errorReasonMap": {},
+    "errorReasonSellingPointAttributeMap": {},
+    "errorReasonSkuImageMap": {},
+    "extendProblemMap": {
+      "imageText": false,
+      "title_word_miss_core_error": false,
+      "imageQualityBad": false,
+      "imageSubTitle": false,
+      "image_scale": false,
+      "inventory": false,
+      "title_word_error": false,
+      "selling_point_attribute_conflict": false,
+      "image_num": false,
+      "freightRate": false,
+      "sku_image": false,
+      "sku_text": false,
+      "price": false,
+      "category": false
+    },
+    "errorReasonQualityBadMap": {},
+    "errorReasonSkuTextMoreMap": {}
+  },
+  "failed": []
+}

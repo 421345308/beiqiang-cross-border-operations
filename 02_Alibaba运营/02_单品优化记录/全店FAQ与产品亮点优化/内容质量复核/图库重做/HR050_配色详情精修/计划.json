@@ -1,0 +1,48 @@
+{
+  "family": "HR050_配色详情精修",
+  "kind": "detail_slot",
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "ids": [
+    "1601943774082",
+    "1601943660717"
+  ],
+  "assets": {
+    "DETAIL": {
+      "file": "01_产品资产/02_可发布素材/HR050/06_当前图文/配色/e8df2585bed6/detail.png",
+      "sha256": "b0446a9c85b20b5180a257d51f482e75c31d54637dd9b492d9274214975b3717",
+      "state": "PASS",
+      "native_svg": "01_产品资产/02_可发布素材/HR050/06_当前图文/配色/e8df2585bed6/detail.svg"
+    }
+  },
+  "main_replacements_by_id": {
+    "1601943774082": {},
+    "1601943660717": {}
+  },
+  "detail_replacements_by_id": {
+    "1601943774082": {
+      "https://sc04.alicdn.com/kf/H7a12b6ee81c5408eac07edacf3466198R.jpg": "DETAIL"
+    },
+    "1601943660717": {
+      "https://sc04.alicdn.com/kf/H7a12b6ee81c5408eac07edacf3466198R.jpg": "DETAIL"
+    }
+  },
+  "expected_old_by_id": {
+    "1601943774082": [
+      "https://sc04.alicdn.com/kf/H6c8e06303e5848b98c71b561da50f41ft.jpg",
+      "https://sc04.alicdn.com/kf/H080a1315b725448a97692e5cbc611bb2B.jpg",
+      "https://sc04.alicdn.com/kf/H7a12b6ee81c5408eac07edacf3466198R.jpg",
+      "https://sc04.alicdn.com/kf/Hfd9ee93883dd447b8a197dcc19f64c1cG.jpg"
+    ],
+    "1601943660717": [
+      "https://sc04.alicdn.com/kf/H6c8e06303e5848b98c71b561da50f41ft.jpg",
+      "https://sc04.alicdn.com/kf/H080a1315b725448a97692e5cbc611bb2B.jpg",
+      "https://sc04.alicdn.com/kf/H7a12b6ee81c5408eac07edacf3466198R.jpg",
+      "https://sc04.alicdn.com/kf/Hfd9ee93883dd447b8a197dcc19f64c1cG.jpg"
+    ]
+  },
+  "source_evidence": [
+    "01_产品资产/02_可发布素材/HR050/06_当前图文/配色/e8df2585bed6/图稿依据.json"
+  ],
+  "scope": "Replace exact price-bearing old colour graphic with actual colour/EU selection. Source photos unchanged. HR057 additionally replaces the old main colour card using the cleaned exact Neon Green photograph. All unrelated fields and company galleries preserved."
+}

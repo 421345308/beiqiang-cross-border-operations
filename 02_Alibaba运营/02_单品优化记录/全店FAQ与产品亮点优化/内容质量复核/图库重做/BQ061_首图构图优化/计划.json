@@ -1,0 +1,25 @@
+{
+  "family": "BQ061_首图构图优化",
+  "kind": "main_slot",
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "ids": [
+    "10000047356491"
+  ],
+  "assets": {
+    "H239": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ061_AA811/06_当前图文/首图/H239.png",
+      "sha256": "ff276e53c17c05c1ddd4d62800a396f6a493ecec6d4cd377c16b73f43d696f30",
+      "state": "PASS"
+    }
+  },
+  "main_replacements_by_id": {
+    "10000047356491": {
+      "https://sc04.alicdn.com/kf/Hce14a91f851c4bffb8caab8afcdba123d.jpg": "H239"
+    }
+  },
+  "source_evidence": [
+    "01_产品资产/02_可发布素材/00_最终上传/BQ061_AA811/06_当前图文/首图/H239_图稿依据.json"
+  ],
+  "scope": "Exact original-ID M1 composition upgrade; complete shoe edges and real variant retained. Preserve every other image slot, factory image, detail content, SKU, pricing, copy and FAQ."
+}

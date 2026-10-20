@@ -1,0 +1,33 @@
+{
+  "family": "BQ051",
+  "execution_key": "BQ051_规格照片精修",
+  "ids": [
+    "10000047216427"
+  ],
+  "source_id": null,
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "source_evidence": [
+    "01_产品资产/02_可发布素材/00_最终上传/BQ051_K6689/01_来源原图/sku_board_07.jpg",
+    "01_产品资产/02_可发布素材/00_最终上传/BQ051_K6689/06_当前图文/规格照片/BlackWhite.json"
+  ],
+  "image_assets": {
+    "BlackWhite": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ051_K6689/06_当前图文/规格照片/BlackWhite.png",
+      "sha256": "08bc92cdcf94146204d97f3385cf94fc0556d27d258f0d9741a480d4a485b953",
+      "image_review": "PASS"
+    }
+  },
+  "rebind_image_roles": {
+    "Black/White": "BlackWhite"
+  },
+  "expected_images_by_id": {
+    "10000047216427": {
+      "Black/White": "https://sc04.alicdn.com/kf/S2ba2b168b45c44d8bc73237e3525e708K.jpg"
+    }
+  },
+  "scope": "SKU photograph only. Exact same original colour and source shoe, single complete shoe on white. Remove unrelated text, people and other colours. Keep SKU IDs, colour labels, size ranges, all prices, stock and page unchanged.",
+  "rebind_images": {
+    "Black/White": "https://sc04.alicdn.com/kf/Hd857bd819aba4d2d8459ef45d391150cc/286385890/Hd857bd819aba4d2d8459ef45d391150cc.png"
+  }
+}

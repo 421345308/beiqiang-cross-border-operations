@@ -1,0 +1,45 @@
+{
+  "family": "BQ007_首图构图优化",
+  "kind": "main_slot",
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "ids": [
+    "1601939585913",
+    "1601939701201",
+    "1601939711161"
+  ],
+  "assets": {
+    "H108": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ007_L0017/06_当前图文/首图/H108.png",
+      "sha256": "02dd7dc44775162d4030b5c970034d9d354274c33918b53a13d9652e4468cebe",
+      "state": "PASS"
+    },
+    "H109": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ007_L0017/06_当前图文/首图/H109.png",
+      "sha256": "d9309c401e2581554f353987693be5fc3b19296698c573e88d2ba6a2beea08ca",
+      "state": "PASS"
+    },
+    "H110": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ007_L0017/06_当前图文/首图/H110.png",
+      "sha256": "3fc0bc5888eddc3c23a9cab3b8c173593581cf4d228cd86a69fef23ee7bf29df",
+      "state": "PASS"
+    }
+  },
+  "main_replacements_by_id": {
+    "1601939585913": {
+      "https://sc04.alicdn.com/kf/H45c4d98bb5824ab79f299a04151cf0bfH.jpg": "H108"
+    },
+    "1601939701201": {
+      "https://sc04.alicdn.com/kf/Hd0edb11e1a8c44ccbd3e38bd06277bf3U.jpg": "H109"
+    },
+    "1601939711161": {
+      "https://sc04.alicdn.com/kf/H6b0948b966e8477f9204ff3d32058ca5h.jpg": "H110"
+    }
+  },
+  "source_evidence": [
+    "01_产品资产/02_可发布素材/00_最终上传/BQ007_L0017/06_当前图文/首图/H108_图稿依据.json",
+    "01_产品资产/02_可发布素材/00_最终上传/BQ007_L0017/06_当前图文/首图/H109_图稿依据.json",
+    "01_产品资产/02_可发布素材/00_最终上传/BQ007_L0017/06_当前图文/首图/H110_图稿依据.json"
+  ],
+  "scope": "Exact original-ID M1 composition upgrade; complete shoe edges and real variant retained. Preserve every other image slot, factory image, detail content, SKU, pricing, copy and FAQ."
+}

@@ -1,0 +1,39 @@
+{
+  "family": "BQ008_功能图正式精修",
+  "kind": "mixed_slots",
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "ids": [
+    "1601825021825"
+  ],
+  "assets": {
+    "BQ008_construction": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ008_L1009/06_当前图文/功能/BQ008_construction.png",
+      "sha256": "3ac23c57eaeb133b7a8a7fcb8c36cd9e2ce9b3ae47949f6f1cbc3f4572910a35",
+      "state": "PASS"
+    }
+  },
+  "main_replacements_by_id": {
+    "1601825021825": {}
+  },
+  "detail_replacements_by_id": {
+    "1601825021825": {
+      "https://sc04.alicdn.com/kf/H473809bc0ef442819957b19ede11eb2em.png": "BQ008_construction"
+    }
+  },
+  "expected_old_by_id": {
+    "1601825021825": [
+      "https://sc04.alicdn.com/kf/H473809bc0ef442819957b19ede11eb2em.png",
+      "https://sc04.alicdn.com/kf/Hfbd79b19a5b4495c9dffdeeb1302dbba7.png",
+      "https://sc04.alicdn.com/kf/H3ff44bddcd5d4a838ae1777de0c4a85ac.png",
+      "https://sc04.alicdn.com/kf/H52233330ed74482d8401fa01aae6fd198.png"
+    ]
+  },
+  "detail_deletions_by_id": {
+    "1601825021825": []
+  },
+  "source_evidence": [
+    "01_产品资产/02_可发布素材/00_最终上传/BQ008_L1009/06_当前图文/功能/BQ008_construction_图稿依据.json"
+  ],
+  "scope": "Replace individually reviewed product proofs with exact-shoe buyer-facing diagrams. Remove internal instructions, unsupported claim labels and redundant detail filler. Keep factory F1 at existing position, company suite, all copy, SKU, prices, stock and other fields unchanged."
+}

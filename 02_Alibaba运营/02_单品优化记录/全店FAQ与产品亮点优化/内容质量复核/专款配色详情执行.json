@@ -1,0 +1,175 @@
+{
+  "at": "2026-10-20T11:14:01.514399+00:00",
+  "groups": [
+    {
+      "family": "HR050_配色详情精修",
+      "ids": [
+        "1601943774082",
+        "1601943660717"
+      ],
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "current_states": {
+        "1601943774082": {
+          "state": "FORMAL_FIELDS_SCORE_PASS",
+          "proof": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR050_配色详情精修/商品/1601943774082/verification.json",
+          "at": "2026-10-20T12:10:45.167324+00:00"
+        },
+        "1601943660717": {
+          "state": "FORMAL_FIELDS_SCORE_PASS",
+          "proof": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR050_配色详情精修/商品/1601943660717/verification.json",
+          "at": "2026-10-20T12:10:48.932078+00:00"
+        }
+      },
+      "reconciled_at": "2026-10-20T18:19:00.540761+00:00"
+    },
+    {
+      "family": "HR056_配色详情精修",
+      "ids": [
+        "1601943775160",
+        "1601943751252",
+        "1601943778191"
+      ],
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "current_states": {
+        "1601943775160": {
+          "state": "FORMAL_FIELDS_SCORE_PASS",
+          "proof": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR056_配色详情精修/商品/1601943775160/verification.json",
+          "at": "2026-10-20T12:10:53.065702+00:00"
+        },
+        "1601943751252": {
+          "state": "FORMAL_FIELDS_SCORE_PASS",
+          "proof": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR056_配色详情精修/商品/1601943751252/verification.json",
+          "at": "2026-10-20T12:10:56.006990+00:00"
+        },
+        "1601943778191": {
+          "state": "FORMAL_FIELDS_SCORE_PASS",
+          "proof": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR056_配色详情精修/商品/1601943778191/verification.json",
+          "at": "2026-10-20T12:10:58.945214+00:00"
+        }
+      },
+      "reconciled_at": "2026-10-20T18:19:00.544538+00:00"
+    },
+    {
+      "family": "HR057_配色详情精修",
+      "ids": [
+        "1601943768215",
+        "1601943700590",
+        "1601943771190"
+      ],
+      "state": "FORMAL_FIELDS_SCORE_PASS",
+      "current_states": {
+        "1601943768215": {
+          "state": "FORMAL_FIELDS_SCORE_PASS",
+          "proof": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR057_配色详情精修/商品/1601943768215/verification.json",
+          "at": "2026-10-20T12:11:04.384741+00:00"
+        },
+        "1601943700590": {
+          "state": "FORMAL_FIELDS_SCORE_PASS",
+          "proof": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR057_配色详情精修/商品/1601943700590/verification.json",
+          "at": "2026-10-20T12:11:07.437209+00:00"
+        },
+        "1601943771190": {
+          "state": "FORMAL_FIELDS_SCORE_PASS",
+          "proof": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR057_配色详情精修/商品/1601943771190/verification.json",
+          "at": "2026-10-20T12:11:13.675638+00:00"
+        }
+      },
+      "reconciled_at": "2026-10-20T18:19:00.548222+00:00"
+    }
+  ],
+  "phase_runs": {
+    "execute": {
+      "at": "2026-10-20T11:22:31.199936+00:00",
+      "results": [
+        {
+          "family": "HR050_配色详情精修",
+          "returncode": 0,
+          "states": {
+            "1601943774082": "NOT_VERIFIED",
+            "1601943660717": "NOT_VERIFIED"
+          }
+        },
+        {
+          "family": "HR056_配色详情精修",
+          "returncode": 0,
+          "states": {
+            "1601943775160": "NOT_VERIFIED",
+            "1601943751252": "NOT_VERIFIED",
+            "1601943778191": "NOT_VERIFIED"
+          }
+        },
+        {
+          "family": "HR057_配色详情精修",
+          "returncode": 0,
+          "states": {
+            "1601943768215": "NOT_VERIFIED",
+            "1601943700590": "NOT_VERIFIED",
+            "1601943771190": "NOT_VERIFIED"
+          }
+        }
+      ]
+    },
+    "verify": {
+      "at": "2026-10-20T12:11:16.378029+00:00",
+      "results": [
+        {
+          "family": "HR050_配色详情精修",
+          "returncode": 0,
+          "states": {
+            "1601943774082": "FORMAL_FIELDS_SCORE_PASS",
+            "1601943660717": "FORMAL_FIELDS_SCORE_PASS"
+          }
+        },
+        {
+          "family": "HR056_配色详情精修",
+          "returncode": 0,
+          "states": {
+            "1601943775160": "FORMAL_FIELDS_SCORE_PASS",
+            "1601943751252": "FORMAL_FIELDS_SCORE_PASS",
+            "1601943778191": "FORMAL_FIELDS_SCORE_PASS"
+          }
+        },
+        {
+          "family": "HR057_配色详情精修",
+          "returncode": 0,
+          "states": {
+            "1601943768215": "FORMAL_FIELDS_SCORE_PASS",
+            "1601943700590": "FORMAL_FIELDS_SCORE_PASS",
+            "1601943771190": "FORMAL_FIELDS_SCORE_PASS"
+          }
+        }
+      ]
+    },
+    "sync": {
+      "at": "2026-10-20T12:31:29.958009+00:00",
+      "results": [
+        {
+          "family": "HR050_配色详情精修",
+          "returncode": 0,
+          "states": {
+            "1601943774082": "FORMAL_FIELDS_SCORE_PASS",
+            "1601943660717": "FORMAL_FIELDS_SCORE_PASS"
+          }
+        },
+        {
+          "family": "HR056_配色详情精修",
+          "returncode": 0,
+          "states": {
+            "1601943775160": "FORMAL_FIELDS_SCORE_PASS",
+            "1601943751252": "FORMAL_FIELDS_SCORE_PASS",
+            "1601943778191": "FORMAL_FIELDS_SCORE_PASS"
+          }
+        },
+        {
+          "family": "HR057_配色详情精修",
+          "returncode": 0,
+          "states": {
+            "1601943768215": "FORMAL_FIELDS_SCORE_PASS",
+            "1601943700590": "FORMAL_FIELDS_SCORE_PASS",
+            "1601943771190": "FORMAL_FIELDS_SCORE_PASS"
+          }
+        }
+      ]
+    }
+  }
+}
