@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-10-19",
-  "state": "SIX_STYLES_ON_SALE_H5_VERIFIED_REAL_VIDEO_AND_APP_PENDING",
+  "updated_on": "2026-10-20",
+  "state": "NINE_FLEECE_STYLES_ON_SALE_H5_MEDIA_COUPON_VERIFIED_APP_PENDING",
   "canonical_entry": "09_国内电商/抖店/README.md",
-  "scope": "雷丹森羊新店6款加绒商品已在售：原两款商业字段保留，新增4款按批准94/97减5元券；新旧店对象与素材隔离",
+  "scope": "新店全目录10款在售、草稿0；本档案9款加绒商品共182SKU，既有9212独立保留。新增A116/K6116/A212已正式发布，94减5预计89；原7款字段/库存/SKU及图文对象不变。",
   "evidence": {
     "private_capture": ".local/品牌新店/当前核验/",
     "product_source": "https://bqgcd.sooxie.com/",
     "identity": "复用现有产品身份和真实来源；不新建第二套产品主库",
     "old_store_data": "旧店数据只用于提出选款和售后假设，不能当新店经营基线或品牌款表现",
-    "freshness": "后台/完整目录及新增来源为2026-10-19读取；后续变化须重取，不将旧店数据当新店表现"
+    "freshness": "2026-10-20完成当前全目录分页，发布前原7款及新增3款双接口回读；新增39张平台媒体和3款H5通过，原券重新打开确认9款。此前经营数据保持原窗口，不冒充今日重取。"
   },
   "brand": {
     "name": "雷丹森羊",
@@ -295,5 +295,19 @@
     "next": "按流水线当前选型准备ZX9507黑杏加绒15秒AI结构仿写试片，先锁具体参考片和当次付费范围；生成/保真/音画验收后再上传，主图视频HTTP写入尚未实测。店铺装修与账号承接继续准备，投放另有成本和预算依据。",
     "waybill": "SHARED_ACTIVE：平台共享给我页面显示原店中通洛江马甲镇网点已生效；首次正常订单打印待核",
     "content_sop": "商品内容SOP.md"
+  },
+  "current_acceptance": {
+    "new_styles": [
+      "A116",
+      "K6116",
+      "A212"
+    ],
+    "new_skus": 66,
+    "backend": "PASSED",
+    "media": "39/39 exact pixels; order and colour bindings passed",
+    "coupon": "Original 5 CNY coupon extended to 9 listings; 3 new expected prices 89 CNY verified",
+    "buyer_preview": "3 H5 pages passed; App spec selection and actual checkout pending",
+    "existing_seven": "Main/description objects, title, commercial and SKU baseline preserved",
+    "current_entry": "README.md / 数据/品牌首发商品.json"
   }
 }

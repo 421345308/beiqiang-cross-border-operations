@@ -1,4 +1,4 @@
-// Execute only the four explicitly approved additions; keep the existing two listings intact.
+// Execute only explicitly approved styles; preserve existing listings and per-object receipts.
 import fs from 'node:fs/promises';import path from 'node:path';import {createHash} from 'node:crypto';import {isDeepStrictEqual} from 'node:util';
 import {MiaoshouHttp} from './miaoshou_http.mjs';import {invariant,skuInvariant} from './focus_media_update.mjs';
 const root='09_国内电商/抖店',priv=root+'/.local/品牌新店',file=root+'/数据/品牌首发商品.json';
@@ -14,8 +14,8 @@ if(mode==='protect-existing'){
  const checks={};for(const[m,v]of Object.entries(existing)){await pause();const b=await c.getProductBase(v.id);await pause();const s=await c.getProductSku(v.id);checks[m]=isDeepStrictEqual(invariant(b.productInfo),v.base)&&isDeepStrictEqual(skuInvariant(s),v.sku);}
  await save(priv+'/当前核验/扩品后原两款保护.json',{checkedAt:new Date().toISOString(),checks});console.log(JSON.stringify(checks));if(Object.values(checks).some(v=>!v))process.exitCode=2;
 }else{
- const dir=priv+'/发布/'+model,expectedPrice=candidate?p.commercial.sale_price_cny:['M889','H7212'].includes(model)?94:97;
- if(candidate&&![94,97].includes(expectedPrice))throw Error('Candidate requires a confirmed daily price tier');
+ const dir=priv+'/发布/'+model,expectedPrice=p.commercial.sale_price_cny;
+ if(![94,97].includes(expectedPrice))throw Error('Style requires a confirmed daily price tier');
  if(p.commercial?.sale_price_cny!==expectedPrice||p.commercial.coupon_cny!==5||p.commercial.target_price_cny!==expectedPrice-5||!p.publication.price_approved)throw Error('Approved commercial values differ');
  const catalog=async()=>{let all=[];for(const isDraft of [false,true]){await pause();const r=await c.listProducts({pageSize:100,isDraft});if(r.total!==r.productList.length)throw Error('Full pagination required');all.push(...r.productList);}return all;};
  if(mode==='prepare'){

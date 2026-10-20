@@ -4,13 +4,17 @@ import json
 import sys
 from pathlib import Path
 from urllib.parse import urlparse
-from urllib.request import Request, urlopen
+from urllib.request import Request, build_opener, ProxyHandler
 from PIL import Image, ImageChops, ImageStat
 
 root = Path('09_国内电商/抖店')
+# Domestic product CDN follows the workspace's approved direct route. Keep TLS verification.
+media_opener = build_opener(ProxyHandler({}))
 plan = json.loads((root / '数据/品牌首发商品.json').read_text(encoding='utf-8'))
 for model in (sys.argv[1:] or list(plan['models'])):
-    product = plan['models'][model]
+    product = plan['models'].get(model) or plan.get('expansion_candidates', {}).get('models', {}).get(model)
+    if product is None:
+        raise ValueError('Unknown reviewed model: ' + model)
     evidence = root / product['publication']['private_content_evidence']
     file = evidence / 'verification.json'
     verification = json.loads(file.read_text(encoding='utf-8'))
@@ -37,7 +41,7 @@ for model in (sys.argv[1:] or list(plan['models'])):
             raise ValueError('Unexpected platform media host')
         actual = target / f"{row['role']}-{row['index']}.img"
         if not actual.exists():
-            with urlopen(Request(row['url'], headers={'User-Agent': 'BeiqiangMediaQuality/1.0'}), timeout=30) as response:
+            with media_opener.open(Request(row['url'], headers={'User-Agent': 'BeiqiangMediaQuality/1.0'}), timeout=30) as response:
                 actual.write_bytes(response.read())
         with Image.open(row['expected']) as original, Image.open(actual) as published:
             original, published = original.convert('RGB'), published.convert('RGB')
