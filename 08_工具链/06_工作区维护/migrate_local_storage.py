@@ -1,14 +1,16 @@
 """Move allowlisted local data to E:, verifying bytes and preserving Windows junctions.
 
-Dry run by default. Never follows reparse points, moves runtimes, or removes evidence.
+Dry run by default. Never follows reparse points or moves Codex runtimes.
 """
 import argparse
+import csv
 import hashlib
 import json
 import os
 from pathlib import Path
 import shutil
 import stat
+import subprocess
 import time
 import _winapi
 
@@ -16,6 +18,14 @@ import _winapi
 ROOT = Path(__file__).resolve().parents[2]
 PAIRS = {
     "project-temp": (ROOT / "99_临时区", Path("E:/贝强大文件/工作台运行资料/99_临时区")),
+    "lmstudio-data": (Path.home() / ".lmstudio", Path("E:/软件数据/LMStudio")),
+    "vscode-extensions": (Path.home() / ".vscode/extensions", Path("E:/软件数据/VSCode/extensions")),
+    "cursor-extensions": (Path.home() / ".cursor/extensions", Path("E:/软件数据/Cursor/extensions")),
+}
+APP_PROCESSES = {
+    "lmstudio-data": {"lm studio.exe", "llmster.exe"},
+    "vscode-extensions": {"code.exe", "code - insiders.exe", "code - oss.exe"},
+    "cursor-extensions": {"cursor.exe"},
 }
 
 
@@ -26,7 +36,7 @@ def is_junction(path):
         return False
 
 
-def inventory(root):
+def inventory(root, hash_files=True):
     result = {}
     pending = [root]
     while pending:
@@ -42,9 +52,12 @@ def inventory(root):
                 result[relative] = ("dir",)
                 pending.append(item)
             else:
-                with item.open("rb") as stream:
-                    digest = hashlib.file_digest(stream, "sha256").hexdigest()
-                result[relative] = ("file", info.st_size, digest)
+                if hash_files:
+                    with item.open("rb") as stream:
+                        digest = hashlib.file_digest(stream, "sha256").hexdigest()
+                    result[relative] = ("file", info.st_size, digest)
+                else:
+                    result[relative] = ("file", info.st_size, info.st_mtime_ns, info.st_ino)
     return result
 
 
@@ -55,19 +68,56 @@ def junction(source, target):
     _winapi.CreateJunction(target, str(source))
 
 
+def remove_verified_entries(root, entries):
+    for rel, entry in sorted(entries.items(), key=lambda pair: len(Path(pair[0]).parts), reverse=True):
+        old = root / rel
+        if entry[0] in ("junction", "dir"):
+            os.rmdir(old)
+        else:
+            if old.lstat().st_file_attributes & stat.FILE_ATTRIBUTE_READONLY:
+                old.chmod(stat.S_IWRITE)
+            old.unlink()
+    root.rmdir()
+
+
+def finish_cleanup(name):
+    source, target = PAIRS[name]
+    held = source.with_name(source.name + ".migration-hold")
+    if not is_junction(source) or source.resolve() != target.resolve():
+        raise RuntimeError("Verified compatibility link is required")
+    if held.resolve() != held.absolute() or held.parent != source.parent:
+        raise RuntimeError("Unexpected cleanup boundary")
+    remaining = inventory(held)
+    current_target = inventory(target)
+    if any(current_target.get(rel) != entry for rel, entry in remaining.items()):
+        raise RuntimeError("Remaining original differs from destination; keep it")
+    size = sum(entry[1] for entry in remaining.values() if entry[0] == "file")
+    remove_verified_entries(held, remaining)
+    print(json.dumps({"name": name, "cleanup_completed": True, "remaining_bytes_released": size}), flush=True)
+
+
 def migrate(name, apply, resume=False, child=None):
     source, target = PAIRS[name]
     if child:
+        if name != "project-temp":
+            raise RuntimeError("Only project-temp accepts --child")
         if Path(child).name != child or child in (".", ".."):
             raise RuntimeError("Child must be one direct directory name")
         source, target = source / child, target / child
-    elif apply:
+    elif apply and name == "project-temp":
         raise RuntimeError("Whole temporary root may be active; choose --child")
     # Check absolute physical boundaries before any move/delete. Source roots
     # are fixed above; a previously migrated root is never traversed or deleted.
     if is_junction(source):
         print(json.dumps({"name": name, "already_linked": os.readlink(source)}, ensure_ascii=False))
         return
+    if apply and name in APP_PROCESSES:
+        processes = subprocess.check_output(
+            ["tasklist", "/FO", "CSV", "/NH"], text=True, errors="replace"
+        )
+        running = {row[0].lower() for row in csv.reader(processes.splitlines()) if row}
+        if running & APP_PROCESSES[name]:
+            raise RuntimeError("Target application is running; close it before migration")
     if source.resolve() != source.absolute() or source.drive.upper() != "C:":
         raise RuntimeError("Source is redirected or outside C:")
     if target.drive.upper() != "E:" or (target.exists() and not resume):
@@ -77,6 +127,7 @@ def migrate(name, apply, resume=False, child=None):
     held = source.with_name(source.name + ".migration-hold")
     if held.exists():
         raise RuntimeError("A previous migration needs inspection")
+    original_metadata = inventory(source, hash_files=False)
     before = inventory(source)
     if apply and any((source / rel).stat().st_mtime > time.time() - 900
                      for rel, value in before.items() if value[0] == "file"):
@@ -103,7 +154,7 @@ def migrate(name, apply, resume=False, child=None):
     source.rename(held)
     try:
         junction(source, target)
-        if inventory(source) != before:
+        if source.resolve() != target.resolve():
             raise RuntimeError("Compatibility path verification failed")
     except Exception:
         if is_junction(source):
@@ -114,15 +165,9 @@ def migrate(name, apply, resume=False, child=None):
     # rmdir on a junction removes the link alone, never its external target.
     if held.resolve() != held.absolute() or held.parent != source.parent:
         raise RuntimeError("Unexpected cleanup boundary")
-    if inventory(held) != before:
+    if inventory(held, hash_files=False) != original_metadata:
         raise RuntimeError("Original changed after switching; original copy kept for inspection")
-    for rel, entry in sorted(before.items(), key=lambda pair: len(Path(pair[0]).parts), reverse=True):
-        old = held / rel
-        if entry[0] in ("junction", "dir"):
-            os.rmdir(old)
-        else:
-            old.unlink()
-    held.rmdir()
+    remove_verified_entries(held, before)
     print(json.dumps({"name": name, "verified": True, "released_bytes": size}, ensure_ascii=False), flush=True)
 
 
@@ -132,5 +177,11 @@ if __name__ == "__main__":
     parser.add_argument("--apply", action="store_true")
     parser.add_argument("--resume", action="store_true", help="Only verify an existing copy before switching")
     parser.add_argument("--child", help="One inactive direct child of the temporary root")
+    parser.add_argument("--finish-cleanup", action="store_true", help="Verify and remove a partial original after a completed switch")
     args = parser.parse_args()
-    migrate(args.name, args.apply, args.resume, args.child)
+    if args.finish_cleanup:
+        if not args.apply or args.child or args.name == "project-temp":
+            parser.error("Cleanup requires --apply and an exact software allowlist entry")
+        finish_cleanup(args.name)
+    else:
+        migrate(args.name, args.apply, args.resume, args.child)
