@@ -4,12 +4,12 @@ import {MiaoshouHttp} from './miaoshou_http.mjs';import {invariant,skuInvariant}
 const root='09_国内电商/抖店',priv=root+'/.local/品牌新店',file=root+'/数据/品牌首发商品.json';
 const read=async f=>JSON.parse(await fs.readFile(f,'utf8')),save=async(f,v)=>{await fs.mkdir(path.dirname(f),{recursive:true});await fs.writeFile(f,JSON.stringify(v,null,2)+'\n');},sha=b=>createHash('sha256').update(b).digest('hex');
 const pause=()=>new Promise(r=>setTimeout(r,2300));
-const [mode,model]=process.argv.slice(2),allowed=['M889','H7212','ZX2116','ZX9507','A116','K6116','A212','8811','A507','H7116','K6212','L0017','R1811','R1601','M8506','A502','T55836','A218','A008'];
+const [mode,model]=process.argv.slice(2),allowed=['M889','H7212','ZX2116','ZX9507','A116','K6116','A212','8811','A507','H7116','K6212','L0017','R1811','R1601','M8506','A502','T55836','A218','A008','ZX2212','8008','K6689'];
 if(!['prepare','publish','verify','protect-existing'].includes(mode)||(mode!=='protect-existing'&&!allowed.includes(model)))throw Error('Usage: prepare|publish|verify MODEL | protect-existing');
 const plan=await read(file),candidate=plan.expansion_candidates?.models?.[model],p=plan.models[model]??candidate;
 if(mode!=='protect-existing'){
  const price=p?.commercial?.sale_price_cny;
- if(![94,97].includes(price))throw Error('Style requires a confirmed daily price tier');
+ if(!([94,97].includes(price)||(model==='L0017'&&price===109)))throw Error('Style requires a confirmed daily price tier');
  if(p.commercial.coupon_cny!==5||p.commercial.target_price_cny!==price-5||!p.publication.price_approved)throw Error('Approved commercial values differ');
 }
 const profilePath='08_工具链/01_业务脚本/抖店妙手/.local/shops/brand/session.json',profile=await read(profilePath),c=await MiaoshouHttp.fromSavedSession({sessionPath:profilePath,timeoutMs:45000});
