@@ -4,9 +4,9 @@ import {MiaoshouHttp} from './miaoshou_http.mjs';import {invariant,skuInvariant}
 const root='09_国内电商/抖店',priv=root+'/.local/品牌新店',file=root+'/数据/品牌首发商品.json';
 const read=async f=>JSON.parse(await fs.readFile(f,'utf8')),save=async(f,v)=>{await fs.mkdir(path.dirname(f),{recursive:true});await fs.writeFile(f,JSON.stringify(v,null,2)+'\n');},sha=b=>createHash('sha256').update(b).digest('hex');
 const pause=()=>new Promise(r=>setTimeout(r,2300));
-const [mode,model]=process.argv.slice(2),allowed=['M889','H7212','ZX2116','ZX9507'];
+const [mode,model]=process.argv.slice(2),allowed=['M889','H7212','ZX2116','ZX9507','A116','K6116','A212'];
 if(!['prepare','publish','verify','protect-existing'].includes(mode)||(mode!=='protect-existing'&&!allowed.includes(model)))throw Error('Usage: prepare|publish|verify MODEL | protect-existing');
-const plan=await read(file),p=plan.models[model];
+const plan=await read(file),candidate=plan.expansion_candidates?.models?.[model],p=plan.models[model]??candidate;
 const profilePath='08_工具链/01_业务脚本/抖店妙手/.local/shops/brand/session.json',profile=await read(profilePath),c=await MiaoshouHttp.fromSavedSession({sessionPath:profilePath,timeoutMs:45000});
 const shop=await c.getShopIdentity();if(shop.shopId!==String(profile.expectedShopId)||shop.shopName!==profile.expectedShopName)throw Error('Shop differs');
 const existingFile=priv+'/扩品保护基线.json';let existing;try{existing=await read(existingFile);}catch(e){if(e.code!=='ENOENT')throw e;existing={};for(const m of ['A1689','ZX9002']){const id=(await read(priv+'/发布/'+m+'/create/response.json')).productId;await pause();const b=await c.getProductBase(id);await pause();const s=await c.getProductSku(id);existing[m]={id,base:invariant(b.productInfo),sku:skuInvariant(s)};}await save(existingFile,existing);}
@@ -14,13 +14,22 @@ if(mode==='protect-existing'){
  const checks={};for(const[m,v]of Object.entries(existing)){await pause();const b=await c.getProductBase(v.id);await pause();const s=await c.getProductSku(v.id);checks[m]=isDeepStrictEqual(invariant(b.productInfo),v.base)&&isDeepStrictEqual(skuInvariant(s),v.sku);}
  await save(priv+'/当前核验/扩品后原两款保护.json',{checkedAt:new Date().toISOString(),checks});console.log(JSON.stringify(checks));if(Object.values(checks).some(v=>!v))process.exitCode=2;
 }else{
- const dir=priv+'/发布/'+model,expectedPrice=['M889','H7212'].includes(model)?94:97;
+ const dir=priv+'/发布/'+model,expectedPrice=candidate?p.commercial.sale_price_cny:['M889','H7212'].includes(model)?94:97;
+ if(candidate&&![94,97].includes(expectedPrice))throw Error('Candidate requires a confirmed daily price tier');
  if(p.commercial?.sale_price_cny!==expectedPrice||p.commercial.coupon_cny!==5||p.commercial.target_price_cny!==expectedPrice-5||!p.publication.price_approved)throw Error('Approved commercial values differ');
  const catalog=async()=>{let all=[];for(const isDraft of [false,true]){await pause();const r=await c.listProducts({pageSize:100,isDraft});if(r.total!==r.productList.length)throw Error('Full pagination required');all.push(...r.productList);}return all;};
  if(mode==='prepare'){
   try{await fs.access(dir+'/create/attempt.json');throw Error('Creation attempted; reconcile instead');}catch(e){if(e.code!=='ENOENT')throw e;}
-  const allAssets=Object.values(plan.models).flatMap(v=>[...v.main_assets,...v.detail_files]);if(plan.visual_qa.state!=='PASSED'||plan.visual_qa.asset_set_sha256!==sha(Buffer.from(allAssets.map(a=>a.sha256).join('\n'))))throw Error('Current visual QA required');
-  if((await catalog()).some(v=>v.name===p.title||v.goodsNo===model||v.goodsNum===model))throw Error('Potential existing style; inspect SKUs');
+  const qa=candidate?candidate.acceptance.visual_qa:plan.visual_qa;
+  const allAssets=candidate?[...p.main_assets,...p.detail_files]:Object.values(plan.models).flatMap(v=>[...v.main_assets,...v.detail_files]);if(qa.state!=='PASSED'||qa.asset_set_sha256!==sha(Buffer.from(allAssets.map(a=>a.sha256).join('\n'))))throw Error('Current visual QA required');
+  const currentCatalog=await catalog();
+  if(currentCatalog.some(v=>v.name===p.title||v.productNum===model||v.goodsNo===model||v.goodsNum===model))throw Error('Potential existing style; inspect SKUs');
+  if(candidate){
+   const inspected=await read(priv+'/当前核验/全店规格查重.json');
+   if(new Date()-new Date((await read(priv+'/当前核验/catalog-summary.json')).checkedAt)>3600000)throw Error('Refresh full catalog and SKU inspection');
+   if(currentCatalog.some(v=>!inspected.some(i=>i.id===String(v.productIdStr??v.productId))))throw Error('Catalog changed; inspect all new SKU identities');
+   if(inspected.some(i=>i.productNum===model||i.skus.some(s=>String(s.code).includes(model)||s.sellProperties.some(v=>String(v.valueName).includes(model)))))throw Error('Potential existing SKU identity');
+  }
   const cacheFile=priv+'/素材上传.json',cache=await read(cacheFile);
   const upload=async(f,expected)=>{const b=await fs.readFile(f),h=sha(b);if(expected&&h!==expected)throw Error('Asset drifted');let entry=cache[h];if(entry&&entry.shopId!==shop.shopId)throw Error('Wrong-shop cache');if(!entry){await pause();entry={shopId:shop.shopId,file:f,sha256:h,uploadedAt:new Date().toISOString(),receipt:await c.uploadImage(f)};cache[h]=entry;await save(cacheFile,cache);}return entry.receipt.url;};
   const pics=[],description=[],specPic=[];for(const a of p.main_assets)pics.push(await upload(a.path,a.sha256));for(const a of p.detail_files)description.push(await upload(a.path,a.sha256));for(const a of p.media_binding.sku_color_files){const h=p.sourceEvidence.find(v=>v.path===a.path)?.sha256;if(!h)throw Error('Colour provenance missing');specPic.push(await upload(a.path,h));}
