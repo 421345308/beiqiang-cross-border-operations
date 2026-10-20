@@ -1,0 +1,43 @@
+{
+  "state": "CURRENT_SIX_COLOUR_MEDIA_BINDING",
+  "items": {
+    "Black": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ015_R1811/03_颜色图/black.png",
+      "sha256": "152d434d09eae03d9a65ebaa3501008d812af8e0464e923a37d605f76f8a2040",
+      "role": "CURRENT_SKU_COLOUR",
+      "source": "Existing true product photo, original mistaken binding corrected without pixel changes"
+    },
+    "Grey White": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ015_R1811/03_颜色图/white.png",
+      "sha256": "ea8d85cb0ea1209cfcb06134acf803c5a5477ca142740666c9c73af96ef050cb",
+      "role": "CURRENT_SKU_COLOUR",
+      "source": "Existing true product photo, original mistaken binding corrected without pixel changes"
+    },
+    "Black White": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ015_R1811/03_颜色图/black_white.png",
+      "sha256": "b160b242ac0f596d4fa382d5f159feef4a2cae1e2b4d46a93acebb571c2aa100",
+      "role": "CURRENT_SKU_COLOUR",
+      "source": "Existing true product photo, original mistaken binding corrected without pixel changes"
+    },
+    "Green": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ015_R1811/05_AI候选/SKU_Green.png",
+      "sha256": "4b1e14b5f1785c3abe2219b729222958ab4571d757f9ed9c09476374cb1edc6a",
+      "role": "CURRENT_SKU_COLOUR",
+      "source": "01_产品资产/02_可发布素材/00_最终上传/BQ015_R1811/01_来源原图/source_25.jpg"
+    },
+    "Pink": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ015_R1811/05_AI候选/SKU_Pink.png",
+      "sha256": "555e57ded82096e94525a94e07f92837cb5811d10d1e0fbb8c7b780469746d11",
+      "role": "CURRENT_SKU_COLOUR",
+      "source": "01_产品资产/02_可发布素材/00_最终上传/BQ015_R1811/01_来源原图/source_26.jpg"
+    },
+    "Off White": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ015_R1811/05_AI候选/SKU_OffWhite.png",
+      "sha256": "7375cb976acf794b1a02efa66538e7a3c743bab489ae41341a0f4a5697e9f142",
+      "role": "CURRENT_SKU_COLOUR",
+      "source": "01_产品资产/02_可发布素材/00_最终上传/BQ015_R1811/01_来源原图/source_28.jpg"
+    }
+  },
+  "platform_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ015_颜色图纠正/商品/1601939683302/verification.json",
+  "note": "Use this exact colour mapping. Legacy filename white.png represents Grey White; do not infer a display colour from filenames. New3 images are referenced in place, not copied into duplicate files."
+}

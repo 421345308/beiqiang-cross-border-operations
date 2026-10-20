@@ -887,9 +887,9 @@ def _created_image_identity(value):
     parsed = urlsplit('https:' + value if value.startswith('//') else value)
     if parsed.hostname != 'sc04.alicdn.com' or parsed.query or parsed.fragment:
         return value
-    original = re.fullmatch(r'/kf/(H[A-Za-z0-9]+)/([0-9]+)/\1\.(?:jpg|jpeg|png)', parsed.path)
-    thumbnail = re.fullmatch(r'/kf/(H[A-Za-z0-9]+)\.(jpg|jpeg|png)_350x350\.\2', parsed.path)
-    compact = re.fullmatch(r'/kf/(H[A-Za-z0-9]+)\.(?:jpg|jpeg|png)', parsed.path)
+    original = re.fullmatch(r'/kf/([HAS][A-Za-z0-9]+)/([0-9]+)/\1\.(?:jpg|jpeg|png)', parsed.path)
+    thumbnail = re.fullmatch(r'/kf/([HAS][A-Za-z0-9]+)\.(jpg|jpeg|png)_350x350\.(?:\2|jpg)', parsed.path)
+    compact = re.fullmatch(r'/kf/([HAS][A-Za-z0-9]+)\.(?:jpg|jpeg|png)', parsed.path)
     match = original or thumbnail or compact
     return 'sc04-kf-asset:' + match.group(1) if match else value
 

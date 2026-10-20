@@ -1,0 +1,30 @@
+{
+  "family": "BQ018",
+  "execution_key": "BQ018_其余主图色码",
+  "kind": "main_slot",
+  "ids": [
+    "1601939589890",
+    "1601939641542",
+    "1601939726170"
+  ],
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "assets": {
+    "M2": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ018_A116/05_AI候选/M2_colors.png",
+      "sha256": "699128c3a78249946da33bb4b1376a3c4113b0073fc2de0cb8ce49ddfe034dac",
+      "state": "PASS",
+      "review": "Four complete real shoes match source23-26, including distinct purple and cream knit patterns, cord stoppers and heel loops. Lavender EU35-40, other3 EU35-45, no Blue. Labels and number ranges visually checked.",
+      "prompt": "Source23-26 exact four colours, whole-shoe 2x2 English colour matrix: Lavender EU35-40, Cream/BlackWhite/AllBlack EU35-45; preserve actual sole, knit and stopped elastic laces; no invented Blue or claims."
+    }
+  },
+  "main_replacements_by_url": {
+    "https://sc04.alicdn.com/kf/H58eb2465434048238821d59f46cb9305W.jpg": "M2"
+  },
+  "source_evidence": [
+    "01_产品资产/02_可发布素材/00_最终上传/BQ018_A116/00_上架填写表.md",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/来源核对/src-45900f3e8258.json",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ018/计划.json"
+  ],
+  "scope": "Replace the exact shared blanket EU35-45 colour panel on three independently checked sibling galleries with correct Lavender35-40 and other colours35-45. Preserve their original four product photographs, factory position5, details, SKU39, copy, FAQ and trade."
+}

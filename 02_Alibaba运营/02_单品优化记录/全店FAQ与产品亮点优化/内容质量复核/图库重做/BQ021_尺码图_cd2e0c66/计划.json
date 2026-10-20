@@ -1,0 +1,37 @@
+{
+  "family": "BQ021",
+  "execution_key": "BQ021_尺码图_cd2e0c66",
+  "kind": "detail_slot",
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "ids": [
+    "1601838963947"
+  ],
+  "assets": {
+    "EU": {
+      "state": "PASS",
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ021_K6212/02_详情页/eu_size_selection_cd2e0c66.png",
+      "sha256": "2dd87157dfa0b6d776c7d15a0806f8b284bd0d57a0334d7789838d38dbfd4820",
+      "native_svg": "01_产品资产/02_可发布素材/00_最终上传/BQ021_K6212/02_详情页/eu_size_selection_cd2e0c66.svg",
+      "review": "All14 diagrams visually reviewed in complete contact sheets; native child-size chart checked. EU units, colour labels and exact selections checked against per-ID source snapshot. Responsive-height native graphic, no inferred US/foot length, no synthetic product geometry."
+    }
+  },
+  "detail_replacements_by_url": {
+    "https://sc04.alicdn.com/kf/Hedb24b270ee44c3eb5dc3aa29df12801g.jpg": "EU"
+  },
+  "expected_old_by_id": {
+    "1601838963947": [
+      "https://sc04.alicdn.com/kf/Hedb24b270ee44c3eb5dc3aa29df12801g.jpg",
+      "https://sc04.alicdn.com/kf/H30bc6ef2c77c45bd9525528a2292f7c9n.jpg",
+      "https://sc04.alicdn.com/kf/S75d1d87067b342cb940167c6ebb48ee7K.jpg",
+      "https://sc04.alicdn.com/kf/S4b2112ae8c1948dcb5c1e35815208cc48.jpg"
+    ]
+  },
+  "source_evidence": [
+    "01_产品资产/02_可发布素材/00_最终上传/BQ021_K6212/00_上架填写表.md",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/来源核对/src-0d974524b70b.json",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ021_尺码图_cd2e0c66/生成依据.json",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/历史尺码图来源复核.json"
+  ],
+  "reason": "Exact live byte/pixel match to known formula-generated US/foot-length table. Replace only this known picture by exact current colour/EU matrix, preserving all other product content."
+}

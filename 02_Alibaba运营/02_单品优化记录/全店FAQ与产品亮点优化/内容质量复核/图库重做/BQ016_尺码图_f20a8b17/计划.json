@@ -1,0 +1,50 @@
+{
+  "family": "BQ016",
+  "execution_key": "BQ016_尺码图_f20a8b17",
+  "kind": "detail_slot",
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "ids": [
+    "1601939608691",
+    "1601939633580",
+    "1601939691301"
+  ],
+  "assets": {
+    "EU": {
+      "state": "PASS",
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ016_201/02_详情页/eu_size_selection_f20a8b17.png",
+      "sha256": "367622a6a96cf508785aa76d362ec8ffad0022d004493ba277139ed6f77fe45d",
+      "native_svg": "01_产品资产/02_可发布素材/00_最终上传/BQ016_201/02_详情页/eu_size_selection_f20a8b17.svg",
+      "review": "All14 diagrams visually reviewed in complete contact sheets; native child-size chart checked. EU units, colour labels and exact selections checked against per-ID source snapshot. Responsive-height native graphic, no inferred US/foot length, no synthetic product geometry."
+    }
+  },
+  "detail_replacements_by_url": {
+    "https://sc04.alicdn.com/kf/Sdafafcc35f5d4d18adf9f5d5017753e9s.jpg": "EU"
+  },
+  "expected_old_by_id": {
+    "1601939608691": [
+      "https://sc04.alicdn.com/kf/S4ebf06dbb0c74e5b8692f6e15e6b1c3fW.jpg",
+      "https://sc04.alicdn.com/kf/Sce30c0cef8d64ebc874b33062c4bf6f4r.jpg",
+      "https://sc04.alicdn.com/kf/Sdafafcc35f5d4d18adf9f5d5017753e9s.jpg",
+      "https://sc04.alicdn.com/kf/S19b3fa49e3ed49c7838ac4ff81a3b418d.jpg"
+    ],
+    "1601939633580": [
+      "https://sc04.alicdn.com/kf/S4ebf06dbb0c74e5b8692f6e15e6b1c3fW.jpg",
+      "https://sc04.alicdn.com/kf/Sdafafcc35f5d4d18adf9f5d5017753e9s.jpg",
+      "https://sc04.alicdn.com/kf/Sce30c0cef8d64ebc874b33062c4bf6f4r.jpg",
+      "https://sc04.alicdn.com/kf/S19b3fa49e3ed49c7838ac4ff81a3b418d.jpg"
+    ],
+    "1601939691301": [
+      "https://sc04.alicdn.com/kf/S19b3fa49e3ed49c7838ac4ff81a3b418d.jpg",
+      "https://sc04.alicdn.com/kf/Sce30c0cef8d64ebc874b33062c4bf6f4r.jpg",
+      "https://sc04.alicdn.com/kf/Sdafafcc35f5d4d18adf9f5d5017753e9s.jpg",
+      "https://sc04.alicdn.com/kf/S4ebf06dbb0c74e5b8692f6e15e6b1c3fW.jpg"
+    ]
+  },
+  "source_evidence": [
+    "01_产品资产/02_可发布素材/00_最终上传/BQ016_201/00_上架填写表.md",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ016_尺码图_f20a8b17/生成依据.json",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/历史尺码图来源复核.json"
+  ],
+  "reason": "Exact live byte/pixel match to known formula-generated US/foot-length table. Replace only this known picture by exact current colour/EU matrix, preserving all other product content."
+}

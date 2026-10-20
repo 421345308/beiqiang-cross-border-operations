@@ -37,5 +37,31 @@
     "state": "PASS",
     "review": "Four complete real shoes match source23-26, including distinct purple and cream knit patterns, cord stoppers and heel loops. Lavender EU35-40, other3 EU35-45, no Blue. Labels and number ranges visually checked.",
     "prompt": "Source23-26 exact four colours, whole-shoe 2x2 English colour matrix: Lavender EU35-40, Cream/BlackWhite/AllBlack EU35-45; preserve actual sole, knit and stopped elastic laces; no invented Blue or claims."
+  },
+  "reviewed_gallery_assets": {
+    "M1": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ018_A116/05_AI候选/gallery_M1.png",
+      "sha256": "d3d3353ee86e7379c9b948844ba8a80d274f18f1c633d981e2302a4f8c40e076",
+      "state": "PASS",
+      "review": "Whole-shoe source23 silhouette, knit pattern, stopped laces and sole matched. M3 uses deliberate component close-ups, not an accidental cropped hero. Context shoe remains complete."
+    },
+    "M3": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ018_A116/05_AI候选/gallery_M3.png",
+      "sha256": "fd637eb3c219141031076cd626a61cb5a9d1a2c4fa2cde50d241e131ca61d8ca",
+      "state": "PASS",
+      "review": "Whole-shoe source23 silhouette, knit pattern, stopped laces and sole matched. M3 uses deliberate component close-ups, not an accidental cropped hero. Context shoe remains complete."
+    },
+    "M4": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ018_A116/05_AI候选/gallery_M4.png",
+      "sha256": "4e41ba66ea46c8260d20049d34baf8b1cea23c82210b02d8a903bca3e807784c",
+      "state": "PASS",
+      "review": "Exact source05 knit and tread pods/triangular incisions matched for M4. M5 exact source09 on-foot pose, closure, full-shoe boundaries and sole retained; no performance guarantee."
+    },
+    "M5": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ018_A116/05_AI候选/gallery_M5.png",
+      "sha256": "3e83368345b42c519f7a9001361647fe12b0dbff23d902b847b6c215dc3a0d33",
+      "state": "PASS",
+      "review": "Exact source05 knit and tread pods/triangular incisions matched for M4. M5 exact source09 on-foot pose, closure, full-shoe boundaries and sole retained; no performance guarantee."
+    }
   }
 }

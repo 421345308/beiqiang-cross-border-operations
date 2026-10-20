@@ -512,15 +512,10 @@ class Product:
         return list(range(start, end + 1))
 
     def foot_lengths(self) -> list[float]:
-        sizes = self.eu_sizes()
-        # Conservative reference values only.
-        base = 195 + (sizes[0] - 31) * 6.5
-        return [base + i * 5 for i in range(len(sizes))]
+        raise ValueError('Retired unsupported size formula: use exact measured/source foot lengths, never derive them from EU labels')
 
     def us_ref(self, eu_size: int) -> str:
-        if "Kids" in self.group or "Kids" in self.title:
-            return f"Kids {max(12, eu_size - 20)}"
-        return f"{max(4, eu_size - 32)}-{max(5, eu_size - 31)}"
+        raise ValueError('Retired unsupported conversion: use an exact verified product size chart')
 
 
 PRODUCTS = [
@@ -1067,12 +1062,7 @@ def write_batch_readme() -> None:
 
 
 def main() -> None:
-    UPLOAD_ROOT.mkdir(parents=True, exist_ok=True)
-    for product in PRODUCTS:
-        make_product(product)
-    write_batch_readme()
-    rename_raw_packages()
-    print(f"Organized {len(PRODUCTS)} product folders under {UPLOAD_ROOT}")
+    raise SystemExit('RETIRED historical batch generator: inferred size conversions and automatic raw-package renames must not be replayed. Use current product evidence and the reviewed per-product image workflow.')
 
 
 if __name__ == "__main__":

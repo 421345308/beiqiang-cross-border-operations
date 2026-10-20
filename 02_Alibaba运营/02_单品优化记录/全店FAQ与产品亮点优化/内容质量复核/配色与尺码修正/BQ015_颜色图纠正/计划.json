@@ -1,0 +1,44 @@
+{
+  "family": "BQ015",
+  "execution_key": "BQ015_颜色图纠正",
+  "source_id": "src-2064f015e244",
+  "ids": [
+    "1601939683302",
+    "1601939743040",
+    "1601939747001"
+  ],
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "source_evidence": [
+    "01_产品资产/02_可发布素材/00_最终上传/BQ015_R1811/00_上架填写表.md",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/来源核对/src-2064f015e244.json",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ015/素材审核.json",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ015/计划.json"
+  ],
+  "add": {},
+  "restrict": {},
+  "rebind_images": {
+    "Black": "https://sc04.alicdn.com/kf/Sadea5c90d2bc48cabf1888feb5e64047z.png",
+    "Grey White": "https://sc04.alicdn.com/kf/S396374542ee3443ba5b24c981f735e9ck.png",
+    "Black White": "https://sc04.alicdn.com/kf/S15fe0acad64e42909ce93ad6b3184d37F.png"
+  },
+  "expected_images_by_id": {
+    "1601939683302": {
+      "Black": "https://sc04.alicdn.com/kf/S15fe0acad64e42909ce93ad6b3184d37F.png",
+      "Grey White": "https://sc04.alicdn.com/kf/Sadea5c90d2bc48cabf1888feb5e64047z.png",
+      "Black White": "https://sc04.alicdn.com/kf/S396374542ee3443ba5b24c981f735e9ck.png"
+    },
+    "1601939743040": {
+      "Grey White": "https://sc04.alicdn.com/kf/Sadea5c90d2bc48cabf1888feb5e64047z.png",
+      "Black White": "https://sc04.alicdn.com/kf/S396374542ee3443ba5b24c981f735e9ck.png",
+      "Black": "https://sc04.alicdn.com/kf/S15fe0acad64e42909ce93ad6b3184d37F.png"
+    },
+    "1601939747001": {
+      "Black White": "https://sc04.alicdn.com/kf/S396374542ee3443ba5b24c981f735e9ck.png",
+      "Black": "https://sc04.alicdn.com/kf/S15fe0acad64e42909ce93ad6b3184d37F.png",
+      "Grey White": "https://sc04.alicdn.com/kf/Sadea5c90d2bc48cabf1888feb5e64047z.png"
+    }
+  },
+  "scope": "Correct three old rotated image bindings only via saleProp. Black: all-black shoe; GreyWhite: grey-white shoe; BlackWhite: black-upper-white-sole shoe. All66SKU IDs/codes/prices/inventory unchanged.",
+  "review": "All3 original transparent PNG photos viewed individually and on white diagnostic background. Source R1811 blackwhite/allblack/grey options confirmed. Same wrong binding cycle on all3IDs."
+}

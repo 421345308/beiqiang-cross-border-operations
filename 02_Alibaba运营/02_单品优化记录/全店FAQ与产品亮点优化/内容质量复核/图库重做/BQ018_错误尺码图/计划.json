@@ -1,0 +1,57 @@
+{
+  "family": "BQ018",
+  "execution_key": "BQ018_错误尺码图",
+  "kind": "detail_slot",
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "ids": [
+    "10000044007878",
+    "1601939589890",
+    "1601939641542",
+    "1601939726170"
+  ],
+  "assets": {
+    "M2": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ018_A116/05_AI候选/M2_colors.png",
+      "sha256": "699128c3a78249946da33bb4b1376a3c4113b0073fc2de0cb8ce49ddfe034dac",
+      "state": "PASS",
+      "review": "Four complete real shoes match source23-26, including distinct purple and cream knit patterns, cord stoppers and heel loops. Lavender EU35-40, other3 EU35-45, no Blue. Labels and number ranges visually checked.",
+      "prompt": "Source23-26 exact four colours, whole-shoe 2x2 English colour matrix: Lavender EU35-40, Cream/BlackWhite/AllBlack EU35-45; preserve actual sole, knit and stopped elastic laces; no invented Blue or claims."
+    }
+  },
+  "expected_old_by_id": {
+    "10000044007878": [
+      "https://sc04.alicdn.com/kf/Sf6a31fc66468494f922e0599c95c498bo.jpg",
+      "https://sc04.alicdn.com/kf/Sc8781044e2524ecdafe0f9f6b7e0a8d85.jpg",
+      "https://sc04.alicdn.com/kf/S7b32f0c573864fc5a90d8a6f1cddd436i.jpg",
+      "https://sc04.alicdn.com/kf/Sd4062f340a1b49029cfbcd672b1e1ad2L.jpg"
+    ],
+    "1601939589890": [
+      "https://sc04.alicdn.com/kf/S7a577c269d2c407cbb5d654bc2b10922w.jpg",
+      "https://sc04.alicdn.com/kf/Sf6a31fc66468494f922e0599c95c498bo.jpg",
+      "https://sc04.alicdn.com/kf/Sc8781044e2524ecdafe0f9f6b7e0a8d85.jpg",
+      "https://sc04.alicdn.com/kf/S7b32f0c573864fc5a90d8a6f1cddd436i.jpg"
+    ],
+    "1601939641542": [
+      "https://sc04.alicdn.com/kf/S7a577c269d2c407cbb5d654bc2b10922w.jpg",
+      "https://sc04.alicdn.com/kf/Sf6a31fc66468494f922e0599c95c498bo.jpg",
+      "https://sc04.alicdn.com/kf/S7b32f0c573864fc5a90d8a6f1cddd436i.jpg",
+      "https://sc04.alicdn.com/kf/Sc8781044e2524ecdafe0f9f6b7e0a8d85.jpg"
+    ],
+    "1601939726170": [
+      "https://sc04.alicdn.com/kf/Sf6a31fc66468494f922e0599c95c498bo.jpg",
+      "https://sc04.alicdn.com/kf/Sc8781044e2524ecdafe0f9f6b7e0a8d85.jpg",
+      "https://sc04.alicdn.com/kf/S7a577c269d2c407cbb5d654bc2b10922w.jpg",
+      "https://sc04.alicdn.com/kf/S7b32f0c573864fc5a90d8a6f1cddd436i.jpg"
+    ]
+  },
+  "source_evidence": [
+    "01_产品资产/02_可发布素材/00_最终上传/BQ018_A116/00_上架填写表.md",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/来源核对/src-45900f3e8258.json",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ018/计划.json"
+  ],
+  "reason": "Current first product detail has unevidenced US/foot-length conversion and implies Lavender EU35-45. Replace only this wrong picture with source-specific EU matrix; other images/fields preserved. Full group design continues independently. Match the wrong size picture by exact CDN identity, not the first slot: current get and render orders differ on sibling IDs. Keep target current Schema order and all other original pictures.",
+  "detail_replacements_by_url": {
+    "https://sc04.alicdn.com/kf/Sf6a31fc66468494f922e0599c95c498bo.jpg": "M2"
+  }
+}

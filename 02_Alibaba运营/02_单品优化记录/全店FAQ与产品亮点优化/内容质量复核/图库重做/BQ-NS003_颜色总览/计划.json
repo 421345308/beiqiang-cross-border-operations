@@ -1,0 +1,29 @@
+{
+  "family": "BQ-NS003",
+  "execution_key": "BQ-NS003_颜色总览",
+  "kind": "main_slot",
+  "ids": [
+    "1601970690721"
+  ],
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "assets": {
+    "COLORS": {
+      "state": "PASS",
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ-NS003/05_AI候选/M2_seven_colors.png",
+      "sha256": "4df25ac0cc1e9624f1332a146c358d37f182bd04adf4d5030c40e61f5537ea65",
+      "review": "Seven actual source colour variants all complete, Grey orange collar and per-variant soles retained. Six EU35-45 labels, Purple35-43 checked. No Pink invented.",
+      "prompt": "Exact seven colour portfolio from source03 and reviewed Green/RoseRed/Purple assets, preserve each sole/collar geometry and colour, correct EU range per card, no stock/performance claims."
+    }
+  },
+  "main_replacements_by_url": {
+    "https://sc04.alicdn.com/kf/H078089a6ec0349bea7289fe395401b7a6.jpg": "COLORS"
+  },
+  "source_evidence": [
+    "02_Alibaba运营/05_扩品工程/执行记录/229正式新建_2026-10-04_task5/facts_and_color_bindings.json",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/来源核对/src-67e63a6d3c1b.json",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ-NS003/素材审核.json",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ-NS003/计划.json"
+  ],
+  "scope": "Replace old second black-white whole-pair view with actual seven-colour overview; preserve six-gallery order and other five original images, structured details, SKU75, copy, FAQ and trade. Full current six-image contact inspected; factory remains sixth."
+}

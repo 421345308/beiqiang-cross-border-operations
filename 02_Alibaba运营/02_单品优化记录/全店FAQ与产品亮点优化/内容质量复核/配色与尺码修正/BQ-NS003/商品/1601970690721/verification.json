@@ -1,0 +1,373 @@
+{
+  "id": "1601970690721",
+  "at": "2026-10-19T22:11:59.981490+00:00",
+  "state": "FORMAL_FIELDS_SCORE_PASS",
+  "status": "approved",
+  "display": "Y",
+  "checks": {
+    "exact_colour_EU": true,
+    "retained_sku_identity": true,
+    "removed_unsupported": true,
+    "unique_real_sku_ids": true,
+    "all_price_tiers_preserved": true,
+    "other_formal_fields": true,
+    "display": true,
+    "schema_targets": true,
+    "other_schema": true,
+    "score": true
+  },
+  "score": "5.00",
+  "public_status": "API_ACCEPTANCE_NO_BROWSER_PER_USER",
+  "diagnostics": {
+    "ruleScoreMap": {
+      "title_word_miss_core_error": 0.0,
+      "imageQualityBad": 0.0,
+      "image_scale": 0.0,
+      "title_word_error": 0.0,
+      "image_num": 0.0
+    },
+    "errorReasonSkuImageMoreMap": {},
+    "errorReasonTitleWordMissErrorMap": {},
+    "errorReasonList": [],
+    "errorReasonTitleWordErrorMap": {},
+    "extendCheckMap": {
+      "imageText": true,
+      "sku_image": false,
+      "title_word_miss_core_error": true,
+      "imageQualityBad": true,
+      "sku_text": false,
+      "imageSubTitle": false,
+      "category": true,
+      "title_word_error": true,
+      "selling_point_attribute_conflict": false
+    },
+    "errorReasonCategoryMap": {},
+    "errorReasonSkuTextMap": {},
+    "errorReasonSubTitleMap": {},
+    "errorReasonMap": {},
+    "errorReasonSellingPointAttributeMap": {},
+    "errorReasonSkuImageMap": {},
+    "extendProblemMap": {
+      "imageText": false,
+      "title_word_miss_core_error": false,
+      "imageQualityBad": false,
+      "imageSubTitle": false,
+      "image_scale": false,
+      "inventory": false,
+      "title_word_error": false,
+      "selling_point_attribute_conflict": false,
+      "image_num": false,
+      "freightRate": false,
+      "sku_image": false,
+      "sku_text": false,
+      "price": false,
+      "category": false
+    },
+    "errorReasonQualityBadMap": {},
+    "errorReasonSkuTextMoreMap": {}
+  },
+  "failed": [],
+  "pairs": [
+    [
+      "Black/White",
+      "44"
+    ],
+    [
+      "Black/White",
+      "43"
+    ],
+    [
+      "Grey",
+      "35"
+    ],
+    [
+      "Black/White",
+      "45"
+    ],
+    [
+      "Black/White",
+      "40"
+    ],
+    [
+      "Black/White",
+      "39"
+    ],
+    [
+      "Black/White",
+      "42"
+    ],
+    [
+      "Black/White",
+      "41"
+    ],
+    [
+      "Black/White",
+      "36"
+    ],
+    [
+      "Black/White",
+      "35"
+    ],
+    [
+      "Black/White",
+      "38"
+    ],
+    [
+      "Black/White",
+      "37"
+    ],
+    [
+      "All Black",
+      "43"
+    ],
+    [
+      "All Black",
+      "42"
+    ],
+    [
+      "All Black",
+      "45"
+    ],
+    [
+      "Green",
+      "35"
+    ],
+    [
+      "All Black",
+      "44"
+    ],
+    [
+      "Green",
+      "36"
+    ],
+    [
+      "All Black",
+      "39"
+    ],
+    [
+      "All Black",
+      "38"
+    ],
+    [
+      "All Black",
+      "41"
+    ],
+    [
+      "All Black",
+      "40"
+    ],
+    [
+      "All Black",
+      "35"
+    ],
+    [
+      "All Black",
+      "37"
+    ],
+    [
+      "All Black",
+      "36"
+    ],
+    [
+      "Rose Red",
+      "42"
+    ],
+    [
+      "Rose Red",
+      "43"
+    ],
+    [
+      "Rose Red",
+      "44"
+    ],
+    [
+      "Rose Red",
+      "45"
+    ],
+    [
+      "Purple",
+      "35"
+    ],
+    [
+      "Purple",
+      "36"
+    ],
+    [
+      "Purple",
+      "37"
+    ],
+    [
+      "Purple",
+      "38"
+    ],
+    [
+      "Purple",
+      "39"
+    ],
+    [
+      "Khaki",
+      "45"
+    ],
+    [
+      "Purple",
+      "40"
+    ],
+    [
+      "Purple",
+      "41"
+    ],
+    [
+      "Purple",
+      "42"
+    ],
+    [
+      "Khaki",
+      "42"
+    ],
+    [
+      "Purple",
+      "43"
+    ],
+    [
+      "Khaki",
+      "41"
+    ],
+    [
+      "Khaki",
+      "44"
+    ],
+    [
+      "Khaki",
+      "43"
+    ],
+    [
+      "Khaki",
+      "38"
+    ],
+    [
+      "Green",
+      "37"
+    ],
+    [
+      "Khaki",
+      "37"
+    ],
+    [
+      "Green",
+      "38"
+    ],
+    [
+      "Khaki",
+      "40"
+    ],
+    [
+      "Green",
+      "39"
+    ],
+    [
+      "Khaki",
+      "39"
+    ],
+    [
+      "Green",
+      "40"
+    ],
+    [
+      "Grey",
+      "45"
+    ],
+    [
+      "Green",
+      "41"
+    ],
+    [
+      "Grey",
+      "44"
+    ],
+    [
+      "Green",
+      "42"
+    ],
+    [
+      "Khaki",
+      "36"
+    ],
+    [
+      "Green",
+      "43"
+    ],
+    [
+      "Khaki",
+      "35"
+    ],
+    [
+      "Green",
+      "44"
+    ],
+    [
+      "Grey",
+      "41"
+    ],
+    [
+      "Green",
+      "45"
+    ],
+    [
+      "Grey",
+      "40"
+    ],
+    [
+      "Rose Red",
+      "35"
+    ],
+    [
+      "Grey",
+      "43"
+    ],
+    [
+      "Rose Red",
+      "36"
+    ],
+    [
+      "Grey",
+      "42"
+    ],
+    [
+      "Rose Red",
+      "37"
+    ],
+    [
+      "Grey",
+      "37"
+    ],
+    [
+      "Rose Red",
+      "38"
+    ],
+    [
+      "Grey",
+      "36"
+    ],
+    [
+      "Rose Red",
+      "39"
+    ],
+    [
+      "Grey",
+      "39"
+    ],
+    [
+      "Rose Red",
+      "40"
+    ],
+    [
+      "Grey",
+      "38"
+    ],
+    [
+      "Rose Red",
+      "41"
+    ]
+  ],
+  "sku_count": 75
+}

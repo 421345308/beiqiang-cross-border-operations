@@ -1,0 +1,40 @@
+{
+  "family": "BQ015",
+  "execution_key": "BQ015_六色总览",
+  "kind": "main_slot",
+  "ids": [
+    "1601939683302",
+    "1601939743040",
+    "1601939747001"
+  ],
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "assets": {
+    "COLORS": {
+      "state": "PASS",
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ015_R1811/05_AI候选/M2_six_colors.png",
+      "sha256": "615455500aa911460a904ba17ce9e4f1b0a50460bb214af773494acfa83c2f61",
+      "review": "Native six-card image inspected against exact source and corrected SKU pictures. BlackWhite forefoot is all black knit, white only guard/sole; other five colours, stops, collar and sole matched, allEU35-45. Reject previous white-mesh BlackWhite candidate.",
+      "generation_file": "E:\\C盘迁移\\Codex\\.codex\\generated_images\\01a1164e-73c1-70d1-882c-299608adb19c\\exec-77ce1349-a44d-4c26-bc52-e0157b58f545.png",
+      "prompt": "Six complete exact R1811 colour variants; retain variant-specific knit, toe guard, stopped laces and soles. Green/Pink/OffWhite/BlackWhite/GreyWhite/Black, each EU35-45. Surgical correction of BlackWhite full black knit using real source photograph."
+    }
+  },
+  "main_replacements_by_id": {
+    "1601939683302": {
+      "https://sc04.alicdn.com/kf/S78e56ec3a5844a6ebc82efae4d851b165.jpg": "COLORS"
+    },
+    "1601939743040": {
+      "https://sc04.alicdn.com/kf/S9a953945b84e43e2ad6d36dc4336b2d9N.jpg": "COLORS"
+    },
+    "1601939747001": {
+      "https://sc04.alicdn.com/kf/S1c02614806ea44c3b73e899587b3925b9.jpg": "COLORS"
+    }
+  },
+  "source_evidence": [
+    "01_产品资产/02_可发布素材/00_最终上传/BQ015_R1811/00_上架填写表.md",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/来源核对/src-2064f015e244.json",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ015/素材审核.json",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ015_颜色图纠正/本地颜色图映射.json"
+  ],
+  "scope": "Three complete current six-image galleries individually inspected. Replace only redundant secondary Green side-profile at positions2/6/4 respectively with correct six-colour overview. Preserve each M1, sole, heel, other original image, factory position5/3/5, details, SKU66, copy, FAQ and trade."
+}

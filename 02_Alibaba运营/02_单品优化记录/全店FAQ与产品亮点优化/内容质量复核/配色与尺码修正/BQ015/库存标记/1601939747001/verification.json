@@ -1,0 +1,73 @@
+{
+  "id": "1601939747001",
+  "at": "2026-10-20T01:22:28.704093+00:00",
+  "state": "FORMAL_DIFFERENCE_DIAGNOSE_NO_REPLAY",
+  "confirmation": "负责人明确答复：新增项也填 999 可询货标记。范围为R1811新增绿、粉、米白EU35–45；不代表实物现货或保供数量。",
+  "checks": {
+    "all_66_ids": true,
+    "new_33_marker": true,
+    "old_33_inventory_unchanged": true,
+    "all_other_formal_fields": true,
+    "approved_visible": true,
+    "formal_get_matches_inventory": true,
+    "score": false
+  },
+  "failed": [
+    "score"
+  ],
+  "score": "3.90",
+  "diagnostics": {
+    "ruleScoreMap": {
+      "title_word_miss_core_error": 0.0,
+      "imageQualityBad": 0.0,
+      "image_scale": 0.0,
+      "title_word_error": 0.0,
+      "image_num": 0.0
+    },
+    "errorReasonSkuImageMoreMap": {},
+    "errorReasonTitleWordMissErrorMap": {},
+    "errorReasonList": [],
+    "errorReasonTitleWordErrorMap": {},
+    "extendCheckMap": {
+      "imageText": true,
+      "sku_image": false,
+      "title_word_miss_core_error": true,
+      "imageQualityBad": true,
+      "sku_text": false,
+      "imageSubTitle": false,
+      "category": true,
+      "title_word_error": true,
+      "selling_point_attribute_conflict": false
+    },
+    "errorReasonCategoryMap": {},
+    "errorReasonSkuTextMap": {},
+    "errorReasonSubTitleMap": {},
+    "errorReasonMap": {},
+    "errorReasonSellingPointAttributeMap": {},
+    "errorReasonSkuImageMap": {},
+    "extendProblemMap": {
+      "imageText": false,
+      "title_word_miss_core_error": false,
+      "imageQualityBad": false,
+      "imageSubTitle": false,
+      "image_scale": false,
+      "inventory": true,
+      "title_word_error": false,
+      "selling_point_attribute_conflict": false,
+      "image_num": false,
+      "freightRate": false,
+      "sku_image": false,
+      "sku_text": false,
+      "price": false,
+      "category": false
+    },
+    "errorReasonQualityBadMap": {},
+    "errorReasonSkuTextMoreMap": {}
+  },
+  "sku_count": 66,
+  "new_sku_count": 33,
+  "marker": 999,
+  "physical_stock_claim": false,
+  "status": "approved",
+  "display": "Y"
+}

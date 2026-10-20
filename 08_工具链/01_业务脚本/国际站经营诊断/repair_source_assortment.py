@@ -48,14 +48,19 @@ def main():
         if a.mode=='prepare':
             assert not ledger.exists(),'Existing attempt: read only'
             got=get(pid);save(raw/'before_get.json',got);p=got['product'];assert p['status']=='approved'and p['display']=='Y';rr=render(pid,p);assert rr.get('data');save(raw/'before_render.json',rr)
-            current=raw/'current_schema.xml';current.write_text(rr['data'],encoding='utf8');schema=E.fromstring(rr['data']);out=pub.values_only(schema,operation='update',field_ids=FIELDS)
+            current=raw/'current_schema.xml';current.write_text(rr['data'],encoding='utf8');schema=E.fromstring(rr['data']);rebind_only=bool(plan.get('rebind_images'))and not plan.get('add')and not plan.get('restrict');fields=['saleProp']if rebind_only else FIELDS;out=pub.values_only(schema,operation='update',field_ids=fields)
             colours=out.find("./field[@id='saleProp']/complex-value/field[@id='p-191288010']/values");sizes=out.find("./field[@id='saleProp']/complex-value/field[@id='p-222038415']/values")
-            cm={v.text:v.get('inputValue')for v in colours};sm={v.text:v.get('inputValue')for v in sizes};sizeids={v.get('inputValue').replace('Size ',''):v.text for v in sizes};skus=out.find("./field[@id='sku']");original=list(skus.findall('./complex-values'));removed=[]
+            cm={v.text:v.get('inputValue')for v in colours};sm={v.text:v.get('inputValue')for v in sizes};sizeids={v.get('inputValue').replace('Size ',''):v.text for v in sizes};skus=out.find("./field[@id='sku']");original=list(skus.findall('./complex-values'))if skus is not None else[];removed=[]
+            for value in colours:
+                label=value.get('inputValue')
+                if label in plan.get('rebind_images',{}):
+                    assert contract._created_image_identity(value.get('img'))==contract._created_image_identity(plan['expected_images_by_id'][pid][label]),'Current colour image differs from reviewed original'
+                    value.set('img',plan['rebind_images'][label])
             for row in original:
                 vals={v.get('propId'):v.get('propValueId')for v in row.findall("./field[@id='props']/values/value")};c=cm[vals['191288010']];eu=sm[vals['222038415']].replace('Size ','')
                 if c in plan.get('restrict',{})and eu not in plan['restrict'][c]:
                     removed.append(row.findtext("./field[@id='skuId']/value"));skus.remove(row)
-            kept=list(skus.findall('./complex-values'));assert kept
+            kept=list(skus.findall('./complex-values'))if skus is not None else[];assert kept or rebind_only
             bank=load(folder/'图片银行.json')['items']if plan.get('add')else{}
             for index,(c,item)in enumerate(plan.get('add',{}).items()):
                 assert c not in cm.values()and bank[c]['state']=='UPLOADED';marker=str(-1001-index);assert marker not in cm
@@ -65,16 +70,21 @@ def main():
                     for fid in ('skuId','outerSupplyId'):
                         f=row.find("./field[@id='%s']"%fid)
                         for ch in list(f):f.remove(ch)
+                    # Existing SKU stock remains untouched. A source colour
+                    # label does not supply a quantity for a newly added SKU.
+                    stock=row.find("./field[@id='skuStock']")
+                    if stock is not None:
+                        for ch in list(stock):stock.remove(ch)
                     pub.set_direct_value(row,'skuOuterId',a.family+'-'+pid[-5:]+'-'+c.upper().replace(' ','')+'-'+eu)
                     values=row.find("./field[@id='props']/values");values.clear()
                     for prop,label,v in [('191288010',c,marker),('222038415',sm[sizeids[eu]],sizeids[eu])]:E.SubElement(values,'value',{'propValueId':v,'propId':prop,'propName':'p-'+prop,'propValueName':label}).text=prop+':'+v
                     skus.append(row)
             contract.validate_sku_property_pairs(out);payload=raw/'payload.xml';payload.write_text(E.tostring(out,encoding='unicode'),encoding='utf8')
-            manifest={'operation':'update','product_id':pid,'category_id':p['category_id'],'facts_reviewed':True,'source_evidence':plan['source_evidence']+[rel(folder/'计划.json')],'current_schema':'current_schema.xml','current_schema_sha256':sha(current),'schema_request_id':rr['request_id'],'schema_acquired_at':now(),'payload_xml':'payload.xml','field_ids':FIELDS,'dependency_ids':[]}
+            manifest={'operation':'update','product_id':pid,'category_id':p['category_id'],'facts_reviewed':True,'source_evidence':plan['source_evidence']+[rel(folder/'计划.json')],'current_schema':'current_schema.xml','current_schema_sha256':sha(current),'schema_request_id':rr['request_id'],'schema_acquired_at':now(),'payload_xml':'payload.xml','field_ids':fields,'dependency_ids':[]}
             if removed:manifest['reviewed_sku_removals']={'ids':removed,'reason':'Exact source restricts Lavender to EU35-40; remove unsupported EU41-45 only.','source_evidence':plan['source_evidence']}
             save(raw/'manifest.json',manifest);pub.load_submission_manifest(raw/'manifest.json','update',pid)
             ax=axes(p);expected=[key(row,ax)for row in p['product_sku']['skus']if str(row['sku_id'])not in removed]+[(c,eu)for c,item in plan.get('add',{}).items()for eu in item['EU']]
-            save(public/'prepared.json',{'id':pid,'at':now(),'fields':FIELDS,'before_sku_count':len(original),'expected_pairs':expected,'removed_unsupported_ids':removed,'payload_sha256':sha(payload),'source_evidence':manifest['source_evidence']});print('PREPARED',pid,len(expected),flush=True)
+            save(public/'prepared.json',{'id':pid,'at':now(),'fields':fields,'before_sku_count':len(p['product_sku']['skus']),'expected_pairs':expected,'removed_unsupported_ids':removed,'payload_sha256':sha(payload),'source_evidence':manifest['source_evidence']});print('PREPARED',pid,len(expected),flush=True)
         elif a.mode=='submit':
             assert not ledger.exists(),'Existing attempt: reconcile by reads';prepared=load(public/'prepared.json');assert prepared['payload_sha256']==sha(raw/'payload.xml');listing=pub.load_submission_manifest(raw/'manifest.json','update',pid)
             got=get(pid);save(raw/'immediate_prewrite_get.json',got);assert got['product']==load(raw/'before_get.json')['product'],'Current changed, no write'
@@ -83,6 +93,8 @@ def main():
         else:
             assert ledger.exists();before=load(raw/'before_get.json')['product'];prepared=load(public/'prepared.json');got=get(pid);save(raw/'after_get.json',got);p=got['product'];ax=axes(p);pairs=Counter(key(r,ax)for r in p['product_sku']['skus']);original={str(r['sku_id']):r for r in before['product_sku']['skus']if str(r['sku_id'])not in prepared['removed_unsupported_ids']};actual={str(r['sku_id']):r for r in p['product_sku']['skus']}
             checks={'exact_colour_EU':pairs==Counter(tuple(x)for x in prepared['expected_pairs']),'retained_sku_identity':all(actual.get(i)==r for i,r in original.items()),'removed_unsupported':not set(prepared['removed_unsupported_ids'])&set(actual),'unique_real_sku_ids':len(actual)==len(p['product_sku']['skus'])and '0'not in actual,'all_price_tiers_preserved':all(r.get('bulk_discount_prices')==before['product_sku']['skus'][0].get('bulk_discount_prices')for r in actual.values()),'other_formal_fields':{k:v for k,v in p.items()if k not in ('product_sku','gmt_modified','status','display')}=={k:v for k,v in before.items()if k not in ('product_sku','gmt_modified','status','display')}}
+            if plan.get('rebind_images'):
+                colour_images={v['system_value_name']:v.get('image_url')for axis in p['product_sku']['sku_attributes']if str(axis['attribute_id'])=='191288010'for v in axis['values']};checks['colour_image_bindings']=all(contract._created_image_identity(colour_images.get(label))==contract._created_image_identity(url)for label,url in plan['rebind_images'].items())
             report={'id':pid,'at':now(),'state':'REVIEW_PENDING','status':p['status'],'display':p['display'],'checks':checks,'score':None,'public_status':'API_ACCEPTANCE_NO_BROWSER_PER_USER'}
             if p['status']=='approved':
                 checks['display']=p['display']==before['display'];rr=render(pid,p);save(raw/'after_render.json',rr)
@@ -95,12 +107,13 @@ def main():
 def sync(plan,folder):
     file=ROOT/'02_Alibaba运营/05_扩品工程/数据/产品与链接台账.json';data=load(file)
     for pid in plan['ids']:
-        public=folder/'商品'/pid;report=load(public/'verification.json');assert report['state']=='FORMAL_FIELDS_SCORE_PASS';raw=RAW/plan['family']/pid;got=load(raw/'after_get.json');p=got['product'];listing=next(x for x in data['listings']if x['id']==pid);product=next(x for x in data['products']if x['id']==listing['product_id']);canonical=ROOT/'02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品'/pid
+        public=folder/'商品'/pid;report=load(public/'verification.json');assert report['status']=='approved'and all(v is True for k,v in report['checks'].items()if k!='score'),'Only proved formal fields can sync; score pending stays explicit';raw=RAW/plan.get('execution_key',plan['family'])/pid;got=load(raw/'after_get.json');p=got['product'];listing=next(x for x in data['listings']if x['id']==pid);product=next(x for x in data['products']if x['id']==listing['product_id']);canonical=ROOT/'02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品'/pid
+        if listing.get('formal_fields',{}).get('at','')>report['at']:continue
         save(canonical/'formal_get.json',{'requested_product_id':pid,'observed_at_utc':report['at'],'method':'alibaba.icbu.product.get','response':s.sanitized(got),'sanitized_fields':['owner_member','owner_member_display_name','owner_member_id'],'raw_response_file':rel(raw/'after_get.json')});save(canonical/'formal_render.json',s.sanitized(load(raw/'after_render.json')))
         refs=[rel(folder/'计划.json')]+[rel(public/n)for n in ('prepared.json','update_receipt.json','verification.json')];phase={'at':report['at'],'state':report['state'],'scope':'Exact source colour/EU matrix; retained SKU IDs/codes/prices and all unrelated product fields verified.','evidence':refs};listing.setdefault('optimization',{})['source_assortment_revision']=phase;product['source_assortment_revision']=phase
         for obj in (listing,product):obj['evidence']=list(dict.fromkeys(obj.get('evidence',[])+refs))
         listing['formal_fields']={'file':rel(canonical/'formal_get.json'),'at':report['at'],'scope':phase['scope']};listing.setdefault('current_platform_fields',{}).update(at=report['at'],sku_count=report['sku_count'],colour_EU={c:sorted(eu for cc,eu in report['pairs']if cc==c)for c in set(c for c,eu in report['pairs'])});listing.setdefault('catalog_fields',{}).update(listing['current_platform_fields']);listing.setdefault('observation',{}).update(at=report['at'],score=report['score'],audit=p['status'],display=p['display'],sku_count=report['sku_count']);listing.setdefault('local_sync',{}).update(state=report['state'],observed_at=report['at'],current_fields_file=rel(canonical/'formal_get.json'),assortment_verification=rel(public/'verification.json'));product.setdefault('local_assets',{})['current_assortment']=rel(folder/'计划.json')
-        source=next(x for x in data['sources']if x['id']==plan['source_id']);source['current_assortment']={'at':report['at'],'state':'EXACT_COLOR_EU_VERIFIED','matrix':listing['current_platform_fields']['colour_EU'],'evidence':refs,'remaining_source_options':plan.get('unmapped_options',[]),'inventory':'Source options are not physical stock proof'}
+        source=next(x for x in data['sources']if x['id']==plan['source_id']);source['current_assortment']={'at':report['at'],'state':'EXACT_COLOR_EU_VERIFIED'if report['state']=='FORMAL_FIELDS_SCORE_PASS'else'FORMAL_COLOR_EU_VERIFIED_SCORE_PENDING','score':report['score'],'matrix':listing['current_platform_fields']['colour_EU'],'evidence':refs,'remaining_source_options':plan.get('unmapped_options',[]),'inventory':'Source options are not physical stock proof; newly added variants may have default zero until a quantity is supplied'}
     save(file,data);sys.path.insert(0,str(ROOT/'08_工具链/06_工作区维护'));import build_product_workspace as workspace
     errors=workspace.validate(data,ROOT);assert not errors,errors
     for path,body in workspace.build(data).items():workspace.write_generated(ROOT/path,body)

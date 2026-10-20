@@ -1,0 +1,669 @@
+{
+  "generator": "08_工具链/01_业务脚本/商品图片与审计/organize_20260616_new_packages.py",
+  "unsupported_logic": "foot length base195+(EUstart-31)*6.5 then increments5mm; US max(4,EU-32) to max(5,EU-31). These are formulas, not measurements or verified conversions.",
+  "candidate_families": [
+    "BQ016",
+    "BQ017",
+    "BQ018",
+    "BQ019",
+    "BQ020",
+    "BQ021",
+    "BQ022",
+    "BQ023",
+    "BQ024",
+    "BQ025",
+    "BQ026",
+    "BQ027",
+    "BQ028",
+    "BQ029",
+    "BQ030"
+  ],
+  "live_family_candidates": [
+    {
+      "family": "BQ022",
+      "ids": [
+        "10000043991998",
+        "1601939641581",
+        "1601939659468",
+        "1601939709218"
+      ],
+      "state": "SIZE_IMAGE_SOURCE_REVIEW_PRIORITY",
+      "reason": "Legacy image generator derives foot length and US reference from fixed formulas rather than this product evidence. Current live binding and image content must be checked per ID; do not infer all historical assets remain live."
+    },
+    {
+      "family": "BQ023",
+      "ids": [
+        "10000044004948",
+        "1601939616754",
+        "1601939722180",
+        "1601939752005"
+      ],
+      "state": "SIZE_IMAGE_SOURCE_REVIEW_PRIORITY",
+      "reason": "Legacy image generator derives foot length and US reference from fixed formulas rather than this product evidence. Current live binding and image content must be checked per ID; do not infer all historical assets remain live."
+    },
+    {
+      "family": "BQ018",
+      "ids": [
+        "10000044007878",
+        "1601939589890",
+        "1601939641542",
+        "1601939726170"
+      ],
+      "state": "SIZE_IMAGE_SOURCE_REVIEW_PRIORITY",
+      "reason": "Legacy image generator derives foot length and US reference from fixed formulas rather than this product evidence. Current live binding and image content must be checked per ID; do not infer all historical assets remain live."
+    },
+    {
+      "family": "BQ026",
+      "ids": [
+        "10000044011929",
+        "1601939714238",
+        "1601939725201",
+        "1601939745065"
+      ],
+      "state": "SIZE_IMAGE_SOURCE_REVIEW_PRIORITY",
+      "reason": "Legacy image generator derives foot length and US reference from fixed formulas rather than this product evidence. Current live binding and image content must be checked per ID; do not infer all historical assets remain live."
+    },
+    {
+      "family": "BQ016",
+      "ids": [
+        "10000044021584",
+        "1601939608691",
+        "1601939633580",
+        "1601939691301"
+      ],
+      "state": "SIZE_IMAGE_SOURCE_REVIEW_PRIORITY",
+      "reason": "Legacy image generator derives foot length and US reference from fixed formulas rather than this product evidence. Current live binding and image content must be checked per ID; do not infer all historical assets remain live."
+    },
+    {
+      "family": "BQ025",
+      "ids": [
+        "10000044024484",
+        "1601939612707",
+        "1601939733108",
+        "1601939751016"
+      ],
+      "state": "SIZE_IMAGE_SOURCE_REVIEW_PRIORITY",
+      "reason": "Legacy image generator derives foot length and US reference from fixed formulas rather than this product evidence. Current live binding and image content must be checked per ID; do not infer all historical assets remain live."
+    },
+    {
+      "family": "BQ027",
+      "ids": [
+        "10000044028277",
+        "1601939616762",
+        "1601939692338",
+        "1601939703288"
+      ],
+      "state": "SIZE_IMAGE_SOURCE_REVIEW_PRIORITY",
+      "reason": "Legacy image generator derives foot length and US reference from fixed formulas rather than this product evidence. Current live binding and image content must be checked per ID; do not infer all historical assets remain live."
+    },
+    {
+      "family": "BQ017",
+      "ids": [
+        "10000044034049",
+        "1601939593839",
+        "1601939636508",
+        "1601939697271"
+      ],
+      "state": "SIZE_IMAGE_SOURCE_REVIEW_PRIORITY",
+      "reason": "Legacy image generator derives foot length and US reference from fixed formulas rather than this product evidence. Current live binding and image content must be checked per ID; do not infer all historical assets remain live."
+    },
+    {
+      "family": "BQ019",
+      "ids": [
+        "10000044041008",
+        "1601939602873",
+        "1601939616747",
+        "1601939695286"
+      ],
+      "state": "SIZE_IMAGE_SOURCE_REVIEW_PRIORITY",
+      "reason": "Legacy image generator derives foot length and US reference from fixed formulas rather than this product evidence. Current live binding and image content must be checked per ID; do not infer all historical assets remain live."
+    },
+    {
+      "family": "BQ024",
+      "ids": [
+        "10000044041031",
+        "1601939684371",
+        "1601939691340",
+        "1601939691342"
+      ],
+      "state": "SIZE_IMAGE_SOURCE_REVIEW_PRIORITY",
+      "reason": "Legacy image generator derives foot length and US reference from fixed formulas rather than this product evidence. Current live binding and image content must be checked per ID; do not infer all historical assets remain live."
+    },
+    {
+      "family": "BQ021",
+      "ids": [
+        "1601838963947",
+        "1601939606858",
+        "1601939709217",
+        "1601939739115"
+      ],
+      "state": "SIZE_IMAGE_SOURCE_REVIEW_PRIORITY",
+      "reason": "Legacy image generator derives foot length and US reference from fixed formulas rather than this product evidence. Current live binding and image content must be checked per ID; do not infer all historical assets remain live."
+    },
+    {
+      "family": "BQ030",
+      "ids": [
+        "1601839050756",
+        "1601939615744",
+        "1601939672381",
+        "1601939679363"
+      ],
+      "state": "SIZE_IMAGE_SOURCE_REVIEW_PRIORITY",
+      "reason": "Legacy image generator derives foot length and US reference from fixed formulas rather than this product evidence. Current live binding and image content must be checked per ID; do not infer all historical assets remain live."
+    },
+    {
+      "family": "BQ029",
+      "ids": [
+        "1601839062659",
+        "1601939607770",
+        "1601939721228",
+        "1601939749045"
+      ],
+      "state": "SIZE_IMAGE_SOURCE_REVIEW_PRIORITY",
+      "reason": "Legacy image generator derives foot length and US reference from fixed formulas rather than this product evidence. Current live binding and image content must be checked per ID; do not infer all historical assets remain live."
+    },
+    {
+      "family": "BQ020",
+      "ids": [
+        "1601839073314",
+        "1601939590957",
+        "1601939625613",
+        "1601939712249"
+      ],
+      "state": "SIZE_IMAGE_SOURCE_REVIEW_PRIORITY",
+      "reason": "Legacy image generator derives foot length and US reference from fixed formulas rather than this product evidence. Current live binding and image content must be checked per ID; do not infer all historical assets remain live."
+    },
+    {
+      "family": "BQ028",
+      "ids": [
+        "1601839105416",
+        "1601939625627",
+        "1601939705262",
+        "1601939720204"
+      ],
+      "state": "SIZE_IMAGE_SOURCE_REVIEW_PRIORITY",
+      "reason": "Legacy image generator derives foot length and US reference from fixed formulas rather than this product evidence. Current live binding and image content must be checked per ID; do not infer all historical assets remain live."
+    }
+  ],
+  "confirmed_repair": "BQ018 wrong size image Sf6a31fc66468494f922e0599c95c498bo replaced on four IDs; see gallery repair evidence.",
+  "at": "2026-10-19T22:48:33.662349+00:00",
+  "image_match_scope": "Latest local formal snapshots; immutable image URLs fetched directly. Exact byte/pixel matches only, no family-wide impact inference.",
+  "exact_matches": [
+    {
+      "family": "BQ016",
+      "id": "1601939608691",
+      "url": "https://sc04.alicdn.com/kf/Sdafafcc35f5d4d18adf9f5d5017753e9s.jpg",
+      "local_file": "01_产品资产/02_可发布素材/00_最终上传/BQ016_201/02_详情页/01_size.jpg",
+      "match": "EXACT_BYTES",
+      "requires_visual_classification": false,
+      "status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-19T19:48:32.892261+00:00"
+    },
+    {
+      "family": "BQ016",
+      "id": "1601939633580",
+      "url": "https://sc04.alicdn.com/kf/Sdafafcc35f5d4d18adf9f5d5017753e9s.jpg",
+      "local_file": "01_产品资产/02_可发布素材/00_最终上传/BQ016_201/02_详情页/01_size.jpg",
+      "match": "EXACT_BYTES",
+      "requires_visual_classification": false,
+      "status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-19T18:37:01.969598+00:00"
+    },
+    {
+      "family": "BQ016",
+      "id": "1601939691301",
+      "url": "https://sc04.alicdn.com/kf/Sdafafcc35f5d4d18adf9f5d5017753e9s.jpg",
+      "local_file": "01_产品资产/02_可发布素材/00_最终上传/BQ016_201/02_详情页/01_size.jpg",
+      "match": "EXACT_BYTES",
+      "requires_visual_classification": false,
+      "status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-19T18:36:57.029537+00:00"
+    },
+    {
+      "family": "BQ017",
+      "id": "1601939593839",
+      "url": "https://sc04.alicdn.com/kf/S6b0b288bc1e944098931cd847a2c9251G.jpg",
+      "local_file": "01_产品资产/02_可发布素材/00_最终上传/BQ017_A008/02_详情页/01_size.jpg",
+      "match": "EXACT_BYTES",
+      "requires_visual_classification": false,
+      "status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-19T18:37:18.357957+00:00"
+    },
+    {
+      "family": "BQ017",
+      "id": "1601939636508",
+      "url": "https://sc04.alicdn.com/kf/S6b0b288bc1e944098931cd847a2c9251G.jpg",
+      "local_file": "01_产品资产/02_可发布素材/00_最终上传/BQ017_A008/02_详情页/01_size.jpg",
+      "match": "EXACT_BYTES",
+      "requires_visual_classification": false,
+      "status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-19T19:48:28.378714+00:00"
+    },
+    {
+      "family": "BQ017",
+      "id": "1601939697271",
+      "url": "https://sc04.alicdn.com/kf/S6b0b288bc1e944098931cd847a2c9251G.jpg",
+      "local_file": "01_产品资产/02_可发布素材/00_最终上传/BQ017_A008/02_详情页/01_size.jpg",
+      "match": "EXACT_BYTES",
+      "requires_visual_classification": false,
+      "status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-19T18:37:21.648764+00:00"
+    },
+    {
+      "family": "BQ019",
+      "id": "10000044041008",
+      "url": "https://sc04.alicdn.com/kf/A31bac423886340038a888c21c7472ad4Z.jpg",
+      "local_file": "01_产品资产/02_可发布素材/00_最终上传/BQ019_A206/02_详情页/01_size.jpg",
+      "match": "EXACT_BYTES",
+      "requires_visual_classification": false,
+      "status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-19T19:46:11.778689+00:00"
+    },
+    {
+      "family": "BQ019",
+      "id": "1601939602873",
+      "url": "https://sc04.alicdn.com/kf/A31bac423886340038a888c21c7472ad4Z.jpg",
+      "local_file": "01_产品资产/02_可发布素材/00_最终上传/BQ019_A206/02_详情页/01_size.jpg",
+      "match": "EXACT_BYTES",
+      "requires_visual_classification": false,
+      "status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-19T18:37:24.218197+00:00"
+    },
+    {
+      "family": "BQ019",
+      "id": "1601939616747",
+      "url": "https://sc04.alicdn.com/kf/A31bac423886340038a888c21c7472ad4Z.jpg",
+      "local_file": "01_产品资产/02_可发布素材/00_最终上传/BQ019_A206/02_详情页/01_size.jpg",
+      "match": "EXACT_BYTES",
+      "requires_visual_classification": false,
+      "status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-19T18:37:27.480152+00:00"
+    },
+    {
+      "family": "BQ019",
+      "id": "1601939695286",
+      "url": "https://sc04.alicdn.com/kf/A31bac423886340038a888c21c7472ad4Z.jpg",
+      "local_file": "01_产品资产/02_可发布素材/00_最终上传/BQ019_A206/02_详情页/01_size.jpg",
+      "match": "EXACT_BYTES",
+      "requires_visual_classification": false,
+      "status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-19T18:37:28.418497+00:00"
+    },
+    {
+      "family": "BQ020",
+      "id": "1601839073314",
+      "url": "https://sc04.alicdn.com/kf/H3d0630b9d3c3469fa873638708f637a6d.jpg",
+      "local_file": "01_产品资产/02_可发布素材/00_最终上传/BQ020_A218/02_详情页/01_size.jpg",
+      "match": "EXACT_BYTES",
+      "requires_visual_classification": false,
+      "status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-19T18:40:28.677058+00:00"
+    },
+    {
+      "family": "BQ020",
+      "id": "1601939590957",
+      "url": "https://sc04.alicdn.com/kf/H3d0630b9d3c3469fa873638708f637a6d.jpg",
+      "local_file": "01_产品资产/02_可发布素材/00_最终上传/BQ020_A218/02_详情页/01_size.jpg",
+      "match": "EXACT_BYTES",
+      "requires_visual_classification": false,
+      "status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-19T18:40:29.356485+00:00"
+    },
+    {
+      "family": "BQ020",
+      "id": "1601939625613",
+      "url": "https://sc04.alicdn.com/kf/H3d0630b9d3c3469fa873638708f637a6d.jpg",
+      "local_file": "01_产品资产/02_可发布素材/00_最终上传/BQ020_A218/02_详情页/01_size.jpg",
+      "match": "EXACT_BYTES",
+      "requires_visual_classification": false,
+      "status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-19T18:40:34.137803+00:00"
+    },
+    {
+      "family": "BQ020",
+      "id": "1601939712249",
+      "url": "https://sc04.alicdn.com/kf/H3d0630b9d3c3469fa873638708f637a6d.jpg",
+      "local_file": "01_产品资产/02_可发布素材/00_最终上传/BQ020_A218/02_详情页/01_size.jpg",
+      "match": "EXACT_BYTES",
+      "requires_visual_classification": false,
+      "status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-19T18:40:34.622028+00:00"
+    },
+    {
+      "family": "BQ021",
+      "id": "1601838963947",
+      "url": "https://sc04.alicdn.com/kf/Hedb24b270ee44c3eb5dc3aa29df12801g.jpg",
+      "local_file": "01_产品资产/02_可发布素材/00_最终上传/BQ021_K6212/02_详情页/01_size.jpg",
+      "match": "EXACT_BYTES",
+      "requires_visual_classification": false,
+      "status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-19T20:36:36.523838+00:00"
+    },
+    {
+      "family": "BQ021",
+      "id": "1601939606858",
+      "url": "https://sc04.alicdn.com/kf/Hedb24b270ee44c3eb5dc3aa29df12801g.jpg",
+      "local_file": "01_产品资产/02_可发布素材/00_最终上传/BQ021_K6212/02_详情页/01_size.jpg",
+      "match": "EXACT_BYTES",
+      "requires_visual_classification": false,
+      "status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-19T18:40:05.122477+00:00"
+    },
+    {
+      "family": "BQ021",
+      "id": "1601939709217",
+      "url": "https://sc04.alicdn.com/kf/Hedb24b270ee44c3eb5dc3aa29df12801g.jpg",
+      "local_file": "01_产品资产/02_可发布素材/00_最终上传/BQ021_K6212/02_详情页/01_size.jpg",
+      "match": "EXACT_BYTES",
+      "requires_visual_classification": false,
+      "status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-19T18:40:08.314041+00:00"
+    },
+    {
+      "family": "BQ021",
+      "id": "1601939739115",
+      "url": "https://sc04.alicdn.com/kf/Hedb24b270ee44c3eb5dc3aa29df12801g.jpg",
+      "local_file": "01_产品资产/02_可发布素材/00_最终上传/BQ021_K6212/02_详情页/01_size.jpg",
+      "match": "EXACT_BYTES",
+      "requires_visual_classification": false,
+      "status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-19T19:49:53.058445+00:00"
+    },
+    {
+      "family": "BQ022",
+      "id": "10000043991998",
+      "url": "https://sc04.alicdn.com/kf/Sf72cc813ebbe4db5a991489382052cffI.jpg",
+      "local_file": "01_产品资产/02_可发布素材/00_最终上传/BQ022_A2208/02_详情页/01_size.jpg",
+      "match": "EXACT_BYTES",
+      "requires_visual_classification": false,
+      "status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-19T19:46:00.713045+00:00"
+    },
+    {
+      "family": "BQ022",
+      "id": "1601939641581",
+      "url": "https://sc04.alicdn.com/kf/Sf72cc813ebbe4db5a991489382052cffI.jpg",
+      "local_file": "01_产品资产/02_可发布素材/00_最终上传/BQ022_A2208/02_详情页/01_size.jpg",
+      "match": "EXACT_BYTES",
+      "requires_visual_classification": false,
+      "status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-19T18:36:22.211838+00:00"
+    },
+    {
+      "family": "BQ022",
+      "id": "1601939659468",
+      "url": "https://sc04.alicdn.com/kf/Sf72cc813ebbe4db5a991489382052cffI.jpg",
+      "local_file": "01_产品资产/02_可发布素材/00_最终上传/BQ022_A2208/02_详情页/01_size.jpg",
+      "match": "EXACT_BYTES",
+      "requires_visual_classification": false,
+      "status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-19T19:48:41.451599+00:00"
+    },
+    {
+      "family": "BQ022",
+      "id": "1601939709218",
+      "url": "https://sc04.alicdn.com/kf/Sf72cc813ebbe4db5a991489382052cffI.jpg",
+      "local_file": "01_产品资产/02_可发布素材/00_最终上传/BQ022_A2208/02_详情页/01_size.jpg",
+      "match": "EXACT_BYTES",
+      "requires_visual_classification": false,
+      "status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-19T18:36:25.030311+00:00"
+    },
+    {
+      "family": "BQ023",
+      "id": "1601939616754",
+      "url": "https://sc04.alicdn.com/kf/Sa7449eac684b49baa26465caa45525f0b.jpg",
+      "local_file": "01_产品资产/02_可发布素材/00_最终上传/BQ023_A505/02_详情页/01_size.jpg",
+      "match": "EXACT_BYTES",
+      "requires_visual_classification": false,
+      "status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-19T18:36:29.204576+00:00"
+    },
+    {
+      "family": "BQ023",
+      "id": "1601939722180",
+      "url": "https://sc04.alicdn.com/kf/Sa7449eac684b49baa26465caa45525f0b.jpg",
+      "local_file": "01_产品资产/02_可发布素材/00_最终上传/BQ023_A505/02_详情页/01_size.jpg",
+      "match": "EXACT_BYTES",
+      "requires_visual_classification": false,
+      "status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-19T18:36:29.865842+00:00"
+    },
+    {
+      "family": "BQ023",
+      "id": "1601939752005",
+      "url": "https://sc04.alicdn.com/kf/Sa7449eac684b49baa26465caa45525f0b.jpg",
+      "local_file": "01_产品资产/02_可发布素材/00_最终上传/BQ023_A505/02_详情页/01_size.jpg",
+      "match": "EXACT_BYTES",
+      "requires_visual_classification": false,
+      "status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-19T18:36:33.450811+00:00"
+    },
+    {
+      "family": "BQ024",
+      "id": "1601939684371",
+      "url": "https://sc04.alicdn.com/kf/Scfbb2dd004d14e1b9bd78405a9105423U.jpg",
+      "local_file": "01_产品资产/02_可发布素材/00_最终上传/BQ024_A830/02_详情页/01_size.jpg",
+      "match": "EXACT_BYTES",
+      "requires_visual_classification": false,
+      "status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-19T18:37:30.311113+00:00"
+    },
+    {
+      "family": "BQ024",
+      "id": "1601939691340",
+      "url": "https://sc04.alicdn.com/kf/Scfbb2dd004d14e1b9bd78405a9105423U.jpg",
+      "local_file": "01_产品资产/02_可发布素材/00_最终上传/BQ024_A830/02_详情页/01_size.jpg",
+      "match": "EXACT_BYTES",
+      "requires_visual_classification": false,
+      "status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-19T18:37:35.095556+00:00"
+    },
+    {
+      "family": "BQ024",
+      "id": "1601939691342",
+      "url": "https://sc04.alicdn.com/kf/Scfbb2dd004d14e1b9bd78405a9105423U.jpg",
+      "local_file": "01_产品资产/02_可发布素材/00_最终上传/BQ024_A830/02_详情页/01_size.jpg",
+      "match": "EXACT_BYTES",
+      "requires_visual_classification": false,
+      "status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-19T19:49:12.208227+00:00"
+    },
+    {
+      "family": "BQ026",
+      "id": "1601939714238",
+      "url": "https://sc04.alicdn.com/kf/S028a8494c6684240a465e9c720f5ded8H.jpg",
+      "local_file": "01_产品资产/02_可发布素材/00_最终上传/BQ026_T5828/02_详情页/01_size.jpg",
+      "match": "EXACT_BYTES",
+      "requires_visual_classification": false,
+      "status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-19T19:49:38.271337+00:00"
+    },
+    {
+      "family": "BQ026",
+      "id": "1601939725201",
+      "url": "https://sc04.alicdn.com/kf/S028a8494c6684240a465e9c720f5ded8H.jpg",
+      "local_file": "01_产品资产/02_可发布素材/00_最终上传/BQ026_T5828/02_详情页/01_size.jpg",
+      "match": "EXACT_BYTES",
+      "requires_visual_classification": false,
+      "status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-19T19:49:49.169578+00:00"
+    },
+    {
+      "family": "BQ026",
+      "id": "1601939745065",
+      "url": "https://sc04.alicdn.com/kf/S028a8494c6684240a465e9c720f5ded8H.jpg",
+      "local_file": "01_产品资产/02_可发布素材/00_最终上传/BQ026_T5828/02_详情页/01_size.jpg",
+      "match": "EXACT_BYTES",
+      "requires_visual_classification": false,
+      "status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-19T18:36:45.809002+00:00"
+    },
+    {
+      "family": "BQ027",
+      "id": "1601939616762",
+      "url": "https://sc04.alicdn.com/kf/S204b28117b7e4f179273b2a4efe4a156V.jpg",
+      "local_file": "01_产品资产/02_可发布素材/00_最终上传/BQ027_K6116/02_详情页/01_size.jpg",
+      "match": "EXACT_BYTES",
+      "requires_visual_classification": false,
+      "status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-19T18:37:12.291378+00:00"
+    },
+    {
+      "family": "BQ027",
+      "id": "1601939692338",
+      "url": "https://sc04.alicdn.com/kf/S204b28117b7e4f179273b2a4efe4a156V.jpg",
+      "local_file": "01_产品资产/02_可发布素材/00_最终上传/BQ027_K6116/02_详情页/01_size.jpg",
+      "match": "EXACT_BYTES",
+      "requires_visual_classification": false,
+      "status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-19T18:37:14.382580+00:00"
+    },
+    {
+      "family": "BQ027",
+      "id": "1601939703288",
+      "url": "https://sc04.alicdn.com/kf/S204b28117b7e4f179273b2a4efe4a156V.jpg",
+      "local_file": "01_产品资产/02_可发布素材/00_最终上传/BQ027_K6116/02_详情页/01_size.jpg",
+      "match": "EXACT_BYTES",
+      "requires_visual_classification": false,
+      "status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-19T19:49:17.959522+00:00"
+    },
+    {
+      "family": "BQ028",
+      "id": "1601939625627",
+      "url": "https://sc04.alicdn.com/kf/Hb6b84cc0154a4a4b98a1dfde50a8f3c78.jpg",
+      "local_file": "01_产品资产/02_可发布素材/00_最终上传/BQ028_BISCUIT/02_详情页/01_size.jpg",
+      "match": "EXACT_BYTES",
+      "requires_visual_classification": false,
+      "status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-19T18:40:37.290742+00:00"
+    },
+    {
+      "family": "BQ028",
+      "id": "1601939705262",
+      "url": "https://sc04.alicdn.com/kf/Hb6b84cc0154a4a4b98a1dfde50a8f3c78.jpg",
+      "local_file": "01_产品资产/02_可发布素材/00_最终上传/BQ028_BISCUIT/02_详情页/01_size.jpg",
+      "match": "EXACT_BYTES",
+      "requires_visual_classification": false,
+      "status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-19T19:49:36.902136+00:00"
+    },
+    {
+      "family": "BQ028",
+      "id": "1601939720204",
+      "url": "https://sc04.alicdn.com/kf/Hb6b84cc0154a4a4b98a1dfde50a8f3c78.jpg",
+      "local_file": "01_产品资产/02_可发布素材/00_最终上传/BQ028_BISCUIT/02_详情页/01_size.jpg",
+      "match": "EXACT_BYTES",
+      "requires_visual_classification": false,
+      "status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-19T19:49:42.037848+00:00"
+    },
+    {
+      "family": "BQ029",
+      "id": "1601939607770",
+      "url": "https://sc04.alicdn.com/kf/H50fb69196e2a44409ddd0a888431b49aW.jpg",
+      "local_file": "01_产品资产/02_可发布素材/00_最终上传/BQ029_A025/02_详情页/01_size.jpg",
+      "match": "EXACT_BYTES",
+      "requires_visual_classification": false,
+      "status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-19T18:40:24.241058+00:00"
+    },
+    {
+      "family": "BQ029",
+      "id": "1601939721228",
+      "url": "https://sc04.alicdn.com/kf/H50fb69196e2a44409ddd0a888431b49aW.jpg",
+      "local_file": "01_产品资产/02_可发布素材/00_最终上传/BQ029_A025/02_详情页/01_size.jpg",
+      "match": "EXACT_BYTES",
+      "requires_visual_classification": false,
+      "status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-19T19:49:49.113803+00:00"
+    },
+    {
+      "family": "BQ029",
+      "id": "1601939749045",
+      "url": "https://sc04.alicdn.com/kf/H50fb69196e2a44409ddd0a888431b49aW.jpg",
+      "local_file": "01_产品资产/02_可发布素材/00_最终上传/BQ029_A025/02_详情页/01_size.jpg",
+      "match": "EXACT_BYTES",
+      "requires_visual_classification": false,
+      "status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-19T18:40:32.678007+00:00"
+    },
+    {
+      "family": "BQ030",
+      "id": "1601939615744",
+      "url": "https://sc04.alicdn.com/kf/Haa29391799df4de68b3b465b2ab45bb0R.jpg",
+      "local_file": "01_产品资产/02_可发布素材/00_最终上传/BQ030_A811/02_详情页/01_size.jpg",
+      "match": "EXACT_BYTES",
+      "requires_visual_classification": false,
+      "status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-19T18:40:13.014971+00:00"
+    },
+    {
+      "family": "BQ030",
+      "id": "1601939672381",
+      "url": "https://sc04.alicdn.com/kf/Haa29391799df4de68b3b465b2ab45bb0R.jpg",
+      "local_file": "01_产品资产/02_可发布素材/00_最终上传/BQ030_A811/02_详情页/01_size.jpg",
+      "match": "EXACT_BYTES",
+      "requires_visual_classification": false,
+      "status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-19T18:40:17.458770+00:00"
+    },
+    {
+      "family": "BQ030",
+      "id": "1601939679363",
+      "url": "https://sc04.alicdn.com/kf/Haa29391799df4de68b3b465b2ab45bb0R.jpg",
+      "local_file": "01_产品资产/02_可发布素材/00_最终上传/BQ030_A811/02_详情页/01_size.jpg",
+      "match": "EXACT_BYTES",
+      "requires_visual_classification": false,
+      "status": "approved",
+      "display": "Y",
+      "observed_at": "2026-10-19T20:36:36.588232+00:00"
+    }
+  ],
+  "matched_ids": 43,
+  "downloaded": 96,
+  "download_errors": []
+}

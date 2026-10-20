@@ -9,7 +9,23 @@
       "sha256": "34f073b7f8dfc0135ba3ddaffca8959eb96b30b176a7cb16b6a4059042162453",
       "review": "Exact apple-green source right shoe; matching green wavy sole, knitted toe and closed slip-on upper retained.",
       "prompt": "Clean exact right Green shoe from source02; whole shoe studio photograph, preserve actual knit, shape, same-colour wavy sole and opening; no text or new claims."
+    },
+    "Rose Red": {
+      "state": "PASS",
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ-NS003/05_AI候选/SKU_RoseRed.png",
+      "source_file": "01_产品资产/02_可发布素材/00_最终上传/BQ-NS003/01_来源原图/source_02.jpg",
+      "sha256": "a4797e7397f79524077eee4d4619514eb600f3c9ffa6b4b71eccbc255d052f0b",
+      "review": "Exact source colour and side silhouette. RoseRed matching-colour sole retained. Purple uses corrected low white sole and pale grey rear insert; source grid proves colour identity, not measured performance.",
+      "prompt": "Exact source colour shoe on white, whole silhouette. Purple correction rejects inflated/grooved sole and retains source low white base."
+    },
+    "Purple": {
+      "state": "PASS",
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ-NS003/05_AI候选/SKU_Purple.png",
+      "source_file": "01_产品资产/02_可发布素材/00_最终上传/BQ-NS003/01_来源原图/source_03.jpg",
+      "sha256": "70f64a7cd72cb793085c07328a9de1fc065a6e08af04e6bb727171b2d26181b8",
+      "review": "Exact source colour and side silhouette. RoseRed matching-colour sole retained. Purple uses corrected low white sole and pale grey rear insert; source grid proves colour identity, not measured performance.",
+      "prompt": "Exact source colour shoe on white, whole silhouette. Purple correction rejects inflated/grooved sole and retains source low white base."
     }
   },
-  "state": "OTHER_TWO_GENERATIONS_PENDING_NOT_SUBMITTED"
+  "state": "THREE_ADDITIONAL_COLORS_REVIEWED"
 }

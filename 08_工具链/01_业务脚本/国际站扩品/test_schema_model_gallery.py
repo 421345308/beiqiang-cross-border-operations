@@ -23,6 +23,14 @@ def parent_payload(field):
 class ModelGalleryTests(unittest.TestCase):
     def setUp(self):
         self.cases=json.loads((F/'model_number_cases.json').read_text(encoding='utf-8'))['cases']
+    def test_observed_original_compact_and_thumbnail_asset_identity_stays_narrow(self):
+        key=contract._created_image_identity
+        self.assertEqual(key('https://sc04.alicdn.com/kf/Ha02abc/123/Ha02abc.png'),key('//sc04.alicdn.com/kf/Ha02abc.png_350x350.png'))
+        self.assertEqual(key('https://sc04.alicdn.com/kf/Sf6abc.jpg'),key('//sc04.alicdn.com/kf/Sf6abc.jpg_350x350.jpg'))
+        self.assertEqual(key('https://sc04.alicdn.com/kf/A40ca667b5dcb494cb4349fe0b98db6f0C.jpg'),key('//sc04.alicdn.com/kf/A40ca667b5dcb494cb4349fe0b98db6f0C.jpg_350x350.jpg'))
+        self.assertEqual(key('https://sc04.alicdn.com/kf/Ha02abc.png'),key('//sc04.alicdn.com/kf/Ha02abc.png_350x350.jpg'))
+        for other in ('https://example.com/kf/Ha02abc.png','https://sc04.alicdn.com/kf/Ha02abc.png?x=1','https://sc04.alicdn.com/kf/Ha02abc.png_999x999.png','https://sc04.alicdn.com/kf/OtherAsset.png','https://sc04.alicdn.com/kf/Ha02DIFFERENT.png'):
+            self.assertNotEqual(key('https://sc04.alicdn.com/kf/Ha02abc.png'),key(other))
     def test_three_real_bare_model_requests_are_serialized_as_product_attributes(self):
         for case in self.cases:
             schema=ET.fromstring(case['schema'])

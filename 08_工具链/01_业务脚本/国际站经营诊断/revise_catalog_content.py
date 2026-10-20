@@ -133,7 +133,11 @@ def sync(ids):
             obj.setdefault('evidence',[])
             for e in phase['evidence']:
                 if e not in obj['evidence']:obj['evidence'].append(e)
-        if state=='FORMAL_FIELDS_SCORE_PASS':
+        formal_pass=report.get('status')=='approved'and all(v is True for k,v in report['checks'].items()if k!='score')
+        if formal_pass:
+            # A proved older copy operation remains valid evidence, but must
+            # not replace a newer formal snapshot from a later SKU/image repair.
+            if l.get('formal_fields',{}).get('at','')>report['at']:continue
             folder=RAW/pid;got=load(folder/'after_get.json');actual=got['product'];canonical=ROOT/'02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品'/pid
             save(canonical/'formal_get.json',{'requested_product_id':pid,'observed_at_utc':report['at'],'method':'alibaba.icbu.product.get','response':sanitized(got),'sanitized_fields':['owner_member','owner_member_display_name','owner_member_id'],'raw_response_file':rel(folder/'after_get.json')})
             save(canonical/'formal_render.json',sanitized(load(folder/'after_render.json')))

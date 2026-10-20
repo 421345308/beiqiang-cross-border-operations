@@ -1,0 +1,59 @@
+{
+  "source_rows": 217,
+  "source_read_success": 214,
+  "source_read_errors": 3,
+  "scope": "Source option labels trigger exact-photo, alias and per-colour EU review; they do not directly authorize fabricating colour or stock.",
+  "active_repairs": [
+    "M001",
+    "BQ015",
+    "BQ018",
+    "BQ-NS003"
+  ],
+  "items": [
+    {
+      "family": "BQ022",
+      "state": "CANDIDATE_DIFFERENCE_NOT_APPROVED_FOR_SKU",
+      "finding": "One real source colour appears missing; resolve GreyGreen aliases before adding."
+    },
+    {
+      "family": "BQ025",
+      "state": "CANDIDATE_DIFFERENCE_NOT_APPROVED_FOR_SKU",
+      "finding": "BlackYellow EU37-45 candidate absent from current matrix; exact photo/binding review required."
+    },
+    {
+      "family": "BQ005",
+      "state": "CANDIDATE_DIFFERENCE_NOT_APPROVED_FOR_SKU",
+      "finding": "BlackWhite candidate missing; White/Cream may be aliases, do not add duplicates."
+    },
+    {
+      "family": "BQ007",
+      "state": "CANDIDATE_DIFFERENCE_NOT_APPROVED_FOR_SKU",
+      "finding": "AllBlackFleece and BlackWhiteFleece source options missing; keep lining variants distinct, require exact photo."
+    },
+    {
+      "family": "BQ021",
+      "state": "CANDIDATE_DIFFERENCE_NOT_APPROVED_FOR_SKU",
+      "finding": "White source option needs exact current SKU/photo comparison."
+    },
+    {
+      "family": "BQ028",
+      "state": "CANDIDATE_DIFFERENCE_NOT_APPROVED_FOR_SKU",
+      "finding": "BlackWhiteFleece option needs exact photo and lining-bound SKU before claiming availability."
+    },
+    {
+      "family": "BQ-ABH219",
+      "state": "CANDIDATE_DIFFERENCE_NOT_APPROVED_FOR_SKU",
+      "finding": "Brown and Black cotton-lined options need variant-specific evidence and picture bindings."
+    },
+    {
+      "family": "BQ-LQ2667",
+      "state": "CANDIDATE_DIFFERENCE_NOT_APPROVED_FOR_SKU",
+      "finding": "Black fleece option missing; do not claim lining availability until matrix/photo agrees."
+    },
+    {
+      "family": "BQ048",
+      "state": "CANDIDATE_DIFFERENCE_NOT_APPROVED_FOR_SKU",
+      "finding": "Combined public source URL contains two references; split and resolve exact product references before colour comparison."
+    }
+  ]
+}

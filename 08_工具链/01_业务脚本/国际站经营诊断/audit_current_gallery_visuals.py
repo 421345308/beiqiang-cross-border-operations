@@ -20,10 +20,12 @@ def main():
     urls=list(dict.fromkeys(u for v in galleries.values() for u in v))
     def fetch(u):
         h=hashlib.sha256(u.encode()).hexdigest();p=cache/(h+'.jpg');meta=cache/(h+'.json')
-        if p.exists() and meta.exists():return u,json.loads(meta.read_text(encoding='utf8'))
+        if p.exists() and meta.exists():
+            cached=json.loads(meta.read_text(encoding='utf8'))
+            if not u.lower().endswith('.png')or cached.get('preview_alpha_matte')=='white':return u,cached
         try:
             with urlopen(Request(u,headers={'User-Agent':'Mozilla/5.0','Accept':'image/jpeg'}),timeout=40)as response:raw=response.read()
-            im=Image.open(BytesIO(raw)).convert('RGB');record={'url':u,'dimensions':list(im.size),'raw_sha256':hashlib.sha256(raw).hexdigest(),'preview':p.relative_to(ROOT).as_posix()};ImageOps.contain(im,(520,520)).save(p,quality=93);meta.write_text(json.dumps(record),encoding='utf8');return u,record
+            decoded=Image.open(BytesIO(raw)).convert('RGBA');matte=Image.new('RGBA',decoded.size,'white');matte.alpha_composite(decoded);im=matte.convert('RGB');record={'url':u,'dimensions':list(im.size),'raw_sha256':hashlib.sha256(raw).hexdigest(),'preview':p.relative_to(ROOT).as_posix(),'preview_alpha_matte':'white'};ImageOps.contain(im,(520,520)).save(p,quality=93);meta.write_text(json.dumps(record),encoding='utf8');return u,record
         except Exception as e:return u,{'url':u,'error':type(e).__name__}
     with ThreadPoolExecutor(max_workers=8)as pool:
         results={}

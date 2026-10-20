@@ -1,0 +1,39 @@
+{
+  "family": "BQ019",
+  "execution_key": "BQ019_尺码图_9bbc65c8_正式纠正",
+  "kind": "detail_slot",
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "ids": [
+    "1601939616747"
+  ],
+  "assets": {
+    "EU": {
+      "state": "PASS",
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ019_A206/02_详情页/eu_size_selection_9bbc65c8.png",
+      "sha256": "5992134edf189e95f5c0f268806dd33be2116a8bdd164bbef370477c51e974ed",
+      "native_svg": "01_产品资产/02_可发布素材/00_最终上传/BQ019_A206/02_详情页/eu_size_selection_9bbc65c8.svg",
+      "review": "All14 diagrams visually reviewed in complete contact sheets; native child-size chart checked. EU units, colour labels and exact selections checked against per-ID source snapshot. Responsive-height native graphic, no inferred US/foot length, no synthetic product geometry."
+    }
+  },
+  "detail_replacements_by_url": {
+    "https://sc04.alicdn.com/kf/A31bac423886340038a888c21c7472ad4Z.jpg": "EU"
+  },
+  "expected_old_by_id": {
+    "1601939616747": [
+      "https://sc04.alicdn.com/kf/Sf629e537fc964a9984cf4c80f8e7b2aap.jpg",
+      "https://sc04.alicdn.com/kf/A40ca667b5dcb494cb4349fe0b98db6f0C.jpg",
+      "https://sc04.alicdn.com/kf/Aba4fdd6630fb45679cd169b5e475c0b7S.jpg",
+      "https://sc04.alicdn.com/kf/A31bac423886340038a888c21c7472ad4Z.jpg"
+    ]
+  },
+  "source_evidence": [
+    "01_产品资产/02_可发布素材/00_最终上传/BQ019_A206/00_上架填写表.md",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/来源核对/src-bcf97f11b892.json",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ019_尺码图_9bbc65c8/生成依据.json",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/历史尺码图来源复核.json",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ019_尺码图_9bbc65c8/商品/1601939616747/verification.json"
+  ],
+  "reason": "Exact live byte/pixel match to known formula-generated US/foot-length table. Replace only this known picture by exact current colour/EU matrix, preserving all other product content. Reviewed current approved read still contains the exact old chart after unknown transport outcome. This is a fresh current-Schema correction with its own once ledger; original outcome is not assumed committed/uncommitted.",
+  "correction_of": "BQ019_尺码图_9bbc65c8"
+}
