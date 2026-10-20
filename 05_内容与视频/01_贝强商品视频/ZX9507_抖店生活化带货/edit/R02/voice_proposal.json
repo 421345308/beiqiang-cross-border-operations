@@ -2,9 +2,9 @@
   "schema": "beiqiang-voice-proposal-v1",
   "updated": "2026-10-20",
   "product": "ZX9507黑杏加绒针织套脚鞋",
-  "status": "RESEARCH_INCOMPLETE_NO_GENERATION_AUTHORIZATION",
+  "status": "TENCENT_NATIVE_AUDIO_REVIEW_RETURNED_WITH_LIMITS_NO_GENERATION_AUTHORIZATION",
   "visual_baseline": "Keep accepted R02 AI picture; no video regeneration proposed for the voice trial.",
-  "clarification": "User last sentence about AI remake is ambiguous; optional clarification pending. Preparing on the assumption of continuing AI reference adaptation and keeping accepted visuals; do not require factory shooting.",
+  "clarification": "User explicitly confirmed: continue AI reference adaptation, retain accepted R02 visuals, prioritize voice improvement. No new generation authorization.",
   "retired_word": "利落",
   "preferred_angle": [
     "暖和也要好看",
@@ -32,7 +32,7 @@
   "quote": {
     "observed_on": "2026-10-20",
     "displayed_credits": 1,
-    "scope": "27 Chinese-character text on current HD model page, count1; page still shows default female preset. This is model/text-level quote, NOT verified chosen-voice quote.",
+    "scope": "27 displayed characters including punctuation (23 Han characters), current HD model page count1; default female preset still shown. Not verified chosen-voice quote.",
     "two_voice_trial_estimate_credits": 2,
     "confirmed_two_voice_quote": false,
     "full_narration_quote": null,
@@ -40,7 +40,7 @@
     "new_video_generation_credits": 0
   },
   "execution_gate": [
-    "Need reliable native-audio review endpoint; free review failed semantic control.",
+    "Reference voice observations available via Tencent; unresolved music judgments and timing remain explicitly uncertain. Voice choice requires user listening.",
     "Need CLI selected-voice parameters and web display to agree before any run.",
     "Need explicit human confirmation of exact trial voices, count and final quote."
   ],
@@ -61,8 +61,64 @@
     "control_reply": "reported five tones and claimed voice; failed",
     "qwen3": "official free demo returned AppError, no review",
     "assistant_native_audio": "current tool explicitly returned audio content omitted because audio input is unsupported",
-    "accepted_music_or_naturalness_verdict": false
+    "accepted_music_or_naturalness_verdict": false,
+    "tencent": {
+      "native_input": "whole original audio, not transcript",
+      "records": [
+        {
+          "name": "control",
+          "status": "returned",
+          "automatic_retries": 0
+        },
+        {
+          "name": "dige27",
+          "status": "returned",
+          "automatic_retries": 0
+        },
+        {
+          "name": "warrior19",
+          "status": "returned",
+          "automatic_retries": 0
+        },
+        {
+          "name": "r02",
+          "status": "returned",
+          "automatic_retries": 0
+        },
+        {
+          "name": "ricky70",
+          "status": "returned",
+          "automatic_retries": 0
+        },
+        {
+          "name": "mixkit288",
+          "status": "returned",
+          "automatic_retries": 0
+        }
+      ],
+      "control": "Correct no speech/singing and three tones; incorrect approximate timestamps; no timing QA pass.",
+      "limits": [
+        "BGM presence disputed across providers for dige27",
+        "Singing voice gender disputed for warrior19",
+        "Exact timing not validated",
+        "No personal listening by current assistant claimed"
+      ],
+      "cash_cost": 0,
+      "new_media_generated": 0,
+      "private_evidence": "pipeline/.local/声音分析/tencent_*"
+    }
   },
   "binding_issue": "Both CLI1.1.3 and official1.2.0 return intended voice in node params while web form shows default少女音色/1.00. Grouped advancedSettings patch is rejected with [object Object] allowed-fields error. No bypass, raw generation request or run attempted.",
-  "voice_catalog_source": "https://github.com/MiniMax-AI/skills/blob/main/skills/frontend-dev/references/minimax-voice-catalog.md"
+  "voice_catalog_source": "https://github.com/MiniMax-AI/skills/blob/main/skills/frontend-dev/references/minimax-voice-catalog.md",
+  "tencent_option": {
+    "model": "minimax-speech-2.8-hd",
+    "official_cny_per_10000_characters": 3.5,
+    "trial_characters_including_punctuation": 27,
+    "estimated_cny_per_trial": 0.00945,
+    "two_trials_estimated_cny": 0.0189,
+    "scope": "Arithmetic estimate for existing system voices, subject to billable character rules and actual billing; no custom voice creation.",
+    "account_service_state": "VIRTUAL; no free trial; postpaid disabled; not activated",
+    "tested_generation": false,
+    "source": "https://cloud.tencent.com/document/product/1823/130055#voice-generation-price-section"
+  }
 }
