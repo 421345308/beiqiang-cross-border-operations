@@ -36,7 +36,7 @@
     "post_url": "https://www.facebook.com/permalink.php?story_fbid=pfbid02zBUTRkQTd2hPfLDVysMhbyhptcNJw2poxa9ziLaXWdwRj51cV3VUj4EZ9JR6K96cl&id=61594495798770"
   },
   {
-    "status": "PREPARED_NOT_PUBLISHED",
+    "status": "NOT_PUBLISHED_PAGE_LOAD_FAILURE",
     "scheduled_slot": "2026-10-20T21:00:00+08:00",
     "folder": "Post_02_BQ006_Sample_Shortlist",
     "images": [
@@ -67,6 +67,7 @@
     ],
     "facts": "产品与链接台账.json + 对应00_上架填写表.md及原始包；普通楦，不用宽头或Hands Free主张；BQ006白紫35–40；供货、数量、样品、价格、交期逐单核实",
     "photo_count": 4,
-    "sku": "BQ006 / M8811"
+    "sku": "BQ006 / M8811",
+    "failure": "2026-10-20 21:00: Chrome connected; profile normal reload and fresh Facebook home tab stayed at loading screen. No upload or submit; local draft retained, no catch-up."
   }
 ]
