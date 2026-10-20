@@ -27,6 +27,7 @@ function svg(model,index,height,accent,body){return `<svg xmlns="http://www.w3.o
 function head(title,sub,accent){return text(56,132,title,52,'#242b27',700)+para(56,187,sub,27,688,accent);}
 const catalog=[];
 for(const [model,p]of Object.entries(plan.models)){
+ const fleece=p.fleece!==false;
  if(process.argv[4]&&process.argv[4]!=='--review-only'&&model!==process.argv[4])continue;
  if(process.argv[4]==='--review-only'){catalog.push({model,title:p.title,main:p.main_files,details:p.detail_files});continue;}
  const dir=p.detail_output_dir||path.join('01_产品资产/02_可发布素材/抖店棉鞋_20261014',model,'优化','详情');await fs.mkdir(dir,{recursive:true});
@@ -41,7 +42,7 @@ for(const [model,p]of Object.entries(plan.models)){
  b=head('日常舒适，从合脚开始',p.closure==='套脚'?'免去系鞋带步骤，让日常出门省事一点':p.closure==='系带'?'松紧自己调，穿着更合自己的脚背':'穿前先核对脚型与尺码，日常选鞋更清楚',p.accent);
  b+=await img(p.main_files[0],56,244,688,410,{crop:p.upper_crop,round:22});
  b+=rect(76,596,280,40,'#fff',8,'fill-opacity=".94"')+text(94,624,'鞋面与穿脱结构 · 实物展示',20,p.accent,600);
- const features=[['针织鞋面','织物鞋面，搭配日常休闲穿着。'],[p.closure==='套脚'?'省去系带步骤':p.closure==='系带'?'脚背松紧自己调':'鞋带装饰外观',p.closure==='套脚'?'套脚鞋口设计，出门少一道系鞋带的步骤。':p.closure==='系带'?'系带可以调整松紧，结合脚背和袜厚选择。':'选码结合脚型与穿袜厚度，合脚是日常舒适的开始。'],p.rear_feature];
+ const features=[p.upper_feature||['针织鞋面','织物鞋面，搭配日常休闲穿着。'],[p.closure==='套脚'?'省去系带步骤':p.closure==='系带'?'脚背松紧自己调':'鞋带装饰外观',p.closure==='套脚'?'套脚鞋口设计，出门少一道系鞋带的步骤。':p.closure==='系带'?'系带可以调整松紧，结合脚背和袜厚选择。':'选码结合脚型与穿袜厚度，合脚是日常舒适的开始。'],p.rear_feature];
  features.forEach((a,i)=>{const y=722+i*142;b+=rect(56,y-31,54,54,p.accent,14)+text(83,y+6,String(i+1).padStart(2,'0'),24,'#fff',700,'text-anchor="middle"')+text(130,y,a[0],36,'#252c27',700)+para(130,y+49,a[1],26,610,'#656e62',39);});
  pages.push(['02_舒适好穿结构讲解',1200,b]);
  // 3. Winter value and everyday situations, without fabricating a fleece macro.
@@ -50,25 +51,31 @@ for(const [model,p]of Object.entries(plan.models)){
  b+=rect(76,715,246,40,'#242b27',7,'fill-opacity=".82"')+text(92,743,p.warmth_photo?'加绒鞋口与内里实拍':'鞋型与配色实拍展示',22,'#fff');
  ['通勤路上','下楼买菜','饭后散步'].forEach((s,i)=>{const x=56+i*232;b+=rect(x,824,220,116,'#fff3e4',16)+text(x+110,877,s,31,'#8a482e',700,'text-anchor="middle"')+text(x+110,915,'秋冬日常穿着',21,'#8a6550',400,'text-anchor="middle"');});
  b+=text(56,1016,'认准颜色规格里的「加绒」标识',33,'#fff6e9',700)+para(56,1070,'按自己的脚型、脚背与穿袜习惯，参考脚长选择合适尺码。',25,688,'#ffe8d2',39);
- pages.push(['03_加绒日常场景',1200,b]);
+ if(!fleece){
+  b=head('日常这一双，先看结构',p.daily_subtitle||'常规版本 · 结合场景、脚型与袜厚选择',p.accent);
+  b+=await img(p.detail_photo,56,260,688,570,{round:22});
+  b+=text(56,905,p.daily_headline||'把款式和穿着选择看清楚',38,p.accent,700);
+  b+=para(56,968,p.daily_copy||'本商品为常规内里版本；下单前核对配色与尺码。脚背、袜厚和脚型不同，穿着感受也有差异。',27,688,'#636760',43);
+ }
+ pages.push([fleece?'03_加绒日常场景':'03_常规版本与穿着选择',1200,b]);
  // 4. Distinctive styling, supported by actual outsole and profile photos.
  b=text(56,146,p.style_headline[0],72,'#252c27',700)+text(56,236,p.style_headline[1],72,'#252c27',700)+text(56,286,p.style_subtitle,26,p.accent);
  b+=await img(p.sole_photo,56,326,688,570,{round:22});
- b+=rect(56,928,688,144,'#fff',20)+text(84,982,p.style_caption,34,p.accent,700)+para(84,1029,'外底材质：'+p.sole+'  ·  '+p.color_names.join(' / '),25,630,'#6a7067',37);
+ b+=rect(56,928,688,144,'#fff',20)+text(84,982,p.style_caption,34,p.accent,700)+para(84,1029,(p.sole?'外底材质：'+p.sole+'  ·  ':'')+p.color_names.join(' / '),25,630,'#6a7067',37);
  pages.push(['04_轮廓搭配与外底实拍',1150,b]);
 
  // 5. True colour variants.
- b=head(p.color_names.length===1?'这款配色，日常好搭':'先选配色，再选尺码',p.mixed_versions?'加绒重点配色；常规版及其他配色见商品规格':'本款当前售卖的加绒颜色规格',p.accent);
+ b=head(p.color_names.length===1?'这款配色，日常好搭':'先选配色，再选尺码',p.mixed_versions?'加绒重点配色；常规版及其他配色见商品规格':'本款当前售卖的'+(fleece?'加绒':'常规')+'颜色规格',p.accent);
  if(p.color_names.length===1){b+=await img(p.color_files[0],56,250,688,610,{round:24});b+=text(400,925,p.color_names[0],42,p.accent,700,'text-anchor="middle"');}
- else{for(let i=0;i<p.color_names.length;i++){const y=240+i*340;b+=await img(p.color_files[i],56,y,370,300,{round:20});b+=text(458,y+133,p.color_names[i],34,p.accent,700)+text(458,y+182,'加绒版本',24,'#686e66');}}
+ else{for(let i=0;i<p.color_names.length;i++){const y=240+i*340;b+=await img(p.color_files[i],56,y,370,300,{round:20});b+=text(458,y+133,p.color_names[i],34,p.accent,700)+text(458,y+182,fleece?'加绒版本':'常规版本',24,'#686e66');}}
  const colorNoteY=Math.max(978,240+p.color_names.length*340+28);
  b+=para(56,colorNoteY,p.choice_copy,22,688);
  pages.push(['05_颜色规格选择',Math.max(1100,colorNoteY+130),b]);
  // 6. Complete readable product parameters.
  b=head('商品信息，一页看清','下单前核对款式、材质、颜色和尺码',p.accent);
- const facts=[['可选版本',p.mixed_versions?'常规 / 加绒':'加绒款'],['鞋面材质','织物'],['内里材质',p.mixed_versions?'按常规 / 加绒规格区分':'人造短毛绒'],['外底材质',p.sole],['闭合方式',p.closure],['穿着选择',p.mixed_versions?'按气温选择内里版本':'秋冬日常穿着'],['可选颜色',p.mixed_versions?'配色以商品规格为准':p.color_names.join(' / ')],['可选尺码',p.start_size+'—'+p.end_size+'码']];
- facts.forEach(([k,v],i)=>{const y=238+i*90;b+=rect(56,y,688,86,i%2?'#ebe7de':'#fff',10)+text(82,y+54,k,29,'#73796d')+text(288,y+54,v,29,'#283126',600);});
- b+=para(56,979,p.mixed_versions?'常规与加绒分别选择，请核对商品颜色规格中的版本。':'本页展示加绒款，请按颜色规格中的加绒标识选购。',24,688);
+ const facts=[['可选版本',p.mixed_versions?'常规 / 加绒':fleece?'加绒款':'常规款'],['鞋面材质',p.upper||'织物'],['内里材质',p.mixed_versions?'按常规 / 加绒规格区分':fleece?'人造短毛绒':p.inner],['外底材质',p.sole],['闭合方式',p.closure],['穿着选择',p.mixed_versions?'按气温选择内里版本':fleece?'秋冬日常穿着':'日常休闲穿着'],['可选颜色',p.mixed_versions?'配色以商品规格为准':p.color_names.join(' / ')],['可选尺码',p.start_size+'—'+p.end_size+'码']].filter(([,value])=>value);
+ facts.forEach(([k,v],i)=>{const y=238+i*90,units=[...String(v)].reduce((n,c)=>n+(c.charCodeAt(0)>255?1:.55),0),fontSize=Math.min(29,Math.floor(420/Math.max(1,units)));b+=rect(56,y,688,86,i%2?'#ebe7de':'#fff',10)+text(82,y+54,k,29,'#73796d')+(fontSize<21?para(288,y+34,v,24,420,'#283126',32):text(288,y+54,v,fontSize,'#283126',600));});
+ b+=para(56,979,p.mixed_versions?'常规与加绒分别选择，请核对商品颜色规格中的版本。':fleece?'本页展示加绒款，请按颜色规格中的加绒标识选购。':'本页展示常规款，请按配色、脚长、脚背及袜厚选购。',24,688);
  pages.push(['06_商品参数',1100,b]);
  // 7. Authorized foot-length guidance, not inner-shoe measurements.
  b=head('按脚长参考选码','标准尺码参考  ·  单位：厘米',p.accent);

@@ -2,9 +2,13 @@
 import hashlib
 import json
 import sys
+import time
+import io
+from http.client import IncompleteRead
 from pathlib import Path
 from urllib.parse import urlparse
 from urllib.request import Request, build_opener, ProxyHandler
+from urllib.error import HTTPError, URLError
 from PIL import Image, ImageChops, ImageStat
 
 root = Path('09_国内电商/抖店')
@@ -41,8 +45,22 @@ for model in (sys.argv[1:] or list(plan['models'])):
             raise ValueError('Unexpected platform media host')
         actual = target / f"{row['role']}-{row['index']}.img"
         if not actual.exists():
-            with media_opener.open(Request(row['url'], headers={'User-Agent': 'BeiqiangMediaQuality/1.0'}), timeout=30) as response:
-                actual.write_bytes(response.read())
+            for attempt in range(3):
+                try:
+                    with media_opener.open(Request(row['url'], headers={'User-Agent': 'BeiqiangMediaQuality/1.0'}), timeout=30) as response:
+                        content = response.read()
+                    with Image.open(io.BytesIO(content)) as downloaded:
+                        downloaded.verify()
+                    pending = actual.with_suffix('.tasktmp')
+                    pending.write_bytes(content)
+                    pending.replace(actual)
+                    break
+                except (URLError, IncompleteRead, TimeoutError, ConnectionError) as error:
+                    if isinstance(error, HTTPError) and error.code not in (429, 502, 503, 504):
+                        raise
+                    if attempt == 2:
+                        raise
+                    time.sleep(attempt + 1)
         with Image.open(row['expected']) as original, Image.open(actual) as published:
             original, published = original.convert('RGB'), published.convert('RGB')
             same_size = original.size == published.size

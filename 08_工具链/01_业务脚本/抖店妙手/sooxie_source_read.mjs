@@ -45,7 +45,15 @@ export async function readSource(id) {
     price: Number(html.match(/class="meri-price">([\d.]+)</)?.[1]) || null,
     colors: list('color'), sizes: list('size'),
     attributes: Array.from((detail.sku || '').matchAll(/<span>([^<]+)<\/span>/g), m => clean(m[1])),
-    gallery: Array.from((detail.img || '').matchAll(/alt='([^']+)'/g), m => m[1]),
+    // The detail endpoint's alt list is only a subset. Read this product's hero
+    // and lazy-loaded description photographs; never include related-product cards.
+    // A source description may itself mix models, so images still need identity QA.
+    gallery: [...new Set([
+      html.match(/id="photoBig"[\s\S]*?<img[^>]*src="([^"]+)"/)?.[1],
+      ...Array.from(html.matchAll(/<img[^>]*class="Lazyload"[^>]*data-url="([^"]+)"/g), m => m[1]),
+      ...Array.from((detail.img || '').matchAll(/alt='([^']+)'/g), m => m[1]),
+    ].filter(Boolean))],
+    gallery_basis: '当前页photoBig首图、Lazyload详情原图及详情接口补充；不读取关联推荐卡片，源页自身混款仍须逐图审核。',
     scope: 'Source-page observations only; shared normal/fleece attributes require variant review. No physical stock count is asserted.',
   };
 }
