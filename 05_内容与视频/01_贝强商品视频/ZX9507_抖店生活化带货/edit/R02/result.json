@@ -2,7 +2,7 @@
   "schema": "beiqiang-generated-video-result-v1",
   "updated": "2026-10-20",
   "product": "ZX9507黑杏加绒针织鞋",
-  "status": "USER_ACCEPTED_VISUAL_DIRECTION_BGM_PREVIEW_READY",
+  "status": "USER_REPORTED_UPLOADED_AUDIO_REJECTED",
   "provider": "LibTV",
   "requested_model": "Seedance 2.5",
   "execution_route": "Hypit Source/Run -> native LibTV Provider -> official CLI -> verified downloaded output",
@@ -37,5 +37,9 @@
   "review_limits": [
     "完整时段抽帧及两处局部检查已完成；未声称逐帧连续动态/主观声音审美已验收。",
     "鞋型与黑杏配色可识别；针织与底纹有局部重建，不承诺逐像素锁定。"
-  ]
+  ],
+  "user_reported_uploaded": true,
+  "publish_verified": false,
+  "current_user_feedback": "音色机械；新文案不要用利落；先方案与费用、确认后生成。",
+  "voice_research_status": "INCOMPLETE_NATIVE_AUDIO_CONTROL_FAILED"
 }
