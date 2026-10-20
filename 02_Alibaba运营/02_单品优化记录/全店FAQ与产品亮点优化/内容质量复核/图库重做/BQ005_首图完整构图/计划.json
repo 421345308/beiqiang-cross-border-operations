@@ -1,0 +1,26 @@
+{
+  "family": "BQ005_首图完整构图",
+  "kind": "main_slot",
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "ids": [
+    "1601939631570"
+  ],
+  "assets": {
+    "HERO": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ005_A503/06_当前图文/首图/AllBlack.png",
+      "sha256": "78d484ec0d2ac4e2b203fa5ab423d14c913b822392dd84681bc4ae8714bd23de",
+      "state": "PASS"
+    }
+  },
+  "main_replacements_by_id": {
+    "1601939631570": {
+      "https://sc04.alicdn.com/kf/He77b98f4709748da9643b054aeeeded1b.png": "HERO"
+    }
+  },
+  "source_evidence": [
+    "01_产品资产/02_可发布素材/00_最终上传/BQ005_A503/06_当前图文/首图/图稿依据.json",
+    "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939631570/formal_get.json"
+  ],
+  "scope": "Replace only cropped All Black M1 with source-anchored full-shoe photograph. Preserve positions of all remaining main images, factory image, details, SKU, pricing, title and FAQ."
+}

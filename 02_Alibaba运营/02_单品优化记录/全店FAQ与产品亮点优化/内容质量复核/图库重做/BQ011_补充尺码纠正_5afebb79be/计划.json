@@ -1,0 +1,66 @@
+{
+  "family": "BQ011_补充尺码纠正_5afebb79be",
+  "kind": "detail_slot",
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "ids": [
+    "10000043725883"
+  ],
+  "assets": {
+    "EU": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ011_A002/06_当前图文/欧码/BQ011_补充尺码纠正_5afebb79be/EU.png",
+      "sha256": "2a365785db6e49c08b4d0311cdc188dd831a92dff549797f46ada07db5181817",
+      "state": "PASS",
+      "native_svg": "01_产品资产/02_可发布素材/00_最终上传/BQ011_A002/06_当前图文/欧码/BQ011_补充尺码纠正_5afebb79be/EU.svg",
+      "review": "All 15 diagrams viewed in three contact sheets with three native representative checks. Exact current per-colour EU matrix checked; legible, complete numeric labels, no US conversion or foot length. Source facts and current per-ID SKU data retained in plan."
+    }
+  },
+  "matrix": {
+    "Grey Black": [
+      "39",
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45"
+    ],
+    "Grey White": [
+      "39",
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45"
+    ],
+    "Light Grey": [
+      "39",
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45"
+    ]
+  },
+  "detail_replacements_by_id": {
+    "10000043725883": {
+      "https://sc04.alicdn.com/kf/S8fcc997a9cf84c9fa53efe22353cf033j.png": "EU"
+    }
+  },
+  "expected_old_by_id": {
+    "10000043725883": [
+      "https://sc04.alicdn.com/kf/S8fcc997a9cf84c9fa53efe22353cf033j.png",
+      "https://sc04.alicdn.com/kf/S85b6763402114d958afb753952d130e6n.png",
+      "https://sc04.alicdn.com/kf/S0dfe76f607da4b199b8bd4e445377acfF.png",
+      "https://sc04.alicdn.com/kf/S073bca3898824ab1abdc126fb579b710i.png",
+      "https://sc04.alicdn.com/kf/S33a734e8205943c181e77b86f702e81fv.png"
+    ]
+  },
+  "source_evidence": [
+    "01_产品资产/02_可发布素材/00_最终上传/BQ011_A002/00_上架填写表.md",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/来源核对/src-8f6a0a86351f.json"
+  ],
+  "scope": "Replace exact reviewed US/foot-length or unhelpful old size graphic by current exact colour/EU matrix; no conversion, foot length, SKU, colour, price or other content change."
+}

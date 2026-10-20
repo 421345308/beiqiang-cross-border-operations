@@ -1,0 +1,48 @@
+{
+  "family": "HR006_旧报价图替换",
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "assets": {
+    "HR006_b1733d594572": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ1006_26NC0072/06_当前图文/结构/HR006_b1733d594572/main.png",
+      "sha256": "186ef0cead0c98f85eabfe2ba1198866c8fde046ac630dd097bfbef62e270e35",
+      "state": "PASS",
+      "native_svg": "01_产品资产/02_可发布素材/00_最终上传/BQ1006_26NC0072/06_当前图文/结构/HR006_b1733d594572/main.svg"
+    },
+    "HR006_a34225786ac1": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ1006_26NC0072/06_当前图文/结构/HR006_a34225786ac1/detail.png",
+      "sha256": "5b6341e3383b2144b4c8de5f1a2c6a2b3d748fd748d1bc55c0464892cdf9c533",
+      "state": "PASS",
+      "native_svg": "01_产品资产/02_可发布素材/00_最终上传/BQ1006_26NC0072/06_当前图文/结构/HR006_a34225786ac1/detail.svg"
+    }
+  },
+  "ids": [
+    "1601943364813"
+  ],
+  "main_replacements_by_id": {
+    "1601943364813": {
+      "https://sc04.alicdn.com/kf/H821be020b5f7400ea6407a57178b5980P.png": "HR006_b1733d594572"
+    }
+  },
+  "detail_replacements_by_id": {
+    "1601943364813": {
+      "https://sc04.alicdn.com/kf/H00409385ee874858a679dff76cdc0ed3N.png": "HR006_a34225786ac1"
+    }
+  },
+  "expected_old_by_id": {
+    "1601943364813": [
+      "https://sc04.alicdn.com/kf/H943ed97a7a0d4b7ab50b5b233f6cb48dB.png",
+      "https://sc04.alicdn.com/kf/H415d4b270c234cd29a56c09504a253ef9.png",
+      "https://sc04.alicdn.com/kf/H00409385ee874858a679dff76cdc0ed3N.png",
+      "https://sc04.alicdn.com/kf/H0d8efffd430a4ff8ae15e6b6bb85e877m.png"
+    ]
+  },
+  "source_evidence": [
+    "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR006/来源与正式绑定核验.json",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
+    "01_产品资产/02_可发布素材/00_最终上传/BQ1006_26NC0072/06_当前图文/结构/HR006_b1733d594572/图稿依据.json",
+    "01_产品资产/02_可发布素材/00_最终上传/BQ1006_26NC0072/06_当前图文/结构/HR006_a34225786ac1/图稿依据.json"
+  ],
+  "scope": "Replace only old price/quote graphics with source-reviewed product construction diagrams. Photographs unchanged; all other gallery roles, factory image, SKU, price, quantities, title and FAQ retained.",
+  "kind": "mixed_slots"
+}

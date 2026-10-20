@@ -1,0 +1,134 @@
+{
+  "family": "BQ007_补充尺码纠正_363f9d6476",
+  "kind": "detail_slot",
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "ids": [
+    "1601825070472",
+    "1601939701201",
+    "1601939711161",
+    "1601939585913"
+  ],
+  "assets": {
+    "EU": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ007_L0017/06_当前图文/欧码/BQ007_补充尺码纠正_363f9d6476/EU.png",
+      "sha256": "2d48b3c368551f2c20766228bd1ed8d2e30f549a0cb0c66715070ff261a64d7c",
+      "state": "PASS",
+      "native_svg": "01_产品资产/02_可发布素材/00_最终上传/BQ007_L0017/06_当前图文/欧码/BQ007_补充尺码纠正_363f9d6476/EU.svg",
+      "review": "All 15 diagrams viewed in three contact sheets with three native representative checks. Exact current per-colour EU matrix checked; legible, complete numeric labels, no US conversion or foot length. Source facts and current per-ID SKU data retained in plan."
+    }
+  },
+  "matrix": {
+    "All Black": [
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45"
+    ],
+    "Black White": [
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45"
+    ],
+    "Orange": [
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45"
+    ],
+    "White": [
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45"
+    ],
+    "White Khaki": [
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45"
+    ]
+  },
+  "detail_replacements_by_id": {
+    "1601825070472": {
+      "https://sc04.alicdn.com/kf/H719cdee7ee8d407aae1669d4a969a7748.png": "EU"
+    },
+    "1601939701201": {
+      "https://sc04.alicdn.com/kf/H6f42f2ef307847e988af2a573d0f17d6t.jpg": "EU"
+    },
+    "1601939711161": {
+      "https://sc04.alicdn.com/kf/H6f42f2ef307847e988af2a573d0f17d6t.jpg": "EU"
+    },
+    "1601939585913": {
+      "https://sc04.alicdn.com/kf/H6f42f2ef307847e988af2a573d0f17d6t.jpg": "EU"
+    }
+  },
+  "expected_old_by_id": {
+    "1601825070472": [
+      "https://sc04.alicdn.com/kf/H6fefd525a660451ca4efaf61c55610e9Q.png",
+      "https://sc04.alicdn.com/kf/S85b6763402114d958afb753952d130e6n.png",
+      "https://sc04.alicdn.com/kf/H719cdee7ee8d407aae1669d4a969a7748.png",
+      "https://sc04.alicdn.com/kf/H25aa1f5a39cf4325aca37e7b11862404G.png",
+      "https://sc04.alicdn.com/kf/H5785de6a352c4ecd9bbed671c3ba9f7ey.png"
+    ],
+    "1601939701201": [
+      "https://sc04.alicdn.com/kf/Hc9094a1419f14b659e349eac9dca717e8.jpg",
+      "https://sc04.alicdn.com/kf/S0bf315200a224216a0ea8616df9956d0V.png",
+      "https://sc04.alicdn.com/kf/H2b24f45a85bb440fb1ae523f6d104026U.jpg",
+      "https://sc04.alicdn.com/kf/H6f42f2ef307847e988af2a573d0f17d6t.jpg"
+    ],
+    "1601939711161": [
+      "https://sc04.alicdn.com/kf/S0bf315200a224216a0ea8616df9956d0V.png",
+      "https://sc04.alicdn.com/kf/H2b24f45a85bb440fb1ae523f6d104026U.jpg",
+      "https://sc04.alicdn.com/kf/Hc9094a1419f14b659e349eac9dca717e8.jpg",
+      "https://sc04.alicdn.com/kf/H6f42f2ef307847e988af2a573d0f17d6t.jpg"
+    ],
+    "1601939585913": [
+      "https://sc04.alicdn.com/kf/S0bf315200a224216a0ea8616df9956d0V.png",
+      "https://sc04.alicdn.com/kf/H2b24f45a85bb440fb1ae523f6d104026U.jpg",
+      "https://sc04.alicdn.com/kf/Hc9094a1419f14b659e349eac9dca717e8.jpg",
+      "https://sc04.alicdn.com/kf/H6f42f2ef307847e988af2a573d0f17d6t.jpg"
+    ]
+  },
+  "source_evidence": [
+    "01_产品资产/02_可发布素材/00_最终上传/BQ007_L0017/00_上架填写表.md",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/来源核对/src-4ff69bb6bde1.json"
+  ],
+  "scope": "Replace exact reviewed US/foot-length or unhelpful old size graphic by current exact colour/EU matrix; no conversion, foot length, SKU, colour, price or other content change."
+}

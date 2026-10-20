@@ -1,0 +1,52 @@
+{
+  "family": "BQ026",
+  "execution_key": "BQ026_逐色绑定纠正",
+  "ids": [
+    "1601939714238",
+    "1601939725201",
+    "1601939745065"
+  ],
+  "source_id": null,
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "source_evidence": [
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/颜色绑定复核.json",
+    "01_产品资产/01_原始数据包/已整理_BQ026_T5828_T5828",
+    "01_产品资产/01_原始数据包/已整理_BQ026_T5828_T5828/T5828/800X800主图/01 (1).jpg",
+    "01_产品资产/01_原始数据包/已整理_BQ026_T5828_T5828/T5828/800X800主图/01 (10)(1).jpg",
+    "01_产品资产/01_原始数据包/已整理_BQ026_T5828_T5828/T5828/800X800主图/01 (11)(1).jpg",
+    "01_产品资产/01_原始数据包/已整理_BQ026_T5828_T5828/T5828/800X800主图/01 (2).jpg",
+    "01_产品资产/01_原始数据包/已整理_BQ026_T5828_T5828/T5828/800X800主图/01 (3).jpg",
+    "01_产品资产/01_原始数据包/已整理_BQ026_T5828_T5828/T5828/800X800主图/01 (4).JPG",
+    "01_产品资产/01_原始数据包/已整理_BQ026_T5828_T5828/T5828/800X800主图/01 (5).JPG",
+    "01_产品资产/01_原始数据包/已整理_BQ026_T5828_T5828/T5828/800X800主图/01 (6).JPG"
+  ],
+  "rebind_images": {
+    "Black": "https://sc04.alicdn.com/kf/S54a0149da7944289926c8c1da83d83b6H.jpg",
+    "White": "https://sc04.alicdn.com/kf/S70db21545e5844bd946f7ff3faace076I.jpg",
+    "Grey": "https://sc04.alicdn.com/kf/S04a2014a1ecd4b94b3f211bb6603c7cbn.jpg",
+    "Pink": "https://sc04.alicdn.com/kf/Sa5008903b7874e47bd581f10b08fb6caA.jpg"
+  },
+  "expected_images_by_id": {
+    "1601939714238": {
+      "Black": "https://sc04.alicdn.com/kf/Sfbd4e01f42504025a4098b5c715d8124N.jpg",
+      "White": "https://sc04.alicdn.com/kf/S69f2e4a3e2cf4925a9a4f0509a227c9cv.jpg",
+      "Grey": "https://sc04.alicdn.com/kf/S1a1137295d1740caa8b1123b7601c1daj.jpg",
+      "Pink": "https://sc04.alicdn.com/kf/S19dd11c05ae14c7fa6d38c064ed52d232.jpg"
+    },
+    "1601939725201": {
+      "Black": "https://sc04.alicdn.com/kf/Sfbd4e01f42504025a4098b5c715d8124N.jpg",
+      "White": "https://sc04.alicdn.com/kf/S69f2e4a3e2cf4925a9a4f0509a227c9cv.jpg",
+      "Grey": "https://sc04.alicdn.com/kf/S1a1137295d1740caa8b1123b7601c1daj.jpg",
+      "Pink": "https://sc04.alicdn.com/kf/S19dd11c05ae14c7fa6d38c064ed52d232.jpg"
+    },
+    "1601939745065": {
+      "Black": "https://sc04.alicdn.com/kf/Sfbd4e01f42504025a4098b5c715d8124N.jpg",
+      "White": "https://sc04.alicdn.com/kf/S69f2e4a3e2cf4925a9a4f0509a227c9cv.jpg",
+      "Grey": "https://sc04.alicdn.com/kf/S1a1137295d1740caa8b1123b7601c1daj.jpg",
+      "Pink": "https://sc04.alicdn.com/kf/S19dd11c05ae14c7fa6d38c064ed52d232.jpg"
+    }
+  },
+  "review": "Exact raw-package source contacts and all27 SKU sheets reviewed; correct whole-shoe photos from this family reused by visible upper/sole colour. Only demonstrably wrong colour-photo bindings; no colour renaming, new variant or physical-stock inference.",
+  "scope": "saleProp only; retain all SKU IDs/codes/quantities/prices, title/highlights/FAQ, gallery, details, category and trade fields."
+}

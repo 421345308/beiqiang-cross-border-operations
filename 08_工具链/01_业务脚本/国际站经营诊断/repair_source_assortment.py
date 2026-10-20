@@ -22,6 +22,11 @@ def axes(p):
 def key(row,ax):
     v=json.loads(row['attr2_value']);return tuple(ax[k][str(v[k])].replace('Size ','')for k in ('191288010','222038415'))
 
+def protected_formal(p):
+    out={k:copy.deepcopy(v)for k,v in p.items()if k not in ('product_sku','gmt_modified','status','display')}
+    out['attributes']=sorted(out.get('attributes',[]),key=lambda row:json.dumps(row,sort_keys=True))
+    return out
+
 def main():
     sys.stdout.reconfigure(encoding='utf8');ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('mode',choices=['bank','prepare','submit','verify','sync']);ap.add_argument('--family',required=True);ap.add_argument('--ids');a=ap.parse_args()
     folder=BASE/a.family;plan=load(folder/'计划.json');assert plan['reviewed']is True and plan['reviewer']=='active_agent';assert all((ROOT/f).exists()for f in plan['source_evidence'])
@@ -33,7 +38,7 @@ def main():
     def render(pid,p):return read('alibaba.icbu.product.schema.render',{'param_product_top_publish_request':{'product_id':int(pid),'cat_id':int(p['category_id']),'language':'en_US'}})
     if a.mode=='bank':
         bankfile=folder/'图片银行.json';banks=load(bankfile)if bankfile.exists()else{'items':{}}
-        for c,item in plan.get('add',{}).items():
+        for c,item in {**plan.get('add',{}),**plan.get('image_assets',{})}.items():
             f=ROOT/item['file'];assert sha(f)==item['sha256']and item['image_review']=='PASS'and f.stat().st_size<4*1024*1024
             if c in banks['items']:
                 assert banks['items'][c]['state']=='UPLOADED'and banks['items'][c]['sha256']==sha(f);continue
@@ -41,7 +46,11 @@ def main():
             result=api.upload_image(cfg,f,None);save(RAW/a.family/('upload_'+c.replace(' ','')+'.json'),result);r=result.get('upload_image_response',{});assert not api.api_error(result)and r.get('file_id')and r.get('photobank_url')
             url=r['photobank_url'];url='https:'+url if url.startswith('//')else url.replace('http:','https:');assert url.startswith('https://sc04.alicdn.com/')
             banks['items'][c].update(state='UPLOADED',url=url,file_id=str(r['file_id']));save(bankfile,banks);print('BANK',a.family,c,'UPLOADED',flush=True)
-        banks['state']='COMPLETE';save(bankfile,banks);return
+        banks['state']='COMPLETE';save(bankfile,banks)
+        if plan.get('rebind_image_roles'):
+            assert not any((folder/'商品'/pid/'update_once.json').exists()for pid in plan['ids'])
+            plan['rebind_images']={label:banks['items'][role]['url']for label,role in plan['rebind_image_roles'].items()};save(folder/'计划.json',plan)
+        return
     if a.mode=='sync':return sync(plan,folder)
     for pid in plan['ids']:
         assert pid not in s.PROTECTED;public=folder/'商品'/pid;raw=RAW/a.family/pid;ledger=public/'update_once.json'
@@ -92,7 +101,7 @@ def main():
             receipt=pub.api_submit(api,cfg,listing,False,update_product_id=pid);save(raw/'update_receipt.json',receipt);save(public/'update_receipt.json',s.sanitized(receipt));save(ledger,{'id':pid,'at':receipt['attempted_at'],'state':receipt['status'],'refs':receipt.get('refs')});print(pid,receipt['status'],flush=True)
         else:
             assert ledger.exists();before=load(raw/'before_get.json')['product'];prepared=load(public/'prepared.json');got=get(pid);save(raw/'after_get.json',got);p=got['product'];ax=axes(p);pairs=Counter(key(r,ax)for r in p['product_sku']['skus']);original={str(r['sku_id']):r for r in before['product_sku']['skus']if str(r['sku_id'])not in prepared['removed_unsupported_ids']};actual={str(r['sku_id']):r for r in p['product_sku']['skus']}
-            checks={'exact_colour_EU':pairs==Counter(tuple(x)for x in prepared['expected_pairs']),'retained_sku_identity':all(actual.get(i)==r for i,r in original.items()),'removed_unsupported':not set(prepared['removed_unsupported_ids'])&set(actual),'unique_real_sku_ids':len(actual)==len(p['product_sku']['skus'])and '0'not in actual,'all_price_tiers_preserved':all(r.get('bulk_discount_prices')==before['product_sku']['skus'][0].get('bulk_discount_prices')for r in actual.values()),'other_formal_fields':{k:v for k,v in p.items()if k not in ('product_sku','gmt_modified','status','display')}=={k:v for k,v in before.items()if k not in ('product_sku','gmt_modified','status','display')}}
+            checks={'exact_colour_EU':pairs==Counter(tuple(x)for x in prepared['expected_pairs']),'retained_sku_identity':all(actual.get(i)==r for i,r in original.items()),'removed_unsupported':not set(prepared['removed_unsupported_ids'])&set(actual),'unique_real_sku_ids':len(actual)==len(p['product_sku']['skus'])and '0'not in actual,'all_price_tiers_preserved':all(r.get('bulk_discount_prices')==before['product_sku']['skus'][0].get('bulk_discount_prices')for r in actual.values()),'other_formal_fields':protected_formal(p)==protected_formal(before)}
             if plan.get('rebind_images'):
                 colour_images={v['system_value_name']:v.get('image_url')for axis in p['product_sku']['sku_attributes']if str(axis['attribute_id'])=='191288010'for v in axis['values']};checks['colour_image_bindings']=all(contract._created_image_identity(colour_images.get(label))==contract._created_image_identity(url)for label,url in plan['rebind_images'].items())
             report={'id':pid,'at':now(),'state':'REVIEW_PENDING','status':p['status'],'display':p['display'],'checks':checks,'score':None,'public_status':'API_ACCEPTANCE_NO_BROWSER_PER_USER'}
@@ -113,7 +122,10 @@ def sync(plan,folder):
         refs=[rel(folder/'计划.json')]+[rel(public/n)for n in ('prepared.json','update_receipt.json','verification.json')];phase={'at':report['at'],'state':report['state'],'scope':'Exact source colour/EU matrix; retained SKU IDs/codes/prices and all unrelated product fields verified.','evidence':refs};listing.setdefault('optimization',{})['source_assortment_revision']=phase;product['source_assortment_revision']=phase
         for obj in (listing,product):obj['evidence']=list(dict.fromkeys(obj.get('evidence',[])+refs))
         listing['formal_fields']={'file':rel(canonical/'formal_get.json'),'at':report['at'],'scope':phase['scope']};listing.setdefault('current_platform_fields',{}).update(at=report['at'],sku_count=report['sku_count'],colour_EU={c:sorted(eu for cc,eu in report['pairs']if cc==c)for c in set(c for c,eu in report['pairs'])});listing.setdefault('catalog_fields',{}).update(listing['current_platform_fields']);listing.setdefault('observation',{}).update(at=report['at'],score=report['score'],audit=p['status'],display=p['display'],sku_count=report['sku_count']);listing.setdefault('local_sync',{}).update(state=report['state'],observed_at=report['at'],current_fields_file=rel(canonical/'formal_get.json'),assortment_verification=rel(public/'verification.json'));product.setdefault('local_assets',{})['current_assortment']=rel(folder/'计划.json')
-        source=next(x for x in data['sources']if x['id']==plan['source_id']);source['current_assortment']={'at':report['at'],'state':'EXACT_COLOR_EU_VERIFIED'if report['state']=='FORMAL_FIELDS_SCORE_PASS'else'FORMAL_COLOR_EU_VERIFIED_SCORE_PENDING','score':report['score'],'matrix':listing['current_platform_fields']['colour_EU'],'evidence':refs,'remaining_source_options':plan.get('unmapped_options',[]),'inventory':'Source options are not physical stock proof; newly added variants may have default zero until a quantity is supplied'}
+        source=next((x for x in data['sources']if x['id']==plan.get('source_id')),None)
+        if source is not None:source['current_assortment']={'at':report['at'],'state':'EXACT_COLOR_EU_VERIFIED'if report['state']=='FORMAL_FIELDS_SCORE_PASS'else'FORMAL_COLOR_EU_VERIFIED_SCORE_PENDING','score':report['score'],'matrix':listing['current_platform_fields']['colour_EU'],'evidence':refs,'remaining_source_options':plan.get('unmapped_options',[]),'inventory':'Source options are not physical stock proof; newly added variants may have default zero until a quantity is supplied'}
+        if plan.get('rebind_images'):
+            product.setdefault('local_assets',{})['current_colour_binding_revision']=rel(folder/'计划.json')
     save(file,data);sys.path.insert(0,str(ROOT/'08_工具链/06_工作区维护'));import build_product_workspace as workspace
     errors=workspace.validate(data,ROOT);assert not errors,errors
     for path,body in workspace.build(data).items():workspace.write_generated(ROOT/path,body)

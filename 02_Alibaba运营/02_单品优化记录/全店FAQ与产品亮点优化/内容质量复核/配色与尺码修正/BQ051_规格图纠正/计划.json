@@ -1,0 +1,42 @@
+{
+  "family": "BQ051",
+  "execution_key": "BQ051_规格图纠正",
+  "ids": [
+    "10000047216427"
+  ],
+  "source_id": null,
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "source_evidence": [
+    "01_产品资产/02_可发布素材/00_最终上传/BQ051_K6689/01_来源原图/sku_03.jpg",
+    "01_产品资产/02_可发布素材/00_最终上传/BQ051_K6689/00_上架填写表.md"
+  ],
+  "source_url": "https://bqgcd.sooxie.com/detail/1665897",
+  "image_assets": {
+    "PHOTO": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ051_K6689/05_AI候选/SKU_AllBlack.png",
+      "sha256": "fbde76c086e360455466609b6598de6d512d56599f588a6b19603acc335f272d",
+      "image_review": "PASS",
+      "review": "Native source and selected candidate inspected. Exact colour and shoe geometry retained; single colour selection photograph, no people, copy, frames or invented performance. BQ044 black-knit upper/white sole and stopped cords; BQ051 full black upper/sculpted black sole."
+    }
+  },
+  "rebind_image_roles": {
+    "All Black": "PHOTO"
+  },
+  "expected_images_by_id": {
+    "10000047216427": {
+      "All Black": "https://sc04.alicdn.com/kf/S5438e29ffade4613b6330382330a6c3eW.jpg"
+    }
+  },
+  "scope": "Replace only the incorrect SKU colour photograph with exact-source controlled AI studio version. Preserve all SKU identities, colour names, size matrix, price and quantity; product gallery repaired separately.",
+  "generation": {
+    "mode": "BUILTIN_IMAGE_GEN",
+    "original_file": "01_产品资产/02_可发布素材/00_最终上传/BQ051_K6689/01_来源原图/sku_03.jpg",
+    "original_sha256": "c14f9071e1d52975ee87118aef3bdffdc060926610d5f05c476c6d674cb4e783",
+    "generated_file": "exec-8113afb6-7a87-4e5b-a1a7-4d492e18dae7.png",
+    "prompt": "Precise identity-preserving studio extraction of the exact real source shoe, preserve upper knit zones, closure, toe, heel and original sole. White neutral background, complete shoe edges, no crop, people, text, marks or false claims. BQ044 black-upper white-sole stopped-lace pair from source19; BQ051 all-black slip-on/sculpted diagonal sole from source03."
+  },
+  "rebind_images": {
+    "All Black": "https://sc04.alicdn.com/kf/Hc5702d4d8ceb4532991b757832efa075M/286385890/Hc5702d4d8ceb4532991b757832efa075M.png"
+  }
+}

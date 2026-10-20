@@ -28,7 +28,7 @@
 ### BQ020 / A218 · 1601839073314
 
 - 平台链接：[1601839073314](https://www.alibaba.com/product-detail/Wholesale-Spring-Summer-Breathable-Mesh-Solid_1601839073314.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601839073314/formal_get.json)；UTC 2026-10-19T23:31:26.143628+00:00。
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601839073314/formal_get.json)；UTC 2026-10-20T07:02:22.524279+00:00。
 - 当前正式标题：Hollow Knit Lace-Up Walking Shoes A218 Low Top Summer Casual Sneakers Wholesale
 - 审核/展示：approved / Y；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
@@ -39,7 +39,7 @@
   - M2：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/3a45845051605dcaac34662605c69502f3f56be181ffe6c77b5278628ea8c99c.jpg) · 1200×1200
   - M3：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/a91532a263625ac79a5656dbe34c5ea82416b8644c1535587d656f55dfdc2ef3.jpg) · 1200×1200
   - M4：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/a9d0b934ea45eba09ced32c11208d8dd23821b6381b91b144677a31071d833cd.jpg) · 1200×1200
-  - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/5ac0034bf7b8e0e755aac16a7198a119868fdfaa95cc55bc26828105298978de.jpg) · 1200×1200
+  - M5：本地图片待补；官方来源 https://sc04.alicdn.com/kf/H78ef5129bd934b18ba5e179b234107140.png
   - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/00_%E6%9C%80%E7%BB%88%E4%B8%8A%E4%BC%A0/00_%E5%8E%82%E5%AE%B6%E8%B5%84%E6%96%99/03_%E5%BD%93%E5%89%8D%E5%B7%A5%E5%8E%82%E4%B8%BB%E5%9B%BE/F1_factory.png) · 1254×1254
 - 本地同步状态：`FORMAL_FIELDS_SCORE_PASS`。
 - 本轮优化：`FORMAL_FIELDS_SCORE_PASS`；Image/source colour audit continues independently. Do not replay historical copy.
@@ -50,7 +50,7 @@
 ### BQ020-R1 / A218 · 1601939590957
 
 - 平台链接：[1601939590957](https://www.alibaba.com/product-detail/Breathable-Hollow-Knit-Lace-Up-Walking_1601939590957.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939590957/formal_get.json)；UTC 2026-10-19T23:31:36.607768+00:00。
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939590957/formal_get.json)；UTC 2026-10-20T05:03:27.887889+00:00。
 - 当前正式标题：Hollow Knit Lace-Up Walking Shoes A218 Low Top Summer Casual Sneakers Wholesale
 - 审核/展示：approved / Y；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
@@ -72,7 +72,7 @@
 ### BQ020-O1 / A218 · 1601939625613
 
 - 平台链接：[1601939625613](https://www.alibaba.com/product-detail/Custom-Logo-Hollow-Knit-Lace-Up_1601939625613.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939625613/formal_get.json)；UTC 2026-10-20T00:52:06.876263+00:00。
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939625613/formal_get.json)；UTC 2026-10-20T05:33:23.045502+00:00。
 - 当前正式标题：Hollow Knit Lace-Up Walking Shoes A218 Low Top Summer Casual Sneakers Wholesale
 - 审核/展示：approved / Y；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
@@ -94,7 +94,7 @@
 ### BQ020-W1 / A218 · 1601939712249
 
 - 平台链接：[1601939712249](https://www.alibaba.com/product-detail/Wholesale-Hollow-Knit-Lace-Up-Walking_1601939712249.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939712249/formal_get.json)；UTC 2026-10-19T23:31:50.331130+00:00。
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939712249/formal_get.json)；UTC 2026-10-20T05:03:43.332920+00:00。
 - 当前正式标题：Hollow Knit Lace-Up Walking Shoes A218 Low Top Summer Casual Sneakers Wholesale
 - 审核/展示：approved / Y；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
@@ -240,5 +240,21 @@
 - [prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ020_%E5%B0%BA%E7%A0%81%E5%9B%BE_b3739c5d_%E6%AD%A3%E5%BC%8F%E7%BA%A0%E6%AD%A3/%E5%95%86%E5%93%81/1601939625613/prepared.json)
 - [update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ020_%E5%B0%BA%E7%A0%81%E5%9B%BE_b3739c5d_%E6%AD%A3%E5%BC%8F%E7%BA%A0%E6%AD%A3/%E5%95%86%E5%93%81/1601939625613/update_receipt.json)
 - [verification.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ020_%E5%B0%BA%E7%A0%81%E5%9B%BE_b3739c5d_%E6%AD%A3%E5%BC%8F%E7%BA%A0%E6%AD%A3/%E5%95%86%E5%93%81/1601939625613/verification.json)
+- [计划.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E9%85%8D%E8%89%B2%E4%B8%8E%E5%B0%BA%E7%A0%81%E4%BF%AE%E6%AD%A3/BQ020_%E9%80%90%E8%89%B2%E7%BB%91%E5%AE%9A%E7%BA%A0%E6%AD%A3/%E8%AE%A1%E5%88%92.json)
+- [prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E9%85%8D%E8%89%B2%E4%B8%8E%E5%B0%BA%E7%A0%81%E4%BF%AE%E6%AD%A3/BQ020_%E9%80%90%E8%89%B2%E7%BB%91%E5%AE%9A%E7%BA%A0%E6%AD%A3/%E5%95%86%E5%93%81/1601939590957/prepared.json)
+- [update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E9%85%8D%E8%89%B2%E4%B8%8E%E5%B0%BA%E7%A0%81%E4%BF%AE%E6%AD%A3/BQ020_%E9%80%90%E8%89%B2%E7%BB%91%E5%AE%9A%E7%BA%A0%E6%AD%A3/%E5%95%86%E5%93%81/1601939590957/update_receipt.json)
+- [verification.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E9%85%8D%E8%89%B2%E4%B8%8E%E5%B0%BA%E7%A0%81%E4%BF%AE%E6%AD%A3/BQ020_%E9%80%90%E8%89%B2%E7%BB%91%E5%AE%9A%E7%BA%A0%E6%AD%A3/%E5%95%86%E5%93%81/1601939590957/verification.json)
+- [prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E9%85%8D%E8%89%B2%E4%B8%8E%E5%B0%BA%E7%A0%81%E4%BF%AE%E6%AD%A3/BQ020_%E9%80%90%E8%89%B2%E7%BB%91%E5%AE%9A%E7%BA%A0%E6%AD%A3/%E5%95%86%E5%93%81/1601939712249/prepared.json)
+- [update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E9%85%8D%E8%89%B2%E4%B8%8E%E5%B0%BA%E7%A0%81%E4%BF%AE%E6%AD%A3/BQ020_%E9%80%90%E8%89%B2%E7%BB%91%E5%AE%9A%E7%BA%A0%E6%AD%A3/%E5%95%86%E5%93%81/1601939712249/update_receipt.json)
+- [verification.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E9%85%8D%E8%89%B2%E4%B8%8E%E5%B0%BA%E7%A0%81%E4%BF%AE%E6%AD%A3/BQ020_%E9%80%90%E8%89%B2%E7%BB%91%E5%AE%9A%E7%BA%A0%E6%AD%A3/%E5%95%86%E5%93%81/1601939712249/verification.json)
+- [计划.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E9%85%8D%E8%89%B2%E4%B8%8E%E5%B0%BA%E7%A0%81%E4%BF%AE%E6%AD%A3/BQ020_%E9%80%90%E8%89%B2%E7%BB%91%E5%AE%9A%E7%BA%A0%E6%AD%A3_%E6%AD%A3%E5%BC%8F%E7%BA%A0%E6%AD%A3/%E8%AE%A1%E5%88%92.json)
+- [prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E9%85%8D%E8%89%B2%E4%B8%8E%E5%B0%BA%E7%A0%81%E4%BF%AE%E6%AD%A3/BQ020_%E9%80%90%E8%89%B2%E7%BB%91%E5%AE%9A%E7%BA%A0%E6%AD%A3_%E6%AD%A3%E5%BC%8F%E7%BA%A0%E6%AD%A3/%E5%95%86%E5%93%81/1601939625613/prepared.json)
+- [update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E9%85%8D%E8%89%B2%E4%B8%8E%E5%B0%BA%E7%A0%81%E4%BF%AE%E6%AD%A3/BQ020_%E9%80%90%E8%89%B2%E7%BB%91%E5%AE%9A%E7%BA%A0%E6%AD%A3_%E6%AD%A3%E5%BC%8F%E7%BA%A0%E6%AD%A3/%E5%95%86%E5%93%81/1601939625613/update_receipt.json)
+- [verification.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E9%85%8D%E8%89%B2%E4%B8%8E%E5%B0%BA%E7%A0%81%E4%BF%AE%E6%AD%A3/BQ020_%E9%80%90%E8%89%B2%E7%BB%91%E5%AE%9A%E7%BA%A0%E6%AD%A3_%E6%AD%A3%E5%BC%8F%E7%BA%A0%E6%AD%A3/%E5%95%86%E5%93%81/1601939625613/verification.json)
+- [计划.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ020_%E9%85%8D%E8%89%B2%E5%9B%BE%E9%87%8D%E5%BB%BA_b2b728657e93/%E8%AE%A1%E5%88%92.json)
+- [图片银行.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ020_%E9%85%8D%E8%89%B2%E5%9B%BE%E9%87%8D%E5%BB%BA_b2b728657e93/%E5%9B%BE%E7%89%87%E9%93%B6%E8%A1%8C.json)
+- [prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ020_%E9%85%8D%E8%89%B2%E5%9B%BE%E9%87%8D%E5%BB%BA_b2b728657e93/%E5%95%86%E5%93%81/1601839073314/prepared.json)
+- [update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ020_%E9%85%8D%E8%89%B2%E5%9B%BE%E9%87%8D%E5%BB%BA_b2b728657e93/%E5%95%86%E5%93%81/1601839073314/update_receipt.json)
+- [verification.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ020_%E9%85%8D%E8%89%B2%E5%9B%BE%E9%87%8D%E5%BB%BA_b2b728657e93/%E5%95%86%E5%93%81/1601839073314/verification.json)
 
 原件、正式回执与当前资料通过本页关联，不再复制成第二套商品库。

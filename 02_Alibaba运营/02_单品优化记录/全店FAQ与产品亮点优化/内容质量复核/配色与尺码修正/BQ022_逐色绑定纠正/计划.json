@@ -1,0 +1,33 @@
+{
+  "family": "BQ022",
+  "execution_key": "BQ022_逐色绑定纠正",
+  "ids": [
+    "10000043991998"
+  ],
+  "source_id": null,
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "source_evidence": [
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/颜色绑定复核.json",
+    "01_产品资产/01_原始数据包/已整理_BQ022_A2208_A2208情侣鞋图片",
+    "01_产品资产/01_原始数据包/已整理_BQ022_A2208_补充_A2208",
+    "01_产品资产/01_原始数据包/已整理_BQ022_A2208_A2208情侣鞋图片/A2208情侣鞋图片/x366A9305.jpg",
+    "01_产品资产/01_原始数据包/已整理_BQ022_A2208_A2208情侣鞋图片/A2208情侣鞋图片/x366A9306.jpg",
+    "01_产品资产/01_原始数据包/已整理_BQ022_A2208_A2208情侣鞋图片/A2208情侣鞋图片/620/3_01.jpg",
+    "01_产品资产/01_原始数据包/已整理_BQ022_A2208_A2208情侣鞋图片/A2208情侣鞋图片/620/3_02.jpg",
+    "01_产品资产/01_原始数据包/已整理_BQ022_A2208_A2208情侣鞋图片/A2208情侣鞋图片/620/3_03.jpg",
+    "01_产品资产/01_原始数据包/已整理_BQ022_A2208_A2208情侣鞋图片/A2208情侣鞋图片/620/3_04.jpg",
+    "01_产品资产/01_原始数据包/已整理_BQ022_A2208_A2208情侣鞋图片/A2208情侣鞋图片/620/3_05.jpg",
+    "01_产品资产/01_原始数据包/已整理_BQ022_A2208_A2208情侣鞋图片/A2208情侣鞋图片/620/3_06.jpg"
+  ],
+  "rebind_images": {
+    "Light Grey": "https://sc04.alicdn.com/kf/S68775e0b2cf34c80bb16375031b6fb7bz.jpg"
+  },
+  "expected_images_by_id": {
+    "10000043991998": {
+      "Light Grey": "https://sc04.alicdn.com/kf/Ha52a6ffe57274032818ead931327bdc0b.jpg"
+    }
+  },
+  "review": "Exact raw-package source contacts and all27 SKU sheets reviewed; correct whole-shoe photos from this family reused by visible upper/sole colour. Only demonstrably wrong colour-photo bindings; no colour renaming, new variant or physical-stock inference.",
+  "scope": "saleProp only; retain all SKU IDs/codes/quantities/prices, title/highlights/FAQ, gallery, details, category and trade fields."
+}

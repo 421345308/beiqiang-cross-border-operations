@@ -1,0 +1,48 @@
+{
+  "family": "HR008_旧报价图替换",
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "assets": {
+    "HR008_46b5805d8e1f": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ1008_661/06_当前图文/结构/HR008_46b5805d8e1f/main.png",
+      "sha256": "0617de2dc24f1c8edf3a9b3bc6034f5ae80a5cece849c5f58a298aa6dd4f6c11",
+      "state": "PASS",
+      "native_svg": "01_产品资产/02_可发布素材/00_最终上传/BQ1008_661/06_当前图文/结构/HR008_46b5805d8e1f/main.svg"
+    },
+    "HR008_aad99684cb96": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ1008_661/06_当前图文/结构/HR008_aad99684cb96/detail.png",
+      "sha256": "44bcb2872699fab5c2a5502ef12e9ddad0c9ff773e72068119d6e058e72b245b",
+      "state": "PASS",
+      "native_svg": "01_产品资产/02_可发布素材/00_最终上传/BQ1008_661/06_当前图文/结构/HR008_aad99684cb96/detail.svg"
+    }
+  },
+  "ids": [
+    "1601943451227"
+  ],
+  "main_replacements_by_id": {
+    "1601943451227": {
+      "https://sc04.alicdn.com/kf/H5f45a1e1011c47969dbba65be78ddc07P.png": "HR008_46b5805d8e1f"
+    }
+  },
+  "detail_replacements_by_id": {
+    "1601943451227": {
+      "https://sc04.alicdn.com/kf/H53c4140641354fadbd0c03350321507dm.png": "HR008_aad99684cb96"
+    }
+  },
+  "expected_old_by_id": {
+    "1601943451227": [
+      "https://sc04.alicdn.com/kf/He0948879fa0c4d28907ccc6b0ab39197r.png",
+      "https://sc04.alicdn.com/kf/H83a6c95f3d954a8eac67163b867662d74.png",
+      "https://sc04.alicdn.com/kf/H53c4140641354fadbd0c03350321507dm.png",
+      "https://sc04.alicdn.com/kf/Hed077b739cd5451f8ba4b125dc072db61.png"
+    ]
+  },
+  "source_evidence": [
+    "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR008/来源与正式绑定核验.json",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
+    "01_产品资产/02_可发布素材/00_最终上传/BQ1008_661/06_当前图文/结构/HR008_46b5805d8e1f/图稿依据.json",
+    "01_产品资产/02_可发布素材/00_最终上传/BQ1008_661/06_当前图文/结构/HR008_aad99684cb96/图稿依据.json"
+  ],
+  "scope": "Replace only old price/quote graphics with source-reviewed product construction diagrams. Photographs unchanged; all other gallery roles, factory image, SKU, price, quantities, title and FAQ retained.",
+  "kind": "mixed_slots"
+}

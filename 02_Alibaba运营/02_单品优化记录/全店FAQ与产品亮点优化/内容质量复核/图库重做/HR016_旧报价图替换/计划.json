@@ -1,0 +1,41 @@
+{
+  "family": "HR016_旧报价图替换",
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "assets": {
+    "HR016_531ace2f8e79": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ1016_031/06_当前图文/结构/HR016_531ace2f8e79/detail.png",
+      "sha256": "bdc70805d2cc015e2362d4f6fed79b33264951b7ae8ea31dd330037876379669",
+      "state": "PASS",
+      "native_svg": "01_产品资产/02_可发布素材/00_最终上传/BQ1016_031/06_当前图文/结构/HR016_531ace2f8e79/detail.svg"
+    }
+  },
+  "ids": [
+    "1601943523535"
+  ],
+  "main_replacements_by_id": {
+    "1601943523535": {}
+  },
+  "detail_replacements_by_id": {
+    "1601943523535": {
+      "https://sc04.alicdn.com/kf/H85b5de39f31c44828f0a24b1e53301a2u.png": "HR016_531ace2f8e79"
+    }
+  },
+  "expected_old_by_id": {
+    "1601943523535": [
+      "https://sc04.alicdn.com/kf/H335bd4523a004f749af6a07c9d580d38p.png",
+      "https://sc04.alicdn.com/kf/H5fb4b688a6a94d9ca3200eea838c5932J.png",
+      "https://sc04.alicdn.com/kf/H85b5de39f31c44828f0a24b1e53301a2u.png",
+      "https://sc04.alicdn.com/kf/H9c9f9fe3f7ae40039baee71d0b4979b8D.png"
+    ]
+  },
+  "source_evidence": [
+    "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR016_031_真实货源与材料预检_2026-09-24.md",
+    "99_临时区/HR016_031_公开货源图_2026-09-24/01_土黄_白底_来源图.jpg",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/来源核对/src-a3b2857d0ef1.json",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
+    "01_产品资产/02_可发布素材/00_最终上传/BQ1016_031/06_当前图文/结构/HR016_531ace2f8e79/图稿依据.json"
+  ],
+  "scope": "Replace only old price/quote graphics with source-reviewed product construction diagrams. Photographs unchanged; all other gallery roles, factory image, SKU, price, quantities, title and FAQ retained.",
+  "kind": "detail_slot"
+}

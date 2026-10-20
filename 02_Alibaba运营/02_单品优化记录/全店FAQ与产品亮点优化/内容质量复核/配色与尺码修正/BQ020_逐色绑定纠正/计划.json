@@ -1,0 +1,44 @@
+{
+  "family": "BQ020",
+  "execution_key": "BQ020_逐色绑定纠正",
+  "ids": [
+    "1601939590957",
+    "1601939625613",
+    "1601939712249"
+  ],
+  "source_id": null,
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "source_evidence": [
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/颜色绑定复核.json",
+    "01_产品资产/01_原始数据包/已整理_BQ020_A218_A218贝强鞋业夏季透孔一脚蹬男女鞋35-45批55元",
+    "01_产品资产/01_原始数据包/已整理_BQ020_A218_A218贝强鞋业夏季透孔一脚蹬男女鞋35-45批55元/A218贝强鞋业夏季透孔一脚蹬男女鞋35-45批55元/800X800主图 - 透气/主图 (1).jpg",
+    "01_产品资产/01_原始数据包/已整理_BQ020_A218_A218贝强鞋业夏季透孔一脚蹬男女鞋35-45批55元/A218贝强鞋业夏季透孔一脚蹬男女鞋35-45批55元/800X800主图 - 透气/主图 (10).jpg",
+    "01_产品资产/01_原始数据包/已整理_BQ020_A218_A218贝强鞋业夏季透孔一脚蹬男女鞋35-45批55元/A218贝强鞋业夏季透孔一脚蹬男女鞋35-45批55元/800X800主图 - 透气/主图 (11).jpg",
+    "01_产品资产/01_原始数据包/已整理_BQ020_A218_A218贝强鞋业夏季透孔一脚蹬男女鞋35-45批55元/A218贝强鞋业夏季透孔一脚蹬男女鞋35-45批55元/800X800主图 - 透气/主图 (12).jpg",
+    "01_产品资产/01_原始数据包/已整理_BQ020_A218_A218贝强鞋业夏季透孔一脚蹬男女鞋35-45批55元/A218贝强鞋业夏季透孔一脚蹬男女鞋35-45批55元/800X800主图 - 透气/主图 (13).JPG",
+    "01_产品资产/01_原始数据包/已整理_BQ020_A218_A218贝强鞋业夏季透孔一脚蹬男女鞋35-45批55元/A218贝强鞋业夏季透孔一脚蹬男女鞋35-45批55元/800X800主图 - 透气/主图 (14).JPG",
+    "01_产品资产/01_原始数据包/已整理_BQ020_A218_A218贝强鞋业夏季透孔一脚蹬男女鞋35-45批55元/A218贝强鞋业夏季透孔一脚蹬男女鞋35-45批55元/800X800主图 - 透气/主图 (15).JPG",
+    "01_产品资产/01_原始数据包/已整理_BQ020_A218_A218贝强鞋业夏季透孔一脚蹬男女鞋35-45批55元/A218贝强鞋业夏季透孔一脚蹬男女鞋35-45批55元/800X800主图 - 透气/主图 (16).JPG"
+  ],
+  "rebind_images": {
+    "Black White": "https://sc04.alicdn.com/kf/Hb12fa2d50d904ecdb7df2e08f34da9d9j.jpg",
+    "All Black": "https://sc04.alicdn.com/kf/Haca31ee7476d4dd5b325c07edbd973776.jpg"
+  },
+  "expected_images_by_id": {
+    "1601939590957": {
+      "Black White": "https://sc04.alicdn.com/kf/Sff0efbb0e5424829a81575e702f355081.jpg",
+      "All Black": "https://sc04.alicdn.com/kf/Sda6990613aca4561abd538220d92dc348.jpg"
+    },
+    "1601939625613": {
+      "Black White": "https://sc04.alicdn.com/kf/Sff0efbb0e5424829a81575e702f355081.jpg",
+      "All Black": "https://sc04.alicdn.com/kf/Sda6990613aca4561abd538220d92dc348.jpg"
+    },
+    "1601939712249": {
+      "Black White": "https://sc04.alicdn.com/kf/Sff0efbb0e5424829a81575e702f355081.jpg",
+      "All Black": "https://sc04.alicdn.com/kf/Sda6990613aca4561abd538220d92dc348.jpg"
+    }
+  },
+  "review": "Exact raw-package source contacts and all27 SKU sheets reviewed; correct whole-shoe photos from this family reused by visible upper/sole colour. Only demonstrably wrong colour-photo bindings; no colour renaming, new variant or physical-stock inference.",
+  "scope": "saleProp only; retain all SKU IDs/codes/quantities/prices, title/highlights/FAQ, gallery, details, category and trade fields."
+}

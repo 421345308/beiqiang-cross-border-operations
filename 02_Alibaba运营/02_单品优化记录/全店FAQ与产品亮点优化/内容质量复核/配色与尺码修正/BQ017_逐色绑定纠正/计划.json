@@ -1,0 +1,52 @@
+{
+  "family": "BQ017",
+  "execution_key": "BQ017_逐色绑定纠正",
+  "ids": [
+    "1601939593839",
+    "1601939636508",
+    "1601939697271"
+  ],
+  "source_id": null,
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "source_evidence": [
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/颜色绑定复核.json",
+    "01_产品资产/01_原始数据包/已整理_BQ017_A008_2024贝强鞋业A008套袜一脚蹬男女鞋35-45批55元",
+    "01_产品资产/01_原始数据包/已整理_BQ017_A008_2024贝强鞋业A008套袜一脚蹬男女鞋35-45批55元/贝强鞋业A008套袜一脚蹬男女鞋35-45批55元/800X800主图/主图 (1).JPG",
+    "01_产品资产/01_原始数据包/已整理_BQ017_A008_2024贝强鞋业A008套袜一脚蹬男女鞋35-45批55元/贝强鞋业A008套袜一脚蹬男女鞋35-45批55元/800X800主图/主图 (10).JPG",
+    "01_产品资产/01_原始数据包/已整理_BQ017_A008_2024贝强鞋业A008套袜一脚蹬男女鞋35-45批55元/贝强鞋业A008套袜一脚蹬男女鞋35-45批55元/800X800主图/主图 (11).JPG",
+    "01_产品资产/01_原始数据包/已整理_BQ017_A008_2024贝强鞋业A008套袜一脚蹬男女鞋35-45批55元/贝强鞋业A008套袜一脚蹬男女鞋35-45批55元/800X800主图/主图 (12).JPG",
+    "01_产品资产/01_原始数据包/已整理_BQ017_A008_2024贝强鞋业A008套袜一脚蹬男女鞋35-45批55元/贝强鞋业A008套袜一脚蹬男女鞋35-45批55元/800X800主图/主图 (13).JPG",
+    "01_产品资产/01_原始数据包/已整理_BQ017_A008_2024贝强鞋业A008套袜一脚蹬男女鞋35-45批55元/贝强鞋业A008套袜一脚蹬男女鞋35-45批55元/800X800主图/主图 (14).JPG",
+    "01_产品资产/01_原始数据包/已整理_BQ017_A008_2024贝强鞋业A008套袜一脚蹬男女鞋35-45批55元/贝强鞋业A008套袜一脚蹬男女鞋35-45批55元/800X800主图/主图 (15).JPG",
+    "01_产品资产/01_原始数据包/已整理_BQ017_A008_2024贝强鞋业A008套袜一脚蹬男女鞋35-45批55元/贝强鞋业A008套袜一脚蹬男女鞋35-45批55元/800X800主图/主图 (16).JPG"
+  ],
+  "rebind_images": {
+    "White": "https://sc04.alicdn.com/kf/Sf358d765ea4d4a0babc012abd757d7abi.jpg",
+    "Grey": "https://sc04.alicdn.com/kf/S0ea1e2ec31f64f15ad28cb6ed8926d7dC.jpg",
+    "Black White": "https://sc04.alicdn.com/kf/Sadb4bad4d3a942209bcf19ddbeccaac3g.jpg",
+    "All Black": "https://sc04.alicdn.com/kf/S53a3ce5ed5be4358af3ce69e9977fb958.jpg"
+  },
+  "expected_images_by_id": {
+    "1601939593839": {
+      "White": "https://sc04.alicdn.com/kf/S25edfa2e41f4495fa2ba657ef272fad2B.jpg",
+      "Grey": "https://sc04.alicdn.com/kf/S42e227ee893f49dfa82f266144711793o.jpg",
+      "Black White": "https://sc04.alicdn.com/kf/Scd3665a3d2184fe98ce0768023afb7d4x.jpg",
+      "All Black": "https://sc04.alicdn.com/kf/Sc1086eb9c3a940d1a03edae7fb714d1fx.jpg"
+    },
+    "1601939636508": {
+      "White": "https://sc04.alicdn.com/kf/S25edfa2e41f4495fa2ba657ef272fad2B.jpg",
+      "Grey": "https://sc04.alicdn.com/kf/S42e227ee893f49dfa82f266144711793o.jpg",
+      "Black White": "https://sc04.alicdn.com/kf/Scd3665a3d2184fe98ce0768023afb7d4x.jpg",
+      "All Black": "https://sc04.alicdn.com/kf/Sc1086eb9c3a940d1a03edae7fb714d1fx.jpg"
+    },
+    "1601939697271": {
+      "White": "https://sc04.alicdn.com/kf/S25edfa2e41f4495fa2ba657ef272fad2B.jpg",
+      "Grey": "https://sc04.alicdn.com/kf/S42e227ee893f49dfa82f266144711793o.jpg",
+      "Black White": "https://sc04.alicdn.com/kf/Scd3665a3d2184fe98ce0768023afb7d4x.jpg",
+      "All Black": "https://sc04.alicdn.com/kf/Sc1086eb9c3a940d1a03edae7fb714d1fx.jpg"
+    }
+  },
+  "review": "Exact raw-package source contacts and all27 SKU sheets reviewed; correct whole-shoe photos from this family reused by visible upper/sole colour. Only demonstrably wrong colour-photo bindings; no colour renaming, new variant or physical-stock inference.",
+  "scope": "saleProp only; retain all SKU IDs/codes/quantities/prices, title/highlights/FAQ, gallery, details, category and trade fields."
+}

@@ -1,0 +1,91 @@
+{
+  "family": "BQ005_补充尺码纠正_4f5e1797a7",
+  "kind": "detail_slot",
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "ids": [
+    "1601815020244"
+  ],
+  "assets": {
+    "EU": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ005_A503/06_当前图文/欧码/BQ005_补充尺码纠正_4f5e1797a7/EU.png",
+      "sha256": "8a2f08e57858f12741cec418f5233fe68574d466bde9823b74d934a450d83545",
+      "state": "PASS",
+      "native_svg": "01_产品资产/02_可发布素材/00_最终上传/BQ005_A503/06_当前图文/欧码/BQ005_补充尺码纠正_4f5e1797a7/EU.svg",
+      "review": "All 15 diagrams viewed in three contact sheets with three native representative checks. Exact current per-colour EU matrix checked; legible, complete numeric labels, no US conversion or foot length. Source facts and current per-ID SKU data retained in plan."
+    }
+  },
+  "matrix": {
+    "Black": [
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45"
+    ],
+    "Grey": [
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45"
+    ],
+    "Pink": [
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45"
+    ],
+    "White": [
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45"
+    ]
+  },
+  "detail_replacements_by_id": {
+    "1601815020244": {
+      "https://sc04.alicdn.com/kf/H0eb5da06e6c245db9afd98310426f8b8S.jpg": "EU"
+    }
+  },
+  "expected_old_by_id": {
+    "1601815020244": [
+      "https://sc04.alicdn.com/kf/H0eb5da06e6c245db9afd98310426f8b8S.jpg",
+      "https://sc04.alicdn.com/kf/S85b6763402114d958afb753952d130e6n.png",
+      "https://sc04.alicdn.com/kf/Hb7567fbe59974b7daaf1d9b58a624663m.jpg",
+      "https://sc04.alicdn.com/kf/H98ef40503c7c42ac9da155a4e839f608m.jpg",
+      "https://sc04.alicdn.com/kf/Hc2171a98853d4cb2ab57e92f1bd9b589l.jpg"
+    ]
+  },
+  "source_evidence": [
+    "01_产品资产/02_可发布素材/00_最终上传/BQ005_A503/00_上架填写表.md",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/来源核对/src-cf1121e21f0b.json"
+  ],
+  "scope": "Replace exact reviewed US/foot-length or unhelpful old size graphic by current exact colour/EU matrix; no conversion, foot length, SKU, colour, price or other content change."
+}

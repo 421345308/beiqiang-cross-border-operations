@@ -1,0 +1,40 @@
+{
+  "family": "BQ025",
+  "execution_key": "BQ025_逐色绑定纠正_正式纠正",
+  "ids": [
+    "1601939751016"
+  ],
+  "source_id": null,
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "source_evidence": [
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/颜色绑定复核.json",
+    "01_产品资产/01_原始数据包/已整理_BQ025_A1689_A1689情侣鞋图片",
+    "01_产品资产/01_原始数据包/已整理_BQ025_A1689_A1689情侣鞋图片/A1689情侣鞋图片/800/X366A0033.jpg",
+    "01_产品资产/01_原始数据包/已整理_BQ025_A1689_A1689情侣鞋图片/A1689情侣鞋图片/800/X366A0035.jpg",
+    "01_产品资产/01_原始数据包/已整理_BQ025_A1689_A1689情侣鞋图片/A1689情侣鞋图片/800/X366A0039.jpg",
+    "01_产品资产/01_原始数据包/已整理_BQ025_A1689_A1689情侣鞋图片/A1689情侣鞋图片/800/X366A0041.jpg",
+    "01_产品资产/01_原始数据包/已整理_BQ025_A1689_A1689情侣鞋图片/A1689情侣鞋图片/800/X366A0042.jpg",
+    "01_产品资产/01_原始数据包/已整理_BQ025_A1689_A1689情侣鞋图片/A1689情侣鞋图片/800/X366A0045.jpg",
+    "01_产品资产/01_原始数据包/已整理_BQ025_A1689_A1689情侣鞋图片/A1689情侣鞋图片/800/X366A0047.jpg",
+    "01_产品资产/01_原始数据包/已整理_BQ025_A1689_A1689情侣鞋图片/A1689情侣鞋图片/800/X366A0048.jpg",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ025_逐色绑定纠正/商品/1601939751016/verification.json"
+  ],
+  "rebind_images": {
+    "All Black": "https://sc04.alicdn.com/kf/S12153edfa8ff4ac28d9f7968a7132dd2J.jpg"
+  },
+  "expected_images_by_id": {
+    "1601939612707": {
+      "All Black": "https://sc04.alicdn.com/kf/S2f63987357be46e6a8d26926fe216bb8i.jpg"
+    },
+    "1601939733108": {
+      "All Black": "https://sc04.alicdn.com/kf/S2f63987357be46e6a8d26926fe216bb8i.jpg"
+    },
+    "1601939751016": {
+      "All Black": "https://sc04.alicdn.com/kf/S2f63987357be46e6a8d26926fe216bb8i.jpg"
+    }
+  },
+  "review": "Exact raw-package source contacts and all27 SKU sheets reviewed; correct whole-shoe photos from this family reused by visible upper/sole colour. Only demonstrably wrong colour-photo bindings; no colour renaming, new variant or physical-stock inference.",
+  "scope": "saleProp only; retain all SKU IDs/codes/quantities/prices, title/highlights/FAQ, gallery, details, category and trade fields.",
+  "reviewed_followup_of": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ025_逐色绑定纠正/商品/1601939751016/verification.json"
+}

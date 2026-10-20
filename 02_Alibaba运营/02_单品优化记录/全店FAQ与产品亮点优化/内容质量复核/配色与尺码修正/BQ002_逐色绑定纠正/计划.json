@@ -1,0 +1,48 @@
+{
+  "family": "BQ002",
+  "execution_key": "BQ002_逐色绑定纠正",
+  "ids": [
+    "1601939614689",
+    "1601939635505",
+    "1601939654418"
+  ],
+  "source_id": null,
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "source_evidence": [
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/颜色绑定复核.json",
+    "01_产品资产/01_原始数据包/已整理_BQ002_5.13贝强2数据包",
+    "01_产品资产/01_原始数据包/已整理_BQ002_5.13贝强2数据包/800X800主图/01 (1).jpg",
+    "01_产品资产/01_原始数据包/已整理_BQ002_5.13贝强2数据包/800X800主图/01 (10).jpg",
+    "01_产品资产/01_原始数据包/已整理_BQ002_5.13贝强2数据包/800X800主图/01 (11).jpg",
+    "01_产品资产/01_原始数据包/已整理_BQ002_5.13贝强2数据包/800X800主图/01 (12).jpg",
+    "01_产品资产/01_原始数据包/已整理_BQ002_5.13贝强2数据包/800X800主图/01 (13).jpg",
+    "01_产品资产/01_原始数据包/已整理_BQ002_5.13贝强2数据包/800X800主图/01 (14).jpg",
+    "01_产品资产/01_原始数据包/已整理_BQ002_5.13贝强2数据包/800X800主图/01 (15).jpg",
+    "01_产品资产/01_原始数据包/已整理_BQ002_5.13贝强2数据包/800X800主图/01 (16).JPG"
+  ],
+  "rebind_images": {
+    "Grey Black": "https://sc04.alicdn.com/kf/S46af698c93cb4a5ea7c8e1c837b26d469.jpg",
+    "Grey White": "https://sc04.alicdn.com/kf/S3c7bf3cc7da245e9b71698652da1f34eH.jpg",
+    "Grey Khaki": "https://sc04.alicdn.com/kf/S5db3f4865ff34b518351073c4dafcfeeS.jpg"
+  },
+  "expected_images_by_id": {
+    "1601939614689": {
+      "Grey Black": "https://sc04.alicdn.com/kf/S5db3f4865ff34b518351073c4dafcfeeS.jpg",
+      "Grey White": "https://sc04.alicdn.com/kf/S46af698c93cb4a5ea7c8e1c837b26d469.jpg",
+      "Grey Khaki": "https://sc04.alicdn.com/kf/S3c7bf3cc7da245e9b71698652da1f34eH.jpg"
+    },
+    "1601939635505": {
+      "Grey Black": "https://sc04.alicdn.com/kf/S5db3f4865ff34b518351073c4dafcfeeS.jpg",
+      "Grey White": "https://sc04.alicdn.com/kf/S46af698c93cb4a5ea7c8e1c837b26d469.jpg",
+      "Grey Khaki": "https://sc04.alicdn.com/kf/S3c7bf3cc7da245e9b71698652da1f34eH.jpg"
+    },
+    "1601939654418": {
+      "Grey Black": "https://sc04.alicdn.com/kf/S5db3f4865ff34b518351073c4dafcfeeS.jpg",
+      "Grey White": "https://sc04.alicdn.com/kf/S46af698c93cb4a5ea7c8e1c837b26d469.jpg",
+      "Grey Khaki": "https://sc04.alicdn.com/kf/S3c7bf3cc7da245e9b71698652da1f34eH.jpg"
+    }
+  },
+  "review": "Exact raw-package source contacts and all27 SKU sheets reviewed; correct whole-shoe photos from this family reused by visible upper/sole colour. Only demonstrably wrong colour-photo bindings; no colour renaming, new variant or physical-stock inference.",
+  "scope": "saleProp only; retain all SKU IDs/codes/quantities/prices, title/highlights/FAQ, gallery, details, category and trade fields."
+}

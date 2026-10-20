@@ -1,0 +1,44 @@
+{
+  "family": "BQ003",
+  "execution_key": "BQ003_逐色绑定纠正_正式纠正",
+  "ids": [
+    "1601939665367"
+  ],
+  "source_id": null,
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "source_evidence": [
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/颜色绑定复核.json",
+    "01_产品资产/01_原始数据包/已整理_BQ003_R1218_贝强鞋业2026夏季R1218镂空包头板鞋35-45批55元",
+    "01_产品资产/01_原始数据包/已整理_BQ003_R1218_贝强鞋业2026夏季R1218镂空包头板鞋35-45批55元/贝强鞋业2026夏季R1218镂空包头板鞋35-45批55元/800X800主图/00-1.jpg",
+    "01_产品资产/01_原始数据包/已整理_BQ003_R1218_贝强鞋业2026夏季R1218镂空包头板鞋35-45批55元/贝强鞋业2026夏季R1218镂空包头板鞋35-45批55元/800X800主图/00-2.jpg",
+    "01_产品资产/01_原始数据包/已整理_BQ003_R1218_贝强鞋业2026夏季R1218镂空包头板鞋35-45批55元/贝强鞋业2026夏季R1218镂空包头板鞋35-45批55元/800X800主图/00-3.jpg",
+    "01_产品资产/01_原始数据包/已整理_BQ003_R1218_贝强鞋业2026夏季R1218镂空包头板鞋35-45批55元/贝强鞋业2026夏季R1218镂空包头板鞋35-45批55元/800X800主图/00-4.jpg",
+    "01_产品资产/01_原始数据包/已整理_BQ003_R1218_贝强鞋业2026夏季R1218镂空包头板鞋35-45批55元/贝强鞋业2026夏季R1218镂空包头板鞋35-45批55元/800X800主图/00.jpg",
+    "01_产品资产/01_原始数据包/已整理_BQ003_R1218_贝强鞋业2026夏季R1218镂空包头板鞋35-45批55元/贝强鞋业2026夏季R1218镂空包头板鞋35-45批55元/800X800主图/01 (1).jpg",
+    "01_产品资产/01_原始数据包/已整理_BQ003_R1218_贝强鞋业2026夏季R1218镂空包头板鞋35-45批55元/贝强鞋业2026夏季R1218镂空包头板鞋35-45批55元/800X800主图/01 (2).jpg",
+    "01_产品资产/01_原始数据包/已整理_BQ003_R1218_贝强鞋业2026夏季R1218镂空包头板鞋35-45批55元/贝强鞋业2026夏季R1218镂空包头板鞋35-45批55元/800X800主图/01 (3).jpg",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ003_逐色绑定纠正/商品/1601939665367/verification.json"
+  ],
+  "rebind_images": {
+    "Pink": "https://sc04.alicdn.com/kf/S69b23658e64e49e9bc27dbaad3c5f732l.png",
+    "White": "https://sc04.alicdn.com/kf/S7c0a0c31362042678b4b7b3a19be96707.png"
+  },
+  "expected_images_by_id": {
+    "1601939585904": {
+      "Pink": "https://sc04.alicdn.com/kf/S7c0a0c31362042678b4b7b3a19be96707.png",
+      "White": "https://sc04.alicdn.com/kf/S69b23658e64e49e9bc27dbaad3c5f732l.png"
+    },
+    "1601939663432": {
+      "Pink": "https://sc04.alicdn.com/kf/S7c0a0c31362042678b4b7b3a19be96707.png",
+      "White": "https://sc04.alicdn.com/kf/S69b23658e64e49e9bc27dbaad3c5f732l.png"
+    },
+    "1601939665367": {
+      "Pink": "https://sc04.alicdn.com/kf/S7c0a0c31362042678b4b7b3a19be96707.png",
+      "White": "https://sc04.alicdn.com/kf/S69b23658e64e49e9bc27dbaad3c5f732l.png"
+    }
+  },
+  "review": "Exact raw-package source contacts and all27 SKU sheets reviewed; correct whole-shoe photos from this family reused by visible upper/sole colour. Only demonstrably wrong colour-photo bindings; no colour renaming, new variant or physical-stock inference.",
+  "scope": "saleProp only; retain all SKU IDs/codes/quantities/prices, title/highlights/FAQ, gallery, details, category and trade fields.",
+  "reviewed_followup_of": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ003_逐色绑定纠正/商品/1601939665367/verification.json"
+}

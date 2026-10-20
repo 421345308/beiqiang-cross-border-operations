@@ -50,7 +50,7 @@
 ### BQ013-W1 / T55836 · 1601939619687
 
 - 平台链接：[1601939619687](https://www.alibaba.com/product-detail/Slip-On-Knit-Walking-Shoes-Easy_1601939619687.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939619687/formal_get.json)；UTC 2026-10-19T18:36:17.859403+00:00。
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939619687/formal_get.json)；UTC 2026-10-20T05:02:55.132296+00:00。
 - 当前正式标题：Knit Slip-On Walking Shoes Low Collar Lace-Free Casual Sneakers Wholesale
 - 审核/展示：approved / Y；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
@@ -76,7 +76,7 @@
 ### BQ013-R1 / T55836 · 1601939638522
 
 - 平台链接：[1601939638522](https://www.alibaba.com/product-detail/Slip-On-Knit-Walking-Shoes-Breathable_1601939638522.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939638522/formal_get.json)；UTC 2026-10-19T19:48:35.744781+00:00。
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939638522/formal_get.json)；UTC 2026-10-20T05:03:01.261915+00:00。
 - 当前正式标题：Knit Slip-On Walking Shoes Low Collar Lace-Free Casual Sneakers Wholesale
 - 审核/展示：approved / Y；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
@@ -102,7 +102,7 @@
 ### BQ013-O1 / T55836 · 1601939736061
 
 - 平台链接：[1601939736061](https://www.alibaba.com/product-detail/Slip-On-Knit-Walking-Shoes-Easy_1601939736061.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939736061/formal_get.json)；UTC 2026-10-19T18:36:22.048713+00:00。
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939736061/formal_get.json)；UTC 2026-10-20T05:03:07.493817+00:00。
 - 当前正式标题：Knit Slip-On Walking Shoes Low Collar Lace-Free Casual Sneakers Wholesale
 - 审核/展示：approved / Y；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
@@ -239,5 +239,15 @@
 - [prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E7%BB%93%E6%9E%84%E4%B8%8E%E6%A0%87%E9%A2%98%E7%BA%A0%E6%AD%A3/%E5%95%86%E5%93%81/1601939638522/prepared.json)
 - [update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E7%BB%93%E6%9E%84%E4%B8%8E%E6%A0%87%E9%A2%98%E7%BA%A0%E6%AD%A3/%E5%95%86%E5%93%81/1601939638522/update_receipt.json)
 - [verification.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E7%BB%93%E6%9E%84%E4%B8%8E%E6%A0%87%E9%A2%98%E7%BA%A0%E6%AD%A3/%E5%95%86%E5%93%81/1601939638522/verification.json)
+- [计划.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E9%85%8D%E8%89%B2%E4%B8%8E%E5%B0%BA%E7%A0%81%E4%BF%AE%E6%AD%A3/BQ013_%E9%80%90%E8%89%B2%E7%BB%91%E5%AE%9A%E7%BA%A0%E6%AD%A3/%E8%AE%A1%E5%88%92.json)
+- [prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E9%85%8D%E8%89%B2%E4%B8%8E%E5%B0%BA%E7%A0%81%E4%BF%AE%E6%AD%A3/BQ013_%E9%80%90%E8%89%B2%E7%BB%91%E5%AE%9A%E7%BA%A0%E6%AD%A3/%E5%95%86%E5%93%81/1601939619687/prepared.json)
+- [update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E9%85%8D%E8%89%B2%E4%B8%8E%E5%B0%BA%E7%A0%81%E4%BF%AE%E6%AD%A3/BQ013_%E9%80%90%E8%89%B2%E7%BB%91%E5%AE%9A%E7%BA%A0%E6%AD%A3/%E5%95%86%E5%93%81/1601939619687/update_receipt.json)
+- [verification.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E9%85%8D%E8%89%B2%E4%B8%8E%E5%B0%BA%E7%A0%81%E4%BF%AE%E6%AD%A3/BQ013_%E9%80%90%E8%89%B2%E7%BB%91%E5%AE%9A%E7%BA%A0%E6%AD%A3/%E5%95%86%E5%93%81/1601939619687/verification.json)
+- [prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E9%85%8D%E8%89%B2%E4%B8%8E%E5%B0%BA%E7%A0%81%E4%BF%AE%E6%AD%A3/BQ013_%E9%80%90%E8%89%B2%E7%BB%91%E5%AE%9A%E7%BA%A0%E6%AD%A3/%E5%95%86%E5%93%81/1601939638522/prepared.json)
+- [update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E9%85%8D%E8%89%B2%E4%B8%8E%E5%B0%BA%E7%A0%81%E4%BF%AE%E6%AD%A3/BQ013_%E9%80%90%E8%89%B2%E7%BB%91%E5%AE%9A%E7%BA%A0%E6%AD%A3/%E5%95%86%E5%93%81/1601939638522/update_receipt.json)
+- [verification.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E9%85%8D%E8%89%B2%E4%B8%8E%E5%B0%BA%E7%A0%81%E4%BF%AE%E6%AD%A3/BQ013_%E9%80%90%E8%89%B2%E7%BB%91%E5%AE%9A%E7%BA%A0%E6%AD%A3/%E5%95%86%E5%93%81/1601939638522/verification.json)
+- [prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E9%85%8D%E8%89%B2%E4%B8%8E%E5%B0%BA%E7%A0%81%E4%BF%AE%E6%AD%A3/BQ013_%E9%80%90%E8%89%B2%E7%BB%91%E5%AE%9A%E7%BA%A0%E6%AD%A3/%E5%95%86%E5%93%81/1601939736061/prepared.json)
+- [update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E9%85%8D%E8%89%B2%E4%B8%8E%E5%B0%BA%E7%A0%81%E4%BF%AE%E6%AD%A3/BQ013_%E9%80%90%E8%89%B2%E7%BB%91%E5%AE%9A%E7%BA%A0%E6%AD%A3/%E5%95%86%E5%93%81/1601939736061/update_receipt.json)
+- [verification.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E9%85%8D%E8%89%B2%E4%B8%8E%E5%B0%BA%E7%A0%81%E4%BF%AE%E6%AD%A3/BQ013_%E9%80%90%E8%89%B2%E7%BB%91%E5%AE%9A%E7%BA%A0%E6%AD%A3/%E5%95%86%E5%93%81/1601939736061/verification.json)
 
 原件、正式回执与当前资料通过本页关联，不再复制成第二套商品库。

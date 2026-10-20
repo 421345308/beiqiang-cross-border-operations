@@ -1,0 +1,206 @@
+{
+  "id": "10000043991998",
+  "at": "2026-10-20T05:04:07.596649+00:00",
+  "state": "FORMAL_FIELDS_SCORE_PASS",
+  "status": "approved",
+  "display": "Y",
+  "checks": {
+    "exact_colour_EU": true,
+    "retained_sku_identity": true,
+    "removed_unsupported": true,
+    "unique_real_sku_ids": true,
+    "all_price_tiers_preserved": true,
+    "other_formal_fields": true,
+    "colour_image_bindings": true,
+    "display": true,
+    "schema_targets": true,
+    "other_schema": true,
+    "score": true
+  },
+  "score": "5.00",
+  "public_status": "API_ACCEPTANCE_NO_BROWSER_PER_USER",
+  "diagnostics": {
+    "ruleScoreMap": {
+      "title_word_miss_core_error": 0.0,
+      "imageQualityBad": 0.0,
+      "image_scale": 0.0,
+      "title_word_error": 0.0,
+      "image_num": 0.0
+    },
+    "errorReasonSkuImageMoreMap": {},
+    "errorReasonTitleWordMissErrorMap": {},
+    "errorReasonList": [],
+    "errorReasonTitleWordErrorMap": {},
+    "extendCheckMap": {
+      "imageText": true,
+      "sku_image": false,
+      "title_word_miss_core_error": true,
+      "imageQualityBad": true,
+      "sku_text": false,
+      "imageSubTitle": false,
+      "category": true,
+      "title_word_error": true,
+      "selling_point_attribute_conflict": false
+    },
+    "errorReasonCategoryMap": {},
+    "errorReasonSkuTextMap": {},
+    "errorReasonSubTitleMap": {},
+    "errorReasonMap": {},
+    "errorReasonSellingPointAttributeMap": {},
+    "errorReasonSkuImageMap": {},
+    "extendProblemMap": {
+      "imageText": false,
+      "title_word_miss_core_error": false,
+      "imageQualityBad": false,
+      "imageSubTitle": false,
+      "image_scale": false,
+      "inventory": false,
+      "title_word_error": false,
+      "selling_point_attribute_conflict": false,
+      "image_num": false,
+      "freightRate": false,
+      "sku_image": false,
+      "sku_text": false,
+      "price": false,
+      "category": false
+    },
+    "errorReasonQualityBadMap": {},
+    "errorReasonSkuTextMoreMap": {}
+  },
+  "failed": [],
+  "pairs": [
+    [
+      "Black White",
+      "41"
+    ],
+    [
+      "Black White",
+      "40"
+    ],
+    [
+      "Black White",
+      "43"
+    ],
+    [
+      "Black White",
+      "42"
+    ],
+    [
+      "Black White",
+      "45"
+    ],
+    [
+      "Black White",
+      "44"
+    ],
+    [
+      "Black White Stripe",
+      "36"
+    ],
+    [
+      "Black White Stripe",
+      "35"
+    ],
+    [
+      "Black White",
+      "35"
+    ],
+    [
+      "Black White",
+      "37"
+    ],
+    [
+      "Black White",
+      "36"
+    ],
+    [
+      "Black White",
+      "39"
+    ],
+    [
+      "Black White",
+      "38"
+    ],
+    [
+      "Light Grey",
+      "35"
+    ],
+    [
+      "Black White Stripe",
+      "45"
+    ],
+    [
+      "Light Grey",
+      "37"
+    ],
+    [
+      "Light Grey",
+      "36"
+    ],
+    [
+      "Light Grey",
+      "39"
+    ],
+    [
+      "Light Grey",
+      "38"
+    ],
+    [
+      "Light Grey",
+      "41"
+    ],
+    [
+      "Light Grey",
+      "40"
+    ],
+    [
+      "Black White Stripe",
+      "38"
+    ],
+    [
+      "Black White Stripe",
+      "37"
+    ],
+    [
+      "Black White Stripe",
+      "40"
+    ],
+    [
+      "Black White Stripe",
+      "39"
+    ],
+    [
+      "Black White Stripe",
+      "42"
+    ],
+    [
+      "Black White Stripe",
+      "41"
+    ],
+    [
+      "Black White Stripe",
+      "44"
+    ],
+    [
+      "Black White Stripe",
+      "43"
+    ],
+    [
+      "Light Grey",
+      "43"
+    ],
+    [
+      "Light Grey",
+      "42"
+    ],
+    [
+      "Light Grey",
+      "45"
+    ],
+    [
+      "Light Grey",
+      "44"
+    ]
+  ],
+  "sku_count": 33
+}

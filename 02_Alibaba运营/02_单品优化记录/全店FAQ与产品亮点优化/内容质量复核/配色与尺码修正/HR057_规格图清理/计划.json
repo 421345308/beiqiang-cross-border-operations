@@ -1,0 +1,50 @@
+{
+  "family": "HR057",
+  "execution_key": "HR057_规格图清理",
+  "ids": [
+    "1601943768215",
+    "1601943700590",
+    "1601943771190"
+  ],
+  "source_id": "src-hr-hr057-h10",
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "source_evidence": [
+    "01_产品资产/02_可发布素材/HR057/SKU_NEON_GREEN.jpg",
+    "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR057/事实与页面计划.json",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/来源核对/src-hr-hr057-h10.json"
+  ],
+  "image_assets": {
+    "PHOTO": {
+      "file": "01_产品资产/02_可发布素材/HR057/06_当前图文/SKU_NeonGreen.png",
+      "sha256": "f781f420638bf03e85812609fa39e07860b8a54f61b17da25adf223666009914",
+      "image_review": "PASS",
+      "review": "Original and generated image viewed. Only source Chinese colour label removed; full neon-green sock shoe, knit seam, ribbed cuff, ring loop, sculpted side sole and original colour maintained. No new branding, features, people or props."
+    }
+  },
+  "rebind_image_roles": {
+    "Neon Green": "PHOTO"
+  },
+  "expected_images_by_id": {
+    "1601943768215": {
+      "Neon Green": "https://sc04.alicdn.com/kf/H1c44855b9ec54cf59fe6c1fb83303ebf2.jpg"
+    },
+    "1601943700590": {
+      "Neon Green": "https://sc04.alicdn.com/kf/H1c44855b9ec54cf59fe6c1fb83303ebf2.jpg"
+    },
+    "1601943771190": {
+      "Neon Green": "https://sc04.alicdn.com/kf/H1c44855b9ec54cf59fe6c1fb83303ebf2.jpg"
+    }
+  },
+  "scope": "Clean Chinese label from exact neon-green SKU photograph; preserve current SKU identities, colour names, EU matrix, inventory and all non-image fields.",
+  "generation": {
+    "tool": "builtin_image_gen",
+    "source": "01_产品资产/02_可发布素材/HR057/SKU_NEON_GREEN.jpg",
+    "source_sha256": "0a3b46dc294c7a238a480f222e7c72f302e5b13cd4c145dd2f0826729b37ecad",
+    "generated": "exec-1d29f789-ec44-419f-b9dc-b4eed88f6f58.png",
+    "reviewed_at": "2026-10-20T07:49:46.015583+00:00"
+  },
+  "rebind_images": {
+    "Neon Green": "https://sc04.alicdn.com/kf/H5a703dafc5de4c24b930c62b89c342fes/286385890/H5a703dafc5de4c24b930c62b89c342fes.png"
+  }
+}

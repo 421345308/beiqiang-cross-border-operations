@@ -16665,7 +16665,7 @@
     }
   ],
   "visual_review": {
-    "state": "CONTACT_SCREEN_COMPLETE_EXACT_SOURCE_CHECKS_PENDING",
+    "state": "EXACT_BINDING_REPAIRS_COMPLETE_NAMING_REVIEW_PENDING",
     "sheets_reviewed": [
       1,
       2,
@@ -16698,48 +16698,91 @@
     "findings": [
       {
         "family": "BQ002",
-        "state": "VISUAL_MISMATCH_SOURCE_AND_NATIVE_CHECK_REQUIRED",
-        "note": "Some sibling GreyWhite/GreyKhaki/GreyBlack bindings cycle across sole colours."
+        "state": "SOURCE_REVIEWED_BINDING_CORRECTED_FORMAL_PASS",
+        "note": "Some sibling GreyWhite/GreyKhaki/GreyBlack bindings cycle across sole colours.",
+        "current_evidence": [
+          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ002_逐色绑定纠正/商品/1601939614689/verification.json",
+          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ002_逐色绑定纠正/商品/1601939635505/verification.json",
+          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ002_逐色绑定纠正/商品/1601939654418/verification.json"
+        ]
       },
       {
         "family": "BQ003",
-        "state": "VISUAL_MISMATCH_SOURCE_AND_NATIVE_CHECK_REQUIRED",
-        "note": "One Pink photograph is white and one White photograph is pink."
+        "state": "SOURCE_REVIEWED_BINDING_CORRECTED_FORMAL_PASS",
+        "note": "One Pink photograph is white and one White photograph is pink.",
+        "current_evidence": [
+          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ003_逐色绑定纠正/商品/1601939585904/verification.json",
+          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ003_逐色绑定纠正/商品/1601939663432/verification.json",
+          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ003_逐色绑定纠正_正式纠正/商品/1601939665367/verification.json"
+        ]
       },
       {
         "family": "BQ013",
-        "state": "VISUAL_MISMATCH_SOURCE_AND_NATIVE_CHECK_REQUIRED",
-        "note": "Sibling Grey/WineRed/Black images cycle."
+        "state": "SOURCE_REVIEWED_BINDING_CORRECTED_FORMAL_PASS",
+        "note": "Sibling Grey/WineRed/Black images cycle.",
+        "current_evidence": [
+          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ013_逐色绑定纠正/商品/1601939619687/verification.json",
+          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ013_逐色绑定纠正/商品/1601939638522/verification.json",
+          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ013_逐色绑定纠正/商品/1601939736061/verification.json"
+        ]
       },
       {
         "family": "BQ023",
-        "state": "VISUAL_MISMATCH_SOURCE_AND_NATIVE_CHECK_REQUIRED",
-        "note": "Sibling Grey/Brown/Black images cycle."
+        "state": "SOURCE_REVIEWED_BINDING_CORRECTED_FORMAL_PASS",
+        "note": "Sibling Grey/Brown/Black images cycle.",
+        "current_evidence": [
+          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ023_逐色绑定纠正/商品/1601939616754/verification.json",
+          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ023_逐色绑定纠正/商品/1601939722180/verification.json",
+          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ023_逐色绑定纠正/商品/1601939752005/verification.json"
+        ]
       },
       {
         "family": "BQ026",
-        "state": "VISUAL_MISMATCH_SOURCE_AND_NATIVE_CHECK_REQUIRED",
-        "note": "Sibling Grey/White/Black/Pink images cycle."
+        "state": "SOURCE_REVIEWED_BINDING_CORRECTED_FORMAL_PASS",
+        "note": "Sibling Grey/White/Black/Pink images cycle.",
+        "current_evidence": [
+          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ026_逐色绑定纠正/商品/1601939714238/verification.json",
+          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ026_逐色绑定纠正/商品/1601939725201/verification.json",
+          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ026_逐色绑定纠正/商品/1601939745065/verification.json"
+        ]
       },
       {
         "family": "BQ025",
-        "state": "VISUAL_MISMATCH_SOURCE_AND_NATIVE_CHECK_REQUIRED",
-        "note": "One AllBlack image is blue-grey."
+        "state": "SOURCE_REVIEWED_BINDING_CORRECTED_FORMAL_PASS",
+        "note": "One AllBlack image is blue-grey.",
+        "current_evidence": [
+          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ025_逐色绑定纠正/商品/1601939612707/verification.json",
+          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ025_逐色绑定纠正/商品/1601939733108/verification.json",
+          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ025_逐色绑定纠正_正式纠正/商品/1601939751016/verification.json"
+        ]
       },
       {
         "family": "BQ027",
-        "state": "VISUAL_MISMATCH_SOURCE_AND_NATIVE_CHECK_REQUIRED",
-        "note": "Sibling Cream/BlackWhite/Black images cycle."
+        "state": "SOURCE_REVIEWED_BINDING_CORRECTED_FORMAL_PASS",
+        "note": "Sibling Cream/BlackWhite/Black images cycle.",
+        "current_evidence": [
+          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ027_逐色绑定纠正/商品/1601939616762/verification.json",
+          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ027_逐色绑定纠正/商品/1601939692338/verification.json",
+          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ027_逐色绑定纠正/商品/1601939703288/verification.json"
+        ]
       },
       {
         "family": "BQ017",
-        "state": "VISUAL_MISMATCH_SOURCE_AND_NATIVE_CHECK_REQUIRED",
-        "note": "Sibling AllBlack/BlackWhite/White/Grey images cycle."
+        "state": "SOURCE_REVIEWED_BINDING_CORRECTED_FORMAL_PASS",
+        "note": "Sibling AllBlack/BlackWhite/White/Grey images cycle.",
+        "current_evidence": [
+          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ017_逐色绑定纠正/商品/1601939636508/verification.json",
+          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ017_逐色绑定纠正/商品/1601939697271/verification.json",
+          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ017_逐色绑定纠正_正式纠正/商品/1601939593839/verification.json"
+        ]
       },
       {
         "family": "BQ022",
-        "state": "VISUAL_MISMATCH_SOURCE_AND_NATIVE_CHECK_REQUIRED",
-        "note": "LightGrey image blue in one link versus grey in another; source naming check."
+        "state": "SOURCE_REVIEWED_BINDING_CORRECTED_FORMAL_PASS",
+        "note": "LightGrey image blue in one link versus grey in another; source naming check.",
+        "current_evidence": [
+          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ022_逐色绑定纠正/商品/10000043991998/verification.json"
+        ]
       },
       {
         "family": "BQ031",
@@ -16748,38 +16791,68 @@
       },
       {
         "family": "BQ051",
-        "state": "VISUAL_MISMATCH_SOURCE_AND_NATIVE_CHECK_REQUIRED",
-        "note": "AllBlack label uses white sole on one image."
+        "state": "SOURCE_REVIEWED_BINDING_CORRECTED_FORMAL_PASS",
+        "note": "AllBlack label uses white sole on one image.",
+        "current_evidence": [
+          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ051_规格图纠正/商品/10000047216427/verification.json"
+        ]
       },
       {
         "family": "BQ044",
-        "state": "VISUAL_MISMATCH_SOURCE_AND_NATIVE_CHECK_REQUIRED",
-        "note": "BlackWhite thumbnail looks all black; native source check needed."
+        "state": "SOURCE_REVIEWED_BINDING_CORRECTED_FORMAL_PASS",
+        "note": "BlackWhite thumbnail looks all black; native source check needed.",
+        "current_evidence": [
+          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ044_规格图纠正/商品/10000047221334/verification.json"
+        ]
       },
       {
         "family": "BQ006",
-        "state": "VISUAL_MISMATCH_SOURCE_AND_NATIVE_CHECK_REQUIRED",
-        "note": "One sibling has multi-colour overview and unrelated all-white or grey on-foot gallery pictures as individual colour bindings."
+        "state": "SOURCE_REVIEWED_BINDING_CORRECTED_FORMAL_PASS",
+        "note": "One sibling has multi-colour overview and unrelated all-white or grey on-foot gallery pictures as individual colour bindings.",
+        "current_evidence": [
+          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ006_逐色绑定纠正/商品/1601939655430/verification.json",
+          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ006_逐色绑定纠正/商品/1601939660427/verification.json"
+        ]
       },
       {
         "family": "BQ005",
-        "state": "VISUAL_MISMATCH_SOURCE_AND_NATIVE_CHECK_REQUIRED",
-        "note": "Sibling Pink/Grey images swapped."
+        "state": "SOURCE_REVIEWED_BINDING_CORRECTED_FORMAL_PASS",
+        "note": "Sibling Pink/Grey images swapped.",
+        "current_evidence": [
+          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ005_逐色绑定纠正/商品/1601939599850/verification.json",
+          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ005_逐色绑定纠正/商品/1601939631570/verification.json",
+          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ005_逐色绑定纠正/商品/1601939712176/verification.json"
+        ]
       },
       {
         "family": "BQ009",
-        "state": "VISUAL_MISMATCH_SOURCE_AND_NATIVE_CHECK_REQUIRED",
-        "note": "MintGreen and BlackWhite images swapped."
+        "state": "SOURCE_REVIEWED_BINDING_CORRECTED_FORMAL_PASS",
+        "note": "MintGreen and BlackWhite images swapped.",
+        "current_evidence": [
+          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ009_逐色绑定纠正/商品/1601939661419/verification.json",
+          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ009_逐色绑定纠正/商品/1601939675350/verification.json",
+          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ009_逐色绑定纠正/商品/1601939721165/verification.json"
+        ]
       },
       {
         "family": "BQ021",
-        "state": "VISUAL_MISMATCH_SOURCE_AND_NATIVE_CHECK_REQUIRED",
-        "note": "Multiple sibling labels cycle, including sole Black/White and Blue/Grey/White."
+        "state": "SOURCE_REVIEWED_BINDING_CORRECTED_FORMAL_PASS",
+        "note": "Multiple sibling labels cycle, including sole Black/White and Blue/Grey/White.",
+        "current_evidence": [
+          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ021_逐色绑定纠正/商品/1601939606858/verification.json",
+          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ021_逐色绑定纠正/商品/1601939709217/verification.json",
+          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ021_逐色绑定纠正/商品/1601939739115/verification.json"
+        ]
       },
       {
         "family": "BQ020",
-        "state": "VISUAL_MISMATCH_SOURCE_AND_NATIVE_CHECK_REQUIRED",
-        "note": "Sibling AllBlack/BlackWhite images swapped."
+        "state": "SOURCE_REVIEWED_BINDING_CORRECTED_FORMAL_PASS",
+        "note": "Sibling AllBlack/BlackWhite images swapped.",
+        "current_evidence": [
+          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ020_逐色绑定纠正/商品/1601939590957/verification.json",
+          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ020_逐色绑定纠正/商品/1601939712249/verification.json",
+          "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ020_逐色绑定纠正_正式纠正/商品/1601939625613/verification.json"
+        ]
       }
     ],
     "confirmed_current_clean_families": [
@@ -16787,6 +16860,7 @@
       "BQ018"
     ],
     "at": "2026-10-20T01:55:54.392060+00:00",
-    "scope_note": "All27 contact sheets inspected by active agent. Clear and suspected mismatches are candidates, not automatic source truth or completed repairs. Original native images and exact source must confirm each affected ID before write. No missing images or undefined SKU labels in479 IDs. R1811 current6colour bindings now visually correct."
+    "scope_note": "All27 contact sheets inspected by active agent. Clear and suspected mismatches are candidates, not automatic source truth or completed repairs. Original native images and exact source must confirm each affected ID before write. No missing images or undefined SKU labels in479 IDs. R1811 current6colour bindings now visually correct.",
+    "reconciled_at": "2026-10-20T10:00:55.603867+00:00"
   }
 }

@@ -1,0 +1,46 @@
+{
+  "family": "BQ017_配色图重建_b2b728657e93",
+  "kind": "mixed_slots",
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "ids": [
+    "10000044034049"
+  ],
+  "source_evidence": [
+    "01_产品资产/02_可发布素材/00_最终上传/BQ017_A008/06_当前图文/配色_b2b728657e93/图稿依据.json",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/颜色绑定复核.json"
+  ],
+  "assets": {
+    "DETAIL": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ017_A008/06_当前图文/配色_b2b728657e93/detail.png",
+      "sha256": "a0e8bd294533ef19077e2d229f43dfae9d190585ebd7ac3efcbb145e4c46dcab",
+      "state": "PASS",
+      "review": "Native selected diagram inspected at readable resolution: exact validated colour photographs unchanged, exact current EU matrix, complete shoe boundaries, legible labels, no internal source comments, stock or price claims."
+    },
+    "MAIN": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ017_A008/06_当前图文/配色_b2b728657e93/main.png",
+      "sha256": "d39874753d549109e43990340f15a2ffc8b5ded408448e26f6ea466805b2f9cb",
+      "state": "PASS",
+      "review": "Native selected diagram inspected at readable resolution: exact validated colour photographs unchanged, exact current EU matrix, complete shoe boundaries, legible labels, no internal source comments, stock or price claims."
+    }
+  },
+  "main_replacements_by_id": {
+    "10000044034049": {
+      "https://sc04.alicdn.com/kf/H0c3cbe1648df4d358c6b5ae7771b90e2S.jpg": "MAIN"
+    }
+  },
+  "detail_replacements_by_id": {
+    "10000044034049": {
+      "https://sc04.alicdn.com/kf/S22b5c49afb144f63a9f28c8f9bf75279V.jpg": "DETAIL"
+    }
+  },
+  "expected_old_by_id": {
+    "10000044034049": [
+      "https://sc04.alicdn.com/kf/S96f1e5e762c94addafa178fcb7e31dd3q.jpg",
+      "https://sc04.alicdn.com/kf/S3b2b52381b8d423eaf127a2fb45e7c99b.jpg",
+      "https://sc04.alicdn.com/kf/S22b5c49afb144f63a9f28c8f9bf75279V.jpg",
+      "https://sc04.alicdn.com/kf/Sdc783b3e1d4c4436b8ba29d19a6607cee.jpg"
+    ]
+  },
+  "scope": "Exact image identity replacement of old colour panels. Correct photographs and current EU ranges; preserve factory slot, all other images, SKU identities, quantities, prices, copy and FAQ."
+}

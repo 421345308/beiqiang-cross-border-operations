@@ -1,0 +1,38 @@
+{
+  "family": "BQ029_配色图重建_753b18e84720",
+  "kind": "main_slot",
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "ids": [
+    "1601839062659"
+  ],
+  "source_evidence": [
+    "01_产品资产/02_可发布素材/00_最终上传/BQ029_A025/06_当前图文/配色_753b18e84720/图稿依据.json",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/颜色绑定复核.json"
+  ],
+  "assets": {
+    "MAIN": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ029_A025/06_当前图文/配色_753b18e84720/main.png",
+      "sha256": "097d8a9eeb91d9f7c78177f526b5bf2a5f077a47386af0019ec4ee6b504fdb72",
+      "state": "PASS",
+      "review": "Native selected diagram inspected at readable resolution: exact validated colour photographs unchanged, exact current EU matrix, complete shoe boundaries, legible labels, no internal source comments, stock or price claims."
+    }
+  },
+  "main_replacements_by_id": {
+    "1601839062659": {
+      "https://sc04.alicdn.com/kf/H16c6c4871b30438790a6c82d635244edG.jpg": "MAIN"
+    }
+  },
+  "detail_replacements_by_id": {
+    "1601839062659": {}
+  },
+  "expected_old_by_id": {
+    "1601839062659": [
+      "https://sc04.alicdn.com/kf/Sc204d38de587431fa5d6a23af245a707x.jpg",
+      "https://sc04.alicdn.com/kf/S3bf0ace761e745899a2bc35edfee4d2fp.jpg",
+      "https://sc04.alicdn.com/kf/Secfd69d307a04e55889fd051b44c54c4y.jpg",
+      "https://sc04.alicdn.com/kf/Sbb9ad584dbce4eca97ad9c0512ff38c98.jpg"
+    ]
+  },
+  "scope": "Exact image identity replacement of old colour panels. Correct photographs and current EU ranges; preserve factory slot, all other images, SKU identities, quantities, prices, copy and FAQ."
+}

@@ -1,0 +1,135 @@
+{
+  "family": "BQ003_补充尺码纠正_53e72ecab3",
+  "kind": "detail_slot",
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "ids": [
+    "10000043200726",
+    "1601939665367",
+    "1601939663432",
+    "1601939585904"
+  ],
+  "assets": {
+    "EU": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ003_R1218/06_当前图文/欧码/BQ003_补充尺码纠正_53e72ecab3/EU.png",
+      "sha256": "dafc09e19dedbc1f4192c2083804a5dd230c07a586dd4d0199ed498d7a5e863b",
+      "state": "PASS",
+      "native_svg": "01_产品资产/02_可发布素材/00_最终上传/BQ003_R1218/06_当前图文/欧码/BQ003_补充尺码纠正_53e72ecab3/EU.svg",
+      "review": "All 15 diagrams viewed in three contact sheets with three native representative checks. Exact current per-colour EU matrix checked; legible, complete numeric labels, no US conversion or foot length. Source facts and current per-ID SKU data retained in plan."
+    }
+  },
+  "matrix": {
+    "All Black": [
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45"
+    ],
+    "Black White": [
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45"
+    ],
+    "Grey": [
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45"
+    ],
+    "Pink": [
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45"
+    ],
+    "White": [
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45"
+    ]
+  },
+  "detail_replacements_by_id": {
+    "10000043200726": {
+      "https://sc04.alicdn.com/kf/S5e382865789d4d59b479d0846b3c5acfJ.png": "EU"
+    },
+    "1601939665367": {
+      "https://sc04.alicdn.com/kf/Sfb079d9321414929a5f18743b20a4755m.png": "EU"
+    },
+    "1601939663432": {
+      "https://sc04.alicdn.com/kf/Sfb079d9321414929a5f18743b20a4755m.png": "EU"
+    },
+    "1601939585904": {
+      "https://sc04.alicdn.com/kf/Sfb079d9321414929a5f18743b20a4755m.png": "EU"
+    }
+  },
+  "expected_old_by_id": {
+    "10000043200726": [
+      "https://sc04.alicdn.com/kf/Sa321e6d79535459bb92d495f71877356O.png",
+      "https://sc04.alicdn.com/kf/Sa5b2c074ecaa41499fb52d3e2c3b7b6dy.png",
+      "https://sc04.alicdn.com/kf/S8f22a6a537084cf68cc39cdeb534ac88b.png",
+      "https://sc04.alicdn.com/kf/S5e382865789d4d59b479d0846b3c5acfJ.png",
+      "https://sc04.alicdn.com/kf/S9e0798bfe0d44232b951d17a40b1e4bah.png",
+      "https://sc04.alicdn.com/kf/S9e0fdb7726834e2ebbbbcbc3ed771fe2H.png"
+    ],
+    "1601939665367": [
+      "https://sc04.alicdn.com/kf/Sfc03a06e878447f6b79ca3afe9efb72bO.png",
+      "https://sc04.alicdn.com/kf/Sfb079d9321414929a5f18743b20a4755m.png",
+      "https://sc04.alicdn.com/kf/S924a855f1a47406d97a1f451a24ef7123.png",
+      "https://sc04.alicdn.com/kf/Sa8b3fd02756748a0856ec0d5abbc8f3c1.png"
+    ],
+    "1601939663432": [
+      "https://sc04.alicdn.com/kf/Sfc03a06e878447f6b79ca3afe9efb72bO.png",
+      "https://sc04.alicdn.com/kf/Sfb079d9321414929a5f18743b20a4755m.png",
+      "https://sc04.alicdn.com/kf/S924a855f1a47406d97a1f451a24ef7123.png",
+      "https://sc04.alicdn.com/kf/Sa8b3fd02756748a0856ec0d5abbc8f3c1.png"
+    ],
+    "1601939585904": [
+      "https://sc04.alicdn.com/kf/Sfc03a06e878447f6b79ca3afe9efb72bO.png",
+      "https://sc04.alicdn.com/kf/S924a855f1a47406d97a1f451a24ef7123.png",
+      "https://sc04.alicdn.com/kf/Sfb079d9321414929a5f18743b20a4755m.png",
+      "https://sc04.alicdn.com/kf/Sa8b3fd02756748a0856ec0d5abbc8f3c1.png"
+    ]
+  },
+  "source_evidence": [
+    "01_产品资产/02_可发布素材/00_最终上传/BQ003_R1218/00_上架填写表.md",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/来源核对/src-6ecbd1c25605.json"
+  ],
+  "scope": "Replace exact reviewed US/foot-length or unhelpful old size graphic by current exact colour/EU matrix; no conversion, foot length, SKU, colour, price or other content change."
+}

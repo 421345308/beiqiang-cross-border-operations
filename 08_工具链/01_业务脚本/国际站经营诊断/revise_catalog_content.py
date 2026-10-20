@@ -8,7 +8,7 @@ from datetime import datetime,timezone
 from xml.etree import ElementTree as E
 from concurrent.futures import ThreadPoolExecutor
 from decimal import Decimal
-import argparse,json,hashlib,importlib.util,sys,copy,traceback
+import argparse,json,hashlib,importlib.util,sys,copy,traceback,os,tempfile,time
 ROOT=Path(__file__).resolve().parents[3]
 BASE=ROOT/'02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核'
 RAW=ROOT/'99_临时区/商品质量全店复核/文案执行'
@@ -21,7 +21,21 @@ from read_only_catalog import read_only_call
 PROTECTED={'1601825074604','1601943574507','1601943545775'}
 def now():return datetime.now(timezone.utc).isoformat()
 def load(p):return json.loads(p.read_text(encoding='utf8'))
-def save(p,x):p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(x,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+def save(p,x):
+    p.parent.mkdir(parents=True,exist_ok=True)
+    # Local watchers can transiently lock a JSON path on Windows. A complete
+    # sibling temporary file prevents a failed write from truncating the truth.
+    temp=None
+    try:
+        with tempfile.NamedTemporaryFile(mode='w',encoding='utf8',dir=p.parent,prefix='.'+p.name+'.',suffix='.tmp',delete=False)as handle:
+            temp=Path(handle.name);handle.write(json.dumps(x,ensure_ascii=False,indent=2)+'\n');handle.flush();os.fsync(handle.fileno())
+        for attempt in range(4):
+            try:os.replace(temp,p);break
+            except OSError:
+                if attempt==3:raise
+                time.sleep(0.2*(attempt+1))
+    finally:
+        if temp is not None and temp.exists():temp.unlink()
 def rel(p):return p.relative_to(ROOT).as_posix()
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def client():

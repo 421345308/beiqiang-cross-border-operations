@@ -29,7 +29,7 @@
 ### BQ036 / 8025 · 1601924292931
 
 - 平台链接：[1601924292931](https://www.alibaba.com/product-detail/High-Top-Slip-On-Knit-Sock_1601924292931.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601924292931/formal_get.json)；UTC 2026-10-19T19:47:21.941919+00:00。
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601924292931/formal_get.json)；UTC 2026-10-20T08:30:13.751129+00:00。
 - 当前正式标题：High Top Knit Slip-On Sock Sneakers with Ribbed Collar and EVA Sole Wholesale
 - 审核/展示：approved / Y；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
@@ -95,7 +95,7 @@
 ### BQ1039-B · 1601943670292
 
 - 平台链接：[1601943670292](https://www.alibaba.com/product-detail/Knit-Slip-On-Casual-Shoes-with_1601943670292.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943670292/formal_get.json)；UTC 2026-10-19T18:40:55.187103+00:00。
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943670292/formal_get.json)；UTC 2026-10-20T07:54:58.578434+00:00。
 - 当前正式标题：High Top Knit Slip-On Sock Sneakers with Ribbed Collar and EVA Sole Wholesale
 - 审核/展示：approved / Y；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
@@ -117,7 +117,6 @@
 ## 其他原始/正式证据
 
 - [国际站预上架商品总表_2026-08-14.csv](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E5%9B%BD%E9%99%85%E7%AB%99%E9%A2%84%E4%B8%8A%E6%9E%B6%E5%95%86%E5%93%81%E6%80%BB%E8%A1%A8_2026-08-14.csv)
-- [HR系列货源发货与图片总表.md](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/HR%E7%B3%BB%E5%88%97%E7%9C%9F%E5%AE%9E%E8%B4%A7%E6%BA%90%E6%94%B9%E9%80%A0_2026-09-21/HR%E7%B3%BB%E5%88%97%E8%B4%A7%E6%BA%90%E5%8F%91%E8%B4%A7%E4%B8%8E%E5%9B%BE%E7%89%87%E6%80%BB%E8%A1%A8.md)
 - [HR系列货源发货与图片总表.md](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/HR%E7%B3%BB%E5%88%97%E7%9C%9F%E5%AE%9E%E8%B4%A7%E6%BA%90%E6%94%B9%E9%80%A0_2026-09-21/HR%E7%B3%BB%E5%88%97%E8%B4%A7%E6%BA%90%E5%8F%91%E8%B4%A7%E4%B8%8E%E5%9B%BE%E7%89%87%E6%80%BB%E8%A1%A8.md)
 - [copy.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%95%86%E5%93%81/1601924292931/copy.json)
 - [update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%95%86%E5%93%81/1601924292931/update_receipt.json)
@@ -253,5 +252,13 @@
 - [prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E7%BB%93%E6%9E%84%E4%B8%8E%E6%A0%87%E9%A2%98%E7%BA%A0%E6%AD%A3/%E5%95%86%E5%93%81/1601924292931/prepared.json)
 - [update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E7%BB%93%E6%9E%84%E4%B8%8E%E6%A0%87%E9%A2%98%E7%BA%A0%E6%AD%A3/%E5%95%86%E5%93%81/1601924292931/update_receipt.json)
 - [verification.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E7%BB%93%E6%9E%84%E4%B8%8E%E6%A0%87%E9%A2%98%E7%BA%A0%E6%AD%A3/%E5%95%86%E5%93%81/1601924292931/verification.json)
+- [计划.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ036_%E6%97%A7%E6%8A%A5%E4%BB%B7%E5%9B%BE%E6%9B%BF%E6%8D%A2/%E8%AE%A1%E5%88%92.json)
+- [图片银行.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ036_%E6%97%A7%E6%8A%A5%E4%BB%B7%E5%9B%BE%E6%9B%BF%E6%8D%A2/%E5%9B%BE%E7%89%87%E9%93%B6%E8%A1%8C.json)
+- [prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ036_%E6%97%A7%E6%8A%A5%E4%BB%B7%E5%9B%BE%E6%9B%BF%E6%8D%A2/%E5%95%86%E5%93%81/1601943670292/prepared.json)
+- [update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ036_%E6%97%A7%E6%8A%A5%E4%BB%B7%E5%9B%BE%E6%9B%BF%E6%8D%A2/%E5%95%86%E5%93%81/1601943670292/update_receipt.json)
+- [verification.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ036_%E6%97%A7%E6%8A%A5%E4%BB%B7%E5%9B%BE%E6%9B%BF%E6%8D%A2/%E5%95%86%E5%93%81/1601943670292/verification.json)
+- [prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ036_%E6%97%A7%E6%8A%A5%E4%BB%B7%E5%9B%BE%E6%9B%BF%E6%8D%A2/%E5%95%86%E5%93%81/1601924292931/prepared.json)
+- [update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ036_%E6%97%A7%E6%8A%A5%E4%BB%B7%E5%9B%BE%E6%9B%BF%E6%8D%A2/%E5%95%86%E5%93%81/1601924292931/update_receipt.json)
+- [verification.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ036_%E6%97%A7%E6%8A%A5%E4%BB%B7%E5%9B%BE%E6%9B%BF%E6%8D%A2/%E5%95%86%E5%93%81/1601924292931/verification.json)
 
 原件、正式回执与当前资料通过本页关联，不再复制成第二套商品库。

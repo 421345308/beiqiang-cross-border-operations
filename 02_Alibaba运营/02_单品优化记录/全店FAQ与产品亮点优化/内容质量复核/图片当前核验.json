@@ -1,0 +1,44 @@
+{
+  "at": "2026-10-20T10:00:55.625819+00:00",
+  "scope": "Per-ID formal image repair evidence; scopes overlap and counts must not be added. This is not a whole-store visual completion statement.",
+  "unique_ids_with_verified_repairs_in_these_indexes": 98,
+  "indexes": {
+    "颜色绑定修正.json": {
+      "ids": 39,
+      "states": {
+        "FORMAL_FIELDS_SCORE_PASS": 39
+      }
+    },
+    "配色图执行.json": {
+      "ids": 11,
+      "states": {
+        "FORMAL_FIELDS_SCORE_PASS": 11
+      }
+    },
+    "旧报价图执行.json": {
+      "ids": 49,
+      "states": {
+        "FORMAL_FIELDS_SCORE_PASS": 49
+      }
+    },
+    "报价图正式纠正执行.json": {
+      "ids": 2,
+      "states": {
+        "FORMAL_FIELDS_SCORE_PASS": 2
+      }
+    },
+    "首图修复执行.json": {
+      "ids": 1,
+      "states": {
+        "REVIEW_PENDING": 1
+      }
+    },
+    "补充尺码图执行.json": {
+      "ids": 34,
+      "states": {
+        "REVIEWED_NOT_SUBMITTED": 34
+      }
+    }
+  },
+  "remaining": "Native weak-hero review, product-specific detail defects, special colour/quote cards and supplemental EU batch remain separate."
+}

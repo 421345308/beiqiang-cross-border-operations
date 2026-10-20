@@ -1,0 +1,54 @@
+{
+  "family": "BQ036_旧报价图替换",
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "assets": {
+    "BQ036_962ce0650817": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ036_8025/06_当前图文/结构/BQ036_962ce0650817/detail.png",
+      "sha256": "798283d5bccd82d16ccd0c893a56ecb56180bb1c8847a823e14852645b8abeca",
+      "state": "PASS",
+      "native_svg": "01_产品资产/02_可发布素材/00_最终上传/BQ036_8025/06_当前图文/结构/BQ036_962ce0650817/detail.svg"
+    }
+  },
+  "ids": [
+    "1601924292931",
+    "1601943670292"
+  ],
+  "main_replacements_by_id": {
+    "1601924292931": {},
+    "1601943670292": {}
+  },
+  "detail_replacements_by_id": {
+    "1601924292931": {
+      "https://sc04.alicdn.com/kf/A320519747e0d42e7b28c287832c81304u.png": "BQ036_962ce0650817"
+    },
+    "1601943670292": {
+      "https://sc04.alicdn.com/kf/H6997f15a63fc4ec98157413b780e5ae4Q.jpg": "BQ036_962ce0650817"
+    }
+  },
+  "expected_old_by_id": {
+    "1601924292931": [
+      "https://sc04.alicdn.com/kf/A39699221bc2846e99a537ae008f7d2bcK.png",
+      "https://sc04.alicdn.com/kf/Ad3f1a458b69842fd8e90bc4e4511e50cG.png",
+      "https://sc04.alicdn.com/kf/A3a1aab49c3214d34909d0d7a4954a46a4.png",
+      "https://sc04.alicdn.com/kf/A3c21f069c8264f5681305872dcefff00p.png",
+      "https://sc04.alicdn.com/kf/A320519747e0d42e7b28c287832c81304u.png",
+      "https://sc04.alicdn.com/kf/A0f1ab252ba4744e5931b716e71f290e69.png"
+    ],
+    "1601943670292": [
+      "https://sc04.alicdn.com/kf/Hb01b3f4a0bb74dcbbadea63d434219a87.jpg",
+      "https://sc04.alicdn.com/kf/H5dc2e366585944b680fddadac0fab7c0x.jpg",
+      "https://sc04.alicdn.com/kf/Hdb18b3c8ea8f4166a98fc30872d2fd3bY.jpg",
+      "https://sc04.alicdn.com/kf/H6997f15a63fc4ec98157413b780e5ae4Q.jpg",
+      "https://sc04.alicdn.com/kf/Heccfb0a573b64928a6141871cef9b3c4R.jpg"
+    ]
+  },
+  "source_evidence": [
+    "01_产品资产/02_可发布素材/00_最终上传/BQ036_8025/00_上架填写表.md",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/来源核对/src-a4697dab9e6e.json",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
+    "01_产品资产/02_可发布素材/00_最终上传/BQ036_8025/06_当前图文/结构/BQ036_962ce0650817/图稿依据.json"
+  ],
+  "scope": "Replace only old price/quote graphics with source-reviewed product construction diagrams. Photographs unchanged; all other gallery roles, factory image, SKU, price, quantities, title and FAQ retained.",
+  "kind": "detail_slot"
+}

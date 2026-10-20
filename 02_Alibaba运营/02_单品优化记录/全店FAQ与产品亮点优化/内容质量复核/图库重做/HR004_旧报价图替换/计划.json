@@ -1,0 +1,70 @@
+{
+  "family": "HR004_旧报价图替换",
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "assets": {
+    "HR004_5bb0381215f1": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ1004_25QLFAN15-36/06_当前图文/结构/HR004_5bb0381215f1/main.png",
+      "sha256": "e4d559bf68da4d1d424a491a8c867813161c30885f08076517e2d1ed3c666249",
+      "state": "PASS",
+      "native_svg": "01_产品资产/02_可发布素材/00_最终上传/BQ1004_25QLFAN15-36/06_当前图文/结构/HR004_5bb0381215f1/main.svg"
+    },
+    "HR004_17fe0fdd9de8": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ1004_25QLFAN15-36/06_当前图文/结构/HR004_17fe0fdd9de8/detail.png",
+      "sha256": "4e193d1f3f629a465685efb3bb59f9c34ab5eed3aad7b830fd4ec15f60196597",
+      "state": "PASS",
+      "native_svg": "01_产品资产/02_可发布素材/00_最终上传/BQ1004_25QLFAN15-36/06_当前图文/结构/HR004_17fe0fdd9de8/detail.svg"
+    }
+  },
+  "ids": [
+    "1601943397351",
+    "1601943405519",
+    "1601943421458"
+  ],
+  "main_replacements_by_id": {
+    "1601943397351": {
+      "https://sc04.alicdn.com/kf/H7a8de70b0a87418590c43b060847c9f02.png": "HR004_5bb0381215f1"
+    },
+    "1601943405519": {},
+    "1601943421458": {
+      "https://sc04.alicdn.com/kf/He5046626c509422ab7584ee2e037fa820.png": "HR004_5bb0381215f1"
+    }
+  },
+  "detail_replacements_by_id": {
+    "1601943397351": {},
+    "1601943405519": {
+      "https://sc04.alicdn.com/kf/H4c050d64ea3742c99f5e00601a48866e0.png": "HR004_17fe0fdd9de8"
+    },
+    "1601943421458": {
+      "https://sc04.alicdn.com/kf/Hefc148a393ea40d3aef996165e18ef38h.png": "HR004_17fe0fdd9de8"
+    }
+  },
+  "expected_old_by_id": {
+    "1601943397351": [
+      "https://sc04.alicdn.com/kf/H78e02c0a01d047e981a564501b7cc3e1d.png",
+      "https://sc04.alicdn.com/kf/H49023bd6bd62404aa7deef5cc92c5e58t.png",
+      "https://sc04.alicdn.com/kf/Hc07d4fb91a714a4093a234b1d2494717B.png",
+      "https://sc04.alicdn.com/kf/H58f529b600434dcca32f55871aec4619B.png"
+    ],
+    "1601943405519": [
+      "https://sc04.alicdn.com/kf/H3f1e5e3f846b417e86cfe3205cab8c70U.png",
+      "https://sc04.alicdn.com/kf/Hbb8c53f19c5142eab10aac2be5be4984H.png",
+      "https://sc04.alicdn.com/kf/H4bfb08f471b1449c9e5fae9e83440bcc7.png",
+      "https://sc04.alicdn.com/kf/H4c050d64ea3742c99f5e00601a48866e0.png"
+    ],
+    "1601943421458": [
+      "https://sc04.alicdn.com/kf/Hf0d66295aa2b46308e28fa6134765698J.png",
+      "https://sc04.alicdn.com/kf/He58fae3869e94b3786640753bfecf3ddu.png",
+      "https://sc04.alicdn.com/kf/Hefc148a393ea40d3aef996165e18ef38h.png",
+      "https://sc04.alicdn.com/kf/H0cf11a09f77d45578a4e5b0b2bead5d9B.png"
+    ]
+  },
+  "source_evidence": [
+    "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR004/来源与正式绑定核验.json",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
+    "01_产品资产/02_可发布素材/00_最终上传/BQ1004_25QLFAN15-36/06_当前图文/结构/HR004_5bb0381215f1/图稿依据.json",
+    "01_产品资产/02_可发布素材/00_最终上传/BQ1004_25QLFAN15-36/06_当前图文/结构/HR004_17fe0fdd9de8/图稿依据.json"
+  ],
+  "scope": "Replace only old price/quote graphics with source-reviewed product construction diagrams. Photographs unchanged; all other gallery roles, factory image, SKU, price, quantities, title and FAQ retained.",
+  "kind": "mixed_slots"
+}

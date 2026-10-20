@@ -1,0 +1,297 @@
+{
+  "id": "1601939665367",
+  "at": "2026-10-20T05:02:11.620834+00:00",
+  "state": "FORMAL_DIFFERENCE_DIAGNOSE_NO_REPLAY",
+  "status": "approved",
+  "display": "Y",
+  "checks": {
+    "exact_colour_EU": true,
+    "retained_sku_identity": true,
+    "removed_unsupported": true,
+    "unique_real_sku_ids": true,
+    "all_price_tiers_preserved": true,
+    "other_formal_fields": true,
+    "colour_image_bindings": false,
+    "display": true,
+    "schema_targets": false,
+    "other_schema": true,
+    "score": true
+  },
+  "score": "5.00",
+  "public_status": "API_ACCEPTANCE_NO_BROWSER_PER_USER",
+  "diagnostics": {
+    "ruleScoreMap": {
+      "title_word_miss_core_error": 0.0,
+      "imageQualityBad": 0.0,
+      "image_scale": 0.0,
+      "title_word_error": 0.0,
+      "image_num": 0.0
+    },
+    "errorReasonSkuImageMoreMap": {},
+    "errorReasonTitleWordMissErrorMap": {},
+    "errorReasonList": [],
+    "errorReasonTitleWordErrorMap": {},
+    "extendCheckMap": {
+      "imageText": true,
+      "sku_image": false,
+      "title_word_miss_core_error": true,
+      "imageQualityBad": true,
+      "sku_text": false,
+      "imageSubTitle": false,
+      "category": true,
+      "title_word_error": true,
+      "selling_point_attribute_conflict": false
+    },
+    "errorReasonCategoryMap": {},
+    "errorReasonSkuTextMap": {},
+    "errorReasonSubTitleMap": {},
+    "errorReasonMap": {},
+    "errorReasonSellingPointAttributeMap": {},
+    "errorReasonSkuImageMap": {},
+    "extendProblemMap": {
+      "imageText": false,
+      "title_word_miss_core_error": false,
+      "imageQualityBad": false,
+      "imageSubTitle": false,
+      "image_scale": false,
+      "inventory": false,
+      "title_word_error": false,
+      "selling_point_attribute_conflict": false,
+      "image_num": false,
+      "freightRate": false,
+      "sku_image": false,
+      "sku_text": false,
+      "price": false,
+      "category": false
+    },
+    "errorReasonQualityBadMap": {},
+    "errorReasonSkuTextMoreMap": {}
+  },
+  "failed": [
+    "colour_image_bindings",
+    "schema_targets"
+  ],
+  "pairs": [
+    [
+      "All Black",
+      "41"
+    ],
+    [
+      "All Black",
+      "42"
+    ],
+    [
+      "All Black",
+      "43"
+    ],
+    [
+      "All Black",
+      "44"
+    ],
+    [
+      "All Black",
+      "37"
+    ],
+    [
+      "All Black",
+      "38"
+    ],
+    [
+      "All Black",
+      "39"
+    ],
+    [
+      "All Black",
+      "40"
+    ],
+    [
+      "Black White",
+      "44"
+    ],
+    [
+      "Black White",
+      "45"
+    ],
+    [
+      "All Black",
+      "35"
+    ],
+    [
+      "All Black",
+      "36"
+    ],
+    [
+      "Black White",
+      "40"
+    ],
+    [
+      "Black White",
+      "41"
+    ],
+    [
+      "Black White",
+      "42"
+    ],
+    [
+      "Black White",
+      "43"
+    ],
+    [
+      "Black White",
+      "36"
+    ],
+    [
+      "Black White",
+      "37"
+    ],
+    [
+      "Black White",
+      "38"
+    ],
+    [
+      "Black White",
+      "39"
+    ],
+    [
+      "Pink",
+      "43"
+    ],
+    [
+      "Pink",
+      "44"
+    ],
+    [
+      "Pink",
+      "45"
+    ],
+    [
+      "Black White",
+      "35"
+    ],
+    [
+      "Pink",
+      "39"
+    ],
+    [
+      "Pink",
+      "40"
+    ],
+    [
+      "Pink",
+      "41"
+    ],
+    [
+      "Pink",
+      "42"
+    ],
+    [
+      "Pink",
+      "35"
+    ],
+    [
+      "Pink",
+      "36"
+    ],
+    [
+      "Pink",
+      "37"
+    ],
+    [
+      "Pink",
+      "38"
+    ],
+    [
+      "All Black",
+      "45"
+    ],
+    [
+      "Grey",
+      "42"
+    ],
+    [
+      "Grey",
+      "43"
+    ],
+    [
+      "Grey",
+      "44"
+    ],
+    [
+      "Grey",
+      "45"
+    ],
+    [
+      "Grey",
+      "38"
+    ],
+    [
+      "Grey",
+      "39"
+    ],
+    [
+      "Grey",
+      "40"
+    ],
+    [
+      "Grey",
+      "41"
+    ],
+    [
+      "White",
+      "45"
+    ],
+    [
+      "Grey",
+      "35"
+    ],
+    [
+      "Grey",
+      "36"
+    ],
+    [
+      "Grey",
+      "37"
+    ],
+    [
+      "White",
+      "41"
+    ],
+    [
+      "White",
+      "42"
+    ],
+    [
+      "White",
+      "43"
+    ],
+    [
+      "White",
+      "44"
+    ],
+    [
+      "White",
+      "37"
+    ],
+    [
+      "White",
+      "38"
+    ],
+    [
+      "White",
+      "39"
+    ],
+    [
+      "White",
+      "40"
+    ],
+    [
+      "White",
+      "35"
+    ],
+    [
+      "White",
+      "36"
+    ]
+  ],
+  "sku_count": 55
+}

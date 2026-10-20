@@ -1,0 +1,48 @@
+{
+  "family": "BQ013",
+  "execution_key": "BQ013_逐色绑定纠正",
+  "ids": [
+    "1601939619687",
+    "1601939638522",
+    "1601939736061"
+  ],
+  "source_id": null,
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "source_evidence": [
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/颜色绑定复核.json",
+    "01_产品资产/01_原始数据包/已整理_BQ013_T55836_T55836贝强鞋业2025新款批53元",
+    "01_产品资产/01_原始数据包/已整理_BQ013_T55836_T55836贝强鞋业2025新款批53元/贝强鞋业2025新款T55836批53元/800X800主图/001.jpg",
+    "01_产品资产/01_原始数据包/已整理_BQ013_T55836_T55836贝强鞋业2025新款批53元/贝强鞋业2025新款T55836批53元/800X800主图/002.jpg",
+    "01_产品资产/01_原始数据包/已整理_BQ013_T55836_T55836贝强鞋业2025新款批53元/贝强鞋业2025新款T55836批53元/800X800主图/003.jpg",
+    "01_产品资产/01_原始数据包/已整理_BQ013_T55836_T55836贝强鞋业2025新款批53元/贝强鞋业2025新款T55836批53元/800X800主图/004.jpg",
+    "01_产品资产/01_原始数据包/已整理_BQ013_T55836_T55836贝强鞋业2025新款批53元/贝强鞋业2025新款T55836批53元/800X800主图/005.jpg",
+    "01_产品资产/01_原始数据包/已整理_BQ013_T55836_T55836贝强鞋业2025新款批53元/贝强鞋业2025新款T55836批53元/800X800主图/006.jpg",
+    "01_产品资产/01_原始数据包/已整理_BQ013_T55836_T55836贝强鞋业2025新款批53元/贝强鞋业2025新款T55836批53元/800X800主图/007.jpg",
+    "01_产品资产/01_原始数据包/已整理_BQ013_T55836_T55836贝强鞋业2025新款批53元/贝强鞋业2025新款T55836批53元/800X800主图/008.jpg"
+  ],
+  "rebind_images": {
+    "Grey": "https://sc04.alicdn.com/kf/S7fd729b795894115b7874474557ddbe4Y.png",
+    "Black": "https://sc04.alicdn.com/kf/Sb27a50f90d4d4132a894c71a1b557456P.png",
+    "Wine Red": "https://sc04.alicdn.com/kf/Sd56efce9eff447f691784cdb8c296356K.png"
+  },
+  "expected_images_by_id": {
+    "1601939619687": {
+      "Grey": "https://sc04.alicdn.com/kf/Se55a38db0443412a829fce9f98cea790n.png",
+      "Black": "https://sc04.alicdn.com/kf/S3db506c301d54df89b6ad1164a9d8761n.png",
+      "Wine Red": "https://sc04.alicdn.com/kf/S4e6d8fbe85c549ea85e0eba28de4c832P.png"
+    },
+    "1601939638522": {
+      "Grey": "https://sc04.alicdn.com/kf/Se55a38db0443412a829fce9f98cea790n.png",
+      "Black": "https://sc04.alicdn.com/kf/S3db506c301d54df89b6ad1164a9d8761n.png",
+      "Wine Red": "https://sc04.alicdn.com/kf/S4e6d8fbe85c549ea85e0eba28de4c832P.png"
+    },
+    "1601939736061": {
+      "Grey": "https://sc04.alicdn.com/kf/Se55a38db0443412a829fce9f98cea790n.png",
+      "Black": "https://sc04.alicdn.com/kf/S3db506c301d54df89b6ad1164a9d8761n.png",
+      "Wine Red": "https://sc04.alicdn.com/kf/S4e6d8fbe85c549ea85e0eba28de4c832P.png"
+    }
+  },
+  "review": "Exact raw-package source contacts and all27 SKU sheets reviewed; correct whole-shoe photos from this family reused by visible upper/sole colour. Only demonstrably wrong colour-photo bindings; no colour renaming, new variant or physical-stock inference.",
+  "scope": "saleProp only; retain all SKU IDs/codes/quantities/prices, title/highlights/FAQ, gallery, details, category and trade fields."
+}

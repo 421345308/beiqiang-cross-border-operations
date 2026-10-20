@@ -1,0 +1,362 @@
+{
+  "id": "1601943700590",
+  "at": "2026-10-20T09:17:30.225063+00:00",
+  "state": "FORMAL_FIELDS_SCORE_PASS",
+  "status": "approved",
+  "display": "Y",
+  "checks": {
+    "exact_colour_EU": true,
+    "retained_sku_identity": true,
+    "removed_unsupported": true,
+    "unique_real_sku_ids": true,
+    "all_price_tiers_preserved": true,
+    "other_formal_fields": true,
+    "colour_image_bindings": true,
+    "display": true,
+    "schema_targets": true,
+    "other_schema": true,
+    "score": true
+  },
+  "score": "5.00",
+  "public_status": "API_ACCEPTANCE_NO_BROWSER_PER_USER",
+  "diagnostics": {
+    "ruleScoreMap": {
+      "title_word_miss_core_error": 0.0,
+      "imageQualityBad": 0.0,
+      "image_scale": 0.0,
+      "title_word_error": 0.0,
+      "image_num": 0.0
+    },
+    "errorReasonSkuImageMoreMap": {},
+    "errorReasonTitleWordMissErrorMap": {},
+    "errorReasonList": [],
+    "errorReasonTitleWordErrorMap": {},
+    "extendCheckMap": {
+      "imageText": true,
+      "sku_image": false,
+      "title_word_miss_core_error": true,
+      "imageQualityBad": true,
+      "sku_text": false,
+      "imageSubTitle": false,
+      "category": true,
+      "title_word_error": true,
+      "selling_point_attribute_conflict": false
+    },
+    "errorReasonCategoryMap": {},
+    "errorReasonSkuTextMap": {},
+    "errorReasonSubTitleMap": {},
+    "errorReasonMap": {},
+    "errorReasonSellingPointAttributeMap": {},
+    "errorReasonSkuImageMap": {},
+    "extendProblemMap": {
+      "imageText": false,
+      "title_word_miss_core_error": false,
+      "imageQualityBad": false,
+      "imageSubTitle": false,
+      "image_scale": false,
+      "inventory": false,
+      "title_word_error": false,
+      "selling_point_attribute_conflict": false,
+      "image_num": false,
+      "freightRate": false,
+      "sku_image": false,
+      "sku_text": false,
+      "price": false,
+      "category": false
+    },
+    "errorReasonQualityBadMap": {},
+    "errorReasonSkuTextMoreMap": {}
+  },
+  "failed": [],
+  "pairs": [
+    [
+      "Neon Green",
+      "EU41"
+    ],
+    [
+      "Neon Green",
+      "EU40"
+    ],
+    [
+      "Neon Green",
+      "EU39"
+    ],
+    [
+      "Neon Green",
+      "EU38"
+    ],
+    [
+      "Neon Green",
+      "EU45"
+    ],
+    [
+      "Neon Green",
+      "EU44"
+    ],
+    [
+      "Neon Green",
+      "EU43"
+    ],
+    [
+      "Neon Green",
+      "EU42"
+    ],
+    [
+      "Neon Green",
+      "EU46"
+    ],
+    [
+      "Black",
+      "EU37"
+    ],
+    [
+      "Black",
+      "EU36"
+    ],
+    [
+      "Black",
+      "EU35"
+    ],
+    [
+      "Turquoise",
+      "EU46"
+    ],
+    [
+      "Black",
+      "EU41"
+    ],
+    [
+      "Black",
+      "EU40"
+    ],
+    [
+      "Black",
+      "EU39"
+    ],
+    [
+      "Black",
+      "EU38"
+    ],
+    [
+      "Black",
+      "EU45"
+    ],
+    [
+      "Black",
+      "EU44"
+    ],
+    [
+      "Black",
+      "EU43"
+    ],
+    [
+      "Black",
+      "EU42"
+    ],
+    [
+      "Neon Green",
+      "EU37"
+    ],
+    [
+      "Neon Green",
+      "EU36"
+    ],
+    [
+      "Neon Green",
+      "EU35"
+    ],
+    [
+      "Black",
+      "EU46"
+    ],
+    [
+      "White",
+      "EU37"
+    ],
+    [
+      "White",
+      "EU36"
+    ],
+    [
+      "White",
+      "EU35"
+    ],
+    [
+      "White",
+      "EU41"
+    ],
+    [
+      "White",
+      "EU40"
+    ],
+    [
+      "White",
+      "EU39"
+    ],
+    [
+      "White",
+      "EU38"
+    ],
+    [
+      "White",
+      "EU45"
+    ],
+    [
+      "White",
+      "EU44"
+    ],
+    [
+      "White",
+      "EU43"
+    ],
+    [
+      "White",
+      "EU42"
+    ],
+    [
+      "Blue Grey",
+      "EU37"
+    ],
+    [
+      "Blue Grey",
+      "EU36"
+    ],
+    [
+      "Blue Grey",
+      "EU35"
+    ],
+    [
+      "White",
+      "EU46"
+    ],
+    [
+      "Yellow",
+      "EU45"
+    ],
+    [
+      "Yellow",
+      "EU44"
+    ],
+    [
+      "Yellow",
+      "EU43"
+    ],
+    [
+      "Yellow",
+      "EU42"
+    ],
+    [
+      "Turquoise",
+      "EU37"
+    ],
+    [
+      "Turquoise",
+      "EU36"
+    ],
+    [
+      "Turquoise",
+      "EU35"
+    ],
+    [
+      "Yellow",
+      "EU46"
+    ],
+    [
+      "Turquoise",
+      "EU41"
+    ],
+    [
+      "Turquoise",
+      "EU40"
+    ],
+    [
+      "Turquoise",
+      "EU39"
+    ],
+    [
+      "Turquoise",
+      "EU38"
+    ],
+    [
+      "Turquoise",
+      "EU45"
+    ],
+    [
+      "Turquoise",
+      "EU44"
+    ],
+    [
+      "Turquoise",
+      "EU43"
+    ],
+    [
+      "Turquoise",
+      "EU42"
+    ],
+    [
+      "Blue Grey",
+      "EU41"
+    ],
+    [
+      "Blue Grey",
+      "EU40"
+    ],
+    [
+      "Blue Grey",
+      "EU39"
+    ],
+    [
+      "Blue Grey",
+      "EU38"
+    ],
+    [
+      "Blue Grey",
+      "EU45"
+    ],
+    [
+      "Blue Grey",
+      "EU44"
+    ],
+    [
+      "Blue Grey",
+      "EU43"
+    ],
+    [
+      "Blue Grey",
+      "EU42"
+    ],
+    [
+      "Yellow",
+      "EU37"
+    ],
+    [
+      "Yellow",
+      "EU36"
+    ],
+    [
+      "Yellow",
+      "EU35"
+    ],
+    [
+      "Blue Grey",
+      "EU46"
+    ],
+    [
+      "Yellow",
+      "EU41"
+    ],
+    [
+      "Yellow",
+      "EU40"
+    ],
+    [
+      "Yellow",
+      "EU39"
+    ],
+    [
+      "Yellow",
+      "EU38"
+    ]
+  ],
+  "sku_count": 72
+}

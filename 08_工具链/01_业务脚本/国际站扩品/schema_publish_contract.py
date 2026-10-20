@@ -975,10 +975,20 @@ def created_field_equivalent(field_id, expected, actual):
                 if not images or len(images) != len(fields['images']):
                     raise ValueError('Unrecognized gallery images')
                 for image in images:
+                    image_fields={f.get('id'):f for f in image.findall('field')}
                     urls = image.findall("./field[@id='imageURL']/value")
-                    if len(image) != 1 or len(urls) != 1 or urls[0].attrib:
+                    if (len(image_fields)!=len(image)or not set(image_fields)<= {'imageURL','generalText'}
+                            or len(urls)!=1 or urls[0].attrib):
                         raise ValueError('Unrecognized gallery image attributes')
-                    counts[_created_image_identity(urls[0].text)] += 1
+                    caption=('ABSENT','')
+                    if 'generalText'in image_fields:
+                        caption_field=image_fields['generalText'];values=caption_field.findall('value')
+                        if len(caption_field)!=1 or len(values)!=1 or values[0].attrib:
+                            raise ValueError('Unrecognized gallery image caption')
+                        caption=('PRESENT',values[0].text or '')
+                    # Existing supported captions are preserved literally;
+                    # their removal/change must never pass a URL-only check.
+                    counts[(_created_image_identity(urls[0].text),caption)] += 1
             return [(key, sorted(counts.items())) for key, counts in sorted(groups.items())]
         if field_id in {'detailImage','companyImage'}:
             return gallery_signature(before) == gallery_signature(after)

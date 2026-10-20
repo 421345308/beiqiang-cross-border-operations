@@ -23,6 +23,18 @@ def parent_payload(field):
 class ModelGalleryTests(unittest.TestCase):
     def setUp(self):
         self.cases=json.loads((F/'model_number_cases.json').read_text(encoding='utf-8'))['cases']
+    def test_existing_gallery_caption_survives_observed_group_reordering(self):
+        xml='<itemSchema><field id="detailImage"><complex-values><field id="images"><complex-values><field id="imageURL"><value>//sc04.alicdn.com/kf/Ha123.png</value></field><field id="generalText"><value>Product specifications</value></field></complex-values></field><field id="gallery"><value>300</value></field></complex-values><complex-values><field id="images"><complex-values><field id="imageURL"><value>//sc04.alicdn.com/kf/Sb456.jpg</value></field></complex-values></field><field id="gallery"><value>150</value></field></complex-values></field></itemSchema>'
+        before=ET.fromstring(xml);after=deepcopy(before);field=after.find('./field');rows=list(field);field[:]=rows[::-1]
+        after.find('.//field[@id="imageURL"]/value').text='//sc04.alicdn.com/kf/Sb456.jpg_350x350.jpg'
+        a=contract.field_snapshot(before)['detailImage'];b=contract.field_snapshot(after)['detailImage']
+        self.assertTrue(contract.created_field_equivalent('detailImage',a,b))
+        after.find('.//field[@id="generalText"]/value').text='Changed caption'
+        self.assertFalse(contract.created_field_equivalent('detailImage',a,contract.field_snapshot(after)['detailImage']))
+
+    def test_existing_gallery_caption_cannot_be_dropped(self):
+        before=ET.fromstring('<itemSchema><field id="detailImage"><complex-values><field id="images"><complex-values><field id="imageURL"><value>//sc04.alicdn.com/kf/Ha123.png</value></field><field id="generalText"><value>Original caption</value></field></complex-values></field><field id="gallery"><value>300</value></field></complex-values></field></itemSchema>');after=deepcopy(before);row=after.find('.//field[@id="images"]/complex-values');row.remove(row.find('./field[@id="generalText"]'))
+        self.assertFalse(contract.created_field_equivalent('detailImage',contract.field_snapshot(before)['detailImage'],contract.field_snapshot(after)['detailImage']))
     def test_observed_original_compact_and_thumbnail_asset_identity_stays_narrow(self):
         key=contract._created_image_identity
         self.assertEqual(key('https://sc04.alicdn.com/kf/Ha02abc/123/Ha02abc.png'),key('//sc04.alicdn.com/kf/Ha02abc.png_350x350.png'))

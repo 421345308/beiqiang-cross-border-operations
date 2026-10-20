@@ -1,0 +1,283 @@
+{
+  "method": "alibaba.icbu.product.schema.update",
+  "operation": "update",
+  "status": "submitted_needs_readback",
+  "content_status": "pending_readback",
+  "expected_fields": {
+    "saleProp": [
+      "field",
+      [
+        [
+          "id",
+          "saleProp"
+        ]
+      ],
+      "",
+      [
+        [
+          "complex-value",
+          [],
+          "",
+          [
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "p-222038415"
+                ]
+              ],
+              "",
+              [
+                [
+                  "values",
+                  [],
+                  "",
+                  [
+                    [
+                      "value",
+                      [
+                        [
+                          "inputValue",
+                          "36"
+                        ]
+                      ],
+                      "190000105",
+                      []
+                    ],
+                    [
+                      "value",
+                      [
+                        [
+                          "inputValue",
+                          "37"
+                        ]
+                      ],
+                      "29542",
+                      []
+                    ],
+                    [
+                      "value",
+                      [
+                        [
+                          "inputValue",
+                          "38"
+                        ]
+                      ],
+                      "28388",
+                      []
+                    ],
+                    [
+                      "value",
+                      [
+                        [
+                          "inputValue",
+                          "39"
+                        ]
+                      ],
+                      "190000792",
+                      []
+                    ],
+                    [
+                      "value",
+                      [
+                        [
+                          "inputValue",
+                          "40"
+                        ]
+                      ],
+                      "28389",
+                      []
+                    ],
+                    [
+                      "value",
+                      [
+                        [
+                          "inputValue",
+                          "41"
+                        ]
+                      ],
+                      "28390",
+                      []
+                    ],
+                    [
+                      "value",
+                      [
+                        [
+                          "inputValue",
+                          "42"
+                        ]
+                      ],
+                      "28391",
+                      []
+                    ],
+                    [
+                      "value",
+                      [
+                        [
+                          "inputValue",
+                          "43"
+                        ]
+                      ],
+                      "28392",
+                      []
+                    ],
+                    [
+                      "value",
+                      [
+                        [
+                          "inputValue",
+                          "44"
+                        ]
+                      ],
+                      "28393",
+                      []
+                    ],
+                    [
+                      "value",
+                      [
+                        [
+                          "inputValue",
+                          "45"
+                        ]
+                      ],
+                      "28394",
+                      []
+                    ],
+                    [
+                      "value",
+                      [
+                        [
+                          "inputValue",
+                          "46"
+                        ]
+                      ],
+                      "28395",
+                      []
+                    ]
+                  ]
+                ]
+              ]
+            ],
+            [
+              "field",
+              [
+                [
+                  "id",
+                  "p-191288010"
+                ]
+              ],
+              "",
+              [
+                [
+                  "values",
+                  [],
+                  "",
+                  [
+                    [
+                      "value",
+                      [
+                        [
+                          "img",
+                          "https://sc04.alicdn.com/kf/S3c7bf3cc7da245e9b71698652da1f34eH.jpg"
+                        ],
+                        [
+                          "inputValue",
+                          "Grey White"
+                        ]
+                      ],
+                      "-1",
+                      []
+                    ],
+                    [
+                      "value",
+                      [
+                        [
+                          "img",
+                          "https://sc04.alicdn.com/kf/S46af698c93cb4a5ea7c8e1c837b26d469.jpg"
+                        ],
+                        [
+                          "inputValue",
+                          "Grey Black"
+                        ]
+                      ],
+                      "-24",
+                      []
+                    ],
+                    [
+                      "value",
+                      [
+                        [
+                          "img",
+                          "https://sc04.alicdn.com/kf/S5db3f4865ff34b518351073c4dafcfeeS.jpg"
+                        ],
+                        [
+                          "inputValue",
+                          "Grey Khaki"
+                        ]
+                      ],
+                      "-47",
+                      []
+                    ]
+                  ]
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "sku_verification": null,
+  "task_pack": null,
+  "replacement_plan": null,
+  "replacement_transition": null,
+  "inventory_input": null,
+  "post_publish_acceptance": {
+    "phase": "post_publish_completion",
+    "target_score": 5.0,
+    "actual_score": null,
+    "observed_at": null,
+    "score_source": null,
+    "diagnostics": {
+      "status": "not_read"
+    },
+    "score_status": "pending_score",
+    "overall_status": "PENDING_SCORE",
+    "unverified_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "versioned_content": null,
+    "required_content_checks": [
+      "formal_fields",
+      "review_approved",
+      "public_page",
+      "sku_binding",
+      "media_review",
+      "source_truth",
+      "keyword_persistence"
+    ],
+    "limits": "Platform listing score does not prove public content, source truth or real product quality."
+  },
+  "attempted_at": "2026-10-20T04:33:05.940280+00:00",
+  "response": {
+    "trace_id": "2133fc2917924707889288507e0fa4",
+    "product_id": 1601939635505,
+    "biz_success": true,
+    "request_id": "212c41d317924707889342419",
+    "_trace_id_": "2133fc2917924707889288507e0fa4"
+  },
+  "refs": {
+    "request_id": "212c41d317924707889342419",
+    "trace_id": "2133fc2917924707889288507e0fa4",
+    "message": null,
+    "error": null
+  },
+  "product_id": "1601939635505"
+}
