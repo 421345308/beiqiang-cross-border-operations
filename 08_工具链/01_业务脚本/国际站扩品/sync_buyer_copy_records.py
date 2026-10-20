@@ -2,13 +2,18 @@
 
 No platform writes. Preserve unrelated registry fields and other workstreams.
 """
+
+import sys as _registry_sys
+from pathlib import Path as _RegistryPath
+_registry_sys.path.insert(0, str(_RegistryPath(__file__).resolve().parents[3]/"08_工具链/06_工作区维护"))
+from product_registry import ProductRegistry
 from pathlib import Path
 from datetime import datetime,timezone
 import importlib.util,json,argparse,hashlib,sys
 
 ROOT=Path(__file__).resolve().parents[3]
 BASE=ROOT/'02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化'
-REGISTRY=ROOT/'02_Alibaba运营/05_扩品工程/数据/产品与链接台账.json'
+REGISTRY=ProductRegistry(ROOT)
 
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--ids',required=True);args=ap.parse_args()

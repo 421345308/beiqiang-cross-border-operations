@@ -2,7 +2,7 @@
 
 from .strategy import platform_id, targets_for, validate_options
 
-LEDGER = "02_Alibaba运营/05_扩品工程/数据/产品与链接台账.json"
+LEDGER = "00_总控台/产品中心/数据/产品.json"
 ENTRIES = {
     "product": ["02_Alibaba运营/AGENTS.md", "02_Alibaba运营/00_运营SOP/国际站商品全生命周期SOP.md"],
     "content": ["05_内容与视频/AGENTS.md", "05_内容与视频/README.md"],

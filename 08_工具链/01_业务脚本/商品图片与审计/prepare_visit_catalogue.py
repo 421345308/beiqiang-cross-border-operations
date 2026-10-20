@@ -1,4 +1,9 @@
 """Collect an expanded buyer catalogue from local, source-mapped evidence."""
+
+import sys as _registry_sys
+from pathlib import Path as _RegistryPath
+_registry_sys.path.insert(0, str(_RegistryPath(__file__).resolve().parents[3]/"08_工具链/06_工作区维护"))
+from product_registry import ProductRegistry
 import argparse
 import json
 import re
@@ -35,7 +40,7 @@ def main():
     root=args.root;out=args.output;out.mkdir(parents=True,exist_ok=True)
     old=root/'04_客户开发/06_报价与产品册/full_catalog_2026-10-04'
     mapping={x['code']:x for x in read(old/'source_mapping_internal.json') if x.get('identity')}
-    ledger=read(root/'02_Alibaba运营/05_扩品工程/数据/产品与链接台账.json')
+    ledger=read(ProductRegistry(root))
     products={x['id']:x for x in ledger['products']};sources={x['id']:x for x in ledger['sources']}
     rows=[];urls=set();excluded=[]
     for item in read(old/'catalogue_public_data.json'):

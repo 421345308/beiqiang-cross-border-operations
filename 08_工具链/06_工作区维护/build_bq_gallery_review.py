@@ -1,4 +1,9 @@
 """Read-only contact sheets of current gallery images, with exact URL/slot records."""
+
+import sys as _registry_sys
+from pathlib import Path as _RegistryPath
+_registry_sys.path.insert(0, str(_RegistryPath(__file__).resolve().parents[2]/"08_工具链/06_工作区维护"))
+from product_registry import ProductRegistry
 from concurrent.futures import ThreadPoolExecutor
 from io import BytesIO
 import hashlib
@@ -15,7 +20,7 @@ OUT=ROOT/'99_临时区/商品对应/图审'
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--all-links',action='store_true');args=parser.parse_args()
-    data=json.loads((ROOT/'02_Alibaba运营/05_扩品工程/数据/产品与链接台账.json').read_text(encoding='utf-8-sig'))
+    data=json.loads((ProductRegistry(ROOT)).read_text(encoding='utf-8-sig'))
     listings={x['id']:x for x in data['listings']}
     targets=data['bq_ease_optimization']['targets']
     chosen={}

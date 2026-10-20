@@ -1,14 +1,21 @@
 """Use collected seller product metrics, never quality score, to select source directions."""
+
+import sys as _registry_sys
+from pathlib import Path as _RegistryPath
+_registry_sys.path.insert(0, str(_RegistryPath(__file__).resolve().parents[3]/"08_工具链/06_工作区维护"))
+from product_registry import ProductRegistry
 from pathlib import Path
 from datetime import datetime,timezone
 import json,re,sys,time
 ROOT=Path(__file__).resolve().parents[3]
 BASE=ROOT/'02_Alibaba运营/05_扩品工程/执行记录/HR实源替换'
 DATA=ROOT/'99_临时区/HR实源替换/商品经营数据'
-REG=ROOT/'02_Alibaba运营/05_扩品工程/数据/产品与链接台账.json'
+REG=ProductRegistry(ROOT)
 METRICS=['exposure','clicks','ctr_percent','visitors','inquiries','tm_people']
 def load(p):return json.loads(p.read_text(encoding='utf8'))
 def save(p,x):
+    if hasattr(p, 'write_registry'):
+        return p.write_registry(x)
     raw=(json.dumps(x,ensure_ascii=False,indent=2)+'\n').encode('utf8')
     temporary=p.with_name(p.name+'.operating-selection.tmp')
     temporary.write_bytes(raw)

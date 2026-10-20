@@ -1,0 +1,401 @@
+{
+  "schema_version": 1,
+  "updated_on": "2026-10-20",
+  "stores": [
+    {
+      "key": "douyin_legacy",
+      "name": "抖店旧店"
+    },
+    {
+      "key": "douyin_leidansenyang",
+      "name": "雷丹森羊品牌专卖店"
+    }
+  ],
+  "listings": [
+    {
+      "store_key": "douyin_legacy",
+      "source_model": "ZX9002",
+      "product_id": null,
+      "identity_state": "PENDING_CANONICAL_BINDING",
+      "version": "加绒",
+      "content_file": "09_国内电商/抖店/数据/棉鞋内容优化.json",
+      "content_key": "ZX9002",
+      "identity_evidence": "09_国内电商/抖店/数据/棉鞋上品包.json#styles.ZX9002",
+      "scope": "复用已存在的原款对应；加绒版本材料和渠道SKU逐店核验，不继承其他渠道状态。",
+      "observation": {
+        "state": "APPLIED_READBACK_AUDIT_PASSED",
+        "record_updated_on": "2026-10-15",
+        "scope": "复用单款渠道档案中的保存证据，本次未重新查询平台。媒体正文维护在content_file，商品精确ID与正式回执留.local。"
+      }
+    },
+    {
+      "store_key": "douyin_legacy",
+      "source_model": "ZX2116",
+      "product_id": "BQ031",
+      "identity_state": "MATCHED_SOURCE_MODEL",
+      "version": "加绒",
+      "content_file": "09_国内电商/抖店/数据/棉鞋内容优化.json",
+      "content_key": "ZX2116",
+      "identity_evidence": "09_国内电商/抖店/数据/棉鞋上品包.json#styles.ZX2116",
+      "scope": "复用已存在的原款对应；加绒版本材料和渠道SKU逐店核验，不继承其他渠道状态。",
+      "observation": {
+        "state": "APPLIED_READBACK_AUDIT_PASSED",
+        "record_updated_on": "2026-10-15",
+        "scope": "复用单款渠道档案中的保存证据，本次未重新查询平台。媒体正文维护在content_file，商品精确ID与正式回执留.local。"
+      }
+    },
+    {
+      "store_key": "douyin_legacy",
+      "source_model": "ZX9507",
+      "product_id": null,
+      "identity_state": "PENDING_CANONICAL_BINDING",
+      "version": "加绒",
+      "content_file": "09_国内电商/抖店/数据/棉鞋内容优化.json",
+      "content_key": "ZX9507",
+      "identity_evidence": "09_国内电商/抖店/数据/棉鞋上品包.json#styles.ZX9507",
+      "scope": "复用已存在的原款对应；加绒版本材料和渠道SKU逐店核验，不继承其他渠道状态。",
+      "observation": {
+        "state": "APPLIED_READBACK_AUDIT_PASSED",
+        "record_updated_on": "2026-10-15",
+        "scope": "复用单款渠道档案中的保存证据，本次未重新查询平台。媒体正文维护在content_file，商品精确ID与正式回执留.local。"
+      }
+    },
+    {
+      "store_key": "douyin_legacy",
+      "source_model": "K6116",
+      "product_id": "BQ027",
+      "identity_state": "MATCHED_SOURCE_MODEL",
+      "version": "加绒",
+      "content_file": "09_国内电商/抖店/数据/棉鞋内容优化.json",
+      "content_key": "K6116",
+      "identity_evidence": "09_国内电商/抖店/数据/棉鞋上品包.json#styles.K6116",
+      "scope": "复用已存在的原款对应；加绒版本材料和渠道SKU逐店核验，不继承其他渠道状态。",
+      "observation": {
+        "state": "APPLIED_READBACK_AUDIT_PASSED",
+        "record_updated_on": "2026-10-15",
+        "scope": "复用单款渠道档案中的保存证据，本次未重新查询平台。媒体正文维护在content_file，商品精确ID与正式回执留.local。"
+      }
+    },
+    {
+      "store_key": "douyin_legacy",
+      "source_model": "8811",
+      "product_id": "BQ058",
+      "identity_state": "MATCHED_SOURCE_MODEL",
+      "version": "加绒",
+      "content_file": "09_国内电商/抖店/数据/旧混款整理.json",
+      "content_key": "8811",
+      "identity_evidence": "09_国内电商/抖店/数据/棉鞋上品包.json#styles.8811",
+      "scope": "复用已存在的原款对应；加绒版本材料和渠道SKU逐店核验，不继承其他渠道状态。",
+      "observation": {
+        "state": "APPLIED_READBACK_AUDIT_PASSED",
+        "record_updated_on": "2026-10-15",
+        "scope": "复用单款渠道档案中的保存证据，本次未重新查询平台。媒体正文维护在content_file，商品精确ID与正式回执留.local。"
+      }
+    },
+    {
+      "store_key": "douyin_legacy",
+      "source_model": "A116",
+      "product_id": "BQ018",
+      "identity_state": "MATCHED_SOURCE_MODEL",
+      "version": "加绒",
+      "content_file": "09_国内电商/抖店/数据/旧混款整理.json",
+      "content_key": "A116",
+      "identity_evidence": "09_国内电商/抖店/数据/棉鞋上品包.json#styles.A116",
+      "scope": "复用已存在的原款对应；加绒版本材料和渠道SKU逐店核验，不继承其他渠道状态。",
+      "observation": {
+        "state": "APPLIED_READBACK_AUDIT_PASSED",
+        "record_updated_on": "2026-10-15",
+        "scope": "复用单款渠道档案中的保存证据，本次未重新查询平台。媒体正文维护在content_file，商品精确ID与正式回执留.local。"
+      }
+    },
+    {
+      "store_key": "douyin_legacy",
+      "source_model": "A1689",
+      "product_id": "BQ025",
+      "identity_state": "MATCHED_SOURCE_MODEL",
+      "version": "加绒",
+      "content_file": "09_国内电商/抖店/数据/旧混款整理.json",
+      "content_key": "A1689",
+      "identity_evidence": "09_国内电商/抖店/数据/棉鞋上品包.json#styles.A1689",
+      "scope": "复用已存在的原款对应；加绒版本材料和渠道SKU逐店核验，不继承其他渠道状态。",
+      "observation": {
+        "state": "APPLIED_READBACK_AUDIT_PASSED",
+        "record_updated_on": "2026-10-15",
+        "scope": "复用单款渠道档案中的保存证据，本次未重新查询平台。媒体正文维护在content_file，商品精确ID与正式回执留.local。"
+      }
+    },
+    {
+      "store_key": "douyin_legacy",
+      "source_model": "A212",
+      "product_id": "BQ048",
+      "identity_state": "MATCHED_SOURCE_MODEL",
+      "version": "加绒",
+      "content_file": "09_国内电商/抖店/数据/旧混款整理.json",
+      "content_key": "A212",
+      "identity_evidence": "09_国内电商/抖店/数据/棉鞋上品包.json#styles.A212",
+      "scope": "复用已存在的原款对应；加绒版本材料和渠道SKU逐店核验，不继承其他渠道状态。",
+      "observation": {
+        "state": "APPLIED_READBACK_AUDIT_PASSED",
+        "record_updated_on": "2026-10-15",
+        "scope": "复用单款渠道档案中的保存证据，本次未重新查询平台。媒体正文维护在content_file，商品精确ID与正式回执留.local。"
+      }
+    },
+    {
+      "store_key": "douyin_legacy",
+      "source_model": "A507",
+      "product_id": "BQ014",
+      "identity_state": "MATCHED_SOURCE_MODEL",
+      "version": "加绒",
+      "content_file": "09_国内电商/抖店/数据/旧混款整理.json",
+      "content_key": "A507",
+      "identity_evidence": "09_国内电商/抖店/数据/棉鞋上品包.json#styles.A507",
+      "scope": "复用已存在的原款对应；加绒版本材料和渠道SKU逐店核验，不继承其他渠道状态。",
+      "observation": {
+        "state": "APPLIED_READBACK_AUDIT_PASSED",
+        "record_updated_on": "2026-10-15",
+        "scope": "复用单款渠道档案中的保存证据，本次未重新查询平台。媒体正文维护在content_file，商品精确ID与正式回执留.local。"
+      }
+    },
+    {
+      "store_key": "douyin_legacy",
+      "source_model": "H7116",
+      "product_id": "BQ037",
+      "identity_state": "MATCHED_SOURCE_MODEL",
+      "version": "加绒",
+      "content_file": "09_国内电商/抖店/数据/旧混款整理.json",
+      "content_key": "H7116",
+      "identity_evidence": "09_国内电商/抖店/数据/棉鞋上品包.json#styles.H7116",
+      "scope": "复用已存在的原款对应；加绒版本材料和渠道SKU逐店核验，不继承其他渠道状态。",
+      "observation": {
+        "state": "APPLIED_READBACK_AUDIT_PASSED",
+        "record_updated_on": "2026-10-15",
+        "scope": "复用单款渠道档案中的保存证据，本次未重新查询平台。媒体正文维护在content_file，商品精确ID与正式回执留.local。"
+      }
+    },
+    {
+      "store_key": "douyin_legacy",
+      "source_model": "H7212",
+      "product_id": null,
+      "identity_state": "PENDING_CANONICAL_BINDING",
+      "version": "加绒",
+      "content_file": "09_国内电商/抖店/数据/旧混款整理.json",
+      "content_key": "H7212",
+      "identity_evidence": "09_国内电商/抖店/数据/棉鞋上品包.json#styles.H7212",
+      "scope": "复用已存在的原款对应；加绒版本材料和渠道SKU逐店核验，不继承其他渠道状态。",
+      "observation": {
+        "state": "APPLIED_READBACK_AUDIT_PASSED",
+        "record_updated_on": "2026-10-15",
+        "scope": "复用单款渠道档案中的保存证据，本次未重新查询平台。媒体正文维护在content_file，商品精确ID与正式回执留.local。"
+      }
+    },
+    {
+      "store_key": "douyin_legacy",
+      "source_model": "K6212",
+      "product_id": "BQ021",
+      "identity_state": "MATCHED_SOURCE_MODEL",
+      "version": "加绒",
+      "content_file": "09_国内电商/抖店/数据/旧混款整理.json",
+      "content_key": "K6212",
+      "identity_evidence": "09_国内电商/抖店/数据/棉鞋上品包.json#styles.K6212",
+      "scope": "复用已存在的原款对应；加绒版本材料和渠道SKU逐店核验，不继承其他渠道状态。",
+      "observation": {
+        "state": "APPLIED_READBACK_AUDIT_PASSED",
+        "record_updated_on": "2026-10-15",
+        "scope": "复用单款渠道档案中的保存证据，本次未重新查询平台。媒体正文维护在content_file，商品精确ID与正式回执留.local。"
+      }
+    },
+    {
+      "store_key": "douyin_legacy",
+      "source_model": "L0017",
+      "product_id": "BQ007",
+      "identity_state": "MATCHED_SOURCE_MODEL",
+      "version": "加绒",
+      "content_file": "09_国内电商/抖店/数据/旧混款整理.json",
+      "content_key": "L0017",
+      "identity_evidence": "09_国内电商/抖店/数据/棉鞋上品包.json#styles.L0017",
+      "scope": "复用已存在的原款对应；加绒版本材料和渠道SKU逐店核验，不继承其他渠道状态。",
+      "observation": {
+        "state": "APPLIED_READBACK_AUDIT_PASSED",
+        "record_updated_on": "2026-10-15",
+        "scope": "复用单款渠道档案中的保存证据，本次未重新查询平台。媒体正文维护在content_file，商品精确ID与正式回执留.local。"
+      }
+    },
+    {
+      "store_key": "douyin_legacy",
+      "source_model": "M889",
+      "product_id": "BQ038",
+      "identity_state": "MATCHED_SOURCE_MODEL",
+      "version": "加绒",
+      "content_file": "09_国内电商/抖店/数据/旧混款整理.json",
+      "content_key": "M889",
+      "identity_evidence": "09_国内电商/抖店/数据/棉鞋上品包.json#styles.M889",
+      "scope": "复用已存在的原款对应；加绒版本材料和渠道SKU逐店核验，不继承其他渠道状态。",
+      "observation": {
+        "state": "CONTENT_PRICE_AUDIT_PASSED_SKU_MIGRATED_55",
+        "record_updated_on": "2026-10-15",
+        "scope": "复用单款渠道档案中的保存证据，本次未重新查询平台。媒体正文维护在content_file，商品精确ID与正式回执留.local。"
+      }
+    },
+    {
+      "store_key": "douyin_legacy",
+      "source_model": "R1811",
+      "product_id": "BQ015",
+      "identity_state": "MATCHED_SOURCE_MODEL",
+      "version": "加绒",
+      "content_file": "09_国内电商/抖店/数据/旧混款整理.json",
+      "content_key": "R1811",
+      "identity_evidence": "09_国内电商/抖店/数据/棉鞋上品包.json#styles.R1811",
+      "scope": "复用已存在的原款对应；加绒版本材料和渠道SKU逐店核验，不继承其他渠道状态。",
+      "observation": {
+        "state": "APPLIED_READBACK_AUDIT_PASSED",
+        "record_updated_on": "2026-10-15",
+        "scope": "复用单款渠道档案中的保存证据，本次未重新查询平台。媒体正文维护在content_file，商品精确ID与正式回执留.local。"
+      }
+    },
+    {
+      "store_key": "douyin_leidansenyang",
+      "source_model": "ZX9002",
+      "product_id": null,
+      "identity_state": "PENDING_CANONICAL_BINDING",
+      "version": "加绒",
+      "content_file": "09_国内电商/抖店/数据/品牌首发商品.json",
+      "content_key": "ZX9002",
+      "identity_evidence": "09_国内电商/抖店/数据/棉鞋上品包.json#styles.ZX9002",
+      "scope": "复用已存在的原款对应；加绒版本材料和渠道SKU逐店核验，不继承其他渠道状态。",
+      "observation": {
+        "state": "ON_SALE_BACKEND_MEDIA_H5_VERIFIED_APP_PENDING",
+        "record_updated_on": "2026-10-20",
+        "scope": "复用单款渠道档案中的保存证据，本次未重新查询平台。媒体正文维护在content_file，商品精确ID与正式回执留.local。"
+      }
+    },
+    {
+      "store_key": "douyin_leidansenyang",
+      "source_model": "A1689",
+      "product_id": "BQ025",
+      "identity_state": "MATCHED_SOURCE_MODEL",
+      "version": "加绒",
+      "content_file": "09_国内电商/抖店/数据/品牌首发商品.json",
+      "content_key": "A1689",
+      "identity_evidence": "09_国内电商/抖店/数据/棉鞋上品包.json#styles.A1689",
+      "scope": "复用已存在的原款对应；加绒版本材料和渠道SKU逐店核验，不继承其他渠道状态。",
+      "observation": {
+        "state": "ON_SALE_BACKEND_MEDIA_H5_VERIFIED_APP_PENDING",
+        "record_updated_on": "2026-10-20",
+        "scope": "复用单款渠道档案中的保存证据，本次未重新查询平台。媒体正文维护在content_file，商品精确ID与正式回执留.local。"
+      }
+    },
+    {
+      "store_key": "douyin_leidansenyang",
+      "source_model": "M889",
+      "product_id": "BQ038",
+      "identity_state": "MATCHED_SOURCE_MODEL",
+      "version": "加绒",
+      "content_file": "09_国内电商/抖店/数据/品牌首发商品.json",
+      "content_key": "M889",
+      "identity_evidence": "09_国内电商/抖店/数据/棉鞋上品包.json#styles.M889",
+      "scope": "复用已存在的原款对应；加绒版本材料和渠道SKU逐店核验，不继承其他渠道状态。",
+      "observation": {
+        "state": "ON_SALE_BACKEND_MEDIA_H5_VERIFIED_APP_PENDING",
+        "record_updated_on": "2026-10-20",
+        "scope": "复用单款渠道档案中的保存证据，本次未重新查询平台。媒体正文维护在content_file，商品精确ID与正式回执留.local。"
+      }
+    },
+    {
+      "store_key": "douyin_leidansenyang",
+      "source_model": "H7212",
+      "product_id": null,
+      "identity_state": "PENDING_CANONICAL_BINDING",
+      "version": "加绒",
+      "content_file": "09_国内电商/抖店/数据/品牌首发商品.json",
+      "content_key": "H7212",
+      "identity_evidence": "09_国内电商/抖店/数据/棉鞋上品包.json#styles.H7212",
+      "scope": "复用已存在的原款对应；加绒版本材料和渠道SKU逐店核验，不继承其他渠道状态。",
+      "observation": {
+        "state": "ON_SALE_BACKEND_MEDIA_H5_VERIFIED_APP_PENDING",
+        "record_updated_on": "2026-10-20",
+        "scope": "复用单款渠道档案中的保存证据，本次未重新查询平台。媒体正文维护在content_file，商品精确ID与正式回执留.local。"
+      }
+    },
+    {
+      "store_key": "douyin_leidansenyang",
+      "source_model": "ZX2116",
+      "product_id": "BQ031",
+      "identity_state": "MATCHED_SOURCE_MODEL",
+      "version": "加绒",
+      "content_file": "09_国内电商/抖店/数据/品牌首发商品.json",
+      "content_key": "ZX2116",
+      "identity_evidence": "09_国内电商/抖店/数据/棉鞋上品包.json#styles.ZX2116",
+      "scope": "复用已存在的原款对应；加绒版本材料和渠道SKU逐店核验，不继承其他渠道状态。",
+      "observation": {
+        "state": "ON_SALE_BACKEND_MEDIA_H5_VERIFIED_APP_PENDING",
+        "record_updated_on": "2026-10-20",
+        "scope": "复用单款渠道档案中的保存证据，本次未重新查询平台。媒体正文维护在content_file，商品精确ID与正式回执留.local。"
+      }
+    },
+    {
+      "store_key": "douyin_leidansenyang",
+      "source_model": "ZX9507",
+      "product_id": null,
+      "identity_state": "PENDING_CANONICAL_BINDING",
+      "version": "加绒",
+      "content_file": "09_国内电商/抖店/数据/品牌首发商品.json",
+      "content_key": "ZX9507",
+      "identity_evidence": "09_国内电商/抖店/数据/棉鞋上品包.json#styles.ZX9507",
+      "scope": "复用已存在的原款对应；加绒版本材料和渠道SKU逐店核验，不继承其他渠道状态。",
+      "observation": {
+        "state": "ON_SALE_BACKEND_MEDIA_H5_VERIFIED_APP_PENDING",
+        "record_updated_on": "2026-10-20",
+        "scope": "复用单款渠道档案中的保存证据，本次未重新查询平台。媒体正文维护在content_file，商品精确ID与正式回执留.local。"
+      }
+    },
+    {
+      "store_key": "douyin_leidansenyang",
+      "source_model": "A116",
+      "product_id": "BQ018",
+      "identity_state": "MATCHED_SOURCE_MODEL",
+      "version": "加绒",
+      "content_file": "09_国内电商/抖店/数据/品牌首发商品.json",
+      "content_key": "A116",
+      "identity_evidence": "09_国内电商/抖店/数据/棉鞋上品包.json#styles.A116",
+      "scope": "复用已存在的原款对应；加绒版本材料和渠道SKU逐店核验，不继承其他渠道状态。",
+      "observation": {
+        "state": "ON_SALE_H5_MEDIA_COUPON_VERIFIED_APP_PENDING",
+        "record_updated_on": "2026-10-20",
+        "scope": "复用单款渠道档案中的保存证据，本次未重新查询平台。媒体正文维护在content_file，商品精确ID与正式回执留.local。"
+      }
+    },
+    {
+      "store_key": "douyin_leidansenyang",
+      "source_model": "K6116",
+      "product_id": "BQ027",
+      "identity_state": "MATCHED_SOURCE_MODEL",
+      "version": "加绒",
+      "content_file": "09_国内电商/抖店/数据/品牌首发商品.json",
+      "content_key": "K6116",
+      "identity_evidence": "09_国内电商/抖店/数据/棉鞋上品包.json#styles.K6116",
+      "scope": "复用已存在的原款对应；加绒版本材料和渠道SKU逐店核验，不继承其他渠道状态。",
+      "observation": {
+        "state": "ON_SALE_H5_MEDIA_COUPON_VERIFIED_APP_PENDING",
+        "record_updated_on": "2026-10-20",
+        "scope": "复用单款渠道档案中的保存证据，本次未重新查询平台。媒体正文维护在content_file，商品精确ID与正式回执留.local。"
+      }
+    },
+    {
+      "store_key": "douyin_leidansenyang",
+      "source_model": "A212",
+      "product_id": "BQ048",
+      "identity_state": "MATCHED_SOURCE_MODEL",
+      "version": "加绒",
+      "content_file": "09_国内电商/抖店/数据/品牌首发商品.json",
+      "content_key": "A212",
+      "identity_evidence": "09_国内电商/抖店/数据/棉鞋上品包.json#styles.A212",
+      "scope": "复用已存在的原款对应；加绒版本材料和渠道SKU逐店核验，不继承其他渠道状态。",
+      "observation": {
+        "state": "ON_SALE_H5_MEDIA_COUPON_VERIFIED_APP_PENDING",
+        "record_updated_on": "2026-10-20",
+        "scope": "复用单款渠道档案中的保存证据，本次未重新查询平台。媒体正文维护在content_file，商品精确ID与正式回执留.local。"
+      }
+    }
+  ],
+  "coverage_note": "本索引覆盖旧店15款与新店9款已维护档案；新店另有9212独立在售款未纳入内容档案，保留未对应缺口。不是完整平台实时目录。精确店铺/商品/SKU ID仅在.local正式证据中保存。"
+}

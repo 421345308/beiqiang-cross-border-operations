@@ -1,11 +1,16 @@
 """Refresh derived catalog/source/optimization summary without overwriting original evidence."""
+
+import sys as _registry_sys
+from pathlib import Path as _RegistryPath
+_registry_sys.path.insert(0, str(_RegistryPath(__file__).resolve().parents[2]/"08_工具链/06_工作区维护"))
+from product_registry import ProductRegistry
 from collections import Counter
 import json
 from pathlib import Path
 from product_dossiers import sync_formal_references
 
 ROOT=Path(__file__).resolve().parents[2]
-REGISTRY=ROOT/'02_Alibaba运营/05_扩品工程/数据/产品与链接台账.json'
+REGISTRY=ProductRegistry(ROOT)
 AREA=ROOT/'02_Alibaba运营/05_扩品工程/数据/目录对账'
 
 def main():

@@ -20,6 +20,8 @@ from prepare_company_gallery import ROLES
 def now():return datetime.now(timezone.utc).isoformat()
 def load(p):return b.load(p)
 def save(p,x):
+ if hasattr(p, 'write_registry'):
+     return p.write_registry(x)
  p.parent.mkdir(parents=True,exist_ok=True)
  with tempfile.NamedTemporaryFile(mode='w',encoding='utf8',dir=p.parent,prefix='.'+p.name+'.',suffix='.tmp',delete=False)as h:
   json.dump(x,h,ensure_ascii=False,indent=2);h.write('\n');temporary=h.name

@@ -17,6 +17,8 @@ FIELDS = ['textDesc', 'companyFaqDesc']
 PROTECTED_IDS = frozenset({'1601825074604'})
 def now(): return datetime.now(timezone.utc).isoformat()
 def save(path, value):
+    if hasattr(path, 'write_registry'):
+        return path.write_registry(value)
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(value, ensure_ascii=False, indent=2)+'\n', encoding='utf8')
 def sha(path): return hashlib.sha256(path.read_bytes()).hexdigest()

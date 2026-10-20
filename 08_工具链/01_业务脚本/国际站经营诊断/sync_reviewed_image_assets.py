@@ -1,4 +1,9 @@
 """Index exact uploaded masters and current formal colour bindings without network access."""
+
+import sys as _registry_sys
+from pathlib import Path as _RegistryPath
+_registry_sys.path.insert(0, str(_RegistryPath(__file__).resolve().parents[3]/"08_工具链/06_工作区维护"))
+from product_registry import ProductRegistry
 from pathlib import Path
 from collections import defaultdict
 import sys
@@ -27,7 +32,7 @@ def main():
     cache['content_media_revision']={'at':s.now(),'scope':'Exact locally reviewed uploaded masters, indexed from successful image-bank receipts. Does not assert every bank asset is currently bound.'}
     s.save(cachefile,cache)
     native={c._created_image_identity(u):r for u,r in cache['assets'].items()if r.get('file')and(s.ROOT/r['file']).is_file()}
-    reg=s.load(s.ROOT/'02_Alibaba运营/05_扩品工程/数据/产品与链接台账.json')
+    reg=s.load(ProductRegistry(s.ROOT))
     current={str(p['id'])for p in s.load(s.RAW/'全店图片续修/当前目录/catalog.json')['products']};groups=defaultdict(dict);missing=[]
     for listing in reg['listings']:
         pid=listing['id']

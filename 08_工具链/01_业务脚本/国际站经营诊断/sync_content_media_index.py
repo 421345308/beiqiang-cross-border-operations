@@ -1,4 +1,9 @@
 """Bind current reviewed media to exact CDN identities, without copying masters."""
+
+import sys as _registry_sys
+from pathlib import Path as _RegistryPath
+_registry_sys.path.insert(0, str(_RegistryPath(__file__).resolve().parents[3]/"08_工具链/06_工作区维护"))
+from product_registry import ProductRegistry
 from pathlib import Path
 from PIL import Image
 import json,sys,subprocess
@@ -6,7 +11,7 @@ sys.path.insert(0,str(Path(__file__).parent));import revise_catalog_content as s
 import schema_publish_contract as c
 
 def main():
-    sys.stdout.reconfigure(encoding='utf8');file=s.ROOT/'02_Alibaba运营/05_扩品工程/数据/产品与链接台账.json';data=s.load(file);cachefile=s.ROOT/'02_Alibaba运营/05_扩品工程/数据/目录对账/当前素材清单.json';cache=s.load(cachefile);records={}
+    sys.stdout.reconfigure(encoding='utf8');file=ProductRegistry(s.ROOT);data=s.load(file);cachefile=s.ROOT/'02_Alibaba运营/05_扩品工程/数据/目录对账/当前素材清单.json';cache=s.load(cachefile);records={}
     for bankfile in s.BASE.rglob('图片银行.json'):
         for role,row in s.load(bankfile).get('items',{}).items():
             if row.get('state')!='UPLOADED'or not row.get('file'):continue
@@ -34,7 +39,7 @@ def main():
     cache['content_media_revision']={'at':s.now(),'entry':s.rel(s.ENTRY),'master_identities':len(records),'no_master_copies_created':True};s.save(cachefile,cache)
     products={p['id']:p for p in data['products']};p=products['BQ015'];p.setdefault('local_assets',{})['current_colour_images']=s.rel(s.BASE/'配色与尺码修正/BQ015_颜色图纠正/本地颜色图映射.json');p['next_action']='六色66SKU与旧三色错绑已核；新增33色码组合按负责人确认设999可询货标记，独立库存接口与正式SKU已回读；继续六色总览及评分刷新核对。'
     p=products['BQ-NS003'];p['next_action']='七色75SKU与七色主图总览已正式核验5.0；粉色无独立实图，不将紫色冒充粉色；保留原44SKU身份与价格。'
-    p=products['BQ018'];assets=p.setdefault('local_assets',{});gallery=assets.setdefault('current_gallery_by_id',{});oldfile='02_Alibaba运营/05_扩品工程/数据/产品与链接台账.json';old=json.loads(subprocess.check_output(['git','show','HEAD:'+oldfile]).decode('utf8'));oldp=next(x for x in old['products']if x['id']=='BQ018');prior=oldp.get('local_assets',{}).get('current_gallery_by_id',{})
+    p=products['BQ018'];assets=p.setdefault('local_assets',{});gallery=assets.setdefault('current_gallery_by_id',{});oldfile='00_总控台/产品中心/数据/产品.json';old=json.loads(subprocess.check_output(['git','show','HEAD:'+oldfile]).decode('utf8'));oldp=next(x for x in old['products']if x['id']=='BQ018');prior=oldp.get('local_assets',{}).get('current_gallery_by_id',{})
     for pid,value in list(gallery.items()):
         if 'BQ018_错误尺码图'in value:
             assets.setdefault('current_detail_image_revision_by_id',{})[pid]=value

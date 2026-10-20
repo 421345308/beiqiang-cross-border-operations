@@ -1,4 +1,9 @@
 """Upload and bind an exact reviewed gallery plan on existing original IDs."""
+
+import sys as _registry_sys
+from pathlib import Path as _RegistryPath
+_registry_sys.path.insert(0, str(_RegistryPath(__file__).resolve().parents[3]/"08_工具链/06_工作区维护"))
+from product_registry import ProductRegistry
 from pathlib import Path
 from xml.etree import ElementTree as E
 from decimal import Decimal
@@ -118,7 +123,7 @@ def main():
             report['failed']=[k for k,v in checks.items()if v is False];save(public/'verification.json',report);print(json.dumps({k:report[k]for k in ('id','state','score','failed')},ensure_ascii=False),flush=True)
 
 def sync(plan,folder):
-    file=ROOT/'02_Alibaba运营/05_扩品工程/数据/产品与链接台账.json';d=load(file)
+    file=ProductRegistry(ROOT);d=load(file)
     for pid in plan['ids']:
         public=folder/'商品'/pid;report=load(public/'verification.json');assert report['state']=='FORMAL_FIELDS_SCORE_PASS';raw=RAW/plan.get('execution_key',plan['family'])/pid;got=load(raw/'after_get.json');p=got['product'];l=next(x for x in d['listings']if x['id']==pid);product=next(x for x in d['products']if x['id']==l['product_id']);canonical=ROOT/'02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品'/pid
         if l.get('formal_fields',{}).get('at','')>report['at']:continue

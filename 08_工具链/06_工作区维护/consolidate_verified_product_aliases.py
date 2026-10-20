@@ -1,4 +1,9 @@
 """Consolidate two evidence-confirmed duplicate identities without removing originals."""
+
+import sys as _registry_sys
+from pathlib import Path as _RegistryPath
+_registry_sys.path.insert(0, str(_RegistryPath(__file__).resolve().parents[2]/"08_工具链/06_工作区维护"))
+from product_registry import ProductRegistry
 import argparse
 from datetime import datetime,timezone
 import hashlib
@@ -6,7 +11,7 @@ import json
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[2]
-REGISTRY=ROOT/'02_Alibaba运营/05_扩品工程/数据/产品与链接台账.json'
+REGISTRY=ProductRegistry(ROOT)
 OLD='01_产品资产/02_可发布素材/00_最终上传/BQ063_7212'
 NEW='01_产品资产/02_可发布素材/00_最终上传/BQ028_BISCUIT/历史准备_原BQ063'
 REPORT=ROOT/'02_Alibaba运营/05_扩品工程/数据/目录对账/素材位置调整.json'

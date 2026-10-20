@@ -2,13 +2,18 @@
 
 Does not assert publication, stock, OEM capability or material from folder names.
 """
+
+import sys as _registry_sys
+from pathlib import Path as _RegistryPath
+_registry_sys.path.insert(0, str(_RegistryPath(__file__).resolve().parents[2]/"08_工具链/06_工作区维护"))
+from product_registry import ProductRegistry
 import hashlib
 import json
 from pathlib import Path
 import re
 
 ROOT = Path(__file__).resolve().parents[2]
-REGISTRY = ROOT / '02_Alibaba运营/05_扩品工程/数据/产品与链接台账.json'
+REGISTRY = ProductRegistry(ROOT)
 ASSETS = ROOT / '01_产品资产/02_可发布素材/00_最终上传'
 RAW = ROOT / '01_产品资产/01_原始数据包'
 

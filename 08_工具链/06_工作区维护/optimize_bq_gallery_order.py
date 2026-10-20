@@ -1,4 +1,9 @@
 """Reorder individually matched, visually reviewed BQ images; no video or claim changes."""
+
+import sys as _registry_sys
+from pathlib import Path as _RegistryPath
+_registry_sys.path.insert(0, str(_RegistryPath(__file__).resolve().parents[2]/"08_工具链/06_工作区维护"))
+from product_registry import ProductRegistry
 import argparse
 from concurrent.futures import ThreadPoolExecutor,as_completed
 from copy import deepcopy
@@ -12,7 +17,7 @@ from urllib.parse import urlparse
 from xml.etree import ElementTree as ET
 
 ROOT=Path(__file__).resolve().parents[2]
-REGISTRY=ROOT/'02_Alibaba运营/05_扩品工程/数据/产品与链接台账.json'
+REGISTRY=ProductRegistry(ROOT)
 AREA=ROOT/'02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录'
 # One-based visually reviewed preferred order. Unmatched variant images stay
 # in their original slot; family identity alone never authorizes replacing them.
@@ -36,6 +41,8 @@ def key(url):
     name=Path(urlparse('https:'+url if url.startswith('//') else url).path).name
     return re.sub(r'_\d+x\d+\.jpg$','',name,flags=re.I).rsplit('.',1)[0]
 def save(path,value):
+    if hasattr(path, 'write_registry'):
+        return path.write_registry(value)
     path.parent.mkdir(parents=True,exist_ok=True)
     path.write_text(json.dumps(value,ensure_ascii=False,indent=2),encoding='utf-8')
 def stamp():return datetime.now(timezone.utc).isoformat()

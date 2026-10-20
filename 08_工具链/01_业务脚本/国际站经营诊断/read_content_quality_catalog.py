@@ -1,4 +1,9 @@
 """Read-only current catalog, product fields and one exact public source page."""
+
+import sys as _registry_sys
+from pathlib import Path as _RegistryPath
+_registry_sys.path.insert(0, str(_RegistryPath(__file__).resolve().parents[3]/"08_工具链/06_工作区维护"))
+from product_registry import ProductRegistry
 from pathlib import Path
 from datetime import datetime,timezone
 from concurrent.futures import ThreadPoolExecutor
@@ -63,7 +68,7 @@ def photos():
  print('M001_PHOTOS_SAVED',len(rows),flush=True)
 
 def sources():
- registry=json.loads((ROOT/'02_Alibaba运营/05_扩品工程/数据/产品与链接台账.json').read_text(encoding='utf8'));audit=json.loads((OUT/'全店内容检查.json').read_text(encoding='utf8'));families={r['family']for r in audit['rows']};products={p['id']:p for p in registry['products']};links={s['id']:s for s in registry['sources']};targets={}
+ registry=json.loads((ProductRegistry(ROOT)).read_text(encoding='utf8'));audit=json.loads((OUT/'全店内容检查.json').read_text(encoding='utf8'));families={r['family']for r in audit['rows']};products={p['id']:p for p in registry['products']};links={s['id']:s for s in registry['sources']};targets={}
  for f in families:
   product=products.get(f,{})
   keys=[product.get('adopted_source_id'),product.get('reference_source_id')]+[x.get('source_id')for x in product.get('source_routes_by_color',{}).values()]

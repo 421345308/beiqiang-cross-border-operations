@@ -2,6 +2,11 @@
 
 Earlier score-pending reports remain historical. No live write is performed here.
 """
+
+import sys as _registry_sys
+from pathlib import Path as _RegistryPath
+_registry_sys.path.insert(0, str(_RegistryPath(__file__).resolve().parents[3]/"08_工具链/06_工作区维护"))
+from product_registry import ProductRegistry
 from pathlib import Path
 from collections import Counter
 import sys
@@ -38,7 +43,7 @@ def main():
             'inventory_scope':CONFIRMATION,'physical_stock_claim':False,
             'evidence':[s.rel(gallery),s.rel(marker),s.rel(base/'商品'/pid/'verification.json'),s.rel(s.BASE/'正式差异收尾/商品'/pid/'verification.json')]})
     s.save(base/'综合核验.json',report)
-    registry=s.ROOT/'02_Alibaba运营/05_扩品工程/数据/产品与链接台账.json';d=s.load(registry)
+    registry=ProductRegistry(s.ROOT);d=s.load(registry)
     for row in report['rows']:
         listing=next(x for x in d['listings'] if x['id']==row['id'])
         assert listing['formal_fields']['at']==row['at'],'Latest canonical snapshot must match accepted gallery observation'

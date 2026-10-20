@@ -4,6 +4,11 @@ Current target Schema names determine IDs. Full category-property values are
 preserved except the two explicitly reviewed material roles; title is included
 unchanged to protect it against platform attribute-based title regeneration.
 """
+
+import sys as _registry_sys
+from pathlib import Path as _RegistryPath
+_registry_sys.path.insert(0, str(_RegistryPath(__file__).resolve().parents[3]/"08_工具链/06_工作区维护"))
+from product_registry import ProductRegistry
 from pathlib import Path
 from datetime import datetime, timezone
 from xml.etree import ElementTree as E
@@ -14,7 +19,7 @@ import argparse, hashlib, importlib.util, json, sys
 ROOT = Path(__file__).resolve().parents[3]
 BASE = ROOT / '02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08'
 AUDIT = BASE / '质量复核_2026-10-09/材料字段复核'
-REG = ROOT / '02_Alibaba运营/05_扩品工程/数据/产品与链接台账.json'
+REG = ProductRegistry(ROOT)
 sys.path.insert(0, str(Path(__file__).parent))
 import publish_hot_rank_hr_a_batch as pub
 from read_only_catalog import read_only_call, product_readiness, ReadBusinessError

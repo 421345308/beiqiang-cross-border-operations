@@ -3,6 +3,11 @@
 Plan, uploads and each original product update have independent once ledgers.
 Only current sale properties, SKU rows and their price dependencies are submitted.
 """
+
+import sys as _registry_sys
+from pathlib import Path as _RegistryPath
+_registry_sys.path.insert(0, str(_RegistryPath(__file__).resolve().parents[3]/"08_工具链/06_工作区维护"))
+from product_registry import ProductRegistry
 from pathlib import Path
 from xml.etree import ElementTree as E
 from collections import Counter
@@ -114,7 +119,7 @@ def main():
             report.update(failed=[k for k,v in checks.items()if v is False],pairs=[list(k)for k in pairs],sku_count=sum(pairs.values()));save(public/'verification.json',report);print(json.dumps({k:report[k]for k in ('id','state','score','failed','sku_count')},ensure_ascii=False),flush=True)
 
 def sync(plan,folder):
-    file=ROOT/'02_Alibaba运营/05_扩品工程/数据/产品与链接台账.json';data=load(file)
+    file=ProductRegistry(ROOT);data=load(file)
     for pid in plan['ids']:
         public=folder/'商品'/pid;report=load(public/'verification.json');assert report['status']=='approved'and all(v is True for k,v in report['checks'].items()if k!='score'),'Only proved formal fields can sync; score pending stays explicit';raw=RAW/plan.get('execution_key',plan['family'])/pid;got=load(raw/'after_get.json');p=got['product'];listing=next(x for x in data['listings']if x['id']==pid);product=next(x for x in data['products']if x['id']==listing['product_id']);canonical=ROOT/'02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品'/pid
         if listing.get('formal_fields',{}).get('at','')>report['at']:continue

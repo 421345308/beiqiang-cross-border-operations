@@ -1,4 +1,9 @@
 """Map current formal CDN identities to unique local selected assets."""
+
+import sys as _registry_sys
+from pathlib import Path as _RegistryPath
+_registry_sys.path.insert(0, str(_RegistryPath(__file__).resolve().parents[3]/"08_工具链/06_工作区维护"))
+from product_registry import ProductRegistry
 from pathlib import Path
 from PIL import Image
 import json,os
@@ -27,7 +32,7 @@ def sync():
  import sys
  sys.path.insert(0,str(o.ROOT/'08_工具链/06_工作区维护'))
  import build_product_workspace as workspace
- registry=o.b.load(o.ROOT/'02_Alibaba运营/05_扩品工程/数据/产品与链接台账.json')
+ registry=o.b.load(ProductRegistry(o.ROOT))
  assert not workspace.validate(registry)
  for path,raw in workspace.build(registry).items():workspace.write_generated(o.ROOT/path,raw)
  print('CURRENT_MEDIA_IDENTITY_AND_DOSSIER_SYNC')

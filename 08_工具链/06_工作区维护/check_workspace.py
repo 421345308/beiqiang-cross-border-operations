@@ -18,6 +18,7 @@ import re
 import stat
 import subprocess
 import sys
+from product_registry import ProductRegistry, PRODUCTS
 from urllib.parse import unquote
 
 
@@ -349,7 +350,7 @@ class WorkspaceCheck:
         if not area.exists():
             return
         generator = self.root / "08_工具链/06_工作区维护/build_product_workspace.py"
-        registry = area / "数据/产品与链接台账.json"
+        registry = self.root / PRODUCTS
         if not generator.exists() or not registry.exists():
             self.issue("product_registry", registry, "missing canonical product registry or renderer")
             return
@@ -358,7 +359,7 @@ class WorkspaceCheck:
         spec.loader.exec_module(module)
         module.ROOT = self.root
         try:
-            data = json.loads(registry.read_text(encoding="utf-8-sig"))
+            data = json.loads(ProductRegistry(self.root).read_text())
             for error in module.validate(data, self.root):
                 self.issue("product_registry", registry, error)
             if self.errors and any(x["check"] == "product_registry" for x in self.errors):
@@ -367,6 +368,11 @@ class WorkspaceCheck:
                 path = self.root / rel
                 if not module.view_matches(path, expected):
                     self.issue("product_registry", path, "generated view differs from canonical registry; regenerate instead of editing separately")
+            if (self.root / "09_国内电商/抖店/数据/渠道产品对应.json").is_file():
+                import build_product_hub
+                for rel, expected in build_product_hub.build(self.root).items():
+                    if not module.view_matches(self.root/rel, expected):
+                        self.issue("product_registry", self.root/rel, "cross-channel view differs; regenerate product hub")
             self.counts["product_groups"] = len(data["products"])
             self.counts["listing_ids"] = len(data["listings"])
             self.counts["shared_sources"] = len(data["sources"])

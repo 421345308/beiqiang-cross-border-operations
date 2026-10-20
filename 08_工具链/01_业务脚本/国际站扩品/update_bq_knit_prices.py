@@ -1,4 +1,9 @@
 """Owner-approved BQ001–030 prices: exact IDs, current Schema, once-only writes."""
+
+import sys as _registry_sys
+from pathlib import Path as _RegistryPath
+_registry_sys.path.insert(0, str(_RegistryPath(__file__).resolve().parents[3]/"08_工具链/06_工作区维护"))
+from product_registry import ProductRegistry
 from pathlib import Path
 import argparse, copy, hashlib, importlib.util, json, re
 from concurrent.futures import ThreadPoolExecutor
@@ -8,7 +13,7 @@ import schema_publish_contract as contract
 from read_only_catalog import read_only_call
 
 ROOT=Path(__file__).resolve().parents[3]
-REG=ROOT/'02_Alibaba运营/05_扩品工程/数据/产品与链接台账.json'
+REG=ProductRegistry(ROOT)
 OUT=ROOT/'02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整'
 DETAILS=ROOT/'02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品'
 FIELDS=('scPrice','ladderPrice','productTitle')
@@ -16,6 +21,8 @@ USD=['7.48','7.18','6.73']
 def now():return datetime.now(timezone.utc).isoformat()
 def load(p):return json.loads(p.read_text(encoding='utf-8-sig'))
 def save(p,v):
+    if hasattr(p, 'write_registry'):
+        return p.write_registry(v)
     p.parent.mkdir(parents=True,exist_ok=True)
     p.write_text(json.dumps(v,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 def rel(p):return p.relative_to(ROOT).as_posix()

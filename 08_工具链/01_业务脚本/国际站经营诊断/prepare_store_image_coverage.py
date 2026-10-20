@@ -1,4 +1,9 @@
 """Freeze current catalog image coverage and all sibling M1 review sheets."""
+
+import sys as _registry_sys
+from pathlib import Path as _RegistryPath
+_registry_sys.path.insert(0, str(_RegistryPath(__file__).resolve().parents[3]/"08_工具链/06_工作区维护"))
+from product_registry import ProductRegistry
 from pathlib import Path
 from collections import Counter
 from PIL import Image,ImageDraw,ImageOps
@@ -7,7 +12,7 @@ sys.path.insert(0,str(Path(__file__).parent));import revise_catalog_content as s
 import schema_publish_contract as c
 
 def main():
-    sys.stdout.reconfigure(encoding='utf8');catalog=s.load(s.RAW/'全店图片续修/当前目录/catalog.json');current={str(r['id'])for r in catalog['products']};reg=s.load(s.ROOT/'02_Alibaba运营/05_扩品工程/数据/产品与链接台账.json');cache=s.load(s.ROOT/'02_Alibaba运营/05_扩品工程/数据/目录对账/当前素材清单.json')['assets'];native={c._created_image_identity(u):r for u,r in cache.items()if r.get('file')and(s.ROOT/r['file']).is_file()}
+    sys.stdout.reconfigure(encoding='utf8');catalog=s.load(s.RAW/'全店图片续修/当前目录/catalog.json');current={str(r['id'])for r in catalog['products']};reg=s.load(ProductRegistry(s.ROOT));cache=s.load(s.ROOT/'02_Alibaba运营/05_扩品工程/数据/目录对账/当前素材清单.json')['assets'];native={c._created_image_identity(u):r for u,r in cache.items()if r.get('file')and(s.ROOT/r['file']).is_file()}
     rows=[];m1={};missing=[];problems=[]
     for l in reg['listings']:
         pid=l['id']

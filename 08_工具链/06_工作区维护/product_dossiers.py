@@ -24,7 +24,7 @@ def builds(data):
         parent = Path(product['dossier_path']).parent if product.get('dossier_path') else AREA / product['id']
         current_model=product.get('current_model')or product['aliases'][0]
         lines = [f"# {current_model} 商品档案", '',
-                 '此页由唯一台账生成，是本款唯一资料入口；修改事实到下方唯一字段文件或台账，平台正式值到按ID保存的回读原件。原始包只读，候选/历史材料不当当前线上素材。', '',
+                 '此页是本款国际站档案，由产品中心及国际站商品数据组合生成；跨渠道共用身份与供应来源回产品中心，渠道正式值回按ID保存的回读原件。原始包只读，候选/历史材料不当当前线上素材。', '',
                  f"来源状态：`{product['source_state']}`。下一步：{product['next_action']}", '',
                  '## 当前资料与实物证据', '']
         legacy=[x for x in product['aliases']if x!=current_model]

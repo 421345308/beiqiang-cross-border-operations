@@ -3,6 +3,11 @@
 This is a native SVG information layout, not photographic retouching. The raster
 photographs are embedded without cropping, recolouring, resampling or reconstruction.
 """
+
+import sys as _registry_sys
+from pathlib import Path as _RegistryPath
+_registry_sys.path.insert(0, str(_RegistryPath(__file__).resolve().parents[3]/"08_工具链/06_工作区维护"))
+from product_registry import ProductRegistry
 from pathlib import Path
 from html import escape
 import argparse,base64,hashlib,json,math,mimetypes,subprocess,sys,re
@@ -51,7 +56,7 @@ def diagram(rows,detail):
 
 def main():
     sys.stdout.reconfigure(encoding='utf8');ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--family',required=True);a=ap.parse_args()
-    registry=s.load(s.ROOT/'02_Alibaba运营/05_扩品工程/数据/产品与链接台账.json');cache=s.load(s.ROOT/'02_Alibaba运营/05_扩品工程/数据/目录对账/当前素材清单.json')['assets'];native={c._created_image_identity(u):r for u,r in cache.items()if r.get('file')and(s.ROOT/r['file']).is_file()}
+    registry=s.load(ProductRegistry(s.ROOT));cache=s.load(s.ROOT/'02_Alibaba运营/05_扩品工程/数据/目录对账/当前素材清单.json')['assets'];native={c._created_image_identity(u):r for u,r in cache.items()if r.get('file')and(s.ROOT/r['file']).is_file()}
     grouped={}
     for listing in registry['listings']:
         if listing['product_id']!=a.family or listing['id']in s.PROTECTED:continue

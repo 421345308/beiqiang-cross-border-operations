@@ -4,6 +4,11 @@ Inventory update is a delta API: a saved attempt is never automatically replayed
 Only the 33 added Green/Pink/Off White EU35–45 SKUs per reviewed ID can change.
 999 is a seller-side inquiry marker, never evidence of physical availability.
 """
+
+import sys as _registry_sys
+from pathlib import Path as _RegistryPath
+_registry_sys.path.insert(0, str(_RegistryPath(__file__).resolve().parents[3]/"08_工具链/06_工作区维护"))
+from product_registry import ProductRegistry
 from pathlib import Path
 from collections import Counter
 from decimal import Decimal
@@ -122,7 +127,7 @@ def main():
             print(json.dumps({k:report[k] for k in ('id','state','score','failed')},ensure_ascii=False),flush=True)
 
 def sync():
-    file=s.ROOT/'02_Alibaba运营/05_扩品工程/数据/产品与链接台账.json';data=s.load(file)
+    file=ProductRegistry(s.ROOT);data=s.load(file)
     for pid in IDS:
         public,raw=BASE/pid,RAW/pid;report=s.load(public/'verification.json')
         assert all(v is True for k,v in report['checks'].items() if k!='score')

@@ -3,6 +3,11 @@
 Preserves all twelve existing SKU IDs/codes, existing price tiers and every
 unsubmitted field. A write ledger prevents replay of uploads or updates.
 """
+
+import sys as _registry_sys
+from pathlib import Path as _RegistryPath
+_registry_sys.path.insert(0, str(_RegistryPath(__file__).resolve().parents[3]/"08_工具链/06_工作区维护"))
+from product_registry import ProductRegistry
 from pathlib import Path
 from xml.etree import ElementTree as E
 from collections import Counter
@@ -89,7 +94,7 @@ def verify(api,cfg):
     report.update(checks=checks,failed=[k for k,v in checks.items()if v is False],sku_count=len(bindings),colors=sorted(axes['191288010'].values()),sku_bindings=bindings);save(BASE/'verification.json',report);print(json.dumps({k:report[k]for k in ('id','state','score','failed','sku_count')},ensure_ascii=False),flush=True)
 def sync(api=None,cfg=None):
     from PIL import Image
-    report=load(BASE/'verification.json');assert report['state']=='FORMAL_FIELDS_SCORE_PASS';plan=inspect_plan();got=load(RAW/'after_get.json');p=got['product'];file=ROOT/'02_Alibaba运营/05_扩品工程/数据/产品与链接台账.json';data=load(file);listing=next(x for x in data['listings']if x['id']==PID);product=next(x for x in data['products']if x['id']==listing['product_id']);source=next(x for x in data['sources']if x['id']==plan['source_id'])
+    report=load(BASE/'verification.json');assert report['state']=='FORMAL_FIELDS_SCORE_PASS';plan=inspect_plan();got=load(RAW/'after_get.json');p=got['product'];file=ProductRegistry(ROOT);data=load(file);listing=next(x for x in data['listings']if x['id']==PID);product=next(x for x in data['products']if x['id']==listing['product_id']);source=next(x for x in data['sources']if x['id']==plan['source_id'])
     canonical=ROOT/'02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品'/PID
     save(canonical/'formal_get.json',{'requested_product_id':PID,'observed_at_utc':report['at'],'method':'alibaba.icbu.product.get','response':shared.sanitized(got),'sanitized_fields':['owner_member','owner_member_display_name','owner_member_id'],'raw_response_file':rel(RAW/'after_get.json')});save(canonical/'formal_render.json',shared.sanitized(load(RAW/'after_render.json')))
     refs=[rel(BASE/n)for n in ('事实与页面计划.json','图片银行.json','prepared.json','update_receipt.json','verification.json')]

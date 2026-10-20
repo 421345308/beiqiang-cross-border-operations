@@ -28,7 +28,10 @@ CANARY='1601976084873'
 
 def now():return datetime.now(timezone.utc).isoformat()
 def load(p):return b.load(p)
-def save(p,x):b.save(p,x)
+def save(p,x):
+    if hasattr(p, 'write_registry'):
+        return p.write_registry(x)
+    b.save(p,x)
 def sha(p):return b.sha(p)
 def folder(pid):return BASE/'商品'/pid/'V8'
 def ledger_file(pid):

@@ -109,6 +109,18 @@ class RuntimeTests(unittest.TestCase):
         self.write_json(LEDGER, self.ledger)
         self.assert_code("IDENTITY_AMBIGUOUS", lambda: self.engine.ws.inspect_product("TEST_ALIAS"))
 
+    def test_split_product_supply_and_channel_identity(self):
+        self.write_json(LEDGER, {"updated_on": "2026-10-20", "products": self.ledger["products"]})
+        self.write_json("00_总控台/产品中心/数据/供应来源.json", {"sources": []})
+        self.write_json("02_Alibaba运营/05_扩品工程/数据/国际站商品.json", {
+            "listings": self.ledger["listings"],
+            "product_state": {"TEST001": {"dossier_path": "channel.md"}},
+        })
+        product = self.engine.ws.inspect_product("TEST_ALIAS")
+        self.assertEqual(product["listing_ids"], ["1600000000001"])
+        self.assertEqual(product["source_state"], "HOLD_SOURCE")
+        self.assertIn("channel.md", product["references"])
+
     def test_title_scope_reads_only_product_entries(self):
         plan = self.engine.ws.plan(self.request())
         self.assertEqual(plan["modules"], ["product"])

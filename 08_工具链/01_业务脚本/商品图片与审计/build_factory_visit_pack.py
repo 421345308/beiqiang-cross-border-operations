@@ -2,6 +2,11 @@
 
 Contact configuration and customer information stay local. No network calls.
 """
+
+import sys as _registry_sys
+from pathlib import Path as _RegistryPath
+_registry_sys.path.insert(0, str(_RegistryPath(__file__).resolve().parents[3]/"08_工具链/06_工作区维护"))
+from product_registry import ProductRegistry
 import argparse
 import json
 from io import BytesIO
@@ -93,7 +98,7 @@ def frame(c, page, section):
 def build_catalogue(root, data_dir, out, cfg):
     public = json.loads((data_dir/'catalogue_public_data.json').read_text(encoding='utf-8-sig'))
     mapping = json.loads((data_dir/'source_mapping_internal.json').read_text(encoding='utf-8-sig'))
-    ledger = json.loads((root/'02_Alibaba运营/05_扩品工程/数据/产品与链接台账.json').read_text(encoding='utf-8-sig'))
+    ledger = json.loads((ProductRegistry(root)).read_text(encoding='utf-8-sig'))
     products = {p['id']: p for p in ledger['products']}
     verified = {}
     for row in mapping:

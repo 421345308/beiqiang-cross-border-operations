@@ -3,6 +3,11 @@
 Candidate/missing registry labels do not establish that an existing page lacks
 an actual shoe. Preserve every ID's evidence and distinguish unresolved history.
 """
+
+import sys as _registry_sys
+from pathlib import Path as _RegistryPath
+_registry_sys.path.insert(0, str(_RegistryPath(__file__).resolve().parents[3]/"08_工具链/06_工作区维护"))
+from product_registry import ProductRegistry
 from pathlib import Path
 from collections import Counter
 from datetime import datetime
@@ -11,7 +16,7 @@ import hashlib,json,argparse
 ROOT=Path(__file__).resolve().parents[3]
 BASE=ROOT/'02_Alibaba运营/05_扩品工程/执行记录/HR实源替换'
 CAT=ROOT/'99_临时区/HR实源替换/全量目录/catalog.json'
-REG=ROOT/'02_Alibaba运营/05_扩品工程/数据/产品与链接台账.json'
+REG=ProductRegistry(ROOT)
 
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--catalog',type=Path,default=CAT);args=parser.parse_args();catalog_path=args.catalog

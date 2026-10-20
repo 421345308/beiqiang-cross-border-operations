@@ -1,4 +1,9 @@
 """Read-only exact-ID performance triage; different periods/channels stay separate."""
+
+import sys as _registry_sys
+from pathlib import Path as _RegistryPath
+_registry_sys.path.insert(0, str(_RegistryPath(__file__).resolve().parents[3]/"08_工具链/06_工作区维护"))
+from product_registry import ProductRegistry
 from pathlib import Path
 from datetime import datetime,timezone
 from collections import Counter,defaultdict
@@ -8,7 +13,7 @@ ROOT=Path(__file__).resolve().parents[3]
 AREA=ROOT/'02_Alibaba运营/01_店铺与全店诊断'
 BASE=AREA/'经营诊断证据/商品表现处置'
 ADS=AREA/'经营诊断证据/推广计划_20260914123458/20261015'
-REG=ROOT/'02_Alibaba运营/05_扩品工程/数据/产品与链接台账.json'
+REG=ProductRegistry(ROOT)
 PROTECTED={'1601825074604'}
 def load(p):return json.loads(p.read_text(encoding='utf8'))
 def rel(p):return p.relative_to(ROOT).as_posix()

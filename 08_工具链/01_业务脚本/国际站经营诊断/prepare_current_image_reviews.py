@@ -1,4 +1,9 @@
 """Build current per-family image review sheets from exact formal CDN bindings."""
+
+import sys as _registry_sys
+from pathlib import Path as _RegistryPath
+_registry_sys.path.insert(0, str(_RegistryPath(__file__).resolve().parents[3]/"08_工具链/06_工作区维护"))
+from product_registry import ProductRegistry
 from pathlib import Path
 from PIL import Image,ImageOps,ImageDraw
 import sys,argparse
@@ -7,7 +12,7 @@ import schema_publish_contract as c
 
 def main():
     sys.stdout.reconfigure(encoding='utf8');ap=argparse.ArgumentParser();ap.add_argument('--families',required=True);a=ap.parse_args()
-    registry=s.load(s.ROOT/'02_Alibaba运营/05_扩品工程/数据/产品与链接台账.json');cache=s.load(s.ROOT/'02_Alibaba运营/05_扩品工程/数据/目录对账/当前素材清单.json')['assets'];by_identity={c._created_image_identity(url):r for url,r in cache.items()if r.get('file')and(s.ROOT/r['file']).exists()}
+    registry=s.load(ProductRegistry(s.ROOT));cache=s.load(s.ROOT/'02_Alibaba运营/05_扩品工程/数据/目录对账/当前素材清单.json')['assets'];by_identity={c._created_image_identity(url):r for url,r in cache.items()if r.get('file')and(s.ROOT/r['file']).exists()}
     out=s.ROOT/'99_临时区/商品质量全店复核/整组现图';records=[]
     for family in a.families.split(','):
         p=next(x for x in registry['products']if x['id']==family)

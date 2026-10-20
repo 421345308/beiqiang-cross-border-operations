@@ -20,7 +20,7 @@ from pathlib import Path
 from urllib.parse import urlsplit
 
 BASE = Path(__file__).resolve().parent
-CATALOG = BASE.parents[1] / "02_Alibaba运营/05_扩品工程/数据/产品与链接台账.json"
+CATALOG = BASE.parents[1] / "00_总控台/产品中心/数据/产品.json"
 NAME = "电商商品与订单管理系统"
 VERSION = "V1.0"
 DEMO_PASSWORD = 'Demo-Only-8766'

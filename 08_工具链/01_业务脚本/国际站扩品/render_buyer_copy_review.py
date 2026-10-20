@@ -3,6 +3,11 @@
 Earlier copy.json objects remain unchanged as submission evidence. This
 read-only renderer never publishes or upgrades their platform/source status.
 """
+
+import sys as _registry_sys
+from pathlib import Path as _RegistryPath
+_registry_sys.path.insert(0, str(_RegistryPath(__file__).resolve().parents[3]/"08_工具链/06_工作区维护"))
+from product_registry import ProductRegistry
 from pathlib import Path
 from collections import defaultdict
 import hashlib, json
@@ -11,7 +16,7 @@ ROOT = Path(__file__).resolve().parents[3]
 BASE = ROOT/'02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化'
 
 def main():
-    registry=json.loads((ROOT/'02_Alibaba运营/05_扩品工程/数据/产品与链接台账.json').read_text('utf8'))
+    registry=json.loads((ProductRegistry(ROOT)).read_text('utf8'))
     links={x['id']:x for x in registry['listings']}
     general=json.loads((BASE/'通用FAQ与公司简介.json').read_text('utf8'))
     assert general['status']=='APPROVED_FOR_BATCH_REPLACEMENT'

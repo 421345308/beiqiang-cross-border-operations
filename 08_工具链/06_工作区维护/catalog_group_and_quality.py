@@ -1,4 +1,9 @@
 """Read actual group definitions and quality scores into the current catalog evidence."""
+
+import sys as _registry_sys
+from pathlib import Path as _RegistryPath
+_registry_sys.path.insert(0, str(_RegistryPath(__file__).resolve().parents[2]/"08_工具链/06_工作区维护"))
+from product_registry import ProductRegistry
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import importlib.util
 import json
@@ -7,7 +12,7 @@ from datetime import datetime, timezone
 
 ROOT=Path(__file__).resolve().parents[2]
 AREA=ROOT/'02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录'
-REGISTRY=ROOT/'02_Alibaba运营/05_扩品工程/数据/产品与链接台账.json'
+REGISTRY=ProductRegistry(ROOT)
 
 def main():
     spec=importlib.util.spec_from_file_location('api',ROOT/'.agents/skills/alibaba-openapi-operator/scripts/alibaba_openapi.py')

@@ -13,12 +13,13 @@ import hashlib
 import os
 import tempfile
 import json
+from product_registry import ProductRegistry
 from pathlib import Path
 from urllib.parse import urlsplit, quote
 
 ROOT = Path(__file__).resolve().parents[2]
 AREA = Path('02_Alibaba运营/05_扩品工程')
-REGISTRY = AREA / '数据/产品与链接台账.json'
+REGISTRY = Path('00_总控台/产品中心/数据/产品.json')
 TOTAL = AREA / '国际站合规扩品工程总控.md'
 QUERY = AREA / '供应商产品总表/供应商产品查询.html'
 CSV = AREA / '供应商产品总表/供应商产品总表.csv'
@@ -124,7 +125,7 @@ def build(data: dict) -> dict[Path, bytes]:
     candidate=sum(not p.get('adopted_source_id') and not p.get('reference_source_id') and bool(p.get('candidate_source_ids')) for p in products.values())
     missing=sum(not p.get('adopted_source_id') and not p.get('reference_source_id') and not p.get('candidate_source_ids') for p in products.values())
     md=['# 国际站扩品总文件','',f"整理日期：{data['updated_on']}。此日期表示台账整理，货源、价格、平台状态沿用各自证据时间；本次未重新核验线上。",'',
-        '**日常只看本文件；需要检索时打开[同数据查询页](供应商产品总表/供应商产品查询.html)。** 款式、原鞋款直链、存量链接和下一动作汇总如下，不要求阅读每次修改记录。','',
+        '本页只负责国际站执行与逐链接验收。跨渠道共用身份、供应商与外部扩品统一看[产品中心](../../00_总控台/产品中心/README.md)；按店铺查商品看[产品与渠道查询](../../00_总控台/产品中心/产品与渠道查询.html)。国际站内检索仍可用[本渠道查询页](供应商产品总表/供应商产品查询.html)。','',
         f"登记 {len(products)} 个产品/候选组，关联 {len(data['listings'])} 个历史及正式商品ID；{adopted} 组有已采用的历史来源映射，{mapped} 组补回原款来源但逐链接绑定待核，{candidate} 组只有候选来源，{missing} 组仍缺采购映射。登记组数不代表独立鞋型、在线数量或已确认供给。",'',
         'A/B/C 以及同一 BQ 编号下的存量后缀链接共用产品身份与货源，只做一次款式溯源；各商品ID的提交、审核、展示、关键词及公开验收分别记录。候选不等于已经替换，缺失兄弟链接的正式绑定不靠推断补成通过。','',
         '## 当前任务与下一步','', '| 工作 | 已有结论及边界 | 下一步 | 证据 |','| --- | --- | --- | --- |']
@@ -168,7 +169,7 @@ def build(data: dict) -> dict[Path, bytes]:
         if dossier:
             rendered[-1]['local_assets']['files'].insert(0,{'path':'本款统一商品档案','url':quote(Path(os.path.relpath(ROOT/dossier,ROOT/QUERY.parent)).as_posix(),safe='/.:_-')})
     md+=['','## 维护方式','',
-        '只修改[产品与链接台账](数据/产品与链接台账.json)，运行[生成与检查工具](../../08_工具链/06_工作区维护/build_product_workspace.py)刷新本页、查询页和兼容CSV；这些展示文件不独立维护。规则只改[唯一商品SOP](../00_运营SOP/国际站商品全生命周期SOP.md)。','',
+        '共用事实改[产品中心](../../00_总控台/产品中心/README.md)，国际站链接及执行状态改[国际站商品数据](数据/国际站商品.json)。运行生成工具刷新本页、查询页和兼容CSV；派生文件不独立维护。发布规则只改[唯一商品SOP](../00_运营SOP/国际站商品全生命周期SOP.md)。','',
         '当前结论覆盖原条目；不按修改次数新建报告、队列或“明早验收”。正式写入/拒绝/未知结果及证明验收范围的原始回执按商品ID留存，新证据只更新对应台账并关联回执。历史材料中的旧暂停、线程分工和待授权不自动成为当前指令。','']
     payload=json.dumps(rendered,ensure_ascii=False).replace('<','\\u003c')
     page='''<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>扩品总表 · 贝强</title><style>
@@ -206,7 +207,7 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--check',action='store_true')
     args=parser.parse_args()
-    data=json.loads((ROOT/REGISTRY).read_text(encoding='utf-8-sig'))
+    data=json.loads(ProductRegistry(ROOT).read_text())
     errors=validate(data)
     if errors:
         for e in errors: print(e)

@@ -1,7 +1,12 @@
+
+import sys as _registry_sys
+from pathlib import Path as _RegistryPath
+_registry_sys.path.insert(0, str(_RegistryPath(__file__).resolve().parents[3]/"08_工具链/06_工作区维护"))
+from product_registry import ProductRegistry
 from pathlib import Path
 from datetime import datetime,timezone,timedelta
 import json,sys,copy,importlib.util
-ROOT=Path(__file__).resolve().parents[3];BASE=ROOT/'02_Alibaba运营/05_扩品工程/执行记录/HR实源替换';REG=ROOT/'02_Alibaba运营/05_扩品工程/数据/产品与链接台账.json'
+ROOT=Path(__file__).resolve().parents[3];BASE=ROOT/'02_Alibaba运营/05_扩品工程/执行记录/HR实源替换';REG=ProductRegistry(ROOT)
 sys.path.insert(0,str(Path(__file__).parent));import replace_hr_real_sources as op
 sys.path.insert(0,str(ROOT/'08_工具链/06_工作区维护'));import build_product_workspace as workspace
 def rel(p):return p.relative_to(ROOT).as_posix()

@@ -4,6 +4,11 @@ Frozen exact IDs, current Schema, minimal incremental updates, one write ledger 
 ID, independent formal/non-target/score checks, then registry/source double-sync.
 Never retries an acknowledged or unknown write. Does not recreate absent IDs.
 """
+
+import sys as _registry_sys
+from pathlib import Path as _RegistryPath
+_registry_sys.path.insert(0, str(_RegistryPath(__file__).resolve().parents[3]/"08_工具链/06_工作区维护"))
+from product_registry import ProductRegistry
 from pathlib import Path
 from datetime import datetime,timezone
 from concurrent.futures import ThreadPoolExecutor,as_completed
@@ -19,7 +24,7 @@ import schema_publish_contract as contract
 from read_only_catalog import read_only_call,ReadBusinessError
 BASE=ROOT/'02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图'
 ENTRY=ROOT/'02_Alibaba运营/06_图片与检查记录/共享工厂详情'
-REG=ROOT/'02_Alibaba运营/05_扩品工程/数据/产品与链接台账.json'
+REG=ProductRegistry(ROOT)
 CURRENT=ROOT/'02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品'
 ASSET='01_产品资产/02_可发布素材/00_最终上传/00_厂家资料/03_当前工厂主图/F1_factory.png'
 ASSET_SHA='13987d2f18fb1e3274ebf1d2eb2bed945d8ee12c33c2a0a5f23e3f41890ce29f'

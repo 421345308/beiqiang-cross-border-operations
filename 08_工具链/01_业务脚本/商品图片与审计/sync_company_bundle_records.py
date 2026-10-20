@@ -1,13 +1,18 @@
 """Synchronize approved company-bundle results with the unique registry/dossiers.
 No platform writes; no source facts or product-specific highlights are changed.
 """
+
+import sys as _registry_sys
+from pathlib import Path as _RegistryPath
+_registry_sys.path.insert(0, str(_RegistryPath(__file__).resolve().parents[3]/"08_工具链/06_工作区维护"))
+from product_registry import ProductRegistry
 from pathlib import Path
 import argparse, copy, importlib.util, json, sys, tempfile, os
 sys.path.insert(0,str(Path(__file__).resolve().parent))
 import replace_company_bundle as op
 sys.path.insert(0,str(op.ROOT/'08_工具链/01_业务脚本/国际站扩品'))
 from field_stage_navigation import annotate
-REG=op.ROOT/'02_Alibaba运营/05_扩品工程/数据/产品与链接台账.json'
+REG=ProductRegistry(op.ROOT)
 DETAILS=op.ROOT/'02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品'
 
 def main():

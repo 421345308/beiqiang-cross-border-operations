@@ -3,6 +3,11 @@
 Only productTitle/textDesc are submitted. Images, FAQ, SKU and trade terms
 remain protected. Unknown writes are reconciled by reads, never replayed.
 """
+
+import sys as _registry_sys
+from pathlib import Path as _RegistryPath
+_registry_sys.path.insert(0, str(_RegistryPath(__file__).resolve().parents[3]/"08_工具链/06_工作区维护"))
+from product_registry import ProductRegistry
 from pathlib import Path
 from datetime import datetime,timezone
 from xml.etree import ElementTree as E
@@ -22,6 +27,8 @@ PROTECTED={'1601825074604','1601943574507','1601943545775'}
 def now():return datetime.now(timezone.utc).isoformat()
 def load(p):return json.loads(p.read_text(encoding='utf8'))
 def save(p,x):
+    if hasattr(p, 'write_registry'):
+        return p.write_registry(x)
     p.parent.mkdir(parents=True,exist_ok=True)
     # Local watchers can transiently lock a JSON path on Windows. A complete
     # sibling temporary file prevents a failed write from truncating the truth.
@@ -132,7 +139,7 @@ def main():
             for row in pool.map(guarded,ids):result.append(row);print(json.dumps(row,ensure_ascii=False),flush=True)
     save(BASE/(a.mode+'_summary.json'),{'at':now(),'rows':result})
 def sync(ids):
-    file=ROOT/'02_Alibaba运营/05_扩品工程/数据/产品与链接台账.json';data=load(file);listings={l['id']:l for l in data['listings']};products={p['id']:p for p in data['products']};synced=[]
+    file=ProductRegistry(ROOT);data=load(file);listings={l['id']:l for l in data['listings']};products={p['id']:p for p in data['products']};synced=[]
     for pid in ids:
         public=BASE/'商品'/pid;v=public/'verification.json'
         if not v.exists():continue

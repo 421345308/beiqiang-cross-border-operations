@@ -2,6 +2,11 @@
 
 Read-only toward Alibaba. Never infer source identity from titles or a score.
 """
+
+import sys as _registry_sys
+from pathlib import Path as _RegistryPath
+_registry_sys.path.insert(0, str(_RegistryPath(__file__).resolve().parents[3]/"08_工具链/06_工作区维护"))
+from product_registry import ProductRegistry
 from pathlib import Path
 from urllib.parse import urlsplit
 from collections import Counter
@@ -10,7 +15,7 @@ import hashlib,json,sys,argparse,time
 
 ROOT=Path(__file__).resolve().parents[3]
 BASE=ROOT/'02_Alibaba运营/05_扩品工程/执行记录/HR实源替换'
-REG=ROOT/'02_Alibaba运营/05_扩品工程/数据/产品与链接台账.json'
+REG=ProductRegistry(ROOT)
 sys.path.insert(0,str(ROOT/'08_工具链/06_工作区维护'))
 import build_product_workspace as workspace
 
@@ -258,7 +263,7 @@ def main():
             l.setdefault('optimization',{})['source_binding_reconciliation']={'state':proof['state'],'source_id':sid,'at':now,'evidence':[ref],'platform_mutation':'NONE'}
         print(family,'EXISTING_SOURCE_BOUND',len(rows),flush=True)
     errors=workspace.validate(registry);assert not errors,errors
-    registry['updated_on']=datetime.now(timezone(timedelta(hours=8))).date().isoformat();save(REG.relative_to(ROOT),registry,expected_sha=registry_sha)
+    registry['updated_on']=datetime.now(timezone(timedelta(hours=8))).date().isoformat();REG.write_registry(registry)
     for p,data in workspace.build(registry).items():
         for attempt in range(3):
             try:

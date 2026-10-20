@@ -89,10 +89,24 @@ class Workspace:
 
     def inspect_product(self, sku, listing_id=None):
         ledger = self.json(LEDGER)
+        # New workspace stores identity independently of supply and channel state.
+        # Explicit legacy fixtures can still supply a complete composed record.
+        channel_state = {}
+        if "listings" not in ledger:
+            channel = self.json("02_Alibaba运营/05_扩品工程/数据/国际站商品.json")
+            ledger["listings"] = channel["listings"]
+            ledger["sources"] = self.json("00_总控台/产品中心/数据/供应来源.json")["sources"]
+            channel_state = channel.get("product_state", {})
         matches = [p for p in ledger["products"] if sku == p["id"] or sku in p.get("aliases", [])]
         if len(matches) != 1:
             fail("IDENTITY_AMBIGUOUS", "SKU must resolve to exactly one canonical product")
-        product = matches[0]
+        product = dict(matches[0])
+        state = channel_state.get(product["id"], {})
+        for key, value in state.items():
+            if key == "classification":
+                product[key] = {**product.get(key, {}), **value}
+            else:
+                product[key] = value
         listings = [p for p in ledger["listings"] if p.get("product_id") == product["id"]]
         if listing_id:
             listings = [p for p in listings if str(p["id"]) == str(listing_id)]

@@ -1,4 +1,9 @@
 """Reuse verified existing current bytes instead of keeping a second CDN cache copy."""
+
+import sys as _registry_sys
+from pathlib import Path as _RegistryPath
+_registry_sys.path.insert(0, str(_RegistryPath(__file__).resolve().parents[2]/"08_工具链/06_工作区维护"))
+from product_registry import ProductRegistry
 import argparse
 import hashlib
 import json
@@ -36,7 +41,7 @@ def main():
     audit['platform_cache_reuse']={'deleted_exact_cache_copies':len(replacements),'bytes_removed':sum(x['bytes'] for x in replacements.values()),'items':replacements,'scope':'已核相同字节的本地当前素材复用；原始包、公司原件与回执不删除'}
     (AREA/'本地资产唯一性.json').write_text(json.dumps(audit,ensure_ascii=False,indent=2),encoding='utf-8')
     from build_product_workspace import build,validate,write_generated
-    data=json.loads((ROOT/'02_Alibaba运营/05_扩品工程/数据/产品与链接台账.json').read_text(encoding='utf-8-sig'))
+    data=json.loads((ProductRegistry(ROOT)).read_text(encoding='utf-8-sig'))
     if validate(data):raise ValueError('Registry needs validation before derived links regenerate')
     for path,body in build(data).items():
         target=ROOT/path
