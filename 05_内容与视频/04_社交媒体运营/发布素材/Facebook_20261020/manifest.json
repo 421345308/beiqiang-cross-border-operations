@@ -1,0 +1,70 @@
+[
+  {
+    "status": "PREPARED_NOT_PUBLISHED",
+    "scheduled_slot": "2026-10-20T12:00:00+08:00",
+    "folder": "Post_01_BQ005_Knit_Details",
+    "images": [
+      {
+        "file": "01_BQ005_grey.jpg",
+        "sha256": "E9038EF3A5C858C41FF36F27D9E6DAD4A1931C2C0B6A894C06025EDE4B2527C8",
+        "source": "01_产品资产/02_可发布素材/00_最终上传/BQ005_A503/01_主图/01_main.jpg",
+        "visual_review": "2026-10-20逐张查看，与款式颜色对应，无性能文字；BQ006带绒全黑图未采用"
+      },
+      {
+        "file": "02_BQ005_white_detail.jpg",
+        "sha256": "2E9A20C4689401D9558F12A38661188F8D12BA60049E0A276C162454E26DCDFF",
+        "source": "01_产品资产/02_可发布素材/00_最终上传/BQ005_A503/01_主图/03_white.jpg",
+        "visual_review": "2026-10-20逐张查看，与款式颜色对应，无性能文字；BQ006带绒全黑图未采用"
+      },
+      {
+        "file": "03_BQ005_pink.jpg",
+        "sha256": "8E9BB6C234061EF876C30E7B2F6236F31F38A3EC61D4B6293C1C53BB713EE2F0",
+        "source": "01_产品资产/02_可发布素材/00_最终上传/BQ005_A503/01_主图/04_pink.jpg",
+        "visual_review": "2026-10-20逐张查看，与款式颜色对应，无性能文字；BQ006带绒全黑图未采用"
+      },
+      {
+        "file": "04_BQ005_black.jpg",
+        "sha256": "31C64DE58653DFCB5E995DB89618321671188BFE0F375C5321A3695B76317419",
+        "source": "01_产品资产/02_可发布素材/00_最终上传/BQ005_A503/01_主图/05_black.jpg",
+        "visual_review": "2026-10-20逐张查看，与款式颜色对应，无性能文字；BQ006带绒全黑图未采用"
+      }
+    ],
+    "facts": "产品与链接台账.json + 对应00_上架填写表.md及原始包；普通楦，不用宽头或Hands Free主张；BQ006白紫35–40；供货、数量、样品、价格、交期逐单核实",
+    "photo_count": 4,
+    "sku": "BQ005 / A503"
+  },
+  {
+    "status": "PREPARED_NOT_PUBLISHED",
+    "scheduled_slot": "2026-10-20T21:00:00+08:00",
+    "folder": "Post_02_BQ006_Sample_Shortlist",
+    "images": [
+      {
+        "file": "01_BQ006_all_white.jpg",
+        "sha256": "62A5D740A77920D05A4FA29E4D87CD5ADBEF4DE59C0618F89AC1C139922AB6A0",
+        "source": "01_产品资产/02_可发布素材/00_最终上传/BQ006_M8811/01_主图/02_white.jpg",
+        "visual_review": "2026-10-20逐张查看，与款式颜色对应，无性能文字；BQ006带绒全黑图未采用"
+      },
+      {
+        "file": "02_BQ006_white_grey.jpg",
+        "sha256": "F05DEAEE3075241859EF29ECE5755EDE5846995BB7FEC53DEE83EE162C132B43",
+        "source": "01_产品资产/02_可发布素材/00_最终上传/BQ006_M8811/01_主图/03_grey.jpg",
+        "visual_review": "2026-10-20逐张查看，与款式颜色对应，无性能文字；BQ006带绒全黑图未采用"
+      },
+      {
+        "file": "03_BQ006_black_white.jpg",
+        "sha256": "A8B438DDEF185DB9DE8CE4072CBF3DFD15FE8A0E9FA55FD7FDFBCC92D3E49AE9",
+        "source": "01_产品资产/02_可发布素材/00_最终上传/BQ006_M8811/01_主图/04_blackw.jpg",
+        "visual_review": "2026-10-20逐张查看，与款式颜色对应，无性能文字；BQ006带绒全黑图未采用"
+      },
+      {
+        "file": "04_BQ006_white_purple.jpg",
+        "sha256": "7DDB7910E906C038CB45D7C7217A46F5C739601D457C3D907E3AE0E4DBC7EEA7",
+        "source": "01_产品资产/02_可发布素材/00_最终上传/BQ006_M8811/01_主图/05_purple.jpg",
+        "visual_review": "2026-10-20逐张查看，与款式颜色对应，无性能文字；BQ006带绒全黑图未采用"
+      }
+    ],
+    "facts": "产品与链接台账.json + 对应00_上架填写表.md及原始包；普通楦，不用宽头或Hands Free主张；BQ006白紫35–40；供货、数量、样品、价格、交期逐单核实",
+    "photo_count": 4,
+    "sku": "BQ006 / M8811"
+  }
+]
