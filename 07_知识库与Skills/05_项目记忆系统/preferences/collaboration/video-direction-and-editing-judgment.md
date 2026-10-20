@@ -3,7 +3,7 @@ id: video-directing-judgment
 type: Preference
 title: 视频创作中的导演判断
 description: 视频方案、选镜、剪辑和复盘需综合全片效果，而非机械套用局部指令或秒数。
-status: active
+status: disputed
 scope: "通用 AI 视频; 方案、选镜、剪辑与成片复盘"
 source: pending
 privacy: internal
@@ -18,3 +18,5 @@ timestamp: 2026-09-11
 不能按总时长、平均素材时长或固定秒数机械切片；数字范围需有用途和证据。当局部要求影响整体效果时，说明取舍理由和替代方案。复盘以实际观看和可定位镜头为准，参数达标不能替代审美判断。
 
 原始确认记录尚未定位；具体项目例外以其 `PROJECT.md` 和当次要求为准。
+
+来源未定位，当前仅作历史待核线索；不作为默认偏好、禁令或授权。具体任务由现行业务源与本次要求决定。

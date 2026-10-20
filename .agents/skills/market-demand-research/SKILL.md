@@ -7,7 +7,7 @@ description: Research Beiqiang walking shoe market demand and product direction 
 
 ## Required reads
 
-- Read [current status](../../../00_总控台/当前状态.md), [product master](../../../00_总控台/产品经营主表.md), and dated evidence for the specific direction.
+- Read [current status](../../../00_总控台/当前状态.md), [product master](../../../00_总控台/产品中心/README.md), and dated evidence for the specific direction.
 
 Use this skill to judge what Beiqiang should push next with evidence from multiple data sources. Separate B2B supplier signals from retail demand language.
 
@@ -34,7 +34,7 @@ Rate each direction by:
 
 - Demand signal: search/result density, backend exposure/click/inquiry signal, RFQ signal, retail/social attention.
 - Competition strength: supplier count, title similarity, price pressure, content saturation.
-- Beiqiang fit: factory supply ability, product evidence, image readiness, FOB 8-12 USD/pair fit, OEM/ODM angle.
+- Beiqiang fit: factory supply ability, product evidence, image readiness, fit with the current evidenced commercial baseline, OEM/ODM angle.
 - Conversion path: whether the direction can produce a clear Alibaba title, main image, detail proof, and inquiry hook.
 
 ## 输出格式

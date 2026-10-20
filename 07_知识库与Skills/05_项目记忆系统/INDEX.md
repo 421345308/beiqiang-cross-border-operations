@@ -4,13 +4,11 @@
 
 | 类型 | 任务信号 / 适用范围 | 路径 |
 | --- | --- | --- |
-| Authorization | 用户要求与指定的原网页版 GPT 对话讨论 | [指定对话授权](preferences/collaboration/ai-collaboration-and-memory-control.md) |
-| Preference | 未指定模型的通用 AI 视频工具选择 | [视频工具偏好](preferences/collaboration/ai-video-tool-routing.md) |
-| Preference | 通用 AI 视频导演判断与剪辑 | [导演判断偏好](preferences/collaboration/video-direction-and-editing-judgment.md) |
 | Preference | 已核实鞋款的多链接图文差异 | [多链接视觉偏好](preferences/deliverables/alibaba-multilink-image-and-title-preferences.md) |
-| Preference | 对外工厂图片偏好；当前素材从业务唯一入口读取 | [对外工厂图片偏好](preferences/deliverables/buyer-facing-factory-image-preference.md) |
-| Decision | 冷邮件暂停与小样本实验 | [获客实验决定](context/projects/outreach-experiment-2026-08-27.md) |
-| Decision | BQ 链接持续优化和源链接保护 | [BQ 优化决定](context/projects/alibaba-bq-link-optimization-goal-2026-09-14.md) |
 | Experience | 多链接图片重复与 Excel 导入复盘 | [多链接失败经验](knowledge/experiences/alibaba-multilink-visual-failure-2026-08-28.md) |
 
 发布和修复直接读权威商品 SOP；技术开发直接读技术型买家 SOP；工具参数直接读当前 Skill 和中央规范。具体路径由根 `AGENTS.md` 路由，不再建立重复的记忆摘要。
+
+BQ优化状态与保护条件直接查原商品入口；早期冷邮件暂停/10人实验已被后续流水线替代，原复盘仍在客户开发原件中，不再作为活动记忆。
+
+另有3条旧偏好和1条旧授权的原确认来源未定位，正文保留为 `disputed`，退出默认索引与执行依据；不为消除警告编造来源。

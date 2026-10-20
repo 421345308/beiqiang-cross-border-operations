@@ -1,19 +1,21 @@
 ---
 name: tiktok-b2b-content
-description: Draft Beiqiang B2B footwear short-video concepts, scripts, hooks and captions for TikTok or a user-selected channel such as domestic Douyin. Match real SKU evidence to the current audience, language and brand or inquiry objective.
+description: Draft Beiqiang footwear short-video concepts, scripts, hooks and captions for TikTok or a user-selected channel, with the actual B2B or domestic retail audience taken from the project. Match real SKU evidence to the current audience, language and brand or inquiry objective.
 ---
 
 # Beiqiang B2B Short-Video Content
 
 ## Scope
 
-This skill supports Beiqiang footwear content for sourcing buyers. TikTok in its retained identifier describes the original use case; it does not set the channel for new work. Confirm the actual project audience, channel, language, objective and chosen creative approach from the user instruction and `PROJECT.md`.
+This skill supports Beiqiang footwear content for the project’s actual audience, including sourcing buyers or domestic retail consumers. TikTok in its retained identifier describes the original use case; it does not set the channel for new work. Confirm the actual project audience, channel, language, objective and chosen creative approach from the user instruction and `PROJECT.md`.
 
-Overseas importer content, domestic Douyin factory-brand ads, product introductions and inquiry-led explainers need different openings, pacing and calls to action. Do not automatically use English, Alibaba links, factory tours or a buyer-problem opening. A B2B audience can be reached through attractive lifestyle/product advertising when that serves the current brief.
+Overseas importer content, domestic Douyin factory-brand ads, product introductions and inquiry-led explainers need different openings, pacing and calls to action. Do not automatically use English, Alibaba links, factory tours or a buyer-problem opening. A sourcing audience can be reached through attractive lifestyle/product advertising when that serves the current brief.
 
-## Required context and conditional references
+## Required reads
 
 - Read the [video entry](../../../05_内容与视频/AGENTS.md), current project and exact SKU/source evidence before making product claims.
+## Conditional references
+
 - Read [script options](references/script-formats.md) for a full script/calendar; a small hook or caption edit needs only current evidence.
 - Use [positioning](../beiqiang-positioning/SKILL.md) when resolving a disputed claim/audience angle. Use competitor research when current market evidence is actually needed. Do not invoke unrelated operations simply because they are linked.
 

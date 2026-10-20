@@ -33,12 +33,12 @@ If no backend data exists yet, create a launch preparation plan and a tracking s
 ## 工作流
 
 1. Confirm product readiness: title, attributes, first image, gallery, detail page, duplicate risk, inquiry CTA.
-2. Select top 3-5 products for first P4P and deeper optimization.
+2. Select products that answer the actual launch goals and evidence gaps; suggested batch size is adjustable, and ad spending needs its own authorization.
 3. Build keyword library: core terms, scenario terms, B2B/OEM terms, negative/risky terms.
 4. Build competitor library with Firecrawl from small public-page batches.
 5. Prepare RFQ and inquiry reply templates with missing quote data marked.
 6. Set daily data recording: exposure, clicks, CTR, visitors, inquiries, P4P spend, keyword performance, buyer questions.
-7. Review every 3-7 days and adjust product, keyword, image, and follow-up actions.
+7. Choose a review window suited to the launch and reporting lag; do not turn this launch-week workflow into a permanent daily or all-channel requirement.
 
 ## 输出格式
 
@@ -55,7 +55,6 @@ TikTok/content actions:
 Data tracking table:
 Risks and confirmations:
 Today must-do list:
-ChatGPT handoff:
 ```
 
 ## 贝强业务规则

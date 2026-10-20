@@ -173,7 +173,7 @@ HR015 ABC native接口正式替换完成并由Root独立回读42新SKU实际ID/�
 
 ## 2026-09-29 执行指南小试
 
-已落盘`08_工具链/04_MCP与Workctl/WorkBuddy_HR执行指南.md`。实际CLI使用当前help支持的glm-5.0-turbo、低推理、最多8轮，仅Read/Write，任务只读指南与HR016银行清单并写两份短交付。7.7秒终止，最终事件is_error=true、Authentication required、num_turns=2；进程退出0不能算成功，两份交付均未生成。不宣称已读取指南、不扩量、不重复认证重试；Root继续HR制作提交。证据：`99_临时区/WorkBuddy_HR执行指南小试_2026-09-29/`。
+已落盘`08_工具链/04_MCP与Workctl/README.md`。实际CLI使用当前help支持的glm-5.0-turbo、低推理、最多8轮，仅Read/Write，任务只读指南与HR016银行清单并写两份短交付。7.7秒终止，最终事件is_error=true、Authentication required、num_turns=2；进程退出0不能算成功，两份交付均未生成。不宣称已读取指南、不扩量、不重复认证重试；Root继续HR制作提交。证据：`99_临时区/WorkBuddy_HR执行指南小试_2026-09-29/`。
 
 ## 2026-09-29 官方认证接入及共用目录修复
 

@@ -5,6 +5,10 @@ description: Prepare, generate and review Beiqiang footwear videos with a user-s
 
 # Beiqiang Seedance Video
 
+## Required reads
+
+- Read the current project and [video entry](../../../05_内容与视频/AGENTS.md); load provider/model references only for the selected route.
+
 ## Scope and required context
 
 Applies to Beiqiang footwear work using Seedance. It does not select the version, provider, channel, audience, language, style or runtime for a new project. The old overseas TikTok / English / Seedance 2.0 Ark setup was a project configuration, not a continuing default.

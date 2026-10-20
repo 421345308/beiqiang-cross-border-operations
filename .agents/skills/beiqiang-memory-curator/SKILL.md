@@ -9,7 +9,7 @@ description: Maintain Beiqiang memories when the user requests remembering, upda
 
 - Read the [memory protocol](../../../07_知识库与Skills/05_项目记忆系统/README.md) and [index](../../../07_知识库与Skills/05_项目记忆系统/INDEX.md) for affected entries.
 
-Read `07_知识库与Skills/05_项目记忆系统/README.md` and `INDEX.md`; reuse unchanged versions already read in the task. Read only affected entries unless the user asks for a full audit.
+Reuse unchanged protocol/index already read. Read affected entries only, unless the user requests a full memory audit.
 
 ## Authorization
 

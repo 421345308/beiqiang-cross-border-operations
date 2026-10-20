@@ -59,7 +59,6 @@ Duplicate image risk:
 Remake priorities:
 Recommended image prompts or briefs:
 Pending confirmations:
-ChatGPT handoff:
 ```
 
 Image role table fields:

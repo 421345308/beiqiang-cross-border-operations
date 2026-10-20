@@ -1,128 +1,30 @@
 ---
 name: alibaba-catalog-audit
-description: Audit the current full Beiqiang Alibaba.com catalog before further listing or promotion. Use for product identity, images, SKU bindings, detail pages, URLs, live state and conversion quality; the audit scope is the current catalog, not a fixed product count.
+description: Audit Beiqiang Alibaba.com product identity, images, SKU bindings, detail pages, URLs and conversion issues for the requested current catalog scope. A full-store audit covers the current catalog rather than a historical product count; it does not automatically block unrelated work.
 ---
 
-# Alibaba Full Catalog Audit
+# Alibaba Catalog Audit
 
 ## Required reads
 
-- Read [workspace boundaries](../../../AGENTS.md), [Alibaba entry](../../../02_Alibaba运营/AGENTS.md), and the relevant gates in the [lifecycle SOP](../../../02_Alibaba运营/00_运营SOP/国际站商品全生命周期SOP.md); inspect current catalog evidence for the audited scope.
+- Read the [Alibaba entry](../../../02_Alibaba运营/AGENTS.md), exact product/source evidence and applicable [lifecycle SOP](../../../02_Alibaba运营/00_运营SOP/国际站商品全生命周期SOP.md) gates. Reuse unchanged context already read. Current identity and supplier relationships come from the product center, not historical audit counts.
 
-货源身份、外采可供能力和 `HOLD_SOURCE` 的现行判断只读根 `AGENTS.md` 与单款证据；本 Skill 不维护第二份货源规则。
+## Scope and evidence
 
-Use this skill for Beiqiang's pre-launch or pre-promotion Alibaba.com product audit. Treat the audit as an operating decision tool, not a generic listing review.
+Establish whether the user requested a full store, one family, a batch, one field or a promotion-readiness review. A full-store audit first obtains the complete current catalog and reconciles IDs; a narrow task stays narrow. Missing evidence is unknown rather than a low invented score.
 
-Before publishing additional products, run a blocking integrity audit of every current live product. A catalog with unresolved identity, image, SKU, detail-page, or URL errors is not ready for expansion.
+Keep source identity, local drafts, official fields/review, buyer-visible content and business results separate. Label offline reviews as local preparation. For performance data retain the reporting window, timezone, currency, channel, unit, buyer deduplication and attribution; do not combine incompatible organic/ad/RFQ slices.
 
-## 适用场景
+## Review
 
-- Review all current Beiqiang Alibaba.com products before official store launch.
-- Score product pages, local upload folders, exported backend rows, or product URLs.
-- Identify main products, potential products, supplemental products, duplicate-risk products, and products not suitable for promotion.
-- Decide first-week optimization, P4P testing candidates, and products needing merge or pause.
+- Resolve physical product, source article/version, current Beiqiang model and each platform ID before evaluating presentation. A/B/C and historical aliases do not create new physical products.
+- Check requested content and its actual dependencies: title/category/attributes; image identity, roles and readability; SKU color/size bindings; details/video; commercial fields; buyer contact path. Current thresholds and single-product exceptions live only in the SOP.
+- For HTML/AI detail types inspect actual rendered content or the buyer page; empty structured image arrays alone do not establish missing details. Distinguish officially stored content from delayed or failed public rendering.
+- Compare siblings using source identity, original IDs, actual product/variant facts, buyer intent, image overlap and performance. A changed title/color/order alone is weak differentiation. Recommend canonical optimization, evidence-supported distinct pages, merge review or pause review; an audit does not itself authorize hiding/deleting products.
+- For each material issue state the observation, competing explanation, next discriminating check and smallest useful correction. Actual scores aid diagnosis; scores and page completeness do not prove supply, demand or purchase progress.
 
-## 输入要求
+## Risk scope and output
 
-Prefer these inputs:
+Apply lifecycle SOP §9 to the affected object, linked fields, shared assets or genuinely shop-wide risk. Do not make one unresolved product a blanket gate on every authorized task. Explain the actual propagation path when broader work must stop.
 
-- Product code/model, product URL, title, category, product group, attributes, keywords, selling points.
-- Main image files or screenshots, first 5 gallery images, detail page screenshots or local detail images.
-- Video availability, SKU/color images, MOQ/sample/lead-time/packing fields when available.
-- Alibaba backend data when available: impressions, clicks, CTR, visitors, inquiries, inquiry rate, P4P spend, keyword rows, RFQ leads.
-- Live readback where available: productId, title, Model Number, main-image count, SKU/color-image bindings, product detail count, company-image count, productDescType, URL scan, copy, trunk, and public page.
-
-If backend data is missing, label the result as `本地资料预审`, not final performance audit.
-
-For performance diagnosis, preserve report date/timezone, currency, link/family ID, channel, unit, deduplication and attribution. Quality score, online state, `999` and an inquiry do not establish real source or supply. Use the [read-only funnel aggregator](../../../08_工具链/01_业务脚本/funnel_metrics.py) only for comparable rows; a score is a triage aid, not evidence that exposure or effective inquiries improved. Explain observation, alternative cause, next check and smallest action for each priority item.
-
-## 发布完整性门槛
-
-For every live item, block further publishing until these pass:
-
-- Title and Model Number match the current SKU and source model.
-- Six main images belong to the same product and contain no Chinese promotion, domestic watermark, third-party mark, or AI-altered shoe structure.
-- SKU color count, size count, total combinations, and color-image bindings are internally consistent.
-- Use the workspace's sole authoritative SOP, `02_Alibaba运营/00_运营SOP/国际站商品全生命周期SOP.md`, for live publishing thresholds. The current structured-detail baseline is at least 4 product images that clearly cover the product, plus 5 audited company images; do not retain duplicate or irrelevant images merely to reach 6. For `productDescType=5`, verify AI/HTML page content or the public buyer page instead of treating empty structured arrays as missing.
-- No `skill.accio.com`, local path, expiring OSS URL, nested URL, or malformed non-Alibaba image address.
-- Copy, trunk, and public page agree. Copy correct plus trunk old is pending, not complete.
-
-Quality score alone cannot pass this gate.
-
-## 同货号多链接审计
-
-Do not count links as independent products merely because their titles, M1 colors or image order differ. Group the catalog first by verified factory article number and physical shoe structure, then compare sibling links on:
-
-- M1 color and composition.
-- Exact and near-duplicate overlap in M2-M6.
-- Product-detail image overlap.
-- SKU color/size matrix, attributes and commercial fields.
-- Whether each page answers a genuinely different procurement need with different evidenced content.
-
-Use these decisions:
-
-- `OPTIMIZE_CANONICAL`: retain the strongest existing link and improve its M1 color plus full six-image sequence.
-- `KEEP_DISTINCT`: retain siblings only when real product facts and page content support distinct buyer needs.
-- `MERGE_REVIEW`: same product facts with mainly title/color/image presentation differences; compare performance before consolidation.
-- `PAUSE_REVIEW`: redundant weak sibling with no independent traffic or conversion evidence.
-
-Flag `5/6 shared main images + all product-detail images shared` as high-confidence presentation-only expansion even when titles and keywords are unique. Do not automatically remove or hide products during an audit; provide the family evidence and recommended action first.
-
-## 评分表
-
-Score each product out of 100:
-
-- Title quality: 10
-- Category and attributes: 10
-- First image click potential: 15
-- First 5 gallery image system: 15
-- Video and dynamic proof: 10
-- Detail page conversion: 15
-- Keyword coverage: 10
-- Duplicate listing risk: 10
-- Inquiry guidance: 5
-
-Use evidence in the product folder, screenshots, or backend export. Do not invent a score for unavailable evidence; mark it as pending or give a conservative low score.
-
-## 产品分层
-
-- A 主推款: clear verified differentiation, strong images, complete live integrity, and suitability for P4P test. Wide-toe positioning is optional and SKU-specific.
-- B 潜力款: product is useful but title/images/detail page need optimization.
-- C 补充款: can enrich the shop but should not receive ad budget now.
-- D 重复风险款: too similar to other products; merge, adjust, or weaken.
-- E 暂不推广款: weak positioning, weak assets, poor conversion value, or missing key evidence.
-
-## 输出格式
-
-Return:
-
-```text
-Audit scope:
-Evidence used:
-Product score table:
-Product tier table:
-Main promote candidates:
-Pause or merge candidates:
-P4P test candidates:
-Top duplicate risks:
-High-priority fixes:
-Missing data:
-Today action list:
-ChatGPT handoff:
-```
-
-For each product row include: product code, model, group, score, tier, biggest problem, priority action, P4P suitability, duplicate risk, missing confirmations.
-
-## 贝强业务规则
-
-- Keep Beiqiang positioned as a Quanzhou footwear factory supplier for US/EU importers, wholesalers, Amazon/TikTok sellers, sourcing agents, and brand/private-label buyers.
-- Prefer real product differences: shoe type, outsole, upper, toe width, closure, buyer scenario, season, size range, OEM/ODM service.
-- Prioritize exposure, click-through, inquiry conversion, and repeatable buyer trust.
-- Use FOB 8-12 USD/pair only as target commercial logic, subject to style, quantity, material, size ratio, packing, and order requirements.
-
-## 禁止事项
-
-- Do not suggest blind mass listing or duplicate listing just to increase product count.
-- Do not treat color-only or title-only variants as strong separate products.
-- Do not invent price, MOQ, material, outsole, lining, certificates, lead time, capacity, or medical claims.
-- Do not mark a product as P4P-ready if first image, title, detail page, or duplicate risk is unresolved.
+Report scope/coverage, evidence dates, material findings, recommended action and unresolved facts. A full audit may use a product/family table and promotion tiers; a single-field check needs only its finding. Use an optional scoring rubric only when useful to compare adequately observed products, identify it as an internal heuristic, and do not substitute it for official requirements or buyer results. Prices, MOQ, sample and lead-time conditions come from current SKU evidence and SOP, not a second commercial-default table here.

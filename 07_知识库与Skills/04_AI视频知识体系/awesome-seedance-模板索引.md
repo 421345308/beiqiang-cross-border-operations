@@ -88,7 +88,7 @@
 | 场景 | 可以怎么做 |
 | --- | --- |
 | 通用 AI 视频实验 / 个人项目 | 25 个模板**全部可用**。虚构角色评测、恐怖、打斗、宠物、奇幻都是正当创作题材，不受经营场景的约束 |
-| 贝强对外商品视频 | 只取与采购证据相关的子集，并遵守单款事实与不得编造的红线。见 [beiqiang-seedance-video 模板映射](../../../.agents/skills/beiqiang-seedance-video/references/template-mapping.md) |
+| 贝强对外商品视频 | 只取与采购证据相关的子集，并遵守单款事实与不得编造的红线。见 [beiqiang-seedance-video 模板映射](../../.agents/skills/beiqiang-seedance-video/references/template-mapping.md) |
 
 换句话说：`ugc-creator-review` 用在**虚构创作**里完全合法；用在**贝强商品视频**里假装是真实买家评测，才构成编造客户评价。**不要因为经营场景的限制，就把整个模板库判为不可用。**
 

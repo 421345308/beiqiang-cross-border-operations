@@ -5,7 +5,9 @@
 /01_产品资产/01_原始数据包/
 /01_产品资产/02_可发布素材/
 /02_可上传素材/
-/05_内容与视频/03_通用AI视频实验/
+/05_内容与视频/03_通用AI视频实验/*
+!/05_内容与视频/03_通用AI视频实验/AGENTS.md
+!/05_内容与视频/03_通用AI视频实验/README.md
 /05_内容与视频/01_贝强商品视频/seedance/classical_chinese/
 /05_内容与视频/01_贝强商品视频/seedance/civilization_arc/
 /output/
@@ -155,3 +157,16 @@ Desktop.ini
 /02_Alibaba运营/**/修正前正式商品.json
 /02_Alibaba运营/**/目录页_*.json
 /02_Alibaba运营/**/平台目录快照_*.json
+
+# Protocol records are local evidence. Use audit_workspace_structure.py --wire
+# to catch envelopes with nonstandard names before public synchronization.
+/02_Alibaba运营/**/*.xml
+/02_Alibaba运营/**/*receipt*.json
+/02_Alibaba运营/**/*response*.json
+/02_Alibaba运营/**/*render*.json
+/02_Alibaba运营/**/*schema*.json
+/02_Alibaba运营/**/*Schema*.json
+/02_Alibaba运营/**/*回执*.json
+/02_Alibaba运营/**/*载荷*.json
+/02_Alibaba运营/**/encrypted_id.json
+/02_Alibaba运营/**/score.json

@@ -7,7 +7,9 @@ description: Prepare and review reusable character, animal, product, prop and lo
 
 Use this project capability when preparing references for AI video, including a new story or repairing inconsistent characters, clothing, props or scenes.
 
-Read the [video entry](../../../05_内容与视频/AGENTS.md) and the current PROJECT.md. The user's story, style, product, model/provider and authorization come from that project; this skill does not select them.
+## Required reads
+
+- Read the [video entry](../../../05_内容与视频/AGENTS.md) and the current PROJECT.md. The user's story, style, product, model/provider and authorization come from that project; this skill does not select them.
 
 ## Asset and shot preparation
 

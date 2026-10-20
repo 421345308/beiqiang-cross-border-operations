@@ -11,7 +11,7 @@ description: Turn dated Alibaba.com and B2B channel metrics into Beiqiang's next
 
 Use this skill to convert weekly operation data into next actions. The review should be operational, specific, and tied to Beiqiang's B2B buyer positioning.
 
-## Required References
+## Conditional references
 
 - Read `references/review-template.md` for a complete weekly scorecard; a single metric or narrow diagnosis needs only its source rows.
 - Load a narrower skill only when the review actually includes that action: product editing, competitor verification, RFQ wording or TikTok content. Keep the default review focused on the supplied metrics and source dates.

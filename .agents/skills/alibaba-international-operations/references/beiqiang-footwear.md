@@ -9,7 +9,7 @@ This reference routes to evidence, not a second SKU database. Read the current r
 - Raw SKU evidence: `01_产品资产/01_原始数据包/`.
 - Prepared assets: `01_产品资产/02_可发布素材/00_最终上传/` and the current SKU's approved execution package.
 - Technical facts: `01_产品资产/03_技术资料卡/`.
-- Current product evidence: `00_总控台/产品经营主表.md` and its linked audit records.
+- Current product evidence: `00_总控台/产品中心/README.md` and its linked audit records.
 
 Use the exact SKU's source and confirmations for material, lining, outsole, fit, size, weight, price, MOQ, packing and lead time. Do not default to EVA, mesh lining, EU 36–46, slip-on, or wide toe box. BQ032 and later are regular fit unless explicitly supported otherwise.
 

@@ -39,7 +39,7 @@ MEMORY_OPTIONAL = {"supersedes", "verify_when", "review_after"}
 MEMORY_TYPES = {"Authorization", "Preference", "Decision", "Experience"}
 MEMORY_STATES = {"active", "superseded", "disputed", "archived"}
 ACTIVE_CONTROL = (
-    "当前状态.md", "产品经营主表.md", "资产索引.md", "跨渠道经营总览.md", "工作区维护.md", "全渠道增长总控.md",
+    "当前状态.md", "资产索引.md", "跨渠道经营总览.md", "工作区维护.md", "全渠道增长总控.md",
 )
 PRUNE = {
     ".git", "node_modules", "browser_data", ".venv", "venv", "__pycache__",

@@ -25,7 +25,7 @@ Use this skill to move a buyer from inquiry to confirmed specs, sample order, or
 - Position Beiqiang as a Quanzhou footwear factory supplier.
 - Keep the buyer type B2B: importer, wholesaler, Amazon/TikTok seller, brand buyer, sourcing agent.
 - Discuss only the current SKU's verified shoe type, fit, materials, source and feasible order options. Wide toe, EVA, samples, mixed sizes/colors and OEM/ODM are conditional.
-- Use FOB `8-12 USD/pair` only as a reference range when relevant; final price depends on style, quantity, material, size ratio, packing, and trade terms.
+- Reuse the latest scoped quote and current commercial/SKU evidence; do not introduce a separate default FOB range in a follow-up.
 - Ask for one clear next action, not a long survey.
 - Identify whether this is a new inquiry, quoted-buyer follow-up, sample follow-up or visitor outreach. Read the actual buyer stage, earlier answer and stop-contact state. A first-inquiry automatic reply does not establish visitor popup access; verify account feature and trigger separately before any proposal. Country informs language, destination rules and timezone, never a stereotype of price or certification interest.
 - Deliver a stage-specific draft and internal next-check only; do not activate automation or send a message. For translation, preserve model facts, units and confirmed sizes, and verify local buyer language rather than treating machine translation as search-demand evidence.

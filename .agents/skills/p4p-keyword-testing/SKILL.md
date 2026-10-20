@@ -56,7 +56,6 @@ Scale rules:
 Tracking table:
 After-test actions:
 Risk notes:
-ChatGPT handoff:
 ```
 
 Tracking table fields:
