@@ -47,20 +47,24 @@
       "job_id": "ZX9507-R02",
       "product": "ZX9507",
       "project": "../ZX9507_抖店生活化带货/PROJECT.md",
-      "stage": "USER_ACCEPTED_VISUAL_DIRECTION_BGM_PREVIEW_READY",
+      "stage": "USER_REPORTED_UPLOADED_VOICE_REJECTED",
       "manifest": "../ZX9507_抖店生活化带货/edit/R02/proposal.json",
       "preview": "../ZX9507_抖店生活化带货/edit/R02/ZX9507_R02_黑杏加绒_15秒_BGM版.mp4",
       "new_video_generations": 1,
       "new_audio_generations": 0,
       "generation_submitted": true,
       "further_paid_generation_authorized": false,
-      "published": false,
+      "published": null,
       "quoted_credits": 782,
       "provider_preflight": "ready",
       "user_visual_direction_accepted": true,
       "paid_generation_retries": 0,
       "bgm_generation_credits": 0,
-      "result": "../ZX9507_抖店生活化带货/edit/R02/result.json"
+      "result": "../ZX9507_抖店生活化带货/edit/R02/result.json",
+      "user_reported_uploaded": true,
+      "publish_verification": "NOT_READ_BACK",
+      "user_audio_accepted": false,
+      "current_research": "edit/references/声画参考与ZX9507方向.md"
     }
   ],
   "metrics": {
