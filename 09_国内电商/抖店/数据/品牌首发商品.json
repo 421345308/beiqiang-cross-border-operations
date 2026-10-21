@@ -17451,7 +17451,7 @@
   },
   "expansion_candidates": {
     "updated_on": "2026-10-20",
-    "state": "REMAINING_CATALOG_IDENTITY_VERSION_SOURCE_CATEGORY_REVIEW_CONTINUES",
+    "state": "SEVEN_REGULAR_VARIANTS_PREPARED_PLATFORM_IMAGE_REVIEW_PENDING",
     "models": {
       "9002-R": {
         "mixed_versions": false,
@@ -17732,8 +17732,13 @@
           "price_confirmation": "负责人后续同档普通款统一94减5、库存履约沿原基线；本次确认普通/加绒仅内里版本不同。"
         },
         "publication": {
-          "state": "PREPARED_PENDING_CREATE",
-          "price_approved": true
+          "state": "NOT_CREATED_PLATFORM_IMAGE_REVIEW_PENDING",
+          "price_approved": true,
+          "private_content_evidence": ".local/品牌新店/发布/9002-R",
+          "planned_sellable_sku_count": 20,
+          "planned_inactive_zero_stock_sku_count": 0,
+          "create_result": "EXPLICIT_REJECTED_NOT_UNKNOWN",
+          "platform_reason": "描述图图片正在审核中，请等待"
         },
         "acceptance": {
           "visual_qa": {
@@ -18070,8 +18075,13 @@
           "price_confirmation": "负责人后续同档普通款统一94减5、库存履约沿原基线；本次确认普通/加绒仅内里版本不同。"
         },
         "publication": {
-          "state": "LOCAL_CONTENT_PREPARATION",
-          "price_approved": true
+          "state": "NOT_CREATED_PLATFORM_IMAGE_REVIEW_PENDING",
+          "price_approved": true,
+          "private_content_evidence": ".local/品牌新店/发布/9507-R",
+          "planned_sellable_sku_count": 20,
+          "planned_inactive_zero_stock_sku_count": 0,
+          "create_result": "EXPLICIT_REJECTED_NOT_UNKNOWN",
+          "platform_reason": "描述图图片正在审核中，请等待"
         },
         "acceptance": {
           "visual_qa": {
@@ -18487,8 +18497,13 @@
           "price_confirmation": "负责人后续同档普通款统一94减5、库存履约沿原基线；本次确认普通/加绒仅内里版本不同。"
         },
         "publication": {
-          "state": "LOCAL_CONTENT_PREPARATION",
-          "price_approved": true
+          "state": "NOT_CREATED_PLATFORM_IMAGE_REVIEW_PENDING",
+          "price_approved": true,
+          "private_content_evidence": ".local/品牌新店/发布/ZX2116-R",
+          "planned_sellable_sku_count": 50,
+          "planned_inactive_zero_stock_sku_count": 0,
+          "create_result": "EXPLICIT_REJECTED_NOT_UNKNOWN",
+          "platform_reason": "描述图图片正在审核中，请等待"
         },
         "acceptance": {
           "visual_qa": {
@@ -18914,8 +18929,13 @@
           "price_confirmation": "负责人后续同档普通款统一94减5、库存履约沿原基线；本次确认普通/加绒仅内里版本不同。"
         },
         "publication": {
-          "state": "LOCAL_CONTENT_PREPARATION",
-          "price_approved": true
+          "state": "NOT_CREATED_PLATFORM_IMAGE_REVIEW_PENDING",
+          "price_approved": true,
+          "private_content_evidence": ".local/品牌新店/发布/M889-R",
+          "planned_sellable_sku_count": 33,
+          "planned_inactive_zero_stock_sku_count": 0,
+          "create_result": "EXPLICIT_REJECTED_NOT_UNKNOWN",
+          "platform_reason": "描述图图片正在审核中，请等待"
         },
         "acceptance": {
           "visual_qa": {
@@ -19351,8 +19371,13 @@
           "price_confirmation": "负责人后续同档普通款统一94减5、库存履约沿原基线；本次确认普通/加绒仅内里版本不同。"
         },
         "publication": {
-          "state": "LOCAL_CONTENT_PREPARATION",
-          "price_approved": true
+          "state": "NOT_CREATED_PLATFORM_IMAGE_REVIEW_PENDING",
+          "price_approved": true,
+          "private_content_evidence": ".local/品牌新店/发布/A212-R",
+          "planned_sellable_sku_count": 66,
+          "planned_inactive_zero_stock_sku_count": 0,
+          "create_result": "EXPLICIT_REJECTED_NOT_UNKNOWN",
+          "platform_reason": "描述图图片正在审核中，请等待"
         },
         "acceptance": {
           "visual_qa": {
@@ -19761,8 +19786,13 @@
           "price_confirmation": "负责人后续同档普通款统一94减5、库存履约沿原基线；本次确认普通/加绒仅内里版本不同。"
         },
         "publication": {
-          "state": "LOCAL_CONTENT_PREPARATION",
-          "price_approved": true
+          "state": "NOT_CREATED_PLATFORM_IMAGE_REVIEW_PENDING",
+          "price_approved": true,
+          "private_content_evidence": ".local/品牌新店/发布/A116-R",
+          "planned_sellable_sku_count": 39,
+          "planned_inactive_zero_stock_sku_count": 5,
+          "create_result": "EXPLICIT_REJECTED_NOT_UNKNOWN",
+          "platform_reason": "描述图图片正在审核中，请等待"
         },
         "acceptance": {
           "visual_qa": {
@@ -20179,8 +20209,13 @@
           "price_confirmation": "负责人后续同档普通款统一94减5、库存履约沿原基线；本次确认普通/加绒仅内里版本不同。"
         },
         "publication": {
-          "state": "LOCAL_CONTENT_PREPARATION",
-          "price_approved": true
+          "state": "NOT_CREATED_PLATFORM_IMAGE_REVIEW_PENDING",
+          "price_approved": true,
+          "private_content_evidence": ".local/品牌新店/发布/A1689-R",
+          "planned_sellable_sku_count": 31,
+          "planned_inactive_zero_stock_sku_count": 2,
+          "create_result": "EXPLICIT_REJECTED_NOT_UNKNOWN",
+          "platform_reason": "描述图图片正在审核中，请等待"
         },
         "acceptance": {
           "visual_qa": {
@@ -20244,7 +20279,8 @@
     "completed_models": [
       "208",
       "5836"
-    ]
+    ],
+    "current_blocker": "七款创建均被平台明确描述图图片正在审核中拒绝（resultUnknown=false），9002等待后独立复提一次仍同样明确拒绝；正常审图完成后以独立回执提交，未知结果先回读，不重复上传素材或改变图片规避审核。"
   },
   "catalog_coverage": {
     "observed_on": "2026-10-20",
@@ -20261,7 +20297,7 @@
     },
     "summary": {
       "EXISTING_VERSION_RECONCILED": 10,
-      "AUTHORIZED_CONTENT_VISUAL_READY": 7,
+      "NOT_CREATED_PLATFORM_IMAGE_REVIEW_PENDING": 7,
       "ON_SALE_H5_MEDIA_COUPON_VERIFIED_APP_PENDING": 39,
       "HOLD_HIGHER_PRICE_AND_MARK_REVIEW": 2,
       "HOLD_MARK_AUTHORISATION": 14,
@@ -20399,7 +20435,7 @@
         "canonical_product_ids": [],
         "listed_record": null,
         "prepared_record": "9002-R",
-        "state": "AUTHORIZED_CONTENT_VISUAL_READY",
+        "state": "NOT_CREATED_PLATFORM_IMAGE_REVIEW_PENDING",
         "source_price_cny": 55,
         "source_colors": [
           "浅灰杏",
@@ -20419,7 +20455,7 @@
         ],
         "normal_or_fleece_review": "按来源版本及逐SKU实图核；记录状态不代表整条来源的全部版本/颜色均已上架",
         "visual_observation": "已看本款当前前7张来源图缩略总览；原包选款及正式图文逐款另验",
-        "note": "为需要38—47大码和浅深灰中性色搭配的人，把鞋面与立体侧墙完整展现，按本款两色选购。；材料与功能仅本款来源一般属性，不作定量测试或功效承诺。",
+        "note": "普通版同鞋型关系、图文/属性/限码与94减5已确认并准备；平台明确描述图图片正在审核中，创建失败，尚无新商品；待正常审图完成继续。",
         "related_existing_fleece_model": "ZX9002",
         "version_confirmation": {
           "confirmed_on": "2026-10-21",
@@ -20434,7 +20470,7 @@
         "canonical_product_ids": [],
         "listed_record": null,
         "prepared_record": "9507-R",
-        "state": "AUTHORIZED_CONTENT_VISUAL_READY",
+        "state": "NOT_CREATED_PLATFORM_IMAGE_REVIEW_PENDING",
         "source_price_cny": 58,
         "source_colors": [
           "全黑",
@@ -20455,7 +20491,7 @@
         ],
         "normal_or_fleece_review": "按来源版本及逐SKU实图核；记录状态不代表整条来源的全部版本/颜色均已上架",
         "visual_observation": "已看本款当前前7张来源图缩略总览；原包选款及正式图文逐款另验",
-        "note": "为偏好黑杏拼接或全黑、需要38—47码日常套脚的人，以真实拼接外观和大码范围回答选款；米白缺完整外观照片保留待补。；材料与功能仅本款来源一般属性，不作定量测试或功效承诺。",
+        "note": "普通版同鞋型关系、图文/属性/限码与94减5已确认并准备；平台明确描述图图片正在审核中，创建失败，尚无新商品；待正常审图完成继续。",
         "related_existing_fleece_model": "ZX9507",
         "version_confirmation": {
           "confirmed_on": "2026-10-21",
@@ -20542,7 +20578,7 @@
         ],
         "listed_record": null,
         "prepared_record": "ZX2116-R",
-        "state": "AUTHORIZED_CONTENT_VISUAL_READY",
+        "state": "NOT_CREATED_PLATFORM_IMAGE_REVIEW_PENDING",
         "source_price_cny": 55,
         "source_colors": [
           "全黑",
@@ -20565,7 +20601,7 @@
         ],
         "normal_or_fleece_review": "按来源版本及逐SKU实图核；记录状态不代表整条来源的全部版本/颜色均已上架",
         "visual_observation": "已看本款当前前7张来源图缩略总览；原包选款及正式图文逐款另验",
-        "note": "给想要针织低帮、38—47码和五色选择的人，用干净实物角度展示轮廓；鞋带按实图结扣装饰表述，不作系带调节承诺。；材料与功能仅本款来源一般属性，不作定量测试或功效承诺。",
+        "note": "普通版同鞋型关系、图文/属性/限码与94减5已确认并准备；平台明确描述图图片正在审核中，创建失败，尚无新商品；待正常审图完成继续。",
         "related_existing_fleece_model": "ZX2116",
         "version_confirmation": {
           "confirmed_on": "2026-10-21",
@@ -21210,7 +21246,7 @@
         ],
         "listed_record": null,
         "prepared_record": "M889-R",
-        "state": "AUTHORIZED_CONTENT_VISUAL_READY",
+        "state": "NOT_CREATED_PLATFORM_IMAGE_REVIEW_PENDING",
         "source_price_cny": 58,
         "source_colors": [
           "黑白",
@@ -21234,7 +21270,7 @@
         ],
         "normal_or_fleece_review": "按来源版本及逐SKU实图核；记录状态不代表整条来源的全部版本/颜色均已上架",
         "visual_observation": "已看本款当前前7张来源图缩略总览；原包选款及正式图文逐款另验",
-        "note": "给需要系带调节脚背、偏好黑白或浅色日常鞋的人，用本款完整双鞋实拍清楚展示三种颜色，常规版不混保暖属性。；材料与功能仅本款来源一般属性，不作定量测试或功效承诺。",
+        "note": "普通版同鞋型关系、图文/属性/限码与94减5已确认并准备；平台明确描述图图片正在审核中，创建失败，尚无新商品；待正常审图完成继续。",
         "related_existing_fleece_model": "M889",
         "version_confirmation": {
           "confirmed_on": "2026-10-21",
@@ -21724,7 +21760,7 @@
         "canonical_product_ids": [],
         "listed_record": null,
         "prepared_record": "A212-R",
-        "state": "AUTHORIZED_CONTENT_VISUAL_READY",
+        "state": "NOT_CREATED_PLATFORM_IMAGE_REVIEW_PENDING",
         "source_price_cny": 53,
         "source_colors": [
           "黑白",
@@ -21749,7 +21785,7 @@
         ],
         "normal_or_fleece_review": "按来源版本及逐SKU实图核；记录状态不代表整条来源的全部版本/颜色均已上架",
         "visual_observation": "已看本款当前前7张来源图缩略总览；原包选款及正式图文逐款另验",
-        "note": "给偏好套脚、希望在六色间选择的人，重点说明白蓝与黑蓝为不同鞋底搭配，用各自完整上脚照片帮助选色。；材料与功能仅本款来源一般属性，不作定量测试或功效承诺。",
+        "note": "普通版同鞋型关系、图文/属性/限码与94减5已确认并准备；平台明确描述图图片正在审核中，创建失败，尚无新商品；待正常审图完成继续。",
         "related_existing_fleece_model": "A212",
         "version_confirmation": {
           "confirmed_on": "2026-10-21",
@@ -22338,7 +22374,7 @@
         ],
         "listed_record": null,
         "prepared_record": "A116-R",
-        "state": "AUTHORIZED_CONTENT_VISUAL_READY",
+        "state": "NOT_CREATED_PLATFORM_IMAGE_REVIEW_PENDING",
         "source_price_cny": 55,
         "source_colors": [
           "紫色35-40",
@@ -22363,7 +22399,7 @@
         ],
         "normal_or_fleece_review": "按来源版本及逐SKU实图核；记录状态不代表整条来源的全部版本/颜色均已上架",
         "visual_observation": "已看本款当前前7张来源图缩略总览；原包选款及正式图文逐款另验",
-        "note": "给希望基础色之外增加紫色搭配的人，清楚说明紫色仅35—40，三种基础色35—45，按实物选色选码，蓝色缺图暂不上。；材料与功能仅本款来源一般属性，不作定量测试或功效承诺。",
+        "note": "普通版同鞋型关系、图文/属性/限码与94减5已确认并准备；平台明确描述图图片正在审核中，创建失败，尚无新商品；待正常审图完成继续。",
         "related_existing_fleece_model": "A116",
         "version_confirmation": {
           "confirmed_on": "2026-10-21",
@@ -22674,7 +22710,7 @@
         ],
         "listed_record": null,
         "prepared_record": "A1689-R",
-        "state": "AUTHORIZED_CONTENT_VISUAL_READY",
+        "state": "NOT_CREATED_PLATFORM_IMAGE_REVIEW_PENDING",
         "source_price_cny": 53,
         "source_colors": [
           "黑白",
@@ -22697,7 +22733,7 @@
         ],
         "normal_or_fleece_review": "按来源版本及逐SKU实图核；记录状态不代表整条来源的全部版本/颜色均已上架",
         "visual_observation": "已看本款当前前7张来源图缩略总览；原包选款及正式图文逐款另验",
-        "note": "给需要基础黑色或黑黄点缀日常鞋的人，用本款真实三色展示外观，明确黑黄仅37—45码，不继承来源已无的浅灰。；材料与功能仅本款来源一般属性，不作定量测试或功效承诺。",
+        "note": "普通版同鞋型关系、图文/属性/限码与94减5已确认并准备；平台明确描述图图片正在审核中，创建失败，尚无新商品；待正常审图完成继续。",
         "related_existing_fleece_model": "A1689",
         "version_confirmation": {
           "confirmed_on": "2026-10-21",

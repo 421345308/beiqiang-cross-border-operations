@@ -58,6 +58,13 @@ if(mode==='protect-existing'){
   const payload=await read(dir+'/payload.json');if((await catalog()).some(v=>v.name===p.title))throw Error('Existing title; reconcile');let attempt='create';
   if(process.argv.includes('--retry-qps')){const f=await read(dir+'/create/failure.json');if(f.code!=='ddApiLocalQpsLimit')throw Error('Not an explicit rate-limit failure');attempt='create-qps-retry';}
   if(process.argv.includes('--retry-size-matrix')){const f=await read(dir+'/create/failure.json');if(model!=='A828'||f.code!=='50002'||f.resultUnknown!==false||!f.receipt?.reason?.includes('sku数量和规格组合数不匹配'))throw Error('Not the confirmed matrix validation failure');attempt='create-size-matrix-retry';}
+  if(process.argv.includes('--retry-media-review')){
+   if(!['9002-R','9507-R','ZX2116-R','M889-R','A212-R','A116-R','A1689-R'].includes(model))throw Error('Not a confirmed regular-version media-review case');
+   const prior=[];for(const entry of await fs.readdir(dir,{withFileTypes:true})){if(!entry.isDirectory()||!(entry.name==='create'||entry.name.startsWith('create-media-review-retry')))continue;const at=await read(dir+'/'+entry.name+'/attempt.json');prior.push({name:entry.name,startedAt:at.startedAt});}
+   prior.sort((a,b)=>Date.parse(b.startedAt)-Date.parse(a.startedAt));if(!prior.length)throw Error('No known creation attempt');const lastDir=dir+'/'+prior[0].name;
+   const f=await read(lastDir+'/failure.json'),original=await read(lastDir+'/request.json');if(f.resultUnknown!==false||f.receipt?.result!=='fail'||f.receipt.reason!=='描述图图片正在审核中，请等待'||!isDeepStrictEqual(payload,original))throw Error('Not the latest confirmed unchanged media-review rejection');
+   attempt='create-media-review-retry-'+Date.now();
+  }
   await pause();const r=await c.createProduct(payload,{evidenceDir:dir+'/'+attempt});if(attempt!=='create')await save(dir+'/creation-result.json',r);p.publication.state='CREATED_PENDING_AUDIT';await save(file,plan);console.log(JSON.stringify({model,created:true}));
  }else{
   let receipt;try{receipt=await read(dir+'/creation-result.json');}catch(e){if(e.code!=='ENOENT')throw e;receipt=await read(dir+'/create/response.json');}const id=receipt.productId;if(typeof id!=='string'||!/^\d+$/.test(id))throw Error('Exact product ID required');
