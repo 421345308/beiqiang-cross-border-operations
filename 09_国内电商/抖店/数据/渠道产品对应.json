@@ -635,6 +635,70 @@
         "record_updated_on": "2026-10-21",
         "scope": "审核、主字段/SKU、媒体像素与图序、原5元券扩围及H5通过；App选规格/实际核销待验。精确平台ID仅留.local。"
       }
+    },
+    {
+      "store_key": "douyin_leidansenyang",
+      "source_model": "T5503",
+      "product_id": "BQ033",
+      "identity_state": "MATCHED_EXPLICIT_PRODUCT_AND_SOURCE_EVIDENCE",
+      "version": "常规",
+      "content_file": "09_国内电商/抖店/数据/品牌首发商品.json",
+      "content_key": "T5503",
+      "identity_evidence": "09_国内电商/抖店/数据/品牌首发商品.json#models.T5503.source_current",
+      "scope": "沿本款真实来源、原包与现行事实关联，本店零售价和履约独立回读。",
+      "observation": {
+        "state": "ON_SALE_H5_MEDIA_COUPON_VERIFIED_APP_PENDING",
+        "record_updated_on": "2026-10-21",
+        "scope": "审核、主字段/SKU、媒体像素与图序、原5元券扩围及H5通过；App选规格/实际核销待验。精确平台ID仅留.local。"
+      }
+    },
+    {
+      "store_key": "douyin_leidansenyang",
+      "source_model": "T5505",
+      "product_id": "BQ034",
+      "identity_state": "MATCHED_EXPLICIT_PRODUCT_AND_SOURCE_EVIDENCE",
+      "version": "常规",
+      "content_file": "09_国内电商/抖店/数据/品牌首发商品.json",
+      "content_key": "T5505",
+      "identity_evidence": "09_国内电商/抖店/数据/品牌首发商品.json#models.T5505.source_current",
+      "scope": "沿本款真实来源、原包与现行事实关联，本店零售价和履约独立回读。",
+      "observation": {
+        "state": "ON_SALE_H5_MEDIA_COUPON_VERIFIED_APP_PENDING",
+        "record_updated_on": "2026-10-21",
+        "scope": "审核、主字段/SKU、媒体像素与图序、原5元券扩围及H5通过；App选规格/实际核销待验。精确平台ID仅留.local。"
+      }
+    },
+    {
+      "store_key": "douyin_leidansenyang",
+      "source_model": "A350",
+      "product_id": "BQ060",
+      "identity_state": "MATCHED_EXPLICIT_PRODUCT_AND_SOURCE_EVIDENCE",
+      "version": "常规",
+      "content_file": "09_国内电商/抖店/数据/品牌首发商品.json",
+      "content_key": "A350",
+      "identity_evidence": "09_国内电商/抖店/数据/品牌首发商品.json#models.A350.source_current",
+      "scope": "沿本款真实来源、原包与现行事实关联，本店零售价和履约独立回读。",
+      "observation": {
+        "state": "ON_SALE_H5_MEDIA_COUPON_VERIFIED_APP_PENDING",
+        "record_updated_on": "2026-10-21",
+        "scope": "审核、主字段/SKU、媒体像素与图序、原5元券扩围及H5通过；App选规格/实际核销待验。精确平台ID仅留.local。"
+      }
+    },
+    {
+      "store_key": "douyin_leidansenyang",
+      "source_model": "A206",
+      "product_id": "BQ019",
+      "identity_state": "MATCHED_EXPLICIT_PRODUCT_AND_SOURCE_EVIDENCE",
+      "version": "常规",
+      "content_file": "09_国内电商/抖店/数据/品牌首发商品.json",
+      "content_key": "A206",
+      "identity_evidence": "09_国内电商/抖店/数据/品牌首发商品.json#models.A206.source_current",
+      "scope": "沿本款真实来源、原包与现行事实关联，本店零售价和履约独立回读。",
+      "observation": {
+        "state": "ON_SALE_H5_MEDIA_COUPON_VERIFIED_APP_PENDING",
+        "record_updated_on": "2026-10-21",
+        "scope": "审核、主字段/SKU、媒体像素与图序、原5元券扩围及H5通过；App选规格/实际核销待验。精确平台ID仅留.local。"
+      }
     }
   ],
   "coverage_note": "本索引覆盖旧店15款与新店9款已维护档案；新店另有9212独立在售款未纳入内容档案，保留未对应缺口。不是完整平台实时目录。精确店铺/商品/SKU ID仅在.local正式证据中保存。"

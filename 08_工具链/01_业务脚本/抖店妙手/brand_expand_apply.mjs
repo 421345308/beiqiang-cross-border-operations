@@ -4,7 +4,7 @@ import {MiaoshouHttp} from './miaoshou_http.mjs';import {invariant,skuInvariant}
 const root='09_国内电商/抖店',priv=root+'/.local/品牌新店',file=root+'/数据/品牌首发商品.json';
 const read=async f=>JSON.parse(await fs.readFile(f,'utf8')),save=async(f,v)=>{await fs.mkdir(path.dirname(f),{recursive:true});await fs.writeFile(f,JSON.stringify(v,null,2)+'\n');},sha=b=>createHash('sha256').update(b).digest('hex');
 const pause=()=>new Promise(r=>setTimeout(r,2300));
-const [mode,model]=process.argv.slice(2),allowed=['M889','H7212','ZX2116','ZX9507','A116','K6116','A212','8811','A507','H7116','K6212','L0017','R1811','R1601','M8506','A502','T55836','A218','A008','ZX2212','8008','K6689'];
+const [mode,model]=process.argv.slice(2),allowed=['M889','H7212','ZX2116','ZX9507','A116','K6116','A212','8811','A507','H7116','K6212','L0017','R1811','R1601','M8506','A502','T55836','A218','A008','ZX2212','8008','K6689','T5503','T5505','A350','A206'];
 if(!['prepare','publish','verify','protect-existing'].includes(mode)||(mode!=='protect-existing'&&!allowed.includes(model)))throw Error('Usage: prepare|publish|verify MODEL | protect-existing');
 const plan=await read(file),candidate=plan.expansion_candidates?.models?.[model],p=plan.models[model]??candidate;
 if(mode!=='protect-existing'){
