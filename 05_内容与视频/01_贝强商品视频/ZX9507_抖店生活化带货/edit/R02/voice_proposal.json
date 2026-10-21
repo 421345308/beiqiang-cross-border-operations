@@ -1,10 +1,10 @@
 {
   "schema": "beiqiang-voice-proposal-v1",
-  "updated": "2026-10-20",
+  "updated": "2026-10-21",
   "product": "ZX9507黑杏加绒针织套脚鞋",
-  "status": "TENCENT_NATIVE_AUDIO_REVIEW_RETURNED_WITH_LIMITS_NO_GENERATION_AUTHORIZATION",
+  "status": "CANCELLED_USER_HANDLES_AUDIO_VISUAL_ONLY",
   "visual_baseline": "Keep accepted R02 AI picture; no video regeneration proposed for the voice trial.",
-  "clarification": "User explicitly confirmed: continue AI reference adaptation, retain accepted R02 visuals, prioritize voice improvement. No new generation authorization.",
+  "clarification": "User explicitly takes over sound; assistant only handles reference visuals, visual generation and visual QA. Deliver silent video by default.",
   "retired_word": "利落",
   "preferred_angle": [
     "暖和也要好看",
@@ -40,9 +40,7 @@
     "new_video_generation_credits": 0
   },
   "execution_gate": [
-    "Reference voice observations available via Tencent; unresolved music judgments and timing remain explicitly uncertain. Voice choice requires user listening.",
-    "Need CLI selected-voice parameters and web display to agree before any run.",
-    "Need explicit human confirmation of exact trial voices, count and final quote."
+    "Audio proposal cancelled by user; do not run voice trials, audio generation or further BGM research unless user explicitly requests it again."
   ],
   "generation_submitted": false,
   "actual_new_voice_generations": 0,
