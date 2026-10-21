@@ -60,19 +60,31 @@ def build(evidence, catalog_path):
     listings = {x['id']: x for x in read(ROOT / '02_Alibaba运营/05_扩品工程/数据/国际站商品.json')['listings']}
     products = {x['id']: x for x in read(ROOT / '00_总控台/产品中心/数据/产品.json')['products']}
     sources = {x['id']: x for x in read(ROOT / '00_总控台/产品中心/数据/供应来源.json')['sources']}
+    cost_path = ROOT / '00_总控台/产品中心/数据/.local/生产成本基线.json'
+    confirmed_costs = read(cost_path) if cost_path.exists() else {}
     old = read(BASE / '商品诊断数据.json')
     previous = {p['id']: p for p in old['products']}
     result = []
+    state_overlay_ids = []
     for pid, item in current.items():
         listing = listings.get(pid, {})
         identity = products.get(listing.get('product_id'), {})
         source = sources.get(listing.get('bound_source_id') or identity.get('adopted_source_id'), {})
         prior = previous.get(pid, {})
         metric = metrics.get(pid)
+        formal = ROOT / '02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品' / pid / 'formal_get.json'
+        formal_record = read(formal) if formal.exists() else {}
+        p = formal_record.get('response', {}).get('product', {})
+        if p and formal_record.get('observed_at_utc', '') > catalog['observed_at_utc']:
+            assert p['product_id'] == item['product_id'], '精确ID回读身份不一致'
+            item.update({k: p[k] for k in ('status', 'display', 'subject', 'gmt_modified') if k in p})
+            state_overlay_ids.append(pid)
         created = item.get('gmt_create', '')[:10]
         replaced = prior.get('physical_source_changed_on')
         signals = []
-        if item.get('display') != 'Y' or item.get('status') != 'approved':
+        if item.get('status') in ('modified', 'new'):
+            action = '平台审核中；保留回执不重复提交'
+        elif item.get('display') != 'Y' or item.get('status') != 'approved':
             action = '保留当前下架或退回状态'
         elif created > '2026-10-17':
             action = '晚于报表窗口的新商品'
@@ -95,8 +107,6 @@ def build(evidence, catalog_path):
                 signals.append('曝光≥250且搜索点击率<0.8%，复核信号并非原因')
             if metric['visitors'] >= 25 and not (metric['inquiries'] or metric['tm_buyers']):
                 signals.append('访客≥25且询盘/TM均为0，不能据此推断价格原因')
-        formal = ROOT / '02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品' / pid / 'formal_get.json'
-        p = read(formal).get('response', {}).get('product', {}) if formal.exists() else {}
         tier_sets = []
         for sku in p.get('product_sku', {}).get('skus', []):
             tiers = sku.get('bulk_discount_prices', [])
@@ -106,6 +116,8 @@ def build(evidence, catalog_path):
         cost_state = ('自有原包成本需按版本核算，不以零售标价代成本' if identity.get('raw_packages') and not source else
                       '公开来源标价，费用及当天供货仍待核' if cost else
                       '当前采购报价未完整核实')
+        if not source and pid in confirmed_costs.get('listing_ids', []) and identity.get('id') in confirmed_costs.get('families', {}):
+            cost_state = '负责人已确认生产成本基线；适用履约费用另核'
         result.append({
             'id': pid, 'model': listing.get('model'), 'family': listing.get('product_id'),
             'title': item.get('subject'), 'status': item.get('status'), 'display': item.get('display'),
@@ -132,6 +144,7 @@ def build(evidence, catalog_path):
         'report_rows_outside_current_catalog': sorted(set(metrics) - set(current)),
         'totals': totals,
         'catalog_states': dict(Counter(f"{p.get('status')}/{p.get('display')}" for p in current.values())),
+        'newer_exact_id_state_overlay_ids': state_overlay_ids,
         'actions': dict(Counter(x['current_action'] for x in result)),
         'cost_states': dict(Counter(x['cost_state'] for x in result)),
         'scope': '完整当前488条与14页411行匹配；无行保持null；总量跨商品未去重；搜索不减营销点击',

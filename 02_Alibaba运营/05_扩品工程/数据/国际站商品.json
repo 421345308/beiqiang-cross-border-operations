@@ -5298,9 +5298,8 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-21T01:35:17.104214+00:00",
-        "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测",
-        "score": "5.00"
+        "at": "2026-10-21T14:48:55.048895+00:00",
+        "scope": "价格API闭环；公开呈现未核"
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601825021825/prepared.json",
@@ -5331,7 +5330,7 @@
       "catalog_presence": "OBSERVED",
       "catalog_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
       "catalog_fields": {
-        "at": "2026-10-21T01:35:17.104214+00:00",
+        "at": "2026-10-21T14:48:55.048895+00:00",
         "model": "BQ-008",
         "title": "Mesh Panel Lace-Up Walking Shoes with Layered Upper and Sculpted Sole Wholesale",
         "keywords": [
@@ -5383,19 +5382,19 @@
         ]
       },
       "local_sync": {
-        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "state": "FORMAL_PRICE_PASS_API",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601825021825/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601825021825/formal_render.json",
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601825021825/当前图库与货号.json",
-        "at": "2026-10-16T04:41:44.131190+00:00",
+        "at": "2026-10-21T14:48:55.048895+00:00",
         "observed_at": "2026-10-19T18:39:05.934512+00:00",
         "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601825021825/verification.json",
         "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ008_详情信息整组收尾/商品/1601825021825/verification.json"
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601825021825/formal_get.json",
-        "at": "2026-10-21T01:35:17.104214+00:00",
-        "scope": "Replace the observed remaining generic/incorrect product-use or sole captions with four distinct real-product roles: construction, actual component/opening/on-foot detail, per-ID colour selection and exact EU matrix. Preserve all other product fields, SKU photos/rows/prices/stock, company suite and original F1 position. Only BQ007 two misleading main M2 captions are included."
+        "at": "2026-10-21T14:48:55.048895+00:00",
+        "scope": "本次价格正式回读；不代表公开验收"
       },
       "platform_group": {
         "id": "971467417",
@@ -5403,7 +5402,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-10-21T01:35:17.104214+00:00",
+        "at": "2026-10-21T14:48:55.048895+00:00",
         "model": "BQ-008",
         "title": "Mesh Panel Lace-Up Walking Shoes with Layered Upper and Sculpted Sole Wholesale",
         "keywords": [
@@ -5579,6 +5578,47 @@
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ008_详情信息整组收尾/商品/1601825021825/verification.json"
           ]
         }
+      },
+      "price_review": {
+        "id": "1601825021825",
+        "family": "BQ008",
+        "model": "BQ-008",
+        "new_tiers": [
+          [
+            2,
+            "9.49"
+          ],
+          [
+            50,
+            "9.19"
+          ],
+          [
+            100,
+            "8.78"
+          ]
+        ],
+        "basis": {
+          "type": "OWNER_CONFIRMED_PRODUCTION_BASELINE_REDUCTION",
+          "cost_reference": "00_总控台/产品中心/数据/.local/生产成本基线.json",
+          "cost_family_key": "BQ008",
+          "cost_confirmed_on": "2026-10-21",
+          "cost_class_evidence": "01_产品资产/02_可发布素材/00_最终上传/BQ008_L1009/00_上架填写表.md",
+          "fx_cny_per_usd": "6.6670",
+          "fx_published_at": "2026-10-21 15:23:07 Asia/Shanghai",
+          "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+          "markups_by_quantity": {
+            "2-49": "50%",
+            "50-99": "40%",
+            "100+": "30%"
+          },
+          "rounding": "CEILING_USD_CENT",
+          "scope": "Production-cost baseline only. Actual costs stay in ignored local file; no ownership/material changes, no retail prices used as cost. Applicable expenses remain order-specific.",
+          "competitor_comparison": "SAME_CONDITION_COMPETITOR_NOT_YET_VERIFIED"
+        },
+        "at": "2026-10-21T14:48:55.048895+00:00",
+        "state": "FORMAL_PRICE_PASS_API",
+        "verification": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/原包成本续核/降价执行/1601825021825/verification.json",
+        "public": "NOT_REQUESTED_API_ACCEPTANCE"
       }
     },
     {
@@ -9501,9 +9541,8 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-20T07:54:31.782045+00:00",
-        "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测",
-        "score": "5.00"
+        "at": "2026-10-21T14:49:37.002841+00:00",
+        "scope": "价格API闭环；公开呈现未核"
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/10000046705043/prepared.json",
@@ -9522,7 +9561,7 @@
       "catalog_presence": "OBSERVED",
       "catalog_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
       "catalog_fields": {
-        "at": "2026-10-20T07:54:31.782045+00:00",
+        "at": "2026-10-21T14:49:37.002841+00:00",
         "model": "BQ-035 / A001",
         "title": "Men's Knit Backless Mules Closed Toe Slip-On Casual Shoes Wholesale",
         "keywords": [
@@ -9588,19 +9627,19 @@
         ]
       },
       "local_sync": {
-        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "state": "FORMAL_PRICE_PASS_API",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000046705043/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000046705043/formal_render.json",
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/10000046705043/当前图库与货号.json",
-        "at": "2026-10-16T04:42:00.043792+00:00",
+        "at": "2026-10-21T14:49:37.002841+00:00",
         "observed_at": "2026-10-19T19:46:20.569085+00:00",
         "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/结构与标题纠正/商品/10000046705043/verification.json",
         "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ035_旧报价图替换/商品/10000046705043/verification.json"
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000046705043/formal_get.json",
-        "at": "2026-10-20T07:54:31.782045+00:00",
-        "scope": "Replace only old price/quote graphics with source-reviewed product construction diagrams. Photographs unchanged; all other gallery roles, factory image, SKU, price, quantities, title and FAQ retained."
+        "at": "2026-10-21T14:49:37.002841+00:00",
+        "scope": "本次价格正式回读；不代表公开验收"
       },
       "platform_group": {
         "id": "972225685",
@@ -9608,7 +9647,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-10-20T07:54:31.782045+00:00",
+        "at": "2026-10-21T14:49:37.002841+00:00",
         "model": "BQ-035 / A001",
         "title": "Men's Knit Backless Mules Closed Toe Slip-On Casual Shoes Wholesale",
         "keywords": [
@@ -9800,6 +9839,47 @@
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ035_旧报价图替换/商品/10000046705043/verification.json"
           ]
         }
+      },
+      "price_review": {
+        "id": "10000046705043",
+        "family": "BQ035",
+        "model": "BQ-035 / A001",
+        "new_tiers": [
+          [
+            2,
+            "9.00"
+          ],
+          [
+            50,
+            "8.40"
+          ],
+          [
+            100,
+            "7.80"
+          ]
+        ],
+        "basis": {
+          "type": "OWNER_CONFIRMED_PRODUCTION_BASELINE_REDUCTION",
+          "cost_reference": "00_总控台/产品中心/数据/.local/生产成本基线.json",
+          "cost_family_key": "BQ035",
+          "cost_confirmed_on": "2026-10-21",
+          "cost_class_evidence": "01_产品资产/02_可发布素材/00_最终上传/BQ035_A001/00_上架填写表.md",
+          "fx_cny_per_usd": "6.6670",
+          "fx_published_at": "2026-10-21 15:23:07 Asia/Shanghai",
+          "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+          "markups_by_quantity": {
+            "2-49": "50%",
+            "50-99": "40%",
+            "100+": "30%"
+          },
+          "rounding": "CEILING_USD_CENT",
+          "scope": "Production-cost baseline only. Actual costs stay in ignored local file; no ownership/material changes, no retail prices used as cost. Applicable expenses remain order-specific.",
+          "competitor_comparison": "SAME_CONDITION_COMPETITOR_NOT_YET_VERIFIED"
+        },
+        "at": "2026-10-21T14:49:37.002841+00:00",
+        "state": "FORMAL_PRICE_PASS_API",
+        "verification": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/原包成本续核/降价执行/10000046705043/verification.json",
+        "public": "NOT_REQUESTED_API_ACCEPTANCE"
       }
     },
     {
@@ -27626,9 +27706,8 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-19T18:39:16.450985+00:00",
-        "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测",
-        "score": "5.00"
+        "at": "2026-10-21T14:49:50.297067+00:00",
+        "scope": "价格API闭环；公开呈现未核"
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939659415/prepared.json",
@@ -27639,7 +27718,7 @@
       "catalog_presence": "OBSERVED",
       "catalog_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
       "catalog_fields": {
-        "at": "2026-10-19T18:39:16.450985+00:00",
+        "at": "2026-10-21T14:49:50.297067+00:00",
         "model": "BQ008-O1 / L1009",
         "title": "Mesh Panel Lace-Up Walking Shoes with Layered Upper and Sculpted Sole Wholesale",
         "keywords": [
@@ -27661,18 +27740,18 @@
         "highlights": "Mesh-panel lace-up casual shoes with a thick sculpted sole.\n\nAdjustable instep fit: The front laces let the wearer loosen the opening for entry and set the tension over the foot."
       },
       "local_sync": {
-        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "state": "FORMAL_PRICE_PASS_API",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939659415/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939659415/formal_render.json",
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601939659415/当前图库与货号.json",
-        "at": "2026-10-16T04:40:52.899798+00:00",
+        "at": "2026-10-21T14:49:50.297067+00:00",
         "observed_at": "2026-10-19T18:39:16.450985+00:00",
         "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939659415/verification.json"
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939659415/formal_get.json",
-        "at": "2026-10-19T18:39:16.450985+00:00",
-        "scope": "Original ID productTitle/textDesc only; SKU, images, generalFAQ, company and trade preserved"
+        "at": "2026-10-21T14:49:50.297067+00:00",
+        "scope": "本次价格正式回读；不代表公开验收"
       },
       "platform_group": {
         "id": "971467417",
@@ -27680,7 +27759,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-10-19T18:39:16.450985+00:00",
+        "at": "2026-10-21T14:49:50.297067+00:00",
         "model": "BQ008-O1 / L1009",
         "title": "Mesh Panel Lace-Up Walking Shoes with Layered Upper and Sculpted Sole Wholesale",
         "keywords": [
@@ -27814,6 +27893,47 @@
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939659415/verification.json"
           ]
         }
+      },
+      "price_review": {
+        "id": "1601939659415",
+        "family": "BQ008",
+        "model": "BQ008-O1 / L1009",
+        "new_tiers": [
+          [
+            2,
+            "9.45"
+          ],
+          [
+            50,
+            "9.15"
+          ],
+          [
+            100,
+            "8.78"
+          ]
+        ],
+        "basis": {
+          "type": "OWNER_CONFIRMED_PRODUCTION_BASELINE_REDUCTION",
+          "cost_reference": "00_总控台/产品中心/数据/.local/生产成本基线.json",
+          "cost_family_key": "BQ008",
+          "cost_confirmed_on": "2026-10-21",
+          "cost_class_evidence": "01_产品资产/02_可发布素材/00_最终上传/BQ008_L1009/00_上架填写表.md",
+          "fx_cny_per_usd": "6.6670",
+          "fx_published_at": "2026-10-21 15:23:07 Asia/Shanghai",
+          "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+          "markups_by_quantity": {
+            "2-49": "50%",
+            "50-99": "40%",
+            "100+": "30%"
+          },
+          "rounding": "CEILING_USD_CENT",
+          "scope": "Production-cost baseline only. Actual costs stay in ignored local file; no ownership/material changes, no retail prices used as cost. Applicable expenses remain order-specific.",
+          "competitor_comparison": "SAME_CONDITION_COMPETITOR_NOT_YET_VERIFIED"
+        },
+        "at": "2026-10-21T14:49:50.297067+00:00",
+        "state": "FORMAL_PRICE_PASS_API",
+        "verification": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/原包成本续核/降价执行/1601939659415/verification.json",
+        "public": "NOT_REQUESTED_API_ACCEPTANCE"
       }
     },
     {
@@ -27827,9 +27947,8 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-19T18:39:13.284781+00:00",
-        "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测",
-        "score": "5.00"
+        "at": "2026-10-21T14:49:52.991817+00:00",
+        "scope": "价格API闭环；公开呈现未核"
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939628529/prepared.json",
@@ -27840,7 +27959,7 @@
       "catalog_presence": "OBSERVED",
       "catalog_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
       "catalog_fields": {
-        "at": "2026-10-19T18:39:13.284781+00:00",
+        "at": "2026-10-21T14:49:52.991817+00:00",
         "model": "BQ008-R1 / L1009",
         "title": "Mesh Panel Lace-Up Walking Shoes with Layered Upper and Sculpted Sole Wholesale",
         "keywords": [
@@ -27862,18 +27981,18 @@
         "highlights": "Mesh-panel lace-up casual shoes with a thick sculpted sole.\n\nAdjustable instep fit: The front laces let the wearer loosen the opening for entry and set the tension over the foot."
       },
       "local_sync": {
-        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "state": "FORMAL_PRICE_PASS_API",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939628529/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939628529/formal_render.json",
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601939628529/当前图库与货号.json",
-        "at": "2026-10-16T04:41:10.129590+00:00",
+        "at": "2026-10-21T14:49:52.991817+00:00",
         "observed_at": "2026-10-19T18:39:13.284781+00:00",
         "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939628529/verification.json"
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939628529/formal_get.json",
-        "at": "2026-10-19T18:39:13.284781+00:00",
-        "scope": "Original ID productTitle/textDesc only; SKU, images, generalFAQ, company and trade preserved"
+        "at": "2026-10-21T14:49:52.991817+00:00",
+        "scope": "本次价格正式回读；不代表公开验收"
       },
       "platform_group": {
         "id": "971467417",
@@ -27881,7 +28000,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-10-19T18:39:13.284781+00:00",
+        "at": "2026-10-21T14:49:52.991817+00:00",
         "model": "BQ008-R1 / L1009",
         "title": "Mesh Panel Lace-Up Walking Shoes with Layered Upper and Sculpted Sole Wholesale",
         "keywords": [
@@ -28015,6 +28134,47 @@
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939628529/verification.json"
           ]
         }
+      },
+      "price_review": {
+        "id": "1601939628529",
+        "family": "BQ008",
+        "model": "BQ008-R1 / L1009",
+        "new_tiers": [
+          [
+            2,
+            "9.53"
+          ],
+          [
+            50,
+            "9.23"
+          ],
+          [
+            100,
+            "8.78"
+          ]
+        ],
+        "basis": {
+          "type": "OWNER_CONFIRMED_PRODUCTION_BASELINE_REDUCTION",
+          "cost_reference": "00_总控台/产品中心/数据/.local/生产成本基线.json",
+          "cost_family_key": "BQ008",
+          "cost_confirmed_on": "2026-10-21",
+          "cost_class_evidence": "01_产品资产/02_可发布素材/00_最终上传/BQ008_L1009/00_上架填写表.md",
+          "fx_cny_per_usd": "6.6670",
+          "fx_published_at": "2026-10-21 15:23:07 Asia/Shanghai",
+          "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+          "markups_by_quantity": {
+            "2-49": "50%",
+            "50-99": "40%",
+            "100+": "30%"
+          },
+          "rounding": "CEILING_USD_CENT",
+          "scope": "Production-cost baseline only. Actual costs stay in ignored local file; no ownership/material changes, no retail prices used as cost. Applicable expenses remain order-specific.",
+          "competitor_comparison": "SAME_CONDITION_COMPETITOR_NOT_YET_VERIFIED"
+        },
+        "at": "2026-10-21T14:49:52.991817+00:00",
+        "state": "FORMAL_PRICE_PASS_API",
+        "verification": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/原包成本续核/降价执行/1601939628529/verification.json",
+        "public": "NOT_REQUESTED_API_ACCEPTANCE"
       }
     },
     {
@@ -28028,9 +28188,8 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-19T18:39:07.937094+00:00",
-        "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测",
-        "score": "5.00"
+        "at": "2026-10-21T14:49:55.490331+00:00",
+        "scope": "价格API闭环；公开呈现未核"
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939625569/prepared.json",
@@ -28041,7 +28200,7 @@
       "catalog_presence": "OBSERVED",
       "catalog_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
       "catalog_fields": {
-        "at": "2026-10-19T18:39:07.937094+00:00",
+        "at": "2026-10-21T14:49:55.490331+00:00",
         "model": "BQ008-W1 / L1009",
         "title": "Mesh Panel Lace-Up Walking Shoes with Layered Upper and Sculpted Sole Wholesale",
         "keywords": [
@@ -28063,18 +28222,18 @@
         "highlights": "Mesh-panel lace-up casual shoes with a thick sculpted sole.\n\nAdjustable instep fit: The front laces let the wearer loosen the opening for entry and set the tension over the foot."
       },
       "local_sync": {
-        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "state": "FORMAL_PRICE_PASS_API",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939625569/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939625569/formal_render.json",
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601939625569/当前图库与货号.json",
-        "at": "2026-10-16T04:41:13.462215+00:00",
+        "at": "2026-10-21T14:49:55.490331+00:00",
         "observed_at": "2026-10-19T18:39:07.937094+00:00",
         "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939625569/verification.json"
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939625569/formal_get.json",
-        "at": "2026-10-19T18:39:07.937094+00:00",
-        "scope": "Original ID productTitle/textDesc only; SKU, images, generalFAQ, company and trade preserved"
+        "at": "2026-10-21T14:49:55.490331+00:00",
+        "scope": "本次价格正式回读；不代表公开验收"
       },
       "platform_group": {
         "id": "971467417",
@@ -28082,7 +28241,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-10-19T18:39:07.937094+00:00",
+        "at": "2026-10-21T14:49:55.490331+00:00",
         "model": "BQ008-W1 / L1009",
         "title": "Mesh Panel Lace-Up Walking Shoes with Layered Upper and Sculpted Sole Wholesale",
         "keywords": [
@@ -28216,6 +28375,47 @@
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939625569/verification.json"
           ]
         }
+      },
+      "price_review": {
+        "id": "1601939625569",
+        "family": "BQ008",
+        "model": "BQ008-W1 / L1009",
+        "new_tiers": [
+          [
+            2,
+            "9.49"
+          ],
+          [
+            50,
+            "9.19"
+          ],
+          [
+            100,
+            "8.78"
+          ]
+        ],
+        "basis": {
+          "type": "OWNER_CONFIRMED_PRODUCTION_BASELINE_REDUCTION",
+          "cost_reference": "00_总控台/产品中心/数据/.local/生产成本基线.json",
+          "cost_family_key": "BQ008",
+          "cost_confirmed_on": "2026-10-21",
+          "cost_class_evidence": "01_产品资产/02_可发布素材/00_最终上传/BQ008_L1009/00_上架填写表.md",
+          "fx_cny_per_usd": "6.6670",
+          "fx_published_at": "2026-10-21 15:23:07 Asia/Shanghai",
+          "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+          "markups_by_quantity": {
+            "2-49": "50%",
+            "50-99": "40%",
+            "100+": "30%"
+          },
+          "rounding": "CEILING_USD_CENT",
+          "scope": "Production-cost baseline only. Actual costs stay in ignored local file; no ownership/material changes, no retail prices used as cost. Applicable expenses remain order-specific.",
+          "competitor_comparison": "SAME_CONDITION_COMPETITOR_NOT_YET_VERIFIED"
+        },
+        "at": "2026-10-21T14:49:55.490331+00:00",
+        "state": "FORMAL_PRICE_PASS_API",
+        "verification": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/原包成本续核/降价执行/1601939625569/verification.json",
+        "public": "NOT_REQUESTED_API_ACCEPTANCE"
       }
     },
     {
@@ -28229,10 +28429,8 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-21T01:35:32.904024+00:00",
-        "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测",
-        "score": "5.00",
-        "sku_count": 44
+        "at": "2026-10-21T14:48:47.332839+00:00",
+        "scope": "价格API闭环；公开呈现未核"
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939721165/prepared.json",
@@ -28267,7 +28465,7 @@
       "catalog_presence": "OBSERVED",
       "catalog_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
       "catalog_fields": {
-        "at": "2026-10-21T01:35:32.904024+00:00",
+        "at": "2026-10-21T14:48:47.332839+00:00",
         "model": "BQ009-O1 / L1026",
         "title": "Custom Logo Men's Casual Sneakers Breathable Mesh Lace Up Thick Sole Walking Shoes OEM ODM L1026",
         "keywords": [
@@ -28374,11 +28572,11 @@
         ]
       },
       "local_sync": {
-        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "state": "FORMAL_PRICE_PASS_API",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939721165/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939721165/formal_render.json",
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601939721165/当前图库与货号.json",
-        "at": "2026-10-16T04:40:25.994213+00:00",
+        "at": "2026-10-21T14:48:47.332839+00:00",
         "observed_at": "2026-10-20T05:02:49.459772+00:00",
         "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939721165/verification.json",
         "assortment_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ009_逐色绑定纠正/商品/1601939721165/verification.json",
@@ -28386,8 +28584,8 @@
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939721165/formal_get.json",
-        "at": "2026-10-21T01:35:32.904024+00:00",
-        "scope": "Replace the observed remaining generic/incorrect product-use or sole captions with four distinct real-product roles: construction, actual component/opening/on-foot detail, per-ID colour selection and exact EU matrix. Preserve all other product fields, SKU photos/rows/prices/stock, company suite and original F1 position. Only BQ007 two misleading main M2 captions are included."
+        "at": "2026-10-21T14:48:47.332839+00:00",
+        "scope": "本次价格正式回读；不代表公开验收"
       },
       "platform_group": {
         "id": "971467417",
@@ -28395,7 +28593,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-10-21T01:35:32.904024+00:00",
+        "at": "2026-10-21T14:48:47.332839+00:00",
         "model": "BQ009-O1 / L1026",
         "title": "Custom Logo Men's Casual Sneakers Breathable Mesh Lace Up Thick Sole Walking Shoes OEM ODM L1026",
         "keywords": [
@@ -28637,6 +28835,47 @@
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ009_详情信息整组收尾/商品/1601939721165/verification.json"
           ]
         }
+      },
+      "price_review": {
+        "id": "1601939721165",
+        "family": "BQ009",
+        "model": "BQ009-O1 / L1026",
+        "new_tiers": [
+          [
+            2,
+            "9.45"
+          ],
+          [
+            50,
+            "9.15"
+          ],
+          [
+            100,
+            "8.78"
+          ]
+        ],
+        "basis": {
+          "type": "OWNER_CONFIRMED_PRODUCTION_BASELINE_REDUCTION",
+          "cost_reference": "00_总控台/产品中心/数据/.local/生产成本基线.json",
+          "cost_family_key": "BQ009",
+          "cost_confirmed_on": "2026-10-21",
+          "cost_class_evidence": "01_产品资产/02_可发布素材/00_最终上传/BQ009_L1026/00_上架填写表.md",
+          "fx_cny_per_usd": "6.6670",
+          "fx_published_at": "2026-10-21 15:23:07 Asia/Shanghai",
+          "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+          "markups_by_quantity": {
+            "2-49": "50%",
+            "50-99": "40%",
+            "100+": "30%"
+          },
+          "rounding": "CEILING_USD_CENT",
+          "scope": "Production-cost baseline only. Actual costs stay in ignored local file; no ownership/material changes, no retail prices used as cost. Applicable expenses remain order-specific.",
+          "competitor_comparison": "SAME_CONDITION_COMPETITOR_NOT_YET_VERIFIED"
+        },
+        "at": "2026-10-21T14:48:47.332839+00:00",
+        "state": "FORMAL_PRICE_PASS_API",
+        "verification": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/原包成本续核/降价执行/1601939721165/verification.json",
+        "public": "NOT_REQUESTED_API_ACCEPTANCE"
       }
     },
     {
@@ -28650,10 +28889,8 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-21T01:35:22.453272+00:00",
-        "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测",
-        "score": "5.00",
-        "sku_count": 44
+        "at": "2026-10-21T14:48:50.208831+00:00",
+        "scope": "价格API闭环；公开呈现未核"
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939661419/prepared.json",
@@ -28688,7 +28925,7 @@
       "catalog_presence": "OBSERVED",
       "catalog_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
       "catalog_fields": {
-        "at": "2026-10-21T01:35:22.453272+00:00",
+        "at": "2026-10-21T14:48:50.208831+00:00",
         "model": "BQ009-R1 / L1026",
         "title": "Men's Light Weight Casual Sneakers Breathable Mesh Lace-Up Thick Sole Walking Shoes for Daily Wear All Seasons L1026",
         "keywords": [
@@ -28795,11 +29032,11 @@
         ]
       },
       "local_sync": {
-        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "state": "FORMAL_PRICE_PASS_API",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939661419/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939661419/formal_render.json",
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601939661419/当前图库与货号.json",
-        "at": "2026-10-16T04:21:51.770000+00:00",
+        "at": "2026-10-21T14:48:50.208831+00:00",
         "observed_at": "2026-10-20T05:02:32.512778+00:00",
         "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939661419/verification.json",
         "assortment_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ009_逐色绑定纠正/商品/1601939661419/verification.json",
@@ -28807,8 +29044,8 @@
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939661419/formal_get.json",
-        "at": "2026-10-21T01:35:22.453272+00:00",
-        "scope": "Replace the observed remaining generic/incorrect product-use or sole captions with four distinct real-product roles: construction, actual component/opening/on-foot detail, per-ID colour selection and exact EU matrix. Preserve all other product fields, SKU photos/rows/prices/stock, company suite and original F1 position. Only BQ007 two misleading main M2 captions are included."
+        "at": "2026-10-21T14:48:50.208831+00:00",
+        "scope": "本次价格正式回读；不代表公开验收"
       },
       "platform_group": {
         "id": "971467417",
@@ -28816,7 +29053,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-10-21T01:35:22.453272+00:00",
+        "at": "2026-10-21T14:48:50.208831+00:00",
         "model": "BQ009-R1 / L1026",
         "title": "Men's Light Weight Casual Sneakers Breathable Mesh Lace-Up Thick Sole Walking Shoes for Daily Wear All Seasons L1026",
         "keywords": [
@@ -29058,6 +29295,47 @@
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ009_详情信息整组收尾/商品/1601939661419/verification.json"
           ]
         }
+      },
+      "price_review": {
+        "id": "1601939661419",
+        "family": "BQ009",
+        "model": "BQ009-R1 / L1026",
+        "new_tiers": [
+          [
+            2,
+            "9.53"
+          ],
+          [
+            50,
+            "9.23"
+          ],
+          [
+            100,
+            "8.78"
+          ]
+        ],
+        "basis": {
+          "type": "OWNER_CONFIRMED_PRODUCTION_BASELINE_REDUCTION",
+          "cost_reference": "00_总控台/产品中心/数据/.local/生产成本基线.json",
+          "cost_family_key": "BQ009",
+          "cost_confirmed_on": "2026-10-21",
+          "cost_class_evidence": "01_产品资产/02_可发布素材/00_最终上传/BQ009_L1026/00_上架填写表.md",
+          "fx_cny_per_usd": "6.6670",
+          "fx_published_at": "2026-10-21 15:23:07 Asia/Shanghai",
+          "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+          "markups_by_quantity": {
+            "2-49": "50%",
+            "50-99": "40%",
+            "100+": "30%"
+          },
+          "rounding": "CEILING_USD_CENT",
+          "scope": "Production-cost baseline only. Actual costs stay in ignored local file; no ownership/material changes, no retail prices used as cost. Applicable expenses remain order-specific.",
+          "competitor_comparison": "SAME_CONDITION_COMPETITOR_NOT_YET_VERIFIED"
+        },
+        "at": "2026-10-21T14:48:50.208831+00:00",
+        "state": "FORMAL_PRICE_PASS_API",
+        "verification": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/原包成本续核/降价执行/1601939661419/verification.json",
+        "public": "NOT_REQUESTED_API_ACCEPTANCE"
       }
     },
     {
@@ -29071,10 +29349,8 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-21T01:35:29.880225+00:00",
-        "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测",
-        "score": "5.00",
-        "sku_count": 44
+        "at": "2026-10-21T14:48:52.824500+00:00",
+        "scope": "价格API闭环；公开呈现未核"
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939675350/prepared.json",
@@ -29109,7 +29385,7 @@
       "catalog_presence": "OBSERVED",
       "catalog_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
       "catalog_fields": {
-        "at": "2026-10-21T01:35:29.880225+00:00",
+        "at": "2026-10-21T14:48:52.824500+00:00",
         "model": "BQ009-W1 / L1026",
         "title": "Wholesale Men's Light Weight Casual Sneakers Breathable Mesh Lace up Thick Sole Walking Shoes Factory Supply L1026",
         "keywords": [
@@ -29216,11 +29492,11 @@
         ]
       },
       "local_sync": {
-        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "state": "FORMAL_PRICE_PASS_API",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939675350/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939675350/formal_render.json",
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601939675350/当前图库与货号.json",
-        "at": "2026-10-16T04:40:44.694843+00:00",
+        "at": "2026-10-21T14:48:52.824500+00:00",
         "observed_at": "2026-10-20T05:02:43.691600+00:00",
         "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939675350/verification.json",
         "assortment_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ009_逐色绑定纠正/商品/1601939675350/verification.json",
@@ -29228,8 +29504,8 @@
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939675350/formal_get.json",
-        "at": "2026-10-21T01:35:29.880225+00:00",
-        "scope": "Replace the observed remaining generic/incorrect product-use or sole captions with four distinct real-product roles: construction, actual component/opening/on-foot detail, per-ID colour selection and exact EU matrix. Preserve all other product fields, SKU photos/rows/prices/stock, company suite and original F1 position. Only BQ007 two misleading main M2 captions are included."
+        "at": "2026-10-21T14:48:52.824500+00:00",
+        "scope": "本次价格正式回读；不代表公开验收"
       },
       "platform_group": {
         "id": "971467417",
@@ -29237,7 +29513,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-10-21T01:35:29.880225+00:00",
+        "at": "2026-10-21T14:48:52.824500+00:00",
         "model": "BQ009-W1 / L1026",
         "title": "Wholesale Men's Light Weight Casual Sneakers Breathable Mesh Lace up Thick Sole Walking Shoes Factory Supply L1026",
         "keywords": [
@@ -29479,6 +29755,47 @@
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ009_详情信息整组收尾/商品/1601939675350/verification.json"
           ]
         }
+      },
+      "price_review": {
+        "id": "1601939675350",
+        "family": "BQ009",
+        "model": "BQ009-W1 / L1026",
+        "new_tiers": [
+          [
+            2,
+            "9.49"
+          ],
+          [
+            50,
+            "9.19"
+          ],
+          [
+            100,
+            "8.78"
+          ]
+        ],
+        "basis": {
+          "type": "OWNER_CONFIRMED_PRODUCTION_BASELINE_REDUCTION",
+          "cost_reference": "00_总控台/产品中心/数据/.local/生产成本基线.json",
+          "cost_family_key": "BQ009",
+          "cost_confirmed_on": "2026-10-21",
+          "cost_class_evidence": "01_产品资产/02_可发布素材/00_最终上传/BQ009_L1026/00_上架填写表.md",
+          "fx_cny_per_usd": "6.6670",
+          "fx_published_at": "2026-10-21 15:23:07 Asia/Shanghai",
+          "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+          "markups_by_quantity": {
+            "2-49": "50%",
+            "50-99": "40%",
+            "100+": "30%"
+          },
+          "rounding": "CEILING_USD_CENT",
+          "scope": "Production-cost baseline only. Actual costs stay in ignored local file; no ownership/material changes, no retail prices used as cost. Applicable expenses remain order-specific.",
+          "competitor_comparison": "SAME_CONDITION_COMPETITOR_NOT_YET_VERIFIED"
+        },
+        "at": "2026-10-21T14:48:52.824500+00:00",
+        "state": "FORMAL_PRICE_PASS_API",
+        "verification": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/原包成本续核/降价执行/1601939675350/verification.json",
+        "public": "NOT_REQUESTED_API_ACCEPTANCE"
       }
     },
     {
@@ -56191,9 +56508,8 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-20T17:50:22.435294+00:00",
-        "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测",
-        "score": "5.00"
+        "at": "2026-10-21T14:49:06.100129+00:00",
+        "scope": "价格API闭环；公开呈现未核"
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/10000046439033/prepared.json",
@@ -56212,7 +56528,7 @@
       "catalog_presence": "OBSERVED",
       "catalog_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
       "catalog_fields": {
-        "at": "2026-10-20T17:50:22.435294+00:00",
+        "at": "2026-10-21T14:49:06.100129+00:00",
         "model": "BQ031 / ZX2116",
         "title": "Wide Toe Box Knit Lace-Up Walking Shoes with Heel Pull Loop Wholesale",
         "keywords": [
@@ -56264,19 +56580,19 @@
         ]
       },
       "local_sync": {
-        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "state": "FORMAL_PRICE_PASS_API",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000046439033/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000046439033/formal_render.json",
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/10000046439033/当前图库与货号.json",
-        "at": "2026-10-16T04:42:02.714789+00:00",
+        "at": "2026-10-21T14:49:06.100129+00:00",
         "observed_at": "2026-10-19T19:46:20.447638+00:00",
         "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/结构与标题纠正/商品/10000046439033/verification.json",
         "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ031_功能图正式精修/商品/10000046439033/verification.json"
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000046439033/formal_get.json",
-        "at": "2026-10-20T17:50:22.435294+00:00",
-        "scope": "Replace individually reviewed product proofs with exact-shoe buyer-facing diagrams. Remove internal instructions, unsupported claim labels and redundant detail filler. Keep factory F1 at existing position, company suite, all copy, SKU, prices, stock and other fields unchanged."
+        "at": "2026-10-21T14:49:06.100129+00:00",
+        "scope": "本次价格正式回读；不代表公开验收"
       },
       "platform_group": {
         "id": "915505550",
@@ -56284,7 +56600,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-10-20T17:50:22.435294+00:00",
+        "at": "2026-10-21T14:49:06.100129+00:00",
         "model": "BQ031 / ZX2116",
         "title": "Wide Toe Box Knit Lace-Up Walking Shoes with Heel Pull Loop Wholesale",
         "keywords": [
@@ -56462,6 +56778,47 @@
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ031_功能图正式精修/商品/10000046439033/verification.json"
           ]
         }
+      },
+      "price_review": {
+        "id": "10000046439033",
+        "family": "BQ031",
+        "model": "BQ031 / ZX2116",
+        "new_tiers": [
+          [
+            2,
+            "9.00"
+          ],
+          [
+            50,
+            "8.40"
+          ],
+          [
+            100,
+            "7.80"
+          ]
+        ],
+        "basis": {
+          "type": "OWNER_CONFIRMED_PRODUCTION_BASELINE_REDUCTION",
+          "cost_reference": "00_总控台/产品中心/数据/.local/生产成本基线.json",
+          "cost_family_key": "BQ031",
+          "cost_confirmed_on": "2026-10-21",
+          "cost_class_evidence": "01_产品资产/02_可发布素材/00_最终上传/BQ031_ZX2116/00_上架填写表.md",
+          "fx_cny_per_usd": "6.6670",
+          "fx_published_at": "2026-10-21 15:23:07 Asia/Shanghai",
+          "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+          "markups_by_quantity": {
+            "2-49": "50%",
+            "50-99": "40%",
+            "100+": "30%"
+          },
+          "rounding": "CEILING_USD_CENT",
+          "scope": "Production-cost baseline only. Actual costs stay in ignored local file; no ownership/material changes, no retail prices used as cost. Applicable expenses remain order-specific.",
+          "competitor_comparison": "SAME_CONDITION_COMPETITOR_NOT_YET_VERIFIED"
+        },
+        "at": "2026-10-21T14:49:06.100129+00:00",
+        "state": "FORMAL_PRICE_PASS_API",
+        "verification": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/原包成本续核/降价执行/10000046439033/verification.json",
+        "public": "NOT_REQUESTED_API_ACCEPTANCE"
       }
     },
     {
@@ -56475,9 +56832,8 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-20T17:50:27.050928+00:00",
-        "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测",
-        "score": "5.00"
+        "at": "2026-10-21T14:49:08.373402+00:00",
+        "scope": "价格API闭环；公开呈现未核"
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939754004/prepared.json",
@@ -56498,7 +56854,7 @@
       "catalog_presence": "OBSERVED",
       "catalog_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
       "catalog_fields": {
-        "at": "2026-10-20T17:50:27.050928+00:00",
+        "at": "2026-10-21T14:49:08.373402+00:00",
         "model": "BQ031-O1 / ZX2116",
         "title": "Wide Toe Box Knit Lace-Up Walking Shoes with Heel Pull Loop Wholesale",
         "keywords": [
@@ -56550,19 +56906,19 @@
         ]
       },
       "local_sync": {
-        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "state": "FORMAL_PRICE_PASS_API",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939754004/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939754004/formal_render.json",
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601939754004/当前图库与货号.json",
-        "at": "2026-10-16T04:40:09.957587+00:00",
+        "at": "2026-10-21T14:49:08.373402+00:00",
         "observed_at": "2026-10-19T18:37:46.103469+00:00",
         "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939754004/verification.json",
         "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ031_功能图正式精修/商品/1601939754004/verification.json"
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939754004/formal_get.json",
-        "at": "2026-10-20T17:50:27.050928+00:00",
-        "scope": "Replace individually reviewed product proofs with exact-shoe buyer-facing diagrams. Remove internal instructions, unsupported claim labels and redundant detail filler. Keep factory F1 at existing position, company suite, all copy, SKU, prices, stock and other fields unchanged."
+        "at": "2026-10-21T14:49:08.373402+00:00",
+        "scope": "本次价格正式回读；不代表公开验收"
       },
       "platform_group": {
         "id": "916810944",
@@ -56570,7 +56926,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-10-20T17:50:27.050928+00:00",
+        "at": "2026-10-21T14:49:08.373402+00:00",
         "model": "BQ031-O1 / ZX2116",
         "title": "Wide Toe Box Knit Lace-Up Walking Shoes with Heel Pull Loop Wholesale",
         "keywords": [
@@ -56749,6 +57105,47 @@
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ031_功能图正式精修/商品/1601939754004/verification.json"
           ]
         }
+      },
+      "price_review": {
+        "id": "1601939754004",
+        "family": "BQ031",
+        "model": "BQ031-O1 / ZX2116",
+        "new_tiers": [
+          [
+            2,
+            "9.00"
+          ],
+          [
+            50,
+            "8.40"
+          ],
+          [
+            100,
+            "7.80"
+          ]
+        ],
+        "basis": {
+          "type": "OWNER_CONFIRMED_PRODUCTION_BASELINE_REDUCTION",
+          "cost_reference": "00_总控台/产品中心/数据/.local/生产成本基线.json",
+          "cost_family_key": "BQ031",
+          "cost_confirmed_on": "2026-10-21",
+          "cost_class_evidence": "01_产品资产/02_可发布素材/00_最终上传/BQ031_ZX2116/00_上架填写表.md",
+          "fx_cny_per_usd": "6.6670",
+          "fx_published_at": "2026-10-21 15:23:07 Asia/Shanghai",
+          "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+          "markups_by_quantity": {
+            "2-49": "50%",
+            "50-99": "40%",
+            "100+": "30%"
+          },
+          "rounding": "CEILING_USD_CENT",
+          "scope": "Production-cost baseline only. Actual costs stay in ignored local file; no ownership/material changes, no retail prices used as cost. Applicable expenses remain order-specific.",
+          "competitor_comparison": "SAME_CONDITION_COMPETITOR_NOT_YET_VERIFIED"
+        },
+        "at": "2026-10-21T14:49:08.373402+00:00",
+        "state": "FORMAL_PRICE_PASS_API",
+        "verification": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/原包成本续核/降价执行/1601939754004/verification.json",
+        "public": "NOT_REQUESTED_API_ACCEPTANCE"
       }
     },
     {
@@ -56762,9 +57159,8 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-20T17:50:31.536310+00:00",
-        "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测",
-        "score": "5.00"
+        "at": "2026-10-21T14:49:03.782851+00:00",
+        "scope": "价格API闭环；公开呈现未核"
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939667426/prepared.json",
@@ -56788,7 +57184,7 @@
       "catalog_presence": "OBSERVED",
       "catalog_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
       "catalog_fields": {
-        "at": "2026-10-20T17:50:31.536310+00:00",
+        "at": "2026-10-21T14:49:03.782851+00:00",
         "model": "BQ031-R1 / ZX2116",
         "title": "Wide Toe Box Knit Lace-Up Walking Shoes with Heel Pull Loop Wholesale",
         "keywords": [
@@ -56840,19 +57236,19 @@
         ]
       },
       "local_sync": {
-        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "state": "FORMAL_PRICE_PASS_API",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939667426/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939667426/formal_render.json",
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601939667426/当前图库与货号.json",
-        "at": "2026-10-16T04:40:47.087010+00:00",
+        "at": "2026-10-21T14:49:03.782851+00:00",
         "observed_at": "2026-10-19T19:48:51.267648+00:00",
         "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/结构与标题纠正/商品/1601939667426/verification.json",
         "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ031_功能图正式精修/商品/1601939667426/verification.json"
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939667426/formal_get.json",
-        "at": "2026-10-20T17:50:31.536310+00:00",
-        "scope": "Replace individually reviewed product proofs with exact-shoe buyer-facing diagrams. Remove internal instructions, unsupported claim labels and redundant detail filler. Keep factory F1 at existing position, company suite, all copy, SKU, prices, stock and other fields unchanged."
+        "at": "2026-10-21T14:49:03.782851+00:00",
+        "scope": "本次价格正式回读；不代表公开验收"
       },
       "platform_group": {
         "id": "916810944",
@@ -56860,7 +57256,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-10-20T17:50:31.536310+00:00",
+        "at": "2026-10-21T14:49:03.782851+00:00",
         "model": "BQ031-R1 / ZX2116",
         "title": "Wide Toe Box Knit Lace-Up Walking Shoes with Heel Pull Loop Wholesale",
         "keywords": [
@@ -57038,6 +57434,47 @@
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ031_功能图正式精修/商品/1601939667426/verification.json"
           ]
         }
+      },
+      "price_review": {
+        "id": "1601939667426",
+        "family": "BQ031",
+        "model": "BQ031-R1 / ZX2116",
+        "new_tiers": [
+          [
+            2,
+            "9.00"
+          ],
+          [
+            50,
+            "8.40"
+          ],
+          [
+            100,
+            "7.80"
+          ]
+        ],
+        "basis": {
+          "type": "OWNER_CONFIRMED_PRODUCTION_BASELINE_REDUCTION",
+          "cost_reference": "00_总控台/产品中心/数据/.local/生产成本基线.json",
+          "cost_family_key": "BQ031",
+          "cost_confirmed_on": "2026-10-21",
+          "cost_class_evidence": "01_产品资产/02_可发布素材/00_最终上传/BQ031_ZX2116/00_上架填写表.md",
+          "fx_cny_per_usd": "6.6670",
+          "fx_published_at": "2026-10-21 15:23:07 Asia/Shanghai",
+          "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+          "markups_by_quantity": {
+            "2-49": "50%",
+            "50-99": "40%",
+            "100+": "30%"
+          },
+          "rounding": "CEILING_USD_CENT",
+          "scope": "Production-cost baseline only. Actual costs stay in ignored local file; no ownership/material changes, no retail prices used as cost. Applicable expenses remain order-specific.",
+          "competitor_comparison": "SAME_CONDITION_COMPETITOR_NOT_YET_VERIFIED"
+        },
+        "at": "2026-10-21T14:49:03.782851+00:00",
+        "state": "FORMAL_PRICE_PASS_API",
+        "verification": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/原包成本续核/降价执行/1601939667426/verification.json",
+        "public": "NOT_REQUESTED_API_ACCEPTANCE"
       }
     },
     {
@@ -57051,9 +57488,8 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-20T17:50:35.849757+00:00",
-        "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测",
-        "score": "5.00"
+        "at": "2026-10-21T14:49:01.627763+00:00",
+        "scope": "价格API闭环；公开呈现未核"
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939693331/prepared.json",
@@ -57074,7 +57510,7 @@
       "catalog_presence": "OBSERVED",
       "catalog_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
       "catalog_fields": {
-        "at": "2026-10-20T17:50:35.849757+00:00",
+        "at": "2026-10-21T14:49:01.627763+00:00",
         "model": "BQ031-W1 / ZX2116",
         "title": "Wide Toe Box Knit Lace-Up Walking Shoes with Heel Pull Loop Wholesale",
         "keywords": [
@@ -57126,19 +57562,19 @@
         ]
       },
       "local_sync": {
-        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "state": "FORMAL_PRICE_PASS_API",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939693331/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939693331/formal_render.json",
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601939693331/当前图库与货号.json",
-        "at": "2026-10-16T04:40:37.687898+00:00",
+        "at": "2026-10-21T14:49:01.627763+00:00",
         "observed_at": "2026-10-19T18:37:43.725271+00:00",
         "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939693331/verification.json",
         "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ031_功能图正式精修/商品/1601939693331/verification.json"
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939693331/formal_get.json",
-        "at": "2026-10-20T17:50:35.849757+00:00",
-        "scope": "Replace individually reviewed product proofs with exact-shoe buyer-facing diagrams. Remove internal instructions, unsupported claim labels and redundant detail filler. Keep factory F1 at existing position, company suite, all copy, SKU, prices, stock and other fields unchanged."
+        "at": "2026-10-21T14:49:01.627763+00:00",
+        "scope": "本次价格正式回读；不代表公开验收"
       },
       "platform_group": {
         "id": "916810944",
@@ -57146,7 +57582,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-10-20T17:50:35.849757+00:00",
+        "at": "2026-10-21T14:49:01.627763+00:00",
         "model": "BQ031-W1 / ZX2116",
         "title": "Wide Toe Box Knit Lace-Up Walking Shoes with Heel Pull Loop Wholesale",
         "keywords": [
@@ -57323,6 +57759,48 @@
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ031_功能图正式精修/商品/1601939693331/verification.json"
           ]
         }
+      },
+      "price_review": {
+        "id": "1601939693331",
+        "family": "BQ031",
+        "model": "BQ031-W1 / ZX2116",
+        "new_tiers": [
+          [
+            2,
+            "9.00"
+          ],
+          [
+            50,
+            "8.40"
+          ],
+          [
+            100,
+            "7.80"
+          ]
+        ],
+        "basis": {
+          "type": "OWNER_CONFIRMED_PRODUCTION_BASELINE_REDUCTION",
+          "cost_reference": "00_总控台/产品中心/数据/.local/生产成本基线.json",
+          "cost_family_key": "BQ031",
+          "cost_confirmed_on": "2026-10-21",
+          "cost_class_evidence": "01_产品资产/02_可发布素材/00_最终上传/BQ031_ZX2116/00_上架填写表.md",
+          "fx_cny_per_usd": "6.6670",
+          "fx_published_at": "2026-10-21 15:23:07 Asia/Shanghai",
+          "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+          "markups_by_quantity": {
+            "2-49": "50%",
+            "50-99": "40%",
+            "100+": "30%"
+          },
+          "rounding": "CEILING_USD_CENT",
+          "scope": "Production-cost baseline only. Actual costs stay in ignored local file; no ownership/material changes, no retail prices used as cost. Applicable expenses remain order-specific.",
+          "competitor_comparison": "SAME_CONDITION_COMPETITOR_NOT_YET_VERIFIED",
+          "trade_supplement_evidence": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/商品/1601939693331/trade_supplement.json"
+        },
+        "at": "2026-10-21T14:49:01.627763+00:00",
+        "state": "FORMAL_PRICE_PASS_API",
+        "verification": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/原包成本续核/降价执行/1601939693331/verification.json",
+        "public": "NOT_REQUESTED_API_ACCEPTANCE"
       }
     },
     {
@@ -57620,9 +58098,8 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-20T15:28:26.439593+00:00",
-        "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测",
-        "score": "5.00"
+        "at": "2026-10-21T14:49:22.148574+00:00",
+        "scope": "价格API闭环；公开呈现未核"
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939722196/prepared.json",
@@ -57638,7 +58115,7 @@
       "catalog_presence": "OBSERVED",
       "catalog_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
       "catalog_fields": {
-        "at": "2026-10-20T15:28:26.439593+00:00",
+        "at": "2026-10-21T14:49:22.148574+00:00",
         "model": "BQ032-O1 / ZX2212",
         "title": "Regular Fit Knit Lace-Up Walking Shoes Low Top Casual Sneakers Wholesale",
         "keywords": [
@@ -57690,19 +58167,19 @@
         ]
       },
       "local_sync": {
-        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "state": "FORMAL_PRICE_PASS_API",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939722196/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939722196/formal_render.json",
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601939722196/当前图库与货号.json",
-        "at": "2026-10-16T04:40:23.052525+00:00",
+        "at": "2026-10-21T14:49:22.148574+00:00",
         "observed_at": "2026-10-19T18:37:51.631778+00:00",
         "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939722196/verification.json",
         "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ032_首图构图优化/商品/1601939722196/verification.json"
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939722196/formal_get.json",
-        "at": "2026-10-20T15:28:26.439593+00:00",
-        "scope": "Exact original-ID M1 composition upgrade; complete shoe edges and real variant retained. Preserve every other image slot, factory image, detail content, SKU, pricing, copy and FAQ."
+        "at": "2026-10-21T14:49:22.148574+00:00",
+        "scope": "本次价格正式回读；不代表公开验收"
       },
       "platform_group": {
         "id": "916810944",
@@ -57710,7 +58187,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-10-20T15:28:26.439593+00:00",
+        "at": "2026-10-21T14:49:22.148574+00:00",
         "model": "BQ032-O1 / ZX2212",
         "title": "Regular Fit Knit Lace-Up Walking Shoes Low Top Casual Sneakers Wholesale",
         "keywords": [
@@ -57889,6 +58366,47 @@
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ032_首图构图优化/商品/1601939722196/verification.json"
           ]
         }
+      },
+      "price_review": {
+        "id": "1601939722196",
+        "family": "BQ032",
+        "model": "BQ032-O1 / ZX2212",
+        "new_tiers": [
+          [
+            2,
+            "9.45"
+          ],
+          [
+            50,
+            "9.15"
+          ],
+          [
+            100,
+            "8.78"
+          ]
+        ],
+        "basis": {
+          "type": "OWNER_CONFIRMED_PRODUCTION_BASELINE_REDUCTION",
+          "cost_reference": "00_总控台/产品中心/数据/.local/生产成本基线.json",
+          "cost_family_key": "BQ032",
+          "cost_confirmed_on": "2026-10-21",
+          "cost_class_evidence": "01_产品资产/02_可发布素材/00_最终上传/BQ032_ZX2212/00_上架填写表.md",
+          "fx_cny_per_usd": "6.6670",
+          "fx_published_at": "2026-10-21 15:23:07 Asia/Shanghai",
+          "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+          "markups_by_quantity": {
+            "2-49": "50%",
+            "50-99": "40%",
+            "100+": "30%"
+          },
+          "rounding": "CEILING_USD_CENT",
+          "scope": "Production-cost baseline only. Actual costs stay in ignored local file; no ownership/material changes, no retail prices used as cost. Applicable expenses remain order-specific.",
+          "competitor_comparison": "SAME_CONDITION_COMPETITOR_NOT_YET_VERIFIED"
+        },
+        "at": "2026-10-21T14:49:22.148574+00:00",
+        "state": "FORMAL_PRICE_PASS_API",
+        "verification": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/原包成本续核/降价执行/1601939722196/verification.json",
+        "public": "NOT_REQUESTED_API_ACCEPTANCE"
       }
     },
     {
@@ -57902,9 +58420,8 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-20T15:28:30.854828+00:00",
-        "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测",
-        "score": "5.00"
+        "at": "2026-10-21T14:49:15.057500+00:00",
+        "scope": "价格API闭环；公开呈现未核"
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939751023/prepared.json",
@@ -57920,7 +58437,7 @@
       "catalog_presence": "OBSERVED",
       "catalog_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
       "catalog_fields": {
-        "at": "2026-10-20T15:28:30.854828+00:00",
+        "at": "2026-10-21T14:49:15.057500+00:00",
         "model": "BQ032-R1 / ZX2212",
         "title": "Regular Fit Knit Lace-Up Walking Shoes Low Top Casual Sneakers Wholesale",
         "keywords": [
@@ -57972,19 +58489,19 @@
         ]
       },
       "local_sync": {
-        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "state": "FORMAL_PRICE_PASS_API",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939751023/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939751023/formal_render.json",
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601939751023/当前图库与货号.json",
-        "at": "2026-10-16T04:40:12.796242+00:00",
+        "at": "2026-10-21T14:49:15.057500+00:00",
         "observed_at": "2026-10-19T18:37:55.660650+00:00",
         "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939751023/verification.json",
         "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ032_首图构图优化/商品/1601939751023/verification.json"
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939751023/formal_get.json",
-        "at": "2026-10-20T15:28:30.854828+00:00",
-        "scope": "Exact original-ID M1 composition upgrade; complete shoe edges and real variant retained. Preserve every other image slot, factory image, detail content, SKU, pricing, copy and FAQ."
+        "at": "2026-10-21T14:49:15.057500+00:00",
+        "scope": "本次价格正式回读；不代表公开验收"
       },
       "platform_group": {
         "id": "916810944",
@@ -57992,7 +58509,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-10-20T15:28:30.854828+00:00",
+        "at": "2026-10-21T14:49:15.057500+00:00",
         "model": "BQ032-R1 / ZX2212",
         "title": "Regular Fit Knit Lace-Up Walking Shoes Low Top Casual Sneakers Wholesale",
         "keywords": [
@@ -58171,6 +58688,47 @@
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ032_首图构图优化/商品/1601939751023/verification.json"
           ]
         }
+      },
+      "price_review": {
+        "id": "1601939751023",
+        "family": "BQ032",
+        "model": "BQ032-R1 / ZX2212",
+        "new_tiers": [
+          [
+            2,
+            "9.53"
+          ],
+          [
+            50,
+            "9.23"
+          ],
+          [
+            100,
+            "8.78"
+          ]
+        ],
+        "basis": {
+          "type": "OWNER_CONFIRMED_PRODUCTION_BASELINE_REDUCTION",
+          "cost_reference": "00_总控台/产品中心/数据/.local/生产成本基线.json",
+          "cost_family_key": "BQ032",
+          "cost_confirmed_on": "2026-10-21",
+          "cost_class_evidence": "01_产品资产/02_可发布素材/00_最终上传/BQ032_ZX2212/00_上架填写表.md",
+          "fx_cny_per_usd": "6.6670",
+          "fx_published_at": "2026-10-21 15:23:07 Asia/Shanghai",
+          "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+          "markups_by_quantity": {
+            "2-49": "50%",
+            "50-99": "40%",
+            "100+": "30%"
+          },
+          "rounding": "CEILING_USD_CENT",
+          "scope": "Production-cost baseline only. Actual costs stay in ignored local file; no ownership/material changes, no retail prices used as cost. Applicable expenses remain order-specific.",
+          "competitor_comparison": "SAME_CONDITION_COMPETITOR_NOT_YET_VERIFIED"
+        },
+        "at": "2026-10-21T14:49:15.057500+00:00",
+        "state": "FORMAL_PRICE_PASS_API",
+        "verification": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/原包成本续核/降价执行/1601939751023/verification.json",
+        "public": "NOT_REQUESTED_API_ACCEPTANCE"
       }
     },
     {
@@ -58184,9 +58742,8 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-20T15:28:23.154536+00:00",
-        "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测",
-        "score": "5.00"
+        "at": "2026-10-21T14:49:19.773451+00:00",
+        "scope": "价格API闭环；公开呈现未核"
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939651515/prepared.json",
@@ -58205,7 +58762,7 @@
       "catalog_presence": "OBSERVED",
       "catalog_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
       "catalog_fields": {
-        "at": "2026-10-20T15:28:23.154536+00:00",
+        "at": "2026-10-21T14:49:19.773451+00:00",
         "model": "BQ032-W1 / ZX2212",
         "title": "Regular Fit Knit Lace-Up Walking Shoes Low Top Casual Sneakers Wholesale",
         "keywords": [
@@ -58257,19 +58814,19 @@
         ]
       },
       "local_sync": {
-        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "state": "FORMAL_PRICE_PASS_API",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939651515/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939651515/formal_render.json",
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601939651515/当前图库与货号.json",
-        "at": "2026-10-16T04:40:58.161123+00:00",
+        "at": "2026-10-21T14:49:19.773451+00:00",
         "observed_at": "2026-10-19T19:48:40.203394+00:00",
         "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/结构与标题纠正/商品/1601939651515/verification.json",
         "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ032_首图构图优化/商品/1601939651515/verification.json"
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939651515/formal_get.json",
-        "at": "2026-10-20T15:28:23.154536+00:00",
-        "scope": "Exact original-ID M1 composition upgrade; complete shoe edges and real variant retained. Preserve every other image slot, factory image, detail content, SKU, pricing, copy and FAQ."
+        "at": "2026-10-21T14:49:19.773451+00:00",
+        "scope": "本次价格正式回读；不代表公开验收"
       },
       "platform_group": {
         "id": "916810944",
@@ -58277,7 +58834,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-10-20T15:28:23.154536+00:00",
+        "at": "2026-10-21T14:49:19.773451+00:00",
         "model": "BQ032-W1 / ZX2212",
         "title": "Regular Fit Knit Lace-Up Walking Shoes Low Top Casual Sneakers Wholesale",
         "keywords": [
@@ -58455,6 +59012,47 @@
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ032_首图构图优化/商品/1601939651515/verification.json"
           ]
         }
+      },
+      "price_review": {
+        "id": "1601939651515",
+        "family": "BQ032",
+        "model": "BQ032-W1 / ZX2212",
+        "new_tiers": [
+          [
+            2,
+            "9.49"
+          ],
+          [
+            50,
+            "9.19"
+          ],
+          [
+            100,
+            "8.78"
+          ]
+        ],
+        "basis": {
+          "type": "OWNER_CONFIRMED_PRODUCTION_BASELINE_REDUCTION",
+          "cost_reference": "00_总控台/产品中心/数据/.local/生产成本基线.json",
+          "cost_family_key": "BQ032",
+          "cost_confirmed_on": "2026-10-21",
+          "cost_class_evidence": "01_产品资产/02_可发布素材/00_最终上传/BQ032_ZX2212/00_上架填写表.md",
+          "fx_cny_per_usd": "6.6670",
+          "fx_published_at": "2026-10-21 15:23:07 Asia/Shanghai",
+          "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+          "markups_by_quantity": {
+            "2-49": "50%",
+            "50-99": "40%",
+            "100+": "30%"
+          },
+          "rounding": "CEILING_USD_CENT",
+          "scope": "Production-cost baseline only. Actual costs stay in ignored local file; no ownership/material changes, no retail prices used as cost. Applicable expenses remain order-specific.",
+          "competitor_comparison": "SAME_CONDITION_COMPETITOR_NOT_YET_VERIFIED"
+        },
+        "at": "2026-10-21T14:49:19.773451+00:00",
+        "state": "FORMAL_PRICE_PASS_API",
+        "verification": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/原包成本续核/降价执行/1601939651515/verification.json",
+        "public": "NOT_REQUESTED_API_ACCEPTANCE"
       }
     },
     {
@@ -58468,9 +59066,8 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-20T08:30:05.038293+00:00",
-        "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测",
-        "score": "5.00"
+        "at": "2026-10-21T14:49:28.768559+00:00",
+        "scope": "价格API闭环；公开呈现未核"
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601924345456/prepared.json",
@@ -58489,7 +59086,7 @@
       "catalog_presence": "OBSERVED",
       "catalog_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
       "catalog_fields": {
-        "at": "2026-10-20T08:30:05.038293+00:00",
+        "at": "2026-10-21T14:49:28.768559+00:00",
         "model": "BQ033 / T5503",
         "title": "Knit Lace-Up Casual Walking Shoes with Foamed Sole Low Top Sneakers Wholesale",
         "keywords": [
@@ -58556,19 +59153,19 @@
         ]
       },
       "local_sync": {
-        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "state": "FORMAL_PRICE_PASS_API",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601924345456/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601924345456/formal_render.json",
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601924345456/当前图库与货号.json",
-        "at": "2026-10-16T04:41:34.723353+00:00",
+        "at": "2026-10-21T14:49:28.768559+00:00",
         "observed_at": "2026-10-19T20:13:21.040141+00:00",
         "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/结构与标题纠正/商品/1601924345456/verification.json",
         "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ033_旧报价图替换/商品/1601924345456/verification.json"
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601924345456/formal_get.json",
-        "at": "2026-10-20T08:30:05.038293+00:00",
-        "scope": "Replace only old price/quote graphics with source-reviewed product construction diagrams. Photographs unchanged; all other gallery roles, factory image, SKU, price, quantities, title and FAQ retained."
+        "at": "2026-10-21T14:49:28.768559+00:00",
+        "scope": "本次价格正式回读；不代表公开验收"
       },
       "platform_group": {
         "id": "916810944",
@@ -58576,7 +59173,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-10-20T08:30:05.038293+00:00",
+        "at": "2026-10-21T14:49:28.768559+00:00",
         "model": "BQ033 / T5503",
         "title": "Knit Lace-Up Casual Walking Shoes with Foamed Sole Low Top Sneakers Wholesale",
         "keywords": [
@@ -58769,6 +59366,47 @@
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ033_旧报价图替换/商品/1601924345456/verification.json"
           ]
         }
+      },
+      "price_review": {
+        "id": "1601924345456",
+        "family": "BQ033",
+        "model": "BQ033 / T5503",
+        "new_tiers": [
+          [
+            2,
+            "9.00"
+          ],
+          [
+            50,
+            "8.40"
+          ],
+          [
+            100,
+            "7.80"
+          ]
+        ],
+        "basis": {
+          "type": "OWNER_CONFIRMED_PRODUCTION_BASELINE_REDUCTION",
+          "cost_reference": "00_总控台/产品中心/数据/.local/生产成本基线.json",
+          "cost_family_key": "BQ033",
+          "cost_confirmed_on": "2026-10-21",
+          "cost_class_evidence": "01_产品资产/02_可发布素材/00_最终上传/BQ033_T5503/00_上架填写表.md",
+          "fx_cny_per_usd": "6.6670",
+          "fx_published_at": "2026-10-21 15:23:07 Asia/Shanghai",
+          "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+          "markups_by_quantity": {
+            "2-49": "50%",
+            "50-99": "40%",
+            "100+": "30%"
+          },
+          "rounding": "CEILING_USD_CENT",
+          "scope": "Production-cost baseline only. Actual costs stay in ignored local file; no ownership/material changes, no retail prices used as cost. Applicable expenses remain order-specific.",
+          "competitor_comparison": "SAME_CONDITION_COMPETITOR_NOT_YET_VERIFIED"
+        },
+        "at": "2026-10-21T14:49:28.768559+00:00",
+        "state": "FORMAL_PRICE_PASS_API",
+        "verification": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/原包成本续核/降价执行/1601924345456/verification.json",
+        "public": "NOT_REQUESTED_API_ACCEPTANCE"
       }
     },
     {
@@ -58782,9 +59420,8 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-20T17:07:01.166541+00:00",
-        "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测",
-        "score": "5.00"
+        "at": "2026-10-21T14:49:10.534980+00:00",
+        "scope": "价格API闭环；公开呈现未核"
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/11000037600317/prepared.json",
@@ -58808,7 +59445,7 @@
       "catalog_presence": "OBSERVED",
       "catalog_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
       "catalog_fields": {
-        "at": "2026-10-20T17:07:01.166541+00:00",
+        "at": "2026-10-21T14:49:10.534980+00:00",
         "model": "BQ034 / T5505",
         "title": "Knit Slip-On Walking Shoes with EVA Sole Low Cut Casual Sneakers for Daily Wear Wholesale",
         "keywords": [
@@ -58860,19 +59497,19 @@
         ]
       },
       "local_sync": {
-        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "state": "FORMAL_PRICE_PASS_API",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/11000037600317/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/11000037600317/formal_render.json",
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/11000037600317/当前图库与货号.json",
-        "at": "2026-10-16T04:41:44.912072+00:00",
+        "at": "2026-10-21T14:49:10.534980+00:00",
         "observed_at": "2026-10-19T19:46:39.932296+00:00",
         "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/结构与标题纠正/商品/11000037600317/verification.json",
         "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ034_功能图正式精修/商品/11000037600317/verification.json"
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/11000037600317/formal_get.json",
-        "at": "2026-10-20T17:07:01.166541+00:00",
-        "scope": "Replace individually reviewed product proofs with exact-shoe buyer-facing diagrams. Remove internal instructions, unsupported claim labels and redundant detail filler. Keep factory F1 at existing position, company suite, all copy, SKU, prices, stock and other fields unchanged."
+        "at": "2026-10-21T14:49:10.534980+00:00",
+        "scope": "本次价格正式回读；不代表公开验收"
       },
       "optimization": {
         "state": "FORMAL_DIFFERENCE_REVIEW_REQUIRED",
@@ -59017,7 +59654,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-10-20T17:07:01.166541+00:00",
+        "at": "2026-10-21T14:49:10.534980+00:00",
         "model": "BQ034 / T5505",
         "title": "Knit Slip-On Walking Shoes with EVA Sole Low Cut Casual Sneakers for Daily Wear Wholesale",
         "keywords": [
@@ -59067,6 +59704,47 @@
             "image_url": "https://sc04.alicdn.com/kf/Ha5c4d34b09864ee08b2ec0b77a5ed6964.png"
           }
         ]
+      },
+      "price_review": {
+        "id": "11000037600317",
+        "family": "BQ034",
+        "model": "BQ034 / T5505",
+        "new_tiers": [
+          [
+            2,
+            "9.00"
+          ],
+          [
+            50,
+            "8.40"
+          ],
+          [
+            100,
+            "7.80"
+          ]
+        ],
+        "basis": {
+          "type": "OWNER_CONFIRMED_PRODUCTION_BASELINE_REDUCTION",
+          "cost_reference": "00_总控台/产品中心/数据/.local/生产成本基线.json",
+          "cost_family_key": "BQ034",
+          "cost_confirmed_on": "2026-10-21",
+          "cost_class_evidence": "01_产品资产/02_可发布素材/00_最终上传/BQ034_T5505/00_上架填写表.md",
+          "fx_cny_per_usd": "6.6670",
+          "fx_published_at": "2026-10-21 15:23:07 Asia/Shanghai",
+          "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+          "markups_by_quantity": {
+            "2-49": "50%",
+            "50-99": "40%",
+            "100+": "30%"
+          },
+          "rounding": "CEILING_USD_CENT",
+          "scope": "Production-cost baseline only. Actual costs stay in ignored local file; no ownership/material changes, no retail prices used as cost. Applicable expenses remain order-specific.",
+          "competitor_comparison": "SAME_CONDITION_COMPETITOR_NOT_YET_VERIFIED"
+        },
+        "at": "2026-10-21T14:49:10.534980+00:00",
+        "state": "FORMAL_PRICE_PASS_API",
+        "verification": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/原包成本续核/降价执行/11000037600317/verification.json",
+        "public": "NOT_REQUESTED_API_ACCEPTANCE"
       }
     },
     {
@@ -59402,9 +60080,8 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-20T08:30:17.432550+00:00",
-        "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测",
-        "score": "5.00"
+        "at": "2026-10-21T14:49:26.459010+00:00",
+        "scope": "价格API闭环；公开呈现未核"
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601924347721/prepared.json",
@@ -59423,7 +60100,7 @@
       "catalog_presence": "OBSERVED",
       "catalog_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
       "catalog_fields": {
-        "at": "2026-10-20T08:30:17.432550+00:00",
+        "at": "2026-10-21T14:49:26.459010+00:00",
         "model": "BQ037 / H7116",
         "title": "Knit Lace-Up Walking Shoes with Raised Toe Cap EVA Sole Casual Sneakers Wholesale",
         "keywords": [
@@ -59490,19 +60167,19 @@
         ]
       },
       "local_sync": {
-        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "state": "FORMAL_PRICE_PASS_API",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601924347721/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601924347721/formal_render.json",
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601924347721/当前图库与货号.json",
-        "at": "2026-10-16T04:41:35.521871+00:00",
+        "at": "2026-10-21T14:49:26.459010+00:00",
         "observed_at": "2026-10-19T19:47:33.314280+00:00",
         "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/结构与标题纠正/商品/1601924347721/verification.json",
         "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ037_旧报价图替换/商品/1601924347721/verification.json"
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601924347721/formal_get.json",
-        "at": "2026-10-20T08:30:17.432550+00:00",
-        "scope": "Replace only old price/quote graphics with source-reviewed product construction diagrams. Photographs unchanged; all other gallery roles, factory image, SKU, price, quantities, title and FAQ retained."
+        "at": "2026-10-21T14:49:26.459010+00:00",
+        "scope": "本次价格正式回读；不代表公开验收"
       },
       "platform_group": {
         "id": "916810944",
@@ -59510,7 +60187,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-10-20T08:30:17.432550+00:00",
+        "at": "2026-10-21T14:49:26.459010+00:00",
         "model": "BQ037 / H7116",
         "title": "Knit Lace-Up Walking Shoes with Raised Toe Cap EVA Sole Casual Sneakers Wholesale",
         "keywords": [
@@ -59703,6 +60380,47 @@
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ037_旧报价图替换/商品/1601924347721/verification.json"
           ]
         }
+      },
+      "price_review": {
+        "id": "1601924347721",
+        "family": "BQ037",
+        "model": "BQ037 / H7116",
+        "new_tiers": [
+          [
+            2,
+            "9.00"
+          ],
+          [
+            50,
+            "8.40"
+          ],
+          [
+            100,
+            "7.80"
+          ]
+        ],
+        "basis": {
+          "type": "OWNER_CONFIRMED_PRODUCTION_BASELINE_REDUCTION",
+          "cost_reference": "00_总控台/产品中心/数据/.local/生产成本基线.json",
+          "cost_family_key": "BQ037",
+          "cost_confirmed_on": "2026-10-21",
+          "cost_class_evidence": "01_产品资产/02_可发布素材/00_最终上传/BQ037_H7116/00_上架填写表.md",
+          "fx_cny_per_usd": "6.6670",
+          "fx_published_at": "2026-10-21 15:23:07 Asia/Shanghai",
+          "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+          "markups_by_quantity": {
+            "2-49": "50%",
+            "50-99": "40%",
+            "100+": "30%"
+          },
+          "rounding": "CEILING_USD_CENT",
+          "scope": "Production-cost baseline only. Actual costs stay in ignored local file; no ownership/material changes, no retail prices used as cost. Applicable expenses remain order-specific.",
+          "competitor_comparison": "SAME_CONDITION_COMPETITOR_NOT_YET_VERIFIED"
+        },
+        "at": "2026-10-21T14:49:26.459010+00:00",
+        "state": "FORMAL_PRICE_PASS_API",
+        "verification": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/原包成本续核/降价执行/1601924347721/verification.json",
+        "public": "NOT_REQUESTED_API_ACCEPTANCE"
       }
     },
     {
@@ -59716,9 +60434,8 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-20T08:30:21.006410+00:00",
-        "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测",
-        "score": "5.00"
+        "at": "2026-10-21T14:49:34.971653+00:00",
+        "scope": "价格API闭环；公开呈现未核"
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601924732369/prepared.json",
@@ -59737,7 +60454,7 @@
       "catalog_presence": "OBSERVED",
       "catalog_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
       "catalog_fields": {
-        "at": "2026-10-20T08:30:21.006410+00:00",
+        "at": "2026-10-21T14:49:34.971653+00:00",
         "model": "BQ038 / M889",
         "title": "Knit Lace-Up Walking Sneakers Chunky EVA Sole with Seasonal Lining Options Wholesale",
         "keywords": [
@@ -59804,19 +60521,19 @@
         ]
       },
       "local_sync": {
-        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "state": "FORMAL_PRICE_PASS_API",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601924732369/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601924732369/formal_render.json",
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601924732369/当前图库与货号.json",
-        "at": "2026-10-16T04:41:33.975990+00:00",
+        "at": "2026-10-21T14:49:34.971653+00:00",
         "observed_at": "2026-10-19T19:47:40.102716+00:00",
         "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/结构与标题纠正/商品/1601924732369/verification.json",
         "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ038_旧报价图替换/商品/1601924732369/verification.json"
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601924732369/formal_get.json",
-        "at": "2026-10-20T08:30:21.006410+00:00",
-        "scope": "Replace only old price/quote graphics with source-reviewed product construction diagrams. Photographs unchanged; all other gallery roles, factory image, SKU, price, quantities, title and FAQ retained."
+        "at": "2026-10-21T14:49:34.971653+00:00",
+        "scope": "本次价格正式回读；不代表公开验收"
       },
       "platform_group": {
         "id": "916810944",
@@ -59824,7 +60541,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-10-20T08:30:21.006410+00:00",
+        "at": "2026-10-21T14:49:34.971653+00:00",
         "model": "BQ038 / M889",
         "title": "Knit Lace-Up Walking Sneakers Chunky EVA Sole with Seasonal Lining Options Wholesale",
         "keywords": [
@@ -60017,6 +60734,47 @@
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ038_旧报价图替换/商品/1601924732369/verification.json"
           ]
         }
+      },
+      "price_review": {
+        "id": "1601924732369",
+        "family": "BQ038",
+        "model": "BQ038 / M889",
+        "new_tiers": [
+          [
+            2,
+            "9.00"
+          ],
+          [
+            50,
+            "8.40"
+          ],
+          [
+            100,
+            "7.80"
+          ]
+        ],
+        "basis": {
+          "type": "OWNER_CONFIRMED_PRODUCTION_BASELINE_REDUCTION",
+          "cost_reference": "00_总控台/产品中心/数据/.local/生产成本基线.json",
+          "cost_family_key": "BQ038",
+          "cost_confirmed_on": "2026-10-21",
+          "cost_class_evidence": "01_产品资产/02_可发布素材/00_最终上传/BQ038_M889/00_上架填写表.md",
+          "fx_cny_per_usd": "6.6670",
+          "fx_published_at": "2026-10-21 15:23:07 Asia/Shanghai",
+          "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+          "markups_by_quantity": {
+            "2-49": "50%",
+            "50-99": "40%",
+            "100+": "30%"
+          },
+          "rounding": "CEILING_USD_CENT",
+          "scope": "Production-cost baseline only. Actual costs stay in ignored local file; no ownership/material changes, no retail prices used as cost. Applicable expenses remain order-specific.",
+          "competitor_comparison": "SAME_CONDITION_COMPETITOR_NOT_YET_VERIFIED"
+        },
+        "at": "2026-10-21T14:49:34.971653+00:00",
+        "state": "FORMAL_PRICE_PASS_API",
+        "verification": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/原包成本续核/降价执行/1601924732369/verification.json",
+        "public": "NOT_REQUESTED_API_ACCEPTANCE"
       }
     },
     {
@@ -60030,9 +60788,8 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-20T08:30:25.017918+00:00",
-        "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测",
-        "score": "5.00"
+        "at": "2026-10-21T14:49:32.981021+00:00",
+        "scope": "价格API闭环；公开呈现未核"
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601924755368/prepared.json",
@@ -60051,7 +60808,7 @@
       "catalog_presence": "OBSERVED",
       "catalog_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
       "catalog_fields": {
-        "at": "2026-10-20T08:30:25.017918+00:00",
+        "at": "2026-10-21T14:49:32.981021+00:00",
         "model": "BQ039 / 155",
         "title": "Stretch Knit High Top Slip-On Sock Sneakers with Segmented Foamed Sole Wholesale",
         "keywords": [
@@ -60118,19 +60875,19 @@
         ]
       },
       "local_sync": {
-        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "state": "FORMAL_PRICE_PASS_API",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601924755368/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601924755368/formal_render.json",
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601924755368/当前图库与货号.json",
-        "at": "2026-10-16T04:41:34.729338+00:00",
+        "at": "2026-10-21T14:49:32.981021+00:00",
         "observed_at": "2026-10-19T19:47:42.372874+00:00",
         "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/结构与标题纠正/商品/1601924755368/verification.json",
         "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ039_旧报价图替换/商品/1601924755368/verification.json"
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601924755368/formal_get.json",
-        "at": "2026-10-20T08:30:25.017918+00:00",
-        "scope": "Replace only old price/quote graphics with source-reviewed product construction diagrams. Photographs unchanged; all other gallery roles, factory image, SKU, price, quantities, title and FAQ retained."
+        "at": "2026-10-21T14:49:32.981021+00:00",
+        "scope": "本次价格正式回读；不代表公开验收"
       },
       "optimization": {
         "state": "PENDING_APPROVAL",
@@ -60290,7 +61047,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-10-20T08:30:25.017918+00:00",
+        "at": "2026-10-21T14:49:32.981021+00:00",
         "model": "BQ039 / 155",
         "title": "Stretch Knit High Top Slip-On Sock Sneakers with Segmented Foamed Sole Wholesale",
         "keywords": [
@@ -60355,6 +61112,47 @@
             "image_url": "https://sc04.alicdn.com/kf/S65a0a0672dd948f0bc5df4fe4c6fc3f4K.jpg"
           }
         ]
+      },
+      "price_review": {
+        "id": "1601924755368",
+        "family": "BQ039",
+        "model": "BQ039 / 155",
+        "new_tiers": [
+          [
+            2,
+            "9.00"
+          ],
+          [
+            50,
+            "8.40"
+          ],
+          [
+            100,
+            "7.80"
+          ]
+        ],
+        "basis": {
+          "type": "OWNER_CONFIRMED_PRODUCTION_BASELINE_REDUCTION",
+          "cost_reference": "00_总控台/产品中心/数据/.local/生产成本基线.json",
+          "cost_family_key": "BQ039",
+          "cost_confirmed_on": "2026-10-21",
+          "cost_class_evidence": "01_产品资产/02_可发布素材/00_最终上传/BQ039_155/00_上架填写表.md",
+          "fx_cny_per_usd": "6.6670",
+          "fx_published_at": "2026-10-21 15:23:07 Asia/Shanghai",
+          "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+          "markups_by_quantity": {
+            "2-49": "50%",
+            "50-99": "40%",
+            "100+": "30%"
+          },
+          "rounding": "CEILING_USD_CENT",
+          "scope": "Production-cost baseline only. Actual costs stay in ignored local file; no ownership/material changes, no retail prices used as cost. Applicable expenses remain order-specific.",
+          "competitor_comparison": "SAME_CONDITION_COMPETITOR_NOT_YET_VERIFIED"
+        },
+        "at": "2026-10-21T14:49:32.981021+00:00",
+        "state": "FORMAL_PRICE_PASS_API",
+        "verification": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/原包成本续核/降价执行/1601924755368/verification.json",
+        "public": "NOT_REQUESTED_API_ACCEPTANCE"
       }
     },
     {
@@ -60368,9 +61166,8 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-20T08:30:28.632348+00:00",
-        "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测",
-        "score": "5.00"
+        "at": "2026-10-21T14:49:30.968592+00:00",
+        "scope": "价格API闭环；公开呈现未核"
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601924792152/prepared.json",
@@ -60389,7 +61186,7 @@
       "catalog_presence": "OBSERVED",
       "catalog_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
       "catalog_fields": {
-        "at": "2026-10-20T08:30:28.632348+00:00",
+        "at": "2026-10-21T14:49:30.968592+00:00",
         "model": "BQ040 / 1689",
         "title": "Men's Knit Slip-On Walking Shoes with Heel Pull Loop and MD Foam Sole Wholesale",
         "keywords": [
@@ -60456,19 +61253,19 @@
         ]
       },
       "local_sync": {
-        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "state": "FORMAL_PRICE_PASS_API",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601924792152/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601924792152/formal_render.json",
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601924792152/当前图库与货号.json",
-        "at": "2026-10-16T04:41:31.760983+00:00",
+        "at": "2026-10-21T14:49:30.968592+00:00",
         "observed_at": "2026-10-19T19:47:44.164619+00:00",
         "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/结构与标题纠正/商品/1601924792152/verification.json",
         "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ040_旧报价图替换/商品/1601924792152/verification.json"
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601924792152/formal_get.json",
-        "at": "2026-10-20T08:30:28.632348+00:00",
-        "scope": "Replace only old price/quote graphics with source-reviewed product construction diagrams. Photographs unchanged; all other gallery roles, factory image, SKU, price, quantities, title and FAQ retained."
+        "at": "2026-10-21T14:49:30.968592+00:00",
+        "scope": "本次价格正式回读；不代表公开验收"
       },
       "optimization": {
         "state": "FORMAL_DIFFERENCE_REVIEW_REQUIRED",
@@ -60613,7 +61410,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-10-20T08:30:28.632348+00:00",
+        "at": "2026-10-21T14:49:30.968592+00:00",
         "model": "BQ040 / 1689",
         "title": "Men's Knit Slip-On Walking Shoes with Heel Pull Loop and MD Foam Sole Wholesale",
         "keywords": [
@@ -60678,6 +61475,47 @@
             "image_url": "https://sc04.alicdn.com/kf/A4748a908304b44018f6bc74c461b4bccu.jpg"
           }
         ]
+      },
+      "price_review": {
+        "id": "1601924792152",
+        "family": "BQ040",
+        "model": "BQ040 / 1689",
+        "new_tiers": [
+          [
+            2,
+            "9.00"
+          ],
+          [
+            50,
+            "8.40"
+          ],
+          [
+            100,
+            "7.80"
+          ]
+        ],
+        "basis": {
+          "type": "OWNER_CONFIRMED_PRODUCTION_BASELINE_REDUCTION",
+          "cost_reference": "00_总控台/产品中心/数据/.local/生产成本基线.json",
+          "cost_family_key": "BQ040",
+          "cost_confirmed_on": "2026-10-21",
+          "cost_class_evidence": "01_产品资产/02_可发布素材/00_最终上传/BQ040_1689/00_上架填写表.md",
+          "fx_cny_per_usd": "6.6670",
+          "fx_published_at": "2026-10-21 15:23:07 Asia/Shanghai",
+          "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+          "markups_by_quantity": {
+            "2-49": "50%",
+            "50-99": "40%",
+            "100+": "30%"
+          },
+          "rounding": "CEILING_USD_CENT",
+          "scope": "Production-cost baseline only. Actual costs stay in ignored local file; no ownership/material changes, no retail prices used as cost. Applicable expenses remain order-specific.",
+          "competitor_comparison": "SAME_CONDITION_COMPETITOR_NOT_YET_VERIFIED"
+        },
+        "at": "2026-10-21T14:49:30.968592+00:00",
+        "state": "FORMAL_PRICE_PASS_API",
+        "verification": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/原包成本续核/降价执行/1601924792152/verification.json",
+        "public": "NOT_REQUESTED_API_ACCEPTANCE"
       }
     },
     {
@@ -60691,9 +61529,8 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-20T07:55:24.456581+00:00",
-        "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测",
-        "score": "5.00"
+        "at": "2026-10-21T14:49:24.446148+00:00",
+        "scope": "价格API闭环；公开呈现未核"
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/10000047127570/prepared.json",
@@ -60709,7 +61546,7 @@
       "catalog_presence": "OBSERVED",
       "catalog_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
       "catalog_fields": {
-        "at": "2026-10-20T07:55:24.456581+00:00",
+        "at": "2026-10-21T14:49:24.446148+00:00",
         "model": "BQ041 / 202",
         "title": "Kids Knit Slip-On Casual Walking Shoes with Foamed Sole Wholesale",
         "keywords": [
@@ -60768,19 +61605,19 @@
         ]
       },
       "local_sync": {
-        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "state": "FORMAL_PRICE_PASS_API",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000047127570/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000047127570/formal_render.json",
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/10000047127570/当前图库与货号.json",
-        "at": "2026-10-16T04:42:00.015361+00:00",
+        "at": "2026-10-21T14:49:24.446148+00:00",
         "observed_at": "2026-10-19T18:37:59.752358+00:00",
         "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/10000047127570/verification.json",
         "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ041_旧报价图替换/商品/10000047127570/verification.json"
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000047127570/formal_get.json",
-        "at": "2026-10-20T07:55:24.456581+00:00",
-        "scope": "Replace only old price/quote graphics with source-reviewed product construction diagrams. Photographs unchanged; all other gallery roles, factory image, SKU, price, quantities, title and FAQ retained."
+        "at": "2026-10-21T14:49:24.446148+00:00",
+        "scope": "本次价格正式回读；不代表公开验收"
       },
       "platform_group": {
         "id": "972226104",
@@ -60788,7 +61625,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-10-20T07:55:24.456581+00:00",
+        "at": "2026-10-21T14:49:24.446148+00:00",
         "model": "BQ041 / 202",
         "title": "Kids Knit Slip-On Casual Walking Shoes with Foamed Sole Wholesale",
         "keywords": [
@@ -60972,6 +61809,47 @@
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ041_旧报价图替换/商品/10000047127570/verification.json"
           ]
         }
+      },
+      "price_review": {
+        "id": "10000047127570",
+        "family": "BQ041",
+        "model": "BQ041 / 202",
+        "new_tiers": [
+          [
+            2,
+            "9.00"
+          ],
+          [
+            50,
+            "8.40"
+          ],
+          [
+            100,
+            "7.80"
+          ]
+        ],
+        "basis": {
+          "type": "OWNER_CONFIRMED_PRODUCTION_BASELINE_REDUCTION",
+          "cost_reference": "00_总控台/产品中心/数据/.local/生产成本基线.json",
+          "cost_family_key": "BQ041",
+          "cost_confirmed_on": "2026-10-21",
+          "cost_class_evidence": "01_产品资产/02_可发布素材/00_最终上传/BQ041_202/00_上架填写表.md",
+          "fx_cny_per_usd": "6.6670",
+          "fx_published_at": "2026-10-21 15:23:07 Asia/Shanghai",
+          "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+          "markups_by_quantity": {
+            "2-49": "50%",
+            "50-99": "40%",
+            "100+": "30%"
+          },
+          "rounding": "CEILING_USD_CENT",
+          "scope": "Production-cost baseline only. Actual costs stay in ignored local file; no ownership/material changes, no retail prices used as cost. Applicable expenses remain order-specific.",
+          "competitor_comparison": "SAME_CONDITION_COMPETITOR_NOT_YET_VERIFIED"
+        },
+        "at": "2026-10-21T14:49:24.446148+00:00",
+        "state": "FORMAL_PRICE_PASS_API",
+        "verification": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/原包成本续核/降价执行/10000047127570/verification.json",
+        "public": "NOT_REQUESTED_API_ACCEPTANCE"
       }
     },
     {
@@ -60985,9 +61863,8 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-19T19:46:23.266102+00:00",
-        "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测",
-        "score": "5.00"
+        "at": "2026-10-21T14:49:48.044351+00:00",
+        "scope": "价格API闭环；公开呈现未核"
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/10000047166193/prepared.json",
@@ -61001,7 +61878,7 @@
       "catalog_presence": "OBSERVED",
       "catalog_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
       "catalog_fields": {
-        "at": "2026-10-19T19:46:23.266102+00:00",
+        "at": "2026-10-21T14:49:48.044351+00:00",
         "model": "BQ042 / 206",
         "title": "Knit Lace-Up Walking Shoes Low Top Rubber-Plastic Sole Casual Sneakers Wholesale",
         "keywords": [
@@ -61023,18 +61900,18 @@
         "highlights": "Knit lace-up casual shoes with a rubber-plastic sole and a fine woven upper.\n\nAdjustable instep fit: The front laces let the wearer loosen the opening for entry and set the tension over the foot."
       },
       "local_sync": {
-        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "state": "FORMAL_PRICE_PASS_API",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000047166193/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000047166193/formal_render.json",
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/10000047166193/当前图库与货号.json",
-        "at": "2026-10-16T04:42:00.045975+00:00",
+        "at": "2026-10-21T14:49:48.044351+00:00",
         "observed_at": "2026-10-19T19:46:23.266102+00:00",
         "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/结构与标题纠正/商品/10000047166193/verification.json"
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000047166193/formal_get.json",
-        "at": "2026-10-19T19:46:23.266102+00:00",
-        "scope": "Original ID productTitle/textDesc only; SKU, images, generalFAQ, company and trade preserved"
+        "at": "2026-10-21T14:49:48.044351+00:00",
+        "scope": "本次价格正式回读；不代表公开验收"
       },
       "platform_group": {
         "id": "916810944",
@@ -61042,7 +61919,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-10-19T19:46:23.266102+00:00",
+        "at": "2026-10-21T14:49:48.044351+00:00",
         "model": "BQ042 / 206",
         "title": "Knit Lace-Up Walking Shoes Low Top Rubber-Plastic Sole Casual Sneakers Wholesale",
         "keywords": [
@@ -61178,6 +62055,47 @@
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/结构与标题纠正/商品/10000047166193/verification.json"
           ]
         }
+      },
+      "price_review": {
+        "id": "10000047166193",
+        "family": "BQ042",
+        "model": "BQ042 / 206",
+        "new_tiers": [
+          [
+            2,
+            "9.00"
+          ],
+          [
+            50,
+            "8.40"
+          ],
+          [
+            100,
+            "7.80"
+          ]
+        ],
+        "basis": {
+          "type": "OWNER_CONFIRMED_PRODUCTION_BASELINE_REDUCTION",
+          "cost_reference": "00_总控台/产品中心/数据/.local/生产成本基线.json",
+          "cost_family_key": "BQ042",
+          "cost_confirmed_on": "2026-10-21",
+          "cost_class_evidence": "01_产品资产/02_可发布素材/00_最终上传/BQ042_206/00_上架填写表.md",
+          "fx_cny_per_usd": "6.6670",
+          "fx_published_at": "2026-10-21 15:23:07 Asia/Shanghai",
+          "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+          "markups_by_quantity": {
+            "2-49": "50%",
+            "50-99": "40%",
+            "100+": "30%"
+          },
+          "rounding": "CEILING_USD_CENT",
+          "scope": "Production-cost baseline only. Actual costs stay in ignored local file; no ownership/material changes, no retail prices used as cost. Applicable expenses remain order-specific.",
+          "competitor_comparison": "SAME_CONDITION_COMPETITOR_NOT_YET_VERIFIED"
+        },
+        "at": "2026-10-21T14:49:48.044351+00:00",
+        "state": "FORMAL_PRICE_PASS_API",
+        "verification": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/原包成本续核/降价执行/10000047166193/verification.json",
+        "public": "NOT_REQUESTED_API_ACCEPTANCE"
       }
     },
     {
@@ -61191,9 +62109,8 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-19T19:46:23.614330+00:00",
-        "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测",
-        "score": "5.00"
+        "at": "2026-10-21T14:49:43.362573+00:00",
+        "scope": "价格API闭环；公开呈现未核"
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/10000047175212/prepared.json",
@@ -61207,7 +62124,7 @@
       "catalog_presence": "OBSERVED",
       "catalog_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
       "catalog_fields": {
-        "at": "2026-10-19T19:46:23.614330+00:00",
+        "at": "2026-10-21T14:49:43.362573+00:00",
         "model": "BQ043 / 8008",
         "title": "Knit Lace-Up Casual Walking Shoes with Sculpted EVA Sole Wholesale",
         "keywords": [
@@ -61229,18 +62146,18 @@
         "highlights": "Knit lace-up casual shoes with an EVA sole and a sculpted side profile.\n\nAdjustable instep fit: The front laces let the wearer loosen the opening for entry and set the tension over the foot."
       },
       "local_sync": {
-        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "state": "FORMAL_PRICE_PASS_API",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000047175212/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000047175212/formal_render.json",
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/10000047175212/当前图库与货号.json",
-        "at": "2026-10-16T04:41:59.868264+00:00",
+        "at": "2026-10-21T14:49:43.362573+00:00",
         "observed_at": "2026-10-19T19:46:23.614330+00:00",
         "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/结构与标题纠正/商品/10000047175212/verification.json"
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000047175212/formal_get.json",
-        "at": "2026-10-19T19:46:23.614330+00:00",
-        "scope": "Original ID productTitle/textDesc only; SKU, images, generalFAQ, company and trade preserved"
+        "at": "2026-10-21T14:49:43.362573+00:00",
+        "scope": "本次价格正式回读；不代表公开验收"
       },
       "platform_group": {
         "id": "916810944",
@@ -61248,7 +62165,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-10-19T19:46:23.614330+00:00",
+        "at": "2026-10-21T14:49:43.362573+00:00",
         "model": "BQ043 / 8008",
         "title": "Knit Lace-Up Casual Walking Shoes with Sculpted EVA Sole Wholesale",
         "keywords": [
@@ -61384,6 +62301,47 @@
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/结构与标题纠正/商品/10000047175212/verification.json"
           ]
         }
+      },
+      "price_review": {
+        "id": "10000047175212",
+        "family": "BQ043",
+        "model": "BQ043 / 8008",
+        "new_tiers": [
+          [
+            2,
+            "9.00"
+          ],
+          [
+            50,
+            "8.40"
+          ],
+          [
+            100,
+            "7.80"
+          ]
+        ],
+        "basis": {
+          "type": "OWNER_CONFIRMED_PRODUCTION_BASELINE_REDUCTION",
+          "cost_reference": "00_总控台/产品中心/数据/.local/生产成本基线.json",
+          "cost_family_key": "BQ043",
+          "cost_confirmed_on": "2026-10-21",
+          "cost_class_evidence": "01_产品资产/02_可发布素材/00_最终上传/BQ043_8008/00_上架填写表.md",
+          "fx_cny_per_usd": "6.6670",
+          "fx_published_at": "2026-10-21 15:23:07 Asia/Shanghai",
+          "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+          "markups_by_quantity": {
+            "2-49": "50%",
+            "50-99": "40%",
+            "100+": "30%"
+          },
+          "rounding": "CEILING_USD_CENT",
+          "scope": "Production-cost baseline only. Actual costs stay in ignored local file; no ownership/material changes, no retail prices used as cost. Applicable expenses remain order-specific.",
+          "competitor_comparison": "SAME_CONDITION_COMPETITOR_NOT_YET_VERIFIED"
+        },
+        "at": "2026-10-21T14:49:43.362573+00:00",
+        "state": "FORMAL_PRICE_PASS_API",
+        "verification": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/原包成本续核/降价执行/10000047175212/verification.json",
+        "public": "NOT_REQUESTED_API_ACCEPTANCE"
       }
     },
     {
@@ -61397,10 +62355,8 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-20T17:50:40.644747+00:00",
-        "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测",
-        "score": "5.00",
-        "sku_count": 66
+        "at": "2026-10-21T14:48:59.199179+00:00",
+        "scope": "价格API闭环；公开呈现未核"
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/10000047221334/prepared.json",
@@ -61427,7 +62383,7 @@
       "catalog_presence": "OBSERVED",
       "catalog_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
       "catalog_fields": {
-        "at": "2026-10-20T17:50:40.644747+00:00",
+        "at": "2026-10-21T14:48:59.199179+00:00",
         "model": "BQ044 / 811",
         "title": "Knit Lace-Up Walking Shoes Rounded Toe Rubber-Plastic Sole Casual Sneakers Wholesale",
         "keywords": [
@@ -61560,11 +62516,11 @@
         ]
       },
       "local_sync": {
-        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "state": "FORMAL_PRICE_PASS_API",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000047221334/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000047221334/formal_render.json",
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/10000047221334/当前图库与货号.json",
-        "at": "2026-10-16T04:41:51.086286+00:00",
+        "at": "2026-10-21T14:48:59.199179+00:00",
         "observed_at": "2026-10-20T17:16:31.406379+00:00",
         "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/结构与标题纠正/商品/10000047221334/verification.json",
         "assortment_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ044_规格照片精修/商品/10000047221334/verification.json",
@@ -61572,8 +62528,8 @@
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000047221334/formal_get.json",
-        "at": "2026-10-20T17:50:40.644747+00:00",
-        "scope": "Replace individually reviewed product proofs with exact-shoe buyer-facing diagrams. Remove internal instructions, unsupported claim labels and redundant detail filler. Keep factory F1 at existing position, company suite, all copy, SKU, prices, stock and other fields unchanged."
+        "at": "2026-10-21T14:48:59.199179+00:00",
+        "scope": "本次价格正式回读；不代表公开验收"
       },
       "platform_group": {
         "id": "916810944",
@@ -61581,7 +62537,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-10-20T17:50:40.644747+00:00",
+        "at": "2026-10-21T14:48:59.199179+00:00",
         "model": "BQ044 / 811",
         "title": "Knit Lace-Up Walking Shoes Rounded Toe Rubber-Plastic Sole Casual Sneakers Wholesale",
         "keywords": [
@@ -61851,6 +62807,47 @@
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ044_功能图正式精修/商品/10000047221334/verification.json"
           ]
         }
+      },
+      "price_review": {
+        "id": "10000047221334",
+        "family": "BQ044",
+        "model": "BQ044 / 811",
+        "new_tiers": [
+          [
+            2,
+            "9.00"
+          ],
+          [
+            50,
+            "8.40"
+          ],
+          [
+            100,
+            "7.80"
+          ]
+        ],
+        "basis": {
+          "type": "OWNER_CONFIRMED_PRODUCTION_BASELINE_REDUCTION",
+          "cost_reference": "00_总控台/产品中心/数据/.local/生产成本基线.json",
+          "cost_family_key": "BQ044",
+          "cost_confirmed_on": "2026-10-21",
+          "cost_class_evidence": "01_产品资产/02_可发布素材/00_最终上传/BQ044_811/00_上架填写表.md",
+          "fx_cny_per_usd": "6.6670",
+          "fx_published_at": "2026-10-21 15:23:07 Asia/Shanghai",
+          "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+          "markups_by_quantity": {
+            "2-49": "50%",
+            "50-99": "40%",
+            "100+": "30%"
+          },
+          "rounding": "CEILING_USD_CENT",
+          "scope": "Production-cost baseline only. Actual costs stay in ignored local file; no ownership/material changes, no retail prices used as cost. Applicable expenses remain order-specific.",
+          "competitor_comparison": "SAME_CONDITION_COMPETITOR_NOT_YET_VERIFIED"
+        },
+        "at": "2026-10-21T14:48:59.199179+00:00",
+        "state": "FORMAL_PRICE_PASS_API",
+        "verification": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/原包成本续核/降价执行/10000047221334/verification.json",
+        "public": "NOT_REQUESTED_API_ACCEPTANCE"
       }
     },
     {
@@ -61864,9 +62861,8 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-19T18:38:07.907050+00:00",
-        "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测",
-        "score": "5.00"
+        "at": "2026-10-21T14:50:02.141430+00:00",
+        "scope": "价格API闭环；公开呈现未核"
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/10000047187673/prepared.json",
@@ -61877,7 +62873,7 @@
       "catalog_presence": "OBSERVED",
       "catalog_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
       "catalog_fields": {
-        "at": "2026-10-19T18:38:07.907050+00:00",
+        "at": "2026-10-21T14:50:02.141430+00:00",
         "model": "BQ046 / A155",
         "title": "High Top Knit Slip-On Sock Sneakers with Ribbed Ankle Opening Wholesale",
         "keywords": [
@@ -61899,18 +62895,18 @@
         "highlights": "High-top knit slip-on casual shoes with a ribbed collar and rubber-plastic EVA sole.\n\nSimple daily dressing: The slip-on opening removes the need to tie conventional laces when putting the shoes on."
       },
       "local_sync": {
-        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "state": "FORMAL_PRICE_PASS_API",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000047187673/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000047187673/formal_render.json",
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/10000047187673/当前图库与货号.json",
-        "at": "2026-10-16T04:41:55.144468+00:00",
+        "at": "2026-10-21T14:50:02.141430+00:00",
         "observed_at": "2026-10-19T18:38:07.907050+00:00",
         "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/10000047187673/verification.json"
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000047187673/formal_get.json",
-        "at": "2026-10-19T18:38:07.907050+00:00",
-        "scope": "Original ID productTitle/textDesc only; SKU, images, generalFAQ, company and trade preserved"
+        "at": "2026-10-21T14:50:02.141430+00:00",
+        "scope": "本次价格正式回读；不代表公开验收"
       },
       "optimization": {
         "state": "FORMAL_VERIFIED_PUBLIC_PENDING",
@@ -62042,7 +63038,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-10-19T18:38:07.907050+00:00",
+        "at": "2026-10-21T14:50:02.141430+00:00",
         "model": "BQ046 / A155",
         "title": "High Top Knit Slip-On Sock Sneakers with Ribbed Ankle Opening Wholesale",
         "keywords": [
@@ -62062,6 +63058,47 @@
         "url": "https://www.alibaba.com/product-detail/High-Top-Slip-On-Knit-Sock_10000047187673.html",
         "scope": "Current exact-ID official get; scoped target acceptance kept separately",
         "highlights": "High-top knit slip-on casual shoes with a ribbed collar and rubber-plastic EVA sole.\n\nSimple daily dressing: The slip-on opening removes the need to tie conventional laces when putting the shoes on."
+      },
+      "price_review": {
+        "id": "10000047187673",
+        "family": "BQ046",
+        "model": "BQ046 / A155",
+        "new_tiers": [
+          [
+            2,
+            "9.00"
+          ],
+          [
+            50,
+            "8.40"
+          ],
+          [
+            100,
+            "7.80"
+          ]
+        ],
+        "basis": {
+          "type": "OWNER_CONFIRMED_PRODUCTION_BASELINE_REDUCTION",
+          "cost_reference": "00_总控台/产品中心/数据/.local/生产成本基线.json",
+          "cost_family_key": "BQ046",
+          "cost_confirmed_on": "2026-10-21",
+          "cost_class_evidence": "01_产品资产/02_可发布素材/00_最终上传/BQ046_A155/00_上架填写表.md",
+          "fx_cny_per_usd": "6.6670",
+          "fx_published_at": "2026-10-21 15:23:07 Asia/Shanghai",
+          "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+          "markups_by_quantity": {
+            "2-49": "50%",
+            "50-99": "40%",
+            "100+": "30%"
+          },
+          "rounding": "CEILING_USD_CENT",
+          "scope": "Production-cost baseline only. Actual costs stay in ignored local file; no ownership/material changes, no retail prices used as cost. Applicable expenses remain order-specific.",
+          "competitor_comparison": "SAME_CONDITION_COMPETITOR_NOT_YET_VERIFIED"
+        },
+        "at": "2026-10-21T14:50:02.141430+00:00",
+        "state": "FORMAL_PRICE_PASS_API",
+        "verification": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/原包成本续核/降价执行/10000047187673/verification.json",
+        "public": "NOT_REQUESTED_API_ACCEPTANCE"
       }
     },
     {
@@ -62075,9 +63112,8 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-19T18:38:10.623824+00:00",
-        "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测",
-        "score": "5.00"
+        "at": "2026-10-21T14:50:04.350300+00:00",
+        "scope": "价格API闭环；公开呈现未核"
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/10000047208726/prepared.json",
@@ -62088,7 +63124,7 @@
       "catalog_presence": "OBSERVED",
       "catalog_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
       "catalog_fields": {
-        "at": "2026-10-19T18:38:10.623824+00:00",
+        "at": "2026-10-21T14:50:04.350300+00:00",
         "model": "BQ047 / A189",
         "title": "Men's High Top Knit Slip-On Sock Sneakers with Ribbed Collar Wholesale",
         "keywords": [
@@ -62110,18 +63146,18 @@
         "highlights": "Men's high-top knit slip-on casual shoes with a rubber-plastic EVA sole.\n\nSimple daily dressing: The slip-on opening removes the need to tie conventional laces when putting the shoes on."
       },
       "local_sync": {
-        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "state": "FORMAL_PRICE_PASS_API",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000047208726/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000047208726/formal_render.json",
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/10000047208726/当前图库与货号.json",
-        "at": "2026-10-16T04:41:51.781558+00:00",
+        "at": "2026-10-21T14:50:04.350300+00:00",
         "observed_at": "2026-10-19T18:38:10.623824+00:00",
         "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/10000047208726/verification.json"
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000047208726/formal_get.json",
-        "at": "2026-10-19T18:38:10.623824+00:00",
-        "scope": "Original ID productTitle/textDesc only; SKU, images, generalFAQ, company and trade preserved"
+        "at": "2026-10-21T14:50:04.350300+00:00",
+        "scope": "本次价格正式回读；不代表公开验收"
       },
       "optimization": {
         "state": "FORMAL_VERIFIED_PUBLIC_PENDING",
@@ -62268,7 +63304,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-10-19T18:38:10.623824+00:00",
+        "at": "2026-10-21T14:50:04.350300+00:00",
         "model": "BQ047 / A189",
         "title": "Men's High Top Knit Slip-On Sock Sneakers with Ribbed Collar Wholesale",
         "keywords": [
@@ -62288,6 +63324,47 @@
         "url": "https://www.alibaba.com/product-detail/Men-s-High-Top-Slip-On_10000047208726.html",
         "scope": "Current exact-ID official get; scoped target acceptance kept separately",
         "highlights": "Men's high-top knit slip-on casual shoes with a rubber-plastic EVA sole.\n\nSimple daily dressing: The slip-on opening removes the need to tie conventional laces when putting the shoes on."
+      },
+      "price_review": {
+        "id": "10000047208726",
+        "family": "BQ047",
+        "model": "BQ047 / A189",
+        "new_tiers": [
+          [
+            2,
+            "9.00"
+          ],
+          [
+            50,
+            "8.40"
+          ],
+          [
+            100,
+            "7.80"
+          ]
+        ],
+        "basis": {
+          "type": "OWNER_CONFIRMED_PRODUCTION_BASELINE_REDUCTION",
+          "cost_reference": "00_总控台/产品中心/数据/.local/生产成本基线.json",
+          "cost_family_key": "BQ047",
+          "cost_confirmed_on": "2026-10-21",
+          "cost_class_evidence": "01_产品资产/02_可发布素材/00_最终上传/BQ047_A189/00_上架填写表.md",
+          "fx_cny_per_usd": "6.6670",
+          "fx_published_at": "2026-10-21 15:23:07 Asia/Shanghai",
+          "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+          "markups_by_quantity": {
+            "2-49": "50%",
+            "50-99": "40%",
+            "100+": "30%"
+          },
+          "rounding": "CEILING_USD_CENT",
+          "scope": "Production-cost baseline only. Actual costs stay in ignored local file; no ownership/material changes, no retail prices used as cost. Applicable expenses remain order-specific.",
+          "competitor_comparison": "SAME_CONDITION_COMPETITOR_NOT_YET_VERIFIED"
+        },
+        "at": "2026-10-21T14:50:04.350300+00:00",
+        "state": "FORMAL_PRICE_PASS_API",
+        "verification": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/原包成本续核/降价执行/10000047208726/verification.json",
+        "public": "NOT_REQUESTED_API_ACCEPTANCE"
       }
     },
     {
@@ -62301,9 +63378,8 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-19T19:46:28.735346+00:00",
-        "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测",
-        "score": "5.00"
+        "at": "2026-10-21T14:49:45.686615+00:00",
+        "scope": "价格API闭环；公开呈现未核"
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/10000047198577/prepared.json",
@@ -62317,7 +63393,7 @@
       "catalog_presence": "OBSERVED",
       "catalog_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
       "catalog_fields": {
-        "at": "2026-10-19T19:46:28.735346+00:00",
+        "at": "2026-10-21T14:49:45.686615+00:00",
         "model": "BQ048 / A212",
         "title": "Knit Slip-On Walking Shoes Low Cut Casual Sneakers with Seasonal Lining Options Wholesale",
         "keywords": [
@@ -62339,18 +63415,18 @@
         "highlights": "Knit slip-on casual shoes with a rubber-plastic sole and a low-cut lace-free front.\n\nSimple daily dressing: The slip-on opening removes the need to tie conventional laces when putting the shoes on.\n\nSoft winter interior: The plush lining adds a soft contact surface around the foot for cold-season casual wear."
       },
       "local_sync": {
-        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "state": "FORMAL_PRICE_PASS_API",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000047198577/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000047198577/formal_render.json",
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/10000047198577/当前图库与货号.json",
-        "at": "2026-10-16T04:41:54.553478+00:00",
+        "at": "2026-10-21T14:49:45.686615+00:00",
         "observed_at": "2026-10-19T19:46:28.735346+00:00",
         "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/结构与标题纠正/商品/10000047198577/verification.json"
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000047198577/formal_get.json",
-        "at": "2026-10-19T19:46:28.735346+00:00",
-        "scope": "Original ID productTitle/textDesc only; SKU, images, generalFAQ, company and trade preserved"
+        "at": "2026-10-21T14:49:45.686615+00:00",
+        "scope": "本次价格正式回读；不代表公开验收"
       },
       "optimization": {
         "state": "FORMAL_DIFFERENCE_REVIEW_REQUIRED",
@@ -62483,7 +63559,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-10-19T19:46:28.735346+00:00",
+        "at": "2026-10-21T14:49:45.686615+00:00",
         "model": "BQ048 / A212",
         "title": "Knit Slip-On Walking Shoes Low Cut Casual Sneakers with Seasonal Lining Options Wholesale",
         "keywords": [
@@ -62503,6 +63579,47 @@
         "url": "https://www.alibaba.com/product-detail/Slip-On-Knit-Walking-Shoes-Breathable_10000047198577.html",
         "scope": "Current exact-ID official get; scoped target acceptance kept separately",
         "highlights": "Knit slip-on casual shoes with a rubber-plastic sole and a low-cut lace-free front.\n\nSimple daily dressing: The slip-on opening removes the need to tie conventional laces when putting the shoes on.\n\nSoft winter interior: The plush lining adds a soft contact surface around the foot for cold-season casual wear."
+      },
+      "price_review": {
+        "id": "10000047198577",
+        "family": "BQ048",
+        "model": "BQ048 / A212",
+        "new_tiers": [
+          [
+            2,
+            "9.00"
+          ],
+          [
+            50,
+            "8.40"
+          ],
+          [
+            100,
+            "7.80"
+          ]
+        ],
+        "basis": {
+          "type": "OWNER_CONFIRMED_PRODUCTION_BASELINE_REDUCTION",
+          "cost_reference": "00_总控台/产品中心/数据/.local/生产成本基线.json",
+          "cost_family_key": "BQ048",
+          "cost_confirmed_on": "2026-10-21",
+          "cost_class_evidence": "01_产品资产/02_可发布素材/00_最终上传/BQ048_A212/00_上架填写表.md",
+          "fx_cny_per_usd": "6.6670",
+          "fx_published_at": "2026-10-21 15:23:07 Asia/Shanghai",
+          "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+          "markups_by_quantity": {
+            "2-49": "50%",
+            "50-99": "40%",
+            "100+": "30%"
+          },
+          "rounding": "CEILING_USD_CENT",
+          "scope": "Production-cost baseline only. Actual costs stay in ignored local file; no ownership/material changes, no retail prices used as cost. Applicable expenses remain order-specific.",
+          "competitor_comparison": "SAME_CONDITION_COMPETITOR_NOT_YET_VERIFIED"
+        },
+        "at": "2026-10-21T14:49:45.686615+00:00",
+        "state": "FORMAL_PRICE_PASS_API",
+        "verification": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/原包成本续核/降价执行/10000047198577/verification.json",
+        "public": "NOT_REQUESTED_API_ACCEPTANCE"
       }
     },
     {
@@ -62516,9 +63633,8 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-19T18:38:14.815059+00:00",
-        "scope": "商品表现处置精确ID回读",
-        "score": "5.00"
+        "at": "2026-10-21T14:49:57.691220+00:00",
+        "scope": "价格API闭环；公开呈现未核"
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/10000047220568/prepared.json",
@@ -62529,7 +63645,7 @@
       "catalog_presence": "OBSERVED",
       "catalog_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
       "catalog_fields": {
-        "at": "2026-10-19T18:38:14.815059+00:00",
+        "at": "2026-10-21T14:49:57.691220+00:00",
         "model": "BQ049 / A230",
         "title": "Knit Lace-Up Walking Shoes A230 with Curved Upper Panels Casual Sneakers Wholesale",
         "keywords": [
@@ -62551,8 +63667,8 @@
         "highlights": "Knit lace-up casual shoes with a rubber-plastic sole and curved contrast upper detailing.\n\nAdjustable instep fit: The front laces let the wearer loosen the opening for entry and set the tension over the foot."
       },
       "local_sync": {
-        "at": "2026-10-16T15:40:19.090755+00:00",
-        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "at": "2026-10-21T14:49:57.691220+00:00",
+        "state": "FORMAL_PRICE_PASS_API",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000047220568/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000047220568/formal_render.json",
         "verification": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/商品表现处置/商品/10000047220568/标题识别优化/verification.json",
@@ -62561,8 +63677,8 @@
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000047220568/formal_get.json",
-        "at": "2026-10-19T18:38:14.815059+00:00",
-        "scope": "Original ID productTitle/textDesc only; SKU, images, generalFAQ, company and trade preserved"
+        "at": "2026-10-21T14:49:57.691220+00:00",
+        "scope": "本次价格正式回读；不代表公开验收"
       },
       "platform_group": {
         "id": "916810944",
@@ -62570,7 +63686,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-10-19T18:38:14.815059+00:00",
+        "at": "2026-10-21T14:49:57.691220+00:00",
         "model": "BQ049 / A230",
         "title": "Knit Lace-Up Walking Shoes A230 with Curved Upper Panels Casual Sneakers Wholesale",
         "keywords": [
@@ -62721,6 +63837,47 @@
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/10000047220568/verification.json"
           ]
         }
+      },
+      "price_review": {
+        "id": "10000047220568",
+        "family": "BQ049",
+        "model": "BQ049 / A230",
+        "new_tiers": [
+          [
+            2,
+            "9.00"
+          ],
+          [
+            50,
+            "8.40"
+          ],
+          [
+            100,
+            "7.80"
+          ]
+        ],
+        "basis": {
+          "type": "OWNER_CONFIRMED_PRODUCTION_BASELINE_REDUCTION",
+          "cost_reference": "00_总控台/产品中心/数据/.local/生产成本基线.json",
+          "cost_family_key": "BQ049",
+          "cost_confirmed_on": "2026-10-21",
+          "cost_class_evidence": "01_产品资产/02_可发布素材/00_最终上传/BQ049_A230/00_上架填写表.md",
+          "fx_cny_per_usd": "6.6670",
+          "fx_published_at": "2026-10-21 15:23:07 Asia/Shanghai",
+          "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+          "markups_by_quantity": {
+            "2-49": "50%",
+            "50-99": "40%",
+            "100+": "30%"
+          },
+          "rounding": "CEILING_USD_CENT",
+          "scope": "Production-cost baseline only. Actual costs stay in ignored local file; no ownership/material changes, no retail prices used as cost. Applicable expenses remain order-specific.",
+          "competitor_comparison": "SAME_CONDITION_COMPETITOR_NOT_YET_VERIFIED"
+        },
+        "at": "2026-10-21T14:49:57.691220+00:00",
+        "state": "FORMAL_PRICE_PASS_API",
+        "verification": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/原包成本续核/降价执行/10000047220568/verification.json",
+        "public": "NOT_REQUESTED_API_ACCEPTANCE"
       }
     },
     {
@@ -62734,9 +63891,8 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-20T15:28:37.814136+00:00",
-        "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测",
-        "score": "5.00"
+        "at": "2026-10-21T14:49:17.386997+00:00",
+        "scope": "价格API闭环；公开呈现未核"
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/10000047196608/prepared.json",
@@ -62755,7 +63911,7 @@
       "catalog_presence": "OBSERVED",
       "catalog_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
       "catalog_fields": {
-        "at": "2026-10-20T15:28:37.814136+00:00",
+        "at": "2026-10-21T14:49:17.386997+00:00",
         "model": "BQ050 / A828",
         "title": "Knit Lace-Up Walking Shoes with Segmented Sole Low Top Casual Sneakers Wholesale",
         "keywords": [
@@ -62811,19 +63967,19 @@
         ]
       },
       "local_sync": {
-        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "state": "FORMAL_PRICE_PASS_API",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000047196608/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000047196608/formal_render.json",
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/10000047196608/当前图库与货号.json",
-        "at": "2026-10-16T04:41:55.078988+00:00",
+        "at": "2026-10-21T14:49:17.386997+00:00",
         "observed_at": "2026-10-19T19:46:26.153285+00:00",
         "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/结构与标题纠正/商品/10000047196608/verification.json",
         "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ050_首图构图优化/商品/10000047196608/verification.json"
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000047196608/formal_get.json",
-        "at": "2026-10-20T15:28:37.814136+00:00",
-        "scope": "Exact original-ID M1 composition upgrade; complete shoe edges and real variant retained. Preserve every other image slot, factory image, detail content, SKU, pricing, copy and FAQ."
+        "at": "2026-10-21T14:49:17.386997+00:00",
+        "scope": "本次价格正式回读；不代表公开验收"
       },
       "platform_group": {
         "id": "916810944",
@@ -62831,7 +63987,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-10-20T15:28:37.814136+00:00",
+        "at": "2026-10-21T14:49:17.386997+00:00",
         "model": "BQ050 / A828",
         "title": "Knit Lace-Up Walking Shoes with Segmented Sole Low Top Casual Sneakers Wholesale",
         "keywords": [
@@ -63013,6 +64169,47 @@
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ050_首图构图优化/商品/10000047196608/verification.json"
           ]
         }
+      },
+      "price_review": {
+        "id": "10000047196608",
+        "family": "BQ050",
+        "model": "BQ050 / A828",
+        "new_tiers": [
+          [
+            2,
+            "9.00"
+          ],
+          [
+            50,
+            "8.40"
+          ],
+          [
+            100,
+            "7.80"
+          ]
+        ],
+        "basis": {
+          "type": "OWNER_CONFIRMED_PRODUCTION_BASELINE_REDUCTION",
+          "cost_reference": "00_总控台/产品中心/数据/.local/生产成本基线.json",
+          "cost_family_key": "BQ050",
+          "cost_confirmed_on": "2026-10-21",
+          "cost_class_evidence": "01_产品资产/02_可发布素材/00_最终上传/BQ050_A828/00_上架填写表.md",
+          "fx_cny_per_usd": "6.6670",
+          "fx_published_at": "2026-10-21 15:23:07 Asia/Shanghai",
+          "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+          "markups_by_quantity": {
+            "2-49": "50%",
+            "50-99": "40%",
+            "100+": "30%"
+          },
+          "rounding": "CEILING_USD_CENT",
+          "scope": "Production-cost baseline only. Actual costs stay in ignored local file; no ownership/material changes, no retail prices used as cost. Applicable expenses remain order-specific.",
+          "competitor_comparison": "SAME_CONDITION_COMPETITOR_NOT_YET_VERIFIED"
+        },
+        "at": "2026-10-21T14:49:17.386997+00:00",
+        "state": "FORMAL_PRICE_PASS_API",
+        "verification": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/原包成本续核/降价执行/10000047196608/verification.json",
+        "public": "NOT_REQUESTED_API_ACCEPTANCE"
       }
     },
     {
@@ -63026,10 +64223,8 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-20T17:50:45.359614+00:00",
-        "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测",
-        "score": "5.00",
-        "sku_count": 33
+        "at": "2026-10-21T14:48:57.135637+00:00",
+        "scope": "价格API闭环；公开呈现未核"
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/10000047216427/prepared.json",
@@ -63056,7 +64251,7 @@
       "catalog_presence": "OBSERVED",
       "catalog_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
       "catalog_fields": {
-        "at": "2026-10-20T17:50:45.359614+00:00",
+        "at": "2026-10-21T14:48:57.135637+00:00",
         "model": "BQ051 / K6689",
         "title": "Knit Slip-On Walking Shoes with Rubber Sole Low Cut Casual Sneakers Wholesale",
         "keywords": [
@@ -63150,11 +64345,11 @@
         ]
       },
       "local_sync": {
-        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "state": "FORMAL_PRICE_PASS_API",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000047216427/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000047216427/formal_render.json",
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/10000047216427/当前图库与货号.json",
-        "at": "2026-10-16T04:41:51.706772+00:00",
+        "at": "2026-10-21T14:48:57.135637+00:00",
         "observed_at": "2026-10-20T17:16:39.366681+00:00",
         "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/结构与标题纠正/商品/10000047216427/verification.json",
         "assortment_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ051_规格照片精修/商品/10000047216427/verification.json",
@@ -63162,8 +64357,8 @@
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000047216427/formal_get.json",
-        "at": "2026-10-20T17:50:45.359614+00:00",
-        "scope": "Replace individually reviewed product proofs with exact-shoe buyer-facing diagrams. Remove internal instructions, unsupported claim labels and redundant detail filler. Keep factory F1 at existing position, company suite, all copy, SKU, prices, stock and other fields unchanged."
+        "at": "2026-10-21T14:48:57.135637+00:00",
+        "scope": "本次价格正式回读；不代表公开验收"
       },
       "optimization": {
         "state": "PENDING_APPROVAL",
@@ -63334,7 +64529,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-10-20T17:50:45.359614+00:00",
+        "at": "2026-10-21T14:48:57.135637+00:00",
         "model": "BQ051 / K6689",
         "title": "Knit Slip-On Walking Shoes with Rubber Sole Low Cut Casual Sneakers Wholesale",
         "keywords": [
@@ -63426,6 +64621,47 @@
             "image_url": "https://sc04.alicdn.com/kf/He6b7be7fd07547d1870b392482f9a26br.png"
           }
         ]
+      },
+      "price_review": {
+        "id": "10000047216427",
+        "family": "BQ051",
+        "model": "BQ051 / K6689",
+        "new_tiers": [
+          [
+            2,
+            "9.00"
+          ],
+          [
+            50,
+            "8.40"
+          ],
+          [
+            100,
+            "7.80"
+          ]
+        ],
+        "basis": {
+          "type": "OWNER_CONFIRMED_PRODUCTION_BASELINE_REDUCTION",
+          "cost_reference": "00_总控台/产品中心/数据/.local/生产成本基线.json",
+          "cost_family_key": "BQ051",
+          "cost_confirmed_on": "2026-10-21",
+          "cost_class_evidence": "01_产品资产/02_可发布素材/00_最终上传/BQ051_K6689/00_上架填写表.md",
+          "fx_cny_per_usd": "6.6670",
+          "fx_published_at": "2026-10-21 15:23:07 Asia/Shanghai",
+          "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+          "markups_by_quantity": {
+            "2-49": "50%",
+            "50-99": "40%",
+            "100+": "30%"
+          },
+          "rounding": "CEILING_USD_CENT",
+          "scope": "Production-cost baseline only. Actual costs stay in ignored local file; no ownership/material changes, no retail prices used as cost. Applicable expenses remain order-specific.",
+          "competitor_comparison": "SAME_CONDITION_COMPETITOR_NOT_YET_VERIFIED"
+        },
+        "at": "2026-10-21T14:48:57.135637+00:00",
+        "state": "FORMAL_PRICE_PASS_API",
+        "verification": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/原包成本续核/降价执行/10000047216427/verification.json",
+        "public": "NOT_REQUESTED_API_ACCEPTANCE"
       }
     },
     {
@@ -63439,9 +64675,8 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-19T19:46:28.986582+00:00",
-        "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测",
-        "score": "5.00"
+        "at": "2026-10-21T14:49:41.175763+00:00",
+        "scope": "价格API闭环；公开呈现未核"
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/10000047201716/prepared.json",
@@ -63455,7 +64690,7 @@
       "catalog_presence": "OBSERVED",
       "catalog_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
       "catalog_fields": {
-        "at": "2026-10-19T19:46:28.986582+00:00",
+        "at": "2026-10-21T14:49:41.175763+00:00",
         "model": "BQ052 / 9212",
         "title": "Knit Lace-Up Walking Shoes with Segmented EVA Sole Casual Sneakers Wholesale",
         "keywords": [
@@ -63477,18 +64712,18 @@
         "highlights": "Knit lace-up casual shoes with an EVA sole and a pronounced segmented side profile.\n\nAdjustable instep fit: The front laces let the wearer loosen the opening for entry and set the tension over the foot."
       },
       "local_sync": {
-        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "state": "FORMAL_PRICE_PASS_API",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000047201716/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000047201716/formal_render.json",
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/10000047201716/当前图库与货号.json",
-        "at": "2026-10-16T04:41:54.974749+00:00",
+        "at": "2026-10-21T14:49:41.175763+00:00",
         "observed_at": "2026-10-19T19:46:28.986582+00:00",
         "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/结构与标题纠正/商品/10000047201716/verification.json"
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000047201716/formal_get.json",
-        "at": "2026-10-19T19:46:28.986582+00:00",
-        "scope": "Original ID productTitle/textDesc only; SKU, images, generalFAQ, company and trade preserved"
+        "at": "2026-10-21T14:49:41.175763+00:00",
+        "scope": "本次价格正式回读；不代表公开验收"
       },
       "platform_group": {
         "id": "916810944",
@@ -63496,7 +64731,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-10-19T19:46:28.986582+00:00",
+        "at": "2026-10-21T14:49:41.175763+00:00",
         "model": "BQ052 / 9212",
         "title": "Knit Lace-Up Walking Shoes with Segmented EVA Sole Casual Sneakers Wholesale",
         "keywords": [
@@ -63632,6 +64867,47 @@
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/结构与标题纠正/商品/10000047201716/verification.json"
           ]
         }
+      },
+      "price_review": {
+        "id": "10000047201716",
+        "family": "BQ052",
+        "model": "BQ052 / 9212",
+        "new_tiers": [
+          [
+            2,
+            "9.00"
+          ],
+          [
+            50,
+            "8.40"
+          ],
+          [
+            100,
+            "7.80"
+          ]
+        ],
+        "basis": {
+          "type": "OWNER_CONFIRMED_PRODUCTION_BASELINE_REDUCTION",
+          "cost_reference": "00_总控台/产品中心/数据/.local/生产成本基线.json",
+          "cost_family_key": "BQ052",
+          "cost_confirmed_on": "2026-10-21",
+          "cost_class_evidence": "01_产品资产/02_可发布素材/00_最终上传/BQ052_9212/00_上架填写表.md",
+          "fx_cny_per_usd": "6.6670",
+          "fx_published_at": "2026-10-21 15:23:07 Asia/Shanghai",
+          "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+          "markups_by_quantity": {
+            "2-49": "50%",
+            "50-99": "40%",
+            "100+": "30%"
+          },
+          "rounding": "CEILING_USD_CENT",
+          "scope": "Production-cost baseline only. Actual costs stay in ignored local file; no ownership/material changes, no retail prices used as cost. Applicable expenses remain order-specific.",
+          "competitor_comparison": "SAME_CONDITION_COMPETITOR_NOT_YET_VERIFIED"
+        },
+        "at": "2026-10-21T14:49:41.175763+00:00",
+        "state": "FORMAL_PRICE_PASS_API",
+        "verification": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/原包成本续核/降价执行/10000047201716/verification.json",
+        "public": "NOT_REQUESTED_API_ACCEPTANCE"
       }
     },
     {
@@ -63645,9 +64921,8 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-19T18:38:16.827187+00:00",
-        "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测",
-        "score": "5.00"
+        "at": "2026-10-21T14:50:06.538510+00:00",
+        "scope": "价格API闭环；公开呈现未核"
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/10000047307924/prepared.json",
@@ -63658,7 +64933,7 @@
       "catalog_presence": "OBSERVED",
       "catalog_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
       "catalog_fields": {
-        "at": "2026-10-19T18:38:16.827187+00:00",
+        "at": "2026-10-21T14:50:06.538510+00:00",
         "model": "BQ053 / 1888",
         "title": "Elastic Knit High Top Slip-On Sock Sneakers with Seasonal Lining Options Wholesale",
         "keywords": [
@@ -63680,18 +64955,18 @@
         "highlights": "Pull-on ankle coverage: A tall elastic-knit opening extends around the ankle without a lace fastening.\n\nSeasonal interior options: Regular and fleece-lined versions provide different interior finishes in the same sock-style shape.\n\nPU sole construction: A PU sole forms the base beneath the stretch-knit upper."
       },
       "local_sync": {
-        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "state": "FORMAL_PRICE_PASS_API",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000047307924/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000047307924/formal_render.json",
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/10000047307924/当前图库与货号.json",
-        "at": "2026-10-16T04:41:48.248049+00:00",
+        "at": "2026-10-21T14:50:06.538510+00:00",
         "observed_at": "2026-10-19T18:38:16.827187+00:00",
         "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/10000047307924/verification.json"
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000047307924/formal_get.json",
-        "at": "2026-10-19T18:38:16.827187+00:00",
-        "scope": "Original ID productTitle/textDesc only; SKU, images, generalFAQ, company and trade preserved"
+        "at": "2026-10-21T14:50:06.538510+00:00",
+        "scope": "本次价格正式回读；不代表公开验收"
       },
       "optimization": {
         "state": "FORMAL_VERIFIED_PUBLIC_PENDING",
@@ -63838,7 +65113,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-10-19T18:38:16.827187+00:00",
+        "at": "2026-10-21T14:50:06.538510+00:00",
         "model": "BQ053 / 1888",
         "title": "Elastic Knit High Top Slip-On Sock Sneakers with Seasonal Lining Options Wholesale",
         "keywords": [
@@ -63858,6 +65133,47 @@
         "url": "https://www.alibaba.com/product-detail/High-Top-Slip-On-Knit-Sock_10000047307924.html",
         "scope": "Current exact-ID official get; scoped target acceptance kept separately",
         "highlights": "Pull-on ankle coverage: A tall elastic-knit opening extends around the ankle without a lace fastening.\n\nSeasonal interior options: Regular and fleece-lined versions provide different interior finishes in the same sock-style shape.\n\nPU sole construction: A PU sole forms the base beneath the stretch-knit upper."
+      },
+      "price_review": {
+        "id": "10000047307924",
+        "family": "BQ053",
+        "model": "BQ053 / 1888",
+        "new_tiers": [
+          [
+            2,
+            "9.00"
+          ],
+          [
+            50,
+            "8.40"
+          ],
+          [
+            100,
+            "7.80"
+          ]
+        ],
+        "basis": {
+          "type": "OWNER_CONFIRMED_PRODUCTION_BASELINE_REDUCTION",
+          "cost_reference": "00_总控台/产品中心/数据/.local/生产成本基线.json",
+          "cost_family_key": "BQ053",
+          "cost_confirmed_on": "2026-10-21",
+          "cost_class_evidence": "01_产品资产/02_可发布素材/00_最终上传/BQ053_1888/00_上架填写表.md",
+          "fx_cny_per_usd": "6.6670",
+          "fx_published_at": "2026-10-21 15:23:07 Asia/Shanghai",
+          "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+          "markups_by_quantity": {
+            "2-49": "50%",
+            "50-99": "40%",
+            "100+": "30%"
+          },
+          "rounding": "CEILING_USD_CENT",
+          "scope": "Production-cost baseline only. Actual costs stay in ignored local file; no ownership/material changes, no retail prices used as cost. Applicable expenses remain order-specific.",
+          "competitor_comparison": "SAME_CONDITION_COMPETITOR_NOT_YET_VERIFIED"
+        },
+        "at": "2026-10-21T14:50:06.538510+00:00",
+        "state": "FORMAL_PRICE_PASS_API",
+        "verification": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/原包成本续核/降价执行/10000047307924/verification.json",
+        "public": "NOT_REQUESTED_API_ACCEPTANCE"
       }
     },
     {
@@ -63871,9 +65187,8 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-19T19:46:36.757018+00:00",
-        "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测",
-        "score": "5.00"
+        "at": "2026-10-21T14:49:39.121637+00:00",
+        "scope": "价格API闭环；公开呈现未核"
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/10000047392343/prepared.json",
@@ -63887,7 +65202,7 @@
       "catalog_presence": "OBSERVED",
       "catalog_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
       "catalog_fields": {
-        "at": "2026-10-19T19:46:36.757018+00:00",
+        "at": "2026-10-21T14:49:39.121637+00:00",
         "model": "BQ059 / A1888",
         "title": "High Top Knit Slip-On Sock Sneakers with Foamed Sole for Daily Wear Wholesale",
         "keywords": [
@@ -63909,18 +65224,18 @@
         "highlights": "High-top knit slip-on casual shoes with a foamed sole and a plain sock-style upper.\n\nSimple daily dressing: The slip-on opening removes the need to tie conventional laces when putting the shoes on."
       },
       "local_sync": {
-        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "state": "FORMAL_PRICE_PASS_API",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000047392343/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000047392343/formal_render.json",
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/10000047392343/当前图库与货号.json",
-        "at": "2026-10-16T04:41:47.824758+00:00",
+        "at": "2026-10-21T14:49:39.121637+00:00",
         "observed_at": "2026-10-19T19:46:36.757018+00:00",
         "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/结构与标题纠正/商品/10000047392343/verification.json"
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000047392343/formal_get.json",
-        "at": "2026-10-19T19:46:36.757018+00:00",
-        "scope": "Original ID productTitle/textDesc only; SKU, images, generalFAQ, company and trade preserved"
+        "at": "2026-10-21T14:49:39.121637+00:00",
+        "scope": "本次价格正式回读；不代表公开验收"
       },
       "optimization": {
         "state": "PENDING_APPROVAL",
@@ -64068,7 +65383,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-10-19T19:46:36.757018+00:00",
+        "at": "2026-10-21T14:49:39.121637+00:00",
         "model": "BQ059 / A1888",
         "title": "High Top Knit Slip-On Sock Sneakers with Foamed Sole for Daily Wear Wholesale",
         "keywords": [
@@ -64088,6 +65403,47 @@
         "url": "https://www.alibaba.com/product-detail/High-Top-Slip-On-Knit-Sock_10000047392343.html",
         "scope": "Current exact-ID official get; scoped target acceptance kept separately",
         "highlights": "High-top knit slip-on casual shoes with a foamed sole and a plain sock-style upper.\n\nSimple daily dressing: The slip-on opening removes the need to tie conventional laces when putting the shoes on."
+      },
+      "price_review": {
+        "id": "10000047392343",
+        "family": "BQ059",
+        "model": "BQ059 / A1888",
+        "new_tiers": [
+          [
+            2,
+            "9.00"
+          ],
+          [
+            50,
+            "8.40"
+          ],
+          [
+            100,
+            "7.80"
+          ]
+        ],
+        "basis": {
+          "type": "OWNER_CONFIRMED_PRODUCTION_BASELINE_REDUCTION",
+          "cost_reference": "00_总控台/产品中心/数据/.local/生产成本基线.json",
+          "cost_family_key": "BQ059",
+          "cost_confirmed_on": "2026-10-21",
+          "cost_class_evidence": "01_产品资产/02_可发布素材/00_最终上传/BQ059_A1888/00_上架填写表.md",
+          "fx_cny_per_usd": "6.6670",
+          "fx_published_at": "2026-10-21 15:23:07 Asia/Shanghai",
+          "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+          "markups_by_quantity": {
+            "2-49": "50%",
+            "50-99": "40%",
+            "100+": "30%"
+          },
+          "rounding": "CEILING_USD_CENT",
+          "scope": "Production-cost baseline only. Actual costs stay in ignored local file; no ownership/material changes, no retail prices used as cost. Applicable expenses remain order-specific.",
+          "competitor_comparison": "SAME_CONDITION_COMPETITOR_NOT_YET_VERIFIED"
+        },
+        "at": "2026-10-21T14:49:39.121637+00:00",
+        "state": "FORMAL_PRICE_PASS_API",
+        "verification": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/原包成本续核/降价执行/10000047392343/verification.json",
+        "public": "NOT_REQUESTED_API_ACCEPTANCE"
       }
     },
     {
@@ -64101,9 +65457,8 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-19T18:38:23.981046+00:00",
-        "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测",
-        "score": "5.00"
+        "at": "2026-10-21T14:50:00.098008+00:00",
+        "scope": "价格API闭环；公开呈现未核"
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/10000047396313/prepared.json",
@@ -64114,7 +65469,7 @@
       "catalog_presence": "OBSERVED",
       "catalog_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
       "catalog_fields": {
-        "at": "2026-10-19T18:38:23.981046+00:00",
+        "at": "2026-10-21T14:50:00.098008+00:00",
         "model": "BQ060 / A350",
         "title": "Knit Lace-Up Walking Shoes Low Top Rubber-Plastic Sole Casual Sneakers Wholesale",
         "keywords": [
@@ -64136,18 +65491,18 @@
         "highlights": "Knit lace-up casual shoes with a rubber-plastic sole and a low-cut upper.\n\nAdjustable instep fit: The front laces let the wearer loosen the opening for entry and set the tension over the foot."
       },
       "local_sync": {
-        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "state": "FORMAL_PRICE_PASS_API",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000047396313/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000047396313/formal_render.json",
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/10000047396313/当前图库与货号.json",
-        "at": "2026-10-16T04:41:47.477719+00:00",
+        "at": "2026-10-21T14:50:00.098008+00:00",
         "observed_at": "2026-10-19T18:38:23.981046+00:00",
         "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/10000047396313/verification.json"
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000047396313/formal_get.json",
-        "at": "2026-10-19T18:38:23.981046+00:00",
-        "scope": "Original ID productTitle/textDesc only; SKU, images, generalFAQ, company and trade preserved"
+        "at": "2026-10-21T14:50:00.098008+00:00",
+        "scope": "本次价格正式回读；不代表公开验收"
       },
       "platform_group": {
         "id": "916810944",
@@ -64155,7 +65510,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-10-19T18:38:23.981046+00:00",
+        "at": "2026-10-21T14:50:00.098008+00:00",
         "model": "BQ060 / A350",
         "title": "Knit Lace-Up Walking Shoes Low Top Rubber-Plastic Sole Casual Sneakers Wholesale",
         "keywords": [
@@ -64290,6 +65645,47 @@
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/10000047396313/verification.json"
           ]
         }
+      },
+      "price_review": {
+        "id": "10000047396313",
+        "family": "BQ060",
+        "model": "BQ060 / A350",
+        "new_tiers": [
+          [
+            2,
+            "9.00"
+          ],
+          [
+            50,
+            "8.40"
+          ],
+          [
+            100,
+            "7.80"
+          ]
+        ],
+        "basis": {
+          "type": "OWNER_CONFIRMED_PRODUCTION_BASELINE_REDUCTION",
+          "cost_reference": "00_总控台/产品中心/数据/.local/生产成本基线.json",
+          "cost_family_key": "BQ060",
+          "cost_confirmed_on": "2026-10-21",
+          "cost_class_evidence": "01_产品资产/02_可发布素材/00_最终上传/BQ060_A350/00_上架填写表.md",
+          "fx_cny_per_usd": "6.6670",
+          "fx_published_at": "2026-10-21 15:23:07 Asia/Shanghai",
+          "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+          "markups_by_quantity": {
+            "2-49": "50%",
+            "50-99": "40%",
+            "100+": "30%"
+          },
+          "rounding": "CEILING_USD_CENT",
+          "scope": "Production-cost baseline only. Actual costs stay in ignored local file; no ownership/material changes, no retail prices used as cost. Applicable expenses remain order-specific.",
+          "competitor_comparison": "SAME_CONDITION_COMPETITOR_NOT_YET_VERIFIED"
+        },
+        "at": "2026-10-21T14:50:00.098008+00:00",
+        "state": "FORMAL_PRICE_PASS_API",
+        "verification": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/原包成本续核/降价执行/10000047396313/verification.json",
+        "public": "NOT_REQUESTED_API_ACCEPTANCE"
       }
     },
     {
@@ -64303,9 +65699,8 @@
       "observation": {
         "audit": "approved",
         "display": "Y",
-        "at": "2026-10-20T15:28:42.054729+00:00",
-        "scope": "本轮货号与共用工厂主图精确ID正式回读；公开页未逐项实测",
-        "score": "5.00"
+        "at": "2026-10-21T14:49:12.829883+00:00",
+        "scope": "价格API闭环；公开呈现未核"
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/10000047356491/prepared.json",
@@ -64324,7 +65719,7 @@
       "catalog_presence": "OBSERVED",
       "catalog_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
       "catalog_fields": {
-        "at": "2026-10-20T15:28:42.054729+00:00",
+        "at": "2026-10-21T14:49:12.829883+00:00",
         "model": "BQ061 / AA811",
         "title": "Knit Lace-Up Walking Shoes with Foamed Sole Rounded Low Top Casual Sneakers Wholesale",
         "keywords": [
@@ -64376,19 +65771,19 @@
         ]
       },
       "local_sync": {
-        "state": "FORMAL_FIELDS_SCORE_PASS",
+        "state": "FORMAL_PRICE_PASS_API",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000047356491/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000047356491/formal_render.json",
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/10000047356491/当前图库与货号.json",
-        "at": "2026-10-16T04:41:47.827444+00:00",
+        "at": "2026-10-21T14:49:12.829883+00:00",
         "observed_at": "2026-10-19T19:46:35.895183+00:00",
         "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/结构与标题纠正/商品/10000047356491/verification.json",
         "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ061_首图构图优化/商品/10000047356491/verification.json"
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000047356491/formal_get.json",
-        "at": "2026-10-20T15:28:42.054729+00:00",
-        "scope": "Exact original-ID M1 composition upgrade; complete shoe edges and real variant retained. Preserve every other image slot, factory image, detail content, SKU, pricing, copy and FAQ."
+        "at": "2026-10-21T14:49:12.829883+00:00",
+        "scope": "本次价格正式回读；不代表公开验收"
       },
       "platform_group": {
         "id": "916810944",
@@ -64396,7 +65791,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-10-20T15:28:42.054729+00:00",
+        "at": "2026-10-21T14:49:12.829883+00:00",
         "model": "BQ061 / AA811",
         "title": "Knit Lace-Up Walking Shoes with Foamed Sole Rounded Low Top Casual Sneakers Wholesale",
         "keywords": [
@@ -64574,6 +65969,47 @@
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ061_首图构图优化/商品/10000047356491/verification.json"
           ]
         }
+      },
+      "price_review": {
+        "id": "10000047356491",
+        "family": "BQ061",
+        "model": "BQ061 / AA811",
+        "new_tiers": [
+          [
+            2,
+            "9.00"
+          ],
+          [
+            50,
+            "8.40"
+          ],
+          [
+            100,
+            "7.80"
+          ]
+        ],
+        "basis": {
+          "type": "OWNER_CONFIRMED_PRODUCTION_BASELINE_REDUCTION",
+          "cost_reference": "00_总控台/产品中心/数据/.local/生产成本基线.json",
+          "cost_family_key": "BQ061",
+          "cost_confirmed_on": "2026-10-21",
+          "cost_class_evidence": "01_产品资产/02_可发布素材/00_最终上传/BQ061_AA811/00_上架填写表.md",
+          "fx_cny_per_usd": "6.6670",
+          "fx_published_at": "2026-10-21 15:23:07 Asia/Shanghai",
+          "fx_source": "https://www.boc.cn/sourcedb/whpj/",
+          "markups_by_quantity": {
+            "2-49": "50%",
+            "50-99": "40%",
+            "100+": "30%"
+          },
+          "rounding": "CEILING_USD_CENT",
+          "scope": "Production-cost baseline only. Actual costs stay in ignored local file; no ownership/material changes, no retail prices used as cost. Applicable expenses remain order-specific.",
+          "competitor_comparison": "SAME_CONDITION_COMPETITOR_NOT_YET_VERIFIED"
+        },
+        "at": "2026-10-21T14:49:12.829883+00:00",
+        "state": "FORMAL_PRICE_PASS_API",
+        "verification": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/原包成本续核/降价执行/10000047356491/verification.json",
+        "public": "NOT_REQUESTED_API_ACCEPTANCE"
       }
     },
     {

@@ -49,6 +49,9 @@ def stable(product):
         value.pop(key, None)
     for key in ('fob_min_price', 'fob_max_price'):
         value.get('sourcing_trade', {}).pop(key, None)
+    # Some exact-ID get responses expose the linked lowest price here instead
+    # of sourcing_trade. Verify it separately; preserve all other trade fields.
+    value.get('wholesale_trade', {}).pop('price', None)
     for sku in value.get('product_sku', {}).get('skus', []):
         sku.pop('bulk_discount_prices', None)
     for key in ('company_image', 'detail_image'):
@@ -72,6 +75,22 @@ def formal_prices_match(product, expected):
     skus = product.get('product_sku', {}).get('skus', [])
     return bool(skus) and all(sorted((int(t['start_quantity']), Decimal(str(t['price'])))
         for t in sku.get('bulk_discount_prices', [])) == expected for sku in skus)
+
+
+def check_trade_basis(product, plan, schema):
+    trade = product.get('sourcing_trade')
+    if trade:
+        assert trade['fob_currency'] == 'USD' and trade['fob_unit_type'] == 'Pair'
+        return 'PRODUCT_GET_USD_PAIR'
+    evidence = plan['basis'].get('trade_supplement_evidence')
+    assert evidence, 'Missing trade object requires explicit exact-ID supplemental evidence'
+    supplement = load(ROOT / evidence)
+    assert supplement['currency'] == 'USD' and supplement['unit'] == 'Pair'
+    field = schema.find("./field[@id='priceUnit']")
+    value = field.findtext('value')
+    assert any(o.get('value') == value and o.get('displayName') == 'Pair/Pairs'
+               for o in field.findall('./options/option')), 'Current schema unit differs'
+    return 'SCHEMA_PAIR_AND_EXACT_ID_PUBLIC_CURRENCY_SUPPLEMENT'
 
 
 def validate_reduction(old, new):
@@ -162,10 +181,10 @@ def main():
                 # product.get returns an opaque product_id, not the numeric catalog id.
                 assert ('_' + pid + '.html') in p['pc_detail_url'], 'Returned detail URL identity differs'
                 assert p['status'] == 'approved' and p['display'] == 'Y'
-                assert p['sourcing_trade']['fob_currency'] == 'USD' and p['sourcing_trade']['fob_unit_type'] == 'Pair'
                 r = render(pid, p['category_id'])
                 save(folder / 'before_render.json', r)
                 root = ET.fromstring(r['data'])
+                trade_basis = check_trade_basis(p, plan, root)
                 payload = contract.values_only(root, operation='update', field_ids=FIELDS)
                 assert set(e.get('id') for e in payload) == set(FIELDS)
                 assert payload.find("./field[@id='scPrice']/value").text == '1'
@@ -180,6 +199,7 @@ def main():
                 xml = ET.tostring(payload, encoding='unicode')
                 (folder / 'payload.xml').write_text(xml, encoding='utf-8')
                 save(folder / 'plan.json', {**plan, 'at': now(), 'category_id': p['category_id'],
+                    'trade_basis': trade_basis,
                     'old_tiers': [[q, str(v)] for q, v in old], 'fields': list(FIELDS),
                     'video_fields_inspected': [k for k in ('imageVideo', 'detailVideo') if root.find('./field[@id="'+k+'"]') is not None],
                     'payload_sha256': hashlib.sha256(xml.encode()).hexdigest()})
@@ -195,7 +215,8 @@ def main():
                 before, current = load(folder / 'before_get.json')['product'], g['product']
                 assert current['status'] == 'approved' and current['display'] == 'Y'
                 assert stable(current) == stable(before) and current['product_sku'] == before['product_sku']
-                assert current['sourcing_trade'] == before['sourcing_trade']
+                assert current.get('sourcing_trade') == before.get('sourcing_trade')
+                assert current.get('wholesale_trade') == before.get('wholesale_trade')
                 with (folder / 'write_once.json').open('x', encoding='utf-8') as stream:
                     json.dump({'id': pid, 'at': now(), 'state': 'STARTED_UNKNOWN_NO_REPLAY',
                         'sha256': prepared['payload_sha256']}, stream)
@@ -211,15 +232,23 @@ def main():
                 save(folder / 'after_get.json', g)
                 p = g['product']
                 expected = wanted_tiers(plan)
+                trade = p.get('sourcing_trade')
+                range_match = (Decimal(trade['fob_min_price']) == min(v for q, v in expected)
+                    and Decimal(trade['fob_max_price']) == max(v for q, v in expected)) if trade else None
+                assert trade or plan['basis'].get('trade_supplement_evidence'), 'Unexpected missing trade object'
+                wholesale_price = p.get('wholesale_trade', {}).get('price')
+                wholesale_match = Decimal(str(wholesale_price)) == min(v for q, v in expected) if wholesale_price is not None else None
                 result = {'id': pid, 'at': now(), 'state': 'PENDING',
                     'prices_match': formal_prices_match(p, expected),
-                    'trade_range_matches': (Decimal(p['sourcing_trade']['fob_min_price']) == min(v for q, v in expected)
-                        and Decimal(p['sourcing_trade']['fob_max_price']) == max(v for q, v in expected)),
+                    'trade_range_matches': range_match,
+                    'wholesale_price_matches': wholesale_match,
+                    'trade_range_evidence': 'PRODUCT_GET' if trade else 'NOT_RETURNED; verify current schema and every SKU; explicit currency supplement retained',
                     'non_price_formal_preserved': stable(p) == stable(load(folder / 'before_get.json')['product']),
                     'status': p['status'], 'display': p['display'], 'public': 'NOT_REQUESTED_API_ACCEPTANCE'}
                 if p['status'] == 'approved':
                     r = render(pid, p['category_id'])
                     save(folder / 'after_render.json', r)
+                    result['trade_basis'] = check_trade_basis(p, plan, ET.fromstring(r['data']))
                     old = contract.field_snapshot(ET.fromstring(load(folder / 'before_render.json')['data']))
                     new = contract.field_snapshot(ET.fromstring(r['data']))
                     result['schema_preservation_failures'] = [k for k, v in old.items()
@@ -228,11 +257,11 @@ def main():
                     score = read('alibaba.icbu.product.score.get', {'product_id': int(pid)})
                     save(folder / 'score.json', score)
                     result['actual_score'] = score.get('result', {}).get('final_score')
-                    if (result['prices_match'] and result['trade_range_matches'] and result['non_price_formal_preserved']
+                    if (result['prices_match'] and result['trade_range_matches'] is not False and wholesale_match is not False and result['non_price_formal_preserved']
                             and result['schema_prices_match'] and not result['schema_preservation_failures']
                             and p['display'] == 'Y'):
                         result['state'] = 'FORMAL_PRICE_PASS_API'
-                elif p['status'] in ('modified', 'new') and result['prices_match'] and result['trade_range_matches'] and result['non_price_formal_preserved']:
+                elif p['status'] in ('modified', 'new') and result['prices_match'] and result['trade_range_matches'] is not False and wholesale_match is not False and result['non_price_formal_preserved']:
                     result['state'] = 'PRICE_FIELDS_PASS_REVIEW_PENDING'
                 elif p['status'] == 'tbd':
                     result['state'] = 'AUDIT_REJECTED_REQUIRES_DIAGNOSIS'
