@@ -1,0 +1,36 @@
+{
+  "duration": 10.041666666666666,
+  "seed": 9507,
+  "events": [
+    {
+      "type": "contact",
+      "time": 2.47,
+      "duration": 0.18,
+      "peak_dbfs": -20,
+      "pan": 0.12
+    },
+    {
+      "type": "fabric",
+      "time": 4.38,
+      "duration": 0.22,
+      "peak_dbfs": -34,
+      "pan": 0.1
+    },
+    {
+      "type": "contact",
+      "time": 4.98,
+      "duration": 0.18,
+      "peak_dbfs": -21,
+      "pan": 0.08
+    },
+    {
+      "type": "contact",
+      "time": 7.5,
+      "duration": 0.18,
+      "peak_dbfs": -20.5,
+      "pan": -0.12
+    }
+  ],
+  "provenance": "Existing procedural Foley retained only for preserved source frames; hand fabric events removed.",
+  "timing_evidence": "Existing R02 contact sheet and focused windows 2.65/4.65/7.65 seconds; timing is approximate, audition pending."
+}

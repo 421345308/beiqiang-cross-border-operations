@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-20",
+  "updated": "2026-10-21",
   "jobs": [
     {
       "job_id": "ZX9507-V05",
@@ -47,7 +47,7 @@
       "job_id": "ZX9507-R02",
       "product": "ZX9507",
       "project": "../ZX9507_抖店生活化带货/PROJECT.md",
-      "stage": "USER_REPORTED_UPLOADED_VOICE_REJECTED",
+      "stage": "USER_ACCEPTED_NO_NARRATION_DIRECTION_HAND_SHOT_CRITIQUE",
       "manifest": "../ZX9507_抖店生活化带货/edit/R02/proposal.json",
       "preview": "../ZX9507_抖店生活化带货/edit/R02/ZX9507_R02_黑杏加绒_15秒_BGM版.mp4",
       "new_video_generations": 1,
@@ -64,9 +64,45 @@
       "user_reported_uploaded": true,
       "publish_verification": "NOT_READ_BACK",
       "user_audio_accepted": false,
-      "current_research": "edit/references/声画参考与ZX9507方向.md",
+      "current_research": "../../视频灵感.html",
       "voice_research_status": "INCOMPLETE_NATIVE_AUDIO_CONTROL_FAILED",
-      "voice_proposal": "../ZX9507_抖店生活化带货/edit/R02/voice_proposal.json"
+      "voice_proposal": "../ZX9507_抖店生活化带货/edit/R02/voice_proposal.json",
+      "current_preview": "../../成片/抖店/ZX9507_黑杏加绒_10秒_去手部镜头.mp4",
+      "current_preview_status": "LOCAL_EDIT_VISUAL_REVIEWED_AWAITING_USER",
+      "current_preview_is_new_generation": false
+    },
+    {
+      "job_id": "ZX9507-R03",
+      "product": "ZX9507",
+      "project": "../ZX9507_抖店生活化带货/PROJECT.md",
+      "manifest": "../ZX9507_抖店生活化带货/edit/下一批画面方案.json",
+      "stage": "PRICED_AWAITING_CURRENT_GENERATION_CONFIRMATION",
+      "name": "同一双鞋，换条裤子看看",
+      "generation_submitted": false,
+      "new_video_generations": 0,
+      "quoted_credits": 805
+    },
+    {
+      "job_id": "ZX9507-R04",
+      "product": "ZX9507",
+      "project": "../ZX9507_抖店生活化带货/PROJECT.md",
+      "manifest": "../ZX9507_抖店生活化带货/edit/下一批画面方案.json",
+      "stage": "PRICED_AWAITING_CURRENT_GENERATION_CONFIRMATION",
+      "name": "穿出去，走一小段",
+      "generation_submitted": false,
+      "new_video_generations": 0,
+      "quoted_credits": 690
+    },
+    {
+      "job_id": "ZX9507-R05",
+      "product": "ZX9507",
+      "project": "../ZX9507_抖店生活化带货/PROJECT.md",
+      "manifest": "../ZX9507_抖店生活化带货/edit/下一批画面方案.json",
+      "stage": "CREATIVE_PREPARED_QUOTE_PENDING",
+      "name": "黑色针织，杏色造型底",
+      "generation_submitted": false,
+      "new_video_generations": 0,
+      "quoted_credits": null
     }
   ],
   "metrics": {

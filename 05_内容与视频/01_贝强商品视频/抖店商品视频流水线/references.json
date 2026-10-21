@@ -1,10 +1,11 @@
 {
-  "observed_on": "2026-10-20",
+  "observed_on": "2026-10-21",
   "acquisition_notes": [
     "Firecrawl unavailable; public web search used.",
     "Anonymous Douyin search requires login; did not bypass it or ask user to log in for unrelated prep.",
     "Bilibili source downloaded publicly at 720p using yt-dlp; no cookies, credentials or premium bypass.",
-    "2026-10-19 Chrome已登录页面正常搜索可用；R02两条原片按页面实际资源下载并核ID/时长，不导出cookies。"
+    "2026-10-19 Chrome已登录页面正常搜索可用；R02两条原片按页面实际资源下载并核ID/时长，不导出cookies。",
+    "2026-10-21: 3 new Douyin full videos acquired from observed rendered currentSrc, IDs/durations verified, no cookies exported. 1 rejected as visual master; 2 have limited transferable outfit structures. Browser wrapper snapshots and direct downloadMedia were slow; normal DOM read + CDN file transfer succeeded for HTTPS media. Blob-only Sangpo and black-shoe sources remain unacquired, not generation inputs."
   ],
   "references": [
     {
@@ -158,6 +159,66 @@
       "audio_status": "NOT_REVIEWED",
       "hot_status": "HIGH_VISIBLE_INTERACTION_NOT_SALES_PROOF",
       "local_review": "edit/references/声画参考与ZX9507方向.md"
+    },
+    {
+      "id": "7663458526299949041",
+      "url": "https://www.douyin.com/video/7663458526299949041",
+      "author": "036-",
+      "title": "什么单品？能够一直陪伴长期主义者。那无疑是鞋子！三双不同风格的鞋子佳肴。",
+      "engagement": {
+        "observed_on": "2026-10-21",
+        "likes_display": "1.6万",
+        "comments": 311,
+        "favorites": 3384,
+        "shares": 1044,
+        "scope": "Single-post current visible interaction, not sales or organic attribution"
+      },
+      "source_sha256": "bedbe8256877a234ce819be9831a3f96ecf34fbc7ba7a1be0ca95c2a5451e5e2",
+      "local_media": "edit/references/7663458526299949041/source.mp4",
+      "local_review": "edit/references/7663458526299949041/edit/qa/source/reference_20261021_132907/reference_shot_analysis.md",
+      "visual_decision": "REJECT_AS_DIRECT_VISUAL_MASTER",
+      "adaptation": "不直接复刻。可借“先给观看理由”，但不能把人物人设热度移植成贝强鞋的吸引力。",
+      "audio_status": "NOT_REVIEWED_THIS_TASK_NO_AUDIO_REUSE"
+    },
+    {
+      "id": "7679743631713225448",
+      "url": "https://www.douyin.com/video/7679743631713225448",
+      "author": "Thomas日常穿搭",
+      "title": "用一双乐福鞋解锁两套穿法",
+      "engagement": {
+        "observed_on": "2026-10-21",
+        "likes_display": "631",
+        "comments": 23,
+        "favorites": 65,
+        "shares": 77,
+        "scope": "Single-post current visible interaction, not sales or organic attribution"
+      },
+      "source_sha256": "9bc530ee4434616f3c531e8b53df13b27498845f01e9468598c98acd9a9435d1",
+      "local_media": "edit/references/7679743631713225448/source.mp4",
+      "local_review": "edit/references/7679743631713225448/edit/qa/source/reference_20261021_133634/reference_shot_analysis.md",
+      "visual_decision": "USE_OUTFIT_COMPARISON_STRUCTURE",
+      "adaptation": "借同鞋换裤装的清楚对照，改为秋冬长裤、针织套脚鞋和原创人物场景；补鞋子中近景，避免鞋占画面太小。631赞属于表达参考，不称爆款或成交证明。",
+      "audio_status": "NOT_REVIEWED_THIS_TASK_NO_AUDIO_REUSE"
+    },
+    {
+      "id": "7676794143049403684",
+      "url": "https://www.douyin.com/video/7676794143049403684",
+      "author": "小郑裁缝",
+      "title": "真正的风格 就是你穿了很多种衣服 你还是你",
+      "engagement": {
+        "observed_on": "2026-10-21",
+        "likes_display": "6.5万",
+        "comments": 984,
+        "favorites": 3923,
+        "shares": 6399,
+        "scope": "Single-post current visible interaction, not sales or organic attribution"
+      },
+      "source_sha256": "a028888663ab9c4804c82abb320771d0170a18cb15f4fa70c3c24dfdb91c087b",
+      "local_media": "edit/references/7676794143049403684/source.mp4",
+      "local_review": "edit/references/7676794143049403684/edit/qa/source/reference_20261021_133633/reference_shot_analysis.md",
+      "visual_decision": "USE_CHANGE_AND_FRAMING_NOT_PERSONA",
+      "adaptation": "借固定位置换装及前后反差，不搬人物、园区梗、正装定位或妆造。为黑杏针织鞋改成休闲长裤搭配；该片不是同款鞋或销量证明。",
+      "audio_status": "NOT_REVIEWED_THIS_TASK_NO_AUDIO_REUSE"
     }
   ],
   "principle": "Search position, author total likes, marketing copy and indexed numbers do not prove a specific video is viral or commercially effective."

@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-21",
+  "status": "VISUAL_REVIEWED_AWAITING_USER",
+  "output": "成片/抖店/ZX9507_黑杏加绒_10秒_去手部镜头.mp4",
+  "frames": 241,
+  "video_duration": 10.041666666666666,
+  "source_ranges_seconds": [
+    [
+      0,
+      9
+    ],
+    [
+      14,
+      15.041666666666666
+    ]
+  ],
+  "removed_frames": [
+    216,
+    335
+  ],
+  "change": "Remove hand-over-upper interval; preserve earlier foot motion and clean full-pair ending.",
+  "video_reencoded_once": true,
+  "new_ai_generation_calls": 0,
+  "generation_credits": 0,
+  "audio": "Existing licensed music + existing procedural Foley retimed; no narration; no sound model call.",
+  "sha256": "14badcd1eac43030d3fd11b462ac8670a6f75b6ecb182128254958b078d73e89",
+  "full_decode_passed": true,
+  "qa": "qa/qa_20261021_134608/QA_REPORT.md",
+  "source_id": "c8a303761f45c46a"
+}

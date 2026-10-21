@@ -1,0 +1,189 @@
+{
+  "updated": "2026-10-21",
+  "product": "ZX9507黑杏加绒",
+  "status": "TWO_DRAFTS_PRICED_AWAITING_PAID_GENERATION_CONFIRMATION",
+  "user_feedback": "Current no-narration action-audio preview accepted in direction; upper-stroking gesture adds little and product expression lacks variety. Seek more relevant retail references.",
+  "production": {
+    "platform": "LibTV",
+    "requested_model": "Seedance 2.5",
+    "ratio": "9:16",
+    "resolution": "720p",
+    "narration": false,
+    "action_sound": true,
+    "music": "Separate editable existing licensed music if needed; no new voice or music model call proposed."
+  },
+  "identity_sources": [
+    "sources/product_factory_white.jpg",
+    "sources/product_factory_side.jpg",
+    "sources/product_factory_sole.jpg"
+  ],
+  "excluded_inputs": [
+    "R01/R02 finished videos as new-generation references",
+    "prior actor and entrance assets by default"
+  ],
+  "plans": [
+    {
+      "id": "ZX9507-R03",
+      "name": "同一双鞋，换条裤子看看",
+      "priority": 1,
+      "duration_seconds": 15,
+      "goal": "让消费者看到黑杏配色与不同秋冬长裤的关系，而不是听“百搭”这个词。",
+      "reference_ids": [
+        "7679743631713225448",
+        "7676794143049403684"
+      ],
+      "reference_usage": "借同鞋两套的比较结构与固定机位换装；非逐帧照搬，不复制人物或正装定位。",
+      "shots": [
+        {
+          "time": "0–3秒",
+          "action": "膝下中景，黑直筒长裤与黑杏鞋落稳，先看完整鞋型。"
+        },
+        {
+          "time": "3–6秒",
+          "action": "保持鞋的位置与机位，切换米白直筒裤，轻转脚看杏色底侧。"
+        },
+        {
+          "time": "6–10秒",
+          "action": "改深蓝直筒牛仔裤，同鞋向前走两步，裤脚不过分盖鞋。"
+        },
+        {
+          "time": "10–15秒",
+          "action": "选最好的一套，完整半身/全身搭配与鞋子中近景交替，双鞋收尾。"
+        }
+      ],
+      "new_expression": "同鞋不同裤装的直接选择感；不复用R02场景、男模或成片。",
+      "main_risk": "裤装切换时鞋型漂移；同一黑杏边界、针织分区和块状底逐段核对。",
+      "draft_prepared": true,
+      "prompt": "edit/R03/generation_prompt.txt",
+      "input_images": [
+        "sources/product_factory_white.jpg",
+        "sources/product_factory_side.jpg",
+        "sources/product_factory_sole.jpg"
+      ],
+      "video_reference_excerpt": {
+        "source_id": "7679743631713225448",
+        "source_range_seconds": [
+          8,
+          28
+        ],
+        "local_file": "edit/R03/reference_excerpt_08_28.mp4",
+        "audio_removed": true,
+        "sha256": "973ca378c9e3d941e7c90f18bfb03c74053cd1b8e5a7be44240a64abcc781084"
+      },
+      "input_mode": "mixed2video",
+      "cli_readback": {
+        "model": "star-video2.5",
+        "modeType": "mixed2video",
+        "ratio": null,
+        "resolution": null,
+        "duration": null,
+        "count": 1,
+        "enableSound": null
+      },
+      "generation_submitted": false,
+      "quoted_credits": 805
+    },
+    {
+      "id": "ZX9507-R04",
+      "name": "穿出去，走一小段",
+      "priority": 2,
+      "duration_seconds": 15,
+      "goal": "补足现片只有原地转脚的不足，让鞋参与一个正常日常过程。",
+      "reference_ids": [
+        "7679743631713225448"
+      ],
+      "reference_usage": "只借全身穿搭与向前移动的尺度关系；出门和街道是原创情境，不称复刻了未取得的通勤鞋原片。",
+      "shots": [
+        {
+          "time": "0–4秒",
+          "action": "干燥街边店门口，成年模特穿深蓝长裤/浅色外套走出，低机位先看鞋。"
+        },
+        {
+          "time": "4–9秒",
+          "action": "侧后方跟随两三步，鞋头、套脚口和鞋底起伏清楚，不跑跳或踩水。"
+        },
+        {
+          "time": "9–12秒",
+          "action": "停下自然回身，侧面完整鞋型转到前侧三分之四。"
+        },
+        {
+          "time": "12–15秒",
+          "action": "稍宽画面带出整套搭配，最后短停在完整双鞋。"
+        }
+      ],
+      "new_expression": "从静态展示变成真实日常动作关系；无讲解，有落脚与衣物环境声。",
+      "main_risk": "左右脚、接地和跟拍连续性；只安排短距离平地正常步行，不暗示专业跑步/防滑能力。",
+      "draft_prepared": true,
+      "prompt": "edit/R04/generation_prompt.txt",
+      "input_images": [
+        "sources/product_factory_white.jpg",
+        "sources/product_factory_side.jpg",
+        "sources/product_factory_sole.jpg"
+      ],
+      "video_reference_excerpt": null,
+      "input_mode": "image2video",
+      "cli_readback": {
+        "model": "star-video2.5",
+        "modeType": "image2video",
+        "ratio": null,
+        "resolution": null,
+        "duration": null,
+        "count": 1,
+        "enableSound": null
+      },
+      "generation_submitted": false,
+      "quoted_credits": 690
+    },
+    {
+      "id": "ZX9507-R05",
+      "name": "黑色针织，杏色造型底",
+      "priority": 3,
+      "duration_seconds": 12,
+      "goal": "补足商品辨识度：黑杏分界、套脚鞋口、针织分区与底侧轮廓。",
+      "reference_ids": [],
+      "reference_usage": "依据真实工厂侧面/整体图设计的原创商品画面，非已验证爆款复刻。",
+      "shots": [
+        {
+          "time": "0–4秒",
+          "action": "干净的阶台/低矮展示面，鞋子完整侧面，柔和侧光带出鞋面与杏色底。"
+        },
+        {
+          "time": "4–8秒",
+          "action": "正常上脚的前侧三分之四，中近景看鞋口与黑杏边界，不摸鞋面。"
+        },
+        {
+          "time": "8–12秒",
+          "action": "自然换重心到后侧，完整双鞋收尾；不以极端微距放大生成纹理。"
+        }
+      ],
+      "new_expression": "用角度、光线和尺度表达细节，替代没有信息的手指划动。",
+      "main_risk": "针织与底纹微结构重建；放在前两条之后，按实图核验再决定是否生成。"
+    }
+  ],
+  "quote": {
+    "observed_on": "2026-10-21",
+    "method": "Official CLI unrun drafts; actual signed-in Chrome rendered generator panels read through browser DOM and accessibility. Screenshot canvas saved privately; panel lies below viewport in wide fit-to-screen screenshot, so screenshot alone is not pricing evidence.",
+    "model": "Seedance 2.5",
+    "resolution": "720p",
+    "ratio": "9:16",
+    "enableSound": "on",
+    "narration": false,
+    "count_per_plan": 1,
+    "output_seconds_per_plan": 15,
+    "credits_by_plan": {
+      "ZX9507-R03": 805,
+      "ZX9507-R04": 690
+    },
+    "total_credits": 1495,
+    "r03_strikethrough_credits": 1610,
+    "generation_submitted": false,
+    "exact_credits": 1495,
+    "payment_status": "NOT_SPENT",
+    "account_logged_in": true,
+    "approval_scope": "R03 and R04 once each only; no automatic retry; R05 excluded"
+  },
+  "generation_submitted": false,
+  "actual_new_paid_generation_calls": 0,
+  "automatic_paid_retry": false,
+  "next_step": "Request current confirmation for R03 once (805 credits) and R04 once (690 credits), total1495; recheck same inputs and actual price before executing; never auto retry. R05 remains a reserve."
+}
