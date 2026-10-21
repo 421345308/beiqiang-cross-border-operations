@@ -67,7 +67,7 @@ for(const [model,p]of Object.entries(plan.models)){
  // 5. True colour variants.
  b=head(p.color_names.length===1?'这款配色，日常好搭':'先选配色，再选尺码',p.mixed_versions?'加绒重点配色；常规版及其他配色见商品规格':'本款当前售卖的'+(fleece?'加绒':'常规')+'颜色规格',p.accent);
  if(p.color_names.length===1){b+=await img(p.color_files[0],56,250,688,610,{round:24});b+=text(400,925,p.color_names[0],42,p.accent,700,'text-anchor="middle"');}
- else{for(let i=0;i<p.color_names.length;i++){const y=240+i*340;b+=await img(p.color_files[i],56,y,370,300,{round:20});b+=text(458,y+133,p.color_names[i],34,p.accent,700)+text(458,y+182,fleece?'加绒版本':'常规版本',24,'#686e66');}}
+ else{for(let i=0;i<p.color_names.length;i++){const y=240+i*340,range=p.color_size_ranges?.[p.color_names[i]];b+=await img(p.color_files[i],56,y,370,300,{round:20});b+=text(458,y+133,p.color_names[i],34,p.accent,700)+text(458,y+182,range?range[0]+'—'+range[1]+'码':fleece?'加绒版本':'常规版本',24,'#686e66');}}
  const colorNoteY=Math.max(978,240+p.color_names.length*340+28);
  b+=para(56,colorNoteY,p.choice_copy,22,688);
  pages.push(['05_颜色规格选择',Math.max(1100,colorNoteY+130),b]);
@@ -75,14 +75,14 @@ for(const [model,p]of Object.entries(plan.models)){
  b=head('商品信息，一页看清','下单前核对款式、材质、颜色和尺码',p.accent);
  const facts=[['可选版本',p.mixed_versions?'常规 / 加绒':fleece?'加绒款':'常规款'],['鞋面材质',p.upper||'织物'],['内里材质',p.mixed_versions?'按常规 / 加绒规格区分':fleece?'人造短毛绒':p.inner],['外底材质',p.sole],['闭合方式',p.closure],['穿着选择',p.mixed_versions?'按气温选择内里版本':fleece?'秋冬日常穿着':'日常休闲穿着'],['可选颜色',p.mixed_versions?'配色以商品规格为准':p.color_names.join(' / ')],['可选尺码',p.start_size+'—'+p.end_size+'码']].filter(([,value])=>value);
  facts.forEach(([k,v],i)=>{const y=238+i*90,units=[...String(v)].reduce((n,c)=>n+(c.charCodeAt(0)>255?1:.55),0),fontSize=Math.min(29,Math.floor(420/Math.max(1,units)));b+=rect(56,y,688,86,i%2?'#ebe7de':'#fff',10)+text(82,y+54,k,29,'#73796d')+(fontSize<21?para(288,y+34,v,24,420,'#283126',32):text(288,y+54,v,fontSize,'#283126',600));});
- b+=para(56,979,p.mixed_versions?'常规与加绒分别选择，请核对商品颜色规格中的版本。':fleece?'本页展示加绒款，请按颜色规格中的加绒标识选购。':'本页展示常规款，请按配色、脚长、脚背及袜厚选购。',24,688);
+ b+=para(56,979,p.size_range_note||(p.mixed_versions?'常规与加绒分别选择，请核对商品颜色规格中的版本。':fleece?'本页展示加绒款，请按颜色规格中的加绒标识选购。':'本页展示常规款，请按配色、脚长、脚背及袜厚选购。'),24,688);
  pages.push(['06_商品参数',1100,b]);
  // 7. Authorized foot-length guidance, not inner-shoe measurements.
  b=head('按脚长参考选码','标准尺码参考  ·  单位：厘米',p.accent);
  b+=rect(56,232,688,62,p.accent,12)+text(224,274,'鞋码',30,'#fff',700,'text-anchor="middle"')+text(574,274,'参考脚长',30,'#fff',700,'text-anchor="middle"');
  for(let size=p.start_size;size<=p.end_size;size++){const n=size-p.start_size,y=304+n*53;b+=rect(56,y,688,49,n%2?'#ebe7de':'#fff',8)+text(224,y+35,String(size),28,'#283126',500,'text-anchor="middle"')+text(574,y+35,String(22.5+(size-35)*.5),28,'#283126',500,'text-anchor="middle"');}
  const sy=324+(p.end_size-p.start_size+1)*53;
- b+=text(56,sy+20,'脚长怎么量？',34,p.accent,700)+para(56,sy+70,'脚跟贴墙站立，测量脚跟到最长脚趾的距离；两脚分别测量，参考较长的一只。',25,688)+para(56,sy+180,'尺码表为选码参考，非鞋内长。不同脚型、脚背与穿袜厚度会影响穿着感受。',22,688,'#777b72',36);
+ b+=text(56,sy+20,'脚长怎么量？',34,p.accent,700)+para(56,sy+70,'脚跟贴墙站立，测量脚跟到最长脚趾的距离；两脚分别测量，参考较长的一只。',25,688)+para(56,sy+180,(p.size_range_note?p.size_range_note+' ':'')+'尺码表为选码参考，非鞋内长。不同脚型、脚背与穿袜厚度会影响穿着感受。',22,688,'#777b72',36);
  pages.push(['07_脚长尺码指南',Math.max(1210,sy+310),b]);
  // 8. Policy information, matching existing shop configuration.
  b=head('下单与售后，都写清楚','发货、运费及服务按店铺现行规则办理',p.accent);
