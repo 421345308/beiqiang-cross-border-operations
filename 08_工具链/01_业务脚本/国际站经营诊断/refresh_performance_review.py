@@ -103,8 +103,8 @@ def build(evidence, catalog_path):
             if tiers and tiers not in tier_sets:
                 tier_sets.append(tiers)
         cost = number(source.get('price'))
-        cost_state = ('公开来源标价，费用及当天供货仍待核' if cost else
-                      '自有原包成本需按版本核算，不以零售标价代成本' if identity.get('raw_packages') else
+        cost_state = ('自有原包成本需按版本核算，不以零售标价代成本' if identity.get('raw_packages') and not source else
+                      '公开来源标价，费用及当天供货仍待核' if cost else
                       '当前采购报价未完整核实')
         result.append({
             'id': pid, 'model': listing.get('model'), 'family': listing.get('product_id'),
@@ -118,7 +118,8 @@ def build(evidence, catalog_path):
             'source_currency': source.get('currency'), 'source_observed_on': source.get('observed_at'),
             'cost_state': cost_state, 'current_price_tier_sets': tier_sets,
             'trade': p.get('sourcing_trade'),
-            'same_product_price_state': '待同款图片/版本、同档报价及完整费用核对；未自动改价',
+            'price_revision': listing.get('price_review'),
+            'same_product_price_state': '基线降价状态见price_revision；同条件竞品及完整费用仍需分别核对',
             'current_formal_reference': formal.relative_to(ROOT).as_posix(),
             'attribution_note': '10月17–21日图文/价格修改与本窗口重叠或晚于本窗口，不能判为改后效果',
         })
@@ -134,7 +135,8 @@ def build(evidence, catalog_path):
         'actions': dict(Counter(x['current_action'] for x in result)),
         'cost_states': dict(Counter(x['cost_state'] for x in result)),
         'scope': '完整当前488条与14页411行匹配；无行保持null；总量跨商品未去重；搜索不减营销点击',
-        'platform_mutations': 0,
+        'report_builder_platform_mutations': 0,
+        'linked_price_revision_states': dict(Counter(x['price_revision']['state'] for x in result if x['price_revision'])),
     }
     output = {'schema_version': 1, 'summary': summary, 'products': result}
     write(BASE / '经营复核.json', output)
@@ -157,7 +159,7 @@ def render(data):
         source = ('<br><a href="'+esc(x['source_url'])+'">核对来源 '+esc(x['source_model'])+'</a><small>'+esc(x['source_currency'])+' '+esc(x['source_price'])+' · '+esc(x['source_observed_on'])+'</small>') if x['source_url'] else ''
         body.append('<tr data-action="'+esc(x['current_action'])+'"><td><a href="'+esc(x['url'])+'">'+esc(x['model'])+'</a><small>'+esc(x['id'])+'</small></td>'+''.join('<td>'+esc(n)+'</td>' for n in nums[:2])+'<td>'+ctr+'</td>'+''.join('<td>'+esc(n)+'</td>' for n in nums[2:])+ '<td>'+esc(x['current_action'])+'</td><td>'+esc(price)+'</td><td>'+esc(x['cost_state'])+source+'</td></tr>')
     actions = ''.join('<option>'+esc(a)+'</option>' for a in data['summary']['actions'])
-    page = '''<!doctype html><meta charset="utf-8"><title>商品经营复核</title><style>body{font:15px system-ui;margin:28px;background:#f5f7fb;color:#18304a}h1{font-size:26px}p{max-width:1100px;line-height:1.7}input,select{padding:10px;margin:8px}table{border-collapse:collapse;width:100%;background:white;font-size:13px}th,td{padding:10px;text-align:left;border-bottom:1px solid #ddd}th{position:sticky;top:0;background:#dfeafb}small{display:block;color:#607082}a{color:#1550a1}td:nth-child(9){min-width:210px}</style><h1>商品经营复核 · 2026年10月21日</h1><p>完整周：10月11–17日（平台PST，过滤大陆）。当前488条，报表411行。无行不当零；搜索和营销不能相减，询盘和TM不相加当去重买家。最近图文及价格变更尚不能由本窗口评价效果。</p><p>完全同款、同数量、同包装和费用条件下，价格目标不高于竞品并覆盖成本和利润。当前价格是正式字段读取；公开供方标价不是今天的采购合同，本表不代表已调价。10月17日确认的针织鞋50/48/45元基线优先于旧通用算法。</p><input id="q" placeholder="搜索货号或商品ID"><select id="action"><option value="">全部处理方向</option>'''+actions+'''</select><p id="count"></p><table><thead><tr><th>商品</th><th>搜索曝光</th><th>搜索点击</th><th>点击率</th><th>访客</th><th>询盘</th><th>TM</th><th>处理方向</th><th>当前数量价</th><th>成本依据</th></tr></thead><tbody>'''+''.join(body)+'''</tbody></table><script>function filter(){let n=0;document.querySelectorAll('tbody tr').forEach(r=>{let ok=r.innerText.toLowerCase().includes(q.value.toLowerCase())&&(!action.value||r.dataset.action===action.value);r.hidden=!ok;if(ok)n++});count.textContent='当前显示 '+n+' 条'}q.oninput=filter;action.onchange=filter;filter();</script>'''
+    page = '''<!doctype html><meta charset="utf-8"><title>商品经营复核</title><style>body{font:15px system-ui;margin:28px;background:#f5f7fb;color:#18304a}h1{font-size:26px}p{max-width:1100px;line-height:1.7}input,select{padding:10px;margin:8px}table{border-collapse:collapse;width:100%;background:white;font-size:13px}th,td{padding:10px;text-align:left;border-bottom:1px solid #ddd}th{position:sticky;top:0;background:#dfeafb}small{display:block;color:#607082}a{color:#1550a1}td:nth-child(9){min-width:210px}</style><h1>商品经营复核 · 2026年10月21日</h1><p>完整周：10月11–17日（平台PST，过滤大陆）。当前488条，报表411行。无行不当零；搜索和营销不能相减，询盘和TM不相加当去重买家。最近图文及价格变更尚不能由本窗口评价效果。</p><p>完全同款、同数量、同包装和费用条件下，价格目标不高于竞品并覆盖成本和利润。价格来自同ID当前回读；<a href="价格复核.html">降价执行与审核状态见价格复核</a>。公开供方标价不是订单采购合同，不据本表宣称全店低于同行。10月17日确认的针织鞋50/48/45元基线优先于旧通用算法。</p><input id="q" placeholder="搜索货号或商品ID"><select id="action"><option value="">全部处理方向</option>'''+actions+'''</select><p id="count"></p><table><thead><tr><th>商品</th><th>搜索曝光</th><th>搜索点击</th><th>点击率</th><th>访客</th><th>询盘</th><th>TM</th><th>处理方向</th><th>当前数量价</th><th>成本依据</th></tr></thead><tbody>'''+''.join(body)+'''</tbody></table><script>function filter(){let n=0;document.querySelectorAll('tbody tr').forEach(r=>{let ok=r.innerText.toLowerCase().includes(q.value.toLowerCase())&&(!action.value||r.dataset.action===action.value);r.hidden=!ok;if(ok)n++});count.textContent='当前显示 '+n+' 条'}q.oninput=filter;action.onchange=filter;filter();</script>'''
     (BASE / '经营复核.html').write_text(page, encoding='utf-8')
 
 
