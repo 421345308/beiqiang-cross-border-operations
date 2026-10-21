@@ -43,7 +43,10 @@ for model in (sys.argv[1:] or list(plan['models'])):
         parsed = urlparse(row['url'])
         if parsed.scheme != 'https' or not parsed.hostname.endswith('.ecombdimg.com'):
             raise ValueError('Unexpected platform media host')
-        actual = target / f"{row['role']}-{row['index']}.img"
+        # A listing revision can replace the image at the same position. Cache the
+        # formal image object, not merely its position; CDN host rotation is harmless.
+        image_key = hashlib.sha256(parsed.path.encode('utf-8')).hexdigest()[:16]
+        actual = target / f"{row['role']}-{row['index']}-{image_key}.img"
         if not actual.exists():
             for attempt in range(3):
                 try:
