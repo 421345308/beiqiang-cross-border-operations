@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-21",
+  "status": "NO_NARRATION_FOLEY_PREVIEW_AWAITING_USER_LISTEN",
+  "source": "edit/R02/generated/ZX9507_R02_黑杏加绒_15秒原片.mp4",
+  "output_from_content_root": "成片/抖店/ZX9507_黑杏加绒_15秒_无讲解.mp4",
+  "video_stream_unchanged": true,
+  "frames": 361,
+  "width": 720,
+  "height": 1280,
+  "fps": 24,
+  "original_mixed_audio_used": false,
+  "narration_included": false,
+  "original_foley_recovered": false,
+  "foley": "Locally synthesized soft contact and fabric sound; not original recording",
+  "foley_events": "action_audio/events.json",
+  "music": "music/SOURCE.json",
+  "new_model_calls": 0,
+  "generation_credits": 0,
+  "full_decode_passed": true,
+  "output_sha256": "42cd1bf4b7ae3fd3ce858ec594cd0aab4905a849eb951d32f9dd76587ca3bedc",
+  "qa_limit": "Video stream identity verified. New Foley naturalness and precise synchronization need user listening; no personal hearing claim.",
+  "audio_checks": {
+    "mean_dbfs": -26.8,
+    "peak_dbfs": -11.1,
+    "no_original_mixed_audio": true
+  }
+}

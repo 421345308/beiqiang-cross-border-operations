@@ -2,9 +2,9 @@
   "schema": "beiqiang-voice-proposal-v1",
   "updated": "2026-10-21",
   "product": "ZX9507黑杏加绒针织套脚鞋",
-  "status": "CANCELLED_USER_HANDLES_AUDIO_VISUAL_ONLY",
+  "status": "NARRATION_CANCELLED_ACTION_AUDIO_RETAINED",
   "visual_baseline": "Keep accepted R02 AI picture; no video regeneration proposed for the voice trial.",
-  "clarification": "User explicitly takes over sound; assistant only handles reference visuals, visual generation and visual QA. Deliver silent video by default.",
+  "clarification": "User handles narration. Remove spoken explanation, retain synchronized footwear action sounds; do not default to silence. No voice trials or voice generation requested.",
   "retired_word": "利落",
   "preferred_angle": [
     "暖和也要好看",
