@@ -1,0 +1,20 @@
+{
+  "id": "1601957664983",
+  "at": "2026-10-21T01:54:47.984809+00:00",
+  "state": "FORMAL_FIELDS_SCORE_PASS",
+  "scope": "Current exact SKU colour photos and unchanged SKU identities, size combinations, prices and stock. Later independently authorized main/detail gallery revisions are outside this SKU-only check; their own formal proof is linked. Does not replace original full-field submission report.",
+  "checks": {
+    "exact_colour_photos": true,
+    "all_sku_identity_structure_prices_stock_unchanged": true,
+    "approved_visible": true,
+    "latest_formal_score": true
+  },
+  "failed": [],
+  "score": "5.00",
+  "evidence": [
+    "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601957664983/formal_get.json",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ005_规格照片完整修复/计划.json",
+    "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ005_规格照片完整修复/图片银行.json"
+  ],
+  "formal_observed_at": "2026-10-20T20:01:04.780681+00:00"
+}

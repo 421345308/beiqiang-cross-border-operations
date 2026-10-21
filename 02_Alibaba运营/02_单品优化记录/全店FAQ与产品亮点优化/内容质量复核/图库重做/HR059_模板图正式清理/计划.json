@@ -1,0 +1,58 @@
+{
+  "family": "HR059_模板图正式清理",
+  "kind": "mixed_slots",
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "ids": [
+    "1601943790138",
+    "1601943767266",
+    "1601943779211"
+  ],
+  "assets": {
+    "HR059_proof_49": {
+      "file": "01_产品资产/02_可发布素材/HR059/06_当前图文/精修/HR059_proof_49.png",
+      "sha256": "8a72ae5ed227e98ab28cde6fc43d13d0bcccf3c35e79229bbb9a475edbe80a31",
+      "state": "PASS"
+    }
+  },
+  "main_replacements_by_id": {
+    "1601943790138": {},
+    "1601943767266": {},
+    "1601943779211": {}
+  },
+  "detail_replacements_by_id": {
+    "1601943790138": {
+      "https://sc04.alicdn.com/kf/Hb2ddb5cf861b4c5caca884c4bc93d584J.jpg": "HR059_proof_49"
+    },
+    "1601943767266": {
+      "https://sc04.alicdn.com/kf/Hb2ddb5cf861b4c5caca884c4bc93d584J.jpg": "HR059_proof_49"
+    },
+    "1601943779211": {
+      "https://sc04.alicdn.com/kf/Hb2ddb5cf861b4c5caca884c4bc93d584J.jpg": "HR059_proof_49"
+    }
+  },
+  "expected_old_by_id": {
+    "1601943790138": [
+      "https://sc04.alicdn.com/kf/He886fe9cb40440c7a0029a79999655ce3.jpg",
+      "https://sc04.alicdn.com/kf/Hb2ddb5cf861b4c5caca884c4bc93d584J.jpg",
+      "https://sc04.alicdn.com/kf/H1d55fb2ad2db45c796975305f1284ac9z.jpg",
+      "https://sc04.alicdn.com/kf/H5ec9f800e4b74c0e8778b961c3f8fd3fd.jpg"
+    ],
+    "1601943767266": [
+      "https://sc04.alicdn.com/kf/He886fe9cb40440c7a0029a79999655ce3.jpg",
+      "https://sc04.alicdn.com/kf/Hb2ddb5cf861b4c5caca884c4bc93d584J.jpg",
+      "https://sc04.alicdn.com/kf/H1d55fb2ad2db45c796975305f1284ac9z.jpg",
+      "https://sc04.alicdn.com/kf/H5ec9f800e4b74c0e8778b961c3f8fd3fd.jpg"
+    ],
+    "1601943779211": [
+      "https://sc04.alicdn.com/kf/He886fe9cb40440c7a0029a79999655ce3.jpg",
+      "https://sc04.alicdn.com/kf/Hb2ddb5cf861b4c5caca884c4bc93d584J.jpg",
+      "https://sc04.alicdn.com/kf/H1d55fb2ad2db45c796975305f1284ac9z.jpg",
+      "https://sc04.alicdn.com/kf/H5ec9f800e4b74c0e8778b961c3f8fd3fd.jpg"
+    ]
+  },
+  "source_evidence": [
+    "01_产品资产/02_可发布素材/HR059/06_当前图文/精修/HR059_proof_49_图稿依据.json"
+  ],
+  "scope": "Only exact individually reviewed image slots. Replace internal production captions with real-shoe visible construction, exact per-ID colour panels and distinct details. Preserve existing F1 position, approved company suite, text, SKU IDs/axes, all prices, stock and commercial fields."
+}

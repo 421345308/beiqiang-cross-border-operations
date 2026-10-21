@@ -28,7 +28,7 @@
 ### BQ-010 · 1601825160204
 
 - 平台链接：[1601825160204](https://www.alibaba.com/product-detail/Wholesale-Stretch-Fabric-Breathable-Mesh-Lining_1601825160204.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601825160204/formal_get.json)；UTC 2026-10-20T12:49:06.412353+00:00。
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601825160204/formal_get.json)；UTC 2026-10-21T01:40:26.326035+00:00。
 - 当前正式标题：Stretch Fabric Lace-Up Walking Shoes with Mesh Lining and EVA Sole Wholesale
 - 审核/展示：approved / Y；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
@@ -50,7 +50,7 @@
 ### BQ010-O1 / R1601 · 1601939573998
 
 - 平台链接：[1601939573998](https://www.alibaba.com/product-detail/All-Black-Men-s-Breathable-Light_1601939573998.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939573998/formal_get.json)；UTC 2026-10-20T17:50:09.544677+00:00。
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939573998/formal_get.json)；UTC 2026-10-21T01:40:31.627536+00:00。
 - 当前正式标题：Stretch Fabric Lace-Up Walking Shoes with Mesh Lining and EVA Sole Wholesale
 - 审核/展示：approved / Y；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
@@ -72,7 +72,7 @@
 ### BQ010-W1 / R1601 · 1601939589876
 
 - 平台链接：[1601939589876](https://www.alibaba.com/product-detail/Wholesale-Men-s-Breathable-Light-Weight_1601939589876.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939589876/formal_get.json)；UTC 2026-10-20T17:50:18.047458+00:00。
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939589876/formal_get.json)；UTC 2026-10-21T01:40:34.969564+00:00。
 - 当前正式标题：Stretch Fabric Lace-Up Walking Shoes with Mesh Lining and EVA Sole Wholesale
 - 审核/展示：approved / Y；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
@@ -94,7 +94,7 @@
 ### BQ010-R1 / R1601 · 1601939734070
 
 - 平台链接：[1601939734070](https://www.alibaba.com/product-detail/Men-s-Daily-Walking-Shoes-Lace_1601939734070.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939734070/formal_get.json)；UTC 2026-10-20T17:50:14.924672+00:00。
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939734070/formal_get.json)；UTC 2026-10-21T01:40:39.032919+00:00。
 - 当前正式标题：Stretch Fabric Lace-Up Walking Shoes with Mesh Lining and EVA Sole Wholesale
 - 审核/展示：approved / Y；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
@@ -258,5 +258,24 @@
 - [prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ010_%E5%8A%9F%E8%83%BD%E5%9B%BE%E6%AD%A3%E5%BC%8F%E7%B2%BE%E4%BF%AE/%E5%95%86%E5%93%81/1601939589876/prepared.json)
 - [update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ010_%E5%8A%9F%E8%83%BD%E5%9B%BE%E6%AD%A3%E5%BC%8F%E7%B2%BE%E4%BF%AE/%E5%95%86%E5%93%81/1601939589876/update_receipt.json)
 - [verification.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ010_%E5%8A%9F%E8%83%BD%E5%9B%BE%E6%AD%A3%E5%BC%8F%E7%B2%BE%E4%BF%AE/%E5%95%86%E5%93%81/1601939589876/verification.json)
+- [计划.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ010_%E6%A8%A1%E6%9D%BF%E5%9B%BE%E6%AD%A3%E5%BC%8F%E6%B8%85%E7%90%86/%E8%AE%A1%E5%88%92.json)
+- [图片银行.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ010_%E6%A8%A1%E6%9D%BF%E5%9B%BE%E6%AD%A3%E5%BC%8F%E6%B8%85%E7%90%86/%E5%9B%BE%E7%89%87%E9%93%B6%E8%A1%8C.json)
+- [prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ010_%E6%A8%A1%E6%9D%BF%E5%9B%BE%E6%AD%A3%E5%BC%8F%E6%B8%85%E7%90%86/%E5%95%86%E5%93%81/1601825160204/prepared.json)
+- [update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ010_%E6%A8%A1%E6%9D%BF%E5%9B%BE%E6%AD%A3%E5%BC%8F%E6%B8%85%E7%90%86/%E5%95%86%E5%93%81/1601825160204/update_receipt.json)
+- [verification.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ010_%E6%A8%A1%E6%9D%BF%E5%9B%BE%E6%AD%A3%E5%BC%8F%E6%B8%85%E7%90%86/%E5%95%86%E5%93%81/1601825160204/verification.json)
+- [计划.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ010_%E8%AF%A6%E6%83%85%E4%BF%A1%E6%81%AF%E6%95%B4%E7%BB%84%E6%94%B6%E5%B0%BE/%E8%AE%A1%E5%88%92.json)
+- [图片银行.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ010_%E8%AF%A6%E6%83%85%E4%BF%A1%E6%81%AF%E6%95%B4%E7%BB%84%E6%94%B6%E5%B0%BE/%E5%9B%BE%E7%89%87%E9%93%B6%E8%A1%8C.json)
+- [prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ010_%E8%AF%A6%E6%83%85%E4%BF%A1%E6%81%AF%E6%95%B4%E7%BB%84%E6%94%B6%E5%B0%BE/%E5%95%86%E5%93%81/1601825160204/prepared.json)
+- [update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ010_%E8%AF%A6%E6%83%85%E4%BF%A1%E6%81%AF%E6%95%B4%E7%BB%84%E6%94%B6%E5%B0%BE/%E5%95%86%E5%93%81/1601825160204/update_receipt.json)
+- [verification.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ010_%E8%AF%A6%E6%83%85%E4%BF%A1%E6%81%AF%E6%95%B4%E7%BB%84%E6%94%B6%E5%B0%BE/%E5%95%86%E5%93%81/1601825160204/verification.json)
+- [prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ010_%E8%AF%A6%E6%83%85%E4%BF%A1%E6%81%AF%E6%95%B4%E7%BB%84%E6%94%B6%E5%B0%BE/%E5%95%86%E5%93%81/1601939573998/prepared.json)
+- [update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ010_%E8%AF%A6%E6%83%85%E4%BF%A1%E6%81%AF%E6%95%B4%E7%BB%84%E6%94%B6%E5%B0%BE/%E5%95%86%E5%93%81/1601939573998/update_receipt.json)
+- [verification.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ010_%E8%AF%A6%E6%83%85%E4%BF%A1%E6%81%AF%E6%95%B4%E7%BB%84%E6%94%B6%E5%B0%BE/%E5%95%86%E5%93%81/1601939573998/verification.json)
+- [prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ010_%E8%AF%A6%E6%83%85%E4%BF%A1%E6%81%AF%E6%95%B4%E7%BB%84%E6%94%B6%E5%B0%BE/%E5%95%86%E5%93%81/1601939589876/prepared.json)
+- [update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ010_%E8%AF%A6%E6%83%85%E4%BF%A1%E6%81%AF%E6%95%B4%E7%BB%84%E6%94%B6%E5%B0%BE/%E5%95%86%E5%93%81/1601939589876/update_receipt.json)
+- [verification.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ010_%E8%AF%A6%E6%83%85%E4%BF%A1%E6%81%AF%E6%95%B4%E7%BB%84%E6%94%B6%E5%B0%BE/%E5%95%86%E5%93%81/1601939589876/verification.json)
+- [prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ010_%E8%AF%A6%E6%83%85%E4%BF%A1%E6%81%AF%E6%95%B4%E7%BB%84%E6%94%B6%E5%B0%BE/%E5%95%86%E5%93%81/1601939734070/prepared.json)
+- [update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ010_%E8%AF%A6%E6%83%85%E4%BF%A1%E6%81%AF%E6%95%B4%E7%BB%84%E6%94%B6%E5%B0%BE/%E5%95%86%E5%93%81/1601939734070/update_receipt.json)
+- [verification.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ010_%E8%AF%A6%E6%83%85%E4%BF%A1%E6%81%AF%E6%95%B4%E7%BB%84%E6%94%B6%E5%B0%BE/%E5%95%86%E5%93%81/1601939734070/verification.json)
 
 原件、正式回执与当前资料通过本页关联，不再复制成第二套商品库。

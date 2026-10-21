@@ -1,6 +1,6 @@
 {
-  "at": "2026-10-20T18:31:16.582562+00:00",
-  "scope": "Expanded current URL-bound text scan plus whole-gallery visual review. Detection is not completion. Internal production wording and duplicate information are repaired against the exact original ID.",
+  "at": "2026-10-21T01:54:47.127998+00:00",
+  "scope": "Original exact-image findings retained as traceable evidence; current_bindings is independently recomputed from exact per-ID formal fields, not an active old-template queue.",
   "items": [
     {
       "key": "166fbfa185c4b08fa47d41c7cc572bc5c5896cb7619006564ff409a715b12fed",
@@ -18,16 +18,26 @@
           "role": "D1"
         }
       ],
-      "current_bindings": [
+      "current_bindings": [],
+      "text": "PRODUCT DETAILS VisibIe product features ． Lightweight Product Reference ． Source p h OtO shOWS about 177g per shoe ． FlexibIe casual walking styl e Use claims that match product phOtOS and supplier confirmation",
+      "review_index": 0,
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "original_bindings": [
         {
           "family": "BQ004",
           "id": "10000043201799",
           "role": "D1"
         }
       ],
-      "text": "PRODUCT DETAILS VisibIe product features ． Lightweight Product Reference ． Source p h OtO shOWS about 177g per shoe ． FlexibIe casual walking styl e Use claims that match product phOtOS and supplier confirmation",
-      "review_index": 0,
-      "state": "EXACT_CURRENT_IMAGE_REPAIR_PENDING"
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000043201799/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ004_详情信息整组收尾/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ004_详情信息整组收尾/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ004_详情信息整组收尾/商品/10000043201799/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ004_详情信息整组收尾/商品/10000043201799/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ004_详情信息整组收尾/商品/10000043201799/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.014463+00:00"
     },
     {
       "key": "e27adc475edb450ecf526323c05280515ac304069f687f72125328701f2f9f3c",
@@ -45,16 +55,26 @@
           "role": "D4"
         }
       ],
-      "current_bindings": [
+      "current_bindings": [],
+      "text": "COLOR OPTIONS AvaiIable color reference ． Use real product color photos from the package ． M ixed colors and sizes ca n be discussed ． FinaI availability should be confirmed before order 0 0 ActuaI color may vary by screen and production batch",
+      "review_index": 1,
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "original_bindings": [
         {
           "family": "BQ004",
           "id": "10000043201799",
-          "role": "D3"
+          "role": "D4"
         }
       ],
-      "text": "COLOR OPTIONS AvaiIable color reference ． Use real product color photos from the package ． M ixed colors and sizes ca n be discussed ． FinaI availability should be confirmed before order 0 0 ActuaI color may vary by screen and production batch",
-      "review_index": 1,
-      "state": "EXACT_CURRENT_IMAGE_REPAIR_PENDING"
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000043201799/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ004_详情信息整组收尾/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ004_详情信息整组收尾/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ004_详情信息整组收尾/商品/10000043201799/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ004_详情信息整组收尾/商品/10000043201799/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ004_详情信息整组收尾/商品/10000043201799/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.015463+00:00"
     },
     {
       "key": "1f087e7058c6a07115d6efbbe69f663e19df1eabb0c50446de0330be24a98927",
@@ -72,16 +92,26 @@
           "role": "D1"
         }
       ],
-      "current_bindings": [
+      "current_bindings": [],
+      "text": "COLOR OPTIONS AvaiIable color reference ． Use real product photos from th e package ． Mixed colors and Sizes be discussed ． FinaI availability should be confirmed before order 丿 ActuaI color m ay vary by screen and production batch",
+      "review_index": 2,
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "original_bindings": [
         {
           "family": "BQ007",
           "id": "1601825070472",
           "role": "D1"
         }
       ],
-      "text": "COLOR OPTIONS AvaiIable color reference ． Use real product photos from th e package ． Mixed colors and Sizes be discussed ． FinaI availability should be confirmed before order 丿 ActuaI color m ay vary by screen and production batch",
-      "review_index": 2,
-      "state": "EXACT_CURRENT_IMAGE_REPAIR_PENDING"
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601825070472/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ007_模板图正式清理/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ007_模板图正式清理/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ007_模板图正式清理/商品/1601825070472/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ007_模板图正式清理/商品/1601825070472/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ007_模板图正式清理/商品/1601825070472/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.016464+00:00"
     },
     {
       "key": "a98bc1e0e5a465b0f7fdab7d0e5d33e502715766c13c48f27b05701a9d11d1a4",
@@ -99,16 +129,26 @@
           "role": "D5"
         }
       ],
-      "current_bindings": [
+      "current_bindings": [],
+      "text": "COLOR OPTIONS AvaiIable color reference ． Use real product photos from th e package ． Mixed colors and Sizes be discussed ． FinaI availability should be confirmed before order ActuaI color m ay vary by screen and production batch",
+      "review_index": 3,
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "original_bindings": [
         {
           "family": "BQ008",
           "id": "1601825021825",
-          "role": "D4"
+          "role": "D5"
         }
       ],
-      "text": "COLOR OPTIONS AvaiIable color reference ． Use real product photos from th e package ． Mixed colors and Sizes be discussed ． FinaI availability should be confirmed before order ActuaI color m ay vary by screen and production batch",
-      "review_index": 3,
-      "state": "EXACT_CURRENT_IMAGE_REPAIR_PENDING"
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601825021825/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ008_详情信息整组收尾/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ008_详情信息整组收尾/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ008_详情信息整组收尾/商品/1601825021825/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ008_详情信息整组收尾/商品/1601825021825/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ008_详情信息整组收尾/商品/1601825021825/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.017547+00:00"
     },
     {
       "key": "181db57ecd55b8de307888d4476e234b58ed9c75c39db75a463a60e300dfeef5",
@@ -126,16 +166,26 @@
           "role": "D4"
         }
       ],
-      "current_bindings": [
+      "current_bindings": [],
+      "text": "PRODUCT DETAILS Verified product features ． Stretch fabric upper with lace-up closure ． Toe-cap profile for a distinctive casual ℃ Ok ． Mesh lining and EVA sole shown in platform attributes Beiqiang Footwear 》 R1601 product reference",
+      "review_index": 4,
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "original_bindings": [
         {
           "family": "BQ010",
           "id": "1601825160204",
           "role": "D4"
         }
       ],
-      "text": "PRODUCT DETAILS Verified product features ． Stretch fabric upper with lace-up closure ． Toe-cap profile for a distinctive casual ℃ Ok ． Mesh lining and EVA sole shown in platform attributes Beiqiang Footwear 》 R1601 product reference",
-      "review_index": 4,
-      "state": "EXACT_CURRENT_IMAGE_REPAIR_PENDING"
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601825160204/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ010_详情信息整组收尾/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ010_详情信息整组收尾/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ010_详情信息整组收尾/商品/1601825160204/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ010_详情信息整组收尾/商品/1601825160204/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ010_详情信息整组收尾/商品/1601825160204/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.018464+00:00"
     },
     {
       "key": "fe2806e44dc87b6a57e38cbae362c44d55397373f247821686ff89323e2d2b02",
@@ -153,16 +203,26 @@
           "role": "D5"
         }
       ],
-      "current_bindings": [
+      "current_bindings": [],
+      "text": "BEIQIANG FOOTWEAR COLOR REFERENCE CIean SKU images for buyer selection G rey Black Grey Wh ite Light Grey Use original clean product photos for SKU color images. M ixed colors and sizes can be discussed according tO order quantity. Beiqiang Footwear ] CoIor reference only",
+      "review_index": 5,
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "original_bindings": [
         {
           "family": "BQ011",
           "id": "10000043725883",
-          "role": "D4"
+          "role": "D5"
         }
       ],
-      "text": "BEIQIANG FOOTWEAR COLOR REFERENCE CIean SKU images for buyer selection G rey Black Grey Wh ite Light Grey Use original clean product photos for SKU color images. M ixed colors and sizes can be discussed according tO order quantity. Beiqiang Footwear ] CoIor reference only",
-      "review_index": 5,
-      "state": "EXACT_CURRENT_IMAGE_REPAIR_PENDING"
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000043725883/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ011_模板图正式清理/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ011_模板图正式清理/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ011_模板图正式清理/商品/10000043725883/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ011_模板图正式清理/商品/10000043725883/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ011_模板图正式清理/商品/10000043725883/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.019463+00:00"
     },
     {
       "key": "b0b3b34bf547ceb954cf5018a3205f2823c47cedaac3b6a7089d3d282dfa4051",
@@ -180,16 +240,26 @@
           "role": "D3"
         }
       ],
-      "current_bindings": [
+      "current_bindings": [],
+      "text": "KNIT S 凵 P-ON UPPER Knitted TextiIe Upper Product-Led Detail Source P h 0t0 Anchor Clean B2B Layout",
+      "review_index": 6,
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "original_bindings": [
         {
           "family": "BQ016",
           "id": "10000044021584",
           "role": "D3"
         }
       ],
-      "text": "KNIT S 凵 P-ON UPPER Knitted TextiIe Upper Product-Led Detail Source P h 0t0 Anchor Clean B2B Layout",
-      "review_index": 6,
-      "state": "EXACT_CURRENT_IMAGE_REPAIR_PENDING"
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000044021584/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ016_详情信息整组收尾/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ016_详情信息整组收尾/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ016_详情信息整组收尾/商品/10000044021584/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ016_详情信息整组收尾/商品/10000044021584/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ016_详情信息整组收尾/商品/10000044021584/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.019463+00:00"
     },
     {
       "key": "b9a10227390456f8d5dbb5b3c9f2f5bcd786e4bdac66665d05db3ef144448140",
@@ -207,16 +277,26 @@
           "role": "M4"
         }
       ],
-      "current_bindings": [
+      "current_bindings": [],
+      "text": "FLEXIBLE CUSHION SOLE VisibIe SOIe or side stru ctu re from source phOtO Sole Detail Cushion Feel Stable Step",
+      "review_index": 7,
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "original_bindings": [
         {
           "family": "BQ017",
           "id": "10000044034049",
           "role": "M4"
         }
       ],
-      "text": "FLEXIBLE CUSHION SOLE VisibIe SOIe or side stru ctu re from source phOtO Sole Detail Cushion Feel Stable Step",
-      "review_index": 7,
-      "state": "EXACT_CURRENT_IMAGE_REPAIR_PENDING"
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000044034049/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ017_模板图正式清理/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ017_模板图正式清理/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ017_模板图正式清理/商品/10000044034049/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ017_模板图正式清理/商品/10000044034049/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ017_模板图正式清理/商品/10000044034049/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.021587+00:00"
     },
     {
       "key": "43c2af11543e587038bf08acc0d05dbdba852153ade3f284afed641ed7b6f0e5",
@@ -249,7 +329,11 @@
           "role": "D1"
         }
       ],
-      "current_bindings": [
+      "current_bindings": [],
+      "text": "KNITTED TEXTILE UPPER Knitted TextiIe Upper Product-Led Detail Source P h 0t0 Anchor Clean B2B Layout",
+      "review_index": 8,
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "original_bindings": [
         {
           "family": "BQ018",
           "id": "10000044007878",
@@ -271,9 +355,27 @@
           "role": "D1"
         }
       ],
-      "text": "KNITTED TEXTILE UPPER Knitted TextiIe Upper Product-Led Detail Source P h 0t0 Anchor Clean B2B Layout",
-      "review_index": 8,
-      "state": "EXACT_CURRENT_IMAGE_REPAIR_PENDING"
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000044007878/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ018_详情信息整组收尾/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ018_详情信息整组收尾/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ018_详情信息整组收尾/商品/10000044007878/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ018_详情信息整组收尾/商品/10000044007878/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ018_详情信息整组收尾/商品/10000044007878/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939589890/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ018_详情信息整组收尾/商品/1601939589890/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ018_详情信息整组收尾/商品/1601939589890/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ018_详情信息整组收尾/商品/1601939589890/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939641542/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ018_详情信息整组收尾/商品/1601939641542/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ018_详情信息整组收尾/商品/1601939641542/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ018_详情信息整组收尾/商品/1601939641542/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939726170/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ018_详情信息整组收尾/商品/1601939726170/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ018_详情信息整组收尾/商品/1601939726170/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ018_详情信息整组收尾/商品/1601939726170/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.026797+00:00"
     },
     {
       "key": "0d1c55cef2b56d214b2e76f155dcb760341da3ab9e8842059e775d89775bffde",
@@ -291,16 +393,26 @@
           "role": "M4"
         }
       ],
-      "current_bindings": [
+      "current_bindings": [],
+      "text": "LIGHTWEIGHT SOLE VisibIe SOIe or side stru ctu re from source phOtO Sole Detail Cushion Feel Stable Step",
+      "review_index": 9,
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "original_bindings": [
         {
           "family": "BQ019",
           "id": "10000044041008",
           "role": "M4"
         }
       ],
-      "text": "LIGHTWEIGHT SOLE VisibIe SOIe or side stru ctu re from source phOtO Sole Detail Cushion Feel Stable Step",
-      "review_index": 9,
-      "state": "EXACT_CURRENT_IMAGE_REPAIR_PENDING"
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000044041008/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ019_详情信息整组收尾/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ019_详情信息整组收尾/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ019_详情信息整组收尾/商品/10000044041008/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ019_详情信息整组收尾/商品/10000044041008/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ019_详情信息整组收尾/商品/10000044041008/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.027829+00:00"
     },
     {
       "key": "759ce9d295d186d6594de2930e0c01292651f1b8b03e5ab6d0a4669fe3f9d9df",
@@ -333,7 +445,11 @@
           "role": "D3"
         }
       ],
-      "current_bindings": [
+      "current_bindings": [],
+      "text": "BREATHABLE KNIT UPPER Breathable Knitted Upper Product-Led Detail Source P h 0t0 Anchor Clean B2B Layout",
+      "review_index": 10,
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "original_bindings": [
         {
           "family": "BQ019",
           "id": "10000044041008",
@@ -355,9 +471,27 @@
           "role": "D3"
         }
       ],
-      "text": "BREATHABLE KNIT UPPER Breathable Knitted Upper Product-Led Detail Source P h 0t0 Anchor Clean B2B Layout",
-      "review_index": 10,
-      "state": "EXACT_CURRENT_IMAGE_REPAIR_PENDING"
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000044041008/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ019_详情信息整组收尾/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ019_详情信息整组收尾/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ019_详情信息整组收尾/商品/10000044041008/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ019_详情信息整组收尾/商品/10000044041008/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ019_详情信息整组收尾/商品/10000044041008/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939695286/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ019_详情信息整组收尾/商品/1601939695286/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ019_详情信息整组收尾/商品/1601939695286/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ019_详情信息整组收尾/商品/1601939695286/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939602873/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ019_详情信息整组收尾/商品/1601939602873/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ019_详情信息整组收尾/商品/1601939602873/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ019_详情信息整组收尾/商品/1601939602873/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939616747/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ019_详情信息整组收尾/商品/1601939616747/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ019_详情信息整组收尾/商品/1601939616747/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ019_详情信息整组收尾/商品/1601939616747/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.032172+00:00"
     },
     {
       "key": "dbddb0d3dc6e3866016128eb1909338b092c4b082707d4893929370229dc8fbb",
@@ -375,16 +509,26 @@
           "role": "M4"
         }
       ],
-      "current_bindings": [
+      "current_bindings": [],
+      "text": "CUSHION WALKING SOLE VisibIe SOIe or side stru ctu re from source phOtO Sole Detail Cushion Feel Stable Step",
+      "review_index": 11,
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "original_bindings": [
         {
           "family": "BQ021",
           "id": "1601838963947",
           "role": "M4"
         }
       ],
-      "text": "CUSHION WALKING SOLE VisibIe SOIe or side stru ctu re from source phOtO Sole Detail Cushion Feel Stable Step",
-      "review_index": 11,
-      "state": "EXACT_CURRENT_IMAGE_REPAIR_PENDING"
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601838963947/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ021_主图配色派生同步/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ021_主图配色派生同步/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ021_主图配色派生同步/商品/1601838963947/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ021_主图配色派生同步/商品/1601838963947/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ021_主图配色派生同步/商品/1601838963947/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.032676+00:00"
     },
     {
       "key": "cd7e942a329dfafe3e496a7c0e2663fd4d2c044ccb776667c62e12865f2bbe1e",
@@ -417,7 +561,11 @@
           "role": "D2"
         }
       ],
-      "current_bindings": [
+      "current_bindings": [],
+      "text": "STRETCH TEXTILE UPPER St retch TextiIe Upper Product-Led Detail Source P h 0t0 Anchor Clean B2B Layout",
+      "review_index": 12,
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "original_bindings": [
         {
           "family": "BQ021",
           "id": "1601838963947",
@@ -436,12 +584,32 @@
         {
           "family": "BQ021",
           "id": "1601939606858",
-          "role": "D3"
+          "role": "D2"
         }
       ],
-      "text": "STRETCH TEXTILE UPPER St retch TextiIe Upper Product-Led Detail Source P h 0t0 Anchor Clean B2B Layout",
-      "review_index": 12,
-      "state": "EXACT_CURRENT_IMAGE_REPAIR_PENDING"
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601838963947/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ021_主图配色派生同步/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ021_主图配色派生同步/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ021_主图配色派生同步/商品/1601838963947/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ021_主图配色派生同步/商品/1601838963947/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ021_主图配色派生同步/商品/1601838963947/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939739115/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ021_模板图正式清理/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ021_模板图正式清理/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ021_模板图正式清理/商品/1601939739115/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ021_模板图正式清理/商品/1601939739115/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ021_模板图正式清理/商品/1601939739115/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939709217/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ021_模板图正式清理/商品/1601939709217/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ021_模板图正式清理/商品/1601939709217/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ021_模板图正式清理/商品/1601939709217/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939606858/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ021_模板图正式清理/商品/1601939606858/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ021_模板图正式清理/商品/1601939606858/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ021_模板图正式清理/商品/1601939606858/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.036737+00:00"
     },
     {
       "key": "4e95d868402db74b80e8a800e02dc8d21a20de83161f16c93841aa6e0d0b6198",
@@ -459,16 +627,26 @@
           "role": "M4"
         }
       ],
-      "current_bindings": [
+      "current_bindings": [],
+      "text": "LIGHT WALKING SOLE VisibIe SOIe or side stru ctu re from source phOtO Sole Detail Cushion Feel Stable Step",
+      "review_index": 13,
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "original_bindings": [
         {
           "family": "BQ022",
           "id": "10000043991998",
           "role": "M4"
         }
       ],
-      "text": "LIGHT WALKING SOLE VisibIe SOIe or side stru ctu re from source phOtO Sole Detail Cushion Feel Stable Step",
-      "review_index": 13,
-      "state": "EXACT_CURRENT_IMAGE_REPAIR_PENDING"
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000043991998/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ022_详情信息整组收尾/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ022_详情信息整组收尾/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ022_详情信息整组收尾/商品/10000043991998/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ022_详情信息整组收尾/商品/10000043991998/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ022_详情信息整组收尾/商品/10000043991998/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.037262+00:00"
     },
     {
       "key": "36da5742dfff0063cee9e4a9e42003c5fba1d7f45a3702430c94dc56b1b187e4",
@@ -501,7 +679,11 @@
           "role": "D3"
         }
       ],
-      "current_bindings": [
+      "current_bindings": [],
+      "text": "STRIPED KNIT UPPER Striped Knitted Upper Product-Led Detail Source P h 0t0 Anchor Clean B2B Layout",
+      "review_index": 14,
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "original_bindings": [
         {
           "family": "BQ022",
           "id": "10000043991998",
@@ -523,9 +705,27 @@
           "role": "D3"
         }
       ],
-      "text": "STRIPED KNIT UPPER Striped Knitted Upper Product-Led Detail Source P h 0t0 Anchor Clean B2B Layout",
-      "review_index": 14,
-      "state": "EXACT_CURRENT_IMAGE_REPAIR_PENDING"
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000043991998/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ022_详情信息整组收尾/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ022_详情信息整组收尾/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ022_详情信息整组收尾/商品/10000043991998/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ022_详情信息整组收尾/商品/10000043991998/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ022_详情信息整组收尾/商品/10000043991998/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939709218/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ022_详情信息整组收尾/商品/1601939709218/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ022_详情信息整组收尾/商品/1601939709218/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ022_详情信息整组收尾/商品/1601939709218/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939659468/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ022_详情信息整组收尾/商品/1601939659468/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ022_详情信息整组收尾/商品/1601939659468/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ022_详情信息整组收尾/商品/1601939659468/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939641581/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ022_详情信息整组收尾/商品/1601939641581/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ022_详情信息整组收尾/商品/1601939641581/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ022_详情信息整组收尾/商品/1601939641581/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.040806+00:00"
     },
     {
       "key": "2f5f801dcf401c8a0ce95ca5745e89556cbd4616524828daeac74105e4b60056",
@@ -553,7 +753,11 @@
           "role": "D1"
         }
       ],
-      "current_bindings": [
+      "current_bindings": [],
+      "text": "PRODUCT DETAILS VisibIe product features ． Lightweight Product Reference ． Source p h 0t0 s h OWS about 177g per shoe ． FlexibIe casual walking style 0@0 Use claims that match product photos and supplier confirmation",
+      "review_index": 15,
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "original_bindings": [
         {
           "family": "BQ004",
           "id": "1601939700200",
@@ -570,9 +774,23 @@
           "role": "D1"
         }
       ],
-      "text": "PRODUCT DETAILS VisibIe product features ． Lightweight Product Reference ． Source p h 0t0 s h OWS about 177g per shoe ． FlexibIe casual walking style 0@0 Use claims that match product photos and supplier confirmation",
-      "review_index": 15,
-      "state": "EXACT_CURRENT_IMAGE_REPAIR_PENDING"
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939700200/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ004_详情信息整组收尾/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ004_详情信息整组收尾/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ004_详情信息整组收尾/商品/1601939700200/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ004_详情信息整组收尾/商品/1601939700200/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ004_详情信息整组收尾/商品/1601939700200/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939738037/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ004_详情信息整组收尾/商品/1601939738037/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ004_详情信息整组收尾/商品/1601939738037/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ004_详情信息整组收尾/商品/1601939738037/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939626612/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ004_详情信息整组收尾/商品/1601939626612/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ004_详情信息整组收尾/商品/1601939626612/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ004_详情信息整组收尾/商品/1601939626612/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.043892+00:00"
     },
     {
       "key": "5c8383d20091cd490b83733d70b56531549eeb8197eb466839bd6da5a8cc71d6",
@@ -605,11 +823,15 @@
           "role": "D3"
         }
       ],
-      "current_bindings": [
+      "current_bindings": [],
+      "text": "PRODUCT DETAILS VisibIe product features ． SOle & Upper Detail ． BreathabIe hollow upper and textured outsole ． SuitabIe for summer walking and casual wear Use claims that match product photos and supplier confirmation",
+      "review_index": 16,
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "original_bindings": [
         {
           "family": "BQ005",
           "id": "1601815020244",
-          "role": "D1"
+          "role": "D3"
         },
         {
           "family": "BQ005",
@@ -627,9 +849,27 @@
           "role": "D3"
         }
       ],
-      "text": "PRODUCT DETAILS VisibIe product features ． SOle & Upper Detail ． BreathabIe hollow upper and textured outsole ． SuitabIe for summer walking and casual wear Use claims that match product photos and supplier confirmation",
-      "review_index": 16,
-      "state": "EXACT_CURRENT_IMAGE_REPAIR_PENDING"
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601815020244/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ005_详情信息整组收尾/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ005_详情信息整组收尾/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ005_详情信息整组收尾/商品/1601815020244/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ005_详情信息整组收尾/商品/1601815020244/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ005_详情信息整组收尾/商品/1601815020244/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939631570/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ005_详情信息整组收尾/商品/1601939631570/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ005_详情信息整组收尾/商品/1601939631570/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ005_详情信息整组收尾/商品/1601939631570/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939712176/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ005_详情信息整组收尾/商品/1601939712176/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ005_详情信息整组收尾/商品/1601939712176/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ005_详情信息整组收尾/商品/1601939712176/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939599850/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ005_详情信息整组收尾/商品/1601939599850/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ005_详情信息整组收尾/商品/1601939599850/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ005_详情信息整组收尾/商品/1601939599850/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.047395+00:00"
     },
     {
       "key": "b374bbf5cc442ccc526a3b654adc1d1bbf0aacf731dc76066670881a3a847d48",
@@ -662,11 +902,15 @@
           "role": "D2"
         }
       ],
-      "current_bindings": [
+      "current_bindings": [],
+      "text": "COLOR OPTIONS Available color reference Use real product color photos from the package M ixed colors and sizes ca n be discussed FinaI availability should be confirmed before order ActuaI color may vary by screen and production batch",
+      "review_index": 17,
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "original_bindings": [
         {
           "family": "BQ005",
           "id": "1601815020244",
-          "role": "D3"
+          "role": "D4"
         },
         {
           "family": "BQ005",
@@ -684,9 +928,27 @@
           "role": "D2"
         }
       ],
-      "text": "COLOR OPTIONS Available color reference Use real product color photos from the package M ixed colors and sizes ca n be discussed FinaI availability should be confirmed before order ActuaI color may vary by screen and production batch",
-      "review_index": 17,
-      "state": "EXACT_CURRENT_IMAGE_REPAIR_PENDING"
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601815020244/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ005_详情信息整组收尾/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ005_详情信息整组收尾/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ005_详情信息整组收尾/商品/1601815020244/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ005_详情信息整组收尾/商品/1601815020244/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ005_详情信息整组收尾/商品/1601815020244/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939631570/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ005_详情信息整组收尾/商品/1601939631570/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ005_详情信息整组收尾/商品/1601939631570/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ005_详情信息整组收尾/商品/1601939631570/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939712176/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ005_详情信息整组收尾/商品/1601939712176/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ005_详情信息整组收尾/商品/1601939712176/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ005_详情信息整组收尾/商品/1601939712176/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939599850/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ005_详情信息整组收尾/商品/1601939599850/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ005_详情信息整组收尾/商品/1601939599850/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ005_详情信息整组收尾/商品/1601939599850/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.051600+00:00"
     },
     {
       "key": "f0acf5a8997938dcdac01fef4949a858f5400cd5f19dae60d3e0a8fe4a6ea597",
@@ -714,16 +976,20 @@
           "role": "D4"
         }
       ],
-      "current_bindings": [
+      "current_bindings": [],
+      "text": "PRODUCT DETAILS VisibIe product features ． Winter Style Detail ． Chunky casual SOIe with kn itted upper ． Fleece option only for black wh ite and all black Use claims that match product photos and supplier confirmation",
+      "review_index": 18,
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "original_bindings": [
         {
           "family": "BQ006",
           "id": "1601814931739",
-          "role": "D3"
+          "role": "D4"
         },
         {
           "family": "BQ006",
           "id": "1601939655430",
-          "role": "D3"
+          "role": "D4"
         },
         {
           "family": "BQ006",
@@ -731,9 +997,23 @@
           "role": "D4"
         }
       ],
-      "text": "PRODUCT DETAILS VisibIe product features ． Winter Style Detail ． Chunky casual SOIe with kn itted upper ． Fleece option only for black wh ite and all black Use claims that match product photos and supplier confirmation",
-      "review_index": 18,
-      "state": "EXACT_CURRENT_IMAGE_REPAIR_PENDING"
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601814931739/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ006_模板图正式清理/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ006_模板图正式清理/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ006_模板图正式清理/商品/1601814931739/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ006_模板图正式清理/商品/1601814931739/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ006_模板图正式清理/商品/1601814931739/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939655430/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ006_模板图正式清理/商品/1601939655430/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ006_模板图正式清理/商品/1601939655430/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ006_模板图正式清理/商品/1601939655430/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939660427/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ006_模板图正式清理/商品/1601939660427/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ006_模板图正式清理/商品/1601939660427/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ006_模板图正式清理/商品/1601939660427/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.054384+00:00"
     },
     {
       "key": "f8b3afe76306fcf2e521d4e7a801684a709e8cc4b22c97ca6496213f07ef8995",
@@ -751,16 +1031,26 @@
           "role": "D5"
         }
       ],
-      "current_bindings": [
+      "current_bindings": [],
+      "text": "COLOR OPTIONS Available color reference ． Use real color photos from the M8811 package ． Wh ite purple and wh ite pink are EU 35 一 40 only ． Fleece lining is only for black wh ite and all black ActuaI color may vary by screen and production batch",
+      "review_index": 19,
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "original_bindings": [
         {
           "family": "BQ006",
           "id": "1601814931739",
-          "role": "D4"
+          "role": "D5"
         }
       ],
-      "text": "COLOR OPTIONS Available color reference ． Use real color photos from the M8811 package ． Wh ite purple and wh ite pink are EU 35 一 40 only ． Fleece lining is only for black wh ite and all black ActuaI color may vary by screen and production batch",
-      "review_index": 19,
-      "state": "EXACT_CURRENT_IMAGE_REPAIR_PENDING"
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601814931739/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ006_模板图正式清理/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ006_模板图正式清理/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ006_模板图正式清理/商品/1601814931739/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ006_模板图正式清理/商品/1601814931739/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ006_模板图正式清理/商品/1601814931739/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.055450+00:00"
     },
     {
       "key": "a56323a978aceaa2d6a793b6c7acb5fdf1fa389501c9d057fd108110f4de810d",
@@ -788,7 +1078,11 @@
           "role": "D3"
         }
       ],
-      "current_bindings": [
+      "current_bindings": [],
+      "text": "KNIT SLIP-ON UPPER Knitted TextiIe Upper Product-Led Detail Source P h 0t0 Anchor C 《 ean B2B Layout",
+      "review_index": 20,
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "original_bindings": [
         {
           "family": "BQ016",
           "id": "1601939633580",
@@ -805,9 +1099,23 @@
           "role": "D3"
         }
       ],
-      "text": "KNIT SLIP-ON UPPER Knitted TextiIe Upper Product-Led Detail Source P h 0t0 Anchor C 《 ean B2B Layout",
-      "review_index": 20,
-      "state": "EXACT_CURRENT_IMAGE_REPAIR_PENDING"
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939633580/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ016_详情信息整组收尾/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ016_详情信息整组收尾/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ016_详情信息整组收尾/商品/1601939633580/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ016_详情信息整组收尾/商品/1601939633580/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ016_详情信息整组收尾/商品/1601939633580/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939691301/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ016_详情信息整组收尾/商品/1601939691301/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ016_详情信息整组收尾/商品/1601939691301/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ016_详情信息整组收尾/商品/1601939691301/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939608691/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ016_详情信息整组收尾/商品/1601939608691/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ016_详情信息整组收尾/商品/1601939608691/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ016_详情信息整组收尾/商品/1601939608691/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.057116+00:00"
     },
     {
       "key": "987c6f6b6f8472e2001099cdc0b912110ae67b5b65cceee0ecfd163de6ffceb3",
@@ -835,7 +1143,11 @@
           "role": "D3"
         }
       ],
-      "current_bindings": [
+      "current_bindings": [],
+      "text": "QUILTED TEXTILE UPPER Quilted TextiIe Upper Product-Led Detail Source P h 0t0 Anchor Clean B2B Layout",
+      "review_index": 21,
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "original_bindings": [
         {
           "family": "BQ017",
           "id": "1601939593839",
@@ -852,9 +1164,23 @@
           "role": "D3"
         }
       ],
-      "text": "QUILTED TEXTILE UPPER Quilted TextiIe Upper Product-Led Detail Source P h 0t0 Anchor Clean B2B Layout",
-      "review_index": 21,
-      "state": "EXACT_CURRENT_IMAGE_REPAIR_PENDING"
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939593839/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ017_详情信息整组收尾/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ017_详情信息整组收尾/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ017_详情信息整组收尾/商品/1601939593839/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ017_详情信息整组收尾/商品/1601939593839/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ017_详情信息整组收尾/商品/1601939593839/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939697271/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ017_详情信息整组收尾/商品/1601939697271/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ017_详情信息整组收尾/商品/1601939697271/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ017_详情信息整组收尾/商品/1601939697271/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939636508/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ017_详情信息整组收尾/商品/1601939636508/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ017_详情信息整组收尾/商品/1601939636508/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ017_详情信息整组收尾/商品/1601939636508/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.060176+00:00"
     },
     {
       "key": "29428b47c40a73c7457a1391717b5199bd51c3edb1f82bceea1392a6febd6911",
@@ -872,16 +1198,26 @@
           "role": "M4"
         }
       ],
-      "current_bindings": [
+      "current_bindings": [],
+      "text": "CUSHION WALKING SOLE VisibIe SOIe or side stru ctu re from source phOtO Sole Detail Cushion Feel Stable Step",
+      "review_index": 22,
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "original_bindings": [
         {
           "family": "BQ020",
           "id": "1601839073314",
           "role": "M4"
         }
       ],
-      "text": "CUSHION WALKING SOLE VisibIe SOIe or side stru ctu re from source phOtO Sole Detail Cushion Feel Stable Step",
-      "review_index": 22,
-      "state": "EXACT_CURRENT_IMAGE_REPAIR_PENDING"
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601839073314/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ020_详情信息整组收尾/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ020_详情信息整组收尾/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ020_详情信息整组收尾/商品/1601839073314/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ020_详情信息整组收尾/商品/1601839073314/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ020_详情信息整组收尾/商品/1601839073314/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.061968+00:00"
     },
     {
       "key": "17d83e74fe80282d1cc6ac788dfb54a2bba5af94eb7111e358a87c4d3112b880",
@@ -914,7 +1250,11 @@
           "role": "D4"
         }
       ],
-      "current_bindings": [
+      "current_bindings": [],
+      "text": "HOLLOW KNIT UPPER Hollow Knitted Upper Product-Led Detail Source P h 0t0 Anchor Clean B2B Layout",
+      "review_index": 23,
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "original_bindings": [
         {
           "family": "BQ020",
           "id": "1601839073314",
@@ -936,9 +1276,27 @@
           "role": "D4"
         }
       ],
-      "text": "HOLLOW KNIT UPPER Hollow Knitted Upper Product-Led Detail Source P h 0t0 Anchor Clean B2B Layout",
-      "review_index": 23,
-      "state": "EXACT_CURRENT_IMAGE_REPAIR_PENDING"
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601839073314/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ020_详情信息整组收尾/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ020_详情信息整组收尾/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ020_详情信息整组收尾/商品/1601839073314/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ020_详情信息整组收尾/商品/1601839073314/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ020_详情信息整组收尾/商品/1601839073314/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939625613/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ020_详情信息整组收尾/商品/1601939625613/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ020_详情信息整组收尾/商品/1601939625613/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ020_详情信息整组收尾/商品/1601939625613/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939590957/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ020_详情信息整组收尾/商品/1601939590957/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ020_详情信息整组收尾/商品/1601939590957/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ020_详情信息整组收尾/商品/1601939590957/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939712249/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ020_详情信息整组收尾/商品/1601939712249/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ020_详情信息整组收尾/商品/1601939712249/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ020_详情信息整组收尾/商品/1601939712249/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.065323+00:00"
     },
     {
       "key": "e3f7f8fe24b379cdc7d85b44b4d6fac038f51cd6386da260b97e6371588f27a9",
@@ -956,16 +1314,26 @@
           "role": "M4"
         }
       ],
-      "current_bindings": [
+      "current_bindings": [],
+      "text": "FLEXIBLE CUSHION SOLE VisibIe SOIe or side stru ctu re from source phOtO Sole Detail Cushion Feel Stable Step",
+      "review_index": 24,
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "original_bindings": [
         {
           "family": "BQ023",
           "id": "10000044004948",
           "role": "M4"
         }
       ],
-      "text": "FLEXIBLE CUSHION SOLE VisibIe SOIe or side stru ctu re from source phOtO Sole Detail Cushion Feel Stable Step",
-      "review_index": 24,
-      "state": "EXACT_CURRENT_IMAGE_REPAIR_PENDING"
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000044004948/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ023_模板图正式清理/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ023_模板图正式清理/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ023_模板图正式清理/商品/10000044004948/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ023_模板图正式清理/商品/10000044004948/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ023_模板图正式清理/商品/10000044004948/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.066562+00:00"
     },
     {
       "key": "b932d0d8edd6e44546d82de28e665df449a6aa5e850347fded8a98863f9c1d73",
@@ -993,7 +1361,11 @@
           "role": "D2"
         }
       ],
-      "current_bindings": [
+      "current_bindings": [],
+      "text": "SOFT KNIT UPPER SOft Knitted Upper Product-Led Detail Source P h 0t0 Anchor Clean B2B Layout",
+      "review_index": 25,
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "original_bindings": [
         {
           "family": "BQ023",
           "id": "1601939752005",
@@ -1010,9 +1382,23 @@
           "role": "D2"
         }
       ],
-      "text": "SOFT KNIT UPPER SOft Knitted Upper Product-Led Detail Source P h 0t0 Anchor Clean B2B Layout",
-      "review_index": 25,
-      "state": "EXACT_CURRENT_IMAGE_REPAIR_PENDING"
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939752005/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ023_详情信息整组收尾/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ023_详情信息整组收尾/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ023_详情信息整组收尾/商品/1601939752005/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ023_详情信息整组收尾/商品/1601939752005/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ023_详情信息整组收尾/商品/1601939752005/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939616754/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ023_详情信息整组收尾/商品/1601939616754/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ023_详情信息整组收尾/商品/1601939616754/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ023_详情信息整组收尾/商品/1601939616754/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939722180/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ023_详情信息整组收尾/商品/1601939722180/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ023_详情信息整组收尾/商品/1601939722180/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ023_详情信息整组收尾/商品/1601939722180/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.068324+00:00"
     },
     {
       "key": "c6a8589d0ba0167691ee7464c5c48292a19f7c181c3d2644cfddee43ae2c5282",
@@ -1030,16 +1416,26 @@
           "role": "M4"
         }
       ],
-      "current_bindings": [
+      "current_bindings": [],
+      "text": "SOFT CUSHION SOLE VisibIe SOIe or side stru ctu re from source phOtO Sole Detail Cushion Feel Stable Step",
+      "review_index": 26,
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "original_bindings": [
         {
           "family": "BQ024",
           "id": "10000044041031",
           "role": "M4"
         }
       ],
-      "text": "SOFT CUSHION SOLE VisibIe SOIe or side stru ctu re from source phOtO Sole Detail Cushion Feel Stable Step",
-      "review_index": 26,
-      "state": "EXACT_CURRENT_IMAGE_REPAIR_PENDING"
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000044041031/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ024_模板图正式清理/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ024_模板图正式清理/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ024_模板图正式清理/商品/10000044041031/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ024_模板图正式清理/商品/10000044041031/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ024_模板图正式清理/商品/10000044041031/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.070033+00:00"
     },
     {
       "key": "031f3e521ee45bf8221849cf498bec55ac06e270a100afcea6e5e8e4c5d7dda6",
@@ -1067,7 +1463,11 @@
           "role": "D3"
         }
       ],
-      "current_bindings": [
+      "current_bindings": [],
+      "text": "SOFT KNIT UPPER SOft Knitted Upper @捃緲，。蕊t;蚂翩唣溺簟嗯笋男蠢訛，晦轾浒。 Product-Led Detail Source P h 0t0 Anchor Clean B2B Layout",
+      "review_index": 27,
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "original_bindings": [
         {
           "family": "BQ024",
           "id": "1601939691340",
@@ -1084,9 +1484,23 @@
           "role": "D3"
         }
       ],
-      "text": "SOFT KNIT UPPER SOft Knitted Upper @捃緲，。蕊t;蚂翩唣溺簟嗯笋男蠢訛，晦轾浒。 Product-Led Detail Source P h 0t0 Anchor Clean B2B Layout",
-      "review_index": 27,
-      "state": "EXACT_CURRENT_IMAGE_REPAIR_PENDING"
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939691340/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ024_详情信息整组收尾/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ024_详情信息整组收尾/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ024_详情信息整组收尾/商品/1601939691340/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ024_详情信息整组收尾/商品/1601939691340/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ024_详情信息整组收尾/商品/1601939691340/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939684371/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ024_详情信息整组收尾/商品/1601939684371/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ024_详情信息整组收尾/商品/1601939684371/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ024_详情信息整组收尾/商品/1601939684371/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939691342/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ024_详情信息整组收尾/商品/1601939691342/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ024_详情信息整组收尾/商品/1601939691342/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ024_详情信息整组收尾/商品/1601939691342/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.071689+00:00"
     },
     {
       "key": "1940aff4c04c437b93e592f1766a2a8d57b75f7b228c559aa90bba47f5396d81",
@@ -1104,16 +1518,26 @@
           "role": "M4"
         }
       ],
-      "current_bindings": [
+      "current_bindings": [],
+      "text": "LIGHTWEIGHT WALKING SOLE VisibIe SOIe or side stru ctu re from source phOtO Sole Detail Cushion Feel Stable Step",
+      "review_index": 28,
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "original_bindings": [
         {
           "family": "BQ026",
           "id": "10000044011929",
           "role": "M4"
         }
       ],
-      "text": "LIGHTWEIGHT WALKING SOLE VisibIe SOIe or side stru ctu re from source phOtO Sole Detail Cushion Feel Stable Step",
-      "review_index": 28,
-      "state": "EXACT_CURRENT_IMAGE_REPAIR_PENDING"
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000044011929/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ026_模板图正式清理/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ026_模板图正式清理/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ026_模板图正式清理/商品/10000044011929/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ026_模板图正式清理/商品/10000044011929/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ026_模板图正式清理/商品/10000044011929/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.073614+00:00"
     },
     {
       "key": "ae8cad648871895053554492c1315ba3c69804ea1391cfd591e92e5d66adcf82",
@@ -1141,7 +1565,11 @@
           "role": "D1"
         }
       ],
-      "current_bindings": [
+      "current_bindings": [],
+      "text": "BREATHABLE KNIT UPPER Breathable Knitted Upper Product-Led Detail Source P h 0t0 Anchor Clean B2B Layout",
+      "review_index": 29,
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "original_bindings": [
         {
           "family": "BQ026",
           "id": "1601939714238",
@@ -1158,9 +1586,23 @@
           "role": "D1"
         }
       ],
-      "text": "BREATHABLE KNIT UPPER Breathable Knitted Upper Product-Led Detail Source P h 0t0 Anchor Clean B2B Layout",
-      "review_index": 29,
-      "state": "EXACT_CURRENT_IMAGE_REPAIR_PENDING"
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939714238/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ026_详情信息整组收尾/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ026_详情信息整组收尾/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ026_详情信息整组收尾/商品/1601939714238/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ026_详情信息整组收尾/商品/1601939714238/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ026_详情信息整组收尾/商品/1601939714238/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939725201/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ026_详情信息整组收尾/商品/1601939725201/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ026_详情信息整组收尾/商品/1601939725201/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ026_详情信息整组收尾/商品/1601939725201/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939745065/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ026_详情信息整组收尾/商品/1601939745065/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ026_详情信息整组收尾/商品/1601939745065/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ026_详情信息整组收尾/商品/1601939745065/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.076532+00:00"
     },
     {
       "key": "116e41ce4ad079b56c3e69e25f0d2935fab10fa60246dd316c666ec7b9b373e1",
@@ -1178,16 +1620,26 @@
           "role": "M4"
         }
       ],
-      "current_bindings": [
+      "current_bindings": [],
+      "text": "CHUNKY CUSHION SOLE VisibIe SOIe or side stru ctu re from source phOtO Sole Detail Cushion Feel Stable Step",
+      "review_index": 30,
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "original_bindings": [
         {
           "family": "BQ027",
           "id": "10000044028277",
           "role": "M4"
         }
       ],
-      "text": "CHUNKY CUSHION SOLE VisibIe SOIe or side stru ctu re from source phOtO Sole Detail Cushion Feel Stable Step",
-      "review_index": 30,
-      "state": "EXACT_CURRENT_IMAGE_REPAIR_PENDING"
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/10000044028277/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ027_模板图正式清理/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ027_模板图正式清理/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ027_模板图正式清理/商品/10000044028277/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ027_模板图正式清理/商品/10000044028277/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ027_模板图正式清理/商品/10000044028277/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.077577+00:00"
     },
     {
       "key": "b593745fd3abaf62f2cb50c442504e189155f8110a1353803fc3d3a18f9983d1",
@@ -1215,7 +1667,11 @@
           "role": "D4"
         }
       ],
-      "current_bindings": [
+      "current_bindings": [],
+      "text": "KNIT TEXTILE UPPER Knitted TextiIe Upper Product-Led Detail Source P h 0t0 Anchor Clean B2B Layout",
+      "review_index": 31,
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "original_bindings": [
         {
           "family": "BQ027",
           "id": "1601939703288",
@@ -1232,9 +1688,23 @@
           "role": "D4"
         }
       ],
-      "text": "KNIT TEXTILE UPPER Knitted TextiIe Upper Product-Led Detail Source P h 0t0 Anchor Clean B2B Layout",
-      "review_index": 31,
-      "state": "EXACT_CURRENT_IMAGE_REPAIR_PENDING"
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939703288/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ027_详情信息整组收尾/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ027_详情信息整组收尾/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ027_详情信息整组收尾/商品/1601939703288/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ027_详情信息整组收尾/商品/1601939703288/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ027_详情信息整组收尾/商品/1601939703288/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939692338/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ027_详情信息整组收尾/商品/1601939692338/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ027_详情信息整组收尾/商品/1601939692338/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ027_详情信息整组收尾/商品/1601939692338/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939616762/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ027_详情信息整组收尾/商品/1601939616762/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ027_详情信息整组收尾/商品/1601939616762/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ027_详情信息整组收尾/商品/1601939616762/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.080462+00:00"
     },
     {
       "key": "b3f023e482db00828bbe34c523c4240682d6d97958bce50ff6ccb926f4a4d4bd",
@@ -1262,7 +1732,11 @@
           "role": "D3"
         }
       ],
-      "current_bindings": [
+      "current_bindings": [],
+      "text": "KNIT SLIP-ON UPPER Knitted TextiIe Upper Product-Led Detail Source P h 0t0 Anchor CI ean B2B Layout",
+      "review_index": 32,
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "original_bindings": [
         {
           "family": "BQ028",
           "id": "1601939705262",
@@ -1279,9 +1753,23 @@
           "role": "D3"
         }
       ],
-      "text": "KNIT SLIP-ON UPPER Knitted TextiIe Upper Product-Led Detail Source P h 0t0 Anchor CI ean B2B Layout",
-      "review_index": 32,
-      "state": "EXACT_CURRENT_IMAGE_REPAIR_PENDING"
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939705262/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ028_详情信息整组收尾/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ028_详情信息整组收尾/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ028_详情信息整组收尾/商品/1601939705262/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ028_详情信息整组收尾/商品/1601939705262/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ028_详情信息整组收尾/商品/1601939705262/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939625627/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ028_详情信息整组收尾/商品/1601939625627/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ028_详情信息整组收尾/商品/1601939625627/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ028_详情信息整组收尾/商品/1601939625627/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939720204/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ028_详情信息整组收尾/商品/1601939720204/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ028_详情信息整组收尾/商品/1601939720204/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ028_详情信息整组收尾/商品/1601939720204/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.081978+00:00"
     },
     {
       "key": "f2f6f021419f5e21ad746a2aca44188cf77e659c85c07b09ac28b56748650bec",
@@ -1299,16 +1787,26 @@
           "role": "M2"
         }
       ],
-      "current_bindings": [
+      "current_bindings": [],
+      "text": "HIGH TOP KNIT UPPER High Top Knit TextiIe Upper B2B Check Real Ph 0t0 Upper Detail",
+      "review_index": 33,
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "original_bindings": [
         {
           "family": "BQ029",
           "id": "1601839062659",
           "role": "M2"
         }
       ],
-      "text": "HIGH TOP KNIT UPPER High Top Knit TextiIe Upper B2B Check Real Ph 0t0 Upper Detail",
-      "review_index": 33,
-      "state": "EXACT_CURRENT_IMAGE_REPAIR_PENDING"
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601839062659/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ029_模板图正式清理/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ029_模板图正式清理/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ029_模板图正式清理/商品/1601839062659/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ029_模板图正式清理/商品/1601839062659/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ029_模板图正式清理/商品/1601839062659/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.083975+00:00"
     },
     {
       "key": "d330cbbf1943ab513ae9626d07a6138b605fd47809e90294b7230f04129f6fc4",
@@ -1326,16 +1824,26 @@
           "role": "M4"
         }
       ],
-      "current_bindings": [
+      "current_bindings": [],
+      "text": "WAVE PATTERN SOLE VisibIe SOIe or side stru ctu re from source phOtO Sole Detail Cushion Feel Stable Step",
+      "review_index": 34,
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "original_bindings": [
         {
           "family": "BQ029",
           "id": "1601839062659",
           "role": "M4"
         }
       ],
-      "text": "WAVE PATTERN SOLE VisibIe SOIe or side stru ctu re from source phOtO Sole Detail Cushion Feel Stable Step",
-      "review_index": 34,
-      "state": "EXACT_CURRENT_IMAGE_REPAIR_PENDING"
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601839062659/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ029_模板图正式清理/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ029_模板图正式清理/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ029_模板图正式清理/商品/1601839062659/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ029_模板图正式清理/商品/1601839062659/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ029_模板图正式清理/商品/1601839062659/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.084972+00:00"
     },
     {
       "key": "a90038390ebbff6dbaeb33659e227e4446ed2ab0eba48f8d06f164012874b0ae",
@@ -1353,16 +1861,26 @@
           "role": "D2"
         }
       ],
-      "current_bindings": [
+      "current_bindings": [],
+      "text": "HIGH TOP KNIT UPPER High Top Knit TextiIe Upper B2B Check ReaI PhOtO Upper Detail",
+      "review_index": 35,
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "original_bindings": [
         {
           "family": "BQ029",
           "id": "1601839062659",
           "role": "D2"
         }
       ],
-      "text": "HIGH TOP KNIT UPPER High Top Knit TextiIe Upper B2B Check ReaI PhOtO Upper Detail",
-      "review_index": 35,
-      "state": "EXACT_CURRENT_IMAGE_REPAIR_PENDING"
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601839062659/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ029_模板图正式清理/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ029_模板图正式清理/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ029_模板图正式清理/商品/1601839062659/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ029_模板图正式清理/商品/1601839062659/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ029_模板图正式清理/商品/1601839062659/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.084972+00:00"
     },
     {
       "key": "1823d6dfb836ef9f4651b811f96c8170e8f069a37be6ce797b54832a531c1d0d",
@@ -1390,7 +1908,11 @@
           "role": "D1"
         }
       ],
-      "current_bindings": [
+      "current_bindings": [],
+      "text": "HIGH TOP KNIT UPPER High Top Knit TextiIe Upper Product-Led Detail Source P h 0t0 Anchor Clean B2B Layout",
+      "review_index": 36,
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "original_bindings": [
         {
           "family": "BQ029",
           "id": "1601939721228",
@@ -1407,9 +1929,23 @@
           "role": "D1"
         }
       ],
-      "text": "HIGH TOP KNIT UPPER High Top Knit TextiIe Upper Product-Led Detail Source P h 0t0 Anchor Clean B2B Layout",
-      "review_index": 36,
-      "state": "EXACT_CURRENT_IMAGE_REPAIR_PENDING"
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939721228/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ029_详情信息整组收尾/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ029_详情信息整组收尾/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ029_详情信息整组收尾/商品/1601939721228/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ029_详情信息整组收尾/商品/1601939721228/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ029_详情信息整组收尾/商品/1601939721228/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939607770/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ029_详情信息整组收尾/商品/1601939607770/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ029_详情信息整组收尾/商品/1601939607770/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ029_详情信息整组收尾/商品/1601939607770/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939749045/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ029_详情信息整组收尾/商品/1601939749045/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ029_详情信息整组收尾/商品/1601939749045/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ029_详情信息整组收尾/商品/1601939749045/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.088243+00:00"
     },
     {
       "key": "fc83c1778e9d4cf0b827f735cb32b39c0a7c328a921f7961a740139485dce77f",
@@ -1427,16 +1963,26 @@
           "role": "M4"
         }
       ],
-      "current_bindings": [
+      "current_bindings": [],
+      "text": "LIGHT CUSHION SOLE VisibIe SOIe or side stru ctu re from source phOtO Sole Detail Cushion Feel Stable Step",
+      "review_index": 37,
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "original_bindings": [
         {
           "family": "BQ030",
           "id": "1601839050756",
           "role": "M4"
         }
       ],
-      "text": "LIGHT CUSHION SOLE VisibIe SOIe or side stru ctu re from source phOtO Sole Detail Cushion Feel Stable Step",
-      "review_index": 37,
-      "state": "EXACT_CURRENT_IMAGE_REPAIR_PENDING"
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601839050756/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ030_模板图正式清理/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ030_模板图正式清理/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ030_模板图正式清理/商品/1601839050756/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ030_模板图正式清理/商品/1601839050756/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ030_模板图正式清理/商品/1601839050756/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.089249+00:00"
     },
     {
       "key": "08ef3f4cadfdc7dbc9e505a28dcb2525ba19a784f9e0c299207a7c947b7506ea",
@@ -1464,7 +2010,11 @@
           "role": "D1"
         }
       ],
-      "current_bindings": [
+      "current_bindings": [],
+      "text": "BREATHABLE MESH UPPER Breathable Mesh Upper Product-Led Detail Source P h 0t0 Anchor Clean B2B Layout",
+      "review_index": 38,
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "original_bindings": [
         {
           "family": "BQ030",
           "id": "1601939615744",
@@ -1481,9 +2031,23 @@
           "role": "D1"
         }
       ],
-      "text": "BREATHABLE MESH UPPER Breathable Mesh Upper Product-Led Detail Source P h 0t0 Anchor Clean B2B Layout",
-      "review_index": 38,
-      "state": "EXACT_CURRENT_IMAGE_REPAIR_PENDING"
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939615744/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ030_详情信息整组收尾/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ030_详情信息整组收尾/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ030_详情信息整组收尾/商品/1601939615744/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ030_详情信息整组收尾/商品/1601939615744/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ030_详情信息整组收尾/商品/1601939615744/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939679363/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ030_详情信息整组收尾/商品/1601939679363/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ030_详情信息整组收尾/商品/1601939679363/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ030_详情信息整组收尾/商品/1601939679363/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939672381/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ030_详情信息整组收尾/商品/1601939672381/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ030_详情信息整组收尾/商品/1601939672381/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ030_详情信息整组收尾/商品/1601939672381/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.091574+00:00"
     },
     {
       "key": "4dde9a34f607190a486929b3c1b1aab3837e5d8293e38d504c515b6a54160dc2",
@@ -1501,16 +2065,26 @@
           "role": "D3"
         }
       ],
-      "current_bindings": [
+      "current_bindings": [],
+      "text": "ACTUAL WEAR PERSPECTIVES TWO source photographs Of the same black style WALKING VIEW Listed EU labels: 39 一 44 ． Send your required size rat i O with your inquiry. SEATED VIEW",
+      "review_index": 39,
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "original_bindings": [
         {
           "family": "HR001",
           "id": "1601943493004",
           "role": "D3"
         }
       ],
-      "text": "ACTUAL WEAR PERSPECTIVES TWO source photographs Of the same black style WALKING VIEW Listed EU labels: 39 一 44 ． Send your required size rat i O with your inquiry. SEATED VIEW",
-      "review_index": 39,
-      "state": "EXACT_CURRENT_IMAGE_REPAIR_PENDING"
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943493004/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR001_模板图正式清理/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR001_模板图正式清理/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR001_模板图正式清理/商品/1601943493004/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR001_模板图正式清理/商品/1601943493004/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR001_模板图正式清理/商品/1601943493004/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.092077+00:00"
     },
     {
       "key": "57eda047cdb8d21e3e1e48be2339769fd5138b64ad30b7027f5bcf2cd24e7abb",
@@ -1528,16 +2102,26 @@
           "role": "M5"
         }
       ],
-      "current_bindings": [
+      "current_bindings": [],
+      "text": "COMPARE TWO WEAR LOOKS ActuaI source photographs in grey and burgundy GREY BURGUNDY TWO real color options shown in their photographed settings.",
+      "review_index": 40,
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "original_bindings": [
         {
           "family": "HR003",
           "id": "1601943335928",
           "role": "M5"
         }
       ],
-      "text": "COMPARE TWO WEAR LOOKS ActuaI source photographs in grey and burgundy GREY BURGUNDY TWO real color options shown in their photographed settings.",
-      "review_index": 40,
-      "state": "EXACT_CURRENT_IMAGE_REPAIR_PENDING"
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943335928/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR003_模板图正式清理/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR003_模板图正式清理/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR003_模板图正式清理/商品/1601943335928/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR003_模板图正式清理/商品/1601943335928/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR003_模板图正式清理/商品/1601943335928/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.093113+00:00"
     },
     {
       "key": "67773f0de22ae86856f871f9c7c131fdb006782af6b9b68e352befc1db150685",
@@ -1555,16 +2139,26 @@
           "role": "D2"
         }
       ],
-      "current_bindings": [
+      "current_bindings": [],
+      "text": "ACTUAL UPPER CLOSE VIEW Original source photograph Of the khaki shoe UPPER Cowhide leather VISIBLE D ETAI LS Apron-toe stitching CLOSURE Lace-up lnspect the real upper surface and toe stitching.",
+      "review_index": 41,
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "original_bindings": [
         {
           "family": "HR004",
           "id": "1601943397351",
           "role": "D2"
         }
       ],
-      "text": "ACTUAL UPPER CLOSE VIEW Original source photograph Of the khaki shoe UPPER Cowhide leather VISIBLE D ETAI LS Apron-toe stitching CLOSURE Lace-up lnspect the real upper surface and toe stitching.",
-      "review_index": 41,
-      "state": "EXACT_CURRENT_IMAGE_REPAIR_PENDING"
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943397351/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_模板图正式清理/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_模板图正式清理/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_模板图正式清理/商品/1601943397351/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_模板图正式清理/商品/1601943397351/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR004_模板图正式清理/商品/1601943397351/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.093113+00:00"
     },
     {
       "key": "30e17dd94a039d8b79261319b7d61b38dc565ba3f1e9a91271fe4f628806b3d5",
@@ -1582,16 +2176,26 @@
           "role": "M3"
         }
       ],
-      "current_bindings": [
+      "current_bindings": [],
+      "text": "SIX-COLOR WHOLESALE RANGE Exact source photos | choose your color assortment BLUE RED B LAC K GREY WHITE KHAKI Six ] i sted colors 丨 EU 39 一 48 丨 send pai rs per col or-size.",
+      "review_index": 42,
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "original_bindings": [
         {
           "family": "HR007",
           "id": "1601943332965",
           "role": "M3"
         }
       ],
-      "text": "SIX-COLOR WHOLESALE RANGE Exact source photos | choose your color assortment BLUE RED B LAC K GREY WHITE KHAKI Six ] i sted colors 丨 EU 39 一 48 丨 send pai rs per col or-size.",
-      "review_index": 42,
-      "state": "EXACT_CURRENT_IMAGE_REPAIR_PENDING"
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943332965/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR007_模板图正式清理/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR007_模板图正式清理/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR007_模板图正式清理/商品/1601943332965/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR007_模板图正式清理/商品/1601943332965/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR007_模板图正式清理/商品/1601943332965/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.094353+00:00"
     },
     {
       "key": "c74fcd3606234345d9bd8ee1b5f334a077db48977cd7b8debd9d882c95a15847",
@@ -1609,16 +2213,26 @@
           "role": "D1"
         }
       ],
-      "current_bindings": [
+      "current_bindings": [],
+      "text": "COLOR ASSORTMENT REFERENCE Compare s ix exa ct source photographs BLUE RED B LAC K GREY WHITE KHAKI Six ] i sted colors 丨 EU 39 一 48 丨 send pai rs per col or-size.",
+      "review_index": 43,
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "original_bindings": [
         {
           "family": "HR007",
           "id": "1601943332965",
           "role": "D1"
         }
       ],
-      "text": "COLOR ASSORTMENT REFERENCE Compare s ix exa ct source photographs BLUE RED B LAC K GREY WHITE KHAKI Six ] i sted colors 丨 EU 39 一 48 丨 send pai rs per col or-size.",
-      "review_index": 43,
-      "state": "EXACT_CURRENT_IMAGE_REPAIR_PENDING"
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943332965/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR007_模板图正式清理/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR007_模板图正式清理/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR007_模板图正式清理/商品/1601943332965/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR007_模板图正式清理/商品/1601943332965/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR007_模板图正式清理/商品/1601943332965/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.095607+00:00"
     },
     {
       "key": "1fe92eb61a8e2fe5b54278da2847eb637cedf677450c475a32755571581720af",
@@ -1636,16 +2250,26 @@
           "role": "M2"
         }
       ],
-      "current_bindings": [
+      "current_bindings": [],
+      "text": "WHITE SIDE PROFILE ActuaI source photograph Of the same Wh ite shoe DESIGN LOW t0 p lace-up UPPER SOLE PROFILE Layered edge REAR D ETAI L Pull ta b Compare the toe, side panels and SOIe edge in the real phOtO.",
+      "review_index": 44,
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "original_bindings": [
         {
           "family": "HR008",
           "id": "1601943348656",
           "role": "M2"
         }
       ],
-      "text": "WHITE SIDE PROFILE ActuaI source photograph Of the same Wh ite shoe DESIGN LOW t0 p lace-up UPPER SOLE PROFILE Layered edge REAR D ETAI L Pull ta b Compare the toe, side panels and SOIe edge in the real phOtO.",
-      "review_index": 44,
-      "state": "EXACT_CURRENT_IMAGE_REPAIR_PENDING"
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943348656/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR008_模板图正式清理/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR008_模板图正式清理/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR008_模板图正式清理/商品/1601943348656/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR008_模板图正式清理/商品/1601943348656/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR008_模板图正式清理/商品/1601943348656/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.096359+00:00"
     },
     {
       "key": "339779d1d66e8e35a3f5907d5bcb6aba508a645fc4bb063df8ee27b77ea40cb6",
@@ -1663,16 +2287,26 @@
           "role": "D3"
         }
       ],
-      "current_bindings": [
+      "current_bindings": [],
+      "text": "WHITE & B LACK RANGE OPTIONS TWO actual source photographs for collection planning WHITE TWO listed colors | six EU labels per color. Choose your required color-size quantities. BLACK",
+      "review_index": 45,
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "original_bindings": [
         {
           "family": "HR008",
           "id": "1601943348656",
           "role": "D3"
         }
       ],
-      "text": "WHITE & B LACK RANGE OPTIONS TWO actual source photographs for collection planning WHITE TWO listed colors | six EU labels per color. Choose your required color-size quantities. BLACK",
-      "review_index": 45,
-      "state": "EXACT_CURRENT_IMAGE_REPAIR_PENDING"
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943348656/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR008_模板图正式清理/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR008_模板图正式清理/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR008_模板图正式清理/商品/1601943348656/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR008_模板图正式清理/商品/1601943348656/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR008_模板图正式清理/商品/1601943348656/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.096359+00:00"
     },
     {
       "key": "3ac7fddcf213737f128a4ac9fe65a774e60be5f529783c613c9d1ee05b4e5b0f",
@@ -1695,7 +2329,11 @@
           "role": "D3"
         }
       ],
-      "current_bindings": [
+      "current_bindings": [],
+      "text": "Laye re d side profile ActuaI shoe worn in the source photograph ． Lace-up fastening and curved stitched overlays.",
+      "review_index": 46,
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "original_bindings": [
         {
           "family": "HR029",
           "id": "1601943544741",
@@ -1707,9 +2345,19 @@
           "role": "D3"
         }
       ],
-      "text": "Laye re d side profile ActuaI shoe worn in the source photograph ． Lace-up fastening and curved stitched overlays.",
-      "review_index": 46,
-      "state": "EXACT_CURRENT_IMAGE_REPAIR_PENDING"
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943544741/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR029_模板图正式清理/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR029_模板图正式清理/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR029_模板图正式清理/商品/1601943544741/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR029_模板图正式清理/商品/1601943544741/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR029_模板图正式清理/商品/1601943544741/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943558646/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR029_模板图正式清理/商品/1601943558646/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR029_模板图正式清理/商品/1601943558646/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR029_模板图正式清理/商品/1601943558646/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.097359+00:00"
     },
     {
       "key": "1a6995a2838fc779229e6d80e8f2445217dbdf0d6befd6e8e0d002f008a61d85",
@@ -1732,7 +2380,11 @@
           "role": "D1"
         }
       ],
-      "current_bindings": [
+      "current_bindings": [],
+      "text": "Everyday Derby styling Camel shown with casual trousers in the source photograph ． Lace-up design and | ow-top opening.",
+      "review_index": 47,
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "original_bindings": [
         {
           "family": "HR031",
           "id": "1601943665060",
@@ -1744,9 +2396,19 @@
           "role": "D1"
         }
       ],
-      "text": "Everyday Derby styling Camel shown with casual trousers in the source photograph ． Lace-up design and | ow-top opening.",
-      "review_index": 47,
-      "state": "EXACT_CURRENT_IMAGE_REPAIR_PENDING"
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943665060/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR031_模板图正式清理/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR031_模板图正式清理/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR031_模板图正式清理/商品/1601943665060/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR031_模板图正式清理/商品/1601943665060/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR031_模板图正式清理/商品/1601943665060/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943651120/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR031_模板图正式清理/商品/1601943651120/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR031_模板图正式清理/商品/1601943651120/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR031_模板图正式清理/商品/1601943651120/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.099478+00:00"
     },
     {
       "key": "4632513a2f32f107facb811044b69bc6318d1a76495b3d319bbc6707b9d92178",
@@ -1769,7 +2431,11 @@
           "role": "D2"
         }
       ],
-      "current_bindings": [
+      "current_bindings": [],
+      "text": "ScuIpted sole & heel 丨 00p DiagonaI sidewall fins and a rear pull ℃ op ． LOS ANGELES Actu al BIack option shown in th e source photograph.",
+      "review_index": 48,
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "original_bindings": [
         {
           "family": "HR036",
           "id": "1601943627431",
@@ -1781,9 +2447,19 @@
           "role": "D2"
         }
       ],
-      "text": "ScuIpted sole & heel 丨 00p DiagonaI sidewall fins and a rear pull ℃ op ． LOS ANGELES Actu al BIack option shown in th e source photograph.",
-      "review_index": 48,
-      "state": "EXACT_CURRENT_IMAGE_REPAIR_PENDING"
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943627431/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR036_模板图正式清理/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR036_模板图正式清理/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR036_模板图正式清理/商品/1601943627431/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR036_模板图正式清理/商品/1601943627431/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR036_模板图正式清理/商品/1601943627431/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943561786/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR036_模板图正式清理/商品/1601943561786/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR036_模板图正式清理/商品/1601943561786/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR036_模板图正式清理/商品/1601943561786/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.100481+00:00"
     },
     {
       "key": "993208a2935a75b8845fee85c97bf3b768faa8b43379fcc360f1c8a132492108",
@@ -1811,7 +2487,11 @@
           "role": "D2"
         }
       ],
-      "current_bindings": [
+      "current_bindings": [],
+      "text": "Everyday G rey b00t profile ActuaI source photograph Of the shoe in a casual outfit. 然 冫 ： 切 亻 卡 瓠 才 Same zip-up stru ctu re across three colour options.",
+      "review_index": 49,
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "original_bindings": [
         {
           "family": "HR059",
           "id": "1601943790138",
@@ -1828,9 +2508,23 @@
           "role": "D2"
         }
       ],
-      "text": "Everyday G rey b00t profile ActuaI source photograph Of the shoe in a casual outfit. 然 冫 ： 切 亻 卡 瓠 才 Same zip-up stru ctu re across three colour options.",
-      "review_index": 49,
-      "state": "EXACT_CURRENT_IMAGE_REPAIR_PENDING"
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943790138/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR059_模板图正式清理/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR059_模板图正式清理/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR059_模板图正式清理/商品/1601943790138/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR059_模板图正式清理/商品/1601943790138/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR059_模板图正式清理/商品/1601943790138/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943767266/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR059_模板图正式清理/商品/1601943767266/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR059_模板图正式清理/商品/1601943767266/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR059_模板图正式清理/商品/1601943767266/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943779211/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR059_模板图正式清理/商品/1601943779211/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR059_模板图正式清理/商品/1601943779211/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR059_模板图正式清理/商品/1601943779211/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.102495+00:00"
     },
     {
       "key": "8cda0f2432aec67eee45431d8356ef7a4066a625a80a508667cd02848a71e501",
@@ -1853,7 +2547,11 @@
           "role": "M2"
         }
       ],
-      "current_bindings": [
+      "current_bindings": [],
+      "text": "ActuaI side & t0 p profiles Khaki option shown in the source photograph ．",
+      "review_index": 50,
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "original_bindings": [
         {
           "family": "HR060",
           "id": "1601943755354",
@@ -1865,9 +2563,19 @@
           "role": "M2"
         }
       ],
-      "text": "ActuaI side & t0 p profiles Khaki option shown in the source photograph ．",
-      "review_index": 50,
-      "state": "EXACT_CURRENT_IMAGE_REPAIR_PENDING"
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943755354/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR060_模板图正式清理/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR060_模板图正式清理/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR060_模板图正式清理/商品/1601943755354/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR060_模板图正式清理/商品/1601943755354/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR060_模板图正式清理/商品/1601943755354/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943705620/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR060_模板图正式清理/商品/1601943705620/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR060_模板图正式清理/商品/1601943705620/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR060_模板图正式清理/商品/1601943705620/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.105548+00:00"
     },
     {
       "key": "08ecb62b2721100db214b5e06e5d1774390a2bb4cfe785aeef0959583e5cc4c4",
@@ -1895,7 +2603,11 @@
           "role": "D1"
         }
       ],
-      "current_bindings": [
+      "current_bindings": [],
+      "text": "Foref00t & lace layout Grey option shown from above. OriginaI source photograph Of th e Grey option.",
+      "review_index": 51,
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "original_bindings": [
         {
           "family": "HR062",
           "id": "1601943682804",
@@ -1912,9 +2624,25 @@
           "role": "D1"
         }
       ],
-      "text": "Foref00t & lace layout Grey option shown from above. OriginaI source photograph Of th e Grey option.",
-      "review_index": 51,
-      "state": "EXACT_CURRENT_IMAGE_REPAIR_PENDING"
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943682804/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR062_全图残留清理/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR062_全图残留清理/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR062_全图残留清理/商品/1601943682804/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR062_全图残留清理/商品/1601943682804/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR062_全图残留清理/商品/1601943682804/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943799127/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR062_全图残留回读纠正/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR062_全图残留回读纠正/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR062_全图残留回读纠正/商品/1601943799127/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR062_全图残留回读纠正/商品/1601943799127/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR062_全图残留回读纠正/商品/1601943799127/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943761346/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR062_全图残留清理/商品/1601943761346/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR062_全图残留清理/商品/1601943761346/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR062_全图残留清理/商品/1601943761346/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.107488+00:00"
     },
     {
       "key": "b10f17d31683c8e5784384ff8f998e8fa2592af3c2333c5c5c7c93b550d12368",
@@ -1942,7 +2670,11 @@
           "role": "D3"
         }
       ],
-      "current_bindings": [
+      "current_bindings": [],
+      "text": "BIack & White colour direction ActuaI paired shoes in the source photograph ． Same lace-up stru ctu re across three options.",
+      "review_index": 52,
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "original_bindings": [
         {
           "family": "HR065",
           "id": "1601943738486",
@@ -1959,9 +2691,485 @@
           "role": "D3"
         }
       ],
-      "text": "BIack & White colour direction ActuaI paired shoes in the source photograph ． Same lace-up stru ctu re across three options.",
-      "review_index": 52,
-      "state": "EXACT_CURRENT_IMAGE_REPAIR_PENDING"
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943738486/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR065_模板图正式清理/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR065_模板图正式清理/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR065_模板图正式清理/商品/1601943738486/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR065_模板图正式清理/商品/1601943738486/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR065_模板图正式清理/商品/1601943738486/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943703750/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR065_模板图正式清理/商品/1601943703750/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR065_模板图正式清理/商品/1601943703750/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR065_模板图正式清理/商品/1601943703750/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943717639/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR065_模板图正式清理/商品/1601943717639/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR065_模板图正式清理/商品/1601943717639/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR065_模板图正式清理/商品/1601943717639/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.111891+00:00"
+    },
+    {
+      "i": 2,
+      "key": "eeee08ec1432b9b38d58254ea23ad2a9298eb499a837c6aa115db3f732788356",
+      "url": "https://sc04.alicdn.com/kf/S68186673a54d451b9f132a6ea4b2a308R.jpg",
+      "file": "01_产品资产/05_平台当前素材/a3b552246798482805fa64c55b2e7433a25a3f690a42f414048d2611e4b4f1ce.jpg",
+      "sha256": "a3b552246798482805fa64c55b2e7433a25a3f690a42f414048d2611e4b4f1ce",
+      "dimensions": [
+        1200,
+        1200
+      ],
+      "bindings": [
+        {
+          "family": "BQ026",
+          "id": "1601939714238",
+          "role": "D3"
+        },
+        {
+          "family": "BQ026",
+          "id": "1601939725201",
+          "role": "D2"
+        },
+        {
+          "family": "BQ026",
+          "id": "1601939745065",
+          "role": "D2"
+        }
+      ],
+      "text": "PRODUCT INFORMATION Source image s h ows approx. 177g per single shoe Model U pper Sole Closure Season AppIication Packing T5828 Breathable Knitted IJ pper Cushion sole Lace-U p EU 35 嶙 5 Lightweight Knit Walking Shoes Spring ， Summer, Autumn _ 177g lightweight walking shoes _ breathable knit lace-up sneakers DaiIy walking, commuting ， casual wear _ women casual walking shoes Shoe box or plastic bag",
+      "review_index": 53,
+      "original_bindings": [
+        {
+          "family": "BQ026",
+          "id": "1601939714238",
+          "role": "D3"
+        },
+        {
+          "family": "BQ026",
+          "id": "1601939725201",
+          "role": "D2"
+        },
+        {
+          "family": "BQ026",
+          "id": "1601939745065",
+          "role": "D2"
+        }
+      ],
+      "current_bindings": [],
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939714238/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ026_详情信息整组收尾/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ026_详情信息整组收尾/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ026_详情信息整组收尾/商品/1601939714238/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ026_详情信息整组收尾/商品/1601939714238/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ026_详情信息整组收尾/商品/1601939714238/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939725201/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ026_详情信息整组收尾/商品/1601939725201/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ026_详情信息整组收尾/商品/1601939725201/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ026_详情信息整组收尾/商品/1601939725201/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939745065/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ026_详情信息整组收尾/商品/1601939745065/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ026_详情信息整组收尾/商品/1601939745065/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ026_详情信息整组收尾/商品/1601939745065/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.114413+00:00"
+    },
+    {
+      "i": 3,
+      "key": "c5fa7bacb09194bafd555b4fa7e65b9bd68a1f0707ca7b1b17da5d884016f380",
+      "url": "https://sc04.alicdn.com/kf/H26d7329dc57b4fc196eb24f7956b0df2a.png",
+      "file": "01_产品资产/05_平台当前素材/d3697f66afb0bf77198c57407194cdb55538a384d961b8091d738d8427e32acf.png",
+      "sha256": "d3697f66afb0bf77198c57407194cdb55538a384d961b8091d738d8427e32acf",
+      "dimensions": [
+        1200,
+        1200
+      ],
+      "bindings": [
+        {
+          "family": "HR007",
+          "id": "1601943463020",
+          "role": "M4"
+        }
+      ],
+      "text": "BLUE & RED COLLECTION OPTIONS Compare tWO exa ct source product photographs BLUE RED Compare tWO COlor choices for your casual range. Other listed colors: Black, White, Grey and Khaki.",
+      "review_index": 54,
+      "original_bindings": [
+        {
+          "family": "HR007",
+          "id": "1601943463020",
+          "role": "M4"
+        }
+      ],
+      "current_bindings": [],
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943463020/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR007_全图残留清理/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR007_全图残留清理/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR007_全图残留清理/商品/1601943463020/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR007_全图残留清理/商品/1601943463020/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR007_全图残留清理/商品/1601943463020/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.114413+00:00"
+    },
+    {
+      "i": 4,
+      "key": "cc2c430048a96adbba1f7a686a3fe406c5dea3bf049c1131c345792813d1050c",
+      "url": "https://sc04.alicdn.com/kf/Hababd6610ea849f69ee5f5c090a8b6716.png",
+      "file": "01_产品资产/05_平台当前素材/93d5c98808119a3b29c5ae049762eca0811d6287ede94a64d740fffab27db937.png",
+      "sha256": "93d5c98808119a3b29c5ae049762eca0811d6287ede94a64d740fffab27db937",
+      "dimensions": [
+        1200,
+        1200
+      ],
+      "bindings": [
+        {
+          "family": "HR007",
+          "id": "1601943463020",
+          "role": "D3"
+        }
+      ],
+      "text": "TWO COLORS FOR CASUAL RANGES Compare tWO exa ct source product photographs RED EU labels: 39 一 48 ． Provide quantities per selected color and size. BLUE",
+      "review_index": 55,
+      "original_bindings": [
+        {
+          "family": "HR007",
+          "id": "1601943463020",
+          "role": "D3"
+        }
+      ],
+      "current_bindings": [],
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943463020/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR007_全图残留清理/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR007_全图残留清理/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR007_全图残留清理/商品/1601943463020/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR007_全图残留清理/商品/1601943463020/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR007_全图残留清理/商品/1601943463020/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.117411+00:00"
+    },
+    {
+      "i": 5,
+      "key": "3f70902276676f0b24b37ea3ca7a7c120b54a6a91c1edc2ca2312daa13219dd7",
+      "url": "https://sc04.alicdn.com/kf/H8ca8937e0f27424cb82dab4763318916U.png",
+      "file": "01_产品资产/05_平台当前素材/35a9315f8821f4fd0361135dac9ad19d620fb6bc8c4e99eb6b81c6e81296dd72.png",
+      "sha256": "35a9315f8821f4fd0361135dac9ad19d620fb6bc8c4e99eb6b81c6e81296dd72",
+      "dimensions": [
+        1200,
+        1200
+      ],
+      "bindings": [
+        {
+          "family": "HR007",
+          "id": "1601943408495",
+          "role": "M5"
+        }
+      ],
+      "text": "WHITE & KHAKI STY 凵 NG Compare tWO exa ct source product photographs 00 WHITE KHAKI TWO neutral options fro m the same six-color style.",
+      "review_index": 56,
+      "original_bindings": [
+        {
+          "family": "HR007",
+          "id": "1601943408495",
+          "role": "M5"
+        }
+      ],
+      "current_bindings": [],
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943408495/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR007_全图残留清理/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR007_全图残留清理/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR007_全图残留清理/商品/1601943408495/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR007_全图残留清理/商品/1601943408495/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR007_全图残留清理/商品/1601943408495/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.117411+00:00"
+    },
+    {
+      "i": 6,
+      "key": "ffcd6834c362b6e50556f1bf8fc391d1bfd1265898f16db1a42c206c5a949a10",
+      "url": "https://sc04.alicdn.com/kf/Hb49c182f1d3f4df688ef8216c2b46512m.png",
+      "file": "01_产品资产/05_平台当前素材/e95fb132bd22e64b2e2a0cbb8f24a31f7fa0ecb63ce11d1c0d064d3914d6a368.png",
+      "sha256": "e95fb132bd22e64b2e2a0cbb8f24a31f7fa0ecb63ce11d1c0d064d3914d6a368",
+      "dimensions": [
+        1200,
+        1200
+      ],
+      "bindings": [
+        {
+          "family": "HR007",
+          "id": "1601943408495",
+          "role": "D3"
+        }
+      ],
+      "text": "NEUTRAL COLOR COMPARISON Compare tWO exa ct source product photographs 00 KHAKI WHITE B row n laces and collar trim a re visible in bOth photographs. Six listed colors | EU 39 一 48 ．",
+      "review_index": 57,
+      "original_bindings": [
+        {
+          "family": "HR007",
+          "id": "1601943408495",
+          "role": "D3"
+        }
+      ],
+      "current_bindings": [],
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943408495/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR007_全图残留清理/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR007_全图残留清理/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR007_全图残留清理/商品/1601943408495/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR007_全图残留清理/商品/1601943408495/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR007_全图残留清理/商品/1601943408495/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.119426+00:00"
+    },
+    {
+      "i": 9,
+      "key": "25192e6b397ea4588b5f3ca8feb14791e6068bfdb8b4111cb28d37be8e02f86b",
+      "url": "https://sc04.alicdn.com/kf/H6f7347dfa9e54026914acfc8173c3dc78.png",
+      "file": "01_产品资产/05_平台当前素材/ab315d3ae4c6d0d66f5535b504890ca68fe64dbbe8d656e05ed3ee9890ee0401.png",
+      "sha256": "ab315d3ae4c6d0d66f5535b504890ca68fe64dbbe8d656e05ed3ee9890ee0401",
+      "dimensions": [
+        1200,
+        1200
+      ],
+      "bindings": [
+        {
+          "family": "HR008",
+          "id": "1601943422371",
+          "role": "D1"
+        }
+      ],
+      "text": "LACE-UP & PANEL DETAILS CompIete BIack shoe from the actual source image The full photograph shows the upper and SOIe profile. CLOSURE Lace-up EYELETS Black finish SEAMS Toe and side panels",
+      "review_index": 58,
+      "original_bindings": [
+        {
+          "family": "HR008",
+          "id": "1601943422371",
+          "role": "D1"
+        }
+      ],
+      "current_bindings": [],
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943422371/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR008_全图残留清理/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR008_全图残留清理/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR008_全图残留清理/商品/1601943422371/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR008_全图残留清理/商品/1601943422371/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR008_全图残留清理/商品/1601943422371/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.119426+00:00"
+    },
+    {
+      "i": 10,
+      "key": "c8d4669b9b3e74378d718610a7e228949e68f8c38c6989054f6a6dd3de2923f8",
+      "url": "https://sc04.alicdn.com/kf/Hbc380c1b02124de7bede67b8026614aeB.jpg",
+      "file": "01_产品资产/02_可发布素材/HR062/M3.jpg",
+      "sha256": "ca160325e5619f78987fcaa874aed64b9ac4ceed7f3527a8ff1d4716c3f3c57c",
+      "dimensions": [
+        1000,
+        1000
+      ],
+      "bindings": [
+        {
+          "family": "HR062",
+          "id": "1601943682804",
+          "role": "M3"
+        },
+        {
+          "family": "HR062",
+          "id": "1601943799127",
+          "role": "M3"
+        },
+        {
+          "family": "HR062",
+          "id": "1601943761346",
+          "role": "M3"
+        }
+      ],
+      "text": "Segmented rubber sole OriginaI source sole-bottom photograph ．",
+      "review_index": 59,
+      "original_bindings": [
+        {
+          "family": "HR062",
+          "id": "1601943682804",
+          "role": "M3"
+        },
+        {
+          "family": "HR062",
+          "id": "1601943799127",
+          "role": "M3"
+        },
+        {
+          "family": "HR062",
+          "id": "1601943761346",
+          "role": "M3"
+        }
+      ],
+      "current_bindings": [],
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943682804/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR062_全图残留清理/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR062_全图残留清理/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR062_全图残留清理/商品/1601943682804/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR062_全图残留清理/商品/1601943682804/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR062_全图残留清理/商品/1601943682804/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943799127/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR062_全图残留回读纠正/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR062_全图残留回读纠正/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR062_全图残留回读纠正/商品/1601943799127/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR062_全图残留回读纠正/商品/1601943799127/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR062_全图残留回读纠正/商品/1601943799127/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943761346/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR062_全图残留清理/商品/1601943761346/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR062_全图残留清理/商品/1601943761346/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR062_全图残留清理/商品/1601943761346/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.122864+00:00"
+    },
+    {
+      "i": 11,
+      "key": "f7ac85acbd36c3b42803ca34f11541f59ca716119ed6f1713fef5ce2c762cb68",
+      "url": "https://sc04.alicdn.com/kf/H895bb8c84e07430db5191b3d9a4184cbv.jpg",
+      "file": "01_产品资产/02_可发布素材/HR062/D3.jpg",
+      "sha256": "5e534cccc972b8b55d9bd43832dd62a476e4a87b4b38f6466afe13abbc605049",
+      "dimensions": [
+        1000,
+        1250
+      ],
+      "bindings": [
+        {
+          "family": "HR062",
+          "id": "1601943682804",
+          "role": "D3"
+        },
+        {
+          "family": "HR062",
+          "id": "1601943799127",
+          "role": "D2"
+        },
+        {
+          "family": "HR062",
+          "id": "1601943761346",
+          "role": "D3"
+        }
+      ],
+      "text": "Outsole patte r n overview Continuous SOIe with segmented raised bottom sections. Actu al source sole phOtO ， matched tO this shoe.",
+      "review_index": 60,
+      "original_bindings": [
+        {
+          "family": "HR062",
+          "id": "1601943682804",
+          "role": "D3"
+        },
+        {
+          "family": "HR062",
+          "id": "1601943799127",
+          "role": "D2"
+        },
+        {
+          "family": "HR062",
+          "id": "1601943761346",
+          "role": "D3"
+        }
+      ],
+      "current_bindings": [],
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943682804/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR062_全图残留清理/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR062_全图残留清理/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR062_全图残留清理/商品/1601943682804/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR062_全图残留清理/商品/1601943682804/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR062_全图残留清理/商品/1601943682804/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943799127/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR062_全图残留回读纠正/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR062_全图残留回读纠正/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR062_全图残留回读纠正/商品/1601943799127/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR062_全图残留回读纠正/商品/1601943799127/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR062_全图残留回读纠正/商品/1601943799127/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943761346/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR062_全图残留清理/商品/1601943761346/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR062_全图残留清理/商品/1601943761346/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR062_全图残留清理/商品/1601943761346/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.125171+00:00"
+    },
+    {
+      "i": 12,
+      "key": "2b26044b737bb94eea3c0214c126094ad338c1d0c8f59f8bf778ba796f740d4d",
+      "url": "https://sc04.alicdn.com/kf/H46c344679d7a428a8f276a050dbff214V.jpg",
+      "file": "01_产品资产/02_可发布素材/HR063/D1.jpg",
+      "sha256": "2f8d423b8690f08533ec1b617cbed64bc7b634460032d135d1d647b0c99a4bba",
+      "dimensions": [
+        1000,
+        1250
+      ],
+      "bindings": [
+        {
+          "family": "HR063",
+          "id": "1601943653995",
+          "role": "D2"
+        },
+        {
+          "family": "HR063",
+          "id": "1601943651966",
+          "role": "D1"
+        },
+        {
+          "family": "HR063",
+          "id": "1601943764325",
+          "role": "D2"
+        }
+      ],
+      "text": "Patterned outsole layout Raised tread blocks and contrasting inset sections. OriginaI source bottom photograph.",
+      "review_index": 61,
+      "original_bindings": [
+        {
+          "family": "HR063",
+          "id": "1601943653995",
+          "role": "D2"
+        },
+        {
+          "family": "HR063",
+          "id": "1601943651966",
+          "role": "D1"
+        },
+        {
+          "family": "HR063",
+          "id": "1601943764325",
+          "role": "D2"
+        }
+      ],
+      "current_bindings": [],
+      "state": "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS",
+      "current_evidence": [
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943653995/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR063_全图残留清理/计划.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR063_全图残留清理/图片银行.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR063_全图残留清理/商品/1601943653995/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR063_全图残留清理/商品/1601943653995/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR063_全图残留清理/商品/1601943653995/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943651966/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR063_全图残留清理/商品/1601943651966/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR063_全图残留清理/商品/1601943651966/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR063_全图残留清理/商品/1601943651966/verification.json",
+        "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943764325/formal_get.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR063_全图残留清理/商品/1601943764325/prepared.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR063_全图残留清理/商品/1601943764325/update_receipt.json",
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR063_全图残留清理/商品/1601943764325/verification.json"
+      ],
+      "reconciled_at": "2026-10-21T01:54:47.127998+00:00"
     }
-  ]
+  ],
+  "states": {
+    "EXACT_CURRENT_IMAGE_REPLACED_FORMAL_PASS": 62
+  },
+  "current_remaining_bindings": 0
 }

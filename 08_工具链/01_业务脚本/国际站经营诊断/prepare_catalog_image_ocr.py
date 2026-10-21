@@ -11,9 +11,10 @@ import schema_publish_contract as c
 
 def main():
     d=s.load(ProductRegistry(s.ROOT));cache=s.load(s.ROOT/'02_Alibaba运营/05_扩品工程/数据/目录对账/当前素材清单.json')['assets'];identities={c._created_image_identity(u):r for u,r in cache.items()if r.get('file')and(s.ROOT/r['file']).is_file()};items={};missing=[];ids=[]
+    current={str(r['id'])for r in s.load(s.RAW/'全店图片续修/当前目录/catalog.json')['products']}
     for listing in d['listings']:
         pid=listing['id'];f=s.ROOT/'02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品'/pid/'formal_get.json'
-        if pid in s.PROTECTED or not f.exists():continue
+        if pid in s.PROTECTED or pid not in current or not f.exists():continue
         p=s.load(f)['response']['product']
         if p['status']!='approved'or p['display']!='Y':continue
         ids.append(pid)

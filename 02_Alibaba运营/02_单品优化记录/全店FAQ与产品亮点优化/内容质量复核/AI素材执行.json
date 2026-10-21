@@ -1,90 +1,337 @@
 {
-  "scope": "Source-anchored built-in image generation; generated assets are NOT accepted or live unless a separate reviewed plan, upload receipt and formal verification prove it.",
+  "scope": "Current candidate reconciliation. Only exact reviewed masters linked through official upload and current formal bindings count as live; other outputs are unused/superseded candidates.",
   "items": [
     {
       "key": "BQ001_sole",
       "generated_file": "exec-19ec5f29-fb79-40ce-aa77-eee779509ec4.png",
-      "state": "GENERATED_NATIVE_REVIEW_REQUIRED"
+      "state": "REVIEWED_MASTER_CURRENTLY_BOUND",
+      "reconciled_at": "2026-10-21T01:54:49.279865+00:00",
+      "sha256": "ad623a680d4912d2d771d1716318507557cd4662ce1d3a445476d3b9e6cce90f",
+      "current_evidence": [
+        {
+          "bank": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ001_功能图正式精修/图片银行.json",
+          "file": "01_产品资产/02_可发布素材/00_最终上传/BQ001_数据包1/06_当前图文/功能/BQ001_sole.png",
+          "current_ids": [
+            "10000042821848",
+            "1601939572948",
+            "1601939707196",
+            "1601939727104",
+            "1601956115029",
+            "1601957061462",
+            "1601957079462"
+          ]
+        },
+        {
+          "bank": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ001_功能图正式精修_回读纠正/图片银行.json",
+          "file": "01_产品资产/02_可发布素材/00_最终上传/BQ001_数据包1/06_当前图文/功能/BQ001_sole.png",
+          "current_ids": [
+            "10000042821848",
+            "1601939572948",
+            "1601939707196",
+            "1601939727104",
+            "1601956115029",
+            "1601957061462",
+            "1601957079462"
+          ]
+        }
+      ],
+      "scope": "Exact native master digest matched against successful image-bank receipts and current original-ID formal bindings. Native review belongs to the linked exact plan and source proof; no generated image proves material, stock or performance."
     },
     {
       "key": "BQ002_sole",
       "generated_file": "exec-d7684e7f-5f8a-4ee3-9f39-1bad8a70be84.png",
-      "state": "GENERATED_NATIVE_REVIEW_REQUIRED"
+      "state": "REVIEWED_MASTER_CURRENTLY_BOUND",
+      "reconciled_at": "2026-10-21T01:54:49.281363+00:00",
+      "sha256": "fecec1fe22166511f271c20cc169d4cdc42023f8058bf48ceeef633313e10be2",
+      "current_evidence": [
+        {
+          "bank": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ002_功能图正式精修/图片银行.json",
+          "file": "01_产品资产/02_可发布素材/00_最终上传/BQ002_数据包2/06_当前图文/功能/BQ002_sole.png",
+          "current_ids": [
+            "10000042896165",
+            "1601939614689",
+            "1601939635505",
+            "1601939654418",
+            "1601956046603",
+            "1601957075451",
+            "1601957092413"
+          ]
+        }
+      ],
+      "scope": "Exact native master digest matched against successful image-bank receipts and current original-ID formal bindings. Native review belongs to the linked exact plan and source proof; no generated image proves material, stock or performance."
     },
     {
       "key": "BQ011_entry",
       "generated_file": "exec-eff4de43-5ee7-4988-91d1-23b24436449a.png",
-      "state": "GENERATED_NATIVE_REVIEW_REQUIRED"
+      "state": "REVIEWED_MASTER_CURRENTLY_BOUND",
+      "reconciled_at": "2026-10-21T01:54:49.282977+00:00",
+      "sha256": "265c1c96a11ea3c0ca0fbce74e433af97405be71e4d0e9d90e3809aefc45924b",
+      "current_evidence": [
+        {
+          "bank": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ011_功能图正式精修/图片银行.json",
+          "file": "01_产品资产/02_可发布素材/00_最终上传/BQ011_A002/06_当前图文/功能/BQ011_entry.png",
+          "current_ids": [
+            "10000043725883",
+            "1601939606803",
+            "1601939634522",
+            "1601939666421"
+          ]
+        }
+      ],
+      "scope": "Exact native master digest matched against successful image-bank receipts and current original-ID formal bindings. Native review belongs to the linked exact plan and source proof; no generated image proves material, stock or performance."
     },
     {
       "key": "BQ028_tread",
       "generated_file": "exec-dcc8b96a-9f25-488e-bb65-b485ec3fa2b4.png",
-      "state": "GENERATED_NATIVE_REVIEW_REQUIRED"
+      "state": "REVIEWED_MASTER_CURRENTLY_BOUND",
+      "reconciled_at": "2026-10-21T01:54:49.284982+00:00",
+      "sha256": "c37b2ce282f4ff4c4bba311ba689cc772fb3f6dd5aea7835f3ee1332b129078c",
+      "current_evidence": [
+        {
+          "bank": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ028_功能图正式精修/图片银行.json",
+          "file": "01_产品资产/02_可发布素材/00_最终上传/BQ028_BISCUIT/06_当前图文/功能/BQ028_tread.png",
+          "current_ids": [
+            "1601839105416",
+            "1601939625627",
+            "1601939705262",
+            "1601939720204"
+          ]
+        }
+      ],
+      "scope": "Exact native master digest matched against successful image-bank receipts and current original-ID formal bindings. Native review belongs to the linked exact plan and source proof; no generated image proves material, stock or performance."
     },
     {
       "key": "BQ011_tread",
       "generated_file": "exec-cf7f7e78-55ea-415e-8eea-6d9239f73180.png",
-      "state": "GENERATED_NATIVE_REVIEW_REQUIRED"
+      "state": "REVIEWED_MASTER_CURRENTLY_BOUND",
+      "reconciled_at": "2026-10-21T01:54:49.287279+00:00",
+      "sha256": "127b985903be2946e062b77b16f7a2062f3338e5c2d27e4c37e47ac708f5e0de",
+      "current_evidence": [
+        {
+          "bank": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ011_功能图正式精修/图片银行.json",
+          "file": "01_产品资产/02_可发布素材/00_最终上传/BQ011_A002/06_当前图文/功能/BQ011_tread.png",
+          "current_ids": [
+            "10000043725883"
+          ]
+        }
+      ],
+      "scope": "Exact native master digest matched against successful image-bank receipts and current original-ID formal bindings. Native review belongs to the linked exact plan and source proof; no generated image proves material, stock or performance."
     },
     {
       "key": "BQ012_wear",
       "generated_file": "exec-3ec0c6a8-2713-443c-a3be-11611b83b9ab.png",
-      "state": "GENERATED_NATIVE_REVIEW_REQUIRED"
+      "state": "REVIEWED_MASTER_CURRENTLY_BOUND",
+      "reconciled_at": "2026-10-21T01:54:49.289340+00:00",
+      "sha256": "0f62f8662c08ee949db23e3f4e2c5226929309c87852d7aea22b74b588b9179c",
+      "current_evidence": [
+        {
+          "bank": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ012_功能图正式精修/图片银行.json",
+          "file": "01_产品资产/02_可发布素材/00_最终上传/BQ012_M8506/06_当前图文/功能/BQ012_wear.png",
+          "current_ids": [
+            "10000043744505"
+          ]
+        }
+      ],
+      "scope": "Exact native master digest matched against successful image-bank receipts and current original-ID formal bindings. Native review belongs to the linked exact plan and source proof; no generated image proves material, stock or performance."
     },
     {
       "key": "BQ012_sole",
       "generated_file": "exec-3db595f1-a2fd-4674-a5c0-cc0e4f6bd586.png",
-      "state": "GENERATED_NATIVE_REVIEW_REQUIRED"
+      "state": "REVIEWED_MASTER_CURRENTLY_BOUND",
+      "reconciled_at": "2026-10-21T01:54:49.291357+00:00",
+      "sha256": "9fead938336f7f34772636e80854cd8d1f229b820bab9aae16d3acb6d328a191",
+      "current_evidence": [
+        {
+          "bank": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ012_功能图正式精修/图片银行.json",
+          "file": "01_产品资产/02_可发布素材/00_最终上传/BQ012_M8506/06_当前图文/功能/BQ012_sole.png",
+          "current_ids": [
+            "10000043744505"
+          ]
+        }
+      ],
+      "scope": "Exact native master digest matched against successful image-bank receipts and current original-ID formal bindings. Native review belongs to the linked exact plan and source proof; no generated image proves material, stock or performance."
     },
     {
       "key": "BQ013_knit",
       "generated_file": "exec-cecbf62c-3f3b-4e61-a432-bd01f59064be.png",
-      "state": "GENERATED_NATIVE_REVIEW_REQUIRED"
+      "state": "REVIEWED_MASTER_CURRENTLY_BOUND",
+      "reconciled_at": "2026-10-21T01:54:49.293511+00:00",
+      "sha256": "fac7bb561611fcdbd3e8f76cbb4f5a3980a42f4dc12efaffd7c96dc597e8f62e",
+      "current_evidence": [
+        {
+          "bank": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ013_功能图正式精修/图片银行.json",
+          "file": "01_产品资产/02_可发布素材/00_最终上传/BQ013_T55836/06_当前图文/功能/BQ013_knit.png",
+          "current_ids": [
+            "10000043763325",
+            "1601939619687",
+            "1601939638522",
+            "1601939736061"
+          ]
+        }
+      ],
+      "scope": "Exact native master digest matched against successful image-bank receipts and current original-ID formal bindings. Native review belongs to the linked exact plan and source proof; no generated image proves material, stock or performance."
     },
     {
       "key": "BQ014_sole",
       "generated_file": "exec-e481c04b-8b98-4987-a395-43b92835096f.png",
-      "state": "GENERATED_NATIVE_REVIEW_REQUIRED"
+      "state": "REVIEWED_MASTER_CURRENTLY_BOUND",
+      "reconciled_at": "2026-10-21T01:54:49.295113+00:00",
+      "sha256": "35ee6fd8afefb1cbdb5c1e7b7afda1f2abf3b8357ad470d1bfb3d410c4d63c24",
+      "current_evidence": [
+        {
+          "bank": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ014_功能图正式精修/图片银行.json",
+          "file": "01_产品资产/02_可发布素材/00_最终上传/BQ014_A507/06_当前图文/功能/BQ014_sole.png",
+          "current_ids": [
+            "10000043732626"
+          ]
+        }
+      ],
+      "scope": "Exact native master digest matched against successful image-bank receipts and current original-ID formal bindings. Native review belongs to the linked exact plan and source proof; no generated image proves material, stock or performance."
     },
     {
       "key": "hero_71",
       "generated_file": "exec-f4948528-f421-4d30-a927-683609e53513.png",
-      "state": "GENERATED_NATIVE_REVIEW_REQUIRED"
+      "state": "REVIEWED_MASTER_CURRENTLY_BOUND",
+      "reconciled_at": "2026-10-21T01:54:49.296712+00:00",
+      "sha256": "6187a1c10091b0c48f035006d237b8de5f8b2214574f4d34ba65cbb9c0d771f1",
+      "current_evidence": [
+        {
+          "bank": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ003_首图构图优化/图片银行.json",
+          "file": "01_产品资产/02_可发布素材/00_最终上传/BQ003_R1218/06_当前图文/首图/H71.png",
+          "current_ids": [
+            "10000043200726"
+          ]
+        }
+      ],
+      "scope": "Exact native master digest matched against successful image-bank receipts and current original-ID formal bindings. Native review belongs to the linked exact plan and source proof; no generated image proves material, stock or performance."
     },
     {
       "key": "hero_96",
       "generated_file": "exec-76e6e152-4894-48c5-a9b4-020355b31746.png",
-      "state": "GENERATED_NATIVE_REVIEW_REQUIRED"
+      "state": "REVIEWED_MASTER_CURRENTLY_BOUND",
+      "reconciled_at": "2026-10-21T01:54:49.298320+00:00",
+      "sha256": "c5ed3d15b305bf11c32fd9b87954e51d76d99fd3bcedbedce52d55efae87b523",
+      "current_evidence": [
+        {
+          "bank": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ006_首图构图优化/图片银行.json",
+          "file": "01_产品资产/02_可发布素材/00_最终上传/BQ006_M8811/06_当前图文/首图/H96.png",
+          "current_ids": [
+            "1601814931739"
+          ]
+        }
+      ],
+      "scope": "Exact native master digest matched against successful image-bank receipts and current original-ID formal bindings. Native review belongs to the linked exact plan and source proof; no generated image proves material, stock or performance."
     },
     {
       "key": "hero_108",
       "generated_file": "exec-570abb14-a1dd-4e8b-835d-8250fd1d240b.png",
-      "state": "GENERATED_NATIVE_REVIEW_REQUIRED"
+      "state": "REVIEWED_MASTER_CURRENTLY_BOUND",
+      "reconciled_at": "2026-10-21T01:54:49.300500+00:00",
+      "sha256": "02dd7dc44775162d4030b5c970034d9d354274c33918b53a13d9652e4468cebe",
+      "current_evidence": [
+        {
+          "bank": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ007_首图构图优化/图片银行.json",
+          "file": "01_产品资产/02_可发布素材/00_最终上传/BQ007_L0017/06_当前图文/首图/H108.png",
+          "current_ids": [
+            "1601939585913"
+          ]
+        }
+      ],
+      "scope": "Exact native master digest matched against successful image-bank receipts and current original-ID formal bindings. Native review belongs to the linked exact plan and source proof; no generated image proves material, stock or performance."
     },
     {
       "key": "hero_109",
       "generated_file": "exec-4a77661b-128f-4429-9b12-1f5f4a09a6f1.png",
-      "state": "GENERATED_NATIVE_REVIEW_REQUIRED"
+      "state": "REVIEWED_MASTER_CURRENTLY_BOUND",
+      "reconciled_at": "2026-10-21T01:54:49.301596+00:00",
+      "sha256": "d9309c401e2581554f353987693be5fc3b19296698c573e88d2ba6a2beea08ca",
+      "current_evidence": [
+        {
+          "bank": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ007_首图构图优化/图片银行.json",
+          "file": "01_产品资产/02_可发布素材/00_最终上传/BQ007_L0017/06_当前图文/首图/H109.png",
+          "current_ids": [
+            "1601939701201"
+          ]
+        }
+      ],
+      "scope": "Exact native master digest matched against successful image-bank receipts and current original-ID formal bindings. Native review belongs to the linked exact plan and source proof; no generated image proves material, stock or performance."
     },
     {
       "key": "hero_110",
       "generated_file": "exec-ede42fc9-c038-452c-8d37-f725843a7f8a.png",
-      "state": "GENERATED_NATIVE_REVIEW_REQUIRED"
+      "state": "REVIEWED_MASTER_CURRENTLY_BOUND",
+      "reconciled_at": "2026-10-21T01:54:49.304601+00:00",
+      "sha256": "3fc0bc5888eddc3c23a9cab3b8c173593581cf4d228cd86a69fef23ee7bf29df",
+      "current_evidence": [
+        {
+          "bank": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ007_首图构图优化/图片银行.json",
+          "file": "01_产品资产/02_可发布素材/00_最终上传/BQ007_L0017/06_当前图文/首图/H110.png",
+          "current_ids": [
+            "1601939711161"
+          ]
+        }
+      ],
+      "scope": "Exact native master digest matched against successful image-bank receipts and current original-ID formal bindings. Native review belongs to the linked exact plan and source proof; no generated image proves material, stock or performance."
     },
     {
       "key": "hero_123",
       "generated_file": "exec-6c217842-2a01-411d-95a7-aa32b8650e7d.png",
-      "state": "GENERATED_NATIVE_REVIEW_REQUIRED"
+      "state": "REVIEWED_MASTER_CURRENTLY_BOUND",
+      "reconciled_at": "2026-10-21T01:54:49.306603+00:00",
+      "sha256": "d63d0ccad70602bb1eead1765517cfbd9f444405a65f04863c4dd67465ae9269",
+      "current_evidence": [
+        {
+          "bank": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ010_首图构图优化/图片银行.json",
+          "file": "01_产品资产/02_可发布素材/00_最终上传/BQ010_R1601/06_当前图文/首图/H123.png",
+          "current_ids": [
+            "1601825160204"
+          ]
+        }
+      ],
+      "scope": "Exact native master digest matched against successful image-bank receipts and current original-ID formal bindings. Native review belongs to the linked exact plan and source proof; no generated image proves material, stock or performance."
     },
     {
       "key": "hero_127",
       "generated_file": "exec-63391d79-1359-419c-8bf2-6b975a3a263e.png",
-      "state": "GENERATED_NATIVE_REVIEW_REQUIRED"
+      "state": "REVIEWED_MASTER_CURRENTLY_BOUND",
+      "reconciled_at": "2026-10-21T01:54:49.308602+00:00",
+      "sha256": "1c7b213f5988db31e464a1b048724f63a31139f144a21ac61748a8fbb36bcf69",
+      "current_evidence": [
+        {
+          "bank": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ011_功能图正式精修/图片银行.json",
+          "file": "01_产品资产/02_可发布素材/00_最终上传/BQ011_A002/06_当前图文/功能/BQ011_hero.png",
+          "current_ids": [
+            "10000043725883"
+          ]
+        }
+      ],
+      "scope": "Exact native master digest matched against successful image-bank receipts and current original-ID formal bindings. Native review belongs to the linked exact plan and source proof; no generated image proves material, stock or performance."
     },
     {
       "key": "hero_135",
       "generated_file": "exec-125c386c-aaa2-4027-882f-f795a300f7c6.png",
-      "state": "GENERATED_NATIVE_REVIEW_REQUIRED"
+      "state": "REVIEWED_MASTER_CURRENTLY_BOUND",
+      "reconciled_at": "2026-10-21T01:54:49.310602+00:00",
+      "sha256": "7ac0761bcf9cfd2daac5d058297b896d00603b2e8e961401c84bdc4636d3310f",
+      "current_evidence": [
+        {
+          "bank": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ013_功能图正式精修/图片银行.json",
+          "file": "01_产品资产/02_可发布素材/00_最终上传/BQ013_T55836/06_当前图文/首图/H135.png",
+          "current_ids": [
+            "10000043763325",
+            "1601939638522"
+          ]
+        },
+        {
+          "bank": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ013_首图构图优化/图片银行.json",
+          "file": "01_产品资产/02_可发布素材/00_最终上传/BQ013_T55836/06_当前图文/首图/H135.png",
+          "current_ids": [
+            "10000043763325",
+            "1601939638522"
+          ]
+        }
+      ],
+      "scope": "Exact native master digest matched against successful image-bank receipts and current original-ID formal bindings. Native review belongs to the linked exact plan and source proof; no generated image proves material, stock or performance."
     }
   ]
 }

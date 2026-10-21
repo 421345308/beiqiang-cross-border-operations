@@ -1,0 +1,58 @@
+{
+  "family": "HR063_全图残留清理",
+  "kind": "mixed_slots",
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "ids": [
+    "1601943653995",
+    "1601943651966",
+    "1601943764325"
+  ],
+  "assets": {
+    "HR063_residual_12": {
+      "state": "PASS",
+      "file": "01_产品资产/02_可发布素材/HR063/06_当前图文/精修/HR063_residual_12.png",
+      "sha256": "c633e3e1fe18a326350f5674d4cce215fc23d1fcf28b34dcea1b7d5ca63a8f0c"
+    }
+  },
+  "main_replacements_by_id": {
+    "1601943653995": {},
+    "1601943651966": {},
+    "1601943764325": {}
+  },
+  "detail_replacements_by_id": {
+    "1601943653995": {
+      "https://sc04.alicdn.com/kf/H46c344679d7a428a8f276a050dbff214V.jpg": "HR063_residual_12"
+    },
+    "1601943651966": {
+      "https://sc04.alicdn.com/kf/H46c344679d7a428a8f276a050dbff214V.jpg": "HR063_residual_12"
+    },
+    "1601943764325": {
+      "https://sc04.alicdn.com/kf/H46c344679d7a428a8f276a050dbff214V.jpg": "HR063_residual_12"
+    }
+  },
+  "expected_old_by_id": {
+    "1601943653995": [
+      "https://sc04.alicdn.com/kf/H1e16360353de49de80276a9137c9b3aeB.jpg",
+      "https://sc04.alicdn.com/kf/H46c344679d7a428a8f276a050dbff214V.jpg",
+      "https://sc04.alicdn.com/kf/H8e1326b124754e0889f296569922e323D.jpg",
+      "https://sc04.alicdn.com/kf/Hf853bb3c8b8844b5a85e1607d8498cd1V.jpg"
+    ],
+    "1601943651966": [
+      "https://sc04.alicdn.com/kf/H46c344679d7a428a8f276a050dbff214V.jpg",
+      "https://sc04.alicdn.com/kf/H1e16360353de49de80276a9137c9b3aeB.jpg",
+      "https://sc04.alicdn.com/kf/Hf853bb3c8b8844b5a85e1607d8498cd1V.jpg",
+      "https://sc04.alicdn.com/kf/H8e1326b124754e0889f296569922e323D.jpg"
+    ],
+    "1601943764325": [
+      "https://sc04.alicdn.com/kf/H1e16360353de49de80276a9137c9b3aeB.jpg",
+      "https://sc04.alicdn.com/kf/H46c344679d7a428a8f276a050dbff214V.jpg",
+      "https://sc04.alicdn.com/kf/Hf853bb3c8b8844b5a85e1607d8498cd1V.jpg",
+      "https://sc04.alicdn.com/kf/H8e1326b124754e0889f296569922e323D.jpg"
+    ]
+  },
+  "source_evidence": [
+    "01_产品资产/02_可发布素材/HR063/06_当前图文/精修/HR063_residual_12_图稿依据.json"
+  ],
+  "scope": "Exact full-catalog residual diagnostic: remove internal source captions, old approximate weight/size repetition and repeated colour-pair filler. Use individually native-reviewed actual shoe entry, lacing, sidewall and tread proof. Preserve all other images/F1/company suite, SKU, commercial fields and copy."
+}

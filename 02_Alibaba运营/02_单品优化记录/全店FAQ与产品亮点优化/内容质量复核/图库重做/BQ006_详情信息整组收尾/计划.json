@@ -1,0 +1,56 @@
+{
+  "family": "BQ006_详情信息整组收尾",
+  "product_family": "BQ006",
+  "kind": "detail_slot",
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "ids": [
+    "1601939735063"
+  ],
+  "assets": {
+    "structure": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ006_M8811/06_当前图文/详情组/structure_d79103d0.png",
+      "sha256": "e184000d17cfaac3c8267e30fbe0e14e022d59a305137aa80db431f07f305d51",
+      "state": "PASS"
+    },
+    "component": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ006_M8811/06_当前图文/详情组/component_571ae232.png",
+      "sha256": "01309fbba8243aebbf27228a46a67ab572365d3aaf9eb3ee470e81d078040d2a",
+      "state": "PASS"
+    },
+    "colour_16f5a1cef0b9": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ006_M8811/06_当前图文/详情组/colour_16f5a1cef0b9.png",
+      "sha256": "d1aad7dbff256eaf1979207670732ca12e5d168ad9b68ec29fdf5bda9ec20469",
+      "state": "PASS"
+    },
+    "eu_16f5a1cef0b9": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ006_M8811/06_当前图文/详情组/eu_16f5a1cef0b9.png",
+      "sha256": "960d34c885cd248f3f38331aa1d3d3939418b88248bf3fbb84a01caff08e4987",
+      "state": "PASS"
+    }
+  },
+  "expected_old_by_id": {
+    "1601939735063": [
+      "https://sc04.alicdn.com/kf/Hfcbe8b46f9b14fca9fbf866c4111f427C.jpg",
+      "https://sc04.alicdn.com/kf/H0b150e1604654b51a0e3ae5097d987b6V.png",
+      "https://sc04.alicdn.com/kf/H2304a2c7d9ee4818b3544015f7d9da89M.jpg",
+      "https://sc04.alicdn.com/kf/H8291bac637984246a425b3313bb56219H.jpg"
+    ]
+  },
+  "detail_replacements_by_id": {
+    "1601939735063": {
+      "https://sc04.alicdn.com/kf/Hfcbe8b46f9b14fca9fbf866c4111f427C.jpg": "component",
+      "https://sc04.alicdn.com/kf/H2304a2c7d9ee4818b3544015f7d9da89M.jpg": "colour_16f5a1cef0b9",
+      "https://sc04.alicdn.com/kf/H8291bac637984246a425b3313bb56219H.jpg": "eu_16f5a1cef0b9"
+    }
+  },
+  "main_replacements_by_id": {
+    "1601939735063": {}
+  },
+  "source_evidence": [
+    "01_产品资产/02_可发布素材/00_最终上传/BQ006_M8811/06_当前图文/详情组/structure_d79103d0.json",
+    "01_产品资产/02_可发布素材/00_最终上传/BQ006_M8811/06_当前图文/详情组/component_571ae232.json",
+    "01_产品资产/02_可发布素材/00_最终上传/BQ006_M8811/06_当前图文/详情组/matrix_16f5a1cef0b9.json"
+  ],
+  "scope": "Replace the observed remaining generic/incorrect product-use or sole captions with four distinct real-product roles: construction, actual component/opening/on-foot detail, per-ID colour selection and exact EU matrix. Preserve all other product fields, SKU photos/rows/prices/stock, company suite and original F1 position. Only BQ007 two misleading main M2 captions are included."
+}

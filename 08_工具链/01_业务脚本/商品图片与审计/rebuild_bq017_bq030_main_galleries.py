@@ -10,6 +10,14 @@ import sys
 
 from PIL import Image, ImageDraw, ImageEnhance, ImageFont
 
+RETIRED_REASON = (
+    'RETIRED historical gallery generator: generic source/B2B badges, inherited '
+    'SKU facts and automatic image replacement must not be regenerated. Use the '
+    'current lifecycle SOP and exact per-product reviewed image plans.'
+)
+if __name__ == '__main__':
+    raise SystemExit(RETIRED_REASON)
+
 
 TARGET_RE = re.compile(r"^BQ0(1[7-9]|2[0-9]|30)_")
 GALLERY_FILES = ["01_main.jpg", "02_upper.jpg", "03_fit.jpg", "04_sole.jpg", "05_colors.jpg", "06_scene.jpg"]
@@ -377,6 +385,7 @@ def apply_candidates(products: list[Path]) -> None:
 
 
 def run(apply: bool) -> None:
+    raise RuntimeError(RETIRED_REASON)
     QA_ROOT.mkdir(parents=True, exist_ok=True)
     metadata = load_metadata()
     products = product_dirs()

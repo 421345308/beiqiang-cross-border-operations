@@ -1,0 +1,47 @@
+{
+  "family": "HR031_模板图正式清理",
+  "kind": "mixed_slots",
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "ids": [
+    "1601943665060",
+    "1601943651120"
+  ],
+  "assets": {
+    "HR031_proof_47": {
+      "file": "01_产品资产/02_可发布素材/HR031/06_当前图文/精修/HR031_proof_47.png",
+      "sha256": "3b3fb15042b7024b3229ca123ad5354432f0d1d82dbb1c000f89058fbb7bc766",
+      "state": "PASS"
+    }
+  },
+  "main_replacements_by_id": {
+    "1601943665060": {},
+    "1601943651120": {}
+  },
+  "detail_replacements_by_id": {
+    "1601943665060": {
+      "https://sc04.alicdn.com/kf/H5f811d8baffd4241935c1c92e2c0081fD.jpg": "HR031_proof_47"
+    },
+    "1601943651120": {
+      "https://sc04.alicdn.com/kf/H5f811d8baffd4241935c1c92e2c0081fD.jpg": "HR031_proof_47"
+    }
+  },
+  "expected_old_by_id": {
+    "1601943665060": [
+      "https://sc04.alicdn.com/kf/H3be4f143445844eea1e0ff8b6b4ffd72N.jpg",
+      "https://sc04.alicdn.com/kf/H42b828840a7f41c4a2f662ed3d5f844av.jpg",
+      "https://sc04.alicdn.com/kf/H90baaffe5ff64a149bf8bfe908228bf6A.jpg",
+      "https://sc04.alicdn.com/kf/H5f811d8baffd4241935c1c92e2c0081fD.jpg"
+    ],
+    "1601943651120": [
+      "https://sc04.alicdn.com/kf/H5f811d8baffd4241935c1c92e2c0081fD.jpg",
+      "https://sc04.alicdn.com/kf/H3be4f143445844eea1e0ff8b6b4ffd72N.jpg",
+      "https://sc04.alicdn.com/kf/H90baaffe5ff64a149bf8bfe908228bf6A.jpg",
+      "https://sc04.alicdn.com/kf/H42b828840a7f41c4a2f662ed3d5f844av.jpg"
+    ]
+  },
+  "source_evidence": [
+    "01_产品资产/02_可发布素材/HR031/06_当前图文/精修/HR031_proof_47_图稿依据.json"
+  ],
+  "scope": "Only exact individually reviewed image slots. Replace internal production captions with real-shoe visible construction, exact per-ID colour panels and distinct details. Preserve existing F1 position, approved company suite, text, SKU IDs/axes, all prices, stock and commercial fields."
+}

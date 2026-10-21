@@ -33,7 +33,7 @@
 ### BQ006 / M8811 · 1601814931739
 
 - 平台链接：[1601814931739](https://www.alibaba.com/product-detail/Wholesale-Summer-Autumn-Breathable-Anti-Slip_1601814931739.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601814931739/formal_get.json)；UTC 2026-10-20T11:25:49.207702+00:00。
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601814931739/formal_get.json)；UTC 2026-10-20T21:12:05.135323+00:00。
 - 当前正式标题：Knit Lace-Up Casual Sneakers with Chunky EVA Sole and Raised Toe Detail Wholesale
 - 审核/展示：approved / Y；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
@@ -55,7 +55,7 @@
 ### BQ006-R1 / M8811 · 1601939655430
 
 - 平台链接：[1601939655430](https://www.alibaba.com/product-detail/White-Pink-All-Seasons-Casual-Walking_1601939655430.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939655430/formal_get.json)；UTC 2026-10-20T10:50:16.511117+00:00。
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939655430/formal_get.json)；UTC 2026-10-20T21:12:09.379706+00:00。
 - 当前正式标题：Knit Lace-Up Casual Sneakers with Chunky EVA Sole and Raised Toe Detail Wholesale
 - 审核/展示：approved / Y；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
@@ -77,7 +77,7 @@
 ### BQ006-W1 / M8811 · 1601939660427
 
 - 平台链接：[1601939660427](https://www.alibaba.com/product-detail/Wholesale-White-Green-Walking-Style-Shoes_1601939660427.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939660427/formal_get.json)；UTC 2026-10-20T10:50:22.398634+00:00。
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939660427/formal_get.json)；UTC 2026-10-20T21:12:13.552069+00:00。
 - 当前正式标题：Knit Lace-Up Casual Sneakers with Chunky EVA Sole and Raised Toe Detail Wholesale
 - 审核/展示：approved / Y；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
@@ -99,7 +99,7 @@
 ### BQ006-O1 / M8811 · 1601939735063
 
 - 平台链接：[1601939735063](https://www.alibaba.com/product-detail/All-Black-Breathable-Walking-Shoes-Knit_1601939735063.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939735063/formal_get.json)；UTC 2026-10-20T14:05:11.920253+00:00。
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939735063/formal_get.json)；UTC 2026-10-21T01:35:13.074755+00:00。
 - 当前正式标题：Knit Lace-Up Casual Sneakers with Chunky EVA Sole and Raised Toe Detail Wholesale
 - 审核/展示：approved / Y；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
@@ -617,5 +617,21 @@
 - [prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ006_%E5%8A%9F%E8%83%BD%E5%9B%BE%E6%AD%A3%E5%BC%8F%E7%B2%BE%E4%BF%AE/%E5%95%86%E5%93%81/1601939735063/prepared.json)
 - [update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ006_%E5%8A%9F%E8%83%BD%E5%9B%BE%E6%AD%A3%E5%BC%8F%E7%B2%BE%E4%BF%AE/%E5%95%86%E5%93%81/1601939735063/update_receipt.json)
 - [verification.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ006_%E5%8A%9F%E8%83%BD%E5%9B%BE%E6%AD%A3%E5%BC%8F%E7%B2%BE%E4%BF%AE/%E5%95%86%E5%93%81/1601939735063/verification.json)
+- [计划.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ006_%E6%A8%A1%E6%9D%BF%E5%9B%BE%E6%AD%A3%E5%BC%8F%E6%B8%85%E7%90%86/%E8%AE%A1%E5%88%92.json)
+- [图片银行.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ006_%E6%A8%A1%E6%9D%BF%E5%9B%BE%E6%AD%A3%E5%BC%8F%E6%B8%85%E7%90%86/%E5%9B%BE%E7%89%87%E9%93%B6%E8%A1%8C.json)
+- [prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ006_%E6%A8%A1%E6%9D%BF%E5%9B%BE%E6%AD%A3%E5%BC%8F%E6%B8%85%E7%90%86/%E5%95%86%E5%93%81/1601814931739/prepared.json)
+- [update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ006_%E6%A8%A1%E6%9D%BF%E5%9B%BE%E6%AD%A3%E5%BC%8F%E6%B8%85%E7%90%86/%E5%95%86%E5%93%81/1601814931739/update_receipt.json)
+- [verification.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ006_%E6%A8%A1%E6%9D%BF%E5%9B%BE%E6%AD%A3%E5%BC%8F%E6%B8%85%E7%90%86/%E5%95%86%E5%93%81/1601814931739/verification.json)
+- [prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ006_%E6%A8%A1%E6%9D%BF%E5%9B%BE%E6%AD%A3%E5%BC%8F%E6%B8%85%E7%90%86/%E5%95%86%E5%93%81/1601939655430/prepared.json)
+- [update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ006_%E6%A8%A1%E6%9D%BF%E5%9B%BE%E6%AD%A3%E5%BC%8F%E6%B8%85%E7%90%86/%E5%95%86%E5%93%81/1601939655430/update_receipt.json)
+- [verification.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ006_%E6%A8%A1%E6%9D%BF%E5%9B%BE%E6%AD%A3%E5%BC%8F%E6%B8%85%E7%90%86/%E5%95%86%E5%93%81/1601939655430/verification.json)
+- [prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ006_%E6%A8%A1%E6%9D%BF%E5%9B%BE%E6%AD%A3%E5%BC%8F%E6%B8%85%E7%90%86/%E5%95%86%E5%93%81/1601939660427/prepared.json)
+- [update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ006_%E6%A8%A1%E6%9D%BF%E5%9B%BE%E6%AD%A3%E5%BC%8F%E6%B8%85%E7%90%86/%E5%95%86%E5%93%81/1601939660427/update_receipt.json)
+- [verification.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ006_%E6%A8%A1%E6%9D%BF%E5%9B%BE%E6%AD%A3%E5%BC%8F%E6%B8%85%E7%90%86/%E5%95%86%E5%93%81/1601939660427/verification.json)
+- [计划.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ006_%E8%AF%A6%E6%83%85%E4%BF%A1%E6%81%AF%E6%95%B4%E7%BB%84%E6%94%B6%E5%B0%BE/%E8%AE%A1%E5%88%92.json)
+- [图片银行.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ006_%E8%AF%A6%E6%83%85%E4%BF%A1%E6%81%AF%E6%95%B4%E7%BB%84%E6%94%B6%E5%B0%BE/%E5%9B%BE%E7%89%87%E9%93%B6%E8%A1%8C.json)
+- [prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ006_%E8%AF%A6%E6%83%85%E4%BF%A1%E6%81%AF%E6%95%B4%E7%BB%84%E6%94%B6%E5%B0%BE/%E5%95%86%E5%93%81/1601939735063/prepared.json)
+- [update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ006_%E8%AF%A6%E6%83%85%E4%BF%A1%E6%81%AF%E6%95%B4%E7%BB%84%E6%94%B6%E5%B0%BE/%E5%95%86%E5%93%81/1601939735063/update_receipt.json)
+- [verification.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ006_%E8%AF%A6%E6%83%85%E4%BF%A1%E6%81%AF%E6%95%B4%E7%BB%84%E6%94%B6%E5%B0%BE/%E5%95%86%E5%93%81/1601939735063/verification.json)
 
 原件、正式回执与当前资料通过本页关联，不再复制成第二套商品库。

@@ -1,0 +1,61 @@
+{
+  "family": "BQ005",
+  "execution_key": "BQ005_规格照片完整修复",
+  "ids": [
+    "1601815020244",
+    "1601939631570",
+    "1601939712176",
+    "1601957629892",
+    "1601957664983",
+    "1601957855049",
+    "1601957778956",
+    "1601939599850"
+  ],
+  "source_id": null,
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "source_evidence": [
+    "01_产品资产/01_原始数据包/已整理_BQ005_A503_贝强鞋业A503夏季镂空男女鞋35-45批55元/贝强鞋业A503夏季镂空男女鞋35-45批55元/620/1_05.jpg",
+    "01_产品资产/02_可发布素材/00_最终上传/BQ005_A503/06_当前图文/规格照片/White.json"
+  ],
+  "image_assets": {
+    "White": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ005_A503/06_当前图文/规格照片/White.png",
+      "sha256": "8c0ccdfde27c134de5386c546e2ef436f2e2be4ba28c69d8c64d1b77029e3f70",
+      "image_review": "PASS"
+    }
+  },
+  "rebind_image_roles": {
+    "White": "White"
+  },
+  "expected_images_by_id": {
+    "1601815020244": {
+      "White": "https://sc04.alicdn.com/kf/H86068359efb74c58b35ddde9e1a82f46o.jpg"
+    },
+    "1601939631570": {
+      "White": "https://sc04.alicdn.com/kf/Seb2585b5092b440daa2d5354471ef824C.jpg"
+    },
+    "1601939712176": {
+      "White": "https://sc04.alicdn.com/kf/Seb2585b5092b440daa2d5354471ef824C.jpg"
+    },
+    "1601957629892": {
+      "White": "https://sc04.alicdn.com/kf/Seb2585b5092b440daa2d5354471ef824C.jpg"
+    },
+    "1601957664983": {
+      "White": "https://sc04.alicdn.com/kf/Seb2585b5092b440daa2d5354471ef824C.jpg"
+    },
+    "1601957855049": {
+      "White": "https://sc04.alicdn.com/kf/Seb2585b5092b440daa2d5354471ef824C.jpg"
+    },
+    "1601957778956": {
+      "White": "https://sc04.alicdn.com/kf/Seb2585b5092b440daa2d5354471ef824C.jpg"
+    },
+    "1601939599850": {
+      "White": "https://sc04.alicdn.com/kf/Seb2585b5092b440daa2d5354471ef824C.jpg"
+    }
+  },
+  "scope": "Only replace the exact matching existing colour SKU photograph. Preserve all IDs, colour/size combinations, prices, stock, text and gallery.",
+  "rebind_images": {
+    "White": "https://sc04.alicdn.com/kf/H00924263d96248659b015b1f9c48b386V/286385890/H00924263d96248659b015b1f9c48b386V.png"
+  }
+}

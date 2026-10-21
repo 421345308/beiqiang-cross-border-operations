@@ -1,0 +1,82 @@
+{
+  "family": "BQ028_详情信息整组收尾",
+  "product_family": "BQ028",
+  "kind": "detail_slot",
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "ids": [
+    "1601939625627",
+    "1601939705262",
+    "1601939720204"
+  ],
+  "assets": {
+    "structure": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ028_BISCUIT/06_当前图文/详情组/structure_9480d094.png",
+      "sha256": "efce562ef6bd851ea74b7ef0294bf35da8abc079a4e9d1ea5c14504fe4f8da44",
+      "state": "PASS"
+    },
+    "component": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ028_BISCUIT/06_当前图文/详情组/component_5b4693a4.png",
+      "sha256": "dcc7541d5da4a46455e24f855e65dd4db9bee0a6171645ac0b8c590a16e30070",
+      "state": "PASS"
+    },
+    "colour_78554daf93c4": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ028_BISCUIT/06_当前图文/详情组/colour_78554daf93c4.png",
+      "sha256": "a320af63d405dd74d05f74d5727132470b3d5c82adb30f34963c454512d29d69",
+      "state": "PASS"
+    },
+    "eu_78554daf93c4": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ028_BISCUIT/06_当前图文/详情组/eu_78554daf93c4.png",
+      "sha256": "b69f09f4822bdbc08b44c2399da0ffb60eb2b8ffd3b812dd10910d9580acfee5",
+      "state": "PASS"
+    }
+  },
+  "expected_old_by_id": {
+    "1601939625627": [
+      "https://sc04.alicdn.com/kf/S64cfcb466e56406a96915a3e63b8a4c2C.jpg",
+      "https://sc04.alicdn.com/kf/H1d9679818a954e5d8be80b5a8a3f1e27K.png",
+      "https://sc04.alicdn.com/kf/H012dffbee27c42fda380f26b0be0f6b74.jpg",
+      "https://sc04.alicdn.com/kf/H72a1517192a044dc802c57a25cd82abc5.png"
+    ],
+    "1601939705262": [
+      "https://sc04.alicdn.com/kf/H72a1517192a044dc802c57a25cd82abc5.png",
+      "https://sc04.alicdn.com/kf/S64cfcb466e56406a96915a3e63b8a4c2C.jpg",
+      "https://sc04.alicdn.com/kf/H012dffbee27c42fda380f26b0be0f6b74.jpg",
+      "https://sc04.alicdn.com/kf/H1d9679818a954e5d8be80b5a8a3f1e27K.png"
+    ],
+    "1601939720204": [
+      "https://sc04.alicdn.com/kf/H012dffbee27c42fda380f26b0be0f6b74.jpg",
+      "https://sc04.alicdn.com/kf/H1d9679818a954e5d8be80b5a8a3f1e27K.png",
+      "https://sc04.alicdn.com/kf/H72a1517192a044dc802c57a25cd82abc5.png",
+      "https://sc04.alicdn.com/kf/S64cfcb466e56406a96915a3e63b8a4c2C.jpg"
+    ]
+  },
+  "detail_replacements_by_id": {
+    "1601939625627": {
+      "https://sc04.alicdn.com/kf/S64cfcb466e56406a96915a3e63b8a4c2C.jpg": "component",
+      "https://sc04.alicdn.com/kf/H012dffbee27c42fda380f26b0be0f6b74.jpg": "colour_78554daf93c4",
+      "https://sc04.alicdn.com/kf/H72a1517192a044dc802c57a25cd82abc5.png": "eu_78554daf93c4"
+    },
+    "1601939705262": {
+      "https://sc04.alicdn.com/kf/H72a1517192a044dc802c57a25cd82abc5.png": "component",
+      "https://sc04.alicdn.com/kf/S64cfcb466e56406a96915a3e63b8a4c2C.jpg": "colour_78554daf93c4",
+      "https://sc04.alicdn.com/kf/H012dffbee27c42fda380f26b0be0f6b74.jpg": "eu_78554daf93c4"
+    },
+    "1601939720204": {
+      "https://sc04.alicdn.com/kf/H012dffbee27c42fda380f26b0be0f6b74.jpg": "component",
+      "https://sc04.alicdn.com/kf/H72a1517192a044dc802c57a25cd82abc5.png": "colour_78554daf93c4",
+      "https://sc04.alicdn.com/kf/S64cfcb466e56406a96915a3e63b8a4c2C.jpg": "eu_78554daf93c4"
+    }
+  },
+  "main_replacements_by_id": {
+    "1601939625627": {},
+    "1601939705262": {},
+    "1601939720204": {}
+  },
+  "source_evidence": [
+    "01_产品资产/02_可发布素材/00_最终上传/BQ028_BISCUIT/06_当前图文/详情组/structure_9480d094.json",
+    "01_产品资产/02_可发布素材/00_最终上传/BQ028_BISCUIT/06_当前图文/详情组/component_5b4693a4.json",
+    "01_产品资产/02_可发布素材/00_最终上传/BQ028_BISCUIT/06_当前图文/详情组/matrix_78554daf93c4.json"
+  ],
+  "scope": "Replace the observed remaining generic/incorrect product-use or sole captions with four distinct real-product roles: construction, actual component/opening/on-foot detail, per-ID colour selection and exact EU matrix. Preserve all other product fields, SKU photos/rows/prices/stock, company suite and original F1 position. Only BQ007 two misleading main M2 captions are included."
+}

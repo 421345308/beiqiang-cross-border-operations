@@ -1,0 +1,36 @@
+{
+  "family": "HR001_模板图正式清理",
+  "kind": "mixed_slots",
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "ids": [
+    "1601943493004"
+  ],
+  "assets": {
+    "HR001_proof_39": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ1001_26NC1328/06_当前图文/精修/HR001_proof_39.png",
+      "sha256": "b6a7b21dea5b66910be68e59460a7f9837b203b1877f2dfac1400232395abe74",
+      "state": "PASS"
+    }
+  },
+  "main_replacements_by_id": {
+    "1601943493004": {}
+  },
+  "detail_replacements_by_id": {
+    "1601943493004": {
+      "https://sc04.alicdn.com/kf/H4676de262332401999100fccb124eba6C.png": "HR001_proof_39"
+    }
+  },
+  "expected_old_by_id": {
+    "1601943493004": [
+      "https://sc04.alicdn.com/kf/Heddf16d8e73b4865ac3bbbb3921409e3t.png",
+      "https://sc04.alicdn.com/kf/H8bcce1c0a999441291c320d28955a3dbd.png",
+      "https://sc04.alicdn.com/kf/H4676de262332401999100fccb124eba6C.png",
+      "https://sc04.alicdn.com/kf/He0e737037a53468298f46a3fca8d2cc5m.png"
+    ]
+  },
+  "source_evidence": [
+    "01_产品资产/02_可发布素材/00_最终上传/BQ1001_26NC1328/06_当前图文/精修/HR001_proof_39_图稿依据.json"
+  ],
+  "scope": "Only exact individually reviewed image slots. Replace internal production captions with real-shoe visible construction, exact per-ID colour panels and distinct details. Preserve existing F1 position, approved company suite, text, SKU IDs/axes, all prices, stock and commercial fields."
+}

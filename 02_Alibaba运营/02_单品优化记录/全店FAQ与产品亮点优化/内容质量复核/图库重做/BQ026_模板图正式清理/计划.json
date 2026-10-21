@@ -1,0 +1,75 @@
+{
+  "family": "BQ026_模板图正式清理",
+  "kind": "mixed_slots",
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "ids": [
+    "10000044011929",
+    "1601939714238",
+    "1601939725201",
+    "1601939745065"
+  ],
+  "assets": {
+    "BQ026_proof_28": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ026_T5828/06_当前图文/精修/BQ026_proof_28.png",
+      "sha256": "c02712b36805d950bfbfa607ef4f247bd99ee6c999719d4688b18e33d9e02586",
+      "state": "PASS"
+    },
+    "BQ026_proof_29": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ026_T5828/06_当前图文/精修/BQ026_proof_29.png",
+      "sha256": "992ec61507eb0e2e936c069bb8126acd14a2f02ddf8f4236e1089d4e5dea10fb",
+      "state": "PASS"
+    }
+  },
+  "main_replacements_by_id": {
+    "10000044011929": {
+      "https://sc04.alicdn.com/kf/Hdc55960dd0d14c02ad77cb89bac0421ex.jpg": "BQ026_proof_28"
+    },
+    "1601939714238": {},
+    "1601939725201": {},
+    "1601939745065": {}
+  },
+  "detail_replacements_by_id": {
+    "10000044011929": {},
+    "1601939714238": {
+      "https://sc04.alicdn.com/kf/S7d5287ffe1e8471da4fb21b50c2051dcT.jpg": "BQ026_proof_29"
+    },
+    "1601939725201": {
+      "https://sc04.alicdn.com/kf/S7d5287ffe1e8471da4fb21b50c2051dcT.jpg": "BQ026_proof_29"
+    },
+    "1601939745065": {
+      "https://sc04.alicdn.com/kf/S7d5287ffe1e8471da4fb21b50c2051dcT.jpg": "BQ026_proof_29"
+    }
+  },
+  "expected_old_by_id": {
+    "10000044011929": [
+      "https://sc04.alicdn.com/kf/S95e907eddb5446818055f69be65dc6a6T.jpg",
+      "https://sc04.alicdn.com/kf/Sfbd4e01f42504025a4098b5c715d8124N.jpg",
+      "https://sc04.alicdn.com/kf/S19dd11c05ae14c7fa6d38c064ed52d232.jpg",
+      "https://sc04.alicdn.com/kf/S69f2e4a3e2cf4925a9a4f0509a227c9cv.jpg"
+    ],
+    "1601939714238": [
+      "https://sc04.alicdn.com/kf/S7d5287ffe1e8471da4fb21b50c2051dcT.jpg",
+      "https://sc04.alicdn.com/kf/Se773778ed0cd45bb8aeaa222146e6eb8Q.jpg",
+      "https://sc04.alicdn.com/kf/S68186673a54d451b9f132a6ea4b2a308R.jpg",
+      "https://sc04.alicdn.com/kf/H7681a3e8cc0747ec87bf1b6a06e73d30j.png"
+    ],
+    "1601939725201": [
+      "https://sc04.alicdn.com/kf/H7681a3e8cc0747ec87bf1b6a06e73d30j.png",
+      "https://sc04.alicdn.com/kf/S68186673a54d451b9f132a6ea4b2a308R.jpg",
+      "https://sc04.alicdn.com/kf/Se773778ed0cd45bb8aeaa222146e6eb8Q.jpg",
+      "https://sc04.alicdn.com/kf/S7d5287ffe1e8471da4fb21b50c2051dcT.jpg"
+    ],
+    "1601939745065": [
+      "https://sc04.alicdn.com/kf/S7d5287ffe1e8471da4fb21b50c2051dcT.jpg",
+      "https://sc04.alicdn.com/kf/H7681a3e8cc0747ec87bf1b6a06e73d30j.png",
+      "https://sc04.alicdn.com/kf/S68186673a54d451b9f132a6ea4b2a308R.jpg",
+      "https://sc04.alicdn.com/kf/Se773778ed0cd45bb8aeaa222146e6eb8Q.jpg"
+    ]
+  },
+  "source_evidence": [
+    "01_产品资产/02_可发布素材/00_最终上传/BQ026_T5828/06_当前图文/精修/BQ026_proof_28_图稿依据.json",
+    "01_产品资产/02_可发布素材/00_最终上传/BQ026_T5828/06_当前图文/精修/BQ026_proof_29_图稿依据.json"
+  ],
+  "scope": "Only exact individually reviewed image slots. Replace internal production captions with real-shoe visible construction, exact per-ID colour panels and distinct details. Preserve existing F1 position, approved company suite, text, SKU IDs/axes, all prices, stock and commercial fields."
+}

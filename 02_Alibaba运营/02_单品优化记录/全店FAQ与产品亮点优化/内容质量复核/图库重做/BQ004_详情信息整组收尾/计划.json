@@ -1,0 +1,104 @@
+{
+  "family": "BQ004_详情信息整组收尾",
+  "product_family": "BQ004",
+  "kind": "detail_slot",
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "ids": [
+    "10000043201799",
+    "1601939626612",
+    "1601939700200",
+    "1601939738037"
+  ],
+  "assets": {
+    "structure": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ004_A502/06_当前图文/详情组/structure_9c33ceb2.png",
+      "sha256": "0c01452d6fb763c44dbf12a654a08aa72922f851ac013a34c3e9a13e696544df",
+      "state": "PASS"
+    },
+    "component": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ004_A502/06_当前图文/详情组/component_86d9005c.png",
+      "sha256": "571596af95438c17c49fe6cb300916d253538a4ea0db6de88e5252a57b83a362",
+      "state": "PASS"
+    },
+    "colour_3e9fb187a1b6": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ004_A502/06_当前图文/详情组/colour_3e9fb187a1b6.png",
+      "sha256": "3da75fdaa8a509563116fd7e8b0c39f209ceb1509c279a88818077ca060cc22a",
+      "state": "PASS"
+    },
+    "eu_3e9fb187a1b6": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ004_A502/06_当前图文/详情组/eu_3e9fb187a1b6.png",
+      "sha256": "fbf3c4d1578accffc492f45b4c1d35afaaaf778e906fadbc4a181c383c4b128a",
+      "state": "PASS"
+    },
+    "colour_ca4ff22ea087": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ004_A502/06_当前图文/详情组/colour_ca4ff22ea087.png",
+      "sha256": "71c55e91d9e3792e05ae86e48fbc197b3558f053c1502efb826eaf5e7e171232",
+      "state": "PASS"
+    },
+    "eu_ca4ff22ea087": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ004_A502/06_当前图文/详情组/eu_ca4ff22ea087.png",
+      "sha256": "bbdf1ac2fbff9ae4bae0972f78dfc9e369cb9caa08e3a2c6f83442b488cac431",
+      "state": "PASS"
+    }
+  },
+  "expected_old_by_id": {
+    "10000043201799": [
+      "https://sc04.alicdn.com/kf/Hddcb13425e3b4096b7e798938c64eacfg.png",
+      "https://sc04.alicdn.com/kf/Hfdb424ec28ea4676b1be2bf49277d52bL.png",
+      "https://sc04.alicdn.com/kf/Hffb79acd7a814d308942fa926ff5c132F.png",
+      "https://sc04.alicdn.com/kf/A014b8a3122d5493684e6b8dc0ac19f609.png"
+    ],
+    "1601939626612": [
+      "https://sc04.alicdn.com/kf/Hfdb424ec28ea4676b1be2bf49277d52bL.png",
+      "https://sc04.alicdn.com/kf/A28ef113cd8eb48b6bad70573678f1d18i.jpg",
+      "https://sc04.alicdn.com/kf/Sd1f7dcc9482f4516a0c8a72b32bdc55c7.png",
+      "https://sc04.alicdn.com/kf/S92e2dfe5be1c46eebe5360ba896397bd0.png"
+    ],
+    "1601939700200": [
+      "https://sc04.alicdn.com/kf/Hfdb424ec28ea4676b1be2bf49277d52bL.png",
+      "https://sc04.alicdn.com/kf/A28ef113cd8eb48b6bad70573678f1d18i.jpg",
+      "https://sc04.alicdn.com/kf/Sd1f7dcc9482f4516a0c8a72b32bdc55c7.png",
+      "https://sc04.alicdn.com/kf/S92e2dfe5be1c46eebe5360ba896397bd0.png"
+    ],
+    "1601939738037": [
+      "https://sc04.alicdn.com/kf/A28ef113cd8eb48b6bad70573678f1d18i.jpg",
+      "https://sc04.alicdn.com/kf/S92e2dfe5be1c46eebe5360ba896397bd0.png",
+      "https://sc04.alicdn.com/kf/Sd1f7dcc9482f4516a0c8a72b32bdc55c7.png",
+      "https://sc04.alicdn.com/kf/Hfdb424ec28ea4676b1be2bf49277d52bL.png"
+    ]
+  },
+  "detail_replacements_by_id": {
+    "10000043201799": {
+      "https://sc04.alicdn.com/kf/A014b8a3122d5493684e6b8dc0ac19f609.png": "component"
+    },
+    "1601939626612": {
+      "https://sc04.alicdn.com/kf/A28ef113cd8eb48b6bad70573678f1d18i.jpg": "component",
+      "https://sc04.alicdn.com/kf/Sd1f7dcc9482f4516a0c8a72b32bdc55c7.png": "colour_ca4ff22ea087",
+      "https://sc04.alicdn.com/kf/S92e2dfe5be1c46eebe5360ba896397bd0.png": "eu_ca4ff22ea087"
+    },
+    "1601939700200": {
+      "https://sc04.alicdn.com/kf/A28ef113cd8eb48b6bad70573678f1d18i.jpg": "component",
+      "https://sc04.alicdn.com/kf/Sd1f7dcc9482f4516a0c8a72b32bdc55c7.png": "colour_ca4ff22ea087",
+      "https://sc04.alicdn.com/kf/S92e2dfe5be1c46eebe5360ba896397bd0.png": "eu_ca4ff22ea087"
+    },
+    "1601939738037": {
+      "https://sc04.alicdn.com/kf/A28ef113cd8eb48b6bad70573678f1d18i.jpg": "component",
+      "https://sc04.alicdn.com/kf/S92e2dfe5be1c46eebe5360ba896397bd0.png": "colour_ca4ff22ea087",
+      "https://sc04.alicdn.com/kf/Sd1f7dcc9482f4516a0c8a72b32bdc55c7.png": "eu_ca4ff22ea087"
+    }
+  },
+  "main_replacements_by_id": {
+    "10000043201799": {},
+    "1601939626612": {},
+    "1601939700200": {},
+    "1601939738037": {}
+  },
+  "source_evidence": [
+    "01_产品资产/02_可发布素材/00_最终上传/BQ004_A502/06_当前图文/详情组/structure_9c33ceb2.json",
+    "01_产品资产/02_可发布素材/00_最终上传/BQ004_A502/06_当前图文/详情组/component_86d9005c.json",
+    "01_产品资产/02_可发布素材/00_最终上传/BQ004_A502/06_当前图文/详情组/matrix_3e9fb187a1b6.json",
+    "01_产品资产/02_可发布素材/00_最终上传/BQ004_A502/06_当前图文/详情组/matrix_ca4ff22ea087.json"
+  ],
+  "scope": "Replace the observed remaining generic/incorrect product-use or sole captions with four distinct real-product roles: construction, actual component/opening/on-foot detail, per-ID colour selection and exact EU matrix. Preserve all other product fields, SKU photos/rows/prices/stock, company suite and original F1 position. Only BQ007 two misleading main M2 captions are included."
+}

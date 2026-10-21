@@ -1,0 +1,26 @@
+{
+  "family": "BQ021_主图配色派生同步",
+  "product_family": "BQ021",
+  "kind": "main_slot",
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "ids": [
+    "1601838963947"
+  ],
+  "assets": {
+    "main_colour": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ021_K6212/06_当前图文/详情组/main_colour_current.png",
+      "sha256": "300d3b9d8bb95d0064b17d47d8028a239449acd3a5d006a852d953cf5efae43e",
+      "state": "PASS"
+    }
+  },
+  "main_replacements_by_id": {
+    "1601838963947": {
+      "https://sc04.alicdn.com/kf/H7de6cc1eda3b4e7aaabcb2f472efc981z.png": "main_colour"
+    }
+  },
+  "source_evidence": [
+    "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601838963947/formal_get.json"
+  ],
+  "scope": "Only refresh the existing M5 exact current-colour/EU diagram using the repaired single-Grey photograph. Preserve every other formal field and original F1 position."
+}

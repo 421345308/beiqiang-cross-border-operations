@@ -28,3 +28,9 @@ API 核验只证明正式字段、审核和评分，不代表原尺寸图审、�
 `repair_added_sku_marker.py prepare|submit|verify|sync`仅执行负责人已明确确认的R1811三条新增33SKU/条的999可询货标记。先对原33与新33的身份、逐色EU范围和当前独立库存值；增量API每ID只提交一次，未知结果不得重放。`reconcile_r1811_content.py`对后续图库正式回读与前序库存、颜色、文案证据作综合验收，保留旧评分报告。`audit_colour_bindings.py`输出全目录SKU颜色图片联系表，筛查成功不代表修复通过；`sync_content_media_index.py`只按图片银行身份和SHA绑定当前本地素材，不复制媒体。
 
 `repair_reviewed_gallery.py`只执行已审图片计划，支持完整图组、只换主图库、按精确图片身份纠正详情图。不同链接工厂图位置与get/render的详情排列可以不同，不能按第六槽/第一张猜；单图纠错逐原图ID核图集归属与多重集合，图库重做核有序首图。CDN原图/缩略形式只按已核身份等价，未知格式保持失败。`render_content_quality_preview.py`生成唯一图片复核页，出图/提交/正式生效分别展示。
+
+`run_reviewed_image_repairs.py`按已审索引执行、回读与串行本地同步；先完成上一阶段进程再启动依赖阶段，不能把返回会话号当作完成。`verify_current_store_image_closure.py read|audit`完整枚举当前目录；已有全量读后可用`read --ids ...`刷新受影响原ID，核对六主图、唯一标准工厂图、产品详情图集、SKU照片及全部SKU行与本地一致。`reconcile_current_sku_photos.py`独立核当前规格照片，允许后续已授权图库修改具有自己的证明，保留最初完整字段回执。`summarize_image_repairs.py`按逐ID当前证据汇总，重叠批次不能相加；OCR与API评分均不能代替逐张原件对照。
+
+历史`organize_20260616_new_packages.py`与`rebuild_bq017_bq030_main_galleries.py`已经退役，不能重新生成旧制作标签、沿用默认重量/尺码或覆盖当前已审图。现行图稿与提示词在对应产品资产入口及其计划中维护。
+
+`reconcile_reviewed_detail_sets.py`核对已逐张查看的详情整组方案：实物结构、真实部件或穿着细节、配色、EU矩阵各有作用；按原商品ID检查当前绑定与SKU色码、原图校验值。它只把人工图审决定与当前正式字段关联，不从评分推断视觉质量。最新整组方案在业务入口的`详情图组收尾执行.json`，旧用途模板与不准确弹力/闭合措辞不再执行。

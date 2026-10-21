@@ -33,7 +33,7 @@
 ### BQ-007 · 1601825070472
 
 - 平台链接：[1601825070472](https://www.alibaba.com/product-detail/Wholesale-Slip-On-Knit-Walking-Shoes_1601825070472.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601825070472/formal_get.json)；UTC 2026-10-20T14:05:18.318391+00:00。
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601825070472/formal_get.json)；UTC 2026-10-20T21:12:18.174805+00:00。
 - 当前正式标题：Elastic Lace Slip-On Knit Walking Shoes with Sculpted Foam Sole Casual Sneakers Wholesale
 - 审核/展示：approved / Y；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
@@ -55,7 +55,7 @@
 ### BQ007-W1 / L0017 · 1601939585913
 
 - 平台链接：[1601939585913](https://www.alibaba.com/product-detail/Men-s-Slip-On-Knit-Walking_1601939585913.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939585913/formal_get.json)；UTC 2026-10-20T17:05:35.484477+00:00。
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939585913/formal_get.json)；UTC 2026-10-21T01:35:14.205753+00:00。
 - 当前正式标题：Elastic Lace Slip-On Knit Walking Shoes with Sculpted Foam Sole Casual Sneakers Wholesale
 - 审核/展示：approved / Y；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
@@ -81,7 +81,7 @@
 ### BQ007-O1 / L0017 · 1601939701201
 
 - 平台链接：[1601939701201](https://www.alibaba.com/product-detail/Slip-On-Knit-Breathable-Light-Weight_1601939701201.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939701201/formal_get.json)；UTC 2026-10-20T14:05:22.429068+00:00。
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939701201/formal_get.json)；UTC 2026-10-21T01:35:28.580244+00:00。
 - 当前正式标题：Elastic Lace Slip-On Knit Walking Shoes with Sculpted Foam Sole Casual Sneakers Wholesale
 - 审核/展示：approved / Y；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
@@ -89,7 +89,7 @@
 - 店内分组：Slip-On Casual Walking Shoes · 972130291；[平台分组回执](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%BA%97%E5%86%85%E5%88%86%E7%BB%84/972130291.json)。
 - 本地平台素材：[唯一素材索引](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90%E6%B8%85%E5%8D%95.json)；图片按内容哈希保存一份，图库/详情/SKU通过索引引用。
   - M1：本地图片待补；官方来源 https://sc04.alicdn.com/kf/H4e9813ca8cd549cb961a58b3fe64d76eJ.png
-  - M2：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/80bd1eddd2e9b41af705cdde49200c0c70dd836710c47bef7507882b2cf84f03.jpg) · 1200×1200
+  - M2：本地图片待补；官方来源 https://sc04.alicdn.com/kf/H2f8745a920ae4cdc97032b7ea59a20eaZ.png
   - M3：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/454edb408f2b5f9634b784af4aeaef399d04b21eb49c5b1a47af8772a080f26d.jpg) · 750×1000
   - M4：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/899f873a8c6c5d15d6c9fe37bb0b01fea402b2b71a6f7e7eebaaa9ab34b185ee.jpg) · 750×1000
   - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/070e0e736f18325a2d6d8375fd0f24f63dbcba47c6ade9e4bdbc0a6a561d883f.jpg) · 750×1000
@@ -107,7 +107,7 @@
 ### BQ007-R1 / L0017 · 1601939711161
 
 - 平台链接：[1601939711161](https://www.alibaba.com/product-detail/Slip-On-Knit-Walking-Shoes-Easy_1601939711161.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939711161/formal_get.json)；UTC 2026-10-20T14:05:27.352345+00:00。
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939711161/formal_get.json)；UTC 2026-10-21T01:35:31.969442+00:00。
 - 当前正式标题：Elastic Lace Slip-On Knit Walking Shoes with Sculpted Foam Sole Casual Sneakers Wholesale
 - 审核/展示：approved / Y；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
@@ -115,7 +115,7 @@
 - 店内分组：Slip-On Casual Walking Shoes · 972130291；[平台分组回执](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%BA%97%E5%86%85%E5%88%86%E7%BB%84/972130291.json)。
 - 本地平台素材：[唯一素材索引](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90%E6%B8%85%E5%8D%95.json)；图片按内容哈希保存一份，图库/详情/SKU通过索引引用。
   - M1：本地图片待补；官方来源 https://sc04.alicdn.com/kf/H02d09dfc479a4f0cbec0bd519e0df6708.png
-  - M2：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/80bd1eddd2e9b41af705cdde49200c0c70dd836710c47bef7507882b2cf84f03.jpg) · 1200×1200
+  - M2：本地图片待补；官方来源 https://sc04.alicdn.com/kf/H2f8745a920ae4cdc97032b7ea59a20eaZ.png
   - M3：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/fc091d1fa0f8bf514c93256b30a608040980d2097f9c5f753b5efda891ba95f9.jpg) · 750×1000
   - M4：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/454edb408f2b5f9634b784af4aeaef399d04b21eb49c5b1a47af8772a080f26d.jpg) · 750×1000
   - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/070e0e736f18325a2d6d8375fd0f24f63dbcba47c6ade9e4bdbc0a6a561d883f.jpg) · 750×1000
@@ -561,5 +561,21 @@
 - [prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ007_%E5%8A%9F%E8%83%BD%E5%9B%BE%E6%AD%A3%E5%BC%8F%E7%B2%BE%E4%BF%AE_%E5%9B%9E%E8%AF%BB%E7%BA%A0%E6%AD%A3/%E5%95%86%E5%93%81/1601939585913/prepared.json)
 - [update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ007_%E5%8A%9F%E8%83%BD%E5%9B%BE%E6%AD%A3%E5%BC%8F%E7%B2%BE%E4%BF%AE_%E5%9B%9E%E8%AF%BB%E7%BA%A0%E6%AD%A3/%E5%95%86%E5%93%81/1601939585913/update_receipt.json)
 - [verification.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ007_%E5%8A%9F%E8%83%BD%E5%9B%BE%E6%AD%A3%E5%BC%8F%E7%B2%BE%E4%BF%AE_%E5%9B%9E%E8%AF%BB%E7%BA%A0%E6%AD%A3/%E5%95%86%E5%93%81/1601939585913/verification.json)
+- [计划.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ007_%E6%A8%A1%E6%9D%BF%E5%9B%BE%E6%AD%A3%E5%BC%8F%E6%B8%85%E7%90%86/%E8%AE%A1%E5%88%92.json)
+- [图片银行.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ007_%E6%A8%A1%E6%9D%BF%E5%9B%BE%E6%AD%A3%E5%BC%8F%E6%B8%85%E7%90%86/%E5%9B%BE%E7%89%87%E9%93%B6%E8%A1%8C.json)
+- [prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ007_%E6%A8%A1%E6%9D%BF%E5%9B%BE%E6%AD%A3%E5%BC%8F%E6%B8%85%E7%90%86/%E5%95%86%E5%93%81/1601825070472/prepared.json)
+- [update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ007_%E6%A8%A1%E6%9D%BF%E5%9B%BE%E6%AD%A3%E5%BC%8F%E6%B8%85%E7%90%86/%E5%95%86%E5%93%81/1601825070472/update_receipt.json)
+- [verification.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ007_%E6%A8%A1%E6%9D%BF%E5%9B%BE%E6%AD%A3%E5%BC%8F%E6%B8%85%E7%90%86/%E5%95%86%E5%93%81/1601825070472/verification.json)
+- [计划.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ007_%E8%AF%A6%E6%83%85%E4%BF%A1%E6%81%AF%E6%95%B4%E7%BB%84%E6%94%B6%E5%B0%BE/%E8%AE%A1%E5%88%92.json)
+- [图片银行.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ007_%E8%AF%A6%E6%83%85%E4%BF%A1%E6%81%AF%E6%95%B4%E7%BB%84%E6%94%B6%E5%B0%BE/%E5%9B%BE%E7%89%87%E9%93%B6%E8%A1%8C.json)
+- [prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ007_%E8%AF%A6%E6%83%85%E4%BF%A1%E6%81%AF%E6%95%B4%E7%BB%84%E6%94%B6%E5%B0%BE/%E5%95%86%E5%93%81/1601939585913/prepared.json)
+- [update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ007_%E8%AF%A6%E6%83%85%E4%BF%A1%E6%81%AF%E6%95%B4%E7%BB%84%E6%94%B6%E5%B0%BE/%E5%95%86%E5%93%81/1601939585913/update_receipt.json)
+- [verification.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ007_%E8%AF%A6%E6%83%85%E4%BF%A1%E6%81%AF%E6%95%B4%E7%BB%84%E6%94%B6%E5%B0%BE/%E5%95%86%E5%93%81/1601939585913/verification.json)
+- [prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ007_%E8%AF%A6%E6%83%85%E4%BF%A1%E6%81%AF%E6%95%B4%E7%BB%84%E6%94%B6%E5%B0%BE/%E5%95%86%E5%93%81/1601939701201/prepared.json)
+- [update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ007_%E8%AF%A6%E6%83%85%E4%BF%A1%E6%81%AF%E6%95%B4%E7%BB%84%E6%94%B6%E5%B0%BE/%E5%95%86%E5%93%81/1601939701201/update_receipt.json)
+- [verification.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ007_%E8%AF%A6%E6%83%85%E4%BF%A1%E6%81%AF%E6%95%B4%E7%BB%84%E6%94%B6%E5%B0%BE/%E5%95%86%E5%93%81/1601939701201/verification.json)
+- [prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ007_%E8%AF%A6%E6%83%85%E4%BF%A1%E6%81%AF%E6%95%B4%E7%BB%84%E6%94%B6%E5%B0%BE/%E5%95%86%E5%93%81/1601939711161/prepared.json)
+- [update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ007_%E8%AF%A6%E6%83%85%E4%BF%A1%E6%81%AF%E6%95%B4%E7%BB%84%E6%94%B6%E5%B0%BE/%E5%95%86%E5%93%81/1601939711161/update_receipt.json)
+- [verification.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ007_%E8%AF%A6%E6%83%85%E4%BF%A1%E6%81%AF%E6%95%B4%E7%BB%84%E6%94%B6%E5%B0%BE/%E5%95%86%E5%93%81/1601939711161/verification.json)
 
 原件、正式回执与当前资料通过本页关联，不再复制成第二套商品库。

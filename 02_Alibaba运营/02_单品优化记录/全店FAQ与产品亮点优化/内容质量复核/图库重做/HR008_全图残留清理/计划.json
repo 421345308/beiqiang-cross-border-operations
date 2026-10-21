@@ -1,0 +1,36 @@
+{
+  "family": "HR008_全图残留清理",
+  "kind": "mixed_slots",
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "ids": [
+    "1601943422371"
+  ],
+  "assets": {
+    "HR008_residual_9": {
+      "state": "PASS",
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ1008_661/06_当前图文/精修/HR008_residual_9.png",
+      "sha256": "5499d6c84f0667268d6a4e3e61f0705683e11e671fe508ff64af8d8dc1f4502a"
+    }
+  },
+  "main_replacements_by_id": {
+    "1601943422371": {}
+  },
+  "detail_replacements_by_id": {
+    "1601943422371": {
+      "https://sc04.alicdn.com/kf/H6f7347dfa9e54026914acfc8173c3dc78.png": "HR008_residual_9"
+    }
+  },
+  "expected_old_by_id": {
+    "1601943422371": [
+      "https://sc04.alicdn.com/kf/H6f7347dfa9e54026914acfc8173c3dc78.png",
+      "https://sc04.alicdn.com/kf/H3cd8fb06f67c4840b3587c4329599797q.png",
+      "https://sc04.alicdn.com/kf/Hda82b830b8ce48d290a0806bf4698b80x.png",
+      "https://sc04.alicdn.com/kf/Hafceb0e1298a440ba1bac4149f063798M.png"
+    ]
+  },
+  "source_evidence": [
+    "01_产品资产/02_可发布素材/00_最终上传/BQ1008_661/06_当前图文/精修/HR008_residual_9_图稿依据.json"
+  ],
+  "scope": "Exact full-catalog residual diagnostic: remove internal source captions, old approximate weight/size repetition and repeated colour-pair filler. Use individually native-reviewed actual shoe entry, lacing, sidewall and tread proof. Preserve all other images/F1/company suite, SKU, commercial fields and copy."
+}

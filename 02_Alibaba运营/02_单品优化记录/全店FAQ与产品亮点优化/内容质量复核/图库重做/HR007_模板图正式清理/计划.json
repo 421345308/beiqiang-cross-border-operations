@@ -1,0 +1,50 @@
+{
+  "family": "HR007_模板图正式清理",
+  "kind": "mixed_slots",
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "ids": [
+    "1601943332965"
+  ],
+  "assets": {
+    "HR007_colour_517ce686a6e5_main": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ1007_sh10015a-R-009/06_当前图文/精修/HR007_colour_517ce686a6e5_main.png",
+      "sha256": "f3b2e66f2a463f93f805bbb5293c3d572c0891f0d3224a358eb6e8c615e0665f",
+      "state": "PASS"
+    }
+  },
+  "main_replacements_by_id": {
+    "1601943332965": {
+      "https://sc04.alicdn.com/kf/H25bc73209f1c498288ec52810cece2987.png": "HR007_colour_517ce686a6e5_main"
+    }
+  },
+  "detail_replacements_by_id": {
+    "1601943332965": {
+      "https://sc04.alicdn.com/kf/H5742893afdc84e498a80c74d250fc09ar.png": "HR007_colour_517ce686a6e5_main"
+    }
+  },
+  "expected_old_by_id": {
+    "1601943332965": [
+      "https://sc04.alicdn.com/kf/H5742893afdc84e498a80c74d250fc09ar.png",
+      "https://sc04.alicdn.com/kf/H32a0128b6bb0469f86cf69c06d368efec.png",
+      "https://sc04.alicdn.com/kf/H340352e75ae44e27aa83af3b8a3c0840f.png",
+      "https://sc04.alicdn.com/kf/H1fa56037db8740b886d89af6d17b9e596.png"
+    ]
+  },
+  "source_evidence": [
+    "01_产品资产/02_可发布素材/00_最终上传/BQ1007_sh10015a-R-009/06_当前图文/精修/HR007_colour_517ce686a6e5_main_图稿依据.json",
+    "01_产品资产/02_可发布素材/00_最终上传/BQ1007_sh10015a-R-009/06_当前图文/精修/HR007_colour_517ce686a6e5_detail_图稿依据.json"
+  ],
+  "scope": "Only exact individually reviewed image slots. Replace internal production captions with real-shoe visible construction, exact per-ID colour panels and distinct details. Preserve existing F1 position, approved company suite, text, SKU IDs/axes, all prices, stock and commercial fields.",
+  "pre_submission_asset_adjustment": {
+    "at": "2026-10-20T21:27:25.840801+00:00",
+    "scope": "This group has no attempted product write. Use the already native-reviewed and officially uploaded compact six-colour panel for its detail colour slot as well. It shows the same exact six colour photographs clearly; all page targets and colours remain unchanged. No second uncertain image-upload replay.",
+    "unused_candidate": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ1007_sh10015a-R-009/05_优化候选/未采用配色详情/HR007_colour_517ce686a6e5_detail.png",
+      "sha256": "9db865ab32608db570af144353aaa6f98d24c9fde5621a0fb91e56e5c26c6f7a",
+      "state": "PASS"
+    },
+    "unknown_upload_evidence": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR007_模板图正式清理/图片银行.json",
+    "accepted_role": "HR007_colour_517ce686a6e5_main"
+  }
+}

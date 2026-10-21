@@ -1,0 +1,45 @@
+{
+  "family": "BQ021",
+  "execution_key": "BQ021_规格照片完整修复",
+  "ids": [
+    "1601838963947",
+    "1601939739115",
+    "1601939709217",
+    "1601939606858"
+  ],
+  "source_id": null,
+  "reviewed": true,
+  "reviewer": "active_agent",
+  "source_evidence": [
+    "01_产品资产/05_平台当前素材/38c84a7ef155494df513f6cb219fbf9f456d6758c2eb82059006cd718c51ba33.jpg",
+    "01_产品资产/02_可发布素材/00_最终上传/BQ021_K6212/06_当前图文/规格照片/Grey.json"
+  ],
+  "image_assets": {
+    "Grey": {
+      "file": "01_产品资产/02_可发布素材/00_最终上传/BQ021_K6212/06_当前图文/规格照片/Grey.png",
+      "sha256": "107d503e9b1b69b2e587c311fd9fd7d100c8cecfc259eeba0154d11de80a9438",
+      "image_review": "PASS"
+    }
+  },
+  "rebind_image_roles": {
+    "Grey": "Grey"
+  },
+  "expected_images_by_id": {
+    "1601838963947": {
+      "Grey": "https://sc04.alicdn.com/kf/Hb141ddd931c64b05b55f97c0e10e2df2t.jpg"
+    },
+    "1601939739115": {
+      "Grey": "https://sc04.alicdn.com/kf/Hb141ddd931c64b05b55f97c0e10e2df2t.jpg"
+    },
+    "1601939709217": {
+      "Grey": "https://sc04.alicdn.com/kf/Hb141ddd931c64b05b55f97c0e10e2df2t.jpg"
+    },
+    "1601939606858": {
+      "Grey": "https://sc04.alicdn.com/kf/Hb141ddd931c64b05b55f97c0e10e2df2t.jpg"
+    }
+  },
+  "scope": "Only replace the exact matching existing colour SKU photograph. Preserve all IDs, colour/size combinations, prices, stock, text and gallery.",
+  "rebind_images": {
+    "Grey": "https://sc04.alicdn.com/kf/H7fce746ff53d49f49d86dfecd3f9e32bY/286385890/H7fce746ff53d49f49d86dfecd3f9e32bY.png"
+  }
+}

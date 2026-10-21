@@ -1,7 +1,7 @@
 {
   "id": "10000047216427",
-  "at": "2026-10-20T17:16:39.366681+00:00",
-  "state": "FORMAL_FIELDS_SCORE_PASS",
+  "at": "2026-10-20T20:00:48.359772+00:00",
+  "state": "FORMAL_DIFFERENCE_DIAGNOSE_NO_REPLAY",
   "status": "approved",
   "display": "Y",
   "checks": {
@@ -10,11 +10,11 @@
     "removed_unsupported": true,
     "unique_real_sku_ids": true,
     "all_price_tiers_preserved": true,
-    "other_formal_fields": true,
+    "other_formal_fields": false,
     "colour_image_bindings": true,
     "display": true,
     "schema_targets": true,
-    "other_schema": true,
+    "other_schema": false,
     "score": true
   },
   "score": "5.00",
@@ -67,7 +67,10 @@
     "errorReasonQualityBadMap": {},
     "errorReasonSkuTextMoreMap": {}
   },
-  "failed": [],
+  "failed": [
+    "other_formal_fields",
+    "other_schema"
+  ],
   "pairs": [
     [
       "Black/White",
