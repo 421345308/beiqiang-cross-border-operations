@@ -1,6 +1,6 @@
 [
   {
-    "status": "PREPARED_NOT_PUBLISHED",
+    "status": "NOT_PUBLISHED_CONNECTION_TIMEOUT",
     "sku": "BQ007 / L0017",
     "photo_count": 4,
     "images": [
@@ -31,7 +31,8 @@
     ],
     "folder": "Post_01_BQ007_Elastic_Laces",
     "facts": "00_总控台/产品中心/数据/产品.json + 对应00_上架填写表.md及原始包；普通楦，BQ007弹力鞋带不等于Hands Free；BQ008不写待核鞋底材料；供货、样品、报价逐单确认",
-    "scheduled_slot": "2026-10-21T12:00:00+08:00"
+    "scheduled_slot": "2026-10-21T12:00:00+08:00",
+    "execution_note": "2026-10-21 12:00时段：新主页导航net::ERR_CONNECTION_TIMED_OUT，绑定错误标签读取40秒超时；无法查重或打开编辑器，未上传、未提交；保留本地草稿，不追补。"
   },
   {
     "status": "PREPARED_NOT_PUBLISHED",
