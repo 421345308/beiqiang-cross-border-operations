@@ -4,12 +4,15 @@ from __future__ import annotations
 import argparse
 import json
 import secrets
+import tempfile
 import threading
+import time
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import urlsplit
 
 from core import Crawler, DATA, csv_export, new_candidate, now, search_plan
+from crm import CRMReader
 
 LOCK = threading.RLock()
 JOB = {"running": False, "message": ""}
@@ -27,9 +30,22 @@ class Store:
     def write(self, rows):
         with LOCK:
             self.directory.mkdir(parents=True, exist_ok=True)
-            temp = self.path.with_suffix(".tmp")
-            temp.write_text(json.dumps(rows, ensure_ascii=False, indent=2), encoding="utf-8")
-            temp.replace(self.path)
+            # Unique files avoid colliding with another process's pending write.
+            # Windows scanners/readers can briefly deny atomic replacement.
+            with tempfile.NamedTemporaryFile(mode="w", encoding="utf-8", dir=self.directory, prefix="candidates-", suffix=".tmp", delete=False) as pending:
+                temp = Path(pending.name)
+                pending.write(json.dumps(rows, ensure_ascii=False, indent=2))
+            try:
+                for attempt in range(3):
+                    try:
+                        temp.replace(self.path)
+                        break
+                    except PermissionError:
+                        if attempt == 2:
+                            raise
+                        time.sleep(.05 * (attempt + 1))
+            finally:
+                temp.unlink(missing_ok=True)
 
     def add(self, seeds):
         if not isinstance(seeds, list) or not 1 <= len(seeds) <= 100:
@@ -85,7 +101,8 @@ class Store:
                 self.write(rows)
 
 
-def handler_class(store, token):
+def handler_class(store, token, crm=None):
+    crm = crm or CRMReader()
     class Handler(BaseHTTPRequestHandler):
         def log_message(self, *args):
             pass
@@ -124,9 +141,13 @@ def handler_class(store, token):
                 content = Path(__file__).with_name("index.html").read_text(encoding="utf-8").replace("__TOKEN__", token)
                 self.reply(200, content, "text/html; charset=utf-8")
             elif path == "/api/state":
-                self.reply(200, {"candidates": store.read(), "job": JOB, "storage": str(store.directory), "crm_status": "候选暂存；未同步正式CRM和停止联系清单"})
+                with LOCK:
+                    candidates = crm.annotate(store.read())
+                self.reply(200, {"candidates": candidates, "job": JOB, "storage": str(store.directory), "crm_status": crm.meta})
             elif path == "/api/export":
-                self.reply(200, csv_export(store.read()), "text/csv; charset=utf-8")
+                with LOCK:
+                    candidates = crm.annotate(store.read())
+                self.reply(200, csv_export(candidates), "text/csv; charset=utf-8")
             else:
                 self.reply(404, {"error": "未找到页面"})
 
@@ -170,6 +191,8 @@ def handler_class(store, token):
                     self.reply(404, {"error": "未找到操作"})
             except (ValueError, KeyError, TypeError, AttributeError) as exc:
                 self.reply(400, {"error": str(exc)[:240]})
+            except OSError:
+                self.reply(503, {"error": "本机数据读取或保存失败；原记录保留，请稍后重新读取确认，勿按已保存处理"})
     return Handler
 
 
@@ -209,7 +232,7 @@ def main():
         if not target.is_relative_to(DATA.resolve()):
             raise ValueError("联系人导出须保存在本工具.local目录中")
         target.parent.mkdir(parents=True, exist_ok=True)
-        target.write_text(csv_export(store.read()), encoding="utf-8")
+        target.write_text(csv_export(CRMReader().annotate(store.read())), encoding="utf-8")
         print(str(target))
 
 

@@ -480,11 +480,14 @@ def new_candidate(seed):
 
 def csv_export(records):
     out = io.StringIO(newline="")
-    fields = ["候选ID", "公司", "官网", "市场线索待核", "初筛", "采购需求", "人工状态", "人工备注", "渠道", "公开入口", "入口用途", "来源", "核查时间", "联系条件", "CRM核对"]
+    fields = ["候选ID", "公司", "官网", "市场线索待核", "初筛", "采购需求", "人工状态", "人工备注", "渠道", "公开入口", "入口用途", "来源", "核查时间", "联系条件", "CRM核对", "CRM匹配", "CRM Lead ID", "CRM停止状态", "CRM停止原值", "CRM最近动作记录（不等于触达）", "CRM匹配出处", "CRM核对时间", "CRM文件SHA256", "CRM下一步", "CRM未定日期及历史", "CRM门槛类别", "本地人工停止"]
     writer = csv.writer(out)
     writer.writerow(fields)
     for row in records:
+        crm = row.get("crm", {})
+        matches = crm.get("matches", [])
+        crm_values = [crm.get("match_status", "未核验"), "; ".join(m["lead_id"] for m in matches), crm.get("stop_state", "未知"), "; ".join(m["lead_id"] + ": " + (m["stop_raw"] or "[空值]") for m in matches), "; ".join(m["lead_id"] + ": " + (m["latest_touch"]["raw_date"] if m.get("latest_touch") else "无可排序日期；不代表未触达") for m in matches), "; ".join(f'{m["sheet"]}!{m["row"]} ' + ",".join(x["method"] for x in m["methods"]) for m in matches), crm.get("checked_at", ""), crm.get("sha256", ""), crm.get("next_action", "未核验"), json.dumps([{"lead_id": m["lead_id"], "undated_touches": m.get("undated_touches", []), "history": m.get("history", [])} for m in matches], ensure_ascii=False), "; ".join(m["lead_id"] + ": " + m.get("stop_reason", "未知") for m in matches), "是" if crm.get("local_stop") else "否"]
         for c in row.get("contacts", []) or [{}]:
             values = [row["id"], row["company"], row["website"], row.get("market_hint", ""), row.get("analysis", {}).get("tier", ""), row.get("analysis", {}).get("opportunity", ""), row["review"]["state"], row["review"]["note"], c.get("kind", ""), c.get("value", ""), c.get("role", ""), c.get("source_url", ""), c.get("checked_at", ""), c.get("permission", ""), "须在正式CRM查重及核对停止联系状态；不是发送名单"]
-            writer.writerow(["'" + str(v) if str(v).lstrip().startswith(("=", "+", "-", "@")) else v for v in values])
+            writer.writerow(["'" + str(v) if str(v).lstrip().startswith(("=", "+", "-", "@")) else v for v in values + crm_values])
     return "\ufeff" + out.getvalue()

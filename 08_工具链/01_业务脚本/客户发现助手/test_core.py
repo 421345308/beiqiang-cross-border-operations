@@ -8,6 +8,7 @@ from pathlib import Path
 from unittest.mock import patch
 
 from app import JOB, Store, handler_class
+from crm import CRMReader
 from core import Crawler, PublicTransport, analyse, bounded_read, csv_export, extract_contacts, new_candidate, normalize_url, parse_page, public_addresses
 from http.server import ThreadingHTTPServer
 
@@ -218,13 +219,35 @@ class StoreTests(unittest.TestCase):
             with self.subTest(seed=seed), self.assertRaises(ValueError):
                 self.store.add([seed])
 
+    def test_windows_replace_lock_retries_and_preserves_original_on_failure(self):
+        self.store.add([{"website": "https://company.example/"}])
+        original = self.store.path.read_bytes()
+        record = self.store.read()[0]
+        replace = Path.replace
+        attempts = []
+        def transient(path, target):
+            attempts.append(path)
+            if len(attempts) < 3:
+                raise PermissionError("synthetic Windows file lock")
+            return replace(path, target)
+        with patch("app.Path.replace", transient), patch("app.time.sleep"):
+            self.store.review(record["id"], "暂缓", "Updated")
+        self.assertEqual(len(attempts), 3)
+        self.assertEqual(self.store.read()[0]["review"]["state"], "暂缓")
+        committed = self.store.path.read_bytes()
+        with patch("app.Path.replace", side_effect=PermissionError("synthetic persistent lock")), patch("app.time.sleep"), self.assertRaises(PermissionError):
+            self.store.review(record["id"], "停止联系", "Failed write")
+        self.assertEqual(self.store.path.read_bytes(), committed)
+        self.assertNotEqual(original, committed)
+        self.assertEqual(list(self.store.directory.glob("*.tmp")), [])
+
 
 class ServerTests(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
         self.store = Store(self.tmp.name)
         self.token = "test-token"
-        self.server = ThreadingHTTPServer(("127.0.0.1", 0), handler_class(self.store, self.token))
+        self.server = ThreadingHTTPServer(("127.0.0.1", 0), handler_class(self.store, self.token, CRMReader(Path(self.tmp.name) / "missing-crm.xlsx")))
         self.thread = threading.Thread(target=self.server.serve_forever, daemon=True)
         self.thread.start()
 
@@ -267,6 +290,16 @@ class ServerTests(unittest.TestCase):
         status, content, _ = self.request("/api/export", self.token)
         self.assertEqual(status, 200)
         self.assertIn("值得继续", content)
+
+    def test_failed_save_has_clear_http_error_without_corrupting_data(self):
+        self.store.add([{"website": "https://company.example/"}])
+        original = self.store.path.read_bytes()
+        record = self.store.read()[0]
+        with patch("app.Path.replace", side_effect=PermissionError("synthetic persistent lock")), patch("app.time.sleep"):
+            status, content, _ = self.request("/api/review", self.token, "POST", {"id": record["id"], "state": "停止联系"})
+        self.assertEqual(status, 503)
+        self.assertIn("原记录保留", content)
+        self.assertEqual(self.store.path.read_bytes(), original)
 
 
 if __name__ == "__main__":
