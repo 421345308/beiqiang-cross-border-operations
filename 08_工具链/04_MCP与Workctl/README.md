@@ -4,6 +4,7 @@
 
 | 工具 | 职责与读取条件 |
 | --- | --- |
+| [国内网络分流](网络分流/README.md) | Clash Verge 全局国内规则库、经营/创作服务直连与国内 DNS；不含节点及凭证 |
 | Alibaba OpenAPI | 当前国际站执行入口见[成功能力与规格](../01_业务脚本/国际站扩品/README.md)，业务规则回商品SOP |
 | `run_workbuddy_task.mjs`、`workbuddy_ipc_client.mjs` | 现有桌面宿主认证与限定文件任务工具；仅在本次任务确实选择WorkBuddy时核当前接口、登录及任务范围，不默认启动代理 |
 | `run_workctl_with_accio_env.py` | 历史网关适配，非现行商品执行入口，不从旧HR移交方案恢复调用 |
