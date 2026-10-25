@@ -12,7 +12,7 @@ ASSET=ROOT/'01_产品资产'
 EXPECTED=Path('E:/贝强大文件/01_产品资产').resolve()
 RAW=ASSET/'01_原始素材'; FINISHED=ASSET/'02_成品素材'
 INDEX=ROOT/'00_总控台/产品中心/数据/素材索引.json'
-ALIASES=RAW/'路径迁移索引.json'
+ALIASES=Path('E:/贝强离线归档/产品旧档/路径迁移索引.json')
 MEDIA={'.png','.jpg','.jpeg','.webp','.gif','.mp4','.svg'}
 def read(p):return json.loads(p.read_text('utf-8-sig'))
 def write(p,obj):

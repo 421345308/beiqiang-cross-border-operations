@@ -1,0 +1,89 @@
+{
+  "release": {
+    "releaseId": "2026-10-25.7",
+    "releasedAt": "2026-10-25T22:14:29+08:00",
+    "productCount": 69,
+    "lineSheetPages": 16,
+    "factoryVideo": {
+      "durationSeconds": 180,
+      "narrationLanguages": [
+        "en"
+      ],
+      "captionLanguages": [
+        "en",
+        "zh"
+      ],
+      "stillCount": 9
+    },
+    "publicOrigin": "https://www.beiqiang.online"
+  },
+  "checkedAt": "2026-10-25T22:33:23.737426+08:00",
+  "pages": [
+    {
+      "path": "/products/",
+      "status": 200
+    },
+    {
+      "path": "/products/bq018/",
+      "status": 200
+    },
+    {
+      "path": "/products/bq1041/",
+      "status": 200
+    },
+    {
+      "path": "/private-label-concept/",
+      "status": 200
+    },
+    {
+      "path": "/line-sheet/",
+      "status": 200
+    },
+    {
+      "path": "/zh/products/",
+      "status": 200
+    },
+    {
+      "path": "/zh/products/bq018/",
+      "status": 200
+    },
+    {
+      "path": "/zh/products/bq1041/",
+      "status": 200
+    },
+    {
+      "path": "/zh/private-label-concept/",
+      "status": 200
+    },
+    {
+      "path": "/zh/line-sheet/",
+      "status": 200
+    }
+  ],
+  "pdfs": [
+    {
+      "file": "beiqiang-footwear-line-sheet-2026.pdf",
+      "sha256": "693efce4f1c21490dda075014a52e8351c9a965d9605f0056ac561f4a52f5614"
+    },
+    {
+      "file": "beiqiang-footwear-line-sheet-zh-2026.pdf",
+      "sha256": "9e12f5c6073c14d5725a26c7f6315bf4215c5c86906672c010c71bf0ae96fbcd"
+    }
+  ],
+  "canonicalSourceFilesVerified": 560,
+  "testsPassed": 32,
+  "browserChecks": [
+    "Chinese combination: black + EU40 + Zip-Up = 2 styles",
+    "Product links carry selected colour; browser back restores filters",
+    "No matching styles offers clear filters; reset returns full catalogue",
+    "English and Chinese use shared controls",
+    "390px viewport, 375px document width; mobile panel expands and collapses"
+  ],
+  "websiteCommit": "297c26cf879e16d402d0b877d9b348f3ba1b417c",
+  "deployment": {
+    "id": "dpsa4d85n6w4",
+    "status": "Success",
+    "usedInProd": true,
+    "commit": "297c26cf879e16d402d0b877d9b348f3ba1b417c"
+  }
+}

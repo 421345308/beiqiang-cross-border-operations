@@ -83,7 +83,9 @@
       "source_state": "ADOPTED",
       "adopted_source_id": "src-ee64a037a6a5",
       "candidate_source_ids": [],
-      "raw_packages": [],
+      "raw_packages": [
+        "01_产品资产/01_原始素材/BQ-C2627"
+      ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/2627BSK_API新建_2026-10-02/facts_and_copy.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601969885846/copy.json",
@@ -157,7 +159,9 @@
       "source_state": "ADOPTED",
       "adopted_source_id": "src-24aa28447d08",
       "candidate_source_ids": [],
-      "raw_packages": [],
+      "raw_packages": [
+        "01_产品资产/01_原始素材/BQ-CA67"
+      ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/A67_API新建_2026-10-02/facts_and_copy.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601969861694/copy.json",
@@ -1483,7 +1487,9 @@
       "source_state": "ADOPTED",
       "adopted_source_id": "src-730e7699372e",
       "candidate_source_ids": [],
-      "raw_packages": [],
+      "raw_packages": [
+        "01_产品资产/01_原始素材/BQ-LQ059"
+      ],
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601972951733/copy.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601972951733/update_receipt.json",
@@ -1553,7 +1559,9 @@
       "source_state": "ADOPTED",
       "adopted_source_id": "src-96f65658dc67",
       "candidate_source_ids": [],
-      "raw_packages": [],
+      "raw_packages": [
+        "01_产品资产/01_原始素材/BQ-LQ060"
+      ],
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601972944790/copy.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601972944790/update_receipt.json",
@@ -2510,7 +2518,9 @@
       "source_state": "ADOPTED",
       "adopted_source_id": "src-038a36798455",
       "candidate_source_ids": [],
-      "raw_packages": [],
+      "raw_packages": [
+        "01_产品资产/01_原始素材/BQ-LQ2597"
+      ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2597准备/经营任务包.md",
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
@@ -3663,9 +3673,7 @@
       "source_state": "ADOPTED",
       "adopted_source_id": "src-5526194f6169",
       "candidate_source_ids": [],
-      "raw_packages": [
-        "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ-M001/01_来源原图"
-      ],
+      "raw_packages": [],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/数据/来源证据/e1b9347f19d5.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601970169467/copy.json",
@@ -3737,7 +3745,9 @@
       "source_state": "ADOPTED",
       "adopted_source_id": "src-3f99c995fc27",
       "candidate_source_ids": [],
-      "raw_packages": [],
+      "raw_packages": [
+        "01_产品资产/01_原始素材/BQ-M858"
+      ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/数据/来源证据/88562c165071.txt",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601969853888/copy.json",
@@ -4437,10 +4447,9 @@
       "adopted_source_id": null,
       "candidate_source_ids": [],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ001/已整理_BQ001_5.13贝强1数据包"
+        "01_产品资产/01_原始素材/BQ001"
       ],
       "evidence": [
-        "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ001_数据包1/00_上架填写表.md",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000042821848/copy.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000042821848/update_receipt.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000042821848/after_get.json",
@@ -4664,7 +4673,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ001"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ001_数据包1/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -4742,10 +4750,9 @@
       "adopted_source_id": null,
       "candidate_source_ids": [],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ002/已整理_BQ002_5.13贝强2数据包"
+        "01_产品资产/01_原始素材/BQ002"
       ],
       "evidence": [
-        "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ002_数据包2/00_上架填写表.md",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000042896165/copy.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000042896165/update_receipt.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000042896165/after_get.json",
@@ -4970,7 +4977,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ002"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ002_数据包2/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -5062,10 +5068,9 @@
       "adopted_source_id": null,
       "candidate_source_ids": [],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ003/已整理_BQ003_R1218_贝强鞋业2026夏季R1218镂空包头板鞋35-45批55元"
+        "01_产品资产/01_原始素材/BQ003"
       ],
       "evidence": [
-        "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ003_R1218/00_上架填写表.md",
         "02_Alibaba运营/05_扩品工程/数据/搜鞋网贝强工厂店在线商品_2026-08-14.csv",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000043200726/copy.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000043200726/update_receipt.json",
@@ -5353,7 +5358,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ003"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ003_R1218/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -5439,10 +5443,9 @@
       "adopted_source_id": null,
       "candidate_source_ids": [],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ004/已整理_BQ004_A502_贝强鞋业A502新款35-45批55元"
+        "01_产品资产/01_原始素材/BQ004"
       ],
       "evidence": [
-        "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ004_A502/00_上架填写表.md",
         "02_Alibaba运营/05_扩品工程/数据/搜鞋网贝强工厂店在线商品_2026-08-14.csv",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000043201799/copy.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000043201799/update_receipt.json",
@@ -5696,7 +5699,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ004"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ004_A502/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -5769,10 +5771,9 @@
       "adopted_source_id": null,
       "candidate_source_ids": [],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ005/已整理_BQ005_A503_贝强鞋业A503夏季镂空男女鞋35-45批55元"
+        "01_产品资产/01_原始素材/BQ005"
       ],
       "evidence": [
-        "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ005_A503/00_上架填写表.md",
         "02_Alibaba运营/05_扩品工程/数据/搜鞋网贝强工厂店在线商品_2026-08-14.csv",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601815020244/copy.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601815020244/update_receipt.json",
@@ -6083,7 +6084,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ005"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ005_A503/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -6171,10 +6171,9 @@
       "adopted_source_id": null,
       "candidate_source_ids": [],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ006/已整理_BQ006_M8811_贝强鞋业秋冬季新款M8811男女鞋35-45批58元"
+        "01_产品资产/01_原始素材/BQ006"
       ],
       "evidence": [
-        "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ006_M8811/00_上架填写表.md",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601814931739/copy.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601814931739/update_receipt.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601814931739/after_get.json",
@@ -6540,7 +6539,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ006"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ006_M8811/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -6641,10 +6639,9 @@
       "adopted_source_id": null,
       "candidate_source_ids": [],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ007/已整理_BQ007_L0017_贝强鞋业35-45批65全网限价98"
+        "01_产品资产/01_原始素材/BQ007"
       ],
       "evidence": [
-        "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ007_L0017/00_上架填写表.md",
         "02_Alibaba运营/05_扩品工程/数据/搜鞋网贝强工厂店在线商品_2026-08-14.csv",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601825070472/copy.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601825070472/update_receipt.json",
@@ -6987,7 +6984,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ007"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ007_L0017/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -7066,10 +7062,9 @@
       "adopted_source_id": null,
       "candidate_source_ids": [],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ008/已整理_BQ008_L1009_贝强鞋业36-45批68限价108元"
+        "01_产品资产/01_原始素材/BQ008"
       ],
       "evidence": [
-        "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ008_L1009/00_上架填写表.md",
         "02_Alibaba运营/05_扩品工程/数据/搜鞋网贝强工厂店在线商品_2026-08-14.csv",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601825021825/copy.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601825021825/update_receipt.json",
@@ -7202,7 +7197,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ008"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ008_L1009/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -7265,10 +7259,9 @@
       "adopted_source_id": null,
       "candidate_source_ids": [],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ009/已整理_BQ009_L1026_贝强鞋业35-45批65全网限价98元"
+        "01_产品资产/01_原始素材/BQ009"
       ],
       "evidence": [
-        "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ009_L1026/00_上架填写表.md",
         "02_Alibaba运营/05_扩品工程/数据/搜鞋网贝强工厂店在线商品_2026-08-14.csv",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601939661419/copy.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601939661419/update_receipt.json",
@@ -7409,7 +7402,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ009"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ009_L1026/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -7487,10 +7479,9 @@
       "adopted_source_id": null,
       "candidate_source_ids": [],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ010/已整理_BQ010_R1601_贝强鞋业R1601款包头帆布板鞋35-45批55元"
+        "01_产品资产/01_原始素材/BQ010"
       ],
       "evidence": [
-        "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ010_R1601/00_上架填写表.md",
         "02_Alibaba运营/05_扩品工程/数据/搜鞋网贝强工厂店在线商品_2026-08-14.csv",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601825160204/copy.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601825160204/update_receipt.json",
@@ -7660,7 +7651,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ010"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ010_R1601/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -7731,10 +7721,9 @@
       "adopted_source_id": null,
       "candidate_source_ids": [],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ011/已整理_BQ011_A002_A002贝强工厂店一脚蹬男鞋39-45批58元"
+        "01_产品资产/01_原始素材/BQ011"
       ],
       "evidence": [
-        "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ011_A002/00_上架填写表.md",
         "02_Alibaba运营/05_扩品工程/数据/搜鞋网贝强工厂店在线商品_2026-08-14.csv",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000043725883/copy.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000043725883/update_receipt.json",
@@ -7883,7 +7872,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ011"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ011_A002/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -7950,10 +7938,9 @@
       "adopted_source_id": null,
       "candidate_source_ids": [],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ012/已整理_BQ012_M8506_M8506贝强新款35-45批58元"
+        "01_产品资产/01_原始素材/BQ012"
       ],
       "evidence": [
-        "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ012_M8506/00_上架填写表.md",
         "02_Alibaba运营/05_扩品工程/数据/搜鞋网贝强工厂店在线商品_2026-08-14.csv",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000043744505/copy.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000043744505/update_receipt.json",
@@ -8104,7 +8091,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ012"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ012_M8506/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -8173,10 +8159,9 @@
       "adopted_source_id": null,
       "candidate_source_ids": [],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ013/已整理_BQ013_T55836_T55836贝强鞋业2025新款批53元"
+        "01_产品资产/01_原始素材/BQ013"
       ],
       "evidence": [
-        "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ013_T55836/00_上架填写表.md",
         "02_Alibaba运营/05_扩品工程/数据/搜鞋网贝强工厂店在线商品_2026-08-14.csv",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000043763325/copy.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000043763325/update_receipt.json",
@@ -8331,7 +8316,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ013"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ013_T55836/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -8411,10 +8395,9 @@
       "adopted_source_id": null,
       "candidate_source_ids": [],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ014/已整理_BQ014_A507_贝强鞋业A507闪穿鞋35-45秋冬新款批55元"
+        "01_产品资产/01_原始素材/BQ014"
       ],
       "evidence": [
-        "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ014_A507/00_上架填写表.md",
         "02_Alibaba运营/05_扩品工程/数据/搜鞋网贝强工厂店在线商品_2026-08-14.csv",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000043732626/copy.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000043732626/update_receipt.json",
@@ -8550,7 +8533,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ014"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ014_A507/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -8612,10 +8594,9 @@
       "adopted_source_id": null,
       "candidate_source_ids": [],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ015/已整理_BQ015_R1811_贝强鞋业R1811秋冬新款35-45批58元"
+        "01_产品资产/01_原始素材/BQ015"
       ],
       "evidence": [
-        "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ015_R1811/00_上架填写表.md",
         "02_Alibaba运营/05_扩品工程/数据/搜鞋网贝强工厂店在线商品_2026-08-14.csv",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601939683302/copy.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601939683302/update_receipt.json",
@@ -8759,7 +8740,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ015"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ015_R1811/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -8850,10 +8830,9 @@
       "adopted_source_id": null,
       "candidate_source_ids": [],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ016/已整理_BQ016_201_201贝强工厂店秋季一脚蹬女鞋童鞋31-40批50元"
+        "01_产品资产/01_原始素材/BQ016"
       ],
       "evidence": [
-        "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ016_201/00_上架填写表.md",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000044021584/copy.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000044021584/update_receipt.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000044021584/after_get.json",
@@ -9010,7 +8989,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ016"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ016_201/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -9088,10 +9066,9 @@
       "adopted_source_id": null,
       "candidate_source_ids": [],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ017/已整理_BQ017_A008_2024贝强鞋业A008套袜一脚蹬男女鞋35-45批55元"
+        "01_产品资产/01_原始素材/BQ017"
       ],
       "evidence": [
-        "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ017_A008/00_上架填写表.md",
         "02_Alibaba运营/05_扩品工程/数据/搜鞋网贝强工厂店在线商品_2026-08-14.csv",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000044034049/copy.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000044034049/update_receipt.json",
@@ -9267,7 +9244,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ017"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ017_A008/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -9347,10 +9323,9 @@
       "adopted_source_id": null,
       "candidate_source_ids": [],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ018/已整理_BQ018_A116_A116贝强工厂店多走路男鞋35-45批55元"
+        "01_产品资产/01_原始素材/BQ018"
       ],
       "evidence": [
-        "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ018_A116/00_上架填写表.md",
         "02_Alibaba运营/05_扩品工程/数据/搜鞋网贝强工厂店在线商品_2026-08-14.csv",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000044007878/copy.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000044007878/update_receipt.json",
@@ -9555,7 +9530,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ018"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ018_A116/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -9641,10 +9615,9 @@
       "adopted_source_id": null,
       "candidate_source_ids": [],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ019/已整理_BQ019_A206_A206情侣鞋图片"
+        "01_产品资产/01_原始素材/BQ019"
       ],
       "evidence": [
-        "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ019_A206/00_上架填写表.md",
         "02_Alibaba运营/05_扩品工程/数据/搜鞋网贝强工厂店在线商品_2026-08-14.csv",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000044041008/copy.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000044041008/update_receipt.json",
@@ -9809,7 +9782,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ019"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ019_A206/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -9881,10 +9853,9 @@
       "adopted_source_id": null,
       "candidate_source_ids": [],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ020/已整理_BQ020_A218_A218贝强鞋业夏季透孔一脚蹬男女鞋35-45批55元"
+        "01_产品资产/01_原始素材/BQ020"
       ],
       "evidence": [
-        "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ020_A218/00_上架填写表.md",
         "02_Alibaba运营/05_扩品工程/数据/搜鞋网贝强工厂店在线商品_2026-08-14.csv",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601839073314/copy.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601839073314/update_receipt.json",
@@ -10061,7 +10032,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ020"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ020_A218/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -10146,10 +10116,9 @@
       "adopted_source_id": null,
       "candidate_source_ids": [],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ021/已整理_BQ021_K6212_贝强鞋业K6212款35-45批53元"
+        "01_产品资产/01_原始素材/BQ021"
       ],
       "evidence": [
-        "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ021_K6212/00_上架填写表.md",
         "02_Alibaba运营/05_扩品工程/数据/搜鞋网贝强工厂店在线商品_2026-08-14.csv",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601838963947/copy.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601838963947/update_receipt.json",
@@ -10346,7 +10315,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ021"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ021_K6212/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -10430,11 +10398,9 @@
       "adopted_source_id": null,
       "candidate_source_ids": [],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ022/已整理_BQ022_A2208_A2208情侣鞋图片",
-        "01_产品资产/01_原始素材/BQ022/已整理_BQ022_A2208_补充_A2208"
+        "01_产品资产/01_原始素材/BQ022"
       ],
       "evidence": [
-        "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ022_A2208/00_上架填写表.md",
         "02_Alibaba运营/05_扩品工程/数据/搜鞋网贝强工厂店在线商品_2026-08-14.csv",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000043991998/copy.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000043991998/update_receipt.json",
@@ -10604,7 +10570,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ022"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ022_A2208/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -10688,10 +10653,9 @@
       "adopted_source_id": null,
       "candidate_source_ids": [],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ023/已整理_BQ023_A505_A505数据包"
+        "01_产品资产/01_原始素材/BQ023"
       ],
       "evidence": [
-        "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ023_A505/00_上架填写表.md",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000044004948/copy.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000044004948/update_receipt.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000044004948/after_get.json",
@@ -10858,7 +10822,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ023"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ023_A505/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -10951,10 +10914,9 @@
       "adopted_source_id": null,
       "candidate_source_ids": [],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ024/已整理_BQ024_A830_A830贝强工厂店37-45批55元"
+        "01_产品资产/01_原始素材/BQ024"
       ],
       "evidence": [
-        "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ024_A830/00_上架填写表.md",
         "02_Alibaba运营/05_扩品工程/数据/搜鞋网贝强工厂店在线商品_2026-08-14.csv",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000044041031/copy.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000044041031/update_receipt.json",
@@ -11118,7 +11080,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ024"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ024_A830/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -11188,10 +11149,9 @@
       "adopted_source_id": null,
       "candidate_source_ids": [],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ025/已整理_BQ025_A1689_A1689情侣鞋图片"
+        "01_产品资产/01_原始素材/BQ025"
       ],
       "evidence": [
-        "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ025_A1689/00_上架填写表.md",
         "02_Alibaba运营/05_扩品工程/数据/搜鞋网贝强工厂店在线商品_2026-08-14.csv",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000044024484/copy.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000044024484/update_receipt.json",
@@ -11324,7 +11284,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ025"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ025_A1689/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -11381,10 +11340,9 @@
       "adopted_source_id": null,
       "candidate_source_ids": [],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ026/已整理_BQ026_T5828_T5828"
+        "01_产品资产/01_原始素材/BQ026"
       ],
       "evidence": [
-        "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ026_T5828/00_上架填写表.md",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000044011929/copy.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000044011929/update_receipt.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000044011929/after_get.json",
@@ -11572,7 +11530,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ026"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ026_T5828/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -11665,10 +11622,9 @@
       "adopted_source_id": null,
       "candidate_source_ids": [],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ027/已整理_BQ027_K6116_贝强工厂店K6116情侣款35-45批55元限价79"
+        "01_产品资产/01_原始素材/BQ027"
       ],
       "evidence": [
-        "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ027_K6116/00_上架填写表.md",
         "02_Alibaba运营/05_扩品工程/数据/搜鞋网贝强工厂店在线商品_2026-08-14.csv",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000044028277/copy.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000044028277/update_receipt.json",
@@ -11839,7 +11795,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ027"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ027_K6116/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -11927,13 +11882,10 @@
       "adopted_source_id": null,
       "candidate_source_ids": [],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ028/已整理_BQ028_BISCUIT_贝强鞋业2024秋冬新款饼干鞋底一脚蹬男女鞋35-45批55元",
-        "01_产品资产/01_原始素材/历史输入/待审_搜鞋网_2026-08-14/7212"
+        "01_产品资产/01_原始素材/BQ028"
       ],
       "evidence": [
-        "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ028_BISCUIT/00_上架填写表.md",
         "02_Alibaba运营/05_扩品工程/数据/搜鞋网贝强工厂店在线商品_2026-08-14.csv",
-        "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ028_BISCUIT/历史准备_原BQ063/00_上架填写表.md",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601839105416/copy.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601839105416/update_receipt.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601839105416/after_get.json",
@@ -12111,7 +12063,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ028"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ028_BISCUIT/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -12144,9 +12095,6 @@
         "evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
         "store_group_state": "FORMAL_PRODUCT_AND_GROUP_READBACK"
       },
-      "historical_asset_roots": [
-        "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ028_BISCUIT/历史准备_原BQ063"
-      ],
       "price_adjustment": {
         "entry": "02_Alibaba运营/02_单品优化记录/BQ针织鞋价格调整/README.md",
         "states": [
@@ -12181,10 +12129,9 @@
       "adopted_source_id": null,
       "candidate_source_ids": [],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ029/已整理_BQ029_A025_贝强鞋业A025高帮波浪纹35-45批58元全网限价88元"
+        "01_产品资产/01_原始素材/BQ029"
       ],
       "evidence": [
-        "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ029_A025/00_上架填写表.md",
         "02_Alibaba运营/05_扩品工程/数据/搜鞋网贝强工厂店在线商品_2026-08-14.csv",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601839062659/copy.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601839062659/update_receipt.json",
@@ -12351,7 +12298,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ029"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ029_A025/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -12421,10 +12367,9 @@
       "adopted_source_id": null,
       "candidate_source_ids": [],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ030/已整理_BQ030_A811_贝强鞋业A811童鞋31-40批55元全网限价76元"
+        "01_产品资产/01_原始素材/BQ030"
       ],
       "evidence": [
-        "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ030_A811/00_上架填写表.md",
         "02_Alibaba运营/05_扩品工程/数据/搜鞋网贝强工厂店在线商品_2026-08-14.csv",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601839050756/copy.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601839050756/update_receipt.json",
@@ -12591,7 +12536,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ030"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ030_A811/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -12661,10 +12605,9 @@
       "adopted_source_id": null,
       "candidate_source_ids": [],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ031/已整理_BQ031_ZX2116_贝强鞋业宽头大码38-47原始数据包"
+        "01_产品资产/01_原始素材/BQ031"
       ],
       "evidence": [
-        "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ031_ZX2116/00_上架填写表.md",
         "02_Alibaba运营/05_扩品工程/数据/搜鞋网贝强工厂店在线商品_2026-08-14.csv",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000046439033/copy.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000046439033/update_receipt.json",
@@ -12815,7 +12758,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ031"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ031_ZX2116/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -12881,9 +12823,7 @@
       "source_state": "MAPPED",
       "adopted_source_id": null,
       "candidate_source_ids": [],
-      "raw_packages": [
-        "01_产品资产/01_原始素材/历史输入/待审_搜鞋网_2026-08-14/ZX2212"
-      ],
+      "raw_packages": [],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/数据/国际站预上架商品总表_2026-08-14.csv",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000046653813/copy.json",
@@ -13025,7 +12965,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ032"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ032_ZX2212/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -13087,9 +13026,7 @@
       "source_state": "MAPPED",
       "adopted_source_id": null,
       "candidate_source_ids": [],
-      "raw_packages": [
-        "01_产品资产/01_原始素材/历史输入/待审_搜鞋网_2026-08-14/T5503"
-      ],
+      "raw_packages": [],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/数据/国际站预上架商品总表_2026-08-14.csv",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601924345456/copy.json",
@@ -13134,7 +13071,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ033"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ033_T5503/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -13186,9 +13122,7 @@
       "source_state": "MAPPED",
       "adopted_source_id": null,
       "candidate_source_ids": [],
-      "raw_packages": [
-        "01_产品资产/01_原始素材/历史输入/待审_搜鞋网_2026-08-14/T5505"
-      ],
+      "raw_packages": [],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/数据/国际站预上架商品总表_2026-08-14.csv",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/11000037600317/copy.json",
@@ -13238,7 +13172,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ034"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ034_T5505/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -13293,9 +13226,7 @@
       "source_state": "MAPPED",
       "adopted_source_id": null,
       "candidate_source_ids": [],
-      "raw_packages": [
-        "01_产品资产/01_原始素材/历史输入/待审_搜鞋网_2026-08-14/A001"
-      ],
+      "raw_packages": [],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/数据/国际站预上架商品总表_2026-08-14.csv",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000046705043/copy.json",
@@ -13340,7 +13271,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ035"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ035_A001/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -13394,9 +13324,7 @@
       "source_state": "ADOPTED",
       "adopted_source_id": "src-a4697dab9e6e",
       "candidate_source_ids": [],
-      "raw_packages": [
-        "01_产品资产/01_原始素材/历史输入/待审_搜鞋网_2026-08-14/8025"
-      ],
+      "raw_packages": [],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/数据/国际站预上架商品总表_2026-08-14.csv",
         "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md",
@@ -13554,7 +13482,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ036"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ036_8025/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -13606,9 +13533,7 @@
       "source_state": "MAPPED",
       "adopted_source_id": null,
       "candidate_source_ids": [],
-      "raw_packages": [
-        "01_产品资产/01_原始素材/历史输入/待审_搜鞋网_2026-08-14/H7116"
-      ],
+      "raw_packages": [],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/数据/国际站预上架商品总表_2026-08-14.csv",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601924347721/copy.json",
@@ -13653,7 +13578,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ037"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ037_H7116/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -13705,9 +13629,7 @@
       "source_state": "MAPPED",
       "adopted_source_id": null,
       "candidate_source_ids": [],
-      "raw_packages": [
-        "01_产品资产/01_原始素材/历史输入/待审_搜鞋网_2026-08-14/M889"
-      ],
+      "raw_packages": [],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/数据/国际站预上架商品总表_2026-08-14.csv",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601924732369/copy.json",
@@ -13752,7 +13674,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ038"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ038_M889/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -13804,9 +13725,7 @@
       "source_state": "MAPPED",
       "adopted_source_id": null,
       "candidate_source_ids": [],
-      "raw_packages": [
-        "01_产品资产/01_原始素材/历史输入/待审_搜鞋网_2026-08-14/155"
-      ],
+      "raw_packages": [],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/数据/国际站预上架商品总表_2026-08-14.csv",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601924755368/copy.json",
@@ -13851,7 +13770,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ039"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ039_155/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -13903,9 +13821,7 @@
       "source_state": "MAPPED",
       "adopted_source_id": null,
       "candidate_source_ids": [],
-      "raw_packages": [
-        "01_产品资产/01_原始素材/历史输入/待审_搜鞋网_2026-08-14/1689"
-      ],
+      "raw_packages": [],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/数据/国际站预上架商品总表_2026-08-14.csv",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/1601924792152/copy.json",
@@ -13950,7 +13866,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ040"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ040_1689/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -14002,9 +13917,7 @@
       "source_state": "MAPPED",
       "adopted_source_id": null,
       "candidate_source_ids": [],
-      "raw_packages": [
-        "01_产品资产/01_原始素材/历史输入/待审_搜鞋网_2026-08-14/202"
-      ],
+      "raw_packages": [],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/数据/国际站预上架商品总表_2026-08-14.csv",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000047127570/copy.json",
@@ -14046,7 +13959,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ041"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ041_202/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -14098,9 +14010,7 @@
       "source_state": "MAPPED",
       "adopted_source_id": null,
       "candidate_source_ids": [],
-      "raw_packages": [
-        "01_产品资产/01_原始素材/历史输入/待审_搜鞋网_2026-08-14/206"
-      ],
+      "raw_packages": [],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/数据/国际站预上架商品总表_2026-08-14.csv",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000047166193/copy.json",
@@ -14140,7 +14050,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ042"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ042_206/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -14177,9 +14086,7 @@
       "source_state": "MAPPED",
       "adopted_source_id": null,
       "candidate_source_ids": [],
-      "raw_packages": [
-        "01_产品资产/01_原始素材/历史输入/待审_搜鞋网_2026-08-14/8008"
-      ],
+      "raw_packages": [],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/数据/国际站预上架商品总表_2026-08-14.csv",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000047175212/copy.json",
@@ -14219,7 +14126,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ043"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ043_8008/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -14256,9 +14162,7 @@
       "source_state": "MAPPED",
       "adopted_source_id": null,
       "candidate_source_ids": [],
-      "raw_packages": [
-        "01_产品资产/01_原始素材/历史输入/待审_搜鞋网_2026-08-14/811"
-      ],
+      "raw_packages": [],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/数据/国际站预上架商品总表_2026-08-14.csv",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000047221334/copy.json",
@@ -14311,7 +14215,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ044"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ044_811/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -14376,9 +14279,7 @@
       "source_state": "MAPPED",
       "adopted_source_id": null,
       "candidate_source_ids": [],
-      "raw_packages": [
-        "01_产品资产/01_原始素材/历史输入/待审_搜鞋网_2026-08-14/A155"
-      ],
+      "raw_packages": [],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/数据/国际站预上架商品总表_2026-08-14.csv",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000047187673/copy.json",
@@ -14415,7 +14316,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ046"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ046_A155/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -14452,9 +14352,7 @@
       "source_state": "MAPPED",
       "adopted_source_id": null,
       "candidate_source_ids": [],
-      "raw_packages": [
-        "01_产品资产/01_原始素材/历史输入/待审_搜鞋网_2026-08-14/A189"
-      ],
+      "raw_packages": [],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/数据/国际站预上架商品总表_2026-08-14.csv",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000047208726/copy.json",
@@ -14491,7 +14389,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ047"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ047_A189/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -14528,9 +14425,7 @@
       "source_state": "MAPPED",
       "adopted_source_id": null,
       "candidate_source_ids": [],
-      "raw_packages": [
-        "01_产品资产/01_原始素材/历史输入/待审_搜鞋网_2026-08-14/A212"
-      ],
+      "raw_packages": [],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/数据/国际站预上架商品总表_2026-08-14.csv",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000047198577/copy.json",
@@ -14570,7 +14465,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ048"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ048_A212/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -14607,9 +14501,7 @@
       "source_state": "MAPPED",
       "adopted_source_id": null,
       "candidate_source_ids": [],
-      "raw_packages": [
-        "01_产品资产/01_原始素材/历史输入/待审_搜鞋网_2026-08-14/A230"
-      ],
+      "raw_packages": [],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/数据/国际站预上架商品总表_2026-08-14.csv",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000047220568/copy.json",
@@ -14646,7 +14538,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ049"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ049_A230/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -14686,9 +14577,7 @@
       "source_state": "MAPPED",
       "adopted_source_id": null,
       "candidate_source_ids": [],
-      "raw_packages": [
-        "01_产品资产/01_原始素材/历史输入/待审_搜鞋网_2026-08-14/A828"
-      ],
+      "raw_packages": [],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/数据/国际站预上架商品总表_2026-08-14.csv",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000047196608/copy.json",
@@ -14733,7 +14622,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ050"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ050_A828/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -14785,9 +14673,7 @@
       "source_state": "MAPPED",
       "adopted_source_id": null,
       "candidate_source_ids": [],
-      "raw_packages": [
-        "01_产品资产/01_原始素材/历史输入/待审_搜鞋网_2026-08-14/K6689"
-      ],
+      "raw_packages": [],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/数据/国际站预上架商品总表_2026-08-14.csv",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000047216427/copy.json",
@@ -14840,7 +14726,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ051"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ051_K6689/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -14905,9 +14790,7 @@
       "source_state": "MAPPED",
       "adopted_source_id": null,
       "candidate_source_ids": [],
-      "raw_packages": [
-        "01_产品资产/01_原始素材/历史输入/待审_搜鞋网_2026-08-14/9212"
-      ],
+      "raw_packages": [],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/数据/国际站预上架商品总表_2026-08-14.csv",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000047201716/copy.json",
@@ -14947,7 +14830,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ052"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ052_9212/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -14984,12 +14866,9 @@
       "source_state": "MAPPED",
       "adopted_source_id": null,
       "candidate_source_ids": [],
-      "raw_packages": [
-        "01_产品资产/01_原始素材/历史输入/待审_搜鞋网_2026-08-14/1888"
-      ],
+      "raw_packages": [],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/数据/搜鞋网贝强工厂店在线商品_2026-08-14.csv",
-        "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ053_1888/00_上架填写表.md",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000047307924/copy.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000047307924/update_receipt.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000047307924/after_get.json",
@@ -15024,7 +14903,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ053"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ053_1888/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -15061,12 +14939,9 @@
       "source_state": "MAPPED",
       "adopted_source_id": null,
       "candidate_source_ids": [],
-      "raw_packages": [
-        "01_产品资产/01_原始素材/历史输入/待审_搜鞋网_2026-08-14/A1888"
-      ],
+      "raw_packages": [],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/数据/搜鞋网贝强工厂店在线商品_2026-08-14.csv",
-        "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ059_A1888/00_上架填写表.md",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000047392343/copy.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000047392343/update_receipt.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000047392343/after_get.json",
@@ -15104,7 +14979,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ059"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ059_A1888/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -15141,12 +15015,9 @@
       "source_state": "MAPPED",
       "adopted_source_id": null,
       "candidate_source_ids": [],
-      "raw_packages": [
-        "01_产品资产/01_原始素材/历史输入/待审_搜鞋网_2026-08-14/A350"
-      ],
+      "raw_packages": [],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/数据/搜鞋网贝强工厂店在线商品_2026-08-14.csv",
-        "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ060_A350/00_上架填写表.md",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000047396313/copy.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000047396313/update_receipt.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000047396313/after_get.json",
@@ -15181,7 +15052,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ060"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ060_A350/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -15218,12 +15088,9 @@
       "source_state": "MAPPED",
       "adopted_source_id": null,
       "candidate_source_ids": [],
-      "raw_packages": [
-        "01_产品资产/01_原始素材/历史输入/待审_搜鞋网_2026-08-14/AA811"
-      ],
+      "raw_packages": [],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/数据/搜鞋网贝强工厂店在线商品_2026-08-14.csv",
-        "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ061_AA811/00_上架填写表.md",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000047356491/copy.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000047356491/update_receipt.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/商品/10000047356491/after_get.json",
@@ -15266,7 +15133,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ061"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ061_AA811/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "current_gallery_by_id": {
@@ -15321,7 +15187,7 @@
         "src-hr-dz14546082-a-kb11"
       ],
       "raw_packages": [
-        "01_产品资产/01_原始素材/DZ14546082-A/DZ14546082-A_KB11"
+        "01_产品资产/01_原始素材/DZ14546082-A"
       ],
       "evidence": [
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/12000003229472/manifest.json",
@@ -16698,7 +16564,9 @@
       "candidate_source_ids": [
         "src-hr-hr009-10-161"
       ],
-      "raw_packages": [],
+      "raw_packages": [
+        "01_产品资产/01_原始素材/BQ1009"
+      ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md",
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943411769/manifest.json",
@@ -18494,7 +18362,7 @@
         "src-hr-hr020-9917"
       ],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ1020/BQ1020_9917"
+        "01_产品资产/01_原始素材/BQ1020"
       ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md",
@@ -18604,7 +18472,7 @@
         "state": "SOURCE_ROUTE_EVIDENCED",
         "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "01_产品资产/01_原始素材/BQ1020/BQ1020_9917/source.json",
+          "01_产品资产/01_原始素材/BQ1020/BQ1020_4b5aa0a736300240.json",
           "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR020/素材清单.json"
         ],
         "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
@@ -18852,7 +18720,7 @@
         "src-hr-hr024-8856"
       ],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ1024/BQ1024_8856"
+        "01_产品资产/01_原始素材/BQ1024"
       ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/HR系列真实货源改造_2026-09-21/HR系列货源发货与图片总表.md",
@@ -18934,7 +18802,7 @@
         "state": "SOURCE_ROUTE_EVIDENCED",
         "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "01_产品资产/01_原始素材/BQ1024/BQ1024_8856/source.json",
+          "01_产品资产/01_原始素材/BQ1024/BQ1024_6fd9159927e58736.json",
           "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR024/素材清单.json"
         ],
         "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
@@ -19421,7 +19289,7 @@
         "src-hr-hr029-726c"
       ],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ1029/BQ1029_726C"
+        "01_产品资产/01_原始素材/BQ1029"
       ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/热榜持续扩品_2026-09-05/HR001-HR067_201条最终全链路回读.json",
@@ -19515,7 +19383,7 @@
         "state": "SOURCE_ROUTE_EVIDENCED",
         "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "01_产品资产/01_原始素材/BQ1029/BQ1029_726C/source.json",
+          "01_产品资产/01_原始素材/BQ1029/BQ1029_d3bc5e8929af06ed.json",
           "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR029/素材清单.json"
         ],
         "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
@@ -19547,7 +19415,7 @@
         "src-hr-hr030-mna-1"
       ],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ1030/BQ1030_MNA-1"
+        "01_产品资产/01_原始素材/BQ1030"
       ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/热榜持续扩品_2026-09-05/HR001-HR067_201条最终全链路回读.json",
@@ -19626,7 +19494,7 @@
         "state": "SOURCE_ROUTE_EVIDENCED",
         "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "01_产品资产/01_原始素材/BQ1030/BQ1030_MNA-1/source.json",
+          "01_产品资产/01_原始素材/BQ1030/BQ1030_fb3956f876a9592b.json",
           "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR030/素材清单.json"
         ],
         "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
@@ -19652,7 +19520,7 @@
         "src-hr-hr031-d11"
       ],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ1031/BQ1031_D11"
+        "01_产品资产/01_原始素材/BQ1031"
       ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/热榜持续扩品_2026-09-05/HR001-HR067_201条最终全链路回读.json",
@@ -19746,7 +19614,7 @@
         "state": "SOURCE_ROUTE_EVIDENCED",
         "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "01_产品资产/01_原始素材/BQ1031/BQ1031_D11/source.json",
+          "01_产品资产/01_原始素材/BQ1031/BQ1031_c523aede4fe01085.json",
           "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR031/素材清单.json"
         ],
         "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
@@ -19778,7 +19646,7 @@
         "src-hr-hr032-ch33"
       ],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ1032/BQ1032_CH33"
+        "01_产品资产/01_原始素材/BQ1032"
       ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/热榜持续扩品_2026-09-05/HR001-HR067_201条最终全链路回读.json",
@@ -19863,7 +19731,7 @@
         "state": "SOURCE_ROUTE_EVIDENCED",
         "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "01_产品资产/01_原始素材/BQ1032/BQ1032_CH33/source.json",
+          "01_产品资产/01_原始素材/BQ1032/BQ1032_e64f2ca77e8de22f.json",
           "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR032/素材清单.json"
         ],
         "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
@@ -20087,7 +19955,7 @@
         "src-hr-hr035-888-d"
       ],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ1035/BQ1035_888-D"
+        "01_产品资产/01_原始素材/BQ1035"
       ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/热榜持续扩品_2026-09-05/HR001-HR067_201条最终全链路回读.json",
@@ -20169,7 +20037,7 @@
         "state": "SOURCE_ROUTE_EVIDENCED",
         "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "01_产品资产/01_原始素材/BQ1035/BQ1035_888-D/source.json",
+          "01_产品资产/01_原始素材/BQ1035/BQ1035_4a5da0731d2cfd08.json",
           "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR035/素材清单.json"
         ],
         "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
@@ -20189,7 +20057,7 @@
         "src-hr-hr036-1936"
       ],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ1036/BQ1036_1936"
+        "01_产品资产/01_原始素材/BQ1036"
       ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/热榜持续扩品_2026-09-05/HR001-HR067_201条最终全链路回读.json",
@@ -20283,7 +20151,7 @@
         "state": "SOURCE_ROUTE_EVIDENCED",
         "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "01_产品资产/01_原始素材/BQ1036/BQ1036_1936/source.json",
+          "01_产品资产/01_原始素材/BQ1036/BQ1036_a1881156e467a6b7.json",
           "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR036/素材清单.json"
         ],
         "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
@@ -20315,7 +20183,7 @@
         "src-hr-hr037-w33"
       ],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ1037/BQ1037_W33"
+        "01_产品资产/01_原始素材/BQ1037"
       ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/热榜持续扩品_2026-09-05/HR001-HR067_201条最终全链路回读.json",
@@ -20397,7 +20265,7 @@
         "state": "SOURCE_ROUTE_EVIDENCED",
         "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "01_产品资产/01_原始素材/BQ1037/BQ1037_W33/source.json",
+          "01_产品资产/01_原始素材/BQ1037/BQ1037_9239643c4214fc29.json",
           "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR037/素材清单.json"
         ],
         "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
@@ -20417,7 +20285,7 @@
         "src-hr-hr038-ar288"
       ],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ1038/BQ1038_AR288"
+        "01_产品资产/01_原始素材/BQ1038"
       ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/热榜持续扩品_2026-09-05/HR001-HR067_201条最终全链路回读.json",
@@ -20502,7 +20370,7 @@
         "state": "SOURCE_ROUTE_EVIDENCED",
         "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "01_产品资产/01_原始素材/BQ1038/BQ1038_AR288/source.json",
+          "01_产品资产/01_原始素材/BQ1038/BQ1038_e293233e6acd79f8.json",
           "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR038/素材清单.json"
         ],
         "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
@@ -20522,7 +20390,7 @@
         "src-hr-hr040-813"
       ],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ1040/BQ1040_813"
+        "01_产品资产/01_原始素材/BQ1040"
       ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/热榜持续扩品_2026-09-05/HR001-HR067_201条最终全链路回读.json",
@@ -20600,7 +20468,7 @@
         "state": "SOURCE_ROUTE_EVIDENCED",
         "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "01_产品资产/01_原始素材/BQ1040/BQ1040_813/source.json",
+          "01_产品资产/01_原始素材/BQ1040/BQ1040_1dcae2bed62cca18.json",
           "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR040/素材清单.json"
         ],
         "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
@@ -20620,7 +20488,7 @@
         "src-hr-hr041-c268"
       ],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ1041/BQ1041_C268"
+        "01_产品资产/01_原始素材/BQ1041"
       ],
       "evidence": [
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943608942/manifest.json",
@@ -20724,7 +20592,7 @@
         "state": "SOURCE_ROUTE_EVIDENCED",
         "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "01_产品资产/01_原始素材/BQ1041/BQ1041_C268/source.json",
+          "01_产品资产/01_原始素材/BQ1041/BQ1041_269f1b7e901e174e.json",
           "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR041/素材清单.json"
         ],
         "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
@@ -20744,7 +20612,7 @@
         "src-hr-hr042-9818"
       ],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ1042/BQ1042_9818"
+        "01_产品资产/01_原始素材/BQ1042"
       ],
       "evidence": [
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943639708/manifest.json",
@@ -20848,7 +20716,7 @@
         "state": "SOURCE_ROUTE_EVIDENCED",
         "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "01_产品资产/01_原始素材/BQ1042/BQ1042_9818/source.json",
+          "01_产品资产/01_原始素材/BQ1042/BQ1042_926634284de532be.json",
           "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR042/素材清单.json"
         ],
         "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
@@ -20868,7 +20736,7 @@
         "src-hr-hr043-556"
       ],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ1043/BQ1043_556"
+        "01_产品资产/01_原始素材/BQ1043"
       ],
       "evidence": [
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943607904/manifest.json",
@@ -20974,7 +20842,7 @@
         "state": "SOURCE_ROUTE_EVIDENCED",
         "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "01_产品资产/01_原始素材/BQ1043/BQ1043_556/source.json",
+          "01_产品资产/01_原始素材/BQ1043/BQ1043_e762ff4fda4f827c.json",
           "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR043/素材清单.json"
         ],
         "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
@@ -21123,7 +20991,7 @@
         "src-hr-hr045-f18"
       ],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ1045/BQ1045_F18"
+        "01_产品资产/01_原始素材/BQ1045"
       ],
       "evidence": [
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943660642/manifest.json",
@@ -21227,7 +21095,7 @@
         "state": "SOURCE_ROUTE_EVIDENCED",
         "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "01_产品资产/01_原始素材/BQ1045/BQ1045_F18/source.json",
+          "01_产品资产/01_原始素材/BQ1045/BQ1045_3df6bc50d43f9bac.json",
           "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR045/素材清单.json"
         ],
         "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
@@ -21247,7 +21115,7 @@
         "src-hr-hr046-ar299"
       ],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ1046/BQ1046_AR299"
+        "01_产品资产/01_原始素材/BQ1046"
       ],
       "evidence": [
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943660658/manifest.json",
@@ -21351,7 +21219,7 @@
         "state": "SOURCE_ROUTE_EVIDENCED",
         "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "01_产品资产/01_原始素材/BQ1046/BQ1046_AR299/source.json",
+          "01_产品资产/01_原始素材/BQ1046/BQ1046_16d06b210ee14a5b.json",
           "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR046/素材清单.json"
         ],
         "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
@@ -21371,7 +21239,7 @@
         "src-hr-hr047-0073"
       ],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ1047/BQ1047_0073"
+        "01_产品资产/01_原始素材/BQ1047"
       ],
       "evidence": [
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943670678/manifest.json",
@@ -21477,7 +21345,7 @@
         "state": "SOURCE_ROUTE_EVIDENCED",
         "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "01_产品资产/01_原始素材/BQ1047/BQ1047_0073/source.json",
+          "01_产品资产/01_原始素材/BQ1047/BQ1047_618f861c5a3137f1.json",
           "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR047/素材清单.json"
         ],
         "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
@@ -21497,7 +21365,7 @@
         "src-hr-hr048-964"
       ],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ1048/BQ1048_964"
+        "01_产品资产/01_原始素材/BQ1048"
       ],
       "evidence": [
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943607995/manifest.json",
@@ -21601,7 +21469,7 @@
         "state": "SOURCE_ROUTE_EVIDENCED",
         "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "01_产品资产/01_原始素材/BQ1048/BQ1048_964/source.json",
+          "01_产品资产/01_原始素材/BQ1048/BQ1048_357a34520e2eb5a4.json",
           "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR048/素材清单.json"
         ],
         "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
@@ -21621,7 +21489,7 @@
         "src-hr-hr049-b75"
       ],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ1049/BQ1049_B75"
+        "01_产品资产/01_原始素材/BQ1049"
       ],
       "evidence": [
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943633918/manifest.json",
@@ -21725,7 +21593,7 @@
         "state": "SOURCE_ROUTE_EVIDENCED",
         "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "01_产品资产/01_原始素材/BQ1049/BQ1049_B75/source.json",
+          "01_产品资产/01_原始素材/BQ1049/BQ1049_4e0e97e1b0780ec5.json",
           "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR049/素材清单.json"
         ],
         "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
@@ -21745,7 +21613,7 @@
         "src-hr-hr050-315"
       ],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ1050/BQ1050_315"
+        "01_产品资产/01_原始素材/BQ1050"
       ],
       "evidence": [
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943660717/manifest.json",
@@ -21859,7 +21727,7 @@
         "state": "SOURCE_ROUTE_EVIDENCED",
         "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "01_产品资产/01_原始素材/BQ1050/BQ1050_315/source.json",
+          "01_产品资产/01_原始素材/BQ1050/BQ1050_e048cf857e9d9cb9.json",
           "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR050/素材清单.json"
         ],
         "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
@@ -21891,7 +21759,7 @@
         "src-bded161d28f1"
       ],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ1051/BQ1051_936"
+        "01_产品资产/01_原始素材/BQ1051"
       ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/数据/来源证据/6e1df35af433.md",
@@ -22027,7 +21895,7 @@
         "state": "SOURCE_ROUTE_EVIDENCED",
         "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "01_产品资产/01_原始素材/BQ1051/BQ1051_936/source.json",
+          "01_产品资产/01_原始素材/BQ1051/BQ1051_8e2f62d99da1e979.json",
           "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR051/素材清单.json"
         ],
         "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
@@ -22047,7 +21915,7 @@
         "src-hr-hr052-d818"
       ],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ1052/BQ1052_D818"
+        "01_产品资产/01_原始素材/BQ1052"
       ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/热榜持续扩品_2026-09-05/HR001-HR067_201条最终全链路回读.json",
@@ -22131,7 +21999,7 @@
         "state": "SOURCE_ROUTE_EVIDENCED",
         "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "01_产品资产/01_原始素材/BQ1052/BQ1052_D818/source.json",
+          "01_产品资产/01_原始素材/BQ1052/BQ1052_27bd8e69d84dc1e6.json",
           "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR052/素材清单.json"
         ],
         "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
@@ -22151,7 +22019,7 @@
         "src-hr-hr053-f263"
       ],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ1053/BQ1053_F263"
+        "01_产品资产/01_原始素材/BQ1053"
       ],
       "evidence": [
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943638954/manifest.json",
@@ -22255,7 +22123,7 @@
         "state": "SOURCE_ROUTE_EVIDENCED",
         "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "01_产品资产/01_原始素材/BQ1053/BQ1053_F263/source.json",
+          "01_产品资产/01_原始素材/BQ1053/BQ1053_010bc1264f9f8a24.json",
           "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR053/素材清单.json"
         ],
         "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
@@ -22275,7 +22143,7 @@
         "src-hr-hr054-27975"
       ],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ1054/BQ1054_27975"
+        "01_产品资产/01_原始素材/BQ1054"
       ],
       "evidence": [
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943673716/manifest.json",
@@ -22384,7 +22252,7 @@
         "state": "SOURCE_ROUTE_EVIDENCED",
         "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "01_产品资产/01_原始素材/BQ1054/BQ1054_27975/source.json",
+          "01_产品资产/01_原始素材/BQ1054/BQ1054_d495a54ad0541a4a.json",
           "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR054/素材清单.json"
         ],
         "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
@@ -22404,7 +22272,7 @@
         "src-hr-hr055-b803"
       ],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ1055/BQ1055_B803"
+        "01_产品资产/01_原始素材/BQ1055"
       ],
       "evidence": [
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943672753/manifest.json",
@@ -22508,7 +22376,7 @@
         "state": "SOURCE_ROUTE_EVIDENCED",
         "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "01_产品资产/01_原始素材/BQ1055/BQ1055_B803/source.json",
+          "01_产品资产/01_原始素材/BQ1055/BQ1055_f5f729077dbf22ab.json",
           "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR055/素材清单.json"
         ],
         "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
@@ -22528,7 +22396,7 @@
         "src-hr-hr056-555"
       ],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ1056/BQ1056_555"
+        "01_产品资产/01_原始素材/BQ1056"
       ],
       "evidence": [
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943751252/manifest.json",
@@ -22648,7 +22516,7 @@
         "state": "SOURCE_ROUTE_EVIDENCED",
         "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "01_产品资产/01_原始素材/BQ1056/BQ1056_555/source.json",
+          "01_产品资产/01_原始素材/BQ1056/BQ1056_f2a359e77b24c357.json",
           "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR056/素材清单.json"
         ],
         "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
@@ -22680,7 +22548,7 @@
         "src-hr-hr057-h10"
       ],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ1057/BQ1057_H10"
+        "01_产品资产/01_原始素材/BQ1057"
       ],
       "evidence": [
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943700590/manifest.json",
@@ -22814,7 +22682,7 @@
         "state": "SOURCE_ROUTE_EVIDENCED",
         "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "01_产品资产/01_原始素材/BQ1057/BQ1057_H10/source.json",
+          "01_产品资产/01_原始素材/BQ1057/BQ1057_127a03e5cff478b8.json",
           "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR057/素材清单.json"
         ],
         "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
@@ -22857,7 +22725,7 @@
         "src-hr-hr058-as795"
       ],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ1058/BQ1058_AS795"
+        "01_产品资产/01_原始素材/BQ1058"
       ],
       "evidence": [
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943721497/manifest.json",
@@ -22961,7 +22829,7 @@
         "state": "SOURCE_ROUTE_EVIDENCED",
         "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "01_产品资产/01_原始素材/BQ1058/BQ1058_AS795/source.json",
+          "01_产品资产/01_原始素材/BQ1058/BQ1058_a09466605112647d.json",
           "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR058/素材清单.json"
         ],
         "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
@@ -22981,7 +22849,7 @@
         "src-hr-hr059-5612"
       ],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ1059/BQ1059_5612"
+        "01_产品资产/01_原始素材/BQ1059"
       ],
       "evidence": [
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943767266/manifest.json",
@@ -23101,7 +22969,7 @@
         "state": "SOURCE_ROUTE_EVIDENCED",
         "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "01_产品资产/01_原始素材/BQ1059/BQ1059_5612/source.json",
+          "01_产品资产/01_原始素材/BQ1059/BQ1059_35ab307479f49d63.json",
           "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR059/素材清单.json"
         ],
         "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
@@ -23133,7 +23001,7 @@
         "src-hr-hr060-aa23"
       ],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ1060/BQ1060_AA23"
+        "01_产品资产/01_原始素材/BQ1060"
       ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/热榜持续扩品_2026-09-05/HR001-HR067_201条最终全链路回读.json",
@@ -23237,7 +23105,7 @@
         "state": "SOURCE_ROUTE_EVIDENCED",
         "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "01_产品资产/01_原始素材/BQ1060/BQ1060_AA23/source.json",
+          "01_产品资产/01_原始素材/BQ1060/BQ1060_73ce8f1a5e3029dd.json",
           "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR060/素材清单.json"
         ],
         "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
@@ -23269,7 +23137,7 @@
         "src-hr-hr061-l895"
       ],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ1061/BQ1061_L895"
+        "01_产品资产/01_原始素材/BQ1061"
       ],
       "evidence": [
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943700660/manifest.json",
@@ -23373,7 +23241,7 @@
         "state": "SOURCE_ROUTE_EVIDENCED",
         "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "01_产品资产/01_原始素材/BQ1061/BQ1061_L895/source.json",
+          "01_产品资产/01_原始素材/BQ1061/BQ1061_36737fd476f0df07.json",
           "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR061/素材清单.json"
         ],
         "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
@@ -23393,7 +23261,7 @@
         "src-hr-hr062-d02"
       ],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ1062/BQ1062_D02"
+        "01_产品资产/01_原始素材/BQ1062"
       ],
       "evidence": [
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943682804/manifest.json",
@@ -23526,7 +23394,7 @@
         "state": "SOURCE_ROUTE_EVIDENCED",
         "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "01_产品资产/01_原始素材/BQ1062/BQ1062_D02/source.json",
+          "01_产品资产/01_原始素材/BQ1062/BQ1062_b285b84ce3041fd6.json",
           "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR062/素材清单.json"
         ],
         "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
@@ -23558,7 +23426,7 @@
         "src-hr-hr063-1712"
       ],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ1063/BQ1063_1712"
+        "01_产品资产/01_原始素材/BQ1063"
       ],
       "evidence": [
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943651966/manifest.json",
@@ -23681,7 +23549,7 @@
         "state": "SOURCE_ROUTE_EVIDENCED",
         "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "01_产品资产/01_原始素材/BQ1063/BQ1063_1712/source.json",
+          "01_产品资产/01_原始素材/BQ1063/BQ1063_428756b643293efb.json",
           "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR063/素材清单.json"
         ],
         "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
@@ -23744,7 +23612,7 @@
         "src-hr-hr065-j55"
       ],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ1065/BQ1065_J55"
+        "01_产品资产/01_原始素材/BQ1065"
       ],
       "evidence": [
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943703750/manifest.json",
@@ -23864,7 +23732,7 @@
         "state": "SOURCE_ROUTE_EVIDENCED",
         "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "01_产品资产/01_原始素材/BQ1065/BQ1065_J55/source.json",
+          "01_产品资产/01_原始素材/BQ1065/BQ1065_1e266eab1b8a2393.json",
           "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR065/素材清单.json"
         ],
         "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
@@ -23896,7 +23764,7 @@
         "src-hr-hr066-ws6"
       ],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ1066/BQ1066_WS6"
+        "01_产品资产/01_原始素材/BQ1066"
       ],
       "evidence": [
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943670945/manifest.json",
@@ -24000,7 +23868,7 @@
         "state": "SOURCE_ROUTE_EVIDENCED",
         "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "01_产品资产/01_原始素材/BQ1066/BQ1066_WS6/source.json",
+          "01_产品资产/01_原始素材/BQ1066/BQ1066_ef1300bd020bb6f7.json",
           "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR066/素材清单.json"
         ],
         "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
@@ -24020,7 +23888,7 @@
         "src-hr-hr067-d11"
       ],
       "raw_packages": [
-        "01_产品资产/01_原始素材/BQ1067/BQ1067_D11"
+        "01_产品资产/01_原始素材/BQ1067"
       ],
       "evidence": [
         "02_Alibaba运营/06_图片与检查记录/共享工厂详情/商品/1601943658940/manifest.json",
@@ -24124,7 +23992,7 @@
         "state": "SOURCE_ROUTE_EVIDENCED",
         "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "01_产品资产/01_原始素材/BQ1067/BQ1067_D11/source.json",
+          "01_产品资产/01_原始素材/BQ1067/BQ1067_8a4e7c2784c255b0.json",
           "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR067/素材清单.json"
         ],
         "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
@@ -24141,7 +24009,9 @@
       "source_state": "ADOPTED",
       "adopted_source_id": "src-8983688f2432",
       "candidate_source_ids": [],
-      "raw_packages": [],
+      "raw_packages": [
+        "01_产品资产/01_原始素材/BQ-LQ011"
+      ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/质量复核_2026-10-09/全分类处理队列.json",
@@ -24201,11 +24071,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQ011",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQ011/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -24237,7 +24103,9 @@
       "source_state": "ADOPTED",
       "adopted_source_id": "src-ad8ee2fa1373",
       "candidate_source_ids": [],
-      "raw_packages": [],
+      "raw_packages": [
+        "01_产品资产/01_原始素材/BQ-LQ012"
+      ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/质量复核_2026-10-09/全分类处理队列.json",
@@ -24304,11 +24172,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQ012",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQ012/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -24353,7 +24217,9 @@
       "source_state": "ADOPTED",
       "adopted_source_id": "src-59a1a7702cb5",
       "candidate_source_ids": [],
-      "raw_packages": [],
+      "raw_packages": [
+        "01_产品资产/01_原始素材/BQ-LQ013"
+      ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/质量复核_2026-10-09/全分类处理队列.json",
@@ -24420,11 +24286,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQ013",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQ013/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -24469,7 +24331,9 @@
       "source_state": "ADOPTED",
       "adopted_source_id": "src-5088dbcc0372",
       "candidate_source_ids": [],
-      "raw_packages": [],
+      "raw_packages": [
+        "01_产品资产/01_原始素材/BQ-LQ015"
+      ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/质量复核_2026-10-09/全分类处理队列.json",
@@ -24536,11 +24400,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQ015",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQ015/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -24844,7 +24704,7 @@
       "adopted_source_id": "src-f5d3f2c97bb0",
       "candidate_source_ids": [],
       "raw_packages": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/020准备/01_产品来源原图"
+        "01_产品资产/01_原始素材/BQ-LQ020"
       ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
@@ -24878,11 +24738,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQ020",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQ020/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -25150,7 +25006,7 @@
       "adopted_source_id": "src-4a244dcb47c9",
       "candidate_source_ids": [],
       "raw_packages": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/02412准备/01_产品来源原图"
+        "01_产品资产/01_原始素材/BQ-LQ02412"
       ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
@@ -25184,11 +25040,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQ02412",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQ02412/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -25260,7 +25112,7 @@
       "adopted_source_id": "src-c08775d48fa0",
       "candidate_source_ids": [],
       "raw_packages": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/02503准备/01_产品来源原图"
+        "01_产品资产/01_原始素材/BQ-LQ02503"
       ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
@@ -25297,11 +25149,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQ02503",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQ02503/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -25373,7 +25221,7 @@
       "adopted_source_id": "src-6c9daacfef0f",
       "candidate_source_ids": [],
       "raw_packages": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/图片/02505"
+        "01_产品资产/01_原始素材/BQ-LQ02505"
       ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
@@ -25407,11 +25255,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQ02505",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQ02505/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -25483,7 +25327,7 @@
       "adopted_source_id": "src-f5077829238a",
       "candidate_source_ids": [],
       "raw_packages": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/026准备/01_产品来源原图"
+        "01_产品资产/01_原始素材/BQ-LQ026"
       ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
@@ -25520,11 +25364,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQ026",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQ026/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -25652,7 +25492,9 @@
       "source_state": "ADOPTED",
       "adopted_source_id": "src-af09fff0d394",
       "candidate_source_ids": [],
-      "raw_packages": [],
+      "raw_packages": [
+        "01_产品资产/01_原始素材/BQ-LQ027"
+      ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/质量复核_2026-10-09/全分类处理队列.json",
@@ -25713,11 +25555,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQ027",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQ027/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -25834,7 +25672,9 @@
       "source_state": "ADOPTED",
       "adopted_source_id": "src-184300bc8765",
       "candidate_source_ids": [],
-      "raw_packages": [],
+      "raw_packages": [
+        "01_产品资产/01_原始素材/BQ-LQ029"
+      ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/质量复核_2026-10-09/全分类处理队列.json",
@@ -25892,11 +25732,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQ029",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQ029/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -25930,8 +25766,7 @@
       "adopted_source_id": "src-5b52a6d61cf2",
       "candidate_source_ids": [],
       "raw_packages": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0323F准备/01_产品来源原图",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0323-1准备/01_产品来源原图"
+        "01_产品资产/01_原始素材/BQ-LQ0323F"
       ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
@@ -25967,11 +25802,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQ0323F",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQ0323F/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -26222,7 +26053,7 @@
       "adopted_source_id": "src-d438d7cece9b",
       "candidate_source_ids": [],
       "raw_packages": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/0922准备/01_产品来源原图"
+        "01_产品资产/01_原始素材/BQ-LQ0922"
       ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
@@ -26256,11 +26087,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQ0922",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQ0922/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -26332,7 +26159,7 @@
       "adopted_source_id": "src-1f77fc173f5d",
       "candidate_source_ids": [],
       "raw_packages": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1026准备/01_产品来源原图"
+        "01_产品资产/01_原始素材/BQ-LQ1026"
       ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
@@ -26366,11 +26193,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQ1026",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQ1026/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -26459,7 +26282,7 @@
       "adopted_source_id": "src-2bb7d1e18acb",
       "candidate_source_ids": [],
       "raw_packages": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/117-1准备/01_产品来源原图"
+        "01_产品资产/01_原始素材/BQ-LQ117-1"
       ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
@@ -26493,11 +26316,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQ117-1",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQ117-1/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -26551,7 +26370,7 @@
       "adopted_source_id": "src-4e2dadc34943",
       "candidate_source_ids": [],
       "raw_packages": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1628准备/01_产品来源原图"
+        "01_产品资产/01_原始素材/BQ-LQ1628"
       ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
@@ -26585,11 +26404,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQ1628",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQ1628/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -26661,7 +26476,7 @@
       "adopted_source_id": "src-2fd783b62ec5",
       "candidate_source_ids": [],
       "raw_packages": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1680准备/01_产品来源原图"
+        "01_产品资产/01_原始素材/BQ-LQ1680"
       ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
@@ -26695,11 +26510,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQ1680",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQ1680/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -26788,7 +26599,7 @@
       "adopted_source_id": "src-4cf1620d0e9b",
       "candidate_source_ids": [],
       "raw_packages": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/1712准备/01_当前家族来源原图"
+        "01_产品资产/01_原始素材/BQ-LQ1712"
       ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
@@ -26822,11 +26633,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQ1712",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQ1712/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -26919,7 +26726,7 @@
       "adopted_source_id": "src-f446bedb67c9",
       "candidate_source_ids": [],
       "raw_packages": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2132准备/01_产品来源原图"
+        "01_产品资产/01_原始素材/BQ-LQ2132"
       ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
@@ -26953,11 +26760,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQ2132",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQ2132/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -27056,7 +26859,9 @@
       "source_state": "ADOPTED",
       "adopted_source_id": "src-c9182e53de2c",
       "candidate_source_ids": [],
-      "raw_packages": [],
+      "raw_packages": [
+        "01_产品资产/01_原始素材/BQ-LQ2409"
+      ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/质量复核_2026-10-09/全分类处理队列.json",
@@ -27116,11 +26921,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQ2409",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQ2409/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -27152,7 +26953,9 @@
       "source_state": "ADOPTED",
       "adopted_source_id": "src-e21dfa97f1ed",
       "candidate_source_ids": [],
-      "raw_packages": [],
+      "raw_packages": [
+        "01_产品资产/01_原始素材/BQ-LQ2413"
+      ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/质量复核_2026-10-09/全分类处理队列.json",
@@ -27219,11 +27022,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQ2413",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQ2413/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -27268,7 +27067,9 @@
       "source_state": "ADOPTED",
       "adopted_source_id": "src-6db214cd2b06",
       "candidate_source_ids": [],
-      "raw_packages": [],
+      "raw_packages": [
+        "01_产品资产/01_原始素材/BQ-LQ2415"
+      ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/质量复核_2026-10-09/全分类处理队列.json",
@@ -27335,11 +27136,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQ2415",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQ2415/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -27384,7 +27181,9 @@
       "source_state": "ADOPTED",
       "adopted_source_id": "src-894ffef5b942",
       "candidate_source_ids": [],
-      "raw_packages": [],
+      "raw_packages": [
+        "01_产品资产/01_原始素材/BQ-LQ2416"
+      ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/质量复核_2026-10-09/全分类处理队列.json",
@@ -27451,11 +27250,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQ2416",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQ2416/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -27500,7 +27295,9 @@
       "source_state": "ADOPTED",
       "adopted_source_id": "src-6b6dbaacb0cf",
       "candidate_source_ids": [],
-      "raw_packages": [],
+      "raw_packages": [
+        "01_产品资产/01_原始素材/BQ-LQ2417"
+      ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/质量复核_2026-10-09/全分类处理队列.json",
@@ -27567,11 +27364,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQ2417",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQ2417/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -27617,7 +27410,7 @@
       "adopted_source_id": "src-66e2c48586e7",
       "candidate_source_ids": [],
       "raw_packages": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2418准备/01_产品来源原图"
+        "01_产品资产/01_原始素材/BQ-LQ2418"
       ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
@@ -27651,11 +27444,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQ2418",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQ2418/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -27726,7 +27515,9 @@
       "source_state": "ADOPTED",
       "adopted_source_id": "src-9b83000ab685",
       "candidate_source_ids": [],
-      "raw_packages": [],
+      "raw_packages": [
+        "01_产品资产/01_原始素材/BQ-LQ25019"
+      ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/质量复核_2026-10-09/全分类处理队列.json",
@@ -27785,11 +27576,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQ25019",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQ25019/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -27822,7 +27609,7 @@
       "adopted_source_id": "src-8cfcee52f82e",
       "candidate_source_ids": [],
       "raw_packages": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2505准备/01_产品来源原图"
+        "01_产品资产/01_原始素材/BQ-LQ2505"
       ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
@@ -27856,11 +27643,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQ2505",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQ2505/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -27930,7 +27713,7 @@
       "adopted_source_id": "src-25bece2e7c64",
       "candidate_source_ids": [],
       "raw_packages": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/图片/2509"
+        "01_产品资产/01_原始素材/BQ-LQ2509"
       ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
@@ -27964,11 +27747,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQ2509",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQ2509/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -28081,7 +27860,7 @@
       "adopted_source_id": "src-7e6c58c6125a",
       "candidate_source_ids": [],
       "raw_packages": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2539准备/01_产品来源原图"
+        "01_产品资产/01_原始素材/BQ-LQ2539"
       ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
@@ -28115,11 +27894,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQ2539",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQ2539/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -28189,7 +27964,7 @@
       "adopted_source_id": "src-33e7764c86c8",
       "candidate_source_ids": [],
       "raw_packages": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2550准备/01_产品来源原图"
+        "01_产品资产/01_原始素材/BQ-LQ2550"
       ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
@@ -28223,11 +27998,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQ2550",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQ2550/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -28316,7 +28087,9 @@
       "source_state": "ADOPTED",
       "adopted_source_id": "src-d4c61d959d8d",
       "candidate_source_ids": [],
-      "raw_packages": [],
+      "raw_packages": [
+        "01_产品资产/01_原始素材/BQ-LQ2558"
+      ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/质量复核_2026-10-09/全分类处理队列.json",
@@ -28376,11 +28149,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQ2558",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQ2558/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -28412,7 +28181,9 @@
       "source_state": "ADOPTED",
       "adopted_source_id": "src-d218b227bd3d",
       "candidate_source_ids": [],
-      "raw_packages": [],
+      "raw_packages": [
+        "01_产品资产/01_原始素材/BQ-LQ2559"
+      ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/质量复核_2026-10-09/全分类处理队列.json",
@@ -28472,11 +28243,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQ2559",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQ2559/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -28508,7 +28275,9 @@
       "source_state": "ADOPTED",
       "adopted_source_id": "src-0f3b9410d389",
       "candidate_source_ids": [],
-      "raw_packages": [],
+      "raw_packages": [
+        "01_产品资产/01_原始素材/BQ-LQ2560"
+      ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/质量复核_2026-10-09/全分类处理队列.json",
@@ -28568,11 +28337,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQ2560",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQ2560/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -28604,7 +28369,9 @@
       "source_state": "ADOPTED",
       "adopted_source_id": "src-06f7c95abee1",
       "candidate_source_ids": [],
-      "raw_packages": [],
+      "raw_packages": [
+        "01_产品资产/01_原始素材/BQ-LQ2561"
+      ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/质量复核_2026-10-09/全分类处理队列.json",
@@ -28664,11 +28431,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQ2561",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQ2561/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -28787,7 +28550,7 @@
       "adopted_source_id": "src-ef63ae43f087",
       "candidate_source_ids": [],
       "raw_packages": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2569准备/01_产品来源原图"
+        "01_产品资产/01_原始素材/BQ-LQ2569"
       ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
@@ -28833,11 +28596,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQ2569",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQ2569/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -29228,7 +28987,7 @@
       "adopted_source_id": "src-797c9dded222",
       "candidate_source_ids": [],
       "raw_packages": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2575准备/01_产品来源原图"
+        "01_产品资产/01_原始素材/BQ-LQ2575"
       ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
@@ -29262,11 +29021,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQ2575",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQ2575/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -29338,7 +29093,7 @@
       "adopted_source_id": "src-ff8d28f6cbcc",
       "candidate_source_ids": [],
       "raw_packages": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2576准备/01_产品来源原图"
+        "01_产品资产/01_原始素材/BQ-LQ2576"
       ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
@@ -29372,11 +29127,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQ2576",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQ2576/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -29619,7 +29370,7 @@
       "adopted_source_id": "src-4a78572dfe44",
       "candidate_source_ids": [],
       "raw_packages": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2579准备/01_产品来源原图"
+        "01_产品资产/01_原始素材/BQ-LQ2579"
       ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
@@ -29653,11 +29404,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQ2579",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQ2579/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -29728,7 +29475,9 @@
       "source_state": "ADOPTED",
       "adopted_source_id": "src-f8406b0e60a1",
       "candidate_source_ids": [],
-      "raw_packages": [],
+      "raw_packages": [
+        "01_产品资产/01_原始素材/BQ-LQ2580"
+      ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/质量复核_2026-10-09/全分类处理队列.json",
@@ -29786,11 +29535,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQ2580",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQ2580/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -29824,8 +29569,7 @@
       "adopted_source_id": "src-5e614f2c3328",
       "candidate_source_ids": [],
       "raw_packages": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2583-1准备/01_产品来源原图",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2583准备/01_产品来源原图"
+        "01_产品资产/01_原始素材/BQ-LQ2583-1"
       ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
@@ -29898,11 +29642,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQ2583-1",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQ2583-1/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -30182,7 +29922,7 @@
       "adopted_source_id": "src-2f2e8a3ba701",
       "candidate_source_ids": [],
       "raw_packages": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2593准备/01_产品来源原图"
+        "01_产品资产/01_原始素材/BQ-LQ2593"
       ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
@@ -30216,11 +29956,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQ2593",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQ2593/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -30394,7 +30130,9 @@
       "source_state": "ADOPTED",
       "adopted_source_id": "src-d9ee11e25e75",
       "candidate_source_ids": [],
-      "raw_packages": [],
+      "raw_packages": [
+        "01_产品资产/01_原始素材/BQ-LQ2627"
+      ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/质量复核_2026-10-09/全分类处理队列.json",
@@ -30452,11 +30190,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQ2627",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQ2627/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -30489,7 +30223,7 @@
       "adopted_source_id": "src-e39fb7e34a8f",
       "candidate_source_ids": [],
       "raw_packages": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2772准备/01_产品来源原图"
+        "01_产品资产/01_原始素材/BQ-LQ2772"
       ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
@@ -30523,11 +30257,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQ2772",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQ2772/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -30611,7 +30341,7 @@
       "adopted_source_id": "src-7c30b934ce12",
       "candidate_source_ids": [],
       "raw_packages": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/323准备/01_产品来源原图"
+        "01_产品资产/01_原始素材/BQ-LQ323"
       ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
@@ -30645,11 +30375,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQ323",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQ323/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -30719,7 +30445,7 @@
       "adopted_source_id": "src-c536d5e0fae0",
       "candidate_source_ids": [],
       "raw_packages": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/822准备/01_产品来源原图"
+        "01_产品资产/01_原始素材/BQ-LQ822"
       ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
@@ -30753,11 +30479,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQ822",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQ822/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -30829,7 +30551,7 @@
       "adopted_source_id": "src-7f5d4e86e9a3",
       "candidate_source_ids": [],
       "raw_packages": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/868准备/01_产品来源原图"
+        "01_产品资产/01_原始素材/BQ-LQ868"
       ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
@@ -30863,11 +30585,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQ868",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQ868/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -30939,7 +30657,7 @@
       "adopted_source_id": "src-0563177eb488",
       "candidate_source_ids": [],
       "raw_packages": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/909准备/01_产品来源原图"
+        "01_产品资产/01_原始素材/BQ-LQ909"
       ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
@@ -30973,11 +30691,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQ909",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQ909/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -31049,7 +30763,7 @@
       "adopted_source_id": "src-ac29307c7b07",
       "candidate_source_ids": [],
       "raw_packages": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/923准备/01_产品来源原图"
+        "01_产品资产/01_原始素材/BQ-LQ923"
       ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
@@ -31083,11 +30797,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQ923",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQ923/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -31177,7 +30887,7 @@
       "adopted_source_id": "src-376d3237f216",
       "candidate_source_ids": [],
       "raw_packages": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/924准备/01_产品来源原图"
+        "01_产品资产/01_原始素材/BQ-LQ924"
       ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
@@ -31211,11 +30921,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQ924",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQ924/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -31305,7 +31011,7 @@
       "adopted_source_id": "src-743609de0090",
       "candidate_source_ids": [],
       "raw_packages": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/931准备/01_产品来源原图"
+        "01_产品资产/01_原始素材/BQ-LQ931"
       ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
@@ -31339,11 +31045,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQ931",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQ931/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -31415,7 +31117,7 @@
       "adopted_source_id": "src-d5edf1c1dc02",
       "candidate_source_ids": [],
       "raw_packages": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/9705准备/01_产品来源原图"
+        "01_产品资产/01_原始素材/BQ-LQ9705"
       ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
@@ -31449,11 +31151,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQ9705",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQ9705/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -31542,7 +31240,7 @@
       "adopted_source_id": "src-163b14a8c952",
       "candidate_source_ids": [],
       "raw_packages": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/995准备/01_产品来源原图"
+        "01_产品资产/01_原始素材/BQ-LQ995"
       ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
@@ -31576,11 +31274,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQ995",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQ995/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -31671,8 +31365,7 @@
       "adopted_source_id": "src-1c8a45b9566a",
       "candidate_source_ids": [],
       "raw_packages": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/K502准备/01_当前家族来源原图",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/K502D准备/01_当前家族来源原图"
+        "01_产品资产/01_原始素材/BQ-LQK502"
       ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
@@ -31708,11 +31401,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQK502",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQK502/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -31847,8 +31536,7 @@
       "adopted_source_id": "src-cb6b8e6ad27d",
       "candidate_source_ids": [],
       "raw_packages": [
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/117准备/01_产品来源原图",
-        "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/ST-117准备/01_产品来源原图"
+        "01_产品资产/01_原始素材/BQ-LQST-117"
       ],
       "evidence": [
         "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json",
@@ -31885,11 +31573,7 @@
         "current_buyer_copy": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/逐款文案.json",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
         "finished_asset_key": "BQ-LQST-117",
-        "finished_asset_count": 6,
-        "saved_media_roots": [
-          "01_产品资产/01_原始素材/BQ-LQST-117/渠道保存原件"
-        ],
-        "saved_media_scope": "渠道保存的来源图及历史编辑素材；目录归档不证明实拍、自产或当前可发布。"
+        "finished_asset_count": 6
       },
       "classification": {
         "local_intent_candidates": [
@@ -31981,19 +31665,14 @@
       "source_state": "MAPPED",
       "adopted_source_id": null,
       "candidate_source_ids": [],
-      "raw_packages": [
-        "01_产品资产/01_原始素材/历史输入/待审_搜鞋网_2026-08-14/A012"
-      ],
-      "evidence": [
-        "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ045_A012/00_上架填写表.md"
-      ],
+      "raw_packages": [],
+      "evidence": [],
       "notes": [
         "本地既有待上架资料补登；不是已发布或已核当前供给。"
       ],
       "reference_source_id": "src-f78bb35731b4",
       "local_assets": {
         "asset_roots": [],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ045_A012/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
@@ -32017,12 +31696,8 @@
       "source_state": "MAPPED",
       "adopted_source_id": null,
       "candidate_source_ids": [],
-      "raw_packages": [
-        "01_产品资产/01_原始素材/历史输入/待审_搜鞋网_2026-08-14/208"
-      ],
-      "evidence": [
-        "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ054_208/00_上架填写表.md"
-      ],
+      "raw_packages": [],
+      "evidence": [],
       "notes": [
         "本地既有待上架资料补登；不是已发布或已核当前供给。"
       ],
@@ -32031,7 +31706,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ054"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ054_208/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
@@ -32055,12 +31729,8 @@
       "source_state": "MAPPED",
       "adopted_source_id": null,
       "candidate_source_ids": [],
-      "raw_packages": [
-        "01_产品资产/01_原始素材/历史输入/待审_搜鞋网_2026-08-14/2206"
-      ],
-      "evidence": [
-        "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ055_2206/00_上架填写表.md"
-      ],
+      "raw_packages": [],
+      "evidence": [],
       "notes": [
         "本地既有待上架资料补登；不是已发布或已核当前供给。"
       ],
@@ -32069,7 +31739,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ055"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ055_2206/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
@@ -32093,12 +31762,8 @@
       "source_state": "MAPPED",
       "adopted_source_id": null,
       "candidate_source_ids": [],
-      "raw_packages": [
-        "01_产品资产/01_原始素材/历史输入/待审_搜鞋网_2026-08-14/5836"
-      ],
-      "evidence": [
-        "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ056_5836/00_上架填写表.md"
-      ],
+      "raw_packages": [],
+      "evidence": [],
       "notes": [
         "本地既有待上架资料补登；不是已发布或已核当前供给。"
       ],
@@ -32107,7 +31772,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ056"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ056_5836/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
@@ -32131,12 +31795,8 @@
       "source_state": "MAPPED",
       "adopted_source_id": null,
       "candidate_source_ids": [],
-      "raw_packages": [
-        "01_产品资产/01_原始素材/历史输入/待审_搜鞋网_2026-08-14/689"
-      ],
-      "evidence": [
-        "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ057_689/00_上架填写表.md"
-      ],
+      "raw_packages": [],
+      "evidence": [],
       "notes": [
         "本地既有待上架资料补登；不是已发布或已核当前供给。"
       ],
@@ -32145,7 +31805,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ057"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ057_689/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
@@ -32169,12 +31828,8 @@
       "source_state": "MAPPED",
       "adopted_source_id": null,
       "candidate_source_ids": [],
-      "raw_packages": [
-        "01_产品资产/01_原始素材/历史输入/待审_搜鞋网_2026-08-14/8811"
-      ],
-      "evidence": [
-        "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ058_8811/00_上架填写表.md"
-      ],
+      "raw_packages": [],
+      "evidence": [],
       "notes": [
         "本地既有待上架资料补登；不是已发布或已核当前供给。"
       ],
@@ -32183,7 +31838,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ058"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ058_8811/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
@@ -32207,12 +31861,8 @@
       "source_state": "MAPPED",
       "adopted_source_id": null,
       "candidate_source_ids": [],
-      "raw_packages": [
-        "01_产品资产/01_原始素材/历史输入/待审_搜鞋网_2026-08-14/116"
-      ],
-      "evidence": [
-        "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ062_116/00_上架填写表.md"
-      ],
+      "raw_packages": [],
+      "evidence": [],
       "notes": [
         "本地既有待上架资料补登；不是已发布或已核当前供给。"
       ],
@@ -32221,7 +31871,6 @@
         "asset_roots": [
           "01_产品资产/02_成品素材/BQ062"
         ],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ062_116/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
@@ -32235,10 +31884,7 @@
         "state": "TITLE_OBSERVATION_PENDING_SKU_REVIEW",
         "evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
         "store_group_state": "NOT_RETURNED_PENDING_REVIEW"
-      },
-      "historical_asset_roots": [
-        "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ062_116/历史准备_BQ052误编号"
-      ]
+      }
     },
     {
       "id": "BQ064",
@@ -32248,19 +31894,14 @@
       "source_state": "MAPPED",
       "adopted_source_id": null,
       "candidate_source_ids": [],
-      "raw_packages": [
-        "01_产品资产/01_原始素材/历史输入/待审_搜鞋网_2026-08-14/A201"
-      ],
-      "evidence": [
-        "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ064_A201/00_上架填写表.md"
-      ],
+      "raw_packages": [],
+      "evidence": [],
       "notes": [
         "本地既有待上架资料补登；不是已发布或已核当前供给。"
       ],
       "reference_source_id": "src-d48df4693f53",
       "local_assets": {
         "asset_roots": [],
-        "current_fields_file": "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ064_A201/00_上架填写表.md",
         "state": "SINGLE_CURRENT_FACT_ENTRY",
         "scope": "商品档案为唯一当前入口；事实准备表与每ID最新正式字段分开维护，历史标题不冒充当前线上标题",
         "finished_asset_index": "00_总控台/产品中心/数据/素材索引.json",
@@ -32284,11 +31925,7 @@
         "BQ063"
       ],
       "source_id": "src-32ae508d4363",
-      "evidence": [
-        "01_产品资产/01_原始素材/历史输入/待审_搜鞋网_2026-08-14/7212/source.json",
-        "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ028_BISCUIT/00_上架填写表.md",
-        "01_产品资产/01_原始素材/历史制作资料/00_最终上传/BQ028_BISCUIT/历史准备_原BQ063/00_上架填写表.md"
-      ]
+      "evidence": []
     },
     {
       "canonical": "BQ036",

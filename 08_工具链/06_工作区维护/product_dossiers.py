@@ -27,8 +27,6 @@ def builds(data):
                  '此页是本款国际站档案，由产品中心及国际站商品数据组合生成；跨渠道共用身份与供应来源回产品中心，渠道正式值回按ID保存的回读原件。原始包只读，候选/历史材料不当当前线上素材。', '',
                  f"来源状态：`{product['source_state']}`。下一步：{product['next_action']}", '',
                  '## 当前资料与实物证据', '']
-        legacy=[x for x in product['aliases']if x!=current_model]
-        if legacy:lines.insert(4,'历史/关联查询别名：'+', '.join(legacy)+'。以各商品ID正式型号为准。')
         route=product.get('supply_mode',{})
         if route:
             label={'EXTERNAL_FACTORY':'外采','OWN_FACTORY':'自产'}.get(route.get('current'),'供货类型待核')
@@ -46,8 +44,6 @@ def builds(data):
             lines.append(('- 商品图制作映射（主图库以逐ID最新记录为准）：'if assets.get('current_gallery_by_id')else'- 当前选图与正式CDN映射：')+ref(assets['current_image_map'],parent))
         for path in product.get('raw_packages', []):
             lines.append(f'- 原始包：{ref(path,parent,Path(path).name)}')
-        for path in product.get('historical_asset_roots', []):
-            lines.append(f'- 历史准备素材（禁止直接上传）：{ref(path,parent,Path(path).name)}')
         lines += ['', '## 采购来源（内部使用）', '']
         source_ids = list(dict.fromkeys([x for x in [product.get('adopted_source_id'),product.get('reference_source_id'),*product.get('candidate_source_ids',[])] if x]))
         if not source_ids:
