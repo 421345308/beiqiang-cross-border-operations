@@ -58,7 +58,7 @@ NESTED_ROOTS = ("03_独立站/03_网站源码/", "08_工具链/02_视频工具/o
 # These roots are deliberately absent from an ordinary Git checkout. Check a
 # missing child as an error only after its local mount/staging root exists.
 LOCAL_UNTRACKED_ROOTS = (
-    "01_产品资产/01_原始数据包", "01_产品资产/02_可发布素材",
+    "01_产品资产/01_原始素材", "01_产品资产/02_成品素材",
     "01_产品资产/04_去标与处理后素材", "03_独立站/03_网站源码",
     "05_内容与视频/03_通用AI视频实验", "99_临时区",
     "04_客户开发/07_RFQ专岗", "04_客户开发/01_线索与CRM/outputs",

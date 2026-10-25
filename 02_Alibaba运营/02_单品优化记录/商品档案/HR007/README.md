@@ -12,7 +12,7 @@
 - 供货分类依据：[bank_manifest.json](../../../../99_%E4%B8%B4%E6%97%B6%E5%8C%BA/HR007_%E5%BD%93%E5%89%8DABC%E5%9B%BE%E6%96%87%E5%A4%8D%E5%AE%A1_2026-09-29/bank_manifest.json)
 - 供货分类依据：[来源与正式绑定核验.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/HR007/%E6%9D%A5%E6%BA%90%E4%B8%8E%E6%AD%A3%E5%BC%8F%E7%BB%91%E5%AE%9A%E6%A0%B8%E9%AA%8C.json)
 - 本地事实/准备字段：[来源与正式绑定核验.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/HR007/%E6%9D%A5%E6%BA%90%E4%B8%8E%E6%AD%A3%E5%BC%8F%E7%BB%91%E5%AE%9A%E6%A0%B8%E9%AA%8C.json)
-- 当前素材目录：[BQ1007_sh10015a-R-009](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/00_%E6%9C%80%E7%BB%88%E4%B8%8A%E4%BC%A0/BQ1007_sh10015a-R-009)
+- 当前素材目录：[BQ1007](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ1007)
 - 当前主图库按商品ID对应（含最新统一工厂图）：
   - [1601943463020 当前图库与货号](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601943463020/%E5%BD%93%E5%89%8D%E5%9B%BE%E5%BA%93%E4%B8%8E%E8%B4%A7%E5%8F%B7.json)
   - [1601943408495 当前图库与货号](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601943408495/%E5%BD%93%E5%89%8D%E5%9B%BE%E5%BA%93%E4%B8%8E%E8%B4%A7%E5%8F%B7.json)
@@ -21,7 +21,7 @@
 ## 采购来源（内部使用）
 
 - 已采用记录：[Hefei Shali Trade Co., Ltd. / sh10015a-R-009](https://wholesaler.alibaba.com/product-detail/sh10013a-New-model-men-canvas-shoes_60672146735.html)
-  - 保存的标价：USD 未核当前进货报价 / 双；原观察日期：2026-09-28。历史已采用实款对应恢复；当前数量、价格、包装及交期逐单询价，不从平台售价或样品费反推采购价。
+  - 保存的标价：USD 5.99 / 双；原观察日期：2026-10-21。供方公开单价/数量档见latest_public_quote；不是已确认订单采购成本。适用包装、检验、服务、运税等费用逐单核，不从样品费反推。
   - 供方店铺入口：[https://wholesaler.alibaba.com/product-detail/sh10013a-New-model-men-canvas-shoes_60672146735.html](https://wholesaler.alibaba.com/product-detail/sh10013a-New-model-men-canvas-shoes_60672146735.html)
   - 来源原件：[ROOT_images_approved.json](../../../../99_%E4%B8%B4%E6%97%B6%E5%8C%BA/HR007_%E5%BD%93%E5%89%8DABC%E5%9B%BE%E6%96%87%E5%A4%8D%E5%AE%A1_2026-09-29/ROOT_images_approved.json)
   - 来源原件：[bank_manifest.json](../../../../99_%E4%B8%B4%E6%97%B6%E5%8C%BA/HR007_%E5%BD%93%E5%89%8DABC%E5%9B%BE%E6%96%87%E5%A4%8D%E5%AE%A1_2026-09-29/bank_manifest.json)
@@ -32,10 +32,10 @@
 ### BQ1007-C · 1601943332965
 
 - 平台链接：[1601943332965](https://www.alibaba.com/product-detail/Mens-Casual-Sneakers-with-Canvas-Upper_1601943332965.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943332965/formal_get.json)；UTC 2026-10-20T22:43:06.863776+00:00。
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943332965/formal_get.json)；UTC 2026-10-21T07:41:27.960247+00:00。
 - 当前正式标题：Mens Casual Sneakers with Canvas Upper and Lace Up Design for Everyday Wear
 - 审核/展示：approved / Y；平台类目ID：201334413。
-- 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
+- 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, owner_member, owner_member_display_name, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
 - SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。
 - 店内分组：Slip-On Casual Walking Shoes · 972130291；[平台分组回执](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%BA%97%E5%86%85%E5%88%86%E7%BB%84/972130291.json)。
 - 本地平台素材：[唯一素材索引](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90%E6%B8%85%E5%8D%95.json)；图片按内容哈希保存一份，图库/详情/SKU通过索引引用。
@@ -45,7 +45,7 @@
   - M4：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/8d986bf3348ef841c474aaa86e9ee6ca55c474bc95ab727bfab31f7add4f8ba7.png) · 1200×1200
   - M5：本地图片待补；官方来源 https://sc04.alicdn.com/kf/Hb19807ebc9b34b1eaaa168af4fe3805b8.png
   - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/00_%E6%9C%80%E7%BB%88%E4%B8%8A%E4%BC%A0/00_%E5%8E%82%E5%AE%B6%E8%B5%84%E6%96%99/03_%E5%BD%93%E5%89%8D%E5%B7%A5%E5%8E%82%E4%B8%BB%E5%9B%BE/F1_factory.png) · 1254×1254
-- 本地同步状态：`FORMAL_FIELDS_SCORE_PASS`。
+- 本地同步状态：`FORMAL_PRICE_PASS_API`。
 - 本轮优化：`FORMAL_FIELDS_SCORE_PASS`；Image/source colour audit continues independently. Do not replay historical copy.
   - 变更证据：[prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%95%86%E5%93%81/1601943332965/prepared.json)
   - 变更证据：[update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%95%86%E5%93%81/1601943332965/update_receipt.json)
@@ -54,10 +54,10 @@
 ### BQ1007-B · 1601943408495
 
 - 平台链接：[1601943408495](https://www.alibaba.com/product-detail/Men-s-Low-Top-Canvas-Shoes_1601943408495.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943408495/formal_get.json)；UTC 2026-10-20T23:19:04.336464+00:00。
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943408495/formal_get.json)；UTC 2026-10-21T07:41:24.321365+00:00。
 - 当前正式标题：Men's Low Top Canvas Shoes with Cotton Fabric Lining for Everyday Casual Wear
 - 审核/展示：approved / Y；平台类目ID：201334413。
-- 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
+- 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, owner_member, owner_member_display_name, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
 - SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。
 - 店内分组：Slip-On Casual Walking Shoes · 972130291；[平台分组回执](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%BA%97%E5%86%85%E5%88%86%E7%BB%84/972130291.json)。
 - 本地平台素材：[唯一素材索引](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90%E6%B8%85%E5%8D%95.json)；图片按内容哈希保存一份，图库/详情/SKU通过索引引用。
@@ -67,7 +67,7 @@
   - M4：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/91023f39d73d855e01adb0c51182137a46766334e84b6208b117764cbecba505.png) · 1200×1200
   - M5：本地图片待补；官方来源 https://sc04.alicdn.com/kf/H178c8df95ce04e33af2b76f7a3bcbe9aa.png
   - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/00_%E6%9C%80%E7%BB%88%E4%B8%8A%E4%BC%A0/00_%E5%8E%82%E5%AE%B6%E8%B5%84%E6%96%99/03_%E5%BD%93%E5%89%8D%E5%B7%A5%E5%8E%82%E4%B8%BB%E5%9B%BE/F1_factory.png) · 1254×1254
-- 本地同步状态：`FORMAL_FIELDS_SCORE_PASS`。
+- 本地同步状态：`FORMAL_PRICE_PASS_API`。
 - 本轮优化：`FORMAL_FIELDS_SCORE_PASS`；Image/source colour audit continues independently. Do not replay historical copy.
   - 变更证据：[prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%95%86%E5%93%81/1601943408495/prepared.json)
   - 变更证据：[update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%95%86%E5%93%81/1601943408495/update_receipt.json)
@@ -76,10 +76,10 @@
 ### BQ1007-A · 1601943463020
 
 - 平台链接：[1601943463020](https://www.alibaba.com/product-detail/Men-s-Canvas-Casual-Sneakers-with_1601943463020.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943463020/formal_get.json)；UTC 2026-10-20T23:19:00.905666+00:00。
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943463020/formal_get.json)；UTC 2026-10-21T07:41:21.314592+00:00。
 - 当前正式标题：Men's Canvas Casual Sneakers with Lace Up Closure for Everyday Outfits
 - 审核/展示：approved / Y；平台类目ID：201334413。
-- 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
+- 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, owner_member, owner_member_display_name, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
 - SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。
 - 店内分组：Slip-On Casual Walking Shoes · 972130291；[平台分组回执](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%BA%97%E5%86%85%E5%88%86%E7%BB%84/972130291.json)。
 - 本地平台素材：[唯一素材索引](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90%E6%B8%85%E5%8D%95.json)；图片按内容哈希保存一份，图库/详情/SKU通过索引引用。
@@ -89,7 +89,7 @@
   - M4：本地图片待补；官方来源 https://sc04.alicdn.com/kf/H2cbc04b368c04b3281e5a4b9fefed8c0d.png
   - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/05_%E5%B9%B3%E5%8F%B0%E5%BD%93%E5%89%8D%E7%B4%A0%E6%9D%90/1283f90f5f232a65f8b17b60251b7ae3bca2f77ba5182985061be1498050daef.png) · 1200×1200
   - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/00_%E6%9C%80%E7%BB%88%E4%B8%8A%E4%BC%A0/00_%E5%8E%82%E5%AE%B6%E8%B5%84%E6%96%99/03_%E5%BD%93%E5%89%8D%E5%B7%A5%E5%8E%82%E4%B8%BB%E5%9B%BE/F1_factory.png) · 1254×1254
-- 本地同步状态：`FORMAL_FIELDS_SCORE_PASS`。
+- 本地同步状态：`FORMAL_PRICE_PASS_API`。
 - 本轮优化：`FORMAL_FIELDS_SCORE_PASS`；Image/source colour audit continues independently. Do not replay historical copy.
   - 变更证据：[prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%95%86%E5%93%81/1601943463020/prepared.json)
   - 变更证据：[update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%95%86%E5%93%81/1601943463020/update_receipt.json)

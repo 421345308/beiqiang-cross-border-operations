@@ -13,7 +13,7 @@ import argparse
 ROOT = Path(__file__).resolve().parents[2]
 AREA = ROOT / '02_Alibaba运营/05_扩品工程/数据/目录对账'
 DETAILS = AREA / '当前平台目录/商品'
-CACHE = ROOT / '01_产品资产/05_平台当前素材'
+CACHE = ROOT / '01_产品资产/01_原始素材/平台回读'
 
 
 def image_urls(value):

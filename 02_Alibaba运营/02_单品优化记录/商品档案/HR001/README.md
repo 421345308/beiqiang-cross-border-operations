@@ -10,7 +10,7 @@
 - 当前供货类型（内部）：外采；SOURCE_ROUTE_EVIDENCED。货号不随供货路径永久绑定，转产后更新证据与生效范围。
 - 供货分类依据：[HR系列货源发货与图片总表.md](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/HR%E7%B3%BB%E5%88%97%E7%9C%9F%E5%AE%9E%E8%B4%A7%E6%BA%90%E6%94%B9%E9%80%A0_2026-09-21/HR%E7%B3%BB%E5%88%97%E8%B4%A7%E6%BA%90%E5%8F%91%E8%B4%A7%E4%B8%8E%E5%9B%BE%E7%89%87%E6%80%BB%E8%A1%A8.md)
 - 本地事实/准备字段：尚未指定；不从线上页面证明自产或实物能力。
-- 当前素材目录：[BQ1001_26NC1328](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E5%8F%AF%E5%8F%91%E5%B8%83%E7%B4%A0%E6%9D%90/00_%E6%9C%80%E7%BB%88%E4%B8%8A%E4%BC%A0/BQ1001_26NC1328)
+- 当前素材目录：[BQ1001](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ1001)
 - 当前主图库按商品ID对应（含最新统一工厂图）：
   - [1601943493004 当前图库与货号](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601943493004/%E5%BD%93%E5%89%8D%E5%9B%BE%E5%BA%93%E4%B8%8E%E8%B4%A7%E5%8F%B7.json)
   - [1601943474137 当前图库与货号](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601943474137/%E5%BD%93%E5%89%8D%E5%9B%BE%E5%BA%93%E4%B8%8E%E8%B4%A7%E5%8F%B7.json)
@@ -19,7 +19,7 @@
 ## 采购来源（内部使用）
 
 - 已采用记录：[hzmshoes/HZM（公司名称待核） / 26NC1328](https://hzmshoes.en.made-in-china.com/product/VURrgkUYsbWD/China-Custom-High-End-Genuine-Leather-Business-Office-Formal-Loafers-Shoes-for-Men-Walking-Style-Soft-Casual-Wedding-Shoe-Manufacturer.html)
-  - 保存的标价：USD 25 / 双；原观察日期：2026-09-28。采购数量、版本、包装、运税与当天可供条件逐单确认。
+  - 保存的标价：USD 25.00 / 双；原观察日期：2026-10-21。供方公开单价/数量档见latest_public_quote；不是已确认订单采购成本。适用包装、检验、服务、运税等费用逐单核，不从样品费反推。
   - 供方店铺入口：[https://hzmshoes.en.made-in-china.com](https://hzmshoes.en.made-in-china.com)
   - 来源原件：[HR系列货源发货与图片总表.md](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/HR%E7%B3%BB%E5%88%97%E7%9C%9F%E5%AE%9E%E8%B4%A7%E6%BA%90%E6%94%B9%E9%80%A0_2026-09-21/HR%E7%B3%BB%E5%88%97%E8%B4%A7%E6%BA%90%E5%8F%91%E8%B4%A7%E4%B8%8E%E5%9B%BE%E7%89%87%E6%80%BB%E8%A1%A8.md)
 

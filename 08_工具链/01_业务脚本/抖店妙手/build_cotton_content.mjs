@@ -30,7 +30,7 @@ for(const [model,p]of Object.entries(plan.models)){
  const fleece=p.fleece!==false;
  if(process.argv[4]&&process.argv[4]!=='--review-only'&&model!==process.argv[4])continue;
  if(process.argv[4]==='--review-only'){catalog.push({model,title:p.title,main:p.main_files,details:p.detail_files});continue;}
- const dir=p.detail_output_dir||path.join('01_产品资产/02_可发布素材/抖店棉鞋_20261014',model,'优化','详情');await fs.mkdir(dir,{recursive:true});
+ const dir=p.detail_output_dir||path.join('99_临时区/商品素材制作/抖店',model,'优化','详情');await fs.mkdir(dir,{recursive:true});
  const pages=[];
  // 1. Interest first: a daily scene and a specific wearing benefit.
  let b=text(56,144,p.benefit_headline[0],78,'#252c27',700)+text(56,237,p.benefit_headline[1],78,'#252c27',700)+text(56,282,p.benefit_subtitle,26,p.accent);

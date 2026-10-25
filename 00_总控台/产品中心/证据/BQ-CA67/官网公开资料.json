@@ -34,33 +34,53 @@
   "website_images": [
     {
       "path": "/catalog/bq-ca67/01_main.jpg",
-      "sha256": "904cb1230a686ad9ff0085278122e078d6163497e4e011d720740831252b2c97",
-      "review": "逐图核实款式、颜色、结构与公开文字；真实来源图片，未采用工厂通用图证明自产。"
+      "sha256": "6ea9209f373114268388e427ed3737b1562d7ccc7cbae5adcacd3f9d8e6cbd3c",
+      "source_sha256": "0489df2544b16ec034129b589a25f37d25b0527ee628e2301ed30f68eadf55d0",
+      "source_url": "https://images.xiecdn.com/baoduo/fnedsrkmgcsnwg3sn5pbhvepaiqv3uri.jpg!bac",
+      "role": "colour",
+      "review": "2026-10-25: source-backed photo; C2627 colour-sheet crops labelled on-page."
     },
     {
       "path": "/catalog/bq-ca67/02_view.jpg",
-      "sha256": "b7f557d50a5dbde1b24f42524eaf12fb75742ceddaed476318750b69b5ee5182",
-      "review": "逐图核实款式、颜色、结构与公开文字；真实来源图片，未采用工厂通用图证明自产。"
+      "sha256": "634d4a7f4f4cd4a4bb5fe4d46b01d1138f0092628411bb3e555c4ccfaf1912f0",
+      "source_sha256": "f2ac58299776b0e796d6f294f38161f4064171a62579739fc11f87a8af044db9",
+      "source_url": "https://images.xiecdn.com/baoduo/brq72da2fhl1pqi3ida40jtv2p36ey8q.jpg!bac",
+      "role": "colour",
+      "review": "2026-10-25: source-backed photo; C2627 colour-sheet crops labelled on-page."
     },
     {
       "path": "/catalog/bq-ca67/03_view.jpg",
-      "sha256": "1d284b3b1cde39839953da93dbff8eab0b578741c4ff98da7e01e4f412a93133",
-      "review": "逐图核实款式、颜色、结构与公开文字；真实来源图片，未采用工厂通用图证明自产。"
+      "sha256": "bcaf864263dd7446e54d1f80ae872ae8122bb2547cb5ee3518ed7a3dd8fadc30",
+      "source_sha256": "5d9e5ade3b3528d4fae5c7f89faeb0769000130111a272f8a9c9b85c7bcad905",
+      "source_url": "https://images.xiecdn.com/baoduo/jxr7rajtob5tlbrisrmi0s83iiyj1qaa.jpg!bac",
+      "role": "colour",
+      "review": "2026-10-25: source-backed photo; C2627 colour-sheet crops labelled on-page."
     },
     {
       "path": "/catalog/bq-ca67/04_view.jpg",
-      "sha256": "1d17886c097a08132c4d49e4b2bf93ebfb1bda9fe9105d24eddc42d8baa5d917",
-      "review": "逐图核实款式、颜色、结构与公开文字；真实来源图片，未采用工厂通用图证明自产。"
+      "sha256": "90029778b0eb00e4f9181c2ac9ee9bf4be5aac2dc08ad0218948439c07ca15c0",
+      "source_sha256": "92dc5f859fd12dd64a98da0f45af036fa4b2e345d99524c1193b3b0f806dc34d",
+      "source_url": "https://images.xiecdn.com/baoduo/d4z7bj1eho9o2isme72qfe4xipj9579s.jpg!bac",
+      "role": "on-foot",
+      "review": "2026-10-25: source-backed photo; C2627 colour-sheet crops labelled on-page."
+    },
+    {
+      "path": "/catalog/bq-ca67/05_pair.jpg",
+      "sha256": "65a3675a5f98c66ec9ed22733498a4359fc505e21faf056e1cf4d95947a86db5",
+      "source_sha256": "8b684fa98d5bb660507ce18ddeba622baaebd87385e340fb109519c24b7eae60",
+      "source_url": "https://images.xiecdn.com/baoduo/kcr6jhqk6eknqlu32ilzoxukmcbnddn5.jpg!bac",
+      "role": "pair",
+      "review": "2026-10-25: source-backed photo; C2627 colour-sheet crops labelled on-page."
     }
   ],
   "website_projection": {
-    "release": "2026-10-25.3",
+    "release": "2026-10-25.5",
     "status": "LIVE_VERIFIED",
     "en": "https://www.beiqiang.online/products/bq-ca67/",
     "zh": "https://www.beiqiang.online/zh/products/bq-ca67/",
-    "checked_at": "2026-10-25T04:02:53+00:00",
-    "commit": "77526aa0be0ce843040e7fc0ba706a6989ae2793",
-    "deployment_id": "dpljxapl6v2k",
+    "checked_at": "2026-10-25T11:02:35+00:00",
+    "commit": "445dda0be9219c5677a78072062f83a1613766ed",
+    "deployment_id": "dpj5u50ariai",
     "verification": "03_独立站/03_搜索与渠道数据/google-www-beiqiang-online/product-catalog-production-verification.json"
   }
 }

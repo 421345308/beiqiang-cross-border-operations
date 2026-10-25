@@ -9,6 +9,7 @@
 - 当前供货类型（内部）：外采；SOURCE_ROUTE_EVIDENCED。货号不随供货路径永久绑定，转产后更新证据与生效范围。
 - 供货分类依据：[facts_and_copy.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/2627BSK_API%E6%96%B0%E5%BB%BA_2026-10-02/facts_and_copy.json)
 - 本地事实/准备字段：尚未指定；不从线上页面证明自产或实物能力。
+- 当前素材目录：[BQ-C2627](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ-C2627)
 - 当前主图库按商品ID对应（含最新统一工厂图）：
   - [1601969885846 当前图库与货号](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/HR%E5%AE%9E%E6%BA%90%E6%9B%BF%E6%8D%A2/%E8%B4%A7%E5%8F%B7%E4%B8%8E%E5%85%B1%E7%94%A8%E4%B8%BB%E5%9B%BE/%E5%95%86%E5%93%81/1601969885846/%E5%BD%93%E5%89%8D%E5%9B%BE%E5%BA%93%E4%B8%8E%E8%B4%A7%E5%8F%B7.json)
 
@@ -18,6 +19,7 @@
   - 保存的标价：CNY 23 / 双；原观察日期：2026-10-02。采购数量、版本、包装、运税与当天可供条件逐单确认。
   - 供方店铺入口：[https://huohuo.sooxie.com](https://huohuo.sooxie.com)
   - 来源原件：[facts_and_copy.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95/2627BSK_API%E6%96%B0%E5%BB%BA_2026-10-02/facts_and_copy.json)
+  - 来源原件：[官网公开资料.json](../../../../00_%E6%80%BB%E6%8E%A7%E5%8F%B0/%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83/%E8%AF%81%E6%8D%AE/BQ-C2627/%E5%AE%98%E7%BD%91%E5%85%AC%E5%BC%80%E8%B5%84%E6%96%99.json)
 
 ## 国际站链接与本地正式字段
 
@@ -71,5 +73,6 @@
 - [prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%95%86%E5%93%81/1601969885846/prepared.json)
 - [update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%95%86%E5%93%81/1601969885846/update_receipt.json)
 - [verification.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%95%86%E5%93%81/1601969885846/verification.json)
+- [官网公开资料.json](../../../../00_%E6%80%BB%E6%8E%A7%E5%8F%B0/%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83/%E8%AF%81%E6%8D%AE/BQ-C2627/%E5%AE%98%E7%BD%91%E5%85%AC%E5%BC%80%E8%B5%84%E6%96%99.json)
 
 原件、正式回执与当前资料通过本页关联，不再复制成第二套商品库。
