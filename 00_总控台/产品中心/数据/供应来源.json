@@ -842,7 +842,8 @@
       "price_terms": "供方公开单价/数量档见latest_public_quote；不是已确认订单采购成本。适用包装、检验、服务、运税等费用逐单核，不从样品费反推。",
       "observed_at": "2026-10-21",
       "evidence": [
-        "02_Alibaba运营/05_扩品工程/执行记录/A67_API新建_2026-10-02/facts_and_copy.json"
+        "02_Alibaba运营/05_扩品工程/执行记录/A67_API新建_2026-10-02/facts_and_copy.json",
+        "00_总控台/产品中心/证据/BQ-CA67/官网公开资料.json"
       ],
       "price_review": {
         "at": "2026-10-21T06:36:18.336170+00:00",
@@ -866,7 +867,13 @@
         "model": "A67",
         "evidence": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/来源/src-24aa28447d08/observation.json"
       },
-      "price_basis": "PUBLIC_SUPPLIER_QUOTE_NOT_CONFIRMED_ORDER_COST"
+      "price_basis": "PUBLIC_SUPPLIER_QUOTE_NOT_CONFIRMED_ORDER_COST",
+      "latest_product_review": {
+        "observed_on": "2026-10-25",
+        "state": "PUBLIC_PRODUCT_IDENTITY_AND_VARIANTS_VERIFIED",
+        "evidence": "00_总控台/产品中心/证据/BQ-CA67/官网公开资料.json",
+        "scope": "型号、颜色、尺码与款式可正常核对；不更新独立价格审核或视为库存确认。"
+      }
     },
     {
       "id": "src-24e92b289153",
@@ -1482,7 +1489,8 @@
       "price_terms": "供方公开单价/数量档见latest_public_quote；不是已确认订单采购成本。适用包装、检验、服务、运税等费用逐单核，不从样品费反推。",
       "observed_at": "2026-10-21",
       "evidence": [
-        "02_Alibaba运营/05_扩品工程/数据/来源证据/88562c165071.txt"
+        "02_Alibaba运营/05_扩品工程/数据/来源证据/88562c165071.txt",
+        "00_总控台/产品中心/证据/BQ-M858/官网公开资料.json"
       ],
       "price_review": {
         "at": "2026-10-21T06:36:23.625868+00:00",
@@ -1506,7 +1514,13 @@
         "model": "K858",
         "evidence": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/来源/src-3f99c995fc27/observation.json"
       },
-      "price_basis": "PUBLIC_SUPPLIER_QUOTE_NOT_CONFIRMED_ORDER_COST"
+      "price_basis": "PUBLIC_SUPPLIER_QUOTE_NOT_CONFIRMED_ORDER_COST",
+      "latest_product_review": {
+        "observed_on": "2026-10-25",
+        "state": "PUBLIC_PRODUCT_IDENTITY_AND_VARIANTS_VERIFIED",
+        "evidence": "00_总控台/产品中心/证据/BQ-M858/官网公开资料.json",
+        "scope": "型号、颜色、尺码与款式可正常核对；不更新独立价格审核或视为库存确认。"
+      }
     },
     {
       "id": "src-413e6ff7aad3",
@@ -5900,13 +5914,20 @@
       "price_terms": "采购数量、版本、包装、运税与当天可供条件逐单确认。",
       "observed_at": "2026-10-02",
       "evidence": [
-        "02_Alibaba运营/05_扩品工程/执行记录/2627BSK_API新建_2026-10-02/facts_and_copy.json"
+        "02_Alibaba运营/05_扩品工程/执行记录/2627BSK_API新建_2026-10-02/facts_and_copy.json",
+        "00_总控台/产品中心/证据/BQ-C2627/官网公开资料.json"
       ],
       "price_review": {
         "at": "2026-10-21T06:37:16.116626+00:00",
         "state": "SOURCE_PRICE_OR_IDENTITY_NEEDS_REVIEW",
         "evidence": "02_Alibaba运营/01_店铺与全店诊断/经营诊断证据/价格核验/来源/src-ee64a037a6a5/observation.json",
         "order_cost_confirmed": false
+      },
+      "latest_product_review": {
+        "observed_on": "2026-10-25",
+        "state": "PUBLIC_PRODUCT_IDENTITY_AND_VARIANTS_VERIFIED",
+        "evidence": "00_总控台/产品中心/证据/BQ-C2627/官网公开资料.json",
+        "scope": "型号、颜色、尺码与款式可正常核对；不更新独立价格审核或视为库存确认。"
       }
     },
     {

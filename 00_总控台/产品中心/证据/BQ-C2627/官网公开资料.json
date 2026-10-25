@@ -1,0 +1,68 @@
+{
+  "product_id": "BQ-C2627",
+  "source_id": "src-ee64a037a6a5",
+  "supplier": "火火网络鞋业",
+  "source_model": "2627BSK",
+  "source_url": "https://huohuo.sooxie.com/detail/2557137",
+  "observed_on": "2026-10-25",
+  "source_page_status": 200,
+  "raw_response_sha256": "e0ce239f16966e55ee61ddd087b047b83574ab84f80e42facc683131541f79e1",
+  "source_review": "正常公开页面访问；核对型号、颜色、尺码及当前商品图片。公开展示不证明实时库存或订单履约。",
+  "supply_mode": "EXTERNAL_FACTORY",
+  "source_supported_facts": {
+    "upper": "EVA upper",
+    "colors": [
+      "Blue",
+      "Khaki",
+      "Beige",
+      "Light Pink",
+      "Black"
+    ],
+    "size_labels": "35–36 / 37–38 / 39–40",
+    "closure": "Slip-On",
+    "visible_features": [
+      "Pivoting heel strap",
+      "Vented upper and raised sole profile",
+      "Three paired size labels"
+    ]
+  },
+  "unconfirmed": [
+    "独立外底及内里材料",
+    "样品实测尺寸及市场尺码换算",
+    "当次可供色码和数量",
+    "测试性能、品牌改动与订单条件"
+  ],
+  "gallery_manifest": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601969885846/当前图库与货号.json",
+  "website_images": [
+    {
+      "path": "/catalog/bq-c2627/01_main.jpg",
+      "sha256": "4a023724779ae09f22dbb7ffed263c020af2f0c38a70e90ec8f84e37b6b0e311",
+      "review": "逐图核实款式、颜色、结构与公开文字；真实来源图片，未采用工厂通用图证明自产。"
+    },
+    {
+      "path": "/catalog/bq-c2627/02_view.jpg",
+      "sha256": "9c5287dc486fd41b77e760270980dff2108df6c6a47044274a99c74b91595178",
+      "review": "逐图核实款式、颜色、结构与公开文字；真实来源图片，未采用工厂通用图证明自产。"
+    },
+    {
+      "path": "/catalog/bq-c2627/03_view.jpg",
+      "sha256": "c4298a146eaad377d656587e534df3fce46b1d214ce2f73c7d52494f83f9300e",
+      "review": "逐图核实款式、颜色、结构与公开文字；真实来源图片，未采用工厂通用图证明自产。"
+    },
+    {
+      "path": "/catalog/bq-c2627/04_view.jpg",
+      "sha256": "cd965e95869046cb2e45c0f743da0a9755d439792512bc06b7f05025a3da0a47",
+      "review": "逐图核实款式、颜色、结构与公开文字；真实来源图片，未采用工厂通用图证明自产。"
+    }
+  ],
+  "website_projection": {
+    "release": "2026-10-25.3",
+    "status": "LIVE_VERIFIED",
+    "en": "https://www.beiqiang.online/products/bq-c2627/",
+    "zh": "https://www.beiqiang.online/zh/products/bq-c2627/",
+    "checked_at": "2026-10-25T04:02:53+00:00",
+    "commit": "77526aa0be0ce843040e7fc0ba706a6989ae2793",
+    "deployment_id": "dpljxapl6v2k",
+    "verification": "03_独立站/03_搜索与渠道数据/google-www-beiqiang-online/product-catalog-production-verification.json"
+  }
+}

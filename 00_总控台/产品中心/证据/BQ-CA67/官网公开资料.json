@@ -1,0 +1,66 @@
+{
+  "product_id": "BQ-CA67",
+  "source_id": "src-24aa28447d08",
+  "supplier": "宝多鞋业",
+  "source_model": "A67",
+  "source_url": "https://baoduo.sooxie.com/detail/2439758",
+  "observed_on": "2026-10-25",
+  "source_page_status": 200,
+  "raw_response_sha256": "7cd1ce7d876063fc0ded936e3a265344b114a00186ad65546edb0117922dddd2",
+  "source_review": "正常公开页面访问；核对型号、颜色、尺码及当前商品图片。公开展示不证明实时库存或订单履约。",
+  "supply_mode": "EXTERNAL_FACTORY",
+  "source_supported_facts": {
+    "upper": "EVA upper",
+    "colors": [
+      "Black",
+      "Grey",
+      "Khaki"
+    ],
+    "size_labels": "36–37 / 38–39 / 40–41 / 42–43 / 44–45",
+    "closure": "Slip-On",
+    "visible_features": [
+      "Covered heel and side openings",
+      "Moulded lace-look detail; slip-on construction",
+      "Five paired size labels"
+    ]
+  },
+  "unconfirmed": [
+    "独立外底及内里材料",
+    "样品实测尺寸及市场尺码换算",
+    "当次可供色码和数量",
+    "测试性能、品牌改动与订单条件"
+  ],
+  "gallery_manifest": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601969861694/当前图库与货号.json",
+  "website_images": [
+    {
+      "path": "/catalog/bq-ca67/01_main.jpg",
+      "sha256": "904cb1230a686ad9ff0085278122e078d6163497e4e011d720740831252b2c97",
+      "review": "逐图核实款式、颜色、结构与公开文字；真实来源图片，未采用工厂通用图证明自产。"
+    },
+    {
+      "path": "/catalog/bq-ca67/02_view.jpg",
+      "sha256": "b7f557d50a5dbde1b24f42524eaf12fb75742ceddaed476318750b69b5ee5182",
+      "review": "逐图核实款式、颜色、结构与公开文字；真实来源图片，未采用工厂通用图证明自产。"
+    },
+    {
+      "path": "/catalog/bq-ca67/03_view.jpg",
+      "sha256": "1d284b3b1cde39839953da93dbff8eab0b578741c4ff98da7e01e4f412a93133",
+      "review": "逐图核实款式、颜色、结构与公开文字；真实来源图片，未采用工厂通用图证明自产。"
+    },
+    {
+      "path": "/catalog/bq-ca67/04_view.jpg",
+      "sha256": "1d17886c097a08132c4d49e4b2bf93ebfb1bda9fe9105d24eddc42d8baa5d917",
+      "review": "逐图核实款式、颜色、结构与公开文字；真实来源图片，未采用工厂通用图证明自产。"
+    }
+  ],
+  "website_projection": {
+    "release": "2026-10-25.3",
+    "status": "LIVE_VERIFIED",
+    "en": "https://www.beiqiang.online/products/bq-ca67/",
+    "zh": "https://www.beiqiang.online/zh/products/bq-ca67/",
+    "checked_at": "2026-10-25T04:02:53+00:00",
+    "commit": "77526aa0be0ce843040e7fc0ba706a6989ae2793",
+    "deployment_id": "dpljxapl6v2k",
+    "verification": "03_独立站/03_搜索与渠道数据/google-www-beiqiang-online/product-catalog-production-verification.json"
+  }
+}
