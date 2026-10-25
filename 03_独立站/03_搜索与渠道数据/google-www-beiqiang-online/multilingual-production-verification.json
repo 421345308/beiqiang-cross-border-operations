@@ -1,0 +1,754 @@
+{
+  "release": {
+    "releaseId": "2026-10-25.8",
+    "releasedAt": "2026-10-25T15:08:06Z",
+    "productCount": 69,
+    "publicLanguages": [
+      "en",
+      "zh",
+      "de",
+      "fr",
+      "es"
+    ],
+    "lineSheetPages": 16,
+    "factoryVideo": {
+      "durationSeconds": 180,
+      "narrationLanguages": [
+        "en"
+      ],
+      "captionLanguages": [
+        "en",
+        "zh"
+      ],
+      "stillCount": 9
+    },
+    "publicOrigin": "https://www.beiqiang.online"
+  },
+  "checkedAt": "2026-10-25T15:40:51.360520+00:00",
+  "websiteCommit": "d2b384fde2a6628f432e40325b0aaa7d2d6cea94",
+  "newPagesChecked": [
+    {
+      "path": "/de/",
+      "status": 200,
+      "lang": "de",
+      "canonical": "https://www.beiqiang.online/de/",
+      "alternates": {
+        "en": "https://www.beiqiang.online/",
+        "zh-CN": "https://www.beiqiang.online/zh/",
+        "de": "https://www.beiqiang.online/de/",
+        "fr": "https://www.beiqiang.online/fr/",
+        "es": "https://www.beiqiang.online/es/",
+        "x-default": "https://www.beiqiang.online/"
+      }
+    },
+    {
+      "path": "/de/products/",
+      "status": 200,
+      "lang": "de",
+      "canonical": "https://www.beiqiang.online/de/products/",
+      "alternates": {
+        "en": "https://www.beiqiang.online/products/",
+        "zh-CN": "https://www.beiqiang.online/zh/products/",
+        "de": "https://www.beiqiang.online/de/products/",
+        "fr": "https://www.beiqiang.online/fr/products/",
+        "es": "https://www.beiqiang.online/es/products/",
+        "x-default": "https://www.beiqiang.online/products/"
+      }
+    },
+    {
+      "path": "/de/product-finder/",
+      "status": 200,
+      "lang": "de",
+      "canonical": "https://www.beiqiang.online/de/product-finder/",
+      "alternates": {
+        "en": "https://www.beiqiang.online/product-finder/",
+        "zh-CN": "https://www.beiqiang.online/zh/product-finder/",
+        "de": "https://www.beiqiang.online/de/product-finder/",
+        "fr": "https://www.beiqiang.online/fr/product-finder/",
+        "es": "https://www.beiqiang.online/es/product-finder/",
+        "x-default": "https://www.beiqiang.online/product-finder/"
+      }
+    },
+    {
+      "path": "/de/products/bq018/",
+      "status": 200,
+      "lang": "de",
+      "canonical": "https://www.beiqiang.online/de/products/bq018/",
+      "alternates": {
+        "en": "https://www.beiqiang.online/products/bq018/",
+        "zh-CN": "https://www.beiqiang.online/zh/products/bq018/",
+        "de": "https://www.beiqiang.online/de/products/bq018/",
+        "fr": "https://www.beiqiang.online/fr/products/bq018/",
+        "es": "https://www.beiqiang.online/es/products/bq018/",
+        "x-default": "https://www.beiqiang.online/products/bq018/"
+      }
+    },
+    {
+      "path": "/de/products/bq1041/",
+      "status": 200,
+      "lang": "de",
+      "canonical": "https://www.beiqiang.online/de/products/bq1041/",
+      "alternates": {
+        "en": "https://www.beiqiang.online/products/bq1041/",
+        "zh-CN": "https://www.beiqiang.online/zh/products/bq1041/",
+        "de": "https://www.beiqiang.online/de/products/bq1041/",
+        "fr": "https://www.beiqiang.online/fr/products/bq1041/",
+        "es": "https://www.beiqiang.online/es/products/bq1041/",
+        "x-default": "https://www.beiqiang.online/products/bq1041/"
+      }
+    },
+    {
+      "path": "/de/products/bq-c2627/",
+      "status": 200,
+      "lang": "de",
+      "canonical": "https://www.beiqiang.online/de/products/bq-c2627/",
+      "alternates": {
+        "en": "https://www.beiqiang.online/products/bq-c2627/",
+        "zh-CN": "https://www.beiqiang.online/zh/products/bq-c2627/",
+        "de": "https://www.beiqiang.online/de/products/bq-c2627/",
+        "fr": "https://www.beiqiang.online/fr/products/bq-c2627/",
+        "es": "https://www.beiqiang.online/es/products/bq-c2627/",
+        "x-default": "https://www.beiqiang.online/products/bq-c2627/"
+      }
+    },
+    {
+      "path": "/de/request-quote/",
+      "status": 200,
+      "lang": "de",
+      "canonical": "https://www.beiqiang.online/de/request-quote/",
+      "alternates": {
+        "en": "https://www.beiqiang.online/request-quote/",
+        "zh-CN": "https://www.beiqiang.online/zh/request-quote/",
+        "de": "https://www.beiqiang.online/de/request-quote/",
+        "fr": "https://www.beiqiang.online/fr/request-quote/",
+        "es": "https://www.beiqiang.online/es/request-quote/",
+        "x-default": "https://www.beiqiang.online/request-quote/"
+      }
+    },
+    {
+      "path": "/de/factory/",
+      "status": 200,
+      "lang": "de",
+      "canonical": "https://www.beiqiang.online/de/factory/",
+      "alternates": {
+        "en": "https://www.beiqiang.online/factory/",
+        "zh-CN": "https://www.beiqiang.online/zh/factory/",
+        "de": "https://www.beiqiang.online/de/factory/",
+        "fr": "https://www.beiqiang.online/fr/factory/",
+        "es": "https://www.beiqiang.online/es/factory/",
+        "x-default": "https://www.beiqiang.online/factory/"
+      }
+    },
+    {
+      "path": "/de/buyer-guide/",
+      "status": 200,
+      "lang": "de",
+      "canonical": "https://www.beiqiang.online/de/buyer-guide/",
+      "alternates": {
+        "en": "https://www.beiqiang.online/buyer-guide/",
+        "zh-CN": "https://www.beiqiang.online/zh/buyer-guide/",
+        "de": "https://www.beiqiang.online/de/buyer-guide/",
+        "fr": "https://www.beiqiang.online/fr/buyer-guide/",
+        "es": "https://www.beiqiang.online/es/buyer-guide/",
+        "x-default": "https://www.beiqiang.online/buyer-guide/"
+      }
+    },
+    {
+      "path": "/de/privacy/",
+      "status": 200,
+      "lang": "de",
+      "canonical": "https://www.beiqiang.online/de/privacy/",
+      "alternates": {
+        "en": "https://www.beiqiang.online/privacy/",
+        "zh-CN": "https://www.beiqiang.online/zh/privacy/",
+        "de": "https://www.beiqiang.online/de/privacy/",
+        "fr": "https://www.beiqiang.online/fr/privacy/",
+        "es": "https://www.beiqiang.online/es/privacy/",
+        "x-default": "https://www.beiqiang.online/privacy/"
+      }
+    },
+    {
+      "path": "/de/terms/",
+      "status": 200,
+      "lang": "de",
+      "canonical": "https://www.beiqiang.online/de/terms/",
+      "alternates": {
+        "en": "https://www.beiqiang.online/terms/",
+        "zh-CN": "https://www.beiqiang.online/zh/terms/",
+        "de": "https://www.beiqiang.online/de/terms/",
+        "fr": "https://www.beiqiang.online/fr/terms/",
+        "es": "https://www.beiqiang.online/es/terms/",
+        "x-default": "https://www.beiqiang.online/terms/"
+      }
+    },
+    {
+      "path": "/de/line-sheet/",
+      "status": 200,
+      "lang": "de",
+      "canonical": "https://www.beiqiang.online/de/line-sheet/",
+      "alternates": {
+        "en": "https://www.beiqiang.online/line-sheet/",
+        "zh-CN": "https://www.beiqiang.online/zh/line-sheet/",
+        "de": "https://www.beiqiang.online/de/line-sheet/",
+        "fr": "https://www.beiqiang.online/fr/line-sheet/",
+        "es": "https://www.beiqiang.online/es/line-sheet/",
+        "x-default": "https://www.beiqiang.online/line-sheet/"
+      }
+    },
+    {
+      "path": "/de/oem-odm/",
+      "status": 200,
+      "lang": "de",
+      "canonical": "https://www.beiqiang.online/de/oem-odm/",
+      "alternates": {
+        "en": "https://www.beiqiang.online/oem-odm/",
+        "zh-CN": "https://www.beiqiang.online/zh/oem-odm/",
+        "de": "https://www.beiqiang.online/de/oem-odm/",
+        "fr": "https://www.beiqiang.online/fr/oem-odm/",
+        "es": "https://www.beiqiang.online/es/oem-odm/",
+        "x-default": "https://www.beiqiang.online/oem-odm/"
+      }
+    },
+    {
+      "path": "/de/quality-packing/",
+      "status": 200,
+      "lang": "de",
+      "canonical": "https://www.beiqiang.online/de/quality-packing/",
+      "alternates": {
+        "en": "https://www.beiqiang.online/quality-packing/",
+        "zh-CN": "https://www.beiqiang.online/zh/quality-packing/",
+        "de": "https://www.beiqiang.online/de/quality-packing/",
+        "fr": "https://www.beiqiang.online/fr/quality-packing/",
+        "es": "https://www.beiqiang.online/es/quality-packing/",
+        "x-default": "https://www.beiqiang.online/quality-packing/"
+      }
+    },
+    {
+      "path": "/de/sample-order-process/",
+      "status": 200,
+      "lang": "de",
+      "canonical": "https://www.beiqiang.online/de/sample-order-process/",
+      "alternates": {
+        "en": "https://www.beiqiang.online/sample-order-process/",
+        "zh-CN": "https://www.beiqiang.online/zh/sample-order-process/",
+        "de": "https://www.beiqiang.online/de/sample-order-process/",
+        "fr": "https://www.beiqiang.online/fr/sample-order-process/",
+        "es": "https://www.beiqiang.online/es/sample-order-process/",
+        "x-default": "https://www.beiqiang.online/sample-order-process/"
+      }
+    },
+    {
+      "path": "/de/sourcing-review/",
+      "status": 200,
+      "lang": "de",
+      "canonical": "https://www.beiqiang.online/de/sourcing-review/",
+      "alternates": {
+        "en": "https://www.beiqiang.online/sourcing-review/",
+        "zh-CN": "https://www.beiqiang.online/zh/sourcing-review/",
+        "de": "https://www.beiqiang.online/de/sourcing-review/",
+        "fr": "https://www.beiqiang.online/fr/sourcing-review/",
+        "es": "https://www.beiqiang.online/es/sourcing-review/",
+        "x-default": "https://www.beiqiang.online/sourcing-review/"
+      }
+    },
+    {
+      "path": "/fr/",
+      "status": 200,
+      "lang": "fr",
+      "canonical": "https://www.beiqiang.online/fr/",
+      "alternates": {
+        "en": "https://www.beiqiang.online/",
+        "zh-CN": "https://www.beiqiang.online/zh/",
+        "de": "https://www.beiqiang.online/de/",
+        "fr": "https://www.beiqiang.online/fr/",
+        "es": "https://www.beiqiang.online/es/",
+        "x-default": "https://www.beiqiang.online/"
+      }
+    },
+    {
+      "path": "/fr/products/",
+      "status": 200,
+      "lang": "fr",
+      "canonical": "https://www.beiqiang.online/fr/products/",
+      "alternates": {
+        "en": "https://www.beiqiang.online/products/",
+        "zh-CN": "https://www.beiqiang.online/zh/products/",
+        "de": "https://www.beiqiang.online/de/products/",
+        "fr": "https://www.beiqiang.online/fr/products/",
+        "es": "https://www.beiqiang.online/es/products/",
+        "x-default": "https://www.beiqiang.online/products/"
+      }
+    },
+    {
+      "path": "/fr/product-finder/",
+      "status": 200,
+      "lang": "fr",
+      "canonical": "https://www.beiqiang.online/fr/product-finder/",
+      "alternates": {
+        "en": "https://www.beiqiang.online/product-finder/",
+        "zh-CN": "https://www.beiqiang.online/zh/product-finder/",
+        "de": "https://www.beiqiang.online/de/product-finder/",
+        "fr": "https://www.beiqiang.online/fr/product-finder/",
+        "es": "https://www.beiqiang.online/es/product-finder/",
+        "x-default": "https://www.beiqiang.online/product-finder/"
+      }
+    },
+    {
+      "path": "/fr/products/bq018/",
+      "status": 200,
+      "lang": "fr",
+      "canonical": "https://www.beiqiang.online/fr/products/bq018/",
+      "alternates": {
+        "en": "https://www.beiqiang.online/products/bq018/",
+        "zh-CN": "https://www.beiqiang.online/zh/products/bq018/",
+        "de": "https://www.beiqiang.online/de/products/bq018/",
+        "fr": "https://www.beiqiang.online/fr/products/bq018/",
+        "es": "https://www.beiqiang.online/es/products/bq018/",
+        "x-default": "https://www.beiqiang.online/products/bq018/"
+      }
+    },
+    {
+      "path": "/fr/products/bq1041/",
+      "status": 200,
+      "lang": "fr",
+      "canonical": "https://www.beiqiang.online/fr/products/bq1041/",
+      "alternates": {
+        "en": "https://www.beiqiang.online/products/bq1041/",
+        "zh-CN": "https://www.beiqiang.online/zh/products/bq1041/",
+        "de": "https://www.beiqiang.online/de/products/bq1041/",
+        "fr": "https://www.beiqiang.online/fr/products/bq1041/",
+        "es": "https://www.beiqiang.online/es/products/bq1041/",
+        "x-default": "https://www.beiqiang.online/products/bq1041/"
+      }
+    },
+    {
+      "path": "/fr/products/bq-c2627/",
+      "status": 200,
+      "lang": "fr",
+      "canonical": "https://www.beiqiang.online/fr/products/bq-c2627/",
+      "alternates": {
+        "en": "https://www.beiqiang.online/products/bq-c2627/",
+        "zh-CN": "https://www.beiqiang.online/zh/products/bq-c2627/",
+        "de": "https://www.beiqiang.online/de/products/bq-c2627/",
+        "fr": "https://www.beiqiang.online/fr/products/bq-c2627/",
+        "es": "https://www.beiqiang.online/es/products/bq-c2627/",
+        "x-default": "https://www.beiqiang.online/products/bq-c2627/"
+      }
+    },
+    {
+      "path": "/fr/request-quote/",
+      "status": 200,
+      "lang": "fr",
+      "canonical": "https://www.beiqiang.online/fr/request-quote/",
+      "alternates": {
+        "en": "https://www.beiqiang.online/request-quote/",
+        "zh-CN": "https://www.beiqiang.online/zh/request-quote/",
+        "de": "https://www.beiqiang.online/de/request-quote/",
+        "fr": "https://www.beiqiang.online/fr/request-quote/",
+        "es": "https://www.beiqiang.online/es/request-quote/",
+        "x-default": "https://www.beiqiang.online/request-quote/"
+      }
+    },
+    {
+      "path": "/fr/factory/",
+      "status": 200,
+      "lang": "fr",
+      "canonical": "https://www.beiqiang.online/fr/factory/",
+      "alternates": {
+        "en": "https://www.beiqiang.online/factory/",
+        "zh-CN": "https://www.beiqiang.online/zh/factory/",
+        "de": "https://www.beiqiang.online/de/factory/",
+        "fr": "https://www.beiqiang.online/fr/factory/",
+        "es": "https://www.beiqiang.online/es/factory/",
+        "x-default": "https://www.beiqiang.online/factory/"
+      }
+    },
+    {
+      "path": "/fr/buyer-guide/",
+      "status": 200,
+      "lang": "fr",
+      "canonical": "https://www.beiqiang.online/fr/buyer-guide/",
+      "alternates": {
+        "en": "https://www.beiqiang.online/buyer-guide/",
+        "zh-CN": "https://www.beiqiang.online/zh/buyer-guide/",
+        "de": "https://www.beiqiang.online/de/buyer-guide/",
+        "fr": "https://www.beiqiang.online/fr/buyer-guide/",
+        "es": "https://www.beiqiang.online/es/buyer-guide/",
+        "x-default": "https://www.beiqiang.online/buyer-guide/"
+      }
+    },
+    {
+      "path": "/fr/privacy/",
+      "status": 200,
+      "lang": "fr",
+      "canonical": "https://www.beiqiang.online/fr/privacy/",
+      "alternates": {
+        "en": "https://www.beiqiang.online/privacy/",
+        "zh-CN": "https://www.beiqiang.online/zh/privacy/",
+        "de": "https://www.beiqiang.online/de/privacy/",
+        "fr": "https://www.beiqiang.online/fr/privacy/",
+        "es": "https://www.beiqiang.online/es/privacy/",
+        "x-default": "https://www.beiqiang.online/privacy/"
+      }
+    },
+    {
+      "path": "/fr/terms/",
+      "status": 200,
+      "lang": "fr",
+      "canonical": "https://www.beiqiang.online/fr/terms/",
+      "alternates": {
+        "en": "https://www.beiqiang.online/terms/",
+        "zh-CN": "https://www.beiqiang.online/zh/terms/",
+        "de": "https://www.beiqiang.online/de/terms/",
+        "fr": "https://www.beiqiang.online/fr/terms/",
+        "es": "https://www.beiqiang.online/es/terms/",
+        "x-default": "https://www.beiqiang.online/terms/"
+      }
+    },
+    {
+      "path": "/fr/line-sheet/",
+      "status": 200,
+      "lang": "fr",
+      "canonical": "https://www.beiqiang.online/fr/line-sheet/",
+      "alternates": {
+        "en": "https://www.beiqiang.online/line-sheet/",
+        "zh-CN": "https://www.beiqiang.online/zh/line-sheet/",
+        "de": "https://www.beiqiang.online/de/line-sheet/",
+        "fr": "https://www.beiqiang.online/fr/line-sheet/",
+        "es": "https://www.beiqiang.online/es/line-sheet/",
+        "x-default": "https://www.beiqiang.online/line-sheet/"
+      }
+    },
+    {
+      "path": "/fr/oem-odm/",
+      "status": 200,
+      "lang": "fr",
+      "canonical": "https://www.beiqiang.online/fr/oem-odm/",
+      "alternates": {
+        "en": "https://www.beiqiang.online/oem-odm/",
+        "zh-CN": "https://www.beiqiang.online/zh/oem-odm/",
+        "de": "https://www.beiqiang.online/de/oem-odm/",
+        "fr": "https://www.beiqiang.online/fr/oem-odm/",
+        "es": "https://www.beiqiang.online/es/oem-odm/",
+        "x-default": "https://www.beiqiang.online/oem-odm/"
+      }
+    },
+    {
+      "path": "/fr/quality-packing/",
+      "status": 200,
+      "lang": "fr",
+      "canonical": "https://www.beiqiang.online/fr/quality-packing/",
+      "alternates": {
+        "en": "https://www.beiqiang.online/quality-packing/",
+        "zh-CN": "https://www.beiqiang.online/zh/quality-packing/",
+        "de": "https://www.beiqiang.online/de/quality-packing/",
+        "fr": "https://www.beiqiang.online/fr/quality-packing/",
+        "es": "https://www.beiqiang.online/es/quality-packing/",
+        "x-default": "https://www.beiqiang.online/quality-packing/"
+      }
+    },
+    {
+      "path": "/fr/sample-order-process/",
+      "status": 200,
+      "lang": "fr",
+      "canonical": "https://www.beiqiang.online/fr/sample-order-process/",
+      "alternates": {
+        "en": "https://www.beiqiang.online/sample-order-process/",
+        "zh-CN": "https://www.beiqiang.online/zh/sample-order-process/",
+        "de": "https://www.beiqiang.online/de/sample-order-process/",
+        "fr": "https://www.beiqiang.online/fr/sample-order-process/",
+        "es": "https://www.beiqiang.online/es/sample-order-process/",
+        "x-default": "https://www.beiqiang.online/sample-order-process/"
+      }
+    },
+    {
+      "path": "/fr/sourcing-review/",
+      "status": 200,
+      "lang": "fr",
+      "canonical": "https://www.beiqiang.online/fr/sourcing-review/",
+      "alternates": {
+        "en": "https://www.beiqiang.online/sourcing-review/",
+        "zh-CN": "https://www.beiqiang.online/zh/sourcing-review/",
+        "de": "https://www.beiqiang.online/de/sourcing-review/",
+        "fr": "https://www.beiqiang.online/fr/sourcing-review/",
+        "es": "https://www.beiqiang.online/es/sourcing-review/",
+        "x-default": "https://www.beiqiang.online/sourcing-review/"
+      }
+    },
+    {
+      "path": "/es/",
+      "status": 200,
+      "lang": "es",
+      "canonical": "https://www.beiqiang.online/es/",
+      "alternates": {
+        "en": "https://www.beiqiang.online/",
+        "zh-CN": "https://www.beiqiang.online/zh/",
+        "de": "https://www.beiqiang.online/de/",
+        "fr": "https://www.beiqiang.online/fr/",
+        "es": "https://www.beiqiang.online/es/",
+        "x-default": "https://www.beiqiang.online/"
+      }
+    },
+    {
+      "path": "/es/products/",
+      "status": 200,
+      "lang": "es",
+      "canonical": "https://www.beiqiang.online/es/products/",
+      "alternates": {
+        "en": "https://www.beiqiang.online/products/",
+        "zh-CN": "https://www.beiqiang.online/zh/products/",
+        "de": "https://www.beiqiang.online/de/products/",
+        "fr": "https://www.beiqiang.online/fr/products/",
+        "es": "https://www.beiqiang.online/es/products/",
+        "x-default": "https://www.beiqiang.online/products/"
+      }
+    },
+    {
+      "path": "/es/product-finder/",
+      "status": 200,
+      "lang": "es",
+      "canonical": "https://www.beiqiang.online/es/product-finder/",
+      "alternates": {
+        "en": "https://www.beiqiang.online/product-finder/",
+        "zh-CN": "https://www.beiqiang.online/zh/product-finder/",
+        "de": "https://www.beiqiang.online/de/product-finder/",
+        "fr": "https://www.beiqiang.online/fr/product-finder/",
+        "es": "https://www.beiqiang.online/es/product-finder/",
+        "x-default": "https://www.beiqiang.online/product-finder/"
+      }
+    },
+    {
+      "path": "/es/products/bq018/",
+      "status": 200,
+      "lang": "es",
+      "canonical": "https://www.beiqiang.online/es/products/bq018/",
+      "alternates": {
+        "en": "https://www.beiqiang.online/products/bq018/",
+        "zh-CN": "https://www.beiqiang.online/zh/products/bq018/",
+        "de": "https://www.beiqiang.online/de/products/bq018/",
+        "fr": "https://www.beiqiang.online/fr/products/bq018/",
+        "es": "https://www.beiqiang.online/es/products/bq018/",
+        "x-default": "https://www.beiqiang.online/products/bq018/"
+      }
+    },
+    {
+      "path": "/es/products/bq1041/",
+      "status": 200,
+      "lang": "es",
+      "canonical": "https://www.beiqiang.online/es/products/bq1041/",
+      "alternates": {
+        "en": "https://www.beiqiang.online/products/bq1041/",
+        "zh-CN": "https://www.beiqiang.online/zh/products/bq1041/",
+        "de": "https://www.beiqiang.online/de/products/bq1041/",
+        "fr": "https://www.beiqiang.online/fr/products/bq1041/",
+        "es": "https://www.beiqiang.online/es/products/bq1041/",
+        "x-default": "https://www.beiqiang.online/products/bq1041/"
+      }
+    },
+    {
+      "path": "/es/products/bq-c2627/",
+      "status": 200,
+      "lang": "es",
+      "canonical": "https://www.beiqiang.online/es/products/bq-c2627/",
+      "alternates": {
+        "en": "https://www.beiqiang.online/products/bq-c2627/",
+        "zh-CN": "https://www.beiqiang.online/zh/products/bq-c2627/",
+        "de": "https://www.beiqiang.online/de/products/bq-c2627/",
+        "fr": "https://www.beiqiang.online/fr/products/bq-c2627/",
+        "es": "https://www.beiqiang.online/es/products/bq-c2627/",
+        "x-default": "https://www.beiqiang.online/products/bq-c2627/"
+      }
+    },
+    {
+      "path": "/es/request-quote/",
+      "status": 200,
+      "lang": "es",
+      "canonical": "https://www.beiqiang.online/es/request-quote/",
+      "alternates": {
+        "en": "https://www.beiqiang.online/request-quote/",
+        "zh-CN": "https://www.beiqiang.online/zh/request-quote/",
+        "de": "https://www.beiqiang.online/de/request-quote/",
+        "fr": "https://www.beiqiang.online/fr/request-quote/",
+        "es": "https://www.beiqiang.online/es/request-quote/",
+        "x-default": "https://www.beiqiang.online/request-quote/"
+      }
+    },
+    {
+      "path": "/es/factory/",
+      "status": 200,
+      "lang": "es",
+      "canonical": "https://www.beiqiang.online/es/factory/",
+      "alternates": {
+        "en": "https://www.beiqiang.online/factory/",
+        "zh-CN": "https://www.beiqiang.online/zh/factory/",
+        "de": "https://www.beiqiang.online/de/factory/",
+        "fr": "https://www.beiqiang.online/fr/factory/",
+        "es": "https://www.beiqiang.online/es/factory/",
+        "x-default": "https://www.beiqiang.online/factory/"
+      }
+    },
+    {
+      "path": "/es/buyer-guide/",
+      "status": 200,
+      "lang": "es",
+      "canonical": "https://www.beiqiang.online/es/buyer-guide/",
+      "alternates": {
+        "en": "https://www.beiqiang.online/buyer-guide/",
+        "zh-CN": "https://www.beiqiang.online/zh/buyer-guide/",
+        "de": "https://www.beiqiang.online/de/buyer-guide/",
+        "fr": "https://www.beiqiang.online/fr/buyer-guide/",
+        "es": "https://www.beiqiang.online/es/buyer-guide/",
+        "x-default": "https://www.beiqiang.online/buyer-guide/"
+      }
+    },
+    {
+      "path": "/es/privacy/",
+      "status": 200,
+      "lang": "es",
+      "canonical": "https://www.beiqiang.online/es/privacy/",
+      "alternates": {
+        "en": "https://www.beiqiang.online/privacy/",
+        "zh-CN": "https://www.beiqiang.online/zh/privacy/",
+        "de": "https://www.beiqiang.online/de/privacy/",
+        "fr": "https://www.beiqiang.online/fr/privacy/",
+        "es": "https://www.beiqiang.online/es/privacy/",
+        "x-default": "https://www.beiqiang.online/privacy/"
+      }
+    },
+    {
+      "path": "/es/terms/",
+      "status": 200,
+      "lang": "es",
+      "canonical": "https://www.beiqiang.online/es/terms/",
+      "alternates": {
+        "en": "https://www.beiqiang.online/terms/",
+        "zh-CN": "https://www.beiqiang.online/zh/terms/",
+        "de": "https://www.beiqiang.online/de/terms/",
+        "fr": "https://www.beiqiang.online/fr/terms/",
+        "es": "https://www.beiqiang.online/es/terms/",
+        "x-default": "https://www.beiqiang.online/terms/"
+      }
+    },
+    {
+      "path": "/es/line-sheet/",
+      "status": 200,
+      "lang": "es",
+      "canonical": "https://www.beiqiang.online/es/line-sheet/",
+      "alternates": {
+        "en": "https://www.beiqiang.online/line-sheet/",
+        "zh-CN": "https://www.beiqiang.online/zh/line-sheet/",
+        "de": "https://www.beiqiang.online/de/line-sheet/",
+        "fr": "https://www.beiqiang.online/fr/line-sheet/",
+        "es": "https://www.beiqiang.online/es/line-sheet/",
+        "x-default": "https://www.beiqiang.online/line-sheet/"
+      }
+    },
+    {
+      "path": "/es/oem-odm/",
+      "status": 200,
+      "lang": "es",
+      "canonical": "https://www.beiqiang.online/es/oem-odm/",
+      "alternates": {
+        "en": "https://www.beiqiang.online/oem-odm/",
+        "zh-CN": "https://www.beiqiang.online/zh/oem-odm/",
+        "de": "https://www.beiqiang.online/de/oem-odm/",
+        "fr": "https://www.beiqiang.online/fr/oem-odm/",
+        "es": "https://www.beiqiang.online/es/oem-odm/",
+        "x-default": "https://www.beiqiang.online/oem-odm/"
+      }
+    },
+    {
+      "path": "/es/quality-packing/",
+      "status": 200,
+      "lang": "es",
+      "canonical": "https://www.beiqiang.online/es/quality-packing/",
+      "alternates": {
+        "en": "https://www.beiqiang.online/quality-packing/",
+        "zh-CN": "https://www.beiqiang.online/zh/quality-packing/",
+        "de": "https://www.beiqiang.online/de/quality-packing/",
+        "fr": "https://www.beiqiang.online/fr/quality-packing/",
+        "es": "https://www.beiqiang.online/es/quality-packing/",
+        "x-default": "https://www.beiqiang.online/quality-packing/"
+      }
+    },
+    {
+      "path": "/es/sample-order-process/",
+      "status": 200,
+      "lang": "es",
+      "canonical": "https://www.beiqiang.online/es/sample-order-process/",
+      "alternates": {
+        "en": "https://www.beiqiang.online/sample-order-process/",
+        "zh-CN": "https://www.beiqiang.online/zh/sample-order-process/",
+        "de": "https://www.beiqiang.online/de/sample-order-process/",
+        "fr": "https://www.beiqiang.online/fr/sample-order-process/",
+        "es": "https://www.beiqiang.online/es/sample-order-process/",
+        "x-default": "https://www.beiqiang.online/sample-order-process/"
+      }
+    },
+    {
+      "path": "/es/sourcing-review/",
+      "status": 200,
+      "lang": "es",
+      "canonical": "https://www.beiqiang.online/es/sourcing-review/",
+      "alternates": {
+        "en": "https://www.beiqiang.online/sourcing-review/",
+        "zh-CN": "https://www.beiqiang.online/zh/sourcing-review/",
+        "de": "https://www.beiqiang.online/de/sourcing-review/",
+        "fr": "https://www.beiqiang.online/fr/sourcing-review/",
+        "es": "https://www.beiqiang.online/es/sourcing-review/",
+        "x-default": "https://www.beiqiang.online/sourcing-review/"
+      }
+    }
+  ],
+  "existingPagesChecked": [
+    {
+      "path": "/",
+      "status": 200
+    },
+    {
+      "path": "/zh/",
+      "status": 200
+    },
+    {
+      "path": "/products/bq018/",
+      "status": 200
+    },
+    {
+      "path": "/zh/products/bq018/",
+      "status": 200
+    }
+  ],
+  "newSitemapPages": 246,
+  "localExportPagesChecked": 246,
+  "targetedTestsPassed": 50,
+  "lint": {
+    "errors": 0,
+    "existingWarnings": 11
+  },
+  "browserAcceptance": [
+    "DE colour + closure + EU size filters; comparison retained on switch to FR",
+    "FR real yellow photos, zoom and selected colour into inquiry",
+    "FR form draft and per-style input retained on switch to ES",
+    "Actual inquiry handler local failure and success, response language es; no mail sent",
+    "390px DE/FR product and comparison pages without horizontal document overflow",
+    "EN/ZH mobile drawer outside header containing block, full viewport and five language choices",
+    "All-photos gallery keeps selected colour for inquiry"
+  ],
+  "scopeLimits": [
+    "PDFs and factory-video captions remain EN/ZH",
+    "Advanced protected project workflows and secondary resources remain EN/ZH; English handoff labelled",
+    "No production inquiry or email submitted",
+    "Eight pre-existing full-project TypeScript errors remain"
+  ],
+  "deployment": {
+    "DeploymentId": "dplcl9ruzu64",
+    "Status": "Success",
+    "Code": 0,
+    "RepoCommitHash": "d2b384fde2a6628f432e40325b0aaa7d2d6cea94",
+    "RepoCommitMsg": "Make static deployment output explicit and validate localized artifacts",
+    "CreatedOn": "2026-10-25T15:36:58.983Z",
+    "UsedInProd": true,
+    "PreviewUrl": "https://beiqiang-footwear-dplcl9ruzu64.edgeone.dev",
+    "ViaMeta": "Github"
+  }
+}
