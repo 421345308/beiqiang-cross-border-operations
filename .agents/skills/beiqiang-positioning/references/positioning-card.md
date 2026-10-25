@@ -16,7 +16,9 @@ Keep the product's verified category and construction ahead of generic comfort l
 
 | Phrase or angle | Evidence required before use |
 | --- | --- |
-| `wide toe box`, `roomy toe space`, toe-spread comparison | Current-SKU wide-last evidence or explicit owner confirmation |
+| `wide toe box`, `roomy toe space` | Current-SKU evidence or explicit owner confirmation of toe-box space; a wide-looking photo is insufficient |
+| `wide fit`, wide last | Current-SKU width/last evidence or explicit owner confirmation of that exact fit; a roomy toe box alone is insufficient |
+| Toe-spread or fit comparison | Actual comparable fit/measurement evidence; do not infer a wearer outcome from shape |
 | `lightweight EVA sole` | Confirmed EVA material and support for the light-weight claim |
 | `breathable knit upper` | Confirmed knit construction and support for breathability |
 | `factory direct supply` | Match to the original own-factory product package |
@@ -30,7 +32,7 @@ Do not promote medical, orthopedic, waterproof, certified, years/capacity, brand
 
 For a verified own-factory wide-toe style:
 
-> Factory supply wide toe box walking shoes for daily walking, commuting and casual wear.
+> Walking shoes with a wide toe box, manufactured by Beiqiang.
 
 When the SKU's source and sample availability are confirmed:
 

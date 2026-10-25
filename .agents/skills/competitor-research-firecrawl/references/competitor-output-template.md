@@ -1,6 +1,6 @@
 # Competitor Output Template
 
-Use this structure for competitor research reports.
+Select only sections that answer the actual research question. This is a reference, not a mandatory full report for every request.
 
 ## Executive Summary
 
@@ -21,7 +21,7 @@ Risk or missing evidence:
 
 ## Keyword Findings
 
-Return 3 groups:
+When keyword analysis is relevant, distinguish these possible groups. Observed wording does not establish search volume, ranking potential or suitability for every channel:
 
 - Core traffic terms: high-relevance product keywords.
 - Differentiation terms: wide toe box, knit, EVA sole, slip-on, lightweight, etc.
@@ -46,13 +46,13 @@ Return:
 - Confirmation questions to ask buyers.
 - Follow-up angle.
 
-## TikTok B2B Actions
+## Social Content Actions
 
 Return:
 
-- 3 buyer-problem hooks.
-- 3 proof shots.
-- 1 Alibaba inquiry CTA.
+- Select the actual audience and requested platform.
+- Propose as many openings and evidence shots as the content requires; no fixed count.
+- Choose the next action from the actual customer journey: product detail, website inquiry, platform contact or another authorized destination. Alibaba is not the default destination.
 
 ## Evidence Boundary
 
@@ -66,7 +66,7 @@ Facts Beiqiang must confirm before publishing or quoting:
 
 ## Comparable Offer And Differentiated Value (2026-10-03 owner direction)
 
-Add to a full brief: exact source cost/date/unit and FX basis; comparable Alibaba product/date/currency/unit/quantity tier/material/color-size/customization/trade-term/shipping; match status and unresolved differences; current authorized price and known applicable fulfillment/service expenses; target buyer and evidenced non-price value. Preserve the applicable original 30–50% cost markup without calling it net profit. Low price versus sold counts is a hypothesis, not causation. Compare two-pair trial orders with equivalent conditions, never thousand-unit tail prices. Unknown fees remain pending-estimate. The current strategy does not primarily target $1–2 high-volume basics, without creating a store-wide minimum-price ban. Do not change prices/budgets or invent inventory/OEM capability. Fill concrete SKU actions in the existing A–G task package rather than a duplicate financial register.
+When price comparison is needed, record source cost/date/unit and FX basis; comparable product/date/currency/unit/quantity tier/material/color-size/customization/trade-term/shipping; match status and unresolved differences; current authorized price and known applicable service expenses. Use the original channel/SKU pricing record instead of maintaining a second universal markup rule here. Cost markup is not net profit. Low price versus sold counts is a hypothesis, not causation. Compare equivalent order conditions, never a trial order with a thousand-unit tail price. Unknown fees remain pending-estimate. Do not change prices/budgets or invent inventory/OEM capability. For an Alibaba implementation, use its existing task package; website research does not require that package.
 
 ## Cross-channel And Current-Version Diagnosis
 

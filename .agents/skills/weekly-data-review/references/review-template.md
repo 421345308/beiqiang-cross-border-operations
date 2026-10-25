@@ -1,6 +1,6 @@
 # Weekly Data Review Template
 
-Use this template for weekly Beiqiang operations review.
+Use relevant sections for the requested channels. Do not require every dataset or exactly three findings for a narrow review.
 
 ## Data To Collect
 
@@ -32,7 +32,15 @@ Competitor/market:
 - Price/MOQ signals.
 - Image/detail-page patterns.
 
+Website/search, when in scope:
+
+- Search Console query/page/country/device impressions and clicks, with reporting window and latency.
+- Product views, inquiry starts, successful submissions, qualified inquiries and source/language where observable and permitted.
+- Access failures, form failures and indexing evidence. A click on WhatsApp is not a delivered inquiry; AI mentions are not attributed visits or sales.
+
 ## Metric Reading
+
+The patterns below generate hypotheses, not proven causes. Check metric definitions, sample size, period, paid/organic filters and source availability before comparison. Missing data is not zero. Calculate aggregate CTR from total clicks / total impressions, not the mean of row percentages.
 
 - High exposure + low CTR: title, first image, price band, or search intent mismatch.
 - Low exposure + good CTR: keyword coverage, product quality score, category, duplicate risk, or publishing volume issue.
@@ -82,7 +90,7 @@ Facts needing confirmation:
 
 ## Action Priority
 
-Use this priority order:
+Choose priorities by current business impact, evidence and feasibility. Resolve access, submission or product-truth failures before cosmetic metric optimization. The following are possible actions, not a fixed order or compulsory weekly checklist:
 
 1. Fix pages with exposure but weak CTR.
 2. Fix pages with clicks but weak inquiries.

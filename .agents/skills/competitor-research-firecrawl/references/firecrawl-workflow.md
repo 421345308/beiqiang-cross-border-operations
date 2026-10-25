@@ -4,7 +4,7 @@ Use Firecrawl to collect structured market evidence before optimizing Beiqiang l
 
 ## MCP Setup Assumption
 
-Firecrawl MCP is expected to expose tools such as:
+Discover the currently available tools and their schemas first. Names below describe possible capabilities, not guaranteed callable tools:
 
 - `firecrawl_search`
 - `firecrawl_scrape`
@@ -47,9 +47,9 @@ Add product-specific terms such as `winter`, `fleece lined`, `canvas`, `mesh`, `
 1. Use `firecrawl_search` for broad discovery when URLs are unknown.
 2. Use `firecrawl_map` for one supplier site, Alibaba storefront, or brand site when many product URLs may exist.
 3. Use `firecrawl_scrape` for a single page when exact URL is known.
-4. Use `firecrawl_batch_scrape` for 5-12 known product URLs.
+4. Use a supported batch operation for independent known URLs when useful; respect its actual limits rather than a fixed sample count.
 5. Use `firecrawl_extract` when structured JSON is needed from product pages.
-6. Use `firecrawl_agent` for open-ended research across multiple sources, then poll its status tool until complete.
+6. Use an available research-agent operation only when the task warrants it and applicable instructions permit delegation. For asynchronous jobs, follow returned status instructions with bounded waits; handle completion, failure and rate limits explicitly. Do not poll indefinitely or bypass access limits.
 
 ## Extraction Schema
 

@@ -25,4 +25,4 @@ For title/main-image/detail optimization, reuse dated applicable excellent same-
 
 Deliver the improved content and concise reasons directly. Store metrics reveal weaknesses, set priorities and support later review; A/B, a fixed 2–3 product test, sample accumulation or significance is not a standard workflow or prerequisite. Record previous/proposed values, source/date and change reasons for correction without forcing a control experiment.
 
-A narrow question gets a concise comparison with links. A full research brief gets a source table, market patterns, evidence limits and prioritized Alibaba/RFQ/content actions. Use `beiqiang-positioning` only when a buyer-facing claim or product fit needs separate review.
+A narrow question gets a concise comparison with links. A full research brief gets a source table, market patterns, evidence limits and prioritized actions for the requested channel. For demand or bestseller conclusions, apply the [shared evidence method](../../../06_市场研究/需求证据与扩品方法.md). Use `beiqiang-positioning` only when a buyer-facing claim or product fit needs separate review.
