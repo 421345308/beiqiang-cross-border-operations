@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-10-20",
+  "updated_on": "2026-10-26",
   "stores": [
     {
       "key": "douyin_legacy",
@@ -1019,7 +1019,126 @@
         "record_updated_on": "2026-10-21",
         "scope": "审核、主字段/SKU、媒体像素与图序、原5元券扩围及H5通过；App选规格/实际核销待验。精确平台ID仅留.local。"
       }
+    },
+    {
+      "store_key": "douyin_leidansenyang",
+      "source_model": "9002-R",
+      "product_id": null,
+      "identity_state": "SOURCE_MAPPED_CANONICAL_PRODUCT_PENDING",
+      "version": "常规",
+      "content_file": "09_国内电商/抖店/数据/品牌首发商品.json",
+      "content_key": "9002-R",
+      "identity_evidence": "09_国内电商/抖店/数据/品牌首发商品.json#models.9002-R.source_current",
+      "scope": "本款普通版与既有加绒版分开链接及字段，逐款对应来源及负责人版本确认。",
+      "observation": {
+        "state": "ON_SALE_H5_MEDIA_COUPON_VERIFIED_APP_PENDING",
+        "record_updated_on": "2026-10-26",
+        "scope": "审核、正式字段/SKU、图片像素及图序、颜色绑定、H5标题图文及5元券通过；H5完整价格隐藏，手机App选规格及实际核销待验。精确平台ID仅留.local。"
+      },
+      "supplier_source_model": "9002"
+    },
+    {
+      "store_key": "douyin_leidansenyang",
+      "source_model": "9507-R",
+      "product_id": null,
+      "identity_state": "SOURCE_MAPPED_CANONICAL_PRODUCT_PENDING",
+      "version": "常规",
+      "content_file": "09_国内电商/抖店/数据/品牌首发商品.json",
+      "content_key": "9507-R",
+      "identity_evidence": "09_国内电商/抖店/数据/品牌首发商品.json#models.9507-R.source_current",
+      "scope": "本款普通版与既有加绒版分开链接及字段，逐款对应来源及负责人版本确认。",
+      "observation": {
+        "state": "ON_SALE_H5_MEDIA_COUPON_VERIFIED_APP_PENDING",
+        "record_updated_on": "2026-10-26",
+        "scope": "审核、正式字段/SKU、图片像素及图序、颜色绑定、H5标题图文及5元券通过；H5完整价格隐藏，手机App选规格及实际核销待验。精确平台ID仅留.local。"
+      },
+      "supplier_source_model": "9507"
+    },
+    {
+      "store_key": "douyin_leidansenyang",
+      "source_model": "ZX2116-R",
+      "product_id": "BQ031",
+      "identity_state": "MATCHED_EXPLICIT_PRODUCT_AND_SOURCE_EVIDENCE",
+      "version": "常规",
+      "content_file": "09_国内电商/抖店/数据/品牌首发商品.json",
+      "content_key": "ZX2116-R",
+      "identity_evidence": "09_国内电商/抖店/数据/品牌首发商品.json#models.ZX2116-R.source_current",
+      "scope": "本款普通版与既有加绒版分开链接及字段，逐款对应来源及负责人版本确认。",
+      "observation": {
+        "state": "ON_SALE_H5_MEDIA_COUPON_VERIFIED_APP_PENDING",
+        "record_updated_on": "2026-10-26",
+        "scope": "审核、正式字段/SKU、图片像素及图序、颜色绑定、H5标题图文及5元券通过；H5完整价格隐藏，手机App选规格及实际核销待验。精确平台ID仅留.local。"
+      },
+      "supplier_source_model": "ZX2116"
+    },
+    {
+      "store_key": "douyin_leidansenyang",
+      "source_model": "M889-R",
+      "product_id": "BQ038",
+      "identity_state": "MATCHED_EXPLICIT_PRODUCT_AND_SOURCE_EVIDENCE",
+      "version": "常规",
+      "content_file": "09_国内电商/抖店/数据/品牌首发商品.json",
+      "content_key": "M889-R",
+      "identity_evidence": "09_国内电商/抖店/数据/品牌首发商品.json#models.M889-R.source_current",
+      "scope": "本款普通版与既有加绒版分开链接及字段，逐款对应来源及负责人版本确认。",
+      "observation": {
+        "state": "ON_SALE_H5_MEDIA_COUPON_VERIFIED_APP_PENDING",
+        "record_updated_on": "2026-10-26",
+        "scope": "审核、正式字段/SKU、图片像素及图序、颜色绑定、H5标题图文及5元券通过；H5完整价格隐藏，手机App选规格及实际核销待验。精确平台ID仅留.local。"
+      },
+      "supplier_source_model": "M889"
+    },
+    {
+      "store_key": "douyin_leidansenyang",
+      "source_model": "A212-R",
+      "product_id": "BQ048",
+      "identity_state": "MATCHED_EXPLICIT_PRODUCT_AND_SOURCE_EVIDENCE",
+      "version": "常规",
+      "content_file": "09_国内电商/抖店/数据/品牌首发商品.json",
+      "content_key": "A212-R",
+      "identity_evidence": "09_国内电商/抖店/数据/品牌首发商品.json#models.A212-R.source_current",
+      "scope": "本款普通版与既有加绒版分开链接及字段，逐款对应来源及负责人版本确认。",
+      "observation": {
+        "state": "ON_SALE_H5_MEDIA_COUPON_VERIFIED_APP_PENDING",
+        "record_updated_on": "2026-10-26",
+        "scope": "审核、正式字段/SKU、图片像素及图序、颜色绑定、H5标题图文及5元券通过；H5完整价格隐藏，手机App选规格及实际核销待验。精确平台ID仅留.local。"
+      },
+      "supplier_source_model": "A212"
+    },
+    {
+      "store_key": "douyin_leidansenyang",
+      "source_model": "A116-R",
+      "product_id": "BQ018",
+      "identity_state": "MATCHED_EXPLICIT_PRODUCT_AND_SOURCE_EVIDENCE",
+      "version": "常规",
+      "content_file": "09_国内电商/抖店/数据/品牌首发商品.json",
+      "content_key": "A116-R",
+      "identity_evidence": "09_国内电商/抖店/数据/品牌首发商品.json#models.A116-R.source_current",
+      "scope": "本款普通版与既有加绒版分开链接及字段，逐款对应来源及负责人版本确认。",
+      "observation": {
+        "state": "ON_SALE_H5_MEDIA_COUPON_VERIFIED_APP_PENDING",
+        "record_updated_on": "2026-10-26",
+        "scope": "审核、正式字段/SKU、图片像素及图序、颜色绑定、H5标题图文及5元券通过；H5完整价格隐藏，手机App选规格及实际核销待验。精确平台ID仅留.local。"
+      },
+      "supplier_source_model": "A116"
+    },
+    {
+      "store_key": "douyin_leidansenyang",
+      "source_model": "A1689-R",
+      "product_id": "BQ025",
+      "identity_state": "MATCHED_EXPLICIT_PRODUCT_AND_SOURCE_EVIDENCE",
+      "version": "常规",
+      "content_file": "09_国内电商/抖店/数据/品牌首发商品.json",
+      "content_key": "A1689-R",
+      "identity_evidence": "09_国内电商/抖店/数据/品牌首发商品.json#models.A1689-R.source_current",
+      "scope": "本款普通版与既有加绒版分开链接及字段，逐款对应来源及负责人版本确认。",
+      "observation": {
+        "state": "ON_SALE_H5_MEDIA_COUPON_VERIFIED_APP_PENDING",
+        "record_updated_on": "2026-10-26",
+        "scope": "审核、正式字段/SKU、图片像素及图序、颜色绑定、H5标题图文及5元券通过；H5完整价格隐藏，手机App选规格及实际核销待验。精确平台ID仅留.local。"
+      },
+      "supplier_source_model": "A1689"
     }
   ],
-  "coverage_note": "本索引覆盖旧店15款与新店9款已维护档案；新店另有9212独立在售款未纳入内容档案，保留未对应缺口。不是完整平台实时目录。精确店铺/商品/SKU ID仅在.local正式证据中保存。"
+  "coverage_note": "旧店15款及品牌新店55款内容档案分别对应；新店另有既有9212独立款待补共用身份，完整店铺56款。品牌新7款H5完整价格隐藏、手机App选码及实际核销待验。"
 }

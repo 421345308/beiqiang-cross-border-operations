@@ -18,6 +18,7 @@ const ENDPOINTS = Object.freeze({
   productAudit: {method: 'POST', path: '/api/v2/product/product/getProductAuditList'},
   sizeTemplateInfo: {method: 'POST', path: '/api/v2/product/product/getSizeTemplateInfo'},
   products: {method: 'POST', path: '/api/v2/product/product/searchProductList'},
+  materials: {method: 'POST', path: '/api/v2/material/material/getFolderInfo'},
   sizeTemplateInit: {method: 'POST', path: '/api/v2/move/size_temp/getSizeTempInitData'},
   uploadImage: {method: 'POST', path: '/api/v2/move/batch/uploadImage'},
   saveSizeTemplate: {method: 'POST', path: '/api/v2/move/size_temp/saveSizeTemp'},
@@ -193,6 +194,12 @@ export class MiaoshouHttp {
   async getProductAudit(productId) {
     if (!/^\d+$/.test(String(productId))) throw new Error('Invalid productId');
     return await this.#request('productAudit', {productId: String(productId)});
+  }
+
+  // Observed material-center image list and approved-only filter, 2026-10-25.
+  async listImageMaterials({folderId = '0', pageNo = 1, auditStatus = 0} = {}) {
+    if (!/^\d+$/.test(String(folderId)) || !Number.isInteger(pageNo) || pageNo < 1 || ![0, 3].includes(auditStatus)) throw new Error('Invalid observed material query');
+    return await this.#request('materials', {auditStatus, materialName: '', createTimeStart: '', createTimeEnd: '', folderId: String(folderId), pageNo, pageSize: 50, type: 'photo'});
   }
 
   async getSizeTemplateInfo(sizeInfoTemplateId) {

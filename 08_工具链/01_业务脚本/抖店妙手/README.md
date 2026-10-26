@@ -8,6 +8,8 @@
 
 2026-10-18多店保护已实现并测试：新店会话使用 `.local/shops/brand/session.json`，保存明确目标身份；原 `.local/session.json` 保持原样。新增 `getShopIdentity()`，每次图片上传、商品/尺码/状态写入前都读取服务端身份并核对目标ID。缺目标、会话串店或保存配置目标冲突会在写入前失败；自动测试覆盖串店拦截和目标正确的提交记录。旧会话的只读方法仍可用，旧写入须先经真实身份核对并补齐该会话自己的目标信息，不能填新店目标迁就旧脚本。
 
+2026-10-25新店恢复：负责人完成续费及官方授权后，复用原目标身份刷新已授权本机会话并通过服务端身份核验，完整商品56款/草稿0回读正常；不据此宣称旧店独立会话恢复。素材中心实际接口为`POST /api/v2/material/material/getFolderInfo`，`listImageMaterials({folderId,pageNo,auditStatus})`固定photo/每页50，审核通过筛选为3。本次完整13页611条，102张目标图均状态3。原商品创建反复明确“描述图图片正在审核中”时，核实临时上传URL与已审条目的正式byteUrl；逐图下载正式URL与本地比完整像素及绑定，再正常取得类目推荐凭据，以同图正式URL独立提交一次。7款全部成功、审核/正式字段及102图回读通过。原失败与修正请求分别保留；不得把单个状态3当完整媒体验收，不改图、重传或关闭校验绕审。买家H5本次隐藏完整价格，分别记录图文/5元券通过与手机App价格/规格/实际核销待验。
+
 ## 实测能力
 
 | 方法 | 业务能力 |
@@ -19,6 +21,7 @@
 | `listProducts({page,pageSize,isDraft})` | 完整分页读取商品、草稿；还需逐商品SKU查重 |
 | `getProductBase(id)` / `getProductSku(id)` | 正式字段与SKU回读，精确商品ID取字符串productIdStr |
 | `getProductAudit(id)` | 审核记录：-1等图片审核，0审核中，1通过，2不通过 |
+| `listImageMaterials({folderId,pageNo,auditStatus})` | 素材中心分页；全部0/审核通过3，已核13页611条及正式byteUrl |
 | `uploadImage(path)` | JPEG/PNG上传，返回临时图片地址 |
 | `recommendCategory({name,mainImgUrls})` | 真实标题与主图的官方推荐类目及凭据 |
 | `getSizeTemplateInfo(sizeInfoTemplateId)` | 回读实际选定尺码及配置，已验证当前前端参数 |
