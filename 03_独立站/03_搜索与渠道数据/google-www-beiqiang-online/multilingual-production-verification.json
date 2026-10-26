@@ -1,7 +1,7 @@
 {
   "release": {
-    "releaseId": "2026-10-25.8",
-    "releasedAt": "2026-10-25T15:08:06Z",
+    "releaseId": "2026-10-26.2",
+    "releasedAt": "2026-10-26T01:25:20.796875+00:00",
     "productCount": 69,
     "publicLanguages": [
       "en",
@@ -24,8 +24,8 @@
     },
     "publicOrigin": "https://www.beiqiang.online"
   },
-  "checkedAt": "2026-10-25T15:40:51.360520+00:00",
-  "websiteCommit": "d2b384fde2a6628f432e40325b0aaa7d2d6cea94",
+  "checkedAt": "2026-10-26T01:47:58.353309+00:00",
+  "websiteCommit": "7709f7b3ef14e029c53845f7a49395094f01c404",
   "newPagesChecked": [
     {
       "path": "/de/",
@@ -720,7 +720,10 @@
   ],
   "newSitemapPages": 246,
   "localExportPagesChecked": 246,
-  "targetedTestsPassed": 50,
+  "fullTestsPassed": 384,
+  "typecheck": {
+    "errors": 0
+  },
   "lint": {
     "errors": 0,
     "existingWarnings": 11
@@ -735,20 +738,49 @@
     "All-photos gallery keeps selected colour for inquiry"
   ],
   "scopeLimits": [
-    "PDFs and factory-video captions remain EN/ZH",
+    "Factory-video captions remain EN/ZH",
     "Advanced protected project workflows and secondary resources remain EN/ZH; English handoff labelled",
-    "No production inquiry or email submitted",
-    "Eight pre-existing full-project TypeScript errors remain"
+    "No production inquiry or email submitted; receipt transport tested with injection only"
+  ],
+  "pdfs": [
+    {
+      "locale": "de",
+      "status": 200,
+      "sha256": "36cd09b4f9618a57c012f242a344fda2e33de22a5a183455e9d662c7076bdd24",
+      "pages": 20,
+      "products": 69
+    },
+    {
+      "locale": "fr",
+      "status": 200,
+      "sha256": "d5abcdeec1cae40a83091219e8250736e89d8d4a0e2d03f36ddf2f863c8424f7",
+      "pages": 20,
+      "products": 69
+    },
+    {
+      "locale": "es",
+      "status": 200,
+      "sha256": "dca28989241f45771d543994d1527290e1e6ceb94683e08b1567216c3746554b",
+      "pages": 20,
+      "products": 69
+    }
+  ],
+  "browserAcceptanceThisRelease": [
+    "FR selected lavender changes print image, colour and link together",
+    "ES print media displays only localized product facts and selected real photo",
+    "390px DE catalogue download entry has no document overflow",
+    "All 60 catalogue pages visually inspected; 207 localized product links verified",
+    "1280px product page uses two columns; 390px keeps single column without document overflow"
   ],
   "deployment": {
-    "DeploymentId": "dplcl9ruzu64",
+    "DeploymentId": "dpkkzijf5833",
     "Status": "Success",
     "Code": 0,
-    "RepoCommitHash": "d2b384fde2a6628f432e40325b0aaa7d2d6cea94",
-    "RepoCommitMsg": "Make static deployment output explicit and validate localized artifacts",
-    "CreatedOn": "2026-10-25T15:36:58.983Z",
+    "RepoCommitHash": "7709f7b3ef14e029c53845f7a49395094f01c404",
+    "RepoCommitMsg": "Restore two-column desktop layouts on localized product pages",
+    "CreatedOn": "2026-10-26T01:44:41.454Z",
     "UsedInProd": true,
-    "PreviewUrl": "https://beiqiang-footwear-dplcl9ruzu64.edgeone.dev",
+    "PreviewUrl": "https://beiqiang-footwear-dpkkzijf5833.edgeone.dev",
     "ViaMeta": "Github"
   }
 }
