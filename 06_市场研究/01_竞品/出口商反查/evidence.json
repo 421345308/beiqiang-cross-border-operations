@@ -1,0 +1,195 @@
+{
+  "checked_date": "2026-10-26",
+  "timezone": "Asia/Shanghai",
+  "method": "公开web搜索/open；无Firecrawl工具；未绕过登录/验证码/付费墙",
+  "source_observations": [
+    {
+      "id": "SRC01",
+      "url": "https://kaisuntd.en.alibaba.com/",
+      "access": "OPEN_EMPTY",
+      "fact": "工具返回0行；现有544目录与店铺主体对应回2026-10-11/21原研究",
+      "limit": "本轮不能声称看到当前公司页"
+    },
+    {
+      "id": "SRC02",
+      "url": "https://goldenheymann.en.alibaba.com/",
+      "access": "OPEN_EMPTY",
+      "fact": "工具返回0行",
+      "limit": "店铺对应沿用原研究，当前注册主体待核"
+    },
+    {
+      "id": "SRC03",
+      "url": "https://amcshoes.en.alibaba.com/",
+      "access": "OPEN_EMPTY",
+      "fact": "工具返回0行",
+      "limit": "产品对应回旧研究"
+    },
+    {
+      "id": "SRC04",
+      "url": "https://galler.en.alibaba.com/",
+      "access": "OPEN_EMPTY",
+      "fact": "工具返回0行",
+      "limit": "不与jchshoes自动合并"
+    },
+    {
+      "id": "SRC05",
+      "url": "https://shunzhishoes.en.alibaba.com/",
+      "access": "OPEN_EMPTY",
+      "fact": "工具返回0行",
+      "limit": "当前主体未独立重核"
+    },
+    {
+      "id": "SRC06",
+      "url": "https://wzjikexing.en.alibaba.com/",
+      "access": "OPEN_EMPTY",
+      "fact": "工具返回0行",
+      "limit": "不采用导购AI对人手/规模推断"
+    },
+    {
+      "id": "SRC07",
+      "url": "https://tzduoya.en.alibaba.com/",
+      "access": "OPEN_EMPTY",
+      "fact": "工具返回0行",
+      "limit": "不把搜索排名或sold当出口证据"
+    },
+    {
+      "id": "SRC08",
+      "url": "https://www.gotosuppliers.com/supplier/goldenheymann/profile.html",
+      "access": "OPEN_READABLE",
+      "fact": "英文全名、Trading Company、鞋材及成品鞋方向；地址显示Fengdong/Shuitou",
+      "limit": "第三方目录；地址行政区文字存在疑点，不能当官方工商"
+    },
+    {
+      "id": "SRC09",
+      "url": "https://amcshoes.com/",
+      "access": "SEARCH_BODY_THEN_OPEN_502",
+      "fact": "搜索返回英文全名、女鞋/童鞋及Houjie Dongguan地址",
+      "limit": "当前直接open502；自述制造及认证未独立核"
+    },
+    {
+      "id": "SRC10",
+      "url": "https://amcshoes.com/OurStory.html",
+      "access": "SEARCH_BODY_THEN_OPEN_TIMEOUT",
+      "fact": "供应商故事有AMC用名与创业/分厂叙述",
+      "limit": "故事里的合作品牌不证明买方确认，不作为有效潜客"
+    },
+    {
+      "id": "SRC11",
+      "url": "https://www.jinchenshoes.com/",
+      "access": "SEARCH_BODY_THEN_OPEN_TIMEOUT",
+      "fact": "搜索正文英文全名为Shijiazhuang Jinchen Technology Co., Ltd.，产品为赤足定位鞋",
+      "limit": "直接open两次超时；与galler/jchshoes法人关系待核"
+    },
+    {
+      "id": "SRC12",
+      "url": "https://suppliers.alibaba.com/jinjiang-keytop-shoes-coltd_2209722677599",
+      "access": "OPEN_READABLE",
+      "fact": "结构头部同英文名，Contact Supplier指向ketuoshoes；Trade结构市场及鞋类产品卡可读",
+      "limit": "AI Overview和通用FAQ不是独立验厂/承诺证据；所列报告有效期需另核"
+    },
+    {
+      "id": "SRC13",
+      "url": "https://www.tendata.com/en/supplier/jinjiang-keytop-shoes-co-ltd-chin-CHNN5631b4235737d3f1210f72bd68b0a791.html",
+      "access": "OPEN_READABLE",
+      "fact": "中文名晋江科拓鞋业有限公司；信用代码91350582MA2Y4YQ602；地址表2楼/简介3楼",
+      "limit": "第三方工商摘录；官网字段open为-，不能沿用搜索旧值当实时官网"
+    },
+    {
+      "id": "SRC14",
+      "url": "https://suppliers.alibaba.com/quanzhou-simble-import-and-export-trading-co-ltd_3402977786",
+      "access": "OPEN_READABLE",
+      "fact": "结构头部英文全名；Contact Supplier指向simblecn；Featured Products有飞织鞋",
+      "limit": "平台AI Overview不作工厂/认证事实；未下载原验厂报告"
+    },
+    {
+      "id": "SRC15",
+      "url": "https://www.simblefootwear.com/about-us",
+      "access": "OPEN_READABLE",
+      "fact": "页眉及版权为进出口公司；About段为Quanzhou Simble Footwear Co., Ltd.；产品导航有休闲鞋",
+      "limit": "两个公司用名及2001/2015年份待工商核；不合并为已确认同一法人"
+    },
+    {
+      "id": "SRC16",
+      "url": "https://suppliers.alibaba.com/xiamen-jieruixin-trading-co-ltd_3087457625",
+      "access": "OPEN_READABLE",
+      "fact": "结构头部英文全名；Contact Supplier指向jerycen；Trade栏列北美/北欧/西欧",
+      "limit": "AI描述有纺织服装和产能用语，不采用；真实生产厂/出口票未核"
+    },
+    {
+      "id": "SRC17",
+      "url": "https://chinahotmarzz.en.alibaba.com/index.html?from=detail&productId=1601110294522",
+      "access": "SEARCH_BODY_THEN_OPEN_EMPTY",
+      "fact": "搜索正文英文全名及拖鞋/洞洞鞋列表，成立2022及21年经验自述并列",
+      "limit": "当次open0行；经营经验非注册年限；与Network Technology未证关联"
+    },
+    {
+      "id": "SRC18",
+      "url": "https://fuyufootwear.com/about-us/",
+      "access": "OPEN_READABLE",
+      "fact": "英文名Fujian Fuyu Technology Co., Ltd.；EVA/PVC拖鞋、凉鞋、花园鞋；页脚Tonglin Anhai地址",
+      "limit": "未找到已核Alibaba店；与公开名单Neikeng地址关系待核；品牌Logo仅供应商自述"
+    },
+    {
+      "id": "SRC19",
+      "url": "https://www.alibaba.com/countrysearch/CN/knitted-shoes.html",
+      "access": "SEARCH_CATEGORY_THEN_OPEN_DIFFERENT_CACHE",
+      "fact": "搜索正文出现Langchi、Huifa、Linfeng、HappyChina等候选；open返回不同产品卡快照",
+      "limit": "搜索卡可供发现，单店主体及商品URL未完成提取；不作当前销售/价格依据"
+    },
+    {
+      "id": "SRC20",
+      "url": "https://www.alibaba.com/countrysearch/CN/jinjiang-hotel.html",
+      "access": "SEARCH_CATEGORY",
+      "fact": "Happy China (Jinjiang) Ltd.在室内拖鞋卡出现",
+      "limit": "仅品类线索，店铺主体待当前回读"
+    },
+    {
+      "id": "SRC21",
+      "url": "https://www.alibaba.com/product-detail/BAIRUILUN-Wholesale-Men-s-Women-s_1601368082604.html",
+      "access": "OPEN_READABLE",
+      "fact": "同英文供应商链接bairuilun.m；介绍写贸易公司及formerly Shenyang Flying Footwear Industry",
+      "limit": "供应商自述旧名非工商曾用名；BAIRUILUN品牌非出口方"
+    },
+    {
+      "id": "SRC22",
+      "url": "https://www.alibaba.com/product-detail/Good-quality-sneaker-black-breathable-men-1601193574087.html",
+      "access": "OPEN_READABLE_OLD_CACHE",
+      "fact": "供应商链接ywyongge；男鞋标题和女鞋类目并列",
+      "limit": "缓存旧页，不当实时价格销量"
+    },
+    {
+      "id": "SRC23",
+      "url": "https://www.alibaba.com/product-detail/New-Retro-Sport-Running-Shoes-for_11000033057093.html",
+      "access": "OPEN_EMPTY",
+      "fact": "0行",
+      "limit": "回旧证据"
+    },
+    {
+      "id": "SRC24",
+      "url": "https://www.alibaba.com/product-detail/Wear-Resistant-Elastic-Shock-Absorption-Men_1601367328948.html",
+      "access": "OPEN_EMPTY",
+      "fact": "0行",
+      "limit": "回旧证据"
+    }
+  ],
+  "deep_review_competitor_ids": [
+    "EX001",
+    "EX002",
+    "EX003",
+    "EX004",
+    "EX008",
+    "EX012",
+    "EX013",
+    "EX014",
+    "EX015",
+    "EX016"
+  ],
+  "not_obtained": [
+    "官方工商登记全量资料",
+    "20家实际出口主体确认",
+    "20家逐款实物/工厂确认",
+    "全店客户名单",
+    "海外联系人采购权限",
+    "实时海关全量日志"
+  ]
+}

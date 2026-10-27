@@ -85,4 +85,18 @@ python -X utf8 -m unittest discover -s '08_工具链/01_业务脚本/客户发�
 
 目录中 `discover.py`、`export.py` 是既有独立实验，未接入主工作台；本轮不运行或改写它们，不把未经核验的数据源接口当成现有自动发现能力。
 
+## 贸易研究离线复核（2026-10-27）
+
+`trade_review.py`复用本工具候选库和原CRM只读核对，处理人工核验的贸易研究附件，不是新的海关采集接口。研究流程和本轮报告见[获客研究与邮件治理](../../../04_客户开发/获客研究与送达率治理.md)。
+
+```powershell
+python -X utf8 '08_工具链/01_业务脚本/客户发现助手/trade_review.py' '04_客户开发/02_目标名单/.local/客户发现助手/海关反查/leads.json' '04_客户开发/02_目标名单/.local/客户发现助手/海关反查' --import-candidates
+```
+
+输入/输出均限制在既有受控候选目录。每个候选的`sources`保留URL、时间、实读/索引/受阻与证据；`score`须含product/bulk/active/brand/contact/potential六维，各项`points`分别不超过30/25/15/15/10/5并有`reason`；正分另须`source_urls`指向本公司已列来源。程序验证字段，不代替人工判断来源是否支持结论。
+
+导出`crm_review.json`、`客户复核.csv`及兼容原工作台的`candidate_import.json`。默认只导出；加`--import-candidates`才按域名稳定ID导入既有库，不覆盖人工判断/停止状态。官网要有`website_verified: true`，并由`website_source_url`指向同域且已列的实读来源；`access_level`只接受`public_page`、`official_page`或`公开正文已打开`。索引/摘要/受阻不能冒充已核官网；人仍须判断主体归属，不能仅凭同域自动认证法人。未核候选的正式`website`留空，可另留`website_candidate`。评分不提供发送许可。原CRM不改写，文件hash与未知/冲突状态保留。
+
+本轮7候选中4个已核官网导入，3个无已核官网留待核；4个在当前CRM没有精确域名命中，所有联系状态仍未知。既有候选从6增至10；“未匹配”不等于新增客户或无人联系。详情仍可回原研究附件，正式Lead与外发记录回原CRM。
+
 保存可靠性：唯一临时文件与有限退避；持续替换失败返回HTTP 503并保留旧JSON。独立Windows真实文件锁验证短暂锁恢复、持续锁失败保护通过；原始偶发锁来源未确证。最终36项程序检查和独立HTTP/CSV核验通过，新CRM界面尚未做浏览器视觉/点击验收。
