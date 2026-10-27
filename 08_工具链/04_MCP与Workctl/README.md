@@ -9,6 +9,7 @@
 | `run_workbuddy_task.mjs`、`workbuddy_ipc_client.mjs` | 现有桌面宿主认证与限定文件任务工具；仅在本次任务确实选择WorkBuddy时核当前接口、登录及任务范围，不默认启动代理 |
 | `run_workctl_with_accio_env.py` | 历史网关适配，非现行商品执行入口，不从旧HR移交方案恢复调用 |
 | [TokenHub](TokenHub/README.md) | 对应模型服务的既有接入与实际测试证据 |
+| [Muse 调用 Codex CLI](Muse调用Codex%20CLI说明.md) | 本机入口、非交互调用、UTF-8 输入、JSON 事件、会话续接与故障处理 |
 | [WorkBuddy同步验证](WorkBuddy_CLI与桌面会话同步验证_2026-10-01.md) | 桌面/CLI会话行为的历史实测，适用版本与日期见原记录，不作为当前登录或模型能力证明 |
 
 此前为验证代理替换路径，单独维护了HR上下文、执行指南和全量移交。这些材料重复商品规则，并把试点分工、模型轮次和旧剩余量写成长期指令；已撤掉影子入口。原小试及提交/回读仍在原业务证据和本地运行记录中，查问题时按对象取证。
