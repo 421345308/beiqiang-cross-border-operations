@@ -170,6 +170,22 @@
       "access": "OPEN_EMPTY",
       "fact": "0行",
       "limit": "回旧证据"
+    },
+    {
+      "id": "SRC-20261028-KAISUN-HOME",
+      "url": "https://kaisuntd.en.alibaba.com/",
+      "checked_date": "2026-10-28",
+      "access": "FIRECRAWL_OFFICIAL_API_READ",
+      "fact": "首页显示Xiamen Kaisun Trading Co., Ltd.及Barefoot/Casual等鞋类分组",
+      "limit": "未取得可与海关对齐的登记地址；不升级为已核同一出口法人"
+    },
+    {
+      "id": "SRC-20261028-KAISUN-PROFILE",
+      "url": "https://kaisuntd.en.alibaba.com/company_profile.html",
+      "checked_date": "2026-10-28",
+      "access": "CAPTCHA_SLIDER",
+      "fact": "HTTP200且API success但正文为滑块验证",
+      "limit": "未绕过；不能把请求成功计作公司资料已读"
     }
   ],
   "deep_review_competitor_ids": [
@@ -191,5 +207,6 @@
     "全店客户名单",
     "海外联系人采购权限",
     "实时海关全量日志"
-  ]
+  ],
+  "latest_checked_date": "2026-10-28"
 }

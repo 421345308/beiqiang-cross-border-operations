@@ -14,7 +14,7 @@ Discover the currently available tools and their schemas first. Names below desc
 - `firecrawl_agent`
 - status-check tools for async batch or agent jobs
 
-If the tools are not available in the current Codex session, keep the same schema and use available search/browsing tools manually. State that Firecrawl MCP is not active.
+If MCP tools are absent, check the existing local integration before declaring Firecrawl unavailable. An existing `FIRECRAWL_API_KEY` can use the official API even when MCP is not loaded. Check credit usage and one relevant public page using the current official API documentation; never print the key or put it in the project. See [local setup](../../../../08_工具链/04_MCP与Workctl/mcp/FIRECRAWL_MCP_SETUP.md). Missing MCP, invalid credentials, exhausted credits and a blocked target page are different conditions. Use available search/browsing only when no working Firecrawl route is available, preserving the same evidence fields.
 
 ## Research Inputs
 

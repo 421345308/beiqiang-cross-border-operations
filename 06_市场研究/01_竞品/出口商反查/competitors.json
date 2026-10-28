@@ -16,13 +16,13 @@
       "registration_status": "未查得官方工商登记；不凭英文翻译补中文名",
       "product_direction": "针织/套脚/休闲及宽头定位鞋",
       "target_markets": "Alibaba资料自述南欧/北美等；未独立验证",
-      "source_urls": "06_市场研究/01_竞品/行业标杆店铺拆解/README.md | https://suppliers.alibaba.com/xiamen-kaisun-trading-co-ltd_2208076938802",
-      "checked_date": "2026-10-26",
-      "access_mode": "HISTORICAL_PRIMARY+SEARCH; 当次店首页空正文/supplier页不可读",
-      "evidence_grade": "E1",
-      "verification_status": "候选主体；实际出口主体未确认",
+      "source_urls": "06_市场研究/01_竞品/行业标杆店铺拆解/README.md | https://suppliers.alibaba.com/xiamen-kaisun-trading-co-ltd_2208076938802 | https://kaisuntd.en.alibaba.com/ | https://kaisuntd.en.alibaba.com/company_profile.html",
+      "checked_date": "2026-10-28",
+      "access_mode": "FIRECRAWL_OFFICIAL_API; 首页正文成功；company_profile为滑块",
+      "evidence_grade": "E2",
+      "verification_status": "店铺名称和鞋类目录已实读；出口主体地址对应仍待核",
       "priority": "P1",
-      "notes": "复用544条既有目录；贸易平台同名出现纸品/家具，不可把全部交易并入鞋类。"
+      "notes": "复用544条既有目录；贸易平台同名出现纸品/家具，不可把全部交易并入鞋类。 10/28首页显示英文全名及Barefoot/Casual鞋类分组；详情滑块未绕过。海关同名鞋票不能替代店铺地址/法人对应。"
     },
     {
       "competitor_id": "EX002",
@@ -423,5 +423,6 @@
       "priority": "P2",
       "notes": "旧第三方文档hotshoes域名不作为当前店主体确认，当前店URL留空。"
     }
-  ]
+  ],
+  "latest_checked_date": "2026-10-28"
 }

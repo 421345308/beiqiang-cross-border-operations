@@ -2,6 +2,14 @@
 
 This file is an integration note. Do not store a Firecrawl API key in the project.
 
+## Verified local route (2026-10-28)
+
+The current Codex configuration does not load a Firecrawl MCP server, and the app plugin inventory reports Firecrawl as not installed. The existing local `FIRECRAWL_API_KEY` is nevertheless valid: the official credit-usage endpoint returned HTTP 200, and public Alibaba, trade-record and buyer pages were successfully scraped through the official API. Missing session tools do not mean missing credits or an unavailable account.
+
+For this environment, use the existing key directly with the [official API](https://docs.firecrawl.dev/api-reference/endpoint/scrape): `GET https://api.firecrawl.dev/v2/team/credit-usage` checks the account; `POST https://api.firecrawl.dev/v2/scrape` accepts a public URL and `formats: ["markdown"]`. Pass the key only in the Authorization header from the environment. Keep TLS verification enabled and save source URL, collection time and response status with the business evidence. Do not send customer emails or private CRM data as scrape inputs.
+
+Do not install another integration or restart active sessions just to use this working route. The optional MCP setup below applies when persistent MCP tools are wanted; quota resets do not install or reload an MCP server. A successful request also does not prove every target page is accessible or every source claim is true.
+
 ## What This MCP Is For
 
 Use Firecrawl MCP for public competitor research:
