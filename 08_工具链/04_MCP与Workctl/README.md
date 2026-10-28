@@ -9,6 +9,7 @@
 | `run_workbuddy_task.mjs`、`workbuddy_ipc_client.mjs` | 现有桌面宿主认证与限定文件任务工具；仅在本次任务确实选择WorkBuddy时核当前接口、登录及任务范围，不默认启动代理 |
 | `run_workctl_with_accio_env.py` | 历史网关适配，非现行商品执行入口，不从旧HR移交方案恢复调用 |
 | [TokenHub](TokenHub/README.md) | 对应模型服务的既有接入与实际测试证据 |
+| [Muse与Codex协作](Muse-Codex协作.md) | 默认分工和会话定位，工作流回总控，业务结论回原项目 |
 | [Muse 调用 Codex CLI](Muse调用Codex%20CLI说明.md) | 本机入口、非交互调用、UTF-8 输入、JSON 事件、会话续接与故障处理 |
 | [WorkBuddy同步验证](WorkBuddy_CLI与桌面会话同步验证_2026-10-01.md) | 桌面/CLI会话行为的历史实测，适用版本与日期见原记录，不作为当前登录或模型能力证明 |
 
