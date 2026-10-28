@@ -3,6 +3,7 @@ import json
 import os
 from pathlib import Path
 from urllib.parse import quote
+from product_asset_store import ALIASES, read, resolve_legacy_asset
 
 ROOT = Path(__file__).resolve().parents[2]
 DETAILS = Path('02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品')
@@ -11,6 +12,7 @@ AREA = Path('02_Alibaba运营/02_单品优化记录/商品档案')
 
 def builds(data):
     output = {}
+    migration_index = read(ALIASES) if ALIASES.exists() else {}
     cache_path=ROOT/'02_Alibaba运营/05_扩品工程/数据/目录对账/当前素材清单.json'
     cache=json.loads(cache_path.read_text(encoding='utf-8')) if cache_path.exists() else {}
     sources = {s['id']: s for s in data['sources']}
@@ -18,7 +20,10 @@ def builds(data):
     for listing in data['listings']:
         links.setdefault(listing['product_id'], []).append(listing)
     def ref(path, parent, label=None):
-        url = quote(Path(os.path.relpath(ROOT/path, ROOT/parent)).as_posix(), safe='/.:_-')
+        target = resolve_legacy_asset(path, migration_index=migration_index)
+        # An offline original can live on another drive; relpath cannot cross drives.
+        destination = target.as_posix() if target.drive != ROOT.drive else Path(os.path.relpath(target, ROOT/parent)).as_posix()
+        url = quote(destination, safe='/.:_-')
         return f'[{label or Path(path).name}]({url})'
     for product in data['products']:
         parent = Path(product['dossier_path']).parent if product.get('dossier_path') else AREA / product['id']

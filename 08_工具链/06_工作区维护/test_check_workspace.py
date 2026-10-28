@@ -134,7 +134,7 @@ class SkillFixture(unittest.TestCase):
         with TemporaryDirectory() as tmp:
             root = Path(tmp)
             doc = root / "AGENTS.md"
-            content = "Read `01_产品资产/01_原始数据包/sample.jpg`."
+            content = "Read `01_产品资产/01_原始素材/sample.jpg`."
             checker = WorkspaceCheck(root)
             checker.code_links(doc, content, "fixture")
             self.assertEqual(checker.errors, [])
@@ -143,7 +143,7 @@ class SkillFixture(unittest.TestCase):
             checker = WorkspaceCheck(root)
             checker.code_links(doc, content, "fixture")
             self.assertEqual(checker.errors, [])
-            (root / "01_产品资产/01_原始数据包").mkdir()
+            (root / "01_产品资产/01_原始素材").mkdir()
             checker = WorkspaceCheck(root)
             checker.code_links(doc, content, "fixture")
             self.assertTrue(any("missing inline-code path" in item["message"] for item in checker.errors))

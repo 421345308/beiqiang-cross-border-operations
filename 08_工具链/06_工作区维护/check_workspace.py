@@ -141,7 +141,10 @@ def markdown_targets(text: str) -> list[str]:
         else:
             value = re.sub(r"\s+[\"'].*[\"']\s*$", "", value)
         value = value.replace("\\ ", " ").strip()
-        if value and not value.startswith("#") and not re.match(r"^[a-zA-Z][a-zA-Z0-9+.-]*:", value):
+        if value and not value.startswith("#") and (
+            re.match(r"^[a-zA-Z]:[/\\]", value)
+            or not re.match(r"^[a-zA-Z][a-zA-Z0-9+.-]*:", value)
+        ):
             result.append(unquote(value.split("#", 1)[0].split("?", 1)[0]))
     return result
 

@@ -24,12 +24,13 @@ def guard(p):
  resolved=p.resolve()
  if not resolved.is_relative_to(EXPECTED):raise RuntimeError(f'Outside verified asset root: {p}')
  return resolved
-def resolve_legacy_asset(path):
+def resolve_legacy_asset(path, *, migration_index=None):
  path=str(path).replace('\\','/');p=ROOT/path
  if p.exists():return p
- if ALIASES.exists():
-  mapping=read(ALIASES)['paths'];return ROOT/mapping.get(path,path)
- return p
+ if migration_index is None:
+  migration_index=read(ALIASES) if ALIASES.exists() else {}
+ target=migration_index.get('paths',{}).get(path) or migration_index.get('directories',{}).get(path)
+ return ROOT/target if target else p
 def strings(value):
  if isinstance(value,str):yield value
  elif isinstance(value,list):

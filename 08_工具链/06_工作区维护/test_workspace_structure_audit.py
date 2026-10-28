@@ -2,6 +2,7 @@ import unittest
 from pathlib import Path
 
 from audit_workspace_structure import is_wire_record, local_destination
+from check_workspace import markdown_targets
 
 
 class EvidenceBoundaryTest(unittest.TestCase):
@@ -32,6 +33,16 @@ class EvidenceBoundaryTest(unittest.TestCase):
         self.assertEqual(local_destination(document, "/AGENTS.md", root), root / "AGENTS.md")
         self.assertIsNone(local_destination(document, "https://example.com/a", root))
         self.assertIsNone(local_destination(document, "#scope", root))
+
+    def test_windows_archive_links_are_checked_as_local_paths(self):
+        text = '[原件](E:/archive/original.png) [网页](https://example.com/a)'
+        self.assertEqual(markdown_targets(text), ['E:/archive/original.png'])
+        root = Path.cwd()
+        if root.drive:
+            self.assertEqual(
+                local_destination(root / 'README.md', markdown_targets(text)[0], root),
+                Path('E:/archive/original.png'),
+            )
 
 
 if __name__ == "__main__":
