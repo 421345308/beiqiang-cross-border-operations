@@ -29,7 +29,7 @@
 - 平台链接：[1601825021825](https://www.alibaba.com/product-detail/Wholesale-Solid-Spring-Summer-Breathable-Mesh_1601825021825.html)
 - 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601825021825/formal_get.json)；UTC 2026-10-21T14:48:55.048895+00:00。
 - 当前正式标题：Mesh Panel Lace-Up Walking Shoes with Layered Upper and Sculpted Sole Wholesale
-- 审核/展示：approved / Y；平台类目ID：201334413。
+- 审核/展示（2026-10-29 15:56 UTC+8）：modified / N；平台类目ID：201334413；公开呈现待验。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, owner_member, owner_member_display_name, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
 - SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。
 - 店内分组：Athletic & Running Style Shoes · 971467417；[平台分组回执](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%BA%97%E5%86%85%E5%88%86%E7%BB%84/971467417.json)。
@@ -47,6 +47,8 @@
   - 变更证据：[verification.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%95%86%E5%93%81/1601825021825/verification.json)
 
 ### BQ008-W1 / L1009 · 1601939625569
+
+> 2026-10-29当前增量：仅本W1现有300组详情首图新增选款文字与CTA，正式get的`image_text`已命中，状态`modified / N`。[唯一采购承接任务](../../BQ系列持续优化_2026-09-14/主推采购承接.md)维护本次状态与下一步，[最新本地正式回读](../../BQ系列持续优化_2026-09-14/采购承接执行/1601939625569/选款文字/after_get.json)补充下方10月21日快照；标题/亮点/原图库保持，后续详情编辑须保全新增文字并先取实时get/render。
 
 - 平台链接：[1601939625569](https://www.alibaba.com/product-detail/Wholesale-Men-s-Grey-Green-Breathable_1601939625569.html)
 - 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939625569/formal_get.json)；UTC 2026-10-21T14:49:55.490331+00:00。
