@@ -6,9 +6,15 @@
 
 2026-10-30负责人指出应复用OpenAI提供的云环境，故撤销“必须先提供Linux云主机”的判断。官方支持在网页/桌面创建并发布环境，从手机接续；任务可在本机休眠后运行。[官方云环境文档](https://learn.chatgpt.com/docs/environments/cloud-environments)。不需要先购买服务器，也不需要在托管任务里再嵌套一层Codex CLI登录。
 
-本账户实查：桌面“设置 → Codex云端 → 环境”显示暂无已保存环境；创建向导已识别GitHub连接，但显示“此连接没有可用的代码仓库”。进一步从向导“配置访问权限”进入官方ChatGPT Codex Connector安装授权页，已选择且仅选择`421345308/beiqiang-cross-border-operations`和`421345308/beiqiang-footwear-site`，未点击Install & Authorize。该连接器要求读取checks/commit statuses/metadata，读写actions/code/issues/pull requests/workflows，以及读取账号邮箱；已集中请求负责人确认新增访问。普通连接设置页加载失败，向导提供的GitHub官方安装页可用。环境计划Only me；尚未创建、发布或执行云任务。授权页面截图保存在本地`99_临时区/工作台应用验收/Codex云端仓库授权.png`，不进公开Git。
+2026-10-30已完成：负责人授权并安装官方ChatGPT Codex Connector，已回读确认仅选择`421345308/beiqiang-cross-border-operations`与`421345308/beiqiang-footwear-site`。基于两个仓库main创建的**贝强经营工作台**环境已发布，环境列表显示私有，配置为Only me。初始化使用GPT-6.1 Sol，运行于OpenAI托管环境，无需购置主机。
 
-接入验收分两步：先验证发布环境能用Sol读项目、完成一项任务并取得结果，再验证官网工作台能否通过官方方式提交和回收任务。[CLI参考](https://learn.chatgpt.com/docs/cli/reference)提供实验性`codex cloud exec/list/status/diff`能力，本机已有相关命令且只读list成功；仍需核新托管环境兼容性。CLI功能存在不等于已有供网站直接调用的个人套餐REST接口，当前未证实这一接口。Legacy Cloud与新Cloud不可混同，不能把Legacy环境选择器为空解释为账户无云能力。
+云端实测：网站构建、396项测试和lint通过，英文首页、目录与中文首页请求正常；经营工作台11项后端测试及6项备用执行器离线测试通过，实际读取7张任务。Node 24.19、Python 3.12；两个仓库无源码或锁文件改动。已保存安装脚本与启动说明；仅在被忽略位置补齐测试PDF副本和本地Node兼容配置。发布完成后UI确认已加载最新发布版本的草稿；尚未另起独立业务任务验证恢复。发布与授权截图、回读保存在`99_临时区/工作台应用验收/`，不进公开Git。
+
+当前使用：在官方ChatGPT/Codex的“设置 → Codex云端”可找到该环境，新云任务从已发布环境启动。环境只有软件包域名预设访问，未加入生产密钥或私有队列凭证。初始化不代表官网队列已连接，也不代表业务任务会自动执行。
+
+下一交付是发布环境恢复验证与官网任务结果回传。[CLI参考](https://learn.chatgpt.com/docs/cli/reference)提供实验性`codex cloud exec/list/status/diff`；本机0.164.0-alpha.11.1在环境发布后仍只列出All Environments，没有该环境，未提交CLI云任务。这是当前客户端实测限制，不能外推为新版Cloud永不支持CLI。官方文档尚未查到面向个人套餐、供自建网站直接创建新版Cloud任务的公开REST接口。
+
+可行方向：从官方Cloud启动有界任务，让任务通过限定官网域名和范围的身份读取既有队列、回传实际日志与提案；须先完成该链路的身份、网络与回读验收。网站自行唤醒任务、持续守护和源文件采纳尚未实现。正式Agents API需要独立Platform身份与计费，不与个人套餐Cloud身份混用。[Agents API快速入门](https://developers.openai.com/api/docs/guides/agents-api/quickstart)。
 
 网站私有后台、任务队列与资料快照继续复用；本目录`runner.py`是自托管备选，不是OpenAI托管环境的必装程序。只有托管路线实际不满足需求且负责人选定替代方案时，再考虑下述部署。
 
