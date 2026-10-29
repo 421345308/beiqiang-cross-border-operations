@@ -1,17 +1,27 @@
-# 云执行器准备
+# 云端执行接入与备用CLI执行器
 
 2026-10-29：已准备可运行的 Python 标准库队列客户端，**未部署到云、未调用模型、未购买资源**。配套云接口由网站工作台后端维护，本目录不保存第二份任务状态或业务资料。
 
-## 现有环境与最短选择
+## 当前首选：OpenAI托管Codex Cloud
+
+2026-10-30负责人指出应复用OpenAI提供的云环境，故撤销“必须先提供Linux云主机”的判断。官方支持在网页/桌面创建并发布环境，从手机接续；任务可在本机休眠后运行。[官方云环境文档](https://learn.chatgpt.com/docs/environments/cloud-environments)。不需要先购买服务器，也不需要在托管任务里再嵌套一层Codex CLI登录。
+
+本账户实查：桌面“设置 → Codex云端 → 环境”显示暂无已保存环境；创建向导已识别GitHub连接，但显示“此连接没有可用的代码仓库”。进一步从向导“配置访问权限”进入官方ChatGPT Codex Connector安装授权页，已选择且仅选择`421345308/beiqiang-cross-border-operations`和`421345308/beiqiang-footwear-site`，未点击Install & Authorize。该连接器要求读取checks/commit statuses/metadata，读写actions/code/issues/pull requests/workflows，以及读取账号邮箱；已集中请求负责人确认新增访问。普通连接设置页加载失败，向导提供的GitHub官方安装页可用。环境计划Only me；尚未创建、发布或执行云任务。授权页面截图保存在本地`99_临时区/工作台应用验收/Codex云端仓库授权.png`，不进公开Git。
+
+接入验收分两步：先验证发布环境能用Sol读项目、完成一项任务并取得结果，再验证官网工作台能否通过官方方式提交和回收任务。[CLI参考](https://learn.chatgpt.com/docs/cli/reference)提供实验性`codex cloud exec/list/status/diff`能力，本机已有相关命令且只读list成功；仍需核新托管环境兼容性。CLI功能存在不等于已有供网站直接调用的个人套餐REST接口，当前未证实这一接口。Legacy Cloud与新Cloud不可混同，不能把Legacy环境选择器为空解释为账户无云能力。
+
+网站私有后台、任务队列与资料快照继续复用；本目录`runner.py`是自托管备选，不是OpenAI托管环境的必装程序。只有托管路线实际不满足需求且负责人选定替代方案时，再考虑下述部署。
+
+## 已有网站与备用部署条件
 
 - 已有正式网站：EdgeOne Makers `beiqiang-footwear` / `makers-zsvtdpeh3qf1`，静态前端、Cloud Functions与Blob；源码独立仓库 `03_独立站/03_网站源码/`。目前没有可核的本项目常驻CPU云主机或已部署Agent执行器证据；本机没有可直接用于盘点CVM的 `tccli`，不能据此断言云账号没有实例。
 - 本机已安装EdgeOne CLI：`08_工具链/03_网站发布运行时/edgeone-cli-runtime/node_modules/.bin/edgeone.cmd`，已只读验证 `--help` / `makers --help`。网站 `.edgeone/project.json`确认上面的项目身份；未读取auth文件或`.env`。
 - GitHub型项目继续由main推送触发部署，不用上传型项目绕过现有发布。部署适配器 `edgeone-deploy/export-static.mjs`、静态构建 `scripts/export-edgeone-static.mjs`；正式发布核验 `npm run verify:deployments`（`scripts/verify-deployment-parity.mjs`）。配置以网站README的Production Deployment段为准：root `edgeone-deploy`、install `npm ci --prefix ..`、build `npm run build`、output `dist`。
 - 官方现提供同项目 `agents/` 运行时：单次默认5分钟、可设60分钟，空闲5分钟回收，会话最长6小时。它不是永久后台进程；需要持久任务和真实触发。普通Cloud Functions单次默认30秒、最大120秒，不宜承载不确定时长的CLI任务。[Agents文档](https://pages.edgeone.ai/document/agents)、[Cloud Functions限制](https://pages.edgeone.ai/document/cloud-functions)。本账号是否可用、部署根与Agents打包是否匹配，仍须实际预览验收。
 
-当前优先路线是**可信CPU云主机运行Codex CLI，负责人正常device-auth登录现有ChatGPT套餐**，承接网站私有队列。此处 `runner.py` 即该执行端；不是已配置的EdgeOne Agent。EdgeOne Agent加官方API仅作为将来明确选择的另一条路线，不默认切到API付费。
+备用路线是可信CPU云主机运行Codex CLI，通过正常device-auth登录现有ChatGPT套餐承接网站私有队列。此处`runner.py`仅服务该路线；不是已配置的OpenAI Cloud或EdgeOne Agent。EdgeOne Agent加官方API也是备选，不默认切到API付费。
 
-## 身份与费用缺口
+## 备用Runner的身份与费用条件
 
 网站本人登录、机器队列身份、模型调用身份是三件事。Runner需要：
 
