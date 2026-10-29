@@ -1,0 +1,269 @@
+{
+  "verifiedAt": "2026-10-29T04:53:26.083644+00:00",
+  "releaseId": "2026-10-29.1",
+  "websiteCommit": "293567dbe79c215978c7d5d56ed626355be4a523",
+  "deployment": {
+    "DeploymentId": "dp9p71rt03uj",
+    "Status": "Success",
+    "Code": 0,
+    "RepoCommitHash": "293567dbe79c215978c7d5d56ed626355be4a523",
+    "RepoCommitMsg": "Publish selected assortment and open catalogue browsing",
+    "CreatedOn": "2026-10-29T04:48:05.709Z",
+    "UsedInProd": true,
+    "PreviewUrl": "https://beiqiang-footwear-dp9p71rt03uj.edgeone.dev"
+  },
+  "origin": "https://www.beiqiang.online",
+  "scope": [
+    "EN/ZH home: three featured factory styles and cooperation routes",
+    "EN/ZH public selected catalogue and existing full catalogues; optional selection-advice form",
+    "BQ003/BQ005 identity corrected: visible links in EN/ZH, embedded data in DE/FR/ES"
+  ],
+  "localValidation": {
+    "testsPassed": 384,
+    "typecheck": true,
+    "catalogueCheck": true,
+    "buildAndStaticExport": true,
+    "lintErrors": 0,
+    "existingLintWarnings": 9,
+    "rebuiltPdfVisualComparison": {
+      "pages": 32,
+      "pixelDifferences": 0,
+      "textDifferences": 0
+    }
+  },
+  "productionBrowser": {
+    "origin": "https://www.beiqiang.online",
+    "checks": [
+      {
+        "path": "/",
+        "codes": [
+          "BQ008",
+          "BQ009",
+          "BQ031"
+        ],
+        "hero": "Everyday casual footwear.\nBuild your next range."
+      },
+      {
+        "path": "/line-sheet/",
+        "catalogueBeforeForm": true
+      },
+      {
+        "path": "/zh/",
+        "codes": [
+          "BQ008",
+          "BQ009",
+          "BQ031"
+        ],
+        "hero": "日常休闲鞋系列\n为下一批采购选款"
+      },
+      {
+        "path": "/zh/line-sheet/",
+        "catalogueBeforeForm": true
+      },
+      {
+        "path": "/products/bq003/",
+        "id": "10000043200726"
+      },
+      {
+        "path": "/products/bq005/",
+        "id": "1601815020244"
+      },
+      {
+        "action": "featured BQ008 added to local quote list"
+      },
+      {
+        "path": "/",
+        "mobileWidth": {
+          "viewport": 390,
+          "scroll": 390
+        }
+      },
+      {
+        "path": "/zh/",
+        "mobileWidth": {
+          "viewport": 390,
+          "scroll": 390
+        }
+      },
+      {
+        "path": "/line-sheet/",
+        "mobileWidth": {
+          "viewport": 390,
+          "scroll": 390
+        }
+      },
+      {
+        "path": "/zh/line-sheet/",
+        "mobileWidth": {
+          "viewport": 390,
+          "scroll": 390
+        }
+      }
+    ],
+    "pageErrors": [],
+    "selectedPdfBytes": 1868277,
+    "selectedPdfSha256": "55a35a37402dbdb8bb40b7386398803cb9db97a3a232de670b9b38eb349313bc",
+    "inquiriesSent": 0
+  },
+  "deploymentParity": {
+    "expected": {
+      "releaseId": "2026-10-29.1",
+      "releasedAt": "2026-10-29T04:35:07.838887+00:00",
+      "productCount": 69,
+      "publicLanguages": [
+        "en",
+        "zh",
+        "de",
+        "fr",
+        "es"
+      ],
+      "lineSheetPages": 16,
+      "factoryVideo": {
+        "durationSeconds": 180,
+        "narrationLanguages": [
+          "en"
+        ],
+        "captionLanguages": [
+          "en",
+          "zh"
+        ],
+        "stillCount": 9
+      },
+      "publicOrigin": "https://www.beiqiang.online"
+    },
+    "results": [
+      {
+        "origin": "https://www.beiqiang.online",
+        "ok": true,
+        "expectedReleaseId": "2026-10-29.1",
+        "releaseStatus": 200,
+        "releaseError": null,
+        "releaseId": "2026-10-29.1",
+        "releaseMatches": true,
+        "productCountMatches": true,
+        "factoryVideoMatches": true,
+        "media": [
+          {
+            "path": "/videos/beiqiang-factory-tour.mp4",
+            "status": 206,
+            "contentType": "video/mp4",
+            "ok": true
+          },
+          {
+            "path": "/videos/beiqiang-factory-tour.en.vtt",
+            "status": 206,
+            "contentType": "text/vtt; charset=utf-8",
+            "ok": true
+          },
+          {
+            "path": "/videos/beiqiang-factory-tour.zh.vtt",
+            "status": 206,
+            "contentType": "text/vtt; charset=utf-8",
+            "ok": true
+          }
+        ]
+      }
+    ]
+  },
+  "productLinks": [
+    {
+      "path": "/products/bq003/",
+      "status": 200,
+      "alibabaProductId": "10000043200726",
+      "correctMapping": true,
+      "verificationMethod": "visible Alibaba product link"
+    },
+    {
+      "path": "/products/bq005/",
+      "status": 200,
+      "alibabaProductId": "1601815020244",
+      "correctMapping": true,
+      "verificationMethod": "visible Alibaba product link"
+    },
+    {
+      "path": "/zh/products/bq003/",
+      "status": 200,
+      "alibabaProductId": "10000043200726",
+      "correctMapping": true,
+      "verificationMethod": "visible Alibaba product link"
+    },
+    {
+      "path": "/zh/products/bq005/",
+      "status": 200,
+      "alibabaProductId": "1601815020244",
+      "correctMapping": true,
+      "verificationMethod": "visible Alibaba product link"
+    },
+    {
+      "path": "/de/products/bq003/",
+      "status": 200,
+      "alibabaProductId": "10000043200726",
+      "correctMapping": true,
+      "verificationMethod": "embedded product data only; this language has no Alibaba button"
+    },
+    {
+      "path": "/de/products/bq005/",
+      "status": 200,
+      "alibabaProductId": "1601815020244",
+      "correctMapping": true,
+      "verificationMethod": "embedded product data only; this language has no Alibaba button"
+    },
+    {
+      "path": "/fr/products/bq003/",
+      "status": 200,
+      "alibabaProductId": "10000043200726",
+      "correctMapping": true,
+      "verificationMethod": "embedded product data only; this language has no Alibaba button"
+    },
+    {
+      "path": "/fr/products/bq005/",
+      "status": 200,
+      "alibabaProductId": "1601815020244",
+      "correctMapping": true,
+      "verificationMethod": "embedded product data only; this language has no Alibaba button"
+    },
+    {
+      "path": "/es/products/bq003/",
+      "status": 200,
+      "alibabaProductId": "10000043200726",
+      "correctMapping": true,
+      "verificationMethod": "embedded product data only; this language has no Alibaba button"
+    },
+    {
+      "path": "/es/products/bq005/",
+      "status": 200,
+      "alibabaProductId": "1601815020244",
+      "correctMapping": true,
+      "verificationMethod": "embedded product data only; this language has no Alibaba button"
+    }
+  ],
+  "pdfs": [
+    {
+      "path": "/downloads/beiqiang-selected-casual-footwear.pdf",
+      "status": 200,
+      "bytes": 1868277,
+      "sha256": "55a35a37402dbdb8bb40b7386398803cb9db97a3a232de670b9b38eb349313bc",
+      "matchesLocal": true
+    },
+    {
+      "path": "/downloads/beiqiang-footwear-line-sheet-2026.pdf",
+      "status": 200,
+      "bytes": 7316896,
+      "sha256": "85ad4724c26244738289de514aebcccc26eaa576a6279fcbf1751acec672e115",
+      "matchesLocal": true
+    },
+    {
+      "path": "/downloads/beiqiang-footwear-line-sheet-zh-2026.pdf",
+      "status": 200,
+      "bytes": 7375923,
+      "sha256": "cb4a576d5a8f2d70ec9dc82ece5ba2b0189fd95725c022482f59da9a89f2b31b",
+      "matchesLocal": true
+    }
+  ],
+  "visualReview": [
+    "Desktop EN/ZH home and catalogue",
+    "390px home and catalogue",
+    "Three featured cards"
+  ],
+  "businessBoundary": "Presentation is deployed; no customer messages or production inquiry submissions were made. Sample terms, Alibaba content alignment and buyer validation remain in stage A. No conversion improvement is claimed."
+}
