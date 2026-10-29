@@ -65,12 +65,12 @@
 
 ### BQ009-W1 / L1026 · 1601939675350
 
-> 2026-10-29当前增量：仅本W1标题已提交并正式get命中，状态`modified / N`；详情选款文字尚未提交。[唯一采购承接任务](../../BQ系列持续优化_2026-09-14/主推采购承接.md)维护本次状态与下一步，[最新本地正式回读](../../BQ系列持续优化_2026-09-14/采购承接执行/1601939675350/after_get.json)优先于下方10月21日价格快照。旧标题不得作为后续更新输入；先取实时get/render，不重放本次请求。
+> 2026-10-29最新增量：本W1批准后正式及公开标题比最初提交稿多Lightweight Breathable，差异来源未核，保持实际值。本轮现有300组新增选款文字/CTA，正式get命中、`modified / N`待审核；[唯一采购承接任务](../../BQ系列持续优化_2026-09-14/主推采购承接.md)和[最新回读](../../BQ系列持续优化_2026-09-14/采购承接执行/续验_1620/1601939675350/选款文字/after_get.json)优先于下方旧快照，不以旧标题回写。
 
 - 平台链接：[1601939675350](https://www.alibaba.com/product-detail/Wholesale-Men-s-Light-Weight-Casual_1601939675350.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939675350/formal_get.json)；UTC 2026-10-21T14:48:52.824500+00:00。
-- 当前正式标题（2026-10-29 15:56 UTC+8的get；待审核）：Wholesale Textile Lace-Up Casual Sneakers L1026 for Everyday Walking
-- 审核/展示（2026-10-29 15:56 UTC+8）：modified / N；平台类目ID：201334413；公开呈现待验。
+- 最新正式回读：[完整商品字段](../../BQ系列持续优化_2026-09-14/采购承接执行/续验_1620/1601939675350/选款文字/after_get.json)；2026-10-29本轮增量；下方其他材料不代替该最新状态。
+- 当前正式标题（2026-10-29批准后get及公开页）：Wholesale Lightweight Breathable Textile Lace-Up Casual Sneakers L1026 for Everyday Walking
+- 审核/展示（2026-10-29 16:44:03 UTC+8正式get）：modified / N；平台类目ID：201334413；仅本轮新增详情文字待审核、Schema及公开核验；标题此前已批准且正常买家页可见。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, owner_member, owner_member_display_name, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
 - SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。
 - 店内分组：Athletic & Running Style Shoes · 971467417；[平台分组回执](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%BA%97%E5%86%85%E5%88%86%E7%BB%84/971467417.json)。
@@ -81,7 +81,7 @@
   - M4：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/%E5%85%B1%E4%BA%AB%E7%B4%A0%E6%9D%90/%E5%85%B1%E4%BA%AB%E7%B4%A0%E6%9D%90_13987d2f18fb1e32.png) · 1254×1254
   - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ009/BQ009_d0282cdd0c612c55.jpg) · 1000×1000
   - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ009/BQ009_74fd70dd4f830068.jpg) · 1000×1000
-- 本地同步状态：`FORMAL_PRICE_PASS_API`。
+- 本地同步状态：`DETAIL_SUBMITTED_GET_MATCH_PENDING_REVIEW`；本次范围见上方唯一采购承接任务。
 - 本轮优化：`FORMAL_FIELDS_SCORE_PASS`；Image/source colour audit continues independently. Do not replay historical copy.
   - 变更证据：[prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%95%86%E5%93%81/1601939675350/prepared.json)
   - 变更证据：[update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%95%86%E5%93%81/1601939675350/update_receipt.json)

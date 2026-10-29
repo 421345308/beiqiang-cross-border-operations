@@ -48,12 +48,12 @@
 
 ### BQ008-W1 / L1009 · 1601939625569
 
-> 2026-10-29当前增量：仅本W1现有300组详情首图新增选款文字与CTA，正式get的`image_text`已命中，状态`modified / N`。[唯一采购承接任务](../../BQ系列持续优化_2026-09-14/主推采购承接.md)维护本次状态与下一步，[最新本地正式回读](../../BQ系列持续优化_2026-09-14/采购承接执行/1601939625569/选款文字/after_get.json)补充下方10月21日快照；标题/亮点/原图库保持，后续详情编辑须保全新增文字并先取实时get/render。
+> 2026-10-29最新增量：本W1选款文字与CTA已`approved / Y`，get/render逐字命中、正常买家公开页完整文字可见，实际5.00。[唯一采购承接任务](../../BQ系列持续优化_2026-09-14/主推采购承接.md)和[最新回读](../../BQ系列持续优化_2026-09-14/采购承接执行/续验_1620/1601939625569/after_get.json)优先于下方10月21日快照；后续详情编辑须保全新增文字并先取实时get/render。
 
 - 平台链接：[1601939625569](https://www.alibaba.com/product-detail/Wholesale-Men-s-Grey-Green-Breathable_1601939625569.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939625569/formal_get.json)；UTC 2026-10-21T14:49:55.490331+00:00。
+- 最新正式回读：[完整商品字段](../../BQ系列持续优化_2026-09-14/采购承接执行/续验_1620/1601939625569/after_get.json)；2026-10-29本轮增量；下方其他材料不代替该最新状态。
 - 当前正式标题：Mesh Panel Lace-Up Walking Shoes with Layered Upper and Sculpted Sole Wholesale
-- 审核/展示：approved / Y；平台类目ID：201334413。
+- 审核/展示（2026-10-29 16:44:01 UTC+8正式get）：approved / Y；平台类目ID：201334413；本次选款文字正式、Schema及公开验收通过。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, owner_member, owner_member_display_name, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
 - SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。
 - 店内分组：Athletic & Running Style Shoes · 971467417；[平台分组回执](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%BA%97%E5%86%85%E5%88%86%E7%BB%84/971467417.json)。
@@ -64,7 +64,7 @@
   - M4：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ008/BQ008_bd212c1ae36a8bd3.jpg) · 1000×1000
   - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ008/BQ008_50d88749af837ffc.jpg) · 1000×1000
   - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/%E5%85%B1%E4%BA%AB%E7%B4%A0%E6%9D%90/%E5%85%B1%E4%BA%AB%E7%B4%A0%E6%9D%90_13987d2f18fb1e32.png) · 1254×1254
-- 本地同步状态：`FORMAL_PRICE_PASS_API`。
+- 本地同步状态：`TARGET_FORMAL_SCHEMA_PUBLIC_PASS`；本次范围见上方唯一采购承接任务。
 - 本轮优化：`FORMAL_FIELDS_SCORE_PASS`；Image/source colour audit continues independently. Do not replay historical copy.
   - 变更证据：[prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%95%86%E5%93%81/1601939625569/prepared.json)
   - 变更证据：[update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%95%86%E5%93%81/1601939625569/update_receipt.json)
