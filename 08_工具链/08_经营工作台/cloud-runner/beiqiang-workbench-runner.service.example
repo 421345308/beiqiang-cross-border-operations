@@ -1,0 +1,21 @@
+# Preparation template only. Replace absolute path placeholders before use.
+# Install as the same unprivileged Linux user who completes Codex device login.
+[Unit]
+Description=Beiqiang private workbench outbound runner
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/ABSOLUTE/PATH/TO/cloud-runner
+EnvironmentFile=%h/.config/beiqiang-workbench/runner.env
+Environment=PATH=/ABSOLUTE/PATH/TO/CODEX_BIN:/usr/local/bin:/usr/bin:/bin
+ExecStart=/usr/bin/python3 -u /ABSOLUTE/PATH/TO/cloud-runner/runner.py
+UMask=0077
+KillMode=control-group
+TimeoutStopSec=30
+Restart=no
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=default.target
