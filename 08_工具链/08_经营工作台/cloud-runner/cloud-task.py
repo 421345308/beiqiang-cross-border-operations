@@ -12,7 +12,7 @@ import tempfile
 import time
 from urllib.error import HTTPError, URLError
 
-from runner import Queue, SCHEMA, validate_job, validate_result
+from runner import Queue, result_schema, validate_job, validate_result
 
 DEFAULT_URL = 'https://www.beiqiang.online/api/workbench-runner'
 STATE_DIR = Path(__file__).resolve().parent.parent / '.local' / 'cloud-task'
@@ -91,11 +91,16 @@ def sanitize(value, secret, lease=''):
 
 def canonical_result(result):
     # Match server validateProposal: only before/after CRLF and CR are normalized.
-    return {'summary': result['summary'], 'next_steps': result['next_steps'],
+    value = {'summary': result['summary'], 'next_steps': result['next_steps'],
             'changes': [dict(path=change['path'], reason=change['reason'],
                              before=change['before'].replace('\r\n', '\n').replace('\r', '\n'),
                              after=change['after'].replace('\r\n', '\n').replace('\r', '\n'))
                         for change in result['changes']]}
+    if 'fields' in result:
+        value['summary'] = result['summary'].strip()
+        value['next_steps'] = [item.strip() for item in result['next_steps']]
+        value['fields'] = {key: item.strip() for key, item in result['fields'].items()}
+    return value
 
 
 def perform(args, queue, root, secret):
@@ -128,10 +133,25 @@ def perform(args, queue, root, secret):
         write_state(path, state)
         return sanitize({'run_id': args.run_id, 'status': 'claimed', 'policy': POLICY,
                          'source': job.get('source'), 'instruction': job['instruction'],
-                         'document': job.get('document'), 'result_schema': SCHEMA},
+                         'document': job.get('document'), 'kind': job.get('kind'),
+                         'inquiry_context': job.get('inquiry_context'), 'result_schema': result_schema(job)},
                         secret, job['lease_token'])
     state = read_state(path, args.run_id)
     if args.command == 'status':
+        if getattr(args, 'remote', False):
+            response = queue.call('status', run_id=args.run_id)
+            run = response.get('run', {})
+            if run.get('id') != args.run_id:
+                raise ValueError('Server status identity mismatch')
+            if state.get('submitted_result') is not None and run.get('status') in ('awaiting_review', 'accepted', 'rejected'):
+                if run.get('result') != state['submitted_result']:
+                    raise ValueError('Server proposal readback mismatch')
+                state.update(status='finished')
+                state.pop('job', None)
+                state.pop('submitted_result', None)
+                write_state(path, state)
+            return {**public_status(state), 'server_status': run.get('status'),
+                    'needs_owner_cancel': state['status'] == 'claim_pending' and run.get('status') in ('running', 'interrupted')}
         return public_status(state)
     job = active_job(state)
     identity = {'run_id': args.run_id, 'lease_token': job['lease_token']}
@@ -154,6 +174,8 @@ def perform(args, queue, root, secret):
             if result_path.stat().st_size > 1000000:
                 raise ValueError('Result file exceeds supported size')
             result = validate_result(job, json.loads(result_path.read_text(encoding='utf-8')))
+            state['submitted_result'] = canonical_result(result)
+            write_state(path, state)
             body = dict(identity, result=result)
             if args.session_id:
                 body['session_id'] = args.session_id
@@ -167,12 +189,13 @@ def perform(args, queue, root, secret):
             raise ValueError('Server did not confirm task report; local task remains active')
         expected_result = canonical_result(result) if args.command == 'complete' else None
         if args.command == 'complete' and any(run.get(key) != expected_result[key]
-                                             for key in ('summary', 'changes', 'next_steps')):
+                                             for key in expected_result):
             # Some deployments return the proposal nested under result.
             if run.get('result') != expected_result:
                 raise ValueError('Server proposal readback mismatch; local task remains active')
         state['status'] = 'finished' if args.command == 'complete' else 'failed'
         state.pop('job', None)
+        state.pop('submitted_result', None)
         write_state(path, state)
     return public_status(state)
 
@@ -183,6 +206,8 @@ def parser():
     for name in ('claim', 'heartbeat', 'event', 'complete', 'fail', 'status'):
         command = commands.add_parser(name)
         command.add_argument('--run-id', required=True)
+        if name == 'status':
+            command.add_argument('--remote', action='store_true', help='Read back server state; never replay delivery')
         if name in ('event', 'fail'):
             command.add_argument('--message', required=True)
         if name == 'complete':
@@ -195,7 +220,7 @@ def main(argv=None):
     args = parser().parse_args(argv)
     secret = ''
     try:
-        if args.command == 'status':
+        if args.command == 'status' and not args.remote:
             value = public_status(read_state(state_path(STATE_DIR, args.run_id), args.run_id))
         else:
             secret = os.environ.get('WORKBENCH_RUNNER_SECRET', '')
@@ -227,7 +252,7 @@ def main(argv=None):
                              'Result ', 'Server ', 'Set WORKBENCH_', 'Cross-source ',
                              'Replacement must ', 'Tasks without ', 'Missing document snapshot',
                              'Document source or hash mismatch', 'Job exceeds ', 'Invalid result',
-                             'Invalid next steps', 'Invalid changes', 'Invalid change',
+                             'Invalid next steps', 'Invalid changes', 'Invalid change', 'Invalid inquiry',
                              'Renewed lease is expired', 'Queue endpoint must be HTTPS')
             if message.startswith(safe_prefixes) and (not secret or secret not in message):
                 detail += ': ' + message
