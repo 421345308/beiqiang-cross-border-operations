@@ -1,0 +1,49 @@
+{
+  "observation_date": "2026-10-31",
+  "capture_method": "正常Chrome页面；CUA读取DOM/无障碍树并实看截图。以下为工具返回的公开页面原文摘录，按候选转存；不是API销量报表，也未保存完整192卡原件。",
+  "site_context": {"delivery_country": "CN", "language": "English", "currency": "USD", "sort": "default image relevance", "pages_per_input": 2, "cards_per_page": 48},
+  "input_images": {
+    "BQ008": "04_客户开发/06_报价与产品册/full_catalog_2026-10-04/source_images/BQ008.jpg",
+    "BQ009": "04_客户开发/06_报价与产品册/full_catalog_2026-10-04/source_images/BQ009.jpg"
+  },
+  "search_images_after_upload": {
+    "BQ008": "https://icbu-picture-sh.oss-cn-shanghai.aliyuncs.com/icbuimgsearch/imageBase64_ffa6c76ed5c54a659d19c570cbe3dd54.jpeg",
+    "BQ009": "https://icbu-picture-sh.oss-cn-shanghai.aliyuncs.com/icbuimgsearch/imageBase64_51d528bdcb984265b81f98e29bc2203f.jpeg"
+  },
+  "observations": [
+    {
+      "product_id": "1601814259749",
+      "url": "https://www.alibaba.com/product-detail/2026-Breathable-Casual-Lightweight-Soft-Soled_1601814259749.html",
+      "search_card_text": "2026 Breathable Casual Lightweight Soft Soled Non-slip Running Shoes Sneakers\nReorder rate 29%\n$9.96-17.60\nMin. order: 2 pairs\n8 sold\nShenzhen Lexinchen Trading Co., Ltd.\n1 yr\nCN\n4.4/5.0\n(18)\nChat now",
+      "detail_excerpts": ["No reviews yet 8 sold", "$17.60", "2-11 pairs", "$15.36", "12-119 pairs", "$9.96", "≥120 pairs", "Black grey", "Black", "Grey green", "Silver black", "Outsole Material", "Rubber", "Midsole Material", "EVA", "Closure Type", "Slip-On"],
+      "visual_judgment": "BQ008相同鞋型；详情和变体实看。材料与闭合为竞品填报，不迁入贝强。"
+    },
+    {
+      "product_id": "1601819601764",
+      "url": "https://www.alibaba.com/product-detail/2026-Unisex-Marathon-Running-Shoes-with_1601819601764.html",
+      "search_card_text": "2026 Unisex Marathon Running Shoes with High Rebound Cushioning, Lightweight and Non-slip, Shock-absorbing and Breathable\nReorder rate 29%\n$9.96-17.60\nMin. order: 2 pairs\n24 sold\nShenzhen Lexinchen Trading Co., Ltd.\n1 yr\nCN\n4.4/5.0\n(18)\nChat now",
+      "detail_excerpts": ["2026 Unisex Marathon Running Shoes with High Rebound Cushioning, Lightweight and Non-slip, Shock-absorbing and Breathable", "5.0 ( 1  review )", "25 sold", "Green", "Black", "Black white", "Orange", "No new ratings for this product in the past year. Showing previous ratings and reviews instead."],
+      "visual_judgment": "BQ009相同鞋型；薄荷绿双鞋图与四色变体实看。搜索卡24/详情25分别记录，差异原因未知。"
+    },
+    {
+      "product_id": "1601201618138",
+      "url": "https://www.alibaba.com/product-detail/Men-s-Lightweight-Low-Top-Mesh_1601201618138.html",
+      "detail_excerpts": ["Men's Lightweight Low Top Mesh Breathable Running Shoes Height Increasing Thick Soled Non-Slip Sports Shoes Men's Sneakers", "232 sold", "Henan Huaying Shoes Co., Ltd.", "Model Number", "HY-XH-XV-117"],
+      "visual_judgment": "不同款；黑鞋侧面标形、白底粗斜槽不同于BQ009。"
+    },
+    {
+      "product_id": "1601766149243",
+      "url": "https://www.alibaba.com/product-detail/Factory-Custom-OEM-Lace-Up-Shock_1601766149243.html",
+      "detail_excerpts": ["Factory Custom OEM Lace-Up Shock Absorbing Mesh Upper Lightweight Comfort Breathable Spring/Autumn/Winter Running Shoes", "No reviews yet 1260 sold", "QUANZHOU CITY DAYIN SPORTS PRODUCTS CO.,LTD", "$13.56", "600-799 pairs", "Model Number", "D-HL-003"],
+      "visual_judgment": "不同款；白鞋侧面标形及点状/分层底墙不同于BQ009。"
+    },
+    {
+      "product_id": "1601867473161",
+      "url": "https://www.alibaba.com/product-detail/Men-s-Ultra-Light-Summer-Running_1601867473161.html",
+      "detail_excerpts": ["Men's Ultra-Light Summer Running Shoes Mesh Breathable Anti-Slip Shock Absorption Elastic Sole Lace-Up Sport Casual Sneakers", "No reviews yet 51 sold", "Quanzhou Zhengsen Footwear Industry Co., Ltd.", "Model Number", "2252"],
+      "visual_judgment": "不同款；上脚灰鞋三角覆片及较薄底型不同于BQ008。"
+    }
+  ],
+  "sales_count_unit": "页面只写sold，计数单位与统计周期未披露；不换算为订单/月销量。",
+  "platform_changes": "none"
+}
