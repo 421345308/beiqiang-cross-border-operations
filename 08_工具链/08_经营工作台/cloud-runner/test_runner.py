@@ -37,6 +37,21 @@ class RunnerTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             runner.validate_result(self.job,{'summary':'test','changes':[{}],'next_steps':[]})
 
+    def test_combined_owner_control_preserves_maximum_user_instruction(self):
+        user = 'u' * 12000
+        control = '\n\n负责人当前执行要求（版本 123；只在既有权限内执行）：\n' + '\n\n'.join(label + '：\n' + 'c' * 4000 for label in ('当前重点', '执行优先级', '补充要求'))
+        self.job['instruction'] = user + control
+        self.assertGreater(len(self.job['instruction']), 24000)
+        self.assertLess(len(self.job['instruction']), runner.MAX_JOB_INSTRUCTION)
+        self.assertGreater(runner.validate_job(self.job), 0)
+        self.assertTrue(self.job['instruction'].startswith(user))
+        for source_free in (False, True):
+            if source_free:
+                self.job.update(source=None, document=None)
+            self.job['instruction'] = 'x' * (runner.MAX_JOB_INSTRUCTION + 1)
+            with self.assertRaises(ValueError):
+                runner.validate_job(self.job)
+
     def test_queue_endpoint_keeps_secret_off_urls(self):
         for url in ('http://host/api','https://user:secret@host/api','https://host/api?key=x'):
             with self.assertRaises(ValueError):runner.Queue(url,'fake-test-token')

@@ -16,6 +16,10 @@ from urllib.parse import urlsplit
 from urllib.request import Request
 
 MODEL = 'gpt-6.1-sol'
+# API user input <=12000 plus three owner-control fields <=4000 each,
+# with labels/version framing (<1000). This is the combined envelope, not
+# permission to increase the API's individual user-input limit.
+MAX_JOB_INSTRUCTION = 25000
 SCHEMA = {'type':'object','additionalProperties':False,'required':['summary','changes','next_steps'],
           'properties':{'summary':{'type':'string'},'changes':{'type':'array','items':{
               'type':'object','additionalProperties':False,'required':['path','before','after','reason'],
@@ -28,12 +32,14 @@ def validate_job(job):
         if not isinstance(job.get(key), str) or not job[key]:
             raise ValueError('Invalid job field: '+key)
     deadline=datetime.fromisoformat(job['lease_expires_at'].replace('Z','+00:00')).timestamp()
+    if len(job['instruction']) > MAX_JOB_INSTRUCTION:
+        raise ValueError('Job exceeds supported input size')
     if not job.get('source') and doc is None:return deadline
     if not isinstance(doc,dict) or not isinstance(doc.get('path'), str) or not isinstance(doc.get('content'), str):
         raise ValueError('Missing document snapshot')
     if doc['path'] != job['source'] or hashlib.sha256(doc['content'].encode()).hexdigest() != doc['hash']:
         raise ValueError('Document source or hash mismatch')
-    if len(doc['content']) > 400000 or len(job['instruction']) > 12000:
+    if len(doc['content']) > 400000:
         raise ValueError('Job exceeds supported input size')
     return deadline
 
