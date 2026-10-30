@@ -21,14 +21,14 @@ python3 cloud-task.py claim --run-id <指定ID>
 python3 cloud-task.py event --run-id <指定ID> --message "实际进展"
 python3 cloud-task.py heartbeat --run-id <指定ID>
 python3 cloud-task.py complete --run-id <指定ID> --result <私有JSON文件>
-python3 cloud-task.py status --run-id <指定ID>
+python3 cloud-task.py status --run-id <指定ID> --remote
 ```
 
-失败时用`fail --run-id <指定ID> --message "实际原因"`。结果文件在Linux使用0600权限；客户端私有状态保存在被忽略的`.local/cloud-task/`，不输出密钥或租约。保留官方代理及证书配置，网络密钥可为官方代理占位值，不要求原始密钥出现在进程中。手动模式必须指定任务，不抢其他排队任务；已领取任务按真实租约展示，不显示常驻在线。网站仍为snapshot_review，结果只进入待审，源文件采纳尚未接通。
+失败时用`fail --run-id <指定ID> --message "实际原因"`。结果文件在Linux使用0600权限；客户端私有状态保存在被忽略的`.local/cloud-task/`，不输出密钥或租约。保留官方代理及证书配置，网络密钥可为官方代理占位值，不要求原始密钥出现在进程中。手动模式必须指定任务，不抢其他排队任务；已领取任务按真实租约展示，不显示常驻在线。项目文档仍为snapshot_review，提案先进入待审，再由项目对话回写；网站询盘已有独立的官网审阅保存路径，见下节。
 
 验收：网站399项测试、类型检查、构建和lint通过（9项既有图片提示）；客户端及备用执行器合计25项Linux测试通过。正式域名与部署预览版本、视频及字幕一致。本机对正式网站完成指定领取、进度、续租、结果回传，私有回读为awaiting_review；首次紧接完成的事件列表未满足回读断言，随后只读复核确认原进度事件和结果均已保存，没有重新执行任务。证据为`99_临时区/工作台应用验收/manual-cloud-protocol-readback.json`。此项是本机协议验收，model=protocol-test、无源文件修改；当时尚未验证实际OpenAI Cloud到官网执行，后续实际验收见下节。私有队列另留一张连接验收任务，不改原七项经营任务。
 
-当前客户端的实验性`codex cloud`选择器尚未显示该新版环境，未提交CLI云任务；这不是永久能力判断。面向个人套餐、供自建网站直接创建新版Cloud任务的公开REST接口尚未核实。网站自行唤醒、持续守护及源文件采纳均未实现。正式Agents API需要独立Platform身份与计费，不与个人套餐Cloud混用。[Agents API快速入门](https://developers.openai.com/api/docs/guides/agents-api/quickstart)。
+当前客户端的实验性`codex cloud`选择器尚未显示该新版环境，未提交CLI云任务；这不是永久能力判断。面向个人套餐、供自建网站直接创建新版Cloud任务的公开REST接口尚未核实。网站自行唤醒与持续守护未实现；本地文档回写及网站询盘审阅保存分别沿下文已验证路径。正式Agents API需要独立Platform身份与计费，不与个人套餐Cloud混用。[Agents API快速入门](https://developers.openai.com/api/docs/guides/agents-api/quickstart)。
 
 ### 原生Sol实际回传验收（2026-10-30）
 
@@ -41,6 +41,16 @@ python3 cloud-task.py status --run-id <指定ID>
 网站私有后台、任务队列与资料快照继续复用；本目录`runner.py`是自托管备选，不是OpenAI托管环境的必装程序。只有托管路线实际不满足需求且负责人选定替代方案时，再考虑下述部署。
 
 ## 云端提案经本地审阅回写
+
+### 网站询盘类型
+
+2026-10-30客户端提交 `8d14bee` 增加 `kind=inquiry_review`，沿同一 `cloud-task.py` claim/event/heartbeat/complete协议。领取结果含安全字段投影 `inquiry_context`、原询盘hash和处理版本；只允许输出 `summary`、`changes=[]`、`next_steps` 及 `fields`（internal_note、next_action、handling_status）。结果字段不能写客户原提交或发邮件；人工采纳只在网站询盘页完成。原文档任务继续既有单片段提案协议。
+
+`status --run-id <ID> --remote` 会实际回读网站，区别于默认本地status；complete应答丢失时，按本地已提交结果与服务端结果比对，匹配才确认finished，不重交。领取应答丢失且没有租约时，不猜令牌或再次抢任务，远端状态提示由负责人取消原运行再新建。备用 `runner.py --run-id <ID>` 可在已正常登录Codex的执行机上仅执行指定任务一次；这不代表已部署常驻执行器。
+
+51项Linux客户端与回写工具测试通过，包含询盘字段范围、来源绑定、结果规范化及提交丢回包后的远端核对。真实原生Sol运行 `816596ccdffe04dcd9ddc1236b19a9b9` 已对明确标识的内部测试询盘完成指定领取、进度、续租、结构化提交及 `status --remote` 核对，服务端确认awaiting_review。沿原配置会话 `01a18bc8-b6c4-7241-bd42-4104547c4025` 使用更新客户端，未另调模型。统筹在正式网站审阅并采纳后，独立回读确认处理版本0→1、决定accept、处理字段与模型方案一致，客户原记录hash不变；未向测试地址或客户发送消息。原run保存模型结果，审阅状态由同一询盘的决定投影，不再给run复制第二份决定。证据见 `99_临时区/工作台应用验收/inquiry-agent-production-readback.json`。
+
+### 文档类型保持原回写路径
 
 官网“导出提案，交项目对话审阅回写”导出v1 JSON，保留服务器的`source/source_hash/source_version`、运行编号和实际修改，不包含执行凭证或完整私有日志。没有来源或没有修改项的结果仅供阅读；旧导出包缺少原文依据时不能直接应用。
 
@@ -97,7 +107,7 @@ python runner.py
 
 采用网站后端约定的 `POST /api/workbench-runner`，Bearer机器密钥；action为 `heartbeat/claim/event/complete/fail`。claim返回 `job`（空则无任务），包含id、source、instruction、lease_token、lease_expires_at、document `{path,content,hash,version}`。任务文档是明确导入云端的快照，不根据source读本地路径。全局heartbeat记录在线，执行时每30秒带run_id和lease_token续10分钟租约；服务端拒绝续租即停止本次CLI。任务过期后端应标interrupted，不能自动重领重跑。
 
-只将选中文本通过stdin送入独立临时目录中的只读CLI，禁用连接器、插件、shell、浏览器和图片生成等能力；不执行队列下发的命令。机器密钥不进入子进程环境。CLI生成的事件回传为私有日志，结构化提案须满足快照hash、单文件和精确唯一片段校验。最终只提交待审提案；网站后端当前为snapshot_review，尚不允许采纳原文改动，后续须接通原业务源同步再开放回写。
+只将选中文本通过stdin送入独立临时目录中的只读CLI，禁用连接器、插件、shell、浏览器和图片生成等能力；不执行队列下发的命令。机器密钥不进入子进程环境。CLI生成的事件回传为私有日志，结构化提案须满足快照hash、单文件和精确唯一片段校验。最终只提交待审提案；文档类型须经项目对话审阅回写本地原文，询盘类型经官网审阅保存内部处理字段，执行器本身不采纳结果。
 
 网络/租约/执行或上报失败会停止runner，不自动重新执行，也不把发送成功当作业务操作完成。重启应先核云端原记录状态。当前无CLI resume请求入口；session_id只作真实执行追溯，不承诺跨主机恢复。
 
