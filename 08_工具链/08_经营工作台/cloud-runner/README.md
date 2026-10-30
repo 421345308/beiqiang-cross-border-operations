@@ -1,6 +1,6 @@
 # 云端执行接入与备用CLI执行器
 
-2026-10-29：已准备可运行的 Python 标准库队列客户端，**未部署到云、未调用模型、未购买资源**。配套云接口由网站工作台后端维护，本目录不保存第二份任务状态或业务资料。
+2026-10-30：原生Cloud任务客户端已接入正式网站协议验收，实际Cloud配对待完成；自托管CLI执行器仍为备用，未部署或购买资源。配套云接口由网站工作台后端维护，本目录不保存第二份任务状态或业务资料。
 
 ## 当前首选：OpenAI托管Codex Cloud
 
@@ -10,18 +10,30 @@
 
 云端实测：网站构建、396项测试和lint通过，英文首页、目录与中文首页请求正常；经营工作台11项后端测试及6项备用执行器离线测试通过，实际读取7张任务。Node 24.19、Python 3.12；两个仓库无源码或锁文件改动。已保存安装脚本与启动说明；仅在被忽略位置补齐测试PDF副本和本地Node兼容配置。发布完成后UI确认已加载最新发布版本的草稿；尚未另起独立业务任务验证恢复。发布与授权截图、回读保存在`99_临时区/工作台应用验收/`，不进公开Git。
 
-当前使用：在官方ChatGPT/Codex的“设置 → Codex云端”可找到该环境，新云任务从已发布环境启动。环境只有软件包域名预设访问，未加入生产密钥或私有队列凭证。初始化不代表官网队列已连接，也不代表业务任务会自动执行。
+当前使用：在官方ChatGPT/Codex的“设置 → Codex云端”找到已发布环境。2026-10-30官网已部署手动Cloud模式（版本2026-10-30.1，部署dpveh5n7o793），排队任务可复制含指定run_id的云端执行指令。网站已配置专用队列身份；**Cloud网络密钥尚待负责人填写并保存**，不能把网站配置成功记为Cloud已连接。
 
-下一交付是发布环境恢复验证与官网任务结果回传。[CLI参考](https://learn.chatgpt.com/docs/cli/reference)提供实验性`codex cloud exec/list/status/diff`；本机0.164.0-alpha.11.1在环境发布后仍只列出All Environments，没有该环境，未提交CLI云任务。这是当前客户端实测限制，不能外推为新版Cloud永不支持CLI。官方文档尚未查到面向个人套餐、供自建网站直接创建新版Cloud任务的公开REST接口。
+从官方Cloud启动Sol有界任务，使用本目录`cloud-task.py`领取指定任务并回报进展、续租和结果；不在托管任务中嵌套Codex CLI或另调用API模型。网络密钥名称为`WORKBENCH_RUNNER_SECRET`，作用域仅当前Only me环境，允许域名仅`www.beiqiang.online`。值留本机被忽略的`.local/cloud-pairing-secret.txt`，不进Git或聊天；按照电脑操作工具的凭证规则，由负责人在官方表单完成填写和保存。保存后发布环境，再以新Cloud任务验证恢复和实际回传。
 
-可行方向：从官方Cloud启动有界任务，让任务通过限定官网域名和范围的身份读取既有队列、回传实际日志与提案；须先完成该链路的身份、网络与回读验收。网站自行唤醒任务、持续守护和源文件采纳尚未实现。正式Agents API需要独立Platform身份与计费，不与个人套餐Cloud身份混用。[Agents API快速入门](https://developers.openai.com/api/docs/guides/agents-api/quickstart)。
+```text
+python3 cloud-task.py claim --run-id <指定ID>
+python3 cloud-task.py event --run-id <指定ID> --message "实际进展"
+python3 cloud-task.py heartbeat --run-id <指定ID>
+python3 cloud-task.py complete --run-id <指定ID> --result <私有JSON文件>
+python3 cloud-task.py status --run-id <指定ID>
+```
+
+失败时用`fail --run-id <指定ID> --message "实际原因"`。结果文件在Linux使用0600权限；客户端私有状态保存在被忽略的`.local/cloud-task/`，不输出密钥或租约。保留官方代理及证书配置，网络密钥可为官方代理占位值，不要求原始密钥出现在进程中。手动模式必须指定任务，不抢其他排队任务；已领取任务按真实租约展示，不显示常驻在线。网站仍为snapshot_review，结果只进入待审，源文件采纳尚未接通。
+
+验收：网站399项测试、类型检查、构建和lint通过（9项既有图片提示）；客户端及备用执行器合计25项Linux测试通过。正式域名与部署预览版本、视频及字幕一致。本机对正式网站完成指定领取、进度、续租、结果回传，私有回读为awaiting_review；首次紧接完成的事件列表未满足回读断言，随后只读复核确认原进度事件和结果均已保存，没有重新执行任务。证据为`99_临时区/工作台应用验收/manual-cloud-protocol-readback.json`。此项是本机协议验收，model=protocol-test、无源文件修改；**实际OpenAI Cloud到官网执行尚未验证**。私有队列另留一张连接验收任务，不改原七项经营任务。
+
+当前客户端的实验性`codex cloud`选择器尚未显示该新版环境，未提交CLI云任务；这不是永久能力判断。面向个人套餐、供自建网站直接创建新版Cloud任务的公开REST接口尚未核实。网站自行唤醒、持续守护及源文件采纳均未实现。正式Agents API需要独立Platform身份与计费，不与个人套餐Cloud混用。[Agents API快速入门](https://developers.openai.com/api/docs/guides/agents-api/quickstart)。
 
 网站私有后台、任务队列与资料快照继续复用；本目录`runner.py`是自托管备选，不是OpenAI托管环境的必装程序。只有托管路线实际不满足需求且负责人选定替代方案时，再考虑下述部署。
 
 ## 已有网站与备用部署条件
 
 - 已有正式网站：EdgeOne Makers `beiqiang-footwear` / `makers-zsvtdpeh3qf1`，静态前端、Cloud Functions与Blob；源码独立仓库 `03_独立站/03_网站源码/`。目前没有可核的本项目常驻CPU云主机或已部署Agent执行器证据；本机没有可直接用于盘点CVM的 `tccli`，不能据此断言云账号没有实例。
-- 本机已安装EdgeOne CLI：`08_工具链/03_网站发布运行时/edgeone-cli-runtime/node_modules/.bin/edgeone.cmd`，已只读验证 `--help` / `makers --help`。网站 `.edgeone/project.json`确认上面的项目身份；未读取auth文件或`.env`。
+- 本机已安装EdgeOne CLI：`08_工具链/03_网站发布运行时/edgeone-cli-runtime/node_modules/.bin/edgeone.cmd`，已只读验证 `--help` / `makers --help`。网站 `.edgeone/project.json`确认上面的项目身份；本轮使用既有部署身份配置网站队列并验收私有存储，凭证只在进程内使用。
 - GitHub型项目继续由main推送触发部署，不用上传型项目绕过现有发布。部署适配器 `edgeone-deploy/export-static.mjs`、静态构建 `scripts/export-edgeone-static.mjs`；正式发布核验 `npm run verify:deployments`（`scripts/verify-deployment-parity.mjs`）。配置以网站README的Production Deployment段为准：root `edgeone-deploy`、install `npm ci --prefix ..`、build `npm run build`、output `dist`。
 - 官方现提供同项目 `agents/` 运行时：单次默认5分钟、可设60分钟，空闲5分钟回收，会话最长6小时。它不是永久后台进程；需要持久任务和真实触发。普通Cloud Functions单次默认30秒、最大120秒，不宜承载不确定时长的CLI任务。[Agents文档](https://pages.edgeone.ai/document/agents)、[Cloud Functions限制](https://pages.edgeone.ai/document/cloud-functions)。本账号是否可用、部署根与Agents打包是否匹配，仍须实际预览验收。
 
