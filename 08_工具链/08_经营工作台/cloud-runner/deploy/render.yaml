@@ -1,0 +1,30 @@
+# Example only. Creating this paid worker requires an explicit owner decision.
+# Supply secrets privately in the Render Dashboard; never put auth.json here.
+services:
+  - type: worker
+    name: beiqiang-private-sol-worker
+    runtime: docker
+    region: singapore
+    plan: 0.5c-512mb
+    branch: main
+    autoDeployTrigger: "off"
+    numInstances: 1
+    dockerfilePath: 08_工具链/08_经营工作台/cloud-runner/deploy/Dockerfile
+    dockerContext: 08_工具链/08_经营工作台/cloud-runner
+    disk:
+      name: private-worker-state
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: RUNNER_ENABLED
+        value: "false"
+      - key: WORKBENCH_RUNNER_URL
+        value: https://www.beiqiang.online/api/workbench-runner
+      - key: WORKBENCH_RUNNER_SECRET
+        sync: false
+      - key: CODEX_HOME
+        value: /var/data/codex
+      - key: WORKBENCH_RUNNER_STATE
+        value: /var/data/runner
+      - key: WORKBENCH_RUNNER_PERSISTENT_ROOT
+        value: /var/data

@@ -2,6 +2,9 @@
 import hashlib
 from pathlib import Path
 import unittest
+from unittest.mock import patch, Mock
+import tempfile
+import json
 import runner
 
 
@@ -62,6 +65,26 @@ class RunnerTests(unittest.TestCase):
         self.assertIn('KillMode=control-group',unit)
         self.assertIn('EnvironmentFile=%h/',unit)
         self.assertNotIn('OPENAI_API_KEY=',unit)
+
+    def test_automatic_execution_failure_persists_pause_and_stops_claiming(self):
+        queue=Mock()
+        queue.call.side_effect=lambda action, **fields: {'job':self.job} if action=='claim' else {}
+        with tempfile.TemporaryDirectory() as directory:
+            env={'WORKBENCH_RUNNER_URL':'https://www.beiqiang.online/api/workbench-runner',
+                 'WORKBENCH_RUNNER_SECRET':'synthetic-test-secret-only',
+                 'WORKBENCH_RUNNER_STATE':directory}
+            with patch.dict(runner.os.environ,env), patch('sys.argv',['runner.py']), \
+                    patch.object(runner.shutil,'which',return_value='/fixture/codex'), \
+                    patch('preflight.preflight',return_value={'ok':True}), \
+                    patch.object(runner,'Queue',return_value=queue), \
+                    patch.object(runner,'execute',side_effect=RuntimeError('fixture failure')):
+                with self.assertRaises(RuntimeError):runner.main()
+            pause=json.loads((Path(directory)/'blocked.json').read_text())
+            self.assertEqual(pause['run_id'],self.job['id'])
+            self.assertEqual(pause['reason'],'execution_or_report_failed')
+            self.assertEqual([call.args[0] for call in queue.call.call_args_list],
+                             ['heartbeat','claim','fail','heartbeat'])
+            self.assertFalse(queue.call.call_args.kwargs['capabilities']['ready'])
 
 
 if __name__=='__main__':unittest.main()

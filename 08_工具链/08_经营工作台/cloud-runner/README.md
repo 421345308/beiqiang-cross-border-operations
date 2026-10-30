@@ -1,5 +1,14 @@
 # 云端执行接入与备用CLI执行器
 
+## 当前常驻路线（2026-10-31）
+
+自动派发现在选用[Render私有Worker部署包](deploy/README.md)，沿原 `runner.py`，不是网站直接自动启动新版官方Cloud环境。正常ChatGPT登录使用现有Codex套餐，固定Sol；不新增API计费身份。服务器需 `WORKBENCH_RUNNER_MODE=self_hosted`、`WORKBENCH_AUTODISPATCH=enabled`，且收到近期通过启动预检的回报才允许无指定ID领取。任一条件未就绪，界面明确显示排队与原因。原人工Cloud保持指定run_id方式，生产现状仍此模式。
+
+无指定run_id的runner启动先检查私有持久目录、Linux非root、固定CLI、ChatGPT身份和正式队列地址，再发ready心跳；失败不领取。执行/结果上报失败将原因及run_id保存到私有 `blocked.json`，重启仍暂停，按部署文档核回执后恢复；不增加自动重试层。指定run_id的一次性调用继续保留。
+
+本轮65项Linux客户端测试全部通过，含13项启动检查；真实本机PostgreSQL+Sol无指定ID领取、回传、审阅采纳验收已完成：运行 `e01caa1d35a207b9f8e5f0173d4d1e71`，会话 `01a18d84-96af-7302-83e6-32b48913aa30`，合成内部测试对象保持待处理，原询盘hash未变。证据 `99_临时区/工作台应用验收/postgres-sol-readback.json`。尚未开通Render，因此云端登录、512MB容量、重启续用身份、关闭本机继续执行仍待实际验收；本机成功不代替这些条件。
+
+
 2026-10-30：原生Sol Cloud经标准客户端完成正式网站指定任务回传，实际配对已验收；自托管CLI执行器仍为备用，未部署或购买资源。配套云接口由网站工作台后端维护，本目录不保存第二份任务状态或业务资料。
 
 ## 当前首选：OpenAI托管Codex Cloud
@@ -38,7 +47,7 @@ python3 cloud-task.py status --run-id <指定ID> --remote
 
 本次仅验证官方配置会话中的原生模型到官网完整回传，不是独立新会话恢复、常驻执行、自动唤醒、平台发布、客户外发或源文件采纳。后续人工启动必须沿标准客户端保存运行状态，不能临时改用仅内存持有租约的传输程序。任务结论经统筹审阅用于明确三类业务依赖，未启动该提案中的业务执行包。
 
-网站私有后台、任务队列与资料快照继续复用；本目录`runner.py`是自托管备选，不是OpenAI托管环境的必装程序。只有托管路线实际不满足需求且负责人选定替代方案时，再考虑下述部署。
+网站私有后台、任务队列与资料快照继续复用；本目录`runner.py`用于选定的私有常驻路线，不是OpenAI托管环境的必装程序；当前部署及验收状态以上文和deploy/README为准。
 
 ## 云端提案经本地审阅回写
 
@@ -87,7 +96,7 @@ python -X utf8 "08_工具链/08_经营工作台/cloud-runner/review-proposal.py"
 网站本人登录、机器队列身份、模型调用身份是三件事。Runner需要：
 
 1. 已部署的HTTPS队列端点和独立 `WORKBENCH_RUNNER_SECRET`，由部署环境注入，不在网页中提供机器密钥。
-2. 一处能运行Python 3.10+和Codex CLI的执行环境。无已确认现有实例，因此目前无主机报价，不自行购买或启动GPU实例。
+2. 一处能运行Python 3.10+和Codex CLI的执行环境。已选Render私有Worker及持久盘，价格和步骤见deploy/README；未自行购买或启动实例。
 3. 在该执行环境、同一个非root用户下运行 `codex login --device-auth`，由负责人在自己的浏览器完成ChatGPT授权，然后运行 `codex login status`确认使用ChatGPT登录。若安全设置尚未允许设备登录，按官方设置启用。本路线使用现有套餐的Codex额度与限制，不自动切换API、不承诺无限或零额外费用。**不复制本机ChatGPT auth文件去云**。[官方鉴权文档](https://learn.chatgpt.com/docs/auth)。
 
 本目录未验证云主机登录后的套餐余量或Sol实际访问。API Key只作为负责人明确选择后的可选身份，按API计费。符合条件的ChatGPT订阅者确有API赠金，但官方明确排除Codex API-key usage，不能把赠金当成这条执行路线的额度。[官方赠金范围](https://developers.openai.com/api/docs/guides/chatgpt-api-credits)。

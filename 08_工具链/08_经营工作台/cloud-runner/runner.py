@@ -207,10 +207,17 @@ def main():
     if not endpoint or not secret:parser.error('Set WORKBENCH_RUNNER_URL and WORKBENCH_RUNNER_SECRET in the deployment environment')
     executable=shutil.which('codex')
     if not executable:parser.error('Install and authenticate Codex CLI on this execution host first')
+    capabilities = None
+    if not args.run_id:
+        from preflight import preflight
+        checked = preflight()
+        if not checked['ok']:
+            parser.error('Private worker startup checks failed; run preflight.py for safe check results')
+        capabilities = {'ready': True, 'auth': 'chatgpt', 'model': MODEL}
     state=Path(os.environ.get('WORKBENCH_RUNNER_STATE',str(Path(__file__).resolve().parent.parent/'.local'/'cloud-runner')))
     state.mkdir(parents=True,exist_ok=True);queue=Queue(endpoint,secret)
     while True:
-        queue.call('heartbeat')
+        queue.call('heartbeat', **({'capabilities': capabilities} if capabilities else {}))
         job=queue.call('claim', **({'run_id': args.run_id} if args.run_id else {})).get('job')
         if job:
             try:execute(queue,job,executable,state)
@@ -218,6 +225,15 @@ def main():
                 # No automatic replay after an uncertain delivery or execution failure.
                 try:queue.call('fail',run_id=job['id'],lease_token=job['lease_token'],error=type(exc).__name__+': execution/report failed; inspect private runner logs')
                 except Exception:pass
+                if capabilities:
+                    # Render restarts exited workers. Keep an execution failure paused
+                    # across that restart until an operator checks the actual result.
+                    (state / 'blocked.json').write_text(json.dumps({
+                        'reason': 'execution_or_report_failed',
+                        'run_id': job['id'], 'at': time.time(),
+                    }), encoding='utf-8')
+                    try:queue.call('heartbeat', capabilities={**capabilities, 'ready': False})
+                    except Exception:pass
                 raise
         if args.once or args.run_id:return
         time.sleep(10)
