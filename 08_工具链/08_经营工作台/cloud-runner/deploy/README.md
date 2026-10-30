@@ -1,5 +1,8 @@
 # 私有 Sol 后台执行器部署包
 
+> 2026-10-31当前决策：负责人否决默认付费托管组合，优先验证现有机器上的开源自建。本页保留此前已验证的Docker包和Render可选步骤，不代表已选用Render，也不构成开户或购买要求。最新取舍见[架构方案](../../PRODUCT.md#运行条件与已核边界)。
+
+
 准备于2026-10-30。复用上级 `runner.py` 的单实例循环，没有增加第二个派发器、监督器、队列或模型API。此目录只是可审阅部署包；未开通Render、未付费、未在Render登录或实际运行模型。启动预检通过也不证明套餐剩余、模型可用或真实任务完成。
 
 ## 选定的运行方式与价格
@@ -12,7 +15,7 @@ Render **Background Worker，Singapore，单实例，1GB Persistent Disk**。后
 
 ## 部署前集中决定
 
-负责人只需确认是否接受上述约US$7.25/月起的worker资源，并正常登录Render完成账户/付款资料。当前没有本项目Render账号资源的可核证据，不能声称已有免费额度。不要把服务器费与现有ChatGPT套餐额度混为一笔。
+仅将来明确重选Render时，才核实当时费用并办理账户/付款资料。当前没有本项目Render账号资源的可核证据，不能声称已有免费额度。不要把服务器费与现有ChatGPT套餐额度混为一笔。
 
 这是一台无公开入口的可信私有worker，不是在公开GitHub仓库启用带账号凭证的CI。代码可从现有main或审核后的镜像取得；保持自动部署关闭，禁止PR预览、公共触发器或第三方任意代码进入运行环境。不要把 `auth.json` 放进源码、镜像、build args、Render环境变量、GitHub Actions或日志。官方支持保存CLI认证并用于可信私有自动化；公开仓库CI不适用其账号认证维护方案。[非交互认证](https://learn.chatgpt.com/docs/non-interactive-mode)、[私有认证维护边界](https://learn.chatgpt.com/docs/auth/ci-cd-auth)
 

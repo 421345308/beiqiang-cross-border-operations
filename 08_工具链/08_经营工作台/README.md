@@ -15,7 +15,7 @@
 
 验收：446项网站测试全部通过（含真实PostgreSQL，无跳过），65项Linux执行客户端测试通过；构建、类型检查通过，lint零错误/9项原有图片提示。隔离库备份恢复核10条合成记录与hash一致；真实本机Sol完成无指定run_id领取→回传→采纳，原询盘hash不变。浏览器核数据库状态、创建任务、统一列表返回原任务及390px布局无横向溢出。原始证据保留 `99_临时区/工作台应用验收/` 的 `database-final-tests.log`、`database-final-linux-tests.log`、`postgres-restore-verification.json`、`postgres-sol-readback.json` 和 `database-unified-task-ui.png`。这是本地真实数据库/模型验收，不是Supabase或Render已上线证明。执行器Docker镜像也已实际构建，断网空环境验证非root私有挂盘、默认不领取、固定CLI、未登录拒启动与故障暂停跨重启保留全部通过；镜像与交付源码hash一致，测试容器及空卷已清理。证据 `worker-deploy-smoke.json`；未复制认证、调用云端模型或创建收费资源。
 
-**依赖与下一动作**：选定Supabase Pro新加坡一个Micro项目（US$25/月）+ Render新加坡单实例Background Worker和1GB盘（约US$7.25/月起），合计基线约US$32.25/月，未含税、超额及原ChatGPT套餐。两项尚未开户/采购；负责人集中确认预算、注册付款，并在执行器完成一次正常ChatGPT设备登录。之后由统筹接私有配置、验证EdgeOne连接/服务商恢复、正式迁移，并验收关闭本机仍执行及重启接续，再开生产自动领取。512MB是否足够要以该云实例真实Sol任务测量，未自动选更贵档位。部署包、完整步骤和费用来源见[架构方案](PRODUCT.md#运行条件与已核边界)、[私有执行器部署](cloud-runner/deploy/README.md)。
+**依赖与下一动作**：2026-10-31负责人否决约US$32.25/月托管组合，取消Supabase/Render开户采购依赖。现已核实腾讯云已有可评估的主机，但运行其他服务，未做安装或配置变更。下一交付由统筹将现有代码整理为可移植自建部署，先核共用资源和私有连接，再验真实任务、备份恢复、关闭本机和重启接续，最后正式迁移并开启自动领取。当前无需新注册数据库账号；后续真实续费/升级及设备登录集中提出。选择理由、开源参考及重评条件见[架构方案](PRODUCT.md#运行条件与已核边界)。[原Render部署包](cloud-runner/deploy/README.md)保留可选参考，不再是已选生产路线。
 
 ## 网站询盘业务接入（首个开发交付）
 
