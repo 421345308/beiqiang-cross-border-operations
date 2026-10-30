@@ -84,7 +84,7 @@ python -X utf8 "08_工具链/08_经营工作台/cloud-runner/review-proposal.py"
 
 ## 已有网站与备用部署条件
 
-- 已有正式网站：EdgeOne Makers `beiqiang-footwear` / `makers-zsvtdpeh3qf1`，静态前端、Cloud Functions与Blob；源码独立仓库 `03_独立站/03_网站源码/`。目前没有可核的本项目常驻CPU云主机或已部署Agent执行器证据；本机没有可直接用于盘点CVM的 `tccli`，不能据此断言云账号没有实例。
+- 已有正式网站：EdgeOne Makers `beiqiang-footwear` / `makers-zsvtdpeh3qf1`，静态前端、Cloud Functions与Blob；源码独立仓库 `03_独立站/03_网站源码/`。2026-10-31已通过腾讯云控制台核实已有新加坡主机，负责人确认用于VPS代理；未部署本项目常驻Agent。共用建议见上级PRODUCT，账号及实例细节只在受忽略的 `.local/tencent-host-assessment.json`。官方Codex Cloud继续作为已验收的人工有界执行入口，程序化提交需另验，不因有自建主机就停止评估官方路线。
 - 本机已安装EdgeOne CLI：`08_工具链/03_网站发布运行时/edgeone-cli-runtime/node_modules/.bin/edgeone.cmd`，已只读验证 `--help` / `makers --help`。网站 `.edgeone/project.json`确认上面的项目身份；本轮使用既有部署身份配置网站队列并验收私有存储，凭证只在进程内使用。
 - GitHub型项目继续由main推送触发部署，不用上传型项目绕过现有发布。部署适配器 `edgeone-deploy/export-static.mjs`、静态构建 `scripts/export-edgeone-static.mjs`；正式发布核验 `npm run verify:deployments`（`scripts/verify-deployment-parity.mjs`）。配置以网站README的Production Deployment段为准：root `edgeone-deploy`、install `npm ci --prefix ..`、build `npm run build`、output `dist`。
 - 官方现提供同项目 `agents/` 运行时：单次默认5分钟、可设60分钟，空闲5分钟回收，会话最长6小时。它不是永久后台进程；需要持久任务和真实触发。普通Cloud Functions单次默认30秒、最大120秒，不宜承载不确定时长的CLI任务。[Agents文档](https://pages.edgeone.ai/document/agents)、[Cloud Functions限制](https://pages.edgeone.ai/document/cloud-functions)。本账号是否可用、部署根与Agents打包是否匹配，仍须实际预览验收。
