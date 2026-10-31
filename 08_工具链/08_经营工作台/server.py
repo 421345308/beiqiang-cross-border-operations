@@ -186,6 +186,16 @@ class Workbench:
                     os.replace(temp,p)
                 finally:temp.unlink(missing_ok=True)
             run.update(status='accepted',updated_at=now());self.save(run);return run
+    def reject(self,rid):
+        with self.lock:
+            run=self.get(rid)
+            if run['status']!='awaiting_review':raise Conflict('此记录不在待审状态')
+            stamp=now()
+            # Preserve rejected proposals when resume replaces the current result.
+            history=run.get('review_history',[])
+            history.append({'decision':'reject','at':stamp,'result':run.get('result'),'changes':run.get('changes',[]),'diff':run.get('diff',''),'summary':run.get('summary','')})
+            run.update(status='rejected',updated_at=stamp,review_history=history)
+            self.save(run);return run
     def cancel(self,rid):
         with self.lock:
             run=self.get(rid)
@@ -234,6 +244,7 @@ class Handler(BaseHTTPRequestHandler):
                 rid,action=parts[2:]
                 if action=='cancel':return self.send_json(app.cancel(rid))
                 if action=='accept':return self.send_json(app.accept(rid))
+                if action=='reject':return self.send_json(app.reject(rid))
                 if action=='resume':return self.send_json(app.start(app.get(rid)['task_id'],body.get('instruction'),rid))
             self.send_json({'error':'接口不存在'},404)
         except PermissionError as e:self.send_json({'error':str(e)},403)
