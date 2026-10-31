@@ -89,6 +89,36 @@ class DeskHTTPTests(unittest.TestCase):
         self.assertEqual(status,200);self.assertEqual(bootstrap['csrf_token'],self.app.token)
         self.assertEqual(bootstrap['website_status']['state'],'ready')
 
+    def test_channel_and_creation_pages_use_real_local_sources(self):
+        project = self.root/'05_内容与视频/示例/PROJECT.md'
+        project.parent.mkdir(parents=True, exist_ok=True)
+        project.write_text('# 创作项目\n这里是当前记录', encoding='utf8')
+        (self.root/'05_内容与视频/README.md').write_text('[项目](示例/PROJECT.md)', encoding='utf8')
+        status, overview = self.request('/api/desk/channels')
+        self.assertEqual(status, 200)
+        self.assertEqual([x['id'] for x in overview['channels']], ['alibaba', 'website', 'douyin'])
+        status, result = self.request('/api/desk/creation')
+        self.assertEqual(status, 200)
+        self.assertEqual(result['projects'][0]['title'], '创作项目')
+        status, detail = self.request('/api/desk/creation/item?'+urlencode({'id': result['projects'][0]['id']}))
+        self.assertEqual(status, 200)
+        self.assertIn('这里是当前记录', detail['content'])
+        oid = result['projects'][0]['id']
+        status, initial = self.request('/api/desk/creation-canvas?'+urlencode({'object_id': oid}))
+        self.assertEqual(status, 200)
+        self.assertIn('创作项目', initial['canvas']['nodes'][0]['data']['title'])
+        canvas = initial['canvas']; canvas['nodes'][0]['data']['title'] = '继续制作'
+        status, saved = self.request('/api/desk/creation-canvas', canvas)
+        self.assertEqual(status, 200)
+        self.assertTrue(saved['canvas']['version'])
+        self.assertEqual(self.request('/api/desk/creation-canvas', canvas)[0], 409)
+        self.assertEqual(self.request('/api/desk/creation-canvas?'+urlencode({'object_id': oid}))[1]['canvas']['nodes'][0]['data']['title'], '继续制作')
+        self.assertEqual(project.read_text(encoding='utf8'), '# 创作项目\n这里是当前记录')
+        malformed = saved['canvas'].copy(); malformed['nodes'] = [None]
+        self.assertEqual(self.request('/api/desk/creation-canvas', malformed)[0], 400)
+        dangling = saved['canvas'].copy(); dangling['edges'] = [{'id':'e1','source':'missing','target':'brief'}]
+        self.assertEqual(self.request('/api/desk/creation-canvas', dangling)[0], 400)
+
     def test_artifact_post_edit_and_fresh_get_read_file_content(self):
         status,saved=self.request('/api/desk/artifacts',{'object_id':'product:BQ009','title':'选款方案','content':'# 第一版\n核实来源'})
         self.assertEqual(status,200);original_path=self.root/saved['path'];self.assertEqual(original_path.read_text(encoding='utf8'),'# 第一版\n核实来源')

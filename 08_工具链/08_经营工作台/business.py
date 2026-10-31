@@ -62,11 +62,18 @@ class Business:
             state_label=SOURCE_STATES.get(product.get('source_state'),product.get('source_state') or '尚未记录')
             first=listings[0] if listings else {};fields=first.get('current_platform_fields') or {}
             title=fields.get('title') or (first.get('catalog_fields') or {}).get('title') or ''
-            obj=_object('product:'+pid,'product',pid,PRODUCTS,subtitle=title or state_label,
+            obj=_object('product:'+pid,'product',product.get('current_model') or pid,PRODUCTS,subtitle=title or state_label,
                 summary=' · '.join(str(v) for v in [state_label,source.get('supplier'),source.get('model')] if v))
+            obj['current_model']=product.get('current_model') or pid
+            obj['aliases']=product.get('aliases') or []
+            obj['source_state']=product.get('source_state') or ''
+            obj['source_role']='adopted' if adopted else ('reference' if source else 'missing')
+            obj['publication_disposition']=product.get('publication_disposition') or {}
             obj['product_series']='HR' if re.fullmatch(r'HR[-_]?\d+',pid,re.I) else '其他'
             obj['facts']=[_fact('共用产品ID',pid),_fact('来源状态',state_label),_fact('别名',product.get('aliases',[])),
                 _fact('原始资料包',product.get('raw_packages') or '原档未列出原包路径')]
+            if product.get('current_model'):obj['facts'].append(_fact('当前款号（原档）',product['current_model']))
+            if product.get('publication_disposition'):obj['facts'].append(_fact('平台发布处置（原档）',product['publication_disposition']))
             mode=product.get('supply_mode')
             if mode:obj['facts'].append(_fact('供货模式（原记录）',mode))
             classification=product.get('classification') or {}
@@ -77,16 +84,21 @@ class Business:
             if source:
                 obj['facts'] += [_fact('已采纳供应来源' if adopted else '历史参考来源（非采购承诺）',source.get('id')),_fact('供应商',source.get('supplier','未记录')),
                     _fact('供应商原款',source.get('model','未记录')),_fact('历史参考价',{'price':source.get('price'),'currency':source.get('currency'),'observed_at':source.get('observed_at'),'basis':source.get('price_basis')})]
-                if str(source.get('url','')).startswith('https://'):obj['links'].append({'label':'原供货来源','url':source['url']})
+                if str(source.get('url','')).startswith('https://'):obj['links'].append({'label':'已采纳供货来源' if adopted else '历史参考来源（非采购承诺）','url':source['url']})
             for listing in listings:
                 current=listing.get('current_platform_fields') or {};historic=listing.get('catalog_fields') or {}
                 status={'approved':'已审核','modified':'修改审核中','pending':'待审核','published':'已发布'}.get(current.get('status'),current.get('status') or '未记录审核状态')
                 obj['facts'].append(_fact('Alibaba '+str(listing.get('id')),' · '.join(str(v) for v in [current.get('title') or historic.get('title'),status,current.get('at')] if v)))
                 url=current.get('url') or listing.get('url')
                 if isinstance(url,str) and url.startswith('https://'):obj['links'].append({'label':'Alibaba '+str(listing.get('id')),'url':url})
-            for asset in asset_map.get(pid,[]):
+            # Finished assets are indexed under both stable identity and current model.
+            product_assets=asset_map.get(pid,[])+asset_map.get(product.get('current_model'),[])
+            product_assets.sort(key=lambda a: (not any(re.fullmatch(r'(?:Alibaba main 1|Reviewed M1|Douyin main_files|Website overview)',r) for r in a.get('roles',[])),str(a.get('file',''))))
+            seen_assets=set()
+            for asset in product_assets:
                 relative=asset.get('file','')
-                if not isinstance(relative,str):continue
+                if not isinstance(relative,str) or relative in seen_assets:continue
+                seen_assets.add(relative)
                 parts=Path(relative.replace('\\','/')).parts
                 if not relative.startswith('01_产品资产/') or '..' in parts or any(p.startswith('.') for p in parts):continue
                 if Path(relative).suffix.lower() not in ('.jpg','.jpeg','.png','.webp','.gif','.mp4','.webm','.mp3','.wav'):continue
@@ -98,7 +110,7 @@ class Business:
             local=product.get('local_assets') or {}
             selected=[p for p in [local.get('current_fields_file'),local.get('current_buyer_copy'),local.get('current_assortment')]+evidence if isinstance(p,str)]
             selected=list(dict.fromkeys(selected))[:8]
-            core={k:product[k] for k in ('id','aliases','source_state','raw_packages','notes','supply_mode') if k in product}
+            core={k:product[k] for k in ('id','current_model','aliases','source_state','raw_packages','notes','supply_mode','publication_disposition') if k in product}
             core['source_state_label']=state_label;core['classification']=classification;core['existing_specifications']=specifications
             source_core={k:source[k] for k in ('id','supplier','model','url','price','currency','observed_at','price_terms') if k in source}
             channel_core=[{'id':v.get('id'),'url':v.get('url'),'current':{k:v.get('current_platform_fields',{}).get(k) for k in ('title','status','at','price_tiers')},'historical_title':v.get('catalog_fields',{}).get('title')} for v in listings]
@@ -223,16 +235,25 @@ class Business:
             result.append(obj)
         return result
 
+    def _creations(self):
+        from creation import Creation
+        catalog=Creation(self.root)
+        return [{**row,'subtitle':'创作项目','assets':[],'links':[],'facts':[],'content':''} for row in catalog.list_projects()]
+
     def list_objects(self,kind='',q=''):
-        if kind not in ('','product','customer','prospect') or not isinstance(q,str):raise ValueError('业务查询参数无效')
+        if kind not in ('','product','customer','prospect','creation') or not isinstance(q,str):raise ValueError('业务查询参数无效')
         objects=(self._products() if kind in ('','product') else [])+(self._customers()+self._website_objects()+self._alibaba_objects()+self._intake_objects() if kind in ('','customer') else [])+(self._prospect_objects() if kind in ('','prospect') else [])
+        if kind in ('','creation'):objects+=self._creations()
         query=q.strip().casefold()
         if query:objects=[o for o in objects if query in json.dumps(o,ensure_ascii=False).casefold()]
         # List stays compact; detail and Agent context use get_object.
-        return [{**{k:o[k] for k in ('id','kind','title','subtitle','source','summary')},'source_type':o.get('source_type') or ('website' if o['id'].startswith('customer:website-') else 'local'),'assets':o['assets'][:1], 'product_series':o.get('product_series'), 'classification':o.get('classification',{}), 'facts':[f for f in o['facts'] if f['label'].startswith('用途候选')] if o['kind']=='product' else []} for o in objects]
+        return [{**{k:o[k] for k in ('id','kind','title','subtitle','source','summary')},'source_type':o.get('source_type') or ('website' if o['id'].startswith('customer:website-') else 'local'),'assets':o['assets'][:1], 'product_series':o.get('product_series'), 'current_model':o.get('current_model'), 'aliases':o.get('aliases',[]), 'source_state':o.get('source_state'), 'source_role':o.get('source_role'), 'publication_disposition':o.get('publication_disposition',{}), 'links':o['links'] if o['kind']=='product' else [], 'classification':o.get('classification',{}), 'facts':[f for f in o['facts'] if f['label'].startswith('用途候选')] if o['kind']=='product' else []} for o in objects]
 
     def get_object(self,object_id):
         if not isinstance(object_id,str):raise ValueError('业务对象ID无效')
+        if object_id.startswith('creation:'):
+            from creation import Creation
+            return {**Creation(self.root).get_project(object_id),'subtitle':'创作项目','facts':[]}
         if object_id.startswith('product:'):objects=self._products()
         elif object_id.startswith('customer:website-'):objects=self._website_objects()
         elif object_id.startswith('customer:alibaba-order-buyer:'):objects=self._alibaba_objects()
@@ -252,13 +273,17 @@ class Business:
         if object_id.startswith('customer:website-'):
             reference=object_id.removeprefix('customer:website-')
             return self.root/'04_客户开发/.local/网站询盘'/reference
+        if obj['kind']=='creation':return (self.root/obj['source']).parent/'.local/成果'
         folder='00_总控台/产品中心' if obj['kind']=='product' else '04_客户开发'
         return self.root/folder/'.local/成果'/_stable(object_id)
 
     def _artifact(self,row):
         oid,object_id,title,relative,at=row
         path=self.root/relative
-        if not path.resolve().is_relative_to(self.root) or '.local' not in path.parts:raise ValueError('成果路径不在本地业务范围')
+        if object_id.startswith('creation:'):
+            base=self._artifact_base(object_id)
+            if path.resolve().parent!=base.resolve() or '.local' not in path.parts:raise ValueError('成果路径不在本地业务范围')
+        elif not path.resolve().is_relative_to(self.root) or '.local' not in path.parts:raise ValueError('成果路径不在本地业务范围')
         return {'id':oid,'object_id':object_id,'title':title,'content':path.read_text(encoding='utf8'),
                 'path':relative,'updated_at':at}
 
@@ -275,7 +300,10 @@ class Business:
         with self.app.lock:
             previous=self.app.db.execute('SELECT object_id,path FROM business_artifacts WHERE id=?',(oid,)).fetchone()
             if artifact_id and (not previous or previous[0]!=object_id):raise ValueError('成果不属于这个业务对象')
-            if not base.resolve().is_relative_to(self.root):raise ValueError('成果目录超出原业务范围')
+            if object_id.startswith('creation:'):
+                project=(self.root/self.get_object(object_id)['source']).resolve().parent
+                if base.resolve()!=project/'.local/成果':raise ValueError('成果目录超出原创作项目')
+            elif not base.resolve().is_relative_to(self.root):raise ValueError('成果目录超出原业务范围')
             private=next(p for p in (base,*base.parents) if p.name=='.local')
             private.mkdir(parents=True,exist_ok=True,mode=0o700)
             cursor=private

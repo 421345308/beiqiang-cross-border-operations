@@ -12,6 +12,10 @@ from business import Business
 from agent_jobs import AgentJobs
 from customer_workspace import CustomerWorkspace
 from inquiry_intake import InquiryIntake
+from channel_overview import ChannelOverview
+from creation import Creation
+from creation_canvas import CreationCanvas
+from workspaces import WorkspaceConflict as CanvasConflict
 
 HERE = Path(__file__).resolve().parent
 MODEL = 'gpt-6.1-sol'
@@ -46,6 +50,9 @@ class Workbench:
         self.customer_workspace=CustomerWorkspace(self)
         self.inquiry_intake=InquiryIntake(self)
         self.agent_jobs=AgentJobs(self)
+        self.channel_overview=ChannelOverview(self,self.workspaces)
+        self.creation=Creation(self.root)
+        self.creation_canvas=CreationCanvas(self)
     def save(self, run):
         with self.lock:
             self.db.execute('INSERT OR REPLACE INTO runs VALUES (?,?)',(run['id'],json.dumps(run,ensure_ascii=False))); self.db.commit()
@@ -243,6 +250,16 @@ class Handler(BaseHTTPRequestHandler):
                 if u.path=='/api/desk/customer-profile':return self.send_json(app.customer_workspace.profile(value('object_id')))
                 if u.path=='/api/desk/inquiry-queue':return self.send_json(app.customer_workspace.queue(bucket=value('bucket') or 'active',state=value('state'),q=value('q')))
                 if u.path=='/api/desk/customer-workflow':return self.send_json(app.customer_workspace.workflow(value('object_id')))
+                if u.path=='/api/desk/creation-canvas':return self.send_json({'canvas':app.creation_canvas.get(value('object_id'))})
+                if u.path=='/api/desk/creation':return self.send_json({'projects':app.creation.list_projects(value('q'))})
+                if u.path=='/api/desk/creation/item':return self.send_json(app.creation.get_project(value('id')))
+                if u.path=='/api/desk/creation/libtv':return self.send_json(app.creation.libtv_projects())
+                if u.path=='/api/desk/title-diagnosis':return self.send_json(app.product_changes.diagnose(value('product_id')))
+                if u.path=='/api/desk/channels':return self.send_json(app.channel_overview.snapshot())
+                if u.path=='/api/desk/douyin':
+                    run=subprocess.run(['node',str(HERE/'douyin_overview.mjs')],capture_output=True,text=True,encoding='utf8',timeout=45,**({'creationflags':subprocess.CREATE_NO_WINDOW} if os.name=='nt' else {}))
+                    if run.returncode:raise ValueError('抖店数据暂不可读')
+                    return self.send_json(json.loads(run.stdout))
                 if u.path=='/api/desk/discovery':return self.send_json(app.customer_workspace.discovery())
                 if u.path=='/api/desk/discovery/item':return self.send_json(app.customer_workspace.get_discovery(value('id')))
                 if u.path=='/api/desk/objects':return self.send_json({'objects':app.business.list_objects(kind=value('kind'),q=value('q'))})
@@ -261,6 +278,10 @@ class Handler(BaseHTTPRequestHandler):
             if u.path.startswith('/api/runs/'):return self.send_json(app.get(u.path.split('/')[3]))
             if u.path=='/api/document':return self.send_json(app.document(parse_qs(u.query).get('path',[''])[0]))
             if u.path.startswith('/api/'):return self.send_json({'error':'接口不存在'},404)
+            if u.path.startswith('/creation-canvas/'):
+                static=(HERE/'creation-canvas'/'dist').resolve(); asset=(static/unquote(u.path.removeprefix('/creation-canvas/'))).resolve()
+                if not asset.is_relative_to(static) or not asset.is_file():return self.send_json({'error':'画布页面不存在'},404)
+                data=asset.read_bytes();self.send_response(200);self.send_header('Content-Type',mimetypes.guess_type(str(asset))[0] or 'application/octet-stream');self.send_header('X-Content-Type-Options','nosniff');self.send_header('Content-Length',str(len(data)));self.end_headers();self.wfile.write(data);return
             web=(HERE/'web').resolve();p=(web/unquote(u.path).lstrip('/')).resolve()
             if u.path=='/':p=web/'index.html'
             if not p.is_relative_to(web) or not p.is_file():return self.send_json({'error':'页面不存在'},404)
@@ -275,10 +296,12 @@ class Handler(BaseHTTPRequestHandler):
             if not secrets.compare_digest(self.headers.get('X-Workbench-Token',''),app.token):raise PermissionError('请求令牌无效，请刷新页面')
             if self.headers.get('Content-Type','').split(';')[0]!='application/json':raise ValueError('请求必须使用JSON')
             size=int(self.headers.get('Content-Length','0'))
-            limit=256000 if urlsplit(self.path).path=='/api/canvases' else 64000
+            limit=550000 if urlsplit(self.path).path=='/api/desk/creation-canvas' else 256000 if urlsplit(self.path).path=='/api/canvases' else 64000
             if size<1 or size>limit:raise ValueError('请求大小无效')
             body=json.loads(self.rfile.read(size));parts=urlsplit(self.path).path.strip('/').split('/')
             if not isinstance(body,dict):raise ValueError('请求必须是JSON对象')
+            if parts==['api','desk','creation-canvas']:
+                return self.send_json({'canvas':app.creation_canvas.save(body)})
             if parts==['api','desk','jobs']:
                 return self.send_json(app.agent_jobs.start(body.get('object_id'),body.get('instruction'),mode=body.get('mode','draft')),201)
             if parts==['api','desk','customer-profile']:
@@ -323,7 +346,7 @@ class Handler(BaseHTTPRequestHandler):
             self.send_json({'error':'接口不存在'},404)
         except MediaError as e:self.send_json({'error':str(e)},e.status)
         except PermissionError as e:self.send_json({'error':str(e)},403)
-        except (Conflict,WorkspaceConflict) as e:self.send_json({'error':str(e)},409)
+        except (Conflict,WorkspaceConflict,CanvasConflict) as e:self.send_json({'error':str(e)},409)
         except (ValueError,KeyError,TypeError) as e:self.send_json({'error':str(e)},400)
         except Exception:self.send_json({'error':'操作失败，请检查本地运行环境'},500)
 

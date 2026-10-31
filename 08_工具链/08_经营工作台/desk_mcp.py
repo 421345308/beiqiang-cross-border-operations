@@ -41,8 +41,10 @@ class DeskTools:
         if not isinstance(q,str) or type(limit) is not int or not 1<=limit<=20:
             raise ValueError('来源查询无效，最多20条')
         obj=self.object();paths={};source=obj.get('source')
+        if obj.get('kind')=='creation':source='object:'+self.object_id
         if self.object_id.startswith('customer:website-'):
             source='website:inquiry:'+self.object_id.removeprefix('customer:website-')
+            paths['conversation:'+self.object_id]='complete-customer-conversation'
         elif self.object_id.startswith(('customer:alibaba-order-buyer:', 'customer:intake:', 'prospect:')):
             source='object:'+self.object_id
         if isinstance(source,str):paths[source]='current-object-source'
@@ -75,7 +77,7 @@ class DeskTools:
                         for ref in [(row.get('formal_fields')or{}).get('file'),(row.get('local_sync')or{}).get('current_fields_file')]:
                             if isinstance(ref,str):paths[ref]='current-formal-readback'
             paths['02_Alibaba运营/00_运营SOP/国际站商品全生命周期SOP.md']='applicable-sop'
-        else:
+        elif obj.get('kind')!='creation':
             paths['00_总控台/产品中心/产品矩阵与供货能力.md']='company-capabilities'
             paths['02_Alibaba运营/01_店铺与全店诊断/店铺首页优化方案_2026-09-14.md']='company-facts'
             paths['04_客户开发/03_邮件与多渠道模板/潜在客户多渠道开发与外发素材SOP_2026-08-26.md']='company-presentation'
@@ -83,7 +85,7 @@ class DeskTools:
             paths['07_知识库与Skills/01_运营SOP/技术型品牌买家询盘评估SOP.md']='applicable-sop'
         result={}
         for relative,role in paths.items():
-            if relative.startswith(('website:', 'object:', 'origin:')):
+            if relative.startswith(('website:', 'object:', 'origin:', 'conversation:')):
                 result[relative]={'path':relative,'role':role,'kind':'object-record'};continue
             try:path=self._safe_path(relative)
             except ValueError:continue
@@ -109,7 +111,12 @@ class DeskTools:
         allowed={row['path']:row for row in self.sources(q=path or '')}
         if path not in allowed:raise ValueError('仅允许读取当前对象关联原件')
         projection=None
-        if path.startswith('origin:'):
+        if path.startswith('conversation:'):
+            obj=self.object()
+            content=json.dumps({'initial_inquiry':obj.get('content',''),'messages':obj.get('conversation',[]),
+                                'guidance':'按往来顺序区分客户与我方；已回复内容不重复追问，未确认承诺不能当成能力事实。'},ensure_ascii=False,indent=2)
+            projection='complete bound website inquiry and conversation; paginate until nextStart is null'
+        elif path.startswith('origin:'):
             oid=path.removeprefix('origin:')
             if oid.startswith('customer:website-'):self.business.refresh_website(wait=True)
             content=self.business.get_object(oid).get('content','');projection='linked original business record'
@@ -159,6 +166,9 @@ class DeskTools:
                 with self.audit.open('a',encoding='utf8') as stream:
                     stream.write(json.dumps({'tool':'get_object','object_id':self.object_id,'success':True})+'\n')
             return obj
+        if name=='get_creation_canvas':
+            if self.object().get('kind')!='creation':raise ValueError('画布工具仅支持当前创作项目')
+            return self.business.app.creation_canvas.get(self.object_id)
         if name=='list_objects':
             if args.get('kind')=='product':
                 return self.business.list_objects(kind='product',q=args.get('q',''))[:20]
@@ -183,6 +193,7 @@ class DeskTools:
 TOOLS=[{'name':name,'description':description,'inputSchema':schema,
         'annotations':{'readOnlyHint':True,'destructiveHint':False,'openWorldHint':False}}
        for name,description,schema in [
+           ('get_creation_canvas','读取当前创作项目已有画布节点、连线及version；只读，不创建或修改画布。',{'type':'object','properties':{},'additionalProperties':False}),
            ('get_object','读取当前业务对象、已有事实与关联资料。',{'type':'object','properties':{},'additionalProperties':False}),
            ('list_objects','kind=product搜索共用产品（最多20条），可按需求匹配；其他类型仅查当前对象。',{'type':'object','properties':{'kind':{'type':'string'},'q':{'type':'string'}},'additionalProperties':False}),
            ('list_sources','默认最多20条当前原包/已选证据/正式档案。仅需历史时用q按路径关键词检索，仍最多20条。',{'type':'object','properties':{'q':{'type':'string'},'limit':{'type':'integer','minimum':1,'maximum':20}},'additionalProperties':False}),

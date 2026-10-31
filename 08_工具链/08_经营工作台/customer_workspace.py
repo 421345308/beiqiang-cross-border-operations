@@ -114,12 +114,21 @@ class CustomerWorkspace:
         cleaned.update(saved.get('cleaned',{}))
         analysis={'intent':'unknown','fit':'unknown','basis':[],'missing':[],'next_action':'','facts':[],'inferences':[]}
         analysis.update(saved.get('analysis',{}))
+        conversation=[]
+        for index,message in enumerate(record.get('messages') or []):
+            if not isinstance(message,dict) or not isinstance(message.get('body'),str):continue
+            mid=str(message.get('id') or ('legacy-'+str(index)+'-'+_hash(message['body'])[:16]))
+            derived=saved.get('message_translations',{}).get(mid,{})
+            digest=_hash(message['body'])
+            conversation.append({'message_id':mid,'sender':message.get('sender',''),'body':message['body'],'sent_at':message.get('sentAt',''),
+                'translation_zh':derived.get('translation_zh','') if derived.get('body_hash')==digest else '',
+                'translation_stale':bool(derived) and derived.get('body_hash')!=digest,'body_hash':digest})
         provenance={'source':obj.get('source'),'source_hash':source_hash,'observed_at':record.get('receivedAt') or record.get('checked_at'),
             'acquisition':'unknown','source_verification':{'state':'unverified','note':'仅确认原来源有这份记录；未核实访客身份、自然获客或渠道归因。' if source_type=='website' else '沿原业务记录读取；研究资料不等于采购意向或已触达。'},
             'evidence_notes':saved.get('source_note',''),'evidence':saved.get('evidence',[])}
         return {'object_id':object_id,'source_type':source_type,'provenance':provenance,'original_text':original,
             'original_language':saved.get('original_language') or record.get('original_language') or record.get('language') or ('zh' if source_type=='alibaba_order_buyer' else 'unknown'),
-            'translation_zh':saved.get('translation_zh',''),'cleaned':cleaned,'analysis':analysis,
+            'conversation':conversation,'translation_zh':saved.get('translation_zh',''),'cleaned':cleaned,'analysis':analysis,
             'source_hash':source_hash,'derived_source_hash':saved.get('source_hash'),
             'stale':bool(saved.get('source_hash')) and saved.get('source_hash')!=source_hash,'updated_at':saved.get('updated_at'),
             'operator_context':saved.get('operator_context',''),
@@ -127,13 +136,26 @@ class CustomerWorkspace:
             'derivation':'人工或Agent派生资料；facts为列明依据的摘录，inferences为判断，不改原文。'}
 
     def save_profile(self,object_id,body):
-        if not isinstance(body,dict) or set(body)-{'source_hash','original_language','translation_zh','cleaned','analysis','source_note','evidence','operator_context'}:raise ValueError('不支持的客户分析字段')
+        if not isinstance(body,dict) or set(body)-{'source_hash','original_language','translation_zh','cleaned','analysis','source_note','evidence','operator_context','message_translations'}:raise ValueError('不支持的客户分析字段')
         with self.app.lock:
             current=self.profile(object_id)
             if body.get('source_hash')!=current['source_hash']:raise ValueError('原来源已变化，请刷新后重新核对派生资料')
             saved=self._saved_profile(object_id)
             for key,limit in [('original_language',80),('translation_zh',50000),('source_note',10000),('operator_context',12000)]:
                 if key in body:saved[key]=_text(body[key],limit)
+            if 'message_translations' in body:
+                rows=body['message_translations']
+                messages={m['message_id']:m for m in current['conversation']}
+                if not isinstance(rows,list) or len(rows)>500:raise ValueError('消息译文格式无效')
+                translations=dict(saved.get('message_translations',{}));seen=set()
+                for row in rows:
+                    if not isinstance(row,dict) or set(row)!={'message_id','translation_zh'}:raise ValueError('消息译文字段无效')
+                    mid=row['message_id']
+                    if not isinstance(mid,str) or mid not in messages or mid in seen:raise ValueError('消息ID不存在或重复')
+                    translated=_text(row['translation_zh'],20000)
+                    if not translated.strip():raise ValueError('消息译文不能为空')
+                    seen.add(mid);translations[mid]={'translation_zh':translated,'body_hash':messages[mid]['body_hash']}
+                saved['message_translations']=translations
             if 'cleaned' in body:saved['cleaned']={**saved.get('cleaned',{}),**_mapping(body['cleaned'],SOURCE_FIELDS)}
             if 'analysis' in body:saved['analysis']={**saved.get('analysis',{}),**_mapping(body['analysis'],ANALYSIS_FIELDS)}
             if 'evidence' in body:saved['evidence']=_evidence(body['evidence'])

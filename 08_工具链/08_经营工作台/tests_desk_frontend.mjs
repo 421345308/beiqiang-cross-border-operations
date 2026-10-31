@@ -164,3 +164,76 @@ test('customer detail prioritizes secretary brief, hides JSON and history, saves
 test('brief keeps reception fit visible while context and source notes are folded', async () => {
  const h=harness('#/object/customer%3Arecord'); h.objects.push({id:'customer:record',kind:'customer',title:'客户',assets:[]}); Object.assign(h.profile.analysis,{brief:'先厘清开发边界',fit:'现有生产可承接，具体配方需按样品目标确认',recommended_reply:'可以先讨论样品目的与交付物。'}); h.profile.operator_context='数量来自表单必填，不代表确认订单'; h.profile.provenance.evidence_notes='来源说明'; h.profile.provenance.source_verification.note='来源说明'; await h.ui.bootstrap(); await settle(); const host=h.ui.S.detail.profileHost, brief=host.querySelector('.inquiry-brief'); assert.ok(brief.querySelector('.brief-fit').textContent.includes('现有生产可承接')); const context=brief.querySelector('.operator-context'); assert.equal(context.tagName,'DETAILS'); assert.equal(Boolean(context.open),false); const source=host.querySelector('.source-note'); assert.equal(source.tagName,'DETAILS'); assert.equal(Boolean(source.open),false); assert.equal(source.querySelectorAll('p').length,1); assert.ok(brief.querySelector('.brief-reply').textContent.includes('可以先讨论')); assert.equal(brief.querySelector('.brief-reply').tagName,'SECTION');
 });
+
+test('creation project opens its exact object and exposes its agent', async () => {
+  const h = harness('#/creation?item=creation%3Aabc');
+  const original = h.originalFetch;
+  h.interceptFetch(async (path, options) => {
+    const url = new URL(path, 'http://127.0.0.1:8765');
+    let value;
+    if (url.pathname === '/api/desk/creation/item') value = {id:'creation:abc',title:'视频项目',content:'原始项目记录',assets:[],links:[]};
+    else if (url.pathname === '/api/desk/object' && url.searchParams.get('id') === 'creation:abc') value = {id:'creation:abc',kind:'creation',title:'视频项目',source:'05_内容与视频/项目/PROJECT.md',assets:[]};
+    else return original(path, options);
+    return {ok:true,json:async()=>value};
+  });
+  await h.ui.bootstrap(); await settle();
+  assert.ok(h.elements.page.textContent.includes('原始项目记录'));
+  assert.ok(h.elements.page.textContent.includes('交给 Sol 继续创作'));
+  assert.ok(h.elements.page.textContent.includes('创作成果'));
+});
+
+test('product title diagnosis uses the chosen platform listing', async () => {
+  const h = harness('#/object/product%3A1');
+  h.objects[0].links = [{label:'Alibaba 123',url:'https://example.com/product'}];
+  const original = h.originalFetch;
+  h.interceptFetch(async (path, options) => {
+    const u = new URL(path,'http://127.0.0.1:8765');
+    if (u.pathname === '/api/desk/title-diagnosis') { assert.equal(u.searchParams.get('product_id'),'123'); return {ok:true,json:async()=>({ok:true,change:{localTitle:'Local',platform:{title:'Live'}}})}; }
+    return original(path, options);
+  });
+  await h.ui.bootstrap(); await settle();
+  const select=walk(h.elements.page).find(x=>x['aria-label']==='国际站商品'); select.value='123';
+  await findButton(h.elements.page,'读取当前标题').click(); await settle();
+  assert.ok(h.elements.page.textContent.includes('平台和本地标题不同'));
+});
+
+test('title draft selects only existing evidence and prepares without submission', async () => {
+  const h=harness('#/object/product%3A1');
+  h.objects[0].links=[{label:'Alibaba 123',url:'https://example.com/product'}];
+  h.objects[0].content=JSON.stringify({selected_evidence_paths:['facts.md','../private.md','.local/secret.md',42]});
+  const original=h.originalFetch;let prepared=0;
+  h.interceptFetch(async(path,options)=>{
+    if(String(path)==='/api/product-changes/prepare'){
+      const body=JSON.parse(options.body);assert.deepEqual(body,{product_id:'123',proposed_title:'Verified Casual Shoes',rationale:'Verified source',evidence:['facts.md']});prepared++;
+      return {ok:true,json:async()=>({ok:true,change:{id:'draft1',version:'version1',submission:{state:'not-submitted'},diff:{before:'Old title',after:body.proposed_title}}})};
+    }
+    if(String(path).endsWith('/draft1/apply')) {assert.deepEqual(JSON.parse(options.body),{confirmed:true,expected_version:'version1'});return {ok:true,json:async()=>({ok:false,error:{code:'CLIENT_OR_STORAGE_FAILURE'}})};}
+    if(String(path).endsWith('/draft1/reconcile'))return {ok:true,json:async()=>({ok:true,change:{id:'draft1',version:'version2',submission:{state:'outcome-unknown'},formal:{state:'verified'},localSync:{state:'synced'},diff:{before:'Old title',after:'Verified Casual Shoes'}}})};
+    return original(path,options);
+  });
+  await h.ui.bootstrap();await settle();
+  const nodes=walk(h.elements.page),byLabel=label=>nodes.find(x=>x['aria-label']===label);
+  byLabel('国际站商品').value='123';byLabel('拟修改英文标题').value='Verified Casual Shoes';byLabel('修改理由').value='Verified source';
+  assert.equal(byLabel('../private.md'),undefined);assert.equal(byLabel('.local/secret.md'),undefined);
+  await findButton(h.elements.page,'准备修改草稿').click();assert.equal(prepared,0);
+  byLabel('facts.md').checked=true;await findButton(h.elements.page,'准备修改草稿').click();await settle();
+  assert.equal(prepared,1);assert.ok(h.elements.page.textContent.includes('修改前：Old title'));assert.ok(h.elements.page.textContent.includes('尚未提交'));
+  await findButton(h.elements.page,'审核通过，提交此标题').click();await settle();
+  assert.equal(findButton(h.elements.page,'审核通过，提交此标题').disabled,true);
+  assert.ok(h.elements.page.textContent.includes('勿重复提交'));
+  await findButton(h.elements.page,'读回审核与同步状态').click();await settle();
+  assert.ok(h.elements.page.textContent.includes('已同步'));
+  assert.equal(findButton(h.elements.page,'审核通过，提交此标题').disabled,true);
+});
+test('website conversation uses persisted Chinese and polling preserves unsent reply', async () => {
+ const h=harness('#/object/customer%3Awebsite-test');
+ h.objects.push({id:'customer:website-test',kind:'customer',title:'买家',assets:[],conversation:[{sender:'buyer',body:'Fallback original'}]});
+ h.profile.conversation=[{message_id:'m1',sender:'buyer',body:'What is MOQ?',translation_zh:'起订量多少？'},{message_id:'m2',sender:'seller',body:'Choose a style.',translation_zh:''}];
+ await h.ui.bootstrap();await settle();
+ const page=h.elements.page;
+ assert.ok(page.textContent.includes('起订量多少？'));assert.ok(page.textContent.includes('What is MOQ?'));assert.ok(page.textContent.includes('尚无中文对照'));
+ assert.equal(page.textContent.includes('Fallback original'),false);
+ const reply=walk(page).find(x=>x['aria-label']==='网站私信回复');reply.value='Unsent draft';
+ await h.ui.poll();await settle();
+ assert.equal(walk(page).find(x=>x['aria-label']==='网站私信回复'),reply);assert.equal(reply.value,'Unsent draft');
+});

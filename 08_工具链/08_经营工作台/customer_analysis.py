@@ -14,7 +14,8 @@ COMPANY_CONTEXT_SOURCES=(
 )
 
 def _object(properties):return {'type':'object','additionalProperties':False,'properties':properties,'required':list(properties)}
-SCHEMA=_object({'original_language':{'type':'string'},'translation_zh':{'type':'string'},
+MESSAGE_TRANSLATIONS={'type':'array','maxItems':500,'items':_object({'message_id':{'type':'string'},'translation_zh':{'type':'string'}})}
+SCHEMA=_object({'message_translations':MESSAGE_TRANSLATIONS,'original_language':{'type':'string'},'translation_zh':{'type':'string'},
     'cleaned':_object({key:{'type':'string'} for key in CLEANED}),
     'analysis':_object({**{key:{'type':'string'} for key in ANALYSIS_TEXT},
         **{key:{'type':'array','items':{'type':'string'},**({'maxItems':3} if key=='questions_now' else {})} for key in ANALYSIS_LIST}})})
@@ -22,7 +23,16 @@ SCHEMA=_object({'original_language':{'type':'string'},'translation_zh':{'type':'
 def parse_result(content):
     try:value=json.loads(content)
     except (ValueError,TypeError):raise ValueError('客户分析必须返回完整JSON，不能混入Markdown或说明。')
-    if not isinstance(value,dict) or set(value)!={'original_language','translation_zh','cleaned','analysis'}:raise ValueError('客户分析字段不完整。')
+    if not isinstance(value,dict) or not {'original_language','translation_zh','cleaned','analysis'}<=set(value) or set(value)-{'original_language','translation_zh','cleaned','analysis','message_translations'}:raise ValueError('客户分析字段不完整。')
+    if 'message_translations' in value:
+        rows=value['message_translations']
+        if not isinstance(rows,list) or len(rows)>500:raise ValueError('消息译文格式无效')
+        seen=set()
+        for row in rows:
+            if not isinstance(row,dict) or set(row)!={'message_id','translation_zh'}:raise ValueError('消息译文字段无效')
+            if not isinstance(row['message_id'],str) or not row['message_id'] or len(row['message_id'])>200 or row['message_id'] in seen:raise ValueError('消息ID无效或重复')
+            if not isinstance(row['translation_zh'],str) or not row['translation_zh'].strip() or len(row['translation_zh'])>20000:raise ValueError('消息译文无效')
+            seen.add(row['message_id'])
     for key in ('original_language','translation_zh'):
         if not isinstance(value[key],str) or not value[key].strip() or len(value[key])>(80 if key=='original_language' else 50000):raise ValueError('原文语言或完整中文译文无效。')
     if not isinstance(value['cleaned'],dict) or set(value['cleaned'])!=set(CLEANED):raise ValueError('客户清洗字段不完整。')
@@ -39,6 +49,8 @@ def parse_result(content):
 
 def prompt(profile,instruction):
     return ('本次是customer_analysis结构化客户处理，不是回复邮件或Markdown成果。只返回指定schema的JSON。\n'
+        '网站客户须读取list_sources中的conversation来源至nextStart为空，结合完整多轮往来判断当前待答问题；区分买家新要求、我方已回复与尚未兑现承诺，不将已回答问题重复当作缺口。'
+        'message_translations逐条完整翻译profile.conversation中的消息，保留message_id，双方消息均译为中文，已是中文则保留原文；没有消息返回空数组。禁止虚构ID或合并消息。'
         '完整逐段翻译original_text为中文，保留全部需求、数值、单位、限制和问句；不是摘要，不得省略后半段。'
         '若原文是中文，translation_zh保留完整中文原文；original_language明确实际语言，无法判断写unknown。'
         'cleaned仅摘取原文明示的事实：未提供的字段写空字符串，不从邮箱域名、姓名、IP或措辞猜公司/国家/数量/客户价值。'

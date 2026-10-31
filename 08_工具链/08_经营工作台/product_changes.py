@@ -188,6 +188,31 @@ class ProductChanges:
         result.find('./field/value').text = title
         return ET.tostring(result, encoding='unicode')
 
+    def diagnose(self, product_id, *, read_platform=True):
+        """Read a title baseline; never submit or synchronize product facts."""
+        return self._run(self._diagnose, product_id, read_platform=read_platform)
+
+    def _diagnose(self, pid, *, read_platform=True):
+        if not isinstance(pid,str) or not re.fullmatch(r'\d{1,32}',pid) or type(read_platform) is not bool:
+            raise ChangeError('INVALID_ARGUMENT')
+        _, _, row = self._catalog(pid)
+        local = (row.get('current_platform_fields') or row.get('catalog_fields') or {}).get('title')
+        self._start_audit(uuid.uuid4().hex)
+        platform = self._read(pid) if read_platform else None
+        issues = []
+        if not local: issues.append('LOCAL_TITLE_MISSING')
+        if 'PROTECT_SOURCE' in json.dumps(row): issues.append('PROTECTED_PRODUCT')
+        if platform and platform['title'] != local: issues.append('LOCAL_PLATFORM_TITLE_DIFFERS')
+        if platform and platform['status'] != 'approved': issues.append('PLATFORM_NOT_APPROVED')
+        return {'productId':pid,'sharedProductId':row.get('product_id'),'localTitle':local,
+                'platform':platform,'issues':issues,'readOnly':True,
+                'evidenceReceipts':list(self._audit_refs),
+                'nextStep':'review_title_and_evidence',
+                'requiredPreparation':['proposed_title','rationale','existing_evidence_paths'],
+                'submission':{'state':'not-submitted'},'localSync':{'state':'not-synced'},
+                'publicVerification':{'state':'not-verified'},
+                'boundary':'诊断只读取标题及版本，不证明材料、功能或供货能力；准备、提交、正式回读、本地同步、公开验收分别记录。'}
+
     def prepare(self, product_id, proposed_title, *, rationale, evidence, internal_test=False):
         return self._run(self._prepare, product_id, proposed_title, rationale=rationale, evidence=evidence, internal_test=internal_test)
 

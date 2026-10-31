@@ -83,3 +83,20 @@ class CustomerTests(unittest.TestCase):
         with self.assertRaises(ValueError):self.work.create_discovery({'kind':'candidate','company':'Buyer','sent':True})
 
 if __name__=='__main__':unittest.main()
+class MessageTranslationTests(CustomerTests):
+    def test_message_translation_identity_persistence_and_changed_body(self):
+        self.record['messages']=[{'id':'m1','sender':'buyer','body':'What is MOQ?','sentAt':'2026-11-01'},{'id':'m2','sender':'seller','body':'Please select a style.'}]
+        self.obj['content']=json.dumps(self.record)
+        before=copy.deepcopy(self.obj)
+        profile=self.work.profile(self.obj['id'])
+        saved=self.work.save_profile(self.obj['id'],{'source_hash':profile['source_hash'],'message_translations':[{'message_id':'m1','translation_zh':'起订量多少？'},{'message_id':'m2','translation_zh':'请选择款式。'}]})
+        self.assertEqual(saved['conversation'][0]['translation_zh'],'起订量多少？')
+        self.assertEqual(self.work.profile(self.obj['id'])['conversation'][1]['translation_zh'],'请选择款式。')
+        self.assertEqual(before,self.obj)
+        self.record['messages'][0]['body']='What is the price?';self.obj['content']=json.dumps(self.record)
+        updated=self.work.profile(self.obj['id'])
+        self.assertEqual(updated['conversation'][0]['translation_zh'],'')
+        self.assertTrue(updated['conversation'][0]['translation_stale'])
+        self.assertEqual(updated['conversation'][1]['translation_zh'],'请选择款式。')
+        with self.assertRaises(ValueError):self.work.save_profile(self.obj['id'],{'source_hash':profile['source_hash'],'message_translations':[]})
+        with self.assertRaises(ValueError):self.work.save_profile(self.obj['id'],{'source_hash':updated['source_hash'],'message_translations':[{'message_id':'foreign','translation_zh':'错误'}]})

@@ -31,6 +31,10 @@ def open_business(root=None, state=None):
         from inquiry_intake import InquiryIntake
         app.customer_workspace = CustomerWorkspace(app)
         app.inquiry_intake = InquiryIntake(app)
+        from creation import Creation
+        from creation_canvas import CreationCanvas
+        app.creation = Creation(app.root)
+        app.creation_canvas = CreationCanvas(app)
     except Exception:
         app.db.close()
         raise
@@ -38,6 +42,16 @@ def open_business(root=None, state=None):
 
 
 def invoke(business, area, operation, *, object_id=None, kind='', query='', title=None, content=None, artifact_id=None):
+    if area == 'canvas':
+        canvas = business.app.creation_canvas
+        if operation == 'get':return canvas.get(object_id)
+        if operation == 'save':
+            try:body = json.loads(content)
+            except (ValueError, TypeError):raise ValueError('画布保存需要JSON正文，包含version、nodes和edges')
+            if not isinstance(body,dict) or not {'version','nodes','edges'} <= set(body):raise ValueError('画布保存须明确version、nodes和edges；先读取现有画布')
+            if body.get('object_id',object_id) != object_id:raise ValueError('画布对象与命令目标不一致')
+            return canvas.save({**body,'object_id':object_id})
+        raise ValueError('不支持的画布动作')
     website_object = isinstance(object_id, str) and object_id.startswith('customer:website-')
     customer_listing = area == 'objects' and operation == 'list' and kind in ('', 'customer')
     status = None
@@ -80,11 +94,16 @@ def main(argv=None):
     save.add_argument('--title', required=True)
     save.add_argument('--content-file', type=Path, help='省略时从stdin读取Markdown正文')
     save.add_argument('--artifact-id', help='明确更新同一份既有成果')
+    canvas = areas.add_parser('canvas').add_subparsers(dest='operation', required=True)
+    canvas.add_parser('get').add_argument('object_id')
+    canvas_save = canvas.add_parser('save')
+    canvas_save.add_argument('object_id')
+    canvas_save.add_argument('--content-file', type=Path, help='省略时stdin读取含version/nodes/edges的JSON')
     args = parser.parse_args(argv)
     app = None
     try:
         content = None
-        if args.area == 'artifacts' and args.operation == 'save':
+        if args.area in ('artifacts','canvas') and args.operation == 'save':
             content = args.content_file.read_text(encoding='utf-8-sig') if args.content_file else sys.stdin.read()
         app = open_business(args.root, args.state)
         result = invoke(app.business, args.area, args.operation, object_id=getattr(args, 'object_id', None),

@@ -41,6 +41,20 @@ class Client:
 
 
 class ProductChangeTests(unittest.TestCase):
+    def test_title_diagnosis_reads_without_draft_submission_or_local_sync(self):
+        before=self.path.read_bytes()
+        result=self.changes.diagnose('123')
+        self.assertTrue(result['ok'])
+        self.assertEqual(result['change']['platform']['title'],'Old title')
+        self.assertEqual([m for m,p in self.client.calls],[GET])
+        self.assertEqual(self.path.read_bytes(),before)
+        self.assertEqual(self.changes.list_changes(),[])
+        self.assertEqual(result['change']['submission']['state'],'not-submitted')
+        self.assertTrue(result['change']['evidenceReceipts'])
+        self.client.calls.clear()
+        self.assertTrue(self.changes.diagnose('123',read_platform=False)['ok'])
+        self.assertEqual(self.client.calls,[])
+
     def setUp(self):
         self.temp=tempfile.TemporaryDirectory();self.root=Path(self.temp.name)
         self.path=self.root/CATALOG;self.path.parent.mkdir(parents=True)
