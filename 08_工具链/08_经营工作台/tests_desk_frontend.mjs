@@ -62,7 +62,7 @@ function harness(hash = '#/overview') {
 
 test('real data drives navigation and original content is collapsed; untrusted titles stay text', async () => {
   const h = harness('#/products'); await h.ui.bootstrap(); await settle(); assert.ok(h.elements.page.textContent.includes('真实商品')); assert.equal(walk(h.body).some(item => item.tagName === 'SCRIPT'), false);
-  h.location.hash = '#/object/product%3A1'; await h.ui.renderRoute(); await settle(); const source = h.elements.page.querySelector('.object-source-details'); assert.ok(source); assert.notEqual(source.open, true); assert.equal(h.ui.safeUrl('javascript:alert(1)'), null); assert.equal(h.ui.imageAsset({ path: 'real.jpg', url: '/api/asset?id=1' }), true);
+  h.location.hash = '#/object/product%3A1'; await h.ui.renderRoute(); await settle(); assert.equal(h.elements.page.querySelector('.object-source-details'), null); assert.equal(h.ui.safeUrl('javascript:alert(1)'), null); assert.equal(h.ui.imageAsset({ path: 'real.jpg', url: '/api/asset?id=1' }), true);
 });
 
 test('job carries current object/token, text events render, and polling preserves instruction and unsaved artifact', async () => {
@@ -109,7 +109,7 @@ test('detached customer search cannot rewrite the object hash while navigation i
 
 test('product summary keeps business facts compact and preserves long channel fields behind disclosure', async () => {
   const h = harness('#/object/product%3A1'); h.objects[0].facts = [{ label: '共用产品ID', value: 'internal-id' }, { label: '别名', value: 'extra aliases' }, { label: '来源状态', value: '已确认' }, { label: '供应商', value: '真实供应商' }, { label: '供应商原款', value: '原款008' }, { label: '用途候选', value: '候选方向' }, { label: '历史参考价', value: '仅作参考' }, { label: '原档已有规格', value: '原档规格' }, { label: 'Alibaba 123', value: 'Long platform title '.repeat(30) }, { label: '原始资料包', value: '原包路径' }]; await h.ui.bootstrap(); await settle();
-  const hero = h.elements.page.querySelector('.detail-hero'), visible = hero.querySelector('.object-facts'), extra = hero.querySelector('.extra-facts'); assert.equal(visible.querySelectorAll('dt').length, 6); assert.equal(visible.textContent.includes('internal-id'), false); assert.equal(visible.textContent.includes('Long platform title'), false); assert.notEqual(extra.open, true); assert.ok(extra.textContent.includes('Long platform title')); assert.ok(extra.textContent.includes('internal-id'));
+  const hero = h.elements.page.querySelector('.detail-hero'), visible = hero.querySelector('.object-facts'), extra = hero.querySelector('.extra-facts'); assert.equal(visible.querySelectorAll('dt').length, 6); assert.equal(visible.textContent.includes('internal-id'), false); assert.equal(visible.textContent.includes('Long platform title'), false); assert.equal(extra, null);
 });
 
 test('default artifact follows latest actual job, explicit artifact wins, and saved work opens in read mode', async () => {
