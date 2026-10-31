@@ -241,6 +241,8 @@ class Handler(BaseHTTPRequestHandler):
                         'goals':app.bootstrap()['goals'],'website_status':app.business.website_status(),
                         'alibaba_status':app.business.alibaba.status()})
                 if u.path=='/api/desk/customer-profile':return self.send_json(app.customer_workspace.profile(value('object_id')))
+                if u.path=='/api/desk/inquiry-queue':return self.send_json(app.customer_workspace.queue(bucket=value('bucket') or 'active',state=value('state'),q=value('q')))
+                if u.path=='/api/desk/customer-workflow':return self.send_json(app.customer_workspace.workflow(value('object_id')))
                 if u.path=='/api/desk/discovery':return self.send_json(app.customer_workspace.discovery())
                 if u.path=='/api/desk/discovery/item':return self.send_json(app.customer_workspace.get_discovery(value('id')))
                 if u.path=='/api/desk/objects':return self.send_json({'objects':app.business.list_objects(kind=value('kind'),q=value('q'))})
@@ -282,6 +284,9 @@ class Handler(BaseHTTPRequestHandler):
             if parts==['api','desk','customer-profile']:
                 object_id=body.pop('object_id',None)
                 return self.send_json(app.customer_workspace.save_profile(object_id,body))
+            if parts==['api','desk','customer-workflow']:
+                object_id=body.pop('object_id',None)
+                return self.send_json(app.customer_workspace.save_workflow(object_id,body))
             if parts==['api','desk','discovery']:return self.send_json(app.customer_workspace.create_discovery(body),201)
             if parts==['api','desk','discovery','update']:
                 entry_id=body.pop('id',None)

@@ -10,14 +10,15 @@ import unittest
 from unittest.mock import patch
 from agent_jobs import AgentJobs
 from customer_workspace import CustomerWorkspace
-from customer_analysis import parse_result,CLEANED,ANALYSIS_TEXT,ANALYSIS_LIST
+from customer_analysis import (parse_result,prompt,SCHEMA,COMPANY_CONTEXT_SOURCES,CLEANED,ANALYSIS_TEXT,ANALYSIS_LIST,
+                              LEGACY_ANALYSIS_TEXT,LEGACY_ANALYSIS_LIST)
 from tests_agent_jobs import Process
 
 def response():
     return {'original_language':'en','translation_zh':'我们需要500双样品，请确认鞋款规格和样品费用。',
         'cleaned':{key:{'company':'Buyer','quantity':'500','need':'需要样品'}.get(key,'') for key in CLEANED},
-        'analysis':{**{key:{'intent':'样品询问，尚未确认订单','fit':'需核逐款供货依据','next_action':'询问鞋款、尺码和交付地'}.get(key,'') for key in ANALYSIS_TEXT},
-            **{key:[] for key in ANALYSIS_LIST}}}
+        'analysis':{**{key:{'intent':'样品询问，尚未确认订单','fit':'需核逐款供货依据','next_action':'询问鞋款、尺码和交付地'}.get(key,'') for key in LEGACY_ANALYSIS_TEXT},
+            **{key:[] for key in LEGACY_ANALYSIS_LIST}}}
 
 class CustomerAnalysisTests(unittest.TestCase):
     def setUp(self):
@@ -106,4 +107,43 @@ class CustomerAnalysisTests(unittest.TestCase):
         malformed=response();malformed['analysis']['facts']=[{'claim':'Not allowed shape'}]
         with self.assertRaises(ValueError):parse_result(json.dumps(malformed))
 
+    def test_secretary_prompt_answers_known_factory_cooperation_before_order_checklist(self):
+        text=prompt({'original_text':'Are you a factory? What is your MOQ?'},'分析核心意图')
+        self.assertIn('贝强就是工厂',text)
+        self.assertIn('现款可小量、混色混码',text)
+        self.assertIn('Logo、鞋垫/标签、鞋盒、鞋面改色可做',text)
+        self.assertIn('定制按难度商谈',text)
+        self.assertIn('现在阻碍下一步',text)
+        self.assertIn('报价时才需要',text)
+        self.assertIn('不猜客户是否使用AI',text)
+        self.assertIn('先回答核心需求',text)
+
+    def test_operator_explanation_is_object_scoped_and_does_not_destroy_original(self):
+        original='I want a factory partner and would like to know MOQ.'
+        explanation='这条表单1000为必填占位，不代表1000双订单；核心为找合作工厂及了解MOQ。'
+        text=prompt({'original_text':original,'cleaned':{'quantity':'1000'},'operator_context':explanation},'简报')
+        self.assertIn(original,text);self.assertIn(explanation,text)
+        self.assertIn('优先用其解释表单与正文冲突',text)
+        self.assertIn('不能泛化到别的询盘',text)
+        unrelated=prompt({'original_text':'We confirm an order of 1000 pairs.'},'分析')
+        self.assertNotIn('必填占位',unrelated)
+
+    def test_new_schema_complete_legacy_parse_compatible_and_three_questions_max(self):
+        analysis=SCHEMA['properties']['analysis']
+        self.assertTrue({'brief','core_need','secondary_requests','conflicts','recommended_reply','questions_now'}<=set(analysis['required']))
+        self.assertEqual(analysis['properties']['questions_now']['maxItems'],3)
+        self.assertEqual(parse_result(json.dumps(response()))['analysis'],response()['analysis'])
+        expanded=response()
+        expanded['analysis'].update(brief='寻合作，先答工厂与小量混配。',core_need='了解MOQ',recommended_reply='先介绍可承接方式，再请选款。',
+                                   secondary_requests=[],conflicts=[],questions_now=['偏好的款型？'])
+        self.assertEqual(parse_result(json.dumps(expanded))['analysis']['core_need'],'了解MOQ')
+        expanded['analysis']['questions_now']=['a','b','c','d']
+        with self.assertRaises(ValueError):parse_result(json.dumps(expanded))
+
+    def test_context_uses_existing_sources_and_keeps_internal_details_out_of_buyer_reply(self):
+        text=prompt({'original_text':'Please explain your cooperation options.'},'分析')
+        for path in COMPANY_CONTEXT_SOURCES:self.assertIn(path,text)
+        self.assertIn('内部成本、采购入口、供应商信息',text)
+        self.assertIn('不写进建议给客户的正文',text)
+        self.assertIn('英文正文，必须附完整中文译文',text)
 if __name__=='__main__':unittest.main()

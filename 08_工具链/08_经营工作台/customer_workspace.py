@@ -12,10 +12,12 @@ import os
 from pathlib import Path
 import tempfile
 from uuid import uuid4
+import customer_workflow
 
 CANDIDATES='04_客户开发/02_目标名单/.local/客户发现助手/candidates.json'
 SOURCE_FIELDS={'company','country','quantity','need','stage','contact_name','email','products','timeline','destination','budget','source_notes'}
-ANALYSIS_FIELDS={'intent','fit','basis','missing','next_action','facts','inferences','needs','product_fit','recommendations','reply_draft','risks','questions'}
+ANALYSIS_FIELDS={'intent','fit','basis','missing','next_action','facts','inferences','needs','product_fit','recommendations','reply_draft','risks','questions',
+                 'brief','core_need','recommended_reply','secondary_requests','conflicts','questions_now'}
 DISCOVERY_FIELDS={'title','target','company','website','market_hint','evidence','next_action','status','notes','object_id','origin_object_id','ready_for_customer'}
 
 def _now():return datetime.now(timezone.utc).isoformat()
@@ -37,6 +39,19 @@ def _evidence(value):
             result.append({key:_text(val,4000) for key,val in item.items()})
         else:raise ValueError('证据格式无效')
     return result
+
+def _order_text(record):
+    lines=['订单接口业务摘要（不是买家原话，也不是新询盘）']
+    for order in record.get('orders',[]):
+        if not isinstance(order,dict):continue
+        lines.append('订单编号：'+str(order.get('id') or '原记录未提供'))
+        lines.append('订单状态：'+str(order.get('status') or '原记录未提供'))
+        for product in order.get('products',[]):
+            if not isinstance(product,dict):continue
+            lines.append('商品：'+str(product.get('name') or product.get('product_id') or '原记录未提供')+
+                '；数量：'+str(product.get('quantity') if product.get('quantity') is not None else '原记录未提供')+
+                (' '+str(product['unit']) if product.get('unit') else ''))
+    return '\n'.join(lines)
 
 class CustomerWorkspace:
     def __init__(self,app):
@@ -81,8 +96,10 @@ class CustomerWorkspace:
         except ValueError:record={}
         if not isinstance(record,dict):record={}
         source_type=obj.get('source_type') or ('website' if object_id.startswith('customer:website-') else 'local')
-        original=record.get('requirements') if source_type=='website' else obj.get('original_text')
-        if not isinstance(original,str):original=content
+        if source_type=='alibaba_order_buyer':original=_order_text(record)
+        elif source_type=='website':original=record.get('requirements') if isinstance(record.get('requirements'),str) else ''
+        elif source_type=='manual_import':original=obj.get('original_text') or record.get('original_text') or ''
+        else:original=obj.get('original_text') if isinstance(obj.get('original_text'),str) else content
         canonical=json.dumps(record,ensure_ascii=False,sort_keys=True) if record else content
         return obj,source_type,record,original,_hash(canonical)
 
@@ -101,32 +118,75 @@ class CustomerWorkspace:
             'acquisition':'unknown','source_verification':{'state':'unverified','note':'仅确认原来源有这份记录；未核实访客身份、自然获客或渠道归因。' if source_type=='website' else '沿原业务记录读取；研究资料不等于采购意向或已触达。'},
             'evidence_notes':saved.get('source_note',''),'evidence':saved.get('evidence',[])}
         return {'object_id':object_id,'source_type':source_type,'provenance':provenance,'original_text':original,
-            'original_language':saved.get('original_language') or record.get('original_language') or record.get('language') or 'unknown',
+            'original_language':saved.get('original_language') or record.get('original_language') or record.get('language') or ('zh' if source_type=='alibaba_order_buyer' else 'unknown'),
             'translation_zh':saved.get('translation_zh',''),'cleaned':cleaned,'analysis':analysis,
             'source_hash':source_hash,'derived_source_hash':saved.get('source_hash'),
-            'stale':bool(saved) and saved.get('source_hash')!=source_hash,'updated_at':saved.get('updated_at'),
+            'stale':bool(saved.get('source_hash')) and saved.get('source_hash')!=source_hash,'updated_at':saved.get('updated_at'),
+            'operator_context':saved.get('operator_context',''),
+            'workflow':customer_workflow.decorate(object_id,source_type,saved.get('workflow')),
             'derivation':'人工或Agent派生资料；facts为列明依据的摘录，inferences为判断，不改原文。'}
 
     def save_profile(self,object_id,body):
-        if not isinstance(body,dict) or set(body)-{'source_hash','original_language','translation_zh','cleaned','analysis','source_note','evidence'}:raise ValueError('不支持的客户分析字段')
+        if not isinstance(body,dict) or set(body)-{'source_hash','original_language','translation_zh','cleaned','analysis','source_note','evidence','operator_context'}:raise ValueError('不支持的客户分析字段')
         with self.app.lock:
             current=self.profile(object_id)
             if body.get('source_hash')!=current['source_hash']:raise ValueError('原来源已变化，请刷新后重新核对派生资料')
             saved=self._saved_profile(object_id)
-            for key,limit in [('original_language',80),('translation_zh',50000),('source_note',10000)]:
+            for key,limit in [('original_language',80),('translation_zh',50000),('source_note',10000),('operator_context',12000)]:
                 if key in body:saved[key]=_text(body[key],limit)
             if 'cleaned' in body:saved['cleaned']={**saved.get('cleaned',{}),**_mapping(body['cleaned'],SOURCE_FIELDS)}
             if 'analysis' in body:saved['analysis']={**saved.get('analysis',{}),**_mapping(body['analysis'],ANALYSIS_FIELDS)}
             if 'evidence' in body:saved['evidence']=_evidence(body['evidence'])
             saved.update(object_id=object_id,source_hash=current['source_hash'],updated_at=_now())
-            if object_id.startswith('customer:website-'):
-                reference=object_id.removeprefix('customer:website-')
-                if not reference or any(c not in 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_-' for c in reference):raise ValueError('网站询盘ID无效')
-                path=self.root/'04_客户开发/.local/网站询盘'/reference/'客户分析.json'
-            else:path=self.root/'04_客户开发/.local/客户分析'/(_hash(object_id)[:24]+'.json')
-            relative=self._write(path,saved)
-            self.app.db.execute('INSERT OR REPLACE INTO customer_profiles VALUES (?,?)',(object_id,relative));self.app.db.commit()
+            self._store_profile(object_id,saved)
         return self.profile(object_id)
+
+    def _store_profile(self,object_id,saved):
+        if object_id.startswith('customer:website-'):
+            reference=object_id.removeprefix('customer:website-')
+            if not reference or any(c not in 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_-' for c in reference):raise ValueError('网站询盘ID无效')
+            path=self.root/'04_客户开发/.local/网站询盘'/reference/'客户分析.json'
+        else:path=self.root/'04_客户开发/.local/客户分析'/(_hash(object_id)[:24]+'.json')
+        relative=self._write(path,saved)
+        self.app.db.execute('INSERT OR REPLACE INTO customer_profiles VALUES (?,?)',(object_id,relative));self.app.db.commit()
+
+    def workflow(self,object_id):
+        obj,source_type,record,original,source_hash=self._source(object_id)
+        return customer_workflow.decorate(object_id,source_type,self._saved_profile(object_id).get('workflow'))
+
+    def save_workflow(self,object_id,body):
+        with self.app.lock:
+            row=customer_workflow.update(self.workflow(object_id),body)
+            saved=self._saved_profile(object_id)
+            saved.update(object_id=object_id,workflow=row)
+            self._store_profile(object_id,saved)
+        return self.workflow(object_id)
+
+    def queue(self,bucket='active',state='',q=''):
+        if bucket not in customer_workflow.BUCKETS or state and state not in customer_workflow.STATES or not isinstance(q,str):raise ValueError('询盘队列查询无效')
+        rows=[]
+        for entry in self.app.business.list_objects(kind='customer'):
+            object_id=entry['id'];obj,source_type,record,original,source_hash=self._source(object_id)
+            if source_type=='alibaba_order_buyer':continue
+            saved=self._saved_profile(object_id);cleaned=saved.get('cleaned',{})
+            flow=customer_workflow.decorate(object_id,source_type,saved.get('workflow'))
+            rows.append({'object_id':object_id,'title':obj.get('title') or '',
+                'contact':{'name':record.get('name') or record.get('contact_name') or cleaned.get('contact_name') or '',
+                    'email':record.get('email') or cleaned.get('email') or ''},
+                'source_type':source_type,'source':obj.get('source'),
+                'received_at':record.get('receivedAt') or record.get('received_at'),
+                'workflow':flow,'analysis':customer_workflow.brief(saved.get('analysis',{}),{**{'need':record.get('requirements')},**cleaned}),
+                'analysis_stale':bool(saved.get('source_hash')) and saved.get('source_hash')!=source_hash})
+        counts={key:sum(row['workflow']['bucket']==key for row in rows) for key in customer_workflow.BUCKETS}
+        selected=[row for row in rows if row['workflow']['bucket']==bucket]
+        counts['states']={key:sum(row['workflow']['state']==key for row in selected) for key in customer_workflow.STATES}
+        counts['priorities']={key:sum(row['workflow']['priority']==key for row in selected) for key in customer_workflow.PRIORITIES}
+        counts['overdue']=sum(row['workflow']['overdue'] for row in rows)
+        if state:selected=[row for row in selected if row['workflow']['state']==state]
+        if q.strip():selected=[row for row in selected if q.strip().casefold() in json.dumps(row,ensure_ascii=False).casefold()]
+        selected.sort(key=customer_workflow.sort_key);counts['matched']=len(selected)
+        return {'items':selected,'rows':selected,'counts':counts,'bucket':bucket,'state':state,'q':q,
+            'labels':{'states':dict(customer_workflow.STATES),'priorities':dict(customer_workflow.PRIORITIES),'buckets':dict(customer_workflow.BUCKETS)}}
 
     def _source_candidates(self):
         path=self.root/CANDIDATES

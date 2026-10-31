@@ -29,6 +29,26 @@ class CustomerHTTPTests(unittest.TestCase):
         self.assertEqual(status,201);return result
     def tools(self,oid):return DeskTools(self.app.business,self.root,oid,audit=self.root/'read-audit.jsonl')
 
+    def test_inquiry_queue_workflow_and_operator_context_share_current_brief(self):
+        created=self.intake();oid=created['object_id']
+        status,queue=self.request('/api/desk/inquiry-queue?bucket=active')
+        self.assertEqual(status,200);self.assertIn(oid,[r['object_id'] for r in queue['items']])
+        status,flow=self.request('/api/desk/customer-workflow',{'object_id':oid,'state':'preparing','priority':'high','next_action':'先准备合作回复'})
+        self.assertEqual(status,200);self.assertEqual(flow['state'],'preparing')
+        status,profile=self.request('/api/desk/customer-profile?'+urlencode({'object_id':oid}))
+        self.assertEqual(status,200);self.assertFalse(profile['stale'])
+        status,saved=self.request('/api/desk/customer-profile',{'object_id':oid,'source_hash':profile['source_hash'],'operator_context':'此数量是估计值，先讨论合作方式'})
+        self.assertEqual(status,200);self.assertEqual(saved['workflow']['priority'],'high')
+        brief=self.tools(oid).call('get_object',{})['customer_brief']
+        self.assertEqual(brief['operator_context'],'此数量是估计值，先讨论合作方式')
+        self.assertEqual(brief['workflow']['next_action'],'先准备合作回复')
+        status,closed=self.request('/api/desk/customer-workflow',{'object_id':oid,'state':'archived'})
+        self.assertEqual(status,200)
+        status,active=self.request('/api/desk/inquiry-queue?bucket=active')
+        self.assertNotIn(oid,[r['object_id'] for r in active['items']])
+        status,ended=self.request('/api/desk/inquiry-queue?bucket=archive')
+        self.assertIn(oid,[r['object_id'] for r in ended['items']])
+
     def test_manual_inquiry_http_object_profile_and_chinese_save_reopen(self):
         original='We need 800 pairs. Please confirm available sizes, sample fee and lead time.'
         created=self.intake(original);oid=created['object_id']

@@ -76,6 +76,9 @@ class DeskTools:
                             if isinstance(ref,str):paths[ref]='current-formal-readback'
             paths['02_Alibaba运营/00_运营SOP/国际站商品全生命周期SOP.md']='applicable-sop'
         else:
+            paths['00_总控台/产品中心/产品矩阵与供货能力.md']='company-capabilities'
+            paths['02_Alibaba运营/01_店铺与全店诊断/店铺首页优化方案_2026-09-14.md']='company-facts'
+            paths['04_客户开发/03_邮件与多渠道模板/潜在客户多渠道开发与外发素材SOP_2026-08-26.md']='company-presentation'
             paths['04_客户开发/README.md']='applicable-sop'
             paths['07_知识库与Skills/01_运营SOP/技术型品牌买家询盘评估SOP.md']='applicable-sop'
         result={}
@@ -148,6 +151,10 @@ class DeskTools:
     def call(self,name,args):
         if name=='get_object':
             obj=self.object()
+            workspace=getattr(getattr(self.business,'app',None),'customer_workspace',None)
+            if workspace and obj.get('kind') in ('customer','prospect'):
+                profile=workspace.profile(self.object_id)
+                obj={**obj,'customer_brief':{key:profile.get(key) for key in ('operator_context','analysis','cleaned','workflow','stale')}}
             if self.audit:
                 with self.audit.open('a',encoding='utf8') as stream:
                     stream.write(json.dumps({'tool':'get_object','object_id':self.object_id,'success':True})+'\n')

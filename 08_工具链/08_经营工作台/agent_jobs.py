@@ -140,6 +140,10 @@ class AgentJobs:
                     'source': item.get('source')} for item in candidates
                    if item.get('id') in related_ids][:15]
         context = {key: obj.get(key) for key in ('id', 'kind', 'title', 'subtitle', 'source', 'summary', 'facts', 'assets', 'links', 'content')}
+        workspace=getattr(self.app,'customer_workspace',None)
+        if workspace and obj.get('kind') in ('customer','prospect'):
+            profile=workspace.profile(obj['id'])
+            context['current_customer_brief']={key:profile.get(key) for key in ('operator_context','analysis','cleaned','workflow','stale')}
         # A large source stays reachable at its original path; do not silently
         # pretend truncated context is a complete copy of that source.
         if isinstance(context.get('content'), str) and len(context['content']) > 18000:
@@ -154,6 +158,9 @@ class AgentJobs:
             '材料、尺码、版本、MOQ、价格及交期逐款取证，缺证不从别款推定。'
             '客户资料仅用于当前业务，不公开同步；产品与来源、渠道商品分别维护。'
             '必要SOP可从list_sources读取。'
+            '客户工作先读company-capabilities公司能力来源；贝强是鞋类工厂，已确认的公司身份和一般合作能力直接复用，不因缺某款资料就整体写成承接能力未知。'
+            '优先理解客户正文中的合作目标和当前阶段；结合负责人operator_context解释冲突，不把必填表单数字自动当成确定订单。'
+            '像业务秘书一样给出明确判断和能推进的一步：客户真正需要什么、我们如何承接、此刻最多三个问题。泛化能力清单及后续技术细节不要一次变成问卷；不猜客户是否用AI。'
             '先读当前商品及渠道总档的精确投影，current_platform_fields正式字段优先历史文案/尺码计划。'
             '当前正式字段与历史计划冲突时，列出冲突及时间，不能采用旧计划替代当前尺码或规格。'
             '默认来源已精简；仅有具体缺口才用list_sources(q=关键词)检索历史，避免批量读取回执。'
