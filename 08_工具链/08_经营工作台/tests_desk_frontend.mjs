@@ -65,6 +65,17 @@ test('real data drives navigation and original content is collapsed; untrusted t
   h.location.hash = '#/object/product%3A1'; await h.ui.renderRoute(); await settle(); assert.equal(h.elements.page.querySelector('.object-source-details'), null); assert.equal(h.ui.safeUrl('javascript:alert(1)'), null); assert.equal(h.ui.imageAsset({ path: 'real.jpg', url: '/api/asset?id=1' }), true);
 });
 
+test('商品分页并按实际鞋型筛选，不把冬鞋默认归为靴或把步行鞋归为系带', async () => {
+  const h = harness('#/products'); h.objects.length = 0;
+  for (let i = 0; i < 40; i++) h.objects.push({ id:`product:${i}`, kind:'product', title:`鞋${i}`, facts:[{label:'用途候选',value:i===0?'冬季套脚鞋':i===1?'步行休闲鞋':'系带鞋'}], assets:[] });
+  await h.ui.bootstrap(); await settle();
+  assert.equal(h.elements.page.querySelectorAll('.object-tile').length,36);
+  await findButton(h.body,'显示更多商品').click(); assert.equal(h.elements.page.querySelectorAll('.object-tile').length,40);
+  const category = walk(h.body).find(item=>item['aria-label']==='商品分类'); category.value='boot'; await category.listeners.change(); await settle();
+  assert.equal(h.elements.page.querySelectorAll('.object-tile').length,0);
+  category.value='slip'; await category.listeners.change(); await settle(); assert.ok(h.elements.page.textContent.includes('冬季套脚鞋'));
+});
+
 test('job carries current object/token, text events render, and polling preserves instruction and unsaved artifact', async () => {
   const h = harness('#/object/product%3A1'); await h.ui.bootstrap(); await settle(); const ctx = h.ui.S.detail;
   ctx.instruction.value = '根据真实材料整理选款'; ctx.instruction.listeners.input({}); await findButton(h.body, '交给 Sol 处理').click(); const call = h.requests.find(item => item.path === '/api/desk/jobs' && item.payload); assert.equal(call.payload.object_id, 'product:1'); assert.equal(call.options.headers['X-Workbench-Token'], 'fixture-token'); assert.ok(ctx.jobBox.textContent.includes('已取得资料'));
