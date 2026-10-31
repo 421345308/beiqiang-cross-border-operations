@@ -16,6 +16,38 @@ DEFAULT_CODEX_VERSION = '0.166.0'
 QUEUE_URL = 'https://www.beiqiang.online/api/workbench-runner'
 
 
+def is_mountpoint(path, *, mountinfo=None, expected_root=None, require_persistent=False):
+    """Recognize exact Linux mount entries, including same-device bind mounts.
+
+    os.path.ismount compares devices/inodes and misses same-filesystem binds.
+    mountinfo is kernel evidence for this process's own mount namespace.
+    An injected text fixture is used only by unit tests.
+    """
+    target = os.fspath(Path(path).resolve())
+    if mountinfo is None:
+        try:
+            mountinfo = Path('/proc/self/mountinfo').read_text(encoding='utf-8')
+        except OSError:
+            return not require_persistent and os.path.ismount(path)
+    for line in mountinfo.splitlines():
+        fields = line.split()
+        if len(fields) < 10 or '-' not in fields[6:]:
+            continue
+        decode = lambda value: re.sub(r'\\([0-7]{3})', lambda match: chr(int(match[1], 8)), value)
+        point = decode(fields[4])
+        if point == target:
+            separator = fields.index('-', 6)
+            if len(fields) <= separator + 3:
+                continue
+            filesystem = fields[separator + 1]
+            if require_persistent and filesystem in ('tmpfs', 'ramfs', 'overlay', 'proc', 'sysfs', 'devtmpfs', 'cgroup', 'cgroup2'):
+                continue
+            if expected_root is not None and decode(fields[3]) != expected_root:
+                continue
+            return True
+    return False
+
+
 def _run(command, env):
     return subprocess.run(command, env=env, capture_output=True, text=True,
                           encoding='utf-8', errors='replace', timeout=20, check=False)
@@ -79,7 +111,7 @@ def preflight(env=None, *, expected_version=None, run_command=None, find_executa
         if os.name != 'nt':
             valid = valid and all(not (p.stat().st_mode & 0o077) and p.stat().st_uid == os.geteuid() for p in (code, state))
         check('storage_paths', valid, 'PRIVATE_STORAGE_PATHS_REQUIRED')
-        mounted = os.path.ismount(root)
+        mounted = is_mountpoint(root, expected_root=env.get('WORKBENCH_RUNNER_BIND_SOURCE'), require_persistent=True)
         result['storage']['mount_present'] = mounted
         check('persistent_mount', mounted or not require_mount, 'PERSISTENT_MOUNT_REQUIRED')
         if valid:

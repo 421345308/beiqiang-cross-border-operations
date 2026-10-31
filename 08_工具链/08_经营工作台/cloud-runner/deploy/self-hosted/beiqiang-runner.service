@@ -1,0 +1,38 @@
+[Unit]
+Description=Beiqiang private Sol runner
+After=network-online.target beiqiang-api.service
+RequiresMountsFor=/var/lib/beiqiang/runner
+[Service]
+User=beiqiang-runner
+Group=beiqiang-runner
+WorkingDirectory=/opt/beiqiang-runner/current
+EnvironmentFile=/etc/beiqiang/runner.env
+Environment=HOME=/var/lib/beiqiang-runner
+Environment=CODEX_HOME=/var/data/codex
+Environment=WORKBENCH_RUNNER_STATE=/var/data/state
+Environment=WORKBENCH_RUNNER_PERSISTENT_ROOT=/var/data
+Environment=WORKBENCH_RUNNER_BIND_SOURCE=/var/lib/beiqiang/runner
+Environment=PATH=/opt/beiqiang/runtime/node/bin:/opt/beiqiang-codex/bin:/usr/local/bin:/usr/bin:/bin
+# Private mount namespace; does not mount over the host's /var/data.
+BindPaths=/var/lib/beiqiang/runner:/var/data
+ExecStartPre=/usr/bin/python3 /opt/beiqiang-runner/current/preflight.py
+ExecStart=/usr/bin/python3 -u /opt/beiqiang-runner/current/runner.py
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/data /var/lib/beiqiang-runner
+InaccessiblePaths=-/etc/sing-box -/root -/etc/beiqiang/api.env -/etc/beiqiang/tls -/var/lib/postgresql -/var/lib/beiqiang/files
+MemoryMax=512M
+MemoryHigh=448M
+CPUQuota=75%
+TasksMax=96
+KillMode=control-group
+TimeoutStopSec=30
+# Auth/execution faults require review; restart must not clear blocked.json.
+Restart=no
+StandardOutput=journal
+StandardError=journal
+[Install]
+WantedBy=multi-user.target

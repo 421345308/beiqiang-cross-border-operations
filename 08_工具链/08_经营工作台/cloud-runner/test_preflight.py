@@ -5,10 +5,28 @@ import tempfile
 from types import SimpleNamespace
 import unittest
 
-from preflight import DEFAULT_CODEX_VERSION, QUEUE_URL, preflight
+from preflight import DEFAULT_CODEX_VERSION, QUEUE_URL, preflight, is_mountpoint
 
 
 class PreflightTests(unittest.TestCase):
+    def test_mountinfo_recognizes_exact_same_device_bind_only(self):
+        root = Path(tempfile.gettempdir()).resolve()
+        mount = root / 'private-mount'
+        fixture = f'80 20 8:1 /private/source {os.fspath(mount)} rw,relatime - ext4 /dev/sda rw\n'
+        self.assertTrue(is_mountpoint(mount, mountinfo=fixture))
+        self.assertFalse(is_mountpoint(root, mountinfo=fixture))
+        self.assertFalse(is_mountpoint(mount / 'child', mountinfo=fixture))
+        self.assertFalse(is_mountpoint(mount, mountinfo='80 malformed\n'))
+        self.assertTrue(is_mountpoint(mount, mountinfo=fixture, expected_root='/private/source', require_persistent=True))
+        self.assertFalse(is_mountpoint(mount, mountinfo=fixture, expected_root='/other/source', require_persistent=True))
+        self.assertFalse(is_mountpoint(mount, mountinfo=fixture.replace('ext4 /dev/sda', 'tmpfs tmpfs'), require_persistent=True))
+        self.assertFalse(is_mountpoint(mount, mountinfo=fixture.replace('ext4 /dev/sda', 'overlay overlay'), require_persistent=True))
+
+    @unittest.skipIf(os.name == 'nt', 'Linux mountinfo POSIX escaped paths')
+    def test_mountinfo_decodes_kernel_escaped_mountpoint(self):
+        fixture = r'81 20 8:1 /source /tmp/private\040mount\134name rw - ext4 /dev/sda rw'
+        self.assertTrue(is_mountpoint('/tmp/private mount\\name', mountinfo=fixture))
+
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
