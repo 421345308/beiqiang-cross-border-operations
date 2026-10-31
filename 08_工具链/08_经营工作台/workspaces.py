@@ -74,7 +74,8 @@ class Workspaces:
                         raise ValueError('节点位置不正确')
                     position[axis] = value
                 clean.append({'id': nid, 'type': kind_name, 'title': text(node.get('title', ''), '节点标题', 200),
-                              'content': text(node.get('content', ''), '节点内容', 12000), **position})
+                              'content': text(node.get('content', ''), '节点内容', 12000),
+                              'media_path': text(node.get('media_path', ''), '素材路径', 2000), **position})
             data = {'id': oid, 'title': text(body.get('title'), '画布名称', 200, True), 'nodes': clean,
                     'project_id': text(body.get('project_id') or '', 'LibTV画布ID', 128),
                     'workspace_id': text(body.get('workspace_id') or '', 'LibTV工作区ID', 128)}

@@ -1,4 +1,4 @@
-"""Local workbench. Business Markdown remains authoritative; SQLite stores runs only."""
+"""Local workbench with shared SQLite execution and draft records."""
 from __future__ import annotations
 import argparse, difflib, hashlib, importlib.util, json, mimetypes, os, re, secrets, shutil, signal, sqlite3, subprocess, threading, uuid
 from datetime import datetime, timezone
@@ -6,6 +6,8 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import urlsplit, parse_qs, unquote
 from workspaces import Workspaces, WorkspaceConflict
+from media_assets import MediaAssets, MediaError
+from product_changes import ProductChanges
 
 HERE = Path(__file__).resolve().parent
 MODEL = 'gpt-6.1-sol'
@@ -34,6 +36,8 @@ class Workbench:
                 run.update(status='interrupted',error='服务重启中断了执行；可续改。',updated_at=now()); self.save(run)
         self.schema=self.state/'proposal.schema.json'; self.schema.write_text(json.dumps(SCHEMA),encoding='utf-8')
         self.workspaces=Workspaces(self)
+        self.media=MediaAssets(self.root)
+        self.product_changes=ProductChanges(self)
     def save(self, run):
         with self.lock:
             self.db.execute('INSERT OR REPLACE INTO runs VALUES (?,?)',(run['id'],json.dumps(run,ensure_ascii=False))); self.db.commit()
@@ -220,6 +224,10 @@ class Handler(BaseHTTPRequestHandler):
         try:
             self.check_host();u=urlsplit(self.path);app=self.server.app
             if u.path=='/api/health':return self.send_json({'ok':True,'model':MODEL,'app':'beiqiang-workbench','root':str(app.root)})
+            if u.path=='/api/media/file':return app.media.serve(self,parse_qs(u.query).get('path',[''])[0])
+            if u.path=='/api/product-changes':return self.send_json({'changes':app.product_changes.list_changes()})
+            if u.path.startswith('/api/product-changes/'):
+                return self.send_json(app.product_changes.get(u.path.split('/')[-1]))
             if u.path.startswith(('/api/canvases','/api/product-drafts','/api/tools/','/api/channel-metrics/')):
                 return self.send_json(app.workspaces.route_get(u.path,parse_qs(u.query)))
             if u.path=='/api/bootstrap':return self.send_json(app.bootstrap())
@@ -231,6 +239,7 @@ class Handler(BaseHTTPRequestHandler):
             if u.path=='/':p=web/'index.html'
             if not p.is_relative_to(web) or not p.is_file():return self.send_json({'error':'页面不存在'},404)
             data=p.read_bytes();self.send_response(200);self.send_header('Content-Type',mimetypes.guess_type(str(p))[0] or 'application/octet-stream');self.send_header('X-Content-Type-Options','nosniff');self.send_header('Content-Length',str(len(data)));self.end_headers();self.wfile.write(data)
+        except MediaError as e:self.send_json({'error':str(e)},e.status)
         except PermissionError as e:self.send_json({'error':str(e)},403)
         except (ValueError,KeyError) as e:self.send_json({'error':str(e)},400)
         except Exception:self.send_json({'error':'读取失败，请检查本地业务文件'},500)
@@ -244,6 +253,12 @@ class Handler(BaseHTTPRequestHandler):
             if size<1 or size>limit:raise ValueError('请求大小无效')
             body=json.loads(self.rfile.read(size));parts=urlsplit(self.path).path.strip('/').split('/')
             if not isinstance(body,dict):raise ValueError('请求必须是JSON对象')
+            if parts==['api','media','resolve']:return self.send_json({'media':app.media.resolve(body.get('path',''))})
+            if parts==['api','product-changes','prepare']:
+                return self.send_json(app.product_changes.prepare(body.get('product_id'),body.get('proposed_title'),rationale=body.get('rationale'),evidence=body.get('evidence')))
+            if len(parts)==4 and parts[:2]==['api','product-changes']:
+                if parts[3]=='apply':return self.send_json(app.product_changes.apply(parts[2],confirmed=body.get('confirmed'),expected_version=body.get('expected_version')))
+                if parts[3]=='reconcile':return self.send_json(app.product_changes.reconcile(parts[2]))
             if urlsplit(self.path).path.startswith(('/api/canvases','/api/product-drafts','/api/tools/')):
                 return self.send_json(app.workspaces.route_post(urlsplit(self.path).path,body))
             if parts==['api','runs']:return self.send_json(app.start(body.get('task_id'),body.get('instruction')),201)
@@ -254,6 +269,7 @@ class Handler(BaseHTTPRequestHandler):
                 if action=='reject':return self.send_json(app.reject(rid))
                 if action=='resume':return self.send_json(app.start(app.get(rid)['task_id'],body.get('instruction'),rid))
             self.send_json({'error':'接口不存在'},404)
+        except MediaError as e:self.send_json({'error':str(e)},e.status)
         except PermissionError as e:self.send_json({'error':str(e)},403)
         except (Conflict,WorkspaceConflict) as e:self.send_json({'error':str(e)},409)
         except (ValueError,KeyError,TypeError) as e:self.send_json({'error':str(e)},400)
@@ -262,7 +278,7 @@ class Handler(BaseHTTPRequestHandler):
 def main():
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--root',type=Path,default=HERE.parents[1]);parser.add_argument('--port',type=int,default=8765);args=parser.parse_args()
     app=Workbench(args.root);server=ThreadingHTTPServer(('127.0.0.1',args.port),Handler);server.app=app
-    print('贝强工作台 http://127.0.0.1:%s （本地文档审核写回；外发与平台操作未接入）'%args.port,flush=True)
+    print('贝强工作台 http://127.0.0.1:%s （本地资料、视频与具名渠道操作）'%args.port,flush=True)
     try:server.serve_forever()
     except KeyboardInterrupt:pass
     finally:

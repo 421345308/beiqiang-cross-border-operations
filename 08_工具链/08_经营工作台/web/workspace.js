@@ -7,11 +7,12 @@
   const status = (target, text, kind = '') => { target.textContent = text; target.className = `module-status ${kind}`; };
   const prettyDate = value => value ? date(value) : '未提供';
   const external = (label, url) => { try { const parsed = new URL(url); if (parsed.protocol !== 'https:') return null; const a = node('a', label, 'module-link'); a.href = parsed.href; a.target = '_blank'; a.rel = 'noopener noreferrer'; return a; } catch { return null; } };
+  const changeErrors = { INVALID_ARGUMENT: '请检查标题、变更理由和依据文件是否完整。', INVALID_EVIDENCE_PATH: '依据文件路径不可用，请选择项目内真实存在的资料。', PROTECTED_PRODUCT: '此商品有来源保护，不能通过本流程提交。', LOCAL_TITLE_MISSING: '本地商品档案缺少原标题，请先补齐原记录。', NO_CHANGE: '拟改标题与当前正式标题一致，无需提交。', PLATFORM_NOT_APPROVED: '商品当前不是可修改的正式审核通过状态。', PLATFORM_VERSION_CONFLICT: '正式商品已变化，请重新准备差异。', LOCAL_VERSION_CONFLICT: '本地商品档案已变化，请先核对原记录。', VERSION_CONFLICT: '变更记录版本已更新，请重新打开核对。', ALREADY_ATTEMPTED_RECONCILE_ONLY: '本记录已尝试提交，只能沿原记录回读，不能重复发送。', INTERNAL_TEST_NOT_SUBMITTABLE: '内部验收草案不可提交平台。', TITLE_SCHEMA_UNVERIFIED: '平台标题结构尚未核实，未提交。', TITLE_SCHEMA_MISMATCH: '平台标题结构不匹配，未提交。', SCHEMA_UNAVAILABLE: '暂未取得平台修改结构，未提交。', PRODUCT_CHANGE_IN_PROGRESS: '该商品已有标题变更正在核对，请先查看原记录。', NOT_SUBMITTED: '本记录尚未提交，不需要执行提交后回读。' };
   async function request(path, body) {
     const options = body === undefined ? {} : { method: 'POST', headers: { 'Content-Type': 'application/json', 'X-Workbench-Token': state.data?.csrf_token || '' }, body: JSON.stringify(body) };
     const response = await fetch(path, options); let value;
     try { value = await response.json(); } catch { throw new Error('服务暂未返回可读取的结果，请稍后重试。'); }
-    if (!response.ok || value.ok === false) { const message = response.status === 409 && path === '/api/canvases' ? '草稿已在其他页面更新，请重新打开核对；本次未保存内容仍保留。' : typeof value.error === 'string' ? value.error : value.error?.message || '服务暂不可用，请检查连接后重试。'; const error = new Error(String(message).slice(0, 400)); error.code = typeof value.error === 'object' ? value.error?.code : undefined; error.status = response.status; throw error; }
+    if (!response.ok || value.ok === false) { const message = response.status === 409 && path === '/api/canvases' ? '草稿已在其他页面更新，请重新打开核对；本次未保存内容仍保留。' : typeof value.error === 'string' ? value.error : value.error?.message || changeErrors[value.error?.code] || '服务暂不可用，请检查连接后重试。'; const error = new Error(String(message).slice(0, 400)); error.code = typeof value.error === 'object' ? value.error?.code : undefined; error.status = response.status; error.change = value.change || null; throw error; }
     return value;
   }
   const dataPart = (result, key) => result.data?.[key] ?? result.data ?? result[key];
@@ -21,9 +22,11 @@
   const titleBlock = (root, eyebrow, title, description) => { const h = node('div', undefined, 'module-header'), text = node('div'); text.append(node('span', eyebrow, 'eyebrow'), node('h1', title), node('p', description)); h.append(text); root.append(h); };
   const c = { ready: false, canvas: { title: '未命名视频草稿', nodes: [] }, selected: null, dirty: false, zoom: 1, remoteProject: null, remoteWorkspace: '', remoteProjects: [], page: 1 };
   const refs = {};
+  const mediaCache = new Map();
+  const mediaKey = item => `${item.id}:${item.media_path || ''}`;
   function changed() { c.dirty = true; status(refs.canvasStatus, '本地修改尚未保存'); }
   function leaveDraft() { if (c.saving) { status(refs.canvasStatus, '正在保存，请稍后再切换草稿。'); return false; } return !c.dirty || window.confirm('当前本地草稿尚未保存，继续会放弃本次未保存的修改。'); }
-  function canvasDimensions() { return { width: Math.max(1800, ...c.canvas.nodes.map(n => Number(n.x) + 330)), height: Math.max(1200, ...c.canvas.nodes.map(n => Number(n.y) + 250)) }; }
+  function canvasDimensions() { return { width: Math.max(1800, ...c.canvas.nodes.map(n => Number(n.x) + 330)), height: Math.max(1200, ...c.canvas.nodes.map(n => Number(n.y) + (n.type === 'asset' ? 430 : 250))) }; }
   function drawLines() {
     const { width, height } = canvasDimensions(); refs.wires.setAttribute('width', width); refs.wires.setAttribute('height', height); refs.wires.replaceChildren();
     for (let i = 1; i < c.canvas.nodes.length; i++) { const a = c.canvas.nodes[i - 1], b = c.canvas.nodes[i], path = document.createElementNS('http://www.w3.org/2000/svg', 'path'); const x = Number(a.x) + 260, y = Number(a.y) + 40, endX = Number(b.x), endY = Number(b.y) + 40; path.setAttribute('d', `M ${x} ${y} C ${x + 60} ${y}, ${endX - 60} ${endY}, ${endX} ${endY}`); refs.wires.append(path); }
@@ -44,10 +47,52 @@
         const end = () => { head.removeEventListener('pointermove', move); head.removeEventListener('pointerup', end); head.removeEventListener('pointercancel', end); };
         head.addEventListener('pointermove', move); head.addEventListener('pointerup', end); head.addEventListener('pointercancel', end);
       });
-      card.append(head, node('h4', item.title || '未命名卡片'), node('p', item.content || '选择卡片，在左侧编辑内容。')); card.addEventListener('click', () => selectCard(item.id)); refs.surface.append(card);
+      card.append(head, node('h4', item.title || '未命名卡片'), node('p', item.content || '选择卡片，在左侧编辑内容。')); if (item.type === 'asset') card.append(mediaPreview(item)); card.addEventListener('click', event => { if (!event.target.closest('video,audio,img,button,a,input,textarea')) selectCard(item.id); }); refs.surface.append(card);
     }
     resizeCanvas(); renderEditor();
   }
+  function verifiedMedia(value) {
+    if (!value || !['image', 'video', 'audio'].includes(value.kind) || typeof value.path !== 'string' || !value.path || typeof value.url !== 'string' || !value.url || typeof value.mime_type !== 'string' || !value.mime_type.startsWith(`${value.kind}/`)) throw new Error('服务未返回有效的本地媒体引用，未显示预览。');
+    const url = new URL(value.url, window.location.origin);
+    if (url.origin !== window.location.origin || url.pathname !== '/api/media/file' || url.username || url.password || url.hash || url.searchParams.get('path') !== value.path) throw new Error('服务未返回已核本地媒体地址，未显示预览。');
+    return { ...value, url: url.pathname + url.search };
+  }
+  function mediaPreview(item) {
+    const box = node('div', undefined, 'asset-preview'); const saved = mediaCache.get(mediaKey(item));
+    if (!item.media_path) { box.append(node('p', '尚未选择项目素材。填写相对路径后点击“检查并预览”。', 'subtle')); return box; }
+    box.append(node('div', item.media_path, 'asset-path'));
+    if (saved?.status !== 'ready') { box.append(node('p', saved?.message || '尚未检查实际素材，未加载预览。', saved?.status === 'error' ? 'module-status error' : 'subtle')); return box; }
+    let media;
+    try { media = verifiedMedia(saved.media); } catch (error) { box.append(node('p', error.message, 'module-status error')); return box; }
+    const preview = node(media.kind === 'image' ? 'img' : media.kind); preview.src = media.url;
+    if (media.kind === 'image') { preview.alt = media.name || item.title || '项目图片素材'; preview.loading = 'lazy'; }
+    else { preview.controls = true; preview.preload = 'metadata'; if (media.kind === 'video') preview.playsInline = true; }
+    preview.addEventListener('error', () => { preview.remove(); if (!box.querySelector('.asset-load-error')) box.append(node('p', '素材读取失败或文件已变化。请重新检查路径后预览。', 'module-status error asset-load-error')); });
+    preview.addEventListener('click', event => event.stopPropagation());
+    const enlarge = act('放大预览', () => { if (typeof preview.pause === 'function') preview.pause(); openMediaPreview(media); }); enlarge.addEventListener('click', event => event.stopPropagation());
+    box.append(preview, enlarge, node('div', `${media.name || '本地素材'} · ${media.mime_type} · ${Number.isFinite(media.size) ? `${media.size.toLocaleString('zh-CN')} 字节` : '大小未提供'}`, 'subtle')); return box;
+  }
+  function openMediaPreview(reference) {
+    const media = verifiedMedia(reference), dialog = node('dialog', undefined, 'media-lightbox');
+    const preview = node(media.kind === 'image' ? 'img' : media.kind), content = node('div', undefined, 'media-lightbox-content'), message = node('div', '', 'module-status'); preview.src = media.url;
+    if (media.kind === 'image') preview.alt = media.name || '本地项目素材';
+    else { preview.controls = true; preview.preload = 'metadata'; if (media.kind === 'video') preview.playsInline = true; }
+    preview.addEventListener('error', () => status(message, '素材读取失败或文件已变化。关闭后请重新检查路径。', 'error'));
+    content.append(preview); dialog.append(toolbar(node('h2', media.name || '实际素材预览'), act('关闭预览', () => dialog.close())), node('p', media.path, 'subtle'), message, content);
+    dialog.addEventListener('close', () => { if (typeof preview.pause === 'function') { preview.pause(); preview.removeAttribute('src'); preview.load(); } dialog.remove(); }); document.body.append(dialog); dialog.showModal();
+  }
+  async function resolveMedia(item, { quiet = false } = {}) {
+    const requestedPath = (item.media_path || '').trim(); if (!requestedPath) { if (!quiet) status(refs.canvasStatus, '请先填写项目相对素材路径。', 'error'); return; }
+    const key = mediaKey(item); if (mediaCache.get(key)?.status === 'loading') return; mediaCache.set(key, { status: 'loading', message: '正在核对本地文件与媒体类型…' });
+    try {
+      const result = await request('/api/media/resolve', { path: requestedPath }), media = verifiedMedia(result.media);
+      if (!c.canvas.nodes.includes(item) || (item.media_path || '').trim() !== requestedPath) return;
+      if (item.media_path !== media.path) { item.media_path = media.path; changed(); }
+      mediaCache.set(mediaKey(item), { status: 'ready', media }); if (!quiet) status(refs.canvasStatus, '实际素材已核对，预览仅在本机读取；未上传远端。', 'success');
+    } catch (error) { if (!c.canvas.nodes.includes(item)) return; mediaCache.set(key, { status: 'error', message: error.message }); if (!quiet) status(refs.canvasStatus, error.message, 'error'); }
+    renderCanvas();
+  }
+  function resolveSavedMedia() { for (const item of c.canvas.nodes) if (item.type === 'asset' && item.media_path) resolveMedia(item, { quiet: true }); }
   function renderEditor() {
     const target = refs.editor; target.replaceChildren(node('h3', '卡片内容')); const item = c.canvas.nodes.find(n => n.id === c.selected);
     if (!item) { target.append(node('p', '选择画布卡片后编辑标题和文字。', 'subtle')); return; }
@@ -55,7 +100,13 @@
     title.addEventListener('input', () => { item.title = title.value; const card = [...refs.surface.querySelectorAll('.canvas-node')].find(n => n.dataset.id === item.id); if (card) card.querySelector('h4').textContent = item.title || '未命名卡片'; changed(); });
     content.addEventListener('input', () => { item.content = content.value; const card = [...refs.surface.querySelectorAll('.canvas-node')].find(n => n.dataset.id === item.id); if (card) card.querySelector('p').textContent = item.content || '选择卡片，在左侧编辑内容。'; changed(); });
     const actions = toolbar(act('前移一位', () => { const index = c.canvas.nodes.indexOf(item); if (index > 0) { [c.canvas.nodes[index - 1], c.canvas.nodes[index]] = [c.canvas.nodes[index], c.canvas.nodes[index - 1]]; changed(); renderCanvas(); } }), act('删除卡片', () => { c.canvas.nodes = c.canvas.nodes.filter(n => n.id !== item.id); c.selected = null; changed(); renderCanvas(); }));
-    target.append(node('label', `${kindLabel(item.type)} · 标题`), title, node('label', '提示文字 / 内容'), content, actions, act('复制此内容到 LibTV 文本节点…', () => syncNode(item)));
+    target.append(node('label', `${kindLabel(item.type)} · 标题`), title, node('label', '提示文字 / 内容'), content);
+    if (item.type === 'asset') {
+      const path = field('input', '05_内容与视频/项目/素材.png'); path.value = item.media_path || ''; path.setAttribute('aria-label', '项目相对素材路径');
+      path.addEventListener('input', () => { item.media_path = path.value; changed(); const card = [...refs.surface.querySelectorAll('.canvas-node')].find(el => el.dataset.id === item.id); card?.querySelector('.asset-preview')?.replaceWith(mediaPreview(item)); });
+      target.append(node('label', '项目相对素材路径（图片 / 视频 / 音频）'), path, node('p', '仅读取后端核准的本地文件。路径文字不会被当作网址或文件地址直接加载。', 'subtle'), act('检查并预览实际素材', () => resolveMedia(item)));
+    }
+    target.append(actions, act('复制此内容到 LibTV 文本节点…', () => syncNode(item)));
   }
   function addCard(type) { const index = c.canvas.nodes.length; const item = { id: uuid(), type, title: `${kindLabel(type)} ${index + 1}`, content: '', x: 45 + (index % 4) * 310, y: 45 + Math.floor(index / 4) * 230 }; c.canvas.nodes.push(item); c.selected = item.id; changed(); renderCanvas(); }
   async function refreshCanvases() {
@@ -121,7 +172,7 @@
   function initVideo() {
     if (c.ready) return; c.ready = true; const root = document.getElementById('video-view'); titleBlock(root, 'VIDEO WORKSPACE', '把想法排成镜头', '本地草稿在本机保存。LibTV 远端画布通过明确的读取或确认操作连接；本轮不提供付费生成。');
     refs.title = field('input', '本地草稿标题'); refs.title.value = c.canvas.title; refs.title.addEventListener('input', () => { c.canvas.title = refs.title.value; changed(); }); refs.saved = field('select'); refs.saved.add(new Option('打开已保存的本地草稿', ''));
-    refs.saved.addEventListener('change', async () => { if (!refs.saved.value || !leaveDraft()) return; try { const result = await request(`/api/canvases/${encodeURIComponent(refs.saved.value)}`); c.canvas = result.canvas || result.data || result; c.selected = null; c.dirty = false; renderCanvas(); status(refs.canvasStatus, '已打开本地保存的草稿，不代表 LibTV 远端最新状态。'); } catch (error) { status(refs.canvasStatus, error.message, 'error'); } });
+    refs.saved.addEventListener('change', async () => { if (!refs.saved.value || !leaveDraft()) return; try { const result = await request(`/api/canvases/${encodeURIComponent(refs.saved.value)}`); c.canvas = result.canvas || result.data || result; c.selected = null; c.dirty = false; renderCanvas(); resolveSavedMedia(); status(refs.canvasStatus, '已打开本地保存的草稿，不代表 LibTV 远端最新状态。'); } catch (error) { status(refs.canvasStatus, error.message, 'error'); } });
     root.append(toolbar(refs.title, act('新建本地草稿', () => { if (leaveDraft()) { c.canvas = { title: '未命名视频草稿', nodes: [] }; c.selected = null; c.dirty = false; renderCanvas(); status(refs.canvasStatus, '新建本地草稿，尚未保存。'); } }), act('保存到本机', saveCanvas, 'primary'), refs.saved)); refs.canvasStatus = node('div', '', 'module-status'); root.append(refs.canvasStatus);
     const layout = node('div', undefined, 'canvas-layout'), side = node('aside', undefined, 'canvas-side'), cards = node('section', undefined, 'card'); cards.append(node('h3', '添加卡片'), toolbar(act('＋ 文本', () => addCard('text')), act('＋ 镜头', () => addCard('shot')), act('＋ 素材', () => addCard('asset'))));
     const remote = node('section', undefined, 'card'); remote.append(node('span', 'LIBTV 远端 · 不自动同步', 'remote-label')); refs.workspace = field('select'); refs.workspace.add(new Option('先读取工作空间', '')); refs.project = field('select'); refs.project.add(new Option('先读取画布列表', '')); refs.workspace.addEventListener('change', () => { c.remoteProject = null; refs.remoteInfo.replaceChildren(); refs.project.replaceChildren(new Option('重新读取画布列表', '')); }); refs.project.addEventListener('change', () => { c.remoteProject = null; refs.remoteInfo.replaceChildren(); }); refs.remoteName = field('input', '新远端画布名称'); refs.remoteStatus = node('div', '', 'module-status'); refs.remoteInfo = node('div');
@@ -142,7 +193,7 @@
   function switchAlibaba(tab) { a.tab = tab; [...ar.tabs.children].forEach((el, i) => el.classList.toggle('active', i === ['products', 'customers', 'metrics'].indexOf(tab))); ar.body.replaceChildren(); status(ar.message, ''); if (tab === 'products') renderProductsPanel(); if (tab === 'customers') renderCustomers(); if (tab === 'metrics') renderMetrics(); }
   function renderProductsPanel() {
     ar.products = node('div', undefined, 'product-grid'); ar.detail = node('section', undefined, 'module-detail'); ar.pagination = node('div', undefined, 'module-toolbar'); ar.pageLabel = node('span', '', 'subtle'); const prev = act('上一页', () => { if (a.page > 1) { a.page--; loadProducts(); } }); const next = act('下一页', () => { a.page++; loadProducts(); }); ar.prev = prev; ar.next = next;
-    ar.body.append(toolbar(act('读取平台商品', () => loadProducts()), act('查看本地优化草稿', loadProductDrafts), node('span', '商品数量只用于翻页，不代表经营表现。', 'subtle')), ar.products); ar.pagination.append(prev, ar.pageLabel, next); ar.body.append(ar.pagination, ar.detail); loadProducts();
+    ar.body.append(toolbar(act('读取平台商品', () => loadProducts()), act('查看本地优化草稿', loadProductDrafts), act('标题变更记录', loadTitleChanges), node('span', '商品数量只用于翻页，不代表经营表现。', 'subtle')), ar.products); ar.pagination.append(prev, ar.pageLabel, next); ar.body.append(ar.pagination, ar.detail); loadProducts();
   }
   function productRows(result) { return arrayItems(result.data?.products || result.data); }
   async function loadProducts() {
@@ -159,11 +210,75 @@
     if (!id) { status(ar.message, '该条记录缺少商品 ID，无法查询详情。', 'error'); return; } status(ar.message, '正在获取真实商品详情…');
     try { const result = await request(`/api/tools/alibaba/product?product_id=${encodeURIComponent(id)}`); if (a.tab !== 'products') return; const product = result.data?.product || result.data; a.product = product; const subject = product.subject || product.title || ''; ar.detail.replaceChildren(node('h2', subject || '商品详情')); const dl = node('dl');
       for (const [label, value] of [['商品 ID', product.id || product.product_id || id], ['平台状态', product.status], ['获取时间', prettyDate(result.source?.collectedAt || result.source?.attemptedAt)], ['类目', product.category_name || product.category_id], ['详情摘要', product.description]]) if (value !== undefined && value !== null && value !== '') dl.append(node('dt', label), node('dd', String(value))); ar.detail.append(dl); const link = external('在平台打开此商品 ↗', product.platformUrl || product.pc_detail_url || product.url || product.platform_url); if (link) ar.detail.append(link);
-      const form = node('div', undefined, 'module-form'); const after = field('textarea', '拟优化的标题'), notes = field('textarea', '优化依据、待确认信息'); after.value = subject; form.append(node('h3', '本地商品优化草稿'), node('p', '仅保存到本机，不提交标题、图片、属性或任何平台字段。', 'module-notice'), node('label', '拟修改标题'), after, node('label', '备注与依据'), notes, act('保存本地优化草稿', async () => { const draft = await request('/api/product-drafts', { product_id: String(product.id || product.product_id || id), subject_before: subject, subject_after: after.value, notes: notes.value }); status(ar.message, `优化草稿已保存 · ${prettyDate(draft.updated_at)}。未提交国际站。`, 'success'); }, 'primary')); ar.detail.append(form);
+      const draftHost = node('section'); ar.detail.append(draftHost); renderProductDraftEditor({ product_id: String(product.id || id), subject_before: subject, subject_after: subject, notes: '' }, draftHost);
+
     } catch (error) { status(ar.message, error.message, 'error'); }
   }
+  function renderProductDraftEditor(draft, host) {
+    host.replaceChildren(); const form = node('div', undefined, 'module-form'), after = field('textarea', '拟优化的标题'), notes = field('textarea', '优化依据、待确认信息'), evidence = field('textarea', '项目相对依据路径，每行一条');
+    after.value = draft.subject_after || ''; notes.value = draft.notes || ''; evidence.value = '02_Alibaba运营/05_扩品工程/数据/国际站商品.json';
+    const message = node('div', '', 'module-status'), changes = node('div'); let saving = false, preparing = false;
+    const save = act(draft.id ? '保存当前草稿修改' : '保存本地优化草稿', async () => {
+      if (saving) return; saving = true; save.disabled = true;
+      try {
+        const result = await request('/api/product-drafts', { ...(draft.id ? { id: draft.id, updated_at: draft.updated_at } : {}), product_id: String(draft.product_id), subject_before: draft.subject_before || '', subject_after: after.value, notes: notes.value });
+        Object.assign(draft, result.draft || result); save.textContent = '保存当前草稿修改'; status(message, `同一本地草稿已保存 · ${prettyDate(draft.updated_at)}。未提交国际站。`, 'success');
+      } catch (error) { status(message, error.status === 409 ? '草稿已在其他页面修改，请重新打开核对；当前输入仍保留。' : error.message, 'error'); }
+      finally { saving = false; save.disabled = false; }
+    }, 'primary');
+    const prepare = act('准备标题差异（只读核对）', async () => {
+      if (preparing) return; if (!after.value.trim()) { status(message, '请先填写拟修改标题。', 'error'); return; } if (!notes.value.trim()) { status(message, '请填写本次标题变更的具体理由。', 'error'); return; }
+      preparing = true; prepare.disabled = true; status(message, '正在读取正式标题并准备具名差异；尚未提交平台…');
+      try { const result = await request('/api/product-changes/prepare', { product_id: String(draft.product_id), proposed_title: after.value, rationale: notes.value, evidence: evidence.value.split(/\r?\n/).map(value => value.trim()).filter(Boolean) }); renderTitleChange(result.change, changes); status(message, '标题差异已准备，请核对目标、正式原值、拟改值及本地依据。此步骤未提交平台。', 'success'); }
+      catch (error) { status(message, error.message, 'error'); if (error.change) renderTitleChange(error.change, changes); }
+      finally { preparing = false; prepare.disabled = false; }
+    });
+    form.append(node('h3', draft.id ? '继续编辑本地商品草稿' : '本地商品优化草稿'), node('p', `目标商品：${draft.product_id}。草稿只保存提案；平台提交和回执仅保存在独立标题变更记录中。`, 'module-notice'), node('label', '保存时的原标题'), node('p', draft.subject_before || '原草稿未提供标题', 'draft-original'), node('label', '拟修改标题'), after, node('label', '备注与修改依据'), notes, toolbar(save), node('label', '变更依据（已填现有商品档案，可补逐款原始资料）'), evidence, node('p', '新增材料、功能或商业承诺须有逐款事实依据，不能只靠改写标题。准备差异会读取当前平台标题。只有后续具名确认才提交；正式回读、本地同步和公开呈现分别显示。', 'subtle'), prepare, message); host.append(form, changes);
+  }
+  const titleStateLabels = { prepared: '差异已准备 · 尚未提交', outcome_unknown: '提交结果未知 · 只可回读', submitted: '请求已提交 · 待核正式结果', business_rejected: '平台未接受本次提交', formal_pending: '正式结果待回读', formal_verified: '正式接口已核 · 本地同步待核', local_conflict: '本地记录冲突 · 尚未同步完成', local_synced: '正式回读与本地同步已完成' };
+  const stepStateLabels = { 'not-synced': '尚未同步', 'outcome-unknown': '结果未知', 'business-rejected': '未接受', 'not-started': '尚未开始', not_started: '尚未开始', 'not-submitted': '尚未提交', pending: '待核对', 'not-verified': '尚未验收', not_verified: '尚未验收', verified: '已核对', submitted: '已提交', sent: '已发送请求', unknown: '结果未知', failed: '失败', rejected: '未接受', updated: '已更新', synced: '已同步', conflict: '存在冲突', matched: '已一致' };
+  function renderTitleChange(change, host) {
+    host.replaceChildren(); if (!change || !change.id || !change.productId) { host.append(node('p', '未取得可核的标题变更记录，不能提交。', 'module-status error')); return; }
+    const section = node('section', undefined, 'title-change-step'); if (change.internalTest === true) section.append(node('p', '内部验收草案 · 不可提交', 'module-notice')); section.append(node('h3', titleStateLabels[change.state] || `当前状态：${change.state || '未提供'}`), node('p', `目标商品 ID：${change.productId} · 变更记录：${change.id} · 版本 ${change.version}`, 'subtle'));
+    const diff = node('div', undefined, 'title-review-diff'), before = node('div'), after = node('div'); before.append(node('strong', '当前正式标题'), node('p', change.diff?.before ?? '未提供')); after.append(node('strong', '拟提交标题'), node('p', change.diff?.after ?? '未提供')); diff.append(before, after); section.append(diff);
+    if (change.diff?.localBefore !== undefined) section.append(node('p', `本地记录原值：${change.diff.localBefore || '未提供'}`, 'subtle'));
+    if (change.rationale) section.append(node('p', `修改依据：${change.rationale}`));
+    if (Array.isArray(change.evidence) && change.evidence.length) { const list = node('ul'); change.evidence.forEach(value => list.append(node('li', typeof value === 'string' ? value : value.path || '依据记录'))); section.append(node('h4', '依据文件'), list); }
+    const steps = node('dl'); for (const [label, step] of [['平台提交', change.submission], ['正式接口回读', change.formal], ['本地档案同步', change.localSync], ['公开页面验收', change.publicVerification]]) { const state = step?.state; steps.append(node('dt', label), node('dd', state ? stepStateLabels[state] || state : '尚未取得状态')); } section.append(steps);
+    if (change.localSync?.indexState === 'pending-regeneration') section.append(node('p', '本地商品档案已同步；派生索引尚待重新生成。', 'module-notice'));
+    if (change.formal?.title) section.append(node('p', `正式回读标题：${change.formal.title}`));
+    const publicDone = ['verified', 'matched'].includes(change.publicVerification?.state); section.append(node('p', publicDone ? '公开页面已有独立验收记录，请以该记录范围为准。' : '公开页面尚未完成独立验收，不能把提交成功、正式回读或本地同步称为全部完成。', 'module-notice'));
+    const message = node('div', '', 'module-status'), actions = toolbar();
+    if (change.state === 'prepared' && change.internalTest !== true) actions.append(act('审阅并确认向该商品提交标题…', () => confirmTitleApply(change, host), 'primary'));
+    else section.append(node('p', change.internalTest === true ? '内部验收记录只用于核对差异，不会发起平台写请求。' : '本记录不再重复发送平台写请求；结果未知、待正式回读或本地冲突时，先沿原记录核对。', 'subtle'));
+    actions.append(act('重读这条变更记录', async () => { try { const result = await request(`/api/product-changes/${encodeURIComponent(change.id)}`); renderTitleChange(result.change, host); } catch (error) { status(message, error.message, 'error'); } }));
+    if (change.state !== 'prepared') actions.append(act('回读结果并核对本地同步', async () => { try { const result = await request(`/api/product-changes/${encodeURIComponent(change.id)}/reconcile`, {}); renderTitleChange(result.change, host); } catch (error) { if (error.change) renderTitleChange(error.change, host); else status(message, error.message, 'error'); } }));
+    section.append(actions, message); host.append(section);
+  }
+  function confirmTitleApply(change, host) {
+    if (change.state !== 'prepared' || change.internalTest === true) return; const dialog = node('dialog', undefined, 'module-confirm');
+    dialog.append(node('h2', '确认向国际站提交这一条标题差异'), node('p', `目标商品：${change.productId}。仅修改标题，不包含其他商品或字段。`), node('pre', `变更记录：${change.id}\n审阅版本：${change.version}\n\n正式原标题：\n${change.diff?.before || ''}\n\n拟提交标题：\n${change.diff?.after || ''}`));
+    const label = node('label', undefined, 'named-confirm'), checked = field('input'); checked.type = 'checkbox'; label.append(checked, document.createTextNode(` 我确认向商品 ${change.productId} 提交上述标题差异`)); const message = node('div', '', 'module-status');
+    const submit = act('确认提交给这一个商品', async () => {
+      if (!checked.checked || submit.dataset.sent === 'yes') return; submit.dataset.sent = 'yes'; submit.disabled = true; checked.disabled = true; status(message, '正在提交具名标题差异；请勿重复操作…');
+      try { const result = await request(`/api/product-changes/${encodeURIComponent(change.id)}/apply`, { confirmed: true, expected_version: change.version }); renderTitleChange(result.change, host); dialog.close(); }
+      catch (error) {
+        if (error.change) renderTitleChange(error.change, host);
+        else renderTitleChange({ ...change, state: 'outcome_unknown', submission: { state: 'unknown' } }, host);
+        status(message, `${error.message}\n请关闭本窗口，沿同一变更记录回读核对；此处不会重复发送平台请求。`, 'error');
+      }
+    }, 'primary'); submit.disabled = true; checked.addEventListener('change', () => { if (submit.dataset.sent !== 'yes') submit.disabled = !checked.checked; });
+    dialog.append(label, node('p', '确认后会发起真实平台写请求。成功响应仍须区分正式回读、本地同步及公开验收。', 'module-notice'), message, toolbar(act('取消 / 关闭', () => dialog.close()), submit)); document.body.append(dialog); dialog.addEventListener('close', () => dialog.remove()); dialog.showModal();
+  }
+  async function loadTitleChanges() {
+    try { const result = await request('/api/product-changes'); if (a.tab !== 'products') return; ar.detail.replaceChildren(node('h2', '标题变更与执行回执'), node('p', '这是提交状态的唯一记录。未知结果沿原记录核对，不重新创建同一提交。', 'module-notice')); const detail = node('section'), rows = result.changes || []; if (!rows.length) ar.detail.append(node('p', '尚无标题变更记录。', 'empty')); for (const change of rows) { const row = node('article', undefined, 'card module-list'); row.append(node('h3', `商品 ${change.productId}`), node('p', `${titleStateLabels[change.state] || change.state || '状态未提供'} · ${change.id}`, 'subtle'), act('打开原变更记录', async () => { const item = await request(`/api/product-changes/${encodeURIComponent(change.id)}`); renderTitleChange(item.change, detail); })); ar.detail.append(row); } ar.detail.append(detail); } catch (error) { status(ar.message, error.message, 'error'); }
+  }
   async function loadProductDrafts() {
-    try { const result = await request('/api/product-drafts'); if (a.tab !== 'products') return; ar.detail.replaceChildren(node('h2', '本机保存的优化草稿'), node('p', '以下均未提交国际站；平台当前标题请重新读取商品详情。', 'module-notice')); const rows = result.drafts || []; if (!rows.length) ar.detail.append(node('p', '尚未保存本地草稿。', 'empty')); rows.forEach(draft => { const row = node('article', undefined, 'card module-list'); row.append(node('h3', draft.subject_after || '未填写拟改标题'), node('p', `商品 ID：${draft.product_id} · ${prettyDate(draft.updated_at)} · 未提交平台`, 'subtle'), node('p', `原标题：${draft.subject_before || '未提供'}`), node('p', draft.notes || ''), act('重新读取平台详情', () => loadProduct(draft.product_id))); ar.detail.append(row); }); } catch (error) { status(ar.message, error.message, 'error'); }
+    try {
+      const result = await request('/api/product-drafts'); if (a.tab !== 'products') return; ar.detail.replaceChildren(node('h2', '本机保存的优化草稿'), node('p', '草稿仅保留提案，不记录或推断平台提交状态；实际提交请看“标题变更记录”。', 'module-notice')); const rows = result.drafts || [];
+      if (!rows.length) ar.detail.append(node('p', '尚未保存本地草稿。', 'empty'));
+      rows.forEach(draft => { const row = node('article', undefined, 'card module-list'), editor = node('section'); row.append(node('h3', draft.subject_after || '未填写拟改标题'), node('p', `商品 ID：${draft.product_id} · ${prettyDate(draft.updated_at)} · 本地草稿`, 'subtle'), node('p', `原标题：${draft.subject_before || '未提供'}`), node('p', draft.notes || ''), toolbar(act('重新打开编辑这份草稿', () => renderProductDraftEditor(draft, editor)), act('重新读取平台详情', () => loadProduct(draft.product_id))), editor); ar.detail.append(row); });
+    } catch (error) { status(ar.message, error.message, 'error'); }
   }
   function renderCustomers() {
     ar.body.append(node('h2', '客户与订单'), node('p', '查询和操作能力以当前授权接口为准。未接入的模块保留明确说明，不以空列表冒充没有客户或订单。', 'module-notice')); ar.customerBody = node('div', undefined, 'module-list'); ar.body.append(toolbar(act('重读接入说明', async () => { await loadCapabilities(); renderCapabilityCards(); })), ar.customerBody); renderCapabilityCards();

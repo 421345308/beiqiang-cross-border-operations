@@ -31,6 +31,14 @@ class WorkspaceTests(unittest.TestCase):
             self.work.save('canvas', {**canvas, 'title': '过期页面'})
         self.assertEqual(self.work.get('canvas', canvas['id']), revised)
 
+    def test_canvas_persists_media_reference_but_not_client_url(self):
+        canvas = self.work.save('canvas', {'title':'素材草稿','nodes':[
+            {'id':'media1','type':'asset','title':'原素材','content':'引用原件','x':0,'y':0,
+             'media_path':'05_内容与视频/项目/成片.mp4','media':{'url':'https://untrusted.example/file'}}]})
+        item = Workspaces(self.app).get('canvas',canvas['id'])['nodes'][0]
+        self.assertEqual(item['media_path'],'05_内容与视频/项目/成片.mp4')
+        self.assertNotIn('media',item)
+
     def test_bad_nodes_cannot_replace_saved_canvas(self):
         canvas = self.work.save('canvas', {'title': '保持原稿', 'nodes': []})
         with self.assertRaises(ValueError):
