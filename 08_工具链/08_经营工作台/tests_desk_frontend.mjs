@@ -109,7 +109,7 @@ test('detached customer search cannot rewrite the object hash while navigation i
 
 test('product summary keeps business facts compact and preserves long channel fields behind disclosure', async () => {
   const h = harness('#/object/product%3A1'); h.objects[0].facts = [{ label: '共用产品ID', value: 'internal-id' }, { label: '别名', value: 'extra aliases' }, { label: '来源状态', value: '已确认' }, { label: '供应商', value: '真实供应商' }, { label: '供应商原款', value: '原款008' }, { label: '用途候选', value: '候选方向' }, { label: '历史参考价', value: '仅作参考' }, { label: '原档已有规格', value: '原档规格' }, { label: 'Alibaba 123', value: 'Long platform title '.repeat(30) }, { label: '原始资料包', value: '原包路径' }]; await h.ui.bootstrap(); await settle();
-  const hero = h.elements.page.querySelector('.detail-hero'), visible = hero.querySelector('.object-facts'), extra = hero.querySelector('.extra-facts'); assert.equal(visible.querySelectorAll('dt').length, 6); assert.equal(visible.textContent.includes('internal-id'), false); assert.equal(visible.textContent.includes('Long platform title'), false); assert.equal(extra, null);
+  const hero = h.elements.page.querySelector('.detail-hero'), visible = hero.querySelector('.object-facts'), extra = hero.querySelector('.extra-facts'); assert.equal(visible.querySelectorAll('dt').length, 3); assert.equal(visible.textContent.includes('internal-id'), false); assert.equal(visible.textContent.includes('Long platform title'), false); assert.equal(extra, null);
 });
 
 test('default artifact follows latest actual job, explicit artifact wins, and saved work opens in read mode', async () => {
@@ -133,7 +133,7 @@ test('analysis creates a linked research task with evidence and never sends outr
 });
 
 test('development exposes real candidate evidence, research context, and a non-outreach preparation marker', async () => {
-  const h = harness('#/customers?view=development'); h.discovery.candidates.push({ id: 'candidate:source', object_id: 'prospect:candidate:source', kind: 'candidate', title: '已有来源候选', company: '候选公司', target: '需要核实供货适配', evidence: [{ url: 'https://example.com/', text: '原候选公开来源' }] }); await h.ui.bootstrap(); await settle(); assert.ok(h.elements.page.textContent.includes('目标客群')); const row = walk(h.elements.page).find(item => item.tagName === 'ARTICLE' && item.textContent.includes('已有来源候选')); await findButton(row, '打开继续 →').click(); await settle(); assert.ok(h.elements.page.textContent.includes('原候选公开来源')); assert.ok(h.ui.S.detail.instruction.value.includes('research_company'));
+  const h = harness('#/customers?view=development'); h.discovery.candidates.push({ id: 'candidate:source', object_id: 'prospect:candidate:source', kind: 'candidate', title: '已有来源候选', company: '候选公司', target: '需要核实供货适配', evidence: [{ url: 'https://example.com/', text: '原候选公开来源' }] }); await h.ui.bootstrap(); await settle(); assert.ok(h.elements.page.textContent.includes('目标客群')); const row = walk(h.elements.page).find(item => item.tagName === 'ARTICLE' && item.textContent.includes('已有来源候选')); await findButton(row, '打开客户 →').click(); await settle(); assert.ok(h.elements.page.textContent.includes('原候选公开来源')); assert.ok(h.ui.S.detail.instruction.value.includes('research_company'));
   await findButton(h.elements.page, '标记进入推进准备').click(); const changed = h.requests.find(item => item.path === '/api/desk/discovery/update'); assert.equal(changed.payload.ready_for_customer, true); assert.equal(changed.payload.status, '推进准备'); assert.equal(h.requests.some(item => /send|outreach/.test(item.path)), false);
 });
 

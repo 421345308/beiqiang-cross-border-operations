@@ -64,6 +64,17 @@ class Business:
             title=fields.get('title') or (first.get('catalog_fields') or {}).get('title') or ''
             obj=_object('product:'+pid,'product',product.get('current_model') or pid,PRODUCTS,subtitle=title or state_label,
                 summary=' · '.join(str(v) for v in [state_label,source.get('supplier'),source.get('model')] if v))
+            mode_record=product.get('supply_mode') or {}
+            supply_kind=mode_record.get('current') if isinstance(mode_record,dict) else ''
+            own=supply_kind=='OWN_FACTORY' and bool(product.get('raw_packages')) and bool(mode_record.get('evidence'))
+            supply_url=source.get('url','') if adopted and supply_kind=='EXTERNAL_FACTORY' else ''
+            if not isinstance(supply_url,str) or not supply_url.startswith('https://'):supply_url=''
+            obj['supply']={'kind':'own' if own else ('external' if supply_kind=='EXTERNAL_FACTORY' else 'unconfirmed'),
+                'label':'自有工厂' if own else ('外采供货' if supply_kind=='EXTERNAL_FACTORY' else '供货待确认'),
+                'url':supply_url,'supplier':source.get('supplier','') if adopted else '',
+                'model':source.get('model','') if adopted else ''}
+            obj['subtitle']=title
+            obj['summary']=obj['supply']['label']
             obj['current_model']=product.get('current_model') or pid
             obj['aliases']=product.get('aliases') or []
             obj['source_state']=product.get('source_state') or ''
@@ -247,7 +258,7 @@ class Business:
         query=q.strip().casefold()
         if query:objects=[o for o in objects if query in json.dumps(o,ensure_ascii=False).casefold()]
         # List stays compact; detail and Agent context use get_object.
-        return [{**{k:o[k] for k in ('id','kind','title','subtitle','source','summary')},'source_type':o.get('source_type') or ('website' if o['id'].startswith('customer:website-') else 'local'),'assets':o['assets'][:1], 'product_series':o.get('product_series'), 'current_model':o.get('current_model'), 'aliases':o.get('aliases',[]), 'source_state':o.get('source_state'), 'source_role':o.get('source_role'), 'publication_disposition':o.get('publication_disposition',{}), 'links':o['links'] if o['kind']=='product' else [], 'classification':o.get('classification',{}), 'facts':[f for f in o['facts'] if f['label'].startswith('用途候选')] if o['kind']=='product' else []} for o in objects]
+        return [{**{k:o[k] for k in ('id','kind','title','subtitle','source','summary')},'source_type':o.get('source_type') or ('website' if o['id'].startswith('customer:website-') else 'local'),'assets':o['assets'][:1], 'supply':o.get('supply',{}), 'product_series':o.get('product_series'), 'current_model':o.get('current_model'), 'aliases':o.get('aliases',[]), 'source_state':o.get('source_state'), 'source_role':o.get('source_role'), 'publication_disposition':o.get('publication_disposition',{}), 'links':o['links'] if o['kind']=='product' else [], 'classification':o.get('classification',{}), 'facts':[f for f in o['facts'] if f['label'].startswith('用途候选')] if o['kind']=='product' else []} for o in objects]
 
     def get_object(self,object_id):
         if not isinstance(object_id,str):raise ValueError('业务对象ID无效')

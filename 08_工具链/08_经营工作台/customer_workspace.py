@@ -222,10 +222,14 @@ class CustomerWorkspace:
             evidence=[{'url':row['source_url'],'text':'既有发现出处','observed_at':row.get('discovered_at') or ''}] if row.get('source_url') else []
             for page in row.get('pages',[]):
                 if isinstance(page,dict) and page.get('url'):evidence.append({'url':page['url'],'text':page.get('title') or '既有读取页面','observed_at':page.get('checked_at') or ''})
+            analysis=row.get('analysis') or {}
             result.append({'id':'candidate:'+source_id,'kind':'candidate','source_id':source_id,'title':company,'company':company,'website':website,
                 'market_hint':row.get('market_hint') or '', 'target':row.get('discovery_note') or '',
+                'business_summary':analysis.get('business_summary') or analysis.get('buyer_summary') or '',
+                'business_category':analysis.get('business_category') or '',
+                'contact_status_label':analysis.get('contact_status_label') or '',
                 'status':(row.get('review') or {}).get('state') or row.get('research_status') or '未核验',
-                'evidence':evidence,'next_action':'','notes':'','object_id':'prospect:candidate:'+source_id,'ready_for_customer':False,'source':CANDIDATES,
+                'evidence':evidence,'next_action':analysis.get('next_action') or '','notes':'','object_id':'prospect:candidate:'+source_id,'ready_for_customer':False,'source':CANDIDATES,
                 'source_record':{'contacts':row.get('contacts',[]),'research_status':row.get('research_status'),
                     'analysis':row.get('analysis',{}),'analysis_scope':'既有初筛，未在本次重新背调','review':row.get('review',{})},
                 'source_verification':{'state':'unverified','note':'候选研究不代表当前采购需求；Lead ID、已发送及停止联系状态仍须核原CRM。'},
