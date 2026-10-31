@@ -1,10 +1,10 @@
 # BQ009 商品档案
 
-2026-10-31研究增量：[国际站以图搜同款与标题草稿](../../../../06_市场研究/01_竞品/BQ008_BQ009国际站同款与标题研究.md)。同鞋型候选搜索卡24 sold、详情25 sold及1条评价；232/1260售出候选实看不同款。原创标题仅草稿，未提交平台，不覆盖下方正式值及详情待审状态。
+2026-10-31当前增量：本款全部4条链接已提交不同标题、逐款亮点及小单首档10.90美元；当前回读命中、质量评分均5.00，仍modified/N审核中。逐ID当前值见本页最新增量，历史快照不覆盖本次提交。[研究依据](../../../../06_市场研究/01_竞品/BQ008_BQ009国际站同款与标题研究.md)。
 
 此页是本款国际站档案，由产品中心及国际站商品数据组合生成；跨渠道共用身份与供应来源回产品中心，渠道正式值回按ID保存的回读原件。原始包只读，候选/历史材料不当当前线上素材。
 
-来源状态：`MAPPED`。下一步：本轮标题与功能亮点已正式核验 3/3 条；余项按当前核验处理，图像和来源色码单列继续，不重放旧文案。
+来源状态：`MAPPED`。本次4条链接已受理且目标回读命中，均待平台审核；下一步只读验审核、Schema及公开呈现，不重放。
 
 ## 当前资料与实物证据
 
@@ -27,10 +27,12 @@
 
 ### BQ-009 · 1601825074604
 
+> 2026-10-31最新：`modified / N`，当前回读标题：**Factory Direct Marathon Running Shoes High Rebound Non-Slip Mesh Lace-Up Sneakers Wholesale**；小单2–49双USD10.90，各中/大档原价保留，实际评分5.00。[当前回读原件](2026-10-31_全链接优化/1601825074604/after_get.json)；以下旧值按快照日期追溯，不反向回写。
+
 - 平台链接：[1601825074604](https://www.alibaba.com/product-detail/Wholesale-Breathable-Mesh-Athletic-Walking-Shoes_1601825074604.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601825074604/formal_get.json)；UTC 2026-10-10T07:03:57.850336+00:00。
-- 当前正式标题：Wholesale Breathable Mesh Athletic Walking Shoes L1026 Thick Sole Lightweight Casual Sneakers OEM ODM
-- 审核/展示：approved / Y；平台类目ID：201334413。
+- 历史完整字段入口（当前文件可能已有新回读）：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601825074604/formal_get.json)；UTC 2026-10-10T07:03:57.850336+00:00。
+- 历史标题快照：Wholesale Breathable Mesh Athletic Walking Shoes L1026 Thick Sole Lightweight Casual Sneakers OEM ODM
+- 历史审核/展示：approved / Y；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, owner_member, owner_member_display_name, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
 - SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。
 - 店内分组：Athletic & Running Style Shoes · 971467417；[平台分组回执](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%BA%97%E5%86%85%E5%88%86%E7%BB%84/971467417.json)。
@@ -45,10 +47,12 @@
 
 ### BQ009-R1 / L1026 · 1601939661419
 
+> 2026-10-31最新：`modified / N`，当前回读标题：**Factory Direct Lightweight Marathon Running Shoes High Rebound Non-Slip Sneakers with Thick Sole**；小单2–49双USD10.90，各中/大档原价保留，实际评分5.00。[当前回读原件](2026-10-31_全链接优化/1601939661419/after_get.json)；以下旧值按快照日期追溯，不反向回写。
+
 - 平台链接：[1601939661419](https://www.alibaba.com/product-detail/Men-s-Light-Weight-Casual-Sneakers_1601939661419.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939661419/formal_get.json)；UTC 2026-10-21T14:48:50.208831+00:00。
-- 当前正式标题：Men's Light Weight Casual Sneakers Breathable Mesh Lace-Up Thick Sole Walking Shoes for Daily Wear All Seasons L1026
-- 审核/展示：approved / Y；平台类目ID：201334413。
+- 历史完整字段入口（当前文件可能已有新回读）：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939661419/formal_get.json)；UTC 2026-10-21T14:48:50.208831+00:00。
+- 历史标题快照：Men's Light Weight Casual Sneakers Breathable Mesh Lace-Up Thick Sole Walking Shoes for Daily Wear All Seasons L1026
+- 历史审核/展示：approved / Y；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, owner_member, owner_member_display_name, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
 - SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。
 - 店内分组：Athletic & Running Style Shoes · 971467417；[平台分组回执](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%BA%97%E5%86%85%E5%88%86%E7%BB%84/971467417.json)。
@@ -67,12 +71,14 @@
 
 ### BQ009-W1 / L1026 · 1601939675350
 
+> 2026-10-31最新：`modified / N`，当前回读标题：**Factory Direct Breathable Textile Lace-Up Marathon Running Shoes High Rebound Non-Slip Sneakers Wholesale**；小单2–49双USD10.90，各中/大档原价保留，实际评分5.00。[当前回读原件](2026-10-31_全链接优化/1601939675350/after_get.json)；以下旧值按快照日期追溯，不反向回写。
+
 > 2026-10-29最新增量：本W1批准后正式及公开标题比最初提交稿多Lightweight Breathable，差异来源未核，保持实际值。本轮现有300组新增选款文字/CTA，正式get命中、`modified / N`待审核；[唯一采购承接任务](../../BQ系列持续优化_2026-09-14/主推采购承接.md)和[最新回读](../../BQ系列持续优化_2026-09-14/采购承接执行/续验_1620/1601939675350/选款文字/after_get.json)优先于下方旧快照，不以旧标题回写。
 
 - 平台链接：[1601939675350](https://www.alibaba.com/product-detail/Wholesale-Men-s-Light-Weight-Casual_1601939675350.html)
 - 最新正式回读：[完整商品字段](../../BQ系列持续优化_2026-09-14/采购承接执行/续验_1620/1601939675350/选款文字/after_get.json)；2026-10-29本轮增量；下方其他材料不代替该最新状态。
-- 当前正式标题（2026-10-29批准后get及公开页）：Wholesale Lightweight Breathable Textile Lace-Up Casual Sneakers L1026 for Everyday Walking
-- 审核/展示（2026-10-29 16:44:03 UTC+8正式get）：modified / N；平台类目ID：201334413；仅本轮新增详情文字待审核、Schema及公开核验；标题此前已批准且正常买家页可见。
+- 历史标题快照（2026-10-29批准后get及公开页）：Wholesale Lightweight Breathable Textile Lace-Up Casual Sneakers L1026 for Everyday Walking
+- 历史审核/展示（2026-10-29 16:44:03 UTC+8正式get）：modified / N；平台类目ID：201334413；仅本轮新增详情文字待审核、Schema及公开核验；标题此前已批准且正常买家页可见。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, owner_member, owner_member_display_name, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
 - SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。
 - 店内分组：Athletic & Running Style Shoes · 971467417；[平台分组回执](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%BA%97%E5%86%85%E5%88%86%E7%BB%84/971467417.json)。
@@ -91,10 +97,12 @@
 
 ### BQ009-O1 / L1026 · 1601939721165
 
+> 2026-10-31最新：`modified / N`，当前回读标题：**Factory Direct Custom Logo Marathon Running Shoes High Rebound Non-Slip Lace-Up Sneakers OEM ODM**；小单2–49双USD10.90，各中/大档原价保留，实际评分5.00。[当前回读原件](2026-10-31_全链接优化/1601939721165/after_get.json)；以下旧值按快照日期追溯，不反向回写。
+
 - 平台链接：[1601939721165](https://www.alibaba.com/product-detail/Custom-Logo-Men-s-Casual-Sneakers_1601939721165.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939721165/formal_get.json)；UTC 2026-10-21T14:48:47.332839+00:00。
-- 当前正式标题：Custom Logo Men's Casual Sneakers Breathable Mesh Lace Up Thick Sole Walking Shoes OEM ODM L1026
-- 审核/展示：approved / Y；平台类目ID：201334413。
+- 历史完整字段入口（当前文件可能已有新回读）：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939721165/formal_get.json)；UTC 2026-10-21T14:48:47.332839+00:00。
+- 历史标题快照：Custom Logo Men's Casual Sneakers Breathable Mesh Lace Up Thick Sole Walking Shoes OEM ODM L1026
+- 历史审核/展示：approved / Y；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, owner_member, owner_member_display_name, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
 - SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。
 - 店内分组：Athletic & Running Style Shoes · 971467417；[平台分组回执](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%BA%97%E5%86%85%E5%88%86%E7%BB%84/971467417.json)。
@@ -248,3 +256,18 @@
 - [verification.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ009_%E8%AF%A6%E6%83%85%E4%BF%A1%E6%81%AF%E6%95%B4%E7%BB%84%E6%94%B6%E5%B0%BE/%E5%95%86%E5%93%81/1601939721165/verification.json)
 
 原件、正式回执与当前资料通过本页关联，不再复制成第二套商品库。
+
+## 2026-10-31 全链接优化（最新增量）
+
+本轮负责人明确授权优化BQ009全部现有四条链接，包含原源，覆盖此前W1限制。采用Factory Direct及负责人本轮明确采用的Marathon、High Rebound、Non-Slip表达，未增加量化性能或测试结论。标题按结构及采购意图区分；首档统一10.90美元，其余每ID原数量价保留。
+
+| 商品ID | 最新审核/展示 | 新标题 | 数量价USD（2/50/100双起） | 实际评分 | 成功提交request_id |
+| --- | --- | --- | --- | --- | --- |
+| 1601825074604 | modified/N | Factory Direct Marathon Running Shoes High Rebound Non-Slip Mesh Lace-Up Sneakers Wholesale | 10.90 / 9.19 / 9.09 | 5.00 | 0bbb637a17934222785872488 |
+| 1601939661419 | modified/N | Factory Direct Lightweight Marathon Running Shoes High Rebound Non-Slip Sneakers with Thick Sole | 10.90 / 9.23 / 8.78 | 5.00 | 2105584317934223966225196 |
+| 1601939675350 | modified/N | Factory Direct Breathable Textile Lace-Up Marathon Running Shoes High Rebound Non-Slip Sneakers Wholesale | 10.90 / 9.19 / 8.78 | 5.00 | 0b830ecc17934224151006322 |
+| 1601939721165 | modified/N | Factory Direct Custom Logo Marathon Running Shoes High Rebound Non-Slip Lace-Up Sneakers OEM ODM | 10.90 / 9.15 / 8.78 | 5.00 | 0b51802d17934224334527591 |
+
+正式get已逐ID核标题、产品亮点、每个SKU数量价；材料、主图、SKU编号/色码/库存、原详情图片、视频、公司图、公司介绍及FAQ均保全。原源详情没有可写300文字组，保留其全部原详情；三条扩展链接在原300组补简短产品与合作信息，W1原选款CTA保全。三条扩展首次因详情文字过长被平台明确拒绝，保留拒绝原件并按当前500限制压缩后分别提交一次，无未知结果重放。
+
+最终复核时间以本机summary.json与逐IDverification.json为准；仍modified/N的条目保持审核中，不能报正式上线。已批准的条目再核当前Schema。公开买家页本轮未验，原件和运行文件仅保存在已忽略的`2026-10-31_全链接优化/`目录，不公开推送。后续只读核审核与公开呈现，不重复提交。

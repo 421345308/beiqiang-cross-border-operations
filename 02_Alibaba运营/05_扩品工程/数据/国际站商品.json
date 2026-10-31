@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-10-21",
+  "updated_on": "2026-10-31",
   "listings": [
     {
       "id": "1601969936536",
@@ -5296,10 +5296,11 @@
       "bound_source_id": null,
       "source_relation": "SOURCE_EVIDENCE_MISSING",
       "observation": {
-        "audit": "approved",
-        "display": "Y",
-        "at": "2026-10-21T14:48:55.048895+00:00",
-        "scope": "价格API闭环；公开呈现未核"
+        "audit": "modified",
+        "display": "N",
+        "at": "2026-10-31T04:54:57.565564+00:00",
+        "scope": "本次8链接标题/亮点/小单价提交后官方get；仍在审核中",
+        "score": "5.00"
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601825021825/prepared.json",
@@ -5324,7 +5325,9 @@
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ008_详情信息整组收尾/图片银行.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ008_详情信息整组收尾/商品/1601825021825/prepared.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ008_详情信息整组收尾/商品/1601825021825/update_receipt.json",
-        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ008_详情信息整组收尾/商品/1601825021825/verification.json"
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ008_详情信息整组收尾/商品/1601825021825/verification.json",
+        "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/执行证据_20261031/1601825021825/final_get.json",
+        "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/执行证据_20261031/1601825021825/verification.json"
       ],
       "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
       "catalog_presence": "OBSERVED",
@@ -5382,19 +5385,20 @@
         ]
       },
       "local_sync": {
-        "state": "FORMAL_PRICE_PASS_API",
+        "state": "SUBMITTED_TARGET_FIELDS_MATCH_PENDING_REVIEW",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601825021825/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601825021825/formal_render.json",
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601825021825/当前图库与货号.json",
-        "at": "2026-10-21T14:48:55.048895+00:00",
+        "at": "2026-10-31T04:54:57.565564+00:00",
         "observed_at": "2026-10-19T18:39:05.934512+00:00",
         "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601825021825/verification.json",
-        "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ008_详情信息整组收尾/商品/1601825021825/verification.json"
+        "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ008_详情信息整组收尾/商品/1601825021825/verification.json",
+        "next_action": "核审核通过、当前Schema与公开呈现；不重放本次成功提交"
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601825021825/formal_get.json",
-        "at": "2026-10-21T14:48:55.048895+00:00",
-        "scope": "本次价格正式回读；不代表公开验收"
+        "at": "2026-10-31T04:54:57.565564+00:00",
+        "scope": "完整官方get当前回读；审核中，正式批准与公开呈现待验"
       },
       "platform_group": {
         "id": "971467417",
@@ -5402,9 +5406,9 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-10-21T14:48:55.048895+00:00",
+        "at": "2026-10-31T04:54:57.565564+00:00",
         "model": "BQ-008",
-        "title": "Mesh Panel Lace-Up Walking Shoes with Layered Upper and Sculpted Sole Wholesale",
+        "title": "Factory Direct Mesh Marathon Running Shoes High Rebound Non-Slip Lace-Up Sneakers with Layered Upper",
         "keywords": [
           ""
         ],
@@ -5417,11 +5421,11 @@
           "https://sc04.alicdn.com/kf/Hbcecb01ecb1b4cfbad3a5564beb6aa88T.jpg"
         ],
         "category_id": 201334413,
-        "display": "Y",
-        "status": "approved",
-        "url": "https://www.alibaba.com/product-detail/Wholesale-Solid-Spring-Summer-Breathable-Mesh_1601825021825.html",
-        "scope": "Current exact-ID official get; scoped target acceptance kept separately",
-        "highlights": "Mesh-panel lace-up casual shoes with a thick sculpted sole.\n\nAdjustable instep fit: The front laces let the wearer loosen the opening for entry and set the tension over the foot.",
+        "display": "N",
+        "status": "modified",
+        "url": "https://www.alibaba.com/product-detail/Factory-Direct-Mesh-Marathon-Running-Shoes_1601825021825.html",
+        "scope": "2026-10-31当前官方get；新标题、亮点与小单价命中，modified/N审核中；不记公开生效",
+        "highlights": "Mesh-panel lace-up casual shoes with a thick sculpted sole.\n\nAdjustable instep fit: The front laces let the wearer loosen the opening for entry and set the tension over the foot.\n\nFactory-direct mesh marathon running shoes with high rebound and a non-slip sole. For wholesale or OEM enquiries, send your selected colors, size breakdown, quantity and destination. Branding, packaging, sample costs and dispatch timing are confirmed against your requirements before ordering.",
         "detail_images": [
           {
             "image_set": {
@@ -5450,6 +5454,20 @@
               "id": "200"
             },
             "image_url": "https://sc04.alicdn.com/kf/H85b2464526904a8e84752a566e897acex.png"
+          }
+        ],
+        "price_tiers": [
+          {
+            "start_quantity": 2,
+            "price": "10.90"
+          },
+          {
+            "start_quantity": 50,
+            "price": "9.19"
+          },
+          {
+            "start_quantity": 100,
+            "price": "8.78"
           }
         ]
       },
@@ -5577,6 +5595,23 @@
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ008_详情信息整组收尾/商品/1601825021825/update_receipt.json",
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ008_详情信息整组收尾/商品/1601825021825/verification.json"
           ]
+        },
+        "factory_direct_content": {
+          "state": "SUBMITTED_TARGET_FIELDS_MATCH_PENDING_REVIEW",
+          "at": "2026-10-31T04:54:57.565564+00:00",
+          "scope": [
+            "title",
+            "product_summary",
+            "first_price_tier",
+            "applicable_detail_text"
+          ],
+          "evidence": [
+            "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/执行证据_20261031/1601825021825/final_get.json",
+            "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/执行证据_20261031/1601825021825/verification.json"
+          ],
+          "actual_score": "5.00",
+          "public_status": "PENDING_BROWSER_URL_CONFIDENCE_STOP",
+          "next_action": "只读核approved/Y后render及公开呈现，不重复提交"
         }
       },
       "price_review": {
@@ -5630,12 +5665,16 @@
       "bound_source_id": null,
       "source_relation": "SOURCE_EVIDENCE_MISSING",
       "observation": {
-        "audit": "approved",
-        "display": "Y",
-        "at": "2026-10-07T04:25:00.978045+00:00",
-        "scope": "历史目录回读；不等于来源/全内容验收"
+        "audit": "modified",
+        "display": "N",
+        "at": "2026-10-31T04:55:56.036006+00:00",
+        "scope": "本次8链接标题/亮点/小单价提交后官方get；仍在审核中",
+        "score": "5.00"
       },
-      "evidence": [],
+      "evidence": [
+        "02_Alibaba运营/02_单品优化记录/商品档案/BQ009/2026-10-31_全链接优化/1601825074604/after_get.json",
+        "02_Alibaba运营/02_单品优化记录/商品档案/BQ009/2026-10-31_全链接优化/1601825074604/verification.json"
+      ],
       "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
       "catalog_presence": "OBSERVED",
       "catalog_evidence": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/catalog.json",
@@ -5661,14 +5700,15 @@
         "scope": "product.list；不是全字段/公开验收"
       },
       "local_sync": {
-        "state": "FORMAL_SNAPSHOT_SAVED",
+        "state": "SUBMITTED_TARGET_FIELDS_MATCH_PENDING_REVIEW",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601825074604/formal_get.json",
-        "next_action": "正式字段已保存在本地；逐款核实物事实/当前素材，并验收本次优化公开呈现"
+        "next_action": "核审核通过、当前Schema与公开呈现；不重放本次成功提交",
+        "at": "2026-10-31T04:55:56.036006+00:00"
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601825074604/formal_get.json",
-        "at": "2026-10-10T07:03:57.850336+00:00",
-        "scope": "product.get返回的完整字段；不等于来源或公开视觉验收"
+        "at": "2026-10-31T04:55:56.036006+00:00",
+        "scope": "完整官方get当前回读；审核中，正式批准与公开呈现待验"
       },
       "platform_group": {
         "id": "971467417",
@@ -5676,8 +5716,8 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-10-10T07:03:57.850336+00:00",
-        "title": "Wholesale Breathable Mesh Athletic Walking Shoes L1026 Thick Sole Lightweight Casual Sneakers OEM ODM",
+        "at": "2026-10-31T04:55:56.036006+00:00",
+        "title": "Factory Direct Marathon Running Shoes High Rebound Non-Slip Mesh Lace-Up Sneakers Wholesale",
         "keywords": [
           ""
         ],
@@ -5690,10 +5730,44 @@
           "https://sc04.alicdn.com/kf/H2977c962882f40d084232e3f81390822S.jpg"
         ],
         "category_id": 201334413,
-        "display": "Y",
-        "status": "approved",
-        "url": "https://www.alibaba.com/product-detail/Wholesale-Breathable-Mesh-Athletic-Walking-Shoes_1601825074604.html",
-        "scope": "按ID完整product.get正式字段；审核与公开验收分开"
+        "display": "N",
+        "status": "modified",
+        "url": "https://www.alibaba.com/product-detail/Factory-Direct-Marathon-Running-Shoes-High_1601825074604.html",
+        "scope": "2026-10-31当前官方get；新标题、亮点与小单价命中，modified/N审核中；不记公开生效",
+        "highlights": "Marathon running sneakers: A lightweight, breathable textile style with a high-rebound, non-slip sole.\n\nAdjustable lace-up fit: The mesh-panel upper and front laces allow the wearer to adjust instep tension.\n\nLayered construction: A thick sole profile and raised front overlay define the closed-toe sneaker.",
+        "price_tiers": [
+          {
+            "start_quantity": 2,
+            "price": "10.90"
+          },
+          {
+            "start_quantity": 50,
+            "price": "9.19"
+          },
+          {
+            "start_quantity": 100,
+            "price": "9.09"
+          }
+        ]
+      },
+      "optimization": {
+        "factory_direct_content": {
+          "state": "SUBMITTED_TARGET_FIELDS_MATCH_PENDING_REVIEW",
+          "at": "2026-10-31T04:55:56.036006+00:00",
+          "scope": [
+            "title",
+            "product_summary",
+            "first_price_tier",
+            "applicable_detail_text"
+          ],
+          "evidence": [
+            "02_Alibaba运营/02_单品优化记录/商品档案/BQ009/2026-10-31_全链接优化/1601825074604/after_get.json",
+            "02_Alibaba运营/02_单品优化记录/商品档案/BQ009/2026-10-31_全链接优化/1601825074604/verification.json"
+          ],
+          "actual_score": "5.00",
+          "public_status": "PENDING_BROWSER_URL_CONFIDENCE_STOP",
+          "next_action": "只读核approved/Y后render及公开呈现，不重复提交"
+        }
       }
     },
     {
@@ -27704,15 +27778,18 @@
       "bound_source_id": null,
       "source_relation": "SOURCE_EVIDENCE_MISSING",
       "observation": {
-        "audit": "approved",
-        "display": "Y",
-        "at": "2026-10-21T14:49:50.297067+00:00",
-        "scope": "价格API闭环；公开呈现未核"
+        "audit": "modified",
+        "display": "N",
+        "at": "2026-10-31T04:54:57.582739+00:00",
+        "scope": "本次8链接标题/亮点/小单价提交后官方get；仍在审核中",
+        "score": "5.00"
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939659415/prepared.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939659415/update_receipt.json",
-        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939659415/verification.json"
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939659415/verification.json",
+        "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/执行证据_20261031/1601939659415/final_get.json",
+        "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/执行证据_20261031/1601939659415/verification.json"
       ],
       "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
       "catalog_presence": "OBSERVED",
@@ -27740,18 +27817,19 @@
         "highlights": "Mesh-panel lace-up casual shoes with a thick sculpted sole.\n\nAdjustable instep fit: The front laces let the wearer loosen the opening for entry and set the tension over the foot."
       },
       "local_sync": {
-        "state": "FORMAL_PRICE_PASS_API",
+        "state": "SUBMITTED_TARGET_FIELDS_MATCH_PENDING_REVIEW",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939659415/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939659415/formal_render.json",
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601939659415/当前图库与货号.json",
-        "at": "2026-10-21T14:49:50.297067+00:00",
+        "at": "2026-10-31T04:54:57.582739+00:00",
         "observed_at": "2026-10-19T18:39:16.450985+00:00",
-        "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939659415/verification.json"
+        "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939659415/verification.json",
+        "next_action": "核审核通过、当前Schema与公开呈现；不重放本次成功提交"
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939659415/formal_get.json",
-        "at": "2026-10-21T14:49:50.297067+00:00",
-        "scope": "本次价格正式回读；不代表公开验收"
+        "at": "2026-10-31T04:54:57.582739+00:00",
+        "scope": "完整官方get当前回读；审核中，正式批准与公开呈现待验"
       },
       "platform_group": {
         "id": "971467417",
@@ -27759,9 +27837,9 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-10-21T14:49:50.297067+00:00",
+        "at": "2026-10-31T04:54:57.582739+00:00",
         "model": "BQ008-O1 / L1009",
-        "title": "Mesh Panel Lace-Up Walking Shoes with Layered Upper and Sculpted Sole Wholesale",
+        "title": "Factory Direct Mesh Marathon Running Shoes High Rebound Non-Slip Lace-Up Sneakers for OEM Projects",
         "keywords": [
           ""
         ],
@@ -27774,11 +27852,25 @@
           "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
         ],
         "category_id": 201334413,
-        "display": "Y",
-        "status": "approved",
-        "url": "https://www.alibaba.com/product-detail/Custom-Logo-All-Black-Breathable-Mesh_1601939659415.html",
-        "scope": "Current exact-ID official get; scoped target acceptance kept separately",
-        "highlights": "Mesh-panel lace-up casual shoes with a thick sculpted sole.\n\nAdjustable instep fit: The front laces let the wearer loosen the opening for entry and set the tension over the foot."
+        "display": "N",
+        "status": "modified",
+        "url": "https://www.alibaba.com/product-detail/Factory-Direct-Mesh-Marathon-Running-Shoes_1601939659415.html",
+        "scope": "2026-10-31当前官方get；新标题、亮点与小单价命中，modified/N审核中；不记公开生效",
+        "highlights": "Mesh-panel lace-up casual shoes with a thick sculpted sole.\n\nAdjustable instep fit: The front laces let the wearer loosen the opening for entry and set the tension over the foot.\n\nFactory-direct mesh marathon running shoes with high rebound and a non-slip sole. For wholesale or OEM enquiries, send your selected colors, size breakdown, quantity and destination. Branding, packaging, sample costs and dispatch timing are confirmed against your requirements before ordering.",
+        "price_tiers": [
+          {
+            "start_quantity": 2,
+            "price": "10.90"
+          },
+          {
+            "start_quantity": 50,
+            "price": "9.15"
+          },
+          {
+            "start_quantity": 100,
+            "price": "8.78"
+          }
+        ]
       },
       "optimization": {
         "buyer_copy": {
@@ -27892,6 +27984,23 @@
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939659415/update_receipt.json",
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939659415/verification.json"
           ]
+        },
+        "factory_direct_content": {
+          "state": "SUBMITTED_TARGET_FIELDS_MATCH_PENDING_REVIEW",
+          "at": "2026-10-31T04:54:57.582739+00:00",
+          "scope": [
+            "title",
+            "product_summary",
+            "first_price_tier",
+            "applicable_detail_text"
+          ],
+          "evidence": [
+            "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/执行证据_20261031/1601939659415/final_get.json",
+            "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/执行证据_20261031/1601939659415/verification.json"
+          ],
+          "actual_score": "5.00",
+          "public_status": "PENDING_BROWSER_URL_CONFIDENCE_STOP",
+          "next_action": "只读核approved/Y后render及公开呈现，不重复提交"
         }
       },
       "price_review": {
@@ -27945,15 +28054,18 @@
       "bound_source_id": null,
       "source_relation": "SOURCE_EVIDENCE_MISSING",
       "observation": {
-        "audit": "approved",
-        "display": "Y",
-        "at": "2026-10-21T14:49:52.991817+00:00",
-        "scope": "价格API闭环；公开呈现未核"
+        "audit": "modified",
+        "display": "N",
+        "at": "2026-10-31T04:54:57.577281+00:00",
+        "scope": "本次8链接标题/亮点/小单价提交后官方get；仍在审核中",
+        "score": "5.00"
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939628529/prepared.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939628529/update_receipt.json",
-        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939628529/verification.json"
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939628529/verification.json",
+        "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/执行证据_20261031/1601939628529/final_get.json",
+        "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/执行证据_20261031/1601939628529/verification.json"
       ],
       "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
       "catalog_presence": "OBSERVED",
@@ -27981,18 +28093,19 @@
         "highlights": "Mesh-panel lace-up casual shoes with a thick sculpted sole.\n\nAdjustable instep fit: The front laces let the wearer loosen the opening for entry and set the tension over the foot."
       },
       "local_sync": {
-        "state": "FORMAL_PRICE_PASS_API",
+        "state": "SUBMITTED_TARGET_FIELDS_MATCH_PENDING_REVIEW",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939628529/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939628529/formal_render.json",
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601939628529/当前图库与货号.json",
-        "at": "2026-10-21T14:49:52.991817+00:00",
+        "at": "2026-10-31T04:54:57.577281+00:00",
         "observed_at": "2026-10-19T18:39:13.284781+00:00",
-        "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939628529/verification.json"
+        "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939628529/verification.json",
+        "next_action": "核审核通过、当前Schema与公开呈现；不重放本次成功提交"
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939628529/formal_get.json",
-        "at": "2026-10-21T14:49:52.991817+00:00",
-        "scope": "本次价格正式回读；不代表公开验收"
+        "at": "2026-10-31T04:54:57.577281+00:00",
+        "scope": "完整官方get当前回读；审核中，正式批准与公开呈现待验"
       },
       "platform_group": {
         "id": "971467417",
@@ -28000,9 +28113,9 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-10-21T14:49:52.991817+00:00",
+        "at": "2026-10-31T04:54:57.577281+00:00",
         "model": "BQ008-R1 / L1009",
-        "title": "Mesh Panel Lace-Up Walking Shoes with Layered Upper and Sculpted Sole Wholesale",
+        "title": "Factory Direct Mesh Marathon Running Shoes High Rebound Non-Slip Lace-Up Sneakers for Retail Collections",
         "keywords": [
           ""
         ],
@@ -28015,11 +28128,25 @@
           "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
         ],
         "category_id": 201334413,
-        "display": "Y",
-        "status": "approved",
-        "url": "https://www.alibaba.com/product-detail/Men-s-Black-White-Breathable-Mesh_1601939628529.html",
-        "scope": "Current exact-ID official get; scoped target acceptance kept separately",
-        "highlights": "Mesh-panel lace-up casual shoes with a thick sculpted sole.\n\nAdjustable instep fit: The front laces let the wearer loosen the opening for entry and set the tension over the foot."
+        "display": "N",
+        "status": "modified",
+        "url": "https://www.alibaba.com/product-detail/Factory-Direct-Mesh-Marathon-Running-Shoes_1601939628529.html",
+        "scope": "2026-10-31当前官方get；新标题、亮点与小单价命中，modified/N审核中；不记公开生效",
+        "highlights": "Mesh-panel lace-up casual shoes with a thick sculpted sole.\n\nAdjustable instep fit: The front laces let the wearer loosen the opening for entry and set the tension over the foot.\n\nFactory-direct mesh marathon running shoes with high rebound and a non-slip sole. For wholesale or OEM enquiries, send your selected colors, size breakdown, quantity and destination. Branding, packaging, sample costs and dispatch timing are confirmed against your requirements before ordering.",
+        "price_tiers": [
+          {
+            "start_quantity": 2,
+            "price": "10.90"
+          },
+          {
+            "start_quantity": 50,
+            "price": "9.23"
+          },
+          {
+            "start_quantity": 100,
+            "price": "8.78"
+          }
+        ]
       },
       "optimization": {
         "buyer_copy": {
@@ -28133,6 +28260,23 @@
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939628529/update_receipt.json",
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939628529/verification.json"
           ]
+        },
+        "factory_direct_content": {
+          "state": "SUBMITTED_TARGET_FIELDS_MATCH_PENDING_REVIEW",
+          "at": "2026-10-31T04:54:57.577281+00:00",
+          "scope": [
+            "title",
+            "product_summary",
+            "first_price_tier",
+            "applicable_detail_text"
+          ],
+          "evidence": [
+            "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/执行证据_20261031/1601939628529/final_get.json",
+            "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/执行证据_20261031/1601939628529/verification.json"
+          ],
+          "actual_score": "5.00",
+          "public_status": "PENDING_BROWSER_URL_CONFIDENCE_STOP",
+          "next_action": "只读核approved/Y后render及公开呈现，不重复提交"
         }
       },
       "price_review": {
@@ -28186,15 +28330,18 @@
       "bound_source_id": null,
       "source_relation": "SOURCE_EVIDENCE_MISSING",
       "observation": {
-        "audit": "approved",
-        "display": "Y",
-        "at": "2026-10-21T14:49:55.490331+00:00",
-        "scope": "价格API闭环；公开呈现未核"
+        "audit": "modified",
+        "display": "N",
+        "at": "2026-10-31T04:54:57.570873+00:00",
+        "scope": "本次8链接标题/亮点/小单价提交后官方get；仍在审核中",
+        "score": "5.00"
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939625569/prepared.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939625569/update_receipt.json",
-        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939625569/verification.json"
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939625569/verification.json",
+        "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/执行证据_20261031/1601939625569/final_get.json",
+        "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/执行证据_20261031/1601939625569/verification.json"
       ],
       "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
       "catalog_presence": "OBSERVED",
@@ -28222,18 +28369,19 @@
         "highlights": "Mesh-panel lace-up casual shoes with a thick sculpted sole.\n\nAdjustable instep fit: The front laces let the wearer loosen the opening for entry and set the tension over the foot."
       },
       "local_sync": {
-        "state": "FORMAL_PRICE_PASS_API",
+        "state": "SUBMITTED_TARGET_FIELDS_MATCH_PENDING_REVIEW",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939625569/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939625569/formal_render.json",
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601939625569/当前图库与货号.json",
-        "at": "2026-10-21T14:49:55.490331+00:00",
+        "at": "2026-10-31T04:54:57.570873+00:00",
         "observed_at": "2026-10-19T18:39:07.937094+00:00",
-        "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939625569/verification.json"
+        "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939625569/verification.json",
+        "next_action": "核审核通过、当前Schema与公开呈现；不重放本次成功提交"
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939625569/formal_get.json",
-        "at": "2026-10-21T14:49:55.490331+00:00",
-        "scope": "本次价格正式回读；不代表公开验收"
+        "at": "2026-10-31T04:54:57.570873+00:00",
+        "scope": "完整官方get当前回读；审核中，正式批准与公开呈现待验"
       },
       "platform_group": {
         "id": "971467417",
@@ -28241,9 +28389,9 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-10-21T14:49:55.490331+00:00",
+        "at": "2026-10-31T04:54:57.570873+00:00",
         "model": "BQ008-W1 / L1009",
-        "title": "Mesh Panel Lace-Up Walking Shoes with Layered Upper and Sculpted Sole Wholesale",
+        "title": "Factory Direct Mesh Marathon Running Shoes High Rebound Non-Slip Lace-Up Sneakers Wholesale Trial Orders",
         "keywords": [
           ""
         ],
@@ -28256,11 +28404,25 @@
           "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
         ],
         "category_id": 201334413,
-        "display": "Y",
-        "status": "approved",
-        "url": "https://www.alibaba.com/product-detail/Wholesale-Men-s-Grey-Green-Breathable_1601939625569.html",
-        "scope": "Current exact-ID official get; scoped target acceptance kept separately",
-        "highlights": "Mesh-panel lace-up casual shoes with a thick sculpted sole.\n\nAdjustable instep fit: The front laces let the wearer loosen the opening for entry and set the tension over the foot."
+        "display": "N",
+        "status": "modified",
+        "url": "https://www.alibaba.com/product-detail/Factory-Direct-Mesh-Marathon-Running-Shoes_1601939625569.html",
+        "scope": "2026-10-31当前官方get；新标题、亮点与小单价命中，modified/N审核中；不记公开生效",
+        "highlights": "Mesh-panel lace-up casual shoes with a thick sculpted sole.\n\nAdjustable instep fit: The front laces let the wearer loosen the opening for entry and set the tension over the foot.\n\nFactory-direct mesh marathon running shoes with high rebound and a non-slip sole. For wholesale or OEM enquiries, send your selected colors, size breakdown, quantity and destination. Branding, packaging, sample costs and dispatch timing are confirmed against your requirements before ordering.",
+        "price_tiers": [
+          {
+            "start_quantity": 2,
+            "price": "10.90"
+          },
+          {
+            "start_quantity": 50,
+            "price": "9.19"
+          },
+          {
+            "start_quantity": 100,
+            "price": "8.78"
+          }
+        ]
       },
       "optimization": {
         "buyer_copy": {
@@ -28374,6 +28536,23 @@
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939625569/update_receipt.json",
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939625569/verification.json"
           ]
+        },
+        "factory_direct_content": {
+          "state": "SUBMITTED_TARGET_FIELDS_MATCH_PENDING_REVIEW",
+          "at": "2026-10-31T04:54:57.570873+00:00",
+          "scope": [
+            "title",
+            "product_summary",
+            "first_price_tier",
+            "applicable_detail_text"
+          ],
+          "evidence": [
+            "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/执行证据_20261031/1601939625569/final_get.json",
+            "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/执行证据_20261031/1601939625569/verification.json"
+          ],
+          "actual_score": "5.00",
+          "public_status": "PENDING_BROWSER_URL_CONFIDENCE_STOP",
+          "next_action": "只读核approved/Y后render及公开呈现，不重复提交"
         }
       },
       "price_review": {
@@ -28427,10 +28606,11 @@
       "bound_source_id": null,
       "source_relation": "SOURCE_EVIDENCE_MISSING",
       "observation": {
-        "audit": "approved",
-        "display": "Y",
-        "at": "2026-10-21T14:48:47.332839+00:00",
-        "scope": "价格API闭环；公开呈现未核"
+        "audit": "modified",
+        "display": "N",
+        "at": "2026-10-31T04:56:27.554933+00:00",
+        "scope": "本次8链接标题/亮点/小单价提交后官方get；仍在审核中",
+        "score": "5.00"
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939721165/prepared.json",
@@ -28459,7 +28639,9 @@
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ009_详情信息整组收尾/图片银行.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ009_详情信息整组收尾/商品/1601939721165/prepared.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ009_详情信息整组收尾/商品/1601939721165/update_receipt.json",
-        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ009_详情信息整组收尾/商品/1601939721165/verification.json"
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ009_详情信息整组收尾/商品/1601939721165/verification.json",
+        "02_Alibaba运营/02_单品优化记录/商品档案/BQ009/2026-10-31_全链接优化/1601939721165/after_get.json",
+        "02_Alibaba运营/02_单品优化记录/商品档案/BQ009/2026-10-31_全链接优化/1601939721165/verification.json"
       ],
       "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
       "catalog_presence": "OBSERVED",
@@ -28572,20 +28754,21 @@
         ]
       },
       "local_sync": {
-        "state": "FORMAL_PRICE_PASS_API",
+        "state": "SUBMITTED_TARGET_FIELDS_MATCH_PENDING_REVIEW",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939721165/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939721165/formal_render.json",
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601939721165/当前图库与货号.json",
-        "at": "2026-10-21T14:48:47.332839+00:00",
+        "at": "2026-10-31T04:56:27.554933+00:00",
         "observed_at": "2026-10-20T05:02:49.459772+00:00",
         "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939721165/verification.json",
         "assortment_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ009_逐色绑定纠正/商品/1601939721165/verification.json",
-        "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ009_详情信息整组收尾/商品/1601939721165/verification.json"
+        "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ009_详情信息整组收尾/商品/1601939721165/verification.json",
+        "next_action": "核审核通过、当前Schema与公开呈现；不重放本次成功提交"
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939721165/formal_get.json",
-        "at": "2026-10-21T14:48:47.332839+00:00",
-        "scope": "本次价格正式回读；不代表公开验收"
+        "at": "2026-10-31T04:56:27.554933+00:00",
+        "scope": "完整官方get当前回读；审核中，正式批准与公开呈现待验"
       },
       "platform_group": {
         "id": "971467417",
@@ -28593,9 +28776,9 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-10-21T14:48:47.332839+00:00",
+        "at": "2026-10-31T04:56:27.554933+00:00",
         "model": "BQ009-O1 / L1026",
-        "title": "Custom Logo Men's Casual Sneakers Breathable Mesh Lace Up Thick Sole Walking Shoes OEM ODM L1026",
+        "title": "Factory Direct Custom Logo Marathon Running Shoes High Rebound Non-Slip Lace-Up Sneakers OEM ODM",
         "keywords": [
           ""
         ],
@@ -28608,11 +28791,11 @@
           "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
         ],
         "category_id": 201334413,
-        "display": "Y",
-        "status": "approved",
-        "url": "https://www.alibaba.com/product-detail/Custom-Logo-Men-s-Casual-Sneakers_1601939721165.html",
-        "scope": "Current exact-ID official get; scoped target acceptance kept separately",
-        "highlights": "Adjustable mesh-panel upper: The lace-up front allows the instep tension to be set by the wearer.\n\nLayered casual construction: A thick sole profile and raised front overlay form a closed-toe walking sneaker.",
+        "display": "N",
+        "status": "modified",
+        "url": "https://www.alibaba.com/product-detail/Factory-Direct-Custom-Logo-Marathon-Running_1601939721165.html",
+        "scope": "2026-10-31当前官方get；新标题、亮点与小单价命中，modified/N审核中；不记公开生效",
+        "highlights": "Marathon running sneakers: A lightweight, breathable textile style with a high-rebound, non-slip sole.\n\nAdjustable lace-up fit: The mesh-panel upper and front laces allow the wearer to adjust instep tension.\n\nLayered construction: A thick sole profile and raised front overlay define the closed-toe sneaker.",
         "sku_count": 44,
         "colour_EU": {
           "Orange": [
@@ -28696,6 +28879,20 @@
               "id": "150"
             },
             "image_url": "https://sc04.alicdn.com/kf/Hf7ca36a78bcb4275b97dd8cbbe505efdh.png"
+          }
+        ],
+        "price_tiers": [
+          {
+            "start_quantity": 2,
+            "price": "10.90"
+          },
+          {
+            "start_quantity": 50,
+            "price": "9.15"
+          },
+          {
+            "start_quantity": 100,
+            "price": "8.78"
           }
         ]
       },
@@ -28834,6 +29031,23 @@
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ009_详情信息整组收尾/商品/1601939721165/update_receipt.json",
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ009_详情信息整组收尾/商品/1601939721165/verification.json"
           ]
+        },
+        "factory_direct_content": {
+          "state": "SUBMITTED_TARGET_FIELDS_MATCH_PENDING_REVIEW",
+          "at": "2026-10-31T04:56:27.554933+00:00",
+          "scope": [
+            "title",
+            "product_summary",
+            "first_price_tier",
+            "applicable_detail_text"
+          ],
+          "evidence": [
+            "02_Alibaba运营/02_单品优化记录/商品档案/BQ009/2026-10-31_全链接优化/1601939721165/after_get.json",
+            "02_Alibaba运营/02_单品优化记录/商品档案/BQ009/2026-10-31_全链接优化/1601939721165/verification.json"
+          ],
+          "actual_score": "5.00",
+          "public_status": "PENDING_BROWSER_URL_CONFIDENCE_STOP",
+          "next_action": "只读核approved/Y后render及公开呈现，不重复提交"
         }
       },
       "price_review": {
@@ -28887,10 +29101,11 @@
       "bound_source_id": null,
       "source_relation": "SOURCE_EVIDENCE_MISSING",
       "observation": {
-        "audit": "approved",
-        "display": "Y",
-        "at": "2026-10-21T14:48:50.208831+00:00",
-        "scope": "价格API闭环；公开呈现未核"
+        "audit": "modified",
+        "display": "N",
+        "at": "2026-10-31T04:56:06.528960+00:00",
+        "scope": "本次8链接标题/亮点/小单价提交后官方get；仍在审核中",
+        "score": "5.00"
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939661419/prepared.json",
@@ -28919,7 +29134,9 @@
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ009_详情信息整组收尾/图片银行.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ009_详情信息整组收尾/商品/1601939661419/prepared.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ009_详情信息整组收尾/商品/1601939661419/update_receipt.json",
-        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ009_详情信息整组收尾/商品/1601939661419/verification.json"
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ009_详情信息整组收尾/商品/1601939661419/verification.json",
+        "02_Alibaba运营/02_单品优化记录/商品档案/BQ009/2026-10-31_全链接优化/1601939661419/after_get.json",
+        "02_Alibaba运营/02_单品优化记录/商品档案/BQ009/2026-10-31_全链接优化/1601939661419/verification.json"
       ],
       "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
       "catalog_presence": "OBSERVED",
@@ -29032,20 +29249,21 @@
         ]
       },
       "local_sync": {
-        "state": "FORMAL_PRICE_PASS_API",
+        "state": "SUBMITTED_TARGET_FIELDS_MATCH_PENDING_REVIEW",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939661419/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939661419/formal_render.json",
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601939661419/当前图库与货号.json",
-        "at": "2026-10-21T14:48:50.208831+00:00",
+        "at": "2026-10-31T04:56:06.528960+00:00",
         "observed_at": "2026-10-20T05:02:32.512778+00:00",
         "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939661419/verification.json",
         "assortment_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ009_逐色绑定纠正/商品/1601939661419/verification.json",
-        "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ009_详情信息整组收尾/商品/1601939661419/verification.json"
+        "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ009_详情信息整组收尾/商品/1601939661419/verification.json",
+        "next_action": "核审核通过、当前Schema与公开呈现；不重放本次成功提交"
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939661419/formal_get.json",
-        "at": "2026-10-21T14:48:50.208831+00:00",
-        "scope": "本次价格正式回读；不代表公开验收"
+        "at": "2026-10-31T04:56:06.528960+00:00",
+        "scope": "完整官方get当前回读；审核中，正式批准与公开呈现待验"
       },
       "platform_group": {
         "id": "971467417",
@@ -29053,9 +29271,9 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-10-21T14:48:50.208831+00:00",
+        "at": "2026-10-31T04:56:06.528960+00:00",
         "model": "BQ009-R1 / L1026",
-        "title": "Men's Light Weight Casual Sneakers Breathable Mesh Lace-Up Thick Sole Walking Shoes for Daily Wear All Seasons L1026",
+        "title": "Factory Direct Lightweight Marathon Running Shoes High Rebound Non-Slip Sneakers with Thick Sole",
         "keywords": [
           ""
         ],
@@ -29068,11 +29286,11 @@
           "https://sc04.alicdn.com/kf/S56cfb49a9fe54764a511721608257a0dE.jpg"
         ],
         "category_id": 201334413,
-        "display": "Y",
-        "status": "approved",
-        "url": "https://www.alibaba.com/product-detail/Men-s-Light-Weight-Casual-Sneakers_1601939661419.html",
-        "scope": "Current exact-ID official get; scoped target acceptance kept separately",
-        "highlights": "Adjustable mesh-panel upper: The lace-up front allows the instep tension to be set by the wearer.\n\nLayered casual construction: A thick sole profile and raised front overlay form a closed-toe walking sneaker.",
+        "display": "N",
+        "status": "modified",
+        "url": "https://www.alibaba.com/product-detail/Factory-Direct-Lightweight-Marathon-Running-Shoes_1601939661419.html",
+        "scope": "2026-10-31当前官方get；新标题、亮点与小单价命中，modified/N审核中；不记公开生效",
+        "highlights": "Marathon running sneakers: A lightweight, breathable textile style with a high-rebound, non-slip sole.\n\nAdjustable lace-up fit: The mesh-panel upper and front laces allow the wearer to adjust instep tension.\n\nLayered construction: A thick sole profile and raised front overlay define the closed-toe sneaker.",
         "sku_count": 44,
         "colour_EU": {
           "Orange": [
@@ -29156,6 +29374,20 @@
               "id": "150"
             },
             "image_url": "https://sc04.alicdn.com/kf/Hf7ca36a78bcb4275b97dd8cbbe505efdh.png"
+          }
+        ],
+        "price_tiers": [
+          {
+            "start_quantity": 2,
+            "price": "10.90"
+          },
+          {
+            "start_quantity": 50,
+            "price": "9.23"
+          },
+          {
+            "start_quantity": 100,
+            "price": "8.78"
           }
         ]
       },
@@ -29294,6 +29526,23 @@
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ009_详情信息整组收尾/商品/1601939661419/update_receipt.json",
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ009_详情信息整组收尾/商品/1601939661419/verification.json"
           ]
+        },
+        "factory_direct_content": {
+          "state": "SUBMITTED_TARGET_FIELDS_MATCH_PENDING_REVIEW",
+          "at": "2026-10-31T04:56:06.528960+00:00",
+          "scope": [
+            "title",
+            "product_summary",
+            "first_price_tier",
+            "applicable_detail_text"
+          ],
+          "evidence": [
+            "02_Alibaba运营/02_单品优化记录/商品档案/BQ009/2026-10-31_全链接优化/1601939661419/after_get.json",
+            "02_Alibaba运营/02_单品优化记录/商品档案/BQ009/2026-10-31_全链接优化/1601939661419/verification.json"
+          ],
+          "actual_score": "5.00",
+          "public_status": "PENDING_BROWSER_URL_CONFIDENCE_STOP",
+          "next_action": "只读核approved/Y后render及公开呈现，不重复提交"
         }
       },
       "price_review": {
@@ -29347,10 +29596,11 @@
       "bound_source_id": null,
       "source_relation": "SOURCE_EVIDENCE_MISSING",
       "observation": {
-        "audit": "approved",
-        "display": "Y",
-        "at": "2026-10-21T14:48:52.824500+00:00",
-        "scope": "价格API闭环；公开呈现未核"
+        "audit": "modified",
+        "display": "N",
+        "at": "2026-10-31T04:56:17.045422+00:00",
+        "scope": "本次8链接标题/亮点/小单价提交后官方get；仍在审核中",
+        "score": "5.00"
       },
       "evidence": [
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939675350/prepared.json",
@@ -29379,7 +29629,9 @@
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ009_详情信息整组收尾/图片银行.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ009_详情信息整组收尾/商品/1601939675350/prepared.json",
         "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ009_详情信息整组收尾/商品/1601939675350/update_receipt.json",
-        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ009_详情信息整组收尾/商品/1601939675350/verification.json"
+        "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ009_详情信息整组收尾/商品/1601939675350/verification.json",
+        "02_Alibaba运营/02_单品优化记录/商品档案/BQ009/2026-10-31_全链接优化/1601939675350/after_get.json",
+        "02_Alibaba运营/02_单品优化记录/商品档案/BQ009/2026-10-31_全链接优化/1601939675350/verification.json"
       ],
       "notes": "已核平台ID/型号/链接；没有逐款来源证明，供应商/原货号/拿货价留空。平台展示不证明自产/实际供给。",
       "catalog_presence": "OBSERVED",
@@ -29492,20 +29744,21 @@
         ]
       },
       "local_sync": {
-        "state": "FORMAL_PRICE_PASS_API",
+        "state": "SUBMITTED_TARGET_FIELDS_MATCH_PENDING_REVIEW",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939675350/formal_get.json",
         "current_schema_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939675350/formal_render.json",
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601939675350/当前图库与货号.json",
-        "at": "2026-10-21T14:48:52.824500+00:00",
+        "at": "2026-10-31T04:56:17.045422+00:00",
         "observed_at": "2026-10-20T05:02:43.691600+00:00",
         "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939675350/verification.json",
         "assortment_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/配色与尺码修正/BQ009_逐色绑定纠正/商品/1601939675350/verification.json",
-        "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ009_详情信息整组收尾/商品/1601939675350/verification.json"
+        "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ009_详情信息整组收尾/商品/1601939675350/verification.json",
+        "next_action": "核审核通过、当前Schema与公开呈现；不重放本次成功提交"
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939675350/formal_get.json",
-        "at": "2026-10-21T14:48:52.824500+00:00",
-        "scope": "本次价格正式回读；不代表公开验收"
+        "at": "2026-10-31T04:56:17.045422+00:00",
+        "scope": "完整官方get当前回读；审核中，正式批准与公开呈现待验"
       },
       "platform_group": {
         "id": "971467417",
@@ -29513,9 +29766,9 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-10-21T14:48:52.824500+00:00",
+        "at": "2026-10-31T04:56:17.045422+00:00",
         "model": "BQ009-W1 / L1026",
-        "title": "Wholesale Men's Light Weight Casual Sneakers Breathable Mesh Lace up Thick Sole Walking Shoes Factory Supply L1026",
+        "title": "Factory Direct Breathable Textile Lace-Up Marathon Running Shoes High Rebound Non-Slip Sneakers Wholesale",
         "keywords": [
           ""
         ],
@@ -29528,11 +29781,11 @@
           "https://sc04.alicdn.com/kf/S4dddceaf1267492a9a7712bafbc56c0bb.jpg"
         ],
         "category_id": 201334413,
-        "display": "Y",
-        "status": "approved",
-        "url": "https://www.alibaba.com/product-detail/Wholesale-Men-s-Light-Weight-Casual_1601939675350.html",
-        "scope": "Current exact-ID official get; scoped target acceptance kept separately",
-        "highlights": "Adjustable mesh-panel upper: The lace-up front allows the instep tension to be set by the wearer.\n\nLayered casual construction: A thick sole profile and raised front overlay form a closed-toe walking sneaker.",
+        "display": "N",
+        "status": "modified",
+        "url": "https://www.alibaba.com/product-detail/Factory-Direct-Breathable-Textile-Lace-Up_1601939675350.html",
+        "scope": "2026-10-31当前官方get；新标题、亮点与小单价命中，modified/N审核中；不记公开生效",
+        "highlights": "Marathon running sneakers: A lightweight, breathable textile style with a high-rebound, non-slip sole.\n\nAdjustable lace-up fit: The mesh-panel upper and front laces allow the wearer to adjust instep tension.\n\nLayered construction: A thick sole profile and raised front overlay define the closed-toe sneaker.",
         "sku_count": 44,
         "colour_EU": {
           "Orange": [
@@ -29616,6 +29869,20 @@
               "id": "300"
             },
             "image_url": "https://sc04.alicdn.com/kf/Hd9b7424fb02041a1889d639318ce2a54Y.png"
+          }
+        ],
+        "price_tiers": [
+          {
+            "start_quantity": 2,
+            "price": "10.90"
+          },
+          {
+            "start_quantity": 50,
+            "price": "9.19"
+          },
+          {
+            "start_quantity": 100,
+            "price": "8.78"
           }
         ]
       },
@@ -29754,6 +30021,23 @@
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ009_详情信息整组收尾/商品/1601939675350/update_receipt.json",
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ009_详情信息整组收尾/商品/1601939675350/verification.json"
           ]
+        },
+        "factory_direct_content": {
+          "state": "SUBMITTED_TARGET_FIELDS_MATCH_PENDING_REVIEW",
+          "at": "2026-10-31T04:56:17.045422+00:00",
+          "scope": [
+            "title",
+            "product_summary",
+            "first_price_tier",
+            "applicable_detail_text"
+          ],
+          "evidence": [
+            "02_Alibaba运营/02_单品优化记录/商品档案/BQ009/2026-10-31_全链接优化/1601939675350/after_get.json",
+            "02_Alibaba运营/02_单品优化记录/商品档案/BQ009/2026-10-31_全链接优化/1601939675350/verification.json"
+          ],
+          "actual_score": "5.00",
+          "public_status": "PENDING_BROWSER_URL_CONFIDENCE_STOP",
+          "next_action": "只读核approved/Y后render及公开呈现，不重复提交"
         }
       },
       "price_review": {

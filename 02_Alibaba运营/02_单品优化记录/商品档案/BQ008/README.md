@@ -1,10 +1,10 @@
 # BQ008 商品档案
 
-2026-10-31研究增量：[国际站以图搜同款与标题草稿](../../../../06_市场研究/01_竞品/BQ008_BQ009国际站同款与标题研究.md)。已实看同鞋型候选详情8 sold，未确认高销量精确同款标杆；原创标题仅草稿，未提交平台，不覆盖下方正式值。
+2026-10-31当前增量：本款全部4条链接已提交不同标题、逐款亮点及小单首档10.90美元；当前回读命中、质量评分均5.00，仍modified/N审核中。逐ID当前值见本页最新增量，历史快照不覆盖本次提交。[研究依据](../../../../06_市场研究/01_竞品/BQ008_BQ009国际站同款与标题研究.md)。
 
 此页是本款国际站档案，由产品中心及国际站商品数据组合生成；跨渠道共用身份与供应来源回产品中心，渠道正式值回按ID保存的回读原件。原始包只读，候选/历史材料不当当前线上素材。
 
-来源状态：`MAPPED`。下一步：本轮标题与功能亮点已正式核验 4/4 条；余项按当前核验处理，图像和来源色码单列继续，不重放旧文案。
+来源状态：`MAPPED`。本次4条链接已受理且目标回读命中，均待平台审核；下一步只读验审核、Schema及公开呈现，不重放。
 
 ## 当前资料与实物证据
 
@@ -28,10 +28,12 @@
 
 ### BQ-008 · 1601825021825
 
+> 2026-10-31最新：`modified / N`，当前回读标题：**Factory Direct Mesh Marathon Running Shoes High Rebound Non-Slip Lace-Up Sneakers with Layered Upper**；小单2–49双USD10.90，各中/大档原价保留，实际评分5.00。[当前回读原件](执行证据_20261031/1601825021825/final_get.json)；以下旧值按快照日期追溯，不反向回写。
+
 - 平台链接：[1601825021825](https://www.alibaba.com/product-detail/Wholesale-Solid-Spring-Summer-Breathable-Mesh_1601825021825.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601825021825/formal_get.json)；UTC 2026-10-21T14:48:55.048895+00:00。
-- 当前正式标题：Mesh Panel Lace-Up Walking Shoes with Layered Upper and Sculpted Sole Wholesale
-- 审核/展示（2026-10-29 15:56 UTC+8）：modified / N；平台类目ID：201334413；公开呈现待验。
+- 历史完整字段入口（当前文件可能已有新回读）：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601825021825/formal_get.json)；UTC 2026-10-21T14:48:55.048895+00:00。
+- 历史标题快照：Mesh Panel Lace-Up Walking Shoes with Layered Upper and Sculpted Sole Wholesale
+- 历史审核/展示（2026-10-29 15:56 UTC+8）：modified / N；平台类目ID：201334413；公开呈现待验。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, owner_member, owner_member_display_name, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
 - SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。
 - 店内分组：Athletic & Running Style Shoes · 971467417；[平台分组回执](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%BA%97%E5%86%85%E5%88%86%E7%BB%84/971467417.json)。
@@ -50,12 +52,14 @@
 
 ### BQ008-W1 / L1009 · 1601939625569
 
+> 2026-10-31最新：`modified / N`，当前回读标题：**Factory Direct Mesh Marathon Running Shoes High Rebound Non-Slip Lace-Up Sneakers Wholesale Trial Orders**；小单2–49双USD10.90，各中/大档原价保留，实际评分5.00。[当前回读原件](执行证据_20261031/1601939625569/final_get.json)；以下旧值按快照日期追溯，不反向回写。
+
 > 2026-10-29最新增量：本W1选款文字与CTA已`approved / Y`，get/render逐字命中、正常买家公开页完整文字可见，实际5.00。[唯一采购承接任务](../../BQ系列持续优化_2026-09-14/主推采购承接.md)和[最新回读](../../BQ系列持续优化_2026-09-14/采购承接执行/续验_1620/1601939625569/after_get.json)优先于下方10月21日快照；后续详情编辑须保全新增文字并先取实时get/render。
 
 - 平台链接：[1601939625569](https://www.alibaba.com/product-detail/Wholesale-Men-s-Grey-Green-Breathable_1601939625569.html)
 - 最新正式回读：[完整商品字段](../../BQ系列持续优化_2026-09-14/采购承接执行/续验_1620/1601939625569/after_get.json)；2026-10-29本轮增量；下方其他材料不代替该最新状态。
-- 当前正式标题：Mesh Panel Lace-Up Walking Shoes with Layered Upper and Sculpted Sole Wholesale
-- 审核/展示（2026-10-29 16:44:01 UTC+8正式get）：approved / Y；平台类目ID：201334413；本次选款文字正式、Schema及公开验收通过。
+- 历史标题快照：Mesh Panel Lace-Up Walking Shoes with Layered Upper and Sculpted Sole Wholesale
+- 历史审核/展示（2026-10-29 16:44:01 UTC+8正式get）：approved / Y；平台类目ID：201334413；本次选款文字正式、Schema及公开验收通过。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, owner_member, owner_member_display_name, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
 - SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。
 - 店内分组：Athletic & Running Style Shoes · 971467417；[平台分组回执](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%BA%97%E5%86%85%E5%88%86%E7%BB%84/971467417.json)。
@@ -74,10 +78,12 @@
 
 ### BQ008-R1 / L1009 · 1601939628529
 
+> 2026-10-31最新：`modified / N`，当前回读标题：**Factory Direct Mesh Marathon Running Shoes High Rebound Non-Slip Lace-Up Sneakers for Retail Collections**；小单2–49双USD10.90，各中/大档原价保留，实际评分5.00。[当前回读原件](执行证据_20261031/1601939628529/final_get.json)；以下旧值按快照日期追溯，不反向回写。
+
 - 平台链接：[1601939628529](https://www.alibaba.com/product-detail/Men-s-Black-White-Breathable-Mesh_1601939628529.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939628529/formal_get.json)；UTC 2026-10-21T14:49:52.991817+00:00。
-- 当前正式标题：Mesh Panel Lace-Up Walking Shoes with Layered Upper and Sculpted Sole Wholesale
-- 审核/展示：approved / Y；平台类目ID：201334413。
+- 历史完整字段入口（当前文件可能已有新回读）：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939628529/formal_get.json)；UTC 2026-10-21T14:49:52.991817+00:00。
+- 历史标题快照：Mesh Panel Lace-Up Walking Shoes with Layered Upper and Sculpted Sole Wholesale
+- 历史审核/展示：approved / Y；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, owner_member, owner_member_display_name, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
 - SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。
 - 店内分组：Athletic & Running Style Shoes · 971467417；[平台分组回执](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%BA%97%E5%86%85%E5%88%86%E7%BB%84/971467417.json)。
@@ -96,10 +102,12 @@
 
 ### BQ008-O1 / L1009 · 1601939659415
 
+> 2026-10-31最新：`modified / N`，当前回读标题：**Factory Direct Mesh Marathon Running Shoes High Rebound Non-Slip Lace-Up Sneakers for OEM Projects**；小单2–49双USD10.90，各中/大档原价保留，实际评分5.00。[当前回读原件](执行证据_20261031/1601939659415/final_get.json)；以下旧值按快照日期追溯，不反向回写。
+
 - 平台链接：[1601939659415](https://www.alibaba.com/product-detail/Custom-Logo-All-Black-Breathable-Mesh_1601939659415.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939659415/formal_get.json)；UTC 2026-10-21T14:49:50.297067+00:00。
-- 当前正式标题：Mesh Panel Lace-Up Walking Shoes with Layered Upper and Sculpted Sole Wholesale
-- 审核/展示：approved / Y；平台类目ID：201334413。
+- 历史完整字段入口（当前文件可能已有新回读）：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939659415/formal_get.json)；UTC 2026-10-21T14:49:50.297067+00:00。
+- 历史标题快照：Mesh Panel Lace-Up Walking Shoes with Layered Upper and Sculpted Sole Wholesale
+- 历史审核/展示：approved / Y；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, owner_member, owner_member_display_name, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
 - SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。
 - 店内分组：Athletic & Running Style Shoes · 971467417；[平台分组回执](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%BA%97%E5%86%85%E5%88%86%E7%BB%84/971467417.json)。
@@ -245,3 +253,25 @@
 - [verification.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%9B%BE%E5%BA%93%E9%87%8D%E5%81%9A/BQ008_%E8%AF%A6%E6%83%85%E4%BF%A1%E6%81%AF%E6%95%B4%E7%BB%84%E6%94%B6%E5%B0%BE/%E5%95%86%E5%93%81/1601825021825/verification.json)
 
 原件、正式回执与当前资料通过本页关联，不再复制成第二套商品库。
+
+
+## 2026-10-31 本轮提交与正式回读
+
+单写入者：Codex BQ008子任务。四条均已单次正式提交，当前 `modified/N` 审核中；不得重放。公开验收待审核结束后继续。标题与亮点采用负责人本轮明确认可的Factory Direct、Marathon、High Rebound、Non-Slip，不加入量化测试或认证。
+
+- 1601825021825：`modified/N`；实际评分5.00；标题/亮点比对True，其他详情/图片/属性严格顺序比较False（原ID详情图仅顺序变化，资产及角色集合保持），SKU与其他价格保留True。
+  - 当前回读标题：Factory Direct Mesh Marathon Running Shoes High Rebound Non-Slip Lace-Up Sneakers with Layered Upper
+  - [正式原件及核对](执行证据_20261031/1601825021825/verification.json)。
+- 1601939625569：`modified/N`；实际评分5.00；标题/亮点比对True，其他详情/图片/属性保留True，SKU与其他价格保留True。
+  - 当前回读标题：Factory Direct Mesh Marathon Running Shoes High Rebound Non-Slip Lace-Up Sneakers Wholesale Trial Orders
+  - [正式原件及核对](执行证据_20261031/1601939625569/verification.json)。
+- 1601939628529：`modified/N`；实际评分5.00；标题/亮点比对True，其他详情/图片/属性保留True，SKU与其他价格保留True。
+  - 当前回读标题：Factory Direct Mesh Marathon Running Shoes High Rebound Non-Slip Lace-Up Sneakers for Retail Collections
+  - [正式原件及核对](执行证据_20261031/1601939628529/verification.json)。
+- 1601939659415：`modified/N`；实际评分5.00；标题/亮点比对True，其他详情/图片/属性保留True，SKU与其他价格保留True。
+  - 当前回读标题：Factory Direct Mesh Marathon Running Shoes High Rebound Non-Slip Lace-Up Sneakers for OEM Projects
+  - [正式原件及核对](执行证据_20261031/1601939659415/verification.json)。
+
+本轮全链接内容/首档价格授权覆盖历史仅W1执行边界；`PROTECT_SOURCE` 的下架/删除保护不撤销。API完整原件仅本地留存并由证据目录.gitignore排除；公开可同步[去敏结果摘要](执行证据_20261031/summary.json)。
+
+集中第二次正式get：四条仍modified/N，不重放、不循环等待；审核通过后再render与公开验收。价格首档2–49双统一USD10.90；50–99双原ID/W1保留9.19、R1保留9.23、O1保留9.15；100双起各保留8.78。
