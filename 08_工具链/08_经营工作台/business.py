@@ -64,12 +64,14 @@ class Business:
             title=fields.get('title') or (first.get('catalog_fields') or {}).get('title') or ''
             obj=_object('product:'+pid,'product',pid,PRODUCTS,subtitle=title or state_label,
                 summary=' · '.join(str(v) for v in [state_label,source.get('supplier'),source.get('model')] if v))
+            obj['product_series']='HR' if re.fullmatch(r'HR[-_]?\d+',pid,re.I) else '其他'
             obj['facts']=[_fact('共用产品ID',pid),_fact('来源状态',state_label),_fact('别名',product.get('aliases',[])),
                 _fact('原始资料包',product.get('raw_packages') or '原档未列出原包路径')]
             mode=product.get('supply_mode')
             if mode:obj['facts'].append(_fact('供货模式（原记录）',mode))
             classification=product.get('classification') or {}
             if classification.get('local_intent_candidates'):obj['facts'].append(_fact('用途候选（非逐款能力结论）',classification['local_intent_candidates']))
+            obj['classification']=classification
             specifications={k:product[k] for k in ('specifications','materials','material','sizes','size_range','colors') if product.get(k)}
             if specifications:obj['facts'].append(_fact('原档已有规格',specifications))
             if source:
@@ -176,6 +178,7 @@ class Business:
             statuses={'new':'待处理','open':'处理中','handled':'已处理','closed':'已关闭','pending':'待处理','replied':'已回复'}
             obj['facts']=[_fact('来源','网站原始记录'),_fact('记录编号',reference)]+[
                 _fact(label,statuses.get(row[k],row[k]) if k=='status' else row[k]) for k,label in labels.items() if row.get(k) not in ('',None)]
+            obj['conversation']=[{'sender':m.get('sender',''),'body':m.get('body',''),'sent_at':m.get('sentAt','')} for m in (row.get('messages') or []) if isinstance(m,dict)]
             obj['links']=[{'label':'网站私有后台','url':'https://www.beiqiang.online/admin/workbench/'}]
             result.append(obj)
         return result
@@ -226,7 +229,7 @@ class Business:
         query=q.strip().casefold()
         if query:objects=[o for o in objects if query in json.dumps(o,ensure_ascii=False).casefold()]
         # List stays compact; detail and Agent context use get_object.
-        return [{**{k:o[k] for k in ('id','kind','title','subtitle','source','summary')},'source_type':o.get('source_type') or ('website' if o['id'].startswith('customer:website-') else 'local'),'assets':o['assets'][:1], 'facts':[f for f in o['facts'] if f['label'].startswith('用途候选')] if o['kind']=='product' else []} for o in objects]
+        return [{**{k:o[k] for k in ('id','kind','title','subtitle','source','summary')},'source_type':o.get('source_type') or ('website' if o['id'].startswith('customer:website-') else 'local'),'assets':o['assets'][:1], 'product_series':o.get('product_series'), 'classification':o.get('classification',{}), 'facts':[f for f in o['facts'] if f['label'].startswith('用途候选')] if o['kind']=='product' else []} for o in objects]
 
     def get_object(self,object_id):
         if not isinstance(object_id,str):raise ValueError('业务对象ID无效')

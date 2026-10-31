@@ -284,6 +284,8 @@ class Handler(BaseHTTPRequestHandler):
             if parts==['api','desk','customer-profile']:
                 object_id=body.pop('object_id',None)
                 return self.send_json(app.customer_workspace.save_profile(object_id,body))
+            if parts==['api','desk','website-reply']:
+                return self.send_json(app.business.website.reply(body.get('object_id'),body.get('message')))
             if parts==['api','desk','customer-workflow']:
                 object_id=body.pop('object_id',None)
                 return self.send_json(app.customer_workspace.save_workflow(object_id,body))
