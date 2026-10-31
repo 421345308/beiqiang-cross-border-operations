@@ -101,3 +101,23 @@ class WebsiteTests(unittest.TestCase):
             self.assertEqual(website.status()['state'],'not_configured');opener.assert_not_called()
 
 if __name__=='__main__':unittest.main()
+
+class ProductCategoryTests(unittest.TestCase):
+    def test_navigation_uses_shape_without_promoting_function_claims(self):
+        from business import _product_category
+        for recorded,expected in [(['网面拼接系带踝帮TPR底户外休闲靴'],'靴子'),(['闭头针织半拖鞋'],'凉鞋/拖鞋'),(['闭趾包后跟套脚洞洞休闲鞋'],'洞洞鞋'),(['透气/轻量候选'],'其他'),([], '其他')]:
+            with self.subTest(recorded=recorded):
+                self.assertEqual(_product_category({'local_intent_candidates':recorded}),expected)
+
+    def test_list_and_detail_share_category_and_preserve_evidence(self):
+        case=BusinessTests();case.setUp()
+        try:
+            case.product()
+            data=json.loads((case.root/PRODUCTS).read_text(encoding='utf8'))
+            data['products'][0]['classification']={'local_intent_candidates':['低帮系带休闲板鞋'],'state':'TITLE_OBSERVATION_PENDING_SKU_REVIEW'}
+            case.write(PRODUCTS,data)
+            self.assertEqual(case.business.list_objects('product')[0]['category'],'系带休闲鞋')
+            detail=case.business.get_object('product:BQ009')
+            self.assertEqual(detail['category'],'系带休闲鞋')
+            self.assertEqual(detail['classification']['state'],'TITLE_OBSERVATION_PENDING_SKU_REVIEW')
+        finally:case.doCleanups()

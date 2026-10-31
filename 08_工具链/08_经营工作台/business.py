@@ -21,6 +21,21 @@ CRM='04_客户开发/04_发送与跟进记录/客户开发跟进表_20260802.csv
 SKIP={'node_modules','outputs','_build','build','dist','cache','__pycache__','backups'}
 SOURCE_STATES={'ADOPTED':'已采纳供货来源','RAW_PACKAGE':'已有原始数据包','MAPPED':'已建立来源对应','MISSING':'来源缺失，待补证','CANDIDATE':'候选来源，尚未采纳','HOLD_SOURCE':'来源待核实，暂停承诺'}
 
+def _product_category(classification):
+    """Navigation only: use recorded shoe shapes, never infer performance."""
+    candidates=classification.get('local_intent_candidates') or []
+    text=' '.join(v for v in candidates if isinstance(v,str))
+    for label,words in (
+        ('靴子',('靴',)),
+        ('凉鞋/拖鞋',('凉鞋','拖鞋','半拖')),
+        ('洞洞鞋',('洞洞',)),
+        ('乐福鞋/豆豆鞋',('乐福','豆豆')),
+        ('套脚休闲鞋',('套脚','袜套','一脚蹬')),
+        ('系带休闲鞋',('系带',)),
+    ):
+        if any(word in text for word in words):return label
+    return '其他'
+
 def _now():return datetime.now(timezone.utc).isoformat()
 def _stable(value):return hashlib.sha256(value.encode('utf8')).hexdigest()[:20]
 def _clean(value):return re.sub(r'\s+',' ',str(value)).strip()
@@ -90,6 +105,7 @@ class Business:
             classification=product.get('classification') or {}
             if classification.get('local_intent_candidates'):obj['facts'].append(_fact('用途候选（非逐款能力结论）',classification['local_intent_candidates']))
             obj['classification']=classification
+            obj['category']=_product_category(classification)
             specifications={k:product[k] for k in ('specifications','materials','material','sizes','size_range','colors') if product.get(k)}
             if specifications:obj['facts'].append(_fact('原档已有规格',specifications))
             if source:
@@ -258,7 +274,7 @@ class Business:
         query=q.strip().casefold()
         if query:objects=[o for o in objects if query in json.dumps(o,ensure_ascii=False).casefold()]
         # List stays compact; detail and Agent context use get_object.
-        return [{**{k:o[k] for k in ('id','kind','title','subtitle','source','summary')},'source_type':o.get('source_type') or ('website' if o['id'].startswith('customer:website-') else 'local'),'assets':o['assets'][:1], 'supply':o.get('supply',{}), 'product_series':o.get('product_series'), 'current_model':o.get('current_model'), 'aliases':o.get('aliases',[]), 'source_state':o.get('source_state'), 'source_role':o.get('source_role'), 'publication_disposition':o.get('publication_disposition',{}), 'links':o['links'] if o['kind']=='product' else [], 'classification':o.get('classification',{}), 'facts':[f for f in o['facts'] if f['label'].startswith('用途候选')] if o['kind']=='product' else []} for o in objects]
+        return [{**{k:o[k] for k in ('id','kind','title','subtitle','source','summary')},'source_type':o.get('source_type') or ('website' if o['id'].startswith('customer:website-') else 'local'),'assets':o['assets'][:1], 'supply':o.get('supply',{}), 'product_series':o.get('product_series'), 'current_model':o.get('current_model'), 'aliases':o.get('aliases',[]), 'source_state':o.get('source_state'), 'source_role':o.get('source_role'), 'publication_disposition':o.get('publication_disposition',{}), 'links':o['links'] if o['kind']=='product' else [], 'category':o.get('category'), 'classification':o.get('classification',{}), 'facts':[f for f in o['facts'] if f['label'].startswith('用途候选')] if o['kind']=='product' else []} for o in objects]
 
     def get_object(self,object_id):
         if not isinstance(object_id,str):raise ValueError('业务对象ID无效')

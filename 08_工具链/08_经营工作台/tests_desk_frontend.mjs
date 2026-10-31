@@ -85,6 +85,20 @@ test('商品详情将供货链接与多个国际站商品链接集中展示', as
   assert.equal(links.querySelectorAll('a').length,3);
 });
 
+test('客户开发可搜索分类，并把已结束跟进与当前客户分开', async () => {
+  const h=harness('#/customers?view=development'); h.discovery.candidates.push(
+    {id:'candidate:1',kind:'candidate',title:'英国批发公司',business_category:'批发商',business_summary:'经营休闲鞋',contact_status_label:'未联系'},
+    {id:'candidate:2',kind:'candidate',title:'旧客户',business_category:'品牌',business_summary:'已有联系',contact_status_label:'已结束跟进'});
+  await h.ui.bootstrap(); await settle(); assert.ok(h.elements.page.textContent.includes('英国批发公司')); assert.equal(h.elements.page.textContent.includes('旧客户'),false);
+  const input=walk(h.body).find(x=>x['aria-label']==='搜索目标客户'); input.value='不存在'; input.listeners.input(); assert.equal(h.elements.page.textContent.includes('英国批发公司'),false);
+  input.value=''; input.listeners.input(); const status=walk(h.body).find(x=>x['aria-label']==='联系状态'); status.value='ended'; status.listeners.change(); assert.ok(h.elements.page.textContent.includes('旧客户')); assert.equal(h.elements.page.textContent.includes('英国批发公司'),false);
+});
+
+test('客户详情直接展示公司网站和现有联系方式', async () => {
+  const h=harness('#/customers?view=development&item=candidate%3A1'); h.discovery.candidates.push({id:'candidate:1',kind:'candidate',title:'买家公司',company:'买家公司',website:'https://example.org',business_category:'批发商',business_summary:'鞋类批发',source_record:{contacts:[{kind:'email',value:'buyer@example.org'}]}});
+  await h.ui.bootstrap(); await settle(); assert.ok(h.elements.page.textContent.includes('邮箱：buyer@example.org')); assert.ok(walk(h.body).some(x=>x.tagName==='A' && x.textContent==='访问公司网站 ↗'));
+});
+
 test('job carries current object/token, text events render, and polling preserves instruction and unsaved artifact', async () => {
   const h = harness('#/object/product%3A1'); await h.ui.bootstrap(); await settle(); const ctx = h.ui.S.detail;
   ctx.instruction.value = '根据真实材料整理选款'; ctx.instruction.listeners.input({}); await findButton(h.body, '交给 Sol 处理').click(); const call = h.requests.find(item => item.path === '/api/desk/jobs' && item.payload); assert.equal(call.payload.object_id, 'product:1'); assert.equal(call.options.headers['X-Workbench-Token'], 'fixture-token'); assert.ok(ctx.jobBox.textContent.includes('已取得资料'));

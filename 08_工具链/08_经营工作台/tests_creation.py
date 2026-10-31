@@ -38,3 +38,12 @@ class CreationTests(unittest.TestCase):
                 self.assertEqual(business.list_artifacts(oid)[0]['content'],'Creative draft')
                 self.assertEqual((p/'PROJECT.md').read_text(encoding='utf8'),original)
             finally:db.close()
+
+    def test_context_evidence(self):
+        text = '# 项目\n## 当前状态\n尚未验收\n```md\n## 下一步\n代码标题\n```\n## 下一动作\n观看第二版'
+        sections, context = Creation._project_context(text)
+        self.assertEqual([s['title'] for s in sections], ['项目', '当前状态', '下一动作'])
+        self.assertIn('尚未验收', context['progress'][0]['content'])
+        self.assertEqual(context['next_actions'][0]['content'], '观看第二版')
+        self.assertEqual(context['next_actions'][0]['line'], 8)
+        self.assertEqual(context['goal'], [])

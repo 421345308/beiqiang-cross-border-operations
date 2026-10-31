@@ -31,6 +31,36 @@ class Creation:
                 elif target.name in ('README.md','VIDEO_INDEX.md') and target not in seen:queue.append(target)
         return sorted(records)
 
+    @staticmethod
+    def _project_context(content):
+        """Expose original sections for review and agent continuation, without inferring state."""
+        sections=[]
+        current=None
+        fenced=False
+        for number,line in enumerate(content.splitlines(),1):
+            if line.lstrip().startswith(('```','~~~')):
+                fenced=not fenced
+            heading=None if fenced else re.match(r'^(#{1,6})\s+(.+?)\s*#*$',line)
+            if heading:
+                if current is not None:
+                    current['content']='\n'.join(current.pop('_lines')).strip()
+                    sections.append(current)
+                current={'title':heading.group(2).strip(),'level':len(heading.group(1)),
+                         'line':number,'_lines':[]}
+            elif current is not None:
+                current['_lines'].append(line)
+        if current is not None:
+            current['content']='\n'.join(current.pop('_lines')).strip()
+            sections.append(current)
+        labels={'goal':('目标','本轮交付','项目定位'),
+                'progress':('当前状态','当前进度','当前结果','最新进展'),
+                'next_actions':('下一步','下一动作','后续行动','待办'),
+                'acceptance':('验收','完成依据','交付标准')}
+        context={key:[dict(section) for section in sections
+                      if any(label in section['title'] for label in names)]
+                 for key,names in labels.items()}
+        return sections,context
+
     def _summary(self,path):
         relative=path.relative_to(self.root).as_posix()
         content=path.read_text(encoding='utf-8-sig')
@@ -60,7 +90,8 @@ class Creation:
                 host=urlsplit(url).hostname or ''
                 if host=='liblib.art' or host.endswith('.liblib.art') or host=='libtv.ai' or host.endswith('.libtv.ai'):
                     if url not in links:links.append(url)
-            return {**row,'content':content,'assets':assets,'links':links,'notice':'文件存在不代表观看验收或正式发布；状态以原项目为准。'}
+            sections,context=self._project_context(content)
+            return {**row,'sections':sections,'project_context':context,'content':content,'assets':assets,'links':links,'notice':'文件存在不代表观看验收或正式发布；状态以原项目为准。'}
         raise ValueError('找不到创作项目')
 
     def libtv_projects(self,workspace_id='0',page=1):

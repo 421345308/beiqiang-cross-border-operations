@@ -91,6 +91,18 @@ class WorkflowTests(unittest.TestCase):
         current=CustomerWorkspace(self.app).workflow(oid)
         self.assertEqual(len(current['history']),20);self.assertEqual(current['history'][-1]['to'],'waiting_customer')
         self.assertEqual(current['history'][-1]['to_label'],'等客户')
+    def test_business_summary_respects_operator_and_closed_state(self):
+        from customer_workflow import business_summary,decorate
+        flow=decorate('customer:x','website',{'next_action':'先整理选款'})
+        result=business_summary({'brief':'客户寻找休闲鞋','next_action':'AI建议追问数量'}, {}, flow)
+        self.assertEqual(result['headline'],'客户寻找休闲鞋')
+        self.assertEqual(result['next_action'],'先整理选款')
+        history=business_summary({}, {}, decorate('customer:x','local'))
+        self.assertIn('历史资料',history['next_action'])
+        ended=business_summary({'next_action':'旧建议'}, {}, decorate('customer:x','website',{'state':'lost'}))
+        self.assertEqual(ended['next_action'],'')
+        self.assertIn('business_summary',self.work.queue()['items'][0])
+
     def test_order_summary_is_chinese_business_context_not_json_buyer_quotation(self):
         profile=self.work.profile('customer:order')
         self.assertEqual(profile['original_language'],'zh');self.assertIn('不是买家原话',profile['original_text'])

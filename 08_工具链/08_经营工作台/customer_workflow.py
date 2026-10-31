@@ -88,3 +88,25 @@ def brief(analysis,cleaned):
     for key in ('missing','secondary_requests','conflicts','questions_now'):
         result[key]=[clip(value) for value in analysis.get(key,[])[:3] if isinstance(value,str)] if isinstance(analysis.get(key),list) else []
     return result
+
+
+def business_summary(analysis, cleaned, workflow):
+    """Business-facing projection; explicit operator action wins over AI advice."""
+    summary=brief(analysis,cleaned)
+    defaults={
+        'new':'阅读客户需求，整理合作回复',
+        'preparing':'审阅回复草稿，确认后安排回复',
+        'waiting_customer':'查看客户是否回复，再安排后续跟进',
+        'internal_review':'评估当前需求的承接方案',
+        'quoting':'核对选款与商业条件，推进报价沟通',
+        'sampling':'确认样品目的、交付内容与下一步',
+    }
+    action=(workflow.get('next_action') or '').strip()
+    if not action and workflow['state'] not in ENDED and workflow['bucket']!='history':
+        action=summary['next_action'] or defaults.get(workflow['state'],'')
+    if not action and workflow['bucket']=='history':action='查看历史资料；有当前机会时转入推进'
+    return {'headline':summary['brief'] or summary['core_need'] or '尚未整理客户需求',
+            'core_need':summary['core_need'], 'fit':summary['fit'],
+            'next_action':action, 'questions_now':summary['questions_now'],
+            'recommended_reply':summary['recommended_reply'],
+            'status':workflow['state_label'],'pending_label':workflow['pending_label']}

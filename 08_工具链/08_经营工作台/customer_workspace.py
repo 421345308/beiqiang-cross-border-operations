@@ -199,6 +199,8 @@ class CustomerWorkspace:
                 'received_at':record.get('receivedAt') or record.get('received_at'),
                 'workflow':flow,'analysis':customer_workflow.brief(saved.get('analysis',{}),{**{'need':record.get('requirements')},**cleaned}),
                 'analysis_stale':bool(saved.get('source_hash')) and saved.get('source_hash')!=source_hash})
+        for row in rows:
+            row['business_summary']=customer_workflow.business_summary(row['analysis'],{},row['workflow'])
         counts={key:sum(row['workflow']['bucket']==key for row in rows) for key in customer_workflow.BUCKETS}
         selected=[row for row in rows if row['workflow']['bucket']==bucket]
         counts['states']={key:sum(row['workflow']['state']==key for row in selected) for key in customer_workflow.STATES}
