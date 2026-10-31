@@ -1,10 +1,10 @@
 # BQ009 商品档案
 
-2026-10-31当前增量：本款全部4条链接已提交不同标题、逐款亮点及小单首档10.90美元；当前回读命中、质量评分均5.00，仍modified/N审核中。逐ID当前值见本页最新增量，历史快照不覆盖本次提交。[研究依据](../../../../06_市场研究/01_竞品/BQ008_BQ009国际站同款与标题研究.md)。
+2026-10-31最新批准验收：本款4条全部approved/Y，get及当前Schema标题/亮点/价格命中，实际评分均5.00。小单2–49双USD10.90，中/大档按各ID原值保留。公开视觉及交互仍待浏览器完整恢复后核验；下方提交后待审记录为历史阶段。
 
 此页是本款国际站档案，由产品中心及国际站商品数据组合生成；跨渠道共用身份与供应来源回产品中心，渠道正式值回按ID保存的回读原件。原始包只读，候选/历史材料不当当前线上素材。
 
-来源状态：`MAPPED`。本次4条链接已受理且目标回读命中，均待平台审核；下一步只读验审核、Schema及公开呈现，不重放。
+来源状态：`MAPPED`。本次4条链接已批准并通过API字段验收；下一步核公开页面，禁止重放成功提交。
 
 ## 当前资料与实物证据
 
@@ -27,7 +27,7 @@
 
 ### BQ-009 · 1601825074604
 
-> 2026-10-31最新：`modified / N`，当前回读标题：**Factory Direct Marathon Running Shoes High Rebound Non-Slip Mesh Lace-Up Sneakers Wholesale**；小单2–49双USD10.90，各中/大档原价保留，实际评分5.00。[当前回读原件](2026-10-31_全链接优化/1601825074604/after_get.json)；以下旧值按快照日期追溯，不反向回写。
+> 2026-10-31最新批准：`approved / Y`，当前标题：**Factory Direct Marathon Running Shoes High Rebound Non-Slip Mesh Lace-Up Sneakers Wholesale**；小单2–49双USD10.90，各中/大档原价保留，实际评分5.00。[批准后回读](2026-10-31_全链接优化/1601825074604/recovery_get.json)。[当前回读原件](2026-10-31_全链接优化/1601825074604/after_get.json)；以下旧值按快照日期追溯，不反向回写。
 
 - 平台链接：[1601825074604](https://www.alibaba.com/product-detail/Wholesale-Breathable-Mesh-Athletic-Walking-Shoes_1601825074604.html)
 - 历史完整字段入口（当前文件可能已有新回读）：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601825074604/formal_get.json)；UTC 2026-10-10T07:03:57.850336+00:00。
@@ -47,7 +47,7 @@
 
 ### BQ009-R1 / L1026 · 1601939661419
 
-> 2026-10-31最新：`modified / N`，当前回读标题：**Factory Direct Lightweight Marathon Running Shoes High Rebound Non-Slip Sneakers with Thick Sole**；小单2–49双USD10.90，各中/大档原价保留，实际评分5.00。[当前回读原件](2026-10-31_全链接优化/1601939661419/after_get.json)；以下旧值按快照日期追溯，不反向回写。
+> 2026-10-31最新批准：`approved / Y`，当前标题：**Factory Direct Lightweight Marathon Running Shoes High Rebound Non-Slip Sneakers with Thick Sole**；小单2–49双USD10.90，各中/大档原价保留，实际评分5.00。[批准后回读](2026-10-31_全链接优化/1601939661419/recovery_get.json)。[当前回读原件](2026-10-31_全链接优化/1601939661419/after_get.json)；以下旧值按快照日期追溯，不反向回写。
 
 - 平台链接：[1601939661419](https://www.alibaba.com/product-detail/Men-s-Light-Weight-Casual-Sneakers_1601939661419.html)
 - 历史完整字段入口（当前文件可能已有新回读）：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939661419/formal_get.json)；UTC 2026-10-21T14:48:50.208831+00:00。
@@ -71,7 +71,7 @@
 
 ### BQ009-W1 / L1026 · 1601939675350
 
-> 2026-10-31最新：`modified / N`，当前回读标题：**Factory Direct Breathable Textile Lace-Up Marathon Running Shoes High Rebound Non-Slip Sneakers Wholesale**；小单2–49双USD10.90，各中/大档原价保留，实际评分5.00。[当前回读原件](2026-10-31_全链接优化/1601939675350/after_get.json)；以下旧值按快照日期追溯，不反向回写。
+> 2026-10-31最新批准：`approved / Y`，当前标题：**Factory Direct Breathable Textile Lace-Up Marathon Running Shoes High Rebound Non-Slip Sneakers Wholesale**；小单2–49双USD10.90，各中/大档原价保留，实际评分5.00。[批准后回读](2026-10-31_全链接优化/1601939675350/recovery_get.json)。[当前回读原件](2026-10-31_全链接优化/1601939675350/after_get.json)；以下旧值按快照日期追溯，不反向回写。
 
 > 2026-10-29最新增量：本W1批准后正式及公开标题比最初提交稿多Lightweight Breathable，差异来源未核，保持实际值。本轮现有300组新增选款文字/CTA，正式get命中、`modified / N`待审核；[唯一采购承接任务](../../BQ系列持续优化_2026-09-14/主推采购承接.md)和[最新回读](../../BQ系列持续优化_2026-09-14/采购承接执行/续验_1620/1601939675350/选款文字/after_get.json)优先于下方旧快照，不以旧标题回写。
 
@@ -97,7 +97,7 @@
 
 ### BQ009-O1 / L1026 · 1601939721165
 
-> 2026-10-31最新：`modified / N`，当前回读标题：**Factory Direct Custom Logo Marathon Running Shoes High Rebound Non-Slip Lace-Up Sneakers OEM ODM**；小单2–49双USD10.90，各中/大档原价保留，实际评分5.00。[当前回读原件](2026-10-31_全链接优化/1601939721165/after_get.json)；以下旧值按快照日期追溯，不反向回写。
+> 2026-10-31最新批准：`approved / Y`，当前标题：**Factory Direct Custom Logo Marathon Running Shoes High Rebound Non-Slip Lace-Up Sneakers OEM ODM**；小单2–49双USD10.90，各中/大档原价保留，实际评分5.00。[批准后回读](2026-10-31_全链接优化/1601939721165/recovery_get.json)。[当前回读原件](2026-10-31_全链接优化/1601939721165/after_get.json)；以下旧值按快照日期追溯，不反向回写。
 
 - 平台链接：[1601939721165](https://www.alibaba.com/product-detail/Custom-Logo-Men-s-Casual-Sneakers_1601939721165.html)
 - 历史完整字段入口（当前文件可能已有新回读）：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939721165/formal_get.json)；UTC 2026-10-21T14:48:47.332839+00:00。
@@ -271,3 +271,8 @@
 正式get已逐ID核标题、产品亮点、每个SKU数量价；材料、主图、SKU编号/色码/库存、原详情图片、视频、公司图、公司介绍及FAQ均保全。原源详情没有可写300文字组，保留其全部原详情；三条扩展链接在原300组补简短产品与合作信息，W1原选款CTA保全。三条扩展首次因详情文字过长被平台明确拒绝，保留拒绝原件并按当前500限制压缩后分别提交一次，无未知结果重放。
 
 最终复核时间以本机summary.json与逐IDverification.json为准；仍modified/N的条目保持审核中，不能报正式上线。已批准的条目再核当前Schema。公开买家页本轮未验，原件和运行文件仅保存在已忽略的`2026-10-31_全链接优化/`目录，不公开推送。后续只读核审核与公开呈现，不重复提交。
+
+
+### 2026-10-31批准后的验收增量
+
+四条均approved/Y，get和当前Schema的标题及亮点逐字一致，首档10.90与逐SKU中/大档原值一致，实时评分5.00。批准后独立证据保存在本款执行目录audit_after_browser_recovery.json及逐ID recovery_get/render/score.json；未重放原提交。BQ009扩展详情数组只发生返回顺序差异，图库角色、URL、文字与数量保持；BQ008源图序变化也保留独立待核。BQ008-W1公开正文已读到新标题、新价和新增亮点，但截图调用又超时，因此不能扩大为8条公开视觉和交互完成。

@@ -1,10 +1,10 @@
 # BQ008 商品档案
 
-2026-10-31当前增量：本款全部4条链接已提交不同标题、逐款亮点及小单首档10.90美元；当前回读命中、质量评分均5.00，仍modified/N审核中。逐ID当前值见本页最新增量，历史快照不覆盖本次提交。[研究依据](../../../../06_市场研究/01_竞品/BQ008_BQ009国际站同款与标题研究.md)。
+2026-10-31最新批准验收：本款4条全部approved/Y，get及当前Schema标题/亮点/价格命中，实际评分均5.00。小单2–49双USD10.90，中/大档按各ID原值保留。公开视觉及交互仍待浏览器完整恢复后核验；下方提交后待审记录为历史阶段。
 
 此页是本款国际站档案，由产品中心及国际站商品数据组合生成；跨渠道共用身份与供应来源回产品中心，渠道正式值回按ID保存的回读原件。原始包只读，候选/历史材料不当当前线上素材。
 
-来源状态：`MAPPED`。本次4条链接已受理且目标回读命中，均待平台审核；下一步只读验审核、Schema及公开呈现，不重放。
+来源状态：`MAPPED`。本次4条链接已批准并通过API字段验收；下一步核公开页面，禁止重放成功提交。
 
 ## 当前资料与实物证据
 
@@ -28,7 +28,7 @@
 
 ### BQ-008 · 1601825021825
 
-> 2026-10-31最新：`modified / N`，当前回读标题：**Factory Direct Mesh Marathon Running Shoes High Rebound Non-Slip Lace-Up Sneakers with Layered Upper**；小单2–49双USD10.90，各中/大档原价保留，实际评分5.00。[当前回读原件](执行证据_20261031/1601825021825/final_get.json)；以下旧值按快照日期追溯，不反向回写。
+> 2026-10-31最新批准：`approved / Y`，当前标题：**Factory Direct Mesh Marathon Running Shoes High Rebound Non-Slip Lace-Up Sneakers with Layered Upper**；小单2–49双USD10.90，各中/大档原价保留，实际评分5.00。[批准后回读](执行证据_20261031/1601825021825/recovery_get.json)。[当前回读原件](执行证据_20261031/1601825021825/final_get.json)；以下旧值按快照日期追溯，不反向回写。
 
 - 平台链接：[1601825021825](https://www.alibaba.com/product-detail/Wholesale-Solid-Spring-Summer-Breathable-Mesh_1601825021825.html)
 - 历史完整字段入口（当前文件可能已有新回读）：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601825021825/formal_get.json)；UTC 2026-10-21T14:48:55.048895+00:00。
@@ -52,7 +52,7 @@
 
 ### BQ008-W1 / L1009 · 1601939625569
 
-> 2026-10-31最新：`modified / N`，当前回读标题：**Factory Direct Mesh Marathon Running Shoes High Rebound Non-Slip Lace-Up Sneakers Wholesale Trial Orders**；小单2–49双USD10.90，各中/大档原价保留，实际评分5.00。[当前回读原件](执行证据_20261031/1601939625569/final_get.json)；以下旧值按快照日期追溯，不反向回写。
+> 2026-10-31最新批准：`approved / Y`，当前标题：**Factory Direct Mesh Marathon Running Shoes High Rebound Non-Slip Lace-Up Sneakers Wholesale Trial Orders**；小单2–49双USD10.90，各中/大档原价保留，实际评分5.00。[批准后回读](执行证据_20261031/1601939625569/recovery_get.json)。[当前回读原件](执行证据_20261031/1601939625569/final_get.json)；以下旧值按快照日期追溯，不反向回写。
 
 > 2026-10-29最新增量：本W1选款文字与CTA已`approved / Y`，get/render逐字命中、正常买家公开页完整文字可见，实际5.00。[唯一采购承接任务](../../BQ系列持续优化_2026-09-14/主推采购承接.md)和[最新回读](../../BQ系列持续优化_2026-09-14/采购承接执行/续验_1620/1601939625569/after_get.json)优先于下方10月21日快照；后续详情编辑须保全新增文字并先取实时get/render。
 
@@ -78,7 +78,7 @@
 
 ### BQ008-R1 / L1009 · 1601939628529
 
-> 2026-10-31最新：`modified / N`，当前回读标题：**Factory Direct Mesh Marathon Running Shoes High Rebound Non-Slip Lace-Up Sneakers for Retail Collections**；小单2–49双USD10.90，各中/大档原价保留，实际评分5.00。[当前回读原件](执行证据_20261031/1601939628529/final_get.json)；以下旧值按快照日期追溯，不反向回写。
+> 2026-10-31最新批准：`approved / Y`，当前标题：**Factory Direct Mesh Marathon Running Shoes High Rebound Non-Slip Lace-Up Sneakers for Retail Collections**；小单2–49双USD10.90，各中/大档原价保留，实际评分5.00。[批准后回读](执行证据_20261031/1601939628529/recovery_get.json)。[当前回读原件](执行证据_20261031/1601939628529/final_get.json)；以下旧值按快照日期追溯，不反向回写。
 
 - 平台链接：[1601939628529](https://www.alibaba.com/product-detail/Men-s-Black-White-Breathable-Mesh_1601939628529.html)
 - 历史完整字段入口（当前文件可能已有新回读）：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939628529/formal_get.json)；UTC 2026-10-21T14:49:52.991817+00:00。
@@ -102,7 +102,7 @@
 
 ### BQ008-O1 / L1009 · 1601939659415
 
-> 2026-10-31最新：`modified / N`，当前回读标题：**Factory Direct Mesh Marathon Running Shoes High Rebound Non-Slip Lace-Up Sneakers for OEM Projects**；小单2–49双USD10.90，各中/大档原价保留，实际评分5.00。[当前回读原件](执行证据_20261031/1601939659415/final_get.json)；以下旧值按快照日期追溯，不反向回写。
+> 2026-10-31最新批准：`approved / Y`，当前标题：**Factory Direct Mesh Marathon Running Shoes High Rebound Non-Slip Lace-Up Sneakers for OEM Projects**；小单2–49双USD10.90，各中/大档原价保留，实际评分5.00。[批准后回读](执行证据_20261031/1601939659415/recovery_get.json)。[当前回读原件](执行证据_20261031/1601939659415/final_get.json)；以下旧值按快照日期追溯，不反向回写。
 
 - 平台链接：[1601939659415](https://www.alibaba.com/product-detail/Custom-Logo-All-Black-Breathable-Mesh_1601939659415.html)
 - 历史完整字段入口（当前文件可能已有新回读）：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939659415/formal_get.json)；UTC 2026-10-21T14:49:50.297067+00:00。
@@ -275,3 +275,8 @@
 本轮全链接内容/首档价格授权覆盖历史仅W1执行边界；`PROTECT_SOURCE` 的下架/删除保护不撤销。API完整原件仅本地留存并由证据目录.gitignore排除；公开可同步[去敏结果摘要](执行证据_20261031/summary.json)。
 
 集中第二次正式get：四条仍modified/N，不重放、不循环等待；审核通过后再render与公开验收。价格首档2–49双统一USD10.90；50–99双原ID/W1保留9.19、R1保留9.23、O1保留9.15；100双起各保留8.78。
+
+
+### 2026-10-31批准后的验收增量
+
+四条均approved/Y，get和当前Schema的标题及亮点逐字一致，首档10.90与逐SKU中/大档原值一致，实时评分5.00。批准后独立证据保存在本款执行目录audit_after_browser_recovery.json及逐ID recovery_get/render/score.json；未重放原提交。BQ009扩展详情数组只发生返回顺序差异，图库角色、URL、文字与数量保持；BQ008源图序变化也保留独立待核。BQ008-W1公开正文已读到新标题、新价和新增亮点，但截图调用又超时，因此不能扩大为8条公开视觉和交互完成。
