@@ -8,7 +8,9 @@
 
 ## 当前统一后端部署与待验收项（2026-10-31）
 
-已有腾讯云Ubuntu主机上，统一Node API、专用PostgreSQL（localhost:5433）及独立Nginx TLS网关（8443）已enable且active，API健康检查200，生产HTTPS 8443的CAv2可信证书链已验证。原sing-box进程PID19372、配置hash及443监听保持不变。执行器真实私有bind mount、非root归属和0700写入检查通过；官方Codex CLI 0.166.0已安装且服务账号可执行。但官方设备认证页明确返回`unsupported_country_region_territory`，临时登录服务已停止；runner保持OFF，后端为`manual_cloud`，不绕过地域限制，也不宣称自动派发或云端真实Sol完成。
+**认证诊断更正**：新加坡在[官方支持地区列表](https://help.openai.com/en/articles/7947663-chatgpt-supported-countries)内；[设备登录](https://developers.openai.com/codex/auth/)分服务器申请设备码与浏览器授权两步。此次失败只定位到本机Chrome授权页，具体网络出口/地区识别原因未查明。后续应分别诊断两端并完成官方正常授权，再验实际模型任务；不能据此要求换服务器或认定套餐执行路线不可行。
+
+已有腾讯云Ubuntu主机上，统一Node API、专用PostgreSQL（localhost:5433）及独立Nginx TLS网关（8443）已enable且active，API健康检查200，生产HTTPS 8443的CAv2可信证书链已验证。原sing-box进程PID19372、配置hash及443监听保持不变。执行器真实私有bind mount、非root归属和0700写入检查通过；官方Codex CLI 0.166.0已安装且服务账号可执行。但本机Chrome打开官方设备授权页时返回`unsupported_country_region_territory`（服务器已成功取得设备码；尚未证明服务器地区被拒绝），临时登录服务已停止；runner保持OFF，后端为`manual_cloud`，不绕过地域限制，也不宣称自动派发或云端真实Sol完成。
 
 2026-10-31 14:55（北京时间）已向正式主机PostgreSQL及私有文件目录导入160条，并完整verify160；源bundle SHA256为`3690d1c0466fe7bafbc8cd00a700d9bf7903012edb85c87bfae2c91014d6a137`。原Blob及原件保留。14:59已完成独立恢复库/文件目录、全部记录内容与metadata/附件核对及本项目API重启后持久性验收，160条全内容digest为`4e60157ef25f3e14e62e8d63723a57b49b77aee128f914a74eed9baae315f9af`。离机下载完成，archive SHA256为`bc8534f7f7066a35acc1c7cd47924223f453f124d810b7878dfaa20f891970e1`，全部内部checksums通过；服务端私有证据在`/root/beiqiang-backup-acceptance-20261031T065947Z`，离机包在网站源码受忽略的`self-hosted/.local/backups/20261031T065947Z/private-backup.tar.gz`。不将私有备份或客户正文提交公开仓库。
 
@@ -16,7 +18,7 @@
 
 负责人已正常登录，正式Chrome实际读取8项任务和6条询盘。仅在明确标记的内部测试`BQ-20261030-E0F00006`执行人工prepare/review并采纳成功，页面显示无客户邮件、方案依据采纳前处理版本1及2条审阅历史；正式整页reload后重新勾选内部/全部并打开同一记录，内部意见和next逐字保留，审阅历史同时显示2026-10-31 15:51:42人工方案已采纳及原2026-10-30历史，原客户需求文本未变。读写验收通过；本次没有新模型执行。随后通过正式导入UI仅更新当前状态文档及其原任务卡各1项，重新读取确认新结果保留、任务总数仍8、负责人重点与补充要求不变。证据：`99_临时区/工作台应用验收/unified-owner-ui-readback.txt`、`unified-inquiry-persisted.png`、`unified-workbench-delivered.png`。该结果与正式迁库、可信TLS、同源转发及离机恢复共同构成本轮基础后端交付，不表示A包或整体经营系统全部完成。
 
-自动执行仍受官方认证地域限制，runner保持OFF/manual_cloud，不绕过限制；云端真实Sol自动领取及本机关机自动执行未验收。后续按实际业务推进旧身份收敛、渠道持续采集与执行可用条件，不重复迁库或新增平行业务源。没有购买新资源或修改原代理。实现与验收方法见[架构方案](PRODUCT.md#运行条件与已核边界)及[原生执行器部署](cloud-runner/deploy/self-hosted/README.md)。
+自动执行尚未完成认证：已观察到本机浏览器授权页地区报错，尚未证明新加坡服务器不可用，runner保持OFF/manual_cloud，不绕过限制；云端真实Sol自动领取及本机关机自动执行未验收。后续按实际业务推进旧身份收敛、渠道持续采集与执行可用条件，不重复迁库或新增平行业务源。没有购买新资源或修改原代理。实现与验收方法见[架构方案](PRODUCT.md#运行条件与已核边界)及[原生执行器部署](cloud-runner/deploy/self-hosted/README.md)。
 
 ## 数据库、统一任务与自动领取（此前隔离交付）
 
@@ -76,7 +78,7 @@ OpenAI托管云环境**贝强经营工作台**已发布，仅本人可用，绑�
 
 来源核对、项目对话审阅回写及新快照确认已有明确路径，详见[回写方法](cloud-runner/README.md#云端提案经本地审阅回写)。负责人2026-10-30要求优先打磨内在能力，不以主推鞋组织本轮：可编辑总控、带日期的两渠道摘要、真实执行及Codex额度展示已交付，产品保留为客户选款可调用的资料。当前从官网排队任务复制指令，交给官方Cloud中的已发布环境执行；网站不会自动唤醒Cloud，没有常驻执行器。私有队列额外保留一张连接验收任务及运行历史，七项经营任务范围不变。
 
-原始产品包、媒体、客户原件与凭证按对象保留，不整盘上传。常驻自动领取选用私有CLI runner，原生部署和CLI安装已完成，但官方认证返回地域不支持，保持OFF/manual_cloud；真实领取验收依官方可用条件另行处理；官方Cloud保留人工指定任务入口。订阅API赠金与Codex套餐额度分开，本路线不依赖赠金。实际环境、使用入口与接入边界见[云执行入口](cloud-runner/README.md)。线上后台发布结果回[网站开发记录](../../03_独立站/02_开发记录/独立站产品与架构设计.md)。
+原始产品包、媒体、客户原件与凭证按对象保留，不整盘上传。常驻自动领取选用私有CLI runner，原生部署和CLI安装已完成，但本机浏览器设备授权页返回地域错误，服务器已取得设备码，尚未证明服务器不可用，保持OFF/manual_cloud；真实领取验收依官方可用条件另行处理；官方Cloud保留人工指定任务入口。订阅API赠金与Codex套餐额度分开，本路线不依赖赠金。实际环境、使用入口与接入边界见[云执行入口](cloud-runner/README.md)。线上后台发布结果回[网站开发记录](../../03_独立站/02_开发记录/独立站产品与架构设计.md)。
 
 ## 按业务使用独立对话
 
