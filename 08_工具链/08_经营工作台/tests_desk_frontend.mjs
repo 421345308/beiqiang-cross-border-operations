@@ -257,3 +257,24 @@ test('website conversation uses persisted Chinese and polling preserves unsent r
  await h.ui.poll();await settle();
  assert.equal(walk(page).find(x=>x['aria-label']==='网站私信回复'),reply);assert.equal(reply.value,'Unsent draft');
 });
+
+test('旧8765入口只检查静态资源并保留路径查询和路由，失败时保留明确链接', async () => {
+  for (const available of [true, false]) {
+    const body = new Element('body'), calls = [], redirects = [];
+    const location = { port: '8765', href: 'http://127.0.0.1:8765/desk?view=work#/products?q=shoe', replace: url => redirects.push(url) };
+    vm.runInNewContext(fs.readFileSync(new URL('./web/desk.js', import.meta.url), 'utf8'), {
+      document: { body, createElement: tag => new Element(tag) }, location, URL, AbortController, setTimeout, clearTimeout,
+      fetch: async (url, options) => { calls.push({ url, options }); if (!available) throw new Error('offline'); return {}; }
+    });
+    await settle();
+    assert.equal(calls.length, 1);
+    assert.equal(calls[0].url, 'http://127.0.0.1:8766/desk.js');
+    assert.equal(calls[0].options.method, 'HEAD');
+    assert.equal(calls[0].options.credentials, 'omit');
+    const target = 'http://127.0.0.1:8766/desk?view=work#/products?q=shoe';
+    assert.equal(body.querySelector('a').href, target);
+    assert.match(body.textContent, /旧工作台入口/);
+    assert.deepEqual(redirects, available ? [target] : []);
+    if (!available) assert.match(body.textContent, /双击“启动工作台”/);
+  }
+});

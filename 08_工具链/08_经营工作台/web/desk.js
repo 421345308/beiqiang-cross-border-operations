@@ -2,6 +2,27 @@
 (() => {
   const $ = id => document.getElementById(id);
   const el = (tag, text, cls) => { const value = document.createElement(tag); if (text !== undefined) value.textContent = text; if (cls) value.className = cls; return value; };
+  // Only the retired port is special; future launch ports keep their own origin.
+  if (location.port === '8765') {
+    const destination = new URL(location.href);
+    destination.port = '8766';
+    const panel = el('section', undefined, 'empty');
+    const status = el('p', '正在检查当前入口，连通后会自动前往。');
+    const entrance = el('a', '打开当前工作台入口 →');
+    entrance.href = destination.href;
+    panel.append(el('h1', '这是旧工作台入口（8765）'), status, entrance);
+    document.body.replaceChildren(panel);
+    document.title = '旧入口 · 贝强工作台';
+    const probe = new URL('/desk.js', destination);
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 2500);
+    // Static asset only: never send cookies or read business data across ports.
+    fetch(probe.href, { method: 'HEAD', mode: 'no-cors', credentials: 'omit', cache: 'no-store', signal: controller.signal })
+      .then(() => { location.replace(destination.href); })
+      .catch(() => { status.textContent = '工作台尚未连接，请双击“启动工作台”后重试。'; })
+      .finally(() => clearTimeout(timeout));
+    return;
+  }
   const S = { token: '', objects: [], jobs: [], artifacts: [], goals: {}, route: '', page: 'overview', object: null, detail: null, edits: new Map(), pending: false, loadSerial: 0, pollBusy: false, websiteStatus: {}, alibabaStatus: {}, listRefresh: null, lastBootstrapPoll: 0, instructions: new Map(), selectedArtifacts: new Map() };
   const statusNames = { queued: '等待开始', running: '正在处理', completed: '已形成成果', needs_input: '待补充依据', failed: '未能完成', cancelled: '已停止' };
   const text = value => value === null || value === undefined ? '' : typeof value === 'object' ? Array.isArray(value) ? value.map(text).join(' · ') : Object.values(value).map(text).filter(Boolean).join(' · ') : String(value);

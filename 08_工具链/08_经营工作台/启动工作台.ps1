@@ -1,7 +1,7 @@
 ﻿[CmdletBinding()]
 param([switch]$NoBrowser)
 $ErrorActionPreference = 'Stop'
-$localUrl = 'http://127.0.0.1:8765'
+$localUrl = 'http://127.0.0.1:8766'
 $projectRoot = (Resolve-Path -LiteralPath (Join-Path $PSScriptRoot '..\..')).Path
 $statePath = Join-Path $PSScriptRoot '.local'
 function Get-WorkbenchHealth {
@@ -12,12 +12,12 @@ function Test-WorkbenchIdentity($health) {
 }
 function Test-PortOccupied {
     $client = New-Object Net.Sockets.TcpClient
-    try { $client.Connect('127.0.0.1', 8765); return $true } catch { return $false } finally { $client.Dispose() }
+    try { $client.Connect('127.0.0.1', 8766); return $true } catch { return $false } finally { $client.Dispose() }
 }
 try {
     $health = Get-WorkbenchHealth
     if (-not (Test-WorkbenchIdentity $health)) {
-        if (Test-PortOccupied) { throw '8765端口已被其他服务或其他目录的工作台占用。请先确认并关闭该服务，再启动本工作台。' }
+        if (Test-PortOccupied) { throw '8766端口已被其他服务或其他目录的工作台占用。请先确认并关闭该服务，再启动本工作台。' }
         $python = Get-Command python -CommandType Application -ErrorAction SilentlyContinue | Select-Object -First 1
         $pythonArgs = @()
         if (-not $python -or $python.Source -like '*\Microsoft\WindowsApps\*') {
@@ -31,7 +31,7 @@ try {
         $outLog = Join-Path $statePath 'server.stdout.log'
         $errLog = Join-Path $statePath 'server.stderr.log'
         $serverPath = Join-Path $PSScriptRoot 'server.py'
-        $arguments = @($pythonArgs) + @('-X', 'utf8', ('"{0}"' -f $serverPath), '--port', '8765', '--root', ('"{0}"' -f $projectRoot))
+        $arguments = @($pythonArgs) + @('-X', 'utf8', ('"{0}"' -f $serverPath), '--port', '8766', '--root', ('"{0}"' -f $projectRoot))
         $service = Start-Process -FilePath $python.Source -ArgumentList $arguments -WorkingDirectory $PSScriptRoot -WindowStyle Hidden -RedirectStandardOutput $outLog -RedirectStandardError $errLog -PassThru
         $deadline = (Get-Date).AddSeconds(15)
         do {
