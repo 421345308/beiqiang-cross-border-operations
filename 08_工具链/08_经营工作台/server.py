@@ -5,6 +5,7 @@ from datetime import datetime, timezone
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import urlsplit, parse_qs, unquote
+from workspaces import Workspaces, WorkspaceConflict
 
 HERE = Path(__file__).resolve().parent
 MODEL = 'gpt-6.1-sol'
@@ -32,6 +33,7 @@ class Workbench:
             if run['status'] in ('queued','running'):
                 run.update(status='interrupted',error='服务重启中断了执行；可续改。',updated_at=now()); self.save(run)
         self.schema=self.state/'proposal.schema.json'; self.schema.write_text(json.dumps(SCHEMA),encoding='utf-8')
+        self.workspaces=Workspaces(self)
     def save(self, run):
         with self.lock:
             self.db.execute('INSERT OR REPLACE INTO runs VALUES (?,?)',(run['id'],json.dumps(run,ensure_ascii=False))); self.db.commit()
@@ -218,6 +220,8 @@ class Handler(BaseHTTPRequestHandler):
         try:
             self.check_host();u=urlsplit(self.path);app=self.server.app
             if u.path=='/api/health':return self.send_json({'ok':True,'model':MODEL,'app':'beiqiang-workbench','root':str(app.root)})
+            if u.path.startswith(('/api/canvases','/api/product-drafts','/api/tools/','/api/channel-metrics/')):
+                return self.send_json(app.workspaces.route_get(u.path,parse_qs(u.query)))
             if u.path=='/api/bootstrap':return self.send_json(app.bootstrap())
             if u.path=='/api/runs':return self.send_json({'runs':app.runs()})
             if u.path.startswith('/api/runs/'):return self.send_json(app.get(u.path.split('/')[3]))
@@ -236,9 +240,12 @@ class Handler(BaseHTTPRequestHandler):
             if not secrets.compare_digest(self.headers.get('X-Workbench-Token',''),app.token):raise PermissionError('请求令牌无效，请刷新页面')
             if self.headers.get('Content-Type','').split(';')[0]!='application/json':raise ValueError('请求必须使用JSON')
             size=int(self.headers.get('Content-Length','0'))
-            if size<1 or size>64000:raise ValueError('请求大小无效')
+            limit=256000 if urlsplit(self.path).path=='/api/canvases' else 64000
+            if size<1 or size>limit:raise ValueError('请求大小无效')
             body=json.loads(self.rfile.read(size));parts=urlsplit(self.path).path.strip('/').split('/')
             if not isinstance(body,dict):raise ValueError('请求必须是JSON对象')
+            if urlsplit(self.path).path.startswith(('/api/canvases','/api/product-drafts','/api/tools/')):
+                return self.send_json(app.workspaces.route_post(urlsplit(self.path).path,body))
             if parts==['api','runs']:return self.send_json(app.start(body.get('task_id'),body.get('instruction')),201)
             if len(parts)==4 and parts[:2]==['api','runs']:
                 rid,action=parts[2:]
@@ -248,7 +255,7 @@ class Handler(BaseHTTPRequestHandler):
                 if action=='resume':return self.send_json(app.start(app.get(rid)['task_id'],body.get('instruction'),rid))
             self.send_json({'error':'接口不存在'},404)
         except PermissionError as e:self.send_json({'error':str(e)},403)
-        except Conflict as e:self.send_json({'error':str(e)},409)
+        except (Conflict,WorkspaceConflict) as e:self.send_json({'error':str(e)},409)
         except (ValueError,KeyError,TypeError) as e:self.send_json({'error':str(e)},400)
         except Exception:self.send_json({'error':'操作失败，请检查本地运行环境'},500)
 

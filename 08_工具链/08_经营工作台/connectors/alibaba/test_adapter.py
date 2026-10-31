@@ -21,6 +21,48 @@ class AdapterTests(unittest.TestCase):
         client = FakeClient(RuntimeError())
         self.assertTrue(execute("capabilities", client=client)["ok"])
         self.assertEqual(client.calls, [])
+        business = execute("capabilities", client=client)["data"]["business"]
+        self.assertEqual(business["inquiries"]["status"], "not-verified")
+        self.assertIn("2026-09复核", business["inquiries"]["reason"])
+        self.assertIn("未实测", business["inquiries"]["reason"])
+        for key in ("products", "orders"):
+            self.assertEqual(business[key]["status"], "supported")
+            self.assertIn("2026-10-31本机已实测", business[key]["reason"])
+
+    def test_normalized_product_id_from_real_detail_shape(self):
+        row = {'product_id':'encrypted','pc_detail_url':'https://www.alibaba.com/product-detail/Shoe_123.html','status':'approved'}
+        result = execute('product',client=FakeClient({'product':row}),product_id='123')
+        self.assertEqual(result['data']['id'],'123')
+        self.assertEqual(result['data']['platformUrl'],row['pc_detail_url'])
+
+    def test_order_list_real_shape_params_and_private_projection(self):
+        row = {'trade_id':'opaque-order','create_date':{'timestamp':123,'format_date':'PDT original'},'buyer':{'email':'private'},'remark':'private'}
+        client = FakeClient({'result':{'success':True,'value':{'total_count':3,'order_list':[row]}}})
+        result = execute('orders',client=client,page=2,page_size=1)
+        self.assertTrue(result['ok'])
+        self.assertEqual(json.loads(client.calls[0][1]['param_trade_ecology_order_list_query']),{'role':'seller','start_page':1,'page_size':1})
+        self.assertEqual(result['pagination']['nextPage'],3)
+        self.assertNotIn('private',json.dumps(result))
+        self.assertNotIn('status',result['data'][0])
+
+    def test_order_detail_identity_and_failures(self):
+        client = FakeClient({'value':{'trade_id':'order-a','buyer':{'mobile':'private'}}})
+        result=execute('order',client=client,order_id='order-a')
+        self.assertTrue(result['ok'])
+        self.assertEqual(client.calls[0],('alibaba.seller.order.get',{'e_trade_id':'order-a','language':'en_US'}))
+        self.assertNotIn('private',json.dumps(result))
+        self.assertFalse(execute('order',client=client,order_id='order-b')['ok'])
+        for raw in ({'result':{'success':False,'error_message':'private'}}, {'result':{'success':True,'value':{}}},
+                    {'result':{'success':True,'value':{'total_count':4,'order_list':[{'trade_id':'a'}]}}}):
+            value=execute('orders',client=FakeClient(raw),page_size=2)
+            self.assertFalse(value['ok'])
+            self.assertIsNone(value['data'])
+            self.assertNotIn('private',json.dumps(value))
+
+    def test_platform_code_safe_only(self):
+        result=execute('products',client=FakeClient({'code':'InsufficientPermission','msg':'private'}))
+        self.assertEqual(result['error']['platformCode'],'InsufficientPermission')
+        self.assertNotIn('private',json.dumps(result))
 
     def test_explicit_check(self):
         client = FakeClient({"products": [], "total_item": 0})
