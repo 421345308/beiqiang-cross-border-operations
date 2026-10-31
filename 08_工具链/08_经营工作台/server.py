@@ -10,6 +10,8 @@ from media_assets import MediaAssets, MediaError
 from product_changes import ProductChanges
 from business import Business
 from agent_jobs import AgentJobs
+from customer_workspace import CustomerWorkspace
+from inquiry_intake import InquiryIntake
 
 HERE = Path(__file__).resolve().parent
 MODEL = 'gpt-6.1-sol'
@@ -41,6 +43,8 @@ class Workbench:
         self.media=MediaAssets(self.root)
         self.product_changes=ProductChanges(self)
         self.business=Business(self)
+        self.customer_workspace=CustomerWorkspace(self)
+        self.inquiry_intake=InquiryIntake(self)
         self.agent_jobs=AgentJobs(self)
     def save(self, run):
         with self.lock:
@@ -234,7 +238,11 @@ class Handler(BaseHTTPRequestHandler):
                 if u.path=='/api/desk/bootstrap':
                     return self.send_json({'csrf_token':app.token,'objects':app.business.list_objects(),
                         'jobs':app.agent_jobs.list_jobs(),'artifacts':app.business.list_artifacts(),
-                        'goals':app.bootstrap()['goals'],'website_status':app.business.website_status()})
+                        'goals':app.bootstrap()['goals'],'website_status':app.business.website_status(),
+                        'alibaba_status':app.business.alibaba.status()})
+                if u.path=='/api/desk/customer-profile':return self.send_json(app.customer_workspace.profile(value('object_id')))
+                if u.path=='/api/desk/discovery':return self.send_json(app.customer_workspace.discovery())
+                if u.path=='/api/desk/discovery/item':return self.send_json(app.customer_workspace.get_discovery(value('id')))
                 if u.path=='/api/desk/objects':return self.send_json({'objects':app.business.list_objects(kind=value('kind'),q=value('q'))})
                 if u.path=='/api/desk/object':return self.send_json(app.business.get_object(value('id')))
                 if u.path=='/api/desk/jobs':return self.send_json({'jobs':app.agent_jobs.list_jobs()})
@@ -270,7 +278,19 @@ class Handler(BaseHTTPRequestHandler):
             body=json.loads(self.rfile.read(size));parts=urlsplit(self.path).path.strip('/').split('/')
             if not isinstance(body,dict):raise ValueError('请求必须是JSON对象')
             if parts==['api','desk','jobs']:
-                return self.send_json(app.agent_jobs.start(body.get('object_id'),body.get('instruction')),201)
+                return self.send_json(app.agent_jobs.start(body.get('object_id'),body.get('instruction'),mode=body.get('mode','draft')),201)
+            if parts==['api','desk','customer-profile']:
+                object_id=body.pop('object_id',None)
+                return self.send_json(app.customer_workspace.save_profile(object_id,body))
+            if parts==['api','desk','discovery']:return self.send_json(app.customer_workspace.create_discovery(body),201)
+            if parts==['api','desk','discovery','update']:
+                entry_id=body.pop('id',None)
+                return self.send_json(app.customer_workspace.update_discovery(entry_id,body))
+            if parts==['api','desk','inquiries']:
+                record=app.inquiry_intake.add(body)
+                return self.send_json({'record':record,'object_id':'customer:intake:'+record['id']},201)
+            if parts==['api','desk','alibaba','refresh']:
+                return self.send_json(app.business.alibaba.refresh(wait=False,page=body.get('page',1)))
             if parts==['api','desk','refresh']:
                 app.business.refresh_website(wait=False)
                 return self.send_json(app.business.website_status())

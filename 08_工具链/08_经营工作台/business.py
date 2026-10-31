@@ -11,6 +11,7 @@ from datetime import datetime,timezone
 from urllib.parse import urlencode,urlsplit
 from uuid import uuid4
 from website_inquiries import WebsiteInquiries,URL as WEBSITE_URL
+from connectors.alibaba.customer_source import AlibabaCustomerSource
 
 PRODUCTS='00_总控台/产品中心/数据/产品.json'
 SUPPLY='00_总控台/产品中心/数据/供应来源.json'
@@ -31,6 +32,7 @@ def _object(oid,kind,title,source,subtitle='',summary='',content=''):
 class Business:
     def __init__(self,app):
         self.app=app;self.root=Path(app.root).resolve();self.website=getattr(app,'website_inquiries',None) or WebsiteInquiries(self.root)
+        self.alibaba=getattr(app,'alibaba_customers',None) or AlibabaCustomerSource(self.root)
         with app.lock:
             app.db.execute('CREATE TABLE IF NOT EXISTS business_artifacts (id TEXT PRIMARY KEY, object_id TEXT NOT NULL, title TEXT NOT NULL, path TEXT NOT NULL, updated_at TEXT NOT NULL)')
             app.db.commit()
@@ -168,28 +170,71 @@ class Business:
             requirements=str(row.get('requirements') or '')
             summary=requirements if len(requirements)<=240 else requirements[:239]+'…'
             obj=_object('customer:website-'+reference,'customer',row.get('company') or row.get('name') or reference,
-                '网站询盘 · '+reference,subtitle='网站询盘 · '+str(row.get('country') or ''),summary=summary,
+                '网站记录 · '+reference,subtitle='网站记录 · '+str(row.get('country') or ''),summary=summary,
                 content=json.dumps(row,ensure_ascii=False,indent=2))
             labels={'name':'联系人','company':'公司','country':'国家/地区','email':'邮箱','quantity':'采购数量','status':'处理状态','receivedAt':'收到时间'}
             statuses={'new':'待处理','open':'处理中','handled':'已处理','closed':'已关闭','pending':'待处理','replied':'已回复'}
-            obj['facts']=[_fact('来源','网站原询盘（只读）'),_fact('询盘reference',reference)]+[
+            obj['facts']=[_fact('来源','网站原始记录'),_fact('记录编号',reference)]+[
                 _fact(label,statuses.get(row[k],row[k]) if k=='status' else row[k]) for k,label in labels.items() if row.get(k) not in ('',None)]
             obj['links']=[{'label':'网站私有后台','url':'https://www.beiqiang.online/admin/workbench/'}]
             result.append(obj)
         return result
 
+    def _alibaba_objects(self):
+        result=[]
+        for row in self.alibaba.records():
+            obj=_object('customer:'+row['id'],'customer',row.get('name') or '国际站订单买家',
+                '国际站订单接口',subtitle='国际站 · 订单买家',summary='已读取订单 '+str(len(row['orders']))+' 笔；订单记录不代表新询盘。',
+                content=json.dumps(row,ensure_ascii=False,indent=2))
+            obj['source_type']='alibaba_order_buyer'
+            obj['facts']=[_fact('来源','国际站订单买家'),_fact('国家/地区',row.get('country') or '原记录未提供'),
+                _fact('读取时间',row.get('observed_at'))]
+            obj['facts'] += [_fact('订单 '+o['id'],o.get('status') or '原记录未提供') for o in row['orders']]
+            result.append(obj)
+        return result
+
+    def _prospect_objects(self):
+        workspace=getattr(self.app,'customer_workspace',None)
+        if not workspace:return []
+        result=[]
+        for row in workspace.list_discovery():
+            obj=_object('prospect:'+row['id'],'prospect',row['title'],row.get('source') or '本地客户开发研究',
+                subtitle='开发研究任务' if row['kind']=='research_task' else '主动开发候选',summary=row.get('next_action') or row.get('target') or '',
+                content=json.dumps(row,ensure_ascii=False,indent=2))
+            obj['source_type']='outbound_research';obj['original_text']=row.get('notes') or row.get('target') or ''
+            obj['facts']=[_fact('研究目标',row.get('target') or '待明确'),_fact('当前状态',row.get('status') or '待研究')]
+            if row.get('website'):obj['links']=[{'label':'企业官网','url':row['website']}]
+            result.append(obj)
+        return result
+
+    def _intake_objects(self):
+        intake=getattr(self.app,'inquiry_intake',None)
+        if not intake:return []
+        result=[]
+        for row in intake.list_records():
+            channel={'alibaba':'国际站','email':'邮件','other':'其他渠道'}.get(row['channel'],'其他渠道')
+            obj=_object('customer:intake:'+row['id'],'customer',row.get('company') or row.get('contact_name') or '待确认客户',
+                channel+'原文录入',subtitle=channel+' · 原文录入',summary=row['original_text'][:200],content=json.dumps(row,ensure_ascii=False,indent=2))
+            obj['source_type']='manual_import';obj['original_text']=row['original_text']
+            obj['facts']=[_fact('记录来源',channel+'原文录入'),_fact('接收日期',row.get('received_at') or '未提供')]
+            result.append(obj)
+        return result
+
     def list_objects(self,kind='',q=''):
-        if kind not in ('','product','customer') or not isinstance(q,str):raise ValueError('业务查询参数无效')
-        objects=(self._products() if kind in ('','product') else [])+(self._customers()+self._website_objects() if kind in ('','customer') else [])
+        if kind not in ('','product','customer','prospect') or not isinstance(q,str):raise ValueError('业务查询参数无效')
+        objects=(self._products() if kind in ('','product') else [])+(self._customers()+self._website_objects()+self._alibaba_objects()+self._intake_objects() if kind in ('','customer') else [])+(self._prospect_objects() if kind in ('','prospect') else [])
         query=q.strip().casefold()
         if query:objects=[o for o in objects if query in json.dumps(o,ensure_ascii=False).casefold()]
         # List stays compact; detail and Agent context use get_object.
-        return [{**{k:o[k] for k in ('id','kind','title','subtitle','source','summary')},'assets':o['assets'][:1]} for o in objects]
+        return [{**{k:o[k] for k in ('id','kind','title','subtitle','source','summary')},'source_type':o.get('source_type') or ('website' if o['id'].startswith('customer:website-') else 'local'),'assets':o['assets'][:1]} for o in objects]
 
     def get_object(self,object_id):
         if not isinstance(object_id,str):raise ValueError('业务对象ID无效')
         if object_id.startswith('product:'):objects=self._products()
         elif object_id.startswith('customer:website-'):objects=self._website_objects()
+        elif object_id.startswith('customer:alibaba-order-buyer:'):objects=self._alibaba_objects()
+        elif object_id.startswith('customer:intake:'):objects=self._intake_objects()
+        elif object_id.startswith('prospect:'):objects=self._prospect_objects()
         elif object_id.startswith('customer:'):objects=self._customers()
         else:raise ValueError('未知业务对象类型')
         item=next((o for o in objects if o['id']==object_id),None)

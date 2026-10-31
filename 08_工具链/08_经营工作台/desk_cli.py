@@ -27,6 +27,10 @@ def open_business(root=None, state=None):
                           lock=threading.RLock(), db=sqlite3.connect(folder / 'runs.sqlite3', timeout=30))
     try:
         app.business = Business(app)
+        from customer_workspace import CustomerWorkspace
+        from inquiry_intake import InquiryIntake
+        app.customer_workspace = CustomerWorkspace(app)
+        app.inquiry_intake = InquiryIntake(app)
     except Exception:
         app.db.close()
         raise

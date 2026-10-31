@@ -30,6 +30,7 @@ function harness(hash = '#/overview') {
   for (const id of ['page', 'reload', 'desk-notice', 'save-indicator', 'connection', 'page-name', 'breadcrumb']) { elements[id] = new Element(id === 'reload' ? 'button' : 'div'); elements[id].id = id; body.append(elements[id]); }
   const nav = ['overview', 'products', 'customers', 'library'].map(name => { const item = new Element('a'); item.dataset.nav = name; body.append(item); return item; });
   const requests = [], objects = [{ id: 'product:1', kind: 'product', title: '<img src=x onerror=alert(1)>真实商品', subtitle: '实际款号', source: '商品原档案', facts: [{ label: '材料', value: '已核材料' }], assets: [{ path: '商品图.jpg', label: '真实主图', url: '/api/media/file?path=商品图.jpg' }], content: '很长的原文', related: [] }];
+  const profile = { object_id: 'customer:record', source_type: 'website', source_hash: 'hash-1', provenance: { source_hash: 'hash-1', source_verification: { state: 'unverified', note: '来源待核' } }, original_text: 'Please send sample information.', translation_zh: '请提供样品信息。', cleaned: { company: '示例公司', quantity: '未提供' }, analysis: { intent: '尚待确认', fit: '尚待核对', basis: [], missing: ['采购数量'], next_action: '确认采购数量', facts: [], inferences: [], recommendations: ['核实来源'] } }; const discovery = { tasks: [], candidates: [] };
   const artifacts = [{ id: 'a1', object_id: 'product:1', title: '现有选款资料', content: '原成果', updated_at: '2026-10-31T01:00:00Z' }]; const jobs = []; let web = { state: 'loading' };
   const local = new Map(), location = { hash, origin: 'http://127.0.0.1:8765' };
   const context = { console, URL, URLSearchParams, Date, JSON, Math, Map, Set, location, localStorage: { getItem: key => local.get(key) || null, setItem: (key, value) => local.set(key, value) }, history: { replaceState: (_s, _t, next) => { location.hash = next; } }, setTimeout: () => 1, clearTimeout() {}, setInterval() {}, window: { addEventListener() {} }, document: { body, visibilityState: 'visible', createElement: tag => new Element(tag), getElementById: id => elements[id], querySelectorAll: selector => selector === '[data-nav]' ? nav : body.querySelectorAll(selector) } };
@@ -38,6 +39,12 @@ function harness(hash = '#/overview') {
     if (url.pathname === '/api/desk/bootstrap') value = { csrf_token: 'fixture-token', objects, jobs, artifacts, website_status: web, goals: { phase: '当前经营阶段' } };
     else if (url.pathname === '/api/desk/objects') value = { objects: objects.filter(item => !url.searchParams.get('kind') || item.kind === url.searchParams.get('kind')) };
     else if (url.pathname === '/api/desk/object') value = objects.find(item => item.id === url.searchParams.get('id'));
+    else if (url.pathname === '/api/desk/customer-profile' && payload) { Object.assign(profile, payload); value = profile; }
+    else if (url.pathname === '/api/desk/customer-profile') value = { ...profile, object_id: url.searchParams.get('object_id') };
+    else if (url.pathname === '/api/desk/discovery' && payload) { value = { ...payload, id: 'research:new', object_id: 'prospect:research:new', evidence: payload.evidence || [] }; discovery.tasks.push(value); }
+    else if (url.pathname === '/api/desk/discovery') value = discovery;
+    else if (url.pathname === '/api/desk/discovery/item') value = [...discovery.tasks, ...discovery.candidates].find(item => item.id === url.searchParams.get('id'));
+    else if (url.pathname === '/api/desk/discovery/update') { value = [...discovery.tasks, ...discovery.candidates].find(item => item.id === payload.id); Object.assign(value, payload); }
     else if (url.pathname === '/api/desk/jobs' && payload) { value = { id: 'j1', object_id: payload.object_id, instruction: payload.instruction, status: 'running', events: [{ type: 'progress', text: '已取得资料' }], updated_at: '2026-10-31T02:00:00Z' }; jobs.push(value); }
     else if (url.pathname === '/api/desk/jobs') value = { jobs };
     else if (url.pathname === '/api/desk/artifacts' && payload) { value = { ...payload, id: payload.id || 'a2', updated_at: '2026-10-31T03:00:00Z' }; const index = artifacts.findIndex(item => item.id === value.id); if (index >= 0) artifacts[index] = value; else artifacts.push(value); }
@@ -48,7 +55,7 @@ function harness(hash = '#/overview') {
   };
   const source = fs.readFileSync(new URL('./web/desk.js', import.meta.url), 'utf8'); assert.doesNotMatch(source, /\.innerHTML\s*=/);
   vm.createContext(context); vm.runInContext(source.replace('bootstrap(); setInterval(poll, 4000);', 'window.__desk = { S, bootstrap, renderRoute, poll, refreshData, safeUrl, imageAsset };'), context);
-  return { ui: context.window.__desk, elements, body, objects, artifacts, jobs, requests, location, setWebsite: value => { web = value; }, originalFetch: context.fetch, interceptFetch: callback => { context.fetch = callback; } };
+  return { ui: context.window.__desk, elements, body, objects, artifacts, jobs, requests, location, profile, discovery, setWebsite: value => { web = value; }, originalFetch: context.fetch, interceptFetch: callback => { context.fetch = callback; } };
 }
 
 test('real data drives navigation and original content is collapsed; untrusted titles stay text', async () => {
@@ -65,12 +72,12 @@ test('job carries current object/token, text events render, and polling preserve
 });
 
 test('website loading is not an empty-inquiry claim and later real customer appears without replacing search', async () => {
-  const h = harness('#/customers'); await h.ui.bootstrap(); await settle(); assert.ok(h.elements.page.textContent.includes('网站询盘正在读取')); const search = h.elements.page.querySelector('input');
+  const h = harness('#/customers?view=inquiries'); await h.ui.bootstrap(); await settle(); assert.ok(h.elements.page.textContent.includes('网站记录正在读取')); const search = h.elements.page.querySelector('input');
   h.objects.push({ id: 'customer:real', kind: 'customer', title: '真实需求', source: '网站询盘', assets: [], content: '客户原文' }); h.setWebsite({ state: 'ready', observed_at: '2026-10-31T05:00:00Z' }); await h.ui.poll(); await settle(); assert.equal(h.elements.page.querySelector('input'), search); assert.ok(h.elements.page.textContent.includes('真实需求')); await h.ui.refreshData(); assert.ok(h.requests.some(item => item.path === '/api/desk/refresh' && item.payload));
 });
 
 test('home never recommends arbitrary first products; recents require an actual open or job', async () => {
-  const h = harness(); h.artifacts.length = 0; await h.ui.bootstrap(); await settle(); assert.ok(h.elements.page.textContent.includes('从业务开始')); assert.ok(h.elements.page.textContent.includes('网站询盘')); assert.equal(h.elements.page.textContent.includes('继续工作'), false); assert.equal(h.elements.page.textContent.includes('真实商品'), false);
+  const h = harness(); h.artifacts.length = 0; await h.ui.bootstrap(); await settle(); assert.ok(h.elements.page.textContent.includes('从业务开始')); assert.ok(h.elements.page.textContent.includes('网站记录')); assert.equal(h.elements.page.textContent.includes('继续工作'), false); assert.equal(h.elements.page.textContent.includes('真实商品'), false);
   h.objects.push({ id: 'customer:worked', kind: 'customer', title: '实际处理过的客户', source: '本地客户记录', assets: [] }); h.jobs.push({ id: 'past-job', object_id: 'customer:worked', status: 'completed', updated_at: '2026-10-31T02:00:00Z' }); await h.ui.bootstrap(); await settle(); assert.ok(h.elements.page.textContent.includes('实际处理过的客户')); assert.equal(h.elements.page.textContent.includes('真实商品'), false);
   h.location.hash = '#/object/product%3A1'; await h.ui.renderRoute(); await settle(); h.location.hash = '#/overview'; await h.ui.renderRoute(); assert.ok(h.elements.page.textContent.includes('真实商品')); assert.ok(h.elements.page.textContent.includes('继续工作'));
 });
@@ -95,7 +102,7 @@ test('wrong object identity is never rendered or inserted as the selected custom
 });
 
 test('detached customer search cannot rewrite the object hash while navigation is in progress', async () => {
-  const h = harness('#/customers'); await h.ui.bootstrap(); await settle(); const oldInput = h.elements.page.querySelector('input'); h.location.hash = '#/object/product%3A1'; oldInput.value = 'late event'; oldInput.listeners.input({}); assert.equal(h.location.hash, '#/object/product%3A1');
+  const h = harness('#/customers?view=inquiries'); await h.ui.bootstrap(); await settle(); const oldInput = h.elements.page.querySelector('input'); h.location.hash = '#/object/product%3A1'; oldInput.value = 'late event'; oldInput.listeners.input({}); assert.equal(h.location.hash, '#/object/product%3A1');
 });
 
 test('product summary keeps business facts compact and preserves long channel fields behind disclosure', async () => {
@@ -108,4 +115,36 @@ test('default artifact follows latest actual job, explicit artifact wins, and sa
   h.jobs.push({ id: 'old', object_id: 'product:1', status: 'needs_input', artifact_id: 'a1', created_at: '2026-10-30T00:00:00Z' }, { id: 'latest', object_id: 'product:1', status: 'completed', artifact_id: 'latest-work', created_at: '2026-10-31T00:00:00Z' });
   await h.ui.bootstrap(); await settle(); assert.equal(h.ui.S.detail.selectedId, 'latest-work'); assert.ok(h.ui.S.detail.editor.querySelector('.artifact-preview').textContent.includes('最新工作正文')); assert.equal(h.ui.S.detail.editor.querySelector('textarea').hidden, true); await findButton(h.ui.S.detail.editor, '编辑').click(); assert.equal(h.ui.S.detail.editor.querySelector('textarea').hidden, false);
   h.location.hash = '#/object/product%3A1?artifact=a1'; await h.ui.renderRoute(); await settle(); assert.equal(h.ui.S.detail.selectedId, 'a1');
+});
+
+test('customer analysis preserves original, displays Chinese profile, and submits structured analysis mode', async () => {
+  const h = harness('#/object/customer%3Arecord'); h.objects.push({ id: 'customer:record', kind: 'customer', title: '来源记录', subtitle: '网站询盘', source: 'website:record', assets: [], content: 'Please send sample information.' }); await h.ui.bootstrap(); await settle(); const ctx = h.ui.S.detail;
+  assert.ok(ctx.profileHost.textContent.includes('请提供样品信息')); assert.ok(ctx.profileHost.textContent.includes('Please send sample information.')); assert.ok(ctx.profileHost.textContent.includes('来源待核实')); assert.equal(ctx.profileHost.textContent.includes('真实询盘'), false);
+  await findButton(ctx.profileHost, '翻译并分析原始需求').click(); const jobCall = h.requests.find(item => item.path === '/api/desk/jobs' && item.payload); assert.equal(jobCall.payload.mode, 'customer_analysis'); assert.equal(jobCall.payload.object_id, 'customer:record');
+  h.profile.translation_zh = '新的完整中文译文'; h.jobs[0].status = 'completed'; h.jobs[0].updated_at = '2026-10-31T09:00:00Z'; h.jobs[0].profile_saved = true; h.jobs[0].artifact_id = null; await h.ui.poll(); await settle(); assert.ok(ctx.profileHost.textContent.includes('新的完整中文译文')); assert.equal(h.artifacts.length, 1);
+  await findButton(ctx.profileHost, '编辑解读与分析').click(); const edit = ctx.profileHost.querySelector('textarea'); edit.value = '人工尚未保存的中文解释'; h.jobs[0].updated_at = '2026-10-31T10:00:00Z'; await h.ui.poll(); await settle(); assert.equal(ctx.profileHost.querySelector('textarea'), edit); assert.equal(edit.value, '人工尚未保存的中文解释');
+  await findButton(ctx.profileHost, '保存中文解读与分析').click(); const save = h.requests.find(item => item.path === '/api/desk/customer-profile' && item.payload); assert.equal(save.payload.source_hash, 'hash-1'); assert.equal(save.payload.translation_zh, '人工尚未保存的中文解释'); assert.equal(Object.hasOwn(save.payload, 'original_text'), false);
+});
+
+test('analysis creates a linked research task with evidence and never sends outreach', async () => {
+  const h = harness('#/object/customer%3Arecord'); h.objects.push({ id: 'customer:record', kind: 'customer', title: '当前需求', source: 'website:record', assets: [] }); await h.ui.bootstrap(); await settle(); await findButton(h.ui.S.detail.profileHost, '把缺口或下一步转为研究任务').click(); const dialog = walk(h.body).find(item => item.tagName === 'DIALOG'); await findButton(dialog, '保存研究任务并打开').click(); const created = h.requests.find(item => item.path === '/api/desk/discovery' && item.payload); assert.equal(created.payload.origin_object_id, 'customer:record'); assert.equal(created.payload.kind, 'research_task'); assert.ok(created.payload.evidence.length); assert.ok(h.location.hash.includes('view=development')); assert.equal(h.requests.some(item => /send|outreach/.test(item.path)), false);
+});
+
+test('development exposes real candidate evidence, research context, and a non-outreach preparation marker', async () => {
+  const h = harness('#/customers?view=development'); h.discovery.candidates.push({ id: 'candidate:source', object_id: 'prospect:candidate:source', kind: 'candidate', title: '已有来源候选', company: '候选公司', target: '需要核实供货适配', evidence: [{ url: 'https://example.com/', text: '原候选公开来源' }] }); await h.ui.bootstrap(); await settle(); assert.ok(h.elements.page.textContent.includes('目标客群')); const row = walk(h.elements.page).find(item => item.tagName === 'ARTICLE' && item.textContent.includes('已有来源候选')); await findButton(row, '打开继续 →').click(); await settle(); assert.ok(h.elements.page.textContent.includes('原候选公开来源')); assert.ok(h.ui.S.detail.instruction.value.includes('research_company'));
+  await findButton(h.elements.page, '标记进入推进准备').click(); const changed = h.requests.find(item => item.path === '/api/desk/discovery/update'); assert.equal(changed.payload.ready_for_customer, true); assert.equal(changed.payload.status, '推进准备'); assert.equal(h.requests.some(item => /send|outreach/.test(item.path)), false);
+});
+
+test('order buyers stay a separate source filter instead of inflating inquiry counts', async () => {
+  const h = harness('#/customers?view=inquiries'); h.objects.push({ id: 'customer:original', kind: 'customer', title: '原需求记录', assets: [] }, { id: 'customer:order', kind: 'customer', title: '订单来源买家', source_type: 'alibaba_order_buyer', assets: [] }); await h.ui.bootstrap(); await settle(); assert.ok(h.elements.page.textContent.includes('原需求记录')); assert.equal(h.elements.page.textContent.includes('订单来源买家'), false); const filter = h.elements.page.querySelector('select'); filter.value = 'orders'; await filter.listeners.change({}); await settle(); assert.ok(h.elements.page.textContent.includes('订单来源买家')); assert.equal(h.elements.page.textContent.includes('原需求记录'), false);
+});
+
+test('customer reading keeps Chinese need first and supporting analysis folded with three recommendations', async () => {
+  const h = harness('#/object/customer%3Arecord'); h.objects.push({ id: 'customer:record', kind: 'customer', title: '来源记录', summary: 'A long English original request.', source: 'website:record', assets: [] }); h.profile.cleaned.need = '中文提取的具体需求'; h.profile.cleaned.stage = 'new'; h.profile.provenance.evidence_notes = '网站来源尚待核实'; h.profile.analysis.recommendations = ['建议一', '建议二', '建议三', '建议四', '建议五']; await h.ui.bootstrap(); await settle(); const ctx = h.ui.S.detail;
+  assert.equal(ctx.summaryParagraph.textContent, '中文提取的具体需求'); const folders = ctx.profileHost.querySelector('.analysis-folders'); assert.equal(folders.querySelectorAll('details').length, 4); assert.ok(folders.querySelectorAll('details').every(item => !item.open)); const rec = ctx.profileHost.querySelector('.recommendations'); assert.equal(rec.querySelectorAll('li').length, 3); await findButton(rec, '展开全部 5 条建议').click(); assert.equal(rec.querySelectorAll('li').length, 5); assert.ok(ctx.profileHost.textContent.includes('待处理'));
+  const children = ctx.profileHost.children; assert.ok(children.indexOf(ctx.profileHost.querySelector('.source-note')) < children.indexOf(ctx.profileHost.querySelector('.bilingual-grid')));
+});
+
+test('selected research task hides the long candidate list and follows its actual goal and linked original', async () => {
+  const h = harness('#/customers?view=development&item=research%3Alinked'); h.discovery.tasks.push({ id: 'research:linked', object_id: 'prospect:research:linked', kind: 'research_task', title: '改善承接', target: '优化定制开发询盘承接', origin_object_id: 'customer:record', evidence: [] }); await h.ui.bootstrap(); await settle(); assert.equal(h.elements.page.querySelector('.discovery-target').hidden, true); assert.ok(h.ui.S.detail.instruction.value.includes('优化定制开发询盘承接')); assert.ok(h.ui.S.detail.instruction.value.includes('customer:record')); assert.equal(h.ui.S.detail.instruction.value.includes('research_company'), false); assert.ok(findButton(h.elements.page, '← 返回客户开发列表'));
 });

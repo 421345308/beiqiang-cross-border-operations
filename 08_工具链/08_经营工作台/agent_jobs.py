@@ -17,6 +17,7 @@ import uuid
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.request import getproxies
+import customer_analysis
 
 MODEL = 'gpt-6.1-sol'
 ACTIVE = ('queued', 'running')
@@ -106,15 +107,19 @@ class AgentJobs:
             self._event(job, kind, text)
             self._save(job)
 
-    def start(self, object_id, instruction):
+    def start(self, object_id, instruction, mode='draft'):
+        if mode not in ('draft','customer_analysis'):raise ValueError('不支持的工作模式')
         if not isinstance(instruction, str) or not instruction.strip() or len(instruction) > 12000:
             raise ValueError('请填写要交给Agent的具体工作，最多12000字')
         obj = self.app.business.get_object(object_id)
         if not isinstance(obj, dict) or obj.get('id') != object_id:
             raise ValueError('业务对象无效')
         title = str(obj.get('title') or '业务资料')[:200]
+        profile=self.app.customer_workspace.profile(object_id) if mode=='customer_analysis' else None
+        if profile is not None:obj={**obj,'_customer_profile':profile}
         job = {'id': uuid.uuid4().hex, 'object_id': object_id, 'title': title,
                'instruction': instruction.strip(), 'status': 'queued', 'summary': '',
+               'mode':mode,'source_hash':profile['source_hash'] if profile else None,'profile_saved':False,
                'error': None, 'events': [], 'artifact_id': None, 'created_at': now(), 'updated_at': now()}
         self._event(job, 'queued', '工作已排队，成果将保存到当前业务对象。')
         with self.lock:
@@ -126,6 +131,8 @@ class AgentJobs:
         return job
 
     def _prompt(self, job, obj):
+        if job.get('mode')=='customer_analysis':
+            return customer_analysis.prompt(obj['_customer_profile'],job['instruction'])
         # Route through shared objects, not a complete project or skill dump.
         related_ids = {r if isinstance(r, str) else r.get('id') for r in obj.get('related', []) if isinstance(r, (str, dict))}
         candidates = self.app.business.list_objects() if related_ids else []
@@ -155,6 +162,7 @@ class AgentJobs:
             '禁止外发、平台写入、付费调用、购买及启动其他业务任务。'
             '不要修改项目文件或其他对话成果，不运行保存CLI；你处于只读工具环境。'
             '最终完整输出可直接使用的Markdown正文，由工作台保存为当前对象成果。'
+            '凡有英文正文（包括客户回复草稿），必须附逐段完整中文对照，不得以中文摘要代替；内部说明另列，不混入客户正文。'
             '必须实际读取业务原件；若必要原件不可读，明确写未完成及缺口，不冒充完整成果。'
             '清楚区分已核事实、建议与缺口，引用实际项目相对路径，不编造发送/审核/成交/库存结果。'
             '若是客户回复草稿，给出可用正文，并把内部说明放在正文之外。\n\n'
@@ -191,11 +199,17 @@ class AgentJobs:
                 raise JobFailure('未找到Codex CLI，请检查本机安装与PATH。')
             folder = (Path(self.app.state) / 'agent-jobs' / job_id).resolve()
             folder.mkdir(parents=True, exist_ok=False)
-            final = folder / 'final.md'
+            final = folder / ('analysis.json' if job.get('mode')=='customer_analysis' else 'final.md')
+            schema=None
+            if job.get('mode')=='customer_analysis':
+                schema=folder/'customer-analysis.schema.json'
+                schema.write_text(json.dumps(customer_analysis.SCHEMA,ensure_ascii=False),encoding='utf8')
             prompt = self._prompt(job, obj)
             flags = ({'creationflags': subprocess.CREATE_NO_WINDOW | subprocess.CREATE_NEW_PROCESS_GROUP}
                      if os.name == 'nt' else {'start_new_session': True})
-            process = subprocess.Popen(self.command(exe, folder, final,root=self.app.root,state=self.app.state,object_id=job['object_id']), stdin=subprocess.PIPE,
+            command=self.command(exe, folder, final,root=self.app.root,state=self.app.state,object_id=job['object_id'])
+            if schema is not None:command[-1:-1]=['--output-schema',str(schema)]
+            process = subprocess.Popen(command, stdin=subprocess.PIPE,
                                        stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
                                        text=True, encoding='utf-8', errors='replace', env=child_environment(), **flags)
             with self.lock:
@@ -263,6 +277,21 @@ class AgentJobs:
                 # Cancellation and result publication are serialized. No file
                 # edits by the model are adopted as authoritative business data.
                 phase = '成果保存'
+                if job.get('mode')=='customer_analysis':
+                    try:result=customer_analysis.parse_result(content)
+                    except ValueError as error:raise JobFailure(str(error))
+                    if not source_ready:
+                        job.update(status='needs_input',profile_saved=False,artifact_id=None,summary='客户原件读取未完成。',error='原件依据待补，本次未保存翻译与分析。')
+                        self._event(job,'needs_input',job['error']);self._save(job);return
+                    current=self.app.customer_workspace.profile(job['object_id'])
+                    if current['source_hash']!=job['source_hash']:
+                        job.update(status='needs_input',profile_saved=False,artifact_id=None,summary='原来源已变化，请重新核对。',error='分析依据已过期，本次未覆盖客户派生资料。')
+                        self._event(job,'needs_input',job['error']);self._save(job);return
+                    saved=self.app.customer_workspace.save_profile(job['object_id'],{'source_hash':job['source_hash'],**result})
+                    if saved.get('stale') or saved.get('derived_source_hash')!=job['source_hash']:raise JobFailure('客户派生资料保存回读未命中本次来源。')
+                    job.update(status='completed',profile_saved=True,artifact_id=None,error=None,summary=result['analysis']['next_action'][:300] or '完整中文译文与客户分析已保存。')
+                    self._event(job,'completed','完整中文译文与客户分析已回存当前客户，未另建重复Markdown成果。')
+                    self._save(job);return
                 artifact = self.app.business.save_artifact(job['object_id'], job['title'][:185] + ' · Agent成果', content)
                 if not isinstance(artifact, dict) or not isinstance(artifact.get('id'), str) or not artifact['id']:
                     raise JobFailure('业务服务未返回有效成果编号，请核对已有成果，避免重复保存。')
