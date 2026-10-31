@@ -1,6 +1,6 @@
 ---
 name: image-conversion-review
-description: Review Beiqiang Alibaba.com main images and first gallery images for search click-through and inquiry conversion. Use when checking product image roles, first-image quality, gallery sequence, duplicate image risk, B2B visual style, SKU-supported product proof, OEM image placement, and image remake priorities.
+description: Review Beiqiang Alibaba.com product images for clarity, click-through and buyer conversion.
 ---
 
 # Image Conversion Review
@@ -105,7 +105,7 @@ Classify `5/6 shared main images + all product-detail images shared` as high-con
 
 必须保持不变：鞋头比例、鞋楦与整体轮廓、鞋底高度/曲线/纹路、鞋面分区与针织纹理、闭合方式、鞋口、后跟拉环、材料外观、Logo及真实SKU颜色。AI不得补造不存在的配色、部件、标签、功能、认证、评价或工厂事实。
 
-AI候选进入正式图片银行前，至少完成：真实参考图可追溯、原图与候选同屏对照、原尺寸逐项检查、六图整组检查、颜色/SKU/标题一致性检查。结构无法确认或出现漂移即淘汰；通过上述门禁的AI图可以作为M1正式候选，不要求退回较弱原图。
+AI候选用于正式商品图时，结合本次涉及范围检查实鞋一致性、清晰度和颜色/SKU对应；需要检查整组时，图数及角色按当前商品方案和SOP执行。结构漂移的候选需修正；合适的AI图可以作为M1，不要求退回较弱原图。
 
 需要生成或编辑时，读取[电商图片生成经验](../alibaba-international-operations/references/ecom-image-generation-lessons.md)，先形成图片角色与负面约束，再生成和验收。
 

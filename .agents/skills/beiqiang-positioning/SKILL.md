@@ -1,6 +1,6 @@
 ---
 name: beiqiang-positioning
-description: Review a Beiqiang buyer-facing claim, audience angle or product positioning decision against current SKU evidence. Use for an actual positioning question or disputed claim; a routine title-only draft can apply the claim rules without running a separate positioning task.
+description: Evaluate a specific Beiqiang positioning or buyer-facing claim against current product and audience evidence.
 ---
 
 # Beiqiang positioning

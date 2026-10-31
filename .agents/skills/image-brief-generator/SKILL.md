@@ -1,6 +1,6 @@
 ---
 name: image-brief-generator
-description: Image brief and AI prompt generator for Beiqiang Alibaba.com operations. Use when creating design briefs or AI image prompts for Alibaba main images, detail images, shipping images, OEM/ODM images, factory images, quality inspection images, size charts, color charts, wide toe box comparison graphics, and product proof visuals for B2B shoe buyers.
+description: Create design briefs or AI image prompts for Beiqiang Alibaba.com footwear listings.
 ---
 
 # Image Brief Generator

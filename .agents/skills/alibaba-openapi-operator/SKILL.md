@@ -13,12 +13,11 @@ Prefer the authorized Alibaba Open APIs over repetitive browser form work. Resol
 
 ## Safety and evidence
 
-API readback proves only the returned platform fields and review state. Product/source truth remains in [workspace boundaries](../../../AGENTS.md), exact SKU evidence and the [canonical lifecycle SOP](../../../02_Alibaba运营/00_运营SOP/国际站商品全生命周期SOP.md).
+API readback reports platform fields and review state; product and commercial decisions follow the current SKU record and applicable lifecycle SOP.
 
 - Credentials default to `~/.config/beiqiang/alibaba-openapi.json` (`Path.home()` in the client). A different external file can be selected with `--config` before the command. Never print secrets, copy them into prompts, commit them, or place them in generated workbooks.
 - Treat the current permission page and current official API documentation as authoritative. Read [references/permissions.md](references/permissions.md) to route an operation.
 - Read-only discovery and validation may run directly. Product/media, inventory/display, order/shipping, address and other external mutations must remain within the user's authorized targets and scope. Prepare the exact change before any missing approval is requested; existing authorization in the conversation remains valid.
-- For publishing or repair, read [the canonical lifecycle SOP](../../../02_Alibaba运营/00_运营SOP/国际站商品全生命周期SOP.md) and the SKU source evidence. Do not infer unsupported fields or copy historical defaults.
 - For sourced HR replacement, apply the SOP's current sourcing and inventory convention. A stock-only update on an old-shoe page is not a completed replacement; read back formal inventory and the other affected fields separately.
 - Record request IDs, trace IDs, returned product IDs, and platform error objects. Do not call success unless the API returns a positive business result.
 

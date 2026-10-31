@@ -1,6 +1,6 @@
 ---
 name: video-reference-assets
-description: Prepare and review reusable character, animal, product, prop and location references before AI video generation. Use for multi-view identity or wardrobe assets, separate empty scenes and shot composites; not ordinary one-image posters or video editing.
+description: Prepare reusable character, product, prop or scene references for AI video generation.
 ---
 
 # Video Reference Assets

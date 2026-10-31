@@ -148,12 +148,12 @@ class AgentJobTests(unittest.TestCase):
         self.assertEqual(result['artifact_id'],'artifact-1')
         self.assertIn('reconnecting',[event['type'] for event in result['events']])
 
-    def test_no_original_read_receipt_keeps_draft_as_needs_input(self):
+    def test_draft_can_finish_without_a_mandatory_source_tool_receipt(self):
         self.options={'source_read':False}
         result=self.wait(self.jobs.start('product:shoe','整理'))
-        self.assertEqual(result['status'],'needs_input')
+        self.assertEqual(result['status'],'completed')
         self.assertEqual(result['artifact_id'],'artifact-1')
-        self.assertIn('读取未完成',result['error'])
+        self.assertIsNone(result['error'])
 
     def test_missing_empty_or_uncompleted_result_is_failure(self):
         for options in ({'content':None},{'content':'  '},{'complete':False},{'failed':True}):

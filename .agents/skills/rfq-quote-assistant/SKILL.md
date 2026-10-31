@@ -20,13 +20,13 @@ Use this skill to answer B2B sourcing inquiries with practical, trust-building q
 
 ## Quote Discipline
 
-- Select a small number of well-matched real RFQs for individual review; confirm each model/source, quantity, price/terms and intended reply before an actual quotation. Writing or strategy approval never grants automatic bulk sending or advertising budget permission.
+- Prioritize RFQs with a useful fit, using the buyer's request and existing confirmed model, supply and commercial terms. Ask only for information that affects the immediate quotation or next step. An actual quotation or send stays within the user's authorized scope.
 - Triage each real RFQ by exact shoe/capability fit, quantity and commercial target, missing specs, buying stage, destination and technical-development needs. Explain the priority in plain terms; do not invent a platform ranking score or quote simply to use an allowance.
 - Reply to the buyer's stated requirement first, then show the matching evidenced model, conditional price or the one or two facts needed for a valid quote, and a concrete next step. A one-pair inquiry may be sample exploration rather than an automatic rejection or bulk-order signal.
 
-- Keep price as a range unless the user provides style, material, quantity, size ratio, packing, and order terms.
+- Use confirmed current SKU and order terms whether provided in this conversation or recorded in the project. Give an appropriate range or qualified estimate if decisive terms are missing; do not repeatedly ask for already confirmed information.
 - Read the applicable current commercial baseline and exact SKU/order evidence; do not keep an independent default quotation band in this skill.
-- Ask for order-critical details naturally: quantity, target market, size range, color mix, logo/packing needs, delivery time, and sample address.
+- Ask naturally for the one or two details actually needed now; collect further order details as the discussion progresses.
 - Offer feasible next steps: confirm the actual model and source, check sample availability and current color/size supply, then quote after specs.
 - Avoid unsupported claims about certificates, capacity, years, private-label services, or compliance.
 - Treat named customers/logos and example figures as unverified until there is specific permission and evidence. Draft only; never send through a platform as part of a writing task.
@@ -45,4 +45,4 @@ For a short request, return the ready-to-send reply and only the missing facts t
 - Do not promise fixed final price without confirmed specs.
 - Do not promise DDP/FBA cost without address, carton, weight, and logistics route.
 - Do not invent certificates, stock, lead time, or customization capacity.
-- Do not write retail promotion language.
+- Adapt customer-facing language to the buyer and channel; consumer use scenarios may support a B2B pitch when grounded in the product.

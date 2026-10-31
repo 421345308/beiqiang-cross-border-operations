@@ -22,7 +22,7 @@ Use this skill to move a buyer from inquiry to confirmed specs, sample order, or
 
 ## 贝强业务规则
 
-- Position Beiqiang as a Quanzhou footwear factory supplier.
+- Use Beiqiang's confirmed footwear-factory identity and describe the specific shoe's supply according to its product record; do not describe externally sourced shoes as factory-made without confirmation.
 - Keep the buyer type B2B: importer, wholesaler, Amazon/TikTok seller, brand buyer, sourcing agent.
 - Discuss only the current SKU's verified shoe type, fit, materials, source and feasible order options. Wide toe, EVA, samples, mixed sizes/colors and OEM/ODM are conditional.
 - Reuse the latest scoped quote and current commercial/SKU evidence; do not introduce a separate default FOB range in a follow-up.

@@ -1,6 +1,6 @@
 ---
 name: alibaba-catalog-audit
-description: Audit Beiqiang Alibaba.com product identity, images, SKU bindings, detail pages, URLs and conversion issues for the requested current catalog scope. A full-store audit covers the current catalog rather than a historical product count; it does not automatically block unrelated work.
+description: Audit the current Alibaba.com catalog for product identity, images, SKU bindings and conversion issues.
 ---
 
 # Alibaba Catalog Audit

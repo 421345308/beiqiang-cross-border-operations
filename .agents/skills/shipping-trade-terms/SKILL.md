@@ -1,6 +1,6 @@
 ---
 name: shipping-trade-terms
-description: Shipping and trade terms assistant for Beiqiang B2B shoe exports. Use when explaining or drafting EXW, FOB, DDP, FCA, air freight, sea freight, express delivery, Amazon FBA shipment, packing, carton, sample shipping, freight quotation questions, and buyer-facing logistics copy for Alibaba inquiries, RFQ replies, product pages, and follow-ups.
+description: Explain shipping and trade terms or draft logistics replies for Beiqiang footwear exports.
 ---
 
 # Shipping Trade Terms
@@ -29,17 +29,7 @@ Use this skill to explain trade terms and draft buyer-safe logistics copy for sh
 
 ## 输出格式
 
-Return:
-
-```text
-Scenario:
-Recommended term:
-Buyer-facing explanation:
-Message template:
-Data needed for final quote:
-Risk notes:
-Internal operator note:
-```
+Match the requested scope: answer a simple term question directly or provide the requested buyer message. For a complete shipping decision, include the recommended option, what it covers, the information needed for a quote and any material trade-offs.
 
 ## 禁止事项
 

@@ -1,6 +1,6 @@
 ---
 name: beiqiang-seedance-video
-description: Prepare, generate and review Beiqiang footwear videos with a user-selected Seedance version and execution platform. Use for product-reference planning, model research, prompts, generation and footwear QA; channel, language and model come from the current project.
+description: Plan, generate or review Beiqiang footwear videos using the selected Seedance model and platform.
 ---
 
 # Beiqiang Seedance Video

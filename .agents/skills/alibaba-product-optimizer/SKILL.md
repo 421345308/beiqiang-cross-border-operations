@@ -1,6 +1,6 @@
 ---
 name: alibaba-product-optimizer
-description: Analyze or revise requested fields on one Beiqiang Alibaba.com product. Use for a title-only draft, keywords, attributes, images, details or a complete page review; preserve the requested scope. Publishing and API changes belong to separate execution skills.
+description: Review or draft requested title, keyword, image, attribute or detail changes for one Alibaba.com product.
 ---
 
 # Alibaba Product Optimizer

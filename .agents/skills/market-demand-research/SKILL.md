@@ -1,6 +1,6 @@
 ---
 name: market-demand-research
-description: Research footwear demand and product priorities for Beiqiang using Google Trends, search queries, scoped sales evidence, channel results and verified supply. Use for product selection, website catalog expansion, search-content planning or deciding which directions merit promotion; distinguish search interest from sales and channel-specific buying intent.
+description: Research footwear demand and product priorities using market and channel evidence.
 ---
 
 # Market Demand Research

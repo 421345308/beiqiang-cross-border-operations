@@ -1,6 +1,6 @@
 ---
 name: competitor-research-firecrawl
-description: Research public shoe competitors for Beiqiang B2B decisions with Firecrawl or available browsing. Use for competitor products, buyer language, keyword patterns, image roles and evidence-based gaps; keep competitor observations separate from Beiqiang SKU facts.
+description: Research public footwear competitors for Beiqiang B2B product, positioning and channel decisions.
 ---
 
 # Competitor Research Firecrawl

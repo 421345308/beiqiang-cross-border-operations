@@ -1,6 +1,6 @@
 ---
 name: tiktok-b2b-content
-description: Draft Beiqiang footwear short-video concepts, scripts, hooks and captions for TikTok or a user-selected channel, with the actual B2B or domestic retail audience taken from the project. Match real SKU evidence to the current audience, language and brand or inquiry objective.
+description: Create footwear short-video concepts, scripts or captions for TikTok or a user-selected channel.
 ---
 
 # Beiqiang B2B Short-Video Content

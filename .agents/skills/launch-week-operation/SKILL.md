@@ -1,6 +1,6 @@
 ---
 name: launch-week-operation
-description: Plan and run Beiqiang Alibaba.com launch-week operations. Use when creating first-week tasks for product audit, top product optimization, keyword library, competitor library, RFQ replies, inquiry follow-up, P4P test setup, TikTok B2B content, data tracking, and daily operating rhythm after store launch.
+description: Plan or review launch-week operations for a Beiqiang Alibaba.com store.
 ---
 
 # Launch Week Operation
