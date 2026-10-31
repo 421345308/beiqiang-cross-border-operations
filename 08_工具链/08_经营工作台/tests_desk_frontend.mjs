@@ -1,0 +1,111 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import vm from 'node:vm';
+
+class Element {
+  constructor(tag = 'div') { this.tagName = tag.toUpperCase(); this.children = []; this.listeners = {}; this.dataset = {}; this.style = {}; this.value = ''; this._text = ''; this.className = ''; this.disabled = false; this.hidden = false; this.classList = { toggle: (name, on) => { const values = new Set(this.className.split(' ').filter(Boolean)); if (on) values.add(name); else values.delete(name); this.className = [...values].join(' '); }, add: name => { this.className += ` ${name}`; } }; }
+  set textContent(value) { this._text = String(value); this.children = []; }
+  get textContent() { return this._text + this.children.map(item => item.textContent || '').join(''); }
+  append(...items) { for (const item of items) { item.parent = this; this.children.push(item); } }
+  insertBefore(item, before) { item.parent = this; const index = this.children.indexOf(before); if (index < 0) this.children.push(item); else this.children.splice(index, 0, item); }
+  replaceChildren(...items) { this.children = []; this._text = ''; this.append(...items); }
+  addEventListener(name, callback) { this.listeners[name] = callback; }
+  setAttribute(key, value) { this[key] = value; }
+  removeAttribute(key) { this[key] = ''; }
+  querySelectorAll(selector) { return walk(this).slice(1).filter(item => selector.startsWith('.') ? item.className.split(' ').includes(selector.slice(1)) : item.tagName === selector.toUpperCase()); }
+  querySelector(selector) { return this.querySelectorAll(selector)[0] || null; }
+  async click() { if (!this.disabled) return this.listeners.click?.({}); }
+  focus() { this.focused = true; }
+  scrollIntoView() { this.scrolled = true; }
+  remove() { if (this.parent) this.parent.children = this.parent.children.filter(item => item !== this); }
+  showModal() { this.open = true; }
+  close() { this.open = false; this.listeners.close?.({}); }
+}
+const walk = root => [root, ...root.children.flatMap(walk)];
+const findButton = (root, label) => { const value = walk(root).find(item => item.tagName === 'BUTTON' && item.textContent === label); assert.ok(value, `Missing ${label}`); return value; };
+const settle = async () => { for (let i = 0; i < 4; i++) await new Promise(resolve => setImmediate(resolve)); };
+function harness(hash = '#/overview') {
+  const body = new Element('body'), elements = {};
+  for (const id of ['page', 'reload', 'desk-notice', 'save-indicator', 'connection', 'page-name', 'breadcrumb']) { elements[id] = new Element(id === 'reload' ? 'button' : 'div'); elements[id].id = id; body.append(elements[id]); }
+  const nav = ['overview', 'products', 'customers', 'library'].map(name => { const item = new Element('a'); item.dataset.nav = name; body.append(item); return item; });
+  const requests = [], objects = [{ id: 'product:1', kind: 'product', title: '<img src=x onerror=alert(1)>真实商品', subtitle: '实际款号', source: '商品原档案', facts: [{ label: '材料', value: '已核材料' }], assets: [{ path: '商品图.jpg', label: '真实主图', url: '/api/media/file?path=商品图.jpg' }], content: '很长的原文', related: [] }];
+  const artifacts = [{ id: 'a1', object_id: 'product:1', title: '现有选款资料', content: '原成果', updated_at: '2026-10-31T01:00:00Z' }]; const jobs = []; let web = { state: 'loading' };
+  const local = new Map(), location = { hash, origin: 'http://127.0.0.1:8765' };
+  const context = { console, URL, URLSearchParams, Date, JSON, Math, Map, Set, location, localStorage: { getItem: key => local.get(key) || null, setItem: (key, value) => local.set(key, value) }, history: { replaceState: (_s, _t, next) => { location.hash = next; } }, setTimeout: () => 1, clearTimeout() {}, setInterval() {}, window: { addEventListener() {} }, document: { body, visibilityState: 'visible', createElement: tag => new Element(tag), getElementById: id => elements[id], querySelectorAll: selector => selector === '[data-nav]' ? nav : body.querySelectorAll(selector) } };
+  context.fetch = async (path, options = {}) => {
+    const url = new URL(path, location.origin), payload = options.body ? JSON.parse(options.body) : null; requests.push({ path, options, payload }); let value;
+    if (url.pathname === '/api/desk/bootstrap') value = { csrf_token: 'fixture-token', objects, jobs, artifacts, website_status: web, goals: { phase: '当前经营阶段' } };
+    else if (url.pathname === '/api/desk/objects') value = { objects: objects.filter(item => !url.searchParams.get('kind') || item.kind === url.searchParams.get('kind')) };
+    else if (url.pathname === '/api/desk/object') value = objects.find(item => item.id === url.searchParams.get('id'));
+    else if (url.pathname === '/api/desk/jobs' && payload) { value = { id: 'j1', object_id: payload.object_id, instruction: payload.instruction, status: 'running', events: [{ type: 'progress', text: '已取得资料' }], updated_at: '2026-10-31T02:00:00Z' }; jobs.push(value); }
+    else if (url.pathname === '/api/desk/jobs') value = { jobs };
+    else if (url.pathname === '/api/desk/artifacts' && payload) { value = { ...payload, id: payload.id || 'a2', updated_at: '2026-10-31T03:00:00Z' }; const index = artifacts.findIndex(item => item.id === value.id); if (index >= 0) artifacts[index] = value; else artifacts.push(value); }
+    else if (url.pathname === '/api/desk/artifacts') value = { artifacts: artifacts.filter(item => item.object_id === url.searchParams.get('object_id')) };
+    else if (url.pathname === '/api/desk/refresh') { web = { state: 'loading' }; value = { status: web }; }
+    else throw new Error(`Unexpected API ${path}`);
+    return { ok: true, json: async () => structuredClone(value) };
+  };
+  const source = fs.readFileSync(new URL('./web/desk.js', import.meta.url), 'utf8'); assert.doesNotMatch(source, /\.innerHTML\s*=/);
+  vm.createContext(context); vm.runInContext(source.replace('bootstrap(); setInterval(poll, 4000);', 'window.__desk = { S, bootstrap, renderRoute, poll, refreshData, safeUrl, imageAsset };'), context);
+  return { ui: context.window.__desk, elements, body, objects, artifacts, jobs, requests, location, setWebsite: value => { web = value; }, originalFetch: context.fetch, interceptFetch: callback => { context.fetch = callback; } };
+}
+
+test('real data drives navigation and original content is collapsed; untrusted titles stay text', async () => {
+  const h = harness('#/products'); await h.ui.bootstrap(); await settle(); assert.ok(h.elements.page.textContent.includes('真实商品')); assert.equal(walk(h.body).some(item => item.tagName === 'SCRIPT'), false);
+  h.location.hash = '#/object/product%3A1'; await h.ui.renderRoute(); await settle(); const source = h.elements.page.querySelector('.object-source-details'); assert.ok(source); assert.notEqual(source.open, true); assert.equal(h.ui.safeUrl('javascript:alert(1)'), null); assert.equal(h.ui.imageAsset({ path: 'real.jpg', url: '/api/asset?id=1' }), true);
+});
+
+test('job carries current object/token, text events render, and polling preserves instruction and unsaved artifact', async () => {
+  const h = harness('#/object/product%3A1'); await h.ui.bootstrap(); await settle(); const ctx = h.ui.S.detail;
+  ctx.instruction.value = '根据真实材料整理选款'; ctx.instruction.listeners.input({}); await findButton(h.body, '交给 Sol 处理').click(); const call = h.requests.find(item => item.path === '/api/desk/jobs' && item.payload); assert.equal(call.payload.object_id, 'product:1'); assert.equal(call.options.headers['X-Workbench-Token'], 'fixture-token'); assert.ok(ctx.jobBox.textContent.includes('已取得资料'));
+  const title = ctx.editor.querySelector('input'), editor = ctx.editor.querySelector('textarea'); title.value = '自己修改的标题'; title.listeners.input({}); editor.value = '自己未保存的正文'; editor.listeners.input({});
+  h.jobs[0].status = 'completed'; h.jobs[0].updated_at = '2026-10-31T04:00:00Z'; h.artifacts.push({ id: 'new-result', object_id: 'product:1', title: '新成果', content: '模型新输出', updated_at: '2026-10-31T04:00:00Z' }); await h.ui.poll();
+  assert.equal(ctx.editor.querySelector('textarea'), editor); assert.equal(editor.value, '自己未保存的正文'); assert.equal(ctx.instruction.value, '根据真实材料整理选款'); await findButton(ctx.editor, '保存成果').click(); const save = h.requests.find(item => item.path === '/api/desk/artifacts' && item.payload); assert.equal(save.payload.id, 'a1'); assert.equal(save.payload.content, '自己未保存的正文');
+});
+
+test('website loading is not an empty-inquiry claim and later real customer appears without replacing search', async () => {
+  const h = harness('#/customers'); await h.ui.bootstrap(); await settle(); assert.ok(h.elements.page.textContent.includes('网站询盘正在读取')); const search = h.elements.page.querySelector('input');
+  h.objects.push({ id: 'customer:real', kind: 'customer', title: '真实需求', source: '网站询盘', assets: [], content: '客户原文' }); h.setWebsite({ state: 'ready', observed_at: '2026-10-31T05:00:00Z' }); await h.ui.poll(); await settle(); assert.equal(h.elements.page.querySelector('input'), search); assert.ok(h.elements.page.textContent.includes('真实需求')); await h.ui.refreshData(); assert.ok(h.requests.some(item => item.path === '/api/desk/refresh' && item.payload));
+});
+
+test('home never recommends arbitrary first products; recents require an actual open or job', async () => {
+  const h = harness(); h.artifacts.length = 0; await h.ui.bootstrap(); await settle(); assert.ok(h.elements.page.textContent.includes('从业务开始')); assert.ok(h.elements.page.textContent.includes('网站询盘')); assert.equal(h.elements.page.textContent.includes('继续工作'), false); assert.equal(h.elements.page.textContent.includes('真实商品'), false);
+  h.objects.push({ id: 'customer:worked', kind: 'customer', title: '实际处理过的客户', source: '本地客户记录', assets: [] }); h.jobs.push({ id: 'past-job', object_id: 'customer:worked', status: 'completed', updated_at: '2026-10-31T02:00:00Z' }); await h.ui.bootstrap(); await settle(); assert.ok(h.elements.page.textContent.includes('实际处理过的客户')); assert.equal(h.elements.page.textContent.includes('真实商品'), false);
+  h.location.hash = '#/object/product%3A1'; await h.ui.renderRoute(); await settle(); h.location.hash = '#/overview'; await h.ui.renderRoute(); assert.ok(h.elements.page.textContent.includes('真实商品')); assert.ok(h.elements.page.textContent.includes('继续工作'));
+});
+
+test('成果 sits before a large gallery and only six assets display until expanded', async () => {
+  const h = harness('#/object/product%3A1'); h.objects[0].assets = Array.from({ length: 29 }, (_, i) => ({ path: `real-${i}.jpg`, label: `原素材 ${i}`, url: `/api/media/file?path=real-${i}.jpg` })); await h.ui.bootstrap(); await settle();
+  const main = h.elements.page.querySelector('.object-main'); assert.ok(main.children[1].textContent.startsWith('工作成果')); const grid = main.querySelector('.asset-grid'); assert.equal(grid.children.length, 6); await findButton(main, '展开全部 29 份素材').click(); assert.equal(grid.children.length, 29); await findButton(main, '收起素材').click(); assert.equal(grid.children.length, 6);
+});
+
+
+test('late product response cannot paint over a newer customer URL before hashchange is handled', async () => {
+  const h = harness(); await h.ui.bootstrap(); await settle(); let finish;
+  h.interceptFetch(async (path, options) => path.startsWith('/api/desk/object?') ? new Promise(resolve => { finish = () => resolve({ ok: true, json: async () => structuredClone(h.objects[0]) }); }) : h.originalFetch(path, options));
+  h.location.hash = '#/object/product%3A1'; const opening = h.ui.renderRoute(); await settle();
+  h.location.hash = '#/customers'; finish(); await opening; assert.equal(h.elements.page.textContent.includes('很长的原文'), false); assert.equal(h.ui.S.detail, null);
+  await h.ui.renderRoute(); await settle(); assert.ok(h.elements.page.textContent.includes('客户')); assert.equal(h.ui.S.page, 'customers');
+});
+
+test('wrong object identity is never rendered or inserted as the selected customer', async () => {
+  const h = harness(); await h.ui.bootstrap(); await settle(); h.interceptFetch(async (path, options) => path.startsWith('/api/desk/object?') ? { ok: true, json: async () => structuredClone(h.objects[0]) } : h.originalFetch(path, options));
+  h.location.hash = '#/object/customer%3Afoot-levelers'; await h.ui.renderRoute(); await settle(); assert.ok(h.elements.page.textContent.includes('返回资料与所选对象不一致')); assert.equal(h.ui.S.object, null); assert.equal(h.ui.S.detail, null); assert.equal(h.ui.S.objects.some(item => item.id === 'customer:foot-levelers'), false);
+});
+
+test('detached customer search cannot rewrite the object hash while navigation is in progress', async () => {
+  const h = harness('#/customers'); await h.ui.bootstrap(); await settle(); const oldInput = h.elements.page.querySelector('input'); h.location.hash = '#/object/product%3A1'; oldInput.value = 'late event'; oldInput.listeners.input({}); assert.equal(h.location.hash, '#/object/product%3A1');
+});
+
+test('product summary keeps business facts compact and preserves long channel fields behind disclosure', async () => {
+  const h = harness('#/object/product%3A1'); h.objects[0].facts = [{ label: '共用产品ID', value: 'internal-id' }, { label: '别名', value: 'extra aliases' }, { label: '来源状态', value: '已确认' }, { label: '供应商', value: '真实供应商' }, { label: '供应商原款', value: '原款008' }, { label: '用途候选', value: '候选方向' }, { label: '历史参考价', value: '仅作参考' }, { label: '原档已有规格', value: '原档规格' }, { label: 'Alibaba 123', value: 'Long platform title '.repeat(30) }, { label: '原始资料包', value: '原包路径' }]; await h.ui.bootstrap(); await settle();
+  const hero = h.elements.page.querySelector('.detail-hero'), visible = hero.querySelector('.object-facts'), extra = hero.querySelector('.extra-facts'); assert.equal(visible.querySelectorAll('dt').length, 6); assert.equal(visible.textContent.includes('internal-id'), false); assert.equal(visible.textContent.includes('Long platform title'), false); assert.notEqual(extra.open, true); assert.ok(extra.textContent.includes('Long platform title')); assert.ok(extra.textContent.includes('internal-id'));
+});
+
+test('default artifact follows latest actual job, explicit artifact wins, and saved work opens in read mode', async () => {
+  const h = harness('#/object/product%3A1'); h.artifacts[0].updated_at = '2026-11-02T00:00:00Z'; h.artifacts.push({ id: 'latest-work', object_id: 'product:1', title: '最新真实成果', content: '最新工作正文', updated_at: '2026-10-31T02:00:00Z' });
+  h.jobs.push({ id: 'old', object_id: 'product:1', status: 'needs_input', artifact_id: 'a1', created_at: '2026-10-30T00:00:00Z' }, { id: 'latest', object_id: 'product:1', status: 'completed', artifact_id: 'latest-work', created_at: '2026-10-31T00:00:00Z' });
+  await h.ui.bootstrap(); await settle(); assert.equal(h.ui.S.detail.selectedId, 'latest-work'); assert.ok(h.ui.S.detail.editor.querySelector('.artifact-preview').textContent.includes('最新工作正文')); assert.equal(h.ui.S.detail.editor.querySelector('textarea').hidden, true); await findButton(h.ui.S.detail.editor, '编辑').click(); assert.equal(h.ui.S.detail.editor.querySelector('textarea').hidden, false);
+  h.location.hash = '#/object/product%3A1?artifact=a1'; await h.ui.renderRoute(); await settle(); assert.equal(h.ui.S.detail.selectedId, 'a1');
+});

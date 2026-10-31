@@ -8,6 +8,8 @@ from urllib.parse import urlsplit, parse_qs, unquote
 from workspaces import Workspaces, WorkspaceConflict
 from media_assets import MediaAssets, MediaError
 from product_changes import ProductChanges
+from business import Business
+from agent_jobs import AgentJobs
 
 HERE = Path(__file__).resolve().parent
 MODEL = 'gpt-6.1-sol'
@@ -38,6 +40,8 @@ class Workbench:
         self.workspaces=Workspaces(self)
         self.media=MediaAssets(self.root)
         self.product_changes=ProductChanges(self)
+        self.business=Business(self)
+        self.agent_jobs=AgentJobs(self)
     def save(self, run):
         with self.lock:
             self.db.execute('INSERT OR REPLACE INTO runs VALUES (?,?)',(run['id'],json.dumps(run,ensure_ascii=False))); self.db.commit()
@@ -224,6 +228,18 @@ class Handler(BaseHTTPRequestHandler):
         try:
             self.check_host();u=urlsplit(self.path);app=self.server.app
             if u.path=='/api/health':return self.send_json({'ok':True,'model':MODEL,'app':'beiqiang-workbench','root':str(app.root)})
+            if u.path.startswith('/api/desk/'):
+                query=parse_qs(u.query)
+                value=lambda name:query.get(name,[''])[0]
+                if u.path=='/api/desk/bootstrap':
+                    return self.send_json({'csrf_token':app.token,'objects':app.business.list_objects(),
+                        'jobs':app.agent_jobs.list_jobs(),'artifacts':app.business.list_artifacts(),
+                        'goals':app.bootstrap()['goals'],'website_status':app.business.website_status()})
+                if u.path=='/api/desk/objects':return self.send_json({'objects':app.business.list_objects(kind=value('kind'),q=value('q'))})
+                if u.path=='/api/desk/object':return self.send_json(app.business.get_object(value('id')))
+                if u.path=='/api/desk/jobs':return self.send_json({'jobs':app.agent_jobs.list_jobs()})
+                if u.path=='/api/desk/job':return self.send_json(app.agent_jobs.get_job(value('id')))
+                if u.path=='/api/desk/artifacts':return self.send_json({'artifacts':app.business.list_artifacts(value('object_id') or None)})
             if u.path=='/api/media/file':return app.media.serve(self,parse_qs(u.query).get('path',[''])[0])
             if u.path=='/api/product-changes':return self.send_json({'changes':app.product_changes.list_changes()})
             if u.path.startswith('/api/product-changes/'):
@@ -253,6 +269,15 @@ class Handler(BaseHTTPRequestHandler):
             if size<1 or size>limit:raise ValueError('请求大小无效')
             body=json.loads(self.rfile.read(size));parts=urlsplit(self.path).path.strip('/').split('/')
             if not isinstance(body,dict):raise ValueError('请求必须是JSON对象')
+            if parts==['api','desk','jobs']:
+                return self.send_json(app.agent_jobs.start(body.get('object_id'),body.get('instruction')),201)
+            if parts==['api','desk','refresh']:
+                app.business.refresh_website(wait=False)
+                return self.send_json(app.business.website_status())
+            if parts==['api','desk','job','cancel']:
+                return self.send_json(app.agent_jobs.cancel(body.get('id')))
+            if parts==['api','desk','artifacts']:
+                return self.send_json(app.business.save_artifact(body.get('object_id'),body.get('title'),body.get('content'),artifact_id=body.get('id')))
             if parts==['api','media','resolve']:return self.send_json({'media':app.media.resolve(body.get('path',''))})
             if parts==['api','product-changes','prepare']:
                 return self.send_json(app.product_changes.prepare(body.get('product_id'),body.get('proposed_title'),rationale=body.get('rationale'),evidence=body.get('evidence')))
@@ -282,6 +307,8 @@ def main():
     try:server.serve_forever()
     except KeyboardInterrupt:pass
     finally:
+        for job in app.agent_jobs.list_jobs():
+            if job['status'] in ('running','queued'):app.agent_jobs.cancel(job['id'])
         for r in app.runs():
             if r['status'] in ('running','queued'):app.cancel(r['id'])
         server.server_close()
