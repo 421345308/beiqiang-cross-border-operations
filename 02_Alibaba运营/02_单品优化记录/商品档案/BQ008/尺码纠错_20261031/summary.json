@@ -1,0 +1,40 @@
+{
+  "product_id": "1601825021825",
+  "observed_at": "2026-10-31T05:55:30.202599+00:00",
+  "state": "APPROVED_FORMAL_SCHEMA_SCORE_PASS",
+  "status": "approved",
+  "display": "Y",
+  "sku_count": 40,
+  "retained_40_rows_exact": true,
+  "removed_ids_absent": true,
+  "size35_option_absent": true,
+  "changed_top_level_fields": [
+    "gmt_modified",
+    "product_sku",
+    "struct_detail",
+    "display",
+    "status"
+  ],
+  "other_fields_strict": false,
+  "actual_score": "5.00",
+  "render_available": true,
+  "source_evidence": "Original L1009 EU36-45: original form line15, source CSV line62, Oct19 source audit; owner authorized exact repair",
+  "next_action": "Main agent public size verification; no replay",
+  "other_fields_difference": "Only detail_image order changed; exact assets and image_set role multiset preserved, other fields unchanged",
+  "other_fields_semantic_preserved": true,
+  "latest_get_file": "latest_get.json",
+  "render_sku_ids_exact": true,
+  "render_sizes": [
+    "36",
+    "37",
+    "38",
+    "39",
+    "40",
+    "41",
+    "42",
+    "43",
+    "44",
+    "45"
+  ],
+  "render_size35_absent": true
+}

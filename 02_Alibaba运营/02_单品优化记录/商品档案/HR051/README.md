@@ -241,3 +241,25 @@
 - [verification.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%95%86%E5%93%81/1601969906452/verification.json)
 
 原件、正式回执与当前资料通过本页关联，不再复制成第二套商品库。
+
+
+## 2026-10-31 精确ID文案修正（审核中）
+
+仅 `1601969906452`，已一次提交并get逐字命中，当前 `modified / N`；评分5.00，审核中render无data，尚未完成批准或公开呈现验收。其余历史链接不联动。
+
+字段 `productTitle`：
+
+原值：
+
+> Wholesale Textile Lace-Up Casual Sneakers with Rubber Sole and Rear Pull Loop for Everyday Footwear
+
+提交后get值：
+
+> Wholesale Textile Cord-Lock Casual Sneakers with Rubber Sole and Rear Pull Loop for Everyday Footwear
+
+本次仅标题结构准确化或删除重复旋钮调节段；未新增性能/商业承诺。价格、图片、SKU及其余内容保全通过；BQ1051-E的商品URL随标题正常联动。待approved/Y后只做Schema回读，不重放提交。
+
+证据：[最小请求与前后值](执行证据_20261031/prepared.json)、[提交回执](执行证据_20261031/receipt.json)、[get/保全/评分验收](执行证据_20261031/verification.json)。
+
+
+2026-10-31只读收尾：正式原件已归本对象`执行证据_20261031/`并由其.gitignore留本机；临时原件保留。最新一次get：`modified / N`。仍待平台审核，不重放提交。
