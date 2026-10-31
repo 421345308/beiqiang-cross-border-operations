@@ -27,4 +27,3 @@ class OverviewTest(unittest.TestCase):
         self.assertEqual(douyin['actions'],['读取抖店商品'])
 
 if __name__=='__main__':unittest.main()
-
