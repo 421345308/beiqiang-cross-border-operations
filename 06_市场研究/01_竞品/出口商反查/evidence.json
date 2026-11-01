@@ -202,6 +202,46 @@
       "access": "FIRECRAWL_OFFICIAL_API_READ",
       "fact": "同英文名贸易页有鞋类逐票及地址",
       "limit": "店铺与出口方登记地址尚未交叉核对；逐票和海外客户留本地"
+    },
+    {
+      "id": "SRC-20261101-EX022",
+      "url": "https://japanese.alibaba.com/f/%E7%99%BD-%E3%82%B9%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%BC-%E3%83%A9%E3%82%B3%E3%82%B9%E3%83%86.html",
+      "checked_date": "2026-11-01",
+      "access": "SEARCH_INDEX",
+      "fact": "搜索索引一款男式系带休闲鞋显示318 sold，周期未知；同名贸易样本涉及青少年休闲鞋。店铺与出口地址关系待核，不能等同所有订单。",
+      "limit": "搜索结果缓存；平台成交数字单品、统计周期未知，店铺与报关主体未核"
+    },
+    {
+      "id": "SRC-20261101-EX023",
+      "url": "https://chinese.alibaba.com/catalog/chunky-shoes_cid201339906",
+      "checked_date": "2026-11-01",
+      "access": "SEARCH_INDEX",
+      "fact": "搜索索引一款厚底休闲鞋显示151 sold，周期未知；店铺与报关出口方关系待核。",
+      "limit": "搜索结果缓存；平台成交数字单品、统计周期未知，店铺与报关主体未核"
+    },
+    {
+      "id": "SRC-20261101-EX024",
+      "url": "https://xiangchensports.en.alibaba.com/index.html?from=detail&productId=1601582505453",
+      "checked_date": "2026-11-01",
+      "access": "SEARCH_INDEX",
+      "fact": "搜索缓存中一款休闲高帮鞋显示76 sold，周期未知；店铺页本次打开无正文，出口主体与地址待核。",
+      "limit": "搜索结果缓存；平台成交数字单品、统计周期未知，店铺与报关主体未核"
+    },
+    {
+      "id": "SRC-20261101-EX025",
+      "url": "https://www.alibaba.com/countrysearch/CN/shoes-market.html",
+      "checked_date": "2026-11-01",
+      "access": "SEARCH_INDEX",
+      "fact": "搜索索引一款男士休闲鞋显示750 sold，周期未知；Langji与Langchi为不同拼写，不自动合并法人。",
+      "limit": "搜索结果缓存；平台成交数字单品、统计周期未知，店铺与报关主体未核"
+    },
+    {
+      "id": "SRC-20261101-EX026",
+      "url": "https://apparel.alibaba.com/supplier/wholesale-jordans-from-china",
+      "checked_date": "2026-11-01",
+      "access": "SEARCH_INDEX",
+      "fact": "平台搜索页显示步行鞋等主营类目及美国市场询盘排名线索，非成交销量；待核店铺及出口主体。",
+      "limit": "搜索结果缓存；平台成交数字单品、统计周期未知，店铺与报关主体未核"
     }
   ],
   "deep_review_competitor_ids": [

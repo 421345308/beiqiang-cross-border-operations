@@ -1,8 +1,8 @@
 # 竞品公司与出口商反查
 
-初查日：2026-10-26；最新补查：2026-11-01（北京时间）。本页扩展现有竞品研究，不新建CRM。**已形成21家公司候选、10家原优先主体调查卡和69条名称检索项；未完成全部实际出口主体确认。** 海外潜客、联系方式、提单关系及评分留现有客户发现助手的本地受控数据区。
+初查日：2026-10-26；最新补查：2026-11-01（北京时间）。本页扩展现有竞品研究，不新建CRM。**已形成26家公司候选、10家原优先主体调查卡和79条名称检索项；未完成全部实际出口主体确认。** 海外潜客、联系方式、提单关系及评分留现有客户发现助手的本地受控数据区。
 
-数据入口：[候选JSON](competitors.json)、[候选CSV](competitors.csv)、[名称与别名检索CSV](aliases.csv)、[逐来源证据与访问限制](evidence.json)。10家优先对象为EX001—004、EX008及EX012—016。旧研究的商品、目录与图片证据继续保留在原位置，本表只引用。
+数据入口：[候选JSON](competitors.json)、[候选CSV](competitors.csv)、[名称与别名检索CSV](aliases.csv)、[逐来源证据与访问限制](evidence.json)。本机另有[海关数据查询公司名单.xlsx](海关数据查询公司名单.xlsx)，按试查价值排列26家公司并附给数据库服务商的字段要求；该文件为本地导出，公开同步只包含不涉海外客户的原始公开研究。原10家深查对象为EX001—004、EX008及EX012—016，试查顺序结合新增销量与贸易线索重新排序。旧研究的商品、目录与图片证据继续保留在原位置，本表只引用。
 
 ## 2026-11-01：高销量线索与贸易反查补充
 
@@ -10,9 +10,11 @@ EX013 Quanzhou Simble 的[国际站搜索索引](https://www.alibaba.com/country
 
 EX021 Quanzhou DHD Global Trading 在[国际站旧目录](https://www.alibaba.com/oem-shoes-wholesale-suppliers.html)有完整英文名、休闲鞋方向及店铺链接；[同名贸易页面](https://www.importinfo.com/quanzhou-dhd-global-trading-co-ltd)有鞋类逐票。店铺与贸易主体地址尚待交叉核对，该目录没有可核的当前销量。EX011 Yiwu Yongge 的[公开分类页缓存](https://www.alibaba.com/countrysearch/CN/sneaker.html)曾显示一款鞋 296 sold，缓存和统计周期不等于实时销量；本轮未找到同名双方均可读的鞋类提单，继续留在研究池。
 
+本轮补入 EX022 Wenzhou Sipcope、EX023 Wenzhou Better Outdoor、EX024 Quanzhou Xiangchen、EX025 Chongqing Langji 和 EX026 Quanzhou Benmiao。平台搜索索引分别显示 Sipcope 一款男士休闲鞋318 sold、Better一款厚底休闲鞋151 sold、Xiangchen一款高帮鞋76 sold、Langji一款鞋750 sold；EX018 Langchi另有一款鞋256 sold。它们都是单品搜索缓存，统计周期未知，直接页面不一定在本次返回相同卡片，不能当整店销量或所有买家采购数量；Langji与Langchi不自动合并。Sipcope的同名贸易样本含青少年休闲鞋，海外收货人留本地客户研究。
+
 ## 覆盖与证据等级
 
-原20家包括11家既有研究对象、9家新发现候选，本次另补EX021。新发现并非都已核实店铺：Fuyu仅确认官网业务表述；Langchi、Huifa、Linfeng仅取得Alibaba类别搜索卡片，公司/店铺/商品对应待补。不能把全部候选写成已核供应商或都有鞋类出口记录的公司。
+原20家包括11家既有研究对象、9家新发现候选，本次补EX021—026。新发现并非都已核实店铺：Fuyu仅确认官网业务表述；Langchi、Langji、Huifa、Linfeng等仅取得Alibaba类别搜索卡片，公司/店铺/商品对应待补。不能把全部候选写成已核供应商或都有鞋类出口记录的公司。
 
 - E1：搜索结果正文、摘要或原本地历史研究。适合发现线索，仍须回原页核查；保留查询日及原证据日期。
 - E2：本轮实际打开可读的官方/平台结构字段或公开企业目录。只证明该页面显示的身份/产品表述；第三方目录不是官方工商登记。
