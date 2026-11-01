@@ -85,6 +85,23 @@ test('Gmail 连接只在本地表单提交密码，成功刷新并清空密码',
   assert.equal(calls.length,1); assert.equal(calls[0].app_password,'fixture-app-secret'); assert.equal(password.value,''); assert.ok(panel.textContent.includes('已连接')); assert.equal(panel.textContent.includes('fixture-app-secret'),false);
 });
 
+test('Gmail 首选 Google 只读授权，客户端文件只提交给本机', async () => {
+  const h=harness('#/object/customer%3Amail'),original=h.originalFetch,calls=[];
+  h.objects.push({id:'customer:mail',kind:'customer',title:'邮箱客户',assets:[]});
+  h.interceptFetch(async(path,options={})=>{
+    if(path==='/api/desk/gmail/oauth/start'){calls.push(JSON.parse(options.body));return {ok:true,json:async()=>({authorization_url:'https://accounts.google.com/o/oauth2/v2/auth?state=fixture'})};}
+    if(String(path).startsWith('/api/desk/gmail/'))return {ok:true,json:async()=>({status:{state:'not_connected'},messages:[]})};
+    return original(path,options);
+  });
+  await h.ui.bootstrap();await settle();const panel=h.elements.page.querySelector('.gmail-conversation');
+  assert.ok(panel.textContent.includes('使用 Google 账号授权'));assert.ok(panel.textContent.includes('只读邮件'));
+  const file=walk(panel).find(x=>x['aria-label']==='Google 桌面应用客户端文件');file.files=[{text:async()=>JSON.stringify({installed:{client_id:'fixture',client_secret:'local-secret'}})}];
+  await findButton(panel,'准备 Google 授权').click();await settle();
+  assert.equal(calls[0].client_config.installed.client_secret,'local-secret');
+  assert.ok(walk(panel).some(x=>x.tagName==='A' && x.textContent==='继续 Google 登录并授权 ↗'));
+  assert.equal(panel.textContent.includes('local-secret'),false);
+});
+
 test('总览与询盘列表分别提醒 Gmail 和网站站内消息', async () => {
   const h=harness(); h.objects.push({id:'customer:mail',kind:'customer',title:'邮件回复买家',workflow:{gmail_reply_pending:true,customer_reply_pending:true,state:'preparing'}});
   await h.ui.bootstrap(); await settle(); assert.ok(h.elements.page.textContent.includes('Gmail 客户有新回复')); assert.ok(h.elements.page.textContent.includes('网站站内消息有新回复'));

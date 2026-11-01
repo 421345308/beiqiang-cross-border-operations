@@ -8,6 +8,7 @@ from pathlib import Path
 import threading
 import time
 from gmail_mailbox import GmailMailbox, normalize_email, test_credentials, save_password, credential_available
+from gmail_oauth import GmailOAuth, GmailOAuthMailbox, credentials_available as oauth_credentials_available
 
 
 def _timestamp(value):
@@ -43,14 +44,16 @@ def customer_emails(obj):
 class GmailService:
     def __init__(self,app,*,mailbox_factory=GmailMailbox,credential_tester=test_credentials,
                  credential_saver=save_password,credential_checker=credential_available,
-                 on_new_reply=None,interval=120,clock=time.time):
+                 oauth_factory=GmailOAuth,oauth_mailbox_factory=GmailOAuthMailbox,
+                 oauth_credential_checker=oauth_credentials_available,on_new_reply=None,interval=120,clock=time.time):
         self.app=app;self.mailbox_factory=mailbox_factory;self.credential_tester=credential_tester
         self.credential_saver=credential_saver;self.credential_checker=credential_checker
         self.on_new_reply=on_new_reply;self.interval=interval;self.clock=clock
+        self.oauth=oauth_factory();self.oauth_mailbox_factory=oauth_mailbox_factory;self.oauth_credential_checker=oauth_credential_checker
         self.lock=threading.RLock();self._stop=threading.Event();self._thread=None
         self._cache={};self._mailbox=None;self._account='';self._connected_at=None;self.revision=0
         self._retry_at={}
-        self._state='not_connected';self._error=None;self._last_success=None
+        self._state='not_connected';self._error=None;self._last_success=None;self._auth_mode=''
         self.path=Path(app.state)/'gmail.json'
         with app.lock:
             app.db.execute('CREATE TABLE IF NOT EXISTS gmail_reply_events (object_id TEXT NOT NULL,message_id TEXT NOT NULL,dispatch_state TEXT NOT NULL,PRIMARY KEY(object_id,message_id))')
@@ -60,15 +63,17 @@ class GmailService:
             try:
                 config=json.loads(self.path.read_text(encoding='utf-8-sig'))
                 self._account=normalize_email(config['email']);self._connected_at=config.get('connected_at')
-                if self.credential_checker(self._account):
-                    self._mailbox=self.mailbox_factory(self._account);self._state='connected'
+                self._auth_mode=config.get('auth_mode') or 'app_password'
+                checker,factory=(self.oauth_credential_checker,self.oauth_mailbox_factory) if self._auth_mode=='oauth' else (self.credential_checker,self.mailbox_factory)
+                if checker(self._account):
+                    self._mailbox=factory(self._account);self._state='connected'
             except Exception:
                 self._state='error';self._error='Gmail本地配置或系统凭据暂不可读'
 
     def status(self):
         with self.lock:return {'state':self._state,'account_email':self._account,'connected_at':self._connected_at,
                                'last_success_at':self._last_success,'error':self._error,'revision':self.revision,
-                               'running':bool(self._thread and self._thread.is_alive())}
+                               'auth_mode':self._auth_mode,'running':bool(self._thread and self._thread.is_alive())}
 
     def connect(self,email,password):
         account=normalize_email(email)
@@ -86,7 +91,25 @@ class GmailService:
             temporary.write_text(json.dumps({'email':account,'connected_at':connected_at}),encoding='utf-8')
             temporary.replace(self.path)
             self._account=account;self._connected_at=connected_at;self._mailbox=mailbox
+            self._auth_mode='app_password';self._cache={};self._state='connected';self._error=None;self._last_success=None;self.revision+=1
+        return self.status()
+
+    def start_oauth(self,client_config,redirect_uri):
+        return self.oauth.start(client_config,redirect_uri,self._account)
+
+    def finish_oauth(self,state,code):
+        account=self.oauth.finish(state,code)
+        connected_at=(self._connected_at if self._account==account and _timestamp(self._connected_at) is not None
+                      else datetime.fromtimestamp(self.clock(),timezone.utc).isoformat())
+        mailbox=self.oauth_mailbox_factory(account)
+        self.path.parent.mkdir(parents=True,exist_ok=True)
+        temporary=self.path.with_suffix('.tmp')
+        with self.lock:
+            temporary.write_text(json.dumps({'email':account,'connected_at':connected_at,'auth_mode':'oauth'}),encoding='utf-8')
+            temporary.replace(self.path)
+            self._account=account;self._connected_at=connected_at;self._mailbox=mailbox;self._auth_mode='oauth'
             self._cache={};self._state='connected';self._error=None;self._last_success=None;self.revision+=1
+        self.start()
         return self.status()
 
     def _empty(self,state=None,error=None):

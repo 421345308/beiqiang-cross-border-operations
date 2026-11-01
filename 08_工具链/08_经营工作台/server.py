@@ -1,6 +1,7 @@
 """Local workbench with shared SQLite execution and draft records."""
 from __future__ import annotations
 import argparse, difflib, hashlib, importlib.util, json, mimetypes, os, re, secrets, shutil, signal, sqlite3, subprocess, threading, uuid
+from html import escape
 from datetime import datetime, timezone
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -244,6 +245,11 @@ class Handler(BaseHTTPRequestHandler):
     def log_message(self,*args):pass
     def send_json(self,obj,status=200):
         data=json.dumps(obj,ensure_ascii=False).encode();self.send_response(status);self.send_header('Content-Type','application/json; charset=utf-8');self.send_header('Cache-Control','no-store');self.send_header('X-Content-Type-Options','nosniff');self.send_header('Content-Length',str(len(data)));self.end_headers();self.wfile.write(data)
+    def send_gmail_result(self,message,status=200):
+        data=('<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>Gmail 授权</title>'
+              '<body style="font-family:sans-serif;padding:2rem;line-height:1.8"><h1>Gmail 连接</h1><p>'+escape(message)+'</p>'
+              '<p><a href="/">返回工作台</a></p></body></html>').encode('utf-8')
+        self.send_response(status);self.send_header('Content-Type','text/html; charset=utf-8');self.send_header('Cache-Control','no-store');self.send_header('Referrer-Policy','no-referrer');self.send_header('Content-Length',str(len(data)));self.end_headers();self.wfile.write(data)
     def check_host(self):
         allowed={'127.0.0.1:'+str(self.server.server_port),'localhost:'+str(self.server.server_port)}
         if self.headers.get('Host') not in allowed:raise PermissionError('仅允许本机工作台访问')
@@ -259,6 +265,12 @@ class Handler(BaseHTTPRequestHandler):
             if u.path.startswith('/api/desk/'):
                 query=parse_qs(u.query)
                 value=lambda name:query.get(name,[''])[0]
+                if u.path=='/api/desk/gmail/oauth/callback':
+                    try:
+                        app.gmail.finish_oauth(value('state'),value('code'))
+                        return self.send_gmail_result('连接成功，可以关闭此页并回到客户记录。')
+                    except ValueError as exc:return self.send_gmail_result(str(exc),400)
+                    except Exception:return self.send_gmail_result('Google 连接未完成，请返回工作台重新尝试。',400)
                 if u.path=='/api/desk/bootstrap':
                     return self.send_json({'csrf_token':app.token,'objects':app.business.list_objects(),
                         'jobs':app.agent_jobs.list_jobs(),'artifacts':app.business.list_artifacts(),
@@ -329,6 +341,9 @@ class Handler(BaseHTTPRequestHandler):
                 status=app.gmail.connect(body.get('account_email'),body.get('app_password'))
                 app.gmail.start()
                 return self.send_json({'status':status})
+            if parts==['api','desk','gmail','oauth','start']:
+                redirect_uri='http://127.0.0.1:'+str(self.server.server_port)+'/api/desk/gmail/oauth/callback'
+                return self.send_json({'authorization_url':app.gmail.start_oauth(body.get('client_config'),redirect_uri)})
             if parts==['api','desk','gmail','sync']:return self.send_json(app.gmail.customer(body.get('object_id'),force=True))
             if parts==['api','desk','gmail','ack']:return self.send_json(app.gmail.acknowledge(body.get('object_id')))
             if parts==['api','desk','creation-canvas']:

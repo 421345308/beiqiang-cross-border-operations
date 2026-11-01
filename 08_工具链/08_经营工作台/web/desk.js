@@ -285,9 +285,34 @@
       if (status.history_note) host.append(el('p', text(status.history_note), 'artifact-note'));
       if (!connected && !noContact) {
         const setup = el('details', undefined, 'gmail-connect'); setup.append(el('summary', '连接我的 Gmail'));
-        setup.append(el('p', '先为 Google 账号开启两步验证，再创建应用专用密码。它允许访问邮箱，本工作台只读取邮件。请只在此本地页面填写，不要发到聊天中。'));
-        const help = link('在 Google 创建应用专用密码 ↗', 'https://myaccount.google.com/apppasswords'); if (help) setup.append(help);
-        const account = addField(setup, 'Gmail 邮箱', status.account_email || ''), password = addField(setup, 'Google 应用专用密码'); account.type = 'email'; password.type = 'password'; password.autocomplete = 'new-password';
+        setup.append(el('h3', '使用 Google 账号授权'), el('p', '首次连接需要创建 Google 桌面应用并启用 Gmail API，再选择下载的客户端文件；随后在 Google 登录并授权只读邮件。'));
+        const steps = el('details'); steps.append(el('summary','首次设置步骤'));
+        steps.append(el('p','1. 打开 Google Cloud，新建或选择一个项目，启用 Gmail API。'));
+        const library=link('打开 Gmail API 设置 ↗','https://console.cloud.google.com/apis/library/gmail.googleapis.com'); if(library)steps.append(library);
+        steps.append(el('p','2. 设置 Google 身份验证平台，个人账号选择“外部”；如处于测试模式，将自己的 Gmail 加入测试用户。'));
+        const audience=link('打开 Google 授权设置 ↗','https://console.cloud.google.com/auth/audience'); if(audience)steps.append(audience);
+        steps.append(el('p','3. 创建“桌面应用”类型的 OAuth 客户端，下载 JSON 文件，在下方选择；测试模式的授权会在 7 天后到期。'));
+        const clients=link('创建桌面应用客户端 ↗','https://console.cloud.google.com/auth/clients'); if(clients)steps.append(clients);
+        setup.append(steps);
+        const config=addField(setup,'Google 桌面应用客户端文件');config.type='file';config.accept='.json,application/json';
+        const oauthFeedback=el('p','','agent-feedback'), oauthLink=el('div');
+        const oauthButton=button('准备 Google 授权',async()=>{
+          oauthButton.disabled=true;oauthFeedback.textContent='正在准备 Google 登录…';oauthLink.replaceChildren();
+          try {
+            let clientConfig=null;
+            if(config.files?.[0]) { try { clientConfig=JSON.parse(await config.files[0].text()); } catch { throw new Error('客户端文件不是有效的 JSON，请重新选择。'); } }
+            const result=await api('/api/desk/gmail/oauth/start',{client_config:clientConfig});
+            const authorize=link('继续 Google 登录并授权 ↗',result.authorization_url);
+            if(!authorize)throw new Error('未能准备 Google 登录，请重试。');
+            oauthLink.append(authorize);oauthFeedback.textContent='请点击下方链接，在 Google 页面完成登录和只读授权。';
+          } catch(error) { oauthFeedback.textContent=error.message; }
+          finally { oauthButton.disabled=false; }
+        },'primary');
+        setup.append(oauthButton,oauthFeedback,oauthLink);
+        const passwordSetup=el('details');passwordSetup.append(el('summary','其他方式：应用专用密码'));
+        passwordSetup.append(el('p', '需要账号支持两步验证及应用专用密码。此密码允许访问邮箱，工作台只读取邮件。请只在本地页面填写，不要发到聊天中。'));
+        const help = link('在 Google 创建应用专用密码 ↗', 'https://myaccount.google.com/apppasswords'); if (help) passwordSetup.append(help);
+        const account = addField(passwordSetup, 'Gmail 邮箱', status.account_email || ''), password = addField(passwordSetup, 'Google 应用专用密码'); account.type = 'email'; password.type = 'password'; password.autocomplete = 'new-password';
         const feedback = el('p', '', 'agent-feedback'), connect = button('连接邮箱', async () => {
           const secret = password.value; password.value = '';
           if (!account.value.trim() || !secret.trim()) { feedback.textContent = '请填写邮箱和 Google 提供的应用专用密码。'; return; }
@@ -295,7 +320,7 @@
           try { await api('/api/desk/gmail/connect', {account_email:account.value.trim(),app_password:secret}); if(S.detail !== ctx)return; ctx.gmailStamp = null; await loadGmail(ctx); }
           catch { if(S.detail === ctx)feedback.textContent = '连接未完成，请检查邮箱、两步验证和应用专用密码后重试。'; }
           finally { password.value = ''; connect.disabled = false; }
-        }, 'primary'); setup.append(feedback, connect); host.append(setup);
+        }, 'primary'); passwordSetup.append(feedback, connect); setup.append(passwordSetup); host.append(setup);
       }
       if (data.reply_pending) host.append(el('p', '客户有新邮件，请先阅读，再准备下一步。', 'mail-attention'));
       if (data.reply_pending) host.append(button('标记邮件已处理',async()=>{try{await api('/api/desk/gmail/ack',{object_id:ctx.object.id});ctx.gmailStamp=null;await loadGmail(ctx);if(ctx.profileHost)await loadProfile(ctx);toast('已标记处理。');}catch(error){toast(error.message);}},'quiet'));

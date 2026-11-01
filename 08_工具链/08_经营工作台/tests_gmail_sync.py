@@ -65,6 +65,19 @@ class Tests(unittest.TestCase):
     def test_reconnect_keeps_the_first_connection_boundary(self):
         s=self.connect();first=s.status()['connected_at'];self.now+=3600;s.connect(ACCOUNT,'new-secret')
         self.assertEqual(s.status()['connected_at'],first)
+    def test_google_authorization_connects_and_restores_after_restart(self):
+        class OAuth:
+            def start(self,config,redirect,hint):return 'https://accounts.google.com/authorized'
+            def finish(self,state,code):return ACCOUNT
+        kwargs=dict(oauth_factory=OAuth,oauth_mailbox_factory=lambda _:self.mail,oauth_credential_checker=lambda _:True,clock=lambda:self.now)
+        s=GmailService(self.app,**kwargs);s.start=lambda:None
+        self.assertIn('accounts.google.com',s.start_oauth({'installed':{}},'http://127.0.0.1/callback'))
+        self.assertEqual(s.finish_oauth('state','code')['auth_mode'],'oauth')
+        stored=json.loads((self.app.state/'gmail.json').read_text())
+        self.assertEqual(set(stored),{'email','connected_at','auth_mode'})
+        restored=GmailService(self.app,**kwargs)
+        self.assertEqual(restored.status()['state'],'connected');self.assertEqual(restored.status()['auth_mode'],'oauth')
+        self.mail.messages=[message()];self.assertEqual(len(restored.customer('customer:1')['messages']),1)
     def test_answered(self):
         s=self.connect();self.mail.messages=[message(),message('answer','outbound','2026-11-01T03:00:00Z')];self.assertFalse(s.customer('customer:1')['reply_pending']);self.assertEqual(self.events,[])
     def test_failure_preserves(self):

@@ -11,7 +11,7 @@ import tempfile
 import threading
 import time
 import unittest
-from urllib.parse import urlencode
+from urllib.parse import urlencode, parse_qs, urlsplit
 from unittest.mock import patch
 import server
 from business import PRODUCTS,SUPPLY,ASSETS,CHANNEL
@@ -156,6 +156,56 @@ class DeskHTTPTests(unittest.TestCase):
             self.assertEqual(status,200);customer.assert_called_with(oid,force=True)
             status,result=self.request('/api/desk/gmail/customer?'+urlencode({'object_id':oid}))
             self.assertEqual(status,200);customer.assert_called_with(oid)
+
+    def test_google_oauth_start_and_callback_use_same_workbench_port(self):
+        config={'installed':{'client_id':'fixture.apps.googleusercontent.com','client_secret':'fixture'}}
+        with patch.object(self.app.gmail,'start_oauth',return_value='https://accounts.google.com/o/oauth2/v2/auth?state=fixture') as start, \
+             patch.object(self.app.gmail,'finish_oauth') as finish:
+            status,result=self.request('/api/desk/gmail/oauth/start',{'client_config':config})
+            self.assertEqual(status,200);self.assertIn('accounts.google.com',result['authorization_url'])
+            self.assertEqual(start.call_args.args[1],f'http://127.0.0.1:{self.http.server_port}/api/desk/gmail/oauth/callback')
+            connection=http.client.HTTPConnection('127.0.0.1',self.http.server_port,timeout=5)
+            try:
+                connection.request('GET','/api/desk/gmail/oauth/callback?state=fixture&code=one-time-code')
+                response=connection.getresponse();page=response.read().decode('utf8')
+                self.assertEqual(response.status,200);self.assertIn('连接成功',page);self.assertNotIn('one-time-code',page)
+            finally:connection.close()
+            finish.assert_called_once_with('fixture','one-time-code')
+
+    def test_google_oauth_reply_reaches_customer_queue_and_agent(self):
+        from gmail_oauth import GmailOAuthMailbox, SCOPE
+        import base64
+        oid='customer:website-BQ-REAL';buyer='buyer@example.test';account='seller@example.test'
+        self.website.fetch=lambda:{'ok':True,'records':[{'reference':'BQ-REAL','company':'Fixture buyer','email':buyer,'requirements':'Need footwear'}]}
+        self.website.refresh(wait=True);self.app.customer_workspace.save_workflow(oid,{'state':'preparing'})
+        self.app.customer_workspace.save_workflow(oid,{'state':'waiting_customer'})
+        saved={}
+        def request(url,*,token=None,form=None):
+            if form and form.get('grant_type')=='authorization_code':return {'access_token':'fixture-access','refresh_token':'fixture-refresh','scope':SCOPE}
+            if form and form.get('grant_type')=='refresh_token':return {'access_token':'fixture-access','expires_in':3600}
+            if url.endswith('/profile'):return {'emailAddress':account}
+            if '/messages?' in url:return {'messages':[{'id':'10'}]}
+            if '/messages/10?' in url:
+                return {'id':'10','threadId':'20','internalDate':'32503680000000','payload':{'mimeType':'text/plain',
+                    'headers':[{'name':'From','value':buyer},{'name':'To','value':account},{'name':'Subject','value':'Reply'}],
+                    'body':{'data':base64.urlsafe_b64encode(b'Please share details.').decode().rstrip('=')}}}
+            raise AssertionError(url)
+        self.app.gmail.oauth.request=request;self.app.gmail.oauth.saver=lambda email,value:saved.update({email:value})
+        self.app.gmail.oauth_mailbox_factory=lambda email:GmailOAuthMailbox(email,request=request,reader=lambda _:saved[email])
+        config={'installed':{'client_id':'fixture.apps.googleusercontent.com','client_secret':'fixture'}}
+        with patch.object(self.app.gmail,'start'),patch.object(self.app.agent_jobs,'start',return_value={'id':'draft-job'}) as start:
+            status,result=self.request('/api/desk/gmail/oauth/start',{'client_config':config})
+            state=parse_qs(urlsplit(result['authorization_url']).query)['state'][0]
+            connection=http.client.HTTPConnection('127.0.0.1',self.http.server_port,timeout=5)
+            try:
+                connection.request('GET','/api/desk/gmail/oauth/callback?'+urlencode({'state':state,'code':'fixture-code'}))
+                response=connection.getresponse();response.read();self.assertEqual(response.status,200)
+            finally:connection.close()
+            self.app.gmail.scan_once();self.app.gmail.scan_once();self.assertEqual(start.call_count,1)
+            status,mail=self.request('/api/desk/gmail/customer?'+urlencode({'object_id':oid}))
+            self.assertEqual(mail['messages'][0]['body'],'Please share details.');self.assertTrue(mail['reply_pending'])
+            status,queue=self.request('/api/desk/inquiry-queue?bucket=active')
+            self.assertTrue(next(row for row in queue['items'] if row['object_id']==oid)['workflow']['gmail_reply_pending'])
 
     def test_new_gmail_reply_drives_queue_draft_and_acknowledgement(self):
         from gmail_sync import GmailService
