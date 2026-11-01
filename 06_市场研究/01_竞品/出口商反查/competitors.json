@@ -422,7 +422,28 @@
       "verification_status": "候选主体；实际出口主体未确认",
       "priority": "P2",
       "notes": "旧第三方文档hotshoes域名不作为当前店主体确认，当前店URL留空。"
+    },
+    {
+      "competitor_id": "EX021",
+      "store_name": "Quanzhou DHD Global Trading Co., Ltd.",
+      "store_url": "https://dhdglobal.en.alibaba.com/",
+      "related_product_url": "",
+      "company_en": "Quanzhou DHD Global Trading Co., Ltd.",
+      "company_zh": "",
+      "official_website": "",
+      "registered_address": "",
+      "unified_credit_code": "",
+      "registration_status": "未查得官方工商登记；不凭第三方翻译确认中文名",
+      "product_direction": "休闲鞋、运动鞋及其他鞋类",
+      "target_markets": "国际站旧目录自述北美等；未独立验证",
+      "source_urls": "https://www.alibaba.com/oem-shoes-wholesale-suppliers.html | https://www.importinfo.com/quanzhou-dhd-global-trading-co-ltd",
+      "checked_date": "2026-11-01",
+      "access_mode": "FIRECRAWL_OFFICIAL_API_AND_PUBLIC_PAGE",
+      "evidence_grade": "E2",
+      "verification_status": "国际站目录与店域名对应；同名贸易主体地址及法人关系仍需核",
+      "priority": "P1",
+      "notes": "国际站公开目录出现完整英文名、休闲鞋及店铺链接；同名贸易页有鞋类逐票。目录为历史缓存，未取得该款当前销量；不将聚合票数等同鞋类订单。"
     }
   ],
-  "latest_checked_date": "2026-10-28"
+  "latest_checked_date": "2026-11-01"
 }

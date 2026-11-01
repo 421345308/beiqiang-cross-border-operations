@@ -186,6 +186,22 @@
       "access": "CAPTCHA_SLIDER",
       "fact": "HTTP200且API success但正文为滑块验证",
       "limit": "未绕过；不能把请求成功计作公司资料已读"
+    },
+    {
+      "id": "SRC-20261101-DHD-ALIBABA",
+      "url": "https://www.alibaba.com/oem-shoes-wholesale-suppliers.html",
+      "checked_date": "2026-11-01",
+      "access": "FIRECRAWL_OFFICIAL_API_READ",
+      "fact": "目录以完整英文名链接dhdglobal店铺并列休闲鞋",
+      "limit": "目录缓存；未核当前销量、营业执照或出口方地址"
+    },
+    {
+      "id": "SRC-20261101-DHD-TRADE",
+      "url": "https://www.importinfo.com/quanzhou-dhd-global-trading-co-ltd",
+      "checked_date": "2026-11-01",
+      "access": "FIRECRAWL_OFFICIAL_API_READ",
+      "fact": "同英文名贸易页有鞋类逐票及地址",
+      "limit": "店铺与出口方登记地址尚未交叉核对；逐票和海外客户留本地"
     }
   ],
   "deep_review_competitor_ids": [
@@ -208,5 +224,5 @@
     "海外联系人采购权限",
     "实时海关全量日志"
   ],
-  "latest_checked_date": "2026-10-28"
+  "latest_checked_date": "2026-11-01"
 }
