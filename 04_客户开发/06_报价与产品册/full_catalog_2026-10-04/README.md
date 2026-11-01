@@ -2,6 +2,8 @@
 
 Customer-facing English catalogue with 51 model selections, 30 portrait pages and real product photographs. Recommended styles appear first; colorways are grouped under their model codes. Prices are omitted so buyers can request a quotation for their selected colors, sizes and quantities.
 
+2026-11-01负责人明确确认：本册51款均为贝强本厂款式；大多数款式的批发参考价格为每双8–15美元，具体按款式及订单数量确定。PDF原件未写合作来源，也未列固定价格；在邮件中介绍该参考区间，并按实际订单提供报价。
+
 ## Deliverables
 
 - `Beiqiang_51_Style_Footwear_Catalogue_2026-10-04.pdf` — customer catalogue, 2,225,993 bytes.

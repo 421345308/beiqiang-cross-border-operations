@@ -19,7 +19,7 @@ ASSETS='00_总控台/产品中心/数据/素材索引.json'
 CHANNEL='02_Alibaba运营/05_扩品工程/数据/国际站商品.json'
 CRM='04_客户开发/04_发送与跟进记录/客户开发跟进表_20260802.csv'
 SKIP={'node_modules','outputs','_build','build','dist','cache','__pycache__','backups'}
-SOURCE_STATES={'ADOPTED':'已采纳供货来源','RAW_PACKAGE':'已有原始数据包','MAPPED':'已建立来源对应','MISSING':'来源缺失，待补证','CANDIDATE':'候选来源，尚未采纳','HOLD_SOURCE':'来源待核实，暂停承诺'}
+SOURCE_STATES={'ADOPTED':'已采纳供货来源','OWNER_CONFIRMED':'负责人确认本厂','RAW_PACKAGE':'已有原始数据包','MAPPED':'已建立来源对应','MISSING':'来源缺失，待补证','CANDIDATE':'候选来源，尚未采纳','HOLD_SOURCE':'来源待核实，暂停承诺'}
 
 def _product_category(classification):
     """Navigation only: use recorded shoe shapes, never infer performance."""
@@ -81,7 +81,8 @@ class Business:
                 summary=' · '.join(str(v) for v in [state_label,source.get('supplier'),source.get('model')] if v))
             mode_record=product.get('supply_mode') or {}
             supply_kind=mode_record.get('current') if isinstance(mode_record,dict) else ''
-            own=supply_kind=='OWN_FACTORY' and bool(product.get('raw_packages')) and bool(mode_record.get('evidence'))
+            owner_confirmed=mode_record.get('state')=='OWNER_CONFIRMED_2026_11_01'
+            own=supply_kind=='OWN_FACTORY' and bool(mode_record.get('evidence')) and (bool(product.get('raw_packages')) or owner_confirmed)
             supply_url=source.get('url','') if adopted and supply_kind=='EXTERNAL_FACTORY' else ''
             if not isinstance(supply_url,str) or not supply_url.startswith('https://'):supply_url=''
             obj['supply']={'kind':'own' if own else ('external' if supply_kind=='EXTERNAL_FACTORY' else 'unconfirmed'),

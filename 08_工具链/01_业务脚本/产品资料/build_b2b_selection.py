@@ -53,10 +53,10 @@ def prepare(node):
         identity = 'HR009' if code == 'BQ1009' else code
         product = canonical[identity]
         p['canonical_id'] = identity
-        if p['supply'] == 'Beiqiang factory':
-            assert f'01_产品资产/01_原始素材/{code}' in product['raw_packages'], code
-        else:
-            assert product['source_state'] == 'ADOPTED', code
+        assert p['supply'] == 'Beiqiang factory', code
+        supply = product.get('supply_mode', {})
+        owner_confirmed = supply.get('current') == 'OWN_FACTORY' and supply.get('state') == 'OWNER_CONFIRMED_2026_11_01'
+        assert owner_confirmed or f'01_产品资产/01_原始素材/{code}' in product.get('raw_packages', []), code
         formal_path = PRIVATE / f"{p['id']}-current.json"
         formal = read(formal_path)['response']['product']
         assert formal['status'] == 'approved' and formal['display'] == 'Y', code
@@ -78,10 +78,11 @@ def prepare(node):
             fact_source = '03_独立站/03_网站源码/app/data/products.ts'
             record = next(x for x in provenance[code] if x['image'] == src['images'][0])
             assert hashlib.sha256(image.read_bytes()).hexdigest() == record['outputSha256'], code
-            if p['supply'] == 'Beiqiang factory':
-                assert record['sourceKind'] == 'factory-original-package', code
+            if record['sourceKind'] == 'factory-original-package':
                 raw = ROOT / '01_产品资产/01_原始素材' / code / record['sourceFile']
                 assert hashlib.sha256(raw.read_bytes()).hexdigest() == record['sourceSha256'], code
+            else:
+                assert owner_confirmed, code
         p['image'] = str(image)
         assets.append({'code': code, 'canonical_id': identity, 'image': str(image.relative_to(ROOT)),
                        'sha256': hashlib.sha256(image.read_bytes()).hexdigest(),
@@ -158,13 +159,13 @@ def build(node):
     text('footwear.', 40, 176, 36, 'Display')
     para('Build your next range around a focused selection of knit, textile and casual styles.',
          42, 242, 300, 14, maxh=85)
-    para('For importers, wholesalers and private-label buyers. Factory styles from Quanzhou, with selected partner-sourced additions.',
+    para('For importers, wholesalers and private-label buyers. Footwear produced by our factory in Quanzhou.',
          42, 339, 290, 11, maxh=78)
     photo(products[0]['image'], 377, 116, 425, 375)
     text('FEATURED  BQ008', 400, 503, 9, 'Bold', MUTED)
     rule(451, 42, 285)
-    text('5 factory styles', 42, 469, 12, 'Bold')
-    text('3 complementary selections', 42, 492, 12, 'Bold')
+    text('8 factory styles', 42, 469, 12, 'Bold')
+    text('For your casual range', 42, 492, 12, 'Bold')
     footer(1); c.showPage()
 
     def card(p, x, top):
@@ -184,7 +185,7 @@ def build(node):
     c.showPage()
 
     page('02 / Complement your range', 'Add the styles your buyers need.',
-         'One more factory knit option, plus selected partner-sourced styles for specific assortment gaps.',3)
+         'Four more factory styles to complement a casual footwear range.',3)
     for i,p in enumerate(products[4:]): card(p,40+(i%2)*390,151+(i//2)*197)
     c.showPage()
 
@@ -210,7 +211,7 @@ def build(node):
         y=176+i*31
         if i%2==0:box(40,y,762,31,'#E9EDE6')
         closure='Slip-on' if p['code']=='BQ001' else 'Heel strap' if p['code']=='BQ-C2627' else 'Lace-up'
-        supply='Factory' if p['supply']=='Beiqiang factory' else 'Partner-sourced'
+        supply='Factory'
         for s,x in zip([p['code'],p['role'],p['size'],supply,closure],cols):text(s,x+8,y+9,9)
     para('Sizes shown are the documented style ranges. We confirm the selected colour, size mix and order availability in your quotation.',
          40,432,755,9,MUTED,maxh=30)

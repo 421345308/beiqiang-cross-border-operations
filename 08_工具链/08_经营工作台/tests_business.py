@@ -30,6 +30,20 @@ class BusinessTests(unittest.TestCase):
         self.assertEqual(len(obj['assets']),1);self.assertTrue(obj['assets'][0]['url'].startswith('/api/media/file?'))
         self.assertIn('Old title',obj['content']);self.assertIn('Current title',obj['content'])
         self.assertEqual(len(self.business.list_objects(kind='product',q='Supplier')),1)
+    def test_owner_confirmed_factory_is_visible_without_inventing_raw_package(self):
+        self.product()
+        data=json.loads((self.root/PRODUCTS).read_text(encoding='utf8'))
+        product=data['products'][0]
+        product['adopted_source_id']=None;product['reference_source_id']='src-1'
+        product['source_state']='OWNER_CONFIRMED';product['raw_packages']=[]
+        product['supply_mode']={'current':'OWN_FACTORY','state':'OWNER_CONFIRMED_2026_11_01','evidence':['owner-confirmation.md']}
+        self.write(PRODUCTS,data)
+        obj=self.business.get_object('product:BQ009')
+        self.assertEqual(obj['supply']['kind'],'own');self.assertEqual(obj['supply']['label'],'自有工厂')
+        self.assertEqual(obj['source_role'],'reference');self.assertEqual(obj['supply']['supplier'],'')
+        self.assertIn('Supplier',obj['content'])
+        product['supply_mode']['state']='NOT_CONFIRMED';self.write(PRODUCTS,data)
+        self.assertEqual(self.business.get_object('product:BQ009')['supply']['kind'],'unconfirmed')
     def test_empty_temp_project_does_not_break_local_sources(self):
         self.assertEqual(self.business.list_objects(),[])
     def test_customer_explicit_crm_and_project_records_skip_example(self):

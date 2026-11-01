@@ -17,6 +17,8 @@ def main():
  bank=n.load(n.ENTRY/'共用主图图片银行.json');counts=Counter();model_counts=Counter();changed_plans={};proofs=[];at=n.now()
  # Classification is independent of renaming and limited to evidenced routes.
  for p in r['products']:
+  # This older migration must not overwrite a later explicit owner confirmation.
+  if p.get('supply_mode',{}).get('state')=='OWNER_CONFIRMED_2026_11_01':continue
   src=sources.get(p.get('adopted_source_id'));raw=p.get('raw_packages',[]);mode=None;evidence=[]
   if p['source_state']=='RAW_PACKAGE'and raw and all((ROOT/f).exists()for f in raw):mode='OWN_FACTORY';evidence=raw
   elif src and p['source_state']=='ADOPTED'and urlsplit(src.get('url','')).hostname not in ('bqgcd.sooxie.com',None):mode='EXTERNAL_FACTORY';evidence=src.get('evidence',[])
