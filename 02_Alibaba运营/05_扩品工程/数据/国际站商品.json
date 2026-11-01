@@ -28421,10 +28421,10 @@
       "bound_source_id": null,
       "source_relation": "SOURCE_EVIDENCE_MISSING",
       "observation": {
-        "audit": "approved",
-        "display": "Y",
-        "at": "2026-10-31T05:15:15.424035+00:00",
-        "scope": "批准后API与公开本轮目标字段/首屏主图验收；独立尺码修正状态另记",
+        "audit": "modified",
+        "display": "N",
+        "at": "2026-11-01T14:02:14.791197+00:00",
+        "scope": "2026-11-01新增采购FAQ提交后的官方get；modified/N为审核中，一次公开抓取FAQ已命中，正常视觉及审核后稳定性另验。",
         "score": "5.00"
       },
       "evidence": [
@@ -28460,19 +28460,21 @@
         "highlights": "Mesh-panel lace-up casual shoes with a thick sculpted sole.\n\nAdjustable instep fit: The front laces let the wearer loosen the opening for entry and set the tension over the foot."
       },
       "local_sync": {
-        "state": "PUBLIC_TARGET_FIELDS_AND_MAIN_IMAGE_PASS",
-        "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939625569/formal_get.json",
-        "current_schema_file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/执行证据_20261031/1601939625569/recovery_render.json",
+        "state": "FAQ_SUBMITTED_REVIEW_PENDING",
+        "current_fields_file": "02_Alibaba运营/02_单品优化记录/BQ系列持续优化_2026-09-14/采购承接执行/20261101_BQ008_FAQ/review_get.json",
+        "current_schema_file": null,
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601939625569/当前图库与货号.json",
-        "at": "2026-10-31T05:15:15.424035+00:00",
+        "at": "2026-11-01T14:02:14.791197+00:00",
         "observed_at": "2026-10-19T18:39:07.937094+00:00",
         "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939625569/verification.json",
-        "next_action": "本轮文案价格与首屏主图已验；按独立后续修正状态推进，不重放提交"
+        "next_action": "不重放已受理请求；待approved/Y后复核当前Schema FAQ、非目标字段及买家公开页，再确定公开生效。",
+        "latest_faq_verification": "02_Alibaba运营/02_单品优化记录/BQ系列持续优化_2026-09-14/采购承接执行/20261101_BQ008_FAQ/review_verification.json",
+        "previous_approved_schema_file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/执行证据_20261031/1601939625569/recovery_render.json"
       },
       "formal_fields": {
-        "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939625569/formal_get.json",
-        "at": "2026-10-31T05:15:15.424035+00:00",
-        "scope": "批准后完整官方get；目标Schema同步命中，公开视觉另验"
+        "file": "02_Alibaba运营/02_单品优化记录/BQ系列持续优化_2026-09-14/采购承接执行/20261101_BQ008_FAQ/review_get.json",
+        "at": "2026-11-01T14:02:14.791197+00:00",
+        "scope": "FAQ提交后的完整官方get；审核中，当前可编辑Schema及公开呈现待验。"
       },
       "platform_group": {
         "id": "971467417",
@@ -28480,7 +28482,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-10-31T05:15:15.424035+00:00",
+        "at": "2026-11-01T14:02:14.791197+00:00",
         "model": "BQ008-W1 / L1009",
         "title": "Factory Direct Mesh Marathon Running Shoes High Rebound Non-Slip Lace-Up Sneakers Wholesale Trial Orders",
         "keywords": [
@@ -28495,10 +28497,10 @@
           "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
         ],
         "category_id": 201334413,
-        "display": "Y",
-        "status": "approved",
+        "display": "N",
+        "status": "modified",
         "url": "https://www.alibaba.com/product-detail/Factory-Direct-Mesh-Marathon-Running-Shoes_1601939625569.html",
-        "scope": "2026-10-31批准后get/render目标命中，公开标题/三档价/亮点及首屏主图逐ID验收；全图库不在本轮逐图范围",
+        "scope": "2026-11-01 FAQ提交后官方get其余正式字段保全；一次公开抓取FAQ命中，审核和正常视觉交互待验。",
         "highlights": "Mesh-panel lace-up casual shoes with a thick sculpted sole.\n\nAdjustable instep fit: The front laces let the wearer loosen the opening for entry and set the tension over the foot.\n\nFactory-direct mesh marathon running shoes with high rebound and a non-slip sole. For wholesale or OEM enquiries, send your selected colors, size breakdown, quantity and destination. Branding, packaging, sample costs and dispatch timing are confirmed against your requirements before ordering.",
         "price_tiers": [
           {
@@ -28660,6 +28662,33 @@
             "colour_interaction": "Grey Green pressed, main photo and size dialog observed",
             "observation_date": "2026-10-31"
           }
+        },
+        "procurement_faq_20261101": {
+          "state": "SUBMITTED_REVIEW_PENDING",
+          "submitted_at": "2026-11-01T13:56:08.249882+00:00",
+          "observed_at": "2026-11-01T14:02:14.791197+00:00",
+          "product_id": "1601939625569",
+          "question": "Do you support logo customization and OEM/ODM?",
+          "answer_before": "Yes. We work with buyers on branding and footwear development. Send your logo artwork or design reference, target quantity and market requirements so we can develop a suitable proposal.",
+          "answer_submitted": "Yes. We can customise logos, insoles and labels, shoe boxes and upper colours. Start with a style or design reference, and we will discuss the changes and quotation with you. Custom order quantities and schedules depend on the design.",
+          "submission_business_success": true,
+          "submission_request_id": "2105044417935413738714739",
+          "readback_request_id": "213d4e4917935417236485244",
+          "status": "modified",
+          "display": "N",
+          "target_match": true,
+          "other_seven_pairs_preserved": true,
+          "other_formal_fields_preserved": true,
+          "public_status": "ONE_PUBLIC_CRAWL_MATCH_VISUAL_AND_APPROVAL_PENDING",
+          "public_observed_at": "2026-11-01T14:06:51.905573+00:00",
+          "evidence": {
+            "receipt": "02_Alibaba运营/02_单品优化记录/BQ系列持续优化_2026-09-14/采购承接执行/20261101_BQ008_FAQ/submission_receipt.json",
+            "readback": "02_Alibaba运营/02_单品优化记录/BQ系列持续优化_2026-09-14/采购承接执行/20261101_BQ008_FAQ/review_get.json",
+            "verification": "02_Alibaba运营/02_单品优化记录/BQ系列持续优化_2026-09-14/采购承接执行/20261101_BQ008_FAQ/review_verification.json",
+            "score": "02_Alibaba运营/02_单品优化记录/BQ系列持续优化_2026-09-14/采购承接执行/20261101_BQ008_FAQ/score_get.json",
+            "public_crawl": "02_Alibaba运营/02_单品优化记录/BQ系列持续优化_2026-09-14/采购承接执行/20261101_BQ008_FAQ/public_during_review.json"
+          },
+          "next_action": "审批后回读Schema和买家页；仅本ID的FAQ第6问，不推断其他商品已同步。"
         }
       },
       "price_review": {
