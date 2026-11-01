@@ -74,16 +74,61 @@ class Tests(unittest.TestCase):
         self.assertIn('accounts.google.com',s.start_oauth({'installed':{}},'http://127.0.0.1/callback'))
         self.assertEqual(s.finish_oauth('state','code')['auth_mode'],'oauth')
         stored=json.loads((self.app.state/'gmail.json').read_text())
-        self.assertEqual(set(stored),{'email','connected_at','auth_mode'})
+        self.assertEqual(set(stored),{'email','connected_at','auth_mode','authorized_at'})
         restored=GmailService(self.app,**kwargs)
         self.assertEqual(restored.status()['state'],'connected');self.assertEqual(restored.status()['auth_mode'],'oauth')
         self.mail.messages=[message()];self.assertEqual(len(restored.customer('customer:1')['messages']),1)
+    def test_testing_expiry_follows_latest_authorization_not_original_connection(self):
+        class OAuth:
+            def finish(self,state,code):return ACCOUNT
+        config={'email':ACCOUNT,'connected_at':'2026-11-01T08:00:00+00:00','auth_mode':'oauth','publishing_status':'testing'}
+        (self.app.state/'gmail.json').write_text(json.dumps(config),encoding='utf8')
+        self.now=1793606400
+        s=GmailService(self.app,oauth_factory=OAuth,oauth_mailbox_factory=lambda _:self.mail,oauth_credential_checker=lambda _:True,clock=lambda:self.now);s.start=lambda:None
+        self.assertEqual(s.status()['authorization_expires_at'],'2026-11-08T08:00:00+00:00')
+        s.finish_oauth('state','code');stored=json.loads((self.app.state/'gmail.json').read_text())
+        self.assertEqual(stored['connected_at'],config['connected_at']);self.assertEqual(stored['publishing_status'],'testing')
+        self.assertEqual((__import__('datetime').datetime.fromisoformat(s.status()['authorization_expires_at'])-__import__('datetime').datetime.fromisoformat(stored['authorized_at'])).days,7)
     def test_answered(self):
         s=self.connect();self.mail.messages=[message(),message('answer','outbound','2026-11-01T03:00:00Z')];self.assertFalse(s.customer('customer:1')['reply_pending']);self.assertEqual(self.events,[])
+    def test_promotions_and_automatic_reply_do_not_trigger_drafts(self):
+        s=self.connect();sales=message('sent','outbound','2026-11-01T02:00:00Z')
+        promo=message('promotion',at='2026-11-01T03:00:00Z');promo['mail_kind']='promotion'
+        automatic=message('out-of-office',at='2026-11-01T04:00:00Z');automatic['mail_kind']='automatic'
+        self.mail.messages=[sales,promo,automatic];result=s.customer('customer:1')
+        self.assertFalse(result['reply_pending']);self.assertEqual(self.events,[])
+        self.assertEqual([m['id'] for m in result['messages']],['sent','out-of-office'])
+    def test_promotions_do_not_hide_an_unanswered_buyer_reply(self):
+        s=self.connect();answer=message('reply',at='2026-11-01T03:00:00Z')
+        promo=message('promotion',at='2026-11-01T04:00:00Z');promo['mail_kind']='promotion'
+        self.mail.messages=[answer,promo];result=s.customer('customer:1')
+        self.assertTrue(result['reply_pending']);self.assertEqual(self.events[0][1]['id'],'reply')
+    def test_colleague_from_matching_sent_thread_triggers_customer_reply(self):
+        s=self.connect();colleague=message();colleague['from']='colleague@example.com';colleague['customer_emails']=[BUYER]
+        self.mail.messages=[colleague];self.assertTrue(s.customer('customer:1')['reply_pending']);self.assertEqual(len(self.events),1)
+    def test_incomplete_threads_are_not_reported_as_no_reply(self):
+        s=self.connect();self.mail.messages=[message('sent','outbound','2026-11-01T03:00:00Z')]
+        original=self.mail.context
+        def incomplete(*args,**kwargs):
+            result=original(*args,**kwargs);result['status']['thread_lookup_incomplete']=True;return result
+        self.mail.context=incomplete;result=s.customer('customer:1')
+        self.assertIsNone(result['reply_pending']);self.assertIn('尚未读完',result['next_action']);self.assertEqual(self.events,[])
     def test_failure_preserves(self):
         s=self.connect();self.mail.messages=[message()];s.customer('customer:1');self.mail.messages=[];self.mail.state='error';r=s.customer('customer:1');self.assertEqual(s.status()['state'],'error');self.assertIsNone(r['reply_pending']);self.assertEqual(len(r['messages']),1)
     def test_batch_one_login_per_customer_direction(self):
         s=self.connect();self.app.business.objects['prospect:2']=dict(id='prospect:2',kind='prospect',content=json.dumps(dict(email=SECOND)));self.mail.messages=[message(),message('second','outbound','2026-11-01T03:00:00Z',SECOND)];s.scan_once();self.assertEqual(len(self.mail.calls),1);self.assertTrue(s.peek('customer:1')['reply_pending']);self.assertFalse(s.peek('prospect:2')['reply_pending'])
+    def test_sync_reads_customer_source_once_without_reloading_each_object(self):
+        s=self.connect();obj=self.app.business.objects['customer:1'];calls=[]
+        self.app.business.mail_objects=lambda:(calls.append('read') or [obj])
+        self.app.business.get_object=lambda oid:(_ for _ in ()).throw(AssertionError('source read twice'))
+        self.mail.messages=[message()];s.scan_once()
+        self.assertEqual(calls,['read']);self.assertTrue(s.peek('customer:1')['reply_pending'])
+    def test_new_buyer_candidates_update_even_without_existing_customers(self):
+        s=self.connect();self.app.business.objects={}
+        self.mail.buyer_candidates=lambda known,ids:{'status':{'state':'ready'},'items':[{'id':'x','summary':'鞋类采购咨询'}]}
+        revision=s.revision;s.scan_once()
+        self.assertEqual(s.buyer_candidates()['items'][0]['id'],'x');self.assertGreater(s.revision,revision)
+        self.assertEqual(s.dismiss_candidate('x')['items'],[]);s.scan_once();self.assertEqual(s.buyer_candidates()['items'],[])
     def test_revision(self):
         s=self.connect();self.mail.messages=[message()];s.customer('customer:1');rev=s.revision;s.customer('customer:1');self.assertEqual(s.revision,rev);self.mail.state='error';s.customer('customer:1');self.assertGreater(s.revision,rev)
     def test_callback_failure_retry_and_latest_only(self):

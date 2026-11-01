@@ -12,17 +12,20 @@ import re
 import secrets
 import threading
 import time
+from concurrent.futures import ThreadPoolExecutor
 from urllib.error import HTTPError
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
 from gmail_mailbox import normalize_email
+from gmail_filter import classify_mail, new_buyer_summary
 
 AUTH_URL = 'https://accounts.google.com/o/oauth2/v2/auth'
 TOKEN_URL = 'https://oauth2.googleapis.com/token'
 GMAIL_URL = 'https://gmail.googleapis.com/gmail/v1/users/me/'
 SCOPE = 'https://www.googleapis.com/auth/gmail.readonly'
 SERVICE = 'Beiqiang.Workdesk.GmailOAuth'
+PUBLIC_MAIL_DOMAINS = {'gmail.com','googlemail.com','outlook.com','hotmail.com','live.com','yahoo.com','icloud.com','qq.com','163.com','126.com','88.com','tencent.com'}
 
 
 def load_credentials(account):
@@ -139,18 +142,23 @@ def _decode_part(part):
         return raw.decode('utf-8', errors='replace')
 
 
-def parse_api_message(value, account, customers):
+def _headers(value):
+    headers={}
+    for header in (value.get('payload') or {}).get('headers') or []:
+        name=str(header.get('name','')).lower()
+        headers[name]=', '.join(filter(None,(headers.get(name),str(header.get('value') or ''))))
+    return headers
+
+
+def parse_api_message(value, account, customers, thread_customers=()):
     payload = value.get('payload') or {}
-    headers = {}
-    for header in payload.get('headers') or []:
-        name = str(header.get('name', '')).lower()
-        headers[name] = ', '.join(filter(None, (headers.get(name), str(header.get('value') or ''))))
+    headers = _headers(value)
     addresses = lambda names: {a.lower() for _, a in getaddresses([headers.get(n, '') for n in names]) if a}
     senders, recipients = addresses(['from']), addresses(['to', 'cc', 'bcc'])
     if account in senders:
         direction, associated = 'outbound', recipients & customers
     elif account in recipients:
-        direction, associated = 'inbound', senders & customers
+        direction, associated = 'inbound', (senders & customers) or (set(thread_customers) & customers)
     else:
         return None
     if not associated:
@@ -181,6 +189,7 @@ def parse_api_message(value, account, customers):
         'from': headers.get('from', ''), 'to': headers.get('to', ''), 'cc': headers.get('cc', ''),
         'bcc': headers.get('bcc', ''), 'subject': headers.get('subject', ''), 'snippet': str(value.get('snippet') or ''),
         'body': body.strip(), 'translation_zh': None, 'attachments': attachments, 'body_truncated': truncated,
+        'mail_kind': classify_mail(headers,direction=direction,labels=value.get('labelIds') or (),subject=headers.get('subject',''),body=body),
         'url': 'https://mail.google.com/mail/u/?authuser=' + account + '#all/' + thread if thread else None,
         'customer_emails': sorted(associated)}
 
@@ -191,22 +200,25 @@ class GmailOAuthMailbox:
         self.request, self.reader, self.ttl, self.clock = request, reader, ttl, clock
         self.max_messages = max_messages
         self.lock = threading.RLock()
+        self.inbox_lock = threading.Lock()
+        self.token_lock = threading.Lock()
         self._token, self._token_expires, self._messages, self._cache = None, 0, {}, {}
 
     def _access_token(self):
-        if self._token and self.clock() < self._token_expires - 30:
+        with self.token_lock:
+            if self._token and self.clock() < self._token_expires - 30:
+                return self._token
+            saved = self.reader(self.account_email)
+            if not saved:
+                raise ValueError('请重新连接 Google 账号')
+            form = {'client_id': saved['client_id'], 'refresh_token': saved['refresh_token'], 'grant_type': 'refresh_token'}
+            if saved.get('client_secret'):
+                form['client_secret'] = saved['client_secret']
+            result = self.request(TOKEN_URL, form=form)
+            if not result.get('access_token'):
+                raise ValueError('Google 授权已失效，请重新连接')
+            self._token, self._token_expires = result['access_token'], self.clock() + int(result.get('expires_in', 3600))
             return self._token
-        saved = self.reader(self.account_email)
-        if not saved:
-            raise ValueError('请重新连接 Google 账号')
-        form = {'client_id': saved['client_id'], 'refresh_token': saved['refresh_token'], 'grant_type': 'refresh_token'}
-        if saved.get('client_secret'):
-            form['client_secret'] = saved['client_secret']
-        result = self.request(TOKEN_URL, form=form)
-        if not result.get('access_token'):
-            raise ValueError('Google 授权已失效，请重新连接')
-        self._token, self._token_expires = result['access_token'], self.clock() + int(result.get('expires_in', 3600))
-        return self._token
 
     def context(self, customer_emails, *, force=False):
         customers = {normalize_email(x) for x in customer_emails} - {self.account_email}
@@ -215,35 +227,141 @@ class GmailOAuthMailbox:
             old = self._cache.get(key)
             if old and not force and self.clock() - old['last_poll'] < self.ttl:
                 return copy.deepcopy(old['result'])
-            status = {'state': 'ready', 'account_email': self.account_email,
-                      'last_success_at': old['result']['status'].get('last_success_at') if old else None, 'error': None}
-            messages = copy.deepcopy(old['result']['messages']) if old else []
-            try:
-                token = self._access_token()
-                terms = ' '.join('from:' + x + ' to:' + x for x in sorted(customers))
-                query = '-in:drafts -in:spam -in:trash {' + terms + '}'
-                listing = self.request(GMAIL_URL + 'messages?' + urlencode({'q': query, 'maxResults': self.max_messages}), token=token)
-                found = []
-                for item in listing.get('messages') or []:
-                    mid = str(item.get('id') or '')
-                    if not re.fullmatch('[0-9a-fA-F]+', mid):
-                        continue
-                    if mid not in self._messages:
-                        self._messages[mid] = self.request(GMAIL_URL + 'messages/' + mid + '?format=full', token=token)
-                    message = parse_api_message(self._messages[mid], self.account_email, customers)
-                    if message:
-                        found.append(message)
-                messages = sorted(found, key=lambda m: (m['sent_at'] or '', m['id']))
-                status.update(last_success_at=datetime.fromtimestamp(self.clock(), timezone.utc).isoformat(),
-                    loaded_count=len(messages), history_limited=bool(listing.get('nextPageToken')),
-                    history_note=('仅显示最近 ' + str(self.max_messages) + ' 封匹配邮件') if listing.get('nextPageToken') else None)
-            except Exception as exc:
-                status.update(state='error', error=str(exc) if isinstance(exc, ValueError) else 'Google 邮件连接暂不可用，请检查网络后重试')
-            dated = [m for m in messages if m['sent_at']]
-            latest = max(dated, key=lambda m: (m['sent_at'], m['id']), default=None)
-            pending = bool(latest and latest['direction'] == 'inbound') if status['state'] == 'ready' else None
-            result = {'status': status, 'messages': messages, 'reply_pending': pending,
-                      'next_action': '邮件同步尚未成功，请恢复连接后确认客户回复' if pending is None else
-                                     '查看客户新回复并准备答复' if pending else '等待客户回复' if latest else '暂无已同步邮件'}
+        status = {'state': 'ready', 'account_email': self.account_email,
+                  'last_success_at': old['result']['status'].get('last_success_at') if old else None, 'error': None}
+        messages = copy.deepcopy(old['result']['messages']) if old else []
+        try:
+            token = self._access_token()
+            terms = ' '.join('from:' + x + ' to:' + x for x in sorted(customers))
+            query = '-in:drafts -in:spam -in:trash {' + terms + '}'
+            listing = self.request(GMAIL_URL + 'messages?' + urlencode({'q': query, 'maxResults': self.max_messages}), token=token)
+            found = []
+            ids=[str(item.get('id') or '') for item in listing.get('messages') or []]
+            ids=[mid for mid in ids if re.fullmatch('[0-9a-fA-F]+',mid)]
+            def fetch_message(mid):
+                with self.lock:raw=self._messages.get(mid)
+                if force or raw is None:
+                    raw=self.request(GMAIL_URL + 'messages/' + mid + '?format=full', token=token)
+                    with self.lock:self._messages[mid]=raw
+                return raw
+            with ThreadPoolExecutor(max_workers=4) as pool:raw_messages=list(pool.map(fetch_message,ids))
+            for raw in raw_messages:
+                message = parse_api_message(raw, self.account_email, customers)
+                if message:
+                    found.append(message)
+            # A buyer may reply from a colleague's address in the same
+            # thread. Expand threads with our sent messages to retain that context.
+            threads = {}
+            for message in reversed(found):
+                if message['direction']=='outbound' and re.fullmatch(r'\d+',str(message.get('thread_id') or '')):
+                    threads.setdefault(format(int(message['thread_id']),'x'),set()).update(message.get('customer_emails') or [])
+            seen={message['id'] for message in found}
+            thread_incomplete=len(threads)>15
+            def fetch_thread(item):
+                tid,associated=item
+                try:return associated,self.request(GMAIL_URL+'threads/'+tid+'?format=full',token=token)
+                except Exception:return associated,None
+            with ThreadPoolExecutor(max_workers=4) as pool:thread_results=list(pool.map(fetch_thread,list(threads.items())[:15]))
+            for associated,thread in thread_results:
+                if thread is None:thread_incomplete=True;continue
+                sent_ids={}
+                for raw in thread.get('messages') or []:
+                    if set(raw.get('labelIds') or ()).intersection(('DRAFT','SPAM','TRASH')):continue
+                    direct=parse_api_message(raw,self.account_email,customers)
+                    if direct and direct['direction']=='outbound':
+                        message_id=_headers(raw).get('message-id','').strip()
+                        if message_id:sent_ids.setdefault(message_id,set()).update(set(direct['customer_emails']) & associated)
+                for raw in thread.get('messages') or []:
+                    if set(raw.get('labelIds') or ()).intersection(('DRAFT','SPAM','TRASH')):continue
+                    mid=str(raw.get('id') or '')
+                    if not re.fullmatch('[0-9a-fA-F]+',mid):continue
+                    with self.lock:self._messages[mid]=raw
+                    message=parse_api_message(raw,self.account_email,customers)
+                    if not message:
+                        headers=_headers(raw)
+                        refs=re.findall(r'<[^<>]+>',headers.get('in-reply-to') or headers.get('references') or '')
+                        matched=sent_ids.get(refs[-1],set()) if refs else set()
+                        if not matched:
+                            senders={a.lower() for _,a in getaddresses([headers.get('from','')]) if '@' in a}
+                            domains={a.rsplit('@',1)[1] for a in senders}-PUBLIC_MAIL_DOMAINS
+                            matched={a for a in associated if a.rsplit('@',1)[-1] in domains}
+                        message=parse_api_message(raw,self.account_email,customers,matched)
+                    if message and message['id'] not in seen:
+                        found.append(message);seen.add(message['id'])
+            messages = sorted(found, key=lambda m: (m['sent_at'] or '', m['id']))
+            notices=[]
+            if listing.get('nextPageToken'):notices.append('仅显示最近 '+str(self.max_messages)+' 封匹配邮件')
+            if thread_incomplete:notices.append('部分邮件线程未完整展开，请稍后更新')
+            status.update(last_success_at=datetime.fromtimestamp(self.clock(), timezone.utc).isoformat(),
+                loaded_count=len(messages), history_limited=bool(listing.get('nextPageToken')),
+                thread_lookup_incomplete=thread_incomplete,history_note='；'.join(notices) or None)
+        except Exception as exc:
+            status.update(state='error', error=str(exc) if isinstance(exc, ValueError) else 'Google 邮件连接暂不可用，请检查网络后重试')
+        dated = [m for m in messages if m['sent_at'] and m.get('mail_kind') not in ('promotion','automatic')]
+        latest = max(dated, key=lambda m: (m['sent_at'], m['id']), default=None)
+        pending = bool(latest and latest['direction'] == 'inbound') if status['state'] == 'ready' else None
+        result = {'status': status, 'messages': messages, 'reply_pending': pending,
+                  'next_action': '邮件同步尚未成功，请恢复连接后确认客户回复' if pending is None else
+                                 '查看客户新回复并准备答复' if pending else '等待客户回复' if latest else '暂无已同步邮件'}
+        with self.lock:
             self._cache[key] = {'result': result, 'last_poll': self.clock() if status['state'] == 'ready' else float('-inf')}
-            return copy.deepcopy(result)
+        return copy.deepcopy(result)
+
+    def buyer_candidates(self, known_emails, linked_ids=()):
+        """Find likely new buyer inquiries; source mail remains in Gmail."""
+        known={normalize_email(x) for x in known_emails}|{self.account_email}
+        with self.inbox_lock:
+            status={'state':'ready','last_success_at':None,'error':None}
+            try:
+                token=self._access_token()
+                query='in:inbox newer_than:90d -in:spam -in:trash -in:drafts {shoe shoes footwear sneaker sneakers slipper sandals boots}'
+                listing=self.request(GMAIL_URL+'messages?'+urlencode({'q':query,'maxResults':30}),token=token)
+                ids=[str(x.get('id') or '') for x in listing.get('messages') or []]
+                ids=[mid for mid in ids if re.fullmatch('[0-9a-fA-F]+',mid)]
+                def fetch(mid):
+                    with self.lock:raw=self._messages.get(mid)
+                    if raw is None:
+                        raw=self.request(GMAIL_URL+'messages/'+mid+'?format=full',token=token)
+                        with self.lock:self._messages[mid]=raw
+                    return raw
+                with ThreadPoolExecutor(max_workers=4) as pool:raw_messages=list(pool.map(fetch,ids))
+                items=[];seen=set();times={}
+                for raw in raw_messages:
+                    raw_id=str(raw.get('id') or '')
+                    canonical_id=str(int(raw_id,16))
+                    if canonical_id in linked_ids:continue
+                    headers={str(h.get('name','')).lower():str(h.get('value','')) for h in (raw.get('payload') or {}).get('headers') or []}
+                    addresses=getaddresses([headers.get('from','')])
+                    if not addresses:continue
+                    name,address=addresses[0]
+                    try:address=normalize_email(address)
+                    except ValueError:continue
+                    if address in known or address in seen:continue
+                    message=parse_api_message(raw,self.account_email,{address})
+                    if not message or message['direction']!='inbound' or message['mail_kind']!='conversation':continue
+                    summary=new_buyer_summary(message['subject'],message['body'])
+                    if not summary:continue
+                    seen.add(address)
+                    items.append({'id':message['id'],'thread_id':message['thread_id'],'email':address,
+                        'contact_name':name[:200],'title':name[:200] or address.split('@')[-1],
+                        'summary':summary,'subject':message['subject'],'sent_at':message['sent_at'],'url':message['url']})
+                    times[message['id']]=int(raw.get('internalDate') or 0)
+                def already_answered(item):
+                    if not item.get('thread_id'):return None
+                    try:thread=self.request(GMAIL_URL+'threads/'+format(int(item['thread_id']),'x')+'?format=metadata',token=token)
+                    except Exception:return None
+                    for raw in thread.get('messages') or []:
+                        if set(raw.get('labelIds') or ()).intersection(('DRAFT','SPAM','TRASH')):continue
+                        headers={str(h.get('name','')).lower():str(h.get('value','')) for h in (raw.get('payload') or {}).get('headers') or []}
+                        senders={a.lower() for _,a in getaddresses([headers.get('from','')])}
+                        recipients={a.lower() for _,a in getaddresses([headers.get(k,'') for k in ('to','cc','bcc')])}
+                        if self.account_email in senders and item['email'] in recipients and int(raw.get('internalDate') or 0)>times[item['id']]:return True
+                    return False
+                with ThreadPoolExecutor(max_workers=4) as pool:answered=list(pool.map(already_answered,items))
+                for item,value in zip(items,answered):item['answered']=value
+                status.update(last_success_at=datetime.fromtimestamp(self.clock(),timezone.utc).isoformat(),
+                              history_limited=bool(listing.get('nextPageToken')))
+                return {'status':status,'items':items}
+            except Exception as exc:
+                status.update(state='error',error=str(exc) if isinstance(exc,ValueError) else '新买家邮件筛选暂未完成')
+                return {'status':status,'items':[]}

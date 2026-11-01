@@ -102,6 +102,14 @@ test('Gmail 首选 Google 只读授权，客户端文件只提交给本机', asy
   assert.equal(panel.textContent.includes('local-secret'),false);
 });
 
+test('Gmail 测试授权显示预计到期时间', async () => {
+  const h=harness('#/object/customer%3Amail'),original=h.originalFetch;
+  h.objects.push({id:'customer:mail',kind:'customer',title:'邮箱客户',assets:[]});
+  h.interceptFetch(async(path,options)=>String(path).startsWith('/api/desk/gmail/')
+    ? {ok:true,json:async()=>({status:{state:'connected',authorization_expires_at:'2026-11-08T08:17:00Z'},messages:[]})} : original(path,options));
+  await h.ui.bootstrap();await settle();assert.ok(h.elements.page.textContent.includes('Google 测试授权预计'));assert.ok(h.elements.page.textContent.includes('重新授权即可'));
+});
+
 test('总览与询盘列表分别提醒 Gmail 和网站站内消息', async () => {
   const h=harness(); h.objects.push({id:'customer:mail',kind:'customer',title:'邮件回复买家',workflow:{gmail_reply_pending:true,customer_reply_pending:true,state:'preparing'}});
   await h.ui.bootstrap(); await settle(); assert.ok(h.elements.page.textContent.includes('Gmail 客户有新回复')); assert.ok(h.elements.page.textContent.includes('网站站内消息有新回复'));
@@ -121,6 +129,34 @@ test('后台同步到新邮件后自动刷新总览', async () => {
   revision=1;rows=[{object_id:'customer:mail',title:'邮件客户',workflow:{state:'new',pending_party:'internal',gmail_reply_pending:true,gmail_next_action:'阅读客户新邮件'}}];
   h.ui.S.lastBootstrapPoll=0;await h.ui.poll();await settle();
   assert.ok(h.elements.page.textContent.includes('Gmail 客户有新回复'));assert.ok(h.elements.page.textContent.includes('阅读客户新邮件'));
+});
+
+test('Gmail 新买家显示中文摘要并可加入原客户列表', async () => {
+  const h=harness('#/customers?view=development'),original=h.originalFetch;
+  h.interceptFetch(async(path,options)=>{
+    if(path==='/api/desk/gmail/candidates')return {ok:true,json:async()=>({status:{state:'ready'},items:[{id:'m1',title:'Buyer Company',contact_name:'Buyer',email:'buyer@example.org',summary:'邮件提出鞋类采购或报价咨询',sent_at:'2026-11-01T01:00:00Z',url:'https://mail.google.com/mail/#all/abcd'}]})};
+    if(String(path).startsWith('/api/desk/gmail/'))return {ok:true,json:async()=>({status:{state:'connected'},messages:[]})};
+    return original(path,options);
+  });
+  await h.ui.bootstrap();await settle();assert.ok(h.elements.page.textContent.includes('邮件提出鞋类采购或报价咨询'));
+  await findButton(h.body,'加入客户并处理').click();await settle();
+  const created=h.requests.find(x=>x.path==='/api/desk/discovery'&&x.payload?.kind==='candidate');
+  assert.equal(created.payload.email,'buyer@example.org');assert.equal(created.payload.business_category,'邮件咨询');
+});
+
+test('Gmail 历史询盘单独折叠，不算当前新客户', async () => {
+  const h=harness('#/customers?view=development'),original=h.originalFetch;
+  h.interceptFetch(async(path,options)=>path==='/api/desk/gmail/candidates'
+    ? {ok:true,json:async()=>({status:{state:'ready'},items:[{id:'old',title:'Old buyer',email:'old@example.org',summary:'邮件提出鞋类采购或报价咨询',is_new:false,answered:false}]})} : original(path,options));
+  await h.ui.bootstrap();await settle();assert.ok(h.elements.page.textContent.includes('历史买家邮件 · 1 封'));
+  assert.ok(h.elements.page.textContent.includes('原线程未发现我方回复'));assert.equal(h.elements.page.textContent.includes('Gmail 潜在买家来信'),false);
+});
+
+test('Gmail 首次筛选时给出可见的进度提示', async () => {
+  const h=harness('#/customers?view=development'),original=h.originalFetch;
+  h.interceptFetch(async(path,options)=>path==='/api/desk/gmail/candidates'
+    ? {ok:true,json:async()=>({status:{state:'loading'},items:[]})} : original(path,options));
+  await h.ui.bootstrap();await settle();assert.ok(h.elements.page.textContent.includes('正在筛选 Gmail 来信'));
 });
 
 test('real data drives navigation and original content is collapsed; untrusted titles stay text', async () => {

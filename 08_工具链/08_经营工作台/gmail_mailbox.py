@@ -17,6 +17,7 @@ import threading
 import time
 from urllib.parse import urlparse, unquote
 from urllib.request import getproxies
+from gmail_filter import classify_mail
 
 SERVICE = 'Beiqiang.Workdesk.Gmail'
 HOST = 'imap.gmail.com'
@@ -162,6 +163,7 @@ def parse_message(raw, metadata, uid, account, customers):
             'body': body.strip(), 'translation_zh': None,
             'attachments':attachments,
             'body_truncated': bool(size and int(size[1]) > len(raw)),
+            'mail_kind': classify_mail(dict(msg.items()),direction=direction,subject=str(msg.get('Subject','')),body=body),
             'url': 'https://mail.google.com/mail/u/?authuser=' + account + '#all/' + format(int(thread), 'x') if thread else None,
             'customer_emails': sorted(associated)}
 
@@ -211,7 +213,7 @@ class GmailMailbox:
                 status['state'] = 'error'
                 status['error'] = ('Gmail服务器拒绝读取或登录，请检查账号设置及连接状态' if isinstance(exc, imaplib.IMAP4.error)
                                    else 'Gmail连接或读取失败（' + type(exc).__name__ + '），请检查网络与代理')
-            dated = [m for m in messages if m['sent_at']]
+            dated = [m for m in messages if m['sent_at'] and m.get('mail_kind') not in ('promotion','automatic')]
             latest = max(dated, key=lambda m: (m['sent_at'], m['id']), default=None)
             pending = bool(latest and latest['direction'] == 'inbound') if status['state'] == 'ready' else None
             result = {'status': status, 'messages': messages, 'reply_pending': pending,

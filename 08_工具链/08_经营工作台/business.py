@@ -267,6 +267,10 @@ class Business:
         catalog=Creation(self.root)
         return [{**row,'subtitle':'创作项目','assets':[],'links':[],'facts':[],'content':''} for row in catalog.list_projects()]
 
+    def mail_objects(self):
+        """Read customer sources once for a Gmail synchronization pass."""
+        return self._customers()+self._website_objects()+self._alibaba_objects()+self._intake_objects()+self._prospect_objects()
+
     def list_objects(self,kind='',q=''):
         if kind not in ('','product','customer','prospect','creation') or not isinstance(q,str):raise ValueError('业务查询参数无效')
         objects=(self._products() if kind in ('','product') else [])+(self._customers()+self._website_objects()+self._alibaba_objects()+self._intake_objects() if kind in ('','customer') else [])+(self._prospect_objects() if kind in ('','prospect') else [])

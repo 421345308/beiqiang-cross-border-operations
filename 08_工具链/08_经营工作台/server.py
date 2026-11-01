@@ -277,6 +277,7 @@ class Handler(BaseHTTPRequestHandler):
                         'goals':app.bootstrap()['goals'],'website_status':app.business.website_status(),
                         'alibaba_status':app.business.alibaba.status(),'gmail_revision':app.gmail.status()['revision']})
                 if u.path=='/api/desk/gmail/customer':return self.send_json(app.gmail.customer(value('object_id')))
+                if u.path=='/api/desk/gmail/candidates':return self.send_json(app.gmail.buyer_candidates())
                 if u.path=='/api/desk/customer-profile':return self.send_json(app.customer_workspace.profile(value('object_id')))
                 if u.path=='/api/desk/inquiry-queue':return self.send_json(app.customer_workspace.queue(bucket=value('bucket') or 'active',state=value('state'),q=value('q')))
                 if u.path=='/api/desk/customer-workflow':return self.send_json(app.customer_workspace.workflow(value('object_id')))
@@ -346,6 +347,7 @@ class Handler(BaseHTTPRequestHandler):
                 return self.send_json({'authorization_url':app.gmail.start_oauth(body.get('client_config'),redirect_uri)})
             if parts==['api','desk','gmail','sync']:return self.send_json(app.gmail.customer(body.get('object_id'),force=True))
             if parts==['api','desk','gmail','ack']:return self.send_json(app.gmail.acknowledge(body.get('object_id')))
+            if parts==['api','desk','gmail','candidates','dismiss']:return self.send_json(app.gmail.dismiss_candidate(body.get('message_id')))
             if parts==['api','desk','creation-canvas']:
                 return self.send_json({'canvas':app.creation_canvas.save(body)})
             if parts==['api','desk','creation','libtv','create']:

@@ -158,6 +158,11 @@
       pending.append(list);
       if(waiting.length)pending.append(button(`${waiting.length} 位客户等待回复 →`,()=>{location.hash='/customers?view=inquiries&state=waiting_customer';},'quiet'));
     }).catch(()=>{});
+    api('/api/desk/gmail/candidates').then(data=>{
+      const items=(data.items||[]).filter(item=>item.is_new!==false && item.answered!==true);
+      if(S.page!=='overview' || !items.length)return;
+      pending.append(button(`Gmail 发现 ${items.length} 封潜在买家来信 →`,()=>{location.hash='/customers?view=development';},'mail-attention'));
+    }).catch(()=>{});
     page.append(sectionHeading('从业务开始', '进入真实对象，而非工具菜单'), businessEntrances()); const recentRows = recentObjects(); if (recentRows.length) { page.append(sectionHeading('继续工作', '近期打开或实际处理过的对象')); const recent = el('div', undefined, 'continue-grid'); recentRows.forEach(object => recent.append(tile(object))); page.append(recent); }
     const columns = el('div', undefined, 'overview-grid'), active = el('section'), artifacts = el('section'); active.append(sectionHeading('正在推进', '实际执行状态')); const jobs = el('div', undefined, 'row-list'); const running = S.jobs.filter(isActive); running.forEach(job => jobs.append(workRow(job))); if (!running.length) empty(jobs, '当前没有执行中的工作。打开一款商品或一位客户，说明这次需要什么。'); active.append(jobs); artifacts.append(sectionHeading('最近成果', '打开后可继续编辑')); const list = el('div', undefined, 'row-list'); [...S.artifacts].sort((a, b) => String(b.updated_at || '').localeCompare(String(a.updated_at || ''))).slice(0, 5).forEach(item => list.append(artifactRow(item))); if (!list.children.length) empty(list, '新的选款资料、回复草稿会保存在这里，并关联原商品或客户。'); artifacts.append(list); columns.append(active, artifacts); page.append(columns);
     const failed = S.jobs.filter(job => job.status === 'failed').slice(0, 3); if (failed.length) { page.append(sectionHeading('需要留意', '未完成的工作')); const rows = el('div', undefined, 'row-list'); failed.forEach(job => rows.append(workRow(job))); page.append(rows); }
@@ -281,11 +286,12 @@
       const stamp = JSON.stringify(data); if (stamp === ctx.gmailStamp) return; ctx.gmailStamp = stamp;
       const host = ctx.gmailHost, status = data.status || {}, connected = status.state === 'connected', noContact = status.state === 'no_contact_email'; host.replaceChildren(el('h2', 'Gmail 邮件往来'));
       host.append(el('p', connected ? `已连接${status.account_email ? ` · ${status.account_email}` : ''}${status.last_success_at ? ` · 最近读取 ${time(status.last_success_at)}` : ''}` : noContact ? '这位客户尚未填写联系邮箱。' : status.state === 'error' ? '邮件读取暂未完成，请稍后重试。' : '尚未连接 Gmail，当前没有自动收信。', connected ? 'gmail-status' : 'artifact-note'));
+      if(status.authorization_expires_at)host.append(el('p',`Google 测试授权预计 ${time(status.authorization_expires_at)} 到期，到期后重新授权即可。`,'artifact-note'));
       if (status.error) host.append(el('p', text(status.error), 'inline-error'));
       if (status.history_note) host.append(el('p', text(status.history_note), 'artifact-note'));
       if (!connected && !noContact) {
         const setup = el('details', undefined, 'gmail-connect'); setup.append(el('summary', '连接我的 Gmail'));
-        setup.append(el('h3', '使用 Google 账号授权'), el('p', '首次连接需要创建 Google 桌面应用并启用 Gmail API，再选择下载的客户端文件；随后在 Google 登录并授权只读邮件。'));
+        setup.append(el('h3', '使用 Google 账号授权'), el('p', '工作台只读邮件。首次连接需要创建 Google 桌面应用并启用 Gmail API，再选择下载的客户端文件；已经连接过的账号重新授权时无需再次选择文件。'));
         const steps = el('details'); steps.append(el('summary','首次设置步骤'));
         steps.append(el('p','1. 打开 Google Cloud，新建或选择一个项目，启用 Gmail API。'));
         const library=link('打开 Gmail API 设置 ↗','https://console.cloud.google.com/apis/library/gmail.googleapis.com'); if(library)steps.append(library);
@@ -335,7 +341,7 @@
       const messages = Array.isArray(data.messages) ? data.messages : [];
       if (!messages.length) host.append(el('p', connected ? '暂未找到与这位客户关联的邮件。' : '连接完成后，客户邮件会在这里显示。', 'muted'));
       for (const mail of messages) {
-        const entry = el('article', undefined, 'gmail-message'); entry.append(el('h3', `${mail.direction === 'outbound' ? '我方发出' : '客户来信'} · ${time(mail.sent_at)}`), el('p', mail.subject || '无主题', 'mail-subject'));
+        const entry = el('article', undefined, 'gmail-message'); entry.append(el('h3', `${mail.direction === 'outbound' ? '我方发出' : mail.mail_kind === 'automatic' ? '自动回复' : '客户来信'} · ${time(mail.sent_at)}`), el('p', mail.subject || '无主题', 'mail-subject'));
         if (mail.translation_zh) entry.append(el('p', text(mail.translation_zh), 'plain-reading')); else entry.append(el('p', '原文可在下方查看；可让 Sol 整理中文重点及回复。', 'muted'));
         if (mail.attachments?.length) entry.append(el('p', `附件：${mail.attachments.map(a=>text(a.filename)).join('、')}`, 'artifact-note'));
         const original = el('details'); original.append(el('summary', '查看邮件原文与收发人'), el('p', `发件人：${text(mail.from)} · 收件人：${Array.isArray(mail.to) ? mail.to.join('，') : text(mail.to)}`), el('pre', text(mail.body || mail.snippet), 'source-body')); const source = link('在 Gmail 中查看 ↗', mail.url); if (source) original.append(source); entry.append(original); host.append(entry);
@@ -399,9 +405,9 @@
     form.append(message, button('保存中文解读与分析', async () => { try { await api('/api/desk/customer-profile', { object_id: ctx.object.id, source_hash: p.source_hash || p.provenance?.source_hash, translation_zh: translation.value, original_language: p.original_language || 'unknown', cleaned: { ...p.cleaned, company: company.value, country: country.value, quantity: quantity.value, need: need.value }, analysis: { ...p.analysis, fit: fit.value || 'unknown', basis: lines(basis), missing: lines(missing), next_action: next.value }, source_note: sourceNote.value }); ctx.profileEditing = false; await loadProfile(ctx); toast('中文解读与分析已保存，原始需求未改动。'); } catch (error) { message.textContent = error.message; } }, 'primary'), button('返回阅读（不保存本次编辑）', () => { ctx.profileEditing = false; renderProfile(ctx); }, 'quiet')); host.append(form);
   }
   async function renderDevelopment() {
-    const page = $('page'), routeSerial = S.loadSerial; const current = () => S.page === 'customers' && routeSerial === S.loadSerial && parseRoute().query.get('view') !== 'inquiries'; page.replaceChildren(heading('客户开发', '从目标客群，走向有依据的推进', '研究任务、候选证据与下一步在同一处。候选记录不等于采购意向或已联系客户。'), customerTabs('development')); const target = el('details', undefined, 'card discovery-target'); target.append(el('summary', '新建买家研究任务')); const form = el('div', undefined, 'discovery-target-form'), title = addField(form, '研究任务名称', '', false, '例如：为一组产品寻找匹配的买家'), audience = addField(form, '目标客群与研究要求', '', true, '说明市场、买家业务、产品适配与需要核查的证据'); const feedback = el('p', '', 'agent-feedback'), tasks = el('section'), candidates = el('section'), detail = el('section'); target.append(form, feedback, button('保存研究任务', async () => { if (!title.value.trim() || !audience.value.trim()) { feedback.textContent = '请先写清任务名称和目标客群。'; return; } try { const result = await api('/api/desk/discovery', { kind: 'research_task', title: title.value, target: audience.value, status: '研究准备' }); await read(); await openItem((result.item || result).id); } catch (error) { feedback.textContent = error.message; } }, 'primary')); page.append(candidates, tasks, target, detail);
+    const page = $('page'), routeSerial = S.loadSerial; const current = () => S.page === 'customers' && routeSerial === S.loadSerial && parseRoute().query.get('view') !== 'inquiries'; page.replaceChildren(heading('客户开发', '从目标客群，走向有依据的推进', '研究任务、候选证据与下一步在同一处。候选记录不等于采购意向或已联系客户。'), customerTabs('development')); const target = el('details', undefined, 'card discovery-target'); target.append(el('summary', '新建买家研究任务')); const form = el('div', undefined, 'discovery-target-form'), title = addField(form, '研究任务名称', '', false, '例如：为一组产品寻找匹配的买家'), audience = addField(form, '目标客群与研究要求', '', true, '说明市场、买家业务、产品适配与需要核查的证据'); const feedback = el('p', '', 'agent-feedback'), inbox = el('section'), tasks = el('section'), candidates = el('section'), detail = el('section'); target.append(form, feedback, button('保存研究任务', async () => { if (!title.value.trim() || !audience.value.trim()) { feedback.textContent = '请先写清任务名称和目标客群。'; return; } try { const result = await api('/api/desk/discovery', { kind: 'research_task', title: title.value, target: audience.value, status: '研究准备' }); await read(); await openItem((result.item || result).id); } catch (error) { feedback.textContent = error.message; } }, 'primary')); page.append(inbox, candidates, tasks, target, detail);
     async function openItem(id) {
-      const result = await api(`/api/desk/discovery/item?id=${encodeURIComponent(id)}`); if (!current()) return; const item = result.item || result; history.replaceState(null, '', `#/customers?view=development&item=${encodeURIComponent(item.id)}`); target.hidden = true; tasks.hidden = true; candidates.hidden = true; searchPanel.hidden = true; detail.replaceChildren(button('← 返回客户开发列表', () => { location.hash = '/customers?view=development'; }, 'quiet back-development'));
+      const result = await api(`/api/desk/discovery/item?id=${encodeURIComponent(id)}`); if (!current()) return; const item = result.item || result; history.replaceState(null, '', `#/customers?view=development&item=${encodeURIComponent(item.id)}`); target.hidden = true; inbox.hidden = true; tasks.hidden = true; candidates.hidden = true; searchPanel.hidden = true; detail.replaceChildren(button('← 返回客户开发列表', () => { location.hash = '/customers?view=development'; }, 'quiet back-development'));
       const layout = el('div', undefined, 'object-layout discovery-detail'), main = el('div', undefined, 'card'), right = el('aside', undefined, 'card object-agent'); main.append(el('h2', item.title || item.company || '研究记录'), el('p', item.kind === 'research_task' ? '研究任务' : item.business_category || '待确认业务类型', 'provenance-note'));
       if (item.kind === 'candidate') {
         const prior = item.source_record?.analysis || {}, summary = el('section', undefined, 'candidate-summary');
@@ -476,6 +482,33 @@
     let candidateQuery = '', candidateCategory = '', candidateStatus = 'active';
     async function read() {
       try { const data = await api('/api/desk/discovery'); if (!current()) return; tasks.replaceChildren(sectionHeading('研究任务', '保存后可交给 Sol 继续')); candidates.replaceChildren(sectionHeading('目标客户', '按业务类型查看客户摘要与推进安排'),button('新增客户',addCandidate,'primary'));
+        api('/api/desk/gmail/candidates').then(mail=>{
+          if(!current())return;
+          const known=new Set((data.candidates||[]).flatMap(item=>[item.email,...(item.source_record?.contacts||[]).filter(c=>c?.kind==='email').map(c=>c.value)]).filter(Boolean).map(v=>text(v).trim().toLowerCase()));
+          const rows=(mail.items||[]).filter(item=>!known.has(text(item.email).trim().toLowerCase()));inbox.replaceChildren();
+          if(mail.status?.state==='error'){inbox.append(el('p','Gmail 新买家邮件筛选暂未完成，请检查邮箱连接。','inline-error'));return;}
+          if(mail.status?.state==='loading'){inbox.append(el('p','正在筛选 Gmail 来信，请稍候。','muted'));return;}
+          if(!rows.length){if(mail.status?.state==='ready')inbox.append(el('p',mail.status?.history_limited?'Gmail：最近 30 封鞋类关键词邮件中暂无识别到新的采购咨询。':'Gmail：暂无识别到新的鞋类采购咨询。','muted'));return;}
+          const active=rows.filter(item=>item.is_new!==false && item.answered!==true),historical=rows.filter(item=>item.is_new===false || item.answered===true);
+          if(active.length)inbox.append(sectionHeading('Gmail 潜在买家来信','筛选出的鞋类采购咨询，加入客户后可继续分析'));
+          if(mail.status?.history_limited)inbox.append(el('p','当前检查最近 30 封鞋类关键词邮件，可在 Gmail 查看更早邮件。','artifact-note'));
+          const history=el('details',undefined,'card');if(historical.length)history.append(el('summary',`历史买家邮件 · ${historical.length} 封`));
+          for(const item of [...active,...historical]){
+            const card=el('article',undefined,'card work-row'),content=el('div');
+            content.append(el('h3',text(item.title)),el('p',text(item.summary)),el('p',`来信邮箱：${text(item.email)} · ${time(item.sent_at)}`));
+            if(item.answered===true)content.append(el('p','已在原邮件线程回复。','muted'));
+            else if(item.is_new===false)content.append(el('p',item.answered===false?'历史来信，原线程未发现我方回复。':'历史来信，可查看原线程进展。','muted'));
+            const original=link('在 Gmail 查看原文 ↗',item.url);if(original)content.append(original);
+            const name=addField(content,'公司或联系人',item.title),action=button('加入客户并处理',async()=>{
+              if(!name.value.trim())return;action.disabled=true;
+              try{const value=await api('/api/desk/discovery',{kind:'candidate',company:name.value.trim(),contact_name:text(item.contact_name),email:text(item.email),business_category:'邮件咨询',business_summary:text(item.summary),contact_status_label:item.is_new===false?'历史来信':'收到邮件',next_action:item.is_new===false?'查看邮件往来与当前进展。':'阅读客户邮件并准备回复。',evidence:item.url?[{url:item.url,text:'Gmail 来信',observed_at:item.sent_at || ''}]:[]});await read();await openItem((value.item||value).id);}
+              catch(error){action.disabled=false;toast(error.message);}
+            },'primary');const actions=el('div');actions.append(action,button('忽略这封',async()=>{
+              try{await api('/api/desk/gmail/candidates/dismiss',{message_id:item.id});await read();}catch(error){toast(error.message);}
+            },'quiet'));card.append(content,actions);(historical.includes(item)?history:inbox).append(card);
+          }
+          if(historical.length)inbox.append(history);
+        }).catch(()=>{});
         for (const [root, allRows, emptyLabel] of [[tasks, data.tasks || [], '还没有本地研究任务。'], [candidates, data.candidates || [], '没有符合条件的客户。']]) {
           const list = el('div', undefined, 'row-list'); let count = null;
           if (root === candidates) {

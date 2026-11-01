@@ -1,7 +1,7 @@
 """Local Gmail coordination, read-only polling and durable reply event deduplication."""
 from __future__ import annotations
 import copy
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from email.utils import getaddresses
 import json
 from pathlib import Path
@@ -53,27 +53,37 @@ class GmailService:
         self.lock=threading.RLock();self._stop=threading.Event();self._thread=None
         self._cache={};self._mailbox=None;self._account='';self._connected_at=None;self.revision=0
         self._retry_at={}
-        self._state='not_connected';self._error=None;self._last_success=None;self._auth_mode=''
+        self._inbox={'status':{'state':'loading','last_success_at':None},'items':[]}
+        self._state='not_connected';self._error=None;self._last_success=None;self._auth_mode='';self._publishing_status='';self._authorized_at=None
         self.path=Path(app.state)/'gmail.json'
         with app.lock:
             app.db.execute('CREATE TABLE IF NOT EXISTS gmail_reply_events (object_id TEXT NOT NULL,message_id TEXT NOT NULL,dispatch_state TEXT NOT NULL,PRIMARY KEY(object_id,message_id))')
             app.db.execute('CREATE TABLE IF NOT EXISTS gmail_acknowledged (object_id TEXT PRIMARY KEY,message_id TEXT NOT NULL)')
+            app.db.execute('CREATE TABLE IF NOT EXISTS gmail_inbox_dismissed (account TEXT NOT NULL,message_id TEXT NOT NULL,PRIMARY KEY(account,message_id))')
             app.db.commit()
         if self.path.exists():
             try:
                 config=json.loads(self.path.read_text(encoding='utf-8-sig'))
                 self._account=normalize_email(config['email']);self._connected_at=config.get('connected_at')
                 self._auth_mode=config.get('auth_mode') or 'app_password'
+                self._publishing_status=config.get('publishing_status') or ''
+                self._authorized_at=config.get('authorized_at') or self._connected_at
                 checker,factory=(self.oauth_credential_checker,self.oauth_mailbox_factory) if self._auth_mode=='oauth' else (self.credential_checker,self.mailbox_factory)
                 if checker(self._account):
                     self._mailbox=factory(self._account);self._state='connected'
             except Exception:
                 self._state='error';self._error='Gmail本地配置或系统凭据暂不可读'
 
+    def _authorization_details(self):
+        at=_timestamp(self._authorized_at)
+        if self._auth_mode=='oauth' and self._publishing_status=='testing' and at is not None:
+            return {'authorization_expires_at':(datetime.fromtimestamp(at,timezone.utc)+timedelta(days=7)).isoformat()}
+        return {}
+
     def status(self):
         with self.lock:return {'state':self._state,'account_email':self._account,'connected_at':self._connected_at,
                                'last_success_at':self._last_success,'error':self._error,'revision':self.revision,
-                               'auth_mode':self._auth_mode,'running':bool(self._thread and self._thread.is_alive())}
+                               'auth_mode':self._auth_mode,'running':bool(self._thread and self._thread.is_alive()),**self._authorization_details()}
 
     def connect(self,email,password):
         account=normalize_email(email)
@@ -91,7 +101,7 @@ class GmailService:
             temporary.write_text(json.dumps({'email':account,'connected_at':connected_at}),encoding='utf-8')
             temporary.replace(self.path)
             self._account=account;self._connected_at=connected_at;self._mailbox=mailbox
-            self._auth_mode='app_password';self._cache={};self._state='connected';self._error=None;self._last_success=None;self.revision+=1
+            self._auth_mode='app_password';self._publishing_status='';self._authorized_at=None;self._cache={};self._inbox={'status':{'state':'loading','last_success_at':None},'items':[]};self._state='connected';self._error=None;self._last_success=None;self.revision+=1
         return self.status()
 
     def start_oauth(self,client_config,redirect_uri):
@@ -101,23 +111,42 @@ class GmailService:
         account=self.oauth.finish(state,code)
         connected_at=(self._connected_at if self._account==account and _timestamp(self._connected_at) is not None
                       else datetime.fromtimestamp(self.clock(),timezone.utc).isoformat())
+        authorized_at=datetime.fromtimestamp(self.clock(),timezone.utc).isoformat()
         mailbox=self.oauth_mailbox_factory(account)
         self.path.parent.mkdir(parents=True,exist_ok=True)
         temporary=self.path.with_suffix('.tmp')
         with self.lock:
-            temporary.write_text(json.dumps({'email':account,'connected_at':connected_at,'auth_mode':'oauth'}),encoding='utf-8')
+            config={'email':account,'connected_at':connected_at,'auth_mode':'oauth','authorized_at':authorized_at}
+            if self._account==account and self._publishing_status:config['publishing_status']=self._publishing_status
+            temporary.write_text(json.dumps(config),encoding='utf-8')
             temporary.replace(self.path)
-            self._account=account;self._connected_at=connected_at;self._mailbox=mailbox;self._auth_mode='oauth'
-            self._cache={};self._state='connected';self._error=None;self._last_success=None;self.revision+=1
+            if self._account!=account:self._publishing_status=''
+            self._account=account;self._connected_at=connected_at;self._authorized_at=authorized_at;self._mailbox=mailbox;self._auth_mode='oauth'
+            self._cache={};self._inbox={'status':{'state':'loading','last_success_at':None},'items':[]};self._state='connected';self._error=None;self._last_success=None;self.revision+=1
         self.start()
         return self.status()
 
     def _empty(self,state=None,error=None):
-        return {'status':{'state':state or self._state,'account_email':self._account,'last_success_at':None,'error':error or self._error},
+        return {'status':{'state':state or self._state,'account_email':self._account,'last_success_at':None,'error':error or self._error,**self._authorization_details()},
                 'messages':[],'reply_pending':None,'next_action':'连接Gmail后查看邮件往来'}
 
     def peek(self,object_id):
         with self.lock:return copy.deepcopy(self._cache.get(object_id) or self._empty())
+
+    def buyer_candidates(self):
+        with self.lock:
+            if not self._mailbox:return {'status':{'state':'not_connected'},'items':[]}
+            return copy.deepcopy(self._inbox)
+
+    def dismiss_candidate(self,message_id):
+        with self.lock:
+            if not any(item.get('id')==message_id for item in self._inbox.get('items',[])):
+                raise ValueError('邮件已不在待查看列表')
+        with self.app.lock:
+            self.app.db.execute('INSERT OR IGNORE INTO gmail_inbox_dismissed VALUES (?,?)',(self._account,message_id));self.app.db.commit()
+        with self.lock:
+            self._inbox['items']=[item for item in self._inbox.get('items',[]) if item.get('id')!=message_id];self.revision+=1
+            return copy.deepcopy(self._inbox)
 
     def _workflow(self,object_id):
         workspace=self.app.customer_workspace
@@ -125,8 +154,8 @@ class GmailService:
             return workspace._saved_profile(object_id).get('workflow') or {}
         return workspace.workflow(object_id)
 
-    def customer(self,object_id,force=False,*,_context=None):
-        obj=self.app.business.get_object(object_id)
+    def customer(self,object_id,force=False,*,_context=None,_object=None):
+        obj=_object if _object is not None else self.app.business.get_object(object_id)
         emails=customer_emails(obj)
         with self.lock:
             account=self._account;mailbox=self._mailbox
@@ -149,12 +178,12 @@ class GmailService:
                 explicit=set(message.get('customer_emails') or [])
                 senders={a.lower() for _,a in getaddresses([message.get('from') or ''])}
                 recipients={a.lower() for _,a in getaddresses([message.get(k) or '' for k in ('to','cc','bcc')])}
-                valid=(direction=='inbound' and account in recipients and senders.intersection(emails)) or (direction=='outbound' and account in senders and (recipients|explicit).intersection(emails))
-                if valid:accepted.append(message)
+                valid=(direction=='inbound' and account in recipients and (senders|explicit).intersection(emails)) or (direction=='outbound' and account in senders and (recipients|explicit).intersection(emails))
+                if valid and message.get('mail_kind')!='promotion':accepted.append(message)
             result['messages']=accepted
             source_state=result.get('status',{}).get('state')
             if source_state=='ready':
-                dated=[m for m in accepted if _timestamp(m.get('sent_at')) is not None]
+                dated=[m for m in accepted if m.get('mail_kind')!='automatic' and _timestamp(m.get('sent_at')) is not None]
                 latest=max(dated,key=lambda m:_timestamp(m['sent_at']),default=None)
                 result['reply_pending']=bool(latest and latest.get('direction')=='inbound')
                 acknowledged=False
@@ -170,6 +199,8 @@ class GmailService:
                         ack=self.app.db.execute('SELECT message_id FROM gmail_acknowledged WHERE object_id=?',(object_id,)).fetchone()
                     if ack and str(latest.get('id'))==ack[0]:result['reply_pending']=False;acknowledged=True
                 result['next_action']='查看客户新回复并准备答复' if result['reply_pending'] else '已标记处理，可继续跟进客户' if acknowledged else '等待客户回复' if latest else '暂无已同步邮件'
+                if result['reply_pending'] is False and result['status'].get('thread_lookup_incomplete'):
+                    result['reply_pending']=None;result['next_action']='部分邮件线程尚未读完，请稍后更新'
                 result['status']['state']='connected'
             else:
                 result['status']['state']='not_connected' if source_state=='not_configured' else 'error'
@@ -182,6 +213,7 @@ class GmailService:
                 if self._state=='connected':self._last_success=result['status'].get('last_success_at')
                 if previous!=(self._state,self._error):self.revision+=1
         with self.lock:
+            result['status'].update(self._authorization_details())
             old=self._cache.get(object_id)
             if old and old.get('callback_error'):result['callback_error']=old['callback_error']
             signature=lambda r: (r.get('reply_pending'),r.get('status',{}).get('state'),[(m.get('id'),m.get('direction')) for m in r.get('messages',[])])
@@ -193,7 +225,7 @@ class GmailService:
     def acknowledge(self,object_id):
         current=self.peek(object_id)
         if current.get('reply_pending') is not True:raise ValueError('当前没有需要处理的新邮件')
-        messages=[m for m in current.get('messages',[]) if m.get('direction')=='inbound' and _timestamp(m.get('sent_at')) is not None]
+        messages=[m for m in current.get('messages',[]) if m.get('direction')=='inbound' and m.get('mail_kind')!='automatic' and _timestamp(m.get('sent_at')) is not None]
         if not messages:raise ValueError('无法找到需要处理的新邮件')
         latest=max(messages,key=lambda m:_timestamp(m['sent_at']))
         with self.app.lock:
@@ -218,7 +250,7 @@ class GmailService:
         if since is None:return
         messages=context['messages']
         latest_sales=max((_timestamp(m.get('sent_at')) for m in messages if m.get('direction')=='outbound' and _timestamp(m.get('sent_at')) is not None),default=None)
-        candidates=[m for m in messages if m.get('direction')=='inbound' and m.get('id') and _timestamp(m.get('sent_at')) is not None and _timestamp(m['sent_at'])>since and (latest_sales is None or _timestamp(m['sent_at'])>latest_sales)]
+        candidates=[m for m in messages if m.get('direction')=='inbound' and m.get('mail_kind')!='automatic' and m.get('id') and _timestamp(m.get('sent_at')) is not None and _timestamp(m['sent_at'])>since and (latest_sales is None or _timestamp(m['sent_at'])>latest_sales)]
         if not candidates:return
         message=max(candidates,key=lambda m:(_timestamp(m['sent_at']),str(m['id'])))
         mid=str(message['id'])
@@ -250,19 +282,34 @@ class GmailService:
     def scan_once(self):
         if not self._mailbox:return self.status()
         targets=[];emails=set()
-        for entry in self.app.business.list_objects():
-            if entry.get('kind') in ('customer','prospect'):
-                obj=self.app.business.get_object(entry['id'])
-                addresses=set(customer_emails(obj))-{self._account}
-                if addresses:targets.append(entry['id']);emails.update(addresses)
-        if not emails:return self.status()
-        try:context=self._mailbox.context(sorted(emails))
-        except Exception as exc:context={'status':{'state':'error','error':'Gmail读取失败（'+type(exc).__name__+'）'},'messages':[],'reply_pending':None}
-        for object_id in targets:
-            if self._stop.is_set():break
-            try:self.customer(object_id,_context=context)
-            except Exception:
-                with self.lock:self._state='error';self._error='部分客户邮件同步失败，请查看客户原资料与连接状态';self.revision+=1
+        business=self.app.business
+        objects=business.mail_objects() if hasattr(business,'mail_objects') else [business.get_object(e['id']) for e in business.list_objects() if e.get('kind') in ('customer','prospect')]
+        for obj in objects:
+            addresses=set(customer_emails(obj))-{self._account}
+            if addresses:targets.append((obj['id'],obj));emails.update(addresses)
+        context={'messages':[]}
+        if emails:
+            try:context=self._mailbox.context(sorted(emails))
+            except Exception as exc:context={'status':{'state':'error','error':'Gmail读取失败（'+type(exc).__name__+'）'},'messages':[],'reply_pending':None}
+            for object_id,obj in targets:
+                if self._stop.is_set():break
+                try:self.customer(object_id,_context=context,_object=obj)
+                except Exception:
+                    with self.lock:self._state='error';self._error='部分客户邮件同步失败，请查看客户原资料与连接状态';self.revision+=1
+        if hasattr(self._mailbox,'buyer_candidates') and not self._stop.is_set():
+            linked=context.get('messages') or []
+            found=self._mailbox.buyer_candidates(emails,{m.get('id') for m in linked})
+            with self.app.lock:dismissed={row[0] for row in self.app.db.execute('SELECT message_id FROM gmail_inbox_dismissed WHERE account=?',(self._account,))}
+            found['items']=[item for item in found.get('items',[]) if item.get('id') not in dismissed]
+            boundary=_timestamp(self._connected_at)
+            for item in found['items']:
+                received=_timestamp(item.get('sent_at'))
+                item['is_new']=bool(received is not None and boundary is not None and received>boundary)
+            with self.lock:
+                old=[(x.get('id'),x.get('summary')) for x in self._inbox.get('items',[])]
+                new=[(x.get('id'),x.get('summary')) for x in found.get('items',[])]
+                if old!=new or self._inbox.get('status',{}).get('state')!=found.get('status',{}).get('state'):self.revision+=1
+                self._inbox=found
         return self.status()
 
     def start(self):

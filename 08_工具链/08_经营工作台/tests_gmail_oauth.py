@@ -1,6 +1,7 @@
 import base64
 import hashlib
 import json
+import threading
 import unittest
 from urllib.parse import parse_qs, urlsplit
 
@@ -61,12 +62,13 @@ class OAuthTests(unittest.TestCase):
 
 class MailboxTests(unittest.TestCase):
     def setUp(self):
-        self.calls=[];self.now=1000;self.values=[email(),email('11','outbound')];self.fail=False
+        self.calls=[];self.now=1000;self.values=[email(),email('11','outbound')];self.thread_values=None;self.fail=False
         def request(url,*,token=None,form=None):
             self.calls.append((url,token,form))
             if self.fail:raise OSError('offline')
             if form is not None:return {'access_token':'temporary-token','expires_in':3600}
             if 'messages?' in url:return {'messages':[{'id':x['id']} for x in self.values]}
+            if '/threads/' in url:return {'messages':self.values if self.thread_values is None else self.thread_values}
             mid=url.split('/messages/')[1].split('?')[0]
             return next(x for x in self.values if x['id']==mid)
         self.box=GmailOAuthMailbox(ACCOUNT,request=request,reader=lambda account:{'client_id':CLIENT,'client_secret':'secret','refresh_token':'refresh'},clock=lambda:self.now)
@@ -78,7 +80,20 @@ class MailboxTests(unittest.TestCase):
         self.assertFalse(any('attachments/' in call[0] for call in self.calls))
     def test_poll_caches_unchanged_message_content(self):
         self.box.context([BUYER]);count=len(self.calls);self.now+=121;self.box.context([BUYER])
-        self.assertEqual(len(self.calls),count+1)
+        self.assertEqual(len(self.calls),count+2)
+    def test_slow_background_sync_does_not_block_another_customer(self):
+        entered,release=threading.Event(),threading.Event();results={}
+        self.box._token='token';self.box._token_expires=self.now+3600
+        def request(url,*,token=None,form=None):
+            query=parse_qs(urlsplit(url).query).get('q',[''])[0]
+            if BUYER in query:entered.set();release.wait(3)
+            return {'messages':[]}
+        self.box.request=request
+        first=threading.Thread(target=lambda:results.update(first=self.box.context([BUYER])))
+        second=threading.Thread(target=lambda:results.update(second=self.box.context(['other@example.com'])))
+        first.start();self.assertTrue(entered.wait(1));second.start();second.join(1)
+        try:self.assertFalse(second.is_alive());self.assertEqual(results['second']['status']['state'],'ready')
+        finally:release.set();first.join(3);second.join(3)
     def test_public_desktop_client_refresh_does_not_require_a_secret(self):
         self.box.reader=lambda account:{'client_id':CLIENT,'refresh_token':'refresh'}
         self.assertEqual(self.box.context([BUYER])['status']['state'],'ready')
@@ -93,6 +108,64 @@ class MailboxTests(unittest.TestCase):
         value=email();value['payload']['parts']=[{'mimeType':'text/html','body':{'data':encoded('<p>Hello <b>buyer</b></p>')}},
                                                 {'mimeType':'text/plain','body':{'attachmentId':'body-is-separate'}}]
         result=parse_api_message(value,ACCOUNT,{BUYER});self.assertIn('Hello',result['body']);self.assertTrue(result['body_truncated'])
+    def test_colleague_in_same_thread_associates_with_customer(self):
+        sent=email('11','outbound');colleague=email('12');colleague['payload']['headers'][0]['value']='colleague@example.com'
+        self.values=[sent];self.thread_values=[sent,colleague]
+        messages=self.box.context([BUYER])['messages']
+        self.assertEqual(len(messages),2);self.assertEqual(messages[-1]['customer_emails'],[BUYER])
+        self.assertEqual(messages[-1]['from'],'colleague@example.com')
+    def test_same_subject_thread_does_not_merge_other_companies(self):
+        sent=email('11','outbound');sent['payload']['headers'].append({'name':'Message-ID','value':'<sent-to-buyer>'})
+        unrelated=email('12');unrelated['payload']['headers'][0]['value']='other@different-company.test'
+        unrelated['payload']['headers'].append({'name':'In-Reply-To','value':'<sent-to-someone-else>'})
+        self.values=[sent];self.thread_values=[sent,unrelated]
+        self.assertEqual([m['id'] for m in self.box.context([BUYER])['messages']],['17'])
+    def test_cross_domain_reply_requires_a_reference_to_the_customer_mail(self):
+        sent=email('11','outbound');sent['payload']['headers'].append({'name':'Message-ID','value':'<sent-to-buyer>'})
+        colleague=email('12');colleague['payload']['headers'][0]['value']='agent@buyer-representative.test'
+        colleague['payload']['headers'].append({'name':'In-Reply-To','value':'<sent-to-buyer>'})
+        self.values=[sent];self.thread_values=[sent,colleague]
+        self.assertEqual(len(self.box.context([BUYER])['messages']),2)
+    def test_public_email_domain_alone_does_not_merge_buyers(self):
+        buyer='buyer@gmail.com';sent=email('11','outbound');sent['payload']['headers'][1]['value']=buyer
+        unrelated=email('12');unrelated['payload']['headers'][0]['value']='stranger@gmail.com'
+        self.values=[sent];self.thread_values=[sent,unrelated]
+        self.assertEqual(len(self.box.context([buyer])['messages']),1)
+    def test_thread_excludes_spam_and_drafts(self):
+        sent=email('11','outbound');spam=email('12');spam['labelIds']=['SPAM']
+        self.values=[sent];self.thread_values=[sent,spam]
+        self.assertEqual(len(self.box.context([BUYER])['messages']),1)
+    def test_thread_error_preserves_direct_correspondence_and_reports_incomplete(self):
+        original=self.box.request
+        def broken(url,**kwargs):
+            if '/threads/' in url:raise OSError('offline')
+            return original(url,**kwargs)
+        self.box.request=broken;result=self.box.context([BUYER])
+        self.assertEqual(result['status']['state'],'ready');self.assertTrue(result['status']['thread_lookup_incomplete'])
+        self.assertEqual(len(result['messages']),2)
+    def test_inbox_finds_undiscovered_buyer_and_filters_marketing(self):
+        buyer=email('30',body='We are looking for a supplier of knitted shoes. Could you provide a quotation?')
+        buyer['payload']['headers'][0]['value']='New Buyer <newbuyer@example.com>'
+        promo=email('31',body='Discover the latest shoes in our newsletter!')
+        promo['payload']['headers'][0]['value']='store@example.com';promo['payload']['headers'].append({'name':'List-Unsubscribe','value':'<https://example.com>'})
+        known=email('32',body='We are looking for a supplier of knitted shoes.')
+        self.values=[buyer,promo,known]
+        result=self.box.buyer_candidates({BUYER})
+        self.assertEqual(result['status']['state'],'ready');self.assertEqual(len(result['items']),1)
+        self.assertEqual(result['items'][0]['email'],'newbuyer@example.com');self.assertIn('鞋类',result['items'][0]['summary'])
+        self.assertNotIn('body',result['items'][0])
+    def test_inbox_does_not_duplicate_a_reply_already_linked_by_thread(self):
+        buyer=email('30',body='We are looking for a supplier of shoes.')
+        buyer['payload']['headers'][0]['value']='colleague@example.com';self.values=[buyer]
+        self.assertEqual(self.box.buyer_candidates({BUYER},linked_ids={'48'})['items'],[])
+    def test_candidate_marks_reply_sent_in_same_thread(self):
+        buyer=email('30',body='We are looking for a supplier of knitted shoes.')
+        buyer['payload']['headers'][0]['value']='newbuyer@example.com'
+        answer=email('31','outbound');answer['internalDate']='1793501000000'
+        answer['payload']['headers'][1]['value']='newbuyer@example.com'
+        self.values=[buyer];self.thread_values=[buyer,answer]
+        result=self.box.buyer_candidates({BUYER})
+        self.assertTrue(result['items'][0]['answered'])
 
 
 if __name__=='__main__':unittest.main()
