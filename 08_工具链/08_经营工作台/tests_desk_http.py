@@ -103,6 +103,33 @@ class DeskHTTPTests(unittest.TestCase):
         self.assertEqual(status,200);self.assertEqual(profile['original_text'],original);self.assertTrue(profile['translation_zh'])
         status,queue=self.request('/api/desk/inquiry-queue?bucket=active');self.assertEqual(status,200);self.assertTrue(any(row['object_id']==oid for row in queue['items']))
 
+    def test_buyer_search_and_libtv_routes(self):
+        with patch('buyer_discovery.search_buyers',return_value={'status':'success','records':[{'company':'Sample buyer'}]}) as search:
+            status,result=self.request('/api/desk/buyer-search?q=footwear');self.assertEqual(status,200);self.assertEqual(result['records'][0]['company'],'Sample buyer');search.assert_called_once_with('footwear')
+        with patch.object(self.app.creation,'libtv_execute',return_value={'ok':True,'data':{}}) as execute:
+            status,result=self.request('/api/desk/creation/libtv/nodes?project_id=canvas-id');self.assertEqual(status,200);execute.assert_called_with('nodes',project_id='canvas-id')
+            status,result=self.request('/api/desk/creation/libtv/create',{'name':'项目','workspace_id':'0'});self.assertEqual(status,200);execute.assert_called_with('create_project',name='项目',workspace_id='0')
+            status,result=self.request('/api/desk/creation/libtv/text',{'project_id':'canvas-id','title':'标题','content':'内容'});self.assertEqual(status,200);execute.assert_called_with('create_text_node',project_id='canvas-id',title='标题',content='内容',x=0,y=0)
+
+    def test_customer_material_update_and_remove_keep_original(self):
+        file=self.root/'04_客户开发/.local/网站询盘/BQ-REAL/工厂介绍.pdf'
+        file.parent.mkdir(parents=True);file.write_bytes(b'%PDF material')
+        path=file.relative_to(self.root).as_posix();oid='customer:website-BQ-REAL'
+        status,created=self.request('/api/library',{'title':'工厂材料','path':path,'object_ids':[oid]})
+        self.assertEqual(status,200)
+        status,edited=self.request('/api/library/update',{'id':created['id'],'title':'工厂介绍','object_ids':[]})
+        self.assertEqual(status,200);self.assertEqual(edited['title'],'工厂介绍');self.assertEqual(edited['object_ids'],[])
+        status,removed=self.request('/api/library/remove',{'id':created['id']})
+        self.assertEqual(status,200);self.assertEqual(removed['removed'],created['id']);self.assertEqual(file.read_bytes(),b'%PDF material')
+        self.assertEqual(self.request('/api/library')[1]['items'],[])
+
+    def test_company_lookup_uses_saved_candidate(self):
+        entry=self.app.customer_workspace.create_discovery({'kind':'candidate','company':'Example Buyer'})
+        with patch('company_lookup.lookup_company',return_value={'status':'candidates','candidates':[{'website':'https://buyer.example'}]}) as lookup:
+            status,result=self.request('/api/desk/company-lookup',{'object_id':entry['object_id']})
+            self.assertEqual(status,200);self.assertEqual(result['candidates'][0]['website'],'https://buyer.example')
+            self.assertEqual(lookup.call_args.args[0]['id'],entry['object_id'])
+
     def test_channel_and_creation_pages_use_real_local_sources(self):
         project = self.root/'05_内容与视频/示例/PROJECT.md'
         project.parent.mkdir(parents=True, exist_ok=True)

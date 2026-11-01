@@ -99,3 +99,12 @@ class Creation:
             from connectors.libtv.adapter import Adapter
             self.adapter=Adapter()
         return self.adapter.execute('projects',workspace_id=workspace_id,page=page,page_size=20)
+
+    def libtv_execute(self, operation, **arguments):
+        """Only free canvas/text operations; no model or media generation."""
+        if operation not in ('project','nodes','workspaces','create_project','create_text_node'):
+            raise ValueError('仅支持读取画布、创建画布和添加文字节点')
+        if self.adapter is None:
+            from connectors.libtv.adapter import Adapter
+            self.adapter=Adapter()
+        return self.adapter.execute(operation, **arguments)

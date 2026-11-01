@@ -103,6 +103,55 @@ class WorkflowTests(unittest.TestCase):
         self.assertEqual(ended['next_action'],'')
         self.assertIn('business_summary',self.work.queue()['items'][0])
 
+    def test_new_reply_waiting_baseline_legacy_and_closed(self):
+        from customer_workflow import decorate,update
+        at=datetime(2026,11,1,tzinfo=timezone.utc)
+        old={'id':'old','sender':'buyer','body':'Old','sentAt':'2026-10-31T00:00:00Z'}
+        new={'id':'new','sender':'buyer','body':'New','sentAt':'2026-11-01T01:00:00Z'}
+        record={'messages':[old]}
+        saved=update(decorate('x','website',{'state':'preparing'}),{'state':'waiting_customer'},now=at,record=record)
+        def flow(value=saved):return decorate('x','website',value,record=record)
+        self.assertFalse(flow()['customer_reply_pending'])
+        record['messages'].append(new)
+        pending=flow();self.assertEqual(pending['state'],'new');self.assertEqual(pending['pending_party'],'internal')
+        changed=update(pending,{'note':'Review'},now=at+timedelta(hours=2),record=record)
+        self.assertTrue(flow(changed)['customer_reply_pending'])
+        acknowledged=update(pending,{'state':'waiting_customer'},now=at+timedelta(hours=2),record=record)
+        self.assertFalse(flow(acknowledged)['customer_reply_pending'])
+        legacy={'state':'waiting_customer','updated_at':'2026-11-01T03:00:00Z',
+                'history':[{'to':'waiting_customer','at':at.isoformat()}]}
+        self.assertTrue(flow(legacy)['customer_reply_pending'])
+        for state in ('won','lost','archived'):
+            self.assertFalse(flow({**saved,'state':state})['customer_reply_pending'])
+        record['messages'].append({'sender':'sales','body':'Answered','sentAt':'2026-11-01T02:00:00Z'})
+        self.assertFalse(flow()['customer_reply_pending'])
+        record['messages']=[old,{'sender':'buyer','body':'No timestamp'},{'sender':'buyer','body':'Invalid','sentAt':'bad'}]
+        self.assertFalse(flow()['customer_reply_pending'])
+
+    def test_page_default_form_save_after_customer_reply(self):
+        oid='customer:website-one'
+        saved={'state':'waiting_customer','next_action':'Wait for customer',
+               'updated_at':'2026-10-30T00:00:00Z'}
+        self.work._store_profile(oid,{'workflow':saved})
+        record=json.loads(self.rows[oid]['content'])
+        record['messages']=[{'id':'reply','sender':'buyer','body':'Please prepare samples',
+                             'sentAt':'2026-10-31T00:00:00Z'}]
+        self.rows[oid]['content']=json.dumps(record)
+        profile=self.work.profile(oid);flow=profile['workflow']
+        self.assertEqual(flow['state'],'new')
+        self.assertIn('新回复',flow['next_action'])
+        self.assertEqual(flow['customer_reply_label'],'客户有新回复')
+        # The page sends every displayed field even when only the note was edited.
+        body={key:flow[key] for key in ('state','priority','bucket','due_at','next_action','note')}
+        body['note']='Reviewed page, preparing response'
+        result=self.work.save_workflow(oid,body)
+        self.assertEqual(result['state'],'new')
+        self.assertIn('新回复',result['next_action'])
+        queue=self.work.queue()['items']
+        row=next(row for row in queue if row['object_id']==oid)
+        self.assertEqual(row['business_summary']['next_action'],result['next_action'])
+        self.assertEqual(json.loads(self.rows[oid]['content']),record)
+
     def test_order_summary_is_chinese_business_context_not_json_buyer_quotation(self):
         profile=self.work.profile('customer:order')
         self.assertEqual(profile['original_language'],'zh');self.assertIn('不是买家原话',profile['original_text'])

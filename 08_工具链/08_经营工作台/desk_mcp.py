@@ -182,6 +182,12 @@ class DeskTools:
             return {'object':scoped.object(),'sources':scoped.sources()}
         if name=='list_sources':return self.sources(args.get('q',''),args.get('limit',20))
         if name=='read_source':return self.read(args.get('path'),args.get('start',0),args.get('limit',12000))
+        if name=='list_customer_materials':
+            if self.object().get('kind')!='customer':raise ValueError('资料包仅支持当前客户')
+            return {'materials':self.business.app.library.for_object(self.object_id)}
+        if name=='read_customer_material':
+            if self.object().get('kind')!='customer':raise ValueError('资料包仅支持当前客户')
+            return self.business.app.library.read_for_object(self.object_id,args.get('material_id'),args.get('start',0),args.get('limit',12000))
         if name=='research_company':
             from prospect_research import research_company
             obj=self.object()
@@ -203,6 +209,12 @@ TOOLS.append({'name':'research_company','description':'读取当前候选公司�
               'annotations':{'readOnlyHint':True,'destructiveHint':False,'openWorldHint':True}})
 TOOLS.append({'name':'read_product','description':'按list_objects(kind=product)找到的ID读取产品事实及来源；传返回的source_path可继续读该款原件。用于客户需求匹配，不预设主推款。',
               'inputSchema':{'type':'object','properties':{'product_id':{'type':'string'},'source_path':{'type':'string'},'start':{'type':'integer'}},'required':['product_id'],'additionalProperties':False},
+              'annotations':{'readOnlyHint':True,'destructiveHint':False,'openWorldHint':False}})
+TOOLS.append({'name':'list_customer_materials','description':'查看当前客户关联的资料及通用资料，文件沿用原位置。',
+              'inputSchema':{'type':'object','properties':{},'additionalProperties':False},
+              'annotations':{'readOnlyHint':True,'destructiveHint':False,'openWorldHint':False}})
+TOOLS.append({'name':'read_customer_material','description':'按资料ID读取当前客户或通用资料的PDF/文本内容；图片返回原文件位置。',
+              'inputSchema':{'type':'object','properties':{'material_id':{'type':'string'},'start':{'type':'integer','minimum':0},'limit':{'type':'integer','minimum':1,'maximum':20000}},'required':['material_id'],'additionalProperties':False},
               'annotations':{'readOnlyHint':True,'destructiveHint':False,'openWorldHint':False}})
 
 

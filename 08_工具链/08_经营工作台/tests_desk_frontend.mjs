@@ -105,6 +105,43 @@ test('从客户开发新增公司，并保存业务信息', async () => {
   await findButton(dialog,'保存客户').click(); const request=h.requests.find(x=>x.path==='/api/desk/discovery'&&x.payload?.kind==='candidate'); assert.equal(request.payload.company,'样例采购公司'); assert.equal(request.payload.business_summary,'鞋类批发'); assert.equal(request.payload.next_action,'寻找采购联系人');
 });
 
+test('网站回复可采用成果中的英文正文，不带邮件主题或中文', async () => {
+ const h=harness('#/object/customer%3Awebsite-x'); h.objects.push({id:'customer:website-x',kind:'customer',title:'买家',source:'website:x',conversation:[],assets:[]}); h.artifacts.push({id:'reply-1',object_id:'customer:website-x',title:'回复草稿',content:'# 回复\n## 英文正文\nSubject: inquiry\n\nDear buyer,\n\nThank you.\n\n## 完整中文对照\n亲爱的买家',updated_at:'2026-11-01'}); await h.ui.bootstrap(); await settle();
+ await findButton(h.body,'采用英文正文到回复框').click(); const reply=walk(h.body).find(x=>x['aria-label']==='网站私信回复'); assert.equal(reply.value,'Dear buyer,\n\nThank you.'); assert.equal(h.requests.some(x=>x.path==='/api/desk/website-reply'),false);
+});
+
+test('网站客户优先打开最新保存的回复而非旧任务草稿', async () => {
+ const h=harness('#/object/customer%3Awebsite-x'); h.objects.push({id:'customer:website-x',kind:'customer',title:'买家',source:'website:x',conversation:[],assets:[]});
+ h.artifacts.push({id:'old',object_id:'customer:website-x',title:'旧草稿',content:'旧判断',updated_at:'2026-10-01'},{id:'new',object_id:'customer:website-x',title:'更新后的回复',content:'## 英文正文\nDear buyer',updated_at:'2026-11-01'}); h.jobs.push({id:'job',object_id:'customer:website-x',artifact_id:'old',status:'completed'});
+ await h.ui.bootstrap();await settle();assert.ok(h.ui.S.detail.editor.textContent.includes('更新后的回复'));assert.equal(h.ui.S.detail.editor.textContent.includes('旧判断'),false);
+});
+
+test('买家搜索能查看真实来源并加入目标客户', async () => {
+ const h=harness('#/customers?view=development'), original=h.originalFetch; h.interceptFetch(async (path,options) => { if(String(path).startsWith('/api/desk/buyer-search?'))return {ok:true,json:async()=>({status:'success',records:[{company:'Example Wholesale',shipments:72,last_shipment:'2026-10-01',company_url:'https://www.importyeti.com/company/example'}]})};return original(path,options); });
+ await h.ui.bootstrap(); await settle(); await findButton(h.body,'搜索买家').click(); await settle(); assert.ok(h.elements.page.textContent.includes('Example Wholesale')); await findButton(h.body,'加入目标客户').click(); const created=h.requests.find(x=>x.payload?.company==='Example Wholesale'); assert.equal(created.payload.kind,'candidate'); assert.equal(created.payload.evidence[0].url,'https://www.importyeti.com/company/example');
+});
+
+test('官网搜索可查看来源并保存所选网址到原客户', async () => {
+ const h=harness('#/customers?view=development&item=candidate%3A1'), original=h.originalFetch;
+ h.discovery.candidates.push({id:'candidate:1',object_id:'prospect:candidate:1',kind:'candidate',title:'Example Buyer',company:'Example Buyer',evidence:[]});
+ h.interceptFetch(async(path,options)=>String(path)==='/api/desk/company-lookup' ? {ok:true,json:async()=>({status:'candidates',checked_at:'2026-11-01',candidates:[{website:'https://buyer.example',source_url:'https://source.example/buyer',evidence:'Website: buyer.example'}]})} : original(path,options));
+ await h.ui.bootstrap(); await settle(); await findButton(h.body,'查找公司官网').click();
+ assert.ok(h.elements.page.textContent.includes('https://buyer.example')); assert.ok(h.elements.page.textContent.includes('查看资料来源'));
+ await findButton(h.body,'使用这个官网').click(); await settle();
+ const saved=h.requests.find(x=>x.path==='/api/desk/discovery/update'); assert.equal(saved.payload.website,'https://buyer.example'); assert.equal(saved.payload.evidence.at(-1).url,'https://source.example/buyer');
+});
+
+test('LibTV 画布可读取节点并由用户添加文字', async () => {
+ const h=harness('#/creation'), original=h.originalFetch, calls=[]; h.interceptFetch(async(path,options={})=>{ const url=new URL(path,'http://127.0.0.1:8766'); let value;
+  if(url.pathname==='/api/desk/creation')value={projects:[]};
+  else if(url.pathname==='/api/desk/creation/libtv')value={ok:true,data:{projects:{items:[{id:'canvas-1',name:'测试画布'}]}}};
+  else if(url.pathname==='/api/desk/creation/libtv/nodes')value={ok:true,data:{nodes:{items:[{title:'参考',content:'鞋子画面'}]}}};
+  else if(url.pathname==='/api/desk/creation/libtv/text'){calls.push(JSON.parse(options.body));value={ok:true,data:{node:{id:'node-1'}}};}
+  else return original(path,options);return {ok:true,json:async()=>value}; });
+ await h.ui.bootstrap(); await settle(); await findButton(h.body,'读取我的画布').click(); await findButton(h.body,'查看节点').click(); assert.ok(h.elements.page.textContent.includes('鞋子画面'));
+ const title=walk(h.body).find(x=>x['aria-label']==='节点标题'),content=walk(h.body).find(x=>x['aria-label']==='文字内容');title.value='镜头想法';content.value='鞋子行走';await findButton(h.body,'添加文字节点').click();assert.equal(calls[0].project_id,'canvas-1');assert.equal(calls[0].content,'鞋子行走');
+});
+
 test('job carries current object/token, text events render, and polling preserves instruction and unsaved artifact', async () => {
   const h = harness('#/object/product%3A1'); await h.ui.bootstrap(); await settle(); const ctx = h.ui.S.detail;
   ctx.instruction.value = '根据真实材料整理选款'; ctx.instruction.listeners.input({}); await findButton(h.body, '交给 Sol 处理').click(); const call = h.requests.find(item => item.path === '/api/desk/jobs' && item.payload); assert.equal(call.payload.object_id, 'product:1'); assert.equal(call.options.headers['X-Workbench-Token'], 'fixture-token'); assert.ok(ctx.jobBox.textContent.includes('已取得资料'));
@@ -127,6 +164,34 @@ test('home never recommends arbitrary first products; recents require an actual 
 test('总览直接显示当前客户需求和下一动作', async () => {
   const h = harness(); h.objects.push({id:'customer:active',kind:'customer',title:'当前买家',summary:'需要采购休闲鞋',workflow:{state:'preparing',next_action:'准备选款'}});
   await h.ui.bootstrap(); await settle(); assert.ok(h.elements.page.textContent.includes('待推进的客户')); assert.ok(h.elements.page.textContent.includes('当前买家')); assert.ok(h.elements.page.textContent.includes('准备选款'));
+});
+
+test('总览将待处理的新回复与等待客户的事项分开', async () => {
+  const h = harness(); h.objects.push(
+    {id:'customer:waiting',kind:'customer',title:'等待中的买家',summary:'等资料',workflow:{state:'waiting_customer',pending_party:'customer'}},
+    {id:'customer:reply',kind:'customer',title:'有新回复的买家',summary:'需要评估',workflow:{state:'new',pending_party:'internal',customer_reply_pending:true,next_action:'阅读客户新回复'}});
+  await h.ui.bootstrap(); await settle();
+  const pending=h.elements.page.querySelector('.overview-pending');
+  assert.ok(pending.textContent.includes('有新回复的买家')); assert.ok(pending.textContent.includes('网站客户有新回复'));
+  assert.equal(pending.textContent.includes('等待中的买家'),false); assert.ok(pending.textContent.includes('1 位客户等待回复'));
+});
+
+test('网站往来更新后总览会刷新客户状态', async () => {
+  const h=harness(),original=h.originalFetch;
+  let rows=[{object_id:'customer:1',title:'客户甲',workflow:{state:'waiting_customer',pending_party:'customer'}}];
+  h.interceptFetch(async(path,options)=>String(path).startsWith('/api/desk/inquiry-queue?') ? {ok:true,json:async()=>({items:structuredClone(rows)})} : original(path,options));
+  await h.ui.bootstrap();await settle();assert.ok(h.elements.page.textContent.includes('1 位客户等待回复'));
+  rows=[{object_id:'customer:1',title:'客户甲',workflow:{state:'new',pending_party:'internal',customer_reply_pending:true,next_action:'阅读新回复'}}];
+  h.setWebsite({state:'ready',observed_at:'2026-11-01T03:00:00Z'});await h.ui.poll();await settle();
+  assert.ok(h.elements.page.textContent.includes('网站客户有新回复'));assert.ok(h.elements.page.textContent.includes('阅读新回复'));
+});
+
+test('等待客户时隐藏过时的首封回复建议', async () => {
+  const h=harness('#/object/customer%3Awebsite-x'); h.objects.push({id:'customer:website-x',kind:'customer',title:'买家',source:'website:x',conversation:[],assets:[]});
+  h.profile.workflow={state:'waiting_customer',state_label:'等客户',bucket:'active',next_action:'等待照片',allowed_transitions:[]};
+  h.profile.analysis.questions_now=['请发照片']; h.profile.analysis.recommended_reply='旧的首封回复';
+  await h.ui.bootstrap(); await settle();
+  assert.ok(h.ui.S.detail.profileHost.textContent.includes('等待照片')); assert.equal(h.ui.S.detail.profileHost.textContent.includes('旧的首封回复'),false);
 });
 
 test('成果 sits before a large gallery and only six assets display until expanded', async () => {
@@ -202,7 +267,7 @@ test('inquiry queue separates history, sorts priority, and shows workflow not ra
 });
 
 test('customer detail prioritizes secretary brief, hides JSON and history, saves named workflow with token', async () => {
- const h = harness('#/object/customer%3Arecord'); h.objects.push({id:'customer:record',kind:'customer',title:'实际客户',content:'{"internal_schema":"never show"}',facts:[{label:'技术字段',value:'not in briefing'}],assets:[]}); Object.assign(h.profile.analysis,{brief:'先确认开发边界，再讨论样品',core_need:'开发专用鞋底',questions_now:['使用场景？','验收标准？','目标数量？','非当前问题'],recommended_reply:'先给现有能力及开发边界'}); h.profile.workflow={state:'preparing',priority:'high',next_action:'准备开发范围回复',allowed_transitions:[{state:'waiting_customer',label:'等客户'}]}; await h.ui.bootstrap(); await settle(); const page=h.elements.page,ctx=h.ui.S.detail; assert.ok(page.textContent.includes('先确认开发边界')); assert.equal(page.textContent.includes('internal_schema'),false); assert.equal(page.textContent.includes('非当前问题'),false); const history=walk(page).find(item=>item.tagName==='DETAILS'&&item.children[0]?.textContent==='历史草稿与处理记录'); assert.ok(history); assert.equal(Boolean(history.open),false); const editor=ctx.profileHost.querySelector('.workflow-editor'), next=walk(editor).find(item=>item['aria-label']==='下一动作'); next.value='等待客户补充使用场景'; await next.listeners.input(); await h.ui.poll(); await settle(); assert.equal(ctx.profileHost.querySelector('.workflow-editor'),editor); await findButton(editor,'保存推进安排').click(); const request=h.requests.find(item=>item.path==='/api/desk/customer-workflow'); assert.equal(request.payload.next_action,'等待客户补充使用场景'); assert.equal(request.options.headers['X-Workbench-Token'],'fixture-token');
+ const h = harness('#/object/customer%3Arecord'); h.objects.push({id:'customer:record',kind:'customer',title:'实际客户',content:'{"internal_schema":"never show"}',facts:[{label:'技术字段',value:'not in briefing'}],assets:[]}); Object.assign(h.profile.analysis,{brief:'先确认开发边界，再讨论样品',core_need:'开发专用鞋底',questions_now:['使用场景？','验收标准？','目标数量？','非当前问题'],recommended_reply:'先给现有能力及开发边界'}); h.profile.workflow={state:'preparing',priority:'high',next_action:'准备开发范围回复',allowed_transitions:[{state:'waiting_customer',label:'等客户'}]}; await h.ui.bootstrap(); await settle(); const page=h.elements.page,ctx=h.ui.S.detail; assert.ok(page.textContent.includes('先确认开发边界')); assert.equal(page.textContent.includes('internal_schema'),false); assert.equal(page.textContent.includes('非当前问题'),false); const history=walk(page).find(item=>item.tagName==='DETAILS'&&item.children[0]?.textContent==='回复草稿与工作成果'); assert.ok(history); assert.equal(Boolean(history.open),false); const editor=ctx.profileHost.querySelector('.workflow-editor'), next=walk(editor).find(item=>item['aria-label']==='下一动作'); next.value='等待客户补充使用场景'; await next.listeners.input(); await h.ui.poll(); await settle(); assert.equal(ctx.profileHost.querySelector('.workflow-editor'),editor); await findButton(editor,'保存推进安排').click(); const request=h.requests.find(item=>item.path==='/api/desk/customer-workflow'); assert.equal(request.payload.next_action,'等待客户补充使用场景'); assert.equal(request.options.headers['X-Workbench-Token'],'fixture-token');
 });
 
 

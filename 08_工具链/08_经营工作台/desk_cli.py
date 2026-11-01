@@ -35,13 +35,21 @@ def open_business(root=None, state=None):
         from creation_canvas import CreationCanvas
         app.creation = Creation(app.root)
         app.creation_canvas = CreationCanvas(app)
+        from media_assets import MediaAssets
+        from resource_library import ResourceLibrary
+        app.media = MediaAssets(app.root)
+        app.library = ResourceLibrary(app)
     except Exception:
         app.db.close()
         raise
     return app
 
 
-def invoke(business, area, operation, *, object_id=None, kind='', query='', title=None, content=None, artifact_id=None):
+def invoke(business, area, operation, *, object_id=None, kind='', query='', title=None, content=None, artifact_id=None, material_id=None, start=0):
+    if area == 'materials':
+        if operation=='list':return {'materials':business.app.library.for_object(object_id)}
+        if operation=='read':return business.app.library.read_for_object(object_id,material_id,start=start)
+        raise ValueError('不支持的资料包动作')
     if area == 'canvas':
         canvas = business.app.creation_canvas
         if operation == 'get':return canvas.get(object_id)
@@ -94,6 +102,9 @@ def main(argv=None):
     save.add_argument('--title', required=True)
     save.add_argument('--content-file', type=Path, help='省略时从stdin读取Markdown正文')
     save.add_argument('--artifact-id', help='明确更新同一份既有成果')
+    materials = areas.add_parser('materials').add_subparsers(dest='operation', required=True)
+    materials.add_parser('list').add_argument('object_id')
+    material_read=materials.add_parser('read');material_read.add_argument('object_id');material_read.add_argument('material_id');material_read.add_argument('--start',type=int,default=0)
     canvas = areas.add_parser('canvas').add_subparsers(dest='operation', required=True)
     canvas.add_parser('get').add_argument('object_id')
     canvas_save = canvas.add_parser('save')
@@ -109,7 +120,7 @@ def main(argv=None):
         result = invoke(app.business, args.area, args.operation, object_id=getattr(args, 'object_id', None),
                         kind=getattr(args, 'kind', ''), query=getattr(args, 'query', ''),
                         title=getattr(args, 'title', None), content=content,
-                        artifact_id=getattr(args, 'artifact_id', None))
+                        artifact_id=getattr(args, 'artifact_id', None),material_id=getattr(args,'material_id',None),start=getattr(args,'start',0))
         print(json.dumps(result, ensure_ascii=False))
         return 0
     except ValueError as exc:

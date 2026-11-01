@@ -7,6 +7,7 @@ from pathlib import Path
 from urllib.parse import urlsplit, parse_qs, unquote
 from workspaces import Workspaces, WorkspaceConflict
 from media_assets import MediaAssets, MediaError
+from resource_library import ResourceLibrary
 from product_changes import ProductChanges
 from business import Business
 from agent_jobs import AgentJobs
@@ -45,6 +46,7 @@ class Workbench:
         self.schema=self.state/'proposal.schema.json'; self.schema.write_text(json.dumps(SCHEMA),encoding='utf-8')
         self.workspaces=Workspaces(self)
         self.media=MediaAssets(self.root)
+        self.library=ResourceLibrary(self)
         self.product_changes=ProductChanges(self)
         self.business=Business(self)
         self.customer_workspace=CustomerWorkspace(self)
@@ -238,6 +240,9 @@ class Handler(BaseHTTPRequestHandler):
     def do_GET(self):
         try:
             self.check_host();u=urlsplit(self.path);app=self.server.app
+            if u.path=='/api/library/candidates':return self.send_json({'items':app.library.candidates(parse_qs(u.query).get('q',[''])[0])})
+            if u.path=='/api/library':return self.send_json({'items':app.library.list()})
+            if u.path=='/api/library/file':return app.library.serve(self,parse_qs(u.query).get('id',[''])[0])
             if u.path=='/api/health':return self.send_json({'ok':True,'model':MODEL,'app':'beiqiang-workbench','root':str(app.root)})
             if u.path.startswith('/api/desk/'):
                 query=parse_qs(u.query)
@@ -254,6 +259,7 @@ class Handler(BaseHTTPRequestHandler):
                 if u.path=='/api/desk/creation':return self.send_json({'projects':app.creation.list_projects(value('q'))})
                 if u.path=='/api/desk/creation/item':return self.send_json(app.creation.get_project(value('id')))
                 if u.path=='/api/desk/creation/libtv':return self.send_json(app.creation.libtv_projects())
+                if u.path=='/api/desk/creation/libtv/nodes':return self.send_json(app.creation.libtv_execute('nodes',project_id=value('project_id')))
                 if u.path=='/api/desk/title-diagnosis':return self.send_json(app.product_changes.diagnose(value('product_id')))
                 if u.path=='/api/desk/channels':return self.send_json(app.channel_overview.snapshot())
                 if u.path=='/api/desk/douyin':
@@ -261,6 +267,9 @@ class Handler(BaseHTTPRequestHandler):
                     if run.returncode:raise ValueError('抖店数据暂不可读')
                     return self.send_json(json.loads(run.stdout))
                 if u.path=='/api/desk/discovery':return self.send_json(app.customer_workspace.discovery())
+                if u.path=='/api/desk/buyer-search':
+                    from buyer_discovery import search_buyers
+                    return self.send_json(search_buyers(value('q') or 'footwear'))
                 if u.path=='/api/desk/discovery/item':return self.send_json(app.customer_workspace.get_discovery(value('id')))
                 if u.path=='/api/desk/objects':return self.send_json({'objects':app.business.list_objects(kind=value('kind'),q=value('q'))})
                 if u.path=='/api/desk/object':return self.send_json(app.business.get_object(value('id')))
@@ -299,9 +308,16 @@ class Handler(BaseHTTPRequestHandler):
             limit=550000 if urlsplit(self.path).path=='/api/desk/creation-canvas' else 256000 if urlsplit(self.path).path=='/api/canvases' else 64000
             if size<1 or size>limit:raise ValueError('请求大小无效')
             body=json.loads(self.rfile.read(size));parts=urlsplit(self.path).path.strip('/').split('/')
+            if parts==['api','library']:return self.send_json(app.library.add(body))
             if not isinstance(body,dict):raise ValueError('请求必须是JSON对象')
+            if parts==['api','library','update']:return self.send_json(app.library.update(body))
+            if parts==['api','library','remove']:return self.send_json(app.library.remove(body.get('id')))
             if parts==['api','desk','creation-canvas']:
                 return self.send_json({'canvas':app.creation_canvas.save(body)})
+            if parts==['api','desk','creation','libtv','create']:
+                return self.send_json(app.creation.libtv_execute('create_project',name=body.get('name'),workspace_id=body.get('workspace_id','0')))
+            if parts==['api','desk','creation','libtv','text']:
+                return self.send_json(app.creation.libtv_execute('create_text_node',project_id=body.get('project_id'),title=body.get('title'),content=body.get('content'),x=body.get('x',0),y=body.get('y',0)))
             if parts==['api','desk','jobs']:
                 return self.send_json(app.agent_jobs.start(body.get('object_id'),body.get('instruction'),mode=body.get('mode','draft')),201)
             if parts==['api','desk','customer-profile']:
@@ -312,6 +328,9 @@ class Handler(BaseHTTPRequestHandler):
             if parts==['api','desk','customer-workflow']:
                 object_id=body.pop('object_id',None)
                 return self.send_json(app.customer_workspace.save_workflow(object_id,body))
+            if parts==['api','desk','company-lookup']:
+                from company_lookup import lookup_company
+                return self.send_json(lookup_company(app.business.get_object(body.get('object_id'))))
             if parts==['api','desk','discovery']:return self.send_json(app.customer_workspace.create_discovery(body),201)
             if parts==['api','desk','discovery','update']:
                 entry_id=body.pop('id',None)

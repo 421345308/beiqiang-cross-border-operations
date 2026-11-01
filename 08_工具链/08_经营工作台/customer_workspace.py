@@ -132,7 +132,7 @@ class CustomerWorkspace:
             'source_hash':source_hash,'derived_source_hash':saved.get('source_hash'),
             'stale':bool(saved.get('source_hash')) and saved.get('source_hash')!=source_hash,'updated_at':saved.get('updated_at'),
             'operator_context':saved.get('operator_context',''),
-            'workflow':customer_workflow.decorate(object_id,source_type,saved.get('workflow')),
+            'workflow':customer_workflow.decorate(object_id,source_type,saved.get('workflow'),record=record),
             'derivation':'人工或Agent派生资料；facts为列明依据的摘录，inferences为判断，不改原文。'}
 
     def save_profile(self,object_id,body):
@@ -174,11 +174,11 @@ class CustomerWorkspace:
 
     def workflow(self,object_id):
         obj,source_type,record,original,source_hash=self._source(object_id)
-        return customer_workflow.decorate(object_id,source_type,self._saved_profile(object_id).get('workflow'))
+        return customer_workflow.decorate(object_id,source_type,self._saved_profile(object_id).get('workflow'),record=record)
 
     def save_workflow(self,object_id,body):
         with self.app.lock:
-            row=customer_workflow.update(self.workflow(object_id),body)
+            row=customer_workflow.update(self.workflow(object_id),body,record=self._source(object_id)[2])
             saved=self._saved_profile(object_id)
             saved.update(object_id=object_id,workflow=row)
             self._store_profile(object_id,saved)
@@ -191,7 +191,7 @@ class CustomerWorkspace:
             object_id=entry['id'];obj,source_type,record,original,source_hash=self._source(object_id)
             if source_type=='alibaba_order_buyer':continue
             saved=self._saved_profile(object_id);cleaned=saved.get('cleaned',{})
-            flow=customer_workflow.decorate(object_id,source_type,saved.get('workflow'))
+            flow=customer_workflow.decorate(object_id,source_type,saved.get('workflow'),record=record)
             rows.append({'object_id':object_id,'title':obj.get('title') or '',
                 'contact':{'name':record.get('name') or record.get('contact_name') or cleaned.get('contact_name') or '',
                     'email':record.get('email') or cleaned.get('email') or ''},
