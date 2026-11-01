@@ -108,11 +108,13 @@ class DeskHTTPTests(unittest.TestCase):
         self.assertEqual(status, 200)
         self.assertIn('创作项目', initial['canvas']['nodes'][0]['data']['title'])
         canvas = initial['canvas']; canvas['nodes'][0]['data']['title'] = '继续制作'
+        canvas['nodes'].append({'id':'shot1','type':'creation','position':{'x':120,'y':280},'data':{'kind':'shot','title':'镜头一','duration':'3','visual':'鞋子侧面行走','copy':'轻松出行','status':'待制作','media_path':'05_内容与视频/示例/鞋图.png'}})
         status, saved = self.request('/api/desk/creation-canvas', canvas)
         self.assertEqual(status, 200)
         self.assertTrue(saved['canvas']['version'])
         self.assertEqual(self.request('/api/desk/creation-canvas', canvas)[0], 409)
         self.assertEqual(self.request('/api/desk/creation-canvas?'+urlencode({'object_id': oid}))[1]['canvas']['nodes'][0]['data']['title'], '继续制作')
+        self.assertEqual(self.request('/api/desk/creation-canvas?'+urlencode({'object_id': oid}))[1]['canvas']['nodes'][1]['data']['visual'], '鞋子侧面行走')
         self.assertEqual(project.read_text(encoding='utf8'), '# 创作项目\n这里是当前记录')
         malformed = saved['canvas'].copy(); malformed['nodes'] = [None]
         self.assertEqual(self.request('/api/desk/creation-canvas', malformed)[0], 400)

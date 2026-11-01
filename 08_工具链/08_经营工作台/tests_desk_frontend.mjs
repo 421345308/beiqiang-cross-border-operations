@@ -99,6 +99,12 @@ test('客户详情直接展示公司网站和现有联系方式', async () => {
   await h.ui.bootstrap(); await settle(); assert.ok(h.elements.page.textContent.includes('邮箱：buyer@example.org')); assert.ok(walk(h.body).some(x=>x.tagName==='A' && x.textContent==='访问公司网站 ↗'));
 });
 
+test('从客户开发新增公司，并保存业务信息', async () => {
+  const h=harness('#/customers?view=development'); await h.ui.bootstrap(); await settle(); await findButton(h.body,'新增客户').click(); const dialog=walk(h.body).find(x=>x.tagName==='DIALOG');
+  for (const [label,value] of [['公司名称','样例采购公司'],['公司网站','https://buyer.example'],['国家或市场','英国'],['业务摘要','鞋类批发'],['买家类型','批发商'],['联系状态','未联系'],['下一步','寻找采购联系人']]) { const field=walk(dialog).find(x=>x['aria-label']===label); field.value=value; }
+  await findButton(dialog,'保存客户').click(); const request=h.requests.find(x=>x.path==='/api/desk/discovery'&&x.payload?.kind==='candidate'); assert.equal(request.payload.company,'样例采购公司'); assert.equal(request.payload.business_summary,'鞋类批发'); assert.equal(request.payload.next_action,'寻找采购联系人');
+});
+
 test('job carries current object/token, text events render, and polling preserves instruction and unsaved artifact', async () => {
   const h = harness('#/object/product%3A1'); await h.ui.bootstrap(); await settle(); const ctx = h.ui.S.detail;
   ctx.instruction.value = '根据真实材料整理选款'; ctx.instruction.listeners.input({}); await findButton(h.body, '交给 Sol 处理').click(); const call = h.requests.find(item => item.path === '/api/desk/jobs' && item.payload); assert.equal(call.payload.object_id, 'product:1'); assert.equal(call.options.headers['X-Workbench-Token'], 'fixture-token'); assert.ok(ctx.jobBox.textContent.includes('已取得资料'));
@@ -116,6 +122,11 @@ test('home never recommends arbitrary first products; recents require an actual 
   const h = harness(); h.artifacts.length = 0; await h.ui.bootstrap(); await settle(); assert.ok(h.elements.page.textContent.includes('从业务开始')); assert.ok(h.elements.page.textContent.includes('网站记录')); assert.equal(h.elements.page.textContent.includes('继续工作'), false); assert.equal(h.elements.page.textContent.includes('真实商品'), false);
   h.objects.push({ id: 'customer:worked', kind: 'customer', title: '实际处理过的客户', source: '本地客户记录', assets: [] }); h.jobs.push({ id: 'past-job', object_id: 'customer:worked', status: 'completed', updated_at: '2026-10-31T02:00:00Z' }); await h.ui.bootstrap(); await settle(); assert.ok(h.elements.page.textContent.includes('实际处理过的客户')); assert.equal(h.elements.page.textContent.includes('真实商品'), false);
   h.location.hash = '#/object/product%3A1'; await h.ui.renderRoute(); await settle(); h.location.hash = '#/overview'; await h.ui.renderRoute(); assert.ok(h.elements.page.textContent.includes('真实商品')); assert.ok(h.elements.page.textContent.includes('继续工作'));
+});
+
+test('总览直接显示当前客户需求和下一动作', async () => {
+  const h = harness(); h.objects.push({id:'customer:active',kind:'customer',title:'当前买家',summary:'需要采购休闲鞋',workflow:{state:'preparing',next_action:'准备选款'}});
+  await h.ui.bootstrap(); await settle(); assert.ok(h.elements.page.textContent.includes('待推进的客户')); assert.ok(h.elements.page.textContent.includes('当前买家')); assert.ok(h.elements.page.textContent.includes('准备选款'));
 });
 
 test('成果 sits before a large gallery and only six assets display until expanded', async () => {

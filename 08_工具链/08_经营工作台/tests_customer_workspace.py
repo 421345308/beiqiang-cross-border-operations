@@ -100,3 +100,15 @@ class MessageTranslationTests(CustomerTests):
         self.assertEqual(updated['conversation'][1]['translation_zh'],'请选择款式。')
         with self.assertRaises(ValueError):self.work.save_profile(self.obj['id'],{'source_hash':profile['source_hash'],'message_translations':[]})
         with self.assertRaises(ValueError):self.work.save_profile(self.obj['id'],{'source_hash':updated['source_hash'],'message_translations':[{'message_id':'foreign','translation_zh':'错误'}]})
+
+class DiscoveryOrganizationTests(CustomerTests):
+    def test_business_fields_persist_and_source_is_untouched(self):
+        path=self.candidates();before=path.read_bytes()
+        fields={'priority':'high','country':'US','business_summary':'Wholesale buyer','business_category':'wholesaler','contact_status_label':'Not contacted','next_action':'Check buyer route','contact_name':'Buyer','email':'buyer@example.test','phone':'12345'}
+        row=self.work.update_discovery('candidate:stable-company',fields)
+        for key,value in fields.items():self.assertEqual(row[key],value)
+        self.assertEqual(path.read_bytes(),before)
+        self.assertEqual(CustomerWorkspace(self.app).get_discovery(row['id'])['priority'],'high')
+        created=self.work.create_discovery({'kind':'candidate','company':'Sub brand','website':'https://buyer.test',**fields})
+        self.assertEqual(created['business_summary'],'Wholesale buyer')
+        with self.assertRaises(ValueError):self.work.update_discovery(row['id'],{'priority':'invalid'})

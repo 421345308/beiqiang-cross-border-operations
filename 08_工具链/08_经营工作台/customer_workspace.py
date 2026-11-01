@@ -18,7 +18,7 @@ CANDIDATES='04_客户开发/02_目标名单/.local/客户发现助手/candidates
 SOURCE_FIELDS={'company','country','quantity','need','stage','contact_name','email','products','timeline','destination','budget','source_notes'}
 ANALYSIS_FIELDS={'intent','fit','basis','missing','next_action','facts','inferences','needs','product_fit','recommendations','reply_draft','risks','questions',
                  'brief','core_need','recommended_reply','secondary_requests','conflicts','questions_now'}
-DISCOVERY_FIELDS={'title','target','company','website','market_hint','evidence','next_action','status','notes','object_id','origin_object_id','ready_for_customer'}
+DISCOVERY_FIELDS={'title','target','company','website','market_hint','evidence','next_action','status','notes','object_id','origin_object_id','ready_for_customer','priority','business_summary','business_category','contact_status_label','country','contact_name','email','phone'}
 
 def _now():return datetime.now(timezone.utc).isoformat()
 def _hash(value):return hashlib.sha256(value.encode('utf8')).hexdigest()
@@ -264,6 +264,7 @@ class CustomerWorkspace:
         clean={}
         for key,value in body.items():
             if key=='kind':continue
+            if key=='priority' and value not in ('high','normal','low'):raise ValueError('请选择有效的优先级')
             if key=='ready_for_customer':
                 if type(value) is not bool:raise ValueError('准备推进标记须为布尔值')
                 clean[key]=value
@@ -275,7 +276,7 @@ class CustomerWorkspace:
         if kind not in ('candidate','research_task') or not (clean.get('title') or clean.get('company')):raise ValueError('请填写研究任务标题或候选公司')
         oid=('candidate:local-' if kind=='candidate' else 'research:')+uuid4().hex;at=_now()
         row={'id':oid,'kind':kind,'source_id':None,'title':clean.get('title') or clean.get('company'),'target':'','company':'','website':'','market_hint':'',
-             'evidence':[],'next_action':'','status':'待研究','notes':'','object_id':'prospect:'+oid,'ready_for_customer':False,'source':'人工研究补充',
+             'priority':'normal','business_summary':'','business_category':'','contact_status_label':'','country':'','evidence':[],'next_action':'','status':'待研究','notes':'','object_id':'prospect:'+oid,'ready_for_customer':False,'source':'人工研究补充',
              'source_verification':{'state':'unverified','note':'人工创建的研究对象，尚未核为采购机会或已触达。'},'crm_status':'not_checked','outreach_status':'unknown','created_at':at,'updated_at':at,**clean}
         with self.app.lock:
             path=self.root/'04_客户开发/02_目标名单/.local/工作台研究'/(oid.split(':',1)[1]+'.json')
@@ -305,4 +306,5 @@ class CustomerWorkspace:
                 'ready_count':sum(r.get('ready_for_customer') is True for r in rows),'outreach_status':'not_enabled'},
             'sources':[{'path':CANDIDATES,'state':'ready' if (self.root/CANDIDATES).is_file() else 'not_available',
             'scope':'既有候选池只读；研究补充原业务.local保存，不复制或修改正式CRM。'}],
+            'priorities':{'high':'优先','normal':'正常','low':'稍后'},
             'counts':counts,'outreach_enabled':False}
