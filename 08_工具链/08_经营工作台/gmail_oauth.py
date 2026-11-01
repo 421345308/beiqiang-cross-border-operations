@@ -38,7 +38,7 @@ def save_credentials(account, value):
 
 def credentials_available(account):
     value = load_credentials(account)
-    return bool(value and value.get('refresh_token') and value.get('client_id') and value.get('client_secret'))
+    return bool(value and value.get('refresh_token') and value.get('client_id'))
 
 
 def _request(url, *, token=None, form=None):
@@ -62,9 +62,9 @@ def _desktop_client(config):
     if not isinstance(config, dict) or not isinstance(config.get('installed'), dict):
         raise ValueError('请选择 Google Cloud 下载的“桌面应用”客户端 JSON')
     installed = config['installed']
-    client_id, client_secret = installed.get('client_id'), installed.get('client_secret')
+    client_id, client_secret = installed.get('client_id'), installed.get('client_secret', '')
     if (not isinstance(client_id, str) or not client_id.endswith('.apps.googleusercontent.com')
-            or not isinstance(client_secret, str) or not client_secret or len(client_secret) > 500):
+            or not isinstance(client_secret, str) or len(client_secret) > 500):
         raise ValueError('Google 客户端文件缺少有效的客户端信息')
     return {'client_id': client_id, 'client_secret': client_secret}
 
@@ -82,7 +82,7 @@ class GmailOAuth:
             saved = self.reader(account_hint) if account_hint else None
             if not saved:
                 raise ValueError('请先选择 Google Cloud 下载的桌面应用客户端 JSON')
-            client = {'client_id': saved['client_id'], 'client_secret': saved['client_secret']}
+            client = {'client_id': saved['client_id'], 'client_secret': saved.get('client_secret', '')}
         state, verifier = secrets.token_urlsafe(32), secrets.token_urlsafe(64)
         challenge = base64.urlsafe_b64encode(hashlib.sha256(verifier.encode()).digest()).rstrip(b'=').decode()
         with self.lock:
@@ -104,9 +104,11 @@ class GmailOAuth:
         if self.clock() - pending['started_at'] > 900 or not code:
             raise ValueError('Google 登录未完成，请从工作台重新发起')
         client = pending['client']
-        tokens = self.request(TOKEN_URL, form={'client_id': client['client_id'], 'client_secret': client['client_secret'],
-            'code': code, 'code_verifier': pending['verifier'], 'grant_type': 'authorization_code',
-            'redirect_uri': pending['redirect_uri']})
+        form = {'client_id': client['client_id'], 'code': code, 'code_verifier': pending['verifier'],
+                'grant_type': 'authorization_code', 'redirect_uri': pending['redirect_uri']}
+        if client['client_secret']:
+            form['client_secret'] = client['client_secret']
+        tokens = self.request(TOKEN_URL, form=form)
         if not tokens.get('access_token') or not tokens.get('refresh_token'):
             raise ValueError('Google 未提供持续读取授权，请重新连接')
         if tokens.get('scope') and SCOPE not in tokens['scope'].split():
@@ -197,8 +199,10 @@ class GmailOAuthMailbox:
         saved = self.reader(self.account_email)
         if not saved:
             raise ValueError('请重新连接 Google 账号')
-        result = self.request(TOKEN_URL, form={'client_id': saved['client_id'], 'client_secret': saved['client_secret'],
-            'refresh_token': saved['refresh_token'], 'grant_type': 'refresh_token'})
+        form = {'client_id': saved['client_id'], 'refresh_token': saved['refresh_token'], 'grant_type': 'refresh_token'}
+        if saved.get('client_secret'):
+            form['client_secret'] = saved['client_secret']
+        result = self.request(TOKEN_URL, form=form)
         if not result.get('access_token'):
             raise ValueError('Google 授权已失效，请重新连接')
         self._token, self._token_expires = result['access_token'], self.clock() + int(result.get('expires_in', 3600))

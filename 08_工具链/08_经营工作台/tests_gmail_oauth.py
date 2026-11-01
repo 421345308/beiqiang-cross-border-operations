@@ -53,6 +53,10 @@ class OAuthTests(unittest.TestCase):
         self.auth.reader=lambda account:{'client_id':CLIENT,'client_secret':'saved','refresh_token':'old'}
         query=parse_qs(urlsplit(self.auth.start(None,REDIRECT,ACCOUNT)).query)
         self.assertEqual(query['client_id'],[CLIENT])
+    def test_public_desktop_client_can_authorize_without_a_client_secret(self):
+        url=self.auth.start({'installed':{'client_id':CLIENT}},REDIRECT)
+        self.auth.finish(parse_qs(urlsplit(url).query)['state'][0],'code')
+        self.assertNotIn('client_secret',self.calls[0][2]);self.assertEqual(self.saved[0][1]['client_secret'],'')
 
 
 class MailboxTests(unittest.TestCase):
@@ -75,6 +79,10 @@ class MailboxTests(unittest.TestCase):
     def test_poll_caches_unchanged_message_content(self):
         self.box.context([BUYER]);count=len(self.calls);self.now+=121;self.box.context([BUYER])
         self.assertEqual(len(self.calls),count+1)
+    def test_public_desktop_client_refresh_does_not_require_a_secret(self):
+        self.box.reader=lambda account:{'client_id':CLIENT,'refresh_token':'refresh'}
+        self.assertEqual(self.box.context([BUYER])['status']['state'],'ready')
+        self.assertNotIn('client_secret',self.calls[0][2])
     def test_failed_refresh_preserves_history_without_claiming_no_reply(self):
         self.box.context([BUYER]);self.fail=True;result=self.box.context([BUYER],force=True)
         self.assertEqual(result['status']['state'],'error');self.assertIsNone(result['reply_pending']);self.assertEqual(len(result['messages']),2)
