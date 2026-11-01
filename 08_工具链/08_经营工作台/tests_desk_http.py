@@ -89,6 +89,20 @@ class DeskHTTPTests(unittest.TestCase):
         self.assertEqual(status,200);self.assertEqual(bootstrap['csrf_token'],self.app.token)
         self.assertEqual(bootstrap['website_status']['state'],'ready')
 
+    def test_alibaba_manual_inquiry_to_analysis_and_queue(self):
+        from tests_customer_analysis import response
+        original='Please send a quotation for 500 pairs of walking shoes.'
+        status,created=self.request('/api/desk/inquiries',{'channel':'alibaba','company':'Fixture buyer','original_text':original})
+        self.assertEqual(status,201);oid=created['object_id']
+        status,profile=self.request('/api/desk/customer-profile?'+urlencode({'object_id':oid}))
+        self.assertEqual(status,200);self.assertEqual(profile['original_text'],original)
+        self.options={'content':json.dumps(response(),ensure_ascii=False)}
+        status,job=self.request('/api/desk/jobs',{'object_id':oid,'mode':'customer_analysis','instruction':'翻译并整理回复要点'})
+        self.assertEqual(status,201);done=self.wait_job(job['id']);self.assertEqual(done['status'],'completed')
+        status,profile=self.request('/api/desk/customer-profile?'+urlencode({'object_id':oid}))
+        self.assertEqual(status,200);self.assertEqual(profile['original_text'],original);self.assertTrue(profile['translation_zh'])
+        status,queue=self.request('/api/desk/inquiry-queue?bucket=active');self.assertEqual(status,200);self.assertTrue(any(row['object_id']==oid for row in queue['items']))
+
     def test_channel_and_creation_pages_use_real_local_sources(self):
         project = self.root/'05_内容与视频/示例/PROJECT.md'
         project.parent.mkdir(parents=True, exist_ok=True)
