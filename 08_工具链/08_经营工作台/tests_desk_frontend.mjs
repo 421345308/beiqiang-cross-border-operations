@@ -60,6 +60,52 @@ function harness(hash = '#/overview') {
   return { ui: context.window.__desk, elements, body, objects, artifacts, jobs, requests, location, profile, discovery, setWebsite: value => { web = value; }, originalFetch: context.fetch, interceptFetch: callback => { context.fetch = callback; } };
 }
 
+test('Gmail 显示真实连接状态，原文按需展开，更新邮件保留未保存内容', async () => {
+  const h=harness('#/object/customer%3A1'), original=h.originalFetch;
+  h.objects.push({id:'customer:1',kind:'customer',title:'邮件客户',assets:[]});
+  let mail={status:{state:'not_connected'},messages:[]};
+  h.interceptFetch(async(path,options)=>String(path).startsWith('/api/desk/gmail/') ? {ok:true,json:async()=>structuredClone(mail)} : original(path,options));
+  await h.ui.bootstrap(); await settle(); assert.ok(h.elements.page.textContent.includes('尚未连接 Gmail')); assert.equal(h.elements.page.textContent.includes('已连接 ·'),false);
+  const instruction=h.ui.S.detail.instruction; instruction.value='自己未提交的要求'; instruction.listeners.input();
+  mail={status:{state:'connected',account_email:'sales@example.org'},reply_pending:true,next_action:'准备样品资料',messages:[{id:'m1',direction:'inbound',sent_at:'2026-11-01T01:00:00Z',subject:'Sample request',snippet:'Please send sample details',body:'Buyer original text',from:'buyer@example.org',to:['sales@example.org']}]};
+  await findButton(h.body,'更新邮件往来').click(); await settle();
+  const panel=h.elements.page.querySelector('.gmail-conversation'); assert.ok(panel.textContent.includes('客户有新邮件')); assert.ok(panel.textContent.includes('准备样品资料')); assert.equal(panel.querySelector('details').open,undefined); assert.ok(panel.textContent.includes('Buyer original text'));
+  assert.equal(h.ui.S.detail.instruction,instruction); assert.equal(instruction.value,'自己未提交的要求');
+  await findButton(panel,'根据邮件准备回复').click(); assert.ok(instruction.value.startsWith('自己未提交的要求')); assert.ok(instruction.value.includes('最新 Gmail 往来')); assert.equal(h.requests.some(x=>x.path.includes('send')),false);
+});
+
+test('Gmail 连接只在本地表单提交密码，成功刷新并清空密码', async () => {
+  const h=harness('#/object/customer%3Amail'), original=h.originalFetch, calls=[];
+  h.objects.push({id:'customer:mail',kind:'customer',title:'邮箱客户',assets:[]}); let connected=false;
+  h.interceptFetch(async(path,options={})=>{ if(String(path)==='/api/desk/gmail/connect') {calls.push(JSON.parse(options.body)); connected=true; return {ok:true,json:async()=>({ok:true})};} if(String(path).startsWith('/api/desk/gmail/'))return {ok:true,json:async()=>({status:{state:connected?'connected':'not_connected',account_email:connected?'sales@example.org':''},messages:[]})}; return original(path,options); });
+  await h.ui.bootstrap(); await settle();
+  const panel=h.elements.page.querySelector('.gmail-conversation'), account=walk(panel).find(x=>x['aria-label']==='Gmail 邮箱'), password=walk(panel).find(x=>x['aria-label']==='Google 应用专用密码');
+  assert.equal(password.type,'password'); assert.ok(panel.textContent.includes('不要发到聊天中')); assert.ok(walk(panel).some(x=>x.tagName==='A' && x.href==='https://myaccount.google.com/apppasswords'));
+  account.value='sales@example.org'; password.value='fixture-app-secret'; await findButton(panel,'连接邮箱').click(); await settle();
+  assert.equal(calls.length,1); assert.equal(calls[0].app_password,'fixture-app-secret'); assert.equal(password.value,''); assert.ok(panel.textContent.includes('已连接')); assert.equal(panel.textContent.includes('fixture-app-secret'),false);
+});
+
+test('总览与询盘列表分别提醒 Gmail 和网站站内消息', async () => {
+  const h=harness(); h.objects.push({id:'customer:mail',kind:'customer',title:'邮件回复买家',workflow:{gmail_reply_pending:true,customer_reply_pending:true,state:'preparing'}});
+  await h.ui.bootstrap(); await settle(); assert.ok(h.elements.page.textContent.includes('Gmail 客户有新回复')); assert.ok(h.elements.page.textContent.includes('网站站内消息有新回复'));
+  h.location.hash='#/customers?view=inquiries'; await h.ui.renderRoute(); await settle(); assert.ok(h.elements.page.textContent.includes('Gmail 客户有新回复'));
+});
+
+test('后台同步到新邮件后自动刷新总览', async () => {
+  const h=harness(),original=h.originalFetch;let revision=0;
+  let rows=[{object_id:'customer:mail',title:'邮件客户',workflow:{state:'waiting_customer',pending_party:'customer'}}];
+  h.interceptFetch(async(path,options)=>{
+    if(String(path).startsWith('/api/desk/inquiry-queue?'))return {ok:true,json:async()=>({items:structuredClone(rows)})};
+    const response=await original(path,options);
+    if(path==='/api/desk/bootstrap'){const value=await response.json();value.gmail_revision=revision;return {ok:true,json:async()=>value};}
+    return response;
+  });
+  await h.ui.bootstrap();await settle();assert.ok(h.elements.page.textContent.includes('1 位客户等待回复'));
+  revision=1;rows=[{object_id:'customer:mail',title:'邮件客户',workflow:{state:'new',pending_party:'internal',gmail_reply_pending:true,gmail_next_action:'阅读客户新邮件'}}];
+  h.ui.S.lastBootstrapPoll=0;await h.ui.poll();await settle();
+  assert.ok(h.elements.page.textContent.includes('Gmail 客户有新回复'));assert.ok(h.elements.page.textContent.includes('阅读客户新邮件'));
+});
+
 test('real data drives navigation and original content is collapsed; untrusted titles stay text', async () => {
   const h = harness('#/products'); await h.ui.bootstrap(); await settle(); assert.ok(h.elements.page.textContent.includes('真实商品')); assert.equal(walk(h.body).some(item => item.tagName === 'SCRIPT'), false);
   h.location.hash = '#/object/product%3A1'; await h.ui.renderRoute(); await settle(); assert.equal(h.elements.page.querySelector('.object-source-details'), null); assert.equal(h.ui.safeUrl('javascript:alert(1)'), null); assert.equal(h.ui.imageAsset({ path: 'real.jpg', url: '/api/asset?id=1' }), true);
@@ -117,8 +163,8 @@ test('网站客户优先打开最新保存的回复而非旧任务草稿', async
 });
 
 test('买家搜索能查看真实来源并加入目标客户', async () => {
- const h=harness('#/customers?view=development'), original=h.originalFetch; h.interceptFetch(async (path,options) => { if(String(path).startsWith('/api/desk/buyer-search?'))return {ok:true,json:async()=>({status:'success',records:[{company:'Example Wholesale',shipments:72,last_shipment:'2026-10-01',company_url:'https://www.importyeti.com/company/example'}]})};return original(path,options); });
- await h.ui.bootstrap(); await settle(); await findButton(h.body,'搜索买家').click(); await settle(); assert.ok(h.elements.page.textContent.includes('Example Wholesale')); await findButton(h.body,'加入目标客户').click(); const created=h.requests.find(x=>x.payload?.company==='Example Wholesale'); assert.equal(created.payload.kind,'candidate'); assert.equal(created.payload.evidence[0].url,'https://www.importyeti.com/company/example');
+ const h=harness('#/customers?view=development'), original=h.originalFetch; h.interceptFetch(async (path,options) => { if(String(path).startsWith('/api/desk/buyer-search?'))return {ok:true,json:async()=>({status:'success',records:[{company:'Example Wholesale',source_title:'Example Wholesale',source_url:'https://example.test/about',excerpt:'Footwear wholesaler'}]})};return original(path,options); });
+ await h.ui.bootstrap(); await settle(); await findButton(h.body,'搜索买家').click(); await settle(); assert.ok(h.elements.page.textContent.includes('Example Wholesale')); await findButton(h.body,'加入目标客户').click(); const created=h.requests.find(x=>x.payload?.company==='Example Wholesale'); assert.equal(created.payload.kind,'candidate'); assert.equal(created.payload.evidence[0].url,'https://example.test/about'); assert.equal(created.payload.country,undefined); assert.doesNotMatch(created.payload.business_summary,/进口记录/);
 });
 
 test('官网搜索可查看来源并保存所选网址到原客户', async () => {
@@ -172,7 +218,7 @@ test('总览将待处理的新回复与等待客户的事项分开', async () =>
     {id:'customer:reply',kind:'customer',title:'有新回复的买家',summary:'需要评估',workflow:{state:'new',pending_party:'internal',customer_reply_pending:true,next_action:'阅读客户新回复'}});
   await h.ui.bootstrap(); await settle();
   const pending=h.elements.page.querySelector('.overview-pending');
-  assert.ok(pending.textContent.includes('有新回复的买家')); assert.ok(pending.textContent.includes('网站客户有新回复'));
+  assert.ok(pending.textContent.includes('有新回复的买家')); assert.ok(pending.textContent.includes('网站站内消息有新回复'));
   assert.equal(pending.textContent.includes('等待中的买家'),false); assert.ok(pending.textContent.includes('1 位客户等待回复'));
 });
 
@@ -183,7 +229,7 @@ test('网站往来更新后总览会刷新客户状态', async () => {
   await h.ui.bootstrap();await settle();assert.ok(h.elements.page.textContent.includes('1 位客户等待回复'));
   rows=[{object_id:'customer:1',title:'客户甲',workflow:{state:'new',pending_party:'internal',customer_reply_pending:true,next_action:'阅读新回复'}}];
   h.setWebsite({state:'ready',observed_at:'2026-11-01T03:00:00Z'});await h.ui.poll();await settle();
-  assert.ok(h.elements.page.textContent.includes('网站客户有新回复'));assert.ok(h.elements.page.textContent.includes('阅读新回复'));
+  assert.ok(h.elements.page.textContent.includes('网站站内消息有新回复'));assert.ok(h.elements.page.textContent.includes('阅读新回复'));
 });
 
 test('等待客户时隐藏过时的首封回复建议', async () => {

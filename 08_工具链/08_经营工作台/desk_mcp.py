@@ -188,6 +188,9 @@ class DeskTools:
         if name=='read_customer_material':
             if self.object().get('kind')!='customer':raise ValueError('资料包仅支持当前客户')
             return self.business.app.library.read_for_object(self.object_id,args.get('material_id'),args.get('start',0),args.get('limit',12000))
+        if name=='get_customer_gmail':
+            if self.object().get('kind') not in ('customer','prospect'):raise ValueError('邮件往来仅支持当前客户')
+            return self.business.app.gmail.customer(self.object_id,force=True)
         if name=='research_company':
             from prospect_research import research_company
             obj=self.object()
@@ -216,6 +219,9 @@ TOOLS.append({'name':'list_customer_materials','description':'查看当前客户
 TOOLS.append({'name':'read_customer_material','description':'按资料ID读取当前客户或通用资料的PDF/文本内容；图片返回原文件位置。',
               'inputSchema':{'type':'object','properties':{'material_id':{'type':'string'},'start':{'type':'integer','minimum':0},'limit':{'type':'integer','minimum':1,'maximum':20000}},'required':['material_id'],'additionalProperties':False},
               'annotations':{'readOnlyHint':True,'destructiveHint':False,'openWorldHint':False}})
+TOOLS.append({'name':'get_customer_gmail','description':'读取当前客户已连接的 Gmail 收发往来与连接状态；只读，不发送或改变邮件。',
+              'inputSchema':{'type':'object','properties':{},'additionalProperties':False},
+              'annotations':{'readOnlyHint':True,'destructiveHint':False,'openWorldHint':True}})
 
 
 def dispatch(tools,message):

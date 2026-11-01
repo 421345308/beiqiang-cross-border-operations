@@ -16,6 +16,7 @@ from inquiry_intake import InquiryIntake
 from channel_overview import ChannelOverview
 from creation import Creation
 from creation_canvas import CreationCanvas
+from gmail_sync import GmailService
 from workspaces import WorkspaceConflict as CanvasConflict
 
 HERE = Path(__file__).resolve().parent
@@ -55,6 +56,17 @@ class Workbench:
         self.channel_overview=ChannelOverview(self,self.workspaces)
         self.creation=Creation(self.root)
         self.creation_canvas=CreationCanvas(self)
+        self.gmail=GmailService(self,on_new_reply=self._gmail_reply)
+        if self.gmail.status()['state']=='connected':self.gmail.start()
+
+    def _gmail_reply(self,object_id,message,context):
+        if any(job.get('object_id')==object_id and job.get('status') in ('queued','running') for job in self.agent_jobs.list_jobs()):
+            raise ValueError('该客户已有工作正在执行')
+        instruction=('客户在 Gmail 发来新邮件。先调用 get_customer_gmail 读取已同步往来，判断最新邮件的真实意图与已有答复；'
+                     '如提示正文被截断，说明需要在 Gmail 查看完整原文，不虚构缺失内容；'
+                     '用中文整理客户要求、我们如何承接和下一步，再准备英文回复草稿及完整中文对照。'
+                     '如为自动回复或退信，直接说明实际情况；不自动发送或作未经确认的商业承诺。')
+        return self.agent_jobs.start(object_id,instruction,mode='draft')
     def save(self, run):
         with self.lock:
             self.db.execute('INSERT OR REPLACE INTO runs VALUES (?,?)',(run['id'],json.dumps(run,ensure_ascii=False))); self.db.commit()
@@ -251,7 +263,8 @@ class Handler(BaseHTTPRequestHandler):
                     return self.send_json({'csrf_token':app.token,'objects':app.business.list_objects(),
                         'jobs':app.agent_jobs.list_jobs(),'artifacts':app.business.list_artifacts(),
                         'goals':app.bootstrap()['goals'],'website_status':app.business.website_status(),
-                        'alibaba_status':app.business.alibaba.status()})
+                        'alibaba_status':app.business.alibaba.status(),'gmail_revision':app.gmail.status()['revision']})
+                if u.path=='/api/desk/gmail/customer':return self.send_json(app.gmail.customer(value('object_id')))
                 if u.path=='/api/desk/customer-profile':return self.send_json(app.customer_workspace.profile(value('object_id')))
                 if u.path=='/api/desk/inquiry-queue':return self.send_json(app.customer_workspace.queue(bucket=value('bucket') or 'active',state=value('state'),q=value('q')))
                 if u.path=='/api/desk/customer-workflow':return self.send_json(app.customer_workspace.workflow(value('object_id')))
@@ -312,6 +325,12 @@ class Handler(BaseHTTPRequestHandler):
             if not isinstance(body,dict):raise ValueError('请求必须是JSON对象')
             if parts==['api','library','update']:return self.send_json(app.library.update(body))
             if parts==['api','library','remove']:return self.send_json(app.library.remove(body.get('id')))
+            if parts==['api','desk','gmail','connect']:
+                status=app.gmail.connect(body.get('account_email'),body.get('app_password'))
+                app.gmail.start()
+                return self.send_json({'status':status})
+            if parts==['api','desk','gmail','sync']:return self.send_json(app.gmail.customer(body.get('object_id'),force=True))
+            if parts==['api','desk','gmail','ack']:return self.send_json(app.gmail.acknowledge(body.get('object_id')))
             if parts==['api','desk','creation-canvas']:
                 return self.send_json({'canvas':app.creation_canvas.save(body)})
             if parts==['api','desk','creation','libtv','create']:
@@ -376,6 +395,7 @@ def main():
     try:server.serve_forever()
     except KeyboardInterrupt:pass
     finally:
+        app.gmail.stop()
         for job in app.agent_jobs.list_jobs():
             if job['status'] in ('running','queued'):app.agent_jobs.cancel(job['id'])
         for r in app.runs():

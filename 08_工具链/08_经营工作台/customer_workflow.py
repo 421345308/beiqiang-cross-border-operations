@@ -83,7 +83,7 @@ def update(current,body,now=None,record=None):
     if current.get('excluded'):raise ValueError('订单买家不加入询盘处理队列')
     row={key:current.get(key) for key in ('state','priority','bucket','due_at','next_action','note','updated_at')}
     row['state']=current.get('saved_state',current['state'])
-    if current.get('customer_reply_pending') and 'state' not in body:
+    if (current.get('customer_reply_pending') or current.get('gmail_reply_pending')) and 'state' not in body:
         row['next_action']=current.get('saved_next_action','')
     row['history']=list(current.get('history') or [])
     for key in ('waiting_since','waiting_message_keys'):
@@ -146,7 +146,8 @@ def business_summary(analysis, cleaned, workflow):
         'sampling':'确认样品目的、交付内容与下一步',
     }
     action=(workflow.get('next_action') or '').strip()
-    if workflow.get('customer_reply_pending'):action='阅读客户新回复，安排后续处理'
+    if workflow.get('gmail_reply_pending'):action=workflow.get('gmail_next_action') or '阅读客户新邮件，安排后续处理'
+    elif workflow.get('customer_reply_pending'):action='阅读客户新回复，安排后续处理'
     if not action and workflow['state'] not in ENDED and workflow['bucket']!='history':
         action=summary['next_action'] or defaults.get(workflow['state'],'')
     if not action and workflow['bucket']=='history':action='查看历史资料；有当前机会时转入推进'

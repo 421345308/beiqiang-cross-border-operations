@@ -130,6 +130,63 @@ class DeskHTTPTests(unittest.TestCase):
             self.assertEqual(status,200);self.assertEqual(result['candidates'][0]['website'],'https://buyer.example')
             self.assertEqual(lookup.call_args.args[0]['id'],entry['object_id'])
 
+    def test_gmail_reply_enters_customer_queue_and_dispatches_draft(self):
+        oid='customer:website-BQ-REAL'
+        self.app.customer_workspace.save_workflow(oid,{'state':'preparing'})
+        self.app.customer_workspace.save_workflow(oid,{'state':'waiting_customer'})
+        self.app.gmail._cache[oid]={'status':{'state':'connected'},'messages':[],
+                                    'reply_pending':True,'next_action':'阅读客户新邮件'}
+        status,queue=self.request('/api/desk/inquiry-queue?bucket=active')
+        row=next(item for item in queue['items'] if item['object_id']==oid)
+        self.assertEqual(status,200);self.assertTrue(row['workflow']['gmail_reply_pending'])
+        self.assertEqual(row['workflow']['state_label'],'待处理')
+        with patch.object(self.app.agent_jobs,'start',return_value={'id':'draft-job'}) as start:
+            self.app._gmail_reply(oid,{'id':'message-1'},{})
+            self.assertEqual(start.call_args.args[0],oid)
+            self.assertIn('get_customer_gmail',start.call_args.args[1])
+
+    def test_gmail_local_routes_connect_and_read_without_sending(self):
+        oid='customer:website-BQ-REAL'
+        with patch.object(self.app.gmail,'connect',return_value={'state':'connected'}) as connect, \
+             patch.object(self.app.gmail,'start') as start, \
+             patch.object(self.app.gmail,'customer',return_value={'status':{'state':'connected'},'messages':[]}) as customer:
+            status,result=self.request('/api/desk/gmail/connect',{'account_email':'seller@example.test','app_password':'synthetic-password'})
+            self.assertEqual(status,200);self.assertEqual(result['status']['state'],'connected');start.assert_called_once()
+            status,result=self.request('/api/desk/gmail/sync',{'object_id':oid})
+            self.assertEqual(status,200);customer.assert_called_with(oid,force=True)
+            status,result=self.request('/api/desk/gmail/customer?'+urlencode({'object_id':oid}))
+            self.assertEqual(status,200);customer.assert_called_with(oid)
+
+    def test_new_gmail_reply_drives_queue_draft_and_acknowledgement(self):
+        from gmail_sync import GmailService
+        oid='customer:website-BQ-REAL';buyer='buyer@example.test';account='seller@example.test'
+        self.website.fetch=lambda:{'ok':True,'records':[{'reference':'BQ-REAL','company':'Fixture buyer','email':buyer,'requirements':'Need footwear'}]}
+        self.website.refresh(wait=True)
+        self.app.customer_workspace.save_workflow(oid,{'state':'preparing'})
+        self.app.customer_workspace.save_workflow(oid,{'state':'waiting_customer'})
+        class Mailbox:
+            def __init__(self):self.messages=[]
+            def context(self,emails,force=False):
+                return {'status':{'state':'ready','last_success_at':'2999-01-01T01:00:00+00:00','error':None},
+                        'messages':list(self.messages),'reply_pending':True,'next_action':''}
+        mail=Mailbox()
+        self.app.gmail=GmailService(self.app,mailbox_factory=lambda account:mail,credential_tester=lambda *a:None,
+                                    credential_saver=lambda *a:None,credential_checker=lambda *a:True,on_new_reply=self.app._gmail_reply)
+        self.app.gmail.connect(account,'synthetic-password')
+        mail.messages=[{'id':'mail-1','direction':'inbound','sent_at':'2999-01-01T00:00:00+00:00','from':buyer,'to':account,'body':'Please share details.'}]
+        with patch.object(self.app.agent_jobs,'start',return_value={'id':'draft-job'}) as start:
+            self.app.gmail.scan_once();self.app.gmail.scan_once();self.assertEqual(start.call_count,1)
+            status,result=self.request('/api/desk/gmail/customer?'+urlencode({'object_id':oid}))
+            self.assertEqual(status,200);self.assertTrue(result['reply_pending']);self.assertEqual(result['messages'][0]['id'],'mail-1')
+            from desk_mcp import DeskTools
+            agent_mail=DeskTools(self.app.business,self.root,oid).call('get_customer_gmail',{})
+            self.assertEqual(agent_mail['messages'][0]['body'],'Please share details.')
+            status,queue=self.request('/api/desk/inquiry-queue?bucket=active')
+            self.assertTrue(next(row for row in queue['items'] if row['object_id']==oid)['workflow']['gmail_reply_pending'])
+            status,result=self.request('/api/desk/gmail/ack',{'object_id':oid})
+            self.assertEqual(status,200);self.assertFalse(result['reply_pending'])
+            self.app.gmail.scan_once();self.assertEqual(start.call_count,1)
+
     def test_channel_and_creation_pages_use_real_local_sources(self):
         project = self.root/'05_内容与视频/示例/PROJECT.md'
         project.parent.mkdir(parents=True, exist_ok=True)

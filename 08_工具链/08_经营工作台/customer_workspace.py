@@ -107,6 +107,20 @@ class CustomerWorkspace:
         with self.app.lock:row=self.app.db.execute('SELECT path FROM customer_profiles WHERE object_id=?',(object_id,)).fetchone()
         return self._read(row[0]) if row else {}
 
+    def _mail_workflow(self,object_id,flow):
+        service=getattr(self.app,'gmail',None)
+        if not service or flow.get('bucket')!='active' or flow.get('state') in customer_workflow.ENDED:return flow
+        mail=service.peek(object_id)
+        if mail.get('reply_pending') is not True:return flow
+        flow['gmail_reply_pending']=True
+        flow['gmail_next_action']='阅读客户新邮件，查看自动准备的分析与回复草稿'
+        if flow['state']=='waiting_customer':
+            flow.update(saved_state='waiting_customer',saved_next_action=flow.get('next_action',''),
+                        state='new',state_label=customer_workflow.STATES['new'],pending_party='internal',
+                        pending_label='我方处理',next_action=flow['gmail_next_action'])
+            flow['allowed_transitions']=customer_workflow.transitions(flow)
+        return flow
+
     def profile(self,object_id):
         obj,source_type,record,original,source_hash=self._source(object_id);saved=self._saved_profile(object_id)
         cleaned={'company':record.get('company'),'country':record.get('country'),'quantity':record.get('quantity'),
@@ -132,7 +146,7 @@ class CustomerWorkspace:
             'source_hash':source_hash,'derived_source_hash':saved.get('source_hash'),
             'stale':bool(saved.get('source_hash')) and saved.get('source_hash')!=source_hash,'updated_at':saved.get('updated_at'),
             'operator_context':saved.get('operator_context',''),
-            'workflow':customer_workflow.decorate(object_id,source_type,saved.get('workflow'),record=record),
+            'workflow':self._mail_workflow(object_id,customer_workflow.decorate(object_id,source_type,saved.get('workflow'),record=record)),
             'derivation':'人工或Agent派生资料；facts为列明依据的摘录，inferences为判断，不改原文。'}
 
     def save_profile(self,object_id,body):
@@ -174,7 +188,7 @@ class CustomerWorkspace:
 
     def workflow(self,object_id):
         obj,source_type,record,original,source_hash=self._source(object_id)
-        return customer_workflow.decorate(object_id,source_type,self._saved_profile(object_id).get('workflow'),record=record)
+        return self._mail_workflow(object_id,customer_workflow.decorate(object_id,source_type,self._saved_profile(object_id).get('workflow'),record=record))
 
     def save_workflow(self,object_id,body):
         with self.app.lock:
@@ -191,7 +205,7 @@ class CustomerWorkspace:
             object_id=entry['id'];obj,source_type,record,original,source_hash=self._source(object_id)
             if source_type=='alibaba_order_buyer':continue
             saved=self._saved_profile(object_id);cleaned=saved.get('cleaned',{})
-            flow=customer_workflow.decorate(object_id,source_type,saved.get('workflow'),record=record)
+            flow=self._mail_workflow(object_id,customer_workflow.decorate(object_id,source_type,saved.get('workflow'),record=record))
             rows.append({'object_id':object_id,'title':obj.get('title') or '',
                 'contact':{'name':record.get('name') or record.get('contact_name') or cleaned.get('contact_name') or '',
                     'email':record.get('email') or cleaned.get('email') or ''},
@@ -300,6 +314,11 @@ class CustomerWorkspace:
 
     def discovery(self):
         rows=self.list_discovery()
+        service=getattr(self.app,'gmail',None)
+        if service:
+            for row in rows:
+                if row.get('kind')=='candidate' and service.peek(row.get('object_id','')).get('reply_pending') is True:
+                    row['gmail_reply_pending']=True;row['gmail_next_action']='阅读客户新邮件，准备后续沟通'
         counts={kind:sum(r['kind']==kind for r in rows) for kind in ('candidate','research_task')}
         return {'items':rows,'tasks':[r for r in rows if r['kind']=='research_task'],'candidates':[r for r in rows if r['kind']=='candidate'],
             'overview':{'candidate_count':counts['candidate'],'research_task_count':counts['research_task'],

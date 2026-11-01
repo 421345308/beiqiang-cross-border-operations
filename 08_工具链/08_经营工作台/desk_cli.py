@@ -39,6 +39,8 @@ def open_business(root=None, state=None):
         from resource_library import ResourceLibrary
         app.media = MediaAssets(app.root)
         app.library = ResourceLibrary(app)
+        from gmail_sync import GmailService
+        app.gmail = GmailService(app)
     except Exception:
         app.db.close()
         raise

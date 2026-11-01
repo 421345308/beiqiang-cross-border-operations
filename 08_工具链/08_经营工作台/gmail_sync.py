@@ -1,0 +1,259 @@
+"""Local Gmail coordination, read-only polling and durable reply event deduplication."""
+from __future__ import annotations
+import copy
+from datetime import datetime, timezone
+from email.utils import getaddresses
+import json
+from pathlib import Path
+import threading
+import time
+from gmail_mailbox import GmailMailbox, normalize_email, test_credentials, save_password, credential_available
+
+
+def _timestamp(value):
+    try:
+        d=datetime.fromisoformat(str(value).replace('Z','+00:00'))
+        return d.timestamp() if d.tzinfo else None
+    except (ValueError, TypeError, OverflowError):return None
+
+
+def customer_emails(obj):
+    """Only explicit contact fields; never infer addresses from narrative or URLs."""
+    if obj.get('kind') not in ('customer','prospect'):raise ValueError('请选择客户或候选目标')
+    try:record=json.loads(obj.get('content') or '{}')
+    except (ValueError,TypeError):record={}
+    if not isinstance(record,dict):record={}
+    values=[record.get(k) for k in ('email','Email','EMAIL','contact_email','buyerEmail','Contact_Email')]
+    for key in ('contact','contactInfo'):
+        if isinstance(record.get(key),dict):values.append(record[key].get('email'))
+    source=record.get('source_record') or {}
+    for contact in source.get('contacts',[]) if isinstance(source,dict) else []:
+        if isinstance(contact,dict) and str(contact.get('kind','')).lower() in ('email','e-mail','邮箱'):
+            values.append(contact.get('value'))
+    values.extend(f.get('value') for f in obj.get('facts',[]) if isinstance(f,dict) and str(f.get('label','')).strip().lower() in ('email','e-mail','邮箱','电子邮箱','联系邮箱','客户邮箱','contact_email'))
+    found=set()
+    for value in values:
+        if not isinstance(value,str):continue
+        for _,address in getaddresses([value]):
+            try:found.add(normalize_email(address))
+            except ValueError:pass
+    return sorted(found)
+
+
+class GmailService:
+    def __init__(self,app,*,mailbox_factory=GmailMailbox,credential_tester=test_credentials,
+                 credential_saver=save_password,credential_checker=credential_available,
+                 on_new_reply=None,interval=120,clock=time.time):
+        self.app=app;self.mailbox_factory=mailbox_factory;self.credential_tester=credential_tester
+        self.credential_saver=credential_saver;self.credential_checker=credential_checker
+        self.on_new_reply=on_new_reply;self.interval=interval;self.clock=clock
+        self.lock=threading.RLock();self._stop=threading.Event();self._thread=None
+        self._cache={};self._mailbox=None;self._account='';self._connected_at=None;self.revision=0
+        self._retry_at={}
+        self._state='not_connected';self._error=None;self._last_success=None
+        self.path=Path(app.state)/'gmail.json'
+        with app.lock:
+            app.db.execute('CREATE TABLE IF NOT EXISTS gmail_reply_events (object_id TEXT NOT NULL,message_id TEXT NOT NULL,dispatch_state TEXT NOT NULL,PRIMARY KEY(object_id,message_id))')
+            app.db.execute('CREATE TABLE IF NOT EXISTS gmail_acknowledged (object_id TEXT PRIMARY KEY,message_id TEXT NOT NULL)')
+            app.db.commit()
+        if self.path.exists():
+            try:
+                config=json.loads(self.path.read_text(encoding='utf-8-sig'))
+                self._account=normalize_email(config['email']);self._connected_at=config.get('connected_at')
+                if self.credential_checker(self._account):
+                    self._mailbox=self.mailbox_factory(self._account);self._state='connected'
+            except Exception:
+                self._state='error';self._error='Gmail本地配置或系统凭据暂不可读'
+
+    def status(self):
+        with self.lock:return {'state':self._state,'account_email':self._account,'connected_at':self._connected_at,
+                               'last_success_at':self._last_success,'error':self._error,'revision':self.revision,
+                               'running':bool(self._thread and self._thread.is_alive())}
+
+    def connect(self,email,password):
+        account=normalize_email(email)
+        # No persistence occurs before the supplied credential has passed a real login check.
+        self.credential_tester(account,password)
+        self.credential_saver(account,password)
+        mailbox=self.mailbox_factory(account)
+        # Keep the original sync boundary when reconnecting the same account,
+        # so replies received while disconnected are still picked up.
+        connected_at=(self._connected_at if self._account==account and _timestamp(self._connected_at) is not None
+                      else datetime.fromtimestamp(self.clock(),timezone.utc).isoformat())
+        self.path.parent.mkdir(parents=True,exist_ok=True)
+        temporary=self.path.with_suffix('.tmp')
+        with self.lock:
+            temporary.write_text(json.dumps({'email':account,'connected_at':connected_at}),encoding='utf-8')
+            temporary.replace(self.path)
+            self._account=account;self._connected_at=connected_at;self._mailbox=mailbox
+            self._cache={};self._state='connected';self._error=None;self._last_success=None;self.revision+=1
+        return self.status()
+
+    def _empty(self,state=None,error=None):
+        return {'status':{'state':state or self._state,'account_email':self._account,'last_success_at':None,'error':error or self._error},
+                'messages':[],'reply_pending':None,'next_action':'连接Gmail后查看邮件往来'}
+
+    def peek(self,object_id):
+        with self.lock:return copy.deepcopy(self._cache.get(object_id) or self._empty())
+
+    def _workflow(self,object_id):
+        workspace=self.app.customer_workspace
+        if hasattr(workspace,'_saved_profile'):
+            return workspace._saved_profile(object_id).get('workflow') or {}
+        return workspace.workflow(object_id)
+
+    def customer(self,object_id,force=False,*,_context=None):
+        obj=self.app.business.get_object(object_id)
+        emails=customer_emails(obj)
+        with self.lock:
+            account=self._account;mailbox=self._mailbox
+        emails=[e for e in emails if e!=account]
+        if not mailbox:
+            result=self._empty()
+        elif not emails:
+            result=self._empty('no_contact_email','客户原记录未填写联系邮箱')
+            result['next_action']='请先在客户原资料填写联系邮箱'
+        else:
+            try:
+                result=copy.deepcopy(_context if _context is not None else mailbox.context(emails,force=force))
+            except Exception as exc:
+                result=self.peek(object_id);result['status'].update(state='error',error='Gmail读取失败（'+type(exc).__name__+'）');result['reply_pending']=None
+            if result.get('status',{}).get('state')!='ready' and not result.get('messages'):
+                result['messages']=self.peek(object_id).get('messages',[])
+            accepted=[]
+            for message in result.get('messages',[]):
+                direction=message.get('direction')
+                explicit=set(message.get('customer_emails') or [])
+                senders={a.lower() for _,a in getaddresses([message.get('from') or ''])}
+                recipients={a.lower() for _,a in getaddresses([message.get(k) or '' for k in ('to','cc','bcc')])}
+                valid=(direction=='inbound' and account in recipients and senders.intersection(emails)) or (direction=='outbound' and account in senders and (recipients|explicit).intersection(emails))
+                if valid:accepted.append(message)
+            result['messages']=accepted
+            source_state=result.get('status',{}).get('state')
+            if source_state=='ready':
+                dated=[m for m in accepted if _timestamp(m.get('sent_at')) is not None]
+                latest=max(dated,key=lambda m:_timestamp(m['sent_at']),default=None)
+                result['reply_pending']=bool(latest and latest.get('direction')=='inbound')
+                acknowledged=False
+                if result['reply_pending']:
+                    flow=self._workflow(object_id)
+                    if flow.get('state')=='waiting_customer':
+                        entered=next((h.get('at') for h in reversed(flow.get('history') or []) if h.get('to')=='waiting_customer'),None)
+                        boundary=_timestamp(flow.get('waiting_since') or entered or flow.get('updated_at'))
+                    else:boundary=None
+                    if boundary is None:boundary=_timestamp(self._connected_at)
+                    if boundary is not None and _timestamp(latest['sent_at'])<=boundary:result['reply_pending']=False
+                    with self.app.lock:
+                        ack=self.app.db.execute('SELECT message_id FROM gmail_acknowledged WHERE object_id=?',(object_id,)).fetchone()
+                    if ack and str(latest.get('id'))==ack[0]:result['reply_pending']=False;acknowledged=True
+                result['next_action']='查看客户新回复并准备答复' if result['reply_pending'] else '已标记处理，可继续跟进客户' if acknowledged else '等待客户回复' if latest else '暂无已同步邮件'
+                result['status']['state']='connected'
+            else:
+                result['status']['state']='not_connected' if source_state=='not_configured' else 'error'
+                result['reply_pending']=None
+                result['next_action']='邮件同步尚未成功，请恢复连接后确认客户回复'
+            with self.lock:
+                if account!=self._account:return self._empty()
+                previous=(self._state,self._error)
+                self._state=result['status']['state'];self._error=result['status'].get('error')
+                if self._state=='connected':self._last_success=result['status'].get('last_success_at')
+                if previous!=(self._state,self._error):self.revision+=1
+        with self.lock:
+            old=self._cache.get(object_id)
+            if old and old.get('callback_error'):result['callback_error']=old['callback_error']
+            signature=lambda r: (r.get('reply_pending'),r.get('status',{}).get('state'),[(m.get('id'),m.get('direction')) for m in r.get('messages',[])])
+            if old is None or signature(old)!=signature(result):self.revision+=1
+            self._cache[object_id]=copy.deepcopy(result)
+        if emails and result.get('status',{}).get('state')=='connected':self._dispatch(object_id,result)
+        return self.peek(object_id)
+
+    def acknowledge(self,object_id):
+        current=self.peek(object_id)
+        if current.get('reply_pending') is not True:raise ValueError('当前没有需要处理的新邮件')
+        messages=[m for m in current.get('messages',[]) if m.get('direction')=='inbound' and _timestamp(m.get('sent_at')) is not None]
+        if not messages:raise ValueError('无法找到需要处理的新邮件')
+        latest=max(messages,key=lambda m:_timestamp(m['sent_at']))
+        with self.app.lock:
+            self.app.db.execute('INSERT OR REPLACE INTO gmail_acknowledged VALUES (?,?)',(object_id,str(latest['id'])));self.app.db.commit()
+        with self.lock:
+            current=self._cache.get(object_id)
+            if current:
+                current['reply_pending']=False;current['next_action']='已标记处理，可继续跟进客户';self.revision+=1
+        return self.peek(object_id)
+
+    def _dispatch(self,object_id,context):
+        if not self.on_new_reply or not context.get('reply_pending'):return
+        flow=self._workflow(object_id)
+        if flow.get('bucket') in ('history','archive'):return
+        since=None
+        if flow.get('saved_state',flow.get('state'))=='waiting_customer':
+            entered=next((h.get('at') for h in reversed(flow.get('history') or []) if h.get('to')=='waiting_customer'),None)
+            since=_timestamp(flow.get('waiting_since') or entered or flow.get('updated_at'))
+        # Prospects and other active customers have no waiting timestamp. Treat
+        # messages after Gmail was connected as new, without dispatching history.
+        if since is None:since=_timestamp(self._connected_at)
+        if since is None:return
+        messages=context['messages']
+        latest_sales=max((_timestamp(m.get('sent_at')) for m in messages if m.get('direction')=='outbound' and _timestamp(m.get('sent_at')) is not None),default=None)
+        candidates=[m for m in messages if m.get('direction')=='inbound' and m.get('id') and _timestamp(m.get('sent_at')) is not None and _timestamp(m['sent_at'])>since and (latest_sales is None or _timestamp(m['sent_at'])>latest_sales)]
+        if not candidates:return
+        message=max(candidates,key=lambda m:(_timestamp(m['sent_at']),str(m['id'])))
+        mid=str(message['id'])
+        with self.lock:
+            if self.clock()<self._retry_at.get((object_id,mid),0):return
+        with self.app.lock:
+            existing=self.app.db.execute('SELECT dispatch_state FROM gmail_reply_events WHERE object_id=? AND message_id=?',(object_id,mid)).fetchone()
+            if existing and existing[0]!='failed':
+                if existing[0]=='dispatching':
+                    with self.lock:
+                        note='上次客户回复处理结果未确认，请人工接续，避免重复启动'
+                        if self._cache[object_id].get('callback_error')!=note:self.revision+=1
+                        self._cache[object_id]['callback_error']=note
+                return
+            self.app.db.execute('INSERT OR REPLACE INTO gmail_reply_events VALUES (?,?,?)',(object_id,mid,'dispatching'));self.app.db.commit()
+        try:
+            self.on_new_reply(object_id,copy.deepcopy(message),copy.deepcopy(context))
+            state='dispatched'
+        except Exception:
+            state='failed'
+        with self.app.lock:
+            self.app.db.execute('UPDATE gmail_reply_events SET dispatch_state=? WHERE object_id=? AND message_id=?',(state,object_id,mid));self.app.db.commit()
+        with self.lock:
+            if state=='failed':
+                self._retry_at[(object_id,mid)]=self.clock()+self.interval
+                self._cache[object_id]['callback_error']='客户回复已同步，后续处理未启动；下轮同步重试，也可人工接续';self.revision+=1
+            elif self._cache[object_id].pop('callback_error',None):self.revision+=1
+
+    def scan_once(self):
+        if not self._mailbox:return self.status()
+        targets=[];emails=set()
+        for entry in self.app.business.list_objects():
+            if entry.get('kind') in ('customer','prospect'):
+                obj=self.app.business.get_object(entry['id'])
+                addresses=set(customer_emails(obj))-{self._account}
+                if addresses:targets.append(entry['id']);emails.update(addresses)
+        if not emails:return self.status()
+        try:context=self._mailbox.context(sorted(emails))
+        except Exception as exc:context={'status':{'state':'error','error':'Gmail读取失败（'+type(exc).__name__+'）'},'messages':[],'reply_pending':None}
+        for object_id in targets:
+            if self._stop.is_set():break
+            try:self.customer(object_id,_context=context)
+            except Exception:
+                with self.lock:self._state='error';self._error='部分客户邮件同步失败，请查看客户原资料与连接状态';self.revision+=1
+        return self.status()
+
+    def start(self):
+        with self.lock:
+            if self._thread and self._thread.is_alive():return
+            self._stop.clear()
+            def run():
+                while not self._stop.is_set():
+                    try:self.scan_once()
+                    except Exception:
+                        with self.lock:self._state='error';self._error='Gmail同步未完成，请检查连接状态';self.revision+=1
+                    self._stop.wait(self.interval)
+            self._thread=threading.Thread(target=run,name='gmail-readonly-sync',daemon=True);self._thread.start()
+
+    def stop(self):
+        self._stop.set()
+        if self._thread and self._thread is not threading.current_thread():self._thread.join(timeout=2)
