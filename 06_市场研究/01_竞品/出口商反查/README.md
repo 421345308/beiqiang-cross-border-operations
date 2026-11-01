@@ -4,6 +4,10 @@
 
 数据入口：[候选JSON](competitors.json)、[候选CSV](competitors.csv)、[名称与别名检索CSV](aliases.csv)、[逐来源证据与访问限制](evidence.json)。10家优先对象为EX001—004、EX008及EX012—016。旧研究的商品、目录与图片证据继续保留在原位置，本表只引用。
 
+## 2026-11-01：高销量线索与贸易反查补充
+
+EX013 Quanzhou Simble 的[国际站搜索索引](https://www.alibaba.com/countrysearch/CN/mens-shoes-sneakers.html?intention_id=30ba6efb9e2e4cdeb7450916415c0347)显示一款男士休闲运动鞋“489 sold”；本次打开该页未返回该商品正文，数字和统计周期未能独立复核，只作优先研究线索，不当成当前月销量或整店销量。[官网](https://www.simblefootwear.com/)展示相近英文名及休闲运动鞋，贸易页有同名截断出口方和休闲鞋逐票；店铺主体与出口方地址关系仍需核。海外候选、逐票和各对象下一步保存在[本地客户研究](../../../04_客户开发/02_目标名单/.local/客户发现助手/海关反查/README.md)，不把关联聚合数当鞋类订单。
+
 ## 覆盖与证据等级
 
 20家包括11家既有研究对象、9家新发现候选。新发现并非都已核实店铺：Fuyu仅确认官网业务表述；Langchi、Huifa、Linfeng仅取得Alibaba类别搜索卡片，公司/店铺/商品对应待补。不能把20候选写成20个已核供应商或20家有鞋类出口记录的公司。
