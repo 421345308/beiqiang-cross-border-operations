@@ -31,9 +31,9 @@
 ### BQ005 / A503 · 1601815020244
 
 - 平台链接：[1601815020244](https://www.alibaba.com/product-detail/Wholesale-Spring-Autumn-Hollow-Knit-Lace_1601815020244.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601815020244/formal_get.json)；UTC 2026-10-21T01:35:13.020571+00:00。
-- 当前正式标题：Knit Lace-Up Walking Shoes with Textured Upper Low Top Casual Sneakers Wholesale
-- 审核/展示：approved / Y；平台类目ID：201334413。
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601815020244/formal_get.json)；UTC 2026-11-02T01:55:20.136619+00:00。
+- 当前正式标题：Breathable Knit Lace Up Walking Shoes with Textured Upper and EVA Sole Casual Sneakers
+- 审核/展示：modified / N；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
 - SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。
 - 店内分组：Breathable Lace-Up Walking Shoes · 916810944；[平台分组回执](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%BA%97%E5%86%85%E5%88%86%E7%BB%84/916810944.json)。
@@ -45,6 +45,10 @@
   - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/%E5%85%B1%E4%BA%AB%E7%B4%A0%E6%9D%90/%E5%85%B1%E4%BA%AB%E7%B4%A0%E6%9D%90_13987d2f18fb1e32.png) · 1254×1254
   - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ005/BQ005_373f02282689ea55.jpg) · 800×800
 - 本地同步状态：`FORMAL_FIELDS_SCORE_PASS`。
+- 标题搜索优化：`PENDING_REVIEW`；等待审核，核准后复核正式标题及买家页
+  - 标题证据：[20261102_full_batch_05_plan.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601815020244/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_05_plan.json)
+  - 标题证据：[20261102_full_batch_05_receipt.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601815020244/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_05_receipt.json)
+  - 标题证据：[20261102_full_batch_05_verification.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601815020244/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_05_verification.json)
 - 本轮优化：`FORMAL_FIELDS_SCORE_PASS`；Image/source colour audit continues independently. Do not replay historical copy.
   - 变更证据：[prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E6%AD%A3%E5%BC%8F%E5%B7%AE%E5%BC%82%E6%94%B6%E5%B0%BE/%E5%95%86%E5%93%81/1601815020244/prepared.json)
   - 变更证据：[update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E6%AD%A3%E5%BC%8F%E5%B7%AE%E5%BC%82%E6%94%B6%E5%B0%BE/%E5%95%86%E5%93%81/1601815020244/update_receipt.json)
@@ -53,9 +57,9 @@
 ### BQ005-W1 / A503 · 1601939599850
 
 - 平台链接：[1601939599850](https://www.alibaba.com/product-detail/Wholesale-Multi-Color-Breathable-Knit-Walking_1601939599850.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939599850/formal_get.json)；UTC 2026-10-21T01:35:16.333336+00:00。
-- 当前正式标题：Knit Lace-Up Walking Shoes with Textured Upper Low Top Casual Sneakers Wholesale
-- 审核/展示：approved / Y；平台类目ID：201334413。
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939599850/formal_get.json)；UTC 2026-11-02T01:55:13.922661+00:00。
+- 当前正式标题：Wholesale Breathable Knit Lace Up Walking Shoes Textured Low Top Sneakers with EVA Sole
+- 审核/展示：modified / N；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
 - SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。
 - 店内分组：Breathable Lace-Up Walking Shoes · 916810944；[平台分组回执](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%BA%97%E5%86%85%E5%88%86%E7%BB%84/916810944.json)。
@@ -67,6 +71,10 @@
   - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ005/BQ005_fa989ae8e6d4c530.jpg) · 1000×1000
   - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ005/BQ005_0778588aff3cbed7.jpg) · 1000×1000
 - 本地同步状态：`FORMAL_FIELDS_SCORE_PASS`。
+- 标题搜索优化：`PENDING_REVIEW_DETAIL_ORDER_CHECK`；审核后核渲染Schema图片顺序、正式标题及买家页
+  - 标题证据：[20261102_full_batch_05_plan.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939599850/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_05_plan.json)
+  - 标题证据：[20261102_full_batch_05_receipt.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939599850/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_05_receipt.json)
+  - 标题证据：[20261102_full_batch_05_verification.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939599850/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_05_verification.json)
 - 本轮优化：`FORMAL_FIELDS_SCORE_PASS`；Image/source colour audit continues independently. Do not replay historical copy.
   - 变更证据：[prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E7%BB%93%E6%9E%84%E4%B8%8E%E6%A0%87%E9%A2%98%E7%BA%A0%E6%AD%A3/%E5%95%86%E5%93%81/1601939599850/prepared.json)
   - 变更证据：[update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E7%BB%93%E6%9E%84%E4%B8%8E%E6%A0%87%E9%A2%98%E7%BA%A0%E6%AD%A3/%E5%95%86%E5%93%81/1601939599850/update_receipt.json)
@@ -75,9 +83,9 @@
 ### BQ005-O1 / A503 · 1601939631570
 
 - 平台链接：[1601939631570](https://www.alibaba.com/product-detail/Custom-Logo-All-Black-Breathable-Knit_1601939631570.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939631570/formal_get.json)；UTC 2026-10-21T01:35:20.445959+00:00。
-- 当前正式标题：Knit Lace-Up Walking Shoes with Textured Upper Low Top Casual Sneakers Wholesale
-- 审核/展示：approved / Y；平台类目ID：201334413。
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939631570/formal_get.json)；UTC 2026-11-02T01:56:26.323861+00:00。
+- 当前正式标题：Custom Logo Breathable Knit Lace Up Walking Shoes with Textured Upper EVA Sole OEM ODM
+- 审核/展示：modified / N；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
 - SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。
 - 店内分组：Breathable Lace-Up Walking Shoes · 916810944；[平台分组回执](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%BA%97%E5%86%85%E5%88%86%E7%BB%84/916810944.json)。
@@ -89,6 +97,10 @@
   - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ005/BQ005_094c49b6882cd035.jpg) · 1000×1000
   - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/%E5%85%B1%E4%BA%AB%E7%B4%A0%E6%9D%90/%E5%85%B1%E4%BA%AB%E7%B4%A0%E6%9D%90_13987d2f18fb1e32.png) · 1254×1254
 - 本地同步状态：`FORMAL_FIELDS_SCORE_PASS`。
+- 标题搜索优化：`PENDING_REVIEW_DETAIL_ORDER_CHECK`；审核后核渲染Schema图片顺序、正式标题及买家页
+  - 标题证据：[20261102_full_batch_05_plan.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939631570/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_05_plan.json)
+  - 标题证据：[20261102_full_batch_05_receipt.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939631570/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_05_receipt.json)
+  - 标题证据：[20261102_full_batch_05_verification.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939631570/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_05_verification.json)
 - 本轮优化：`FORMAL_FIELDS_SCORE_PASS`；Image/source colour audit continues independently. Do not replay historical copy.
   - 变更证据：[prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%95%86%E5%93%81/1601939631570/prepared.json)
   - 变更证据：[update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%95%86%E5%93%81/1601939631570/update_receipt.json)
@@ -97,9 +109,9 @@
 ### BQ005-R1 / A503 · 1601939712176
 
 - 平台链接：[1601939712176](https://www.alibaba.com/product-detail/Pink-Breathable-Knit-Walking-Shoes-Lightweight_1601939712176.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939712176/formal_get.json)；UTC 2026-10-21T01:35:24.107514+00:00。
-- 当前正式标题：Knit Lace-Up Walking Shoes with Textured Upper Low Top Casual Sneakers Wholesale
-- 审核/展示：approved / Y；平台类目ID：201334413。
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939712176/formal_get.json)；UTC 2026-11-02T01:55:13.849105+00:00。
+- 当前正式标题：Lightweight Breathable Knit Lace Up Walking Shoes with Textured Upper and EVA Sole
+- 审核/展示：modified / N；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
 - SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。
 - 店内分组：Breathable Lace-Up Walking Shoes · 916810944；[平台分组回执](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%BA%97%E5%86%85%E5%88%86%E7%BB%84/916810944.json)。
@@ -111,6 +123,10 @@
   - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ005/BQ005_a82bd3cd187ff41c.jpg) · 1000×1000
   - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/%E5%85%B1%E4%BA%AB%E7%B4%A0%E6%9D%90/%E5%85%B1%E4%BA%AB%E7%B4%A0%E6%9D%90_13987d2f18fb1e32.png) · 1254×1254
 - 本地同步状态：`FORMAL_FIELDS_SCORE_PASS`。
+- 标题搜索优化：`PENDING_REVIEW_DETAIL_ORDER_CHECK`；审核后核渲染Schema图片顺序、正式标题及买家页
+  - 标题证据：[20261102_full_batch_05_plan.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939712176/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_05_plan.json)
+  - 标题证据：[20261102_full_batch_05_receipt.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939712176/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_05_receipt.json)
+  - 标题证据：[20261102_full_batch_05_verification.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601939712176/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_05_verification.json)
 - 本轮优化：`FORMAL_FIELDS_SCORE_PASS`；Image/source colour audit continues independently. Do not replay historical copy.
   - 变更证据：[prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E6%AD%A3%E5%BC%8F%E5%B7%AE%E5%BC%82%E6%94%B6%E5%B0%BE/%E5%95%86%E5%93%81/1601939712176/prepared.json)
   - 变更证据：[update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E6%AD%A3%E5%BC%8F%E5%B7%AE%E5%BC%82%E6%94%B6%E5%B0%BE/%E5%95%86%E5%93%81/1601939712176/update_receipt.json)
@@ -119,9 +135,9 @@
 ### BQ005-S1 / A503 · 1601957629892
 
 - 平台链接：[1601957629892](https://www.alibaba.com/product-detail/Wholesale-All-Black-Solid-Breathable-Mesh_1601957629892.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601957629892/formal_get.json)；UTC 2026-10-20T20:01:02.058998+00:00。
-- 当前正式标题：Knit Lace-Up Walking Shoes with Textured Upper Low Top Casual Sneakers Wholesale
-- 审核/展示：approved / Y；平台类目ID：201334413。
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601957629892/formal_get.json)；UTC 2026-11-02T01:55:32.329662+00:00。
+- 当前正式标题：Breathable Low Top Knit Walking Shoes Lace Up Sneakers with Textured Upper and EVA Sole
+- 审核/展示：modified / N；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
 - SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。
 - 店内分组：Breathable Lace-Up Walking Shoes · 916810944；[平台分组回执](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%BA%97%E5%86%85%E5%88%86%E7%BB%84/916810944.json)。
@@ -133,6 +149,10 @@
   - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ005/BQ005_324ed9194a8244de.jpg) · 1000×1000
   - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/%E5%85%B1%E4%BA%AB%E7%B4%A0%E6%9D%90/%E5%85%B1%E4%BA%AB%E7%B4%A0%E6%9D%90_13987d2f18fb1e32.png) · 1254×1254
 - 本地同步状态：`FORMAL_FIELDS_SCORE_PASS`。
+- 标题搜索优化：`PENDING_REVIEW`；等待审核，核准后复核正式标题及买家页
+  - 标题证据：[20261102_full_batch_05_plan.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601957629892/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_05_plan.json)
+  - 标题证据：[20261102_full_batch_05_receipt.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601957629892/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_05_receipt.json)
+  - 标题证据：[20261102_full_batch_05_verification.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601957629892/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_05_verification.json)
 - 本轮优化：`FORMAL_FIELDS_SCORE_PASS`；Image/source colour audit continues independently. Do not replay historical copy.
   - 变更证据：[prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E7%BB%93%E6%9E%84%E4%B8%8E%E6%A0%87%E9%A2%98%E7%BA%A0%E6%AD%A3/%E5%95%86%E5%93%81/1601957629892/prepared.json)
   - 变更证据：[update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E7%BB%93%E6%9E%84%E4%B8%8E%E6%A0%87%E9%A2%98%E7%BA%A0%E6%AD%A3/%E5%95%86%E5%93%81/1601957629892/update_receipt.json)
@@ -141,9 +161,9 @@
 ### BQ005-S2 / A503 · 1601957664983
 
 - 平台链接：[1601957664983](https://www.alibaba.com/product-detail/Grey-Breathable-Mesh-Lining-Solid-Lightweight_1601957664983.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601957664983/formal_get.json)；UTC 2026-10-20T20:01:04.780681+00:00。
-- 当前正式标题：Knit Lace-Up Walking Shoes with Textured Upper Low Top Casual Sneakers Wholesale
-- 审核/展示：approved / Y；平台类目ID：201334413。
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601957664983/formal_get.json)；UTC 2026-11-02T01:55:26.662229+00:00。
+- 当前正式标题：Lace Up Knit Walking Shoes with Breathable Textured Upper and EVA Sole Casual Sneakers
+- 审核/展示：modified / N；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
 - SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。
 - 店内分组：Breathable Lace-Up Walking Shoes · 916810944；[平台分组回执](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%BA%97%E5%86%85%E5%88%86%E7%BB%84/916810944.json)。
@@ -155,6 +175,10 @@
   - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ005/BQ005_ccd61271835b6871.jpg) · 1000×1000
   - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/%E5%85%B1%E4%BA%AB%E7%B4%A0%E6%9D%90/%E5%85%B1%E4%BA%AB%E7%B4%A0%E6%9D%90_13987d2f18fb1e32.png) · 1254×1254
 - 本地同步状态：`FORMAL_FIELDS_SCORE_PASS`。
+- 标题搜索优化：`PENDING_REVIEW`；等待审核，核准后复核正式标题及买家页
+  - 标题证据：[20261102_full_batch_05_plan.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601957664983/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_05_plan.json)
+  - 标题证据：[20261102_full_batch_05_receipt.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601957664983/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_05_receipt.json)
+  - 标题证据：[20261102_full_batch_05_verification.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601957664983/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_05_verification.json)
 - 本轮优化：`FORMAL_FIELDS_SCORE_PASS`；Image/source colour audit continues independently. Do not replay historical copy.
   - 变更证据：[prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E7%BB%93%E6%9E%84%E4%B8%8E%E6%A0%87%E9%A2%98%E7%BA%A0%E6%AD%A3/%E5%95%86%E5%93%81/1601957664983/prepared.json)
   - 变更证据：[update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E7%BB%93%E6%9E%84%E4%B8%8E%E6%A0%87%E9%A2%98%E7%BA%A0%E6%AD%A3/%E5%95%86%E5%93%81/1601957664983/update_receipt.json)
@@ -163,9 +187,9 @@
 ### BQ005-S4 / A503 · 1601957778956
 
 - 平台链接：[1601957778956](https://www.alibaba.com/product-detail/Wholesale-White-Breathable-Knit-Lace-Up_1601957778956.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601957778956/formal_get.json)；UTC 2026-10-20T20:01:12.002192+00:00。
-- 当前正式标题：Knit Lace-Up Walking Shoes with Textured Upper Low Top Casual Sneakers Wholesale
-- 审核/展示：approved / Y；平台类目ID：201334413。
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601957778956/formal_get.json)；UTC 2026-11-02T01:55:20.122388+00:00。
+- 当前正式标题：Knit Lace Up Walking Sneakers with Breathable Textured Upper and EVA Sole
+- 审核/展示：modified / N；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
 - SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。
 - 店内分组：Breathable Lace-Up Walking Shoes · 916810944；[平台分组回执](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%BA%97%E5%86%85%E5%88%86%E7%BB%84/916810944.json)。
@@ -177,6 +201,10 @@
   - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ005/BQ005_7472a86fdcdd39dd.jpg) · 1000×1000
   - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/%E5%85%B1%E4%BA%AB%E7%B4%A0%E6%9D%90/%E5%85%B1%E4%BA%AB%E7%B4%A0%E6%9D%90_13987d2f18fb1e32.png) · 1254×1254
 - 本地同步状态：`FORMAL_FIELDS_SCORE_PASS`。
+- 标题搜索优化：`PENDING_REVIEW`；等待审核，核准后复核正式标题及买家页
+  - 标题证据：[20261102_full_batch_05_plan.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601957778956/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_05_plan.json)
+  - 标题证据：[20261102_full_batch_05_receipt.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601957778956/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_05_receipt.json)
+  - 标题证据：[20261102_full_batch_05_verification.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601957778956/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_05_verification.json)
 - 本轮优化：`FORMAL_FIELDS_SCORE_PASS`；Image/source colour audit continues independently. Do not replay historical copy.
   - 变更证据：[prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%95%86%E5%93%81/1601957778956/prepared.json)
   - 变更证据：[update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%95%86%E5%93%81/1601957778956/update_receipt.json)
@@ -185,9 +213,9 @@
 ### BQ005-S3 / A503 · 1601957855049
 
 - 平台链接：[1601957855049](https://www.alibaba.com/product-detail/Pink-Breathable-Knit-Lace-Up-Walking_1601957855049.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601957855049/formal_get.json)；UTC 2026-10-20T20:01:07.732169+00:00。
-- 当前正式标题：Knit Lace-Up Walking Shoes with Textured Upper Low Top Casual Sneakers Wholesale
-- 审核/展示：approved / Y；平台类目ID：201334413。
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601957855049/formal_get.json)；UTC 2026-11-02T01:55:26.683239+00:00。
+- 当前正式标题：Breathable Knit Casual Sneakers Lace Up Walking Shoes with Textured Upper and EVA Sole
+- 审核/展示：modified / N；平台类目ID：201334413。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
 - SKU、材料、价格/数量档、包装、交期、图库、详情及FAQ按接口返回原文留存；接口未返回的字段仍待核，未做公开视觉验收不记通过。
 - 店内分组：Breathable Lace-Up Walking Shoes · 916810944；[平台分组回执](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%BA%97%E5%86%85%E5%88%86%E7%BB%84/916810944.json)。
@@ -199,6 +227,10 @@
   - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ005/BQ005_f58816d8c2b21559.jpg) · 1000×1000
   - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/%E5%85%B1%E4%BA%AB%E7%B4%A0%E6%9D%90/%E5%85%B1%E4%BA%AB%E7%B4%A0%E6%9D%90_13987d2f18fb1e32.png) · 1254×1254
 - 本地同步状态：`FORMAL_FIELDS_SCORE_PASS`。
+- 标题搜索优化：`PENDING_REVIEW`；等待审核，核准后复核正式标题及买家页
+  - 标题证据：[20261102_full_batch_05_plan.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601957855049/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_05_plan.json)
+  - 标题证据：[20261102_full_batch_05_receipt.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601957855049/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_05_receipt.json)
+  - 标题证据：[20261102_full_batch_05_verification.json](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601957855049/.local/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96/20261102_full_batch_05_verification.json)
 - 本轮优化：`FORMAL_FIELDS_SCORE_PASS`；Image/source colour audit continues independently. Do not replay historical copy.
   - 变更证据：[prepared.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%95%86%E5%93%81/1601957855049/prepared.json)
   - 变更证据：[update_receipt.json](../../%E5%85%A8%E5%BA%97FAQ%E4%B8%8E%E4%BA%A7%E5%93%81%E4%BA%AE%E7%82%B9%E4%BC%98%E5%8C%96/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F%E5%A4%8D%E6%A0%B8/%E5%95%86%E5%93%81/1601957855049/update_receipt.json)
