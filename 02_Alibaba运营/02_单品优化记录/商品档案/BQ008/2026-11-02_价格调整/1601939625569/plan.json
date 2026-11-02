@@ -1,0 +1,38 @@
+{
+  "id": "1601939625569",
+  "family": "BQ008",
+  "category_id": 201334413,
+  "prepared_at": "2026-11-02T04:50:30.814975+00:00",
+  "before": [
+    [
+      2,
+      "10.90"
+    ],
+    [
+      50,
+      "9.19"
+    ],
+    [
+      100,
+      "8.78"
+    ]
+  ],
+  "after": [
+    [
+      2,
+      "10.90"
+    ],
+    [
+      50,
+      "9.50"
+    ]
+  ],
+  "sha256": "eaf6d81653df438c165dae392a61ecfc4a2bbeb910100a7e77d82fe0a44ef882",
+  "fields": [
+    "ladderPrice"
+  ],
+  "dependencies": [
+    "productTitle",
+    "scPrice"
+  ]
+}
