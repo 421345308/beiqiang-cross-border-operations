@@ -71395,13 +71395,13 @@
         "at": "2026-10-21T07:20:55.058032+00:00",
         "observed_at": "2026-10-19T18:41:16.185573+00:00",
         "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943305914/verification.json",
-        "title_state": "PENDING_PLATFORM_VERIFY",
-        "title_next_action": "等待审核，核准后复核正式标题及买家页"
+        "title_state": "PENDING_PUBLIC_VERIFY",
+        "title_next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页"
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943305914/formal_get.json",
-        "at": "2026-11-02T03:42:11.194279+00:00",
-        "scope": "标题修改后官方字段回读；审核中，不等于公开生效"
+        "at": "2026-11-02T03:52:47.379156+00:00",
+        "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验"
       },
       "platform_group": {
         "id": "916810944",
@@ -71409,7 +71409,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-11-02T03:42:11.194279+00:00",
+        "at": "2026-11-02T03:52:47.379156+00:00",
         "model": "BQ1002-A",
         "title": "Men's Textile Lace Up Walking Sneakers with Mesh Lining and Rubber Sole",
         "keywords": [
@@ -71424,10 +71424,10 @@
           "https://sc04.alicdn.com/kf/H88699365304846d88b326ba0c4ca5cb7D.png"
         ],
         "category_id": 201334413,
-        "display": "N",
-        "status": "modified",
+        "display": "Y",
+        "status": "approved",
         "url": "https://www.alibaba.com/product-detail/Men-s-Textile-Lace-Up-Walking_1601943305914.html",
-        "scope": "精确ID商品回读；标题审核中、公开待验",
+        "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验",
         "highlights": "Low-top textile lace-up casual shoes with a continuous stitched toe surround and low sole profile.\n\nAdjustable instep fit: The front laces let the wearer loosen the opening for entry and set the tension over the foot.\n\nA grip for entry: The pull loop provides a place to hold the shoe while guiding the foot into the opening."
       },
       "optimization": {
@@ -71567,7 +71567,7 @@
           ]
         },
         "title_search": {
-          "state": "PENDING_REVIEW",
+          "state": "FORMAL_APPROVED_PUBLIC_PENDING",
           "at": "2026-11-02T03:42:11.194279+00:00",
           "before": "Men's Low-Top Lace-Up Walking Shoes with Mesh Lining and Rubber Soles",
           "target": "Men's Textile Lace Up Walking Sneakers with Mesh Lining and Rubber Sole",
@@ -71575,14 +71575,17 @@
             "productTitle"
           ],
           "keywords_note": "旧关键词接口为空；编辑版本及是否迁移按具体商品核对",
-          "other_fields_and_inventory": "IMMEDIATE_READBACK_UNCHANGED",
+          "other_fields_and_inventory": "SCHEMA_IMAGE_ORDER_AND_INVENTORY_UNCHANGED",
           "public_status": "NOT_CHECKED",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943305914/.local/标题优化/20261102_full_batch_15_plan.json",
             "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943305914/.local/标题优化/20261102_full_batch_15_receipt.json",
-            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943305914/.local/标题优化/20261102_full_batch_15_verification.json"
+            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943305914/.local/标题优化/20261102_full_batch_15_verification.json",
+            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943305914/.local/标题优化/20261102_full_batch_15_approved_get.json",
+            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943305914/.local/标题优化/20261102_full_batch_15_approved_verification.json"
           ],
-          "next_action": "等待审核，核准后复核正式标题及买家页"
+          "next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页",
+          "reviewed_at": "2026-11-02T03:52:47.379156+00:00"
         }
       },
       "legacy_model_aliases": [
@@ -105263,13 +105266,13 @@
         "at": "2026-10-16T04:18:21.790360+00:00",
         "observed_at": "2026-10-19T18:44:59.981196+00:00",
         "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943639863/verification.json",
-        "title_state": "PENDING_PLATFORM_VERIFY",
-        "title_next_action": "等待审核，核准后复核正式标题及买家页"
+        "title_state": "PENDING_PUBLIC_VERIFY",
+        "title_next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页"
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943639863/formal_get.json",
-        "at": "2026-11-02T03:42:11.087626+00:00",
-        "scope": "标题修改后官方字段回读；审核中，不等于公开生效"
+        "at": "2026-11-02T03:52:44.773482+00:00",
+        "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验"
       },
       "platform_group": {
         "id": "973003809",
@@ -105278,7 +105281,7 @@
         "scope": "当前正式商品与已核官方店内分组；与本地采购分类分列"
       },
       "current_platform_fields": {
-        "at": "2026-11-02T03:42:11.087626+00:00",
+        "at": "2026-11-02T03:52:44.773482+00:00",
         "model": "BQ1049-C",
         "title": "Low Top Lace Up Casual Sneakers with Eyelets and Textured PVC Sole",
         "keywords": [
@@ -105293,10 +105296,10 @@
           "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
         ],
         "category_id": 201334413,
-        "display": "N",
-        "status": "modified",
+        "display": "Y",
+        "status": "approved",
         "url": "https://www.alibaba.com/product-detail/Low-Top-Lace-Up-Casual-Sneakers_1601943639863.html",
-        "scope": "精确ID商品回读；标题审核中、公开待验",
+        "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验",
         "highlights": "Low-top everyday profile: A plain rounded forefoot and continuous side panel create a clean casual look for footwear collections.\n\nAdjustable instep fit: The front laces let the wearer loosen the opening for entry and set the tension over the foot."
       },
       "optimization": {
@@ -105413,7 +105416,7 @@
           ]
         },
         "title_search": {
-          "state": "PENDING_REVIEW",
+          "state": "FORMAL_APPROVED_PUBLIC_PENDING",
           "at": "2026-11-02T03:42:11.087626+00:00",
           "before": "Low Cut Casual Sneakers with Eyelet Lacing and Textured PVC Sole for Wholesale Shoe Assortments",
           "target": "Low Top Lace Up Casual Sneakers with Eyelets and Textured PVC Sole",
@@ -105421,14 +105424,17 @@
             "productTitle"
           ],
           "keywords_note": "旧关键词接口为空；编辑版本及是否迁移按具体商品核对",
-          "other_fields_and_inventory": "IMMEDIATE_READBACK_UNCHANGED",
+          "other_fields_and_inventory": "SCHEMA_IMAGE_ORDER_AND_INVENTORY_UNCHANGED",
           "public_status": "NOT_CHECKED",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943639863/.local/标题优化/20261102_full_batch_15_plan.json",
             "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943639863/.local/标题优化/20261102_full_batch_15_receipt.json",
-            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943639863/.local/标题优化/20261102_full_batch_15_verification.json"
+            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943639863/.local/标题优化/20261102_full_batch_15_verification.json",
+            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943639863/.local/标题优化/20261102_full_batch_15_approved_get.json",
+            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943639863/.local/标题优化/20261102_full_batch_15_approved_verification.json"
           ],
-          "next_action": "等待审核，核准后复核正式标题及买家页"
+          "next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页",
+          "reviewed_at": "2026-11-02T03:52:44.773482+00:00"
         }
       },
       "legacy_model_aliases": [
@@ -117429,13 +117435,13 @@
         "at": "2026-10-16T04:18:28.469203+00:00",
         "observed_at": "2026-10-19T18:46:22.884434+00:00",
         "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943734532/verification.json",
-        "title_state": "PENDING_PLATFORM_VERIFY",
-        "title_next_action": "审核后核渲染Schema图片顺序、正式标题及买家页"
+        "title_state": "PENDING_PUBLIC_VERIFY",
+        "title_next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页"
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943734532/formal_get.json",
-        "at": "2026-11-02T03:42:05.045401+00:00",
-        "scope": "标题修改后官方字段回读；审核中，不等于公开生效"
+        "at": "2026-11-02T03:52:44.685464+00:00",
+        "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验"
       },
       "platform_group": {
         "id": "971885228",
@@ -117444,7 +117450,7 @@
         "scope": "当前正式商品与已核官方店内分组；与本地采购分类分列"
       },
       "current_platform_fields": {
-        "at": "2026-11-02T03:42:05.045401+00:00",
+        "at": "2026-11-02T03:52:44.685464+00:00",
         "model": "BQ1066-A",
         "title": "High Top Knit Slip On Sock Sneakers with Ribbed Collar and Geometric Pattern",
         "keywords": [
@@ -117459,10 +117465,10 @@
           "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
         ],
         "category_id": 201334413,
-        "display": "N",
-        "status": "modified",
+        "display": "Y",
+        "status": "approved",
         "url": "https://www.alibaba.com/product-detail/High-Top-Knit-Slip-On-Sock_1601943734532.html",
-        "scope": "精确ID商品回读；标题审核中、公开待验",
+        "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验",
         "highlights": "Tall sock-style shape: A ribbed shaft rises above the ankle and gives the shoe a distinctive high-top profile.\n\nSimple daily dressing: The slip-on opening removes the need to tie conventional laces when putting the shoes on."
       },
       "optimization": {
@@ -117579,7 +117585,7 @@
           ]
         },
         "title_search": {
-          "state": "PENDING_REVIEW_DETAIL_ORDER_CHECK",
+          "state": "FORMAL_APPROVED_PUBLIC_PENDING",
           "at": "2026-11-02T03:42:05.045401+00:00",
           "before": "High Top Knit Sock Sneakers with Ribbed Shaft and Geometric Upper Pattern for Casual Footwear Collections",
           "target": "High Top Knit Slip On Sock Sneakers with Ribbed Collar and Geometric Pattern",
@@ -117587,14 +117593,17 @@
             "productTitle"
           ],
           "keywords_note": "旧关键词接口为空；编辑版本及是否迁移按具体商品核对",
-          "other_fields_and_inventory": "GET_IMAGE_LIST_ORDER_CHANGED_SCHEMA_PENDING",
+          "other_fields_and_inventory": "SCHEMA_IMAGE_ORDER_AND_INVENTORY_UNCHANGED",
           "public_status": "NOT_CHECKED",
           "evidence": [
             "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943734532/.local/标题优化/20261102_full_batch_15_plan.json",
             "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943734532/.local/标题优化/20261102_full_batch_15_receipt.json",
-            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943734532/.local/标题优化/20261102_full_batch_15_verification.json"
+            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943734532/.local/标题优化/20261102_full_batch_15_verification.json",
+            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943734532/.local/标题优化/20261102_full_batch_15_approved_get.json",
+            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943734532/.local/标题优化/20261102_full_batch_15_approved_verification.json"
           ],
-          "next_action": "审核后核渲染Schema图片顺序、正式标题及买家页"
+          "next_action": "审核已通过，详情与公司图Schema顺序和库存一致；待核买家公开页",
+          "reviewed_at": "2026-11-02T03:52:44.685464+00:00"
         }
       },
       "legacy_model_aliases": [
