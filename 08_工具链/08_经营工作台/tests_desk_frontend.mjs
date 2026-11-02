@@ -604,10 +604,13 @@ test('渠道页显示可用渠道，暂不接入的渠道不制造空入口', as
 });
 test('同行清单展示真实店铺，登记买家进入原客户研究并保留关联', async () => {
   const h = harness('#/customers?view=competitors');
-  h.interceptFetch(async (path, options) => path === '/api/desk/competitors' ? {ok:true,json:async()=>({items:[{id:'EX001',company:'Shoe Factory',direction:'休闲鞋',store_url:'https://shoe.en.alibaba.com/',sales:{note:'单款 224 sold，周期不明',source_url:'https://www.alibaba.com/picks/shoes.html'},buyers:[{id:'candidate:old',company:'Known Buyer'}]}],excluded:[{company:'Old Shop',note:'店铺打开未确认',buyers:[]}],existing_buyers:[{id:'candidate:old',company:'Known Buyer'}]})} : h.originalFetch(path, options));
+  h.interceptFetch(async (path, options) => path === '/api/desk/competitors' ? {ok:true,json:async()=>({items:[{id:'EX001',company:'Shoe Factory',direction:'休闲鞋',store_url:'https://shoe.en.alibaba.com/',identity:{name:'鞋业有限公司',credit_code:'123456789012345678',source_url:'https://example.com/company'},sales:{note:'单款 224 sold，周期不明',source_url:'https://www.alibaba.com/picks/shoes.html'},buyers:[{id:'candidate:old',company:'Known Buyer'}]}],excluded:[{company:'Old Shop',note:'店铺打开未确认',buyers:[]}],existing_buyers:[{id:'candidate:old',company:'Known Buyer'}]})} : h.originalFetch(path, options));
   await h.ui.bootstrap(); await settle();
   assert.match(h.elements.page.textContent,/Shoe Factory/); assert.match(h.elements.page.textContent,/Old Shop/);
   assert.ok(walk(h.elements.page).some(node => node.tagName === 'A' && node.href === 'https://shoe.en.alibaba.com/'));
+  assert.match(h.elements.page.textContent,/中文检索名：鞋业有限公司/); assert.match(h.elements.page.textContent,/123456789012345678/);
+  assert.ok(walk(h.elements.page).some(node => node.tagName === 'A' && node.href === 'https://example.com/company'));
+  await findButton(h.elements.page,'复制中文名').click(); assert.equal(h.clipboard(),'鞋业有限公司');
   await findButton(h.elements.page,'复制公司名').click(); assert.equal(h.clipboard(),'Shoe Factory');
   await findButton(h.elements.page,'登记买家').click(); const dialog=walk(h.body).find(node=>node.tagName==='DIALOG');
   walk(dialog).find(node=>node['aria-label']==='买家公司名称').value='New Buyer';

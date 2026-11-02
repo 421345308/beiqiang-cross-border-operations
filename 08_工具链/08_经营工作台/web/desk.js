@@ -348,7 +348,7 @@
     const page = $('page'), serial = S.loadSerial;
     const current = () => S.page === 'customers' && serial === S.loadSerial && parseRoute().query.get('view') === 'competitors';
     page.replaceChildren(heading('客户开发', '同行找客户', '从国际站同行入手，找到买家后直接在这里登记、继续研究。'), customerTabs('competitors'));
-    const explanation = el('p', '以下为店铺页面能对应公司的同行。查海关时，请结合地址、货描和日期核对出口方；买家关联仍是研究线索。', 'competitor-intro');
+    const explanation = el('p', '以下为店铺页面能对应公司的同行。中文名来自公开资料，可用于查询；查海关时请结合地址、货描和日期核对出口方。', 'competitor-intro');
     const search = el('input', undefined, 'search-input'); search.type = 'search'; search.placeholder = '搜索公司或鞋类方向'; search.setAttribute('aria-label', '搜索同行');
     const count = el('span', '', 'search-count'), bar = el('div', undefined, 'search-bar'), list = el('div', undefined, 'row-list competitor-list');
     bar.append(search, count); page.append(explanation, bar, list);
@@ -387,13 +387,15 @@
     }
     function paint() {
       list.replaceChildren(); const query = search.value.trim().toLocaleLowerCase();
-      const rows = (data.items || []).filter(item => `${item.company} ${item.direction}`.toLocaleLowerCase().includes(query));
+      const rows = (data.items || []).filter(item => `${item.company} ${item.direction} ${item.identity?.name || ''} ${item.identity?.credit_code || ''}`.toLocaleLowerCase().includes(query));
       count.textContent = `${rows.length} 家同行`;
       for (const item of rows) {
         const card = el('article', undefined, 'card competitor-row'), info = el('div', undefined, 'competitor-main'), actions = el('div', undefined, 'competitor-actions');
         info.append(el('h3', item.company), el('p', item.direction));
+        if (item.identity) { const identity = el('p', `中文检索名：${item.identity.name}${item.identity.credit_code ? ` · 信用代码：${item.identity.credit_code}` : ''}`, 'competitor-identity'); const source = link('来源 ↗', item.identity.source_url); if (source) identity.append(el('span', ' '), source); info.append(identity); }
         if (item.sales) { const sold = el('p', item.sales.note, 'competitor-sales'); const source = link('销量依据 ↗', item.sales.source_url); if (source) sold.append(el('span', ' '), source); info.append(sold); }
         buyerLinks(info, item.buyers); const shop = link('查看国际站店铺 ↗', item.store_url); if (shop) actions.append(shop);
+        if (item.identity) actions.append(button('复制中文名', async () => { if (!navigator.clipboard?.writeText) { toast('请选择中文公司名称后复制。'); return; } await navigator.clipboard.writeText(item.identity.name); toast('中文公司名已复制。'); }, 'quiet'));
         actions.append(button('复制公司名', async () => { if (!navigator.clipboard?.writeText) { toast('请选择公司名称后复制。'); return; } await navigator.clipboard.writeText(item.company); toast('公司名已复制。'); }, 'quiet'), button('登记买家', () => addBuyer(item), 'primary'));
         card.append(info, actions); list.append(card);
       }

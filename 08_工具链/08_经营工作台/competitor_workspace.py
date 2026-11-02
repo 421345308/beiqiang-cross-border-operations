@@ -27,6 +27,11 @@ def list_competitors(app):
         item={'id':row['competitor_id'],'company':company,'direction':row.get('product_direction',''),
               'store_url':store,'source_url':source,'checked_date':verification.get('checked_date',''),
               'buyers':related}
+        identity=row.get('company_zh_evidence') or {}
+        identity_url=urlparse(identity.get('source_url',''))
+        if row.get('company_zh') and identity_url.scheme=='https' and identity_url.hostname:
+            item['identity']={'name':row['company_zh'],'source_url':identity.get('source_url',''),
+                              'credit_code':row.get('unified_credit_code','')}
         sales=row.get('sales_observation') or {}
         if isinstance(sales.get('sold'),int) and _sales_url(sales.get('source_url','')):
             item['sales']={'sold':sales['sold'],'note':sales.get('note',''),'source_url':sales['source_url']}

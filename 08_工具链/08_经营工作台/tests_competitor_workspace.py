@@ -16,6 +16,8 @@ class CompetitorWorkspaceTests(unittest.TestCase):
         path.write_text(json.dumps({'competitors':[
             {'competitor_id':'EX001','company_en':'Shoe Company','store_url':'https://shoe.en.alibaba.com/',
              'product_direction':'casual shoes','store_verification':{'status':'verified','source_url':'https://shoe.en.alibaba.com/','checked_date':'2026-11-02'},
+             'company_zh':'鞋业有限公司','unified_credit_code':'123456789012345678',
+             'company_zh_evidence':{'source_url':'https://example.com/company'} ,
              'sales_observation':{'sold':224,'note':'Accio单款展示，周期不明','source_url':'https://www.accio.com/plp/shoes'}},
             {'competitor_id':'EX002','company_en':'Only a Website','store_url':'','store_verification':{'status':'not_found','note':'仅找到官网'}},
             {'competitor_id':'EX003','company_en':'Misleading Domain','store_url':'https://alibaba.com.evil.test/',
@@ -31,9 +33,16 @@ class CompetitorWorkspaceTests(unittest.TestCase):
         self.assertEqual([x['company'] for x in result['items']],['Shoe Company'])
         self.assertEqual(result['items'][0]['buyers'],[{'id':buyer['id'],'company':'Buyer One'}])
         self.assertEqual(result['items'][0]['sales']['sold'],224)
+        self.assertEqual(result['items'][0]['identity'],{'name':'鞋业有限公司','credit_code':'123456789012345678','source_url':'https://example.com/company'})
         self.assertEqual(len(result['excluded']),2)
         self.assertNotIn('Buyer One',(self.app.root/CATALOG).read_text(encoding='utf8'))
         self.assertFalse(buyer['ready_for_customer'])
+
+    def test_name_without_secure_evidence_is_not_presented(self):
+        path=self.app.root/CATALOG;catalog=json.loads(path.read_text(encoding='utf8'))
+        catalog['competitors'][0]['company_zh_evidence']['source_url']='http://example.com/company'
+        path.write_text(json.dumps(catalog),encoding='utf8')
+        self.assertNotIn('identity',list_competitors(self.app)['items'][0])
 
     def test_relations_validate_and_preserve_existing_candidate(self):
         buyer=self.work.create_discovery({'kind':'candidate','company':'Existing Buyer'})
