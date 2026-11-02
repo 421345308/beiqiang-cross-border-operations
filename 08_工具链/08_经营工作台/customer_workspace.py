@@ -19,7 +19,7 @@ CANDIDATES='04_客户开发/02_目标名单/.local/客户发现助手/candidates
 SOURCE_FIELDS={'company','country','quantity','need','stage','contact_name','email','products','timeline','destination','budget','source_notes'}
 ANALYSIS_FIELDS={'intent','fit','basis','missing','next_action','facts','inferences','needs','product_fit','recommendations','reply_draft','risks','questions',
                  'brief','core_need','recommended_reply','secondary_requests','conflicts','questions_now'}
-DISCOVERY_FIELDS={'title','target','company','website','market_hint','evidence','next_action','status','notes','object_id','origin_object_id','ready_for_customer','priority','business_summary','business_category','contact_status_label','country','contact_name','email','phone','related_competitors'}
+DISCOVERY_FIELDS={'title','target','company','website','market_hint','evidence','next_action','status','notes','object_id','origin_object_id','ready_for_customer','priority','business_summary','business_category','contact_status_label','country','contact_name','email','phone','related_competitors','discovery_reason'}
 
 def _now():return datetime.now(timezone.utc).isoformat()
 def _hash(value):return hashlib.sha256(value.encode('utf8')).hexdigest()

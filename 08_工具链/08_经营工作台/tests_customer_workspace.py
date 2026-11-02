@@ -104,7 +104,7 @@ class MessageTranslationTests(CustomerTests):
 class DiscoveryOrganizationTests(CustomerTests):
     def test_business_fields_persist_and_source_is_untouched(self):
         path=self.candidates();before=path.read_bytes()
-        fields={'priority':'high','country':'US','business_summary':'Wholesale buyer','business_category':'wholesaler','contact_status_label':'Not contacted','next_action':'Check buyer route','contact_name':'Buyer','email':'buyer@example.test','phone':'12345'}
+        fields={'priority':'high','country':'US','business_summary':'Wholesale buyer','business_category':'wholesaler','contact_status_label':'Not contacted','next_action':'Check buyer route','contact_name':'Buyer','email':'buyer@example.test','phone':'12345','discovery_reason':'Found via trade directory; footwear range fits knit slip-ons.'}
         row=self.work.update_discovery('candidate:stable-company',fields)
         for key,value in fields.items():self.assertEqual(row[key],value)
         self.assertEqual(path.read_bytes(),before)

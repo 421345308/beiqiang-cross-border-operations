@@ -280,6 +280,19 @@ test('客户详情直接展示公司网站和现有联系方式', async () => {
   await h.ui.bootstrap(); await settle(); assert.ok(h.elements.page.textContent.includes('邮箱：buyer@example.org')); assert.ok(walk(h.body).some(x=>x.tagName==='A' && x.textContent==='访问公司网站 ↗'));
 });
 
+test('客户详情展示并保存发现路径和适配理由', async () => {
+  const h=harness('#/customers?view=development&item=candidate%3A1');
+  h.discovery.candidates.push({id:'candidate:1',kind:'candidate',title:'买家公司',company:'买家公司',discovery_reason:'公开搜索发现；官网主营休闲鞋。',evidence:[{url:'https://buyer.example/about',text:'官网业务'}]});
+  await h.ui.bootstrap(); await settle();
+  const summary=h.elements.page.querySelector('.candidate-summary');
+  assert.ok(summary.textContent.includes('公开搜索发现；官网主营休闲鞋。'));
+  assert.ok(walk(summary).some(node=>node.tagName==='A' && node.href==='https://buyer.example/about'));
+  const field=walk(h.elements.page).find(node=>node['aria-label']==='从哪里找到，为什么适合');
+  field.value='公开目录发现；鞋类定位与本厂套脚鞋相邻。';
+  await findButton(h.elements.page,'保存客户资料').click(); await settle();
+  assert.equal(h.requests.find(item=>item.path==='/api/desk/discovery/update').payload.discovery_reason,field.value);
+});
+
 test('客户收到新邮件后，详情下一步不再显示等待回复', async () => {
   const h=harness('#/customers?view=development&item=candidate%3A1'), original=h.originalFetch;
   h.discovery.candidates.push({id:'candidate:1',object_id:'prospect:candidate:1',kind:'candidate',title:'买家公司',next_action:'等待客户回复'});
