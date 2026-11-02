@@ -31,7 +31,7 @@
 ### BQ1044-C · 1601943607919
 
 - 平台链接：[1601943607919](https://www.alibaba.com/product-detail/Men-s-Slip-On-Casual-Shoes_1601943607919.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943607919/formal_get.json)；UTC 2026-11-02T01:57:18.054940+00:00。
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943607919/formal_get.json)；UTC 2026-11-02T02:10:49.801485+00:00。
 - 当前正式标题：Men's PU Slip On Penny Loafers with Mesh Lining and Rubber Sole for Casual Wear
 - 审核/展示：approved / Y；平台类目ID：202240835。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
@@ -59,7 +59,7 @@
 ### BQ1044-A · 1601943650718
 
 - 平台链接：[1601943650718](https://www.alibaba.com/product-detail/Men-s-Penny-Loafers-with-Slip_1601943650718.html)
-- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943650718/formal_get.json)；UTC 2026-11-02T01:57:18.568078+00:00。
+- 正式回读：[完整商品字段](../../../05_%E6%89%A9%E5%93%81%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE/%E7%9B%AE%E5%BD%95%E5%AF%B9%E8%B4%A6/%E5%BD%93%E5%89%8D%E5%B9%B3%E5%8F%B0%E7%9B%AE%E5%BD%95/%E5%95%86%E5%93%81/1601943650718/formal_get.json)；UTC 2026-11-02T02:10:49.846857+00:00。
 - 当前正式标题：Men's PU Penny Loafers with Slip On Design and Mesh Lining for Business Casual Wear
 - 审核/展示：approved / Y；平台类目ID：202240835。
 - 正式字段原件包含：attributes, category_id, display, gmt_create, gmt_modified, group_id, is_smart_edit, keywords, language, main_image, pc_detail_url, price_type, product_id, product_sku, product_type, rts, sourcing_trade, status, struct_detail, struct_detail_product, sub_market_type, subject。
@@ -101,6 +101,8 @@
   - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ1044/BQ1044_393593c1f0a41dd2.jpg) · 1200×1200
   - M6：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/%E5%85%B1%E4%BA%AB%E7%B4%A0%E6%9D%90/%E5%85%B1%E4%BA%AB%E7%B4%A0%E6%9D%90_13987d2f18fb1e32.png) · 1254×1254
 - 本地同步状态：`PERFORMANCE_ACTION_DOUBLE_SYNC_PASS`。
+- 标题搜索优化：`DRAFT_OFFLINE_HOLD`；拟标题：Men's Slip On PU Casual Loafers with Apron Toe Stitching and Rubber Sole；原下架状态，历史内容更新曾导致重新展示，先核实保持下架的可靠方式，尚未提交。
+  - 标题证据：[restore_company_original_offline.py](../../../../08_%E5%B7%A5%E5%85%B7%E9%93%BE/01_%E4%B8%9A%E5%8A%A1%E8%84%9A%E6%9C%AC/%E5%95%86%E5%93%81%E5%9B%BE%E7%89%87%E4%B8%8E%E5%AE%A1%E8%AE%A1/restore_company_original_offline.py)
 - 本轮优化：`FORMAL_OFFLINE_NON_TARGET_PASS`；重复弱链接已下架；保留同源有咨询入口 1601943650718，不重建弱链接。
   - 变更证据：[prepared.json](../../../01_%E5%BA%97%E9%93%BA%E4%B8%8E%E5%85%A8%E5%BA%97%E8%AF%8A%E6%96%AD/%E7%BB%8F%E8%90%A5%E8%AF%8A%E6%96%AD%E8%AF%81%E6%8D%AE/%E5%95%86%E5%93%81%E8%A1%A8%E7%8E%B0%E5%A4%84%E7%BD%AE/%E5%95%86%E5%93%81/1601943753087/%E9%87%8D%E5%A4%8D%E5%BC%B1%E9%93%BE%E6%8E%A5%E4%B8%8B%E6%9E%B6/prepared.json)
   - 变更证据：[receipt.json](../../../01_%E5%BA%97%E9%93%BA%E4%B8%8E%E5%85%A8%E5%BA%97%E8%AF%8A%E6%96%AD/%E7%BB%8F%E8%90%A5%E8%AF%8A%E6%96%AD%E8%AF%81%E6%8D%AE/%E5%95%86%E5%93%81%E8%A1%A8%E7%8E%B0%E5%A4%84%E7%BD%AE/%E5%95%86%E5%93%81/1601943753087/%E9%87%8D%E5%A4%8D%E5%BC%B1%E9%93%BE%E6%8E%A5%E4%B8%8B%E6%9E%B6/receipt.json)

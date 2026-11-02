@@ -61,6 +61,9 @@
   - M5：[本地原图](../../../../01_%E4%BA%A7%E5%93%81%E8%B5%84%E4%BA%A7/02_%E6%88%90%E5%93%81%E7%B4%A0%E6%9D%90/BQ-M858/BQ-M858_01dca5924f6bb97f.jpg) · 1000×1000
   - M6：[本地原图](E:/%E8%B4%9D%E5%BC%BA%E7%A6%BB%E7%BA%BF%E5%BD%92%E6%A1%A3/%E4%BA%A7%E5%93%81%E6%97%A7%E6%A1%A3/%E5%B9%B3%E5%8F%B0%E5%9B%9E%E8%AF%BB/ac0685208672a27123a39e13ffdf51a6f389fafa4c00a283aed8c7983e66cae9.jpg) · 1000×1000
 - 本地同步状态：`FORMAL_SNAPSHOT_SAVED`。
+- 标题搜索优化：`DRAFT_OFFLINE_HOLD`；拟标题：Microfiber Closed Toe Slip On Mule Shoes with Buckle Strap and Rubber Sole；原下架状态，历史内容更新曾导致重新展示，先核实保持下架的可靠方式，尚未提交。
+  - 标题证据：[restore_company_original_offline.py](../../../../08_%E5%B7%A5%E5%85%B7%E9%93%BE/01_%E4%B8%9A%E5%8A%A1%E8%84%9A%E6%9C%AC/%E5%95%86%E5%93%81%E5%9B%BE%E7%89%87%E4%B8%8E%E5%AE%A1%E8%AE%A1/restore_company_original_offline.py)
+- 本轮优化：``；
 
 ## 其他原始/正式证据
 
