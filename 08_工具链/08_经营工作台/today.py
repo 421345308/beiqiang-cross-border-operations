@@ -137,8 +137,8 @@ class Today:
         items = []
         for change in pending:
             platform_id = str(change.get('productId') or '')
-            product = next((p for p in products if any(link.get('label') == 'Alibaba ' + platform_id
-                            for link in p.get('links') or [])), None)
+            product = next((p for p in products if any(str(listing.get('id')) == platform_id
+                            for listing in p.get('channel_listings') or [])), None)
             action = ({'label': '查看商品', 'type': 'open_object', 'object_id': product['id']}
                       if product else {'label': '打开商品', 'type': 'open_catalog'})
             items.append(self._item('decide', 'platform_change', (product or {}).get('title') or '商品标题草稿',

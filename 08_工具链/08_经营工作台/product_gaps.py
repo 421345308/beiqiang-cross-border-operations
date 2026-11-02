@@ -1,7 +1,6 @@
 """Find missing product associations without inferring a price or specification."""
 import re
 
-PLATFORM_ID = re.compile(r'^Alibaba\s+(\d{6,32})$')
 
 # 已登记的资料关联
 GAPS = (
@@ -17,12 +16,8 @@ SEVERITY_ORDER = {'high': 0, 'normal': 1, 'low': 2}
 
 
 def _platform_ids(obj):
-    ids = []
-    for link in obj.get('links') or []:
-        match = PLATFORM_ID.match(str(link.get('label') or '').strip())
-        if match:
-            ids.append(match.group(1))
-    return ids
+    return [str(item['id']) for item in obj.get('channel_listings') or []
+            if isinstance(item, dict) and item.get('id') is not None]
 
 
 def _gaps(obj):

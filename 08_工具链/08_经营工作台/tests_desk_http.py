@@ -90,6 +90,24 @@ class DeskHTTPTests(unittest.TestCase):
         self.assertEqual(status,200);self.assertEqual(bootstrap['csrf_token'],self.app.token)
         self.assertEqual(bootstrap['website_status']['state'],'ready')
 
+    def test_product_review_reads_only_the_selected_platform_listing(self):
+        from types import SimpleNamespace
+        calls=[]
+        def call(method,params):
+            calls.append((method,params))
+            return {'product':{'id':'1601','subject':'Live shoes','status':'approved','display':'Y',
+                'main_image':{'images':['https://sc04.alicdn.com/main.jpg']},
+                'struct_detail':{'detail_image':{'images':[{'image_url':'https://sc04.alicdn.com/detail.jpg'}]}}}}
+        self.app.product_review.client=SimpleNamespace(call=call,safe=lambda value:value)
+        self.app.product_review.translate=lambda rows:[{'id':rows[0]['id'],'subject_zh':'鞋子','body_zh':''}]
+        status,result=self.request('/api/desk/product-review?'+urlencode({'object_id':'product:BQ009'}))
+        self.assertEqual(status,200);self.assertEqual(result['selected']['id'],'1601')
+        self.assertEqual(result['selected']['platform']['title'],'Live shoes')
+        self.assertEqual(len(result['selected']['platform']['detail_images']),1)
+        self.assertEqual(calls[0][0],'alibaba.icbu.product.get')
+        for thread in threading.enumerate():
+            if thread.name=='product-title-translation':thread.join(2)
+
     def test_alibaba_manual_inquiry_to_analysis_and_queue(self):
         from tests_customer_analysis import response
         original='Please send a quotation for 500 pairs of walking shoes.'

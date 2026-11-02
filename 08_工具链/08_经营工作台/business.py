@@ -142,6 +142,7 @@ class Business:
             core['source_state_label']=state_label;core['classification']=classification;core['existing_specifications']=specifications
             source_core={k:source[k] for k in ('id','supplier','model','url','price','currency','observed_at','price_terms') if k in source}
             channel_core=[{'id':v.get('id'),'url':v.get('url'),'current':{k:v.get('current_platform_fields',{}).get(k) for k in ('title','status','at','price_tiers')},'historical_title':v.get('catalog_fields',{}).get('title')} for v in listings]
+            obj['channel_listings']=channel_core
             obj['content']=json.dumps({'product':core,'source_role':'已采纳' if adopted else '历史参考，非新增供货承诺',
                 'supply_source':source_core,'selected_evidence_paths':selected,'channel_listings':channel_core,
                 'full_index':PRODUCTS,'boundary':'标题/用途候选不是材料、功能、自有工厂或供货承诺的证明。完整回执按原档路径查阅。'},ensure_ascii=False,indent=2)
@@ -279,7 +280,7 @@ class Business:
         query=q.strip().casefold()
         if query:objects=[o for o in objects if query in json.dumps(o,ensure_ascii=False).casefold()]
         # List stays compact; detail and Agent context use get_object.
-        return [{**{k:o[k] for k in ('id','kind','title','subtitle','source','summary')},'source_type':o.get('source_type') or ('website' if o['id'].startswith('customer:website-') else 'local'),'assets':o['assets'][:1], 'supply':o.get('supply',{}), 'product_series':o.get('product_series'), 'current_model':o.get('current_model'), 'aliases':o.get('aliases',[]), 'source_state':o.get('source_state'), 'source_role':o.get('source_role'), 'publication_disposition':o.get('publication_disposition',{}), 'links':o['links'] if o['kind']=='product' else [], 'category':o.get('category'), 'classification':o.get('classification',{}), 'facts':[f for f in o['facts'] if f['label'].startswith('用途候选')] if o['kind']=='product' else []} for o in objects]
+        return [{**{k:o[k] for k in ('id','kind','title','subtitle','source','summary')},'source_type':o.get('source_type') or ('website' if o['id'].startswith('customer:website-') else 'local'),'assets':o['assets'][:1], 'supply':o.get('supply',{}), 'product_series':o.get('product_series'), 'current_model':o.get('current_model'), 'aliases':o.get('aliases',[]), 'source_state':o.get('source_state'), 'source_role':o.get('source_role'), 'publication_disposition':o.get('publication_disposition',{}), 'links':o['links'] if o['kind']=='product' else [], 'channel_listings':o.get('channel_listings',[]) if o['kind']=='product' else [], 'category':o.get('category'), 'classification':o.get('classification',{}), 'facts':[f for f in o['facts'] if f['label'].startswith('用途候选')] if o['kind']=='product' else []} for o in objects]
 
     def get_object(self,object_id):
         if not isinstance(object_id,str):raise ValueError('业务对象ID无效')

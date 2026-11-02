@@ -8,7 +8,7 @@ from today import Today
 def product(pid, *, assets=(), supply='own', source_url='', role='missing', links=(), facts=()):
     return {'id': 'product:' + pid, 'title': pid, 'assets': list(assets),
             'supply': {'kind': supply, 'url': source_url}, 'source_role': role,
-            'links': [{'label': label} for label in links], 'category': '系带',
+            'links': [{'label': label} for label in links], 'channel_listings':[{'id':label.split()[-1]} for label in links], 'category': '系带',
             'facts': [{'label': label, 'value': value} for label, value in facts]}
 
 
@@ -27,6 +27,13 @@ class GapTests(unittest.TestCase):
         summary = ProductGaps(SimpleNamespace(business=business)).summary()
         self.assertEqual(summary['with_gaps'], 0)
         self.assertEqual(business.calls, 1)
+
+    def test_platform_association_does_not_depend_on_link_label(self):
+        row=product('BQ001',assets=[{}],links=['Alibaba 1601825021825'])
+        row['links'][0]['label']='国际站商品'
+        detail=ProductGaps(SimpleNamespace(business=FakeBusiness([row]))).for_product('BQ001')
+        self.assertNotIn('no_platform_id',detail['gap_keys'])
+        self.assertEqual(detail['platform_ids'],['1601825021825'])
 
     def test_only_external_source_without_link_is_reported(self):
         business = FakeBusiness([product('BQ002', assets=[], supply='external', links=[])])

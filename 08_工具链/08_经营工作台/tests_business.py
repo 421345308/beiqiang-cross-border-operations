@@ -29,7 +29,9 @@ class BusinessTests(unittest.TestCase):
         self.assertEqual(obj['title'],'BQ009');self.assertEqual(obj['subtitle'],'Current title')
         self.assertEqual(len(obj['assets']),1);self.assertTrue(obj['assets'][0]['url'].startswith('/api/media/file?'))
         self.assertIn('Old title',obj['content']);self.assertIn('Current title',obj['content'])
-        self.assertEqual(len(self.business.list_objects(kind='product',q='Supplier')),1)
+        self.assertEqual(obj['channel_listings'][0]['id'],'1601')
+        listing=self.business.list_objects(kind='product',q='Supplier');self.assertEqual(len(listing),1)
+        self.assertEqual(listing[0]['channel_listings'][0]['id'],'1601')
     def test_owner_confirmed_factory_is_visible_without_inventing_raw_package(self):
         self.product()
         data=json.loads((self.root/PRODUCTS).read_text(encoding='utf8'))

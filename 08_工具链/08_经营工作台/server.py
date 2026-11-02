@@ -10,6 +10,7 @@ from workspaces import Workspaces, WorkspaceConflict
 from media_assets import MediaAssets, MediaError
 from resource_library import ResourceLibrary
 from product_changes import ProductChanges
+from alibaba_product_review import AlibabaProductReview
 from business import Business
 from agent_jobs import AgentJobs, codex_executable
 from customer_workspace import CustomerWorkspace
@@ -54,6 +55,7 @@ class Workbench:
         self.media=MediaAssets(self.root)
         self.library=ResourceLibrary(self)
         self.product_changes=ProductChanges(self)
+        self.product_review=AlibabaProductReview(self)
         self.business=Business(self)
         self.customer_workspace=CustomerWorkspace(self)
         self.inquiry_intake=InquiryIntake(self)
@@ -308,6 +310,7 @@ class Handler(BaseHTTPRequestHandler):
                 if u.path=='/api/desk/creation/libtv':return self.send_json(app.creation.libtv_projects())
                 if u.path=='/api/desk/creation/libtv/nodes':return self.send_json(app.creation.libtv_execute('nodes',project_id=value('project_id')))
                 if u.path=='/api/desk/title-diagnosis':return self.send_json(app.product_changes.diagnose(value('product_id')))
+                if u.path=='/api/desk/product-review':return self.send_json(app.product_review.get(value('object_id'),value('listing_id'),refresh=value('refresh')=='1'))
                 if u.path=='/api/desk/channels':return self.send_json(app.channel_overview.snapshot())
                 if u.path=='/api/desk/today':return self.send_json(app.today.snapshot())
                 if u.path=='/api/desk/product-gaps':
