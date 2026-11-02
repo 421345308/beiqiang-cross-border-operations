@@ -215,6 +215,7 @@ def parse_api_message(value, account, customers, thread_customers=()):
         canonical_id, canonical_thread = mid, thread or None
     return {'id': canonical_id, 'thread_id': canonical_thread, 'direction': direction, 'sent_at': sent_at,
         'from': headers.get('from', ''), 'to': headers.get('to', ''), 'cc': headers.get('cc', ''),
+        'reply_to': headers.get('reply-to', ''), 'rfc_message_id': headers.get('message-id', ''), 'references': headers.get('references', ''),
         'bcc': headers.get('bcc', ''), 'subject': headers.get('subject', ''), 'snippet': str(value.get('snippet') or ''),
         'body': body.strip(), 'translation_zh': None, 'attachments': attachments, 'body_truncated': truncated,
         'mail_kind': classify_mail(headers,direction=direction,labels=value.get('labelIds') or (),subject=headers.get('subject',''),body=body),

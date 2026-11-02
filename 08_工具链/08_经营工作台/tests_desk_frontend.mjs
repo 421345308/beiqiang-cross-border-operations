@@ -79,6 +79,35 @@ test('Gmail 默认显示中文，原文只通过 Gmail 链接查看，更新邮�
   await findButton(panel,'根据邮件准备回复').click(); assert.ok(instruction.value.startsWith('自己未提交的要求')); assert.ok(instruction.value.includes('最新 Gmail 往来')); assert.equal(h.requests.some(x=>x.path.includes('send')),false);
 });
 
+test('客户邮件在本地保存、添加资料并审核后才发送，刷新邮件不丢草稿', async () => {
+  const h=harness('#/object/customer%3Amail'),original=h.originalFetch,calls=[];
+  h.objects.push({id:'customer:mail',kind:'customer',title:'测试客户',assets:[]});
+  let draft={object_id:'customer:mail',account:'seller@example.test',to:'buyer@example.test',subject:'Re: Samples',body_en:'',body_zh:'',attachments:[],version:'v1',status:'draft',can_send:true};
+  h.interceptFetch(async(path,options={})=>{
+    const url=new URL(path,'http://127.0.0.1:8766'),payload=options.body ? JSON.parse(options.body) : null;calls.push({path:url.pathname,payload});
+    if(url.pathname==='/api/desk/gmail/customer' || url.pathname==='/api/desk/gmail/sync')return {ok:true,json:async()=>({status:{state:'connected',account_email:'seller@example.test'},messages:[]})};
+    if(url.pathname==='/api/desk/gmail/draft' && !payload)return {ok:true,json:async()=>structuredClone(draft)};
+    if(url.pathname==='/api/desk/gmail/draft'){draft={...draft,...payload.fields,version:'v2'};return {ok:true,json:async()=>structuredClone(draft)};}
+    if(url.pathname==='/api/library')return {ok:true,json:async()=>({items:[{id:'mat1',title:'产品目录',path:'catalog.pdf'}]})};
+    if(url.pathname==='/api/desk/gmail/attachment'){draft={...draft,version:'v3',attachments:[{id:'a1',name:'catalog.pdf',size:1000}]};return {ok:true,json:async()=>structuredClone(draft)};}
+    if(url.pathname==='/api/desk/gmail/send'){draft={...draft,status:'sent',sent_at:'2026-11-02T00:00:00Z',gmail_url:'https://mail.google.com/mail/u/0/#all/20'};return {ok:true,json:async()=>structuredClone(draft)};}
+    return original(path,options);
+  });
+  await h.ui.bootstrap();await settle();
+  const panel=h.elements.page.querySelector('.gmail-conversation');await findButton(panel,'写邮件 / 继续草稿').click();await settle();
+  const composer=panel.querySelector('.mail-composer'), en=walk(composer).find(x=>x['aria-label']==='英文正文（发送给客户）'),zh=walk(composer).find(x=>x['aria-label']==='中文对照（仅供自己审核）');
+  en.value='Hello buyer, here are our shoes.';en.listeners.input();zh.value='您好，这是我们的鞋子。';zh.listeners.input();
+  await findButton(panel,'更新邮件往来').click();await settle();assert.equal(en.value,'Hello buyer, here are our shoes.');
+  const picker=walk(composer).find(x=>x.tagName==='DETAILS' && x.className==='mail-material-picker');picker.open=true;await picker.listeners.toggle();await settle();
+  await findButton(composer,'＋ 产品目录').click();await settle();assert.ok(composer.textContent.includes('catalog.pdf'));
+  await findButton(composer,'查看并审核').click();await settle();
+  assert.ok(composer.textContent.includes('您好，这是我们的鞋子。'));assert.ok(composer.textContent.includes('Hello buyer, here are our shoes.'));
+  assert.ok(composer.textContent.includes('收件人：buyer@example.test'));assert.ok(composer.textContent.includes('catalog.pdf'));
+  assert.equal(calls.filter(x=>x.path==='/api/desk/gmail/send').length,0);
+  await findButton(composer,'确认发送这封邮件').click();await settle();
+  assert.equal(calls.filter(x=>x.path==='/api/desk/gmail/send').length,1);assert.ok(composer.textContent.includes('邮件已由 Gmail 接收'));
+});
+
 test('邮件翻译进行中及失败时显示状态，并可重试', async () => {
   const h=harness('#/object/customer%3A1'), original=h.originalFetch;
   h.objects.push({id:'customer:1',kind:'customer',title:'邮件客户',assets:[]});

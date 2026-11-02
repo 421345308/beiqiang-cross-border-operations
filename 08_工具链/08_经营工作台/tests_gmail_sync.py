@@ -43,6 +43,13 @@ class Tests(unittest.TestCase):
         self.assertEqual(customer_emails(obj),[BUYER])
     def test_strict_matching(self):
         s=self.connect();self.mail.messages=[message(buyer='otherbuyer@example.com')];r=s.customer('customer:1');self.assertEqual(r['messages'],[]);self.assertFalse(r['reply_pending']);self.assertEqual(self.events,[])
+    def test_manually_sent_reply_address_is_included_in_future_customer_syncs(self):
+        s=self.connect();s.link_sent_address('customer:1','reply@example.com')
+        self.mail.messages=[message('reply',buyer='reply@example.com')]
+        result=s.customer('customer:1',force=True)
+        self.assertTrue(result['reply_pending']);self.assertEqual(result['messages'][0]['id'],'reply')
+        self.assertEqual(set(self.mail.calls[-1]),{BUYER,'reply@example.com'})
+        s.scan_once();self.assertEqual(set(self.mail.calls[-1]),{BUYER,'reply@example.com'})
     def test_other_mailbox_rejected(self):
         s=self.connect();m=message();m['to']='other@example.com';self.mail.messages=[m];self.assertEqual(s.customer('customer:1')['messages'],[])
     def test_bcc_explicit_match(self):

@@ -158,6 +158,7 @@ def parse_message(raw, metadata, uid, account, customers):
     size = re.search(rb'RFC822.SIZE (\d+)', metadata)
     return {'id': ident, 'thread_id': thread, 'direction': direction, 'sent_at': sent_at,
             'from': str(msg.get('From', '')), 'to': str(msg.get('To', '')),
+            'reply_to': str(msg.get('Reply-To', '')), 'rfc_message_id': str(msg.get('Message-ID', '')), 'references': str(msg.get('References', '')),
             'cc': str(msg.get('Cc', '')), 'bcc': str(msg.get('Bcc', '')),
             'subject': str(msg.get('Subject', '')), 'snippet': ' '.join(body.split())[:240],
             'body': body.strip(), 'translation_zh': None,

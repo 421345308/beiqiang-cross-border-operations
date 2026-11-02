@@ -60,6 +60,7 @@ class GmailService:
             app.db.execute('CREATE TABLE IF NOT EXISTS gmail_reply_events (object_id TEXT NOT NULL,message_id TEXT NOT NULL,dispatch_state TEXT NOT NULL,PRIMARY KEY(object_id,message_id))')
             app.db.execute('CREATE TABLE IF NOT EXISTS gmail_acknowledged (object_id TEXT PRIMARY KEY,message_id TEXT NOT NULL)')
             app.db.execute('CREATE TABLE IF NOT EXISTS gmail_inbox_dismissed (account TEXT NOT NULL,message_id TEXT NOT NULL,PRIMARY KEY(account,message_id))')
+            app.db.execute('CREATE TABLE IF NOT EXISTS gmail_customer_addresses (object_id TEXT NOT NULL,address TEXT NOT NULL,PRIMARY KEY(object_id,address))')
             app.db.commit()
         if self.path.exists():
             try:
@@ -159,9 +160,19 @@ class GmailService:
             return workspace._saved_profile(object_id).get('workflow') or {}
         return workspace.workflow(object_id)
 
+    def addresses(self, obj):
+        with self.app.lock:
+            rows=self.app.db.execute('SELECT address FROM gmail_customer_addresses WHERE object_id=?',(obj['id'],)).fetchall()
+        return sorted(set(customer_emails(obj)) | {row[0] for row in rows})
+
+    def link_sent_address(self, object_id, address):
+        address=normalize_email(address)
+        with self.app.lock:
+            self.app.db.execute('INSERT OR IGNORE INTO gmail_customer_addresses VALUES (?,?)',(object_id,address));self.app.db.commit()
+
     def customer(self,object_id,force=False,*,_context=None,_object=None):
         obj=_object if _object is not None else self.app.business.get_object(object_id)
-        emails=customer_emails(obj)
+        emails=self.addresses(obj)
         with self.lock:
             account=self._account;mailbox=self._mailbox
         emails=[e for e in emails if e!=account]
@@ -298,7 +309,7 @@ class GmailService:
         business=self.app.business
         objects=business.mail_objects() if hasattr(business,'mail_objects') else [business.get_object(e['id']) for e in business.list_objects() if e.get('kind') in ('customer','prospect')]
         for obj in objects:
-            addresses=set(customer_emails(obj))-{self._account}
+            addresses=set(self.addresses(obj))-{self._account}
             if addresses:targets.append((obj['id'],obj));emails.update(addresses)
         context={'messages':[]}
         if emails:

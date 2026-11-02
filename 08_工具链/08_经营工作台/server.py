@@ -18,6 +18,7 @@ from channel_overview import ChannelOverview
 from creation import Creation
 from creation_canvas import CreationCanvas
 from gmail_sync import GmailService
+from gmail_drafts import GmailDrafts
 from gmail_translation import GmailTranslator
 from product_gaps import ProductGaps
 from today import Today
@@ -65,6 +66,7 @@ class Workbench:
         self.today=Today(self,gaps=self.product_gaps)
         self.gmail=GmailService(self,on_new_reply=self._gmail_reply)
         self.gmail.translator=GmailTranslator(self,self.gmail.translation_changed)
+        self.gmail_drafts=GmailDrafts(self)
         if self.gmail.status()['state']=='connected':self.gmail.start()
 
     def _gmail_reply(self,object_id,message,context):
@@ -284,6 +286,12 @@ class Handler(BaseHTTPRequestHandler):
                         'goals':app.bootstrap()['goals'],'website_status':app.business.website_status(),
                         'alibaba_status':app.business.alibaba.status(),'gmail_revision':app.gmail.status()['revision']})
                 if u.path=='/api/desk/gmail/customer':return self.send_json(app.gmail.customer(value('object_id')))
+                if u.path=='/api/desk/gmail/draft':return self.send_json(app.gmail_drafts.get(value('object_id')))
+                if u.path=='/api/desk/gmail/attachment':
+                    item,data=app.gmail_drafts.attachment(value('object_id'),value('id'))
+                    self.send_response(200);self.send_header('Content-Type',mimetypes.guess_type(item['name'])[0] or 'application/octet-stream')
+                    self.send_header('Content-Disposition',"inline; filename*=UTF-8''"+__import__('urllib.parse',fromlist=['quote']).quote(item['name']))
+                    self.send_header('X-Content-Type-Options','nosniff');self.send_header('Cache-Control','no-store');self.send_header('Content-Length',str(len(data)));self.end_headers();self.wfile.write(data);return
                 if u.path=='/api/desk/gmail/candidates':return self.send_json(app.gmail.buyer_candidates())
                 if u.path=='/api/desk/customer-profile':return self.send_json(app.customer_workspace.profile(value('object_id')))
                 if u.path=='/api/desk/inquiry-queue':return self.send_json(app.customer_workspace.queue(bucket=value('bucket') or 'active',state=value('state'),q=value('q')))
@@ -345,7 +353,8 @@ class Handler(BaseHTTPRequestHandler):
             if not secrets.compare_digest(self.headers.get('X-Workbench-Token',''),app.token):raise PermissionError('请求令牌无效，请刷新页面')
             if self.headers.get('Content-Type','').split(';')[0]!='application/json':raise ValueError('请求必须使用JSON')
             size=int(self.headers.get('Content-Length','0'))
-            limit=550000 if urlsplit(self.path).path=='/api/desk/creation-canvas' else 256000 if urlsplit(self.path).path=='/api/canvases' else 64000
+            path=urlsplit(self.path).path
+            limit=26000000 if path=='/api/desk/gmail/attachment' else 550000 if path=='/api/desk/creation-canvas' else 256000 if path=='/api/canvases' else 240000 if path=='/api/desk/gmail/draft' else 64000
             if size<1 or size>limit:raise ValueError('请求大小无效')
             body=json.loads(self.rfile.read(size));parts=urlsplit(self.path).path.strip('/').split('/')
             if parts==['api','library']:return self.send_json(app.library.add(body))
@@ -360,6 +369,17 @@ class Handler(BaseHTTPRequestHandler):
                 redirect_uri='http://127.0.0.1:'+str(self.server.server_port)+'/api/desk/gmail/oauth/callback'
                 return self.send_json({'authorization_url':app.gmail.start_oauth(body.get('client_config'),redirect_uri)})
             if parts==['api','desk','gmail','sync']:return self.send_json(app.gmail.customer(body.get('object_id'),force=True))
+            if parts==['api','desk','gmail','draft']:
+                return self.send_json(app.gmail_drafts.save(body.get('object_id'),body.get('version'),body.get('fields')))
+            if parts==['api','desk','gmail','draft','new']:return self.send_json(app.gmail_drafts.new(body.get('object_id')))
+            if parts==['api','desk','gmail','attachment']:
+                return self.send_json(app.gmail_drafts.add_attachment(body.get('object_id'),body.get('version'),filename=body.get('filename',''),data=body.get('data',''),resource_id=body.get('resource_id','')))
+            if parts==['api','desk','gmail','attachment','remove']:
+                return self.send_json(app.gmail_drafts.remove_attachment(body.get('object_id'),body.get('version'),body.get('attachment_id')))
+            if parts==['api','desk','gmail','send']:
+                return self.send_json(app.gmail_drafts.send(body.get('object_id'),body.get('version')))
+            if parts==['api','desk','gmail','reconcile']:return self.send_json(app.gmail_drafts.reconcile(body.get('object_id')))
+            if parts==['api','desk','gmail','resume-unsent']:return self.send_json(app.gmail_drafts.resume_unsent(body.get('object_id'),body.get('confirmed_not_sent') is True))
             if parts==['api','desk','gmail','ack']:return self.send_json(app.gmail.acknowledge(body.get('object_id')))
             if parts==['api','desk','gmail','candidates','dismiss']:return self.send_json(app.gmail.dismiss_candidate(body.get('message_id')))
             if parts==['api','desk','creation-canvas']:

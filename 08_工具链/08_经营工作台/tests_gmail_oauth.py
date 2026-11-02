@@ -108,6 +108,10 @@ class MailboxTests(unittest.TestCase):
         value=email();value['payload']['parts']=[{'mimeType':'text/html','body':{'data':encoded('<p>Hello <b>buyer</b></p>')}},
                                                 {'mimeType':'text/plain','body':{'attachmentId':'body-is-separate'}}]
         result=parse_api_message(value,ACCOUNT,{BUYER});self.assertIn('Hello',result['body']);self.assertTrue(result['body_truncated'])
+    def test_reply_address_and_rfc_message_id_are_available_for_threaded_reply(self):
+        value=email();value['payload']['headers'].extend([{'name':'Reply-To','value':'Sales <sales@example.com>'},{'name':'Message-ID','value':'<buyer-1@example.com>'}])
+        result=parse_api_message(value,ACCOUNT,{BUYER})
+        self.assertEqual(result['reply_to'],'Sales <sales@example.com>');self.assertEqual(result['rfc_message_id'],'<buyer-1@example.com>')
     def test_colleague_in_same_thread_associates_with_customer(self):
         sent=email('11','outbound');colleague=email('12');colleague['payload']['headers'][0]['value']='colleague@example.com'
         self.values=[sent];self.thread_values=[sent,colleague]

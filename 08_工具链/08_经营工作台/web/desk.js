@@ -411,9 +411,10 @@
   }
   function mountGmail(ctx, main) {
     const host = el('section', undefined, 'card gmail-conversation'); ctx.gmailHost = host; main.append(host);
+    ctx.gmailMessages = el('div'); ctx.composerHost = el('div', undefined, 'gmail-composer-host'); host.append(ctx.gmailMessages, ctx.composerHost);
     ctx.candidateNext = main.querySelector('.candidate-next-action');
     ctx.candidateNextDefault = ctx.candidateNext?.textContent || '';
-    host.append(el('h2', 'Gmail 邮件往来'), el('p', '正在读取邮件连接状态…'));
+    ctx.gmailMessages.append(el('h2', 'Gmail 邮件往来'), el('p', '正在读取邮件连接状态…'));
     loadGmail(ctx);
   }
   async function loadGmail(ctx, sync = false) {
@@ -423,9 +424,9 @@
       if (S.detail !== ctx) return;
       if (ctx.candidateNext) ctx.candidateNext.textContent = data.reply_pending ? '下一步：阅读客户新邮件，准备后续沟通' : ctx.candidateNextDefault;
       const stamp = JSON.stringify(data); if (stamp === ctx.gmailStamp) return; ctx.gmailStamp = stamp;
-      const host = ctx.gmailHost, status = data.status || {}, connected = status.state === 'connected', noContact = status.state === 'no_contact_email'; host.replaceChildren(el('h2', 'Gmail 邮件往来'));
+      const host = ctx.gmailMessages, status = data.status || {}, connected = status.state === 'connected', noContact = status.state === 'no_contact_email'; host.replaceChildren(el('h2', 'Gmail 邮件往来'));
       host.append(el('p', connected ? `已连接${status.account_email ? ` · ${status.account_email}` : ''}${status.last_success_at ? ` · 最近读取 ${time(status.last_success_at)}` : ''}` : noContact ? '这位客户尚未填写联系邮箱。' : status.state === 'error' ? '邮件读取暂未完成，请稍后重试。' : '尚未连接 Gmail，当前没有自动收信。', connected ? 'gmail-status' : 'artifact-note'));
-      if (connected) host.append(el('p', '工作台运行时约每 2 分钟检查一次；可手动更新。邮件请在 Gmail 中审核后发送。', 'gmail-sync-note'));
+      if (connected) host.append(el('p', '工作台运行时约每 2 分钟检查一次；可手动更新。回复在本页审核后发送。', 'gmail-sync-note'));
       if(status.authorization_expires_at)host.append(el('p',`Google 测试授权预计 ${time(status.authorization_expires_at)} 到期，到期后重新授权即可。`,'artifact-note'));
       if (status.error) host.append(el('p', text(status.error), 'inline-error'));
       if (status.history_note) host.append(el('p', text(status.history_note), 'artifact-note'));
@@ -478,6 +479,7 @@
       if (data.callback_error) host.append(el('p', text(data.callback_error), 'inline-error'));
       if (data.next_action) host.append(el('p', `下一步：${data.next_action}`, 'next-action'));
       const mailActions = el('div', undefined, 'gmail-actions');
+      mailActions.append(button('写邮件 / 继续草稿', () => openGmailComposer(ctx), 'primary'));
       mailActions.append(button('更新邮件往来', () => loadGmail(ctx, true), 'quiet'), button('根据邮件准备回复', () => { ctx.instruction.value = (ctx.instruction.value.trim() ? ctx.instruction.value + '\n\n' : '') + '请先读取这位客户最新 Gmail 往来，用中文说明客户回复的重点、当前需要处理的事项和建议下一步，再准备英文回复草稿并附中文对照。保留原有承诺与上下文，不发送邮件。'; S.instructions.set(String(ctx.object.id), ctx.instruction.value); ctx.instruction.focus(); }, 'quiet'));
       const messages = Array.isArray(data.messages) ? [...data.messages].sort((a,b) => text(b.sent_at).localeCompare(text(a.sent_at))) : [];
       const latestThread = messages.find(mail => mail.url)?.url;
@@ -496,8 +498,143 @@
         const source = link('在 Gmail 查看原文 ↗', mail.url); if (source) entry.append(source); host.append(entry);
         if (mail.body_truncated) entry.append(el('p','邮件内容较长，可在 Gmail 查看完整原文和附件。','artifact-note'));
       }
-    } catch (error) { if (S.detail === ctx) ctx.gmailHost.replaceChildren(el('h2', 'Gmail 邮件往来'), el('p', `邮件暂不可读取：${error.message}`, 'artifact-note'), button('重试读取邮件', () => loadGmail(ctx), 'quiet')); }
+    } catch (error) { if (S.detail === ctx) ctx.gmailMessages.replaceChildren(el('h2', 'Gmail 邮件往来'), el('p', `邮件暂不可读取：${error.message}`, 'artifact-note'), button('重试读取邮件', () => loadGmail(ctx), 'quiet')); }
     finally { ctx.gmailBusy = false; }
+  }
+  async function openGmailComposer(ctx, source = null) {
+    if (ctx.composer) {
+      if (source) ctx.composer.useSource(source);
+      ctx.composerHost.scrollIntoView?.({behavior:'smooth',block:'start'}); return;
+    }
+    const host = ctx.composerHost; host.replaceChildren(el('p', '正在打开邮件草稿…', 'muted'));
+    try {
+      const initial = await api(`/api/desk/gmail/draft?object_id=${encodeURIComponent(ctx.object.id)}`);
+      if (S.detail !== ctx) return;
+      const state = {draft:initial, dirty:false, editSeq:0, saving:Promise.resolve(), timer:null};
+      const editState = {dirty:false}; S.edits.set(`gmail:${ctx.object.id}`, editState);
+      const body = el('div', undefined, 'mail-composer'), editor = el('div', undefined, 'mail-editor'), preview = el('div', undefined, 'mail-review');
+      const feedback = el('p', '', 'mail-compose-feedback'), head = el('div', undefined, 'mail-compose-head');
+      head.append(el('div', '给客户写邮件', 'mail-compose-title'), el('span', '草稿保存在本机 · 发送前由你审核', 'mail-compose-caption'));
+      body.append(head, editor, preview, feedback); host.replaceChildren(body);
+      function fields(draft) {
+        editor.replaceChildren(); preview.replaceChildren(); preview.hidden=true;
+        editor.append(el('p', `发件邮箱：${draft.account || '尚未连接 Gmail'}`, 'mail-from'));
+        const to = addField(editor, '收件人', draft.to), subject = addField(editor, '邮件主题', draft.subject);
+        if(draft.thread_id) editor.append(el('p','沿原邮件线程回复；如果修改主题，会作为新邮件发送。','artifact-note'));
+        to.type='email';
+        const en = addField(editor, '英文正文（发送给客户）', draft.body_en, true, '在这里撰写或从工作成果中采用英文回复');
+        const zh = addField(editor, '中文对照（仅供自己审核）', draft.body_zh, true, '填写中文对照，方便审核');
+        en.className='mail-body-input'; zh.className='mail-body-input chinese';
+        const attachments = el('div', undefined, 'mail-attachments'); editor.append(attachments);
+        const row = el('div', undefined, 'mail-compose-actions'), saveButton = button('保存草稿', async()=>{await save();feedback.textContent='草稿已保存。';}, 'quiet');
+        const reviewButton = button('查看并审核', async()=>{
+          reviewButton.disabled=true;
+          try {
+            await save(); const d=state.draft;
+            if (!d.to.trim() || !d.subject.trim() || !d.body_en.trim()) throw new Error('请先填写收件人、主题和英文正文。');
+            review(d); editor.hidden=true; preview.hidden=false; feedback.textContent='请检查完整内容和附件，确认后才会发送。';
+          } catch(error) { feedback.textContent=error.message; } finally { reviewButton.disabled=false; }
+        }, 'primary');
+        row.append(saveButton,reviewButton); editor.append(row);
+        for (const input of [to,subject,en,zh]) input.addEventListener('input',()=>{
+          state.dirty=true; editState.dirty=true; state.editSeq++; feedback.textContent='正在保存草稿…';
+          clearTimeout(state.timer); state.timer=setTimeout(()=>save().catch(error=>{feedback.textContent=error.message;}),900);
+        });
+        async function save() {
+          clearTimeout(state.timer);
+          state.saving = state.saving.catch(()=>{}).then(async()=>{
+            while(state.dirty) {
+              const seq=state.editSeq, snapshot={to:to.value.trim(),subject:subject.value.trim(),body_en:en.value,body_zh:zh.value};
+              const saved=await api('/api/desk/gmail/draft',{object_id:ctx.object.id,version:state.draft.version,fields:snapshot});
+              state.draft={...state.draft,...saved}; if(seq===state.editSeq){state.dirty=false;editState.dirty=false;feedback.textContent='草稿已保存';}
+            }
+          });
+          return state.saving;
+        }
+        function attachmentLinks(box, draft, removable) {
+          if (!draft.attachments?.length) {box.append(el('p','尚未添加附件','muted'));return;}
+          for(const item of draft.attachments) {
+            const line=el('div',undefined,'mail-attachment');
+            const href=`/api/desk/gmail/attachment?object_id=${encodeURIComponent(ctx.object.id)}&id=${encodeURIComponent(item.id)}`;
+            const view=link(`${item.name} · ${(item.size/1024/1024).toFixed(2)} MB ↗`,href); if(view)line.append(view);
+            if(removable)line.append(button('移除',async()=>{try{await save();state.draft={...state.draft,...await api('/api/desk/gmail/attachment/remove',{object_id:ctx.object.id,version:state.draft.version,attachment_id:item.id})};drawAttachments();}catch(error){feedback.textContent=error.message;}},'quiet'));
+            box.append(line);
+          }
+        }
+        function drawAttachments() {
+          attachments.replaceChildren(el('h3','附件')); attachmentLinks(attachments,state.draft,true);
+          const controls=el('div',undefined,'mail-attachment-controls');
+          const uploadLabel=el('label','添加本地文件','mail-upload'), upload=el('input'); upload.type='file'; upload.multiple=true; upload.setAttribute('aria-label','添加本地附件'); uploadLabel.append(upload); controls.append(uploadLabel);
+          upload.addEventListener('change',async()=>{
+            try {
+              await save(); const selected=Array.from(upload.files || []);
+              for(const file of selected) {
+                if(file.size>18*1024*1024)throw new Error('附件合计请控制在 18 MB 以内。');
+                const data=await new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(String(reader.result).split(',')[1]);reader.onerror=()=>reject(new Error('附件读取失败。'));reader.readAsDataURL(file);});
+                state.draft={...state.draft,...await api('/api/desk/gmail/attachment',{object_id:ctx.object.id,version:state.draft.version,filename:file.name,data})};
+              }
+              feedback.textContent='附件已添加，请在审核时打开检查。';drawAttachments();
+            } catch(error) {feedback.textContent=error.message;} finally {upload.value='';}
+          });
+          const materials=el('details',undefined,'mail-material-picker'); materials.append(el('summary','从资料包选择'));
+          const materialList=el('div'); materials.append(materialList);
+          materials.addEventListener('toggle',async()=>{
+            if(!materials.open || materials.loaded)return; materials.loaded=true; materialList.replaceChildren(el('p','正在读取资料…','muted'));
+            try {
+              const result=await api('/api/library'); materialList.replaceChildren();
+              const search=el('input');search.placeholder='搜索资料名称';search.setAttribute('aria-label','搜索附件资料');materialList.append(search);
+              const list=el('div',undefined,'mail-material-list');materialList.append(list);
+              function draw(){list.replaceChildren();const items=(result.items || []).filter(item=>`${item.title} ${item.path}`.toLowerCase().includes(search.value.toLowerCase()));
+                if(!items.length)list.append(el('p','没有匹配资料','muted'));
+                for(const item of items)list.append(button(`＋ ${item.title}`,async()=>{try{await save();state.draft={...state.draft,...await api('/api/desk/gmail/attachment',{object_id:ctx.object.id,version:state.draft.version,resource_id:item.id})};feedback.textContent='资料已添加，请在审核时打开检查。';drawAttachments();}catch(error){feedback.textContent=error.message;}},'quiet'));
+              } search.addEventListener('input',draw);draw();
+            } catch(error){materialList.replaceChildren(el('p',error.message,'inline-error'));}
+          });
+          controls.append(materials);attachments.append(controls);
+        }
+        function review(d) {
+          preview.replaceChildren(el('h3','请审核这封邮件'),el('p',`发件人：${d.account || '未连接'}`),el('p',`收件人：${d.to}`),el('p',`主题：${d.subject}`));
+          preview.append(el('h4','中文对照（不会发送）'),el('pre',d.body_zh || '尚未填写中文对照','mail-review-text'),el('h4','英文正文（发送内容）'),el('pre',d.body_en,'mail-review-text'));
+          const files=el('div',undefined,'mail-review-files');files.append(el('h4','实际附件'));attachmentLinks(files,d,false);preview.append(files);
+          if(!d.can_send)preview.append(el('p','当前邮箱尚未具备可用的发送授权，请先恢复 Gmail 发送授权。','inline-error'));
+          const actions=el('div',undefined,'mail-compose-actions');
+          actions.append(button('返回修改',()=>{preview.hidden=true;editor.hidden=false;feedback.textContent='可继续修改草稿。';},'quiet'));
+          const sendButton=button('确认发送这封邮件',async()=>{
+            sendButton.disabled=true;feedback.textContent='正在发送，请稍候…';
+            try {state.draft={...state.draft,...await api('/api/desk/gmail/send',{object_id:ctx.object.id,version:state.draft.version})};drawResult();ctx.gmailStamp=null;await loadGmail(ctx);}
+            catch(error){
+              try{const latest=await api(`/api/desk/gmail/draft?object_id=${encodeURIComponent(ctx.object.id)}`);if(latest.status!=='draft'){state.draft={...state.draft,...latest};drawResult();return;}}catch{}
+              feedback.textContent=error.message;sendButton.disabled=false;
+            }
+          },'primary'); sendButton.disabled=!d.can_send;actions.append(sendButton);preview.append(actions);
+        }
+        ctx.composer.useSource=source=>{
+          if(en.value.trim() || zh.value.trim()){feedback.textContent='草稿已有正文，请先处理现有内容，再采用其他成果。';return;}
+          en.value=source.en || '';zh.value=source.zh || '';if(source.subject && !subject.value.trim())subject.value=source.subject;
+          state.dirty=true;editState.dirty=true;state.editSeq++;feedback.textContent='已带入成果，请检查并保存。';en.focus();
+        };
+        drawAttachments();
+      }
+      function drawResult() {
+        const d=state.draft; editor.hidden=true;preview.hidden=false;preview.replaceChildren();
+        if(d.status==='sent') {
+          preview.append(el('h3','邮件已由 Gmail 接收'),el('p',`收件人：${d.to} · ${time(d.sent_at)}`),el('p',`主题：${d.subject}`));
+          if(d.sync_note)preview.append(el('p',d.sync_note,'inline-error'));
+          const original=link('在 Gmail 查看已发送邮件 ↗',d.gmail_url);if(original)preview.append(original);
+          preview.append(button('写下一封',async()=>{try{state.draft={...state.draft,...await api('/api/desk/gmail/draft/new',{object_id:ctx.object.id})};editor.hidden=false;fields(state.draft);feedback.textContent='';}catch(error){feedback.textContent=error.message;}},'primary'));
+          feedback.textContent='发送结果已记录，客户后续回复会继续同步。';
+        } else {
+          preview.append(el('h3','发送结果尚未确认'),el('p',d.error || '请先核对 Gmail 已发送邮件。','inline-error'));
+          preview.append(button('核对发送结果',async()=>{try{state.draft={...state.draft,...await api('/api/desk/gmail/reconcile',{object_id:ctx.object.id})};drawResult();if(state.draft.status==='sent'){ctx.gmailStamp=null;await loadGmail(ctx);}}catch(error){feedback.textContent=error.message;}},'primary'));
+          const sent=link('打开 Gmail 已发送邮件 ↗',`https://mail.google.com/mail/u/?authuser=${encodeURIComponent(d.account || '')}#sent`);if(sent)preview.append(sent);
+          if(d.status==='unknown')preview.append(button('我已确认未发送，恢复草稿',async()=>{try{state.draft={...state.draft,...await api('/api/desk/gmail/resume-unsent',{object_id:ctx.object.id,confirmed_not_sent:true})};editor.hidden=false;fields(state.draft);feedback.textContent='草稿已恢复，请重新审核。';}catch(error){feedback.textContent=error.message;}},'quiet'));
+          feedback.textContent='核对结果前不能重复发送。';
+        }
+      }
+      ctx.composer={useSource:()=>{}};
+      if(initial.status==='draft'){fields(initial);if(source)ctx.composer.useSource(source);}else drawResult();
+      host.scrollIntoView?.({behavior:'smooth',block:'start'});
+    } catch(error){host.replaceChildren(el('p',`草稿暂时打不开：${error.message}`,'inline-error'));}
   }
   function renderConversation(ctx) {
     if (!ctx.conversationMessages) return;
@@ -801,6 +938,7 @@
   }
   function editKey(ctx, id) { return `${ctx.object.id}:${id || 'new'}`; }
   function englishReplyDraft(content) { const match=text(content).match(/^##\s*(?:英文正文|英文回复草稿)(?:[^\n]*)\n([\s\S]*?)(?=^##\s|(?![\s\S]))/m); return match ? match[1].replace(/^\s*(?:\*\*)?Subject:(?:\*\*)?[^\n]*\n/im,'').trim() : ''; }
+  function chineseReplyDraft(content) { const match=text(content).match(/^##\s*(?:完整中文对照|中文正文|中文对照|中文回复|中文译文|中文翻译)(?:[^\n]*)\n([\s\S]*?)(?=^##\s|(?![\s\S]))/m); return match ? match[1].trim() : ''; }
   function plainEmailDraft(value) { return text(value).replace(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g,'$1: $2').replace(/^\s*\|?\s*:?-{3,}[^\n]*$/gm,'').replace(/^\s*\|(.+)\|\s*$/gm,(_,row)=>row.split('|').map(cell=>cell.trim()).join('  |  ')).replace(/\*\*([^*]+)\*\*/g,'$1').replace(/\n{3,}/g,'\n\n').trim(); }
   function showArtifactEditor(ctx, artifact) {
     const id = artifact?.id || null, key = editKey(ctx, id); let edit = S.edits.get(key);
@@ -814,7 +952,7 @@
     function update() { edit.title = title.value; edit.content = content.value; edit.dirty = true; caption.textContent = '有未保存的编辑'; } title.addEventListener('input', update); content.addEventListener('input', update);
     const modes = el('div', undefined, 'artifact-modes'), preview = el('div', undefined, 'artifact-preview'), read = button('阅读', () => setMode('preview')), write = button('编辑', () => setMode('edit'));
     function setMode(mode) { const reading = mode === 'preview'; title.hidden = reading; content.hidden = reading; save.hidden = reading; preview.hidden = !reading; read.classList.toggle('active', reading); write.classList.toggle('active', !reading); preview.replaceChildren(el('h3', title.value || '工作成果'), el('pre', content.value || '这份成果还没有正文。')); if (!reading) content.focus(); }
-    modes.append(read, write); const footer = el('div', undefined, 'artifact-footer'); footer.append(caption, save); if(ctx.replyArea && englishReplyDraft(content.value))footer.append(button('采用英文正文到回复框',()=>{const value=englishReplyDraft(content.value); if(!value){toast('请先在成果中写明英文正文。');return;} if(ctx.replyArea.value.trim()){toast('回复框已有内容，请先处理后再采用。');return;}ctx.replyArea.value=value;ctx.replyArea.focus();ctx.replyArea.scrollIntoView?.({behavior:'smooth',block:'center'});toast('已放入回复框，请检查后发送。');},'quiet')); if(ctx.gmailHost && englishReplyDraft(content.value) && !/已发送/.test(text(artifact?.title)))footer.append(button('复制英文回复',async()=>{const value=plainEmailDraft(englishReplyDraft(content.value));if(!value){toast('请先准备英文回复。');return;}try{await navigator.clipboard.writeText(value);toast('英文回复已复制，可在 Gmail 中审核并回复。');}catch{toast('复制未成功，请从编辑区复制英文正文。');}},'quiet')); ctx.editor.append(modes, preview, title, content, footer, el('p', '保存的是这份工作成果；不会自动发送给客户或修改平台商品。', 'artifact-note')); setMode(artifact && !edit.dirty ? 'preview' : 'edit'); renderArtifactTabs(ctx);
+    modes.append(read, write); const footer = el('div', undefined, 'artifact-footer'); footer.append(caption, save); if(ctx.replyArea && englishReplyDraft(content.value))footer.append(button('采用英文正文到回复框',()=>{const value=englishReplyDraft(content.value); if(!value){toast('请先在成果中写明英文正文。');return;} if(ctx.replyArea.value.trim()){toast('回复框已有内容，请先处理后再采用。');return;}ctx.replyArea.value=value;ctx.replyArea.focus();ctx.replyArea.scrollIntoView?.({behavior:'smooth',block:'center'});toast('已放入回复框，请检查后发送。');},'quiet')); if(ctx.gmailHost && englishReplyDraft(content.value) && !/已发送/.test(text(artifact?.title))){footer.append(button('采用到邮件草稿',()=>openGmailComposer(ctx,{en:plainEmailDraft(englishReplyDraft(content.value)),zh:plainEmailDraft(chineseReplyDraft(content.value))}),'quiet'));footer.append(button('复制英文回复',async()=>{const value=plainEmailDraft(englishReplyDraft(content.value));if(!value){toast('请先准备英文回复。');return;}try{await navigator.clipboard.writeText(value);toast('英文回复已复制，可在 Gmail 中审核并回复。');}catch{toast('复制未成功，请从编辑区复制英文正文。');}},'quiet'));} ctx.editor.append(modes, preview, title, content, footer, el('p', '保存的是这份工作成果；不会自动发送给客户或修改平台商品。', 'artifact-note')); setMode(artifact && !edit.dirty ? 'preview' : 'edit'); renderArtifactTabs(ctx);
   }
   function renderArtifactTabs(ctx) { ctx.tabs.replaceChildren(); for (const artifact of ctx.artifacts) ctx.tabs.append(button(text(artifact.title || '工作成果'), () => selectArtifact(ctx, artifact.id), ctx.selectedId === artifact.id ? 'active' : '')); ctx.tabs.append(button('＋ 新建笔记', () => { ctx.userPickedNew = true; showArtifactEditor(ctx, null); }, ctx.selectedId === null ? 'active' : '')); }
   function selectArtifact(ctx, id) { const artifact = ctx.artifacts.find(item => String(item.id) === String(id)); if (artifact) { showArtifactEditor(ctx, artifact); ctx.editor.scrollIntoView?.({ behavior: 'smooth', block: 'start' }); } else refreshArtifacts(ctx, true, id).then(() => ctx.editor.scrollIntoView?.({ behavior: 'smooth', block: 'start' })); }

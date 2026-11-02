@@ -158,6 +158,33 @@ class DeskHTTPTests(unittest.TestCase):
             status,result=self.request('/api/desk/gmail/customer?'+urlencode({'object_id':oid}))
             self.assertEqual(status,200);customer.assert_called_with(oid)
 
+    def test_customer_gmail_draft_review_attachment_and_explicit_send(self):
+        import base64
+        oid='customer:website-BQ-REAL';self.app.gmail._account='seller@example.test'
+        sent=[];drafts=self.app.gmail_drafts
+        drafts.grant_reader=lambda account:{'refresh_token':'fixture','scopes':['https://www.googleapis.com/auth/gmail.readonly','https://www.googleapis.com/auth/gmail.send']}
+        drafts.token_provider=lambda account:'fixture-token'
+        drafts.sender=lambda token,payload:sent.append(payload) or {'id':'abc123','threadId':'def456'}
+        with patch.object(self.app.gmail,'customer',return_value={'status':{'state':'connected'},'messages':[]}) as sync:
+            status,draft=self.request('/api/desk/gmail/draft?'+urlencode({'object_id':oid}))
+            self.assertEqual(status,200);self.assertTrue(draft['can_send'])
+            body={'object_id':oid,'version':draft['version'],'fields':{'to':'buyer@example.test','subject':'Samples','body_en':'Hello buyer','body_zh':'您好'}}
+            status,_=self.request('/api/desk/gmail/draft',body,token=False);self.assertEqual(status,403)
+            status,draft=self.request('/api/desk/gmail/draft',body);self.assertEqual(status,200)
+            status,draft=self.request('/api/desk/gmail/attachment',{'object_id':oid,'version':draft['version'],'filename':'shoe.jpg','data':base64.b64encode(b'picture').decode()})
+            self.assertEqual(status,200);self.assertEqual(sent,[])
+            connection=http.client.HTTPConnection('127.0.0.1',self.http.server_port,timeout=5)
+            try:
+                connection.request('GET','/api/desk/gmail/attachment?'+urlencode({'object_id':oid,'id':draft['attachments'][0]['id']}))
+                response=connection.getresponse();self.assertEqual(response.status,200);self.assertEqual(response.read(),b'picture')
+            finally:connection.close()
+            status,result=self.request('/api/desk/gmail/send',{'object_id':oid,'version':draft['version']})
+            self.assertEqual(status,200);self.assertEqual(result['status'],'sent');self.assertEqual(len(sent),1)
+            self.assertEqual(self.app.customer_workspace.workflow(oid)['state'],'waiting_customer')
+            sync.assert_called_with(oid,force=True)
+            self.assertEqual(self.request('/api/desk/gmail/send',{'object_id':oid,'version':draft['version']})[0],400)
+            self.assertEqual(len(sent),1)
+
     def test_google_oauth_start_and_callback_use_same_workbench_port(self):
         config={'installed':{'client_id':'fixture.apps.googleusercontent.com','client_secret':'fixture'}}
         with patch.object(self.app.gmail,'start_oauth',return_value='https://accounts.google.com/o/oauth2/v2/auth?state=fixture') as start, \

@@ -150,6 +150,22 @@
 .candidate-quick-actions{display:flex;flex-wrap:wrap;gap:17px;margin-top:8px}.candidate-quick-actions button{font-size:12px;color:#3c6b50}
 .discovery-detail .gmail-conversation{margin:19px 0;padding:20px;background:#fbfdfb}
 .gmail-sync-note{color:#788b7d;font-size:12px}.gmail-actions{display:flex;align-items:center;flex-wrap:wrap;gap:9px 17px}.gmail-actions button{font-size:12px}.gmail-reply-link{display:inline-flex;justify-self:start;padding:7px 12px;border-radius:7px;background:#e8f2e9;color:#315f47;font-size:12px;font-weight:600}
+.gmail-composer-host:not(:empty){margin-top:20px}
+.mail-composer{padding:20px;border:1px solid #dbe8dc;border-radius:12px;background:#fff;box-shadow:0 4px 18px #294d3610}
+.mail-compose-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-bottom:15px;margin-bottom:16px;border-bottom:1px solid #edf2ec}
+.mail-compose-title{font-size:16px;font-weight:700;color:#244b37}.mail-compose-caption,.mail-from{font-size:12px;color:#73887a}
+.mail-editor .desk-field{display:grid;gap:6px;margin:13px 0;color:#526a59;font-size:12px;font-weight:600}
+.mail-editor input,.mail-editor textarea{width:100%;border:1px solid #dce7dc;border-radius:8px;padding:10px 12px;background:#fbfdfb;font:inherit;color:#263d30}
+.mail-editor textarea.mail-body-input{min-height:180px;line-height:1.65;resize:vertical}.mail-editor textarea.chinese{min-height:110px}
+.mail-editor input:focus,.mail-editor textarea:focus{outline:2px solid #bdd8c2;border-color:#84ad91}
+.mail-attachments{margin-top:18px;border-top:1px solid #edf2ec;padding-top:14px}.mail-attachments h3{font-size:13px;color:#385844}
+.mail-attachment{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:8px 0;border-bottom:1px solid #f1f4f0;font-size:12px}.mail-attachment a{overflow-wrap:anywhere;color:#397357}
+.mail-attachment-controls,.mail-compose-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:14px}
+.mail-upload,.mail-material-picker>summary{display:inline-block;cursor:pointer;padding:8px 11px;border:1px solid #d7e4d8;border-radius:7px;background:#f7faf6;color:#416b4e;font-size:12px;font-weight:600}.mail-upload input{display:none}
+.mail-material-picker[open]{flex-basis:100%}.mail-material-picker input{margin-top:10px}.mail-material-list{max-height:190px;overflow:auto;display:grid;gap:2px}.mail-material-list button{text-align:left;margin:0;padding:8px;color:#426c50}
+.mail-review{border-radius:10px;padding:18px;background:#f7faf6;color:#304d39}.mail-review h3{font-size:16px;margin-bottom:12px}.mail-review h4{font-size:12px;margin:17px 0 7px;color:#6c8270}.mail-review>p{font-size:13px;margin:5px 0;overflow-wrap:anywhere}
+.mail-review-text{white-space:pre-wrap;overflow-wrap:anywhere;font:inherit;font-size:13px;line-height:1.75;color:#304238}.mail-review-files{margin-top:14px;border-top:1px solid #e2ece1}.mail-compose-feedback{min-height:18px;margin-top:12px;font-size:12px;color:#718677}
+@media(max-width:600px){.mail-compose-head{align-items:flex-start;flex-direction:column}.mail-composer{padding:15px}.mail-compose-actions button{flex:1}.mail-attachment-controls{align-items:flex-start}}
 @media(max-width:1100px){.customer-columns,.customer-list-row{grid-template-columns:minmax(150px,1fr) minmax(180px,1fr) minmax(180px,1.15fr) 110px;gap:12px}}
 @media(max-width:760px){
   .sync-review{margin-left:0}.customer-list-heading{align-items:flex-start}.customer-list-heading h2{font-size:19px}
