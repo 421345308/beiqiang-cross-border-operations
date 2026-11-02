@@ -11,13 +11,15 @@ from media_assets import MediaAssets, MediaError
 from resource_library import ResourceLibrary
 from product_changes import ProductChanges
 from business import Business
-from agent_jobs import AgentJobs
+from agent_jobs import AgentJobs, codex_executable
 from customer_workspace import CustomerWorkspace
 from inquiry_intake import InquiryIntake
 from channel_overview import ChannelOverview
 from creation import Creation
 from creation_canvas import CreationCanvas
 from gmail_sync import GmailService
+from product_gaps import ProductGaps
+from today import Today
 from workspaces import WorkspaceConflict as CanvasConflict
 
 HERE = Path(__file__).resolve().parent
@@ -57,6 +59,9 @@ class Workbench:
         self.channel_overview=ChannelOverview(self,self.workspaces)
         self.creation=Creation(self.root)
         self.creation_canvas=CreationCanvas(self)
+        # 「今天」聚合页依赖的两个只读诊断器：商品资料缺口 + 跨对象待办。
+        self.product_gaps=ProductGaps(self)
+        self.today=Today(self,gaps=self.product_gaps)
         self.gmail=GmailService(self,on_new_reply=self._gmail_reply)
         if self.gmail.status()['state']=='connected':self.gmail.start()
 
@@ -135,7 +140,7 @@ class Workbench:
             threading.Thread(target=self.execute,args=(run['id'],bool(rid)),daemon=True).start()
             return run
     def command(self, run, resume):
-        exe=shutil.which('codex')
+        exe=codex_executable()
         if not exe: raise RuntimeError('找不到Codex CLI，请先安装并登录')
         cmd=[exe,'-s','read-only','-a','never','exec']
         if resume:cmd+=['resume',run['session_id']]
@@ -288,6 +293,10 @@ class Handler(BaseHTTPRequestHandler):
                 if u.path=='/api/desk/creation/libtv/nodes':return self.send_json(app.creation.libtv_execute('nodes',project_id=value('project_id')))
                 if u.path=='/api/desk/title-diagnosis':return self.send_json(app.product_changes.diagnose(value('product_id')))
                 if u.path=='/api/desk/channels':return self.send_json(app.channel_overview.snapshot())
+                if u.path=='/api/desk/today':return self.send_json(app.today.snapshot())
+                if u.path=='/api/desk/product-gaps':
+                    product_id=value('product_id')
+                    return self.send_json(app.product_gaps.for_product(product_id) if product_id else app.product_gaps.summary(limit=int(value('limit') or 12)))
                 if u.path=='/api/desk/douyin':
                     run=subprocess.run(['node',str(HERE/'douyin_overview.mjs')],capture_output=True,text=True,encoding='utf8',timeout=45,**({'creationflags':subprocess.CREATE_NO_WINDOW} if os.name=='nt' else {}))
                     if run.returncode:raise ValueError('抖店数据暂不可读')

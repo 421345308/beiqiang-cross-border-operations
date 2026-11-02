@@ -9,7 +9,7 @@ from pathlib import Path
 from types import SimpleNamespace
 from unittest.mock import patch
 
-from agent_jobs import AgentJobs, MODEL, child_environment
+from agent_jobs import AgentJobs, MODEL, child_environment, codex_executable
 from desk_cli import invoke
 from desk_mcp import DeskTools,dispatch,PRODUCTS,CHANNEL
 
@@ -135,6 +135,8 @@ class AgentJobTests(unittest.TestCase):
         self.assertNotIn('UNRELATED_PRIVATE_CONTENT',self.processes[0].stdin.value)
         self.assertIn('buyer.md',self.processes[0].stdin.value)
         self.assertIn('逐款证据',self.processes[0].stdin.value)
+        self.assertIn('company-capabilities',self.processes[0].stdin.value)
+        self.assertNotIn('8–15美元',self.processes[0].stdin.value)
 
     def test_failed_exit_never_saves_existing_output(self):
         self.options={'code':1}
@@ -162,12 +164,19 @@ class AgentJobTests(unittest.TestCase):
         self.assertFalse(self.app.business.artifacts)
 
     def test_cli_unavailable_and_save_failure(self):
-        with patch('agent_jobs.shutil.which',return_value=None):
+        with patch('agent_jobs.codex_executable',return_value=None):
             result=self.wait(self.jobs.start('product:shoe','整理'))
             self.assertEqual(result['status'],'failed');self.assertIn('未找到Codex CLI',result['error'])
         self.app.business.fail_save=True
         result=self.wait(self.jobs.start('product:shoe','整理'))
         self.assertEqual(result['status'],'failed');self.assertIn('保存成果失败',result['error'])
+
+    def test_desktop_cli_can_be_found_when_service_path_is_stale(self):
+        installed=self.root/'OpenAI'/'Codex'/'bin'/'updated-version'/'codex.exe'
+        installed.parent.mkdir(parents=True);installed.write_bytes(b'test')
+        with patch('agent_jobs.shutil.which',return_value=None), patch('agent_jobs.os.name','nt'), \
+             patch.dict('agent_jobs.os.environ',{'LOCALAPPDATA':str(self.root)}):
+            self.assertEqual(codex_executable(),str(installed))
 
     def test_cancel_running_kills_process_no_artifact_and_no_late_completion(self):
         gate=threading.Event();self.options={'gate':gate}

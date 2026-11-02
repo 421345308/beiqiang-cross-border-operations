@@ -274,7 +274,7 @@ class DeskHTTPTests(unittest.TestCase):
         self.assertEqual(status,200);original_path=self.root/saved['path'];self.assertEqual(original_path.read_text(encoding='utf8'),'# 第一版\n核实来源')
         status,edited=self.request('/api/desk/artifacts',{'id':saved['id'],'object_id':'product:BQ009','title':'选款方案更新','content':'# 第二版\n仍是同一对象'})
         self.assertEqual(status,200);self.assertEqual(edited['id'],saved['id'])
-        self.assertEqual(original_path.with_suffix('.prev.md').read_text(encoding='utf8'),'# 第一版\n核实来源')
+        self.assertFalse(original_path.with_suffix('.prev.md').exists())
         status,refreshed=self.request('/api/desk/artifacts?'+urlencode({'object_id':'product:BQ009'}))
         self.assertEqual(status,200);self.assertEqual(len(refreshed['artifacts']),1)
         self.assertEqual(refreshed['artifacts'][0]['content'],'# 第二版\n仍是同一对象')

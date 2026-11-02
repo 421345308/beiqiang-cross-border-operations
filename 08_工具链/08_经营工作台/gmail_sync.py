@@ -2,13 +2,12 @@
 from __future__ import annotations
 import copy
 from datetime import datetime, timedelta, timezone
-from email.utils import getaddresses
 import json
 from pathlib import Path
 import threading
 import time
 from gmail_mailbox import GmailMailbox, normalize_email, test_credentials, save_password, credential_available
-from gmail_oauth import GmailOAuth, GmailOAuthMailbox, credentials_available as oauth_credentials_available
+from gmail_oauth import GmailDependencyError, GmailOAuth, GmailOAuthMailbox, parse_addresses, credentials_available as oauth_credentials_available
 
 
 def _timestamp(value):
@@ -35,7 +34,7 @@ def customer_emails(obj):
     found=set()
     for value in values:
         if not isinstance(value,str):continue
-        for _,address in getaddresses([value]):
+        for address in parse_addresses([value]):
             try:found.add(normalize_email(address))
             except ValueError:pass
     return sorted(found)
@@ -71,6 +70,8 @@ class GmailService:
                 checker,factory=(self.oauth_credential_checker,self.oauth_mailbox_factory) if self._auth_mode=='oauth' else (self.credential_checker,self.mailbox_factory)
                 if checker(self._account):
                     self._mailbox=factory(self._account);self._state='connected'
+            except GmailDependencyError as exc:
+                self._state='error';self._error=str(exc)
             except Exception:
                 self._state='error';self._error='Gmail本地配置或系统凭据暂不可读'
 
@@ -176,8 +177,8 @@ class GmailService:
             for message in result.get('messages',[]):
                 direction=message.get('direction')
                 explicit=set(message.get('customer_emails') or [])
-                senders={a.lower() for _,a in getaddresses([message.get('from') or ''])}
-                recipients={a.lower() for _,a in getaddresses([message.get(k) or '' for k in ('to','cc','bcc')])}
+                senders=set(parse_addresses([message.get('from') or '']))
+                recipients=set(parse_addresses([message.get(k) or '' for k in ('to','cc','bcc')]))
                 valid=(direction=='inbound' and account in recipients and (senders|explicit).intersection(emails)) or (direction=='outbound' and account in senders and (recipients|explicit).intersection(emails))
                 if valid and message.get('mail_kind')!='promotion':accepted.append(message)
             result['messages']=accepted
@@ -239,7 +240,7 @@ class GmailService:
     def _dispatch(self,object_id,context):
         if not self.on_new_reply or not context.get('reply_pending'):return
         flow=self._workflow(object_id)
-        if flow.get('bucket') in ('history','archive'):return
+        if flow.get('bucket') == 'archive':return
         since=None
         if flow.get('saved_state',flow.get('state'))=='waiting_customer':
             entered=next((h.get('at') for h in reversed(flow.get('history') or []) if h.get('to')=='waiting_customer'),None)

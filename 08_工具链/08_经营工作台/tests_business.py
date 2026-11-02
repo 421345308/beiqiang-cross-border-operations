@@ -69,7 +69,8 @@ class BusinessTests(unittest.TestCase):
         self.assertEqual(self.business.list_artifacts('product:BQ009')[0]['content'],'Edited in original artifact file')
         other=Business(self.app);saved=other.save_artifact('product:BQ009','Revised','New body',artifact_id=result['id'])
         self.assertEqual(saved['path'],result['path']);self.assertEqual(len(other.list_artifacts()),1)
-        self.assertEqual(path.with_suffix('.prev.md').read_text(encoding='utf8'),'Edited in original artifact file')
+        self.assertEqual(path.read_text(encoding='utf8'),'New body')
+        self.assertFalse(path.with_suffix('.prev.md').exists())
         columns=[row[1] for row in self.app.db.execute('PRAGMA table_info(business_artifacts)')];self.assertNotIn('content',columns)
         self.assertEqual((self.root/PRODUCTS).read_bytes(),before)
     def test_website_tests_filtered_and_artifacts_keep_website_original_readonly(self):

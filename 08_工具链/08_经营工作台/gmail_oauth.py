@@ -28,14 +28,27 @@ SERVICE = 'Beiqiang.Workdesk.GmailOAuth'
 PUBLIC_MAIL_DOMAINS = {'gmail.com','googlemail.com','outlook.com','hotmail.com','live.com','yahoo.com','icloud.com','qq.com','163.com','126.com','88.com','tencent.com'}
 
 
+class GmailDependencyError(RuntimeError):
+    pass
+
+
+def _keyring():
+    try:
+        import keyring
+    except ModuleNotFoundError as exc:  # pragma: no cover - 环境依赖问题
+        raise GmailDependencyError('缺少依赖 keyring，读不到已保存的 Google 授权。'
+                                   '请在工作台目录执行 python -m pip install -r requirements-gmail.txt 后重启工作台。') from exc
+    return keyring
+
+
 def load_credentials(account):
-    import keyring
+    keyring = _keyring()
     value = keyring.get_password(SERVICE, normalize_email(account))
     return json.loads(value) if value else None
 
 
 def save_credentials(account, value):
-    import keyring
+    keyring = _keyring()
     keyring.set_password(SERVICE, normalize_email(account), json.dumps(value))
 
 
@@ -150,11 +163,26 @@ def _headers(value):
     return headers
 
 
+def parse_addresses(values):
+    """Parse email addresses, filtering empty fields before Python 3.13's parser."""
+    cleaned = [v for v in values if isinstance(v, str) and v.strip()]
+    if not cleaned:
+        return []
+    found = []
+    for _, address in getaddresses(cleaned):
+        if not isinstance(address, str):
+            continue
+        address = address.strip().lower()
+        if address and address not in found:
+            found.append(address)
+    return found
+
+
 def parse_api_message(value, account, customers, thread_customers=()):
     payload = value.get('payload') or {}
     headers = _headers(value)
-    addresses = lambda names: {a.lower() for _, a in getaddresses([headers.get(n, '') for n in names]) if a}
-    senders, recipients = addresses(['from']), addresses(['to', 'cc', 'bcc'])
+    senders = set(parse_addresses([headers.get('from', '')]))
+    recipients = set(parse_addresses([headers.get('to', ''), headers.get('cc', ''), headers.get('bcc', '')]))
     if account in senders:
         direction, associated = 'outbound', recipients & customers
     elif account in recipients:
@@ -282,7 +310,7 @@ class GmailOAuthMailbox:
                         refs=re.findall(r'<[^<>]+>',headers.get('in-reply-to') or headers.get('references') or '')
                         matched=sent_ids.get(refs[-1],set()) if refs else set()
                         if not matched:
-                            senders={a.lower() for _,a in getaddresses([headers.get('from','')]) if '@' in a}
+                            senders={a for a in parse_addresses([headers.get('from','')]) if '@' in a}
                             domains={a.rsplit('@',1)[1] for a in senders}-PUBLIC_MAIL_DOMAINS
                             matched={a for a in associated if a.rsplit('@',1)[-1] in domains}
                         message=parse_api_message(raw,self.account_email,customers,matched)
@@ -331,9 +359,10 @@ class GmailOAuthMailbox:
                     canonical_id=str(int(raw_id,16))
                     if canonical_id in linked_ids:continue
                     headers={str(h.get('name','')).lower():str(h.get('value','')) for h in (raw.get('payload') or {}).get('headers') or []}
-                    addresses=getaddresses([headers.get('from','')])
-                    if not addresses:continue
-                    name,address=addresses[0]
+                    raw_from=(headers.get('from','') or '').strip()
+                    pairs=getaddresses([raw_from]) if raw_from else []
+                    if not pairs:continue
+                    name,address=pairs[0]
                     try:address=normalize_email(address)
                     except ValueError:continue
                     if address in known or address in seen:continue
@@ -353,8 +382,8 @@ class GmailOAuthMailbox:
                     for raw in thread.get('messages') or []:
                         if set(raw.get('labelIds') or ()).intersection(('DRAFT','SPAM','TRASH')):continue
                         headers={str(h.get('name','')).lower():str(h.get('value','')) for h in (raw.get('payload') or {}).get('headers') or []}
-                        senders={a.lower() for _,a in getaddresses([headers.get('from','')])}
-                        recipients={a.lower() for _,a in getaddresses([headers.get(k,'') for k in ('to','cc','bcc')])}
+                        senders=set(parse_addresses([headers.get('from','')]))
+                        recipients=set(parse_addresses([headers.get(k,'') for k in ('to','cc','bcc')]))
                         if self.account_email in senders and item['email'] in recipients and int(raw.get('internalDate') or 0)>times[item['id']]:return True
                     return False
                 with ThreadPoolExecutor(max_workers=4) as pool:answered=list(pool.map(already_answered,items))

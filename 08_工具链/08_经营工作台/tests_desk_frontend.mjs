@@ -32,6 +32,9 @@ function harness(hash = '#/overview') {
   const requests = [], objects = [{ id: 'product:1', kind: 'product', title: '<img src=x onerror=alert(1)>真实商品', subtitle: '实际款号', source: '商品原档案', facts: [{ label: '材料', value: '已核材料' }], assets: [{ path: '商品图.jpg', label: '真实主图', url: '/api/media/file?path=商品图.jpg' }], content: '很长的原文', related: [] }];
   const profile = { object_id: 'customer:record', source_type: 'website', source_hash: 'hash-1', provenance: { source_hash: 'hash-1', source_verification: { state: 'unverified', note: '来源待核' } }, original_text: 'Please send sample information.', translation_zh: '请提供样品信息。', cleaned: { company: '示例公司', quantity: '未提供' }, analysis: { intent: '尚待确认', fit: '尚待核对', basis: [], missing: ['采购数量'], next_action: '确认采购数量', facts: [], inferences: [], recommendations: ['核实来源'] } }; const discovery = { tasks: [], candidates: [] };
   const artifacts = [{ id: 'a1', object_id: 'product:1', title: '现有选款资料', content: '原成果', updated_at: '2026-10-31T01:00:00Z' }]; const jobs = []; let web = { state: 'loading' };
+  // 「今天」与商品缺口为 2026-11-01 新增接口；默认空态，测试里按需替换。
+  let today = { generated_at: '2026-11-01T00:00:00Z', groups: { decide: [], act: [], watch: [] }, counts: { decide: 0, act: 0, watch: 0 }, labels: { decide: '等你拍板', act: '今天能推', watch: '在跑，不用动手' }, sources: {} };
+  let productGaps = { total: 1, with_gaps: 0, blocked: 0, counts: {}, items: [], checked: [], unavailable: {}, labels: {} };
   const local = new Map(), location = { hash, origin: 'http://127.0.0.1:8765' };
   const context = { console, URL, URLSearchParams, Date, JSON, Math, Map, Set, location, localStorage: { getItem: key => local.get(key) || null, setItem: (key, value) => local.set(key, value) }, history: { replaceState: (_s, _t, next) => { location.hash = next; } }, setTimeout: () => 1, clearTimeout() {}, setInterval() {}, window: { addEventListener() {} }, document: { body, visibilityState: 'visible', createElement: tag => new Element(tag), getElementById: id => elements[id], querySelectorAll: selector => selector === '[data-nav]' ? nav : body.querySelectorAll(selector) } };
   context.fetch = async (path, options = {}) => {
@@ -51,13 +54,15 @@ function harness(hash = '#/overview') {
     else if (url.pathname === '/api/desk/jobs') value = { jobs };
     else if (url.pathname === '/api/desk/artifacts' && payload) { value = { ...payload, id: payload.id || 'a2', updated_at: '2026-10-31T03:00:00Z' }; const index = artifacts.findIndex(item => item.id === value.id); if (index >= 0) artifacts[index] = value; else artifacts.push(value); }
     else if (url.pathname === '/api/desk/artifacts') value = { artifacts: artifacts.filter(item => item.object_id === url.searchParams.get('object_id')) };
+    else if (url.pathname === '/api/desk/today') value = today;
+    else if (url.pathname === '/api/desk/product-gaps') value = productGaps;
     else if (url.pathname === '/api/desk/refresh') { web = { state: 'loading' }; value = { status: web }; }
     else throw new Error(`Unexpected API ${path}`);
     return { ok: true, json: async () => structuredClone(value) };
   };
   const source = fs.readFileSync(new URL('./web/desk.js', import.meta.url), 'utf8'); assert.doesNotMatch(source, /\.innerHTML\s*=/);
   vm.createContext(context); vm.runInContext(source.replace('bootstrap(); setInterval(poll, 4000);', 'window.__desk = { S, bootstrap, renderRoute, poll, refreshData, safeUrl, imageAsset };'), context);
-  return { ui: context.window.__desk, elements, body, objects, artifacts, jobs, requests, location, profile, discovery, setWebsite: value => { web = value; }, originalFetch: context.fetch, interceptFetch: callback => { context.fetch = callback; } };
+  return { ui: context.window.__desk, elements, body, objects, artifacts, jobs, requests, location, profile, discovery, setWebsite: value => { web = value; }, setToday: value => { today = value; }, setProductGaps: value => { productGaps = value; }, originalFetch: context.fetch, interceptFetch: callback => { context.fetch = callback; } };
 }
 
 test('Gmail 显示真实连接状态，原文按需展开，更新邮件保留未保存内容', async () => {
@@ -112,21 +117,21 @@ test('Gmail 测试授权显示预计到期时间', async () => {
 
 test('总览与询盘列表分别提醒 Gmail 和网站站内消息', async () => {
   const h=harness(); h.objects.push({id:'customer:mail',kind:'customer',title:'邮件回复买家',workflow:{gmail_reply_pending:true,customer_reply_pending:true,state:'preparing'}});
+  h.setToday({groups:{decide:[],act:[{title:'邮件回复买家有新回复',judgment:'Gmail 客户有新回复 · 网站站内消息有新回复',action:{type:'open_object',object_id:'customer:mail'}}],watch:[]},counts:{decide:0,act:1,watch:0},labels:{act:'待处理'}});
   await h.ui.bootstrap(); await settle(); assert.ok(h.elements.page.textContent.includes('Gmail 客户有新回复')); assert.ok(h.elements.page.textContent.includes('网站站内消息有新回复'));
   h.location.hash='#/customers?view=inquiries'; await h.ui.renderRoute(); await settle(); assert.ok(h.elements.page.textContent.includes('Gmail 客户有新回复'));
 });
 
 test('后台同步到新邮件后自动刷新总览', async () => {
   const h=harness(),original=h.originalFetch;let revision=0;
-  let rows=[{object_id:'customer:mail',title:'邮件客户',workflow:{state:'waiting_customer',pending_party:'customer'}}];
+  h.setToday({groups:{decide:[],act:[],watch:[{title:'等待回复：邮件客户',judgment:'等待客户回复'}]},counts:{decide:0,act:0,watch:1},labels:{watch:'等待'}});
   h.interceptFetch(async(path,options)=>{
-    if(String(path).startsWith('/api/desk/inquiry-queue?'))return {ok:true,json:async()=>({items:structuredClone(rows)})};
     const response=await original(path,options);
     if(path==='/api/desk/bootstrap'){const value=await response.json();value.gmail_revision=revision;return {ok:true,json:async()=>value};}
     return response;
   });
-  await h.ui.bootstrap();await settle();assert.ok(h.elements.page.textContent.includes('1 位客户等待回复'));
-  revision=1;rows=[{object_id:'customer:mail',title:'邮件客户',workflow:{state:'new',pending_party:'internal',gmail_reply_pending:true,gmail_next_action:'阅读客户新邮件'}}];
+  await h.ui.bootstrap();await settle();assert.ok(h.elements.page.textContent.includes('等待回复：邮件客户'));
+  revision=1;h.setToday({groups:{decide:[],act:[{title:'邮件客户有新回复',judgment:'Gmail 客户有新回复 · 阅读客户新邮件'}],watch:[]},counts:{decide:0,act:1,watch:0},labels:{act:'待处理'}});
   h.ui.S.lastBootstrapPoll=0;await h.ui.poll();await settle();
   assert.ok(h.elements.page.textContent.includes('Gmail 客户有新回复'));assert.ok(h.elements.page.textContent.includes('阅读客户新邮件'));
 });
@@ -198,6 +203,15 @@ test('客户详情直接展示公司网站和现有联系方式', async () => {
   await h.ui.bootstrap(); await settle(); assert.ok(h.elements.page.textContent.includes('邮箱：buyer@example.org')); assert.ok(walk(h.body).some(x=>x.tagName==='A' && x.textContent==='访问公司网站 ↗'));
 });
 
+test('客户收到新邮件后，详情下一步不再显示等待回复', async () => {
+  const h=harness('#/customers?view=development&item=candidate%3A1'), original=h.originalFetch;
+  h.discovery.candidates.push({id:'candidate:1',object_id:'prospect:candidate:1',kind:'candidate',title:'买家公司',next_action:'等待客户回复'});
+  h.interceptFetch(async(path,options)=>String(path).startsWith('/api/desk/gmail/') ? {ok:true,json:async()=>({status:{state:'connected'},reply_pending:true,messages:[]})} : original(path,options));
+  await h.ui.bootstrap(); await settle();
+  assert.ok(h.elements.page.textContent.includes('下一步：阅读客户新邮件，准备后续沟通'));
+  assert.equal(h.elements.page.querySelector('.candidate-next-action').textContent.includes('等待客户回复'),false);
+});
+
 test('从客户开发新增公司，并保存业务信息', async () => {
   const h=harness('#/customers?view=development'); await h.ui.bootstrap(); await settle(); await findButton(h.body,'新增客户').click(); const dialog=walk(h.body).find(x=>x.tagName==='DIALOG');
   for (const [label,value] of [['公司名称','样例采购公司'],['公司网站','https://buyer.example'],['国家或市场','英国'],['业务摘要','鞋类批发'],['买家类型','批发商'],['联系状态','未联系'],['下一步','寻找采购联系人']]) { const field=walk(dialog).find(x=>x['aria-label']===label); field.value=value; }
@@ -261,26 +275,24 @@ test('home never recommends arbitrary first products; recents require an actual 
 });
 
 test('总览直接显示当前客户需求和下一动作', async () => {
-  const h = harness(); h.objects.push({id:'customer:active',kind:'customer',title:'当前买家',summary:'需要采购休闲鞋',workflow:{state:'preparing',next_action:'准备选款'}});
-  await h.ui.bootstrap(); await settle(); assert.ok(h.elements.page.textContent.includes('待推进的客户')); assert.ok(h.elements.page.textContent.includes('当前买家')); assert.ok(h.elements.page.textContent.includes('准备选款'));
+  const h = harness(); h.setToday({groups:{decide:[],act:[{title:'当前买家',judgment:'需要采购休闲鞋 · 准备选款'}],watch:[]},counts:{decide:0,act:1,watch:0},labels:{act:'待处理'}});
+  await h.ui.bootstrap(); await settle(); assert.ok(h.elements.page.textContent.includes('当前买家')); assert.ok(h.elements.page.textContent.includes('需要采购休闲鞋')); assert.ok(h.elements.page.textContent.includes('准备选款'));
 });
 
 test('总览将待处理的新回复与等待客户的事项分开', async () => {
-  const h = harness(); h.objects.push(
-    {id:'customer:waiting',kind:'customer',title:'等待中的买家',summary:'等资料',workflow:{state:'waiting_customer',pending_party:'customer'}},
-    {id:'customer:reply',kind:'customer',title:'有新回复的买家',summary:'需要评估',workflow:{state:'new',pending_party:'internal',customer_reply_pending:true,next_action:'阅读客户新回复'}});
+  const h = harness(); h.setToday({groups:{decide:[],act:[{title:'有新回复的买家',judgment:'网站站内消息有新回复'}],watch:[{title:'等待回复：等待中的买家',judgment:'等资料'}]},counts:{decide:0,act:1,watch:1},labels:{act:'待处理',watch:'等待'}});
   await h.ui.bootstrap(); await settle();
-  const pending=h.elements.page.querySelector('.overview-pending');
+  const groups=h.elements.page.querySelectorAll('.today-group');
+  const pending=groups.find(x=>x.className.split(' ').includes('act')), waiting=groups.find(x=>x.className.split(' ').includes('watch'));
   assert.ok(pending.textContent.includes('有新回复的买家')); assert.ok(pending.textContent.includes('网站站内消息有新回复'));
-  assert.equal(pending.textContent.includes('等待中的买家'),false); assert.ok(pending.textContent.includes('1 位客户等待回复'));
+  assert.equal(pending.textContent.includes('等待中的买家'),false); assert.ok(waiting.textContent.includes('等待中的买家'));
 });
 
 test('网站往来更新后总览会刷新客户状态', async () => {
-  const h=harness(),original=h.originalFetch;
-  let rows=[{object_id:'customer:1',title:'客户甲',workflow:{state:'waiting_customer',pending_party:'customer'}}];
-  h.interceptFetch(async(path,options)=>String(path).startsWith('/api/desk/inquiry-queue?') ? {ok:true,json:async()=>({items:structuredClone(rows)})} : original(path,options));
-  await h.ui.bootstrap();await settle();assert.ok(h.elements.page.textContent.includes('1 位客户等待回复'));
-  rows=[{object_id:'customer:1',title:'客户甲',workflow:{state:'new',pending_party:'internal',customer_reply_pending:true,next_action:'阅读新回复'}}];
+  const h=harness();
+  h.setToday({groups:{decide:[],act:[],watch:[{title:'等待回复：客户甲',judgment:'等待客户'}]},counts:{decide:0,act:0,watch:1},labels:{watch:'等待'}});
+  await h.ui.bootstrap();await settle();assert.ok(h.elements.page.textContent.includes('等待回复：客户甲'));
+  h.setToday({groups:{decide:[],act:[{title:'客户甲有新回复',judgment:'网站站内消息有新回复 · 阅读新回复'}],watch:[]},counts:{decide:0,act:1,watch:0},labels:{act:'待处理'}});
   h.setWebsite({state:'ready',observed_at:'2026-11-01T03:00:00Z'});await h.ui.poll();await settle();
   assert.ok(h.elements.page.textContent.includes('网站站内消息有新回复'));assert.ok(h.elements.page.textContent.includes('阅读新回复'));
 });
@@ -466,4 +478,76 @@ test('旧8765入口只检查静态资源并保留路径查询和路由，失败�
     assert.deepEqual(redirects, available ? [target] : []);
     if (!available) assert.match(body.textContent, /双击“启动工作台”/);
   }
+});
+
+// 2026-11-01 新增：首页「今天」按"谁做主"分组渲染，判断一律来自后端，前端不自造结论。
+test('首页今天区块按分组渲染后端给出的判断与动作', async () => {
+  const h = harness();
+  h.setToday({ groups: { decide: [{ id: 'd1', kind: 'customer_overdue', group: 'decide', title: 'HTV 已超期', judgment: '已超过自定时限，需要你决定继续还是改期。', action: { label: '打开并调整时限', type: 'open_object', object_id: 'customer:1' }, evidence: [{ label: '原定时限', value: '2026-10-01' }], severity: 'high' }], act: [{ id: 'a1', kind: 'customer_reply', group: 'act', title: '客户有新回复', judgment: '往来原文已在客户页。', action: { label: '让 Sol 起草', type: 'agent', object_id: 'customer:2', instruction: '读取最新往来并准备回复草稿；不自动发送。' }, evidence: [], severity: 'normal' }], watch: [] }, counts: { decide: 1, act: 1, watch: 0 }, labels: { decide: '等你拍板', act: '今天能推', watch: '在跑，不用动手' } });
+  await h.ui.bootstrap(); await settle();
+  const today = h.elements.page.querySelector('.overview-today');
+  assert.ok(today, '今天区块应存在');
+  assert.ok(today.textContent.includes('等你拍板'));
+  assert.ok(today.textContent.includes('HTV 已超期'));
+  assert.ok(today.textContent.includes('已超过自定时限'));
+  // 依据默认折叠在 details 里，不应占据首屏文本主干之外
+  assert.ok(today.querySelector('.today-evidence').textContent.includes('原定时限'));
+  assert.ok(today.textContent.includes('今天能推'));
+});
+
+test('今天区块的 Agent 动作会带指令启动任务，不自动发送', async () => {
+  const h = harness();
+  h.setToday({ groups: { decide: [], act: [{ id: 'a1', kind: 'customer_reply', group: 'act', title: '客户有新回复', judgment: '判断', action: { label: '让 Sol 起草', type: 'agent', object_id: 'customer:2', instruction: '读取最新往来；不自动发送。' }, evidence: [] }], watch: [] }, counts: { decide: 0, act: 1, watch: 0 }, labels: { decide: '等你拍板', act: '今天能推', watch: '在跑' } });
+  await h.ui.bootstrap(); await settle();
+  const today = h.elements.page.querySelector('.overview-today');
+  await findButton(today, '让 Sol 起草').click(); await settle();
+  const started = h.requests.find(item => item.path === '/api/desk/jobs');
+  assert.ok(started, '应发起任务');
+  assert.equal(started.payload.object_id, 'customer:2');
+  assert.equal(started.payload.mode, 'draft');
+  assert.match(started.payload.instruction, /不自动发送/);
+});
+
+test('今天没有待办时给出明确空态，而不是空白', async () => {
+  const h = harness(); await h.ui.bootstrap(); await settle();
+  const today = h.elements.page.querySelector('.overview-today');
+  assert.ok(today.textContent.includes('今天没有需要你处理的事'));
+});
+
+test('首页客户新来信直达该客户记录', async () => {
+  const h = harness();
+  h.setToday({groups:{decide:[],act:[{title:'买家有新来信',judgment:'发件人：buyer@example.org',action:{label:'查看客户',type:'open_object',object_id:'prospect:candidate:abc'}}],watch:[]},counts:{decide:0,act:1,watch:0},labels:{act:'待处理'}});
+  await h.ui.bootstrap(); await settle();
+  await findButton(h.elements.page.querySelector('.overview-today'),'查看客户').click();
+  assert.equal(h.location.hash,'/customers?view=development&item=candidate%3Aabc');
+});
+
+test('首页网站询盘数量使用实际读取结果', async () => {
+  const h = harness(); h.setWebsite({state:'ready',observed_at:'2026-11-02T01:00:00Z',total:1});
+  h.objects.push({id:'customer:website-x',kind:'customer',source_type:'website',title:'买家'});
+  await h.ui.bootstrap(); await settle();
+  assert.ok(h.elements.page.textContent.includes('已读取 1 条询盘'));
+});
+
+test('商品页按资料缺口排序，并保留退回全部商品的出口', async () => {
+  const h = harness('#/products?view=gaps');
+  h.setProductGaps({ total: 2, with_gaps: 1, blocked: 1, counts: { no_source: 1 }, items: [{ object_id: 'product:1', title: '缺资料的款', gap_keys: ['no_source'], severity: 'high' }], checked: ['no_source'], unavailable: { no_price: '需打开单款' }, labels: {} });
+  h.objects.push({ id: 'product:2', kind: 'product', title: '资料齐全的款', assets: [{}], supply: { kind: 'own', label: '自有工厂' }, source_role: 'adopted', links: [] });
+  await h.ui.bootstrap(); await settle();
+  assert.ok(h.elements.page.textContent.includes('1 款待补充资料'));
+  assert.ok(findButton(h.elements.page, '查看全部商品 →'));
+  // 缺口视图应只留缺资料的款；资料齐全的不该出现在这里。
+  assert.equal(h.elements.page.textContent.includes('资料齐全的款'), false);
+});
+
+test('渠道页显示可用渠道，暂不接入的渠道不制造空入口', async () => {
+  const h = harness('#/channels'); const original = h.originalFetch;
+  h.interceptFetch(async (path, options) => String(path).startsWith('/api/desk/channels') ? { ok: true, json: async () => ({ channels: [{ id: 'alibaba', title: '国际站', data: {}, gaps: ['询盘与报价未验证接通'] }, { id: 'douyin', title: '抖店', connection: {state:'not_integrated'}, data: { available: false }, gaps: ['成交、流量和售后指标未接通'] }, { id: 'another', title: '其他已接入渠道', connection: {state:'ready'}, data:{scope:'经营数据'} }] }) } : original(path, options));
+  await h.ui.bootstrap(); await settle();
+  const text = h.elements.page.textContent;
+  assert.ok(text.includes('国际站'));
+  assert.equal(text.includes('抖店'), false);
+  assert.ok(text.includes('其他已接入渠道'));
+  assert.ok(text.includes('未接通的能力 1 项'));
+  assert.ok(text.includes('询盘与报价未验证接通'));
 });

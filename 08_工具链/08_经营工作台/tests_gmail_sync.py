@@ -2,6 +2,7 @@ import copy,json,sqlite3,tempfile,threading,unittest
 from pathlib import Path
 from types import SimpleNamespace
 from gmail_sync import GmailService,customer_emails
+from gmail_oauth import GmailDependencyError
 ACCOUNT='me@example.com';BUYER='buyer@example.com';SECOND='second@example.com'
 def message(mid='new',direction='inbound',at='2026-11-01T02:00:00Z',buyer=BUYER):
     return dict(id=mid,direction=direction,sent_at=at,**{'from':buyer if direction=='inbound' else ACCOUNT,'to':ACCOUNT if direction=='inbound' else buyer})
@@ -29,6 +30,11 @@ class Tests(unittest.TestCase):
         self.assertEqual(self.saved,[]);self.assertFalse((self.app.state/'gmail.json').exists())
     def test_no_config_no_network(self):
         s=self.service();s.scan_once();s.peek('customer:1');s.customer('customer:1');self.assertEqual(self.mail.calls,[]);self.assertEqual(s.status()['state'],'not_connected')
+    def test_missing_dependency_explains_the_connection_failure(self):
+        (self.app.state/'gmail.json').write_text(json.dumps({'email':ACCOUNT,'auth_mode':'oauth'}),encoding='utf8')
+        def missing(_): raise GmailDependencyError('缺少依赖 keyring，请安装后重启')
+        s=GmailService(self.app,oauth_credential_checker=missing)
+        self.assertEqual(s.status()['state'],'error');self.assertIn('缺少依赖 keyring',s.status()['error'])
     def test_explicit_emails_only(self):
         obj=dict(kind='customer',content=json.dumps(dict(email=BUYER,requirements='wrong@example.com')),facts=[dict(label='原记录来源',value='wrong@example.com'),dict(label='邮箱',value=SECOND)])
         self.assertEqual(customer_emails(obj),[BUYER,SECOND])
@@ -50,6 +56,9 @@ class Tests(unittest.TestCase):
         self.assertTrue(s.customer('customer:1',force=True)['reply_pending'])
     def test_history_no_trigger(self):
         s=self.connect();self.mail.messages=[message(at='2026-11-01T00:00:00Z')];self.assertEqual(len(s.customer('customer:1')['messages']),1);self.assertEqual(self.events,[])
+    def test_new_reply_from_historical_customer_is_processed(self):
+        s=self.connect();self.flow={'state':'new','bucket':'history'};self.mail.messages=[message()]
+        self.assertTrue(s.customer('customer:1')['reply_pending']);self.assertEqual(len(self.events),1)
     def test_wait_boundary_not_connect(self):
         s=self.connect();self.mail.messages=[message()];s.customer('customer:1');self.assertEqual(len(self.events),1)
     def test_active_and_prospect_replies_after_connection_are_dispatched(self):

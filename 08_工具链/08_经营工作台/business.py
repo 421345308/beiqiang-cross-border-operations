@@ -343,15 +343,6 @@ class Business:
                 cursor=cursor/part;cursor.mkdir(exist_ok=True,mode=0o700)
             target=base/(oid+'.md')
             if target.is_symlink():raise ValueError('成果文件不能是链接')
-            if target.exists():
-                previous_path=target.with_suffix('.prev.md')
-                if previous_path.is_symlink():raise ValueError('成果备份不能是链接')
-                previous_fd,previous_name=tempfile.mkstemp(prefix='.previous-',dir=base)
-                try:
-                    with os.fdopen(previous_fd,'wb') as stream:stream.write(target.read_bytes());stream.flush();os.fsync(stream.fileno())
-                    os.replace(previous_name,previous_path)
-                finally:
-                    if os.path.exists(previous_name):os.unlink(previous_name)
             fd,name=tempfile.mkstemp(prefix='.artifact-',dir=base)
             try:
                 with os.fdopen(fd,'w',encoding='utf8',newline='\n') as stream:stream.write(content);stream.flush();os.fsync(stream.fileno())

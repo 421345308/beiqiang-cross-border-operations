@@ -93,7 +93,13 @@
   function sectionHeading(title, note) { const row = el('div', undefined, 'section-title'); row.append(el('h2', title)); if (note) row.append(el('span', note)); return row; }
   function heading(eyebrow, title, description) { const wrap = el('div', undefined, 'page-heading'), content = el('div'); content.append(el('span', eyebrow, 'eyebrow'), el('h1', title)); if (description) content.append(el('p', description)); wrap.append(content); return wrap; }
   function empty(root, description) { root.append(el('div', description, 'empty')); }
-  function goObject(id) { location.hash = String(id).startsWith('creation:') ? `/creation?item=${encodeURIComponent(id)}` : `/object/${encodeURIComponent(id)}`; }
+  function goObject(id, artifactId = '') {
+    const value = String(id);
+    let route = value.startsWith('creation:') ? `/creation?item=${encodeURIComponent(value)}` :
+      value.startsWith('prospect:') ? `/customers?view=development&item=${encodeURIComponent(value.slice('prospect:'.length))}` : `/object/${encodeURIComponent(value)}`;
+    if (artifactId) route += `${route.includes('?') ? '&' : '?'}artifact=${encodeURIComponent(artifactId)}`;
+    location.hash = route;
+  }
   function remember(id) { try { const prior = JSON.parse(localStorage.getItem('bq-desk-recent') || '[]').map(value => typeof value === 'string' ? { id: value, at: null } : value); localStorage.setItem('bq-desk-recent', JSON.stringify([{ id, at: new Date().toISOString() }, ...prior.filter(value => value.id !== id)].slice(0, 12))); } catch { /* Recent links are optional. */ } }
   function recentObjects() {
     let ids = []; try { ids = JSON.parse(localStorage.getItem('bq-desk-recent') || '[]').map(value => typeof value === 'string' ? value : value.id); } catch { /* Use only actual jobs if local history is unavailable. */ }
@@ -101,14 +107,18 @@
     return [...ids, ...jobs.map(job => job.object_id)].map(objectById).filter(object => { if (!object || seen.has(object.id)) return false; seen.add(object.id); return true; }).slice(0, 6);
   }
   function businessEntrances() {
-    const grid = el('div', undefined, 'business-entrances'), products = S.objects.filter(item => item.kind === 'product').length, customers = S.objects.filter(item => item.kind === 'customer').length, website = S.objects.filter(item => item.kind === 'customer' && (text(item.source).startsWith('website:') || text(item.subtitle).includes('网站询盘'))).length;
-    for (const [title, note, hash] of [['商品', `已接入 ${products} 份商品资料 · 查资料、选素材、整理选款`, '/products'], ['客户', `已关联 ${customers} 份客户与需求记录 · 看背景、准备下一步`, '/customers'], ['网站记录', S.websiteStatus.observed_at ? `已取得 ${website} 条记录 · 打开原文继续核对` : '询盘仍在读取中，完成后自动出现', '/customers?view=inquiries&q=%E7%BD%91%E7%AB%99']]) { const card = el('article', undefined, 'card business-entry'); card.append(el('h2', title), el('p', note), button('打开 →', () => { location.hash = hash; }, 'quiet')); grid.append(card); }
+    const grid = el('div', undefined, 'business-entrances'), products = S.objects.filter(item => item.kind === 'product' && !/^HR[-_]?\d+$/i.test(item.title || '')).length;
+    const website = typeof S.websiteStatus.total === 'number' ? S.websiteStatus.total : S.objects.filter(item => item.source_type === 'website' || String(item.id).startsWith('customer:website-')).length;
+    for (const [title, note, hash] of [['商品', `已接入 ${products} 款商品 · 查资料、选素材、整理选款`, '/products'], ['客户', '查看客户需求、往来与开发进展', '/customers'], ['网站询盘', S.websiteStatus.observed_at ? `已读取 ${website} 条询盘 · 查看客户需求` : '询盘正在读取', '/customers?view=inquiries&q=%E7%BD%91%E7%AB%99']]) { const card = el('article', undefined, 'card business-entry'); card.append(el('h2', title), el('p', note), button('打开 →', () => { location.hash = hash; }, 'quiet')); grid.append(card); }
     return grid;
   }
   function image(asset, cls) { const src = safeUrl(asset?.url); if (!src) return null; const img = el('img', undefined, cls); img.src = src; img.alt = assetLabel(asset); img.loading = 'lazy'; img.referrerPolicy = 'no-referrer'; img.addEventListener('error', () => img.remove()); return img; }
   function productDescription(object) { const f=(object.facts || []).find(x => text(x.label).startsWith('用途候选')); return text(f?.value).split('·').map(v => v.replace(/需求/g, '').replace(/待分类/g, '').trim()).filter(Boolean).join(' · ') || '商品类型尚未整理'; }
   function creativeSummary(content) { return text(content).split('\n').map(line=>line.trim().replace(/\*\*/g,'').replace(/^[-*]\s*/,'').replace(/^(?:更新|更新时间)：\d{4}-\d{2}-\d{2}[。\s]*/,'')) .filter(line=>line && !/^(#|\||---|项目名称：)/.test(line) && !/本档案仅按既有本地文件/i.test(line) && /[\u3400-\u9fff]/.test(line)).map(line=>line.split(/；(?:本次未|未新增|未生成|用户再次明确授权删除|自动审批)/)[0])[0] || ''; }
-  function appendSupply(host, object) { const supply=object.supply || {}; if(supply.kind==='own') host.append(el('p','自有工厂')); else if(supply.kind==='external') { const row=el('p'); row.append(el('span', text(supply.model))); const a=link('查看供货商品',supply.url); if(a)row.append(a); host.append(row); } }
+  function appendSupply(host, object) { const supply=object.supply || {};
+    if(supply.kind==='own') host.append(el('p','自有工厂'));
+    else if(supply.kind==='external') { const row=el('p'); if(supply.model)row.append(el('span',text(supply.model)+' ')); const a=link('查看供货商品',supply.url); if(a)row.append(a); if(row.children.length)host.append(row); }
+  }
   function appendProductLinks(host, object) {
     const supply = object.supply || {}, listings = (object.links || []).filter(item => /^Alibaba \d+$/.test(item.label || ''));
     if (supply.kind !== 'own' && !safeUrl(supply.url) && !listings.length) return;
@@ -121,7 +131,11 @@
   }
   function productCategory(object) { const d=object.category && object.category !== '其他' ? object.category : productDescription(object); return /靴/.test(d) ? 'boot' : /洞洞/.test(d) ? 'clog' : /凉鞋|拖鞋|半拖/.test(d) ? 'sandal' : /乐福|豆豆/.test(d) ? 'loafer' : /套脚|袜套|一脚蹬/.test(d) ? 'slip' : /系带/.test(d) ? 'lace' : 'other'; }
   function tile(object) {
-    const card = el('article', undefined, 'card object-tile'), asset = firstImage(object); if (asset) card.append(image(asset, 'tile-image'));
+    const card = el('article', undefined, 'card object-tile'), asset = firstImage(object);
+    // 2026-11-01：无图商品原来没有图片区，卡片比同排矮一截，网格参差。补等高占位，
+    // 同时明确写出"无登记图片"——这正是缺口本身，不该用空白糊过去。
+    if (asset) card.append(image(asset, 'tile-image'));
+    else if (object.kind === 'product') card.append(el('div', '无登记图片', 'tile-image tile-placeholder'));
     card.append(el('span', objectKind(object), 'object-type'), el('h3', text(object.title), 'object-title'), el('p', object.kind === 'product' ? productDescription(object) : displayText(object.subtitle || object.summary)), button(object.kind === 'product' ? '查看商品 →' : '继续处理 →', () => goObject(object.id), 'quiet open-object')); if(object.kind==='product')appendSupply(card,object); return card;
   }
   function workRow(job) {
@@ -129,7 +143,7 @@
     const right = el('div'); right.append(badge(job.status), button('打开', () => goObject(job.object_id), 'quiet')); row.append(info, right); return row;
   }
   function artifactRow(artifact) {
-    const row = el('article', undefined, 'card work-row'), info = el('div'); info.append(el('h3', text(artifact.title || '工作成果')), el('p', `${objectById(artifact.object_id)?.title || '关联资料'} · ${time(artifact.updated_at)}`)); row.append(info, button('查看成果 →', () => { location.hash = String(artifact.object_id).startsWith('creation:') ? `/creation?item=${encodeURIComponent(artifact.object_id)}&artifact=${encodeURIComponent(artifact.id)}` : `/object/${encodeURIComponent(artifact.object_id)}?artifact=${encodeURIComponent(artifact.id)}`; }, 'quiet')); return row;
+    const row = el('article', undefined, 'card work-row'), info = el('div'); info.append(el('h3', text(artifact.title || '工作成果')), el('p', `${objectById(artifact.object_id)?.title || '关联资料'} · ${time(artifact.updated_at)}`)); row.append(info, button('查看成果 →', () => goObject(artifact.object_id, artifact.id), 'quiet')); return row;
   }
   function websiteText() {
     const value = S.websiteStatus || {}, stamp = value.observed_at ? ` · 上次读取 ${time(value.observed_at)}` : '';
@@ -141,31 +155,70 @@
   function alibabaText() { const status = S.alibabaStatus || {}; if (['loading', 'refreshing', 'pending'].includes(status.state)) return '正在读取国际站订单买家；不会混入询盘数量。'; if (status.observed_at) return `订单买家来源：仅已读取的第 ${status.pagination?.page || 1} 页订单 · ${time(status.observed_at)}，不代表全量客户或新询盘。`; return '国际站订单买家尚未完成读取；订单买家与询盘分开显示。'; }
   function websiteLabel() { return el('p', websiteText(), 'website-status'); }
   function updateWebsiteLabels() { document.querySelectorAll('.website-status').forEach(item => { item.textContent = item.className.includes('alibaba-source-status') ? alibabaText() : websiteText(); }); }
+  function todayAction(action) {
+    if (!action) return null;
+    const go = hash => button(action.label || '打开', () => { location.hash = hash; }, 'quiet');
+    if (action.type === 'agent') return button(action.label || '交给 Sol', async () => {
+      try { await api('/api/desk/jobs', { object_id: action.object_id, instruction: action.instruction, mode: 'draft' }); toast('已交给 Sol；完成后成果会回到该客户下。'); }
+      catch (error) { message(error.message); }
+    }, 'primary');
+    if (action.type === 'open_object' && action.object_id) return button(action.label || '打开', () => goObject(action.object_id), 'quiet');
+    if (action.type === 'open_job') { const job = S.jobs.find(item => item.id === action.job_id); return job?.object_id ? button(action.label || '查看', () => goObject(job.object_id), 'quiet') : null; }
+    if (action.type === 'refresh_channel') return button(action.label || '重新采集', async () => {
+      try { await api('/api/desk/refresh', {}); await api('/api/desk/alibaba/refresh', { page: 1 }); toast('已触发重新采集，稍后回来核对结果。'); }
+      catch (error) { message(error.message); }
+    }, 'quiet');
+    if (action.type === 'open_products') return go('/products?view=gaps');
+    if (action.type === 'open_catalog') return go('/products');
+    if (action.type === 'open_development') return go('/customers?view=development');
+    if (action.type === 'open_channels') return go('/channels');
+    return go('/customers?view=inquiries');
+  }
+  async function renderToday(host) {
+    let data;
+    try { data = await api('/api/desk/today'); } catch { host.replaceChildren(el('p', '待办暂时无法读取，请稍后重试。', 'inline-error')); return; }
+    const detached = host.isConnected === false || (host.isConnected === undefined && !(host.parentNode || host.parent));
+    if (S.page !== 'overview' || detached) return;
+    const groups = data.groups || {}, labels = data.labels || {}, counts = data.counts || {};
+    const summary = ['decide', 'act', 'watch'].filter(key => counts[key]).map(key => `${labels[key] || key} ${counts[key]}`).join(' · ');
+    host.replaceChildren(sectionHeading('今天', summary || '暂时没有待处理事项'));
+    const unavailable = Object.entries(data.sources || {}).filter(([, value]) => value?.state === 'unavailable');
+    if (unavailable.length) host.append(el('p', '部分信息暂时无法读取，请检查对应连接。', 'inline-error'));
+    const grid = el('div', undefined, 'today-groups');
+    for (const key of ['decide', 'act', 'watch']) {
+      const items = groups[key] || [];
+      if (!items.length) continue;
+      const card = el('section', undefined, `card today-group ${key}`);
+      card.append(el('h3', `${labels[key] || key}　${items.length}`));
+      for (const item of items) {
+        const row = el('article', undefined, `today-row ${item.severity || 'normal'}`), info = el('div');
+        info.append(el('h4', text(item.title)));
+        if (text(item.judgment)) info.append(el('p', text(item.judgment)));
+        const evidence = (item.evidence || []).filter(entry => text(entry.value));
+        if (evidence.length) {
+          // 依据与来源默认折叠：免责说明、来源路径属于脚注，不该占据首屏。
+          const details = el('details', undefined, 'today-evidence');
+          details.append(el('summary', '依据与来源'));
+          for (const entry of evidence) details.append(el('p', `${entry.label}：${entry.value}`, 'muted'));
+          info.append(details);
+        }
+        row.append(info);
+        const action = todayAction(item.action);
+        if (action) row.append(action);
+        card.append(row);
+      }
+      grid.append(card);
+    }
+    if (!grid.children.length) empty(grid, '今天没有需要你处理的事。客户回复、平台草稿、渠道数据变化后会自动出现在这里。');
+    host.append(grid);
+  }
   function renderOverview() {
     const page = $('page'), goalsOpen = page.querySelector('.goals')?.open; page.replaceChildren(heading('我的工作台', '今天，从这里继续', '找到正在推进的事，把下一步交给 Sol，成果留在原处。'));
     page.append(websiteLabel());
+    const today = el('section', undefined, 'overview-today'); page.append(today); renderToday(today);
     const goals = Object.entries(S.goals || {}).filter(([, value]) => text(value)); if (goals.length) { const details = el('details', undefined, 'card goals'); details.open = !!goalsOpen; details.append(el('summary', '当前方向与重点')); for (const [key, value] of goals) details.append(el('div', `${({ long_term: '长期方向', phase: '当前阶段', focus: '当前重点', priorities: '优先事项', notes: '补充要求' }[key] || '当前要求')}：${text(value)}`)); page.append(details); }
-    const pending=el('section',undefined,'overview-pending'); page.append(pending);
-    api('/api/desk/inquiry-queue?bucket=active').then(data => {
-      if(S.page!=='overview' || !pending.parentNode && !pending.parent) return;
-      const all=data.items || data.rows || [], waiting=all.filter(row=>row.workflow?.pending_party==='customer' && !replyNotice(row.workflow));
-      const rows=all.filter(row=>row.workflow?.pending_party!=='customer' || replyNotice(row.workflow)).sort((a,b)=>Number(!!replyNotice(b.workflow))-Number(!!replyNotice(a.workflow))).slice(0,3);
-      if(!all.length)return;
-      pending.append(sectionHeading('待推进的客户','先看需要我方处理的事项'));
-      const list=el('div',undefined,'row-list');
-      for(const row of rows) { const card=el('article',undefined,'card work-row'), content=el('div'), brief=row.business_summary || {}, analysis=row.analysis || {}, workflow=row.workflow || {}; content.append(el('h3',row.title || '客户')); if(replyNotice(workflow))content.append(el('p',replyNotice(workflow),'mail-attention')); content.append(el('p',brief.core_need || brief.headline || analysis.core_need || analysis.brief || '打开客户查看需求')); const next=(workflow.gmail_reply_pending && workflow.gmail_next_action) || brief.next_action || workflow.next_action || analysis.next_action; if(next)content.append(el('p',`下一步：${next}`)); card.append(content,button('打开客户 →',()=>goObject(row.object_id),'quiet'));list.append(card); }
-      if(!rows.length)empty(list,'目前没有需要我方处理的询盘。');
-      pending.append(list);
-      if(waiting.length)pending.append(button(`${waiting.length} 位客户等待回复 →`,()=>{location.hash='/customers?view=inquiries&state=waiting_customer';},'quiet'));
-    }).catch(()=>{});
-    api('/api/desk/gmail/candidates').then(data=>{
-      const items=(data.items||[]).filter(item=>item.is_new!==false && item.answered!==true);
-      if(S.page!=='overview' || !items.length)return;
-      pending.append(button(`Gmail 发现 ${items.length} 封潜在买家来信 →`,()=>{location.hash='/customers?view=development';},'mail-attention'));
-    }).catch(()=>{});
     page.append(sectionHeading('从业务开始', '进入真实对象，而非工具菜单'), businessEntrances()); const recentRows = recentObjects(); if (recentRows.length) { page.append(sectionHeading('继续工作', '近期打开或实际处理过的对象')); const recent = el('div', undefined, 'continue-grid'); recentRows.forEach(object => recent.append(tile(object))); page.append(recent); }
-    const columns = el('div', undefined, 'overview-grid'), active = el('section'), artifacts = el('section'); active.append(sectionHeading('正在推进', '实际执行状态')); const jobs = el('div', undefined, 'row-list'); const running = S.jobs.filter(isActive); running.forEach(job => jobs.append(workRow(job))); if (!running.length) empty(jobs, '当前没有执行中的工作。打开一款商品或一位客户，说明这次需要什么。'); active.append(jobs); artifacts.append(sectionHeading('最近成果', '打开后可继续编辑')); const list = el('div', undefined, 'row-list'); [...S.artifacts].sort((a, b) => String(b.updated_at || '').localeCompare(String(a.updated_at || ''))).slice(0, 5).forEach(item => list.append(artifactRow(item))); if (!list.children.length) empty(list, '新的选款资料、回复草稿会保存在这里，并关联原商品或客户。'); artifacts.append(list); columns.append(active, artifacts); page.append(columns);
-    const failed = S.jobs.filter(job => job.status === 'failed').slice(0, 3); if (failed.length) { page.append(sectionHeading('需要留意', '未完成的工作')); const rows = el('div', undefined, 'row-list'); failed.forEach(job => rows.append(workRow(job))); page.append(rows); }
+    const artifacts = el('section'); artifacts.append(sectionHeading('最近成果', '打开后可继续编辑')); const list = el('div', undefined, 'row-list'); [...S.artifacts].sort((a, b) => String(b.updated_at || '').localeCompare(String(a.updated_at || ''))).slice(0, 5).forEach(item => list.append(artifactRow(item))); if (!list.children.length) empty(list, '新的选款资料、回复草稿会保存在这里，并关联原商品或客户。'); artifacts.append(list); page.append(artifacts);
   }
   function parseRoute() { const raw = location.hash.replace(/^#\/?/, '') || 'overview', split = raw.indexOf('?'); return { parts: (split < 0 ? raw : raw.slice(0, split)).split('/'), query: new URLSearchParams(split < 0 ? '' : raw.slice(split + 1)) }; }
   function setNav(page) { const name = ({ overview: '总览', products: '商品', customers: '客户', channels: '渠道', creation: '创作', library: '客户资料包' })[page] || '详情'; $('page-name').textContent = name; document.querySelectorAll('[data-nav]').forEach(item => item.classList.toggle('active', item.dataset.nav === page)); }
@@ -182,10 +235,23 @@
   async function renderChannels() {
     const page = $('page'); page.replaceChildren(heading('渠道', '从渠道继续经营', '查看已有数据和可以直接进入的工作。'));
     try { const data=await api('/api/desk/channels'); if (S.page !== 'channels') return; const grid=el('div',undefined,'overview-grid');
-      for (const item of data.channels || []) { if(item.id !== 'website' && item.id !== 'alibaba') continue; const card=el('section',undefined,'card'); card.append(el('h2',item.title));
+      for (const item of data.channels || []) { if (item.connection?.state === 'not_integrated') continue; const card=el('section',undefined,'card'); card.append(el('h2',item.title));
         if (item.id === 'website') { card.append(el('p',websiteText()),el('p',item.connection?.total == null ? '询盘数量暂不可用' : `现有网站询盘：${item.connection.total} 条`),button('查看网站询盘',()=>{location.hash='/customers?view=inquiries';},'quiet')); }
         else if (item.id === 'alibaba') { const stamp=item.connection?.last_success_at; card.append(el('p',stamp ? `最近成功读取：${time(stamp)}` : '尚无可展示的近期读取记录。')); if(item.data?.ok && item.data.metrics) { const metrics=item.data.metrics; const labels={search_impressions:'搜索曝光',search_clicks:'搜索点击',visitors:'访客',inquiries:'询盘',tm_buyers:'TM买家',marketing_clicks:'营销点击'}; card.append(el('p',`历史数据 ${item.data.period || ''} · ${item.data.timezone || ''}`)); const line=Object.entries(labels).filter(([k])=>metrics[k] != null).map(([k,v])=>`${v} ${metrics[k]}`).join(' · '); if(line)card.append(el('p',line)); card.append(el('p','商品口径汇总，人数未去重；不用于计算转化率。','muted')); } card.append(button('查看商品',()=>{location.hash='/products';},'quiet'),button('查看订单买家',()=>{location.hash='/customers?view=inquiries&source=orders';},'quiet')); }
-        for (const gap of item.gaps || []) if(!gap.includes('妙手尚未接工作台调用')) card.append(el('p',gap,'muted')); grid.append(card);
+        else {
+          const detail = item.data || {};
+          card.append(el('p', detail.available === false ? '当前未取到该渠道数据。' : (text(detail.scope) || '暂无可展示的指标。')));
+          if (detail.observed_at) card.append(el('p', `上次观测：${time(detail.observed_at)}`, 'muted'));
+          for (const action of item.actions || []) if (text(action)) card.append(el('p', text(action), 'muted'));
+        }
+        const gaps=(item.gaps || []).filter(gap=>!gap.includes('妙手尚未接工作台调用'));
+        if (gaps.length) {
+          const box=el('details',undefined,'channel-gaps');
+          box.append(el('summary',`未接通的能力 ${gaps.length} 项`));
+          for (const gap of gaps) box.append(el('p',gap,'muted'));
+          card.append(box);
+        }
+        grid.append(card);
       } page.append(grid);
     } catch(error) { message(error.message); }
   }
@@ -225,10 +291,19 @@
     if (kind === 'customers' && parseRoute().query.get('view') !== 'inquiries') { renderDevelopment(); return; }
     if (kind === 'customers' && parseRoute().query.get('source') !== 'orders') { renderInquiryQueue(query); return; }
     const listRouteSerial = S.loadSerial; const listIsCurrent = () => listRouteSerial === S.loadSerial && parseRoute().parts[0] === kind;
+    const gapView = kind === 'products' && parseRoute().query.get('view') === 'gaps';
     const page = $('page'), labels = { products: ['商品资料', '商品', '从真实产品、规格与素材出发，整理可以直接使用的选款资料。'], customers: ['客户与需求', '客户', '需求、来源与准备中的回复，放在同一处继续。'], library: ['查找资料', '资料', '跨商品与客户查找原文、图片和已有资料，不搬动原文件。'] };
-    page.replaceChildren(heading(...labels[kind])); if (kind === 'customers') page.append(customerTabs('inquiries')); if (kind === 'customers' || kind === 'library') page.append(websiteLabel()); const input = el('input', undefined, 'search-input'); input.type = 'search'; input.value = query; input.placeholder = kind === 'products' ? '搜索款号、名称或商品信息' : kind === 'customers' ? '搜索客户、需求或来源' : '搜索商品、客户与关联资料'; input.setAttribute('aria-label', '搜索资料'); const sourceSelect = kind === 'customers' ? el('select', undefined, 'source-filter') : null; if (sourceSelect) { for (const [value, label] of [['records', '需求与客户记录'], ['orders', '国际站订单买家（非询盘）'], ['all', '全部来源（分类型）']]) { const option = el('option', label); option.value = value; sourceSelect.append(option); } sourceSelect.value = parseRoute().query.get('source') || 'records'; sourceSelect.setAttribute('aria-label', '客户来源类型'); } const category = el('select'); category.setAttribute('aria-label', '商品分类'); for (const [v,l] of [['','全部分类'],['lace','系带鞋'],['slip','套脚鞋'],['boot','靴'],['sandal','凉鞋与拖鞋'],['clog','洞洞鞋'],['loafer','乐福与豆豆鞋'],['other','其他与待分类']]) { const o=el('option',l); o.value=v; category.append(o); } const count = el('span', '', 'search-count'), list = el('div', undefined, kind === 'products' ? 'product-grid' : kind === 'library' ? 'library-grid' : 'row-list'); const search = el('div', undefined, 'search-bar'); search.append(input); if (kind === 'products') { search.append(category); category.addEventListener('change', () => find(input.value)); } if (sourceSelect) search.append(sourceSelect); search.append(count); page.append(search); if (kind === 'customers') { const orderStatus = el('p', '', 'alibaba-source-status website-status'); orderStatus.textContent = alibabaText(); page.append(orderStatus, button('更新订单买家（第 1 页）', async () => { try { const result = await api('/api/desk/alibaba/refresh', { page: 1 }); S.alibabaStatus = result.status || result; orderStatus.textContent = alibabaText(); } catch (error) { message(error.message); } }, 'quiet order-refresh')); } page.append(list); let timer, searchSerial = 0;
+    page.replaceChildren(heading(...labels[kind])); if (kind === 'customers') page.append(customerTabs('inquiries')); if (kind === 'customers' || kind === 'library') page.append(websiteLabel()); if (gapView) { const bar = el('div', undefined, 'gap-view-bar'); bar.append(el('p', '查看尚未关联的商品图片、供货链接和国际站链接。', 'muted'), button('查看全部商品 →', () => { location.hash = '/products'; }, 'quiet')); page.append(bar); } const input = el('input', undefined, 'search-input'); input.type = 'search'; input.value = query; input.placeholder = kind === 'products' ? '搜索款号、名称或商品信息' : kind === 'customers' ? '搜索客户、需求或来源' : '搜索商品、客户与关联资料'; input.setAttribute('aria-label', '搜索资料'); const sourceSelect = kind === 'customers' ? el('select', undefined, 'source-filter') : null; if (sourceSelect) { for (const [value, label] of [['records', '需求与客户记录'], ['orders', '国际站订单买家（非询盘）'], ['all', '全部来源（分类型）']]) { const option = el('option', label); option.value = value; sourceSelect.append(option); } sourceSelect.value = parseRoute().query.get('source') || 'records'; sourceSelect.setAttribute('aria-label', '客户来源类型'); } const category = el('select'); category.setAttribute('aria-label', '商品分类'); for (const [v,l] of [['','全部分类'],['lace','系带鞋'],['slip','套脚鞋'],['boot','靴'],['sandal','凉鞋与拖鞋'],['clog','洞洞鞋'],['loafer','乐福与豆豆鞋'],['other','其他与待分类']]) { const o=el('option',l); o.value=v; category.append(o); } const count = el('span', '', 'search-count'), list = el('div', undefined, kind === 'products' ? 'product-grid' : kind === 'library' ? 'library-grid' : 'row-list'); const search = el('div', undefined, 'search-bar'); search.append(input); if (kind === 'products') { search.append(category); category.addEventListener('change', () => find(input.value)); } if (sourceSelect) search.append(sourceSelect); search.append(count); page.append(search); if (kind === 'customers') { const orderStatus = el('p', '', 'alibaba-source-status website-status'); orderStatus.textContent = alibabaText(); page.append(orderStatus, button('更新订单买家（第 1 页）', async () => { try { const result = await api('/api/desk/alibaba/refresh', { page: 1 }); S.alibabaStatus = result.status || result; orderStatus.textContent = alibabaText(); } catch (error) { message(error.message); } }, 'quiet order-refresh')); } page.append(list); let timer, searchSerial = 0;
     async function find(value) { const sequence = ++searchSerial; count.textContent = '正在查找…'; try { const endpointKind = kind === 'products' ? 'product' : kind === 'customers' ? 'customer' : ''; const result = await api(`/api/desk/objects?q=${encodeURIComponent(value)}&kind=${endpointKind}`); if (sequence !== searchSerial || S.page !== kind || !listIsCurrent()) return; let rows = array(result, 'objects').filter(object => !sourceSelect || sourceSelect.value === 'all' || (sourceSelect.value === 'orders' ? object.source_type === 'alibaba_order_buyer' : object.source_type !== 'alibaba_order_buyer')); if (kind === 'products') { rows = rows.filter(object => !/^HR[-_]?\d+$/i.test(object.title)); if (category.value) rows = rows.filter(object => productCategory(object) === category.value); rows.sort((a,b) => productCategory(a).localeCompare(productCategory(b), 'zh-CN') || text(a.title).localeCompare(text(b.title), 'zh-CN', {numeric:true})); } list.replaceChildren(); count.textContent = kind === 'customers' ? `${sourceSelect.value === 'orders' ? '订单买家' : '来源记录'} ${rows.length} 份` : `${rows.length} 项结果`;
         if (kind === 'products') {
+          if (gapView) {
+            const limit = Math.max(1, S.objects.filter(object => object.kind === 'product').length);
+            const gaps = await api(`/api/desk/product-gaps?limit=${limit}`), byId = new Map((gaps.items || []).map((row, index) => [String(row.object_id), { row, index }]));
+            if (sequence !== searchSerial || S.page !== kind || !listIsCurrent()) return;
+            rows = rows.filter(object => byId.has(String(object.id)));
+            rows.sort((a, b) => byId.get(String(a.id)).index - byId.get(String(b.id)).index);
+            count.textContent = `${rows.length} 款待补充资料`;
+          }
           let shown = 0; const more = button('显示更多商品', () => showMore(), 'quiet');
           function showMore() { more.remove(); const end = Math.min(shown + 36, rows.length); while (shown < end) list.append(tile(rows[shown++])); if (shown < rows.length) list.append(more); }
           showMore();
@@ -275,6 +350,8 @@
   }
   function mountGmail(ctx, main) {
     const host = el('section', undefined, 'card gmail-conversation'); ctx.gmailHost = host; main.append(host);
+    ctx.candidateNext = main.querySelector('.candidate-next-action');
+    ctx.candidateNextDefault = ctx.candidateNext?.textContent || '';
     host.append(el('h2', 'Gmail 邮件往来'), el('p', '正在读取邮件连接状态…'));
     loadGmail(ctx);
   }
@@ -283,6 +360,7 @@
     try {
       const data = await api(sync ? '/api/desk/gmail/sync' : `/api/desk/gmail/customer?object_id=${encodeURIComponent(ctx.object.id)}`, sync ? {object_id:ctx.object.id} : undefined);
       if (S.detail !== ctx) return;
+      if (ctx.candidateNext) ctx.candidateNext.textContent = data.reply_pending ? '下一步：阅读客户新邮件，准备后续沟通' : ctx.candidateNextDefault;
       const stamp = JSON.stringify(data); if (stamp === ctx.gmailStamp) return; ctx.gmailStamp = stamp;
       const host = ctx.gmailHost, status = data.status || {}, connected = status.state === 'connected', noContact = status.state === 'no_contact_email'; host.replaceChildren(el('h2', 'Gmail 邮件往来'));
       host.append(el('p', connected ? `已连接${status.account_email ? ` · ${status.account_email}` : ''}${status.last_success_at ? ` · 最近读取 ${time(status.last_success_at)}` : ''}` : noContact ? '这位客户尚未填写联系邮箱。' : status.state === 'error' ? '邮件读取暂未完成，请稍后重试。' : '尚未连接 Gmail，当前没有自动收信。', connected ? 'gmail-status' : 'artifact-note'));
@@ -412,7 +490,7 @@
       if (item.kind === 'candidate') {
         const prior = item.source_record?.analysis || {}, summary = el('section', undefined, 'candidate-summary');
         summary.append(el('h3', '买家摘要'), el('p', item.business_summary || '尚无可展示的业务摘要。'));
-        summary.append(el('p', `联系状态：${item.contact_status_label || '尚未核实联系状态'}`), el('p', `下一步：${item.next_action || '补充推进安排'}`));
+        summary.append(el('p', `联系状态：${item.contact_status_label || '尚未核实联系状态'}`), el('p', `下一步：${item.next_action || '补充推进安排'}`, 'candidate-next-action'));
         main.append(summary);
         const contacts = item.source_record?.contacts || [], site = link('访问公司网站 ↗', item.website); if (contacts.length || site || item.contact_name || item.email || item.phone) { const contactBox = el('section', undefined, 'candidate-contacts'); contactBox.append(el('h3', '联系方式')); if (site) contactBox.append(site); for (const [label,value] of [['联系人',item.contact_name],['邮箱',item.email],['电话',item.phone]]) if(value)contactBox.append(el('p',`${label}：${text(value)}`)); for (const contact of contacts) { const value = typeof contact === 'string' ? contact : contact.value; if (!value) continue; const kind = typeof contact === 'object' ? text(contact.kind).toLowerCase() : ''; const label = ({email:'邮箱',phone:'电话',telephone:'电话',whatsapp:'WhatsApp',wechat:'微信'})[kind] || '联系'; contactBox.append(el('p', `${label}：${text(value)}`)); } main.append(contactBox); }
       }
@@ -446,7 +524,7 @@
         },'quiet');
         lookup.append(el('h3','公司官网'),el('p','按公司名称查找公开网址，结果可用于后续买家研究。每次查询使用现有搜索额度。'),findSite,status,results); main.append(lookup);
       }
-      const object = { id: item.object_id || `prospect:${item.id}`, kind: 'prospect', title: item.title || item.company, source: item.source, assets: [] }, artifactSection = el('section', undefined, 'card'); artifactSection.append(el('h2', '研究成果')); const tabs = el('div', undefined, 'artifact-tabs'), editor = el('div'); artifactSection.append(tabs, editor); const ctx = { object, right, tabs, editor, artifacts: [], selectedId: null }; S.detail = ctx; buildAgent(ctx); ctx.instruction.placeholder = '说明希望核查哪些候选、哪类来源、哪些适配问题。'; ctx.right.querySelector('h2').textContent = '交给 Sol 研究'; ctx.right.querySelector('.agent-copy').textContent = '依据当前目标与已有来源开展研究。没有查到的证据应明确待核，不编造联系人或采购意向。'; ctx.instruction.value = item.kind === 'candidate' ? '请先读取当前候选的既有初筛、来源证据和原CRM关联，核对已发送、退信及停止联系状态，避免重复开发；再根据明确缺口调用业务工具 research_company 读取候选公司官网；用中文整理业务类型、产品与采购适配依据、来源网址、待核信息及下一步。工具无法读取的来源明确列为缺口，不编造联系方式、采购意向或已联系记录，不发送消息。' : `请执行当前研究任务：${item.title || ''}。\n研究目标：${item.target || '请按记录中的明确目标推进'}。\n${item.origin_object_id ? `先读取关联来源对象 ${item.origin_object_id} 的原文及已有资料，再处理本研究目标。` : '先读取当前研究记录与证据，不要把任务强行改成公司官网研究。'}\n用中文完成有依据的分析与可执行改进方案，区分已知事实、推断、缺口和下一步；需要时调用对应业务工具，不自动外发。`; const shortcutBox = ctx.right.querySelector('.agent-shortcuts'); const defaultInstruction = ctx.instruction.value; shortcutBox.replaceChildren(button(item.kind === 'candidate' ? '核对官网与候选证据' : '按当前目标执行研究', () => { ctx.instruction.value = defaultInstruction; ctx.instruction.focus(); }), button(item.kind === 'candidate' ? '整理适配与下一步' : '核对原文与问题依据', () => { ctx.instruction.value = item.kind === 'candidate' ? '请根据当前目标和已有证据，用中文整理供货适配、证据缺口和可执行下一步。需要公司官网证据时调用 research_company，不虚构采购意向。' : `请围绕“${item.target || item.title}”核对关联来源${item.origin_object_id ? `对象 ${item.origin_object_id}` : '记录'}中的原文、事实依据与未解决问题，明确改进方向，不把网站承接或询盘处理任务变成找公司官网。`; ctx.instruction.focus(); })); if(item.kind==='candidate')mountGmail(ctx,main); layout.append(main, right); detail.append(layout, artifactSection); refreshArtifacts(ctx, true); detail.scrollIntoView?.({ behavior: 'smooth', block: 'start' });
+      const object = { id: item.object_id || `prospect:${item.id}`, kind: 'prospect', title: item.title || item.company, source: item.source, assets: [] }, artifactSection = el('section', undefined, 'card'); artifactSection.append(el('h2', '研究成果')); const tabs = el('div', undefined, 'artifact-tabs'), editor = el('div'); artifactSection.append(tabs, editor); const ctx = { object, right, tabs, editor, artifacts: [], selectedId: null, requestedArtifact: parseRoute().query.get('artifact') }; S.detail = ctx; buildAgent(ctx); ctx.instruction.placeholder = '说明希望核查哪些候选、哪类来源、哪些适配问题。'; ctx.right.querySelector('h2').textContent = '交给 Sol 研究'; ctx.right.querySelector('.agent-copy').textContent = '依据当前目标与已有来源开展研究。没有查到的证据应明确待核，不编造联系人或采购意向。'; ctx.instruction.value = item.kind === 'candidate' ? '请先读取当前候选的既有初筛、来源证据和原CRM关联，核对已发送、退信及停止联系状态，避免重复开发；再根据明确缺口调用业务工具 research_company 读取候选公司官网；用中文整理业务类型、产品与采购适配依据、来源网址、待核信息及下一步。工具无法读取的来源明确列为缺口，不编造联系方式、采购意向或已联系记录，不发送消息。' : `请执行当前研究任务：${item.title || ''}。\n研究目标：${item.target || '请按记录中的明确目标推进'}。\n${item.origin_object_id ? `先读取关联来源对象 ${item.origin_object_id} 的原文及已有资料，再处理本研究目标。` : '先读取当前研究记录与证据，不要把任务强行改成公司官网研究。'}\n用中文完成有依据的分析与可执行改进方案，区分已知事实、推断、缺口和下一步；需要时调用对应业务工具，不自动外发。`; const shortcutBox = ctx.right.querySelector('.agent-shortcuts'); const defaultInstruction = ctx.instruction.value; shortcutBox.replaceChildren(button(item.kind === 'candidate' ? '核对官网与候选证据' : '按当前目标执行研究', () => { ctx.instruction.value = defaultInstruction; ctx.instruction.focus(); }), button(item.kind === 'candidate' ? '整理适配与下一步' : '核对原文与问题依据', () => { ctx.instruction.value = item.kind === 'candidate' ? '请根据当前目标和已有证据，用中文整理供货适配、证据缺口和可执行下一步。需要公司官网证据时调用 research_company，不虚构采购意向。' : `请围绕“${item.target || item.title}”核对关联来源${item.origin_object_id ? `对象 ${item.origin_object_id}` : '记录'}中的原文、事实依据与未解决问题，明确改进方向，不把网站承接或询盘处理任务变成找公司官网。`; ctx.instruction.focus(); })); if(item.kind==='candidate')mountGmail(ctx,main); layout.append(main, right); detail.append(layout, artifactSection); refreshArtifacts(ctx, true); detail.scrollIntoView?.({ behavior: 'smooth', block: 'start' });
     }
     function addCandidate() {
       const dialog=el('dialog',undefined,'desk-modal intake-dialog'), form=el('div',undefined,'profile-form'); dialog.append(el('h2','新增目标客户'));
@@ -522,7 +600,7 @@
           function draw() {
           list.replaceChildren(); const ended = item => /结束|停止/.test(text(item.contact_status_label)); const rows = root !== candidates ? allRows : allRows.filter(item => (!candidateCategory || (item.business_category || '其他') === candidateCategory) && (candidateStatus === 'all' || (candidateStatus === 'ended' ? ended(item) : !ended(item))) && [item.title,item.company,item.business_summary,item.country,item.market_hint].some(value => text(value).toLowerCase().includes(candidateQuery.trim().toLowerCase()))); if (count) count.textContent = `${rows.length} 位客户`;
           const groups = new Map(); for (const item of rows) { const category = item.kind === 'candidate' ? (item.business_category || '其他') : '研究任务'; if (!groups.has(category)) groups.set(category, []); groups.get(category).push(item); }
-          for (const [category, items] of groups) { if (root === candidates) list.append(el('h3', category)); const ranks={high:0,normal:1,low:2}; items.sort((a,b)=>(ranks[a.priority] ?? 1)-(ranks[b.priority] ?? 1)); for (const item of items) { const card = el('article', undefined, 'card work-row'), textPart = el('div'); textPart.append(el('h3', item.title || item.company || '研究任务')); if(replyNotice(item.workflow || item))textPart.append(el('p',replyNotice(item.workflow || item),'mail-attention')); if (item.kind === 'candidate' && item.priority === 'high') textPart.append(el('span','优先','eyebrow')); if (item.kind === 'candidate' && item.country) textPart.append(el('small',text(item.country))); if (item.kind === 'candidate') { textPart.append(el('p', item.business_summary || '尚无可展示的业务摘要。'), el('p', `联系状态：${item.contact_status_label || '尚未核实联系状态'}`), el('p', `下一步：${item.next_action || '补充业务判断与推进安排'}`)); const dateValue=text(item.updated_at || item.created_at || item.discovered_at).slice(0,10); if(/^\d{4}-\d{2}-\d{2}$/.test(dateValue))textPart.append(el('small', `${item.updated_at ? '更新' : '发现'}日期：${dateValue}`)); } else textPart.append(el('p', item.target || '尚未说明研究目标')); card.append(textPart, button('打开客户 →', () => openItem(item.id), 'quiet')); list.append(card); } }
+          for (const [category, items] of groups) { if (root === candidates) list.append(el('h3', category)); const ranks={high:0,normal:1,low:2}; items.sort((a,b)=>(ranks[a.priority] ?? 1)-(ranks[b.priority] ?? 1)); for (const item of items) { const card = el('article', undefined, 'card work-row'), textPart = el('div'); textPart.append(el('h3', item.title || item.company || '研究任务')); if(replyNotice(item.workflow || item))textPart.append(el('p',replyNotice(item.workflow || item),'mail-attention')); if (item.kind === 'candidate' && item.priority === 'high') textPart.append(el('span','优先','eyebrow')); if (item.kind === 'candidate' && item.country) textPart.append(el('small',text(item.country))); if (item.kind === 'candidate') { textPart.append(el('p', item.business_summary || '尚无可展示的业务摘要。'), el('p', `联系状态：${item.contact_status_label || '尚未核实联系状态'}`), el('p', `下一步：${item.gmail_reply_pending ? (item.gmail_next_action || '阅读客户新邮件，准备后续沟通') : (item.next_action || '补充业务判断与推进安排')}`)); const dateValue=text(item.updated_at || item.created_at || item.discovered_at).slice(0,10); if(/^\d{4}-\d{2}-\d{2}$/.test(dateValue))textPart.append(el('small', `${item.updated_at ? '更新' : '发现'}日期：${dateValue}`)); } else textPart.append(el('p', item.target || '尚未说明研究目标')); card.append(textPart, button('打开客户 →', () => openItem(item.id), 'quiet')); list.append(card); } }
           if (!rows.length) empty(list, emptyLabel);
           }
           root.append(list); draw();
@@ -558,9 +636,22 @@
       const send = button('发送网站私信', async () => { if (!reply.value.trim()) { result.textContent = '请先填写回复原文。'; return; } send.disabled = true; try { const value = await api('/api/desk/website-reply', {object_id:object.id,message:reply.value}); result.textContent = value.saved ? `网站私信已保存并发送；${value.notification_sent ? '邮件提醒已发送' : '邮件提醒未发送，请查看网站往来记录'}。` : '未确认发送成功，请核对往来记录。'; if (value.saved) { reply.value = ''; const refreshed = objectResult(await api(`/api/desk/object?id=${encodeURIComponent(object.id)}`)); object.conversation = refreshed.conversation || []; const entry = el('article'); entry.append(el('h3', '我方 · 刚刚'), el('p', '消息已保存，重新打开可查看完整往来。')); conversation.insertBefore(entry, reply); } } catch (error) { result.textContent = error.message; } finally { send.disabled = false; } }, 'primary');
       conversation.append(el('p', '点击后将给买家发送网站私信，并尝试邮件提醒。'), reply, send, result); main.append(conversation);
     }
+    if (object.kind === 'product') loadProductGaps(object, main);
     if (object.kind === 'product') { const listings=(object.links || []).filter(x=>/^Alibaba \d+$/.test(x.label || '')); if(listings.length) { const box=el('section',undefined,'card'), select=el('select'), output=el('div'); box.append(el('h2','国际站商品标题'),el('p','选择对应平台商品，读取当前正式标题。')); select.setAttribute('aria-label','国际站商品'); for(const entry of listings) { const option=el('option',`平台商品 ${entry.label.split(' ')[1]}`); option.value=entry.label.split(' ')[1]; select.append(option); } box.append(select,button('读取当前标题',async()=>{output.replaceChildren(el('p','正在读取…'));try{const value=await api(`/api/desk/title-diagnosis?product_id=${encodeURIComponent(select.value)}`);if(!value.ok)throw new Error('当前商品暂不可读取，请检查国际站连接。');const d=value.change;output.replaceChildren(el('p',`平台标题：${d.platform?.title || '未返回'}`),el('p',`本地记录：${d.localTitle || '未记录'}`),el('p',d.platform?.title===d.localTitle ? '平台和本地标题一致。' : '平台和本地标题不同，请先检查。'));}catch(error){output.replaceChildren(el('p',error.message));}},'quiet'),output);titleDraftForm(box,object,select);main.append(box); } }
     const artifactSection = el(object.kind === 'customer' ? 'details' : 'section', undefined, 'card'); if(object.kind==='customer' && isWebsite(object))artifactSection.open=true; artifactSection.append(el(object.kind === 'customer' ? 'summary' : 'h2', object.kind === 'customer' ? '回复草稿与工作成果' : '工作成果')); const tabs = el('div', undefined, 'artifact-tabs'), editor = el('div'); artifactSection.append(el('p', '整理出的选款资料、回复草稿和补充内容都保存在这里，可继续编辑。', 'artifact-note'), tabs, editor); main.insertBefore(artifactSection, main.children[1] || null);
     const ctx = { object, right, tabs, editor, summaryParagraph, conversationMessages, replyArea, artifacts: [], selectedId: null, requestedArtifact, currentEdit: null }; S.detail = ctx; buildAgent(ctx); if (object.kind === 'customer') { ctx.profileHost = el('section', undefined, 'card customer-analysis'); main.insertBefore(ctx.profileHost, main.children[0] || null); main.insertBefore(button('客户资料包 · 选择与组合材料',()=>{location.hash='/library?customer='+encodeURIComponent(object.id);},'quiet'),ctx.profileHost); loadProfile(ctx); } if(object.kind==='customer')mountGmail(ctx,main); layout.append(main, right); page.append(layout); refreshArtifacts(ctx, true);
+  }
+  async function loadProductGaps(object, host) {
+    const card = el('section', undefined, 'card product-gaps');
+    card.append(el('h2', '资料缺口'), el('p', '正在核对已登记字段…', 'muted'));
+    host.append(card);
+    try {
+      const data = await api(`/api/desk/product-gaps?product_id=${encodeURIComponent(String(object.id).replace(/^product:/, ''))}`);
+      const gaps = data.gaps || [];
+      if (!gaps.length) { card.remove(); return; }
+      card.replaceChildren(el('h2', '待补充资料'));
+      for (const gap of gaps) card.append(el('p', `${gap.label}：${gap.reason}`, gap.severity === 'high' ? 'gap-blocking' : 'muted'));
+    } catch { card.remove(); }
   }
   function previewAsset(asset) {
     const src = safeUrl(asset.url); if (!src) return; const dialog = el('dialog', undefined, 'desk-modal'), header = el('div', undefined, 'modal-head'); header.append(el('h2', assetLabel(asset)), button('关闭', () => dialog.close(), 'quiet')); dialog.append(header); const wrap = el('div', undefined, 'modal-media'); let media;
