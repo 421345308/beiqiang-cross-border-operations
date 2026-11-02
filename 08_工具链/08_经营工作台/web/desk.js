@@ -288,6 +288,7 @@
     } catch(error) { message(error.message); }
   }
   function renderSearchPage(kind, query) {
+    if (kind === 'customers' && parseRoute().query.get('view') === 'competitors') { renderCompetitors(); return; }
     if (kind === 'customers' && parseRoute().query.get('view') !== 'inquiries') { renderDevelopment(); return; }
     if (kind === 'customers' && parseRoute().query.get('source') !== 'orders') { renderInquiryQueue(query); return; }
     const listRouteSerial = S.loadSerial; const listIsCurrent = () => listRouteSerial === S.loadSerial && parseRoute().parts[0] === kind;
@@ -341,7 +342,65 @@
     for (const input of [state, priority, bucket, next, due, note]) { input.addEventListener('input', () => { ctx.workflowEditing = true; }); input.addEventListener('change', () => { ctx.workflowEditing = true; }); } form.append(feedback, button('保存推进安排', async () => { try { await api('/api/desk/customer-workflow', {object_id:ctx.object.id,state:state.value,priority:priority.value,...(bucket.value !== (w.bucket || 'active') ? {bucket:bucket.value} : {}),next_action:next.value,due_at:due.value,note:note.value}); ctx.workflowEditing = false; await loadProfile(ctx); toast('推进安排已保存。'); } catch(error) { feedback.textContent = error.message; } }, 'primary')); box.append(form); host.append(box);
   }
   function customerTabs(current) {
-    const tabs = el('div', undefined, 'customer-tabs'); for (const [id, label] of [['development', '客户开发'], ['inquiries', '询盘处理']]) tabs.append(button(label, () => { location.hash = `/customers?view=${id}`; }, current === id ? 'active' : '')); return tabs;
+    const tabs = el('div', undefined, 'customer-tabs'); for (const [id, label] of [['development', '客户开发'], ['competitors', '同行找客户'], ['inquiries', '询盘处理']]) tabs.append(button(label, () => { location.hash = `/customers?view=${id}`; }, current === id ? 'active' : '')); return tabs;
+  }
+  async function renderCompetitors() {
+    const page = $('page'), serial = S.loadSerial;
+    const current = () => S.page === 'customers' && serial === S.loadSerial && parseRoute().query.get('view') === 'competitors';
+    page.replaceChildren(heading('客户开发', '同行找客户', '从国际站同行入手，找到买家后直接在这里登记、继续研究。'), customerTabs('competitors'));
+    const explanation = el('p', '以下为店铺页面能对应公司的同行。查海关时，请结合地址、货描和日期核对出口方；买家关联仍是研究线索。', 'competitor-intro');
+    const search = el('input', undefined, 'search-input'); search.type = 'search'; search.placeholder = '搜索公司或鞋类方向'; search.setAttribute('aria-label', '搜索同行');
+    const count = el('span', '', 'search-count'), bar = el('div', undefined, 'search-bar'), list = el('div', undefined, 'row-list competitor-list');
+    bar.append(search, count); page.append(explanation, bar, list);
+    let data;
+    try { data = await api('/api/desk/competitors'); } catch (error) { if (current()) message(error.message); return; }
+    if (!current()) return;
+    function openBuyer(id) { location.hash = `/customers?view=development&item=${encodeURIComponent(id)}`; }
+    function addBuyer(company) {
+      const dialog = el('dialog', undefined, 'intake-dialog'), form = el('div', undefined, 'competitor-form');
+      dialog.append(el('h2', `登记 ${company.company} 的买家线索`), el('p', '填入查询到的公司，保存后可继续研究其业务与联系方式。', 'muted'));
+      const name = addField(form, '买家公司名称', '', false, '例如：ABC Footwear Inc.'), country = addField(form, '国家或市场（选填）'), note = addField(form, '线索说明（选填）', '', true, '可填写查询来源、货描、日期等');
+      const feedback = el('div', undefined, 'inline-error');
+      const save = button('保存并查看客户', async () => {
+        const companyName = name.value.trim(); feedback.replaceChildren();
+        if (!companyName) { feedback.textContent = '请填写买家公司名称。'; return; }
+        const same = (data.existing_buyers || []).find(row => row.company.trim().toLocaleLowerCase() === companyName.toLocaleLowerCase());
+        if (same) { feedback.append(el('p', '该公司已在客户列表中，请先查看已有记录。'), button('打开已有客户', () => { dialog.close(); openBuyer(same.id); }, 'quiet')); return; }
+        save.disabled = true;
+        try {
+          const description = note.value.trim();
+          const created = await api('/api/desk/discovery', { kind: 'candidate', company: companyName, country: country.value.trim(),
+            target: `从同行 ${company.company} 研究中登记的买家线索。`,
+            evidence: description ? [{text: description, url: '', observed_at: ''}] : [],
+            next_action: '核对具体来源及买家公司业务、采购入口。', related_competitors: [company.id] });
+          const item = created.item || created;
+          data.existing_buyers.push({id: item.id, company: companyName}); dialog.close(); openBuyer(item.id);
+        } catch (error) { feedback.textContent = error.message; save.disabled = false; }
+      }, 'primary');
+      dialog.append(form, feedback, save, button('取消', () => dialog.close(), 'quiet'));
+      dialog.addEventListener('close', () => dialog.remove()); document.body.append(dialog); dialog.showModal(); name.focus();
+    }
+    function buyerLinks(host, buyers) {
+      if (!buyers?.length) return;
+      const row = el('div', undefined, 'competitor-buyers'); row.append(el('span', '相关买家线索：'));
+      buyers.forEach(buyer => row.append(button(buyer.company, () => openBuyer(buyer.id), 'quiet'))); host.append(row);
+    }
+    function paint() {
+      list.replaceChildren(); const query = search.value.trim().toLocaleLowerCase();
+      const rows = (data.items || []).filter(item => `${item.company} ${item.direction}`.toLocaleLowerCase().includes(query));
+      count.textContent = `${rows.length} 家同行`;
+      for (const item of rows) {
+        const card = el('article', undefined, 'card competitor-row'), info = el('div', undefined, 'competitor-main'), actions = el('div', undefined, 'competitor-actions');
+        info.append(el('h3', item.company), el('p', item.direction));
+        if (item.sales) { const sold = el('p', item.sales.note, 'competitor-sales'); const source = link('销量依据 ↗', item.sales.source_url); if (source) sold.append(el('span', ' '), source); info.append(sold); }
+        buyerLinks(info, item.buyers); const shop = link('查看国际站店铺 ↗', item.store_url); if (shop) actions.append(shop);
+        actions.append(button('复制公司名', async () => { if (!navigator.clipboard?.writeText) { toast('请选择公司名称后复制。'); return; } await navigator.clipboard.writeText(item.company); toast('公司名已复制。'); }, 'quiet'), button('登记买家', () => addBuyer(item), 'primary'));
+        card.append(info, actions); list.append(card);
+      }
+      if (!rows.length) empty(list, '没有找到匹配的同行。');
+    }
+    search.addEventListener('input', paint); paint();
+    if (data.excluded?.length) { const other = el('details', undefined, 'competitor-excluded'); other.append(el('summary', `另外 ${data.excluded.length} 家暂未列入国际站名单`)); for (const item of data.excluded) { const line = el('div', undefined, 'competitor-excluded-item'); line.append(el('strong', item.company), el('p', item.note)); buyerLinks(line, item.buyers); other.append(line); } page.append(other); }
   }
   function addField(root, label, value = '', multiline = false, placeholder = '') { const wrap = el('label', undefined, 'desk-field'), input = el(multiline ? 'textarea' : 'input'); input.value = text(value); input.placeholder = placeholder; input.setAttribute('aria-label', label); wrap.append(el('span', label), input); root.append(wrap); return input; }
   function listText(root, title, values) { const section = el('div', undefined, 'analysis-block'); section.append(el('h3', title)); const items = Array.isArray(values) ? values : values ? [values] : []; if (items.length) { const list = el('ul'); items.forEach(item => list.append(el('li', displayText(item)))); section.append(list); } else section.append(el('p', '尚未取得依据', 'muted')); root.append(section); }
@@ -364,6 +423,7 @@
       const stamp = JSON.stringify(data); if (stamp === ctx.gmailStamp) return; ctx.gmailStamp = stamp;
       const host = ctx.gmailHost, status = data.status || {}, connected = status.state === 'connected', noContact = status.state === 'no_contact_email'; host.replaceChildren(el('h2', 'Gmail 邮件往来'));
       host.append(el('p', connected ? `已连接${status.account_email ? ` · ${status.account_email}` : ''}${status.last_success_at ? ` · 最近读取 ${time(status.last_success_at)}` : ''}` : noContact ? '这位客户尚未填写联系邮箱。' : status.state === 'error' ? '邮件读取暂未完成，请稍后重试。' : '尚未连接 Gmail，当前没有自动收信。', connected ? 'gmail-status' : 'artifact-note'));
+      if (connected) host.append(el('p', '工作台运行时约每 2 分钟检查一次；可手动更新。邮件请在 Gmail 中审核后发送。', 'gmail-sync-note'));
       if(status.authorization_expires_at)host.append(el('p',`Google 测试授权预计 ${time(status.authorization_expires_at)} 到期，到期后重新授权即可。`,'artifact-note'));
       if (status.error) host.append(el('p', text(status.error), 'inline-error'));
       if (status.history_note) host.append(el('p', text(status.history_note), 'artifact-note'));
@@ -415,8 +475,12 @@
       if (data.reply_pending) host.append(button('标记邮件已处理',async()=>{try{await api('/api/desk/gmail/ack',{object_id:ctx.object.id});ctx.gmailStamp=null;await loadGmail(ctx);if(ctx.profileHost)await loadProfile(ctx);toast('已标记处理。');}catch(error){toast(error.message);}},'quiet'));
       if (data.callback_error) host.append(el('p', text(data.callback_error), 'inline-error'));
       if (data.next_action) host.append(el('p', `下一步：${data.next_action}`, 'next-action'));
-      host.append(button('更新邮件往来', () => loadGmail(ctx, true), 'quiet'), button('根据邮件准备回复', () => { ctx.instruction.value = (ctx.instruction.value.trim() ? ctx.instruction.value + '\n\n' : '') + '请先读取这位客户最新 Gmail 往来，用中文说明客户回复的重点、当前需要处理的事项和建议下一步，再准备英文回复草稿并附中文对照。保留原有承诺与上下文，不发送邮件。'; S.instructions.set(String(ctx.object.id), ctx.instruction.value); ctx.instruction.focus(); }, 'quiet'));
-      const messages = Array.isArray(data.messages) ? data.messages : [];
+      const mailActions = el('div', undefined, 'gmail-actions');
+      mailActions.append(button('更新邮件往来', () => loadGmail(ctx, true), 'quiet'), button('根据邮件准备回复', () => { ctx.instruction.value = (ctx.instruction.value.trim() ? ctx.instruction.value + '\n\n' : '') + '请先读取这位客户最新 Gmail 往来，用中文说明客户回复的重点、当前需要处理的事项和建议下一步，再准备英文回复草稿并附中文对照。保留原有承诺与上下文，不发送邮件。'; S.instructions.set(String(ctx.object.id), ctx.instruction.value); ctx.instruction.focus(); }, 'quiet'));
+      const messages = Array.isArray(data.messages) ? [...data.messages].sort((a,b) => text(b.sent_at).localeCompare(text(a.sent_at))) : [];
+      const latestThread = messages.find(mail => mail.url)?.url;
+      if (latestThread) { const replyLink = link('在 Gmail 查看并回复 ↗', latestThread); if (replyLink) { replyLink.className = 'gmail-reply-link'; mailActions.append(replyLink); } }
+      host.append(mailActions);
       if (!messages.length) host.append(el('p', connected ? '暂未找到与这位客户关联的邮件。' : '连接完成后，客户邮件会在这里显示。', 'muted'));
       for (const mail of messages) {
         const entry = el('article', undefined, 'gmail-message'); entry.append(el('h3', `${mail.direction === 'outbound' ? '我方发出' : mail.mail_kind === 'automatic' ? '自动回复' : '客户来信'} · ${time(mail.sent_at)}`));
@@ -487,10 +551,32 @@
     const lines = input => input.value.split(/\r?\n/).map(value => value.trim()).filter(Boolean);
     form.append(message, button('保存中文解读与分析', async () => { try { await api('/api/desk/customer-profile', { object_id: ctx.object.id, source_hash: p.source_hash || p.provenance?.source_hash, translation_zh: translation.value, original_language: p.original_language || 'unknown', cleaned: { ...p.cleaned, company: company.value, country: country.value, quantity: quantity.value, need: need.value }, analysis: { ...p.analysis, fit: fit.value || 'unknown', basis: lines(basis), missing: lines(missing), next_action: next.value }, source_note: sourceNote.value }); ctx.profileEditing = false; await loadProfile(ctx); toast('中文解读与分析已保存，原始需求未改动。'); } catch (error) { message.textContent = error.message; } }, 'primary'), button('返回阅读（不保存本次编辑）', () => { ctx.profileEditing = false; renderProfile(ctx); }, 'quiet')); host.append(form);
   }
+  function customerStage(item, activity) {
+    const flow = item.workflow || {}, state = text(flow.state), status = text(item.contact_status_label);
+    if (flow.gmail_reply_pending || flow.customer_reply_pending || item.gmail_reply_pending) return 'action';
+    if (['won', 'lost', 'archived'].includes(state) || /已结束|不再推进|停止联系/.test(status)) return 'ended';
+    if (activity?.group === 'act' || activity?.group === 'decide') return 'action';
+    if (state === 'waiting_customer' || activity?.kind === 'customer_waiting') return 'waiting';
+    if ((flow.configured || item.kind === 'inquiry') && state && state !== 'waiting_customer') return 'action';
+    if (/待审核|待回复|收到.*回复|客户.*新.*(?:信|回复)|准备回复/.test(status)) return 'action';
+    if (/等待|等客户|已联系|已发|已回复/.test(status) || /等待.*回复|等客户/.test(text(item.next_action))) return 'waiting';
+    return 'prospect';
+  }
+  function customerStageLabel(stage, item) {
+    if (item.gmail_reply_pending || item.workflow?.gmail_reply_pending || item.workflow?.customer_reply_pending) return '有新回复';
+    return ({action:'待我处理', waiting:'等待客户', prospect:'待开发', ended:'已结束'})[stage] || '待开发';
+  }
+  function customerInquiry(row) {
+    const summary = row.business_summary || {}, flow = row.workflow || {};
+    return {id:row.object_id, object_id:row.object_id, kind:'inquiry', title:row.title,
+      business_category:row.source_type === 'website' ? '网站询盘' : '客户询盘', business_summary:summary.core_need || summary.headline || row.analysis?.core_need || '',
+      contact_status_label:flow.state_label || '', next_action:summary.next_action || flow.next_action || '',
+      workflow:flow, updated_at:flow.updated_at || row.received_at, source_type:row.source_type};
+  }
   async function renderDevelopment() {
-    const page = $('page'), routeSerial = S.loadSerial; const current = () => S.page === 'customers' && routeSerial === S.loadSerial && parseRoute().query.get('view') !== 'inquiries'; page.replaceChildren(heading('客户开发', '从目标客群，走向有依据的推进', '研究任务、候选证据与下一步在同一处。候选记录不等于采购意向或已联系客户。'), customerTabs('development')); const target = el('details', undefined, 'card discovery-target'); target.append(el('summary', '新建买家研究任务')); const form = el('div', undefined, 'discovery-target-form'), title = addField(form, '研究任务名称', '', false, '例如：为一组产品寻找匹配的买家'), audience = addField(form, '目标客群与研究要求', '', true, '说明市场、买家业务、产品适配与需要核查的证据'); const feedback = el('p', '', 'agent-feedback'), inbox = el('section'), tasks = el('section'), candidates = el('section'), detail = el('section'); target.append(form, feedback, button('保存研究任务', async () => { if (!title.value.trim() || !audience.value.trim()) { feedback.textContent = '请先写清任务名称和目标客群。'; return; } try { const result = await api('/api/desk/discovery', { kind: 'research_task', title: title.value, target: audience.value, status: '研究准备' }); await read(); await openItem((result.item || result).id); } catch (error) { feedback.textContent = error.message; } }, 'primary')); page.append(inbox, candidates, tasks, target, detail);
+    const page = $('page'), routeSerial = S.loadSerial; const current = () => S.page === 'customers' && routeSerial === S.loadSerial && parseRoute().query.get('view') !== 'inquiries'; page.replaceChildren(heading('客户工作台', '客户与机会', '先看需要处理的事，再继续开发目标客群。'), customerTabs('development')); const target = el('details', undefined, 'card discovery-target'); target.append(el('summary', '新建买家研究任务')); const form = el('div', undefined, 'discovery-target-form'), title = addField(form, '研究任务名称', '', false, '例如：为一组产品寻找匹配的买家'), audience = addField(form, '目标客群与研究要求', '', true, '说明市场、买家业务、产品适配与需要核查的证据'); const feedback = el('p', '', 'agent-feedback'), inbox = el('section'), tasks = el('section'), candidates = el('section'), detail = el('section'), sync = el('div', undefined, 'customer-sync'); target.append(form, feedback, button('保存研究任务', async () => { if (!title.value.trim() || !audience.value.trim()) { feedback.textContent = '请先写清任务名称和目标客群。'; return; } try { const result = await api('/api/desk/discovery', { kind: 'research_task', title: title.value, target: audience.value, status: '研究准备' }); await read(); await openItem((result.item || result).id); } catch (error) { feedback.textContent = error.message; } }, 'primary')); page.append(sync, inbox, candidates, tasks, target, detail);
     async function openItem(id) {
-      const result = await api(`/api/desk/discovery/item?id=${encodeURIComponent(id)}`); if (!current()) return; const item = result.item || result; const route = parseRoute(), artifact = route.query.get('item') === String(item.id) ? route.query.get('artifact') : null; history.replaceState(null, '', `#/customers?view=development&item=${encodeURIComponent(item.id)}${artifact ? `&artifact=${encodeURIComponent(artifact)}` : ''}`); target.hidden = true; inbox.hidden = true; tasks.hidden = true; candidates.hidden = true; searchPanel.hidden = true; detail.replaceChildren(button('← 返回客户开发列表', () => { location.hash = '/customers?view=development'; }, 'quiet back-development'));
+      const result = await api(`/api/desk/discovery/item?id=${encodeURIComponent(id)}`); if (!current()) return; const item = result.item || result; const route = parseRoute(), artifact = route.query.get('item') === String(item.id) ? route.query.get('artifact') : null; history.replaceState(null, '', `#/customers?view=development&item=${encodeURIComponent(item.id)}${artifact ? `&artifact=${encodeURIComponent(artifact)}` : ''}`); target.hidden = true; inbox.hidden = true; tasks.hidden = true; candidates.hidden = true; searchPanel.hidden = true; sync.hidden = true; detail.replaceChildren(button('← 返回客户开发列表', () => { location.hash = '/customers?view=development'; }, 'quiet back-development'));
       const layout = el('div', undefined, 'object-layout discovery-detail'), main = el('div', undefined, 'card'), right = el('aside', undefined, 'card object-agent'); main.append(el('h2', item.title || item.company || '研究记录'), el('p', item.kind === 'research_task' ? '研究任务' : item.business_category || '待确认业务类型', 'provenance-note'));
       if (item.kind === 'candidate') {
         const prior = item.source_record?.analysis || {}, summary = el('section', undefined, 'candidate-summary');
@@ -529,7 +615,14 @@
         },'quiet');
         lookup.append(el('h3','公司官网'),el('p','按公司名称查找公开网址，结果可用于后续买家研究。每次查询使用现有搜索额度。'),findSite,status,results); main.append(lookup);
       }
-      const object = { id: item.object_id || `prospect:${item.id}`, kind: 'prospect', title: item.title || item.company, source: item.source, assets: [] }, artifactSection = el('section', undefined, 'card'); artifactSection.append(el('h2', '研究成果')); const tabs = el('div', undefined, 'artifact-tabs'), editor = el('div'); artifactSection.append(tabs, editor); const ctx = { object, right, tabs, editor, artifacts: [], selectedId: null, requestedArtifact: parseRoute().query.get('artifact') }; S.detail = ctx; buildAgent(ctx); ctx.instruction.placeholder = '说明希望核查哪些候选、哪类来源、哪些适配问题。'; ctx.right.querySelector('h2').textContent = '交给 Sol 研究'; ctx.right.querySelector('.agent-copy').textContent = '依据当前目标与已有来源开展研究。没有查到的证据应明确待核，不编造联系人或采购意向。'; ctx.instruction.value = item.kind === 'candidate' ? '请先读取当前候选的既有初筛、来源证据和原CRM关联，核对已发送、退信及停止联系状态，避免重复开发；再根据明确缺口调用业务工具 research_company 读取候选公司官网；用中文整理业务类型、产品与采购适配依据、来源网址、待核信息及下一步。工具无法读取的来源明确列为缺口，不编造联系方式、采购意向或已联系记录，不发送消息。' : `请执行当前研究任务：${item.title || ''}。\n研究目标：${item.target || '请按记录中的明确目标推进'}。\n${item.origin_object_id ? `先读取关联来源对象 ${item.origin_object_id} 的原文及已有资料，再处理本研究目标。` : '先读取当前研究记录与证据，不要把任务强行改成公司官网研究。'}\n用中文完成有依据的分析与可执行改进方案，区分已知事实、推断、缺口和下一步；需要时调用对应业务工具，不自动外发。`; const shortcutBox = ctx.right.querySelector('.agent-shortcuts'); const defaultInstruction = ctx.instruction.value; shortcutBox.replaceChildren(button(item.kind === 'candidate' ? '核对官网与候选证据' : '按当前目标执行研究', () => { ctx.instruction.value = defaultInstruction; ctx.instruction.focus(); }), button(item.kind === 'candidate' ? '整理适配与下一步' : '核对原文与问题依据', () => { ctx.instruction.value = item.kind === 'candidate' ? '请根据当前目标和已有证据，用中文整理供货适配、证据缺口和可执行下一步。需要公司官网证据时调用 research_company，不虚构采购意向。' : `请围绕“${item.target || item.title}”核对关联来源${item.origin_object_id ? `对象 ${item.origin_object_id}` : '记录'}中的原文、事实依据与未解决问题，明确改进方向，不把网站承接或询盘处理任务变成找公司官网。`; ctx.instruction.focus(); })); if(item.kind==='candidate')mountGmail(ctx,main); layout.append(main, right); detail.append(layout, artifactSection); refreshArtifacts(ctx, true); detail.scrollIntoView?.({ behavior: 'smooth', block: 'start' });
+      const object = { id: item.object_id || `prospect:${item.id}`, kind: 'prospect', title: item.title || item.company, source: item.source, assets: [] }, artifactSection = el('section', undefined, 'card'); artifactSection.append(el('h2', '研究成果')); const tabs = el('div', undefined, 'artifact-tabs'), editor = el('div'); artifactSection.append(tabs, editor); const ctx = { object, right, tabs, editor, artifacts: [], selectedId: null, requestedArtifact: parseRoute().query.get('artifact') }; S.detail = ctx; buildAgent(ctx); ctx.instruction.placeholder = '说明希望核查哪些候选、哪类来源、哪些适配问题。'; ctx.right.querySelector('h2').textContent = '交给 Sol 研究'; ctx.right.querySelector('.agent-copy').textContent = '围绕当前客户，整理资料、分析需求和准备回复。'; ctx.instruction.value = item.kind === 'candidate' ? '请先读取当前候选的既有初筛、来源证据和原CRM关联，核对已发送、退信及停止联系状态，避免重复开发；再根据明确缺口调用业务工具 research_company 读取候选公司官网；用中文整理业务类型、产品与采购适配依据、来源网址、待核信息及下一步。工具无法读取的来源明确列为缺口，不编造联系方式、采购意向或已联系记录，不发送消息。' : `请执行当前研究任务：${item.title || ''}。\n研究目标：${item.target || '请按记录中的明确目标推进'}。\n${item.origin_object_id ? `先读取关联来源对象 ${item.origin_object_id} 的原文及已有资料，再处理本研究目标。` : '先读取当前研究记录与证据，不要把任务强行改成公司官网研究。'}\n用中文完成有依据的分析与可执行改进方案，区分已知事实、推断、缺口和下一步；需要时调用对应业务工具，不自动外发。`; const shortcutBox = ctx.right.querySelector('.agent-shortcuts'); const defaultInstruction = ctx.instruction.value; shortcutBox.replaceChildren(button(item.kind === 'candidate' ? '核对官网与候选证据' : '按当前目标执行研究', () => { ctx.instruction.value = defaultInstruction; ctx.instruction.focus(); }), button(item.kind === 'candidate' ? '整理适配与下一步' : '核对原文与问题依据', () => { ctx.instruction.value = item.kind === 'candidate' ? '请根据当前目标和已有证据，用中文整理供货适配、证据缺口和可执行下一步。需要公司官网证据时调用 research_company，不虚构采购意向。' : `请围绕“${item.target || item.title}”核对关联来源${item.origin_object_id ? `对象 ${item.origin_object_id}` : '记录'}中的原文、事实依据与未解决问题，明确改进方向，不把网站承接或询盘处理任务变成找公司官网。`; ctx.instruction.focus(); })); if(item.kind==='candidate'){mountGmail(ctx,main);main.insertBefore(ctx.gmailHost,editDetails);} layout.append(main, right); detail.append(layout, artifactSection); refreshArtifacts(ctx, true); detail.scrollIntoView?.({ behavior: 'smooth', block: 'start' });
+      if (item.kind === 'candidate') {
+        ctx.instruction.value = S.instructions.get(String(ctx.object.id)) || '';
+        ctx.instruction.placeholder = '例如：看看客户最新回复，准备一份中英对照的邮件草稿。';
+        const shortcuts = el('div', undefined, 'candidate-quick-actions');
+        shortcuts.append(button('查看资料与回复', () => artifactSection.scrollIntoView?.({behavior:'smooth',block:'start'}), 'quiet'), button('编辑客户资料', () => { editDetails.open = true; editDetails.scrollIntoView?.({behavior:'smooth',block:'start'}); }, 'quiet'));
+        main.querySelector('.candidate-summary')?.append(shortcuts);
+      }
     }
     function addCandidate() {
       const dialog=el('dialog',undefined,'desk-modal intake-dialog'), form=el('div',undefined,'profile-form'); dialog.append(el('h2','新增目标客户'));
@@ -537,7 +630,7 @@
       const save=button('保存客户',async()=>{if(!company.value.trim()){feedback.textContent='请填写公司名称。';return;}save.disabled=true;try{const result=await api('/api/desk/discovery',{kind:'candidate',company:company.value.trim(),website:website.value.trim(),country:country.value.trim(),contact_name:contactName.value.trim(),email:email.value.trim(),phone:phone.value.trim(),market_hint:country.value.trim(),business_summary:summary.value.trim(),business_category:category.value.trim(),contact_status_label:status.value.trim(),next_action:next.value.trim(),priority:priority.value});dialog.close();await read();await openItem((result.item||result).id);}catch(error){feedback.textContent=error.message;save.disabled=false;}},'primary');
       dialog.append(form,feedback,save,button('取消',()=>dialog.close(),'quiet'));document.body.append(dialog);dialog.addEventListener('close',()=>dialog.remove());dialog.showModal();
     }
-    const searchPanel=el('details',undefined,'card'), searchForm=el('div',undefined,'profile-form'), buyerKeyword=addField(searchForm,'买家搜索关键词','footwear importer'), searchResults=el('div'), searchFeedback=el('p','','agent-feedback');
+    const searchPanel=el('details',undefined,'card customer-search-tool'), searchForm=el('div',undefined,'profile-form'), buyerKeyword=addField(searchForm,'买家搜索关键词','footwear importer'), searchResults=el('div'), searchFeedback=el('p','','agent-feedback');
     searchPanel.append(el('summary','搜索公开买家线索'),el('p','输入鞋类、买家类型或目标市场，选择有价值的公司继续研究。搜索使用现有 Firecrawl 额度。'),searchForm);
     const searchButton=button('搜索买家',async()=>{
       searchButton.disabled=true;searchFeedback.textContent='正在搜索…';searchResults.replaceChildren();
@@ -564,14 +657,26 @@
     },'primary');searchPanel.append(searchButton,searchFeedback,searchResults);page.insertBefore(searchPanel,candidates);
     let candidateQuery = '', candidateCategory = '', candidateStatus = 'active';
     async function read() {
-      try { const data = await api('/api/desk/discovery'); if (!current()) return; tasks.replaceChildren(sectionHeading('研究任务', '保存后可交给 Sol 继续')); candidates.replaceChildren(sectionHeading('目标客户', '按业务类型查看客户摘要与推进安排'),button('新增客户',addCandidate,'primary'));
+      try { const data = await api('/api/desk/discovery'); if (!current()) return;
+        const extra = await Promise.allSettled([api('/api/desk/today'), api('/api/desk/inquiry-queue?bucket=active')]); if (!current()) return;
+        const today = extra[0].status === 'fulfilled' ? extra[0].value : {}, queue = extra[1].status === 'fulfilled' ? extra[1].value : {};
+        const activities = new Map(); for (const group of ['watch','act','decide']) for (const item of today.groups?.[group] || []) if (item.object_id) activities.set(item.object_id, {...item,group});
+        const allCustomers = [...(data.candidates || []), ...(queue.items || []).map(customerInquiry)];
+        tasks.replaceChildren(); candidates.replaceChildren();
+        if (extra[1].status !== 'fulfilled') candidates.append(el('p','网站询盘暂未读取，以下先显示已有目标客户。','inline-error'));
+        if (extra[0].status !== 'fulfilled') candidates.append(el('p','部分待办状态暂未读取，请稍后刷新。','inline-error'));
         api('/api/desk/gmail/candidates').then(mail=>{
           if(!current())return;
+          const gmailStatus = mail.status || {}, lastMail = gmailStatus.last_success_at ? ` · 最近检查 ${time(gmailStatus.last_success_at)}` : '';
+          const source = el('div', undefined, 'sync-status-line');
+          source.append(el('span', '', `sync-indicator ${gmailStatus.state === 'ready' ? 'online' : ''}`), el('span', gmailStatus.state === 'ready' ? `Gmail 已连接 · 运行时约每 2 分钟检查${lastMail}` : gmailStatus.state === 'loading' ? 'Gmail 正在检查来信' : gmailStatus.state === 'error' ? 'Gmail 暂未同步，请检查连接' : 'Gmail 尚未连接'));
+          const website = S.websiteStatus || {}; const webText = website.observed_at ? `网站询盘 · 页面打开时约 2 分钟刷新 · 最近读取 ${time(website.observed_at)}` : '网站询盘 · 正在读取';
+          sync.replaceChildren(source,el('span',webText,'sync-website'),el('span','邮件发送前在 Gmail 审核','sync-review'));
           const known=new Set((data.candidates||[]).flatMap(item=>[item.email,...(item.source_record?.contacts||[]).filter(c=>c?.kind==='email').map(c=>c.value)]).filter(Boolean).map(v=>text(v).trim().toLowerCase()));
           const rows=(mail.items||[]).filter(item=>!known.has(text(item.email).trim().toLowerCase()));inbox.replaceChildren();
           if(mail.status?.state==='error'){inbox.append(el('p','Gmail 新买家邮件筛选暂未完成，请检查邮箱连接。','inline-error'));return;}
           if(mail.status?.state==='loading'){inbox.append(el('p','正在筛选 Gmail 来信，请稍候。','muted'));return;}
-          if(!rows.length){if(mail.status?.state==='ready')inbox.append(el('p',mail.status?.history_limited?'Gmail：最近 30 封鞋类关键词邮件中暂无识别到新的采购咨询。':'Gmail：暂无识别到新的鞋类采购咨询。','muted'));return;}
+          if(!rows.length)return;
           const active=rows.filter(item=>item.is_new!==false && item.answered!==true),historical=rows.filter(item=>item.is_new===false || item.answered===true);
           if(active.length)inbox.append(sectionHeading('Gmail 潜在买家来信','筛选出的鞋类采购咨询，加入客户后可继续分析'));
           if(mail.status?.history_limited)inbox.append(el('p','当前检查最近 30 封鞋类关键词邮件，可在 Gmail 查看更早邮件。','artifact-note'));
@@ -591,25 +696,35 @@
             },'quiet'));card.append(content,actions);(historical.includes(item)?history:inbox).append(card);
           }
           if(historical.length)inbox.append(history);
-        }).catch(()=>{});
-        for (const [root, allRows, emptyLabel] of [[tasks, data.tasks || [], '还没有本地研究任务。'], [candidates, data.candidates || [], '没有符合条件的客户。']]) {
-          const list = el('div', undefined, 'row-list'); let count = null;
-          if (root === candidates) {
-            const bar = el('div', undefined, 'search-bar'), input = el('input', undefined, 'search-input'), categories = el('select'), statuses = el('select'); count = el('span', '', 'search-count');
-            input.type = 'search'; input.placeholder = '搜索公司、业务或市场'; input.setAttribute('aria-label', '搜索目标客户'); input.value = candidateQuery;
-            categories.setAttribute('aria-label', '买家类型'); for (const value of ['', ...new Set(allRows.map(item => item.business_category || '其他'))]) { const option = el('option', value || '全部买家类型'); option.value = value; categories.append(option); } categories.value = candidateCategory;
-            statuses.setAttribute('aria-label', '联系状态'); for (const [value, label] of [['active','待推进'],['ended','已结束跟进'],['all','全部状态']]) { const option=el('option',label); option.value=value; statuses.append(option); } statuses.value=candidateStatus;
-            input.addEventListener('input', () => {candidateQuery=input.value; draw();}); categories.addEventListener('change', () => {candidateCategory=categories.value; draw();}); statuses.addEventListener('change', () => {candidateStatus=statuses.value; draw();});
-            bar.append(input,categories,statuses,count); root.append(bar);
+        }).catch(()=>{if(current())sync.replaceChildren(el('span','Gmail 状态暂不可读取。','inline-error'));});
+        const taskRows = data.tasks || []; if (taskRows.length) { const box=el('details',undefined,'customer-research'); box.append(el('summary',`研究任务 · ${taskRows.length}`)); for(const item of taskRows){const row=el('article',undefined,'research-row'), copy=el('div');copy.append(el('h3',item.title || '研究任务'),el('p',item.target || ''));row.append(copy,button('打开研究 →',()=>openItem(item.id),'quiet'));box.append(row);} tasks.append(box); }
+        const header = el('div',undefined,'customer-list-heading'), headingText=el('div'); headingText.append(el('h2','目标客户与询盘'),el('p','按当前进展排列，先处理有回复和待办的客户。')); header.append(headingText,button('新增客户',addCandidate,'primary')); candidates.append(header);
+        const stats=el('div',undefined,'customer-stats'), bar=el('div',undefined,'customer-filter-bar'), input=el('input',undefined,'search-input'), categories=el('select'), statuses=el('select'), count=el('span','','search-count'), list=el('div',undefined,'customer-list');
+        input.type='search';input.placeholder='搜索公司、需求或市场';input.setAttribute('aria-label','搜索目标客户');input.value=candidateQuery;
+        categories.setAttribute('aria-label','买家类型');for(const value of ['',...new Set(allCustomers.map(item=>item.business_category || '其他'))]){const option=el('option',value || '全部买家类型');option.value=value;categories.append(option);}categories.value=candidateCategory;
+        statuses.setAttribute('aria-label','联系状态');for(const [value,label] of [['active','全部进行中'],['action','待我处理'],['waiting','等待客户'],['prospect','待开发'],['ended','已结束跟进'],['all','全部状态']]){const option=el('option',label);option.value=value;statuses.append(option);}statuses.value=candidateStatus;
+        bar.append(input,categories,statuses,count);candidates.append(stats,bar,list);
+        function draw() {
+          stats.replaceChildren();list.replaceChildren();
+          const countStage=stage=>allCustomers.filter(item=>customerStage(item,activities.get(item.object_id))===stage).length;
+          for(const [stage,label,caption] of [['action','待我处理','新回复与待办'],['waiting','等待客户','已联系或已报价'],['prospect','待开发','待研究和联系']]){
+            const tile=button('',()=>{candidateStatus=stage;statuses.value=stage;draw();},`customer-stat ${stage}${candidateStatus===stage?' active':''}`);
+            tile.append(el('span',label,'stat-label'),el('strong',String(countStage(stage))),el('span',caption,'stat-caption'));stats.append(tile);
           }
-          function draw() {
-          list.replaceChildren(); const ended = item => /结束|停止/.test(text(item.contact_status_label)); const rows = root !== candidates ? allRows : allRows.filter(item => (!candidateCategory || (item.business_category || '其他') === candidateCategory) && (candidateStatus === 'all' || (candidateStatus === 'ended' ? ended(item) : !ended(item))) && [item.title,item.company,item.business_summary,item.country,item.market_hint].some(value => text(value).toLowerCase().includes(candidateQuery.trim().toLowerCase()))); if (count) count.textContent = `${rows.length} 位客户`;
-          const groups = new Map(); for (const item of rows) { const category = item.kind === 'candidate' ? (item.business_category || '其他') : '研究任务'; if (!groups.has(category)) groups.set(category, []); groups.get(category).push(item); }
-          for (const [category, items] of groups) { if (root === candidates) list.append(el('h3', category)); const ranks={high:0,normal:1,low:2}; items.sort((a,b)=>(ranks[a.priority] ?? 1)-(ranks[b.priority] ?? 1)); for (const item of items) { const card = el('article', undefined, 'card work-row'), textPart = el('div'); textPart.append(el('h3', item.title || item.company || '研究任务')); if(replyNotice(item.workflow || item))textPart.append(el('p',replyNotice(item.workflow || item),'mail-attention')); if (item.kind === 'candidate' && item.priority === 'high') textPart.append(el('span','优先','eyebrow')); if (item.kind === 'candidate' && item.country) textPart.append(el('small',text(item.country))); if (item.kind === 'candidate') { textPart.append(el('p', item.business_summary || '尚无可展示的业务摘要。'), el('p', `联系状态：${item.contact_status_label || '尚未核实联系状态'}`), el('p', `下一步：${item.gmail_reply_pending ? (item.gmail_next_action || '阅读客户新邮件，准备后续沟通') : (item.next_action || '补充业务判断与推进安排')}`)); const dateValue=text(item.updated_at || item.created_at || item.discovered_at).slice(0,10); if(/^\d{4}-\d{2}-\d{2}$/.test(dateValue))textPart.append(el('small', `${item.updated_at ? '更新' : '发现'}日期：${dateValue}`)); } else textPart.append(el('p', item.target || '尚未说明研究目标')); card.append(textPart, button('打开客户 →', () => openItem(item.id), 'quiet')); list.append(card); } }
-          if (!rows.length) empty(list, emptyLabel);
+          const rows=allCustomers.filter(item=>{const stage=customerStage(item,activities.get(item.object_id));return (!candidateCategory || (item.business_category || '其他')===candidateCategory) && (candidateStatus==='all' || (candidateStatus==='active'?stage!=='ended':candidateStatus===stage)) && [item.title,item.company,item.business_summary,item.country,item.market_hint,item.next_action].some(value=>text(value).toLowerCase().includes(candidateQuery.trim().toLowerCase()));});
+          const stageRank={action:0,waiting:1,prospect:2,ended:3},priorityRank={high:0,normal:1,low:2};rows.sort((a,b)=>stageRank[customerStage(a,activities.get(a.object_id))]-stageRank[customerStage(b,activities.get(b.object_id))] || (priorityRank[a.priority]??1)-(priorityRank[b.priority]??1) || text(b.updated_at || b.created_at).localeCompare(text(a.updated_at || a.created_at)));
+          count.textContent=`${rows.length} 位客户`;
+          if(rows.length){const columns=el('div',undefined,'customer-columns');for(const label of ['客户','客户情况','下一步','进展'])columns.append(el('span',label));list.append(columns);}
+          for(const item of rows){
+            const activity=activities.get(item.object_id),stage=customerStage(item,activity),row=el('article',undefined,`customer-list-row stage-${stage}`),identity=el('div',undefined,'customer-identity'),name=el('div');
+            const avatar=el('span',text(item.title || item.company || '客').slice(0,1).toUpperCase(),'customer-monogram');name.append(el('h3',item.title || item.company || '客户'),el('p',[item.country || item.market_hint,item.business_category].filter(Boolean).map(text).join(' · ') || '目标客户'));identity.append(avatar,name);
+            const brief=el('div',undefined,'customer-brief');if(item.contact_status_label && item.kind!=='inquiry')brief.append(el('strong',text(item.contact_status_label),'customer-progress'));brief.append(el('p',item.business_summary || '打开客户查看业务情况。'));const dateValue=text(item.updated_at || item.created_at || item.discovered_at).slice(0,10);if(/^\d{4}-\d{2}-\d{2}$/.test(dateValue))brief.append(el('small',`${item.updated_at?'更新':'发现'} ${dateValue}`));
+            const next=el('div',undefined,'customer-action-cell'), action=item.gmail_reply_pending ? (item.gmail_next_action || '阅读客户新邮件，准备后续沟通') : item.next_action || activity?.judgment || (stage==='waiting'?'等待客户回复':'了解业务与采购入口');next.append(el('p',text(action)));
+            const meta=el('div',undefined,'customer-row-actions');meta.append(el('span',customerStageLabel(stage,item),`customer-stage ${stage}`),button('打开客户 →',()=>item.kind==='inquiry'?goObject(item.object_id):openItem(item.id),'quiet'));row.append(identity,brief,next,meta);list.append(row);
           }
-          root.append(list); draw();
+          if(!rows.length)empty(list,candidateStatus==='action'?'目前没有需要你处理的客户。':'没有找到符合条件的客户。');
         }
+        input.addEventListener('input',()=>{candidateQuery=input.value;draw();});categories.addEventListener('change',()=>{candidateCategory=categories.value;draw();});statuses.addEventListener('change',()=>{candidateStatus=statuses.value;draw();});draw();
       } catch (error) { feedback.textContent = error.message; }
     }
     S.listRefresh = read; await read(); const selected = parseRoute().query.get('item'); if (selected && current()) { try { await openItem(selected); } catch (error) { feedback.textContent = error.message; } }
@@ -684,6 +799,7 @@
   }
   function editKey(ctx, id) { return `${ctx.object.id}:${id || 'new'}`; }
   function englishReplyDraft(content) { const match=text(content).match(/^##\s*(?:英文正文|英文回复草稿)(?:[^\n]*)\n([\s\S]*?)(?=^##\s|(?![\s\S]))/m); return match ? match[1].replace(/^\s*(?:\*\*)?Subject:(?:\*\*)?[^\n]*\n/im,'').trim() : ''; }
+  function plainEmailDraft(value) { return text(value).replace(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g,'$1: $2').replace(/^\s*\|?\s*:?-{3,}[^\n]*$/gm,'').replace(/^\s*\|(.+)\|\s*$/gm,(_,row)=>row.split('|').map(cell=>cell.trim()).join('  |  ')).replace(/\*\*([^*]+)\*\*/g,'$1').replace(/\n{3,}/g,'\n\n').trim(); }
   function showArtifactEditor(ctx, artifact) {
     const id = artifact?.id || null, key = editKey(ctx, id); let edit = S.edits.get(key);
     if (edit && !edit.dirty && artifact && edit.baseline !== artifact.updated_at) edit = null;
@@ -696,7 +812,7 @@
     function update() { edit.title = title.value; edit.content = content.value; edit.dirty = true; caption.textContent = '有未保存的编辑'; } title.addEventListener('input', update); content.addEventListener('input', update);
     const modes = el('div', undefined, 'artifact-modes'), preview = el('div', undefined, 'artifact-preview'), read = button('阅读', () => setMode('preview')), write = button('编辑', () => setMode('edit'));
     function setMode(mode) { const reading = mode === 'preview'; title.hidden = reading; content.hidden = reading; save.hidden = reading; preview.hidden = !reading; read.classList.toggle('active', reading); write.classList.toggle('active', !reading); preview.replaceChildren(el('h3', title.value || '工作成果'), el('pre', content.value || '这份成果还没有正文。')); if (!reading) content.focus(); }
-    modes.append(read, write); const footer = el('div', undefined, 'artifact-footer'); footer.append(caption, save); if(ctx.replyArea && englishReplyDraft(content.value))footer.append(button('采用英文正文到回复框',()=>{const value=englishReplyDraft(content.value); if(!value){toast('请先在成果中写明英文正文。');return;} if(ctx.replyArea.value.trim()){toast('回复框已有内容，请先处理后再采用。');return;}ctx.replyArea.value=value;ctx.replyArea.focus();ctx.replyArea.scrollIntoView?.({behavior:'smooth',block:'center'});toast('已放入回复框，请检查后发送。');},'quiet')); ctx.editor.append(modes, preview, title, content, footer, el('p', '保存的是这份工作成果；不会自动发送给客户或修改平台商品。', 'artifact-note')); setMode(artifact && !edit.dirty ? 'preview' : 'edit'); renderArtifactTabs(ctx);
+    modes.append(read, write); const footer = el('div', undefined, 'artifact-footer'); footer.append(caption, save); if(ctx.replyArea && englishReplyDraft(content.value))footer.append(button('采用英文正文到回复框',()=>{const value=englishReplyDraft(content.value); if(!value){toast('请先在成果中写明英文正文。');return;} if(ctx.replyArea.value.trim()){toast('回复框已有内容，请先处理后再采用。');return;}ctx.replyArea.value=value;ctx.replyArea.focus();ctx.replyArea.scrollIntoView?.({behavior:'smooth',block:'center'});toast('已放入回复框，请检查后发送。');},'quiet')); if(ctx.gmailHost && englishReplyDraft(content.value) && !/已发送/.test(text(artifact?.title)))footer.append(button('复制英文回复',async()=>{const value=plainEmailDraft(englishReplyDraft(content.value));if(!value){toast('请先准备英文回复。');return;}try{await navigator.clipboard.writeText(value);toast('英文回复已复制，可在 Gmail 中审核并回复。');}catch{toast('复制未成功，请从编辑区复制英文正文。');}},'quiet')); ctx.editor.append(modes, preview, title, content, footer, el('p', '保存的是这份工作成果；不会自动发送给客户或修改平台商品。', 'artifact-note')); setMode(artifact && !edit.dirty ? 'preview' : 'edit'); renderArtifactTabs(ctx);
   }
   function renderArtifactTabs(ctx) { ctx.tabs.replaceChildren(); for (const artifact of ctx.artifacts) ctx.tabs.append(button(text(artifact.title || '工作成果'), () => selectArtifact(ctx, artifact.id), ctx.selectedId === artifact.id ? 'active' : '')); ctx.tabs.append(button('＋ 新建笔记', () => { ctx.userPickedNew = true; showArtifactEditor(ctx, null); }, ctx.selectedId === null ? 'active' : '')); }
   function selectArtifact(ctx, id) { const artifact = ctx.artifacts.find(item => String(item.id) === String(id)); if (artifact) { showArtifactEditor(ctx, artifact); ctx.editor.scrollIntoView?.({ behavior: 'smooth', block: 'start' }); } else refreshArtifacts(ctx, true, id).then(() => ctx.editor.scrollIntoView?.({ behavior: 'smooth', block: 'start' })); }

@@ -36,7 +36,7 @@ function harness(hash = '#/overview') {
   let today = { generated_at: '2026-11-01T00:00:00Z', groups: { decide: [], act: [], watch: [] }, counts: { decide: 0, act: 0, watch: 0 }, labels: { decide: '等你拍板', act: '今天能推', watch: '在跑，不用动手' }, sources: {} };
   let productGaps = { total: 1, with_gaps: 0, blocked: 0, counts: {}, items: [], checked: [], unavailable: {}, labels: {} };
   const local = new Map(), location = { hash, origin: 'http://127.0.0.1:8765' };
-  const context = { console, URL, URLSearchParams, Date, JSON, Math, Map, Set, location, localStorage: { getItem: key => local.get(key) || null, setItem: (key, value) => local.set(key, value) }, history: { replaceState: (_s, _t, next) => { location.hash = next; } }, setTimeout: () => 1, clearTimeout() {}, setInterval() {}, window: { addEventListener() {} }, document: { body, visibilityState: 'visible', createElement: tag => new Element(tag), getElementById: id => elements[id], querySelectorAll: selector => selector === '[data-nav]' ? nav : body.querySelectorAll(selector) } };
+  const context = { console, URL, URLSearchParams, Date, JSON, Math, Map, Set, location, navigator: { clipboard: { writeText: async value => local.set('clipboard',value) } }, localStorage: { getItem: key => local.get(key) || null, setItem: (key, value) => local.set(key, value) }, history: { replaceState: (_s, _t, next) => { location.hash = next; } }, setTimeout: () => 1, clearTimeout() {}, setInterval() {}, window: { addEventListener() {} }, document: { body, visibilityState: 'visible', createElement: tag => new Element(tag), getElementById: id => elements[id], querySelectorAll: selector => selector === '[data-nav]' ? nav : body.querySelectorAll(selector) } };
   context.fetch = async (path, options = {}) => {
     const url = new URL(path, location.origin), payload = options.body ? JSON.parse(options.body) : null; requests.push({ path, options, payload }); let value;
     if (url.pathname === '/api/desk/bootstrap') value = { csrf_token: 'fixture-token', objects, jobs, artifacts, website_status: web, goals: { phase: '当前经营阶段' } };
@@ -62,7 +62,7 @@ function harness(hash = '#/overview') {
   };
   const source = fs.readFileSync(new URL('./web/desk.js', import.meta.url), 'utf8'); assert.doesNotMatch(source, /\.innerHTML\s*=/);
   vm.createContext(context); vm.runInContext(source.replace('bootstrap(); setInterval(poll, 4000);', 'window.__desk = { S, bootstrap, renderRoute, poll, refreshData, safeUrl, imageAsset };'), context);
-  return { ui: context.window.__desk, elements, body, objects, artifacts, jobs, requests, location, profile, discovery, setWebsite: value => { web = value; }, setToday: value => { today = value; }, setProductGaps: value => { productGaps = value; }, originalFetch: context.fetch, interceptFetch: callback => { context.fetch = callback; } };
+  return { ui: context.window.__desk, elements, body, objects, artifacts, jobs, requests, location, profile, discovery, clipboard: () => local.get('clipboard'), setWebsite: value => { web = value; }, setToday: value => { today = value; }, setProductGaps: value => { productGaps = value; }, originalFetch: context.fetch, interceptFetch: callback => { context.fetch = callback; } };
 }
 
 test('Gmail 默认显示中文，原文只通过 Gmail 链接查看，更新邮件保留未保存内容', async () => {
@@ -210,6 +210,23 @@ test('客户开发可搜索分类，并把已结束跟进与当前客户分开',
   input.value=''; input.listeners.input(); const status=walk(h.body).find(x=>x['aria-label']==='联系状态'); status.value='ended'; status.listeners.change(); assert.ok(h.elements.page.textContent.includes('旧客户')); assert.equal(h.elements.page.textContent.includes('英国批发公司'),false);
 });
 
+test('客户工作区把新回复置前，合并当前网站询盘并按下一步筛选', async () => {
+  const h=harness('#/customers?view=development');
+  h.discovery.candidates.push(
+    {id:'candidate:waiting',object_id:'prospect:candidate:waiting',kind:'candidate',title:'等回复客户',contact_status_label:'已发送报价',business_summary:'做鞋类零售',next_action:'等待客户回复'},
+    {id:'candidate:reply',object_id:'prospect:candidate:reply',kind:'candidate',title:'新回复客户',contact_status_label:'已发送报价',business_summary:'鞋类批发',next_action:'等待客户回复',gmail_reply_pending:true,gmail_next_action:'阅读客户新邮件'},
+    {id:'candidate:new',object_id:'prospect:candidate:new',kind:'candidate',title:'待开发客户',contact_status_label:'未联系',business_summary:'进口休闲鞋'});
+  h.objects.push({id:'customer:website-test',kind:'customer',title:'网站咨询客户',source_type:'website',summary:'寻求鞋类合作',workflow:{state:'waiting_customer',state_label:'等客户',next_action:'等待项目照片'}});
+  await h.ui.bootstrap(); await settle();
+  const rows=h.elements.page.querySelectorAll('.customer-list-row');
+  assert.equal(rows[0].querySelector('h3').textContent,'新回复客户');
+  assert.ok(rows[0].textContent.includes('有新回复')); assert.ok(rows[0].textContent.includes('阅读客户新邮件'));
+  assert.ok(rows.some(row=>row.textContent.includes('网站咨询客户')));
+  const actionable=walk(h.elements.page).find(item=>item.className.split(' ').includes('customer-stat') && item.className.split(' ').includes('action')); await actionable.click();
+  assert.equal(h.elements.page.querySelectorAll('.customer-list-row').length,1);
+  assert.ok(h.elements.page.textContent.includes('新回复客户')); assert.equal(h.elements.page.textContent.includes('待开发客户'),false);
+});
+
 test('客户详情直接展示公司网站和现有联系方式', async () => {
   const h=harness('#/customers?view=development&item=candidate%3A1'); h.discovery.candidates.push({id:'candidate:1',kind:'candidate',title:'买家公司',company:'买家公司',website:'https://example.org',business_category:'批发商',business_summary:'鞋类批发',source_record:{contacts:[{kind:'email',value:'buyer@example.org'}]}});
   await h.ui.bootstrap(); await settle(); assert.ok(h.elements.page.textContent.includes('邮箱：buyer@example.org')); assert.ok(walk(h.body).some(x=>x.tagName==='A' && x.textContent==='访问公司网站 ↗'));
@@ -222,6 +239,17 @@ test('客户收到新邮件后，详情下一步不再显示等待回复', async
   await h.ui.bootstrap(); await settle();
   assert.ok(h.elements.page.textContent.includes('下一步：阅读客户新邮件，准备后续沟通'));
   assert.equal(h.elements.page.querySelector('.candidate-next-action').textContent.includes('等待客户回复'),false);
+});
+
+test('客户回复草稿可以复制英文到 Gmail，已发送内容不提供重复发送入口', async () => {
+  const h=harness('#/customers?view=development&item=candidate%3A1'), original=h.originalFetch;
+  h.discovery.candidates.push({id:'candidate:1',object_id:'prospect:candidate:1',kind:'candidate',title:'买家公司'});
+  h.artifacts.push({id:'draft-1',object_id:'prospect:candidate:1',title:'回复草稿',content:'## 英文正文\nSubject: Quotation\n\nDear buyer,\n\n**Thank you.**\n\n## 中文对照\n谢谢。',updated_at:'2026-11-02'});
+  h.interceptFetch(async(path,options)=>String(path).startsWith('/api/desk/gmail/') ? {ok:true,json:async()=>({status:{state:'connected'},messages:[]})} : original(path,options));
+  await h.ui.bootstrap(); await settle(); await findButton(h.elements.page,'复制英文回复').click();
+  assert.equal(h.clipboard(),'Dear buyer,\n\nThank you.'); assert.equal(h.requests.some(x=>/send|outreach/.test(x.path)),false);
+  h.artifacts[1].title='回复（已发送）'; await h.ui.renderRoute(); await settle();
+  assert.equal(walk(h.elements.page).some(item=>item.tagName==='BUTTON' && item.textContent==='复制英文回复'),false);
 });
 
 test('从客户开发新增公司，并保存业务信息', async () => {
@@ -377,7 +405,7 @@ test('analysis creates a linked research task with evidence and never sends outr
 });
 
 test('development exposes real candidate evidence, research context, and a non-outreach preparation marker', async () => {
-  const h = harness('#/customers?view=development'); h.discovery.candidates.push({ id: 'candidate:source', object_id: 'prospect:candidate:source', kind: 'candidate', title: '已有来源候选', company: '候选公司', target: '需要核实供货适配', evidence: [{ url: 'https://example.com/', text: '原候选公开来源' }] }); await h.ui.bootstrap(); await settle(); assert.ok(h.elements.page.textContent.includes('目标客群')); const row = walk(h.elements.page).find(item => item.tagName === 'ARTICLE' && item.textContent.includes('已有来源候选')); await findButton(row, '打开客户 →').click(); await settle(); assert.ok(h.elements.page.textContent.includes('原候选公开来源')); assert.ok(h.ui.S.detail.instruction.value.includes('research_company'));
+  const h = harness('#/customers?view=development'); h.discovery.candidates.push({ id: 'candidate:source', object_id: 'prospect:candidate:source', kind: 'candidate', title: '已有来源候选', company: '候选公司', target: '需要核实供货适配', evidence: [{ url: 'https://example.com/', text: '原候选公开来源' }] }); await h.ui.bootstrap(); await settle(); assert.ok(h.elements.page.textContent.includes('目标客群')); const row = walk(h.elements.page).find(item => item.tagName === 'ARTICLE' && item.textContent.includes('已有来源候选')); await findButton(row, '打开客户 →').click(); await settle(); assert.ok(h.elements.page.textContent.includes('原候选公开来源')); assert.equal(h.ui.S.detail.instruction.value,''); await findButton(h.elements.page, '核对官网与候选证据').click(); assert.ok(h.ui.S.detail.instruction.value.includes('research_company'));
   await findButton(h.elements.page, '标记进入推进准备').click(); const changed = h.requests.find(item => item.path === '/api/desk/discovery/update'); assert.equal(changed.payload.ready_for_customer, true); assert.equal(changed.payload.status, '推进准备'); assert.equal(h.requests.some(item => /send|outreach/.test(item.path)), false);
 });
 
@@ -573,4 +601,29 @@ test('渠道页显示可用渠道，暂不接入的渠道不制造空入口', as
   assert.ok(text.includes('其他已接入渠道'));
   assert.ok(text.includes('未接通的能力 1 项'));
   assert.ok(text.includes('询盘与报价未验证接通'));
+});
+test('同行清单展示真实店铺，登记买家进入原客户研究并保留关联', async () => {
+  const h = harness('#/customers?view=competitors');
+  h.interceptFetch(async (path, options) => path === '/api/desk/competitors' ? {ok:true,json:async()=>({items:[{id:'EX001',company:'Shoe Factory',direction:'休闲鞋',store_url:'https://shoe.en.alibaba.com/',sales:{note:'单款 224 sold，周期不明',source_url:'https://www.alibaba.com/picks/shoes.html'},buyers:[{id:'candidate:old',company:'Known Buyer'}]}],excluded:[{company:'Old Shop',note:'店铺打开未确认',buyers:[]}],existing_buyers:[{id:'candidate:old',company:'Known Buyer'}]})} : h.originalFetch(path, options));
+  await h.ui.bootstrap(); await settle();
+  assert.match(h.elements.page.textContent,/Shoe Factory/); assert.match(h.elements.page.textContent,/Old Shop/);
+  assert.ok(walk(h.elements.page).some(node => node.tagName === 'A' && node.href === 'https://shoe.en.alibaba.com/'));
+  await findButton(h.elements.page,'复制公司名').click(); assert.equal(h.clipboard(),'Shoe Factory');
+  await findButton(h.elements.page,'登记买家').click(); const dialog=walk(h.body).find(node=>node.tagName==='DIALOG');
+  walk(dialog).find(node=>node['aria-label']==='买家公司名称').value='New Buyer';
+  walk(dialog).find(node=>node['aria-label']==='国家或市场（选填）').value='US';
+  walk(dialog).find(node=>node['aria-label']==='线索说明（选填）').value='数据库记录，鞋类';
+  await findButton(dialog,'保存并查看客户').click();
+  const created=h.requests.find(row=>row.path==='/api/desk/discovery' && row.payload);
+  assert.equal(created.payload.company,'New Buyer'); assert.deepEqual(created.payload.related_competitors,['EX001']);
+  assert.match(h.location.hash,/customers\?view=development&item=/); assert.equal(h.requests.some(row=>/send|outreach/.test(row.path)),false);
+});
+
+test('同行登记遇到已有公司时打开原客户，不重复建立', async () => {
+  const h = harness('#/customers?view=competitors');
+  h.interceptFetch(async (path, options) => path === '/api/desk/competitors' ? {ok:true,json:async()=>({items:[{id:'EX001',company:'Shoe Factory',direction:'鞋',store_url:'https://shoe.en.alibaba.com/',buyers:[]}],excluded:[],existing_buyers:[{id:'candidate:old',company:'Known Buyer'}]})} : h.originalFetch(path, options));
+  await h.ui.bootstrap(); await settle(); await findButton(h.elements.page,'登记买家').click();
+  const dialog=walk(h.body).find(node=>node.tagName==='DIALOG'); walk(dialog).find(node=>node['aria-label']==='买家公司名称').value=' known buyer ';
+  await findButton(dialog,'保存并查看客户').click(); assert.equal(h.requests.some(row=>row.path==='/api/desk/discovery' && row.payload),false);
+  await findButton(dialog,'打开已有客户').click(); assert.match(h.location.hash,/candidate%3Aold/);
 });
