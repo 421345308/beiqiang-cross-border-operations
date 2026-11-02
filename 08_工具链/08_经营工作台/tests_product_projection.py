@@ -2,6 +2,15 @@ import unittest
 from unittest.mock import patch
 from tests_business import BusinessTests
 class ProductProjectionTests(BusinessTests):
+    def test_unavailable_product_shows_replacement_status(self):
+        self.product()
+        import json
+        from business import PRODUCTS
+        rows=json.loads((self.root/PRODUCTS).read_text(encoding='utf8'))
+        rows['products'][0]['publication_disposition']={'state':'OWNER_REPORTED_UNAVAILABLE_REPLACEMENT_PENDING'}
+        self.write(PRODUCTS,rows)
+        self.assertIn('暂停新推荐',self.business.list_objects('product')[0]['summary'])
+
     def test_current_model_and_reference_source_are_distinct_in_list(self):
         self.product()
         import json

@@ -96,6 +96,8 @@ class Business:
             obj['source_state']=product.get('source_state') or ''
             obj['source_role']='adopted' if adopted else ('reference' if source else 'missing')
             obj['publication_disposition']=product.get('publication_disposition') or {}
+            if obj['publication_disposition'].get('state')=='OWNER_REPORTED_UNAVAILABLE_REPLACEMENT_PENDING':
+                obj['summary']='负责人反馈原款无货 · 暂停新推荐 · 正在找替代款'
             obj['product_series']='HR' if re.fullmatch(r'HR[-_]?\d+',pid,re.I) else '其他'
             obj['facts']=[_fact('共用产品ID',pid),_fact('来源状态',state_label),_fact('别名',product.get('aliases',[])),
                 _fact('原始资料包',product.get('raw_packages') or '原档未列出原包路径')]
