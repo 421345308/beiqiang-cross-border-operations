@@ -349,7 +349,7 @@
     const current = () => S.page === 'customers' && serial === S.loadSerial && parseRoute().query.get('view') === 'competitors';
     page.replaceChildren(heading('客户开发', '同行找客户', '从国际站同行入手，找到买家后直接在这里登记、继续研究。'), customerTabs('competitors'));
     const explanation = el('p', '以下为店铺页面能对应公司的同行。中文名来自公开资料，可用于查询；查海关时请结合地址、货描和日期核对出口方。', 'competitor-intro');
-    const search = el('input', undefined, 'search-input'); search.type = 'search'; search.placeholder = '搜索公司或鞋类方向'; search.setAttribute('aria-label', '搜索同行');
+    const search = el('input', undefined, 'search-input'); search.type = 'search'; search.placeholder = '搜索公司名、信用代码或鞋类'; search.setAttribute('aria-label', '搜索同行');
     const count = el('span', '', 'search-count'), bar = el('div', undefined, 'search-bar'), list = el('div', undefined, 'row-list competitor-list');
     bar.append(search, count); page.append(explanation, bar, list);
     let data;
@@ -402,7 +402,6 @@
       if (!rows.length) empty(list, '没有找到匹配的同行。');
     }
     search.addEventListener('input', paint); paint();
-    if (data.excluded?.length) { const other = el('details', undefined, 'competitor-excluded'); other.append(el('summary', `另外 ${data.excluded.length} 家暂未列入国际站名单`)); for (const item of data.excluded) { const line = el('div', undefined, 'competitor-excluded-item'); line.append(el('strong', item.company), el('p', item.note)); buyerLinks(line, item.buyers); other.append(line); } page.append(other); }
   }
   function addField(root, label, value = '', multiline = false, placeholder = '') { const wrap = el('label', undefined, 'desk-field'), input = el(multiline ? 'textarea' : 'input'); input.value = text(value); input.placeholder = placeholder; input.setAttribute('aria-label', label); wrap.append(el('span', label), input); root.append(wrap); return input; }
   function listText(root, title, values) { const section = el('div', undefined, 'analysis-block'); section.append(el('h3', title)); const items = Array.isArray(values) ? values : values ? [values] : []; if (items.length) { const list = el('ul'); items.forEach(item => list.append(el('li', displayText(item)))); section.append(list); } else section.append(el('p', '尚未取得依据', 'muted')); root.append(section); }
