@@ -1,6 +1,6 @@
 # BQ008 商品档案
 
-**2026-11-02价格：**负责人最终确认本款 4 条链接按 2–49 双每双 10.00 美元、50 双起每双 9.50 美元调整。审核和提交状态见[国际站商品数据](../../../05_扩品工程/数据/国际站商品.json)。
+**2026-11-02最新价格复核：**当前平台本款4链接仍为2–49双10.00美元、50双起9.50美元。负责人已明确质疑仅两档；独立交叉复核建议保留前两档金额、恢复100双起第三档，9.00美元仅为待选方案，尚未改价。此前“最终确认”是旧执行阶段记录，不作为本轮同意删档的依据。
 
 2026-11-01 22:20续验：W1 `1601939625569`已`approved / Y`；官方get及当前Schema均命中新FAQ，其余七问和其他正式字段保全。22:22评分5.00；22:21美国配送视角公开抓取显示新答案。正常买家视觉/交互另待验收，本次不重放提交。[批准后验证](../../BQ系列持续优化_2026-09-14/采购承接执行/20261101_BQ008_FAQ/20261101_222007_verification.json)；[公开抓取](../../BQ系列持续优化_2026-09-14/采购承接执行/20261101_BQ008_FAQ/public_after_approval.json)。
 
@@ -307,3 +307,13 @@
 ### 尺码纠错最终结果
 
 源链接1601825021825已approved/Y，当前get与Schema均为4色×36–45码共40行，保留行全部值严格一致，评分5.00。批准后再次实看公开页，只有36–45码，35码已消失；新标题、三档价格及产品亮点保持。见[批准后验收](尺码纠错_20261031/approved_verification.json)。下方或前面的modified/N是提交后的历史阶段，当前以本结果为准。
+
+## 2026-11-02 三Agent交叉复核后的标题修正
+
+价格、标题和执行先各自独立检查，再交叉复核。仅三条问题标题修改，源链接及BQ009四条有效标题保留。三条各一次productTitle提交已get逐字命中，当前modified/N，评分5.00；另一Agent直接比较写前/写后原件，40个SKU全部值与ID、两档现价、主图、详情、FAQ及顺序保全通过。审核中Schema无data，尚不报批准或公开生效。
+
+- `1601939625569`：Factory Direct Breathable Mesh Marathon Running Shoes High Rebound Non-Slip Thick Sole Sneakers Wholesale。
+- `1601939628529`：Factory Direct Mesh Lace-Up Running Shoes High Rebound Non-Slip Sneakers with Layered Upper and Thick Sole。
+- `1601939659415`：Factory Direct Custom Logo Mesh Marathon Running Shoes High Rebound Non-Slip Lace-Up Sneakers OEM ODM。
+
+正式及独立验收见[本对象摘要](2026-11-02_交叉复核修正/summary.json)和各ID的`title/independent_review.json`。价格未修改；第三档金额等待负责人选择。

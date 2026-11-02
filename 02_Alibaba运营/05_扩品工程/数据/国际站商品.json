@@ -5646,7 +5646,7 @@
         "display": "Y",
         "status": "approved",
         "url": "https://www.alibaba.com/product-detail/Factory-Direct-Mesh-Marathon-Running-Shoes_1601825021825.html",
-        "scope": "文案/价格公开已验；源尺码纠错批准后get/render及40行保全，公开36–45码通过",
+        "scope": "当前正式API字段；2026-11-02两档价格仅API通过，不能继承10月31日旧价格公开验收；最新标题修正另按精确ID分阶段验收",
         "highlights": "Mesh-panel lace-up casual shoes with a thick sculpted sole.\n\nAdjustable instep fit: The front laces let the wearer loosen the opening for entry and set the tension over the foot.\n\nFactory-direct mesh marathon running shoes with high rebound and a non-slip sole. For wholesale or OEM enquiries, send your selected colors, size breakdown, quantity and destination. Branding, packaging, sample costs and dispatch timing are confirmed against your requirements before ordering.",
         "detail_images": [
           {
@@ -5918,7 +5918,39 @@
         ],
         "verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_价格调整/1601825021825/最终价格/verification.json",
         "public": "PENDING",
-        "next_action": "等待平台审核并核对接口结果。"
+        "next_action": "当前两档已获API批准；负责人质疑删除100双档，三档方案待第三档金额选定，尚未重写价格；最新公开价格未验"
+      },
+      "price_strategy_review": {
+        "date": "2026-11-02",
+        "state": "THIRD_TIER_AMOUNT_PENDING_OWNER_CHOICE",
+        "scope": "BQ008/BQ009八链接恢复数量阶梯；与标题修正分开",
+        "current_usd_tiers": [
+          [
+            2,
+            "10.00"
+          ],
+          [
+            50,
+            "9.50"
+          ]
+        ],
+        "proposed_usd_tiers": [
+          [
+            2,
+            "10.00"
+          ],
+          [
+            50,
+            "9.50"
+          ],
+          [
+            100,
+            "9.00"
+          ]
+        ],
+        "proposal_status": "待负责人选定第三档9.00，不是已确认金额",
+        "review": "价格/标题/执行三Agent先独立后交叉复核；正式API成功不证明经营方案合理",
+        "next_action": "第三档金额选定后按每款数量与全SKU精确执行，不重放历史载荷"
       }
     },
     {
@@ -6001,7 +6033,7 @@
         "display": "Y",
         "status": "approved",
         "url": "https://www.alibaba.com/product-detail/Factory-Direct-Marathon-Running-Shoes-High_1601825074604.html",
-        "scope": "2026-10-31批准后get/render目标命中，公开标题/三档价/亮点及首屏主图逐ID验收；全图库不在本轮逐图范围",
+        "scope": "当前正式API字段；2026-11-02两档价格仅API通过，不能继承10月31日旧价格公开验收；最新标题修正另按精确ID分阶段验收",
         "highlights": "Marathon running sneakers: A lightweight, breathable textile style with a high-rebound, non-slip sole.\n\nAdjustable lace-up fit: The mesh-panel upper and front laces allow the wearer to adjust instep tension.\n\nLayered construction: A thick sole profile and raised front overlay define the closed-toe sneaker.",
         "price_tiers": [
           {
@@ -6065,7 +6097,39 @@
         ],
         "verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ009/2026-11-02_价格调整/1601825074604/最终价格/verification.json",
         "public": "PENDING",
-        "next_action": "等待平台审核并核对接口结果。"
+        "next_action": "当前两档已获API批准；负责人质疑删除100双档，三档方案待第三档金额选定，尚未重写价格；最新公开价格未验"
+      },
+      "price_strategy_review": {
+        "date": "2026-11-02",
+        "state": "THIRD_TIER_AMOUNT_PENDING_OWNER_CHOICE",
+        "scope": "BQ008/BQ009八链接恢复数量阶梯；与标题修正分开",
+        "current_usd_tiers": [
+          [
+            2,
+            "10.00"
+          ],
+          [
+            50,
+            "9.50"
+          ]
+        ],
+        "proposed_usd_tiers": [
+          [
+            2,
+            "10.00"
+          ],
+          [
+            50,
+            "9.50"
+          ],
+          [
+            100,
+            "9.00"
+          ]
+        ],
+        "proposal_status": "待负责人选定第三档9.00，不是已确认金额",
+        "review": "价格/标题/执行三Agent先独立后交叉复核；正式API成功不证明经营方案合理",
+        "next_action": "第三档金额选定后按每款数量与全SKU精确执行，不重放历史载荷"
       }
     },
     {
@@ -30226,15 +30290,15 @@
       "id": "1601939659415",
       "product_id": "BQ008",
       "model": "BQ008-O1 / L1009",
-      "url": "https://www.alibaba.com/product-detail/Custom-Logo-All-Black-Breathable-Mesh_1601939659415.html",
+      "url": "https://www.alibaba.com/product-detail/Factory-Direct-Custom-Logo-Mesh-Marathon_1601939659415.html",
       "record_type": "来源待补",
       "bound_source_id": null,
       "source_relation": "SOURCE_EVIDENCE_MISSING",
       "observation": {
-        "audit": "approved",
-        "display": "Y",
-        "at": "2026-11-02T05:22:49.113027+00:00",
-        "scope": "本次价格的官方回读，公开价格另核",
+        "audit": "modified",
+        "display": "N",
+        "at": "2026-11-02T15:01:18.323284+00:00",
+        "scope": "交叉复核后单字段标题修正get命中，独立写后保全通过；审核/当前Schema/公开待验",
         "score": "5.00"
       },
       "evidence": [
@@ -30270,21 +30334,21 @@
         "highlights": "Mesh-panel lace-up casual shoes with a thick sculpted sole.\n\nAdjustable instep fit: The front laces let the wearer loosen the opening for entry and set the tension over the foot."
       },
       "local_sync": {
-        "state": "PUBLIC_TARGET_FIELDS_AND_MAIN_IMAGE_PASS",
+        "state": "SUBMITTED_GET_MATCH_INDEPENDENT_REVIEW_PASS_PENDING_PLATFORM_REVIEW",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939659415/formal_get.json",
-        "current_schema_file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/执行证据_20261031/1601939659415/recovery_render.json",
+        "current_schema_file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_交叉复核修正/1601939659415/title/after_render.json",
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601939659415/当前图库与货号.json",
-        "at": "2026-10-31T05:15:49.354832+00:00",
+        "at": "2026-11-02T15:01:18.323284+00:00",
         "observed_at": "2026-10-19T18:39:16.450985+00:00",
-        "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939659415/verification.json",
-        "next_action": "本轮文案价格与首屏主图已验；按独立后续修正状态推进，不重放提交",
+        "content_verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_交叉复核修正/1601939659415/title/independent_review.json",
+        "next_action": "只读核批准后当前Schema及公开呈现；不重放成功提交",
         "price_state": "APPROVED",
         "price_verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_价格调整/1601939659415/最终价格/verification.json"
       },
       "formal_fields": {
-        "file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_价格调整/1601939659415/最终价格/after_get.json",
-        "at": "2026-11-02T05:22:49.113027+00:00",
-        "scope": "本次价格的官方回读；公开价格另核"
+        "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939659415/formal_get.json",
+        "at": "2026-11-02T15:01:18.323284+00:00",
+        "scope": "交叉复核后标题单字段修正的当前官方get"
       },
       "platform_group": {
         "id": "971467417",
@@ -30292,9 +30356,9 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-11-02T05:22:49.113027+00:00",
+        "at": "2026-11-02T15:01:18.323284+00:00",
         "model": "BQ008-O1 / L1009",
-        "title": "Factory Direct Mesh Marathon Running Shoes High Rebound Non-Slip Lace-Up Sneakers for OEM Projects",
+        "title": "Factory Direct Custom Logo Mesh Marathon Running Shoes High Rebound Non-Slip Lace-Up Sneakers OEM ODM",
         "keywords": [
           ""
         ],
@@ -30307,10 +30371,10 @@
           "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
         ],
         "category_id": 201334413,
-        "display": "Y",
-        "status": "approved",
-        "url": "https://www.alibaba.com/product-detail/Factory-Direct-Mesh-Marathon-Running-Shoes_1601939659415.html",
-        "scope": "2026-10-31批准后get/render目标命中，公开标题/三档价/亮点及首屏主图逐ID验收；全图库不在本轮逐图范围",
+        "display": "N",
+        "status": "modified",
+        "url": "https://www.alibaba.com/product-detail/Factory-Direct-Custom-Logo-Mesh-Marathon_1601939659415.html",
+        "scope": "当前正式API字段；2026-11-02两档价格仅API通过，不能继承10月31日旧价格公开验收；最新标题修正另按精确ID分阶段验收",
         "highlights": "Mesh-panel lace-up casual shoes with a thick sculpted sole.\n\nAdjustable instep fit: The front laces let the wearer loosen the opening for entry and set the tension over the foot.\n\nFactory-direct mesh marathon running shoes with high rebound and a non-slip sole. For wholesale or OEM enquiries, send your selected colors, size breakdown, quantity and destination. Branding, packaging, sample costs and dispatch timing are confirmed against your requirements before ordering.",
         "price_tiers": [
           {
@@ -30468,7 +30532,26 @@
             "scope": "2026-10-31 Chrome重启后正常公开页正文和首屏截图逐ID实看；所列为观察摘要，非完整原始DOM或全图库逐图验收",
             "colour_interaction": "not separately tested",
             "observation_date": "2026-10-31"
-          }
+          },
+          "latest_title_scope": "本记录10月31日的原标题公开观察已被11月2日标题修正取代；当前状态回title_cross_review_20261102"
+        },
+        "title_cross_review_20261102": {
+          "date": "2026-11-02",
+          "at": "2026-11-02T15:01:18.323284+00:00",
+          "state": "SUBMITTED_GET_MATCH_INDEPENDENT_REVIEW_PASS_PENDING_PLATFORM_REVIEW",
+          "scope": "productTitle only",
+          "expected_title": "Factory Direct Custom Logo Mesh Marathon Running Shoes High Rebound Non-Slip Lace-Up Sneakers OEM ODM",
+          "actual_score": "5.00",
+          "public_status": "NOT_VERIFIED",
+          "independent_review": "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_交叉复核修正/1601939659415/title/independent_review.json",
+          "evidence": [
+            "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_交叉复核修正/1601939659415/title/before_get.json",
+            "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_交叉复核修正/1601939659415/title/payload.xml",
+            "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_交叉复核修正/1601939659415/title/update_receipt.json",
+            "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_交叉复核修正/1601939659415/title/after_get.json",
+            "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_交叉复核修正/1601939659415/title/verification.json"
+          ],
+          "next_action": "只读核批准后当前Schema及公开呈现；不重放成功提交"
         }
       },
       "price_review": {
@@ -30527,22 +30610,54 @@
         ],
         "verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_价格调整/1601939659415/最终价格/verification.json",
         "public": "PENDING",
-        "next_action": "等待平台审核并核对接口结果。"
+        "next_action": "当前两档已获API批准；负责人质疑删除100双档，三档方案待第三档金额选定，尚未重写价格；最新公开价格未验"
+      },
+      "price_strategy_review": {
+        "date": "2026-11-02",
+        "state": "THIRD_TIER_AMOUNT_PENDING_OWNER_CHOICE",
+        "scope": "BQ008/BQ009八链接恢复数量阶梯；与标题修正分开",
+        "current_usd_tiers": [
+          [
+            2,
+            "10.00"
+          ],
+          [
+            50,
+            "9.50"
+          ]
+        ],
+        "proposed_usd_tiers": [
+          [
+            2,
+            "10.00"
+          ],
+          [
+            50,
+            "9.50"
+          ],
+          [
+            100,
+            "9.00"
+          ]
+        ],
+        "proposal_status": "待负责人选定第三档9.00，不是已确认金额",
+        "review": "价格/标题/执行三Agent先独立后交叉复核；正式API成功不证明经营方案合理",
+        "next_action": "第三档金额选定后按每款数量与全SKU精确执行，不重放历史载荷"
       }
     },
     {
       "id": "1601939628529",
       "product_id": "BQ008",
       "model": "BQ008-R1 / L1009",
-      "url": "https://www.alibaba.com/product-detail/Men-s-Black-White-Breathable-Mesh_1601939628529.html",
+      "url": "https://www.alibaba.com/product-detail/Factory-Direct-Mesh-Lace-Up-Running_1601939628529.html",
       "record_type": "来源待补",
       "bound_source_id": null,
       "source_relation": "SOURCE_EVIDENCE_MISSING",
       "observation": {
-        "audit": "approved",
-        "display": "Y",
-        "at": "2026-11-02T05:22:51.642283+00:00",
-        "scope": "本次价格的官方回读，公开价格另核",
+        "audit": "modified",
+        "display": "N",
+        "at": "2026-11-02T15:01:18.277607+00:00",
+        "scope": "交叉复核后单字段标题修正get命中，独立写后保全通过；审核/当前Schema/公开待验",
         "score": "5.00"
       },
       "evidence": [
@@ -30578,21 +30693,21 @@
         "highlights": "Mesh-panel lace-up casual shoes with a thick sculpted sole.\n\nAdjustable instep fit: The front laces let the wearer loosen the opening for entry and set the tension over the foot."
       },
       "local_sync": {
-        "state": "PUBLIC_TARGET_FIELDS_AND_MAIN_IMAGE_PASS",
+        "state": "SUBMITTED_GET_MATCH_INDEPENDENT_REVIEW_PASS_PENDING_PLATFORM_REVIEW",
         "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939628529/formal_get.json",
-        "current_schema_file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/执行证据_20261031/1601939628529/recovery_render.json",
+        "current_schema_file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_交叉复核修正/1601939628529/title/after_render.json",
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601939628529/当前图库与货号.json",
-        "at": "2026-10-31T05:15:32.323221+00:00",
+        "at": "2026-11-02T15:01:18.277607+00:00",
         "observed_at": "2026-10-19T18:39:13.284781+00:00",
-        "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939628529/verification.json",
-        "next_action": "本轮文案价格与首屏主图已验；按独立后续修正状态推进，不重放提交",
+        "content_verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_交叉复核修正/1601939628529/title/independent_review.json",
+        "next_action": "只读核批准后当前Schema及公开呈现；不重放成功提交",
         "price_state": "APPROVED",
         "price_verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_价格调整/1601939628529/最终价格/verification.json"
       },
       "formal_fields": {
-        "file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_价格调整/1601939628529/最终价格/after_get.json",
-        "at": "2026-11-02T05:22:51.642283+00:00",
-        "scope": "本次价格的官方回读；公开价格另核"
+        "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939628529/formal_get.json",
+        "at": "2026-11-02T15:01:18.277607+00:00",
+        "scope": "交叉复核后标题单字段修正的当前官方get"
       },
       "platform_group": {
         "id": "971467417",
@@ -30600,9 +30715,9 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-11-02T05:22:51.642283+00:00",
+        "at": "2026-11-02T15:01:18.277607+00:00",
         "model": "BQ008-R1 / L1009",
-        "title": "Factory Direct Mesh Marathon Running Shoes High Rebound Non-Slip Lace-Up Sneakers for Retail Collections",
+        "title": "Factory Direct Mesh Lace-Up Running Shoes High Rebound Non-Slip Sneakers with Layered Upper and Thick Sole",
         "keywords": [
           ""
         ],
@@ -30615,10 +30730,10 @@
           "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
         ],
         "category_id": 201334413,
-        "display": "Y",
-        "status": "approved",
-        "url": "https://www.alibaba.com/product-detail/Factory-Direct-Mesh-Marathon-Running-Shoes_1601939628529.html",
-        "scope": "2026-10-31批准后get/render目标命中，公开标题/三档价/亮点及首屏主图逐ID验收；全图库不在本轮逐图范围",
+        "display": "N",
+        "status": "modified",
+        "url": "https://www.alibaba.com/product-detail/Factory-Direct-Mesh-Lace-Up-Running_1601939628529.html",
+        "scope": "当前正式API字段；2026-11-02两档价格仅API通过，不能继承10月31日旧价格公开验收；最新标题修正另按精确ID分阶段验收",
         "highlights": "Mesh-panel lace-up casual shoes with a thick sculpted sole.\n\nAdjustable instep fit: The front laces let the wearer loosen the opening for entry and set the tension over the foot.\n\nFactory-direct mesh marathon running shoes with high rebound and a non-slip sole. For wholesale or OEM enquiries, send your selected colors, size breakdown, quantity and destination. Branding, packaging, sample costs and dispatch timing are confirmed against your requirements before ordering.",
         "price_tiers": [
           {
@@ -30776,7 +30891,26 @@
             "scope": "2026-10-31 Chrome重启后正常公开页正文和首屏截图逐ID实看；所列为观察摘要，非完整原始DOM或全图库逐图验收",
             "colour_interaction": "not separately tested",
             "observation_date": "2026-10-31"
-          }
+          },
+          "latest_title_scope": "本记录10月31日的原标题公开观察已被11月2日标题修正取代；当前状态回title_cross_review_20261102"
+        },
+        "title_cross_review_20261102": {
+          "date": "2026-11-02",
+          "at": "2026-11-02T15:01:18.277607+00:00",
+          "state": "SUBMITTED_GET_MATCH_INDEPENDENT_REVIEW_PASS_PENDING_PLATFORM_REVIEW",
+          "scope": "productTitle only",
+          "expected_title": "Factory Direct Mesh Lace-Up Running Shoes High Rebound Non-Slip Sneakers with Layered Upper and Thick Sole",
+          "actual_score": "5.00",
+          "public_status": "NOT_VERIFIED",
+          "independent_review": "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_交叉复核修正/1601939628529/title/independent_review.json",
+          "evidence": [
+            "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_交叉复核修正/1601939628529/title/before_get.json",
+            "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_交叉复核修正/1601939628529/title/payload.xml",
+            "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_交叉复核修正/1601939628529/title/update_receipt.json",
+            "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_交叉复核修正/1601939628529/title/after_get.json",
+            "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_交叉复核修正/1601939628529/title/verification.json"
+          ],
+          "next_action": "只读核批准后当前Schema及公开呈现；不重放成功提交"
         }
       },
       "price_review": {
@@ -30835,22 +30969,54 @@
         ],
         "verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_价格调整/1601939628529/最终价格/verification.json",
         "public": "PENDING",
-        "next_action": "等待平台审核并核对接口结果。"
+        "next_action": "当前两档已获API批准；负责人质疑删除100双档，三档方案待第三档金额选定，尚未重写价格；最新公开价格未验"
+      },
+      "price_strategy_review": {
+        "date": "2026-11-02",
+        "state": "THIRD_TIER_AMOUNT_PENDING_OWNER_CHOICE",
+        "scope": "BQ008/BQ009八链接恢复数量阶梯；与标题修正分开",
+        "current_usd_tiers": [
+          [
+            2,
+            "10.00"
+          ],
+          [
+            50,
+            "9.50"
+          ]
+        ],
+        "proposed_usd_tiers": [
+          [
+            2,
+            "10.00"
+          ],
+          [
+            50,
+            "9.50"
+          ],
+          [
+            100,
+            "9.00"
+          ]
+        ],
+        "proposal_status": "待负责人选定第三档9.00，不是已确认金额",
+        "review": "价格/标题/执行三Agent先独立后交叉复核；正式API成功不证明经营方案合理",
+        "next_action": "第三档金额选定后按每款数量与全SKU精确执行，不重放历史载荷"
       }
     },
     {
       "id": "1601939625569",
       "product_id": "BQ008",
       "model": "BQ008-W1 / L1009",
-      "url": "https://www.alibaba.com/product-detail/Wholesale-Men-s-Grey-Green-Breathable_1601939625569.html",
+      "url": "https://www.alibaba.com/product-detail/Factory-Direct-Breathable-Mesh-Marathon-Running_1601939625569.html",
       "record_type": "来源待补",
       "bound_source_id": null,
       "source_relation": "SOURCE_EVIDENCE_MISSING",
       "observation": {
-        "audit": "approved",
-        "display": "Y",
-        "at": "2026-11-02T05:20:34.395380+00:00",
-        "scope": "本次价格的官方回读，公开价格另核",
+        "audit": "modified",
+        "display": "N",
+        "at": "2026-11-02T15:01:18.330902+00:00",
+        "scope": "交叉复核后单字段标题修正get命中，独立写后保全通过；审核/当前Schema/公开待验",
         "score": "5.00"
       },
       "evidence": [
@@ -30886,23 +31052,23 @@
         "highlights": "Mesh-panel lace-up casual shoes with a thick sculpted sole.\n\nAdjustable instep fit: The front laces let the wearer loosen the opening for entry and set the tension over the foot."
       },
       "local_sync": {
-        "state": "FAQ_APPROVED_FORMAL_SCHEMA_PUBLIC_TEXT_PASS",
-        "current_fields_file": "02_Alibaba运营/02_单品优化记录/BQ系列持续优化_2026-09-14/采购承接执行/20261101_BQ008_FAQ/20261101_222007_get.json",
-        "current_schema_file": "02_Alibaba运营/02_单品优化记录/BQ系列持续优化_2026-09-14/采购承接执行/20261101_BQ008_FAQ/20261101_222007_render.json",
+        "state": "SUBMITTED_GET_MATCH_INDEPENDENT_REVIEW_PASS_PENDING_PLATFORM_REVIEW",
+        "current_fields_file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939625569/formal_get.json",
+        "current_schema_file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_交叉复核修正/1601939625569/title/after_render.json",
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601939625569/当前图库与货号.json",
-        "at": "2026-11-01T14:20:12.873965+00:00",
+        "at": "2026-11-02T15:01:18.330902+00:00",
         "observed_at": "2026-10-19T18:39:07.937094+00:00",
-        "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601939625569/verification.json",
-        "next_action": "FAQ已批准、get/render与一次公开文字核验通过；正常买家视觉交互待验。继续首页与橱窗已授权调整。",
+        "content_verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_交叉复核修正/1601939625569/title/independent_review.json",
+        "next_action": "只读核批准后当前Schema及公开呈现；不重放成功提交",
         "latest_faq_verification": "02_Alibaba运营/02_单品优化记录/BQ系列持续优化_2026-09-14/采购承接执行/20261101_BQ008_FAQ/20261101_222007_verification.json",
         "previous_approved_schema_file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/执行证据_20261031/1601939625569/recovery_render.json",
         "price_state": "APPROVED",
         "price_verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_价格调整/1601939625569/最终价格/verification.json"
       },
       "formal_fields": {
-        "file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_价格调整/1601939625569/最终价格/after_get.json",
-        "at": "2026-11-02T05:20:34.395380+00:00",
-        "scope": "本次价格的官方回读；公开价格另核"
+        "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601939625569/formal_get.json",
+        "at": "2026-11-02T15:01:18.330902+00:00",
+        "scope": "交叉复核后标题单字段修正的当前官方get"
       },
       "platform_group": {
         "id": "971467417",
@@ -30910,9 +31076,9 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-11-02T05:20:34.395380+00:00",
+        "at": "2026-11-02T15:01:18.330902+00:00",
         "model": "BQ008-W1 / L1009",
-        "title": "Factory Direct Mesh Marathon Running Shoes High Rebound Non-Slip Lace-Up Sneakers Wholesale Trial Orders",
+        "title": "Factory Direct Breathable Mesh Marathon Running Shoes High Rebound Non-Slip Thick Sole Sneakers Wholesale",
         "keywords": [
           ""
         ],
@@ -30925,10 +31091,10 @@
           "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
         ],
         "category_id": 201334413,
-        "display": "Y",
-        "status": "approved",
-        "url": "https://www.alibaba.com/product-detail/Factory-Direct-Mesh-Marathon-Running-Shoes_1601939625569.html",
-        "scope": "2026-11-01 FAQ审核通过、get/render命中且其余正式字段保全；美国公开抓取命中，视觉交互待验。",
+        "display": "N",
+        "status": "modified",
+        "url": "https://www.alibaba.com/product-detail/Factory-Direct-Breathable-Mesh-Marathon-Running_1601939625569.html",
+        "scope": "当前正式API字段；2026-11-02两档价格仅API通过，不能继承10月31日旧价格公开验收；最新标题修正另按精确ID分阶段验收",
         "highlights": "Mesh-panel lace-up casual shoes with a thick sculpted sole.\n\nAdjustable instep fit: The front laces let the wearer loosen the opening for entry and set the tension over the foot.\n\nFactory-direct mesh marathon running shoes with high rebound and a non-slip sole. For wholesale or OEM enquiries, send your selected colors, size breakdown, quantity and destination. Branding, packaging, sample costs and dispatch timing are confirmed against your requirements before ordering.",
         "price_tiers": [
           {
@@ -31086,7 +31252,8 @@
             "scope": "2026-10-31 Chrome重启后正常公开页正文和首屏截图逐ID实看；所列为观察摘要，非完整原始DOM或全图库逐图验收",
             "colour_interaction": "Grey Green pressed, main photo and size dialog observed",
             "observation_date": "2026-10-31"
-          }
+          },
+          "latest_title_scope": "本记录10月31日的原标题公开观察已被11月2日标题修正取代；当前状态回title_cross_review_20261102"
         },
         "procurement_faq_20261101": {
           "state": "APPROVED_FORMAL_SCHEMA_PUBLIC_TEXT_PASS",
@@ -31121,6 +31288,24 @@
           "score": "5.00",
           "score_observed_at": "2026-11-01T14:22:06.073188+00:00",
           "score_request_id": "210829b717935429259874138"
+        },
+        "title_cross_review_20261102": {
+          "date": "2026-11-02",
+          "at": "2026-11-02T15:01:18.330902+00:00",
+          "state": "SUBMITTED_GET_MATCH_INDEPENDENT_REVIEW_PASS_PENDING_PLATFORM_REVIEW",
+          "scope": "productTitle only",
+          "expected_title": "Factory Direct Breathable Mesh Marathon Running Shoes High Rebound Non-Slip Thick Sole Sneakers Wholesale",
+          "actual_score": "5.00",
+          "public_status": "NOT_VERIFIED",
+          "independent_review": "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_交叉复核修正/1601939625569/title/independent_review.json",
+          "evidence": [
+            "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_交叉复核修正/1601939625569/title/before_get.json",
+            "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_交叉复核修正/1601939625569/title/payload.xml",
+            "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_交叉复核修正/1601939625569/title/update_receipt.json",
+            "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_交叉复核修正/1601939625569/title/after_get.json",
+            "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_交叉复核修正/1601939625569/title/verification.json"
+          ],
+          "next_action": "只读核批准后当前Schema及公开呈现；不重放成功提交"
         }
       },
       "price_review": {
@@ -31179,7 +31364,39 @@
         ],
         "verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ008/2026-11-02_价格调整/1601939625569/最终价格/verification.json",
         "public": "PENDING",
-        "next_action": "等待平台审核并核对接口结果。"
+        "next_action": "当前两档已获API批准；负责人质疑删除100双档，三档方案待第三档金额选定，尚未重写价格；最新公开价格未验"
+      },
+      "price_strategy_review": {
+        "date": "2026-11-02",
+        "state": "THIRD_TIER_AMOUNT_PENDING_OWNER_CHOICE",
+        "scope": "BQ008/BQ009八链接恢复数量阶梯；与标题修正分开",
+        "current_usd_tiers": [
+          [
+            2,
+            "10.00"
+          ],
+          [
+            50,
+            "9.50"
+          ]
+        ],
+        "proposed_usd_tiers": [
+          [
+            2,
+            "10.00"
+          ],
+          [
+            50,
+            "9.50"
+          ],
+          [
+            100,
+            "9.00"
+          ]
+        ],
+        "proposal_status": "待负责人选定第三档9.00，不是已确认金额",
+        "review": "价格/标题/执行三Agent先独立后交叉复核；正式API成功不证明经营方案合理",
+        "next_action": "第三档金额选定后按每款数量与全SKU精确执行，不重放历史载荷"
       }
     },
     {
@@ -31381,7 +31598,7 @@
         "display": "Y",
         "status": "approved",
         "url": "https://www.alibaba.com/product-detail/Factory-Direct-Custom-Logo-Marathon-Running_1601939721165.html",
-        "scope": "2026-10-31批准后get/render目标命中，公开标题/三档价/亮点及首屏主图逐ID验收；全图库不在本轮逐图范围",
+        "scope": "当前正式API字段；2026-11-02两档价格仅API通过，不能继承10月31日旧价格公开验收；最新标题修正另按精确ID分阶段验收",
         "highlights": "Marathon running sneakers: A lightweight, breathable textile style with a high-rebound, non-slip sole.\n\nAdjustable lace-up fit: The mesh-panel upper and front laces allow the wearer to adjust instep tension.\n\nLayered construction: A thick sole profile and raised front overlay define the closed-toe sneaker.",
         "sku_count": 44,
         "colour_EU": {
@@ -31706,7 +31923,39 @@
         ],
         "verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ009/2026-11-02_价格调整/1601939721165/最终价格/verification.json",
         "public": "PENDING",
-        "next_action": "等待平台审核并核对接口结果。"
+        "next_action": "当前两档已获API批准；负责人质疑删除100双档，三档方案待第三档金额选定，尚未重写价格；最新公开价格未验"
+      },
+      "price_strategy_review": {
+        "date": "2026-11-02",
+        "state": "THIRD_TIER_AMOUNT_PENDING_OWNER_CHOICE",
+        "scope": "BQ008/BQ009八链接恢复数量阶梯；与标题修正分开",
+        "current_usd_tiers": [
+          [
+            2,
+            "10.00"
+          ],
+          [
+            50,
+            "9.50"
+          ]
+        ],
+        "proposed_usd_tiers": [
+          [
+            2,
+            "10.00"
+          ],
+          [
+            50,
+            "9.50"
+          ],
+          [
+            100,
+            "9.00"
+          ]
+        ],
+        "proposal_status": "待负责人选定第三档9.00，不是已确认金额",
+        "review": "价格/标题/执行三Agent先独立后交叉复核；正式API成功不证明经营方案合理",
+        "next_action": "第三档金额选定后按每款数量与全SKU精确执行，不重放历史载荷"
       }
     },
     {
@@ -31908,7 +32157,7 @@
         "display": "Y",
         "status": "approved",
         "url": "https://www.alibaba.com/product-detail/Factory-Direct-Lightweight-Marathon-Running-Shoes_1601939661419.html",
-        "scope": "2026-10-31批准后get/render目标命中，公开标题/三档价/亮点及首屏主图逐ID验收；全图库不在本轮逐图范围",
+        "scope": "当前正式API字段；2026-11-02两档价格仅API通过，不能继承10月31日旧价格公开验收；最新标题修正另按精确ID分阶段验收",
         "highlights": "Marathon running sneakers: A lightweight, breathable textile style with a high-rebound, non-slip sole.\n\nAdjustable lace-up fit: The mesh-panel upper and front laces allow the wearer to adjust instep tension.\n\nLayered construction: A thick sole profile and raised front overlay define the closed-toe sneaker.",
         "sku_count": 44,
         "colour_EU": {
@@ -32233,7 +32482,39 @@
         ],
         "verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ009/2026-11-02_价格调整/1601939661419/最终价格/verification.json",
         "public": "PENDING",
-        "next_action": "等待平台审核并核对接口结果。"
+        "next_action": "当前两档已获API批准；负责人质疑删除100双档，三档方案待第三档金额选定，尚未重写价格；最新公开价格未验"
+      },
+      "price_strategy_review": {
+        "date": "2026-11-02",
+        "state": "THIRD_TIER_AMOUNT_PENDING_OWNER_CHOICE",
+        "scope": "BQ008/BQ009八链接恢复数量阶梯；与标题修正分开",
+        "current_usd_tiers": [
+          [
+            2,
+            "10.00"
+          ],
+          [
+            50,
+            "9.50"
+          ]
+        ],
+        "proposed_usd_tiers": [
+          [
+            2,
+            "10.00"
+          ],
+          [
+            50,
+            "9.50"
+          ],
+          [
+            100,
+            "9.00"
+          ]
+        ],
+        "proposal_status": "待负责人选定第三档9.00，不是已确认金额",
+        "review": "价格/标题/执行三Agent先独立后交叉复核；正式API成功不证明经营方案合理",
+        "next_action": "第三档金额选定后按每款数量与全SKU精确执行，不重放历史载荷"
       }
     },
     {
@@ -32435,7 +32716,7 @@
         "display": "Y",
         "status": "approved",
         "url": "https://www.alibaba.com/product-detail/Factory-Direct-Breathable-Textile-Lace-Up_1601939675350.html",
-        "scope": "2026-10-31批准后get/render目标命中，公开标题/三档价/亮点及首屏主图逐ID验收；全图库不在本轮逐图范围",
+        "scope": "当前正式API字段；2026-11-02两档价格仅API通过，不能继承10月31日旧价格公开验收；最新标题修正另按精确ID分阶段验收",
         "highlights": "Marathon running sneakers: A lightweight, breathable textile style with a high-rebound, non-slip sole.\n\nAdjustable lace-up fit: The mesh-panel upper and front laces allow the wearer to adjust instep tension.\n\nLayered construction: A thick sole profile and raised front overlay define the closed-toe sneaker.",
         "sku_count": 44,
         "colour_EU": {
@@ -32760,7 +33041,39 @@
         ],
         "verification": "02_Alibaba运营/02_单品优化记录/商品档案/BQ009/2026-11-02_价格调整/1601939675350/最终价格/verification.json",
         "public": "PENDING",
-        "next_action": "等待平台审核并核对接口结果。"
+        "next_action": "当前两档已获API批准；负责人质疑删除100双档，三档方案待第三档金额选定，尚未重写价格；最新公开价格未验"
+      },
+      "price_strategy_review": {
+        "date": "2026-11-02",
+        "state": "THIRD_TIER_AMOUNT_PENDING_OWNER_CHOICE",
+        "scope": "BQ008/BQ009八链接恢复数量阶梯；与标题修正分开",
+        "current_usd_tiers": [
+          [
+            2,
+            "10.00"
+          ],
+          [
+            50,
+            "9.50"
+          ]
+        ],
+        "proposed_usd_tiers": [
+          [
+            2,
+            "10.00"
+          ],
+          [
+            50,
+            "9.50"
+          ],
+          [
+            100,
+            "9.00"
+          ]
+        ],
+        "proposal_status": "待负责人选定第三档9.00，不是已确认金额",
+        "review": "价格/标题/执行三Agent先独立后交叉复核；正式API成功不证明经营方案合理",
+        "next_action": "第三档金额选定后按每款数量与全SKU精确执行，不重放历史载荷"
       }
     },
     {
