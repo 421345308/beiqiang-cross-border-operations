@@ -13293,9 +13293,9 @@
       "bound_source_id": null,
       "source_relation": "SOURCE_EVIDENCE_MISSING",
       "observation": {
-        "audit": "modified",
-        "display": "N",
-        "at": "2026-11-02T05:25:25.149693+00:00",
+        "audit": "approved",
+        "display": "Y",
+        "at": "2026-11-02T05:36:20.302105+00:00",
         "scope": "价格提交后的官方回读",
         "score": "5.00",
         "sku_count": 30
@@ -13428,7 +13428,7 @@
       },
       "formal_fields": {
         "file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ002/2026-11-02_价格调整/1601939635505/after_get.json",
-        "at": "2026-11-02T05:25:25.149693+00:00",
+        "at": "2026-11-02T05:36:20.302105+00:00",
         "scope": "尺码调整后价格修改的官方回读"
       },
       "optimization": {
@@ -13619,7 +13619,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-11-02T05:25:25.149693+00:00",
+        "at": "2026-11-02T05:36:20.302105+00:00",
         "model": "BQ002-O1 / BQ002",
         "title": "Custom Logo Wide Toe Box Slip On Walking Sneakers Breathable Knit Shoes with EVA Sole OEM ODM",
         "keywords": [
@@ -13634,8 +13634,8 @@
           "https://sc04.alicdn.com/kf/H2651c2d7bfec4dd3982b4037721778f66.jpg"
         ],
         "category_id": 201334413,
-        "display": "N",
-        "status": "modified",
+        "display": "Y",
+        "status": "approved",
         "url": "https://www.alibaba.com/product-detail/Custom-Logo-Wide-Toe-Box-Slip_1601939635505.html",
         "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验",
         "highlights": "Room at the toes: The wide forefoot gives the toes more space within a low-top knit walking shoe.\n\nEasy daily entry: The lace-free opening lets the foot enter without tying conventional shoelaces.\n\nKnit and EVA construction: A textured knitted upper is paired with a sculpted EVA sole for everyday casual wear.",
@@ -13721,8 +13721,8 @@
         "price_scope": "官方接口回读"
       },
       "price_adjustment": {
-        "at": "2026-11-02T05:25:25.149693+00:00",
-        "state": "PENDING_REVIEW",
+        "at": "2026-11-02T05:36:20.302105+00:00",
+        "state": "APPROVED",
         "usd_tiers": [
           [
             2,
@@ -13754,9 +13754,9 @@
       "bound_source_id": null,
       "source_relation": "SOURCE_EVIDENCE_MISSING",
       "observation": {
-        "audit": "modified",
-        "display": "N",
-        "at": "2026-11-02T05:25:29.970577+00:00",
+        "audit": "approved",
+        "display": "Y",
+        "at": "2026-11-02T05:32:12.833316+00:00",
         "scope": "价格提交后的官方回读",
         "score": "5.00",
         "sku_count": 30
@@ -13889,7 +13889,7 @@
       },
       "formal_fields": {
         "file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ002/2026-11-02_价格调整/1601939614689/after_get.json",
-        "at": "2026-11-02T05:25:29.970577+00:00",
+        "at": "2026-11-02T05:32:12.833316+00:00",
         "scope": "尺码调整后价格修改的官方回读"
       },
       "optimization": {
@@ -14080,7 +14080,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-11-02T05:25:29.970577+00:00",
+        "at": "2026-11-02T05:32:12.833316+00:00",
         "model": "BQ002-R1 / BQ002",
         "title": "Breathable Knit Wide Toe Box Slip On Walking Sneakers Lightweight Shoes with EVA Sole",
         "keywords": [
@@ -14095,8 +14095,8 @@
           "https://sc04.alicdn.com/kf/H51650b4f666743f0956b2a753c3082fcG.jpg"
         ],
         "category_id": 201334413,
-        "display": "N",
-        "status": "modified",
+        "display": "Y",
+        "status": "approved",
         "url": "https://www.alibaba.com/product-detail/Breathable-Knit-Wide-Toe-Box-Slip_1601939614689.html",
         "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验",
         "highlights": "Room at the toes: The wide forefoot gives the toes more space within a low-top knit walking shoe.\n\nEasy daily entry: The lace-free opening lets the foot enter without tying conventional shoelaces.\n\nKnit and EVA construction: A textured knitted upper is paired with a sculpted EVA sole for everyday casual wear.",
@@ -14182,8 +14182,8 @@
         "price_scope": "官方接口回读"
       },
       "price_adjustment": {
-        "at": "2026-11-02T05:25:29.970577+00:00",
-        "state": "PENDING_REVIEW",
+        "at": "2026-11-02T05:32:12.833316+00:00",
+        "state": "APPROVED",
         "usd_tiers": [
           [
             2,
@@ -14594,9 +14594,9 @@
       "bound_source_id": null,
       "source_relation": "SOURCE_EVIDENCE_MISSING",
       "observation": {
-        "audit": "modified",
-        "display": "N",
-        "at": "2026-11-02T05:25:40.682242+00:00",
+        "audit": "approved",
+        "display": "Y",
+        "at": "2026-11-02T05:36:23.594631+00:00",
         "scope": "价格提交后的官方回读",
         "score": "5.00",
         "sku_count": 30
@@ -14682,7 +14682,7 @@
       },
       "formal_fields": {
         "file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ002/2026-11-02_价格调整/1601957092413/after_get.json",
-        "at": "2026-11-02T05:25:40.682242+00:00",
+        "at": "2026-11-02T05:36:23.594631+00:00",
         "scope": "尺码调整后价格修改的官方回读"
       },
       "platform_group": {
@@ -14691,7 +14691,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-11-02T05:25:40.682242+00:00",
+        "at": "2026-11-02T05:36:23.594631+00:00",
         "model": "BQ002-S2 / BQ002",
         "title": "Breathable Knit Slip On Sneakers with Wide Toe Box EVA Sole Walking Shoes for Daily Wear",
         "keywords": [
@@ -14706,8 +14706,8 @@
           "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
         ],
         "category_id": 201334413,
-        "display": "N",
-        "status": "modified",
+        "display": "Y",
+        "status": "approved",
         "url": "https://www.alibaba.com/product-detail/Breathable-Knit-Slip-On-Sneakers-with_1601957092413.html",
         "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验",
         "highlights": "Room at the toes: The wide forefoot gives the toes more space within a low-top knit walking shoe.\n\nEasy daily entry: The lace-free opening lets the foot enter without tying conventional shoelaces.\n\nKnit and EVA construction: A textured knitted upper is paired with a sculpted EVA sole for everyday casual wear.",
@@ -14940,8 +14940,8 @@
         }
       },
       "price_adjustment": {
-        "at": "2026-11-02T05:25:40.682242+00:00",
-        "state": "PENDING_REVIEW",
+        "at": "2026-11-02T05:36:23.594631+00:00",
+        "state": "APPROVED",
         "usd_tiers": [
           [
             2,
@@ -15356,9 +15356,9 @@
       "bound_source_id": null,
       "source_relation": "SOURCE_EVIDENCE_MISSING",
       "observation": {
-        "audit": "modified",
-        "display": "N",
-        "at": "2026-11-02T05:25:50.761609+00:00",
+        "audit": "approved",
+        "display": "Y",
+        "at": "2026-11-02T05:36:26.684697+00:00",
         "scope": "价格提交后的官方回读",
         "score": "5.00",
         "sku_count": 30
@@ -15491,7 +15491,7 @@
       },
       "formal_fields": {
         "file": "02_Alibaba运营/02_单品优化记录/商品档案/BQ002/2026-11-02_价格调整/1601939654418/after_get.json",
-        "at": "2026-11-02T05:25:50.761609+00:00",
+        "at": "2026-11-02T05:36:26.684697+00:00",
         "scope": "尺码调整后价格修改的官方回读"
       },
       "optimization": {
@@ -15682,7 +15682,7 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-11-02T05:25:50.761609+00:00",
+        "at": "2026-11-02T05:36:26.684697+00:00",
         "model": "BQ002-W1 / BQ002",
         "title": "Wholesale Wide Toe Box Knit Slip On Walking Sneakers Breathable Casual Shoes with EVA Sole",
         "keywords": [
@@ -15697,8 +15697,8 @@
           "https://sc04.alicdn.com/kf/H66c70ba5e5b94ee4a197f4dcd7a62072U.jpg"
         ],
         "category_id": 201334413,
-        "display": "N",
-        "status": "modified",
+        "display": "Y",
+        "status": "approved",
         "url": "https://www.alibaba.com/product-detail/Wholesale-Wide-Toe-Box-Knit-Slip_1601939654418.html",
         "scope": "审核通过后的官方字段回读；图片Schema顺序和库存与修改前一致，买家页待验",
         "highlights": "Room at the toes: The wide forefoot gives the toes more space within a low-top knit walking shoe.\n\nEasy daily entry: The lace-free opening lets the foot enter without tying conventional shoelaces.\n\nKnit and EVA construction: A textured knitted upper is paired with a sculpted EVA sole for everyday casual wear.",
@@ -15784,8 +15784,8 @@
         "price_scope": "官方接口回读"
       },
       "price_adjustment": {
-        "at": "2026-11-02T05:25:50.761609+00:00",
-        "state": "PENDING_REVIEW",
+        "at": "2026-11-02T05:36:26.684697+00:00",
+        "state": "APPROVED",
         "usd_tiers": [
           [
             2,
