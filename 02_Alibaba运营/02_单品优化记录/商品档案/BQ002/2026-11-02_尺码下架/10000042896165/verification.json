@@ -1,9 +1,9 @@
 {
   "id": "10000042896165",
   "family": "BQ002",
-  "at": "2026-11-02T05:15:08.251576+00:00",
-  "status": "modified",
-  "display": "N",
+  "at": "2026-11-02T05:25:06.491100+00:00",
+  "status": "approved",
+  "display": "Y",
   "checks": {
     "removed_sizes_absent": true,
     "removed_skus_absent": true,
@@ -25,5 +25,5 @@
     "44",
     "45"
   ],
-  "state": "PENDING_REVIEW"
+  "state": "APPROVED"
 }
