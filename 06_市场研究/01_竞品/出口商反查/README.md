@@ -1,14 +1,16 @@
 # 竞品公司与出口商反查
 
-初查日：2026-10-26；最新店铺补查：2026-11-02（北京时间）。本页扩展现有竞品研究，不新建CRM。**26家研究对象中，24家国际站店铺页面直接显示对应公司名称；另有2家未列入当前店铺清单。** 海外潜客、联系方式、提单关系及评分留现有客户发现助手的本地受控数据区。
+初查日：2026-10-26；最新店铺补查：2026-11-02（北京时间）。本页扩展现有竞品研究，不新建CRM。**28家研究对象中，26家国际站店铺页面直接显示对应公司名称；另有2家未列入当前店铺清单。** 海外潜客、联系方式、提单关系及评分留现有客户发现助手的本地受控数据区。
 
 数据入口：[候选JSON](competitors.json)、[候选CSV](competitors.csv)、[名称与别名检索CSV](aliases.csv)、[逐来源证据与访问限制](evidence.json)。工作台“客户开发 → 同行找客户”直接读取该名单，并关联本地受控买家研究；本机另有[海关数据查询公司名单.xlsx](海关数据查询公司名单.xlsx)。旧研究的商品、目录与图片证据继续保留在原位置，本表只引用。
 
 ## 2026-11-02：店铺重新核实
 
-24家当前名单逐一实读国际站店铺首页并核对英文公司名，来源和核对日期随各公司保存在 `competitors.json` 的 `store_verification` 中。Fujian Fuyu只核到官网，未找到对应国际站店铺；Quanzhou DHD Global虽然有平台旧目录及店铺链接，但本次打开店铺入口返回搜索页，未确认当前可用。两者仍留研究池，暂不列入可直接查看的店铺清单。
+26家当前名单逐一实读国际站店铺首页并核对英文公司名，来源和核对日期随各公司保存在 `competitors.json` 的 `store_verification` 中。Fujian Fuyu只核到官网，未找到对应国际站店铺；Quanzhou DHD Global虽然有平台旧目录及店铺链接，但本次打开店铺入口返回搜索页，未确认当前可用。两者仍留研究池，暂不列入可直接查看的店铺清单。
 
 原表误把Shijiazhuang Jinchen与galler店直接对应；本轮店铺首页显示该公司的是 [jchshoes](https://jchshoes.en.alibaba.com/)，原galler链接和原商品链接保留为历史线索，不合并。Langchi与Langji分别有店铺，不因名称相近合并。页面中的单款sold及其缓存、统计周期与整店销量均需区分；没有可复核数字的店铺不宣称销量高。国际站店铺与公司名对应，也不等于已核实每条海关记录的出口主体。
+
+同日补入 [Quanzhou Weshine](https://weshineshoes.en.alibaba.com/) 与 [Luoyang Jinshiyuan](https://jsyshoes.en.alibaba.com/)，两家首页分别显示公司名及针织、休闲鞋方向；[Accio聚合页](https://www.accio.com/plp/nike-zoom-streak-fly)对应单款分别显示906和330 sold，统计周期未知，并非整店销量或实时海关数据。该页另显示Kaisun单款600 sold；国际站[公开索引](https://www.alibaba.com/picks/shoes-swiss.html)显示Yongge单款318 sold，均按来源性质展示，不据此推定实际出口买家。
 
 ## 2026-11-01：高销量线索与贸易反查补充
 

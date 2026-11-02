@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "checked_date": "2026-10-26",
-  "scope": "26家研究对象，其中24家店铺页面直接显示公司名称；1家仅核到官网，1家旧店铺入口本次返回搜索页。海关实际出口主体按具体记录再核对。",
+  "scope": "28家研究对象，其中26家店铺页面直接显示公司名称；1家仅核到官网，1家旧店铺入口本次返回搜索页。海关实际出口主体按具体记录再核对。",
   "competitors": [
     {
       "competitor_id": "EX001",
@@ -28,6 +28,12 @@
         "checked_date": "2026-11-02",
         "source_url": "https://kaisuntd.en.alibaba.com/",
         "basis": "国际站店铺页面直接显示公司名称"
+      },
+      "sales_observation": {
+        "sold": 600,
+        "source_url": "https://www.accio.com/plp/nike-max-360",
+        "checked_date": "2026-11-02",
+        "note": "Accio聚合页面曾展示单款 600 sold，统计周期未注明。"
       }
     },
     {
@@ -308,6 +314,12 @@
         "checked_date": "2026-11-02",
         "source_url": "https://ywyongge.en.alibaba.com/",
         "basis": "国际站店铺页面直接显示公司名称"
+      },
+      "sales_observation": {
+        "sold": 318,
+        "source_url": "https://www.alibaba.com/picks/shoes-swiss.html",
+        "checked_date": "2026-11-02",
+        "note": "国际站公开索引曾展示单款 318 sold，统计周期未注明。"
       }
     },
     {
@@ -725,6 +737,72 @@
         "source_url": "https://www.alibaba.com/catalog/Casual-Shoes_cid201339807?categoryId=201339807&sortType=prodSold180",
         "checked_date": "2026-11-02",
         "note": "公开索引缓存曾展示单款 690 sold，统计周期未注明。"
+      }
+    },
+    {
+      "competitor_id": "EX027",
+      "store_name": "Quanzhou Weshine Imp & Exp Co., Ltd.",
+      "store_url": "https://weshineshoes.en.alibaba.com/",
+      "related_product_url": "https://www.alibaba.com/product-detail/Weshine-Wholesale-Custom-Running-Shoe-New_1601213545668.html",
+      "company_en": "Quanzhou Weshine Imp & Exp Co., Ltd.",
+      "company_zh": "",
+      "official_website": "",
+      "registered_address": "",
+      "unified_credit_code": "",
+      "registration_status": "未查得官方工商登记；不凭英文翻译补中文名",
+      "product_direction": "飞织网面休闲鞋、运动休闲鞋",
+      "target_markets": "",
+      "source_urls": "https://weshineshoes.en.alibaba.com/ | https://www.accio.com/plp/nike-zoom-streak-fly",
+      "checked_date": "2026-11-02",
+      "access_mode": "FIRECRAWL_OFFICIAL_API；首页直接显示公司及鞋类",
+      "evidence_grade": "E2",
+      "verification_status": "国际站店铺及公司名称已对应；具体海关记录的出口方仍须核对",
+      "priority": "P1",
+      "notes": "仅确认平台店铺、公司名和鞋类方向；成交数字为聚合页面单款线索，周期不明，不作为整店销量或海关交易。",
+      "store_verification": {
+        "status": "verified",
+        "checked_date": "2026-11-02",
+        "source_url": "https://weshineshoes.en.alibaba.com/",
+        "basis": "国际站店铺页面直接显示公司名称"
+      },
+      "sales_observation": {
+        "sold": 906,
+        "source_url": "https://www.accio.com/plp/nike-zoom-streak-fly",
+        "checked_date": "2026-11-02",
+        "note": "Accio聚合页面曾展示单款 906 sold，统计周期未注明。"
+      }
+    },
+    {
+      "competitor_id": "EX028",
+      "store_name": "Luoyang Jinshiyuan Import And Export Co., Ltd.",
+      "store_url": "https://jsyshoes.en.alibaba.com/",
+      "related_product_url": "https://www.alibaba.com/product-detail/JSYWD-615-Men-Casual-Shoes-fashionable_1601209117383.html",
+      "company_en": "Luoyang Jinshiyuan Import And Export Co., Ltd.",
+      "company_zh": "",
+      "official_website": "",
+      "registered_address": "",
+      "unified_credit_code": "",
+      "registration_status": "未查得官方工商登记；不凭英文翻译补中文名",
+      "product_direction": "女式飞织、套脚及休闲步行鞋",
+      "target_markets": "",
+      "source_urls": "https://jsyshoes.en.alibaba.com/ | https://www.accio.com/plp/nike-zoom-streak-fly",
+      "checked_date": "2026-11-02",
+      "access_mode": "FIRECRAWL_OFFICIAL_API；首页直接显示公司及鞋类",
+      "evidence_grade": "E2",
+      "verification_status": "国际站店铺及公司名称已对应；具体海关记录的出口方仍须核对",
+      "priority": "P1",
+      "notes": "仅确认平台店铺、公司名和鞋类方向；成交数字为聚合页面单款线索，周期不明，不作为整店销量或海关交易。",
+      "store_verification": {
+        "status": "verified",
+        "checked_date": "2026-11-02",
+        "source_url": "https://jsyshoes.en.alibaba.com/",
+        "basis": "国际站店铺页面直接显示公司名称"
+      },
+      "sales_observation": {
+        "sold": 330,
+        "source_url": "https://www.accio.com/plp/nike-zoom-streak-fly",
+        "checked_date": "2026-11-02",
+        "note": "Accio聚合页面曾展示单款 330 sold，统计周期未注明。"
       }
     }
   ],

@@ -6,7 +6,7 @@ import threading
 from types import SimpleNamespace
 import unittest
 
-from competitor_workspace import CATALOG, list_competitors
+from competitor_workspace import CATALOG, list_competitors, _sales_url
 from customer_workspace import CustomerWorkspace
 
 class CompetitorWorkspaceTests(unittest.TestCase):
@@ -16,7 +16,7 @@ class CompetitorWorkspaceTests(unittest.TestCase):
         path.write_text(json.dumps({'competitors':[
             {'competitor_id':'EX001','company_en':'Shoe Company','store_url':'https://shoe.en.alibaba.com/',
              'product_direction':'casual shoes','store_verification':{'status':'verified','source_url':'https://shoe.en.alibaba.com/','checked_date':'2026-11-02'},
-             'sales_observation':{'sold':224,'note':'单款展示，周期不明','source_url':'https://www.alibaba.com/picks/shoes.html'}},
+             'sales_observation':{'sold':224,'note':'Accio单款展示，周期不明','source_url':'https://www.accio.com/plp/shoes'}},
             {'competitor_id':'EX002','company_en':'Only a Website','store_url':'','store_verification':{'status':'not_found','note':'仅找到官网'}},
             {'competitor_id':'EX003','company_en':'Misleading Domain','store_url':'https://alibaba.com.evil.test/',
              'store_verification':{'status':'verified','source_url':'https://www.alibaba.com/'}}
@@ -41,5 +41,11 @@ class CompetitorWorkspaceTests(unittest.TestCase):
         self.assertEqual(updated['related_competitors'],['EX001'])
         with self.assertRaises(ValueError):self.work.update_discovery(buyer['id'],{'related_competitors':['../bad']})
         self.assertEqual(self.work.get_discovery(buyer['id'])['related_competitors'],['EX001'])
+
+    def test_sales_evidence_only_links_to_actual_secure_platform_domains(self):
+        self.assertTrue(_sales_url('https://www.accio.com/plp/shoes'))
+        self.assertTrue(_sales_url('https://www.alibaba.com/picks/shoes.html'))
+        self.assertFalse(_sales_url('http://www.accio.com/plp/shoes'))
+        self.assertFalse(_sales_url('https://accio.com.evil.test/plp/shoes'))
 
 if __name__=='__main__':unittest.main()
