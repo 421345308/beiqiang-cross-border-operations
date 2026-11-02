@@ -2,7 +2,7 @@
 
 Customer-facing English catalogue with 51 model selections, 30 portrait pages and real product photographs. Recommended styles appear first; colorways are grouped under their model codes. Prices are omitted so buyers can request a quotation for their selected colors, sizes and quantities.
 
-2026-11-02负责人更正了产品归属：不能将本册51款一概介绍为本厂款，逐款供货关系见[产品中心](../../../00_总控台/产品中心/README.md)。大多数款式的批发参考价格为每双8–15美元，具体按款式及订单数量确定。PDF原件未列固定价格；按实际订单提供报价。
+内部供货关系见[产品中心](../../../00_总控台/产品中心/README.md)；2026-11-03负责人明确对外统一展示为贝强鞋款，不标注或区分单款供货类别。大多数款式的批发参考价格为每双8–15美元，具体按款式及订单数量确定。PDF原件未列固定价格；按实际订单提供报价。
 
 ## Deliverables
 
