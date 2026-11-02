@@ -1,8 +1,14 @@
 # 竞品公司与出口商反查
 
-初查日：2026-10-26；最新补查：2026-11-01（北京时间）。本页扩展现有竞品研究，不新建CRM。**已形成26家公司候选、10家原优先主体调查卡和79条名称检索项；未完成全部实际出口主体确认。** 海外潜客、联系方式、提单关系及评分留现有客户发现助手的本地受控数据区。
+初查日：2026-10-26；最新店铺补查：2026-11-02（北京时间）。本页扩展现有竞品研究，不新建CRM。**26家研究对象中，24家国际站店铺页面直接显示对应公司名称；另有2家未列入当前店铺清单。** 海外潜客、联系方式、提单关系及评分留现有客户发现助手的本地受控数据区。
 
-数据入口：[候选JSON](competitors.json)、[候选CSV](competitors.csv)、[名称与别名检索CSV](aliases.csv)、[逐来源证据与访问限制](evidence.json)。本机另有[海关数据查询公司名单.xlsx](海关数据查询公司名单.xlsx)，按试查价值排列26家公司并附给数据库服务商的字段要求；该文件为本地导出，公开同步只包含不涉海外客户的原始公开研究。原10家深查对象为EX001—004、EX008及EX012—016，试查顺序结合新增销量与贸易线索重新排序。旧研究的商品、目录与图片证据继续保留在原位置，本表只引用。
+数据入口：[候选JSON](competitors.json)、[候选CSV](competitors.csv)、[名称与别名检索CSV](aliases.csv)、[逐来源证据与访问限制](evidence.json)。工作台“客户开发 → 同行找客户”直接读取该名单，并关联本地受控买家研究；本机另有[海关数据查询公司名单.xlsx](海关数据查询公司名单.xlsx)。旧研究的商品、目录与图片证据继续保留在原位置，本表只引用。
+
+## 2026-11-02：店铺重新核实
+
+24家当前名单逐一实读国际站店铺首页并核对英文公司名，来源和核对日期随各公司保存在 `competitors.json` 的 `store_verification` 中。Fujian Fuyu只核到官网，未找到对应国际站店铺；Quanzhou DHD Global虽然有平台旧目录及店铺链接，但本次打开店铺入口返回搜索页，未确认当前可用。两者仍留研究池，暂不列入可直接查看的店铺清单。
+
+原表误把Shijiazhuang Jinchen与galler店直接对应；本轮店铺首页显示该公司的是 [jchshoes](https://jchshoes.en.alibaba.com/)，原galler链接和原商品链接保留为历史线索，不合并。Langchi与Langji分别有店铺，不因名称相近合并。页面中的单款sold及其缓存、统计周期与整店销量均需区分；没有可复核数字的店铺不宣称销量高。国际站店铺与公司名对应，也不等于已核实每条海关记录的出口主体。
 
 ## 2026-11-01：高销量线索与贸易反查补充
 
@@ -14,7 +20,7 @@ EX021 Quanzhou DHD Global Trading 在[国际站旧目录](https://www.alibaba.co
 
 ## 覆盖与证据等级
 
-原20家包括11家既有研究对象、9家新发现候选，本次补EX021—026。新发现并非都已核实店铺：Fuyu仅确认官网业务表述；Langchi、Langji、Huifa、Linfeng等仅取得Alibaba类别搜索卡片，公司/店铺/商品对应待补。不能把全部候选写成已核供应商或都有鞋类出口记录的公司。
+原20家包括11家既有研究对象、9家新发现候选，后补EX021—026。2026-11-01时部分只取得类别搜索卡片；最新店铺对应以本页2026-11-02结论及JSON为准。不能把全部候选写成都有已核鞋类出口记录。
 
 - E1：搜索结果正文、摘要或原本地历史研究。适合发现线索，仍须回原页核查；保留查询日及原证据日期。
 - E2：本轮实际打开可读的官方/平台结构字段或公开企业目录。只证明该页面显示的身份/产品表述；第三方目录不是官方工商登记。
@@ -29,7 +35,7 @@ EX021 Quanzhou DHD Global Trading 在[国际站旧目录](https://www.alibaba.co
 | EX001 | Xiamen Kaisun Trading Co., Ltd. | 10/28 Firecrawl官方API实读kaisuntd首页，出现同英文名及Barefoot/Casual类目，首页升为E2；原544条目录保留原证据日期 | company_profile页返回滑块，登记地址与出口方对应仍未核。贸易关系须按逐票鞋类货描、地址及日期筛，不汇总全部同名交易 |
 | EX002 | Xiamen Golden Heymann Import & Export Co., Ltd. | 原店/针织商品对应；本轮实读第三方公司目录，写Trading Company | 目录地址与历史提单地址不同；中文/信用代码、实际生产厂未确认。旧出口票只能证明该历史样例 |
 | EX003 | Dongguan Ai Mei Cheng Shoes Co., Ltd. | 原amcshoes店/女士针织商品；官网搜索正文显示同全名及Houjie地址 | 官网实际打开502/超时。品牌合作仅供应商故事自述，不能当买方确认；2002创业与2013登记信息分开 |
-| EX004 | Shijiazhuang Jinchen Technology Co., Ltd. | 原galler店/针织商品；jinchenshoes官网搜索正文显示同英文名 | 官网打开超时；galler与jchshoes未取得登记/地址一致证据，不合并店铺或交易。平台AI Overview不作来源 |
+| EX004 | Shijiazhuang Jinchen Technology Co., Ltd. | 2026-11-02直接实读jchshoes首页，显示该公司名和鞋类；原galler店与本公司关系未证 | 不合并galler或同名交易；出口方地址仍须核对。平台AI Overview不作来源 |
 | EX008 | Shenyang Hengshengwei Trading Co., Ltd. | 本轮实读套脚鞋商品页，供应商链接指向bairuilun.m；介绍明确贸易公司 | formerly Shenyang Flying Footwear Industry仅供应商自述旧名；BAIRUILUN是品牌，实际出口主体与工厂未核 |
 | EX012 | Jinjiang Keytop Shoes Co., Ltd. | 本轮实读Alibaba结构页，Contact Supplier明确ketuoshoes；Tendata有中文名与信用代码 | 中文及代码为第三方资料，待国家企业信用信息公示系统/营业执照核；地址2楼/3楼冲突，保留而不抹平 |
 | EX013 | Quanzhou Simble Import And Export Trading Co., Ltd. | 本轮实读Alibaba结构页并明确链接simblecn；官网页眉版权用同名 | 官网About正文用Quanzhou Simble Footwear Co., Ltd.；属关联用名线索，非同一法人证明。2001与2015年份不能自动选一个 |

@@ -9,6 +9,7 @@ from datetime import datetime,timezone
 import hashlib
 import json
 import os
+import re
 from pathlib import Path
 import tempfile
 from uuid import uuid4
@@ -18,7 +19,7 @@ CANDIDATES='04_客户开发/02_目标名单/.local/客户发现助手/candidates
 SOURCE_FIELDS={'company','country','quantity','need','stage','contact_name','email','products','timeline','destination','budget','source_notes'}
 ANALYSIS_FIELDS={'intent','fit','basis','missing','next_action','facts','inferences','needs','product_fit','recommendations','reply_draft','risks','questions',
                  'brief','core_need','recommended_reply','secondary_requests','conflicts','questions_now'}
-DISCOVERY_FIELDS={'title','target','company','website','market_hint','evidence','next_action','status','notes','object_id','origin_object_id','ready_for_customer','priority','business_summary','business_category','contact_status_label','country','contact_name','email','phone'}
+DISCOVERY_FIELDS={'title','target','company','website','market_hint','evidence','next_action','status','notes','object_id','origin_object_id','ready_for_customer','priority','business_summary','business_category','contact_status_label','country','contact_name','email','phone','related_competitors'}
 
 def _now():return datetime.now(timezone.utc).isoformat()
 def _hash(value):return hashlib.sha256(value.encode('utf8')).hexdigest()
@@ -279,7 +280,10 @@ class CustomerWorkspace:
         for key,value in body.items():
             if key=='kind':continue
             if key=='priority' and value not in ('high','normal','low'):raise ValueError('请选择有效的优先级')
-            if key=='ready_for_customer':
+            if key=='related_competitors':
+                if not isinstance(value,list) or len(value)>30 or any(not isinstance(x,str) or not re.fullmatch(r'EX\d{3}',x) for x in value):raise ValueError('同行关联格式无效')
+                clean[key]=list(dict.fromkeys(value))
+            elif key=='ready_for_customer':
                 if type(value) is not bool:raise ValueError('准备推进标记须为布尔值')
                 clean[key]=value
             else:clean[key]=_evidence(value) if key=='evidence' else _text(value,12000 if key in ('notes','target','next_action') else 2000)

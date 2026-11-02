@@ -357,7 +357,7 @@
     if (!current()) return;
     function openBuyer(id) { location.hash = `/customers?view=development&item=${encodeURIComponent(id)}`; }
     function addBuyer(company) {
-      const dialog = el('dialog', undefined, 'intake-dialog'), form = el('div', undefined, 'competitor-form');
+      const dialog = el('dialog', undefined, 'intake-dialog competitor-dialog'), form = el('div', undefined, 'competitor-form');
       dialog.append(el('h2', `登记 ${company.company} 的买家线索`), el('p', '填入查询到的公司，保存后可继续研究其业务与联系方式。', 'muted'));
       const name = addField(form, '买家公司名称', '', false, '例如：ABC Footwear Inc.'), country = addField(form, '国家或市场（选填）'), note = addField(form, '线索说明（选填）', '', true, '可填写查询来源、货描、日期等');
       const feedback = el('div', undefined, 'inline-error');

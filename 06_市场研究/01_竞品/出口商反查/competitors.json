@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "checked_date": "2026-10-26",
-  "scope": "候选池20，非20家已核出口商",
+  "scope": "26家研究对象，其中24家店铺页面直接显示公司名称；1家仅核到官网，1家旧店铺入口本次返回搜索页。海关实际出口主体按具体记录再核对。",
   "competitors": [
     {
       "competitor_id": "EX001",
@@ -20,9 +20,15 @@
       "checked_date": "2026-10-28",
       "access_mode": "FIRECRAWL_OFFICIAL_API; 首页正文成功；company_profile为滑块",
       "evidence_grade": "E2",
-      "verification_status": "店铺名称和鞋类目录已实读；出口主体地址对应仍待核",
+      "verification_status": "国际站店铺及公司名称已对应；具体海关记录的出口方仍须核对",
       "priority": "P1",
-      "notes": "复用544条既有目录；贸易平台同名出现纸品/家具，不可把全部交易并入鞋类。 10/28首页显示英文全名及Barefoot/Casual鞋类分组；详情滑块未绕过。海关同名鞋票不能替代店铺地址/法人对应。"
+      "notes": "复用544条既有目录；贸易平台同名出现纸品/家具，不可把全部交易并入鞋类。 10/28首页显示英文全名及Barefoot/Casual鞋类分组；详情滑块未绕过。海关同名鞋票不能替代店铺地址/法人对应。",
+      "store_verification": {
+        "status": "verified",
+        "checked_date": "2026-11-02",
+        "source_url": "https://kaisuntd.en.alibaba.com/",
+        "basis": "国际站店铺页面直接显示公司名称"
+      }
     },
     {
       "competitor_id": "EX002",
@@ -41,9 +47,15 @@
       "checked_date": "2026-10-26",
       "access_mode": "OPEN_DIRECTORY; 当次店首页空正文",
       "evidence_grade": "E2",
-      "verification_status": "候选主体；实际出口主体未确认",
+      "verification_status": "国际站店铺及公司名称已对应；具体海关记录的出口方仍须核对",
       "priority": "P1",
-      "notes": "历史店铺与英文名对应；2017出口样例仅证明特定历史记录，详见受控客户反查。"
+      "notes": "历史店铺与英文名对应；2017出口样例仅证明特定历史记录，详见受控客户反查。",
+      "store_verification": {
+        "status": "verified",
+        "checked_date": "2026-11-02",
+        "source_url": "https://goldenheymann.en.alibaba.com/",
+        "basis": "国际站店铺页面直接显示公司名称"
+      }
     },
     {
       "competitor_id": "EX003",
@@ -62,15 +74,21 @@
       "checked_date": "2026-10-26",
       "access_mode": "HISTORICAL_PRIMARY+SEARCH_OFFICIAL; 官网open502/timeout",
       "evidence_grade": "E1",
-      "verification_status": "候选主体；实际出口主体未确认",
+      "verification_status": "国际站店铺及公司名称已对应；具体海关记录的出口方仍须核对",
       "priority": "P1",
-      "notes": "正式检索拼写Ai Mei Cheng；AiMeiCheng为显示缩写。2002故事年份与第三方2013登记年份不混为一谈。"
+      "notes": "正式检索拼写Ai Mei Cheng；AiMeiCheng为显示缩写。2002故事年份与第三方2013登记年份不混为一谈。",
+      "store_verification": {
+        "status": "verified",
+        "checked_date": "2026-11-02",
+        "source_url": "https://amcshoes.en.alibaba.com/",
+        "basis": "国际站店铺页面直接显示公司名称"
+      }
     },
     {
       "competitor_id": "EX004",
       "store_name": "Shijiazhuang Jinchen Technology Co., Ltd.",
-      "store_url": "https://galler.en.alibaba.com/",
-      "related_product_url": "https://www.alibaba.com/product-detail/Barefoot-Shoes-Minimalist-Knit-Breathable-Slip_1601274841526.html",
+      "store_url": "https://jchshoes.en.alibaba.com/",
+      "related_product_url": "https://www.alibaba.com/product-detail/Men-Non-slip-Wide-Toe-Box_1601375392294.html",
       "company_en": "Shijiazhuang Jinchen Technology Co., Ltd.",
       "company_zh": "",
       "official_website": "https://www.jinchenshoes.com/",
@@ -83,9 +101,19 @@
       "checked_date": "2026-10-26",
       "access_mode": "HISTORICAL_PRIMARY+SEARCH_OFFICIAL; 官网open超时",
       "evidence_grade": "E1",
-      "verification_status": "候选主体；实际出口主体未确认",
+      "verification_status": "国际站店铺及公司名称已对应；具体海关记录的出口方仍须核对",
       "priority": "P1",
-      "notes": "官网以同英文名自述业务，但galler与jchshoes两个店域名未核统一主体，不自动合并。"
+      "notes": "官网以同英文名自述业务，但galler与jchshoes两个店域名未核统一主体，不自动合并。 2026-11-02直接实读jchshoes首页与公司名；旧galler店及旧商品与本主体关系未证，留作历史线索，不并入。",
+      "historical_store_urls": [
+        "https://galler.en.alibaba.com/"
+      ],
+      "historical_related_product_url": "https://www.alibaba.com/product-detail/Barefoot-Shoes-Minimalist-Knit-Breathable-Slip_1601274841526.html",
+      "store_verification": {
+        "status": "verified",
+        "checked_date": "2026-11-02",
+        "source_url": "https://jchshoes.en.alibaba.com/",
+        "basis": "国际站店铺页面直接显示公司名称"
+      }
     },
     {
       "competitor_id": "EX005",
@@ -104,9 +132,15 @@
       "checked_date": "2026-10-26",
       "access_mode": "HISTORICAL_PRIMARY+SEARCH_CATEGORY; 当次店首页空正文",
       "evidence_grade": "E1",
-      "verification_status": "候选主体；实际出口主体未确认",
+      "verification_status": "国际站店铺及公司名称已对应；具体海关记录的出口方仍须核对",
       "priority": "P2",
-      "notes": "英文全称来自当前类别卡；个体店与真实出口公司未核。"
+      "notes": "英文全称来自当前类别卡；个体店与真实出口公司未核。",
+      "store_verification": {
+        "status": "verified",
+        "checked_date": "2026-11-02",
+        "source_url": "https://shunzhishoes.en.alibaba.com/",
+        "basis": "国际站店铺页面直接显示公司名称"
+      }
     },
     {
       "competitor_id": "EX006",
@@ -125,9 +159,21 @@
       "checked_date": "2026-10-26",
       "access_mode": "HISTORICAL_PRIMARY+SEARCH_CATEGORY; 当次店首页空正文",
       "evidence_grade": "E1",
-      "verification_status": "候选主体；实际出口主体未确认",
+      "verification_status": "国际站店铺及公司名称已对应；具体海关记录的出口方仍须核对",
       "priority": "P2",
-      "notes": "supplier导购页混有AI式推断，规模/人手/买家类型不采用。"
+      "notes": "supplier导购页混有AI式推断，规模/人手/买家类型不采用。",
+      "store_verification": {
+        "status": "verified",
+        "checked_date": "2026-11-02",
+        "source_url": "https://wzjikexing.en.alibaba.com/",
+        "basis": "国际站店铺页面直接显示公司名称"
+      },
+      "sales_observation": {
+        "sold": 510,
+        "source_url": "https://www.alibaba.com/picks/k-swiss-shoes.html",
+        "checked_date": "2026-11-02",
+        "note": "公开索引缓存曾展示单款 510 sold，统计周期未注明。"
+      }
     },
     {
       "competitor_id": "EX007",
@@ -146,9 +192,15 @@
       "checked_date": "2026-10-26",
       "access_mode": "HISTORICAL_PRIMARY+SEARCH_PRODUCT; 当次店首页空正文",
       "evidence_grade": "E1",
-      "verification_status": "候选主体；实际出口主体未确认",
+      "verification_status": "国际站店铺及公司名称已对应；具体海关记录的出口方仍须核对",
       "priority": "P2",
-      "notes": "新搜女式高跟鞋结果只补公司英文名；不把高跟鞋当贝强核心能力。"
+      "notes": "新搜女式高跟鞋结果只补公司英文名；不把高跟鞋当贝强核心能力。",
+      "store_verification": {
+        "status": "verified",
+        "checked_date": "2026-11-02",
+        "source_url": "https://tzduoya.en.alibaba.com/",
+        "basis": "国际站店铺页面直接显示公司名称"
+      }
     },
     {
       "competitor_id": "EX008",
@@ -167,14 +219,20 @@
       "checked_date": "2026-10-26",
       "access_mode": "OPEN_ALIBABA_PRODUCT",
       "evidence_grade": "E2",
-      "verification_status": "候选主体；实际出口主体未确认",
+      "verification_status": "国际站店铺及公司名称已对应；具体海关记录的出口方仍须核对",
       "priority": "P1",
-      "notes": "本轮商品页供应商链接明确bairuilun.m；介绍称formerly Shenyang Flying Footwear Industry，仅是供应商自述旧名，非官方曾用名。BAIRUILUN为品牌，不等同法人。"
+      "notes": "本轮商品页供应商链接明确bairuilun.m；介绍称formerly Shenyang Flying Footwear Industry，仅是供应商自述旧名，非官方曾用名。BAIRUILUN为品牌，不等同法人。",
+      "store_verification": {
+        "status": "verified",
+        "checked_date": "2026-11-02",
+        "source_url": "https://bairuilun.m.en.alibaba.com/",
+        "basis": "国际站店铺页面直接显示公司名称"
+      }
     },
     {
       "competitor_id": "EX009",
       "store_name": "Quanzhou Oneslon Trading Co., Ltd.",
-      "store_url": "",
+      "store_url": "https://oneslon.en.alibaba.com/",
       "related_product_url": "https://www.alibaba.com/product-detail/New-Retro-Sport-Running-Shoes-for_11000033057093.html",
       "company_en": "Quanzhou Oneslon Trading Co., Ltd.",
       "company_zh": "",
@@ -188,14 +246,20 @@
       "checked_date": "2026-10-26",
       "access_mode": "HISTORICAL_PRIMARY+OPEN_EMPTY; 当次商品页0行",
       "evidence_grade": "E1",
-      "verification_status": "候选主体；实际出口主体未确认",
+      "verification_status": "国际站店铺及公司名称已对应；具体海关记录的出口方仍须核对",
       "priority": "P2",
-      "notes": "原款A98。官网/中文主体和出口方均未确认。"
+      "notes": "原款A98。官网/中文主体和出口方均未确认。",
+      "store_verification": {
+        "status": "verified",
+        "checked_date": "2026-11-02",
+        "source_url": "https://oneslon.en.alibaba.com/",
+        "basis": "国际站店铺页面直接显示公司名称"
+      }
     },
     {
       "competitor_id": "EX010",
       "store_name": "Quanzhou Taihui Shoe Industry Co., Ltd.",
-      "store_url": "",
+      "store_url": "https://taihuishoes.en.alibaba.com/",
       "related_product_url": "https://www.alibaba.com/product-detail/Wear-Resistant-Elastic-Shock-Absorption-Men_1601367328948.html",
       "company_en": "Quanzhou Taihui Shoe Industry Co., Ltd.",
       "company_zh": "",
@@ -209,9 +273,15 @@
       "checked_date": "2026-10-26",
       "access_mode": "HISTORICAL_PRIMARY+OPEN_EMPTY; 当次商品页0行",
       "evidence_grade": "E1",
-      "verification_status": "候选主体；实际出口主体未确认",
+      "verification_status": "国际站店铺及公司名称已对应；具体海关记录的出口方仍须核对",
       "priority": "P2",
-      "notes": "旧商品属性材料混填，研究仅用身份/品类定位；店域名待补。"
+      "notes": "旧商品属性材料混填，研究仅用身份/品类定位；店域名待补。",
+      "store_verification": {
+        "status": "verified",
+        "checked_date": "2026-11-02",
+        "source_url": "https://taihuishoes.en.alibaba.com/",
+        "basis": "国际站店铺页面直接显示公司名称"
+      }
     },
     {
       "competitor_id": "EX011",
@@ -230,9 +300,15 @@
       "checked_date": "2026-10-26",
       "access_mode": "OPEN_ALIBABA_PRODUCT_CACHE",
       "evidence_grade": "E2",
-      "verification_status": "候选主体；实际出口主体未确认",
+      "verification_status": "国际站店铺及公司名称已对应；具体海关记录的出口方仍须核对",
       "priority": "P2",
-      "notes": "商品页供应商链接明确ywyongge；返回缓存旧页，销量/价格不当实时值。男鞋标题与女鞋类目冲突；实际出口方未核。"
+      "notes": "商品页供应商链接明确ywyongge；返回缓存旧页，销量/价格不当实时值。男鞋标题与女鞋类目冲突；实际出口方未核。",
+      "store_verification": {
+        "status": "verified",
+        "checked_date": "2026-11-02",
+        "source_url": "https://ywyongge.en.alibaba.com/",
+        "basis": "国际站店铺页面直接显示公司名称"
+      }
     },
     {
       "competitor_id": "EX012",
@@ -251,9 +327,15 @@
       "checked_date": "2026-10-26",
       "access_mode": "OPEN_ALIBABA_STRUCTURED+OPEN_DIRECTORY",
       "evidence_grade": "E2",
-      "verification_status": "候选主体；实际出口主体未确认",
+      "verification_status": "国际站店铺及公司名称已对应；具体海关记录的出口方仍须核对",
       "priority": "P1",
-      "notes": "Alibaba Contact Supplier链接明确ketuoshoes；Tendata地址表2楼、简介3楼冲突，不填统一注册地址。"
+      "notes": "Alibaba Contact Supplier链接明确ketuoshoes；Tendata地址表2楼、简介3楼冲突，不填统一注册地址。",
+      "store_verification": {
+        "status": "verified",
+        "checked_date": "2026-11-02",
+        "source_url": "https://ketuoshoes.en.alibaba.com/",
+        "basis": "国际站店铺页面直接显示公司名称"
+      }
     },
     {
       "competitor_id": "EX013",
@@ -272,9 +354,15 @@
       "checked_date": "2026-10-26",
       "access_mode": "OPEN_ALIBABA_STRUCTURED+OPEN_OFFICIAL",
       "evidence_grade": "E2",
-      "verification_status": "候选主体；实际出口主体未确认",
+      "verification_status": "国际站店铺及公司名称已对应；具体海关记录的出口方仍须核对",
       "priority": "P1",
-      "notes": "官网页眉版权用进出口公司名、About正文用Quanzhou Simble Footwear Co., Ltd.；是关联名称线索，非工商合并/同一生产主体证明。"
+      "notes": "官网页眉版权用进出口公司名、About正文用Quanzhou Simble Footwear Co., Ltd.；是关联名称线索，非工商合并/同一生产主体证明。",
+      "store_verification": {
+        "status": "verified",
+        "checked_date": "2026-11-02",
+        "source_url": "https://simblecn.en.alibaba.com/",
+        "basis": "国际站店铺页面直接显示公司名称"
+      }
     },
     {
       "competitor_id": "EX014",
@@ -293,9 +381,15 @@
       "checked_date": "2026-10-26",
       "access_mode": "OPEN_ALIBABA_STRUCTURED+SEARCH_MOBILE",
       "evidence_grade": "E2",
-      "verification_status": "候选主体；实际出口主体未确认",
+      "verification_status": "国际站店铺及公司名称已对应；具体海关记录的出口方仍须核对",
       "priority": "P1",
-      "notes": "商品ID源于移动店铺入口，不声明本轮重读商品详情。平台AI Overview误称纺织服装等，不作产品或产能证据。"
+      "notes": "商品ID源于移动店铺入口，不声明本轮重读商品详情。平台AI Overview误称纺织服装等，不作产品或产能证据。",
+      "store_verification": {
+        "status": "verified",
+        "checked_date": "2026-11-02",
+        "source_url": "https://jerycen.en.alibaba.com/",
+        "basis": "国际站店铺页面直接显示公司名称"
+      }
     },
     {
       "competitor_id": "EX015",
@@ -314,9 +408,15 @@
       "checked_date": "2026-10-26",
       "access_mode": "SEARCH_ALIBABA; open空正文",
       "evidence_grade": "E1",
-      "verification_status": "候选主体；实际出口主体未确认",
+      "verification_status": "国际站店铺及公司名称已对应；具体海关记录的出口方仍须核对",
       "priority": "P1",
-      "notes": "注册2022与21年经验自述不能等同；Hotmarzz Network Technology同词商标持有人未证关联，不合并。"
+      "notes": "注册2022与21年经验自述不能等同；Hotmarzz Network Technology同词商标持有人未证关联，不合并。",
+      "store_verification": {
+        "status": "verified",
+        "checked_date": "2026-11-02",
+        "source_url": "https://chinahotmarzz.en.alibaba.com/",
+        "basis": "国际站店铺页面直接显示公司名称"
+      }
     },
     {
       "competitor_id": "EX016",
@@ -335,9 +435,15 @@
       "checked_date": "2026-10-26",
       "access_mode": "OPEN_OFFICIAL",
       "evidence_grade": "E2",
-      "verification_status": "候选主体；实际出口主体未确认",
+      "verification_status": "已核到公司官网；本轮未找到可对应的阿里巴巴国际站店铺，暂不纳入国际站店铺名单。",
       "priority": "P1",
-      "notes": "官网拓展候选，本轮未确认Alibaba店铺。官网页脚Tonglin/Anhai地址与公开供应链名单Neikeng地址待核对应；不直接合并不同地址。"
+      "notes": "官网拓展候选，本轮未确认Alibaba店铺。官网页脚Tonglin/Anhai地址与公开供应链名单Neikeng地址待核对应；不直接合并不同地址。",
+      "store_verification": {
+        "status": "not_found",
+        "checked_date": "2026-11-02",
+        "note": "已核到公司官网；本轮未找到可对应的阿里巴巴国际站店铺，暂不纳入国际站店铺名单。",
+        "source_url": "https://fuyufootwear.com/"
+      }
     },
     {
       "competitor_id": "EX017",
@@ -356,14 +462,20 @@
       "checked_date": "2026-10-26",
       "access_mode": "SEARCH_ALIBABA_CATEGORY+HISTORICAL_STORE_MAPPING",
       "evidence_grade": "E1",
-      "verification_status": "候选主体；实际出口主体未确认",
+      "verification_status": "国际站店铺及公司名称已对应；具体海关记录的出口方仍须核对",
       "priority": "P2",
-      "notes": "店域名有历史公开文档对应，当前主体需店铺资料补核；不采用AI导购复购率。"
+      "notes": "店域名有历史公开文档对应，当前主体需店铺资料补核；不采用AI导购复购率。",
+      "store_verification": {
+        "status": "verified",
+        "checked_date": "2026-11-02",
+        "source_url": "https://happychina.en.alibaba.com/",
+        "basis": "国际站店铺页面直接显示公司名称"
+      }
     },
     {
       "competitor_id": "EX018",
       "store_name": "Chongqing Langchi Shoes Co., Ltd.",
-      "store_url": "",
+      "store_url": "https://cqlcxy.en.alibaba.com/",
       "related_product_url": "",
       "company_en": "Chongqing Langchi Shoes Co., Ltd.",
       "company_zh": "",
@@ -371,20 +483,26 @@
       "registered_address": "",
       "unified_credit_code": "",
       "registration_status": "未查得官方工商登记；不凭英文翻译补中文名",
-      "product_direction": "针织男士休闲鞋",
+      "product_direction": "男士皮质休闲鞋、皮鞋及休闲运动鞋",
       "target_markets": "",
       "source_urls": "https://www.alibaba.com/countrysearch/CN/knitted-shoes.html",
       "checked_date": "2026-10-26",
       "access_mode": "SEARCH_ALIBABA_CATEGORY",
       "evidence_grade": "E1",
-      "verification_status": "候选主体；实际出口主体未确认",
+      "verification_status": "国际站店铺及公司名称已对应；具体海关记录的出口方仍须核对",
       "priority": "P2",
-      "notes": "候选仅来自公开类别索引卡；店铺/商品完整URL未提取，不猜测。Langchi不自动合并Langji。"
+      "notes": "候选仅来自公开类别索引卡；店铺/商品完整URL未提取，不猜测。Langchi不自动合并Langji。",
+      "store_verification": {
+        "status": "verified",
+        "checked_date": "2026-11-02",
+        "source_url": "https://cqlcxy.en.alibaba.com/",
+        "basis": "国际站店铺页面直接显示公司名称"
+      }
     },
     {
       "competitor_id": "EX019",
       "store_name": "Luoyang Huifa Footwear Co., Ltd.",
-      "store_url": "",
+      "store_url": "https://lyhuifa.en.alibaba.com/",
       "related_product_url": "",
       "company_en": "Luoyang Huifa Footwear Co., Ltd.",
       "company_zh": "",
@@ -398,14 +516,20 @@
       "checked_date": "2026-10-26",
       "access_mode": "SEARCH_ALIBABA_CATEGORY",
       "evidence_grade": "E1",
-      "verification_status": "候选主体；实际出口主体未确认",
+      "verification_status": "国际站店铺及公司名称已对应；具体海关记录的出口方仍须核对",
       "priority": "P2",
-      "notes": "候选仅来自公开类别索引卡；单店主体/产品详情/目标市场待核。"
+      "notes": "候选仅来自公开类别索引卡；单店主体/产品详情/目标市场待核。",
+      "store_verification": {
+        "status": "verified",
+        "checked_date": "2026-11-02",
+        "source_url": "https://lyhuifa.en.alibaba.com/",
+        "basis": "国际站店铺页面直接显示公司名称"
+      }
     },
     {
       "competitor_id": "EX020",
       "store_name": "Taizhou Linfeng Shoes Co., Ltd.",
-      "store_url": "",
+      "store_url": "https://hotshoes.en.alibaba.com/",
       "related_product_url": "",
       "company_en": "Taizhou Linfeng Shoes Co., Ltd.",
       "company_zh": "",
@@ -419,9 +543,15 @@
       "checked_date": "2026-10-26",
       "access_mode": "SEARCH_ALIBABA_CATEGORY",
       "evidence_grade": "E1",
-      "verification_status": "候选主体；实际出口主体未确认",
+      "verification_status": "国际站店铺及公司名称已对应；具体海关记录的出口方仍须核对",
       "priority": "P2",
-      "notes": "旧第三方文档hotshoes域名不作为当前店主体确认，当前店URL留空。"
+      "notes": "旧第三方文档hotshoes域名不作为当前店主体确认，当前店URL留空。",
+      "store_verification": {
+        "status": "verified",
+        "checked_date": "2026-11-02",
+        "source_url": "https://hotshoes.en.alibaba.com/",
+        "basis": "国际站店铺页面直接显示公司名称"
+      }
     },
     {
       "competitor_id": "EX021",
@@ -440,14 +570,20 @@
       "checked_date": "2026-11-01",
       "access_mode": "FIRECRAWL_OFFICIAL_API_AND_PUBLIC_PAGE",
       "evidence_grade": "E2",
-      "verification_status": "国际站目录与店域名对应；同名贸易主体地址及法人关系仍需核",
+      "verification_status": "旧目录显示公司和店铺链接，但本次店铺入口返回搜索页，不能确认该店目前可用。",
       "priority": "P1",
-      "notes": "国际站公开目录出现完整英文名、休闲鞋及店铺链接；同名贸易页有鞋类逐票。目录为历史缓存，未取得该款当前销量；不将聚合票数等同鞋类订单。"
+      "notes": "国际站公开目录出现完整英文名、休闲鞋及店铺链接；同名贸易页有鞋类逐票。目录为历史缓存，未取得该款当前销量；不将聚合票数等同鞋类订单。",
+      "store_verification": {
+        "status": "directory_only",
+        "checked_date": "2026-11-02",
+        "note": "旧目录显示公司和店铺链接，但本次店铺入口返回搜索页，不能确认该店目前可用。",
+        "source_url": "https://www.alibaba.com/oem-shoes-wholesale-suppliers.html"
+      }
     },
     {
       "competitor_id": "EX022",
       "store_name": "Wenzhou Sipcope Trading Co., Ltd.",
-      "store_url": "",
+      "store_url": "https://cn1565621943jgye.en.alibaba.com/",
       "related_product_url": "",
       "company_en": "Wenzhou Sipcope Trading Co., Ltd.",
       "company_zh": "",
@@ -461,9 +597,15 @@
       "checked_date": "2026-11-01",
       "access_mode": "SEARCH_ALIBABA_INDEX",
       "evidence_grade": "E1",
-      "verification_status": "公开索引候选；店铺与实际出口主体未确认",
+      "verification_status": "国际站店铺及公司名称已对应；具体海关记录的出口方仍须核对",
       "priority": "P2",
-      "notes": "搜索索引一款男式系带休闲鞋显示318 sold，周期未知；同名贸易样本涉及青少年休闲鞋。店铺与出口地址关系待核，不能等同所有订单。"
+      "notes": "搜索索引一款男式系带休闲鞋显示318 sold，周期未知；同名贸易样本涉及青少年休闲鞋。店铺与出口地址关系待核，不能等同所有订单。",
+      "store_verification": {
+        "status": "verified",
+        "checked_date": "2026-11-02",
+        "source_url": "https://cn1565621943jgye.en.alibaba.com/",
+        "basis": "国际站店铺页面直接显示公司名称"
+      }
     },
     {
       "competitor_id": "EX023",
@@ -482,9 +624,21 @@
       "checked_date": "2026-11-01",
       "access_mode": "SEARCH_ALIBABA_INDEX",
       "evidence_grade": "E1",
-      "verification_status": "公开索引候选；店铺与实际出口主体未确认",
+      "verification_status": "国际站店铺及公司名称已对应；具体海关记录的出口方仍须核对",
       "priority": "P2",
-      "notes": "搜索索引一款厚底休闲鞋显示151 sold，周期未知；店铺与报关出口方关系待核。"
+      "notes": "搜索索引一款厚底休闲鞋显示151 sold，周期未知；店铺与报关出口方关系待核。",
+      "store_verification": {
+        "status": "verified",
+        "checked_date": "2026-11-02",
+        "source_url": "https://btoutdoor.en.alibaba.com/",
+        "basis": "国际站店铺页面直接显示公司名称"
+      },
+      "sales_observation": {
+        "sold": 224,
+        "source_url": "https://www.alibaba.com/picks/new-air-shoes.html",
+        "checked_date": "2026-11-02",
+        "note": "公开索引缓存曾展示单款 224 sold，统计周期未注明。"
+      }
     },
     {
       "competitor_id": "EX024",
@@ -503,14 +657,20 @@
       "checked_date": "2026-11-01",
       "access_mode": "SEARCH_ALIBABA_INDEX",
       "evidence_grade": "E1",
-      "verification_status": "公开索引候选；店铺与实际出口主体未确认",
+      "verification_status": "国际站店铺及公司名称已对应；具体海关记录的出口方仍须核对",
       "priority": "P2",
-      "notes": "搜索缓存中一款休闲高帮鞋显示76 sold，周期未知；店铺页本次打开无正文，出口主体与地址待核。"
+      "notes": "搜索缓存中一款休闲高帮鞋显示76 sold，周期未知；店铺页本次打开无正文，出口主体与地址待核。",
+      "store_verification": {
+        "status": "verified",
+        "checked_date": "2026-11-02",
+        "source_url": "https://xiangchensports.en.alibaba.com/",
+        "basis": "国际站店铺页面直接显示公司名称"
+      }
     },
     {
       "competitor_id": "EX025",
       "store_name": "Chongqing Langji Shoes Co., Ltd.",
-      "store_url": "",
+      "store_url": "https://cqljxy.en.alibaba.com/",
       "related_product_url": "",
       "company_en": "Chongqing Langji Shoes Co., Ltd.",
       "company_zh": "",
@@ -524,14 +684,20 @@
       "checked_date": "2026-11-01",
       "access_mode": "SEARCH_ALIBABA_INDEX",
       "evidence_grade": "E1",
-      "verification_status": "公开索引候选；店铺与实际出口主体未确认",
+      "verification_status": "国际站店铺及公司名称已对应；具体海关记录的出口方仍须核对",
       "priority": "P2",
-      "notes": "搜索索引一款男士休闲鞋显示750 sold，周期未知；Langji与Langchi为不同拼写，不自动合并法人。"
+      "notes": "搜索索引一款男士休闲鞋显示750 sold，周期未知；Langji与Langchi为不同拼写，不自动合并法人。",
+      "store_verification": {
+        "status": "verified",
+        "checked_date": "2026-11-02",
+        "source_url": "https://cqljxy.en.alibaba.com/",
+        "basis": "国际站店铺页面直接显示公司名称"
+      }
     },
     {
       "competitor_id": "EX026",
       "store_name": "Quanzhou Benmiao Sporting Goods Co., Ltd.",
-      "store_url": "",
+      "store_url": "https://ajcustom.en.alibaba.com/",
       "related_product_url": "",
       "company_en": "Quanzhou Benmiao Sporting Goods Co., Ltd.",
       "company_zh": "",
@@ -545,10 +711,22 @@
       "checked_date": "2026-11-01",
       "access_mode": "SEARCH_ALIBABA_INDEX",
       "evidence_grade": "E1",
-      "verification_status": "公开索引候选；店铺与实际出口主体未确认",
+      "verification_status": "国际站店铺及公司名称已对应；具体海关记录的出口方仍须核对",
       "priority": "P2",
-      "notes": "平台搜索页显示步行鞋等主营类目及美国市场询盘排名线索，非成交销量；待核店铺及出口主体。"
+      "notes": "平台搜索页显示步行鞋等主营类目及美国市场询盘排名线索，非成交销量；待核店铺及出口主体。",
+      "store_verification": {
+        "status": "verified",
+        "checked_date": "2026-11-02",
+        "source_url": "https://ajcustom.en.alibaba.com/",
+        "basis": "国际站店铺页面直接显示公司名称"
+      },
+      "sales_observation": {
+        "sold": 690,
+        "source_url": "https://www.alibaba.com/catalog/Casual-Shoes_cid201339807?categoryId=201339807&sortType=prodSold180",
+        "checked_date": "2026-11-02",
+        "note": "公开索引缓存曾展示单款 690 sold，统计周期未注明。"
+      }
     }
   ],
-  "latest_checked_date": "2026-11-01"
+  "latest_checked_date": "2026-11-02"
 }

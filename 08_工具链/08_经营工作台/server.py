@@ -304,6 +304,9 @@ class Handler(BaseHTTPRequestHandler):
                     if run.returncode:raise ValueError('抖店数据暂不可读')
                     return self.send_json(json.loads(run.stdout))
                 if u.path=='/api/desk/discovery':return self.send_json(app.customer_workspace.discovery())
+                if u.path=='/api/desk/competitors':
+                    from competitor_workspace import list_competitors
+                    return self.send_json(list_competitors(app))
                 if u.path=='/api/desk/buyer-search':
                     from buyer_discovery import search_buyers
                     return self.send_json(search_buyers(value('q') or 'footwear'))
