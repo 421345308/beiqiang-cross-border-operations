@@ -526,6 +526,13 @@
         const zh = addField(editor, '中文对照（仅供自己审核）', draft.body_zh, true, '填写中文对照，方便审核');
         en.className='mail-body-input'; zh.className='mail-body-input chinese';
         const attachments = el('div', undefined, 'mail-attachments'); editor.append(attachments);
+        const grant=el('details',undefined,'mail-grant'),grantBody=el('div'),grantNote=el('p','账号授权失效时，可在这里重新授权发信。邮件仍须在本页审核后手动发送。','artifact-note');
+        grant.append(el('summary','Gmail 发信授权'),grantNote,grantBody);
+        grantBody.append(button('准备重新授权',async()=>{
+          grantBody.replaceChildren(el('p','正在准备 Google 授权…','muted'));
+          try{const result=await api('/api/desk/gmail/send-oauth/start',{}),authorize=link('继续 Google 登录并授权 ↗',result.authorization_url);if(!authorize)throw new Error('无法打开 Google 授权。');grantBody.replaceChildren(authorize,el('p','授权完成后返回并刷新工作台。','artifact-note'));}
+          catch(error){grantBody.replaceChildren(el('p',error.message,'inline-error'));}
+        },'quiet'));editor.append(grant);
         const row = el('div', undefined, 'mail-compose-actions'), saveButton = button('保存草稿', async()=>{await save();feedback.textContent='草稿已保存。';}, 'quiet');
         const reviewButton = button('查看并审核', async()=>{
           reviewButton.disabled=true;
@@ -596,7 +603,7 @@
           preview.replaceChildren(el('h3','请审核这封邮件'),el('p',`发件人：${d.account || '未连接'}`),el('p',`收件人：${d.to}`),el('p',`主题：${d.subject}`));
           preview.append(el('h4','中文对照（不会发送）'),el('pre',d.body_zh || '尚未填写中文对照','mail-review-text'),el('h4','英文正文（发送内容）'),el('pre',d.body_en,'mail-review-text'));
           const files=el('div',undefined,'mail-review-files');files.append(el('h4','实际附件'));attachmentLinks(files,d,false);preview.append(files);
-          if(!d.can_send)preview.append(el('p','当前邮箱尚未具备可用的发送授权，请先恢复 Gmail 发送授权。','inline-error'));
+          if(!d.can_send)preview.append(el('p','当前邮箱尚未具备可用的发送授权，请返回修改并打开“Gmail 发信授权”。','inline-error'));
           const actions=el('div',undefined,'mail-compose-actions');
           actions.append(button('返回修改',()=>{preview.hidden=true;editor.hidden=false;feedback.textContent='可继续修改草稿。';},'quiet'));
           const sendButton=button('确认发送这封邮件',async()=>{

@@ -280,6 +280,12 @@ class Handler(BaseHTTPRequestHandler):
                         return self.send_gmail_result('连接成功，可以关闭此页并回到客户记录。')
                     except ValueError as exc:return self.send_gmail_result(str(exc),400)
                     except Exception:return self.send_gmail_result('Google 连接未完成，请返回工作台重新尝试。',400)
+                if u.path=='/api/desk/gmail/send-oauth/callback':
+                    try:
+                        app.gmail_drafts.finish_oauth(value('state'),value('code'))
+                        return self.send_gmail_result('发送授权已恢复。请关闭此页，刷新工作台后继续审核邮件。')
+                    except ValueError as exc:return self.send_gmail_result(str(exc),400)
+                    except Exception:return self.send_gmail_result('Google 发送授权未完成，请返回工作台重新尝试。',400)
                 if u.path=='/api/desk/bootstrap':
                     return self.send_json({'csrf_token':app.token,'objects':app.business.list_objects(),
                         'jobs':app.agent_jobs.list_jobs(),'artifacts':app.business.list_artifacts(),
@@ -368,6 +374,9 @@ class Handler(BaseHTTPRequestHandler):
             if parts==['api','desk','gmail','oauth','start']:
                 redirect_uri='http://127.0.0.1:'+str(self.server.server_port)+'/api/desk/gmail/oauth/callback'
                 return self.send_json({'authorization_url':app.gmail.start_oauth(body.get('client_config'),redirect_uri)})
+            if parts==['api','desk','gmail','send-oauth','start']:
+                redirect_uri='http://127.0.0.1:'+str(self.server.server_port)+'/api/desk/gmail/send-oauth/callback'
+                return self.send_json({'authorization_url':app.gmail_drafts.start_oauth(redirect_uri)})
             if parts==['api','desk','gmail','sync']:return self.send_json(app.gmail.customer(body.get('object_id'),force=True))
             if parts==['api','desk','gmail','draft']:
                 return self.send_json(app.gmail_drafts.save(body.get('object_id'),body.get('version'),body.get('fields')))

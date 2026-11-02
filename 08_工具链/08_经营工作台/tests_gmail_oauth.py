@@ -54,6 +54,16 @@ class OAuthTests(unittest.TestCase):
         self.auth.reader=lambda account:{'client_id':CLIENT,'client_secret':'saved','refresh_token':'old'}
         query=parse_qs(urlsplit(self.auth.start(None,REDIRECT,ACCOUNT)).query)
         self.assertEqual(query['client_id'],[CLIENT])
+    def test_send_scope_authorization_delivers_grant_to_separate_handler(self):
+        scope=SCOPE+' https://www.googleapis.com/auth/gmail.send';grants=[]
+        def request(url,*,token=None,form=None):
+            return {'access_token':'a','refresh_token':'r','scope':scope} if form else {'emailAddress':ACCOUNT}
+        oauth=GmailOAuth(request=request,reader=lambda account:{'client_id':CLIENT,'refresh_token':'old'},
+                         scope=scope,grant_handler=lambda account,client,tokens:grants.append((account,client,tokens)))
+        query=parse_qs(urlsplit(oauth.start(None,REDIRECT,ACCOUNT)).query)
+        self.assertEqual(set(query['scope'][0].split()),set(scope.split()))
+        self.assertEqual(oauth.finish(query['state'][0],'one-time-code'),ACCOUNT)
+        self.assertEqual(grants[0][0],ACCOUNT);self.assertEqual(grants[0][2]['refresh_token'],'r')
     def test_public_desktop_client_can_authorize_without_a_client_secret(self):
         url=self.auth.start({'installed':{'client_id':CLIENT}},REDIRECT)
         self.auth.finish(parse_qs(urlsplit(url).query)['state'][0],'code')

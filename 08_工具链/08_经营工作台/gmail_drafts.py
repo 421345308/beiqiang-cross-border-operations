@@ -17,8 +17,8 @@ from urllib.request import Request, urlopen
 from uuid import uuid4
 
 from gmail_mailbox import normalize_email
-from gmail_oauth import GMAIL_URL, _request, parse_addresses
-from gmail_send_authorization import REQUIRED_SCOPES, _read, _scopes, access_token
+from gmail_oauth import GMAIL_URL, GmailOAuth, _request, parse_addresses
+from gmail_send_authorization import READ_SCOPE, SEND_SCOPE, REQUIRED_SCOPES, _read, _scopes, access_token, save_grant
 from gmail_sync import customer_emails
 
 MAX_ATTACHMENTS = 18 * 1024 * 1024
@@ -50,6 +50,7 @@ class GmailDrafts:
         self.token_provider, self.sender, self.request, self.grant_reader = token_provider, sender, request, grant_reader
         self.lock = threading.RLock()
         self.directory = Path(app.state) / 'gmail-attachments'
+        self.oauth = GmailOAuth(scope=READ_SCOPE+' '+SEND_SCOPE, grant_handler=self._save_grant)
         with app.lock:
             app.db.execute('CREATE TABLE IF NOT EXISTS gmail_drafts (object_id TEXT PRIMARY KEY, data TEXT NOT NULL)')
             app.db.execute('CREATE TABLE IF NOT EXISTS gmail_sent_receipts (message_id TEXT PRIMARY KEY, object_id TEXT NOT NULL, data TEXT NOT NULL)')
@@ -82,6 +83,20 @@ class GmailDrafts:
 
     def _account(self):
         return self.app.gmail.status().get('account_email') or ''
+
+    def _save_grant(self, account, client, tokens):
+        if account != self._account():
+            raise ValueError('请选择工作台当前连接的 Gmail 账号')
+        save_grant(account, client, tokens)
+
+    def start_oauth(self, redirect_uri):
+        account = self._account()
+        if not account:
+            raise ValueError('请先连接用于收信的 Gmail 账号')
+        return self.oauth.start(None, redirect_uri, account)
+
+    def finish_oauth(self, state, code):
+        return self.oauth.finish(state, code)
 
     def _can_send(self, account):
         if not account:

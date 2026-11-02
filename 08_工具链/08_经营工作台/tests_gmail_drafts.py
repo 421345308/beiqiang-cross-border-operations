@@ -8,6 +8,7 @@ import tempfile
 import threading
 from types import SimpleNamespace
 import unittest
+from unittest.mock import patch
 
 from gmail_drafts import GmailDrafts, SendRejected
 
@@ -61,6 +62,14 @@ class DraftTests(unittest.TestCase):
         saved=self.fill()
         self.assertEqual(self.service.get(self.oid)['body_zh'],'您好，这是我们的鞋子。')
         self.assertEqual(saved['status'],'draft');self.assertEqual(self.calls,[])
+
+    def test_send_grant_is_saved_only_for_the_connected_account(self):
+        with patch('gmail_drafts.save_grant') as save:
+            with self.assertRaisesRegex(ValueError,'当前连接'):
+                self.service._save_grant('other@example.test',{},{} )
+            save.assert_not_called()
+            self.service._save_grant('seller@example.test',{'client_id':'fixture'},{'refresh_token':'fixture'})
+            save.assert_called_once()
 
     def test_reviewed_send_preserves_thread_actual_attachments_and_syncs(self):
         draft=self.fill()

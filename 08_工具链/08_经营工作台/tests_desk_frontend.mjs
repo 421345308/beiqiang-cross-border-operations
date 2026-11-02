@@ -90,12 +90,14 @@ test('客户邮件在本地保存、添加资料并审核后才发送，刷新�
     if(url.pathname==='/api/desk/gmail/draft'){draft={...draft,...payload.fields,version:'v2'};return {ok:true,json:async()=>structuredClone(draft)};}
     if(url.pathname==='/api/library')return {ok:true,json:async()=>({items:[{id:'mat1',title:'产品目录',path:'catalog.pdf'}]})};
     if(url.pathname==='/api/desk/gmail/attachment'){draft={...draft,version:'v3',attachments:[{id:'a1',name:'catalog.pdf',size:1000}]};return {ok:true,json:async()=>structuredClone(draft)};}
+    if(url.pathname==='/api/desk/gmail/send-oauth/start')return {ok:true,json:async()=>({authorization_url:'https://accounts.google.com/o/oauth2/v2/auth?state=fixture'})};
     if(url.pathname==='/api/desk/gmail/send'){draft={...draft,status:'sent',sent_at:'2026-11-02T00:00:00Z',gmail_url:'https://mail.google.com/mail/u/0/#all/20'};return {ok:true,json:async()=>structuredClone(draft)};}
     return original(path,options);
   });
   await h.ui.bootstrap();await settle();
   const panel=h.elements.page.querySelector('.gmail-conversation');await findButton(panel,'写邮件 / 继续草稿').click();await settle();
   const composer=panel.querySelector('.mail-composer'), en=walk(composer).find(x=>x['aria-label']==='英文正文（发送给客户）'),zh=walk(composer).find(x=>x['aria-label']==='中文对照（仅供自己审核）');
+  await findButton(composer,'准备重新授权').click();await settle();assert.ok(walk(composer).some(x=>x.tagName==='A' && x.textContent==='继续 Google 登录并授权 ↗'));
   en.value='Hello buyer, here are our shoes.';en.listeners.input();zh.value='您好，这是我们的鞋子。';zh.listeners.input();
   await findButton(panel,'更新邮件往来').click();await settle();assert.equal(en.value,'Hello buyer, here are our shoes.');
   const picker=walk(composer).find(x=>x.tagName==='DETAILS' && x.className==='mail-material-picker');picker.open=true;await picker.listeners.toggle();await settle();

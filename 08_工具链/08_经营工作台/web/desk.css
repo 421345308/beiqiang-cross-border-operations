@@ -162,6 +162,7 @@
 .mail-attachment{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:8px 0;border-bottom:1px solid #f1f4f0;font-size:12px}.mail-attachment a{overflow-wrap:anywhere;color:#397357}
 .mail-attachment-controls,.mail-compose-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:14px}
 .mail-upload,.mail-material-picker>summary{display:inline-block;cursor:pointer;padding:8px 11px;border:1px solid #d7e4d8;border-radius:7px;background:#f7faf6;color:#416b4e;font-size:12px;font-weight:600}.mail-upload input{display:none}
+.mail-grant{margin-top:16px;font-size:12px;color:#607a68}.mail-grant>summary{cursor:pointer;color:#51775c}.mail-grant>p,.mail-grant>div{margin-top:9px}.mail-grant a{color:#397357}
 .mail-material-picker[open]{flex-basis:100%}.mail-material-picker input{margin-top:10px}.mail-material-list{max-height:190px;overflow:auto;display:grid;gap:2px}.mail-material-list button{text-align:left;margin:0;padding:8px;color:#426c50}
 .mail-review{border-radius:10px;padding:18px;background:#f7faf6;color:#304d39}.mail-review h3{font-size:16px;margin-bottom:12px}.mail-review h4{font-size:12px;margin:17px 0 7px;color:#6c8270}.mail-review>p{font-size:13px;margin:5px 0;overflow-wrap:anywhere}
 .mail-review-text{white-space:pre-wrap;overflow-wrap:anywhere;font:inherit;font-size:13px;line-height:1.75;color:#304238}.mail-review-files{margin-top:14px;border-top:1px solid #e2ece1}.mail-compose-feedback{min-height:18px;margin-top:12px;font-size:12px;color:#718677}

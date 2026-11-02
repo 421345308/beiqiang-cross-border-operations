@@ -86,8 +86,9 @@ def _desktop_client(config):
 
 
 class GmailOAuth:
-    def __init__(self, *, request=_request, reader=load_credentials, saver=save_credentials, clock=time.time):
+    def __init__(self, *, request=_request, reader=load_credentials, saver=save_credentials, clock=time.time, scope=SCOPE, grant_handler=None):
         self.request, self.reader, self.saver, self.clock = request, reader, saver, clock
+        self.scope, self.grant_handler = scope, grant_handler
         self.lock = threading.Lock()
         self.pending = None
 
@@ -105,7 +106,7 @@ class GmailOAuth:
             self.pending = {'state': state, 'verifier': verifier, 'client': client,
                             'redirect_uri': redirect_uri, 'started_at': self.clock()}
         query = {'client_id': client['client_id'], 'redirect_uri': redirect_uri, 'response_type': 'code',
-                 'scope': SCOPE, 'state': state, 'code_challenge': challenge, 'code_challenge_method': 'S256',
+                 'scope': self.scope, 'state': state, 'code_challenge': challenge, 'code_challenge_method': 'S256',
                  'access_type': 'offline', 'prompt': 'consent'}
         if account_hint:
             query['login_hint'] = normalize_email(account_hint)
@@ -127,11 +128,14 @@ class GmailOAuth:
         tokens = self.request(TOKEN_URL, form=form)
         if not tokens.get('access_token') or not tokens.get('refresh_token'):
             raise ValueError('Google 未提供持续读取授权，请重新连接')
-        if tokens.get('scope') and SCOPE not in tokens['scope'].split():
-            raise ValueError('Google 未授予 Gmail 读取权限')
+        if tokens.get('scope') and not set(self.scope.split()).issubset(set(tokens['scope'].split())):
+            raise ValueError('Google 未授予所需的 Gmail 权限')
         profile = self.request(GMAIL_URL + 'profile', token=tokens['access_token'])
         account = normalize_email(profile.get('emailAddress'))
-        self.saver(account, {**client, 'refresh_token': tokens['refresh_token']})
+        if self.grant_handler:
+            self.grant_handler(account, client, tokens)
+        else:
+            self.saver(account, {**client, 'refresh_token': tokens['refresh_token']})
         return account
 
 

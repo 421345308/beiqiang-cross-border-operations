@@ -200,6 +200,20 @@ class DeskHTTPTests(unittest.TestCase):
             finally:connection.close()
             finish.assert_called_once_with('fixture','one-time-code')
 
+    def test_send_oauth_uses_current_port_and_separate_grant(self):
+        with patch.object(self.app.gmail_drafts,'start_oauth',return_value='https://accounts.google.com/o/oauth2/v2/auth?state=fixture') as start, \
+             patch.object(self.app.gmail_drafts,'finish_oauth') as finish:
+            status,result=self.request('/api/desk/gmail/send-oauth/start',{})
+            self.assertEqual(status,200);self.assertIn('accounts.google.com',result['authorization_url'])
+            self.assertEqual(start.call_args.args[0],f'http://127.0.0.1:{self.http.server_port}/api/desk/gmail/send-oauth/callback')
+            connection=http.client.HTTPConnection('127.0.0.1',self.http.server_port,timeout=5)
+            try:
+                connection.request('GET','/api/desk/gmail/send-oauth/callback?state=fixture&code=one-time-code')
+                response=connection.getresponse();page=response.read().decode('utf8')
+                self.assertEqual(response.status,200);self.assertIn('发送授权已恢复',page);self.assertNotIn('one-time-code',page)
+            finally:connection.close()
+            finish.assert_called_once_with('fixture','one-time-code')
+
     def test_google_oauth_reply_reaches_customer_queue_and_agent(self):
         from gmail_oauth import GmailOAuthMailbox, SCOPE
         import base64
