@@ -65,18 +65,30 @@ function harness(hash = '#/overview') {
   return { ui: context.window.__desk, elements, body, objects, artifacts, jobs, requests, location, profile, discovery, setWebsite: value => { web = value; }, setToday: value => { today = value; }, setProductGaps: value => { productGaps = value; }, originalFetch: context.fetch, interceptFetch: callback => { context.fetch = callback; } };
 }
 
-test('Gmail 显示真实连接状态，原文按需展开，更新邮件保留未保存内容', async () => {
+test('Gmail 默认显示中文，原文只通过 Gmail 链接查看，更新邮件保留未保存内容', async () => {
   const h=harness('#/object/customer%3A1'), original=h.originalFetch;
   h.objects.push({id:'customer:1',kind:'customer',title:'邮件客户',assets:[]});
   let mail={status:{state:'not_connected'},messages:[]};
   h.interceptFetch(async(path,options)=>String(path).startsWith('/api/desk/gmail/') ? {ok:true,json:async()=>structuredClone(mail)} : original(path,options));
   await h.ui.bootstrap(); await settle(); assert.ok(h.elements.page.textContent.includes('尚未连接 Gmail')); assert.equal(h.elements.page.textContent.includes('已连接 ·'),false);
   const instruction=h.ui.S.detail.instruction; instruction.value='自己未提交的要求'; instruction.listeners.input();
-  mail={status:{state:'connected',account_email:'sales@example.org'},reply_pending:true,next_action:'准备样品资料',messages:[{id:'m1',direction:'inbound',sent_at:'2026-11-01T01:00:00Z',subject:'Sample request',snippet:'Please send sample details',body:'Buyer original text',from:'buyer@example.org',to:['sales@example.org']}]};
+  mail={status:{state:'connected',account_email:'sales@example.org'},reply_pending:true,next_action:'准备样品资料',messages:[{id:'m1',direction:'inbound',sent_at:'2026-11-01T01:00:00Z',subject:'Sample request',subject_zh:'样品咨询',translation_zh:'请提供样品详情。',translation_state:'ready',body:'Buyer original text',from:'buyer@example.org',url:'https://mail.google.com/mail/u/0/#all/thread'}]};
   await findButton(h.body,'更新邮件往来').click(); await settle();
-  const panel=h.elements.page.querySelector('.gmail-conversation'); assert.ok(panel.textContent.includes('客户有新邮件')); assert.ok(panel.textContent.includes('准备样品资料')); assert.equal(panel.querySelector('details').open,undefined); assert.ok(panel.textContent.includes('Buyer original text'));
+  const panel=h.elements.page.querySelector('.gmail-conversation'); assert.ok(panel.textContent.includes('客户有新邮件')); assert.ok(panel.textContent.includes('准备样品资料')); assert.ok(panel.textContent.includes('样品咨询')); assert.ok(panel.textContent.includes('请提供样品详情。')); assert.equal(panel.textContent.includes('Buyer original text'),false); assert.equal(panel.textContent.includes('Sample request'),false); assert.ok(walk(panel).some(x=>x.tagName==='A' && x.href==='https://mail.google.com/mail/u/0/#all/thread'));
   assert.equal(h.ui.S.detail.instruction,instruction); assert.equal(instruction.value,'自己未提交的要求');
   await findButton(panel,'根据邮件准备回复').click(); assert.ok(instruction.value.startsWith('自己未提交的要求')); assert.ok(instruction.value.includes('最新 Gmail 往来')); assert.equal(h.requests.some(x=>x.path.includes('send')),false);
+});
+
+test('邮件翻译进行中及失败时显示状态，并可重试', async () => {
+  const h=harness('#/object/customer%3A1'), original=h.originalFetch;
+  h.objects.push({id:'customer:1',kind:'customer',title:'邮件客户',assets:[]});
+  let state='translating'; const calls=[];
+  h.interceptFetch(async(path,options)=>{ if(String(path).startsWith('/api/desk/gmail/')) { calls.push(path); return {ok:true,json:async()=>({status:{state:'connected'},messages:[{id:'m1',direction:'inbound',body:'secret original',translation_state:state,url:'https://mail.google.com/mail/u/0/#all/thread'}]})}; } return original(path,options); });
+  await h.ui.bootstrap(); await settle(); const panel=h.elements.page.querySelector('.gmail-conversation');
+  assert.ok(panel.textContent.includes('正在翻译成中文')); assert.equal(panel.textContent.includes('secret original'),false);
+  state='error'; await findButton(panel,'更新邮件往来').click(); await settle();
+  assert.ok(panel.textContent.includes('中文翻译暂未完成')); await findButton(panel,'重试翻译').click();
+  assert.equal(calls.filter(x=>x==='/api/desk/gmail/sync').length,2);
 });
 
 test('Gmail 连接只在本地表单提交密码，成功刷新并清空密码', async () => {

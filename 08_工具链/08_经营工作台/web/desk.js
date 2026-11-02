@@ -419,10 +419,15 @@
       const messages = Array.isArray(data.messages) ? data.messages : [];
       if (!messages.length) host.append(el('p', connected ? '暂未找到与这位客户关联的邮件。' : '连接完成后，客户邮件会在这里显示。', 'muted'));
       for (const mail of messages) {
-        const entry = el('article', undefined, 'gmail-message'); entry.append(el('h3', `${mail.direction === 'outbound' ? '我方发出' : mail.mail_kind === 'automatic' ? '自动回复' : '客户来信'} · ${time(mail.sent_at)}`), el('p', mail.subject || '无主题', 'mail-subject'));
-        if (mail.translation_zh) entry.append(el('p', text(mail.translation_zh), 'plain-reading')); else entry.append(el('p', '原文可在下方查看；可让 Sol 整理中文重点及回复。', 'muted'));
+        const entry = el('article', undefined, 'gmail-message'); entry.append(el('h3', `${mail.direction === 'outbound' ? '我方发出' : mail.mail_kind === 'automatic' ? '自动回复' : '客户来信'} · ${time(mail.sent_at)}`));
+        if (mail.subject_zh) entry.append(el('p', text(mail.subject_zh), 'mail-subject'));
+        if (mail.translation_zh) entry.append(el('p', text(mail.translation_zh), 'plain-reading'));
+        else if (mail.translation_state === 'ready') entry.append(el('p', '邮件没有可显示的文字正文。', 'muted'));
+        else if (mail.translation_state === 'translating') entry.append(el('p', '正在翻译成中文…', 'muted'));
+        else entry.append(el('p', '中文翻译暂未完成。', 'inline-error'), button('重试翻译', () => loadGmail(ctx, true), 'quiet'));
+        if (mail.from) entry.append(el('p', `发件人：${text(mail.from)}`, 'artifact-note'));
         if (mail.attachments?.length) entry.append(el('p', `附件：${mail.attachments.map(a=>text(a.filename)).join('、')}`, 'artifact-note'));
-        const original = el('details'); original.append(el('summary', '查看邮件原文与收发人'), el('p', `发件人：${text(mail.from)} · 收件人：${Array.isArray(mail.to) ? mail.to.join('，') : text(mail.to)}`), el('pre', text(mail.body || mail.snippet), 'source-body')); const source = link('在 Gmail 中查看 ↗', mail.url); if (source) original.append(source); entry.append(original); host.append(entry);
+        const source = link('在 Gmail 查看原文 ↗', mail.url); if (source) entry.append(source); host.append(entry);
         if (mail.body_truncated) entry.append(el('p','邮件内容较长，可在 Gmail 查看完整原文和附件。','artifact-note'));
       }
     } catch (error) { if (S.detail === ctx) ctx.gmailHost.replaceChildren(el('h2', 'Gmail 邮件往来'), el('p', `邮件暂不可读取：${error.message}`, 'artifact-note'), button('重试读取邮件', () => loadGmail(ctx), 'quiet')); }

@@ -18,6 +18,7 @@ from channel_overview import ChannelOverview
 from creation import Creation
 from creation_canvas import CreationCanvas
 from gmail_sync import GmailService
+from gmail_translation import GmailTranslator
 from product_gaps import ProductGaps
 from today import Today
 from workspaces import WorkspaceConflict as CanvasConflict
@@ -63,6 +64,7 @@ class Workbench:
         self.product_gaps=ProductGaps(self)
         self.today=Today(self,gaps=self.product_gaps)
         self.gmail=GmailService(self,on_new_reply=self._gmail_reply)
+        self.gmail.translator=GmailTranslator(self,self.gmail.translation_changed)
         if self.gmail.status()['state']=='connected':self.gmail.start()
 
     def _gmail_reply(self,object_id,message,context):

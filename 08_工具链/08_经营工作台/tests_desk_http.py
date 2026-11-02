@@ -36,6 +36,7 @@ class DeskHTTPTests(unittest.TestCase):
         self.write(ASSETS,{'files':[{'file':'01_产品资产/02_成品素材/BQ009/shoe.png','products':['BQ009'],'roles':['商品主图']}]})
         self.write(CHANNEL,{'listings':[{'id':'1601','product_id':'BQ009','current_platform_fields':{'title':'Verified fixture title','status':'approved','at':'2026-10-31'}}]})
         self.app=server.Workbench(self.root,self.root/'runtime')
+        self.app.gmail.translator=None
         self.clock=[1000]
         self.website=WebsiteInquiries(self.root,fetch=lambda:{'ok':True,'records':[
             {'reference':'BQ-REAL','company':'Fixture buyer','country':'US','requirements':'Need sample options','internalTest':False},
@@ -219,15 +220,21 @@ class DeskHTTPTests(unittest.TestCase):
             def context(self,emails,force=False):
                 return {'status':{'state':'ready','last_success_at':'2999-01-01T01:00:00+00:00','error':None},
                         'messages':list(self.messages),'reply_pending':True,'next_action':''}
+        class Translator:
+            def apply(self,account,messages,ids,retry=False):
+                for message in messages:
+                    if message['id'] in ids:message.update(translation_zh='请提供详细资料。',subject_zh='咨询',translation_state='ready')
         mail=Mailbox()
         self.app.gmail=GmailService(self.app,mailbox_factory=lambda account:mail,credential_tester=lambda *a:None,
-                                    credential_saver=lambda *a:None,credential_checker=lambda *a:True,on_new_reply=self.app._gmail_reply)
+                                    credential_saver=lambda *a:None,credential_checker=lambda *a:True,on_new_reply=self.app._gmail_reply,
+                                    translator=Translator())
         self.app.gmail.connect(account,'synthetic-password')
         mail.messages=[{'id':'mail-1','direction':'inbound','sent_at':'2999-01-01T00:00:00+00:00','from':buyer,'to':account,'body':'Please share details.'}]
         with patch.object(self.app.agent_jobs,'start',return_value={'id':'draft-job'}) as start:
             self.app.gmail.scan_once();self.app.gmail.scan_once();self.assertEqual(start.call_count,1)
             status,result=self.request('/api/desk/gmail/customer?'+urlencode({'object_id':oid}))
             self.assertEqual(status,200);self.assertTrue(result['reply_pending']);self.assertEqual(result['messages'][0]['id'],'mail-1')
+            self.assertEqual(result['messages'][0]['translation_zh'],'请提供详细资料。')
             from desk_mcp import DeskTools
             agent_mail=DeskTools(self.app.business,self.root,oid).call('get_customer_gmail',{})
             self.assertEqual(agent_mail['messages'][0]['body'],'Please share details.')

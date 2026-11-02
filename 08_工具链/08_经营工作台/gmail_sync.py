@@ -44,10 +44,11 @@ class GmailService:
     def __init__(self,app,*,mailbox_factory=GmailMailbox,credential_tester=test_credentials,
                  credential_saver=save_password,credential_checker=credential_available,
                  oauth_factory=GmailOAuth,oauth_mailbox_factory=GmailOAuthMailbox,
-                 oauth_credential_checker=oauth_credentials_available,on_new_reply=None,interval=120,clock=time.time):
+                 oauth_credential_checker=oauth_credentials_available,on_new_reply=None,translator=None,interval=120,clock=time.time):
         self.app=app;self.mailbox_factory=mailbox_factory;self.credential_tester=credential_tester
         self.credential_saver=credential_saver;self.credential_checker=credential_checker
         self.on_new_reply=on_new_reply;self.interval=interval;self.clock=clock
+        self.translator=translator
         self.oauth=oauth_factory();self.oauth_mailbox_factory=oauth_mailbox_factory;self.oauth_credential_checker=oauth_credential_checker
         self.lock=threading.RLock();self._stop=threading.Event();self._thread=None
         self._cache={};self._mailbox=None;self._account='';self._connected_at=None;self.revision=0
@@ -134,6 +135,9 @@ class GmailService:
     def peek(self,object_id):
         with self.lock:return copy.deepcopy(self._cache.get(object_id) or self._empty())
 
+    def translation_changed(self):
+        with self.lock:self.revision+=1
+
     def buyer_candidates(self):
         with self.lock:
             if not self._mailbox:return {'status':{'state':'not_connected'},'items':[]}
@@ -213,6 +217,14 @@ class GmailService:
                 self._state=result['status']['state'];self._error=result['status'].get('error')
                 if self._state=='connected':self._last_success=result['status'].get('last_success_at')
                 if previous!=(self._state,self._error):self.revision+=1
+        if self.translator and account and result.get('messages'):
+            messages=result['messages']
+            if _context is None:
+                selected=messages if result.get('status',{}).get('state')=='connected' else []
+            else:
+                incoming=[m for m in messages if m.get('direction')=='inbound' and m.get('mail_kind')!='automatic']
+                selected=[max(incoming,key=lambda m:_timestamp(m.get('sent_at')) or 0)] if incoming and result.get('reply_pending') else []
+            self.translator.apply(account,messages,[m.get('id') for m in selected],retry=bool(force and _context is None))
         with self.lock:
             result['status'].update(self._authorization_details())
             old=self._cache.get(object_id)

@@ -59,6 +59,16 @@ class Tests(unittest.TestCase):
     def test_new_reply_from_historical_customer_is_processed(self):
         s=self.connect();self.flow={'state':'new','bucket':'history'};self.mail.messages=[message()]
         self.assertTrue(s.customer('customer:1')['reply_pending']);self.assertEqual(len(self.events),1)
+    def test_translation_schedules_new_incoming_in_background_and_all_messages_on_open(self):
+        class Translator:
+            def __init__(self):self.calls=[]
+            def apply(self,account,messages,ids,retry=False):self.calls.append((account,list(ids),retry))
+        s=self.connect();s.translator=Translator()
+        old=message('old','outbound','2026-11-01T01:00:00Z');incoming=message('new')
+        self.mail.messages=[old,incoming]
+        s.scan_once();self.assertEqual(s.translator.calls[-1][1],['new'])
+        s.customer('customer:1');self.assertEqual(s.translator.calls[-1][1],['old','new'])
+        s.customer('customer:1',force=True);self.assertTrue(s.translator.calls[-1][2])
     def test_wait_boundary_not_connect(self):
         s=self.connect();self.mail.messages=[message()];s.customer('customer:1');self.assertEqual(len(self.events),1)
     def test_active_and_prospect_replies_after_connection_are_dispatched(self):
