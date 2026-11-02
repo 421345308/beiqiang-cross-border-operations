@@ -340,6 +340,17 @@ test('default artifact follows latest actual job, explicit artifact wins, and sa
   h.location.hash = '#/object/product%3A1?artifact=a1'; await h.ui.renderRoute(); await settle(); assert.equal(h.ui.S.detail.selectedId, 'a1');
 });
 
+test('客户成果链接打开所选草稿，而不是默认最新成果', async () => {
+  const h=harness('#/customers?view=development&item=candidate%3A1&artifact=older');
+  const oid='prospect:candidate:1';
+  h.discovery.candidates.push({id:'candidate:1',object_id:oid,kind:'candidate',title:'买家公司'});
+  h.artifacts.push({id:'newer',object_id:oid,title:'最新成果',content:'最新正文'},
+                   {id:'older',object_id:oid,title:'指定草稿',content:'指定正文'});
+  await h.ui.bootstrap(); await settle();
+  assert.equal(h.ui.S.detail.selectedId,'older');
+  assert.ok(h.ui.S.detail.editor.querySelector('.artifact-preview').textContent.includes('指定正文'));
+});
+
 test('customer analysis preserves original, displays Chinese profile, and submits structured analysis mode', async () => {
   const h = harness('#/object/customer%3Arecord'); h.objects.push({ id: 'customer:record', kind: 'customer', title: '来源记录', subtitle: '网站询盘', source: 'website:record', assets: [], content: 'Please send sample information.' }); await h.ui.bootstrap(); await settle(); const ctx = h.ui.S.detail;
   assert.ok(ctx.profileHost.textContent.includes('请提供样品信息')); assert.ok(ctx.profileHost.textContent.includes('Please send sample information.')); assert.ok(ctx.profileHost.textContent.includes('询盘简报')); assert.equal(ctx.profileHost.textContent.includes('真实询盘'), false);
