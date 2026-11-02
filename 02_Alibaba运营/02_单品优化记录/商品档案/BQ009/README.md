@@ -1,6 +1,17 @@
 # BQ009 商品档案
 
-**2026-11-02最新价格复核：**当前平台本款4链接仍为2–49双10.00美元、50双起9.50美元。负责人已明确质疑仅两档；独立交叉复核建议保留前两档金额、恢复100双起第三档，9.00美元仅为待选方案，尚未改价。此前“最终确认”是旧执行阶段记录，不作为本轮同意删档的依据。
+**2026-11-03当前：**负责人已确认三档价：2–49双10.00美元、50–99双9.50美元、100双起9.00美元；本款4链接全部SKU已正式get命中。每条长标题均120–127字节，含工厂/制造商、Custom Logo和OEM/ODM，按运动跑步/慢跑用途组织；已单次提交并get逐字命中，最新审核和公开状态按下表，不以旧版公开观察覆盖。
+
+## 当前标题与价格（2026-11-03）
+
+| 商品ID | 最新标题 | 字节 | 审核/展示 |
+| --- | --- | --- | --- |
+| 1601825074604 | Lightweight Running Shoes for Daily Jogging with Breathable Uppers and Non-Slip Soles, Custom Logo OEM/ODM Factory Direct | 121 | modified/N |
+| 1601939721165 | Lightweight Running Shoes for Daily Jogging with Breathable Uppers and Custom Logo, OEM/ODM Direct from the Manufacturer | 120 | modified/N |
+| 1601939661419 | Breathable Jogging Shoes for Daily Runs and Casual Wear with Non-Slip Soles, Custom Logo OEM/ODM Direct from the Manufacturer | 125 | modified/N |
+| 1601939675350 | Lightweight Breathable Running Sneakers for Daily Runs with High-Rebound Soles, Custom Logo OEM/ODM Direct from the Factory | 123 | modified/N |
+
+每条同时保留工厂直供/制造商与定制，不再把它们作为可选项。价格在前一合并更新中已恢复三档；本次长稿只写productTitle，SKU身份/库存/颜色图、材料、主图、详情、FAQ等保留，评分均5.00。独立复核与正式原件沿本款`2026-11-02_交叉复核修正/20261103/`逐ID保存。此前短题、两档价和旧公开状态是历史阶段，不能作当前值。4条GET详情图片数组曾变序，图片/角色集合保全，当前Schema及最终展示组序另核。
 
 2026-10-31最新：本款4条差异标题、亮点及10.90小单价已批准并逐ID完成公开正文/首屏主图验收；中/大档按各ID保留，评分5.00。W1薄荷绿配色和35–45码弹层通过。
 
