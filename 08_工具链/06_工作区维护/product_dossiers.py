@@ -107,6 +107,11 @@ def builds(data):
             lines.append(f"- 本地同步状态：`{listing.get('local_sync',{}).get('state','UNVERIFIED')}`。")
             if listing.get('optimization'):
                 opt = listing['optimization']
+                title_opt = opt.get('title_search')
+                if title_opt:
+                    lines.append(f"- 标题搜索优化：`{title_opt.get('state','')}`；{title_opt.get('next_action','')}")
+                    for evidence in title_opt.get('evidence', []):
+                        lines.append(f'  - 标题证据：{ref(evidence,parent)}')
                 current_opt=opt.get('content_quality_revision') or opt.get('product_performance_review') or opt.get('model_factory_normalization') or opt.get('family_color_expansion') or opt.get('real_source_creation') or opt
                 lines += [f"- 本轮优化：`{current_opt.get('state','')}`；{current_opt.get('next_action','')}"]
                 for path in current_opt.get('evidence', []):

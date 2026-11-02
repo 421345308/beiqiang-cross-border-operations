@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-10-31",
+  "updated_on": "2026-11-02",
   "listings": [
     {
       "id": "1601969936536",
@@ -80277,12 +80277,14 @@
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943535517/当前图库与货号.json",
         "at": "2026-10-21T07:20:49.927840+00:00",
         "observed_at": "2026-10-19T18:43:16.927855+00:00",
-        "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943535517/verification.json"
+        "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943535517/verification.json",
+        "title_state": "PENDING_PUBLIC_VERIFY",
+        "title_next_action": "已审核通过，待核买家公开页实际呈现"
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943535517/formal_get.json",
-        "at": "2026-10-21T07:20:49.927840+00:00",
-        "scope": "本次价格正式回读；不代表公开验收"
+        "at": "2026-11-02T00:59:41.780929+00:00",
+        "scope": "标题修改后审核通过的官方字段回读；公开页面待验"
       },
       "platform_group": {
         "id": "916810944",
@@ -80290,9 +80292,9 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-10-21T07:20:49.927840+00:00",
+        "at": "2026-11-02T00:59:41.780929+00:00",
         "model": "BQ1016-B",
-        "title": "Men's Lace-Up Casual Shoes with Mesh Lining and Rubber Outsoles",
+        "title": "Men's Mid Top Lace Up Outdoor Walking Shoes with Mesh Lining and Rubber Sole for Casual Wear",
         "keywords": [
           ""
         ],
@@ -80307,8 +80309,8 @@
         "category_id": 201334413,
         "display": "Y",
         "status": "approved",
-        "url": "https://www.alibaba.com/product-detail/Men-s-Lace-Up-Casual-Shoes_1601943535517.html",
-        "scope": "Current exact-ID official get; scoped target acceptance kept separately",
+        "url": "https://www.alibaba.com/product-detail/Men-s-Mid-Top-Lace-Up_1601943535517.html",
+        "scope": "精确ID商品回读，审核通过；公开页面待验",
         "highlights": "Mid-top lace-up outdoor-style shoes with a wrapped toe area and deep sole tread.\n\nAdjustable instep fit: The front laces let the wearer loosen the opening for entry and set the tension over the foot."
       },
       "optimization": {
@@ -80435,6 +80437,27 @@
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943535517/update_receipt.json",
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943535517/verification.json"
           ]
+        },
+        "title_search": {
+          "state": "FORMAL_APPROVED_PUBLIC_PENDING",
+          "at": "2026-11-02T00:49:31.670274+00:00",
+          "before": "Men's Lace-Up Casual Shoes with Mesh Lining and Rubber Outsoles",
+          "target": "Men's Mid Top Lace Up Outdoor Walking Shoes with Mesh Lining and Rubber Sole for Casual Wear",
+          "scope": [
+            "productTitle"
+          ],
+          "keywords_note": "旧关键词接口返回空；本商品编辑版本是否迁移待核，不认定专用字段可写",
+          "other_fields_and_inventory": "IMMEDIATE_READBACK_UNCHANGED",
+          "public_status": "NOT_CHECKED",
+          "evidence": [
+            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943535517/.local/标题优化/20261102_plan.json",
+            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943535517/.local/标题优化/20261102_update_receipt.json",
+            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943535517/.local/标题优化/20261102_immediate_readback_summary.json",
+            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943535517/.local/标题优化/20261102_review_get.json",
+            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943535517/.local/标题优化/20261102_approved_verification.json"
+          ],
+          "next_action": "正式审核已通过；复核买家公开页实际呈现及后续搜索表现",
+          "reviewed_at": "2026-11-02T00:59:41.780929+00:00"
         }
       },
       "legacy_model_aliases": [
@@ -83106,12 +83129,14 @@
         "at": "2026-10-21T07:41:34.142616+00:00",
         "observed_at": "2026-10-19T18:42:55.488574+00:00",
         "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943635041/verification.json",
-        "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR019_旧报价图替换/商品/1601943635041/verification.json"
+        "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR019_旧报价图替换/商品/1601943635041/verification.json",
+        "title_state": "PENDING_PLATFORM_VERIFY",
+        "title_next_action": "待审核通过后核正式标题、其他字段及公开呈现"
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943635041/formal_get.json",
-        "at": "2026-10-21T07:41:34.142616+00:00",
-        "scope": "本次价格正式回读；不代表公开验收"
+        "at": "2026-11-02T00:54:14.898931+00:00",
+        "scope": "本次标题修改后官方字段回读；审核中，不等于公开生效"
       },
       "platform_group": {
         "id": "972130291",
@@ -83119,9 +83144,9 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-10-21T07:41:34.142616+00:00",
+        "at": "2026-11-02T00:54:14.898931+00:00",
         "model": "BQ1019-C",
-        "title": "Women's Low Top Knit Sneakers with Pull On Design and Round Toe",
+        "title": "Women's Knit Slip On Walking Shoes with Pull Tab and Round Toe for Everyday Wear",
         "keywords": [
           ""
         ],
@@ -83134,10 +83159,10 @@
           "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
         ],
         "category_id": 201333014,
-        "display": "Y",
-        "status": "approved",
-        "url": "https://www.alibaba.com/product-detail/Women-s-Low-Top-Knit-Sneakers_1601943635041.html",
-        "scope": "Current exact-ID official get; scoped target acceptance kept separately",
+        "display": "N",
+        "status": "modified",
+        "url": "https://www.alibaba.com/product-detail/Women-s-Knit-Slip-On-Walking_1601943635041.html",
+        "scope": "精确ID商品回读；标题审核与公开验收分开",
         "highlights": "Women's casual sneakers with a knit-texture upper, slip-on opening and rear pull tab.\n\nSimple daily dressing: The slip-on opening removes the need to tie conventional laces when putting the shoes on.\n\nA grip for entry: The pull loop provides a place to hold the shoe while guiding the foot into the opening.",
         "detail_images": [
           {
@@ -83287,6 +83312,24 @@
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR019_旧报价图替换/商品/1601943635041/update_receipt.json",
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR019_旧报价图替换/商品/1601943635041/verification.json"
           ]
+        },
+        "title_search": {
+          "state": "PENDING_REVIEW",
+          "at": "2026-11-02T00:54:14.898931+00:00",
+          "before": "Women's Low Top Knit Sneakers with Pull On Design and Round Toe",
+          "target": "Women's Knit Slip On Walking Shoes with Pull Tab and Round Toe for Everyday Wear",
+          "scope": [
+            "productTitle"
+          ],
+          "keywords_note": "旧关键词接口返回空；本商品编辑版本是否迁移待核",
+          "other_fields_and_inventory": "IMMEDIATE_READBACK_UNCHANGED",
+          "public_status": "NOT_CHECKED",
+          "evidence": [
+            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943635041/.local/标题优化/20261102_plan.json",
+            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943635041/.local/标题优化/20261102_update_receipt.json",
+            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943635041/.local/标题优化/20261102_immediate_readback_summary.json"
+          ],
+          "next_action": "等待审核，核准后复核当前标题及买家页"
         }
       },
       "legacy_model_aliases": [
@@ -84419,12 +84462,14 @@
         "at": "2026-10-21T07:40:08.926999+00:00",
         "observed_at": "2026-10-19T18:44:12.791221+00:00",
         "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943584343/verification.json",
-        "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR021_旧报价图替换/商品/1601943584343/verification.json"
+        "gallery_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR021_旧报价图替换/商品/1601943584343/verification.json",
+        "title_state": "PENDING_PLATFORM_VERIFY",
+        "title_next_action": "待审核通过后核正式标题、其他字段及公开呈现"
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943584343/formal_get.json",
-        "at": "2026-10-21T07:40:08.926999+00:00",
-        "scope": "本次价格正式回读；不代表公开验收"
+        "at": "2026-11-02T01:02:16.198457+00:00",
+        "scope": "本次标题修改后官方字段回读；审核中，不等于公开生效"
       },
       "platform_group": {
         "id": "972130291",
@@ -84432,9 +84477,9 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-10-21T07:40:08.926999+00:00",
+        "at": "2026-11-02T01:02:16.198457+00:00",
         "model": "BQ1021-B",
-        "title": "Women's Buckle Strap Casual Flats with Suede Upper and Round Toe",
+        "title": "Women's Suede Mary Jane Flats with Double Buckle Straps and Leather Lining for Casual Wear",
         "keywords": [
           ""
         ],
@@ -84447,10 +84492,10 @@
           "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
         ],
         "category_id": 201152005,
-        "display": "Y",
-        "status": "approved",
-        "url": "https://www.alibaba.com/product-detail/Women-s-Buckle-Strap-Casual-Flats_1601943584343.html",
-        "scope": "Current exact-ID official get; scoped target acceptance kept separately",
+        "display": "N",
+        "status": "modified",
+        "url": "https://www.alibaba.com/product-detail/Women-s-Suede-Mary-Jane-Flats_1601943584343.html",
+        "scope": "精确ID商品回读；标题审核中、公开待验",
         "highlights": "Double-strap fastening: Two buckle straps cross the open vamp to hold the shoe around the instep.\n\nOpen-vamp Mary Jane shape: The cut-away upper exposes the top of the foot while retaining a closed toe and heel.\n\nSuede and leather lining: A suede upper and genuine-leather inside combine with a rubber sole.",
         "detail_images": [
           {
@@ -84615,6 +84660,24 @@
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR021_旧报价图替换/商品/1601943584343/update_receipt.json",
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR021_旧报价图替换/商品/1601943584343/verification.json"
           ]
+        },
+        "title_search": {
+          "state": "PENDING_REVIEW",
+          "at": "2026-11-02T01:02:16.198457+00:00",
+          "before": "Women's Buckle Strap Casual Flats with Suede Upper and Round Toe",
+          "target": "Women's Suede Mary Jane Flats with Double Buckle Straps and Leather Lining for Casual Wear",
+          "scope": [
+            "productTitle"
+          ],
+          "keywords_note": "旧关键词接口返回空；本商品编辑版本是否迁移待核",
+          "other_fields_and_inventory": "IMMEDIATE_READBACK_UNCHANGED",
+          "public_status": "NOT_CHECKED",
+          "evidence": [
+            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943584343/.local/标题优化/20261102_plan.json",
+            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943584343/.local/标题优化/20261102_update_receipt.json",
+            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943584343/.local/标题优化/20261102_immediate_readback_summary.json"
+          ],
+          "next_action": "等待审核，核准后复核当前标题及买家页"
         }
       },
       "legacy_model_aliases": [
@@ -86255,12 +86318,14 @@
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943597447/当前图库与货号.json",
         "at": "2026-10-21T07:40:45.243787+00:00",
         "observed_at": "2026-10-19T18:43:35.379501+00:00",
-        "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943597447/verification.json"
+        "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943597447/verification.json",
+        "title_state": "PENDING_PLATFORM_VERIFY",
+        "title_next_action": "待审核通过后核正式标题、其他字段及公开呈现"
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943597447/formal_get.json",
-        "at": "2026-10-21T07:40:45.243787+00:00",
-        "scope": "本次价格正式回读；不代表公开验收"
+        "at": "2026-11-02T00:54:10.627801+00:00",
+        "scope": "本次标题修改后官方字段回读；审核中，不等于公开生效"
       },
       "platform_group": {
         "id": "972130291",
@@ -86268,9 +86333,9 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-10-21T07:40:45.243787+00:00",
+        "at": "2026-11-02T00:54:10.627801+00:00",
         "model": "BQ1025-C",
-        "title": "Women's Low Top Buckle Loafers for Casual Footwear Collections",
+        "title": "Women's Leather Slip On Loafers with Buckle Strap and Wool Lining for Casual Wear",
         "keywords": [
           ""
         ],
@@ -86283,10 +86348,10 @@
           "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
         ],
         "category_id": 202240827,
-        "display": "Y",
-        "status": "approved",
-        "url": "https://www.alibaba.com/product-detail/Women-s-Low-Top-Buckle-Loafers_1601943597447.html",
-        "scope": "Current exact-ID official get; scoped target acceptance kept separately",
+        "display": "N",
+        "status": "modified",
+        "url": "https://www.alibaba.com/product-detail/Women-s-Leather-Slip-On-Loafers_1601943597447.html",
+        "scope": "精确ID商品回读；标题审核与公开验收分开",
         "highlights": "Lace-free loafer entry: A slip-on opening and instep buckle strap provide a closed-front option for daily dressing.\n\nWool-lined interior: Wool lining adds a soft contact layer for cooler-season casual wear.\n\nCowhide and rubber construction: A cowhide leather upper pairs with rubber midsole and outsole layers."
       },
       "optimization": {
@@ -86394,6 +86459,24 @@
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943597447/update_receipt.json",
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943597447/verification.json"
           ]
+        },
+        "title_search": {
+          "state": "PENDING_REVIEW",
+          "at": "2026-11-02T00:54:10.627801+00:00",
+          "before": "Women's Low Top Buckle Loafers for Casual Footwear Collections",
+          "target": "Women's Leather Slip On Loafers with Buckle Strap and Wool Lining for Casual Wear",
+          "scope": [
+            "productTitle"
+          ],
+          "keywords_note": "旧关键词接口返回空；本商品编辑版本是否迁移待核",
+          "other_fields_and_inventory": "IMMEDIATE_READBACK_UNCHANGED",
+          "public_status": "NOT_CHECKED",
+          "evidence": [
+            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943597447/.local/标题优化/20261102_plan.json",
+            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943597447/.local/标题优化/20261102_update_receipt.json",
+            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943597447/.local/标题优化/20261102_immediate_readback_summary.json"
+          ],
+          "next_action": "等待审核，核准后复核当前标题及买家页"
         }
       },
       "legacy_model_aliases": [
@@ -86709,12 +86792,14 @@
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943582498/当前图库与货号.json",
         "at": "2026-10-16T04:21:23.811590+00:00",
         "observed_at": "2026-10-19T18:43:27.302880+00:00",
-        "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943582498/verification.json"
+        "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943582498/verification.json",
+        "title_state": "PENDING_PLATFORM_VERIFY",
+        "title_next_action": "待审核通过后核正式标题、其他字段及公开呈现"
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943582498/formal_get.json",
-        "at": "2026-10-19T18:43:27.302880+00:00",
-        "scope": "Original ID productTitle/textDesc only; SKU, images, generalFAQ, company and trade preserved"
+        "at": "2026-11-02T01:02:27.131967+00:00",
+        "scope": "本次标题修改后官方字段回读；审核中，不等于公开生效"
       },
       "platform_group": {
         "id": "973003809",
@@ -86722,9 +86807,9 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-10-19T18:43:27.302880+00:00",
+        "at": "2026-11-02T01:02:27.131967+00:00",
         "model": "BQ1026-B",
-        "title": "Men's Lace Up Walking Style Shoes with Round Toe and Leather Lining",
+        "title": "Men's Leather Lace Up Casual Shoes with Moc Toe and Leather Lining for Everyday Wear",
         "keywords": [
           ""
         ],
@@ -86737,10 +86822,10 @@
           "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
         ],
         "category_id": 201334413,
-        "display": "Y",
-        "status": "approved",
-        "url": "https://www.alibaba.com/product-detail/Men-s-Lace-Up-Walking-Style_1601943582498.html",
-        "scope": "Current exact-ID official get; scoped target acceptance kept separately",
+        "display": "N",
+        "status": "modified",
+        "url": "https://www.alibaba.com/product-detail/Men-s-Leather-Lace-Up-Casual_1601943582498.html",
+        "scope": "精确ID商品回读；标题审核中、公开待验",
         "highlights": "Men's lace-up moc-toe casual shoes with a cowhide leather upper and genuine leather lining.\n\nAdjustable instep fit: The front laces let the wearer loosen the opening for entry and set the tension over the foot.\n\nLeather-lined construction: A genuine leather lining forms the inside contact layer, paired with the closed-front casual upper."
       },
       "optimization": {
@@ -86848,6 +86933,24 @@
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943582498/update_receipt.json",
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943582498/verification.json"
           ]
+        },
+        "title_search": {
+          "state": "PENDING_REVIEW",
+          "at": "2026-11-02T01:02:27.131967+00:00",
+          "before": "Men's Lace Up Walking Style Shoes with Round Toe and Leather Lining",
+          "target": "Men's Leather Lace Up Casual Shoes with Moc Toe and Leather Lining for Everyday Wear",
+          "scope": [
+            "productTitle"
+          ],
+          "keywords_note": "旧关键词接口返回空；本商品编辑版本是否迁移待核",
+          "other_fields_and_inventory": "IMMEDIATE_READBACK_UNCHANGED",
+          "public_status": "NOT_CHECKED",
+          "evidence": [
+            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943582498/.local/标题优化/20261102_plan.json",
+            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943582498/.local/标题优化/20261102_update_receipt.json",
+            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943582498/.local/标题优化/20261102_immediate_readback_summary.json"
+          ],
+          "next_action": "等待审核，核准后复核当前标题及买家页"
         }
       },
       "legacy_model_aliases": [
@@ -87358,12 +87461,14 @@
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943654096/当前图库与货号.json",
         "at": "2026-10-21T07:40:27.943906+00:00",
         "observed_at": "2026-10-19T18:44:51.596302+00:00",
-        "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943654096/verification.json"
+        "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943654096/verification.json",
+        "title_state": "PENDING_PLATFORM_VERIFY",
+        "title_next_action": "待审核通过后核正式标题、其他字段及公开呈现"
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943654096/formal_get.json",
-        "at": "2026-10-21T07:40:27.943906+00:00",
-        "scope": "本次价格正式回读；不代表公开验收"
+        "at": "2026-11-02T00:54:20.261528+00:00",
+        "scope": "本次标题修改后官方字段回读；审核中，不等于公开生效"
       },
       "platform_group": {
         "id": "973003809",
@@ -87371,9 +87476,9 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-10-21T07:40:27.943906+00:00",
+        "at": "2026-11-02T00:54:20.261528+00:00",
         "model": "BQ1027-B",
-        "title": "Women's Lace Up Casual Flats with Scalloped Edge for Everyday Outfits",
+        "title": "Women's Suede Lace Up Ballet Flats with Scalloped Collar and Rubber Sole for Casual Wear",
         "keywords": [
           ""
         ],
@@ -87386,10 +87491,10 @@
           "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
         ],
         "category_id": 201152005,
-        "display": "Y",
-        "status": "approved",
-        "url": "https://www.alibaba.com/product-detail/Women-s-Lace-Up-Casual-Flats_1601943654096.html",
-        "scope": "Current exact-ID official get; scoped target acceptance kept separately",
+        "display": "N",
+        "status": "modified",
+        "url": "https://www.alibaba.com/product-detail/Women-s-Suede-Lace-Up-Ballet_1601943654096.html",
+        "scope": "精确ID商品回读；标题审核与公开验收分开",
         "highlights": "Women's lace-up suede ballet flats with a scalloped collar.\n\nAdjustable instep fit: The front laces let the wearer loosen the opening for entry and set the tension over the foot."
       },
       "optimization": {
@@ -87497,6 +87602,24 @@
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943654096/update_receipt.json",
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/商品/1601943654096/verification.json"
           ]
+        },
+        "title_search": {
+          "state": "PENDING_REVIEW",
+          "at": "2026-11-02T00:54:20.261528+00:00",
+          "before": "Women's Lace Up Casual Flats with Scalloped Edge for Everyday Outfits",
+          "target": "Women's Suede Lace Up Ballet Flats with Scalloped Collar and Rubber Sole for Casual Wear",
+          "scope": [
+            "productTitle"
+          ],
+          "keywords_note": "旧关键词接口返回空；本商品编辑版本是否迁移待核",
+          "other_fields_and_inventory": "IMMEDIATE_READBACK_UNCHANGED",
+          "public_status": "NOT_CHECKED",
+          "evidence": [
+            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943654096/.local/标题优化/20261102_plan.json",
+            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943654096/.local/标题优化/20261102_update_receipt.json",
+            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943654096/.local/标题优化/20261102_immediate_readback_summary.json"
+          ],
+          "next_action": "等待审核，核准后复核当前标题及买家页"
         }
       },
       "legacy_model_aliases": [
@@ -90281,12 +90404,14 @@
         "current_gallery": "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/货号与共用主图/商品/1601943649254/当前图库与货号.json",
         "at": "2026-10-16T04:21:12.601623+00:00",
         "observed_at": "2026-10-19T19:50:29.996741+00:00",
-        "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/结构与标题纠正/商品/1601943649254/verification.json"
+        "content_verification": "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/结构与标题纠正/商品/1601943649254/verification.json",
+        "title_state": "PENDING_PLATFORM_VERIFY",
+        "title_next_action": "待审核通过后核正式标题、其他字段及公开呈现"
       },
       "formal_fields": {
         "file": "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943649254/formal_get.json",
-        "at": "2026-10-19T19:50:29.996741+00:00",
-        "scope": "Original ID productTitle/textDesc only; SKU, images, generalFAQ, company and trade preserved"
+        "at": "2026-11-02T01:02:21.698416+00:00",
+        "scope": "本次标题修改后官方字段回读；审核中，不等于公开生效"
       },
       "platform_group": {
         "id": "972130291",
@@ -90294,9 +90419,9 @@
         "scope": "正式商品接口返回店内分组；不等于采购意图分类"
       },
       "current_platform_fields": {
-        "at": "2026-10-19T19:50:29.996741+00:00",
+        "at": "2026-11-02T01:02:21.698416+00:00",
         "model": "BQ1033-B",
-        "title": "Women's Round Toe Ballet Flats with Instep Strap for Casual Outfits",
+        "title": "Women's Leather Ballet Flats with Instep Strap and Round Toe for Casual Wear",
         "keywords": [
           ""
         ],
@@ -90309,10 +90434,10 @@
           "https://sc04.alicdn.com/kf/Hea3fc4c6da4b46e0bb75c003260875120.png"
         ],
         "category_id": 201152005,
-        "display": "Y",
-        "status": "approved",
-        "url": "https://www.alibaba.com/product-detail/Women-s-Round-Toe-Ballet-Flats_1601943649254.html",
-        "scope": "Current exact-ID official get; scoped target acceptance kept separately",
+        "display": "N",
+        "status": "modified",
+        "url": "https://www.alibaba.com/product-detail/Women-s-Leather-Ballet-Flats-with_1601943649254.html",
+        "scope": "精确ID商品回读；标题审核中、公开待验",
         "highlights": "Strap-held flat profile: A strap crosses the instep above the open vamp to hold the ballet-style shoe around the foot.\n\nLeather contact layers: Cowhide leather outside and genuine leather lining inside form this round-toe flat.\n\nLow rubber sole: Rubber midsole and outsole layers keep the construction close to a classic casual flat."
       },
       "optimization": {
@@ -90421,6 +90546,24 @@
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/结构与标题纠正/商品/1601943649254/update_receipt.json",
             "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/结构与标题纠正/商品/1601943649254/verification.json"
           ]
+        },
+        "title_search": {
+          "state": "PENDING_REVIEW",
+          "at": "2026-11-02T01:02:21.698416+00:00",
+          "before": "Women's Round Toe Ballet Flats with Instep Strap for Casual Outfits",
+          "target": "Women's Leather Ballet Flats with Instep Strap and Round Toe for Casual Wear",
+          "scope": [
+            "productTitle"
+          ],
+          "keywords_note": "旧关键词接口返回空；本商品编辑版本是否迁移待核",
+          "other_fields_and_inventory": "IMMEDIATE_READBACK_UNCHANGED",
+          "public_status": "NOT_CHECKED",
+          "evidence": [
+            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943649254/.local/标题优化/20261102_plan.json",
+            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943649254/.local/标题优化/20261102_update_receipt.json",
+            "02_Alibaba运营/05_扩品工程/数据/目录对账/当前平台目录/商品/1601943649254/.local/标题优化/20261102_immediate_readback_summary.json"
+          ],
+          "next_action": "等待审核，核准后复核当前标题及买家页"
         }
       },
       "legacy_model_aliases": [
