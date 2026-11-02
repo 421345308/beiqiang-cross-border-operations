@@ -226,12 +226,26 @@ test('商品分页并按实际鞋型筛选，不把冬鞋默认归为靴或把�
   category.value='slip'; await category.listeners.change(); await settle(); assert.ok(h.elements.page.textContent.includes('冬季套脚鞋'));
 });
 
+test('商品按真实供货方式筛选并显示外采链接', async () => {
+  const h = harness('#/products'); h.objects.length = 0;
+  h.objects.push({ id:'product:own', kind:'product', title:'BQ001', facts:[], assets:[], supply:{kind:'own'} });
+  h.objects.push({ id:'product:sourced', kind:'product', title:'BQ-CS063C', facts:[], assets:[], supply:{kind:'external',model:'725',url:'https://supplier.example/725'} });
+  h.objects.push({ id:'product:unknown', kind:'product', title:'BQ040', facts:[], assets:[], supply:{kind:'unconfirmed'} });
+  await h.ui.bootstrap(); await settle();
+  const sourced=walk(h.elements.page).find(item=>item.className.includes('object-tile') && item.textContent.includes('BQ-CS063C'));
+  assert.ok(sourced.textContent.includes('外采供货'));assert.ok(sourced.textContent.includes('725'));assert.equal(sourced.querySelector('a').href,'https://supplier.example/725');
+  const filter=walk(h.body).find(item=>item['aria-label']==='供货方式');
+  filter.value='own';await filter.listeners.change();await settle();assert.ok(h.elements.page.textContent.includes('BQ001'));assert.equal(h.elements.page.textContent.includes('BQ-CS063C'),false);
+  filter.value='external';await filter.listeners.change();await settle();assert.ok(h.elements.page.textContent.includes('BQ-CS063C'));assert.equal(h.elements.page.textContent.includes('BQ001'),false);
+  filter.value='unconfirmed';await filter.listeners.change();await settle();assert.ok(h.elements.page.textContent.includes('BQ040'));assert.equal(h.elements.page.textContent.includes('BQ-CS063C'),false);
+});
+
 test('商品详情将供货链接与多个国际站商品链接集中展示', async () => {
   const h = harness('#/object/product%3A1');
   h.objects[0].supply = {kind:'external',model:'A502',url:'https://supplier.example/item'};
   h.objects[0].links = [{label:'Alibaba 123',url:'https://www.alibaba.com/product-detail/123.html'}, {label:'Alibaba 456',url:'https://www.alibaba.com/product-detail/456.html'}];
   await h.ui.bootstrap(); await settle(); const links = h.elements.page.querySelector('.product-links');
-  assert.ok(links.textContent.includes('供货商品 A502')); assert.ok(links.textContent.includes('国际站商品 123')); assert.ok(links.textContent.includes('国际站商品 456'));
+  assert.ok(links.textContent.includes('外采供货')); assert.ok(links.textContent.includes('供货商品 A502')); assert.ok(links.textContent.includes('国际站商品 123')); assert.ok(links.textContent.includes('国际站商品 456'));
   assert.equal(links.querySelectorAll('a').length,3);
 });
 

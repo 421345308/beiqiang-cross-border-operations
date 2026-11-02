@@ -80,8 +80,8 @@
       "aliases": [
         "BQ-C2627"
       ],
-      "source_state": "OWNER_CONFIRMED",
-      "adopted_source_id": null,
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-ee64a037a6a5",
       "candidate_source_ids": [],
       "raw_packages": [
         "01_产品资产/01_原始素材/BQ-C2627"
@@ -141,39 +141,23 @@
         "store_group_state": "NOT_RETURNED_PENDING_REVIEW"
       },
       "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "current": "EXTERNAL_FACTORY",
+        "state": "SOURCE_ROUTE_EVIDENCED",
+        "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "02_Alibaba运营/05_扩品工程/执行记录/2627BSK_API新建_2026-10-02/facts_and_copy.json"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "ADOPTED",
-          "adopted_source_id": "src-ee64a037a6a5",
-          "reference_source_id": null,
-          "supply_mode": {
-            "current": "EXTERNAL_FACTORY",
-            "state": "SOURCE_ROUTE_EVIDENCED",
-            "at": "2026-10-16T05:17:22.697536+00:00",
-            "evidence": [
-              "02_Alibaba运营/05_扩品工程/执行记录/2627BSK_API新建_2026-10-02/facts_and_copy.json"
-            ],
-            "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
-            "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
-          }
-        }
-      },
-      "reference_source_id": "src-ee64a037a6a5"
+        "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
+        "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
+      }
     },
     {
       "id": "BQ-CA67",
       "aliases": [
         "BQ-CA67"
       ],
-      "source_state": "OWNER_CONFIRMED",
-      "adopted_source_id": null,
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-24aa28447d08",
       "candidate_source_ids": [],
       "raw_packages": [
         "01_产品资产/01_原始素材/BQ-CA67"
@@ -233,39 +217,23 @@
         "store_group_state": "NOT_RETURNED_PENDING_REVIEW"
       },
       "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "current": "EXTERNAL_FACTORY",
+        "state": "SOURCE_ROUTE_EVIDENCED",
+        "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "02_Alibaba运营/05_扩品工程/执行记录/A67_API新建_2026-10-02/facts_and_copy.json"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "ADOPTED",
-          "adopted_source_id": "src-24aa28447d08",
-          "reference_source_id": null,
-          "supply_mode": {
-            "current": "EXTERNAL_FACTORY",
-            "state": "SOURCE_ROUTE_EVIDENCED",
-            "at": "2026-10-16T05:17:22.697536+00:00",
-            "evidence": [
-              "02_Alibaba运营/05_扩品工程/执行记录/A67_API新建_2026-10-02/facts_and_copy.json"
-            ],
-            "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
-            "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
-          }
-        }
-      },
-      "reference_source_id": "src-24aa28447d08"
+        "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
+        "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
+      }
     },
     {
       "id": "BQ-CS063C",
       "aliases": [
         "BQ-CS063C"
       ],
-      "source_state": "OWNER_CONFIRMED",
-      "adopted_source_id": null,
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-da68b93f4b11",
       "candidate_source_ids": [],
       "raw_packages": [],
       "evidence": [
@@ -322,31 +290,15 @@
         "store_group_state": "NOT_RETURNED_PENDING_REVIEW"
       },
       "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "current": "EXTERNAL_FACTORY",
+        "state": "SOURCE_ROUTE_EVIDENCED",
+        "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "08_工具链/01_业务脚本/国际站扩品/schema_capabilities.json"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "ADOPTED",
-          "adopted_source_id": "src-da68b93f4b11",
-          "reference_source_id": null,
-          "supply_mode": {
-            "current": "EXTERNAL_FACTORY",
-            "state": "SOURCE_ROUTE_EVIDENCED",
-            "at": "2026-10-16T05:17:22.697536+00:00",
-            "evidence": [
-              "08_工具链/01_业务脚本/国际站扩品/schema_capabilities.json"
-            ],
-            "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
-            "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
-          }
-        }
-      },
-      "reference_source_id": "src-da68b93f4b11"
+        "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
+        "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
+      }
     },
     {
       "id": "BQ-CS929",
@@ -499,8 +451,8 @@
       "aliases": [
         "BQ-L3522"
       ],
-      "source_state": "OWNER_CONFIRMED",
-      "adopted_source_id": null,
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-24e92b289153",
       "candidate_source_ids": [],
       "raw_packages": [],
       "evidence": [
@@ -560,31 +512,15 @@
         "store_group_state": "NOT_RETURNED_PENDING_REVIEW"
       },
       "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "current": "EXTERNAL_FACTORY",
+        "state": "SOURCE_ROUTE_EVIDENCED",
+        "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "02_Alibaba运营/05_扩品工程/执行记录/3522_API完整新建_2026-10-02/facts_and_copy.json"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "ADOPTED",
-          "adopted_source_id": "src-24e92b289153",
-          "reference_source_id": null,
-          "supply_mode": {
-            "current": "EXTERNAL_FACTORY",
-            "state": "SOURCE_ROUTE_EVIDENCED",
-            "at": "2026-10-16T05:17:22.697536+00:00",
-            "evidence": [
-              "02_Alibaba运营/05_扩品工程/执行记录/3522_API完整新建_2026-10-02/facts_and_copy.json"
-            ],
-            "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
-            "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
-          }
-        }
-      },
-      "reference_source_id": "src-24e92b289153"
+        "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
+        "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
+      }
     },
     {
       "id": "BQ-LQ02507",
@@ -1548,8 +1484,8 @@
       "aliases": [
         "BQ-LQ059"
       ],
-      "source_state": "OWNER_CONFIRMED",
-      "adopted_source_id": null,
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-730e7699372e",
       "candidate_source_ids": [],
       "raw_packages": [
         "01_产品资产/01_原始素材/BQ-LQ059"
@@ -1607,37 +1543,21 @@
         "store_group_state": "NOT_RETURNED_PENDING_REVIEW"
       },
       "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
-        "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
-        ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "ADOPTED",
-          "adopted_source_id": "src-730e7699372e",
-          "reference_source_id": null,
-          "supply_mode": {
-            "current": "EXTERNAL_FACTORY",
-            "state": "SOURCE_ROUTE_EVIDENCED",
-            "at": "2026-10-16T05:17:22.697536+00:00",
-            "evidence": [],
-            "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
-            "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
-          }
-        }
-      },
-      "reference_source_id": "src-730e7699372e"
+        "current": "EXTERNAL_FACTORY",
+        "state": "SOURCE_ROUTE_EVIDENCED",
+        "at": "2026-10-16T05:17:22.697536+00:00",
+        "evidence": [],
+        "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
+        "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
+      }
     },
     {
       "id": "BQ-LQ060",
       "aliases": [
         "BQ-LQ060"
       ],
-      "source_state": "OWNER_CONFIRMED",
-      "adopted_source_id": null,
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-96f65658dc67",
       "candidate_source_ids": [],
       "raw_packages": [
         "01_产品资产/01_原始素材/BQ-LQ060"
@@ -1698,29 +1618,13 @@
         "store_group_state": "NOT_RETURNED_PENDING_REVIEW"
       },
       "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
-        "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
-        ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "ADOPTED",
-          "adopted_source_id": "src-96f65658dc67",
-          "reference_source_id": null,
-          "supply_mode": {
-            "current": "EXTERNAL_FACTORY",
-            "state": "SOURCE_ROUTE_EVIDENCED",
-            "at": "2026-10-16T05:17:22.697536+00:00",
-            "evidence": [],
-            "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
-            "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
-          }
-        }
-      },
-      "reference_source_id": "src-96f65658dc67"
+        "current": "EXTERNAL_FACTORY",
+        "state": "SOURCE_ROUTE_EVIDENCED",
+        "at": "2026-10-16T05:17:22.697536+00:00",
+        "evidence": [],
+        "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
+        "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
+      }
     },
     {
       "id": "BQ-LQ061",
@@ -2611,8 +2515,8 @@
       "aliases": [
         "BQ-LQ2597"
       ],
-      "source_state": "OWNER_CONFIRMED",
-      "adopted_source_id": null,
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-038a36798455",
       "candidate_source_ids": [],
       "raw_packages": [
         "01_产品资产/01_原始素材/BQ-LQ2597"
@@ -2678,32 +2582,16 @@
         "store_group_state": "NOT_RETURNED_PENDING_REVIEW"
       },
       "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "current": "EXTERNAL_FACTORY",
+        "state": "SOURCE_ROUTE_EVIDENCED",
+        "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2597准备/经营任务包.md",
+          "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "ADOPTED",
-          "adopted_source_id": "src-038a36798455",
-          "reference_source_id": null,
-          "supply_mode": {
-            "current": "EXTERNAL_FACTORY",
-            "state": "SOURCE_ROUTE_EVIDENCED",
-            "at": "2026-10-16T05:17:22.697536+00:00",
-            "evidence": [
-              "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/2597准备/经营任务包.md",
-              "02_Alibaba运营/05_扩品工程/执行记录/路崎宽头户外_2026-10-08/分类总清单.json"
-            ],
-            "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
-            "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
-          }
-        }
-      },
-      "reference_source_id": "src-038a36798455"
+        "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
+        "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
+      }
     },
     {
       "id": "BQ-LQ2598",
@@ -3854,8 +3742,8 @@
       "aliases": [
         "BQ-M858"
       ],
-      "source_state": "OWNER_CONFIRMED",
-      "adopted_source_id": null,
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-3f99c995fc27",
       "candidate_source_ids": [],
       "raw_packages": [
         "01_产品资产/01_原始素材/BQ-M858"
@@ -3916,39 +3804,23 @@
         "store_group_state": "NOT_RETURNED_PENDING_REVIEW"
       },
       "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "current": "EXTERNAL_FACTORY",
+        "state": "SOURCE_ROUTE_EVIDENCED",
+        "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "02_Alibaba运营/05_扩品工程/数据/来源证据/88562c165071.txt"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "ADOPTED",
-          "adopted_source_id": "src-3f99c995fc27",
-          "reference_source_id": null,
-          "supply_mode": {
-            "current": "EXTERNAL_FACTORY",
-            "state": "SOURCE_ROUTE_EVIDENCED",
-            "at": "2026-10-16T05:17:22.697536+00:00",
-            "evidence": [
-              "02_Alibaba运营/05_扩品工程/数据/来源证据/88562c165071.txt"
-            ],
-            "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
-            "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
-          }
-        }
-      },
-      "reference_source_id": "src-3f99c995fc27"
+        "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
+        "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
+      }
     },
     {
       "id": "BQ-MJ9968",
       "aliases": [
         "BQ-MJ9968"
       ],
-      "source_state": "OWNER_CONFIRMED",
-      "adopted_source_id": null,
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-65639bfa9f6b",
       "candidate_source_ids": [],
       "raw_packages": [],
       "evidence": [
@@ -4006,31 +3878,15 @@
         "store_group_state": "NOT_RETURNED_PENDING_REVIEW"
       },
       "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "current": "EXTERNAL_FACTORY",
+        "state": "SOURCE_ROUTE_EVIDENCED",
+        "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "02_Alibaba运营/05_扩品工程/执行记录/9968_API完整新建_2026-10-02/facts_and_copy.json"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "ADOPTED",
-          "adopted_source_id": "src-65639bfa9f6b",
-          "reference_source_id": null,
-          "supply_mode": {
-            "current": "EXTERNAL_FACTORY",
-            "state": "SOURCE_ROUTE_EVIDENCED",
-            "at": "2026-10-16T05:17:22.697536+00:00",
-            "evidence": [
-              "02_Alibaba运营/05_扩品工程/执行记录/9968_API完整新建_2026-10-02/facts_and_copy.json"
-            ],
-            "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
-            "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
-          }
-        }
-      },
-      "reference_source_id": "src-65639bfa9f6b"
+        "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
+        "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
+      }
     },
     {
       "id": "BQ-NS001",
@@ -4110,8 +3966,8 @@
       "aliases": [
         "BQ-NS002"
       ],
-      "source_state": "OWNER_CONFIRMED",
-      "adopted_source_id": null,
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-834e4de69f0f",
       "candidate_source_ids": [],
       "raw_packages": [],
       "evidence": [
@@ -4168,39 +4024,23 @@
         "store_group_state": "NOT_RETURNED_PENDING_REVIEW"
       },
       "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "current": "EXTERNAL_FACTORY",
+        "state": "SOURCE_ROUTE_EVIDENCED",
+        "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "02_Alibaba运营/05_扩品工程/执行记录/8815正式新建_2026-10-04_task5/facts_and_color_bindings.json"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "ADOPTED",
-          "adopted_source_id": "src-834e4de69f0f",
-          "reference_source_id": null,
-          "supply_mode": {
-            "current": "EXTERNAL_FACTORY",
-            "state": "SOURCE_ROUTE_EVIDENCED",
-            "at": "2026-10-16T05:17:22.697536+00:00",
-            "evidence": [
-              "02_Alibaba运营/05_扩品工程/执行记录/8815正式新建_2026-10-04_task5/facts_and_color_bindings.json"
-            ],
-            "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
-            "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
-          }
-        }
-      },
-      "reference_source_id": "src-834e4de69f0f"
+        "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
+        "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
+      }
     },
     {
       "id": "BQ-NS003",
       "aliases": [
         "BQ-NS003"
       ],
-      "source_state": "OWNER_CONFIRMED",
-      "adopted_source_id": null,
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-67e63a6d3c1b",
       "candidate_source_ids": [],
       "raw_packages": [],
       "evidence": [
@@ -4270,29 +4110,14 @@
         "store_group_state": "NOT_RETURNED_PENDING_REVIEW"
       },
       "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "current": "EXTERNAL_FACTORY",
+        "state": "SOURCE_ROUTE_EVIDENCED",
+        "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "02_Alibaba运营/05_扩品工程/执行记录/229正式新建_2026-10-04_task5/facts_and_color_bindings.json"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "ADOPTED",
-          "adopted_source_id": "src-67e63a6d3c1b",
-          "reference_source_id": null,
-          "supply_mode": {
-            "current": "EXTERNAL_FACTORY",
-            "state": "SOURCE_ROUTE_EVIDENCED",
-            "at": "2026-10-16T05:17:22.697536+00:00",
-            "evidence": [
-              "02_Alibaba运营/05_扩品工程/执行记录/229正式新建_2026-10-04_task5/facts_and_color_bindings.json"
-            ],
-            "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
-            "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
-          }
-        }
+        "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
+        "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
       },
       "source_assortment_revision": {
         "at": "2026-10-19T22:11:59.981490+00:00",
@@ -4316,8 +4141,7 @@
           "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ-NS003_颜色总览/商品/1601970690721/update_receipt.json",
           "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/BQ-NS003_颜色总览/商品/1601970690721/verification.json"
         ]
-      },
-      "reference_source_id": "src-67e63a6d3c1b"
+      }
     },
     {
       "id": "BQ-W262",
@@ -4473,8 +4297,8 @@
       "aliases": [
         "BQ-W5998"
       ],
-      "source_state": "OWNER_CONFIRMED",
-      "adopted_source_id": null,
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-413e6ff7aad3",
       "candidate_source_ids": [],
       "raw_packages": [],
       "evidence": [
@@ -4531,31 +4355,15 @@
         "store_group_state": "NOT_RETURNED_PENDING_REVIEW"
       },
       "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "current": "EXTERNAL_FACTORY",
+        "state": "SOURCE_ROUTE_EVIDENCED",
+        "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "02_Alibaba运营/05_扩品工程/执行记录/5998_API新建_2026-10-02/facts_and_copy.json"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "ADOPTED",
-          "adopted_source_id": "src-413e6ff7aad3",
-          "reference_source_id": null,
-          "supply_mode": {
-            "current": "EXTERNAL_FACTORY",
-            "state": "SOURCE_ROUTE_EVIDENCED",
-            "at": "2026-10-16T05:17:22.697536+00:00",
-            "evidence": [
-              "02_Alibaba运营/05_扩品工程/执行记录/5998_API新建_2026-10-02/facts_and_copy.json"
-            ],
-            "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
-            "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
-          }
-        }
-      },
-      "reference_source_id": "src-413e6ff7aad3"
+        "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
+        "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
+      }
     },
     {
       "id": "BQ-WBF2888",
@@ -4900,13 +4708,12 @@
       },
       "supply_mode": {
         "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "state": "OWNER_CONFIRMED_2026_11_02",
+        "at": "2026-11-02",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "00_总控台/产品中心/README.md"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
+        "scope": "负责人2026-11-02确认BQ001至BQ03x为自有工厂款；单款原始资料及既有来源记录保留。",
         "previous": {
           "source_state": "RAW_PACKAGE",
           "adopted_source_id": null,
@@ -5222,13 +5029,12 @@
       },
       "supply_mode": {
         "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "state": "OWNER_CONFIRMED_2026_11_02",
+        "at": "2026-11-02",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "00_总控台/产品中心/README.md"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
+        "scope": "负责人2026-11-02确认BQ001至BQ03x为自有工厂款；单款原始资料及既有来源记录保留。",
         "previous": {
           "source_state": "RAW_PACKAGE",
           "adopted_source_id": null,
@@ -5657,13 +5463,12 @@
       },
       "supply_mode": {
         "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "state": "OWNER_CONFIRMED_2026_11_02",
+        "at": "2026-11-02",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "00_总控台/产品中心/README.md"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
+        "scope": "负责人2026-11-02确认BQ001至BQ03x为自有工厂款；单款原始资料及既有来源记录保留。",
         "previous": {
           "source_state": "MAPPED",
           "adopted_source_id": null,
@@ -6001,13 +5806,12 @@
       },
       "supply_mode": {
         "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "state": "OWNER_CONFIRMED_2026_11_02",
+        "at": "2026-11-02",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "00_总控台/产品中心/README.md"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
+        "scope": "负责人2026-11-02确认BQ001至BQ03x为自有工厂款；单款原始资料及既有来源记录保留。",
         "previous": {
           "source_state": "MAPPED",
           "adopted_source_id": null,
@@ -6417,13 +6221,12 @@
       },
       "supply_mode": {
         "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "state": "OWNER_CONFIRMED_2026_11_02",
+        "at": "2026-11-02",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "00_总控台/产品中心/README.md"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
+        "scope": "负责人2026-11-02确认BQ001至BQ03x为自有工厂款；单款原始资料及既有来源记录保留。",
         "previous": {
           "source_state": "MAPPED",
           "adopted_source_id": null,
@@ -6856,13 +6659,12 @@
       },
       "supply_mode": {
         "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "state": "OWNER_CONFIRMED_2026_11_02",
+        "at": "2026-11-02",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "00_总控台/产品中心/README.md"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
+        "scope": "负责人2026-11-02确认BQ001至BQ03x为自有工厂款；单款原始资料及既有来源记录保留。",
         "previous": {
           "source_state": "RAW_PACKAGE",
           "adopted_source_id": null,
@@ -7339,13 +7141,12 @@
       },
       "supply_mode": {
         "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "state": "OWNER_CONFIRMED_2026_11_02",
+        "at": "2026-11-02",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "00_总控台/产品中心/README.md"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
+        "scope": "负责人2026-11-02确认BQ001至BQ03x为自有工厂款；单款原始资料及既有来源记录保留。",
         "previous": {
           "source_state": "MAPPED",
           "adopted_source_id": null,
@@ -7552,13 +7353,12 @@
       },
       "supply_mode": {
         "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "state": "OWNER_CONFIRMED_2026_11_02",
+        "at": "2026-11-02",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "00_总控台/产品中心/README.md"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
+        "scope": "负责人2026-11-02确认BQ001至BQ03x为自有工厂款；单款原始资料及既有来源记录保留。",
         "previous": {
           "source_state": "MAPPED",
           "adopted_source_id": null,
@@ -7788,13 +7588,12 @@
       },
       "supply_mode": {
         "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "state": "OWNER_CONFIRMED_2026_11_02",
+        "at": "2026-11-02",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "00_总控台/产品中心/README.md"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
+        "scope": "负责人2026-11-02确认BQ001至BQ03x为自有工厂款；单款原始资料及既有来源记录保留。",
         "previous": {
           "source_state": "MAPPED",
           "adopted_source_id": null,
@@ -8046,13 +7845,12 @@
       },
       "supply_mode": {
         "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "state": "OWNER_CONFIRMED_2026_11_02",
+        "at": "2026-11-02",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "00_总控台/产品中心/README.md"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
+        "scope": "负责人2026-11-02确认BQ001至BQ03x为自有工厂款；单款原始资料及既有来源记录保留。",
         "previous": {
           "source_state": "MAPPED",
           "adopted_source_id": null,
@@ -8279,13 +8077,12 @@
       },
       "supply_mode": {
         "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "state": "OWNER_CONFIRMED_2026_11_02",
+        "at": "2026-11-02",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "00_总控台/产品中心/README.md"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
+        "scope": "负责人2026-11-02确认BQ001至BQ03x为自有工厂款；单款原始资料及既有来源记录保留。",
         "previous": {
           "source_state": "MAPPED",
           "adopted_source_id": null,
@@ -8516,13 +8313,12 @@
       },
       "supply_mode": {
         "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "state": "OWNER_CONFIRMED_2026_11_02",
+        "at": "2026-11-02",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "00_总控台/产品中心/README.md"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
+        "scope": "负责人2026-11-02确认BQ001至BQ03x为自有工厂款；单款原始资料及既有来源记录保留。",
         "previous": {
           "source_state": "MAPPED",
           "adopted_source_id": null,
@@ -8768,13 +8564,12 @@
       },
       "supply_mode": {
         "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "state": "OWNER_CONFIRMED_2026_11_02",
+        "at": "2026-11-02",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "00_总控台/产品中心/README.md"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
+        "scope": "负责人2026-11-02确认BQ001至BQ03x为自有工厂款；单款原始资料及既有来源记录保留。",
         "previous": {
           "source_state": "MAPPED",
           "adopted_source_id": null,
@@ -8983,13 +8778,12 @@
       },
       "supply_mode": {
         "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "state": "OWNER_CONFIRMED_2026_11_02",
+        "at": "2026-11-02",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "00_总控台/产品中心/README.md"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
+        "scope": "负责人2026-11-02确认BQ001至BQ03x为自有工厂款；单款原始资料及既有来源记录保留。",
         "previous": {
           "source_state": "MAPPED",
           "adopted_source_id": null,
@@ -9235,13 +9029,12 @@
       },
       "supply_mode": {
         "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "state": "OWNER_CONFIRMED_2026_11_02",
+        "at": "2026-11-02",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "00_总控台/产品中心/README.md"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
+        "scope": "负责人2026-11-02确认BQ001至BQ03x为自有工厂款；单款原始资料及既有来源记录保留。",
         "previous": {
           "source_state": "MAPPED",
           "adopted_source_id": null,
@@ -9453,13 +9246,12 @@
       },
       "supply_mode": {
         "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "state": "OWNER_CONFIRMED_2026_11_02",
+        "at": "2026-11-02",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "00_总控台/产品中心/README.md"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
+        "scope": "负责人2026-11-02确认BQ001至BQ03x为自有工厂款；单款原始资料及既有来源记录保留。",
         "previous": {
           "source_state": "RAW_PACKAGE",
           "adopted_source_id": null,
@@ -9759,13 +9551,12 @@
       },
       "supply_mode": {
         "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "state": "OWNER_CONFIRMED_2026_11_02",
+        "at": "2026-11-02",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "00_总控台/产品中心/README.md"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
+        "scope": "负责人2026-11-02确认BQ001至BQ03x为自有工厂款；单款原始资料及既有来源记录保留。",
         "previous": {
           "source_state": "MAPPED",
           "adopted_source_id": null,
@@ -10067,13 +9858,12 @@
       },
       "supply_mode": {
         "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "state": "OWNER_CONFIRMED_2026_11_02",
+        "at": "2026-11-02",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "00_总控台/产品中心/README.md"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
+        "scope": "负责人2026-11-02确认BQ001至BQ03x为自有工厂款；单款原始资料及既有来源记录保留。",
         "previous": {
           "source_state": "MAPPED",
           "adopted_source_id": null,
@@ -10321,13 +10111,12 @@
       },
       "supply_mode": {
         "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "state": "OWNER_CONFIRMED_2026_11_02",
+        "at": "2026-11-02",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "00_总控台/产品中心/README.md"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
+        "scope": "负责人2026-11-02确认BQ001至BQ03x为自有工厂款；单款原始资料及既有来源记录保留。",
         "previous": {
           "source_state": "MAPPED",
           "adopted_source_id": null,
@@ -10600,13 +10389,12 @@
       },
       "supply_mode": {
         "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "state": "OWNER_CONFIRMED_2026_11_02",
+        "at": "2026-11-02",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "00_总控台/产品中心/README.md"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
+        "scope": "负责人2026-11-02确认BQ001至BQ03x为自有工厂款；单款原始资料及既有来源记录保留。",
         "previous": {
           "source_state": "MAPPED",
           "adopted_source_id": null,
@@ -10898,13 +10686,12 @@
       },
       "supply_mode": {
         "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "state": "OWNER_CONFIRMED_2026_11_02",
+        "at": "2026-11-02",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "00_总控台/产品中心/README.md"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
+        "scope": "负责人2026-11-02确认BQ001至BQ03x为自有工厂款；单款原始资料及既有来源记录保留。",
         "previous": {
           "source_state": "MAPPED",
           "adopted_source_id": null,
@@ -11169,13 +10956,12 @@
       },
       "supply_mode": {
         "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "state": "OWNER_CONFIRMED_2026_11_02",
+        "at": "2026-11-02",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "00_总控台/产品中心/README.md"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
+        "scope": "负责人2026-11-02确认BQ001至BQ03x为自有工厂款；单款原始资料及既有来源记录保留。",
         "previous": {
           "source_state": "MAPPED",
           "adopted_source_id": null,
@@ -11401,13 +11187,12 @@
       },
       "supply_mode": {
         "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "state": "OWNER_CONFIRMED_2026_11_02",
+        "at": "2026-11-02",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "00_总控台/产品中心/README.md"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
+        "scope": "负责人2026-11-02确认BQ001至BQ03x为自有工厂款；单款原始资料及既有来源记录保留。",
         "previous": {
           "source_state": "RAW_PACKAGE",
           "adopted_source_id": null,
@@ -11696,13 +11481,12 @@
       },
       "supply_mode": {
         "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "state": "OWNER_CONFIRMED_2026_11_02",
+        "at": "2026-11-02",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "00_总控台/产品中心/README.md"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
+        "scope": "负责人2026-11-02确认BQ001至BQ03x为自有工厂款；单款原始资料及既有来源记录保留。",
         "previous": {
           "source_state": "MAPPED",
           "adopted_source_id": null,
@@ -11903,13 +11687,12 @@
       },
       "supply_mode": {
         "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "state": "OWNER_CONFIRMED_2026_11_02",
+        "at": "2026-11-02",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "00_总控台/产品中心/README.md"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
+        "scope": "负责人2026-11-02确认BQ001至BQ03x为自有工厂款；单款原始资料及既有来源记录保留。",
         "previous": {
           "source_state": "MAPPED",
           "adopted_source_id": null,
@@ -12156,13 +11939,12 @@
       },
       "supply_mode": {
         "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "state": "OWNER_CONFIRMED_2026_11_02",
+        "at": "2026-11-02",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "00_总控台/产品中心/README.md"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
+        "scope": "负责人2026-11-02确认BQ001至BQ03x为自有工厂款；单款原始资料及既有来源记录保留。",
         "previous": {
           "source_state": "RAW_PACKAGE",
           "adopted_source_id": null,
@@ -12475,13 +12257,12 @@
       },
       "supply_mode": {
         "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "state": "OWNER_CONFIRMED_2026_11_02",
+        "at": "2026-11-02",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "00_总控台/产品中心/README.md"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
+        "scope": "负责人2026-11-02确认BQ001至BQ03x为自有工厂款；单款原始资料及既有来源记录保留。",
         "previous": {
           "source_state": "MAPPED",
           "adopted_source_id": null,
@@ -12739,13 +12520,12 @@
       },
       "supply_mode": {
         "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "state": "OWNER_CONFIRMED_2026_11_02",
+        "at": "2026-11-02",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "00_总控台/产品中心/README.md"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
+        "scope": "负责人2026-11-02确认BQ001至BQ03x为自有工厂款；单款原始资料及既有来源记录保留。",
         "previous": {
           "source_state": "MAPPED",
           "adopted_source_id": null,
@@ -12993,13 +12773,12 @@
       },
       "supply_mode": {
         "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "state": "OWNER_CONFIRMED_2026_11_02",
+        "at": "2026-11-02",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "00_总控台/产品中心/README.md"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
+        "scope": "负责人2026-11-02确认BQ001至BQ03x为自有工厂款；单款原始资料及既有来源记录保留。",
         "previous": {
           "source_state": "MAPPED",
           "adopted_source_id": null,
@@ -13247,13 +13026,12 @@
       },
       "supply_mode": {
         "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "state": "OWNER_CONFIRMED_2026_11_02",
+        "at": "2026-11-02",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "00_总控台/产品中心/README.md"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
+        "scope": "负责人2026-11-02确认BQ001至BQ03x为自有工厂款；单款原始资料及既有来源记录保留。",
         "previous": {
           "source_state": "MAPPED",
           "adopted_source_id": null,
@@ -13482,13 +13260,12 @@
       },
       "supply_mode": {
         "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "state": "OWNER_CONFIRMED_2026_11_02",
+        "at": "2026-11-02",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "00_总控台/产品中心/README.md"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
+        "scope": "负责人2026-11-02确认BQ001至BQ03x为自有工厂款；单款原始资料及既有来源记录保留。",
         "previous": {
           "source_state": "MAPPED",
           "adopted_source_id": null,
@@ -13701,13 +13478,12 @@
       },
       "supply_mode": {
         "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "state": "OWNER_CONFIRMED_2026_11_02",
+        "at": "2026-11-02",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "00_总控台/产品中心/README.md"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
+        "scope": "负责人2026-11-02确认BQ001至BQ03x为自有工厂款；单款原始资料及既有来源记录保留。",
         "previous": {
           "source_state": "MAPPED",
           "adopted_source_id": null,
@@ -13813,13 +13589,12 @@
       },
       "supply_mode": {
         "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "state": "OWNER_CONFIRMED_2026_11_02",
+        "at": "2026-11-02",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "00_总控台/产品中心/README.md"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
+        "scope": "负责人2026-11-02确认BQ001至BQ03x为自有工厂款；单款原始资料及既有来源记录保留。",
         "previous": {
           "source_state": "MAPPED",
           "adopted_source_id": null,
@@ -13933,13 +13708,12 @@
       },
       "supply_mode": {
         "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "state": "OWNER_CONFIRMED_2026_11_02",
+        "at": "2026-11-02",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "00_总控台/产品中心/README.md"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
+        "scope": "负责人2026-11-02确认BQ001至BQ03x为自有工厂款；单款原始资料及既有来源记录保留。",
         "previous": {
           "source_state": "MAPPED",
           "adopted_source_id": null,
@@ -14042,6 +13816,15 @@
         "family_key": "BQ035",
         "confirmed_on": "2026-10-21",
         "scope": "负责人确认的生产成本基线；内部文件，不包含完整订单履约费用"
+      },
+      "supply_mode": {
+        "current": "OWN_FACTORY",
+        "state": "OWNER_CONFIRMED_2026_11_02",
+        "at": "2026-11-02",
+        "evidence": [
+          "00_总控台/产品中心/README.md"
+        ],
+        "scope": "负责人2026-11-02确认BQ001至BQ03x为自有工厂款；单款原始资料及既有来源记录保留。"
       }
     },
     {
@@ -14257,13 +14040,12 @@
       "reference_source_id": "src-a4697dab9e6e",
       "supply_mode": {
         "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "state": "OWNER_CONFIRMED_2026_11_02",
+        "at": "2026-11-02",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "00_总控台/产品中心/README.md"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
+        "scope": "负责人2026-11-02确认BQ001至BQ03x为自有工厂款；单款原始资料及既有来源记录保留。",
         "previous": {
           "source_state": "ADOPTED",
           "adopted_source_id": "src-a4697dab9e6e",
@@ -14369,13 +14151,12 @@
       },
       "supply_mode": {
         "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "state": "OWNER_CONFIRMED_2026_11_02",
+        "at": "2026-11-02",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "00_总控台/产品中心/README.md"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
+        "scope": "负责人2026-11-02确认BQ001至BQ03x为自有工厂款；单款原始资料及既有来源记录保留。",
         "previous": {
           "source_state": "MAPPED",
           "adopted_source_id": null,
@@ -14481,13 +14262,12 @@
       },
       "supply_mode": {
         "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "state": "OWNER_CONFIRMED_2026_11_02",
+        "at": "2026-11-02",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "00_总控台/产品中心/README.md"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
+        "scope": "负责人2026-11-02确认BQ001至BQ03x为自有工厂款；单款原始资料及既有来源记录保留。",
         "previous": {
           "source_state": "MAPPED",
           "adopted_source_id": null,
@@ -14593,13 +14373,12 @@
       },
       "supply_mode": {
         "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "state": "OWNER_CONFIRMED_2026_11_02",
+        "at": "2026-11-02",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "00_总控台/产品中心/README.md"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
+        "scope": "负责人2026-11-02确认BQ001至BQ03x为自有工厂款；单款原始资料及既有来源记录保留。",
         "previous": {
           "source_state": "MAPPED",
           "adopted_source_id": null,
@@ -14702,22 +14481,6 @@
         "family_key": "BQ040",
         "confirmed_on": "2026-10-21",
         "scope": "负责人确认的生产成本基线；内部文件，不包含完整订单履约费用"
-      },
-      "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
-        "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
-        ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "MAPPED",
-          "adopted_source_id": null,
-          "reference_source_id": "src-2ca2b6cb313e",
-          "supply_mode": null
-        }
       }
     },
     {
@@ -14811,22 +14574,6 @@
         "family_key": "BQ041",
         "confirmed_on": "2026-10-21",
         "scope": "负责人确认的生产成本基线；内部文件，不包含完整订单履约费用"
-      },
-      "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
-        "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
-        ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "MAPPED",
-          "adopted_source_id": null,
-          "reference_source_id": "src-61c9d75cfb7d",
-          "supply_mode": null
-        }
       }
     },
     {
@@ -14979,22 +14726,6 @@
         "family_key": "BQ043",
         "confirmed_on": "2026-10-21",
         "scope": "负责人确认的生产成本基线；内部文件，不包含完整订单履约费用"
-      },
-      "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
-        "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
-        ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "MAPPED",
-          "adopted_source_id": null,
-          "reference_source_id": "src-4e0c2c58522b",
-          "supply_mode": null
-        }
       }
     },
     {
@@ -15112,22 +14843,6 @@
         "family_key": "BQ044",
         "confirmed_on": "2026-10-21",
         "scope": "负责人确认的生产成本基线；内部文件，不包含完整订单履约费用"
-      },
-      "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
-        "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
-        ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "MAPPED",
-          "adopted_source_id": null,
-          "reference_source_id": "src-1d7ce8857f70",
-          "supply_mode": null
-        }
       }
     },
     {
@@ -15274,22 +14989,6 @@
         "family_key": "BQ047",
         "confirmed_on": "2026-10-21",
         "scope": "负责人确认的生产成本基线；内部文件，不包含完整订单履约费用"
-      },
-      "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
-        "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
-        ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "MAPPED",
-          "adopted_source_id": null,
-          "reference_source_id": "src-419c638403cb",
-          "supply_mode": null
-        }
       }
     },
     {
@@ -15366,22 +15065,6 @@
         "family_key": "BQ048",
         "confirmed_on": "2026-10-21",
         "scope": "负责人确认的生产成本基线；内部文件，不包含完整订单履约费用"
-      },
-      "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
-        "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
-        ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "MAPPED",
-          "adopted_source_id": null,
-          "reference_source_id": "src-4b7b638a1a67",
-          "supply_mode": null
-        }
       }
     },
     {
@@ -15458,22 +15141,6 @@
         "family_key": "BQ049",
         "confirmed_on": "2026-10-21",
         "scope": "负责人确认的生产成本基线；内部文件，不包含完整订单履约费用"
-      },
-      "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
-        "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
-        ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "MAPPED",
-          "adopted_source_id": null,
-          "reference_source_id": "src-3f730215c012",
-          "supply_mode": null
-        }
       }
     },
     {
@@ -15570,22 +15237,6 @@
         "family_key": "BQ050",
         "confirmed_on": "2026-10-21",
         "scope": "负责人确认的生产成本基线；内部文件，不包含完整订单履约费用"
-      },
-      "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
-        "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
-        ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "MAPPED",
-          "adopted_source_id": null,
-          "reference_source_id": "src-c3bc8b3c80be",
-          "supply_mode": null
-        }
       }
     },
     {
@@ -15703,22 +15354,6 @@
         "family_key": "BQ051",
         "confirmed_on": "2026-10-21",
         "scope": "负责人确认的生产成本基线；内部文件，不包含完整订单履约费用"
-      },
-      "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
-        "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
-        ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "MAPPED",
-          "adopted_source_id": null,
-          "reference_source_id": "src-355d4bb60898",
-          "supply_mode": null
-        }
       }
     },
     {
@@ -15795,22 +15430,6 @@
         "family_key": "BQ052",
         "confirmed_on": "2026-10-21",
         "scope": "负责人确认的生产成本基线；内部文件，不包含完整订单履约费用"
-      },
-      "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
-        "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
-        ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "MAPPED",
-          "adopted_source_id": null,
-          "reference_source_id": "src-12b61438b9c1",
-          "supply_mode": null
-        }
       }
     },
     {
@@ -17514,8 +17133,8 @@
         "BQ1009",
         "HR009"
       ],
-      "source_state": "OWNER_CONFIRMED",
-      "adopted_source_id": null,
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-hr-hr009-10-161",
       "candidate_source_ids": [
         "src-hr-hr009-10-161"
       ],
@@ -17637,34 +17256,18 @@
         "store_group_state": "FORMAL_PRODUCT_AND_GROUP_READBACK"
       },
       "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "current": "EXTERNAL_FACTORY",
+        "state": "SOURCE_ROUTE_EVIDENCED",
+        "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR009/复用图审依据.json",
+          "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR009/复用图库绑定.json",
+          "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR009/来源与正式绑定核验.json"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "ADOPTED",
-          "adopted_source_id": "src-hr-hr009-10-161",
-          "reference_source_id": null,
-          "supply_mode": {
-            "current": "EXTERNAL_FACTORY",
-            "state": "SOURCE_ROUTE_EVIDENCED",
-            "at": "2026-10-16T05:17:22.697536+00:00",
-            "evidence": [
-              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR009/复用图审依据.json",
-              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR009/复用图库绑定.json",
-              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR009/来源与正式绑定核验.json"
-            ],
-            "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
-            "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
-          }
-        }
+        "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
+        "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
       },
-      "current_model": "BQ1009",
-      "reference_source_id": "src-hr-hr009-10-161"
+      "current_model": "BQ1009"
     },
     {
       "id": "HR010",
@@ -19685,8 +19288,8 @@
         "BQ1024",
         "HR024"
       ],
-      "source_state": "OWNER_CONFIRMED",
-      "adopted_source_id": null,
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-hr-hr024-8856",
       "candidate_source_ids": [
         "src-hr-hr024-8856"
       ],
@@ -19769,33 +19372,17 @@
         "store_group_state": "FORMAL_PRODUCT_AND_GROUP_READBACK"
       },
       "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "current": "EXTERNAL_FACTORY",
+        "state": "SOURCE_ROUTE_EVIDENCED",
+        "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "01_产品资产/01_原始素材/BQ1024/BQ1024_6fd9159927e58736.json",
+          "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR024/素材清单.json"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "ADOPTED",
-          "adopted_source_id": "src-hr-hr024-8856",
-          "reference_source_id": null,
-          "supply_mode": {
-            "current": "EXTERNAL_FACTORY",
-            "state": "SOURCE_ROUTE_EVIDENCED",
-            "at": "2026-10-16T05:17:22.697536+00:00",
-            "evidence": [
-              "01_产品资产/01_原始素材/BQ1024/BQ1024_6fd9159927e58736.json",
-              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR024/素材清单.json"
-            ],
-            "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
-            "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
-          }
-        }
+        "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
+        "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
       },
-      "current_model": "BQ1024",
-      "reference_source_id": "src-hr-hr024-8856"
+      "current_model": "BQ1024"
     },
     {
       "id": "HR025",
@@ -20270,8 +19857,8 @@
         "BQ1029",
         "HR029"
       ],
-      "source_state": "OWNER_CONFIRMED",
-      "adopted_source_id": null,
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-hr-hr029-726c",
       "candidate_source_ids": [
         "src-hr-hr029-726c"
       ],
@@ -20366,30 +19953,15 @@
         "store_group_state": "FORMAL_PRODUCT_AND_GROUP_READBACK"
       },
       "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "current": "EXTERNAL_FACTORY",
+        "state": "SOURCE_ROUTE_EVIDENCED",
+        "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "01_产品资产/01_原始素材/BQ1029/BQ1029_d3bc5e8929af06ed.json",
+          "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR029/素材清单.json"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "ADOPTED",
-          "adopted_source_id": "src-hr-hr029-726c",
-          "reference_source_id": null,
-          "supply_mode": {
-            "current": "EXTERNAL_FACTORY",
-            "state": "SOURCE_ROUTE_EVIDENCED",
-            "at": "2026-10-16T05:17:22.697536+00:00",
-            "evidence": [
-              "01_产品资产/01_原始素材/BQ1029/BQ1029_d3bc5e8929af06ed.json",
-              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR029/素材清单.json"
-            ],
-            "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
-            "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
-          }
-        }
+        "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
+        "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
       },
       "current_model": "BQ1029",
       "content_gallery_revision": {
@@ -20403,8 +19975,7 @@
           "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR029_模板图正式清理/商品/1601943558646/update_receipt.json",
           "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR029_模板图正式清理/商品/1601943558646/verification.json"
         ]
-      },
-      "reference_source_id": "src-hr-hr029-726c"
+      }
     },
     {
       "id": "HR030",
@@ -20517,8 +20088,8 @@
         "BQ1031",
         "HR031"
       ],
-      "source_state": "OWNER_CONFIRMED",
-      "adopted_source_id": null,
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-hr-hr031-d11",
       "candidate_source_ids": [
         "src-hr-hr031-d11"
       ],
@@ -20613,30 +20184,15 @@
         "store_group_state": "FORMAL_PRODUCT_AND_GROUP_READBACK"
       },
       "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "current": "EXTERNAL_FACTORY",
+        "state": "SOURCE_ROUTE_EVIDENCED",
+        "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "01_产品资产/01_原始素材/BQ1031/BQ1031_c523aede4fe01085.json",
+          "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR031/素材清单.json"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "ADOPTED",
-          "adopted_source_id": "src-hr-hr031-d11",
-          "reference_source_id": null,
-          "supply_mode": {
-            "current": "EXTERNAL_FACTORY",
-            "state": "SOURCE_ROUTE_EVIDENCED",
-            "at": "2026-10-16T05:17:22.697536+00:00",
-            "evidence": [
-              "01_产品资产/01_原始素材/BQ1031/BQ1031_c523aede4fe01085.json",
-              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR031/素材清单.json"
-            ],
-            "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
-            "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
-          }
-        }
+        "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
+        "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
       },
       "current_model": "BQ1031",
       "content_gallery_revision": {
@@ -20650,8 +20206,7 @@
           "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR031_模板图正式清理/商品/1601943651120/update_receipt.json",
           "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR031_模板图正式清理/商品/1601943651120/verification.json"
         ]
-      },
-      "reference_source_id": "src-hr-hr031-d11"
+      }
     },
     {
       "id": "HR032",
@@ -20659,8 +20214,8 @@
         "BQ1032",
         "HR032"
       ],
-      "source_state": "OWNER_CONFIRMED",
-      "adopted_source_id": null,
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-hr-hr032-ch33",
       "candidate_source_ids": [
         "src-hr-hr032-ch33"
       ],
@@ -20746,33 +20301,17 @@
         "store_group_state": "FORMAL_PRODUCT_AND_GROUP_READBACK"
       },
       "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "current": "EXTERNAL_FACTORY",
+        "state": "SOURCE_ROUTE_EVIDENCED",
+        "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "01_产品资产/01_原始素材/BQ1032/BQ1032_e64f2ca77e8de22f.json",
+          "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR032/素材清单.json"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "ADOPTED",
-          "adopted_source_id": "src-hr-hr032-ch33",
-          "reference_source_id": null,
-          "supply_mode": {
-            "current": "EXTERNAL_FACTORY",
-            "state": "SOURCE_ROUTE_EVIDENCED",
-            "at": "2026-10-16T05:17:22.697536+00:00",
-            "evidence": [
-              "01_产品资产/01_原始素材/BQ1032/BQ1032_e64f2ca77e8de22f.json",
-              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR032/素材清单.json"
-            ],
-            "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
-            "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
-          }
-        }
+        "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
+        "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
       },
-      "current_model": "BQ1032",
-      "reference_source_id": "src-hr-hr032-ch33"
+      "current_model": "BQ1032"
     },
     {
       "id": "HR033",
@@ -20984,8 +20523,8 @@
         "BQ1035",
         "HR035"
       ],
-      "source_state": "OWNER_CONFIRMED",
-      "adopted_source_id": null,
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-hr-hr035-888-d",
       "candidate_source_ids": [
         "src-hr-hr035-888-d"
       ],
@@ -21068,33 +20607,17 @@
         "store_group_state": "FORMAL_PRODUCT_AND_GROUP_READBACK"
       },
       "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "current": "EXTERNAL_FACTORY",
+        "state": "SOURCE_ROUTE_EVIDENCED",
+        "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "01_产品资产/01_原始素材/BQ1035/BQ1035_4a5da0731d2cfd08.json",
+          "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR035/素材清单.json"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "ADOPTED",
-          "adopted_source_id": "src-hr-hr035-888-d",
-          "reference_source_id": null,
-          "supply_mode": {
-            "current": "EXTERNAL_FACTORY",
-            "state": "SOURCE_ROUTE_EVIDENCED",
-            "at": "2026-10-16T05:17:22.697536+00:00",
-            "evidence": [
-              "01_产品资产/01_原始素材/BQ1035/BQ1035_4a5da0731d2cfd08.json",
-              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR035/素材清单.json"
-            ],
-            "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
-            "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
-          }
-        }
+        "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
+        "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
       },
-      "current_model": "BQ1035",
-      "reference_source_id": "src-hr-hr035-888-d"
+      "current_model": "BQ1035"
     },
     {
       "id": "HR036",
@@ -21102,8 +20625,8 @@
         "BQ1036",
         "HR036"
       ],
-      "source_state": "OWNER_CONFIRMED",
-      "adopted_source_id": null,
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-hr-hr036-1936",
       "candidate_source_ids": [
         "src-hr-hr036-1936"
       ],
@@ -21198,30 +20721,15 @@
         "store_group_state": "FORMAL_PRODUCT_AND_GROUP_READBACK"
       },
       "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "current": "EXTERNAL_FACTORY",
+        "state": "SOURCE_ROUTE_EVIDENCED",
+        "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "01_产品资产/01_原始素材/BQ1036/BQ1036_a1881156e467a6b7.json",
+          "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR036/素材清单.json"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "ADOPTED",
-          "adopted_source_id": "src-hr-hr036-1936",
-          "reference_source_id": null,
-          "supply_mode": {
-            "current": "EXTERNAL_FACTORY",
-            "state": "SOURCE_ROUTE_EVIDENCED",
-            "at": "2026-10-16T05:17:22.697536+00:00",
-            "evidence": [
-              "01_产品资产/01_原始素材/BQ1036/BQ1036_a1881156e467a6b7.json",
-              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR036/素材清单.json"
-            ],
-            "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
-            "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
-          }
-        }
+        "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
+        "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
       },
       "current_model": "BQ1036",
       "content_gallery_revision": {
@@ -21235,8 +20743,7 @@
           "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR036_模板图正式清理/商品/1601943561786/update_receipt.json",
           "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR036_模板图正式清理/商品/1601943561786/verification.json"
         ]
-      },
-      "reference_source_id": "src-hr-hr036-1936"
+      }
     },
     {
       "id": "HR037",
@@ -21244,8 +20751,8 @@
         "BQ1037",
         "HR037"
       ],
-      "source_state": "OWNER_CONFIRMED",
-      "adopted_source_id": null,
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-hr-hr037-w33",
       "candidate_source_ids": [
         "src-hr-hr037-w33"
       ],
@@ -21328,33 +20835,17 @@
         "store_group_state": "FORMAL_PRODUCT_AND_GROUP_READBACK"
       },
       "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "current": "EXTERNAL_FACTORY",
+        "state": "SOURCE_ROUTE_EVIDENCED",
+        "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "01_产品资产/01_原始素材/BQ1037/BQ1037_9239643c4214fc29.json",
+          "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR037/素材清单.json"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "ADOPTED",
-          "adopted_source_id": "src-hr-hr037-w33",
-          "reference_source_id": null,
-          "supply_mode": {
-            "current": "EXTERNAL_FACTORY",
-            "state": "SOURCE_ROUTE_EVIDENCED",
-            "at": "2026-10-16T05:17:22.697536+00:00",
-            "evidence": [
-              "01_产品资产/01_原始素材/BQ1037/BQ1037_9239643c4214fc29.json",
-              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR037/素材清单.json"
-            ],
-            "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
-            "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
-          }
-        }
+        "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
+        "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
       },
-      "current_model": "BQ1037",
-      "reference_source_id": "src-hr-hr037-w33"
+      "current_model": "BQ1037"
     },
     {
       "id": "HR038",
@@ -21362,8 +20853,8 @@
         "BQ1038",
         "HR038"
       ],
-      "source_state": "OWNER_CONFIRMED",
-      "adopted_source_id": null,
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-hr-hr038-ar288",
       "candidate_source_ids": [
         "src-hr-hr038-ar288"
       ],
@@ -21449,33 +20940,17 @@
         "store_group_state": "FORMAL_PRODUCT_AND_GROUP_READBACK"
       },
       "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "current": "EXTERNAL_FACTORY",
+        "state": "SOURCE_ROUTE_EVIDENCED",
+        "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "01_产品资产/01_原始素材/BQ1038/BQ1038_e293233e6acd79f8.json",
+          "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR038/素材清单.json"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "ADOPTED",
-          "adopted_source_id": "src-hr-hr038-ar288",
-          "reference_source_id": null,
-          "supply_mode": {
-            "current": "EXTERNAL_FACTORY",
-            "state": "SOURCE_ROUTE_EVIDENCED",
-            "at": "2026-10-16T05:17:22.697536+00:00",
-            "evidence": [
-              "01_产品资产/01_原始素材/BQ1038/BQ1038_e293233e6acd79f8.json",
-              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR038/素材清单.json"
-            ],
-            "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
-            "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
-          }
-        }
+        "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
+        "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
       },
-      "current_model": "BQ1038",
-      "reference_source_id": "src-hr-hr038-ar288"
+      "current_model": "BQ1038"
     },
     {
       "id": "HR040",
@@ -21483,8 +20958,8 @@
         "BQ1040",
         "HR040"
       ],
-      "source_state": "OWNER_CONFIRMED",
-      "adopted_source_id": null,
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-hr-hr040-813",
       "candidate_source_ids": [
         "src-hr-hr040-813"
       ],
@@ -21563,33 +21038,17 @@
         "store_group_state": "FORMAL_PRODUCT_AND_GROUP_READBACK"
       },
       "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "current": "EXTERNAL_FACTORY",
+        "state": "SOURCE_ROUTE_EVIDENCED",
+        "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "01_产品资产/01_原始素材/BQ1040/BQ1040_1dcae2bed62cca18.json",
+          "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR040/素材清单.json"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "ADOPTED",
-          "adopted_source_id": "src-hr-hr040-813",
-          "reference_source_id": null,
-          "supply_mode": {
-            "current": "EXTERNAL_FACTORY",
-            "state": "SOURCE_ROUTE_EVIDENCED",
-            "at": "2026-10-16T05:17:22.697536+00:00",
-            "evidence": [
-              "01_产品资产/01_原始素材/BQ1040/BQ1040_1dcae2bed62cca18.json",
-              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR040/素材清单.json"
-            ],
-            "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
-            "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
-          }
-        }
+        "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
+        "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
       },
-      "current_model": "BQ1040",
-      "reference_source_id": "src-hr-hr040-813"
+      "current_model": "BQ1040"
     },
     {
       "id": "HR041",
@@ -21597,8 +21056,8 @@
         "BQ1041",
         "HR041"
       ],
-      "source_state": "OWNER_CONFIRMED",
-      "adopted_source_id": null,
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-hr-hr041-c268",
       "candidate_source_ids": [
         "src-hr-hr041-c268"
       ],
@@ -21703,33 +21162,17 @@
         "store_group_state": "FORMAL_PRODUCT_AND_GROUP_READBACK"
       },
       "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "current": "EXTERNAL_FACTORY",
+        "state": "SOURCE_ROUTE_EVIDENCED",
+        "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "01_产品资产/01_原始素材/BQ1041/BQ1041_269f1b7e901e174e.json",
+          "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR041/素材清单.json"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "ADOPTED",
-          "adopted_source_id": "src-hr-hr041-c268",
-          "reference_source_id": null,
-          "supply_mode": {
-            "current": "EXTERNAL_FACTORY",
-            "state": "SOURCE_ROUTE_EVIDENCED",
-            "at": "2026-10-16T05:17:22.697536+00:00",
-            "evidence": [
-              "01_产品资产/01_原始素材/BQ1041/BQ1041_269f1b7e901e174e.json",
-              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR041/素材清单.json"
-            ],
-            "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
-            "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
-          }
-        }
+        "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
+        "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
       },
-      "current_model": "BQ1041",
-      "reference_source_id": "src-hr-hr041-c268"
+      "current_model": "BQ1041"
     },
     {
       "id": "HR042",
@@ -21861,8 +21304,8 @@
         "BQ1043",
         "HR043"
       ],
-      "source_state": "OWNER_CONFIRMED",
-      "adopted_source_id": null,
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-hr-hr043-556",
       "candidate_source_ids": [
         "src-hr-hr043-556"
       ],
@@ -21969,33 +21412,17 @@
         "store_group_state": "FORMAL_PRODUCT_AND_GROUP_READBACK"
       },
       "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "current": "EXTERNAL_FACTORY",
+        "state": "SOURCE_ROUTE_EVIDENCED",
+        "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "01_产品资产/01_原始素材/BQ1043/BQ1043_e762ff4fda4f827c.json",
+          "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR043/素材清单.json"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "ADOPTED",
-          "adopted_source_id": "src-hr-hr043-556",
-          "reference_source_id": null,
-          "supply_mode": {
-            "current": "EXTERNAL_FACTORY",
-            "state": "SOURCE_ROUTE_EVIDENCED",
-            "at": "2026-10-16T05:17:22.697536+00:00",
-            "evidence": [
-              "01_产品资产/01_原始素材/BQ1043/BQ1043_e762ff4fda4f827c.json",
-              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR043/素材清单.json"
-            ],
-            "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
-            "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
-          }
-        }
+        "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
+        "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
       },
-      "current_model": "BQ1043",
-      "reference_source_id": "src-hr-hr043-556"
+      "current_model": "BQ1043"
     },
     {
       "id": "HR044",
@@ -22132,8 +21559,8 @@
         "BQ1045",
         "HR045"
       ],
-      "source_state": "OWNER_CONFIRMED",
-      "adopted_source_id": null,
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-hr-hr045-f18",
       "candidate_source_ids": [
         "src-hr-hr045-f18"
       ],
@@ -22238,33 +21665,17 @@
         "store_group_state": "FORMAL_PRODUCT_AND_GROUP_READBACK"
       },
       "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "current": "EXTERNAL_FACTORY",
+        "state": "SOURCE_ROUTE_EVIDENCED",
+        "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "01_产品资产/01_原始素材/BQ1045/BQ1045_3df6bc50d43f9bac.json",
+          "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR045/素材清单.json"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "ADOPTED",
-          "adopted_source_id": "src-hr-hr045-f18",
-          "reference_source_id": null,
-          "supply_mode": {
-            "current": "EXTERNAL_FACTORY",
-            "state": "SOURCE_ROUTE_EVIDENCED",
-            "at": "2026-10-16T05:17:22.697536+00:00",
-            "evidence": [
-              "01_产品资产/01_原始素材/BQ1045/BQ1045_3df6bc50d43f9bac.json",
-              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR045/素材清单.json"
-            ],
-            "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
-            "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
-          }
-        }
+        "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
+        "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
       },
-      "current_model": "BQ1045",
-      "reference_source_id": "src-hr-hr045-f18"
+      "current_model": "BQ1045"
     },
     {
       "id": "HR046",
@@ -22272,8 +21683,8 @@
         "BQ1046",
         "HR046"
       ],
-      "source_state": "OWNER_CONFIRMED",
-      "adopted_source_id": null,
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-hr-hr046-ar299",
       "candidate_source_ids": [
         "src-hr-hr046-ar299"
       ],
@@ -22378,33 +21789,17 @@
         "store_group_state": "FORMAL_PRODUCT_AND_GROUP_READBACK"
       },
       "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "current": "EXTERNAL_FACTORY",
+        "state": "SOURCE_ROUTE_EVIDENCED",
+        "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "01_产品资产/01_原始素材/BQ1046/BQ1046_16d06b210ee14a5b.json",
+          "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR046/素材清单.json"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "ADOPTED",
-          "adopted_source_id": "src-hr-hr046-ar299",
-          "reference_source_id": null,
-          "supply_mode": {
-            "current": "EXTERNAL_FACTORY",
-            "state": "SOURCE_ROUTE_EVIDENCED",
-            "at": "2026-10-16T05:17:22.697536+00:00",
-            "evidence": [
-              "01_产品资产/01_原始素材/BQ1046/BQ1046_16d06b210ee14a5b.json",
-              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR046/素材清单.json"
-            ],
-            "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
-            "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
-          }
-        }
+        "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
+        "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
       },
-      "current_model": "BQ1046",
-      "reference_source_id": "src-hr-hr046-ar299"
+      "current_model": "BQ1046"
     },
     {
       "id": "HR047",
@@ -22412,8 +21807,8 @@
         "BQ1047",
         "HR047"
       ],
-      "source_state": "OWNER_CONFIRMED",
-      "adopted_source_id": null,
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-hr-hr047-0073",
       "candidate_source_ids": [
         "src-hr-hr047-0073"
       ],
@@ -22520,33 +21915,17 @@
         "store_group_state": "FORMAL_PRODUCT_AND_GROUP_READBACK"
       },
       "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "current": "EXTERNAL_FACTORY",
+        "state": "SOURCE_ROUTE_EVIDENCED",
+        "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "01_产品资产/01_原始素材/BQ1047/BQ1047_618f861c5a3137f1.json",
+          "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR047/素材清单.json"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "ADOPTED",
-          "adopted_source_id": "src-hr-hr047-0073",
-          "reference_source_id": null,
-          "supply_mode": {
-            "current": "EXTERNAL_FACTORY",
-            "state": "SOURCE_ROUTE_EVIDENCED",
-            "at": "2026-10-16T05:17:22.697536+00:00",
-            "evidence": [
-              "01_产品资产/01_原始素材/BQ1047/BQ1047_618f861c5a3137f1.json",
-              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR047/素材清单.json"
-            ],
-            "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
-            "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
-          }
-        }
+        "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
+        "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
       },
-      "current_model": "BQ1047",
-      "reference_source_id": "src-hr-hr047-0073"
+      "current_model": "BQ1047"
     },
     {
       "id": "HR048",
@@ -22554,8 +21933,8 @@
         "BQ1048",
         "HR048"
       ],
-      "source_state": "OWNER_CONFIRMED",
-      "adopted_source_id": null,
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-hr-hr048-964",
       "candidate_source_ids": [
         "src-hr-hr048-964"
       ],
@@ -22660,33 +22039,17 @@
         "store_group_state": "FORMAL_PRODUCT_AND_GROUP_READBACK"
       },
       "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "current": "EXTERNAL_FACTORY",
+        "state": "SOURCE_ROUTE_EVIDENCED",
+        "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "01_产品资产/01_原始素材/BQ1048/BQ1048_357a34520e2eb5a4.json",
+          "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR048/素材清单.json"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "ADOPTED",
-          "adopted_source_id": "src-hr-hr048-964",
-          "reference_source_id": null,
-          "supply_mode": {
-            "current": "EXTERNAL_FACTORY",
-            "state": "SOURCE_ROUTE_EVIDENCED",
-            "at": "2026-10-16T05:17:22.697536+00:00",
-            "evidence": [
-              "01_产品资产/01_原始素材/BQ1048/BQ1048_357a34520e2eb5a4.json",
-              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR048/素材清单.json"
-            ],
-            "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
-            "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
-          }
-        }
+        "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
+        "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
       },
-      "current_model": "BQ1048",
-      "reference_source_id": "src-hr-hr048-964"
+      "current_model": "BQ1048"
     },
     {
       "id": "HR049",
@@ -22694,8 +22057,8 @@
         "BQ1049",
         "HR049"
       ],
-      "source_state": "OWNER_CONFIRMED",
-      "adopted_source_id": null,
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-hr-hr049-b75",
       "candidate_source_ids": [
         "src-hr-hr049-b75"
       ],
@@ -22800,33 +22163,17 @@
         "store_group_state": "FORMAL_PRODUCT_AND_GROUP_READBACK"
       },
       "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "current": "EXTERNAL_FACTORY",
+        "state": "SOURCE_ROUTE_EVIDENCED",
+        "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "01_产品资产/01_原始素材/BQ1049/BQ1049_4e0e97e1b0780ec5.json",
+          "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR049/素材清单.json"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "ADOPTED",
-          "adopted_source_id": "src-hr-hr049-b75",
-          "reference_source_id": null,
-          "supply_mode": {
-            "current": "EXTERNAL_FACTORY",
-            "state": "SOURCE_ROUTE_EVIDENCED",
-            "at": "2026-10-16T05:17:22.697536+00:00",
-            "evidence": [
-              "01_产品资产/01_原始素材/BQ1049/BQ1049_4e0e97e1b0780ec5.json",
-              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR049/素材清单.json"
-            ],
-            "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
-            "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
-          }
-        }
+        "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
+        "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
       },
-      "current_model": "BQ1049",
-      "reference_source_id": "src-hr-hr049-b75"
+      "current_model": "BQ1049"
     },
     {
       "id": "HR050",
@@ -22834,8 +22181,8 @@
         "BQ1050",
         "HR050"
       ],
-      "source_state": "OWNER_CONFIRMED",
-      "adopted_source_id": null,
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-hr-hr050-315",
       "candidate_source_ids": [
         "src-hr-hr050-315"
       ],
@@ -22950,30 +22297,15 @@
         "store_group_state": "FORMAL_PRODUCT_AND_GROUP_READBACK"
       },
       "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "current": "EXTERNAL_FACTORY",
+        "state": "SOURCE_ROUTE_EVIDENCED",
+        "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "01_产品资产/01_原始素材/BQ1050/BQ1050_e048cf857e9d9cb9.json",
+          "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR050/素材清单.json"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "ADOPTED",
-          "adopted_source_id": "src-hr-hr050-315",
-          "reference_source_id": null,
-          "supply_mode": {
-            "current": "EXTERNAL_FACTORY",
-            "state": "SOURCE_ROUTE_EVIDENCED",
-            "at": "2026-10-16T05:17:22.697536+00:00",
-            "evidence": [
-              "01_产品资产/01_原始素材/BQ1050/BQ1050_e048cf857e9d9cb9.json",
-              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR050/素材清单.json"
-            ],
-            "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
-            "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
-          }
-        }
+        "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
+        "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
       },
       "current_model": "BQ1050",
       "content_gallery_revision": {
@@ -22987,8 +22319,7 @@
           "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR050_配色详情精修/商品/1601943660717/update_receipt.json",
           "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR050_配色详情精修/商品/1601943660717/verification.json"
         ]
-      },
-      "reference_source_id": "src-hr-hr050-315"
+      }
     },
     {
       "id": "HR051",
@@ -22996,8 +22327,8 @@
         "BQ1051",
         "HR051"
       ],
-      "source_state": "OWNER_CONFIRMED",
-      "adopted_source_id": null,
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-bded161d28f1",
       "candidate_source_ids": [
         "src-bded161d28f1"
       ],
@@ -23134,33 +22465,17 @@
         "store_group_state": "FORMAL_PRODUCT_AND_GROUP_READBACK"
       },
       "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "current": "EXTERNAL_FACTORY",
+        "state": "SOURCE_ROUTE_EVIDENCED",
+        "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "01_产品资产/01_原始素材/BQ1051/BQ1051_8e2f62d99da1e979.json",
+          "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR051/素材清单.json"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "ADOPTED",
-          "adopted_source_id": "src-bded161d28f1",
-          "reference_source_id": null,
-          "supply_mode": {
-            "current": "EXTERNAL_FACTORY",
-            "state": "SOURCE_ROUTE_EVIDENCED",
-            "at": "2026-10-16T05:17:22.697536+00:00",
-            "evidence": [
-              "01_产品资产/01_原始素材/BQ1051/BQ1051_8e2f62d99da1e979.json",
-              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR051/素材清单.json"
-            ],
-            "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
-            "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
-          }
-        }
+        "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
+        "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
       },
-      "current_model": "BQ1051",
-      "reference_source_id": "src-bded161d28f1"
+      "current_model": "BQ1051"
     },
     {
       "id": "HR052",
@@ -23168,8 +22483,8 @@
         "BQ1052",
         "HR052"
       ],
-      "source_state": "OWNER_CONFIRMED",
-      "adopted_source_id": null,
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-hr-hr052-d818",
       "candidate_source_ids": [
         "src-hr-hr052-d818"
       ],
@@ -23254,33 +22569,17 @@
         "store_group_state": "FORMAL_PRODUCT_AND_GROUP_READBACK"
       },
       "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "current": "EXTERNAL_FACTORY",
+        "state": "SOURCE_ROUTE_EVIDENCED",
+        "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "01_产品资产/01_原始素材/BQ1052/BQ1052_27bd8e69d84dc1e6.json",
+          "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR052/素材清单.json"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "ADOPTED",
-          "adopted_source_id": "src-hr-hr052-d818",
-          "reference_source_id": null,
-          "supply_mode": {
-            "current": "EXTERNAL_FACTORY",
-            "state": "SOURCE_ROUTE_EVIDENCED",
-            "at": "2026-10-16T05:17:22.697536+00:00",
-            "evidence": [
-              "01_产品资产/01_原始素材/BQ1052/BQ1052_27bd8e69d84dc1e6.json",
-              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR052/素材清单.json"
-            ],
-            "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
-            "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
-          }
-        }
+        "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
+        "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
       },
-      "current_model": "BQ1052",
-      "reference_source_id": "src-hr-hr052-d818"
+      "current_model": "BQ1052"
     },
     {
       "id": "HR053",
@@ -23288,8 +22587,8 @@
         "BQ1053",
         "HR053"
       ],
-      "source_state": "OWNER_CONFIRMED",
-      "adopted_source_id": null,
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-hr-hr053-f263",
       "candidate_source_ids": [
         "src-hr-hr053-f263"
       ],
@@ -23394,33 +22693,17 @@
         "store_group_state": "FORMAL_PRODUCT_AND_GROUP_READBACK"
       },
       "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "current": "EXTERNAL_FACTORY",
+        "state": "SOURCE_ROUTE_EVIDENCED",
+        "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "01_产品资产/01_原始素材/BQ1053/BQ1053_010bc1264f9f8a24.json",
+          "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR053/素材清单.json"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "ADOPTED",
-          "adopted_source_id": "src-hr-hr053-f263",
-          "reference_source_id": null,
-          "supply_mode": {
-            "current": "EXTERNAL_FACTORY",
-            "state": "SOURCE_ROUTE_EVIDENCED",
-            "at": "2026-10-16T05:17:22.697536+00:00",
-            "evidence": [
-              "01_产品资产/01_原始素材/BQ1053/BQ1053_010bc1264f9f8a24.json",
-              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR053/素材清单.json"
-            ],
-            "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
-            "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
-          }
-        }
+        "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
+        "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
       },
-      "current_model": "BQ1053",
-      "reference_source_id": "src-hr-hr053-f263"
+      "current_model": "BQ1053"
     },
     {
       "id": "HR054",
@@ -23557,8 +22840,8 @@
         "BQ1055",
         "HR055"
       ],
-      "source_state": "OWNER_CONFIRMED",
-      "adopted_source_id": null,
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-hr-hr055-b803",
       "candidate_source_ids": [
         "src-hr-hr055-b803"
       ],
@@ -23663,33 +22946,17 @@
         "store_group_state": "FORMAL_PRODUCT_AND_GROUP_READBACK"
       },
       "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "current": "EXTERNAL_FACTORY",
+        "state": "SOURCE_ROUTE_EVIDENCED",
+        "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "01_产品资产/01_原始素材/BQ1055/BQ1055_f5f729077dbf22ab.json",
+          "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR055/素材清单.json"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "ADOPTED",
-          "adopted_source_id": "src-hr-hr055-b803",
-          "reference_source_id": null,
-          "supply_mode": {
-            "current": "EXTERNAL_FACTORY",
-            "state": "SOURCE_ROUTE_EVIDENCED",
-            "at": "2026-10-16T05:17:22.697536+00:00",
-            "evidence": [
-              "01_产品资产/01_原始素材/BQ1055/BQ1055_f5f729077dbf22ab.json",
-              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR055/素材清单.json"
-            ],
-            "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
-            "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
-          }
-        }
+        "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
+        "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
       },
-      "current_model": "BQ1055",
-      "reference_source_id": "src-hr-hr055-b803"
+      "current_model": "BQ1055"
     },
     {
       "id": "HR056",
@@ -23697,8 +22964,8 @@
         "BQ1056",
         "HR056"
       ],
-      "source_state": "OWNER_CONFIRMED",
-      "adopted_source_id": null,
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-hr-hr056-555",
       "candidate_source_ids": [
         "src-hr-hr056-555"
       ],
@@ -23819,30 +23086,15 @@
         "store_group_state": "FORMAL_PRODUCT_AND_GROUP_READBACK"
       },
       "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "current": "EXTERNAL_FACTORY",
+        "state": "SOURCE_ROUTE_EVIDENCED",
+        "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "01_产品资产/01_原始素材/BQ1056/BQ1056_f2a359e77b24c357.json",
+          "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR056/素材清单.json"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "ADOPTED",
-          "adopted_source_id": "src-hr-hr056-555",
-          "reference_source_id": null,
-          "supply_mode": {
-            "current": "EXTERNAL_FACTORY",
-            "state": "SOURCE_ROUTE_EVIDENCED",
-            "at": "2026-10-16T05:17:22.697536+00:00",
-            "evidence": [
-              "01_产品资产/01_原始素材/BQ1056/BQ1056_f2a359e77b24c357.json",
-              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR056/素材清单.json"
-            ],
-            "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
-            "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
-          }
-        }
+        "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
+        "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
       },
       "current_model": "BQ1056",
       "content_gallery_revision": {
@@ -23856,8 +23108,7 @@
           "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR056_配色详情精修/商品/1601943778191/update_receipt.json",
           "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR056_配色详情精修/商品/1601943778191/verification.json"
         ]
-      },
-      "reference_source_id": "src-hr-hr056-555"
+      }
     },
     {
       "id": "HR057",
@@ -23865,8 +23116,8 @@
         "BQ1057",
         "HR057"
       ],
-      "source_state": "OWNER_CONFIRMED",
-      "adopted_source_id": null,
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-hr-hr057-h10",
       "candidate_source_ids": [
         "src-hr-hr057-h10"
       ],
@@ -24001,30 +23252,15 @@
         "store_group_state": "FORMAL_PRODUCT_AND_GROUP_READBACK"
       },
       "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "current": "EXTERNAL_FACTORY",
+        "state": "SOURCE_ROUTE_EVIDENCED",
+        "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "01_产品资产/01_原始素材/BQ1057/BQ1057_127a03e5cff478b8.json",
+          "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR057/素材清单.json"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "ADOPTED",
-          "adopted_source_id": "src-hr-hr057-h10",
-          "reference_source_id": null,
-          "supply_mode": {
-            "current": "EXTERNAL_FACTORY",
-            "state": "SOURCE_ROUTE_EVIDENCED",
-            "at": "2026-10-16T05:17:22.697536+00:00",
-            "evidence": [
-              "01_产品资产/01_原始素材/BQ1057/BQ1057_127a03e5cff478b8.json",
-              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR057/素材清单.json"
-            ],
-            "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
-            "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
-          }
-        }
+        "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
+        "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
       },
       "current_model": "BQ1057",
       "source_assortment_revision": {
@@ -24049,8 +23285,7 @@
           "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR057_配色详情精修/商品/1601943771190/update_receipt.json",
           "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR057_配色详情精修/商品/1601943771190/verification.json"
         ]
-      },
-      "reference_source_id": "src-hr-hr057-h10"
+      }
     },
     {
       "id": "HR058",
@@ -24058,8 +23293,8 @@
         "BQ1058",
         "HR058"
       ],
-      "source_state": "OWNER_CONFIRMED",
-      "adopted_source_id": null,
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-hr-hr058-as795",
       "candidate_source_ids": [
         "src-hr-hr058-as795"
       ],
@@ -24164,33 +23399,17 @@
         "store_group_state": "FORMAL_PRODUCT_AND_GROUP_READBACK"
       },
       "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "current": "EXTERNAL_FACTORY",
+        "state": "SOURCE_ROUTE_EVIDENCED",
+        "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "01_产品资产/01_原始素材/BQ1058/BQ1058_a09466605112647d.json",
+          "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR058/素材清单.json"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "ADOPTED",
-          "adopted_source_id": "src-hr-hr058-as795",
-          "reference_source_id": null,
-          "supply_mode": {
-            "current": "EXTERNAL_FACTORY",
-            "state": "SOURCE_ROUTE_EVIDENCED",
-            "at": "2026-10-16T05:17:22.697536+00:00",
-            "evidence": [
-              "01_产品资产/01_原始素材/BQ1058/BQ1058_a09466605112647d.json",
-              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR058/素材清单.json"
-            ],
-            "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
-            "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
-          }
-        }
+        "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
+        "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
       },
-      "current_model": "BQ1058",
-      "reference_source_id": "src-hr-hr058-as795"
+      "current_model": "BQ1058"
     },
     {
       "id": "HR059",
@@ -24198,8 +23417,8 @@
         "BQ1059",
         "HR059"
       ],
-      "source_state": "OWNER_CONFIRMED",
-      "adopted_source_id": null,
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-hr-hr059-5612",
       "candidate_source_ids": [
         "src-hr-hr059-5612"
       ],
@@ -24320,30 +23539,15 @@
         "store_group_state": "FORMAL_PRODUCT_AND_GROUP_READBACK"
       },
       "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "current": "EXTERNAL_FACTORY",
+        "state": "SOURCE_ROUTE_EVIDENCED",
+        "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "01_产品资产/01_原始素材/BQ1059/BQ1059_35ab307479f49d63.json",
+          "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR059/素材清单.json"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "ADOPTED",
-          "adopted_source_id": "src-hr-hr059-5612",
-          "reference_source_id": null,
-          "supply_mode": {
-            "current": "EXTERNAL_FACTORY",
-            "state": "SOURCE_ROUTE_EVIDENCED",
-            "at": "2026-10-16T05:17:22.697536+00:00",
-            "evidence": [
-              "01_产品资产/01_原始素材/BQ1059/BQ1059_35ab307479f49d63.json",
-              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR059/素材清单.json"
-            ],
-            "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
-            "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
-          }
-        }
+        "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
+        "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
       },
       "current_model": "BQ1059",
       "content_gallery_revision": {
@@ -24357,8 +23561,7 @@
           "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR059_模板图正式清理/商品/1601943779211/update_receipt.json",
           "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR059_模板图正式清理/商品/1601943779211/verification.json"
         ]
-      },
-      "reference_source_id": "src-hr-hr059-5612"
+      }
     },
     {
       "id": "HR060",
@@ -24366,8 +23569,8 @@
         "BQ1060",
         "HR060"
       ],
-      "source_state": "OWNER_CONFIRMED",
-      "adopted_source_id": null,
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-hr-hr060-aa23",
       "candidate_source_ids": [
         "src-hr-hr060-aa23"
       ],
@@ -24472,30 +23675,15 @@
         "store_group_state": "FORMAL_PRODUCT_AND_GROUP_READBACK"
       },
       "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "current": "EXTERNAL_FACTORY",
+        "state": "SOURCE_ROUTE_EVIDENCED",
+        "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "01_产品资产/01_原始素材/BQ1060/BQ1060_73ce8f1a5e3029dd.json",
+          "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR060/素材清单.json"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "ADOPTED",
-          "adopted_source_id": "src-hr-hr060-aa23",
-          "reference_source_id": null,
-          "supply_mode": {
-            "current": "EXTERNAL_FACTORY",
-            "state": "SOURCE_ROUTE_EVIDENCED",
-            "at": "2026-10-16T05:17:22.697536+00:00",
-            "evidence": [
-              "01_产品资产/01_原始素材/BQ1060/BQ1060_73ce8f1a5e3029dd.json",
-              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR060/素材清单.json"
-            ],
-            "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
-            "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
-          }
-        }
+        "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
+        "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
       },
       "current_model": "BQ1060",
       "content_gallery_revision": {
@@ -24509,8 +23697,7 @@
           "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR060_模板图正式清理/商品/1601943705620/update_receipt.json",
           "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR060_模板图正式清理/商品/1601943705620/verification.json"
         ]
-      },
-      "reference_source_id": "src-hr-hr060-aa23"
+      }
     },
     {
       "id": "HR061",
@@ -24518,8 +23705,8 @@
         "BQ1061",
         "HR061"
       ],
-      "source_state": "OWNER_CONFIRMED",
-      "adopted_source_id": null,
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-hr-hr061-l895",
       "candidate_source_ids": [
         "src-hr-hr061-l895"
       ],
@@ -24624,33 +23811,17 @@
         "store_group_state": "FORMAL_PRODUCT_AND_GROUP_READBACK"
       },
       "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "current": "EXTERNAL_FACTORY",
+        "state": "SOURCE_ROUTE_EVIDENCED",
+        "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "01_产品资产/01_原始素材/BQ1061/BQ1061_36737fd476f0df07.json",
+          "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR061/素材清单.json"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "ADOPTED",
-          "adopted_source_id": "src-hr-hr061-l895",
-          "reference_source_id": null,
-          "supply_mode": {
-            "current": "EXTERNAL_FACTORY",
-            "state": "SOURCE_ROUTE_EVIDENCED",
-            "at": "2026-10-16T05:17:22.697536+00:00",
-            "evidence": [
-              "01_产品资产/01_原始素材/BQ1061/BQ1061_36737fd476f0df07.json",
-              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR061/素材清单.json"
-            ],
-            "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
-            "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
-          }
-        }
+        "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
+        "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
       },
-      "current_model": "BQ1061",
-      "reference_source_id": "src-hr-hr061-l895"
+      "current_model": "BQ1061"
     },
     {
       "id": "HR062",
@@ -24658,8 +23829,8 @@
         "BQ1062",
         "HR062"
       ],
-      "source_state": "OWNER_CONFIRMED",
-      "adopted_source_id": null,
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-hr-hr062-d02",
       "candidate_source_ids": [
         "src-hr-hr062-d02"
       ],
@@ -24793,30 +23964,15 @@
         "store_group_state": "FORMAL_PRODUCT_AND_GROUP_READBACK"
       },
       "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "current": "EXTERNAL_FACTORY",
+        "state": "SOURCE_ROUTE_EVIDENCED",
+        "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "01_产品资产/01_原始素材/BQ1062/BQ1062_b285b84ce3041fd6.json",
+          "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR062/素材清单.json"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "ADOPTED",
-          "adopted_source_id": "src-hr-hr062-d02",
-          "reference_source_id": null,
-          "supply_mode": {
-            "current": "EXTERNAL_FACTORY",
-            "state": "SOURCE_ROUTE_EVIDENCED",
-            "at": "2026-10-16T05:17:22.697536+00:00",
-            "evidence": [
-              "01_产品资产/01_原始素材/BQ1062/BQ1062_b285b84ce3041fd6.json",
-              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR062/素材清单.json"
-            ],
-            "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
-            "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
-          }
-        }
+        "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
+        "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
       },
       "current_model": "BQ1062",
       "content_gallery_revision": {
@@ -24830,8 +23986,7 @@
           "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR062_全图残留回读纠正/商品/1601943799127/update_receipt.json",
           "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR062_全图残留回读纠正/商品/1601943799127/verification.json"
         ]
-      },
-      "reference_source_id": "src-hr-hr062-d02"
+      }
     },
     {
       "id": "HR063",
@@ -24839,8 +23994,8 @@
         "BQ1063",
         "HR063"
       ],
-      "source_state": "OWNER_CONFIRMED",
-      "adopted_source_id": null,
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-hr-hr063-1712",
       "candidate_source_ids": [
         "src-hr-hr063-1712"
       ],
@@ -24964,30 +24119,15 @@
         "store_group_state": "FORMAL_PRODUCT_AND_GROUP_READBACK"
       },
       "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "current": "EXTERNAL_FACTORY",
+        "state": "SOURCE_ROUTE_EVIDENCED",
+        "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "01_产品资产/01_原始素材/BQ1063/BQ1063_428756b643293efb.json",
+          "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR063/素材清单.json"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "ADOPTED",
-          "adopted_source_id": "src-hr-hr063-1712",
-          "reference_source_id": null,
-          "supply_mode": {
-            "current": "EXTERNAL_FACTORY",
-            "state": "SOURCE_ROUTE_EVIDENCED",
-            "at": "2026-10-16T05:17:22.697536+00:00",
-            "evidence": [
-              "01_产品资产/01_原始素材/BQ1063/BQ1063_428756b643293efb.json",
-              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR063/素材清单.json"
-            ],
-            "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
-            "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
-          }
-        }
+        "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
+        "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
       },
       "current_model": "BQ1063",
       "content_gallery_revision": {
@@ -25001,8 +24141,7 @@
           "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR063_全图残留清理/商品/1601943764325/update_receipt.json",
           "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR063_全图残留清理/商品/1601943764325/verification.json"
         ]
-      },
-      "reference_source_id": "src-hr-hr063-1712"
+      }
     },
     {
       "id": "HR064",
@@ -25041,8 +24180,8 @@
         "BQ1065",
         "HR065"
       ],
-      "source_state": "OWNER_CONFIRMED",
-      "adopted_source_id": null,
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-hr-hr065-j55",
       "candidate_source_ids": [
         "src-hr-hr065-j55"
       ],
@@ -25163,30 +24302,15 @@
         "store_group_state": "FORMAL_PRODUCT_AND_GROUP_READBACK"
       },
       "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "current": "EXTERNAL_FACTORY",
+        "state": "SOURCE_ROUTE_EVIDENCED",
+        "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "01_产品资产/01_原始素材/BQ1065/BQ1065_1e266eab1b8a2393.json",
+          "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR065/素材清单.json"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "ADOPTED",
-          "adopted_source_id": "src-hr-hr065-j55",
-          "reference_source_id": null,
-          "supply_mode": {
-            "current": "EXTERNAL_FACTORY",
-            "state": "SOURCE_ROUTE_EVIDENCED",
-            "at": "2026-10-16T05:17:22.697536+00:00",
-            "evidence": [
-              "01_产品资产/01_原始素材/BQ1065/BQ1065_1e266eab1b8a2393.json",
-              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR065/素材清单.json"
-            ],
-            "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
-            "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
-          }
-        }
+        "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
+        "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
       },
       "current_model": "BQ1065",
       "content_gallery_revision": {
@@ -25200,8 +24324,7 @@
           "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR065_模板图正式清理/商品/1601943717639/update_receipt.json",
           "02_Alibaba运营/02_单品优化记录/全店FAQ与产品亮点优化/内容质量复核/图库重做/HR065_模板图正式清理/商品/1601943717639/verification.json"
         ]
-      },
-      "reference_source_id": "src-hr-hr065-j55"
+      }
     },
     {
       "id": "HR066",
@@ -25209,8 +24332,8 @@
         "BQ1066",
         "HR066"
       ],
-      "source_state": "OWNER_CONFIRMED",
-      "adopted_source_id": null,
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-hr-hr066-ws6",
       "candidate_source_ids": [
         "src-hr-hr066-ws6"
       ],
@@ -25315,33 +24438,17 @@
         "store_group_state": "FORMAL_PRODUCT_AND_GROUP_READBACK"
       },
       "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "current": "EXTERNAL_FACTORY",
+        "state": "SOURCE_ROUTE_EVIDENCED",
+        "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "01_产品资产/01_原始素材/BQ1066/BQ1066_ef1300bd020bb6f7.json",
+          "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR066/素材清单.json"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "ADOPTED",
-          "adopted_source_id": "src-hr-hr066-ws6",
-          "reference_source_id": null,
-          "supply_mode": {
-            "current": "EXTERNAL_FACTORY",
-            "state": "SOURCE_ROUTE_EVIDENCED",
-            "at": "2026-10-16T05:17:22.697536+00:00",
-            "evidence": [
-              "01_产品资产/01_原始素材/BQ1066/BQ1066_ef1300bd020bb6f7.json",
-              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR066/素材清单.json"
-            ],
-            "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
-            "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
-          }
-        }
+        "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
+        "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
       },
-      "current_model": "BQ1066",
-      "reference_source_id": "src-hr-hr066-ws6"
+      "current_model": "BQ1066"
     },
     {
       "id": "HR067",
@@ -25349,8 +24456,8 @@
         "BQ1067",
         "HR067"
       ],
-      "source_state": "OWNER_CONFIRMED",
-      "adopted_source_id": null,
+      "source_state": "ADOPTED",
+      "adopted_source_id": "src-hr-hr067-d11",
       "candidate_source_ids": [
         "src-hr-hr067-d11"
       ],
@@ -25455,33 +24562,17 @@
         "store_group_state": "FORMAL_PRODUCT_AND_GROUP_READBACK"
       },
       "supply_mode": {
-        "current": "OWN_FACTORY",
-        "state": "OWNER_CONFIRMED_2026_11_01",
-        "at": "2026-11-01",
+        "current": "EXTERNAL_FACTORY",
+        "state": "SOURCE_ROUTE_EVIDENCED",
+        "at": "2026-10-16T05:17:22.697536+00:00",
         "evidence": [
-          "00_总控台/产品中心/README.md",
-          "00_总控台/产品中心/产品矩阵与供货能力.md"
+          "01_产品资产/01_原始素材/BQ1067/BQ1067_8a4e7c2784c255b0.json",
+          "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR067/素材清单.json"
         ],
-        "scope": "负责人确认当前对客展示款式为本厂产品；保留旧来源与图片资料为历史记录，不虚构原始包映射或库存。",
-        "previous": {
-          "source_state": "ADOPTED",
-          "adopted_source_id": "src-hr-hr067-d11",
-          "reference_source_id": null,
-          "supply_mode": {
-            "current": "EXTERNAL_FACTORY",
-            "state": "SOURCE_ROUTE_EVIDENCED",
-            "at": "2026-10-16T05:17:22.697536+00:00",
-            "evidence": [
-              "01_产品资产/01_原始素材/BQ1067/BQ1067_8a4e7c2784c255b0.json",
-              "02_Alibaba运营/05_扩品工程/执行记录/HR实源替换/HR067/素材清单.json"
-            ],
-            "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
-            "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
-          }
-        }
+        "conversion_policy": "一定数量可评估转自产；意向不等于已转产，确认实际转产后保留货号并更新证据及适用订单/版本。",
+        "scope": "内部采购与履约分类，不改买家承诺或推断实物库存。"
       },
-      "current_model": "BQ1067",
-      "reference_source_id": "src-hr-hr067-d11"
+      "current_model": "BQ1067"
     },
     {
       "id": "LQ-011",

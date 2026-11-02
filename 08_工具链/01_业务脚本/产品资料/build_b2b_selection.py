@@ -47,16 +47,17 @@ def prepare(node):
     site_products = {p['code']: p for p in data}
     provenance = read(SITE / 'data/product-photo-provenance.json')['products']
     canonical = {p['id']: p for p in read(ROOT / '00_总控台/产品中心/数据/产品.json')['products']}
+    listings = {str(row['id']): row for row in read(ROOT / '02_Alibaba运营/05_扩品工程/数据/国际站商品.json')['listings']}
     assets = []
     for p in selection['products']:
         code = p['code']
         identity = 'HR009' if code == 'BQ1009' else code
         product = canonical[identity]
         p['canonical_id'] = identity
-        assert p['supply'] == 'Beiqiang factory', code
         supply = product.get('supply_mode', {})
-        owner_confirmed = supply.get('current') == 'OWN_FACTORY' and supply.get('state') == 'OWNER_CONFIRMED_2026_11_01'
-        assert owner_confirmed or f'01_产品资产/01_原始素材/{code}' in product.get('raw_packages', []), code
+        supply_kind = supply.get('current')
+        p['supply'] = {'OWN_FACTORY': 'Beiqiang factory', 'EXTERNAL_FACTORY': 'Supplier-sourced'}.get(supply_kind, 'Supply on request')
+        p['supply_short'] = {'OWN_FACTORY': 'Factory', 'EXTERNAL_FACTORY': 'Sourced'}.get(supply_kind, 'On request')
         formal_path = PRIVATE / f"{p['id']}-current.json"
         formal = read(formal_path)['response']['product']
         assert formal['status'] == 'approved' and formal['display'] == 'Y', code
@@ -81,8 +82,13 @@ def prepare(node):
             if record['sourceKind'] == 'factory-original-package':
                 raw = ROOT / '01_产品资产/01_原始素材' / code / record['sourceFile']
                 assert hashlib.sha256(raw.read_bytes()).hexdigest() == record['sourceSha256'], code
+        colour_sizes = (listings.get(str(p['id']), {}).get('current_platform_fields') or {}).get('colour_EU') or {}
+        current_sizes = sorted({int(size) for sizes in colour_sizes.values() for size in sizes if str(size).isdigit()})
+        if current_sizes:
+            if current_sizes == list(range(current_sizes[0], current_sizes[-1] + 1)):
+                p['size'] = f'EU {current_sizes[0]}-{current_sizes[-1]}'
             else:
-                assert owner_confirmed, code
+                p['size'] = 'EU ' + '/'.join(map(str, current_sizes))
         p['image'] = str(image)
         assets.append({'code': code, 'canonical_id': identity, 'image': str(image.relative_to(ROOT)),
                        'sha256': hashlib.sha256(image.read_bytes()).hexdigest(),
@@ -159,12 +165,12 @@ def build(node):
     text('footwear.', 40, 176, 36, 'Display')
     para('Build your next range around a focused selection of knit, textile and casual styles.',
          42, 242, 300, 14, maxh=85)
-    para('For importers, wholesalers and private-label buyers. Footwear produced by our factory in Quanzhou.',
+    para('For importers, wholesalers and private-label buyers. Footwear from our Quanzhou factory and selected suppliers.',
          42, 339, 290, 11, maxh=78)
     photo(products[0]['image'], 377, 116, 425, 375)
     text('FEATURED  BQ008', 400, 503, 9, 'Bold', MUTED)
     rule(451, 42, 285)
-    text('8 factory styles', 42, 469, 12, 'Bold')
+    text('8 selected styles', 42, 469, 12, 'Bold')
     text('For your casual range', 42, 492, 12, 'Bold')
     footer(1); c.showPage()
 
@@ -185,11 +191,11 @@ def build(node):
     c.showPage()
 
     page('02 / Complement your range', 'Add the styles your buyers need.',
-         'Four more factory styles to complement a casual footwear range.',3)
+         'Four more styles to complement a casual footwear range.',3)
     for i,p in enumerate(products[4:]): card(p,40+(i%2)*390,151+(i//2)*197)
     c.showPage()
 
-    page('03 / Manufacturing', 'Meet the manufacturing behind the range.',
+    page('03 / Manufacturing', "Meet Beiqiang's manufacturing base.",
          'Beiqiang was established in Quanzhou in 2015, with production experience supporting established footwear brands in China.',4)
     for x, val, label in [(40,'2015','Established in Quanzhou'),(301,'3,000+ m2','Manufacturing base'),(562,'200,000 pairs','Annual output')]:
         text(val,x,143,21,'Display');text(label,x,173,9,color=MUTED)
@@ -211,8 +217,7 @@ def build(node):
         y=176+i*31
         if i%2==0:box(40,y,762,31,'#E9EDE6')
         closure='Slip-on' if p['code']=='BQ001' else 'Heel strap' if p['code']=='BQ-C2627' else 'Lace-up'
-        supply='Factory'
-        for s,x in zip([p['code'],p['role'],p['size'],supply,closure],cols):text(s,x+8,y+9,9)
+        for s,x in zip([p['code'],p['role'],p['size'],p['supply_short'],closure],cols):text(s,x+8,y+9,9)
     para('Sizes shown are the documented style ranges. We confirm the selected colour, size mix and order availability in your quotation.',
          40,432,755,9,MUTED,maxh=30)
     text('Make the cost comparison useful.',40,471,16,'Display')

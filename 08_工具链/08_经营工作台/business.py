@@ -81,7 +81,7 @@ class Business:
                 summary=' · '.join(str(v) for v in [state_label,source.get('supplier'),source.get('model')] if v))
             mode_record=product.get('supply_mode') or {}
             supply_kind=mode_record.get('current') if isinstance(mode_record,dict) else ''
-            owner_confirmed=mode_record.get('state')=='OWNER_CONFIRMED_2026_11_01'
+            owner_confirmed=str(mode_record.get('state') or '').startswith('OWNER_CONFIRMED_')
             own=supply_kind=='OWN_FACTORY' and bool(mode_record.get('evidence')) and (bool(product.get('raw_packages')) or owner_confirmed)
             supply_url=source.get('url','') if adopted and supply_kind=='EXTERNAL_FACTORY' else ''
             if not isinstance(supply_url,str) or not supply_url.startswith('https://'):supply_url=''

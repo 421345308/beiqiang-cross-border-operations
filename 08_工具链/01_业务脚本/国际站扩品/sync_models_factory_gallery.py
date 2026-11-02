@@ -18,7 +18,7 @@ def main():
  # Classification is independent of renaming and limited to evidenced routes.
  for p in r['products']:
   # This older migration must not overwrite a later explicit owner confirmation.
-  if p.get('supply_mode',{}).get('state')=='OWNER_CONFIRMED_2026_11_01':continue
+  if str((p.get('supply_mode') or {}).get('state') or '').startswith('OWNER_CONFIRMED_'):continue
   src=sources.get(p.get('adopted_source_id'));raw=p.get('raw_packages',[]);mode=None;evidence=[]
   if p['source_state']=='RAW_PACKAGE'and raw and all((ROOT/f).exists()for f in raw):mode='OWN_FACTORY';evidence=raw
   elif src and p['source_state']=='ADOPTED'and urlsplit(src.get('url','')).hostname not in ('bqgcd.sooxie.com',None):mode='EXTERNAL_FACTORY';evidence=src.get('evidence',[])
