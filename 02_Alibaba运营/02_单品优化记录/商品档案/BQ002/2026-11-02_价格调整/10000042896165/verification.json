@@ -1,11 +1,11 @@
 {
   "id": "10000042896165",
   "family": "BQ002",
-  "at": "2026-11-02T05:25:19.995493+00:00",
+  "at": "2026-11-02T05:27:58.956356+00:00",
   "prices_match": true,
   "non_price_fields_preserved": true,
-  "status": "modified",
-  "display": "N",
+  "status": "approved",
+  "display": "Y",
   "sku_count": 30,
   "tiers": [
     [
@@ -17,5 +17,6 @@
       "9.00"
     ]
   ],
-  "state": "PENDING_REVIEW"
+  "schema_prices_match": true,
+  "state": "APPROVED"
 }
