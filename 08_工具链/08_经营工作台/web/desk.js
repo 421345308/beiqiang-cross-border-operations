@@ -348,13 +348,21 @@
     const page = $('page'), serial = S.loadSerial;
     const current = () => S.page === 'customers' && serial === S.loadSerial && parseRoute().query.get('view') === 'competitors';
     page.replaceChildren(heading('客户开发', '同行找客户', '从国际站同行入手，找到买家后直接在这里登记、继续研究。'), customerTabs('competitors'));
-    const explanation = el('p', '以下为店铺页面能对应公司的同行。中文名来自公开资料，可用于查询；查海关时请结合地址、货描和日期核对出口方。', 'competitor-intro');
+    const explanation = el('p', '查海关时结合地址、货描和日期核对出口方。批量复制优先中文名，未找到中文名的使用英文。', 'competitor-intro');
     const search = el('input', undefined, 'search-input'); search.type = 'search'; search.placeholder = '搜索公司名、信用代码或鞋类'; search.setAttribute('aria-label', '搜索同行');
-    const count = el('span', '', 'search-count'), bar = el('div', undefined, 'search-bar'), list = el('div', undefined, 'row-list competitor-list');
+    const count = el('span', '', 'search-count'), bar = el('div', undefined, 'search-bar competitor-search-bar'), list = el('div', undefined, 'row-list competitor-list');
     bar.append(search, count); page.append(explanation, bar, list);
     let data;
     try { data = await api('/api/desk/competitors'); } catch (error) { if (current()) message(error.message); return; }
     if (!current()) return;
+    const copyAll = button('一键复制全部公司名', async () => {
+      const names = (data.items || []).map(item => text(item.identity?.name).trim() || text(item.company).trim()).filter(Boolean);
+      if (!names.length) { toast('当前没有可复制的公司名称。'); return; }
+      if (!navigator.clipboard?.writeText) { toast('当前页面无法使用剪贴板。'); return; }
+      try { await navigator.clipboard.writeText(names.join('\n')); toast(`已复制 ${names.length} 家公司名称，每家一行。`); }
+      catch { toast('复制未成功，请检查浏览器剪贴板权限。'); }
+    }, 'primary competitor-copy-all');
+    bar.append(copyAll);
     function openBuyer(id) { location.hash = `/customers?view=development&item=${encodeURIComponent(id)}`; }
     function addBuyer(company) {
       const dialog = el('dialog', undefined, 'intake-dialog competitor-dialog'), form = el('div', undefined, 'competitor-form');

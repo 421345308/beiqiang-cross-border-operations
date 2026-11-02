@@ -657,6 +657,19 @@ test('同行清单展示真实店铺，登记买家进入原客户研究并保�
   assert.match(h.location.hash,/customers\?view=development&item=/); assert.equal(h.requests.some(row=>/send|outreach/.test(row.path)),false);
 });
 
+test('一键复制全部同行公司名，优先中文并包含无中文名的同行', async () => {
+  const h = harness('#/customers?view=competitors');
+  h.interceptFetch(async (path, options) => path === '/api/desk/competitors' ? {ok:true,json:async()=>({items:[
+    {id:'EX001',company:'Shoe Factory',direction:'鞋',store_url:'https://shoe.en.alibaba.com/',identity:{name:'鞋业有限公司',source_url:'https://example.com/company'},buyers:[]},
+    {id:'EX002',company:'Other Shoe Co., Ltd.',direction:'鞋',store_url:'https://other.en.alibaba.com/',buyers:[]}
+  ],excluded:[{company:'Old Shop'}],existing_buyers:[]})} : h.originalFetch(path, options));
+  await h.ui.bootstrap(); await settle();
+  const copy = findButton(h.elements.page, '一键复制全部公司名');
+  await copy.click(); assert.equal(h.clipboard(), '鞋业有限公司\nOther Shoe Co., Ltd.');
+  const search=walk(h.elements.page).find(node=>node['aria-label']==='搜索同行'); search.value='鞋业有限公司'; search.listeners.input();
+  await copy.click(); assert.equal(h.clipboard(), '鞋业有限公司\nOther Shoe Co., Ltd.');
+});
+
 test('同行登记遇到已有公司时打开原客户，不重复建立', async () => {
   const h = harness('#/customers?view=competitors');
   h.interceptFetch(async (path, options) => path === '/api/desk/competitors' ? {ok:true,json:async()=>({items:[{id:'EX001',company:'Shoe Factory',direction:'鞋',store_url:'https://shoe.en.alibaba.com/',buyers:[]}],excluded:[],existing_buyers:[{id:'candidate:old',company:'Known Buyer'}]})} : h.originalFetch(path, options));
